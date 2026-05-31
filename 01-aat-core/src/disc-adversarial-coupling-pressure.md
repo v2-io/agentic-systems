@@ -143,3 +143,34 @@ Max attainable: *robust qualitative* for the structural pattern; the specific me
 - **Surfacing bounded-signaling in `#der-directed-separation`.** The bounded-signaling assumption surfaced in §"Scope: implicit assumptions" is more naturally located in `#der-directed-separation`'s Discussion as a load-bearing scope statement on the agent-world interface (it's about *that* segment's structure, not specific to adversarial pressure). Back-pressure follow-on: add to that segment a paragraph naming the assumption — that the channel from $G_t$ to the world runs only through $\pi$, and that this assumption fails operationally when behavioral leakage is rich relative to action coarseness. Cross-reference back to this segment for the adversarial saturation case.
 
 - **Migration note (2026-05-09 GUC rename + 2026-05-21 composite-claim withdrawal):** Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. This segment uses "coupling pressure" / "adversarial coupling" as its central concept — that broader vocabulary is unchanged. The specific GUC-class references were renamed: "toward Class 2 (fully merged)" → "toward Class 3 (Coupled)"; "Class-2 coupled formulation" → "Class 3 (Coupled) formulation"; "Class-3 architecture (partially modular)" for the defensive composite → architecturally-modular composite (routing-structure-driven per `#der-directed-separation` axis-decomposed inheritance); "Class-2 bias bound" → "Class 3 (Coupled) bias bound." The earlier "Class 1 (Separated) sub-agents → Class 2 (Partial) composite refinement" reference (inversion-comparator for the defensive scaffolding case) was withdrawn 2026-05-21 per `spikes/strategic-composition-class-3-attempt-2026-05-21/` (Cournot witness against the unconditional claim; conflation diagnosis on belief-content vs processing-pathway); the defensive-composite passage in §"Defensive scaffolding as composition" was re-derived in regime-axis-aware language at the same time. Removed at `candidate` stage per FORMAT.md Gate 4.
+
+### Incidental audit gold (lift 2026-05-30)
+
+Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo auditors' working dirs, kept separate from the certified theory-fix findings. **Coverage:** as a late-authored Meta-Architecture II segment, only the deepest de-novo walk (773921, Gemini) reached it under its current slug — thin and single-substrate by expectation. Substrate attribution from the audit dir. Several of the auditor's strongest observations (defensive scaffolding as composition, the game-theoretic formalization, bounded-signaling) are *already* tracked in the Working Notes above; those are cross-referenced rather than re-stated.
+
+#### 1. Candidate Brief prose / pre-prose
+
+- **Coupling as attack surface** — the auditor's compression of the segment's frame: adversaries "don't target what people *know* (the observation channel), but what people *want* or *identify with* (the $O_t \to M_t$ coupling channel)" (Gemini, AUDIT-WORKING-773921). A candidate Brief anchor (and a sharper handle than the current Brief's structural-recognition phrasing — see the Feynman-criterion Working Note above).
+
+#### 2. Candidate Discussion
+
+- **Confirmation bias and demoralization as structural, not cognitive-quirk.** The auditor read "Cascade Inversion" as formally deriving these: by acting on $O_t$ first (identity or manufactured urgency), the adversary "forces the Orient Cascade to run backward, making legitimate observations flow *against* the information gradient, guaranteeing their rejection" (Gemini, AUDIT-WORKING-773921). A candidate Discussion sharpening of the cascade-inversion mechanism — names the everyday phenomena (confirmation bias, demoralization) the structure explains.
+- **Directional diagnostic corruption stated as two levers.** "If an adversary wants an agent to give up, they inflate the Satisfaction Gap ($\delta_{\text{sat}}$); if they want it to waste effort on a doomed cause, they inflate Control Regret ($\delta_{\text{regret}}$)" (Gemini, AUDIT-WORKING-773921). A compact gloss linking the segment to #def-satisfaction-gap / #def-control-regret.
+
+#### 3. Follow-up items
+
+- **Adversarial saturation of the bias bound.** The auditor stressed that the Coupled Bias Bound ( #deriv-observation-ambiguity-bias-bound) reads differently under adversarial conditions: "in a benign environment the bound $C$ is a loose worst-case; in an adversarial environment the adversary is an optimizer actively trying to drive the agent's error exactly to $C$" (Gemini, AUDIT-WORKING-773921). A candidate sharpening of how the bias bound is invoked downstream — distinct from the static-bound reading. (The segment's mechanism table already touches this; the "adversary-as-bound-optimizer" framing is the additional texture.)
+- *(Off-ramp note, not gold: the auditor's other strong items — defensive scaffolding deserving its own composition segment, the game-theoretic two-agent $\kappa$-payoff formalization, and bounded-signaling belonging in #der-directed-separation — are already tracked in the Working Notes above. No new follow-up needed.)*
+
+#### 4. Readers often ask / wonder
+
+- **Are humans structurally weaker than text-only LLMs against adversarial coupling?** Following the bounded-signaling assumption: humans leak $G_t$ via micro-expressions, prosody, and latency, bypassing the formal action channel $a_t$ — "adversaries don't have to guess what a human wants; they can read it directly," whereas a text-only LLM leaks only via tokens (Gemini, AUDIT-WORKING-773921). A natural reader question that sharpens the bounded-signaling Working Note's operational stakes.
+
+#### 5. Candidate figures
+
+- (No dedicated figure proposed for this segment in the reached audit.)
+
+#### Belongs elsewhere
+
+- **A formal vocabulary for information warfare / propaganda / cult formation.** Forward-vision: the segment "extends AAT from a theory of agents into a theory of security against cognitive attack," giving "a formal, structural vocabulary for Information Warfare, Propaganda, and Cult Formation based on the physics of the OODA loop" (Gemini, AUDIT-WORKING-773921). Aspirational reach for the M4 framing layer ( #disc-modularity-state-dynamics) / field-positioning, not a per-segment edit.
+- **Peer review and double-entry bookkeeping as Class-1-from-Class-3 composition** — the auditor independently praised the §"Defensive scaffolding as composition" framing ("not just administrative overhead; structural Part III composition moves that create a Class 1 macro-agent out of Class 3 human sub-agents") (Gemini, AUDIT-WORKING-773921). Converges on the existing Working-Note proposal to give defensive scaffolding its own Part III segment; recorded as cross-substrate confirmation of that already-tracked move.

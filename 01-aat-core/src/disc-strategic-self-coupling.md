@@ -170,3 +170,33 @@ Max attainable: *robust qualitative* for the structural pattern across the four 
 - **Indexed at spike-proposals.** A sub-spike candidate flagged from this segment for `spikes/PROPOSED.md` consideration: the *inverted-U shape derivation* — deriving the inflection point $\kappa^\ast$ from action-class composition (the fraction of credibility-dependent vs reality-dependent actions in the agent's relevant action space) as a function whose form predicts the agent's rationally-chosen self-coupling level. Open framework-extension question; appropriate as a Tier 2 / Tier 3 row when M4 lands and surfaces this as a follow-on.
 - **Boundary with cult-formation literature.** The §"Boundary with adversarial coupling pressure" section flags that the line between self-driven and adversarial-driven coupling blurs at the agent's level of experience (cult-formation; identity-conversion under sustained adversarial pressure). The framework's posture is that the *operations* are structurally distinct (driver: self vs external) but their behavioral consequences can converge. Targeted follow-on work for that boundary lives in cult-formation literature (Lifton 1961 *Thought Reform and the Psychology of Totalism*; Singer 1995 *Cults in Our Midst*) which the segment cross-references at adjacent-literature depth.
 - **Migration note (2026-05-09 GUC rename):** $\kappa_{\text{processing}}$ vocabulary is unchanged across the rename (the broader vocabulary lives at the operation level, not the Class label). The segment uses Class 1 (Separated) / Class 2 (Partial) / Class 3 (Coupled) in current canon vocabulary throughout. Removed at `candidate` stage per FORMAT.md Gate 4.
+
+### Incidental audit gold (lift 2026-05-30)
+
+Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo auditors' working dirs, kept separate from the certified theory-fix findings. **Coverage:** as a late-authored Meta-Architecture II segment, only the deepest de-novo walk (773921, Gemini) reached it under its current slug — thin and single-substrate by expectation. Substrate attribution from the audit dir.
+
+#### 1. Candidate Brief prose / pre-prose
+
+- **Why perfect rationality is a handicap** — the auditor's one-line framing of the segment's payload: "a purely modular, perfectly rational, uncoupled agent is actually strategically handicapped in multi-agent environments because it cannot make credible promises or threats" (Gemini, AUDIT-WORKING-773921). A candidate Brief opener that inverts the naive "coupling is bad" reading.
+- **The credibility paradox in words:** "a commitment's value equals its uncoupling cost" — the prose gloss of the strict inequality $c_{\text{couple}} \ll c_{\text{uncouple}}$ (Gemini, AUDIT-WORKING-773921).
+
+#### 2. Candidate Discussion
+
+- **Emotions as commitment technology** *(strongest framing candidate here).* "Defining an emotion (like anger or love) as 'coupling between rational calculation and affective response that trades fungibility for credibility' mathematically explains why humans have emotions: an angry person who will retaliate regardless of cost is a more credible deterrent than a perfectly rational calculator who will accept a bribe" (Gemini, AUDIT-WORKING-773921, on the Frank 1988 leg). A candidate Discussion sharpening — the segment already adopts Frank; this is a pedagogically vivid restatement of *why* the affective-commitment leg matters.
+- **The inverted-U as the framework finding its own limits.** The auditor read the $\mathcal{A}(\kappa_t)$ inverted-U (too much coupling eventually destroys reality-dependent actions → "cult-like delusion") as "an excellent example of the framework finding the natural limits of its own operations" (Gemini, AUDIT-WORKING-773921). Candidate framing for the non-monotonicity Discussion.
+
+#### 3. Follow-up items
+
+- **Self-control as single-agent composition** — the auditor amplified the segment's own Working-Note (d): treat an individual over time as a *composite agent* of temporally-displaced sub-agents (Self-at-$t_1$, Self-at-$t_2$), so a personal rule ("I will not smoke") is an inter-agent coupling agreement and AAT's multi-agent composition math ( #disc-composition-consistency) applies directly to single-agent self-control (Gemini, AUDIT-WORKING-773921). Convergent confirmation that Working-Note (d)'s Ainslie / composition-consistency reading is worth formalizing.
+
+#### 4. Readers often ask / wonder
+
+- (No distinct reader-question surfaced beyond the items above in the reached audit.)
+
+#### 5. Candidate figures
+
+- (No dedicated figure proposed for this segment in the reached audit.)
+
+#### Belongs elsewhere
+
+- **A unified vocabulary for institutional design.** Forward-vision: "contracts, constitutions, and cultural norms are all just technologies for manipulating $\kappa_{\text{processing}}$ to unlock new regions of the action space," and the segment "mathematically formalizes why perfect rationality is evolutionarily unfit for social environments" (Gemini, AUDIT-WORKING-773921). Aspirational reach for the M4 framing layer ( #disc-modularity-state-dynamics) / field-positioning, not a per-segment edit.

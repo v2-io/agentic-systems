@@ -145,4 +145,34 @@ Max attainable: *discussion-grade* for the meta-pattern recognition (it is a pre
 - **The convergence-finding observation as methodological pattern.** The 2026-05-09 cycle's discovery that multiple parallel collaborator probes had independently arrived at the modularity-state-dynamics pattern is itself a methodological observation worth holding alongside the substantive recognition. The framework's discipline supports cross-probe convergence as structural-recognition evidence; the M4 segment's authoring is the canonical case where this convergence-as-coherence-evidence condition surfaced load-bearing material. Recorded in fuller form at `msc/reflections/27-modularity-as-contested-property-and-the-normative-register.md` (the reflection captures the convergence finding as evidence of the framework's coherence under independent probes — a methodological observation worth preserving alongside the substantive shifts).
 - **M4 amplification specificity per competence axis (open, 2026-05-28).** A two-competence decomposition of component capability has been surfaced in `#der-class-coercion-via-wrapping` §Discussion "Two senses of component competence": (1) world-simulation fidelity (accuracy of response to explicit query content) vs (2) input-structure extraction (inferring latent goal context from query surface form). The architectural classification of `#der-directed-separation` is blind to (1) and defined by (2); the structural-leakage bound $\kappa_{W_1}$ receives opposing pressures from the two competences at high capability. Open conjecture relevant to M4: the operational amplification of the three M4 operations under high component fidelity may track competence (2) specifically rather than aggregate capability — strategic self-coupling and adversarial coupling pressure both work through the goal-content channel that (2) carries; a high-fidelity world-simulator with structurally decorrelated input-structure extraction may be a *less* potent M4 attack-surface than aggregate-capability metrics would predict. If the conjecture holds, M4 attack-surface measurement and defensive scaffolding could be sharpened by targeting the inference effect rather than capability writ large, and the M4 amplification reading becomes axis-decomposed in the same shape that the static M1 / M2 / M3 / M4 facet-recognition is axis-decomposed. Discussion-grade open recognition; primary home for the decomposition is the wrapping segment.
 - **Cross-probe convergence provenance.** The three-operation pattern emerged from the 2026-05-09 class-coercion-wrapping integration cycle when uncommitted parallel work — `#disc-adversarial-coupling-pressure` (drafted via a different Opus instance) and `spike-strategic-self-coupling.md` (sister spike) — was found to converge structurally with the class-coercion construction. Provenance recorded in `msc/modularity-cycle-plan-2026-05-09.md` §1. (The literature-search disclosure proper lives in the Search Log above.)
+
+### Incidental audit gold (lift 2026-05-30)
+
+Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo auditors' working dirs, kept separate from the certified theory-fix findings. Orthogonal pedagogical / framing / figure / naming material. **Coverage:** as a late-authored Meta-Architecture II segment, only the deepest de-novo walk (773921, Gemini) reached it under its current slug — so this lift is thin and single-substrate by expectation, not by oversight. Substrate attribution from the audit dir.
+
+#### 1. Candidate Brief prose / pre-prose
+
+- **Modularity is a contested state, not a type** — the segment's load-bearing reframe, stated by the auditor as the thing to hold downstream: "an LLM (Class 3) can be forced into Class 1 behavior via strict W₁ wrapping; a constitutional democracy (Class 1) can be forced into Class 3 behavior via sustained adversarial pressure on its truth-checking institutions. Modularity is a contested state, not a type" (Gemini, AUDIT-WORKING-773921). A candidate Brief anchor.
+- **Operations as a dynamical system on architectural state.** "Defining operations by their derivative on $\kappa_{\text{processing}}$ ($\dot\kappa \lt 0$ for truthification, $\dot\kappa \gt 0$ for the others) turns political and institutional dynamics into a formal dynamical system on the architectural state space" (Gemini, AUDIT-WORKING-773921). Compact gloss of what M4 *is*.
+
+#### 2. Candidate Discussion
+
+- **The truthification / strategic-self-coupling dual stated plainly.** The auditor read the goal-belief-axis dual as the segment's high point: "Truthification (give up belief-pliability for reality-tracking) and Strategic Self-Coupling (give up action-pliability for commitment-credibility) are exact structural duals operating on opposite poles of the goal-belief axis" (Gemini, AUDIT-WORKING-773921). A candidate Discussion sharpening of the existing dual-relationships paragraph. *(The segment's own Working Notes mark this dual at discussion-grade and flag lifting to robust-qualitative as requiring derivation from primitives — keep that scope-mark on any promotion.)*
+
+#### 3. Follow-up items
+
+- (None surfaced beyond what the segment's Working Notes already track — the worked-example slot, the two sub-spike candidates, and the per-competence-axis amplification conjecture above already cover the auditor's curiosity items.)
+
+#### 4. Readers often ask / wonder
+
+- **The Soviet / Lysenkoism worked example.** The auditor singled out the queued worked-example slot (`spike-m4-worked-example-soviet-2026-05-24.md`) as "the most ambitious domain transfer the framework has attempted so far" — modeling political-goal corruption of biological science as a directed-separation failure ($\kappa \to 1$) leading to a persistence-condition death spiral (Gemini, AUDIT-WORKING-773921). Confirms reader appetite for the worked example already slotted in the Working Notes above.
+
+#### 5. Candidate figures
+
+- (No dedicated figure proposed for this segment in the reached audit.)
+
+#### Belongs elsewhere
+
+- **M4 as a unified vocabulary for institutional design / propaganda / behavioral economics.** The forward-vision claim: institutional design, propaganda analysis, and behavioral economics are "all just operations on $\kappa_{\text{processing}}$" — M4 as "the framework's theory of institutional and political evolution," breaking AAT "out of static analysis and into evolutionary dynamics" (Gemini, AUDIT-WORKING-773921). Aspirational reach for the field-positioning / framing layer, not a per-segment edit.
+
 - **Removed at `candidate` stage per FORMAT.md Gate 4.**
