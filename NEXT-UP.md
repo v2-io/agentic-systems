@@ -1,33 +1,36 @@
-# NEXT-UP — live handoff pointer (2026-05-29)
+# NEXT-UP — live handoff pointer (updated 2026-05-30)
 
 > [!note]
-> **Transient, and a pointer — not a navigator.** `PRACTICA.md` (strategy) / `TODO.md` (tactics) / `PROPOSALS.md` (structural moves) / `audits/STATUS.md` (audit routing) / `INTEGRATION-CLEANUP-TODO.md` (the big cleanup) remain authoritative; this file only names what is *hot* from the 2026-05-28/29 audit-gem-hunt + SP-landing run so a compaction or fresh session resumes the momentum. **Delete it once the queue below drains.**
+> **Transient pointer, not a navigator.** Authoritative homes: `PRACTICA.md` (strategy) / `TODO.md` (tactics) / `PROPOSALS.md` (structural moves) / `audits/STATUS.md` (audit routing) / `INTEGRATION-CLEANUP-TODO.md` (the big cleanup) / `CHANGELOG.md` (narrative). This file only names what is *hot* so a compaction or fresh session resumes momentum. **Delete once the queue drains.**
 
-## The disposition (read this first)
+## Hottest thread — the audit-gold two-track
 
-The recent work is a **qualitative gem-hunt over the audit backlog**: audit findings are stale, mostly-unverified *hints*, read with fresh eyes for un-captured meat/gems that improve the theory in **strength / wisdom / beauty**. The hard constraint is **non-loss** — never bury math or prose we would have to re-derive or re-create. Working disciplines that earned their place this run (inherit them):
+**Discovery (2026-05-30).** The de-novo audit process yields two intertwined outputs: (1) *certified findings* — theory-fixes, the fast queue, already handled; and (2) **incidental orthogonal gold** in the per-segment "wandering thoughts" / §14 ideation — pedagogical framing, analogies, candidate figures, naming, forward-vision, aspirational reach (Gemini especially: reach that sometimes becomes real *because* imagined). This gold has been pooling unrouted in `audits/AUDIT-WORKING-*/`. It belongs **per-segment** — lifted into the segment's Working Notes, eventually promoted to its Brief / Discussion — **not** a separate catalog. The early finding-vs-framing *conflation is itself signal* and must be preserved, not sanitized.
 
-- **Verify against current canon first-hand.** Audit/tracker dispositions are *drifted proxies* — across all 12 audits gem-hunted, every flagship finding had moved out from under its "still real" label (resolved by a later cycle). Re-grep; do not trust labels.
-- **Strengthen before softening**; a "tighten the claim" finding usually wants the claim *made true*, and on close reading sometimes reverses (SP-28 became a clarification, not a tightening).
-- **Lint must *gate* the commit, not run beside it.** (Got bitten once this run; caught + amended.)
-- Full stance: project memory `feedback_audit_findings_as_gem_hints`; `doc/audit-routing-instructions.md`; `INTEGRATION-CLEANUP-TODO.md`.
+**Validated by pilot — commit `7594391`.** `#result-persistence-condition` swept: cross-audit gold lifted into its WN in six categories (Brief-prose · Discussion · follow-ups · readers-ask · figures · belongs-elsewhere), deduped across substrates and attributed. Standouts: a transient-adequacy *third* condition $1/\alpha \lt T_{\text{tolerance}}$; Gemini's crèche/nursery reading $\to$ `04-eli-core`; "adding developers *accelerates* collapse"; a $2\times2$ two-gate figure two substrates asked for; four substrates praising the existing Brief as a Feynman exemplar.
 
-## Next up (live queue)
+**Filing convention — clarifies dirs by degrees.** As each segment is swept, its *dedicated* source-note moves into a per-dir `audits/AUDIT-WORKING-<id>/.integrated/`; each dir's top level then shows only still-to-sweep notes, and graduates once empty. **Match by content, never by note-number** — the same segment was filed #15/#20/#21/#22/#23/#29/#30/#32 across audits. Move ONLY the exact segment; the adjacent persistence-*family* segments are distinct and stay.
 
-**Joseph's calls — surfaced, ready on his steer:**
+**Plan / live queue for this thread:**
+- **Flow-fix first (stop the influx, then empty the pool):** proposed changes to `doc/de-novo-audit-instructions.md` so future audits route incidental gold per-segment immediately, separate from certified findings, in the six-category structure. *[in progress 2026-05-30]*
+- **Then the sweep:** segment-by-segment lift across the rest; agents, pre-indexed (6 of 21 dirs are partial / naming-only / predictions-only — skip). Effort ~20–50 min/segment (hub segments worst-case).
+- **Open decisions:** batch-file dirs (451729 / 471203 / 613842 / 963715 hold notes inside multi-segment batch files — leave-until-fully-swept vs. split, lean leave); the **Brief-as-section** FORMAT move (a Brief between title and Formal Expression, absorbing today's `Findings#brief`) — well-supported, Joseph's call; per-dir `.integrated/` vs. top-level mirror (chose per-dir; redirectable); taxonomy = your 1–5 + agent's *Candidate figures* + a confusion-vs-placement split.
+- **Gold-dir gate** still stands for anything beyond this agreed sweep.
 
-- **SP-27** — introspective-fork-undetectability: lossy non-injective $\phi$ ($M_t=\phi(\mathcal{C}_t)$) means a continuity-break is not a measurable event on the agent's *own* accessible $\sigma$-algebra — the structural reason the Three Deaths are *experienced*, not merely suffered. Verified-real gem; **Part-I ↔ Part-IV (moral-core) bridge → his placement/framing call.** → `PROPOSALS.md` SP-27.
-- **SP-29** — `#disc-infrastructure-as-active-monitor` meta-segment candidate (audit-193847 B6). **Gated:** verify the constituents first-hand (§13 chronic-trauma, §31 the $\Sigma{:}O$ richness ratio, §42 forced-forgetting, the 7-ladder dashboard) **and check against `~/src/practica`** before landing — high over-claim risk. → `PROPOSALS.md` SP-29.
-- **D-1 / D-2 / D-3** — the *largest* debt lever: the integration-cleanup (~44 canon→internal-artifact references, the sim/empirical class, the unverified 2026-05-12 bulk-64, missing citation infrastructure). Gated on **D-1** (corrected-principle wording), **D-2** (`.integrated`/`.archived` wipe semantics/timing/scope), **D-3** (the predecessor-abdication encoding). **Ratifying D-1 unblocks the G2 per-segment triage** — the real debt-wipe. → `INTEGRATION-CLEANUP-TODO.md`.
-- **Gold dirs** — `audits/AUDIT-WORKING-*` (de-novo first-encounter cognition; "the gold"). Standing **consult-Joseph gate** before any processing / mining / `.integrated` move. → `audits/README.md`.
+## Other open threads (Joseph's calls)
+- **SP-27** — introspective-fork-undetectability; Part-I ↔ Part-IV (moral-core) bridge, his placement/framing call. → `PROPOSALS.md`.
+- **SP-29** — `#disc-infrastructure-as-active-monitor` meta-segment candidate; gated: verify constituents first-hand + check `~/src/practica`. → `PROPOSALS.md`.
+- **D-2** — wipe of `spikes/.integrated/` + `.archived/` (semantics / timing / scope); G2 de-risked it but the bulk-64 is still un-discharged. → `INTEGRATION-CLEANUP-TODO.md`.
+- **G3** — citation infrastructure / `ref/` reconciliation; publication-critical-path. → `INTEGRATION-CLEANUP-TODO.md` §G3.
 
-**Self-contained — executable without a decision (good for autonomous momentum):**
+## Self-contained — no decision needed
+- **Standalone-backlog gem-hunt:** the `.integrated/MANIFEST.md` + `pending-findings-*.md` backlog, not yet done under the verify-first lens. → `audits/STATUS.md`.
+- **Research-seeds** S31–S41 in `audits/polish-and-sentiment-ledger.md` (each gated on a per-item re-check).
+- **FORMAT `depends:` forward-ref field** (`strengthens:` / `forward-ref:` separating logical-prerequisite from forward-pointer). → `TODO.md` §"Editorial hygiene".
 
-- **Standalone-backlog gem-hunt.** The 12 top-level `audit-findings-*.md` are gem-hunted (two waves; trails in `audits/.gem-hunt-trail/`). *Not yet* done under the same verify-first lens: the `audits/.integrated/MANIFEST.md` + `pending-findings-*.md` standalone backlog. → `audits/STATUS.md`.
-- **Research-seeds** in `audits/polish-and-sentiment-ledger.md` (S31–S41). Graduate-watch: S11 (Tier-3 prevalence), S14 (Cox-necessity for `#deriv-graph-structure-uniqueness`), S22-D.3 (correction-capacity-collapse — *verified un-subsumed*), S39 (AI step-vs-exponential cognitive load), S40 (goal-blind retrieval; converges with S32). Each gated on a per-item first-hand re-check.
-- **FORMAT `depends:` forward-ref field** — convergent hygiene (audit-613842 + 472913 + the lint eq-tag item): a `strengthens:` / `forward-ref:` field separating logical-prerequisite from forward-pointer; would make the dependency DAG acyclic and encode strengthen-before-soften structurally. → `TODO.md` §"Editorial hygiene".
-- **Graduation.** `audit-384279-FINAL` and `audit-773921-FINAL` are *routed, not graduated*; they move to `.integrated/` once the gold-dir gate + residual spike proposals settle. → `audits/STATUS.md`.
+## Landed 2026-05-30 (full narrative in CHANGELOG)
+D-1 ratified + D-3 resolved (`0ca46bf`, `b7d9b9c`); **G2 reference-cleanup** — canon→artifact integration across 38 segments + buried-gold landings (bridge-lemma Theorem 2, the $2\delta+3\sin\delta$ counterexample, two-Kalman closed form, $\alpha\approx0.118$) (`9099e58`); `bin/lint-md` conservative bare-Greek `--fix` (`aa75c7a`); governing-doc banners truthified (`36d1242`); `spike-routing.md` hard-wrap reflow 241→1 (`9686985`); audit-gold pilot (`7594391`).
 
-## Landed this run (for context)
+## Disposition that still governs audit-findings work
 
-Two-wave gem-hunt across 12 audits + the SP-26 sweep (trails: `audits/.gem-hunt-trail/`). Canon landings: **SP-24** (`#def-agent-environment` reframed as *coupling*-structure + umbrella `agent` LEXICON entry), **SP-25** (`#disc-sandbox-evaluation-ceiling` promoted), **SP-26** (`#disc-anti-collapse` discipline — plant + Meta-Architecture I segment + recall + anchor back-refs, fully instrumented), **SP-28** (agency-contrast channel clarification in `#scope-agency`), two verified math-error fixes (`#form-strategy-complexity-cost` table cell; `#def-unity-dimensions` $U_M$ normalization), S29 polish. Infrastructure: evergreen `audits/STATUS.md` created; the dated `msc/audit-backlog-triage` retired to `.integrated/`; project memory `feedback_audit_findings_as_gem_hints` written.
+Audit findings are stale, mostly-unverified *hints*: verify against current canon first-hand (dispositions drift); strengthen before softening; lint *gates* the commit; non-loss is the hard constraint. Full stance: project memory `feedback_audit_findings_as_gem_hints`; `doc/audit-routing-instructions.md`.
