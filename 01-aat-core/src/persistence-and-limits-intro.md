@@ -42,3 +42,24 @@ The flow of the chapter: deliberation cost ( #der-deliberation-cost) → gain-to
 - Three moves the intro tries to surface as the chapter's most interesting content: (1) the sector condition's generalization of the linear case, preserving qualitative content without committing to functional form; (2) the structural-vs-task-adequacy split, which is non-obvious and load-bearing for domain transfer; (3) the gain-sector bridge, which derives $\alpha$ from the gain principle and demotes an opaque postulate to a property.
 - The scope-coda paragraph addresses #scope-agent-identity, which sits at the end of Part I Ch.4 because its dependencies span chapters. The intro names this rather than letting the segment appear unmotivated.
 - The closing "where Part I's machinery resolves into operational results" line is meant to register the chapter's role as climax without overstating. The persistence condition is the single most-cited result in the framework downstream; Part I works because this chapter works.
+
+### Incidental audit gold (2026-05-30 sweep)
+
+Cross-audit "wandering thoughts" / §14-ideation lifted from the de-novo auditors' working dirs (`audit-routing-instructions.md` §8), deduplicated across substrates and lightly attributed. Orthogonal pedagogical / framing material staged for a later Brief/Discussion-promotion pass — kept separate from certified theory-fix findings. Coverage on this intro: three substrates reached a digested reflection (Claude AUDIT-WORKING-384279; Codex/Claude AUDIT-WORKING-526815; Gemini AUDIT-WORKING-773921).
+
+#### 1. Candidate Brief prose / pre-prose
+
+- The bathtub scaffold already in the segment was independently named the clearest possible physical intuition by the auditors, with the analog spelled out in convergent terms: water level = mismatch, inflow = drift $\rho$, drain = correction $\alpha$, rim = capacity $R$, overflow = persistence failure (Gemini, AUDIT-WORKING-773921; Claude, AUDIT-WORKING-384279 — "the canonical respectful-pedagogy mental-model-first artifact"). Gemini extended the analog to *task adequacy* specifically: "the water is low enough that I can still see the bottom of the tub" — a candidate gloss the figure caption does not yet carry (Gemini, AUDIT-WORKING-773921).
+- Survival-as-burn-rate framing for the thermodynamic shadow: "survival [is] not a state you achieve, but a sustained burn rate of information acquisition — if the channel closes, you die at rate $\rho$" (Gemini, AUDIT-WORKING-773921). Tightens the existing thermodynamic-shadow paragraph toward a quotable opener.
+
+#### 2. Candidate Discussion
+
+- The field-contribution framing converged across substrates as the intro's strongest one-liner: the persistence condition "unifies biological extinction, corporate bankruptcy, and control-system instability under a single geometric inequality" (Gemini, AUDIT-WORKING-773921). Already present in spirit in the domain-agnostic paragraph; the three-noun compression is sharper than the current prose.
+
+#### 3. Follow-up items
+
+- **Below-threshold phrasing.** Two substrates flagged the line "below the threshold, mismatch grows without effective bound (up to $R$)" as over-stating what the sector argument proves: a sector guarantee characterizes behavior *inside* the operating region; outside $R$, behavior is un-guaranteed rather than known-to-grow. Suggested rephrasing: "the sector proof no longer guarantees bounded mismatch inside the operating reserve" unless the later theorem actually proves escape (Codex/Claude, AUDIT-WORKING-526815). Flagged as an intro-level phrasing issue, not a result-level defect — but it should be reconciled against what `#result-sector-condition-stability` / `#deriv-sector-condition` actually prove. *(Routed here as framing follow-up; if the downstream theorem turns out NOT to prove escape, this is a scope-honesty fix, not just wording.)*
+
+#### 5. Candidate figures
+
+- **Branching chapter-roadmap diagram (not a theorem diagram).** The bathtub figure scaffolds the *math*; a separate, complementary figure would scaffold the *chapter*: linear ODE → sector generalization → (structural persistence + information cost) in one branch, task adequacy comparing bounded mismatch against a domain threshold in a parallel branch, with the path exiting to structural adaptation when bounded mismatch cannot be lowered inside the model class. The auditor's explicit note: "this diagram should be a chapter map, not a theorem diagram" (Codex/Claude, AUDIT-WORKING-526815).

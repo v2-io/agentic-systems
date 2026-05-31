@@ -120,7 +120,18 @@ The A2' form $\delta^T F \geq \alpha \lVert\delta\rVert^2$ is the sector conditi
 - Landing-context provenance: this segment was carved out of #deriv-sector-condition in the 451729 D.1 Gate verification cycle (2026-05-20) to resolve a depends-graph topology issue — #der-gain-sector-bridge and #deriv-stochastic-non-exit both already depended on #deriv-sector-condition, so making the Lyapunov-derivation segment depend on its own A2'-form-consumers would have created cycles. The sub-scope $\alpha$/$\beta$ partition reflects the strengthening trail recorded in `spikes/spike-a2-prime-strengthening.md` — the analysis that ruled out a universal A2' derivation and identified the five operator families where the bridge is structural.
 - The companion-property partition (A1, A2', A3 together) is held here as the canonical setup; alternate orderings or sub-scope refinements (e.g., the $\alpha_1$/$\alpha_2$/$\alpha_3$/$\alpha'$ ladder accumulated across `#deriv-variational-sector-condition`, `#deriv-adaptive-gain-dynamics`, `#deriv-fisher-whitened-update-rule`) live in their respective segments and inherit this form by reference rather than re-stating it.
 
----
+### Incidental audit gold (2026-05-30 sweep)
+
+Cross-audit "wandering thoughts" / §14-ideation lifted from the de-novo auditors' working dirs (`audit-routing-instructions.md` §8). Orthogonal framing material staged for a later Brief/Discussion-promotion pass — kept separate from certified theory-fix findings. Thin coverage on this segment (one digested reflection reached it: Claude, AUDIT-WORKING-384279); the gold here is methodological-positioning rather than pedagogical, but worth preserving.
+
+#### 2. Candidate Discussion
+
+- The auditor read this segment as the framework's *methodological-honesty exemplar* — the operator-family classification (mapping the sub-scope $\alpha$ derivation forms to Rockafellar / Bauschke–Combettes 2017 / Baillon–Haddad) "names AAT's reach into monotone-operator theory with humility … AAT's distinctive content sits as specialization + repurposing rather than strict generalization." Candidate framing-prose for *why* the sub-scope partition is structured the way it is: it is the template for how scope-exit and prior-art positioning should be done (Claude, AUDIT-WORKING-384279).
+- The **Lipschitz-floor scope-exit** (sub-scope $\beta$ rule-based / discontinuous correction) was singled out as exemplary: it is not merely "verify per-system" but a *structural* scope-exit for contraction-based bridge-lemma analysis, with a concrete counterexample and the right external apparatus (van der Schaft & Schumacher 2000, hybrid-dissipative). Flagged as a model other segments' scope-exits should imitate (Claude, AUDIT-WORKING-384279).
+
+#### 3. Follow-up items
+
+- **Respect the $\kappa(P^-)$ caveat downstream.** The condition-number caveat on the matrix-Kalman → Euclidean-A2' transfer ("degraded by the condition number") was confirmed correct; the watch-item is that downstream segments invoking A2' via this transfer should carry the caveat rather than assuming the clean Euclidean form (Claude, AUDIT-WORKING-384279).
 
 [^lure1957]: Lur'e, A. I. (1957). *Some Nonlinear Problems in the Theory of Automatic Control*. Gostekhizdat. Original sector-condition framework for absolute stability.
 [^nesterov2004]: Nesterov, Y. (2004). *Introductory Lectures on Convex Optimization*. Springer. Theorem 2.1.10 (strong convexity characterized by gradient monotonicity).
