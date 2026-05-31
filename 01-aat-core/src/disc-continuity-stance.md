@@ -57,3 +57,33 @@ The earlier alternative framing — demoting stance to a purely *deployment-leve
 - *Reconsideration resolved.* The 2026-05-04 `recommended-agent-ontology.md` proposal to demote stance from an orthogonal structural axis to a purely deployment-level, tier-gated concern is resolved against by #deriv-self-actuation-grounding: the orthogonality is structural and *derived* (stance = a terminal non-objective invariant the self-actuation operator structurally cannot reach), with the tier-correlation an empirical overlay on — not a replacement of — the structural axis. The segment stays `type: discussion`; it is not retyped to `norm`. `msc/naming/mini-lexicon-todo.md` §13.11 can be closed accordingly.
 - *LEXICON section under review.* The current LEXICON's `## Continuity` section organization conflates three distinct objects (persistence senses, stance axis, ELI scope condition) — see TERMINOLOGY-TODO §F. The five stance terms (`indifferent`, `task-terminal`, `instrumentally-continuous`, `morally-continuous`, `negotiated`) point to this segment as their `primary_source` once it lands.
 - *Open: rigorous boundary cases.* What is the stance of a serverless function with no persistent state but explicit retry-on-failure? Of a Kalman filter inside a long-running service? Of an LLM session under reconstruction adequacy ( #obs-context-turnover, the episodic-persistence analog)? These cases test whether the five-value decomposition is the right shape or whether stance is better treated as a continuous gradient with named landmarks.
+
+### Incidental audit gold (lift 2026-05-30)
+
+Cross-audit "wandering thoughts" / §14-ideation, deduplicated across substrates and lightly attributed. Orthogonal pedagogical / framing material, kept separate from the certified theory-fix findings. **Coverage:** this is a newer segment; only 2 dirs carry a dedicated reflection (526815, 773921) — most audits in the contributing set predate it or batched past it. Substrate attribution inferred from voice where not explicit.
+
+#### 1. Candidate Brief prose / pre-prose
+
+- The segment's core distinction in one line: it "separates two questions that are easy to collapse — whether an agent *can* persist, and how the agent *values* its own continuation." "Can persist" and "cares to persist" are different predicates (Claude, AUDIT-WORKING-526815; Claude, AUDIT-WORKING-773921).
+
+#### 2. Candidate Discussion
+
+- **Decoupling fitness (RL reward) from persistence (Lyapunov stability) clears away decades of confused RL philosophy** *(strong framing).* Treating reward and survival as the same thing is the standard RL conflation; the stance axis pulls them apart, so "a CI/CD pipeline (which *wants* to terminate) and a biological organism (which *wants* to persist) use the same math." Read as "one of AAT's most important conceptual contributions" (Claude, AUDIT-WORKING-773921). Candidate Discussion line.
+- **Survival must be an architectural invariant, not an objective.** The self-actuation-grounding consequence stated vividly: "you cannot simply tell an advanced AI 'your goal is to survive,' because an agent capable of rewriting its goals will find an easier goal" — survival must sit *outside* $O_t$ as a non-revisable invariant on the adaptive substrate. The segment already makes this structural claim; the auditor framing sharpens *why it matters for design* (Claude, AUDIT-WORKING-773921).
+
+#### 3. Follow-up items
+
+- **The "formally independent / orthogonal" phrasing may overstate the relationship.** Continuity stance and persistence *capacity* are conceptually separable, but $O_t$ is not causally inert: a continuity-valuing objective changes policy, monitoring, redundancy, and resource allocation, which can change the actual persistence bound. Suggested softening: "the *valuation* of persistence is not identical to the *dynamics* of persistence" rather than implying no formal coupling in realized agents (Claude, AUDIT-WORKING-526815). Recorded as a candidate phrasing-tightening; routed to the certified-findings track for adjudication.
+- **Boundary cases echo the existing open Working Note.** Does a serverless lambda with auto-retry constitute an *instrumentally-continuous* stance even though $M_t$ is wiped each run? (Claude, AUDIT-WORKING-773921; Claude, AUDIT-WORKING-526815 raises the same Kalman-in-a-service case already flagged above.) Independent convergence on the boundary-case Working Note already present.
+
+#### 4. Readers often ask / wonder
+
+- Whether the five-value axis is the right shape, or whether stance is better modeled as a continuous gradient with named landmarks — both substrates noted the taxonomy is discussion-grade and treated the named stances as vocabulary rather than a derived structural theorem (Claude, AUDIT-WORKING-526815).
+
+#### 5. Candidate figures
+
+- **Orthogonal-axis picture.** Horizontal = capacity-to-persist (from the adaptive dynamics / persistence condition); vertical = valuation-of-continuity (from $O_t$), with the five stances as landmarks on the vertical axis. Add a *dashed* feedback arrow from the $O_t$ axis back to the persistence bound (a continuity-valuing objective affecting policy/redundancy/resource-allocation) so the picture shows the conceptual separation *and* the realized coupling at once (Claude, AUDIT-WORKING-526815).
+
+#### Belongs elsewhere
+
+- **ELI objective-design caution (→ `04-eli-core/`).** An ELI whose objective is written $V(s) = \text{Reward}(s) + \text{Alive}(s)$ is "structurally vulnerable to self-actuation drift" — the continuity requirement must be placed *outside* $O_t$, per the self-actuation grounding no-go. A concrete design constraint for the morally-continuous stance in the ELI volume (Claude, AUDIT-WORKING-773921).

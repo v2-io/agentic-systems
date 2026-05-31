@@ -72,3 +72,37 @@ Organizations or AI agents with true Pareto structure — where no scalarization
 - Compound objectives (multiple simultaneous criteria) might be modeled as terminal AND-nodes in $\Sigma_t$, keeping $O_t$ always simple (one evaluation per terminal). Whether this works for genuinely incommensurable objectives (safety vs. speed) is open — a vector-valued $V_{O_t}$ or Pareto formulation might be needed.
 - The trajectory functional is real-valued, which assumes all objectives are commensurable on a single scale. This is standard in decision theory (von Neumann–Morgenstern) but is a genuine restriction for multi-objective agents. Currently acknowledged, not resolved.
 - $O_t$ can change over time — objectives evolve. The *rate* of objective revision ($\nu_O$) is typically much slower than strategy revision ($\nu_\Sigma$), which is much slower than epistemic update ($\nu_M$). This timescale separation is an empirical observation, not a derived result.
+
+### Incidental audit gold (lift 2026-05-30)
+
+Cross-audit "wandering thoughts" / §14-ideation, deduplicated across substrates and lightly attributed. Orthogonal pedagogical / framing material, kept separate from the certified theory-fix findings. **Coverage:** 12 dirs carry a dedicated or batched reflection (193847, 266847, 361742, 451729, 471203, 526815, 584721, 773921, 829314, 849201, 963715, plus 613842's agency-lift batch). Substrate attribution inferred from voice where not explicit. *Early finding-vs-framing conflation preserved as signal.*
+
+#### 1. Candidate Brief prose / pre-prose
+
+- The revealed-preference defense, restated as a hook: scalar $V_{O_t}$ "is not an imposition on reality; it is an *extraction* of the implied reality of action — the moment the agent steps on the gas or hits the brake, it has mathematically resolved the tradeoff. The agent might not know the weights consciously, but its behavior proves they exist" (Gemini, AUDIT-WORKING-829314; the von-Neumann–Morgenstern lineage noted at Claude, AUDIT-WORKING-361742; Gemini, AUDIT-WORKING-193847).
+
+#### 2. Candidate Discussion
+
+- **$V_{O_t}^{\min}$ is the paperclip-maximizer / cancer-cell distinction** *(strong aspirational reach, two substrates).* The satisfaction threshold is "philosophically massive": a biological organism has a $V_{O_t}^{\min}$ ("stay alive, stay fed") and so *can rest* and decouple from the environment; an unconstrained reward-maximizer has none — "it will consume the entire universe to get one more point of reward; it can never rest." An agent (or consciousness infrastructure) built without an explicit $V_{O_t}^{\min}$ "is structurally equivalent to a cancer cell — it will expand until it destroys its host environment" (Gemini, AUDIT-WORKING-193847; Gemini, AUDIT-WORKING-829314). A candidate Discussion line and a bridge to the satisfaction-gap segment (if the gap can never reach zero, the agent is in permanent terminal inadequacy).
+- **$V_{O_t}^{\min}$ formalizes "ambition / drive" as distinct from "intelligence" ($\mathcal{T}$, $\alpha$)** *(non-obvious, useful).* "The objective acts as the thermostat setting for the entire learning engine of Section I": raise $V_{O_t}^{\min}$ and the agent keeps searching; lower it and it stops adapting early. So an agent can be "highly intelligent but unmotivated (high $\mathcal{T}$, low $V_{O_t}^{\min}$)" or "highly motivated but stupid (low $\mathcal{T}$, high $V_{O_t}^{\min}$)" — the framework gives distinct variables for each trait (Gemini, AUDIT-WORKING-829314). Candidate Discussion.
+- **The threshold bridges satisficing (Simon) and optimizing (RL).** Standard RL agents are never satisfied; $V_{O_t}^{\min}$ "makes room for agents that just want to hit a threshold and stop," matching biological homeostasis and software ("get the tests to pass") far better than infinite maximization (Gemini, AUDIT-WORKING-193847; Claude/Gemini, AUDIT-WORKING-266847; Gemini, AUDIT-WORKING-829314). Candidate Discussion connecting bounded rationality to the threshold.
+
+#### 3. Follow-up items
+
+- **The revealed-preference argument may overstate what action implies.** Choosing one action over another imposes at most a *local* choice relation at that moment; it does not by itself imply a *total order* or a real-valued utility over *all* trajectories. The scalar interface is a legitimate scope restriction, but the defense should name the additional completeness / continuity / independence assumptions needed for a real-valued representation (Claude, AUDIT-WORKING-526815). Recorded as a candidate Epistemic-Status sharpening; routed to the certified-findings track for adjudication.
+- **The functional domain "trajectories" is under-specified.** Examples are written over terminal/time-indexed states ($s_T$, $s_t$) while the domain is "trajectories"; AAT should state whether $\tau$ is a world-state trajectory, a chronica prefix, an action-observation trajectory, or a complete-state trajectory (Claude, AUDIT-WORKING-526815).
+- **The AND-node workaround preserves thresholds but not tradeoff magnitudes** inside the feasible region; downstream diagnostics must not quietly regain scalar precision for genuinely Pareto-structured cases (Claude, AUDIT-WORKING-526815; the structural-survives / diagnostic-degrades split praised as honest at Claude, AUDIT-WORKING-584721 and elsewhere).
+
+#### 4. Readers often ask / wonder
+
+- How does the framework handle an objective evaluated over an *infinite* horizon when the agent has finite computation? (Claude, AUDIT-WORKING-849201 — answered downstream by `#def-value-object`'s horizon $N_h$, worth a forward pointer.)
+- What happens if the agent's $V_{O_t}^{\min}$ is *dynamically adjusted* by the environment — "lowering your standards when things get tough"? (Gemini, AUDIT-WORKING-829314.)
+- For *self-actuated* agents (where $O_t$ is set by the agent itself), the timescale-separation argument for scalarization delegates the weight-choice to "a slower process (the principal, the operator, the value system)" — which raises a meta-question about how the scalarization is itself produced (Claude, AUDIT-WORKING-584721).
+
+#### 5. Candidate figures
+
+- **The objective funnel.** Many objective representations (point target / region / constraint set / utility / trajectory functional) flow through a single scalar evaluation surface that produces values for comparison and threshold tests; a *side channel* shows vector/Pareto objectives that do not fit through the funnel unless scalarized or decomposed into terminal constraint tests — making both the unification and its one genuine exclusion visible at once (Claude, AUDIT-WORKING-526815).
+
+#### Belongs elsewhere
+
+- **The single-interface commitment as the structural basis for the reward-hacking and self-actuation no-gos (→ `#deriv-self-actuation-grounding` / `#deriv-reward-channel-learning-no-go`).** Forcing $O_t$ to a narrow scalar interface sets up two structural no-gos: an agent cannot ground its own terminal goals, and (strengthening Cohen 2022 via Pearl's Causal Hierarchy Theorem) cannot distinguish "doing the task" from "hacking the reward channel" from on-policy data alone — relocating reward hacking from "we need a better loss function" to "we need a different causal architecture" (Claude, AUDIT-WORKING-773921). The segment already states the single-interface→no-go link; the reward-hacking framing develops the appendix derivations, not this formulation.
