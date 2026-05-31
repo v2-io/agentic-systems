@@ -203,3 +203,30 @@ holds in both continuous time (via #deriv-sector-condition) and discrete time (v
 - Non-stationary gain: when $\eta^\ast$ varies over time (as in Kalman filtering with growing $P^-$), the contraction factor $\lambda$ changes per step. The ultimate bound still holds if $\sup_k \lvert\lambda_k\rvert \lt 1$, but the transient analysis requires time-varying contraction arguments.
 - Heavy-tailed disturbances: DA.1S assumes finite second moment. Sub-Weibull or heavy-tailed $w_k$ would need truncation arguments or alternative Lyapunov functions. These extreme cases are better modeled as triggers for structural adaptation ( #result-structural-adaptation-necessity).
 - Non-i.i.d. disturbances: correlated $w_k$ (e.g., Markov environment noise) weakens the supermartingale argument. The contraction still holds per-step, but the steady-state bound requires mixing conditions. This connects to the adversarial coupling analysis in #der-adversarial-destabilization.
+
+### Incidental audit gold (gold-lift, 2026-05-31)
+
+Cross-audit ideation harvested from de-novo auditors' working dirs, deduplicated and lightly attributed. Orthogonal framing / pedagogy; off-ramp (scalar-vs-vector bound confusion) at the end. **Coverage:** one substrate reached a dedicated digested reflection (Gemini, AUDIT-WORKING-193847); a batched discrete/persistence walk (Codex, AUDIT-WORKING-613842) read it as part of the persistence cluster and judged it "doing serious work" with good scope honesty (its certified concern there is about the *downstream template/result* segments compressing the Model-S region-awareness, not this appendix).
+
+#### 1. Candidate Brief prose / pre-prose
+
+- **The discretization penalty as "measure twice, cut once."** In a continuous world you can pull the hammer back mid-swing as the error crosses zero; in a discrete event-driven world the action commits the agent to the full consequence of the swing before the next observation arrives — so an over-high gain over-corrects and oscillates. A plain-language anchor for the no-overshoot bound $\eta^\ast \lt 2/c_{\max}$ (Gemini, AUDIT-WORKING-193847).
+
+#### 2. Candidate Discussion
+
+- **Latency bounds confidence, independent of epistemic certainty.** The no-overshoot condition means the *time between action and observation* caps the maximum safe update gain: a high-latency infrastructure forces the agent to lower $\eta^\ast$ even when its model is perfectly certain ($U_M \approx 0$). "Confidence is not just a function of epistemic certainty; it is strictly bounded by the temporal resolution of the feedback loop." A consequential framing of the discrete bound for agent/infrastructure design (Gemini, AUDIT-WORKING-193847).
+- **The $1/\nu$ discretization penalty as a cost of event-driven agency.** The exact asymptotic gap $V_{ss} - V_c \approx n\sigma_w^2 c_{\max}^2 / (4 c_{\min}^2 \nu)$ shows the discrete system is *systematically worse* than its continuous approximation by a factor scaling as $1/\nu$ under stochastic disturbance — high-frequency agents pay a smaller penalty. Names a real cost the continuous "fluid limit" hides; candidate to surface as the segment's distinctive practical result (Gemini, AUDIT-WORKING-193847).
+
+#### 3. Follow-up items
+
+- **Heavy-tailed $\Rightarrow$ structural adaptation.** If $w_k$ has infinite variance (Cauchy-style "black swan"), the mean-square Lyapunov proof fails entirely — implying such environments cannot be survived by parametric adaptation ($\eta^\ast$ tuning) and *must* be met by structural adaptation (expanding $R$). Sharpens the existing heavy-tailed Working Note above into a routing claim toward `#result-structural-adaptation-necessity` (Gemini, AUDIT-WORKING-193847).
+
+#### 4. Readers often ask / wonder
+
+- **"Aren't Lipschitz-bounded gradient descent and sector-bounded control theory different things?"** The segment's quiet unification answer: they are the same physical reality at different temporal resolutions — gradient descent needs the stronger discrete Lipschitz bound (DA2'b) to prevent overshoot; continuous control needs only the directional sector bound (DA2'a) — surfacing this explicitly would help a reader coming from either side (Gemini, AUDIT-WORKING-193847).
+
+#### Off-ramp (NOT gold) — routed for adjudication
+
+- **Scalar-vs-vector contraction-bound presentation is correct but confusing.** Gemini (AUDIT-WORKING-193847): the general (vector) stability condition $\eta^\ast \lt 2c_{\min}/c_{\max}^2$ and the scalar/colinear simplification $\eta^\ast \lt 2/c_{\max}$ disagree when $c_{\min} \ll c_{\max}$, and a reader can take this as a contradiction. The reconciliation: the general bound combines worst-case minimum alignment ($c_{\min}$) with worst-case maximum magnitude ($c_{\max}$) taken *independently* — necessary in high dimensions (orthogonal overshoot is possible) but overly pessimistic in 1D, where Cauchy-Schwarz is tight and all error is colinear overshoot. Suggested: add a sentence stating the general $\lambda_{\text{eff}}^2$ bound is conservative and that the gap between the two forms is the dimension artifact, not an inconsistency. Presentation/scope-honesty, not a math error.
+
+---

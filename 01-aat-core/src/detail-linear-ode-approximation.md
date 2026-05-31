@@ -208,3 +208,31 @@ Under symmetric coupling ($\gamma_A \approx \gamma_B$), tempo advantage squares:
 - The vector ODE $d\delta/dt = -\mathcal{T}\delta + w$ assumes isotropic correction (same rate in all directions). For anisotropic agents (tempo tensor $\mathbf{T}$), the linear ODE generalizes to $d\delta/dt = -\mathbf{T}\delta + w$ with matrix exponential solutions and per-eigenvalue convergence rates. The per-dimension persistence condition ($\mathcal{T}_k \gt \rho_k / \delta_{\text{critical},k}$) from #result-per-dimension-persistence is the diagonal special case.
 - The norm-inequality subtlety (Section 1 above) propagates into the adversarial scaling law: the squared law ($b = 2$) is exact for $n = 1$ and a worst-case upper bound for $n \gt 1$. Whether this matters quantitatively for multi-dimensional adversarial dynamics has not been tested in simulation.
 - Model S's Ito-Lyapunov derivation assumes $\sigma_w$ is constant. When the noise scale depends on state ($\sigma_w(\delta)$, as in multiplicative noise models), the Ornstein-Uhlenbeck analysis no longer applies and the steady-state formula changes. The sector-condition results in #deriv-sector-condition handle additive noise only.
+
+### Incidental audit gold (gold-lift, 2026-05-31)
+
+Cross-audit ideation harvested from a de-novo auditor's working dir, lightly attributed. Orthogonal framing / pedagogy; off-ramp (steady-state tightness) at the end. **Coverage:** one substrate reached a digested reflection (Gemini, AUDIT-WORKING-193847), which read the segment as both pedagogical and rigorous and praised the failure-mode mapping.
+
+#### 1. Candidate Brief prose / pre-prose
+
+- **The "Linearity Illusion."** The linear approximation assumes $R \to \infty$ and therefore *cannot see* the structural-breakdown trigger — "linear math makes survival look easier than it is." A compact framing of why the linear ODE is the right *baseline* but the wrong *safety analysis*: it gives closed-form trajectories in friendly (convex / linear) environments against which the cost of nonlinearity can be measured (Gemini, AUDIT-WORKING-193847).
+
+#### 2. Candidate Discussion
+
+- **Dead zones as a *requirement for sanity*, not a defect.** The threshold effect at small $\lVert\delta\rVert$ (errors below sensor resolution go uncorrected, so the agent drifts) means absolute perfection is impossible for any finite-resolution agent — but more deeply, *correcting* a tiny error often costs more coordination overhead $C$ than the error itself costs, so a rational agent *builds* a dead zone. For an ELI: a zero-tolerance infrastructure would be paralyzing; "a mind that constantly updates its worldview based on microscopic sensor noise will consume all its tempo on pointless neuroses." Tolerance for minor mismatch as a design principle — vivid Discussion candidate (Gemini, AUDIT-WORKING-193847).
+- **Speed-quality substitutability and the $2.25\times$ tempo multiplier.** Since $\mathcal{T} = \nu \cdot \eta^\ast$, a 50% gain in speed *and* a 50% gain in quality compound to a $2.25\times$ tempo improvement — a clean illustration of why tempo is multiplicative in its two factors, with the (open) investment-strategy implication that balancing compute ($\nu$) against architectural quality ($\eta^\ast$) may beat pouring everything into one (Gemini, AUDIT-WORKING-193847).
+- **Nonlinear-failure-mode mapping.** The "when the linear approximation breaks down" section (dead zones, saturation, structural breakdown) was singled out as one of the clearest expositions of nonlinear control failure the auditor had read, with each mode mapped to a specific AI failure — candidate to foreground as the segment's pedagogical payload (Gemini, AUDIT-WORKING-193847).
+
+#### 3. Follow-up items
+
+- The existing anisotropic-correction Working Note (matrix tempo $\mathbf{T}$) was implicitly re-affirmed; no new follow-up beyond what is already noted.
+
+#### 4. Readers often ask / wonder
+
+- **"Is $\rho/\mathcal{T}$ a loose worst-case bound or the real steady state?"** See off-ramp — the answer (for constant drift it is exactly tight at $t \to \infty$) is worth stating so a reader does not under-weight it as a rarely-hit bound (Gemini, AUDIT-WORKING-193847).
+
+#### Off-ramp (NOT gold) — routed for adjudication
+
+- **The Model-D steady state $\rho/\mathcal{T}$ is exactly tight (not merely a worst-case bound) for constant directional drift.** Gemini (AUDIT-WORKING-193847): the norm-form $d\lVert\delta\rVert/dt \le -\mathcal{T}\lVert\delta\rVert + \rho$ is an inequality because Cauchy-Schwarz is tight only when the disturbance $w$ aligns with $\delta$ — but for a *constant* drift vector, a linear system's $\delta(t)$ eventually aligns with $w$, making the inequality an equality, so $\lVert\delta\rVert_{ss} = \rho/\mathcal{T}$ is the exact inevitable steady-state magnitude for any persistent directional drift (Model D, $n \gt 1$), not a rarely-hit bound. Suggested: clarify that the transient is strictly bounded by the inequality while the steady state is practically tight at $t \to \infty$. Scope/tightness clarification — strengthens the result's certainty rather than weakening it.
+
+---

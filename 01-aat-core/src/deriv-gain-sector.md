@@ -134,7 +134,7 @@ $$\delta^T F(\delta) \geq \eta^\ast \cdot c_{\min} \lVert\delta\rVert^2 = \alpha
 
 $$\delta^T F(\delta) \geq \alpha \lVert\delta\rVert^2 \quad \text{for } \lVert\delta\rVert \leq R$$
 
-evaluated at fixed equilibrium $M^\ast$. Local $(\alpha/\eta)$-strong convexity of $L$ on $\mathcal{B}_R(M^\ast)$ implies this one-point sector condition with $\alpha = \eta \mu$, but the converse fails: there exist losses satisfying the one-point sector condition that are *not* strongly convex on any neighborhood of $M^\ast$ (counterexample below).
+evaluated at fixed equilibrium $M^\ast$. Local $(\alpha/\eta)$-strong convexity of $L$ on $\mathcal B_R(M^\ast)$ implies this one-point sector condition with $\alpha = \eta \mu$, but the converse fails: there exist losses satisfying the one-point sector condition that are *not* strongly convex on any neighborhood of $M^\ast$ (counterexample below).
 
 **(B.4-ii) Two-point sector ⇔ strong convexity (full equivalence).** The two-point / incremental sector condition — DA2'-inc in #deriv-discrete-sector-condition and the bridge-lemma precondition in #form-composition-closure — is
 
@@ -146,13 +146,13 @@ Under this strengthened condition the iff holds:
 
 $$\text{Two-point sector with }(\alpha, R) \iff L \text{ is }(\alpha/\eta)\text{-strongly convex on }\mathcal{B}_R(M^\ast)$$
 
-with $\alpha = \eta \mu$ and $\mu = \inf_{\delta \in \mathcal{B}_R(M^\ast)} \lambda_{\min}(\nabla^2 L(M^\ast + \delta))$. The basin radius $R$ is the largest ball around $M^\ast$ where $\nabla^2 L$ remains positive definite.
+with $\alpha = \eta \mu$ and $\mu = \inf_{\delta \in \mathcal B_R(M^\ast)} \lambda_{\min}(\nabla^2 L(M^\ast + \delta))$. The basin radius $R$ is the largest ball around $M^\ast$ where $\nabla^2 L$ remains positive definite.
 
 **Proof of (B.4-ii).** The correction function for gradient descent is $F(\delta) = \eta \cdot \nabla L(M^\ast + \delta)$ (continuous-time form absorbing event rate $\nu$ into $\mathcal{T} = \nu \cdot \eta$). The two-point sector condition becomes:
 
 $$\eta \cdot (\nabla L(M^\ast + \delta_1) - \nabla L(M^\ast + \delta_2))^T (\delta_1 - \delta_2) \geq \alpha \lVert\delta_1 - \delta_2\rVert^2$$
 
-Dividing by $\eta \gt 0$ gives gradient monotonicity with modulus $\mu = \alpha/\eta$. By Nesterov 2004, Theorem 2.1.10, $L$ is $\mu$-strongly convex on $\mathcal{B}_R(M^\ast)$ iff this gradient monotonicity holds for all $x, y \in \mathcal{B}_R(M^\ast)$. The equivalence is bidirectional:
+Dividing by $\eta \gt 0$ gives gradient monotonicity with modulus $\mu = \alpha/\eta$. By Nesterov 2004, Theorem 2.1.10, $L$ is $\mu$-strongly convex on $\mathcal B_R(M^\ast)$ iff this gradient monotonicity holds for all $x, y \in \mathcal B_R(M^\ast)$. The equivalence is bidirectional:
 
 ($\Rightarrow$) Two-point sector with $(\alpha, R)$ yields gradient monotonicity with $\mu = \alpha/\eta$, hence strong convexity.
 
@@ -292,6 +292,37 @@ For optimal Bayesian updates, B1 holds by construction, making the full chain a 
 - For variational inference and other approximate methods, B1 is not guaranteed by optimality and must be verified per approximation scheme.
 - The adaptive-reserve factorization for gradient agents is $\Delta\rho^\ast = \eta\mu R - \rho$, with three controllable factors: gain $\eta$, curvature $\mu$, and basin width $R$. An agent is robust when $\eta\mu R \gg \rho$.
 - Full simulation code, raw traces, and intermediate analysis live in `spikes/spike-gain-sector-bridge-nonlinear.md`; the segment carries the parameters and outcomes that establish the result. Landing-context provenance: this segment consolidates `spikes/spike-gain-sector-bridge.md` (Kalman / bridge theorem) and `spikes/spike-gain-sector-bridge-nonlinear.md` (gradient equivalence and the six experiments).
+
+### Incidental audit gold (gold-lift, 2026-05-31)
+
+Cross-audit ideation harvested from de-novo auditors' working dirs, deduplicated and lightly attributed. Orthogonal framing / pedagogy material; off-ramp (already-resolved + dimensional-convention) at the end. **Coverage:** three substrates reached a digested reflection (Gemini, AUDIT-WORKING-193847; Claude, AUDIT-WORKING-584721; Codex, AUDIT-WORKING-742613), plus cross-cycle confirmation from Claude, AUDIT-WORKING-963715 and Gemini, AUDIT-WORKING-849201.
+
+#### 1. Candidate Brief prose / pre-prose
+
+- **"The Rosetta Stone between Control and ML."** Prop B.4's gradient-equivalence (under the corrected one-way reading) shows gradient descent on a strongly-convex loss is the same object as a Kalman filter on a linear system — both instances of the sector condition. A plain-language anchor for why the bridge matters: it lets control-theoretic persistence bounds apply to learning systems (Gemini, AUDIT-WORKING-193847).
+- **The $\alpha = \eta\mu$ factorization as the diagnostic.** It separates *agent-design* (gain $\eta$, tunable by the designer) from *environment-structure* (curvature $\mu$, basin width $R$, given by the world); adaptive reserve $\Delta\rho^\ast = \eta\mu R - \rho$ then reads as a three-factor budget, and "robustness = $\eta\mu R \gg \rho$" is the one-line takeaway (Claude, AUDIT-WORKING-584721).
+
+#### 2. Candidate Discussion
+
+- **The FM-1–FM-5 failure-mode taxonomy as a diagnostic for learning collapse.** Two substrates singled out the failure-mode classification as standout pedagogy — it formally separates vanishing-gradient (FM-3), misspecification (FM-5), and unobservable-latent-state (FM-4) failures. Candidate to surface more prominently as the segment's diagnostic contribution (Gemini, AUDIT-WORKING-193847; Claude, AUDIT-WORKING-584721 praises the loss-classification table as a model for other segments).
+- **Directional infidelity (FM-1) as organizational "blame-shifting."** When the update rule rotates the correction away from the true mismatch direction, $\delta^\top g(\delta) \to 0$ and the sector parameter $\alpha \to 0$ even at high gain $\eta^\ast$: the system expends huge effort and learns nothing. The organizational analog (firing a mid-level manager instead of fixing the structural flaw) makes the abstract orthogonality condition concrete, and the consciousness-infrastructure reading — *the internal update must point at the source of the error; an agent that rotates its own error-gradient to protect a favored hypothesis suffers FM-1* — is a vivid pedagogical extension (Gemini, AUDIT-WORKING-193847).
+- **Quasi-convex plateaus are worse than steep narrow basins.** The $\alpha \to 0$-as-$R\to\infty$ case: a plateau gently sloping toward a hole provides *zero adaptive reserve* against drift, whereas a narrow steep non-convex basin at least gives strong local correction — a counterintuitive consequence of the sector geometry worth naming (Gemini, AUDIT-WORKING-193847).
+
+#### 3. Follow-up items
+
+- **The "expected-bridge + stochastic-disturbance" composition is a meta-pattern.** The bridge analysis works in expected value (already in Working Notes as the fluid-limit gap); the stochastic per-step residual $\lVert K\rVert\sigma_\varepsilon$ enters as Model-S disturbance under Prop A.1S — so the framework's expected-value bridge results compose cleanly with its stochastic noise treatments. Flagged as a candidate cross-segment structural observation, not just a local note (Claude, AUDIT-WORKING-584721).
+- The fully-observable diagonal case $\alpha = \min_i K_i$ (bottleneck dimension sets persistence) lines up with `#result-per-dimension-persistence`; the 72% scalar-overestimate from `#def-adaptive-tempo` anisotropy presumably comes from averaging where minimization is correct (Claude, AUDIT-WORKING-584721).
+
+#### 4. Readers often ask / wonder
+
+- **"Is the gradient equivalence really an iff?"** This is exactly the question the corrected B.4 (one-way ⇐) answers — see off-ramp; worth a one-line forward-pointer so a fresh reader does not re-derive the false converse (Codex, AUDIT-WORKING-742613; verified first-hand at Claude, AUDIT-WORKING-963715 — "mathematically precise and consequential").
+
+#### Off-ramp (NOT gold) — routed for adjudication
+
+- **Prop B.4 gradient-equivalence "iff" overstatement — RESOLVED-BY-STRENGTHENING (recorded so it is not re-opened).** Codex (AUDIT-WORKING-742613, "candidate finding K") and Gemini (AUDIT-WORKING-849201) independently flagged that the one-point sector condition (monotonicity relative to $M^\ast$) is *strictly weaker* than local strong convexity; the proof's reverse direction silently replaced the one-point inequality with full two-point gradient monotonicity (witness $L'(x) = x(1 + \tfrac12\sin(10x))$: one-point sector holds with $\mu = \tfrac12$ while $L''$ goes negative nearby). Per the cycle records (742613-F3, resolved by strengthening; landing at the B.4 split — one-point ⇐ vs two-point ⇔), this was **already corrected in current canon**. Flagged here only as a regression-guard: the segment's counterexample $L'(x) = x(1 + \tfrac12\sin(10x))$ is the *defense* of the corrected one-way reading, not a defect — do not "restore" an iff.
+- **Exponential-family global-strong-convexity scope (likely subsumed by the B.4 correction).** Codex (AUDIT-WORKING-742613): "all exponential-family models in natural-parameter form satisfy GA-3 globally" is too strong — pointwise PD Fisher information does not give a uniform global lower bound (Poisson natural parameter: Fisher $= e^\theta$, $\inf_{\mathbb{R}} = 0$). Global sector constants need a compact / bounded-away-from-boundary region or a uniform Fisher lower bound. Verify whether the B.4 split already scoped this.
+- **Per-event vs per-time normalization (architectural; tracked in PROPOSALS).** The deeply-mathematical AUDIT-WORKING-526815 cycle (F13) flags that `#der-gain-sector-bridge` derives $\alpha = \eta^\ast c_{\min}$ while persistence uses $\alpha$ as a *rate* and tempo is $\mathcal{T} = \nu\eta^\ast$ — the event-rate factor $\nu$ is omitted unless $F$ is time-aggregated. Cross-cycle convergence (471203, 526815) reads this as "the bridge is *incomplete*, and downstream segments treat it as complete," with the strengthen-first answer being to finish the bridge + its proof dependencies (this segment, `#deriv-sector-condition`) *first*, then propagate the cleaned dimensional convention. Routed `architectural`→PROPOSALS, connected to PRACTICA's persistence-and-stability area.
+- **FM-3 saturation hard ceiling (scope-sharpening).** Gemini (AUDIT-WORKING-193847): for $g(\delta) = \tanh(\delta)$, the local sector parameter $\alpha(R) = \eta^\ast \tanh(R)/R$ correctly decays, but the *force* saturates — so survival is impossible if $\rho \gt \lVert F\rVert_{\max}$, independent of basin radius $R$ or linear-regime gain $\eta^\ast$. Suggested: add a note to FM-3 that saturating nonlinearities cap the maximum absolute correction speed.
 
 ---
 

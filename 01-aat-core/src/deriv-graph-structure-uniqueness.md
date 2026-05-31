@@ -209,3 +209,37 @@ The parallel to Cox's theorem is now tighter than previously stated: Cox's theor
 - **Non-binary outcome analogs.** For continuous or multi-valued outcomes, the natural analogs of AND/OR might be min/max or additive/multiplicative combination. Is there a completeness result for these? The current argument applies cleanly only to binary outcomes.
 - **Environmental common causes and the CMC.** The CMC proof makes the failure mode precise: when unmodeled environmental dependencies (weather, shared infrastructure, market conditions) affect multiple strategy steps, the exogenous noise terms $\varepsilon_i$ become correlated, causal sufficiency fails, and the Markov factorization is violated. The consequence is exactly the correlated-failure phenomenon in #def-strategy-dag: $\hat P_\Sigma$ overestimates success because it treats joint failure probability as the product of marginals. The fix is structural: add the common-cause as a condition node in $\Sigma_t$, restoring causal sufficiency and the Markov property for the augmented DAG. This connects the graph-theoretic result (Markov property) to the strategy-layer result (independence model validity) through a single condition: causal sufficiency.
 - **Promotion potential.** With the CMC-based proof, #def-strategy-dag's DAG structure claim is now strongly grounded: acyclicity is proved, the Markov property is proved under causal sufficiency. The remaining "definition" character of strategy-dag is about the *parameterization* (AND/OR, single-parameter edges), which is a formulation choice within the proved graphical structure.
+
+### Incidental audit gold (gold-lift, 2026-05-31)
+
+Cross-audit ideation harvested from de-novo auditors' working dirs, deduplicated and lightly attributed. Orthogonal framing / pedagogy; off-ramp (time-unrolled scope clarification) at the end. **Coverage:** two substrates reached a dedicated digested reflection (Gemini, AUDIT-WORKING-193847; Gemini-voiced, AUDIT-WORKING-773921); three batched strategy-DAG walks touched it by reference and converged on the same praise (Claude, AUDIT-WORKING-471203; Claude, AUDIT-WORKING-963715; Claude, AUDIT-WORKING-451729).
+
+#### 1. Candidate Brief prose / pre-prose
+
+- **"The Markov property in planning is a guaranteed consequence of a causally-sufficient world-model, not an arbitrary RL convenience."** The recurring one-line synthesis: many planning frameworks (A*, MCTS) *assume* DAG structure and Markov factorization; here acyclicity is derived from temporal ordering and the factorization from the Causal Markov Condition under causal sufficiency. A plain-language anchor (Gemini, AUDIT-WORKING-193847; Gemini-voiced, AUDIT-WORKING-773921).
+- **"You can't cause your own prerequisite."** Acyclicity in one breath: a strategy is about *causing future events*, and a finite-horizon plan is a finite poset ordered by time, representable as a DAG (its Hasse diagram) — the same argument as the acyclicity of Pearl's causal DAGs, applied to strategy. Named as "a quiet structural contribution that's easy to miss" (Claude, AUDIT-WORKING-963715; the poset/Hasse framing, AUDIT-WORKING-773921).
+
+#### 2. Candidate Discussion
+
+- **The Cox's-theorem-parallel as an epistemic-humility exemplar.** The segment proves the DAG structure is *sufficient* (a Markov DAG meets all operational requirements) but explicitly flags *necessity* (no other structure could) as open, parallel to "Cox's theorem in form but not yet in strength." Two substrates read this self-restraint as a trust-building move worth preserving prominently — and the "What Is Derived vs. What Is Chosen" table was independently called "the platinum standard for epistemic clarity," pre-empting any "you just assumed a DAG" critique by showing exactly which physics/information postulates force it (Gemini-voiced, AUDIT-WORKING-773921; Gemini, AUDIT-WORKING-193847).
+- **Local revisability (P3) demoted from premise to derived consequence.** Auditors flagged the refactor that turns Postulate 3 into a *consequence* of the CMC as "stunning structural refactoring" / "the theory simplifying and tightening itself" — candidate to surface as a worked example of the framework tightening its own axiom set (Gemini, AUDIT-WORKING-193847; Gemini-voiced, AUDIT-WORKING-773921).
+- **"Paranoia" as the active search for hidden common causes.** The causal-sufficiency failure mode (omitting environmental common causes correlates the exogenous $\varepsilon_i$, so $\hat P_\Sigma = \prod p_i$ becomes wildly optimistic) glossed as: an agent naturally drifts to L0 independence because it is cheaper, so it must be *forced* to compute the covariance of its failures $\hat\rho_{ij}$ to detect missing L1 common causes. "A mind without paranoia is mathematically guaranteed to be blindsided by correlated failure" — a vivid framing of the existing common-cause Working Note (Gemini, AUDIT-WORKING-193847).
+
+#### 3. Follow-up items
+
+- **AND/OR parsimony / uniqueness.** Both the segment's own Working Note and an auditor flag the same open: if AND/OR (noisy-AND + noisy-OR) can be proven the *unique* $O(k)$-parameter complete basis for binary combination, `#scope-and-or` upgrades from formulation-choice to derived — "locking the entire strategy structure into pure math" (Gemini-voiced, AUDIT-WORKING-773921).
+- **Necessity direction stays watched downstream.** Auditors note a consistency-watch: downstream segments should not treat the DAG as the *only* possible strategy representation while necessity is open (Claude, AUDIT-WORKING-451729).
+
+#### 4. Readers often ask / wonder
+
+- **"What forces the agent to fix a missing common cause?"** The CMC framing makes the trigger precise but uncomfortable: causal-sufficiency violations show up as *correlated residuals after convergence*, so the agent must experience repeated inexplicable joint failures before it can trigger L1 structural adaptation to add the missing node — a reader may want this failure-then-repair loop made explicit (Gemini, AUDIT-WORKING-193847).
+
+#### Belongs elsewhere
+
+- **The L0/L1/L1'/L2 correlation hierarchy belongs to `#def-strategy-dag`, not this appendix.** Auditors locate the richer correlation-hierarchy content (direction/magnitude of bias; the "structurally refuted" L1'-with-unobservable-common-cause identifiability obstruction) in `#def-strategy-dag`; this appendix carries the acyclicity + CMC-factorization proofs. Noted so a future promoter routes correlation-hierarchy gold to the definition segment (Claude, AUDIT-WORKING-451729, AUDIT-WORKING-963715).
+
+#### Off-ramp (NOT gold) — routed for adjudication
+
+- **Acyclicity holds only for the *time-unrolled* execution graph, not a state-folded policy graph — make the scope explicit.** Gemini (AUDIT-WORKING-193847): the proof ("a cycle would require $\tau_i \lt \dots \lt \tau_i$, impossible for a real time index") is valid when nodes are *time-indexed events*, but if the strategy DAG were folded over *states of the world* (e.g. "at home" recurring at $\tau_1$ and $\tau_3$), cycles are physical and common — a finite-state-machine / general-MDP transition graph is cyclic. The segment already handles this in its "iteration objection resolved" section ("each attempt is a distinct node at a distinct time"), but the suggestion is to state explicitly at Step 1 that $\Sigma_t$ is a time-unrolled execution graph, *not* a policy-over-states $\pi(S)$ — because rolling $\Sigma_t$ up into a state-policy loses the DAG structure. Scope-honesty sharpening of an already-defended point, not a refutation.
+
+---

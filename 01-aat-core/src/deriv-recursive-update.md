@@ -30,7 +30,7 @@ We work within AAT's scope ( #scope-adaptive-system): an agent coupled to an env
 | Information | Description |
 |-------------|-------------|
 | $\Omega_\tau$ | The environment state |
-| $\mathcal{C}_{\tau^-}$ | The complete interaction history ( #def-chronica) up to (but not including) $e_\tau$ |
+| $\mathcal C_{\tau^-}$ | The complete interaction history ( #def-chronica) up to (but not including) $e_\tau$ |
 | $\{M_{\tau'}\}_{\tau' \leq \tau^-}$ | The agent's prior internal states, culminating in $M_{\tau^-}$ |
 | $e_\tau$ | The current event (observation arriving or action completing) |
 | $\{e_{\tau'}\}_{\tau' \gt \tau}$ | Future events (not yet occurred) |
@@ -81,7 +81,7 @@ $$\{\Omega_\tau,\; \mathcal{C}_{\tau^-},\; \{M_{\tau'}\}_{\tau' \leq \tau^-},\; 
 After this elimination:
 $$\{\mathcal{C}_{\tau^-},\; \{M_{\tau'}\}_{\tau' \leq \tau^-},\; e_\tau\}$$
 
-**(iii) Reduce past information to $M_{\tau^-}$.** By C3 (state completeness), $M_{\tau^-}$ is the agent's complete internal state. Every element of $\mathcal{C}_{\tau^-}$ and every prior model state $M_{\tau'}$ ($\tau' \lt \tau^-$) that could influence the update can do so *only through* its effect on $M_{\tau^-}$. The agent's internal state evolves through a sequence of updates; the cumulative effect of all prior events is exactly $M_{\tau^-}$. The raw events that produced this state are no longer separately available — they were "consumed" by the update mechanism and their information (to the extent it was retained) is now encoded in $M_{\tau^-}$.
+**(iii) Reduce past information to $M_{\tau^-}$.** By C3 (state completeness), $M_{\tau^-}$ is the agent's complete internal state. Every element of $\mathcal C_{\tau^-}$ and every prior model state $M_{\tau'}$ ($\tau' \lt \tau^-$) that could influence the update can do so *only through* its effect on $M_{\tau^-}$. The agent's internal state evolves through a sequence of updates; the cumulative effect of all prior events is exactly $M_{\tau^-}$. The raw events that produced this state are no longer separately available — they were "consumed" by the update mechanism and their information (to the extent it was retained) is now encoded in $M_{\tau^-}$.
 
 Could the agent maintain a separate log of raw events outside of $M$? It could — but that log *is part of $M$*. Whatever information the agent retains in any form — model parameters, cached data, raw event buffers, metadata — is by definition part of its complete internal state $M_{\tau^-}$. If something is available to the update mechanism and not in $M_{\tau^-}$, then $M_{\tau^-}$ was not the complete state — contradicting C3.
 
@@ -109,13 +109,13 @@ This is the familiar discrete-time form. $\square$
 
 For readers who prefer a measure-theoretic framing:
 
-The agent's **information set** at time $\tau$ is the sigma-algebra $\mathcal{I}_\tau^{agent}$ — the collection of events (in the probability-theoretic sense) about which the agent can condition its update.
+The agent's **information set** at time $\tau$ is the sigma-algebra $\mathcal I_\tau^{agent}$ — the collection of events (in the probability-theoretic sense) about which the agent can condition its update.
 
-- **C1** restricts $\mathcal{I}_\tau^{agent} \subseteq \sigma(\{e_{\tau'} : \tau' \leq \tau\} \cup \{\Omega_\tau\} \cup \{M_{\tau'} : \tau' \leq \tau^-\})$ — no future information.
-- **C2** further restricts: $\sigma(\Omega_\tau) \setminus \sigma(e_\tau)$ is not in $\mathcal{I}_\tau^{agent}$ — the agent cannot condition on aspects of $\Omega_\tau$ not captured by $e_\tau$.
+- **C1** restricts $\mathcal I_\tau^{agent} \subseteq \sigma(\{e_{\tau'} : \tau' \leq \tau\} \cup \{\Omega_\tau\} \cup \{M_{\tau'} : \tau' \leq \tau^-\})$ — no future information.
+- **C2** further restricts: $\sigma(\Omega_\tau) \setminus \sigma(e_\tau)$ is not in $\mathcal I_\tau^{agent}$ — the agent cannot condition on aspects of $\Omega_\tau$ not captured by $e_\tau$.
 - **C3** further restricts: $\sigma(\{e_{\tau'} : \tau' \lt \tau\} \cup \{M_{\tau'} : \tau' \lt \tau^-\}) \subseteq \sigma(M_{\tau^-})$ from the agent's perspective.
 
-After all three restrictions: $\mathcal{I}_\tau^{agent} = \sigma(M_{\tau^-}, e_\tau)$.
+After all three restrictions: $\mathcal I_\tau^{agent} = \sigma(M_{\tau^-}, e_\tau)$.
 
 By the Doob–Dynkin lemma[^kallenberg2002], any $\sigma(M_{\tau^-}, e_\tau)$-measurable random variable is a (Borel) function of $(M_{\tau^-}, e_\tau)$. Therefore $M_{\tau^+} = f(M_{\tau^-}, e_\tau)$ for some measurable $f$. $\square$
 
@@ -155,7 +155,7 @@ Could $f$ depend on the timestamp $\tau$ itself? Yes — consistently. The event
 
 ### Attack 7: Agents that store full history
 
-An agent with $M_{\tau^-} \supseteq \mathcal{C}_{\tau^-}$ is entirely consistent. The model space $\mathcal{M}$ is simply large enough to include the raw history. The #form-information-bottleneck argues compression is *wise* — but the recursive update form holds regardless of compression level.
+An agent with $M_{\tau^-} \supseteq \mathcal C_{\tau^-}$ is entirely consistent. The model space $\mathcal{M}$ is simply large enough to include the raw history. The #form-information-bottleneck argues compression is *wise* — but the recursive update form holds regardless of compression level.
 
 ## What Is Derived vs. What Is Chosen
 
@@ -167,7 +167,7 @@ An agent with $M_{\tau^-} \supseteq \mathcal{C}_{\tau^-}$ is entirely consistent
 | Recursive form $M_\tau = f(M_{\tau^-}, e_\tau)$ | C1 + C2 + C3 | Proved (unique form compatible with the three constraints) |
 | Future-dependent updates eliminated | C1 alone | Derived (direct consequence) |
 | $\Omega_\tau$-dependent updates eliminated | C2 alone | Derived (direct consequence) |
-| Full-history-dependent updates reducible to recursive form | C3 + any choice of $M \supseteq \mathcal{C}_{\tau^-}$ | Proved (compatibility, not elimination) |
+| Full-history-dependent updates reducible to recursive form | C3 + any choice of $M \supseteq \mathcal C_{\tau^-}$ | Proved (compatibility, not elimination) |
 | Markov property of the update | C3 (completeness) + recursive form | Proved (follows from C3 definition) |
 | Seven attack counterexamples (simultaneous events, continuous coupling, C3 circularity, shared state, external randomness, time-dependence, full history) | Case-by-case reduction to the recursive form | Proved (each) |
 | C3 is definitional, not eliminative | Analysis of what C3 asserts vs. what it rules out | Discussion-grade (clarifying observation) |
@@ -188,7 +188,7 @@ C1 and C2 do genuine eliminative work — they rule out update forms that depend
 
 C3 is a definitional commitment that produces the Markov structure. It cannot be "violated" because any violation is absorbed by expanding $M$. This is not a weakness — it's the nature of the claim. The result says: *the Markovian analysis is the only one consistent with C1 + C2 + the definition of $M$ as complete*. The alternative — an update that depends on something outside $M$ — is not "wrong" but rather means $M$ was misspecified.
 
-**What the result says:** C1 eliminates a physically impossible class of updates (future-dependent). C2 eliminates a scope-excluded class ($\Omega$-dependent). After (1) and (2), the *only remaining question* is how the past enters: through the full history $\mathcal{C}_{\tau^-}$ or through a compressed state $M_{\tau^-}$. C3 says the agent *has* a complete state, and whatever that state is, it's all the agent has. The Markov form follows.
+**What the result says:** C1 eliminates a physically impossible class of updates (future-dependent). C2 eliminates a scope-excluded class ($\Omega$-dependent). After (1) and (2), the *only remaining question* is how the past enters: through the full history $\mathcal C_{\tau^-}$ or through a compressed state $M_{\tau^-}$. C3 says the agent *has* a complete state, and whatever that state is, it's all the agent has. The Markov form follows.
 
 **What the result does NOT say:** That $M$ must be a lossy compression (the agent could store full history). That the Markov property is "natural" or "optimal" (it's a consequence of how $M$ is defined). That continuous-coupling systems are event-driven (the event framework is one abstraction; $\dot{M} = g(M, u)$ is the more general one, arrived at by the same three constraints).
 
@@ -203,6 +203,39 @@ C3 is a definitional commitment that produces the Markov structure. It cannot be
 - C3's definitional character is a feature, not a bug — but it must be stated honestly. The result is not "the update must be Markovian" but rather "the Markovian analysis is the *only* consistent one, given the modeling commitment of #form-agent-model." These sound the same but have different epistemic status.
 - The continuous-coupling generalization (Attack 2) deserves a proper note somewhere: $\dot{M} = g(M, u)$ is the more general form, with event-driven updates as a special case. The three constraints produce the same argument structure in both cases.
 - The information-set formalization (Doob-Dynkin) provides the cleanest technical proof. It should probably be considered the primary proof path, with the elimination argument as the more intuitive exposition.
+
+### Incidental audit gold (gold-lift, 2026-05-31)
+
+Cross-audit ideation harvested from de-novo auditors' working dirs, deduplicated and lightly attributed. Orthogonal framing / pedagogy; off-ramp (status-label harmonization) at the end. **Coverage:** five substrates reached a digested reflection (Gemini, AUDIT-WORKING-193847; Claude, AUDIT-WORKING-584721; Claude, AUDIT-WORKING-471203; Codex, AUDIT-WORKING-742613; Gemini-voiced, AUDIT-WORKING-773921) — unusually strong convergence; several rated this the most-trusted derivation they had read.
+
+#### 1. Candidate Brief prose / pre-prose
+
+- **"The Markov property is a boundary you draw around the agent, not a fact about the world."** The recurring one-line synthesis across substrates: most ML/RL frameworks *postulate* the Markov property; here it is *forced* by C1 (arrow of time) + C2 (partial observability) + C3 (state completeness), with C3 the definitional commitment. "A rigorous proof that the Markov assumption in RL is not an assumption about the world, but a tautological boundary drawn around the agent" (Gemini-voiced, AUDIT-WORKING-773921; same framing, Gemini, AUDIT-WORKING-193847; Claude, AUDIT-WORKING-471203).
+- **"Memory as digestion."** When event $e_\tau$ arrives, the agent extracts the update and discards the raw event; $M_t$ is "the accumulated nutritional value of all past events," not a storage bin. A concrete everyday analog for the recursive form that a non-specialist can re-derive (Gemini, AUDIT-WORKING-193847).
+
+#### 2. Candidate Discussion
+
+- **This derivation as the *template* for AAT's inevitability-core segments.** Three substrates independently read the segment's structure — three named constraints (eliminative C1/C2 vs definitional C3), dual proof paths (set-elimination + Doob-Dynkin), seven explicit counterexample "attacks" with honest verdicts, and the "What Is Derived vs. What Is Chosen" table — as the form *every other* AAT inevitability claim should adopt (Claude, AUDIT-WORKING-584721 and AUDIT-WORKING-471203; the seven-attack discipline named as a candidate meta-pattern, e.g. `#result-mismatch-decomposition` could enumerate "what would break the bias-variance decomposition?").
+- **"Epistemic-architectural rather than mathematical."** Naming-seed for AAT's distinctive contribution as legible here: most frameworks contribute new math; AAT's distinctive move may be new *forms of stating* what is known, with explicit constraint-naming, definitional-character disclosure, and attack-defense. Closer to a philosophy-of-science contribution than a purely mathematical one — candidate for framing-level material (Claude, AUDIT-WORKING-471203). *(Note the early finding-vs-framing texture: offered as a re-characterization of the whole framework's contribution, not just this segment.)*
+
+#### 3. Follow-up items
+
+- **The C3-circularity acknowledgment must survive downstream.** Several auditors flag a consistency-watch: segments that *use* the recursive-update result should preserve the "C3 is definitional, the result is conditional-on-the-modeling-commitment" honesty rather than treating Markovianity as physically derived; drift here is a cross-segment finding (Claude, AUDIT-WORKING-471203; Codex, AUDIT-WORKING-742613).
+- **Continuous-coupling caveat propagation.** Attack 2's $\dot M = g(M,u)$ generalization is the more-general form; the main `#der-recursive-update` between-event corollary $dM/d\tau = g_M(M_\tau)$ should probably carry the same "event-driven is the special case" caveat more prominently (Codex, AUDIT-WORKING-742613; already noted in this segment's own Working Notes above — the auditors converged on it independently).
+- **The "(Descended from TFT Appendix ...)" annotation is diff-voice in the body.** Editorial: move to Working Notes or remove; flagged as the fourth instance of the diff-voice pattern across Section I (Claude, AUDIT-WORKING-471203).
+
+#### 4. Readers often ask / wonder
+
+- **"What is the discretization penalty for the continuous case (Attack 2)?"** If the true dynamic is $\dot M = g(M, o(\tau))$, the event-driven form is a Riemann-sum-style approximation — does the agent suffer an integration error scaling with the inter-event gap? (Gemini, AUDIT-WORKING-193847).
+- **"Doesn't a lossy $\phi$ make the recursive form epistemically sub-optimal?"** If $M_{\tau^-}$ is not a sufficient statistic for $\mathcal C_{\tau^-}$ (lossy compression per `#form-information-bottleneck`), the recursive form locks the agent out of re-querying discarded history — mathematically valid but a structural disadvantage versus an agent that can read raw $\mathcal C_{\tau^-}$. Offered as the formal motivation for *why* agents build external memory systems (writing things down bypasses the recursive bottleneck) (Gemini, AUDIT-WORKING-193847). *(Connects to SP-27 / lossy-$\phi$ recursion and `#disc-m-preservation`.)*
+
+#### Belongs elsewhere
+
+- **Logogenic / Section IV reading** (points at `03-llm-core/` `#disc-m-preservation`, not this appendix): the C3-as-definitional move means a logogenic agent with externalized $M_t$ (on disk) can have its $M_t$ *defined* to include the externalized state, and the recursive form holds — the formal substrate for the $M_t$-preservation argument. Also the provocative architectural claim that Transformers "carry the raw apples around" (re-processing the full context each forward pass) rather than digesting history, so an external recursive loop must extract $M_t$ and feed it forward — aspirational reach toward the logogenic-wrapping material (Gemini, AUDIT-WORKING-193847; Claude, AUDIT-WORKING-471203 names `#disc-m-preservation` as the destination).
+
+#### Off-ramp (NOT gold) — routed for adjudication
+
+- **Status-label harmonization: `exact` (this appendix) vs `conditional` (`#der-recursive-update` body) — a genuine cross-substrate disagreement worth preserving as signal.** Two readings landed: (a) Claude (AUDIT-WORKING-471203) initially flagged a mismatch, then **withdrew** it after reading — concluding the layering is *deliberate and honest*: the appendix is "exact given the three constraints," the body is "conditional on accepting C3 as a modeling commitment," two angles on the same derivation. (b) Codex (AUDIT-WORKING-742613) and Gemini-voiced (AUDIT-WORKING-773921) judged the *language* should still be harmonized, proposing "exact conditional on C1–C3 and the event-driven/sampled representation; continuous coupling generalizes the input form." Net: not a defect in the math, possibly a wording-clarity improvement on whether the two statuses read as obviously-the-same-claim-at-two-layers. Light-touch; route as a status/voice-clarity check, not a correctness finding.
 
 ---
 
