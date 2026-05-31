@@ -1,7 +1,7 @@
 # spikes/ — how to spike (and what happens after)
 
-> [!important]
-> **Some content in this README is under active reconsideration (2026-05-19→20).** The cardinal-rule wording is provisional (pending Joseph's final ratification of the corrected principle), and the `> [!important]` bounded-guarantee callout further down encodes a predecessor's abdication of the role's core duty that is held on a Joseph decision (he was not informed that 64 spikes were bulk-moved unchecked). The trail, the (provisional) corrected principles, the held decisions, and the scoped follow-on work live in [`../INTEGRATION-CLEANUP-TODO.md`](../INTEGRATION-CLEANUP-TODO.md). Read that file before treating any specific guideline here as binding for the items it names; `ROUTING.md` log entry (t) carries the in-tree trail.
+> [!note]
+> **The 2026-05-19→20 reconsideration of this README is largely resolved (2026-05-30).** The corrected principle is now ratified (D-1) — the cardinal rule below states it: canon cites only canon and the published external world; Working Notes are by definition not canon. The bounded-guarantee callout further down was rewritten (D-3) from a predecessor's abdication into honest un-discharged integration debt: the 2026-05-12 bulk-64 must be verified, or consciously set down, before any wipe. Still genuinely open: the bulk-64 / the `.integrated`+`.archived` wipe (D-2) and the citation-infrastructure build (G3) — both tracked in [`../INTEGRATION-CLEANUP-TODO.md`](../INTEGRATION-CLEANUP-TODO.md).
 
 This tree is the **research-spike corpus**: reasoning trails. A spike attacks one claim — pushing the math and the thinking as far as they go until the claim yields, or until it uncovers, with specificity, *why it cannot*. A spike that follows the procedure has a positive result **either way**: a no-go is as much a result as a strengthening, and it is present-tense canonical truth, not archaeology.
 
