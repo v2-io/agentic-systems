@@ -12,8 +12,8 @@
 **Filing convention — clarifies dirs by degrees.** As each segment is swept, its *dedicated* source-note moves into a per-dir `audits/AUDIT-WORKING-<id>/.integrated/`; each dir's top level then shows only still-to-sweep notes, and graduates once empty. **Match by content, never by note-number** — the same segment was filed #15/#20/#21/#22/#23/#29/#30/#32 across audits. Move ONLY the exact segment; the adjacent persistence-*family* segments are distinct and stay.
 
 **Plan / live queue for this thread:**
-- **Flow-fix first (stop the influx, then empty the pool):** proposed changes to `doc/de-novo-audit-instructions.md` so future audits route incidental gold per-segment immediately, separate from certified findings, in the six-category structure. *[in progress 2026-05-30]*
-- **Then the sweep:** segment-by-segment lift across the rest; agents, pre-indexed (6 of 21 dirs are partial / naming-only / predictions-only — skip). Effort ~20–50 min/segment (hub segments worst-case).
+- **Flow-fix — DONE 2026-05-30** (commit `bbf642f`): `doc/de-novo-audit-instructions.md` §7.15 (auditor-side) + `doc/audit-routing-instructions.md` §8 "gold lift" (integrator-side) route future audits' incidental gold per-segment, separate from certified findings.
+- **Sweep — IN PROGRESS:** wave 1 (A1–A3, Part I Ch.1–3) launched; lift-agents edit segment Working Notes, lead files sources + commits per wave. **Durable plan + per-wave progress + batch-reflection move-deferral state: [`audits/.gem-hunt-trail/gold-lift-sweep-2026-05-30.md`](audits/.gem-hunt-trail/gold-lift-sweep-2026-05-30.md).**
 - **Open decisions:** batch-file dirs (451729 / 471203 / 613842 / 963715 hold notes inside multi-segment batch files — leave-until-fully-swept vs. split, lean leave); the **Brief-as-section** FORMAT move (a Brief between title and Formal Expression, absorbing today's `Findings#brief`) — well-supported, Joseph's call; per-dir `.integrated/` vs. top-level mirror (chose per-dir; redirectable); taxonomy = your 1–5 + agent's *Candidate figures* + a confusion-vs-placement split.
 - **Gold-dir gate** still stands for anything beyond this agreed sweep.
 
