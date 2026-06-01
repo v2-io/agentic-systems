@@ -114,7 +114,7 @@ The W₀ / W₁ / W₂ wrapping regimes of `#der-class-coercion-via-wrapping` ar
 
 This unifies the *structure*-vs-*behavior* distinction at Class 1 with the *content*-vs-*process* form distinction at Class 2: they are the same axis read at different architectural levels. The structure / behavior distinction at the Class 1 cell is the agent-level shadow of a sub-classification axis that runs all through Class 2.
 
-Sub-type matching refines the wrapping-regime recommendation: a Class 2 agent with content-form coupling only is sufficient with W₂; a Class 2 agent with process-form coupling at any stage requires W₁ or remains effectively Class 2 under W₂; a Class 2 agent with $\Sigma$-source coupling may need a $\Sigma$-channel-suppressed W₁ even with pipeline access, because strategy-context can leak through stateful component channels independent of the query.
+Sub-type matching refines the wrapping-regime recommendation: a Class 2 agent with content-form coupling only is sufficient with W₂; a Class 2 agent with process-form coupling at any stage requires W₁ or remains effectively Class 2 under W₂; a Class 2 agent with $\Sigma$-source coupling may need a $\Sigma$-channel-suppressed W₁ even with pipeline access, because strategy-context can leak through stateful component channels independent of the query. The call-boundary condition under which W₁'s structural guarantee survives such stateful leakage is the (C2′) condition of `#disc-w1-structural-bound-boundary`: when goal-correlated state crosses the call boundary, W₁'s structural bound is unavailable and only a behavioral bound remains.
 
 ## Epistemic Status
 
