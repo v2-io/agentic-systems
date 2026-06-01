@@ -27,7 +27,7 @@ The honest two-handed claim the canon stands on: *more discipline → strictly b
 
 ## 3. Stage 1 — W₁ correctness-fix (its own cycle)
 
-*Status: in flight (2026-05-31). Spec: `spike-w1-leakage-vacuity-2026-05-31.md` §6; framing from `spike-w1-w2-boundary-intuition-2026-05-31.md` §7.*
+*Status: **landed** `fbcb36a` (2026-05-31). Spec: `spike-w1-leakage-vacuity-2026-05-31.md` §6; framing from `spike-w1-w2-boundary-intuition-2026-05-31.md` §7. A downstream consequence surfaced after landing: the same stale circular bound also sat in `#der-directed-separation`'s Class-1-by-structure refinement — fixed `bd8a0d6`; §9 tracks the remaining 03/04 propagation.*
 
 - Name condition **(C2′)** (no goal-correlated cross-call state) in `#der-class-coercion-via-wrapping`.
 - **Replace** the circular Theorem-2 / W₁-row bound with the selection-channel bound $\kappa_{W_1}^{\text{sel}} = I(A(q_M); G^{op}) \le I(q_M; G^{op})$ (data-processing inequality along $G^{op} \to q_M \to A(q_M)$), labelled *conditional on (C1)+(C2′)*. The old bound conflated the wrapper's processing register $G_W^{state}$ (already-closed) with the operator goal $G^{op}$ read off the query content; conditioning on $q_M$ annihilated the selection signal, leaving a bound that says "$\kappa \le$ an average of $\kappa$."
@@ -36,6 +36,8 @@ The honest two-handed claim the canon stands on: *more discipline → strictly b
 - Commit: its own cycle, its own commit (isolates the correctness fix for review/revert/attribution).
 
 ## 4. Stage 2 — the foundational reframe (after Stage 1 commits; back-references the landed W₁)
+
+*Status (2026-05-31): **§4.1 framing core landed** `ed11222` (independently reviewed — all three guards pass; the in-flight executor was interrupted, the lead completed the noun subsection + scoping rule + $\varepsilon(\kappa)$ norm + implications re-scope). **§4.2/§4.3 Section-II sweep landed** `7d062f6` — `def-value-object` + `deriv-observation-ambiguity-bias-bound` + `impl-orient-cascade` re-scoped; `der-orient-cascade` + `der-action-selection` deliberately **left** (the latter rides on state-completeness, not $\kappa=0$). The lower-boundary scope-check device landed `be1b2c4`. **Remaining:** §4.4 `disc-partial-coupling-pathways` form-matters one-liner; §4.5 LEXICON entry + `separated.md` fix; §4.6 NOTATION locator; §4.7 Meta-Arch cross-refs (Joseph-gated). Then §8 pedagogy pass (now unblocked by the sweep) and §9 Stage-1-completion propagation.*
 
 Per proposal Part 4, with the §2 guards woven through:
 
