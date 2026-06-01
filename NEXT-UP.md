@@ -1,4 +1,4 @@
-# NEXT-UP — live handoff pointer (updated 2026-05-30)
+# NEXT-UP — live handoff pointer (updated 2026-05-31)
 
 > [!note]
 > **Transient pointer, not a navigator.** Authoritative homes: `PRACTICA.md` (strategy) / `TODO.md` (tactics) / `PROPOSALS.md` (structural moves) / `audits/STATUS.md` (audit routing) / `INTEGRATION-CLEANUP-TODO.md` (the big cleanup) / `CHANGELOG.md` (narrative). This file only names what is *hot* so a compaction or fresh session resumes momentum. **Delete once the queue drains.**
@@ -13,9 +13,12 @@
 
 **Plan / live queue for this thread:**
 - **Flow-fix — DONE 2026-05-30** (commit `bbf642f`): `doc/de-novo-audit-instructions.md` §7.15 (auditor-side) + `doc/audit-routing-instructions.md` §8 "gold lift" (integrator-side) route future audits' incidental gold per-segment, separate from certified findings.
-- **Sweep — IN PROGRESS:** wave 1 (A1–A3, Part I Ch.1–3) launched; lift-agents edit segment Working Notes, lead files sources + commits per wave. **Durable plan + per-wave progress + batch-reflection move-deferral state: [`audits/.gem-hunt-trail/gold-lift-sweep-2026-05-30.md`](audits/.gem-hunt-trail/gold-lift-sweep-2026-05-30.md).**
+- **Sweep — IN PROGRESS:** waves 1–4 swept (AAT core through Appendix-A set 2 — 122 gold-bearing segments); **wave 5** (A18–A21) + TST / logogenic / logozoetic remain, then the held batched/paired-note reconciliation + the OUTLINE C-iv idiom-drift fix. Lift-agents edit segment Working Notes, lead files sources + commits per wave. **Durable plan + per-wave progress + deferral state: [`audits/.gem-hunt-trail/gold-lift-sweep-2026-05-30.md`](audits/.gem-hunt-trail/gold-lift-sweep-2026-05-30.md).**
 - **Open decisions:** batch-file dirs (451729 / 471203 / 613842 / 963715 hold notes inside multi-segment batch files — leave-until-fully-swept vs. split, lean leave); the **Brief-as-section** FORMAT move (a Brief between title and Formal Expression, absorbing today's `Findings#brief`) — well-supported, Joseph's call; per-dir `.integrated/` vs. top-level mirror (chose per-dir; redirectable); taxonomy = your 1–5 + agent's *Candidate figures* + a confusion-vs-placement split.
 - **Gold-dir gate** still stands for anything beyond this agreed sweep.
+
+## Also hot — directed-separation foundation pass (off-ramp from the sweep)
+**Mostly landed** this session (CHANGELOG 2026-05-31): the W₁ correctness-fix + the `causal discipline` re-founding of `#der-directed-separation` (`fbcb36a` / `ed11222` / `7d062f6` / `be1b2c4` / `bd8a0d6`; framing core independently reviewed — all three normativity guards pass). **Remaining tail** in `TODO.md` §"Strengthen-first candidates": Stage-2 vocabulary (LEXICON / NOTATION + a `#disc-partial-coupling-pathways` one-liner); the pedagogy pass (*"Where the normative semantics of 'discipline' is earned"* + Layer-0 + the two-channel figure + the κ-axis preamble); the Stage-1-completion propagation to `03/04`. **Next reserved adjudication:** the `#schema-strategy-persistence` hard-ceiling convention (`aedc72d`, verdict B — name the convention, keep `status: exact`). Full design archived at `_obs/directed-separation-foundation-execution-plan-superseded-2026-05-31.md`.
 
 ## Other open threads (Joseph's calls)
 - **SP-27** — introspective-fork-undetectability; Part-I ↔ Part-IV (moral-core) bridge, his placement/framing call. → `PROPOSALS.md`.

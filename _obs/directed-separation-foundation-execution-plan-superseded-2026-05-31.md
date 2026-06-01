@@ -1,5 +1,8 @@
 # Execution plan — the directed-separation / causal-discipline foundation pass
 
+> [!note]
+> **Superseded / archived 2026-05-31.** This was the working plan-of-record for the directed-separation / causal-discipline foundation pass. Its **core landed** the same day — Stage 1 W₁ fix `fbcb36a`; Stage 2 framing core `ed11222` (independently reviewed) + Section-II re-scope sweep `7d062f6` + lower-boundary scope-check `be1b2c4`; stale-bound purge `bd8a0d6`; narrative in `CHANGELOG.md` 2026-05-31. **Not obsolete:** preserved for the remaining-tail design it still carries — §8 (the pedagogy pass) and §9 (the Stage-1-completion propagation to `03/04`) — whose live tracking is `TODO.md` §"Strengthen-first candidates" and `#der-directed-separation`'s Working Notes. Consult §8/§9 when those passes run.
+
 *The disciplined **how**. The **what** is the proposal `spikes/spike-directed-separation-foundation-proposal-2026-05-31.md` (committed `efd57bf`); this doc adds the staging, the gates, the locked decisions, the calibrated normativity, and the exposures-to-watch, so the pass is executable independently and safely. Strength & truth over efficiency or effort — directed separation is foundational to the theory of agency, so it earns a staged, gated process.*
 
 ## 0. Mental model (what we are doing, and why carefully)
