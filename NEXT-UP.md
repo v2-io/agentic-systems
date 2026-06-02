@@ -1,9 +1,21 @@
-# NEXT-UP — live handoff pointer (updated 2026-05-31)
+# NEXT-UP — live handoff pointer (updated 2026-06-02)
 
 > [!note]
 > **Transient pointer, not a navigator.** Authoritative homes: `PRACTICA.md` (strategy) / `TODO.md` (tactics) / `PROPOSALS.md` (structural moves) / `audits/STATUS.md` (audit routing) / `INTEGRATION-CLEANUP-TODO.md` (the big cleanup) / `CHANGELOG.md` (narrative). This file only names what is *hot* so a compaction or fresh session resumes momentum. **Delete once the queue drains.**
 
-## Hottest thread — the audit-gold two-track
+## Hottest thread — SOP consolidation (June 2026)
+
+**The `doc/sop/` home is open and the interment sweep is running.** Scattered process-SOPs are being consolidated into `doc/sop/` under the `.sop.md` (leaf) / `.sop/` (branch) convention; the auto-loaded layer (CLAUDE.md + memory) demotes to index + disposition + before-action triggers. Charter + convention: [`doc/sop/sop-creation.sop.md`](doc/sop/sop-creation.sop.md). Full inventory + migration plan + ratified gate decisions: [`msc/sop-consolidation-design-2026-06-01.md`](msc/sop-consolidation-design-2026-06-01.md).
+
+**The interment pattern (proven over two docs):** rewrite live forward-pointers · regenerate generated outputs at source (scripts / README partials) · leave frozen archaeology period-correct · no tombstone stubs · `bin/check-links` is the gate after each (it backstops the ref-split — it has caught live refs the recon agents missed). `bin/check-links` excludes archaeology and defers `…-core/src/` segment links to lint-outline; repo-specific exemptions live in `.check-links-ignore`.
+
+**Landed this cycle:** `naming.sop` fully interred — `methodology.sop.md` (`ad59d57`) + `principles.sop.md` (`305c541`) under the `naming.sop.md` index; `bin/check-links` built (`f6ffaa5`); 3 stale links fixed (`5bb5177`); `JOSEPH-TODO.md` created (`1382d64`); legacy `bin/build-tex` sunset (`60a201f`).
+
+**Remaining sweep** (each doc = ref-split → gate live/frozen → execute → rebuild affected generated files → check-links green → commit): `spike-routing` → `doc/sop/spikes.sop.md`; then the **codependent audit pair** (de-novo + routing → `doc/sop/audit.sop/`, move together); then **FORMAT last** (→ `doc/sop/format.sop.md` + branches; highest blast radius — decomposition is in the design doc).
+
+**Decisions for Joseph → [`JOSEPH-TODO.md`](JOSEPH-TODO.md)** is now the single queue for everything needing him (the WN-discipline gate, the `doc/sop/sop.md` master-index question, the TODO-freshness reframes, D-2 / G3 / SP-27 / SP-29, the Greek-vocab + README-v2 taste calls).
+
+## Also active — the audit-gold two-track
 
 **Discovery (2026-05-30).** The de-novo audit process yields two intertwined outputs: (1) *certified findings* — theory-fixes, the fast queue, already handled; and (2) **incidental orthogonal gold** in the per-segment "wandering thoughts" / §14 ideation — pedagogical framing, analogies, candidate figures, naming, forward-vision, aspirational reach (Gemini especially: reach that sometimes becomes real *because* imagined). This gold has been pooling unrouted in `audits/AUDIT-WORKING-*/`. It belongs **per-segment** — lifted into the segment's Working Notes, eventually promoted to its Brief / Discussion — **not** a separate catalog. The early finding-vs-framing *conflation is itself signal* and must be preserved, not sanitized.
 
