@@ -1,0 +1,48 @@
+# .check-links-ignore — paths exempt from bin/check-links
+#
+# These are live-but-historical, generated, or reasoning-trail files whose
+# links are NOT a navigation contract, so a stale link in them is expected and
+# not a defect. One gitignore-style glob (or path prefix) per line; blank lines
+# and `#` comments ignored.
+#
+# General categories — dot-dirs (.integrated/ .archived/ .routing-trail/ …),
+# `_obs/`, `_archive/`, `ref/converted/`, and component `…-core/src/` segment
+# links (lint-outline's domain) — are excluded in bin/check-links itself. This
+# file is for the repo-specific rest. Keep it honest: exempt only files whose
+# links are genuinely point-in-time, not files you'd rather not fix.
+
+# Generated-doc source fragments. Their links are written relative to the
+# COMPOSED README at the repo root, not the partial's own location, so they are
+# validated in the built README.md / README-auditor.md (which ARE checked), not
+# here. See bin/build-readme.
+doc/readme/src/
+
+# Historical narratives / frozen point-in-time records — links are period-correct.
+CHANGELOG.md
+LOG.md
+releases/
+msc/reflections/
+msc/handoff-2026-05-01.md
+msc/naming/naming-principles-old.md
+msc/naming/handoff-2026-04-30-cohort-close.md
+msc/naming/round-2-plan.md
+msc/naming/naming-votes/
+
+# Generated output — regenerates from its script (bin/naming-r2-aggregate.rb);
+# stale links here self-heal on the next render.
+msc/naming/r2-patterns.md
+msc/naming/r2-aggregate-table.md
+msc/naming/r2-aggregate-detail.md
+
+# Prior-art analysis working compilation — internal refs into segments / papers,
+# not a navigation contract.
+ref/prior-art-analysis/
+
+# Spike working subdirectories are reasoning trails, not navigation. (When a
+# spike's cycle closes it routes into .integrated/ or .archived/, which are
+# auto-excluded; loose dated working dirs are listed here in the meantime — and
+# their presence here is itself a hint they are due for routing.)
+spikes/tst-mining-2026-05-21/
+spikes/tst-ideas-cycle-2026-05-21/
+spikes/strategic-composition-class-3-attempt-2026-05-21/
+spikes/visual/

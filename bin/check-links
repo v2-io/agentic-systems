@@ -1,0 +1,200 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# bin/check-links — relative-markdown-link integrity checker
+#
+# Validates that relative markdown links in *live* documents resolve to a
+# file (or directory) that exists. This is the link-integrity gate for the
+# doc/sop/ interment work and for the repo generally: when a document moves,
+# every live pointer to it must be rewritten, and this catches the ones that
+# were missed.
+#
+# Deliberately scoped to LIVE doc↔doc navigation. Excluded by design:
+#   - `_obs/`, `_archive/`     — superseded / archived material (verbatim)
+#   - any dot-prefixed dir     — `.integrated/`, `.archived/`,
+#                                `.routing-trail/`, `.gem-hunt-trail/`, …
+#   - `ref/converted/`         — converted external papers (not our docs)
+# Their links are period-correct point-in-time records; rewriting them would
+# falsify the history (the "freeze archaeology" discipline — see doc/sop/).
+# Live-but-historical files whose links are also point-in-time (a CHANGELOG
+# narrative, the reflections journal, completed naming-cycle cards) can be
+# exempted via a repo-root `.check-links-ignore` file (one gitignore-style
+# glob per line; blank lines and `#` comments ignored).
+#
+# What it checks: inline markdown links `[text](target)` and image links
+# `![alt](target)` whose target is a *relative path* — not http(s)/mailto/
+# tel/ftp, not a same-document `#anchor`. Any `#anchor` or `?query` suffix is
+# stripped; only the file part is verified to exist.
+#
+# What it does NOT check (intentional, for now):
+#   - Segment links. Targets inside a component `…-core/src/` directory are
+#     deferred to lint-outline and the build: forward-references to
+#     not-yet-written segments are intentional dependency markers (FORMAT.md),
+#     so flagging them here would be noise. Doc↔doc links (the interment
+#     concern) are exactly what remains in scope. (Note: `doc/readme/src/`
+#     partials are NOT segments and stay in scope.)
+#   - Out-of-repo targets (e.g. `../TST-IDEAS.md` from the root, or links into
+#     `~/.claude/`). Unverifiable from here, so skipped.
+#   - Anchors / headings. The repo mixes GitHub heading-slugs with the
+#     project's own `#segment-slug` cross-reference convention, which resolve
+#     by different rules (see FORMAT.md and the build pipeline). Verifying the
+#     file part already catches the failure mode that matters here — a moved
+#     document orphaning its pointers. Anchor validation is future work.
+#   - Reference-style links (`[text][label]` + `[label]: url`) and bare
+#     backtick path *mentions* (`` `foo.md` `` in prose) — only true inline
+#     links are the navigational contract.
+# Fenced code blocks and inline code spans are skipped so documented examples
+# (e.g. `doc/sop/<topic>.sop.md`) are not mistaken for real links.
+#
+# Usage:
+#   bin/check-links            # check live docs; exit 1 if any link is broken
+#   bin/check-links --all      # also scan the excluded archaeology dirs
+#   bin/check-links PATH...    # check only the given files / directories
+#
+# Exit status: 0 = every live relative link resolves; 1 = at least one broken.
+
+require 'pathname'
+require 'optparse'
+
+REPO_ROOT = Pathname.new(__dir__).parent.expand_path
+IGNORE_FILE = REPO_ROOT.join('.check-links-ignore')
+
+# Target prefixes that are not local file references.
+SKIP_PREFIXES = %w[http:// https:// mailto: tel: ftp:// data: //].freeze
+
+# Inline / image link with an optional <…>-wrapped target and optional title.
+LINK_RE = /!?\[[^\]]*\]\(\s*<?([^)\s>]+)>?(?:\s+"[^"]*")?\s*\)/.freeze
+
+# A path is excluded (frozen archaeology / non-doc material) if it lives under
+# _obs, _archive, ref/converted, or any dot-prefixed dir (.integrated,
+# .archived, .routing-trail, .gem-hunt-trail, .git, …).
+def excluded_dir?(rel_path)
+  return true if rel_path.to_s.start_with?('ref/converted/')
+  rel_path.each_filename.any? do |part|
+    part == '_obs' || part == '_archive' || (part.start_with?('.') && part != '.' && part != '..')
+  end
+end
+
+def load_ignore_globs
+  return [] unless IGNORE_FILE.exist?
+  IGNORE_FILE.each_line.map(&:strip).reject { |l| l.empty? || l.start_with?('#') }
+end
+
+def ignored?(rel_str, globs)
+  globs.any? do |g|
+    File.fnmatch?(g, rel_str, File::FNM_PATHNAME) ||
+      File.fnmatch?(g, rel_str) ||
+      rel_str.start_with?("#{g.chomp('/')}/")
+  end
+end
+
+# Gather candidate .md files under the given roots, honoring exclusions.
+def gather_md(roots, include_all:, ignore_globs:)
+  files = []
+  roots.each do |root|
+    base = Pathname.new(root)
+    base = REPO_ROOT.join(base) unless base.absolute?
+    candidates =
+      if base.directory?
+        Pathname.glob(base.join('**/*.md'), File::FNM_DOTMATCH)
+      else
+        [base]
+      end
+    candidates.each do |p|
+      next unless p.file?
+      rel = p.relative_path_from(REPO_ROOT)
+      next if !include_all && excluded_dir?(rel)
+      next if ignored?(rel.to_s, ignore_globs)
+      files << p
+    end
+  end
+  files.uniq.sort
+end
+
+# Yield [line_no, target] for each relative-link target, skipping fenced
+# code blocks and inline code spans.
+def each_link(text)
+  in_fence = false
+  text.each_line.with_index(1) do |line, line_no|
+    stripped = line.lstrip
+    if stripped.start_with?('```') || stripped.start_with?('~~~')
+      in_fence = !in_fence
+      next
+    end
+    next if in_fence
+    scrubbed = line.gsub(/`[^`]*`/, '') # drop inline code spans
+    scrubbed.scan(LINK_RE) { |m| yield line_no, m[0] }
+  end
+end
+
+def skip_target?(target)
+  return true if target.nil? || target.empty?
+  return true if target.start_with?('#') # same-document anchor
+  SKIP_PREFIXES.any? { |pre| target.start_with?(pre) }
+end
+
+# Resolve a relative target's file part against the linking file's directory.
+def resolve_target(file, target)
+  path_part = target.split('#', 2).first.split('?', 2).first
+  return nil if path_part.nil? || path_part.empty?
+  (file.dirname / path_part).cleanpath
+end
+
+# Segment files live in a component `…-core/src/` directory — their existence
+# and forward-refs are lint-outline's / the build's domain, not ours.
+def segment_target?(resolved)
+  resolved.to_s.include?('-core/src/')
+end
+
+def in_repo?(resolved)
+  resolved.to_s.start_with?("#{REPO_ROOT}/")
+end
+
+# --- main ---------------------------------------------------------------
+
+options = { all: false }
+parser = OptionParser.new do |opts|
+  opts.banner = 'Usage: bin/check-links [--all] [PATH...]'
+  opts.on('--all', 'Include archaeology (_obs/, _archive/, dot-dirs, ref/converted/) in the scan') { options[:all] = true }
+end
+roots = parser.parse(ARGV)
+roots = ['.'] if roots.empty?
+
+ignore_globs = load_ignore_globs
+files = gather_md(roots, include_all: options[:all], ignore_globs: ignore_globs)
+
+broken = Hash.new { |h, k| h[k] = [] }
+checked = 0
+
+files.each do |file|
+  each_link(file.read) do |line_no, target|
+    next if skip_target?(target)
+    resolved = resolve_target(file, target)
+    next if resolved.nil?
+    next if segment_target?(resolved) # lint-outline's domain
+    next unless in_repo?(resolved)     # out-of-repo: unverifiable
+    checked += 1
+    broken[file] << [line_no, target, resolved] unless resolved.exist?
+  end
+end
+
+rel = ->(p) { p.relative_path_from(REPO_ROOT).to_s rescue p.to_s }
+
+if broken.empty?
+  puts "✓ check-links: #{checked} doc-nav links across #{files.size} files all resolve."
+  exit 0
+end
+
+count = broken.values.sum(&:size)
+puts "✗ check-links: #{count} broken doc-nav link#{'s' unless count == 1} " \
+     "in #{broken.size} file#{'s' unless broken.size == 1} " \
+     "(#{checked} links checked across #{files.size} files)"
+puts
+broken.sort_by { |f, _| f.to_s }.each do |file, entries|
+  puts "#{rel.call(file)}"
+  entries.sort_by(&:first).each do |line_no, target, resolved|
+    puts "  L#{line_no}: #{target}  →  missing (#{rel.call(resolved)})"
+  end
+  puts
+end
+exit 1
