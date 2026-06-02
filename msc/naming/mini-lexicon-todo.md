@@ -6,7 +6,7 @@ The R1/R2 vote schema is built around "vote on a candidate name for a target con
 
 Decision (Joseph, 2026-04-29) is to *stop trying*: leave the malformed votes in the corpus, accept that R2 voters will work around them via write-ins where they have ideas, and capture the substantive content here as a separate punch-list. Each item is something a future agent (or Joseph) can pick up and act on.
 
-Sources walked: [`master-list-full.md`](master-list-full.md), [`explanatory-candidate-scan.md`](_archive/explanatory-candidate-scan.md), [`round-2-plan.md`](round-2-plan.md), [`naming-tier2-classification-log.md`](_archive/naming-tier2-classification-log.md), [`/doc/naming-principles.md`](../../doc/naming-principles.md), [`TODO.md`](../../TODO.md). Joseph's nine annotations on the explanatory-candidate-scan high-confidence tier seeded the categorization.
+Sources walked: [`master-list-full.md`](master-list-full.md), [`explanatory-candidate-scan.md`](_archive/explanatory-candidate-scan.md), [`round-2-plan.md`](round-2-plan.md), [`naming-tier2-classification-log.md`](_archive/naming-tier2-classification-log.md), [`doc/sop/naming.sop/principles.sop.md`](../../doc/sop/naming.sop/principles.sop.md), [`TODO.md`](../../TODO.md). Joseph's nine annotations on the explanatory-candidate-scan high-confidence tier seeded the categorization.
 
 Cross-references rather than duplicates: where the substantive concern is already tracked in `TODO.md` or `round-2-plan.md`, the entry is a one-liner pointing there.
 
@@ -244,7 +244,7 @@ These are votes on document structure, not on theory concept names. Some are leg
 
 **Proposed actions:** None — these are FORMAT.md API conventions and renaming would propagate across hundreds of segments. The "votes" are essentially affirmations.
 
-**Status:** *referenced in [doc/naming-principles.md](../../doc/naming-principles.md) §"Public-API layer"* — already flagged as expensive to rename.
+**Status:** *referenced in [doc/sop/naming.sop/principles.sop.md](../../doc/sop/naming.sop/principles.sop.md) §"Public-API layer"* — already flagged as expensive to rename.
 
 ### 4.4 README's "Convergent Choices" / "Maturity Gradient" / "Novel Results" / "Cross-Domain Joining" headings
 
@@ -400,7 +400,7 @@ Largely captured in [`round-2-plan.md`](round-2-plan.md) §"Lexicon-coherence pa
 
 ### 8.1 Acronym discipline already documented; specific cases to revisit
 
-**Issue:** [`doc/naming-principles.md`](../../doc/naming-principles.md) §"Acronym discipline" sets the convention: propose new acronyms only when (a) expanded form will be used 10+ times in nearby prose, (b) acronym survives communal-imagination test on its own, (c) collision-checked against AI/ML literature. The ACT → AAD precedent (resolved AI-Consciousness-Test collision) is the canonical worked example.
+**Issue:** [`doc/sop/naming.sop/principles.sop.md`](../../doc/sop/naming.sop/principles.sop.md) §"Acronym discipline" sets the convention: propose new acronyms only when (a) expanded form will be used 10+ times in nearby prose, (b) acronym survives communal-imagination test on its own, (c) collision-checked against AI/ML literature. The ACT → AAD precedent (resolved AI-Consciousness-Test collision) is the canonical worked example.
 
 Specific cases in the corpus where acronym usage is still in flux:
 - **CIY** (causal information yield) — well-established symbol; alias debate per master-list.
@@ -429,7 +429,7 @@ Specific cases in the corpus where acronym usage is still in flux:
 
 **Sources:** [master-list rows on `track 1 track 2 in bias bound derivation`](master-list-full.md).
 
-**Proposed actions:** Convention call. Pairs with the broader role-prefix-vs-subject-noun discipline in `doc/naming-principles.md`.
+**Proposed actions:** Convention call. Pairs with the broader role-prefix-vs-subject-noun discipline in `doc/sop/naming.sop/principles.sop.md`.
 
 **Status:** open; cheap.
 

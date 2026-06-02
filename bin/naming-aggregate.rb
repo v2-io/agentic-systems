@@ -4,7 +4,7 @@
 # bin/naming-aggregate.rb
 #
 # Aggregates multi-agent naming-vote tables from msc/naming/naming-votes/*.md.
-# Parses markdown tables defined in doc/naming-principles.md — supports both
+# Parses markdown tables defined in doc/sop/naming.sop/principles.sop.md — supports both
 # the 4-column legacy R1 schema (current/new/weight/notes) and the 5-column
 # current schema (current/new/category/weight/notes). Both schemas may appear
 # in a single run; per-file detection is automatic.
@@ -480,7 +480,7 @@ def render_round2(result, records)
   out << ''
   out << 'This is the aggregated candidate list from Round 1, sorted most-popular to least-popular (tallies withheld to prevent bandwagon convergence). Each entry shows a current-name, the alternatives proposed across agents (including explicit keeps), and the reasoning notes from Round 1 agents.'
   out << ''
-  out << '**Your task:** review each entry and cast your own votes following `doc/naming-principles.md`. You may add new candidates not on this list if you discover one during review. Do not read other Round-1 vote files directly — this aggregated summary is your input. Write your votes to `msc/naming/naming-votes/{your-agent-id}.md`.'
+  out << '**Your task:** review each entry and cast your own votes following `doc/sop/naming.sop/principles.sop.md`. You may add new candidates not on this list if you discover one during review. Do not read other Round-1 vote files directly — this aggregated summary is your input. Write your votes to `msc/naming/naming-votes/{your-agent-id}.md`.'
   out << ''
   out << '---'
   out << ''

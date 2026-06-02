@@ -1,6 +1,6 @@
 # Naming Principles
 
-Long-lived naming principles for the Agentic Systems Framework. Vocabulary commitments, slug discipline, evaluation criteria, decision categories, naming layers. Tactical voting mechanics (round structure, vote-weight scales, deliverable formats, cold-start discipline) live separately in [`msc/naming/naming-principles-old.md`](../msc/naming/naming-principles-old.md) for as long as the naming cycle's voting apparatus is in active use; that file will be deprecated when the apparatus retires.
+Long-lived naming principles for the Agentic Systems Framework. Vocabulary commitments, slug discipline, evaluation criteria, decision categories, naming layers. Tactical voting mechanics (round structure, vote-weight scales, deliverable formats, cold-start discipline) live separately in [`msc/naming/naming-principles-old.md`](../../../msc/naming/naming-principles-old.md) for as long as the naming cycle's voting apparatus is in active use; that file will be deprecated when the apparatus retires.
 
 The principles below apply to *every* naming decision in the project — whether reached via multi-agent voting, manual curation, an audit-finding, or a single contributor's call.
 

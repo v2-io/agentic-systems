@@ -8,7 +8,7 @@ Your discrimination as a voter is the substantive deliverable of this round, not
 
 These four documents compose into the round's full instruction set. Read them in order; each has one job, and none is canonical alone:
 
-1. **`doc/naming-principles.md`** — what we name and why; categories; evaluation criteria; architectural invariants.
+1. **`doc/sop/naming.sop/principles.sop.md`** — what we name and why; categories; evaluation criteria; architectural invariants.
 2. **`doc/sop/naming.sop/methodology.sop.md`** — how the pieces compose: the tracker, the segment-walk rhythm, failure modes we've seen and the disciplines that protect against them, stopping rules, what co-ownership of this round means concretely. *Read this carefully — it carries lessons from prior cohorts about what produces good output.*
 3. **`doc/de-novo-audit-instructions.md`** — the segment-walk rhythm itself: one segment at a time, reflections as you go, the posture-discipline that the methodology in (2) borrows.
 4. **Your card and tracker** (paths below) — the actual work. The card's preamble carries the voting-mechanic spec (scale, top-pick, write-in, category column, heading conventions, within-target randomization). The tracker is your working file across the walk.
@@ -80,7 +80,7 @@ As per all of the instructions above, your expected course will be:
 
 ### Pre-walk (one-time setup)
 
-- [ ] **1. Read the four instruction documents** in the order given in "Reading order before you start" above: [`doc/naming-principles.md`](../../doc/naming-principles.md) → [`doc/sop/naming.sop/methodology.sop.md`](../../doc/sop/naming.sop/methodology.sop.md) → [`doc/de-novo-audit-instructions.md`](../../doc/de-novo-audit-instructions.md) → this launch prompt.
+- [ ] **1. Read the four instruction documents** in the order given in "Reading order before you start" above: [`doc/sop/naming.sop/principles.sop.md`](../../doc/sop/naming.sop/principles.sop.md) → [`doc/sop/naming.sop/methodology.sop.md`](../../doc/sop/naming.sop/methodology.sop.md) → [`doc/de-novo-audit-instructions.md`](../../doc/de-novo-audit-instructions.md) → this launch prompt.
 - [ ] **2. Create your audit working directory** at `msc/AUDIT-WORKING-NNNNNN/` (six random digits of your choice; pick anything, just avoid existing-directory collisions). Per [`doc/de-novo-audit-instructions.md`](../../doc/de-novo-audit-instructions.md) §"Before you begin: create your audit-working directory."
 - [ ] **3. Write your workflow restatement** at `00-workflow-restatement.md` in your working directory, covering the five components specified in [`doc/sop/naming.sop/methodology.sop.md`](../../doc/sop/naming.sop/methodology.sop.md) §3 — including a self-articulated answer to *"What level of cognitive effort, thoughtful engagement, and ownership are you expected to exhibit that is atypical for LLM agents currently?"* This is the gate between reading and working.
 - [ ] **4. Orient to the project at the README level.** Unlike a full auditor (who reads [`README-auditor.md`](../../README-auditor.md) to avoid priming on findings / recent progress / known issues), you may read [`README.md`](../../README.md) directly — the priming content is useful to voters because the round's substance *is* the project's actual concepts. The auditor variant remains an option if you prefer the leaner orientation.

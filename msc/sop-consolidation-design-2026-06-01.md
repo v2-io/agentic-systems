@@ -48,7 +48,7 @@ The six inventories converged on the same clusters. These become the `doc/SOP/` 
 |---|---|---|---|
 | Audit (de-novo walk + finding routing) | procedure | `doc/de-novo-audit-instructions.md`, `doc/audit-routing-instructions.md` | `doc/SOP/audit.md` (+ the two manuals relocated as its detail — see §3) |
 | Spike disposition / routing | procedure | `doc/spike-routing.md`, `spikes/README.md` | `doc/SOP/spikes.md` (thin; defers to audit) |
-| Naming cycle + principles | procedure | `doc/naming-principles.md`, `doc/sop/naming.sop/methodology.sop.md` | `doc/SOP/naming.md` (+ the citability / lexicon-coherence memories folded in) |
+| Naming cycle + principles | procedure | `doc/sop/naming.sop/principles.sop.md`, `doc/sop/naming.sop/methodology.sop.md` | `doc/SOP/naming.md` (+ the citability / lexicon-coherence memories folded in) |
 | Segment promotion + gates + format | procedure | `FORMAT.md` | **stays `FORMAT.md`**, cross-linked from SOP (not duplicated) |
 | Terminology system (`bin/term`) | procedure | `terminology/README.md` | **stays** `terminology/README.md`, indexed from SOP |
 | Build / auto-generation pipeline | procedure | `msc/markdown-first-pipeline.md` + tool headers + `FORMAT-TODO.md` | `doc/SOP/build-pipeline.md` (consolidates the auto-gen + monograph disciplines) |
@@ -81,7 +81,7 @@ doc/SOP/
                      archivability test, the canon-cites-only-canon binary, sim/empirical-as-spike-class).
                      Likely just a relocation+rename of doc/spike-routing.md.
 
-  naming.md          relocation of naming-principles.md + doc/sop/naming.sop/methodology.sop.md, with the
+  naming.md          relocation of doc/sop/naming.sop/principles.sop.md + doc/sop/naming.sop/methodology.sop.md, with the
                      sole-carrier memories folded in: citability (Crit-9) four-resolution paths,
                      lexicon-coherence dimensions, voting-round load/scale-drift lessons.
 

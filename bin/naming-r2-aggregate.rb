@@ -186,7 +186,7 @@ def substance_score(raw_weight, novelty, note_chars, bullet_chars, top_pick: fal
   # has multiple +2s on a target; elsewhere it's mostly redundant with +2. The
   # multiplier captures the tiebreaker signal without distorting the common case.
   #
-  # Canonicalize × 1.2 rationale: per naming-principles.md, canonicalize means
+  # Canonicalize × 1.2 rationale: per principles.sop.md, canonicalize means
   # "the phrase is already organically in the prose" — empirical evidence the
   # name fits, beyond just one voter's preference. Excavated-from-prose votes
   # carry stronger fit-signal than invented-rename votes.
@@ -896,7 +896,7 @@ def render_patterns(records, multi_voter_records, voters)
   out << ''
   out << 'For an agent reading after framework ingestion to produce first-pass canonicalize / rename decisions. This doc surfaces patterns target-by-target reading would miss, and provides methodological keys to interpret the score-card numbers.'
   out << ''
-  out << 'See also: [`r2-aggregate-table.md`](r2-aggregate-table.md) (score-card, sorted by max(score/n)), [`r2-aggregate-detail.md`](r2-aggregate-detail.md) (full per-target vote breakdown), [`naming-principles.md`](../../doc/naming-principles.md) (vote categories and criteria), [`methodology.sop.md`](../../doc/sop/naming.sop/methodology.sop.md) (round design and engagement protocol).'
+  out << 'See also: [`r2-aggregate-table.md`](r2-aggregate-table.md) (score-card, sorted by max(score/n)), [`r2-aggregate-detail.md`](r2-aggregate-detail.md) (full per-target vote breakdown), [`principles.sop.md`](../../doc/sop/naming.sop/principles.sop.md) (vote categories and criteria), [`methodology.sop.md`](../../doc/sop/naming.sop/methodology.sop.md) (round design and engagement protocol).'
   out << ''
   out << '---'
   out << ''
@@ -992,7 +992,7 @@ def render_patterns(records, multi_voter_records, voters)
                   .sort_by { |s| -s[:leader_score_per_n] }
   out << "### 2c. Add-alias landings — at least one ⊕ vote on the leader (#{alias_leaders.size})"
   out << ''
-  out << '*The leader has add-alias votes — the proposed action is "keep the current name AND add this as a parallel handle," not "replace." First-pass action: **add the alias** in NOTATION/LEXICON; do not rename. Per `naming-principles.md`: most common case is symbol + English alias.*'
+  out << '*The leader has add-alias votes — the proposed action is "keep the current name AND add this as a parallel handle," not "replace." First-pass action: **add the alias** in NOTATION/LEXICON; do not rename. Per `doc/sop/naming.sop/principles.sop.md`: most common case is symbol + English alias.*'
   out << ''
   out << '| target | proposed alias / leader | leader = current? | score | score/n |'
   out << '|---|---|---|--:|--:|'
@@ -1131,7 +1131,7 @@ def render_patterns(records, multi_voter_records, voters)
   # ============================================================
   out << '## 5. Suggested reading order for first-pass landings'
   out << ''
-  out << '1. **Re-read** [`naming-principles.md`](../../doc/naming-principles.md) §"Vote categories" and §"Rename vs. Add-alias" — the categorical distinctions matter for landing actions.'
+  out << '1. **Re-read** [`principles.sop.md`](../../doc/sop/naming.sop/principles.sop.md) §"Vote categories" and §"Rename vs. Add-alias" — the categorical distinctions matter for landing actions.'
   out << ''
   out << '2. **Section 3 cross-cutting patterns above** — coordinated decisions (Class N, Pearl L1/L2/L3) should be triaged together, not piece-by-piece.'
   out << ''

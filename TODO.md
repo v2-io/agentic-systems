@@ -234,7 +234,7 @@ Status (updated 2026-05-09): R1 + R2 voting cohorts closed; manual canonicalize-
 - Two reviewer-judgment type calls deferred (`#der-agent-opacity`, `#scope-observation-ambiguity-modulation`).
 - Three H1-vs-first-tag word disagreements (`form-objective-functional`, `form-composition-closure`, `scope-observation-ambiguity-modulation`).
 
-Detail in [`msc/naming/naming-rename-plan.md`](msc/naming/naming-rename-plan.md) (renamed from `naming-pilot-rename-plan.md` on 2026-05-04 to reflect the broadened scope from role-prefix-pilot mapping to all naming decisions); principles in [`doc/naming-principles.md`](doc/naming-principles.md); Round-1 vote archaeology in `msc/naming/naming-votes/` and `msc/naming/naming-aggregate-*`.
+Detail in [`msc/naming/naming-rename-plan.md`](msc/naming/naming-rename-plan.md) (renamed from `naming-pilot-rename-plan.md` on 2026-05-04 to reflect the broadened scope from role-prefix-pilot mapping to all naming decisions); principles in [`doc/sop/naming.sop/principles.sop.md`](doc/sop/naming.sop/principles.sop.md); Round-1 vote archaeology in `msc/naming/naming-votes/` and `msc/naming/naming-aggregate-*`.
 
 
 ## Documentation queued
@@ -323,7 +323,7 @@ Until both fixes land, do not run `bin/align-slug --all` against chapters contai
 
 ### Per-role README pipeline rework (queued 2026-05-01)
 
-Replaces the shelved `tools/role-encounter/` approach. Extend the existing `doc/readme/` liquid pipeline to emit `README.md`, `README-auditor.md`, `README-voter.md`, etc. from one source tree. Migrate role-specific instructions content from `doc/de-novo-audit-instructions.md` / `naming-principles.md` / `doc/sop/naming.sop/methodology.sop.md` into `doc/readme/src/_<topic>.md` partials. Add an auto-generated project-tree partial (annotated tree of project directory structure with one-line purposes per directory/file) included in every role README — replaces the drift-prone "File Organization" section in CLAUDE.md. Architecture sketched in [`msc/handoff-2026-05-01.md`](msc/handoff-2026-05-01.md). Lessons from the over-engineered first attempt at [`_obs/role-encounter-superseded-2026-05-01/SUPERSEDED.md`](_obs/role-encounter-superseded-2026-05-01/SUPERSEDED.md).
+Replaces the shelved `tools/role-encounter/` approach. Extend the existing `doc/readme/` liquid pipeline to emit `README.md`, `README-auditor.md`, `README-voter.md`, etc. from one source tree. Migrate role-specific instructions content from `doc/de-novo-audit-instructions.md` / `doc/sop/naming.sop/principles.sop.md` / `doc/sop/naming.sop/methodology.sop.md` into `doc/readme/src/_<topic>.md` partials. Add an auto-generated project-tree partial (annotated tree of project directory structure with one-line purposes per directory/file) included in every role README — replaces the drift-prone "File Organization" section in CLAUDE.md. Architecture sketched in [`msc/handoff-2026-05-01.md`](msc/handoff-2026-05-01.md). Lessons from the over-engineered first attempt at [`_obs/role-encounter-superseded-2026-05-01/SUPERSEDED.md`](_obs/role-encounter-superseded-2026-05-01/SUPERSEDED.md).
 
 ### Phase 2 semantic index (queued 2026-05-01)
 

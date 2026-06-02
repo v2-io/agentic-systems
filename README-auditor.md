@@ -203,7 +203,7 @@ LOG.md                Pre-2026-04-24 cycle archaeology (frozen)
 
 doc/                  Long-lived process documentation
   de-novo-audit-instructions.md
-  naming-principles.md
+  doc/sop/naming.sop/principles.sop.md
   readme/             Templates and partials for README generation
 terminology/          Source-of-truth for prose vocabulary (LEXICON.md is rendered from here)
   entries/            One file per term (YAML frontmatter + markdown body)
