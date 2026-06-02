@@ -20,7 +20,7 @@ Symbols used in Adaptation and Actuation Theory, collected as a convenience inde
 > independent recheck established ρ² decomposes additively via the exact
 > `#result-mismatch-decomposition`, and that a multiplicative
 > `ρ = ρ_external·f(𝓜)·g(π)` is type-incorrect — the segment, not this
-> gloss, is the truth. See `doc/spike-routing.md` §0 and CHANGELOG
+> gloss, is the truth. See `doc/sop/spikes.sop.md` §0 and CHANGELOG
 > 2026-05-18.) A structural fix — auto-deriving this file from segment
 > definitions so it cannot drift — is queued in `TODO.md`.
 

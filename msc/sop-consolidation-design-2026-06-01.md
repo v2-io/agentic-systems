@@ -24,11 +24,11 @@ The repo's "how an agent works here" rules are scattered across the auto-loaded 
 
 **The architectural mirror.** This is exactly the relationship the *global* layer already uses and that works: `~/.claude/CLAUDE.md` is the auto-loaded index + disposition + before-action triggers; `~/.claude/memory/<cluster>/` holds the on-demand detail. The project gets the same two-layer shape: `CLAUDE.md` (auto-loaded: disposition + index + before-action triggers) ↔ `doc/SOP/` (on-demand: authoritative procedure). A before-action trigger is the seam — *"before softening an audit finding, read `doc/SOP/...`"* — disposition in the auto-loaded layer, procedure in the SOP.
 
-**The discipline that governs the consolidation itself: defer-don't-fork.** State each rule once, in its home; everywhere else references it. The corpus already does this well in one place (`doc/spike-routing.md` is deliberately thin and defers its shared core to `doc/audit-routing-instructions.md`). The whole effort is generalizing that one good instinct across the corpus and reversing the places it forked.
+**The discipline that governs the consolidation itself: defer-don't-fork.** State each rule once, in its home; everywhere else references it. The corpus already does this well in one place (`doc/sop/spikes.sop.md` is deliberately thin and defers its shared core to `doc/audit-routing-instructions.md`). The whole effort is generalizing that one good instinct across the corpus and reversing the places it forked.
 
 ## 1. The finding — the core is already consolidated; scatter lives in three specific places
 
-The reassuring result: **the hard-won procedural core is not forked.** Strengthen-first, the no-go protocol, ghost-forms, the meta-stance, the independent-verify gate all live once in `doc/audit-routing-instructions.md`, and `spike-routing.md` defers to it explicitly. Segment mechanics live once in `FORMAT.md`. The terminology system lives once in `terminology/README.md`. The auto-generation disciplines (README/LEXICON/FINDINGS) each have one tool + one source-of-truth. `CLAUDE.md` mostly *points* at these rather than restating them. This is not a contradiction-cleanup; it is an organization-and-gap-filling pass on a corpus whose core is sound.
+The reassuring result: **the hard-won procedural core is not forked.** Strengthen-first, the no-go protocol, ghost-forms, the meta-stance, the independent-verify gate all live once in `doc/audit-routing-instructions.md`, and `spikes.sop.md` defers to it explicitly. Segment mechanics live once in `FORMAT.md`. The terminology system lives once in `terminology/README.md`. The auto-generation disciplines (README/LEXICON/FINDINGS) each have one tool + one source-of-truth. `CLAUDE.md` mostly *points* at these rather than restating them. This is not a contradiction-cleanup; it is an organization-and-gap-filling pass on a corpus whose core is sound.
 
 Scatter actually concentrates in three places:
 
@@ -47,7 +47,7 @@ The six inventories converged on the same clusters. These become the `doc/SOP/` 
 | Cluster | Procedure or disposition? | Current authoritative home(s) | Proposed home |
 |---|---|---|---|
 | Audit (de-novo walk + finding routing) | procedure | `doc/de-novo-audit-instructions.md`, `doc/audit-routing-instructions.md` | `doc/SOP/audit.md` (+ the two manuals relocated as its detail — see §3) |
-| Spike disposition / routing | procedure | `doc/spike-routing.md`, `spikes/README.md` | `doc/SOP/spikes.md` (thin; defers to audit) |
+| Spike disposition / routing | procedure | `doc/sop/spikes.sop.md`, `spikes/README.md` | `doc/SOP/spikes.md` (thin; defers to audit) |
 | Naming cycle + principles | procedure | `doc/sop/naming.sop/principles.sop.md`, `doc/sop/naming.sop/methodology.sop.md` | `doc/SOP/naming.md` (+ the citability / lexicon-coherence memories folded in) |
 | Segment promotion + gates + format | procedure | `FORMAT.md` | **stays `FORMAT.md`**, cross-linked from SOP (not duplicated) |
 | Terminology system (`bin/term`) | procedure | `terminology/README.md` | **stays** `terminology/README.md`, indexed from SOP |
@@ -76,10 +76,10 @@ doc/SOP/
                      gate-2-probes-discussion / independent-verify disciplines (the first two currently
                      sole-carried in memory; the latter two restated in CLAUDE.md).
 
-  spikes.md          thin, like today's spike-routing.md — defers shared core to audit.md, carries the
+  spikes.md          thin, like today's spikes.sop.md — defers shared core to audit.md, carries the
                      spike-specific delta (the five-state disposition, .integrated vs .archived, the
                      archivability test, the canon-cites-only-canon binary, sim/empirical-as-spike-class).
-                     Likely just a relocation+rename of doc/spike-routing.md.
+                     Likely just a relocation+rename of doc/sop/spikes.sop.md.
 
   naming.md          relocation of doc/sop/naming.sop/principles.sop.md + doc/sop/naming.sop/methodology.sop.md, with the
                      sole-carrier memories folded in: citability (Crit-9) four-resolution paths,
@@ -112,7 +112,7 @@ doc/SOP/
 - **`CLAUDE.md` (project).** *Keep (disposition):* strengthen-before-soften, integration-is-replacement, working-theory-belongs-in-canon, math-novelty-recognition, prior-art-integration stance, the math-notation self-reminder, the reading/writing posture, the AAT architectural-decisions orientation. *Demote to pointer (procedure):* slug role-prefix mapping table → `doc/SOP/` (or keep as `bin/align-slug` is the source of truth + a pointer); README/LEXICON build mechanics → `doc/SOP/build-pipeline.md`; Gate-2 mechanics → `doc/SOP/audit.md` (keep the *why* as disposition); audit-cycle three-document layout → `doc/SOP/audit.md`. Net effect: `CLAUDE.md` gets shorter and more clearly disposition-plus-index, which also de-risks the "unreviewed amplifier" concern (`INTEGRATION-CLEANUP-TODO.md` §F6) by shrinking the procedural surface that drifts unwatched.
 - **`CLAUDE.md` (global) + global memory.** *Decision §5(scope).* If in-scope: the before-action prescriptions stay (they are disposition + triggers), but project-specific procedure triggers point into `doc/SOP/`. **Verify against the live `~/.claude/memory/` first-hand** — the inventory surveyed a `~/src/memorata/` copy; the live layer's authored-vs-index-only state must be checked before any edit.
 - **`FORMAT.md` / `NOTATION.md`.** Stay. Single-source the WN-discipline here (the WN-coherence pass's option B). Cross-link from `doc/SOP/README.md`.
-- **`doc/*`.** The process docs relocate/rename under `doc/SOP/` per §3 (or stay and get indexed — gate decision §5). `spike-routing.md`'s defer-to-audit pattern is the template.
+- **`doc/*`.** The process docs relocate/rename under `doc/SOP/` per §3 (or stay and get indexed — gate decision §5). `spikes.sop.md`'s defer-to-audit pattern is the template.
 - **READMEs (`spikes/`, `audits/`, `terminology/`).** Stay as *subdirectory governance* (they document their own corpus and are correctly single-sourced). Indexed from `doc/SOP/README.md`; trim any restatement of a rule whose home is now an SOP, leaving a pointer.
 - **Project memory.** *Extract* the sole-carrier procedure memories to their `doc/SOP/` homes (multi-agent.md, git-hygiene.md, audit.md), leaving each memory thinned to a one-line pointer + the Joseph-quote/why (the disposition slice memory is good at). *Thin* the duplicate memories to pointers. *Keep* the pure-disposition and project-context memories untouched. This is also the lever that gets MEMORY.md back under its limit (§6).
 - **`msc/` + navigators.** The WN-coherence-pass doc archives to `_obs/` once its rule lands in FORMAT. The audit-gold two-track's settled shape moves from `NEXT-UP.md` into `doc/SOP/audit.md` as it is gated. `markdown-first-pipeline.md` stays as the design record, anchored from `doc/SOP/build-pipeline.md`.

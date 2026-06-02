@@ -9,9 +9,9 @@
 
 **The interment pattern (proven over two docs):** rewrite live forward-pointers · regenerate generated outputs at source (scripts / README partials) · leave frozen archaeology period-correct · no tombstone stubs · `bin/check-links` is the gate after each (it backstops the ref-split — it has caught live refs the recon agents missed). `bin/check-links` excludes archaeology and defers `…-core/src/` segment links to lint-outline; repo-specific exemptions live in `.check-links-ignore`.
 
-**Landed this cycle:** `naming.sop` fully interred — `methodology.sop.md` (`ad59d57`) + `principles.sop.md` (`305c541`) under the `naming.sop.md` index; `bin/check-links` built (`f6ffaa5`); 3 stale links fixed (`5bb5177`); `JOSEPH-TODO.md` created (`1382d64`); legacy `bin/build-tex` sunset (`60a201f`).
+**Landed this cycle:** `naming.sop` fully interred — `methodology.sop.md` (`ad59d57`) + `principles.sop.md` (`305c541`) under the `naming.sop.md` index; **`spike-routing.md` interred → `doc/sop/spikes.sop.md`**; `bin/check-links` built (`f6ffaa5`); 3 stale links fixed (`5bb5177`); `JOSEPH-TODO.md` created (`1382d64`); legacy `bin/build-tex` sunset (`60a201f`).
 
-**Remaining sweep** (each doc = ref-split → gate live/frozen → execute → rebuild affected generated files → check-links green → commit): `spike-routing` → `doc/sop/spikes.sop.md`; then the **codependent audit pair** (de-novo + routing → `doc/sop/audit.sop/`, move together); then **FORMAT last** (→ `doc/sop/format.sop.md` + branches; highest blast radius — decomposition is in the design doc).
+**Remaining sweep** (each doc = ref-split → gate live/frozen → execute → rebuild affected generated → check-links green → commit): the **codependent audit pair** is next (de-novo + audit-routing → `doc/sop/audit.sop/{de-novo,routing}.sop.md` + an `audit.sop.md` index; move together; also retargets `spikes.sop.md`'s deferral ref from `../audit-routing-instructions.md` to the new routing piece); then **FORMAT last** (→ `doc/sop/format.sop.md` + branches; highest blast radius — decomposition in the design doc).
 
 **Decisions for Joseph → [`JOSEPH-TODO.md`](JOSEPH-TODO.md)** is now the single queue for everything needing him (the WN-discipline gate, the `doc/sop/sop.md` master-index question, the TODO-freshness reframes, D-2 / G3 / SP-27 / SP-29, the Greek-vocab + README-v2 taste calls).
 

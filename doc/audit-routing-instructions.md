@@ -294,7 +294,7 @@ Three enum refinements the fan-out surfaced, folded here *(evolved ops)*:
 
 **The whole evidence hierarchy is proxy; truth is the arbiter**
 *(authoritative SOP — Joseph 2026-05-18; full statement
-`doc/spike-routing.md` §0).* Every entry in the hierarchy below — and the ledgers, CHANGELOG, INDEX, `NOTATION.md`, the segment's own assertion, the auditor's framing, and even multi-agent convergence — is a **mild proxy** that *drifts*. It locates and cheap-screens a question;
+`sop/spikes.sop.md` §0).* Every entry in the hierarchy below — and the ledgers, CHANGELOG, INDEX, `NOTATION.md`, the segment's own assertion, the auditor's framing, and even multi-agent convergence — is a **mild proxy** that *drifts*. It locates and cheap-screens a question;
 it never settles it. Settle by the mathematics re-derived independently
 (constitutive structure + forced identities + elementary steps), not by what any artifact says. Two named traps: `NOTATION.md` is a *lagging*
 index — the live theory drifts from it; never cite it as authority. And a `[Verified]` whose object is "what file F says" rather than "the derivation holds" is proxy in verification's clothes. The hierarchy is for *screening order*, not for *deciding truth*.
@@ -307,7 +307,7 @@ directed into both SOPs): pickaxe `git log -S'<string>' -- '*/src/'` for when/wh
 across the renames, and dates read in context. Don't infer status from the log's *recency*; do use the log's *provenance*.
 
 **The regression check is central, not optional** (Joseph 2026-05-17,
-directed into both SOPs; full treatment `doc/spike-routing.md` §2a).
+directed into both SOPs; full treatment `sop/spikes.sop.md` §2a).
 Before re-introducing *any* result, and before confirming any "already integrated" claim, the provenance investigation must distinguish
 *never-landed-and-valid* / *current-corrected-truth* from
 *landed-then-deliberately-corrected-away* / *regression-restoration over a later fix*. The scenario: a result was integrated, an audit found a flaw, the theory was fixed — and the now-clean-looking prior result gets restored *because it looks better*. The corrected theory is usually
@@ -381,11 +381,11 @@ The transferable scar: check the new filter externally before building on it —
 the shared core's first refinement from its second corpus). §8's
 "`git`-recency is poisoned … use ledgers, not the log" was too blunt: it correctly killed *recency-as-status-proxy* but, read literally, suppressed
 *provenance investigation* (pickaxe `-S`, `blame`, `log --follow`, dates in context) — a valid, non-destructive, often-sharpest decisive-test instrument. Split the two explicitly. Surfaced from spike-routing
-(`doc/spike-routing.md` §7 / Refinement 2) and folded into the shared core because the evidence-hierarchy is corpus-agnostic. This is the §7 meta-stance working as intended: a second corpus exercising the shared core re-truthified it; the refinement landed here, not in a fork.*
+(`sop/spikes.sop.md` §7 / Refinement 2) and folded into the shared core because the evidence-hierarchy is corpus-agnostic. This is the §7 meta-stance working as intended: a second corpus exercising the shared core re-truthified it; the refinement landed here, not in a fork.*
 
 *Refinement 3 (2026-05-17, Joseph-directed — pre-emptive). The regression check (don't re-land a corrected-away result; don't confirm an integration that is a regression-restoration over a fix) is elevated to a **central** investigation element, not a side gate, on every disposition including already-integrated ones. Body-signal: "it looks better than canon" — because the corrected truth is usually messier.
 Full worked treatment + the disposition `correctly-superseded` in
-`doc/spike-routing.md` §2a / its Refinement 5. Same §7-meta-stance landing: surfaced in the spike corpus, folded into the shared core.*
+`sop/spikes.sop.md` §2a / its Refinement 5. Same §7-meta-stance landing: surfaced in the spike corpus, folded into the shared core.*
 
 *Refinement 4 (2026-05-18, Joseph-directed — the foundational stance,
 made explicit and supreme over all the proxy-mechanics in this doc).
@@ -395,7 +395,7 @@ audit findings, and multi-agent convergence are *mild proxies that drift* — sc
 Two named traps folded into the evidence-hierarchy preamble above:
 `NOTATION.md` lags the live theory (never authority); a `[Verified]`
 tag whose object is "what a file says" is proxy wearing verification's clothes. Caught on a live lead-agent slip (a $\rho$-factorization judgment that cited NOTATION as a verified pillar — the real argument was
-*stronger* without it). Canonical statement: `doc/spike-routing.md`
+*stronger* without it). Canonical statement: `sop/spikes.sop.md`
 §0. This Refinement sits above Refinements 1–3: they are proxy-
 discipline; §0 is what proxy-discipline is *for*.*
 
@@ -404,4 +404,4 @@ discipline; §0 is what proxy-discipline is *for*.*
 Duty is fully discharged when, at current understanding, the artifact carries its **honest tier** + Working Notes state **what is open and what would close it** + the remainder is **released to the standing cycle**;
 then stop. A live gate is legitimate only when the artifact would
 *assert false confidence* without it (a canon landing, a status elevation), not as a precondition for *releasing an honestly lower-tiered* item. Canonical statement + the self-check:
-`doc/spike-routing.md` §0c / its Refinement 8.*
+`sop/spikes.sop.md` §0c / its Refinement 8.*
