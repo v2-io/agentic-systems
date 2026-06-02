@@ -671,7 +671,7 @@ This change converts the loop from purely segment-driven to *segment-driven with
 
 **Status:** open; recommended for future-cycle methodology document. Not a mid-cycle fix; the current cohort's votes stand. Codex and Flash are doing ad-hoc end-of-walk versions of this externally.
 
-**Priority hint:** MEDIUM-HIGH for next cycle's methodology. Worth landing in `doc/naming-cycle-methodology.md` §4 (the walk loop) before any future R2 / R3 round launches.
+**Priority hint:** MEDIUM-HIGH for next cycle's methodology. Worth landing in `doc/sop/naming.sop/methodology.sop.md` §4 (the walk loop) before any future R2 / R3 round launches.
 
 ### 12.4 Voting-sequence noise as a limitation
 

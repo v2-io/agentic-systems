@@ -1,6 +1,6 @@
 # Naming Cycle Methodology
 
-This document describes how a voter actually works through the naming cycle when the round is structured around segment-walk engagement. It composes [`naming-principles.md`](naming-principles.md) (what we name and why), [`de-novo-audit-instructions.md`](de-novo-audit-instructions.md) (how to walk the theory thoughtfully), the per-round launch prompt (this round's identity and posture), and the per-card voting interface — so the voter knows where each lives and how they fit together.
+This document describes how a voter actually works through the naming cycle when the round is structured around segment-walk engagement. It composes [`naming-principles.md`](../../naming-principles.md) (what we name and why), [`de-novo-audit-instructions.md`](../../de-novo-audit-instructions.md) (how to walk the theory thoughtfully), the per-round launch prompt (this round's identity and posture), and the per-card voting interface — so the voter knows where each lives and how they fit together.
 
 It's also the place where what we've learned across rounds about *how this work actually goes well* gets recorded — including the failure modes we've seen, how the methodology is built to protect against them, and what operational moves a voter has at their disposal that might not be obvious from the principles file alone.
 
@@ -174,8 +174,8 @@ For quick reference:
 
 | concern | where it lives |
 |---|---|
-| What we name and why; categories; criteria | [`doc/naming-principles.md`](naming-principles.md) |
-| How to walk the theory thoughtfully (rhythm, reflections) | [`doc/de-novo-audit-instructions.md`](de-novo-audit-instructions.md) |
+| What we name and why; categories; criteria | [`doc/naming-principles.md`](../../naming-principles.md) |
+| How to walk the theory thoughtfully (rhythm, reflections) | [`doc/de-novo-audit-instructions.md`](../../de-novo-audit-instructions.md) |
 | **How to compose the pieces; the tracker; failure modes** | this file |
 | Per-round identity, posture, where your card lives, cold-start scope | the round's launch prompt (`msc/naming/round-2-launch-prompt*.md`) |
 | Per-target candidates, exploration rationales, vote-table mechanics | the voting card itself |

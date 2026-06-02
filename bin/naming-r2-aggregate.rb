@@ -896,7 +896,7 @@ def render_patterns(records, multi_voter_records, voters)
   out << ''
   out << 'For an agent reading after framework ingestion to produce first-pass canonicalize / rename decisions. This doc surfaces patterns target-by-target reading would miss, and provides methodological keys to interpret the score-card numbers.'
   out << ''
-  out << 'See also: [`r2-aggregate-table.md`](r2-aggregate-table.md) (score-card, sorted by max(score/n)), [`r2-aggregate-detail.md`](r2-aggregate-detail.md) (full per-target vote breakdown), [`naming-principles.md`](../../doc/naming-principles.md) (vote categories and criteria), [`naming-cycle-methodology.md`](../../doc/naming-cycle-methodology.md) (round design and engagement protocol).'
+  out << 'See also: [`r2-aggregate-table.md`](r2-aggregate-table.md) (score-card, sorted by max(score/n)), [`r2-aggregate-detail.md`](r2-aggregate-detail.md) (full per-target vote breakdown), [`naming-principles.md`](../../doc/naming-principles.md) (vote categories and criteria), [`methodology.sop.md`](../../doc/sop/naming.sop/methodology.sop.md) (round design and engagement protocol).'
   out << ''
   out << '---'
   out << ''
