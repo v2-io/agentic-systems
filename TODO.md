@@ -57,7 +57,7 @@ The strategic-composition cluster ran from 2026-05-21 through 2026-05-25 across 
 
 The three NeurIPS 2026 Main Track submissions in `~/src/neurips/` (Tragedy of the Confident Agent, Unified Convergence Theory for Non-Stationary RL, LLM Hallucination Bound) extracted three ASF results and refined them under adversarial scrutiny over the 2026-05-04 → 2026-05-07 sprint. The papers are *gain-producing* extractions, not loss-preserving — each landed strengthenings (KKT shadow-price resolution, Bretagnolle-Huber point-mass identity, chart-rescaling no-go on Euclidean chart norms, Class-1 reduction to Stuart-school, structural-class theorem on gain-decay updates, F-A-G-P enforcement framework, Coupled-class autoregressive connectivity lemma covering modern AR architectures, etc.) that don't yet exist at catalog precision in ASF.
 
-Cross-mapping between paper sections and ASF source segments, plus per-segment / catalog / meta-architectural updates the back-integration would touch, captured at: [`msc/neurips-back-integration-2026-05-08.md`](msc/neurips-back-integration-2026-05-08.md).
+Cross-mapping between paper sections and ASF source segments, plus per-segment / catalog / meta-architectural updates the back-integration would touch, captured at: [`spikes/neurips-back-integration-2026-05-08.md`](spikes/neurips-back-integration-2026-05-08.md).
 
 Phasing in §6 of that file is conservative (Phase A minimum-viable ~1 week; Phase B segment-level absorption ~3-4 weeks; Phase C meta-architectural surfacing ~1-2 weeks). The cross-mapping in §1 is the hardest-to-reconstruct part — written while the paper-↔-segment correspondence was held in working memory at full fidelity, will degrade across sessions without the artifact. §7 names specific routing decisions where Joseph's judgment is needed (segment-vs-spike-vs-cross-segment routing for new material; whether the no-go-forces-axiom pattern is its own meta-pattern or an M1 refinement; how heavy to lean on the NeurIPS papers as canonical references pre-decision; etc.).
 
@@ -81,7 +81,7 @@ Recommended cycle scope: a dedicated prose-audit pass across `01-aat-core/src/` 
 
 Sources:
 - Audit's full findings: [`msc/naming/naming-votes/audit-471203-incremental.md`](msc/naming/naming-votes/audit-471203-incremental.md) (segments 1–46 only as of 2026-04-28; will be re-extracted after audit FINAL lands).
-- Aggregator's cross-architecture +3 keep votes for Greek terms (illustrating the defended-by-synoptic-voters posture): [`msc/naming/naming-aggregate-r2-review.md`](msc/naming/naming-aggregate-r2-review.md).
+- Aggregator's cross-architecture +3 keep votes for Greek terms (illustrating the defended-by-synoptic-voters posture): [`msc/naming/_archive/naming-aggregate-r2-review.md`](msc/naming/_archive/naming-aggregate-r2-review.md).
 
 
 ## README v2 pass (queued from 2026-04-27 first-human-feedback cycle)
