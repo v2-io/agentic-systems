@@ -7,7 +7,7 @@
 **Verdict:** **(B), strengthened** — the ceiling is *convention-dependent*; the strengthening is to name the forgetting-ordering convention as an explicit premise, supply AAT's own argument for why that convention is canonical, and state precisely the weaker bound that survives under the alternative.
 **Status:** DRAFTED — pending external-eye gate. No canon edits.
 
-> Settled by re-derived mathematics per `doc/spike-routing.md` §0, not by what the segment or NOTATION asserts.
+> Settled by re-derived mathematics per `doc/sop/spikes.sop.md` §0, not by what the segment or NOTATION asserts.
 
 ---
 
