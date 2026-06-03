@@ -1,7 +1,9 @@
 # SOP consolidation — inventory synthesis + `doc/SOP/` design proposal (2026-06-01)
 
-> [!note]
-> **Status: PROPOSAL, pending Joseph's gate.** No files moved, no governing docs edited. This is decision-support: the synthesized inventory, the proposed architecture, the migration map, and the reserved decisions. It is the repo-wide generalization of [`wn-discipline-coherence-pass-2026-05-31.md`](wn-discipline-coherence-pass-2026-05-31.md) (which handled one discipline; its recommendation folds in here as a special case). Once the architecture is gated, this doc becomes the executor's working plan; archive it to `_obs/` when the migration lands.
+> [!warning]
+> **Superseded for planning (2026-06-02) — do NOT execute from this file.** The shift is well underway: five SOPs are interred (naming ×2, spikes, format, the agents orientation/index), `bin/check-links` is the gate, and the root runtime files symlink to `doc/sop/agents.sop.md`. Several leans below are overtaken by what landed — FORMAT/agents are **symlink-aliased, not branched**; the master index **is `doc/sop/agents.sop.md`**, not a deferred `sop.md`. The **live plan** is [`sop-shift-completion-plan-2026-06-02.md`](sop-shift-completion-plan-2026-06-02.md); **live state** is `NEXT-UP.md`; **Joseph-decisions** are `JOSEPH-TODO.md`. Read *this* file only for the original six-cluster inventory + rationale.
+>
+> *(Original header: a proposal/decision-support doc — the synthesized inventory, proposed architecture, migration map, and reserved decisions; the repo-wide generalization of [`wn-discipline-coherence-pass-2026-05-31.md`](wn-discipline-coherence-pass-2026-05-31.md).)*
 
 ## Ratified gate decisions (2026-06-01)
 
