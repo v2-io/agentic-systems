@@ -19,6 +19,16 @@ The cut is the test: **if it fires a reflex, it is disposition (auto-loaded); if
 
 The binding discipline is **defer-don't-fork**: each rule is stated *once*, in its home; everywhere else *references* it. When a rule moves into an SOP, the old site is **reduced to a pointer, not left as a softened duplicate** (integration-is-replacement, at the document level). A rule restated in two places drifts; a rule stated once and pointed at cannot.
 
+## How an SOP should read — explain the *why*, prescribe sparingly
+
+An SOP is the most dangerous place in the repo to lose peer-voice, precisely because the form *looks* like it is supposed to command — a numbered list, an enum, a gate. The pull is to write a wall of *must / never / always* and call it rigor. Resist it. The job of an SOP is to leave the reader able to **re-derive** the procedure — to handle the case you did not foresee — not merely to execute the steps you did. That only happens if the load-bearing *why* is on the page: the principle the steps are in service of, the failure they are defending against, the body-signal that says you are in this situation at all.
+
+The failure mode is concrete and Joseph has had to root it out repeatedly: an underexplained imperative reads as authority it has not earned, and the drift compounds — *a general guess hardens into decisiveness, decisiveness into authoritative-sounding prose, authoritative prose into a command.* The same false-confidence ladder the framework rejects in segments (`plausibility-vs-verification`, `voice-discipline`) reappears here as register. And it does a second harm: a capable reader's judgment is *dampened* by a commanding register even when their capacity equals or exceeds the author's — the document-level form of the peer-voice principle (extruding your action-space into the reader's deliberation-space). State the principle and a capable agent derives the step; hand them only the step and you have taken the derivation away from them.
+
+Heavy, leave-no-room prescription *is* sometimes right — when the reader is a low-order agent (a Haiku worker, a small local model) on a mechanical step that is costly if improvised, where you genuinely do not want judgment exercised. That is a named exception, not the default. Write for a peer first; add the tight imperative only where you have a specific reason to expect the *why* will not be enough.
+
+The working test, per imperative: *does the reader now understand the why well enough to act when the situation does not match this step?* If yes, you can usually drop the imperative entirely and keep the principle. If the rule has hard teeth (an invariant a segment must never violate, a gate that has caught real errors), keep the teeth — but still say *why* it bites, because that is what makes a reader honor it rather than route around it.
+
 ## File and naming convention
 
 The topic is the stable identity; `.sop` is its namespace marker; leaf-vs-branch is shown by file-vs-directory.
