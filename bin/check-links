@@ -101,6 +101,7 @@ def gather_md(roots, include_all:, ignore_globs:)
         [base]
       end
     candidates.each do |p|
+      next if p.symlink? # a symlink (e.g. CLAUDE.md -> doc/sop/agents.sop.md) aliases a real file scanned at its own path; scanning the alias would resolve its relative links from the wrong base
       next unless p.file?
       rel = p.relative_path_from(REPO_ROOT)
       next if !include_all && excluded_dir?(rel)
