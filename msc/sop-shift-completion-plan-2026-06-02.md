@@ -25,7 +25,7 @@ That closes the file-shuffling. Everything below is the part that actually neede
 - Then thin those memories to one-line pointers at the new SOPs.
 
 **B2 — Single-source the drifted disciplines** (each is currently stated in 2–3 layers; pick one home, point the rest):
-- **WN-discipline** → `FORMAT.md` §Working Notes (per `wn-discipline-coherence-pass-2026-05-31.md`, option B). *Gate: Joseph (A/B + scope) — in JOSEPH-TODO.*
+- **WN-discipline** → `format.sop.md` §Working Notes (the single home). *No fork:* the older `wn-discipline-coherence-pass-2026-05-31.md` "A/B" framing predates `doc/sop/` — single-sourcing *is* this cycle's premise, not a decision. The global `~/.claude/` copy is a separate later pass, outside this shift.
 - **strengthen-before-soften, integration-is-replacement, peer-voice, voice-discipline** are *disposition* → authoritative home is the global `~/.claude/memory/` files; `CLAUDE.md` keeps the before-action *trigger* + a pointer, not the restatement.
 - **segment-voice-not-diff-voice, math-lives-in-segments, working-theory-in-canon** → `FORMAT.md` (segment mechanics); `CLAUDE.md` points.
 

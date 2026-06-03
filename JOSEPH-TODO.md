@@ -8,11 +8,10 @@
 ## Needs your decision (genuinely only-you)
 
 - **D-2 — bulk-64 `.integrated/` wipe.** Irreversible-ish; the call is *discharge the integration debt vs. consciously set it down*, plus semantics (rm+commit vs history-purge), timing, scope. → [`INTEGRATION-CLEANUP-TODO.md`](INTEGRATION-CLEANUP-TODO.md).
-- **D-citation — prose citations vs `\cite{}` discipline.** Your authoring voice for the monograph (the Relata agent recommends *not* auto-rewriting segments). → `INTEGRATION-CLEANUP-TODO.md` §G3, [`FORMAT-TODO.md`](FORMAT-TODO.md).
+- **D-citation — prose citations vs `\cite{}` discipline.** *Not a placement blocker — a future SOP-content discussion.* Once `format.sop.md` is the settled home, we decide the citation discipline together, then launch an agent to apply it retroactively across segments (the Relata agent recommends *not* auto-rewriting). → `INTEGRATION-CLEANUP-TODO.md` §G3, [`FORMAT-TODO.md`](FORMAT-TODO.md).
 
 ## Lead will default-and-proceed (flag only if you'd rather weigh in)
 
-- **WN-discipline** → single-source in FORMAT (option B), project-scope. (The global `~/.claude/` layer is a separate later pass.)
 - **`#schema-strategy-persistence` hard-ceiling** → take adjudication verdict B as settled (name the convention, keep `status: exact`).
 - **SP-27 / SP-29** (Part-I↔Part-IV bridge placement; the infrastructure-as-active-monitor meta-segment candidate) → lead/architectural judgment, tracked in [`PROPOSALS.md`](PROPOSALS.md).
 - **Greek-vocabulary prose discipline** (tighten segment prose vs soften the README claim, per term) → lead per-term pass, in [`TODO.md`](TODO.md).
