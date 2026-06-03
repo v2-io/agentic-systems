@@ -6,7 +6,9 @@ The plan to finish the `doc/sop/` consolidation without stranding the repo in an
 
 `doc/sop/` home + `sop-creation.sop.md` (the convention); interred `naming.sop` (methodology + principles, under its index), `spikes.sop`, and `format.sop` (FORMAT.md is now a symlink to it — zero inbound rewriting); `bin/check-links` (the link-integrity gate); `JOSEPH-TODO.md`; `bin/build-tex` sunset. Tree green throughout.
 
-## Phase A — finish the mechanical interments (commodity work; a fast agent + `check-links`)
+## Phase A — finish the mechanical interments ✓ DONE 2026-06-02
+
+The audit pair is interred (`doc/sop/audit.sop/{de-novo,routing}.sop.md` + the `audit.sop.md` index; old paths symlinked; check-links green). The record below is kept as the worked pattern.
 
 - **The audit pair** (codependent — move together): `doc/de-novo-audit-instructions.md` → `doc/sop/audit.sop/de-novo.sop.md`; `doc/audit-routing-instructions.md` → `doc/sop/audit.sop/routing.sop.md`; reshape `doc/sop/audit.sop.md` into the index. **Use the symlink trick** (leave `de-novo-audit-instructions.md` and `audit-routing-instructions.md` as symlinks to the new pieces): then *all* inbound refs — the ~300 in CLAUDE.md, segments, audits/, the README partials, even `spikes.sop`'s deferral — resolve through the symlinks untouched. The only edits are: (1) the two moved files' own outbound links (depth `doc/` → `doc/sop/audit.sop/` is **+2** `../`), and (2) the two cross-references between them become same-directory (`./de-novo.sop.md` / `./routing.sop.md`). `check-links` gates it.
 - **`format.sop` branching** into `format.sop/` pieces is an optional later nicety, not required. Leave it whole.
