@@ -17,6 +17,8 @@ That closes the file-shuffling. Everything below is the part that actually neede
 
 ## Phase B — the substantive consolidation (the value; do in this order)
 
+> **This phase needs a *thinking* agent, not the mechanical Phase-A treatment.** Single-sourcing the drift and slimming the body are judgment calls (use the disposition-vs-procedure test in [`../../doc/sop/sop-creation.sop.md`](../../doc/sop/sop-creation.sop.md)); a blind/fast agent can do Phase A but should not autopilot Phase B.
+
 **B1 — Author the two orphan SOPs** (currently memory-only; stubs in `doc/sop/`). This frees the most value and starts draining `MEMORY.md` (which is over its load limit).
 - `multi-agent.sop.md` ← the project-memory carriers: `feedback_multi_agent_methods`, `_multi_agent_verification_cadence`, `_pilot_then_sweep_pattern`, `_cluster_work_reconciliation_pattern`, `_subagent_destructive_action_authorization`, `_subagent_questions_as_framing_diagnostic`, `_workflow_restatement_as_feedback_channel`. (Delegation *stance* — peer-voice — stays disposition; the SOP points to it.)
 - `git-hygiene.sop.md` ← `feedback_commit_granularity_and_communicate`, `_commit_before_canon_modifying_spike`, `_hybrid_commit_cadence_for_parallel_sweeps`, plus lint-gates-the-commit and the bash-in-place-editor / backtick-args footguns.
