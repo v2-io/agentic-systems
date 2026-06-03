@@ -2,6 +2,9 @@
 
 The plan to finish the `doc/sop/` consolidation without stranding the repo in an intermediate state. Companion to the design/inventory doc [`sop-consolidation-design-2026-06-01.md`](sop-consolidation-design-2026-06-01.md); this is the executable end-state plan.
 
+> [!note]
+> **✓ WHOLE SHIFT COMPLETE 2026-06-02.** Phase A (audit pair) + Phase B (B1 orphan SOPs, B2 WN-discipline single-source, B3 agents.sop.md slim) all landed; durable narrative in `CHANGELOG.md` (2026-06-02). Retained as the reasoning trail (the symlink-vs-full-move pattern, the phase ordering). The only deliberately-deferred slice is the **global/memory-layer pass** (the global `~/.claude/CLAUDE.md` + `~/.claude/memory/` carriers inheriting the WN-narrowing), which is out of this project-scoped shift.
+
 ## Done
 
 `doc/sop/` home + `sop-creation.sop.md` (the convention); interred `naming.sop` (methodology + principles, under its index), `spikes.sop`, and `format.sop` (FORMAT.md is now a symlink to it — zero inbound rewriting); `bin/check-links` (the link-integrity gate); `JOSEPH-TODO.md`; `bin/build-tex` sunset. Tree green throughout.
