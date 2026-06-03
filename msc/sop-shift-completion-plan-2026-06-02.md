@@ -25,13 +25,13 @@ That closes the file-shuffling. Everything below is the part that actually neede
 - **strengthen-before-soften, integration-is-replacement, peer-voice, voice-discipline** are *disposition* → authoritative home is the global `~/.claude/memory/` files; `CLAUDE.md` keeps the before-action *trigger* + a pointer, not the restatement.
 - **segment-voice-not-diff-voice, math-lives-in-segments, working-theory-in-canon** → `FORMAT.md` (segment mechanics); `CLAUDE.md` points.
 
-**B3 — Slim `CLAUDE.md`** (the biggest project-wide lever; do it *after* B1/B2 so it points at settled homes). Target: roughly halve it, into a clean *disposition + index + triggers* file.
+**B3 — Slim `agents.sop.md`'s body** (`CLAUDE.md` / `AGENTS.md` / `GEMINI.md` now symlink to it; the orientation header + SOP index are authored — `4d5b1be`). Remaining, after B1/B2 settle the homes: demote the body's procedure *restatements* to pointers. Target: roughly halve the body into a clean *disposition + index + triggers* file.
 - **Keep (disposition / orientation / reflex-firing):** what-the-project-is and the naming lineage; the Key Architectural Decisions (GUC classes, directed separation, AND/OR DAG, sector-condition-primary); the epistemic conventions (claim tiers, equation tags); the math-in-files self-reminder; the strengthen-before-soften / integration-is-replacement / math-novelty / prior-art-integration *stances*; the reading-and-writing posture.
 - **Demote to "see `doc/sop/X.sop.md`" + (where reflex-relevant) a before-action trigger:** the Working-Conventions *procedures* — audit-cycle handling, the Gate-2 mechanics, naming mechanics, the README/LEXICON/build auto-generation mechanics, the slug role-prefix table. These are step-by-step procedure, not disposition.
 - **File Organization** → trim to the project map + a pointer to the SOP index; the per-SOP detail lives in the SOPs.
 - The test for each line: *does it fire a reflex (keep) or do you follow it step-by-step (demote to the SOP)?*
 
-**B4 — The `doc/sop/sop.md` master index** *(Joseph gate, in JOSEPH-TODO).* Lean: a thin `sop.md` (read-order + one-liner per SOP) that `CLAUDE.md`'s index points at, rather than duplicating the list in CLAUDE.md.
+**B4 — DONE (2026-06-02, `4d5b1be`): the master index is `doc/sop/agents.sop.md`** — the agent-orientation home (reading-order by role + the SOP index), with `CLAUDE.md` / `AGENTS.md` / `GEMINI.md` symlinked to it. The `sop.md` question is resolved.
 
 ## Why this order
 

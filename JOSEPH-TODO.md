@@ -10,7 +10,6 @@
 ## SOP consolidation (active work, June 2026)
 
 - **WN-discipline coherence gate.** (a) **A vs B** — lead's lean **B** (single-source the Working-Notes discipline in FORMAT; the other ~5 sites reference it, not restate it). (b) **Scope** — project-only, or extend to the global `~/.claude/` layer where the rule also lives. → full inventory + sketched edits in [`msc/wn-discipline-coherence-pass-2026-05-31.md`](msc/wn-discipline-coherence-pass-2026-05-31.md) §6.
-- **`doc/sop/` master index.** Build `doc/sop/sop.md`, or would it be too redundant with CLAUDE.md's index? Deferred by ratified decision #3 ("gather + order first; build the entrypoint later"). → [`doc/sop/sop-creation.sop.md`](doc/sop/sop-creation.sop.md), [`msc/sop-consolidation-design-2026-06-01.md`](msc/sop-consolidation-design-2026-06-01.md) (Ratified §3).
 - **Global `~/.claude/` SOP pass — timing.** Project-layer is ratified first; the global CLAUDE.md is also overloaded and carries ASF-specific material to mine. When to run the successor pass. → `doc/sop/sop-creation.sop.md` §"Near-future work to mine".
 
 ## TODO-freshness flags (surfaced 2026-06-02 by bin/check-links)
