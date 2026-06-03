@@ -122,7 +122,7 @@ A no-go collapses **two** things at once, and missing the second is the error th
 
 The steps, in order. Steps 4.1–4.4 are committed **before** the audit finding is routed (4.5); routing a no-go-bearing finding while the segment still lies about itself is the cardinal sin.
 
-**4.1 — The invariant, stated once and absolute.** *A segment must never lie about its own status, even transiently.* Tracking files carry the delta, the why, the inner process. **Segments carry only present truth with correct bounds and accurate epistemology, at all times.** Whether a claim is true, whether the model is useful, within the degrees we have defined —
+**4.1 — The invariant, stated once and absolute.** *A segment must never lie about its own status, even transiently.* Tracking files carry the change, the why, the inner process. **Segments carry only present truth with correct bounds and accurate epistemology, at all times.** Whether a claim is true, whether the model is useful, within the degrees we have defined —
 the canon is *always honest about itself*. This is **authoritative SOP**;
 everything below serves it.
 
@@ -146,7 +146,7 @@ A weak first plan is acceptable; an absent one is not.
 [§5](#5-how-the-prior-truth-is-mentioned-the-ghost-forms).
 
 **4.6 — You now have the best context to implement the replacement.** Often the spike agent (or you) is best-placed to do — or delegate — the edit that
-*replaces old truth with new present-tense truth*. Tracking/CHANGELOG describe the change, the delta, the process. The segment becomes the new present truth.
+*replaces old truth with new present-tense truth*. Tracking/CHANGELOG describe the change, the reasoning, the process. The segment becomes the new present truth.
 
 ---
 
