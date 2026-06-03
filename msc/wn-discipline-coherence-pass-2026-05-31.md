@@ -1,7 +1,7 @@
 # Working-Notes discipline — SOP coherence pass + refresh proposal (2026-05-31)
 
 > [!note]
-> **Status: PROPOSAL, pending Joseph's gate.** No governing docs edited — the inventory, options, and sketched wording below are decision-support. Two decisions are reserved for Joseph (§6). This is the *full* artifact behind the condensed developing-discipline note in [`../INTEGRATION-CLEANUP-TODO.md`](../INTEGRATION-CLEANUP-TODO.md) ("Developing discipline — what earns a Working-Note"); that note is the durable carrying-summary, this doc is the inventory + options + wording the executor will work from once gated.
+> **Status: LANDED 2026-06-02 — Option B (single-source), project-scope.** The authoritative statement now lives in [`../doc/sop/format.sop.md`](../doc/sop/format.sop.md) §"What earns a Working Note"; the other repo sites were narrowed to pointers (`doc/sop/agents.sop.md`, `doc/sop/audit.sop/routing.sop.md`, `spikes/README.md`). **Deferred to the global/memory pass** (the §6.2 cross-project scope decision): the memory-layer carriers — project `feedback_integration_is_replacement.md` / `feedback_spike_references_only_in_working_notes.md` and the global `~/.claude/` layer — inherit the same narrowing there, not here. Retained below as the reasoning trail (inventory + options + wording).
 
 ## 0. The sharpened discipline being propagated (Joseph, 2026-05-31)
 

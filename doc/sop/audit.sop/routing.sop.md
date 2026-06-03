@@ -168,7 +168,7 @@ There will almost always be *some* canonical record of the disposition of someth
 - Pretending the wrong segment can simply be **softened**.
 - Leaving **any** canon asserting the old epistemology (`exact`, or anything softer-but-still-positive) instead of strictly false / no-go.
 - Writing the no-go in **project-autobiographical / defensive voice** in the canon ("the framework previously held…", "this is not a weakening,
-  we already…"). The *domain* statement ("no such bound exists; the natural route provably fails") belongs in canon; the *process history* ("we used to claim X; an audit flagged it; we strengthened") belongs in CHANGELOG / routing tracker / Working Notes. When the domain statement is already canonical, the autobiographical restatement is redundant and goes to the history layer. When it is *not* yet canonical, write the domain statement *as canon* — do not let the history layer be the only place the truth lives.
+  we already…"). The *domain* statement ("no such bound exists; the natural route provably fails") belongs in canon; the *process history* ("we used to claim X; an audit flagged it; we strengthened") belongs in CHANGELOG / the routing tracker (a Working Note only if it assists future work — see [`../format.sop.md`](../format.sop.md) §"What earns a Working Note"; pure history is not Working-Note content). When the domain statement is already canonical, the autobiographical restatement is redundant and goes to the history layer. When it is *not* yet canonical, write the domain statement *as canon* — do not let the history layer be the only place the truth lives.
 
 ---
 
