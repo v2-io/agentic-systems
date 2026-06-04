@@ -6,15 +6,15 @@
 
 The four-volume build is functional and shipping. All four volumes (`aad`, `tst`, `loga`, `eli`) build cleanly via `bin/build-monograph --all`; markdown-first pipeline produces both `mono/<slug>-v<sem>.pdf` and `mono/<slug>-v<sem>.md` as parallel canonical artifacts; persisted `<component>/<slug>.aux` files are committed for cross-volume xr-refs. A **scrbook** target also landed alongside kaobook (commits `18e0604` → `f33c110`); both share Stages 1+2 of the pipeline and diverge at Stage 3.
 
-**Workstream A — Citation system: substantially landed at the database / CLI layer 2026-05-14.** The cross-project shared bibliography database is at `~/src/relata/`; `bin/relata` is the CLI; ~354 entries seeded from the NeurIPS workspace + synthese-paper + embeddings + two AIES-paper sweeps. Schema extended with `citation_status` (lifecycle field) + `applicable_anonymity` (blind-review handling, distinct from self-citation) + `pdf:` map (path / hash / original_filename / pdf_meta_title / source / coverage / added / added_by). Anonymization deny-list ported. **What remains in Workstream A:** ASF segment migration (~200+ prose citations), build-pipeline wiring (biblatex/natbib + `bin/relata emit` integration into `bin/build-monograph`), conditional-rendering machinery for the applicable_anonymity case. See updated A-section below.
+**Workstream A — Citation system: parent view only.** The detailed ASF-side citation tracker is now [`BIBLIOGRAPHY-TODO.md`](BIBLIOGRAPHY-TODO.md), created after the 2026-05-20 relata-side planning pass corrected the older assumption that `ref/INDEX.md` was a usable bibliography. Settled baseline: the bibliography database lives at `~/src/relata/`; the CLI is the packaged `relata` command; ASF still has no formal citation infrastructure in the volumes themselves. **What remains in Workstream A:** ratify the citation discipline (prose-only vs `\cite{}` vs hybrid), reconcile `ref/` against the discovered bibliography, migrate segment references by author judgment, wire `relata emit` into `bin/build-monograph`, and design conditional rendering for `applicable_anonymity`. Keep implementation detail in `BIBLIOGRAPHY-TODO.md`; this file tracks how the citation work composes with FORMAT and build-pipeline conventions.
 
 The active work below decomposes into three workstreams:
 
-- **Workstream A — Citation system.** Database + CLI substantially landed; ASF segment migration + build-pipeline wiring + conditional-rendering remain.
+- **Workstream A — Citation system.** Database + CLI live in relata; ASF-side discipline, reference reconciliation, segment migration, build-pipeline wiring, and conditional-rendering remain. Detailed tracker: [`BIBLIOGRAPHY-TODO.md`](BIBLIOGRAPHY-TODO.md).
 - **Workstream B — Cross-references, footnotes, sidenotes, margin-notes.** Obsidian `[[#^anchor]]` form, equation-anchor labels, footnote conventions (zero usage anywhere currently), sidenote (numbered Tufte-style) and margin-note (un-numbered) disciplines, `xr-hyper` for cross-volume refs. Mostly unchanged since 2026-05-13.
 - **Workstream C — Discipline + structural distinctions.** AAT-specific vs imported (Pearl, etc.) cue, Discussion-segment schema split, auto-cross-ref formula sweep in appendices, FORMAT.md doc sweep, chapter introduction across remaining Parts, FORMAT-compliance linter sweep. Mostly unchanged since 2026-05-13.
 
-Several architectural decisions are awaiting resolution; those are listed before the workstreams so the answers can flow into the right items as they land. **Open question 1 (bib database location) resolved 2026-05-14: `~/src/relata/`.**
+Several architectural decisions are awaiting resolution; those are listed before the workstreams so the answers can flow into the right items as they land. **Open question 1 (bib database location) resolved 2026-05-14: `~/src/relata/`; later citation-discipline detail lives in `BIBLIOGRAPHY-TODO.md`.**
 
 ---
 
@@ -107,14 +107,14 @@ Filename of the PDF carries semver only — `<slug>-v<semver>.pdf`. SHA + date a
 
 Resolutions feed into the workstream items below. Listed in the order they unblock the most work.
 
-1. ~~**Where does the bib database live?**~~ **RESOLVED 2026-05-14: `~/src/relata/`** — Path B (shared parent, both projects read; single source of truth). Renamed from "refs" to "relata" (Latin for "things related/narrated") to avoid the git/code overload of `refs/`. Established as its own git repo with the ported `bin/refs` → `bin/relata` CLI. Currently held as a strictly private repo per the `[private-repo assumption]` callouts in `~/src/relata/README.md` (PDFs are committed; if the repo ever goes public, gitignore the `pdfs/` directory and add a side-channel sync mechanism). All Workstream A items below now reference `~/src/relata/` rather than the abstract "bib database."
+1. ~~**Where does the bib database live?**~~ **RESOLVED 2026-05-14: `~/src/relata/`** — Path B (shared parent, both projects read; single source of truth). Renamed from "refs" to "relata" (Latin for "things related/narrated") to avoid the git/code overload of `refs/`. Later relata-side work moved the usable CLI to the packaged `relata` command and moved PDFs out of git under `RELATA_PDFS_DIR`; see `BIBLIOGRAPHY-TODO.md` for current operational details. All Workstream A items below now reference `~/src/relata/` rather than the abstract "bib database."
 
 2. **How to mark imported-vs-AAT-native content?**
-   - Option α: `origin: imported|aad-native|recapitulation` frontmatter field + visual cue at render-time
-   - Option β: Distinct segment type `recapitulation` (orthogonal to `definition` / etc.)
-   - Option γ: Convention-only in Epistemic Status framing, no machinery
+   - Option $\alpha$: `origin: imported|aad-native|recapitulation` frontmatter field + visual cue at render-time
+   - Option $\beta$: Distinct segment type `recapitulation` (orthogonal to `definition` / etc.)
+   - Option $\gamma$: Convention-only in Epistemic Status framing, no machinery
 
-   Most use cases are imports-within-otherwise-AAT-segments (one segment isn't purely imported), which leans α.
+   Most use cases are imports-within-otherwise-AAT-segments (one segment isn't purely imported), which leans $\alpha$.
 
    **Unblocks:** Workstream C item C12.
 
@@ -137,28 +137,22 @@ Resolutions feed into the workstream items below. Listed in the order they unblo
 
    **Unblocks:** Workstream B item B11.
 
-5. **Migration sweep scope.**
-   ~200+ prose citations exist in ASF segments. Options:
-   - Full sweep (one Joseph-author session per ambiguous-key resolution; many sessions)
-   - Incremental (convert as segments are touched for other reasons; drift risk)
-   - Hybrid (full sweep on high-traffic segments, incremental on the rest)
+5. **Citation discipline + migration sweep scope.**
+   The actual gate is the Option A/B/C decision in `BIBLIOGRAPHY-TODO.md` §"Citation discipline" / W-1: full `\cite{}` discipline, prose-only status quo, or a hybrid where load-bearing scholarly dependencies become formal citations and context-setting prose can stay prose. Migration scope follows that decision, with a hybrid pass still the current lean.
 
-   Lean hybrid.
-
-   **Unblocks:** Workstream A item A3 phasing.
+   **Unblocks:** Workstream A migration and build-pipeline phasing.
 
 ---
 
 ## Workstream A — Citation system
 
-Goal: ASF parity with structured citation discipline. **Database + CLI + schema substantially landed 2026-05-14** at `~/src/relata/`. What remains: ASF segment migration, build-pipeline wiring, conditional-rendering machinery for the applicable_anonymity case.
+Goal: ASF parity with structured citation discipline without duplicating the newer citation tracker. `BIBLIOGRAPHY-TODO.md` is the operating queue; this section keeps the FORMAT/build-facing summary.
 
-- [x] ~~**A1. Establish the bib database location.**~~ **Landed 2026-05-13/14.** `~/src/relata/` initialized as cross-project shared bib database (its own git repo); 354 entries seeded from neurips/refs + synthese-paper/refs + embeddings/refs.bib + two AIES-paper sweeps (causal-language + behavioral-floor). Schema documented at `~/src/relata/README.md` with field-by-field prose; extensions for citation-status, applicable_anonymity, pdf: map all live.
-- [x] ~~**A2. Stand up `bin/relata` (formerly bin/refs) for ASF.**~~ **Landed 2026-05-13.** Ported from `~/src/neurips/bin/refs` with paths re-rooted; same verbs (`add` / `verify` / `lint` / `search` / `import` / `emit` / `pdf` / `validate`) plus new `possible-duplicates` (collision-warning before adding new entries; handles unicode + BibTeX-escape normalization). `bin/relata pdf` extended to compute sha256 + extract pdf-meta-title via pdfinfo + accept `--source` / `--by` / `--original-filename` / `--coverage` flags. Schema fields for citation-status + applicable_anonymity documented in relata README. **Conditional rendering for anonymized builds is A6** (separate item below).
-- [ ] **A3. Run `bin/migrate-cites` across ASF segments.** ~200+ prose citations in segments. Each ambiguous match (`[Hintikka 1991]` → multiple bib entries) flags for Joseph-author resolution. Lean hybrid: full sweep on high-traffic segments, incremental on the rest. The `bin/migrate-cites` tool exists in `~/src/neurips/bin/` (legacy `[Author Year]` → `\cite{key}` sweeper); needs porting to ASF's segment cadence and pointed at `~/src/relata/` for key resolution. Also needs to use `bin/relata possible-duplicates` for ambiguous-match disambiguation (already implemented in relata as of 2026-05-14).
-- [ ] **A4. Wire biblatex / natbib + `bin/relata emit` into the build pipeline.** The `% kaobiblio loaded once we wire biblatex (task 7)` comment at `mono/kaobook/main.tex:31` is the marker (also applies to `mono/scrbook/main.tex` for the scrbook target). Build steps: `bin/build-monograph` calls `bin/relata emit <volume> --output mono/.build/<volume>/<volume>.references.bib` before LaTeX compile, scanning the volume's segment source for `\cite{key}` and emitting only those entries. Match NeurIPS's bracketed-superscript natbib config (`super,sort&compress`). Bibliography position in volume frontmatter / backmatter to be decided alongside backmatter design (deferred).
-- [x] ~~**A5. Anonymization scanner (`relata/deny-list.yml`).**~~ **Landed via port 2026-05-13.** ASF Zenodo working paper DOI 10.5281/zenodo.19986312 + author "Wecker" + framework / ELI proper-nouns from AUTHORING.md §3.5. `bin/relata lint` runs it against every entry and any cited keys. Relevant when ASF papers themselves go to blind-review venues; also documents the wecker-asf-zenodo-working-paper entry's applicable_anonymity rationale.
-- [ ] **A6. Conditional-rendering machinery for `applicable_anonymity`.** *(New item, surfaced 2026-05-14 from the schema extension.)* When the build target is anonymized AND the entry has `applicable_anonymity: true`, the citation should render as soft form (third-person rephrasing or "Wecker, in preparation" or alternative citation) rather than full author-year. Currently the field is documented in entries (6 such entries: NeurIPS Paper 1/2/3, TACL embeddings, Inquiry Granted-Agency-Sovereigns, ASF Zenodo working paper) but consumed by no build pipeline. Lives in `bin/relata emit` extension or a downstream filter; needs design pass on the rendering options.
+- [x] ~~**A1. Establish the bibliography database + CLI.**~~ **Landed / superseded by relata.** The database location is `~/src/relata/`; the operational command is packaged as `relata` on PATH. Historical `bin/relata` references in this file were tracker drift, not current instructions. Current caveat from `BIBLIOGRAPHY-TODO.md`: until relata's run-from-anywhere externalization lands, ASF scripts that call relata may need to run with `chdir: "~/src/relata"` and absolute ASF paths.
+- [ ] **A2. Ratify citation discipline.** Decide the ASF rule for prose-only vs full `\cite{}` vs hybrid formal-citation skeleton. This is `BIBLIOGRAPHY-TODO.md` W-1 and `JOSEPH-TODO.md` D-citation; do not run a mechanical migration before this is decided.
+- [ ] **A3. Reconcile `ref/` and migrate segment references.** After the discovery/import pass, identify which local PDFs back which discovered entries, then do author-judgment segment migration. Under the current hybrid lean, a reference becomes `\cite{}` only when it carries a segment's load-bearing scholarly dependency; rich context-setting prose may remain prose.
+- [ ] **A4. Wire biblatex / natbib + `relata emit` into the build pipeline.** The `% kaobiblio loaded once we wire biblatex (task 7)` comment at `mono/kaobook/main.tex:31` is the marker (also applies to `mono/scrbook/main.tex` for the scrbook target). `bin/build-monograph` should call `relata emit <volume-or-source-dir> --output mono/.build/<volume>/<volume>.references.bib` before LaTeX compile, with the run-from-anywhere caveat above handled explicitly. Bibliography position in volume frontmatter / backmatter remains deferred.
+- [ ] **A5. Conditional-rendering machinery for `applicable_anonymity`.** When the build target is anonymized and the entry has `applicable_anonymity: true`, the citation should render as a soft form rather than full author-year. This lives in the biblatex/relata-emit pipeline and waits on A4.
 
 ---
 
@@ -203,7 +197,7 @@ Items previously tracked but not blocking the three workstreams. Lifted out so t
 - **Slug rename audit** — separate concern, naming-cycle work; lives at PRACTICA §"Names & Lexicon" and `msc/naming/`.
 - **Cover artwork for TST / LogA / ELI** — AAT's cover lives at `01-aat-core/AAT-cover.svg`; siblings need authoring.
 - **Dependency-graph SVG → PDF pipeline for image rendering** — separate piece similar to cover artwork; `rsvg-convert` invocation.
-- **Table-rendering polish** — narrow-direction adaptation, snap-to-content-width epsilon, source-side math reflow for inherently-wider-than-page equations. In-source TODOs at `bin/lib/segment_renderer.rb` `convert_table` block. The current rendering handles the common cases; these are residual edge-case improvements.
+- **Table-rendering polish** — narrow-direction adaptation, snap-to-content-width $\epsilon$, source-side math reflow for inherently-wider-than-page equations. In-source TODOs at `bin/lib/segment_renderer.rb` `convert_table` block. The current rendering handles the common cases; these are residual edge-case improvements.
 - **Tighter typography candidates** — status badges / stage glyphs on appendix-chapter headings (currently a small indicator strip below the chapter glyph); `\l@appendixchapter` style for tighter ToC entries; etc. Cosmetic.
 - **In-source TODOs in `bin/lib/`** — `AsfLatex` / `AsfVolumeLatex` inheritance vs mixin design; chunk-format contract expressed in two places (extract to `Mono::ChunkFormat`); `**Status**: missing` conflating epistemic-status with existence-status. Pick up when those modules need touching for other reasons.
 
