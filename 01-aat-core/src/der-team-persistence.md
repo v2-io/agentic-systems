@@ -115,7 +115,7 @@ Max attainable: *robust-qualitative* for the persistence condition (it inherits 
 
 ### Incidental audit gold (lift 2026-05-31)
 
-Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo auditors' working dirs, deduplicated across substrates and attributed by substrate + audit. Orthogonal pedagogical / framing / figure / naming material, kept separate from the certified theory-fix findings (the 526815 F182/F189–F194 stream — `\rho_i^{\text{eff}}$ non-negativity convention, the $\mathcal{T}_i \to \alpha_i$ rate-normalization bridge, $\gamma$ units, and the "one channel or the other" event-allocation phrasing — is certified-track and routed there, not here). **Coverage:** dedicated reflections from 193847, 829314, 849201, 773921 (all Gemini/Claude), plus the 526815 first-pass and the 451729/471203 Section-III batch-reflections; substrate attribution inferred from voice where not explicit.
+Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo auditors' working dirs, deduplicated across substrates and attributed by substrate + audit. Orthogonal pedagogical / framing / figure / naming material, kept separate from the certified theory-fix findings (the 526815 F182/F189–F194 stream — $\rho_i^{\text{eff}}$ non-negativity convention, the $\mathcal{T}_i \to \alpha_i$ rate-normalization bridge, $\gamma$ units, and the "one channel or the other" event-allocation phrasing — is certified-track and routed there, not here). **Coverage:** dedicated reflections from 193847, 829314, 849201, 773921 (all Gemini/Claude), plus the 526815 first-pass and the 451729/471203 Section-III batch-reflections; substrate attribution inferred from voice where not explicit.
 
 #### 1. Candidate Brief prose / pre-prose
 

@@ -8,7 +8,6 @@
 ## Needs your decision (genuinely only-you)
 
 - **D-2 — bulk-64 `.integrated/` wipe.** Irreversible-ish; the call is *discharge the integration debt vs. consciously set it down*, plus semantics (rm+commit vs history-purge), timing, scope. → [`INTEGRATION-CLEANUP-TODO.md`](INTEGRATION-CLEANUP-TODO.md).
-- **D-citation — prose citations vs `\cite{}` vs hybrid discipline.** *Not a placement blocker — a future SOP-content discussion.* Once `format.sop.md` is the settled home, we decide the citation discipline together, then launch an agent to apply it retroactively across segments (the Relata agent recommends *not* auto-rewriting). → [`BIBLIOGRAPHY-TODO.md`](BIBLIOGRAPHY-TODO.md), `INTEGRATION-CLEANUP-TODO.md` §G3, [`FORMAT-TODO.md`](FORMAT-TODO.md).
 
 ## Lead will default-and-proceed (flag only if you'd rather weigh in)
 

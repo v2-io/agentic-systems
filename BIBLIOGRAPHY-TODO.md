@@ -9,39 +9,23 @@
 - **The bibliography database is `~/src/relata/`** (decision recorded FORMAT-TODO A; resolved 2026-05-14). Relata is now a packaged Ruby gem with `relata` on PATH (no more `bin/relata`); the canonical doc tree is per-entry YAML under `relata/entries/<bibkey>.yml`, append-only verification events under `relata/verifications/<bibkey>/`, and PDFs live in an external tree (`RELATA_PDFS_DIR`, default `~/.local/share/relata/pdfs`) — Joseph-backed-up; not in any git repo.
 - **ASF has no ASF-local centralized bibliography; relata is the canonical bibliography database.** `ref/INDEX.md` exists but is an old one-off curation (35 entries, 2026-05-04 era) that was never the actual operating bibliography and is now stale per Joseph 2026-05-20 — do not treat it as a source of truth, and do not import it wholesale into relata. The three Undermind-generated research reports in `ref/` (`Novelty_defense_and_integration.md`, `Prior_art_for_unified_agency_theories.md`, `separability-ladder-prior-art-report.md`) are *prior-art research products* — what Undermind surfaced on specific search topics — not the bibliography ASF actually cites *from* in segments. They contain ~78 unique bracketed cite-codes between them and proper References sections at the bottom of each (IEEE-style + DOIs); a fraction of those works is *actually cited* in segments, but the reports themselves are a side-input, not a master list.
 - **The first relata-side discovery/import pass is no longer merely pending.** Local check from the ASF checkout on 2026-06-04: `relata list` sees 2038 entries, `ref/` contains 20 `Prior_art_for_AAT_*.csv` Undermind catalogs, and relata's `TODO-ingest.md` §16.16 records the 20-catalog batch sweep as complete at that point (corpus 550 to 1926 valid entries, 97 PDFs registered, 16 manual-download escalations). Later relata-side work has added more entries. Treat the open ASF work here as citation-policy, reconciliation, verification, and segment-migration work — not as waiting for the first discovery sweep to exist.
-- **ASF has effectively zero formal-citation infrastructure today.** Across all four volumes: 0 `\cite{}` commands. Vol1 has ~9 `[Author Year]` brackets and ~270 inline "Author (Year)" prose references woven into monograph-style scholarly text. Build pipeline marker exists (`mono/kaobook/main.tex:31` — *"% kaobiblio loaded once we wire biblatex (task 7)"*) but is not wired.
-- **There is no `\cite{}`-vs-prose decision yet.** This is the gate. Everything else (bin/build-monograph wiring, the segment migration scope) follows from it.
+- **Formal-citation build infrastructure is now wired; segment migration remains open.** Across all four volumes there are still effectively 0 formal citation commands as of 2026-06-05, but `bin/build-monograph` now emits a stage-local `references.bib` through `relata emit`, loads biblatex / kaobiblio in both render targets, runs LuaLaTeX → biber → LuaLaTeX → LuaLaTeX, and copies the generated snapshot to `mono/<slug>-v<sem>.references.bib`.
+- **The citation discipline is decided (2026-06-05).** ASF uses the strengthened hybrid discipline below: rich scholarly prose remains allowed, but bibliography-worthy scholarly sources need formal natbib-compatible citation commands, and load-bearing external dependencies need locator-backed, verification-ready formal citations.
 
-## Citation discipline — the open ASF decision (Workstream W-1)
+## Citation discipline — decided ASF policy (Workstream W-1 landed 2026-06-05)
 
-The dominant Vol1 pattern today is **scholarly inline prose** with mid-sentence italicized titles, editions, and publishers — *"(Pearl 2009, Causality, 2nd ed., Cambridge; Bareinboim, Correa, Ibeling & Icard 2022)"*. This is not the `[Author Year]` bracket form that `~/src/neurips/bin/migrate-cites` was built for; a mechanical regex sweep would homogenize monograph voice and miss most of the references. Three honest options, with their trade-offs:
+The dominant Vol1 pattern today is **scholarly inline prose** with mid-sentence italicized titles, editions, and publishers — *"(Pearl 2009, Causality, 2nd ed., Cambridge; Bareinboim, Correa, Ibeling & Icard 2022)"*. This is not the `[Author Year]` bracket form that `~/src/neurips/bin/migrate-cites` was built for; a mechanical regex sweep would homogenize monograph voice and miss most of the references. The decided discipline preserves that monograph voice while adding machine-resolvable bibliography structure.
 
-### Option A — Full `\cite{}` discipline (NeurIPS / synthese style)
+### Strengthened hybrid rule
 
-Convert every prose reference to `\citep{key}` / `\citet{key}` / `\citealt[locator]{key}`; biblatex renders the formatted bibliography at the back; reading prose loses the rich author-context strings.
+1. **Rich scholarly prose remains allowed.** A sentence may still say "Pearl's *Causality*, 2nd ed." or name the publisher / edition / theorem context when that information helps the reader.
+2. **Formal citation commands are required for every bibliography-worthy scholarly source.** If a source should appear in the bibliography, include a natbib-compatible cite command in the segment source: `\citep{key}`, `\citet{key}`, `\citealt{key}`, `\citeauthor{key}`, or `\citeyear{key}`. ASF source should not use biblatex-native `\textcite{...}` because the installed relata scanner is keyed to `\cite...` / natbib-style commands.
+3. **Load-bearing external dependencies need locator-backed formal cites.** Imported definitions, inherited theorem statements, recapitulated machinery, empirical claims, and prior-art assertions that support segment correctness should use a formal cite with a page / chapter / theorem / section locator where available, then receive `claim-supported` / `page-ref` verification events in relata as promotion work proceeds.
+4. **Contextual citations can stay prose-rich, but not prose-only if they belong in the bibliography.** Preserve authorial prose around the cite; do not rely on prose alone to get a source into the emitted `.bib`.
+5. **No prose-cited side list for v1.** Do not build a parallel curated "prose-cited" side list in ASF for the first implementation pass. The bibliography is driven by formal cite commands scanned from the rendered volume source.
+6. **Canon cites external works directly.** Internal `ref/` reports, Undermind catalogs, and local synthesis notes can remain Working-Notes provenance or search trails, but they are not source-of-truth citations for canon body claims.
 
-- **Pro:** clean separation of bib-data from prose; uniform reference rendering; mechanical lint can catch unresolved keys; what every individual ASF-sibling paper (neurips, synthese) does.
-- **Con:** removes the monograph's distinctive scholarly voice where references carry context — *"Pearl 2009, Causality, 2nd ed., Cambridge"* is information that compresses to *"\citet{pearl-2009-causality}"* and loses the edition + publisher cues that a careful monograph reader wants inline.
-- **Migration cost:** ~270 per-mention author-passes in Vol1; not regex-tractable for the bulk.
-
-### Option B — Prose-only (status quo)
-
-Keep references inline scholarly-prose; no `\cite{}`; no rendered bibliography section. The reader reconstructs the source from the prose text.
-
-- **Pro:** preserves voice; zero migration cost; matches what's already there.
-- **Con:** no rendered bibliography (a monograph really should have one); no `relata lint` / no anonymization check; no machine-resolvable citation graph; out of step with academic-publication norms for a cited monograph.
-
-### Option C — Hybrid (recommended starting point)
-
-Use `\cite{}` for **the formal scholarly skeleton** — load-bearing theorems being applied, definitions being inherited, specific results being relied upon — *and* allow rich prose context for the rest. Concretely: every `Result`, `Definition`, `Derivation` segment that *depends on* an external work uses a formal `\cite{}`; the *introductions, Discussion segments, and context-setting paragraphs* can keep prose form (with the relata entry as the source of truth either way — the prose just doesn't render as a typeset citation).
-
-- **Pro:** monograph voice preserved where it carries information; formal citation discipline where reproducibility actually matters; the bibliography ends up containing every entry mentioned anywhere (via `relata emit` walking BOTH `\cite{}` and a curated "prose-cited" side-list); future-Joseph and reviewers can audit a Result's external dependencies machine-readably.
-- **Con:** asks ASF agents to make a per-mention judgment ("does this reference *carry* this segment's correctness?"). Less mechanical, but more honest about what a citation means in monograph context.
-- **Migration cost:** moderate — possibly 30–50% of the ~270 Vol1 prose references become `\cite{}` over time (the load-bearing skeleton), the rest stay prose. Done per-segment as those segments are promotion-edited anyway (FORMAT-TODO Workstream C).
-
-**Recommendation:** Option C as the starting discipline. Concrete heuristic: a reference is `\cite{}`-promoted if a *Result/Definition/Derivation* segment's correctness or the formula's source would be audit-questioned without the cite; prose otherwise. The `internal_note:` field on each relata entry can record "load-bearing for #segment-slug" to make this auditable in both directions. Joseph's call.
-
-This decision **gates Workstreams W-3 (segment migration) and W-4 (build-pipeline wiring)** — those can't be properly executed without knowing what they're migrating to.
+This decision unblocks Workstream W-3 (segment migration). Workstream W-4 (build-pipeline wiring) landed with the decision on 2026-06-05.
 
 ---
 
@@ -110,15 +94,15 @@ REFS_LINT_STRICT=1 relata lint                 # non-zero exit on any finding
 
 `lint` checks the anonymization deny-list (catches DOIs / authors that must not appear in a blind submission), schema validity, missing cited keys, and self-cite handling.
 
-### Build-pipeline emit (the format `bin/build-monograph` will eventually call)
+### Build-pipeline emit (current `bin/build-monograph` behavior)
 
 ```bash
-# Scan a paper-dir's source for \cite{} keys, emit only those entries
-# as a biblatex .bib snapshot inside the build directory:
-relata emit 01-aat-core --output 01-aat-core/.build/full-aat/aat.references.bib
+# Conceptual shape; the build script creates a stage-local source dir
+# containing exactly the assembled current volume markdown, then runs:
+relata emit mono/.build-scrbook/aat/citation-scan --output mono/.build-scrbook/aat/references.bib
 ```
 
-The emit walks `<paper-dir>/src/**/*.md` for `\cite{}` / `\citep{}` / `\citet{}` / `\citealt{}` / `\citeauthor{}` (all common natbib variants; 2026-05-06 regression test pins the variant set). Missing keys are reported on stderr but emit still produces a valid `.bib` of the keys it *did* find — so the build can fail-loud later rather than failing to emit at all.
+The emit walks `<paper-dir>/src/**/*.md` for `\cite{}` / `\citep{}` / `\citet{}` / `\citealt{}` / `\citeauthor{}` (all common natbib variants; 2026-05-06 regression test pins the variant set). `bin/build-monograph` deliberately feeds relata a temporary `citation-scan/src/<slug>.md` containing Stage 2's assembled markdown rather than the component's raw `src/` tree, so the bibliography tracks exactly the current rendered volume and does not over-scan `old-*`, orphaned, or non-rendered segment files. Missing keys are reported by relata and now fail the monograph build loudly instead of silently producing a partial bibliography.
 
 ### Run-from-ASF note (verified 2026-06-04)
 
@@ -140,9 +124,9 @@ These exist or are recorded as landed on the relata side; ASF doesn't need to re
 
 ### W-1. Ratify citation discipline
 
-Decide Option A / B / C (or a variant). Document the decision in FORMAT-TODO Workstream A and reference it from this file. Until this is made, W-3 is blocked from being executed *correctly* (you can't mechanically convert prose to `\cite{}` without knowing whether mechanical conversion is the discipline at all).
+**Done 2026-06-05.** Adopted the strengthened hybrid discipline above. W-3 is now unblocked, but still requires author-judgment passes rather than a mechanical regex migration.
 
-**Probably 1 hour of judgment + recording, if Joseph decides directly.**
+**Status:** landed; keep this section as the decision record.
 
 ### W-2. Reconcile `ref/` PDFs against the discovered bibliography
 
@@ -155,7 +139,7 @@ The relata-side discovery/import sweep has surfaced the initial corpus; the loca
 Per-segment, author-pass (NOT mechanical regex). For each prose reference in Vol1 (and ~70 more across Vols 2–4):
 
 1. Identify the work (look up in relata: `relata search <author keyword>` or `relata possible-duplicates --title "..."`).
-2. If it exists in relata: under Option C, decide whether this mention is load-bearing enough to `\cite{}` (then convert the prose to `\citep{key}`/`\citet{key}`/etc.); otherwise leave as prose and optionally record "prose-cited" in the entry's `internal_note:` for bidirectional auditability.
+2. If it exists in relata: add a formal natbib-compatible cite if the work should appear in the bibliography; preserve rich scholarly prose around that cite when useful. For load-bearing dependencies, include a locator where available and add a relata verification event as promotion work proceeds.
 3. If it doesn't exist in relata: `relata add <new-bibkey>` (scaffold) or paste BibTeX on stdin; fill in fields; then proceed with step 2.
 
 Foundational AAT works still worth checking during migration: quick `relata search` probes on 2026-06-04 did not surface Sutton & Barto's *Reinforcement Learning*, Koller & Friedman's PGM textbook, or Bishop's PRML by those author names; Da Costa active-inference works and Hafez works do surface now. Treat this as a search prompt, not proof of absence: look up each first cite in relata, add the entry if genuinely missing, then proceed with the citation judgment above.
@@ -164,20 +148,17 @@ Foundational AAT works still worth checking during migration: quick `relata sear
 
 ### W-4. Wire `bin/build-monograph` to `relata emit`
 
-Concrete: in the build pipeline, before LaTeX compile, shell out:
+**Done 2026-06-05.** `bin/build-monograph` now writes Stage 2 assembled markdown to a temporary `citation-scan/src/<slug>.md`, calls:
 
 ```ruby
-out, _, status = Open3.capture3(
-  "relata", "emit", paper_dir, "--output", "<.build>/<stem>/<stem>.references.bib"
+out, status = Open3.capture2e(
+  "relata", "emit", scan_dir.to_s, "--output", "<stage>/references.bib"
 )
-raise "relata emit failed:\n#{out}" unless status.success?
 ```
 
-Then load biblatex in `mono/kaobook/main.tex` and `mono/scrbook/main.tex` (remove the `% kaobiblio loaded once we wire biblatex (task 7)` markers). Mirror `~/src/neurips/bin/build:754` for the invocation pattern; it's the proven shape.
+The build fails on missing citation keys, writes `references-info.tex`, loads kaobiblio / biblatex with `natbib=true`, runs LuaLaTeX → biber → LuaLaTeX → LuaLaTeX, and copies the generated snapshot to `mono/<slug>-v<sem>.references.bib`.
 
-Installed-CLI note: §11.10 externalization has landed for ASF use, so `Open3.capture3` should call `relata` directly from the ASF build context and pass explicit source/output paths. Do not reintroduce a `cd ~/src/relata` workaround unless a fresh local check shows the installed command has regressed.
-
-**Probably 1–2 hours once W-1 is decided.**
+Installed-CLI note: §11.10 externalization has landed for ASF use, so the build calls `relata` directly from the ASF build context and passes explicit source/output paths. Do not reintroduce a `cd ~/src/relata` workaround unless a fresh local check shows the installed command has regressed.
 
 ### W-5. Conditional rendering for `applicable_anonymity` (FORMAT-TODO A6)
 

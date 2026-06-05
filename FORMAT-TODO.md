@@ -4,13 +4,13 @@
 
 ## Status
 
-The four-volume build is functional and shipping. All four volumes (`aad`, `tst`, `loga`, `eli`) build cleanly via `bin/build-monograph --all`; markdown-first pipeline produces both `mono/<slug>-v<sem>.pdf` and `mono/<slug>-v<sem>.md` as parallel canonical artifacts; persisted `<component>/<slug>.aux` files are committed for cross-volume xr-refs. A **scrbook** target also landed alongside kaobook (commits `18e0604` → `f33c110`); both share Stages 1+2 of the pipeline and diverge at Stage 3.
+The four-volume build is functional and shipping. All four volumes (`aat`, `tst`, `llm`, `eli`) build via `bin/build-monograph --all`; markdown-first pipeline produces both `mono/<slug>-v<sem>.pdf` and `mono/<slug>-v<sem>.md` as parallel canonical artifacts; persisted `<component>/<slug>.aux` files are committed for cross-volume xr-refs. A **scrbook** target also landed alongside kaobook (commits `18e0604` → `f33c110`); both share Stages 1+2 of the pipeline and diverge at Stage 3. As of 2026-06-05, scrbook is the authoritative target for generated component `.aux` snapshots; kaobook remains present but is not the target to optimize.
 
-**Workstream A — Citation system: parent view only.** The detailed ASF-side citation tracker is now [`BIBLIOGRAPHY-TODO.md`](BIBLIOGRAPHY-TODO.md), created after the 2026-05-20 relata-side planning pass corrected the older assumption that `ref/INDEX.md` was a usable bibliography. Settled baseline: the bibliography database lives at `~/src/relata/`; the CLI is the packaged `relata` command; ASF still has no formal citation infrastructure in the volumes themselves. **What remains in Workstream A:** ratify the citation discipline (prose-only vs `\cite{}` vs hybrid), reconcile `ref/` against the discovered bibliography, migrate segment references by author judgment, wire `relata emit` into `bin/build-monograph`, and design conditional rendering for `applicable_anonymity`. Keep implementation detail in `BIBLIOGRAPHY-TODO.md`; this file tracks how the citation work composes with FORMAT and build-pipeline conventions.
+**Workstream A — Citation system: parent view only.** The detailed ASF-side citation tracker is now [`BIBLIOGRAPHY-TODO.md`](BIBLIOGRAPHY-TODO.md), created after the 2026-05-20 relata-side planning pass corrected the older assumption that `ref/INDEX.md` was a usable bibliography. Settled baseline: the bibliography database lives at `~/src/relata/`; the CLI is the packaged `relata` command; ASF uses the strengthened hybrid citation discipline decided 2026-06-05; `bin/build-monograph` now emits rendered-volume `.bib` snapshots through relata and runs biber for both render targets. **What remains in Workstream A:** reconcile `ref/` against the discovered bibliography, migrate segment references by author judgment, and design conditional rendering for `applicable_anonymity`. Keep implementation detail in `BIBLIOGRAPHY-TODO.md`; this file tracks how the citation work composes with FORMAT and build-pipeline conventions.
 
 The active work below decomposes into three workstreams:
 
-- **Workstream A — Citation system.** Database + CLI live in relata; ASF-side discipline, reference reconciliation, segment migration, build-pipeline wiring, and conditional-rendering remain. Detailed tracker: [`BIBLIOGRAPHY-TODO.md`](BIBLIOGRAPHY-TODO.md).
+- **Workstream A — Citation system.** Database + CLI live in relata; ASF-side citation discipline and build-pipeline wiring are now landed; reference reconciliation, segment migration, and conditional-rendering remain. Detailed tracker: [`BIBLIOGRAPHY-TODO.md`](BIBLIOGRAPHY-TODO.md).
 - **Workstream B — Cross-references, footnotes, sidenotes, margin-notes.** Obsidian `[[#^anchor]]` form, equation-anchor labels, footnote conventions (zero usage anywhere currently), sidenote (numbered Tufte-style) and margin-note (un-numbered) disciplines, `xr-hyper` for cross-volume refs. Mostly unchanged since 2026-05-13.
 - **Workstream C — Discipline + structural distinctions.** AAT-specific vs imported (Pearl, etc.) cue, Discussion-segment schema split, auto-cross-ref formula sweep in appendices, FORMAT.md doc sweep, chapter introduction across remaining Parts, FORMAT-compliance linter sweep. Mostly unchanged since 2026-05-13.
 
@@ -55,7 +55,7 @@ Kaobook native, no custom counters:
 ```yaml
 title:       "AAT: Adaptation and Actuation Theory"
 short_title: AAT
-slug:        aad
+slug:        aat
 major:       0
 minor:       1
 patch:       0
@@ -137,10 +137,10 @@ Resolutions feed into the workstream items below. Listed in the order they unblo
 
    **Unblocks:** Workstream B item B11.
 
-5. **Citation discipline + migration sweep scope.**
-   The actual gate is the Option A/B/C decision in `BIBLIOGRAPHY-TODO.md` §"Citation discipline" / W-1: full `\cite{}` discipline, prose-only status quo, or a hybrid where load-bearing scholarly dependencies become formal citations and context-setting prose can stay prose. Migration scope follows that decision, with a hybrid pass still the current lean.
+5. ~~**Citation discipline + migration sweep scope.**~~ **RESOLVED 2026-06-05: strengthened hybrid discipline.**
+   Rich scholarly prose remains allowed, but bibliography-worthy scholarly sources get formal natbib-compatible cite commands and load-bearing external dependencies get locator-backed, verification-ready formal cites. Migration is an author-judgment pass, not a mechanical regex sweep; details live in `BIBLIOGRAPHY-TODO.md`.
 
-   **Unblocks:** Workstream A migration and build-pipeline phasing.
+   **Unblocks:** Workstream A segment migration and citation verification.
 
 ---
 
@@ -149,10 +149,10 @@ Resolutions feed into the workstream items below. Listed in the order they unblo
 Goal: ASF parity with structured citation discipline without duplicating the newer citation tracker. `BIBLIOGRAPHY-TODO.md` is the operating queue; this section keeps the FORMAT/build-facing summary.
 
 - [x] ~~**A1. Establish the bibliography database + CLI.**~~ **Landed / superseded by relata.** The database location is `~/src/relata/`; the operational command is packaged as `relata` on PATH. Historical `bin/relata` references in this file were tracker drift, not current instructions. As of 2026-06-04, the installed `relata` CLI sees the corpus from the ASF checkout; ASF scripts should call `relata` directly and pass explicit paths.
-- [ ] **A2. Ratify citation discipline.** Decide the ASF rule for prose-only vs full `\cite{}` vs hybrid formal-citation skeleton. This is `BIBLIOGRAPHY-TODO.md` W-1 and `JOSEPH-TODO.md` D-citation; do not run a mechanical migration before this is decided.
-- [ ] **A3. Reconcile `ref/` and migrate segment references.** With the initial relata-side discovery/import pass done, identify which local PDFs back which discovered entries, then do author-judgment segment migration. Under the current hybrid lean, a reference becomes `\cite{}` only when it carries a segment's load-bearing scholarly dependency; rich context-setting prose may remain prose.
-- [ ] **A4. Wire biblatex / natbib + `relata emit` into the build pipeline.** The `% kaobiblio loaded once we wire biblatex (task 7)` comment at `mono/kaobook/main.tex:31` is the marker (also applies to `mono/scrbook/main.tex` for the scrbook target). `bin/build-monograph` should call `relata emit <volume-or-source-dir> --output mono/.build/<volume>/<volume>.references.bib` before LaTeX compile and fail loudly on missing citation keys. Bibliography position in volume frontmatter / backmatter remains deferred.
-- [ ] **A5. Conditional-rendering machinery for `applicable_anonymity`.** When the build target is anonymized and the entry has `applicable_anonymity: true`, the citation should render as a soft form rather than full author-year. This lives in the biblatex/relata-emit pipeline and waits on A4.
+- [x] ~~**A2. Ratify citation discipline.**~~ **Landed 2026-06-05.** ASF uses the strengthened hybrid discipline: rich scholarly prose can remain, but bibliography-worthy scholarly sources get formal natbib-compatible cite commands and load-bearing external dependencies get locator-backed, verification-ready formal cites.
+- [ ] **A3. Reconcile `ref/` and migrate segment references.** With the initial relata-side discovery/import pass done, identify which local PDFs back which discovered entries, then do author-judgment segment migration. Under the decided hybrid discipline, preserve rich context-setting prose where useful but add formal citations for every bibliography-worthy source and stronger locator / verification treatment for load-bearing dependencies.
+- [x] ~~**A4. Wire biblatex / natbib + `relata emit` into the build pipeline.**~~ **Landed 2026-06-05.** `bin/build-monograph` emits a stage-local bibliography snapshot from the assembled current volume markdown, fails loudly on missing keys, loads kaobiblio / biblatex with `natbib=true`, runs LuaLaTeX → biber → LuaLaTeX → LuaLaTeX, and copies `mono/<slug>-v<sem>.references.bib` as the self-contained generated snapshot.
+- [ ] **A5. Conditional-rendering machinery for `applicable_anonymity`.** When the build target is anonymized and the entry has `applicable_anonymity: true`, the citation should render as a soft form rather than full author-year. The basic biblatex / relata-emit pipeline now exists; this item is the anonymized-build consumption layer.
 
 ---
 
@@ -165,7 +165,7 @@ Goal: Adopt NeurIPS's cross-reference / footnote conventions for ASF, then exten
 - [ ] **B8. Specify footnote convention in FORMAT.md.** Both `[^anchor]` markdown form and `\footnote{...}` raw-TeX form per NeurIPS AUTHORING.md §2.4. Currently zero footnote usage anywhere in ASF segments — convention establishment is the work.
 - [ ] **B9. Sidenote convention (Tufte-style numbered margin note).** Pending open question 3. Source-side convention TBD; renders to `\sidenote{...}` LaTeX macro using kaobook's machinery. Distinct from the un-numbered margin-note (B10): a sidenote carries a number that ties to its in-line callout, a margin-note just appears in the margin.
 - [ ] **B10. Generalize `\marginnote{...}` discipline.** Currently used only for equation-tag emission via `\eqtag{...}`. Extend to author-driven margin annotation with a source-side convention (TBD). The un-numbered "just there in the margin" form Joseph distinguished from sidenotes.
-- [ ] **B11. Wire `xr-hyper` into preamble.** Phase 1d. The `.aux` files are persisted (`01-aat-core/aad.aux` etc.); `xr-hyper` reads sibling-volume `.aux` for cross-volume label resolution. Fallback form pending open question 4. `.aux` staleness detection: warn or error when a sibling `.aux` was written against a different sibling-volume semver than the one being referenced.
+- [ ] **B11. Wire `xr-hyper` into preamble.** Phase 1d. The `.aux` files are persisted from the scrbook target (`01-aat-core/aat.aux` etc.); `xr-hyper` reads sibling-volume `.aux` for cross-volume label resolution. Fallback form pending open question 4. `.aux` staleness detection: warn or error when a sibling `.aux` was written against a different sibling-volume semver than the one being referenced.
 
 ---
 
@@ -217,7 +217,7 @@ Items previously tracked but not blocking the three workstreams. Lifted out so t
 - `bin/lib/typeset.rb` — Stage 3; `Kramdown::Converter::AsfVolumeLatex`
 - `bin/lib/segment_renderer.rb` — `Kramdown::Converter::AsfLatex` (base class)
 - `<component>/mono-meta.yaml` — per-volume metadata (title, slug, version, cover, toc)
-- `<component>/<slug>.aux` — persisted `.aux` for cross-volume xr-refs (committed)
+- `<component>/<slug>.aux` — persisted scrbook `.aux` for cross-volume xr-refs (committed)
 - `mono/.build/<slug>/{index.md, chunks/*.md}` — Stage 1 output (gitignored)
 - `mono/<slug>-v<sem>.{pdf,md}` — released artifacts
 - `msc/markdown-first-pipeline.md` — design doc; load-bearing reference for the chunk-format contract

@@ -25,6 +25,16 @@
 ]{scrbook}
 
 \input{preamble/setup}
+\usepackage[
+  backend=biber,
+  citestyle=numeric-comp,
+  bibstyle=numeric,
+  sorting=none,
+  natbib=true,
+  hyperref=true,
+  backref=true,
+]{biblatex}
+\addbibresource{references.bib}
 \input{preamble/segment}
 \input{preamble/environments}
 
@@ -34,6 +44,9 @@
 % \volumeslug, \volumecoverpath, and \ifvolumetoc.
 %----------------------------------------------------------------------------
 \input{build-info}
+% Generated alongside references.bib. Defines \ifhasreferences so empty
+% current volumes do not render an empty bibliography heading.
+\input{references-info}
 
 \title{\volumetitle}
 \author{Joseph A. Wecker}
@@ -69,5 +82,9 @@
 % \addchap), emits \mainmatter on the first \part / appendices group, and
 % runs through to the last appendix segment.
 \input{body}
+
+\ifhasreferences
+  \printbibliography[heading=bibintoc,title={Bibliography}]
+\fi
 
 \end{document}
