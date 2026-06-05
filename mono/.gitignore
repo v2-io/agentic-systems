@@ -1,6 +1,7 @@
 .build-kaobook/
 .build-scrbook/
 *.prior.pdf
+*.prior.bib
 # All built artifacts. Filename format is
 #   `<short-title>-v<major>.<minor>.<patch>{k,s}.pdf`  (PDF, target-suffixed)
 #   `<short-title>-v<major>.<minor>.<patch>.md`        (assembled markdown, target-agnostic)

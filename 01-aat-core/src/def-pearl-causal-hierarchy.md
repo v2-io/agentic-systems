@@ -10,7 +10,7 @@ stage: deps-verified
 
 # Definition: Pearl's Causal Hierarchy (Recapitulation)
 
-This segment recapitulates Pearl's three-level hierarchy of causal reasoning (Pearl 2009, *Causality*, 2nd ed., Cambridge; Bareinboim, Correa, Ibeling & Icard 2022) as the vocabulary AAT will deploy throughout the rest of Part II and beyond. The framework is explicit that this is *imported* machinery, not an AAT contribution.
+This segment recapitulates Pearl's three-level hierarchy of causal reasoning \citep[chs.~1--3]{pearl-2009-causality} and its strict non-collapse theorem \citep[Theorem~1]{bareinboim-correa-ibeling-icard-2022-pearl-hierarchy} as the vocabulary AAT will deploy throughout the rest of Part II and beyond. The framework is explicit that this is *imported* machinery, not an AAT contribution.
 
 **Level 1 — Associational.** "What will I observe next, given what I've observed before?" Pattern recognition over the temporally ordered history. Available to any agent that maintains a model ( #form-agent-model), including purely passive observers. Temporal ordering ( #post-causal-structure) constrains which associations are meaningful — later observations can depend on earlier ones, not vice versa.
 

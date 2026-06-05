@@ -11,7 +11,7 @@ stage: deps-verified
 
 # Derived: Causal Hierarchy Requirement
 
-The direct application of Pearl's causal hierarchy ( #def-pearl-causal-hierarchy) to the value object ( #def-value-object). The action-value query uses the $do(\cdot)$ operator and is therefore a *Level-2 (interventional)* query; by the strict-non-collapse theorem (Bareinboim et al. 2022), Level-2 quantities cannot in general be computed from Level-1 data alone. An agent that must evaluate $Q_O$ *from experience* therefore needs access to **Level-2 knowledge** — knowledge about the effects of its own interventions, not merely correlational patterns.
+The direct application of Pearl's causal hierarchy ( #def-pearl-causal-hierarchy) to the value object ( #def-value-object). The action-value query uses the $do(\cdot)$ operator and is therefore a *Level-2 (interventional)* query; by the strict-non-collapse theorem, Level-2 quantities cannot in general be computed from Level-1 data alone \citep[Theorem~1]{bareinboim-correa-ibeling-icard-2022-pearl-hierarchy}. An agent that must evaluate $Q_O$ *from experience* therefore needs access to **Level-2 knowledge** — knowledge about the effects of its own interventions, not merely correlational patterns.
 
 The result is paired with a sharp *scope narrowing*: attention restricts to **learning purposeful agents** — agents that must *acquire or refine* Level-2 knowledge during operation. This is a named sub-scope of #scope-agency that excludes *pre-compiled* interventional structure (PID controllers where the designer pre-computed the control law, LQR where the separation principle gives the optimal policy from model parameters, hardcoded reactive policies). Pre-compiled agents are still within agency scope (they have objectives and act on them) but outside learning-agent scope — their causal structure was externally supplied by a designer who had Level-2 access. *All remaining Part II results operate within learning-agent scope unless explicitly noted otherwise.* The derivation is exact as a direct application of the external hierarchy theorem to the value-object definition; the scope narrowing is a definitional restriction, not a derived result.
 
@@ -40,7 +40,7 @@ Pre-compiled agents are within agency scope (they have objectives and act on the
 
 ## Epistemic Status
 
-*Exact.* The derivation is a direct application of the causal hierarchy theorem (Bareinboim et al. 2022) to the value-object definition. If you accept that $Q_O$ is an interventional query and that the causal hierarchy is strict, the conclusion follows. The scope narrowing to learning agents is a definitional restriction, not a derived result — it sharpens the class of agents under study.
+*Exact.* The derivation is a direct application of the causal hierarchy theorem to the value-object definition. If you accept that $Q_O$ is an interventional query and that the causal hierarchy is strict, the conclusion follows. The scope narrowing to learning agents is a definitional restriction, not a derived result — it sharpens the class of agents under study.
 
 ## Discussion
 
