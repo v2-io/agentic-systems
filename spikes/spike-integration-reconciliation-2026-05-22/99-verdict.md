@@ -34,7 +34,7 @@ Per-cluster outcome:
 | **§1 — CPT Theorem 8 contrapositive for `#def-control-regret`** | **Survives, genuinely new.** `#def-control-regret` does not currently cite CPT or passivity; the diagnostic is a recognition-tier addition. |
 | **§1 — Conley 1978 as direct citation** | **Survives, genuinely new.** Currently only indirect via Papadimitriou-Piliouras 2018; promoting to direct citation of the Fundamental Theorem of Dynamical Systems is a small but real upgrade. |
 | **§1 — Mertikopoulos 2017 as direct citation** | **Already landed via Track A (BG2 verdict cited it).** Indirect through `#disc-identifiability-floor` Instance 3 escape (e) Working Note. Promoting to direct citation in `#disc-dynamic-regime-axis` is a small surface-back. |
-| **§2 — Friston 2025 RGM → `#sketch-multi-timescale-stability`** | **Survives, genuinely new and Track-A-independent.** PRACTICA priority #3. Does not touch Track A territory. Substantive spike required before landing. |
+| **§2 — Friston 2025 RGM → `#der-multi-timescale-stability`** | **Survives, genuinely new and Track-A-independent.** PRACTICA priority #3. Does not touch Track A territory. Substantive spike required before landing. |
 | **§2 — Richens 2025 → `#def-agent-spectrum`** | **Survives, genuinely new.** Forces the +model side of the spectrum at depth $n \geq 2$. Quick recognition-tier landing. |
 | **§2 — Virgo 2025 → `04-eli-core/`** | **Survives, genuinely new.** Working-Note additions in `04-eli-core/` and one Discussion sentence in `#def-agent-spectrum`. |
 | **§2 — Cohen-Hutter-Osborne 2022 → `#deriv-self-actuation-grounding`** | **Survives, genuinely new** (despite proximity to Everitt-Hutter-Kumar-Krakovna 2021 already cited there). Distinct paper with distinct claim shape; Working-Note recognition-tier addition. **Track B coupling: yes — see §4.** |
@@ -314,7 +314,7 @@ Estimated cycle: 0.2.
 This phase updates the PROPOSED registry with the cluster's residue.
 
 **(P7.1) `spikes/PROPOSED.md` Tier-1 entries.** Per §2 synthesis recommendation:
-- **Friston 2025 RGM → `#sketch-multi-timescale-stability` promotion.** PRACTICA priority #3 supplier of formal machinery. Substantive spike; one row.
+- **Friston 2025 RGM → `#der-multi-timescale-stability` promotion.** PRACTICA priority #3 supplier of formal machinery. Substantive spike; one row.
 - **Capucci 2022 + Smithe 2024 categorical cybernetics first fit-check spike.** Tier-2 (exploratory); first of a 3–5-spike sequence under PROPOSED-ADVANCED Phase 3.
 - The other §2 items (Richens, Virgo, Cohen) already landed in Phases 1–2; no PROPOSED rows needed.
 - The §1 Effects-Spiral strengthening stays on PROPOSED.md as it was — *not* subsumed by this cluster. The no-spiral converse landed in Phase 2 (P2.2) is a *related-but-distinct* claim about the same neighborhood.
@@ -420,7 +420,7 @@ Per the strengthen-before-soften discipline: each item this verdict marks as *su
 - **No-spiral converse in `#der-adversarial-destabilization`:** the converse is exactly the strengthen-first finding from the §1 cluster's §03 — Effects-Spiral promotion was refuted; the converse landed as the related-but-true claim. Cannot strengthen further without state-dependent coupling formalization (which is the existing PROPOSED.md Tier 1 work).
 - **R-letter naming reconciliation:** strengthen-first move on this question would be to verify the letters are *not* a collision by reading both canonical segments end-to-end. Done (§1 of this verdict). The naming is genuinely layered; the alternative (renaming one ladder) would be a non-trivial canon-modifying move with no upside — the layers are clearly different objects when read in context.
 - **Richens 2025 grounding in `#def-agent-spectrum`:** strengthen-first move would be to attempt deriving Richens Theorem 1 within AAT's setting rather than citing it. Not done at this cycle; recognition-tier landing is the honest move. A future strengthening cycle could attempt the AAT-internal derivation if PRACTICA prioritizes it.
-- **Friston 2025 RGM → `#sketch-multi-timescale-stability`:** the strengthen-first attempt is the substantive spike itself (PROPOSED.md row from Phase 7). This verdict does not pre-commit to recognition-tier-only landing; the spike's outcome will determine the landing tier.
+- **Friston 2025 RGM → `#der-multi-timescale-stability`:** the strengthen-first attempt is the substantive spike itself (PROPOSED.md row from Phase 7). This verdict does not pre-commit to recognition-tier-only landing; the spike's outcome will determine the landing tier.
 - **Cohen 2022 in `#deriv-self-actuation-grounding`:** strengthen-first move would be to attempt deriving Cohen's reward-tampering inevitability claim within AAT's Result G′ setting. The Result G′ already covers the structural version; Cohen 2022 provides the empirical-pull pairing. The two reinforce each other without one strengthening into the other.
 
 This verdict claims none of the landings are stronger than they actually are. The framing matches the §1 / §2 cluster verdicts' own honest scope claims.

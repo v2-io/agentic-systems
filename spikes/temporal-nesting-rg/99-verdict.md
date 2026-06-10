@@ -116,7 +116,7 @@ The framing should appear in:
 
 **Move A — Adopt-and-cite Friston 2019/2025 in `#disc-composition-consistency` and `#form-composition-closure` Discussion.** Make the form-preservation reading of (A1)–(A4) explicit. Cite the substrate works. **Effort: small. High value.**
 
-**Move B — Promote `#sketch-multi-timescale-stability` via template-stacking + Tikhonov + Chen-Goldenfeld-Oono.** Stand the N-level stability result on the per-scale form-preservation. The template instantiates at every level; sufficient $K_c$-separation between adjacent levels gives composite stability. **Effort: medium. Closes a known gap.**
+**Move B — Promote `#der-multi-timescale-stability` via template-stacking + Tikhonov + Chen-Goldenfeld-Oono.** Stand the N-level stability result on the per-scale form-preservation. The template instantiates at every level; sufficient $K_c$-separation between adjacent levels gives composite stability. **Effort: medium. Closes a known gap.**
 
 **Move C — Two-loop worked example (parametric inner, strategic outer).** Show the form-preservation in a non-Kalman instance: $M_t$ Kalman inner + $\Sigma_t$ Beta-Bernoulli outer with $\nu_\Sigma \ll \nu_M$. Land as worked-example segment. **Effort: medium-large. Closes the "no worked nested-loop instance" gap.**
 

@@ -18,9 +18,9 @@ A direct consequence: the rational *conservatism* toward structural change ident
 
 The framework names symptoms of nesting *violation*: oscillation, instability, degraded performance. In organizations, micromanagement is strategic decisions made at operational tempo. In reinforcement learning, policy updates before the value function converges produce policy oscillation. In biology, premature developmental transitions are the same failure mode at a different timescale.
 
-A multi-timescale stability sketch is offered: under sufficient timescale separation, if each level is stable given the levels above it (each level has a stable attractor for fixed slower-level parameters), the composite $N$-level system is stable. Making this rigorous for AAT requires specifying dynamics at deeper adaptive levels — flagged as an open problem (see #sketch-multi-timescale-stability).
+The composite-stability claim is now derived: under per-level sector conditions and bounded interconnection, if each level is stable given the levels above it, the composite $N$-level system is stable, and this segment's qualitative convergence constraint becomes a closed-form threshold on the admissible timescale ratio ($\epsilon \lt \epsilon_{\max} = \Delta\rho^\ast / (L_h v^{\max})$ — the faster level's adaptive reserve over the slower level's target-drag rate). See #der-multi-timescale-stability for the theorem, its premises, and the honest scope boundary (premise-conditional on deeper-level dynamics admitting a quasi-steady-state manifold with a sector condition; discrete/jump structural adaptation remains open).
 
-The result is rooted in classical singular-perturbation theory (Tikhonov 1952; Khalil 2002 textbook treatment) — the framework adopts the machinery directly. The specific timescale ratios needed for adequate separation are domain-dependent and not derived within AAT.
+The result is rooted in classical singular-perturbation theory (Tikhonov 1952; Khalil 2002 textbook treatment) — the framework adopts the machinery directly. The threshold form of "adequate separation" is derived within AAT ( #der-multi-timescale-stability's $\epsilon_{\max}$); the constants entering it (sector parameters, manifold Lipschitz bounds, velocity bounds) are domain-dependent.
 
 ## Formal Expression
 
@@ -42,7 +42,7 @@ This table is illustrative — real systems may have additional intermediate lev
 
 ## Epistemic Status
 
-*Robust qualitative* — this is standard singular perturbation reasoning (Tikhonov 1952, "Systems of differential equations containing a small parameter multiplying the derivative," *Matematicheskii Sbornik* 31(3):575–586; modern textbook exposition in Khalil 2002, *Nonlinear Systems* (3rd ed.), Prentice Hall, Chapter 11). The convergence constraint follows from the structure of multi-timescale updating. The specific timescale ratios needed for adequate separation are domain-dependent and not derived within AAT.
+*Robust qualitative* — this is standard singular perturbation reasoning (Tikhonov 1952, "Systems of differential equations containing a small parameter multiplying the derivative," *Matematicheskii Sbornik* 31(3):575–586; modern textbook exposition in Khalil 2002, *Nonlinear Systems* (3rd ed.), Prentice Hall, Chapter 11). The convergence constraint follows from the structure of multi-timescale updating. The threshold form of "adequate separation" is now derived within AAT under named premises ( #der-multi-timescale-stability's $\epsilon_{\max}$); the constants entering it are domain-dependent.
 
 ## Discussion
 
@@ -58,7 +58,7 @@ This table is illustrative — real systems may have additional intermediate lev
 
 **Violation symptoms.** When nesting is violated (a slower process acts before the faster one converges): oscillation, instability, degraded performance. In organizations: micromanagement (strategic decisions at operational tempo). In RL: policy updates before value function converges (policy oscillation). In biology: premature developmental transitions.
 
-**Multi-timescale stability (sketch).** Singular perturbation theory gives the composite stability result: if each level is stable given the levels above it (each level has a stable attractor for fixed slower-level parameters), and the timescale separation is sufficient, the composite $N$-level system is stable. Making this rigorous for AAT requires specifying dynamics at deeper adaptive levels — an open problem. See #sketch-multi-timescale-stability for the framework.
+**Multi-timescale stability (derived).** The composite stability result is derived in #der-multi-timescale-stability by stacking the sector-persistence template: if each level satisfies a sector condition given the levels above it and the interconnections are bounded, the composite $N$-level system is stable, with this segment's $\nu_{n+1} \ll \nu_n$ made quantitative ($\epsilon \lt \epsilon_{\max}$, closed-form) and the cost of premature slower-level action priced as an explicit reserve penalty. The result is premise-conditional: deeper levels whose dynamics are discrete/jump processes sit outside the current premises — that remaining gap is named there.
 
 ## Working Notes
 

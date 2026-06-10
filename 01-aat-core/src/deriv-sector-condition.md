@@ -290,7 +290,7 @@ The assumptions themselves (sector condition on a region, bounded disturbance) a
 
 ## Working Notes
 
-- The adversarial extension (Prop A.3, coupled agents) and effects spiral (Cor A.3.1) are in #der-adversarial-destabilization. The multi-timescale sketch (A.4) is in #sketch-multi-timescale-stability.
+- The adversarial extension (Prop A.3, coupled agents) and effects spiral (Cor A.3.1) are in #der-adversarial-destabilization. The multi-timescale stacking theorem (historically sketch A.4) is in #der-multi-timescale-stability — now derived by stacking the template per level.
 - The vector treatment of $\delta(t) \in \mathbb{R}^n$ connects directly to per-dimension tempo analysis ( #result-per-dimension-persistence). Each dimension can have different effective $\alpha_k$ values, and the weakest dimension determines overall persistence — a tensor generalization of the scalar results here.
 - A global sector condition (A2 without the local restriction to $\mathcal B_R$) would give global stability, making $\Delta\rho^\ast$ infinite — the agent could absorb any finite disturbance shock. But this requires the correction function to work perfectly at arbitrary mismatch magnitudes, which is unrealistic for any finite model class. The local form (A2') is the honest one.
 - Landing-context provenance: the sub-scope $\alpha$/$\beta$ partition reflects the strengthening trail recorded in `spikes/spike-a2-prime-strengthening.md` — the analysis that ruled out a universal A2' derivation and identified the five operator families where the bridge is structural.

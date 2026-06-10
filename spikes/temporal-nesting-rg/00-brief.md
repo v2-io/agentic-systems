@@ -2,9 +2,9 @@
 
 **Status**: open — initial brief
 **Date opened**: 2026-05-09
-**Conversation provenance**: Joseph asked whether ASF explores nested adaptive cycles operating at different levels of abstraction simultaneously (inner fast loop advances slower outer loop). Survey found three load-bearing segments (`#der-temporal-nesting`, `#form-composition-closure`, `#der-tempo-composition`) plus the unifying machinery (`#result-sector-persistence-template`, `#sketch-multi-timescale-stability`). Discussion then surfaced a candidate elegance: AAT as a renormalization-group structure with itself as fixed point — making temporal nesting and composite formation two projections of one operation. This brief sets up that test.
+**Conversation provenance**: Joseph asked whether ASF explores nested adaptive cycles operating at different levels of abstraction simultaneously (inner fast loop advances slower outer loop). Survey found three load-bearing segments (`#der-temporal-nesting`, `#form-composition-closure`, `#der-tempo-composition`) plus the unifying machinery (`#result-sector-persistence-template`, `#der-multi-timescale-stability`). Discussion then surfaced a candidate elegance: AAT as a renormalization-group structure with itself as fixed point — making temporal nesting and composite formation two projections of one operation. This brief sets up that test.
 
-**Depends on / cites**: `#der-temporal-nesting`, `#form-composition-closure`, `#der-tempo-composition`, `#result-sector-persistence-template`, `#sketch-multi-timescale-stability`, `#def-strategy-dag`, `#def-adaptive-tempo`, `#disc-composition-consistency`, `#hyp-directed-separation-under-composition`, `spikes/spike-composition-correlated-kalman.md`, `spikes/spike-bridge-lemma-contraction.md`, `spikes/spike-projection-admissibility.md`.
+**Depends on / cites**: `#der-temporal-nesting`, `#form-composition-closure`, `#der-tempo-composition`, `#result-sector-persistence-template`, `#der-multi-timescale-stability`, `#def-strategy-dag`, `#def-adaptive-tempo`, `#disc-composition-consistency`, `#hyp-directed-separation-under-composition`, `spikes/spike-composition-correlated-kalman.md`, `spikes/spike-bridge-lemma-contraction.md`, `spikes/spike-projection-admissibility.md`.
 
 ---
 
@@ -22,7 +22,7 @@ Initial corpus survey (Explore agent, 2026-05-09) found:
 **What's missing.** Three things are *asserted, not derived*:
 
 1. **The bridge from $K_c \gg 1$ to $\varepsilon^* \to 0$.** Audit-flagged 2026-04-21 as "stranded at zero-timescale-separation." The 2026-04-22 fix introduced $K_c$ as a parameter but left the implication at the level of intuition.
-2. **N-level stability composition.** `#sketch-multi-timescale-stability` cites Tikhonov but does not derive the N-level result from AAT's own template.
+2. **N-level stability composition.** `#der-multi-timescale-stability` cites Tikhonov but does not derive the N-level result from AAT's own template.
 3. **DAG depth as temporal nesting.** Not formalized.
 
 ## 2. The candidate elegance: AAT as RG fixed point
@@ -104,7 +104,7 @@ Document at `03-rg-0c-strategy-recursion.md`.
 - **RG-1**: State (A1)–(A4) explicitly as RG fixed-point conditions. Promote `#disc-composition-consistency` from postulate-level to derived under the fixed-point framing.
 - **RG-2**: (O, Σ) recursion as the formal expression of self-similarity. New segment `#deriv-strategy-recursion` or appendix in `#def-strategy-dag`. Connects to `#der-temporal-nesting` via the depth-rate hierarchy.
 - **RG-3**: Directed-separation classes as RG fixed-point types. Strengthens `#hyp-directed-separation-under-composition` by giving it the RG framing.
-- **RG-4**: RG flow of the persistence condition. Subsumes original Spike B (N-level stability) by deriving `#sketch-multi-timescale-stability` as RG-flow stability.
+- **RG-4**: RG flow of the persistence condition. Subsumes original Spike B (N-level stability) by deriving `#der-multi-timescale-stability` as RG-flow stability.
 
 ## 6. Decision criterion
 

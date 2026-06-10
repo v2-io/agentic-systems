@@ -304,7 +304,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Event-Driven Dynamics](terminology/entries/event-driven-dynamics.md)** |  | The formulation of agent-environment coupling as discrete typed events (observation arrivals, action completions) at variable, heterogeneous rates — the generalization of uniform-clock discrete time. |
 | **[Exponential cognitive load](terminology/entries/exponential-cognitive-load.md)** |  | Hypothesis that implementation time grows exponentially with the number of discontinuities in a changeset. |
 | **[Goal-Update Coupling Class](terminology/entries/goal-update-coupling-class.md)** *(GUC Class)* |  | Three-value axis measuring the degree to which an agent's epistemic update is entangled with its goal state; the architectural property that directed separation quantifies. |
-| **[Multi-Timescale Stability](terminology/entries/multi-timescale-stability.md)** |  | When adaptive processes operate at N nested timescales, composite stability requires each level to be stable given its slower levels, with sufficient timescale separation between adjacent pairs (sketch-level result). |
+| **[Multi-Timescale Stability](terminology/entries/multi-timescale-stability.md)** |  | When adaptive processes operate at N nested timescales, the composite is stable when each level satisfies the sector-persistence template with interconnection terms added to its effective disturbance; the required timescale separation is a closed-form threshold (derived, Model D, premise-conditional). |
 | **[Multi-agent routing structure](terminology/entries/multi-agent-routing-structure.md)** | $R_t$ | Multi-agent communication infrastructure — topology $\mathcal N_t$ + protocol $c_t^{(j \to i)}$; the *routing*, not the *content*. |
 | **[Orient cascade](terminology/entries/orient-cascade.md)** |  | Within-cycle resolution order: $M_t$ update → $\Sigma_t$ revision → $O_t$ revision. |
 | **[Persistence Cost](terminology/entries/persistence-cost.md)** | $\dot{R}_{\min}$ | The minimum Shannon information rate an agent must acquire from observations to maintain bounded mismatch — a Landauer-analog lower bound derived from the rate-distortion theorem. |
@@ -326,4 +326,4 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 
 
-_Last rendered 2026-05-29 from 141 entries._
+_Last rendered 2026-06-10 from 141 entries._
