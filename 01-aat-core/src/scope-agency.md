@@ -52,6 +52,8 @@ These are required for the adaptive loop to generate interventional data ( #der-
 
 ## Working Notes
 
+- **The nominal-agent class now has dynamics (2026-06-11).** #der-severed-actuation-dynamics studies *demotion into* this class: an agency-scope agent whose world-kernel loses interventional contrast on its external sphere (agency death, #def-death-as-factor-loss (D3)) becomes nominal toward $\Omega$ — with derived consequences (interventional-structure freeze, truthful impotence-learning, a learned-helplessness absorbing state). The "boxed consciousness" reach in the gold below is realized there.
+
 ### Incidental audit gold (lift 2026-05-30)
 
 Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo auditors' working dirs, deduplicated across substrates and attributed by substrate + audit. Orthogonal pedagogical / framing / figure / naming material, kept separate from the certified theory-fix findings (handled elsewhere). **Coverage:** 10 dirs carry a dedicated reflection (193847, 266847, 361742, 384279, 471203, 526815, 742613, 773921, 829314, 849201) plus the figure-cycle dir 472913; 451729 and 738192 cover it inside a Section-I batch (963715's batch starts after this segment). This segment drew the cycle's first substantive *certified* finding (the Pearl-`do` dependency, below) across several substrates — that is routed via the findings track; the texture is preserved here as signal. Substrate attribution inferred from voice where not explicit; uncertain cases hedged.
