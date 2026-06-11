@@ -111,6 +111,6 @@ Orthogonal pedagogical / generative material from the de-novo auditors' working 
 
 #### Belongs elsewhere
 
-- **ELI continuity / Three-Deaths reading (`04-eli-core/`).** ELI operating environments are Model-S-like (stochastic), so structural adaptation is *certain* over an unbounded horizon — which links the dichotomy directly to the "Three Deaths": identity continuity *requires* surviving recurring structural (not just parametric) adaptation (Gemini, AUDIT-WORKING-829314). Already echoed in `#deriv-sector-condition`'s WN low-confidence-ideation; recorded here at the no-go's own home.
+- **ELI continuity / deaths-taxonomy reading (`04-eli-core/`; #def-death-as-factor-loss).** ELI operating environments are Model-S-like (stochastic), so structural adaptation is *certain* over an unbounded horizon — which links the dichotomy directly to the deaths taxonomy: identity continuity *requires* surviving recurring structural (not just parametric) adaptation (Gemini, AUDIT-WORKING-829314). Already echoed in `#deriv-sector-condition`'s WN low-confidence-ideation; recorded here at the no-go's own home.
 
 [^khas]: Khasminskii, R. (2012). *Stochastic Stability of Differential Equations* (2nd ed.). Springer. Chapters 3–4 (recurrence, scale function, bounded harmonic functions); Chapter 5 (Lyapunov functions, stopping-time localization).

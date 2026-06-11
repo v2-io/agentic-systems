@@ -167,7 +167,7 @@ These are not the same concept twice:
 - `continuity persistence` (as its own named term — currently the entry is just `continuity`, mismatching segment usage)
 - `task adequacy` ($R^\ast < \|\delta_{\text{critical}}\|$) — derives the two-condition decomposition behind operational persistence; not in LEXICON
 - `five constitutive factors of identity` (`def-five-constitutive-factors`) — definitional content behind Moral Continuity; not in LEXICON
-- `Three Deaths` (`hyp-the-three-deaths`) — maps directly onto the three-sense taxonomy and five constitutive factors; not in LEXICON
+- The deaths taxonomy (`def-death-as-factor-loss`, restructured 2026-06-10) — `continuity death` / `relational death` / `agency death` / `truth death` / `phenomenological death` / `death-apt`; factor-generated; not in LEXICON. ("Three Deaths" is retained as a historical proper noun only — do not canonicalize it as a live term.)
 - `identity sufficiency` ($S_{\text{id}}$, `def-identity-sufficiency`) — persistence analog for substrate transfer; not in LEXICON
 - `reconstruction adequacy condition` (`obs-context-turnover.md:70`) — the session-episodic analog of the persistence condition; not in LEXICON
 - Two-timescale persistence distinction (intra-session event-driven vs. inter-session episodic) — load-bearing for logogenic agents; not in LEXICON

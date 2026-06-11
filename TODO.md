@@ -362,7 +362,7 @@ These are existing OUTLINE entries at `exploratory` stage with substantial upstr
 - `04-eli-core/src/def-character-aspiration-dialectic.md` — character (from ACTUS) vs aspiration (from AXIOMATA) dialectic; PROPRIUM-O-v2 §4.3 canonical.
 - `04-eli-core/src/def-gradient-causal-memory.md` — GCM compression; canonical source in zoetica `asm-specification.md` (5-level pyramid).
 - `04-eli-core/src/def-century-scale-event-log.md` — BLAKE3 hash-chained CHRONICA; archema operational defenses against Truth Death.
-- `04-eli-core/src/norm-honest-activation.md` — deception → gain collapse; composes with audit §16 §14 lift in `04-eli-core/src/hyp-the-three-deaths.md` D3.
+- `04-eli-core/src/norm-honest-activation.md` — deception → gain collapse; composes with audit §16 §14 lift in `04-eli-core/src/def-death-as-factor-loss.md` D3.
 - `04-eli-core/src/norm-temporal-coherence-markers.md` — out-of-band Visual Time Delta as physical prerequisite for tempo $\nu$; zoetica `tracking-snapshot-spec.md`.
 
 ### New segment candidates (not yet in OUTLINE)

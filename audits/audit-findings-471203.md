@@ -72,7 +72,7 @@ These are all in the FINAL §F and have MANIFEST dispositions. Preserved here wi
 
 ### F7-§F — Commitment-state $C_t$ extension to $G_t$
 
-- **WORKING-dir trail:** `adversarial-creative-challenges.md:99–107` ("Challenge 8") is the first surfacing — the missing formal commitment phase between deliberation and execution, with the proposed extension $G_t = (O_t, \Sigma_t, C_t)$. Reinforced in `:204–206` (Missing 3: Commitment as commodity) and consolidated at `:291–296` as the most promising §F avenue, with three explicit connections (`#def-strategy-dimension` Working Notes, `#hyp-the-three-deaths`, `#der-deliberation-cost`'s decided-not-yet-executed).
+- **WORKING-dir trail:** `adversarial-creative-challenges.md:99–107` ("Challenge 8") is the first surfacing — the missing formal commitment phase between deliberation and execution, with the proposed extension $G_t = (O_t, \Sigma_t, C_t)$. Reinforced in `:204–206` (Missing 3: Commitment as commodity) and consolidated at `:291–296` as the most promising §F avenue, with three explicit connections (`#def-strategy-dimension` Working Notes, `#def-death-as-factor-loss`, `#der-deliberation-cost`'s decided-not-yet-executed).
 - **Disposition (per MANIFEST):** **subsumed-by-FINAL ≡ PROPOSALS SP-12 §D.4** (exact pre-existing match).
 
 ### F5-§F — Class-2 LLM engineering-guidance reach

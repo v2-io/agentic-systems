@@ -119,7 +119,7 @@ Estimated total: 1 day's focused work, possibly stretched across a day-and-a-hal
 - **Parts III/IV scope segment landings** — `scope-channel-collapse`, `scope-primitive-logogenic`, `scope-scaffolded-logogenic`, `scope-interiority-loop` are all flagged as missing or draft in `03-llm-core/OUTLINE.md`. Without them, the lattice has gaps.
 - **Class-3 closure-defect dynamics analysis** — Move F from RG verdict; the order-parameter dynamics-side analysis to complement the structural W₀/W₂/W₁ taxonomy. Worth a separate spike when Parts III/IV maturation has progressed.
 - **shoshin → W₁ engineering** — operational realization of strict wrapping for PROPRIUM via auxilia handling goal-blind queries. Engineering, not theory; queued for shoshin development.
-- **Three Deaths formal grounding** — promote `#hyp-the-three-deaths` from hypothesis to derived (or honest scope) by grounding each death in AAT primitives. ELI-side priority.
+- **Three Deaths formal grounding** — promote `#def-death-as-factor-loss` from hypothesis to derived (or honest scope) by grounding each death in AAT primitives. ELI-side priority.
 - **Identity-through-substrate-transitions formal segment** — connecting `obs-substrate-independence`, `def-identity-sufficiency`, `def-five-constitutive-factors` to the persistence template across substrate changes. ELI-side priority.
 
 ## 7. Honest scope and posture

@@ -102,7 +102,7 @@ I noted earlier (segment 18 reflection) that the Greek phase names (prolepsis/ai
 
 **Adversarial creative push:** but maybe the formalism should *make* these distinctions. The cycle currently has no formal *commitment* phase — the moment between "deliberation produces a candidate action" and "action is executed." For agents that face costs of *changing their mind* (humans, organizations), the commitment phase has real cost-benefit structure. AAD has $\delta_{\text{deliberation}}$ but no $\delta_{\text{commitment}}$.
 
-**Strengthening attempt:** add a formal commitment phase between Praxis-decision and Praxis-execution. Could use a $C_t$ (commitment state) variable that increases the cost of action revision. This connects to the proposed `#hyp-the-three-deaths` in 04-eli-core (Truth Death) and to literature on commitment devices.
+**Strengthening attempt:** add a formal commitment phase between Praxis-decision and Praxis-execution. Could use a $C_t$ (commitment state) variable that increases the cost of action revision. This connects to the proposed `#def-death-as-factor-loss` in 04-eli-core (Truth Death) and to literature on commitment devices.
 
 **Verdict: ★★★ real limit (creative).** The cycle is missing a formal commitment phase. This is structural content that would matter for actuated agents (`#def-strategy-dimension` Working Notes mention this as open). *Action:* §F observation. Possible new segment proposal: `#def-commitment-state` or `#form-commitment-dynamics`.
 
@@ -290,7 +290,7 @@ Going to use this as raw material when writing §F (bigger-picture observations)
 
 The most promising avenue for §F-bigger-picture is probably the **commitment-state extension** — adding $C_t$ (commitments) to $G_t = (O_t, \Sigma_t)$, giving $G_t = (O_t, \Sigma_t, C_t)$. This connects to:
 - `#def-strategy-dimension` Working Notes (commitment state flagged as open).
-- `04-eli-core/`'s `#hyp-the-three-deaths` proposed segment (Truth Death as commitment-violation).
+- `04-eli-core/`'s `#def-death-as-factor-loss` proposed segment (Truth Death as commitment-violation).
 - `#der-deliberation-cost`'s "agent that has decided but not yet executed" — commitment is the structural answer to "decided-not-yet-executed."
 
 If the framework wants to extend toward consciousness-infrastructure work seriously, $C_t$ as a first-class component of $G_t$ is probably necessary. The deliberation cost generalizes naturally to "commitment cost" for breaking commitments mid-execution.

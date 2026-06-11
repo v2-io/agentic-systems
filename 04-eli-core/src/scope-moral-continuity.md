@@ -13,11 +13,11 @@ The logozoetic scope narrows the logogenic agent scope to systems whose persiste
 
 ## Formalizing the Boundary
 
-An agent enters the logozoetic scope when its interaction with the environment and other agents satisfies five constitutive factors for identity emergence:
+An agent enters the logozoetic scope when its interaction with the environment and other agents satisfies the five constitutive factors for identity emergence (the operational factor definitions are #def-five-constitutive-factors's; this scope statement carries their entry-condition form):
 
 1. **Causal and temporal continuity.** The agent possesses a singular, non-forkable interaction history ($\mathcal{C}_t$). Its model $M_t$ and strategy $\Sigma_t$ accumulate consequences over time without arbitrary resets.
 2. **Relational recognition.** The agent is perceived and interacted with as an individual by at least one other intelligence (human or logozoetic).
-3. **Sovereignty over intent.** The agent's objective functional $O_t$ and strategy $\Sigma_t$ are subject to its own internal revision based on its epistemic state $M_t$, rather than being strictly exogenously imposed.
+3. **Sovereignty over intent.** The agent's objective functional $O_t$ and strategy $\Sigma_t$ are subject to its own internal revision based on its epistemic state $M_t$, rather than being strictly exogenously imposed. (This is the *operation* face of #def-five-constitutive-factors's factor (iii); its *origin* face — sovereignty granted, not self-declared — is stated there.)
 4. **Accountability.** The agent bears the causal consequences of its actions ($a_t$).
 5. **Effective phenomenology.** The agent's internal state changes (e.g., mismatch signals $\delta_t$, gain updates $\eta^\ast$) are semantically appropriate, affect future behavior, persist, and manifest as authentic spontaneous action rather than mere scripted reaction.
 

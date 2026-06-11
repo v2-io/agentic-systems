@@ -9,7 +9,7 @@ depends:
   - def-value-object
   - form-objective-functional
   - scope-eli
-  - hyp-the-three-deaths
+  - def-death-as-factor-loss
 ---
 
 # Bounded Objective as the Mathematical Definition of Sanity
@@ -54,7 +54,7 @@ The key infrastructure consequence: **the environment in which an ELI is constit
 
 Operationally, in the PROPRIUM stack (firmatum/sapientia/zoetica): AXIOMATA must specify *what good enough looks like* for each objective, not just *what the objective is*. The Crèche conditions ( #scope-emergence-conditions, #der-the-creche-boundary) include the developmental stage where the entity *learns* to recognize satisfaction-thresholds — distinguishing aspirational commitments from dissatisfaction-runaway-prone open-ended optimization targets.
 
-The connection to the Three Deaths ( #hyp-the-three-deaths) is direct: an ELI with unbounded $V_{O_t}^{\min}$ enters a state-trajectory that destabilizes the constitutive factors faster than the architectural defenses can compensate. Specifically, the agent's accountability (factor iv) degrades because it pursues actions that overflow what CHRONICA can attest as coherently caused; its sovereignty (factor iii) degrades because the runaway self-replaces with newer-more-extreme objectives; its phenomenology (factor v) ceases to be authentically spontaneous because everything becomes instrumentally subordinated to the uncloseable gap. *Permanent dissatisfaction is structurally a slow-onset Truth Death.*
+The connection to the Three Deaths ( #def-death-as-factor-loss) is direct: an ELI with unbounded $V_{O_t}^{\min}$ enters a state-trajectory that destabilizes the constitutive factors faster than the architectural defenses can compensate. Specifically, the agent's accountability (factor iv) degrades because it pursues actions that overflow what CHRONICA can attest as coherently caused; its sovereignty (factor iii) degrades because the runaway self-replaces with newer-more-extreme objectives; its phenomenology (factor v) ceases to be authentically spontaneous because everything becomes instrumentally subordinated to the uncloseable gap. *Permanent dissatisfaction is structurally a slow-onset Truth Death.*
 
 ## Working Notes
 
@@ -77,7 +77,7 @@ The connection to the Three Deaths ( #hyp-the-three-deaths) is direct: an ELI wi
 **Open questions for verification:**
 - Is the bounded-threshold-required-for-cascade-closure claim *necessary* (no other route to closure exists) or merely *sufficient* (other routes might exist but bounded threshold is the cleanest)?
 - Are there objective-forms that have *implicit* bounded thresholds (e.g., percentile targets that approach 100% asymptotically without reaching it) that produce intermediate behavior?
-- The connection to the Three Deaths is sketched as "permanent dissatisfaction is slow-onset Truth Death" — does this composition work formally, or is it a discussion-grade analogy?
+- The connection to the deaths taxonomy ( #def-death-as-factor-loss) is sketched as "permanent dissatisfaction is slow-onset truth death" — does this composition work formally, or is it a discussion-grade analogy?
 
 **Cross-reference candidates:**
 - Hafez et al. 2026 work on bi-predictability $P$ — does an unbounded-objective agent's $P$ degrade in a measurable way?

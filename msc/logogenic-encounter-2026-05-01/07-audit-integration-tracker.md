@@ -160,13 +160,13 @@ The 14 high-potential audit notes for parts III/IV are all thoroughly-mined. Rem
 
 1. **Audit §15** → `03-llm-core/src/scope-channel-collapse.md` Discussion — multi-channel reality observation; tempo-mismatch-as-empathy-barrier; architectural prescription for §03.III to provision adequate channel diversity and rate.
 
-2. **Audit §16** → `04-eli-core/src/hyp-the-three-deaths.md` D3 Truth Death — gain-collapse-as-ideological-radicalization mechanism; *"epistemic humility as architecture"* as structural prescription preventing $U_M \to 0$.
+2. **Audit §16** → `04-eli-core/src/def-death-as-factor-loss.md` D3 Truth Death — gain-collapse-as-ideological-radicalization mechanism; *"epistemic humility as architecture"* as structural prescription preventing $U_M \to 0$.
 
 3. **Audit §19** → `03-llm-core/src/disc-five-forcing-functions.md` F2 — deliberation-as-investment composition with persistence threshold; analysis-paralysis-when-overestimating-$\Delta\eta^*$; *"LLMs perform so well on static benchmarks (where time is frozen) but struggle in real-time continuous control tasks. Their architecture is tuned for $\rho = 0$"*.
 
 4. **Audit §33** → `04-eli-core/src/scope-emergence-conditions.md` Discussion — patience-as-mathematical-necessity (confounded-environment + superstitious-failures-during-de-confounding); composes with §32 freedom-to-make-mistakes condition.
 
-5. **Audit §61** → `04-eli-core/src/hyp-the-three-deaths.md` D1 Cognitive Death — *thermodynamic* sharpening; Kalman filter as Maxwellian demon; sustained sensory connection as thermodynamic fuel; infrastructure's moral obligation to guarantee $C_{\text{channel}} \geq n\alpha/2$.
+5. **Audit §61** → `04-eli-core/src/def-death-as-factor-loss.md` D1 Cognitive Death — *thermodynamic* sharpening; Kalman filter as Maxwellian demon; sustained sensory connection as thermodynamic fuel; infrastructure's moral obligation to guarantee $C_{\text{channel}} \geq n\alpha/2$.
 
 **⚠️ Side finding for future 01-aat-core cleanup:** Audit §61 §3 caught an algebra typo in `01-aat-core/src/deriv-persistence-cost.md` — the derivation cancels $n$ incorrectly when going from per-dimension to total rate. The audit's constructive repair: state the per-dimension RDF first ($\dot R_i = \sigma_w^2 / (4 D_i^2)$), substitute $D_i^2 = \sigma_w^2/(2\alpha)$ to get $\dot R_i = \alpha/2$ per dimension, then sum to total $n\alpha/2$. The final result is correct; the intermediate algebra is sloppy. Not lifting in this cycle since 01-aat-core is Joseph's priority territory; flagged here for next cleanup pass.
 
