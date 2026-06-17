@@ -63,6 +63,7 @@
 | I   | Derived    |     | [#der-gain-sector-bridge](src/der-gain-sector-bridge.md)                                 | Gain + directional fidelity → sector condition | claims-verified |
 | I   | Result     |     | [#result-sector-condition-stability](src/result-sector-condition-stability.md)           | Nonlinear persistence (Lyapunov)               | claims-verified |
 | I   | Result     |     | [#result-persistence-condition](src/result-persistence-condition.md)                     | Bounded mismatch condition                     | claims-verified |
+| I   | Definition |     | [#def-mood](src/def-mood.md)                                                             | Mood: slow second-order modulator of gain/tempo (leaky integral of mismatch); outer loop on persistence | draft |
 | I   | Result     |     | [#result-structural-adaptation-necessity](src/result-structural-adaptation-necessity.md) | When parametric update fails                   | claims-verified |
 | I   | Derived    |     | [#der-temporal-nesting](src/der-temporal-nesting.md)                                     | Timescale stratification                       | deps-verified   |
 | I   | Discussion |     | [#scope-agent-identity](src/scope-agent-identity.md)                                     | Non-forkable causal trajectory                 | deps-verified   |
