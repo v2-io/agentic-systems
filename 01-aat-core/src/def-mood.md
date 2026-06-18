@@ -37,7 +37,7 @@ This segment is a **definition**, not a truth-claim; its content is the construc
 
 The load-bearing reason this belongs in Part I — *before* objectives — is that nothing in the construct references $O_t$, $\Sigma_t$, or reward. Mood's signed reading as *valued* momentum (approach/avoid, hedonic sign) and its modulation of exploration and risk posture are genuine additions that arrive only once objectives exist; those are deferred to the actuation half (Part II) and depend on this definition, not the reverse.
 
-The candidate quantitative result — that the optimal mood time-constant $\tau^\ast$ matches the environment's autocorrelation timescale — is **not** asserted here; it is logged as a gating sub-spike in Working Notes and would, if it lands, promote this segment toward `conditional`.
+The optimal mood time-constant is derived in `#der-mood-timescale`: minimizing steady-state regime-tracking error gives $\tau^\ast = \sqrt{\tau_{\mathrm{env}}\, r/(2\sigma_\theta^2)}$ — growing as the *square root* of the environment's autocorrelation time (not matching it), with a robust-qualitative core (interior optimum; too-fast mood chases noise, too-slow mood lags the regime). That companion carries the `conditional` result and its premises; this definition remains `discussion-grade` as the construct.
 
 ## Discussion
 
@@ -49,7 +49,7 @@ The applied and normative reading of mood — set-point, recovery, what propagat
 
 ## Working Notes
 
-- **Gating sub-spike (F2, time-constant matching).** Derive $\tau^\ast \propto$ environmental autocorrelation timescale against Bennett et al. (2022)'s leaky-integrator form; the empirical check is the emotional-inertia signature (Kuppens et al. 2010 formalize inertia as the affect AR(1) coefficient; mismatch with environment autocorrelation predicts maladjustment). Success promotes this segment to `conditional` and likely spins out a `result-mood-timescale` companion. Forward pointer for whoever picks this up: the design memo's F2 carries the full argument and references.
+- **Discharged 2026-06-17 — optimal time-constant (F2).** Landed as `#der-mood-timescale` (`conditional`): the strong "$\tau^\ast$ matches the autocorrelation timescale" was refuted and replaced by the derived $\tau^\ast = \sqrt{\tau_{\mathrm{env}}\, r/(2\sigma_\theta^2)}$ scaling law, independently refute-verified. The emotional-inertia signature (Kuppens et al. 2010 — inertia as the affect AR(1) coefficient $1-\lambda$, maladaptive when high $\Leftrightarrow$ $\tau \gg \tau^\ast$) is its clinical corroboration. Reasoning trail: `spikes/spike-mood-timescale-matching-2026-06-17.md`.
 - **Pre-goal volatility link (unverified).** The integrated quantity $a_t$ plausibly connects to volatility-driven learning-rate control (Behrens-style). Verify the citation before using it; if it holds it independently supports the Part I (pre-goal) placement.
 - **Upstream discoverability.** Add a one-line Working-Notes pointer to this segment from `emp-update-gain` and from `result-persistence-condition` (mood as the slow outer loop on each) — not yet done.
 - **OUTLINE.** Not yet entered in `01-aat-core/OUTLINE.md`; provisional home is Part I, Chapter 4 (Persistence and Structural Limits), after `der-gain-sector-bridge`.
