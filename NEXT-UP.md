@@ -1,7 +1,15 @@
-# NEXT-UP — live handoff pointer (updated 2026-06-02)
+# NEXT-UP — live handoff pointer (updated 2026-06-30)
 
 > [!note]
 > **Transient pointer, not a navigator.** Authoritative homes: `PRACTICA.md` (strategy) / `TODO.md` (tactics) / `PROPOSALS.md` (structural moves) / `audits/STATUS.md` (audit routing) / `INTEGRATION-CLEANUP-TODO.md` (the big cleanup) / `CHANGELOG.md` (narrative). This file only names what is *hot* so a compaction or fresh session resumes momentum. **Delete once the queue drains.**
+
+## Landed since 2026-06-02 (full narrative in CHANGELOG)
+
+**Multi-timescale stability (2026-06-10).** `#der-multi-timescale-stability` promoted to `derived`/`exact` (Model D): per-level sector conditions + bounded interconnection ⇒ composite $N$-level stability, with a closed-form nesting threshold and a warm/cold-start reserve-gap pricing.
+
+**Deaths grounding (2026-06-10) + mood/agency-death arc (2026-06-10→17, latest commit `e420587`).** Back-integration from Inquiry Paper 4: `#def-death-as-factor-loss` replaces the Three-Deaths hypothesis (continuity/relational/agency/truth at per-death tiers, phenomenological predicted-not-adjudicated). Released follow-ons since landed: `#def-mood` (Part I, second-order adaptation) + sovereignty-carve memo; `#der-mood-timescale` (F2, optimal time-constant is a sqrt-law); both agency-death legs — `#der-severed-actuation-dynamics` (output) and `#der-captured-objective-dynamics` (input, the reward-channel no-go / Agentic↔Truth bridge). Plan: `msc/deaths-grounding-plan-2026-06-10.md`. Remainder tracked in TODO §"Deaths taxonomy".
+
+**Stale-navigator find + fix (2026-06-30).** PRACTICA item 4 named "four missing scope segments" (`scope-channel-collapse`, `scope-primitive-logogenic`, `scope-scaffolded-logogenic`, `scope-interiority-loop`) as the other half of the deaths-grounding cycle. On pickup: all four already existed at `stage: draft` with substantive content (landed in `ce99ce6`, the 03/04 dir-harmonization commit) — `03-llm-core/OUTLINE.md` simply never had its `missing` markers updated. Same staleness found on two more rows (`disc-framework-self-diagnostic`, `disc-five-forcing-functions`) — also draft-complete. Fixed (OUTLINE + PRACTICA wording corrected, lint + check-links clean). Genuine remaining work on this cluster is **Gate 1 dependency audit** onward, not authoring — the segments' own Working Notes already say so. One row is genuinely missing: `hyp-checkpoint-forking-failure-modes` (it actually lives in `04-eli-core/src/`; tracked in TODO's cross-component segment-resolution item).
 
 ## SOP consolidation — LANDED 2026-06-02 (full narrative in CHANGELOG)
 
