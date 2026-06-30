@@ -7,6 +7,7 @@ depends:
   - scope-channel-collapse
   - scope-logogenic-agent
   - obs-context-turnover
+  - scope-agent-identity
 ---
 
 # Primitive Logogenic Scope
@@ -68,3 +69,5 @@ The transition to §03.II (scaffolded) is what every practical "agentic system" 
 - Can the bias bound be measured empirically for primitive-logogenic agents? Direct empirical validation of the $\kappa \cdot \mathcal{A}$ product would calibrate the bound's tightness.
 
 **Promotion-blocking:** dependencies #scope-channel-collapse just landed; #scope-logogenic-agent at draft; #obs-context-turnover at draft. Could promote together as a cluster.
+
+**Gate 1 fix (2026-06-30):** `#scope-agent-identity` was used load-bearingly in Formal Expression ("trajectory $\mathcal{C}_t$ is forkable... see #scope-agent-identity") but missing from frontmatter `depends:`. Added.

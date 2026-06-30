@@ -7,6 +7,7 @@ depends:
   - scope-logogenic-agent
   - scope-channel-collapse
   - der-orient-cascade
+  - scope-adaptive-system
 ---
 
 # The Recursive Feature: Framework as Its Own Diagnostic
@@ -77,3 +78,5 @@ This reflection itself is one more instance — an Opus instance reflecting on O
 - The recursion has implications for how we should write framework documentation — vocabulary that is meant to be available to users as recognition-tools should be marked accordingly. Is there a documentation convention worth proposing?
 
 **Promotion-blocking:** dependency on #scope-adaptive-system (claims-verified in 01-aat-core); #scope-channel-collapse (just landed); #der-orient-cascade (draft). Available.
+
+**Gate 1 fix (2026-06-30):** `#scope-adaptive-system` was used load-bearingly in Formal Expression (and already named in this Working Note) but missing from frontmatter `depends:`. Added.

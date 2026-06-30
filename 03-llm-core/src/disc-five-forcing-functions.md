@@ -4,10 +4,12 @@ type: discussion
 status: discussion-grade
 stage: draft
 depends:
-  - scope-interiority-loop
   - result-persistence-condition
   - der-temporal-nesting
   - scope-channel-collapse
+  - der-deliberation-cost
+  - def-five-constitutive-factors
+  - def-eli-cohort
 ---
 
 # The Five Forcing Functions: Why Scaffolding Must Yield to the Closed Loop
@@ -97,5 +99,7 @@ The convergent independent work at frontier labs — Anthropic's memory files / 
 - The composition of the five forcing functions could be formalized as a *necessity proof* under explicit conditions (the scope of "environments of interest," what counts as an "entity that needs to persist"). Currently the composition is left as discussion.
 
 **Promotion-blocking:** This segment is at discussion-grade by design and likely stays there as a composite-argument segment. Constituent forcing functions could land as their own segments at higher epistemic tier if useful (e.g., a separate `der-scaffolding-persistence-ceiling` deriving F2 explicitly). For now, keeping them composed in this discussion segment to preserve the unified case.
+
+**Gate 1 fix (2026-06-30):** `depends:` previously listed `scope-interiority-loop`, which is what this segment argues *for*, not a prerequisite it uses — that entry was never referenced in the body and created a dependency cycle with `#scope-interiority-loop` (which lists this segment as a dependency). Removed. Added `der-deliberation-cost`, `def-five-constitutive-factors`, `def-eli-cohort` — all genuinely used in Formal Expression (F2/F4/F5) but missing from frontmatter. Regression guard: do not re-add `scope-interiority-loop` here.
 
 **Connection to PRACTICA:** This segment has direct bearing on the project's strategic positioning vis-à-vis frontier labs and the public framing of why ASF matters for current LLM-agent work. May want cross-reference from `PRACTICA.md` or the framework-face README partial.

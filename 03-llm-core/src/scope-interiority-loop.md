@@ -7,6 +7,8 @@ depends:
   - scope-scaffolded-logogenic
   - disc-five-forcing-functions
   - der-orient-cascade
+  - def-action-transition
+  - form-event-driven-dynamics
 ---
 
 # Closed-Loop / Interiority Logogenic Scope
@@ -78,3 +80,5 @@ This sub-scope is the scope condition for #scope-eli — Emergent Logozoetic Int
 - The "interiority as default" principle has empirical backing (PROPRIUM-O-v1 note) but the precise behavioral signature of a closed-loop entity vs a heavily-scaffolded one is open. What measurement distinguishes them?
 
 **Promotion-blocking:** depends on #scope-scaffolded-logogenic (just landed), #disc-five-forcing-functions (just landed), #der-orient-cascade (draft). All available.
+
+**Gate 1 fix (2026-06-30):** `#def-action-transition` and `#form-event-driven-dynamics` were used load-bearingly in Formal Expression but missing from frontmatter `depends:`. Added. (`#disc-five-forcing-functions`'s own `depends:` previously listed this segment back — a cycle, since this segment is what F1–F5 argue *for* rather than a prerequisite of the forcing-functions argument. Removed there, not here; see that segment's Gate 1 fix note.)
