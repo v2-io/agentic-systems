@@ -36,7 +36,7 @@ The optimal mood time-constant grows as the **square root** of the environmental
 
 ## Epistemic Status
 
-`Conditional` on the named premises: stationary AR(1) regime, additive Gaussian surprise noise, the slowly-drifting condition $\tau_{\mathrm{env}} \gg 2\sigma_\theta^2/r$ (equivalently $\lambda^\ast \ll 1$ and mood memory $\tau^\ast \gg 1$ step — one condition validating both the small-$\lambda$ reduction and the leaky-integrator regime), and quadratic loss. Under these, $J(\lambda)$ is exact and the scaling law follows; the boxed $\lambda^\ast = \sqrt{q/r}$ is the leading-order term of the exact minimizer given above, not itself exact.
+`Conditional` on the named premises: stationary AR(1) regime, additive Gaussian surprise noise, the slowly-drifting condition $\tau_{\mathrm{env}} \gg 2\sigma_\theta^2/r$ (equivalently $\lambda^\ast \ll 1$ and mood memory $\tau^\ast \gg 1$ step — one condition validating both the small-$\lambda$ reduction and the leaky-integrator regime), and quadratic loss. Under these, $J(\lambda)$ is exact and the scaling law follows; the boxed $\lambda^\ast = \sqrt{q/r}$ is the leading-order term of the exact minimizer given above, not itself exact. The optimum is derived *for mood's regime-estimator role*; its transfer to the modulator role ($m_t$ setting the fast gain $K_t$ — `#def-mood`'s actual use) is conjectured equal under certainty-equivalent calibration and remains the open two-layer composition item named below.
 
 The derivation was independently refute-verified (2026-06-17): every algebraic step re-derived clean; the one approximation (dropping the mean-reversion cross-term) confirmed $O(\tau_{\mathrm{env}}^{-1/2})$ relative and self-consistently negligible.
 
