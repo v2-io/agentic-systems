@@ -14,7 +14,7 @@ stage: claims-verified
 
 This is the volume's **central inequality** in its operational form. The segment's headline contribution is the *two-condition decomposition*: persistence is not one threshold but two, with different mechanisms and different remedies.
 
-**Structural persistence** is the Lyapunov-derived condition that the correction machinery contains mismatch within its operating region: $\alpha \gt \rho/R$ under deterministic bounded disturbance, or $\alpha \gt n\sigma_w^2/(2R^2)$ under stochastic disturbance. This says *the machinery works*. Mismatch is ultimately bounded by $R^\ast = \rho/\alpha$ (Model D) or $\sigma_w\sqrt{n/(2\alpha)}$ (Model S). When this inequality fails, mismatch grows without effective bound (up to the sector-region edge) — a qualitative regime transition, not a gradual degradation.
+**Structural persistence** is the Lyapunov-derived condition that the correction machinery contains mismatch within its operating region: $\alpha \gt \rho/R$ under deterministic bounded disturbance, or $\alpha \gt n\sigma_w^2/(2R^2)$ under stochastic disturbance. This says *the machinery works*. Mismatch is ultimately bounded by $R^\ast = \rho/\alpha$ (Model D) or $\sigma_w\sqrt{n/(2\alpha)}$ (Model S). When this inequality fails, the containment *certificate* is lost — escape from the operating region becomes possible, and for correctors whose sector bound is tight (the linear case) it is forced by adversarial disturbance in finite time. The loss of the certificate is a qualitative regime transition, not a gradual degradation; what condition-failure does not do is certify escape for every corrector, since the sector floor can understate correction along the actually-reachable paths ( #deriv-sector-condition Lemma A.1N).
 
 **Task adequacy** is the separate condition that the steady-state mismatch is small enough for the agent's actions to remain useful: $R^\ast \lt \lVert\delta_{\text{critical}}\rVert$, where the critical-mismatch threshold is a *domain-specific tolerance* — how wrong can the model be before the agent's actions become harmful or ineffective? Set by the application, not derived by AAT. The two conditions are independent: an agent can be structurally persistent but task-inadequate (the machinery contains mismatch but not tightly enough for the domain). The remedies differ — task inadequacy can be fixed by raising tempo, lowering disturbance, or relaxing tolerance; structural failure requires changing the correction architecture entirely.
 
@@ -34,9 +34,11 @@ This segment is the canonical single-agent instantiation of the sector-persisten
 
 *[Derived (structural-persistence, from sector-persistence-template)]*
 
-Applying the template to the single-agent epistemic case gives: the correction machinery bounds $\delta$ within the model class capacity iff
+Applying the template to the single-agent epistemic case gives: the correction machinery is guaranteed to bound $\delta$ within the model class capacity when
 
 $$\alpha \gt \frac{\rho}{R} \quad \text{(Model D)} \qquad \alpha \gt \frac{n\sigma_w^2}{2R^2} \quad \text{(Model S)}$$
+
+Each condition is sufficient for the individual agent and tight at class level (necessary for the uniform guarantee over all correctors with the given sector floor; agent-level necessary exactly under a radially tight sector bound — the linear case). See #deriv-sector-condition Lemma A.1N.
 
 with ultimate bound $R^\ast = \rho/\alpha$ (Model D) or $R^\ast_S = \sigma_w\sqrt{n/(2\alpha)}$ (Model S). See #result-sector-condition-stability for how (T1)–(T3) are verified in this instantiation, and #deriv-sector-condition for the proof. Structural persistence is a property of the adaptive architecture — the machinery's ability to contain mismatch — not of the task.
 
@@ -90,7 +92,7 @@ The scalar condition overestimates by up to 72% in simulation. The weak dimensio
 
 ## Epistemic Status
 
-**Structural persistence** thresholds are *exact* under their stated assumptions: Model D gives $\alpha \gt \rho/R$ (Prop A.1, exact under GA-2, GA-3); Model S gives $\alpha \gt n\sigma_w^2/(2R^2)$ (Prop A.1S, exact under GA-2S, GA-3). The threshold's *existence* is *robust qualitative* — any monotone correction function has a capacity limit; this holds across all correction functions tested.
+**Structural persistence** thresholds are *exact* under their stated assumptions: Model D gives $\alpha \gt \rho/R$ (Prop A.1, exact under GA-2, GA-3); Model S gives $\alpha \gt n\sigma_w^2/(2R^2)$ (Prop A.1S, exact under GA-2S, GA-3). Both are sufficiency results with class-level tightness — no fixed-agent only-if is claimed; agent-level necessity holds exactly in the radially tight (e.g. linear) case ( #deriv-sector-condition Lemma A.1N). The threshold's *existence* is *robust qualitative* — any monotone correction function has a capacity limit; this holds across all correction functions tested.
 
 **Task adequacy** ($R^\ast \lt \lVert\delta_{\text{critical}}\rVert$) is *exact as a definition* — given $R^\ast$ (derived) and $\lVert\delta_{\text{critical}}\rVert$ (domain parameter), the comparison is well-defined. The substance lies in estimating $\lVert\delta_{\text{critical}}\rVert$ for specific domains, which is an operationalization question ( #detail-operationalization), not a theory question.
 
@@ -102,7 +104,7 @@ The per-dimension extension is *empirically exact* for Model S (matches AR(1) pr
 
 **Two conditions, not one.** This segment now separates what was previously conflated. Structural persistence ($\alpha \gt \rho/R$) is the Lyapunov-derived result — it says the machinery *works*. Task adequacy ($R^\ast \lt \lVert\delta_{\text{critical}}\rVert$) is a domain-specific constraint — it says the machinery works *well enough*. Neither implies the other, and downstream segments should specify which they mean. Most adversarial-dynamics results ( #result-adversarial-tempo-advantage, #der-adversarial-destabilization) depend on structural persistence. Most domain instantiations (TST, logogenic agent design) care about task adequacy. See Persistence in `LEXICON.md` and `README.md` for the full three-sense taxonomy (structural, operational, continuity).
 
-**Below structural threshold.** When $\alpha \leq \rho / R$, mismatch is not merely large — it grows without effective bound (up to $R$, the sector-condition region). The correction machinery is overwhelmed. This is a qualitative transition, not a gradual degradation.
+**Below structural threshold.** When $\alpha \leq \rho / R$, the Lyapunov certificate is lost: the machinery can no longer guarantee containment within the operating region. For the extremal member of the sector class, and for any corrector whose sector bound is radially tight (the linear case), escape is forced by adversarial disturbance — so the threshold is a genuine qualitative transition, not a gradual degradation. For a general corrector, condition failure means loss of guarantee rather than certified escape: the floor $\alpha$ can understate the correction actually available along reachable paths ( #deriv-sector-condition Lemma A.1N).
 
 **Below task-adequacy threshold.** When $R^\ast \gt \lVert\delta_{\text{critical}}\rVert$ but $R^\ast \lt R$, the system is structurally stable but performing unacceptably. Mismatch is bounded but too large for the domain. The remedy is different from structural failure: increase $\mathcal{T}$ (faster or better correction), decrease $\rho$ (reduce environmental volatility), or relax $\lVert\delta_{\text{critical}}\rVert$ (accept more mismatch). Structural failure requires changing the correction architecture entirely ( #result-structural-adaptation-necessity).
 
