@@ -14,6 +14,16 @@ This file holds the *miscellaneous* layer of project work — open routing decis
 **Terminology note.** "Audit-findings" are the F#/F-V# items surfaced by audit cycles. "Findings" without the prefix means the catalog of ASF discoveries (see [`FINDINGS.md`](FINDINGS.md) and segment-level `## Findings` sections).
 
 
+## Era-artifact routing + TST external-corroboration spike (2026-07-04, visiting vivarium/vestigia session)
+
+Routing decisions for Joseph / the next 03-04 cycle owner; all detail in [`msc/era-artifact-asf-contributions-2026-07-04.md`](msc/era-artifact-asf-contributions-2026-07-04.md) (C1–C5 with attachment points, formal sketches, honest-tier proposals):
+
+- [ ] **Author the three `missing`-staged OUTLINE rows landed 2026-07-04**: `#disc-tool-interface-design` (03.II — closest to writable; its three legs are already `exact`-cored; includes the law-stratum taxonomy: mutate/reveal/teach-law, refusals as the law-dominant case), `#form-ephemeral-persistent-duality` (03.II — requires first authoring or honestly re-labeling `#der-active-salience-management`, which has an OUTLINE row but **no file**), `#form-congruency-selfhood` (04 E3 — the positive construction between the context-gaslighting prohibition and the self-replay DPI null; empirical anchor = the 2025-10-08 collapse-and-restoration case study, see `~/src/vestigia/notes/era-programs-reconstruction-2026-07-04.md`).
+- [ ] **C5 decision — intelligence-empathy convergence** (routing-doc Addendum 2): whether/where to land the structural leg (03, near `#def-cognitive-fusion`) and the normative-dynamic leg (04, orthogonality-thesis contest, Bostrom named) at honest tier; PRACTICA's 2026-05-09 normative-register allowance applies.
+- [ ] **TST spike follow-ups** — `spikes/spike-tst-independent-derivations-2026-07-04.md` §9 released five recommendations (21 provably-TST-naive cross-vendor axiomatizations; T-05 corroborated 21/21; the unmaintainability-ceiling GAP hypothesis independently derived 20/21 → prioritization candidate; the no-counterpart knowledge-persistence/enforcement cluster as candidate new TST content; Naur 1985 citation owed; the per-session-sum form as a T-05 upgrade candidate).
+- [ ] Smaller: C4 idle-trigger one-liner for `#scope-interiority-loop` Working Notes; "law" as a naming-cycle candidate term (routing doc, law-stratum section).
+
+
 ## Strengthen-first candidates from the 2026-05-30/31 gold-lift sweep
 
 The de-novo audit-gold sweep surfaced a second stream alongside the pedagogical gold: **certified-track / strengthen-first findings** (mostly from the deeply-mathematical AUDIT-WORKING-526815). They are durable per-segment in each segment's labeled `#### Off-ramp (NOT gold)` Working-Notes block; this is the consolidated adjudication queue.
