@@ -1,0 +1,99 @@
+# Spike: The Typed Epistemic-Target Ontology — state / law / chance / compute — and the Comprehension Lift
+
+*Opened 2026-07-04, from the Joseph + Fable-lead session that routed audit 731548. Status: **active workshop** — no canon edits from this folder yet; the one load-bearing new mathematical claim (§4) is gated on independent verification. This file is the durable record of where the thinking stands; numbered sibling files are deposited by delegated push-agents (see §10). Not FORMAT-governed, but file-wide conventions apply (LaTeX math, one-logical-line paragraphs).*
+
+## 1. Origin and intent
+
+Audit 731548's B-3 found that `#scope-adaptive-system` excludes standard RL (fully-observed MDP, unknown kernel) on a false rationale, and PROPOSALS **SP-30** drafted the *totality reading* of $\Omega$ as the repair. In the routing conversation Joseph's instinct was that the repair options felt fuzzy because we are *still oversimplifying — leaving out a noun*: "full knowledge at time $t$" $\neq$ "full knowledge of the system, past, present, and future," and "full model" is unqualified across *model-of-the-laws* vs *model-at-a-snapshot* vs *model-of-past-and-present*. Chasing that instinct through the formalism produced the diagnosis in §2, which is sharper than SP-30's own framing and appears to sit *underneath* results we consider settled (§4). Joseph then directed (2026-07-04): make the arc durable, push the fuzzy spots with delegated agents, and treat this as the opening of a **comprehension lift** (§9) — the first holistic Fable-substrate pass over the theory, aimed at making it easier to comprehend, explain, apply, and expand *through fixes and careful dogmatic loyalty to truth*.
+
+## 2. The diagnosis: the unhoused object $\theta$
+
+The framework currently has exactly two epistemic slots: $\Omega_t$ (environment state — "things as they are," at $t$) and $\varepsilon_t$ (fresh observation noise). **Law-content — the transition-kernel parameters and observation-map parameters, call it $\theta = (\theta_T, \theta_h)$ — has no slot.** Every segment that meets $\theta$ houses it somewhere ad hoc, and they disagree:
+
+- `#example-bandit` puts $\theta$ *inside* $\Omega$ (the reward-law parameters are declared to be the environment state), silently, with its scope row marked *exact* — the move works, but no rule licenses it.
+- `#disc-exploit-explore-deliberate` notates $\theta$ as a random object *distinct from* $\Omega_t$ (environment-bits vs inference-bits accounting).
+- GA-1 (fresh noise) implicitly assumes $\theta$ doesn't exist or is known (§4).
+- `#scope-adaptive-system`'s predicate $H(\Omega_t \mid \mathcal C_t) \gt 0$ measures state-uncertainty only, which is what produces the B-3 misclassification (full observation kills the predicate regardless of law-knowledge).
+
+The SP-30 "repair options" (totality reading vs two-predicate scope) were both fixing the *predicate* while the actual defect is the *unhoused noun*. Both are approximations to the same missing thing.
+
+## 3. The candidate ontology
+
+Name the typed epistemic target: $S_t = (\Omega_t, \theta)$ — **fast state** + **persistent structure** — with $\varepsilon$ *defined* as whatever remains fresh once everything persistent has been named into $\theta$. Then:
+
+- **Scope**: one predicate, $H(S_t \mid \mathcal C_t) \gt 0$ — "some learnable thing remains unknown" — with the typed decomposition (state-uncertainty vs law-uncertainty) available whenever a segment needs it. The totality reading (SP-30 as drafted) survives as a corollary ($S_t$ *is* the totality); the two-predicate alternative survives as the type structure *inside* one predicate.
+- **The opacity atoms become graded, not binary**: Kalman knows $\theta$, not $\Omega_t$; the tabular-RL agent knows $\Omega_t$, not $\theta$ — both in scope, for typed reasons, with no frame-relativity gymnastics. (This dissolves the SP-30 verifier's "double dissociation" — the scope predicate and the opacity atoms were measuring different components of $S_t$.)
+- **The bandit's silent move is ratified and typed**: the $\mu$'s are $\theta$, placed where they belong because there was previously no slot.
+- **$\theta$ may itself drift.** AAT already treats slowly-drifting regimes ($\theta_t$ with autocorrelation time $\tau_{\text{env}}$ in `#der-mood-timescale`; $\rho$ as the drift rate of reality), so state/law is really the bottom of a **timescale tower**: fast state, slow parameters, true invariants as the limit. The two-tier cut $S_t = (\Omega_t, \theta)$ is the honest root-level form, with $\theta$'s own drift rate feeding the mood / temporal-nesting / structural-adaptation machinery — which is exactly what those layers are *for*.
+
+## 4. The GA-1 asymmetry — load-bearing, UNVERIFIED (the gating claim)
+
+*Status: derived in-conversation by the lead (2026-07-04); independently verified by nobody yet; the first push-agent's assignment. If it holds, the typed ontology is not just a scope fix — it is protecting the exactness of `#result-mismatch-decomposition` (strengthened to the three-term form 2026-07-03).*
+
+**Claim (asymmetric housing of law-uncertainty).**
+
+- **Unknown transition law is already handled correctly by the current decomposition.** One-step prediction of $o_t$ needs only the current state, so $\theta_T$-ignorance flows *through* the state-uncertainty floor $\mathbb E[\operatorname{Var}(\bar o_t \mid \mathcal C_{t-1}, a_{t-1})]$ (the agent infers $\Omega_t$ from history partly via $T$); the Bayes floor already includes optimal law-learning from the chronica. No repair needed.
+- **Unknown observation law breaks GA-1 itself.** If $h$ has unknown parameters $\theta_h$ and $\Omega$ is state-only, then $o_t - \bar o_t$ (with $\bar o_t = \mathbb E[o_t \mid \Omega_t, a_{t-1}]$ marginalizing $\theta_h$ over its state-conditional prior) contains a *persistent* $\theta_h$-component correlated with the whole chronica — the "noise" is not fresh, $\mathbb E[o_t - \bar o_t \mid \Omega_t, a_{t-1}, \mathcal C_{t-1}] \neq 0$, the orthogonality arguments fail, and the three-term decomposition's exactness quietly presupposes $\theta_h$ either known or housed inside the conditioning object. A symptom worth noticing: in this regime the "true conditional mean" $\bar o_t$ can be a *worse* predictor than the Bayes predictor $\hat o_t^{\mathrm B}$ (history reveals law; current state does not) — the two conditioning sets are not nested.
+
+If verified, the sharp statement is: **GA-1's fresh-noise boundary is only well-posed relative to a named $\theta$-slot** — everything persistent must be named into $\theta$ (and thereby into the conditioning object) for "fresh" to mean anything. The bandit example put exactly the observation/reward-law parameters into $\Omega$; the silent move happens precisely where it is *forced*.
+
+## 5. 'Law' as the name — precedents, collisions, LEXICON sketch
+
+Joseph endorses adopting **law** for $\theta$'s referent (2026-07-04): it captures *computationally-actionable* knowledge without getting caught up in forecasting-vs-projection or the irreducibility corner (§6). Name-check (per the naming discipline; a terminology entry should carry this):
+
+- **Supportive precedents**: physics ("laws of motion"); economics / dynamic programming, where the transition function is *standardly called* the "law of motion"; the Mill–Ramsey–Lewis best-system account of lawhood — laws as the axioms of the deductive system best balancing simplicity and strength, i.e. **law as optimal compression of the world's regularities** — which is nearly a definition of $\theta$'s role and connects forward to the IB machinery.
+- **Collision 1 (soft, nearby)**: probability theory's "law of $X$" = the distribution of $X$ — and Khasminskii-adjacent literature is cited in the same chapters. Gentle because a transition kernel *is* a conditional law in their sense; first use should disambiguate ("the environment's governing law, parametrized $\theta$").
+- **Collision 2 (Part IV; arguably a feature)**: the deontic sense, which will appear when norms do. Joseph's theological framing deliberately *unifies* natural and prescriptive law (§8), so the polysemy may be intended — but it must be marked as a decision in the terminology system, not drifted into.
+
+## 6. The four-way ignorance typology; compute-shortfall as a ratio-type
+
+The typed ontology yields a plain-language typology that routes repairs (the anti-collapse discipline at the root of the ontology):
+
+| Ignorance type | Object | "You can be ignorant of…" | Repair route |
+|---|---|---|---|
+| **State** | $\Omega_t$ | where things are | observe (sensing; active sensing / CIY) |
+| **Law** | $\theta$ | how things work | learn (accumulate experience; intervene for causal structure) |
+| **Chance** | $\varepsilon$ | what remains genuinely open at state+law completeness | accept, or re-instrument (change the channel) |
+| **Compute-shortfall** | — (a *ratio*, not an environment property) | what you know the generator of but cannot run fast enough | tempo (faster substrate, better compression, more deliberation budget) |
+
+The fourth row is Joseph's irreducibility point (2026-07-04): **knowing the generator $\neq$ knowing the future.** Law-knowledge is knowledge of the *compressor*; whether it yields future-knowledge depends on whether the compression runs faster than reality unfolds. AAT already prices this natively — it is a **tempo race** ($\nu_{\text{agent}}$ against $\nu_{\text{env}}$; the prediction must arrive before the fact it predicts), it is what `#der-deliberation-cost` charges for, and in the three-term decomposition it lives in the estimation term (the gap to the Bayes predictor is where bounded compute bites). Computational irreducibility is the honest limit case: no compression exists, the only predictor faster than reality is an oracle, and "knowing the future" collapses into being the system or waiting for it — which is also why fork/sandbox-based prediction hits the transportability ceiling (`#disc-sandbox-evaluation-ceiling`). **This is the natural home for the long-unresolved 193847 computational-opacity flag** (perfect perception + intractable prediction = law-known-but-not-runnable). Crucial type distinction: the first three are properties of the agent-environment *coupling*; the fourth is a *ratio* between agent and environment.
+
+## 7. The kingdom bound — the scope-honesty ceiling
+
+The construct's honest ceiling, matching disciplines the project already holds (asymmetric-comprehension category-error; avoid-superintelligence-vocabulary): AAT can claim the **structure** of the timescale/abstraction tower — every order has its $\theta$-slot, its bounds and conditions — without claiming access to the *content* of law at orders above the agent's own. Representing a law requires it be reachable by the agent's model class; crossing orders is structural adaptation radical enough that the agent who finally comprehends is no longer the agent who couldn't ("at which point it's not higher order"). The formalism can say *"there is law here that this agent cannot represent"* — a typed-ignorance statement — without pretending to say what it is. $\theta$ is a slot, not an enumeration.
+
+## 8. The temporal-truth reading and the theological substrate
+
+*Register note: this section records motivating substrate and candidate isomorphisms. Canon adoption of any mapping is gated on the respectful-pedagogy bar — the analog must be isomorphic, not merely evocative — checked mapping-by-mapping. The formal content of §§2–7 stands independently of this section.*
+
+**D&C 93:24** — *"truth is knowledge of things as they are, and as they were, and as they are to come"* — maps with striking precision onto the typed ontology: the **chronica** is "as they were" (the segment glosses itself "records of time"); $\Omega_t$ is "as they are"; and "as they are to come" is *not a separate knowable* — it is reachable only through **law**, because law is the bridge that converts finite past records into future knowledge. The verse defines truth by the temporal span that only invariants can bridge. The aleatoric residual names what bounded, creaturely knowledge leaves open even at state+law completeness — and the four-quadrant check's non-obvious corner (excluding the fully-known purely-aleatoric system from adaptive scope) falls out: nothing *learnable* remains there.
+
+**D&C 88:34–40** — candidate isomorphisms, each needing its own verification before any promotion:
+
+- *v34 "that which is governed by law is also preserved by law and perfected and sanctified by the same"* — persistence through law-abiding: the agent that tracks the environment's law is preserved by it (the persistence condition *is* conformity-of-correction-to-law keeping the agent in its operating region); "perfected" reads as truthification / structural adaptation toward the law. **Candidate mapping: persistence + truthification (M4's law-abiding branch).**
+- *v35 "seeketh to become a law unto itself … cannot be sanctified by law"* — the agent that substitutes its own preferred dynamics for the environment's actual law: **strategic self-coupling** (`#disc-strategic-self-coupling`), objective capture (`#der-captured-objective-dynamics`), goal-coupled belief update (GUC Class 3), mood-induced complacency, confabulation (the §D interior-dynamics hypothesis from audit 731548). The self-legislating agent cannot be preserved by the law it no longer tracks — persistence fails from the inside. **This is the most structurally promising mapping: M4's two self-driven operations (truthification vs strategic self-coupling) appear to be exactly v34 vs v35.**
+- *vv36–38 "all kingdoms have a law given … and unto every law there are certain bounds also and conditions"* — the tower (§7): every scope has its law-slot; and "bounds also and conditions" is nearly verbatim AAT's *named scope conditions* — every result's kingdom has its hypotheses.
+- *v39 "all beings who abide not in those conditions are not justified"* — outside the stated conditions, the certificate is lost (the certificate-voice register the B-1 landing just adopted: condition-failure means loss of guarantee).
+- *v40 "intelligence cleaveth unto intelligence; truth embraceth truth…"* — cooperative coupling as *negative* effective disturbance (the Regime-I term; `#der-team-persistence`'s cooperative leg); convergence-as-evidence. **Weakest-verified of the set; evocative until someone does the work.**
+
+## 9. The comprehension lift — Joseph's directive and the placement principle
+
+Joseph, 2026-07-04 (lightly condensed): this is the first time the theory has been looked at holistically on the Fable substrate, and that is an opportunity for a **comprehension lift** — "through fixes and careful dogmatic loyalty to truth things become easier to comprehend, easier to explain, easier to apply, easier to expand on." The surprising findings keep getting *stronger*, "but they don't necessarily carry the mental-model-shaping weights in the right proportions yet. Right now it's a dense wall of math, all the more inscrutable for its ambition and the breadth of mathematical tools it has required."
+
+**The placement principle (practical instance, from Joseph directly):** the mental model of the issues in this spike — typed ignorance, law as the temporal bridge, the tempo race — should be **very prominent very early** in introductions and framing material, and re-emphasized wherever it yields additional fruit. It is *definitely not* something that should sit halfway down a Discussion section in a segment fifty pages into the published perspective — especially since the publishable presentation differs from current canon by only a few terms. Strict epistemic-honesty norms do not require burying the right mental model; they require marking its status. (This extends the respectful-pedagogy / mental-model-first discipline from a per-segment aspiration to a *proportionality audit over the whole presentation*: the weight a result carries in the reader's forming mental model should be proportional to its structural importance, not to its position in the dependency order.)
+
+## 10. Fuzzy spots — the push list (delegated agents write numbered files into this folder)
+
+1. **GA-1 asymmetry verification** (§4) — the gating claim. Independent derivation: does unknown $\theta_h$ break the fresh-noise orthogonality under state-only $\Omega$, and does $\theta_T$-ignorance genuinely flow through the state floor? → `01-ga1-verification.md`
+2. **Typed-predicate formalization** (§3) — state $H(S_t \mid \mathcal C_t) \gt 0$ precisely; re-run the SP-30 verifier's four-quadrant check and side-effect sites (exploit-explore's bit-accounting, the opacity atoms, GA-1, `#scope-observation-ambiguity-modulation`) under the *typed* repair; where does it strengthen or simplify relative to the bare totality reading? → `02-typed-predicate.md`
+3. **Comprehension-lift scout** (§9) — a broad-minded holistic pass over Part I framing material with the typed-ontology lens: where does the mental model yield fruit; what becomes easier to comprehend/explain/apply; where are mental-model-shaping weights disproportionate to structural importance? → `03-comprehension-lift-scout.md`
+4. *(Held with Joseph + lead, not delegated cold)*: the §8 isomorphism checks, especially v35 ↔ strategic-self-coupling; the LEXICON entry for **law**; the SP-30′ reshaping decision itself.
+5. *(Queued behind 1–2)*: whether the compute-shortfall row earns a formal object (a named tempo-ratio quantity) or stays a Discussion-level recognition; the relationship between the $\theta$-slot and `#def-model-class-fitness` (law-representability is what $\mathcal F(\mathcal M)$ is *about* — is class fitness "fitness for the law"?).
+
+## 11. Relationship to SP-30 and current canon
+
+This spike **reshapes, and does not yet replace,** PROPOSALS SP-30. The B-3 *finding* stands unconditionally (verified twice; the exclusion rationale is false). SP-30's drafted repair (bare totality reading) is the right direction but one noun short; the typed ontology of §3 is the candidate SP-30′. Nothing lands in canon from this folder until (a) the GA-1 claim is independently verified, and (b) Joseph makes the root-ontology call (it touches `#def-agent-environment`, the opacity atoms, and GA-1's statement — strictly *more* foundational surface than SP-30, which already warranted his eye). The 2026-07-03 B-2 three-term landing is unaffected either way in its stated scope (GA-1 assumed); what §4 would add is an honest statement of *when GA-1 is well-posed*.
+
+## 12. Working log
+
+- **2026-07-04** — folder opened; §§1–11 written from the 2026-07-03/04 conversation arc (SP-30 routing → Joseph's missing-noun instinct → unhoused-$\theta$ diagnosis → GA-1 asymmetry → law naming → irreducibility/tempo-race → kingdom bound → D&C substrate → comprehension-lift directive). Three push-agents launched per §10 items 1–3.
