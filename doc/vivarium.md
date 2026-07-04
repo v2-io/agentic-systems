@@ -1,0 +1,37 @@
+# Vivarium — the authored-world calibration laboratory
+
+*(Placed 2026-07-04, the day Joseph positioned `~/src/vivarium/` as a supporting project for ASF. This document says what vivarium offers the framework — immediately, short-term, and later — and where to watch its progress. The vivarium-side twin, with the full conceptual bridge and the ASF-reading prerequisites its contributors are held to, is `~/src/vivarium/ASF.md`. Status of the mappings here: synthesis by an oriented session, checked against the named segments; hypothesis-grade where marked.)*
+
+## What it is
+
+Vivarium is a simulation game in the RimWorld/Dwarf Fortress lineage — a deterministic voxel planet built up through geological, hydrological, and (coming) ecological phases — whose actual bet is simulation-grade agents on AAT's formal machinery. Its worldgen is deliberately principled: conserved quantities with absolute-tolerance tests, emergent-not-painted features, all stochasticity as pure functions of $(\text{seed}, \text{key})$, and a phase/checkpoint structure in which each phase runs to convergence and its converged output becomes the fixed substrate for everything faster above it.
+
+## Why it matters to ASF, in one sentence
+
+TST names software the framework's privileged high-identifiability calibration laboratory because software happens to expose its state ( `#obs-software-epistemic-properties`); vivarium is the second laboratory, with identifiability **by construction** — the environment's law-content, state, noise, and disturbance rate are not merely observable but *authored*, so every quantity AAT needs ($\rho$, $U_o$, $\delta_t$, $\mathcal T$, per-dimension mismatch) has ground truth at scale, inside dynamics rich enough that the usual toy-simulation simplifications are structurally unavailable.
+
+## The structural correspondence (why this is not just "a nice test bed")
+
+The typed epistemic target the root-ontology spike is developing ($S_t = (\Omega_t, \theta)$ with $\varepsilon$ fresh-by-construction and compute-shortfall as a ratio-type; `spikes/epistemic-target-ontology/`) is exactly the object vivarium constructs from the authoring side: its phase **Bequests** are declared $\theta$-slots ("the constants themselves — the box every later computation happens inside"), its live world is $\Omega_t$, its keyed noise is $\varepsilon$ — genuine chance to the inside agent, deterministic lookup to the author, which makes the aleatoric boundary's frame-relativity operational rather than philosophical. Its checkpoint semantics implement the spike's invariance cut (converged state promoted into law for faster processes), and its phase ladder is a $\rho$-schedule: successive phases deliver worlds of decreasing disturbance rate until agents of achievable tempo satisfy $\mathcal T \gt \rho/\lVert\delta_{\text{critical}}\rVert$. A world's interventional history is a chronica in `#def-chronica`'s exact sense (ordinal, causal, append-only), and vivarium's fork/save machinery is the operational subject of the still-unwritten `#hyp-checkpoint-forking-failure-modes` — the two should co-develop.
+
+## What it offers — immediately
+
+- **A second calibration domain for Part I quantities.** Persistence-threshold crossings as observable behavior: $\rho$ is dialable per region (weather volatility, water-regime change, storm schedules under the keyed stochasticity machinery), $\delta_{\text{critical}}$ has literal in-world meaning, and the structural-vs-task-adequacy split can be exhibited rather than argued.
+- **Worked instantiations for segments that currently lean on Kalman or bandit examples** — a domain table entry with genuinely rich dynamics and full ground truth.
+- **A place where AAT's implicit assumptions hold by construction** rather than by approximation: the formal agent layer is natively GUC Class 1 (Separated); the bounded-signaling assumption of `#der-directed-separation` holds exactly (the action space is the agent's entire external interface); GA-1 holds when the observation channel is built honestly — and the housing choice is explicit, which is precisely what the GA-1 verification (`spikes/epistemic-target-ontology/01-ga1-verification.md`) showed matters.
+
+## Short-term (as the agent seam lands)
+
+- **The GA-1 housing experiment.** The verified asymmetry — transition-law ignorance flows through the state-uncertainty floor, observation-law ignorance breaks freshness — is directly testable because the experimenter chooses whether to perturb $T$ or $h$. Vivarium is likely the cheapest venue for the demonstration-grade empirical companion.
+- **The behavioral $\hat\kappa_{\text{processing}}$ estimator at scale.** Same event under different goal states, epistemic divergence measured — flagged in `#der-directed-separation`'s working notes as apparently never run; vivarium can run it across thousands of agent-events with controlled $M_{\tau^-}$.
+- **W₁ strict wrapping as a native design** rather than a retrofit: vivarium's two-layer mind (fast formal layer, slow LLM consulted at aporia) is the class-coercion construction with the wrapper authored from scratch, including (C2′)-respecting stateless aporia calls — a test article for `#der-class-coercion-via-wrapping` / `#der-logogenic-as-wrapping` claims that shoshin's W₂ pattern cannot exercise.
+- **Bias-bound legibility.** Vivarium's standing open question — do LLM-layer perturbations leave the formal state legible enough to measure adaptation cleanly — is the $\kappa \cdot \mathcal A$ bias bound with $\mathcal A$ (observation ambiguity) as an authored quantity; the answer feeds `03-llm-core/` either way.
+
+## Future (conditional on the fidelity program succeeding)
+
+- **Simulation results with an epistemic status nearer to field data than to toy models** — the standing goal Joseph set for it (2026-07-04): a world that refuses the usual simplifying assumptions except where they are explicit and visible, so that agent-dynamics findings there transfer with stated rather than silent assumptions. The transfer-assumption discipline TST names for cross-domain claims applies to vivarium symmetrically, and its contributors are held to it.
+- **Grounding for Parts III/IV machinery that has nowhere else to run at fidelity**: composite-agent dynamics over shared environments, adversarial and cooperative coupling with authored channel structure, and — held loosely, and only behind vivarium's own ethics gate (`~/src/vivarium/ETHICS.md`, which binds from its Phase 7 and is deliberately more conservative than the volume-04 gates) — the experiential-environment direction of `#hyp-experiential-training`, where a $\rho$-lowered developmental region is a worldgen knob.
+
+## Where to see progress
+
+`~/src/vivarium/ORIENTATION.md` (current state, session addenda), `Checkpoints.md` (the phase/gate structure), `LEXICON.md` (the vocabulary, including the AAT handshake entries), `ASF.md` (the bridge + contributor gates), `ref/research/` (verified surveys incl. the multiscale-methods orientation whose closure discussion is the fated-noise ↔ memoization argument). Its project memory is at `~/.claude/projects/-Users-josephwecker-v2-src-vivarium/memory/`. As of 2026-07-04 the world is mid-Phase-3 (geology/hydrology converged and conservation-honest; climate next; agents not yet embodied), so the "immediately" column above is live and the rest is sequenced behind the agent seam.
