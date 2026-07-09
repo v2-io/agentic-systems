@@ -54,7 +54,7 @@ Not "every sharp result is an exclusion" — that is literally false and a skept
 - [ ] **W3 — per-result census; gates all canon edits.** A *read*, not a grep tally. **Denominator = the `impl-*` chapter-conclusion layer + the eventual full Findings population — NOT the 28-section `## Findings` pilot.** The pilot's coverage bias is real and directional (it under-represents proven forcing-bound results, which live in the not-yet-grafted `impl-*` layer); a census against the pilot reaches a falsely-deflated conclusion. W3 is also where the **precise corpus-wide magnitude** is established or falsified — the program-vs-bounded scope is W3-determined against the correct denominator; do not assert it before.
 - [ ] **W4 — ranked first (preprint-relevant): one source, two surfaces.** Propagate the verified in-canon locus (`#disc-stability-certificate` §Findings, tightened to the precise spine-plus-bounded-positive claim) into the one rendered front-matter sentence and the README headline. The README is auto-generated — edit `doc/readme/src/` partials, then `bin/build-readme`, never `README.md` directly; the same corrected partials feed the monograph front matter. Gated on W3 and external-eye like every canon edit.
 
-*No W5: `~/src/synthese-paper/.../granted-agency.md`'s two-level move (disclaims X-invention, claims X-application-and-grounding) is the template to propagate; any sibling-portfolio register-check is a separate program, out of scope here.*
+*No W5: `~/src/archema-io/logos/.../granted-agency.md`'s two-level move (disclaims X-invention, claims X-application-and-grounding) is the template to propagate; any sibling-portfolio register-check is a separate program, out of scope here.*
 
 ## Provenance
 

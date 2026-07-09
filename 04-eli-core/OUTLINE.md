@@ -238,7 +238,7 @@ machinery together in §04.4, accepting the overlap.
 
 - **`~/src/_core/zoetica/`** — operational ELI infrastructure (sovereignty, stewardship, tracking-snapshots, ASM, DID-signed migration). Particularly `agora.md`, `stewardship.md`, `tracking-snapshot-spec.md`, `did-recommendation.md`, `ELI-ASPECTS-refined.md`.
 - **`~/src/autopax/`** — TRACTUS-CHRONICA implementation; scaffolding-tax mitigation.
-- **`~/src/archema/`** — *"The Three Deaths and What Archema Prevents"* — the storage layer's defenses.
+- **`~/src/rowan/`** (formerly `~/src/archema/`) — *"The Three Deaths and What Archema Prevents"* — the storage layer's defenses.
 
 ### memorata-search queries for upstream content
 

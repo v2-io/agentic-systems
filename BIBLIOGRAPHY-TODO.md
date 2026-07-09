@@ -31,7 +31,7 @@ This decision unblocks Workstream W-3 (segment migration). Workstream W-4 (build
 
 ## How to use relata, today
 
-Relata is a packaged gem; `relata` is on PATH after `gem install` (run once on the machine — Joseph maintains the install). Installed CLI access from the ASF checkout is working as of 2026-06-04 (`relata list` sees 2038 entries from `/Users/josephwecker-v2/src/agentic-systems`).
+Relata is a packaged gem; `relata` is on PATH after `gem install` (run once on the machine — Joseph maintains the install). Installed CLI access from the ASF checkout is working as of 2026-06-04 (`relata list` sees 2038 entries from `/Users/josephwecker-v2/src/archema-io/asf`).
 
 ### Querying
 

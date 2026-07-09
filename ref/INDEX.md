@@ -55,7 +55,7 @@ This `INDEX.md` is the tracked bibliography. Each entry gives the expected filen
 
 ### Identifiability / separability-ladder prior art (added 2026-05-04)
 
-*Pearl-Shpitser-Bareinboim identification lineage, Robins / Richardson / Dawid restricted-intervention lineage, and philosophy-of-modeling parallels. Used by `~/src/agentic-systems/ref/separability-ladder-prior-art-report.md` (Undermind output 2026-05-04) and the planned standalone separability-ladder paper [B-N-Sep] (see `~/src/ops/papers/03-asf-tier2-and-cross-segment.md`). All filenames preserved as-found rather than renamed; canonical-rename suggestion in parentheses where useful.*
+*Pearl-Shpitser-Bareinboim identification lineage, Robins / Richardson / Dawid restricted-intervention lineage, and philosophy-of-modeling parallels. Used by `~/src/archema-io/asf/ref/separability-ladder-prior-art-report.md` (Undermind output 2026-05-04) and the planned standalone separability-ladder paper [B-N-Sep] (see `~/src/ops/papers/03-asf-tier2-and-cross-segment.md`). All filenames preserved as-found rather than renamed; canonical-rename suggestion in parentheses where useful.*
 
 | Filename | Citation | Role |
 |---|---|---|
@@ -118,7 +118,7 @@ This `INDEX.md` is the tracked bibliography. Each entry gives the expected filen
 
 ## Known gaps (papers cited but not currently in `ref/`)
 
-These citations appear in `~/src/agentic-systems/ref/separability-ladder-prior-art-report.md` and would benefit the planned [B-N-Sep] separability-ladder paper, but were not found locally during the 2026-05-04 PDF-identification sweep:
+These citations appear in `~/src/archema-io/asf/ref/separability-ladder-prior-art-report.md` and would benefit the planned [B-N-Sep] separability-ladder paper, but were not found locally during the 2026-05-04 PDF-identification sweep:
 
 - **Hintikka, J. (1991). "Towards a General Theory of Identifiability."** DOI 10.1007/978-94-011-3346-3_7. Springer/Kluwer-Netherlands edited volume chapter, 1991. **The strongest older abstract anchor in the prior-art report** — distinguishes theory-alone determination, determination-with-auxiliary-empirical-results, and non-identifiability at an abstract logical level. Spot-check of unidentified PDFs in `ref/` 2026-05-04 did not locate this file. May need reacquisition.
 - **Basse, G. W. & Bojinov, I. (2020). "A general theory of identification."** Closest modern formal abstraction across fields. Not yet acquired locally.

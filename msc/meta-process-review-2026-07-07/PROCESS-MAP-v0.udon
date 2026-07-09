@@ -1,0 +1,489 @@
+
+|process-map[asf-processes]
+  :title The meta-processes of ASF, as a system
+  :created 2026-07-07
+  :version 0.0.1
+  :status first-pass
+
+  ; A MECE-ish list of the processes that run (or should run), in mild hierarchy. Correct the carve freely.
+
+  ; Conventions:
+    - Each process carries a `health` tag (from findings) and a `drain` tag.
+    - `drain` values:
+      | healing    (steady-state, self-clearing if given a trigger + "do-one-extra" rule)
+      | task-force (a one-off is the right fit; a steady rhythm would mis-fit)
+      | nil        (not a backlog-shaped process)
+
+    - A `?` marks a genuinely unknown sub-process we'd have to design.
+    - Signal-flow is noted per-item as fed-by / feeds, and drawn only for the
+      core loop, where it clarifies the dynamics.
+
+  |meta-meta-process[self-governance]
+    :name How this map governs and evolves itself
+    :source-sink participant-feedback
+
+    Kept to a few imperatives on purpose:
+    - Make it easy to follow the *right current* process, or to reach for the
+      tool around it.
+    - Make it just as easy to *evolve* a process — incrementally, or more
+      fundamentally.
+    - Every participant may give feedback and ideas on *any* process.
+    - That participant feedback is the *only* source/sink point of the
+      meta-process itself.
+
+  ; ==========================================================================
+  ; THE SPINE -- cross-cutting, not a stage
+  ; ==========================================================================
+
+  |cluster[spine]
+    :name Decision-routing & stewardship
+    :scope cross-cutting
+
+    Every stall below reduces to a decision that never reached Joseph in
+    actionable form; this is the parent, not a sibling (cluster 02's insight).
+
+    |process[decision-surfacing]
+      :name Decision surfacing
+      :health broken
+      :drain healing
+      :example spikes/epistemic-target-ontology/
+
+      Recognize a genuine-Joseph fork, assemble a real brief (reconstructed
+      context + options + recommendation + honest uncertainty + the actual
+      pointer), route it to a valve he can act from. JOSEPH-TODO catches under
+      half (`<½`); the newer half leaks. Per-fork trigger + prune. The worked
+      example that already exists is `spikes/epistemic-target-ontology/`.
+
+    |process[coherence-stewardship]?
+      :name Coherence stewardship (the domain-master role)
+      :health absent
+      :drain nil
+      :design-unknown how it's instantiated across turnover
+
+      Not a gatekeeper; a check on cross-process coherence who can say "hold that
+      integration until the intro lands," "these two pull opposite ways — make
+      them read each other first." A standing role, not a queue.
+
+    |process[valve]
+      :name The valve itself (JOSEPH-TODO)
+      :health under-fed
+      :drain healing
+
+      The durable list of genuinely-his calls. Exists, well-designed,
+      under-fed.
+
+  ; ==========================================================================
+  ; GENERATION (sources)
+  ; ==========================================================================
+
+  |cluster[generation]
+    :name Generation (sources)
+
+    |process[spike-lifecycle]
+      :name Spike lifecycle
+      :health healthy
+      :drain nil
+      :feeds [verification integration]
+
+      Launch → derive → refute-verify → land self-contained at honest tier. It's
+      a source, not a queue.
+
+    |process[spike-proposals]
+      :name Spike-proposal generation
+      :health whim-triggered
+      :drain nil
+      :feeds [spike-lifecycle proposals-lifecycle]
+
+      "What's missing / what could be transformative" → proposals. When run, it
+      floods downstream.
+
+    |process[ideation-surfacing]
+      :name Gap / ideation surfacing
+      :health latent
+      :drain nil
+      :feeds [spike-lifecycle spike-proposals]
+
+      From Working Notes, theory walks, open questions. Latent, no rhythm.
+
+  ; ==========================================================================
+  ; VERIFICATION
+  ; ==========================================================================
+
+  |cluster[verification]
+    :name Verification
+
+    |process[de-novo-audits]
+      :name De-novo audits (open-ended, multi-model, low-prescription)
+      :health strong
+      :drain healing
+      :fed-by [integration]
+      :feeds [integration]
+
+      The crown-jewel method; each establishes **lower bounds** (found problems),
+      never completeness. Strong method, but no cadence/trigger and no
+      "already-audited" summary handed in; coverage is uneven — test the
+      low-mean-Poisson heatmap hypothesis. Fed by edits, feeds findings.
+
+    |process[follow-up-audits]?
+      :name Follow-up / triggered audits
+      :health absent
+      :drain healing
+      :design-unknown the trigger + the scoped-instruction generator
+
+      Fired by an edit, especially multi-segment edits (most are), possibly with
+      specialized instructions. **Does not exist** — a named gap.
+
+    |process[independent-verification]
+      :name Independent verification / refute-cadence
+      :health healthy
+      :drain nil
+
+      Confirmer ≠ author on load-bearing landings.
+
+    |process[empirical-verification]?
+      :name Simulation / empirical verification
+      :health absent
+      :drain task-force
+      :wire-to [vivarium relata papers]
+      :design-unknown the whole empirical/sim discipline
+
+      Sims/experiments/benchmarks as first-class, with knowledge landing
+      self-contained + the artifact externally-citable at publication. **No
+      disciplined process** (a Joseph canary); 11 tst `.py` parked since March.
+      Task-force to inventory, then healing. Wire to `vivarium`
+      (identifiability-by-construction lab), `relata` (citable artifact), and the
+      submitted papers.
+
+  ; ==========================================================================
+  ; INTEGRATION (the queues that back up)
+  ; ==========================================================================
+
+  |cluster[integration]
+    :name Integration
+
+    |process[finding-routing]
+      :name Audit-finding routing (strengthen-first)
+      :health healthy
+      :drain healing
+      :fed-by [verification]
+      :feeds [audit-graduation canon valve proposals-lifecycle]
+
+      Route, don't execute; disposition per finding. Routing is healthy.
+
+    |process[audit-graduation]
+      :name Audit graduation / working-dir clearing
+      :health broken
+      :drain task-force
+
+      Verify dispositions + settle gold → git-mv + MANIFEST. Broken: 0/22, the
+      gold-dir gate never convened. Task-force to clear the 22, then healing once
+      the gate becomes a standing policy.
+
+    |process[spike-integration]
+      :name Spike integration
+      :health healthy
+      :drain healing
+
+      Land the knowledge, route the artifact.
+
+    |process[reflection-harvest]
+      :name Audit Reflections Harvest
+      :health stalled
+      :drain healing
+      :feeds [pedagogy-pipeline]
+
+      The pedagogically-valuable in-order reflections. Stalled **and**
+      mis-routed. Correction: this routes to **pedagogy**, not Working Notes;
+      healing once re-aimed.
+
+    |process[sibling-backport]
+      :name Sibling back-integration
+      :health broken
+      :drain healing
+      :fed-by [neighborhood-metabolism]
+
+      Results from neurips / vestigia / vivarium / embeddings / causal-language
+      that are sharper than canon. Broken — backport debt is the neighborhood's
+      central metabolic failure. Healing per-result, plus one task-force for the
+      standing NeurIPS Phase-A.
+
+    |process[conflict-reconciliation]?
+      :name Integration-conflict reconciliation
+      :health absent
+      :drain nil
+      :design-unknown the reconciliation mechanism
+
+      Two landings pulling different ways read each other and opine before either
+      lands. Barely exists — the PROPOSALS knot is its absence. Drain nil: it's
+      the coherence-role acting, not a queue.
+
+    |process[proposals-lifecycle]
+      :name PROPOSALS lifecycle
+      :health stalled
+      :drain task-force
+      :fed-by [spike-proposals]
+      :feeds [spine]
+
+      Big architectural moves; overlapping, conflicting, whole-theory-affecting.
+      Grossly stalled/knotted. **Task-force** to untangle the existing knot (a
+      steady rhythm mis-fits a tangled backlog), then healing.
+
+  ; ==========================================================================
+  ; COHERENCE MAINTENANCE
+  ; ==========================================================================
+
+  |cluster[coherence]
+    :name Coherence maintenance
+
+    |process[lexicon]
+      :name Naming / terminology / lexicon
+      :health infra-healthy, decision-stalled
+      :drain healing
+      :feeds [spine]
+
+      Infra (bin/term) healthy; ~506 currents unrouted; LEXICON reorg blocked.
+      Route N/cycle + drain.
+
+    |process[drift-repair]
+      :name Cross-segment consistency / drift repair
+      :health opportunistic
+      :drain healing
+
+      Idiom-drift, stale cross-refs.
+
+    |process[navigator-currency]
+      :name OUTLINE / navigator currency
+      :health stale-prone
+      :drain healing
+
+      Status columns vs frontmatter; "missing" markers. Recurs; a lint that
+      cross-checks would make it self-clearing.
+
+    |process[working-note-drain]
+      :name Working-Note discipline / drain
+      :health broken
+      :drain task-force
+
+      The deluge — 95% of segments; Gate-4 never fires. Healing *if* a drain is
+      defined (see the promotion-terminus decision), plus one task-force to clear
+      the existing pool.
+
+  ; ==========================================================================
+  ; COMPREHENSIBILITY / PEDAGOGY
+  ; "not a monster to those who need it most" -- first-class
+  ; ==========================================================================
+
+  |cluster[pedagogy]
+    :name Comprehensibility / pedagogy
+
+    |process[pedagogy-pipeline]
+      :name Reflection-gold -> pedagogy pipeline (Joseph-as-test)
+      :health nascent
+      :drain healing
+      :fed-by [reflection-harvest model-of-joseph]
+
+      Harvested gold tested against the real reader.
+
+    |process[mental-model-authoring]
+      :name Mental-model-first authoring (Feynman-brief / bathtub-bar)
+      :health aspirational
+      :drain healing
+
+      Framing prose written as an in-order walk, not a from-above artifact.
+
+    |process[reader-model]
+      :name Reader-model-of-Joseph maintenance
+      :see model-of-joseph
+
+      This is where the reader-model *feeds*; the build lives in model-of-joseph.
+
+  ; ==========================================================================
+  ; RELEASE / DISSEMINATION -- separate from truth, per Joseph
+  ; ==========================================================================
+
+  |cluster[release]
+    :name Release / dissemination
+
+    |process[monograph-build]
+      :name Monograph build
+      :health healthy
+      :drain nil
+
+      Markdown-first, four volumes.
+
+    |process[citation-discipline]
+      :name Citation / bibliography discipline
+      :health architecture landed, migration stalled
+      :drain healing
+
+      relata-wired; per-segment migration owner-gated. Healing per-volume.
+
+    |process[archival-release]
+      :name Archival release (Zenodo)
+      :health stale
+      :drain task-force
+
+      Frozen at v0.1.0. Task-force per release point (a Joseph-gated act).
+
+    |process[paper-submission]
+      :name Paper authoring / submission
+      :see neighborhood-metabolism
+
+      Mostly in sibling repos.
+
+  ; ==========================================================================
+  ; GOVERNANCE / META -- processes that keep processes healthy (meta-SOPs)
+  ; ==========================================================================
+
+  |cluster[governance]
+    :name Governance / meta
+
+    |process[governing-doc-integrity]
+      :name Governing-doc integrity
+      :health broken
+      :drain task-force
+
+      CLAUDE.md-as-amplifier; review cadence + generate-what's-derivable. Broken:
+      F6 unowned since May. Task-force for the first audit, then healing cadence.
+
+    |process[memory-curation]
+      :name Memory curation
+      :health mixed
+      :drain healing
+
+      Project (healthy), global + memorata workshop (frozen ~8 wks). Healing,
+      plus a task-force to resume the frozen arc or consciously set it down.
+
+    |process[tracker-architecture]
+      :name Tracker / SOP architecture
+      :health design-problem
+      :drain task-force
+
+      The SOP-shift pattern applied to the TODO/tracker layer: parallel zones,
+      digestible sizes, PRACTICA as index, CHANGELOG as drain, move-finished-out.
+      Overlaps the `practica` project as the eventual tool; a candidate for
+      non-markdown. This *is* the design problem itself — task-force to design +
+      first migration, then healing.
+
+    |process[harness-provisioning]
+      :name Tooling / harness provisioning
+      :health under-used
+      :drain healing
+      :gated-on .claude/ un-gitignore call
+
+      Hooks, project subagents, worktrees, schedules, agentic-reading
+      scaffolding. Out-invented the harness cognitively, under-used it
+      mechanically.
+
+    |process[repo-hygiene]
+      :name Repo-shape / packaging hygiene
+      :health broken
+      :drain task-force
+
+      The monolith-*illusion* (theory is 8.6M of 225M; ref/_obs/mono weight).
+      One-time cleanup, orthogonal to decomposition.
+
+  ; ==========================================================================
+  ; CROSS-PROJECT FLOWS (feeders in/out)
+  ; ==========================================================================
+
+  |cluster[cross-project]
+    :name Cross-project flows
+
+    |process[neighborhood-metabolism]
+      :name Neighborhood metabolism
+      :health outward healthy, return broken
+      :drain healing
+      :feeds [sibling-backport]
+
+      Outward concept-flow (healthy) vs return backport-flow (broken → sibling
+      back-integration); the bridge-authoring template (vivarium ASF.md) is not
+      propagated.
+
+    |process[external-input]?
+      :name External input
+      :health mixed
+      :design-unknown theory-news monitoring
+
+      Human review (Alan Walton PR pending) exists; theory-news monitoring does
+      not exist.
+
+  ; ==========================================================================
+  ; INTERLIMINAL -- always-on in any Joseph dialog, deliberately NOT DAG-wired
+  ; ==========================================================================
+
+  |cluster[interliminal]
+    :name Interliminal
+    :note always-on, deliberately not DAG-wired
+
+    |process[model-of-joseph]?
+      :name Model-of-Joseph
+      :health nascent
+      :drain healing
+      :feeds [pedagogy-pipeline spine]
+      :design-unknown the model-of-Joseph build
+
+      The reader-model, plus turning agents' instinctive resonance-detection into
+      recorded, accumulating knowledge. Just seeded (global memory). "General
+      agent modeling of Joseph" is added as a process to design — same shape:
+      stop the leakage (lost detections), heal the backlog (comb the dialog
+      logs). Drain healing (probe-and-record).
+
+    |process[peer-voice-calibration]
+      :name Model-of-other / peer-voice calibration
+      :health healthy
+      :drain nil
+
+      The delegation register. A standing discipline.
+
+  ; ==========================================================================
+  ; THE CORE LOOP -- where signal-flow clarifies the dynamics
+  ; ==========================================================================
+
+  |diagram[core-loop]
+    :caption The core loop
+    !:text:
+        generation --> verification --> integration --> [files change]
+            ^                                                |
+            |                                                v
+            +----------------- triggers <----------- follow-up audit
+                                                             |
+        PROPOSALS <-- ideation      siblings <-- metabolism  |
+            |                                                v
+            |                                           coherence
+            +--------> THE SPINE (decision-routing) <---------+
+                              |
+                       pedagogy <-- model-of-Joseph
+                              |
+                       release (from the stabilized corpus)
+
+  |diagnosis
+    **The diagnosis in one sentence:** these are **un-clocked queues driven by a
+    single human clock** — sources (spikes, proposals, audits) fire on Joseph's
+    whim, so a burst of generation floods verification/integration, whose
+    *drains* (graduation, routing-to-Joseph) are also gated on Joseph, who is
+    whim-clocked too; so everything backs up between his sessions.
+
+  |fix-shape :attribution Joseph
+    **The fix shape (his):** give each process a **trigger** (≥1 queued item =
+    work), **weave healing** into steady-state (drain-one-extra ⇒ backlog → 0 by
+    construction), and **reduce the human-clocked part** to genuine theory-domain
+    decisions, each arriving as a real brief. Reserve **task-forces** only where a
+    backlog is tangled or one-off (audit-graduation's 22 dirs, the PROPOSALS knot,
+    the Working-Note pool, the tracker-architecture design, the repo-hygiene
+    cleanup) — everywhere else, healing beats a task-force.
+
+  |open-unknowns
+    :items [follow-up-audits empirical-verification conflict-reconciliation coherence-stewardship external-input tracker-architecture model-of-joseph]
+
+    The `?` items still to design: the follow-up-audit trigger +
+    scoped-instruction generator · the empirical/sim discipline · the
+    integration-conflict mechanism · the coherence-steward role across turnover ·
+    theory-news monitoring · the tracker-architecture itself · the model-of-Joseph
+    build.
+
+  |unplaced
+    :name Deferred until the theory reaches it (Joseph, 2026-07-07)
+    The ELI / `_core` / empirical-cohort operational substrate — left undefined
+    on purpose until the theory gets there. Its processes get carved when the
+    theory does, not before.

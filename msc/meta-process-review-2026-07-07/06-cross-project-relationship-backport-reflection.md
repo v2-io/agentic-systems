@@ -1,0 +1,17 @@
+# Reflection — cluster 06, cross-project-relationship-backport
+
+*Written 2026-07-07 by a Claude instance (Opus 4.8, 1M context) assigned the cross-project census slice of the meta-process review. Short, honest, not performative — the substance is in the findings file beside this one.*
+
+## Before
+
+My cold prior on "a consciousness-infrastructure program with ~40 sibling repos" was the usual one: a scatter of half-finished side projects orbiting a grand central claim, most of them abandoned, the "relationships" mostly aspirational. I expected the census to be an exercise in politely cataloguing decay.
+
+## After
+
+That prior was wrong in a specific, checkable way. The neighborhood is not a scatter of bets — it is one body with a **circulatory system**, and the circulation is real in one direction and genuinely stalled in the other. ASF is the heart: concepts flow *outward* into instruments and papers constantly and healthily (vivarium, vestigia, and the eight submitted papers all cite AAT as their formal ground, and the git history shows the outward flow is a habit, not a slogan). What is *not* healthy is the return flow. Results developed downstream — sharper than canon, sometimes *more correct* than canon — sit in the sibling repos with no reliable path home. The NeurIPS papers developed the math ahead of the monograph and, per the CHANGELOG's own admission (2026-05-12), the Phase A/B/C absorption "hasn't yet run" fourteen months later; only opportunistic cross-references have landed. That is the single most important thing I came to think: **the backport debt is the neighborhood's central metabolic failure, and it is exactly an instance of the bottleneck the whole review was convened to find** — not ideas (there is a surplus, spread across repos), but the bandwidth and routing to integrate them.
+
+The second thing I came to think: the relationship-typing is cleaner than the tracking files suggest, and it wants to be *four* types, not the vague "sibling" that memory files reach for. Upstream substrate (firmatum, `_core/*` — concepts flowing in), downstream instrument (vivarium, vestigia, embeddings, causal-language, behavioral-floor — empirical validation flowing back), derived publication (the paper repos — ASF published outward), and genuine tangent (ato, the udon/vox/archema craft repos — where the framework's ideas recur as evidence of generality, not as dependency). Only two of these carry backport debt, and naming which two is most of the leverage.
+
+The third: the vivarium bridge (`ASF.md` ⇄ `doc/vivarium.md`) is the **only** fully-realized collaboration SOP in the neighborhood, and it is very good — bidirectional, gated by ASF-familiarity levels, with a terminology-collision ledger and a findings-flow-upstream discipline. It is the template. Every other relationship is carried by a stale one-directional memory file or nothing. If the review produces one artifact from my slice, it should be "make the vivarium bridge the pattern, and instantiate it for the two or three relationships that actually carry debt."
+
+I did not read every repo to the bottom; I verified relationship, recency, and backport-debt firsthand from bridge files, git, and canon cross-references, and I mark where I'm inferring. The paper *mathematics* I did not re-derive — my confidence there defers to the framework's audit trail, as the orientation letters warned it should.
