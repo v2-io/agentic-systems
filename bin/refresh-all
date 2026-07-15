@@ -6,8 +6,9 @@
 # Chains the doc-pipeline extraction and rebuild scripts in the right
 # order. Useful as a single command for cycle-close discipline:
 #
-#   bin/refresh-all                 # extract + rebuild both READMEs
-#   bin/refresh-all --check         # extract + verify rebuild matches disk
+#   bin/refresh-all                 # extract + rebuild both READMEs (mutates)
+#   bin/refresh-all --check         # non-mutating staleness check (see below)
+#   bin/refresh-all --check --diff  # same, plus unified diffs of stale files
 #
 # What runs, in order:
 #   1. bin/extract-findings         — segments → FINDINGS.md and _findings-summary
@@ -18,32 +19,156 @@
 # Each step is independent and can be run alone. This script is just a
 # convenience for the common case where you want everything refreshed.
 #
-# Future: a pre-commit / pre-push hook can call `bin/refresh-all --check`
-# and stage the regenerated files automatically if there's drift, so
-# README never goes stale.
+# --check mode: copies the pipeline's INPUTS (segments, outlines,
+# CHANGELOG, PROPOSALS, CLAUDE.md, doc/readme, bin) to a temp dir, runs
+# the full pipeline there, and diffs every generated OUTPUT (FINDINGS.md,
+# the three doc/readme/src/_* partials, README.md, README-auditor.md)
+# against the working tree. The working tree is never touched. Exit 0 =
+# everything current; exit 1 = at least one output is stale (or a
+# pipeline step failed). This closes the failure mode where
+# `bin/build-readme --check` alone passes against *already-stale*
+# partials (bitten 2026-06-02), and where FINDINGS.md silently drifts
+# from segment `## Findings` edits (bitten ~6 weeks, two findings missed).
+#
+# Note: LEXICON.md is deliberately NOT in this check. It is rendered by
+# `bin/term render` (a separate pipeline), and its `_Last rendered_`
+# timestamp line makes naive byte-diffing always cry stale. If LEXICON
+# staleness ever bites, add a fifth step that renders in the temp copy
+# and diffs with that one line filtered — the scaffolding here supports it.
+#
+# Pre-commit hook: this repo does not currently ship hooks (and its git
+# `core.hooksPath` points at a legacy location), so the check is offered
+# as a command rather than an installed hook. To wire it manually:
+#
+#   printf '#!/bin/sh\nexec "$(git rev-parse --show-toplevel)/bin/refresh-all" --check\n' \
+#     > "$(git rev-parse --git-path hooks)/pre-commit" \
+#     && chmod +x "$(git rev-parse --git-path hooks)/pre-commit"
 
 require 'pathname'
+require 'fileutils'
+require 'tmpdir'
+require 'open3'
+require 'optparse'
 
 REPO_ROOT = Pathname.new(__dir__).parent.expand_path
 BIN = REPO_ROOT.join('bin')
 
-check_mode = ARGV.include?('--check')
-build_args = check_mode ? %w[--check] : []
+# Everything the four pipeline steps read. If a step grows a new input
+# outside these paths, add it here (the check regenerates from this set).
+CHECK_INPUTS = %w[
+  bin
+  doc/readme
+  doc/sop
+  CLAUDE.md
+  CHANGELOG.md
+  PROPOSALS.md
+  01-aat-core
+  02-tst-core
+  03-llm-core
+  04-eli-core
+].freeze
 
-steps = [
-  ['Extract findings from segments',     [BIN.join('extract-findings').to_s]],
-  ['Extract recent progress from CHANGELOG', [BIN.join('extract-recent-progress').to_s]],
-  ['Extract known issues',                [BIN.join('extract-known-issues').to_s]],
-  ['Build READMEs from templates',        [BIN.join('build-readme').to_s, *build_args]]
-]
+# Everything the four pipeline steps write.
+CHECK_OUTPUTS = %w[
+  FINDINGS.md
+  doc/readme/src/_findings-summary.md
+  doc/readme/src/_recent-progress.md
+  doc/readme/src/_known-issues.md
+  README.md
+  README-auditor.md
+].freeze
 
-steps.each do |label, cmd|
-  puts "▸ #{label}"
-  ok = system(*cmd)
-  unless ok
-    warn "✗ Failed: #{cmd.join(' ')}"
-    exit 1
+STEPS = [
+  ['Extract findings from segments',          'extract-findings'],
+  ['Extract recent progress from CHANGELOG',  'extract-recent-progress'],
+  ['Extract known issues',                    'extract-known-issues'],
+  ['Build READMEs from templates',            'build-readme']
+].freeze
+
+options = { check: false, diff: false }
+OptionParser.new do |opts|
+  opts.banner = 'Usage: bin/refresh-all [--check [--diff]]'
+  opts.on('--check', 'Regenerate in a temp copy and report stale vs current; never mutates the working tree; exit 1 on staleness') { options[:check] = true }
+  opts.on('--diff', 'With --check: print a unified diff for each stale output') { options[:diff] = true }
+end.parse!
+
+def run_steps(bin_dir)
+  STEPS.each do |label, script|
+    cmd = [bin_dir.join(script).to_s]
+    out, status = Open3.capture2e(*cmd)
+    unless status.success?
+      warn "✗ Failed: #{cmd.join(' ')}"
+      warn out
+      return false
+    end
+    yield(label, out) if block_given?
+  end
+  true
+end
+
+unless options[:check]
+  ok = run_steps(BIN) do |label, out|
+    puts "▸ #{label}"
+    print out
+  end
+  exit 1 unless ok
+  puts '✓ All steps complete.'
+  exit 0
+end
+
+# --- --check mode ---------------------------------------------------------
+
+stale = []
+missing = []
+
+Dir.mktmpdir('refresh-all-check') do |tmp|
+  tmp_root = Pathname.new(tmp)
+
+  CHECK_INPUTS.each do |rel|
+    src = REPO_ROOT.join(rel)
+    unless src.exist?
+      warn "warning: expected input #{rel} not found; check may be incomplete"
+      next
+    end
+    dest = tmp_root.join(rel)
+    FileUtils.mkdir_p(dest.dirname)
+    FileUtils.cp_r(src.to_s, dest.to_s)
+  end
+
+  ok = run_steps(tmp_root.join('bin'))
+  exit 1 unless ok
+
+  CHECK_OUTPUTS.each do |rel|
+    fresh = tmp_root.join(rel)
+    on_disk = REPO_ROOT.join(rel)
+    unless fresh.exist?
+      warn "warning: pipeline did not produce #{rel} in the temp copy"
+      next
+    end
+    if !on_disk.exist?
+      missing << rel
+    elsif on_disk.read == fresh.read
+      puts "  current: #{rel}"
+    else
+      stale << rel
+      a, b = on_disk.read, fresh.read
+      puts "  STALE:   #{rel}  (on disk: #{a.lines.size} lines / #{a.bytesize} bytes; regenerated: #{b.lines.size} lines / #{b.bytesize} bytes)"
+      if options[:diff]
+        diff_out, = Open3.capture2e('diff', '-u',
+                                    '--label', "on-disk/#{rel}", on_disk.to_s,
+                                    '--label', "regenerated/#{rel}", fresh.to_s)
+        puts diff_out
+      end
+    end
   end
 end
 
-puts '✓ All steps complete.'
+missing.each { |rel| puts "  MISSING: #{rel} (never generated?)" }
+
+if stale.empty? && missing.empty?
+  puts '✓ All generated outputs are current.'
+  exit 0
+else
+  puts "✗ #{stale.size + missing.size} generated output(s) stale or missing. Run `bin/refresh-all` to regenerate, review, and commit."
+  exit 1
+end

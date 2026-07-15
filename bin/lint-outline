@@ -4,14 +4,21 @@ Lint an outline file against segment frontmatter dependencies.
 
 Checks:
   1. Ordering violations: segment listed before a dependency in the outline
+     (accepted-by-design violations are whitelisted per component in
+     <component>/OUTLINE-accepted.md — still printed, marked accepted, exit green)
   2. Missing dependencies: segment depends on a slug that doesn't exist as a file
-  3. Undeclared dependencies: segment references #slug in body but slug not in depends
-  4. Orphan segments: files in src/ not referenced in the outline
+     (resolved against ALL components' src/ dirs, since deps are cross-component)
+  3. Orphan segments: files in src/ not referenced in the outline
+  4. Stage consistency: segment frontmatter `stage:` vs the OUTLINE row's stage
+     column — disagreements, missing `stage:` fields, off-vocabulary values
 
 Usage:
     bin/lint-outline [options] [OUTLINE_FILE]
 
-    OUTLINE_FILE defaults to 01-aat-core/OUTLINE.md
+    With no OUTLINE_FILE, checks ALL components:
+    01-aat-core, 02-tst-core, 03-llm-core, 04-eli-core.
+    (--graph/--svg/--diagrams/--section require an explicit OUTLINE_FILE,
+    or default to 01-aat-core/OUTLINE.md with a notice.)
 
 Options:
     --graph FILE    Write a Graphviz DOT file of the dependency graph
@@ -21,7 +28,8 @@ Options:
     --quiet         Only show violations, not summary
     --help          Show this help
 
-Exit code 0 = clean, 1 = violations found.
+Exit code 0 = clean (accepted-by-design ordering violations count as clean),
+1 = violations found.
 """
 
 import os
@@ -80,8 +88,9 @@ def parse_frontmatter(filepath):
 def parse_outline(outline_path):
     """
     Parse an OUTLINE.md file.
-    Returns a list of (section, slug, row_index) in order of appearance.
-    Also returns section metadata (preamble text etc).
+    Returns a list of (section, slug, row_index, outline_stage) in order of
+    appearance. outline_stage is the row's Stage column (the last non-empty
+    cell after the slug link), or None if the row has no stage cell.
     """
     entries = []
     current_section = None
@@ -101,7 +110,7 @@ def parse_outline(outline_path):
                 continue
 
             # Parse table rows with slug references
-            # Format: | § | Type | N | [#slug](src/slug.md) | Claim | Stage |
+            # Format: | § | Type | [N |] [#slug](src/slug.md) | Claim | Stage |
             m = re.search(r'\[#([a-zA-Z0-9_-]+)\]\(src/', line)
             if m:
                 slug = m.group(1)
@@ -112,10 +121,51 @@ def parse_outline(outline_path):
                     if sec in ("I", "II", "III", "IV", "V", "A", "B"):
                         current_section = sec
 
-                entries.append((current_section, slug, row_index))
+                # Stage = last non-empty cell (column layouts vary per component)
+                stage = None
+                if line.strip().startswith("|"):
+                    non_empty = [c for c in cols if c]
+                    # Require the stage cell to come after the slug link's cell
+                    if non_empty:
+                        last = non_empty[-1]
+                        if f"#{slug}" not in last:
+                            stage = last
+
+                entries.append((current_section, slug, row_index, stage))
                 row_index += 1
 
     return entries
+
+
+# ── Accepted-violations whitelist ──────────────────────────────────
+
+def load_accepted_orderings(outline_dir):
+    """
+    Load <outline_dir>/OUTLINE-accepted.md — the accepted-by-design
+    ordering-violation whitelist. Rows are keyed by (segment, dependency)
+    slug pair, so they survive OUTLINE row moves; a slug rename strands the
+    entry, which is then reported as stale (warning, non-fatal).
+
+    Format: markdown table rows `| segment | depends-on | accepted | reason |`.
+    Returns {(slug, dep): reason}.
+    """
+    accepted = {}
+    path = outline_dir / "OUTLINE-accepted.md"
+    if not path.exists():
+        return accepted
+    with open(path, "r") as f:
+        for line in f:
+            line = line.strip()
+            if not line.startswith("|"):
+                continue
+            cols = [c.strip() for c in line.strip("|").split("|")]
+            if len(cols) < 4 or cols[0] in ("segment", "") or set(cols[0]) <= {"-", " ", ":"}:
+                continue
+            slug = cols[0].lstrip("#")
+            dep = cols[1].lstrip("#")
+            reason = cols[3]
+            accepted[(slug, dep)] = reason
+    return accepted
 
 
 # ── Violation detection ────────────────────────────────────────────
@@ -136,12 +186,12 @@ def find_ordering_violations(entries, all_deps):
 
     slug_to_index = {}
     slug_to_section = {}
-    for section, slug, idx in entries:
+    for section, slug, idx, _stage in entries:
         slug_to_index[slug] = idx
         slug_to_section[slug] = section
 
     violations = []
-    for section, slug, idx in entries:
+    for section, slug, idx, _stage in entries:
         deps = all_deps.get(slug, [])
         for dep in deps:
             dep_idx = slug_to_index.get(dep)
@@ -186,6 +236,67 @@ def find_orphan_segments(src_dir, outline_slugs, all_slugs):
         if slug not in outline_slugs and not slug.startswith("old-"):
             orphans.append(slug)
     return orphans
+
+
+STAGE_VOCABULARY = {"missing", "old", "draft", "deps-verified",
+                    "claims-verified", "format-clean", "candidate"}
+
+
+def find_stage_issues(entries, slug_to_meta, component_slugs):
+    """
+    Check frontmatter `stage:` vs the OUTLINE row's stage column
+    (format.sop.md §stage: "A script can verify consistency between the two").
+
+    Flags, per OUTLINE row (old-* segments exempt per FORMAT):
+      - off-vocab-outline:     stage column value not in the stage vocabulary
+      - off-vocab-frontmatter: frontmatter stage: not in the stage vocabulary
+      - no-frontmatter-stage:  segment file exists but has no stage: field
+      - mismatch:              both present and in-vocabulary but disagree
+      - missing-file-mismatch: OUTLINE stage says a file state inconsistent
+                               with whether the file exists
+    """
+    issues = []
+    for _sec, slug, _idx, outline_stage in entries:
+        if slug.startswith("old-"):
+            continue
+        file_exists = slug in component_slugs
+        fm_stage = slug_to_meta.get(slug, {}).get("stage") if file_exists else None
+
+        if outline_stage is not None and outline_stage not in STAGE_VOCABULARY:
+            issues.append({"slug": slug, "kind": "off-vocab-outline",
+                           "detail": f"OUTLINE stage column reads '{outline_stage}' — not in vocabulary"})
+            continue  # can't meaningfully compare further
+
+        if outline_stage in ("missing", "old"):
+            if file_exists:
+                issues.append({"slug": slug, "kind": "missing-file-mismatch",
+                               "detail": f"OUTLINE stage '{outline_stage}' but src/{slug}.md exists"
+                                         + (f" (frontmatter stage: {fm_stage})" if fm_stage else "")})
+            continue
+
+        if not file_exists:
+            # No file: only 'missing'/'old' outline stages are consistent
+            if outline_stage is not None:
+                issues.append({"slug": slug, "kind": "missing-file-mismatch",
+                               "detail": f"OUTLINE stage '{outline_stage}' but no src/{slug}.md file (expected 'missing' or 'old')"})
+            continue
+
+        if fm_stage is None:
+            issues.append({"slug": slug, "kind": "no-frontmatter-stage",
+                           "detail": f"src/{slug}.md has no stage: field"
+                                     + (f" (OUTLINE says '{outline_stage}')" if outline_stage else "")})
+            continue
+
+        if fm_stage not in STAGE_VOCABULARY:
+            issues.append({"slug": slug, "kind": "off-vocab-frontmatter",
+                           "detail": f"frontmatter stage: '{fm_stage}' — not in vocabulary"})
+            continue
+
+        if outline_stage is not None and fm_stage != outline_stage:
+            issues.append({"slug": slug, "kind": "mismatch",
+                           "detail": f"frontmatter stage: '{fm_stage}' ≠ OUTLINE stage '{outline_stage}'"})
+
+    return issues
 
 
 # ── Graphviz output ────────────────────────────────────────────────
@@ -292,7 +403,7 @@ def write_dot(entries, all_deps, slug_to_section, slug_to_meta, filepath,
 
     # Determine which slugs to include
     if section_filter:
-        include = {slug for sec, slug, _ in entries if sec == section_filter}
+        include = {slug for sec, slug, _, _ in entries if sec == section_filter}
         # Track which nodes have external deps (for marking) but don't show them
         has_external_deps = set()
         for slug in include:
@@ -301,7 +412,7 @@ def write_dot(entries, all_deps, slug_to_section, slug_to_meta, filepath,
                     has_external_deps.add(slug)
         external = set()  # empty — don't render external nodes in section views
     else:
-        include = {slug for sec, slug, _ in entries if sec not in exclude_sections}
+        include = {slug for sec, slug, _, _ in entries if sec not in exclude_sections}
         has_external_deps = set()
         external = set()
         for slug in include:
@@ -325,7 +436,7 @@ def write_dot(entries, all_deps, slug_to_section, slug_to_meta, filepath,
 
         # Group by section using subgraphs
         sections_seen = {}
-        for sec, slug, _ in entries:
+        for sec, slug, _, _ in entries:
             if slug in include:
                 if sec not in sections_seen:
                     sections_seen[sec] = []
@@ -466,122 +577,188 @@ def main():
     script_dir = Path(__file__).resolve().parent
     project_root = script_dir.parent
 
-    if outline_file is None:
-        outline_file = project_root / "01-aat-core" / "OUTLINE.md"
+    COMPONENTS = ["01-aat-core", "02-tst-core", "03-llm-core", "04-eli-core"]
+    graph_mode = bool(graph_file or svg_file or diagrams)
+
+    if outline_file is not None:
+        outline_files = [Path(outline_file)]
+    elif graph_mode:
+        # Graph outputs are single-outline; keep the historical default, loudly.
+        outline_files = [project_root / "01-aat-core" / "OUTLINE.md"]
+        print(f"Note: graph output is single-outline; defaulting to {outline_files[0]}", file=sys.stderr)
     else:
-        outline_file = Path(outline_file)
+        outline_files = [project_root / c / "OUTLINE.md" for c in COMPONENTS]
 
-    outline_dir = outline_file.parent
-    src_dir = outline_dir / "src"
+    for f in outline_files:
+        if not f.exists():
+            print(f"Error: {f} not found", file=sys.stderr)
+            sys.exit(1)
 
-    if not outline_file.exists():
-        print(f"Error: {outline_file} not found", file=sys.stderr)
-        sys.exit(1)
+    # ── Collect segment metadata across ALL components ─────────────
+    # Dependencies are cross-component by design (see agents.sop.md), so the
+    # missing-dependency check resolves against the union of all src/ dirs.
 
-    # ── Collect all segment metadata ───────────────────────────────
+    global_slugs = set()            # all slugs across every component
+    slug_to_meta = {}               # slug → {stage, type, status, depends}
+    component_src = {}              # src_dir → set of slugs in that src/
 
-    all_deps = {}       # slug → [dep_slugs]
-    all_slugs = set()   # all slugs found in src/
-    slug_to_meta = {}   # slug → {stage, type, status, depends}
+    src_dirs = {project_root / c / "src" for c in COMPONENTS}
+    src_dirs.update(f.parent / "src" for f in outline_files)
 
-    if src_dir.exists():
-        for md_file in sorted(src_dir.glob("*.md")):
-            meta = parse_frontmatter(md_file)
-            slug = meta["slug"] or md_file.stem
-            all_slugs.add(slug)
-            all_deps[slug] = meta["depends"]
-            slug_to_meta[slug] = {
-                "stage": meta["stage"],
-                "type": meta["type"],
-                "status": meta["status"],
-                "depends": meta["depends"],
-            }
-
-    # ── Parse outline ──────────────────────────────────────────────
-
-    entries = parse_outline(outline_file)
-    outline_slugs = {slug for _, slug, _ in entries}
-
-    # Build section map
-    slug_to_section = {}
-    for sec, slug, _ in entries:
-        slug_to_section[slug] = sec
-
-    # ── Check for violations ───────────────────────────────────────
-
-    violations = find_ordering_violations(entries, all_deps)
-    missing = find_missing_deps(all_deps, all_slugs)
-    orphans = find_orphan_segments(src_dir, outline_slugs, all_slugs)
-
-    # Filter by section if requested
-    if section_filter:
-        violations = [v for v in violations if v["section"] == section_filter]
+    for src_dir in sorted(src_dirs):
+        slugs_here = set()
+        if src_dir.exists():
+            for md_file in sorted(src_dir.glob("*.md")):
+                meta = parse_frontmatter(md_file)
+                slug = meta["slug"] or md_file.stem
+                slugs_here.add(slug)
+                global_slugs.add(slug)
+                slug_to_meta[slug] = {
+                    "stage": meta["stage"],
+                    "type": meta["type"],
+                    "status": meta["status"],
+                    "depends": meta["depends"],
+                }
+        component_src[src_dir] = slugs_here
 
     has_issues = False
+    entries = []
+    all_deps = {}
+    slug_to_section = {}
+    outline_dir = outline_files[0].parent
 
-    # Separate violations by kind
-    true_violations = [v for v in violations if v["kind"] in ("intra-section", "intra-appendix", "cross-section")]
-    backmatter_refs = [v for v in violations if v["kind"] == "backmatter"]
+    for outline_file in outline_files:
+        outline_dir = outline_file.parent
+        src_dir = outline_dir / "src"
+        component_slugs = component_src.get(src_dir, set())
+        multi = len(outline_files) > 1
 
-    if true_violations:
-        has_issues = True
-        print(f"\n{'='*60}")
-        print(f" ORDERING VIOLATIONS ({len(true_violations)})")
-        print(f"{'='*60}\n")
-        for v in true_violations:
-            kind_label = f"[{v['kind']}]"
-            print(f"  {v['slug']} (§{v['section']}, row {v['slug_idx']}) depends on {v['dep']} (§{v.get('dep_section','?')}, row {v['dep_idx']})  {kind_label}")
-            print(f"    → {v['slug']} must come AFTER {v['dep']}")
+        if multi:
+            print(f"\n{'#'*60}")
+            print(f"# {outline_file.relative_to(project_root) if outline_file.is_relative_to(project_root) else outline_file}")
+            print(f"{'#'*60}")
+
+        # Per-component deps (for ordering) — restricted to this src/
+        all_deps = {slug: slug_to_meta[slug]["depends"] for slug in component_slugs}
+
+        # ── Parse outline ──────────────────────────────────────────
+
+        entries = parse_outline(outline_file)
+        outline_slugs = {slug for _, slug, _, _ in entries}
+
+        slug_to_section = {}
+        for sec, slug, _, _ in entries:
+            slug_to_section[slug] = sec
+
+        # ── Check for violations ───────────────────────────────────
+
+        violations = find_ordering_violations(entries, all_deps)
+        missing = find_missing_deps(all_deps, global_slugs)
+        orphans = find_orphan_segments(src_dir, outline_slugs, component_slugs)
+        stage_issues = find_stage_issues(entries, slug_to_meta, component_slugs)
+        accepted_map = load_accepted_orderings(outline_dir)
+
+        # Filter by section if requested
+        if section_filter:
+            violations = [v for v in violations if v["section"] == section_filter]
+
+        # Separate violations by kind, then split off accepted-by-design ones
+        candidate_violations = [v for v in violations if v["kind"] in ("intra-section", "intra-appendix", "cross-section")]
+        backmatter_refs = [v for v in violations if v["kind"] == "backmatter"]
+        true_violations = [v for v in candidate_violations if (v["slug"], v["dep"]) not in accepted_map]
+        accepted_violations = [v for v in candidate_violations if (v["slug"], v["dep"]) in accepted_map]
+        seen_pairs = {(v["slug"], v["dep"]) for v in candidate_violations}
+        stale_accepted = sorted(pair for pair in accepted_map if pair not in seen_pairs)
+
+        if true_violations:
+            has_issues = True
+            print(f"\n{'='*60}")
+            print(f" ORDERING VIOLATIONS ({len(true_violations)})")
+            print(f"{'='*60}\n")
+            for v in true_violations:
+                kind_label = f"[{v['kind']}]"
+                print(f"  {v['slug']} (§{v['section']}, row {v['slug_idx']}) depends on {v['dep']} (§{v.get('dep_section','?')}, row {v['dep_idx']})  {kind_label}")
+                print(f"    → {v['slug']} must come AFTER {v['dep']}")
+                print()
+
+        if accepted_violations and not quiet:
+            print(f"\n{'='*60}")
+            print(f" ACCEPTED ORDERING VIOLATIONS ({len(accepted_violations)}) — by design, per OUTLINE-accepted.md")
+            print(f"{'='*60}\n")
+            for v in accepted_violations:
+                reason = accepted_map[(v["slug"], v["dep"])]
+                print(f"  ✓ {v['slug']} (§{v['section']}) before its dep {v['dep']} (§{v.get('dep_section','?')})  [{v['kind']}]")
+                print(f"      accepted: {reason}")
             print()
 
-    if backmatter_refs and not quiet:
-        print(f"\n{'='*60}")
-        print(f" BACKMATTER REFERENCES ({len(backmatter_refs)}) — intentional presentation order")
-        print(f"{'='*60}\n")
-        for v in backmatter_refs:
-            print(f"  {v['slug']} (§{v['section']}) references proof in {v['dep']} (§{v.get('dep_section','?')})")
-        print()
+        if stale_accepted:
+            print(f"\n  Warning: {len(stale_accepted)} stale OUTLINE-accepted.md entr{'y' if len(stale_accepted)==1 else 'ies'} (no longer a violation — resolved or slug renamed):")
+            for slug, dep in stale_accepted:
+                print(f"    {slug} → {dep}")
 
-    if missing:
-        has_issues = True
-        print(f"\n{'='*60}")
-        print(f" MISSING DEPENDENCIES ({len(missing)})")
-        print(f"{'='*60}\n")
-        for m in missing:
-            print(f"  {m['slug']} depends on {m['dep']} — no such file in src/")
+        if backmatter_refs and not quiet:
+            print(f"\n{'='*60}")
+            print(f" BACKMATTER REFERENCES ({len(backmatter_refs)}) — intentional presentation order")
+            print(f"{'='*60}\n")
+            for v in backmatter_refs:
+                print(f"  {v['slug']} (§{v['section']}) references proof in {v['dep']} (§{v.get('dep_section','?')})")
+            print()
 
-    if orphans and not quiet:
-        print(f"\n{'='*60}")
-        print(f" ORPHAN SEGMENTS ({len(orphans)})")
-        print(f"{'='*60}\n")
-        for o in sorted(orphans):
-            print(f"  src/{o}.md — not referenced in outline")
+        if missing:
+            has_issues = True
+            print(f"\n{'='*60}")
+            print(f" MISSING DEPENDENCIES ({len(missing)})")
+            print(f"{'='*60}\n")
+            for m in missing:
+                print(f"  {m['slug']} depends on {m['dep']} — no such file in any component's src/")
 
-    # ── Summary ────────────────────────────────────────────────────
+        if orphans and not quiet:
+            print(f"\n{'='*60}")
+            print(f" ORPHAN SEGMENTS ({len(orphans)})")
+            print(f"{'='*60}\n")
+            for o in sorted(orphans):
+                print(f"  src/{o}.md — not referenced in outline")
 
-    if not quiet:
-        print(f"\n{'='*60}")
-        print(f" SUMMARY")
-        print(f"{'='*60}\n")
-        print(f"  Outline entries:      {len(entries)}")
-        print(f"  Segment files:        {len(all_slugs)}")
-        print(f"  Ordering violations:  {len(true_violations)}")
-        print(f"  Backmatter refs:      {len(backmatter_refs)}")
-        print(f"  Missing dependencies: {len(missing)}")
-        print(f"  Orphan segments:      {len(orphans)}")
+        if stage_issues:
+            # Warning-only, deliberately not exit-code-affecting (Joseph, 2026-07-14):
+            # the stage layer goes stale fast under rearranging/refinement and is
+            # systematically ignored in current practice; the gating methodology is
+            # under reconsideration (see the meta-process review, promotion-terminus
+            # question). Surfacing drift is useful; failing the gate on it is not.
+            print(f"\n{'='*60}")
+            print(f" STAGE INCONSISTENCIES ({len(stage_issues)}) — warning only — frontmatter vs OUTLINE stage column")
+            print(f"{'='*60}\n")
+            for s in stage_issues:
+                print(f"  {s['slug']}: [{s['kind']}] {s['detail']}")
+            print()
 
-        # Stage distribution
-        stages = defaultdict(int)
-        for slug in outline_slugs:
-            meta = slug_to_meta.get(slug, {})
-            stage = meta.get("stage") or "unknown"
-            stages[stage] += 1
-        print(f"\n  Stage distribution:")
-        for stage in ["claims-verified", "deps-verified", "draft", "missing", "unknown"]:
-            if stages[stage]:
-                print(f"    {stage:20s} {stages[stage]:3d}")
+        # ── Summary ────────────────────────────────────────────────
 
-    # ── Graph output ───────────────────────────────────────────────
+        if not quiet:
+            print(f"\n{'='*60}")
+            print(f" SUMMARY")
+            print(f"{'='*60}\n")
+            print(f"  Outline entries:      {len(entries)}")
+            print(f"  Segment files:        {len(component_slugs)}")
+            print(f"  Ordering violations:  {len(true_violations)}")
+            print(f"  Accepted (by design): {len(accepted_violations)}")
+            print(f"  Backmatter refs:      {len(backmatter_refs)}")
+            print(f"  Missing dependencies: {len(missing)}")
+            print(f"  Orphan segments:      {len(orphans)}")
+            print(f"  Stage inconsistencies:{len(stage_issues):2d}")
+
+            # Stage distribution
+            stages = defaultdict(int)
+            for slug in outline_slugs:
+                meta = slug_to_meta.get(slug, {})
+                stage = meta.get("stage") or "unknown"
+                stages[stage] += 1
+            print(f"\n  Stage distribution:")
+            for stage in ["candidate", "format-clean", "claims-verified", "deps-verified", "draft", "old", "missing", "unknown"]:
+                if stages[stage]:
+                    print(f"    {stage:20s} {stages[stage]:3d}")
+
+    # ── Graph output (single-outline; uses the last-processed outline) ──
 
     if graph_file:
         write_dot(entries, all_deps, slug_to_section, slug_to_meta, graph_file, section_filter)
