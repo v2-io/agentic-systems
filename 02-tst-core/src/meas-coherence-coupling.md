@@ -5,6 +5,7 @@ status: empirical
 depends:
   - def-system-coupling
   - def-system-coherence
+stage: draft
 ---
 
 # Measurement: Coherence-Coupling Measurement

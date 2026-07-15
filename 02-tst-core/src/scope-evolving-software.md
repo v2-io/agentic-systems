@@ -5,6 +5,7 @@ status: axiomatic
 depends:
   - scope-agency
   - post-temporal-optimality
+stage: draft
 ---
 
 # Scope: Evolving Software

@@ -4,6 +4,7 @@ type: definition
 status: axiomatic
 depends:
   - def-discontinuity-distance
+stage: draft
 ---
 
 # Definition: System Coherence

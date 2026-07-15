@@ -5,6 +5,7 @@ status: axiomatic
 depends:
   - def-feature
   - def-comprehension-time
+stage: draft
 ---
 
 # Definition: Implementation Time

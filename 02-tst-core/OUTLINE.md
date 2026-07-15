@@ -29,20 +29,11 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 | S | Observation | | [#obs-software-epistemic-properties](src/obs-software-epistemic-properties.md) | Software's 6 unique properties | draft |
 | S | Definition | | [#def-feature](src/def-feature.md) | Unit of coherent change | draft |
 | S | Result | | [#result-specification-bound](src/result-specification-bound.md) | Can't implement unspecified; includes communication bottleneck corollary | draft |
-| S | Derived | | [#der-change-expectation-baseline](src/der-change-expectation-baseline.md) | Median future ≈ observed past; includes investment scale form | draft |
+| S | Derived | | [#der-change-expectation-baseline](src/der-change-expectation-baseline.md) | Median future ≈ observed past; investment-scaling consequence derived in #der-change-investment | draft |
 | S | Discussion | | [#impl-foundations-features](src/impl-foundations-features.md) | Chapter additional implications & discussion: software as calibration laboratory (#12), specification bound as persistence-bandwidth at spec layer (#32), temporal optimality grounding (#53), domain-generalization transfer theorem candidate (#41) | draft |
 
 <!--
-Internal arc: the normative postulate (temporal optimality) sets TST's
-optimization target; the scope condition narrows to evolving systems where
-the lifecycle sum dominates initial cost; the epistemic-properties segment
-positions software as AAT's calibration laboratory via the six properties
-P1–P6, with the calibration-lab framing as the load-bearing TST commitment
-that disciplines transfer to other domains. The unit of analysis is the
-feature; the specification-bound and change-expectation segments give two
-upstream quantities — minimum-communication time and median future feature
-count $\hat n_{\text{future}}$ — that downstream chapters use as inputs to
-the dual optimization.
+Internal arc: the normative postulate (temporal optimality) sets TST's optimization target; the scope condition narrows to evolving systems where the lifecycle sum dominates initial cost; the epistemic-properties segment positions software as AAT's calibration laboratory via the six properties P1–P6, with the calibration-lab framing as the load-bearing TST commitment that disciplines transfer to other domains. The unit of analysis is the feature; the specification-bound and change-expectation segments give two upstream quantities — minimum-communication time and median future feature count $\hat n_{\text{future}}$ — that downstream chapters use as inputs to the dual optimization.
 -->
 
 ### *Chapter* The Developer Agent and Time Decomposition
@@ -60,17 +51,13 @@ the dual optimization.
 | S | Discussion | | [#impl-developer-agent](src/impl-developer-agent.md) | Chapter additional implications & discussion: AI-maintained-code regime as normal-case for comprehension dominance (#16), persistence-threshold bifurcation from $Q \to U_o \to \eta^\ast \to \mathcal T$ chain (#17), multi-channel developer tempo decomposition | draft |
 
 <!--
-Instantiates AAT's actuated-agent machinery in software. Internal arc: the
-developer-agent scope segment maps $\Omega_t$, $M_t$, $O_t$, $\Sigma_t$,
+Instantiates AAT's actuated-agent machinery in software. Internal arc: the developer-agent scope segment maps $\Omega_t$, $M_t$, $O_t$, $\Sigma_t$,
 observation channels, and action classes onto the developer's environment;
 comprehension and implementation times partition feature time; dual-
 optimization derives the trade-off across the (typically much larger)
-turnover-multiplier-weighted future; change-investment is the pairwise
-decision rule; code-quality-as-observation-infrastructure closes the chain
-$Q \to U_o \to \eta^\ast \to \mathcal T \to$ persistence, giving "this
-codebase is unmaintainable" a formal inequality. The trailing GAP
-(developer tempo decomposition into obs / explore / probe) names the
-natural next-segment slot pairing with AAT's `#def-adaptive-tempo`
+turnover-multiplier-weighted future; change-investment is the pairwise decision rule; code-quality-as-observation-infrastructure closes the chain
+$Q \to U_o \to \eta^\ast \to \mathcal T \to$ persistence, giving "this codebase is unmaintainable" a formal inequality. The trailing GAP
+(developer tempo decomposition into obs / explore / probe) names the natural next-segment slot pairing with AAT's `#def-adaptive-tempo`
 channel machinery.
 -->
 
@@ -89,14 +76,9 @@ channel machinery.
 
 <!--
 Structural mechanics of code that govern implementation cost. Internal arc:
-conceptual-alignment is the upstream determinant (code structure matching
-the domain model reduces comprehension time); atomic-changeset is the
-observable trace of an implementation decision; size-principle gives the
-first-order proportionality between changeset size and implementation time;
+conceptual-alignment is the upstream determinant (code structure matching the domain model reduces comprehension time); atomic-changeset is the observable trace of an implementation decision; size-principle gives the first-order proportionality between changeset size and implementation time;
 discontinuity-distance hierarchy and proximity-principle add the structural-
-correction term (scattered changes are harder than concentrated ones at
-constant size); exponential-cognitive-load is the candidate multiplicative
-form not yet derived — qualitative effect robust, quantitative form open.
+correction term (scattered changes are harder than concentrated ones at constant size); exponential-cognitive-load is the candidate multiplicative form not yet derived — qualitative effect robust, quantitative form open.
 The chapter pairs with Ch.2: that chapter develops the time *decomposition*;
 this chapter develops the structural *mechanics* that determine the times.
 -->
@@ -117,35 +99,18 @@ this chapter develops the structural *mechanics* that determine the times.
 | S | Discussion | | [#impl-system-measures](src/impl-system-measures.md) | Chapter additional implications & discussion: coupling/coherence as system-level diagnostic infrastructure, OKR-as-observability-engineering generalization across multi-agent systems (#42), interventional vs associational reading of git (#49), operational availability as persistence-bandwidth-floor analog, domain-generalization transfer theorem candidate (#41), TST volume closes here | draft |
 
 <!--
-System-level synthesis plus operational and meta-level extensions. Internal
-arc: coupling and coherence are the system-wide aggregate measures (inter-
-module and intra-module structure as conditional probabilities and expected
-proximities); the coherence-coupling measurement is the operational
-quantity computable from git; principled-decision-integration is the full
-optimization that integrates Ch.2's time decomposition with Ch.3's
-structural mechanics under the feature-intensity profile $\lambda(F_i)$,
-sitting here as the synthesis bridge between feature-level mechanics and
-system-level measures; system-availability and continuous-operation extend
-the optimization target to operational time (downtime is part of the
-feature-delivery cost from the user's perspective); causal-discovery-from-
-git names the meta-question of how interventional the git-derived
-substrate actually is, with three confounder classes (shared requirements,
-convention-driven bundling, developer knowledge state) constraining the
-causal interpretation of the segments above. The trailing software-
-persistence GAP is the natural next-segment slot — the unmaintainability
-threshold formalized at the codebase scale, pairing with the code-quality-
-to-persistence chain from Ch.2 lifted from the developer-channel level to
-the system level.
+System-level synthesis plus operational and meta-level extensions. Internal arc: coupling and coherence are the system-wide aggregate measures (inter-
+module and intra-module structure as conditional probabilities and expected proximities); the coherence-coupling measurement is the operational quantity computable from git; principled-decision-integration is the full optimization that integrates Ch.2's time decomposition with Ch.3's structural mechanics under the feature-intensity profile $\lambda(F_i)$,
+sitting here as the synthesis bridge between feature-level mechanics and system-level measures; system-availability and continuous-operation extend the optimization target to operational time (downtime is part of the feature-delivery cost from the user's perspective); causal-discovery-from-
+git names the meta-question of how interventional the git-derived substrate actually is, with three confounder classes (shared requirements,
+convention-driven bundling, developer knowledge state) constraining the causal interpretation of the segments above. The trailing software-
+persistence GAP is the natural next-segment slot — the unmaintainability threshold formalized at the codebase scale, pairing with the code-quality-
+to-persistence chain from Ch.2 lifted from the developer-channel level to the system level.
 
 Placement tension worth flagging: `der-principled-decision-integration`
 draws on segments from Chapters 2 (dual-optimization) and 3 (alignment,
-changeset, proximity) more than from Chapter 4's own coupling/coherence
-measures. It could equally close Ch.3 as the synthesis of feature-level
-mechanics; placement in Ch.4 follows the existing OUTLINE ordering and
-reads the integration as the bridge from feature-level mechanics to
-system-level optimization, where estimating the feature-intensity profile
-$\lambda(F_i)$ benefits from the aggregate system knowledge developed in
-the coupling/coherence segments.
+changeset, proximity) more than from Chapter 4's own coupling/coherence measures. It could equally close Ch.3 as the synthesis of feature-level mechanics; placement in Ch.4 follows the existing OUTLINE ordering and reads the integration as the bridge from feature-level mechanics to system-level optimization, where estimating the feature-intensity profile
+$\lambda(F_i)$ benefits from the aggregate system knowledge developed in the coupling/coherence segments.
 -->
 
 

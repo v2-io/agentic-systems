@@ -4,6 +4,7 @@ type: definition
 status: axiomatic
 depends:
   - scope-evolving-software
+stage: draft
 ---
 
 # Definition: Feature

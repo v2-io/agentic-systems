@@ -4,6 +4,7 @@ type: definition
 status: axiomatic
 depends:
   - def-atomic-changeset
+stage: draft
 ---
 
 # Definition: Discontinuity Distance

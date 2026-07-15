@@ -8,6 +8,7 @@ depends:
   - hyp-conceptual-alignment
   - emp-changeset-size-principle
   - der-change-proximity-principle
+stage: draft
 ---
 
 # Derived: Principled Decision Integration

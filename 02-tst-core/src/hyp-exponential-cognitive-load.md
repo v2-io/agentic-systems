@@ -5,6 +5,7 @@ status: discussion-grade
 depends:
   - der-change-proximity-principle
   - der-deliberation-cost
+stage: draft
 ---
 
 # Hypothesis: Exponential Cognitive Load

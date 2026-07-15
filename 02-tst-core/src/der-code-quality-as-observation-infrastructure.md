@@ -36,7 +36,7 @@ From #def-adaptive-tempo, the contribution of the code-reading channel to adapti
 
 $$\mathcal{T}_{\text{read}}(s) = \nu^{\text{(read)}} \cdot \eta^{\text{(read)}\ast} = \nu^{\text{(read)}} \cdot \frac{U_M}{U_M + f(Q(s))}$$
 
-Since $f$ is decreasing in $Q$, $\mathcal{T}_{\text{read}}$ is increasing in $Q$: higher code quality yields higher adaptive tempo, all else equal.
+Since $f$ is decreasing in $Q$, $\mathcal T_{\text{read}}$ is increasing in $Q$: higher code quality yields higher adaptive tempo, all else equal.
 
 ### The persistence consequence
 
@@ -46,7 +46,7 @@ From #result-persistence-condition (linear operational form), the developer pers
 
 $$\mathcal{T}_{\text{dev}} \gt \frac{\rho}{\lVert\delta_{\text{critical}}\rVert}$$
 
-Since $\mathcal{T}_{\text{dev}}$ includes $\mathcal{T}_{\text{read}}$ as a component ( #scope-developer-agent), and $\mathcal{T}_{\text{read}}$ is increasing in $Q$, code quality degradation can push $\mathcal{T}_{\text{dev}}$ below the persistence threshold. This is the formal content of the claim that a codebase can become "unmaintainable."
+Since $\mathcal T_{\text{dev}}$ includes $\mathcal T_{\text{read}}$ as a component ( #scope-developer-agent), and $\mathcal T_{\text{read}}$ is increasing in $Q$, code quality degradation can push $\mathcal T_{\text{dev}}$ below the persistence threshold. This is the formal content of the claim that a codebase can become "unmaintainable."
 
 ### The investment structure
 
@@ -58,7 +58,7 @@ From #der-change-investment, the investment is justified when:
 
 $$t_{\text{invest}} \lt \hat{n}_{\text{future}} \times \Delta t_{\text{comp}} \times k$$
 
-where $t_{\text{invest}}$ is the immediate cost, $\Delta t_{\text{comp}}$ is the per-interaction comprehension time saved (a consequence of higher $\eta^\ast$), $\hat{n}_{\text{future}}$ is the expected number of future changes to this region ( #der-change-expectation-baseline), and $k$ is the number of distinct agents who will read this code (the turnover multiplier from #der-dual-optimization).
+where $t_{\text{invest}}$ is the immediate cost, $\Delta t_{\text{comp}}$ is the per-interaction comprehension time saved (a consequence of higher $\eta^\ast$), $\hat n_{\text{future}}$ is the expected number of future changes to this region ( #der-change-expectation-baseline), and $k$ is the number of distinct agents who will read this code (the turnover multiplier from #der-dual-optimization).
 
 ### The vicious and virtuous cycles
 
@@ -110,7 +110,7 @@ This narrow definition is load-bearing. The claim is NOT "all code quality is go
 
 ### Technical Debt as Observation Noise
 
-**Brief:** Code quality is identified with the observation noise $U_o$ on code-reading channels. The chain $Q \to U_o \to \eta^\ast \to \mathcal{T}$ then forces a quantitative consequence: degraded code raises observation noise, which depresses the optimal Bayesian update gain, which lowers the agent's adaptive tempo, which can drop the developer's tempo below the persistence threshold that bounds whether a codebase remains maintainable. "Unmaintainable" thus acquires a formal meaning — it names the regime where $\mathcal{T}_{\text{dev}}$ has fallen below $\rho / \lVert \delta_{\text{critical}} \rVert$. The reverse chain — quality investments paid once, observation-noise reductions collected indefinitely — gives an investment calculus whose threshold is $t_{\text{invest}} \lt \hat n_{\text{future}} \cdot \Delta t_{\text{comp}} \cdot k$.
+**Brief:** Code quality is identified with the observation noise $U_o$ on code-reading channels. The chain $Q \to U_o \to \eta^\ast \to \mathcal{T}$ then forces a quantitative consequence: degraded code raises observation noise, which depresses the optimal Bayesian update gain, which lowers the agent's adaptive tempo, which can drop the developer's tempo below the persistence threshold that bounds whether a codebase remains maintainable. "Unmaintainable" thus acquires a formal meaning — it names the regime where $\mathcal T_{\text{dev}}$ has fallen below $\rho / \lVert \delta_{\text{critical}} \rVert$. The reverse chain — quality investments paid once, observation-noise reductions collected indefinitely — gives an investment calculus whose threshold is $t_{\text{invest}} \lt \hat n_{\text{future}} \cdot \Delta t_{\text{comp}} \cdot k$.
 
 **Impact:** Replaces practitioner intuition about "technical debt" with a connected chain of AAT-internal quantities, making "this codebase is unmaintainable" mean a specific inequality rather than a vibe. The chain is the formal bridge between the software-engineering literature on code quality (which is normative without being mechanistic) and AAT's persistence machinery (which is mechanistic without being software-specific). The vicious / virtuous cycle hypothesis — codebases near the persistence threshold are unstable, with small perturbations driving toward one attractor or the other — is a falsifiable structural prediction that distinguishes this account from quality-as-aesthetic-preference. The narrowed scope (quality-that-affects-$U_o$ specifically; aesthetic and convention-only quality is excluded) is load-bearing: it prevents the formalism from being read as endorsing all quality investments.
 

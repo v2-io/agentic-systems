@@ -6,6 +6,7 @@ depends:
   - def-discontinuity-distance
   - emp-changeset-size-principle
   - def-comprehension-time
+stage: draft
 ---
 
 # Derived: Change Proximity Principle

@@ -6,7 +6,7 @@ depends:
   - scope-moral-continuity
   - form-complete-agent-state
   - def-chronica
-  - def-information-bottleneck
+  - form-information-bottleneck
 stage: draft
 ---
 

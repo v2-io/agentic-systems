@@ -6,6 +6,7 @@ depends:
   - scope-evolving-software
   - def-system-availability
   - post-temporal-optimality
+stage: draft
 ---
 
 # Scope: Continuous Operation

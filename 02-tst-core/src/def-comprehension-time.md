@@ -5,6 +5,7 @@ status: axiomatic
 depends:
   - def-feature
   - scope-evolving-software
+stage: draft
 ---
 
 # Definition: Comprehension Time

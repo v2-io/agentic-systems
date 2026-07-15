@@ -4,6 +4,7 @@ type: definition
 status: axiomatic
 depends:
   - def-feature
+stage: draft
 ---
 
 # Definition: Atomic Changeset

@@ -5,6 +5,7 @@ status: discussion-grade
 depends:
   - def-comprehension-time
   - der-change-investment
+stage: draft
 ---
 
 # Hypothesis: Conceptual Alignment

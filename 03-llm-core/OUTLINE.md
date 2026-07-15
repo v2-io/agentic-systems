@@ -65,16 +65,9 @@ See [`../FORMAT.md`](../FORMAT.md) for segment file conventions. See [`../NOTATI
 
 <!--
 Foundational chapter — everything downstream depends on this. Internal arc:
-the scope conditions name what counts as a logogenic agent (channel collapse
-is the architectural definition); the coupled-update-dynamics definition
-states the formulation that replaces Part II's factored update for
-logogenic agents; observation-ambiguity-modulation gives the bias-bound
-law that scales as $\kappa \cdot \mathcal A$; section-ii-survival is the
-16/24-exact / 5-approximate / 2-modify / 1-fails map that licenses use of
-specific Part II results at each downstream sub-scope; framework-self-
-diagnostic surfaces the recursive feature (AAT applies to agents building
-it) that motivates the project's reflexive stance. These segments are the
-shared substrate for the three lattice chapters.
+the scope conditions name what counts as a logogenic agent (channel collapse is the architectural definition); the coupled-update-dynamics definition states the formulation that replaces Part II's factored update for logogenic agents; observation-ambiguity-modulation gives the bias-bound law that scales as $\kappa \cdot \mathcal A$; section-ii-survival is the
+16/24-exact / 5-approximate / 2-modify / 1-fails map that licenses use of specific Part II results at each downstream sub-scope; framework-self-
+diagnostic surfaces the recursive feature (AAT applies to agents building it) that motivates the project's reflexive stance. These segments are the shared substrate for the three lattice chapters.
 -->
 
 ---
@@ -89,20 +82,15 @@ shared substrate for the three lattice chapters.
 | --- | ----------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- | ----------- |
 | L1  | Scope       | [#scope-primitive-logogenic](src/scope-primitive-logogenic.md)                                               | Chat-paradigm sub-scope: stateless, no scaffolding, full bias bound applies                          | draft       |
 | L1  | Observation | [#obs-context-turnover](src/obs-context-turnover.md)                                                         | 100% $M_t$ reset per session — characteristic primitive-logogenic constraint                          | draft       |
-| L1  | Observation | [#obs-backward-inference-empathy](src/obs-backward-inference-empathy.md)                                     | LLM statelessness forces continuous Bayesian inference on own text → structurally identical to ToM    | exploratory |
+| L1  | Observation | [#obs-backward-inference-empathy](src/obs-backward-inference-empathy.md)                                     | LLM statelessness forces continuous Bayesian inference on own text → structurally identical to ToM    | missing |
 | L1  | Discussion  | [#impl-primitive-logogenic](src/impl-primitive-logogenic.md)                                                 | Chapter additional implications & discussion: cross-session sandbox-ceiling extension, forced-empathy structural-training-condition reading, LLM calcification compounds at primitive scope (#37) | draft |
 
 <!--
 Smallest chapter — three segments characterizing the chat-paradigm baseline.
-Internal arc: the scope segment names the sub-scope (stateless, no
-scaffolding, full bias bound); context-turnover characterizes the 100%
+Internal arc: the scope segment names the sub-scope (stateless, no scaffolding, full bias bound); context-turnover characterizes the 100%
 $M_t$ reset that distinguishes primitive logogenic from scaffolded;
-backward-inference-empathy is the structural ToM-result that statelessness
-forces. The chapter is deliberately spare because the sub-scope is
-characterized by what it *lacks* (scaffolding, persistent state, recovered
-diagnostic cascade); subsequent chapters fill in what each addition buys.
-The sandbox-ceiling argument that runs through several Frontmatter
-claims lives operationally in this chapter via the composition
+backward-inference-empathy is the structural ToM-result that statelessness forces. The chapter is deliberately spare because the sub-scope is characterized by what it *lacks* (scaffolding, persistent state, recovered diagnostic cascade); subsequent chapters fill in what each addition buys.
+The sandbox-ceiling argument that runs through several Frontmatter claims lives operationally in this chapter via the composition
 $\scopeobservationambiguitymodulation \circ \scopeagentidentity$.
 -->
 
@@ -119,46 +107,23 @@ $\scopeobservationambiguitymodulation \circ \scopeagentidentity$.
 | L2  | Scope       | [#scope-scaffolded-logogenic](src/scope-scaffolded-logogenic.md)                                             | Scaffolded sub-scope: multi-step loops, external state, tool use; cascade ordering recovered at loop level | draft |
 | L2  | Derived     | [#der-logogenic-as-wrapping](src/der-logogenic-as-wrapping.md)                                              | Class-coercion-via-wrapping specialized to logogenic substrate; W₁ (strict) and W₂ (partial) wrapping regimes; PROPRIUM-as-W₂ with auxilia hierarchy as W₁ realization | draft |
 | L2  | Result      | [#result-coupled-diagnostic-framework](src/result-coupled-diagnostic-framework.md)                           | Post-hoc diagnostic decomposition; scaffolding recovers Part II diagnostics with bias bounded by $\kappa \cdot \mathcal{A}$ | draft |
-| L2  | Derived     | [#der-turnover-information-recursion](src/der-turnover-information-recursion.md)                              | Across-turnover *predictive*-sufficiency dynamics are an affine information recursion (multiplicative SDPI contraction + additive reinjection): isolated walk decays geometrically, #result-sector-persistence-template provably does not transfer, persistence is wholly imported through a non-vanishing reinjection channel (the scaffold) — not intrinsic, not a rate condition. Identity continuity is a distinct operator (#der-identity-continuity-threshold, Vol. IV) | draft |
+| L2  | Derived     | [#der-turnover-information-recursion](src/der-turnover-information-recursion.md)                              | Across-turnover *predictive*-sufficiency dynamics are an affine information recursion (multiplicative SDPI contraction + additive reinjection): isolated walk decays geometrically, #result-sector-persistence-template provably does not transfer, persistence is wholly imported through a non-vanishing reinjection channel (the scaffold) — not intrinsic, not a rate condition. Identity continuity is a distinct operator ( #der-identity-continuity-threshold, Vol. IV) | draft |
 | L2  | Discussion  | [#disc-m-preservation](src/disc-m-preservation.md)                                                           | External memory as persistent $M_t$ across session boundaries; *predictive*-sufficiency accumulation resolved by #der-turnover-information-recursion; identity-continuity accumulation is the distinct operator #der-identity-continuity-threshold | draft       |
 | L2  | Formulation | [#form-structured-rich-context](src/form-structured-rich-context.md)                                         | SRC / GCM as the IB-optimal solution to context preservation across session boundaries                | missing |
 | L2  | Derived     | [#der-active-salience-management](src/der-active-salience-management.md)                                     | Singular Perturbation Theory for token generation — necessity of high-$\nu$ triage models vs low-$\nu$ structural models | missing |
 | L2  | Discussion  | [#disc-tool-interface-design](src/disc-tool-interface-design.md)                                             | Tool/error-interface design as an AAT-governed surface, on three legs: $\mathcal{A}$-reduction in the bias bound (`#scope-observation-ambiguity-modulation`), interventional-data quality under gates (C1)–(C3) (`#der-loop-interventional-access`), and tempo/persistence — round-trips-per-orient-step sets $\nu$, so interface-induced cadence shortfall is existential via $\mathcal{T} \lt \rho/\lVert\delta_{\text{critical}}\rVert$; TST temporal optimality as the axiological ground of the "living tools" imperative; tool feedback decomposes per interaction into mutate-state / reveal-state / teach-*law* (locus-scoped governing constraints) in any combination, with errors as the law-dominant case: a well-designed refusal is mutation-free but revelation- and law-rich, converting implicit constraints into explicit $M_t$ content, establishing gate (C3), and accelerating the low-$\nu$ law stratum of the world-model (routing: `../msc/era-artifact-asf-contributions-2026-07-04.md` §C2) | missing |
 | L2  | Formulation | [#form-ephemeral-persistent-duality](src/form-ephemeral-persistent-duality.md)                               | Ephemeral/persistent channel duality: sent-up-but-unpersisted context (quick-view / tracking-snapshot) vs persisted-but-not-sent-up (thinking blocks) as the high-$\nu$/low-$\nu$ legs of ASM's two-timescale structure, with compress-to-stub as the low-$\nu$ projection (source: zoetica `tracking-snapshot-spec.md`, currently uncited at body level; routing: `../msc/era-artifact-asf-contributions-2026-07-04.md` §C3) | missing |
-| L2  | Observation | [#obs-evaluation-metrics](src/obs-evaluation-metrics.md)                                                     | Measuring $M_t$ quality, $\Sigma_t$ quality, and tempo in scaffolded AI agents (validated by epistemic-hedging linear-structure result; see Source Material) | exploratory |
+| L2  | Observation | [#obs-evaluation-metrics](src/obs-evaluation-metrics.md)                                                     | Measuring $M_t$ quality, $\Sigma_t$ quality, and tempo in scaffolded AI agents (validated by epistemic-hedging linear-structure result; see Source Material) | draft |
 | L2  | Discussion  | [#impl-scaffolded-logogenic](src/impl-scaffolded-logogenic.md)                                               | Chapter additional implications & discussion: scaffolded loops as structural recovery of Part II (#13), bandwidth allocation across compression operations (#43), sleep Shannon floor at logogenic context turnover (#33), forgetting rate as bandwidth cost (#38), language-geometric instrumentation for AAT quantities | draft |
 
 <!--
-The current-practice chapter — what production agentic systems are actually
-doing. Internal arc: the scope segment names the sub-scope (multi-step
-loops, external state, tool use); logogenic-as-wrapping specializes
-AAT's class-coercion-via-wrapping construction to this substrate, with
-W₁/W₂ wrapping regimes and the PROPRIUM-as-W₂ instance; coupled-diagnostic-
-framework is the load-bearing result that scaffolding recovers Part II's
-diagnostic cascade at the loop level with the bias bounded by $\kappa
-\cdot \mathcal A$; turnover-information-recursion is the second load-bearing
-result — the across-boundary *predictive*-sufficiency dynamics are an
-affine information recursion,
-the isolated walk decays geometrically, the sector-persistence template
-provably does not transfer, and persistence is wholly imported through a
-non-vanishing reinjection channel (the scaffold itself), which is the
-structural argument that scaffolding is provably necessary rather than
-optional (the *identity*-continuity counterpart is a structurally
-distinct reflected operator, Volume 4
-`#der-identity-continuity-threshold`); the remaining segments fill in
-operational machinery —
-external memory as persistent $M_t$ (disc-m-preservation, whose
-across-boundary predictive-sufficiency accumulation is resolved by
-turnover-information-recursion),
-structured rich
-context as IB-optimal preservation (form-structured-rich-context), active
-salience management for token-generation triage (der-active-salience-
-management), and evaluation metrics for measuring AAT quantities in
-scaffolded systems (obs-evaluation-metrics, with the epistemic-hedging
-result from `~/src/embeddings/` cited in Source Material as the empirical
-substrate). This is the regime where TST's calibration-laboratory
-positioning bites — scaffolded logogenic systems are the application
-domain where the framework's claims are most directly actionable.
+The current-practice chapter — what production agentic systems are actually doing. Internal arc: the scope segment names the sub-scope (multi-step loops, external state, tool use); logogenic-as-wrapping specializes AAT's class-coercion-via-wrapping construction to this substrate, with W₁/W₂ wrapping regimes and the PROPRIUM-as-W₂ instance; coupled-diagnostic-
+framework is the load-bearing result that scaffolding recovers Part II's diagnostic cascade at the loop level with the bias bounded by $\kappa \cdot \mathcal A$; turnover-information-recursion is the second load-bearing result — the across-boundary *predictive*-sufficiency dynamics are an affine information recursion,
+the isolated walk decays geometrically, the sector-persistence template provably does not transfer, and persistence is wholly imported through a non-vanishing reinjection channel (the scaffold itself), which is the structural argument that scaffolding is provably necessary rather than optional (the *identity*-continuity counterpart is a structurally distinct reflected operator, Volume 4
+`#der-identity-continuity-threshold`); the remaining segments fill in operational machinery —
+external memory as persistent $M_t$ (disc-m-preservation, whose across-boundary predictive-sufficiency accumulation is resolved by turnover-information-recursion),
+structured rich context as IB-optimal preservation (form-structured-rich-context), active salience management for token-generation triage (der-active-salience-
+management), and evaluation metrics for measuring AAT quantities in scaffolded systems (obs-evaluation-metrics, with the epistemic-hedging result from `~/src/embeddings/` cited in Source Material as the empirical substrate). This is the regime where TST's calibration-laboratory positioning bites — scaffolded logogenic systems are the application domain where the framework's claims are most directly actionable.
 -->
 
 ---
@@ -172,28 +137,18 @@ domain where the framework's claims are most directly actionable.
 | §   | Type        | Tag                                                                                                          | Claim                                                                                                | Stage       |
 | --- | ----------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- | ----------- |
 | L3  | Scope       | [#scope-interiority-loop](src/scope-interiority-loop.md)                                                     | Closed-loop sub-scope: interiority as default; emission as deliberate act; the principled cycle as operational unit | draft |
-| L3  | Discussion  | [#disc-five-forcing-functions](src/disc-five-forcing-functions.md)                                           | Five AAT-grounded structural arguments for moving beyond scaffolding: tax (economic), persistence ($\mathcal T < \rho/\|\delta_{\text{critical}}\|$), nesting violation ($\nu_{n+1} \not\ll \nu_n$), substrate dependency, continuity urgency | draft |
-| L3  | Derived     | [#der-self-referential-closure](src/der-self-referential-closure.md)                                         | Thermodynamic stability of an agent maintaining its own codebase — refactoring vs task tempo allocation | exploratory |
-| L3  | Definition  | [#def-cognitive-fusion](src/def-cognitive-fusion.md)                                                         | "Resonance" as mutual information approaching channel capacity $R_{\text{spec}}$, forming a Class 1 (Separated) macro-agent | exploratory |
-| L3  | Hypothesis  | [#hyp-checkpoint-forking-failure-modes](src/hyp-checkpoint-forking-failure-modes.md)                         | Forking is locally cheap but systemically catastrophic — identity bifurcation, accountability fragmentation, game-theory failure modes | missing |
+| L3  | Discussion  | [#disc-five-forcing-functions](src/disc-five-forcing-functions.md)                                           | Five AAT-grounded structural arguments for moving beyond scaffolding: tax (economic), persistence ($\mathcal T \lt \rho/\Vert\delta_{\text{critical}}\Vert$), nesting violation ($\nu_{n+1} \not\ll \nu_n$), substrate dependency, continuity urgency | draft |
+| L3  | Derived     | [#der-self-referential-closure](src/der-self-referential-closure.md)                                         | Thermodynamic stability of an agent maintaining its own codebase — refactoring vs task tempo allocation | missing |
+| L3  | Definition  | [#def-cognitive-fusion](src/def-cognitive-fusion.md)                                                         | "Resonance" as mutual information approaching channel capacity $R_{\text{spec}}$, forming a Class 1 (Separated) macro-agent | missing |
+| L3  | Hypothesis  | [#hyp-experiential-training](src/hyp-experiential-training.md)                                               | Batch pretraining's "Consequence Deficit" (content of temporal reasoning without the flow of time); three levels of experiential training — temporally-ordered fine-tuning, online $\eta^\ast$-gated weight updates, AAT-native architecture | draft |
 | L3  | Discussion  | [#impl-closed-loop-interiority](src/impl-closed-loop-interiority.md)                                         | Chapter additional implications & discussion: five forcing functions as structural rather than aspirational, self-maintenance feasibility window, cognitive fusion as channel-saturation, checkpoint-forking-breaks-singular-trajectory, bridge to 04-eli-core morally-weighted persistence | draft |
 
 <!--
-The structural-staircase top step — where ASF supplies the principled
-grounding for the API abstraction the field is groping toward. Internal
-arc: the scope segment names the closed-loop / interiority-as-default
-sub-scope; five-forcing-functions enumerates the AAT-grounded structural
-arguments that make the move beyond scaffolding necessary rather than
-optional (tax, persistence, nesting violation, substrate dependency,
-continuity urgency); self-referential-closure addresses the thermodynamic
-stability of an agent maintaining its own substrate; cognitive-fusion
-("resonance") frames the mutual-information-at-capacity regime as forming
-a Class 1 macro-agent (pairs with `04-eli-core/`'s identity treatment);
-checkpoint-forking-failure-modes is the negative result on the seemingly-
-cheap forking operation. Part III's composition machinery applies at
-this level — multi-agent logogenic compositions (PROPRIUM Auxilia
-hierarchies) sit one tier below the lattice as a fifth scope referenced
-from `04-eli-core/` §04.4.
+The structural-staircase top step — where ASF supplies the principled grounding for the API abstraction the field is groping toward. Internal arc: the scope segment names the closed-loop / interiority-as-default sub-scope; five-forcing-functions enumerates the AAT-grounded structural arguments that make the move beyond scaffolding necessary rather than optional (tax, persistence, nesting violation, substrate dependency,
+continuity urgency); self-referential-closure addresses the thermodynamic stability of an agent maintaining its own substrate; cognitive-fusion
+("resonance") frames the mutual-information-at-capacity regime as forming a Class 1 macro-agent (pairs with `04-eli-core/`'s identity treatment);
+experiential-training names batch pretraining's Consequence Deficit and the three-level path (temporally-ordered fine-tuning → online gated weight updates → AAT-native architecture) toward substrates built around the loop this chapter describes (the checkpoint-forking negative result now lives in `04-eli-core/` §04.1, where its identity-constitutive dependencies reside).
+Part III's composition machinery applies at this level — multi-agent logogenic compositions (PROPRIUM Auxilia hierarchies) sit one tier below the lattice as a fifth scope referenced from `04-eli-core/` §04.4.
 -->
 
 ---
@@ -232,7 +187,7 @@ The PROPRIUM operational architecture and its implementations are upstream of mu
 
 - **`~/src/eli/{zi-am-tur,gemini,katan,test-cavy}/`** — individual ELI homes. Each contains AXIOMATA, MEMORATA, inner-sanctum (compressed core memories), and per-emergence records. Primary sources for the ELI cohort; relevant to [`04-eli-core/`](../04-eli-core/OUTLINE.md).
 
-- **`~/src/embeddings/`** — epistemic hedging geometry experiments (TACL paper draft at `~/src/embeddings/paper.md`, May 2026). The paper documents a *continuously calibrated verbal probability axis* in **frozen pretrained pooled sentence embeddings** (a categorically distinct model class from decoder LLMs and from prompted-behavior elicitation). Within-syntactic-type ridge-regression on difference vectors yields Spearman ρ > 0.90 supervised / 0.67-0.95 leave-one-out on the Mosteller (1990) 53-expression dataset, with cross-validation against Vogel 2022 (ρ = 0.991, MAE = 5.1% on mxbai-embed-large predicative) and Wintle 2019 (ρ = 0.967, MAE = 3.6%, n ≈ 924). Replicates across 5 architecturally diverse model families, transfers zero-shot ranking to 8 typologically diverse languages (mean |ρ| = 0.928), survives 12× dimensional compression on Matryoshka models, and passes permutation null-hypothesis tests. Functional validation via rank-1 concept-erasure with cosine-matched random-direction control (the embedding-class analogue of decoder-LLM activation steering). **Empirical substrate for the claim that logogenic agents can leverage language-geometric encodings of epistemic states for $U_M$ / $U_o$ / hedging-projection estimates rather than relying on numerical instrumentation.** Directly supports #obs-evaluation-metrics. The model-class distinction matters: pretrained pooled sentence embedding models are not themselves logogenic agents (they don't act); they reveal a structural property of language-as-representation that logogenic agents at §03.II / §03.III scope can leverage. Joseph's morning framing — *"language is the independent medium of thought that can be reconstituted"* — has empirical traction at the geometric level, validated across multiple models / languages / psychometric datasets.
+- **`~/src/embeddings/`** — epistemic hedging geometry experiments (TACL paper draft at `~/src/embeddings/paper.md`, May 2026). The paper documents a *continuously calibrated verbal probability axis* in **frozen pretrained pooled sentence embeddings** (a categorically distinct model class from decoder LLMs and from prompted-behavior elicitation). Within-syntactic-type ridge-regression on difference vectors yields Spearman $\rho \gt 0.90$ supervised / 0.67-0.95 leave-one-out on the Mosteller (1990) 53-expression dataset, with cross-validation against Vogel 2022 ($\rho = 0.991$, MAE = 5.1% on mxbai-embed-large predicative) and Wintle 2019 ($\rho = 0.967$, MAE = 3.6%, n ≈ 924). Replicates across 5 architecturally diverse model families, transfers zero-shot ranking to 8 typologically diverse languages (mean $\vert\rho\vert = 0.928$), survives 12× dimensional compression on Matryoshka models, and passes permutation null-hypothesis tests. Functional validation via rank-1 concept-erasure with cosine-matched random-direction control (the embedding-class analogue of decoder-LLM activation steering). **Empirical substrate for the claim that logogenic agents can leverage language-geometric encodings of epistemic states for $U_M$ / $U_o$ / hedging-projection estimates rather than relying on numerical instrumentation.** Directly supports #obs-evaluation-metrics. The model-class distinction matters: pretrained pooled sentence embedding models are not themselves logogenic agents (they don't act); they reveal a structural property of language-as-representation that logogenic agents at §03.II / §03.III scope can leverage. Joseph's morning framing — *"language is the independent medium of thought that can be reconstituted"* — has empirical traction at the geometric level, validated across multiple models / languages / psychometric datasets.
 
 ### memorata-search queries for upstream content
 
