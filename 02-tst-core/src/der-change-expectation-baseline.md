@@ -4,6 +4,7 @@ type: derived
 status: exact
 depends:
   - scope-evolving-software
+stage: draft
 ---
 
 # Derived: Change Expectation Baseline
@@ -42,15 +43,9 @@ $$P(n_{\text{future}} \mid n_{\text{past}}, I) = \frac{P(I \mid n_{\text{future}
 
 The uninformed baseline is rarely used directly — almost all real code comes with domain knowledge that adjusts expectations. The baseline creates intellectual accountability: deviations from $\hat{n}_{\text{future}} = n_{\text{past}}$ require justification through evidence.
 
-### Corollary: Investment Scaling
-
-*[Derived (investment-scaling, from change-expectation-baseline)]*
-
-Investment in abstraction and flexibility should scale with $n_{\text{past}}$, since the median-predicted remaining lifetime equals the observed lifetime. Systems with minimal feature history ($n_{\text{past}} \lt 3$) warrant minimal structural investment.
-
 ## Epistemic Status
 
-The Bayesian derivation from Jeffrey's prior is *exact* — standard probability theory, not approximation. Two important qualifications:
+The Bayesian derivation from Jeffrey's prior is *exact* — standard probability theory, not approximation. The baseline itself is a *predictive* statement; it carries no normative content about investment. The investment-scaling consequence (justified structural investment scales linearly with $n_{\text{past}}$) requires a decision model on top of the baseline and is derived in #der-change-investment, where the amortized-cost rule makes the acceptance threshold linear in $\hat{n}_{\text{future}} = n_{\text{past}}$. Two important qualifications:
 
 **Median, not expectation.** For Pareto($\alpha = 1$), the mean is undefined (the integral diverges). The result $\hat{n}_{\text{future}} = n_{\text{past}}$ is a *median* prediction. TST's original statement as $E[n_{\text{future}} \mid n_{\text{past}}] = n_{\text{past}}$ uses "expected" loosely. This distinction matters when propagating the estimate through nonlinear functions — the median of a function is not generally the function of the median. Downstream claims ( #der-change-investment, #der-dual-optimization) that use $n_{\text{future}}$ should be understood as using the median prediction, not the mathematical expectation.
 
@@ -70,6 +65,8 @@ The Laplace succession formula ($E[n_{\text{future}} \mid n_{\text{past}}] = n_{
 
 Each of these is an observation that updates the agent's model $M_t$ about the system's future. The gain applied to these updates ( #emp-update-gain) depends on how reliable the information source is — a product roadmap from an engaged PM carries more weight ($\eta^\ast$ closer to 1) than a vague feeling about market direction.
 
+**Investment scaling.** *[Discussion]* Combining the baseline with the amortized-cost decision rule of #der-change-investment yields the qualitative reading commonly attached to it: justified investment in abstraction and flexibility scales with $n_{\text{past}}$, because the acceptance threshold $X \lt \hat n_{\text{future}} \times Y$ is linear in $\hat n_{\text{future}} = n_{\text{past}}$. The derivation lives in that segment, not here — the baseline alone is predictive, not normative. The rule of thumb that very young systems ($n_{\text{past}} \lesssim 3$) warrant minimal structural investment is heuristic-grade: it marks the small-sample regime where the Laplace correction and initial instability dominate, not a derived threshold.
+
 **Connection to AAT.** The baseline is a statement about the agent's $M_t$ regarding the system's future change rate $\rho$. When the agent has observed $n_{\text{past}}$ changes over time $t_0$, and has no other information, the maximum-ignorance prediction is that $\rho$ will continue at approximately its observed rate. This is the null hypothesis — the starting point before any observations update it.
 
 ## Working Notes
@@ -77,4 +74,5 @@ Each of these is an observation that updates the agent's model $M_t$ about the s
 - The median vs expectation issue is real and should be propagated carefully. Every downstream claim that uses $n_{\text{future}}$ (T-05 dual optimization, T-06 change investment, C-04.1 investment scaling) is technically using the median prediction. For symmetric distributions this doesn't matter, but Pareto(1) is heavily right-skewed. This means the true expected number of future changes is *larger than* the median prediction (in fact, undefined/infinite). The practical consequence: if anything, the baseline *underestimates* the case for investment.
 - The uniform feature rate assumption is probably the weakest link. In practice, software systems often have phases: rapid early development, maturation, maintenance, decline. A more sophisticated model would use the observed feature *rate trajectory*, not just the count. This is an open refinement.
 - TST's open question about velocity inflection is interesting but unformalized: when $\hat{n}_{\text{future}}$ transitions from finite to effectively unbounded, the investment strategy may need to shift from linear to compound-seeking. This awaits proper formalization.
+- The former C-04.1 "Investment Scaling" corollary carried a *[Derived]* tag it could not support from the baseline alone (the baseline is predictive; the scaling claim needs a decision model). It now lives as Discussion here with the actual derivation credited to #der-change-investment; the old $n_{\text{past}} \lt 3$ cutoff traces to an ancestor caveat ("very young systems may have higher k due to initial instability") and is marked heuristic. Don't re-promote it without deriving the threshold.
 - The C-04.2 Bayesian updating corollary is structurally just restating Bayes' theorem applied to the baseline. It's not an independent claim — it's how all Bayesian updating works. I've folded it into the main exposition rather than making it a separate corollary.

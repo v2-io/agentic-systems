@@ -80,7 +80,7 @@ These are the forms used throughout the theory as the operational persistence co
 
 ### Per-Dimension Extension
 
-*[Empirical Claim (per-dimension-persistence, from simulation variant F)]*
+*[Derived (per-dimension-persistence, per-dimension Lyapunov under Model D / AR(1) stationary distribution under Model S — see #result-per-dimension-persistence)]*
 
 For anisotropic systems (non-uniform $\rho$ or $\mathcal{T}$ across dimensions), the scalar persistence condition is insufficient. Per-dimension:
 
@@ -98,7 +98,7 @@ The scalar condition overestimates by up to 72% in simulation. The weak dimensio
 
 **The linear operational forms** ($\mathcal{T} \gt \rho/\lVert\delta_{\text{critical}}\rVert$ for Model D; $\mathcal{T} \gt n\sigma_w^2/(2\lVert\delta_{\text{critical}}\rVert^2)$ for Model S) are *exact* for linear correction (where they express task adequacy alone, structural persistence being trivially satisfied) and *useful approximations* for mildly nonlinear correction (where $\alpha \approx \mathcal{T}$). For strongly nonlinear correction, the general $\alpha$-forms are required and BOTH structural and task-adequacy conditions must be checked. Downstream segments that use the linear operational forms should be understood as expressing task adequacy, not structural stability.
 
-The per-dimension extension is *empirically exact* for Model S (matches AR(1) prediction to 4 significant figures in simulation); the Model D per-dimension threshold ($\mathcal{T}_k \gt \rho_k/\delta_{\text{critical},k}$) is exact by the same Lyapunov argument applied per dimension.
+The per-dimension extension is *exact conditional on the disturbance model* ( #result-per-dimension-persistence): the Model D per-dimension threshold ($\mathcal{T}_k \gt \rho_k/\delta_{\text{critical},k}$) is exact by the same Lyapunov argument applied per dimension (GA-2, GA-3), and the Model S per-dimension thresholds are exact under the AR(1) stationary distribution (GA-2S), with simulation confirming the AR(1) prediction to 4 significant figures.
 
 ## Discussion
 
@@ -134,7 +134,7 @@ The persistence condition appears in multiple downstream contexts:
 
 **Impact:** This is the framework's central inequality and the load-bearing connection between control-theoretic Lyapunov stability analysis and the broader question of when any adaptive system — thermostat, software team, immune system, RL agent — can maintain coherent function under change. The two-condition decomposition is itself non-obvious and consequential: prior work that conflated "the machinery works" with "the machinery works well enough" produced category errors in domain transfer (a structurally persistent codebase team can be task-inadequate; the remedies differ). The complementary information-rate bound from `#deriv-persistence-cost` ($\dot R \geq n\alpha/2$) shows the threshold has a sustained-cost shadow: two agents with identical persistence guarantees can face wildly different sustained demands.
 
-**Novelty Claim:** *Claim synthesis* on Lyapunov stability theory, sector-bounded nonlinear correction, and adaptive-tempo information-rate accounting, applied uniformly across single-agent classes that range from Kalman filtering through saturating nonlinear correction through PID control. The Lyapunov machinery itself is standard; the synthesis is its use as the central inequality of an integrated agent theory, with the two-condition decomposition (structural / task-adequacy) as the AAT-internal contribution that cleanly separates "the machinery works" from "the machinery works well enough."
+**Novelty Claim:** *Claim novelty* (at intuition-only search depth — see Search Log) on the two-condition decomposition (structural / task-adequacy): an AAT-internal structural carve that cleanly separates "the machinery works" from "the machinery works well enough," with no direct anticipation known; a targeted search of the bounded-rationality and adaptive-control literature is still owed. Alongside it, *claim synthesis* on Lyapunov stability theory, sector-bounded nonlinear correction, and adaptive-tempo information-rate accounting, applied uniformly across single-agent classes that range from Kalman filtering through saturating nonlinear correction through PID control — the Lyapunov machinery itself is standard; the synthesis is its use as the central inequality of an integrated agent theory.
 
 **Related Work:**
 
@@ -148,6 +148,8 @@ The persistence condition appears in multiple downstream contexts:
 - 2025 (*targeted*): Khalil 2002 / Khasminskii 2012 / Rockafellar-Wets 1998 confirmed as the formal antecedents for the sector-Lyapunov machinery; the segment cites them inline.
 
 ## Working Notes
+
+- 2026-07-14 adjudication: the per-dimension extension's marking was lifted from *empirically exact* / `[Empirical Claim … simulation variant F]` to *[Derived]* / exact-conditional-on-disturbance-model, tracking #result-per-dimension-persistence, which has since derived both forms (Model D per-dimension Lyapunov; Model S AR(1) stationary distribution) with simulation as 4-sig-fig confirmation. The Novelty Claim now leads with the two-condition decomposition at *claim novelty* posture (intuition-only search depth); the targeted bounded-rationality / adaptive-control search in the Search Log remains owed and would either confirm or re-tier that posture.
 
 ### Incidental audit gold (pilot lift, 2026-05-30)
 

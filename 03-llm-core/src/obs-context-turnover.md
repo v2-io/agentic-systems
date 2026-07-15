@@ -1,7 +1,7 @@
 ---
 slug: obs-context-turnover
 type: observation
-status: exact
+status: empirical
 depends:
   - scope-logogenic-agent
   - def-chronica
@@ -12,7 +12,7 @@ stage: draft
 
 # Observation: Context Turnover
 
-At every session boundary, the LLM-based agent's context window is cleared. The chronica $\mathcal{C}_t$ is severed — no internal state carries over. This is a 100% $M_t$ reset: the agent begins each session with $M_t$ reconstructed entirely from external sources and the new prompt. The persistence condition, which assumes continuous or event-driven state evolution, does not apply in its standard form across session boundaries.
+At every session boundary, the LLM-based agent's context window is cleared. The chronica $\mathcal C_t$ is severed — no internal state carries over. This is a 100% $M_t$ reset: the agent begins each session with $M_t$ reconstructed entirely from external sources and the new prompt. The persistence condition, which assumes continuous or event-driven state evolution, does not apply in its standard form across session boundaries.
 
 ## Formal Expression
 
@@ -22,22 +22,22 @@ Let $\tau_k$ and $\tau_{k+1}$ denote the start times of consecutive sessions. At
 
 $$X_{\tau_{k+1}}^{\text{context}} = \emptyset$$
 
-The agent's effective state at the start of session $k+1$ is reconstructed from external memory $\mathcal{E}_{\text{ext}}$ and the new prompt $p_{k+1}$:
+The agent's effective state at the start of session $k+1$ is reconstructed from external memory $\mathcal E_{\text{ext}}$ and the new prompt $p_{k+1}$:
 
 $$X_{\tau_{k+1}} = f_{\text{init}}(\mathcal{E}_{\text{ext}}, p_{k+1}, M_0^{\text{weights}})$$
 
 where:
-- $\mathcal{E}_{\text{ext}}$ is the externally persisted information (files, databases, prior conversation summaries, structured memory stores)
+- $\mathcal E_{\text{ext}}$ is the externally persisted information (files, databases, prior conversation summaries, structured memory stores)
 - $p_{k+1}$ is the session-initiating prompt (user instruction, system prompt, retrieved context)
 - $M_0^{\text{weights}}$ is the frozen pretrained prior (the LLM's weights)
 
 *[Observation (chronica-severance)]*
 
-The chronica ( #def-chronica) is severed at every session boundary. Within a session, $\mathcal{C}_t$ accumulates as the conversation history. Across sessions:
+The chronica ( #def-chronica) is severed at every session boundary. Within a session, $\mathcal C_t$ accumulates as the conversation history. Across sessions:
 
 $$\mathcal{C}_{\tau_{k+1}} \neq \mathcal{C}_{\tau_k} \cup \{e_{\tau_k}, \ldots\}$$
 
-The new session's chronica starts fresh. Any information from the prior session's chronica that is needed must have been *externalized* — written to $\mathcal{E}_{\text{ext}}$ — before the session boundary.
+The new session's chronica starts fresh. Any information from the prior session's chronica that is needed must have been *externalized* — written to $\mathcal E_{\text{ext}}$ — before the session boundary.
 
 *[Observation (sufficiency-discontinuity)]*
 
@@ -57,9 +57,9 @@ The numerator is the mutual information between the end-of-session state and the
 
 ## Epistemic Status
 
-*Exact as an observation.* The 100% context reset at session boundaries is a structural fact of current LLM architectures, not an approximation. The sufficiency-discontinuity bound follows from information-theoretic definitions. What is *not* exact is the characterization of how much information is lost — that depends on the quality of $\mathcal{E}_{\text{ext}}$ and $f_{\text{init}}$, which are engineering choices.
+*Empirical — architecturally guaranteed.* The 100% context reset at session boundaries is a structural fact of current LLM architectures: the support is by construction of the deployed systems, not by sampling, so it is as strong as empirical support gets — but it is a fact about how the world's systems behave, not something the formalism forces. The sufficiency-discontinuity bound follows from information-theoretic definitions given that fact. What is *not* pinned down is the characterization of how much information is lost — that depends on the quality of $\mathcal E_{\text{ext}}$ and $f_{\text{init}}$, which are engineering choices.
 
-Max attainable: exact. This is an observation about a structural property of the architecture.
+Max attainable: empirical. The claim is about a structural property of deployed architectures; a future architecture without session boundaries would void it without any error in the formalism.
 
 ## Discussion
 
@@ -73,18 +73,19 @@ where $S_{\text{min}}$ is the minimum model sufficiency required for the agent t
 1. **Intra-session** (event-driven, continuous): standard AAT dynamics apply. The coupled update $X_{\tau^+} = f_{\text{LLM}}(\text{prompt}(X_{\tau^-}, e_\tau))$ ( #def-coupled-update-dynamics) processes events and evolves $X_t$. The persistence condition applies within a session.
 2. **Inter-session** (episodic, discontinuous): the state is reconstructed from external memory. The persistence challenge is information preservation through the externalization-reconstruction cycle. See #disc-m-preservation.
 
-**Context window as finite $\mathcal{C}_t$ capacity.** Even within a session, the chronica is bounded by the context window length $L$. When $\lvert\mathcal{C}_t\rvert \gt L$, older events are dropped — a forced compression that degrades sufficiency. This creates an intra-session analog of the turnover problem: the agent must continuously prioritize which information to retain in its finite context. The rate of information loss from context-window overflow is an additional disturbance term in the intra-session mismatch dynamics.
+**Context window as finite $\mathcal C_t$ capacity.** Even within a session, the chronica is bounded by the context window length $L$. When $\lvert\mathcal C_t\rvert \gt L$, older events are dropped — a forced compression that degrades sufficiency. This creates an intra-session analog of the turnover problem: the agent must continuously prioritize which information to retain in its finite context. The rate of information loss from context-window overflow is an additional disturbance term in the intra-session mismatch dynamics.
 
 **Context window as joint capacity for $M_t$, $\Sigma_t$, and task.** The context-window capacity $C_{\text{context}}$ (measured in tokens or bits) is shared across the agent's reality model, strategy, and task description. Per `#form-strategy-complexity-cost`'s description-length apparatus, the strategy carries its own DL cost $\text{DL}(\Sigma_t)$ that competes for context-window space with $\text{DL}(M_t)$ (the agent's current beliefs) and $\text{DL}(\text{task})$ (the prompt, goal description, tool definitions). The capacity constraint at any moment is
 
 $$\text{DL}(\Sigma_t) \;+\; \text{DL}(M_t) \;+\; \text{DL}(\text{task}) \;\lt\; C_{\text{context}}.$$
 
-The IB tradeoff $\beta_\Sigma$ from `#form-strategy-complexity-cost` is therefore *directly calibrated by what fits in the window*: stricter context-window limits force smaller $\text{DL}(\Sigma_t)$, which forces shallower or sparser DAGs (per the depth-bound $d^\ast$ in `#form-strategy-complexity-cost`), which trades off against decision-relevant information $I(\Sigma_t; \pi^\ast \mid M_t)$. The window length $L$ is therefore not just a turnover-rate parameter; it is also a structural ceiling on the strategy complexity an agent can sustain *within* a session. Operationally: when context-window pressure rises (long sessions, large $M_t$, complex tasks), the agent must drop strategy-DAG depth or detail before it loses model state — or accept that older chronica entries get compressed away from $\mathcal{C}_t$, degrading $M_t$ sufficiency. The four-way pressure ($\mathcal{C}_t$ recency / $M_t$ detail / $\Sigma_t$ depth / task specification) under a fixed $C_{\text{context}}$ is the LLM-specific instantiation of the general capacity-vs-complexity tradeoff.
+The IB tradeoff $\beta_\Sigma$ from `#form-strategy-complexity-cost` is therefore *directly calibrated by what fits in the window*: stricter context-window limits force smaller $\text{DL}(\Sigma_t)$, which forces shallower or sparser DAGs (per the depth-bound $d^\ast$ in `#form-strategy-complexity-cost`), which trades off against decision-relevant information $I(\Sigma_t; \pi^\ast \mid M_t)$. The window length $L$ is therefore not just a turnover-rate parameter; it is also a structural ceiling on the strategy complexity an agent can sustain *within* a session. Operationally: when context-window pressure rises (long sessions, large $M_t$, complex tasks), the agent must drop strategy-DAG depth or detail before it loses model state — or accept that older chronica entries get compressed away from $\mathcal C_t$, degrading $M_t$ sufficiency. The four-way pressure ($\mathcal C_t$ recency / $M_t$ detail / $\Sigma_t$ depth / task specification) under a fixed $C_{\text{context}}$ is the LLM-specific instantiation of the general capacity-vs-complexity tradeoff.
 
 **Implications for the orient cascade.** The 100% reset means the agent must re-establish its orient cascade from scratch each session. The epistemic state, strategic assessments, and diagnostic quantities ($\delta_{\text{sat}}$, $\delta_{\text{regret}}$) must all be reconstructed. The first events in a new session are disproportionately important — they populate the context with the information needed for subsequent cascade steps.
 
 ## Working Notes
 
+- Tier note (regression-guard): `status: empirical`, not `exact` — the reset is architecturally guaranteed but is a fact about deployed systems, not a derivation from the formalism (`exact` requires the latter per FORMAT §status; all other `type: observation` segments sit at `empirical`/`discussion-grade`). Do not re-promote to `exact` on "structural fact" grounds; the by-construction strength is stated in Epistemic Status.
 - The sufficiency-discontinuity bound is stated in information-theoretic terms. For practical measurement, proxies are needed: task completion rate across session boundaries, time-to-productive-action at session start, frequency of re-asking for already-provided information.
 - The characterization of $f_{\text{init}}$ (what determines reconstruction quality) is deliberately left unformalized here. The mechanisms — retrieval-augmented generation, structured memory stores, conversation summaries — are engineering choices, not theory. See #disc-m-preservation for the treatment.
 - Fine-tuning changes the picture: if the weights are updated between sessions, $M_0^{\text{weights}}$ becomes $M_k^{\text{weights}}$, and some information from session $k$ persists in the weights. This is a partial mitigation of turnover, but the context-specific state ($G_t$, the current strategy, the working state of a multi-step task) is still lost.

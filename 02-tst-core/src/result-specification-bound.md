@@ -6,6 +6,7 @@ depends:
   - post-temporal-optimality
   - def-feature
   - scope-evolving-software
+stage: draft
 ---
 
 # Result: Specification Bound
@@ -14,7 +15,7 @@ The minimum time to implement a feature is bounded below by the time required to
 
 ## Formal Expression
 
-*[Derived (specification-bound)]*
+*[Derived (Conditional on S1–S2; specification-bound)]*
 
 $$\forall \text{ feature } F: \quad \text{time}_{\min}(F) \geq \inf_{c \in \mathcal{C}_{\text{suff}}(F)} \text{time}_{\text{transmit}}(F, c, M_{\text{shared}})$$
 
@@ -23,13 +24,20 @@ where:
 - $M_{\text{shared}}$ is the context shared by specifier and implementer
 - $\text{time}_{\text{transmit}}(F, c, M_{\text{shared}})$ is the time required for channel $c$ to transmit enough information, given that shared context
 
+**Derivation.** Two premises:
+
+- **(S1) Distinguishability premise.** The implementer reliably produces the *intended* feature $F$ — rather than some competing implementation consistent with what has been received so far — only if information sufficient to distinguish $F$ from the alternatives admissible under $M_{\text{shared}}$ has arrived through some channel $c \in \mathcal{C}_{\text{suff}}(F)$. "Reliably" excludes success by lucky guessing; a correct guess does not violate the bound in expectation, only in a lucky sample.
+- **(S2) Temporal ordering.** Reliable implementation of $F$ cannot *complete* before that transmission completes: as long as distinguishing information remains untransmitted, some implementation decision remains underdetermined by everything the implementer has, so any completed artifact resolves it by chance rather than by intent.
+
+Given S1–S2, any successful reliable implementation used some $c \in \mathcal{C}_{\text{suff}}(F)$ and took at least the transmission time of that channel; minimizing over admissible executions gives the infimum over the sufficient-channel set. The bound's existence therefore rests on S1–S2 (near-definitional unpacking of "intended" and "sufficient") plus the standard information-theoretic fact that distinguishing among alternatives requires receiving the distinguishing information; what is *not* derived is any closed form for the transmission time itself.
+
 *[Derived (two-channel special case)]*
 
 If the only admissible sufficient channels are written specification and demonstration, the general bound reduces to:
 
 $$\text{time}_{\min}(F) \geq \min\!\big(\text{time}_{\text{specify}}(F, M_{\text{shared}}),\; \text{time}_{\text{demo}}(F, M_{\text{shared}})\big)$$
 
-*[Derived (specification-time, first-order approximation)]*
+*[Formulation (specification-time, first-order approximation)]*
 
 $$\text{time}_{\text{specify}}(F, M_{\text{shared}}) \approx \frac{H_{\text{req}}(F \mid M_{\text{shared}})}{R_{\text{spec}}}$$
 
@@ -51,7 +59,7 @@ This follows directly: if implementation overhead shrinks (for example, through 
 
 ## Epistemic Status
 
-The bound's *existence* is *derived* from information theory: you cannot implement what has not been sufficiently distinguished from competing implementations, and that distinction requires transmitting enough residual information through some admissible channel. The general infimum-over-channels statement is the strongest version currently justified. The approximation $\text{time}_{\text{specify}} \approx H_{\text{req}} / R_{\text{spec}}$ is *first-order* — the actual relationship depends on channel characteristics, encoding efficiency, and interaction structure. Neither the exact form of $H_{\text{req}}$ nor the effective rate $R_{\text{spec}}$ is derived within AAT.
+The bound's *existence* is *derived*, conditional on the two named premises S1–S2 in the Formal Expression: you cannot reliably implement what has not been sufficiently distinguished from competing implementations, and that distinction requires transmitting enough residual information through some admissible channel. The conditions gating the `conditional` status are: (i) S1's notion of channel *sufficiency* is stated intuitively rather than operationalized (see Working Notes for the intended operationalization); (ii) the bound covers *reliable* implementation — success by lucky guessing is excluded by premise, not proved impossible. Within those conditions the general infimum-over-channels statement is the strongest version currently justified. The approximation $\text{time}_{\text{specify}} \approx H_{\text{req}} / R_{\text{spec}}$ is a *formulation*, not a derivation — a first-order modeling choice patterned on Shannon's entropy-over-rate form, exact only under a formalization (of $H_{\text{req}}$ as a conditional entropy and $R_{\text{spec}}$ as a channel capacity) that has not been carried out here. Neither the exact form of $H_{\text{req}}$ nor the effective rate $R_{\text{spec}}$ is derived within AAT.
 
 ## Discussion
 
@@ -68,6 +76,7 @@ The bound's *existence* is *derived* from information theory: you cannot impleme
 
 ## Working Notes
 
+- 2026-07-14 label adjudication: the general bound's derivation is now exhibited explicitly (premises S1–S2) rather than asserted; the $H_{\text{req}}/R_{\text{spec}}$ line was retagged Derived→Formulation (it is a Shannon-patterned modeling choice, not derived here); the `conditional` status's gating conditions (sufficiency informal; reliability premise) are now named in Epistemic Status. Promoting the Formulation back to Derived requires formalizing $H_{\text{req}}$ as a conditional entropy and $R_{\text{spec}}$ as a capacity.
 - The strongest next tightening would be to define "sufficient" more formally: e.g. the channel must reduce the implementer's posterior uncertainty over acceptable implementations below some task-dependent threshold. Right now sufficiency is intuitive rather than operationalized.
 - This segment was written by an earlier agent with less context (noted in WORKBENCH). Needs a review pass during Part I/IV tightening — particularly to connect to the AAT communication framework ( #hyp-communication-gain) and to make the information-theoretic derivation more explicit.
 - The $H_{\text{req}} / R_{\text{spec}}$ expression is still a first-order approximation. A tighter version would separate encoding efficiency, channel noise, and interactive back-and-forth — but that may be over-engineering for a bound that is primarily conceptual.
