@@ -184,7 +184,7 @@ List the slugs this claim directly depends on. The type of each dependency (defi
 
 Orthogonal to epistemic status. Tracks where the segment is in our working process, not how strong the claim is.
 
-Stage is recorded in segment frontmatter (e.g., `stage: draft`) and in the OUTLINE.md index table. A script can verify consistency between the two.
+Stage is recorded in segment frontmatter (e.g., `stage: draft`) and in the OUTLINE.md index table. `bin/lint-outline` verifies consistency between the two (mismatches, missing/off-vocabulary values, `missing`-vs-file-exists) — **as warnings only, never gate failures**: the stage layer is known to go stale quickly under rearranging, pedagogical reorientation, and continued refinement, and is currently ignored in practice; do not read low stage values as low epistemic strength (that's `status`), and do not alarm over low acceptance counts (Joseph, 2026-07-14 — the gating methodology itself is under reconsideration; see the meta-process review's promotion-terminus question).
 
 | Stage | Meaning | Gate to advance |
 |-------|---------|-----------------|
