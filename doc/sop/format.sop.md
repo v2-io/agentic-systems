@@ -111,7 +111,7 @@ Do not hard-wrap lines just to artificially impose reading width. Let renderers 
 
 ### Segment-set principle (load-bearing for tooling)
 
-**Every non-`old-*` file in a component's `src/` directory is a segment and conforms to the cadence below.** This holds even for drafts, missing-stage entries, or segments orphaned from `OUTLINE.md`. The various stages (`missing`, `old`, `draft`, `deps-verified`, `claims-verified`, `format-clean`, `candidate`) describe progress *within* FORMAT, not exemptions from it.
+**Every non-`old-*` file in a component's `src/` directory is a segment and conforms to the cadence below.** This holds even for drafts, missing-stage entries, or segments orphaned from `OUTLINE.md`. The various stages (`missing`, `old`, `draft`, `deps-verified`, `claims-verified`, `format-clean`, `candidate`) describe progress *within* FORMAT, not exemptions from it. One standing exception: chapter-intro segments and most `disc-*` discussion segments carry a cadence exemption — see the *Document Cadence* section below.
 
 The `old-*` filename prefix is the *only* mechanism for placing a file in `src/` that is exempt from FORMAT. Those are prior-work staging files; they retain their original frontmatter (often with non-AAT `type:` tokens like `Definition`, `Theorem`) until their content is converted. Tooling skips them.
 
@@ -304,6 +304,8 @@ Downgrade to `draft`, not to an intermediate stage — the segment needs full re
 8. **Working Notes** — `## Working Notes` *(optional)*, internal development notes
 
 Definition, notation, and scope-narrowing files may use a simpler format than full claims. Corollaries and alternate formulations can live with their parent claim (they reinforce its independence), but anything that could be referenced independently should be its own file.
+
+**Cadence exemption for intro and discussion segments (Joseph, 2026-07-14).** Chapter-intro segments and most `disc-*` discussion segments are exempt from the full cadence above (in particular `## Formal Expression` and `## Epistemic Status` are not required of them) until dedicated norms for those file kinds are worked out. These files do expository, framing, or meta-architectural work rather than making one formal claim, so the claim-segment cadence is the wrong mold for them; the exemption records that their free-form structure is deliberate, not drift. The math-in-files rules, frontmatter requirements, and OUTLINE membership still apply. When norms for these kinds are authored, they should replace this paragraph.
 
 ### Findings
 
