@@ -47,7 +47,7 @@ This section surfaces what the framework currently acknowledges as open at the o
 - Discussion
 - Discussion
 - Latent structural diversity: variation in correction architectures invisible to persistence analysis, consequential under regime change
-- Endogenous coupling: γ as function of population composition, not exogenous parameter; coupling emergence threshold
+- Endogenous coupling: $\gamma$ as function of population composition, not exogenous parameter; coupling emergence threshold
 - Composition transition dynamics: epochal stability → latent diversification → niche emergence → cascading restructuring → re-equilibration (adopts Miller 2022's extreme transition motif)
 - Computational thresholds for social behavior: minimum agent complexity and interaction depth for composition dynamics (adopts Miller 2022's ICE framework; grounds #form-strategy-complexity-cost)
 

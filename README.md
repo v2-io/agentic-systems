@@ -159,7 +159,7 @@ Some of the framework's distinctive results, with epistemic tiers and links into
 
 ### *Part* Adaptive Systems Under Uncertainty
 
-- **`#result-persistence-condition`** *(status: exact)* — *The Persistence Condition with Structural / Task-Adequacy Decomposition* — *Claim synthesis* on Lyapunov stability theory, sector-bounded nonlinear correction, and adaptive-tempo information-rate accounting, applied uniformly across single-agent classes that range from Kalman filtering through saturating nonlinear correction through PID control.  
+- **`#result-persistence-condition`** *(status: exact)* — *The Persistence Condition with Structural / Task-Adequacy Decomposition* — *Claim novelty* (at intuition-only search depth — see Search Log) on the two-condition decomposition (structural / task-adequacy): an AAT-internal structural carve that cleanly separates "the machinery works" from "the machinery works well enough," with no direct anticipation known; a targeted search of the bounded-rationality and adaptive-control literature is still owed.  
   [`01-aat-core/src/result-persistence-condition.md`](01-aat-core/src/result-persistence-condition.md)
 
 ### *Part* Agentic Systems: Actuated Adaptation
@@ -212,9 +212,11 @@ Some of the framework's distinctive results, with epistemic tiers and links into
   [`01-aat-core/src/deriv-stochastic-non-exit.md`](01-aat-core/src/deriv-stochastic-non-exit.md)
 - **`#deriv-self-actuation-grounding`** *(status: conditional)* — *The Self-Actuation Grounding No-Go and its Adaptive-Substrate Boundary* — *Claim recognition and differentiation.* The degeneracy of unconstrained self-modification (wireheading) is the established Everitt–Hutter line.  
   [`01-aat-core/src/deriv-self-actuation-grounding.md`](01-aat-core/src/deriv-self-actuation-grounding.md)
+- **`#deriv-convention-monotonicity`** *(status: exact)* — *Convention monotonicity is a one-sided guarantee* — *(novelty claim missing — see segment)*  
+  [`01-aat-core/src/deriv-convention-monotonicity.md`](01-aat-core/src/deriv-convention-monotonicity.md)
 - **`#deriv-reward-channel-learning-no-go`** *(status: conditional)* — *The Reward-Channel Learning No-Go and its Two-Cluster Terminal Grounding* — *Claim recognition* of Cohen 2022 as a CHT-at-reward-channel instance of the identifiability-floor pattern, *claim differentiation* of the AAT-side version from the prior-art statement by adding the named-premise structure (R1)–(R5) and the structural escape-menu mapping, and *claim recognition* of the unification with Result G′ via the single-interface commitment of `#form-objective-functional` as the shared structural fact behind two engines (convention-monotonicity within-model; CHT across-model).  
   [`01-aat-core/src/deriv-reward-channel-learning-no-go.md`](01-aat-core/src/deriv-reward-channel-learning-no-go.md)
-- **`#disc-sandbox-evaluation-ceiling`** *(status: discussion-grade)* — *The Sandbox Evaluation Ceiling* — *Application of established machinery* (Pearl 2009 / Bareinboim, Correa, Ibeling & Icard 2022 Causal Hierarchy Theorem) to AAT's singular-trajectory ontology.  
+- **`#disc-sandbox-evaluation-ceiling`** *(status: discussion-grade)* — *The Sandbox Evaluation Ceiling* — *Application of established machinery* (Bareinboim & Pearl 2014 transportability / selection diagrams, resting on the Pearl 2009 / Bareinboim, Correa, Ibeling & Icard 2022 do-calculus and Causal Hierarchy Theorem) to the AI sandbox/deployment evaluation gap.  
   [`01-aat-core/src/disc-sandbox-evaluation-ceiling.md`](01-aat-core/src/disc-sandbox-evaluation-ceiling.md)
 - **`#result-certificate-existence`** *(status: exact)* — *The Contraction-Over-Drift Principle, Grounded* — *Claim recognition* that AAT's one-point sector condition under a free choice of inner product is exactly the converse-Lyapunov certificate, making the framework's contraction-over-drift organizing principle the Lyapunov-theorem equivalence rather than a heuristic.  
   [`01-aat-core/src/result-certificate-existence.md`](01-aat-core/src/result-certificate-existence.md)
@@ -228,6 +230,8 @@ Some of the framework's distinctive results, with epistemic tiers and links into
   [`01-aat-core/src/deriv-observation-ambiguity-bias-bound.md`](01-aat-core/src/deriv-observation-ambiguity-bias-bound.md)
 - **`#disc-partial-coupling-pathways`** *(status: discussion-grade)* — *Partial-Coupling Sub-Typology (Stage × Source × Form)* — *Claim recognition* of the (stage × source × form) sub-typology as the structural complement to Class 1's structure-vs-behavior refinement. *Claim differentiation* on the wrapping-regime correspondence: which wrapping regime suffices for Class 2 → Class 1 coercion is determined by the sub-type's form, not just by the Class label.  
   [`01-aat-core/src/disc-partial-coupling-pathways.md`](01-aat-core/src/disc-partial-coupling-pathways.md)
+- **`#disc-w1-structural-bound-boundary`** *(status: robust-qualitative)* — *The W₁ Structural-Bound Boundary (Certifiability Discontinuity at (C2′))* — *Claim recognition* that the W₁ structural leakage bound's availability is governed by a sharp component-side condition (no goal-correlated cross-call state), with the boundary characterized as a discontinuity in the *validity of the structural certificate* rather than in the agent's leakage behavior — the leakage being continuous, and second-order flat, in the degree of condition-violation.  
+  [`01-aat-core/src/disc-w1-structural-bound-boundary.md`](01-aat-core/src/disc-w1-structural-bound-boundary.md)
 - **`#der-belief-strategy-attractor`** *(status: conditional)* — *Belief-Strategy Attractors From $\Sigma$-Source Coupling (Source Asymmetry)* — *Claim recognition* of the structural source asymmetry as a direct consequence of the orient cascade's topology — strategy is endogenous to belief, objective is exogenous in steady state. *Claim differentiation* on the resulting fixed-point analysis: linearized stability with $K^\ast \to 0$ produces an attractor in the closed-loop dynamics under the $\Sigma$-source case but not under the $O$-source case.  
   [`01-aat-core/src/der-belief-strategy-attractor.md`](01-aat-core/src/der-belief-strategy-attractor.md)
 - **`#disc-dynamic-regime-axis`** *(status: discussion-grade)* — *The Dynamic-Regime Axis as Cross-Cutting Classifier* — *Claim integration* of multi-agent dynamics classifications from at least five neighboring literatures (game-theoretic decomposition; multi-agent learning convergence taxonomy; population games; evolutionary games; mean-field games) into an AAT-internal regime-axis vocabulary that travels with the framework's existing scope-route disjunction (`#scope-composite-agent`), separable-core / structured-repair / general-open shape (`#disc-separability-pattern`), and persistence machinery (`#result-sector-persistence-template`).  
@@ -347,7 +351,7 @@ This section surfaces what the framework currently acknowledges as open at the o
 - Discussion
 - Discussion
 - Latent structural diversity: variation in correction architectures invisible to persistence analysis, consequential under regime change
-- Endogenous coupling: γ as function of population composition, not exogenous parameter; coupling emergence threshold
+- Endogenous coupling: $\gamma$ as function of population composition, not exogenous parameter; coupling emergence threshold
 - Composition transition dynamics: epochal stability → latent diversification → niche emergence → cascading restructuring → re-equilibration (adopts Miller 2022's extreme transition motif)
 - Computational thresholds for social behavior: minimum agent complexity and interaction depth for composition dynamics (adopts Miller 2022's ICE framework; grounds #form-strategy-complexity-cost)
 
