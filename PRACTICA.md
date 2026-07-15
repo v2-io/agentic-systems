@@ -1,7 +1,7 @@
 # PRACTICA
 *Current active areas of work with 🌟 (primary) and ⭐ (secondary) indicating most immediate priorities. In AAT terms, this is the top levels of the strategy DAG.*
 
-> **Live handoff (transient):** resuming the 2026-05-28/29 audit-gem-hunt + SP-landing momentum? Read [`NEXT-UP.md`](NEXT-UP.md) first — it points at what is hot and who-decides-what. Priming-heavy; skip during de-novo audits, and delete it once its queue drains.
+> **Live handoff (transient):** [`NEXT-UP.md`](NEXT-UP.md) (updated 2026-06-30) names what is hot and who-decides-what — read it first when resuming momentum. Priming-heavy; skip during de-novo audits, and delete it once its queue drains.
 
 *This file names the **areas** of active work. The systematic project workflow each area implies — audit cycles, segment refinement and promotion, citation checks, prior-art searches, the named workflow steps below — is mostly not enumerated piece-by-piece. For specific items that don't fit a more systematic home: [`TODO.md`](TODO.md) is the misc-and-details layer (open audit-finding routing decisions, queued spike follow-ups, deferred items, lower-priority specifics). For architectural moves under review: [`PROPOSALS.md`](PROPOSALS.md). Sister-files: [`README.md`](README.md) external-facing snapshot, [`CLAUDE.md`](CLAUDE.md) agent-onboarding, [`CHANGELOG.md`](CHANGELOG.md) historical record. PRACTICA itself is **auditor-safe** — readable during de-novo audits — but linked entries into TODO / PROPOSALS / CHANGELOG are priming-heavy and should be skipped until the initial stages of audits are complete.*
 
@@ -27,7 +27,7 @@ Following the class-coercion-via-wrapping landing and the convergence finding wi
 6. **Identity-through-substrate-transitions** — connect `obs-substrate-independence` / `def-identity-sufficiency` / `def-five-constitutive-factors` to the persistence template across substrate changes. Anticipated segment `#der-substrate-independent-persistence` added to `04-eli-core/OUTLINE.md` as missing.
 7. ~~**Reserved canon decision — Instance-4 / Object-B / CL-2-heavy unification**~~ **INTEGRATED 2026-05-21.** Object B landed as `#der-architecture-noidentifiability` (Kalman-Ho similarity-orbit no-go, dual-anchored on CHT-at-agent-as-SCM); installed as the genuine fourth floor of `#disc-identifiability-floor`; Object A explicitly absorbed in `#disc-additive-coordinate-forcing` as a downstream theorem of (PI) with the floor-vs-coordinate-forcing distinction articulated; CL-2's heavy refinement (the conditional 𝓜/π/cross split / Regime-C confound) discharged as the same object projected onto the disturbance-statistic coordinate. Math-gate repairs from `spikes/.routing-trail/SPIKE-VERIFY-471802/` applied. PROPOSALS §D.9 CLOSED. CHANGELOG 2026-05-21.
 
-Order is recommended; bundle adjustments per cycle. Item 1 (naming refactor) is currently in progress on a parallel agent thread.
+Order is recommended; bundle adjustments per cycle. Item 1's wider naming refactor (the ~500+ R2 rename candidates beyond the landed GUC bundle) is queued but stalled — no execution since ~2026-05-10; see §"Current naming conventions refactor" below.
 
 **Two new register-allowances at the framework level (added 2026-05-09):**
 

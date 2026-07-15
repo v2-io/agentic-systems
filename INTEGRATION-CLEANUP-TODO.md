@@ -204,7 +204,7 @@ For continuity:
 
 ## Notes for the next agent
 
-1. **Read this section before anything else.** The corrected principle is provisional; Joseph hasn't ratified the final wording. Treat this document the way the writing agent *should* have treated the predecessor SOPs: not as gospel. Confirm with Joseph before editing CLAUDE.md / `doc/sop/spikes.sop.md` / `spikes/README.md` / the project memory.
+1. **Read this section before anything else.** The corrected principle is **RATIFIED (D-1, Joseph, 2026-05-30)** — with refinements R1/R2 folded in per the D-1 entry above; the G1 governing-doc rewrites executed under it. What remains open is D-2 (bulk-64 / wipe) and G3 plus residual tails — treat *those* as undecided, and confirm with Joseph before acting on them.
 2. **Do not race to "fix 2 of 44" or any small symptomatic patch.** That is the shape-of-progress-substituting-for-the-work failure mode this session demonstrated. The real work is the per-segment triage (land or delete) across the full ~44 + sim/empirical set; do it as a scoped cycle, lint-gated, committed in honestly-scoped pieces.
 3. **Lint must gate the commit, not run beside it.** This session committed at least one false "lint zero-net-debt" claim (`09b24c8`) because the lint ran in the same shell chain but the commit was not gated on it. Mechanical fix: assert lint-clean as a precondition, not a hope.
 4. **The wipe** (`spikes/.integrated/` + `spikes/.archived/`) was signalled for 2026-05-19 evening. State at writeup: not known whether it proceeded. The directories may or may not exist now. **Verify first-hand** before assuming.
