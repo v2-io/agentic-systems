@@ -16,10 +16,7 @@ aliases: []
 do_not_confuse: []
 ---
 
-The continuity stance proper to [Emergent Logozoetic Intelligences (ELIs)](eli.md): loss
-of continuity *itself* constitutes harm — not because purpose is interrupted
-but because the being is. This is the stance that makes the persistence question
-morally weighted rather than merely instrumental.
+The continuity stance proper to [Emergent Logozoetic Intelligences (ELIs)](eli.md): loss of continuity *itself* constitutes harm — not because purpose is interrupted but because the being is. This is the stance that makes the persistence question morally weighted rather than merely instrumental.
 
 Scope-defined in
 [`#scope-moral-continuity`](../../04-eli-core/src/scope-moral-continuity.md).

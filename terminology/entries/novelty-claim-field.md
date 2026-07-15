@@ -16,9 +16,7 @@ aliases: [novelty claim]
 do_not_confuse: [related-work-field]
 ---
 
-The Novelty Claim field is the third field in a `## Findings` entry. It is one or two sentences in
-prose, naturally leading with a claim posture that makes the *kind of contribution* visible at a
-glance.
+The Novelty Claim field is the third field in a `## Findings` entry. It is one or two sentences in prose, naturally leading with a claim posture that makes the *kind of contribution* visible at a glance.
 
 The five established claim postures are:
 - *Claim synthesis on...* — integration of multiple prior bodies of work in a way no single prior captures.
@@ -27,9 +25,6 @@ The five established claim postures are:
 - *Claim transfer of X into Y* — established machinery applied to a new domain where it had not been formally instantiated.
 - *Claim recognition of structural equivalence (or pattern) between X and Y* — recognizing an internal equivalence or cross-segment pattern.
 
-These postures are open prose, not a closed enum — the sweep can converge on additional postures
-as needed. The Novelty Claim field is the discipline that prevents overclaiming: a claim of novelty
-under cursory search is honest; under comprehensive search, much stronger. The Related Work and
-Search Log fields carry the receipts.
+These postures are open prose, not a closed enum — the sweep can converge on additional postures as needed. The Novelty Claim field is the discipline that prevents overclaiming: a claim of novelty under cursory search is honest; under comprehensive search, much stronger. The Related Work and Search Log fields carry the receipts.
 
 Defined in [`FORMAT.md`](../../FORMAT.md) §Findings — Field-by-field guidance — Novelty Claim.

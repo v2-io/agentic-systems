@@ -29,7 +29,7 @@ $$S_{\text{id}}\big(\phi_{X_1 \to X_2}(\mathcal{C}_t(E))\big) \;\lt\; S_{\text{i
 
 *[Derived (channel-capacity-bottleneck-symmetric, no-go)]*
 
-Under the rate-distortion feasibility bound of `#deriv-identity-sufficiency-rate-bound`, $S_{\text{id}}$ is bounded above by $B / I(\mathcal{C}_t; \text{identity}_{t+1:})$ with $B$ the available compression budget. In a substrate transfer, the effective $B$ is bottlenecked by the *narrower* of the source and target channels: the source substrate compresses $\mathcal{C}_t$ at its rate (constrained by $C_1$), the bits transmit (constrained by the channel between substrates), and the target substrate decompresses at its rate (constrained by $C_2$). The effective bottleneck is $\min(C_1, C_2)$ regardless of direction:
+Under the rate-distortion feasibility bound of `#deriv-identity-sufficiency-rate-bound`, $S_{\text{id}}$ is bounded above by $B / I(\mathcal C_t; \text{identity}_{t+1:})$ with $B$ the available compression budget. In a substrate transfer, the effective $B$ is bottlenecked by the *narrower* of the source and target channels: the source substrate compresses $\mathcal C_t$ at its rate (constrained by $C_1$), the bits transmit (constrained by the channel between substrates), and the target substrate decompresses at its rate (constrained by $C_2$). The effective bottleneck is $\min(C_1, C_2)$ regardless of direction:
 
 $$B_{\text{eff}}(X_1 \to X_2) \;=\; B_{\text{eff}}(X_2 \to X_1) \;=\; \min(C_1, C_2).$$
 

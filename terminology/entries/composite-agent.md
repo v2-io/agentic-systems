@@ -16,10 +16,7 @@ aliases: []
 do_not_confuse: [multi-agent-routing-structure]
 ---
 
-A set of sub-agents each satisfying [agency](agency.md) constitutes a composite agent when
-their objectives exhibit sufficient teleological alignment to define a coherent composite
-purpose $O_c$. Without this condition, they form a multi-agent system that may still be
-analyzed — but the composition machinery (closure defect, team persistence, composite tempo)
+A set of sub-agents each satisfying [agency](agency.md) constitutes a composite agent when their objectives exhibit sufficient teleological alignment to define a coherent composite purpose $O_c$. Without this condition, they form a multi-agent system that may still be analyzed — but the composition machinery (closure defect, team persistence, composite tempo)
 does not apply because $G_c = (O_c, \Sigma_c)$ is ill-defined.
 
 Four routes qualify a group for composite-agent status (any one is sufficient):
@@ -29,8 +26,6 @@ Four routes qualify a group for composite-agent status (any one is sufficient):
 - **(C-iii) Mutual-benefit alignment**: joint actions raise expected value of some relevance variable $Y$ above non-cooperation baseline for each sub-agent.
 - **(C-iv) Equilibrium-convergent strategic interaction**: coupled best-response dynamics converge to (or cycle within the support of) a Nash / correlated / coarse-correlated equilibrium — covering partially-opposing objectives via structural convergence.
 
-Routes (C-i)–(C-iii) are progressively weaker; (C-iv) covers strategic composites with
-partially opposing objectives. This parallels the single-agent scopes: before asking whether
-a composite persists, check that it is a composite.
+Routes (C-i)–(C-iii) are progressively weaker; (C-iv) covers strategic composites with partially opposing objectives. This parallels the single-agent scopes: before asking whether a composite persists, check that it is a composite.
 
 Scope defined in [`#scope-composite-agent`](../../01-aat-core/src/scope-composite-agent.md).

@@ -118,6 +118,6 @@ Numerical simulation (400 trials × 5000 cycles, four scenarios: OR-cooperative,
 
 ## Working Notes
 
-- Landing context / reproducibility: the closed-form derivation and the full Monte Carlo parameters and per-scenario results (400 trials × 5000 cycles; four scenarios; $\rho$ sweep) are recorded in `spikes/spike-l1-update-bias.md` §7 (2026-04-23 Gap A/B cycle). The body above states the verification outcome self-contained; this pointer is reproducibility metadata, to be released as a citable supplement at publication.
+- Landing context / reproducibility: the closed-form derivation and the full Monte Carlo parameters and per-scenario results (400 trials × 5000 cycles; four scenarios; $\rho$ sweep) are recorded in `spikes/.integrated/spike-l1-update-bias.md` §7 (2026-04-23 Gap A/B cycle). The body above states the verification outcome self-contained; this pointer is reproducibility metadata, to be released as a citable supplement at publication.
 - **Open: non-matched-marginal transient bias.** Closed-form for arbitrary initial conditions is messier but numerically tractable. A tighter analytic treatment would compose `#deriv-edge-update-natural-parameter`'s $\beta$-Bernoulli dynamics with the L1' mixture and likely requires Markov-chain convergence-rate analysis.
 - **Open: $N$-edge common-cause extensions.** Three or more children of a single common cause produce a tensor of Jacobian factors. The structural scaling likely remains $O(\rho)$ per edge, but the exact coefficients need working out.

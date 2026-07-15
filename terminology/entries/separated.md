@@ -35,17 +35,9 @@ axis. A Separated agent's epistemic update $f_M$ is goal-blind by construction: 
 argument, and the directed-separation condition of
 [`#der-directed-separation`](../../01-aat-core/src/der-directed-separation.md) holds structurally.
 
-The "by construction" qualifier matters. A Separated agent may be tightly integrated at the system
-level — what distinguishes it is that the belief-update computation is architecturally forbidden from
-reading the goal state, not merely that it happens to be well-behaved. This is the property that makes
-Part II's theoretical results applicable without further qualification.
+The "by construction" qualifier matters. A Separated agent may be tightly integrated at the system level — what distinguishes it is that the belief-update computation is architecturally forbidden from reading the goal state, not merely that it happens to be well-behaved. This is the property that makes Part II's theoretical results applicable without further qualification.
 
 Separation can be implemented natively (the component is inherently goal-blind) or via W₁ wrapping
-(the scaffold enforces the query boundary). W₂ wrapping achieves separation *behaviorally* — the
-resulting composite is Class 1 by behavior rather than by structure, with a residual leakage rate that
-lacks a derivable structural upper bound. See [wrapping-regime](wrapping-regime.md) for the structural
-vs. behavioral sub-distinction.
+(the scaffold enforces the query boundary). W₂ wrapping achieves separation *behaviorally* — the resulting composite is Class 1 by behavior rather than by structure, with a residual leakage rate that lacks a derivable structural upper bound. See [wrapping-regime](wrapping-regime.md) for the structural vs. behavioral sub-distinction.
 
-Where Separated agents cannot be used directly (e.g., because the underlying component is a
-goal-conditioned LLM — Class 3 Coupled), the [class-coercion](class-coercion.md) construction can
-produce a Class-1-at-the-wrapper-level composite at a tempo cost.
+Where Separated agents cannot be used directly (e.g., because the underlying component is a goal-conditioned LLM — Class 3 Coupled), the [class-coercion](class-coercion.md) construction can produce a Class-1-at-the-wrapper-level composite at a tempo cost.

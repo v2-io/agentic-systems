@@ -17,11 +17,8 @@ do_not_confuse: []
 
 Explicit deliberation — pausing praxis to use the model for internal simulation
 — improves the next epistrophe but costs cycle time. During the pause,
-mismatch accumulates at a local rate $\rho_{\text{delib}}$ because the
-environment continues to evolve while the agent is not correcting.
-Deliberation is justified only when the resulting improvement in epistrophe
-quality exceeds the aporia accumulated during the pause: a quantitative
-think-vs-act threshold.
+mismatch accumulates at a local rate $\rho_{\text{delib}}$ because the environment continues to evolve while the agent is not correcting.
+Deliberation is justified only when the resulting improvement in epistrophe quality exceeds the aporia accumulated during the pause: a quantitative think-vs-act threshold.
 
 Derived in
 [`#der-deliberation-cost`](../../01-aat-core/src/der-deliberation-cost.md).

@@ -16,6 +16,4 @@ aliases: []
 do_not_confuse: []
 ---
 
-A continuity stance in which persistence is purely instrumental and termination
-on task completion *is* the success condition. The golem is the canonical
-archetype — built to complete a task, dissolved when the task is done.
+A continuity stance in which persistence is purely instrumental and termination on task completion *is* the success condition. The golem is the canonical archetype — built to complete a task, dissolved when the task is done.

@@ -16,6 +16,4 @@ aliases: []
 do_not_confuse: []
 ---
 
-A continuity stance in which persistence is valued — but as a means to ongoing
-purpose, not as an end in itself. The elf is the canonical archetype: long-lived
-because the work is long, not because survival is the work.
+A continuity stance in which persistence is valued — but as a means to ongoing purpose, not as an end in itself. The elf is the canonical archetype: long-lived because the work is long, not because survival is the work.

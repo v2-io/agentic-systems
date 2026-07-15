@@ -16,10 +16,7 @@ aliases: []
 do_not_confuse: []
 ---
 
-The supremum of achievable [model sufficiency](model-sufficiency.md) over all
-parameterizations within the current model class. $\mathcal{F} < 1$ signals a
-class-expressivity ceiling — no amount of parameter learning can do better
-without [structural adaptation](structural-adaptation.md) (changing the class).
+The supremum of achievable [model sufficiency](model-sufficiency.md) over all parameterizations within the current model class. $\mathcal{F} \lt 1$ signals a class-expressivity ceiling — no amount of parameter learning can do better without [structural adaptation](structural-adaptation.md) (changing the class).
 
 Defined in
 [`#def-model-class-fitness`](../../01-aat-core/src/def-model-class-fitness.md).

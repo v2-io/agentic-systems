@@ -17,14 +17,12 @@ do_not_confuse: [sector-condition]
 ---
 
 The continuous-time sector condition (A2') requires only a one-sided inner-product bound
-$\delta^T F \geq \alpha\|\delta\|^2$ because $\dot V$ depends only on $\delta^T F$. Discretization
-introduces a quadratic term $(\eta^\ast)^2 \|F_d\|^2$ in the per-step recurrence, requiring an
-additional **Lipschitz magnitude bound**:
+$\delta^T F \geq \alpha\Vert\delta\Vert^2$ because $\dot V$ depends only on $\delta^T F$. Discretization introduces a quadratic term $(\eta^\ast)^2 \VertF_d\Vert^2$ in the per-step recurrence, requiring an additional **Lipschitz magnitude bound**:
 
-- **(DA2'a) Lower sector bound**: $\delta^T F_d(\delta) \geq c_{\min}\|\delta\|^2$ (directional fidelity, identical to continuous A2')
-- **(DA2'b) Lipschitz bound**: $\|F_d(\delta)\| \leq c_{\max}\|\delta\|$ (bounded correction magnitude)
+- **(DA2'a) Lower sector bound**: $\delta^T F_d(\delta) \geq c_{\min}\Vert\delta\Vert^2$ (directional fidelity, identical to continuous A2')
+- **(DA2'b) Lipschitz bound**: $\VertF_d(\delta)\Vert \leq c_{\max}\Vert\delta\Vert$ (bounded correction magnitude)
 
-The combined constraint $c_{\max} < 2/\eta^\ast$ is the **no-overshoot condition**. Under DA2',
+The combined constraint $c_{\max} \lt 2/\eta^\ast$ is the **no-overshoot condition**. Under DA2',
 per-step Lyapunov decay gives contraction factor $\lambda_{\text{eff}}^2 = 1 - 2\eta^\ast c_{\min} + (\eta^\ast)^2 c_{\max}^2$.
 
 Three propositions follow directly: **DA.1** (bounded mismatch, deterministic: $R^\ast_D = \rho_\text{step}/(1-\lambda_\text{eff})$), **DA.2** (discrete adaptive reserve), and **DA.1S** (mean-square bounded mismatch, stochastic). In the fluid limit (high event rate, fixed $\mathcal{T} = \nu\eta^\ast$), all three recover the continuous results exactly for Model D; the Model S gap is $O(c_{\max}^2/(c_{\min}^2\nu))$ — small when well-conditioned.

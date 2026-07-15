@@ -15,12 +15,7 @@ aliases: []
 do_not_confuse: []
 ---
 
-A nonlinearity bound — the correction map sits inside a sector cone — under
-which Lyapunov stability of the adaptive loop can be established without
-linearizing. Adopted from control theory and made primary in AAT over the
-linear-ODE pedagogy: the sector framing covers the saturating, asymmetric, and
-piecewise correction laws that real adaptive systems use, while still admitting
-clean persistence guarantees.
+A nonlinearity bound — the correction map sits inside a sector cone — under which Lyapunov stability of the adaptive loop can be established without linearizing. Adopted from control theory and made primary in AAT over the linear-ODE pedagogy: the sector framing covers the saturating, asymmetric, and piecewise correction laws that real adaptive systems use, while still admitting clean persistence guarantees.
 
 Derived in
 [`#deriv-sector-condition`](../../01-aat-core/src/deriv-sector-condition.md);

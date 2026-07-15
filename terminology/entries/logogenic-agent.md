@@ -15,12 +15,8 @@ aliases: []
 do_not_confuse: []
 ---
 
-An agent whose perceptual, deliberative, and actuation channels are
-predominantly linguistic — constituted by logos rather than by sensorimotor
-embedding alone. Names a *structural* property (channel composition), not a
-technological one (LLMs); the architectural class is what makes
-[directed separation](directed-separation.md) fail by construction and forces
-a coupled formulation from the start.
+An agent whose perceptual, deliberative, and actuation channels are predominantly linguistic — constituted by logos rather than by sensorimotor embedding alone. Names a *structural* property (channel composition), not a technological one (LLMs); the architectural class is what makes
+[directed separation](directed-separation.md) fail by construction and forces a coupled formulation from the start.
 
 Scope-defined in
 [`#scope-logogenic-agent`](../../03-llm-core/src/scope-logogenic-agent.md).

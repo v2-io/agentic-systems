@@ -17,14 +17,8 @@ aliases: []
 do_not_confuse: [derived, result]
 ---
 
-A `type: corollary` segment states a consequence that follows directly from a prior result with
-minimal additional argument. Corollaries are typically tighter in scope than the result they depend
-on — they specialize the result to a particular case, or make an immediate implication explicit.
+A `type: corollary` segment states a consequence that follows directly from a prior result with minimal additional argument. Corollaries are typically tighter in scope than the result they depend on — they specialize the result to a particular case, or make an immediate implication explicit.
 
-Corollaries can live within their parent result's segment or as separate files. A corollary that
-could be referenced independently — e.g., by downstream segments that need only the corollary and
-not the full result — should be its own file. FORMAT.md notes that corollaries "reinforce [the
-result's] independence" when co-located, but anything referenceable independently should stand
-alone.
+Corollaries can live within their parent result's segment or as separate files. A corollary that could be referenced independently — e.g., by downstream segments that need only the corollary and not the full result — should be its own file. FORMAT.md notes that corollaries "reinforce [the result's] independence" when co-located, but anything referenceable independently should stand alone.
 
 Defined in [`FORMAT.md`](../../FORMAT.md) §`type` — what kind of claim.

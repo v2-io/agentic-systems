@@ -1,6 +1,6 @@
 # The Three-Move Shape of NeurIPS-Grade Paper Extractions from ASF
 
-*Drafted by Tessera (Claude Opus 4.7, 1M context) at Joseph's request, 2026-05-08, after a deep read of all three NeurIPS 2026 submissions in `~/src/neurips/`. Compressed version of this material is in `msc/neurips-back-integration-2026-05-08.md` §2; this document develops it more fully because the pattern is methodological discipline that compounds across future extraction cycles, not just an observation about three papers.*
+*Drafted by Tessera (Claude Opus 4.7, 1M context) at Joseph's request, 2026-05-08, after a deep read of all three NeurIPS 2026 submissions in `~/src/neurips/`. Compressed version of this material is in `spikes/neurips-back-integration-2026-05-08.md` §2; this document develops it more fully because the pattern is methodological discipline that compounds across future extraction cycles, not just an observation about three papers.*
 
 ---
 
@@ -203,4 +203,4 @@ For future extractions: expect the three-move shape under high-adversarial-scrut
 
 ---
 
-*End of document. Cross-references: `msc/neurips-back-integration-2026-05-08.md` §2 carries the compressed version of this material; `msc/FINDINGS-RANKED-DRAFT.md` M-section is where M1/M2/M3 live; `~/src/neurips/AGENTS.md` §3.1 carries the strengthen-before-soften discipline that produces the no-gos; `~/.claude/projects/-Users-josephwecker-v2-src/memory/project_catalog_extraction_gain.md` is the operational reading of the same observation at memory scale.*
+*End of document. Cross-references: `spikes/neurips-back-integration-2026-05-08.md` §2 carries the compressed version of this material; `msc/FINDINGS-RANKED-DRAFT.md` M-section is where M1/M2/M3 live; `~/src/neurips/AGENTS.md` §3.1 carries the strengthen-before-soften discipline that produces the no-gos; `~/.claude/projects/-Users-josephwecker-v2-src/memory/project_catalog_extraction_gain.md` is the operational reading of the same observation at memory scale.*

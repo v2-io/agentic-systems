@@ -17,17 +17,10 @@ aliases: []
 do_not_confuse: [targeted, not-conducted]
 ---
 
-`cursory` is the search log depth tier indicating a brief initial literature search — enough to
-surface obvious precursors and well-known related work, but not deep enough to support a confident
-novelty claim. A novelty posture under cursory search is honest about that limitation.
+`cursory` is the search log depth tier indicating a brief initial literature search — enough to surface obvious precursors and well-known related work, but not deep enough to support a confident novelty claim. A novelty posture under cursory search is honest about that limitation.
 
-Cursory search is a useful starting point: it catches the cases where the relevant prior work is
-immediately findable (a canonical text, a standard reference) and prevents obvious errors. It is
-not sufficient for the `novelty` posture in a Finding that will be published — that requires at
-least `targeted` depth and ideally `nominally-comprehensive`.
+Cursory search is a useful starting point: it catches the cases where the relevant prior work is immediately findable (a canonical text, a standard reference) and prevents obvious errors. It is not sufficient for the `novelty` posture in a Finding that will be published — that requires at least `targeted` depth and ideally `nominally-comprehensive`.
 
-The Search Log entry at `cursory` depth should note what was searched (which databases, which
-queries, which citation networks) and what was not, so future agents can identify where to focus
-deeper search.
+The Search Log entry at `cursory` depth should note what was searched (which databases, which queries, which citation networks) and what was not, so future agents can identify where to focus deeper search.
 
 Defined in [`FORMAT.md`](../../FORMAT.md) §Findings — Field-by-field guidance — Search Log.

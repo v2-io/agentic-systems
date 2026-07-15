@@ -35,7 +35,7 @@ To diagnose *why* an agent is exhibiting a specific mismatch trajectory, the fol
    - *Defensive Rigidity:* The agent resists all corrections regardless of evidence ($\eta^\ast \to 0$).
 
 2. **Tempo Adequacy (Measuring $\mathcal{T}$):**
-   Can the agent keep up with the environment? This is measured via **Staleness Detection**. If certain categories of belief in the agent's externalized memory ($\mathcal{E}_{\text{ext}}$) are systematically outdated, that specific dimension has failed the persistence condition ($\mathcal{T}_k \lt \rho_k / \Vert\delta_{\text{critical},k}\Vert$).
+   Can the agent keep up with the environment? This is measured via **Staleness Detection**. If certain categories of belief in the agent's externalized memory ($\mathcal E_{\text{ext}}$) are systematically outdated, that specific dimension has failed the persistence condition ($\mathcal T_k \lt \rho_k / \Vert\delta_{\text{critical},k}\Vert$).
 
 3. **Structural Adequacy (Measuring $\Sigma_t$ and $\mathcal{F}$):**
    Are the agent's learned strategies and frameworks effective? This is measured via **Persistent Structured Residuals**. If the agent consistently makes the exact same *type* of strategic error across different specific tasks, its underlying strategy DAG or prompting architecture has hit its fitness ceiling and requires structural adaptation.

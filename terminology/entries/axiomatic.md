@@ -16,14 +16,8 @@ aliases: []
 do_not_confuse: []
 ---
 
-`status: axiomatic` indicates that a segment's claim is true by definition or foundational
-stipulation — there is nothing deeper to derive it from within the framework. Definitions and
-postulates typically carry this status: a definition *constitutes* the thing being defined, and a
-postulate is *accepted* as foundational.
+`status: axiomatic` indicates that a segment's claim is true by definition or foundational stipulation — there is nothing deeper to derive it from within the framework. Definitions and postulates typically carry this status: a definition *constitutes* the thing being defined, and a postulate is *accepted* as foundational.
 
-"Axiomatic" does not mean universally necessary or philosophically certain — it means the claim
-is the starting point *within AAT*. Other choices are possible; AAT begins here. The distinction
-from `exact` is that `exact` claims are derived from prior objects, while `axiomatic` claims are
-the prior objects themselves.
+"Axiomatic" does not mean universally necessary or philosophically certain — it means the claim is the starting point *within AAT*. Other choices are possible; AAT begins here. The distinction from `exact` is that `exact` claims are derived from prior objects, while `axiomatic` claims are the prior objects themselves.
 
 Defined in [`FORMAT.md`](../../FORMAT.md) §`status` — epistemic strength.

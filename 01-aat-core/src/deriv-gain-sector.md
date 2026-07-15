@@ -291,7 +291,7 @@ For optimal Bayesian updates, B1 holds by construction, making the full chain a 
 - The fluid-limit gap: the bridge analysis works in expected value. The actual per-step correction is stochastic; observation noise $\varepsilon$ contributes $K\varepsilon$ to each update, acting as effective disturbance of magnitude $\lVert K\rVert \sigma_\varepsilon$ per step. This maps to the Prop A.1S (stochastic) framework — the sector condition on the expected correction plus stochastic noise.
 - For variational inference and other approximate methods, B1 is not guaranteed by optimality and must be verified per approximation scheme.
 - The adaptive-reserve factorization for gradient agents is $\Delta\rho^\ast = \eta\mu R - \rho$, with three controllable factors: gain $\eta$, curvature $\mu$, and basin width $R$. An agent is robust when $\eta\mu R \gg \rho$.
-- Full simulation code, raw traces, and intermediate analysis live in `spikes/spike-gain-sector-bridge-nonlinear.md`; the segment carries the parameters and outcomes that establish the result. Landing-context provenance: this segment consolidates `spikes/spike-gain-sector-bridge.md` (Kalman / bridge theorem) and `spikes/spike-gain-sector-bridge-nonlinear.md` (gradient equivalence and the six experiments).
+- Full simulation code, raw traces, and intermediate analysis live in `spikes/.integrated/spike-gain-sector-bridge-nonlinear.md`; the segment carries the parameters and outcomes that establish the result. Landing-context provenance: this segment consolidates `spikes/.integrated/spike-gain-sector-bridge.md` (Kalman / bridge theorem) and `spikes/.integrated/spike-gain-sector-bridge-nonlinear.md` (gradient equivalence and the six experiments).
 
 ### Incidental audit gold (gold-lift, 2026-05-31)
 

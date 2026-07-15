@@ -17,15 +17,9 @@ aliases: []
 do_not_confuse: []
 ---
 
-A `type: scope` segment explicitly marks a boundary: what the framework applies to, what it
-excludes, or what conditions must hold for subsequent claims to be valid. Scope segments are
-foundational bookkeeping — they prevent downstream claims from being read more broadly than
-intended, and they license the use of certain simplifications or assumptions within their
-stated boundary.
+A `type: scope` segment explicitly marks a boundary: what the framework applies to, what it excludes, or what conditions must hold for subsequent claims to be valid. Scope segments are foundational bookkeeping — they prevent downstream claims from being read more broadly than intended, and they license the use of certain simplifications or assumptions within their stated boundary.
 
-Scope segments often carry `status: axiomatic` or `status: exact` because the scope is a
-stipulation rather than a derivation. A scope segment that asserts something falsifiable about
-the world (e.g., "real software systems have property P") should instead be typed `empirical`
+Scope segments often carry `status: axiomatic` or `status: exact` because the scope is a stipulation rather than a derivation. A scope segment that asserts something falsifiable about the world (e.g., "real software systems have property P") should instead be typed `empirical`
 or `hypothesis`.
 
 Defined in [`FORMAT.md`](../../FORMAT.md) §`type` — what kind of claim.

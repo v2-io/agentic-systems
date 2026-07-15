@@ -17,17 +17,10 @@ aliases: [claim differentiation]
 do_not_confuse: [novelty-posture, synthesis-posture]
 ---
 
-The differentiation posture is used in the Novelty Claim field when a precursor exists — prior
-work has already addressed this area — but the finding sharpens, extends, or tightens it in a
-specific way that the prior did not achieve. The contribution is the extension, not the territory.
+The differentiation posture is used in the Novelty Claim field when a precursor exists — prior work has already addressed this area — but the finding sharpens, extends, or tightens it in a specific way that the prior did not achieve. The contribution is the extension, not the territory.
 
-Prose form: *"Claim differentiation on..."* followed by what prior work exists, what was lacking
-or approximate in it, and what the finding adds. The "on" phrase names the domain or prior result
-being extended.
+Prose form: *"Claim differentiation on..."* followed by what prior work exists, what was lacking or approximate in it, and what the finding adds. The "on" phrase names the domain or prior result being extended.
 
-This posture is epistemically honest: it acknowledges the prior, claims the extension, and
-positions the finding accurately relative to what came before. It is preferable to the novelty
-posture when a close prior exists, even if the extension is genuinely substantial — accurate
-prior-art attribution is part of the framework's epistemic character.
+This posture is epistemically honest: it acknowledges the prior, claims the extension, and positions the finding accurately relative to what came before. It is preferable to the novelty posture when a close prior exists, even if the extension is genuinely substantial — accurate prior-art attribution is part of the framework's epistemic character.
 
 Defined in [`FORMAT.md`](../../FORMAT.md) §Findings — Novelty Claim.

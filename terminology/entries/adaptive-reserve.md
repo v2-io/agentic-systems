@@ -16,11 +16,8 @@ aliases: []
 do_not_confuse: []
 ---
 
-The headroom between currently observed disturbance and the maximum the
-correction machinery can absorb while still satisfying the persistence
-condition: $\Delta\rho^\ast = \alpha R - \rho$. Operational state lies *inside*
-the structural guarantee when the reserve is positive; agents track the reserve
-to anticipate when persistence is about to fail.
+The headroom between currently observed disturbance and the maximum the correction machinery can absorb while still satisfying the persistence condition: $\Delta\rho^\ast = \alpha R - \rho$. Operational state lies *inside*
+the structural guarantee when the reserve is positive; agents track the reserve to anticipate when persistence is about to fail.
 
 Stated alongside the persistence condition in
 [`#result-persistence-condition`](../../01-aat-core/src/result-persistence-condition.md).

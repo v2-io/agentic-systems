@@ -17,10 +17,7 @@ aliases: [empirical]
 do_not_confuse: [status-empirical, hypothesis, observation]
 ---
 
-A `type: empirical` segment states a generalization that is supported by data, simulation, or
-practical observation, but whose formal derivation from the AAT axioms is either absent or
-impossible in principle (because the claim is fundamentally about how the world behaves, not what
-the formalism forces).
+A `type: empirical` segment states a generalization that is supported by data, simulation, or practical observation, but whose formal derivation from the AAT axioms is either absent or impossible in principle (because the claim is fundamentally about how the world behaves, not what the formalism forces).
 
 The slug `type-empirical` distinguishes this as a *segment type* value from [`status-empirical`](status-empirical.md),
 which is a *frontmatter status* value. Both exist; they are used differently.

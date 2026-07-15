@@ -3,8 +3,8 @@ slug: structural-persistence
 schema_version: 1
 term: structural persistence
 name: Structural
-notation: "$\\alpha > \\rho / R$"
-brief: The correction machinery's *capacity* to maintain bounded mismatch — $\alpha > \rho / R$.
+notation: "$\\alpha \gt \\rho / R$"
+brief: The correction machinery's *capacity* to maintain bounded mismatch — $\alpha \gt \rho / R$.
 layer: prose-symbol
 status: canon
 tags: [continuity]
@@ -17,9 +17,7 @@ aliases: []
 do_not_confuse: []
 ---
 
-The structural sense of persistence: whether the correction machinery has
-sufficient gain $\alpha$ relative to disturbance rate $\rho$ and recovery
-budget $R$ — $\alpha > \rho/R$ — to keep the mismatch bounded *in principle*.
+The structural sense of persistence: whether the correction machinery has sufficient gain $\alpha$ relative to disturbance rate $\rho$ and recovery budget $R$ — $\alpha \gt \rho/R$ — to keep the mismatch bounded *in principle*.
 A property of the architecture, not of the agent's current trajectory.
 
 Stated in the persistence-condition result

@@ -33,7 +33,7 @@ For (A2)–(A4) of `#form-composition-closure` to hold at the wrapper level, the
 
 *[Conditions (wrapper-design)]*
 
-**(D-A2)** The wrapper commits to a prediction map $\hat o_W : \mathcal{X}_M \times \mathcal{A}_W \to \mathcal{O}_W$ so that macro-mismatch $\delta_W = o_W - \hat o_W$ is well-defined.
+**(D-A2)** The wrapper commits to a prediction map $\hat o_W : \mathcal X_M \times \mathcal A_W \to \mathcal O_W$ so that macro-mismatch $\delta_W = o_W - \hat o_W$ is well-defined.
 
 **(D-A3)** $f_M$ supports a gain interpretation per `#def-adaptive-tempo`. Holds for Tier-1 belief-update maps — Bayesian on exponential families, gradient on strongly convex losses, linear-PD with bounded gain. Tier-2/3 cases inherit the corresponding tier-restricted scope from `#deriv-sector-condition`.
 

@@ -15,13 +15,7 @@ aliases: []
 do_not_confuse: []
 ---
 
-Adaptation that revises the *model class* $\mathcal{M}$ itself, not only the
-parameters of a model already inside it. When [model class
-fitness](model-class-fitness.md) $\mathcal{F}(\mathcal{M}) < 1$ — when no model
-in the current class can adequately represent reality — parametric adaptation
-hits a floor that no further updating can lower; structural adaptation is then
-necessary, not optional. Operationally, it is a higher-order cycle: the
-ordinary adaptive cycle operates on $M_t$; structural adaptation operates on
+Adaptation that revises the *model class* $\mathcal{M}$ itself, not only the parameters of a model already inside it. When [model class fitness](model-class-fitness.md) $\mathcal{F}(\mathcal{M}) \lt 1$ — when no model in the current class can adequately represent reality — parametric adaptation hits a floor that no further updating can lower; structural adaptation is then necessary, not optional. Operationally, it is a higher-order cycle: the ordinary adaptive cycle operates on $M_t$; structural adaptation operates on
 $\mathcal{M}$.
 
 Derived in

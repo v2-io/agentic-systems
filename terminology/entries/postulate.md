@@ -17,11 +17,7 @@ aliases: []
 do_not_confuse: []
 ---
 
-A `type: postulate` segment introduces a claim that is accepted as foundational rather than derived
-from prior claims. Postulates are not treated as axioms in the pure-mathematics sense — AAT does not
-claim foundational mathematical originality — but they serve as the bedrock on which derived results
-and definitions rest. The label avoids "axiom" to preserve epistemic honesty: the claims are
-accepted rather than proved, but they are not foundational in a universal sense.
+A `type: postulate` segment introduces a claim that is accepted as foundational rather than derived from prior claims. Postulates are not treated as axioms in the pure-mathematics sense — AAT does not claim foundational mathematical originality — but they serve as the bedrock on which derived results and definitions rest. The label avoids "axiom" to preserve epistemic honesty: the claims are accepted rather than proved, but they are not foundational in a universal sense.
 
 Named equation-level tags use `*[Postulate (slug)]*` to mark postulate equations inline.
 

@@ -15,12 +15,7 @@ aliases: []
 do_not_confuse: []
 ---
 
-The structural topology that makes adaptation possible: a persistent causal
-coupling between agent and environment, in which the agent's outputs become
-inputs to subsequent perception. Distinguished from a [cycle](cycle.md), which
-is one *traversal* of the loop; the loop is the *closed pathway* that admits
-many cycles.
+The structural topology that makes adaptation possible: a persistent causal coupling between agent and environment, in which the agent's outputs become inputs to subsequent perception. Distinguished from a [cycle](cycle.md), which is one *traversal* of the loop; the loop is the *closed pathway* that admits many cycles.
 
 See
-[`#scope-adaptive-system`](../../01-aat-core/src/scope-adaptive-system.md) for
-the loop as the defining feature of adaptive systems.
+[`#scope-adaptive-system`](../../01-aat-core/src/scope-adaptive-system.md) for the loop as the defining feature of adaptive systems.

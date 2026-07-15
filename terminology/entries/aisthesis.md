@@ -16,9 +16,7 @@ aliases: ["αἴσθησις"]
 do_not_confuse: []
 ---
 
-The second phase of the adaptive cycle: the observation $o_t$ arrives — raw
-contact with reality, prior to any comparison with the model's prior
-prediction. Etymologically Greek for "sense-perception" or "what is felt."
+The second phase of the adaptive cycle: the observation $o_t$ arrives — raw contact with reality, prior to any comparison with the model's prior prediction. Etymologically Greek for "sense-perception" or "what is felt."
 
 See
 [`#def-observation-function`](../../01-aat-core/src/def-observation-function.md)

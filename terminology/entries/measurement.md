@@ -18,12 +18,8 @@ do_not_confuse: [definition, observation]
 ---
 
 A `type: measurement` segment specifies how to operationalize a theoretically defined quantity —
-bridging the formal definition to practical measurement or estimation in real systems. A definition
-says *what* a quantity is; a measurement segment says *how* to estimate or observe it in practice.
+bridging the formal definition to practical measurement or estimation in real systems. A definition says *what* a quantity is; a measurement segment says *how* to estimate or observe it in practice.
 
-Measurement segments are important for connecting AAT's formalism to empirical work: a
-quantity that has no operationalization cannot be tested. The measurement's validity depends on
-how faithfully it tracks the theoretical quantity it purports to measure — this relationship is the
-segment's central epistemic claim and should be stated explicitly in the Epistemic Status section.
+Measurement segments are important for connecting AAT's formalism to empirical work: a quantity that has no operationalization cannot be tested. The measurement's validity depends on how faithfully it tracks the theoretical quantity it purports to measure — this relationship is the segment's central epistemic claim and should be stated explicitly in the Epistemic Status section.
 
 Defined in [`FORMAT.md`](../../FORMAT.md) §`type` — what kind of claim.

@@ -25,10 +25,7 @@ and automated reformatting. "Codebase" crosses all architectural boundaries: sou
 configuration, infrastructure-as-code, tests, API contracts, deployment pipelines, monitoring.
 If it must change to deliver the feature, it is part of the changeset.
 
-The changeset is the observable trace of an implementation decision — the software analog of
-action $a_t$ in the general agent formalism. Changeset *size* (lines changed, files touched,
-modules affected) is what temporal-optimality-driven TST claims operate on. The exclusion of
-generated artifacts is a pragmatic convention aligned with measuring the decisions the agent
-actually makes, not amplification effects.
+The changeset is the observable trace of an implementation decision — the software analog of action $a_t$ in the general agent formalism. Changeset *size* (lines changed, files touched,
+modules affected) is what temporal-optimality-driven TST claims operate on. The exclusion of generated artifacts is a pragmatic convention aligned with measuring the decisions the agent actually makes, not amplification effects.
 
 Defined in [`#def-atomic-changeset`](../../02-tst-core/src/def-atomic-changeset.md).

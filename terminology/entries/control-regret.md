@@ -16,13 +16,7 @@ aliases: []
 do_not_confuse: []
 ---
 
-The gap between *best achievable* performance under current information and the
-agent's *current* performance. Pairs with [satisfaction
-gap](satisfaction-gap.md) ($\delta_{\text{sat}}$, "the world doesn't permit it")
-to form a 2×2 diagnostic: any failure-to-achieve decomposes into a
-strategy/execution component (control regret) and a structural-impossibility
-component (satisfaction gap). The split routes interventions — control regret
-says *train harder / re-plan*; satisfaction gap says *change the goal or accept
-the floor*.
+The gap between *best achievable* performance under current information and the agent's *current* performance. Pairs with [satisfaction gap](satisfaction-gap.md) ($\delta_{\text{sat}}$, "the world doesn't permit it")
+to form a 2×2 diagnostic: any failure-to-achieve decomposes into a strategy/execution component (control regret) and a structural-impossibility component (satisfaction gap). The split routes interventions — control regret says *train harder / re-plan*; satisfaction gap says *change the goal or accept the floor*.
 
 Defined in [`#def-control-regret`](../../01-aat-core/src/def-control-regret.md).

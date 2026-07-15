@@ -15,10 +15,6 @@ aliases: []
 do_not_confuse: []
 ---
 
-The Part II class: an agent whose state factors as $(M_t, G_t)$ with $G_t =
-(O_t, \Sigma_t)$ — an explicit objective and strategy distinct from the model
-of reality. The factoring is what makes the [orient cascade](orient-cascade.md)
-and [directed separation](directed-separation.md) results applicable.
+The Part II class: an agent whose state factors as $(M_t, G_t)$ with $G_t = (O_t, \Sigma_t)$ — an explicit objective and strategy distinct from the model of reality. The factoring is what makes the [orient cascade](orient-cascade.md) and [directed separation](directed-separation.md) results applicable.
 
-Defined in
-[`#form-complete-agent-state`](../../01-aat-core/src/form-complete-agent-state.md).
+Defined in [`#form-complete-agent-state`](../../01-aat-core/src/form-complete-agent-state.md).

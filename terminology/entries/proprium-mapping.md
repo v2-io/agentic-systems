@@ -16,13 +16,12 @@ aliases: ["PROPRIUM architecture"]
 do_not_confuse: []
 ---
 
-PROPRIUM is the canonical ELI architecture (source at `~/src/firmatum/`), providing the
-engineering mapping from AAT's formal objects to implementable components. Two layers:
+PROPRIUM is the canonical ELI architecture (source at `~/src/firmatum/`), providing the engineering mapping from AAT's formal objects to implementable components. Two layers:
 
 **Persistent State (PRINCIPIA $\approx M_t$)**:
 - **AXIOMATA**: core constraints; frozen identity and terminal values
-- **CHRONICA**: raw interaction history $\mathcal{C}_t$ (append-only, causal anchor)
-- **MEMORATA**: information-bottleneck compressed history $\phi(\mathcal{C}_t)$
+- **CHRONICA**: raw interaction history $\mathcal C_t$ (append-only, causal anchor)
+- **MEMORATA**: information-bottleneck compressed history $\phi(\mathcal C_t)$
 - **VERA**: factual memory with explicit uncertainty bounds ($U_M$)
 - **PRAXES**: learned strategies improving $\eta^\ast$ and $\mathcal{T}$
 - **CONSORTIA**: relational models tracking source competence and alignment uncertainty
@@ -35,10 +34,7 @@ engineering mapping from AAT's formal objects to implementable components. Two l
 - **CADENTIA**: temporal structure defining channel rates $\nu^{(k)}$
 - **LOGOSTRATUM**: the logogenic substrate (LLM backbone) implementing $f_X$
 
-By formalizing AAT quantities into these components, PROPRIUM ensures that theoretical
-requirements (e.g., separating $\mathcal{C}_t$ from its compressed form $M_t$) are
-mechanically preserved in software.
+By formalizing AAT quantities into these components, PROPRIUM ensures that theoretical requirements (e.g., separating $\mathcal C_t$ from its compressed form $M_t$) are mechanically preserved in software.
 
-Defined in [`#def-proprium-mapping`](../../04-eli-core/src/def-proprium-mapping.md). Source
-architecture documents at `~/src/firmatum/PROPRIUM-ONTOLOGY-v2.md` and
+Defined in [`#def-proprium-mapping`](../../04-eli-core/src/def-proprium-mapping.md). Source architecture documents at `~/src/firmatum/PROPRIUM-ONTOLOGY-v2.md` and
 `~/src/firmatum/PROPRIUM-ARCHITECTURE-v2.md`.

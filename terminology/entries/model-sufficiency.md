@@ -16,11 +16,8 @@ aliases: []
 do_not_confuse: []
 ---
 
-A normalized scalar in $[0,1]$ that quantifies how much of the available
-predictive information the agent's current $M_t$ actually captures. $S = 1$ is
-exact prediction; $S = 0$ is no better than chance. Bounded above by the
-[model class fitness](model-class-fitness.md) $\mathcal{F}$ — even an optimal
-fit within the class cannot exceed the class's expressive ceiling.
+A normalized scalar in $[0,1]$ that quantifies how much of the available predictive information the agent's current $M_t$ actually captures. $S = 1$ is exact prediction; $S = 0$ is no better than chance. Bounded above by the
+[model class fitness](model-class-fitness.md) $\mathcal{F}$ — even an optimal fit within the class cannot exceed the class's expressive ceiling.
 
 Defined in
 [`#def-model-sufficiency`](../../01-aat-core/src/def-model-sufficiency.md).

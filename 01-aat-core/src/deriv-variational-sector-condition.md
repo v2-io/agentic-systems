@@ -39,7 +39,7 @@ is state-dependent: large-mismatch regions see near-full sector constant; near-t
 
 Define $\delta_0 = 2 C_H \sqrt{2\varepsilon}/c_{\min}$ (the approximation-dominated radius around target). Then:
 
-- **Regime A — clean sector bound** ($\lVert\delta\rVert \gt 2\delta_0$). On the annulus $\mathcal{B}_R \setminus \mathcal{B}_{2\delta_0}$, $c_\varepsilon \geq c_{\min}/2$: sector condition holds with constant $c_{\min}/2$. The template's ultimate bound $\rho_\xi / (c_{\min}/2)$ applies.
+- **Regime A — clean sector bound** ($\lVert\delta\rVert \gt 2\delta_0$). On the annulus $\mathcal B_R \setminus \mathcal B_{2\delta_0}$, $c_\varepsilon \geq c_{\min}/2$: sector condition holds with constant $c_{\min}/2$. The template's ultimate bound $\rho_\xi / (c_{\min}/2)$ applies.
 - **Regime B — approximation-dominated floor** ($\lVert\delta\rVert \leq 2\delta_0$). Near target, $c_\varepsilon$ can be arbitrarily small; the correction may not contract. The ultimate bound gains an additive $O(\sqrt\varepsilon)$ term: $R^\ast_\varepsilon = \rho_\xi/(c_{\min}/2) + \delta_0 = \rho_\xi/(c_{\min}/2) + O(\sqrt\varepsilon)$.
 
 Sector-persistence template instantiates with:
@@ -116,7 +116,7 @@ This gives the full current picture: $\{\alpha, \alpha_1, \alpha_2, \alpha_3, \a
 
 ## Working Notes
 
-- Landing context: `spikes/spike-variational-a2prime.md` (2026-04-23 Gap A/B cycle).
+- Landing context: `spikes/.integrated/spike-variational-a2prime.md` (2026-04-23 Gap A/B cycle).
 - **Open: $O(\varepsilon)$ rate via Talagrand T2.** For concentration-preserving variational families with log-Sobolev or T2-Talagrand inequalities, the Pinsker bound can be sharpened to $O(\varepsilon)$ directly (without square-root). Not chased here; would extend $\alpha'$ to a tighter sub-tier for specific family classes.
 - **Amortization gap bounds.** Generalization-gap analysis for VAEs (Rainforth et al. 2018; Nowozin 2018) gives function-class error bounds; composing with variational-family error gives the full $\delta_0$ in amortized VI. Follow-up work.
 - **Connection to natural-gradient VI.** Khan & Lin 2017's conjugate-computation framing makes natural-gradient VI full sub-scope $\alpha$ (not just $\alpha'$). The $\alpha'$ tier is for *non-natural-gradient* VI under KL control.

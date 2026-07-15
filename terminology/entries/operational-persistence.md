@@ -17,11 +17,6 @@ aliases: []
 do_not_confuse: []
 ---
 
-The operational sense of persistence: whether the agent is currently *inside*
-the region in which structural persistence guarantees bounded mismatch. Indexed
-by the [adaptive reserve](adaptive-reserve.md) $\Delta\rho^\ast = \alpha R -
-\rho$ — how much disturbance increase can be absorbed before the structural
-guarantee fails.
+The operational sense of persistence: whether the agent is currently *inside* the region in which structural persistence guarantees bounded mismatch. Indexed by the [adaptive reserve](adaptive-reserve.md) $\Delta\rho^\ast = \alpha R - \rho$ — how much disturbance increase can be absorbed before the structural guarantee fails.
 
-Stated alongside structural persistence in
-[`#result-persistence-condition`](../../01-aat-core/src/result-persistence-condition.md).
+Stated alongside structural persistence in [`#result-persistence-condition`](../../01-aat-core/src/result-persistence-condition.md).

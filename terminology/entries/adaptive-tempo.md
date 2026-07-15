@@ -16,12 +16,8 @@ aliases: ["tempo"]
 do_not_confuse: [strategic-tempo, tempo]
 ---
 
-The product of cycle rate and cycle quality — how fast the agent gets through
-the loop *and* how much each pass accomplishes. Tempo is the central quantity
-in the persistence condition: outpacing disturbance is a tempo statement, not
-a gain-only or rate-only one.
+The product of cycle rate and cycle quality — how fast the agent gets through the loop *and* how much each pass accomplishes. Tempo is the central quantity in the persistence condition: outpacing disturbance is a tempo statement, not a gain-only or rate-only one.
 
 Defined in
-[`#def-adaptive-tempo`](../../01-aat-core/src/def-adaptive-tempo.md); the
-strategic counterpart at
+[`#def-adaptive-tempo`](../../01-aat-core/src/def-adaptive-tempo.md); the strategic counterpart at
 [`#def-strategic-tempo`](../../01-aat-core/src/def-strategic-tempo.md).

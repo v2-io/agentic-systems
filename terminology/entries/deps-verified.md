@@ -17,16 +17,12 @@ aliases: []
 do_not_confuse: [claims-verified, draft]
 ---
 
-`stage: deps-verified` indicates that the segment has passed Gate 1 (dependency audit): all
-entries in its `depends:` list have been confirmed as existing segment files; each dependency is
-genuine (not merely "related"); each referenced segment is itself at `deps-verified` or higher;
+`stage: deps-verified` indicates that the segment has passed Gate 1 (dependency audit): all entries in its `depends:` list have been confirmed as existing segment files; each dependency is genuine (not merely "related"); each referenced segment is itself at `deps-verified` or higher;
 and no missing dependencies have been identified.
 
 Reaching `deps-verified` does not mean the segment's content is correct — it means the foundation
-(the dependency chain) is solid enough to evaluate the content. Gate 2 (content review) is the
-next gate, producing `claims-verified`.
+(the dependency chain) is solid enough to evaluate the content. Gate 2 (content review) is the next gate, producing `claims-verified`.
 
-Segments should be promoted in topological order: leaves first, then their dependents. A segment
-should not reach `claims-verified` while any of its dependencies is still at `draft`.
+Segments should be promoted in topological order: leaves first, then their dependents. A segment should not reach `claims-verified` while any of its dependencies is still at `draft`.
 
 Defined in [`FORMAT.md`](../../FORMAT.md) §`stage` — development process state, and §Gate 1.

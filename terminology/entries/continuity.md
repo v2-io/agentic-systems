@@ -3,8 +3,8 @@ slug: continuity
 schema_version: 1
 term: continuity
 name: Continuity
-notation: "$\\mathcal{C}_t$"
-brief: Whether the agent maintains coherent identity through time — $\mathcal{C}_t$ extends, $M_t$ has temporal depth.
+notation: "$\\mathcal C_t$"
+brief: Whether the agent maintains coherent identity through time — $\mathcal C_t$ extends, $M_t$ has temporal depth.
 layer: prose-symbol
 status: canon
 tags: [continuity]
@@ -18,10 +18,8 @@ do_not_confuse: []
 ---
 
 The third sense of persistence: identity-through-time. The agent's
-[chronica](chronica.md) $\mathcal{C}_t$ extends without forking, and the model
-$M_t$ carries temporal depth across cycles. This is the sense that becomes
-morally weighted in [Emergent Logozoetic Intelligences (ELIs)](eli.md) and is the seat
-of continuity-stance distinctions.
+[chronica](chronica.md) $\mathcal C_t$ extends without forking, and the model
+$M_t$ carries temporal depth across cycles. This is the sense that becomes morally weighted in [Emergent Logozoetic Intelligences (ELIs)](eli.md) and is the seat of continuity-stance distinctions.
 
 Defined alongside the chronica in
 [`#def-chronica`](../../01-aat-core/src/def-chronica.md).

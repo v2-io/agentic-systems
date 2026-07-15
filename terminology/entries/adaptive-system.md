@@ -15,9 +15,7 @@ aliases: []
 do_not_confuse: []
 ---
 
-The minimal class in the AAT agent spectrum: a system with a persistent feedback
-loop that corrects mismatch under uncertainty. No explicit goal structure is
-required at this level — the adaptive cycle (prolepsis → aisthesis → aporia →
+The minimal class in the AAT agent spectrum: a system with a persistent feedback loop that corrects mismatch under uncertainty. No explicit goal structure is required at this level — the adaptive cycle (prolepsis → aisthesis → aporia →
 epistrophe → praxis) is enough to characterize membership.
 
 Scope-defined in

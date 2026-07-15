@@ -16,13 +16,10 @@ aliases: ["ἐπιστροφή"]
 do_not_confuse: []
 ---
 
-The fourth phase of the adaptive cycle: the model is updated in light of the
-mismatch, weighted by the update gain $\eta^\ast$. Etymologically Greek for
-"turning back" or "conversion" — the reorientation of the model toward what
-reality showed.
+The fourth phase of the adaptive cycle: the model is updated in light of the mismatch, weighted by the update gain $\eta^\ast$. Etymologically Greek for
+"turning back" or "conversion" — the reorientation of the model toward what reality showed.
 
 See
 [`#deriv-recursive-update`](../../01-aat-core/src/deriv-recursive-update.md)
 for the update law and
-[`#emp-update-gain`](../../01-aat-core/src/emp-update-gain.md) for the gain
-itself.
+[`#emp-update-gain`](../../01-aat-core/src/emp-update-gain.md) for the gain itself.

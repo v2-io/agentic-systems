@@ -17,16 +17,9 @@ aliases: []
 do_not_confuse: [observation, measurement]
 ---
 
-A `type: worked-example` segment walks through a complete instantiation of the theory in a
-concrete domain — e.g., the bandit problem, Kalman filtering, L1 regularization — showing how the
-abstract framework maps onto real quantities in a real setting. The example validates that the
-theory chain is coherent in the particular domain, catching errors that purely formal arguments
-might miss.
+A `type: worked-example` segment walks through a complete instantiation of the theory in a concrete domain — e.g., the bandit problem, Kalman filtering, L1 regularization — showing how the abstract framework maps onto real quantities in a real setting. The example validates that the theory chain is coherent in the particular domain, catching errors that purely formal arguments might miss.
 
-Worked examples typically do not carry a `## Findings` section — their contribution is pedagogical
-and validating rather than novel. They are the content that exhausts itself in demonstrating their
-parent result's instantiation. (FORMAT.md notes: "worked examples whose content is exhausted by
-the parent result they instantiate all typically lack a Findings section.")
+Worked examples typically do not carry a `## Findings` section — their contribution is pedagogical and validating rather than novel. They are the content that exhausts itself in demonstrating their parent result's instantiation. (FORMAT.md notes: "worked examples whose content is exhausted by the parent result they instantiate all typically lack a Findings section.")
 
 Named examples use paired vocabulary: a worked example's slug takes the form `#example-{domain}`
 (e.g., `#example-bandit`, `#example-kalman`), and the prose form is "worked example {domain}"

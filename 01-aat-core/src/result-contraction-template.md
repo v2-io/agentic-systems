@@ -209,7 +209,7 @@ This is the *interior facet* of the stability certificate ( #disc-stability-cert
 
 ## Working Notes
 
-- **Landing context.** The segment is the primary result of `spikes/spike-contraction-metric-generalization.md` (2026-04-23 Gap A/B cycle). The Jacobian-level observation (DA2'-inc ≡ (CT2)-M=I) and the (PI)/Čencov observation derive from the jacobian-b1 strengthening (2026-04-23 follow-up; absorbed in the spike-routing cycle, CHANGELOG 2026-05-17).
+- **Landing context.** The segment is the primary result of `spikes/.integrated/spike-contraction-metric-generalization.md` (2026-04-23 Gap A/B cycle). The Jacobian-level observation (DA2'-inc ≡ (CT2)-M=I) and the (PI)/Čencov observation derive from the jacobian-b1 strengthening (2026-04-23 follow-up; absorbed in the spike-routing cycle, CHANGELOG 2026-05-17).
 
 - **Heterogeneous general-graph composition.** Slotine 2003 §IV's virtual-system technique covers general directed graphs under a small-gain-along-every-cycle condition. Operationalizing this for `#form-composition-closure`'s general multi-agent setting — including identifying which cycle-gains to measure in practice — is a follow-up derivation. (CM2-M) in this segment handles 2-agent negative-feedback; $N \geq 3$ with general topology remains open but structurally clear.
 

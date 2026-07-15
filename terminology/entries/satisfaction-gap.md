@@ -16,11 +16,8 @@ aliases: []
 do_not_confuse: []
 ---
 
-The structural-impossibility component of any failure-to-achieve: the gap
-between the agent's *ideal* outcome and the *best achievable* outcome under
-current information. Pairs with [control regret](control-regret.md) ($\delta_{\text{regret}}$,
-"you're not doing it well enough") to form a 2×2 diagnostic. The split routes
-interventions: satisfaction gap says *change the goal or accept the floor*;
+The structural-impossibility component of any failure-to-achieve: the gap between the agent's *ideal* outcome and the *best achievable* outcome under current information. Pairs with [control regret](control-regret.md) ($\delta_{\text{regret}}$,
+"you're not doing it well enough") to form a 2×2 diagnostic. The split routes interventions: satisfaction gap says *change the goal or accept the floor*;
 control regret says *train harder / re-plan*.
 
 Defined in

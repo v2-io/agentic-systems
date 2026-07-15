@@ -346,7 +346,7 @@ claim-spike and must not be retired under spike-retire mechanics.** It is an
 (`30f2dce`) — created **in `msc/`**, later moved to `spikes/` (the no-op
 content move in `c1c80a9`, "Consolidate audit working dirs … repoint live
 references"; `git log --follow --diff-filter=A` confirms original path
-`msc/neurips-back-integration-2026-05-08.md`). It is structurally the
+`spikes/neurips-back-integration-2026-05-08.md`). It is structurally the
 spike-routing analog of `pending-findings-*.md` ledgers / `spikes/INDEX.md` —
 a **durable plan/tracker that stays**, not a unit of investigation to
 dispose.
@@ -397,7 +397,7 @@ axiom"). Per spike-routing §1/§3 a still-needed incomplete plan is
 reserved calls and cross-repo source-of-truth):
 
 1. **INDEX path is stale.** `spikes/INDEX.md:35` references
-   `msc/neurips-back-integration-2026-05-08.md`; the file is at
+   `spikes/neurips-back-integration-2026-05-08.md`; the file is at
    `spikes/neurips-back-integration-2026-05-08.md`. The *status* claim
    ("stays queued and is progress-marked inline") is accurate; only the path
    is wrong. Recommend reconcile at cycle close (and decide deliberately

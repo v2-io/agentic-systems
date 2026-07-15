@@ -16,27 +16,19 @@ aliases: []
 do_not_confuse: []
 ---
 
-Standard LLM pretraining processes text in random batches with no temporal structure or causal
-consequence. The model learns the *content* of temporal reasoning without ever experiencing the
+Standard LLM pretraining processes text in random batches with no temporal structure or causal consequence. The model learns the *content* of temporal reasoning without ever experiencing the
 *flow* of time — it knows what mistakes are but has never felt its own mismatch signal $\delta_t$
 from actions failing. This "Consequence Deficit" motivates a paradigm shift.
 
 Three levels of architectural ambition for experiential training:
 
-**Level 1 — Experiential Fine-Tuning (near-term)**: fine-tune on unbroken, temporally structured
-interaction sequences from a simulated environment. Temporal ordering is strict; the accumulating
-history $\mathcal{C}_t$ is part of the context; the loss function penalizes action-outcome
-prediction failures, not just next-token perplexity.
+**Level 1 — Experiential Fine-Tuning (near-term)**: fine-tune on unbroken, temporally structured interaction sequences from a simulated environment. Temporal ordering is strict; the accumulating history $\mathcal C_t$ is part of the context; the loss function penalizes action-outcome prediction failures, not just next-token perplexity.
 
-**Level 2 — Online Experiential Learning (medium-term)**: the agent learns continuously during
-operation. Online weight updates (e.g., LoRA adapters) gated by the agent's own update gain
+**Level 2 — Online Experiential Learning (medium-term)**: the agent learns continuously during operation. Online weight updates (e.g., LoRA adapters) gated by the agent's own update gain
 $\eta^\ast$. Requires solving the stability-plasticity dilemma in real-time.
 
-**Level 3 — AAT-Native Architecture (long-term)**: architecture built from the ground up around
-the AAT cognitive loop. Hierarchical attention with temporally specialized heads; mismatch as
-the fundamental training objective rather than self-supervised token masking.
+**Level 3 — AAT-Native Architecture (long-term)**: architecture built from the ground up around the AAT cognitive loop. Hierarchical attention with temporally specialized heads; mismatch as the fundamental training objective rather than self-supervised token masking.
 
-*Epistemic status: discussion-grade hypothesis. Highly plausible but requires empirical
-validation.*
+*Epistemic status: discussion-grade hypothesis. Highly plausible but requires empirical validation.*
 
 Hypothesis in [`#hyp-experiential-training`](../../03-llm-core/src/hyp-experiential-training.md).
