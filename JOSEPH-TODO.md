@@ -9,10 +9,14 @@
 
 **→ [`msc/decision-briefs-2026-07-15.md`](msc/decision-briefs-2026-07-15.md) — all 21 open Joseph-decisions as one-sitting briefs** (each verified against current state 2026-07-15; ordered quick-nods → policy → theory/naming → strategic; each carries context + options + lead-rec + pointer, decidable from the brief alone). The queue, one line each:
 
-*Quick nods:* Garamond fonts license exposure (repo is public — remove?) · NEXT-UP drain (nod suffices) · F72 external-eye release · `core.hooksPath` unset · `.claude/` selective un-gitignore · repo-weight untracking (`_obs`/fonts) · CURRENT-VOL1 disposition · Zenodo re-release (defer = default).
+*Quick nods:* ~~Garamond fonts~~ (✅ removed 2026-07-15) · ~~NEXT-UP drain~~ (✅ drained 2026-07-15) · F72 external-eye release · `core.hooksPath` unset · `.claude/` selective un-gitignore · repo-weight untracking (`_obs`/fonts) · CURRENT-VOL1 disposition · Zenodo re-release (defer = default).
 *Policy:* gold-dir standing gate (largest unblock: 0/22 graduated) · **D-2 bulk-64 wipe** (verify-then-rm lead-rec) · promotion-terminus / WN drain (sharpened by your 2026-07-14 stage position) · CLAUDE.md generate+cadence · naming-vs-Findings de-block.
 *Theory & naming:* SP-30 typed epistemic target (package ready) · C5 intelligence-empathy landing · the 01 ordering structural call + 9 whitelist-or-reorder rows · separability-triad rung names · agent-spectrum tetrad · Greek-vocabulary per-term · LEXICON §F reorg.
 *Strategic:* 04-eli-core own/private repo (new fact: repo already public).
+
+## Small, outside-repo, only-you (migrated from the drained NEXT-UP, 2026-06-02 vintage)
+
+- Commit the global `~/.claude/CLAUDE.md` — your in-progress edits are mixed with the 2026-06-02 condensation; `~/.claude/CLAUDE.md.bak` marks the boundary. (Optional companion: eyeball the `MEMORY.md` trims from the same pass.)
 
 ## Lead will default-and-proceed (flag only if you'd rather weigh in)
 

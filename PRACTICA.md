@@ -1,7 +1,7 @@
 # PRACTICA
 *Current active areas of work with 🌟 (primary) and ⭐ (secondary) indicating most immediate priorities. In AAT terms, this is the top levels of the strategy DAG.*
 
-> **Live handoff (transient):** [`NEXT-UP.md`](NEXT-UP.md) (updated 2026-06-30) names what is hot and who-decides-what — read it first when resuming momentum. Priming-heavy; skip during de-novo audits, and delete it once its queue drains.
+> **Resuming momentum:** [`CHANGELOG.md`](CHANGELOG.md)'s top entries name what just landed; open Joseph-decisions live in [`JOSEPH-TODO.md`](JOSEPH-TODO.md) (→ the one-sitting briefs at `msc/decision-briefs-2026-07-15.md`). *(The former NEXT-UP.md transient pointer was drained 2026-07-15 per its own charter — residuals migrated, archaeology at `_obs/NEXT-UP-drained-2026-07-15.md`.)* Priming-heavy pointers; skip during de-novo audits.
 
 *This file names the **areas** of active work. The systematic project workflow each area implies — audit cycles, segment refinement and promotion, citation checks, prior-art searches, the named workflow steps below — is mostly not enumerated piece-by-piece. For specific items that don't fit a more systematic home: [`TODO.md`](TODO.md) is the misc-and-details layer (open audit-finding routing decisions, queued spike follow-ups, deferred items, lower-priority specifics). For architectural moves under review: [`PROPOSALS.md`](PROPOSALS.md). Sister-files: [`README.md`](README.md) external-facing snapshot, [`CLAUDE.md`](CLAUDE.md) agent-onboarding, [`CHANGELOG.md`](CHANGELOG.md) historical record. PRACTICA itself is **auditor-safe** — readable during de-novo audits — but linked entries into TODO / PROPOSALS / CHANGELOG are priming-heavy and should be skipped until the initial stages of audits are complete.*
 

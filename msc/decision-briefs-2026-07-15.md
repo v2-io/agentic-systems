@@ -4,7 +4,11 @@
 
 ## Quick nods — strong lead-recs, a yes/no suffices
 
-### Garamond Premier Pro: 37 commercial fonts committed to a public CC-BY repo
+### ✅ DECIDED 2026-07-15 — Garamond Premier Pro fonts
+
+**Joseph's decision:** option 1 executed — untracked from git (`git rm --cached`), gitignored, kept locally, local-install documented in `mono/scrbook/preamble/setup.tex` + `bin/build-monograph`. He notes the fonts are highly modified from the originals; removal ends the concern either way. History rewrite: not requested (separate call, still available).
+
+*Original brief (archaeology):*
 
 *Since the 2026-07-07 census:* Unchanged since census — all 37 .otf still tracked as of 2026-07-15; repo visibility now confirmed PUBLIC (census flagged it as 'before the repo goes (or is) public'), which upgrades this from landmine to live exposure.
 
@@ -18,7 +22,11 @@
 
 **Pointer.** `mono/scrbook/fonts/garamond/`; cluster-05 findings line 99; commit `8c1bb9a`.
 
-### NEXT-UP.md — drain (retire via the proven ritual) or refresh?
+### ✅ DECIDED 2026-07-15 — NEXT-UP.md drained
+
+**Joseph's decision:** option 1 executed via MP-08.2 — residuals migrated (gold-lift queue → `audits/STATUS.md`; outside-repo Joseph items → `JOSEPH-TODO.md`; open decisions were already in this valve), file archived at `_obs/NEXT-UP-drained-2026-07-15.md`, PRACTICA banner replaced.
+
+*Original brief (archaeology):*
 
 *Since the 2026-07-07 census:* Worse, not resolved: the 2026-07-14/15 cycle unstaled PRACTICA/TODO/SOPs but did not touch NEXT-UP.md (last commit 6f5b066, 2026-06-30) — it is now stale by two full arcs (07-03/04 audit/spike/vivarium work AND the 07-14 scan/fix/adjudication cycle). PRACTICA's banner now honestly dates it but still says "read it first."
 

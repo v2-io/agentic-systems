@@ -394,7 +394,10 @@ def run_lualatex(stage, stem, vendor_extra: nil)
   # Pass 1 writes the .bcf, biber resolves citations, and passes 2–3 settle
   # \cref / \ref / \tableofcontents / bibliography back-references. Run with
   # CWD = repo root so fontspec's `Path = ./mono/<target>/fonts/...` relative
-  # paths resolve to repo-vendored font files (Garamond Premier Pro, etc.).
+  # paths resolve to the font files under mono/<target>/fonts/. Note: the
+  # garamond/ family there is gitignored (commercial license — local install
+  # required; see mono/scrbook/preamble/setup.tex), so a fresh clone must
+  # populate it before a scrbook build; open-licensed Inter/FiraCode are tracked.
   #
   # Failure detection is strict and runs on every pass — three independent
   # signals, any one trips:

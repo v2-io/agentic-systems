@@ -10,6 +10,8 @@ The evergreen home for *where each audit currently stands* in the routing pipeli
 - [`polish-and-sentiment-ledger.md`](polish-and-sentiment-ledger.md) — the durable home for soft/sentiment/considered-declined/research-seed findings (the `S`/`P` rows).
 - `pending-findings-*.md` — per-cycle resolution trails for the 2026-04 intake clusters.
 
+**Gold-lift sweep (live queue, migrated from the drained root NEXT-UP.md 2026-07-15):** waves 1–4 swept (122 gold-bearing AAT segments); **wave 5 (A18–A21) + TST / logogenic / logozoetic remain**, then the held batched/paired-note reconciliation and the OUTLINE C-iv idiom-drift fix. Durable plan + per-wave progress + deferral state + the open batch-file/taxonomy sub-decisions: [`.gem-hunt-trail/gold-lift-sweep-2026-05-30.md`](.gem-hunt-trail/gold-lift-sweep-2026-05-30.md). The gold-dir gate itself is decision `gold-dir-standing-gate` in [`../msc/decision-briefs-2026-07-15.md`](../msc/decision-briefs-2026-07-15.md).
+
 **The rule this file serves** (from the routing instructions): an audit is *routed* when every finding has a home; it *graduates* (moves to `.integrated/`, gets a MANIFEST entry) only when every finding has a **verified** disposition closed *in the right direction*, and — for de-novo audits — only after the gold-dir gate is settled with Joseph. "Routed" and "graduated" are distinct states; this tracker shows which an audit is in.
 
 ## Open / in-flight

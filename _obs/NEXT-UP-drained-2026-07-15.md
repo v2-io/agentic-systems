@@ -1,4 +1,7 @@
-# NEXT-UP — live handoff pointer (updated 2026-06-30)
+# NEXT-UP — DRAINED 2026-07-15 (frozen; was the root live-handoff pointer, last updated 2026-06-30)
+
+> [!note]
+> **Drained per its own charter** ("Delete once the queue drains") via the MP-08.2 ritual, Joseph-authorized 2026-07-15. Live residuals migrated: gold-lift wave-5 queue → `audits/STATUS.md`; the two outside-repo Joseph items → `JOSEPH-TODO.md`; all open decisions → `msc/decision-briefs-2026-07-15.md` (the valve). What replaces it: PRACTICA (areas) / TODO (tactics) / JOSEPH-TODO + the decision-briefs valve (Joseph-calls) / CHANGELOG (narrative). Everything below is frozen archaeology of the 2026-06 arc.
 
 > [!note]
 > **Transient pointer, not a navigator.** Authoritative homes: `PRACTICA.md` (strategy) / `TODO.md` (tactics) / `PROPOSALS.md` (structural moves) / `audits/STATUS.md` (audit routing) / `INTEGRATION-CLEANUP-TODO.md` (the big cleanup) / `CHANGELOG.md` (narrative). This file only names what is *hot* so a compaction or fresh session resumes momentum. **Delete once the queue drains.**

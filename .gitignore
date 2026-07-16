@@ -9,3 +9,6 @@ __pycache__/
 combined_aad.md
 combined_*.md
 msc/joseph-working-notes.md
+
+# Commercial font family (licensed + locally modified; NOT redistributable — local install required, see mono/scrbook/preamble/setup.tex)
+mono/scrbook/fonts/garamond/
