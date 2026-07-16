@@ -83,13 +83,11 @@ $$(1 - \lambda) \gt \max\left(\frac{\rho_\Sigma}{R_\Sigma},\; \frac{c_B \cdot \r
 
 *[Empirical claim (monte-carlo-confirmation)]*
 
-Numerical simulation (400 trials × 5000 cycles, four scenarios: OR-cooperative, OR-adversarial, AND-cooperative, AND-adversarial) confirms the closed-form predictions:
-- Sign of bias matches theoretical prediction in all scenarios.
-- Magnitude matches closed form within $\lt 5\%$ at $\rho \in \{0.1, 0.3, 0.5, 0.7, 0.9\}$.
-- Vanishing at $\rho = 0$ verified.
-- Jacobian-induced topological asymmetry verified: OR and AND roots produce opposite-sign biases of matching magnitude.
-- Initial-cycle rate $dB_k/dt \mid_{t=0}$ matches closed form quantitatively.
-- Logarithmic cumulative drift matches (biased-fixed-point convergence rate).
+Two independent Monte Carlo implementations confirm the closed-form predictions — the original 2026-04-23 record (four scenarios: symmetric strong common-cause, asymmetric mild, degenerate $\rho = 0$, $\theta_C$ sweep; 400 trials × 5000 cycles, OR-root) and a fresh 2026-07-16 implementation that reproduces the original's scenario-A cumulative drift to 4 significant figures ($-0.3996$ vs $-0.3997$) and extends verification to the AND-root case:
+- Initial-cycle rate matches the closed form within $\lt 1\%$ for **both OR and AND roots** across the feasible covariance range $\rho \in \{0.04, 0.09, 0.16, 0.20, 0.24\}$ (note $\rho = \operatorname{Cov}(Y_1, Y_2) \leq 1/4$ by construction) and in the asymmetric-edge case.
+- Sign matches prediction everywhere; **OR and AND roots produce opposite-sign biases of matching magnitude** (AND-root now simulated, not derivation-only).
+- Vanishing at $\rho = 0$ verified (degenerate L1'); no false positive under L0-matched truth (drift $\approx 3 \times 10^{-4}$ over 5000 cycles).
+- Cumulative drift is log-order (far from linear) and decelerates slightly faster than the frozen-state $\sum_t 1/(n+t+1)$ prediction, consistent with the bias-induced $\mathbf{p}(t)$ trajectory effect; the exact transient shape has no closed form (see Epistemic Status).
 
 ## Epistemic Status
 
@@ -114,10 +112,11 @@ Numerical simulation (400 trials × 5000 cycles, four scenarios: OR-cooperative,
 
 **Relationship to `#schema-strategy-persistence`'s forgetting.** The segment's existing forgetting prerequisite (for asymptotic sector-persistence) becomes dual under L1': forgetting must *both* outpace sector disturbance *and* prevent bias accumulation. When the two constraints are compatible (admissibility window non-empty), the existing forgetting-rate requirement suffices with appropriate $\rho$-dependent tuning. When incompatible, augmentation is required — a structural scope narrowing that elevates observable-$C$ instrumentation from convenience to prerequisite.
 
-**Connection to `#stability-induced-myopia`'s detection-latency.** The detection-latency theorem ($\mathbb{E}[T_{\text{detect}}] = \Omega((n_{\min}+1)/\varepsilon)$) assumes unbiased marginal tracking; under L1' bias, the pre-accumulated drift degrades effective $\varepsilon$ for subsequent regime-change detection. High-operating-point agents with pre-accumulated L1' bias face a compounded myopia floor. Follow-on refinement possible in `#stability-induced-myopia`.
+**Connection to #deriv-update-detection-latency.** The detection-latency theorem ($\mathbb{E}[T_{\text{detect}}] = \Omega((n_{\min}+1)/\varepsilon)$) assumes unbiased marginal tracking; under L1' bias, the pre-accumulated drift degrades effective $\varepsilon$ for subsequent regime-change detection. High-operating-point agents with pre-accumulated L1' bias face a compounded myopia floor. Follow-on refinement possible in #deriv-update-detection-latency.
 
 ## Working Notes
 
-- Landing context / reproducibility: the closed-form derivation and the full Monte Carlo parameters and per-scenario results (400 trials × 5000 cycles; four scenarios; $\rho$ sweep) are recorded in `spikes/.integrated/spike-l1-update-bias.md` §7 (2026-04-23 Gap A/B cycle). The body above states the verification outcome self-contained; this pointer is reproducibility metadata, to be released as a citable supplement at publication.
+- Landing context / reproducibility: the closed-form derivation and the original Monte Carlo record (scenarios A–D, OR-root) are in `spikes/.integrated/spike-l1-update-bias.md` §7 (2026-04-23 Gap A/B cycle; its script lived in `/tmp` and is lost). The 2026-07-16 re-verification — fresh implementation, full script preserved, OR+AND roots, feasible-$\rho$ grid, 4-sig-fig reproduction of the original scenario-A drift — is `spikes/spike-l1-bias-sim-rerun-2026-07-16.md`. Citable-supplement release at publication should use the rerun's script.
+- **2026-07-16 — Monte Carlo block corrected (truth-status repair from the bulk-64 verify-pass).** The block previously described a simulation that was never run ("four scenarios: OR/AND × cooperative/adversarial"; "$\rho \in \{0.1,\dots,0.9\}$" — infeasible, since $\operatorname{Cov} \leq 1/4$ under the spike's parameterization): a confabulated summary written at landing, while the *actual* 2026-04-23 record was sound (it reproduces exactly). Restated to what ran, strengthened by the rerun (AND-root now verified). Guard: when summarizing a simulation record into a segment, transcribe its parameters — don't paraphrase from memory.
 - **Open: non-matched-marginal transient bias.** Closed-form for arbitrary initial conditions is messier but numerically tractable. A tighter analytic treatment would compose `#deriv-edge-update-natural-parameter`'s $\beta$-Bernoulli dynamics with the L1' mixture and likely requires Markov-chain convergence-rate analysis.
 - **Open: $N$-edge common-cause extensions.** Three or more children of a single common cause produce a tensor of Jacobian factors. The structural scaling likely remains $O(\rho)$ per edge, but the exact coefficients need working out.

@@ -73,6 +73,8 @@ The four current instances follow. Each demonstrates one route through the five-
 
 **Strengthened consequence.** *Observability-as-information-augmentation* becomes load-bearing: when the agent can treat $C$ as an observable feature of the environment (e.g., a regime indicator the environment broadcasts — common in software/operational settings: build state, deployment regime, user tier), the problem transforms from refuted to globally derived. This elevates the engineering choice "instrument the latent" from a convenience to a theoretical prerequisite for L1' identifiability.
 
+**Quantitative companion.** #deriv-l1-update-bias answers the follow-on question this instance leaves open — *if the agent updates anyway on the unidentifiable mixture, how wrong does it get?* — with the closed-form bias $B_k(\rho)$, the biased fixed point, the Cramér-Rao bias floor under forgetting (the direct translation of this instance's rank-1 Fisher matrix), and the dual forgetting-rate requirement. Instance 2 is the structural no-go; that segment is its magnitude.
+
 **Tier.** *Exact* (Cramér-Rao bound is exact for unbiased online estimators).
 
 ### Instance 3 — Composite Contraction Certification from Component Data ( #deriv-critical-mass-composition, #result-contraction-template)
