@@ -37,11 +37,9 @@ The ~10 canon references to sim/empirical paths were resolved 2026-05-30 (CHANGE
 - **`02-tst-core/simulations/`** — real, git-tracked, un-integrated spike work parked in the component tree itself: 11 `.py` files (`lindy_*`, `regime_transitions`, `three_regimes`, `stochastic_*`), 2026-03-20, README added 2026-05-15 but the integration duty never discharged. Not in `spikes/`, not in `INDEX.md`, not routed, not covered by `doc/sop/spikes.sop.md` or `spikes/README.md` — an entire class of spike-equivalent work invisible to the discipline because it isn't markdown and doesn't live under `spikes/`.
 - **`spikes/track-b-nonlinear-sims/`** — live in `spikes/`; canon dependencies on it were resolved 2026-05-30, but its own check→integrate→route terminal home remains open.
 
-### F3. The bulk-64 unverified cohort (2026-05-12)
+### F3. The bulk-64 cohort — **verify duty DISCHARGED 2026-07-16**
 
-`spikes/.integrated/MANIFEST-2026-05-12.md` records 64 spikes bulk-moved into `.integrated/` on 2026-05-12 without per-spike content verification (the governing-doc framing of that skip was revised to honest un-discharged debt under D-3, 2026-05-30). `.integrated/` membership is therefore an unverified record for everything moved before the per-cycle-verification policy.
-
-Concrete consequence for the wipe under consideration (D-2): permanently deleting `.integrated/` + `.archived/` without first discharging the duty for the bulk-64 converts a predecessor's abdication into **irreversible loss of possibly-un-landed valid math/no-gos** — the precise harm the role and the discipline exist to prevent. Counsel given to Joseph 2026-05-19: *do not permanently wipe* until the actual check→integrate→route duty is discharged; if the directories must leave the working tree before then, the only safe form is git-history-preserving (recoverable). Held pending his decision. (Verified 2026-07-15: both directories still exist in the working tree; the wipe has not proceeded.)
+The per-spike verification the 2026-05-12 bulk move skipped has been executed: every one of the 64 spikes read and checked against canon segment *content* (not slug mentions), with every claimed-unlanded item independently challenged by a refute-first second agent. Result: **54 landed / 6 partially-landed / 3 superseded / 1 nothing-to-land**; 21 confirmed-unlanded items across 10 spikes (2 high-value). Durable per-spike ledger: [`spikes/.integrated/VERIFICATION-2026-07-16.md`](spikes/.integrated/VERIFICATION-2026-07-16.md). `.integrated/` membership is now a **verified** record for the bulk-64; the confirmed-unlanded items are queued in `TODO.md` §"Bulk-64 unlanded content" and are the only remaining content-loss exposure — they must land (or be consciously declined) before any wipe deletes their carrier spikes. D-2's timing question accordingly simplifies: after those ~10 spikes' items are dispositioned, a git-recoverable `rm`+commit loses nothing unverified.
 
 ### F5 (remainder). Citation/bibliography infrastructure tails
 
@@ -75,7 +73,7 @@ The *reference* half of G2 (every canon→internal-artifact reference across the
 
 - [ ] **`02-tst-core/simulations/`** (F2) — the 11 parked `.py` files. Per-file: what does it claim? Is the claim in canon self-contained? Where does the artifact end up? (For the published Theory: cited externally as an archival code release / supplement; for the working repo: cleaned to a terminal home.)
 - [ ] **`spikes/track-b-nonlinear-sims/`** (F2) — same treatment; the corpus's own terminal home. This corpus is *live* in `spikes/` and would not be touched by a `.integrated/` wipe.
-- [ ] **The bulk-64 (F3)** — per-spike check that load-bearing content is in canon. The role's actual duty for that cohort, never discharged. Expensive; cannot be done in one evening. Joseph's D-2 call determines whether this happens or whether the cohort is consciously let go.
+- [ ] **The bulk-64 (F3) — verify-pass done 2026-07-16 (see F3 above); remaining: land or decline the 21 confirmed-unlanded items** (queued in `TODO.md` §"Bulk-64 unlanded content"; ledger in `spikes/.integrated/VERIFICATION-2026-07-16.md`).
 
 ### G3. Citation/bibliography discipline — remaining ASF-side tails
 
