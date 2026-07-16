@@ -85,6 +85,7 @@ The IB tradeoff $\beta_\Sigma$ from `#form-strategy-complexity-cost` is therefor
 
 ## Working Notes
 
+- **Capacity-triple framing (2026-07-16).** #disc-deferred-observation-processing names the retention / continuity / attention-capacity decomposition whose all-three-finite corner is exactly this segment's condition, plus the recall-cost-gradient hypothesis for the finite-capacity/unbounded-continuity regime — the constructive direction out of the primitive-logogenic corner.
 - Tier note (regression-guard): `status: empirical`, not `exact` — the reset is architecturally guaranteed but is a fact about deployed systems, not a derivation from the formalism (`exact` requires the latter per FORMAT §status; all other `type: observation` segments sit at `empirical`/`discussion-grade`). Do not re-promote to `exact` on "structural fact" grounds; the by-construction strength is stated in Epistemic Status.
 - The sufficiency-discontinuity bound is stated in information-theoretic terms. For practical measurement, proxies are needed: task completion rate across session boundaries, time-to-productive-action at session start, frequency of re-asking for already-provided information.
 - The characterization of $f_{\text{init}}$ (what determines reconstruction quality) is deliberately left unformalized here. The mechanisms — retrieval-augmented generation, structured memory stores, conversation summaries — are engineering choices, not theory. See #disc-m-preservation for the treatment.

@@ -115,6 +115,7 @@ Ceiling-limiting factors: non-Gaussian cases require information-theoretic bound
 
 ## Working Notes
 
+- **Two-Kalman IB witness landed (2026-07-16).** The symmetric-case canonical-direction identity (means-sum = PCA-optimal = CCA-optimal, explicit $u_\pm$/$\lambda_\pm$) and the heterogeneous-gain falsification handle (IB-optimal rotation should beat the means-sum's $\varepsilon_x$ when $\Delta K \neq 0$ — numeric check unrun) now live in #disc-compression-operations §symmetric-two-Kalman-witness; they bear directly on this segment's rate-distortion reading.
 - **Extension to nonlinear cases.** The framing is linear-Gaussian because that's where rate-distortion has closed forms. Extension to nonlinear micro-dynamics would likely show $\varepsilon_x \gt 0$ even with consistent projections (the identity-propagation argument in Formal Expression relies on linearity). Worth a follow-up spike.
 - **Structural-unity formalization.** A quantitative measure $U_f$ across arbitrary $f_M$ functions (beyond the linear-Gaussian gain-mismatch closed form) is open. Candidates for the underlying operator distance: operator-norm distance in function space, Fisher-information-weighted distance, or IB-style comparison. See #def-unity-dimensions Working Notes.
 - **Joint $(U_O, U_\Sigma)$ derivation.** The exact $f_1$ and $g$ functional forms require a full joint-LQR vs independent-LQR comparison. Mechanical but deferred.
