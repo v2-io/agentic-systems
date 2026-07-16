@@ -2,6 +2,8 @@
 
 *The per-spike verify-pass the 2026-05-12 bulk move skipped, executed 2026-07-16 (D-2 verify duty, INTEGRATION-CLEANUP-TODO F3). Method: one verifier per spike (read the spike fully, identify substantive content, verify landing against segment bodies — content, not slug mentions); every claimed-unlanded item then independently challenged by a refute-first agent with rename-aware search (git log --follow, synonyms, FINDINGS/LEXICON/terminology). 64 spikes: **54 landed / 6 partially-landed / 3 superseded / 1 nothing-to-land**; 26 challenged items → 5 refuted, 21 confirmed unlanded (2 high-value). With this ledger, `.integrated/` membership is a verified record for the bulk-64; the confirmed-unlanded items are queued in TODO.md §"Bulk-64 unlanded content" and must land (or be consciously declined) before any wipe deletes their only carrier. Full agent transcripts: session archaeology; this file is the durable record.*
 
+*Re-sort executed 2026-07-16: the 3 superseded + 1 nothing-to-land spikes moved to `../.archived/` (MANIFEST-2026-07-16.md); all partially-landed spikes completed their landings (CLOSED annotations below) and remain here legitimately.*
+
 ## Verdicts
 
 | Spike | Verdict | Substance (one line) |
