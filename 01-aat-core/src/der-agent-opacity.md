@@ -10,6 +10,10 @@ depends:
   - der-team-persistence
   - der-directed-separation
   - disc-identifiability-floor
+  - emp-update-gain
+  - deriv-edge-credence-dynamics
+  - scope-edge-update-causal-validity
+  - def-observation-function
 stage: draft
 ---
 
@@ -38,6 +42,24 @@ the entropy of agent $A$'s action at horizon $\tau$ conditional on observer $B$'
 
 Under the IDT-observer specialization — $B$ operates as Hafez's Information Digital Twin monitoring $(S_A, a_A, S'_A)$ from outside $A$'s processing — and under ergodicity, $H_b^{A\mid B}(t, \tau) \to H(S, A \mid S')$ as defined in Hafez et al. 2026. AAT's added features (observer-indexing, horizon-indexing, trajectory-indexing) are the distinctive extensions.
 
+### Backward variance decomposition — the duality made structural
+
+*[Derived (Hb-variance-decomposition; exact in linear-Gaussian sub-scope $\alpha$)]*
+
+In the linear-Gaussian regime, write $A$'s action as $a_{A, t+\tau} = \mu_A(X_{A, t+\tau}) + w_a$ with policy noise $w_a \sim \mathcal{N}(0, U_{a,A}^{(\tau)})$ independent of $B$'s filtration. By the law of total variance, $B$'s predictive variance splits into exactly two sources:
+
+$$\mathrm{Var}\big(a_{A, t+\tau} \mid \mathcal{F}_B^t\big) = \underbrace{\mathrm{Var}\big(\mu_A(X_{A,t+\tau}) \mid \mathcal{F}_B^t\big)}_{U_{\pi, B \to A}^{(\tau)}} + \underbrace{U_{a, A}^{(\tau)}}_{\text{policy noise}},$$
+
+and since the predictive law is Gaussian here (Gaussian mean-uncertainty plus independent Gaussian noise — the same argument as the Kalman predictive),
+
+$$H_b^{A \mid B}(t, \tau) = \tfrac{1}{2}\log(2\pi e) + \tfrac{1}{2}\log\!\left[ U_{\pi, B \to A}^{(\tau)} + U_{a, A}^{(\tau)} \right].$$
+
+$U_{\pi, B \to A}$ is $B$'s uncertainty about $A$'s policy conditional mean — **epistemic**, reducible as $B$ learns $A$ (observation, communication, shared architecture). $U_{a, A}$ is $A$'s intrinsic action variability given its own state — **aleatoric from $B$'s side**: no amount of observing $A$ reduces it; only $A$ making its policy more deterministic does. This is the Kalman forward decomposition $U_M + U_o$ ( #emp-update-gain) reflected across the agent-environment boundary: $U_{\pi, B\to A} \leftrightarrow U_M$ (the learnable model term) and $U_{a, A} \leftrightarrow U_o$ (the channel-noise floor) — with the channel noise living in the agent's *actuator* rather than its *sensor*. The headline duality claim is thereby structural rather than rhetorical: the forward and backward directions carry matching two-term epistemic-plus-aleatoric variance decompositions. (It is a structural correspondence, not an adjoint/optimization-theoretic duality theorem — see Working Notes.)
+
+Two consequences. **(i) The transparency knobs are independent.** An agent can lower its opacity to allies by lowering $U_{\pi}$ (publishing intent — #hyp-auftragstaktik-principle is precisely this knob) without touching $U_a$, or by lowering $U_a$ (policy determinism) without publishing anything; conversely an adversary-facing agent can raise either. **(ii) Identifiability floors bound only the epistemic term.** When $B$'s observations of $A$'s action-consequences sit below an observability floor, $U_{\pi, B \to A}$ cannot be reduced even with unbounded data — a structural lower bound on $H_b^{A \mid B}$ from $B$'s side, which is the observer-side floor reading in §Meta-pattern positioning.
+
+*Tier:* exact in linear-Gaussian sub-scope $\alpha$ (law of total variance + Gaussian entropy); robust qualitative beyond (the two-source split survives; the closed log-form does not).
+
 ### Sign-flip via signed coupling
 
 *[Derived (sign-flip-from-signed-coupling)]*
@@ -60,7 +82,15 @@ Parallel to `#der-interaction-channel-classification`'s recipient-side four regi
 - **E-III Information-hide.** $A$ is uniformly opaque to observers; actions are randomized, encrypted, or routed through dead-drops. $H_b^{A\mid B}$ near $H_b^{\max}$ for all observers lacking the key / pattern / channel.
 - **E-IV Active-deceive.** $A$ emits actions that mispredict — the observer's model of $A$ converges to a *wrong* prediction that differs from the actual action by a larger margin than the same observer's model of the environment would accommodate. Boundary: $A$'s self-model quality (for active-deceive, $A$ must model the observer's model of $A$ well enough to choose actions that exploit it).
 
-The 16-cell emitter-recipient composition (four emitter regimes × four recipient regimes) gives a closed-form *adversarial-targeting arg-max* under `#adversarial-edge-targeting`: the most-valuable-to-attack edge is the one where the product of emitter's opacity-to-target and target's vulnerability-to-shock is maximized. This closes the Part III gap that `#adversarial-edge-targeting` (previously GAP) was reserved for; the segment is now operationalized with targeting-fidelity factor $(1 - H_b^{B\mid A}/H_b^{\max})$ from $A$'s self-model quality plus the four-regime recipient classification from `#der-interaction-channel-classification`.
+### The adversarial-edge-targeting arg-max
+
+The 16-cell emitter-recipient composition (four emitter regimes × four recipient regimes) operationalizes the previously-reserved `#adversarial-edge-targeting` Part III gap: given emitter $A$ choosing which edge $k$ of target $B$'s strategy DAG $\Sigma_B$ to attack, the targeted-attack value is
+
+*[Formulation (adversarial-edge-targeting arg-max; factor-wise grounded, multiplicative composition a modeling choice)]*
+
+$$k^\ast = \arg\max_k \;\; \underbrace{p_k(1 - p_k)}_{\text{credence leverage}} \cdot \underbrace{J_k^2}_{\text{plan sensitivity}} \cdot \underbrace{\iota_k}_{\text{edge identifiability}} \cdot \underbrace{\sigma_k^B}_{\text{observability}} \cdot \underbrace{\big(1 - H_b^{B \mid A}/H_b^{\max}\big)}_{\text{targeting fidelity}}.$$
+
+The first four factors are **$B$-interior** — the value of edge $k$ to a *perfectly-informed* adversary, each with a canonical home: credence leverage $p_k(1-p_k)$ is the Beta-Bernoulli update variance ( #deriv-edge-credence-dynamics); plan sensitivity $J_k = \partial P_\Sigma/\partial p_k \geq 0$ is the plan-value Jacobian ( #deriv-edge-credence-dynamics), entering squared because both the injected mismatch and its propagation to plan value scale with it; edge identifiability $\iota_k$ is the Regime-A interventional-access coefficient ( #scope-edge-update-causal-validity); and $\sigma_k^B$ is $B$'s observability of the edge ( #def-observation-function). The **fifth factor is the opacity contribution**: $A$'s targeting fidelity scales with $A$'s legibility-*of*-$B$, i.e. with low $H_b^{B \mid A}$. Under full legibility ($H_b^{B \mid A} \to 0$) the arg-max is fully exploitable — $A$ strikes the single highest-value edge. Under full opacity ($H_b^{B \mid A} \to H_b^{\max}$) the fifth factor vanishes and targeting collapses to the untargeted broadcast attack $\arg\max_k p_k(1-p_k)\,J_k^2$ — the edges most valuable *in expectation*, with no per-edge aim. This is the emitter-side optimizer paired with `#der-interaction-channel-classification`'s recipient-side classifier, closing the pairing that segment's §"Pairing with #adversarial-edge-targeting" advertised. The multiplicative composition is a first-order modeling choice (treating the factors as independent); the individual factors are the derived content, and a second-order interaction analysis (e.g., whether the targeting-fidelity factor should modulate $J_k$ rather than multiply it) is the natural strengthening (Working Notes).
 
 ### Tempo amplification by opacity
 
@@ -80,7 +110,8 @@ The superlinear formula $(\mathcal T_A / \mathcal T_B)^2$ becomes $(\mathcal T_A
 | Reduction to Hafez's $H(S, A \mid S')$ under IDT-observer + ergodic regime | Direct substitution | Derived (exact under IDT + ergodicity) |
 | Sign-flip via signed coupling | Cooperative coupling requires predictability (allies preempt); adversarial coupling operates via disturbance-injection (predicted attack is neutralized) | Derived (from existing `#der-team-persistence` + `#der-adversarial-destabilization` signed-$\gamma$ structure) |
 | Emitter-side four-regime classification | Dual construction to `#der-interaction-channel-classification`'s recipient-side four regimes | Formulation choice |
-| 16-cell emitter-recipient composition closes `#adversarial-edge-targeting` | Product of emitter opacity × recipient vulnerability-to-shock over four × four cells | Derived (arg-max construction) |
+| 16-cell emitter-recipient composition closes `#adversarial-edge-targeting` | Five-factor arg-max: four $B$-interior factors (credence leverage, plan-Jacobian$^2$, edge identifiability, observability) each canonically grounded, times the opacity targeting-fidelity factor | Factors derived; multiplicative product-form a first-order modeling choice |
+| Backward variance decomposition $H_b = \tfrac12\log 2\pi e + \tfrac12\log[U_{\pi,B\to A} + U_{a,A}]$ | Law of total variance + Gaussian entropy; the structural dual of the Kalman $U_M + U_o$ split | Derived (exact in linear-Gaussian sub-scope $\alpha$; robust qualitative beyond) |
 | Tempo-amplification leading-order: $\mathcal{T}^{\text{eff}} = \mathcal{T} \cdot H_b/H_b^{\max}$ | First-order substitution into `#result-adversarial-tempo-advantage`'s tempo-multiplier under Model D | Derived (conditional on Gaussian-coupling sub-scope $\alpha$) |
 | Parameterization-invariance of $H_b$ | $H_b$ is an action-marginal entropy; action space is coordinate-free per `#scope-agent-identity` | Derived |
 | Candidate 4th `#disc-identifiability-floor` instance (generic observer-side form) | $H_b$'s formal structure — "observer cannot predict agent's future action better than $H_b^{A\mid B}$" — is a CHT-style no-go at the observer-side-inference task | Discussion-grade (framing; precise external theorem not yet identified) |
@@ -159,6 +190,7 @@ The superlinear formula $(\mathcal T_A / \mathcal T_B)^2$ becomes $(\mathcal T_A
 - The (C-iv) scope route of `#scope-composite-agent` accommodates adversarial composition via equilibrium convergence; the effects-spiral joint-Jacobian eigenvalue condition of `#deriv-strategic-composition` composes with this segment's opacity-amplification story to give a fully-coupled picture of symmetric adversarial dynamics. Full composition is open work.
 - Candidate fourth-instance formalization for `#disc-identifiability-floor`: the most natural external-theorem anchor is Fano's inequality (relating $H_b$ to error-probability lower bounds) applied to the observer-side prediction task. Open; not pursued here. Two follow-on spikes tested Fano-as-floor-anchor and reach convergent negative conclusions from different inferential tasks: `spikes/.integrated/spike-4th-identifiability-floor-instance-2026-05-20.md` §3 tests Fano on observer-side *action* prediction and demonstrates Outcome C (Fano is a continuous quantitative bound on $P_e$ given $H_b$, not a categorical structural no-go in the M1 sense; the proposed AAT-side escapes either restate Fano's RHS or shift to agent-side policy commitments rather than information-augmentation escapes in the Instances 1–3 sense); `spikes/.integrated/spike-identifiability-floor-instance4-resolution-2026-05-18.md` §4 tests Fano on observer-side *architecture* prediction (Kalman-Ho similarity orbit) and finds Fano degenerates to the vacuous bound at $I = 0$ (now landed as `#der-architecture-noidentifiability` §"Why Fano Is the Finite-Sample Refinement"). The action-prediction-task framing (2026-05-20) and the architecture-prediction-task framing (2026-05-18) reach convergent conclusions on Fano from different inferential tasks: Fano is the finite-sample refinement of an otherwise-attainable task, not the categorical floor anchor M1 requires. The right home for Fano-on-$H_b$ remains adjacent to M1 (this segment's §"Meta-pattern positioning", discussion-grade), not in the floor count.
 - The 16-cell emitter-recipient composition admits closed-form arg-max only under sub-scope $\alpha$ coupling; general non-convex coupling requires per-case optimization.
+- **2026-07-16 — arg-max formula and backward variance decomposition landed from `spikes/.integrated/spike-hb-agent-opacity.md` (§4.4, §3.2).** The five-factor targeting arg-max was previously stated in prose ("closes the gap") but the formula lived only in the spike; it is now displayed with each factor grounded to its home segment. Honest scoping (from the spike's own off-ramp, 526815 F252/F254): the four $B$-interior factors are derived, but the *multiplicative product* is a first-order independence assumption, not a derived optimization — a second-order interaction analysis (does targeting-fidelity modulate $J_k$ or multiply it? is the product the first-order Taylor expansion of an adversary value function $V_O^{\text{adv}}$?) is the strengthening path, and until it lands the arg-max is a `Formulation`, not a `Result`. The backward variance decomposition is exact in linear-Gaussian sub-scope $\alpha$ (law of total variance); it is what makes the $U_o \leftrightarrow H_b$ duality *structural* (matching two-term epistemic+aleatoric splits) rather than merely evocative — though note it is a structural correspondence, not an adjoint duality theorem (the "formal dual" phrasing elsewhere in the segment is flagged in the off-ramp, 526815 F248, as owing either that theorem or a softening to "structural dual"; the decomposition supports the weaker, honest reading).
 - Dual-filtration apparatus ($M_A$ carries $\mathcal F_B^t$ as feature, $M_B$ carries $\mathcal F_A^t$ as feature) would tighten the formalism by unifying observer-indexing with the single-trajectory scope of `#scope-agent-identity`. Architecturally clean; not needed for the derivations here.
 
 ### Incidental audit gold (gold-lift sweep, A15, 2026-05-31)
