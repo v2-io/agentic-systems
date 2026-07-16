@@ -90,7 +90,7 @@ Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo audi
 
 #### Candidate figures
 
-- **A capacity-funnel diagram**: raw channel rates $\nu_k$ enter; gain $\eta_k$ gates each; a redundancy stage subtracts overlap ($I(e^{(i)};e^{(j)} \mid M_{\tau^-})$) *before* summing to effective tempo; then a split into scalar vs tensor outputs shows why a single number can overstate the weakest direction (Codex/Claude, AUDIT-WORKING-526815). The figure should make "more telemetry $\neq$ more adaptation" visible.
+- **A capacity-funnel diagram**: raw channel rates $\nu_k$ enter; gain $\eta_k$ gates each; a redundancy stage subtracts overlap ($I(e^{(i)};e^{(j)} \mid M_{\tau^-})$) *before* summing to effective tempo; then a split into scalar vs tensor outputs shows why a single number can overstate the weakest direction (Codex/Claude, AUDIT-WORKING-526815). The figure should make "more telemetry $\neq$ more adaptation" visible. *(Promotion caution, 2026-07-16: the subtract-CMI-overlap stage as drawn is refuted by #deriv-tempo-additivity no-go N1 — sign-blind measures cannot carry the correction, and the deviation can be negative. A promoted figure needs the joint-covariance form, or restriction to the common-source regime where subtraction is directionally right.)*
 
 #### Belongs elsewhere
 
