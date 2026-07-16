@@ -10,7 +10,7 @@
 **→ [`msc/decision-briefs-2026-07-15.md`](msc/decision-briefs-2026-07-15.md) — the open Joseph-decisions as one-sitting briefs** (each verified against current state 2026-07-15; ordered quick-nods → policy → theory/naming → strategic; each carries context + options + lead-rec + pointer, decidable from the brief alone). The queue, one line each:
 
 *Quick nods:* F72 external-eye release · `core.hooksPath` unset · `.claude/` selective un-gitignore · repo-weight untracking (`_obs`/fonts) · CURRENT-VOL1 disposition · Zenodo re-release (defer = default).
-*Policy:* gold-dir standing gate (largest unblock: 0/22 graduated) · **D-2 bulk-64 wipe** (verify-pass DONE 2026-07-16 — 21 items queued to land, then rm is loss-free) · promotion-terminus / WN drain (sharpened by your 2026-07-14 stage position) · CLAUDE.md generate+cadence · naming-vs-Findings de-block.
+*Policy:* gold-dir standing gate (largest unblock: 0/22 graduated) · promotion-terminus / WN drain (sharpened by your 2026-07-14 stage position) · CLAUDE.md generate+cadence · naming-vs-Findings de-block.
 *Theory & naming:* SP-30 typed epistemic target (package ready) · C5 intelligence-empathy landing · the 01 ordering structural call + 9 whitelist-or-reorder rows · separability-triad rung names · agent-spectrum tetrad · Greek-vocabulary per-term · LEXICON §F reorg.
 *Strategic:* 04-eli-core own/private repo (new fact: repo already public).
 
