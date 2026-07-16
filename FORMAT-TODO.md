@@ -14,7 +14,7 @@ The active work below decomposes into three workstreams:
 - **Workstream B — Cross-references, footnotes, sidenotes, margin-notes.** Obsidian `[[#^anchor]]` form, equation-anchor labels, footnote conventions (zero usage anywhere currently), sidenote (numbered Tufte-style) and margin-note (un-numbered) disciplines, `xr-hyper` for cross-volume refs. Mostly unchanged since 2026-05-13.
 - **Workstream C — Discipline + structural distinctions.** AAT-specific vs imported (Pearl, etc.) cue, Discussion-segment schema split, auto-cross-ref formula sweep in appendices, FORMAT.md doc sweep, chapter introduction across remaining Parts, FORMAT-compliance linter sweep. Mostly unchanged since 2026-05-13.
 
-Several architectural decisions are awaiting resolution; those are listed before the workstreams so the answers can flow into the right items as they land. **Open question 1 (bib database location) resolved 2026-05-14: `~/src/relata/`; later citation-discipline detail lives in `BIBLIOGRAPHY-TODO.md`.**
+Several architectural decisions are awaiting resolution; those are listed before the workstreams so the answers can flow into the right items as they land.
 
 ---
 
@@ -107,8 +107,6 @@ Filename of the PDF carries semver only — `<slug>-v<semver>.pdf`. SHA + date a
 
 Resolutions feed into the workstream items below. Listed in the order they unblock the most work.
 
-1. ~~**Where does the bib database live?**~~ **RESOLVED 2026-05-14: `~/src/relata/`** — Path B (shared parent, both projects read; single source of truth). Renamed from "refs" to "relata" (Latin for "things related/narrated") to avoid the git/code overload of `refs/`. Later relata-side work moved the usable CLI to the packaged `relata` command and moved PDFs out of git under `RELATA_PDFS_DIR`; see `BIBLIOGRAPHY-TODO.md` for current operational details. All Workstream A items below now reference `~/src/relata/` rather than the abstract "bib database."
-
 2. **How to mark imported-vs-AAT-native content?**
    - Option $\alpha$: `origin: imported|aad-native|recapitulation` frontmatter field + visual cue at render-time
    - Option $\beta$: Distinct segment type `recapitulation` (orthogonal to `definition` / etc.)
@@ -137,21 +135,13 @@ Resolutions feed into the workstream items below. Listed in the order they unblo
 
    **Unblocks:** Workstream B item B11.
 
-5. ~~**Citation discipline + migration sweep scope.**~~ **RESOLVED 2026-06-05: strengthened hybrid discipline.**
-   Rich scholarly prose remains allowed, but bibliography-worthy scholarly sources get formal natbib-compatible cite commands and load-bearing external dependencies get locator-backed, verification-ready formal cites. Migration is an author-judgment pass, not a mechanical regex sweep; details live in `BIBLIOGRAPHY-TODO.md`.
-
-   **Unblocks:** Workstream A segment migration and citation verification.
-
 ---
 
 ## Workstream A — Citation system
 
 Goal: ASF parity with structured citation discipline without duplicating the newer citation tracker. `BIBLIOGRAPHY-TODO.md` is the operating queue; this section keeps the FORMAT/build-facing summary.
 
-- [x] ~~**A1. Establish the bibliography database + CLI.**~~ **Landed / superseded by relata.** The database location is `~/src/relata/`; the operational command is packaged as `relata` on PATH. Historical `bin/relata` references in this file were tracker drift, not current instructions. As of 2026-06-04, the installed `relata` CLI sees the corpus from the ASF checkout; ASF scripts should call `relata` directly and pass explicit paths.
-- [x] ~~**A2. Ratify citation discipline.**~~ **Landed 2026-06-05.** ASF uses the strengthened hybrid discipline: rich scholarly prose can remain, but bibliography-worthy scholarly sources get formal natbib-compatible cite commands and load-bearing external dependencies get locator-backed, verification-ready formal cites.
 - [ ] **A3. Reconcile `ref/` and migrate segment references.** With the initial relata-side discovery/import pass done, identify which local PDFs back which discovered entries, then do author-judgment segment migration. Under the decided hybrid discipline, preserve rich context-setting prose where useful but add formal citations for every bibliography-worthy source and stronger locator / verification treatment for load-bearing dependencies.
-- [x] ~~**A4. Wire biblatex / natbib + `relata emit` into the build pipeline.**~~ **Landed 2026-06-05.** `bin/build-monograph` emits a stage-local bibliography snapshot from the assembled current volume markdown, fails loudly on missing keys, loads kaobiblio / biblatex with `natbib=true`, runs LuaLaTeX → biber → LuaLaTeX → LuaLaTeX, and copies `mono/<slug>-v<sem>.references.bib` as the self-contained generated snapshot.
 - [ ] **A5. Conditional-rendering machinery for `applicable_anonymity`.** When the build target is anonymized and the entry has `applicable_anonymity: true`, the citation should render as a soft form rather than full author-year. The basic biblatex / relata-emit pipeline now exists; this item is the anonymized-build consumption layer.
 
 ---
@@ -174,7 +164,6 @@ Goal: Adopt NeurIPS's cross-reference / footnote conventions for ASF, then exten
 Goal: The conventions that distinguish *what* segments are doing (AAT-internal vs imported, claim vs discussion, in-flight vs settled) from how they render. Plus the documentation + sweep work that catches up the corpus to the new conventions.
 
 - [ ] **C12. AAT-specific vs imported distinction.** Pending open question 2. Lightweight visual or structural cue at frontmatter / segment-type / Epistemic-Status level. Especially for segments like `def-pearl-causal-hierarchy` where the content is explicitly external (Pearl 2009; Bareinboim et al. 2022). The Pearl-hierarchy Part I → Part II move (TODO line 362) is one specific instance; this item generalizes it. A second specific instance (audit-471203 §B Finding 6 ≡ audit-742613 FINAL:254, routed here 2026-05-15): `scope-agency.md:19` uses Pearl's `$do(a)$` in the formal scope condition *before* `#def-pearl-causal-hierarchy` introduces it — the standard-imported-notation-used-before-declaration case the general policy must cover (a "standard-notation exemption" convention, or a reorder).
-- [x] ~~**C13. Citation-status field on `relata/entries/`.**~~ **Schema landed 2026-05-14.** `citation_status` field with values `pre-publication` / `in-review` / `preprint` / `published` / `withdrawn` / `accepted-not-yet-published`; companion fields `citation_status_venue` (e.g., "NeurIPS 2026") and `citation_status_updated` (ISO date). Documented in `~/src/relata/README.md` Schema section. Conditional-rendering machinery (the consumption side) is now A6 in Workstream A — the field exists and is populated; the build pipelines that read it don't exist yet.
 - [ ] **C14. Discussion-segment schema split in FORMAT.md.** Already flagged. Claim-segment schema (Formal Expression / Epistemic Status / Discussion / Findings required) vs discussion-segment schema (body-only, subheads optional). The Discussion-as-chapter-intro renderer mode (commit `8da83cd`) suppresses subheads at render-time; the source still has them. FORMAT.md should split the schema so authors don't have to fake it.
 - [ ] **C15. Auto-cross-ref formula sweep in appendices.** Phase 4 of the prior plan. Many manual "Prop A.1" / "(7) above" / "Step 4" / "as shown in (12)" references still exist in appendix segments. Once B7 lands (named-atom labels), this sweep replaces manual cross-refs with `[[#^name]]` form and the renderer produces the rendered number.
 - [ ] **C16. FORMAT.md doc sweep.** Vocabulary alignment with the conventions landed in foundation work + added through workstreams A/B/C. The narrow-area / wide-area vocabulary, the chunk format, the markdown-first pipeline, the new citation conventions, the cross-reference convention extensions — all need representation in FORMAT.md so de-novo audits and future-agent onboarding hit the right discipline. Pairs naturally with C14 (both touch FORMAT.md). CLAUDE.md gets the parallel sweep.

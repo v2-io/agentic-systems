@@ -8,8 +8,6 @@ Live execution queue for naming-cycle decisions that have been **made** (interac
 
 **Pre-flight per item.** For each rename, read the rationale in `naming-rename-plan.md` first (linked per row) — the operational notes there often catch edge cases (segment H1 forms, dual references, pedagogically-useful "Old (New)" first-use) that the brief executable summary here doesn't surface.
 
-**Ordering.** Slug renames first (mechanical, tool-driven), then prose-vocabulary renames (terminology entry + segment sweep), then terminology additions (no rename, just commitment of vocabulary). Within each section: roughly easiest-first, but interleavable. The Class 1/2/3 → Separated/Coupled/Partial item is the largest single piece (touches ~8 segments + README + CLAUDE.md) and warrants its own commit.
-
 **Tooling note (2026-05-09).** "LEXICON entry" rows below mean *entries in the `terminology/` system*, not hand-edits to `LEXICON.md` (which is now auto-generated — see CLAUDE.md §LEXICON discipline). For each row:
 1. Edit (or scaffold via `bin/term add <slug>`) `terminology/entries/<slug>.md` — YAML frontmatter (term, brief, status, source, see_also, etc.) + markdown body for the longer prose definition.
 2. Record the naming decision via `bin/term decide <slug> <action> --by <decider> --note "<rationale pointer>"` (actions: `canonicalize` / `rename` / `add-alias` / `add-cite` / `update-gloss` / `nuance-flag`).
@@ -19,46 +17,16 @@ The LEXICON.md output is the same artifact rows below describe; what changed is 
 
 ---
 
-## A. Slug renames (via `bin/rename-slug`)
-
-Each row: `bin/rename-slug OLD NEW` plus segment H1 update + `*[Type (slug)]*` formal-tag review + cross-reference scan (the script reports stale-text warnings; H1 / opening-sentence / formal tags are touched by hand). The `msc/naming/` directory is excluded from the script's substitution patterns, so this file and `naming-rename-plan.md` are not corrupted by the sweep.
-
-[F1 batch rationale block: `naming-rename-plan.md` §"Pending subject-noun renames — additions (2026-05-04, batch F1 citability fixes)"](msc/naming/naming-rename-plan.md#pending-subject-noun-renames--additions-2026-05-04-batch-f1-citability-fixes).
-
-*All §A items landed.*
-
----
-
-## B. Prose-vocabulary renames (LEXICON entry + segment-prose sweep)
-
-These do *not* use `bin/rename-slug` — the legacy form is prose vocabulary, not a slug. Each row: add/update LEXICON entry + sweep affected segments.
-
-*All §B items landed.* The Class 1/2/3 → Separated/Coupled/Partial bundle (with the coordinated Class 2 ↔ 3 swap and the "Goal-Update Coupling Class" axis name) executed on the `guc-rename-2026-05-09` topical branch. See CHANGELOG entry for the cycle narrative; execution plan archived at [`msc/class-rename-execution-plan-2026-05-09.md`](msc/class-rename-execution-plan-2026-05-09.md); live tracking at [`msc/class-rename-tracking-2026-05-09.md`](msc/class-rename-tracking-2026-05-09.md).
-
-[F1 prose-batch rationale](msc/naming/naming-rename-plan.md#prose-vocabulary-renames--additions-2026-05-04-batch-f1-citability-fixes).
-
----
-
 ## C. Terminology additions — confirmed canonicalize commitments
 
 Per-batch terminology entries (no rename, no prose sweep — just the entry). Each row: scaffold `terminology/entries/<slug>.md` (`bin/term add <slug>` if starting from blank), populate the frontmatter (term, brief, status, source, tags, see_also) + body (one-line gloss minimum, longer prose where worthwhile, segment cross-reference), then `bin/term decide <slug> canonicalize --by <decider>` to record the commitment. After a batch lands, `bin/term render --output LEXICON.md` regenerates the LEXICON view. Tagging via `tags:` drives the LEXICON's thematic sectioning (Cycle Phases / Agent Classes / Core Quantities / Structural Concepts / etc.); reuse existing tags where they fit.
 
-Each batch below is a natural commit unit. Mark a row landed = remove it; add a CHANGELOG entry for the batch.
-
-
-
-*C5–C13 landed 2026-07-15* — 35 new terminology entries + decision events recorded for all rows (including canonicalize affirmations on the already-existing `adaptive-tempo`, `operational-persistence`, `structural-persistence`, `loop`, `cycle`, `communication-gain`, `update-gain` entries, which had no decision events). See the CHANGELOG entry for the batch narrative. Two residues remain:
+Each batch below is a natural commit unit. Mark a row landed = remove it; add a CHANGELOG entry for the batch. No batches are currently queued (new rows arrive as §D decisions land). Two residues from the executed C5–C13 batches (CHANGELOG 2026-07-15) remain:
 
 - [ ] **stability plasticity window (C8 residue — needs Joseph reconciliation).** The 2026-05-04 pass recorded *two* decisions for near-the-same object: batch-3 clean canonicalize of the three-word form "stability plasticity window" AND the compound-vocabulary canonicalize of "stability-plasticity feasibility window" (full phrase = citation form; `feasibility window` = sanctioned short form). The compound decision is more specific and is the one executed (entry `stability-plasticity-feasibility-window`); the bare three-word form is *not* among its sanctioned forms. Decide: treat the batch-3 row as subsumed (add "stability-plasticity window" as an alias) or as a distinct term.
 - [ ] **C12 first-encounter cite sweep (execution remainder).** The five adopted-standard entries (`action-selection`, `causal-structure`, `multi-agent`, `equilibrium-convergence`, `feature`) are landed with `add-cite` decision events, but the first-encounter prior-art cites still need to be added to the source segments' Discussion/opening prose (anchors in the rename-plan F2 table, mirrored in each entry body). Segment-editing work, agent-executable.
 
 ---
-
-## E. Terminology-system enhancements (`bin/term` evolution)
-
-Tooling improvements surfaced during rename-cycle execution. Land independently from the naming-cycle queue above — they affect how the renderer behaves, not which terms canonicalize.
-
-- [x] ~~**`seq:` field for within-group ordering override**~~ **Landed 2026-05-10.** `seq:` is an optional integer field on entries; `bin/term render` sorts within each tag section by `[seq || ∞, term]` — sequenced entries appear first in numeric order, then unsequenced entries alphabetically. Needed before C4 executes, since the segment-type, status, and stage vocabularies are all axis-keyed and must render in taxonomy order, not alphabetically. Field added to `CANONICAL_FIELD_ORDER` after `tags:`; accessor added to Entry class. See commit for implementation. Apply by adding `seq: N` to any entry's frontmatter; re-render regenerates LEXICON in the new order.
 
 ## F. LEXICON Continuity section — pending reorganization (blocked on review)
 

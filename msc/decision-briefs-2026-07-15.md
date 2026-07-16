@@ -1,44 +1,8 @@
 # Decision briefs — 2026-07-15 (the valve)
 
-*Every currently-known genuinely-Joseph decision, one brief each, ordered for a single sitting: quick nods first, strategic last. Each brief was verified against current repo state on 2026-07-15 (the 2026-07-07 census was the substrate; several items moved since). Standard per brief: decidable from this text alone — context, options, lead-rec with honest uncertainty, pointer to full detail. Record decisions inline (a word next to the title is enough — agents will route them) or however is easiest. Assembled by the decision-valve cycle; see CHANGELOG 2026-07-15.*
+*Every currently-open genuinely-Joseph decision, one brief each (decided items are deleted from this file — the decision record lives in CHANGELOG), ordered for a single sitting: quick nods first, strategic last. Each brief was verified against current repo state on 2026-07-15 (the 2026-07-07 census was the substrate; several items moved since). Standard per brief: decidable from this text alone — context, options, lead-rec with honest uncertainty, pointer to full detail. Record decisions inline (a word next to the title is enough — agents will route them) or however is easiest. Assembled by the decision-valve cycle; see CHANGELOG 2026-07-15.*
 
 ## Quick nods — strong lead-recs, a yes/no suffices
-
-### ✅ DECIDED 2026-07-15 — Garamond Premier Pro fonts
-
-**Joseph's decision:** option 1 executed — untracked from git (`git rm --cached`), gitignored, kept locally, local-install documented in `mono/scrbook/preamble/setup.tex` + `bin/build-monograph`. He notes the fonts are highly modified from the originals; removal ends the concern either way. History rewrite: not requested (separate call, still available).
-
-*Original brief (archaeology):*
-
-*Since the 2026-07-07 census:* Unchanged since census — all 37 .otf still tracked as of 2026-07-15; repo visibility now confirmed PUBLIC (census flagged it as 'before the repo goes (or is) public'), which upgrades this from landmine to live exposure.
-
-**What.** `mono/scrbook/fonts/garamond/` holds the full Garamond Premier Pro family — 37 Adobe commercial `.otf` files, ~35 MB — tracked in git in a repo that is **public** under CC-BY-4.0. Adobe's license does not permit redistribution; this is a live licensing violation, not a hypothetical.
-
-**Context.** Verified 2026-07-15: all 37 files still present, still tracked (not gitignored), untouched since the original typography commit (`8c1bb9a`). Repo visibility confirmed PUBLIC. The build pipeline (`bin/build-monograph --target scrbook`) uses them for the monograph PDF. Inter and FiraCode alongside are open-licensed — only Garamond is the exposure.
-
-**Options.** (1) **Remove + gitignore + local install**: delete from the tree, add `fonts/garamond/` to `.gitignore`, document local-install in the build README, optionally add a fallback (EB Garamond, open) so builds don't hard-fail. History still contains the files unless rewritten. (2) License carve-out only: keep the files, add a LICENSE note excluding fonts from CC-BY — this does *not* cure redistribution, since the files are still being distributed. (3) Full cure: option 1 plus history rewrite (`git filter-repo`) — invasive on a repo with active clones/submodule wiring.
-
-**Lead recommendation.** Option 1, promptly — the carve-out is option-shaped but not a fix (redistribution is the violation, not the license label), and a history rewrite can be deferred as a separate call since practical enforcement risk from history-only presence is low. Fairly high confidence; the one open sub-question is whether you want EB Garamond as committed fallback or hard-require local install.
-
-**Pointer.** `mono/scrbook/fonts/garamond/`; cluster-05 findings line 99; commit `8c1bb9a`.
-
-### ✅ DECIDED 2026-07-15 — NEXT-UP.md drained
-
-**Joseph's decision:** option 1 executed via MP-08.2 — residuals migrated (gold-lift queue → `audits/STATUS.md`; outside-repo Joseph items → `JOSEPH-TODO.md`; open decisions were already in this valve), file archived at `_obs/NEXT-UP-drained-2026-07-15.md`, PRACTICA banner replaced.
-
-*Original brief (archaeology):*
-
-*Since the 2026-07-07 census:* Worse, not resolved: the 2026-07-14/15 cycle unstaled PRACTICA/TODO/SOPs but did not touch NEXT-UP.md (last commit 6f5b066, 2026-06-30) — it is now stale by two full arcs (07-03/04 audit/spike/vivarium work AND the 07-14 scan/fix/adjudication cycle). PRACTICA's banner now honestly dates it but still says "read it first."
-
-**What:** NEXT-UP.md's own header says "Delete once the queue drains." It hasn't drained, hasn't refreshed, and now actively misleads — its "what is hot" predates the two hottest work arcs, and PRACTICA routes every resuming session into it first. Draining requires standing to declare its clusters closed, which is why agents haven't done it.
-
-**Context:** The retirement ritual is proven: `spikes/NEXT-UP.md` was drained cleanly 2026-05-25 (`git mv` to `.integrated/`, MANIFEST, residuals migrated, CHANGELOG names the replacement) — MP-08.2. The current file's residual content is small: its Joseph-calls list (D-2/G3/SP-27/SP-29) is a third drifting copy of JOSEPH-TODO/PROPOSALS; its "landed" narrative belongs in CHANGELOG; and after the 07-14 unstaling the permanent trackers are current, so little would be lost.
-
-**Options:** (1) Drain now via MP-08.2: migrate the few live residuals (audit-gold wave-5 queue state, batch-file open decisions) to their permanent homes, archive, remove PRACTICA's banner. (2) Refresh in place — perpetuates a file whose maintenance step is empirically the one that breaks (MP-08.1). (3) Do nothing — the worst state: authoritative-looking and wrong.
-
-**Lead recommendation:** Option 1, fairly confident. This is closer to agent-executable than the other two; your call is really just "yes, declare it drained" — a nod suffices.
-
-**Pointer:** census cluster 08 §C + MP-08.2; `NEXT-UP.md`; PRACTICA banner line 4.
 
 ### F72 — Release or keep the external-eye hold on the hard-ceiling convention fix (aging since 2026-05-31)
 

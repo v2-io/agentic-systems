@@ -34,7 +34,7 @@ This section surfaces what the framework currently acknowledges as open at the o
 - D.6 O-BP12 — Resource budget $B_t$ as master variable
 - D.7 SP-15 — Template-family naming (sector / contraction / dissipativity trio)
 - D.8 SP-16 — Independence-audit as empirical profiling instrument
-- D.9 SP-22 — Operator-family Tier-2 backlog architectural decision (2026-05-12 spike-audit surfaced)
+- D.9 SP-22 — Operator-family Tier-2 backlog: residual CL-1 landing
 
 *Full portfolio with merits, scope, and prior reasoning: [`PROPOSALS.md`](PROPOSALS.md).*
 
