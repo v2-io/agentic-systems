@@ -176,6 +176,10 @@ depends:
 
 Do NOT use "Solid," "Confident," or "Plausible" as tier labels — these are not AAT terms.
 
+### Citing simulations and empirical artifacts — `empirica:` references
+
+Canon segments may cite registered experiments as `empirica:<experiment-slug>` (optionally `@<run-date>` for a specific recorded run) — typically in Epistemic Status, backing *[Empirical Claim (…)]* tags. The registry at root `empirica/` is canon (it travels with the Theory, like LEXICON/NOTATION; ratification refinement R3, 2026-07-16), so this is not a local-working-path violation. The contract: the cited experiment carries a `MANIFEST.md` (claims, tier, parameters, consumers — kept bidirectional with the citing segments) and the specific claim traces to a recorded run in its `RUNS.md` (date, parameters, explicit seed, output). An empirical claim citing an experiment with no matching recorded run is a truth-status defect. Full lifecycle incl. the vivarium-rerun path: [`empirica/README.md`](../../empirica/README.md).
+
 ### `depends` — prerequisite slugs
 
 List the slugs this claim directly depends on. The type of each dependency (definition import vs logical antecedent vs scope assumption) is derivable from the referenced file's own `type` field — no typed edges needed.

@@ -20,6 +20,8 @@ This document carries the remainder of a substantial **integration-failure recov
 
 *(Ratification refinement R2: Working Notes are* intermediate *working notes and license whatever we want freely, but they are excluded from the monograph when built with the `--public` flag — verify the flag's actual build behavior before encoding the claim as fact.)*
 
+*(Ratification refinement R3, Joseph 2026-07-16: point 5's "never a local working path" means never an* unregistered *path. The `empirica/` registry (root-level, established 2026-07-16) travels with the Theory the way LEXICON/NOTATION do, so it is canon: `empirica:<experiment-slug>` references in segments are sanctioned canonical references, and at publication the experiment directories become the external archival objects point 5 requires — the citation form survives the transition. See `empirica/README.md` for the contract.)*
+
 ## Working-Note discipline — open remainders
 
 The authoritative "What earns a Working Note" statement landed 2026-06-02 in [`doc/sop/format.sop.md`](doc/sop/format.sop.md) §"What earns a Working Note" (CHANGELOG 2026-06-02). Still open from that cycle:
