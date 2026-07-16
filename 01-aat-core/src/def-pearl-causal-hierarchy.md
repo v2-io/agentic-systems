@@ -77,7 +77,7 @@ AAT's *distinctive contribution* is not the hierarchy itself but its grounding: 
 
 ## Working Notes
 
-- **Beyond-Level-3 question has a home (2026-07-16).** Reasoning *about* the space of SCMs — mechanism-changing actions, model-space planning, imagination — is treated at discussion grade in #disc-structural-imagination, which deliberately does not claim a hierarchy-theoretic "Level 4" (no strictness witness exists; the question is recorded open there).
+- **Beyond-Level-3 question resolved (2026-07-16).** Latent-anchored mechanism counterfactuals separate strictly from Level 3 (exact witness + reducibility boundary + internalization non-collapse at #deriv-mechanism-counterfactual-separation); the agent-architecture reading (imagination, model-space planning) is #disc-structural-imagination.
 - This segment is positioned in Part II Ch.2 ("Causal Access and the Planning Decision") as of the 2026-05-12 relocation. It previously lived in Part I Ch.1 alongside AAT's own ontological commitments, which mis-framed it as foundational AAT machinery rather than as an imported framework recapitulated for AAT's purposes. The relocation places it at the head of the chapter that deploys it operationally.
 - Part I segments that previously depended on this segment in their `depends:` frontmatter (`def-causal-information-yield`) now reference Pearl 2009 / Bareinboim 2022 via external citation with a forward pointer to this recapitulation. TST segments do the same. The relocation thus introduces no dangling dependencies; what changes is the rhetorical posture (imported framework, lightly cited where mentioned, recapitulated where deployed) and the OUTLINE position (Part II Ch.2 rather than Part I Ch.1).
 
