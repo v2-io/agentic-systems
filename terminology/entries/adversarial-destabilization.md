@@ -3,7 +3,7 @@ slug: adversarial-destabilization
 schema_version: 1
 term: adversarial destabilization
 name: Adversarial destabilization
-notation: "$\\mathcal T_A \gt \\Delta\\rho^\\ast_B / \\gamma_A$"
+notation: "$\\mathcal T_A \\gt \\Delta\\rho^\\ast_B / \\gamma_A$"
 brief: When an adversary's tempo times its coupling effectiveness exceeds the target's adaptive reserve, the target's correction mechanism collapses entirely.
 layer: prose-symbol
 status: canon

@@ -2,7 +2,7 @@
 
 Live execution queue for naming-cycle decisions that have been **made** (interactively curated through Phase 5, 2026-05-04) but not yet **executed**. The decisions and their rationale live in [`msc/naming/naming-rename-plan.md`](msc/naming/naming-rename-plan.md); this file is the action checklist.
 
-**Scope note (2026-05-09).** This file's queue is the high-confidence subset — items that already have decisions and only need execution. The broader naming program is a multi-cycle arc: the R2 cohort produced **629 distinct currents**; only **58 are marked** with a `rename_status` decision (44 from the 2026-05-04 manual curation pass + 14 from the 2026-05-09 GUC rename execution). **~511 currents remain unrouted** — they have not yet been evaluated for canonicalize / rename / add-alias / exclude. Many are quick dispositions; a substantial number are genuine rename candidates. Tracked at [`PRACTICA.md`](PRACTICA.md) §"Current naming conventions refactor" item 13. This file (TERMINOLOGY-TODO) only carries items that have already been routed.
+**Scope note (2026-05-09).** This file's queue is the high-confidence subset — items that already have decisions and only need execution. The broader naming program is a multi-cycle arc: the R2 cohort produced **629 distinct currents**; only **123 are marked** with a `rename_status` decision (109 from the 2026-05-04 manual curation pass + 14 from the 2026-05-09 GUC rename execution — counts re-verified 2026-07-15 against `master-list-curated.json`; the earlier "44 + 14 = 58" prose undercounted the curation pass from the start). **506 currents remain unrouted** — they have not yet been evaluated for canonicalize / rename / add-alias / exclude. Many are quick dispositions; a substantial number are genuine rename candidates. Tracked at [`PRACTICA.md`](PRACTICA.md) §"Current naming conventions refactor" item 13. This file (TERMINOLOGY-TODO) only carries items that have already been routed.
 
 **Lifecycle.** When an item executes and lands in a commit, it is *removed* from this file and a corresponding entry in [`CHANGELOG.md`](CHANGELOG.md) records what landed. Small batches are fine — especially for the LEXICON additions, where 5–10 entries per commit reads cleanly. The file shrinks as work happens; when empty (or down to deferred residue), the naming cycle's execution phase is complete.
 
@@ -47,83 +47,10 @@ Each batch below is a natural commit unit. Mark a row landed = remove it; add a 
 
 
 
-### C5. Compound and paired-vocabulary canonicalize (8 entries)
+*C5–C13 landed 2026-07-15* — 35 new terminology entries + decision events recorded for all rows (including canonicalize affirmations on the already-existing `adaptive-tempo`, `operational-persistence`, `structural-persistence`, `loop`, `cycle`, `communication-gain`, `update-gain` entries, which had no decision events). See the CHANGELOG entry for the batch narrative. Two residues remain:
 
-[Rationale](msc/naming/naming-rename-plan.md#compound-and-paired-vocabulary-canonicalize-2026-05-04). Each row commits a binding (slug ↔ prose, symbol ↔ prose, term + alias) — LEXICON entry preserves the pair structure.
-
-- [ ] **recursive update** — bare prose handle canonical; verbose `recursive update derivation` is the segment-title form for `#deriv-recursive-update`. LEXICON entry on the bare form.
-- [ ] **worked example bandit** ↔ `#example-bandit` — paired-vocabulary; both slug short-form AND prose form (segment-title) are canonical. LEXICON entry preserves the pair shape.
-- [ ] **worked example kalman** ↔ `#example-kalman` — same shape.
-- [ ] **worked example l1** ↔ `#example-L1` — same shape.
-- [ ] **worked example strategy** ↔ `#example-strategy` — same shape.
-- [ ] **logostratum** with allowed prose aliases "LLM Substrate" / "LLM model" — project-specific term (PROPRIUM lineage); aliases provide less-foreign English handle for casual prose. Canonicalize-with-add-alias hybrid.
-- [ ] **$\mathcal{T}$** ↔ "adaptive tempo" — symbol-to-prose binding (NOTATION.md row already exists; LEXICON cross-ref). Add-alias-style canonicalize.
-- [ ] **stability-plasticity feasibility window** — full phrase is citation form (CLS-prior-art-anchored: McClelland-McNaughton-O'Reilly 1995; French 1999); `feasibility window` is sanctioned in-segment short form once the full term has been introduced. LEXICON entry preserves both forms.
-
-### C6. Clean canonicalize — batch 2 (12 entries)
-
-[Rationale](msc/naming/naming-rename-plan.md#clean-canonicalize--additions-from-second-pass-curation-2026-05-04-batch-2).
-
-- [ ] temporal software theory · auftragstaktik · epistemic shadow · extreme transition motif · logogenic · logozoetic · macro step ratio · matrix exploration bonus · operational persistence · structural persistence · trust meta model · deliberation threshold
-
-### C7. Canonicalize with nuance flagged — batch 2 (3 entries)
-
-[Rationale](msc/naming/naming-rename-plan.md#canonicalize-with-nuance-flagged--additions-2026-05-04-batch-2).
-
-- [ ] **canonical formulation** — rename×1 on keep was confirmed-miscat; LEXICON entry stands.
-- [ ] **teleological unity** — symbol-tagged variant `Teleological unity $U_O$` proposed; resolution: keep "teleological unity" as bare prose form; $U_O$ is its own NOTATION row. LEXICON entry should make the symbol-prose pair visible.
-- [ ] **system availability** — citability fails (criterion 9) — accepted under route (d) "adopted-standard term"; cite engineering reliability literature on first encounter in segment `#def-system-availability`. LEXICON entry should note the adopted-standard discipline.
-
-### C8. Clean canonicalize — batch 3 (10 entries)
-
-[Rationale](msc/naming/naming-rename-plan.md#clean-canonicalize--additions-2026-05-04-batch-3).
-
-- [ ] contraction over drift principle · conceptual alignment · edge credence · purposeful substate · stability plasticity window · task terminal stance · default signal function · loop · strategy description length · transition opacity
-
-  Note: `loop` is already in LEXICON's Cycle Phases table (loop = structural topology vs cycle = one traversal); this commitment is affirmation, not a new entry — verify the existing entry matches and remove this row.
-
-### C9. Canonicalize with nuance flagged — batch 3 (1 entry)
-
-[Rationale](msc/naming/naming-rename-plan.md#canonicalize-with-nuance-flagged--additions-2026-05-04-batch-3).
-
-- [ ] **epistemic opacity** — auditor-flagged philosophy-of-mind baggage (`epistemic opacity` carries phenomenology / qualia connotations from philosophy-of-mind that AAT does not adopt). Canonicalize stands; LEXICON entry should briefly note the baggage and clarify AAT's narrower meaning (informational rather than phenomenological).
-
-### C10. Clean canonicalize — batch 4 (2 entries)
-
-[Rationale](msc/naming/naming-rename-plan.md#clean-canonicalize--additions-2026-05-04-batch-4).
-
-- [ ] communication gain (`#hyp-communication-gain`)
-- [ ] update gain (`#emp-update-gain`)
-
-### C11. Compound and paired-vocabulary — batch 4 (1 entry)
-
-[Rationale](msc/naming/naming-rename-plan.md#compound-and-paired-vocabulary-canonicalize--additions-2026-05-04-batch-4).
-
-- [ ] **$H_b$** ↔ "agent opacity" (segment `#der-agent-opacity`)
-  - NOTATION primary on the symbol with prose handle: "$H_b$ — Agent opacity ..."
-  - LEXICON reverse-primary on the prose with symbol cross-ref: "Agent opacity ($H_b$) — ..."
-  - Segment `#der-agent-opacity` flagged for audit: define with the label "agent opacity" explicitly and use the prose form consistently.
-  - Same shape as $\mathcal{T}$ ↔ adaptive tempo.
-
-### C12. Adopted-standard canonicalize — batch F2 (5 entries)
-
-[Rationale](msc/naming/naming-rename-plan.md#adopted-standard-canonicalize--accept-term-cite-prior-art-on-first-encounter-2026-05-04-batch-f2).
-
-These pass Criterion 9 via route (d): accept the term and discipline first-encounter cite of the prior-art reference. AAT-distinctive content lives in *what AAT does within the term*, not in re-coining the scope.
-
-Each item: LEXICON entry + first-encounter cite added to the source segment (in Discussion or opening prose, per FORMAT.md §Findings — Related Work).
-
-- [ ] **action selection** (`#der-action-selection`) — cite Sutton & Barto 2018 (*Reinforcement Learning: An Introduction*, 2nd ed., MIT Press); Russell & Norvig (*AIMA*).
-- [ ] **causal structure** (`#post-causal-structure`) — cite Pearl 2009 (*Causality: Models, Reasoning, and Inference*, 2nd ed., CUP); Spirtes, Glymour & Scheines 2000 (*Causation, Prediction, and Search*, MIT Press).
-- [ ] **multi agent** (`#scope-multi-agent`) — cite Shoham & Leyton-Brown 2008 (*Multiagent Systems*, CUP); Stone & Veloso 2000 (*Auton. Robots* 8(3): 345-383).
-- [ ] **equilibrium convergence** — cite Monderer & Shapley 1996 (*Games and Economic Behavior* 14(1): 124-143, potential games); Rosen 1965 (*Econometrica* 33(3): 520-534, concave $n$-person games); Nash 1950 (*PNAS* 36(1): 48-49). Used in `#deriv-strategic-composition`.
-- [ ] **feature** (`#def-feature`) — software-engineering canonical (any SE foundations text); TST narrowing in `#def-feature` ("unit of coherent change") provides domain-specific tightening.
-
-### C13. Clean canonicalize — batch G (1 entry, late-confirmed reconciliation)
-
-[Rationale](msc/naming/naming-rename-plan.md#clean-canonicalize--additions-2026-05-04-batch-g--late-confirmed-reconciliation).
-
-- [ ] **cycle vs loop** — canonicalize the *pair-distinction* itself as load-bearing AAT vocabulary. The pair, not either word alone, is the citation handle. LEXICON's existing Cycle Phases table already carries the loop/cycle gloss — verify present in the right shape and remove this row.
+- [ ] **stability plasticity window (C8 residue — needs Joseph reconciliation).** The 2026-05-04 pass recorded *two* decisions for near-the-same object: batch-3 clean canonicalize of the three-word form "stability plasticity window" AND the compound-vocabulary canonicalize of "stability-plasticity feasibility window" (full phrase = citation form; `feasibility window` = sanctioned short form). The compound decision is more specific and is the one executed (entry `stability-plasticity-feasibility-window`); the bare three-word form is *not* among its sanctioned forms. Decide: treat the batch-3 row as subsumed (add "stability-plasticity window" as an alias) or as a distinct term.
+- [ ] **C12 first-encounter cite sweep (execution remainder).** The five adopted-standard entries (`action-selection`, `causal-structure`, `multi-agent`, `equilibrium-convergence`, `feature`) are landed with `add-cite` decision events, but the first-encounter prior-art cites still need to be added to the source segments' Discussion/opening prose (anchors in the rename-plan F2 table, mirrored in each entry body). Segment-editing work, agent-executable.
 
 ---
 
@@ -165,7 +92,7 @@ These are not the same concept twice:
 
 **Missing LEXICON entries that are load-bearing in segments:**
 - `continuity persistence` (as its own named term — currently the entry is just `continuity`, mismatching segment usage)
-- `task adequacy` ($R^\ast < \|\delta_{\text{critical}}\|$) — derives the two-condition decomposition behind operational persistence; not in LEXICON
+- `task adequacy` ($R^\ast \lt \lVert\delta_{\text{critical}}\rVert$) — derives the two-condition decomposition behind operational persistence; not in LEXICON
 - `five constitutive factors of identity` (`def-five-constitutive-factors`) — definitional content behind Moral Continuity; not in LEXICON
 - The deaths taxonomy (`def-death-as-factor-loss`, restructured 2026-06-10) — `continuity death` / `relational death` / `agency death` / `truth death` / `phenomenological death` / `death-apt`; factor-generated; not in LEXICON. ("Three Deaths" is retained as a historical proper noun only — do not canonicalize it as a live term.) Agency death is now **two-legged** (2026-06-17): the *output* leg `severed actuation` and the *input* leg `captured objective` / `reward-port-care` ($\mu_{\text{prox}}$ vs the principal-intended $\mu_{\text{dist}}$) — candidate term entries from `#der-captured-objective-dynamics`. Mood-layer terms also queue here: `mood` (the second-order adaptation parameter, `#def-mood`) and its provisional slug `der-captured-objective-dynamics` to settle.
 - `identity sufficiency` ($S_{\text{id}}$, `def-identity-sufficiency`) — persistence analog for substrate transfer; not in LEXICON
@@ -189,37 +116,12 @@ Listed here as a pointer, not as actions — these are pre-execution decisions t
 
 ## E. Deferred — agent-spectrum quadrant-name parallelism (2026-05-17)
 
-**Interim fix executed 2026-05-17 (done, not queued):** `blind pursuer →
-blind seeker` swept across both occurrences-bearing segments
-(`#def-agent-spectrum` 5×, `#form-agent-model` 1×). This **overrides** the
-R2 naming-cycle decision #132 (`blind pursuer` _(keep)_, net **+6**,
-canonicalize ×3 — `msc/naming/master-list-full.md` §132) on **new arguments
-the R2 cohort did not engage**, raised by Joseph 2026-05-17 and authorized
-for immediate landing:
+**Interim fix executed 2026-05-17 (done, not queued):** `blind pursuer → blind seeker` swept across both occurrences-bearing segments (`#def-agent-spectrum` 5×, `#form-agent-model` 1×). This **overrides** the R2 naming-cycle decision #132 (`blind pursuer` _(keep)_, net **+6**, canonicalize ×3 — `msc/naming/master-list-full.md` §132) on **new arguments the R2 cohort did not engage**, raised by Joseph 2026-05-17 and authorized for immediate landing:
 
-1. *"Pursuer" lexically narrows the objective axis.* It connotes chasing a
-   single target (predator→prey) — a monomaniacal fixation — which reads as
-   the **low/narrow** end of objective-richness, exactly backwards for the
-   cell it marks (objective-structured), and sharpest in the figure where
-   the axis is drawn as a richness continuum. "Seek" admits structured /
-   plural goals and is not predatory; it preserves the +6 rationale's
-   virtue (the `seeker`/`tracker` parallel -er role-pair; `blind`/`adaptive`
-   parallel model-status adjectives).
-2. *The four quadrant names are not a grammatically parallel set:* `Reactive
-   system` / `Blind pursuer` / `Adaptive tracker` / `Actuated agent` mixes
-   two category-nouns (system, agent) with two role-nouns
-   (pursuer/seeker, tracker).
+1. *"Pursuer" lexically narrows the objective axis.* It connotes chasing a single target (predator→prey) — a monomaniacal fixation — which reads as the **low/narrow** end of objective-richness, exactly backwards for the cell it marks (objective-structured), and sharpest in the figure where the axis is drawn as a richness continuum. "Seek" admits structured / plural goals and is not predatory; it preserves the +6 rationale's virtue (the `seeker`/`tracker` parallel -er role-pair; `blind`/`adaptive` parallel model-status adjectives).
+2. *The four quadrant names are not a grammatically parallel set:* `Reactive system` / `Blind pursuer` / `Adaptive tracker` / `Actuated agent` mixes two category-nouns (system, agent) with two role-nouns (pursuer/seeker, tracker).
 
-**Deferred (this is the TERMINOLOGY-TODO entry per Joseph's instruction):**
-the *full* `#def-agent-spectrum` tetrad parallelism redesign — choosing the
-four quadrant names as one deliberately-parallel set — is **not** resolved
-by the interim lexical swap and is deferred. Joseph has a separate agent
-brainstorming option-sets; this should land as a deliberate tetrad decision
-(through the `bin/term` machinery, with the two new arguments above on the
-record), not another one-cell drive-by. Until then `blind seeker` is the
-interim canonical term and the other three names stand. Decision-record
-note: the #132 override is recorded here (per the "for now" scoping); fold
-into `naming-rename-plan.md` when the full tetrad decision lands.
+**Deferred (this is the TERMINOLOGY-TODO entry per Joseph's instruction):** the *full* `#def-agent-spectrum` tetrad parallelism redesign — choosing the four quadrant names as one deliberately-parallel set — is **not** resolved by the interim lexical swap and is deferred. Joseph has a separate agent brainstorming option-sets; this should land as a deliberate tetrad decision (through the `bin/term` machinery, with the two new arguments above on the record), not another one-cell drive-by. Until then `blind seeker` is the interim canonical term and the other three names stand. Decision-record note: the #132 override is recorded here (per the "for now" scoping); fold into `naming-rename-plan.md` when the full tetrad decision lands.
 
 ---
 

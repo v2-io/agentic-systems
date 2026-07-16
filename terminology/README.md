@@ -183,12 +183,12 @@ The render step is **independent of lint** — `bin/term render` always emits LE
 ### Generating LEXICON.md
 
 ```bash
-bin/term render                                  # writes terminology/_emitted/LEXICON.md (staging)
-bin/term render --output LEXICON.md              # writes root LEXICON.md (refuses if hand-authored)
-bin/term render --output LEXICON.md --force      # writes root LEXICON.md unconditionally
+bin/term render                                  # writes root LEXICON.md (the live view; default)
+bin/term render --output <path>                  # writes elsewhere (refuses if destination is hand-authored)
+bin/term render --output <path> --force          # writes unconditionally
 ```
 
-**Default destination is the staging path**, not the live root LEXICON.md. Until the existing hand-authored LEXICON entries have been migrated into `terminology/entries/`, rendering directly to the live LEXICON.md would replace real content with a partial generated view. Once migration is complete, change the default in `bin/term`'s `cmd_render` to `ROOT/'LEXICON.md'`.
+**Default destination is the root `LEXICON.md`** (the live human-readable view). The migration of the previously hand-authored LEXICON entries into `terminology/entries/` completed 2026-05-08; root `LEXICON.md` has been an `Auto-generated` artifact since, and `cmd_render`'s default is `ROOT/'LEXICON.md'`. *(This section previously described the pre-migration staging default; updated to present state 2026-07-15.)*
 
 **Clobber guard:** the renderer refuses to overwrite a destination file that does NOT carry the `Auto-generated` marker on its first ~5 lines, unless `--force` is passed. This catches accidental clobbers of hand-authored LEXICON.md or any other markdown file. Files that the renderer itself produced carry the marker and are overwritten freely.
 

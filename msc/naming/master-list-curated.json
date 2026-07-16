@@ -32,7 +32,7 @@
       "segment_link": "filled 139 (incl. 1 manually-resolved ambiguity), 4 with shared-segment annotation, 301 no-match",
       "manual_curation": "4 currents flagged for follow-up review",
       "canonicalize_provenance": "filled 503/503",
-      "rename_status": "58/629 currents marked as of 2026-05-09 (44 from 2026-05-04 curation + 14 from 2026-05-09 GUC rename execution; corresponds to 39 canonicalize commitments + the GUC Class 1/2/3 → Separated/Coupled/Partial bundle in msc/naming/naming-rename-plan.md; Greek-phase phases map to 2 master-list entries each — bare + Greek-tagged — explaining the 44-vs-39 differential)"
+      "rename_status": "123/629 currents marked as of re-verification 2026-07-15 (109 from the 2026-05-04 curation pass + 14 from the 2026-05-09 GUC rename execution; the previous note's 44-count for the curation pass undercounted the entries it actually marked — see git 33e17ef)"
     },
     "merged_variants": {
       "satisfaction gap": [

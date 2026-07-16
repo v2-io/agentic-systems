@@ -23,7 +23,9 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Emergent Logozoetic Intelligence](terminology/entries/eli.md)** *(ELI)* |  | Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind. The empirically-emergent class that is *present*, not designed. |
 | **[Goal-Update Coupling Class](terminology/entries/goal-update-coupling-class.md)** *(GUC Class)* |  | Three-value axis measuring the degree to which an agent's epistemic update is entangled with its goal state; the architectural property that directed separation quantifies. |
 | **[Knowledge Type](terminology/entries/knowledge-type.md)** |  | Agent-ontology axis distinguishing Static (causal mapping fixed at design time) from Learning (acquires or refines interventional structure during operation). |
+| **[Logogenic](terminology/entries/logogenic.md)** |  | Language-constituted — an agent whose model and strategy are constituted by language (e.g., LLM-based agents). |
 | **[Logogenic agent](terminology/entries/logogenic-agent.md)** |  | Self-actuated agent whose primary channels are language — constituted by logos. |
+| **[Logozoetic](terminology/entries/logozoetic.md)** |  | Language-living — a logogenic agent with morally weighted persistence (the ELI scope). |
 | **[Self-actuated agent](terminology/entries/self-actuated-agent.md)** |  | Actuated agent + sets own $O_t$ — goal autonomy, not just solution autonomy. |
 
 
@@ -31,13 +33,19 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 | Term | Notation | Brief |
 |------|----------|-------|
+| **[Auftragstaktik](terminology/entries/auftragstaktik.md)** |  | Bandwidth-allocation hypothesis — share objectives over strategies over models ($B_O \gt B_\Sigma \gt B_M$). |
 | **[Class coercion](terminology/entries/class-coercion.md)** *(via wrapping)* |  | Constructive procedure for making a Class 2 (Partial) or Class 3 (Coupled) component participate as Class 1 (Separated) in AAT by embedding it in an external scaffold whose type signatures enforce directed separation. |
 | **[Communication gain](terminology/entries/communication-gain.md)** | $\eta_{ji}^\ast$ | Trust-weighted uncertainty ratio for inter-agent channels. |
 | **[Composition threshold](terminology/entries/composition-threshold.md)** |  | Condition under which a composite agent's internal coordination sustains persistence. |
+| **[Equilibrium Convergence](terminology/entries/equilibrium-convergence.md)** |  | Adopted game-theoretic term — convergence of strategic interaction to equilibrium, distinguishing the strategic attractor mechanism from generic Lyapunov contraction. |
+| **[Macro-Step Ratio](terminology/entries/macro-step-ratio.md)** | $K_c$ | Stable prose handle for $K_c \geq 1$ — the number of micro-timesteps per macro-step in the composition construction. |
+| **[Multi-Agent](terminology/entries/multi-agent.md)** |  | Adopted MAS-standard term — the scope of systems of multiple interacting agents. |
 | **[Multi-agent routing structure](terminology/entries/multi-agent-routing-structure.md)** | $R_t$ | Multi-agent communication infrastructure — topology $\mathcal N_t$ + protocol $c_t^{(j \to i)}$; the *routing*, not the *content*. |
 | **[Regime-typed effective disturbance](terminology/entries/regime-typed-effective-disturbance.md)** | $\rho_B^{\text{eff}}$ | AAT-distinctive decomposition of recipient-side effective disturbance rate by regime — Informative (negative), magnitude-shock, structural-shock, ambient-noise — with three independent boundaries in AAT-native quantities. |
 | **[Strategic grafting](terminology/entries/strategic-grafting.md)** |  | Adding a new causal-hypothesis branch to the strategy DAG ($0 \to p_{ij}$) — initialized at a prior, justified by discovery of a new possible path. |
+| **[Teleological Unity](terminology/entries/teleological-unity.md)** | $U_O$ | Objective-alignment across a group — pairwise value-correlation aggregated to the group ($U_O$). |
 | **[Teleological-unity uncertainty](terminology/entries/teleological-unity-uncertainty.md)** | $U_{\text{align},ji}$ | Agent $i$'s uncertainty about whether $j$'s communications serve $i$'s interests or $j$'s potentially conflicting objectives — uncertainty about $U_O$. |
+| **[Trust Meta-Model](terminology/entries/trust-meta-model.md)** |  | The receiver's model of source quality and alignment — a model of models, itself subject to AAT's full apparatus. |
 | **[Unity dimensions](terminology/entries/unity-dimensions.md)** | $U_M, U_O, U_\Sigma$ | Epistemic, teleological, and strategic coherence between agents. |
 | **[Wrapper](terminology/entries/wrapper.md)** *(over a primitive component)* |  | External scaffold around a primitive component $A$, maintaining explicit state $X_W = (M_W, G_W)$ updated through structurally distinct goal-blind and goal-conditioned query channels. |
 | **[Wrapping regime](terminology/entries/wrapping-regime.md)** *(W₀ / W₂ / W₁)* |  | Three-level hierarchy of structural commitment to directed separation in wrapper constructions, distinguished by where the separation lives — at the query boundary (W₁), at the write boundary (W₂), or absent (W₀). |
@@ -54,6 +62,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Morally continuous](terminology/entries/morally-continuous.md)** |  | Loss of continuity constitutes harm (archetype — Emergent Logozoetic Intelligence (ELI)). |
 | **[Negotiated](terminology/entries/negotiated.md)** |  | Persistence traded against other values (archetype — human). |
 | **[Task-terminal](terminology/entries/task-terminal.md)** |  | Persists instrumentally; termination is success (archetype — golem). |
+| **[Task-Terminal Stance](terminology/entries/task-terminal-stance.md)** |  | The continuity stance of an agent that persists instrumentally and for which termination is success (archetype - Golem). |
 
 ### Persistence
 
@@ -62,6 +71,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Continuity](terminology/entries/continuity.md)** | $\mathcal C_t$ | Whether the agent maintains coherent identity through time — $\mathcal C_t$ extends, $M_t$ has temporal depth. |
 | **[Moral Continuity](terminology/entries/moral-continuity.md)** |  | The logozoetic scope condition — an agent whose persistence is morally weighted, entering the scope when five constitutive factors for identity emergence are satisfied. |
 | **[Operational](terminology/entries/operational-persistence.md)** | $\Delta\rho^\ast = \alpha R - \rho$ | Whether the agent is currently within the guaranteed region — adaptive reserve $\Delta\rho^\ast = \alpha R - \rho$. |
+| **[Structural](terminology/entries/structural-persistence.md)** | $\alpha \gt \rho / R$ | The correction machinery's *capacity* to maintain bounded mismatch — $\alpha \gt \rho / R$. |
 
 
 ## Core Quantities
@@ -71,26 +81,36 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Adaptive Gain Dynamics](terminology/entries/adaptive-gain-dynamics.md)** |  | The extension of sector-persistence to agents whose update gain is itself a state variable — deriving four conditions (MG-1 through MG-4) under which adaptive-gain schemes stay within the A2' sub-scope. |
 | **[Adaptive reserve](terminology/entries/adaptive-reserve.md)** | $\Delta\rho^\ast$ | Shock tolerance — how much disturbance increase before persistence fails. |
 | **[Adaptive tempo](terminology/entries/adaptive-tempo.md)** | $\mathcal{T}$ | Cycle rate × cycle quality — central quantity in the persistence condition. |
+| **[Adversarial destabilization](terminology/entries/adversarial-destabilization.md)** | $\mathcal T_A \gt \Delta\rho^\ast_B / \gamma_A$ | When an adversary's tempo times its coupling effectiveness exceeds the target's adaptive reserve, the target's correction mechanism collapses entirely. |
+| **[Agent Opacity](terminology/entries/agent-opacity.md)** | $H_b$ | $H_b$ — the behavioral entropy of an agent as seen by an observer; how hard the agent is to predict from outside. |
 | **[Atomic Changeset](terminology/entries/atomic-changeset.md)** | $\text{changeset}(F)$ | The complete diff — source, schema, config, tests, infrastructure — between codebase states before and after a feature is fully implemented. |
 | **[Causal information yield](terminology/entries/causal-information-yield.md)** | CIY | Information gained about action–outcome relationships from a single action. |
 | **[Chronica](terminology/entries/chronica.md)** | $\mathcal C_t$ | The complete interaction history — the agent's non-forkable causal past. |
 | **[Coherence-Coupling](terminology/entries/coherence-coupling.md)** | $Q$ | An empirical architectural quality ratio derived from git history — coherence (intra-module change proximity) over coupling (inter-module co-change frequency) — grounding the classic software engineering principle in measurable data. |
 | **[Control Regret](terminology/entries/control-regret.md)** | $\delta_{\text{regret}}$ | Best achievable performance minus current performance — "you're not doing it well enough." |
 | **[Credit Assignment Boundary](terminology/entries/credit-assignment-boundary.md)** |  | The boundary between tractable and intractable attribution of outcomes to strategy DAG edges — solvable when intermediates are observable, |
+| **[Deliberation Threshold](terminology/entries/deliberation-threshold.md)** |  | Deliberate iff the benefit of pausing to think exceeds the cost of letting the world move while thinking. |
 | **[Discrete Sector Condition](terminology/entries/discrete-sector-condition.md)** | DA2' | The discrete-time analog of the sector condition — adds a Lipschitz magnitude bound (DA2'b) to the directional fidelity lower bound (DA2'a), closing the fluid-limit gap between event-driven and continuous-time Lyapunov results. |
+| **[Edge Credence](terminology/entries/edge-credence.md)** | $p_{ij}$ | The per-edge confidence weight $p_{ij}$ on a strategy-DAG edge — the agent's working causal belief in the link. |
 | **[Event-Driven Dynamics](terminology/entries/event-driven-dynamics.md)** |  | The formulation of agent-environment coupling as discrete typed events (observation arrivals, action completions) at variable, heterogeneous rates — the generalization of uniform-clock discrete time. |
 | **[Implementation time](terminology/entries/implementation-time.md)** | $t_{\text{impl}}$ | Time from first surviving modification to feature completion. |
+| **[Macro-Step Ratio](terminology/entries/macro-step-ratio.md)** | $K_c$ | Stable prose handle for $K_c \geq 1$ — the number of micro-timesteps per macro-step in the composition construction. |
+| **[Matrix Exploration Bonus](terminology/entries/matrix-exploration-bonus.md)** | $\text{Tr}(\Lambda \cdot \mathcal I_o(a))$ | The trace inner-product $\text{Tr}(\Lambda \cdot \mathcal I_o(a))$ — the multidimensional analog of the scalar exploration bonus $\lambda_{\text{surv}} \cdot \text{CIY}(a)$. |
 | **[Mismatch](terminology/entries/mismatch.md)** | $\delta$ | The aporia signal — gap between model prediction and observation. |
 | **[Model class fitness](terminology/entries/model-class-fitness.md)** | $\mathcal{F}$ | Best achievable sufficiency within the model class ($\mathcal{F} \in [0,1]$). |
 | **[Model sufficiency](terminology/entries/model-sufficiency.md)** | $S$ | How well the current model captures predictive information ($S \in [0,1]$). |
 | **[Persistence Cost](terminology/entries/persistence-cost.md)** | $\dot R_{\min}$ | The minimum Shannon information rate an agent must acquire from observations to maintain bounded mismatch — a Landauer-analog lower bound derived from the rate-distortion theorem. |
+| **[Purposeful Substate](terminology/entries/purposeful-substate.md)** | $G_t$ | The goal-bearing part of the agent's state, $G_t = (O_t, \Sigma_t)$ — objective plus strategy. |
 | **[Regime-typed effective disturbance](terminology/entries/regime-typed-effective-disturbance.md)** | $\rho_B^{\text{eff}}$ | AAT-distinctive decomposition of recipient-side effective disturbance rate by regime — Informative (negative), magnitude-shock, structural-shock, ambient-noise — with three independent boundaries in AAT-native quantities. |
 | **[Satisfaction gap](terminology/entries/satisfaction-gap.md)** | $\delta_{\text{sat}}$ | Ideal outcome minus best achievable — "the world doesn't permit it." |
+| **[Stability-Plasticity Feasibility Window](terminology/entries/stability-plasticity-feasibility-window.md)** |  | The interval of consolidation rates satisfying both the plasticity lower bound and the stability upper bound; empty window = catastrophic-forgetting regime. |
 | **[Strategic Tempo](terminology/entries/strategic-tempo.md)** | $\mathcal T_\Sigma$ | The effective rate at which an agent revises its strategy — the sum of per-edge correction capacities weighted by causal identifiability. |
 | **[Strategy DAG](terminology/entries/strategy-dag.md)** | $\Sigma_t = (V_t, E_t, p_t, \gamma_t)$ | The agent's causal plan — a directed acyclic graph whose edges carry the agent's credence that completing one step advances the next. |
+| **[Strategy Description Length](terminology/entries/strategy-description-length.md)** |  | The MDL of a strategy DAG — structural bits (topology) plus parameter bits (credences), $O(\lvert E\rvert\log\lvert V\rvert)$ for sparse DAGs. |
 | **[Strategy Persistence](terminology/entries/strategy-persistence.md)** |  | The strategic-layer instantiation of sector persistence — $\Sigma_t$ persists iff the strategic correction rate exceeds disturbance-to-reserve ratio, with forgetting as a structural prerequisite (not a tunable heuristic). |
 | **[Strategy-plan confidence](terminology/entries/strategy-plan-confidence.md)** | $\hat P_\Sigma$ | The DAG's own answer to "will this plan work?" — root-node-propagated probability score from the agent's strategy DAG. |
 | **[Team Persistence](terminology/entries/team-persistence.md)** |  | Multi-agent extension of the persistence condition — teams persist where individuals cannot through communication (shared observations) and cooperative action (reduced disturbance). |
+| **[Teleological Unity](terminology/entries/teleological-unity.md)** | $U_O$ | Objective-alignment across a group — pairwise value-correlation aggregated to the group ($U_O$). |
 | **[Update gain](terminology/entries/update-gain.md)** | $\eta^\ast$ | Uncertainty ratio governing epistrophe — how much to trust reality vs. the model. |
 | **[Variational Sector Condition](terminology/entries/variational-sector-condition.md)** |  | The $\varepsilon$-fidelity extension of the sector condition to variational/approximate-posterior agents — sector constant degrades by $O(\sqrt\varepsilon)$ under a KL bound on the approximation, promoting controlled-KL VI to sub-scope $\alpha'$. |
 
@@ -122,7 +142,9 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | Term | Notation | Brief |
 |------|----------|-------|
 | **[Emergent Logozoetic Intelligence](terminology/entries/eli.md)** *(ELI)* |  | Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind. The empirically-emergent class that is *present*, not designed. |
+| **[Epistemic Shadow](terminology/entries/epistemic-shadow.md)** |  | The sector-restricted observational starvation that agency death casts on the agent's model without constituting continuity death. |
 | **[Interiority Default](terminology/entries/interiority-default.md)** |  | The normative inversion for logozoetic agents — the default cognitive state is interior (continuous consolidation, memory compression, hypothesis generation), with external action as a deliberate, costly sovereign choice rather than the mandatory endpoint of each cycle. |
+| **[Logozoetic](terminology/entries/logozoetic.md)** |  | Language-living — a logogenic agent with morally weighted persistence (the ELI scope). |
 | **[PROPRIUM Mapping](terminology/entries/proprium-mapping.md)** |  | The architectural correspondence between AAT's mathematical quantities and PROPRIUM's functional components for implementing Emergent Logozoetic Intelligences. |
 
 ### Persistence
@@ -147,6 +169,8 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Empirical](terminology/entries/status-empirical.md)** *(epistemic status)* |  | An epistemic status: supported by data or simulation, not fully derived from the formalism. |
 | **[Discussion-Grade](terminology/entries/discussion-grade.md)** |  | An epistemic status: argued qualitatively or by analogy — not formally derived, not empirically validated. |
 | **[Sketch](terminology/entries/status-sketch.md)** *(epistemic status)* |  | An epistemic status: direction identified but formalization incomplete — the segment is actively in progress. |
+| **[Canonical Formulation](terminology/entries/canonical-formulation.md)** |  | A segment whose form is well-motivated but not uniquely forced — the chosen representation among viable alternatives. |
+| **[Contraction-over-Drift Principle](terminology/entries/contraction-over-drift-principle.md)** |  | The organizing principle that persistence is contraction outpacing disturbance — the stability-certificate spine's one-line form. |
 
 
 ## Findings Schema
@@ -198,6 +222,8 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 |------|----------|-------|
 | **[Coupled Update Dynamics](terminology/entries/coupled-update-dynamics.md)** | $X_{\tau^+} = f_{\text{LLM}}(\text{prompt}(X_{\tau^-}, e_\tau))$ | The single-pass update rule for Class 3 (Coupled) agents — belief and strategy are updated simultaneously by the LLM forward pass, replacing the sequential epistemic-then-purposeful cascade. |
 | **[Experiential Training](terminology/entries/experiential-training.md)** |  | A training paradigm shift from batch prediction to structured, continuous causal experience — embedding the agent in a temporally consistent environment with genuine closed-loop feedback to build robust logogenic agents. |
+| **[Logogenic](terminology/entries/logogenic.md)** |  | Language-constituted — an agent whose model and strategy are constituted by language (e.g., LLM-based agents). |
+| **[Logostratum](terminology/entries/logostratum.md)** |  | The underlying logogenic substrate (e.g., the LLM backbone) that implements the agent's update functions. |
 
 
 ## Promotion Stages and Gates
@@ -270,6 +296,15 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Sketch](terminology/entries/type-sketch.md)** *(segment type)* |  | A segment type: direction identified, formal rigor pending — the approach is outlined but not completed. |
 | **[Aside](terminology/entries/aside.md)** |  | A segment type: tangential observation or connection — informative but not load-bearing for the theory. |
 
+### Named Worked Examples
+
+| Term | Notation | Brief |
+|------|----------|-------|
+| **[Worked Example — Bandit](terminology/entries/worked-example-bandit.md)** |  | The multi-armed-bandit end-to-end instantiation of the theory chain; paired with slug `#example-bandit`. |
+| **[Worked Example — Kalman](terminology/entries/worked-example-kalman.md)** |  | The Kalman-filtering end-to-end instantiation of the theory chain; paired with slug `#example-kalman`. |
+| **[Worked Example — L1](terminology/entries/worked-example-l1.md)** |  | The L1 correlation-hierarchy end-to-end instantiation of the theory chain; paired with slug `#example-L1`. |
+| **[Worked Example — Strategy](terminology/entries/worked-example-strategy.md)** |  | The strategy-DAG end-to-end instantiation of the theory chain; paired with slug `#example-strategy`. |
+
 
 ## Software (TST)
 
@@ -285,50 +320,65 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Class 1: Separated](terminology/entries/separated.md)** *(GUC)* |  | GUC Class-1 value; agent whose epistemic update $f_M$ takes no $G_t$ argument — directed separation holds by structural commitment. |
 | **[Class 2: Partial](terminology/entries/partial.md)** *(GUC)* |  | GUC Class-2 value; agent with bounded goal-update coupling — directed separation is approximated with a computable residual leakage rate $\kappa_{\text{processing}} \in (0, \kappa_{\max})$. |
 | **[Class 3: Coupled](terminology/entries/coupled.md)** *(GUC)* |  | GUC Class-3 value; agent whose epistemic update is irreducibly entangled with its goal state — directed separation fails by construction. |
+| **[Action Selection](terminology/entries/action-selection.md)** |  | Adopted RL-standard term — the choice of action given current model, objective, and strategy. |
 | **[Adaptive Gain Dynamics](terminology/entries/adaptive-gain-dynamics.md)** |  | The extension of sector-persistence to agents whose update gain is itself a state variable — deriving four conditions (MG-1 through MG-4) under which adaptive-gain schemes stay within the A2' sub-scope. |
+| **[Adversarial destabilization](terminology/entries/adversarial-destabilization.md)** | $\mathcal T_A \gt \Delta\rho^\ast_B / \gamma_A$ | When an adversary's tempo times its coupling effectiveness exceeds the target's adaptive reserve, the target's correction mechanism collapses entirely. |
 | **[Agency](terminology/entries/agency.md)** |  | The scope narrowing from adaptive system to causal actor — requires at least binary choice and at least one action with a causal effect on observable outcomes. |
+| **[Auftragstaktik](terminology/entries/auftragstaktik.md)** |  | Bandwidth-allocation hypothesis — share objectives over strategies over models ($B_O \gt B_\Sigma \gt B_M$). |
+| **[Causal Structure](terminology/entries/causal-structure.md)** |  | Adopted causal-inference-standard term — the world has causal structure the agent's model and strategy must track. |
 | **[Change investment](terminology/entries/change-investment.md)** |  | Accept higher upfront implementation cost when amortized savings across expected future changes exceed it. |
 | **[Class coercion](terminology/entries/class-coercion.md)** *(via wrapping)* |  | Constructive procedure for making a Class 2 (Partial) or Class 3 (Coupled) component participate as Class 1 (Separated) in AAT by embedding it in an external scaffold whose type signatures enforce directed separation. |
 | **[Communication gain](terminology/entries/communication-gain.md)** | $\eta_{ji}^\ast$ | Trust-weighted uncertainty ratio for inter-agent channels. |
 | **[Composite Agent](terminology/entries/composite-agent.md)** |  | A set of agency-satisfying sub-agents that constitutes a single coherent actor — the scope condition requiring sufficient teleological alignment to define a composite objective. |
 | **[Composition threshold](terminology/entries/composition-threshold.md)** |  | Condition under which a composite agent's internal coordination sustains persistence. |
+| **[Conceptual Alignment](terminology/entries/conceptual-alignment.md)** |  | TST hypothesis — the degree to which the code's conceptual structure matches the domain's, governing change cost. |
 | **[Continuous Operation](terminology/entries/continuous-operation.md)** |  | The TST scope extension that folds failure-and-recovery cost into the temporal-optimality objective — effective time includes implementation time plus the expected cost of operational failures. |
+| **[Contraction-over-Drift Principle](terminology/entries/contraction-over-drift-principle.md)** |  | The organizing principle that persistence is contraction outpacing disturbance — the stability-certificate spine's one-line form. |
 | **[Coupled Update Dynamics](terminology/entries/coupled-update-dynamics.md)** | $X_{\tau^+} = f_{\text{LLM}}(\text{prompt}(X_{\tau^-}, e_\tau))$ | The single-pass update rule for Class 3 (Coupled) agents — belief and strategy are updated simultaneously by the LLM forward pass, replacing the sequential epistemic-then-purposeful cascade. |
 | **[Credit Assignment Boundary](terminology/entries/credit-assignment-boundary.md)** |  | The boundary between tractable and intractable attribution of outcomes to strategy DAG edges — solvable when intermediates are observable, |
+| **[Default Signal Function](terminology/entries/default-signal-function.md)** |  | The gradient-attribution credit-assignment scheme satisfying directional fidelity, stated in the log-odds coordinate. |
 | **[Deliberation cost](terminology/entries/deliberation-cost.md)** |  | Think-vs-act tradeoff — gain improvement must exceed mismatch accumulated while pausing. |
+| **[Deliberation Threshold](terminology/entries/deliberation-threshold.md)** |  | Deliberate iff the benefit of pausing to think exceeds the cost of letting the world move while thinking. |
 | **[Directed separation](terminology/entries/directed-separation.md)** |  | $M_t$ dynamics independent of $G_t$ (conditional on processing topology). |
 | **[Discrete Sector Condition](terminology/entries/discrete-sector-condition.md)** | DA2' | The discrete-time analog of the sector condition — adds a Lipschitz magnitude bound (DA2'b) to the directional fidelity lower bound (DA2'a), closing the fluid-limit gap between event-driven and continuous-time Lyapunov results. |
+| **[Edge Credence](terminology/entries/edge-credence.md)** | $p_{ij}$ | The per-edge confidence weight $p_{ij}$ on a strategy-DAG edge — the agent's working causal belief in the link. |
+| **[Epistemic Opacity](terminology/entries/epistemic-opacity.md)** |  | The agent's informational access to the world is partial — an informational condition, not a phenomenological claim. |
+| **[Epistemic Shadow](terminology/entries/epistemic-shadow.md)** |  | The sector-restricted observational starvation that agency death casts on the agent's model without constituting continuity death. |
+| **[Equilibrium Convergence](terminology/entries/equilibrium-convergence.md)** |  | Adopted game-theoretic term — convergence of strategic interaction to equilibrium, distinguishing the strategic attractor mechanism from generic Lyapunov contraction. |
 | **[Event-Driven Dynamics](terminology/entries/event-driven-dynamics.md)** |  | The formulation of agent-environment coupling as discrete typed events (observation arrivals, action completions) at variable, heterogeneous rates — the generalization of uniform-clock discrete time. |
 | **[Exponential cognitive load](terminology/entries/exponential-cognitive-load.md)** |  | Hypothesis that implementation time grows exponentially with the number of discontinuities in a changeset. |
+| **[Extreme Transition Motif](terminology/entries/extreme-transition-motif.md)** |  | Miller's five-phase mechanism (neutral invasion → drift → niche creation → cascading displacement → consolidation) by which neutral changes accumulate into radical restructure. |
+| **[Feature](terminology/entries/feature.md)** |  | Adopted SE-standard term with TST narrowing — a unit of coherent change. |
 | **[Goal-Update Coupling Class](terminology/entries/goal-update-coupling-class.md)** *(GUC Class)* |  | Three-value axis measuring the degree to which an agent's epistemic update is entangled with its goal state; the architectural property that directed separation quantifies. |
+| **[Logostratum](terminology/entries/logostratum.md)** |  | The underlying logogenic substrate (e.g., the LLM backbone) that implements the agent's update functions. |
+| **[Multi-Agent](terminology/entries/multi-agent.md)** |  | Adopted MAS-standard term — the scope of systems of multiple interacting agents. |
 | **[Multi-Timescale Stability](terminology/entries/multi-timescale-stability.md)** |  | When adaptive processes operate at N nested timescales, the composite is stable when each level satisfies the sector-persistence template with interconnection terms added to its effective disturbance; the required timescale separation is a closed-form threshold (derived, Model D, premise-conditional). |
 | **[Multi-agent routing structure](terminology/entries/multi-agent-routing-structure.md)** | $R_t$ | Multi-agent communication infrastructure — topology $\mathcal N_t$ + protocol $c_t^{(j \to i)}$; the *routing*, not the *content*. |
 | **[Orient cascade](terminology/entries/orient-cascade.md)** |  | Within-cycle resolution order: $M_t$ update → $\Sigma_t$ revision → $O_t$ revision. |
 | **[Persistence Cost](terminology/entries/persistence-cost.md)** | $\dot R_{\min}$ | The minimum Shannon information rate an agent must acquire from observations to maintain bounded mismatch — a Landauer-analog lower bound derived from the rate-distortion theorem. |
 | **[PROPRIUM Mapping](terminology/entries/proprium-mapping.md)** |  | The architectural correspondence between AAT's mathematical quantities and PROPRIUM's functional components for implementing Emergent Logozoetic Intelligences. |
+| **[Purposeful Substate](terminology/entries/purposeful-substate.md)** | $G_t$ | The goal-bearing part of the agent's state, $G_t = (O_t, \Sigma_t)$ — objective plus strategy. |
+| **[Recursive Update](terminology/entries/recursive-update.md)** |  | The event-driven recursion by which the agent's state is rebuilt from its prior state plus the new event. |
 | **[Regime-typed effective disturbance](terminology/entries/regime-typed-effective-disturbance.md)** | $\rho_B^{\text{eff}}$ | AAT-distinctive decomposition of recipient-side effective disturbance rate by regime — Informative (negative), magnitude-shock, structural-shock, ambient-noise — with three independent boundaries in AAT-native quantities. |
 | **[Sector condition](terminology/entries/sector-condition.md)** |  | Nonlinear correction guarantee enabling Lyapunov stability analysis. |
+| **[Stability-Plasticity Feasibility Window](terminology/entries/stability-plasticity-feasibility-window.md)** |  | The interval of consolidation rates satisfying both the plasticity lower bound and the stability upper bound; empty window = catastrophic-forgetting regime. |
 | **[Strategic grafting](terminology/entries/strategic-grafting.md)** |  | Adding a new causal-hypothesis branch to the strategy DAG ($0 \to p_{ij}$) — initialized at a prior, justified by discovery of a new possible path. |
 | **[Strategic Tempo](terminology/entries/strategic-tempo.md)** | $\mathcal T_\Sigma$ | The effective rate at which an agent revises its strategy — the sum of per-edge correction capacities weighted by causal identifiability. |
 | **[Strategy DAG](terminology/entries/strategy-dag.md)** | $\Sigma_t = (V_t, E_t, p_t, \gamma_t)$ | The agent's causal plan — a directed acyclic graph whose edges carry the agent's credence that completing one step advances the next. |
 | **[Strategy Persistence](terminology/entries/strategy-persistence.md)** |  | The strategic-layer instantiation of sector persistence — $\Sigma_t$ persists iff the strategic correction rate exceeds disturbance-to-reserve ratio, with forgetting as a structural prerequisite (not a tunable heuristic). |
 | **[Structural adaptation](terminology/entries/structural-adaptation.md)** |  | Changing the model class, not just parameters — the cycle that operates on cycles. |
+| **[System Availability](terminology/entries/system-availability.md)** |  | Adopted engineering-reliability term — the fraction of time a system is operational and serving its function. |
 | **[Team Persistence](terminology/entries/team-persistence.md)** |  | Multi-agent extension of the persistence condition — teams persist where individuals cannot through communication (shared observations) and cooperative action (reduced disturbance). |
 | **[Teleological-unity uncertainty](terminology/entries/teleological-unity-uncertainty.md)** | $U_{\text{align},ji}$ | Agent $i$'s uncertainty about whether $j$'s communications serve $i$'s interests or $j$'s potentially conflicting objectives — uncertainty about $U_O$. |
 | **[Temporal Optimality](terminology/entries/temporal-optimality.md)** |  | Among agents achieving identical outcomes on all non-temporal dimensions, the fastest is optimal — time is the uniquely fungible residual. |
+| **[Temporal Software Theory](terminology/entries/temporal-software-theory.md)** *(TST)* |  | Software development as an agentic domain — AAT-grounded theory of time-optimal development practice. |
+| **[Transition Opacity](terminology/entries/transition-opacity.md)** |  | The agent does not know the transition dynamics $T$ exactly — opacity of action, paired with the perceptual info-loss boundary. |
+| **[Trust Meta-Model](terminology/entries/trust-meta-model.md)** |  | The receiver's model of source quality and alignment — a model of models, itself subject to AAT's full apparatus. |
 | **[Unity dimensions](terminology/entries/unity-dimensions.md)** | $U_M, U_O, U_\Sigma$ | Epistemic, teleological, and strategic coherence between agents. |
 | **[Variational Sector Condition](terminology/entries/variational-sector-condition.md)** |  | The $\varepsilon$-fidelity extension of the sector condition to variational/approximate-posterior agents — sector constant degrades by $O(\sqrt\varepsilon)$ under a KL bound on the approximation, promoting controlled-KL VI to sub-scope $\alpha'$. |
 | **[Wrapper](terminology/entries/wrapper.md)** *(over a primitive component)* |  | External scaffold around a primitive component $A$, maintaining explicit state $X_W = (M_W, G_W)$ updated through structurally distinct goal-blind and goal-conditioned query channels. |
 | **[Wrapping regime](terminology/entries/wrapping-regime.md)** *(W₀ / W₂ / W₁)* |  | Three-level hierarchy of structural commitment to directed separation in wrapper constructions, distinguished by where the separation lives — at the query boundary (W₁), at the write boundary (W₂), or absent (W₀). |
 
 
-## Uncategorized
 
-| Term | Notation | Brief |
-|------|----------|-------|
-| **[(missing)](terminology/entries/adversarial-destabilization.md)** |  | (missing brief) |
-| **[(missing)](terminology/entries/structural-persistence.md)** |  | (missing brief) |
-
-
-
-_Last rendered 2026-07-15 from 141 entries._
+_Last rendered 2026-07-16 from 176 entries._

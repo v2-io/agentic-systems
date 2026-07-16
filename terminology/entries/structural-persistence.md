@@ -3,7 +3,7 @@ slug: structural-persistence
 schema_version: 1
 term: structural persistence
 name: Structural
-notation: "$\\alpha \gt \\rho / R$"
+notation: "$\\alpha \\gt \\rho / R$"
 brief: The correction machinery's *capacity* to maintain bounded mismatch — $\alpha \gt \rho / R$.
 layer: prose-symbol
 status: canon
