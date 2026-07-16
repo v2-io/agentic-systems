@@ -14,13 +14,6 @@ This file holds the *miscellaneous* layer of project work — open routing decis
 **Terminology note.** "Audit-findings" are the F#/F-V# items surfaced by audit cycles. "Findings" without the prefix means the catalog of ASF discoveries (see [`FINDINGS.md`](FINDINGS.md) and segment-level `## Findings` sections).
 
 
-## Bulk-64 unlanded content — landing queue (2026-07-16 verify-pass; D-2 gate)
-
-The D-2 verify-pass (per-spike ledger: `spikes/.integrated/VERIFICATION-2026-07-16.md`) confirmed 21 unlanded items across 10 of the 64 bulk-filed spikes — everything else verified landed/superseded. These are the only content-loss exposure remaining before the D-2 wipe; each should land at honest tier (strengthen-first) or be consciously declined with a recorded why. Ordered by the challenge stage's landing-value ratings:
-
-- [ ] **MEDIUM — `spike-finding-1-l0-residual-repair` residue in `#example-L1`:** two scope clauses (L0-residual detection-signal regime scoping ~line 147; "$\pm\rho$ exact" needs the under-marginal-sampling clause ~line 152) + the dangling "Direct verification (see #example-L1)" citation in `#der-causal-insufficiency-detection` for content example-L1 doesn't carry.
-- [ ] **LOW (batchable):** `#disc-separability-pattern` "two floors" stale against four instances; `#der-causal-insufficiency-detection` OUTLINE row still residual-first; the OR-vs-AND per-edge/plan-level divergence gloss (`spike-or-node-strategic-dynamics`); `#der-team-persistence`/`#result-adversarial-tempo-advantage` $H_b$ cross-ref paragraphs; structural-counterfactual claim adequately-scoped-but-underived (`-formal` Approach 1); housekeeping rows in the ledger's low items.
-
 ## Era-artifact routing + TST external-corroboration spike (2026-07-04, visiting vivarium/vestigia session)
 
 Routing decisions for Joseph / the next 03-04 cycle owner; all detail in [`msc/era-artifact-asf-contributions-2026-07-04.md`](msc/era-artifact-asf-contributions-2026-07-04.md) (C1–C5 with attachment points, formal sketches, honest-tier proposals):

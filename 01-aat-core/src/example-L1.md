@@ -144,9 +144,25 @@ For strategies with many mixed or soft common causes, the agent faces a practica
 
 ## Detecting Latent Common Causes
 
-The detection of causal insufficiency and interventional localization of latent common causes is treated as a standalone result in #der-causal-insufficiency-detection. The key connection to this worked example: the L0 residual $\Phi^{L0} - \bar y_G$ converges to $+\rho$ (our example: $0.877 - 0.776 = 0.101$), providing a precise, quantitative detection signal. The agent does not need to know the common cause exists *a priori* — it discovers the need for L1 from persistent structured residuals after convergence.
+The detection of causal insufficiency and interventional localization of latent common causes is treated as a standalone result in #der-causal-insufficiency-detection — a *no-go theorem*: under purely on-policy short-circuit execution, no statistic of the agent's observable history can detect the latent, and the L0 residual in particular is *identically zero* on-policy. The residual figures of this example are the **marginal-sampling** regime ($\varepsilon = 1$: every trial, both paths observed regardless of policy): there the credences converge to the marginals $\theta_1, \theta_2$ and the L0 residual $\Phi^{L0} - \bar y_G$ converges to $+\rho$ (our example: $0.877 - 0.776 = 0.101$). Between the two regimes the residual scales as $O(\varepsilon)$ and serves only as a *confirmatory* signal; the primary detector is the pairwise sibling covariance test under exploration ( #der-causal-insufficiency-detection).
+
+### On-policy observational equivalence (the no-go's shallow-case verification)
+
+This example is also the shallow case for which the no-go is *exact*, and the matched-world construction can be verified directly. The on-policy world $\mathcal W_{L0}^\ast$ has independent edges at the regime conditionals
+
+$$\theta_1^\ast = \theta_C\,\theta_{1\mid C} = 0.72, \qquad \theta_2^\ast = \frac{\theta_C\,(1-\theta_{1\mid C})\,\theta_{2\mid C}}{1 - \theta_C\,\theta_{1\mid C}} = \frac{0.056}{0.28} = 0.2.$$
+
+Under sequential short-circuit OR execution (try path 1; try path 2 only on failure), the three on-policy observable events have identical probabilities in both worlds:
+
+| Event | $\mathcal W_{L1}$ (latent $C$) | $\mathcal W_{L0}^\ast$ (independent) |
+|---|---|---|
+| $A_1$ succeeds | $0.72$ | $\theta_1^\ast = 0.72$ |
+| $A_1$ fails, $A_2$ succeeds | $0.8 \cdot 0.1 \cdot 0.7 = 0.056$ | $0.28 \cdot 0.2 = 0.056$ |
+| $A_1$ fails, $A_2$ fails | $0.2 + 0.8 \cdot 0.1 \cdot 0.3 = 0.224$ | $0.28 \cdot 0.8 = 0.224$ |
+
+The agent's on-policy history is drawn from the same distribution in both worlds — no on-policy statistic can tell them apart, which is the no-go's content instantiated on this example's numbers.
 
 
 ## Epistemic Status
 
-*Conditional on Beta-Bernoulli model.* The L0 overestimation, L1 correction, and sector condition verification are exact algebra. The direction-of-bias formula ($\pm\rho$) is exact for two binary siblings; for deeper DAGs with multiple common causes, the bias involves higher-order covariance terms. The L1 construction principle (factor common cause above the correlation) is general for single common causes gating OR-siblings; the conditioning-based extension for more complex topologies is standard (variable elimination in Bayesian networks).
+*Conditional on Beta-Bernoulli model.* The L0 overestimation, L1 correction, and sector condition verification are exact algebra. The direction-of-bias formula ($\pm\rho$) is exact for two binary siblings **under marginal sampling** (credences at the marginals $\theta_j$; under on-policy short-circuit execution the credences converge to regime conditionals instead and the residual vanishes — see #der-causal-insufficiency-detection); for deeper DAGs with multiple common causes, the bias involves higher-order covariance terms. The on-policy observational-equivalence table is exact arithmetic on the matched-world construction of #der-causal-insufficiency-detection. The L1 construction principle (factor common cause above the correlation) is general for single common causes gating OR-siblings; the conditioning-based extension for more complex topologies is standard (variable elimination in Bayesian networks).

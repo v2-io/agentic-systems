@@ -39,7 +39,7 @@ The ~10 canon references to sim/empirical paths were resolved 2026-05-30 (CHANGE
 
 ### F3. The bulk-64 cohort — **verify duty DISCHARGED 2026-07-16**
 
-The per-spike verification the 2026-05-12 bulk move skipped has been executed: every one of the 64 spikes read and checked against canon segment *content* (not slug mentions), with every claimed-unlanded item independently challenged by a refute-first second agent. Result: **54 landed / 6 partially-landed / 3 superseded / 1 nothing-to-land**; 21 confirmed-unlanded items across 10 spikes (2 high-value). Durable per-spike ledger: [`spikes/.integrated/VERIFICATION-2026-07-16.md`](spikes/.integrated/VERIFICATION-2026-07-16.md). `.integrated/` membership is now a **verified** record for the bulk-64; the confirmed-unlanded items are queued in `TODO.md` §"Bulk-64 unlanded content" and are the only remaining content-loss exposure — they must land (or be consciously declined) before any wipe deletes their carrier spikes. D-2's timing question accordingly simplifies: after those ~10 spikes' items are dispositioned, a git-recoverable `rm`+commit loses nothing unverified.
+The per-spike verification the 2026-05-12 bulk move skipped has been executed: every one of the 64 spikes read and checked against canon segment *content* (not slug mentions), with every claimed-unlanded item independently challenged by a refute-first second agent. Result: **54 landed / 6 partially-landed / 3 superseded / 1 nothing-to-land**; 21 confirmed-unlanded items across 10 spikes (2 high-value). Durable per-spike ledger: [`spikes/.integrated/VERIFICATION-2026-07-16.md`](spikes/.integrated/VERIFICATION-2026-07-16.md). `.integrated/` membership is now a **verified** record for the bulk-64 — and as of 2026-07-16 (same day), **all 21 confirmed-unlanded items are dispositioned**: landed at honest tier or discharged-by-design, per the ledger's per-spike CLOSED/LANDED annotations (six landing cycles; CHANGELOG 2026-07-16). No content-loss exposure remains for the bulk-64. D-2 accordingly reduces to the semantics/scope sub-calls: a git-recoverable `rm`+commit of `.integrated/`+`.archived/` now loses nothing unverified (pending only the `.archived/` re-sort per the ledger's superseded/nothing-to-land verdicts, queued as the closeout step).
 
 ### F5 (remainder). Citation/bibliography infrastructure tails
 
@@ -73,7 +73,7 @@ The *reference* half of G2 (every canon→internal-artifact reference across the
 
 - [ ] **`02-tst-core/simulations/`** (F2) — the 11 parked `.py` files. Per-file: what does it claim? Is the claim in canon self-contained? Where does the artifact end up? (For the published Theory: cited externally as an archival code release / supplement; for the working repo: cleaned to a terminal home.)
 - [ ] **`spikes/track-b-nonlinear-sims/`** (F2) — same treatment; the corpus's own terminal home. This corpus is *live* in `spikes/` and would not be touched by a `.integrated/` wipe.
-- [ ] **The bulk-64 (F3) — verify-pass done 2026-07-16 (see F3 above); remaining: land or decline the 21 confirmed-unlanded items** (queued in `TODO.md` §"Bulk-64 unlanded content"; ledger in `spikes/.integrated/VERIFICATION-2026-07-16.md`).
+- [ ] **The bulk-64 (F3) — verify-pass AND all 21 item-dispositions done 2026-07-16** (ledger: `spikes/.integrated/VERIFICATION-2026-07-16.md`); remaining: the `.archived/` re-sort per ledger verdicts (superseded/nothing-to-land → `.archived/` with MANIFEST reasons), then F3 closes entirely.
 
 ### G3. Citation/bibliography discipline — remaining ASF-side tails
 
