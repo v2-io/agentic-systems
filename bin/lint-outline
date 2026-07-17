@@ -238,7 +238,7 @@ def find_orphan_segments(src_dir, outline_slugs, all_slugs):
     return orphans
 
 
-STAGE_VOCABULARY = {"missing", "old", "draft", "deps-verified",
+STAGE_VOCABULARY = {"missing", "old", "exploratory", "draft", "deps-verified",
                     "claims-verified", "format-clean", "candidate"}
 
 
@@ -754,7 +754,7 @@ def main():
                 stage = meta.get("stage") or "unknown"
                 stages[stage] += 1
             print(f"\n  Stage distribution:")
-            for stage in ["candidate", "format-clean", "claims-verified", "deps-verified", "draft", "old", "missing", "unknown"]:
+            for stage in ["candidate", "format-clean", "claims-verified", "deps-verified", "draft", "exploratory", "old", "missing", "unknown"]:
                 if stages[stage]:
                     print(f"    {stage:20s} {stages[stage]:3d}")
 

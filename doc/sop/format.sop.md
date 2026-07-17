@@ -111,7 +111,7 @@ Do not hard-wrap lines just to artificially impose reading width. Let renderers 
 
 ### Segment-set principle (load-bearing for tooling)
 
-**Every non-`old-*` file in a component's `src/` directory is a segment and conforms to the cadence below.** This holds even for drafts, missing-stage entries, or segments orphaned from `OUTLINE.md`. The various stages (`missing`, `old`, `draft`, `deps-verified`, `claims-verified`, `format-clean`, `candidate`) describe progress *within* FORMAT, not exemptions from it. One standing exception: chapter-intro segments and most `disc-*` discussion segments carry a cadence exemption — see the *Document Cadence* section below.
+**Every non-`old-*` file in a component's `src/` directory is a segment and conforms to the cadence below.** This holds even for drafts, missing-stage entries, or segments orphaned from `OUTLINE.md`. The various stages (`missing`, `old`, `exploratory`, `draft`, `deps-verified`, `claims-verified`, `format-clean`, `candidate`) describe progress *within* FORMAT, not exemptions from it. One standing exception: chapter-intro segments and most `disc-*` discussion segments carry a cadence exemption — see the *Document Cadence* section below.
 
 The `old-*` filename prefix is the *only* mechanism for placing a file in `src/` that is exempt from FORMAT. Those are prior-work staging files; they retain their original frontmatter (often with non-AAT `type:` tokens like `Definition`, `Theorem`) until their content is converted. Tooling skips them.
 
@@ -194,6 +194,7 @@ Stage is recorded in segment frontmatter (e.g., `stage: draft`) and in the OUTLI
 |-------|---------|-----------------|
 | [`missing`](../../terminology/entries/missing.md) | No segment file exists yet | — |
 | `old` | Content exists only as `old-*` source material, not yet converted | Write AAT-formatted version |
+| `exploratory` | Content written but deliberately held under discussion — the idea itself, or its placement, is still open; not yet on the promotion track (Joseph, 2026-07-16) | Settle the idea/placement, then → `draft` |
 | [`draft`](../../terminology/entries/draft.md) | First AAT-formatted version written, not yet reviewed | — |
 | [`deps-verified`](../../terminology/entries/deps-verified.md) | All dependencies audited | [Dependency audit](../../terminology/entries/dependency-audit.md) (see below) |
 | [`claims-verified`](../../terminology/entries/claims-verified.md) | Content reviewed: derivations valid, labels accurate | [Content review](../../terminology/entries/content-review.md) (see below) |
