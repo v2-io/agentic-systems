@@ -4,4 +4,4 @@
 
 | Experiment | Claims (one line) | Tier | Consumers | Vivarium | Status |
 |---|---|---|---|---|---|
-| *(populating 2026-07-16 from the G2 corpora verification — the 02-tst-core/simulations clusters, track-b-nonlinear-sims, and the l1-bias rerun migrate here as their verdicts land)* | | | | | |
+| [track-b-nonlinear](track-b-nonlinear/MANIFEST.md) | Section-I validation suite: nonlinear mismatch, adversarial-coupling exponent regimes ($b = 2$ vs $3/2$), gain gating, per-dimension persistence, causal-IB survival, Hafez bridge | empirical (validates derived results) | `#obs-section-i-validation-simulations` `#result-adversarial-exponent-regimes` `#obs-gated-tempo-advantage` `#result-per-dimension-persistence` `#deriv-causal-ib-exploration` | planned | active |

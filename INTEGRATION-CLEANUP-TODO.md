@@ -32,12 +32,9 @@ The authoritative "What earns a Working Note" statement landed 2026-06-02 in [`d
 
 ## Open findings (verified first-hand 2026-05-19; canon-reference halves discharged 2026-05-30)
 
-### F2 (remainder). Un-integrated sim/empirical corpora
+### F2 — **DISCHARGED 2026-07-16**: both sim corpora verified per-artifact and routed
 
-The ~10 canon references to sim/empirical paths were resolved 2026-05-30 (CHANGELOG); the *corpora themselves* still lack terminal homes:
-
-- **`02-tst-core/simulations/`** — real, git-tracked, un-integrated spike work parked in the component tree itself: 11 `.py` files (`lindy_*`, `regime_transitions`, `three_regimes`, `stochastic_*`), 2026-03-20, README added 2026-05-15 but the integration duty never discharged. Not in `spikes/`, not in `INDEX.md`, not routed, not covered by `doc/sop/spikes.sop.md` or `spikes/README.md` — an entire class of spike-equivalent work invisible to the discipline because it isn't markdown and doesn't live under `spikes/`.
-- **`spikes/track-b-nonlinear-sims/`** — live in `spikes/`; canon dependencies on it were resolved 2026-05-30, but its own check→integrate→route terminal home remains open.
+The G2 corpora verification (13 agents, refute-first challenge stage) closed F2's last limb: `spikes/track-b-nonlinear-sims/` verified **landed** (knowledge self-contained in canon) and migrated to the canonical experiment registry as `empirica/track-b-nonlinear/` (MANIFEST + RUNS; founding entry); the `02-tst-core/simulations/` corpus verified superseded/invalid/unlanded per-file and routed — dead clusters to `spikes/.archived/` (MANIFEST-2026-07-16-tst-sims, which also corrects the old README's false layout claims), the live mortality-gated-breakout pair to `spikes/spike-tst-regime-breakout-sims-2026-03/` (land-or-drop open, Joseph's). One HIGH canon defect found and fixed against the records: `#result-adversarial-exponent-regimes`' stochastic interpolation column (axis-inverted transcription). **With this, the 2026-05 integration-failure recovery's artifact-level duty (F2 + F3) is fully discharged**; this file now carries only the citation tails (G3/F5) and residual G1 items.
 
 ### F3. The bulk-64 cohort — **verify duty DISCHARGED 2026-07-16**
 
@@ -70,8 +67,6 @@ D-2 dissolved on Joseph's clarification (2026-07-16): the "wipe" was a *teaching
 
 The *reference* half of G2 (every canon→internal-artifact reference across the four volumes) was discharged 2026-05-30 (commit `9099e58`; CHANGELOG 2026-05-30). What remains is the un-integrated artifact *corpora* terminal homes and the bulk-64:
 
-- [ ] **`02-tst-core/simulations/`** (F2) — the 11 parked `.py` files. Per-file: what does it claim? Is the claim in canon self-contained? Where does the artifact end up? (For the published Theory: cited externally as an archival code release / supplement; for the working repo: cleaned to a terminal home.)
-- [ ] **`spikes/track-b-nonlinear-sims/`** (F2) — same treatment; the corpus's own terminal home. This corpus is *live* in `spikes/` and would not be touched by a `.integrated/` wipe.
 - [ ] **The bulk-64 (F3) — verify-pass AND all 21 item-dispositions done 2026-07-16** (ledger: `spikes/.integrated/VERIFICATION-2026-07-16.md`); remaining: the `.archived/` re-sort per ledger verdicts (superseded/nothing-to-land → `.archived/` with MANIFEST reasons), then F3 closes entirely.
 
 ### G3. Citation/bibliography discipline — remaining ASF-side tails
@@ -90,7 +85,6 @@ Discipline decided + build wiring landed 2026-06-05; **current operating tracker
 
 - [ ] **`doc/sop/spikes.sop.md`** — explicitly name simulation / empirical-data-processing / experiment / benchmark work as **spike-class**, with the same integration duty: knowledge self-contained in canon; reproducibility artifact externally citable at publication; artifact cleaned to terminal home. (Currently "empirical" appears only incidentally — once in the cross-repo-blocked case, once as an example dir-spike.)
 - [ ] **`spikes/README.md`** — extend the spiker on-ramp to make clear "spike" includes sims/experiments, not just markdown derivations. ("Keep your stuff together" already permits a directory; the explicit naming is what's missing.)
-- [ ] **`spikes/INDEX.md`** — register `02-tst-core/simulations/` and `spikes/track-b-nonlinear-sims/` as un-integrated sim corpora that the recovery role owns (currently invisible to the index).
 - [ ] **OUTLINE/PRACTICA cross-check** — verify segments that legitimately *are* about empirical programs (e.g. `obs-section-i-validation-simulations`) carry the right home for the validation program in canon, with reproducibility artifacts cited as published (or marked clearly as "to be published as supplement" in Working Notes if pre-publication).
 
 ### G5. Structural risk mitigation — CLAUDE.md as unreviewed amplifier

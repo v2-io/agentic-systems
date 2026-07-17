@@ -52,7 +52,7 @@ At $\sigma_{\text{obs}} = 1.0$ (10x the process noise), the fixed-gain adversari
 ## Working Notes
 - The finding that fixed $\eta = 0.1$ is "remarkably robust" to observation noise (42% degradation at $\sigma_{\text{obs}} = 10 \times q_{\text{env}}$) suggests that conservative gains are a reasonable default for environments with unknown noise levels. The cost of being slightly below optimal is much less than the cost of being above optimal (overcorrection amplifies noise).
 - The interaction between observation noise and adversarial exponent regime (drift vs. stochastic) has not been tested. The Variant E results use stochastic coupling only. Whether observation noise degrades the deterministic-drift exponent ($b = 2$) by the same proportion is an open question.
-- Simulation code: `../../spikes/track-b-nonlinear-sims/variants/variant_ef_extensions.py`. Results: `variant_ef_results.md`.
+- Simulation code: `../../empirica/track-b-nonlinear/variants/variant_ef_extensions.py`. Results: `variant_ef_results.md`.
 
 ### Incidental audit gold (gold-lift sweep, A15, 2026-05-31)
 

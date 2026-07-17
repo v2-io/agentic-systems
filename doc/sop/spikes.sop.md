@@ -216,7 +216,7 @@ The trail dirs and the tracker are **not** "audit" artifacts even though spike-r
 File-spikes: agents adjudicate → parent independent-verifies → parent moves.
 
 Directory-spikes (reasoning-trail clusters — `track-a-intent-dag/`,
-`track-b-nonlinear-sims/`, `temporal-nesting-rg/`,
+`temporal-nesting-rg/`,
 `spike-language-as-causal-substrate/`, `class-coercion-wrapping/`,
 `spike-local-embedding-benchmark/`, …): agents may **read and recommend**
 a disposition; the disposition is **Joseph-adjudicated in one batch**, not auto-filed.

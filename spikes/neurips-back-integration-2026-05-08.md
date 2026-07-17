@@ -42,7 +42,7 @@ The papers in `~/src/neurips/` extracted three ASF results, refined them under a
 
 6. **The bistable Pareto frontier** as a real characterization of discrete-action-set controllers, distinct from a smooth survival-vs-reward tradeoff (Paper §App-B: bistable-artifact appendix). Useful for ASF segments that touch on "survival vs reward" framings — the bistability is a feature of the discrete action set, and characterizing it explicitly prevents future overclaiming about smooth Pareto frontiers.
 
-7. **The 2D Gaussian empirical anchor** with the `wall_extreme` ε-blank-wall action (FIM diag(0.0625, 25)), the three-controller comparison (greedy / scalar / LMI), and the survival-rate-vs-σ_w table. This is the simulation that validates the directional-discrimination claim. ASF's spike `track-b-nonlinear-sims/variants/variant_causal_ib.py` carries the underlying simulation; the paper's specific 2D version with the three-controller comparison is a refinement worth referencing back.
+7. **The 2D Gaussian empirical anchor** with the `wall_extreme` ε-blank-wall action (FIM diag(0.0625, 25)), the three-controller comparison (greedy / scalar / LMI), and the survival-rate-vs-σ_w table. This is the simulation that validates the directional-discrimination claim. ASF's spike `empirica/track-b-nonlinear (formerly track-b-nonlinear-sims)/variants/variant_causal_ib.py` carries the underlying simulation; the paper's specific 2D version with the three-controller comparison is a refinement worth referencing back.
 
 ### Paper 2: `02-unified-convergence-rl` ←→ AAT source segments
 

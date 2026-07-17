@@ -41,10 +41,12 @@ The exponent degrades smoothly as the base-to-coupling ratio increases. The asym
 
 | $\rho_{\text{base}} / (\gamma \cdot \mathcal T_B)$ | Exponent (deterministic) | Exponent (stochastic) |
 |:---:|:---:|:---:|
-| 0.002 | 1.999 | 1.481 |
-| 0.20 | 1.877 | 1.101 |
-| 2.0 | 1.445 | 0.791 |
-| 6.3 | 1.213 | 0.577 |
+| 0.002 | 1.999 | $\approx 1.49$ |
+| 0.20 | 1.877 | 1.372 |
+| 2.0 | 1.445 | 0.941 |
+| 6.3 | 1.213 | $\approx 0.72$ |
+
+The two columns come from sweeps at different parameters — deterministic from the Variant-A coupling-dominance sweep ($\mathcal T_B = 0.1$), stochastic from the Variant-D sweep ($\eta = 0.01$) — aligned here on the shared base-to-coupling ratio axis. Stochastic cells at 0.20 and 2.0 are recorded values (rows $\gamma \mathcal T/q = 5.0$ and $0.5$ of the Variant-D table); the 0.002 cell is near-asymptotic (recorded $1.481$ at ratio $0.02$; analytic asymptote $3/2$) and the 6.3 cell is log-interpolated between the recorded values at ratios $4$ and $10$ ($0.791$, $0.645$).
 
 ## Epistemic Status
 
@@ -67,7 +69,8 @@ The exponent degrades smoothly as the base-to-coupling ratio increases. The asym
 ## Working Notes
 - The interpolation between drift and noise regimes (Variant B) shows smooth transition, not a sharp boundary. At mixed drift-noise coupling, the exponent lies between the two asymptotes. The drift fraction $f = \mu / (\mu + \sigma)$ continuously parameterizes the transition.
 - The exponent of 1.05 from the original sim2 was not a falsification of Corollary 11.2 — it reflected a stochastic model (noise-variance coupling) tested in a non-coupling-dominant regime. The original simulation was testing the wrong regime for the ODE's prediction.
-- Simulation code: `../../spikes/track-b-nonlinear-sims/variants/variant_ab_drift.py`, `variant_cd_regimes.py`. Results: `variant_ab_results.md`, `variant_cd_results.md`.
+- Simulation code: `empirica:track-b-nonlinear` (variants `variant_ab_drift.py`, `variant_cd_regimes.py`; results `variant_ab_results.md`, `variant_cd_results.md`).
+- **2026-07-16 — stochastic interpolation column corrected (F2 verification cycle).** The table's stochastic values had been pasted by row position from the Variant-D table without inverting its coupling-to-base axis to this table's base-to-coupling axis — the old values (1.481/1.101/0.791/0.577) belong at ratios 0.02/1.0/4.0/20, not the labeled ones. Corrected against the recorded runs, with per-cell provenance and the two-sweep parameter difference now stated. Derived asymptotes and all coupling-dominant citations were unaffected. Do not re-transcribe simulation numbers by table position — align axes against the record (`empirica/track-b-nonlinear/variants/variant_cd_results.md`).
 
 ### Incidental audit gold (gold-lift sweep, A15, 2026-05-31)
 
