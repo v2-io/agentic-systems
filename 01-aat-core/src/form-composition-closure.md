@@ -94,7 +94,7 @@ where $\hat o_{c,m}$ is the macro-model's prediction of the next macro-observati
 
 $$\mathcal{T}_c = \sum_k \nu_c^{(k)} \cdot \eta_c^{(k)\ast}$$
 
-where $k$ indexes the macro-agent's observation channels, $\nu_c^{(k)}$ is the event rate, and $\eta_c^{(k)\ast}$ is the optimal gain ( #def-adaptive-tempo, #emp-update-gain). This ensures the persistence condition is formulable at the macro level.
+where $k$ indexes the macro-agent's observation channels, $\nu_c^{(k)}$ is the event rate, and $\eta_c^{(k)\ast}$ is the optimal gain ( #def-adaptive-tempo, #emp-update-gain). This ensures the persistence condition is formulable at the macro level. The additive form carries #def-adaptive-tempo's noise-independence scope at the *macro* channel level ( #deriv-tempo-additivity): when macro channels aggregate cross-correlated micro-streams, the exact macro tempo is the joint form, and the additive expression deviates with sign — the composite-level consequences are worked in #der-tempo-composition.
 
 **(A4) Bounded macro-correction.** The macro-correction function satisfies the sector condition ( #result-sector-condition-stability):
 
