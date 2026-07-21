@@ -1,0 +1,66 @@
+# Answers — Batch 6 quiz
+
+*Grounding: segment bodies; WN-only depth tagged. deriv-gain-sector coverage is Props B.1–B.4 (statements + proofs); simulation-validation tail not read, not tested.*
+
+## (1) Critical Mental Model
+
+### A b06-1.1 [mental-model]
+It expresses **task adequacy alone** — the linear operational form. Under linear correction ($F = \mathcal T\delta$, $\alpha = \mathcal T$, $R \to \infty$), structural persistence is trivially satisfied whenever $\mathcal T \gt 0$, so task adequacy is the only binding gate. What it omits: the structural constraint $\alpha \gt \rho/R$, which becomes binding when $R$ is finite — so for saturating correction the linear form *overstates* the persistence margin. Downstream uses of the linear form "should be understood as expressing task adequacy, not structural stability" (the segment's own Epistemic Status).
+
+### A b06-1.2 [mental-model]
+Task inadequacy ($R^\ast \gt \Vert\delta_{\text{critical}}\Vert$ but machinery stable): raise tempo (faster/better correction), lower disturbance $\rho$, or relax the tolerance $\Vert\delta_{\text{critical}}\Vert$. Structural failure ($\alpha \leq \rho/R$): change the correction *architecture* — a new model class with larger $R$ or better $\alpha$; incremental spend inside the current class does not help. "More people/compute" is exactly wrong under structural failure because it feeds the parametric channel that has hit its ceiling *(and the WN-bonus sharpening: added headcount can raise internal noise/disturbance without raising $\alpha$, accelerating collapse)*.
+
+### A b06-1.3 [mental-model]
+Before: GA-3 was an opaque global assumption — the theory's softest structural joint ("the correction function has this property," hard to verify). After: for sub-scope α (optimal Bayesian, exponential-family-on-interior, strongly-convex gradient, L2-regularized, linear-PD), A2' is a *derived consequence of the update rule's geometry* via directional fidelity, with $\alpha$ determined by the gain. Remaining primitive posit: sub-scope β — PID, rule-based, human judgment, severely misspecified, variational, non-convex-beyond-basin, per-step SGD — where A2' is a per-system empirical claim.
+
+### A b06-1.4 [mental-model]
+Mood is a **slow global scalar** — the leaky integral of a per-step tracking-surprise summary (how much better/worse the mismatch stream is behaving than the agent's short-horizon expectation). It modulates the update gain and thereby tempo ($K_t = K_0 g(m_t)$, $\mathcal T_t = \nu_t K_t$) within a bounded band, adding no new fast dynamics — second-order adaptation. It is definable pre-goal because nothing in it references $O_t$, $\Sigma_t$, or reward — the integrated quantity is tracking-surprise, not reward. The band's floor $g_{\min}$ prevents **mood-induced complacency**: sustained easy tracking driving correction power toward zero just before the next regime shift.
+
+### A b06-1.5 [mental-model]
+Actual law: $\tau^\ast \propto \sqrt{\tau_{\text{env}}}$ — environment-matched but **sublinearly** (a 4× slower environment warrants only 2× longer mood memory), scaled by the surprise noise-to-signal ratio. Both extremes lose to the same bias-variance structure: too-fast mood chases noise (variance/noise-tracking cost $\lambda^2 r$ dominates); too-slow mood lags genuine regime shifts (bias/lag cost $(1-\lambda)^2 q$ dominates). The optimum is interior.
+
+### A b06-1.6 [mental-model]
+**MG-3 / quasi-staticity**: $\lambda \ll \underline\alpha$ — mood adapts slower than the primary state contracts, so the fast dynamics see $m_t$ as a constant. Separation holds *at the timescale that matters* even though a global coupling exists in absolute terms — bounded, separation-preserving coupling, quantitative rather than asserted.
+
+## (2) Mathematics
+
+### A b06-2.1 [math]
+$\alpha_{\text{event}} = \eta^\ast c_{\min}$ — dimensionless per-event correction efficiency ($c_{\min} = \inf_{\Vert\delta\Vert\leq R} \delta^T Hg(\delta)/\Vert\delta\Vert^2$, a Rayleigh-quotient geometric ratio). $\alpha_{\text{time}} = \nu\,\eta^\ast c_{\min}$ — per-time sector rate, units $t^{-1}$, the bare $\alpha$ the Lyapunov machinery and persistence inequality consume. $\mathcal T = \sum_k \nu^{(k)}\eta^{(k)\ast}$ — rate, units $t^{-1}$. $\alpha = \mathcal T$ exactly iff $c_{\min} = 1$ (linear correction — Kalman, Beta-Bernoulli), as the per-time identity $\alpha_{\text{time}} = \nu\eta^\ast = \mathcal T$.
+
+### A b06-2.2 [math]
+B1: $\delta^T H g(\delta) \geq c\Vert\delta\Vert^2$ on $\Vert\delta\Vert \leq R$, $c \gt 0$ — the update's correction direction points inward. Conclusion: $F(\delta) = \eta^\ast H g(\delta)$ satisfies A2' with $\alpha = \eta^\ast c_{\min}$ (per-event; $\times\nu$ per-time). Asymmetry: **two-point/incremental sector** $(F(\delta_1)-F(\delta_2))^T(\delta_1-\delta_2) \geq \alpha\Vert\delta_1-\delta_2\Vert^2$ ⟺ local strong convexity (Nesterov 2.1.10); **one-point sector** (A2' at the equilibrium) is strictly weaker — implied by strong convexity, converse false. AAT's persistence machinery requires only the one-point form; the composition bridge lemma (DA2'-inc) requires the two-point form. Counterexample: $L'(x) = x(1+\tfrac12\sin 10x)$ — satisfies $x L'(x) \geq \tfrac12 x^2$ globally (one-point sector, $\alpha = 1/2$) yet $L''(\pi/10) \lt 0$ (not convex near 0).
+
+### A b06-2.3 [math]
+Natively in the **$(P^-)^{-1}$-weighted inner product**; sector parameter $\alpha = 1 - \lambda_{\max}(P_{t|t} P_{t|t-1}^{-1})$ (restricted to observable directions; $\alpha = 0$ on $\ker(H)$ — no information gained there). Euclidean transfer costs the condition number: $\alpha_{\text{Euclidean}} \geq \alpha_{\text{weighted}}/\kappa(P^-)$. Under the **(PI) parameterization-invariance axiom**, Čencov's uniqueness theorem forces the Fisher/information metric on statistical-manifold state spaces — the weighted statement becomes AAT-internally *forced* rather than chosen, and the $\kappa(P^-)$ penalty vanishes.
+
+### A b06-2.4 [math]
+Gate 1 (structural): $\alpha \gt \rho/R$. Gate 2 (task): $R^\ast = \rho/\alpha \lt \Vert\delta_{\text{critical}}\Vert$. Operational persistence = both. When $\Vert\delta_{\text{critical}}\Vert \lt R$: task adequacy binds — the operational condition is $\alpha \gt \rho/\Vert\delta_{\text{critical}}\Vert$. When $R \lt \Vert\delta_{\text{critical}}\Vert$: the structural gate binds (the machinery's own region is the limiting factor).
+
+### A b06-2.5 [math]
+$m_t = (1-\lambda)m_{t-1} + \lambda a_t$, $0 \lt \lambda \ll 1$, $\tau \approx 1/\lambda$; modulation $K_t = K_0\, g(m_t)$ with monotone bounded $g \in [g_{\min}, g_{\max}]$, band inside sector-validity and under the discrete step-size ceiling. MG instantiations: **MG-1** = the band itself (floor keeps $\alpha_t \geq \alpha_{\min} \gt \rho/R$ — excludes complacency; ceiling keeps gain-raising under the contraction ceiling); **MG-2** = trivial, the mood channel is a *linear* leaky integrator with sector constant **exactly $\lambda$**; **MG-3** = quasi-static, $\lambda \ll \underline\alpha$; **MG-4** = $\delta$-bounded second moment of the surprise summary, $\mathbb E[a_t^2\mid\delta] \leq \sigma_0^2 + c_a\Vert\delta\Vert^2$ (stated as a check on any concrete $a_t$, whose form is deliberately unpinned). Result: mood sits in sub-scope $\alpha_2$ of the adaptive-gain refinement.
+
+### A b06-2.6 [math]
+Regime: stationary AR(1) latent $\theta_t = \phi\theta_{t-1}+\xi_t$, $\phi = e^{-1/\tau_{\text{env}}}$; observation $a_t = \theta_t + \eta_t$, noise variance $r$; loss = steady-state MSE of $m_t$ tracking $\theta_t$. In the slow-drift regime ($q \equiv \operatorname{Var}(\Delta\theta) \approx 2\sigma_\theta^2/\tau_{\text{env}}$): $J(\lambda) = \frac{\lambda^2 r + (1-\lambda)^2 q}{\lambda(2-\lambda)}$ — $\lambda^2 r$ prices noise-tracking, $(1-\lambda)^2 q$ prices lag. Leading-order optimum $\lambda^\ast = \sqrt{q/r}$, so $\tau^\ast = \sqrt{r/q} = \sqrt{\tau_{\text{env}}\cdot r/(2\sigma_\theta^2)}$. Tiers: MSE formula **exact** (for the model); $\sqrt{\tau_{\text{env}}}$ scaling **conditional** (on AR(1)/Gaussian/slow-drift/quadratic-loss premises); interior-optimum monotone shape **robust-qualitative** (generic bias-variance of any leaky integrator tracking drift).
+
+### A b06-2.7 [math]
+$\alpha = K = P^-/(P^- + R_{\text{obs}}) = \eta^\ast$ — the sector parameter *is* the Kalman gain (= uncertainty-ratio gain). Tight because the correction is exactly linear ($e\cdot F(e) = Ke^2$, equality). Steady state: $Q \gg R_{\text{obs}}$ ⇒ $K_{ss} \to 1$ (fast dynamics, clean observations — trust data); $Q \ll R_{\text{obs}}$ ⇒ $K_{ss} \approx \sqrt{Q/R_{\text{obs}}}$ (slow dynamics, noisy channel).
+
+## (3) Implications
+
+### A b06-3.1 [implications]
+Part 1: for the framework's most important agent classes — optimal Bayesian updaters, exponential families (interior scope), gradient agents on (locally) strongly convex losses, L2-regularized, linear-PD — the sector condition is *not assumed*: it is derived from the update rule's own geometry (B1 holds by optimality/convexity), with $\alpha$ computable by inspection. Part 2: the concession — sub-scope β genuinely requires A2' as a per-system posit, and five named failure modes (directional infidelity, gain collapse, saturation, unobservable directions, misspecification) characterize the boundary. Strength, not retreat: the assumption load moved from an unverifiable global posit to a transparent, checkable property, and the boundary of validity is *characterized* rather than hidden — reviewers can see exactly where the theorems are earned vs where they are scoped.
+
+### A b06-3.2 [implications]
+Integrate: a per-step tracking-surprise summary (how much worse/better prediction errors are running than short-horizon expectation) — not reward. Bounds: a two-sided band $[g_{\min}, g_{\max}]$ — the floor keeps the effective correction rate above the persistence threshold (prevents complacency collapse when things have been easy); the ceiling keeps surprise-driven gain spikes under the discrete-time contraction/step-size ceiling (prevents instability from over-reaction). Timescale: the modulator's time-constant must be slow relative to the fast update loop ($\lambda \ll \underline\alpha$, quasi-static), which is also what keeps the global coupling separation-preserving — and if tuning it, the target is sublinear in the environment's regime timescale ($\tau^\ast \propto \sqrt{\tau_{\text{env}}}$), not matched to it.
+
+### A b06-3.3 [implications]
+What breaks with only the one-point form: **composition** — the bridge lemma / composition-closure machinery requires the two-point (incremental, DA2'-inc) bound; one-point sector at the equilibrium does not control contraction between arbitrary state pairs, so composite-agent results cannot be certified from single-agent one-point certificates. Prediction: composite results are structurally harder than single-agent persistence — they demand strictly stronger hypotheses (full strong-monotonicity-grade structure), so agent classes that pass single-agent persistence (one-point) may simply not support composition theorems. The counterexample shows the gap is real, not notational.
+
+### A b06-3.4 [implications]
+Placement claim: the affective layer is *ontologically prior to goals* — a pure adaptive-substrate object definable from the mismatch stream alone; you don't need wants to have mood. Deferred to Part II (actuation half): the *signed/valued* reading (approach/avoid, hedonic sign — momentum read against value), and mood's modulation of exploration and risk posture — genuine additions that require objectives to exist. The applied/normative reading (set-points, recovery, mood-control ethics for persistent agents) is deliberately kept out of canon in a design memo.
+
+### A b06-3.5 [implications]
+Normative reading: the affect AR(1) coefficient is $1-\lambda$, so clinically-measured high inertia = operating at $\lambda \lt \lambda^\ast$, i.e., $\tau \gg \tau^\ast(\text{environment})$ — the over-smoothing branch of a derived optimum. The pathology is **not slowness as such but slowness mismatched to a faster-changing-than-assumed environment** — the same $\tau$ is well-tuned in a slow world and pathological in a fast one. Epistemic weight: directional corroboration from an independent empirical literature, explicitly *not load-bearing* for the derivation.
+
+### A b06-3.6 [implications]
+(1) **Channel structure**: scalar tempo's additive sum assumes cross-channel noise independence; five telemetry channels drawing on shared upstream sources are common-source-correlated — the sum overcounts (with saturation at the shared-bias floor), so true tempo may be far below the computed value. Check: structural independence of the channels' noise sources. (2) **Anisotropy**: scalar tempo assumes isotropic correction; if the agent corrects some dimensions far slower, the scalar condition overestimates margin (up to 72% in simulation) and the weak dimension is the bottleneck. Check: per-dimension conditions $\mathcal T_k \gt \rho_k/\delta_{\text{critical},k}$ — and under cross-dimensional correction, the matrix-Loewner form (per-coordinate is unsafe when the tempo eigenbasis misaligns with the coordinate axes).

@@ -1,0 +1,114 @@
+#!/usr/bin/env ruby
+# Pull all quiz question/answer pairs from a directory of *-quiz-questions.md /
+# *-quiz-answers.md files, shuffle, and emit an N-question quiz + matching
+# .answers.md key. IDs are matched by the "b01-1.1"-style token after Q/A.
+#
+# Usage: bin/make-quiz N [OUTPUT_BASENAME]
+#   N               number of questions to sample (required; pass a huge number for "all")
+#   OUTPUT_BASENAME output path stem, written to cwd (default: quiz-<N>); produces
+#                   <stem>.md (quiz) and <stem>.answers.md (key)
+#
+# Source directory is DEFAULT_DIR below (hardcoded — there's only ever one quiz
+# source directory at a time; update the constant when it moves).
+
+require 'find'
+
+def parse_items(path, marker)
+  text = File.read(path)
+  lines = text.lines
+  items = []
+  i = 0
+  while i < lines.length
+    if lines[i] =~ /^###\s+#{marker}\s+(\S+)\s*(\[[^\]]+\])?\s*$/
+      id = $1
+      tag = $2
+      body_start = i + 1
+      j = body_start
+      while j < lines.length && lines[j] !~ /^\#{1,3}\s/
+        j += 1
+      end
+      body = lines[body_start...j].join.strip
+      items << { id: id, tag: tag, body: body, source: path }
+      i = j
+    else
+      i += 1
+    end
+  end
+  items
+end
+
+def collect_pairs(dir)
+  q_files = Dir.glob(File.join(dir, '*-quiz-questions.md')).sort
+  pairs = []
+  q_files.each do |qf|
+    af = qf.sub(/-quiz-questions\.md\z/, '-quiz-answers.md')
+    unless File.exist?(af)
+      warn "warning: no matching answers file for #{qf} (expected #{af}) — skipping"
+      next
+    end
+    questions = parse_items(qf, 'Q')
+    answers = parse_items(af, 'A')
+    answers_by_id = {}
+    answers.each { |a| answers_by_id[a[:id]] = a }
+
+    questions.each do |q|
+      a = answers_by_id[q[:id]]
+      unless a
+        warn "warning: no answer found for #{q[:id]} in #{af} — skipping"
+        next
+      end
+      pairs << { id: q[:id], tag: q[:tag], question: q[:body], answer: a[:body],
+                 source: File.basename(qf) }
+    end
+  end
+  pairs
+end
+
+SCRIPT_DIR = File.dirname(File.realpath(__FILE__))
+DEFAULT_DIR = File.join(SCRIPT_DIR, '..', 'audits', 'AUDIT-WORKING-374162') # hardcoded until these notes find a permanent home
+
+dir = DEFAULT_DIR
+n = ARGV[0] ? Integer(ARGV[0]) : abort("usage: #{$0} N [OUTPUT_BASENAME]")
+pairs = collect_pairs(dir)
+abort "no question/answer pairs found under #{dir}" if pairs.empty?
+
+pairs.shuffle!
+n ||= pairs.length
+if n > pairs.length
+  warn "warning: requested #{n} questions but only #{pairs.length} available — using #{pairs.length}"
+  n = pairs.length
+end
+selected = pairs.first(n)
+
+stem = ARGV[1] || "quiz-#{n}"
+quiz_path = "#{stem}.md"
+answers_path = "#{stem}.answers.md"
+
+File.open(quiz_path, 'w') do |f|
+  f.puts "# Comprehension Quiz (#{n} questions, shuffled from #{dir})"
+  f.puts
+  selected.each_with_index do |p, idx|
+    num = idx + 1
+    f.puts "### Q#{num} #{p[:tag]}".rstrip
+    f.puts
+    f.puts p[:question]
+    f.puts
+    f.puts "**Answer:**"
+    f.puts
+    f.puts
+  end
+end
+
+File.open(answers_path, 'w') do |f|
+  f.puts "# Answers (#{n} questions, shuffled from #{dir})"
+  f.puts
+  selected.each_with_index do |p, idx|
+    num = idx + 1
+    f.puts "### A#{num} #{p[:tag]} (#{p[:id]} — #{p[:source]})".rstrip
+    f.puts
+    f.puts p[:answer]
+    f.puts
+  end
+end
+
+puts "Wrote #{quiz_path} and #{answers_path} (#{n} questions from #{pairs.length} available)"
