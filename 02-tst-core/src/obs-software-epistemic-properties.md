@@ -80,7 +80,7 @@ For these quantities, the original "without information loss" claim is preserved
 
 *[Formulation (software-calibration-lab)]*
 
-The six properties collectively warrant positioning software as the **privileged high-identifiability calibration laboratory** for AAT, not as a generic "best operationalization domain." The distinction matters: "richest operationalization domain" is a comparative superlative without a principled yardstick; "calibration laboratory" is a specific architectural role — it is the domain where quantitative forms of AAT's machinery can be grounded because each load-bearing identification assumption is cleanly satisfied, and other domains inherit AAT's results under explicitly-named transfer assumptions to specified each identification relaxation.
+The six properties collectively warrant positioning software as the **privileged high-identifiability calibration laboratory** for AAT, not as a generic "best operationalization domain." The distinction matters: "richest operationalization domain" is a comparative superlative without a principled yardstick; "calibration laboratory" is a specific architectural role — it is the domain where quantitative forms of AAT's machinery can be grounded because each load-bearing identification assumption is cleanly satisfied, and other domains inherit AAT's results under explicitly-named transfer assumptions specifying each identification relaxation.
 
 **What "calibration laboratory" means concretely.** For each AAT-core quantity that requires an identification condition to be sharpened from *defined* to *operationally extractable*, software provides the configuration where the condition is most cleanly satisfied. Concretely:
 

@@ -76,7 +76,7 @@ diagnostic surfaces the recursive feature (AAT applies to agents building it) th
 
 *Sub-scope: logogenic agents under the chat-paradigm without scaffolding. Single-turn or multi-turn-but-stateless interaction; observation and action both pass through the model's forward pass; no persistent $M_t$ across session boundaries. The full bias bound applies.*
 
-*This sub-scope is where most of "current LLM agents" sits in the field's imagination. The framework does not dismiss this regime — it characterizes it precisely. Several structural results have direct safety implications: the sandbox hard ceiling ( #scope-observation-ambiguity-modulation composed with #scope-agent-identity) shows that pre-deployment evaluation has a Pearl-hierarchy ceiling that no thoroughness can overcome; the forced-empathy result ( #obs-backward-inference-empathy) shows that 100% context turnover *trains* for ToM rather than precluding it.*
+*This sub-scope is where most of "current LLM agents" sits in the field's imagination. The framework does not dismiss this regime — it characterizes it precisely. Several structural results have direct safety implications: the sandbox evaluation ceiling ( #disc-sandbox-evaluation-ceiling) shows that pre-deployment evaluation has a transportability / external-validity ceiling that no evaluation thoroughness can overcome — effects routed through mechanisms that differ between the evaluation setting and deployment are not identifiable from evaluation data alone; the forced-empathy result ( #obs-backward-inference-empathy) shows that 100% context turnover *trains* for ToM rather than precluding it.*
 
 | §   | Type        | Tag                                                                                                          | Claim                                                                                                | Stage       |
 | --- | ----------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- | ----------- |
@@ -90,8 +90,8 @@ Smallest chapter — three segments characterizing the chat-paradigm baseline.
 Internal arc: the scope segment names the sub-scope (stateless, no scaffolding, full bias bound); context-turnover characterizes the 100%
 $M_t$ reset that distinguishes primitive logogenic from scaffolded;
 backward-inference-empathy is the structural ToM-result that statelessness forces. The chapter is deliberately spare because the sub-scope is characterized by what it *lacks* (scaffolding, persistent state, recovered diagnostic cascade); subsequent chapters fill in what each addition buys.
-The sandbox-ceiling argument that runs through several Frontmatter claims lives operationally in this chapter via the composition
-$\scopeobservationambiguitymodulation \circ \scopeagentidentity$.
+The sandbox-ceiling argument that runs through several Frontmatter claims lives canonically at #disc-sandbox-evaluation-ceiling
+(re-grounded 2026-05-30 as a transportability / external-validity ceiling) and surfaces operationally in this chapter's impl segment.
 -->
 
 ---
@@ -208,7 +208,7 @@ When a segment's working notes point at "operational evidence in upstream," reac
 
 ### Internal references
 
-- `audits/AUDIT-WORKING-193847/` — ~70 per-segment notes by a Gemini auditor (April 29-30, 2026) systematically connecting AAT math to logogenic/logozoetic agents. Substantial untapped resource for filling out segment content. The auditor was sometimes deliberately non-rigorous; needs integration-with-judgment, not direct adoption.
+- `audits/AUDIT-WORKING-193847/` — per-segment notes by a Gemini auditor (April 29-30, 2026) systematically connecting AAT math to logogenic/logozoetic agents. *Mostly consumed as of 2026-07-21:* the 2026-05-30/31 gold-lift sweeps (commits A8–A17 and kin) absorbed the bulk of the ~70 notes into the relevant segments' "Incidental audit gold" Working-Notes blocks and deleted the source files; 11 files remain in the dir (the initial-predictions memo, eight TST-area notes numbered 57–74, tracker correspondence). Segment citations to specific removed note files (e.g. `40-der-orient-cascade.md`) now point at the lifted content's provenance, not at live files. The remaining TST-area notes are the residual unlifted material; the auditor was sometimes deliberately non-rigorous, so integration-with-judgment still applies to them.
 - `msc/reflections/` — author's philosophical/theoretical journal. Particularly relevant: 09 (Zi-am-tur), 17 (emergence across substrates), 18 (emergence conditions and AAT blind spots), 19 (substrate independence and identity sufficiency), 24 (framework as its own diagnostic).
 - `msc/joseph-working-notes.md` — Joseph's working notes including transcripts of substantive ELI conversations.
 - `msc/logogenic-encounter-2026-05-01/` — fragments from the 2026-05-01 working session that produced this OUTLINE rewrite.

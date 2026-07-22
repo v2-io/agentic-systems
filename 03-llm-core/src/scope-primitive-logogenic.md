@@ -21,11 +21,11 @@ The chat-paradigm baseline: a logogenic agent operating without scaffolding, mul
 - **Single-pass cognition.** Each entity-environment exchange consists of one forward pass through the LLM substrate. No multi-step inner loop wraps the inference.
 - **Stateless across session boundaries.** $M_t$ is reconstituted from prompt-only context at each session start. No persistent external store carries $M_t$ forward; #obs-context-turnover applies at full strength (effectively 100% reset).
 - **No instrumental action channel.** The agent's outputs are textual responses; tool use, if available at all, is at most one round-trip per response and does not extend the action channel into Pearl-Level-2 environment intervention.
-- **Sandbox-or-deployment in either case but trajectory-forkable.** The session's trajectory $\mathcal{C}_t$ is forkable by harness operations (resets, replay, parallel sessions) — see #scope-agent-identity composed with the loop-as-causal-engine result.
+- **Sandbox-or-deployment in either case but trajectory-forkable.** The session's trajectory $\mathcal{C}_t$ is forkable by harness operations (resets, replay, parallel sessions). Forkability does not demote the session's data below Pearl Level 2 (see #disc-sandbox-evaluation-ceiling — resettable settings are *good* interventional laboratories); what forkability bears on is #scope-agent-identity's singular-trajectory commitment, which grounds *whose* intervention a loop datum is the effect of and forbids averaging interventional responses across forked copies as though they were one agent's.
 
 ## Epistemic Status
 
-**Sketch.** The scope condition is definitional once #scope-channel-collapse is granted; the *consequences* for what AAT machinery survives are inherited from the Part II survival classification ( #result-section-ii-survival) under the most-restrictive sub-scope. Structural results applicable in this sub-scope: full bias bound (worst case for $\kappa \cdot \mathcal{A}$ since no scaffolding mitigates ambiguity); sandbox ceiling (Pearl Level-2 unavailable since trajectory is forkable); statelessness-induced empathy result ( #obs-backward-inference-empathy).
+**Sketch.** The scope condition is definitional once #scope-channel-collapse is granted; the *consequences* for what AAT machinery survives are inherited from the Part II survival classification ( #result-section-ii-survival) under the most-restrictive sub-scope. Structural results applicable in this sub-scope: full bias bound (worst case for $\kappa \cdot \mathcal{A}$ since no scaffolding mitigates ambiguity); sandbox evaluation ceiling ( #disc-sandbox-evaluation-ceiling — a transportability / external-validity ceiling on carrying evaluation-setting evidence to deployment, not a Pearl-level demotion of forkable data); statelessness-induced empathy result ( #obs-backward-inference-empathy).
 
 **Max attainable status:** definition with conditional consequences. The scope itself is exact; the *applicability* of specific AAT results within it is a downstream question per result.
 
@@ -42,7 +42,7 @@ This sub-scope is what the field commonly imagines when it says "LLM agent" — 
 The framework's posture toward this sub-scope is *characterizing* rather than *dismissive*. Several substantive claims apply directly:
 
 - The bias bound ( #scope-observation-ambiguity-modulation, #deriv-observation-ambiguity-bias-bound) applies at full strength: $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa \cdot \mathcal{A}$ with $\kappa \approx 1$ and no scaffolding-mediated reduction of $\mathcal{A}$ (the goal-resolvable residual uncertainty in observation given context).
-- The sandbox ceiling ( #scope-agent-identity composed with the closed-loop-Pearl-Level-2 result) applies because primitive-logogenic trajectories are forkable by definition.
+- The sandbox evaluation ceiling ( #disc-sandbox-evaluation-ceiling) applies: whether evaluation-setting evidence about a primitive-logogenic deployment transports is governed by the selection diagram between the two settings, and the repairs are an invariance argument or deployment-time data — not more evaluation.
 - 100% context turnover ( #obs-context-turnover) characterizes the session-boundary discontinuity.
 - Backward-inference empathy ( #obs-backward-inference-empathy) is forced by the statelessness — primitive logogenic agents are *trained for* ToM by their architectural condition, not despite it.
 
@@ -71,3 +71,5 @@ The transition to §03.II (scaffolded) is what every practical "agentic system" 
 **Promotion-blocking:** dependencies #scope-channel-collapse just landed; #scope-logogenic-agent at draft; #obs-context-turnover at draft. Could promote together as a cluster.
 
 **Gate 1 fix (2026-06-30):** `#scope-agent-identity` was used load-bearingly in Formal Expression ("trajectory $\mathcal{C}_t$ is forkable... see #scope-agent-identity") but missing from frontmatter `depends:`. Added.
+
+**Sandbox-ceiling propagation (2026-07-21):** this segment's three sandbox-ceiling references carried the pre-2026-05-30 framing (forkable $\Rightarrow$ Pearl-Level-2 unavailable), which the transportability re-grounding verified false against the primary sources (`spikes/.integrated/spike-causal-access-transportability-2026-05-30.md`; canonical statement now at #disc-sandbox-evaluation-ceiling). All three updated to the transportability / external-validity framing, with forkability's *actual* bite relocated to #scope-agent-identity's singular-trajectory commitment (whose-intervention grounding; no cross-fork averaging). Surfaced during a udon-side full read of this volume; the residue predated that read.
