@@ -5,6 +5,7 @@ status: robust-qualitative
 depends:
   - def-strategy-dag
   - emp-update-gain
+  - def-mismatch-signal
 stage: draft
 ---
 
@@ -31,6 +32,8 @@ where $\sigma_v$ is the observability of node $v$ — how well the agent can det
 $$\text{conf}_{\text{obs}}(P) = \text{conf}(P) \cdot \text{obs}(P)$$
 
 When $\sigma_v \approx 0$ for any node $v$ on the path: by #emp-update-gain, $\eta_{\text{edge}} = U_{\text{edge}} / (U_{\text{edge}} + U_{\text{obs}}) \to 0$ as $U_{\text{obs}} \to \infty$. The edges connecting to $v$ are **frozen at their prior** — the agent cannot update them regardless of what happens. The path is epistemically dead.
+
+What is frozen is the *update*, not the *input*: observations continue to arrive and continue to be uninformative, which is case (c) of the zero-aporia trichotomy ( #def-mismatch-signal) — near-zero mismatch because the channel cannot detect model error, not because there is nothing to detect. That trichotomy is also what makes the region self-locking rather than merely unproductive: case (c) is not distinguishable from within from case (a), a model that genuinely fits, so the region presents as settled knowledge rather than as a gap.
 
 ## Epistemic Status
 
