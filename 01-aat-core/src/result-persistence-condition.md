@@ -200,3 +200,7 @@ Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo audi
 #### Forward pointer
 
 - **Mood is the slow outer loop on this condition (`#def-mood`).** In the bathtub reading (faucet = rate of change in reality, drain = learning rate, overflow when the faucet outpaces the drain), mood is a slow controller *on the drain*: a global scalar that widens the learning rate when recent overflow-risk has run high and relaxes it when tracking has been easy. See `#def-mood`.
+
+#### Candidate spike (2026-08-12, agent-proposed during an incident-response & forensics applications read)
+
+Two forward candidates. (1) The information-rate cost shadow as a *monitoring vital sign*: $\dot R$ is in principle estimable from an agent's observation-consumption stream, and dormant-vs-running-hot (invisible to the threshold alone) is exactly the load signal an operations team wants; a spike on estimating $\dot R$ from real agent traces would make #deriv-persistence-cost operational. (2) The structural-vs-task-adequacy decomposition as an incident-triage instrument: a short worked protocol mapping observed failure evidence to which condition failed (and hence which remedy class applies), including the resources-can-accelerate-structural-collapse warning from the audit gold above. Agent-proposed forward pointers, not steward decisions.

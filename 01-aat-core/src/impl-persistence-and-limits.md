@@ -95,3 +95,7 @@ Cross-audit "wandering thoughts" / §14-ideation lifted from the de-novo auditor
 #### 2. Candidate Discussion
 
 - The auditor affirmed the "single template, six instantiations" economy (§5) as a potential *strong positive* once the downstream template is verified to actually support the promised instances — worth foregrounding as a chapter-level contribution if it holds (Codex/Claude, AUDIT-WORKING-526815).
+
+### Candidate experiment (2026-08-12, agent-proposed during an incident-response & forensics applications read)
+
+The channel-capacity floor's LLM prediction in §1 ("context-stuffing helps to a point, then degrades — structural rather than a vibe") is a falsifiable, currently-testable claim: sweep context budget against effective adaptation rate on a drifting task and check for the predicted capacity-limited tempo ceiling $C \geq \mathcal{T}/2$. An empirica registration here would give the framework one of its most externally-legible validation points, since the qualitative phenomenon is already widely observed but lacks a structural account. Agent-proposed forward pointer.
