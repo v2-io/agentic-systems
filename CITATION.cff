@@ -36,8 +36,8 @@ keywords:
 license: CC-BY-4.0
 repository-code: "https://github.com/v2-io/agentic-systems"
 url: "https://github.com/v2-io/agentic-systems"
-version: 0.1.0
-date-released: "2026-05-02"
+version: 0.4.0
+date-released: "2026-08-15"
 doi: "10.5281/zenodo.19986312"
 identifiers:
   - type: doi
