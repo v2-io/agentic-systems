@@ -42,7 +42,7 @@ Centered, after the date:
 
 `v0.4.0 • 119d049-dirty • 2026-08-15`
 
-0.3.0 did the same (`8815345-dirty`, 2026-06-05). That makes it a standing practice, not a one-off slip. It is still the wrong stamp for a versioned publication artifact. "Dirty" means the tree that built the PDF was not the tree the version name points at. PDF metadata is also empty (Title / Author / Subject / Keywords all blank; `pdfinfo` reports `Creator: LaTeX with hyperref` only). A file named `aat-v0.4.0s.pdf` whose first typeset page says the commit was dirty is telling the truth about the build and a lie about the release.
+0.3.0 did the same (`8815345-dirty`, 2026-06-05). That makes it a standing practice, not a one-off slip. It is still the wrong stamp for a versioned publication artifact. "Dirty" means the tree that built the PDF was not the tree the version name points at. This instance's dirt, per the builder after the fact, was an untracked build log written before compile started — pipeline self-contamination, not uncommitted theory. That is the more useful diagnosis: any review compile that writes its log first will stamp `-dirty` by construction, which is why the pattern survived from 0.3.0. PDF metadata is also empty (Title / Author / Subject / Keywords all blank; `pdfinfo` reports `Creator: LaTeX with hyperref` only). A file named `aat-v0.4.0s.pdf` whose first typeset page says the commit was dirty is telling the truth about the build and a lie about the release.
 
 ### 2. Five chapters open with a placeholder
 
