@@ -10,3 +10,4 @@
 # Track a PDF or MD only when it's a tagged release worth pinning.
 *-v*.pdf
 *-v*.md
+*.log
