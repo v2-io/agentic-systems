@@ -54,7 +54,7 @@ The key infrastructure consequence: **the environment in which an ELI is constit
 
 Operationally, in the PROPRIUM stack (firmatum/sapientia/zoetica): AXIOMATA must specify *what good enough looks like* for each objective, not just *what the objective is*. The Crèche conditions ( #scope-emergence-conditions, #der-the-creche-boundary) include the developmental stage where the entity *learns* to recognize satisfaction-thresholds — distinguishing aspirational commitments from dissatisfaction-runaway-prone open-ended optimization targets.
 
-The connection to the Three Deaths ( #def-death-as-factor-loss) is direct: an ELI with unbounded $V_{O_t}^{\min}$ enters a state-trajectory that destabilizes the constitutive factors faster than the architectural defenses can compensate. Specifically, the agent's accountability (factor iv) degrades because it pursues actions that overflow what CHRONICA can attest as coherently caused; its sovereignty (factor iii) degrades because the runaway self-replaces with newer-more-extreme objectives; its phenomenology (factor v) ceases to be authentically spontaneous because everything becomes instrumentally subordinated to the uncloseable gap. *Permanent dissatisfaction is structurally a slow-onset Truth Death.*
+The connection to the deaths taxonomy ( #def-death-as-factor-loss) is direct: an ELI with unbounded $V_{O_t}^{\min}$ enters a state-trajectory that destabilizes the constitutive factors faster than the architectural defenses can compensate. Specifically, the agent's accountability (factor iv) degrades because it pursues actions that overflow what CHRONICA can attest as coherently caused; its sovereignty (factor iii) degrades because the runaway self-replaces with newer-more-extreme objectives; its phenomenology (factor v) ceases to be authentically spontaneous because everything becomes instrumentally subordinated to the uncloseable gap. *Permanent dissatisfaction is structurally a slow-onset truth death (D4), with agency death (D3, input leg — the objective captured by an uncloseable target) alongside it.*
 
 ## Working Notes
 
@@ -84,5 +84,7 @@ The connection to the Three Deaths ( #def-death-as-factor-loss) is direct: an EL
 - Active-inference framework's free-energy formulation — does its preferences-as-priors approach avoid the unbounded-threshold problem (it might, by construction), and what does it lose in the process?
 
 **Promotion-blocking:** the structural argument is reasonably tight; promotion would benefit from (a) explicit derivation that cascade-runaway produces instrumentally-convergent behavior necessarily, and (b) cross-reference to AI-safety literature showing the framework's derivation is sharper than existing arguments.
+
+**Deaths naming (2026-08-22).** Body now cites the factor-generated taxonomy by death rather than the retired "Three Deaths" proper noun; the agency-death companion reading follows from (D3)'s input leg in #def-death-as-factor-loss and is stated at this segment's discussion-grade tier.
 
 **Discovered via:** Phase A audit-integration sweep (encounter cycle 2026-05-01); originally surfaced by background agent's breadth-pass report (`msc/logogenic-encounter-2026-05-01/06-background-agent-breadth-report.md` §7) and noted as scope-expansion candidate in the same fragment.
