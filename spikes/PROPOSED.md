@@ -72,11 +72,10 @@ This file is a *navigator*, not detail. It is durable — it is **not** routed/m
 
 | Name | Owned by | Status |
 |---|---|---|
-| Object-B / Instance-4 / CL-2-heavy unification | [`../PROPOSALS.md`](../PROPOSALS.md) §D.9 + PRACTICA item 7 | reserved (Joseph) |
 | CL-1 `#dissipativity-template` (passivity-composition + pid-a2prime + bridge §7.2) | `ROUTING.md` "Next actions" §1 / PROPOSALS §D.9 | queued-heavy |
 | `spike-update-operator-sector` tractable landing | `ROUTING.md` "Next actions" §2 | regression-cleared, pending |
 | Continuity §4.2 second-no-go (adversarially-correlated reinjection) | `der-identity-continuity-threshold:130` ; `der-resource-bounded-destabilization` WN ; `form-resource-budget` WN | reserved (Joseph) |
-| `spike-strategic-self-coupling` (scoping/prior-art only — no results) | live `spikes/spike-strategic-self-coupling.md` ; INDEX 2026-05-09 | open-direction |
+| `spike-strategic-self-coupling` P2/P4 appendices + five open questions (P1 landed as `#disc-strategic-self-coupling` 2026-05-24) | live `spikes/spike-strategic-self-coupling.md` ; INDEX row | open-direction |
 
 ## Misc / process (PROPOSED-MISC)
 
