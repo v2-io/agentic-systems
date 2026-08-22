@@ -116,7 +116,7 @@ Two independent Monte Carlo implementations confirm the closed-form predictions 
 
 ## Working Notes
 
-- **Forward — citable-supplement script.** The 2026-07-16 re-run (OR+AND, feasible-$\rho$ grid) preserves the script with the archived rerun spike; use that at publication. The original 2026-04-23 `/tmp` script is lost.
+- **Forward — citable-supplement script.** The 2026-07-16 re-run (OR+AND, feasible-$\rho$ grid) preserves the script in `spikes/.integrated/spike-l1-bias-sim-rerun-2026-07-16.md`; use that at publication. Original record: `spikes/.integrated/spike-l1-update-bias.md` §7. The original 2026-04-23 `/tmp` script is lost.
 - **Regression guard — do not restore the confabulated MC summary.** The block previously described a simulation that was never run ("four scenarios: OR/AND × cooperative/adversarial"; "$\rho \in \{0.1,\dots,0.9\}$" — infeasible under $\operatorname{Cov} \le 1/4$). When summarizing a simulation record into a segment, transcribe its parameters — don't paraphrase from memory.
 - **Open: non-matched-marginal transient bias.** Closed-form for arbitrary initial conditions is messier but numerically tractable. A tighter analytic treatment would compose `#deriv-edge-update-natural-parameter`'s $\beta$-Bernoulli dynamics with the L1' mixture and likely requires Markov-chain convergence-rate analysis.
 - **Open: $N$-edge common-cause extensions.** Three or more children of a single common cause produce a tensor of Jacobian factors. The structural scaling likely remains $O(\rho)$ per edge, but the exact coefficients need working out.

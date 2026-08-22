@@ -69,6 +69,8 @@ This segment adds no new no-go; its contribution is *recognition* (the reward-ch
 
 ## Working Notes
 
+- **Verification record.** Refute-posture verification (six claims attacked; Result 1's (R2) caveat and the joint-terminal discussion-grade marker are its repairs): `spikes/.integrated/spike-captured-objective-2026-06-17.md`.
+- **Open — partial capture.** Mixed $\alpha_t$ (the objective partly principal-sourced, partly port-sourced) is the realistic case, paralleling #der-severed-actuation-dynamics's open partial-severing item; not treated here.
 - **Slug provisional.** `der-captured-objective-dynamics` parallels `der-severed-actuation-dynamics` (severed-actuation ↔ captured-objective; both `-dynamics`); settle against the naming cycle before `candidate`.
 - **Open — the drift rate (Result 1).** Currently a no-restoring-force argument. A derived $\dot\alpha$ law under an explicit reward/affect-loop model (the #def-mood integrator feeding step-5d revision) would promote Result 1 from "drifts, uncorrectably" to a rate, and connect to the prospective-mood spike's two-channel settlement.
 - **Open — active/passive formal unification.** The bridge claims #disc-strategic-self-coupling (active) and this no-go (passive) are two mechanisms of one factor-(iii)/(iv) co-failure. Formalising the co-failure (one operation, two factors) is the sibling paper's "meat" and a candidate canon derivation.
