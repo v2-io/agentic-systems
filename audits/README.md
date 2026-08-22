@@ -37,7 +37,7 @@ He has stated he does not yet know the full intended disposition — only
 the hard constraint: the gold must not be thrown away, summarized into
 oblivion, or dropped into a black hole where it is never noticed again
 *just because it was "irrelevant" to theory fixes.* This is a standing,
-non-optional gate. It does **not** apply to the `ADJUDICATION-WORKING-*`
+non-optional gate. *Resolved for lifted material, 2026-08-22 (decided with Joseph):* gold mined, per item and first-hand, into the chapter-end `impl-*` segments' Working Notes as teaching frames and implications counts as integrated — *"once notes from the audit gold are in working notes, those parts (up to the entire thoughts files) can be considered fully .integrated finally (do the manifest and changelog work)"* — so a fully-lifted reflection file moves to `.integrated/` with a MANIFEST entry naming where each item landed plus a CHANGELOG line; unlifted files and items stay under the gate (`doc/sop/audit.sop/routing.sop.md`). It does **not** apply to the `ADJUDICATION-WORKING-*`
 dirs — those are ordinary backlog-triage working trails, dispositioned
 during the 2026-05-15/16 cleanup cycle (working spine archived at
 [`.integrated/audit-backlog-triage-2026-05-15.md`](.integrated/audit-backlog-triage-2026-05-15.md)).
