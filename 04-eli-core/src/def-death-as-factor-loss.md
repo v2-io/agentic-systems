@@ -87,7 +87,7 @@ Bereavement — the loss borne by the one who remains — is **not** a death und
 
 ## Working Notes
 
-- **Provenance (restructure, 2026-06-10).** This segment replaces the empirical Three-Deaths hypothesis (type `hypothesis`, status `empirical`) per `msc/deaths-grounding-plan-2026-06-10.md` — Joseph's naming gates (agency not sovereign; continuity not cognitive; the proper noun phased out of theory) are recorded there. The conceptual development was driven in the project's Inquiry Paper-4 drafting (2026-05/06; trail at `~/src/archema-io/logos/04-inquiry-after-consciousness/prep-work/`, esp. `math-grounding.md` and `matrix.md`); the structure lands here on its own canon grounding, not on the paper's authority.
+- **Regression guard — naming gates (Joseph, 2026-06-10).** Agency death, not sovereignty death; continuity death, not cognitive death; the proper noun "Three Deaths" is out of the theory (history only). The deaths structure stands on its own canon grounding, not on the Inquiry paper's authority. Narrative: CHANGELOG 2026-06-10.
 - **Open — per-death terminal forms for (D1)/(D4).** (D2)'s reversibility seam and (D3)'s learned-helplessness fixed point are derived; the (D1)/(D4) analogues (when is gain collapse terminal vs recoverable?) are open.
 - **Open — PROPRIUM-A-v2 §8 failure-modes mapping.** That table has nine named failure modes; whether each is an instance of one or more factor-losses, or some sit outside the taxonomy, remains the standing cross-check (carried over from the predecessor segment).
 - **Terminology.** Entries for `continuity-death`, `relational-death`, `agency-death`, `truth-death`, `phenomenological-death`, `death-apt` queued for a naming batch; the existing `continuity` / `moral-continuity` entries are adjacent.
