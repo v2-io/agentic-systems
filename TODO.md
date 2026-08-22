@@ -1,6 +1,6 @@
 # TODO — Miscellaneous & details
 
-**Last reconciled:** 2026-07-15 (resolved/decided items are pruned on touch — done work leaves this file; narrative lives in [`CHANGELOG.md`](CHANGELOG.md)).
+**Last reconciled:** 2026-08-22 (resolved/decided items are pruned on touch — done work leaves this file; narrative lives in [`CHANGELOG.md`](CHANGELOG.md)).
 
 This file holds the *miscellaneous* layer of project work — open routing decisions whose call belongs to Joseph, multi-cycle queued work-packages, theory items that don't fit elsewhere, queued spike follow-ups, naming-pipeline-specific deferrals, standing editorial hygiene, and lower-priority specifics. The bulk of project work is *not* enumerated here; it lives in:
 
@@ -42,14 +42,14 @@ The de-novo audit-gold sweep surfaced a second stream alongside the pedagogical 
 
 **Tier 2 — structural (verify → strengthen-or-scope):**
 - `#der-class-coercion-in-composition` (A12 F132-134) — "valid AAT composite agent" under-gated (needs the full `#form-composition-closure` criterion + projection admissibility, not (A1)–(A4) alone); reconcile with the W₁ spike's $(C2')$.
-- `#der-tempo-composition` (A12 F116-119) — closure-defect $C_{\text{coord}}$ double-counted (subtracted once as tempo-overhead, once as added disturbance); needs a single accounting ledger.
+- `#der-tempo-composition` (A12 F116-119) — closure-defect $C_{\text{coord}}$ double-counted (subtracted once as tempo-overhead, once as added disturbance); needs a single accounting ledger. Distinct from the additive-overcount claim repaired in the 2026-07-16 tempo-additivity ripple; still named in the segment's gold notes as the figure's "do not subtract it twice" warning.
 - `#def-unity-dimensions` (A13 F146) — $U_M = I/H$ not normalized to $[0,1]$ as the label implies; `#result-unity-closure-mapping` (A13 F154) — the $\varepsilon_x = 0$ claim needs projection-range invariance, not just consistent projections.
 - `#disc-composition-consistency` — "does directed separation compose?" (4-substrate convergence, ripe to promote from its existing hypothesis to a derivation); the boundary-choice rationality principle (471203 Challenge 14).
 - `#form-consolidation-dynamics` — topological mis-positioning (Part-I-positioned, but declares a downstream-appendix dependency and uses Part II machinery in its Formal Expression): a relocate/split canonicalization item (may belong in PROPOSALS / an OUTLINE move).
 - `#der-orient-cascade` (A10 F83/F84 — step-4a $\delta_s$ proof-target vs computable proxy); `#disc-exploit-explore-deliberate` (A10 F85 — the FOC may drop a term unless $\lVert\delta_{\text{post}}\rVert$ is held fixed).
 - **613842 C-iv idiom-drift (integration-debt)** — the scope layer accepts C-iv strategic composites (no shared $O_c$, equilibrium-relative macro-state), but `#form-composition-closure` / `#def-unity-dimensions` / `#deriv-strategic-composition` still partly reason in the older alignment-only / shared-$O_c$ idiom. Cross-segment drift.
 
-**Tier 3 — soft scope/register tightenings:** the remainder of A13 F147–F181, A9 Codex F47–F77, A10 F88–F91 ("deliberation is Pearl-`do`" over-strong), A8 `#impl-strategy-structure` deferred-proof-credit labelling + "unique broadly-available escape" over-strong for the identifiability floors. Each lives in its segment's `#### Off-ramp` WN block.
+**Tier 3 — soft scope/register tightenings:** remainder of A13 F147–F172 (F173–F181 landed in `#impl-unity-communication` 2026-08-22; A10 F88–F91 landed in `#impl-orient-cascade` the same day), A9 Codex F47–F77, A8 `#impl-strategy-structure` deferred-proof-credit labelling + "unique broadly-available escape" (that last is in the remaining impl-series batch). Each lives in its segment's `#### Off-ramp` WN block.
 
 
 ## Strategic-composition cluster residuals (post-NEXT-UP archival, 2026-05-25)
@@ -171,7 +171,7 @@ Items where the question is well-framed but the work hasn't been done. Each is a
   - Empirical validation against LLM performance degradation, tool-call-count, recovery-after-test patterns.
   - Lower-bound failure conditions (typical-case under a distribution over bias directions).
 - **Causal-IB LMI follow-ons** (segment landed `#deriv-causal-ib-lmi`):
-  - Tensor adaptive tempo — `#def-adaptive-tempo` is currently scalar; the LMI requires tensor-valued $\mathcal T$ for per-direction adaptive rates.
+  - Tensor adaptive tempo *downstream* — the per-direction matrix primitive is in `#def-adaptive-tempo` (Tensor extension); the LMI and the composition/summary results still read scalar (same remainder as AAT-1).
   - Worked 2D blank-wall example (~30–60 min editorial).
   - 2D simulation update (`empirica/track-b-nonlinear/variants/variant_causal_ib.py` to 2D with separable drifting/non-drifting subspaces).
   - Closed-form $\mathcal I_{\min}$ via DARE (currently theorem-imported per Boyd et al. 1994).
@@ -251,7 +251,6 @@ Detail in `msc/naming/naming-rename-plan.md` (renamed from `naming-pilot-rename-
 ## Tier-C deferrals
 
 - $G_t$ as single object; $(O_t, \Sigma_t)$ as a property (Opus 2026-04-21 synthesis §7). Defer until more Class 2 logogenic work lands. Strengthened by O-BP2 if pursued.
-- Continuous convention hierarchy $N_r \in [1, \infty]$ (Opus 2026-04-21 synthesis §8). Subsumed by retired O-BP3.
 
 
 ## Editorial hygiene (standing items)
@@ -417,26 +416,16 @@ For the next agent picking up this work:
 
 ---
 
-## 2026-05-10 — Audit-findings intake: 451729 — remaining open item
-
-Cycle's intake-and-disposition narrative is in [CHANGELOG 2026-05-10 / 2026-05-12](CHANGELOG.md); audit report at [`audits/audit-451729-FINAL-2026-05-10.md`](audits/audit-451729-FINAL-2026-05-10.md). One non-surgical open item carried forward:
-
-- [ ] **D.1 promotion-readiness sweep — Phase 5 residual** (all other phases landed 2026-05-20, CHANGELOG): `deriv-edge-credence-dynamics` remains at `stage: draft`. Gate 1 staging-monotonicity blocked on multiple lower-level deps still at `draft` (`schema-strategy-persistence`; `hyp-edge-update-via-gain`; `scope-and-or`). Unblocking requires a stage-promotion sweep on those deps (separate scoping cycle).
-
----
-
 ## 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items
 
-Three audits dropped 2026-05-12 on the markdown-first monograph builds (`audits/.integrated/codex-audit-results-2026-05-12.md` line-precise cross-corpus; `audits/.integrated/gemini-audit-results-2026-05-12.md` thematic cross-corpus; `audits/.integrated/gemini-aad-audit-2026-05-12.md` AAT-only math-verification — all now archived at `audits/.integrated/`). The cross-corpus audits read the *mono* builds; some findings are partly build-pipeline artifacts (preface-prose leakage; cross-component "missing" segments) rather than content defects. The surgical strengthen-first edits that landed from this intake (AAT-2/3/4/6, Gemini-AAT L1' + CIY→LMI, TST-1/2/3/5, ELI preface, 451729 Finding 1, the def-pearl Part I→II move) plus the four spike-and-integrate stages (AAT-5/7/1 + ELI-8) are now consolidated in **[CHANGELOG 2026-05-12](CHANGELOG.md)** — see "The eight surgical strengthen-first edits" ledger and the four-stage arc. Only the open items are carried below.
+Three audits dropped 2026-05-12 on the markdown-first monograph builds (`audits/.integrated/codex-audit-results-2026-05-12.md` line-precise cross-corpus; `audits/.integrated/gemini-audit-results-2026-05-12.md` thematic cross-corpus; `audits/.integrated/gemini-aad-audit-2026-05-12.md` AAT-only math-verification — all now archived at `audits/.integrated/`). The cross-corpus audits read the *mono* builds; some findings are partly build-pipeline artifacts (preface-prose leakage; local-path leakage) rather than content defects. The surgical strengthen-first edits that landed from this intake (AAT-2/3/4/6, Gemini-AAT L1' + CIY→LMI, TST-1/2/3/5, ELI preface, 451729 Finding 1, the def-pearl Part I→II move) plus the four spike-and-integrate stages (AAT-5/7/1 + ELI-8) are now consolidated in **[CHANGELOG 2026-05-12](CHANGELOG.md)** — see "The eight surgical strengthen-first edits" ledger and the four-stage arc. Only the open items are carried below.
 
 ### Group (a) — Build-pipeline / cross-cutting hygiene
 
 These are real content issues that surface in the mono build but live (or need to live) at the build-pipeline / OUTLINE-discipline layer:
 
-- [ ] **Preface / intro discipline** — `01-aat-core/OUTLINE.md` and the OUTLINE prefaces of `02-tst-core/`, `03-llm-core/`, `04-eli-core/` make claims that should be substantiated by an actual segment (or downgraded to match the tier of the segment they reference). Joseph 2026-05-12: *"We shouldn't make any claims in prefaces or intro discussions that aren't substantiated or first claimed in an actual claim (segment)."* Surgical fixes already landed for the three most direct ELI overclaims; the systematic discipline pass is open. **Per-OUTLINE checklist**: every claim in a preface must trace to a segment whose own epistemic-status tier supports the strength of the preface assertion, or the preface defers to that segment's tier explicitly.
-- [ ] **AAT OUTLINE preface top-of-file TODO block** — `01-aat-core/OUTLINE.md` lines 4–11 leak verbatim into the mono build as the first content the reader sees (mono `01-aad-v0.1.0.md:5`). The four TODO items in that block are themselves the right ones (frontmatter; convention for text excluded from PDF build / source markdown comments; "missing" convention for PDF builds; pdf2text legibility). Resolving this loops with the markdown-first-pipeline work in [`msc/markdown-first-pipeline.md`](msc/markdown-first-pipeline.md) and [`FORMAT-TODO.md`](FORMAT-TODO.md). Until a build-time hidden-content convention exists, consider relocating the TODO block to a non-leaking location or wrapping in HTML comments (safe for `pandoc -f markdown`).
-- [ ] **Cross-component segment resolution in mono builds** — `mono/03-loga-v0.1.0.md` shows `hyp-checkpoint-forking-failure-modes` as missing (it lives in `04-eli-core/src/`); `mono/04-eli-v0.1.0.md` shows `hyp-experiential-training` as missing (it lives in `03-llm-core/src/`). The build's segment-resolution step should resolve `#slug` references against every component `src/` directory, not only the volume's own `src/`. Either fix the resolver, or canonicalize each segment to live in exactly one component's `src/` with the others' OUTLINEs forward-referencing.
-- [ ] **Local-path / sibling-project leakage into publishable mono** — codex Cross-File #3. Per `~/src/...`, audit-folder, search-log, and absolute-path references in segments leak into mono builds. Either strip at build time or rewrite to stable citations / archived excerpts.
+- [ ] **Preface / intro discipline** — `01-aat-core/OUTLINE.md` and the OUTLINE prefaces of `02-tst-core/`, `03-llm-core/`, `04-eli-core/` make claims that should be substantiated by an actual segment (or downgraded to match the tier of the segment they reference). Joseph 2026-05-12: *"We shouldn't make any claims in prefaces or intro discussions that aren't substantiated or first claimed in an actual claim (segment)."* Surgical fixes already landed for the three most direct ELI overclaims; the 2026-07-14 cadence exemption (chapter-intro / most `disc-*` exempt from FE/ES until dedicated norms exist — `format.sop.md` §Document Cadence) is a *schema* exemption, not a discharge of this claim-substantiation pass. **Per-OUTLINE checklist**: every claim in a preface must trace to a segment whose own epistemic-status tier supports the strength of the preface assertion, or the preface defers to that segment's tier explicitly.
+- [ ] **Local-path / sibling-project leakage into publishable mono** — codex Cross-File #3. Per `~/src/...`, audit-folder, search-log, and absolute-path references in segments leak into mono builds. Either strip at build time or rewrite to stable citations / archived excerpts. (`CURRENT-VOL1.md` as of 2026-08-22 still embeds at least one absolute path in a figure include; the `--public` flag strips Working Notes, not local paths.)
 
 ### Group (b) — AAT content cycle — open items
 
@@ -444,7 +433,7 @@ Surgical strengthen-first edits and the four spike-and-integrate stages landed (
 
 - [ ] **AAT-1 tensor adaptive tempo downstream promotion** — the per-direction matrix-gain primitive landed in `#def-adaptive-tempo` (Tensor extension) and the matrix-Loewner persistence condition landed as `#deriv-matrix-persistence-condition`. Still open: promoting `#result-adversarial-tempo-advantage` and the composition results (`#form-composition-closure`, `#der-team-persistence`, `#deriv-critical-mass-composition`) to invoke the tensor form directly; matrix sector / nonlinear extension via `#deriv-sector-condition`; matrix adversarial-tempo lift; matrix information-rate floor extension to `#deriv-persistence-cost`; Model D matrix lift. The per-direction primitive is in place; downstream summary results still read scalar and inherit the "scalar / isotropic / nonredundant-channel scope" tag for now.
 - [ ] **AAT-8 appendix dependency map** — appendices in AAT are load-bearing, not optional. For each main-text theorem / result, list the appendix results it depends on. Candidate for PROPOSALS rather than TODO if treated as architectural.
-- [ ] **AAT-9 remaining missing stub** — `worked-example-cam` is genuinely absent from `01-aat-core/src/` (the other two originally listed here, `disc-strategic-self-coupling` and `disc-modularity-state-dynamics`, landed 2026-05-24 — CHANGELOG). Decide whether it blocks v0.1.0 publication surface or is explicitly non-blocking.
+- [ ] **AAT-9 remaining missing stub** — `worked-example-cam` is genuinely absent from `01-aat-core/src/` (the other two originally listed here, `disc-strategic-self-coupling` and `disc-modularity-state-dynamics`, landed 2026-05-24 — CHANGELOG). Still a missing stub on the v0.4.0 reader snapshot (releases/v0.4.0.md: Appendix BD; CURRENT-VOL1-APPENDICES.md renders it as *(missing)*). Decide whether it blocks the public surface or is explicitly non-blocking.
 - [ ] **AAT May-12 chapter intros pass** — neither cross-corpus audit recognized the May-12 chapter-intro segments (`the-reality-model-intro`, `the-cycle-in-motion-intro`, `persistence-and-limits-intro`, `causal-access-intro`, `strategy-structure-intro`, `cooperative-adversarial-intro`, plus the May-12 `def-causal-information-yield` and `def-pearl-causal-hierarchy` rewrites) as recently-written first-pass content. A focused fresh-eyes read of just those eight segments would catch what the broad audit missed.
 
 ### Group (c) — TST surgical sweep — open items
@@ -488,11 +477,9 @@ Triage narrative and completed dispositions live in CHANGELOG (2026-05-12 (late)
 - [ ] **Group IV attention-pair — `spike-attention-causal-graphs` + `spike-attention-governance`** — 2026-03-13 pre-AAT-restructure artifacts. INDEX flags both as "Exploratory; not yet promoted." Strong zombie candidates if attention/observation-allocation is not currently in AAT scope; needs Joseph's judgment on framework-scope.
 - [ ] **Matrix-composition lift** (the natural-next AAT-1 follow-on) — sketched in `spikes/.integrated/spike-matrix-persistence-condition.md` §5.5 and §7. Composition machinery (`#form-composition-closure`, `#der-team-persistence`, `#deriv-critical-mass-composition`) lifted to matrix form via composite stationary covariance solving composite Lyapunov equation; expected structural finding is sub-agent-specialization-as-formal-property (a sub-agent strong on $\hat v_1$ paired with a sub-agent strong on $\hat v_2$ gives a composite strong on the spanned plane, even when each alone fails on the other's strong direction).
 
-## 2026-05-16 — Audit-routing cycle: standing-hygiene (lint-outline state)
+## 2026-05-16 — lint-outline residual (Joseph)
 
-Surfaced as a *byproduct* of the Cluster-C primary-source verification in the 2026-05-16 audit-routing graduation. Mostly discharged by the 2026-07-14 lint-outline whitelist work (`OUTLINE-accepted.md`; 16 orderings accepted by design, missing-dep resolved — CHANGELOG 2026-07-14). One residual:
-
-- [ ] **`impl-persistence-and-limits` (§I) → `result-per-dimension-persistence` (§III) ordering violation** — the one 01-aat-core red lint-outline item; stays red awaiting Joseph's structural call (per the archived NEXT-UP §6.8). OUTLINE re-sequencing or `depends:` correction; mechanical once decided. (03/04 OUTLINE violations are tracked at their own component items, not here.)
+- [ ] **`impl-persistence-and-limits` (§I) → `result-per-dimension-persistence` (§III) ordering violation** — the one 01-aat-core red lint-outline item; stays red awaiting Joseph's structural call (per the archived NEXT-UP §6.8; `OUTLINE-accepted.md` names it as deliberately not whitelisted). OUTLINE re-sequencing or `depends:` correction; mechanical once decided.
 
 ## 2026-05-17 — scrbook appendix numbering (PARKED mid-fix to focus on self-actuation; pickup-ready)
 

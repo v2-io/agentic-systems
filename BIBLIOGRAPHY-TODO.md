@@ -122,12 +122,6 @@ These exist or are recorded as landed on the relata side; ASF doesn't need to re
 
 ## Workstreams ASF needs to own
 
-### W-1. Ratify citation discipline
-
-**Done 2026-06-05.** Adopted the strengthened hybrid discipline above. W-3 is now unblocked, but still requires author-judgment passes rather than a mechanical regex migration.
-
-**Status:** landed; keep this section as the decision record.
-
 ### W-2. Reconcile `ref/` PDFs against the discovered bibliography
 
 The relata-side discovery/import sweep has surfaced the initial corpus; the local `ref/` PDF set and the entries surfaced by discovery now need reconciliation: which PDFs back which discovered entries (filename + sha256 + pdfinfo title cross-check); which PDFs are orphans (locally-held but not referenced by any segment / tracking doc — decide retain-as-reading-material or remove); which discovered entries are PDF-less (have a citation but no local copy — decide acquire or leave bib-only). Per-item judgment; this is now a reconciliation/verification pass, not a wait-for-discovery pass.
@@ -146,24 +140,10 @@ Foundational AAT works still worth checking during migration: quick `relata sear
 
 **Substantial — multi-session per-volume work; Vol1 dense, Vols 2–4 lighter.**
 
-### W-4. Wire `bin/build-monograph` to `relata emit`
-
-**Done 2026-06-05.** `bin/build-monograph` now writes Stage 2 assembled markdown to a temporary `citation-scan/src/<slug>.md`, calls:
-
-```ruby
-out, status = Open3.capture2e(
-  "relata", "emit", scan_dir.to_s, "--output", "<stage>/references.bib"
-)
-```
-
-The build fails on missing citation keys, writes `references-info.tex`, loads kaobiblio / biblatex with `natbib=true`, runs LuaLaTeX → biber → LuaLaTeX → LuaLaTeX, and copies the generated snapshot to `mono/<slug>-v<sem>.references.bib`.
-
-Installed-CLI note: §11.10 externalization has landed for ASF use, so the build calls `relata` directly from the ASF build context and passes explicit source/output paths. Do not reintroduce a `cd ~/src/relata` workaround unless a fresh local check shows the installed command has regressed.
-
 ### W-5. Conditional rendering for `applicable_anonymity` (FORMAT-TODO A6)
 
-When build-target is anonymized AND an entry has `applicable_anonymity: true`, the cite should render as soft form (third-person rephrasing / alternative citation / "Wecker, in preparation"). Lives in the biblatex/relata-emit pipeline; conditional on W-4 being done first.
-**Defer until W-3 + W-4 are in motion.**
+When build-target is anonymized AND an entry has `applicable_anonymity: true`, the cite should render as soft form (third-person rephrasing / alternative citation / "Wecker, in preparation"). Lives in the biblatex/relata-emit pipeline; W-4 (the emit wiring) is done, so this is the anonymized-build consumption layer.
+**Defer until W-3 is in motion.**
 
 ### W-6. Optional cleanup
 

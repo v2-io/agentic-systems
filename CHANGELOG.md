@@ -26,6 +26,47 @@ CHANGELOG carries the *narrative shape* of each cycle (what conventions changed,
 ---
 
 
+## 2026-08-22 — Tracker drain: five weeks of landings pulled out of the forward lists (07-15 discipline, second pass)
+
+The 2026-07-15 prune deleted ~103 done/decided items. Five weeks of CHANGELOG landings (2026-07-16 through 2026-08-22) had not been drained back out of the trackers, and a first attempt at this pass left "Discharged / landed-on-date" *annotations* in place of deletions. Converted: the annotation goes; the narrative lives here; a remainder, if any, is restated as present-tense work. Each deletion below was checked first-hand (CHANGELOG heading, the canon file, live `ls`/`rg`, or a commit) before removal.
+
+**INTEGRATION-CLEANUP-TODO — artifact-level duty closed.** F2 (sim corpora routed; `empirica/` founded with track-b-nonlinear), F3 (bulk-64 verified; 21/21 dispositioned; `.archived/` re-sort), G2 (canon→artifact reference sweep), and the wipe question (teaching hypothetical, never a directive) deleted. Evidence: CHANGELOG 2026-07-16 four entries; `empirica/README.md` + `empirica/track-b-nonlinear/`; `spikes/.integrated/VERIFICATION-2026-07-16.md`; `spikes/.archived/MANIFEST-2026-07-16.md`. Remaining: G3/F5 citation tails, G1/G5/F6 onboarding-doc residuals, G4 spike-on-ramp naming (`empirica/` itself exists), WN-discipline remainders (Joseph's traces-in-`.integrated/` ratification still open). The "no wipe" line is kept as a regression guard.
+
+**TODO.md.** Deleted: the 2026-05-10 451729 D.1 promotion-readiness sweep (dissolved by the 2026-07-14 stage-as-process-archaeology position — `status:` is the live tier; Gate-1 staging-monotonicity is not a work item); Group (a) cross-component "missing" pair (`#hyp-checkpoint-forking-failure-modes` is in `04-eli-core/src/` with an E1 `draft` OUTLINE row; `#hyp-experiential-training` is in `03-llm-core/src/` with an L3 `draft` row — the 2026-05-12 finding was OUTLINE-wiring, fixed 2026-07-14); Group (a) AAT OUTLINE top-of-file TODO block (current `01-aat-core/OUTLINE.md` opens with HTML comments, not a leaking TODO list; `CURRENT-VOL1.md` does not carry it). Restated: preface/intro *claim-substantiation* pass (the 2026-07-14 cadence exemption is a schema exemption, not a discharge); local-path leakage (`CURRENT-VOL1.md` still embeds an absolute figure path); AAT-9 `worked-example-cam` still absent (v0.4.0 Appendix BD renders *(missing)*); Causal-IB tensor follow-on (the matrix primitive is in `#def-adaptive-tempo`; downstream summaries still read scalar, same remainder as AAT-1); strengthen-first Tier 3 minus A10 F88–F91 / A13 F173–F181 (those two batches landed in `#impl-orient-cascade` / `#impl-unity-communication` 2026-08-22); 2026-05-16 lint-outline down to the one Joseph residual (`impl-persistence-and-limits` → `result-per-dimension-persistence`, deliberately not whitelisted). The impl-series status-tagging item was left for the in-flight batch.
+
+**PRACTICA.md.** Deleted the strikethrough "landed" cycle-priority items (GUC bundle 2026-05-09, M4 cycle 2026-05-24, multi-timescale promotion 2026-06-10, Instance-4/Object-B 2026-05-21) and the naming-pipeline `[x]` archaeology (phases 1–5, §A, §B) plus the Misc `[x]` README-pipeline review (2026-04-26). Remaining cycle items restated as Gate 1 on the four existing 03-llm-core scope segments, Class-3 closure-defect, identity-through-substrate-transitions, and the multi-timescale *remainders* (jump-process / Model S stacking / premises-satisfaction — named in `#der-multi-timescale-stability` WN). Naming item 11 restated as the two TERMINOLOGY-TODO residues (C8 three-word vs compound — Joseph; C12 first-encounter cite sweep). Item 4's stale "hyp-checkpoint still missing" sentence removed.
+
+**PROPOSALS.md.** Bundle 1 remainder restated against current README / OUTLINE: *About* already opens on the adaptive cycle (`README.md` lines 10–16); `_position-and-lineage.md` still leads with "ASF integrates four mature disciplines"; Part I Adaptive-Systems intro is still the two-sentence stub; Part III preface still dropped by the public build. O-BP10 dropped from the member list (home is `#result-certificate-existence`, CHANGELOG 2026-05-14) — six remaining members, not seven. C.1 win/win restated: a new floor instance, **not** "Instance 4" (`#der-architecture-noidentifiability` occupies that slot; first-hand in `#disc-identifiability-floor`). D.2 residual no longer re-queues Instance-4 promotion.
+
+**BIBLIOGRAPHY-TODO.md.** W-1 and W-4 sections deleted (decision record is the "Citation discipline" section in the same file; build behavior is the "Build-pipeline emit" section; CHANGELOG 2026-07-15 already recorded the A4 wiring). W-5 restated as the anonymized-build consumption layer, deferred until W-3.
+
+**FORMAT-TODO.md C17.** Not "missing chapterization." All four volumes are chapterized (verified 2026-08-22: AAT 16 `### *Chapter*` headings, TST 4, LogA 4, ELI 5). Remainder is grouping *quality* (Joseph) plus the scrbook second-`*Appendices*` collapse (already a TODO.md item).
+
+**TERMINOLOGY-TODO.md §E.** The executed `blind pursuer → blind seeker` interim swap had no CHANGELOG heading (a 2026-05-17 one-cell landing, authorized by Joseph, overriding R2 #132). Recorded here so the tracker can drop it: swept across `#def-agent-spectrum` (5×) and `#form-agent-model` (1×); "pursuer" narrowed the objective axis backwards for the cell it marks; "seek" keeps the seeker/tracker -er pair. Remaining in the tracker: the full tetrad parallelism redesign, with those two arguments traveling.
+
+**TODO-big-picture.md W4.** Deleted as a work item (landed `6653de6`, 2026-05-16; present in `doc/readme/src/_position-and-lineage.md` and the CURRENT-VOL1 introduction). W3 remains; W1/W2 stay "do not execute."
+
+**Not drained (could not confirm done, or remainder is real work):** era-artifact three missing segments (still no files); strengthen-first Tier 1/2; most PROPOSALS §B/§C/§D; deaths and mood follow-ons; G3 `Novelty_defense_and_integration.md` citations (still 8 Search-Log hits in FINDINGS.md plus at least eight segment bodies).
+
+## 2026-08-22 — Spikes-corpus drain (filing + Working-Notes present-tense)
+
+Eight LANDED file-spikes that still sat at `spikes/` were first-hand content-checked against `*/src/` and `git mv`'d to `spikes/.integrated/` (`85b711f`). INDEX `LANDED` treated as hypothesis; each move ran the exclusion pickaxe on the refuted form. Two siblings were *held*, not filed: `spike-rho-additive-variance-strengthening-2026-04-24` (recommended `#rho-decomposition` never existed; AV-theorem payload orphaned — heavy landing, not a filing op) and `spike-neutral-drift-endogenous-coupling-strengthening-2026-04-24` (§8/§10.1 in `#der-architecture-noidentifiability`; remainder still spike-resident).
+
+A first pass then left "Discharged / Resolved / Provenance" breadcrumbs in Working Notes (path-repointed to `.integrated/` instead of deleted). That is the failure Joseph named: breadcrumbs make working notes untrustworthy as present-tense truth. Follow-on: every resolved item was **deleted**; remaining WN content is forward pointers, regression-guards, or dead-end warnings. Narrative lives here, not in the segments.
+
+**Filed (content first-hand in canon; regression-clear):**
+
+- `#der-multi-timescale-stability` stacked-persistence theorem — `spike-multi-timescale-stacking-2026-06-10`
+- `#der-mood-timescale` $\tau^\ast=\sqrt{\tau_{\mathrm{env}} r/(2\sigma_\theta^2)}$ (match-slogan refuted) — `spike-mood-timescale-matching-2026-06-17`
+- `#der-captured-objective-dynamics` (D3 input-leg) — `spike-captured-objective-2026-06-17`
+- `#der-severed-actuation-dynamics` ($\Omega$-kernel severing) — `spike-severed-actuation-dynamics-2026-06-11`
+- `#deriv-tempo-additivity` signed $\Delta$, echo-chamber $R_s$, two no-gos — `spike-adaptive-tempo-redundancy-penalty-2026-07-15` (ripples already executed 2026-07-16; INDEX said they were not)
+- `#der-tempo-composition` joint-baseline $\mathcal T_c\le\mathcal T_{\text{joint}}$ + super-additive witness — `spike-composite-tempo-synergy-2026-07-16` (canon-body spike pointer removed)
+- `#deriv-l1-update-bias` restated Monte Carlo + AND-root — `spike-l1-bias-sim-rerun-2026-07-16`
+- `#internal-external-decomposition` constitutive multiplicative-$\rho$ no-go — `spike-rho-factorization`
+
+Dir-spikes and Joseph-reserved file-spikes were not auto-filed. Manifest: `spikes/.integrated/MANIFEST-2026-08-22.md`.
+
 ## 2026-08-22 — impl-series status-tagging pass (audit 731548 §B-4), pilot batch of three: `impl-cooperative-adversarial`, `impl-orient-cascade`, `impl-unity-communication`
 
 The pass the July audit routed and nobody ran: align each chapter-end implication to the status its source segments actually carry, strengthening where the source earns more than the prose claimed, restating at the source's tier where it overshot, adding a one-line proof-provenance orientation at each chapter open. Each segment was edited by one agent (sources read whole), independently verified by a second agent on a different substrate (`grok-dev`, sources read whole, report only), and the verifier's required fixes applied before commit. Regression pickaxe on every restated form: clean (no add-then-delete history in `src/`; the deleted forms originate in the gold-lift / implications-series first drafts, not in corrected-away canon). Per Joseph's same-day directive, the segments' Working Notes now carry only regression guards and forward pointers; the per-item dispositions live here.

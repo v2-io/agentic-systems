@@ -1,6 +1,6 @@
 # PROPOSALS — Architectural Portfolio
 
-**Last reconciled:** 2026-07-15 (done/decided-item prune per Joseph's tracking-list directive; executed SPs deleted — narrative in CHANGELOG).
+**Last reconciled:** 2026-08-22 (done/decided-item prune per Joseph's tracking-list directive; executed SPs deleted — narrative in CHANGELOG).
 
 This file replaces `msc/architectural-proposals-2026-04-22.md`. That document accumulated 33 proposals across four audit cycles; many had substantively landed but were still catalogued as open; several were superseded; a few unpromoted architectural moves were hiding in segment Working Notes and `msc/` brainstorm documents. This is the slim, verified, banded portfolio produced by the 2026-04-24 consolidation audit.
 
@@ -28,17 +28,17 @@ Two bundles cross the bands. Handling them as unified work-items rather than as 
 
 ### Bundle 1 — Framework-face reframe (paper-writing-time)
 
-Seven proposals converge on a single coordinated reframing pass that would shift AAT's public self-presentation from "integration of four disciplines" to "epistemic architecture with three-part meta-structure plus integrating content." Three independent frontier-model audits (Codex / Gemini / Opus, 2026-04-23) converged on this reframe on different axes; the segment-level infrastructure is already in place (CLAUDE.md §7 landed, OUTLINE.md "Reading AAT" paragraph landed, the three meta-segments `#additive-coordinate-forcing` / `#disc-identifiability-floor` / `#disc-separability-pattern` now live in Part II's opening Meta-Architecture chapter alongside the `#disc-stability-certificate` spine, per the 2026-05-25 Meta-Architecture relocation — M4's home is Part III's opening chapter).
+Six remaining proposals converge on a single coordinated reframing pass that would shift AAT's public self-presentation from "integration of four disciplines" to "epistemic architecture with three-part meta-structure plus integrating content." Three independent frontier-model audits (Codex / Gemini / Opus, 2026-04-23) converged on this reframe on different axes; the segment-level infrastructure is already in place (CLAUDE.md §7 landed, OUTLINE.md "Reading AAT" paragraph landed, the three meta-segments `#additive-coordinate-forcing` / `#disc-identifiability-floor` / `#disc-separability-pattern` now live in Part II's opening Meta-Architecture chapter alongside the `#disc-stability-certificate` spine, per the 2026-05-25 Meta-Architecture relocation — M4's home is Part III's opening chapter).
 
-**Bundle members:** SP-7 (epistemic architecture foregrounding) + O-BP1 (sector-persistence template as organizing principle) + **O-BP10 (projection-contraction slogan) — LANDED at segment level 2026-05-14 as `#result-certificate-existence`** (`status: exact`; the slogan *an adaptive system is an operator whose contraction rate exceeds its target's drift rate* is now the Lyapunov-theorem equivalence "operator-sector in some metric ⟺ exponentially stable", with the certificate as witness — see CHANGELOG 2026-05-14 and `#disc-stability-certificate`; the long-standing "not yet surfaced at segment level" condition is discharged) + O-BP8 (scope lattice) + SP-3 (calibration-laboratory template generalization) + SP-4 (agent-identity from scope to architectural postulate) + SP-8 (dual-edged floor/separability reading).
+**Bundle members:** SP-7 (epistemic architecture foregrounding) + O-BP1 (sector-persistence template as organizing principle) + O-BP8 (scope lattice) + SP-3 (calibration-laboratory template generalization) + SP-4 (agent-identity from scope to architectural postulate) + SP-8 (dual-edged floor/separability reading). (O-BP10, the projection-contraction slogan, has its own exact-tier home `#result-certificate-existence` — CHANGELOG 2026-05-14 — and is not re-queued.)
 
-**What remains unlanded:** README.md rewrite (still integration-first at line 10); OUTLINE.md preamble pass for Section I/II/III (the cross-sectional "Reading AAT" preamble *was* reframed 2026-05-14 into a two-layer mental-model-first form built on the certificate spine — the per-Part Section I/II/III preamble passes remain); possible new canonical scope-lattice location; `domain-instantiation-template.md` or FORMAT.md section; `#scope-agent-identity` frontmatter `type: scope → postulate`; `#disc-identifiability-floor` + `#disc-separability-pattern` dual-edged editorial touches. *(The O-BP10 sub-item "`#result-sector-persistence-template` introductory paragraph restating the slogan" is superseded: the slogan now has its own exact-tier home `#result-certificate-existence` which the template cross-references as its interior facet, rather than the slogan being restated in an intro paragraph.)*
+**What remains unlanded:** `doc/readme/src/_position-and-lineage.md` still *leads* with "ASF integrates four mature disciplines" and then names the three meta-patterns (README *About* already opens on the adaptive cycle; verified `README.md` lines 10–16). OUTLINE: Part I's Adaptive-Systems intro is still the two-sentence stub the HTML-comments flag; Part III's preface is still dropped by the public build (CHANGELOG 2026-08-22). Still open as originally named: possible new canonical scope-lattice location; `domain-instantiation-template.md` or FORMAT.md section; `#scope-agent-identity` frontmatter `type: scope → postulate`; `#disc-identifiability-floor` + `#disc-separability-pattern` dual-edged editorial touches.
 
 **Total effort:** 2–3 coordinated sessions. Individual pieces are each small; the benefit of coordination is that the reframe reads consistently across README / OUTLINE / CLAUDE / segments rather than drifting between framings.
 
 **Value:** **+9 for framework identity; +10 for paper-writing.** This is the highest-leverage single move available in the portfolio. Joseph-check-in recommended before execution (the organizing axis is architectural and commits the framework's self-presentation for future work).
 
-**Independence:** Bundle-internal: **low** — all seven members converge on the same presentation surface (README + OUTLINE preambles + three meta-segments + `#scope-agent-identity` + `#result-sector-persistence-template`); must be done as one coordinated pass rather than parallelized. Bundle-external: **high** — touches mostly framing surfaces; does not conflict with Section I / II / III substantive segment work. Safe to run in parallel with Bundle 2 or with individual §C / §D items.
+**Independence:** Bundle-internal: **low** — the remaining six members converge on the same presentation surface (README + OUTLINE preambles + three meta-segments + `#scope-agent-identity` + `#result-sector-persistence-template`); must be done as one coordinated pass rather than parallelized. Bundle-external: **high** — touches mostly framing surfaces; does not conflict with Section I / II / III substantive segment work. Safe to run in parallel with Bundle 2 or with individual §C / §D items.
 
 **Risk:** The Fenchel-Bregman reframe (SP-9) proposes to further reorganize `#additive-coordinate-forcing` into "one geometric object + four axioms converging on it." If SP-9 is executed, the bundle's framing of the meta-segments would need revision. Two resolutions: (a) do the bundle first with the current 1-anchor-plus-3-theorem characterization (stable); (b) scope SP-9 first, decide if it supersedes SP-1's landed framing, then do the bundle. **Recommendation: (a) — don't let the Tier-3 reframe-proposal delay the framework-face work.**
 
@@ -68,7 +68,7 @@ Each item has prereqs met and clear downstream value. These are the execution ta
 
 ### B.1 Framework-face reframe bundle (see §Cross-cutting view, Bundle 1)
 
-Seven proposals landed as one coordinated pass. Value **+9 framework / +10 paper**. 2–3 sessions. Joseph-check-in recommended before execution.
+Six remaining proposals as one coordinated pass. Value **+9 framework / +10 paper**. 2–3 sessions. Joseph-check-in recommended before execution.
 
 ### B.2 Section III completion — entry points (see §Cross-cutting view, Bundle 2)
 
@@ -94,11 +94,11 @@ Subsumes F12, F17, F23, F25; partial on F14. **Value: +6.** Primary aspect: scop
 
 ### C.1 O-BP13 — Cox-parallel necessity for `#deriv-graph-structure-uniqueness`
 
-Sharp theorem-spike question: can Lauritzen-Sadeghi 2018 unify enough to force DAG semantics from P1–P4 + causal sufficiency? Win/win outcome structure — success elevates the sufficiency-only claim to full Cox-parallel; failure produces an `#disc-identifiability-floor` Instance 4 with sharp scope. **1–2 session scoping spike; 2–3 sessions if tractable.** External literature ready (Lauritzen-Sadeghi 2018; Evans-Richardson 2014; Drton-Maathuis-Meinshausen 2017).
+Sharp theorem-spike question: can Lauritzen-Sadeghi 2018 unify enough to force DAG semantics from P1–P4 + causal sufficiency? Win/win outcome structure — success elevates the sufficiency-only claim to full Cox-parallel; failure is a *new* floor instance (or a named no-go under `#deriv-graph-structure-uniqueness`), **not** "Instance 4" — that slot is already occupied by `#der-architecture-noidentifiability` (landed 2026-05-21; four instances in `#disc-identifiability-floor`, first-hand). **1–2 session scoping spike; 2–3 sessions if tractable.** External literature ready (Lauritzen-Sadeghi 2018; Evans-Richardson 2014; Drton-Maathuis-Meinshausen 2017).
 
 Primary aspect: correctness. Secondary: fundamentality, transparency. **Value: +5 framework / +7 paper.**
 
-**Independence: high.** Self-contained spike on `#deriv-graph-structure-uniqueness`; either produces a necessity-direction derivation (segment extension) or surfaces a new `#disc-identifiability-floor` Instance 4. Either outcome touches one primary segment plus one meta-segment; minimal cross-segment surface area. Safe to parallelize with any other active proposal.
+**Independence: high.** Self-contained spike on `#deriv-graph-structure-uniqueness`; either produces a necessity-direction derivation (segment extension) or a new floor/no-go (Instance 4 is taken). Either outcome touches one primary segment plus possibly the meta-segment; minimal cross-segment surface area. Safe to parallelize with any other active proposal.
 
 ### C.2 O-BP15 — Comprehensive "minimal proof of viability" worked example
 
@@ -151,7 +151,7 @@ Point estimate **+6** reflecting branching-outcome distribution. **Primary aspec
 
 ### D.2 Section III completion — upstream pieces (see Bundle 2)
 
-**O-BP16 population-level Lyapunov dynamics** — substantially stale characterization (4–6 session estimate predates the partial coverage already landed via `#der-agent-opacity` $H_b$, `#der-interaction-channel-classification`, `#disc-identifiability-floor` Instance 3). Residual work: Kalman-Ho closed-form follow-up spike (queued); Instance 4 promotion to `#disc-identifiability-floor` (1 session); possibly `#population-dynamics` or `#latent-structural-diversity` segment (1–2 sessions if residual content warrants). **Updated total: 2–3 sessions, not 4–6.**
+**O-BP16 population-level Lyapunov dynamics** — residual work: Kalman-Ho closed-form follow-up spike (queued); possibly `#population-dynamics` or `#latent-structural-diversity` segment (1–2 sessions if residual content warrants). Instance 4 is already `#der-architecture-noidentifiability` in `#disc-identifiability-floor` — do not re-queue it here. **Updated total: 1–2 sessions.**
 
 External literature rich: Moran model, replicator-Fokker-Planck (Traulsen-Claussen-Hauert 2008), Kullback-Leibler as Lyapunov for ESS (Baez 2014), Baez-Pollard 2016. Directly reusable under prior-art-integration convention.
 
