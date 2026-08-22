@@ -10,7 +10,7 @@
 # were missed.
 #
 # Deliberately scoped to LIVE doc↔doc navigation. Excluded by design:
-#   - `_obs/`, `_archive/`     — superseded / archived material (verbatim)
+#   - `.archive/`, `_archive/`     — superseded / archived material (verbatim)
 #   - any dot-prefixed dir     — `.integrated/`, `.archived/`,
 #                                `.routing-trail/`, `.gem-hunt-trail/`, …
 #   - `ref/converted/`         — converted external papers (not our docs)
@@ -66,8 +66,10 @@ SKIP_PREFIXES = %w[http:// https:// mailto: tel: ftp:// data: //].freeze
 LINK_RE = /!?\[[^\]]*\]\(\s*<?([^)\s>]+)>?(?:\s+"[^"]*")?\s*\)/.freeze
 
 # A path is excluded (frozen archaeology / non-doc material) if it lives under
-# _obs, _archive, ref/converted, or any dot-prefixed dir (.integrated,
-# .archived, .routing-trail, .gem-hunt-trail, .git, …).
+# `_archive/`, `ref/converted/`, or any dot-prefixed dir (`.archive/` — formerly
+# `_obs/` — plus `.integrated/`, `.archived/`, `.routing-trail/`,
+# `.gem-hunt-trail/`, `.git`, …). `_obs` is kept as a ghost name so leftover
+# pointers into the old path still skip rather than 404-scan.
 def excluded_dir?(rel_path)
   return true if rel_path.to_s.start_with?('ref/converted/')
   rel_path.each_filename.any? do |part|
@@ -156,7 +158,7 @@ end
 options = { all: false }
 parser = OptionParser.new do |opts|
   opts.banner = 'Usage: bin/check-links [--all] [PATH...]'
-  opts.on('--all', 'Include archaeology (_obs/, _archive/, dot-dirs, ref/converted/) in the scan') { options[:all] = true }
+  opts.on('--all', 'Include archaeology (.archive/, _archive/, dot-dirs, ref/converted/) in the scan') { options[:all] = true }
 end
 roots = parser.parse(ARGV)
 roots = ['.'] if roots.empty?

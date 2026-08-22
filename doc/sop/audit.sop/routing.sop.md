@@ -342,7 +342,7 @@ the seam — it locks attribution.
 `adjudication.md` deliverables' stale internal paths are not edited.
 
 **Working-directory lifecycle** *(authoritative SOP — Joseph-attested
-2026-05-16, with rationale)*: a working directory, **once it has served its purpose (fully integrated — nothing of value lives only there), is cleared out of the live tree**, into `.integrated/` (or `.archive` / `_obs`). It is
+2026-05-16, with rationale)*: a working directory, **once it has served its purpose (fully integrated — nothing of value lives only there), is cleared out of the live tree**, into `.integrated/` (or `.archive`). It is
 *not* "retained in place." Leaving served-purpose working dirs in `audits/`
 or `src/` or anywhere live is not cost-neutral: it taxes discoverability on every `ls` / `rg`, is a decision point and cognitive load on every encounter, and — worst — breeds the "it's not done, but I'll leave it here because that's what we do, someone will get to it later" rot. The disposition of a served-purpose working dir is therefore *clear it*, not catalogue an
 (a)/(b) location framework. **Boundary:** this covers dirs whose purpose is

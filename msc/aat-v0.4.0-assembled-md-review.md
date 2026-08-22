@@ -108,7 +108,7 @@ If 0.4.0 is the artifact you want a reviewer or another mind to ingest, rebuild 
 FORMAT calls the assembled markdown the intermediate that an agent ingests when reasoning about a whole volume. Several things in this file still point off-disk, at this machine, or at TeX:
 
 - Five figures use absolute paths (`/Users/josephwecker-v2/src/arch/asf/01-aat-core/src/img/…`). Intentional for Stage 3 (no figure staging). For the `.md` as a portable artifact, the images break the moment the file leaves this checkout.
-- Fifteen leftover `.md` links (`../../03-llm-core/…`, `../../spikes/PROPOSED.md`, `../../msc/…`, `../../_obs/FINDINGS-RANKED-DRAFT-…`). Ingest only rewrites a path when the basename is a known *in-volume* slug. Cross-volume and working-tree links survive as repo-relative paths that do not resolve from `mono/`.
+- Fifteen leftover `.md` links (`../../03-llm-core/…`, `../../spikes/PROPOSED.md`, `../../msc/…`, `../../.archive/FINDINGS-RANKED-DRAFT-…`). Ingest only rewrites a path when the basename is a known *in-volume* slug. Cross-volume and working-tree links survive as repo-relative paths that do not resolve from `mono/`.
 - Citations remain `\citep{…}` / `\citealt{…}` / `\citealp{…}` (Bareinboim, Pearl, Khalil, Friston, etc.). `relata emit` wrote the sibling `mono/aat-v0.4.0.references.bib` (10 entries). The markdown itself has no bibliography section. A markdown reader cannot follow a cite without TeX or the bib file.
 
 None of these is the pipeline inventing theory. All of them mean "open `aat-v0.4.0.md` on another machine / in another mind, with no repo" is not quite true.

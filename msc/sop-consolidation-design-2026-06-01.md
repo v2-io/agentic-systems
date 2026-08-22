@@ -117,7 +117,7 @@ doc/SOP/
 - **`doc/*`.** The process docs relocate/rename under `doc/SOP/` per §3 (or stay and get indexed — gate decision §5). `spikes.sop.md`'s defer-to-audit pattern is the template.
 - **READMEs (`spikes/`, `audits/`, `terminology/`).** Stay as *subdirectory governance* (they document their own corpus and are correctly single-sourced). Indexed from `doc/SOP/README.md`; trim any restatement of a rule whose home is now an SOP, leaving a pointer.
 - **Project memory.** *Extract* the sole-carrier procedure memories to their `doc/SOP/` homes (multi-agent.md, git-hygiene.md, audit.md), leaving each memory thinned to a one-line pointer + the Joseph-quote/why (the disposition slice memory is good at). *Thin* the duplicate memories to pointers. *Keep* the pure-disposition and project-context memories untouched. This is also the lever that gets MEMORY.md back under its limit (§6).
-- **`msc/` + navigators.** The WN-coherence-pass doc archives to `_obs/` once its rule lands in FORMAT. The audit-gold two-track's settled shape moves from `NEXT-UP.md` into `doc/SOP/audit.md` as it is gated. `markdown-first-pipeline.md` stays as the design record, anchored from `doc/SOP/build-pipeline.md`.
+- **`msc/` + navigators.** The WN-coherence-pass doc archives to `.archive/` once its rule lands in FORMAT. The audit-gold two-track's settled shape moves from `NEXT-UP.md` into `doc/SOP/audit.md` as it is gated. `markdown-first-pipeline.md` stays as the design record, anchored from `doc/SOP/build-pipeline.md`.
 
 ## 5. Reserved decisions (Joseph's gate)
 

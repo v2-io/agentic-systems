@@ -53,4 +53,4 @@ On the call, the lead drafts the actual edits (and, if the provisional per-segme
 
 ---
 
-*Authored 2026-05-31 by the SOP coherence pass (agent a48ba87f) + lead synthesis. Working proposal; archive to `_obs/` once the gated edits land (or supersede).*
+*Authored 2026-05-31 by the SOP coherence pass (agent a48ba87f) + lead synthesis. Working proposal; archive to `.archive/` once the gated edits land (or supersede).*

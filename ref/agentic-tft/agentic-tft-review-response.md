@@ -15,7 +15,7 @@
 > - Doc 11 = `agentic-tft-cognitive-loop-spec.md`
 > - Doc 12 = `agentic-tft-evaluation-framework.md`
 > - Doc 13 = `agentic-tft-experiential-training.md`
-> - note 02 = `_obs/agentic-tft-02-epistemic-geometry-and-gain.md`
+> - note 02 = `.archive/agentic-tft-02-epistemic-geometry-and-gain.md`
 > - note 04 = `agentic-tft-narrative-as-implementation.md`
 > - note 06 = `agentic-tft-creche-concept.md`
 

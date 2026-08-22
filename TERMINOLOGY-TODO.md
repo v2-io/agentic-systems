@@ -1,6 +1,6 @@
 # TERMINOLOGY-TODO
 
-Live execution queue for naming-cycle decisions that have been **made** (interactively curated through Phase 5, 2026-05-04) but not yet **executed**. The decisions and their rationale live in [`msc/naming/naming-rename-plan.md`](msc/naming/naming-rename-plan.md); this file is the action checklist.
+Live execution queue for naming-cycle decisions that have been **made** (interactively curated through Phase 5, 2026-05-04) but not yet **executed**. The decisions and their rationale live in `msc/naming/naming-rename-plan.md` inside [`.archive/msc-naming-2026-08-22.tar.gz`](.archive/msc-naming-2026-08-22.tar.gz) (unpack at the repo root to restore `msc/naming/`); this file is the action checklist.
 
 > [!note]
 > **The terminology *system* is migrating to the Archema program level** (`archterm` under `~/src/archema-io/common/utl/`: custodian field, per-project lexicons/notation docs, YAML→udon) — plan at [`../TODO.md`](../TODO.md) §Terminology system (2026-07-16). This file remains the asf-side *content* queue; don't build asf-local tooling features that the migration will re-home.
@@ -33,7 +33,7 @@ Each batch below is a natural commit unit. Mark a row landed = remove it; add a 
 
 ## F. LEXICON Continuity section — pending reorganization (blocked on review)
 
-> **⚠ This needs another opinion and a search of the relevant voting etc. in `msc/naming/` before we take any action.** The findings below are from a single Opus 4.7 corpus exploration (2026-05-10). Do not execute any reorganization until a second-opinion pass has been done and the naming-cycle voting artifacts in `msc/naming/` have been checked for any prior decisions on these terms.
+> **⚠ This needs another opinion and a search of the relevant voting etc. in the packed naming-cycle tree before we take any action.** The findings below are from a single Opus 4.7 corpus exploration (2026-05-10). Do not execute any reorganization until a second-opinion pass has been done and the naming-cycle voting artifacts in [`.archive/msc-naming-2026-08-22.tar.gz`](.archive/msc-naming-2026-08-22.tar.gz) (inner `msc/naming/`) have been checked for any prior decisions on these terms.
 
 ### Findings (Opus 4.7, 2026-05-10)
 
@@ -81,7 +81,7 @@ These are not the same concept twice:
 
 ## D. Open-question residue (the 13 to-canonicalize rows still pending decision)
 
-Listed here as a pointer, not as actions — these are pre-execution decisions that come *before* the queue above grows further. See [`msc/naming/to-canonicalize.md`](msc/naming/to-canonicalize.md) §Table for the 13 rows: most carry `D` in the Confirm column (specification bound, adaptive cycle, operationalization, etc.), and one carries `???` (separable core / structured repair / general open — separability triad-rung naming, ties into [`msc/separability-standalone-paper-proposal.md`](msc/separability-standalone-paper-proposal.md)). When those decisions land, new rows will be added to the appropriate section above.
+Listed here as a pointer, not as actions — these are pre-execution decisions that come *before* the queue above grows further. See `msc/naming/to-canonicalize.md` §Table for the 13 rows: most carry `D` in the Confirm column (specification bound, adaptive cycle, operationalization, etc.), and one carries `???` (separable core / structured repair / general open — separability triad-rung naming, ties into [`msc/separability-standalone-paper-proposal.md`](msc/separability-standalone-paper-proposal.md)). When those decisions land, new rows will be added to the appropriate section above.
 
 ---
 
@@ -98,8 +98,10 @@ Listed here as a pointer, not as actions — these are pre-execution decisions t
 
 ## How this file relates to other naming-cycle files
 
-- [`msc/naming/naming-rename-plan.md`](msc/naming/naming-rename-plan.md) — **Decisions and rationale.** The decision record: what was decided, when, why, with full operational-landing notes. This file (TERMINOLOGY-TODO.md) extracts the *executable summary*; rename-plan retains the *full reasoning*. Each row above links back.
-- [`msc/naming/to-canonicalize.md`](msc/naming/to-canonicalize.md) — **Pre-decision residue.** The remaining 13 rows still pending Joseph's routing call.
-- [`msc/naming/master-list-curated.json`](msc/naming/master-list-curated.json) — **Master vote-aggregation source.** `rename_status` field tracks per-current canonicalize / rename / excluded status (88+ marked).
+The cycle record is packed at [`.archive/msc-naming-2026-08-22.tar.gz`](.archive/msc-naming-2026-08-22.tar.gz). Inner paths:
+
+- `msc/naming/naming-rename-plan.md` — **Decisions and rationale.** The decision record: what was decided, when, why, with full operational-landing notes. This file (TERMINOLOGY-TODO.md) extracts the *executable summary*; rename-plan retains the *full reasoning*. Each row above links back.
+- `msc/naming/to-canonicalize.md` — **Pre-decision residue.** The remaining 13 rows still pending Joseph's routing call.
+- `msc/naming/master-list-curated.json` — **Master vote-aggregation source.** `rename_status` field tracks per-current canonicalize / rename / excluded status (88+ marked).
 - [`PRACTICA.md`](PRACTICA.md) §"🌟 Current naming conventions refactor" — **Strategic pipeline.** Items 9 (final decisions on 13) → 10 (execute renaming surgery) → 11 (land canonicalize commitments) name the phase this file operationalizes.
 - [`CHANGELOG.md`](CHANGELOG.md) — **Where landed batches go.** When items here are committed, the corresponding CHANGELOG entry captures the batch shape and substance.

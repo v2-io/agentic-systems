@@ -25,7 +25,7 @@
 #   - `bin/lint-outline` exits clean on every component OUTLINE.md.
 #
 # Excluded dirs/files (references there stay on OLD names — they're frozen):
-#   _obs/ ref/ .git/ .claude/ msc/naming/
+#   .archive/ ref/ .git/ .claude/ msc/naming/
 #   bin/rename-slug  (this file, which documents OLD examples)
 #
 # Usage:
@@ -58,6 +58,7 @@ COMPONENT_OUTLINES = %w[
 ].map { |p| REPO_ROOT / p }.freeze
 
 EXCLUDED_DIR_PREFIXES = %w[
+  .archive/
   _obs/
   ref/
   .git/

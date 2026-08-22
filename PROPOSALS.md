@@ -122,7 +122,7 @@ Primary aspect: unification. Composes with O-BP11 (partial unblock for the obser
 
 ### C.4 SP-19 — Naming consolidation pass
 
-Top Priority-2 items from `msc/naming/naming-brainstorm-2026-04-24.md`: (a) `#additive-coordinate-forcing` → `#cauchy-coordinates` (shorter, more speakable); (b) `#disc-separability-pattern` → `#separability-ladder`; (c) paired trio "**floor / ladder / Cauchy-coordinates**"; (d) template-family naming (sector / contraction / dissipativity). Rides with Bundle 1 (framework-face reframe) — naming is the implementation layer of the reframe.
+Top Priority-2 items from `msc/naming/naming-brainstorm-2026-04-24.md` (inner path in [`.archive/msc-naming-2026-08-22.tar.gz`](.archive/msc-naming-2026-08-22.tar.gz)): (a) `#additive-coordinate-forcing` → `#cauchy-coordinates` (shorter, more speakable); (b) `#disc-separability-pattern` → `#separability-ladder`; (c) paired trio "**floor / ladder / Cauchy-coordinates**"; (d) template-family naming (sector / contraction / dissipativity). Rides with Bundle 1 (framework-face reframe) — naming is the implementation layer of the reframe.
 
 **Prereq:** Joseph-level naming decision (judgment-call territory; worth an explicit naming-cycle check-in before landing). **Execution:** 1 session.
 
@@ -439,4 +439,4 @@ Four operating principles worth preserving from this audit cycle:
 
 ---
 
-*This file supersedes `msc/architectural-proposals-2026-04-22.md`. That file has been moved to `_obs/architectural-proposals-2026-04-22.md` with a supersession header. LOG.md / CHANGELOG.md carry cycle-level narrative for absorbed and executed proposals (the former §A table and the executed SP-22/24/25/26/28 entries were pruned 2026-07-15 per the tracking-list directive).*
+*This file supersedes `msc/architectural-proposals-2026-04-22.md`. That file has been moved to `.archive/architectural-proposals-2026-04-22.md` with a supersession header. LOG.md / CHANGELOG.md carry cycle-level narrative for absorbed and executed proposals (the former §A table and the executed SP-22/24/25/26/28 entries were pruned 2026-07-15 per the tracking-list directive).*

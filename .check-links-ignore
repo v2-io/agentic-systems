@@ -6,7 +6,7 @@
 # and `#` comments ignored.
 #
 # General categories — dot-dirs (.integrated/ .archived/ .routing-trail/ …),
-# `_obs/`, `_archive/`, `ref/converted/`, and component `…-core/src/` segment
+# `.archive/`, `_archive/`, `ref/converted/`, and component `…-core/src/` segment
 # links (lint-outline's domain) — are excluded in bin/check-links itself. This
 # file is for the repo-specific rest. Keep it honest: exempt only files whose
 # links are genuinely point-in-time, not files you'd rather not fix.
@@ -23,16 +23,6 @@ LOG.md
 releases/
 msc/reflections/
 msc/handoff-2026-05-01.md
-msc/naming/naming-principles-old.md
-msc/naming/handoff-2026-04-30-cohort-close.md
-msc/naming/round-2-plan.md
-msc/naming/naming-votes/
-
-# Generated output — regenerates from its script (bin/naming-r2-aggregate.rb);
-# stale links here self-heal on the next render.
-msc/naming/r2-patterns.md
-msc/naming/r2-aggregate-table.md
-msc/naming/r2-aggregate-detail.md
 
 # Prior-art analysis working compilation — internal refs into segments / papers,
 # not a navigation contract.

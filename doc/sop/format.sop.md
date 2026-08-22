@@ -159,7 +159,7 @@ depends:
 | [`sketch`](../../terminology/entries/type-sketch.md) | Outlines an approach or framework; direction identified, rigor pending |
 | [`aside`](../../terminology/entries/aside.md) | Tangential observation or connection; informative but not load-bearing |
 
-**Why these labels.** The terminology emphasizes that AAT is a *theoretical framework* using existing mathematics, not a pure-mathematics unification project. `postulate` (not `axiom`), `result` (not `theorem`), and `derivation` (not `proof`) avoid the framing that AAT claims foundational mathematical originality where it does not. References to external theorems keep their original names — Cox's theorem, Causal Hierarchy Theorem, Tikhonov's theorem — these are other authors' terms and renaming them would obscure provenance. Segment headings follow suit: `### Derivation`, not `### Proof Sketch`. Equation-level tags use `*[Postulate (slug)]*` and `*[Result (slug)]*`. Historical files (`_obs/`, `msc/`) are not retroactively updated — they preserve the terminology of their era.
+**Why these labels.** The terminology emphasizes that AAT is a *theoretical framework* using existing mathematics, not a pure-mathematics unification project. `postulate` (not `axiom`), `result` (not `theorem`), and `derivation` (not `proof`) avoid the framing that AAT claims foundational mathematical originality where it does not. References to external theorems keep their original names — Cox's theorem, Causal Hierarchy Theorem, Tikhonov's theorem — these are other authors' terms and renaming them would obscure provenance. Segment headings follow suit: `### Derivation`, not `### Proof Sketch`. Equation-level tags use `*[Postulate (slug)]*` and `*[Result (slug)]*`. Historical files (`.archive/`, `msc/`) are not retroactively updated — they preserve the terminology of their era.
 
 ### `status` — epistemic strength
 
@@ -542,7 +542,7 @@ Current members include: #emp-update-gain, #hyp-mismatch-dynamics, #hyp-edge-upd
 
 ## Equation-Level Tags
 
-Inline tags before equations mark their epistemic status. These follow TFT conventions (see `NOTATION.md` and `_obs/old-tf-00-notation-conventions.md`):
+Inline tags before equations mark their epistemic status. These follow TFT conventions (see `NOTATION.md` and `.archive/old-tf-00-notation-conventions.md`):
 
 ```
 *[Definition (slug-name)]*
@@ -600,7 +600,7 @@ GitHub's math renderer is stricter than Obsidian's. To keep both working:
 
 ## Notation Conventions
 
-Follow TFT conventions. See `NOTATION.md` for AAT's symbol reference. The original TFT conventions are in `_obs/old-tf-00-notation-conventions.md`. Key points:
+Follow TFT conventions. See `NOTATION.md` for AAT's symbol reference. The original TFT conventions are in `.archive/old-tf-00-notation-conventions.md`. Key points:
 
 - **Calligraphic** ($\mathcal{M}$, $\mathcal{O}$, $\mathcal{A}$, $\mathcal{C}$, $\mathcal{E}$) for sets and spaces
 - **$\mathcal{T}$** for adaptive tempo (calligraphic to distinguish from temperature)

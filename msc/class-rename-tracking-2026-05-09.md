@@ -142,7 +142,7 @@ These directories carry the old vocabulary. **Do not edit them.** The warning ca
 
 | Directory / file pattern | Coverage source | Notes |
 |---|---|---|
-| `_obs/` (superseded docs) | README + CLAUDE.md callouts | High volume of old Class-N references; preserve verbatim. |
+| `.archive/` (superseded docs) | README + CLAUDE.md callouts | High volume of old Class-N references; preserve verbatim. |
 | `msc/AUDIT-WORKING-*/` | LOG.md + CHANGELOG.md callouts | Per-cycle audit-intermediate workspaces; frozen by audit-cycle discipline. |
 | `audits/` | LOG.md + CHANGELOG.md callouts | Audit FINAL outputs; frozen by audit-cycle discipline. |
 | `spikes/` | README + CLAUDE.md callouts | Reasoning trails. Heaviest archaeology offender: `spikes/spike-coupled-survival-analysis.md` (44 occurrences). |
@@ -174,4 +174,4 @@ Failed verification reverts the file to `modified` with a note describing the is
 
 ## When this file retires
 
-Retires when all rows in Phases 1–7 are at `verified` and Phase 6 collapses + tag are landed. At that point: archive into `_obs/` or leave in `msc/` as the durable record of how the rename was executed.
+Retires when all rows in Phases 1–7 are at `verified` and Phase 6 collapses + tag are landed. At that point: archive into `.archive/` or leave in `msc/` as the durable record of how the rename was executed.

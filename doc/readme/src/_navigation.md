@@ -44,10 +44,9 @@ spikes/               Research spikes (reasoning trails)
 audits/               Audit-cycle FINAL outputs + pending-findings + per-cycle working dirs
   AUDIT-WORKING-*/    Per-cycle audit intermediate workspaces
 msc/                  Other working artifacts (brainstorms, working notes)
-  naming/             Current naming-cycle votes + aggregates + rename plan
   reflections/        Author's philosophical/theoretical journal
 ref/                  Reference papers + internal references
   agentic-tft/        Prior-bridge AAT-source materials (Feb 2026)
 bin/                  Build, lint, generation scripts
-_obs/                 Superseded materials
+.archive/             Superseded materials (formerly `_obs/`; naming-cycle tree packed as `msc-naming-2026-08-22.tar.gz`)
 ```

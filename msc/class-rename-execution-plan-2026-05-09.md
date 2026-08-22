@@ -97,7 +97,7 @@ For per-file Class-N occurrence counts and per-file notes, see the live tracking
 
 ### Frozen archaeology (do not edit; gets warning callouts only)
 
-`_obs/`, `msc/` (except this plan and the rename-plan), `audits/`, `spikes/`, `ref/`, the entire `msc/AUDIT-WORKING-*/` cycle workspaces, naming-vote files, etc. Their Class-N references stay frozen at old meaning. The warning callouts (see [§7](#7-warning-callout-discipline)) are the rosetta stone for future readers.
+`.archive/`, `msc/` (except this plan and the rename-plan), `audits/`, `spikes/`, `ref/`, the entire `msc/AUDIT-WORKING-*/` cycle workspaces, naming-vote files, etc. Their Class-N references stay frozen at old meaning. The warning callouts (see [§7](#7-warning-callout-discipline)) are the rosetta stone for future readers.
 
 ---
 
@@ -113,7 +113,7 @@ The five framing questions resolved before surgery starts. Each decision shapes 
 
 ### 2. Surface scope: all non-archaeological in scope
 
-**Decision.** All non-archaeological canonical-surface Class-N occurrences are in scope (TODO's ~7-segment estimate was wrong). Per fresh grep: 30 segments + 2 OUTLINEs + 4 partials + ~7 root docs + auto-regenerated downstream. Frozen archaeology (`_obs/`, `msc/AUDIT-WORKING-*`, `audits/`, `spikes/`, `ref/`, naming-vote files, etc.) gets warning callouts on the canonical-surface anchors but no direct edits.
+**Decision.** All non-archaeological canonical-surface Class-N occurrences are in scope (TODO's ~7-segment estimate was wrong). Per fresh grep: 30 segments + 2 OUTLINEs + 4 partials + ~7 root docs + auto-regenerated downstream. Frozen archaeology (`.archive/`, `msc/AUDIT-WORKING-*`, `audits/`, `spikes/`, `ref/`, naming-vote files, etc.) gets warning callouts on the canonical-surface anchors but no direct edits.
 
 ### 3. Meta-pattern table: label-edit + key
 
@@ -300,7 +300,7 @@ The "sometimes AKA" column carries informal labels (Modular / Undirected / Opera
 
 ### Where it does NOT land
 
-- Frozen archaeology directories themselves (`_obs/`, `msc/AUDIT-WORKING-*/`, `audits/`, `spikes/`, `ref/`, naming-vote files). These directories are off-limits for direct edits per the project's archaeology-preservation discipline. The callouts at the README / CLAUDE / canonical-segment level are sufficient — anyone reading frozen archaeology will have already passed through one of those anchors.
+- Frozen archaeology directories themselves (`.archive/`, `msc/AUDIT-WORKING-*/`, `audits/`, `spikes/`, `ref/`, naming-vote files). These directories are off-limits for direct edits per the project's archaeology-preservation discipline. The callouts at the README / CLAUDE / canonical-segment level are sufficient — anyone reading frozen archaeology will have already passed through one of those anchors.
 
 ---
 
@@ -318,7 +318,7 @@ The "sometimes AKA" column carries informal labels (Modular / Undirected / Opera
 
 6. **The terminology-tooling shift's `--force` flag.** `bin/term render --output LEXICON.md` currently refuses to clobber the hand-authored LEXICON.md per `terminology/README.md`'s clobber-guard. Until the LEXICON-bootstrap migration completes (separate work, queued), the rename's LEXICON regeneration may need `--force`. Confirm the workflow with `terminology/README.md` §"Generating LEXICON.md" before running.
 
-7. **Frozen archaeology temptation.** Files in `_obs/`, `msc/AUDIT-WORKING-*/`, `audits/`, `spikes/`, `ref/` will appear in grep results with old Class-N references. **Do not edit them.** These are frozen by project discipline. The warning callouts are what makes them readable — not retroactive surgery.
+7. **Frozen archaeology temptation.** Files in `.archive/`, `msc/AUDIT-WORKING-*/`, `audits/`, `spikes/`, `ref/` will appear in grep results with old Class-N references. **Do not edit them.** These are frozen by project discipline. The warning callouts are what makes them readable — not retroactive surgery.
 
 ---
 

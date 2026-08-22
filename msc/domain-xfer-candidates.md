@@ -5,7 +5,7 @@ to RL learning-rate annealing, immune somatic hypermutation to continual
 learning, adaptive control stability theorems to organizational viability,
 Auftragstaktik shared-intent IB compression to multi-agent RL, and dozens
 more — live in the curated catalog at
-[`_obs/FINDINGS-RANKED-DRAFT-superseded-2026-05-13.md`](../_obs/FINDINGS-RANKED-DRAFT-superseded-2026-05-13.md). The catalog's
+[`.archive/FINDINGS-RANKED-DRAFT-superseded-2026-05-13.md`](../.archive/FINDINGS-RANKED-DRAFT-superseded-2026-05-13.md). The catalog's
 *Long-Standing Open Questions Now Within Reach* section (~20 entries) is
 the canonical list of what AAT's unification claims to touch.
 

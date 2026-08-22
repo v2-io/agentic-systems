@@ -154,7 +154,7 @@ Per Joseph's instruction. Branch is now ~7 commits ahead of origin/main locally.
 
 Per the proposal's execution plan: full sunset waits until segment-Findings sweep is far enough along that FINDINGS.md is the credible reference. Currently 6 pilot entries; the sweep is the next major Findings-related cycle.
 
-**Resolution.** The 2026-04-27 catalog merge + Opus brainstorm pass + lower-confidence pull-back brought `msc/FINDINGS-RANKED-DRAFT.md` to ~58 numbered findings + cross-segment + meta-architectural sections — *de facto* the credible "what's settled" reference the proposal's gating condition required. The full segment-level Findings sweep (writing `## Findings` sections in each segment) is still pending and tracked in PRACTICA, but FINDINGS-RANKED-DRAFT is itself now load-bearing enough to host the architectural snapshot CLAUDE-2 used to provide. The 2026-04-28 cycle executed the sunset: CLAUDE-2 moved to `_obs/CLAUDE-2-superseded-2026-04-28.md`; content distributed; `bin/extract-known-issues` updated; live references in CLAUDE.md, TODO.md, and the README partials cleaned up. See CHANGELOG 2026-04-28 entry.
+**Resolution.** The 2026-04-27 catalog merge + Opus brainstorm pass + lower-confidence pull-back brought `msc/FINDINGS-RANKED-DRAFT.md` to ~58 numbered findings + cross-segment + meta-architectural sections — *de facto* the credible "what's settled" reference the proposal's gating condition required. The full segment-level Findings sweep (writing `## Findings` sections in each segment) is still pending and tracked in PRACTICA, but FINDINGS-RANKED-DRAFT is itself now load-bearing enough to host the architectural snapshot CLAUDE-2 used to provide. The 2026-04-28 cycle executed the sunset: CLAUDE-2 moved to `.archive/CLAUDE-2-superseded-2026-04-28.md`; content distributed; `bin/extract-known-issues` updated; live references in CLAUDE.md, TODO.md, and the README partials cleaned up. See CHANGELOG 2026-04-28 entry.
 
 ### J-22. Segment-Findings sweep deferred
 
@@ -169,8 +169,8 @@ Six pilot Findings landed hand-drafted. The sweep across remaining qualifying se
 - OUTLINE.md, FORMAT.md (no changes)
 - Segment text outside the Findings sections (no edits to formal expressions or discussions)
 - LEXICON.md, NOTATION.md (no changes)
-- ref/, _obs/ (no changes)
-- The _obs/proposal-readme-refactor.md beyond the synthesis-prose decision (no further edits to the proposal once committed)
+- ref/, .archive/ (no changes)
+- The .archive/proposal-readme-refactor.md beyond the synthesis-prose decision (no further edits to the proposal once committed)
 
 ---
 
@@ -180,4 +180,4 @@ Six pilot Findings landed hand-drafted. The sweep across remaining qualifying se
 - ~~**TODO.md `## Active — Pending-Review Spikes` cleanup**~~ — **DONE 2026-04-28**: three Pending-Review Spikes sections (~180 lines) consolidated into a single `## Queued spike work` section in TODO; per-spike status now lives in `spikes/INDEX.md`. Spike E status corrected (was DEFERRED, actually PROMOTED in commit `8f9a3ca`).
 - **FORMAT.md should document the `## Findings` section** — currently FORMAT.md lists the segment cadence (frontmatter / Title / summary / Formal Expression / Epistemic Status / Discussion / Working Notes); adding Findings as the optional H2 between Discussion and Working Notes is needed before any sweep instructions can refer to FORMAT.md as authoritative.
 - **`bin/lint-readme`** — flagged above (J-15). Quick win.
-- **The `_obs/CLAUDE-2-superseded-2026-XX-XX.md` placeholder** — when CLAUDE-2 sunsets, the timestamp-stamped archive name needs choosing.
+- **The `.archive/CLAUDE-2-superseded-2026-XX-XX.md` placeholder** — when CLAUDE-2 sunsets, the timestamp-stamped archive name needs choosing.

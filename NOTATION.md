@@ -24,7 +24,7 @@ Symbols used in Adaptation and Actuation Theory, collected as a convenience inde
 > 2026-05-18.) A structural fix — auto-deriving this file from segment
 > definitions so it cannot drift — is queued in `TODO.md`.
 
-Notation conventions are adopted from TFT (`_obs/old-tf-00-notation-conventions.md`) with extensions for AAT's purposeful-agent machinery.
+Notation conventions are adopted from TFT (`.archive/old-tf-00-notation-conventions.md`) with extensions for AAT's purposeful-agent machinery.
 
 
 ## The Adaptive Cycle
