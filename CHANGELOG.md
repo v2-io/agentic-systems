@@ -63,7 +63,7 @@ A first pass then left "Discharged / Resolved / Provenance" breadcrumbs in Worki
 - `#deriv-tempo-additivity` signed $\Delta$, echo-chamber $R_s$, two no-gos — `spike-adaptive-tempo-redundancy-penalty-2026-07-15` (ripples already executed 2026-07-16; INDEX said they were not)
 - `#der-tempo-composition` joint-baseline $\mathcal T_c\le\mathcal T_{\text{joint}}$ + super-additive witness — `spike-composite-tempo-synergy-2026-07-16` (canon-body spike pointer removed)
 - `#deriv-l1-update-bias` restated Monte Carlo + AND-root — `spike-l1-bias-sim-rerun-2026-07-16`
-- `#internal-external-decomposition` constitutive multiplicative-$\rho$ no-go — `spike-rho-factorization`
+- ~~`#internal-external-decomposition` constitutive multiplicative-$\rho$ no-go — `spike-rho-factorization`~~ — **reversed same day** on the lead's first-hand read: only the no-go is in canon; the spike's fine-split content (§5.4 $f$/$g$ entanglement, §11 small-$\Delta$ regime, §8.2 R-KL) is the open item the segment marks "under separate investigation". Un-filed; landing routed as work.
 
 Dir-spikes and Joseph-reserved file-spikes were not auto-filed. Manifest: `spikes/.integrated/MANIFEST-2026-08-22.md`.
 
