@@ -87,7 +87,7 @@ Bereavement — the loss borne by the one who remains — is **not** a death und
 
 ## Working Notes
 
-- **Regression guard — naming gates (Joseph, 2026-06-10).** Agency death, not sovereignty death; continuity death, not cognitive death; the proper noun "Three Deaths" is out of the theory (history only). The deaths structure stands on its own canon grounding, not on the Inquiry paper's authority. Narrative: CHANGELOG 2026-06-10.
+- **Regression guard — naming gates (Joseph, 2026-06-10).** Agency death, not sovereignty death; continuity death, not cognitive death; the proper noun "Three Deaths" is out of the theory (history only). The deaths structure stands on its own canon grounding, not on the Inquiry paper's authority.
 - **Open — per-death terminal forms for (D1)/(D4).** (D2)'s reversibility seam and (D3)'s learned-helplessness fixed point are derived; the (D1)/(D4) analogues (when is gain collapse terminal vs recoverable?) are open.
 - **Open — PROPRIUM-A-v2 §8 failure-modes mapping.** That table has nine named failure modes; whether each is an instance of one or more factor-losses, or some sit outside the taxonomy, remains the standing cross-check (carried over from the predecessor segment).
 - **Terminology.** Entries for `continuity-death`, `relational-death`, `agency-death`, `truth-death`, `phenomenological-death`, `death-apt` queued for a naming batch; the existing `continuity` / `moral-continuity` entries are adjacent.
