@@ -321,6 +321,19 @@
 \usepackage{needspace}
 
 %----------------------------------------------------------------------------
+% Claim-atom sidenotes. typearea under DIV=12, letter, twoside, BCOR=10mm
+% leaves ~98pt of outer margin; use most of it for the note column.
+%
+% \marginpar is a float and dies inside mdframed (compactfield Discussion
+% / Epistemic Status) with "Not in outer par mode" / "Float(s) lost".
+% marginnote's \marginnote occupies the same \marginparwidth column, is
+% not a float, and works in those boxes. Visual: outer-margin sidenote.
+%----------------------------------------------------------------------------
+\usepackage{marginnote}
+\setlength{\marginparsep}{8pt}
+\setlength{\marginparwidth}{78pt}
+
+%----------------------------------------------------------------------------
 % Tables — same toolkit as the kaobook target so AsfLatex's table converter
 % (in segment_renderer.rb) renders identically here.
 %----------------------------------------------------------------------------

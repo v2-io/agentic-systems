@@ -25,18 +25,18 @@
 #   ##### Field             →  \segmentfield{Field} or \begin{workingnotes}
 #                              (small italic-bold paragraph leader, NOT a
 #                              numbered subsection — segment fields are
-#                              labels, not citable structural divisions)
+#                              labels, not citable structural divisions).
+#                              With --compact-fields, Epistemic Status and
+#                              Discussion open compactfield (small type, no rules).
 #
 # Status and stage frontmatter are accepted by the macros but rendered as
 # no-ops in this target — scrbook's promise is "the legible read," and
 # epistemic-discipline metadata stays in the source markdown for anyone
 # who wants it.
 #
-# Eq-tags (`*[Definition (name)]*`) render as small italic standalone
-# leaders before their associated equation rather than as margin notes
-# (the kaobook target uses \marginnote; scrbook has no Tufte margin).
-# Same Ruby dispatch path; different LaTeX macro definition in
-# common-scrbook/preamble/segment.tex.
+# Eq-tags (`*[Definition (name)]*` and the rest of the claim-atom
+# family) render as \marginpar sidenotes, attached to the claim they
+# name (display equation, or the following prose block).
 #
 # Working Notes (in --review) render as a workingnotes environment defined
 # in common-scrbook/preamble/environments.tex (mdframed with thin top/
@@ -53,7 +53,7 @@ module Mono
 
     # Top-level entry. Takes the assembled markdown text and returns the
     # LaTeX body. Caller writes it to the build stage's body.tex.
-    def typeset(markdown_text, variant: :review)
+    def typeset(markdown_text, variant: :review, compact_fields: false)
       # Chunk-format metadata-block parsing is identical to the kaobook
       # target — segments use the same `**Slug**: …` block on every header
       # — so reuse the kaobook converter's preprocessor verbatim. If the
@@ -71,9 +71,10 @@ module Mono
       doc = Kramdown::Document.new(
         text,
         input: 'AsfSegment',
-        asf_variant:     variant,
-        asf_mode:        :volume,
-        asf_known_slugs: known_slugs,
+        asf_variant:        variant,
+        asf_mode:           :volume,
+        asf_known_slugs:    known_slugs,
+        asf_compact_fields: compact_fields,
       )
       latex = doc.to_asf_scrbook_latex
       postprocess_latex(latex, known_slugs)
@@ -214,8 +215,7 @@ class Kramdown::Converter::AsfScrbookLatex < Kramdown::Converter::AsfLatex
     prefix = +''
     prefix << flush_pending_eqtag
     if @in_working_notes && (current_level.nil? || current_level <= @workingnotes_level)
-      prefix << "\\end{workingnotes}\n\n"
-      @in_working_notes = false
+      prefix << close_aside_env
     end
     prefix
   end
@@ -410,10 +410,9 @@ class Kramdown::Converter::AsfScrbookLatex < Kramdown::Converter::AsfLatex
     relative = @current_segment_header_level ? (level - @current_segment_header_level) : 1
     case relative
     when 1
-      if title == 'Working Notes'
-        @in_working_notes   = true
+      if title == 'Working Notes' || compact_aside_field?(title)
         @workingnotes_level = level
-        "#{prefix}\\begin{workingnotes}\n"
+        "#{prefix}#{open_workingnotes_env(title)}"
       elsif @in_working_notes
         "#{prefix}\\workingnotessubhead{#{title}}\n\n"
       else

@@ -95,22 +95,29 @@
 %----------------------------------------------------------------------------
 % \eqtag{Tag-content}
 %
-% Equation-level tag — emitted by the kramdown converter immediately
-% before the equation it labels. Source markdown looks like:
+% Claim-atom label. Source markdown looks like:
 %
 %     *[Derived (sector-condition, from prior-slug)]*
 %
 %     $$ \alpha > \rho/R $$
 %
-% The kaobook target renders this as a margin annotation; scrbook has no
-% Tufte margin column, so we render inline as a small italic standalone
-% paragraph leader. It sits directly above the equation, naming what the
-% next display object is.
+% or the same tag above a prose claim (no display equation). These are
+% annotations on the next claim, not headings — they belong in the outer
+% margin. The converter emits \eqtag immediately before the claim
+% (display equation, or the prose block) so \marginpar aligns with its
+% first line.
+%
+% typearea under DIV=12 / letter / twoside leaves ~98pt of outer margin;
+% \marginparwidth / \marginparsep are set in setup.tex to use most of it.
+% \marginnote rather than \marginpar: see setup.tex.
 %----------------------------------------------------------------------------
 \NewDocumentCommand{\eqtag}{m}{%
-  \par\smallskip%
-  \noindent{\small\itshape #1.}\par%
-  \nopagebreak[4]%
+  \marginnote{%
+    \raggedright
+    \footnotesize\itshape
+    \color{wn-fg}%
+    #1%
+  }%
 }
 
 %----------------------------------------------------------------------------

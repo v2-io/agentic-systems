@@ -70,6 +70,21 @@ module Mono
       render(manifest, label_map, stage)
     end
 
+    # Split a fully-assembled volume at the first `## *Appendices*` heading.
+    # Cross-refs stay resolved (Stage 2 already rewrote them against the
+    # whole-volume label map); Stage 3's postprocess turns out-of-half
+    # slugs into `\externalref`. Returns `[main_md, appendices_md]`;
+    # `appendices_md` is nil when the volume has no appendix group.
+    def split_at_appendices(assembled_md)
+      idx = assembled_md.index(/^## \*Appendices\*/)
+      return [assembled_md, nil] unless idx
+
+      title = assembled_md[/\A# (.+)\n/, 1] || 'Appendices'
+      main = assembled_md[0...idx].rstrip + "\n"
+      appendices = "# #{title} — Appendices\n\n" + assembled_md[idx..]
+      [main, appendices]
+    end
+
     # Parse the index.md frontmatter (YAML manifest + volume metadata).
     def parse_index(path)
       text = path.read

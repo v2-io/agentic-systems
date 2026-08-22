@@ -354,6 +354,41 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     @pending_eqtag   = nil
     @eq_count        = 0
     @table_count     = 0
+    # When true, Epistemic Status and Discussion render in the compactfield
+    # register (Working Notes typeface — small, muted — without the rule
+    # frame). Set by `--compact-fields`.
+    @compact_fields  = options[:asf_compact_fields]
+    @aside_env       = nil
+  end
+
+  # Field titles that `--compact-fields` demotes into compactfield.
+  # Exact H2 match against FORMAT's cadence names; Formal Expression
+  # and Findings stay at full size.
+  ASIDE_FIELD_TITLES = ['Epistemic Status', 'Discussion'].freeze
+
+  def compact_aside_field?(title)
+    @compact_fields && ASIDE_FIELD_TITLES.include?(title)
+  end
+
+  # Open the aside environment. Actual Working Notes keep the ruled
+  # `workingnotes` box; `--compact-fields` Epistemic Status / Discussion
+  # use `compactfield` (same small muted type, no rules).
+  def open_workingnotes_env(title)
+    @in_working_notes = true
+    if title == 'Working Notes'
+      @aside_env = 'workingnotes'
+      "\\begin{workingnotes}\n"
+    else
+      @aside_env = 'compactfield'
+      "\\begin{compactfield}{#{title}}\n"
+    end
+  end
+
+  def close_aside_env
+    env = @aside_env || 'workingnotes'
+    @aside_env = nil
+    @in_working_notes = false
+    "\\end{#{env}}\n\n"
   end
 
   # H2 sections that render full-width (body + margin column) rather
@@ -438,18 +473,41 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
     end
   end
 
-  # Equation-level tags are emitted lazily: the source puts `*[Tag]*` in
-  # its own paragraph BEFORE the equation it labels, but \marginnote
-  # attaches at the position where it's called — which leaves the tag
-  # floating a line or two above the equation it tags. We hold the tag
-  # content in @pending_eqtag and flush it next to the equation itself
-  # (convert_math, block category). If no equation follows, the tag
-  # falls back to its source-position emission at end-of-segment or when
-  # a new eq_tag arrives.
-  def convert_eq_tag(el, _opts)
+  # Claim-atom labels (`*[Definition (name)]*` etc.). Source puts the
+  # tag in its own paragraph BEFORE the claim it names.
+  #
+  # If the next non-blank sibling is a display equation, hold the tag
+  # and flush it immediately before `\begin{equation}` so the sidenote
+  # aligns with the equation's first line. Otherwise emit now — the
+  # tag labels the following prose (or list, or whatever), never the
+  # next field heading. Flushing after the following paragraph was
+  # what stacked "Definition (epistemic opacity)." against
+  # "Epistemic Status."
+  def convert_eq_tag(el, opts)
     out = flush_pending_eqtag
-    @pending_eqtag = el.value
-    out
+    if next_is_display_math?(opts)
+      @pending_eqtag = el.value
+      out
+    else
+      "#{out}\\eqtag{#{escape_eq_tag(el.value)}}\n"
+    end
+  end
+
+  # kramdown's `inner` passes parent + index in opts. Skip :blank
+  # siblings; a following block-math is the display-equation case.
+  def next_is_display_math?(opts)
+    parent = opts[:parent]
+    idx    = opts[:index]
+    return false unless parent && idx
+
+    parent.children[(idx + 1)..].each do |sib|
+      case sib.type
+      when :blank then next
+      when :math  then return sib.options[:category] == :block
+      else             return false
+      end
+    end
+    false
   end
 
   def flush_pending_eqtag
@@ -482,11 +540,7 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
              "\\textbf{#{process_prose(title)}:}\\par\\nobreak\\smallskip\\nopagebreak[4]\n"
     end
     rewritten = inner(el, opts)
-    # Flush any eqtag we held into this paragraph but didn't consume via
-    # a display equation — emit at end-of-paragraph rather than holding
-    # further, so the marginnote stays close to its source position
-    # instead of leaking forward to the next H2 / segment boundary.
-    "#{rewritten}#{flush_pending_eqtag}\n\n"
+    "#{rewritten}\n\n"
   end
 
   # A paragraph qualifies as a leader when its sole child is a :strong
@@ -574,8 +628,8 @@ class Kramdown::Converter::AsfLatex < Kramdown::Converter::Latex
       # Display equation — numbered (`equation`, not `equation*`) with a
       # cross-ref label of the form eq:<slug>-<n> for stable referencing.
       # The number itself reads as e.g. `(I.4)` via \numberwithin in the
-      # preamble. Any pending eqtag flushes inline with the equation so
-      # the marginnote aligns with the equation's first line.
+      # preamble. Any pending eqtag flushes immediately before the
+      # equation so the sidenote aligns with the equation's first line.
       @eq_count += 1
       tag = ''
       if @pending_eqtag

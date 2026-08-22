@@ -20,6 +20,13 @@
 #   bin/build-monograph --all --target kaobook   all four (kaobook)
 #   bin/build-monograph --public aat             public variant (strips Working Notes)
 #   bin/build-monograph --no-toc aat             suppress table of contents
+#   bin/build-monograph --split-appendices aat   main-matter PDF/MD + companion appendices PDF/MD
+#   bin/build-monograph --compact-fields aat     Epistemic Status + Discussion in the
+#                                                Working Notes visual register (small type)
+#   bin/build-monograph --public --split-appendices --compact-fields --emit-current 01
+#                                                rebuild CURRENT-VOL1.{md,pdf} (no Working Notes,
+#                                                no appendices; compact ES/Discussion) and
+#                                                CURRENT-VOL1-APPENDICES.{md,pdf}
 #
 # Layout:
 #   bin/
@@ -160,12 +167,20 @@ def usage_message(error = nil)
       bin/build-monograph --all                       build all volumes
       bin/build-monograph --public <volume>           public variant (strips Working Notes)
       bin/build-monograph --no-toc <volume>           suppress table of contents
+      bin/build-monograph --split-appendices <volume> main-matter + companion appendices artifacts
+      bin/build-monograph --compact-fields <volume>    Epistemic Status + Discussion in Working-Notes
+                                                      visual register (small type, rule frame).
+                                                      With --split-appendices, applies to main matter only
+      bin/build-monograph --emit-current <volume>     copy PDF/MD to CURRENT-VOL1* at repo root
+                                                      (volume 01 / aat only)
 
     Volume ids: #{VOLUME_REGISTRY.flat_map { |e| e[:id_aliases] }.join(' / ')}
     Targets:    #{TARGETS.keys.join(' / ')}  (default: #{DEFAULT_TARGET})
 
     Output:     mono/<slug>-v<sem>{k,s}.pdf  (k=kaobook, s=scrbook)
                 mono/<slug>-v<sem>.md        (target-agnostic assembled markdown)
+                mono/<slug>-v<sem>{k,s}-appendices.pdf   (with --split-appendices)
+                mono/<slug>-v<sem>-appendices.md         (with --split-appendices)
   USAGE
   msg
 end
@@ -175,6 +190,9 @@ def parse_args(argv)
   variant = :review
   toc_override = nil
   target = DEFAULT_TARGET
+  split_appendices = false
+  emit_current = false
+  compact_fields = false
 
   if (i = args.index('--public'))
     args.delete_at(i)
@@ -184,23 +202,52 @@ def parse_args(argv)
     args.delete_at(i)
     toc_override = false
   end
+  if (i = args.index('--split-appendices'))
+    args.delete_at(i)
+    split_appendices = true
+  end
+  if (i = args.index('--emit-current'))
+    args.delete_at(i)
+    emit_current = true
+  end
+  if (i = args.index('--compact-fields'))
+    args.delete_at(i)
+    compact_fields = true
+  end
   if (i = args.index('--target'))
     args.delete_at(i)
     target = args.delete_at(i)
     abort usage_message("unknown target: #{target}") unless TARGETS.key?(target)
   end
   if args.include?('--all')
+    abort usage_message('--emit-current is the CURRENT-VOL1 snapshot path; only valid with volume 01 / aat') if emit_current
     return {
-      volumes:      VOLUME_REGISTRY.map { |e| e[:id_aliases].first },
-      target:       target,
-      variant:      variant,
-      toc_override: toc_override,
+      volumes:           VOLUME_REGISTRY.map { |e| e[:id_aliases].first },
+      target:            target,
+      variant:           variant,
+      toc_override:      toc_override,
+      split_appendices:  split_appendices,
+      emit_current:      false,
+      compact_fields:    compact_fields,
     }
   end
   abort usage_message('no volume specified (try `aat` or `--all`)') if args.empty?
   abort usage_message("unexpected args: #{args[1..].join(' ')}") if args.size > 1
 
-  { volumes: [args.first.downcase], target: target, variant: variant, toc_override: toc_override }
+  volume_id = args.first.downcase
+  if emit_current && !%w[01 aat].include?(volume_id)
+    abort usage_message('--emit-current is the CURRENT-VOL1 snapshot path; only valid with volume 01 / aat')
+  end
+
+  {
+    volumes:          [volume_id],
+    target:           target,
+    variant:          variant,
+    toc_override:     toc_override,
+    split_appendices: split_appendices,
+    emit_current:     emit_current,
+    compact_fields:   compact_fields,
+  }
 end
 
 # ── Git / build-info ────────────────────────────────────────────────────────
@@ -312,12 +359,11 @@ end
 # canonical artifact, written to mono/<slug>-v<sem>.md regardless of which
 # target ran.
 
-def assemble_and_typeset(stage, target_spec, variant:)
-  assembled_md = Mono::Assemble.assemble(stage: stage)
-  typeset_mod  = Object.const_get(target_spec[:typeset_module])
-  body_tex     = typeset_mod.typeset(assembled_md, variant: variant)
-  (stage / 'body.tex').write(body_tex)
-  assembled_md
+def typeset_to_body(stage, target_spec, assembled_md, variant:, compact_fields: false)
+  typeset_mod = Object.const_get(target_spec[:typeset_module])
+  (stage / 'body.tex').write(
+    typeset_mod.typeset(assembled_md, variant: variant, compact_fields: compact_fields)
+  )
 end
 
 def emit_references_bib(stage, spec, assembled_md)
@@ -476,7 +522,7 @@ def abort_lualatex_failure(stem, pass, status, pdf_path, log_path, fatal_excerpt
   abort msg
 end
 
-def copy_outputs(spec, target_spec, stage, stem)
+def copy_outputs(spec, target_spec, stage, stem, persist_aux: true)
   src_pdf = stage / "#{stem}.pdf"
   dst_pdf = MONO_DIR / "#{stem}.pdf"
   FileUtils.cp(dst_pdf, MONO_DIR / "#{stem}.prior.pdf") if dst_pdf.exist?
@@ -485,8 +531,9 @@ def copy_outputs(spec, target_spec, stage, stem)
   # Persist .aux into the component dir so sibling-volume builds have a
   # stable source for cross-volume xr-refs (Phase 1d). Filename is
   # `<slug>.aux`. Scrbook is now the authoritative monograph target, so
-  # kaobook no longer races it for this path.
-  if target_spec[:persists_aux]
+  # kaobook no longer races it for this path. The appendices companion
+  # must not overwrite the main-matter aux.
+  if persist_aux && target_spec[:persists_aux]
     src_aux = stage / "#{stem}.aux"
     if src_aux.exist?
       FileUtils.cp(src_aux, spec[:comp_dir] / "#{spec[:slug]}.aux")
@@ -496,8 +543,12 @@ def copy_outputs(spec, target_spec, stage, stem)
   dst_pdf
 end
 
-def emit_references_artifact(spec, references_bib)
-  bib_stem = "#{spec[:slug]}-v#{spec[:semver]}.references"
+def emit_references_artifact(spec, references_bib, suffix: nil)
+  bib_stem = if suffix
+               "#{spec[:slug]}-v#{spec[:semver]}-#{suffix}.references"
+             else
+               "#{spec[:slug]}-v#{spec[:semver]}.references"
+             end
   dst_bib = MONO_DIR / "#{bib_stem}.bib"
   FileUtils.cp(dst_bib, MONO_DIR / "#{bib_stem}.prior.bib") if dst_bib.exist?
   FileUtils.cp(references_bib, dst_bib)
@@ -508,12 +559,30 @@ end
 # artifact. Filename has no target suffix — Stage 2's output is identical
 # regardless of target. Both kaobook and scrbook builds write the same
 # bytes; whichever ran most recently wins (idempotent).
-def emit_markdown_artifact(spec, assembled_md)
-  md_stem = "#{spec[:slug]}-v#{spec[:semver]}"
+def emit_markdown_artifact(spec, assembled_md, suffix: nil)
+  md_stem = suffix ? "#{spec[:slug]}-v#{spec[:semver]}-#{suffix}" : "#{spec[:slug]}-v#{spec[:semver]}"
   dst_md  = MONO_DIR / "#{md_stem}.md"
   FileUtils.cp(dst_md, MONO_DIR / "#{md_stem}.prior.md") if dst_md.exist?
   dst_md.write(assembled_md)
   dst_md
+end
+
+# Discoverability copies at the repo root. CURRENT-VOL1 is the reader
+# snapshot of Volume 1 (AAT); CURRENT-VOL1-APPENDICES is its companion
+# when --split-appendices is on. Both are tracked (mono/ outputs are not).
+def emit_current_artifacts(main_md:, main_pdf:, appendices_md: nil, appendices_pdf: nil)
+  pairs = [
+    [main_md,  ROOT_DIR / 'CURRENT-VOL1.md'],
+    [main_pdf, ROOT_DIR / 'CURRENT-VOL1.pdf'],
+  ]
+  if appendices_md && appendices_pdf
+    pairs << [appendices_md,  ROOT_DIR / 'CURRENT-VOL1-APPENDICES.md']
+    pairs << [appendices_pdf, ROOT_DIR / 'CURRENT-VOL1-APPENDICES.pdf']
+  end
+  pairs.each do |src, dst|
+    FileUtils.cp(src, dst)
+    warn "[current] → #{dst.relative_path_from(ROOT_DIR)}"
+  end
 end
 
 # Overfull-hbox sizes that are systematic widesection / workingnotes
@@ -573,7 +642,9 @@ end
 
 # ── Per-volume build ────────────────────────────────────────────────────────
 
-def build_volume(volume_id, target:, variant:, toc_override: nil)
+def build_volume(volume_id, target:, variant:, toc_override: nil,
+                 split_appendices: false, emit_current: false,
+                 compact_fields: false)
   spec        = load_volume_spec(volume_id)
   target_spec = TARGETS.fetch(target)
   abort "outline not found for #{volume_id}: #{spec[:outline]}" unless spec[:outline].exist?
@@ -599,14 +670,27 @@ def build_volume(volume_id, target:, variant:, toc_override: nil)
   Mono::Ingest.ingest(spec.merge(toc_enabled: toc_enabled),
                       stage: stage, variant: variant)
 
-  warn "[#{spec[:slug]}/#{target}] assembling + typesetting (toc: #{toc_enabled ? 'on' : 'off'})…"
-  assembled_md = assemble_and_typeset(stage, target_spec, variant: variant)
+  warn "[#{spec[:slug]}/#{target}] assembling (toc: #{toc_enabled ? 'on' : 'off'})…"
+  assembled_full = Mono::Assemble.assemble(stage: stage)
   stats = collect_stats(stage)
   warn "  rendered=#{stats[:rendered]} missing=#{stats[:missing]} " \
        "gaps=#{stats[:gaps]} errors=#{stats[:errors]}"
 
+  if split_appendices
+    main_md, app_md = Mono::Assemble.split_at_appendices(assembled_full)
+    unless app_md
+      abort "[#{spec[:slug]}] --split-appendices: no `## *Appendices*` heading in assembled volume"
+    end
+  else
+    main_md = assembled_full
+    app_md  = nil
+  end
+
+  warn "[#{spec[:slug]}/#{target}] typesetting main matter#{compact_fields ? ' (compact-fields)' : ''}…"
+  typeset_to_body(stage, target_spec, main_md, variant: variant, compact_fields: compact_fields)
+
   warn "[#{spec[:slug]}/#{target}] emitting references…"
-  references_bib, reference_count, relata_output = emit_references_bib(stage, spec, assembled_md)
+  references_bib, reference_count, relata_output = emit_references_bib(stage, spec, main_md)
   warn "  references=#{reference_count}"
   warn "  #{relata_output.strip}" unless relata_output.strip.empty?
 
@@ -614,11 +698,40 @@ def build_volume(volume_id, target:, variant:, toc_override: nil)
   run_lualatex(stage, stem, vendor_extra: vendor_extra)
   pdf = copy_outputs(spec, target_spec, stage, stem)
   summarize_errors(stage, stem)
-  md = emit_markdown_artifact(spec, assembled_md)
+  md = emit_markdown_artifact(spec, main_md)
   bib = emit_references_artifact(spec, references_bib)
   warn "[#{spec[:slug]}/#{target}] → #{pdf.relative_path_from(ROOT_DIR)}"
   warn "[#{spec[:slug]}/#{target}] → #{md.relative_path_from(ROOT_DIR)}"
   warn "[#{spec[:slug]}/#{target}] → #{bib.relative_path_from(ROOT_DIR)}"
+
+  app_pdf = nil
+  app_md_path = nil
+  if app_md
+    app_stem = "#{stem}-appendices"
+    FileUtils.cp(stage / "#{stem}.tex", stage / "#{app_stem}.tex")
+    write_build_info(stage, spec.merge(title: "#{spec[:title]} — Appendices"),
+                     cover_rel: cover_rel, toc_enabled: toc_enabled)
+    warn "[#{spec[:slug]}/#{target}] typesetting appendices…"
+    typeset_to_body(stage, target_spec, app_md, variant: variant, compact_fields: false)
+    warn "[#{spec[:slug]}/#{target}] emitting appendices references…"
+    app_bib, app_ref_count, app_relata = emit_references_bib(stage, spec, app_md)
+    warn "  references=#{app_ref_count}"
+    warn "  #{app_relata.strip}" unless app_relata.strip.empty?
+    warn "[#{spec[:slug]}/#{target}] compiling #{app_stem}…"
+    run_lualatex(stage, app_stem, vendor_extra: vendor_extra)
+    app_pdf = copy_outputs(spec, target_spec, stage, app_stem, persist_aux: false)
+    summarize_errors(stage, app_stem)
+    app_md_path = emit_markdown_artifact(spec, app_md, suffix: 'appendices')
+    app_bib_path = emit_references_artifact(spec, app_bib, suffix: 'appendices')
+    warn "[#{spec[:slug]}/#{target}] → #{app_pdf.relative_path_from(ROOT_DIR)}"
+    warn "[#{spec[:slug]}/#{target}] → #{app_md_path.relative_path_from(ROOT_DIR)}"
+    warn "[#{spec[:slug]}/#{target}] → #{app_bib_path.relative_path_from(ROOT_DIR)}"
+  end
+
+  if emit_current
+    emit_current_artifacts(main_md: md, main_pdf: pdf,
+                           appendices_md: app_md_path, appendices_pdf: app_pdf)
+  end
 end
 
 # ── Main ────────────────────────────────────────────────────────────────────
@@ -628,9 +741,12 @@ def main
   FileUtils.mkdir_p(MONO_DIR)
   opts[:volumes].each do |vol|
     build_volume(vol,
-                 target:       opts[:target],
-                 variant:      opts[:variant],
-                 toc_override: opts[:toc_override])
+                 target:            opts[:target],
+                 variant:           opts[:variant],
+                 toc_override:      opts[:toc_override],
+                 split_appendices:  opts[:split_appendices],
+                 emit_current:      opts[:emit_current],
+                 compact_fields:    opts[:compact_fields])
   end
 end
 

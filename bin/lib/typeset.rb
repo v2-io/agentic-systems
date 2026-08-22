@@ -45,13 +45,14 @@ module Mono
 
     # Top-level entry. Takes the assembled markdown text and returns
     # the LaTeX body. Caller writes it to the build stage's body.tex.
-    def typeset(markdown_text, variant: :review)
+    def typeset(markdown_text, variant: :review, compact_fields: false)
       text = preprocess_metadata_blocks(markdown_text)
       doc = Kramdown::Document.new(
         text,
         input: 'AsfSegment',
-        asf_variant: variant,
-        asf_mode:    :volume,
+        asf_variant:        variant,
+        asf_mode:           :volume,
+        asf_compact_fields: compact_fields,
       )
       doc.to_asf_volume_latex
     end
@@ -234,8 +235,7 @@ class Kramdown::Converter::AsfVolumeLatex < Kramdown::Converter::AsfLatex
       @in_widesection = false
     end
     if @in_working_notes && (current_level.nil? || current_level <= @workingnotes_level)
-      prefix << "\\end{workingnotes}\n\n"
-      @in_working_notes = false
+      prefix << close_aside_env
     end
     prefix
   end
@@ -266,10 +266,9 @@ class Kramdown::Converter::AsfVolumeLatex < Kramdown::Converter::AsfLatex
     when 1
       # Segment-source H2 — subhead, with optional wide-section /
       # workingnotes wrappers.
-      if title == 'Working Notes'
-        @in_working_notes  = true
+      if title == 'Working Notes' || compact_aside_field?(title)
         @workingnotes_level = level
-        "#{prefix}\\begin{workingnotes}\n"
+        "#{prefix}#{open_workingnotes_env(title)}"
       elsif WIDE_SECTION_TITLES.include?(title)
         @in_widesection    = true
         @widesection_level = level

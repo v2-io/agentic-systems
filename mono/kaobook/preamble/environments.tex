@@ -558,7 +558,7 @@
 % which is what lets them survive a page break inside a breakable box.
 % (The inline form resets to black when the second tcolorbox fragment
 % begins on the next page, a recurring KOMA + tcolorbox surprise.)
-\NewDocumentEnvironment{workingnotes}{}{%
+\NewDocumentEnvironment{workingnotes}{O{Working Notes}}{%
   \par\bigskip%
   \begin{tcolorbox}[
     enhanced, breakable,
@@ -576,7 +576,31 @@
   % Same expected-widening absorption as \segmentwidesection — content
   % inside the workingnotes box is naturally wider than \textwidth.
   \hfuzz=180pt%
-  {\sffamily\bfseries Working Notes.}\par\smallskip%
+  {\sffamily\bfseries #1.}\par\smallskip%
+}{%
+  \end{tcolorbox}%
+  \par\medskip%
+}
+
+% Compact fields — `--compact-fields` demotes Epistemic Status /
+% Discussion into the Working Notes typeface without the box fill.
+% fontupper keeps `\small` across page breaks, same as workingnotes.
+\NewDocumentEnvironment{compactfield}{m}{%
+  \par\medskip%
+  \begin{tcolorbox}[
+    enhanced, breakable,
+    width        = \linewidth,
+    colback      = white,
+    colframe     = white,
+    colupper     = wn-fg,
+    fontupper    = \small,
+    boxrule      = 0pt,
+    arc          = 0pt,
+    left         = 0pt, right  = 0pt,
+    top          = 4pt, bottom = 4pt,
+    before skip  = 0pt,  after skip = 0pt,
+  ]%
+  {\sffamily\bfseries #1.}\par\smallskip%
 }{%
   \end{tcolorbox}%
   \par\medskip%

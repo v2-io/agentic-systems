@@ -12,14 +12,12 @@
 \usepackage[framemethod=default]{mdframed}
 
 %----------------------------------------------------------------------------
-% Working Notes — review-mode-only environment for the trailing
-% ## Working Notes section of each segment. Stage-1 ingest already strips
-% the section in --public, so no LaTeX-side conditional is needed here.
+% Working Notes — review-mode-only framed register for the trailing
+% ## Working Notes section. Stage-1 ingest already strips the section in
+% --public, so no LaTeX-side conditional is needed here.
 %
 % Visual register: thin rule above and below, subtle warm-gray foreground,
-% \small body. Reads as set-aside workshop content — unmistakably distinct
-% from finished argument, but not so visually heavy that it dominates the
-% segment when it's present.
+% \small body. Reads as set-aside workshop content.
 %----------------------------------------------------------------------------
 \newmdenv[
   topline       = true,
@@ -41,11 +39,43 @@
   font          = \small,
 ]{workingnotesframe}
 
-\newenvironment{workingnotes}{%
+\NewDocumentEnvironment{workingnotes}{O{Working Notes}}{%
   \begin{workingnotesframe}%
-  \noindent\textit{\textbf{Working Notes.}}\par\smallskip%
+  \noindent\textit{\textbf{#1.}}\par\smallskip%
 }{%
   \end{workingnotesframe}%
+}
+
+% Compact fields — `--compact-fields` demotes Epistemic Status and
+% Discussion into the Working Notes *typeface* (small, muted) without the
+% rule frame. Same mdframed font trick as workingnotes so `\small`
+% survives a page split; all four borders off.
+%----------------------------------------------------------------------------
+\newmdenv[
+  topline       = false,
+  bottomline    = false,
+  rightline     = false,
+  leftline      = false,
+  linewidth     = 0pt,
+  innertopmargin    = 4pt,
+  innerbottommargin = 4pt,
+  innerleftmargin   = 0pt,
+  innerrightmargin  = 0pt,
+  skipabove     = \medskipamount,
+  skipbelow     = \medskipamount,
+  fontcolor     = wn-fg,
+  font          = \small,
+]{compactfieldframe}
+
+\NewDocumentEnvironment{compactfield}{m}{%
+  % Formal Expression sits tight against Epistemic Status; give that
+  % seam ~3× the default compactfield skip. Discussion already inherits
+  % skipbelow+skipabove from the preceding field.
+  \IfStrEq{#1}{Epistemic Status}{\vspace{2\medskipamount}}{}%
+  \begin{compactfieldframe}%
+  \noindent\textit{\textbf{#1.}}\par\smallskip%
+}{%
+  \end{compactfieldframe}%
 }
 
 %----------------------------------------------------------------------------
