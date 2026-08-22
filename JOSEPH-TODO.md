@@ -16,7 +16,6 @@
 
 ## From the 2026-08-22 cleanup pass (only-you)
 
-- **Pipeline branch `worktree-agent-a3691f7b26309082d` (`8f47ec4`) — merge or not.** Fixes the v0.4.0 review's assembly defects (dropped Part III preface / appendix preambles / Part I intro title; raw `#slug`s in eq-tags; empty gaps now "Open question"). Two PDF-visible side effects want your eye first: Part I/II scope paragraphs will render *italic* as authored (the old walker silently stripped the asterisks), and the outline's `*[Layer 0 — …]*` label has eq-tag syntax so it will typeset as a margin tag unless the brackets come off in the outline.
 - **Five `missing` Vol-3 segments** (`obs-backward-inference-empathy`, `form-structured-rich-context`, `der-active-salience-management`, `der-self-referential-closure`, `def-cognitive-fusion`): write at honest tier, or recast the three `03-llm-core/src/impl-*` passages that describe them in the present tense ("carries", "defines", "addresses") as anticipated. Forward refs per se are sanctioned by FORMAT; the present-tense content claims are the defect.
 - **Nine scope-first OUTLINE orderings in 03/04** — whitelist (`OUTLINE-accepted.md`, mechanism proven in 01) if deliberate, else reorder. (Also in the valve.)
 - **GitHub v0.4.0 release body** still says the root CURRENT-VOL1 files are byte-identical to the assets — `gh release edit v0.4.0 --notes-file releases/v0.4.0.md` would sync it.

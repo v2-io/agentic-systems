@@ -26,6 +26,10 @@ CHANGELOG carries the *narrative shape* of each cycle (what conventions changed,
 ---
 
 
+## 2026-08-22 — Monograph assembly fixes merged (`b956a17`, from the v0.4.0 peer reviews)
+
+`bin/lib/outline_walker.rb` + `assemble.rb`: outline prose between rows is no longer dropped (Part III preface, appendix preambles, Part I intro title now reach the assembled `.md`); `#slug` references inside eq-tags, bold, and links resolve instead of printing raw; an empty gap row renders "Open question" instead of nothing. Build verified on the merged tree (`--public --split-appendices --compact-fields --emit-current 01`: rendered=170 missing=1 gaps=9 errors=0). Two authoring-side effects now visible: Part I/II scope paragraphs render italic as authored (the old walker stripped the asterisks), and the outline's `*[Layer 0 — …]*` label typesets as a margin eq-tag because that bracket form *is* eq-tag syntax — an OUTLINE fix, not a pipeline one. The Part I intro title still lands in `.md` but not the PDF (`typeset_scrbook.rb` `handle_h3` discards Preface/Introduction titles — a Stage 3 choice, open). Worktree removed.
+
 ## 2026-08-22 — Tracker drain: five weeks of landings pulled out of the forward lists (07-15 discipline, second pass)
 
 The 2026-07-15 prune deleted ~103 done/decided items. Five weeks of CHANGELOG landings (2026-07-16 through 2026-08-22) had not been drained back out of the trackers, and a first attempt at this pass left "Discharged / landed-on-date" *annotations* in place of deletions. Converted: the annotation goes; the narrative lives here; a remainder, if any, is restated as present-tense work. Each deletion below was checked first-hand (CHANGELOG heading, the canon file, live `ls`/`rg`, or a commit) before removal.
