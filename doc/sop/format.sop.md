@@ -245,7 +245,7 @@ Additionally:
 
 Separate from content review — different cognitive mode.
 
-- Linter passes (`bin/lint-md`)
+- `md-press --check` passes (the commit gate since 2026-08-22; see [`git-hygiene.sop.md`](git-hygiene.sop.md) §"Lint gates the commit" for what it does not yet check)
 - Cross-references (`#slug-name`) resolve to existing files
 - Notation matches `NOTATION.md`
 - Math renders correctly in GitHub and Obsidian (check the compatibility notes above)
