@@ -33,8 +33,8 @@
 #     also matches Chapter.
 #
 # Implicit defaults:
-#   - Inside *Part*, prose between the Part H2 and the first table is the
-#     Preface (no explicit ### *Preface* header needed).
+#   - Inside *Part* or *Appendices*, prose between the H2 and the first
+#     table is the Preface (no explicit ### *Preface* header needed).
 #   - Inside *Part*, segment tables not preceded by a *Chapter* H3 belong
 #     to one implicit Chapter (the walker pretends `### *Chapter*` was there).
 #   - Inside *Appendices*, segments-as-chapters: each segment row becomes
@@ -45,12 +45,13 @@
 #   { kind: :part,        title:, level: 2 }
 #   { kind: :appendices,  title:, level: 2 }
 #   { kind: :preface,     level: 2, title: }                  # volume-level
-#   { kind: :preface,     level: 3, implicit: bool }          # part-level
+#   { kind: :preface,     level: 3, implicit: bool, title:, word: }  # part-level
 #   { kind: :chapter,     title:, level: 3, implicit: bool }
 #   { kind: :segment,     slug:, path:, type:, claim:, container: :part|:appendices }
 #   { kind: :missing,     slug:, type:, claim:, container: :part|:appendices }
 #   { kind: :gap,         description: }
-#   { kind: :scope,       content: }    # italic-wrapped paragraph
+#   (italic-wrapped paragraphs are ordinary :prose — their `*…*` markup is
+#   preserved verbatim; an earlier :scope kind stripped it and had no consumer)
 #   { kind: :prose,       content: }    # plain prose paragraph
 #   { kind: :image,       alt:, src: }  # ![...](...)
 
@@ -132,8 +133,6 @@ module Mono
 
         if (header = parse_header(stripped))
           state.handle_header(header)
-        elsif (scope = parse_scope(stripped))
-          state.handle_scope(scope)
         elsif (img = parse_image(stripped))
           state.handle_image(img)
         elsif stripped.empty? || stripped.match?(/\A-{3,}\s*\z/)
@@ -169,11 +168,6 @@ module Mono
       title  = im[2].strip
       role   = italic[/\A\s*([A-Za-z]+)/, 1]
       { level: level, role: role, title: title }
-    end
-
-    def parse_scope(line)
-      m = line.match(/\A\*(.+)\*\z/m)
-      m && m[1].strip
     end
 
     def parse_image(line)
@@ -221,10 +215,10 @@ module Mono
       def flush_prose
         return if @prose_buffer.empty?
 
-        # If we're inside a Part but haven't seen *Preface* or *Chapter*
-        # yet, and prose is accumulating, surface an implicit Preface
-        # marker before the prose lands.
-        if @current_h2 == :part && @current_h3.nil? && !@preface_seen_in_current_part
+        # If we're inside a Part or an Appendices group but haven't seen
+        # *Preface* or *Chapter* yet, and prose is accumulating, surface
+        # an implicit Preface marker before the prose lands.
+        if %i[part appendices].include?(@current_h2) && @current_h3.nil? && !@preface_seen_in_current_part
           @items << { kind: :preface, level: 3, implicit: true }
           @preface_seen_in_current_part = true
           @current_h3 = :preface
@@ -280,6 +274,7 @@ module Mono
         when 'Appendices'
           @current_h2 = :appendices
           @current_h3 = nil
+          @preface_seen_in_current_part = false
           @items << { kind: :appendices, title: title, level: 2 }
         else
           # Unknown / missing role at H2 — best-effort treat as Part.
@@ -296,7 +291,7 @@ module Mono
         when 'Preface', 'Introduction'
           @current_h3 = :preface
           @preface_seen_in_current_part = true
-          @items << { kind: :preface, level: 3, implicit: false, word: role }
+          @items << { kind: :preface, level: 3, implicit: false, word: role, title: title }
         when 'Chapter'
           @current_h3 = :chapter
           @chapter_seen_in_current_part = true
@@ -326,11 +321,6 @@ module Mono
         @items << parse_segment_row(cells, container: @current_h2)
       end
 
-      def handle_scope(content)
-        flush_prose
-        @items << { kind: :scope, content: content }
-      end
-
       def handle_image(img)
         flush_prose
         @items << { kind: :image, alt: img[:alt], src: img[:src] }
@@ -346,8 +336,16 @@ module Mono
       # Table row schema (FORMAT.md): | § | Type | N | Tag | Claim | Stage |
       def parse_segment_row(cells, container:)
         if cells.any? { |c| c.include?('--GAP--') }
-          desc = cells.reject { |c| c.empty? || c.include?('--GAP--') || c.match?(/\A[A-Z][0-9]?\z/) }
-          return { kind: :gap, description: desc.last || 'Open question' }
+          # The description is the Claim column (schema col 4), whether the
+          # `--GAP--` marker sits in the Type column or the Tag column. An
+          # empty Claim is an open question, not a leftover cell (the old
+          # "last non-empty cell" heuristic picked up the Type column).
+          desc = if cells.length > 4
+                   cells[4].to_s.strip
+                 else
+                   cells.reject { |c| c.empty? || c.include?('--GAP--') || c.match?(/\A[A-Z][0-9]?\z/) }.last.to_s
+                 end
+          return { kind: :gap, description: desc.empty? ? 'Open question' : desc }
         end
 
         slug = rel_path = nil
