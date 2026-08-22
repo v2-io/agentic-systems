@@ -51,6 +51,6 @@ The applied and normative reading of mood — set-point, recovery, what propagat
 
 ## Working Notes
 
-- **Discharged 2026-06-17 — optimal time-constant (F2).** Landed as `#der-mood-timescale` (`conditional`): the strong "$\tau^\ast$ matches the autocorrelation timescale" was refuted and replaced by the derived $\tau^\ast = \sqrt{\tau_{\mathrm{env}}\, r/(2\sigma_\theta^2)}$ scaling law, independently refute-verified. The emotional-inertia signature (Kuppens et al. 2010 — inertia as the affect AR(1) coefficient $1-\lambda$, maladaptive when high $\Leftrightarrow$ $\tau \gg \tau^\ast$) is its clinical corroboration. Reasoning trail: `spikes/spike-mood-timescale-matching-2026-06-17.md`.
+- **Regression guard — do not re-land timescale-matching.** The strong "$\tau^\ast$ matches the autocorrelation timescale" was refuted; the derived law is $\tau^\ast = \sqrt{\tau_{\mathrm{env}}\, r/(2\sigma_\theta^2)}$ in `#der-mood-timescale`.
 - **Pre-goal volatility link (unverified).** The integrated quantity $a_t$ plausibly connects to volatility-driven learning-rate control (Behrens-style). Verify the citation before using it; if it holds it independently supports the Part I (pre-goal) placement.
 - **Part II enrichment.** A companion actuation-side segment should carry the signed/valued momentum reading and the exploration/risk modulation, depending on this one.

@@ -50,7 +50,6 @@ This gives the clinical literature on **emotional inertia** a normative reading.
 
 ## Working Notes
 
-- **Reasoning trail.** Full derivation, the exact-minimizer expansion, and the independent-verification record are in `spikes/spike-mood-timescale-matching-2026-06-17.md`.
 - **Open — exact AR(1).** Drop the local-random-walk approximation for a closed form over the full AR(1); expected to shift constants, not the $\sqrt{\cdot}$ law.
 - **Open — mood-sets-gain composition.** `#def-mood` has mood *modulating* $K$, not *being* the estimator; the two-layer version should confirm the same $\tau^\ast$ governs the mood layer. Likely a corollary.
 - **Open — asymmetric loss.** Quadratic $J$ gives a symmetric optimum; the deaths-weighted vigilance asymmetry of the design memo (`msc/mood-layer-sovereignty-carve-2026-06-17.md`, F-asymmetry) would enter as an asymmetric loss and shift $\lambda^\ast$.

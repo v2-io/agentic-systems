@@ -2,7 +2,7 @@
 
 *Started 2026-04-24. Research spike. Not canon.*
 
-**Status.** This spike pushes on the obstruction identified in `spikes/spike-rho-factorization.md` (the multiplicative form $\rho = \rho_{\text{env}} \cdot f(\mathcal M) \cdot g(\pi)$ was shown to fail structurally). The mandate (per brief from Joseph): *strengthen first; do not accept the heuristic fallback; attempt the improbable*. This spike records what the attempts produced.
+**Status.** This spike pushes on the obstruction identified in `spikes/.integrated/spike-rho-factorization.md` (the multiplicative form $\rho = \rho_{\text{env}} \cdot f(\mathcal M) \cdot g(\pi)$ was shown to fail structurally). The mandate (per brief from Joseph): *strengthen first; do not accept the heuristic fallback; attempt the improbable*. This spike records what the attempts produced.
 
 **Top-line outcome.** Mixed. The variance-additive form admits a **derived theorem under named sub-scope conditions**, with honest cross-terms. Three distinct multiplicative sub-structures were located: (a) the multiplicative-cascade regime (Poisson-driven rare-event streams), (b) the large-deviation / cumulant-generating-function regime (tail asymptotics), and (c) a partial-information-decomposition (PID) regime that recovers the three-factor narrative without enforcing independence. A **sharp no-go theorem for rate-domain multiplicative factorization** is derivable under mild regularity. Net position: the multiplicative form is now one *regime* in a tiered structure, not the governing form; the variance-additive form is the new structural anchor; a candidate axiom for `#additive-coordinate-forcing` is identified but honestly does not land as a fourth Cauchy-FE theorem without fabricated premises.
 
@@ -12,7 +12,7 @@
 
 ### 1.1 What the prior spike established
 
-`spikes/spike-rho-factorization.md` showed — across three structured cases (Kalman, Beta-Bernoulli, controlled OU+LQR) plus a Cauchy-FE forcing attempt plus sub-scope-$\alpha$ restriction — that no derivation route produces the multiplicative form $\rho = \rho_{\text{env}} \cdot f(\mathcal M) \cdot g(\pi)$ under AAT-native structure. The prior spike's own verdict: *"(C) Obstruction with honest reframe. (R-F) is a modeling choice, not derivable; worse, it misrepresents the natural structure, which is variance-additive (R-V) or KL-additive (R-KL) with generic cross terms."*
+`spikes/.integrated/spike-rho-factorization.md` showed — across three structured cases (Kalman, Beta-Bernoulli, controlled OU+LQR) plus a Cauchy-FE forcing attempt plus sub-scope-$\alpha$ restriction — that no derivation route produces the multiplicative form $\rho = \rho_{\text{env}} \cdot f(\mathcal M) \cdot g(\pi)$ under AAT-native structure. The prior spike's own verdict: *"(C) Obstruction with honest reframe. (R-F) is a modeling choice, not derivable; worse, it misrepresents the natural structure, which is variance-additive (R-V) or KL-additive (R-KL) with generic cross terms."*
 
 ### 1.2 Was the failure inherent or method-dependent?
 
