@@ -138,7 +138,7 @@ module Mono
         when 'missing'
           out << render_missing(entry)
         when 'gap'
-          out << render_gap(entry)
+          out << render_gap(entry, label_map)
         end
       end
 
@@ -168,6 +168,16 @@ module Mono
         section = parsed[:metadata]['Section'] || 'Preface'
         header  = title ? "## *#{section}* #{title}" : "## *#{section}*"
         "#{header}\n\n#{body.rstrip}\n"
+      when 'part-preface'
+        # An explicit `### *Introduction*: Title` in OUTLINE.md carries its
+        # title through the chunk's Title metadata; surface it as the same
+        # role-prefixed H3 so the markdown reader sees the part's intro
+        # title. (Stage 3 currently emits no LaTeX for H3 Preface /
+        # Introduction, so the PDF is unchanged by this line.)
+        title   = parsed[:metadata]['Title']
+        section = parsed[:metadata]['Section']
+        header  = title && section ? "### *#{section}* #{title}\n\n" : ''
+        "#{header}#{body.rstrip}\n"
       else
         "#{body.rstrip}\n"
       end
@@ -224,8 +234,9 @@ module Mono
 
     # Gap markers are author-flagged open questions in OUTLINE.md.
     # Rendered as a quoted [Gap] block for visibility.
-    def render_gap(entry)
-      "> **\\[Gap\\]** #{entry['description']}\n"
+    def render_gap(entry, label_map = {})
+      desc = resolve_cross_refs(entry['description'].to_s, label_map)
+      "> **\\[Gap\\]** #{desc}\n"
     end
 
     # ── chunk parsing ──────────────────────────────────────────────────
@@ -267,7 +278,7 @@ module Mono
     # and the segment_renderer's CROSS_REF_RE). Math (`$...$` / `$$...$$`)
     # and inline code (`` ` ``) are passthrough zones — cross-refs inside
     # those are not rewritten.
-    CROSS_REF_RE = /(?<=^|[\s(\[])#([a-z][a-z0-9-]*[a-z0-9])(?![a-z0-9-])/
+    CROSS_REF_RE = /(?<=^|[\s(\[*])#([a-z][a-z0-9-]*[a-z0-9])(?![a-z0-9-])/
 
     def resolve_cross_refs(text, label_map)
       lines = text.split("\n", -1)
@@ -323,8 +334,14 @@ module Mono
           end
         end
 
-        # Markdown link passthrough — `[label](target)` — preserve as-is
-        # so we don't accidentally rewrite the label or target.
+        # Markdown link passthrough — `[label](target)` — preserve the
+        # target untouched. A label that is itself a bare `#slug` (the
+        # form ingest's rewrite_local_links leaves behind for
+        # `[#slug](src/slug.md)`) is rewritten to the same `Type Label`
+        # text the prose resolver produces. A `[` that does NOT open a
+        # link (equation tags `*[Derived (from #slug)]*`, bracketed
+        # asides) is emitted as a plain character and scanning continues
+        # inside the span, so cross-refs there resolve too.
         if ch == '['
           depth = 1
           j = i + 1
@@ -337,21 +354,29 @@ module Mono
             depth -= 1 if line[j] == ']'
             j += 1
           end
-          if j < n && line[j] == '('
+          if depth.zero? && j < n && line[j] == '('
             k = line.index(')', j + 1)
             if k
-              out << line[i..k]
+              label  = line[(i + 1)...(j - 1)]
+              target = line[(j + 1)...k]
+              if (lm = label.match(/\A#([a-z][a-z0-9-]*[a-z0-9])\z/)) &&
+                 (info = label_map[lm[1]]) && target == "##{lm[1]}"
+                label = "#{info['type']} #{info['label']}".strip
+              end
+              out << "[#{label}](#{target})"
               i = k + 1
               next
             end
           end
-          out << line[i...j]
-          i = j
+          out << ch
+          i += 1
           next
         end
 
-        # Cross-ref candidate: `#slug` at line start or after [\s(\[]
-        if ch == '#' && (i.zero? || ' ('.include?(line[i - 1]))
+        # Cross-ref candidate: `#slug` at line start or after whitespace,
+        # `(`, `[` (inside a non-link bracket span), or `*` (bold/italic
+        # wrapping, e.g. `**#slug**`).
+        if ch == '#' && (i.zero? || " ([*\t".include?(line[i - 1]))
           rest = line[(i + 1)..]
           if (m = rest.match(/\A([a-z][a-z0-9-]*[a-z0-9])(?![a-z0-9-])/))
             slug = m[1]
