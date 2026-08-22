@@ -76,7 +76,7 @@ The sector-Lyapunov argument uses $V(\delta) = \tfrac{1}{2}\lVert\delta\rVert^2$
 
 ### Variance-additive cases (AV)
 
-Variance-additive statistics (like the Ornstein-Uhlenbeck steady state in `#hyp-mismatch-dynamics`) share Bregman-type additivity but, like Lyapunov, sit on a squared-norm potential rather than the negative-entropy geometry.
+Variance-additive statistics (like the Ornstein-Uhlenbeck steady state in `#hyp-mismatch-dynamics`) share Bregman-type additivity but, like Lyapunov, sit on a squared-norm potential rather than the negative-entropy geometry. The principal member is the mismatch budget itself: the three-term decomposition of `#result-mismatch-decomposition` and its viability form in `#internal-external-decomposition` are Pythagorean on the squared norm, and the disturbance layer carries no AAT-internal additivity axiom that would force a logarithmic coordinate — which is why a multiplicative $\rho$-factorization was a choice, and a wrong one, rather than a forced form. The information-form counterpart in `#deriv-mismatch-budget-attribution` does sit on the negative-entropy geometry, but by *adoption* (log-loss as a proper scoring rule; Csiszár's Pythagorean identity), not by forcing; it is adopted, like IB below.
 
 ### IB Lagrangian (`#form-information-bottleneck`, `#disc-compression-operations`)
 
