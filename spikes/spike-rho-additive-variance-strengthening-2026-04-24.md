@@ -12,7 +12,7 @@
 
 ### 1.1 What the prior spike established
 
-`spikes/spike-rho-factorization.md` showed — across three structured cases (Kalman, Beta-Bernoulli, controlled OU+LQR) plus a Cauchy-FE forcing attempt plus sub-scope-$\alpha$ restriction — that no derivation route produces the multiplicative form $\rho = \rho_{\text{env}} \cdot f(\mathcal M) \cdot g(\pi)$ under AAT-native structure. The prior spike's own verdict: *"(C) Obstruction with honest reframe. (R-F) is a modeling choice, not derivable; worse, it misrepresents the natural structure, which is variance-additive (R-V) or KL-additive (R-KL) with generic cross terms."*
+`spikes/.integrated/spike-rho-factorization.md` showed — across three structured cases (Kalman, Beta-Bernoulli, controlled OU+LQR) plus a Cauchy-FE forcing attempt plus sub-scope-$\alpha$ restriction — that no derivation route produces the multiplicative form $\rho = \rho_{\text{env}} \cdot f(\mathcal M) \cdot g(\pi)$ under AAT-native structure. The prior spike's own verdict: *"(C) Obstruction with honest reframe. (R-F) is a modeling choice, not derivable; worse, it misrepresents the natural structure, which is variance-additive (R-V) or KL-additive (R-KL) with generic cross terms."*
 
 ### 1.2 Was the failure inherent or method-dependent?
 
