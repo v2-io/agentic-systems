@@ -32,29 +32,11 @@
 
 ### Repo weight: untrack .archive/ (162M) + Garamond fonts (35M)?
 
+*Since 2026-07-15:* the fonts half is done (untracked + gitignored 2026-07-15, CHANGELOG); `_obs/` was renamed `.archive/` and its 91M SVG gzipped to 44M on 2026-08-22, but `.archive/` is still tracked — the remaining call is that directory and whether to rewrite history.
+
 *Since the 2026-07-07 census:* Census overstates the problem: ref/ PDFs were untracked ~2026-05-22 (ref/.gitignore, commits 6b0e984/a6397a6 — only 5.7M tracked now) and mono/ build outputs are already gitignored (mono/.gitignore). Remaining live weight decision is _obs + fonts + history.
 
 **What.** Approve slimming the repo's tracked weight. **Context.** Theory content is ~8.6M, but the pack is 225.7 MiB. Verified today: ref/ PDFs are *already* untracked (5.7M tracked; census's "135M tracked PDFs" is stale) and mono build outputs are *already* gitignored. What's still tracked: `.archive/` **162M** (obsolete archive, live tree) and **35M** of mono/ = almost entirely the commercial Garamond Premier Pro fonts — which are also the CC-BY licensing exposure (census Part C). Plus CURRENT-VOL1 ~8.5M (separate brief). **Options.** (1) Nothing. (2) Untrack `.archive/` (move to an `archive/obs` branch or out-of-tree) + remove Garamond from tracking; working tree lightens, but **already-committed blobs stay in every clone until history is rewritten**. (3) History rewrite (`git filter-repo` on .archive/old-ref-PDF/font blobs) → clone drops toward ~15M, but all hashes change: breaks CHANGELOG/tag commit refs and the archema-io submodule pointer — its own decision. **Lead rec.** Do (2) now — cheap, reversible, and the font removal is due on licensing grounds regardless. Defer (3) to a deliberate public-release point; the licensing question alone may force it sooner (fonts are in history either way). **Pointer.** `msc/meta-process-review-2026-07-07/10-...-findings.md` §0, §Option-B; census Part C.
-
-### CURRENT-VOL1.md/.pdf: gitignore, or make canonical with a generator?
-
-*Since the 2026-07-07 census:* Still live — CHANGELOG 2026-07-14 explicitly left it for Joseph. The .md was touched by the 07-09 path sweep and 07-14 breadcrumb sweep (so it's now hand-edited, drifting from any build); .pdf still frozen at 2026-05-25, one deaths-taxonomy restructure behind the .md.
-
-**What.** Decide the fate of the two committed monograph snapshots at repo root. **Context.** `CURRENT-VOL1.md` (3.0M, last real rebuild 2026-06-11, since hand-edited by two sweeps — it now diverges from what `bin/build-monograph` would produce) and `CURRENT-VOL1.pdf` (5.4M, frozen 2026-05-25, a full restructure behind its own sibling). Both contradict `mono/.gitignore`'s stated policy (track only tagged releases); neither has a generator target; neither is in the File-Org map. They exist as a discoverability workaround you set up so an assembled volume is always one click away. **Options.** (a) **Gitignore both**; rely on tagged `mono/` releases (`aat-v0.3.0…`) for pinned artifacts. (b) **Make them official**: add a `bin/refresh-all` / `build-monograph` target that regenerates both, register in File-Org, never hand-edit. **Why you.** Depends entirely on how *you* actually use them — do you open CURRENT-VOL1.pdf on a device between releases? **Lead rec.** If yes, (b) — the current state (hand-edited generated file + stale PDF) is the worst of both. If you haven't opened it since May, (a). Genuinely your usage-fact; 60-second answer. **Pointer.** cluster-05 findings §39/§67/§78 (P6).
-
-### A8 — Cut a fresh Zenodo version DOI? (metadata frozen at v0.1.0)
-
-*Since the 2026-07-07 census:* Unchanged since census — metadata still v0.1.0; the 2 AAD keyword residues still present in CITATION.cff and .zenodo.json as of 2026-07-15 (parallel FreeWins fix not yet landed).
-
-**What.** Whether to mint a new Zenodo version DOI. Minting is irreversible; only you can authorize a publication act.
-
-**Context.** One Zenodo release ever cut: v0.1.0, 2026-05-02. `CITATION.cff` still says `version: 0.1.0` while current builds are AAT v0.3.0 (monograph pipeline emits `mono/aat-v0.3.0.pdf`) and TST 0.2.0. Verified 2026-07-15: neither `CITATION.cff` nor `.zenodo.json` has been touched since the census — and the stale keyword `adaptation and actuation dynamics` (pre-AAT-rename residue) is **still present in both files**; a FreeWins agent may fix it in parallel, but as of this check it has not landed. The keyword fix is agent-executable and needs no decision from you.
-
-**Options.** (1) Defer the DOI until a deliberate release point (e.g., a Vol 1 candidate or the archema-io repo rename settles — the remote is still `v2-io/agentic-systems`, so a rename would otherwise immediately stale the new DOI's metadata). (2) Cut v0.3.0 now to make the citable record current.
-
-**Lead recommendation.** Defer (matches census lead-rec; still holds after verification) — nothing external is citing at head, and the pending Archema rename argues for one release after it lands, not before. Low uncertainty. The only action worth taking now is the keyword/version metadata fix, which agents can do without you.
-
-**Pointer.** `CITATION.cff`, `.zenodo.json`; cluster-05 findings (`msc/meta-process-review-2026-07-07/05-...-findings.md`).
 
 ## Policy calls — one decision retires a recurring gate
 

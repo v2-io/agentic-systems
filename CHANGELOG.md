@@ -26,6 +26,12 @@ CHANGELOG carries the *narrative shape* of each cycle (what conventions changed,
 ---
 
 
+## 2026-08-22 — Reader snapshot of Volume 1 split into main matter + appendices; public variant at the repo root (Joseph, `490bf42`)
+
+`bin/build-monograph` gained three flags: `--split-appendices` (assemble once, then typeset the `## *Appendices*` groups as a companion volume with its own PDF / markdown / `.references.bib`, leaving the main-matter `.aux` as the sole cross-volume xr-ref source), `--compact-fields` (Epistemic Status + Discussion rendered in the Working-Notes visual register — small type, rule frame — main matter only when split), and `--emit-current` (copy the outputs to `CURRENT-VOL1.{md,pdf}` and `CURRENT-VOL1-APPENDICES.{md,pdf}` at the repo root; volume 01 only). Margin-note rendering fixed in the same commit across `segment_renderer.rb` / `typeset*.rb` and both preambles. **The root `CURRENT-VOL1*` files are now a generated reader snapshot** — `--public --split-appendices --compact-fields --emit-current 01` — and are no longer byte-identical to the v0.4.0 release assets (`releases/v0.4.0.md` corrected accordingly; the GitHub release body still carries the old sentence). This retires the "CURRENT-VOL1 disposition" decision from the valve by action. Against the 2026-08-15 review's repair list, the public build removes the Working Notes (0 sections remain) but still drops the Part III preface, the Part I intro title, and the Layer-0 appendix paragraph; still opens five chapters with `[Gap] Discussion`; still leaves 14 raw `#slug`s inside eq-tag brackets and 9 `\citep` with no bibliography — those are pipeline items, unchanged by this commit.
+
+Same-day record fixes by the cleanup pass that followed: `agents.sop.md` File-Org entry for the snapshot; `INTRODUCTION.md` Working Notes un-staled (the transclusion and the figure embeds have been wired since the v0.4.0 build; the notes still said both were pending); the valve pruned of two decided-by-action briefs (CURRENT-VOL1; Zenodo — the v0.4.0 version DOI was minted 2026-08-15) and the repo-weight brief updated (fonts done 07-15; `.archive/` still tracked); `JOSEPH-TODO` quick-nods line likewise.
+
 ## 2026-08-22 — `_obs/` renamed `.archive/`; naming-cycle tree packed
 
 Joseph: tar-gzip `msc/naming/` into the archaeology home, and rename `_obs/` to `.archive/` while we're at it.
