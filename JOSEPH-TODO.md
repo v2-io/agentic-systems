@@ -9,6 +9,8 @@
 
 **→ [`msc/decision-briefs-2026-07-15.md`](msc/decision-briefs-2026-07-15.md) — the open Joseph-decisions as one-sitting briefs** (each verified against current state 2026-07-15; ordered quick-nods → policy → theory/naming → strategic; each carries context + options + lead-rec + pointer, decidable from the brief alone). The queue, one line each:
 
+*Time-bound:* FAST @ NeurIPS 2026 (Foundations of Agentic Systems Theory workshop) deadline **2026-08-29** — the survey found it is the one venue named around "agentic systems theory"; submit-or-not is yours (`ref/prior-art-analysis/agentic-systems-landscape-2026-08-22.md`).
+
 *Quick nods:* F72 external-eye release · (PI) used-before-introduced — `#der-gain-sector-bridge` consumes `#scope-agent-identity` without listing it in `depends:`; hoist / add dep / reorder is a placement call (731548/35) · `core.hooksPath` unset (still set to the dead pre-rename path as of 2026-08-22) · `.claude/` selective un-gitignore · `.archive/` untracking (the fonts half landed 2026-07-15). *(Decided by action since the briefs were written: CURRENT-VOL1 — made a generated reader snapshot 2026-08-22; Zenodo — v0.4.0 version DOI minted 2026-08-15.)*
 *Policy:* gold-dir standing gate (largest unblock: 0/22 graduated) · promotion-terminus / WN drain (sharpened by your 2026-07-14 stage position) · CLAUDE.md generate+cadence · naming-vs-Findings de-block.
 *Theory & naming:* SP-30 typed epistemic target (package ready) · C5 intelligence-empathy landing · the 01 ordering structural call + 9 whitelist-or-reorder rows · separability-triad rung names · agent-spectrum tetrad · Greek-vocabulary per-term · LEXICON §F reorg.
