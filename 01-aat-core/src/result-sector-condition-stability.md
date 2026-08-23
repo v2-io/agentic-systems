@@ -58,6 +58,8 @@ Full Lyapunov proofs: #deriv-sector-condition Props A.1, A.1S, A.2.
 
 **Generalizing the persistence threshold.** In the linear case, $\alpha = \mathcal{T}$ (adaptive tempo). The general result $\alpha \gt \rho/R$ proves the persistence threshold ( #result-persistence-condition) is a structural necessity of any bounded-correction system, not an artifact of the linear approximation. This result addresses *structural persistence* — the machinery's capacity to bound mismatch — not operational persistence (current proximity to $R$) or continuity persistence (identity through time). See Persistence in `LEXICON.md` for the full disambiguation.
 
+**Two kinds of guarantee, not only two rates.** The Model D and Model S bounds differ in kind as well as scale: under bounded disturbance with $\alpha R \gt \rho$ the persistence region is positively invariant ($P(\tau_R \lt \infty) = 0$), while under additive stochastic forcing exit from any bounded region is certain over an unbounded horizon ($P(\tau_R \lt \infty) = 1$) for every corrector satisfying the sector condition and every $\alpha$ — #deriv-sector-condition Corollary A.1S.1. Model S persistence is a mean-square / fixed-time guarantee, never pathwise-forever; $\alpha$ sets the typical scale and the fixed-time tail, not whether exit eventually occurs.
+
 **Connection to structural adaptation.** When $\rho/\alpha \gt R$, disturbance exceeds the model class's capacity. The sector condition fails — this is the dynamical trigger for structural adaptation ( #result-structural-adaptation-necessity), requiring a new model class with larger valid radius $R'$ or better efficiency $\alpha'$.
 
 ## Working Notes
