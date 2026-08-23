@@ -153,7 +153,7 @@ The Fano-on-observer-prediction direction the extraction proposed is *not* among
 
 **Discussion:** The compound — confidence decay (chain rule) + evidence starvation (`#deriv-edge-credence-dynamics`) + cognitive cost (`#form-strategy-complexity-cost`) — is the structural reason long causal chains compound penalty independently. It is a *cross-segment* claim (F2 in the M1 four-instance catalog per CLAUDE.md §7), candidate for an `impl-strategy-structure` chapter-end implications segment if the treatment is not already there.
 
-**Routing recommendation:** **ledger `research-seed`** (one row, attributed to 471203 §"Fresh-7"; cross-reference the `#impl-strategy-structure` chapter-end implications segment per CLAUDE.md §7 M1-F2). Brief-authoring work if the compound is not already named.
+**Routing recommendation:** **ledger `research-seed`** (one row, attributed to 471203 §"Fresh-7"; cross-reference the `#impl-strategy-structure` chapter-end implications segment per CLAUDE.md §7 M1-F2). **Closed 2026-08-22:** the depth-compound frame is named in `#impl-strategy-structure` §4 (three co-pressures, at discussion grade).
 
 ### Fresh-8. Model-conditioned-L2 vs true-Pearl-L2 subtlety
 

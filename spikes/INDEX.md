@@ -327,7 +327,7 @@ Cross-pollination spike from the AIES 2026 *behavioral-floor* paper (`~/src/beha
 
 | Spike | Location | Status |
 |-------|----------|--------|
-| **C2★ integration scoping** | `spikes/spike-c2-star-to-integrate.md` | **IN FLIGHT — scoping not yet acted on.** Three candidate landing targets identified in the spike header: `#der-loop-interventional-access` (loop-as-Level-2-engine sharpened to operationalizable form), `#disc-identifiability-floor` (possibly as new instance at substrate-protocol layer), and `#der-directed-separation` (Class 1/2/3 architectural-vs-behavioral distinction sharpened by C2★). Pending Joseph's promotion-routing call and the AIES paper's own settling. |
+| **C2★ integration scoping** | `spikes/spike-c2-star-to-integrate.md` | **DORMANT since 2026-05-14 — scoping not acted on** (noted 2026-08-22; `#der-loop-interventional-access`'s (C1)–(C3) gate landed 2026-05-30 independently of it — re-scope against that before acting). Three candidate landing targets identified in the spike header: `#der-loop-interventional-access` (loop-as-Level-2-engine sharpened to operationalizable form), `#disc-identifiability-floor` (possibly as new instance at substrate-protocol layer), and `#der-directed-separation` (Class 1/2/3 architectural-vs-behavioral distinction sharpened by C2★). Pending Joseph's promotion-routing call and the AIES paper's own settling. |
 
 ### 2026-05-13 Language-as-causal-substrate strengthening — IN PROGRESS
 
