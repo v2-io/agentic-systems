@@ -22,7 +22,7 @@ Like the satisfaction gap, control regret is **convention-relative**: under C1 (
 
 $$\delta_{\text{regret}} = A_O(M_t;\, \Pi, N_h) - V_O(M_t, \pi_{\text{current}};\, N_h) \geq 0$$
 
-Always non-negative: the current policy cannot outperform the best in its class.
+Always non-negative — given $\pi_{\text{current}} \in \Pi$ and both terms evaluated under the same $M_t$, $N_h$, and continuation convention: the current policy cannot outperform the best in its class.
 
 - $\delta_{\text{regret}} \approx 0$: The agent is doing the best it can within current $(\Pi, N_h, M_t)$. If $\delta_{\text{sat}} \gt 0$ simultaneously, the problem is not the current strategy — it's either the goal, the capability ($\Pi$, $N_h$), or the model ($M_t$). See #def-satisfaction-gap's disambiguation.
 - $\delta_{\text{regret}} \gg 0$: There's room for improvement without changing $O_t$. → Revise $\Sigma_t$.
