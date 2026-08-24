@@ -911,7 +911,23 @@ def lint_file(filepath, fix=False):
     return all_issues
 
 
+DEPRECATION_NOTICE = """\
+================================================================================
+DEPRECATED (Joseph, 2026-08-22): bin/lint-md is no longer the lint gate.
+The gate is `md-press --math --check` (md-press is on PATH; --help is the
+live truth). See doc/sop/git-hygiene.sop.md, "Lint gates the commit".
+Note: bin/lint-outline is NOT deprecated -- it does a different job.
+
+Running anyway (its math-compat checks cover a filed md-press gap: raw < >
+in math, bare Greek). Treat findings as advisory; file md-press gaps as dated
+FEEDBACK-*.md in ~/src/arch/firmatum/utils/md-press/, not as reasons to keep
+gating on this tool.
+================================================================================
+"""
+
+
 def main():
+    print(DEPRECATION_NOTICE, file=sys.stderr)
     args = sys.argv[1:]
     fix = '--fix' in args
     if fix:

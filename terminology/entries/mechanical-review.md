@@ -20,7 +20,7 @@ do_not_confuse: [content-review, notes-disposition]
 Mechanical review is Gate 3 in the segment promotion workflow — separate from Gate 2 (content review) by design, because they require different cognitive modes. Passing Gate 3 advances a segment from `claims-verified` to `format-clean`.
 
 The gate checklist:
-- `bin/lint-md` passes with no errors
+- `md-press --math --check` passes (the lint gate since 2026-08-22; `bin/lint-md` is deprecated — see `doc/sop/git-hygiene.sop.md`)
 - All `#slug-name` cross-references resolve to existing files
 - Notation matches NOTATION.md
 - Math renders correctly in both GitHub and Obsidian (observing the compatibility notes in FORMAT.md)

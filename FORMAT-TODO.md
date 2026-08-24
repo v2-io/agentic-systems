@@ -168,7 +168,7 @@ Goal: The conventions that distinguish *what* segments are doing (AAT-internal v
 - [ ] **C15. Auto-cross-ref formula sweep in appendices.** Phase 4 of the prior plan. Many manual "Prop A.1" / "(7) above" / "Step 4" / "as shown in (12)" references still exist in appendix segments. Once B7 lands (named-atom labels), this sweep replaces manual cross-refs with `[[#^name]]` form and the renderer produces the rendered number.
 - [ ] **C16. FORMAT.md doc sweep.** Vocabulary alignment with the conventions landed in foundation work + added through workstreams A/B/C. The narrow-area / wide-area vocabulary, the chunk format, the markdown-first pipeline, the new citation conventions, the cross-reference convention extensions — all need representation in FORMAT.md so de-novo audits and future-agent onboarding hit the right discipline. Pairs naturally with C14 (both touch FORMAT.md). CLAUDE.md gets the parallel sweep.
 - [ ] **C17. Chapter grouping *quality* (Joseph), not missing chapterization.** All four volumes are chapterized in their OUTLINEs (verified 2026-08-22: AAT 16 `### *Chapter*` headings across Parts I–III; TST 4; LogA 4; ELI 5). The 2026-05-13 "implicit-Chapter default" characterization is stale. Remainder is whether Joseph wants regrouping, and appendix-group numbering (the scrbook second-`*Appendices*` collapse is a separate TODO.md item).
-- [ ] **C18. FORMAT-compliance linter sweep.** Phase 5 of the prior plan. `bin/lint-md --fix` for auto-fixable categories (hard-wraps, emphasis-underscores, `_` in `\text{}`); manual / agent-driven sweep for the rest (math compatibility issues — `|` / `\|` / `<` / `>` / `*` in math; `\text` outside `$`; etc.). ~200+ findings across the corpus.
+- [ ] **C18. FORMAT-compliance linter sweep.** Phase 5 of the prior plan. [Tooling note 2026-08-24: `bin/lint-md` is deprecated — the gate is `md-press --math --check` etc. (`git-hygiene.sop.md`); this sweep's mechanical layer should run through md-press, with any lint-md-only categories filed as md-press gaps.] `bin/lint-md --fix` for auto-fixable categories (hard-wraps, emphasis-underscores, `_` in `\text{}`); manual / agent-driven sweep for the rest (math compatibility issues — `|` / `\|` / `<` / `>` / `*` in math; `\text` outside `$`; etc.). ~200+ findings across the corpus.
 
 ---
 
@@ -196,8 +196,8 @@ Items previously tracked but not blocking the three workstreams. Lifted out so t
 
 - `bin/build-monograph` — three-stage pipeline orchestrator
 - `bin/output-version <slug> show|bump <patch|minor|major>` — per-volume semver utility (operates on `mono-meta.yaml`)
-- `bin/lint-md` — markdown-convention linter (~880 lines; math-compat, voice, formatting)
-- `bin/lint-outline` — outline + segment dependency linter (~640 lines; deps, cross-refs, orphans)
+- `bin/lint-md` — markdown-convention linter (~880 lines; math-compat, voice, formatting) — **deprecated 2026-08-22** in favor of `md-press --math --check` etc.
+- `bin/lint-outline` — outline + segment dependency linter (~640 lines; deps, cross-refs, orphans) — current (not part of the lint-md deprecation)
 - `mono/kaobook/main.tex` — LaTeX entrypoint template (single `\input{body}` since Stage 3 emits the whole pipeline result into `body.tex`)
 - `mono/kaobook/preamble/*.tex` — preamble fragments (`setup`, `environments`, `status-badges`, `eq-tags`)
 - `bin/lib/outline_walker.rb` — role-prefix-aware OUTLINE parser; HTML-comment stripping at file-read
