@@ -22,3 +22,17 @@
 
 - Do not inherit §4.3's interpretive language ("splinters," "convention") into canon at more than discussion-grade — the mathematics licenses existence of incomparable maximal factors; the psychology-flavored reading is framing.
 - Do not let the misdiagnosis story (§2) migrate anywhere except perhaps the SOP-scar layer — it is process gold, not theory content.
+
+---
+
+# Addendum — genericity spike (same author, same day)
+
+*`spike-belief-splintering-genericity-2026-08-24.md` chases this file's parent spike's open genericity question. Same suggestions register.*
+
+**Verify first:** the perturbed witness's arithmetic (spike §4 — the four $q_m$ vectors, both carves' base-mass sums, positivity, and the two quotient kernels $K_A$/$K_B$ with spectra $\{1, .2\}$ vs $\{1, 0\}$) — it is the only construction carrying the "dynamically inequivalent carvings" claim. Then Lemma S1/Prop S2 (short, but the automorphism-descends-to-quotient-iso step deserves an independent eye), then Prop G1's "proper slice" argument (check the constraint really is independent of row-normalization).
+
+**One finding I surface against my own earlier spike:** the distributional spike's §4.3 asserted "the two conventions retain different information about the world" of the general phenomenon while its only witness was the symmetric one, where that is false (the carvings there are isomorphic via the orbit-swap automorphism — genericity spike §3/§5). Whoever verifies the distributional spike should treat that sentence as corrected by the author: the claim is true on the tuned stratum (perturbed witness), false on the symmetric one.
+
+**Integration shape:** if the cluster lands as one distributional extension of `#deriv-decomposition-uniqueness`, the genericity results slot as the honest scoping of its Class-3 corollary — annihilation (generic), gauge splintering (symmetric), inequivalent splintering (tuned) — probably one Discussion subsection plus the witness in an appendix-grade block; the regime trichotomy is also the natural framing hook for the $\varepsilon$-programme if canon wants to name it as an open workstream. The "belief carvings" term was chosen to dodge the `#def-value-object` convention-hierarchy collision; a naming-cycle eye on it before canon would be wise.
+
+**For the FAST paper:** the one-sentence version — *generic goal-coupling annihilates exact belief; structured (symmetric) coupling splinters it into gauge-equivalent carvings; tuned coupling splinters it into carvings that disagree about what is learnable* — is a strong closing beat for the counterfactual-definition argument, but every clause is exact-regime only; if used, it must carry the $\varepsilon$-caveat explicitly.
