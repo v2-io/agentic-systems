@@ -4,7 +4,9 @@
 
 ## The question
 
-All of this week's decomposition-uniqueness work assumed the agent is perfectly causally disciplined — the belief-update never peeks at the goals, κ exactly zero. Real architectures are never exactly at zero. The commissioned question: when the peeking is small but not zero, do the week's results (the unique belief/goal carve, the canonical belief dynamics, the strange multiple-belief-carvings phenomena) survive approximately, with error bounds — or does something break discontinuously the moment you leave zero?
+*[Corrected 2026-08-24 after Joseph caught the first sentence claiming the week's work "assumed the agent is perfectly causally disciplined." That was false — a frame inherited from the launch brief that conflated two independent axes, and it survived into this file after being corrected in the technical one. The true position:]*
+
+This week's decomposition-uniqueness work has two axes that must not be conflated. **Which agents** it covered: both regimes — the disciplined case (belief-update never peeks at goals) *and* the coupled case, explicitly: the canon segment's Corollary 5 is about agents that violate separation; the distributional spike's splintering witness is a goal-coupled kernel; the genericity spike's whole trichotomy is about coupled agents. **What kind of statements** it made: exact ones throughout — every result, about either regime, was an exactness statement (exact carvings, exact lumpability, exact annihilation). What was genuinely open was the *quantitative* story: for an agent that peeks a little — κ small but not zero — nothing said how *much* structure survives, with what error, or whether anything breaks discontinuously as the peeking shrinks to zero. Real architectures live exactly there. That quantitative small-κ story is what this spike was commissioned to build, and what it delivered.
 
 ## The answer, in one paragraph
 
