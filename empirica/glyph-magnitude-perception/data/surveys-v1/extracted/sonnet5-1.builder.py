@@ -16,20 +16,56 @@ def R(a, b=None, typ="sequence", g=None, d=None, ax=None, st="unstated", bas="un
 
 # v0.8 revision arcs (append-only survey: later entries correcting earlier ones are structural, not anomalies).
 # Targets are migrator-inferred from the surveyor's own supersession language; bracket-marked as such in emit.
-REVISES = {  # span -> (earlier span, revision_kind)
- "L945": ("L939", "correction"),      # "Correcting the record rather than leaving the too-quick 'nothing found' standing"
- "L874": ("L483", "correction"),      # header: "corrected/completed"
- "L644": ("L56",  "contradiction"),   # emphasis ladder vs earlier skip of <≤≪
- "L668": ("L173", "contradiction"),   # ⩵⩶ vs "Nothing found" first pass of Supplemental Math Operators
- "L803": ("L57",  "contradiction"),   # =≡≣ vs earlier "≈ ≡ — no clean feel, skipping"
- "L797": ("L57",  "contradiction"),   # ∼≈≋ same target
- "L724": ("L712", "refinement"),      # "Revising my hypothesis" (round-vs-angular -> repeated-strokes)
- "L1006":("L91",  "contradiction"),   # ˑː vs "no other clean magnitude feel" in Spacing Modifier block
- "L1012":("L91",  "contradiction"),
- "L742": ("L411", "contradiction"),   # slow re-read finds vs "nothing else" in Combining Diacritical Marks
- "L748": ("L411", "contradiction"),
- "L749": ("L411", "contradiction"),
+
+# v0.9 revision arcs: span -> list of (target_span, revision_kind, link_migrator_inferred).
+# Both records always kept whole; earlier felt-reports untouched. Relation vs link marked separately
+# where they diverge (relation surveyor-stated, link target migrator-drawn).
+REVISES = {
+ "L945": [("L939","correction",False)],     # "Correcting the record rather than leaving the too-quick 'nothing found' standing"
+ "L874": [("L483","correction",False)],     # header: "corrected/completed"
+ "L644": [("L56","contradiction",True)],    # miss acknowledged by surveyor; target record migrator-drawn
+ "L668": [("L173","contradiction",True)],   # "another miss from my first too-quick pass"; block-level target inferred
+ "L803": [("L57","contradiction",True)],    # silent vs earlier "≈ ≡ — no clean feel" skip
+ "L797": [("L57","contradiction",True)],
+ "L724": [("L712","refinement",True)],      # "Revising my hypothesis"; target inferred
+ "L1006":[("L91","contradiction",True)],    # "walked right past it"; target inferred
+ "L1012":[("L91","contradiction",True)],
+ "L742": [("L410","refinement",True)],      # "a specific instance I'd only gestured at abstractly before" — refines the gesture, retargeted from L411 (v0.9 re-read)
+ "L748": [("L411","contradiction",True)],
+ "L749": [("L411","contradiction",True)],
+ # v0.9 confirmations (surveyor-acknowledged replication/endorsement of an earlier skip or read)
+ "L809": [("L58","confirmation",False)],    # "confirming my earlier skip rather than second-guessing it"
+ "L839": [("L63","confirmation",True)],     # "careful re-read confirms first pass" — block-level, representative target inferred
+ # v0.9 explicit-extension refinements ("extends/completes the earlier X" in the surveyor's own words)
+ "L632": [("L54","refinement",False)],
+ "L638": [("L133","refinement",False)],
+ "L177": [("L35","refinement",False)],
+ "L530": [("L126","refinement",False)],
+ "L430": [("L128","refinement",False)],
+ "L862": [("L410","refinement",False)],
+ "L766-L768": [("L252","refinement",False)],
+ "L770": [("L244","refinement",False)],
+ "L771": [("L254","refinement",False)],
+ "L772": [("L255","refinement",False)],
+ "L774": [("L256","refinement",False)],
+ "L759": [("L245","refinement",False),("L246","refinement",False)],
 }
+# v0.7 list-form basis (ordered, surveyor's emphasis first) for double-confirmed records
+BASIS_LISTS = {
+ "L8": ["semantic-knowledge","perceived-directly"], "L14": ["semantic-knowledge","perceived-directly"],
+ "L24": ["semantic-knowledge","perceived-directly"], "L90": ["perceived-directly","semantic-knowledge"],
+ "L116": ["semantic-knowledge","perceived-directly"], "L127": ["semantic-knowledge","perceived-directly"],
+ "L133": ["perceived-directly","name-derived"], "L162": ["semantic-knowledge","perceived-directly"],
+ "L235": ["semantic-knowledge","perceived-directly"], "L355": ["perceived-directly","semantic-knowledge"],
+ "L369": ["perceived-directly","semantic-knowledge"], "L626": ["name-derived","perceived-directly"],
+ "L686": ["perceived-directly","name-derived"], "L803": ["perceived-directly","semantic-knowledge"],
+ "L815": ["perceived-directly","semantic-knowledge"], "L1146-L1148": ["perceived-directly","semantic-knowledge"],
+ "L1284": ["perceived-directly","semantic-knowledge"],
+}
+# v0.9 vein closures (sampling-stopped-by-policy) and dual-face roles
+META_KIND = {"L49b":"vein-closed", "L502":"vein-closed", "L569":"vein-closed"}
+ROLES = {"L49b":["meta","law"], "L502":["meta","generator"], "L526":["sequence","vein-closed"],
+         "L188":["sequence","vein-closed"], "L1274":["negative","vein-closed"]}
 IMMEDIACY = {  # span -> surveyor's immediacy-register words, verbatim
  "L54": "stacked-line-count is immediate",
  "L748": "this one I feel very strongly and immediately",
@@ -81,10 +117,29 @@ def emit():
         if r['op'] is not None: rec["open"] = r['op']
         if span in IMMEDIACY:
             rec["epistemics"]["felt_immediacy_verbatim"] = IMMEDIACY[span]
+        deltas = []
+        if span in BASIS_LISTS:
+            rec["epistemics"]["basis"] = BASIS_LISTS[span]
+            deltas.append("basis widened to ordered list (v0.7 ratification, double-confirmed case)")
+        if span in META_KIND:
+            rec["meta_kind"] = META_KIND[span]
+            deltas.append("meta_kind: vein-closed (v0.9 — closed-by-policy, not unexamined, not negative)")
+        if span in ROLES:
+            rec["roles"] = ROLES[span]
+            deltas.append("roles added for dual-face content (v0.6)")
         if span in REVISES:
-            tgt, kind = REVISES[span]
-            rec["revises"] = "[migrator-inferred] " + hashlib.sha256(("survey-rec|sonnet5-1|" + tgt).encode()).hexdigest()[:16]
-            rec["revision_kind"] = kind
+            rec["revises"] = []
+            for tgt, kind, inferred in REVISES[span]:
+                entry = {"id": hashlib.sha256(("survey-rec|sonnet5-1|" + tgt).encode()).hexdigest()[:16],
+                         "revision_kind": kind, "revises_span": tgt}
+                if inferred: entry["id"] = "[migrator-inferred] " + entry["id"]
+                rec["revises"].append(entry)
+            deltas.append("revises migrated to v0.9 list form (+arc sweep: extensions/confirmations)")
+        if deltas:
+            rec["schema_version"] = "0.9"
+            note = "v0.8->0.9 delta: " + "; ".join(deltas)
+            mn = rec["epistemics"].get("migrator_notes")
+            rec["epistemics"]["migrator_notes"] = (mn + ". " + note) if mn else note
         out.append(json.dumps(rec, ensure_ascii=False))
     with open(OUT, "w", encoding="utf-8") as f:
         f.write("\n".join(out) + "\n")
@@ -322,7 +377,7 @@ R(398, g="👤👥", d="↑", ax="literal head-count visible in glyph", st="high
 R(404, g="👁👀", d="↑", ax="one eye vs two — semantic 'more' runs opposite codepoint order", st="high", bas="perceived-directly", lin="brief-steered")
 # Combining Diacritical Marks
 R(410, g="́̋", typ="sequence", d="↑", ax="single vs double accent (acute→double acute, grave→double grave)", st="high", bas="perceived-directly", mn="glyph field carries acute + double acute as representatives; note covers both the acute and grave families")
-R(411, typ="negative", ax="diverse phonetic/tone marks without a shared count axis", neg="not-felt", mn="partially superseded: dot-above/diaeresis (L742), low line/double low line (L748), stroke overlays (L749) found on slow re-read")
+R(411, typ="negative", ax="diverse phonetic/tone marks without a shared count axis", neg="not-felt", mn="partially superseded: low line/double low line (L748) and stroke overlays (L749) found on slow re-read contradict this; the dot-above/diaeresis find (L742) refines the L410 gesture rather than this record")
 # Tamil
 R(417, g="௦௧௨௩௪௫௬௭௮௯", d="↑", ax="digit ladder", st="very high", bas="semantic-knowledge")
 R(418, g="௰௱௲", d="↑", ax="ten/hundred/thousand distinct symbols", st="very high", bas="name-derived")
@@ -356,7 +411,7 @@ R(490, typ="negative", ax="combinatorial arrow variants, nothing beyond weight/m
 # Kangxi Radicals
 R(496, g="⼀⿕", typ="meta", d="↑", ax="entire 214-radical block natively ordered by increasing stroke count — a whole block whose ordering principle already IS a magnitude axis", st="high as a structural/semantic fact, though moderate as a pure glance-perceptual test", bas="semantic-knowledge", mn="glyphs are the two endpoints; felt sense of increasing visual density reported when paging through")
 # Native-script digits consolidated
-R(502, typ="generator", g="٠١٢٣٤٥٦٧٨٩", ax="rule: essentially every native-script decimal digit block forms a ↑ digit ladder — declared a closed, well-confirmed category", st="very high each", bas="semantic-knowledge", mn="glyphs are the Arabic-Indic instance as representative; example chains: Devanagari, Bengali, Thai etc. named in note; per-script felt-strength later differentiated (L693-730) — see those records")
+R(502, typ="meta", g="٠١٢٣٤٥٦٧٨٩", ax="rule: essentially every native-script decimal digit block forms a ↑ digit ladder — declared a closed, well-confirmed category", st="very high each", bas="semantic-knowledge", mn="glyphs are the Arabic-Indic instance as representative; example chains: Devanagari, Bengali, Thai etc. named in note; per-script felt-strength later differentiated (L693-730) — see those records")
 # Small Form Variants
 R(508, typ="equivalence", ax="each character a 'small' width-variant of punctuation elsewhere — same-value-different-dress, not a magnitude ladder", bas="name-derived", mn="assumed (pattern-level, not per-pair inspection)")
 # Rumi
