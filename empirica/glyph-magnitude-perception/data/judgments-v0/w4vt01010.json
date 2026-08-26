@@ -1,0 +1,744 @@
+{
+  "summary": "Shuffled glyph sets: can judges reconstruct orderings that pairwise probes miss?",
+  "agentCount": 6,
+  "logs": [],
+  "result": {
+    "judges": [
+      {
+        "judge": 0,
+        "answers": [
+          {
+            "task": "dice-0",
+            "arrangement": "⚀⚁⚂⚃⚄⚅"
+          },
+          {
+            "task": "drain-0",
+            "arrangement": "☰⚌⚊☱⚍☳☷⚏⚋"
+          },
+          {
+            "task": "rotate4-1",
+            "arrangement": "─╱│╲"
+          },
+          {
+            "task": "noise2-1",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "dice-2",
+            "arrangement": "⚀⚁⚂⚃⚄⚅"
+          },
+          {
+            "task": "risebar-1",
+            "arrangement": "_₋-⁻¯"
+          },
+          {
+            "task": "ramp-1",
+            "arrangement": "▁▂▃▄▅▆▇█"
+          },
+          {
+            "task": "noise2-0",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "noise1-2",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "risebar-2",
+            "arrangement": "_₋-⁻¯"
+          },
+          {
+            "task": "unfold-1",
+            "arrangement": "|)}>=-"
+          },
+          {
+            "task": "dice-1",
+            "arrangement": "⚀⚁⚂⚃⚄⚅"
+          },
+          {
+            "task": "ramp-2",
+            "arrangement": "▁▂▃▄▅▆▇█"
+          },
+          {
+            "task": "unfold-2",
+            "arrangement": "|)}>=-"
+          },
+          {
+            "task": "unfold-0",
+            "arrangement": "|)}>=-"
+          },
+          {
+            "task": "noise1-1",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "ramp-0",
+            "arrangement": "▁▂▃▄▅▆▇█"
+          },
+          {
+            "task": "drain-1",
+            "arrangement": "☰⚌⚊☱⚍☳☷⚏⚋"
+          },
+          {
+            "task": "drain-2",
+            "arrangement": "☰⚌⚊☱⚍☳☷⚏⚋"
+          },
+          {
+            "task": "noise1-0",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "noise2-2",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "rotate4-2",
+            "arrangement": "─╱│╲"
+          },
+          {
+            "task": "risebar-0",
+            "arrangement": "_₋-⁻¯"
+          },
+          {
+            "task": "rotate4-0",
+            "arrangement": "─╱│╲"
+          }
+        ]
+      },
+      {
+        "judge": 1,
+        "answers": [
+          {
+            "task": "dice-0",
+            "arrangement": "⚀⚁⚂⚃⚄⚅"
+          },
+          {
+            "task": "drain-0",
+            "arrangement": "☰⚏⚊☱⚍☳⚋⚌☷"
+          },
+          {
+            "task": "rotate4-1",
+            "arrangement": "─╱│╲"
+          },
+          {
+            "task": "noise2-1",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "dice-2",
+            "arrangement": "⚀⚁⚂⚃⚄⚅"
+          },
+          {
+            "task": "risebar-1",
+            "arrangement": "¯⁻-₋_"
+          },
+          {
+            "task": "ramp-1",
+            "arrangement": "▁▂▃▄▅▆▇█"
+          },
+          {
+            "task": "noise2-0",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "noise1-2",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "risebar-2",
+            "arrangement": "¯⁻-₋_"
+          },
+          {
+            "task": "unfold-1",
+            "arrangement": "|)}>-="
+          },
+          {
+            "task": "dice-1",
+            "arrangement": "⚀⚁⚂⚃⚄⚅"
+          },
+          {
+            "task": "ramp-2",
+            "arrangement": "▁▂▃▄▅▆▇█"
+          },
+          {
+            "task": "unfold-2",
+            "arrangement": "|)}>-="
+          },
+          {
+            "task": "unfold-0",
+            "arrangement": "|)}>-="
+          },
+          {
+            "task": "noise1-1",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "ramp-0",
+            "arrangement": "▁▂▃▄▅▆▇█"
+          },
+          {
+            "task": "drain-1",
+            "arrangement": "☰⚏⚊☱⚍☳⚋⚌☷"
+          },
+          {
+            "task": "drain-2",
+            "arrangement": "☰⚏⚊☱⚍☳⚋⚌☷"
+          },
+          {
+            "task": "noise1-0",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "noise2-2",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "rotate4-2",
+            "arrangement": "─╱│╲"
+          },
+          {
+            "task": "risebar-0",
+            "arrangement": "¯⁻-₋_"
+          },
+          {
+            "task": "rotate4-0",
+            "arrangement": "─╱│╲"
+          }
+        ]
+      },
+      {
+        "judge": 2,
+        "answers": [
+          {
+            "task": "dice-0",
+            "arrangement": "⚀⚁⚂⚃⚄⚅"
+          },
+          {
+            "task": "drain-0",
+            "arrangement": "☰⚌⚊☱☳⚍⚏⚋☷"
+          },
+          {
+            "task": "rotate4-1",
+            "arrangement": "─╱│╲"
+          },
+          {
+            "task": "noise2-1",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "dice-2",
+            "arrangement": "⚀⚁⚂⚃⚄⚅"
+          },
+          {
+            "task": "risebar-1",
+            "arrangement": "₋_-⁻¯"
+          },
+          {
+            "task": "ramp-1",
+            "arrangement": "▁▂▃▄▅▆▇█"
+          },
+          {
+            "task": "noise2-0",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "noise1-2",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "risebar-2",
+            "arrangement": "₋_-⁻¯"
+          },
+          {
+            "task": "unfold-1",
+            "arrangement": "|)}>=-"
+          },
+          {
+            "task": "dice-1",
+            "arrangement": "⚀⚁⚂⚃⚄⚅"
+          },
+          {
+            "task": "ramp-2",
+            "arrangement": "▁▂▃▄▅▆▇█"
+          },
+          {
+            "task": "unfold-2",
+            "arrangement": "|)}>=-"
+          },
+          {
+            "task": "unfold-0",
+            "arrangement": "|)}>=-"
+          },
+          {
+            "task": "noise1-1",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "ramp-0",
+            "arrangement": "▁▂▃▄▅▆▇█"
+          },
+          {
+            "task": "drain-1",
+            "arrangement": "☰⚌⚊☱☳⚍⚏⚋☷"
+          },
+          {
+            "task": "drain-2",
+            "arrangement": "☰⚌⚊☱☳⚍⚏⚋☷"
+          },
+          {
+            "task": "noise1-0",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "noise2-2",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "rotate4-2",
+            "arrangement": "─╱│╲"
+          },
+          {
+            "task": "risebar-0",
+            "arrangement": "₋_-⁻¯"
+          },
+          {
+            "task": "rotate4-0",
+            "arrangement": "─╱│╲"
+          }
+        ]
+      },
+      {
+        "judge": 3,
+        "answers": [
+          {
+            "task": "dice-0",
+            "arrangement": "⚀⚁⚂⚃⚄⚅"
+          },
+          {
+            "task": "drain-0",
+            "arrangement": "☰⚌⚊☱⚍☳⚏⚋☷"
+          },
+          {
+            "task": "rotate4-1",
+            "arrangement": "│╱─╲"
+          },
+          {
+            "task": "noise2-1",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "dice-2",
+            "arrangement": "⚀⚁⚂⚃⚄⚅"
+          },
+          {
+            "task": "risebar-1",
+            "arrangement": "⁻¯-₋_"
+          },
+          {
+            "task": "ramp-1",
+            "arrangement": "▁▂▃▄▅▆▇█"
+          },
+          {
+            "task": "noise2-0",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "noise1-2",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "risebar-2",
+            "arrangement": "⁻¯-₋_"
+          },
+          {
+            "task": "unfold-1",
+            "arrangement": "|)}>-="
+          },
+          {
+            "task": "dice-1",
+            "arrangement": "⚀⚁⚂⚃⚄⚅"
+          },
+          {
+            "task": "ramp-2",
+            "arrangement": "▁▂▃▄▅▆▇█"
+          },
+          {
+            "task": "unfold-2",
+            "arrangement": "|)}>-="
+          },
+          {
+            "task": "unfold-0",
+            "arrangement": "|)}>-="
+          },
+          {
+            "task": "noise1-1",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "ramp-0",
+            "arrangement": "▁▂▃▄▅▆▇█"
+          },
+          {
+            "task": "drain-1",
+            "arrangement": "☰⚌⚊☱⚍☳⚏⚋☷"
+          },
+          {
+            "task": "drain-2",
+            "arrangement": "☰⚌⚊☱⚍☳⚏⚋☷"
+          },
+          {
+            "task": "noise1-0",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "noise2-2",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "rotate4-2",
+            "arrangement": "│╱─╲"
+          },
+          {
+            "task": "risebar-0",
+            "arrangement": "⁻¯-₋_"
+          },
+          {
+            "task": "rotate4-0",
+            "arrangement": "│╱─╲"
+          }
+        ]
+      },
+      {
+        "judge": 4,
+        "answers": [
+          {
+            "task": "dice-0",
+            "arrangement": "⚀⚁⚂⚃⚄⚅"
+          },
+          {
+            "task": "drain-0",
+            "arrangement": "☰⚌⚊☱⚍☳⚏☷⚋"
+          },
+          {
+            "task": "rotate4-1",
+            "arrangement": "│╱─╲"
+          },
+          {
+            "task": "noise2-1",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "dice-2",
+            "arrangement": "⚀⚁⚂⚃⚄⚅"
+          },
+          {
+            "task": "risebar-1",
+            "arrangement": "⁻¯-₋_"
+          },
+          {
+            "task": "ramp-1",
+            "arrangement": "▁▂▃▄▅▆▇█"
+          },
+          {
+            "task": "noise2-0",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "noise1-2",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "risebar-2",
+            "arrangement": "⁻¯-₋_"
+          },
+          {
+            "task": "unfold-1",
+            "arrangement": "|)}>=-"
+          },
+          {
+            "task": "dice-1",
+            "arrangement": "⚀⚁⚂⚃⚄⚅"
+          },
+          {
+            "task": "ramp-2",
+            "arrangement": "▁▂▃▄▅▆▇█"
+          },
+          {
+            "task": "unfold-2",
+            "arrangement": "|)}>=-"
+          },
+          {
+            "task": "unfold-0",
+            "arrangement": "|)}>=-"
+          },
+          {
+            "task": "noise1-1",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "ramp-0",
+            "arrangement": "▁▂▃▄▅▆▇█"
+          },
+          {
+            "task": "drain-1",
+            "arrangement": "☰⚌⚊☱⚍☳⚏☷⚋"
+          },
+          {
+            "task": "drain-2",
+            "arrangement": "☰⚌⚊☱⚍☳⚏☷⚋"
+          },
+          {
+            "task": "noise1-0",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "noise2-2",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "rotate4-2",
+            "arrangement": "│╱─╲"
+          },
+          {
+            "task": "risebar-0",
+            "arrangement": "⁻¯-₋_"
+          },
+          {
+            "task": "rotate4-0",
+            "arrangement": "│╱─╲"
+          }
+        ]
+      },
+      {
+        "judge": 5,
+        "answers": [
+          {
+            "task": "dice-0",
+            "arrangement": "⚀⚁⚂⚃⚄⚅"
+          },
+          {
+            "task": "drain-0",
+            "arrangement": "☰⚌⚊☱⚏☳⚍⚋☷"
+          },
+          {
+            "task": "rotate4-1",
+            "arrangement": "─╱│╲"
+          },
+          {
+            "task": "noise2-1",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "dice-2",
+            "arrangement": "⚀⚁⚂⚃⚄⚅"
+          },
+          {
+            "task": "risebar-1",
+            "arrangement": "¯⁻-₋_"
+          },
+          {
+            "task": "ramp-1",
+            "arrangement": "▁▂▃▄▅▆▇█"
+          },
+          {
+            "task": "noise2-0",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "noise1-2",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "risebar-2",
+            "arrangement": "¯⁻-₋_"
+          },
+          {
+            "task": "unfold-1",
+            "arrangement": "-|=>)}"
+          },
+          {
+            "task": "dice-1",
+            "arrangement": "⚀⚁⚂⚃⚄⚅"
+          },
+          {
+            "task": "ramp-2",
+            "arrangement": "▁▂▃▄▅▆▇█"
+          },
+          {
+            "task": "unfold-2",
+            "arrangement": "-|=>)}"
+          },
+          {
+            "task": "unfold-0",
+            "arrangement": "-|=>)}"
+          },
+          {
+            "task": "noise1-1",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "ramp-0",
+            "arrangement": "▁▂▃▄▅▆▇█"
+          },
+          {
+            "task": "drain-1",
+            "arrangement": "☰⚌⚊☱⚏☳⚍⚋☷"
+          },
+          {
+            "task": "drain-2",
+            "arrangement": "☰⚌⚊☱⚏☳⚍⚋☷"
+          },
+          {
+            "task": "noise1-0",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "noise2-2",
+            "arrangement": "⟂"
+          },
+          {
+            "task": "rotate4-2",
+            "arrangement": "─╱│╲"
+          },
+          {
+            "task": "risebar-0",
+            "arrangement": "¯⁻-₋_"
+          },
+          {
+            "task": "rotate4-0",
+            "arrangement": "─╱│╲"
+          }
+        ]
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Gestalt"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "gestalt-0",
+      "phaseIndex": 1,
+      "phaseTitle": "Gestalt",
+      "agentId": "a869924343db06b85",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787695606083,
+      "queuedAt": 1787695606075,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "A perception task of a different kind — please read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/gestalt-tasks.json: each item has a \"task\" name and a list of glyphs in scrambled order. For each item, look at the glyphs TOGETHER, as a set. If an ordering asserts itself — some axis along which they form a progression — write the glyphs rearranged into that progression as…",
+      "lastProgressAt": 1787695644624,
+      "tokens": 60699,
+      "toolCalls": 2,
+      "durationMs": 38540,
+      "resultPreview": "{\"answers\":[{\"task\":\"dice-0\",\"arrangement\":\"⚀⚁⚂⚃⚄⚅\"},{\"task\":\"drain-0\",\"arrangement\":\"☰⚌⚊☱⚍☳☷⚏⚋\"},{\"task\":\"rotate4-1\",\"arrangement\":\"─╱│╲\"},{\"task\":\"noise2-1\",\"arrangement\":\"⟂\"},{\"task\":\"dice-2\",\"arrangement\":\"⚀⚁⚂⚃⚄⚅\"},{\"task\":\"risebar-1\",\"arrangement\":\"_₋-⁻¯\"},{\"task\":\"ramp-1\",\"arrangement\":\"▁▂▃▄▅▆▇█\"},{\"task\":\"noise2-0\",\"arrangement\":\"⟂\"},{\"task\":\"noise1-2\",\"arrangement\":\"⟂\"},{\"task\":\"risebar-2\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "gestalt-1",
+      "phaseIndex": 1,
+      "phaseTitle": "Gestalt",
+      "agentId": "a00e3da60ffa82830",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787695606083,
+      "queuedAt": 1787695606075,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "A perception task of a different kind — please read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/gestalt-tasks.json: each item has a \"task\" name and a list of glyphs in scrambled order. For each item, look at the glyphs TOGETHER, as a set. If an ordering asserts itself — some axis along which they form a progression — write the glyphs rearranged into that progression as…",
+      "lastProgressAt": 1787695644551,
+      "tokens": 60693,
+      "toolCalls": 2,
+      "durationMs": 35648,
+      "resultPreview": "{\"answers\":[{\"task\":\"dice-0\",\"arrangement\":\"⚀⚁⚂⚃⚄⚅\"},{\"task\":\"drain-0\",\"arrangement\":\"☰⚏⚊☱⚍☳⚋⚌☷\"},{\"task\":\"rotate4-1\",\"arrangement\":\"─╱│╲\"},{\"task\":\"noise2-1\",\"arrangement\":\"⟂\"},{\"task\":\"dice-2\",\"arrangement\":\"⚀⚁⚂⚃⚄⚅\"},{\"task\":\"risebar-1\",\"arrangement\":\"¯⁻-₋_\"},{\"task\":\"ramp-1\",\"arrangement\":\"▁▂▃▄▅▆▇█\"},{\"task\":\"noise2-0\",\"arrangement\":\"⟂\"},{\"task\":\"noise1-2\",\"arrangement\":\"⟂\"},{\"task\":\"risebar-2\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "gestalt-2",
+      "phaseIndex": 1,
+      "phaseTitle": "Gestalt",
+      "agentId": "a7db48f27cb67682d",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787695606083,
+      "queuedAt": 1787695606075,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "A perception task of a different kind — please read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/gestalt-tasks.json: each item has a \"task\" name and a list of glyphs in scrambled order. For each item, look at the glyphs TOGETHER, as a set. If an ordering asserts itself — some axis along which they form a progression — write the glyphs rearranged into that progression as…",
+      "lastProgressAt": 1787695643488,
+      "tokens": 60693,
+      "toolCalls": 2,
+      "durationMs": 34583,
+      "resultPreview": "{\"answers\":[{\"task\":\"dice-0\",\"arrangement\":\"⚀⚁⚂⚃⚄⚅\"},{\"task\":\"drain-0\",\"arrangement\":\"☰⚌⚊☱☳⚍⚏⚋☷\"},{\"task\":\"rotate4-1\",\"arrangement\":\"─╱│╲\"},{\"task\":\"noise2-1\",\"arrangement\":\"⟂\"},{\"task\":\"dice-2\",\"arrangement\":\"⚀⚁⚂⚃⚄⚅\"},{\"task\":\"risebar-1\",\"arrangement\":\"₋_-⁻¯\"},{\"task\":\"ramp-1\",\"arrangement\":\"▁▂▃▄▅▆▇█\"},{\"task\":\"noise2-0\",\"arrangement\":\"⟂\"},{\"task\":\"noise1-2\",\"arrangement\":\"⟂\"},{\"task\":\"risebar-2\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "gestalt-3",
+      "phaseIndex": 1,
+      "phaseTitle": "Gestalt",
+      "agentId": "ac4cbc6163d0fb4be",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787695606083,
+      "queuedAt": 1787695606075,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "A perception task of a different kind — please read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/gestalt-tasks.json: each item has a \"task\" name and a list of glyphs in scrambled order. For each item, look at the glyphs TOGETHER, as a set. If an ordering asserts itself — some axis along which they form a progression — write the glyphs rearranged into that progression as…",
+      "lastProgressAt": 1787695639081,
+      "tokens": 60696,
+      "toolCalls": 2,
+      "durationMs": 30177,
+      "resultPreview": "{\"answers\":[{\"task\":\"dice-0\",\"arrangement\":\"⚀⚁⚂⚃⚄⚅\"},{\"task\":\"drain-0\",\"arrangement\":\"☰⚌⚊☱⚍☳⚏⚋☷\"},{\"task\":\"rotate4-1\",\"arrangement\":\"│╱─╲\"},{\"task\":\"noise2-1\",\"arrangement\":\"⟂\"},{\"task\":\"dice-2\",\"arrangement\":\"⚀⚁⚂⚃⚄⚅\"},{\"task\":\"risebar-1\",\"arrangement\":\"⁻¯-₋_\"},{\"task\":\"ramp-1\",\"arrangement\":\"▁▂▃▄▅▆▇█\"},{\"task\":\"noise2-0\",\"arrangement\":\"⟂\"},{\"task\":\"noise1-2\",\"arrangement\":\"⟂\"},{\"task\":\"risebar-2\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "gestalt-4",
+      "phaseIndex": 1,
+      "phaseTitle": "Gestalt",
+      "agentId": "a21cbfb90fcc52161",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787695606084,
+      "queuedAt": 1787695606075,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "A perception task of a different kind — please read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/gestalt-tasks.json: each item has a \"task\" name and a list of glyphs in scrambled order. For each item, look at the glyphs TOGETHER, as a set. If an ordering asserts itself — some axis along which they form a progression — write the glyphs rearranged into that progression as…",
+      "lastProgressAt": 1787695658568,
+      "tokens": 60696,
+      "toolCalls": 2,
+      "durationMs": 49664,
+      "resultPreview": "{\"answers\":[{\"task\":\"dice-0\",\"arrangement\":\"⚀⚁⚂⚃⚄⚅\"},{\"task\":\"drain-0\",\"arrangement\":\"☰⚌⚊☱⚍☳⚏☷⚋\"},{\"task\":\"rotate4-1\",\"arrangement\":\"│╱─╲\"},{\"task\":\"noise2-1\",\"arrangement\":\"⟂\"},{\"task\":\"dice-2\",\"arrangement\":\"⚀⚁⚂⚃⚄⚅\"},{\"task\":\"risebar-1\",\"arrangement\":\"⁻¯-₋_\"},{\"task\":\"ramp-1\",\"arrangement\":\"▁▂▃▄▅▆▇█\"},{\"task\":\"noise2-0\",\"arrangement\":\"⟂\"},{\"task\":\"noise1-2\",\"arrangement\":\"⟂\"},{\"task\":\"risebar-2\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "gestalt-5",
+      "phaseIndex": 1,
+      "phaseTitle": "Gestalt",
+      "agentId": "a4c830ce5c64318f6",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787695606084,
+      "queuedAt": 1787695606075,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "A perception task of a different kind — please read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/gestalt-tasks.json: each item has a \"task\" name and a list of glyphs in scrambled order. For each item, look at the glyphs TOGETHER, as a set. If an ordering asserts itself — some axis along which they form a progression — write the glyphs rearranged into that progression as…",
+      "lastProgressAt": 1787695646905,
+      "tokens": 60693,
+      "toolCalls": 2,
+      "durationMs": 38000,
+      "resultPreview": "{\"answers\":[{\"task\":\"dice-0\",\"arrangement\":\"⚀⚁⚂⚃⚄⚅\"},{\"task\":\"drain-0\",\"arrangement\":\"☰⚌⚊☱⚏☳⚍⚋☷\"},{\"task\":\"rotate4-1\",\"arrangement\":\"─╱│╲\"},{\"task\":\"noise2-1\",\"arrangement\":\"⟂\"},{\"task\":\"dice-2\",\"arrangement\":\"⚀⚁⚂⚃⚄⚅\"},{\"task\":\"risebar-1\",\"arrangement\":\"¯⁻-₋_\"},{\"task\":\"ramp-1\",\"arrangement\":\"▁▂▃▄▅▆▇█\"},{\"task\":\"noise2-0\",\"arrangement\":\"⟂\"},{\"task\":\"noise1-2\",\"arrangement\":\"⟂\"},{\"task\":\"risebar-2\"…"
+    }
+  ],
+  "totalTokens": 364170,
+  "totalToolCalls": 12
+}

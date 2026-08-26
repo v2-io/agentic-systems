@@ -1,0 +1,1787 @@
+{
+  "summary": "Sonnet agents: de-novo unicode magnitude surveys + blind pairwise judge battery",
+  "agentCount": 10,
+  "logs": [],
+  "result": {
+    "judgeAnswers": [
+      {
+        "chunk": 0,
+        "answers": [
+          {
+            "id": 0,
+            "ans": "<"
+          },
+          {
+            "id": 1,
+            "ans": "<"
+          },
+          {
+            "id": 2,
+            "ans": ">"
+          },
+          {
+            "id": 3,
+            "ans": "<"
+          },
+          {
+            "id": 4,
+            "ans": ">"
+          },
+          {
+            "id": 5,
+            "ans": ">"
+          },
+          {
+            "id": 6,
+            "ans": "<"
+          },
+          {
+            "id": 7,
+            "ans": ">"
+          },
+          {
+            "id": 8,
+            "ans": "<"
+          },
+          {
+            "id": 9,
+            "ans": ">"
+          },
+          {
+            "id": 10,
+            "ans": "<"
+          },
+          {
+            "id": 11,
+            "ans": "<"
+          },
+          {
+            "id": 12,
+            "ans": "<"
+          },
+          {
+            "id": 13,
+            "ans": "<"
+          },
+          {
+            "id": 14,
+            "ans": ">"
+          },
+          {
+            "id": 15,
+            "ans": ">"
+          },
+          {
+            "id": 16,
+            "ans": "<"
+          },
+          {
+            "id": 17,
+            "ans": "<"
+          },
+          {
+            "id": 18,
+            "ans": "<"
+          },
+          {
+            "id": 19,
+            "ans": ">"
+          },
+          {
+            "id": 20,
+            "ans": ">"
+          },
+          {
+            "id": 21,
+            "ans": ">"
+          },
+          {
+            "id": 22,
+            "ans": ">"
+          },
+          {
+            "id": 23,
+            "ans": ">"
+          },
+          {
+            "id": 24,
+            "ans": ">"
+          },
+          {
+            "id": 25,
+            "ans": "<"
+          },
+          {
+            "id": 26,
+            "ans": "<"
+          },
+          {
+            "id": 27,
+            "ans": ">"
+          },
+          {
+            "id": 28,
+            "ans": ">"
+          },
+          {
+            "id": 29,
+            "ans": ">"
+          },
+          {
+            "id": 30,
+            "ans": "<"
+          },
+          {
+            "id": 31,
+            "ans": ">"
+          },
+          {
+            "id": 32,
+            "ans": "<"
+          },
+          {
+            "id": 33,
+            "ans": ">"
+          },
+          {
+            "id": 34,
+            "ans": "<"
+          },
+          {
+            "id": 35,
+            "ans": "<"
+          },
+          {
+            "id": 36,
+            "ans": "<"
+          },
+          {
+            "id": 37,
+            "ans": "<"
+          },
+          {
+            "id": 38,
+            "ans": ">"
+          },
+          {
+            "id": 39,
+            "ans": ">"
+          },
+          {
+            "id": 40,
+            "ans": "<"
+          },
+          {
+            "id": 41,
+            "ans": ">"
+          },
+          {
+            "id": 42,
+            "ans": ">"
+          },
+          {
+            "id": 43,
+            "ans": "<"
+          },
+          {
+            "id": 44,
+            "ans": ">"
+          },
+          {
+            "id": 45,
+            "ans": ">"
+          },
+          {
+            "id": 46,
+            "ans": ">"
+          },
+          {
+            "id": 47,
+            "ans": ">"
+          },
+          {
+            "id": 48,
+            "ans": ">"
+          },
+          {
+            "id": 49,
+            "ans": ">"
+          },
+          {
+            "id": 50,
+            "ans": "<"
+          },
+          {
+            "id": 51,
+            "ans": ">"
+          },
+          {
+            "id": 52,
+            "ans": ">"
+          },
+          {
+            "id": 53,
+            "ans": ">"
+          },
+          {
+            "id": 54,
+            "ans": "<"
+          },
+          {
+            "id": 55,
+            "ans": "<"
+          },
+          {
+            "id": 56,
+            "ans": ">"
+          },
+          {
+            "id": 57,
+            "ans": "<"
+          },
+          {
+            "id": 58,
+            "ans": ">"
+          },
+          {
+            "id": 59,
+            "ans": ">"
+          },
+          {
+            "id": 60,
+            "ans": "<"
+          },
+          {
+            "id": 61,
+            "ans": ">"
+          },
+          {
+            "id": 62,
+            "ans": "<"
+          }
+        ]
+      },
+      {
+        "chunk": 1,
+        "answers": [
+          {
+            "id": 0,
+            "ans": ">"
+          },
+          {
+            "id": 1,
+            "ans": "<"
+          },
+          {
+            "id": 2,
+            "ans": "<"
+          },
+          {
+            "id": 3,
+            "ans": ">"
+          },
+          {
+            "id": 4,
+            "ans": ">"
+          },
+          {
+            "id": 5,
+            "ans": "<"
+          },
+          {
+            "id": 6,
+            "ans": ">"
+          },
+          {
+            "id": 7,
+            "ans": "<"
+          },
+          {
+            "id": 8,
+            "ans": "<"
+          },
+          {
+            "id": 9,
+            "ans": ">"
+          },
+          {
+            "id": 10,
+            "ans": ">"
+          },
+          {
+            "id": 11,
+            "ans": ">"
+          },
+          {
+            "id": 12,
+            "ans": "<"
+          },
+          {
+            "id": 13,
+            "ans": "<"
+          },
+          {
+            "id": 14,
+            "ans": "<"
+          },
+          {
+            "id": 15,
+            "ans": "<"
+          },
+          {
+            "id": 16,
+            "ans": "<"
+          },
+          {
+            "id": 17,
+            "ans": ">"
+          },
+          {
+            "id": 18,
+            "ans": ">"
+          },
+          {
+            "id": 19,
+            "ans": ">"
+          },
+          {
+            "id": 20,
+            "ans": "<"
+          },
+          {
+            "id": 21,
+            "ans": ">"
+          },
+          {
+            "id": 22,
+            "ans": "<"
+          },
+          {
+            "id": 23,
+            "ans": "<"
+          },
+          {
+            "id": 24,
+            "ans": "<"
+          },
+          {
+            "id": 25,
+            "ans": ">"
+          },
+          {
+            "id": 26,
+            "ans": "<"
+          },
+          {
+            "id": 27,
+            "ans": ">"
+          },
+          {
+            "id": 28,
+            "ans": "<"
+          },
+          {
+            "id": 29,
+            "ans": ">"
+          },
+          {
+            "id": 30,
+            "ans": ">"
+          },
+          {
+            "id": 31,
+            "ans": "<"
+          },
+          {
+            "id": 32,
+            "ans": ">"
+          },
+          {
+            "id": 33,
+            "ans": "<"
+          },
+          {
+            "id": 34,
+            "ans": ">"
+          },
+          {
+            "id": 35,
+            "ans": "<"
+          },
+          {
+            "id": 36,
+            "ans": ">"
+          },
+          {
+            "id": 37,
+            "ans": ">"
+          },
+          {
+            "id": 38,
+            "ans": "<"
+          },
+          {
+            "id": 39,
+            "ans": ">"
+          },
+          {
+            "id": 40,
+            "ans": "<"
+          },
+          {
+            "id": 41,
+            "ans": "<"
+          },
+          {
+            "id": 42,
+            "ans": ">"
+          },
+          {
+            "id": 43,
+            "ans": "<"
+          },
+          {
+            "id": 44,
+            "ans": ">"
+          },
+          {
+            "id": 45,
+            "ans": ">"
+          },
+          {
+            "id": 46,
+            "ans": "<"
+          },
+          {
+            "id": 47,
+            "ans": "<"
+          },
+          {
+            "id": 48,
+            "ans": ">"
+          },
+          {
+            "id": 49,
+            "ans": ">"
+          },
+          {
+            "id": 50,
+            "ans": ">"
+          },
+          {
+            "id": 51,
+            "ans": "<"
+          },
+          {
+            "id": 52,
+            "ans": ">"
+          },
+          {
+            "id": 53,
+            "ans": "<"
+          },
+          {
+            "id": 54,
+            "ans": ">"
+          },
+          {
+            "id": 55,
+            "ans": ">"
+          },
+          {
+            "id": 56,
+            "ans": ">"
+          },
+          {
+            "id": 57,
+            "ans": ">"
+          },
+          {
+            "id": 58,
+            "ans": ">"
+          },
+          {
+            "id": 59,
+            "ans": ">"
+          },
+          {
+            "id": 60,
+            "ans": ">"
+          },
+          {
+            "id": 61,
+            "ans": ">"
+          },
+          {
+            "id": 62,
+            "ans": ">"
+          }
+        ]
+      },
+      {
+        "chunk": 2,
+        "answers": [
+          {
+            "id": 0,
+            "ans": ">"
+          },
+          {
+            "id": 1,
+            "ans": "<"
+          },
+          {
+            "id": 2,
+            "ans": "<"
+          },
+          {
+            "id": 3,
+            "ans": ">"
+          },
+          {
+            "id": 4,
+            "ans": ">"
+          },
+          {
+            "id": 5,
+            "ans": "<"
+          },
+          {
+            "id": 6,
+            "ans": ">"
+          },
+          {
+            "id": 7,
+            "ans": ">"
+          },
+          {
+            "id": 8,
+            "ans": "<"
+          },
+          {
+            "id": 9,
+            "ans": ">"
+          },
+          {
+            "id": 10,
+            "ans": ">"
+          },
+          {
+            "id": 11,
+            "ans": "<"
+          },
+          {
+            "id": 12,
+            "ans": ">"
+          },
+          {
+            "id": 13,
+            "ans": ">"
+          },
+          {
+            "id": 14,
+            "ans": ">"
+          },
+          {
+            "id": 15,
+            "ans": "<"
+          },
+          {
+            "id": 16,
+            "ans": ">"
+          },
+          {
+            "id": 17,
+            "ans": ">"
+          },
+          {
+            "id": 18,
+            "ans": ">"
+          },
+          {
+            "id": 19,
+            "ans": "<"
+          },
+          {
+            "id": 20,
+            "ans": "<"
+          },
+          {
+            "id": 21,
+            "ans": ">"
+          },
+          {
+            "id": 22,
+            "ans": ">"
+          },
+          {
+            "id": 23,
+            "ans": ">"
+          },
+          {
+            "id": 24,
+            "ans": ">"
+          },
+          {
+            "id": 25,
+            "ans": ">"
+          },
+          {
+            "id": 26,
+            "ans": ">"
+          },
+          {
+            "id": 27,
+            "ans": "<"
+          },
+          {
+            "id": 28,
+            "ans": ">"
+          },
+          {
+            "id": 29,
+            "ans": ">"
+          },
+          {
+            "id": 30,
+            "ans": "<"
+          },
+          {
+            "id": 31,
+            "ans": ">"
+          },
+          {
+            "id": 32,
+            "ans": ">"
+          },
+          {
+            "id": 33,
+            "ans": ">"
+          },
+          {
+            "id": 34,
+            "ans": ">"
+          },
+          {
+            "id": 35,
+            "ans": ">"
+          },
+          {
+            "id": 36,
+            "ans": ">"
+          },
+          {
+            "id": 37,
+            "ans": ">"
+          },
+          {
+            "id": 38,
+            "ans": ">"
+          },
+          {
+            "id": 39,
+            "ans": ">"
+          },
+          {
+            "id": 40,
+            "ans": ">"
+          },
+          {
+            "id": 41,
+            "ans": ">"
+          },
+          {
+            "id": 42,
+            "ans": "<"
+          },
+          {
+            "id": 43,
+            "ans": ">"
+          },
+          {
+            "id": 44,
+            "ans": "<"
+          },
+          {
+            "id": 45,
+            "ans": ">"
+          },
+          {
+            "id": 46,
+            "ans": "<"
+          },
+          {
+            "id": 47,
+            "ans": "<"
+          },
+          {
+            "id": 48,
+            "ans": ">"
+          },
+          {
+            "id": 49,
+            "ans": ">"
+          },
+          {
+            "id": 50,
+            "ans": ">"
+          },
+          {
+            "id": 51,
+            "ans": ">"
+          },
+          {
+            "id": 52,
+            "ans": ">"
+          },
+          {
+            "id": 53,
+            "ans": "<"
+          },
+          {
+            "id": 54,
+            "ans": "<"
+          },
+          {
+            "id": 55,
+            "ans": ">"
+          },
+          {
+            "id": 56,
+            "ans": "<"
+          },
+          {
+            "id": 57,
+            "ans": ">"
+          },
+          {
+            "id": 58,
+            "ans": ">"
+          },
+          {
+            "id": 59,
+            "ans": ">"
+          },
+          {
+            "id": 60,
+            "ans": ">"
+          },
+          {
+            "id": 61,
+            "ans": "<"
+          },
+          {
+            "id": 62,
+            "ans": "<"
+          }
+        ]
+      },
+      {
+        "chunk": 3,
+        "answers": [
+          {
+            "id": 0,
+            "ans": ">"
+          },
+          {
+            "id": 1,
+            "ans": "<"
+          },
+          {
+            "id": 2,
+            "ans": "<"
+          },
+          {
+            "id": 3,
+            "ans": ">"
+          },
+          {
+            "id": 4,
+            "ans": ">"
+          },
+          {
+            "id": 5,
+            "ans": "<"
+          },
+          {
+            "id": 6,
+            "ans": ">"
+          },
+          {
+            "id": 7,
+            "ans": "<"
+          },
+          {
+            "id": 8,
+            "ans": "<"
+          },
+          {
+            "id": 9,
+            "ans": ">"
+          },
+          {
+            "id": 10,
+            "ans": ">"
+          },
+          {
+            "id": 11,
+            "ans": ">"
+          },
+          {
+            "id": 12,
+            "ans": ">"
+          },
+          {
+            "id": 13,
+            "ans": ">"
+          },
+          {
+            "id": 14,
+            "ans": "<"
+          },
+          {
+            "id": 15,
+            "ans": "<"
+          },
+          {
+            "id": 16,
+            "ans": ">"
+          },
+          {
+            "id": 17,
+            "ans": ">"
+          },
+          {
+            "id": 18,
+            "ans": "<"
+          },
+          {
+            "id": 19,
+            "ans": "<"
+          },
+          {
+            "id": 20,
+            "ans": ">"
+          },
+          {
+            "id": 21,
+            "ans": ">"
+          },
+          {
+            "id": 22,
+            "ans": ">"
+          },
+          {
+            "id": 23,
+            "ans": ">"
+          },
+          {
+            "id": 24,
+            "ans": "<"
+          },
+          {
+            "id": 25,
+            "ans": "<"
+          },
+          {
+            "id": 26,
+            "ans": "<"
+          },
+          {
+            "id": 27,
+            "ans": ">"
+          },
+          {
+            "id": 28,
+            "ans": ">"
+          },
+          {
+            "id": 29,
+            "ans": "<"
+          },
+          {
+            "id": 30,
+            "ans": ">"
+          },
+          {
+            "id": 31,
+            "ans": "<"
+          },
+          {
+            "id": 32,
+            "ans": ">"
+          },
+          {
+            "id": 33,
+            "ans": ">"
+          },
+          {
+            "id": 34,
+            "ans": "<"
+          },
+          {
+            "id": 35,
+            "ans": ">"
+          },
+          {
+            "id": 36,
+            "ans": "<"
+          },
+          {
+            "id": 37,
+            "ans": "<"
+          },
+          {
+            "id": 38,
+            "ans": ">"
+          },
+          {
+            "id": 39,
+            "ans": "<"
+          },
+          {
+            "id": 40,
+            "ans": "<"
+          },
+          {
+            "id": 41,
+            "ans": "<"
+          },
+          {
+            "id": 42,
+            "ans": ">"
+          },
+          {
+            "id": 43,
+            "ans": "<"
+          },
+          {
+            "id": 44,
+            "ans": ">"
+          },
+          {
+            "id": 45,
+            "ans": ">"
+          },
+          {
+            "id": 46,
+            "ans": ">"
+          },
+          {
+            "id": 47,
+            "ans": ">"
+          },
+          {
+            "id": 48,
+            "ans": ">"
+          },
+          {
+            "id": 49,
+            "ans": "<"
+          },
+          {
+            "id": 50,
+            "ans": ">"
+          },
+          {
+            "id": 51,
+            "ans": ">"
+          },
+          {
+            "id": 52,
+            "ans": ">"
+          },
+          {
+            "id": 53,
+            "ans": "<"
+          },
+          {
+            "id": 54,
+            "ans": "<"
+          },
+          {
+            "id": 55,
+            "ans": "<"
+          },
+          {
+            "id": 56,
+            "ans": ">"
+          },
+          {
+            "id": 57,
+            "ans": "<"
+          },
+          {
+            "id": 58,
+            "ans": ">"
+          },
+          {
+            "id": 59,
+            "ans": "<"
+          },
+          {
+            "id": 60,
+            "ans": ">"
+          },
+          {
+            "id": 61,
+            "ans": ">"
+          },
+          {
+            "id": 62,
+            "ans": "<"
+          }
+        ]
+      },
+      {
+        "chunk": 4,
+        "answers": [
+          {
+            "id": 0,
+            "ans": "<"
+          },
+          {
+            "id": 1,
+            "ans": ">"
+          },
+          {
+            "id": 2,
+            "ans": "<"
+          },
+          {
+            "id": 3,
+            "ans": "<"
+          },
+          {
+            "id": 4,
+            "ans": ">"
+          },
+          {
+            "id": 5,
+            "ans": "<"
+          },
+          {
+            "id": 6,
+            "ans": "<"
+          },
+          {
+            "id": 7,
+            "ans": ">"
+          },
+          {
+            "id": 8,
+            "ans": ">"
+          },
+          {
+            "id": 9,
+            "ans": ">"
+          },
+          {
+            "id": 10,
+            "ans": "<"
+          },
+          {
+            "id": 11,
+            "ans": ">"
+          },
+          {
+            "id": 12,
+            "ans": ">"
+          },
+          {
+            "id": 13,
+            "ans": "<"
+          },
+          {
+            "id": 14,
+            "ans": ">"
+          },
+          {
+            "id": 15,
+            "ans": ">"
+          },
+          {
+            "id": 16,
+            "ans": "<"
+          },
+          {
+            "id": 17,
+            "ans": "<"
+          },
+          {
+            "id": 18,
+            "ans": "<"
+          },
+          {
+            "id": 19,
+            "ans": ">"
+          },
+          {
+            "id": 20,
+            "ans": "<"
+          },
+          {
+            "id": 21,
+            "ans": "<"
+          },
+          {
+            "id": 22,
+            "ans": ">"
+          },
+          {
+            "id": 23,
+            "ans": "<"
+          },
+          {
+            "id": 24,
+            "ans": "<"
+          },
+          {
+            "id": 25,
+            "ans": ">"
+          },
+          {
+            "id": 26,
+            "ans": ">"
+          },
+          {
+            "id": 27,
+            "ans": "<"
+          },
+          {
+            "id": 28,
+            "ans": "<"
+          },
+          {
+            "id": 29,
+            "ans": "<"
+          },
+          {
+            "id": 30,
+            "ans": "<"
+          },
+          {
+            "id": 31,
+            "ans": ">"
+          },
+          {
+            "id": 32,
+            "ans": "<"
+          },
+          {
+            "id": 33,
+            "ans": "<"
+          },
+          {
+            "id": 34,
+            "ans": "<"
+          },
+          {
+            "id": 35,
+            "ans": ">"
+          },
+          {
+            "id": 36,
+            "ans": ">"
+          },
+          {
+            "id": 37,
+            "ans": "<"
+          },
+          {
+            "id": 38,
+            "ans": "<"
+          },
+          {
+            "id": 39,
+            "ans": "<"
+          },
+          {
+            "id": 40,
+            "ans": "<"
+          },
+          {
+            "id": 41,
+            "ans": ">"
+          },
+          {
+            "id": 42,
+            "ans": "<"
+          },
+          {
+            "id": 43,
+            "ans": "<"
+          },
+          {
+            "id": 44,
+            "ans": "<"
+          },
+          {
+            "id": 45,
+            "ans": ">"
+          },
+          {
+            "id": 46,
+            "ans": ">"
+          },
+          {
+            "id": 47,
+            "ans": "<"
+          },
+          {
+            "id": 48,
+            "ans": ">"
+          },
+          {
+            "id": 49,
+            "ans": "<"
+          },
+          {
+            "id": 50,
+            "ans": "<"
+          },
+          {
+            "id": 51,
+            "ans": ">"
+          },
+          {
+            "id": 52,
+            "ans": ">"
+          },
+          {
+            "id": 53,
+            "ans": ">"
+          },
+          {
+            "id": 54,
+            "ans": "<"
+          },
+          {
+            "id": 55,
+            "ans": ">"
+          },
+          {
+            "id": 56,
+            "ans": ">"
+          },
+          {
+            "id": 57,
+            "ans": "<"
+          },
+          {
+            "id": 58,
+            "ans": ">"
+          },
+          {
+            "id": 59,
+            "ans": ">"
+          },
+          {
+            "id": 60,
+            "ans": "<"
+          },
+          {
+            "id": 61,
+            "ans": ">"
+          },
+          {
+            "id": 62,
+            "ans": ">"
+          }
+        ]
+      },
+      {
+        "chunk": 5,
+        "answers": [
+          {
+            "id": 0,
+            "ans": ">"
+          },
+          {
+            "id": 1,
+            "ans": ">"
+          },
+          {
+            "id": 2,
+            "ans": ">"
+          },
+          {
+            "id": 3,
+            "ans": "<"
+          },
+          {
+            "id": 4,
+            "ans": "<"
+          },
+          {
+            "id": 5,
+            "ans": "<"
+          },
+          {
+            "id": 6,
+            "ans": "<"
+          },
+          {
+            "id": 7,
+            "ans": ">"
+          },
+          {
+            "id": 8,
+            "ans": "<"
+          },
+          {
+            "id": 9,
+            "ans": "<"
+          },
+          {
+            "id": 10,
+            "ans": "<"
+          },
+          {
+            "id": 11,
+            "ans": ">"
+          },
+          {
+            "id": 12,
+            "ans": "<"
+          },
+          {
+            "id": 13,
+            "ans": "<"
+          },
+          {
+            "id": 14,
+            "ans": "<"
+          },
+          {
+            "id": 15,
+            "ans": ">"
+          },
+          {
+            "id": 16,
+            "ans": ">"
+          },
+          {
+            "id": 17,
+            "ans": "<"
+          },
+          {
+            "id": 18,
+            "ans": ">"
+          },
+          {
+            "id": 19,
+            "ans": "<"
+          },
+          {
+            "id": 20,
+            "ans": "<"
+          },
+          {
+            "id": 21,
+            "ans": "<"
+          },
+          {
+            "id": 22,
+            "ans": "<"
+          },
+          {
+            "id": 23,
+            "ans": ">"
+          },
+          {
+            "id": 24,
+            "ans": ">"
+          },
+          {
+            "id": 25,
+            "ans": "<"
+          },
+          {
+            "id": 26,
+            "ans": "<"
+          },
+          {
+            "id": 27,
+            "ans": "<"
+          },
+          {
+            "id": 28,
+            "ans": "<"
+          },
+          {
+            "id": 29,
+            "ans": "<"
+          },
+          {
+            "id": 30,
+            "ans": "<"
+          },
+          {
+            "id": 31,
+            "ans": ">"
+          },
+          {
+            "id": 32,
+            "ans": ">"
+          },
+          {
+            "id": 33,
+            "ans": "<"
+          },
+          {
+            "id": 34,
+            "ans": ">"
+          },
+          {
+            "id": 35,
+            "ans": "<"
+          },
+          {
+            "id": 36,
+            "ans": ">"
+          },
+          {
+            "id": 37,
+            "ans": ">"
+          },
+          {
+            "id": 38,
+            "ans": "<"
+          },
+          {
+            "id": 39,
+            "ans": ">"
+          },
+          {
+            "id": 40,
+            "ans": "<"
+          },
+          {
+            "id": 41,
+            "ans": "<"
+          },
+          {
+            "id": 42,
+            "ans": ">"
+          },
+          {
+            "id": 43,
+            "ans": "<"
+          },
+          {
+            "id": 44,
+            "ans": ">"
+          },
+          {
+            "id": 45,
+            "ans": "<"
+          },
+          {
+            "id": 46,
+            "ans": ">"
+          },
+          {
+            "id": 47,
+            "ans": "<"
+          },
+          {
+            "id": 48,
+            "ans": ">"
+          },
+          {
+            "id": 49,
+            "ans": "<"
+          },
+          {
+            "id": 50,
+            "ans": ">"
+          },
+          {
+            "id": 51,
+            "ans": "<"
+          },
+          {
+            "id": 52,
+            "ans": "<"
+          },
+          {
+            "id": 53,
+            "ans": "<"
+          },
+          {
+            "id": 54,
+            "ans": ">"
+          },
+          {
+            "id": 55,
+            "ans": "<"
+          },
+          {
+            "id": 56,
+            "ans": ">"
+          },
+          {
+            "id": 57,
+            "ans": "<"
+          },
+          {
+            "id": 58,
+            "ans": "<"
+          },
+          {
+            "id": 59,
+            "ans": ">"
+          },
+          {
+            "id": 60,
+            "ans": ">"
+          },
+          {
+            "id": 61,
+            "ans": ">"
+          },
+          {
+            "id": 62,
+            "ans": ">"
+          }
+        ]
+      }
+    ],
+    "surveySummaries": [
+      {
+        "n": 1,
+        "summary": "Completed a first-instinct pass. Working files at `/Users/josephwecker-v2/src/arch/msc/sonnet-survey-1/sequences.md` (append-only, as requested) plus raw pane dumps I generated with `unicode-group` in that same directory.\n\nStrongest finds, ranked:\n\n1. **`▁▂▃▄▅▆▇█`** (Block Elements) — the sparkline bar-height ramp. Strongest item in the whole pass: maximal immediacy (it functionally *is* a bar chart, no decoding step) and maximal confidence a pairwise task would recover it.\n2. **`░▒▓█`** — shade-density ramp, same family, very strong but shorter.\n3. **`○◔◑◕●`** — circle fill ramp (0/25/50/75/100%), reads like a battery/pie gauge. Noted that ◐ and ◑ (left-half vs right-half) feel like a *tie* — my magnitude sense doesn't care which side is filled, only how much.\n4. **`⚀⚁⚂⚃⚄⚅`** — die faces, the one you predicted I'd predict. Confirmed maximally strong, and importantly via subitizing dots, not digit-convention — a clean example of the immediacy distinction you asked about.\n5. Square/triangle size ladders (`▫◽◻□`, `▴▲`) — strong but short.\n\nWhat surprised me most: the immediacy distinction isn't just a property of a symbol *family*, it can cliff mid-family. Roman numerals `Ⅰ Ⅱ Ⅲ` feel genuinely immediate (stroke-counting/subitizing) but at `Ⅳ` it hard-cuts into pure subtractive-convention lookup — and a naive stroke-counter would actually get misled there (Ⅳ has fewer strokes than Ⅲ despite denoting more). I flagged several other clean \"real semantic magnitude, zero perceptual arrival\" contrast cases per your request: superscript/subscript digits, vulgar fractions (probably the least-immediate item I found — two-part symbol plus an inversion), yin-yang digrams (greater/lesser yang/yin), and chess piece rank (which also breaks into a partial order since knight≈bishop tie).\n\nHonest scope: I covered Geometric Shapes, Block Elements, Miscellaneous Symbols, Arrows, Superscripts/Subscripts, Number Forms, and Enclosed Alphanumerics. I deliberately stopped there rather than grinding through Mathematical Operators, Misc Technical, Dingbats, Spacing Modifier Letters, and the supplemental blocks — wanted to get first-instinct findings in front of you rather than risk overthinking. Happy to continue into those blocks, and glad to stay on the line if you want to steer before I go further."
+      },
+      {
+        "n": 2,
+        "summary": "My strongest finds and what surprised me:\n\n**Strongest immediacy finding:** `▁▂▃▄▅▆▇█` (Block Elements, lower-eighths blocks) is the purest case of magnitude arriving in the percept itself — rising bar height, zero symbol decoding, and codepoints happen to be perfectly monotonic too. `░▒▓█` (dither density) is a close second.\n\n**Sharpest immediacy/strength split:** the circled/parenthesized digit families (①②③... etc.) have maximal ordering-confidence but are *not* immediate at all — pure numeral lookup, no perceptual fill or size change. This made me realize \"strength\" (would pairwise-compare recover the order) and \"immediacy\" (does it arrive before conscious reading) are genuinely orthogonal axes, not two names for the same thing.\n\n**Best circle-fill gauge:** ○◔◑◕● (quarter/half/three-quarter/full black circle) reads exactly like a battery or signal-strength icon — fully immediate, and its codepoints are scattered non-adjacently (25CB, 25D4, 25D1, 25D5, 25CF), so assembling it required semantic search, not codepoint scanning.\n\n**What surprised me most:** the `< ≪ ⋘` \"much less than / very much less than\" chevron-doubling ramp — it spans ASCII plus two separate supplemental-math blocks (U+226A and U+22D8 are ~150 codepoints apart) yet reads instantly via pure glyph-repetition-as-intensity, the same visual grammar as stacking exclamation points. I didn't expect a mathematical-relation block to produce an immediate perceptual ramp.\n\n**Also surprising:** Unicode's own glyph *names* spell out an explicit magnitude adjective ladder in U+1F784–89 (BLACK SLIGHTLY SMALL CIRCLE → MEDIUM BOLD → BOLD → HEAVY → VERY HEAVY → EXTREMELY HEAVY WHITE CIRCLE) — external confirmation the ordering isn't just my projection.\n\n**Semantic-override-of-codepoint cases** (per Joseph's note #5): ⓪ (circled zero) slots to the front of ①②③... despite living at the far end of its codepoint block; and fill ascends while codepoints *descend* within `▏▎▍▌▋▊▉█`.\n\n**Honest gap:** I did not get to dice/trigrams/hexagrams, arrows, or misc-technical/geometric-shapes-extended before wrapping this pass — flagged in the file rather than silently omitted.\n\nWorking file: `/Users/josephwecker-v2/src/arch/msc/sonnet-survey-2/sequences.md`\n\nI'm happy to stay available for follow-up or to continue the sweep (arrows, hexagrams, playing cards, dominoes still unvisited) if useful."
+      },
+      {
+        "n": 3,
+        "summary": "Full log at `/Users/josephwecker-v2/src/arch/msc/sonnet-survey-3/sequences.md` (277 lines). Summary of the pass:\n\n**Strongest finds, ranked by immediacy (magnitude landing in the percept, not via lookup):**\n\n1. `▁▂▃▄▅▆▇█` (block fill) and `◌○◔◑◕●` / `🌑🌒🌓🌔🌕` (pie/disc fill) — the clearest cases where \"more\" is pure area, zero symbol lookup.\n2. `<≪⋘` / `>≫⋙` (chevron-stacking) and `→⇒⇛` (stroke-count arrows) — Unicode's own names spell \"much\"/\"very much less than,\" so semantic naming and glyph-stacking agree; genuinely scattered codepoints (U+2192, U+21D2, U+21DB) with a strong monotonic feel, which is the exact \"scattered but strong\" case the brief asked for.\n3. `⚀⚁⚂⚃⚄⚅` (dice) and `⠀⠁⠃⠇⠏⠟⠿` (braille dot-count) — subitizing-based, immediate for small counts, a hair slower past ~4.\n4. `🞅🞆🞇🞈🞉` — a Geometric-Shapes-Extended stroke-weight family where Unicode's names literally are the ramp (medium-bold/bold/heavy/very-heavy/extremely-heavy).\n\n**What surprised me most:** the enclosed/circled/parenthesized digit families (`①②③…`, `⑴⑵⑶…`) initially felt like my strongest candidates — extremely high pairwise-recoverability confidence — but they're actually immediacy-zero: the ordering comes entirely from digit recognition, the circle contributes nothing. Hitting the block-elements ramp mid-survey recalibrated what \"immediate\" even means, and I think a naive first pass (mine, an hour earlier) would over-report the digit-lookup families and under-report the true fill/count ramps, because strength is easy to introspect and immediacy isn't.\n\n**Trigrams** (`☰☱☲☳☴☵☶☷`), which Joseph named as an expected hit: honestly, I don't get a perceptual ordering from these at all without retrieving the King-Wen binary convention, and even then it's arithmetic (counting broken/unbroken lines), not percept — flagged as a strength/immediacy split rather than rounding it up to a clean finding.\n\n**A recurring non-finding:** bare white/black or inclusive/exclusive toggles (▫▪, ⊂⊆, ≤≦, same-fraction-different-orientation circles like ◐◑◒◓) essentially never read as magnitude, even when technically ordered — a qualitative flip doesn't supply the same \"more\" signal a continuous fill or count does.\n\nI'm happy to stay on the line if you want to follow up."
+      },
+      {
+        "n": 4,
+        "summary": "Completed a first-instinct pass. Full working log at `/Users/josephwecker-v2/src/arch/msc/sonnet-survey-4/sequences.md`. Summary of strongest finds and surprises:\n\n**Strongest percept-immediate (magnitude arrives in the shape itself, no lookup):**\n- `▁▂▃▄▅▆▇█` (block height) and `░▒▓█` (shade density) — the paradigm case, essentially a native sparkline.\n- `○◔◑◕●` — quarter-fill circle ramp, a \"pie chart\" cousin of the block ramp, scattered codepoints.\n- `🌑🌒🌓🌔🌕` — moon phases, waxing half only (the full 8-phase cycle is NOT monotonic — it's a cycle, I flagged that explicitly since it's an easy false-positive).\n- `<` → `≪` → `⋘` — chevron-count \"much-less-than\" ladder, crosses from ASCII into Mathematical Operators.\n- `→⇒⇛` and `∫∬∭`/`∮∯∰` — stroke/mark-count ladders in Arrows and Math Operators.\n- `⠀⠁⠃⠇⠏⠟⠿⣿` — braille dot-count fill ramp, same mechanism as the block bars but dot-based.\n\n**Surprising internal split (mixed immediacy within one \"expected\" sequence):** `⚀⚁⚂⚃⚄⚅` (dice) and the domino pip ramp both subitize instantly for 1-3 but require actual counting for 4-6 — so the sequence Joseph specifically predicted I'd flag turned out to *not* be uniformly immediate along its own length, which I hadn't expected before actually looking.\n\n**Clear negative on the other predicted item:** the eight trigrams (`☰☱☲☳☴☵☶☷`) did NOT give me a monotonic magnitude feel — decoding solid/broken lines as a 3-bit value isn't something I can subitize, and Unicode's own ordering doesn't even follow binary value. Chess pieces by game-value and subset-relation symbols (`⊂⊆`) were similarly negative — real orderings that exist only via outside knowledge, with zero visual \"more\" cue, which I'm calling out as a distinct third category (SEMANTIC/LEARNED) alongside PERCEPT and SYMBOLIC-numeral.\n\n**Genuinely ambiguous, reported honestly rather than forced:** `√∛∜` (root-degree vs. output-magnitude point in opposite directions), `⇉` vs `⇒` (parallel-count vs. stroke-weight don't reduce to each other).\n\nI did not get through the whole 1/2/3-byte space — stopped after ~12 panes (Enclosed Alphanumerics, Block Elements, Geometric Shapes, Misc Symbols, Number Forms, Arrows, Math Operators, Braille, Misc Technical, Dominoes, Dingbats, Moon Phases). Remaining unexplored: Supplemental Arrows-A/B/C, Supplemental Math Symbols A/B, Misc Symbols and Arrows (U+2B00), Playing Cards, Mahjong, CJK punctuation, Mathematical Alphanumeric Symbols, and the rest of Supplemental Symbols and Pictographs. Happy to continue if useful — staying available for follow-up."
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Survey"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Judge"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "survey-1",
+      "phaseIndex": 1,
+      "phaseTitle": "Survey",
+      "agentId": "ab90bde12ec79e646",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693346993,
+      "queuedAt": 1787693346991,
+      "attempt": 1,
+      "lastToolName": "Edit",
+      "lastToolSummary": "/Users/josephwecker-v2/src/arch/msc/sonnet-survey-1/sequenc…",
+      "promptPreview": "Hello! Joseph (the human steward of this repo) invited a few of us to independently perform a perception survey he designed, and I'm passing his invitation to you as a peer — you're free to decline or reframe if something doesn't sit right.\n\nThe brief that states the task better than I could restate it is /Users/josephwecker-v2/src/arch/instr2.md — I'd read it fully first; it's short and it IS the…",
+      "lastProgressAt": 1787693557718,
+      "tokens": 100703,
+      "toolCalls": 19,
+      "durationMs": 210724,
+      "resultPreview": "Completed a first-instinct pass. Working files at `/Users/josephwecker-v2/src/arch/msc/sonnet-survey-1/sequences.md` (append-only, as requested) plus raw pane dumps I generated with `unicode-group` in that same directory.\n\nStrongest finds, ranked:\n\n1. **`▁▂▃▄▅▆▇█`** (Block Elements) — the sparkline bar-height ramp. Strongest item in the whole pass: maximal immediacy (it functionally *is* a bar cha…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "survey-2",
+      "phaseIndex": 1,
+      "phaseTitle": "Survey",
+      "agentId": "a8ae0b5597d66ceb4",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693346993,
+      "queuedAt": 1787693346992,
+      "attempt": 1,
+      "lastToolName": "Edit",
+      "lastToolSummary": "/Users/josephwecker-v2/src/arch/msc/sonnet-survey-2/sequenc…",
+      "promptPreview": "Hello! Joseph (the human steward of this repo) invited a few of us to independently perform a perception survey he designed, and I'm passing his invitation to you as a peer — you're free to decline or reframe if something doesn't sit right.\n\nThe brief that states the task better than I could restate it is /Users/josephwecker-v2/src/arch/instr2.md — I'd read it fully first; it's short and it IS the…",
+      "lastProgressAt": 1787693518915,
+      "tokens": 92453,
+      "toolCalls": 15,
+      "durationMs": 169569,
+      "resultPreview": "My strongest finds and what surprised me:\n\n**Strongest immediacy finding:** `▁▂▃▄▅▆▇█` (Block Elements, lower-eighths blocks) is the purest case of magnitude arriving in the percept itself — rising bar height, zero symbol decoding, and codepoints happen to be perfectly monotonic too. `░▒▓█` (dither density) is a close second.\n\n**Sharpest immediacy/strength split:** the circled/parenthesized digit …"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "survey-3",
+      "phaseIndex": 1,
+      "phaseTitle": "Survey",
+      "agentId": "a73ab2e89d2e0a25e",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693346993,
+      "queuedAt": 1787693346992,
+      "attempt": 1,
+      "lastToolName": "Bash",
+      "lastToolSummary": "wc -l /Users/josephwecker-v2/src/arch/msc/sonnet-survey-3/s…",
+      "promptPreview": "Hello! Joseph (the human steward of this repo) invited a few of us to independently perform a perception survey he designed, and I'm passing his invitation to you as a peer — you're free to decline or reframe if something doesn't sit right.\n\nThe brief that states the task better than I could restate it is /Users/josephwecker-v2/src/arch/instr2.md — I'd read it fully first; it's short and it IS the…",
+      "lastProgressAt": 1787693549821,
+      "tokens": 102113,
+      "toolCalls": 20,
+      "durationMs": 200475,
+      "resultPreview": "Full log at `/Users/josephwecker-v2/src/arch/msc/sonnet-survey-3/sequences.md` (277 lines). Summary of the pass:\n\n**Strongest finds, ranked by immediacy (magnitude landing in the percept, not via lookup):**\n\n1. `▁▂▃▄▅▆▇█` (block fill) and `◌○◔◑◕●` / `🌑🌒🌓🌔🌕` (pie/disc fill) — the clearest cases where \"more\" is pure area, zero symbol lookup.\n2. `<≪⋘` / `>≫⋙` (chevron-stacking) and `→⇒⇛` (stroke…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "survey-4",
+      "phaseIndex": 1,
+      "phaseTitle": "Survey",
+      "agentId": "aa7f186b5f1c7a847",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693346994,
+      "queuedAt": 1787693346992,
+      "attempt": 1,
+      "lastToolName": "Bash",
+      "lastToolSummary": "rm -f /Users/josephwecker-v2/src/arch/msc/sonnet-survey-4/p…",
+      "promptPreview": "Hello! Joseph (the human steward of this repo) invited a few of us to independently perform a perception survey he designed, and I'm passing his invitation to you as a peer — you're free to decline or reframe if something doesn't sit right.\n\nThe brief that states the task better than I could restate it is /Users/josephwecker-v2/src/arch/instr2.md — I'd read it fully first; it's short and it IS the…",
+      "lastProgressAt": 1787693734458,
+      "tokens": 131612,
+      "toolCalls": 45,
+      "durationMs": 385112,
+      "resultPreview": "Completed a first-instinct pass. Full working log at `/Users/josephwecker-v2/src/arch/msc/sonnet-survey-4/sequences.md`. Summary of strongest finds and surprises:\n\n**Strongest percept-immediate (magnitude arrives in the shape itself, no lookup):**\n- `▁▂▃▄▅▆▇█` (block height) and `░▒▓█` (shade density) — the paradigm case, essentially a native sparkline.\n- `○◔◑◕●` — quarter-fill circle ramp, a \"pie…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "judge-0",
+      "phaseIndex": 2,
+      "phaseTitle": "Judge",
+      "agentId": "ad6f816d32c602ba0",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693347006,
+      "queuedAt": 1787693346998,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts only, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/battery-chunk-0.json. It is a list of items, each with an \"id\" and two glyphs \"a\" and \"b\". For each item: which glyph represents MORE — greater magnitude, amount, intensity, or value? Answer '<' if b is more, '>' if a is more. Go with your immediate impression rather …",
+      "lastProgressAt": 1787693371947,
+      "tokens": 60973,
+      "toolCalls": 2,
+      "durationMs": 24940,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"ans\":\"<\"},{\"id\":1,\"ans\":\"<\"},{\"id\":2,\"ans\":\">\"},{\"id\":3,\"ans\":\"<\"},{\"id\":4,\"ans\":\">\"},{\"id\":5,\"ans\":\">\"},{\"id\":6,\"ans\":\"<\"},{\"id\":7,\"ans\":\">\"},{\"id\":8,\"ans\":\"<\"},{\"id\":9,\"ans\":\">\"},{\"id\":10,\"ans\":\"<\"},{\"id\":11,\"ans\":\"<\"},{\"id\":12,\"ans\":\"<\"},{\"id\":13,\"ans\":\"<\"},{\"id\":14,\"ans\":\">\"},{\"id\":15,\"ans\":\">\"},{\"id\":16,\"ans\":\"<\"},{\"id\":17,\"ans\":\"<\"},{\"id\":18,\"ans\":\"<\"},{\"id\":19,\"ans\":\">\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "judge-1",
+      "phaseIndex": 2,
+      "phaseTitle": "Judge",
+      "agentId": "a59645ad91cafd8f8",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693347006,
+      "queuedAt": 1787693346998,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts only, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/battery-chunk-1.json. It is a list of items, each with an \"id\" and two glyphs \"a\" and \"b\". For each item: which glyph represents MORE — greater magnitude, amount, intensity, or value? Answer '<' if b is more, '>' if a is more. Go with your immediate impression rather …",
+      "lastProgressAt": 1787693378244,
+      "tokens": 60957,
+      "toolCalls": 2,
+      "durationMs": 27458,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"ans\":\">\"},{\"id\":1,\"ans\":\"<\"},{\"id\":2,\"ans\":\"<\"},{\"id\":3,\"ans\":\">\"},{\"id\":4,\"ans\":\">\"},{\"id\":5,\"ans\":\"<\"},{\"id\":6,\"ans\":\">\"},{\"id\":7,\"ans\":\"<\"},{\"id\":8,\"ans\":\"<\"},{\"id\":9,\"ans\":\">\"},{\"id\":10,\"ans\":\">\"},{\"id\":11,\"ans\":\">\"},{\"id\":12,\"ans\":\"<\"},{\"id\":13,\"ans\":\"<\"},{\"id\":14,\"ans\":\"<\"},{\"id\":15,\"ans\":\"<\"},{\"id\":16,\"ans\":\"<\"},{\"id\":17,\"ans\":\">\"},{\"id\":18,\"ans\":\">\"},{\"id\":19,\"ans\":\">\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "judge-2",
+      "phaseIndex": 2,
+      "phaseTitle": "Judge",
+      "agentId": "abce5b29d7774390d",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693347007,
+      "queuedAt": 1787693346998,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts only, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/battery-chunk-2.json. It is a list of items, each with an \"id\" and two glyphs \"a\" and \"b\". For each item: which glyph represents MORE — greater magnitude, amount, intensity, or value? Answer '<' if b is more, '>' if a is more. Go with your immediate impression rather …",
+      "lastProgressAt": 1787693372734,
+      "tokens": 60971,
+      "toolCalls": 2,
+      "durationMs": 21948,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"ans\":\">\"},{\"id\":1,\"ans\":\"<\"},{\"id\":2,\"ans\":\"<\"},{\"id\":3,\"ans\":\">\"},{\"id\":4,\"ans\":\">\"},{\"id\":5,\"ans\":\"<\"},{\"id\":6,\"ans\":\">\"},{\"id\":7,\"ans\":\">\"},{\"id\":8,\"ans\":\"<\"},{\"id\":9,\"ans\":\">\"},{\"id\":10,\"ans\":\">\"},{\"id\":11,\"ans\":\"<\"},{\"id\":12,\"ans\":\">\"},{\"id\":13,\"ans\":\">\"},{\"id\":14,\"ans\":\">\"},{\"id\":15,\"ans\":\"<\"},{\"id\":16,\"ans\":\">\"},{\"id\":17,\"ans\":\">\"},{\"id\":18,\"ans\":\">\"},{\"id\":19,\"ans\":\"<\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "judge-3",
+      "phaseIndex": 2,
+      "phaseTitle": "Judge",
+      "agentId": "a0564f746aef78fd8",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693347007,
+      "queuedAt": 1787693346998,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts only, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/battery-chunk-3.json. It is a list of items, each with an \"id\" and two glyphs \"a\" and \"b\". For each item: which glyph represents MORE — greater magnitude, amount, intensity, or value? Answer '<' if b is more, '>' if a is more. Go with your immediate impression rather …",
+      "lastProgressAt": 1787693379297,
+      "tokens": 60948,
+      "toolCalls": 2,
+      "durationMs": 28510,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"ans\":\">\"},{\"id\":1,\"ans\":\"<\"},{\"id\":2,\"ans\":\"<\"},{\"id\":3,\"ans\":\">\"},{\"id\":4,\"ans\":\">\"},{\"id\":5,\"ans\":\"<\"},{\"id\":6,\"ans\":\">\"},{\"id\":7,\"ans\":\"<\"},{\"id\":8,\"ans\":\"<\"},{\"id\":9,\"ans\":\">\"},{\"id\":10,\"ans\":\">\"},{\"id\":11,\"ans\":\">\"},{\"id\":12,\"ans\":\">\"},{\"id\":13,\"ans\":\">\"},{\"id\":14,\"ans\":\"<\"},{\"id\":15,\"ans\":\"<\"},{\"id\":16,\"ans\":\">\"},{\"id\":17,\"ans\":\">\"},{\"id\":18,\"ans\":\"<\"},{\"id\":19,\"ans\":\"<\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 9,
+      "label": "judge-4",
+      "phaseIndex": 2,
+      "phaseTitle": "Judge",
+      "agentId": "a06268a5ae3de1ebf",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693347007,
+      "queuedAt": 1787693346998,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts only, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/battery-chunk-4.json. It is a list of items, each with an \"id\" and two glyphs \"a\" and \"b\". For each item: which glyph represents MORE — greater magnitude, amount, intensity, or value? Answer '<' if b is more, '>' if a is more. Go with your immediate impression rather …",
+      "lastProgressAt": 1787693382708,
+      "tokens": 60997,
+      "toolCalls": 2,
+      "durationMs": 31921,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"ans\":\"<\"},{\"id\":1,\"ans\":\">\"},{\"id\":2,\"ans\":\"<\"},{\"id\":3,\"ans\":\"<\"},{\"id\":4,\"ans\":\">\"},{\"id\":5,\"ans\":\"<\"},{\"id\":6,\"ans\":\"<\"},{\"id\":7,\"ans\":\">\"},{\"id\":8,\"ans\":\">\"},{\"id\":9,\"ans\":\">\"},{\"id\":10,\"ans\":\"<\"},{\"id\":11,\"ans\":\">\"},{\"id\":12,\"ans\":\">\"},{\"id\":13,\"ans\":\"<\"},{\"id\":14,\"ans\":\">\"},{\"id\":15,\"ans\":\">\"},{\"id\":16,\"ans\":\"<\"},{\"id\":17,\"ans\":\"<\"},{\"id\":18,\"ans\":\"<\"},{\"id\":19,\"ans\":\">\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 10,
+      "label": "judge-5",
+      "phaseIndex": 2,
+      "phaseTitle": "Judge",
+      "agentId": "aab3c3d85ae13d801",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693347007,
+      "queuedAt": 1787693346998,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts only, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/battery-chunk-5.json. It is a list of items, each with an \"id\" and two glyphs \"a\" and \"b\". For each item: which glyph represents MORE — greater magnitude, amount, intensity, or value? Answer '<' if b is more, '>' if a is more. Go with your immediate impression rather …",
+      "lastProgressAt": 1787693379967,
+      "tokens": 60984,
+      "toolCalls": 2,
+      "durationMs": 29180,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"ans\":\">\"},{\"id\":1,\"ans\":\">\"},{\"id\":2,\"ans\":\">\"},{\"id\":3,\"ans\":\"<\"},{\"id\":4,\"ans\":\"<\"},{\"id\":5,\"ans\":\"<\"},{\"id\":6,\"ans\":\"<\"},{\"id\":7,\"ans\":\">\"},{\"id\":8,\"ans\":\"<\"},{\"id\":9,\"ans\":\"<\"},{\"id\":10,\"ans\":\"<\"},{\"id\":11,\"ans\":\">\"},{\"id\":12,\"ans\":\"<\"},{\"id\":13,\"ans\":\"<\"},{\"id\":14,\"ans\":\"<\"},{\"id\":15,\"ans\":\">\"},{\"id\":16,\"ans\":\">\"},{\"id\":17,\"ans\":\"<\"},{\"id\":18,\"ans\":\">\"},{\"id\":19,\"ans\":\"<\"…"
+    }
+  ],
+  "totalTokens": 792711,
+  "totalToolCalls": 111
+}

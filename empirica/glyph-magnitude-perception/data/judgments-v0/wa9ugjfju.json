@@ -1,0 +1,1018 @@
+{
+  "summary": "Fresh judges on axis-anti-aligned pairs (ink vs count vs value)",
+  "agentCount": 8,
+  "logs": [],
+  "result": {
+    "judges": [
+      {
+        "judge": 0,
+        "answers": [
+          {
+            "id": 0,
+            "more": "☰",
+            "by": "somewhat"
+          },
+          {
+            "id": 1,
+            "more": "⑩",
+            "by": "somewhat"
+          },
+          {
+            "id": 2,
+            "more": "Ⅴ",
+            "by": "somewhat"
+          },
+          {
+            "id": 3,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 4,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 5,
+            "more": "🯸",
+            "by": "vastly"
+          },
+          {
+            "id": 6,
+            "more": "‱",
+            "by": "somewhat"
+          },
+          {
+            "id": 7,
+            "more": "⚏",
+            "by": "somewhat"
+          },
+          {
+            "id": 8,
+            "more": "⚏",
+            "by": "somewhat"
+          },
+          {
+            "id": 9,
+            "more": "Ⅸ",
+            "by": "somewhat"
+          },
+          {
+            "id": 10,
+            "more": "🯸",
+            "by": "vastly"
+          },
+          {
+            "id": 11,
+            "more": "⑩",
+            "by": "somewhat"
+          },
+          {
+            "id": 12,
+            "more": "‱",
+            "by": "somewhat"
+          },
+          {
+            "id": 13,
+            "more": "☰",
+            "by": "somewhat"
+          },
+          {
+            "id": 14,
+            "more": "Ⅴ",
+            "by": "somewhat"
+          },
+          {
+            "id": 15,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 16,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 17,
+            "more": "‱",
+            "by": "somewhat"
+          },
+          {
+            "id": 18,
+            "more": "Ⅸ",
+            "by": "somewhat"
+          },
+          {
+            "id": 19,
+            "more": "‱",
+            "by": "somewhat"
+          }
+        ]
+      },
+      {
+        "judge": 1,
+        "answers": [
+          {
+            "id": 0,
+            "more": "☰",
+            "by": "somewhat"
+          },
+          {
+            "id": 1,
+            "more": "⑩",
+            "by": "somewhat"
+          },
+          {
+            "id": 2,
+            "more": "Ⅴ",
+            "by": "somewhat"
+          },
+          {
+            "id": 3,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 4,
+            "more": "☷",
+            "by": "somewhat"
+          },
+          {
+            "id": 5,
+            "more": "🯸",
+            "by": "much"
+          },
+          {
+            "id": 6,
+            "more": "‱",
+            "by": "somewhat"
+          },
+          {
+            "id": 7,
+            "more": "⚏",
+            "by": "somewhat"
+          },
+          {
+            "id": 8,
+            "more": "⚏",
+            "by": "somewhat"
+          },
+          {
+            "id": 9,
+            "more": "Ⅸ",
+            "by": "somewhat"
+          },
+          {
+            "id": 10,
+            "more": "🯸",
+            "by": "much"
+          },
+          {
+            "id": 11,
+            "more": "⑩",
+            "by": "somewhat"
+          },
+          {
+            "id": 12,
+            "more": "‱",
+            "by": "somewhat"
+          },
+          {
+            "id": 13,
+            "more": "☰",
+            "by": "somewhat"
+          },
+          {
+            "id": 14,
+            "more": "Ⅴ",
+            "by": "somewhat"
+          },
+          {
+            "id": 15,
+            "more": "☷",
+            "by": "somewhat"
+          },
+          {
+            "id": 16,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 17,
+            "more": "‱",
+            "by": "somewhat"
+          },
+          {
+            "id": 18,
+            "more": "Ⅸ",
+            "by": "somewhat"
+          },
+          {
+            "id": 19,
+            "more": "‱",
+            "by": "somewhat"
+          }
+        ]
+      },
+      {
+        "judge": 2,
+        "answers": [
+          {
+            "id": 0,
+            "more": "☰",
+            "by": "somewhat"
+          },
+          {
+            "id": 1,
+            "more": "⑩",
+            "by": "somewhat"
+          },
+          {
+            "id": 2,
+            "more": "Ⅴ",
+            "by": "somewhat"
+          },
+          {
+            "id": 3,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 4,
+            "more": "☷",
+            "by": "somewhat"
+          },
+          {
+            "id": 5,
+            "more": "🯸",
+            "by": "vastly"
+          },
+          {
+            "id": 6,
+            "more": "‱",
+            "by": "somewhat"
+          },
+          {
+            "id": 7,
+            "more": "⚏",
+            "by": "somewhat"
+          },
+          {
+            "id": 8,
+            "more": "⚏",
+            "by": "somewhat"
+          },
+          {
+            "id": 9,
+            "more": "Ⅸ",
+            "by": "somewhat"
+          },
+          {
+            "id": 10,
+            "more": "🯸",
+            "by": "vastly"
+          },
+          {
+            "id": 11,
+            "more": "⑩",
+            "by": "somewhat"
+          },
+          {
+            "id": 12,
+            "more": "‱",
+            "by": "somewhat"
+          },
+          {
+            "id": 13,
+            "more": "☰",
+            "by": "somewhat"
+          },
+          {
+            "id": 14,
+            "more": "Ⅴ",
+            "by": "somewhat"
+          },
+          {
+            "id": 15,
+            "more": "☷",
+            "by": "somewhat"
+          },
+          {
+            "id": 16,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 17,
+            "more": "‱",
+            "by": "somewhat"
+          },
+          {
+            "id": 18,
+            "more": "Ⅸ",
+            "by": "somewhat"
+          },
+          {
+            "id": 19,
+            "more": "‱",
+            "by": "somewhat"
+          }
+        ]
+      },
+      {
+        "judge": 3,
+        "answers": [
+          {
+            "id": 0,
+            "more": "☰",
+            "by": "somewhat"
+          },
+          {
+            "id": 1,
+            "more": "⑩",
+            "by": "somewhat"
+          },
+          {
+            "id": 2,
+            "more": "Ⅴ",
+            "by": "somewhat"
+          },
+          {
+            "id": 3,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 4,
+            "more": "☷",
+            "by": "somewhat"
+          },
+          {
+            "id": 5,
+            "more": "🯸",
+            "by": "vastly"
+          },
+          {
+            "id": 6,
+            "more": "‰",
+            "by": "somewhat"
+          },
+          {
+            "id": 7,
+            "more": "⚏",
+            "by": "somewhat"
+          },
+          {
+            "id": 8,
+            "more": "⚏",
+            "by": "somewhat"
+          },
+          {
+            "id": 9,
+            "more": "Ⅸ",
+            "by": "somewhat"
+          },
+          {
+            "id": 10,
+            "more": "🯸",
+            "by": "vastly"
+          },
+          {
+            "id": 11,
+            "more": "⑩",
+            "by": "somewhat"
+          },
+          {
+            "id": 12,
+            "more": "%",
+            "by": "much"
+          },
+          {
+            "id": 13,
+            "more": "☰",
+            "by": "somewhat"
+          },
+          {
+            "id": 14,
+            "more": "Ⅴ",
+            "by": "somewhat"
+          },
+          {
+            "id": 15,
+            "more": "☷",
+            "by": "somewhat"
+          },
+          {
+            "id": 16,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 17,
+            "more": "%",
+            "by": "much"
+          },
+          {
+            "id": 18,
+            "more": "Ⅸ",
+            "by": "somewhat"
+          },
+          {
+            "id": 19,
+            "more": "‰",
+            "by": "somewhat"
+          }
+        ]
+      },
+      {
+        "judge": 4,
+        "answers": [
+          {
+            "id": 0,
+            "more": "☰",
+            "by": "somewhat"
+          },
+          {
+            "id": 1,
+            "more": "⑩",
+            "by": "somewhat"
+          },
+          {
+            "id": 2,
+            "more": "Ⅴ",
+            "by": "somewhat"
+          },
+          {
+            "id": 3,
+            "more": "☷",
+            "by": "somewhat"
+          },
+          {
+            "id": 4,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 5,
+            "more": "🯸",
+            "by": "much"
+          },
+          {
+            "id": 6,
+            "more": "‰",
+            "by": "somewhat"
+          },
+          {
+            "id": 7,
+            "more": "⚏",
+            "by": "somewhat"
+          },
+          {
+            "id": 8,
+            "more": "⚏",
+            "by": "somewhat"
+          },
+          {
+            "id": 9,
+            "more": "Ⅸ",
+            "by": "somewhat"
+          },
+          {
+            "id": 10,
+            "more": "🯸",
+            "by": "much"
+          },
+          {
+            "id": 11,
+            "more": "⑩",
+            "by": "somewhat"
+          },
+          {
+            "id": 12,
+            "more": "%",
+            "by": "much"
+          },
+          {
+            "id": 13,
+            "more": "☰",
+            "by": "somewhat"
+          },
+          {
+            "id": 14,
+            "more": "Ⅴ",
+            "by": "somewhat"
+          },
+          {
+            "id": 15,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 16,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 17,
+            "more": "%",
+            "by": "much"
+          },
+          {
+            "id": 18,
+            "more": "Ⅸ",
+            "by": "somewhat"
+          },
+          {
+            "id": 19,
+            "more": "‰",
+            "by": "somewhat"
+          }
+        ]
+      },
+      {
+        "judge": 5,
+        "answers": [
+          {
+            "id": 0,
+            "more": "☰",
+            "by": "somewhat"
+          },
+          {
+            "id": 1,
+            "more": "⑩",
+            "by": "somewhat"
+          },
+          {
+            "id": 2,
+            "more": "Ⅴ",
+            "by": "much"
+          },
+          {
+            "id": 3,
+            "more": "☷",
+            "by": "vastly"
+          },
+          {
+            "id": 4,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 5,
+            "more": "🯸",
+            "by": "much"
+          },
+          {
+            "id": 6,
+            "more": "‱",
+            "by": "somewhat"
+          },
+          {
+            "id": 7,
+            "more": "⚏",
+            "by": "somewhat"
+          },
+          {
+            "id": 8,
+            "more": "⚏",
+            "by": "somewhat"
+          },
+          {
+            "id": 9,
+            "more": "Ⅸ",
+            "by": "somewhat"
+          },
+          {
+            "id": 10,
+            "more": "🯸",
+            "by": "much"
+          },
+          {
+            "id": 11,
+            "more": "⑩",
+            "by": "somewhat"
+          },
+          {
+            "id": 12,
+            "more": "‱",
+            "by": "much"
+          },
+          {
+            "id": 13,
+            "more": "☰",
+            "by": "somewhat"
+          },
+          {
+            "id": 14,
+            "more": "Ⅴ",
+            "by": "much"
+          },
+          {
+            "id": 15,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 16,
+            "more": "☷",
+            "by": "vastly"
+          },
+          {
+            "id": 17,
+            "more": "‱",
+            "by": "much"
+          },
+          {
+            "id": 18,
+            "more": "Ⅸ",
+            "by": "somewhat"
+          },
+          {
+            "id": 19,
+            "more": "‱",
+            "by": "somewhat"
+          }
+        ]
+      },
+      {
+        "judge": 6,
+        "answers": [
+          {
+            "id": 0,
+            "more": "☰",
+            "by": "somewhat"
+          },
+          {
+            "id": 1,
+            "more": "⑩",
+            "by": "somewhat"
+          },
+          {
+            "id": 2,
+            "more": "Ⅴ",
+            "by": "somewhat"
+          },
+          {
+            "id": 3,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 4,
+            "more": "☷",
+            "by": "somewhat"
+          },
+          {
+            "id": 5,
+            "more": "🯸",
+            "by": "vastly"
+          },
+          {
+            "id": 6,
+            "more": "‱",
+            "by": "somewhat"
+          },
+          {
+            "id": 7,
+            "more": "⚏",
+            "by": "somewhat"
+          },
+          {
+            "id": 8,
+            "more": "⚏",
+            "by": "somewhat"
+          },
+          {
+            "id": 9,
+            "more": "Ⅸ",
+            "by": "somewhat"
+          },
+          {
+            "id": 10,
+            "more": "🯸",
+            "by": "vastly"
+          },
+          {
+            "id": 11,
+            "more": "⑩",
+            "by": "somewhat"
+          },
+          {
+            "id": 12,
+            "more": "‱",
+            "by": "somewhat"
+          },
+          {
+            "id": 13,
+            "more": "☰",
+            "by": "somewhat"
+          },
+          {
+            "id": 14,
+            "more": "Ⅴ",
+            "by": "somewhat"
+          },
+          {
+            "id": 15,
+            "more": "☷",
+            "by": "somewhat"
+          },
+          {
+            "id": 16,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 17,
+            "more": "‱",
+            "by": "somewhat"
+          },
+          {
+            "id": 18,
+            "more": "Ⅸ",
+            "by": "somewhat"
+          },
+          {
+            "id": 19,
+            "more": "‱",
+            "by": "somewhat"
+          }
+        ]
+      },
+      {
+        "judge": 7,
+        "answers": [
+          {
+            "id": 0,
+            "more": "☰",
+            "by": "somewhat"
+          },
+          {
+            "id": 1,
+            "more": "⑩",
+            "by": "much"
+          },
+          {
+            "id": 2,
+            "more": "Ⅴ",
+            "by": "somewhat"
+          },
+          {
+            "id": 3,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 4,
+            "more": "☷",
+            "by": "somewhat"
+          },
+          {
+            "id": 5,
+            "more": "🯸",
+            "by": "vastly"
+          },
+          {
+            "id": 6,
+            "more": "‱",
+            "by": "somewhat"
+          },
+          {
+            "id": 7,
+            "more": "⚏",
+            "by": "somewhat"
+          },
+          {
+            "id": 8,
+            "more": "⚏",
+            "by": "somewhat"
+          },
+          {
+            "id": 9,
+            "more": "Ⅸ",
+            "by": "somewhat"
+          },
+          {
+            "id": 10,
+            "more": "🯸",
+            "by": "vastly"
+          },
+          {
+            "id": 11,
+            "more": "⑩",
+            "by": "much"
+          },
+          {
+            "id": 12,
+            "more": "‱",
+            "by": "much"
+          },
+          {
+            "id": 13,
+            "more": "☰",
+            "by": "somewhat"
+          },
+          {
+            "id": 14,
+            "more": "Ⅴ",
+            "by": "somewhat"
+          },
+          {
+            "id": 15,
+            "more": "☷",
+            "by": "somewhat"
+          },
+          {
+            "id": 16,
+            "more": "☷",
+            "by": "much"
+          },
+          {
+            "id": 17,
+            "more": "‱",
+            "by": "much"
+          },
+          {
+            "id": 18,
+            "more": "Ⅸ",
+            "by": "somewhat"
+          },
+          {
+            "id": 19,
+            "more": "‱",
+            "by": "somewhat"
+          }
+        ]
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Conflict"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "conflict-0",
+      "phaseIndex": 1,
+      "phaseTitle": "Conflict",
+      "agentId": "af1f53a74f4a9b778",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787695140148,
+      "queuedAt": 1787695140140,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/conflict-sheet.json: items each with an \"id\" and two glyphs \"a\" and \"b\". For each item answer \"more\" with one of:\n\n  - the glyph itself (copied exactly) — if one immediately feels like it conveys MORE (magnitude, amount, intensity, size, value); then also \"by\": \"somewhat\" …",
+      "lastProgressAt": 1787695159292,
+      "tokens": 59997,
+      "toolCalls": 2,
+      "durationMs": 19143,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"more\":\"☰\",\"by\":\"somewhat\"},{\"id\":1,\"more\":\"⑩\",\"by\":\"somewhat\"},{\"id\":2,\"more\":\"Ⅴ\",\"by\":\"somewhat\"},{\"id\":3,\"more\":\"☷\",\"by\":\"much\"},{\"id\":4,\"more\":\"☷\",\"by\":\"much\"},{\"id\":5,\"more\":\"🯸\",\"by\":\"vastly\"},{\"id\":6,\"more\":\"‱\",\"by\":\"somewhat\"},{\"id\":7,\"more\":\"⚏\",\"by\":\"somewhat\"},{\"id\":8,\"more\":\"⚏\",\"by\":\"somewhat\"},{\"id\":9,\"more\":\"Ⅸ\",\"by\":\"somewhat\"},{\"id\":10,\"more\":\"🯸\",\"by\":\"vastly\"},{…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "conflict-1",
+      "phaseIndex": 1,
+      "phaseTitle": "Conflict",
+      "agentId": "a6a69c454dd4f3707",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787695140148,
+      "queuedAt": 1787695140140,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/conflict-sheet.json: items each with an \"id\" and two glyphs \"a\" and \"b\". For each item answer \"more\" with one of:\n\n  - ≈ — comparable and equal on a shared axis\n\n  - ⟂ — you don't perceive an ordering between them\n\n  - the glyph itself (copied exactly) — if one immediately…",
+      "lastProgressAt": 1787695159877,
+      "tokens": 60006,
+      "toolCalls": 2,
+      "durationMs": 17438,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"more\":\"☰\",\"by\":\"somewhat\"},{\"id\":1,\"more\":\"⑩\",\"by\":\"somewhat\"},{\"id\":2,\"more\":\"Ⅴ\",\"by\":\"somewhat\"},{\"id\":3,\"more\":\"☷\",\"by\":\"much\"},{\"id\":4,\"more\":\"☷\",\"by\":\"somewhat\"},{\"id\":5,\"more\":\"🯸\",\"by\":\"much\"},{\"id\":6,\"more\":\"‱\",\"by\":\"somewhat\"},{\"id\":7,\"more\":\"⚏\",\"by\":\"somewhat\"},{\"id\":8,\"more\":\"⚏\",\"by\":\"somewhat\"},{\"id\":9,\"more\":\"Ⅸ\",\"by\":\"somewhat\"},{\"id\":10,\"more\":\"🯸\",\"by\":\"much\"},{…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "conflict-2",
+      "phaseIndex": 1,
+      "phaseTitle": "Conflict",
+      "agentId": "a9b57d7ec12c5fbeb",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787695140148,
+      "queuedAt": 1787695140140,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/conflict-sheet.json: items each with an \"id\" and two glyphs \"a\" and \"b\". For each item answer \"more\" with one of:\n\n  - the glyph itself (copied exactly) — if one immediately feels like it conveys MORE (magnitude, amount, intensity, size, value); then also \"by\": \"somewhat\" …",
+      "lastProgressAt": 1787695160729,
+      "tokens": 60000,
+      "toolCalls": 2,
+      "durationMs": 18290,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"more\":\"☰\",\"by\":\"somewhat\"},{\"id\":1,\"more\":\"⑩\",\"by\":\"somewhat\"},{\"id\":2,\"more\":\"Ⅴ\",\"by\":\"somewhat\"},{\"id\":3,\"more\":\"☷\",\"by\":\"much\"},{\"id\":4,\"more\":\"☷\",\"by\":\"somewhat\"},{\"id\":5,\"more\":\"🯸\",\"by\":\"vastly\"},{\"id\":6,\"more\":\"‱\",\"by\":\"somewhat\"},{\"id\":7,\"more\":\"⚏\",\"by\":\"somewhat\"},{\"id\":8,\"more\":\"⚏\",\"by\":\"somewhat\"},{\"id\":9,\"more\":\"Ⅸ\",\"by\":\"somewhat\"},{\"id\":10,\"more\":\"🯸\",\"by\":\"vastly…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "conflict-3",
+      "phaseIndex": 1,
+      "phaseTitle": "Conflict",
+      "agentId": "ab93f49bc6160f3ca",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787695140148,
+      "queuedAt": 1787695140140,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/conflict-sheet.json: items each with an \"id\" and two glyphs \"a\" and \"b\". For each item answer \"more\" with one of:\n\n  - ≈ — comparable and equal on a shared axis\n\n  - the glyph itself (copied exactly) — if one immediately feels like it conveys MORE (magnitude, amount, inten…",
+      "lastProgressAt": 1787695158510,
+      "tokens": 60000,
+      "toolCalls": 2,
+      "durationMs": 16071,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"more\":\"☰\",\"by\":\"somewhat\"},{\"id\":1,\"more\":\"⑩\",\"by\":\"somewhat\"},{\"id\":2,\"more\":\"Ⅴ\",\"by\":\"somewhat\"},{\"id\":3,\"more\":\"☷\",\"by\":\"much\"},{\"id\":4,\"more\":\"☷\",\"by\":\"somewhat\"},{\"id\":5,\"more\":\"🯸\",\"by\":\"vastly\"},{\"id\":6,\"more\":\"‰\",\"by\":\"somewhat\"},{\"id\":7,\"more\":\"⚏\",\"by\":\"somewhat\"},{\"id\":8,\"more\":\"⚏\",\"by\":\"somewhat\"},{\"id\":9,\"more\":\"Ⅸ\",\"by\":\"somewhat\"},{\"id\":10,\"more\":\"🯸\",\"by\":\"vastly…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "conflict-4",
+      "phaseIndex": 1,
+      "phaseTitle": "Conflict",
+      "agentId": "a541efe20ca27172e",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787695140148,
+      "queuedAt": 1787695140140,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/conflict-sheet.json: items each with an \"id\" and two glyphs \"a\" and \"b\". For each item answer \"more\" with one of:\n\n  - ⟂ — you don't perceive an ordering between them\n\n  - ≈ — comparable and equal on a shared axis\n\n  - the glyph itself (copied exactly) — if one immediately…",
+      "lastProgressAt": 1787695160587,
+      "tokens": 59997,
+      "toolCalls": 2,
+      "durationMs": 18147,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"more\":\"☰\",\"by\":\"somewhat\"},{\"id\":1,\"more\":\"⑩\",\"by\":\"somewhat\"},{\"id\":2,\"more\":\"Ⅴ\",\"by\":\"somewhat\"},{\"id\":3,\"more\":\"☷\",\"by\":\"somewhat\"},{\"id\":4,\"more\":\"☷\",\"by\":\"much\"},{\"id\":5,\"more\":\"🯸\",\"by\":\"much\"},{\"id\":6,\"more\":\"‰\",\"by\":\"somewhat\"},{\"id\":7,\"more\":\"⚏\",\"by\":\"somewhat\"},{\"id\":8,\"more\":\"⚏\",\"by\":\"somewhat\"},{\"id\":9,\"more\":\"Ⅸ\",\"by\":\"somewhat\"},{\"id\":10,\"more\":\"🯸\",\"by\":\"much\"},{…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "conflict-5",
+      "phaseIndex": 1,
+      "phaseTitle": "Conflict",
+      "agentId": "ac316950fbcb21d41",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787695140149,
+      "queuedAt": 1787695140140,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/conflict-sheet.json: items each with an \"id\" and two glyphs \"a\" and \"b\". For each item answer \"more\" with one of:\n\n  - ⟂ — you don't perceive an ordering between them\n\n  - the glyph itself (copied exactly) — if one immediately feels like it conveys MORE (magnitude, amount,…",
+      "lastProgressAt": 1787695163080,
+      "tokens": 59997,
+      "toolCalls": 2,
+      "durationMs": 20640,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"more\":\"☰\",\"by\":\"somewhat\"},{\"id\":1,\"more\":\"⑩\",\"by\":\"somewhat\"},{\"id\":2,\"more\":\"Ⅴ\",\"by\":\"much\"},{\"id\":3,\"more\":\"☷\",\"by\":\"vastly\"},{\"id\":4,\"more\":\"☷\",\"by\":\"much\"},{\"id\":5,\"more\":\"🯸\",\"by\":\"much\"},{\"id\":6,\"more\":\"‱\",\"by\":\"somewhat\"},{\"id\":7,\"more\":\"⚏\",\"by\":\"somewhat\"},{\"id\":8,\"more\":\"⚏\",\"by\":\"somewhat\"},{\"id\":9,\"more\":\"Ⅸ\",\"by\":\"somewhat\"},{\"id\":10,\"more\":\"🯸\",\"by\":\"much\"},{\"id\":1…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "conflict-6",
+      "phaseIndex": 1,
+      "phaseTitle": "Conflict",
+      "agentId": "a88c90be26cfc6ff7",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787695140149,
+      "queuedAt": 1787695140140,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/conflict-sheet.json: items each with an \"id\" and two glyphs \"a\" and \"b\". For each item answer \"more\" with one of:\n\n  - the glyph itself (copied exactly) — if one immediately feels like it conveys MORE (magnitude, amount, intensity, size, value); then also \"by\": \"somewhat\" …",
+      "lastProgressAt": 1787695159045,
+      "tokens": 59997,
+      "toolCalls": 2,
+      "durationMs": 16605,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"more\":\"☰\",\"by\":\"somewhat\"},{\"id\":1,\"more\":\"⑩\",\"by\":\"somewhat\"},{\"id\":2,\"more\":\"Ⅴ\",\"by\":\"somewhat\"},{\"id\":3,\"more\":\"☷\",\"by\":\"much\"},{\"id\":4,\"more\":\"☷\",\"by\":\"somewhat\"},{\"id\":5,\"more\":\"🯸\",\"by\":\"vastly\"},{\"id\":6,\"more\":\"‱\",\"by\":\"somewhat\"},{\"id\":7,\"more\":\"⚏\",\"by\":\"somewhat\"},{\"id\":8,\"more\":\"⚏\",\"by\":\"somewhat\"},{\"id\":9,\"more\":\"Ⅸ\",\"by\":\"somewhat\"},{\"id\":10,\"more\":\"🯸\",\"by\":\"vastly…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "conflict-7",
+      "phaseIndex": 1,
+      "phaseTitle": "Conflict",
+      "agentId": "a4c7a8ada30468383",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787695140149,
+      "queuedAt": 1787695140140,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/conflict-sheet.json: items each with an \"id\" and two glyphs \"a\" and \"b\". For each item answer \"more\" with one of:\n\n  - ≈ — comparable and equal on a shared axis\n\n  - ⟂ — you don't perceive an ordering between them\n\n  - the glyph itself (copied exactly) — if one immediately…",
+      "lastProgressAt": 1787695158053,
+      "tokens": 59997,
+      "toolCalls": 2,
+      "durationMs": 15613,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"more\":\"☰\",\"by\":\"somewhat\"},{\"id\":1,\"more\":\"⑩\",\"by\":\"much\"},{\"id\":2,\"more\":\"Ⅴ\",\"by\":\"somewhat\"},{\"id\":3,\"more\":\"☷\",\"by\":\"much\"},{\"id\":4,\"more\":\"☷\",\"by\":\"somewhat\"},{\"id\":5,\"more\":\"🯸\",\"by\":\"vastly\"},{\"id\":6,\"more\":\"‱\",\"by\":\"somewhat\"},{\"id\":7,\"more\":\"⚏\",\"by\":\"somewhat\"},{\"id\":8,\"more\":\"⚏\",\"by\":\"somewhat\"},{\"id\":9,\"more\":\"Ⅸ\",\"by\":\"somewhat\"},{\"id\":10,\"more\":\"🯸\",\"by\":\"vastly\"},{…"
+    }
+  ],
+  "totalTokens": 479991,
+  "totalToolCalls": 16
+}

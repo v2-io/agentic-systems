@@ -1,0 +1,2328 @@
+{
+  "summary": "Seed glyphs -> agents propose next rungs; convergence = discovered ladders",
+  "agentCount": 6,
+  "logs": [],
+  "result": {
+    "extenders": [
+      {
+        "agent": 0,
+        "answers": [
+          {
+            "id": 0,
+            "axis": "die face value",
+            "direction": "increasing",
+            "extension": "⚃⚄"
+          },
+          {
+            "id": 1,
+            "axis": "circle fill rotation",
+            "direction": "increasing",
+            "extension": "◒◐"
+          },
+          {
+            "id": 2,
+            "axis": "bold sans alphabet",
+            "direction": "increasing",
+            "extension": "𝗞𝗟"
+          },
+          {
+            "id": 3,
+            "axis": "greek alphabet",
+            "direction": "increasing",
+            "extension": "𝛬𝛭"
+          },
+          {
+            "id": 4,
+            "axis": "dot leader count",
+            "direction": "increasing",
+            "extension": "…⁘"
+          },
+          {
+            "id": 5,
+            "axis": "multiple integral order",
+            "direction": "increasing",
+            "extension": "∭⨌"
+          },
+          {
+            "id": 6,
+            "axis": "tone letter pitch level",
+            "direction": "increasing",
+            "extension": "˦˥"
+          },
+          {
+            "id": 7,
+            "axis": "roman numeral value",
+            "direction": "increasing",
+            "extension": "ⅥⅧ"
+          },
+          {
+            "id": 8,
+            "axis": "braille dot density",
+            "direction": "increasing",
+            "extension": "⣶⣿"
+          },
+          {
+            "id": 9,
+            "axis": "wind speed",
+            "direction": "increasing",
+            "extension": "🌬️🌪️"
+          },
+          {
+            "id": 10,
+            "axis": "tile/domino dot pattern",
+            "direction": "increasing",
+            "extension": "⚎⚏"
+          },
+          {
+            "id": 11,
+            "axis": "chess piece value",
+            "direction": "decreasing",
+            "extension": "♘♙"
+          },
+          {
+            "id": 12,
+            "axis": "greek alphabet",
+            "direction": "increasing",
+            "extension": "𝞄𝞅"
+          },
+          {
+            "id": 13,
+            "axis": "trigram line sequence",
+            "direction": "increasing",
+            "extension": "☲☳"
+          },
+          {
+            "id": 14,
+            "axis": "prime mark count",
+            "direction": "increasing",
+            "extension": "‴⁗"
+          },
+          {
+            "id": 15,
+            "axis": "bidirectional arrow emphasis",
+            "direction": "increasing",
+            "extension": "⇔⟺"
+          },
+          {
+            "id": 16,
+            "axis": "line weight/shading",
+            "direction": "increasing",
+            "extension": "=≡"
+          },
+          {
+            "id": 17,
+            "axis": "moon phase waning",
+            "direction": "decreasing",
+            "extension": "🌘🌑"
+          },
+          {
+            "id": 18,
+            "axis": "blackboard bold alphabet",
+            "direction": "increasing",
+            "extension": "𝕋𝕌"
+          },
+          {
+            "id": 19,
+            "axis": "glyph angularity",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 20,
+            "axis": "approximation tightness",
+            "direction": "increasing",
+            "extension": "≋≡"
+          },
+          {
+            "id": 21,
+            "axis": "die face value",
+            "direction": "increasing",
+            "extension": "⚅"
+          },
+          {
+            "id": 22,
+            "axis": "volume loudness",
+            "direction": "increasing",
+            "extension": "🔊📢"
+          },
+          {
+            "id": 23,
+            "axis": "fraction denominator",
+            "direction": "increasing",
+            "extension": "⅓¼"
+          },
+          {
+            "id": 24,
+            "axis": "fraktur alphabet",
+            "direction": "increasing",
+            "extension": "𝔴𝔵"
+          },
+          {
+            "id": 25,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 26,
+            "axis": "human age",
+            "direction": "increasing",
+            "extension": "🧑👨"
+          },
+          {
+            "id": 27,
+            "axis": "circled number & letter sequence",
+            "direction": "increasing",
+            "extension": "㉺𝙓"
+          },
+          {
+            "id": 28,
+            "axis": "dot leader count",
+            "direction": "increasing",
+            "extension": "⁘"
+          },
+          {
+            "id": 29,
+            "axis": "shading block density",
+            "direction": "increasing",
+            "extension": "▓█"
+          },
+          {
+            "id": 30,
+            "axis": "pie chart fill",
+            "direction": "increasing",
+            "extension": "◑◕"
+          },
+          {
+            "id": 31,
+            "axis": "line count/weight",
+            "direction": "increasing",
+            "extension": "≡"
+          },
+          {
+            "id": 32,
+            "axis": "moon phase waxing",
+            "direction": "increasing",
+            "extension": "🌔🌕"
+          },
+          {
+            "id": 33,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 34,
+            "axis": "trigram line count",
+            "direction": "increasing",
+            "extension": "☲"
+          },
+          {
+            "id": 35,
+            "axis": "fraction value",
+            "direction": "increasing",
+            "extension": "½⅝"
+          },
+          {
+            "id": 36,
+            "axis": "greek alphabet",
+            "direction": "increasing",
+            "extension": "𝞄𝞅"
+          },
+          {
+            "id": 37,
+            "axis": "circle fill",
+            "direction": "increasing",
+            "extension": "●"
+          },
+          {
+            "id": 38,
+            "axis": "differential operator order",
+            "direction": "increasing",
+            "extension": "Δ"
+          },
+          {
+            "id": 39,
+            "axis": "line weight",
+            "direction": "increasing",
+            "extension": "≡"
+          },
+          {
+            "id": 40,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 41,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 42,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 43,
+            "axis": "line rotation angle",
+            "direction": "increasing",
+            "extension": "╲"
+          },
+          {
+            "id": 44,
+            "axis": "color spectrum warmth",
+            "direction": "increasing",
+            "extension": "🟧🟥"
+          },
+          {
+            "id": 45,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 46,
+            "axis": "metric length unit scale",
+            "direction": "increasing",
+            "extension": "m km"
+          },
+          {
+            "id": 47,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 48,
+            "axis": "arabic alphabet",
+            "direction": "increasing",
+            "extension": "ت"
+          },
+          {
+            "id": 49,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 50,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 51,
+            "axis": "metric mass unit scale",
+            "direction": "increasing",
+            "extension": "㌳"
+          },
+          {
+            "id": 52,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 53,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 54,
+            "axis": "star point count",
+            "direction": "increasing",
+            "extension": "✷✸"
+          },
+          {
+            "id": 55,
+            "axis": "greek alphabet cycle",
+            "direction": "decreasing",
+            "extension": "𝛼"
+          },
+          {
+            "id": 56,
+            "axis": "bar chart height",
+            "direction": "increasing",
+            "extension": "█"
+          },
+          {
+            "id": 57,
+            "axis": "block fill width",
+            "direction": "increasing",
+            "extension": "█"
+          },
+          {
+            "id": 58,
+            "axis": "volume loudness",
+            "direction": "increasing",
+            "extension": "🔊📢"
+          },
+          {
+            "id": 59,
+            "axis": "cloud cover",
+            "direction": "increasing",
+            "extension": "⛅🌥️"
+          }
+        ]
+      },
+      {
+        "agent": 1,
+        "answers": [
+          {
+            "id": 0,
+            "extension": "⚃⚄",
+            "direction": "increasing",
+            "axis": "die face pip count"
+          },
+          {
+            "id": 1,
+            "extension": "◒◓",
+            "direction": "increasing",
+            "axis": "circle shading rotating clockwise"
+          },
+          {
+            "id": 2,
+            "extension": "𝗞𝗟",
+            "direction": "increasing",
+            "axis": "bold sans letter sequence"
+          },
+          {
+            "id": 3,
+            "extension": "𝛬𝛭",
+            "direction": "increasing",
+            "axis": "italic Greek letter sequence"
+          },
+          {
+            "id": 4,
+            "extension": "…⁘",
+            "direction": "increasing",
+            "axis": "leader dot count"
+          },
+          {
+            "id": 5,
+            "extension": "∭⨌",
+            "direction": "increasing",
+            "axis": "integral multiplicity"
+          },
+          {
+            "id": 6,
+            "extension": "˦˥",
+            "direction": "increasing",
+            "axis": "tone-letter pitch level"
+          },
+          {
+            "id": 7,
+            "extension": "ⅥⅧ",
+            "direction": "increasing",
+            "axis": "roman numeral value, step of 2"
+          },
+          {
+            "id": 8,
+            "extension": "⣶⣿",
+            "direction": "increasing",
+            "axis": "braille cell dot fill"
+          },
+          {
+            "id": 9,
+            "extension": "💨💨",
+            "direction": "decreasing",
+            "axis": "presence fading into wind"
+          },
+          {
+            "id": 10,
+            "extension": "⚎⚏",
+            "direction": "increasing",
+            "axis": "yin-yang digram line count"
+          },
+          {
+            "id": 11,
+            "extension": "♖♕",
+            "direction": "increasing",
+            "axis": "chess piece value"
+          },
+          {
+            "id": 12,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 13,
+            "extension": "☲☳",
+            "direction": "increasing",
+            "axis": "I Ching trigram sequence"
+          },
+          {
+            "id": 14,
+            "extension": "‴⁗",
+            "direction": "increasing",
+            "axis": "prime mark count"
+          },
+          {
+            "id": 15,
+            "extension": "⇔⟺",
+            "direction": "increasing",
+            "axis": "double-arrow length/weight"
+          },
+          {
+            "id": 16,
+            "extension": "‾",
+            "direction": "increasing",
+            "axis": "horizontal stroke vertical position"
+          },
+          {
+            "id": 17,
+            "extension": "🌘🌑",
+            "direction": "decreasing",
+            "axis": "moon illumination waning"
+          },
+          {
+            "id": 18,
+            "extension": "𝕋𝕌",
+            "direction": "increasing",
+            "axis": "blackboard-bold letter sequence"
+          },
+          {
+            "id": 19,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 20,
+            "extension": "≋",
+            "direction": "increasing",
+            "axis": "wavy-line stroke count"
+          },
+          {
+            "id": 21,
+            "extension": "⚅",
+            "direction": "increasing",
+            "axis": "die face pip count, step of 2"
+          },
+          {
+            "id": 22,
+            "extension": "🔊📢",
+            "direction": "increasing",
+            "axis": "speaker volume"
+          },
+          {
+            "id": 23,
+            "extension": "⅔¾",
+            "direction": "increasing",
+            "axis": "fraction magnitude"
+          },
+          {
+            "id": 24,
+            "extension": "𝔴𝔵",
+            "direction": "increasing",
+            "axis": "fraktur lowercase letter sequence"
+          },
+          {
+            "id": 25,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 26,
+            "extension": "🧑👴",
+            "direction": "increasing",
+            "axis": "human life stage"
+          },
+          {
+            "id": 27,
+            "extension": "㉺𝙓",
+            "direction": "increasing",
+            "axis": "circled digit and bold letter incrementing"
+          },
+          {
+            "id": 28,
+            "extension": "⁘",
+            "direction": "increasing",
+            "axis": "leader dot count"
+          },
+          {
+            "id": 29,
+            "extension": "▓█",
+            "direction": "increasing",
+            "axis": "shade block density"
+          },
+          {
+            "id": 30,
+            "extension": "◑◕●",
+            "direction": "increasing",
+            "axis": "pie-chart fill"
+          },
+          {
+            "id": 31,
+            "extension": "≡",
+            "direction": "increasing",
+            "axis": "horizontal bar count"
+          },
+          {
+            "id": 32,
+            "extension": "🌔🌕",
+            "direction": "increasing",
+            "axis": "moon illumination waxing"
+          },
+          {
+            "id": 33,
+            "extension": "㎥𝙷",
+            "direction": "increasing",
+            "axis": "unit dimension and letter incrementing"
+          },
+          {
+            "id": 34,
+            "extension": "䷀",
+            "direction": "increasing",
+            "axis": "divination symbol line count"
+          },
+          {
+            "id": 35,
+            "extension": "½⅝",
+            "direction": "increasing",
+            "axis": "eighths fraction magnitude"
+          },
+          {
+            "id": 36,
+            "extension": "𝞄𝞅",
+            "direction": "increasing",
+            "axis": "italic Greek letter sequence"
+          },
+          {
+            "id": 37,
+            "extension": "●",
+            "direction": "increasing",
+            "axis": "circle fill"
+          },
+          {
+            "id": 38,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 39,
+            "extension": "≡",
+            "direction": "increasing",
+            "axis": "horizontal bar count"
+          },
+          {
+            "id": 40,
+            "extension": "థద",
+            "direction": "increasing",
+            "axis": "Telugu consonant sequence"
+          },
+          {
+            "id": 41,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 42,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 43,
+            "extension": "│╲",
+            "direction": "increasing",
+            "axis": "line angle rotating"
+          },
+          {
+            "id": 44,
+            "extension": "🟧🟥",
+            "direction": "increasing",
+            "axis": "hue rotating toward red"
+          },
+          {
+            "id": 45,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 46,
+            "extension": "㎡㎥",
+            "direction": "increasing",
+            "axis": "metric unit dimensionality"
+          },
+          {
+            "id": 47,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 48,
+            "extension": "تث",
+            "direction": "increasing",
+            "axis": "Arabic letter sequence"
+          },
+          {
+            "id": 49,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 50,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 51,
+            "extension": "㌘",
+            "direction": "increasing",
+            "axis": "unit magnitude (mg to g)"
+          },
+          {
+            "id": 52,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 53,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 54,
+            "extension": "✷✸",
+            "direction": "increasing",
+            "axis": "star point elaboration"
+          },
+          {
+            "id": 55,
+            "extension": "𝛹𝛸",
+            "direction": "decreasing",
+            "axis": "Greek alphabet position (wrap from omega)"
+          },
+          {
+            "id": 56,
+            "extension": "▇█",
+            "direction": "increasing",
+            "axis": "bar chart height"
+          },
+          {
+            "id": 57,
+            "extension": "▉█",
+            "direction": "increasing",
+            "axis": "block fill"
+          },
+          {
+            "id": 58,
+            "extension": "🔊",
+            "direction": "increasing",
+            "axis": "speaker volume"
+          },
+          {
+            "id": 59,
+            "extension": "⛅🌥️",
+            "direction": "increasing",
+            "axis": "cloud cover"
+          }
+        ]
+      },
+      {
+        "agent": 2,
+        "answers": [
+          {
+            "id": 0,
+            "axis": "die face value",
+            "direction": "increasing",
+            "extension": "⚃⚄⚅"
+          },
+          {
+            "id": 1,
+            "axis": "circle shading fraction",
+            "direction": "increasing",
+            "extension": "◕●"
+          },
+          {
+            "id": 2,
+            "axis": "alphabet (bold sans)",
+            "direction": "increasing",
+            "extension": "𝗞𝗟𝗠"
+          },
+          {
+            "id": 3,
+            "axis": "Greek alphabet (italic)",
+            "direction": "increasing",
+            "extension": "𝛬𝛭𝛮"
+          },
+          {
+            "id": 4,
+            "axis": "leader dot count",
+            "direction": "increasing",
+            "extension": "…"
+          },
+          {
+            "id": 5,
+            "axis": "integral multiplicity",
+            "direction": "increasing",
+            "extension": "∭⨌"
+          },
+          {
+            "id": 6,
+            "axis": "tone letter pitch",
+            "direction": "decreasing",
+            "extension": "˨˩"
+          },
+          {
+            "id": 7,
+            "axis": "roman numeral value (step 2)",
+            "direction": "increasing",
+            "extension": "ⅥⅧ"
+          },
+          {
+            "id": 8,
+            "axis": "braille fill density",
+            "direction": "increasing",
+            "extension": "⣶⣿"
+          },
+          {
+            "id": 9,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 10,
+            "axis": "yin-yang digram line count",
+            "direction": "increasing",
+            "extension": "⚎⚏"
+          },
+          {
+            "id": 11,
+            "axis": "chess piece rank order",
+            "direction": "increasing",
+            "extension": "♘♙"
+          },
+          {
+            "id": 12,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 13,
+            "axis": "trigram sequence",
+            "direction": "increasing",
+            "extension": "☲☳"
+          },
+          {
+            "id": 14,
+            "axis": "prime marks",
+            "direction": "increasing",
+            "extension": "‴⁗"
+          },
+          {
+            "id": 15,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 16,
+            "axis": "line vertical position",
+            "direction": "increasing",
+            "extension": "‾"
+          },
+          {
+            "id": 17,
+            "axis": "moon phase cycle",
+            "direction": "increasing",
+            "extension": "🌘🌑"
+          },
+          {
+            "id": 18,
+            "axis": "alphabet (blackboard bold)",
+            "direction": "increasing",
+            "extension": "𝕋𝕌"
+          },
+          {
+            "id": 19,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 20,
+            "axis": "approximation to equality",
+            "direction": "increasing",
+            "extension": "≅≡"
+          },
+          {
+            "id": 21,
+            "axis": "die face value (step 2)",
+            "direction": "increasing",
+            "extension": "⚅"
+          },
+          {
+            "id": 22,
+            "axis": "speaker volume",
+            "direction": "increasing",
+            "extension": "🔊📢"
+          },
+          {
+            "id": 23,
+            "axis": "fraction value toward one",
+            "direction": "increasing",
+            "extension": "⅔¾"
+          },
+          {
+            "id": 24,
+            "axis": "alphabet (fraktur lowercase)",
+            "direction": "increasing",
+            "extension": "𝔴𝔵"
+          },
+          {
+            "id": 25,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 26,
+            "axis": "human age",
+            "direction": "increasing",
+            "extension": "🧑👨"
+          },
+          {
+            "id": 27,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 28,
+            "axis": "leader dot count",
+            "direction": "increasing",
+            "extension": "⁘"
+          },
+          {
+            "id": 29,
+            "axis": "shading density",
+            "direction": "increasing",
+            "extension": "▓█"
+          },
+          {
+            "id": 30,
+            "axis": "circle shading fraction",
+            "direction": "increasing",
+            "extension": "◑◕"
+          },
+          {
+            "id": 31,
+            "axis": "bar/line count",
+            "direction": "increasing",
+            "extension": "≡"
+          },
+          {
+            "id": 32,
+            "axis": "moon phase illumination",
+            "direction": "increasing",
+            "extension": "🌔🌕"
+          },
+          {
+            "id": 33,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 34,
+            "axis": "hexagram/trigram line count",
+            "direction": "increasing",
+            "extension": "䷀"
+          },
+          {
+            "id": 35,
+            "axis": "eighths fraction value",
+            "direction": "increasing",
+            "extension": "½⅝"
+          },
+          {
+            "id": 36,
+            "axis": "Greek alphabet",
+            "direction": "increasing",
+            "extension": "𝞄𝞅"
+          },
+          {
+            "id": 37,
+            "axis": "circle shading fraction",
+            "direction": "increasing",
+            "extension": "●"
+          },
+          {
+            "id": 38,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 39,
+            "axis": "line weight/count",
+            "direction": "increasing",
+            "extension": "≡"
+          },
+          {
+            "id": 40,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 41,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 42,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 43,
+            "axis": "diagonal line multiplicity",
+            "direction": "increasing",
+            "extension": "╲╳"
+          },
+          {
+            "id": 44,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 45,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 46,
+            "axis": "metric length unit",
+            "direction": "increasing",
+            "extension": "㎞"
+          },
+          {
+            "id": 47,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 48,
+            "axis": "Arabic alphabet order",
+            "direction": "increasing",
+            "extension": "تث"
+          },
+          {
+            "id": 49,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 50,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 51,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 52,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 53,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 54,
+            "axis": "star ray count",
+            "direction": "increasing",
+            "extension": "✷✸"
+          },
+          {
+            "id": 55,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 56,
+            "axis": "bar chart height",
+            "direction": "increasing",
+            "extension": "▇"
+          },
+          {
+            "id": 57,
+            "axis": "block fill",
+            "direction": "increasing",
+            "extension": "█"
+          },
+          {
+            "id": 58,
+            "axis": "speaker volume",
+            "direction": "increasing",
+            "extension": "🔊📢"
+          },
+          {
+            "id": 59,
+            "axis": "cloud coverage",
+            "direction": "increasing",
+            "extension": "⛅☁"
+          }
+        ]
+      },
+      {
+        "agent": 3,
+        "answers": [
+          {
+            "id": 0,
+            "axis": "die face value",
+            "direction": "increasing",
+            "extension": "⚃⚄"
+          },
+          {
+            "id": 1,
+            "axis": "circle shading rotation",
+            "direction": "increasing",
+            "extension": "◒◓"
+          },
+          {
+            "id": 2,
+            "axis": "bold sans-serif alphabet",
+            "direction": "increasing",
+            "extension": "𝗞𝗟"
+          },
+          {
+            "id": 3,
+            "axis": "italic Greek alphabet",
+            "direction": "increasing",
+            "extension": "𝛬𝛭"
+          },
+          {
+            "id": 4,
+            "axis": "ellipsis dot count",
+            "direction": "increasing",
+            "extension": "…⁘"
+          },
+          {
+            "id": 5,
+            "axis": "multiple integral order",
+            "direction": "increasing",
+            "extension": "∭"
+          },
+          {
+            "id": 6,
+            "axis": "tone letter pitch height",
+            "direction": "increasing",
+            "extension": "˦˥"
+          },
+          {
+            "id": 7,
+            "axis": "roman numeral value (step of 2)",
+            "direction": "increasing",
+            "extension": "ⅥⅧ"
+          },
+          {
+            "id": 8,
+            "axis": "braille cell fill",
+            "direction": "increasing",
+            "extension": "⣶⣿"
+          },
+          {
+            "id": 9,
+            "axis": "wind/speed intensity",
+            "direction": "increasing",
+            "extension": "🌬️⚡"
+          },
+          {
+            "id": 10,
+            "axis": "domino tile pip pattern",
+            "direction": "increasing",
+            "extension": "⚎"
+          },
+          {
+            "id": 11,
+            "axis": "chess piece order (bishop→knight→pawn)",
+            "direction": "decreasing",
+            "extension": "♘♙"
+          },
+          {
+            "id": 12,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 13,
+            "axis": "I Ching trigram sequence",
+            "direction": "increasing",
+            "extension": "☲"
+          },
+          {
+            "id": 14,
+            "axis": "prime mark count",
+            "direction": "increasing",
+            "extension": "‴"
+          },
+          {
+            "id": 15,
+            "axis": "bidirectional arrow emphasis/weight",
+            "direction": "increasing",
+            "extension": "⇔⟺"
+          },
+          {
+            "id": 16,
+            "axis": "line vertical position",
+            "direction": "increasing",
+            "extension": "‾"
+          },
+          {
+            "id": 17,
+            "axis": "moon phase waning cycle",
+            "direction": "increasing",
+            "extension": "🌘🌑"
+          },
+          {
+            "id": 18,
+            "axis": "double-struck alphabet",
+            "direction": "increasing",
+            "extension": "𝕋𝕌"
+          },
+          {
+            "id": 19,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 20,
+            "axis": "equivalence strength",
+            "direction": "increasing",
+            "extension": "≅≡"
+          },
+          {
+            "id": 21,
+            "axis": "die face value (step of 2)",
+            "direction": "increasing",
+            "extension": "⚅"
+          },
+          {
+            "id": 22,
+            "axis": "speaker volume level",
+            "direction": "increasing",
+            "extension": "🔊📢"
+          },
+          {
+            "id": 23,
+            "axis": "fraction magnitude (eighths)",
+            "direction": "increasing",
+            "extension": "⅝¾"
+          },
+          {
+            "id": 24,
+            "axis": "fraktur alphabet",
+            "direction": "increasing",
+            "extension": "𝔴𝔵"
+          },
+          {
+            "id": 25,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 26,
+            "axis": "human age progression",
+            "direction": "increasing",
+            "extension": "🧑👨"
+          },
+          {
+            "id": 27,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 28,
+            "axis": "ellipsis dot count",
+            "direction": "increasing",
+            "extension": "⁘⁙"
+          },
+          {
+            "id": 29,
+            "axis": "shade block density",
+            "direction": "increasing",
+            "extension": "▓█"
+          },
+          {
+            "id": 30,
+            "axis": "circle fill quarter-steps",
+            "direction": "increasing",
+            "extension": "◑◕"
+          },
+          {
+            "id": 31,
+            "axis": "equals-sign bar count",
+            "direction": "increasing",
+            "extension": "≡"
+          },
+          {
+            "id": 32,
+            "axis": "moon phase waxing cycle",
+            "direction": "increasing",
+            "extension": "🌔🌕"
+          },
+          {
+            "id": 33,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 34,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 35,
+            "axis": "fraction magnitude (eighths)",
+            "direction": "increasing",
+            "extension": "½⅝"
+          },
+          {
+            "id": 36,
+            "axis": "lowercase Greek alphabet",
+            "direction": "increasing",
+            "extension": "𝞄𝞅"
+          },
+          {
+            "id": 37,
+            "axis": "circle fill progression",
+            "direction": "increasing",
+            "extension": "●"
+          },
+          {
+            "id": 38,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 39,
+            "axis": "equals-sign bar count",
+            "direction": "increasing",
+            "extension": "≡"
+          },
+          {
+            "id": 40,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 41,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 42,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 43,
+            "axis": "diagonal line mirror rotation",
+            "direction": "increasing",
+            "extension": "╲"
+          },
+          {
+            "id": 44,
+            "axis": "rainbow color sequence",
+            "direction": "increasing",
+            "extension": "🟩🟦"
+          },
+          {
+            "id": 45,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 46,
+            "axis": "metric length unit magnitude",
+            "direction": "increasing",
+            "extension": "㎞"
+          },
+          {
+            "id": 47,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 48,
+            "axis": "Arabic letter dot progression",
+            "direction": "increasing",
+            "extension": "تث"
+          },
+          {
+            "id": 49,
+            "axis": "feline size",
+            "direction": "increasing",
+            "extension": "🐅🦁"
+          },
+          {
+            "id": 50,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 51,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 52,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 53,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 54,
+            "axis": "star point count",
+            "direction": "increasing",
+            "extension": "✷✸"
+          },
+          {
+            "id": 55,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 56,
+            "axis": "bar chart height",
+            "direction": "increasing",
+            "extension": "▇█"
+          },
+          {
+            "id": 57,
+            "axis": "block fill width",
+            "direction": "increasing",
+            "extension": "█"
+          },
+          {
+            "id": 58,
+            "axis": "speaker volume level",
+            "direction": "increasing",
+            "extension": "🔊📢"
+          },
+          {
+            "id": 59,
+            "axis": "cloud cover increasing",
+            "direction": "increasing",
+            "extension": "⛅🌥️"
+          }
+        ]
+      },
+      {
+        "agent": 4,
+        "answers": [
+          {
+            "id": 0,
+            "extension": "⚃⚄",
+            "direction": "increasing",
+            "axis": "die face pip count"
+          },
+          {
+            "id": 1,
+            "extension": "◕●",
+            "direction": "increasing",
+            "axis": "circle fill amount"
+          },
+          {
+            "id": 2,
+            "extension": "𝗞𝗟",
+            "direction": "increasing",
+            "axis": "alphabet position (bold)"
+          },
+          {
+            "id": 3,
+            "extension": "𝛬𝛭",
+            "direction": "increasing",
+            "axis": "greek alphabet position"
+          },
+          {
+            "id": 4,
+            "extension": "…⁘",
+            "direction": "increasing",
+            "axis": "dot count in punctuation mark"
+          },
+          {
+            "id": 5,
+            "extension": "∭⨌",
+            "direction": "increasing",
+            "axis": "integral sign multiplicity"
+          },
+          {
+            "id": 6,
+            "extension": "˦˥",
+            "direction": "increasing",
+            "axis": "tone letter pitch level"
+          },
+          {
+            "id": 7,
+            "extension": "ⅥⅧ",
+            "direction": "increasing",
+            "axis": "roman numeral value (step of 2)"
+          },
+          {
+            "id": 8,
+            "extension": "⣶⣿",
+            "direction": "increasing",
+            "axis": "braille dot fill density"
+          },
+          {
+            "id": 9,
+            "extension": "🌪️🌀",
+            "direction": "increasing",
+            "axis": "wind/speed intensity"
+          },
+          {
+            "id": 10,
+            "extension": "⚎⚏",
+            "direction": "increasing",
+            "axis": "tally-rod numeral count"
+          },
+          {
+            "id": 11,
+            "extension": "♖♕",
+            "direction": "increasing",
+            "axis": "chess piece value"
+          },
+          {
+            "id": 12,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 13,
+            "extension": "☲☳",
+            "direction": "increasing",
+            "axis": "I Ching trigram sequence (King Wen order)"
+          },
+          {
+            "id": 14,
+            "extension": "‴⁗",
+            "direction": "increasing",
+            "axis": "prime mark count"
+          },
+          {
+            "id": 15,
+            "extension": "⇔⟺",
+            "direction": "increasing",
+            "axis": "double-arrow visual weight/length"
+          },
+          {
+            "id": 16,
+            "extension": "‾",
+            "direction": "increasing",
+            "axis": "vertical position of horizontal mark"
+          },
+          {
+            "id": 17,
+            "extension": "🌘🌑",
+            "direction": "increasing",
+            "axis": "moon waning toward new"
+          },
+          {
+            "id": 18,
+            "extension": "𝕋𝕌",
+            "direction": "increasing",
+            "axis": "alphabet position (blackboard bold)"
+          },
+          {
+            "id": 19,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 20,
+            "extension": "≋",
+            "direction": "increasing",
+            "axis": "wave/tilde stroke count"
+          },
+          {
+            "id": 21,
+            "extension": "⚅",
+            "direction": "increasing",
+            "axis": "die face value (step of 2)"
+          },
+          {
+            "id": 22,
+            "extension": "🔊📢",
+            "direction": "increasing",
+            "axis": "volume/loudness"
+          },
+          {
+            "id": 23,
+            "extension": "⅓¼",
+            "direction": "decreasing",
+            "axis": "unit fraction value (denominator increasing)"
+          },
+          {
+            "id": 24,
+            "extension": "𝔴𝔵",
+            "direction": "increasing",
+            "axis": "alphabet position (fraktur)"
+          },
+          {
+            "id": 25,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 26,
+            "extension": "🧑👨",
+            "direction": "increasing",
+            "axis": "age"
+          },
+          {
+            "id": 27,
+            "extension": "𝙓𝙔",
+            "direction": "increasing",
+            "axis": "alphabet position (letter component)"
+          },
+          {
+            "id": 28,
+            "extension": "⁘⁙",
+            "direction": "increasing",
+            "axis": "dot count in punctuation mark"
+          },
+          {
+            "id": 29,
+            "extension": "▓█",
+            "direction": "increasing",
+            "axis": "shade block density"
+          },
+          {
+            "id": 30,
+            "extension": "◑◕",
+            "direction": "increasing",
+            "axis": "circle fill amount"
+          },
+          {
+            "id": 31,
+            "extension": "≡≣",
+            "direction": "increasing",
+            "axis": "bar count in equals-like sign"
+          },
+          {
+            "id": 32,
+            "extension": "🌔🌕",
+            "direction": "increasing",
+            "axis": "moon illumination"
+          },
+          {
+            "id": 33,
+            "extension": "𝙷𝙸",
+            "direction": "increasing",
+            "axis": "alphabet position (letter component)"
+          },
+          {
+            "id": 34,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 35,
+            "extension": "½⅝",
+            "direction": "increasing",
+            "axis": "eighths fraction value"
+          },
+          {
+            "id": 36,
+            "extension": "𝞄𝞍",
+            "direction": "increasing",
+            "axis": "greek alphabet position (bold italic)"
+          },
+          {
+            "id": 37,
+            "extension": "●",
+            "direction": "increasing",
+            "axis": "circle fill amount"
+          },
+          {
+            "id": 38,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 39,
+            "extension": "≡",
+            "direction": "increasing",
+            "axis": "bar count"
+          },
+          {
+            "id": 40,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 41,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 42,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 43,
+            "extension": "╲",
+            "direction": "increasing",
+            "axis": "diagonal rotation"
+          },
+          {
+            "id": 44,
+            "extension": "🟩🟦",
+            "direction": "increasing",
+            "axis": "rainbow hue progression"
+          },
+          {
+            "id": 45,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 46,
+            "extension": "㎞",
+            "direction": "increasing",
+            "axis": "length unit magnitude"
+          },
+          {
+            "id": 47,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 48,
+            "extension": "تث",
+            "direction": "increasing",
+            "axis": "arabic alphabet position"
+          },
+          {
+            "id": 49,
+            "extension": "🐅🦁",
+            "direction": "increasing",
+            "axis": "feline size/wildness"
+          },
+          {
+            "id": 50,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 51,
+            "extension": "㎏",
+            "direction": "increasing",
+            "axis": "mass unit magnitude"
+          },
+          {
+            "id": 52,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 53,
+            "extension": "",
+            "direction": "increasing",
+            "axis": ""
+          },
+          {
+            "id": 54,
+            "extension": "✷✸",
+            "direction": "increasing",
+            "axis": "star elaborateness"
+          },
+          {
+            "id": 55,
+            "extension": "𝛹𝛸",
+            "direction": "decreasing",
+            "axis": "greek alphabet position (backward from omega)"
+          },
+          {
+            "id": 56,
+            "extension": "▇█",
+            "direction": "increasing",
+            "axis": "bar height"
+          },
+          {
+            "id": 57,
+            "extension": "█",
+            "direction": "increasing",
+            "axis": "block fill amount"
+          },
+          {
+            "id": 58,
+            "extension": "🔊📢",
+            "direction": "increasing",
+            "axis": "volume/loudness"
+          },
+          {
+            "id": 59,
+            "extension": "⛅☁",
+            "direction": "increasing",
+            "axis": "cloud cover"
+          }
+        ]
+      },
+      {
+        "agent": 5,
+        "answers": [
+          {
+            "id": 0,
+            "axis": "die face pips",
+            "direction": "increasing",
+            "extension": "⚃⚄"
+          },
+          {
+            "id": 1,
+            "axis": "circle fill rotation",
+            "direction": "increasing",
+            "extension": "◒◓"
+          },
+          {
+            "id": 2,
+            "axis": "bold sans-serif letter sequence",
+            "direction": "increasing",
+            "extension": "𝗞𝗟"
+          },
+          {
+            "id": 3,
+            "axis": "Greek letter sequence (bold italic)",
+            "direction": "increasing",
+            "extension": "𝛬𝛭"
+          },
+          {
+            "id": 4,
+            "axis": "dot-leader count",
+            "direction": "increasing",
+            "extension": "…⁘"
+          },
+          {
+            "id": 5,
+            "axis": "integral multiplicity",
+            "direction": "increasing",
+            "extension": "∭⨌"
+          },
+          {
+            "id": 6,
+            "axis": "tone-letter pitch level",
+            "direction": "decreasing",
+            "extension": "˨˩"
+          },
+          {
+            "id": 7,
+            "axis": "roman numeral, even steps",
+            "direction": "increasing",
+            "extension": "ⅥⅧ"
+          },
+          {
+            "id": 8,
+            "axis": "braille dot fill density",
+            "direction": "increasing",
+            "extension": "⣶⣿"
+          },
+          {
+            "id": 9,
+            "axis": "wind/motion intensity",
+            "direction": "increasing",
+            "extension": "🌬️🌪️"
+          },
+          {
+            "id": 10,
+            "axis": "yin-yang digram sequence",
+            "direction": "increasing",
+            "extension": "⚎⚏"
+          },
+          {
+            "id": 11,
+            "axis": "chess piece rank",
+            "direction": "decreasing",
+            "extension": "♘♙"
+          },
+          {
+            "id": 12,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 13,
+            "axis": "I Ching trigram binary value",
+            "direction": "increasing",
+            "extension": "☲☳"
+          },
+          {
+            "id": 14,
+            "axis": "prime mark multiplicity",
+            "direction": "increasing",
+            "extension": "‴⁗"
+          },
+          {
+            "id": 15,
+            "axis": "arrow/equivalence weight",
+            "direction": "increasing",
+            "extension": "⟺"
+          },
+          {
+            "id": 16,
+            "axis": "dash length",
+            "direction": "increasing",
+            "extension": "–—"
+          },
+          {
+            "id": 17,
+            "axis": "moon phase waning",
+            "direction": "decreasing",
+            "extension": "🌘🌑"
+          },
+          {
+            "id": 18,
+            "axis": "double-struck letter sequence",
+            "direction": "increasing",
+            "extension": "𝕋𝕌"
+          },
+          {
+            "id": 19,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 20,
+            "axis": "approximation strength",
+            "direction": "increasing",
+            "extension": "≋"
+          },
+          {
+            "id": 21,
+            "axis": "die face pips, step of two",
+            "direction": "increasing",
+            "extension": "⚅"
+          },
+          {
+            "id": 22,
+            "axis": "volume loudness",
+            "direction": "increasing",
+            "extension": "🔊📢"
+          },
+          {
+            "id": 23,
+            "axis": "fraction size",
+            "direction": "decreasing",
+            "extension": "⅓¼"
+          },
+          {
+            "id": 24,
+            "axis": "fraktur letter sequence",
+            "direction": "increasing",
+            "extension": "𝔴𝔵"
+          },
+          {
+            "id": 25,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 26,
+            "axis": "human age progression",
+            "direction": "increasing",
+            "extension": "🧑👨👴"
+          },
+          {
+            "id": 27,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 28,
+            "axis": "dot-leader count",
+            "direction": "increasing",
+            "extension": "⁘"
+          },
+          {
+            "id": 29,
+            "axis": "shade block density",
+            "direction": "increasing",
+            "extension": "▓█"
+          },
+          {
+            "id": 30,
+            "axis": "circle fill amount",
+            "direction": "increasing",
+            "extension": "◑◕"
+          },
+          {
+            "id": 31,
+            "axis": "equality sign multiplicity",
+            "direction": "increasing",
+            "extension": "≡"
+          },
+          {
+            "id": 32,
+            "axis": "moon phase waxing",
+            "direction": "increasing",
+            "extension": "🌔🌕"
+          },
+          {
+            "id": 33,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 34,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 35,
+            "axis": "eighths fraction value",
+            "direction": "increasing",
+            "extension": "½⅝"
+          },
+          {
+            "id": 36,
+            "axis": "Greek letter sequence (bold italic)",
+            "direction": "increasing",
+            "extension": "𝞄𝞍"
+          },
+          {
+            "id": 37,
+            "axis": "circle fill amount",
+            "direction": "increasing",
+            "extension": "◕●"
+          },
+          {
+            "id": 38,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 39,
+            "axis": "equality sign multiplicity",
+            "direction": "increasing",
+            "extension": "≡"
+          },
+          {
+            "id": 40,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 41,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 42,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 43,
+            "axis": "line orientation/crossing",
+            "direction": "increasing",
+            "extension": "╲╳"
+          },
+          {
+            "id": 44,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 45,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 46,
+            "axis": "length unit magnitude",
+            "direction": "increasing",
+            "extension": "㎞"
+          },
+          {
+            "id": 47,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 48,
+            "axis": "Arabic alphabet order",
+            "direction": "increasing",
+            "extension": "تث"
+          },
+          {
+            "id": 49,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 50,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 51,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 52,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 53,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 54,
+            "axis": "star point count",
+            "direction": "increasing",
+            "extension": "✹✺"
+          },
+          {
+            "id": 55,
+            "axis": "",
+            "direction": "increasing",
+            "extension": ""
+          },
+          {
+            "id": 56,
+            "axis": "bar chart height",
+            "direction": "increasing",
+            "extension": "▇█"
+          },
+          {
+            "id": 57,
+            "axis": "block fill fraction",
+            "direction": "increasing",
+            "extension": "▋▊"
+          },
+          {
+            "id": 58,
+            "axis": "volume loudness",
+            "direction": "increasing",
+            "extension": "🔊📢"
+          },
+          {
+            "id": 59,
+            "axis": "cloud cover",
+            "direction": "increasing",
+            "extension": "⛅🌥️"
+          }
+        ]
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Extend"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "extend-0",
+      "phaseIndex": 1,
+      "phaseTitle": "Extend",
+      "agentId": "a6c958ec344bd65a4",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787699946461,
+      "queuedAt": 1787699946454,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "A generative perception task — please read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/extend-tasks.json: items each with an \"id\" and a \"seed\" of one or two glyphs. For each seed: assume there IS some increasing or decreasing aspect running through it (with two glyphs, the pair may suggest the aspect and its direction; with one, choose the aspect that asserts itself mo…",
+      "lastProgressAt": 1787699997709,
+      "tokens": 60763,
+      "toolCalls": 2,
+      "durationMs": 51247,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"axis\":\"die face value\",\"direction\":\"increasing\",\"extension\":\"⚃⚄\"},{\"id\":1,\"axis\":\"circle fill rotation\",\"direction\":\"increasing\",\"extension\":\"◒◐\"},{\"id\":2,\"axis\":\"bold sans alphabet\",\"direction\":\"increasing\",\"extension\":\"𝗞𝗟\"},{\"id\":3,\"axis\":\"greek alphabet\",\"direction\":\"increasing\",\"extension\":\"𝛬𝛭\"},{\"id\":4,\"axis\":\"dot leader count\",\"direction\":\"increasing\",\"extension\":\"…⁘…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "extend-1",
+      "phaseIndex": 1,
+      "phaseTitle": "Extend",
+      "agentId": "a4ffa27ad8995b6b8",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787699946461,
+      "queuedAt": 1787699946455,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "A generative perception task — please read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/extend-tasks.json: items each with an \"id\" and a \"seed\" of one or two glyphs. For each seed: assume there IS some increasing or decreasing aspect running through it (with two glyphs, the pair may suggest the aspect and its direction; with one, choose the aspect that asserts itself mo…",
+      "lastProgressAt": 1787700035731,
+      "tokens": 60764,
+      "toolCalls": 2,
+      "durationMs": 87001,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"extension\":\"⚃⚄\",\"direction\":\"increasing\",\"axis\":\"die face pip count\"},{\"id\":1,\"extension\":\"◒◓\",\"direction\":\"increasing\",\"axis\":\"circle shading rotating clockwise\"},{\"id\":2,\"extension\":\"𝗞𝗟\",\"direction\":\"increasing\",\"axis\":\"bold sans letter sequence\"},{\"id\":3,\"extension\":\"𝛬𝛭\",\"direction\":\"increasing\",\"axis\":\"italic Greek letter sequence\"},{\"id\":4,\"extension\":\"…⁘\",\"direction\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "extend-2",
+      "phaseIndex": 1,
+      "phaseTitle": "Extend",
+      "agentId": "a897079e7b2ddde7d",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787699946462,
+      "queuedAt": 1787699946455,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "A generative perception task — please read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/extend-tasks.json: items each with an \"id\" and a \"seed\" of one or two glyphs. For each seed: assume there IS some increasing or decreasing aspect running through it (with two glyphs, the pair may suggest the aspect and its direction; with one, choose the aspect that asserts itself mo…",
+      "lastProgressAt": 1787700010103,
+      "tokens": 60761,
+      "toolCalls": 2,
+      "durationMs": 61372,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"axis\":\"die face value\",\"direction\":\"increasing\",\"extension\":\"⚃⚄⚅\"},{\"id\":1,\"axis\":\"circle shading fraction\",\"direction\":\"increasing\",\"extension\":\"◕●\"},{\"id\":2,\"axis\":\"alphabet (bold sans)\",\"direction\":\"increasing\",\"extension\":\"𝗞𝗟𝗠\"},{\"id\":3,\"axis\":\"Greek alphabet (italic)\",\"direction\":\"increasing\",\"extension\":\"𝛬𝛭𝛮\"},{\"id\":4,\"axis\":\"leader dot count\",\"direction\":\"increasi…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "extend-3",
+      "phaseIndex": 1,
+      "phaseTitle": "Extend",
+      "agentId": "ab635591445e0ee34",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787699946462,
+      "queuedAt": 1787699946455,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "A generative perception task — please read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/extend-tasks.json: items each with an \"id\" and a \"seed\" of one or two glyphs. For each seed: assume there IS some increasing or decreasing aspect running through it (with two glyphs, the pair may suggest the aspect and its direction; with one, choose the aspect that asserts itself mo…",
+      "lastProgressAt": 1787699996490,
+      "tokens": 60764,
+      "toolCalls": 2,
+      "durationMs": 47758,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"axis\":\"die face value\",\"direction\":\"increasing\",\"extension\":\"⚃⚄\"},{\"id\":1,\"axis\":\"circle shading rotation\",\"direction\":\"increasing\",\"extension\":\"◒◓\"},{\"id\":2,\"axis\":\"bold sans-serif alphabet\",\"direction\":\"increasing\",\"extension\":\"𝗞𝗟\"},{\"id\":3,\"axis\":\"italic Greek alphabet\",\"direction\":\"increasing\",\"extension\":\"𝛬𝛭\"},{\"id\":4,\"axis\":\"ellipsis dot count\",\"direction\":\"increasin…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "extend-4",
+      "phaseIndex": 1,
+      "phaseTitle": "Extend",
+      "agentId": "acd4c4473dcf713c1",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787699946462,
+      "queuedAt": 1787699946455,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "A generative perception task — please read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/extend-tasks.json: items each with an \"id\" and a \"seed\" of one or two glyphs. For each seed: assume there IS some increasing or decreasing aspect running through it (with two glyphs, the pair may suggest the aspect and its direction; with one, choose the aspect that asserts itself mo…",
+      "lastProgressAt": 1787700043297,
+      "tokens": 60763,
+      "toolCalls": 2,
+      "durationMs": 94565,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"extension\":\"⚃⚄\",\"direction\":\"increasing\",\"axis\":\"die face pip count\"},{\"id\":1,\"extension\":\"◕●\",\"direction\":\"increasing\",\"axis\":\"circle fill amount\"},{\"id\":2,\"extension\":\"𝗞𝗟\",\"direction\":\"increasing\",\"axis\":\"alphabet position (bold)\"},{\"id\":3,\"extension\":\"𝛬𝛭\",\"direction\":\"increasing\",\"axis\":\"greek alphabet position\"},{\"id\":4,\"extension\":\"…⁘\",\"direction\":\"increasing\",\"axis\":…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "extend-5",
+      "phaseIndex": 1,
+      "phaseTitle": "Extend",
+      "agentId": "a2ad23b358e391973",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787699946462,
+      "queuedAt": 1787699946455,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "A generative perception task — please read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/extend-tasks.json: items each with an \"id\" and a \"seed\" of one or two glyphs. For each seed: assume there IS some increasing or decreasing aspect running through it (with two glyphs, the pair may suggest the aspect and its direction; with one, choose the aspect that asserts itself mo…",
+      "lastProgressAt": 1787700012655,
+      "tokens": 60764,
+      "toolCalls": 2,
+      "durationMs": 63923,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"axis\":\"die face pips\",\"direction\":\"increasing\",\"extension\":\"⚃⚄\"},{\"id\":1,\"axis\":\"circle fill rotation\",\"direction\":\"increasing\",\"extension\":\"◒◓\"},{\"id\":2,\"axis\":\"bold sans-serif letter sequence\",\"direction\":\"increasing\",\"extension\":\"𝗞𝗟\"},{\"id\":3,\"axis\":\"Greek letter sequence (bold italic)\",\"direction\":\"increasing\",\"extension\":\"𝛬𝛭\"},{\"id\":4,\"axis\":\"dot-leader count\",\"direct…"
+    }
+  ],
+  "totalTokens": 364579,
+  "totalToolCalls": 12
+}

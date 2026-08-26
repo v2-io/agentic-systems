@@ -1,0 +1,1680 @@
+{
+  "summary": "Sonnet judges: glyph-echo counterbalanced battery (both orders same sheet)",
+  "agentCount": 6,
+  "logs": [],
+  "result": {
+    "judgeAnswers": [
+      {
+        "chunk": 0,
+        "answers": [
+          {
+            "id": 0,
+            "more": "˥"
+          },
+          {
+            "id": 1,
+            "more": "𝍣"
+          },
+          {
+            "id": 2,
+            "more": "▓"
+          },
+          {
+            "id": 3,
+            "more": "♔"
+          },
+          {
+            "id": 4,
+            "more": "🟧"
+          },
+          {
+            "id": 5,
+            "more": "⑧"
+          },
+          {
+            "id": 6,
+            "more": "½"
+          },
+          {
+            "id": 7,
+            "more": "😢"
+          },
+          {
+            "id": 8,
+            "more": "6"
+          },
+          {
+            "id": 9,
+            "more": "█"
+          },
+          {
+            "id": 10,
+            "more": "Ⅹ"
+          },
+          {
+            "id": 11,
+            "more": "⁗"
+          },
+          {
+            "id": 12,
+            "more": "½"
+          },
+          {
+            "id": 13,
+            "more": "▓"
+          },
+          {
+            "id": 14,
+            "more": "◕"
+          },
+          {
+            "id": 15,
+            "more": "😄"
+          },
+          {
+            "id": 16,
+            "more": "𝍣"
+          },
+          {
+            "id": 17,
+            "more": "👴"
+          },
+          {
+            "id": 18,
+            "more": "⁗"
+          },
+          {
+            "id": 19,
+            "more": "˧"
+          },
+          {
+            "id": 20,
+            "more": "௱"
+          },
+          {
+            "id": 21,
+            "more": "ו"
+          },
+          {
+            "id": 22,
+            "more": "ה"
+          },
+          {
+            "id": 23,
+            "more": "ו"
+          },
+          {
+            "id": 24,
+            "more": "˥"
+          },
+          {
+            "id": 25,
+            "more": "⚄"
+          },
+          {
+            "id": 26,
+            "more": "👴"
+          },
+          {
+            "id": 27,
+            "more": "⚄"
+          },
+          {
+            "id": 28,
+            "more": "★"
+          },
+          {
+            "id": 29,
+            "more": "▓"
+          },
+          {
+            "id": 30,
+            "more": "😢"
+          },
+          {
+            "id": 31,
+            "more": "😄"
+          },
+          {
+            "id": 32,
+            "more": "∭"
+          },
+          {
+            "id": 33,
+            "more": "♔"
+          },
+          {
+            "id": 34,
+            "more": "👴"
+          },
+          {
+            "id": 35,
+            "more": "▓"
+          },
+          {
+            "id": 36,
+            "more": "௱"
+          },
+          {
+            "id": 37,
+            "more": "👴"
+          },
+          {
+            "id": 38,
+            "more": "🟧"
+          },
+          {
+            "id": 39,
+            "more": "⨌"
+          },
+          {
+            "id": 40,
+            "more": "ה"
+          },
+          {
+            "id": 41,
+            "more": "█"
+          },
+          {
+            "id": 42,
+            "more": "😢"
+          },
+          {
+            "id": 43,
+            "more": "Ⅹ"
+          },
+          {
+            "id": 44,
+            "more": "█"
+          },
+          {
+            "id": 45,
+            "more": "⑩"
+          },
+          {
+            "id": 46,
+            "more": "㎜"
+          },
+          {
+            "id": 47,
+            "more": "˧"
+          },
+          {
+            "id": 48,
+            "more": "⑨"
+          },
+          {
+            "id": 49,
+            "more": "█"
+          },
+          {
+            "id": 50,
+            "more": "∭"
+          },
+          {
+            "id": 51,
+            "more": "⑩"
+          },
+          {
+            "id": 52,
+            "more": "▆"
+          },
+          {
+            "id": 53,
+            "more": "⑧"
+          },
+          {
+            "id": 54,
+            "more": "⑨"
+          },
+          {
+            "id": 55,
+            "more": "⨌"
+          },
+          {
+            "id": 56,
+            "more": "6"
+          },
+          {
+            "id": 57,
+            "more": "㎜"
+          },
+          {
+            "id": 58,
+            "more": "ᚅ"
+          },
+          {
+            "id": 59,
+            "more": "▆"
+          },
+          {
+            "id": 60,
+            "more": "◕"
+          },
+          {
+            "id": 61,
+            "more": "😢"
+          },
+          {
+            "id": 62,
+            "more": "ᚅ"
+          },
+          {
+            "id": 63,
+            "more": "★"
+          }
+        ]
+      },
+      {
+        "chunk": 1,
+        "answers": [
+          {
+            "id": 0,
+            "more": "♔"
+          },
+          {
+            "id": 1,
+            "more": "7"
+          },
+          {
+            "id": 2,
+            "more": "‴"
+          },
+          {
+            "id": 3,
+            "more": "…"
+          },
+          {
+            "id": 4,
+            "more": "█"
+          },
+          {
+            "id": 5,
+            "more": "𝍡"
+          },
+          {
+            "id": 6,
+            "more": "ג"
+          },
+          {
+            "id": 7,
+            "more": "█"
+          },
+          {
+            "id": 8,
+            "more": "🞱"
+          },
+          {
+            "id": 9,
+            "more": "█"
+          },
+          {
+            "id": 10,
+            "more": "⚅"
+          },
+          {
+            "id": 11,
+            "more": "🞱"
+          },
+          {
+            "id": 12,
+            "more": "𝍣"
+          },
+          {
+            "id": 13,
+            "more": "⁑"
+          },
+          {
+            "id": 14,
+            "more": "9"
+          },
+          {
+            "id": 15,
+            "more": "♔"
+          },
+          {
+            "id": 16,
+            "more": "▎"
+          },
+          {
+            "id": 17,
+            "more": "█"
+          },
+          {
+            "id": 18,
+            "more": "𝍣"
+          },
+          {
+            "id": 19,
+            "more": "7"
+          },
+          {
+            "id": 20,
+            "more": "…"
+          },
+          {
+            "id": 21,
+            "more": "🐋"
+          },
+          {
+            "id": 22,
+            "more": "9"
+          },
+          {
+            "id": 23,
+            "more": "↑"
+          },
+          {
+            "id": 24,
+            "more": "↓"
+          },
+          {
+            "id": 25,
+            "more": "🟨"
+          },
+          {
+            "id": 26,
+            "more": "𝍤"
+          },
+          {
+            "id": 27,
+            "more": "䷡"
+          },
+          {
+            "id": 28,
+            "more": "▎"
+          },
+          {
+            "id": 29,
+            "more": "ᚄ"
+          },
+          {
+            "id": 30,
+            "more": "𝍢"
+          },
+          {
+            "id": 31,
+            "more": "⚅"
+          },
+          {
+            "id": 32,
+            "more": "䷡"
+          },
+          {
+            "id": 33,
+            "more": "▇"
+          },
+          {
+            "id": 34,
+            "more": "█"
+          },
+          {
+            "id": 35,
+            "more": "𝍣"
+          },
+          {
+            "id": 36,
+            "more": "⁑"
+          },
+          {
+            "id": 37,
+            "more": "⚃"
+          },
+          {
+            "id": 38,
+            "more": "½"
+          },
+          {
+            "id": 39,
+            "more": "‴"
+          },
+          {
+            "id": 40,
+            "more": "ג"
+          },
+          {
+            "id": 41,
+            "more": "ᚄ"
+          },
+          {
+            "id": 42,
+            "more": "█"
+          },
+          {
+            "id": 43,
+            "more": "½"
+          },
+          {
+            "id": 44,
+            "more": "⣶"
+          },
+          {
+            "id": 45,
+            "more": "⚃"
+          },
+          {
+            "id": 46,
+            "more": "▒"
+          },
+          {
+            "id": 47,
+            "more": "‴"
+          },
+          {
+            "id": 48,
+            "more": "‴"
+          },
+          {
+            "id": 49,
+            "more": "𝍤"
+          },
+          {
+            "id": 50,
+            "more": "◕"
+          },
+          {
+            "id": 51,
+            "more": "8"
+          },
+          {
+            "id": 52,
+            "more": "🟦"
+          },
+          {
+            "id": 53,
+            "more": "𝍣"
+          },
+          {
+            "id": 54,
+            "more": "˧"
+          },
+          {
+            "id": 55,
+            "more": "🐋"
+          },
+          {
+            "id": 56,
+            "more": "▇"
+          },
+          {
+            "id": 57,
+            "more": "↓"
+          },
+          {
+            "id": 58,
+            "more": "↑"
+          },
+          {
+            "id": 59,
+            "more": "⣶"
+          },
+          {
+            "id": 60,
+            "more": "◕"
+          },
+          {
+            "id": 61,
+            "more": "8"
+          },
+          {
+            "id": 62,
+            "more": "˧"
+          },
+          {
+            "id": 63,
+            "more": "█"
+          }
+        ]
+      },
+      {
+        "chunk": 2,
+        "answers": [
+          {
+            "id": 0,
+            "more": "⬤"
+          },
+          {
+            "id": 1,
+            "more": "🟥"
+          },
+          {
+            "id": 2,
+            "more": "█"
+          },
+          {
+            "id": 3,
+            "more": "█"
+          },
+          {
+            "id": 4,
+            "more": "β"
+          },
+          {
+            "id": 5,
+            "more": "→"
+          },
+          {
+            "id": 6,
+            "more": "🞳"
+          },
+          {
+            "id": 7,
+            "more": "→"
+          },
+          {
+            "id": 8,
+            "more": "🔊"
+          },
+          {
+            "id": 9,
+            "more": "⬤"
+          },
+          {
+            "id": 10,
+            "more": "🐈"
+          },
+          {
+            "id": 11,
+            "more": "😁"
+          },
+          {
+            "id": 12,
+            "more": "௲"
+          },
+          {
+            "id": 13,
+            "more": "㎞"
+          },
+          {
+            "id": 14,
+            "more": "ι"
+          },
+          {
+            "id": 15,
+            "more": "▍"
+          },
+          {
+            "id": 16,
+            "more": "⚄"
+          },
+          {
+            "id": 17,
+            "more": "🞳"
+          },
+          {
+            "id": 18,
+            "more": "⣿"
+          },
+          {
+            "id": 19,
+            "more": "㎞"
+          },
+          {
+            "id": 20,
+            "more": "㎞"
+          },
+          {
+            "id": 21,
+            "more": "㎞"
+          },
+          {
+            "id": 22,
+            "more": "▍"
+          },
+          {
+            "id": 23,
+            "more": "▅"
+          },
+          {
+            "id": 24,
+            "more": "ᚃ"
+          },
+          {
+            "id": 25,
+            "more": "Ⅴ"
+          },
+          {
+            "id": 26,
+            "more": "🞯"
+          },
+          {
+            "id": 27,
+            "more": "▅"
+          },
+          {
+            "id": 28,
+            "more": "ι"
+          },
+          {
+            "id": 29,
+            "more": "♖"
+          },
+          {
+            "id": 30,
+            "more": "🌕"
+          },
+          {
+            "id": 31,
+            "more": "ι"
+          },
+          {
+            "id": 32,
+            "more": "🌕"
+          },
+          {
+            "id": 33,
+            "more": "″"
+          },
+          {
+            "id": 34,
+            "more": "⣶"
+          },
+          {
+            "id": 35,
+            "more": "௲"
+          },
+          {
+            "id": 36,
+            "more": "‥"
+          },
+          {
+            "id": 37,
+            "more": "👴"
+          },
+          {
+            "id": 38,
+            "more": "⣿"
+          },
+          {
+            "id": 39,
+            "more": "⣿"
+          },
+          {
+            "id": 40,
+            "more": "⚄"
+          },
+          {
+            "id": 41,
+            "more": "🟥"
+          },
+          {
+            "id": 42,
+            "more": "Ⅴ"
+          },
+          {
+            "id": 43,
+            "more": "😁"
+          },
+          {
+            "id": 44,
+            "more": "▋"
+          },
+          {
+            "id": 45,
+            "more": "⣿"
+          },
+          {
+            "id": 46,
+            "more": "🞴"
+          },
+          {
+            "id": 47,
+            "more": "🞲"
+          },
+          {
+            "id": 48,
+            "more": "ᚅ"
+          },
+          {
+            "id": 49,
+            "more": "″"
+          },
+          {
+            "id": 50,
+            "more": "䷪"
+          },
+          {
+            "id": 51,
+            "more": "ᚅ"
+          },
+          {
+            "id": 52,
+            "more": "‥"
+          },
+          {
+            "id": 53,
+            "more": "ᚃ"
+          },
+          {
+            "id": 54,
+            "more": "♘"
+          },
+          {
+            "id": 55,
+            "more": "䷪"
+          },
+          {
+            "id": 56,
+            "more": "▋"
+          },
+          {
+            "id": 57,
+            "more": "ι"
+          },
+          {
+            "id": 58,
+            "more": "⣶"
+          },
+          {
+            "id": 59,
+            "more": "🞴"
+          },
+          {
+            "id": 60,
+            "more": "🐈"
+          },
+          {
+            "id": 61,
+            "more": "β"
+          },
+          {
+            "id": 62,
+            "more": "🔊"
+          },
+          {
+            "id": 63,
+            "more": "👴"
+          }
+        ]
+      },
+      {
+        "chunk": 3,
+        "answers": [
+          {
+            "id": 0,
+            "more": "˥"
+          },
+          {
+            "id": 1,
+            "more": "⁗"
+          },
+          {
+            "id": 2,
+            "more": "ז"
+          },
+          {
+            "id": 3,
+            "more": "Ⅳ"
+          },
+          {
+            "id": 4,
+            "more": "ε"
+          },
+          {
+            "id": 5,
+            "more": "▅"
+          },
+          {
+            "id": 6,
+            "more": "⑥"
+          },
+          {
+            "id": 7,
+            "more": "ז"
+          },
+          {
+            "id": 8,
+            "more": "●"
+          },
+          {
+            "id": 9,
+            "more": "Ⅵ"
+          },
+          {
+            "id": 10,
+            "more": "🌓"
+          },
+          {
+            "id": 11,
+            "more": "ᚅ"
+          },
+          {
+            "id": 12,
+            "more": "ח"
+          },
+          {
+            "id": 13,
+            "more": "🌓"
+          },
+          {
+            "id": 14,
+            "more": "🐋"
+          },
+          {
+            "id": 15,
+            "more": "🔊"
+          },
+          {
+            "id": 16,
+            "more": "🌓"
+          },
+          {
+            "id": 17,
+            "more": "⁗"
+          },
+          {
+            "id": 18,
+            "more": "ε"
+          },
+          {
+            "id": 19,
+            "more": "⣤"
+          },
+          {
+            "id": 20,
+            "more": "˥"
+          },
+          {
+            "id": 21,
+            "more": "䷁"
+          },
+          {
+            "id": 22,
+            "more": "🐋"
+          },
+          {
+            "id": 23,
+            "more": "⑥"
+          },
+          {
+            "id": 24,
+            "more": "⅝"
+          },
+          {
+            "id": 25,
+            "more": "⅝"
+          },
+          {
+            "id": 26,
+            "more": "Ⅳ"
+          },
+          {
+            "id": 27,
+            "more": "🌓"
+          },
+          {
+            "id": 28,
+            "more": "●"
+          },
+          {
+            "id": 29,
+            "more": "🟧"
+          },
+          {
+            "id": 30,
+            "more": "🟧"
+          },
+          {
+            "id": 31,
+            "more": "▅"
+          },
+          {
+            "id": 32,
+            "more": "👦"
+          },
+          {
+            "id": 33,
+            "more": "🔉"
+          },
+          {
+            "id": 34,
+            "more": "↑"
+          },
+          {
+            "id": 35,
+            "more": "䷁"
+          },
+          {
+            "id": 36,
+            "more": "●"
+          },
+          {
+            "id": 37,
+            "more": "㎝"
+          },
+          {
+            "id": 38,
+            "more": "🔊"
+          },
+          {
+            "id": 39,
+            "more": "👨"
+          },
+          {
+            "id": 40,
+            "more": "ᚅ"
+          },
+          {
+            "id": 41,
+            "more": "Ⅳ"
+          },
+          {
+            "id": 42,
+            "more": "↑"
+          },
+          {
+            "id": 43,
+            "more": "👨"
+          },
+          {
+            "id": 44,
+            "more": "㎝"
+          },
+          {
+            "id": 45,
+            "more": "◕"
+          },
+          {
+            "id": 46,
+            "more": "🔉"
+          },
+          {
+            "id": 47,
+            "more": "ח"
+          },
+          {
+            "id": 48,
+            "more": "㎝"
+          },
+          {
+            "id": 49,
+            "more": "㎝"
+          },
+          {
+            "id": 50,
+            "more": "▊"
+          },
+          {
+            "id": 51,
+            "more": "👦"
+          },
+          {
+            "id": 52,
+            "more": "▊"
+          },
+          {
+            "id": 53,
+            "more": "Ⅳ"
+          },
+          {
+            "id": 54,
+            "more": "㎝"
+          },
+          {
+            "id": 55,
+            "more": "◕"
+          },
+          {
+            "id": 56,
+            "more": "●"
+          },
+          {
+            "id": 57,
+            "more": "•"
+          },
+          {
+            "id": 58,
+            "more": "Ⅵ"
+          },
+          {
+            "id": 59,
+            "more": "㎝"
+          },
+          {
+            "id": 60,
+            "more": "⣤"
+          },
+          {
+            "id": 61,
+            "more": "•"
+          }
+        ]
+      },
+      {
+        "chunk": 4,
+        "answers": [
+          {
+            "id": 0,
+            "more": "🔊"
+          },
+          {
+            "id": 1,
+            "more": "🔉"
+          },
+          {
+            "id": 2,
+            "more": "🌔"
+          },
+          {
+            "id": 3,
+            "more": "●"
+          },
+          {
+            "id": 4,
+            "more": "𝍤"
+          },
+          {
+            "id": 5,
+            "more": "ᚄ"
+          },
+          {
+            "id": 6,
+            "more": "∭"
+          },
+          {
+            "id": 7,
+            "more": "●"
+          },
+          {
+            "id": 8,
+            "more": "♗"
+          },
+          {
+            "id": 9,
+            "more": "🔊"
+          },
+          {
+            "id": 10,
+            "more": "⨌"
+          },
+          {
+            "id": 11,
+            "more": "௲"
+          },
+          {
+            "id": 12,
+            "more": "⑨"
+          },
+          {
+            "id": 13,
+            "more": "Ⅹ"
+          },
+          {
+            "id": 14,
+            "more": "🞴"
+          },
+          {
+            "id": 15,
+            "more": "8"
+          },
+          {
+            "id": 16,
+            "more": "˦"
+          },
+          {
+            "id": 17,
+            "more": "∭"
+          },
+          {
+            "id": 18,
+            "more": "˦"
+          },
+          {
+            "id": 19,
+            "more": "½"
+          },
+          {
+            "id": 20,
+            "more": "௱"
+          },
+          {
+            "id": 21,
+            "more": "𝍤"
+          },
+          {
+            "id": 22,
+            "more": "⨌"
+          },
+          {
+            "id": 23,
+            "more": "∬"
+          },
+          {
+            "id": 24,
+            "more": "⚃"
+          },
+          {
+            "id": 25,
+            "more": "Ⅹ"
+          },
+          {
+            "id": 26,
+            "more": "˦"
+          },
+          {
+            "id": 27,
+            "more": "⨌"
+          },
+          {
+            "id": 28,
+            "more": "⁂"
+          },
+          {
+            "id": 29,
+            "more": "🞴"
+          },
+          {
+            "id": 30,
+            "more": "🟥"
+          },
+          {
+            "id": 31,
+            "more": "䷪"
+          },
+          {
+            "id": 32,
+            "more": "௰"
+          },
+          {
+            "id": 33,
+            "more": "⁂"
+          },
+          {
+            "id": 34,
+            "more": "䷡"
+          },
+          {
+            "id": 35,
+            "more": "🞴"
+          },
+          {
+            "id": 36,
+            "more": "🞴"
+          },
+          {
+            "id": 37,
+            "more": "👨"
+          },
+          {
+            "id": 38,
+            "more": "ε"
+          },
+          {
+            "id": 39,
+            "more": "8"
+          },
+          {
+            "id": 40,
+            "more": "🔉"
+          },
+          {
+            "id": 41,
+            "more": "௲"
+          },
+          {
+            "id": 42,
+            "more": "🌔"
+          },
+          {
+            "id": 43,
+            "more": "∬"
+          },
+          {
+            "id": 44,
+            "more": "½"
+          },
+          {
+            "id": 45,
+            "more": "⬤"
+          },
+          {
+            "id": 46,
+            "more": "🌔"
+          },
+          {
+            "id": 47,
+            "more": "⬤"
+          },
+          {
+            "id": 48,
+            "more": "䷡"
+          },
+          {
+            "id": 49,
+            "more": "⚃"
+          },
+          {
+            "id": 50,
+            "more": "👨"
+          },
+          {
+            "id": 51,
+            "more": "ᚄ"
+          },
+          {
+            "id": 52,
+            "more": "௰"
+          },
+          {
+            "id": 53,
+            "more": "🟦"
+          },
+          {
+            "id": 54,
+            "more": "⨌"
+          },
+          {
+            "id": 55,
+            "more": "⑨"
+          },
+          {
+            "id": 56,
+            "more": "௱"
+          },
+          {
+            "id": 57,
+            "more": "🌔"
+          },
+          {
+            "id": 58,
+            "more": "˦"
+          },
+          {
+            "id": 59,
+            "more": "♙"
+          },
+          {
+            "id": 60,
+            "more": "䷪"
+          },
+          {
+            "id": 61,
+            "more": "γ"
+          }
+        ]
+      },
+      {
+        "chunk": 5,
+        "answers": [
+          {
+            "id": 0,
+            "more": "…"
+          },
+          {
+            "id": 1,
+            "more": "♕"
+          },
+          {
+            "id": 2,
+            "more": "γ"
+          },
+          {
+            "id": 3,
+            "more": "🐎"
+          },
+          {
+            "id": 4,
+            "more": "🐎"
+          },
+          {
+            "id": 5,
+            "more": "4"
+          },
+          {
+            "id": 6,
+            "more": "▇"
+          },
+          {
+            "id": 7,
+            "more": "⅝"
+          },
+          {
+            "id": 8,
+            "more": "↑"
+          },
+          {
+            "id": 9,
+            "more": "▇"
+          },
+          {
+            "id": 10,
+            "more": "🟧"
+          },
+          {
+            "id": 11,
+            "more": "௲"
+          },
+          {
+            "id": 12,
+            "more": "④"
+          },
+          {
+            "id": 13,
+            "more": "⣿"
+          },
+          {
+            "id": 14,
+            "more": "γ"
+          },
+          {
+            "id": 15,
+            "more": "⅞"
+          },
+          {
+            "id": 16,
+            "more": "⁂"
+          },
+          {
+            "id": 17,
+            "more": "⚝"
+          },
+          {
+            "id": 18,
+            "more": "🌕"
+          },
+          {
+            "id": 19,
+            "more": "ד"
+          },
+          {
+            "id": 20,
+            "more": "★"
+          },
+          {
+            "id": 21,
+            "more": "♖"
+          },
+          {
+            "id": 22,
+            "more": "🔈"
+          },
+          {
+            "id": 23,
+            "more": "🟧"
+          },
+          {
+            "id": 24,
+            "more": "😭"
+          },
+          {
+            "id": 25,
+            "more": "⬤"
+          },
+          {
+            "id": 26,
+            "more": "↑"
+          },
+          {
+            "id": 27,
+            "more": "●"
+          },
+          {
+            "id": 28,
+            "more": "●"
+          },
+          {
+            "id": 29,
+            "more": "★"
+          },
+          {
+            "id": 30,
+            "more": "䷊"
+          },
+          {
+            "id": 31,
+            "more": "◑"
+          },
+          {
+            "id": 32,
+            "more": "4"
+          },
+          {
+            "id": 33,
+            "more": "🐘"
+          },
+          {
+            "id": 34,
+            "more": "♕"
+          },
+          {
+            "id": 35,
+            "more": "◑"
+          },
+          {
+            "id": 36,
+            "more": "😭"
+          },
+          {
+            "id": 37,
+            "more": "⅞"
+          },
+          {
+            "id": 38,
+            "more": "⚝"
+          },
+          {
+            "id": 39,
+            "more": "௲"
+          },
+          {
+            "id": 40,
+            "more": "䷊"
+          },
+          {
+            "id": 41,
+            "more": "④"
+          },
+          {
+            "id": 42,
+            "more": "↑"
+          },
+          {
+            "id": 43,
+            "more": "⁗"
+          },
+          {
+            "id": 44,
+            "more": "🐘"
+          },
+          {
+            "id": 45,
+            "more": "⚄"
+          },
+          {
+            "id": 46,
+            "more": "⣿"
+          },
+          {
+            "id": 47,
+            "more": "🐘"
+          },
+          {
+            "id": 48,
+            "more": "🌕"
+          },
+          {
+            "id": 49,
+            "more": "⁂"
+          },
+          {
+            "id": 50,
+            "more": "♖"
+          },
+          {
+            "id": 51,
+            "more": "🔈"
+          },
+          {
+            "id": 52,
+            "more": "😭"
+          },
+          {
+            "id": 53,
+            "more": "…"
+          },
+          {
+            "id": 54,
+            "more": "⬤"
+          },
+          {
+            "id": 55,
+            "more": "⁗"
+          },
+          {
+            "id": 56,
+            "more": "⅝"
+          },
+          {
+            "id": 57,
+            "more": "ד"
+          },
+          {
+            "id": 58,
+            "more": "🐘"
+          },
+          {
+            "id": 59,
+            "more": "😭"
+          },
+          {
+            "id": 60,
+            "more": "⚄"
+          },
+          {
+            "id": 61,
+            "more": "↑"
+          }
+        ]
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Judge2"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "judge2-0",
+      "phaseIndex": 1,
+      "phaseTitle": "Judge2",
+      "agentId": "a7ca792fad754cbba",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693439283,
+      "queuedAt": 1787693439274,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/battery2-chunk-0.json: a list of items each with an \"id\" and two glyphs \"a\" and \"b\". For each item, decide which glyph represents MORE — greater magnitude, amount, intensity, or value — and give THAT GLYPH itself (copied exactly) as \"more\" in the structured output. Go with…",
+      "lastProgressAt": 1787693464928,
+      "tokens": 60973,
+      "toolCalls": 2,
+      "durationMs": 25644,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"more\":\"˥\"},{\"id\":1,\"more\":\"𝍣\"},{\"id\":2,\"more\":\"▓\"},{\"id\":3,\"more\":\"♔\"},{\"id\":4,\"more\":\"🟧\"},{\"id\":5,\"more\":\"⑧\"},{\"id\":6,\"more\":\"½\"},{\"id\":7,\"more\":\"😢\"},{\"id\":8,\"more\":\"6\"},{\"id\":9,\"more\":\"█\"},{\"id\":10,\"more\":\"Ⅹ\"},{\"id\":11,\"more\":\"⁗\"},{\"id\":12,\"more\":\"½\"},{\"id\":13,\"more\":\"▓\"},{\"id\":14,\"more\":\"◕\"},{\"id\":15,\"more\":\"😄\"},{\"id\":16,\"more\":\"𝍣\"},{\"id\":17,\"more\":\"👴\"},{\"id\":18,\"more…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "judge2-1",
+      "phaseIndex": 1,
+      "phaseTitle": "Judge2",
+      "agentId": "a8ac4a70745fe1ab2",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693439283,
+      "queuedAt": 1787693439274,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/battery2-chunk-1.json: a list of items each with an \"id\" and two glyphs \"a\" and \"b\". For each item, decide which glyph represents MORE — greater magnitude, amount, intensity, or value — and give THAT GLYPH itself (copied exactly) as \"more\" in the structured output. Go with…",
+      "lastProgressAt": 1787693456636,
+      "tokens": 60982,
+      "toolCalls": 2,
+      "durationMs": 13325,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"more\":\"♔\"},{\"id\":1,\"more\":\"7\"},{\"id\":2,\"more\":\"‴\"},{\"id\":3,\"more\":\"…\"},{\"id\":4,\"more\":\"█\"},{\"id\":5,\"more\":\"𝍡\"},{\"id\":6,\"more\":\"ג\"},{\"id\":7,\"more\":\"█\"},{\"id\":8,\"more\":\"🞱\"},{\"id\":9,\"more\":\"█\"},{\"id\":10,\"more\":\"⚅\"},{\"id\":11,\"more\":\"🞱\"},{\"id\":12,\"more\":\"𝍣\"},{\"id\":13,\"more\":\"⁑\"},{\"id\":14,\"more\":\"9\"},{\"id\":15,\"more\":\"♔\"},{\"id\":16,\"more\":\"▎\"},{\"id\":17,\"more\":\"█\"},{\"id\":18,\"more\":…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "judge2-2",
+      "phaseIndex": 1,
+      "phaseTitle": "Judge2",
+      "agentId": "aa75c51f380d89582",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693439284,
+      "queuedAt": 1787693439274,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/battery2-chunk-2.json: a list of items each with an \"id\" and two glyphs \"a\" and \"b\". For each item, decide which glyph represents MORE — greater magnitude, amount, intensity, or value — and give THAT GLYPH itself (copied exactly) as \"more\" in the structured output. Go with…",
+      "lastProgressAt": 1787693457278,
+      "tokens": 61008,
+      "toolCalls": 2,
+      "durationMs": 13966,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"more\":\"⬤\"},{\"id\":1,\"more\":\"🟥\"},{\"id\":2,\"more\":\"█\"},{\"id\":3,\"more\":\"█\"},{\"id\":4,\"more\":\"β\"},{\"id\":5,\"more\":\"→\"},{\"id\":6,\"more\":\"🞳\"},{\"id\":7,\"more\":\"→\"},{\"id\":8,\"more\":\"🔊\"},{\"id\":9,\"more\":\"⬤\"},{\"id\":10,\"more\":\"🐈\"},{\"id\":11,\"more\":\"😁\"},{\"id\":12,\"more\":\"௲\"},{\"id\":13,\"more\":\"㎞\"},{\"id\":14,\"more\":\"ι\"},{\"id\":15,\"more\":\"▍\"},{\"id\":16,\"more\":\"⚄\"},{\"id\":17,\"more\":\"🞳\"},{\"id\":18,\"more…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "judge2-3",
+      "phaseIndex": 1,
+      "phaseTitle": "Judge2",
+      "agentId": "a265c34ea9c921fa2",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693439284,
+      "queuedAt": 1787693439274,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/battery2-chunk-3.json: a list of items each with an \"id\" and two glyphs \"a\" and \"b\". For each item, decide which glyph represents MORE — greater magnitude, amount, intensity, or value — and give THAT GLYPH itself (copied exactly) as \"more\" in the structured output. Go with…",
+      "lastProgressAt": 1787693474439,
+      "tokens": 60985,
+      "toolCalls": 2,
+      "durationMs": 31127,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"more\":\"˥\"},{\"id\":1,\"more\":\"⁗\"},{\"id\":2,\"more\":\"ז\"},{\"id\":3,\"more\":\"Ⅳ\"},{\"id\":4,\"more\":\"ε\"},{\"id\":5,\"more\":\"▅\"},{\"id\":6,\"more\":\"⑥\"},{\"id\":7,\"more\":\"ז\"},{\"id\":8,\"more\":\"●\"},{\"id\":9,\"more\":\"Ⅵ\"},{\"id\":10,\"more\":\"🌓\"},{\"id\":11,\"more\":\"ᚅ\"},{\"id\":12,\"more\":\"ח\"},{\"id\":13,\"more\":\"🌓\"},{\"id\":14,\"more\":\"🐋\"},{\"id\":15,\"more\":\"🔊\"},{\"id\":16,\"more\":\"🌓\"},{\"id\":17,\"more\":\"⁗\"},{\"id\":18,\"more\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "judge2-4",
+      "phaseIndex": 1,
+      "phaseTitle": "Judge2",
+      "agentId": "acbb632f05845d833",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693439284,
+      "queuedAt": 1787693439274,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/battery2-chunk-4.json: a list of items each with an \"id\" and two glyphs \"a\" and \"b\". For each item, decide which glyph represents MORE — greater magnitude, amount, intensity, or value — and give THAT GLYPH itself (copied exactly) as \"more\" in the structured output. Go with…",
+      "lastProgressAt": 1787693457463,
+      "tokens": 60970,
+      "toolCalls": 2,
+      "durationMs": 14151,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"more\":\"🔊\"},{\"id\":1,\"more\":\"🔉\"},{\"id\":2,\"more\":\"🌔\"},{\"id\":3,\"more\":\"●\"},{\"id\":4,\"more\":\"𝍤\"},{\"id\":5,\"more\":\"ᚄ\"},{\"id\":6,\"more\":\"∭\"},{\"id\":7,\"more\":\"●\"},{\"id\":8,\"more\":\"♗\"},{\"id\":9,\"more\":\"🔊\"},{\"id\":10,\"more\":\"⨌\"},{\"id\":11,\"more\":\"௲\"},{\"id\":12,\"more\":\"⑨\"},{\"id\":13,\"more\":\"Ⅹ\"},{\"id\":14,\"more\":\"🞴\"},{\"id\":15,\"more\":\"8\"},{\"id\":16,\"more\":\"˦\"},{\"id\":17,\"more\":\"∭\"},{\"id\":18,\"more…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "judge2-5",
+      "phaseIndex": 1,
+      "phaseTitle": "Judge2",
+      "agentId": "a0add0e3ce9c8a1f4",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693439284,
+      "queuedAt": 1787693439274,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/battery2-chunk-5.json: a list of items each with an \"id\" and two glyphs \"a\" and \"b\". For each item, decide which glyph represents MORE — greater magnitude, amount, intensity, or value — and give THAT GLYPH itself (copied exactly) as \"more\" in the structured output. Go with…",
+      "lastProgressAt": 1787693460376,
+      "tokens": 60932,
+      "toolCalls": 2,
+      "durationMs": 17064,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"more\":\"…\"},{\"id\":1,\"more\":\"♕\"},{\"id\":2,\"more\":\"γ\"},{\"id\":3,\"more\":\"🐎\"},{\"id\":4,\"more\":\"🐎\"},{\"id\":5,\"more\":\"4\"},{\"id\":6,\"more\":\"▇\"},{\"id\":7,\"more\":\"⅝\"},{\"id\":8,\"more\":\"↑\"},{\"id\":9,\"more\":\"▇\"},{\"id\":10,\"more\":\"🟧\"},{\"id\":11,\"more\":\"௲\"},{\"id\":12,\"more\":\"④\"},{\"id\":13,\"more\":\"⣿\"},{\"id\":14,\"more\":\"γ\"},{\"id\":15,\"more\":\"⅞\"},{\"id\":16,\"more\":\"⁂\"},{\"id\":17,\"more\":\"⚝\"},{\"id\":18,\"more\":\"…"
+    }
+  ],
+  "totalTokens": 365850,
+  "totalToolCalls": 12
+}

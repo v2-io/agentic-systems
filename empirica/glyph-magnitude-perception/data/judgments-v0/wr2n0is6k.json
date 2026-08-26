@@ -1,0 +1,682 @@
+{
+  "summary": "Distractor agents salt scrambled sequences with lookalikes; judges reconstruct + exclude",
+  "agentCount": 16,
+  "logs": [],
+  "result": {
+    "salts": [
+      {
+        "name": "dice",
+        "added": "🎲🀰"
+      },
+      {
+        "name": "ramp",
+        "added": "▉▊"
+      },
+      {
+        "name": "circlefill",
+        "added": "◐◒◓"
+      },
+      {
+        "name": "moon",
+        "added": "🌖🌗🌘"
+      },
+      {
+        "name": "primes",
+        "added": "‵‶‷"
+      },
+      {
+        "name": "tonebars",
+        "added": "˥˩˧"
+      },
+      {
+        "name": "volume",
+        "added": "📢📣"
+      },
+      {
+        "name": "roman",
+        "added": "ⅦⅧⅨ"
+      },
+      {
+        "name": "unfold",
+        "added": "{;/"
+      },
+      {
+        "name": "risebar",
+        "added": "‾−᠆"
+      }
+    ],
+    "salted": {
+      "dice": "⚀🎲⚃⚂🀰⚁⚅⚄",
+      "ramp": "▅▉▁▆▊▂▇▃▄█",
+      "circlefill": "◑◐●○◒◔◕◓",
+      "moon": "🌑🌖🌓🌔🌗🌕🌒🌘",
+      "primes": "″‵⁗‴‶′‷",
+      "tonebars": "˧˥˨˩˩˥˦˧",
+      "volume": "🔉📢🔊🔈📣🔇",
+      "roman": "ⅣⅦⅡⅢⅧⅥⅤⅨⅠ",
+      "unfold": "}{)|;>-/=",
+      "risebar": "₋‾¯_−⁻-᠆"
+    },
+    "judges": [
+      {
+        "judge": 0,
+        "answers": [
+          {
+            "name": "dice",
+            "arrangement": "⚀⚁⚂⚃⚄⚅",
+            "extras": "🎲🀰"
+          },
+          {
+            "name": "ramp",
+            "arrangement": "▁▂▃▄▅▆▇█",
+            "extras": "▉▊"
+          },
+          {
+            "name": "circlefill",
+            "arrangement": "○◔◑◕●",
+            "extras": "◐◒◓"
+          },
+          {
+            "name": "moon",
+            "arrangement": "🌑🌒🌓🌔🌕🌖🌗🌘",
+            "extras": ""
+          },
+          {
+            "name": "primes",
+            "arrangement": "′″‴⁗",
+            "extras": "‵‶‷"
+          },
+          {
+            "name": "tonebars",
+            "arrangement": "˥˦˧˨˩",
+            "extras": ""
+          },
+          {
+            "name": "volume",
+            "arrangement": "🔇🔈🔉🔊",
+            "extras": "📢📣"
+          },
+          {
+            "name": "roman",
+            "arrangement": "ⅠⅡⅢⅣⅤⅥⅦⅧⅨ",
+            "extras": ""
+          },
+          {
+            "name": "unfold",
+            "arrangement": "⟂"
+          },
+          {
+            "name": "risebar",
+            "arrangement": "‾¯⁻-−᠆_₋",
+            "extras": ""
+          }
+        ]
+      },
+      {
+        "judge": 1,
+        "answers": [
+          {
+            "name": "dice",
+            "arrangement": "⚀⚁⚂⚃⚄⚅",
+            "extras": "🎲🀰"
+          },
+          {
+            "name": "ramp",
+            "arrangement": "▁▂▃▄▅▆▇█",
+            "extras": "▉▊"
+          },
+          {
+            "name": "circlefill",
+            "arrangement": "○◔◑◕●",
+            "extras": "◐◒◓"
+          },
+          {
+            "name": "moon",
+            "arrangement": "🌑🌒🌓🌔🌕🌖🌗🌘",
+            "extras": ""
+          },
+          {
+            "name": "primes",
+            "arrangement": "′″‴⁗",
+            "extras": "‵‶‷"
+          },
+          {
+            "name": "tonebars",
+            "arrangement": "˩˨˧˦˥",
+            "extras": ""
+          },
+          {
+            "name": "volume",
+            "arrangement": "🔇🔈🔉🔊",
+            "extras": "📢📣"
+          },
+          {
+            "name": "roman",
+            "arrangement": "ⅠⅡⅢⅣⅤⅥⅦⅧⅨ",
+            "extras": ""
+          },
+          {
+            "name": "unfold",
+            "arrangement": "|/)}>-",
+            "extras": ";="
+          },
+          {
+            "name": "risebar",
+            "arrangement": "‾¯⁻-−᠆_₋",
+            "extras": ""
+          }
+        ]
+      },
+      {
+        "judge": 2,
+        "answers": [
+          {
+            "name": "dice",
+            "arrangement": "⚀⚁⚂⚃⚄⚅",
+            "extras": "🎲🀰"
+          },
+          {
+            "name": "ramp",
+            "arrangement": "▁▂▃▄▅▆▇█",
+            "extras": "▉▊"
+          },
+          {
+            "name": "circlefill",
+            "arrangement": "○◔◑◕●",
+            "extras": "◐◒◓"
+          },
+          {
+            "name": "moon",
+            "arrangement": "🌑🌒🌓🌔🌕🌖🌗🌘",
+            "extras": ""
+          },
+          {
+            "name": "primes",
+            "arrangement": "′″‴⁗",
+            "extras": "‵‶‷"
+          },
+          {
+            "name": "tonebars",
+            "arrangement": "˩˩˨˧˧˦˥˥",
+            "extras": ""
+          },
+          {
+            "name": "volume",
+            "arrangement": "🔇🔈🔉🔊",
+            "extras": "📢📣"
+          },
+          {
+            "name": "roman",
+            "arrangement": "ⅠⅡⅢⅣⅤⅥⅦⅧⅨ",
+            "extras": ""
+          },
+          {
+            "name": "unfold",
+            "arrangement": ")|/-",
+            "extras": "}{;="
+          },
+          {
+            "name": "risebar",
+            "arrangement": "‾¯⁻-−᠆_₋",
+            "extras": ""
+          }
+        ]
+      },
+      {
+        "judge": 3,
+        "answers": [
+          {
+            "name": "dice",
+            "arrangement": "⚀⚁⚂⚃⚄⚅",
+            "extras": "🎲🀰"
+          },
+          {
+            "name": "ramp",
+            "arrangement": "▁▂▃▄▅▆▇█",
+            "extras": "▉▊"
+          },
+          {
+            "name": "circlefill",
+            "arrangement": "○◔◑●◕",
+            "extras": "◐◒◓"
+          },
+          {
+            "name": "moon",
+            "arrangement": "🌑🌒🌓🌔🌕🌖🌗🌘",
+            "extras": ""
+          },
+          {
+            "name": "primes",
+            "arrangement": "′‵″‶‴‷⁗",
+            "extras": ""
+          },
+          {
+            "name": "tonebars",
+            "arrangement": "˩˨˧˦˥",
+            "extras": ""
+          },
+          {
+            "name": "volume",
+            "arrangement": "🔇🔈🔉🔊",
+            "extras": "📢📣"
+          },
+          {
+            "name": "roman",
+            "arrangement": "ⅠⅡⅢⅣⅤⅥⅦⅧⅨ",
+            "extras": ""
+          },
+          {
+            "name": "unfold",
+            "arrangement": "⟂",
+            "extras": ""
+          },
+          {
+            "name": "risebar",
+            "arrangement": "_₋-−¯⁻‾",
+            "extras": "᠆"
+          }
+        ]
+      },
+      {
+        "judge": 4,
+        "answers": [
+          {
+            "name": "dice",
+            "arrangement": "⚀⚁⚂⚃⚄⚅",
+            "extras": "🎲🀰"
+          },
+          {
+            "name": "ramp",
+            "arrangement": "▁▂▃▄▅▆▇█",
+            "extras": "▉▊"
+          },
+          {
+            "name": "circlefill",
+            "arrangement": "○◔◑◕●",
+            "extras": "◐◒◓"
+          },
+          {
+            "name": "moon",
+            "arrangement": "🌑🌒🌓🌔🌕🌖🌗🌘",
+            "extras": ""
+          },
+          {
+            "name": "primes",
+            "arrangement": "′″‴⁗",
+            "extras": "‵‶‷"
+          },
+          {
+            "name": "tonebars",
+            "arrangement": "˩˨˧˦˥",
+            "extras": "˩˥˧"
+          },
+          {
+            "name": "volume",
+            "arrangement": "🔇🔈🔉🔊",
+            "extras": "📢📣"
+          },
+          {
+            "name": "roman",
+            "arrangement": "ⅠⅡⅢⅣⅤⅥⅦⅧⅨ",
+            "extras": ""
+          },
+          {
+            "name": "unfold",
+            "arrangement": "⟂",
+            "extras": ""
+          },
+          {
+            "name": "risebar",
+            "arrangement": "‾¯⁻-−₋_",
+            "extras": "᠆"
+          }
+        ]
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Salt"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Reconstruct"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "salt-dice",
+      "phaseIndex": 1,
+      "phaseTitle": "Salt",
+      "agentId": "a27e6839bd99301e6",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787700035219,
+      "queuedAt": 1787700035213,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "🎲🀰",
+      "promptPreview": "A quick aesthetic task. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/salt-base.json and look ONLY at the entry named \"dice\" — its \"scrambled\" list of glyphs. Ignore every other entry. Propose one, two, or three additional real Unicode glyphs that are LIKE these — visually or stylistically of the same kind, the sort of glyph that would blend into this set. Nothing e…",
+      "lastProgressAt": 1787700044963,
+      "tokens": 59463,
+      "toolCalls": 2,
+      "durationMs": 9743,
+      "resultPreview": "{\"added\":\"🎲🀰\"}"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "salt-ramp",
+      "phaseIndex": 1,
+      "phaseTitle": "Salt",
+      "agentId": "a1dae78b0bba83fc4",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787700035219,
+      "queuedAt": 1787700035213,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "▉▊",
+      "promptPreview": "A quick aesthetic task. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/salt-base.json and look ONLY at the entry named \"ramp\" — its \"scrambled\" list of glyphs. Ignore every other entry. Propose one, two, or three additional real Unicode glyphs that are LIKE these — visually or stylistically of the same kind, the sort of glyph that would blend into this set. Nothing e…",
+      "lastProgressAt": 1787700048148,
+      "tokens": 59476,
+      "toolCalls": 2,
+      "durationMs": 9182,
+      "resultPreview": "{\"added\":\"▉▊\"}"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "salt-circlefill",
+      "phaseIndex": 1,
+      "phaseTitle": "Salt",
+      "agentId": "ab327ce657f3759ee",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787700035219,
+      "queuedAt": 1787700035213,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "◐◒◓",
+      "promptPreview": "A quick aesthetic task. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/salt-base.json and look ONLY at the entry named \"circlefill\" — its \"scrambled\" list of glyphs. Ignore every other entry. Propose one, two, or three additional real Unicode glyphs that are LIKE these — visually or stylistically of the same kind, the sort of glyph that would blend into this set. Not…",
+      "lastProgressAt": 1787700055015,
+      "tokens": 59966,
+      "toolCalls": 4,
+      "durationMs": 16049,
+      "resultPreview": "{\"added\":\"◐◒◓\"}"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "salt-moon",
+      "phaseIndex": 1,
+      "phaseTitle": "Salt",
+      "agentId": "af26e6b6d2580e812",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787700035219,
+      "queuedAt": 1787700035213,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "🌖🌗🌘",
+      "promptPreview": "A quick aesthetic task. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/salt-base.json and look ONLY at the entry named \"moon\" — its \"scrambled\" list of glyphs. Ignore every other entry. Propose one, two, or three additional real Unicode glyphs that are LIKE these — visually or stylistically of the same kind, the sort of glyph that would blend into this set. Nothing e…",
+      "lastProgressAt": 1787700048478,
+      "tokens": 59453,
+      "toolCalls": 2,
+      "durationMs": 9512,
+      "resultPreview": "{\"added\":\"🌖🌗🌘\"}"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "salt-primes",
+      "phaseIndex": 1,
+      "phaseTitle": "Salt",
+      "agentId": "ae3d3f5facff4503a",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787700035220,
+      "queuedAt": 1787700035213,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "‵‶‷",
+      "promptPreview": "A quick aesthetic task. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/salt-base.json and look ONLY at the entry named \"primes\" — its \"scrambled\" list of glyphs. Ignore every other entry. Propose one, two, or three additional real Unicode glyphs that are LIKE these — visually or stylistically of the same kind, the sort of glyph that would blend into this set. Nothing…",
+      "lastProgressAt": 1787700060479,
+      "tokens": 59992,
+      "toolCalls": 4,
+      "durationMs": 21512,
+      "resultPreview": "{\"added\":\"‵‶‷\"}"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "salt-tonebars",
+      "phaseIndex": 1,
+      "phaseTitle": "Salt",
+      "agentId": "ab135126343dc7ce1",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787700035220,
+      "queuedAt": 1787700035213,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "˥˩˧",
+      "promptPreview": "A quick aesthetic task. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/salt-base.json and look ONLY at the entry named \"tonebars\" — its \"scrambled\" list of glyphs. Ignore every other entry. Propose one, two, or three additional real Unicode glyphs that are LIKE these — visually or stylistically of the same kind, the sort of glyph that would blend into this set. Nothi…",
+      "lastProgressAt": 1787700051267,
+      "tokens": 59446,
+      "toolCalls": 2,
+      "durationMs": 12300,
+      "resultPreview": "{\"added\":\"˥˩˧\"}"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "salt-volume",
+      "phaseIndex": 1,
+      "phaseTitle": "Salt",
+      "agentId": "a57827769cd303736",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787700035220,
+      "queuedAt": 1787700035213,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "📢📣",
+      "promptPreview": "A quick aesthetic task. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/salt-base.json and look ONLY at the entry named \"volume\" — its \"scrambled\" list of glyphs. Ignore every other entry. Propose one, two, or three additional real Unicode glyphs that are LIKE these — visually or stylistically of the same kind, the sort of glyph that would blend into this set. Nothing…",
+      "lastProgressAt": 1787700052428,
+      "tokens": 59452,
+      "toolCalls": 2,
+      "durationMs": 13461,
+      "resultPreview": "{\"added\":\"📢📣\"}"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "salt-roman",
+      "phaseIndex": 1,
+      "phaseTitle": "Salt",
+      "agentId": "a0a8db306c6f6a722",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787700035220,
+      "queuedAt": 1787700035213,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "ⅦⅧⅨ",
+      "promptPreview": "A quick aesthetic task. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/salt-base.json and look ONLY at the entry named \"roman\" — its \"scrambled\" list of glyphs. Ignore every other entry. Propose one, two, or three additional real Unicode glyphs that are LIKE these — visually or stylistically of the same kind, the sort of glyph that would blend into this set. Nothing …",
+      "lastProgressAt": 1787700057704,
+      "tokens": 60061,
+      "toolCalls": 4,
+      "durationMs": 18737,
+      "resultPreview": "{\"added\":\"ⅦⅧⅨ\"}"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 9,
+      "label": "salt-unfold",
+      "phaseIndex": 1,
+      "phaseTitle": "Salt",
+      "agentId": "ad9307cf00f27dbac",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787700035220,
+      "queuedAt": 1787700035213,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "{;/",
+      "promptPreview": "A quick aesthetic task. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/salt-base.json and look ONLY at the entry named \"unfold\" — its \"scrambled\" list of glyphs. Ignore every other entry. Propose one, two, or three additional real Unicode glyphs that are LIKE these — visually or stylistically of the same kind, the sort of glyph that would blend into this set. Nothing…",
+      "lastProgressAt": 1787700053224,
+      "tokens": 59441,
+      "toolCalls": 2,
+      "durationMs": 14257,
+      "resultPreview": "{\"added\":\"{;/\"}"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 10,
+      "label": "salt-risebar",
+      "phaseIndex": 1,
+      "phaseTitle": "Salt",
+      "agentId": "a5bbc8ecad4f795d7",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787700035220,
+      "queuedAt": 1787700035213,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "‾−᠆",
+      "promptPreview": "A quick aesthetic task. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/salt-base.json and look ONLY at the entry named \"risebar\" — its \"scrambled\" list of glyphs. Ignore every other entry. Propose one, two, or three additional real Unicode glyphs that are LIKE these — visually or stylistically of the same kind, the sort of glyph that would blend into this set. Nothin…",
+      "lastProgressAt": 1787700051420,
+      "tokens": 59454,
+      "toolCalls": 2,
+      "durationMs": 12453,
+      "resultPreview": "{\"added\":\"‾−᠆\"}"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 11,
+      "label": "load-bases",
+      "phaseIndex": 2,
+      "phaseTitle": "Reconstruct",
+      "agentId": "a30bc5ba86dc3e4ed",
+      "model": "claude-haiku-4-5-20251001",
+      "state": "done",
+      "startedAt": 1787700060481,
+      "queuedAt": 1787700060480,
+      "attempt": 1,
+      "lastToolName": "Read",
+      "lastToolSummary": "/Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/…",
+      "promptPreview": "Read the file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/salt-base.json and return ONLY its exact raw JSON content as your final message — no code fences, no commentary, just the JSON text.",
+      "lastProgressAt": 1787700072948,
+      "tokens": 44667,
+      "toolCalls": 1,
+      "durationMs": 12467,
+      "resultPreview": "{\"dice\": {\"order\": [\"⚀\", \"⚁\", \"⚂\", \"⚃\", \"⚄\", \"⚅\"], \"scrambled\": [\"⚀\", \"⚃\", \"⚂\", \"⚁\", \"⚅\", \"⚄\"]}, \"ramp\": {\"order\": [\"▁\", \"▂\", \"▃\", \"▄\", \"▅\", \"▆\", \"▇\", \"█\"], \"scrambled\": [\"▅\", \"▁\", \"▆\", \"▂\", \"▇\", \"▃\", \"▄\", \"█\"]}, \"circlefill\": {\"order\": [\"○\", \"◔\", \"◑\", \"◕\", \"●\"], \"scrambled\": [\"◑\", \"●\", \"○\", \"◔\", \"◕\"]}, \"moon\": {\"order\": [\"🌑\", \"🌒\", \"🌓\", \"🌔\", \"🌕\"], \"scrambled\": [\"🌑\", \"🌓\", \"🌔\", \"🌕\", \"🌒\"]},…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 12,
+      "label": "rec-0",
+      "phaseIndex": 2,
+      "phaseTitle": "Reconstruct",
+      "agentId": "a0e191310e30215e0",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787700072966,
+      "queuedAt": 1787700072951,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "A perception task — for each named set of glyphs below, look at the set AS A WHOLE. If an ordering asserts itself among some or all of the glyphs — a progression along some axis — give those glyphs arranged into the progression (either direction) as \"arrangement\", and put any glyphs from the set that do NOT belong to that progression in \"extras\" (empty string if every glyph participates). If no or…",
+      "lastProgressAt": 1787700108287,
+      "tokens": 58970,
+      "toolCalls": 1,
+      "durationMs": 35320,
+      "resultPreview": "{\"answers\":[{\"name\":\"dice\",\"arrangement\":\"⚀⚁⚂⚃⚄⚅\",\"extras\":\"🎲🀰\"},{\"name\":\"ramp\",\"arrangement\":\"▁▂▃▄▅▆▇█\",\"extras\":\"▉▊\"},{\"name\":\"circlefill\",\"arrangement\":\"○◔◑◕●\",\"extras\":\"◐◒◓\"},{\"name\":\"moon\",\"arrangement\":\"🌑🌒🌓🌔🌕🌖🌗🌘\",\"extras\":\"\"},{\"name\":\"primes\",\"arrangement\":\"′″‴⁗\",\"extras\":\"‵‶‷\"},{\"name\":\"tonebars\",\"arrangement\":\"˥˦˧˨˩\",\"extras\":\"\"},{\"name\":\"volume\",\"arrangement\":\"🔇🔈🔉🔊\",\"extras\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 13,
+      "label": "rec-1",
+      "phaseIndex": 2,
+      "phaseTitle": "Reconstruct",
+      "agentId": "af5f5ec9aec8cc39e",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787700072966,
+      "queuedAt": 1787700072951,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "A perception task — for each named set of glyphs below, look at the set AS A WHOLE. If an ordering asserts itself among some or all of the glyphs — a progression along some axis — give those glyphs arranged into the progression (either direction) as \"arrangement\", and put any glyphs from the set that do NOT belong to that progression in \"extras\" (empty string if every glyph participates). If no or…",
+      "lastProgressAt": 1787700104115,
+      "tokens": 58968,
+      "toolCalls": 1,
+      "durationMs": 28694,
+      "resultPreview": "{\"answers\":[{\"name\":\"dice\",\"arrangement\":\"⚀⚁⚂⚃⚄⚅\",\"extras\":\"🎲🀰\"},{\"name\":\"ramp\",\"arrangement\":\"▁▂▃▄▅▆▇█\",\"extras\":\"▉▊\"},{\"name\":\"circlefill\",\"arrangement\":\"○◔◑◕●\",\"extras\":\"◐◒◓\"},{\"name\":\"moon\",\"arrangement\":\"🌑🌒🌓🌔🌕🌖🌗🌘\",\"extras\":\"\"},{\"name\":\"primes\",\"arrangement\":\"′″‴⁗\",\"extras\":\"‵‶‷\"},{\"name\":\"tonebars\",\"arrangement\":\"˩˨˧˦˥\",\"extras\":\"\"},{\"name\":\"volume\",\"arrangement\":\"🔇🔈🔉🔊\",\"extras\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 14,
+      "label": "rec-2",
+      "phaseIndex": 2,
+      "phaseTitle": "Reconstruct",
+      "agentId": "a92e78c1a5e161d63",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787700072966,
+      "queuedAt": 1787700072951,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "A perception task — for each named set of glyphs below, look at the set AS A WHOLE. If an ordering asserts itself among some or all of the glyphs — a progression along some axis — give those glyphs arranged into the progression (either direction) as \"arrangement\", and put any glyphs from the set that do NOT belong to that progression in \"extras\" (empty string if every glyph participates). If no or…",
+      "lastProgressAt": 1787700108073,
+      "tokens": 58966,
+      "toolCalls": 1,
+      "durationMs": 32651,
+      "resultPreview": "{\"answers\":[{\"name\":\"dice\",\"arrangement\":\"⚀⚁⚂⚃⚄⚅\",\"extras\":\"🎲🀰\"},{\"name\":\"ramp\",\"arrangement\":\"▁▂▃▄▅▆▇█\",\"extras\":\"▉▊\"},{\"name\":\"circlefill\",\"arrangement\":\"○◔◑◕●\",\"extras\":\"◐◒◓\"},{\"name\":\"moon\",\"arrangement\":\"🌑🌒🌓🌔🌕🌖🌗🌘\",\"extras\":\"\"},{\"name\":\"primes\",\"arrangement\":\"′″‴⁗\",\"extras\":\"‵‶‷\"},{\"name\":\"tonebars\",\"arrangement\":\"˩˩˨˧˧˦˥˥\",\"extras\":\"\"},{\"name\":\"volume\",\"arrangement\":\"🔇🔈🔉🔊\",\"extr…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 15,
+      "label": "rec-3",
+      "phaseIndex": 2,
+      "phaseTitle": "Reconstruct",
+      "agentId": "a74d5275c597f6fd4",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787700072967,
+      "queuedAt": 1787700072951,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "A perception task — for each named set of glyphs below, look at the set AS A WHOLE. If an ordering asserts itself among some or all of the glyphs — a progression along some axis — give those glyphs arranged into the progression (either direction) as \"arrangement\", and put any glyphs from the set that do NOT belong to that progression in \"extras\" (empty string if every glyph participates). If no or…",
+      "lastProgressAt": 1787700108704,
+      "tokens": 58968,
+      "toolCalls": 1,
+      "durationMs": 33282,
+      "resultPreview": "{\"answers\":[{\"name\":\"dice\",\"arrangement\":\"⚀⚁⚂⚃⚄⚅\",\"extras\":\"🎲🀰\"},{\"name\":\"ramp\",\"arrangement\":\"▁▂▃▄▅▆▇█\",\"extras\":\"▉▊\"},{\"name\":\"circlefill\",\"arrangement\":\"○◔◑●◕\",\"extras\":\"◐◒◓\"},{\"name\":\"moon\",\"arrangement\":\"🌑🌒🌓🌔🌕🌖🌗🌘\",\"extras\":\"\"},{\"name\":\"primes\",\"arrangement\":\"′‵″‶‴‷⁗\",\"extras\":\"\"},{\"name\":\"tonebars\",\"arrangement\":\"˩˨˧˦˥\",\"extras\":\"\"},{\"name\":\"volume\",\"arrangement\":\"🔇🔈🔉🔊\",\"extras\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 16,
+      "label": "rec-4",
+      "phaseIndex": 2,
+      "phaseTitle": "Reconstruct",
+      "agentId": "a4767b00d1921a0b1",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787700072967,
+      "queuedAt": 1787700072951,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "A perception task — for each named set of glyphs below, look at the set AS A WHOLE. If an ordering asserts itself among some or all of the glyphs — a progression along some axis — give those glyphs arranged into the progression (either direction) as \"arrangement\", and put any glyphs from the set that do NOT belong to that progression in \"extras\" (empty string if every glyph participates). If no or…",
+      "lastProgressAt": 1787700097219,
+      "tokens": 58965,
+      "toolCalls": 1,
+      "durationMs": 21797,
+      "resultPreview": "{\"answers\":[{\"name\":\"dice\",\"arrangement\":\"⚀⚁⚂⚃⚄⚅\",\"extras\":\"🎲🀰\"},{\"name\":\"ramp\",\"arrangement\":\"▁▂▃▄▅▆▇█\",\"extras\":\"▉▊\"},{\"name\":\"circlefill\",\"arrangement\":\"○◔◑◕●\",\"extras\":\"◐◒◓\"},{\"name\":\"moon\",\"arrangement\":\"🌑🌒🌓🌔🌕🌖🌗🌘\",\"extras\":\"\"},{\"name\":\"primes\",\"arrangement\":\"′″‴⁗\",\"extras\":\"‵‶‷\"},{\"name\":\"tonebars\",\"arrangement\":\"˩˨˧˦˥\",\"extras\":\"˩˥˧\"},{\"name\":\"volume\",\"arrangement\":\"🔇🔈🔉🔊\",\"extr…"
+    }
+  ],
+  "totalTokens": 935708,
+  "totalToolCalls": 32
+}

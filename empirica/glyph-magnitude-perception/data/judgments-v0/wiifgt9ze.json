@@ -1,0 +1,952 @@
+{
+  "summary": "Sonnet judges: graded 7-operator magnitude comparisons (distance + ties)",
+  "agentCount": 6,
+  "logs": [],
+  "result": {
+    "graded": [
+      {
+        "chunk": 0,
+        "answers": [
+          {
+            "id": 0,
+            "rel": "≈"
+          },
+          {
+            "id": 1,
+            "rel": "≫"
+          },
+          {
+            "id": 2,
+            "rel": "≈"
+          },
+          {
+            "id": 3,
+            "rel": "≈"
+          },
+          {
+            "id": 4,
+            "rel": "⋙"
+          },
+          {
+            "id": 5,
+            "rel": "≈"
+          },
+          {
+            "id": 6,
+            "rel": "≈"
+          },
+          {
+            "id": 7,
+            "rel": "⋙"
+          },
+          {
+            "id": 8,
+            "rel": "≻"
+          },
+          {
+            "id": 9,
+            "rel": "≈"
+          },
+          {
+            "id": 10,
+            "rel": "≈"
+          },
+          {
+            "id": 11,
+            "rel": "≪"
+          },
+          {
+            "id": 12,
+            "rel": "≈"
+          },
+          {
+            "id": 13,
+            "rel": "≻"
+          },
+          {
+            "id": 14,
+            "rel": "≺"
+          },
+          {
+            "id": 15,
+            "rel": "≈"
+          },
+          {
+            "id": 16,
+            "rel": "≈"
+          },
+          {
+            "id": 17,
+            "rel": "≈"
+          },
+          {
+            "id": 18,
+            "rel": "⋘"
+          },
+          {
+            "id": 19,
+            "rel": "⋘"
+          },
+          {
+            "id": 20,
+            "rel": "≺"
+          },
+          {
+            "id": 21,
+            "rel": "≫"
+          },
+          {
+            "id": 22,
+            "rel": "≈"
+          },
+          {
+            "id": 23,
+            "rel": "≈"
+          },
+          {
+            "id": 24,
+            "rel": "≪"
+          },
+          {
+            "id": 25,
+            "rel": "≺"
+          },
+          {
+            "id": 26,
+            "rel": "⋙"
+          },
+          {
+            "id": 27,
+            "rel": "≈"
+          },
+          {
+            "id": 28,
+            "rel": "≻"
+          },
+          {
+            "id": 29,
+            "rel": "≈"
+          },
+          {
+            "id": 30,
+            "rel": "≈"
+          },
+          {
+            "id": 31,
+            "rel": "≈"
+          },
+          {
+            "id": 32,
+            "rel": "≈"
+          },
+          {
+            "id": 33,
+            "rel": "⋘"
+          }
+        ]
+      },
+      {
+        "chunk": 1,
+        "answers": [
+          {
+            "id": 0,
+            "rel": "≺"
+          },
+          {
+            "id": 1,
+            "rel": "≪"
+          },
+          {
+            "id": 2,
+            "rel": "≈"
+          },
+          {
+            "id": 3,
+            "rel": "≈"
+          },
+          {
+            "id": 4,
+            "rel": "≈"
+          },
+          {
+            "id": 5,
+            "rel": "≈"
+          },
+          {
+            "id": 6,
+            "rel": "≺"
+          },
+          {
+            "id": 7,
+            "rel": "≪"
+          },
+          {
+            "id": 8,
+            "rel": "≫"
+          },
+          {
+            "id": 9,
+            "rel": "≈"
+          },
+          {
+            "id": 10,
+            "rel": "≈"
+          },
+          {
+            "id": 11,
+            "rel": "≻"
+          },
+          {
+            "id": 12,
+            "rel": "≻"
+          },
+          {
+            "id": 13,
+            "rel": "≈"
+          },
+          {
+            "id": 14,
+            "rel": "≈"
+          },
+          {
+            "id": 15,
+            "rel": "≺"
+          },
+          {
+            "id": 16,
+            "rel": "≈"
+          },
+          {
+            "id": 17,
+            "rel": "≈"
+          },
+          {
+            "id": 18,
+            "rel": "≺"
+          },
+          {
+            "id": 19,
+            "rel": "≺"
+          },
+          {
+            "id": 20,
+            "rel": "≈"
+          },
+          {
+            "id": 21,
+            "rel": "≫"
+          },
+          {
+            "id": 22,
+            "rel": "≈"
+          },
+          {
+            "id": 23,
+            "rel": "⋙"
+          },
+          {
+            "id": 24,
+            "rel": "≻"
+          },
+          {
+            "id": 25,
+            "rel": "≫"
+          },
+          {
+            "id": 26,
+            "rel": "≪"
+          },
+          {
+            "id": 27,
+            "rel": "≻"
+          },
+          {
+            "id": 28,
+            "rel": "≈"
+          },
+          {
+            "id": 29,
+            "rel": "≪"
+          },
+          {
+            "id": 30,
+            "rel": "≈"
+          },
+          {
+            "id": 31,
+            "rel": "≻"
+          },
+          {
+            "id": 32,
+            "rel": "⋘"
+          },
+          {
+            "id": 33,
+            "rel": "≫"
+          }
+        ]
+      },
+      {
+        "chunk": 2,
+        "answers": [
+          {
+            "id": 0,
+            "rel": "⋘"
+          },
+          {
+            "id": 1,
+            "rel": "≺"
+          },
+          {
+            "id": 2,
+            "rel": "⋘"
+          },
+          {
+            "id": 3,
+            "rel": "⋙"
+          },
+          {
+            "id": 4,
+            "rel": "⋙"
+          },
+          {
+            "id": 5,
+            "rel": "⋘"
+          },
+          {
+            "id": 6,
+            "rel": "≪"
+          },
+          {
+            "id": 7,
+            "rel": "≫"
+          },
+          {
+            "id": 8,
+            "rel": "≪"
+          },
+          {
+            "id": 9,
+            "rel": "⋘"
+          },
+          {
+            "id": 10,
+            "rel": "⋙"
+          },
+          {
+            "id": 11,
+            "rel": "≪"
+          },
+          {
+            "id": 12,
+            "rel": "≈"
+          },
+          {
+            "id": 13,
+            "rel": "⋘"
+          },
+          {
+            "id": 14,
+            "rel": "≻"
+          },
+          {
+            "id": 15,
+            "rel": "≻"
+          },
+          {
+            "id": 16,
+            "rel": "≺"
+          },
+          {
+            "id": 17,
+            "rel": "≫"
+          },
+          {
+            "id": 18,
+            "rel": "≈"
+          },
+          {
+            "id": 19,
+            "rel": "⋙"
+          },
+          {
+            "id": 20,
+            "rel": "≺"
+          },
+          {
+            "id": 21,
+            "rel": "≈"
+          },
+          {
+            "id": 22,
+            "rel": "≈"
+          },
+          {
+            "id": 23,
+            "rel": "≫"
+          },
+          {
+            "id": 24,
+            "rel": "≻"
+          },
+          {
+            "id": 25,
+            "rel": "≪"
+          },
+          {
+            "id": 26,
+            "rel": "⋙"
+          },
+          {
+            "id": 27,
+            "rel": "≺"
+          },
+          {
+            "id": 28,
+            "rel": "≫"
+          },
+          {
+            "id": 29,
+            "rel": "⋙"
+          },
+          {
+            "id": 30,
+            "rel": "≪"
+          },
+          {
+            "id": 31,
+            "rel": "≻"
+          }
+        ]
+      },
+      {
+        "chunk": 3,
+        "answers": [
+          {
+            "id": 0,
+            "rel": "≻"
+          },
+          {
+            "id": 1,
+            "rel": "≻"
+          },
+          {
+            "id": 2,
+            "rel": "≈"
+          },
+          {
+            "id": 3,
+            "rel": "≈"
+          },
+          {
+            "id": 4,
+            "rel": "≺"
+          },
+          {
+            "id": 5,
+            "rel": "≈"
+          },
+          {
+            "id": 6,
+            "rel": "≺"
+          },
+          {
+            "id": 7,
+            "rel": "≈"
+          },
+          {
+            "id": 8,
+            "rel": "≻"
+          },
+          {
+            "id": 9,
+            "rel": "≈"
+          },
+          {
+            "id": 10,
+            "rel": "≺"
+          },
+          {
+            "id": 11,
+            "rel": "≺"
+          },
+          {
+            "id": 12,
+            "rel": "≺"
+          },
+          {
+            "id": 13,
+            "rel": "≈"
+          },
+          {
+            "id": 14,
+            "rel": "⋘"
+          },
+          {
+            "id": 15,
+            "rel": "≺"
+          },
+          {
+            "id": 16,
+            "rel": "≻"
+          },
+          {
+            "id": 17,
+            "rel": "≈"
+          },
+          {
+            "id": 18,
+            "rel": "≺"
+          },
+          {
+            "id": 19,
+            "rel": "≻"
+          },
+          {
+            "id": 20,
+            "rel": "≺"
+          },
+          {
+            "id": 21,
+            "rel": "≻"
+          },
+          {
+            "id": 22,
+            "rel": "≈"
+          },
+          {
+            "id": 23,
+            "rel": "≺"
+          },
+          {
+            "id": 24,
+            "rel": "≻"
+          },
+          {
+            "id": 25,
+            "rel": "≺"
+          },
+          {
+            "id": 26,
+            "rel": "≺"
+          },
+          {
+            "id": 27,
+            "rel": "⋙"
+          },
+          {
+            "id": 28,
+            "rel": "≻"
+          },
+          {
+            "id": 29,
+            "rel": "≻"
+          },
+          {
+            "id": 30,
+            "rel": "≻"
+          },
+          {
+            "id": 31,
+            "rel": "≻"
+          }
+        ]
+      },
+      {
+        "chunk": 4,
+        "answers": [
+          {
+            "id": 0,
+            "rel": "≫"
+          },
+          {
+            "id": 1,
+            "rel": "⋘"
+          },
+          {
+            "id": 2,
+            "rel": "≈"
+          },
+          {
+            "id": 3,
+            "rel": "≻"
+          },
+          {
+            "id": 4,
+            "rel": "≫"
+          },
+          {
+            "id": 5,
+            "rel": "≈"
+          },
+          {
+            "id": 6,
+            "rel": "≈"
+          },
+          {
+            "id": 7,
+            "rel": "⋘"
+          },
+          {
+            "id": 8,
+            "rel": "⋙"
+          },
+          {
+            "id": 9,
+            "rel": "≫"
+          },
+          {
+            "id": 10,
+            "rel": "≈"
+          },
+          {
+            "id": 11,
+            "rel": "⋘"
+          },
+          {
+            "id": 12,
+            "rel": "⋙"
+          },
+          {
+            "id": 13,
+            "rel": "≻"
+          },
+          {
+            "id": 14,
+            "rel": "≪"
+          },
+          {
+            "id": 15,
+            "rel": "≈"
+          },
+          {
+            "id": 16,
+            "rel": "≈"
+          },
+          {
+            "id": 17,
+            "rel": "≺"
+          },
+          {
+            "id": 18,
+            "rel": "≈"
+          },
+          {
+            "id": 19,
+            "rel": "≈"
+          },
+          {
+            "id": 20,
+            "rel": "⋙"
+          },
+          {
+            "id": 21,
+            "rel": "⋘"
+          },
+          {
+            "id": 22,
+            "rel": "≈"
+          },
+          {
+            "id": 23,
+            "rel": "⋘"
+          },
+          {
+            "id": 24,
+            "rel": "≈"
+          },
+          {
+            "id": 25,
+            "rel": "≈"
+          },
+          {
+            "id": 26,
+            "rel": "≺"
+          },
+          {
+            "id": 27,
+            "rel": "⋘"
+          },
+          {
+            "id": 28,
+            "rel": "≈"
+          },
+          {
+            "id": 29,
+            "rel": "≈"
+          },
+          {
+            "id": 30,
+            "rel": "≈"
+          },
+          {
+            "id": 31,
+            "rel": "⋙"
+          }
+        ]
+      },
+      {
+        "chunk": 5,
+        "answers": [
+          {
+            "id": 0,
+            "rel": "≈"
+          },
+          {
+            "id": 1,
+            "rel": "≫"
+          },
+          {
+            "id": 2,
+            "rel": "≈"
+          },
+          {
+            "id": 3,
+            "rel": "≈"
+          },
+          {
+            "id": 4,
+            "rel": "≻"
+          },
+          {
+            "id": 5,
+            "rel": "≪"
+          },
+          {
+            "id": 6,
+            "rel": "≈"
+          },
+          {
+            "id": 7,
+            "rel": "≫"
+          },
+          {
+            "id": 8,
+            "rel": "≺"
+          },
+          {
+            "id": 9,
+            "rel": "≫"
+          },
+          {
+            "id": 10,
+            "rel": "≈"
+          },
+          {
+            "id": 11,
+            "rel": "⋙"
+          },
+          {
+            "id": 12,
+            "rel": "≈"
+          },
+          {
+            "id": 13,
+            "rel": "⋘"
+          },
+          {
+            "id": 14,
+            "rel": "≻"
+          },
+          {
+            "id": 15,
+            "rel": "≈"
+          },
+          {
+            "id": 16,
+            "rel": "≫"
+          },
+          {
+            "id": 17,
+            "rel": "≺"
+          },
+          {
+            "id": 18,
+            "rel": "≪"
+          },
+          {
+            "id": 19,
+            "rel": "≺"
+          },
+          {
+            "id": 20,
+            "rel": "≈"
+          },
+          {
+            "id": 21,
+            "rel": "≈"
+          },
+          {
+            "id": 22,
+            "rel": "≫"
+          },
+          {
+            "id": 23,
+            "rel": "⋙"
+          },
+          {
+            "id": 24,
+            "rel": "⋙"
+          },
+          {
+            "id": 25,
+            "rel": "≈"
+          },
+          {
+            "id": 26,
+            "rel": "≪"
+          },
+          {
+            "id": 27,
+            "rel": "≈"
+          },
+          {
+            "id": 28,
+            "rel": "≻"
+          },
+          {
+            "id": 29,
+            "rel": "≺"
+          },
+          {
+            "id": 30,
+            "rel": "≪"
+          },
+          {
+            "id": 31,
+            "rel": "≈"
+          }
+        ]
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Grade"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "grade-0",
+      "phaseIndex": 1,
+      "phaseTitle": "Grade",
+      "agentId": "afb05c511629a1c15",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693723010,
+      "queuedAt": 1787693723001,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/battery3-chunk-0.json: items each with an \"id\" and two glyphs \"a\" and \"b\". For each item, compare the MAGNITUDE the two glyphs convey (amount, intensity, size, value — whatever axis the pair makes obvious) and answer with exactly one relation symbol, read as \"a REL b\":\n\n  …",
+      "lastProgressAt": 1787693745208,
+      "tokens": 60404,
+      "toolCalls": 2,
+      "durationMs": 22197,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"rel\":\"≈\"},{\"id\":1,\"rel\":\"≫\"},{\"id\":2,\"rel\":\"≈\"},{\"id\":3,\"rel\":\"≈\"},{\"id\":4,\"rel\":\"⋙\"},{\"id\":5,\"rel\":\"≈\"},{\"id\":6,\"rel\":\"≈\"},{\"id\":7,\"rel\":\"⋙\"},{\"id\":8,\"rel\":\"≻\"},{\"id\":9,\"rel\":\"≈\"},{\"id\":10,\"rel\":\"≈\"},{\"id\":11,\"rel\":\"≪\"},{\"id\":12,\"rel\":\"≈\"},{\"id\":13,\"rel\":\"≻\"},{\"id\":14,\"rel\":\"≺\"},{\"id\":15,\"rel\":\"≈\"},{\"id\":16,\"rel\":\"≈\"},{\"id\":17,\"rel\":\"≈\"},{\"id\":18,\"rel\":\"⋘\"},{\"id\":19,\"rel\":\"⋘\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "grade-1",
+      "phaseIndex": 1,
+      "phaseTitle": "Grade",
+      "agentId": "a81c7570cdcff6058",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693723010,
+      "queuedAt": 1787693723001,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/battery3-chunk-1.json: items each with an \"id\" and two glyphs \"a\" and \"b\". For each item, compare the MAGNITUDE the two glyphs convey (amount, intensity, size, value — whatever axis the pair makes obvious) and answer with exactly one relation symbol, read as \"a REL b\":\n\n  …",
+      "lastProgressAt": 1787693745470,
+      "tokens": 60438,
+      "toolCalls": 2,
+      "durationMs": 18398,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"rel\":\"≺\"},{\"id\":1,\"rel\":\"≪\"},{\"id\":2,\"rel\":\"≈\"},{\"id\":3,\"rel\":\"≈\"},{\"id\":4,\"rel\":\"≈\"},{\"id\":5,\"rel\":\"≈\"},{\"id\":6,\"rel\":\"≺\"},{\"id\":7,\"rel\":\"≪\"},{\"id\":8,\"rel\":\"≫\"},{\"id\":9,\"rel\":\"≈\"},{\"id\":10,\"rel\":\"≈\"},{\"id\":11,\"rel\":\"≻\"},{\"id\":12,\"rel\":\"≻\"},{\"id\":13,\"rel\":\"≈\"},{\"id\":14,\"rel\":\"≈\"},{\"id\":15,\"rel\":\"≺\"},{\"id\":16,\"rel\":\"≈\"},{\"id\":17,\"rel\":\"≈\"},{\"id\":18,\"rel\":\"≺\"},{\"id\":19,\"rel\":\"≺\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "grade-2",
+      "phaseIndex": 1,
+      "phaseTitle": "Grade",
+      "agentId": "afc5a891d7843772b",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693723010,
+      "queuedAt": 1787693723001,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/battery3-chunk-2.json: items each with an \"id\" and two glyphs \"a\" and \"b\". For each item, compare the MAGNITUDE the two glyphs convey (amount, intensity, size, value — whatever axis the pair makes obvious) and answer with exactly one relation symbol, read as \"a REL b\":\n\n  …",
+      "lastProgressAt": 1787693747256,
+      "tokens": 60394,
+      "toolCalls": 2,
+      "durationMs": 20183,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"rel\":\"⋘\"},{\"id\":1,\"rel\":\"≺\"},{\"id\":2,\"rel\":\"⋘\"},{\"id\":3,\"rel\":\"⋙\"},{\"id\":4,\"rel\":\"⋙\"},{\"id\":5,\"rel\":\"⋘\"},{\"id\":6,\"rel\":\"≪\"},{\"id\":7,\"rel\":\"≫\"},{\"id\":8,\"rel\":\"≪\"},{\"id\":9,\"rel\":\"⋘\"},{\"id\":10,\"rel\":\"⋙\"},{\"id\":11,\"rel\":\"≪\"},{\"id\":12,\"rel\":\"≈\"},{\"id\":13,\"rel\":\"⋘\"},{\"id\":14,\"rel\":\"≻\"},{\"id\":15,\"rel\":\"≻\"},{\"id\":16,\"rel\":\"≺\"},{\"id\":17,\"rel\":\"≫\"},{\"id\":18,\"rel\":\"≈\"},{\"id\":19,\"rel\":\"⋙\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "grade-3",
+      "phaseIndex": 1,
+      "phaseTitle": "Grade",
+      "agentId": "a281f324985538683",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693723010,
+      "queuedAt": 1787693723001,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/battery3-chunk-3.json: items each with an \"id\" and two glyphs \"a\" and \"b\". For each item, compare the MAGNITUDE the two glyphs convey (amount, intensity, size, value — whatever axis the pair makes obvious) and answer with exactly one relation symbol, read as \"a REL b\":\n\n  …",
+      "lastProgressAt": 1787693751221,
+      "tokens": 60354,
+      "toolCalls": 2,
+      "durationMs": 24148,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"rel\":\"≻\"},{\"id\":1,\"rel\":\"≻\"},{\"id\":2,\"rel\":\"≈\"},{\"id\":3,\"rel\":\"≈\"},{\"id\":4,\"rel\":\"≺\"},{\"id\":5,\"rel\":\"≈\"},{\"id\":6,\"rel\":\"≺\"},{\"id\":7,\"rel\":\"≈\"},{\"id\":8,\"rel\":\"≻\"},{\"id\":9,\"rel\":\"≈\"},{\"id\":10,\"rel\":\"≺\"},{\"id\":11,\"rel\":\"≺\"},{\"id\":12,\"rel\":\"≺\"},{\"id\":13,\"rel\":\"≈\"},{\"id\":14,\"rel\":\"⋘\"},{\"id\":15,\"rel\":\"≺\"},{\"id\":16,\"rel\":\"≻\"},{\"id\":17,\"rel\":\"≈\"},{\"id\":18,\"rel\":\"≺\"},{\"id\":19,\"rel\":\"≻\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "grade-4",
+      "phaseIndex": 1,
+      "phaseTitle": "Grade",
+      "agentId": "aaa7dcac721d89da7",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693723010,
+      "queuedAt": 1787693723001,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/battery3-chunk-4.json: items each with an \"id\" and two glyphs \"a\" and \"b\". For each item, compare the MAGNITUDE the two glyphs convey (amount, intensity, size, value — whatever axis the pair makes obvious) and answer with exactly one relation symbol, read as \"a REL b\":\n\n  …",
+      "lastProgressAt": 1787693752496,
+      "tokens": 60366,
+      "toolCalls": 2,
+      "durationMs": 25423,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"rel\":\"≫\"},{\"id\":1,\"rel\":\"⋘\"},{\"id\":2,\"rel\":\"≈\"},{\"id\":3,\"rel\":\"≻\"},{\"id\":4,\"rel\":\"≫\"},{\"id\":5,\"rel\":\"≈\"},{\"id\":6,\"rel\":\"≈\"},{\"id\":7,\"rel\":\"⋘\"},{\"id\":8,\"rel\":\"⋙\"},{\"id\":9,\"rel\":\"≫\"},{\"id\":10,\"rel\":\"≈\"},{\"id\":11,\"rel\":\"⋘\"},{\"id\":12,\"rel\":\"⋙\"},{\"id\":13,\"rel\":\"≻\"},{\"id\":14,\"rel\":\"≪\"},{\"id\":15,\"rel\":\"≈\"},{\"id\":16,\"rel\":\"≈\"},{\"id\":17,\"rel\":\"≺\"},{\"id\":18,\"rel\":\"≈\"},{\"id\":19,\"rel\":\"≈\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "grade-5",
+      "phaseIndex": 1,
+      "phaseTitle": "Grade",
+      "agentId": "a4fef508ea6aa30e6",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1787693723011,
+      "queuedAt": 1787693723001,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Quick perception task — first instincts, please. Read the JSON file /Users/josephwecker-v2/src/arch/msc/fable-magnitude-survey/battery3-chunk-5.json: items each with an \"id\" and two glyphs \"a\" and \"b\". For each item, compare the MAGNITUDE the two glyphs convey (amount, intensity, size, value — whatever axis the pair makes obvious) and answer with exactly one relation symbol, read as \"a REL b\":\n\n  …",
+      "lastProgressAt": 1787693747490,
+      "tokens": 60367,
+      "toolCalls": 2,
+      "durationMs": 20416,
+      "resultPreview": "{\"answers\":[{\"id\":0,\"rel\":\"≈\"},{\"id\":1,\"rel\":\"≫\"},{\"id\":2,\"rel\":\"≈\"},{\"id\":3,\"rel\":\"≈\"},{\"id\":4,\"rel\":\"≻\"},{\"id\":5,\"rel\":\"≪\"},{\"id\":6,\"rel\":\"≈\"},{\"id\":7,\"rel\":\"≫\"},{\"id\":8,\"rel\":\"≺\"},{\"id\":9,\"rel\":\"≫\"},{\"id\":10,\"rel\":\"≈\"},{\"id\":11,\"rel\":\"⋙\"},{\"id\":12,\"rel\":\"≈\"},{\"id\":13,\"rel\":\"⋘\"},{\"id\":14,\"rel\":\"≻\"},{\"id\":15,\"rel\":\"≈\"},{\"id\":16,\"rel\":\"≫\"},{\"id\":17,\"rel\":\"≺\"},{\"id\":18,\"rel\":\"≪\"},{\"id\":19,\"rel\":\"≺\"…"
+    }
+  ],
+  "totalTokens": 362323,
+  "totalToolCalls": 12
+}
