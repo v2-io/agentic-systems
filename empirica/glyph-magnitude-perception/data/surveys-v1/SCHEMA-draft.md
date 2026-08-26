@@ -69,6 +69,15 @@ The surveys are append-only BY INSTRUCTION (instr2 preserved first thoughts; cla
 - **Cross-file arcs are pass-2/concordance objects, not pass-1 records** (adjudicated from fable-1, Joseph may override): a RESULTS/instrument-tier finding that revises a survey anecdote is the graduation-by-retest relation — it lives as a cross-corpus link in the concordance layer, referencing pass-1 fated ids, never as a pass-1 record. Pass-1 `revises` stays intra-file.
 - The revision arc is itself signal (first-thought → reconsideration is data about the surveyor's trajectory, including the overthinking instr2 warned against) — pass-2 may analyze arcs as objects; pass-1 just links them.
 
+## Phase 1.5: capture-corrections (Joseph, 2026-08-25 late — the first sliver of normalization, append-only)
+
+Any number of "corrected" records may be layered over pass-1 as clearly-next-phase appends. Mechanics:
+
+- They live in **`extracted/corrections/<surveyor>.jsonl`** — a sibling file, never appended into the pass-1 JSONL (which stays a frozen byte-replayable pure function of source + generator).
+- A capture-correction record carries `record_origin: "capture-correction"` (its author is the capture process, not the surveyor — a different epistemic actor, so nothing it says is surveyor testimony), a full corrected version of the record, and `revises: [{id, revision_kind: "correction"}]` pointing at the pass-1 original.
+- Both versions are first-class for different third-phase purposes (Joseph): fully-corrected records as seed data and merge/unification inputs; the superseded originals as metadata — e.g. L644's mirror-glyph typo is itself the chirality/phase evidence worth discussing.
+- Same fated-id recipe with the corrections filename as the token; same md-press/verbatim disciplines; corrections are themselves append-only (a correction of a correction is a new record revising it).
+
 ## Fields (sequence records; other types take the applicable subset)
 
 - `glyphs`: the sequence AS THE SURVEYOR WROTE IT (verbatim wins — a ↓ ladder stays written-descending; ratified over this line's earlier "canonical ascending", which is a pass-2 normalization); `codepoints`: explicit U+ list (NFC; combining sequences allowed).

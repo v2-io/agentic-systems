@@ -3,7 +3,7 @@
 *One line per item; migrators remain reachable per their extraction reports. Consumed by the cross-survey concordance pass and pass-2 design.*
 
 - ~~[Joseph] sonnet5-1 L946~~ RESOLVED 2026-08-25: steered (frame-steer — Joseph redirected attention off alphabet-discounting, no example content supplied). Distinction noted but deliberately left fuzzy under the anecdote ceiling: frame-steers vs example-steers (where his steering sequences were copied verbatim into records in the longer surveys).
-- **[validation-battery candidate]** sonnet5-1 L644: surveyor typed nested GREATER-THAN glyphs (U+2AA2/U+2AF8) while prose asserts LESS-THAN forms — the discrepancy itself is a testable perception item.
+- ~~[validation-battery candidate] sonnet5-1 L644~~ RESOLVED 2026-08-25 two ways: (a) founding phase-1.5 capture-correction appended (extracted/corrections/sonnet5-1.jsonl — corrected to the prose-asserted less-than forms; original retained as chirality metadata per Joseph's both-versions design); (b) mirror-confusability probe stays a validation-battery item — chirality pairs as battery ride-alongs + data-quality control.
 - **[pass-2 weighting key]** sonnet5-1 L1364-1366 closing-reflection meta: the surveyor's own calibration summary over its whole file — likely the anchor for weighting that surveyor's strength vocabulary.
 - **[pass-2]** felt-strength scale unification across surveyors (incl. sonnet-survey-4's strength self-defined as predicted recoverability — dual-carried per precedent).
 - **[pass-2]** soft immediacy-language sweep ("jumps out", "instantly") — deliberately excluded from pass 1.
