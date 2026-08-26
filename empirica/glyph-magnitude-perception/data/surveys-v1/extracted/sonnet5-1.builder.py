@@ -135,7 +135,7 @@ def emit():
                 if inferred: entry["id"] = "[migrator-inferred] " + entry["id"]
                 rec["revises"].append(entry)
             deltas.append("revises migrated to v0.9 list form (+arc sweep: extensions/confirmations)")
-        if deltas:
+        if deltas or "v0.8->0.9 delta" in (rec["epistemics"].get("migrator_notes") or ""):
             rec["schema_version"] = "0.9"
             note = "v0.8->0.9 delta: " + "; ".join(deltas)
             mn = rec["epistemics"].get("migrator_notes")
@@ -555,7 +555,7 @@ R(933, typ="negative", ax="rest of printable range: distinct punctuation or lett
 # Latin Extended-A
 R(939, typ="negative", ax="letter+one-diacritic forms arranged alphabetically; single-vs-double acute continues only by reaching to another block", neg="verified-absent", mn="corrected two entries later (L945, ŀ) — surveyor left the correction as its own record rather than editing")
 R(945, g="lŀ", d="↑", ax="Catalan punt volat: single-L vs geminated l·l — genuine single/double consonant pair", st="high", bas="semantic-knowledge", mn="explicit correction of the L939 'nothing found'; found by asking what the mark means")
-R(946, typ="meta", ax="'Prompted to look again more slowly rather than trusting my first alphabetical-no-axis read of accent-letter blocks going forward'", bas="unstated", lin="unknown", conf="ambiguous", mn="AMBIGUOUS: cannot tell from the file whether 'prompted' means Joseph steered here or self-prompted by the L943 correction — passed back for adjudication")
+R(946, typ="meta", ax="'Prompted to look again more slowly rather than trusting my first alphabetical-no-axis read of accent-letter blocks going forward'", bas="unstated", lin="steered", conf="clear", mn="Adjudicated STEERED (Joseph, 2026-08-25): 'I noticed that it was discounting anything alphabet-like instead of looking for meaningful progressions or something like that. I didn't prompt with the actual pattern at all (which isn't the case with several other steers in the longer ones, where I know they copied down my steering examples verbatim as a sequence).' — a FRAME-steer (attention redirected, no example content supplied), unlike the example-steers elsewhere; frame-vs-example stays fuzzy by design under the interactive-anecdote ceiling. v0.8->0.9 delta: lineage unknown->steered, confidence ambiguous->clear, per adjudication")
 # Latin Extended-B
 R(952, g="ƧƽƄ", typ="sequence", d="↑", ax="numbered tone letters (TONE TWO/FIVE/SIX) scattered out of numeric order — semantic value overwhelms position", st="high", bas="name-derived", con=True, mn="glyphs: capital tone-two, small tone-five, capital tone-six as representatives; codepoint order in block is 6,2,5")
 R(953, typ="negative", ax="hooks/topbars/strokes are distinct phonetic markers, not gradations — genuinely considered each this time", neg="verified-absent")

@@ -2,7 +2,7 @@
 
 *One line per item; migrators remain reachable per their extraction reports. Consumed by the cross-survey concordance pass and pass-2 design.*
 
-- **[Joseph]** sonnet5-1 L946 "Prompted to look again more slowly" — steward-memory question: Joseph-steering or surveyor self-prompt? Record at `lineage: unknown` / `ambiguous`; one-line builder edit either way.
+- ~~[Joseph] sonnet5-1 L946~~ RESOLVED 2026-08-25: steered (frame-steer — Joseph redirected attention off alphabet-discounting, no example content supplied). Distinction noted but deliberately left fuzzy under the anecdote ceiling: frame-steers vs example-steers (where his steering sequences were copied verbatim into records in the longer surveys).
 - **[validation-battery candidate]** sonnet5-1 L644: surveyor typed nested GREATER-THAN glyphs (U+2AA2/U+2AF8) while prose asserts LESS-THAN forms — the discrepancy itself is a testable perception item.
 - **[pass-2 weighting key]** sonnet5-1 L1364-1366 closing-reflection meta: the surveyor's own calibration summary over its whole file — likely the anchor for weighting that surveyor's strength vocabulary.
 - **[pass-2]** felt-strength scale unification across surveyors (incl. sonnet-survey-4's strength self-defined as predicted recoverability — dual-carried per precedent).
