@@ -10,7 +10,8 @@
 4. **cyclic** — directional feel without magnitude (◰◱◲◳ spinners, rotations). Adjacent-to-target, distinct type (the rotate4/clock-wrap lesson).
 5. **generator** — families/lattices/grids described as rules rather than fixed strings (decorated-digit meta-pattern, braille $B^8$, "regular vs small" as a cross-shape axis). Parameters + example chains, not just one string.
 6. **meta** — observations about the space or the surveying itself ("whenever unicode gives an enclosure style applied to digits, digit-order is essentially guaranteed" — a stated *law* with predicted generalization).
-7. **question** — genuine uncertainties surveyors flagged (◎ vs ◉ internal ordering) — these are pre-made validation battery items.
+7. **morph** (v0.9, from grok-1) — deformation-continuation records: an ordering answered by "what comes next if I keep doing that to it?" rather than pairwise more-ness. Explicitly NOT sequence (different question) and not cyclic (no wrap). The pilot's morph/trajectory family as a record type.
+8. **question** — genuine uncertainties surveyors flagged (◎ vs ◉ internal ordering) — these are pre-made validation battery items.
 
 ## Epistemic ceiling — the outer class, fixed for this corpus
 
@@ -65,6 +66,7 @@ The surveys are append-only BY INSTRUCTION (instr2 preserved first thoughts; cla
 - The later record carries **`revises`**: a LIST of `{"id": <fated id of earlier record>, "revision_kind": ...}` objects — one revising entry can touch several earlier records, with kinds differing per target (v0.9, from the summary-meta case that completed one record's demotion while shifting another's register). Single-target revisions are a one-element list. `revision_kind`: `correction` | `contradiction` | `refinement` | `retraction` | `confirmation` (v0.9 — a later entry replicating/endorsing an earlier one is the same relation class and is within-surveyor replication signal; "consistent with the finding above"). Migrator's conservative read; the surveyor's own words stay verbatim. A `revises_span` beside each id (ratified) keeps links human-checkable. DESIGN INTENT (Joseph): supersession preserves evolution — both versions are first-class for different purposes (current-best consumers follow links forward; trajectory/overthinking analysis reads the arcs and their density; the first-try is data about perception, not debris).
 - Unmarked contradictions (the surveyor never acknowledged the earlier entry, as in the coverage-gap/dice case) get `revision_kind: "contradiction"` with a migrator note that the link is migrator-inferred, bracket-marked per the inference rule.
 - Working distinctions (ratified from the first sweep): a closing RESTATEMENT or synthesis of earlier content is not a revision (no link); an INTRA-record self-correction has no separate record to link (stays inside its record); surveyor-ACKNOWLEDGED revisions ("this one I trust more") need no inferred-marking, silent contradictions do. Finer split (ratified): the RELATION can be surveyor-stated ("consistent with the finding above") while the LINK (which record it targets) is migrator-drawn — mark the two separately when they diverge.
+- **Cross-file arcs are pass-2/concordance objects, not pass-1 records** (adjudicated from fable-1, Joseph may override): a RESULTS/instrument-tier finding that revises a survey anecdote is the graduation-by-retest relation — it lives as a cross-corpus link in the concordance layer, referencing pass-1 fated ids, never as a pass-1 record. Pass-1 `revises` stays intra-file.
 - The revision arc is itself signal (first-thought → reconsideration is data about the surveyor's trajectory, including the overthinking instr2 warned against) — pass-2 may analyze arcs as objects; pass-1 just links them.
 
 ## Fields (sequence records; other types take the applicable subset)
@@ -72,7 +74,10 @@ The surveys are append-only BY INSTRUCTION (instr2 preserved first thoughts; cla
 - `glyphs`: the sequence AS THE SURVEYOR WROTE IT (verbatim wins — a ↓ ladder stays written-descending; ratified over this line's earlier "canonical ascending", which is a pass-2 normalization); `codepoints`: explicit U+ list (NFC; combining sequences allowed).
 - `direction_note`: surveyor's stated direction/arrow verbatim.
 - `axis`: surveyor's "more"-description verbatim, in their own terminology (mechanism-vocabulary unification is pass-2).
-- (strength/calibration now lives in the universal epistemics block above.)
+- **`section_path`** (v0.9, from grok-1 — the expected breaker realized): the surveyor's own header chain, verbatim, on every record. Where headers ARE the surveyor's mechanism taxonomy ("pictorial — the shape *is* the amount"), this field carries it without translation; pass-2 vocabulary work consumes it.
+- **`render_dependence`** (v0.9, optional, from grok-1's Cree pointing saga): where the surveyor's claim proved font/rendering-dependent (true in the chart, false in the steward's face), set true with the surveyor's words on it beside — pass-2 needs the axis; validation batteries must control it.
+- **`basis_verbatim`** (v0.9, from fable-1): where the surveyor tagged their own basis ("visual", "semantic", "both", "visual+semantic"), transcribe it verbatim here; the enum `basis` is then explicitly the migrator's mapping of it — the verbatim-primacy wall applied to basis.
+- (strength/calibration lives in the universal epistemics block above.)
 - `surveyor`, `source_file`, `source_span` (line range), `note_verbatim` (the full original prose — originals beside, never replaced).
 - `lineage`: `unprompted` | `steered` (near a Joseph intervention — sonnet5 and grok records after his "density/morphings/unarticulated axes" challenge are steered; migration agents should mark the boundary where visible in the file) | `unknown`.
 - `constructed`: bool — surveyor assembled it across families ("could seed a cross-sequence…") vs found it as a natural family.

@@ -10,4 +10,11 @@
 - **[pass-2]** mechanism-vocabulary unification (surveyor terminologies kept verbatim; grok's section-header taxonomy is itself a vocabulary).
 - **[concordance]** cross-surveyor sequence intersection/union + trajectory-signature comparison (per-surveyor revision profiles: survey-3 sharpening, survey-4 consolidating, survey-2 one silent contradiction, sonnet5-1 steering-reversal waves).
 - **[source anomalies, raw-only]** sonnet-survey-3: block-element ramps under the Trigrams header (L203-227); dangling "alphabet note below" (L30).
-- **[pending]** grok-1 and fable-1 extractions in flight; their pass-backs may extend this queue.
+- **[pending]** grok-1 extraction pass-backs (JSONL landed; queue items may follow).
+- **[Joseph — routing]** fable-1 RESULTS/instrument sections (L437-523, L550-567, L580-587, L604-641): excluded from survey records as instrument outputs, but they carry survey-affecting revisions (valence axis-ambiguity, ampdecay direction reversal, morph-family verdict, FACTORIZABLE/HOLISTIC/AUTHORED taxonomy). Proposed: experiment-tier record file whose records `revises` survey records CROSS-file — v0.8 links are intra-file only today; schema gap.
+- **[Joseph — routing]** fable-1 method/protocol content (probe design L437-446, closed protocol L521-522): neither perception nor result; preserved raw-only pending a destination.
+- **[schema]** fable-1 migrator field `basis_verbatim` (surveyor's own visual/semantic/both tag beside the `basis` enum) — verifier endorses adoption; candidate v0.9.
+- **[schema]** fable-1: `felt_strength_verbatim` distinction between surveyor-deliberately-unscored candidates (morph/diffuse first thoughts) and mere absence — both currently `unstated` + `marked_speculative`.
+- **[lineage]** fable-1 post-L209 records blanket-`steered` (recalibration lens contaminates everything after); special study L403-435 + L147 adjudicated `brief-steered` per v0.7. Per-record precision beyond that not attempted — flagged, not guessed.
+- **[reconciliation note]** fable-1 L429-430 typed `negative` with roles ["negative","sequence-near-miss"] — v0.7 near-miss precedent arguably applies; either reading defensible.
+- **[unlinked restatements]** fable-1 silent restatements (L27→L20, L66→L35/L11, L67→L13, L105→L12) left without `revises` links per the v0.8 restatement rule; listed here for the concordance pass.
