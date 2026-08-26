@@ -1,0 +1,20 @@
+I am conducting an important survey to find out which unicode sequences (anything with 3 or more codepoints) that have either a monotonically ascending or descending *feel* to them when encountered near each other (so that if you were to ask a fresh agent to compare any two of the items in the list by perceived magnitude, the accumulated ordering would be monotonically preserved, either > or <). You can do whatever you want to get the actual unicode panes in front of you and in your context to ponder carefully-- you can also reach across groups etc. if things come to mind (like various concentric circle shapes scattered around, or other geometric primitive-centric things). I'd like to see your work as you proceed though so append the sequences to a file here in this directory as you go. That will help me steer as well in case my instructions got muddled :-)
+
+(There are some I'm fully expecting to see and I'll bet you are too-- like '⚀⚁⚂⚃⚄⚅' and even maybe the trigram/digram sequence we were talking about earlier, etc. But this is about your *perception* of how well they communicate an abstract sense of magnitude monotonically).
+
+Code-point monotonicity isn't important if you don't sense it-- if the semantic sense of magnitude overwhelms it-- like a circled 0 coming before a circled 1 even though it's at a later codepoint. Codepoint monotonicity might be a hint though to consider -- definitely not the primary objective or qualifier or gate. I would love magnitude sequences that feel very monotonic to you that have scattered codepoints.
+
+Also, please *completely ignore* raster images and metrics and everything else and any of the unicode work scattered around the corpus at this point when getting your initial sequences at least-- those are only confounders for what I need from you right now, which is *how your mind perceives the unicode sequences in terms of ordering, where that is strong.
+
+I'd like you to go all the way through all of the 1,2, and 3-byte utf-8 sets, and maybe beyond if you feel a strong semantic ordering. I suggest maybe starting by writing some code or a tool that generates some of the stronger groups like mathematical operators and geometric shapes and misc symbols, arrow groups, other math groups, even things like spacing modifier letters-- and, after each single group, append any new ideas to the file. If something sparks the imagination (like various kinds of asterisks as found throughout unicode) than append those (assuming they have a distinct ordering feel as we've been discussing). But operationally-- do a tool/script that gives you a single group; Read it in-- append any sequence to the output file-- *then* read the next one.
+
+I would invite you if you're willing to participate in this to create a working / scratch directory for yourself in ~/src/arch/msc/ where you can put any scripts or intermediate things you want, as well as your append-only 'sequences.md' file.
+Oh, at the moment there is this script available to use, for example: `~/src/arch/unicode-group 2200-22FF > ~/src/arch/msc/[your-dir]/current-unicode-pane.txt`
+
+Within sequences.md: In addition to the actual sequences (in unicode), with any notes you like, you may want to give the direction of the slope (arrow showing which direction feels like increasing magnitude), the "strength" of the feel -- how sure you are that a pairwise "which is more?" would stochastically or holistically recover the same order.
+“More” is whatever the sequence makes obvious (count, fill, size, height, nestedness, denoted number, some semantic ladder).
+(Append-only is preferred but not a hard constraint-- even a clarification or something though I'd rather have appended to preserve your "first thoughts" earlier, in case you accidentally start overthinking these things which won't suit our purposes here at all, as much as I generally encourage thinking in most other circumstances :-))
+
+I pulled this brief together from a bunch of scattered prompts I wrote earlier. It's a bit muddled, redundant, and disorganized. So, any questions?
+
+
