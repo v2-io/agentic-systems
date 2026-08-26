@@ -1,0 +1,134 @@
+#!/usr/bin/env python3
+"""Dump one Unicode block as a pane to stare at.
+
+Anyone in this estate may use and extend this. It is a shared tool, not a
+private scratch script.
+
+Usage:
+  unicode-group "Mathematical Operators"
+  unicode-group 2200-22FF
+  unicode-group --list
+"""
+
+from __future__ import annotations
+
+import argparse
+import re
+import sys
+import unicodedata
+
+# Named panes we actually want to look at (BMP + a few extras).
+# Names match Unicode block names where they exist.
+PANES: list[tuple[str, int, int]] = [
+    ("Spacing Modifier Letters", 0x02B0, 0x02FF),
+    ("General Punctuation", 0x2010, 0x206F),
+    ("Superscripts and Subscripts", 0x2070, 0x209F),
+    ("Letterlike Symbols", 0x2100, 0x214F),
+    ("Number Forms", 0x2150, 0x218F),
+    ("Arrows", 0x2190, 0x21FF),
+    ("Mathematical Operators", 0x2200, 0x22FF),
+    ("Miscellaneous Technical", 0x2300, 0x23FF),
+    ("Control Pictures", 0x2400, 0x243F),
+    ("Enclosed Alphanumerics", 0x2460, 0x24FF),
+    ("Box Drawing", 0x2500, 0x257F),
+    ("Block Elements", 0x2580, 0x259F),
+    ("Geometric Shapes", 0x25A0, 0x25FF),
+    ("Miscellaneous Symbols", 0x2600, 0x26FF),
+    ("Dingbats", 0x2700, 0x27BF),
+    ("Miscellaneous Mathematical Symbols-A", 0x27C0, 0x27EF),
+    ("Supplemental Arrows-A", 0x27F0, 0x27FF),
+    ("Braille Patterns", 0x2800, 0x28FF),
+    ("Supplemental Arrows-B", 0x2900, 0x297F),
+    ("Miscellaneous Mathematical Symbols-B", 0x2980, 0x29FF),
+    ("Supplemental Mathematical Operators", 0x2A00, 0x2AFF),
+    ("Miscellaneous Symbols and Arrows", 0x2B00, 0x2BFF),
+    ("Supplemental Punctuation", 0x2E00, 0x2E7F),
+    ("CJK Symbols and Punctuation", 0x3000, 0x303F),
+    ("Modifier Tone Letters", 0xA700, 0xA71F),
+    ("Geometric Shapes Extended", 0x1F780, 0x1F7FF),
+    ("Supplemental Arrows-C", 0x1F800, 0x1F8FF),
+    ("Supplemental Symbols and Pictographs", 0x1F900, 0x1F9FF),
+    ("Mathematical Alphanumeric Symbols", 0x1D400, 0x1D7FF),
+    ("Combining Diacritical Marks", 0x0300, 0x036F),
+    ("Counting Rod Numerals", 0x1D360, 0x1D37F),
+    ("Tai Xuan Jing Symbols", 0x1D300, 0x1D35F),
+    ("Mahjong Tiles", 0x1F000, 0x1F02F),
+    ("Domino Tiles", 0x1F030, 0x1F09F),
+    ("Playing Cards", 0x1F0A0, 0x1F0FF),
+    ("Enclosed Alphanumeric Supplement", 0x1F100, 0x1F1FF),
+    ("Emoticons", 0x1F600, 0x1F64F),
+]
+
+
+def assigned(cp: int) -> bool:
+    try:
+        unicodedata.name(chr(cp))
+        return True
+    except ValueError:
+        return False
+
+
+def dump_range(lo: int, hi: int, title: str) -> None:
+    chars: list[tuple[int, str]] = []
+    for cp in range(lo, hi + 1):
+        if assigned(cp):
+            chars.append((cp, chr(cp)))
+    print(f"# {title}")
+    print(f"# U+{lo:04X}–U+{hi:04X}  n={len(chars)}  unicode={unicodedata.unidata_version}")
+    print()
+    print("".join(ch for _, ch in chars))
+    print()
+    # rows of 32 for staring
+    row = 32
+    for i in range(0, len(chars), row):
+        chunk = chars[i : i + row]
+        print("".join(ch for _, ch in chunk))
+    print()
+    for cp, ch in chars:
+        try:
+            name = unicodedata.name(ch)
+        except ValueError:
+            name = ""
+        print(f"U+{cp:04X}  {ch}  {name}")
+
+
+def resolve(spec: str) -> tuple[str, int, int]:
+    spec = spec.strip()
+    low = spec.casefold()
+    exact = [(n, lo, hi) for n, lo, hi in PANES if low == n.casefold()]
+    if len(exact) == 1:
+        return exact[0]
+    hits = [(n, lo, hi) for n, lo, hi in PANES if low in n.casefold()]
+    if len(hits) == 1:
+        return hits[0]
+    if len(hits) > 1:
+        names = ", ".join(n for n, _, _ in hits)
+        raise SystemExit(f"unicode-group: ambiguous ({names})")
+    compact = spec.replace("U+", "").replace("u+", "").replace(" ", "")
+    if re.fullmatch(r"[0-9A-Fa-f]+-[0-9A-Fa-f]+", compact):
+        a, b = compact.split("-", 1)
+        return (f"U+{int(a, 16):04X}–U+{int(b, 16):04X}", int(a, 16), int(b, 16))
+    raise SystemExit(
+        f"unicode-group: unknown pane {spec!r}\n"
+        f"  try --list, or a range like 2200-22FF"
+    )
+
+
+def main() -> int:
+    p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument("pane", nargs="?", help="block name (substring ok) or HEX-HEX range")
+    p.add_argument("--list", action="store_true", help="print the named panes")
+    args = p.parse_args()
+    if args.list or not args.pane:
+        for i, (n, lo, hi) in enumerate(PANES, 1):
+            mark = ""
+            print(f"{i:2}  {n:42} U+{lo:04X}–U+{hi:04X}")
+        if not args.pane:
+            return 0
+    title, lo, hi = resolve(args.pane)
+    dump_range(lo, hi, title)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
