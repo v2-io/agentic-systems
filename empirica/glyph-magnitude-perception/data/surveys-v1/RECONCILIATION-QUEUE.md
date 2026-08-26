@@ -15,8 +15,12 @@
 - ~~[pending] grok-1 pass-backs~~ CLOSED: all adjudicated during pass-1 (morph type, section_path, render_dependence adopted; extraction committed).
 - ~~[Joseph — routing] fable-1 cross-file arcs~~ RESOLVED 2026-08-25 (Joseph): NO cross-file arc structure at any data layer. The RESULTS-tier content is OUR meta-output — theory, hypotheses, provisional ontologies, working mental models — and belongs in the experiment planning pipeline (MANIFEST claims, DESIGN, PREDICTIONS, possibly a provisional-ontology doc), which is where it already lives. Survey-side: the surveyor (Fable) authored capture-corrections for the two records defective by own newer judgment (ampdecay direction; valence axis-claim) — extracted/corrections/fable-1.jsonl.
 - ~~[Joseph — routing] fable-1 method/protocol content~~ RESOLVED by the same ruling: pipeline content, already durably homed in pilot/pilot-record.md + DESIGN; raw-only in the survey is correct and final.
-- **[schema]** fable-1 migrator field `basis_verbatim` (surveyor's own visual/semantic/both tag beside the `basis` enum) — verifier endorses adoption; candidate v0.9.
+- ~~[schema] basis_verbatim~~ CLOSED: adopted in v0.9 and applied corpus-wide during pass-1.
 - **[TABLED — explore-first, Joseph 2026-08-25]** unscored-vs-absent felt-strength distinction (fable-1 morph/diffuse first-thoughts are deliberately pre-evaluative, not weak): wait for data exploration. One standing caution attached for the SEED-PRIORITY implementation whenever it runs: unstated->low silently triages the liminal generative seeds — check this cohort's fate at exploration time before trusting the squash.
 - ~~[lineage] fable-1 waterline vs per-record~~ RESOLVED 2026-08-25 (Joseph): both granularities stand as honest prior projection; no re-tagging, no idiom unification, ever. LINEAGE IS DEMOTED TO NON-ANALYTICAL METADATA — the anecdote ceiling already assumes NOTHING in this corpus is unsteered, so analyses never condition on lineage; it survives only as potential metadata for other purposes.
-- **[reconciliation note]** fable-1 L429-430 typed `negative` with roles ["negative","sequence-near-miss"] — v0.7 near-miss precedent arguably applies; either reading defensible.
+- ~~[reconciliation note] fable-1 L429-430~~ CLOSED 2026-08-25 (Joseph): stands as typed.
 - **[unlinked restatements]** fable-1 silent restatements (L27→L20, L66→L35/L11, L67→L13, L105→L12) left without `revises` links per the v0.8 restatement rule; listed here for the concordance pass.
+
+---
+
+*Queue walked in full with Joseph, 2026-08-25 late. Live remainder: the two explore-first gates (strength unification, unscored-vs-absent), the tabled immediacy sweep, the ingest-gated concordance (with its routed deposits incl. fable-1 unlinked restatements and the sonnet-survey-3 coverage asterisk), and the validation-battery candidates (mirror-confusability, render-dependence axis). Everything else resolved above with rulings inline.*
