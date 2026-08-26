@@ -27,6 +27,10 @@
 
 Environment: darwin 25.5.0; ollama local; Claude Code workflow subagents (model 'sonnet', session defaults). Task/key JSONs and scripts: `../data/judgments-v0/` + `harness/pilot-scripts/` (migrated from msc/ working dirs, since deleted).
 
-## (next) — first harness-ledger run
+## 2026-08-25 late — first ingest (derived index established)
 
-Not yet run. Must be [full]: ledger row per judgment, pinned model versions, seeded shuffles, per-item option permutation, stimulus hygiene enforced.
+`harness/ingest/{schema.sql,ingest.py}` → local Postgres 18 database `empirica_glyph` (psql-18; pgvector enabled, embedding column reserved). 1,235 records from 9 JSONL files (7 pass-1 + 2 capture-correction), idempotent rebuild by construction. Views: `revision_arcs` (82 links), `glyph_occurrences`. First-look integrity: one machine-cleanliness defect found and routed to source (bracket-marks inside 11 sonnet5-1 arc ids; schema v0.9.1 rule added). First exploration tastes: `█` is the most universal glyph (7/7 surveyors); `⊂⊆` and `Ⓐ` the most-shared negatives; trigram family contested (ladder for some, negative for others); per-surveyor negative-ratio 0.13–0.41. The DB is disposable — `python3 harness/ingest/ingest.py` rebuilds it from data/ at any time.
+
+## (next) — harness proper
+
+Explore the ingested corpus (un-gates the tabled queue items) → protocol v1.0 freeze + PREDICTIONS → the fated-randomness runner with ledger rows per judgment, pinned models, per-item option permutation, stimulus hygiene (ban ≈/⟂/answer vocab from stimulus pools; A/B index answer fallback for echo-fragile judges). See pilot/DESIGN-scale-up.md (with its addenda) for the full spec; RECONCILIATION-QUEUE.md for gates and rulings.

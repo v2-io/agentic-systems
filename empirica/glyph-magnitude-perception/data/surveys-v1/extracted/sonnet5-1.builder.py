@@ -132,9 +132,9 @@ def emit():
             for tgt, kind, inferred in REVISES[span]:
                 entry = {"id": hashlib.sha256(("survey-rec|sonnet5-1|" + tgt).encode()).hexdigest()[:16],
                          "revision_kind": kind, "revises_span": tgt}
-                if inferred: entry["id"] = "[migrator-inferred] " + entry["id"]
+                if inferred: entry["inferred"] = True  # v0.9.1: link-level boolean, id stays bare/joinable
                 rec["revises"].append(entry)
-            deltas.append("revises migrated to v0.9 list form (+arc sweep: extensions/confirmations)")
+            deltas.append("revises migrated to v0.9 list form (+arc sweep: extensions/confirmations); v0.9.1: inference marking moved from id prefix to link-level inferred boolean, ids bare/joinable")
         if deltas or "v0.8->0.9 delta" in (rec["epistemics"].get("migrator_notes") or ""):
             rec["schema_version"] = "0.9"
             note = "v0.8->0.9 delta: " + "; ".join(deltas)
