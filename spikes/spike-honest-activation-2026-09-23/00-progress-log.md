@@ -20,3 +20,10 @@
 - Deliverables written: `01-neighborhood-map.md`, `02-literature.md`, `03-derivations.md` (R1–R9 + verdict), `proposed-integration-plan.md`, `debrief.md`, `outsider-statement.md`, `README.md`. Added S11 (Beta-Bernoulli drill: content moves gain there, so R1 is stated in its general L1-equivalence form) and S12 (sequential dissenters).
 - Closing re-read caught one overclaim, corrected in debrief and outsider statement: "two or more agreeing channels beat authority" is false without tight agreement (at authority 0.99, K=2 gives 0.86 tight, 0.39 moderate, 0.09 loose). Also added the $d_H$ condition to the one-discovered-lie claim in the debrief.
 - Lint: `md-press --math --check` clean on all spike files; manual grep for raw `<`/`>` in inline math and bare Greek: none.
+
+## Session 1, continued: revision 1 after de-novo verification
+
+- Read `de-novo-feedback-1.md` whole. Re-ran `de-novo-feedback-1-checks.py`: output byte-identical. Verified F11 in git (`8ed2a736` appended "not a virtue commitment").
+- Accepted F1 (the clause-1 C verdict was wrong under canon's own definition of gain collapse; I had adopted the brief's guess as the reading and never checked the verdict line against canon's definition). Accepted F2–F7, F9–F12. F8 mostly accepted, with a partial rebuttal: non-deception is exactly what R8a characterizes.
+- F6 strengthening attempted in S13 (consensus-estimated trust). My first hypothesis — one-at-a-time dissenters stay captured — FAILED: persistent dissenters accumulate and escape. The refined hypothesis held: capture persists under *transient* dissent (sustained isolation), across 5 seeds x 3 windows. Both recorded in `sims/checks.py`.
+- Rewrote `03` (revision 1), `debrief.md`, `outsider-statement.md`, `proposed-integration-plan.md`; revised `01`, `02`, `README.md`; wrote `de-novo-feedback-1-response.md`. Re-verified Friedman & Resnick 2001 and Anil et al. 2024 by web search.

@@ -61,7 +61,7 @@
       content prior sd=    10.0 (lie is 0.50 prior-sd from truth) -> P(adv liar) = 0.0205
       content prior sd=     2.0 (lie is 2.50 prior-sd from truth) -> P(adv liar) = 0.2395
       content prior sd=     1.0 (lie is 5.00 prior-sd from truth) -> P(adv liar) = 0.9997
-[PASS] S2b K=2 agreeing honest channels overturn even pA=0.99 P=0.9993
+[PASS] S2b K=2 (content prior centred on truth, eps2=1e-3) overturns pA=0.99 P=0.9993
 
 === S3: pooled vs provenance memory after discovery ===
       pooled belief mu=3.752 (truth 0), provenance-corrected mu=-0.122, corrected U=0.0494
@@ -130,4 +130,27 @@ ALL PASS
 [PASS] S12 discard memory remains captured after 4 dissenters 0.019
 
 === SUMMARY (after S12) ===
+ALL PASS
+
+=== S13: capture under agreement-with-consensus trust (natural dynamics) ===
+      K= 1 honest | one-at-a-time: final belief  4.72, deceiver trust 0.91, mean honest trust 0.02 | all-at-once: belief  4.72, deceiver trust 0.91
+      K= 3 honest | one-at-a-time: final belief  0.09, deceiver trust 0.03, mean honest trust 0.85 | all-at-once: belief -0.09, deceiver trust 0.01
+      K= 6 honest | one-at-a-time: final belief  0.26, deceiver trust 0.02, mean honest trust 0.84 | all-at-once: belief -0.16, deceiver trust 0.01
+      K=12 honest | one-at-a-time: final belief  0.10, deceiver trust 0.01, mean honest trust 0.83 | all-at-once: belief -0.01, deceiver trust 0.02
+[PASS] S13 persistent one-at-a-time dissenters ESCAPE under consensus trust (K=12) 0.10
+[PASS] S13 same 12 sources arriving together escape -0.01
+      one-at-a-time capture across 5 seeds x spacing {100,400}: 0/10
+      simultaneous K=1: final belief  4.72
+      simultaneous K=2: final belief  0.17
+      simultaneous K=3: final belief -0.09
+      simultaneous K=4: final belief  0.32
+      simultaneous K=5: final belief -0.09
+      simultaneous K=6: final belief -0.16
+      -- transient dissent (each dissenter active W steps, then cut off) --
+      W= 50, 12 dissenters in sequence: final beliefs ['4.75', '5.12', '5.53', '4.74', '4.64']
+      W=150, 12 dissenters in sequence: final beliefs ['4.86', '4.60', '4.44', '5.00', '5.27']
+      W=400, 12 dissenters in sequence: final beliefs ['5.67', '5.00', '4.71', '4.90', '5.12']
+[PASS] S13 transient one-at-a-time dissent (W=150): captured across 5 seeds min=4.44
+
+=== SUMMARY (after S13) ===
 ALL PASS

@@ -162,7 +162,9 @@ for pA in [0.5, 0.9, 0.99]:
 print("      -- content-prior plausibility of the lie (K=1, pA=0.99, pH=0.5) --")
 for U0_ in [1e4, 100.0, 4.0, 1.0]:
     print(f"      content prior sd={np.sqrt(U0_):8.1f} (lie is {b/np.sqrt(U0_):.2f} prior-sd from truth) -> P(adv liar) = {p_adv_liar(1, 0.99, 0.5, b, U0=U0_, eps2=1e-4):.4f}")
-check("S2b K=2 agreeing honest channels overturn even pA=0.99",
+# NOTE (after de-novo-feedback-1 F7): this check passes only with the content prior centred
+# on the truth and eps2=1e-3; its original name overstated it.
+check("S2b K=2 (content prior centred on truth, eps2=1e-3) overturns pA=0.99",
       p_adv_liar(2, 0.99, 0.5, b) > 0.9, f"P={p_adv_liar(2, 0.99, 0.5, b):.4f}")
 
 # ---------------------------------------------------------------------------
@@ -396,4 +398,62 @@ print(f"      discard memory, dissenters one at a time:      P(A liar) = {[f'{x:
 check("S12 full memory escapes with >=3 held dissenters", full[2] > 0.9, f"{full[2]:.3f}")
 check("S12 discard memory remains captured after 4 dissenters", max(discard) < 0.5, f"{max(discard):.3f}")
 print("\n=== SUMMARY (after S12) ===")
+print("ALL PASS" if not fails else f"FAILURES: {fails}")
+
+# ---------------------------------------------------------------------------
+# S13. (Added after de-novo-feedback-1 F6.)  Does a NATURAL trust rule produce
+#      judge-and-discard, so that capture is absorbing by dynamics rather than by
+#      an assumed memory policy?  Candidate: reliability estimated by agreement
+#      with the current consensus -- the fixed-point structure of Dawid-Skene /
+#      truth-discovery EM, used exactly when no ground truth is available.
+#        consensus  mu <- (1-kap) mu + kap * sum_j r_j y_j / sum_j r_j
+#        reliability r_j <- r_j + alpha * (exp(-(y_j - mu)^2 / 2c^2) - r_j)
+#      Deceiver present from t=0 (isolation), trust 0.99, asserts b=5.
+#      Honest sources (initial trust 0.5) either arrive one at a time (spaced D
+#      steps apart, staying once arrived) or all at once.
+# ---------------------------------------------------------------------------
+print("\n=== S13: capture under agreement-with-consensus trust (natural dynamics) ===")
+def run_consensus(K, D, T=6000, T0=300, kap=0.2, alpha=0.05, c=1.5, rA=0.99, rH0=0.5, seed=0, simultaneous=False, W=None):
+    g = np.random.default_rng(seed)
+    mu, r = 0.0, [rA]
+    arrive = [0] + ([T0] * K if simultaneous else [T0 + k * D for k in range(K)])
+    for t in range(T):
+        while len(r) < K + 1: r.append(rH0)
+        active = [j for j in range(K + 1) if arrive[j] <= t and (W is None or j == 0 or t < arrive[j] + W)]
+        y = np.array([(b if j == 0 else 0.0) + g.normal(0, 1) for j in active])
+        rr = np.array([r[j] for j in active])
+        mu = (1 - kap) * mu + kap * (rr * y).sum() / rr.sum()
+        agree = np.exp(-(y - mu) ** 2 / (2 * c * c))
+        for i, j in enumerate(active):
+            r[j] += alpha * (agree[i] - r[j])
+    return mu, r
+for K in [1, 3, 6, 12]:
+    ms, rs = run_consensus(K, D=400)
+    mm, rm = run_consensus(K, D=0, simultaneous=True)
+    print(f"      K={K:2d} honest | one-at-a-time: final belief {ms:5.2f}, deceiver trust {rs[0]:.2f}, mean honest trust {np.mean(rs[1:]):.2f}"
+          f" | all-at-once: belief {mm:5.2f}, deceiver trust {rm[0]:.2f}")
+ms12, _ = run_consensus(12, D=400)
+# NOTE (recorded): first run predicted one-at-a-time arrival stays captured -- FAILED
+# (belief 0.10). Dissenters that remain on the channel keep speaking; their down-
+# weighted votes accumulate and the deceiver's agreement falls as the consensus moves.
+# The strengthening attempt of F6 therefore fails for persistent dissenters; restated:
+check("S13 persistent one-at-a-time dissenters ESCAPE under consensus trust (K=12)", ms12 < 1.0, f"{ms12:.2f}")
+mm_hi, _ = run_consensus(12, D=0, simultaneous=True)
+check("S13 same 12 sources arriving together escape", mm_hi < 1.0, f"{mm_hi:.2f}")
+# robustness across seeds and spacing
+caps = [run_consensus(12, D=D, seed=s)[0] > 3.5 for s in range(5) for D in [100, 400]]
+print(f"      one-at-a-time capture across 5 seeds x spacing {{100,400}}: {sum(caps)}/{len(caps)}")
+# threshold for simultaneous arrival
+for K in [1, 2, 3, 4, 5, 6]:
+    m_, _ = run_consensus(K, D=0, simultaneous=True)
+    print(f"      simultaneous K={K}: final belief {m_:5.2f}")
+# Transient dissent: each dissenter speaks only for a window W, then is gone
+# (re-isolation).  Prediction: captured for any number of dissenters.
+print("      -- transient dissent (each dissenter active W steps, then cut off) --")
+for W in [50, 150, 400]:
+    res = [run_consensus(12, D=W + 100, W=W, seed=s)[0] for s in range(5)]
+    print(f"      W={W:3d}, 12 dissenters in sequence: final beliefs {[f'{x:.2f}' for x in res]}")
+res150 = [run_consensus(12, D=250, W=150, seed=s)[0] for s in range(5)]
+check("S13 transient one-at-a-time dissent (W=150): captured across 5 seeds", min(res150) > 3.5, f"min={min(res150):.2f}")
+print("\n=== SUMMARY (after S13) ===")
 print("ALL PASS" if not fails else f"FAILURES: {fails}")

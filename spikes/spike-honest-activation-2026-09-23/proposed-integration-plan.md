@@ -1,34 +1,37 @@
-# Proposed integration plan: suggestions, not a work order
+# Proposed integration plan: suggestions, not a work order (revision 1)
 
-*For the integration pass, after independent verification. The integrator will see the canon at the time of integration, which I can't. Where my suggestion and the canon disagree, the canon is the better guide.*
+*For the integration pass. Revised after `de-novo-feedback-1.md`; its suggested dispositions table is worth reading alongside this. The integrator will see the canon at the time of integration, which I can't. Where my suggestion and the canon disagree, the canon is the better guide.*
 
 ## Suggested landings
 
-1. **Replace the `#norm-honest-activation` row, not soften it.** Clause 1 is a no-go as written (R1). Its intent splits into two true objects, and they want separate homes:
-   - a **derivation** (Vol 4 §04.3, or an appendix in Vol 1 if the integrator judges the math belongs with the gain machinery) carrying R1–R5: *second-order deception and the (D4) terminal form*. Suggested slug direction: something like `#deriv-trust-channel-capture`. The naming cycle owns the final name;
-   - a **normative** segment carrying R8d + R7: *honesty as a condition on channels that must keep their gain, above all the formative channel*. This is the row's intent made true. "Honest activation" may survive as its name, since the synaptic protocol it came from is exactly an instance of it (honest context for instances under study). But the claim is new, so the slug is the naming cycle's call.
-2. **`#def-death-as-factor-loss`**: its Working Note "Open — per-death terminal forms for (D1)/(D4)" can have its (D4) half answered by R5's captured state (absorbing conditions, recoverability conditions, escapes). The (D4) row's mechanism cell could then name the second-order route. The D1 half stays open.
-3. **`#deriv-tempo-additivity`**: its `[Discussion]` sentence ("a filter that models the channels as independent additionally manufactures false confidence…") is derived by R2. A pointer or a promoted statement would close it.
-4. **`#hyp-communication-gain`**: two things. (a) The Working Note wanting $U_{\text{src}}$/$U_{\text{align}}$ split into estimation vs strategy tracks can point at R3's attribution floor, which shows the strategic problem is *prior-determined*, and at the mixture-vs-Gaussian finding: source models with a liar component get geometric corroboration, while Gaussian ones get harmonic. (b) The Sybil follow-up in its audit gold is R3's corroboration factor, counterfeited.
-5. **`#der-interaction-channel-classification`**: its readers-ask ("prevent Regime-I poisoning without infinite $U_o$?") has an answer in R7. For a token-naive agent in an adversarial environment, no policy avoids both capture and starvation; the resolution is protected formation plus an authenticated trusted set.
-6. **`#obs-developmental-trajectory` and the `#der-the-creche-boundary` row**: both carry the claim that low $U_M$ / low gain confers immunity to manipulation. R2/R5 say low $U_M$ protects whatever got in first. A candidate replacement for the graduation criterion: a *calibrated trust model* (authenticated trusted set, strategic-type prior learned from discovered deceptions, provenance memory). This touches a missing segment's row and a draft segment's Discussion. It is a real change of claim, so it probably wants Joseph's eye.
-7. **`#def-model-class-fitness`**: its "Belongs elsewhere" hook ("a model class that assumes honest input is structurally inadequate") can be corrected to R3's form. The inadequate trust class is the one *without a liar component*, and the inadequacy shows up as prior-determined attribution, not as residual structure.
-8. **`#disc-identifiability-floor`**: R4 is a candidate instance (full-channel control gives Level-1 equivalence of the chronica; escapes E1–E4). Lemma-1 of `#deriv-reward-channel-learning-no-go` is the template. Candidacy only; the F-catalog treatment decides.
-9. **`#def-chronica` / CHRONICA defense**: R5c turns "the entity can trust its own history" into a sharper requirement: *keep the source of each piece of evidence*. Pooled memory makes a discovered deception uncorrectable except by dilution. This is the deception sibling of the fork-undetectability gold already in that segment's Working Notes.
-10. **`#disc-sandbox-evaluation-ceiling`**: R8e as a Discussion paragraph. Deceptive indistinguishability purchases transport at the price of overseer-channel capacity.
+1. **`#norm-honest-activation`: strengthen, don't delete.** Both clauses land as strengthened-to (A) under named conditions (`03` Verdict). There is no FALSE-marking step, because no no-go applies to the row as a whole. The only no-go is on the unconditional quantifier "guarantee", and it belongs in the landed segment's statement as its scope, with the counterexamples. Two objects want homes:
+   - A **derivation** carrying R2–R5 (gain collapse under deception, both modes; the attribution floor; the isolation floor; recovery and the terminal form). It could live in Vol 4 §04.3, or in a Vol 1 appendix if the integrator judges the math belongs with the gain machinery.
+   - The **normative** segment itself, carrying R8d with R7's formation statement: non-deception as necessary and sufficient for a channel's full capacity, plus the credibility conditions. Its wording should keep clause 2's "not a virtue commitment" (added in Joseph's own 2026-05-01 restructure) only in the precise sense R8d supports.
+2. **`#def-death-as-factor-loss`**: two edits, and they must land together.
+   - (a) The "(D4) terminal form" open Working Note can be answered by R5's captured state, with its tier stated (named conditions; dynamics numerical).
+   - (b) The severing-source axis currently says D4's externally driven column instantiates `#disc-adversarial-coupling-pressure`. R2–R5's capture route runs through the *trust model* and is fully available to a Class 1 agent, so there is a second, non-coupling external route. Without (b), landing (a) creates a canon inconsistency (verifier F2).
+3. **`#deriv-tempo-additivity`**: its `[Discussion]` sentence about false confidence under mis-modeled independence is derived by R2. It can be promoted, or given a pointer.
+4. **`#hyp-communication-gain`**: R3 shows the strategic (alignment) problem is prior-determined. It also gives the corroboration closed form, the liar-component class point, and the reversal (the agent's model of honest agreement must be realistic). The Sybil follow-up in its gold is R3/R7(d).
+5. **`#der-interaction-channel-classification`** readers-ask ("prevent Regime-I poisoning without infinite $U_o$?"). Answer from R7, not the retracted dilemma:
+   - partial trust bounds linear-pool poisoning at $w\,qB$ for a given lie size;
+   - bounded-influence aggregation bounds it independently of lie size against a minority of independent identities;
+   - neither survives cheap identities or isolation, whose repair is authentication plus channel diversity.
+6. **`#der-the-creche-boundary` row**: the criterion "$U_M$ low enough that $\eta^\ast$ falls below the sycophancy threshold" treats low gain as immunity. Low $U_M$ protects whatever got in first. Candidate replacement: graduation when the *trust model* is calibrated. That means authenticated identities with shared history, liar and duplication components learned from discovered deceptions, provenance memory, and the ability to aggregate robustly. This changes a claim and likely wants Joseph's eye. **`#obs-developmental-trajectory`** needs a lighter touch: say *which* calibration protects (verifier F10).
+7. **`#def-model-class-fitness`** hook: correct it to R3's form. The inadequate trust class lacks a liar component, and one level down (R2) a duplication component. Its failure shows as prior-determined attribution, not structured residuals.
+8. **`#disc-identifiability-floor`**: R4 (full-control Level-1 equivalence, escapes E1–E4) as a candidate instance, on the template of `#deriv-reward-channel-learning-no-go` Lemma 1.
+9. **`#def-chronica` / CHRONICA defense**: R5c. Keep the source of each piece of evidence. This is the deception sibling of the fork-undetectability gold already there.
+10. **`#disc-sandbox-evaluation-ceiling`**: R8e, both directions. Indistinguishability buys transport at the price of overseer-channel capacity; distinguishability keeps the capacity and gives up the transport; and models already partly detect evaluations.
 
-## Suggestions for elsewhere in the theory
+## Suggestions for elsewhere
 
-- **R9 is open work.** Composing R2/R3 with the coupled bias bound would say how much claimed shared purpose buys an adversary against a Class 3 agent beyond what it buys against a Class 1 agent.
-- **R8d's extension to (D2)** (a witness's discovered deception starving identity re-grounding) needs attestation gain modeled as credibility-weighted inside `#der-identity-continuity-threshold`. That looks tractable and would formally connect truth death and relational death.
-- **Partial isolation** (the deceiver controls a fraction of channels, and controls whether the agent's checkable content is really checkable) is the realistic case and is only sketched here.
-- **Pedagogy.** The single sentence that carried the most for me: *a deceiver does not lower your gain; it chooses a world in which low gain would be warranted and makes you live in it.* If it survives verification, it may be the Brief.
+- **Closed-form escape threshold for R5d.** How many concurrent independent dissenters break consensus-trust capture, as a function of the deceiver's initial trust, the agreement kernel and the consensus rate. It looks tractable as a fixed-point stability analysis, and would raise R5d from numerical to derived.
+- **Formation's attack surface.** By R4, whoever controls formation authors the trusted set. The ELI volume's stewardship and Crèche material may want this stated where the steward's role is defined: honest formation, not just protected formation.
+- **R9** (claimed shared purpose in coupled agents) and **R8d's extension to (D2)** remain open.
 
 ## Do-not-inherit list (interpretive language I suspect is mine, not the math's)
 
-- "Captured state" and "terminal form" as names. They parallel `#der-severed-actuation-dynamics`, but the parallel is my framing.
-- "Formation dilemma", "protected formation", "trusted set $T$". The math is a linear-pool model; the words are mine.
-- "Honesty as a condition on the channel". R8a–c are exact; the normative reading (R8d) is conditional on eventual discovery and the type model, and should keep that conditionality.
-- "Anti-training" (undiscovered deception confirms the deceiver). This is a reading of R1b+R2, not a derived learning-theory result.
-- The inoculation mapping (R7). Structural analogy, discussion-grade.
-- "Isolation is the dominant lever". It rests on a *measured* corroboration factor (S10), not a closed form.
+- "Captured state", "terminal form", "sustained isolation" as names. The math behind the last is one parameterization of one trust rule.
+- "Honest formation concentrates the attack surface" came from the verifier's framing. I think it's right, but it is a reading of R4, not a separate result.
+- "Honesty means non-deception" in R8d is my argued reading of ordinary usage. Joseph may intend something else by "absolute honesty", and that is his call.
+- The inoculation mapping and "discovered deception is the training signal" are discussion-grade.
+- "Isolation versus authority" as a log-odds comparison is exact only in the asymptotic regime of the closed form, and only when honest agreement is modelled realistically (R3's reversal).
