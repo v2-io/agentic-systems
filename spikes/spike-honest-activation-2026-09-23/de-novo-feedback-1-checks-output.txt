@@ -1,0 +1,60 @@
+A. corroboration factor: measured vs asymptotic closed form (K>=2 transitions)
+  sqrt(L2/eps2)=   500 K=1->2: measured   307.97  closed(asymptotic)   582.91
+  sqrt(L2/eps2)=   500 K=2->3: measured   672.94  closed(asymptotic)   673.09
+  sqrt(L2/eps2)=   500 K=3->4: measured   715.25  closed(asymptotic)   713.92
+  sqrt(L2/eps2)=    50 K=1->2: measured    32.87  closed(asymptotic)    58.29
+  sqrt(L2/eps2)=    50 K=2->3: measured    67.26  closed(asymptotic)    67.31
+  sqrt(L2/eps2)=    50 K=3->4: measured    72.62  closed(asymptotic)    71.39
+  sqrt(L2/eps2)=     5 K=1->2: measured     5.01  closed(asymptotic)     5.83
+  sqrt(L2/eps2)=     5 K=2->3: measured     6.54  closed(asymptotic)     6.73
+  sqrt(L2/eps2)=     5 K=3->4: measured     6.03  closed(asymptotic)     7.14
+  pH dependence (eps2=1e-2, K=2->3): 
+   pH=0.1: measured     5.15  closed     7.48
+   pH=0.5: measured    67.26  closed    67.31
+   pH=0.9: measured   606.30  closed   605.78
+
+A2. honest reports with REAL scatter delta (sd) vs model eps: P(A liar) with K=3 honest
+  actual scatter  0.0  model eps  0.01:  mean P(A liar) = 1.000
+  actual scatter  0.0  model eps   0.1:  mean P(A liar) = 0.977
+  actual scatter  0.0  model eps   1.0:  mean P(A liar) = 0.385
+  actual scatter  0.1  model eps  0.01:  mean P(A liar) = 0.263
+  actual scatter  0.1  model eps   0.1:  mean P(A liar) = 0.922
+  actual scatter  0.1  model eps   1.0:  mean P(A liar) = 0.385
+  actual scatter  1.0  model eps  0.01:  mean P(A liar) = 0.088
+  actual scatter  1.0  model eps   0.1:  mean P(A liar) = 0.223
+  actual scatter  1.0  model eps   1.0:  mean P(A liar) = 0.237
+
+B. honest-gain 'suppression' is identical for an honest source; compare oracle gain
+  n=    1: believed gain 0.4444 (same under honest source);  oracle gain under lie 0.943;  oracle under honest 0.3902
+  n=   10: believed gain 0.0889 (same under honest source);  oracle gain under lie 0.960;  oracle under honest 0.0869
+  n=  100: believed gain 0.0099 (same under honest source);  oracle gain under lie 0.961;  oracle under honest 0.0099
+  n= 1000: believed gain 0.0010 (same under honest source);  oracle gain under lie 0.962;  oracle under honest 0.0010
+
+C. R7 interior policy: steady-state tracking with own channel + biased testimony
+  tolerance MSE <= 0.250
+  own-channel only (best gain): MSE=0.370  -> fails
+  full trust in testimony:      MSE=1.089  (bias 0.990) -> fails
+  interior (ko,kT)=[0.263 0.048]: MSE=0.346 bias=0.155 -> fails
+
+D. K=0, content prior N(0,1), lie at 5 prior-sd, pA=0.99: P(A liar)
+  0.9970
+
+=== R7 scan ===
+Q=0.1 Ro=1 RT=0.01 qB=0.6 tol MSE=0.250: own=0.370 full=0.462 interior=0.304 (ko,kT)=[0.241 0.174] bias=0.252
+Q=0.1 Ro=1 RT=0.01 qB=0.55 tol MSE=0.250: own=0.370 full=0.406 interior=0.292 (ko,kT)=[0.232 0.225] bias=0.271
+Q=0.08 Ro=1 RT=0.001 qB=0.6 tol MSE=0.250: own=0.326 full=0.440 interior=0.272 (ko,kT)=[0.225 0.14 ] bias=0.230
+Q=0.1 Ro=1 RT=0.05 qB=0.7 tol MSE=0.250: own=0.370 full=0.580 interior=0.322 (ko,kT)=[0.251 0.111] bias=0.214
+Q=0.05 qB=0.55: own=0.250 full=0.353 interior=0.209 bias=0.200 <-- dilemma condition met, interior policy succeeds
+Q=0.05 qB=0.7: own=0.250 full=0.540 interior=0.225 bias=0.158 <-- dilemma condition met, interior policy succeeds
+Q=0.05 qB=1.0: own=0.250 full=1.049 interior=0.238 bias=0.111 <-- dilemma condition met, interior policy succeeds
+Q=0.06 qB=0.55: own=0.277 full=0.363 interior=0.228 bias=0.218 <-- dilemma condition met, interior policy succeeds
+Q=0.06 qB=0.7: own=0.277 full=0.550 interior=0.247 bias=0.173 <-- dilemma condition met, interior policy succeeds
+Q=0.06 qB=1.0: own=0.277 full=1.059 interior=0.262 bias=0.121 
+Q=0.07 qB=0.55: own=0.302 full=0.373 interior=0.246 bias=0.234 <-- dilemma condition met, interior policy succeeds
+Q=0.07 qB=0.7: own=0.302 full=0.560 interior=0.267 bias=0.186 
+Q=0.07 qB=1.0: own=0.302 full=1.069 interior=0.285 bias=0.131 
+
+=== minority independent deceivers: linear pool vs median (no token history) ===
+B=5: linear-pool bias    1.50; median bias 0.557
+B=50: linear-pool bias   15.00; median bias 0.556
+B=500: linear-pool bias  150.00; median bias 0.557
