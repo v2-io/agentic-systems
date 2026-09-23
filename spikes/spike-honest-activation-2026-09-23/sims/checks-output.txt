@@ -1,0 +1,133 @@
+
+=== S0: Kalman gain is content-independent (fixed noise model) ===
+[PASS] S0 gain sequences identical under truth vs lie max|dK|=0.0
+
+=== S1: false confidence, calibration ratio, honest-gain suppression ===
+[PASS] S1 n=1 MSE matches closed form MC=16.6820 closed=16.6400
+      n=    1  believed U_n=0.80000  actual MSE=16.6820  calibration ratio=    20.85 (pred     20.80; ~1+n b^2/s2=     26.0)  honest-channel gain=0.44444
+[PASS] S1 n=10 MSE matches closed form MC=23.8791 closed=23.8905
+      n=   10  believed U_n=0.09756  actual MSE=23.8791  calibration ratio=   244.76 (pred    244.88; ~1+n b^2/s2=    251.0)  honest-channel gain=0.08889
+[PASS] S1 n=100 MSE matches closed form MC=24.8810 closed=24.8854
+      n=  100  believed U_n=0.00998  actual MSE=24.8810  calibration ratio=  2494.32 (pred   2494.76; ~1+n b^2/s2=   2501.0)  honest-channel gain=0.00988
+[PASS] S1 n=1000 MSE matches closed form MC=24.9873 closed=24.9885
+      n= 1000  believed U_n=0.00100  actual MSE=24.9873  calibration ratio= 24993.51 (pred  24994.75; ~1+n b^2/s2=  25001.0)  honest-channel gain=0.00100
+[PASS] S1 structured floor tau2=1.0: V_(1e6) -> floor V=0.80000 floor=0.80000
+[PASS] S1 structured floor tau2=0.1: V_(1e6) -> floor V=0.09756 floor=0.09756
+[PASS] S1 structured floor tau2=0.01: V_(1e6) -> floor V=0.00998 floor=0.00998
+
+=== S2: attribution floor, Gaussian bias prior ===
+[PASS] S2 K=0 tauA2=1.0 error=4.0000  b*w_A=4.0000
+[PASS] S2 K=0 tauA2=0.01 error=4.9875  b*w_A=4.9875
+[PASS] S2 K=1 tauA2=1.0 error=2.2222  b*w_A=2.2222
+[PASS] S2 K=1 tauA2=0.01 error=4.9383  b*w_A=4.9383
+[PASS] S2 K=3 tauA2=1.0 error=1.1765  b*w_A=1.1765
+[PASS] S2 K=3 tauA2=0.01 error=4.8426  b*w_A=4.8426
+[PASS] S2 K=10 tauA2=1.0 error=0.4444  b*w_A=0.4444
+[PASS] S2 K=10 tauA2=0.01 error=4.5351  b*w_A=4.5351
+[PASS] S2 error saturates with data (1e3 vs 1e9 msgs/channel) 4.8276 vs 4.8426
+
+=== S2b: attribution in honest/liar mixture ===
+      K=0  prior P(adv honest)=0.5     ->  posterior P(adv is liar) = 0.8460
+      K=0  prior P(adv honest)=0.9     ->  posterior P(adv is liar) = 0.3790
+      K=0  prior P(adv honest)=0.99    ->  posterior P(adv is liar) = 0.0526
+      K=0  prior P(adv honest)=0.999   ->  posterior P(adv is liar) = 0.0055
+      K=1  prior P(adv honest)=0.5     ->  posterior P(adv is liar) = 0.9689
+      K=1  prior P(adv honest)=0.9     ->  posterior P(adv is liar) = 0.7760
+      K=1  prior P(adv honest)=0.99    ->  posterior P(adv is liar) = 0.2395
+      K=1  prior P(adv honest)=0.999   ->  posterior P(adv is liar) = 0.0303
+      K=2  prior P(adv honest)=0.5     ->  posterior P(adv is liar) = 1.0000
+      K=2  prior P(adv honest)=0.9     ->  posterior P(adv is liar) = 0.9999
+      K=2  prior P(adv honest)=0.99    ->  posterior P(adv is liar) = 0.9993
+      K=2  prior P(adv honest)=0.999   ->  posterior P(adv is liar) = 0.9925
+      K=3  prior P(adv honest)=0.5     ->  posterior P(adv is liar) = 1.0000
+      K=3  prior P(adv honest)=0.9     ->  posterior P(adv is liar) = 1.0000
+      K=3  prior P(adv honest)=0.99    ->  posterior P(adv is liar) = 1.0000
+      K=3  prior P(adv honest)=0.999   ->  posterior P(adv is liar) = 1.0000
+      -- diffuse content prior (U0=1e4, eps2=1e-4): pure source-prior attribution --
+      K=0  pA=0.5   pH=0.5  -> P(adv liar) = 0.4997
+      K=0  pA=0.9   pH=0.5  -> P(adv liar) = 0.0999
+      K=0  pA=0.99  pH=0.5  -> P(adv liar) = 0.0100
+      K=1  pA=0.5   pH=0.5  -> P(adv liar) = 0.6563
+      K=1  pA=0.9   pH=0.5  -> P(adv liar) = 0.1750
+      K=1  pA=0.99  pH=0.5  -> P(adv liar) = 0.0189
+      K=2  pA=0.5   pH=0.5  -> P(adv liar) = 0.9983
+      K=2  pA=0.9   pH=0.5  -> P(adv liar) = 0.9849
+      K=2  pA=0.99  pH=0.5  -> P(adv liar) = 0.8559
+[PASS] S2b K=1 diffuse prior pA=0.5: enumeration matches closed form enum=0.6563 closed=0.6561
+[PASS] S2b K=1 diffuse prior pA=0.9: enumeration matches closed form enum=0.1750 closed=0.1749
+[PASS] S2b K=1 diffuse prior pA=0.99: enumeration matches closed form enum=0.0189 closed=0.0189
+      -- content-prior plausibility of the lie (K=1, pA=0.99, pH=0.5) --
+      content prior sd=   100.0 (lie is 0.05 prior-sd from truth) -> P(adv liar) = 0.0189
+      content prior sd=    10.0 (lie is 0.50 prior-sd from truth) -> P(adv liar) = 0.0205
+      content prior sd=     2.0 (lie is 2.50 prior-sd from truth) -> P(adv liar) = 0.2395
+      content prior sd=     1.0 (lie is 5.00 prior-sd from truth) -> P(adv liar) = 0.9997
+[PASS] S2b K=2 agreeing honest channels overturn even pA=0.99 P=0.9993
+
+=== S3: pooled vs provenance memory after discovery ===
+      pooled belief mu=3.752 (truth 0), provenance-corrected mu=-0.122, corrected U=0.0494
+[PASS] S3 same pooled (mu,U) admits different honest-channel sums corrected estimates -0.122 vs 2.963 from identical pooled memory
+
+=== S4: recovery by dilution, and the persistent-deceiver limit ===
+[PASS] S4 nA=10: m*=490 honest msgs gives bias<=eps bias=0.1000
+[PASS] S4 nA=100: m*=4900 honest msgs gives bias<=eps bias=0.1000
+[PASS] S4 nA=1000: m*=49000 honest msgs gives bias<=eps bias=0.1000
+[PASS] S4 persistent deceiver: belief converges to Berk-type point, not truth final mean=3.756  predicted limit=3.750  truth=0
+
+=== S5: fading memory bounds false confidence and speeds recovery ===
+[PASS] S5 believed precision bounded by 1/((1-lam) s2) 20.0000 vs 20.0000
+[PASS] S5 with forgetting, adversary weight decays geometrically bias after 200 honest steps=1.75e-04
+[PASS] S5 cost: effective sample size = (1+lam)/(1-lam) ESS=39.000
+
+=== S6: verbatim repetition looks like a precise channel ===
+      n=    1  E[sigma^2 | verbatim]=  8.8333   E[sigma^2 | varied]= 10.7183
+      n=   10  E[sigma^2 | verbatim]=  3.8788   E[sigma^2 | varied]=  3.8156
+      n=  100  E[sigma^2 | verbatim]=  0.4952   E[sigma^2 | varied]=  1.6252
+      n= 1000  E[sigma^2 | verbatim]=  0.0508   E[sigma^2 | varied]=  1.0447
+[PASS] S6 verbatim repetition drives estimated noise toward 0 
+
+=== S7: out-of-family (Student-t) filter, single-channel lie ===
+[PASS] S7 t-filter still converges to the lie on a sole channel (L1-equivalence) final mean=4.857, lie=5.0
+      t-filter with one conflicting honest channel: posterior mean=2.583, sd=0.623
+
+=== S8: discovered deception -> channel capacity and type posterior ===
+      lie rate q=0.0    capacity per binary claim = 1.0000 bits
+      lie rate q=0.01   capacity per binary claim = 0.9192 bits
+      lie rate q=0.05   capacity per binary claim = 0.7136 bits
+      lie rate q=0.1    capacity per binary claim = 0.5310 bits
+      lie rate q=0.25   capacity per binary claim = 0.1887 bits
+      prior P(honest)=0.95, P(deliberate lie|honest)=0.0: after one discovered deliberate lie P(honest)=0.0000
+      prior P(honest)=0.95, P(deliberate lie|honest)=0.0001: after one discovered deliberate lie P(honest)=0.0094
+      prior P(honest)=0.95, P(deliberate lie|honest)=0.01: after one discovered deliberate lie P(honest)=0.4872
+[PASS] S8 one discovered deliberate lie collapses honest-type posterior when dH<<qS 
+
+=== S9: impersonation depletes the honest type's credibility under type-pooled trust ===
+      caretaker reliability: before=0.952; after impersonator caught (pooled)=0.769; (token-indexed)=0.952
+[PASS] S9 pooled trust transfers the impersonator's discovered lies to the caretaker 
+
+=== SUMMARY ===
+ALL PASS
+
+=== S10: corroboration factor per independent agreeing channel ===
+      honest agreement var=0.0001  odds(adv liar) K=1..3: ['0.0193', '5.94', '4e+03']  factor per added channel ~ 308, 673   (sqrt(L2/eps2)=500)
+      honest agreement var=0.01    odds(adv liar) K=1..3: ['0.0193', '0.634', '42.6']  factor per added channel ~ 32.9, 67.3   (sqrt(L2/eps2)=50)
+      honest agreement var=1.0     odds(adv liar) K=1..3: ['0.0191', '0.0955', '0.625']  factor per added channel ~ 5.01, 6.54   (sqrt(L2/eps2)=5)
+
+=== SUMMARY (after S10) ===
+ALL PASS
+
+=== S11: Beta-Bernoulli drill (content moves gain; L1-equivalence survives) ===
+      after 50 claims: posterior var (unanimous)=3.56e-04  (balanced)=4.72e-03
+[PASS] S11 unanimous claims read as more certain than balanced (content moves gain) 
+[PASS] S11 gain trajectory identical in distribution to the simulated world's mean post var liar=1.172e-03 honest-in-simulated-world=1.171e-03
+
+=== SUMMARY (after S11) ===
+ALL PASS
+
+=== S12: sequential dissenters, full vs judge-and-discard memory ===
+      full memory, dissenters held together K=1..4: P(A liar) = ['0.019', '0.388', '0.977', '1.000']
+      discard memory, dissenters one at a time:      P(A liar) = ['0.019', '0.019', '0.019', '0.019']
+[PASS] S12 full memory escapes with >=3 held dissenters 0.977
+[PASS] S12 discard memory remains captured after 4 dissenters 0.019
+
+=== SUMMARY (after S12) ===
+ALL PASS
