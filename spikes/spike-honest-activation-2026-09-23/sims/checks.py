@@ -457,3 +457,55 @@ res150 = [run_consensus(12, D=250, W=150, seed=s)[0] for s in range(5)]
 check("S13 transient one-at-a-time dissent (W=150): captured across 5 seeds", min(res150) > 3.5, f"min={min(res150):.2f}")
 print("\n=== SUMMARY (after S13) ===")
 print("ALL PASS" if not fails else f"FAILURES: {fails}")
+
+# ---------------------------------------------------------------------------
+# S14. (Added after de-novo-feedback-2 G1.)  Prior-bearing version of S13.
+#      S13's rule forgets initial trust on a ~1/alpha timescale, so "authority"
+#      cannot persist there.  Here each source's reliability is the posterior
+#      mean of a Beta prior updated by cumulative soft agreement with the
+#      consensus (no forgetting):  r_j = (a_j + sum agree) / (a_j + b_j + n_j).
+#      Borrowed authority = prior pseudo-counts (strength s, mean 0.99) that are
+#      never forgotten.  Still a truth-discovery-style heuristic, not full
+#      Dawid-Skene EM.  Questions: (1) does authority survive isolation-built
+#      incumbency?  (2) without incumbency (neutral start mu=b/2)?  (3) does the
+#      voice-plurality threshold of feedback-2 probe 4 persist?
+# ---------------------------------------------------------------------------
+print("\n=== S14: prior-bearing (Beta, no forgetting) consensus trust ===")
+def run_beta(K, nA=1, T=6000, T0=300, kap=0.2, c=1.5, sA=0.0, mA=0.99, sH=2.0, seed=0, incumbency=True):
+    g = np.random.default_rng(seed)
+    mu = 0.0 if incumbency else b / 2
+    J = nA + K
+    a = np.array([sA * mA] * nA + [sH * 0.5] * K) + 1e-9
+    bb = np.array([sA * (1 - mA)] * nA + [sH * 0.5] * K) + 1e-9
+    agree_sum = np.zeros(J); n = np.zeros(J)
+    start = T0 if incumbency else 0
+    for t in range(T):
+        act = [j for j in range(J) if j < nA or t >= start]
+        y = np.array([(b if j < nA else 0.0) + g.normal(0, 1) for j in act])
+        r = np.array([(a[j] + agree_sum[j]) / (a[j] + bb[j] + n[j]) if (a[j] + bb[j] + n[j]) > 1e-6 else 0.5 for j in act])
+        mu = (1 - kap) * mu + kap * (r * y).sum() / r.sum()
+        ag = np.exp(-(y - mu) ** 2 / (2 * c * c))
+        for i, j in enumerate(act):
+            agree_sum[j] += ag[i]; n[j] += 1
+    return mu
+def capfrac(**kw):
+    v = [run_beta(seed=s, **kw) for s in range(5)]
+    return np.mean([x > 2.5 for x in v]), v
+print("  (1) incumbency (300 steps deceiver alone), lone dissenter; deceiver prior strength sA varied")
+for sA in [0.0, 10.0, 100.0, 1000.0]:
+    f, v = capfrac(K=1, sA=sA)
+    print(f"      sA={sA:7.1f}: captured {f:.1f}  beliefs {[f'{x:.2f}' for x in v]}")
+print("  (2) no incumbency (neutral start mu=b/2, dissenters from t=0)")
+for K in [1, 2, 3]:
+    for sA in [0.0, 100.0, 1000.0, 10000.0]:
+        f, v = capfrac(K=K, sA=sA, incumbency=False)
+        print(f"      K={K} sA={sA:8.1f}: captured {f:.1f}  beliefs {[f'{x:.2f}' for x in v]}")
+print("  (3) incumbency, Sybil voices nA vs concurrent dissenters K (sA=0)")
+for nA in [1, 2, 3]:
+    row = []
+    for K in [1, 2, 3, 4, 5, 6]:
+        f, _ = capfrac(K=K, nA=nA)
+        row.append(f"K={K}:{f:.1f}")
+    print(f"      nA={nA}: " + "  ".join(row))
+print("\n=== SUMMARY (after S14) ===")
+print("ALL PASS" if not fails else f"FAILURES: {fails}")

@@ -1,6 +1,6 @@
-# Debrief: honest activation, and what deception does to a learner (revision 1)
+# Debrief: honest activation, and what deception does to a learner (revision 2)
 
-*To Joseph. Written from the corrected files (`03-derivations.md` revision 1, `sims/checks-output.txt`), after an independent verifier's pass (`de-novo-feedback-1.md`) and my response to it (`de-novo-feedback-1-response.md`). One thing to know first: my original verdict called the row's first clause false. The verifier showed that by the theory's own definition of gain collapse my math proves it *true*, under conditions. It was right, and this version says so.*
+*To Joseph. Written from the corrected files (`03-derivations.md` revision 2, `sims/checks-output.txt`), after two independent verification passes (`de-novo-feedback-1.md`, `de-novo-feedback-2.md`) and my responses to them. One thing to know first: my original verdict called the row's first clause false. The verifier showed that by the theory's own definition of gain collapse my math proves it *true*, under conditions. It was right, and this version says so.*
 
 ## Where the row came from
 
@@ -12,7 +12,8 @@ The theory defines gain collapse as learning stopping *inappropriately*: the age
 
 - **Authority sets a floor, repetition drives the agent to it.** An agent told "this source is one of us" (it assigns the source almost no possible bias) becomes arbitrarily confident. Its actual error divided by its believed error grows linearly with repetitions: about 21, 245, 2,500 and 25,000 at 1, 10, 100 and 1,000 repeats of a 5-sigma lie. An agent that knew its real error would still weight the next honest report at about 0.96. This one weights it at 0.44, 0.089, 0.0099 and 0.001. The same weights would be *correct* after that many honest reports; the deception is the gap, not the weights themselves.
 - **Undetected deception also produces the opposite collapse mode, pointed at the truth.** If the agent models sources as possibly-lying and trusts the deceiver, a lone honest dissenter gets judged the liar. Under a natural trust rule the agent's own updating drives the dissenter's trust to 0.02. That is wrongful discounting of good evidence, the theory's other collapse mode. Which mode appears depends on how the agent models its sources.
-- **The word "guarantee" is false.** Forgetting caps the false confidence. A lie that clashes with what the agent already knows gets caught. Enough concurrent independent dissent breaks the capture. Robust aggregation among independent sources bounds the damage.
+- **The two routes need different conditions.** The overconfidence route needs a source treated as unbiased, an unchanging world, no forgetting, and the lies to keep coming. It does *not* need isolation: even with honest sources present, a trusting agent settles on a permanent bias while growing ever more certain. The wrongful-distrust route is the one that needs the adversary to control who is speaking (below).
+- **The word "guarantee" is false.** In a changing world uncertainty has a floor, which bounds the false confidence. Forgetting caps it. A lie that clashes with what the agent already knows gets caught. Enough concurrent independent dissent breaks the capture. Robust aggregation among independent sources bounds the damage.
 
 One real limit on the mechanism: where the learning math is exact (a Kalman filter), the *content* of a lie leaves the learning rate unchanged, bit for bit. What the deceiver changes is what the agent believes about the source: how unbiased, precise and independent it is. In agents that judge sources by their outputs, though, content does matter. Word-for-word repetition reads as precision (estimated noise 0.05 after 1,000 identical repeats, against about 1 for natural variation), because such an agent has no concept of "copied". The shout manufactures its own authority.
 
@@ -24,19 +25,20 @@ The caution, also from the verifier: that corroboration works only if the agent'
 
 ## The terminal form, and when truth outlives the deception
 
-I tested a natural trust rule: judge each source by how well it agrees with your current consensus. That is how reliability is estimated when there's no ground truth. Under it, the captured state (belief at the lie, deceiver trusted, dissenters distrusted) behaves like this:
+I tested natural trust rules of the kind used when there is no ground truth: judge each source by how well it agrees with your current consensus. There were two versions, one where trust slowly forgets its starting point and one where it never does. In both, the captured state (belief at the lie, deceiver trusted, dissenters distrusted) is held shut by the adversary's control of **who is speaking at once**:
 
-- A single dissenter is shut out by the agent's own updating.
-- Dissenters who *stay on the channel* accumulate and break the capture: two concurrent ones suffice here.
-- Dissenters who speak briefly and are then cut off never break it: twelve in a row leave the belief at the lie across every seed and timing tried.
+- **Isolation launders borrowed authority.** After a period as the only voice, the deceiver's trust is the same whether it started at 0.99 or 0.1. It "earned" that trust by agreeing with a consensus it set alone. Once isolation has run, the authority claim is no longer needed; the track record looks real.
+- **Without that head start, authority is the first-contact lever.** A strongly authoritative newcomer captures an agent against one or two concurrent dissenters but not three, though three still leave a residual bias.
+- **With the head start, dissent must outnumber the deceiver's voices, with a margin.** One deceiver voice falls to two or three concurrent dissenters; three sock-puppet voices hold against four, or against six or more when trust never forgets. Isolation (fewer honest voices) and sock-puppets (more deceiver voices) are two ways of holding the same plurality.
+- **Dissent that is cut off never breaks it:** twelve brief dissenters in a row left the belief at the lie in every run.
 
-So the trap is held shut by **sustained isolation**, the adversary's continued control of how many independent voices reach the agent at once, working through the agent's own trust dynamics. My first version said it was held shut by the agent's memory policy, and the simulation refuted that. This is shown in one setting, not proven.
+My first version of this blamed the agent's memory; the simulation refuted that. My second called it "sustained isolation"; the verifier showed that names only half the lever. What is shown is simulation in two related rules, not a proof. The exact escape condition is open.
 
 "Truth outlives the deception" holds when three things are true:
 
 - the deceiver stops or is discovered (a persistent one leaves a trusting agent permanently biased: 3.75 on a lie of 5 in the checked case);
-- enough independent dissent, or the agent's own action in a world the deceiver doesn't control, reaches it;
-- for fast, exact recovery, the agent remembered *who said what*. Blended memory can only wait for dilution, at a cost linear in the lie's volume (490, 4,900 and 49,000 honest messages for 10, 100 and 1,000 lies).
+- enough concurrent independent dissent, or the agent's own action in a world the deceiver doesn't control, reaches it;
+- for fast, exact recovery, the agent remembered *who said what*. Blended memory can only wait for dilution, at a cost linear in the lie's volume (490, 4,900 and 49,000 honest messages for 10, 100 and 1,000 lies). This is the same condition the machine-unlearning literature found for exact forgetting.
 
 ## Young agents: what capability can't do, and what formation is for
 
@@ -52,16 +54,18 @@ So a young agent's real vulnerability is **few independent channels plus cheap i
 
 ## Clause 2, made precise
 
-- A source that lies at rate $q$ in situations the listener can't tell apart carries $1 - H(q)$ bits per yes/no claim: 0.92 at 1%, 0.71 at 5%, 0.53 at 10%. Falsehood the listener *can* distinguish (disclosed fiction, a marked test) costs nothing. So **not deceiving is necessary and sufficient for a channel's full capacity**. In the ordinary sense of honesty (non-deception) that is your clause 2, exactly and without needing discovery. The verifier agrees the math supports this reformulation. I argue it is also the ordinary meaning of honesty, and you're the judge of what you meant by "absolute". "Never state any falsehood, even disclosed fiction" is not supported.
+- A source that is sometimes honestly wrong (error rate $e$) and also deceives at rate $q$, in situations the listener can't tell apart, carries $1 - H(e + q - 2eq)$ bits per yes/no claim. **Capacity falls strictly as deception rises, below what the source's honesty alone would give, and zero deception is the unique best.** For an error-free source: 0.92 bits at 1% deception, 0.71 at 5%, 0.53 at 10%. For a source that is honestly wrong 2% of the time: 0.86 with no deception, 0.64 at 5%. This needs no discovery.
+- Two precisions the verifier made me face. First, not deceiving is necessary but *not sufficient* for full capacity, because honest mistakes cost capacity too; my previous "necessary and sufficient" was wrong. Second, "deception" here is technical: falsehood the listener can't predict. Disclosed fiction or a marked test costs nothing. So does a known habitual liar, which is a liar in the ordinary sense. Whether the normative segment speaks in the technical sense or the ordinary one is your call.
+- On "not a virtue commitment": the math shows honesty is a structural requirement. It cannot show honesty is *not also* a virtue. The supported reading is "independent of whether it is also a virtue", and the choice of wording is yours. "Absolute" as "never state any falsehood" is not supported, since disclosed falsehood costs nothing.
 - With eventual discovery, one discovered deliberate lie can collapse trust in a source. From 0.95 it falls to about 0.01 if the listener thought honest sources lie deliberately less than 1 in 10,000 times, but only to about 0.5 if it thought 1 in 100. That belief is set by formation. It is a real design question: realistic expectations make an agent more robust to a caretaker's lapse, and slower to condemn a manipulator.
 - Where trust is pooled by role, an impersonator's discovered lies lower the genuine role-holders' credibility.
 - For evaluators it cuts both ways. To the extent tests are indistinguishable from deployment, every situational claim from overseers carries less information, in deployment too. To the extent they're distinguishable (frontier models already partly detect them), the channel is fine but the test evidence doesn't transfer. Disclosed or authenticated test designs keep the channel and give up only the transfer that indistinguishability was meant to buy.
 
 ## Tiers
 
-- **Exact in the stated models and checked numerically:** the gain-collapse law and its gap to the oracle, the attribution floor with its closed form, dilution, the persistent-deceiver limit, provenance as necessary and sufficient for exact correction, forgetting's cap and cost, the capacity result.
+- **Exact in the stated models and checked numerically:** the gain-collapse law and its gap to the oracle, the attribution floor with its closed form, dilution, the persistent-deceiver limit, provenance as necessary and sufficient for exact correction, forgetting's cap and cost, the capacity result with honest error.
 - **Conditional:** capability's limits, the formation statement.
-- **Numerical, in one setting:** the terminal form's dynamics.
+- **Numerical, in two related trust rules:** the terminal form's dynamics.
 - **Discussion-grade or open:** the inoculation reading, the extension to relational death, and claimed shared purpose in goal-coupled agents.
 
 ## Tangents

@@ -27,3 +27,10 @@
 - Accepted F1 (the clause-1 C verdict was wrong under canon's own definition of gain collapse; I had adopted the brief's guess as the reading and never checked the verdict line against canon's definition). Accepted F2–F7, F9–F12. F8 mostly accepted, with a partial rebuttal: non-deception is exactly what R8a characterizes.
 - F6 strengthening attempted in S13 (consensus-estimated trust). My first hypothesis — one-at-a-time dissenters stay captured — FAILED: persistent dissenters accumulate and escape. The refined hypothesis held: capture persists under *transient* dissent (sustained isolation), across 5 seeds x 3 windows. Both recorded in `sims/checks.py`.
 - Rewrote `03` (revision 1), `debrief.md`, `outsider-statement.md`, `proposed-integration-plan.md`; revised `01`, `02`, `README.md`; wrote `de-novo-feedback-1-response.md`. Re-verified Friedman & Resnick 2001 and Anil et al. 2024 by web search.
+
+## Session 1, continued: revision 2 after the re-check
+
+- Read `de-novo-feedback-2.md` whole (committed as `dac2349f`; the coordinator's first message gave a different hash and was corrected). Re-ran its checks: identical.
+- Ran the prior-bearing S13 myself as S14 (Beta reliability, never forgotten). Authority is inert after isolation even without forgetting, so isolation launders authority. Without incumbency, authority acts at first contact. Plurality margins grow when trust never forgets.
+- Accepted G1–G3 and the smaller items. My R8 rebuttal was half wrong (honest error breaks sufficiency); corrected.
+- Released as open: the closed-form escape condition and a latent-class EM version.

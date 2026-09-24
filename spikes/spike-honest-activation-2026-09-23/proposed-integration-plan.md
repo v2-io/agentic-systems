@@ -1,14 +1,14 @@
-# Proposed integration plan: suggestions, not a work order (revision 1)
+# Proposed integration plan: suggestions, not a work order (revision 2)
 
-*For the integration pass. Revised after `de-novo-feedback-1.md`; its suggested dispositions table is worth reading alongside this. The integrator will see the canon at the time of integration, which I can't. Where my suggestion and the canon disagree, the canon is the better guide.*
+*For the integration pass. Revised after `de-novo-feedback-1.md` and `de-novo-feedback-2.md`; their suggested dispositions are worth reading alongside this. The integrator will see the canon at the time of integration, which I can't. Where my suggestion and the canon disagree, the canon is the better guide.*
 
 ## Suggested landings
 
 1. **`#norm-honest-activation`: strengthen, don't delete.** Both clauses land as strengthened-to (A) under named conditions (`03` Verdict). There is no FALSE-marking step, because no no-go applies to the row as a whole. The only no-go is on the unconditional quantifier "guarantee", and it belongs in the landed segment's statement as its scope, with the counterexamples. Two objects want homes:
    - A **derivation** carrying R2–R5 (gain collapse under deception, both modes; the attribution floor; the isolation floor; recovery and the terminal form). It could live in Vol 4 §04.3, or in a Vol 1 appendix if the integrator judges the math belongs with the gain machinery.
-   - The **normative** segment itself, carrying R8d with R7's formation statement: non-deception as necessary and sufficient for a channel's full capacity, plus the credibility conditions. Its wording should keep clause 2's "not a virtue commitment" (added in Joseph's own 2026-05-01 restructure) only in the precise sense R8d supports.
+   - The **normative** segment itself, carrying R8d with R7's formation statement: technical deception strictly lowers a channel's capacity below its honest-error capacity, plus the credibility conditions. Two wording choices are Joseph's. (i) "Not a virtue commitment" (his own 2026-05-01 addition) is supported only as "independent of whether it is also a virtue". (ii) If "absolute" survives into the landed row, its reading as "never assert any falsehood" should be stated as a small no-go (disclosed falsehood costs no capacity).
 2. **`#def-death-as-factor-loss`**: two edits, and they must land together.
-   - (a) The "(D4) terminal form" open Working Note can be answered by R5's captured state, with its tier stated (named conditions; dynamics numerical).
+   - (a) The "(D4) terminal form" open Working Note can be answered by R5's captured state, at its evidence tier: numerical, two truth-discovery-style rules, with the named condition being incumbency plus a concurrent-voice plurality (held by isolation or Sybil voices), not "isolation" alone.
    - (b) The severing-source axis currently says D4's externally driven column instantiates `#disc-adversarial-coupling-pressure`. R2–R5's capture route runs through the *trust model* and is fully available to a Class 1 agent, so there is a second, non-coupling external route. Without (b), landing (a) creates a canon inconsistency (verifier F2).
 3. **`#deriv-tempo-additivity`**: its `[Discussion]` sentence about false confidence under mis-modeled independence is derived by R2. It can be promoted, or given a pointer.
 4. **`#hyp-communication-gain`**: R3 shows the strategic (alignment) problem is prior-determined. It also gives the corroboration closed form, the liar-component class point, and the reversal (the agent's model of honest agreement must be realistic). The Sybil follow-up in its gold is R3/R7(d).
@@ -24,14 +24,14 @@
 
 ## Suggestions for elsewhere
 
-- **Closed-form escape threshold for R5d.** How many concurrent independent dissenters break consensus-trust capture, as a function of the deceiver's initial trust, the agreement kernel and the consensus rate. It looks tractable as a fixed-point stability analysis, and would raise R5d from numerical to derived.
+- **Closed-form escape condition for R5d (released as open).** A fixed-point stability analysis in the voice ratio $n_A : K$, the ratio $b/c$, the consensus rate $\kappa$ and the trust model's memory. The verifier's handle (a lone dissenter's reliability settles near $\frac{c}{\sqrt{c^2+1}}e^{-\mu^2/2(c^2+1)}$) is recorded in `03` R5d. A latent-class (Dawid–Skene EM) version with reliability priors is also open; S14 is the nearest prior-bearing heuristic.
 - **Formation's attack surface.** By R4, whoever controls formation authors the trusted set. The ELI volume's stewardship and Crèche material may want this stated where the steward's role is defined: honest formation, not just protected formation.
 - **R9** (claimed shared purpose in coupled agents) and **R8d's extension to (D2)** remain open.
 
 ## Do-not-inherit list (interpretive language I suspect is mine, not the math's)
 
-- "Captured state", "terminal form", "sustained isolation" as names. The math behind the last is one parameterization of one trust rule.
+- "Captured state", "terminal form", "isolation launders authority", "incumbency plus plurality" as names. The evidence behind the last two is numerical, in two related truth-discovery-style rules.
 - "Honest formation concentrates the attack surface" came from the verifier's framing. I think it's right, but it is a reading of R4, not a separate result.
-- "Honesty means non-deception" in R8d is my argued reading of ordinary usage. Joseph may intend something else by "absolute honesty", and that is his call.
+- "Deception" in R8 is technical (falsehood the receiver cannot predict), not the ordinary sense of lying. Revision 1 argued they coincide; they do not, and how the normative segment words it is Joseph's call.
 - The inoculation mapping and "discovered deception is the training signal" are discussion-grade.
 - "Isolation versus authority" as a log-odds comparison is exact only in the asymptotic regime of the closed form, and only when honest agreement is modelled realistically (R3's reversal).
