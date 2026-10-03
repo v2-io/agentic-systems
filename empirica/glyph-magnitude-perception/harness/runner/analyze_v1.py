@@ -27,7 +27,9 @@ def load_features():
             pass
     for r in csv.DictReader(open(UTF / "axes/data/unicode-axes.tsv"), delimiter="\t", quoting=csv.QUOTE_NONE):
         v = (r.get("numeric_value") or "").strip()
-        if v:
+        # gate on the table's own ucd_numeric flag: the table also carries cultural (gematria/Milesian)
+        # values for letters, which are NOT Unicode Numeric_Value (audit 2026-10-03, analysis/verification/)
+        if v and (r.get("ucd_numeric") or "").strip() == "yes":
             try:
                 if "/" in v:
                     n, d = v.split("/"); NUM[r["char"]] = float(n) / float(d)
@@ -35,7 +37,7 @@ def load_features():
                     NUM[r["char"]] = float(v)
             except Exception:
                 pass
-    # astral numerics the BMP table cannot carry (python unicodedata, same Unicode 14 data)
+    # astral numerics the BMP table cannot carry: python unicodedata.numeric (UCD Numeric_Value, Unicode 14)
     import unicodedata
     for cp in range(0x10000, 0x20000):
         ch = chr(cp)
@@ -86,7 +88,7 @@ def load_runs(stim):
                 meta["failed-call"] += 1; continue
             if res.get("usage", {}).get("thinking_tokens") is not None:
                 think.append(res["usage"]["thinking_tokens"] / max(1, len(row["pids"])))
-            if row["instrument"] in ("gestalt", "signa-gestalt"):
+            if row["instrument"] in ("gestalt", "signa-gestalt", "top40-gestalt"):
                 k = (row["rep"], row["pids"][0])
                 if k not in parsed:
                     parsed[k] = I.parse_gestalt(res["raw"], stim[row["pids"][0]]["glyphs"])

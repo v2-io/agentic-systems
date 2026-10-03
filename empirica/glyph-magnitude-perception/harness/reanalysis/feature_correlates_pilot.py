@@ -27,7 +27,7 @@ for r in csv.DictReader(open(UTF / "bmp-metrics-ghostty.tsv"), delimiter="\t", q
 num = {}
 for r in csv.DictReader(open(UTF / "axes/data/unicode-axes.tsv"), delimiter="\t", quoting=csv.QUOTE_NONE):
     v = r.get("numeric_value") or ""
-    if v.strip():
+    if v.strip() and (r.get("ucd_numeric") or "").strip() == "yes":  # UCD values only (audit 2026-10-03)
         try:
             num[r["char"]] = float(eval(v)) if "/" in v else float(v)
         except Exception:

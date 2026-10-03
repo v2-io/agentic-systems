@@ -20,7 +20,9 @@ from judges import make_judge, ADAPTER_VERSION
 EXP = pathlib.Path(__file__).resolve().parents[2]
 STIMS = {"triads": "triads.jsonl", "format": "format-pairs.jsonl", "conflict": "conflict.jsonl",
          "holistic": "holistic-pairs.jsonl", "gestalt": "gestalt.jsonl",
-         "signa": "consumer-signa-pairs.jsonl", "signa-gestalt": "consumer-signa-gestalt.jsonl"}
+         "signa": "consumer-signa-pairs.jsonl", "signa-gestalt": "consumer-signa-gestalt.jsonl",
+         "top40": "top40-steps.jsonl", "top40-gestalt": "top40-gestalt.jsonl"}
+GESTALT_STIMS = ("gestalt", "signa-gestalt", "top40-gestalt")
 
 def sha(s):
     return hashlib.sha256(s.encode()).hexdigest()
@@ -34,10 +36,10 @@ def group_of(row):
 
 def build_calls(stim, rows, fmt, mode, sheet_size, reps):
     calls = []
-    if stim in ("gestalt", "signa-gestalt") or mode == "single":
+    if stim in GESTALT_STIMS or mode == "single":
         for rep in range(reps):
             for r in rows:
-                if stim in ("gestalt", "signa-gestalt"):
+                if stim in GESTALT_STIMS:
                     prompt = I.gestalt_prompt(r["glyphs"])
                 else:
                     prompt = I.pair_prompt(r["a"], r["b"], fmt, {"pid": r["pid"], "fmt": fmt, "rep": rep})
@@ -69,7 +71,7 @@ def main():
     a = ap.parse_args()
     judges = json.load(open(EXP / "harness/runner/judges-v1.json"))
     jspec = judges["judges"][a.judge]
-    fmt = "gestalt" if a.stim in ("gestalt", "signa-gestalt") else a.format
+    fmt = "gestalt" if a.stim in GESTALT_STIMS else a.format
     rows = load_stim(a.stim)
     stim_digest = digest(rows)
     run_id = f"{a.stim}-{fmt}-{a.mode}-{a.judge}" + (f"-{a.tag}" if a.tag else "")

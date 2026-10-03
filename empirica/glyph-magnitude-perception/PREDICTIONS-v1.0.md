@@ -51,3 +51,12 @@ Scored on committed answers (⟂/≈ reported separately) pooled over both order
 - Thinking-token counts vs ⟂ use across judges.
 - Whether the three new Gemini/Grok/GPT judges reproduce the "two axes" picture or add a third.
 - Concordance between v1.0 triad edges and the survey records' written orders (graduation-by-retest of seeds).
+
+## Errata (appended after registration; thresholds and predictions unchanged)
+
+*Found by the independent audit `analysis/verification/2026-10-03-audit-rederivations.md`. The registered predictions above do not depend on these provenance sentences; they are corrected here, not rewritten, so the registered text stays as committed.*
+
+- The provenance line "80% under the glyph/≈ format (walk2)" read Hebrew/Greek letters' cultural numeral values as Unicode numerics. Gated on Unicode Numeric_Value it is 42/45 = 93%, so the format contrast on numeric pairs is 93% vs 96–99%, with overlapping intervals. llama3.2:3b becomes 56/103 = 54%. The analysis code (`analyze_v1.py`) is gated the same way, which matches the protocol's definition ("both glyphs carry a UCD numeric value").
+- "Of 7 direction flips, 6 moved from numerically wrong to numerically right" should read: five moved wrong→right, one right→wrong (⅜ > ①), one involves no number (🌔/🌚).
+- "⑩ vs 9 — value and ink agree" is wrong: measured ink favors 9 (0.2515 vs 0.1657, different faces), so the pilot's ⑩ 16-0 is a value-over-ink outcome. 🯸 vs 🯱 is aligned by segment count (not measured).
+- "‱ … three circles": ‱ has four circles.
