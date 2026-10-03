@@ -1,33 +1,70 @@
 # MANIFEST — glyph-magnitude-perception
 
-*Entered 2026-08-25 (pilot day). Canonization contract per `empirica/README.md`.*
+*Entered 2026-08-25 (pilot day); claims restated 2026-10-03 after the registered v1.0 run. Canonization contract per `empirica/README.md`.*
 
 ## What it studies
 
-How language-model minds perceive **order among Unicode glyphs** — which glyph sequences carry monotonic magnitude perceptually, by what mechanisms, with what substrate-dependence — and, co-equally, **how measurement formats manufacture or suppress perceived order** (demand characteristics, answer-channel priors, articulation filters). The experimental object is dual: the glyph-order structure AND the measurement protocol itself.
+How language-model minds perceive **order among Unicode glyphs** — which glyph sequences carry monotonic magnitude perceptually, by what mechanisms, with what substrate-dependence — and, co-equally, **how measurement formats and contexts manufacture or suppress perceived order** (demand characteristics, answer-channel priors, position habits, articulation filters, judge context). The experimental object is dual: the glyph-order structure AND the measurement protocol itself.
 
 ## Claims
 
-*Epistemic tier per FORMAT vocabulary; all currently PILOT-tier — single-day runs, pre-registration informal, no held-out confirmation yet.*
+*Tiers: **v1.0** = registered predictions (`PREDICTIONS-v1.0.md`), one campaign, fresh judges, held-out pools, 2026-10-03 (`RUNS.md`); **pilot** = 2026-08-25, single day, informal registration. Every v1.0 claim was audited independently (`analysis/verification/`). Detail and numbers: `analysis/2026-10-03-v1.0-findings.md`, `analysis/v1.0-results.md`.*
 
-1. **[Empirical Claim (pilot)] Mechanism taxonomy of magnitude carriers.** Fill (height/width/density/fraction), count (immediate to the subitizing boundary ~3–4, decoded past it), size/angle, compiled-semantic decode, with denoted-number and ink-fill emerging as the two substrate-invariant axes in assumption-free discovery walks.
-2. **[Empirical Claim (pilot)] Sequence-kind taxonomy.** Factorizable (pairwise = set-level), holistic (perceptible only with ≥~4 glyphs co-present; pairwise-blind AND salt-fragile), authored (a chosen linearization of a perceived partial order; per-reader stable, cross-reader divergent), and generator lattices ($B^4$/$B^6$/$B^8$, product grids) whose maximal chains are ladders.
-3. **[Empirical Claim (pilot)] Demand characteristics, measured.** Forced-choice formats without a no-ordering option manufacture ~80% of cross-domain directed edges (426/533 dissolved when ⟂ was offered on identical pairs, Sonnet tier). Axis-naming requirements filter out confounded/unnamed aspects that motion-framed continuation recovers (⚌☱: 3/6 declines named vs 5/6 continuation unnamed).
-4. **[Empirical Claim (pilot)] Local transitivity; capability buys discipline, not axes.** Within-judge triad cycle rate 1–2% (Sonnet) vs 37% (llama3.2:3b); ⟂ usage 52–57% vs 7%; yet the same two axes survive cross-consistency filtering at both tiers. Answer-channel effects dominate at small scale (3B: 2% bias-immune with ASCII </> answers vs 27% glyph-echo).
-5. **[Empirical Claim (pilot)] Immediacy arbitrates axis conflicts.** Where ink and denoted value oppose, families with strong compiled decode resolve to value (Ⅸ>Ⅷ, 16-0), families without resolve to ink (☷>⚌, 16-0), weak-decode families split (‱>% 12-4). Five converging operationalizations of immediacy agree on one ranking.
-6. **[Intended]** Confirmation-tier versions of 1–5 under frozen protocol v1.0 with fresh judges, fresh seeds, held-out glyph pools (see `pilot/DESIGN-scale-up.md`).
+1. **[Empirical Claim (v1.0)] Offering ⟂ removes a large share of cross-domain directed edges in every mind tested, and what survives is axis-coherent; the size of the effect depends on the judge and on the measurement context.**
+   - Removal: tie-format directed pairs that became ⟂ once offered ranged from 0.28 to 0.72 across frontier judges. The pilot's own judges removed 0.77 of the same 160 pairs.
+   - Context: claude-sonnet-5-5 inside an agent harness with pilot wording used ⟂ on 0.76 of presentations; the same model through an isolated CLI used it on 0.41.
+   - Axis-coherence: survival was higher for within-locus than for random pairs in every testable frontier judge.
+   - The pilot's "~80% manufactured" is the high end of this range, not a constant.
+2. **[Empirical Claim (v1.0)] Denoted number is a substrate-invariant axis among frontier minds; measured ink is a secondary correlate; neither survives at 3–7B.**
+   - Frontier judges (four Claude models, Grok 4.6, GPT-5.6, two Geminis): the larger Unicode numeric value wins 0.95–1.00 of committed numeric edges. Among non-numeric edges, the denser glyph wins 0.64–0.83.
+   - Small open models (llama3.2-3b, gemma3-4b, mistral-7b, hermes3-3b): both correlates are at or below chance (mistral-7b's ink correlate is 0.28).
+   - Transitivity does *not* separate the tiers. Among triads whose three pairs are consistent across both presentation orders, no judge produced a cycle. What capability buys is ⟂ use, consistency across presentation order, and the axes.
+3. **[Empirical Claim (v1.0)] Compiled numeric decode arbitrates axis conflicts; without it, judges fall back on counts of like elements, then fill; size dominates scattered small elements.**
+   - Compiled decode wins over ink and element count for every frontier judge, pooled over 13 items (Roman numerals, seven-segment digits, fractions with large denominators, small-form digits). Exception: the Sonnet models prefer the full-size digit on subscripts (₈ vs 3).
+   - Grams resolve by line count first (☷ over ⚌, against measured ink), then by yang/fill. Yang also carries a compiled semantic reading.
+   - Weak-decode signs (‱ vs % and ‰) split by model family: Sonnet picks the many-circled sign, the others pick by value. ‱'s decoded quantity (per ten thousand) confounds this item.
+4. **[Empirical Claim (v1.0, judge-dependent)] Some orderings are recoverable from a whole set more readily than from pairs, but which ones depends on the mind.**
+   - risebar reconstructs for every Claude judge.
+   - The pilot's flagship holistic specimen `-=>})|` reconstructs well only for Sonnet 5.5, and Opus reconstructs only a 4-glyph sub-order.
+   - Grok's elaboration ladders are pairwise-⟂-heavy for some judges and pairwise-ordered for others.
+   - "Holistic" is a relation between a sequence and a mind.
+5. **[Empirical Claim (v1.0)] Whole-set honesty is not universal.** Noise sets drew ⟂ on 0.64 of frontier presentations (registered threshold 0.80). Three judges declined consistently; others imposed orders.
+6. **[Empirical Claim (pilot)] Mechanism and sequence-kind taxonomies** (fill / count / size-angle / compiled decode; factorizable / holistic / authored / generator lattices) remain pilot-tier working ontologies, *not* tested as taxonomies by v1.0. Joseph's 2026-08-25 ruling keeps them post-hoc and hypothetical.
+7. **[Exploratory] In qwen3-embedding, one linear "more" direction partly orders denoted number and fill ladders together.** Leave-one-family-out ρ = +0.68 after leakage removal, surviving codepoint controls. Other embedding models do not show it. Analyst-chosen ladders; not the judges' representations.
 
 ## Parameters / regime
 
-Judges: Claude Sonnet (workflow subagents, temp default) and llama3.2:3b via ollama (temp 0/0.7, stateless per item). Pools: BMP + SMP symbol blocks, mixture sampling (structured neighborhoods + pane-local + uniform long tail). Units: counterbalanced pairs → triads with reverse cycles split across judges → whole-set gestalt reconstruction → generative continuation/extension → salted membership validation. Full instrument definitions: `pilot/DESIGN-scale-up.md` (protocol v0.9); v1.0 freeze is the next milestone.
+- **Judges.** Isolated CLI or HTTP judges with tools, instruction files and memory stripped; residue is recorded in `harness/runner/judges-v1.json`.
+  - Anthropic: haiku-4-5, sonnet-5, sonnet-5-5, opus-5-5.
+  - xAI: grok-4.6.
+  - OpenAI: gpt-5.6-terra, partial.
+  - Google: gemini-3.1-pro, gemini-3.8-flash, gemma3-4b.
+  - Meta: llama3.2-3b.
+  - Mistral: mistral-7b.
+  - Microsoft: phi-4-mini, largely unparseable.
+  - Nous: hermes3-3b.
+  - Alibaba: qwen2.5-3b (exploratory). qwen3-4b has no valid data.
+- **Protocol** `gmp-v1.0` (`protocol/PROTOCOL-v1.0.md`, including its append-only post-freeze notes).
+  - Fated randomness throughout; per-item option permutation; glyph-echo answers with word fallbacks; the ⟂ / ≈ / graded response set.
+  - Single-item and 40-item-sheet modes are recorded as a factor.
+- **Pools.** The seed stratum draws on four Anthropic-family surveys only (coverage defect noted in PROTOCOL); the uniform tail is block-uniform.
+- **Instruments.** Triads, format experiment, conflict battery, holistic pairs, gestalt reconstruction.
+- **Exploratory batteries.** Top-40 (`analysis/top40.md`) and the SIGNA consumer probe.
 
 ## Consumers
 
-None yet. Candidate landing sites: 03-llm-core (perception/representation segments); the demand-characteristics result may also inform multi-agent measurement methodology (doc/sop/multi-agent.sop.md practices).
+None yet. Candidate landing sites: 03-llm-core (perception/representation segments). The judge-context finding (claim 1) bears on multi-agent measurement methodology (`doc/sop/multi-agent.sop.md`).
 
 ## Provenance
 
-Pilot session 2026-08-25 (Joseph + Fable), originating brief now at `data/surveys-v1/prompts/instr2-founding-brief.md`; the pilot's working substrate (scripts, task/key JSONs, run outputs) migrated to `harness/pilot-scripts/` + `data/judgments-v0/`; full experimental narrative at `pilot/pilot-record.md` (append-only original). All six de-novo surveys (Grok pilot, Sonnet-5 interactive, Fable, 4× workflow Sonnet) at `data/surveys-v1/` — the original `~/src/arch/{instr2.md,grok-instinctive-sequences.md,msc/*}` locations were deleted after migration (2026-08-25 evening). Shared pane tool now at `harness/tools/unicode-group`.
+- **Pilot (2026-08-25):** session with Joseph + Fable; narrative at `pilot/pilot-record.md`; raw data at `data/judgments-v0/`.
+- **v1.0 (2026-10-03):** built and run by a Claude Opus 5.5 subagent commissioned through the aspectus session.
+  - Ledgers: `data/runs-v1/` (inventory in `data/runs-v1/INVENTORY.md`).
+  - Stimuli: `data/stimuli-v1/`.
+  - Harness: `harness/runner/`.
+  - Re-derivations of pilot numbers: `harness/reanalysis/`.
+  - Debrief to Joseph: `debrief.md`.
+- **Surveys:** `data/surveys-v1/` (seeds, never data).
 
 ## Vivarium
 
@@ -35,4 +72,9 @@ planned (protocol maps cleanly to in-vivia judge panels).
 
 ## Provenance honesty note
 
-Pilot Sonnet runs (Workflow batteries) recorded prompts-in-scripts and run IDs but NOT per-call temperature/model-version pins or RNG-seeded shuffles in a ledger; ollama runs recorded seeds and temp but predate the ledger. Pilot claims are therefore reproducible-in-kind, not bit-reproducible. The harness (harness/) exists to close exactly this gap before any confirmation run; per the charter, nothing above is "confirmed" until a recorded harness run exists in RUNS.md.
+- **Pilot runs** are reproducible in kind, not bit-reproducible (see RUNS.md).
+- **v1.0 runs** record every call verbatim: prompt, provider-reported model, usage and raw answer.
+  - API judges ran at provider-default temperature, so they too are reproducible in kind.
+  - Local judges ran at temperature 0 with a fixed seed.
+- **Reasoning effort** was set low but not equalized. Haiku 4.5 thinks about 400 tokens per item; Sonnet 5 thinks none.
+- **Single campaign.** Each v1.0 claim rests on one campaign; replication with an independent stimulus fate (v1.1) is the next strengthening step.

@@ -1,0 +1,23 @@
+{
+ "run_id": "signa-perp-sheet-glimmer30b-sheet",
+ "protocol": "gmp-v1.0",
+ "instrument": "signa",
+ "format": "perp",
+ "mode": "sheet",
+ "sheet_size": 40,
+ "reps": 1,
+ "stimulus_file": "data/stimuli-v1/consumer-signa-pairs.jsonl",
+ "stimulus_digest": "3f1dd0c7a4c385ffa754089b119c16d75627221335483e36f72b025ac5791b48",
+ "judge_label": "glimmer30b-sheet",
+ "judge": {
+  "adapter": "llamacpp",
+  "model": "muse-glimmer-30B-kquant-dynamic",
+  "system_suffix": "\nReasoning strength: low",
+  "max_tokens": 6000,
+  "note": "Meta Muse Glimmer 30B (GGUF k-quant dynamic, Joseph's T7 copy) via llama.cpp llama-server b10358 with DFlash drafter; 'Reasoning strength: low' appended to the study system prompt per the model's control convention; temperature 0. Added 2026-10-03 at Joseph's suggestion (exploratory, key datapoints only). Sheet-mode variant: max_tokens 6000 so the reasoning plus a 40-item JSON answer fits."
+ },
+ "adapter_version": "a1",
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "context_residue": "local llama-server, study system prompt plus the model's reasoning-strength line; no tools.",
+ "created": "2026-10-03T23:10:20.613582+00:00"
+}

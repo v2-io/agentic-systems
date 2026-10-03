@@ -106,7 +106,7 @@ def main():
                 r = json.loads(line)
             except Exception:
                 continue
-            if r["result"].get("raw") and not r["result"].get("error") and not r.get("sheet_incomplete"):
+            if r["result"].get("raw") and not r["result"].get("error") and r.get("sheet_incomplete") is None:
                 done.add((r["rep"], tuple(r["pids"])))
     todo = [c for c in calls if (c["rep"], tuple(c["pids"])) not in done]
     if a.limit:

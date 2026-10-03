@@ -1,71 +1,5 @@
 [
  {
-  "cand": 2,
-  "glyphs": "⚀⚁⚂⚃⚄⚅",
-  "n_surveyors": 7,
-  "stability": 1.0,
-  "floor": 1.0,
-  "universality": 1.0,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.2
-  }
- },
- {
-  "cand": 12,
-  "glyphs": "⓪①②③④⑤⑥⑦⑧⑨⑩",
-  "n_surveyors": 4,
-  "stability": 1.0,
-  "floor": 1.0,
-  "universality": 1.0,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.5
-  }
- },
- {
-  "cand": 20,
-  "glyphs": "⅛¼⅜½⅝¾⅞",
-  "n_surveyors": 3,
-  "stability": 1.0,
-  "floor": 1.0,
-  "universality": 1.0,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.33
-  }
- },
- {
   "cand": 44,
   "glyphs": "¹²³",
   "n_surveyors": 2,
@@ -84,7 +18,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "mistral7b": 0.0
   }
  },
  {
@@ -106,7 +41,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "mistral7b": 0.5
   }
  },
  {
@@ -116,7 +52,30 @@
   "stability": 1.0,
   "floor": 1.0,
   "universality": 1.0,
-  "gestalt": 0.8611111111111112,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.5,
+   "mistral7b": 0.0
+  }
+ },
+ {
+  "cand": 69,
+  "glyphs": "ⅠⅡⅢ",
+  "n_surveyors": 3,
+  "stability": 1.0,
+  "floor": 1.0,
+  "universality": 1.0,
+  "gestalt": 1.0,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
@@ -132,56 +91,12 @@
   }
  },
  {
-  "cand": 11,
-  "glyphs": "0123456789🔟",
-  "n_surveyors": 3,
+  "cand": 103,
+  "glyphs": "·•●⬤",
+  "n_surveyors": 2,
   "stability": 1.0,
   "floor": 1.0,
   "universality": 1.0,
-  "gestalt": 0.8525651699871147,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.2
-  }
- },
- {
-  "cand": 6,
-  "glyphs": "ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ",
-  "n_surveyors": 5,
-  "stability": 0.9848484848484849,
-  "floor": 0.9090909090909091,
-  "universality": 1.0,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 0.91,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.45
-  }
- },
- {
-  "cand": 7,
-  "glyphs": "⓵⓶⓷⓸⓹⓺⓻⓼⓽⓾",
-  "n_surveyors": 5,
-  "stability": 0.9814814814814815,
-  "floor": 0.8888888888888888,
-  "universality": 1.0,
   "gestalt": 1.0,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
@@ -189,7 +104,7 @@
    "gemini31pro": 1.0,
    "gemini38flash": 1.0,
    "grok46": 1.0,
-   "haiku45": 0.89,
+   "haiku45": 1.0,
    "opus55": 1.0,
    "sonnet55": 1.0
   },
@@ -198,11 +113,11 @@
   }
  },
  {
-  "cand": 14,
-  "glyphs": "❶❷❸❹❺❻❼❽❾❿",
-  "n_surveyors": 3,
-  "stability": 0.9814814814814815,
-  "floor": 0.8888888888888888,
+  "cand": 107,
+  "glyphs": "⭒⭑⭐",
+  "n_surveyors": 2,
+  "stability": 1.0,
+  "floor": 1.0,
   "universality": 1.0,
   "gestalt": 1.0,
   "n_judges": 6,
@@ -210,57 +125,13 @@
   "per_judge": {
    "gemini31pro": 1.0,
    "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 0.89,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.44
-  }
- },
- {
-  "cand": 16,
-  "glyphs": "٠١٢٣٤٥٦٧٨٩",
-  "n_surveyors": 2,
-  "stability": 0.9814814814814815,
-  "floor": 0.8888888888888888,
-  "universality": 1.0,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 0.89,
    "grok46": 1.0,
    "haiku45": 1.0,
    "opus55": 1.0,
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.33
-  }
- },
- {
-  "cand": 17,
-  "glyphs": "⁰¹²³⁴⁵⁶⁷⁸⁹",
-  "n_surveyors": 3,
-  "stability": 0.9814814814814815,
-  "floor": 0.8888888888888888,
-  "universality": 1.0,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 0.89,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.22
+   "llama32-3b": 0.5
   }
  },
  {
@@ -282,73 +153,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.44
-  }
- },
- {
-  "cand": 0,
-  "glyphs": "▏▎▍▌▋▊▉█",
-  "n_surveyors": 7,
-  "stability": 0.9761904761904763,
-  "floor": 0.8571428571428571,
-  "universality": 1.0,
-  "gestalt": 0.9503968253968255,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 0.86,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.57
-  }
- },
- {
-  "cand": 19,
-  "glyphs": "⠀⠁⠃⠇⠏⠟⠿⣿",
-  "n_surveyors": 5,
-  "stability": 0.9761904761904762,
-  "floor": 0.8571428571428571,
-  "universality": 1.0,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 1.0,
-   "opus55": 0.86,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.29
-  }
- },
- {
-  "cand": 15,
-  "glyphs": "➀➁➂➃➄➅➆➇➈➉",
-  "n_surveyors": 3,
-  "stability": 0.9629629629629629,
-  "floor": 0.7777777777777778,
-  "universality": 0.8333333333333334,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 0.78,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.22
+   "llama32-3b": 0.44,
+   "mistral7b": 0.0
   }
  },
  {
@@ -370,29 +176,8 @@
    "sonnet55": 0.91
   },
   "small_models": {
-   "llama32-3b": 0.36
-  }
- },
- {
-  "cand": 1,
-  "glyphs": "▁▂▃▄▅▆▇█",
-  "n_surveyors": 7,
-  "stability": 0.9523809523809524,
-  "floor": 0.8571428571428571,
-  "universality": 1.0,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 0.86,
-   "gemini38flash": 0.86,
-   "grok46": 1.0,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.43
+   "llama32-3b": 0.36,
+   "mistral7b": 0.09
   }
  },
  {
@@ -414,7 +199,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.4
+   "llama32-3b": 0.4,
+   "mistral7b": 0.0
   }
  },
  {
@@ -436,7 +222,31 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.33
+   "llama32-3b": 0.33,
+   "mistral7b": 0.33
+  }
+ },
+ {
+  "cand": 37,
+  "glyphs": "௧௰௱௲",
+  "n_surveyors": 3,
+  "stability": 0.9444444444444443,
+  "floor": 0.6666666666666666,
+  "universality": 0.8333333333333334,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 0.67,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.0,
+   "mistral7b": 0.33
   }
  },
  {
@@ -458,29 +268,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.44
-  }
- },
- {
-  "cand": 103,
-  "glyphs": "·•●⬤",
-  "n_surveyors": 2,
-  "stability": 0.9444444444444443,
-  "floor": 0.6666666666666666,
-  "universality": 0.8333333333333334,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 0.67,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.67
+   "llama32-3b": 0.44,
+   "mistral7b": 0.11
   }
  },
  {
@@ -502,29 +291,30 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "mistral7b": 0.0
   }
  },
  {
-  "cand": 37,
-  "glyphs": "௧௰௱௲",
-  "n_surveyors": 3,
-  "stability": 0.9444444444444443,
+  "cand": 75,
+  "glyphs": "０１２３４５６７８９",
+  "n_surveyors": 2,
+  "stability": 0.9259259259259259,
   "floor": 0.6666666666666666,
   "universality": 0.8333333333333334,
-  "gestalt": 0.9166666666666666,
+  "gestalt": 1.0,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
    "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
+   "gemini38flash": 0.67,
    "grok46": 1.0,
-   "haiku45": 0.67,
+   "haiku45": 0.89,
    "opus55": 1.0,
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.22
   }
  },
  {
@@ -546,7 +336,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.5
+   "llama32-3b": 0.5,
+   "mistral7b": 0.0
   }
  },
  {
@@ -568,51 +359,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.5
-  }
- },
- {
-  "cand": 69,
-  "glyphs": "ⅠⅡⅢ",
-  "n_surveyors": 3,
-  "stability": 0.9166666666666666,
-  "floor": 0.5,
-  "universality": 0.8333333333333334,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 0.5,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.5
-  }
- },
- {
-  "cand": 107,
-  "glyphs": "⭒⭑⭐",
-  "n_surveyors": 2,
-  "stability": 0.9166666666666666,
-  "floor": 0.5,
-  "universality": 0.8333333333333334,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 0.5,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.5
+   "llama32-3b": 0.5,
+   "mistral7b": 0.5
   }
  },
  {
@@ -656,29 +404,56 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.25
+   "llama32-3b": 0.25,
+   "mistral7b": 0.25
   }
  },
  {
-  "cand": 5,
-  "glyphs": "▫░▒▓█",
-  "n_surveyors": 7,
-  "stability": 0.9166666666666666,
-  "floor": 0.75,
-  "universality": 0.6666666666666666,
-  "gestalt": 0.9479166666666666,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
+  "cand": 11,
+  "glyphs": "0123456789🔟",
+  "n_surveyors": 3,
+  "stability": 0.9142857142857144,
+  "floor": 0.4,
+  "universality": 0.8571428571428571,
+  "gestalt": 1.0,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
   "per_judge": {
-   "gemini31pro": 0.75,
-   "gemini38flash": 0.75,
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
    "grok46": 1.0,
    "haiku45": 1.0,
    "opus55": 1.0,
+   "qwen25-3b": 0.4,
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.5
+   "llama32-3b": 0.2,
+   "mistral7b": 0.1
+  }
+ },
+ {
+  "cand": 12,
+  "glyphs": "⓪①②③④⑤⑥⑦⑧⑨⑩",
+  "n_surveyors": 4,
+  "stability": 0.9142857142857144,
+  "floor": 0.4,
+  "universality": 0.8571428571428571,
+  "gestalt": 1.0,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "qwen25-3b": 0.4,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.5,
+   "mistral7b": 0.0
   }
  },
  {
@@ -700,7 +475,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.22
+   "llama32-3b": 0.22,
+   "mistral7b": 0.22
   }
  },
  {
@@ -722,7 +498,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.33
+   "llama32-3b": 0.33,
+   "mistral7b": 0.33
   }
  },
  {
@@ -744,7 +521,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "mistral7b": 0.0
   }
  },
  {
@@ -788,59 +566,16 @@
    "sonnet55": 0.67
   },
   "small_models": {
-   "llama32-3b": 0.67
+   "llama32-3b": 0.67,
+   "mistral7b": 0.33
   }
  },
  {
-  "cand": 10,
-  "glyphs": "→⇒⇉⇛⇶",
-  "n_surveyors": 6,
-  "stability": 0.875,
-  "floor": 0.75,
-  "universality": 0.5,
-  "gestalt": 0.9500000000000001,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 0.75,
-   "gemini38flash": 1.0,
-   "grok46": 0.75,
-   "haiku45": 0.75,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.5
-  }
- },
- {
-  "cand": 4,
-  "glyphs": "○◔◑◕●",
-  "n_surveyors": 7,
-  "stability": 0.875,
-  "floor": 0.5,
-  "universality": 0.6666666666666666,
-  "gestalt": 0.9333333333333332,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 0.5,
-   "opus55": 1.0,
-   "sonnet55": 0.75
-  },
-  "small_models": {
-   "llama32-3b": 0.5
-  }
- },
- {
-  "cand": 75,
-  "glyphs": "０１２３４５６７８９",
+  "cand": 74,
+  "glyphs": "₀₁₂₃₄₅₆₇₈₉",
   "n_surveyors": 2,
-  "stability": 0.8518518518518517,
-  "floor": 0.5555555555555556,
+  "stability": 0.8888888888888888,
+  "floor": 0.6666666666666666,
   "universality": 0.6666666666666666,
   "gestalt": 1.0,
   "n_judges": 6,
@@ -848,13 +583,269 @@
   "per_judge": {
    "gemini31pro": 1.0,
    "gemini38flash": 0.67,
-   "grok46": 0.56,
+   "grok46": 0.78,
    "haiku45": 0.89,
    "opus55": 1.0,
    "sonnet55": 1.0
   },
   "small_models": {
+   "llama32-3b": 0.0
+  }
+ },
+ {
+  "cand": 40,
+  "glyphs": "⁚⁖⁘⁙",
+  "n_surveyors": 3,
+  "stability": 0.8888888888888888,
+  "floor": 0.6666666666666666,
+  "universality": 0.6666666666666666,
+  "gestalt": 0.9722222222222222,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 0.67,
+   "grok46": 1.0,
+   "haiku45": 0.67,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.33,
+   "mistral7b": 0.0
+  }
+ },
+ {
+  "cand": 20,
+  "glyphs": "⅛¼⅜½⅝¾⅞",
+  "n_surveyors": 3,
+  "stability": 0.8857142857142858,
+  "floor": 0.2,
+  "universality": 0.8571428571428571,
+  "gestalt": 1.0,
+  "n_judges": 7,
+  "direction_split": "6↑/1↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "qwen25-3b": 0.2,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.33,
+   "mistral7b": 0.33
+  }
+ },
+ {
+  "cand": 87,
+  "glyphs": "⅒⅑⅐⅙⅕¼⅓½",
+  "n_surveyors": 2,
+  "stability": 0.880952380952381,
+  "floor": 0.42857142857142855,
+  "universality": 0.8333333333333334,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 0.43,
+   "grok46": 1.0,
+   "haiku45": 0.86,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.43
+  }
+ },
+ {
+  "cand": 81,
+  "glyphs": "⅛⅕⅓⅜⅗⅔⅘⅚⅞",
+  "n_surveyors": 2,
+  "stability": 0.875,
+  "floor": 0.625,
+  "universality": 0.6666666666666666,
+  "gestalt": 0.9953703703703703,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 0.62,
+   "grok46": 0.75,
+   "haiku45": 0.88,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.25
+  }
+ },
+ {
+  "cand": 17,
+  "glyphs": "⁰¹²³⁴⁵⁶⁷⁸⁹",
+  "n_surveyors": 3,
+  "stability": 0.8730158730158731,
+  "floor": 0.2222222222222222,
+  "universality": 0.8571428571428571,
+  "gestalt": 1.0,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 0.89,
+   "opus55": 1.0,
+   "qwen25-3b": 0.22,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.22,
+   "mistral7b": 0.0
+  }
+ },
+ {
+  "cand": 77,
+  "glyphs": "一二三四五六七八九十",
+  "n_surveyors": 2,
+  "stability": 0.8703703703703706,
+  "floor": 0.5555555555555556,
+  "universality": 0.6666666666666666,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 0.56,
+   "grok46": 0.78,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "sonnet55": 0.89
+  },
+  "small_models": {
    "llama32-3b": 0.22
+  }
+ },
+ {
+  "cand": 6,
+  "glyphs": "ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ",
+  "n_surveyors": 5,
+  "stability": 0.8701298701298701,
+  "floor": 0.18181818181818182,
+  "universality": 0.8571428571428571,
+  "gestalt": 1.0,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 0.91,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "qwen25-3b": 0.18,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.45,
+   "mistral7b": 0.09
+  }
+ },
+ {
+  "cand": 0,
+  "glyphs": "▏▎▍▌▋▊▉█",
+  "n_surveyors": 7,
+  "stability": 0.8571428571428573,
+  "floor": 0.14285714285714285,
+  "universality": 0.8571428571428571,
+  "gestalt": 0.9920634920634921,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 0.86,
+   "opus55": 1.0,
+   "qwen25-3b": 0.14,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.57,
+   "mistral7b": 0.29
+  }
+ },
+ {
+  "cand": 2,
+  "glyphs": "⚀⚁⚂⚃⚄⚅",
+  "n_surveyors": 7,
+  "stability": 0.8571428571428571,
+  "floor": 0.0,
+  "universality": 0.8571428571428571,
+  "gestalt": 1.0,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "qwen25-3b": 0.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.2,
+   "mistral7b": 0.0
+  }
+ },
+ {
+  "cand": 14,
+  "glyphs": "❶❷❸❹❺❻❼❽❾❿",
+  "n_surveyors": 3,
+  "stability": 0.8571428571428571,
+  "floor": 0.1111111111111111,
+  "universality": 0.8571428571428571,
+  "gestalt": 1.0,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 0.89,
+   "opus55": 1.0,
+   "qwen25-3b": 0.11,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.44,
+   "mistral7b": 0.22
+  }
+ },
+ {
+  "cand": 59,
+  "glyphs": "០១២៣៤៥៦៧៨៩",
+  "n_surveyors": 1,
+  "stability": 0.8518518518518517,
+  "floor": 0.1111111111111111,
+  "universality": 0.8333333333333334,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 0.11,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.44,
+   "mistral7b": 0.0
   }
  },
  {
@@ -864,7 +855,7 @@
   "stability": 0.8518518518518517,
   "floor": 0.5555555555555556,
   "universality": 0.6666666666666666,
-  "gestalt": 0.9166666666666666,
+  "gestalt": 1.0,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
@@ -876,73 +867,148 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.33
+   "llama32-3b": 0.33,
+   "mistral7b": 0.33
   }
  },
  {
-  "cand": 59,
-  "glyphs": "០១២៣៤៥៦៧៨៩",
-  "n_surveyors": 1,
+  "cand": 7,
+  "glyphs": "⓵⓶⓷⓸⓹⓺⓻⓼⓽⓾",
+  "n_surveyors": 5,
+  "stability": 0.8412698412698413,
+  "floor": 0.0,
+  "universality": 0.8571428571428571,
+  "gestalt": 1.0,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 0.89,
+   "opus55": 1.0,
+   "qwen25-3b": 0.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.67,
+   "mistral7b": 0.11
+  }
+ },
+ {
+  "cand": 16,
+  "glyphs": "٠١٢٣٤٥٦٧٨٩",
+  "n_surveyors": 2,
+  "stability": 0.8412698412698413,
+  "floor": 0.0,
+  "universality": 0.8571428571428571,
+  "gestalt": 1.0,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 0.89,
+   "grok46": 1.0,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "qwen25-3b": 0.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.33,
+   "mistral7b": 0.0
+  }
+ },
+ {
+  "cand": 1,
+  "glyphs": "▁▂▃▄▅▆▇█",
+  "n_surveyors": 7,
+  "stability": 0.8367346938775511,
+  "floor": 0.14285714285714285,
+  "universality": 0.8571428571428571,
+  "gestalt": 1.0,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.86,
+   "gemini38flash": 0.86,
+   "grok46": 1.0,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "qwen25-3b": 0.14,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.43,
+   "mistral7b": 0.29
+  }
+ },
+ {
+  "cand": 19,
+  "glyphs": "⠀⠁⠃⠇⠏⠟⠿⣿",
+  "n_surveyors": 5,
+  "stability": 0.836734693877551,
+  "floor": 0.0,
+  "universality": 0.8571428571428571,
+  "gestalt": 1.0,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 1.0,
+   "opus55": 0.86,
+   "qwen25-3b": 0.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.29,
+   "mistral7b": 0.29
+  }
+ },
+ {
+  "cand": 108,
+  "glyphs": "∣∥⦀",
+  "n_surveyors": 2,
   "stability": 0.8333333333333334,
-  "floor": 0.1111111111111111,
-  "universality": 0.8333333333333334,
+  "floor": 0.5,
+  "universality": 0.6666666666666666,
   "gestalt": 1.0,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
    "gemini31pro": 1.0,
    "gemini38flash": 1.0,
-   "grok46": 0.11,
-   "haiku45": 1.0,
-   "opus55": 0.89,
+   "grok46": 0.5,
+   "haiku45": 0.5,
+   "opus55": 1.0,
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.44
+   "llama32-3b": 1.0
   }
  },
  {
-  "cand": 74,
-  "glyphs": "₀₁₂₃₄₅₆₇₈₉",
+  "cand": 114,
+  "glyphs": "〡〢〣",
   "n_surveyors": 2,
   "stability": 0.8333333333333334,
-  "floor": 0.4444444444444444,
+  "floor": 0.5,
   "universality": 0.6666666666666666,
   "gestalt": 1.0,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
    "gemini31pro": 1.0,
-   "gemini38flash": 0.67,
-   "grok46": 0.44,
-   "haiku45": 0.89,
+   "gemini38flash": 0.5,
+   "grok46": 1.0,
+   "haiku45": 0.5,
    "opus55": 1.0,
    "sonnet55": 1.0
   },
   "small_models": {
    "llama32-3b": 0.0
-  }
- },
- {
-  "cand": 77,
-  "glyphs": "一二三四五六七八九十",
-  "n_surveyors": 2,
-  "stability": 0.8333333333333334,
-  "floor": 0.5555555555555556,
-  "universality": 0.6666666666666666,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 0.56,
-   "grok46": 0.56,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "sonnet55": 0.89
-  },
-  "small_models": {
-   "llama32-3b": 0.22
   }
  },
  {
@@ -964,39 +1030,86 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "mistral7b": 0.0
   }
  },
  {
-  "cand": 40,
-  "glyphs": "⁚⁖⁘⁙",
+  "cand": 68,
+  "glyphs": "∮∯∰",
   "n_surveyors": 3,
   "stability": 0.8333333333333334,
-  "floor": 0.6666666666666666,
-  "universality": 0.5,
-  "gestalt": 0.9722222222222222,
+  "floor": 0.0,
+  "universality": 0.8333333333333334,
+  "gestalt": 0.9444444444444443,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
    "gemini31pro": 1.0,
-   "gemini38flash": 0.67,
+   "gemini38flash": 1.0,
    "grok46": 1.0,
-   "haiku45": 0.67,
+   "haiku45": 0.0,
    "opus55": 1.0,
-   "sonnet55": 0.67
+   "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.33
+   "llama32-3b": 0.0
+  }
+ },
+ {
+  "cand": 110,
+  "glyphs": "❘❙❚",
+  "n_surveyors": 2,
+  "stability": 0.8333333333333334,
+  "floor": 0.0,
+  "universality": 0.8333333333333334,
+  "gestalt": 0.9333333333333332,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 0.0,
+   "grok46": 1.0,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 1.0
+  }
+ },
+ {
+  "cand": 15,
+  "glyphs": "➀➁➂➃➄➅➆➇➈➉",
+  "n_surveyors": 3,
+  "stability": 0.8253968253968254,
+  "floor": 0.0,
+  "universality": 0.7142857142857143,
+  "gestalt": 1.0,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 0.78,
+   "opus55": 1.0,
+   "qwen25-3b": 0.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.22,
+   "mistral7b": 0.0
   }
  },
  {
   "cand": 53,
   "glyphs": "🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚",
   "n_surveyors": 2,
-  "stability": 0.8333333333333334,
+  "stability": 0.8166666666666668,
   "floor": 0.1,
   "universality": 0.8333333333333334,
-  "gestalt": 0.9583333333333334,
+  "gestalt": 1.0,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
@@ -1005,54 +1118,11 @@
    "grok46": 0.9,
    "haiku45": 0.1,
    "opus55": 1.0,
-   "sonnet55": 1.0
+   "sonnet55": 0.9
   },
   "small_models": {
-   "llama32-3b": 0.1
-  }
- },
- {
-  "cand": 81,
-  "glyphs": "⅛⅕⅓⅜⅗⅔⅘⅚⅞",
-  "n_surveyors": 2,
-  "stability": 0.8214285714285715,
-  "floor": 0.42857142857142855,
-  "universality": 0.6666666666666666,
-  "gestalt": 0.9477154724818277,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 0.62,
-   "grok46": 0.43,
-   "haiku45": 0.88,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.25
-  }
- },
- {
-  "cand": 87,
-  "glyphs": "⅒⅑⅐⅙⅕¼⅓½",
-  "n_surveyors": 2,
-  "stability": 0.8095238095238096,
-  "floor": 0.42857142857142855,
-  "universality": 0.6666666666666666,
-  "gestalt": 0.95,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 0.43,
-   "grok46": 0.57,
-   "haiku45": 0.86,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.43
+   "llama32-3b": 0.1,
+   "mistral7b": 0.1
   }
  },
  {
@@ -1074,29 +1144,8 @@
    "sonnet55": 0.8
   },
   "small_models": {
-   "llama32-3b": 0.0
-  }
- },
- {
-  "cand": 18,
-  "glyphs": "🀙🀚🀛🀜🀝🀞🀟🀠🀡",
-  "n_surveyors": 3,
-  "stability": 0.7916666666666666,
-  "floor": 0.0,
-  "universality": 0.8333333333333334,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 0.88,
-   "haiku45": 0.0,
-   "opus55": 0.88,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "mistral7b": 0.0
   }
  },
  {
@@ -1118,7 +1167,101 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "mistral7b": 0.0
+  }
+ },
+ {
+  "cand": 82,
+  "glyphs": "ⅩⅬⅭⅮⅯↁↂↇↈ",
+  "n_surveyors": 2,
+  "stability": 0.7916666666666666,
+  "floor": 0.375,
+  "universality": 0.5,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 0.38,
+   "grok46": 0.88,
+   "haiku45": 0.75,
+   "opus55": 1.0,
+   "sonnet55": 0.75
+  },
+  "small_models": {
+   "llama32-3b": 0.38
+  }
+ },
+ {
+  "cand": 50,
+  "glyphs": "〡〢〣〤〥〦〧〨〩〸〹〺",
+  "n_surveyors": 2,
+  "stability": 0.787878787878788,
+  "floor": 0.2727272727272727,
+  "universality": 0.8333333333333334,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.82,
+   "gemini38flash": 0.91,
+   "grok46": 0.82,
+   "haiku45": 0.27,
+   "opus55": 1.0,
+   "sonnet55": 0.91
+  },
+  "small_models": {
+   "llama32-3b": 0.0,
+   "mistral7b": 0.27
+  }
+ },
+ {
+  "cand": 5,
+  "glyphs": "▫░▒▓█",
+  "n_surveyors": 7,
+  "stability": 0.7857142857142857,
+  "floor": 0.0,
+  "universality": 0.5714285714285714,
+  "gestalt": 1.0,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.75,
+   "gemini38flash": 0.75,
+   "grok46": 1.0,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "qwen25-3b": 0.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.5,
+   "mistral7b": 0.25
+  }
+ },
+ {
+  "cand": 4,
+  "glyphs": "○◔◑◕●",
+  "n_surveyors": 7,
+  "stability": 0.7857142857142857,
+  "floor": 0.25,
+  "universality": 0.5714285714285714,
+  "gestalt": 0.9333333333333332,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 0.5,
+   "opus55": 1.0,
+   "qwen25-3b": 0.25,
+   "sonnet55": 0.75
+  },
+  "small_models": {
+   "llama32-3b": 0.5,
+   "mistral7b": 0.25
   }
  },
  {
@@ -1140,29 +1283,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.17
-  }
- },
- {
-  "cand": 50,
-  "glyphs": "〡〢〣〤〥〦〧〨〩〸〹〺",
-  "n_surveyors": 2,
-  "stability": 0.7727272727272728,
-  "floor": 0.2727272727272727,
-  "universality": 0.8333333333333334,
-  "gestalt": 0.9166666666666666,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 0.82,
-   "gemini38flash": 0.91,
-   "grok46": 0.82,
-   "haiku45": 0.27,
-   "opus55": 0.91,
-   "sonnet55": 0.91
-  },
-  "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.17,
+   "mistral7b": 0.0
   }
  },
  {
@@ -1184,7 +1306,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "mistral7b": 0.11
   }
  },
  {
@@ -1206,29 +1329,8 @@
    "sonnet55": 0.5
   },
   "small_models": {
-   "llama32-3b": 0.5
-  }
- },
- {
-  "cand": 108,
-  "glyphs": "∣∥⦀",
-  "n_surveyors": 2,
-  "stability": 0.75,
-  "floor": 0.0,
-  "universality": 0.6666666666666666,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 0.0,
-   "haiku45": 0.5,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 1.0
+   "llama32-3b": 0.5,
+   "mistral7b": 1.0
   }
  },
  {
@@ -1238,7 +1340,7 @@
   "stability": 0.75,
   "floor": 0.0,
   "universality": 0.6666666666666666,
-  "gestalt": 0.9166666666666666,
+  "gestalt": 1.0,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
@@ -1254,25 +1356,49 @@
   }
  },
  {
-  "cand": 114,
-  "glyphs": "〡〢〣",
+  "cand": 98,
+  "glyphs": "🏻🏼🏽🏾🏿",
   "n_surveyors": 2,
   "stability": 0.75,
-  "floor": 0.5,
-  "universality": 0.5,
-  "gestalt": 0.9166666666666666,
+  "floor": 0.25,
+  "universality": 0.3333333333333333,
+  "gestalt": 1.0,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 0.5,
-   "grok46": 0.5,
-   "haiku45": 0.5,
+   "gemini31pro": 0.25,
+   "gemini38flash": 0.75,
+   "grok46": 0.75,
+   "haiku45": 0.75,
    "opus55": 1.0,
    "sonnet55": 1.0
   },
   "small_models": {
    "llama32-3b": 0.0
+  }
+ },
+ {
+  "cand": 10,
+  "glyphs": "→⇒⇉⇛⇶",
+  "n_surveyors": 6,
+  "stability": 0.75,
+  "floor": 0.0,
+  "universality": 0.42857142857142855,
+  "gestalt": 0.9500000000000001,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.75,
+   "gemini38flash": 1.0,
+   "grok46": 0.75,
+   "haiku45": 0.75,
+   "opus55": 1.0,
+   "qwen25-3b": 0.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.5,
+   "mistral7b": 0.25
   }
  },
  {
@@ -1294,29 +1420,8 @@
    "sonnet55": 0.75
   },
   "small_models": {
-   "llama32-3b": 0.5
-  }
- },
- {
-  "cand": 13,
-  "glyphs": "🄀🄁🄂🄃🄄🄅🄆🄇🄈🄉",
-  "n_surveyors": 3,
-  "stability": 0.7407407407407408,
-  "floor": 0.3333333333333333,
-  "universality": 0.5,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 0.78,
-   "gemini38flash": 1.0,
-   "grok46": 0.89,
-   "haiku45": 0.33,
-   "opus55": 0.89,
-   "sonnet55": 0.56
-  },
-  "small_models": {
-   "llama32-3b": 0.11
+   "llama32-3b": 0.5,
+   "mistral7b": 0.0
   }
  },
  {
@@ -1338,29 +1443,30 @@
    "sonnet55": 0.8
   },
   "small_models": {
-   "llama32-3b": 0.2
+   "llama32-3b": 0.2,
+   "mistral7b": 0.0
   }
  },
  {
-  "cand": 82,
-  "glyphs": "ⅩⅬⅭⅮⅯↁↂↇↈ",
+  "cand": 72,
+  "glyphs": "🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪",
   "n_surveyors": 2,
-  "stability": 0.7291666666666666,
-  "floor": 0.375,
-  "universality": 0.3333333333333333,
-  "gestalt": 0.9,
+  "stability": 0.7222222222222222,
+  "floor": 0.4444444444444444,
+  "universality": 0.5,
+  "gestalt": 1.0,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 0.38,
-   "grok46": 0.5,
-   "haiku45": 0.75,
-   "opus55": 1.0,
-   "sonnet55": 0.75
+   "gemini31pro": 0.89,
+   "gemini38flash": 0.44,
+   "grok46": 0.67,
+   "haiku45": 0.56,
+   "opus55": 0.89,
+   "sonnet55": 0.89
   },
   "small_models": {
-   "llama32-3b": 0.38
+   "llama32-3b": 0.0
   }
  },
  {
@@ -1370,7 +1476,7 @@
   "stability": 0.7222222222222222,
   "floor": 0.3333333333333333,
   "universality": 0.3333333333333333,
-  "gestalt": 0.9305555555555555,
+  "gestalt": 0.9722222222222222,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
@@ -1386,21 +1492,21 @@
   }
  },
  {
-  "cand": 98,
-  "glyphs": "🏻🏼🏽🏾🏿",
+  "cand": 97,
+  "glyphs": "㎐㎑㎒㎓㎔",
   "n_surveyors": 2,
   "stability": 0.7083333333333334,
   "floor": 0.25,
   "universality": 0.3333333333333333,
-  "gestalt": 1.0,
+  "gestalt": 0.9444444444444443,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
-   "gemini31pro": 0.25,
-   "gemini38flash": 0.75,
-   "grok46": 0.5,
-   "haiku45": 0.75,
-   "opus55": 1.0,
+   "gemini31pro": 1.0,
+   "gemini38flash": 0.25,
+   "grok46": 0.75,
+   "haiku45": 0.5,
+   "opus55": 0.75,
    "sonnet55": 1.0
   },
   "small_models": {
@@ -1426,29 +1532,8 @@
    "sonnet55": 0.75
   },
   "small_models": {
-   "llama32-3b": 0.5
-  }
- },
- {
-  "cand": 97,
-  "glyphs": "㎐㎑㎒㎓㎔",
-  "n_surveyors": 2,
-  "stability": 0.7083333333333334,
-  "floor": 0.25,
-  "universality": 0.3333333333333333,
-  "gestalt": 0.8833333333333332,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 0.25,
-   "grok46": 0.75,
-   "haiku45": 0.5,
-   "opus55": 0.75,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.5,
+   "mistral7b": 0.25
   }
  },
  {
@@ -1470,51 +1555,32 @@
    "sonnet55": 0.8
   },
   "small_models": {
-   "llama32-3b": 0.4
+   "llama32-3b": 0.4,
+   "mistral7b": 0.2
   }
  },
  {
-  "cand": 94,
-  "glyphs": "𝍲𝍳𝍴𝍵𝍶",
-  "n_surveyors": 2,
-  "stability": 0.6944444444444443,
+  "cand": 18,
+  "glyphs": "🀙🀚🀛🀜🀝🀞🀟🀠🀡",
+  "n_surveyors": 3,
+  "stability": 0.6964285714285714,
   "floor": 0.0,
-  "universality": 0.3333333333333333,
-  "gestalt": 0.9400000000000001,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
+  "universality": 0.7142857142857143,
+  "gestalt": 1.0,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
   "per_judge": {
-   "gemini31pro": 0.75,
-   "gemini38flash": 0.75,
-   "grok46": 0.67,
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 0.88,
    "haiku45": 0.0,
    "opus55": 1.0,
+   "qwen25-3b": 0.0,
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.25
-  }
- },
- {
-  "cand": 72,
-  "glyphs": "🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪",
-  "n_surveyors": 2,
-  "stability": 0.6851851851851851,
-  "floor": 0.4444444444444444,
-  "universality": 0.5,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 0.89,
-   "gemini38flash": 0.44,
-   "grok46": 0.44,
-   "haiku45": 0.56,
-   "opus55": 0.89,
-   "sonnet55": 0.89
-  },
-  "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "mistral7b": 0.12
   }
  },
  {
@@ -1524,7 +1590,7 @@
   "stability": 0.6851851851851851,
   "floor": 0.0,
   "universality": 0.6666666666666666,
-  "gestalt": 0.9765625,
+  "gestalt": 1.0,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
@@ -1536,23 +1602,24 @@
    "sonnet55": 0.89
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "mistral7b": 0.11
   }
  },
  {
   "cand": 71,
   "glyphs": "㊀㊁㊂㊃㊄㊅㊆㊇㊈㊉",
   "n_surveyors": 2,
-  "stability": 0.6782407407407408,
+  "stability": 0.6851851851851851,
   "floor": 0.0,
   "universality": 0.5,
-  "gestalt": 0.95,
+  "gestalt": 1.0,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
    "gemini31pro": 1.0,
    "gemini38flash": 0.44,
-   "grok46": 0.62,
+   "grok46": 0.67,
    "haiku45": 0.0,
    "opus55": 1.0,
    "sonnet55": 1.0
@@ -1580,7 +1647,30 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "mistral7b": 0.33
+  }
+ },
+ {
+  "cand": 116,
+  "glyphs": "൰൱൲",
+  "n_surveyors": 2,
+  "stability": 0.6666666666666666,
+  "floor": 0.0,
+  "universality": 0.6666666666666666,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 0.0,
+   "haiku45": 0.0,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.5
   }
  },
  {
@@ -1624,23 +1714,158 @@
    "sonnet55": 0.67
   },
   "small_models": {
-   "llama32-3b": 0.33
+   "llama32-3b": 0.33,
+   "mistral7b": 0.33
   }
  },
  {
-  "cand": 68,
-  "glyphs": "∮∯∰",
-  "n_surveyors": 3,
+  "cand": 94,
+  "glyphs": "𝍲𝍳𝍴𝍵𝍶",
+  "n_surveyors": 2,
   "stability": 0.6666666666666666,
   "floor": 0.0,
-  "universality": 0.6666666666666666,
-  "gestalt": 0.9444444444444443,
+  "universality": 0.3333333333333333,
+  "gestalt": 0.9500000000000001,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.75,
+   "gemini38flash": 0.75,
+   "grok46": 0.5,
+   "haiku45": 0.0,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.25
+  }
+ },
+ {
+  "cand": 112,
+  "glyphs": "=⩵⩶",
+  "n_surveyors": 2,
+  "stability": 0.6666666666666666,
+  "floor": 0.0,
+  "universality": 0.5,
+  "gestalt": 0.95,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
    "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 0.0,
+   "gemini38flash": 0.5,
+   "grok46": 0.5,
+   "haiku45": 0.0,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.5
+  }
+ },
+ {
+  "cand": 73,
+  "glyphs": "🯰🯱🯲🯳🯴🯵🯶🯷🯸🯹",
+  "n_surveyors": 2,
+  "stability": 0.6481481481481481,
+  "floor": 0.0,
+  "universality": 0.6666666666666666,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 0.0,
+   "grok46": 0.89,
+   "haiku45": 0.11,
+   "opus55": 0.89,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.0
+  }
+ },
+ {
+  "cand": 79,
+  "glyphs": "𐄇𐄈𐄉𐄊𐄋𐄌𐄍𐄎𐄏",
+  "n_surveyors": 2,
+  "stability": 0.6458333333333334,
+  "floor": 0.0,
+  "universality": 0.3333333333333333,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.75,
+   "gemini38flash": 0.75,
+   "grok46": 0.5,
+   "haiku45": 0.0,
+   "opus55": 1.0,
+   "sonnet55": 0.88
+  },
+  "small_models": {
+   "llama32-3b": 0.38
+  }
+ },
+ {
+  "cand": 80,
+  "glyphs": "𐄐𐄑𐄒𐄓𐄔𐄕𐄖𐄗𐄘",
+  "n_surveyors": 2,
+  "stability": 0.6458333333333334,
+  "floor": 0.125,
+  "universality": 0.3333333333333333,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.25,
+   "gemini38flash": 0.75,
+   "grok46": 0.75,
+   "haiku45": 0.12,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.25
+  }
+ },
+ {
+  "cand": 9,
+  "glyphs": "<≪⋘⪢⫸",
+  "n_surveyors": 6,
+  "stability": 0.6428571428571429,
+  "floor": 0.25,
+  "universality": 0.0,
+  "gestalt": 0.48333333333333334,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.75,
+   "gemini38flash": 0.75,
+   "grok46": 0.75,
+   "haiku45": 0.25,
+   "opus55": 0.75,
+   "qwen25-3b": 0.5,
+   "sonnet55": 0.75
+  },
+  "small_models": {
+   "llama32-3b": 0.5,
+   "mistral7b": 0.25
+  }
+ },
+ {
+  "cand": 88,
+  "glyphs": "🀱🀹🁁🁉🁑🁙🁡",
+  "n_surveyors": 2,
+  "stability": 0.638888888888889,
+  "floor": 0.0,
+  "universality": 0.5,
+  "gestalt": 0.8285714285714285,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.67,
+   "gemini38flash": 0.33,
+   "grok46": 0.83,
    "haiku45": 0.0,
    "opus55": 1.0,
    "sonnet55": 1.0
@@ -1650,113 +1875,27 @@
   }
  },
  {
-  "cand": 116,
-  "glyphs": "൰൱൲",
-  "n_surveyors": 2,
-  "stability": 0.6666666666666666,
-  "floor": 0.0,
-  "universality": 0.6666666666666666,
-  "gestalt": 0.9166666666666666,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 0.0,
-   "haiku45": 0.0,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.5
-  }
- },
- {
-  "cand": 110,
-  "glyphs": "❘❙❚",
-  "n_surveyors": 2,
-  "stability": 0.6666666666666666,
-  "floor": 0.0,
-  "universality": 0.6666666666666666,
-  "gestalt": 0.8888888888888888,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 0.0,
-   "grok46": 0.0,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 1.0
-  }
- },
- {
-  "cand": 8,
-  "glyphs": "⬞▫◽□◻⬜",
+  "cand": 13,
+  "glyphs": "🄀🄁🄂🄃🄄🄅🄆🄇🄈🄉",
   "n_surveyors": 3,
-  "stability": 0.6666666666666666,
-  "floor": 0.6,
-  "universality": 0.3333333333333333,
-  "gestalt": 0.7999999999999999,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
+  "stability": 0.634920634920635,
+  "floor": 0.0,
+  "universality": 0.42857142857142855,
+  "gestalt": 1.0,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
   "per_judge": {
-   "gemini31pro": 0.6,
-   "gemini38flash": 0.6,
-   "grok46": 0.6,
-   "haiku45": 0.6,
-   "opus55": 0.8,
-   "sonnet55": 0.8
+   "gemini31pro": 0.78,
+   "gemini38flash": 1.0,
+   "grok46": 0.89,
+   "haiku45": 0.33,
+   "opus55": 0.89,
+   "qwen25-3b": 0.0,
+   "sonnet55": 0.56
   },
   "small_models": {
-   "llama32-3b": 0.4
-  }
- },
- {
-  "cand": 3,
-  "glyphs": "□▤▦◫▩■",
-  "n_surveyors": 4,
-  "stability": 0.6666666666666666,
-  "floor": 0.2,
-  "universality": 0.6666666666666666,
-  "gestalt": 0.7944444444444444,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 0.8,
-   "gemini38flash": 0.8,
-   "grok46": 0.8,
-   "haiku45": 0.2,
-   "opus55": 0.8,
-   "sonnet55": 0.6
-  },
-  "small_models": {
-   "llama32-3b": 0.4
-  }
- },
- {
-  "cand": 9,
-  "glyphs": "<≪⋘⪢⫸",
-  "n_surveyors": 6,
-  "stability": 0.6666666666666666,
-  "floor": 0.25,
-  "universality": 0.0,
-  "gestalt": 0.48333333333333334,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 0.75,
-   "gemini38flash": 0.75,
-   "grok46": 0.75,
-   "haiku45": 0.25,
-   "opus55": 0.75,
-   "sonnet55": 0.75
-  },
-  "small_models": {
-   "llama32-3b": 0.5
+   "llama32-3b": 0.11,
+   "mistral7b": 0.0
   }
  },
  {
@@ -1778,29 +1917,32 @@
    "sonnet55": 0.8
   },
   "small_models": {
-   "llama32-3b": 0.4
+   "llama32-3b": 0.4,
+   "mistral7b": 0.2
   }
  },
  {
-  "cand": 79,
-  "glyphs": "𐄇𐄈𐄉𐄊𐄋𐄌𐄍𐄎𐄏",
-  "n_surveyors": 2,
-  "stability": 0.625,
-  "floor": 0.0,
-  "universality": 0.3333333333333333,
-  "gestalt": 0.9714285714285715,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
+  "cand": 8,
+  "glyphs": "⬞▫◽□◻⬜",
+  "n_surveyors": 3,
+  "stability": 0.6285714285714287,
+  "floor": 0.4,
+  "universality": 0.2857142857142857,
+  "gestalt": 0.7999999999999999,
+  "n_judges": 7,
+  "direction_split": "6↑/1↓",
   "per_judge": {
-   "gemini31pro": 0.75,
-   "gemini38flash": 0.75,
-   "grok46": 0.38,
-   "haiku45": 0.0,
-   "opus55": 1.0,
-   "sonnet55": 0.88
+   "gemini31pro": 0.6,
+   "gemini38flash": 0.6,
+   "grok46": 0.6,
+   "haiku45": 0.6,
+   "opus55": 0.8,
+   "qwen25-3b": 0.4,
+   "sonnet55": 0.8
   },
   "small_models": {
-   "llama32-3b": 0.5
+   "llama32-3b": 0.4,
+   "mistral7b": 0.4
   }
  },
  {
@@ -1810,7 +1952,7 @@
   "stability": 0.625,
   "floor": 0.25,
   "universality": 0.16666666666666666,
-  "gestalt": 0.9166666666666666,
+  "gestalt": 1.0,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
@@ -1822,7 +1964,8 @@
    "sonnet55": 0.5
   },
   "small_models": {
-   "llama32-3b": 0.25
+   "llama32-3b": 0.25,
+   "mistral7b": 0.0
   }
  },
  {
@@ -1832,7 +1975,7 @@
   "stability": 0.625,
   "floor": 0.0,
   "universality": 0.3333333333333333,
-  "gestalt": 0.8666666666666667,
+  "gestalt": 0.9500000000000001,
   "n_judges": 6,
   "direction_split": "1↑/5↓",
   "per_judge": {
@@ -1844,7 +1987,30 @@
    "sonnet55": 0.75
   },
   "small_models": {
-   "llama32-3b": 0.5
+   "llama32-3b": 0.5,
+   "mistral7b": 0.0
+  }
+ },
+ {
+  "cand": 102,
+  "glyphs": "㆒㆓㆔㆕",
+  "n_surveyors": 2,
+  "stability": 0.611111111111111,
+  "floor": 0.0,
+  "universality": 0.3333333333333333,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.67,
+   "gemini38flash": 0.33,
+   "grok46": 0.67,
+   "haiku45": 0.0,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.0
   }
  },
  {
@@ -1854,7 +2020,7 @@
   "stability": 0.611111111111111,
   "floor": 0.0,
   "universality": 0.16666666666666666,
-  "gestalt": 0.9583333333333333,
+  "gestalt": 0.9333333333333332,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
@@ -1870,69 +2036,25 @@
   }
  },
  {
-  "cand": 104,
-  "glyphs": "ₐaᴀA",
+  "cand": 86,
+  "glyphs": "㉈㉉㉊㉋㉌㉍㉎㉏",
   "n_surveyors": 2,
-  "stability": 0.611111111111111,
-  "floor": 0.3333333333333333,
-  "universality": 0.0,
-  "gestalt": 0.9166666666666665,
-  "n_judges": 6,
-  "direction_split": "5↑/1↓",
-  "per_judge": {
-   "gemini31pro": 0.67,
-   "gemini38flash": 0.33,
-   "grok46": 0.67,
-   "haiku45": 0.67,
-   "opus55": 0.67,
-   "sonnet55": 0.67
-  },
-  "small_models": {
-   "llama32-3b": 0.0
-  }
- },
- {
-  "cand": 80,
-  "glyphs": "𐄐𐄑𐄒𐄓𐄔𐄕𐄖𐄗𐄘",
-  "n_surveyors": 2,
-  "stability": 0.6041666666666666,
-  "floor": 0.125,
+  "stability": 0.5952380952380952,
+  "floor": 0.0,
   "universality": 0.3333333333333333,
   "gestalt": 1.0,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
-   "gemini31pro": 0.25,
-   "gemini38flash": 0.75,
-   "grok46": 0.5,
-   "haiku45": 0.12,
-   "opus55": 1.0,
+   "gemini31pro": 0.57,
+   "gemini38flash": 0.43,
+   "grok46": 1.0,
+   "haiku45": 0.0,
+   "opus55": 0.57,
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.25
-  }
- },
- {
-  "cand": 73,
-  "glyphs": "🯰🯱🯲🯳🯴🯵🯶🯷🯸🯹",
-  "n_surveyors": 2,
-  "stability": 0.5925925925925926,
-  "floor": 0.0,
-  "universality": 0.5,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 0.0,
-   "grok46": 0.56,
-   "haiku45": 0.11,
-   "opus55": 0.89,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.14
   }
  },
  {
@@ -1942,7 +2064,7 @@
   "stability": 0.5925925925925926,
   "floor": 0.1111111111111111,
   "universality": 0.5,
-  "gestalt": 0.9543402777777779,
+  "gestalt": 1.0,
   "n_judges": 6,
   "direction_split": "5↑/1↓",
   "per_judge": {
@@ -1954,89 +2076,24 @@
    "sonnet55": 0.89
   },
   "small_models": {
-   "llama32-3b": 0.33
-  }
- },
- {
-  "cand": 112,
-  "glyphs": "=⩵⩶",
-  "n_surveyors": 2,
-  "stability": 0.5833333333333334,
-  "floor": 0.0,
-  "universality": 0.5,
-  "gestalt": 0.8416666666666667,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 0.5,
-   "grok46": 0.0,
-   "haiku45": 0.0,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.5
-  }
- },
- {
-  "cand": 88,
-  "glyphs": "🀱🀹🁁🁉🁑🁙🁡",
-  "n_surveyors": 2,
-  "stability": 0.5833333333333334,
-  "floor": 0.0,
-  "universality": 0.3333333333333333,
-  "gestalt": 0.7857142857142857,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 0.67,
-   "gemini38flash": 0.33,
-   "grok46": 0.5,
-   "haiku45": 0.0,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.0
-  }
- },
- {
-  "cand": 102,
-  "glyphs": "㆒㆓㆔㆕",
-  "n_surveyors": 2,
-  "stability": 0.5555555555555555,
-  "floor": 0.0,
-  "universality": 0.3333333333333333,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 0.67,
-   "gemini38flash": 0.33,
-   "grok46": 0.33,
-   "haiku45": 0.0,
-   "opus55": 1.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.33
+   "llama32-3b": 0.33,
+   "mistral7b": 0.11
   }
  },
  {
   "cand": 84,
   "glyphs": "𒐀𒐁𒐂𒐃𒐄𒐅𒐆𒐇",
   "n_surveyors": 2,
-  "stability": 0.5476190476190476,
+  "stability": 0.5714285714285715,
   "floor": 0.0,
   "universality": 0.5,
-  "gestalt": 0.8,
+  "gestalt": 0.8333333333333334,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
    "gemini31pro": 0.29,
    "gemini38flash": 0.14,
-   "grok46": 0.86,
+   "grok46": 1.0,
    "haiku45": 0.0,
    "opus55": 1.0,
    "sonnet55": 1.0
@@ -2046,13 +2103,37 @@
   }
  },
  {
+  "cand": 3,
+  "glyphs": "□▤▦◫▩■",
+  "n_surveyors": 4,
+  "stability": 0.5714285714285714,
+  "floor": 0.0,
+  "universality": 0.5714285714285714,
+  "gestalt": 0.7944444444444444,
+  "n_judges": 7,
+  "direction_split": "7↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.8,
+   "gemini38flash": 0.8,
+   "grok46": 0.8,
+   "haiku45": 0.2,
+   "opus55": 0.8,
+   "qwen25-3b": 0.0,
+   "sonnet55": 0.6
+  },
+  "small_models": {
+   "llama32-3b": 0.2,
+   "mistral7b": 0.2
+  }
+ },
+ {
   "cand": 89,
   "glyphs": "ᚐᚑᚒᚓᚔ",
   "n_surveyors": 2,
   "stability": 0.5416666666666666,
   "floor": 0.0,
   "universality": 0.3333333333333333,
-  "gestalt": 0.9199999999999999,
+  "gestalt": 0.9333333333333332,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
@@ -2068,25 +2149,47 @@
   }
  },
  {
-  "cand": 86,
-  "glyphs": "㉈㉉㉊㉋㉌㉍㉎㉏",
+  "cand": 111,
+  "glyphs": "🞗🞘🞙",
   "n_surveyors": 2,
-  "stability": 0.5238095238095238,
+  "stability": 0.5,
   "floor": 0.0,
-  "universality": 0.16666666666666666,
-  "gestalt": 0.95,
+  "universality": 0.5,
+  "gestalt": 1.0,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
-   "gemini31pro": 0.57,
-   "gemini38flash": 0.43,
-   "grok46": 0.57,
+   "gemini31pro": 1.0,
+   "gemini38flash": 0.0,
+   "grok46": 1.0,
    "haiku45": 0.0,
-   "opus55": 0.57,
+   "opus55": 1.0,
+   "sonnet55": 0.0
+  },
+  "small_models": {
+   "llama32-3b": 0.0
+  }
+ },
+ {
+  "cand": 93,
+  "glyphs": "𐅃𐅄𐅅𐅆𐅇",
+  "n_surveyors": 2,
+  "stability": 0.5,
+  "floor": 0.0,
+  "universality": 0.16666666666666666,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.0,
+   "gemini38flash": 0.5,
+   "grok46": 0.5,
+   "haiku45": 0.25,
+   "opus55": 0.75,
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.29
+   "llama32-3b": 0.25
   }
  },
  {
@@ -2096,7 +2199,7 @@
   "stability": 0.5,
   "floor": 0.0,
   "universality": 0.16666666666666666,
-  "gestalt": 1.0,
+  "gestalt": 0.9333333333333332,
   "n_judges": 6,
   "direction_split": "5↑/1↓",
   "per_judge": {
@@ -2130,6 +2233,29 @@
    "sonnet55": 0.0
   },
   "small_models": {
+   "llama32-3b": 0.0,
+   "mistral7b": 0.33
+  }
+ },
+ {
+  "cand": 99,
+  "glyphs": "ᚁᚂᚃᚄᚅ",
+  "n_surveyors": 2,
+  "stability": 0.4583333333333333,
+  "floor": 0.0,
+  "universality": 0.16666666666666666,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.75,
+   "gemini38flash": 0.25,
+   "grok46": 0.25,
+   "haiku45": 0.0,
+   "opus55": 1.0,
+   "sonnet55": 0.5
+  },
+  "small_models": {
    "llama32-3b": 0.0
   }
  },
@@ -2142,7 +2268,7 @@
   "universality": 0.0,
   "gestalt": 1.0,
   "n_judges": 6,
-  "direction_split": "5↑/1↓",
+  "direction_split": "6↑/0↓",
   "per_judge": {
    "gemini31pro": 0.33,
    "gemini38flash": 0.67,
@@ -2174,73 +2300,30 @@
    "sonnet55": 0.6
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "mistral7b": 0.0
   }
  },
  {
-  "cand": 111,
-  "glyphs": "🞗🞘🞙",
+  "cand": 76,
+  "glyphs": "༪༫༬༭༮༯༰༱༲༳",
   "n_surveyors": 2,
-  "stability": 0.4166666666666667,
-  "floor": 0.0,
-  "universality": 0.3333333333333333,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 0.0,
-   "grok46": 0.5,
-   "haiku45": 0.0,
-   "opus55": 1.0,
-   "sonnet55": 0.0
-  },
-  "small_models": {
-   "llama32-3b": 0.0
-  }
- },
- {
-  "cand": 93,
-  "glyphs": "𐅃𐅄𐅅𐅆𐅇",
-  "n_surveyors": 2,
-  "stability": 0.4166666666666667,
-  "floor": 0.0,
+  "stability": 0.425925925925926,
+  "floor": 0.1111111111111111,
   "universality": 0.16666666666666666,
-  "gestalt": 1.0,
+  "gestalt": 0.9333333333333332,
   "n_judges": 6,
-  "direction_split": "6↑/0↓",
+  "direction_split": "5↑/1↓",
   "per_judge": {
-   "gemini31pro": 0.0,
-   "gemini38flash": 0.5,
-   "grok46": 0.25,
-   "haiku45": 0.25,
-   "opus55": 0.5,
-   "sonnet55": 1.0
+   "gemini31pro": 0.22,
+   "gemini38flash": 0.44,
+   "grok46": 0.56,
+   "haiku45": 0.11,
+   "opus55": 0.89,
+   "sonnet55": 0.33
   },
   "small_models": {
-   "llama32-3b": 0.25
-  }
- },
- {
-  "cand": 99,
-  "glyphs": "ᚁᚂᚃᚄᚅ",
-  "n_surveyors": 2,
-  "stability": 0.4166666666666667,
-  "floor": 0.0,
-  "universality": 0.0,
-  "gestalt": 1.0,
-  "n_judges": 6,
-  "direction_split": "6↑/0↓",
-  "per_judge": {
-   "gemini31pro": 0.75,
-   "gemini38flash": 0.25,
-   "grok46": 0.25,
-   "haiku45": 0.0,
-   "opus55": 0.75,
-   "sonnet55": 0.5
-  },
-  "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.33
   }
  },
  {
@@ -2250,7 +2333,7 @@
   "stability": 0.4166666666666667,
   "floor": 0.0,
   "universality": 0.3333333333333333,
-  "gestalt": 0.95,
+  "gestalt": 1.0,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
@@ -2266,13 +2349,35 @@
   }
  },
  {
+  "cand": 104,
+  "glyphs": "ₐaᴀA",
+  "n_surveyors": 2,
+  "stability": 0.38888888888888884,
+  "floor": 0.0,
+  "universality": 0.0,
+  "gestalt": 0.9333333333333332,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.33,
+   "gemini38flash": 0.0,
+   "grok46": 0.0,
+   "haiku45": 0.67,
+   "opus55": 0.67,
+   "sonnet55": 0.67
+  },
+  "small_models": {
+   "llama32-3b": 0.0
+  }
+ },
+ {
   "cand": 90,
   "glyphs": "꜈꜉꜊꜋꜌",
   "n_surveyors": 2,
   "stability": 0.375,
   "floor": 0.0,
   "universality": 0.16666666666666666,
-  "gestalt": 1.0,
+  "gestalt": 0.9333333333333332,
   "n_judges": 6,
   "direction_split": "4↑/2↓",
   "per_judge": {
@@ -2294,7 +2399,7 @@
   "stability": 0.375,
   "floor": 0.0,
   "universality": 0.0,
-  "gestalt": 0.9133333333333333,
+  "gestalt": 0.9277777777777777,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
@@ -2316,7 +2421,7 @@
   "stability": 0.375,
   "floor": 0.0,
   "universality": 0.0,
-  "gestalt": 0.79,
+  "gestalt": 0.7324074074074073,
   "n_judges": 6,
   "direction_split": "1↑/5↓",
   "per_judge": {
@@ -2329,28 +2434,6 @@
   },
   "small_models": {
    "llama32-3b": 0.5
-  }
- },
- {
-  "cand": 76,
-  "glyphs": "༪༫༬༭༮༯༰༱༲༳",
-  "n_surveyors": 2,
-  "stability": 0.3703703703703704,
-  "floor": 0.1111111111111111,
-  "universality": 0.16666666666666666,
-  "gestalt": 0.8567088607594936,
-  "n_judges": 6,
-  "direction_split": "5↑/1↓",
-  "per_judge": {
-   "gemini31pro": 0.22,
-   "gemini38flash": 0.44,
-   "grok46": 0.22,
-   "haiku45": 0.11,
-   "opus55": 0.89,
-   "sonnet55": 0.33
-  },
-  "small_models": {
-   "llama32-3b": 0.33
   }
  },
  {
@@ -2394,7 +2477,8 @@
    "sonnet55": 0.33
   },
   "small_models": {
-   "llama32-3b": 0.67
+   "llama32-3b": 0.67,
+   "mistral7b": 0.33
   }
  },
  {
@@ -2426,7 +2510,7 @@
   "stability": 0.2619047619047619,
   "floor": 0.0,
   "universality": 0.0,
-  "gestalt": 0.8671428571428571,
+  "gestalt": 0.7392857142857143,
   "n_judges": 6,
   "direction_split": "4↑/2↓",
   "per_judge": {
@@ -2448,7 +2532,7 @@
   "stability": 0.20833333333333334,
   "floor": 0.0,
   "universality": 0.16666666666666666,
-  "gestalt": 0.9400000000000001,
+  "gestalt": 0.9500000000000001,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
@@ -2489,16 +2573,16 @@
   "cand": 85,
   "glyphs": "☷☶☵☴☳☲☱☰",
   "n_surveyors": 2,
-  "stability": 0.12301587301587302,
+  "stability": 0.11904761904761903,
   "floor": 0.0,
   "universality": 0.0,
-  "gestalt": 0.7865079365079365,
+  "gestalt": 0.9285714285714285,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
    "gemini31pro": 0.14,
    "gemini38flash": 0.0,
-   "grok46": 0.17,
+   "grok46": 0.14,
    "haiku45": 0.14,
    "opus55": 0.14,
    "sonnet55": 0.14
@@ -2514,7 +2598,7 @@
   "stability": 0.1111111111111111,
   "floor": 0.0,
   "universality": 0.0,
-  "gestalt": 0.7474747474747474,
+  "gestalt": 0.7777777777777777,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
@@ -2530,13 +2614,13 @@
   }
  },
  {
-  "cand": 105,
-  "glyphs": "nɲɳŋ",
-  "n_surveyors": 2,
+  "cand": 54,
+  "glyphs": "ᬇᬈᬉᬊᬋᬌᬍᬎᬑᬒ",
+  "n_surveyors": 1,
   "stability": 0.05555555555555555,
   "floor": 0.0,
   "universality": 0.0,
-  "gestalt": 0.7142857142857141,
+  "gestalt": 1.0,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
@@ -2548,17 +2632,18 @@
    "sonnet55": 0.0
   },
   "small_models": {
-   "llama32-3b": 0.33
+   "llama32-3b": 0.0,
+   "mistral7b": 0.0
   }
  },
  {
-  "cand": 54,
-  "glyphs": "ᬇᬈᬉᬊᬋᬌᬍᬎᬑᬒ",
-  "n_surveyors": 1,
-  "stability": 0.018518518518518517,
+  "cand": 105,
+  "glyphs": "nɲɳŋ",
+  "n_surveyors": 2,
+  "stability": 0.05555555555555555,
   "floor": 0.0,
   "universality": 0.0,
-  "gestalt": 1.0,
+  "gestalt": 0.7,
   "n_judges": 6,
   "direction_split": "6↑/0↓",
   "per_judge": {
@@ -2566,7 +2651,7 @@
    "gemini38flash": 0.0,
    "grok46": 0.0,
    "haiku45": 0.0,
-   "opus55": 0.11,
+   "opus55": 0.33,
    "sonnet55": 0.0
   },
   "small_models": {

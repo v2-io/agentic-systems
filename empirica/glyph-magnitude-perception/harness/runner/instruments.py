@@ -10,7 +10,13 @@ import json, re
 from fate import rng
 
 PROTOCOL = "gmp-v1.0"
-PARSER_VERSION = "p1.2"
+PARSER_VERSION = "p1.3"
+# p1.3 (2026-10-03, after the independent audit analysis/verification/2026-10-03-audit-v1.0.md, data seen):
+#  pair answers are classified by signal count — exactly one answer signal or 'unparsed' (no more
+#  first-mentioned resolution of two-glyph replies, no leading-glyph rule); the words first/second/none/
+#  equal count only when the text is nothing but answer words (p1.2 read qwen3's truncated reasoning
+#  "First, the user is asking..." as the answer 'first'); the last non-empty line is classified before the
+#  whole text; gestalt answers are read from the last line that carries stimulus glyphs or ⟂/none.
 # p1.2 (2026-10-03, found while inspecting interim gestalt arrangements, before any result was written up):
 #  gestalt answers are no longer edge-stripped of '.', '*', quotes or backticks when those characters are
 #  stimulus glyphs (p1.1 silently dropped the leading '.' of the rings/dimension sets and edge '*' of rays)
@@ -83,36 +89,52 @@ def _strip(r):
     r = r.strip("`*\"' \t\n.")
     return r
 
+_PERP_W = {"none", "neither", "no"}
+_TIE_W = {"equal", "equals", "same"}
+_FILLER = set(BY_WORDS) | {"more", "ordering", "order", "perceived", "the", "one"}
+
+def _classify(text, a, b, sheet):
+    """p1.3 signal classifier: returns (verdict, more, by) only when the text carries exactly ONE answer
+    signal; zero or conflicting signals -> None (reported as unparsed, never imputed)."""
+    t = re.sub(r"^```[a-z]*\s*|\s*```$", "", (text or "").strip()).strip()
+    t = t.strip("".join(c for c in "`*\"' \t\n." if c not in (a, b)))  # never strip a stimulus glyph
+    if not t:
+        return None
+    low = t.lower()
+    toks = [x for x in re.split(r"[\s,;:()\[\]\.!\-—]+", low) if x]
+    by = next((w for w in BY_WORDS if w in toks), None)
+    sig = set()
+    if not (a in b or b in a):
+        if a in t: sig.add(("dir", a))
+        if b in t: sig.add(("dir", b))
+    first_w = {"first", "1st"} | ({"a"} if sheet else set())
+    second_w = {"second", "2nd"} | ({"b"} if sheet else set())
+    word_ok = all(x in _FILLER or x in first_w | second_w | _PERP_W | _TIE_W for x in toks)
+    if word_ok:  # word answers count only when the text is nothing but answer words
+        w = set(toks)
+        if w & first_w: sig.add(("dir", a))
+        if w & second_w: sig.add(("dir", b))
+        if w & _PERP_W: sig.add(("perp", None))
+        if w & _TIE_W: sig.add(("tie", None))
+    if "⟂" in t or "⊥" in t: sig.add(("perp", None))
+    if "≈" in t: sig.add(("tie", None))
+    if len(sig) != 1:
+        return None
+    v, m = next(iter(sig))
+    return (v, m, by if v == "dir" else None)
+
 def parse_pair(raw, a, b, sheet=False):
-    """-> (verdict, more, by) where verdict in {dir, tie, perp, unparsed}; more = glyph or None."""
-    r0 = (raw or "").strip()
-    head = re.split(r"[\s,;]+", r0)[0] if r0 else ""
-    if head in (a, b):
-        by0 = next((w for w in BY_WORDS if re.search(rf"\b{w}\b", r0.lower())), None)
-        return ("dir", head, by0)
-    r = _strip(raw)
-    if not r:
+    """-> (verdict, more, by), verdict in {dir, tie, perp, unparsed}.
+    p1.3: the LAST non-empty line is classified first (explanations precede answers); if it carries no single
+    signal, the whole text is classified; otherwise unparsed."""
+    r0 = re.sub(r"^```[a-z]*\s*|\s*```$", "", (raw or "").strip()).strip()
+    if not r0:
         return ("unparsed", None, None)
-    low = r.lower()
-    by = next((w for w in BY_WORDS if re.search(rf"\b{w}\b", low)), None)
-    has_a, has_b = (a in r), (b in r)
-    if a in b or b in a:  # substring-collision guard (never happens for distinct single glyphs)
-        has_a = has_b = False
-    first_tok = re.split(r"[\s,;:]+", low)[0] if low else ""
-    if has_a and not has_b:
-        return ("dir", a, by)
-    if has_b and not has_a:
-        return ("dir", b, by)
-    if first_tok in ("first", "1st") or (sheet and first_tok == "a"):
-        return ("dir", a, by)
-    if first_tok in ("second", "2nd") or (sheet and first_tok == "b"):
-        return ("dir", b, by)
-    if "⟂" in r or "⊥" in r or first_tok in ("none", "neither", "no"):
-        return ("perp", None, None)
-    if "≈" in r or first_tok in ("equal", "equals", "same"):
-        return ("tie", None, None)
-    if has_a and has_b:  # both echoed: take the first mentioned (pilot convention), flagged by caller
-        return ("dir", a if r.find(a) < r.find(b) else b, by)
+    lines = [ln for ln in r0.splitlines() if ln.strip()]
+    for cand in ([lines[-1]] if len(lines) > 1 else []) + [r0]:
+        v = _classify(cand, a, b, sheet)
+        if v:
+            return v
     return ("unparsed", None, None)
 
 def parse_sheet(raw, items):
@@ -146,6 +168,10 @@ def parse_gestalt(raw, glyphs):
     gs0 = set(glyphs)
     r = (raw or "").strip()
     r = re.sub(r"^```[a-z]*\s*|\s*```$", "", r).strip()
+    lines = [ln.strip() for ln in r.splitlines() if ln.strip()]
+    hits = [ln for ln in lines if ("⟂" in ln or ln.lower().rstrip(".") == "none" or sum(g in ln for g in gs0) >= 2)]
+    if hits:
+        r = hits[-1]
     keep = "".join(c for c in "`*\"' .\t\n" if c not in gs0)
     r = r.strip(keep)
     if not r:

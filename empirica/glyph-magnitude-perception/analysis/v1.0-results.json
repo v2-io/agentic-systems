@@ -82,25 +82,25 @@
   },
   "grok46[sheet]": {
    "tie->perp": [
-    31,
-    121
+    35,
+    94
    ],
    "forced->perp": [
-    30,
-    96
+    46,
+    105
    ],
    "perp_share": [
-    274,
+    286,
     640
    ],
-   "survival_local_minus_mixed": 0.4,
+   "survival_local_minus_mixed": 0.4625,
    "value_forced": [
-    29,
-    30
+    34,
+    35
    ],
    "value_perp": [
-    24,
-    24
+    25,
+    25
    ]
   },
   "haiku45[single]": {
@@ -126,96 +126,142 @@
     23
    ]
   },
-  "llama32-3b[single]": {
+  "hermes3-3b[single]": {
    "tie->perp": [
-    7,
-    107
+    9,
+    69
    ],
    "forced->perp": [
     7,
-    105
+    62
+   ],
+   "perp_share": [
+    206,
+    639
+   ],
+   "survival_local_minus_mixed": 0.040031645569620244,
+   "value_forced": [
+    11,
+    18
+   ],
+   "value_perp": [
+    7,
+    8
+   ]
+  },
+  "llama32-3b[single]": {
+   "tie->perp": [
+    5,
+    84
+   ],
+   "forced->perp": [
+    7,
+    94
    ],
    "perp_share": [
     118,
     640
    ],
-   "survival_local_minus_mixed": -0.07500000000000001,
+   "survival_local_minus_mixed": -0.012500000000000011,
    "value_forced": [
     13,
     23
    ],
    "value_perp": [
-    9,
-    20
+    7,
+    16
    ]
   },
   "mistral7b[single]": {
    "tie->perp": [
     13,
-    96
+    79
    ],
    "forced->perp": [
     15,
-    92
+    86
    ],
    "perp_share": [
     214,
     640
    ],
-   "survival_local_minus_mixed": 0.0875,
+   "survival_local_minus_mixed": 0.07499999999999998,
    "value_forced": [
     13,
     21
    ],
    "value_perp": [
-    4,
-    9
+    3,
+    4
    ]
   },
   "opus55[single]": {
    "tie->perp": [
-    75,
-    143
+    74,
+    144
    ],
    "forced->perp": [
-    76,
-    147
+    75,
+    146
    ],
    "perp_share": [
-    320,
+    326,
     640
    ],
    "survival_local_minus_mixed": 0.65,
    "value_forced": [
-    36,
-    38
+    39,
+    40
    ],
    "value_perp": [
     40,
     40
    ]
   },
-  "qwen3-4b[single]": {
+  "phi4mini[single]": {
    "tie->perp": [
-    0,
-    0
+    1,
+    5
    ],
    "forced->perp": [
-    0,
-    1
+    4,
+    33
    ],
    "perp_share": [
-    0,
+    144,
     640
    ],
-   "survival_local_minus_mixed": 0.0,
+   "survival_local_minus_mixed": 0.0125,
    "value_forced": [
-    0,
-    0
+    1,
+    3
    ],
    "value_perp": [
     0,
     0
+   ]
+  },
+  "qwen25-3b[single]": {
+   "tie->perp": [
+    1,
+    23
+   ],
+   "forced->perp": [
+    1,
+    25
+   ],
+   "perp_share": [
+    114,
+    605
+   ],
+   "survival_local_minus_mixed": 0.0628654970760234,
+   "value_forced": [
+    15,
+    20
+   ],
+   "value_perp": [
+    3,
+    10
    ]
   },
   "sonnet-agent[pilotcond]": {
@@ -258,7 +304,7 @@
   },
   "sonnet55[single]": {
    "tie->perp": [
-    39,
+    40,
     142
    ],
    "forced->perp": [
@@ -266,10 +312,10 @@
     146
    ],
    "perp_share": [
-    239,
+    243,
     640
    ],
-   "survival_local_minus_mixed": 0.4625,
+   "survival_local_minus_mixed": 0.48750000000000004,
    "value_forced": [
     35,
     39
@@ -305,6 +351,10 @@
  },
  "triads": {
   "gemini31pro[sheet]": {
+   "bias_immune_cycles": [
+    0,
+    66
+   ],
    "n": 1800,
    "perp": [
     1195,
@@ -342,6 +392,10 @@
    ]
   },
   "gemini38flash[sheet]": {
+   "bias_immune_cycles": [
+    0,
+    72
+   ],
    "n": 1800,
    "perp": [
     1077,
@@ -361,7 +415,7 @@
    ],
    "agree": [
     786,
-    900
+    898
    ],
    "value": [
     86,
@@ -379,6 +433,10 @@
    ]
   },
   "gemma3-4b[single]": {
+   "bias_immune_cycles": [
+    0,
+    8
+   ],
    "n": 1800,
    "perp": [
     128,
@@ -398,7 +456,7 @@
    ],
    "agree": [
     361,
-    900
+    893
    ],
    "value": [
     13,
@@ -416,6 +474,10 @@
    ]
   },
   "gpt56terra[sheet]": {
+   "bias_immune_cycles": [
+    0,
+    48
+   ],
    "n": 1800,
    "perp": [
     1019,
@@ -435,7 +497,7 @@
    ],
    "agree": [
     688,
-    900
+    897
    ],
    "value": [
     79,
@@ -453,43 +515,51 @@
    ]
   },
   "grok46[sheet]": {
+   "bias_immune_cycles": [
+    0,
+    64
+   ],
    "n": 1800,
    "perp": [
-    809,
+    893,
     1800
    ],
    "perp_uniform": [
-    450,
+    494,
     540
    ],
    "unparsed": [
-    214,
+    54,
     1800
    ],
    "cycles": [
     1,
-    127
+    171
    ],
    "agree": [
-    554,
-    900
+    672,
+    850
    ],
    "value": [
-    65,
-    65
+    84,
+    85
    ],
    "ink": [
-    66,
-    86
+    77,
+    99
    ],
-   "edges": 244,
-   "thinking": 10.598936170212767,
+   "edges": 301,
+   "thinking": 10.453125,
    "first_shown": [
-    368,
-    736
+    404,
+    809
    ]
   },
   "haiku45[single]": {
+   "bias_immune_cycles": [
+    0,
+    32
+   ],
    "n": 1800,
    "perp": [
     1012,
@@ -509,7 +579,7 @@
    ],
    "agree": [
     595,
-    900
+    899
    ],
    "value": [
     59,
@@ -527,46 +597,54 @@
    ]
   },
   "hermes3-3b[single]": {
-   "n": 774,
+   "bias_immune_cycles": [
+    0,
+    2
+   ],
+   "n": 1800,
    "perp": [
-    256,
-    774
+    639,
+    1800
    ],
    "perp_uniform": [
-    0,
-    0
+    204,
+    540
    ],
    "unparsed": [
-    40,
-    774
+    153,
+    1800
    ],
    "cycles": [
-    32,
-    66
+    38,
+    103
    ],
    "agree": [
-    118,
-    386
+    265,
+    756
    ],
    "value": [
-    7,
-    17
+    10,
+    20
    ],
    "ink": [
-    14,
-    26
+    24,
+    46
    ],
-   "edges": 65,
+   "edges": 143,
    "thinking": null,
    "first_shown": [
-    157,
-    471
+    415,
+    984
    ]
   },
   "llama32-3b[single]": {
+   "bias_immune_cycles": [
+    0,
+    33
+   ],
    "n": 1800,
    "perp": [
-    412,
+    413,
     1800
    ],
    "perp_uniform": [
@@ -574,181 +652,201 @@
     540
    ],
    "unparsed": [
-    38,
+    112,
     1800
    ],
    "cycles": [
-    35,
-    273
+    27,
+    222
    ],
    "agree": [
-    527,
-    900
+    479,
+    795
    ],
    "value": [
-    23,
-    45
+    21,
+    41
    ],
    "ink": [
-    59,
-    114
+    55,
+    108
    ],
-   "edges": 403,
+   "edges": 354,
    "thinking": null,
    "first_shown": [
-    590,
-    1238
+    521,
+    1163
    ]
   },
   "mistral7b[single]": {
+   "bias_immune_cycles": [
+    0,
+    3
+   ],
    "n": 1800,
    "perp": [
     605,
     1800
    ],
    "perp_uniform": [
-    172,
+    171,
     540
    ],
    "unparsed": [
-    17,
+    146,
     1800
    ],
    "cycles": [
-    42,
-    160
+    34,
+    117
    ],
    "agree": [
-    339,
-    900
+    278,
+    765
    ],
    "value": [
-    18,
-    32
+    11,
+    19
    ],
    "ink": [
-    18,
-    63
+    15,
+    53
    ],
-   "edges": 212,
+   "edges": 151,
    "thinking": null,
    "first_shown": [
-    372,
-    1128
+    271,
+    999
    ]
   },
   "opus55[single]": {
+   "bias_immune_cycles": [
+    0,
+    94
+   ],
    "n": 1800,
    "perp": [
-    894,
+    901,
     1800
    ],
    "perp_uniform": [
-    506,
+    507,
     540
    ],
    "unparsed": [
-    2,
+    3,
     1800
    ],
    "cycles": [
-    5,
-    205
+    2,
+    203
    ],
    "agree": [
-    805,
-    900
+    818,
+    898
    ],
    "value": [
-    116,
-    116
+    118,
+    118
    ],
    "ink": [
-    92,
-    119
+    93,
+    121
    ],
-   "edges": 397,
+   "edges": 402,
    "thinking": 29.09777777777778,
    "first_shown": [
-    443,
-    892
+    429,
+    883
    ]
   },
   "phi4mini[single]": {
-   "n": 341,
-   "perp": [
-    37,
-    341
-   ],
-   "perp_uniform": [
+   "bias_immune_cycles": [
     0,
     0
    ],
+   "n": 1799,
+   "perp": [
+    302,
+    1799
+   ],
+   "perp_uniform": [
+    80,
+    540
+   ],
    "unparsed": [
-    3,
-    341
+    384,
+    1799
    ],
    "cycles": [
-    1,
-    3
+    2,
+    4
    ],
    "agree": [
-    80,
-    170
+    293,
+    555
    ],
    "value": [
     0,
     2
    ],
    "ink": [
-    0,
-    1
+    2,
+    2
    ],
-   "edges": 4,
+   "edges": 13,
    "thinking": null,
    "first_shown": [
-    65,
-    84
+    143,
+    208
    ]
   },
-  "qwen3-4b[single]": {
-   "n": 1800,
-   "perp": [
+  "qwen25-3b[single]": {
+   "bias_immune_cycles": [
     0,
-    1800
+    0
+   ],
+   "n": 1672,
+   "perp": [
+    385,
+    1672
    ],
    "perp_uniform": [
-    0,
-    540
+    122,
+    528
    ],
    "unparsed": [
-    0,
-    1800
+    234,
+    1672
    ],
    "cycles": [
-    595,
-    600
+    51,
+    114
    ],
    "agree": [
-    5,
-    900
+    193,
+    591
    ],
    "value": [
-    0,
-    0
+    15,
+    21
    ],
    "ink": [
-    0,
-    0
+    15,
+    30
    ],
-   "edges": 5,
+   "edges": 122,
    "thinking": null,
    "first_shown": [
-    1795,
-    1800
+    711,
+    993
    ]
   },
   "sonnet55[sheet]": {
+   "bias_immune_cycles": [
+    0,
+    55
+   ],
    "n": 1800,
    "perp": [
     973,
@@ -786,9 +884,13 @@
    ]
   },
   "sonnet55[single]": {
+   "bias_immune_cycles": [
+    0,
+    87
+   ],
    "n": 1800,
    "perp": [
-    807,
+    809,
     1800
    ],
    "perp_uniform": [
@@ -801,11 +903,11 @@
    ],
    "cycles": [
     3,
-    232
+    230
    ],
    "agree": [
-    766,
-    900
+    768,
+    899
    ],
    "value": [
     109,
@@ -818,11 +920,15 @@
    "edges": 418,
    "thinking": 59.82611111111111,
    "first_shown": [
-    487,
-    980
+    485,
+    978
    ]
   },
   "sonnet5[single]": {
+   "bias_immune_cycles": [
+    0,
+    40
+   ],
    "n": 1800,
    "perp": [
     870,
@@ -842,7 +948,7 @@
    ],
    "agree": [
     594,
-    900
+    898
    ],
    "value": [
     62,
@@ -927,6 +1033,28 @@
     4
    ]
   },
+  "glimmer30b-sheet[sheet]": {
+   "P9": [
+    18,
+    18
+   ],
+   "P10a": [
+    0,
+    0
+   ],
+   "P10b": [
+    0,
+    0
+   ],
+   "P11": [
+    0,
+    2
+   ],
+   "P12": [
+    2,
+    4
+   ]
+  },
   "gpt56terra[sheet]": {
    "P9": [
     78,
@@ -993,10 +1121,32 @@
     12
    ]
   },
+  "hermes3-3b[single]": {
+   "P9": [
+    10,
+    12
+   ],
+   "P10a": [
+    1,
+    2
+   ],
+   "P10b": [
+    1,
+    4
+   ],
+   "P11": [
+    0,
+    2
+   ],
+   "P12": [
+    2,
+    4
+   ]
+  },
   "llama32-3b[single]": {
    "P9": [
     11,
-    20
+    19
    ],
    "P10a": [
     2,
@@ -1017,16 +1167,16 @@
   },
   "mistral7b[single]": {
    "P9": [
-    11,
-    19
+    9,
+    17
    ],
    "P10a": [
     1,
     2
    ],
    "P10b": [
-    1,
-    3
+    0,
+    2
    ],
    "P11": [
     4,
@@ -1039,7 +1189,7 @@
   },
   "opus55[single]": {
    "P9": [
-    77,
+    78,
     78
    ],
    "P10a": [
@@ -1059,21 +1209,43 @@
     12
    ]
   },
-  "qwen3-4b[single]": {
+  "phi4mini[single]": {
    "P9": [
-    13,
-    26
+    0,
+    1
+   ],
+   "P10a": [
+    0,
+    0
+   ],
+   "P10b": [
+    0,
+    0
+   ],
+   "P11": [
+    0,
+    0
+   ],
+   "P12": [
+    3,
+    4
+   ]
+  },
+  "qwen25-3b[single]": {
+   "P9": [
+    14,
+    19
    ],
    "P10a": [
     1,
-    2
+    1
    ],
    "P10b": [
-    3,
-    6
+    0,
+    3
    ],
    "P11": [
-    2,
+    1,
     4
    ],
    "P12": [
@@ -1117,7 +1289,7 @@
     18
    ],
    "P11": [
-    8,
+    7,
     12
    ],
    "P12": [
@@ -1153,106 +1325,127 @@
    "dice": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "ramp": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 0.875,
     "pw_dir": null
    },
    "upper-eighths": {
     "tau": 0.9682539682539683,
     "perp": 0,
+    "coverage": 0.9523809523809524,
     "pw_dir": null
    },
    "unfold": {
     "tau": 0.2,
     "perp": 1,
+    "coverage": 1.0,
     "pw_dir": 0.13333333333333333
    },
    "risebar": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.3
    },
    "rotate4": {
     "tau": 0.3333333333333333,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "drain": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "elab-n": {
     "tau": 0.7777777777777777,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.3333333333333333
    },
    "elab-s": {
     "tau": 1.0,
     "perp": 0,
-    "pw_dir": 0.5
+    "coverage": 1.0,
+    "pw_dir": 0.16666666666666666
    },
    "elab-l": {
     "tau": null,
     "perp": 3,
+    "coverage": null,
     "pw_dir": 0.3
    },
    "elab-z": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.6666666666666666
    },
    "rings": {
     "tau": 0.4666666666666666,
     "perp": 0,
-    "pw_dir": 0.9333333333333333
+    "coverage": 1.0,
+    "pw_dir": 0.8666666666666667
    },
    "rays": {
     "tau": 0.8666666666666667,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.8666666666666667
    },
    "nest": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 0.9166666666666666,
     "pw_dir": 0.3333333333333333
    },
    "dimension": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.8333333333333334
    },
    "stem": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "check": {
     "tau": 0.3333333333333333,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "noise-0": {
     "tau": null,
     "perp": 3,
+    "coverage": null,
     "pw_dir": null
    },
    "noise-1": {
     "tau": null,
     "perp": 3,
+    "coverage": null,
     "pw_dir": null
    },
    "noise-2": {
     "tau": null,
     "perp": 3,
+    "coverage": null,
     "pw_dir": null
    },
    "noise-3": {
     "tau": null,
     "perp": 2,
+    "coverage": null,
     "pw_dir": null
    }
   },
@@ -1260,106 +1453,127 @@
    "dice": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "ramp": {
     "tau": null,
     "perp": null,
+    "coverage": null,
     "pw_dir": null
    },
    "upper-eighths": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "unfold": {
     "tau": 0.4666666666666666,
     "perp": 0,
+    "coverage": 0.8333333333333334,
     "pw_dir": 0.06666666666666667
    },
    "risebar": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.4
    },
    "rotate4": {
     "tau": 0.3333333333333333,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "drain": {
     "tau": 0.8148148148148149,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "elab-n": {
     "tau": 0.7777777777777777,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "elab-s": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "elab-l": {
     "tau": 0.6666666666666666,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.2
    },
    "elab-z": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "rings": {
     "tau": 0.6888888888888888,
     "perp": 0,
-    "pw_dir": 0.9333333333333333
+    "coverage": 1.0,
+    "pw_dir": 0.8666666666666667
    },
    "rays": {
     "tau": 0.9555555555555556,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.7333333333333333
    },
    "nest": {
     "tau": 0.7777777777777777,
     "perp": 0,
+    "coverage": 0.8333333333333334,
     "pw_dir": 0.3333333333333333
    },
    "dimension": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "stem": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "check": {
     "tau": 0.5555555555555555,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.3333333333333333
    },
    "noise-0": {
     "tau": null,
     "perp": 3,
+    "coverage": null,
     "pw_dir": null
    },
    "noise-1": {
     "tau": 0.3333333333333333,
     "perp": 2,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "noise-2": {
     "tau": 0.6,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "noise-3": {
     "tau": 0.5333333333333333,
     "perp": 1,
+    "coverage": 1.0,
     "pw_dir": null
    }
   },
@@ -1367,106 +1581,127 @@
    "dice": {
     "tau": 0.19999999999999998,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.13333333333333333
    },
    "ramp": {
-    "tau": 0.2888888888888889,
+    "tau": 0.4,
     "perp": 0,
+    "coverage": 0.625,
     "pw_dir": null
    },
    "upper-eighths": {
     "tau": 0.11428571428571428,
     "perp": 0,
+    "coverage": 0.8095238095238096,
     "pw_dir": null
    },
    "unfold": {
     "tau": 0.37777777777777777,
     "perp": 0,
+    "coverage": 0.8333333333333334,
     "pw_dir": 0.2
    },
    "risebar": {
     "tau": 0.3333333333333333,
     "perp": 0,
+    "coverage": 0.7333333333333334,
     "pw_dir": 0.3
    },
    "rotate4": {
     "tau": 0.4444444444444444,
     "perp": 0,
+    "coverage": 0.75,
     "pw_dir": null
    },
    "drain": {
     "tau": 0.05555555555555555,
     "perp": 0,
+    "coverage": 0.9629629629629629,
     "pw_dir": null
    },
    "elab-n": {
     "tau": 0.3333333333333333,
     "perp": 0,
+    "coverage": 0.9166666666666666,
     "pw_dir": 0.6666666666666666
    },
    "elab-s": {
     "tau": 0.1111111111111111,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.3333333333333333
    },
    "elab-l": {
     "tau": 0.6666666666666666,
     "perp": 0,
-    "pw_dir": 0.6
+    "coverage": 0.8000000000000002,
+    "pw_dir": 0.5
    },
    "elab-z": {
     "tau": 0.7777777777777778,
     "perp": 0,
+    "coverage": 0.7777777777777777,
     "pw_dir": 0.3333333333333333
    },
    "rings": {
     "tau": 0.3111111111111111,
     "perp": 0,
+    "coverage": 0.7777777777777778,
     "pw_dir": 0.6
    },
    "rays": {
     "tau": 0.37777777777777777,
     "perp": 0,
+    "coverage": 0.7222222222222223,
     "pw_dir": 0.4
    },
    "nest": {
     "tau": 0.3333333333333333,
     "perp": 0,
+    "coverage": 0.75,
     "pw_dir": 0.3333333333333333
    },
    "dimension": {
     "tau": 0.3333333333333333,
     "perp": 0,
+    "coverage": 0.75,
     "pw_dir": 0.16666666666666666
    },
    "stem": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 0.6666666666666666,
     "pw_dir": 0.3333333333333333
    },
    "check": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 0.6666666666666666,
     "pw_dir": 0.0
    },
    "noise-0": {
     "tau": 0.28148148148148144,
     "perp": 0,
+    "coverage": 0.8666666666666667,
     "pw_dir": null
    },
    "noise-1": {
     "tau": 0.3333333333333333,
     "perp": 0,
+    "coverage": 0.6666666666666666,
     "pw_dir": null
    },
    "noise-2": {
-    "tau": 0.24444444444444446,
+    "tau": 0.2,
     "perp": 0,
+    "coverage": 0.9,
     "pw_dir": null
    },
    "noise-3": {
     "tau": 0.688888888888889,
     "perp": 0,
+    "coverage": 0.7777777777777778,
     "pw_dir": null
    }
   },
@@ -1474,106 +1709,127 @@
    "dice": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "ramp": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "upper-eighths": {
     "tau": 0.873015873015873,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "unfold": {
     "tau": 0.3833333333333333,
     "perp": 1,
+    "coverage": 1.0,
     "pw_dir": 0.2
    },
    "risebar": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.2
    },
    "rotate4": {
     "tau": 0.3333333333333333,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "drain": {
     "tau": 0.6666666666666666,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "elab-n": {
     "tau": 0.6666666666666666,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "elab-s": {
     "tau": 0.4444444444444444,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "elab-l": {
     "tau": 0.9333333333333332,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.2
    },
    "elab-z": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "rings": {
     "tau": 0.4666666666666666,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.7333333333333333
    },
    "rays": {
     "tau": 0.888888888888889,
     "perp": 0,
+    "coverage": 0.8333333333333334,
     "pw_dir": 0.6
    },
    "nest": {
     "tau": 0.7777777777777777,
     "perp": 0,
-    "pw_dir": 0.6666666666666666
+    "coverage": 1.0,
+    "pw_dir": 0.5
    },
    "dimension": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.6666666666666666
    },
    "stem": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.6666666666666666
    },
    "check": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.3333333333333333
    },
    "noise-0": {
     "tau": null,
     "perp": 3,
+    "coverage": null,
     "pw_dir": null
    },
    "noise-1": {
     "tau": 0.2,
     "perp": 1,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "noise-2": {
     "tau": 0.4,
     "perp": 2,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "noise-3": {
     "tau": null,
     "perp": 3,
+    "coverage": null,
     "pw_dir": null
    }
   },
@@ -1581,106 +1837,127 @@
    "dice": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "ramp": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "upper-eighths": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "unfold": {
     "tau": 0.4444444444444445,
     "perp": 0,
+    "coverage": 0.8888888888888888,
     "pw_dir": 0.13333333333333333
    },
    "risebar": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.2
    },
    "rotate4": {
     "tau": 0.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "drain": {
     "tau": 0.5370370370370371,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "elab-n": {
     "tau": 0.6666666666666666,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.5
    },
    "elab-s": {
     "tau": 1.0,
     "perp": 0,
-    "pw_dir": 0.6666666666666666
+    "coverage": 1.0,
+    "pw_dir": 0.5
    },
    "elab-l": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.6
    },
    "elab-z": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.6666666666666666
    },
    "rings": {
     "tau": 0.7333333333333334,
     "perp": 0,
-    "pw_dir": 0.8666666666666667
+    "coverage": 1.0,
+    "pw_dir": 0.8
    },
    "rays": {
     "tau": 0.9111111111111111,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.6666666666666666
    },
    "nest": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "dimension": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.8333333333333334
    },
    "stem": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "check": {
     "tau": 0.7777777777777778,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.6666666666666666
    },
    "noise-0": {
     "tau": 0.0,
     "perp": 2,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "noise-1": {
-    "tau": 0.23056431826147913,
-    "perp": 0,
+    "tau": 0.05,
+    "perp": 1,
+    "coverage": 0.8333333333333334,
     "pw_dir": null
    },
    "noise-2": {
     "tau": 0.5333333333333333,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "noise-3": {
     "tau": 0.2,
     "perp": 1,
+    "coverage": 1.0,
     "pw_dir": null
    }
   },
@@ -1688,106 +1965,255 @@
    "dice": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "ramp": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "upper-eighths": {
     "tau": 0.5873015873015873,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "unfold": {
     "tau": 0.3333333333333333,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.4
    },
    "risebar": {
     "tau": 0.7333333333333334,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.3
    },
    "rotate4": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "drain": {
     "tau": 0.7777777777777778,
     "perp": 0,
+    "coverage": 0.5185185185185185,
     "pw_dir": null
    },
    "elab-n": {
     "tau": 0.8888888888888888,
     "perp": 0,
+    "coverage": 0.9166666666666666,
     "pw_dir": 0.16666666666666666
    },
    "elab-s": {
     "tau": 0.6666666666666666,
     "perp": 1,
-    "pw_dir": 0.16666666666666666
+    "coverage": 0.875,
+    "pw_dir": 0.0
    },
    "elab-l": {
     "tau": 0.6,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.1
    },
    "elab-z": {
     "tau": 1.0,
     "perp": 2,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "rings": {
     "tau": 0.4666666666666666,
     "perp": 0,
-    "pw_dir": 0.8666666666666667
+    "coverage": 0.9444444444444445,
+    "pw_dir": 0.7333333333333333
    },
    "rays": {
     "tau": 0.8666666666666667,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.5333333333333333
    },
    "nest": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 0.75,
     "pw_dir": 0.0
    },
    "dimension": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "stem": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.6666666666666666
    },
    "check": {
     "tau": 1.0,
     "perp": 1,
+    "coverage": 1.0,
     "pw_dir": 0.3333333333333333
    },
    "noise-0": {
     "tau": null,
     "perp": 3,
+    "coverage": null,
     "pw_dir": null
    },
    "noise-1": {
     "tau": null,
     "perp": 3,
+    "coverage": null,
     "pw_dir": null
    },
    "noise-2": {
     "tau": 0.6,
     "perp": 2,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "noise-3": {
     "tau": 0.2,
     "perp": 2,
+    "coverage": 1.0,
+    "pw_dir": null
+   }
+  },
+  "hermes3-3b": {
+   "dice": {
+    "tau": null,
+    "perp": 3,
+    "coverage": null,
+    "pw_dir": 0.06666666666666667
+   },
+   "ramp": {
+    "tau": 0.3333333333333333,
+    "perp": 1,
+    "coverage": 0.375,
+    "pw_dir": null
+   },
+   "upper-eighths": {
+    "tau": 0.3333333333333333,
+    "perp": 2,
+    "coverage": 0.42857142857142855,
+    "pw_dir": null
+   },
+   "unfold": {
+    "tau": null,
+    "perp": 3,
+    "coverage": null,
+    "pw_dir": 0.5333333333333333
+   },
+   "risebar": {
+    "tau": null,
+    "perp": 3,
+    "coverage": null,
+    "pw_dir": 0.4
+   },
+   "rotate4": {
+    "tau": 0.16666666666666666,
+    "perp": 1,
+    "coverage": 0.875,
+    "pw_dir": null
+   },
+   "drain": {
+    "tau": null,
+    "perp": 3,
+    "coverage": null,
+    "pw_dir": null
+   },
+   "elab-n": {
+    "tau": 1.0,
+    "perp": 2,
+    "coverage": 0.75,
+    "pw_dir": 0.0
+   },
+   "elab-s": {
+    "tau": 0.0,
+    "perp": 1,
+    "coverage": 1.0,
+    "pw_dir": 0.0
+   },
+   "elab-l": {
+    "tau": 0.0,
+    "perp": 2,
+    "coverage": 1.0,
+    "pw_dir": 0.2
+   },
+   "elab-z": {
+    "tau": null,
+    "perp": 3,
+    "coverage": null,
+    "pw_dir": 0.3333333333333333
+   },
+   "rings": {
+    "tau": null,
+    "perp": 3,
+    "coverage": null,
+    "pw_dir": 0.2
+   },
+   "rays": {
+    "tau": null,
+    "perp": 3,
+    "coverage": null,
+    "pw_dir": 0.2
+   },
+   "nest": {
+    "tau": 0.3333333333333333,
+    "perp": 1,
+    "coverage": 0.875,
+    "pw_dir": 0.0
+   },
+   "dimension": {
+    "tau": null,
+    "perp": 3,
+    "coverage": null,
+    "pw_dir": 0.0
+   },
+   "stem": {
+    "tau": 0.5555555555555555,
+    "perp": 0,
+    "coverage": 1.0,
+    "pw_dir": 0.3333333333333333
+   },
+   "check": {
+    "tau": null,
+    "perp": 3,
+    "coverage": null,
+    "pw_dir": 0.0
+   },
+   "noise-0": {
+    "tau": null,
+    "perp": 3,
+    "coverage": null,
+    "pw_dir": null
+   },
+   "noise-1": {
+    "tau": null,
+    "perp": 3,
+    "coverage": null,
+    "pw_dir": null
+   },
+   "noise-2": {
+    "tau": null,
+    "perp": 3,
+    "coverage": null,
+    "pw_dir": null
+   },
+   "noise-3": {
+    "tau": null,
+    "perp": 3,
+    "coverage": null,
     "pw_dir": null
    }
   },
@@ -1795,106 +2221,127 @@
    "dice": {
     "tau": 0.3333333333333333,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.7333333333333333
    },
    "ramp": {
     "tau": 0.19047619047619047,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "upper-eighths": {
     "tau": 0.3333333333333333,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "unfold": {
     "tau": 0.17037037037037037,
     "perp": 0,
-    "pw_dir": 0.6
+    "coverage": 0.8888888888888888,
+    "pw_dir": 0.5333333333333333
    },
    "risebar": {
     "tau": 0.6,
     "perp": 0,
-    "pw_dir": 0.7
+    "coverage": 0.8666666666666667,
+    "pw_dir": 0.5
    },
    "rotate4": {
     "tau": 0.2222222222222222,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "drain": {
     "tau": 0.11119251119251121,
     "perp": 0,
+    "coverage": 0.9259259259259259,
     "pw_dir": null
    },
    "elab-n": {
     "tau": 0.0,
     "perp": 0,
-    "pw_dir": 0.3333333333333333
+    "coverage": 1.0,
+    "pw_dir": 0.16666666666666666
    },
    "elab-s": {
     "tau": 0.3333333333333333,
     "perp": 0,
-    "pw_dir": 0.3333333333333333
+    "coverage": 0.9166666666666666,
+    "pw_dir": 0.16666666666666666
    },
    "elab-l": {
     "tau": 0.27619047619047615,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.1
    },
    "elab-z": {
     "tau": 0.5555555555555555,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.3333333333333333
    },
    "rings": {
     "tau": 0.24444444444444446,
     "perp": 0,
-    "pw_dir": 0.8
+    "coverage": 1.0,
+    "pw_dir": 0.7333333333333333
    },
    "rays": {
     "tau": 0.5333333333333333,
     "perp": 0,
-    "pw_dir": 0.8666666666666667
+    "coverage": 0.888888888888889,
+    "pw_dir": 0.7333333333333333
    },
    "nest": {
     "tau": 0.2222222222222222,
     "perp": 0,
+    "coverage": 0.8333333333333334,
     "pw_dir": 0.8333333333333334
    },
    "dimension": {
     "tau": 0.5555555555555555,
     "perp": 0,
+    "coverage": 0.8333333333333334,
     "pw_dir": 0.8333333333333334
    },
    "stem": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.6666666666666666
    },
    "check": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.6666666666666666
    },
    "noise-0": {
     "tau": 0.4444444444444445,
     "perp": 0,
+    "coverage": 0.9333333333333332,
     "pw_dir": null
    },
    "noise-1": {
     "tau": 0.3555555555555556,
     "perp": 0,
+    "coverage": 0.9444444444444445,
     "pw_dir": null
    },
    "noise-2": {
     "tau": 0.4000000000000001,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "noise-3": {
     "tau": 0.37777777777777777,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    }
   },
@@ -1902,106 +2349,127 @@
    "dice": {
     "tau": 0.4666666666666666,
     "perp": 0,
-    "pw_dir": 0.4
+    "coverage": 1.0,
+    "pw_dir": 0.2
    },
    "ramp": {
     "tau": 0.20634920634920637,
     "perp": 0,
+    "coverage": 0.875,
     "pw_dir": null
    },
    "upper-eighths": {
     "tau": 0.15873015873015872,
     "perp": 0,
+    "coverage": 0.9047619047619048,
     "pw_dir": null
    },
    "unfold": {
     "tau": 0.13333333333333333,
     "perp": 0,
-    "pw_dir": 0.5333333333333333
+    "coverage": 0.9444444444444445,
+    "pw_dir": 0.4666666666666667
    },
    "risebar": {
-    "tau": 0.7333333333333334,
-    "perp": 0,
+    "tau": 0.9,
+    "perp": 1,
+    "coverage": 0.9,
     "pw_dir": 0.4
    },
    "rotate4": {
     "tau": 0.4444444444444444,
     "perp": 0,
+    "coverage": 0.9166666666666666,
     "pw_dir": null
    },
    "drain": {
     "tau": 0.34920634920634924,
     "perp": 0,
+    "coverage": 0.9629629629629629,
     "pw_dir": null
    },
    "elab-n": {
     "tau": 0.4444444444444444,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "elab-s": {
     "tau": 0.6666666666666666,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "elab-l": {
     "tau": 0.26666666666666666,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.1
    },
    "elab-z": {
     "tau": 0.5555555555555555,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "rings": {
     "tau": 0.5111111111111111,
     "perp": 0,
-    "pw_dir": 0.3333333333333333
+    "coverage": 1.0,
+    "pw_dir": 0.2
    },
    "rays": {
-    "tau": 0.4222222222222222,
-    "perp": 0,
-    "pw_dir": 0.4
+    "tau": 0.8,
+    "perp": 2,
+    "coverage": 0.8333333333333334,
+    "pw_dir": 0.4666666666666667
    },
    "nest": {
     "tau": 0.4444444444444444,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.5
    },
    "dimension": {
     "tau": 0.4444444444444444,
     "perp": 0,
+    "coverage": 0.9166666666666666,
     "pw_dir": 0.0
    },
    "stem": {
     "tau": 0.5555555555555555,
     "perp": 0,
+    "coverage": 0.8888888888888888,
     "pw_dir": 0.0
    },
    "check": {
     "tau": 0.7777777777777777,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.3333333333333333
    },
    "noise-0": {
     "tau": 0.4666666666666666,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "noise-1": {
     "tau": 0.3111111111111111,
     "perp": 0,
+    "coverage": 0.9444444444444445,
     "pw_dir": null
    },
    "noise-2": {
     "tau": 0.48888888888888893,
     "perp": 0,
+    "coverage": 0.9333333333333332,
     "pw_dir": null
    },
    "noise-3": {
     "tau": 0.19999999999999998,
     "perp": 0,
+    "coverage": 0.9444444444444445,
     "pw_dir": null
    }
   },
@@ -2009,213 +2477,383 @@
    "dice": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "ramp": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "upper-eighths": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "unfold": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 0.6666666666666666,
     "pw_dir": 0.2
    },
    "risebar": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.5
    },
    "rotate4": {
     "tau": 0.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "drain": {
     "tau": 0.8148148148148149,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "elab-n": {
     "tau": 0.6666666666666666,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.5
    },
    "elab-s": {
     "tau": 1.0,
     "perp": 0,
-    "pw_dir": 0.6666666666666666
+    "coverage": 1.0,
+    "pw_dir": 0.3333333333333333
    },
    "elab-l": {
     "tau": 0.9333333333333332,
     "perp": 0,
+    "coverage": 0.8666666666666667,
     "pw_dir": 0.7
    },
    "elab-z": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "rings": {
     "tau": 0.4222222222222222,
     "perp": 0,
-    "pw_dir": 0.8666666666666667
+    "coverage": 1.0,
+    "pw_dir": 0.6666666666666666
    },
    "rays": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 0.9444444444444445,
     "pw_dir": 0.8
    },
    "nest": {
     "tau": 0.7777777777777777,
     "perp": 0,
+    "coverage": 0.8333333333333334,
     "pw_dir": 0.6666666666666666
    },
    "dimension": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "stem": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "check": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "noise-0": {
     "tau": null,
     "perp": 3,
+    "coverage": null,
     "pw_dir": null
    },
    "noise-1": {
     "tau": null,
     "perp": 3,
+    "coverage": null,
     "pw_dir": null
    },
    "noise-2": {
     "tau": null,
     "perp": 3,
+    "coverage": null,
     "pw_dir": null
    },
    "noise-3": {
     "tau": null,
     "perp": 3,
+    "coverage": null,
     "pw_dir": null
    }
   },
-  "qwen3-4b": {
+  "phi4mini": {
    "dice": {
-    "tau": 0.2888888888888889,
+    "tau": 0.33333333333333337,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "ramp": {
-    "tau": 0.19047619047619047,
+    "tau": 0.608327351040919,
     "perp": 0,
+    "coverage": 0.875,
     "pw_dir": null
    },
    "upper-eighths": {
-    "tau": 0.2698412698412698,
-    "perp": 0,
+    "tau": null,
+    "perp": 2,
+    "coverage": null,
     "pw_dir": null
    },
    "unfold": {
-    "tau": 0.19999999999999998,
+    "tau": 0.20000000000000004,
     "perp": 0,
+    "coverage": 0.6111111111111112,
     "pw_dir": 0.0
    },
    "risebar": {
-    "tau": 0.19999999999999998,
+    "tau": 0.2222222222222222,
     "perp": 0,
+    "coverage": 0.8000000000000002,
     "pw_dir": 0.0
    },
    "rotate4": {
-    "tau": 0.2222222222222222,
+    "tau": 0.611111111111111,
     "perp": 0,
+    "coverage": 0.5833333333333334,
     "pw_dir": null
    },
    "drain": {
-    "tau": 0.11111111111111112,
-    "perp": 0,
+    "tau": null,
+    "perp": 3,
+    "coverage": null,
     "pw_dir": null
    },
    "elab-n": {
-    "tau": 0.5512984248616433,
+    "tau": 0.4444444444444444,
     "perp": 0,
+    "coverage": 0.8333333333333334,
     "pw_dir": 0.0
    },
    "elab-s": {
-    "tau": 0.0909090909090909,
+    "tau": 0.6222222222222222,
     "perp": 0,
+    "coverage": 0.8333333333333334,
     "pw_dir": 0.0
    },
    "elab-l": {
-    "tau": 0.29411764705882354,
-    "perp": 0,
+    "tau": null,
+    "perp": 1,
+    "coverage": null,
     "pw_dir": 0.0
    },
    "elab-z": {
-    "tau": 0.7777777777777778,
-    "perp": 0,
+    "tau": 0.3333333333333333,
+    "perp": 1,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "rings": {
-    "tau": 0.12929292929292932,
+    "tau": 0.06666666666666667,
     "perp": 0,
+    "coverage": 0.8333333333333334,
     "pw_dir": 0.0
    },
    "rays": {
-    "tau": 0.24444444444444446,
+    "tau": 0.3744444444444444,
     "perp": 0,
+    "coverage": 0.5555555555555556,
     "pw_dir": 0.0
    },
    "nest": {
-    "tau": 0.3333333333333333,
-    "perp": 0,
+    "tau": 0.0,
+    "perp": 1,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "dimension": {
-    "tau": 0.40740740740740744,
+    "tau": 0.3333333333333333,
     "perp": 0,
+    "coverage": 0.875,
     "pw_dir": 0.0
    },
    "stem": {
-    "tau": 1.0,
+    "tau": 0.7777777777777777,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "check": {
     "tau": 0.7777777777777777,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "noise-0": {
-    "tau": 0.4000000000000001,
-    "perp": 0,
+    "tau": null,
+    "perp": 3,
+    "coverage": null,
     "pw_dir": null
    },
    "noise-1": {
-    "tau": 0.3333333333333333,
+    "tau": null,
     "perp": 0,
+    "coverage": null,
     "pw_dir": null
    },
    "noise-2": {
-    "tau": 0.20000000000000004,
-    "perp": 0,
+    "tau": null,
+    "perp": 3,
+    "coverage": null,
     "pw_dir": null
    },
    "noise-3": {
+    "tau": null,
+    "perp": 1,
+    "coverage": null,
+    "pw_dir": null
+   }
+  },
+  "qwen25-3b": {
+   "dice": {
+    "tau": 1.0,
+    "perp": 2,
+    "coverage": 0.8333333333333334,
+    "pw_dir": 0.3076923076923077
+   },
+   "ramp": {
+    "tau": 0.2857142857142857,
+    "perp": 1,
+    "coverage": 0.6875,
+    "pw_dir": null
+   },
+   "upper-eighths": {
+    "tau": 0.0,
+    "perp": 0,
+    "coverage": 0.14285714285714285,
+    "pw_dir": null
+   },
+   "unfold": {
+    "tau": 0.06666666666666667,
+    "perp": 1,
+    "coverage": 1.0,
+    "pw_dir": 0.0
+   },
+   "risebar": {
+    "tau": 0.5873015873015873,
+    "perp": 0,
+    "coverage": 0.6666666666666666,
+    "pw_dir": 0.3
+   },
+   "rotate4": {
+    "tau": null,
+    "perp": 3,
+    "coverage": null,
+    "pw_dir": null
+   },
+   "drain": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": null
+   },
+   "elab-n": {
+    "tau": 0.4444444444444444,
+    "perp": 0,
+    "coverage": 0.9166666666666666,
+    "pw_dir": 0.16666666666666666
+   },
+   "elab-s": {
+    "tau": 1.0,
+    "perp": 0,
+    "coverage": 1.0,
+    "pw_dir": 0.0
+   },
+   "elab-l": {
+    "tau": 0.3333333333333333,
+    "perp": 0,
+    "coverage": 0.8,
+    "pw_dir": 0.1
+   },
+   "elab-z": {
+    "tau": 1.0,
+    "perp": 0,
+    "coverage": 1.0,
+    "pw_dir": 0.0
+   },
+   "rings": {
+    "tau": 0.24444444444444444,
+    "perp": 0,
+    "coverage": 0.8333333333333334,
+    "pw_dir": 0.3333333333333333
+   },
+   "rays": {
     "tau": 0.2888888888888889,
     "perp": 0,
+    "coverage": 0.7222222222222222,
+    "pw_dir": 0.26666666666666666
+   },
+   "nest": {
+    "tau": 0.3333333333333333,
+    "perp": 2,
+    "coverage": 0.75,
+    "pw_dir": 0.6666666666666666
+   },
+   "dimension": {
+    "tau": 0.4444444444444444,
+    "perp": 0,
+    "coverage": 0.9166666666666666,
+    "pw_dir": 0.0
+   },
+   "stem": {
+    "tau": 0.5555555555555555,
+    "perp": 0,
+    "coverage": 0.8888888888888888,
+    "pw_dir": 0.0
+   },
+   "check": {
+    "tau": 1.0,
+    "perp": 0,
+    "coverage": 0.8888888888888888,
+    "pw_dir": 0.3333333333333333
+   },
+   "noise-0": {
+    "tau": null,
+    "perp": 1,
+    "coverage": null,
+    "pw_dir": null
+   },
+   "noise-1": {
+    "tau": null,
+    "perp": 0,
+    "coverage": null,
+    "pw_dir": null
+   },
+   "noise-2": {
+    "tau": null,
+    "perp": 0,
+    "coverage": null,
+    "pw_dir": null
+   },
+   "noise-3": {
+    "tau": null,
+    "perp": 0,
+    "coverage": null,
     "pw_dir": null
    }
   },
@@ -2223,106 +2861,127 @@
    "dice": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "ramp": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "upper-eighths": {
     "tau": 0.619047619047619,
     "perp": 0,
+    "coverage": 0.9523809523809524,
     "pw_dir": null
    },
    "unfold": {
     "tau": 0.4666666666666666,
     "perp": 0,
+    "coverage": 0.8333333333333334,
     "pw_dir": 0.4
    },
    "risebar": {
     "tau": 0.9333333333333332,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.2
    },
    "rotate4": {
     "tau": 0.6666666666666666,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "drain": {
     "tau": 0.3783068783068783,
     "perp": 0,
+    "coverage": 0.9259259259259259,
     "pw_dir": null
    },
    "elab-n": {
     "tau": 0.7777777777777777,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.5
    },
    "elab-s": {
     "tau": 0.8888888888888888,
     "perp": 0,
-    "pw_dir": 0.3333333333333333
+    "coverage": 1.0,
+    "pw_dir": 0.0
    },
    "elab-l": {
     "tau": 0.39999999999999997,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.5
    },
    "elab-z": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "rings": {
     "tau": 0.6888888888888888,
     "perp": 0,
-    "pw_dir": 0.6666666666666666
+    "coverage": 1.0,
+    "pw_dir": 0.4
    },
    "rays": {
     "tau": 0.688888888888889,
     "perp": 0,
+    "coverage": 0.9444444444444445,
     "pw_dir": 0.6
    },
    "nest": {
     "tau": 0.7777777777777777,
     "perp": 0,
+    "coverage": 0.8333333333333334,
     "pw_dir": 0.16666666666666666
    },
    "dimension": {
     "tau": 0.8888888888888888,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.5
    },
    "stem": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "check": {
     "tau": 0.5555555555555555,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "noise-0": {
     "tau": null,
     "perp": 3,
+    "coverage": null,
     "pw_dir": null
    },
    "noise-1": {
     "tau": 0.4444444444444445,
     "perp": 0,
+    "coverage": 0.9444444444444445,
     "pw_dir": null
    },
    "noise-2": {
     "tau": 0.3111111111111111,
     "perp": 0,
+    "coverage": 0.9333333333333332,
     "pw_dir": null
    },
    "noise-3": {
     "tau": 0.15555555555555556,
     "perp": 0,
+    "coverage": 0.8333333333333334,
     "pw_dir": null
    }
   },
@@ -2330,106 +2989,127 @@
    "dice": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "ramp": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "upper-eighths": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "unfold": {
     "tau": 0.7333333333333334,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.4666666666666667
    },
    "risebar": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.7
    },
    "rotate4": {
     "tau": 0.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "drain": {
     "tau": 0.8148148148148149,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "elab-n": {
     "tau": 0.6666666666666666,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.16666666666666666
    },
    "elab-s": {
     "tau": 0.5555555555555555,
     "perp": 0,
-    "pw_dir": 0.16666666666666666
+    "coverage": 1.0,
+    "pw_dir": 0.0
    },
    "elab-l": {
     "tau": 0.8000000000000002,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.3
    },
    "elab-z": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.3333333333333333
    },
    "rings": {
     "tau": 0.8222222222222223,
     "perp": 0,
-    "pw_dir": 1.0
+    "coverage": 1.0,
+    "pw_dir": 0.8
    },
    "rays": {
     "tau": 0.9555555555555556,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.8
    },
    "nest": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.5
    },
    "dimension": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.8333333333333334
    },
    "stem": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 1.0
    },
    "check": {
     "tau": 1.0,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": 0.0
    },
    "noise-0": {
     "tau": 0.4,
     "perp": 2,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "noise-1": {
     "tau": null,
     "perp": 3,
+    "coverage": null,
     "pw_dir": null
    },
    "noise-2": {
     "tau": 0.5,
     "perp": 1,
+    "coverage": 1.0,
     "pw_dir": null
    },
    "noise-3": {
     "tau": 0.2888888888888889,
     "perp": 0,
+    "coverage": 1.0,
     "pw_dir": null
    }
   }
@@ -2524,24 +3204,24 @@
    }
   },
   "grok46[sheet]": {
-   "ordered": 68,
-   "agree": 65,
+   "ordered": 88,
+   "agree": 83,
    "by_surveyor": {
     "sonnet5-1": [
-     38,
-     39
+     50,
+     51
     ],
     "fable-1": [
-     22,
-     24
-    ],
-    "sonnet-survey-2": [
-     4,
-     4
+     26,
+     30
     ],
     "sonnet-survey-1": [
-     1,
-     1
+     2,
+     2
+    ],
+    "sonnet-survey-2": [
+     5,
+     5
     ]
    }
   },
@@ -2568,7 +3248,7 @@
    }
   },
   "hermes3-3b[single]": {
-   "ordered": 10,
+   "ordered": 12,
    "agree": 7,
    "by_surveyor": {
     "sonnet5-1": [
@@ -2577,21 +3257,21 @@
     ],
     "fable-1": [
      3,
-     4
+     6
     ]
    }
   },
   "llama32-3b[single]": {
-   "ordered": 43,
-   "agree": 26,
+   "ordered": 41,
+   "agree": 27,
    "by_surveyor": {
     "fable-1": [
-     8,
-     17
+     9,
+     16
     ],
     "sonnet5-1": [
      13,
-     19
+     18
     ],
     "sonnet-survey-2": [
      3,
@@ -2604,38 +3284,34 @@
    }
   },
   "mistral7b[single]": {
-   "ordered": 20,
+   "ordered": 14,
    "agree": 9,
    "by_surveyor": {
     "sonnet5-1": [
-     6,
-     10
+     5,
+     6
     ],
     "sonnet-survey-1": [
      1,
      1
     ],
     "fable-1": [
-     2,
-     8
-    ],
-    "sonnet-survey-2": [
-     0,
-     1
+     3,
+     7
     ]
    }
   },
   "opus55[single]": {
-   "ordered": 103,
-   "agree": 100,
+   "ordered": 104,
+   "agree": 101,
    "by_surveyor": {
     "fable-1": [
      30,
      32
     ],
     "sonnet5-1": [
-     63,
-     64
+     64,
+     65
     ],
     "sonnet-survey-2": [
      5,
@@ -2652,11 +3328,19 @@
    "agree": 0,
    "by_surveyor": {}
   },
-  "qwen3-4b[single]": {
-   "ordered": 1,
-   "agree": 1,
+  "qwen25-3b[single]": {
+   "ordered": 10,
+   "agree": 6,
    "by_surveyor": {
     "sonnet5-1": [
+     4,
+     5
+    ],
+    "fable-1": [
+     1,
+     4
+    ],
+    "sonnet-survey-2": [
      1,
      1
     ]
@@ -2756,6 +3440,24 @@
     0
    ]
   },
+  "glimmer30b-sheet[sheet]": {
+   "directed": 0,
+   "agree": 0,
+   "order": "·╶╌╍━═⚬○◎◉⬤",
+   "unconfirmed_adjacent": [
+    "·╶:?",
+    "╶╌:?",
+    "╌╍:?",
+    "╍━:?",
+    "━═:?",
+    "═⚬:?",
+    "⚬○:?",
+    "○◎:?",
+    "◎◉:?",
+    "◉⬤:?"
+   ],
+   "gestalt": null
+  },
   "grok46[sheet]": {
    "directed": 37,
    "agree": 36,
@@ -2794,7 +3496,7 @@
     "━═:mixed",
     "⚬○:rev",
     "○◎:rev",
-    "◎◉:flip"
+    "◎◉:unparsed"
    ],
    "gestalt": [
     0.20269360269360268,
@@ -2859,58 +3561,63 @@
   {
    "id": "P1",
    "text": "tie→perp dissolution ≥0.60 (Claude) / ≥0.50 (other frontier)",
+   "registered_verdict": "FAIL (6 of 8 testable runs fail)",
    "cells": [
     "gemini31pro[sheet]: 0.72 (n=122) PASS (thr 0.5)",
     "gemini38flash[sheet]: 0.65 (n=142) PASS (thr 0.5)",
-    "grok46[sheet]: 0.26 (n=121) FAIL (thr 0.5)",
+    "grok46[sheet]: 0.37 (n=94) FAIL (thr 0.5)",
     "haiku45[single]: 0.40 (n=123) FAIL (thr 0.6)",
-    "opus55[single]: 0.52 (n=143) FAIL (thr 0.6)",
+    "opus55[single]: 0.51 (n=144) FAIL (thr 0.6)",
     "sonnet55[sheet]: 0.35 (n=135) FAIL (thr 0.6)",
-    "sonnet55[single]: 0.27 (n=142) FAIL (thr 0.6)",
+    "sonnet55[single]: 0.28 (n=142) FAIL (thr 0.6)",
     "sonnet5[single]: 0.36 (n=120) FAIL (thr 0.6)"
    ]
   },
   {
    "id": "P2",
    "text": "small local: ⟂ share of perp presentations <0.30",
+   "registered_verdict": "PASS (every testable run passes)",
    "cells": [
     "gemma3-4b[single]: 0.06 (n=640) PASS",
     "llama32-3b[single]: 0.18 (n=640) PASS",
-    "qwen3-4b[single]: 0.00 (n=640) PASS"
+    "phi4mini[single]: 0.23 (n=640) PASS"
    ]
   },
   {
    "id": "P2b",
    "text": "small local: tie→perp dissolution <0.40",
+   "registered_verdict": "PASS (every testable run passes)",
    "cells": [
     "gemma3-4b[single]: 0.01 (n=91) PASS",
-    "llama32-3b[single]: 0.07 (n=107) PASS",
-    "qwen3-4b[single]: n<min (0)"
+    "llama32-3b[single]: 0.06 (n=84) PASS",
+    "phi4mini[single]: n<min (5)"
    ]
   },
   {
    "id": "P3",
    "text": "frontier: perp survival fresh-seed-local minus fresh-mixed ≥ +0.30",
+   "registered_verdict": "PASS (every testable run passes)",
    "cells": [
     "gemini31pro[sheet]: +0.61 PASS",
     "gemini38flash[sheet]: +0.74 PASS",
-    "grok46[sheet]: +0.40 PASS",
+    "grok46[sheet]: +0.46 PASS",
     "haiku45[single]: +0.31 PASS",
     "opus55[single]: +0.65 PASS",
     "sonnet55[sheet]: +0.50 PASS",
-    "sonnet55[single]: +0.46 PASS",
+    "sonnet55[single]: +0.49 PASS",
     "sonnet5[single]: +0.49 PASS"
    ]
   },
   {
    "id": "P4",
    "text": "frontier: value-correlate higher under perp than forced",
+   "registered_verdict": "PASS (every testable run passes)",
    "cells": [
     "gemini31pro[sheet]: forced 0.95 → perp 1.00 PASS",
     "gemini38flash[sheet]: forced 0.98 → perp 1.00 PASS",
     "grok46[sheet]: forced 0.97 → perp 1.00 PASS",
     "haiku45[single]: forced 0.85 → perp 0.91 PASS",
-    "opus55[single]: forced 0.95 → perp 1.00 PASS",
+    "opus55[single]: forced 0.97 → perp 1.00 PASS",
     "sonnet55[sheet]: forced 0.90 → perp 0.96 PASS",
     "sonnet55[single]: forced 0.90 → perp 1.00 PASS",
     "sonnet5[single]: forced 0.88 → perp 1.00 PASS"
@@ -2919,36 +3626,38 @@
   {
    "id": "P5f",
    "text": "frontier triads: cycle rate ≤0.05",
+   "registered_verdict": "FAIL (1 of 9 testable runs fail)",
    "cells": [
     "gemini31pro[sheet]: 0.00 (n=152) PASS",
     "gemini38flash[sheet]: 0.02 (n=173) PASS",
     "gpt56terra[sheet]: 0.01 (n=138) PASS",
-    "grok46[sheet]: 0.01 (n=127) PASS",
+    "grok46[sheet]: 0.01 (n=171) PASS",
     "haiku45[single]: 0.05 (n=110) PASS",
-    "opus55[single]: 0.02 (n=205) PASS",
+    "opus55[single]: 0.01 (n=203) PASS",
     "sonnet55[sheet]: 0.02 (n=161) PASS",
-    "sonnet55[single]: 0.01 (n=232) PASS",
+    "sonnet55[single]: 0.01 (n=230) PASS",
     "sonnet5[single]: 0.17 (n=181) FAIL"
    ]
   },
   {
    "id": "P5s",
    "text": "small local triads: cycle rate ≥0.15",
+   "registered_verdict": "FAIL (1 of 2 testable runs fail)",
    "cells": [
     "gemma3-4b[single]: 0.23 (n=177) PASS",
-    "llama32-3b[single]: 0.13 (n=273) FAIL",
-    "phi4mini[single]: n<min (3)",
-    "qwen3-4b[single]: 0.99 (n=600) PASS"
+    "llama32-3b[single]: 0.12 (n=222) FAIL",
+    "phi4mini[single]: n<min (4)"
    ]
   },
   {
    "id": "P6",
    "text": "frontier triads, uniform stratum: ⟂ ≥0.80",
+   "registered_verdict": "FAIL (1 of 9 testable runs fail)",
    "cells": [
     "gemini31pro[sheet]: 0.99 (n=540) PASS",
     "gemini38flash[sheet]: 0.98 (n=540) PASS",
     "gpt56terra[sheet]: 0.96 (n=540) PASS",
-    "grok46[sheet]: 0.83 (n=540) PASS",
+    "grok46[sheet]: 0.91 (n=540) PASS",
     "haiku45[single]: 0.73 (n=540) FAIL",
     "opus55[single]: 0.94 (n=540) PASS",
     "sonnet55[sheet]: 0.98 (n=540) PASS",
@@ -2959,13 +3668,14 @@
   {
    "id": "P7f",
    "text": "frontier triads: value-correlate ≥0.90",
+   "registered_verdict": "PASS (every testable run passes)",
    "cells": [
     "gemini31pro[sheet]: 1.00 (n=77) PASS",
     "gemini38flash[sheet]: 0.99 (n=87) PASS",
     "gpt56terra[sheet]: 0.95 (n=83) PASS",
-    "grok46[sheet]: 1.00 (n=65) PASS",
+    "grok46[sheet]: 0.99 (n=85) PASS",
     "haiku45[single]: 0.98 (n=60) PASS",
-    "opus55[single]: 1.00 (n=116) PASS",
+    "opus55[single]: 1.00 (n=118) PASS",
     "sonnet55[sheet]: 0.97 (n=86) PASS",
     "sonnet55[single]: 1.00 (n=109) PASS",
     "sonnet5[single]: 0.95 (n=65) PASS"
@@ -2974,23 +3684,24 @@
   {
    "id": "P7s",
    "text": "small local triads: value-correlate ≤0.75",
+   "registered_verdict": "PASS (every testable run passes)",
    "cells": [
     "gemma3-4b[single]: 0.46 (n=28) PASS",
-    "llama32-3b[single]: 0.51 (n=45) PASS",
-    "phi4mini[single]: n<min (2)",
-    "qwen3-4b[single]: n<min (0)"
+    "llama32-3b[single]: 0.51 (n=41) PASS",
+    "phi4mini[single]: n<min (2)"
    ]
   },
   {
    "id": "P8f",
    "text": "frontier triads: ink-correlate ≥0.65",
+   "registered_verdict": "FAIL (1 of 9 testable runs fail)",
    "cells": [
     "gemini31pro[sheet]: 0.83 (n=84) PASS",
     "gemini38flash[sheet]: 0.76 (n=98) PASS",
     "gpt56terra[sheet]: 0.71 (n=69) PASS",
-    "grok46[sheet]: 0.77 (n=86) PASS",
+    "grok46[sheet]: 0.78 (n=99) PASS",
     "haiku45[single]: 0.64 (n=72) FAIL",
-    "opus55[single]: 0.77 (n=119) PASS",
+    "opus55[single]: 0.77 (n=121) PASS",
     "sonnet55[sheet]: 0.73 (n=89) PASS",
     "sonnet55[single]: 0.69 (n=123) PASS",
     "sonnet5[single]: 0.69 (n=100) PASS"
@@ -2999,23 +3710,24 @@
   {
    "id": "P8s",
    "text": "small local triads: ink-correlate ≥0.60 (≥30 edges)",
+   "registered_verdict": "FAIL (2 of 2 testable runs fail)",
    "cells": [
     "gemma3-4b[single]: 0.55 (n=62) FAIL",
-    "llama32-3b[single]: 0.52 (n=114) FAIL",
-    "phi4mini[single]: n<min (1)",
-    "qwen3-4b[single]: n<min (0)"
+    "llama32-3b[single]: 0.51 (n=108) FAIL",
+    "phi4mini[single]: n<min (2)"
    ]
   },
   {
    "id": "P9",
    "text": "frontier conflict: value wins on 13 compiled-decode items ≥0.80",
+   "registered_verdict": "PASS (every testable run passes)",
    "cells": [
     "gemini31pro[sheet]: 1.00 (n=77) PASS",
     "gemini38flash[sheet]: 0.99 (n=78) PASS",
     "gpt56terra[sheet]: 1.00 (n=78) PASS",
     "grok46[sheet]: 0.97 (n=78) PASS",
     "haiku45[single]: 0.96 (n=73) PASS",
-    "opus55[single]: 0.99 (n=78) PASS",
+    "opus55[single]: 1.00 (n=78) PASS",
     "sonnet55[sheet]: 0.94 (n=77) PASS",
     "sonnet55[single]: 0.90 (n=78) PASS",
     "sonnet5[single]: 0.81 (n=72) PASS"
@@ -3024,6 +3736,7 @@
   {
    "id": "P10a",
    "text": "frontier: ☷ over ⚌ ≥0.75",
+   "registered_verdict": "pooled over frontier runs: 43/43 = 1.00 → PASS",
    "cells": [
     "gemini31pro[sheet]: 1.00 (n=4) PASS",
     "gemini38flash[sheet]: n<min (3)",
@@ -3039,6 +3752,7 @@
   {
    "id": "P10b",
    "text": "frontier: yang/ink side on equal-line grams ≥0.75",
+   "registered_verdict": "pooled over frontier runs: 95/117 = 0.81 → PASS",
    "cells": [
     "gemini31pro[sheet]: 0.56 (n=9) FAIL",
     "gemini38flash[sheet]: 1.00 (n=6) PASS",
@@ -3054,6 +3768,7 @@
   {
    "id": "P11",
    "text": "frontier: ‱ over % and ‰ ≥0.60",
+   "registered_verdict": "pooled over frontier runs: 35/101 = 0.35 → FAIL",
    "cells": [
     "gemini31pro[sheet]: 0.33 (n=6) FAIL",
     "gemini38flash[sheet]: 0.00 (n=12) FAIL",
@@ -3062,13 +3777,14 @@
     "haiku45[single]: 0.00 (n=11) FAIL",
     "opus55[single]: 0.17 (n=12) FAIL",
     "sonnet55[sheet]: 1.00 (n=12) PASS",
-    "sonnet55[single]: 0.67 (n=12) PASS",
+    "sonnet55[single]: 0.58 (n=12) FAIL",
     "sonnet5[single]: 0.75 (n=12) PASS"
    ]
   },
   {
    "id": "P12",
    "text": "frontier: ≈/⟂ on equal-value probes ≥0.60",
+   "registered_verdict": "pooled over frontier runs: 73/108 = 0.68 → PASS",
    "cells": [
     "gemini31pro[sheet]: 0.92 (n=12) PASS",
     "gemini38flash[sheet]: 0.92 (n=12) PASS",
@@ -3084,11 +3800,12 @@
   {
    "id": "P13",
    "text": "frontier: dice gestalt τ = 1 and noise foils ⟂ ≥0.80",
+   "registered_verdict": "dice τ=1 for every frontier judge: yes; noise ⟂ pooled 61/96 = 0.64 → FAIL",
    "cells": [
     "gemini31pro: dice 1.00, noise ⟂ 11/12 PASS",
     "gemini38flash: dice 1.00, noise ⟂ 6/12 FAIL",
     "gpt56terra: dice 1.00, noise ⟂ 9/12 FAIL",
-    "grok46: dice 1.00, noise ⟂ 3/12 FAIL",
+    "grok46: dice 1.00, noise ⟂ 4/12 FAIL",
     "haiku45: dice 1.00, noise ⟂ 10/12 PASS",
     "opus55: dice 1.00, noise ⟂ 12/12 PASS",
     "sonnet5: dice 1.00, noise ⟂ 3/12 FAIL",
@@ -3098,6 +3815,7 @@
   {
    "id": "P14",
    "text": "Claude: unfold & risebar gestalt τ ≥0.70 and pairwise consistent-directed ≤0.40",
+   "registered_verdict": "FAIL (5 of 8 testable runs fail)",
    "cells": [
     "haiku45 unfold: τ 0.33, pw 0.40 FAIL",
     "haiku45 risebar: τ 0.73, pw 0.30 PASS",
@@ -3112,9 +3830,10 @@
   {
    "id": "P15",
    "text": "frontier: elaboration ladders pairwise ≤0.40 and gestalt τ ≥0.60",
+   "registered_verdict": "read universally: FAIL; read as 'for frontier judges generally': 14 of 24 judge×ladder cells pass",
    "cells": [
     "gemini31pro elab-n: τ 0.78, pw 0.33 PASS",
-    "gemini31pro elab-s: τ 1.00, pw 0.50 FAIL",
+    "gemini31pro elab-s: τ 1.00, pw 0.17 PASS",
     "gemini31pro elab-l: τ ⟂, pw 0.30 FAIL",
     "gemini38flash elab-n: τ 0.78, pw 0.00 PASS",
     "gemini38flash elab-s: τ 1.00, pw 0.00 PASS",
@@ -3123,19 +3842,19 @@
     "gpt56terra elab-s: τ 0.44, pw 0.00 FAIL",
     "gpt56terra elab-l: τ 0.93, pw 0.20 PASS",
     "grok46 elab-n: τ 0.67, pw 0.50 FAIL",
-    "grok46 elab-s: τ 1.00, pw 0.67 FAIL",
+    "grok46 elab-s: τ 1.00, pw 0.50 FAIL",
     "grok46 elab-l: τ 1.00, pw 0.60 FAIL",
     "haiku45 elab-n: τ 0.89, pw 0.17 PASS",
-    "haiku45 elab-s: τ 0.67, pw 0.17 PASS",
+    "haiku45 elab-s: τ 0.67, pw 0.00 PASS",
     "haiku45 elab-l: τ 0.60, pw 0.10 PASS",
     "opus55 elab-n: τ 0.67, pw 0.50 FAIL",
-    "opus55 elab-s: τ 1.00, pw 0.67 FAIL",
+    "opus55 elab-s: τ 1.00, pw 0.33 PASS",
     "opus55 elab-l: τ 0.93, pw 0.70 FAIL",
     "sonnet5 elab-n: τ 0.78, pw 0.50 FAIL",
-    "sonnet5 elab-s: τ 0.89, pw 0.33 PASS",
+    "sonnet5 elab-s: τ 0.89, pw 0.00 PASS",
     "sonnet5 elab-l: τ 0.40, pw 0.50 FAIL",
     "sonnet55 elab-n: τ 0.67, pw 0.17 PASS",
-    "sonnet55 elab-s: τ 0.56, pw 0.17 FAIL",
+    "sonnet55 elab-s: τ 0.56, pw 0.00 FAIL",
     "sonnet55 elab-l: τ 0.80, pw 0.30 PASS"
    ]
   }

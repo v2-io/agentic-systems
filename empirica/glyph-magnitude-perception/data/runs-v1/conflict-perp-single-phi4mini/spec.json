@@ -1,0 +1,20 @@
+{
+ "run_id": "conflict-perp-single-phi4mini",
+ "protocol": "gmp-v1.0",
+ "instrument": "conflict",
+ "format": "perp",
+ "mode": "single",
+ "sheet_size": null,
+ "reps": 1,
+ "stimulus_file": "data/stimuli-v1/conflict.jsonl",
+ "stimulus_digest": "70e6ce538aef9322ea00dab7b0ed2b2a76f4bb50c4578a545c0fb4250c90adb6",
+ "judge_label": "phi4mini",
+ "judge": {
+  "adapter": "ollama",
+  "model": "phi4-mini"
+ },
+ "adapter_version": "a1",
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "context_residue": "local /api/chat with the study system prompt only; temperature 0, seed 0.",
+ "created": "2026-10-03T22:29:39.388299+00:00"
+}

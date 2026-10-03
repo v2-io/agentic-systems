@@ -210,12 +210,36 @@ def agy_call(model, system, prompt, timeout=900):
                     error=f"parse-fail: {ex}; stderr={p.stderr[-300:]}; stdout={p.stdout[-300:]}", adapter_meta={})
 
 # ---------------------------------------------------------------- registry
-ADAPTER_VERSION = {"claude": "a1", "ollama": "a1", "grok": "a2-no-tools", "codex": "a1", "agy": "a1"}
+
+# ---------------------------------------------------------------- llama.cpp server (OpenAI-compatible)
+def llamacpp_call(model, system, prompt, url="http://127.0.0.1:8080/v1/chat/completions", system_suffix="",
+                  temperature=0.0, max_tokens=512, timeout=900):
+    body = {"model": model, "messages": [{"role": "system", "content": system + system_suffix},
+                                          {"role": "user", "content": prompt}],
+            "temperature": temperature, "max_tokens": max_tokens, "seed": 0}
+    req = urllib.request.Request(url, json.dumps(body).encode(), {"Content-Type": "application/json"})
+    t0 = time.time()
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            out = json.load(r)
+    except Exception as ex:
+        return dict(raw=None, model_reported=None, usage={}, cost_usd=0.0, latency_s=time.time() - t0,
+                    error=f"http: {ex}", adapter_meta={})
+    ch = (out.get("choices") or [{}])[0]; msg = ch.get("message") or {}
+    u = out.get("usage") or {}
+    return dict(raw=msg.get("content") or None, model_reported=out.get("model"),
+                usage={"input_tokens": u.get("prompt_tokens"), "output_tokens": u.get("completion_tokens"),
+                       "thinking_chars": len(msg.get("reasoning_content") or "")},
+                cost_usd=0.0, latency_s=time.time() - t0, error=None if msg.get("content") else f"empty (finish={ch.get('finish_reason')})",
+                adapter_meta={"reasoning": (msg.get("reasoning_content") or "")[:2000], "finish": ch.get("finish_reason"),
+                              "system_suffix": system_suffix})
+
+ADAPTER_VERSION = {"claude": "a1", "ollama": "a1", "grok": "a2-no-tools", "codex": "a1", "agy": "a1", "llamacpp": "a1"}
 
 def make_judge(spec):
     """spec: {"adapter": ..., "model": ..., plus adapter kwargs} -> callable(system, prompt)"""
     a = spec["adapter"]; m = spec["model"]
-    kw = {k: v for k, v in spec.items() if k not in ("adapter", "model", "mode", "sheet_size", "workers", "label")}
+    kw = {k: v for k, v in spec.items() if k not in ("adapter", "model", "mode", "sheet_size", "workers", "label", "note", "INVALID")}
     fn = {"claude": claude_call, "ollama": ollama_call, "grok": grok_call,
-          "codex": codex_call, "agy": agy_call}[a]
+          "codex": codex_call, "agy": agy_call, "llamacpp": llamacpp_call}[a]
     return lambda system, prompt: fn(m, system, prompt, **kw)

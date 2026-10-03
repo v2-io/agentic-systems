@@ -67,6 +67,9 @@ def load_stimuli():
             r = json.loads(line); stim[r["pid"]] = r
     return stim
 
+# Judges whose adapter produced no valid answers (see PROTOCOL post-freeze notes): excluded from every analysis.
+INVALID_JUDGES = {"qwen3-4b": "adapter failure: think=false still emitted reasoning, num_predict=48 truncated it before any answer"}
+
 def load_runs(stim):
     """-> list of dicts: run spec + parsed presentations {(rep,pid): (verdict, more, by)} or gestalt parse."""
     runs = []
@@ -74,7 +77,10 @@ def load_runs(stim):
         if not d.is_dir() or d.name.endswith("-shakedown") or "-aborted" in d.name:
             continue
         spec = json.load(open(d / "spec.json"))
+        if spec.get("judge_label") in INVALID_JUDGES:
+            continue
         parsed, meta = {}, Counter()
+        long_answers = 0; n_single = 0
         think = []
         if not (d / "ledger.jsonl").exists():
             continue
@@ -96,6 +102,7 @@ def load_runs(stim):
             # rule: per (rep, presentation), the EARLIEST parseable answer in ledger order is used;
             # a presentation with no parseable answer in any call is 'unparsed'.
             if row["mode"] == "single":
+                n_single += 1; long_answers += len(res["raw"]) > 40
                 pid = row["pids"][0]; k = (row["rep"], pid)
                 if k not in parsed or parsed[k][0] == "unparsed":
                     s = stim[pid]; parsed[k] = I.parse_pair(res["raw"], s["a"], s["b"])
@@ -107,6 +114,7 @@ def load_runs(stim):
                     if k in parsed and parsed[k][0] != "unparsed":
                         continue
                     parsed[k] = pmap.get(it["id"], ("unparsed", None, None))
+        meta["long_answer_share"] = round(long_answers / n_single, 3) if n_single else None
         runs.append({"spec": spec, "parsed": parsed, "meta": meta,
                      "mean_thinking": (sum(think) / len(think)) if think else None})
     return runs
@@ -177,7 +185,8 @@ def analyze_format(runs, stim, out, js):
         for src in ("tie", "forced"):
             a = verdicts.get((jn, src)); p = verdicts.get((jn, "perp"))
             if a and p:
-                base = [k for k, v in a.items() if v[0] == "dir" and v[4] == "pilot-replication" and k in p]
+                base = [k for k, v in a.items() if v[0] == "dir" and v[4] == "pilot-replication" and k in p
+                        and p[k][0] != "unparsed"]  # unknown perp verdicts are excluded, never imputed
                 dis = sum(1 for k in base if p[k][0] == "perp")
                 row.append(fmt_rate(dis, len(base))); jsf.setdefault(jn, {})[f"{src}->perp"] = (dis, len(base))
             else:
@@ -206,8 +215,9 @@ def analyze_format(runs, stim, out, js):
 
 def analyze_triads(runs, stim, out, js):
     out.append("## Triads (claim 4; P5–P8)\n")
-    out.append("| judge | presentations | ⟂ | ⟂ (uniform stratum) | unparsed | first-shown share of directed answers | cycle rate (fully oriented sets) | cross-orientation agreement | value-correlate | ink-correlate | mean thinking tok/item |")
-    out.append("|---|---|---|---|---|---|---|---|---|---|---|")
+    out.append("*cycle rate (registered)* counts 3-cycles within an orientation set; by construction every such cycle is a set where all three answers chose the same screen position, so it measures position-uniformity as much as intransitivity (audit 2026-10-03). *bias-immune cycles* use only triads whose three pairs are consistent-directed across both orientations.\n")
+    out.append("| judge | presentations | ⟂ | ⟂ (uniform stratum) | unparsed | first-shown share of directed answers | cycle rate (registered) | bias-immune cycles | cross-orientation agreement (known pairs) | value-correlate | ink-correlate | mean thinking tok/item |")
+    out.append("|---|---|---|---|---|---|---|---|---|---|---|---|")
     jst = {}
     for r in sorted((r for r in runs if r["spec"]["instrument"] == "triads"), key=lambda r: judge_name(r["spec"])):
         jn = judge_name(r["spec"])
@@ -218,7 +228,7 @@ def analyze_triads(runs, stim, out, js):
         tri = defaultdict(lambda: defaultdict(dict))
         for pid, v in P.items():
             s = stim[pid]; tri[s["triad"]][s["oset"]][(s["a"], s["b"])] = v
-        cyc = full = 0; agree = shared = 0; edges = []
+        cyc = full = 0; agree = shared = 0; edges = []; tri_edges = defaultdict(list)
         for t, osets in tri.items():
             for o, rel in osets.items():
                 ori = []
@@ -235,19 +245,27 @@ def analyze_triads(runs, stim, out, js):
                 v1 = o1.get((b, a))
                 if v1 is None:
                     continue
-                shared += 1
                 pv = pair_verdict(v0, v1)
+                if pv[0] == "unparsed":
+                    continue  # unknown, not disagreement
+                shared += 1
                 if pv[0] in ("dir", "perp", "tie"):
                     agree += 1
                 if pv[0] == "dir":
-                    w = pv[1]; edges.append((b if w == a else a, w))
+                    w = pv[1]; edges.append((b if w == a else a, w)); tri_edges[t].append((b if w == a else a, w))
+        bi_full = bi_cyc = 0  # bias-immune: triads whose 3 pairs are all consistent-directed across orientations
+        for t, te in tri_edges.items():
+            if len(te) == 3:
+                bi_full += 1
+                outs = Counter(l for l, w in te); ins = Counter(w for l, w in te)
+                bi_cyc += all(outs[x] == 1 and ins[x] == 1 for x in set(outs) | set(ins))
         cor = correlates(edges)
-        jst[jn] = {"n": n, "perp": (c["perp"], n), "perp_uniform": (cu["perp"], nu), "unparsed": (c["unparsed"], n),
+        jst[jn] = {"bias_immune_cycles": (bi_cyc, bi_full), "n": n, "perp": (c["perp"], n), "perp_uniform": (cu["perp"], nu), "unparsed": (c["unparsed"], n),
                    "cycles": (cyc, full), "agree": (agree, shared), "value": cor["value"], "ink": cor["ink"],
                    "edges": len(edges), "thinking": r["mean_thinking"], "first_shown": (nfirst, nd)}
         th = f"{r['mean_thinking']:.0f}" if r["mean_thinking"] is not None else "–"
         out.append(f"| {jn} | {n} | {fmt_rate(c['perp'], n)} | {fmt_rate(cu['perp'], nu)} | {c['unparsed']/max(n,1):.2f} | {fmt_rate(nfirst, nd)} | "
-                   f"{fmt_rate(cyc, full)} | {fmt_rate(agree, shared)} | {fmt_rate(*cor['value'])} | {fmt_rate(*cor['ink'])} | {th} |")
+                   f"{fmt_rate(cyc, full)} | {fmt_rate(bi_cyc, bi_full)} | {fmt_rate(agree, shared)} | {fmt_rate(*cor['value'])} | {fmt_rate(*cor['ink'])} | {th} |")
     out.append("")
     js["triads"] = jst
 
@@ -350,20 +368,22 @@ def analyze_holistic(runs, stim, out, js):
         for (rep, pid), g in r["parsed"].items():
             s = stim[pid]; per[s["seq"]].append((s, g))
         for seq, lst in per.items():
-            taus = []; perp = 0; arrangements = []
+            taus = []; perp = 0; arrangements = []; covs = []
             for s, g in lst:
                 if g.get("kind") == "perp":
                     perp += 1; arrangements.append("⟂")
                 elif g.get("kind") == "order":
                     t = kendall_abs(g["order"], s["intended"])
                     taus.append(t if t is not None else 0.0); arrangements.append("".join(g["order"]))
+                    covs.append(len(set(g["order"]) & set(s["intended"])) / len(s["intended"]))
                 else:
                     arrangements.append("?")
             gest[jn][seq] = {"tau": (sum(taus) / len(taus)) if taus else None, "perp": perp, "n": len(lst),
+                             "coverage": (sum(covs) / len(covs)) if covs else None,
                              "self_consistent": len(set(arrangements)) == 1, "arr": arrangements}
     sets = [s["name"] for s in json.load(open(EXP / "harness/runner/holistic-sets-v1.json"))["sets"]] + [f"noise-{i}" for i in range(4)]
     judges = sorted(set(gest) | {j.split("[")[0] for j in pairw})
-    out.append("Gestalt: mean |τ| over the 3 shuffles (⟂ count / 3); `=` marks all three arrangements identical. Pairwise: consistent-directed share of the set's pairs (single or sheet mode as run), and in brackets the share of those directed pairs that agree with the reference direction.\n")
+    out.append("Gestalt: mean |τ| over the 3 shuffles (⟂ count / 3); `=` marks all three arrangements identical; `cov` = mean share of the set's glyphs actually placed in the order when below 1 (τ is computed only over placed glyphs). Pairwise: consistent-directed share of the set's pairs (single or sheet mode as run), and in brackets the share of those directed pairs that agree with the reference direction.\n")
     out.append("| set | " + " | ".join(judges) + " |")
     out.append("|---|" + "---|" * len(judges))
     jsh = {}
@@ -374,6 +394,8 @@ def analyze_holistic(runs, stim, out, js):
             gs = "–"
             if g:
                 gs = (f"{g['tau']:.2f}" if g["tau"] is not None else "–") + f" (⟂{g['perp']})" + ("=" if g["self_consistent"] else "")
+                if g.get("coverage") is not None and g["coverage"] < 0.999:
+                    gs += f" cov {g['coverage']:.2f}"
             pw = [v for jn, d in pairw.items() if jn.split("[")[0] == jl and "[single]" in jn for v in d.get(seq, [])] or \
                  [v for jn, d in pairw.items() if jn.split("[")[0] == jl for v in d.get(seq, [])]
             ps = ""
@@ -385,6 +407,7 @@ def analyze_holistic(runs, stim, out, js):
         out.append(f"| {seq} | " + " | ".join(cells) + " |")
     out.append("")
     js["holistic"] = {j: {s: {"tau": (v["gestalt"] or {}).get("tau"), "perp": (v["gestalt"] or {}).get("perp"),
+                               "coverage": (v["gestalt"] or {}).get("coverage"),
                                "pw_dir": (sum(1 for x in v["pairwise"] if x[0] == "dir") / len(v["pairwise"])) if v["pairwise"] else None}
                            for s, v in d.items()} for j, d in jsh.items()}
 
@@ -399,8 +422,9 @@ def analyze_seed_retest(runs, stim, out, js):
     out.append("Per seed-local triad (120): *ordered* = at least two of its three pairs are consistent-directed; "
                "*agrees* = every consistent-directed pair runs the same way along the record's written glyph order. "
                "Surveyor = the record's source survey.\n")
-    out.append("| judge | triads ordered | ordered triads agreeing with written order | by surveyor (agree/ordered) |")
-    out.append("|---|---|---|---|")
+    out.append("Chance = expected agreement if each committed pair were oriented at random (0.5 for two committed pairs, 0.25 for three). The seed stratum covers only fable-1, sonnet5-1, sonnet-survey-1 and sonnet-survey-2 (all Anthropic-family surveyors; PROTOCOL post-freeze notes).\n")
+    out.append("| judge | triads ordered | ordered triads agreeing with written order | chance | by surveyor (agree/ordered) |")
+    out.append("|---|---|---|---|---|")
     jss = {}
     for r in sorted((r for r in runs if r["spec"]["instrument"] == "triads"), key=lambda r: judge_name(r["spec"])):
         jn = judge_name(r["spec"])
@@ -409,7 +433,7 @@ def analyze_seed_retest(runs, stim, out, js):
             sv = stim[pid]
             if rep == 0 and sv["stratum"] == "seed-local":
                 tri[sv["triad"]][sv["oset"]][(sv["a"], sv["b"])] = (v, sv)
-        ordered = agree = 0; bys = defaultdict(lambda: [0, 0])
+        ordered = agree = 0; chance = 0.0; bys = defaultdict(lambda: [0, 0])
         for t, os_ in tri.items():
             o0, o1 = os_.get(0, {}), os_.get(1, {})
             rec = None; signs = []
@@ -425,10 +449,11 @@ def analyze_seed_retest(runs, stim, out, js):
             if rec is None or len(signs) < 2:
                 continue
             ordered += 1; ok = len(set(signs)) == 1; agree += ok
+            chance += 0.5 if len(signs) == 2 else 0.25  # random orientation of the committed pairs
             bys[rec["surveyor"]][0] += ok; bys[rec["surveyor"]][1] += 1
         jss[jn] = {"ordered": ordered, "agree": agree, "by_surveyor": dict(bys)}
         bs = ", ".join(f"{k} {v[0]}/{v[1]}" for k, v in sorted(bys.items()))
-        out.append(f"| {jn} | {ordered}/120 | {fmt_rate(agree, ordered)} | {bs} |")
+        out.append(f"| {jn} | {ordered}/120 | {fmt_rate(agree, ordered)} | {chance / ordered if ordered else float('nan'):.2f} | {bs} |")
     out.append("")
     js["seed_retest"] = jss
 
@@ -588,13 +613,48 @@ def score_predictions(js, out):
     rows.append(("P13", "frontier: dice gestalt τ = 1 and noise foils ⟂ ≥0.80", cells13))
     rows.append(("P14", "Claude: unfold & risebar gestalt τ ≥0.70 and pairwise consistent-directed ≤0.40", cells14))
     rows.append(("P15", "frontier: elaboration ladders pairwise ≤0.40 and gestalt τ ≥0.60", cells15))
+    # registered-form verdicts: PREDICTIONS-v1.0 words most predictions universally ("for every ... judge");
+    # P10-P12 and P13's noise half are worded over pooled frontier answers/presentations.
+    POOLED = {"P10a": ("P10a", 0.75, ">="), "P10b": ("P10b", 0.75, ">="), "P11": ("P11", 0.60, ">="), "P12": ("P12", 0.60, ">=")}
+    def pooled(key):
+        k = n = 0
+        for j, v in C.items():
+            if lab(j) in FRONTIER and key in v:
+                k += v[key][0]; n += v[key][1]
+        return k, n
+    reg = {}
+    for pid, text, cells in rows:
+        if pid in POOLED:
+            k, n = pooled(POOLED[pid][0]); thr = POOLED[pid][1]
+            reg[pid] = f"pooled over frontier runs: {k}/{n} = {k/n:.2f} → {'PASS' if n and k/n >= thr else 'FAIL'}" if n else "no data"
+        elif pid == "P13":
+            nz_k = sum(int(c.split("noise ⟂ ")[1].split("/")[0]) for c in cells)
+            nz_n = sum(int(c.split("noise ⟂ ")[1].split("/")[1].split()[0]) for c in cells)
+            dice_ok = all("dice 1.00" in c for c in cells)
+            reg[pid] = (f"dice τ=1 for every frontier judge: {'yes' if dice_ok else 'no'}; noise ⟂ pooled {nz_k}/{nz_n} = "
+                        f"{(nz_k/nz_n if nz_n else 0):.2f} → {'PASS' if dice_ok and nz_n and nz_k/nz_n >= 0.80 else 'FAIL'}")
+        elif pid == "P15":
+            npass = sum("PASS" in c for c in cells); nfail = sum("FAIL" in c for c in cells)
+            reg[pid] = f"read universally: {'PASS' if cells and nfail == 0 else 'FAIL'}; read as 'for frontier judges generally': {npass} of {npass + nfail} judge×ladder cells pass"
+        else:
+            testable = [c for c in cells if ("PASS" in c or "FAIL" in c)]
+            reg[pid] = ("untestable (no qualifying data)" if not testable else
+                        ("PASS (every testable run passes)" if all("PASS" in c for c in testable) else
+                         f"FAIL ({sum('FAIL' in c for c in testable)} of {len(testable)} testable runs fail)"))
+    out.append("### Registered verdicts, scored as worded\n")
+    out.append("| prediction | verdict |")
+    out.append("|---|---|")
+    for pid, text, cells in rows:
+        out.append(f"| {pid} — {text} | {reg[pid]} |")
+    out.append("")
+    out.append("### Per-run cells\n")
     for pid, text, cells in rows:
         npass = sum("PASS" in c for c in cells); nfail = sum("FAIL" in c for c in cells)
         out.append(f"**{pid}** — {text}: {npass} pass / {nfail} fail")
         for c in cells:
             out.append(f"- {c}")
         out.append("")
-    js["predictions"] = [{"id": r[0], "text": r[1], "cells": r[2]} for r in rows]
+    js["predictions"] = [{"id": r[0], "text": r[1], "registered_verdict": reg[r[0]], "cells": r[2]} for r in rows]
 
 def main():
     ap = argparse.ArgumentParser()
@@ -605,11 +665,13 @@ def main():
     stim = load_stimuli(); runs = load_runs(stim)
     out = ["# v1.0 results — generated by harness/runner/analyze_v1.py (do not hand-edit)\n",
            f"Runs included: {len(runs)} (shakedown excluded). Parser {I.PARSER_VERSION}. Rates are point [95% Wilson].\n"]
-    out.append("| run | calls ok | failed calls | presentations parsed | unparsed |")
+    out.append(f"Excluded as invalid: {', '.join(f'{k} ({v})' for k, v in INVALID_JUDGES.items())}.\n")
+    out.append("| run | failed calls | presentations parsed | unparsed | single-mode answers > 40 chars |")
     out.append("|---|---|---|---|---|")
     for r in runs:
         c = Counter((v[0] if isinstance(v, tuple) else v.get("kind")) for v in r["parsed"].values())
-        out.append(f"| {r['spec']['run_id']} | – | {r['meta'].get('failed-call', 0)} | {sum(c.values())} | {c.get('unparsed', 0)} |")
+        la = r["meta"].get("long_answer_share")
+        out.append(f"| {r['spec']['run_id']} | {r['meta'].get('failed-call', 0)} | {sum(c.values())} | {c.get('unparsed', 0)} | {'' if la is None else la} |")
     out.append("")
     js = {}
     analyze_format(runs, stim, out, js)

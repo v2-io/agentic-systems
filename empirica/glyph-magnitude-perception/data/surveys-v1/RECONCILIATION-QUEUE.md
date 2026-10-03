@@ -24,3 +24,13 @@
 ---
 
 *Queue walked in full with Joseph, 2026-08-25 late. Live remainder: the two explore-first gates (strength unification, unscored-vs-absent), the tabled immediacy sweep, the ingest-gated concordance (with its routed deposits incl. fable-1 unlinked restatements and the sonnet-survey-3 coverage asterisk), and the validation-battery candidates (mirror-confusability, render-dependence axis). Everything else resolved above with rulings inline.*
+
+## 2026-10-03 — what the v1.0 campaign did and did not touch (note for whoever walks this queue next)
+
+- **Strength gates (felt-strength unification; unscored-vs-absent; SEED-PRIORITY): not triggered.** v1.0 used survey records only as sampling loci, picked uniformly per record, with no strength-derived weighting. The top-40 candidate selection used surveyor *count* only. No felt-strength field was consumed anywhere, so neither gate was opened or discharged, and SEED-PRIORITY-v1 is still unimplemented.
+- **Ingest exploration: partly done, as a by-product.** Seed-pool construction (`harness/runner/stimuli.py`) and the top-40 concordance (`harness/top40/candidates.py`) both read the extractions directly.
+  - They surfaced a schema-variance hazard worth a line here: three extractions (grok-1, sonnet-survey-3, sonnet-survey-4) carry the record kind as `record_type`, while the others use `type`.
+  - A consumer reading only `type` silently drops 350 of 849 sequence records. The v1.0 seed stratum did exactly that; see PROTOCOL post-freeze notes.
+  - `harness/ingest/ingest.py` already reads both.
+- **Concordance: crude version only.** `harness/top40/candidates.py` computes per-record surveyor support (Jaccard ≥ 0.5 across surveyors). It is exploratory and carries no mechanism crosswalk. It is not the tabled concordance item, which stays open.
+- **Graduation by retest** has a first panel. For seed-local triads from fable-1, sonnet5-1 and sonnet-survey-1/2, frontier judges agree with the surveyors' written orders in 0.90–1.00 of ordered triads (`analysis/v1.0-results.md` §Seed retest). grok-1's records have not been retested.

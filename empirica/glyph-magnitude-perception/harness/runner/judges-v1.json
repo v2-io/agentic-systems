@@ -6,7 +6,8 @@
   "grok": "grok -p under an isolated HOME holding only a symlink to ~/.grok/auth.json and a minimal config (no arch-expert agent, no ~/.claude/CLAUDE.md, no skills, no memory); --system-prompt-override, --tools '', no subagents, no web. Verified 2026-10-03: `grok inspect` shows 0 project instructions; judge reports no Joseph/glyph context. Grok's own built-in harness preamble (~13.5k input tokens) remains and cannot be stripped from the CLI.",
   "codex": "codex exec under an isolated CODEX_HOME holding only a symlink to ~/.codex/auth.json (no AGENTS.md, memories, rules, skills); --ephemeral, read-only sandbox. No system-prompt override exists, so the study system line is prepended to the user turn. Codex's built-in agent preamble (~13k input tokens) remains. Verified 2026-10-03: judge reports no Joseph/glyph context.",
   "agy": "Gemini via the Antigravity CLI (agy -p), run in an empty cwd; HOME not isolated (agy's knowledge/brain stores exist under ~/.gemini/antigravity-cli). Verified 2026-10-03: judge reports no Joseph/glyph context. Study system line prepended to the user turn; agy harness preamble (~12k tokens) remains.",
-  "ollama": "local /api/chat with the study system prompt only; temperature 0, seed 0."
+  "ollama": "local /api/chat with the study system prompt only; temperature 0, seed 0.",
+  "llamacpp": "local llama-server, study system prompt plus the model's reasoning-strength line; no tools."
  },
  "judges": {
   "haiku45": {
@@ -54,7 +55,8 @@
   "qwen3-4b": {
    "adapter": "ollama",
    "model": "qwen3:4b",
-   "think": false
+   "think": false,
+   "INVALID": "adapter failure 2026-10-03: think=false still emitted reasoning into content and num_predict=48 cut it off before any answer; every call is truncated reasoning. Excluded from all analysis. /no_think does not stop qwen3:4b reasoning under ollama 0.34.4, and think=true needs >1500 tokens (~30 s) per item."
   },
   "gemma3-4b": {
    "adapter": "ollama",
@@ -81,6 +83,25 @@
   "llama33-70b": {
    "adapter": "ollama",
    "model": "llama3.3:70b"
+  },
+  "qwen25-3b": {
+   "adapter": "ollama",
+   "model": "qwen2.5:3b",
+   "note": "added 2026-10-03 as the non-thinking Alibaba-family substitute for qwen3-4b (exploratory; not in the registered panel)"
+  },
+  "glimmer30b": {
+   "adapter": "llamacpp",
+   "model": "muse-glimmer-30B-kquant-dynamic",
+   "system_suffix": "\nReasoning strength: low",
+   "max_tokens": 768,
+   "note": "Meta Muse Glimmer 30B (GGUF k-quant dynamic, Joseph's T7 copy) via llama.cpp llama-server b10358 with DFlash drafter; 'Reasoning strength: low' appended to the study system prompt per the model's control convention; temperature 0. Added 2026-10-03 at Joseph's suggestion (exploratory, key datapoints only)."
+  },
+  "glimmer30b-sheet": {
+   "adapter": "llamacpp",
+   "model": "muse-glimmer-30B-kquant-dynamic",
+   "system_suffix": "\nReasoning strength: low",
+   "max_tokens": 6000,
+   "note": "Meta Muse Glimmer 30B (GGUF k-quant dynamic, Joseph's T7 copy) via llama.cpp llama-server b10358 with DFlash drafter; 'Reasoning strength: low' appended to the study system prompt per the model's control convention; temperature 0. Added 2026-10-03 at Joseph's suggestion (exploratory, key datapoints only). Sheet-mode variant: max_tokens 6000 so the reasoning plus a 40-item JSON answer fits."
   }
  },
  "note_local_weights": "Most chat-model weights live on Joseph's external T7 drive (symlinked blobs; ~/.ollama/README-models-on-T7.md). It was unplugged when this registry was first written, so qwen3:4b, gemma3:4b, phi4-mini, mistral:7b were pulled to internal disk on 2026-10-03 (qwen3:4b's blob was previously a T7 symlink and is now a local copy). gpt-oss:latest (20B) is the T7 copy."

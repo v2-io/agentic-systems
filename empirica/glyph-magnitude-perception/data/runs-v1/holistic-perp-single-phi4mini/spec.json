@@ -1,0 +1,20 @@
+{
+ "run_id": "holistic-perp-single-phi4mini",
+ "protocol": "gmp-v1.0",
+ "instrument": "holistic",
+ "format": "perp",
+ "mode": "single",
+ "sheet_size": null,
+ "reps": 1,
+ "stimulus_file": "data/stimuli-v1/holistic-pairs.jsonl",
+ "stimulus_digest": "587e289412911c6c92be453ea287b324c2b3727b879d58c998d7ee505640501d",
+ "judge_label": "phi4mini",
+ "judge": {
+  "adapter": "ollama",
+  "model": "phi4-mini"
+ },
+ "adapter_version": "a1",
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "context_residue": "local /api/chat with the study system prompt only; temperature 0, seed 0.",
+ "created": "2026-10-03T22:30:06.317702+00:00"
+}

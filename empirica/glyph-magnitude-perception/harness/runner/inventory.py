@@ -13,7 +13,7 @@ for d in sorted(p for p in R.iterdir() if p.is_dir()):
     n = ok = bad = 0; ts = []; models = collections.Counter(); cost = 0.0
     for line in open(led):
         r = json.loads(line); n += 1; res = r["result"]
-        if res.get("raw") and not res.get("error") and not r.get("sheet_incomplete"):
+        if res.get("raw") and not res.get("error") and r.get("sheet_incomplete") is None:
             ok += 1
         else:
             bad += 1
