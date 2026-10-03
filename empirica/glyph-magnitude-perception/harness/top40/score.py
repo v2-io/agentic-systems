@@ -20,7 +20,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "runner"))
 import analyze_v1 as A
 
 EXP = pathlib.Path(__file__).resolve().parents[2]
-SMALL = {"llama32-3b", "qwen3-4b", "gemma3-4b", "phi4mini", "hermes3-3b", "mistral7b"}
+SMALL = {"llama32-3b", "qwen3-4b", "gemma3-4b", "phi4mini", "hermes3-3b", "mistral7b", "qwen25-3b"}
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--all", action="store_true")

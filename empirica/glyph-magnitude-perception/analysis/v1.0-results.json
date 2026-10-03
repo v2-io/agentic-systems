@@ -1705,6 +1705,134 @@
     "pw_dir": null
    }
   },
+  "glimmer30b-sheet": {
+   "dice": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": 1.0
+   },
+   "ramp": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": null
+   },
+   "upper-eighths": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": null
+   },
+   "unfold": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": 0.06666666666666667
+   },
+   "risebar": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": 0.2
+   },
+   "rotate4": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": null
+   },
+   "drain": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": null
+   },
+   "elab-n": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": 0.0
+   },
+   "elab-s": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": 0.0
+   },
+   "elab-l": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": 0.0
+   },
+   "elab-z": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": 0.0
+   },
+   "rings": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": 0.6
+   },
+   "rays": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": 0.6
+   },
+   "nest": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": 0.3333333333333333
+   },
+   "dimension": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": 0.8333333333333334
+   },
+   "stem": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": 0.3333333333333333
+   },
+   "check": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": 0.3333333333333333
+   },
+   "noise-0": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": null
+   },
+   "noise-1": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": null
+   },
+   "noise-2": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": null
+   },
+   "noise-3": {
+    "tau": null,
+    "perp": null,
+    "coverage": null,
+    "pw_dir": null
+   }
+  },
   "gpt56terra": {
    "dice": {
     "tau": 1.0,
@@ -3441,20 +3569,16 @@
    ]
   },
   "glimmer30b-sheet[sheet]": {
-   "directed": 0,
-   "agree": 0,
-   "order": "·╶╌╍━═⚬○◎◉⬤",
+   "directed": 15,
+   "agree": 15,
+   "order": "·╌⚬○╶╍━═◎◉⬤",
    "unconfirmed_adjacent": [
-    "·╶:?",
-    "╶╌:?",
-    "╌╍:?",
-    "╍━:?",
-    "━═:?",
-    "═⚬:?",
-    "⚬○:?",
-    "○◎:?",
-    "◎◉:?",
-    "◉⬤:?"
+    "·╶:perp",
+    "╶╌:perp",
+    "╍━:mixed",
+    "━═:mixed",
+    "═⚬:perp",
+    "◎◉:mixed"
    ],
    "gestalt": null
   },
@@ -3514,6 +3638,23 @@
    "gestalt": [
     1.0,
     0
+   ]
+  },
+  "qwen25-3b[single]": {
+   "directed": 15,
+   "agree": 7,
+   "order": "╶╍⚬◎━═◉╌⬤○·",
+   "unconfirmed_adjacent": [
+    "·╶:rev",
+    "╶╌:unparsed",
+    "╌╍:flip",
+    "━═:mixed",
+    "═⚬:mixed",
+    "○◎:mixed"
+   ],
+   "gestalt": [
+    0.37777777777777777,
+    2
    ]
   },
   "sonnet55[sheet]": {

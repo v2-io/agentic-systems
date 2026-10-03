@@ -1,0 +1,21 @@
+{
+ "run_id": "signa-perp-single-qwen25-3b",
+ "protocol": "gmp-v1.0",
+ "instrument": "signa",
+ "format": "perp",
+ "mode": "single",
+ "sheet_size": null,
+ "reps": 1,
+ "stimulus_file": "data/stimuli-v1/consumer-signa-pairs.jsonl",
+ "stimulus_digest": "3f1dd0c7a4c385ffa754089b119c16d75627221335483e36f72b025ac5791b48",
+ "judge_label": "qwen25-3b",
+ "judge": {
+  "adapter": "ollama",
+  "model": "qwen2.5:3b",
+  "note": "added 2026-10-03 as the non-thinking Alibaba-family substitute for qwen3-4b (exploratory; not in the registered panel)"
+ },
+ "adapter_version": "a1",
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "context_residue": "local /api/chat with the study system prompt only; temperature 0, seed 0.",
+ "created": "2026-10-03T23:24:44.664950+00:00"
+}

@@ -492,7 +492,7 @@ def analyze_signa(runs, stim, out, js):
     out.append("Per judge: of the 55 pairs, how many are consistent-directed (both orders agree), how many of those run the SIGNA way, "
                "the perceived order by Copeland score (wins − losses over consistent-directed pairs; ties keep SIGNA order), "
                "and the adjacent SIGNA steps that judges did NOT confirm (⟂/≈/mixed or reversed). Gestalt = mean |τ| over 3 shuffles.\n")
-    out.append("| judge | directed / 55 | SIGNA-direction share | perceived order (Copeland) | adjacent steps not confirmed | gestalt |τ| (⟂) |")
+    out.append("| judge | directed / 55 | SIGNA-direction share | perceived order (Copeland) | adjacent steps not confirmed | gestalt mean abs τ (⟂ count) |")
     out.append("|---|---|---|---|---|---|")
     gest = {}
     for r in runs:

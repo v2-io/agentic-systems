@@ -1,5 +1,101 @@
 [
  {
+  "cand": 2,
+  "glyphs": "⚀⚁⚂⚃⚄⚅",
+  "n_surveyors": 7,
+  "stability": 1.0,
+  "floor": 1.0,
+  "universality": 1.0,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.2,
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.0
+  }
+ },
+ {
+  "cand": 11,
+  "glyphs": "0123456789🔟",
+  "n_surveyors": 3,
+  "stability": 1.0,
+  "floor": 1.0,
+  "universality": 1.0,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.2,
+   "mistral7b": 0.1,
+   "qwen25-3b": 0.4
+  }
+ },
+ {
+  "cand": 12,
+  "glyphs": "⓪①②③④⑤⑥⑦⑧⑨⑩",
+  "n_surveyors": 4,
+  "stability": 1.0,
+  "floor": 1.0,
+  "universality": 1.0,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.5,
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.4
+  }
+ },
+ {
+  "cand": 20,
+  "glyphs": "⅛¼⅜½⅝¾⅞",
+  "n_surveyors": 3,
+  "stability": 1.0,
+  "floor": 1.0,
+  "universality": 1.0,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.33,
+   "mistral7b": 0.33,
+   "qwen25-3b": 0.17
+  }
+ },
+ {
   "cand": 44,
   "glyphs": "¹²³",
   "n_surveyors": 2,
@@ -19,7 +115,8 @@
   },
   "small_models": {
    "llama32-3b": 0.0,
-   "mistral7b": 0.0
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -42,7 +139,8 @@
   },
   "small_models": {
    "llama32-3b": 0.0,
-   "mistral7b": 0.5
+   "mistral7b": 0.5,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -65,7 +163,8 @@
   },
   "small_models": {
    "llama32-3b": 0.5,
-   "mistral7b": 0.0
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -87,7 +186,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.5
+   "llama32-3b": 0.5,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -109,7 +209,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.67
+   "llama32-3b": 0.67,
+   "qwen25-3b": 0.33
   }
  },
  {
@@ -131,7 +232,128 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.5
+   "llama32-3b": 0.5,
+   "qwen25-3b": 0.0
+  }
+ },
+ {
+  "cand": 6,
+  "glyphs": "ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ",
+  "n_surveyors": 5,
+  "stability": 0.9848484848484849,
+  "floor": 0.9090909090909091,
+  "universality": 1.0,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 0.91,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.45,
+   "mistral7b": 0.09,
+   "qwen25-3b": 0.18
+  }
+ },
+ {
+  "cand": 7,
+  "glyphs": "⓵⓶⓷⓸⓹⓺⓻⓼⓽⓾",
+  "n_surveyors": 5,
+  "stability": 0.9814814814814815,
+  "floor": 0.8888888888888888,
+  "universality": 1.0,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 0.89,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.67,
+   "mistral7b": 0.11,
+   "qwen25-3b": 0.0
+  }
+ },
+ {
+  "cand": 14,
+  "glyphs": "❶❷❸❹❺❻❼❽❾❿",
+  "n_surveyors": 3,
+  "stability": 0.9814814814814815,
+  "floor": 0.8888888888888888,
+  "universality": 1.0,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 0.89,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.44,
+   "mistral7b": 0.22,
+   "qwen25-3b": 0.11
+  }
+ },
+ {
+  "cand": 16,
+  "glyphs": "٠١٢٣٤٥٦٧٨٩",
+  "n_surveyors": 2,
+  "stability": 0.9814814814814815,
+  "floor": 0.8888888888888888,
+  "universality": 1.0,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 0.89,
+   "grok46": 1.0,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.33,
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.0
+  }
+ },
+ {
+  "cand": 17,
+  "glyphs": "⁰¹²³⁴⁵⁶⁷⁸⁹",
+  "n_surveyors": 3,
+  "stability": 0.9814814814814815,
+  "floor": 0.8888888888888888,
+  "universality": 1.0,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 0.89,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.22,
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.22
   }
  },
  {
@@ -154,7 +376,80 @@
   },
   "small_models": {
    "llama32-3b": 0.44,
-   "mistral7b": 0.0
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.22
+  }
+ },
+ {
+  "cand": 0,
+  "glyphs": "▏▎▍▌▋▊▉█",
+  "n_surveyors": 7,
+  "stability": 0.9761904761904763,
+  "floor": 0.8571428571428571,
+  "universality": 1.0,
+  "gestalt": 0.9920634920634921,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 0.86,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.57,
+   "mistral7b": 0.29,
+   "qwen25-3b": 0.14
+  }
+ },
+ {
+  "cand": 19,
+  "glyphs": "⠀⠁⠃⠇⠏⠟⠿⣿",
+  "n_surveyors": 5,
+  "stability": 0.9761904761904762,
+  "floor": 0.8571428571428571,
+  "universality": 1.0,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 1.0,
+   "opus55": 0.86,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.29,
+   "mistral7b": 0.29,
+   "qwen25-3b": 0.0
+  }
+ },
+ {
+  "cand": 15,
+  "glyphs": "➀➁➂➃➄➅➆➇➈➉",
+  "n_surveyors": 3,
+  "stability": 0.9629629629629629,
+  "floor": 0.7777777777777778,
+  "universality": 0.8333333333333334,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 1.0,
+   "haiku45": 0.78,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.22,
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -177,7 +472,32 @@
   },
   "small_models": {
    "llama32-3b": 0.36,
-   "mistral7b": 0.09
+   "mistral7b": 0.09,
+   "qwen25-3b": 0.09
+  }
+ },
+ {
+  "cand": 1,
+  "glyphs": "▁▂▃▄▅▆▇█",
+  "n_surveyors": 7,
+  "stability": 0.9523809523809524,
+  "floor": 0.8571428571428571,
+  "universality": 1.0,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.86,
+   "gemini38flash": 0.86,
+   "grok46": 1.0,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.43,
+   "mistral7b": 0.29,
+   "qwen25-3b": 0.14
   }
  },
  {
@@ -200,7 +520,8 @@
   },
   "small_models": {
    "llama32-3b": 0.4,
-   "mistral7b": 0.0
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -223,7 +544,8 @@
   },
   "small_models": {
    "llama32-3b": 0.33,
-   "mistral7b": 0.33
+   "mistral7b": 0.33,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -246,7 +568,8 @@
   },
   "small_models": {
    "llama32-3b": 0.0,
-   "mistral7b": 0.33
+   "mistral7b": 0.33,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -269,7 +592,8 @@
   },
   "small_models": {
    "llama32-3b": 0.44,
-   "mistral7b": 0.11
+   "mistral7b": 0.11,
+   "qwen25-3b": 0.33
   }
  },
  {
@@ -292,7 +616,8 @@
   },
   "small_models": {
    "llama32-3b": 0.0,
-   "mistral7b": 0.0
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -314,7 +639,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.22
+   "llama32-3b": 0.22,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -337,7 +663,8 @@
   },
   "small_models": {
    "llama32-3b": 0.5,
-   "mistral7b": 0.0
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.5
   }
  },
  {
@@ -360,7 +687,8 @@
   },
   "small_models": {
    "llama32-3b": 0.5,
-   "mistral7b": 0.5
+   "mistral7b": 0.5,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -382,7 +710,32 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.5
+   "llama32-3b": 0.5,
+   "qwen25-3b": 0.5
+  }
+ },
+ {
+  "cand": 5,
+  "glyphs": "▫░▒▓█",
+  "n_surveyors": 7,
+  "stability": 0.9166666666666666,
+  "floor": 0.75,
+  "universality": 0.6666666666666666,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.75,
+   "gemini38flash": 0.75,
+   "grok46": 1.0,
+   "haiku45": 1.0,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.5,
+   "mistral7b": 0.25,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -405,55 +758,8 @@
   },
   "small_models": {
    "llama32-3b": 0.25,
-   "mistral7b": 0.25
-  }
- },
- {
-  "cand": 11,
-  "glyphs": "0123456789🔟",
-  "n_surveyors": 3,
-  "stability": 0.9142857142857144,
-  "floor": 0.4,
-  "universality": 0.8571428571428571,
-  "gestalt": 1.0,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "qwen25-3b": 0.4,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.2,
-   "mistral7b": 0.1
-  }
- },
- {
-  "cand": 12,
-  "glyphs": "⓪①②③④⑤⑥⑦⑧⑨⑩",
-  "n_surveyors": 4,
-  "stability": 0.9142857142857144,
-  "floor": 0.4,
-  "universality": 0.8571428571428571,
-  "gestalt": 1.0,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "qwen25-3b": 0.4,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.5,
-   "mistral7b": 0.0
+   "mistral7b": 0.25,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -476,7 +782,8 @@
   },
   "small_models": {
    "llama32-3b": 0.22,
-   "mistral7b": 0.22
+   "mistral7b": 0.22,
+   "qwen25-3b": 0.11
   }
  },
  {
@@ -499,7 +806,8 @@
   },
   "small_models": {
    "llama32-3b": 0.33,
-   "mistral7b": 0.33
+   "mistral7b": 0.33,
+   "qwen25-3b": 0.33
   }
  },
  {
@@ -522,7 +830,8 @@
   },
   "small_models": {
    "llama32-3b": 0.0,
-   "mistral7b": 0.0
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.11
   }
  },
  {
@@ -544,7 +853,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.33
+   "llama32-3b": 0.33,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -567,7 +877,8 @@
   },
   "small_models": {
    "llama32-3b": 0.67,
-   "mistral7b": 0.33
+   "mistral7b": 0.33,
+   "qwen25-3b": 0.33
   }
  },
  {
@@ -589,7 +900,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.33
   }
  },
  {
@@ -612,31 +924,8 @@
   },
   "small_models": {
    "llama32-3b": 0.33,
-   "mistral7b": 0.0
-  }
- },
- {
-  "cand": 20,
-  "glyphs": "⅛¼⅜½⅝¾⅞",
-  "n_surveyors": 3,
-  "stability": 0.8857142857142858,
-  "floor": 0.2,
-  "universality": 0.8571428571428571,
-  "gestalt": 1.0,
-  "n_judges": 7,
-  "direction_split": "6↑/1↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "qwen25-3b": 0.2,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.33,
-   "mistral7b": 0.33
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -658,7 +947,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.43
+   "llama32-3b": 0.43,
+   "qwen25-3b": 0.14
   }
  },
  {
@@ -680,31 +970,56 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.25
+   "llama32-3b": 0.25,
+   "qwen25-3b": 0.0
   }
  },
  {
-  "cand": 17,
-  "glyphs": "⁰¹²³⁴⁵⁶⁷⁸⁹",
-  "n_surveyors": 3,
-  "stability": 0.8730158730158731,
-  "floor": 0.2222222222222222,
-  "universality": 0.8571428571428571,
-  "gestalt": 1.0,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
+  "cand": 10,
+  "glyphs": "→⇒⇉⇛⇶",
+  "n_surveyors": 6,
+  "stability": 0.875,
+  "floor": 0.75,
+  "universality": 0.5,
+  "gestalt": 0.9500000000000001,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.75,
+   "gemini38flash": 1.0,
+   "grok46": 0.75,
+   "haiku45": 0.75,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.5,
+   "mistral7b": 0.25,
+   "qwen25-3b": 0.0
+  }
+ },
+ {
+  "cand": 4,
+  "glyphs": "○◔◑◕●",
+  "n_surveyors": 7,
+  "stability": 0.875,
+  "floor": 0.5,
+  "universality": 0.6666666666666666,
+  "gestalt": 0.9333333333333332,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
   "per_judge": {
    "gemini31pro": 1.0,
    "gemini38flash": 1.0,
    "grok46": 1.0,
-   "haiku45": 0.89,
+   "haiku45": 0.5,
    "opus55": 1.0,
-   "qwen25-3b": 0.22,
-   "sonnet55": 1.0
+   "sonnet55": 0.75
   },
   "small_models": {
-   "llama32-3b": 0.22,
-   "mistral7b": 0.0
+   "llama32-3b": 0.5,
+   "mistral7b": 0.25,
+   "qwen25-3b": 0.25
   }
  },
  {
@@ -726,103 +1041,8 @@
    "sonnet55": 0.89
   },
   "small_models": {
-   "llama32-3b": 0.22
-  }
- },
- {
-  "cand": 6,
-  "glyphs": "ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ",
-  "n_surveyors": 5,
-  "stability": 0.8701298701298701,
-  "floor": 0.18181818181818182,
-  "universality": 0.8571428571428571,
-  "gestalt": 1.0,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 0.91,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "qwen25-3b": 0.18,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.45,
-   "mistral7b": 0.09
-  }
- },
- {
-  "cand": 0,
-  "glyphs": "▏▎▍▌▋▊▉█",
-  "n_surveyors": 7,
-  "stability": 0.8571428571428573,
-  "floor": 0.14285714285714285,
-  "universality": 0.8571428571428571,
-  "gestalt": 0.9920634920634921,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 0.86,
-   "opus55": 1.0,
-   "qwen25-3b": 0.14,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.57,
-   "mistral7b": 0.29
-  }
- },
- {
-  "cand": 2,
-  "glyphs": "⚀⚁⚂⚃⚄⚅",
-  "n_surveyors": 7,
-  "stability": 0.8571428571428571,
-  "floor": 0.0,
-  "universality": 0.8571428571428571,
-  "gestalt": 1.0,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "qwen25-3b": 0.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.2,
-   "mistral7b": 0.0
-  }
- },
- {
-  "cand": 14,
-  "glyphs": "❶❷❸❹❺❻❼❽❾❿",
-  "n_surveyors": 3,
-  "stability": 0.8571428571428571,
-  "floor": 0.1111111111111111,
-  "universality": 0.8571428571428571,
-  "gestalt": 1.0,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 0.89,
-   "opus55": 1.0,
-   "qwen25-3b": 0.11,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.44,
-   "mistral7b": 0.22
+   "llama32-3b": 0.22,
+   "qwen25-3b": 0.22
   }
  },
  {
@@ -845,7 +1065,8 @@
   },
   "small_models": {
    "llama32-3b": 0.44,
-   "mistral7b": 0.0
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.11
   }
  },
  {
@@ -868,103 +1089,8 @@
   },
   "small_models": {
    "llama32-3b": 0.33,
-   "mistral7b": 0.33
-  }
- },
- {
-  "cand": 7,
-  "glyphs": "⓵⓶⓷⓸⓹⓺⓻⓼⓽⓾",
-  "n_surveyors": 5,
-  "stability": 0.8412698412698413,
-  "floor": 0.0,
-  "universality": 0.8571428571428571,
-  "gestalt": 1.0,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 0.89,
-   "opus55": 1.0,
-   "qwen25-3b": 0.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.67,
-   "mistral7b": 0.11
-  }
- },
- {
-  "cand": 16,
-  "glyphs": "٠١٢٣٤٥٦٧٨٩",
-  "n_surveyors": 2,
-  "stability": 0.8412698412698413,
-  "floor": 0.0,
-  "universality": 0.8571428571428571,
-  "gestalt": 1.0,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 0.89,
-   "grok46": 1.0,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "qwen25-3b": 0.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.33,
-   "mistral7b": 0.0
-  }
- },
- {
-  "cand": 1,
-  "glyphs": "▁▂▃▄▅▆▇█",
-  "n_surveyors": 7,
-  "stability": 0.8367346938775511,
-  "floor": 0.14285714285714285,
-  "universality": 0.8571428571428571,
-  "gestalt": 1.0,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
-  "per_judge": {
-   "gemini31pro": 0.86,
-   "gemini38flash": 0.86,
-   "grok46": 1.0,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "qwen25-3b": 0.14,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.43,
-   "mistral7b": 0.29
-  }
- },
- {
-  "cand": 19,
-  "glyphs": "⠀⠁⠃⠇⠏⠟⠿⣿",
-  "n_surveyors": 5,
-  "stability": 0.836734693877551,
-  "floor": 0.0,
-  "universality": 0.8571428571428571,
-  "gestalt": 1.0,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 1.0,
-   "opus55": 0.86,
-   "qwen25-3b": 0.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.29,
-   "mistral7b": 0.29
+   "mistral7b": 0.33,
+   "qwen25-3b": 0.11
   }
  },
  {
@@ -986,7 +1112,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 1.0
+   "llama32-3b": 1.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1008,7 +1135,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.5
   }
  },
  {
@@ -1031,7 +1159,8 @@
   },
   "small_models": {
    "llama32-3b": 0.0,
-   "mistral7b": 0.0
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1053,7 +1182,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1075,31 +1205,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 1.0
-  }
- },
- {
-  "cand": 15,
-  "glyphs": "➀➁➂➃➄➅➆➇➈➉",
-  "n_surveyors": 3,
-  "stability": 0.8253968253968254,
-  "floor": 0.0,
-  "universality": 0.7142857142857143,
-  "gestalt": 1.0,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 0.78,
-   "opus55": 1.0,
-   "qwen25-3b": 0.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.22,
-   "mistral7b": 0.0
+   "llama32-3b": 1.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1122,7 +1229,32 @@
   },
   "small_models": {
    "llama32-3b": 0.1,
-   "mistral7b": 0.1
+   "mistral7b": 0.1,
+   "qwen25-3b": 0.0
+  }
+ },
+ {
+  "cand": 18,
+  "glyphs": "🀙🀚🀛🀜🀝🀞🀟🀠🀡",
+  "n_surveyors": 3,
+  "stability": 0.8125,
+  "floor": 0.0,
+  "universality": 0.8333333333333334,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 1.0,
+   "gemini38flash": 1.0,
+   "grok46": 0.88,
+   "haiku45": 0.0,
+   "opus55": 1.0,
+   "sonnet55": 1.0
+  },
+  "small_models": {
+   "llama32-3b": 0.0,
+   "mistral7b": 0.12,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1145,7 +1277,8 @@
   },
   "small_models": {
    "llama32-3b": 0.0,
-   "mistral7b": 0.0
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1168,7 +1301,8 @@
   },
   "small_models": {
    "llama32-3b": 0.0,
-   "mistral7b": 0.0
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.25
   }
  },
  {
@@ -1190,7 +1324,8 @@
    "sonnet55": 0.75
   },
   "small_models": {
-   "llama32-3b": 0.38
+   "llama32-3b": 0.38,
+   "qwen25-3b": 0.38
   }
  },
  {
@@ -1213,55 +1348,8 @@
   },
   "small_models": {
    "llama32-3b": 0.0,
-   "mistral7b": 0.27
-  }
- },
- {
-  "cand": 5,
-  "glyphs": "▫░▒▓█",
-  "n_surveyors": 7,
-  "stability": 0.7857142857142857,
-  "floor": 0.0,
-  "universality": 0.5714285714285714,
-  "gestalt": 1.0,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
-  "per_judge": {
-   "gemini31pro": 0.75,
-   "gemini38flash": 0.75,
-   "grok46": 1.0,
-   "haiku45": 1.0,
-   "opus55": 1.0,
-   "qwen25-3b": 0.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.5,
-   "mistral7b": 0.25
-  }
- },
- {
-  "cand": 4,
-  "glyphs": "○◔◑◕●",
-  "n_surveyors": 7,
-  "stability": 0.7857142857142857,
-  "floor": 0.25,
-  "universality": 0.5714285714285714,
-  "gestalt": 0.9333333333333332,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 1.0,
-   "haiku45": 0.5,
-   "opus55": 1.0,
-   "qwen25-3b": 0.25,
-   "sonnet55": 0.75
-  },
-  "small_models": {
-   "llama32-3b": 0.5,
-   "mistral7b": 0.25
+   "mistral7b": 0.27,
+   "qwen25-3b": 0.09
   }
  },
  {
@@ -1284,7 +1372,8 @@
   },
   "small_models": {
    "llama32-3b": 0.17,
-   "mistral7b": 0.0
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1307,7 +1396,8 @@
   },
   "small_models": {
    "llama32-3b": 0.0,
-   "mistral7b": 0.11
+   "mistral7b": 0.11,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1330,7 +1420,8 @@
   },
   "small_models": {
    "llama32-3b": 0.5,
-   "mistral7b": 1.0
+   "mistral7b": 1.0,
+   "qwen25-3b": 0.5
   }
  },
  {
@@ -1352,7 +1443,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.5
+   "llama32-3b": 0.5,
+   "qwen25-3b": 1.0
   }
  },
  {
@@ -1374,31 +1466,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.0
-  }
- },
- {
-  "cand": 10,
-  "glyphs": "→⇒⇉⇛⇶",
-  "n_surveyors": 6,
-  "stability": 0.75,
-  "floor": 0.0,
-  "universality": 0.42857142857142855,
-  "gestalt": 0.9500000000000001,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
-  "per_judge": {
-   "gemini31pro": 0.75,
-   "gemini38flash": 1.0,
-   "grok46": 0.75,
-   "haiku45": 0.75,
-   "opus55": 1.0,
-   "qwen25-3b": 0.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.5,
-   "mistral7b": 0.25
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1421,7 +1490,32 @@
   },
   "small_models": {
    "llama32-3b": 0.5,
-   "mistral7b": 0.0
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.0
+  }
+ },
+ {
+  "cand": 13,
+  "glyphs": "🄀🄁🄂🄃🄄🄅🄆🄇🄈🄉",
+  "n_surveyors": 3,
+  "stability": 0.7407407407407408,
+  "floor": 0.3333333333333333,
+  "universality": 0.5,
+  "gestalt": 1.0,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.78,
+   "gemini38flash": 1.0,
+   "grok46": 0.89,
+   "haiku45": 0.33,
+   "opus55": 0.89,
+   "sonnet55": 0.56
+  },
+  "small_models": {
+   "llama32-3b": 0.11,
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1444,7 +1538,8 @@
   },
   "small_models": {
    "llama32-3b": 0.2,
-   "mistral7b": 0.0
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1466,7 +1561,8 @@
    "sonnet55": 0.89
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1488,7 +1584,8 @@
    "sonnet55": 0.67
   },
   "small_models": {
-   "llama32-3b": 0.33
+   "llama32-3b": 0.33,
+   "qwen25-3b": 0.33
   }
  },
  {
@@ -1510,7 +1607,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1533,7 +1631,8 @@
   },
   "small_models": {
    "llama32-3b": 0.5,
-   "mistral7b": 0.25
+   "mistral7b": 0.25,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1556,31 +1655,8 @@
   },
   "small_models": {
    "llama32-3b": 0.4,
-   "mistral7b": 0.2
-  }
- },
- {
-  "cand": 18,
-  "glyphs": "🀙🀚🀛🀜🀝🀞🀟🀠🀡",
-  "n_surveyors": 3,
-  "stability": 0.6964285714285714,
-  "floor": 0.0,
-  "universality": 0.7142857142857143,
-  "gestalt": 1.0,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
-  "per_judge": {
-   "gemini31pro": 1.0,
-   "gemini38flash": 1.0,
-   "grok46": 0.88,
-   "haiku45": 0.0,
-   "opus55": 1.0,
-   "qwen25-3b": 0.0,
-   "sonnet55": 1.0
-  },
-  "small_models": {
-   "llama32-3b": 0.0,
-   "mistral7b": 0.12
+   "mistral7b": 0.2,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1603,7 +1679,8 @@
   },
   "small_models": {
    "llama32-3b": 0.0,
-   "mistral7b": 0.11
+   "mistral7b": 0.11,
+   "qwen25-3b": 0.11
   }
  },
  {
@@ -1625,7 +1702,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.33
+   "llama32-3b": 0.33,
+   "qwen25-3b": 0.11
   }
  },
  {
@@ -1648,7 +1726,8 @@
   },
   "small_models": {
    "llama32-3b": 0.0,
-   "mistral7b": 0.33
+   "mistral7b": 0.33,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1670,7 +1749,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.5
+   "llama32-3b": 0.5,
+   "qwen25-3b": 0.5
   }
  },
  {
@@ -1692,7 +1772,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1715,7 +1796,8 @@
   },
   "small_models": {
    "llama32-3b": 0.33,
-   "mistral7b": 0.33
+   "mistral7b": 0.33,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1737,7 +1819,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.25
+   "llama32-3b": 0.25,
+   "qwen25-3b": 0.25
   }
  },
  {
@@ -1759,7 +1842,80 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.5
+   "llama32-3b": 0.5,
+   "qwen25-3b": 0.0
+  }
+ },
+ {
+  "cand": 8,
+  "glyphs": "⬞▫◽□◻⬜",
+  "n_surveyors": 3,
+  "stability": 0.6666666666666666,
+  "floor": 0.6,
+  "universality": 0.3333333333333333,
+  "gestalt": 0.7999999999999999,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.6,
+   "gemini38flash": 0.6,
+   "grok46": 0.6,
+   "haiku45": 0.6,
+   "opus55": 0.8,
+   "sonnet55": 0.8
+  },
+  "small_models": {
+   "llama32-3b": 0.4,
+   "mistral7b": 0.4,
+   "qwen25-3b": 0.4
+  }
+ },
+ {
+  "cand": 3,
+  "glyphs": "□▤▦◫▩■",
+  "n_surveyors": 4,
+  "stability": 0.6666666666666666,
+  "floor": 0.2,
+  "universality": 0.6666666666666666,
+  "gestalt": 0.7944444444444444,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.8,
+   "gemini38flash": 0.8,
+   "grok46": 0.8,
+   "haiku45": 0.2,
+   "opus55": 0.8,
+   "sonnet55": 0.6
+  },
+  "small_models": {
+   "llama32-3b": 0.2,
+   "mistral7b": 0.2,
+   "qwen25-3b": 0.0
+  }
+ },
+ {
+  "cand": 9,
+  "glyphs": "<≪⋘⪢⫸",
+  "n_surveyors": 6,
+  "stability": 0.6666666666666666,
+  "floor": 0.25,
+  "universality": 0.0,
+  "gestalt": 0.48333333333333334,
+  "n_judges": 6,
+  "direction_split": "6↑/0↓",
+  "per_judge": {
+   "gemini31pro": 0.75,
+   "gemini38flash": 0.75,
+   "grok46": 0.75,
+   "haiku45": 0.25,
+   "opus55": 0.75,
+   "sonnet55": 0.75
+  },
+  "small_models": {
+   "llama32-3b": 0.5,
+   "mistral7b": 0.25,
+   "qwen25-3b": 0.5
   }
  },
  {
@@ -1781,7 +1937,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.11
   }
  },
  {
@@ -1803,7 +1960,8 @@
    "sonnet55": 0.88
   },
   "small_models": {
-   "llama32-3b": 0.38
+   "llama32-3b": 0.38,
+   "qwen25-3b": 0.25
   }
  },
  {
@@ -1825,31 +1983,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.25
-  }
- },
- {
-  "cand": 9,
-  "glyphs": "<≪⋘⪢⫸",
-  "n_surveyors": 6,
-  "stability": 0.6428571428571429,
-  "floor": 0.25,
-  "universality": 0.0,
-  "gestalt": 0.48333333333333334,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
-  "per_judge": {
-   "gemini31pro": 0.75,
-   "gemini38flash": 0.75,
-   "grok46": 0.75,
-   "haiku45": 0.25,
-   "opus55": 0.75,
-   "qwen25-3b": 0.5,
-   "sonnet55": 0.75
-  },
-  "small_models": {
-   "llama32-3b": 0.5,
-   "mistral7b": 0.25
+   "llama32-3b": 0.25,
+   "qwen25-3b": 0.38
   }
  },
  {
@@ -1871,31 +2006,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.0
-  }
- },
- {
-  "cand": 13,
-  "glyphs": "🄀🄁🄂🄃🄄🄅🄆🄇🄈🄉",
-  "n_surveyors": 3,
-  "stability": 0.634920634920635,
-  "floor": 0.0,
-  "universality": 0.42857142857142855,
-  "gestalt": 1.0,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
-  "per_judge": {
-   "gemini31pro": 0.78,
-   "gemini38flash": 1.0,
-   "grok46": 0.89,
-   "haiku45": 0.33,
-   "opus55": 0.89,
-   "qwen25-3b": 0.0,
-   "sonnet55": 0.56
-  },
-  "small_models": {
-   "llama32-3b": 0.11,
-   "mistral7b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1918,31 +2030,8 @@
   },
   "small_models": {
    "llama32-3b": 0.4,
-   "mistral7b": 0.2
-  }
- },
- {
-  "cand": 8,
-  "glyphs": "⬞▫◽□◻⬜",
-  "n_surveyors": 3,
-  "stability": 0.6285714285714287,
-  "floor": 0.4,
-  "universality": 0.2857142857142857,
-  "gestalt": 0.7999999999999999,
-  "n_judges": 7,
-  "direction_split": "6↑/1↓",
-  "per_judge": {
-   "gemini31pro": 0.6,
-   "gemini38flash": 0.6,
-   "grok46": 0.6,
-   "haiku45": 0.6,
-   "opus55": 0.8,
-   "qwen25-3b": 0.4,
-   "sonnet55": 0.8
-  },
-  "small_models": {
-   "llama32-3b": 0.4,
-   "mistral7b": 0.4
+   "mistral7b": 0.2,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -1965,7 +2054,8 @@
   },
   "small_models": {
    "llama32-3b": 0.25,
-   "mistral7b": 0.0
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.25
   }
  },
  {
@@ -1988,7 +2078,8 @@
   },
   "small_models": {
    "llama32-3b": 0.5,
-   "mistral7b": 0.0
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2010,7 +2101,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2032,7 +2124,8 @@
    "sonnet55": 0.67
   },
   "small_models": {
-   "llama32-3b": 1.0
+   "llama32-3b": 1.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2054,7 +2147,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.14
+   "llama32-3b": 0.14,
+   "qwen25-3b": 0.29
   }
  },
  {
@@ -2077,7 +2171,8 @@
   },
   "small_models": {
    "llama32-3b": 0.33,
-   "mistral7b": 0.11
+   "mistral7b": 0.11,
+   "qwen25-3b": 0.11
   }
  },
  {
@@ -2099,31 +2194,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.14
-  }
- },
- {
-  "cand": 3,
-  "glyphs": "□▤▦◫▩■",
-  "n_surveyors": 4,
-  "stability": 0.5714285714285714,
-  "floor": 0.0,
-  "universality": 0.5714285714285714,
-  "gestalt": 0.7944444444444444,
-  "n_judges": 7,
-  "direction_split": "7↑/0↓",
-  "per_judge": {
-   "gemini31pro": 0.8,
-   "gemini38flash": 0.8,
-   "grok46": 0.8,
-   "haiku45": 0.2,
-   "opus55": 0.8,
-   "qwen25-3b": 0.0,
-   "sonnet55": 0.6
-  },
-  "small_models": {
-   "llama32-3b": 0.2,
-   "mistral7b": 0.2
+   "llama32-3b": 0.14,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2145,7 +2217,8 @@
    "sonnet55": 0.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2167,7 +2240,8 @@
    "sonnet55": 0.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2189,7 +2263,8 @@
    "sonnet55": 1.0
   },
   "small_models": {
-   "llama32-3b": 0.25
+   "llama32-3b": 0.25,
+   "qwen25-3b": 0.25
   }
  },
  {
@@ -2211,7 +2286,8 @@
    "sonnet55": 0.5
   },
   "small_models": {
-   "llama32-3b": 0.5
+   "llama32-3b": 0.5,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2234,7 +2310,8 @@
   },
   "small_models": {
    "llama32-3b": 0.0,
-   "mistral7b": 0.33
+   "mistral7b": 0.33,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2256,7 +2333,8 @@
    "sonnet55": 0.5
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2278,7 +2356,8 @@
    "sonnet55": 0.33
   },
   "small_models": {
-   "llama32-3b": 0.67
+   "llama32-3b": 0.67,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2301,7 +2380,8 @@
   },
   "small_models": {
    "llama32-3b": 0.0,
-   "mistral7b": 0.0
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2323,7 +2403,8 @@
    "sonnet55": 0.33
   },
   "small_models": {
-   "llama32-3b": 0.33
+   "llama32-3b": 0.33,
+   "qwen25-3b": 0.33
   }
  },
  {
@@ -2345,7 +2426,8 @@
    "sonnet55": 0.0
   },
   "small_models": {
-   "llama32-3b": 0.25
+   "llama32-3b": 0.25,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2367,7 +2449,8 @@
    "sonnet55": 0.67
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2389,7 +2472,8 @@
    "sonnet55": 0.5
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2411,7 +2495,8 @@
    "sonnet55": 0.25
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2433,7 +2518,8 @@
    "sonnet55": 0.5
   },
   "small_models": {
-   "llama32-3b": 0.5
+   "llama32-3b": 0.5,
+   "qwen25-3b": 0.17
   }
  },
  {
@@ -2455,7 +2541,8 @@
    "sonnet55": 0.14
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2478,7 +2565,8 @@
   },
   "small_models": {
    "llama32-3b": 0.67,
-   "mistral7b": 0.33
+   "mistral7b": 0.33,
+   "qwen25-3b": 0.33
   }
  },
  {
@@ -2500,7 +2588,8 @@
    "sonnet55": 0.5
   },
   "small_models": {
-   "llama32-3b": 0.33
+   "llama32-3b": 0.33,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2522,7 +2611,8 @@
    "sonnet55": 0.57
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2544,7 +2634,8 @@
    "sonnet55": 0.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2566,7 +2657,8 @@
    "sonnet55": 0.22
   },
   "small_models": {
-   "llama32-3b": 0.33
+   "llama32-3b": 0.33,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2588,7 +2680,8 @@
    "sonnet55": 0.14
   },
   "small_models": {
-   "llama32-3b": 0.43
+   "llama32-3b": 0.43,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2610,7 +2703,8 @@
    "sonnet55": 0.0
   },
   "small_models": {
-   "llama32-3b": 0.33
+   "llama32-3b": 0.33,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2633,7 +2727,8 @@
   },
   "small_models": {
    "llama32-3b": 0.0,
-   "mistral7b": 0.0
+   "mistral7b": 0.0,
+   "qwen25-3b": 0.0
   }
  },
  {
@@ -2655,7 +2750,8 @@
    "sonnet55": 0.0
   },
   "small_models": {
-   "llama32-3b": 0.0
+   "llama32-3b": 0.0,
+   "qwen25-3b": 0.0
   }
  }
 ]

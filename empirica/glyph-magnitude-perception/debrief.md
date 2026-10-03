@@ -22,14 +22,18 @@ Nothing had happened since the evening of August 25. That day ended with the pil
    I first reported a 20% numeric error rate under the forced format. That came from reading gematria values as Unicode numerics, and the first audit corrected it to 93% accuracy (`analysis/2026-10-03-pilot-rederivations-and-correlates.md`).
 2. **Built the harness** (`harness/runner/`, stdlib Python).
    - Every call is one append-only ledger row, holding the full prompt, the provider-reported model, usage and the verbatim answer.
-   - Randomness is fated as you specified, and the stimuli rebuild byte-identically.
-   - Judge adapters exist for claude, grok, codex, agy (Gemini), ollama and llama.cpp. Each strips tools, instruction files, agent profiles and, where the CLI allows, memory. That mattered: your grok and claude setups otherwise load the arch-expert agent and your global CLAUDE.md.
+   - Randomness is fated as you specified. The stimuli rebuild byte-identically; I re-checked the final files against a fresh build.
+   - Judge adapters exist for claude, grok, codex, agy (Gemini), ollama and llama.cpp. Each strips tools, instruction files, agent profiles and, where the CLI allows, memory. That mattered: your grok setup otherwise loads the arch-expert agent and your global CLAUDE.md.
    - The parser is versioned and re-runnable over the raw answers. It now stands at p1.3.
 3. **Froze protocol `gmp-v1.0`** (`protocol/PROTOCOL-v1.0.md`) and **registered `PREDICTIONS-v1.0.md`**. The registration was committed 22 seconds before the first data row. Its errata and the protocol's post-freeze notes are append-only.
-4. **Ran the campaign: about 44,000 judge calls.**
+4. **Ran the campaign.** About 51,700 judge calls came back answered. A further 1,000 failed and stay in the ledger, and the 4,085 calls from the withdrawn qwen3 judge are kept but excluded.
    - **Frontier:** Claude Haiku 4.5, Sonnet 5, Sonnet 5.5 and Opus 5.5; Grok 4.6; GPT-5.6 (partial, see below); Gemini 3.1 Pro and 3.8 Flash. The Gemini judges came through agy, thanks to your tip.
    - **Local:** llama3.2 3B, gemma3 4B, mistral 7B, phi-4-mini and hermes3 3B. qwen2.5 3B stands in for qwen3 4B, whose data turned out invalid.
-   - **Your Muse Glimmer 30B** got key datapoints only. Its reasoning runs about 4 minutes per 38-item sheet.
+   - **Your Muse Glimmer 30B** got key datapoints only: conflict, SIGNA, holistic pairs. Its reasoning runs about 4 minutes per 38-item sheet.
+     - Compiled decode won all 18 of its committed compiled-decode answers.
+     - It declined the gram and per-mille conflicts.
+     - On SIGNA it committed to only 15 pairs, all in the SIGNA direction, and placed ⚬ below ╶ (5 seconds).
+     - I shut its server down afterwards.
    - **Instruments:**
      - 300 held-out triads;
      - the format experiment (forced, tie, perp);
@@ -60,13 +64,13 @@ Which of those carries the effect is the next clean experiment. The finding itse
 ### Number and fill as axes (claim 4)
 
 - **Frontier minds.** Denoted number is a substrate-invariant axis across all eight frontier judges: the larger Unicode value wins 95–100% of committed numeric edges. Measured ink is a weaker frontier correlate, at 64–83%.
-- **Small models.** At 3–7B both correlates sit at chance, or below it: mistral's ink correlate is 28%. The pilot's "the same two axes survive at 3B" came from chain listings and does not hold at the edge level.
+- **Small models.** At 3–7B both correlates sit at chance, or below it: mistral's ink correlate is 28%. The one possible exception is qwen2.5's value correlate, 0.71 on only 21 edges. The pilot's "the same two axes survive at 3B" came from chain listings and does not hold at the edge level.
 - **Transitivity is not what separates the tiers.** The registered cycle statistic turned out to measure position habit. The second audit showed that in this triad design every within-orientation cycle is a set where the judge chose the same screen position three times. Counting only pairs that are consistent across both presentation orders, *no judge produced a single cycle*, small models included.
 - **What capability actually buys:** using ⟂, being consistent across presentation order, and having the axes at all.
 
 ### What arbitrates conflicts (claim 5)
 
-- **Compiled numeric decode** (Roman, seven-segment, fractions) beats ink and element count for every frontier judge. One exception: the Sonnet models pick the full-size 3 over ₈.
+- **Compiled numeric decode** (Roman, seven-segment, fractions) beats ink and element count for every frontier judge, pooled over items. The exceptions are in the Sonnet models: they pick the full-size 3 over ₈, and Sonnet 5 splits ⁹ vs 2.
 - **Grams resolve by line count first.** ☷ beats ⚌ in all 43 committed frontier answers, even though measured ink favors ⚌.
 - **The per-mille signs split by model family.** Sonnet takes the many-circled ‱. Opus, Haiku, Grok, GPT and the Geminis take the larger value. ‱ is also "per ten thousand", so this item can't separate seeing from decoding. The pilot's "weak decode splits 3:1 toward the visual" was a Sonnet reading.
 
@@ -90,7 +94,7 @@ When a frontier judge sees an order in a seed triad, it matches the surveyor's w
 
 **Top-40** (`analysis/top40.md`):
 
-- Frontier judges saturate. Dice, circled and enclosed digits, eighths, superscripts, medals (read descending), `·•●⬤`, and dot leaders all reach full stability.
+- Frontier judges saturate. Dice, Western and circled digits, eighths, `¹²³`, medals (read descending), `ⅠⅡⅢ`, `·•●⬤`, `⭒⭑⭐` and dot leaders all reach full stability.
 - The *floor* and *small-model* columns discriminate more than the rank does.
 
 **SIGNA** (`analysis/v1.0-results.md` §Consumer probe):
@@ -108,7 +112,7 @@ If you're choosing a ladder for a column read across rows, the single-glyph evid
 
 ## Embedding probe (your linear-vector question)
 
-Exploratory. In qwen3-embedding, a linear "more" direction trained on 30 ladders orders the held-out 31st at mean ρ ≈ +0.68. The result survives codepoint controls, and a number-trained direction partly orders fill ladders too. The other embedding models either collapse exotic glyphs to unknown tokens or are explained by codepoint order.
+Exploratory. In qwen3-embedding, a linear "more" direction trained on 30 ladders orders the held-out 31st at mean ρ ≈ +0.68. The result survives codepoint controls, and a number-trained direction partly orders fill ladders too. The other embedding models show weaker or no transfer. Two of them collapse most exotic glyphs to unknown tokens, and the one the audit tested for codepoint order (embeddinggemma) is explained by it.
 
 That suggests a shared representational direction coexisting with judges who, given ⟂, keep number and fill apart. It is a hypothesis, not a finding; the open tests are listed in the re-derivations note.
 
@@ -123,12 +127,13 @@ That suggests a shared representational direction coexisting with judges who, gi
 - **Resource contention.** For a while I ran several local models at once (your "three llama-servers"). I moved to one at a time after your note.
 - **Errors the audits caught:**
   - **qwen3 4B produced no valid answers.** Its reasoning leaked into the reply and was truncated. My parser read "First, the user is asking…" as the answer *first*. All of its numbers are withdrawn.
-  - **The sheet re-ask gate skipped fully empty sheets**, because `0.0` is falsy. Fixed, and the sheets were re-asked.
+  - **The sheet re-ask gate skipped fully empty sheets**, because `0.0` is falsy. Fixed, and the sheets were re-asked. The exceptions are four Gemini-flash top-40 sheets and six gestalt calls, which the Antigravity quota then blocked.
   - **A field-name mismatch dropped 350 of 849 sequence records when I built the seed pool.** Some extractions say `type`, others `record_type`. Grok's survey, and survey-3 and survey-4, never became seed loci. Grok's was the only non-Anthropic survey.
   - **I first reported predictions run by run instead of as worded, and left two failures unmentioned.**
 
   All are corrected in place, with history notes; the protocol's post-freeze notes list every change.
 - **gpt-oss** (T7 copy) won't load in this ollama version (a 2025 GGUF). llama3.3 70B wasn't run.
+- **The Gemini (Antigravity) individual quota** was reached near the end. It resets in about 1.5 hours; I'm noting it in case you were mid-use.
 
 ## What's open
 
