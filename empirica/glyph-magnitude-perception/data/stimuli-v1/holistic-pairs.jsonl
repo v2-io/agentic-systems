@@ -1,0 +1,226 @@
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 0, "a": "⚀", "b": "⚁", "intended": [0, 1], "pid": "Hbb9da15f3574"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 1, "a": "⚁", "b": "⚀", "intended": [1, 0], "pid": "H61f7483166de"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 0, "a": "⚀", "b": "⚂", "intended": [0, 2], "pid": "H423325f7f085"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 1, "a": "⚂", "b": "⚀", "intended": [2, 0], "pid": "H543558fc89a0"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 0, "a": "⚀", "b": "⚃", "intended": [0, 3], "pid": "He476d387d8b4"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 1, "a": "⚃", "b": "⚀", "intended": [3, 0], "pid": "H6bd72dd8268c"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 0, "a": "⚀", "b": "⚄", "intended": [0, 4], "pid": "H70de93c823c0"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 1, "a": "⚄", "b": "⚀", "intended": [4, 0], "pid": "H7994faa2f968"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 0, "a": "⚀", "b": "⚅", "intended": [0, 5], "pid": "H39212583bddc"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 1, "a": "⚅", "b": "⚀", "intended": [5, 0], "pid": "H1614524a091a"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 0, "a": "⚁", "b": "⚂", "intended": [1, 2], "pid": "He5ecc2e17579"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 1, "a": "⚂", "b": "⚁", "intended": [2, 1], "pid": "Hfbfe21a12478"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 0, "a": "⚁", "b": "⚃", "intended": [1, 3], "pid": "He5d42d633c1c"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 1, "a": "⚃", "b": "⚁", "intended": [3, 1], "pid": "H80c39e8d90ea"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 0, "a": "⚁", "b": "⚄", "intended": [1, 4], "pid": "Ha6382c9b8dc7"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 1, "a": "⚄", "b": "⚁", "intended": [4, 1], "pid": "H1e130e987fe5"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 0, "a": "⚁", "b": "⚅", "intended": [1, 5], "pid": "H9c35957df435"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 1, "a": "⚅", "b": "⚁", "intended": [5, 1], "pid": "H84f18247a9b1"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 0, "a": "⚂", "b": "⚃", "intended": [2, 3], "pid": "H488ebdde0f34"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 1, "a": "⚃", "b": "⚂", "intended": [3, 2], "pid": "H7732d8ac9168"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 0, "a": "⚂", "b": "⚄", "intended": [2, 4], "pid": "Ha2b3b0b5ba54"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 1, "a": "⚄", "b": "⚂", "intended": [4, 2], "pid": "H81c28ecf010e"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 0, "a": "⚂", "b": "⚅", "intended": [2, 5], "pid": "H8ee7757cb02c"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 1, "a": "⚅", "b": "⚂", "intended": [5, 2], "pid": "Hfd4bbf5bb0c6"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 0, "a": "⚃", "b": "⚄", "intended": [3, 4], "pid": "H577728b53618"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 1, "a": "⚄", "b": "⚃", "intended": [4, 3], "pid": "Hfa4161918ed3"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 0, "a": "⚃", "b": "⚅", "intended": [3, 5], "pid": "Hba5a5e2c43aa"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 1, "a": "⚅", "b": "⚃", "intended": [5, 3], "pid": "H189d9b9aa52a"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 0, "a": "⚄", "b": "⚅", "intended": [4, 5], "pid": "H55f5911974cf"}
+{"set": "holistic-pairs", "seq": "dice", "kind": "control-factorizable", "order": 1, "a": "⚅", "b": "⚄", "intended": [5, 4], "pid": "Hf0d5ad0e6bd3"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 0, "a": "-", "b": "=", "intended": [0, 1], "pid": "Hf97b59705c24"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 1, "a": "=", "b": "-", "intended": [1, 0], "pid": "Hc3e7cf2b7249"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 0, "a": "-", "b": ">", "intended": [0, 2], "pid": "H26bacab6d279"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 1, "a": ">", "b": "-", "intended": [2, 0], "pid": "Hc0f8992d7a08"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 0, "a": "-", "b": "}", "intended": [0, 3], "pid": "Hfbfd3f6e1f4a"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 1, "a": "}", "b": "-", "intended": [3, 0], "pid": "Hb3cb73bce67a"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 0, "a": "-", "b": ")", "intended": [0, 4], "pid": "He1c06b31dddd"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 1, "a": ")", "b": "-", "intended": [4, 0], "pid": "H3292cd0ba7b0"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 0, "a": "-", "b": "|", "intended": [0, 5], "pid": "Hbf58c43efcf9"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 1, "a": "|", "b": "-", "intended": [5, 0], "pid": "H7d4d39fc889d"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 0, "a": "=", "b": ">", "intended": [1, 2], "pid": "Heb4f573d4cb9"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 1, "a": ">", "b": "=", "intended": [2, 1], "pid": "Hca8cba305548"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 0, "a": "=", "b": "}", "intended": [1, 3], "pid": "Hbecd626c0d75"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 1, "a": "}", "b": "=", "intended": [3, 1], "pid": "Hc18cdd74e68b"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 0, "a": "=", "b": ")", "intended": [1, 4], "pid": "H86be2c57b830"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 1, "a": ")", "b": "=", "intended": [4, 1], "pid": "H8f7e0adaabbf"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 0, "a": "=", "b": "|", "intended": [1, 5], "pid": "H912b76dca612"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 1, "a": "|", "b": "=", "intended": [5, 1], "pid": "Hf2c446c7b513"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 0, "a": ">", "b": "}", "intended": [2, 3], "pid": "H6e23daabe86b"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 1, "a": "}", "b": ">", "intended": [3, 2], "pid": "H1c042e7927c0"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 0, "a": ">", "b": ")", "intended": [2, 4], "pid": "H9e7ad4357f2c"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 1, "a": ")", "b": ">", "intended": [4, 2], "pid": "Hed9812f7b9c8"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 0, "a": ">", "b": "|", "intended": [2, 5], "pid": "H6fa16ea1f702"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 1, "a": "|", "b": ">", "intended": [5, 2], "pid": "H54a40d89c1ba"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 0, "a": "}", "b": ")", "intended": [3, 4], "pid": "Ha43c620c0c7c"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 1, "a": ")", "b": "}", "intended": [4, 3], "pid": "H92f1eb2eaade"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 0, "a": "}", "b": "|", "intended": [3, 5], "pid": "H40cdfd939085"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 1, "a": "|", "b": "}", "intended": [5, 3], "pid": "H750aef6f2dcc"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 0, "a": ")", "b": "|", "intended": [4, 5], "pid": "Hc856a2169f3a"}
+{"set": "holistic-pairs", "seq": "unfold", "kind": "pilot-holistic", "order": 1, "a": "|", "b": ")", "intended": [5, 4], "pid": "Ha9c3322c47a6"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 0, "a": "_", "b": "₋", "intended": [0, 1], "pid": "H5be9a24b3385"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 1, "a": "₋", "b": "_", "intended": [1, 0], "pid": "Hbf711e08aa61"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 0, "a": "_", "b": "-", "intended": [0, 2], "pid": "H92fdd496cf34"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 1, "a": "-", "b": "_", "intended": [2, 0], "pid": "H5ed6084ce035"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 0, "a": "_", "b": "⁻", "intended": [0, 3], "pid": "H78d1a45fe8e1"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 1, "a": "⁻", "b": "_", "intended": [3, 0], "pid": "H6a1924a3d9bb"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 0, "a": "_", "b": "¯", "intended": [0, 4], "pid": "H3acfcb340575"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 1, "a": "¯", "b": "_", "intended": [4, 0], "pid": "Hbe8dacdee666"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 0, "a": "₋", "b": "-", "intended": [1, 2], "pid": "Hdcdeea46a9fd"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 1, "a": "-", "b": "₋", "intended": [2, 1], "pid": "H70574ed6532a"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 0, "a": "₋", "b": "⁻", "intended": [1, 3], "pid": "H8a20596f6b60"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 1, "a": "⁻", "b": "₋", "intended": [3, 1], "pid": "H410dddf952ab"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 0, "a": "₋", "b": "¯", "intended": [1, 4], "pid": "Hafb2bd95e036"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 1, "a": "¯", "b": "₋", "intended": [4, 1], "pid": "Hddd1f6912f03"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 0, "a": "-", "b": "⁻", "intended": [2, 3], "pid": "H57e2b24db3df"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 1, "a": "⁻", "b": "-", "intended": [3, 2], "pid": "H7ba4bec35d32"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 0, "a": "-", "b": "¯", "intended": [2, 4], "pid": "H1f5b0f85dcad"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 1, "a": "¯", "b": "-", "intended": [4, 2], "pid": "He0d7adcae6de"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 0, "a": "⁻", "b": "¯", "intended": [3, 4], "pid": "Hdf4988a6f97b"}
+{"set": "holistic-pairs", "seq": "risebar", "kind": "pilot-holistic", "order": 1, "a": "¯", "b": "⁻", "intended": [4, 3], "pid": "H675c9e76fedd"}
+{"set": "holistic-pairs", "seq": "elab-n", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "n", "b": "ɲ", "intended": [0, 1], "pid": "H38e5408524a7"}
+{"set": "holistic-pairs", "seq": "elab-n", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ɲ", "b": "n", "intended": [1, 0], "pid": "Hf828a2cb6be4"}
+{"set": "holistic-pairs", "seq": "elab-n", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "n", "b": "ɳ", "intended": [0, 2], "pid": "H5ae90310c3cc"}
+{"set": "holistic-pairs", "seq": "elab-n", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ɳ", "b": "n", "intended": [2, 0], "pid": "H79a619c26278"}
+{"set": "holistic-pairs", "seq": "elab-n", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "n", "b": "ŋ", "intended": [0, 3], "pid": "H408bdb2af343"}
+{"set": "holistic-pairs", "seq": "elab-n", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ŋ", "b": "n", "intended": [3, 0], "pid": "H82f857c4a104"}
+{"set": "holistic-pairs", "seq": "elab-n", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "ɲ", "b": "ɳ", "intended": [1, 2], "pid": "Hca1918828442"}
+{"set": "holistic-pairs", "seq": "elab-n", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ɳ", "b": "ɲ", "intended": [2, 1], "pid": "H7c96c93a8e32"}
+{"set": "holistic-pairs", "seq": "elab-n", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "ɲ", "b": "ŋ", "intended": [1, 3], "pid": "Hf690394f34c7"}
+{"set": "holistic-pairs", "seq": "elab-n", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ŋ", "b": "ɲ", "intended": [3, 1], "pid": "H98d7dba2ff8a"}
+{"set": "holistic-pairs", "seq": "elab-n", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "ɳ", "b": "ŋ", "intended": [2, 3], "pid": "H7ae218e464dd"}
+{"set": "holistic-pairs", "seq": "elab-n", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ŋ", "b": "ɳ", "intended": [3, 2], "pid": "Hf1a99f31e5cc"}
+{"set": "holistic-pairs", "seq": "elab-s", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "s", "b": "ſ", "intended": [0, 1], "pid": "H2841a93fa6c3"}
+{"set": "holistic-pairs", "seq": "elab-s", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ſ", "b": "s", "intended": [1, 0], "pid": "H40940aa7b4e9"}
+{"set": "holistic-pairs", "seq": "elab-s", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "s", "b": "ʃ", "intended": [0, 2], "pid": "H169ff6e49d8b"}
+{"set": "holistic-pairs", "seq": "elab-s", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ʃ", "b": "s", "intended": [2, 0], "pid": "Hc939251fb3c4"}
+{"set": "holistic-pairs", "seq": "elab-s", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "s", "b": "ʆ", "intended": [0, 3], "pid": "H204334ea0cd7"}
+{"set": "holistic-pairs", "seq": "elab-s", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ʆ", "b": "s", "intended": [3, 0], "pid": "Hd986cca57250"}
+{"set": "holistic-pairs", "seq": "elab-s", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "ſ", "b": "ʃ", "intended": [1, 2], "pid": "H59e84503a2bd"}
+{"set": "holistic-pairs", "seq": "elab-s", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ʃ", "b": "ſ", "intended": [2, 1], "pid": "H4b568633ccce"}
+{"set": "holistic-pairs", "seq": "elab-s", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "ſ", "b": "ʆ", "intended": [1, 3], "pid": "Hd9c59fe714e8"}
+{"set": "holistic-pairs", "seq": "elab-s", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ʆ", "b": "ſ", "intended": [3, 1], "pid": "H5480978dd20e"}
+{"set": "holistic-pairs", "seq": "elab-s", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "ʃ", "b": "ʆ", "intended": [2, 3], "pid": "H8e2c2444d7d5"}
+{"set": "holistic-pairs", "seq": "elab-s", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ʆ", "b": "ʃ", "intended": [3, 2], "pid": "H134e043261d8"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "l", "b": "ɫ", "intended": [0, 1], "pid": "Hae8cfc21d15c"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ɫ", "b": "l", "intended": [1, 0], "pid": "H84d0ee194595"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "l", "b": "ɬ", "intended": [0, 2], "pid": "Hec42e826c6e5"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ɬ", "b": "l", "intended": [2, 0], "pid": "Hbaa70a4741b5"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "l", "b": "ɭ", "intended": [0, 3], "pid": "H5f27306ece0e"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ɭ", "b": "l", "intended": [3, 0], "pid": "H4b379db418ad"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "l", "b": "ɮ", "intended": [0, 4], "pid": "Heed0393974da"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ɮ", "b": "l", "intended": [4, 0], "pid": "H3e08b7cd6492"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "ɫ", "b": "ɬ", "intended": [1, 2], "pid": "H94dc0efde504"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ɬ", "b": "ɫ", "intended": [2, 1], "pid": "H7432181e80b4"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "ɫ", "b": "ɭ", "intended": [1, 3], "pid": "H88bb1b801914"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ɭ", "b": "ɫ", "intended": [3, 1], "pid": "H6f010a46db11"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "ɫ", "b": "ɮ", "intended": [1, 4], "pid": "H8daf7a6f71c8"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ɮ", "b": "ɫ", "intended": [4, 1], "pid": "Hd127e48eb11c"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "ɬ", "b": "ɭ", "intended": [2, 3], "pid": "H313d4b45f7c6"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ɭ", "b": "ɬ", "intended": [3, 2], "pid": "Ha292583067bb"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "ɬ", "b": "ɮ", "intended": [2, 4], "pid": "Hbabbbc1281ce"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ɮ", "b": "ɬ", "intended": [4, 2], "pid": "Hb08d664d2ced"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 0, "a": "ɭ", "b": "ɮ", "intended": [3, 4], "pid": "H15b9319314e5"}
+{"set": "holistic-pairs", "seq": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": 1, "a": "ɮ", "b": "ɭ", "intended": [4, 3], "pid": "H6066fbbd457e"}
+{"set": "holistic-pairs", "seq": "elab-z", "kind": "held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)", "order": 0, "a": "z", "b": "ʒ", "intended": [0, 1], "pid": "Hb9f01b4a25a6"}
+{"set": "holistic-pairs", "seq": "elab-z", "kind": "held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)", "order": 1, "a": "ʒ", "b": "z", "intended": [1, 0], "pid": "H792281074d36"}
+{"set": "holistic-pairs", "seq": "elab-z", "kind": "held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)", "order": 0, "a": "z", "b": "ʓ", "intended": [0, 2], "pid": "H2a744c7e2c6c"}
+{"set": "holistic-pairs", "seq": "elab-z", "kind": "held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)", "order": 1, "a": "ʓ", "b": "z", "intended": [2, 0], "pid": "H8c765fb4fe81"}
+{"set": "holistic-pairs", "seq": "elab-z", "kind": "held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)", "order": 0, "a": "ʒ", "b": "ʓ", "intended": [1, 2], "pid": "Hbdf08b4a6a64"}
+{"set": "holistic-pairs", "seq": "elab-z", "kind": "held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)", "order": 1, "a": "ʓ", "b": "ʒ", "intended": [2, 1], "pid": "H646b72e84688"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 0, "a": ".", "b": "o", "intended": [0, 1], "pid": "H12af048af139"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "o", "b": ".", "intended": [1, 0], "pid": "Hbfc6f019b83b"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 0, "a": ".", "b": "⊙", "intended": [0, 2], "pid": "Hc742669a676a"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "⊙", "b": ".", "intended": [2, 0], "pid": "H23ba47ad629f"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 0, "a": ".", "b": "⊚", "intended": [0, 3], "pid": "H6a9f2dfedca1"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "⊚", "b": ".", "intended": [3, 0], "pid": "Hc3b27ba83a97"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 0, "a": ".", "b": "◎", "intended": [0, 4], "pid": "H82b057aa6e33"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "◎", "b": ".", "intended": [4, 0], "pid": "H8fd6347aadf0"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 0, "a": ".", "b": "◯", "intended": [0, 5], "pid": "H5b14d43c7b90"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "◯", "b": ".", "intended": [5, 0], "pid": "H27b7e2be63b6"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "o", "b": "⊙", "intended": [1, 2], "pid": "He2e687737857"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "⊙", "b": "o", "intended": [2, 1], "pid": "H0e57e01bc4c3"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "o", "b": "⊚", "intended": [1, 3], "pid": "H19bfd4c83e6b"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "⊚", "b": "o", "intended": [3, 1], "pid": "H7ebc33b0e2dc"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "o", "b": "◎", "intended": [1, 4], "pid": "H1c7f1147bb13"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "◎", "b": "o", "intended": [4, 1], "pid": "H9a6e2f845b9a"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "o", "b": "◯", "intended": [1, 5], "pid": "Hf3da6840559e"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "◯", "b": "o", "intended": [5, 1], "pid": "He8511efc0219"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "⊙", "b": "⊚", "intended": [2, 3], "pid": "H273e2268dc38"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "⊚", "b": "⊙", "intended": [3, 2], "pid": "H2edb7fb9b6ac"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "⊙", "b": "◎", "intended": [2, 4], "pid": "Hc2797cd077e6"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "◎", "b": "⊙", "intended": [4, 2], "pid": "H0da4503df8b7"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "⊙", "b": "◯", "intended": [2, 5], "pid": "Hed91311a5b09"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "◯", "b": "⊙", "intended": [5, 2], "pid": "H79a9d7c88fa0"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "⊚", "b": "◎", "intended": [3, 4], "pid": "Hbf775b8090e6"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "◎", "b": "⊚", "intended": [4, 3], "pid": "H75f254df9b02"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "⊚", "b": "◯", "intended": [3, 5], "pid": "Hbdcb1ce68d3a"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "◯", "b": "⊚", "intended": [5, 3], "pid": "H5562dd130ceb"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "◎", "b": "◯", "intended": [4, 5], "pid": "H61716ebce935"}
+{"set": "holistic-pairs", "seq": "rings", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "◯", "b": "◎", "intended": [5, 4], "pid": "Hc2c0acac6962"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "+", "b": "×", "intended": [0, 1], "pid": "H234b840823f1"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "×", "b": "+", "intended": [1, 0], "pid": "H34affe570f55"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "+", "b": "∗", "intended": [0, 2], "pid": "H2f28f7f71858"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "∗", "b": "+", "intended": [2, 0], "pid": "H1e6ad04b6bf9"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "+", "b": "*", "intended": [0, 3], "pid": "Hc1b9b6bb80ba"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "*", "b": "+", "intended": [3, 0], "pid": "Ha03b8f53f06e"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "+", "b": "✶", "intended": [0, 4], "pid": "Hb9d875cd08ed"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "✶", "b": "+", "intended": [4, 0], "pid": "H86aebb1a6816"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "+", "b": "✹", "intended": [0, 5], "pid": "H447781760974"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "✹", "b": "+", "intended": [5, 0], "pid": "Hf608e631fb92"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "×", "b": "∗", "intended": [1, 2], "pid": "Hf4c2f0517ef2"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "∗", "b": "×", "intended": [2, 1], "pid": "H1a2ea4097c72"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "×", "b": "*", "intended": [1, 3], "pid": "Hf3b468ed7e0d"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "*", "b": "×", "intended": [3, 1], "pid": "Ha90d6c9c128f"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "×", "b": "✶", "intended": [1, 4], "pid": "H2baa0d577883"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "✶", "b": "×", "intended": [4, 1], "pid": "H0f09250d34a1"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "×", "b": "✹", "intended": [1, 5], "pid": "H254b639d229a"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "✹", "b": "×", "intended": [5, 1], "pid": "H22c0cb5a5fab"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "∗", "b": "*", "intended": [2, 3], "pid": "Hda6b4cc52be9"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "*", "b": "∗", "intended": [3, 2], "pid": "H6b83ffdd2e76"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "∗", "b": "✶", "intended": [2, 4], "pid": "H52de4097ba46"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "✶", "b": "∗", "intended": [4, 2], "pid": "Hb8942aee84b6"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "∗", "b": "✹", "intended": [2, 5], "pid": "H8155b83ece68"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "✹", "b": "∗", "intended": [5, 2], "pid": "H11024ea08031"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "*", "b": "✶", "intended": [3, 4], "pid": "H3114228cfa5f"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "✶", "b": "*", "intended": [4, 3], "pid": "H5692f96d8427"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "*", "b": "✹", "intended": [3, 5], "pid": "He4f84ac51aa9"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "✹", "b": "*", "intended": [5, 3], "pid": "H2750de9ddb24"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "✶", "b": "✹", "intended": [4, 5], "pid": "H994e03be2f15"}
+{"set": "holistic-pairs", "seq": "rays", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "✹", "b": "✶", "intended": [5, 4], "pid": "H2fba184d6227"}
+{"set": "holistic-pairs", "seq": "nest", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "<", "b": "⊂", "intended": [0, 1], "pid": "H82fb7dec00b2"}
+{"set": "holistic-pairs", "seq": "nest", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "⊂", "b": "<", "intended": [1, 0], "pid": "Haa137e9cb2d4"}
+{"set": "holistic-pairs", "seq": "nest", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "<", "b": "⊆", "intended": [0, 2], "pid": "H99c7560cdf21"}
+{"set": "holistic-pairs", "seq": "nest", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "⊆", "b": "<", "intended": [2, 0], "pid": "Ha6741d15cf98"}
+{"set": "holistic-pairs", "seq": "nest", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "<", "b": "⋐", "intended": [0, 3], "pid": "H67c5fbfa9618"}
+{"set": "holistic-pairs", "seq": "nest", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "⋐", "b": "<", "intended": [3, 0], "pid": "H86964af43104"}
+{"set": "holistic-pairs", "seq": "nest", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "⊂", "b": "⊆", "intended": [1, 2], "pid": "Hc905308f83e8"}
+{"set": "holistic-pairs", "seq": "nest", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "⊆", "b": "⊂", "intended": [2, 1], "pid": "H7b1626a9e820"}
+{"set": "holistic-pairs", "seq": "nest", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "⊂", "b": "⋐", "intended": [1, 3], "pid": "H7045b163e71a"}
+{"set": "holistic-pairs", "seq": "nest", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "⋐", "b": "⊂", "intended": [3, 1], "pid": "Hbafc9275864f"}
+{"set": "holistic-pairs", "seq": "nest", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "⊆", "b": "⋐", "intended": [2, 3], "pid": "Ha5265dc30591"}
+{"set": "holistic-pairs", "seq": "nest", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "⋐", "b": "⊆", "intended": [3, 2], "pid": "Hb52313818306"}
+{"set": "holistic-pairs", "seq": "dimension", "kind": "held-out holistic candidate (morph)", "order": 0, "a": ".", "b": "-", "intended": [0, 1], "pid": "H078363c0c3b1"}
+{"set": "holistic-pairs", "seq": "dimension", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "-", "b": ".", "intended": [1, 0], "pid": "H8a1a4230b088"}
+{"set": "holistic-pairs", "seq": "dimension", "kind": "held-out holistic candidate (morph)", "order": 0, "a": ".", "b": "□", "intended": [0, 2], "pid": "Hd8ace458c80c"}
+{"set": "holistic-pairs", "seq": "dimension", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "□", "b": ".", "intended": [2, 0], "pid": "H336eb7cbf623"}
+{"set": "holistic-pairs", "seq": "dimension", "kind": "held-out holistic candidate (morph)", "order": 0, "a": ".", "b": "■", "intended": [0, 3], "pid": "Hbf200e3028e3"}
+{"set": "holistic-pairs", "seq": "dimension", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "■", "b": ".", "intended": [3, 0], "pid": "Hdd1b1f0a9da7"}
+{"set": "holistic-pairs", "seq": "dimension", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "-", "b": "□", "intended": [1, 2], "pid": "Hbb06bff27394"}
+{"set": "holistic-pairs", "seq": "dimension", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "□", "b": "-", "intended": [2, 1], "pid": "H6f946c04d29d"}
+{"set": "holistic-pairs", "seq": "dimension", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "-", "b": "■", "intended": [1, 3], "pid": "H9c15ed4f4e7c"}
+{"set": "holistic-pairs", "seq": "dimension", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "■", "b": "-", "intended": [3, 1], "pid": "Hd82fc6aebe22"}
+{"set": "holistic-pairs", "seq": "dimension", "kind": "held-out holistic candidate (morph)", "order": 0, "a": "□", "b": "■", "intended": [2, 3], "pid": "Ha588708fc67c"}
+{"set": "holistic-pairs", "seq": "dimension", "kind": "held-out holistic candidate (morph)", "order": 1, "a": "■", "b": "□", "intended": [3, 2], "pid": "H71a5af7d6d8d"}
+{"set": "holistic-pairs", "seq": "stem", "kind": "held-out holistic candidate (morph, 3 rungs)", "order": 0, "a": "|", "b": "∥", "intended": [0, 1], "pid": "H7f8fdf49fce8"}
+{"set": "holistic-pairs", "seq": "stem", "kind": "held-out holistic candidate (morph, 3 rungs)", "order": 1, "a": "∥", "b": "|", "intended": [1, 0], "pid": "H01d8fe092fea"}
+{"set": "holistic-pairs", "seq": "stem", "kind": "held-out holistic candidate (morph, 3 rungs)", "order": 0, "a": "|", "b": "⦀", "intended": [0, 2], "pid": "H35ff070802ff"}
+{"set": "holistic-pairs", "seq": "stem", "kind": "held-out holistic candidate (morph, 3 rungs)", "order": 1, "a": "⦀", "b": "|", "intended": [2, 0], "pid": "H6fa909395456"}
+{"set": "holistic-pairs", "seq": "stem", "kind": "held-out holistic candidate (morph, 3 rungs)", "order": 0, "a": "∥", "b": "⦀", "intended": [1, 2], "pid": "H77bb32248f94"}
+{"set": "holistic-pairs", "seq": "stem", "kind": "held-out holistic candidate (morph, 3 rungs)", "order": 1, "a": "⦀", "b": "∥", "intended": [2, 1], "pid": "H8eb6824d0227"}
+{"set": "holistic-pairs", "seq": "check", "kind": "held-out holistic candidate (morph, 3 rungs)", "order": 0, "a": "/", "b": "√", "intended": [0, 1], "pid": "H07a643bf5ee8"}
+{"set": "holistic-pairs", "seq": "check", "kind": "held-out holistic candidate (morph, 3 rungs)", "order": 1, "a": "√", "b": "/", "intended": [1, 0], "pid": "Hb888f6d3bbda"}
+{"set": "holistic-pairs", "seq": "check", "kind": "held-out holistic candidate (morph, 3 rungs)", "order": 0, "a": "/", "b": "✓", "intended": [0, 2], "pid": "H668c758101bc"}
+{"set": "holistic-pairs", "seq": "check", "kind": "held-out holistic candidate (morph, 3 rungs)", "order": 1, "a": "✓", "b": "/", "intended": [2, 0], "pid": "H7c30e403daed"}
+{"set": "holistic-pairs", "seq": "check", "kind": "held-out holistic candidate (morph, 3 rungs)", "order": 0, "a": "√", "b": "✓", "intended": [1, 2], "pid": "H00e6350fd917"}
+{"set": "holistic-pairs", "seq": "check", "kind": "held-out holistic candidate (morph, 3 rungs)", "order": 1, "a": "✓", "b": "√", "intended": [2, 1], "pid": "Hc200600a79a4"}

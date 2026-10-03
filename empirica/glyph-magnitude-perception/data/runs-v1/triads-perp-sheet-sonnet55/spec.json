@@ -1,0 +1,20 @@
+{
+ "run_id": "triads-perp-sheet-sonnet55",
+ "protocol": "gmp-v1.0",
+ "instrument": "triads",
+ "format": "perp",
+ "mode": "sheet",
+ "sheet_size": 40,
+ "reps": 1,
+ "stimulus_file": "data/stimuli-v1/triads.jsonl",
+ "stimulus_digest": "0938dc5a45a4e1feb0a8b333821d33b66da86972f0fb9df1195311be5c89c667",
+ "judge_label": "sonnet55",
+ "judge": {
+  "adapter": "claude",
+  "model": "claude-sonnet-5-5",
+  "effort": "low"
+ },
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "context_residue": "claude -p with --tools '' --strict-mcp-config (no MCP), --setting-sources '' and --system-prompt override. Verified 2026-10-03: the judge sees no CLAUDE.md content and nothing about glyphs; it DOES see an account-level note giving the user's email address (asked directly, sonnet-5-5 reported it). Not removable from this CLI; judged harmless to glyph perception.",
+ "created": "2026-10-03T20:05:15.436772+00:00"
+}

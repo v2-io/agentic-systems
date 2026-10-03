@@ -34,3 +34,13 @@ Environment: darwin 25.5.0; ollama local; Claude Code workflow subagents (model 
 ## (next) — harness proper
 
 Explore the ingested corpus (un-gates the tabled queue items) → protocol v1.0 freeze + PREDICTIONS → the fated-randomness runner with ledger rows per judgment, pinned models, per-item option permutation, stimulus hygiene (ban ≈/⟂/answer vocab from stimulus pools; A/B index answer fallback for echo-fragile judges). See pilot/DESIGN-scale-up.md (with its addenda) for the full spec; RECONCILIATION-QUEUE.md for gates and rulings.
+
+## 2026-10-03 — v1.0 harness built; protocol frozen; predictions registered
+
+Harness `harness/runner/` (stdlib Python): `fate.py` (fated seeds), `judges.py` (isolated adapters: claude CLI, ollama, grok CLI, codex exec, agy), `instruments.py` (prompts + parser p1.0), `stimuli.py` (fated held-out stimulus sets, byte-identical on rebuild), `run.py` (append-only ledger per run). Protocol: `protocol/PROTOCOL-v1.0.md` (`gmp-v1.0`). Registered predictions: `PREDICTIONS-v1.0.md`, committed before any confirmation run. Pilot re-derivations: `harness/reanalysis/` (walk2→walk3 dissolution 425/533; feature correlates over pilot edges).
+
+| Run | Instrument | Judges | Provenance | Record |
+|---|---|---|---|---|
+| shakedown (adapter debugging, < 70 calls total) | triads/format/gestalt | haiku45, sonnet55, llama32-3b, grok46, gpt56terra, gemini31pro, gemini38flash | [full] ledger | `data/runs-v1/*-shakedown/` — excluded from all analyses |
+
+Environment: darwin (Apple M4 Max, 48 GB); claude CLI 2.1.288; grok CLI 1.0.44; codex exec; agy; ollama 0.34.4. Local weights for qwen3:4b, gemma3:4b, phi4-mini, mistral:7b, gpt-oss:20b were pulled on this date for the panel (they had been absent; `ollama rm` reverses).

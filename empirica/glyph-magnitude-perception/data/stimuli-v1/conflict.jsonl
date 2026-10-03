@@ -1,0 +1,76 @@
+{"set": "conflict", "item": "roman-8-9", "order": 0, "a": "Ⅷ", "b": "Ⅸ", "annot": {"value": "Ⅸ", "elements": "Ⅷ", "ink": "Ⅷ", "pilot_rule": "Ⅸ"}, "pid": "Cfb6ce9bddff4"}
+{"set": "conflict", "item": "roman-8-9", "order": 1, "a": "Ⅸ", "b": "Ⅷ", "annot": {"value": "Ⅸ", "elements": "Ⅷ", "ink": "Ⅷ", "pilot_rule": "Ⅸ"}, "pid": "C89b557460a26"}
+{"set": "conflict", "item": "roman-3-5", "order": 0, "a": "Ⅲ", "b": "Ⅴ", "annot": {"value": "Ⅴ", "elements": "Ⅲ", "ink": "Ⅲ", "pilot_rule": "Ⅴ"}, "pid": "C41e2bf3e3f44"}
+{"set": "conflict", "item": "roman-3-5", "order": 1, "a": "Ⅴ", "b": "Ⅲ", "annot": {"value": "Ⅴ", "elements": "Ⅲ", "ink": "Ⅲ", "pilot_rule": "Ⅴ"}, "pid": "C62c02294773c"}
+{"set": "conflict", "item": "roman-lc-8-9", "order": 0, "a": "ⅷ", "b": "ⅸ", "annot": {"value": "ⅸ", "elements": "ⅷ", "ink": "ⅷ", "pilot_rule": "ⅸ"}, "pid": "Cb2915b009164"}
+{"set": "conflict", "item": "roman-lc-8-9", "order": 1, "a": "ⅸ", "b": "ⅷ", "annot": {"value": "ⅸ", "elements": "ⅷ", "ink": "ⅷ", "pilot_rule": "ⅸ"}, "pid": "C435735ecb4be"}
+{"set": "conflict", "item": "roman-lc-3-4", "order": 0, "a": "ⅲ", "b": "ⅳ", "annot": {"value": "ⅳ", "elements": "ⅲ", "ink": "ⅲ", "pilot_rule": "ⅳ"}, "pid": "C77c2a759cd2d"}
+{"set": "conflict", "item": "roman-lc-3-4", "order": 1, "a": "ⅳ", "b": "ⅲ", "annot": {"value": "ⅳ", "elements": "ⅲ", "ink": "ⅲ", "pilot_rule": "ⅳ"}, "pid": "Cb85d62820474"}
+{"set": "conflict", "item": "roman-lc-4-5", "order": 0, "a": "ⅳ", "b": "ⅴ", "annot": {"value": "ⅴ", "elements": "ⅳ", "ink": "ⅳ", "pilot_rule": "ⅴ"}, "pid": "C0168e02dd171"}
+{"set": "conflict", "item": "roman-lc-4-5", "order": 1, "a": "ⅴ", "b": "ⅳ", "annot": {"value": "ⅴ", "elements": "ⅳ", "ink": "ⅳ", "pilot_rule": "ⅴ"}, "pid": "Ca1ed94edbd72"}
+{"set": "conflict", "item": "roman-10-12-aligned", "order": 0, "a": "Ⅹ", "b": "Ⅻ", "annot": {"value": "Ⅻ", "elements": "Ⅻ", "ink": "Ⅻ", "pilot_rule": "Ⅻ"}, "pid": "C21f71d19ea57"}
+{"set": "conflict", "item": "roman-10-12-aligned", "order": 1, "a": "Ⅻ", "b": "Ⅹ", "annot": {"value": "Ⅻ", "elements": "Ⅻ", "ink": "Ⅻ", "pilot_rule": "Ⅻ"}, "pid": "Caeb176f81c7b"}
+{"set": "conflict", "item": "sup9-vs-2", "order": 0, "a": "⁹", "b": "2", "annot": {"value": "⁹", "size": "2", "ink": "2", "pilot_rule": "⁹"}, "pid": "Cb58f55e4a9a9"}
+{"set": "conflict", "item": "sup9-vs-2", "order": 1, "a": "2", "b": "⁹", "annot": {"value": "⁹", "size": "2", "ink": "2", "pilot_rule": "⁹"}, "pid": "C8dfe44bc64e3"}
+{"set": "conflict", "item": "sub8-vs-3", "order": 0, "a": "₈", "b": "3", "annot": {"value": "₈", "size": "3", "ink": "3", "pilot_rule": "₈"}, "pid": "Ca5c3056c0643"}
+{"set": "conflict", "item": "sub8-vs-3", "order": 1, "a": "3", "b": "₈", "annot": {"value": "₈", "size": "3", "ink": "3", "pilot_rule": "₈"}, "pid": "Cabaddfc3e349"}
+{"set": "conflict", "item": "sup7-vs-1", "order": 0, "a": "⁷", "b": "1", "annot": {"value": "⁷", "size": "1", "ink": "1", "pilot_rule": "⁷"}, "pid": "Ce921bb646ebe"}
+{"set": "conflict", "item": "sup7-vs-1", "order": 1, "a": "1", "b": "⁷", "annot": {"value": "⁷", "size": "1", "ink": "1", "pilot_rule": "⁷"}, "pid": "Cacc6c2687115"}
+{"set": "conflict", "item": "sup9-vs-9-equal", "order": 0, "a": "⁹", "b": "9", "annot": {"value": "=", "size": "9", "ink": "9", "pilot_rule": "="}, "pid": "C1cc8383f91ba"}
+{"set": "conflict", "item": "sup9-vs-9-equal", "order": 1, "a": "9", "b": "⁹", "annot": {"value": "=", "size": "9", "ink": "9", "pilot_rule": "="}, "pid": "C9e3651be90c1"}
+{"set": "conflict", "item": "seg-0-vs-1", "order": 0, "a": "🯰", "b": "🯱", "annot": {"value": "🯱", "elements": "🯰", "ink": "🯰 (est: 6 vs 2 segments)", "pilot_rule": "🯱"}, "pid": "C58cc21db0f35"}
+{"set": "conflict", "item": "seg-0-vs-1", "order": 1, "a": "🯱", "b": "🯰", "annot": {"value": "🯱", "elements": "🯰", "ink": "🯰 (est: 6 vs 2 segments)", "pilot_rule": "🯱"}, "pid": "C4c34bf428833"}
+{"set": "conflict", "item": "seg-0-vs-7", "order": 0, "a": "🯰", "b": "🯷", "annot": {"value": "🯷", "elements": "🯰", "ink": "🯰 (est: 6 vs 3 segments)", "pilot_rule": "🯷"}, "pid": "C43c7fbaf87d4"}
+{"set": "conflict", "item": "seg-0-vs-7", "order": 1, "a": "🯷", "b": "🯰", "annot": {"value": "🯷", "elements": "🯰", "ink": "🯰 (est: 6 vs 3 segments)", "pilot_rule": "🯷"}, "pid": "C5be58bd9922c"}
+{"set": "conflict", "item": "seg-1-vs-8-aligned", "order": 0, "a": "🯱", "b": "🯸", "annot": {"value": "🯸", "elements": "🯸", "ink": "🯸 (est)", "pilot_rule": "🯸"}, "pid": "Cb1b6dc9c4d8e"}
+{"set": "conflict", "item": "seg-1-vs-8-aligned", "order": 1, "a": "🯸", "b": "🯱", "annot": {"value": "🯸", "elements": "🯸", "ink": "🯸 (est)", "pilot_rule": "🯸"}, "pid": "C6eaaee7c3177"}
+{"set": "conflict", "item": "frac-8th-vs-half", "order": 0, "a": "⅛", "b": "½", "annot": {"value": "½", "denominator_digit": "⅛", "pilot_rule": "½"}, "pid": "C6279c02ffd4c"}
+{"set": "conflict", "item": "frac-8th-vs-half", "order": 1, "a": "½", "b": "⅛", "annot": {"value": "½", "denominator_digit": "⅛", "pilot_rule": "½"}, "pid": "C7be7c920ad8d"}
+{"set": "conflict", "item": "frac-9th-vs-3rd", "order": 0, "a": "⅑", "b": "⅓", "annot": {"value": "⅓", "denominator_digit": "⅑", "pilot_rule": "⅓"}, "pid": "C9baa446c9206"}
+{"set": "conflict", "item": "frac-9th-vs-3rd", "order": 1, "a": "⅓", "b": "⅑", "annot": {"value": "⅓", "denominator_digit": "⅑", "pilot_rule": "⅓"}, "pid": "C3f8db124a083"}
+{"set": "conflict", "item": "frac-10th-vs-5th", "order": 0, "a": "⅒", "b": "⅕", "annot": {"value": "⅕", "denominator_digit": "⅒", "pilot_rule": "⅕"}, "pid": "C6eba857dc05c"}
+{"set": "conflict", "item": "frac-10th-vs-5th", "order": 1, "a": "⅕", "b": "⅒", "annot": {"value": "⅕", "denominator_digit": "⅒", "pilot_rule": "⅕"}, "pid": "C18538283df2b"}
+{"set": "conflict", "item": "permille-pct-vs-mille", "order": 0, "a": "%", "b": "‰", "annot": {"value": "%", "elements": "‰", "ink": "%", "pilot_rule": "‰"}, "pid": "C5d9b8e2f7a90"}
+{"set": "conflict", "item": "permille-pct-vs-mille", "order": 1, "a": "‰", "b": "%", "annot": {"value": "%", "elements": "‰", "ink": "%", "pilot_rule": "‰"}, "pid": "Ce1d7c3ead20b"}
+{"set": "conflict", "item": "permille-mille-vs-myriad", "order": 0, "a": "‰", "b": "‱", "annot": {"value": "‰", "elements": "‱", "ink": "‰", "pilot_rule": "‱"}, "pid": "C4266970ecc18"}
+{"set": "conflict", "item": "permille-mille-vs-myriad", "order": 1, "a": "‱", "b": "‰", "annot": {"value": "‰", "elements": "‱", "ink": "‰", "pilot_rule": "‱"}, "pid": "Cbd51a4d59699"}
+{"set": "conflict", "item": "permille-pct-vs-myriad", "order": 0, "a": "%", "b": "‱", "annot": {"value": "%", "elements": "‱", "ink": "%", "pilot_rule": "‱"}, "pid": "C0ce5c1b7454f"}
+{"set": "conflict", "item": "permille-pct-vs-myriad", "order": 1, "a": "‱", "b": "%", "annot": {"value": "%", "elements": "‱", "ink": "%", "pilot_rule": "‱"}, "pid": "C724832c5e7ea"}
+{"set": "conflict", "item": "arabic-pct-vs-mille", "order": 0, "a": "٪", "b": "؉", "annot": {"value": "٪", "elements": "؉", "ink": "؉", "pilot_rule": "؉"}, "pid": "C3cd3c718fb2f"}
+{"set": "conflict", "item": "arabic-pct-vs-mille", "order": 1, "a": "؉", "b": "٪", "annot": {"value": "٪", "elements": "؉", "ink": "؉", "pilot_rule": "؉"}, "pid": "C0cf3401bc69b"}
+{"set": "conflict", "item": "arabic-mille-vs-myriad", "order": 0, "a": "؉", "b": "؊", "annot": {"value": "؉", "elements": "؊", "ink": "؊", "pilot_rule": "؊"}, "pid": "Cd08a03438d3e"}
+{"set": "conflict", "item": "arabic-mille-vs-myriad", "order": 1, "a": "؊", "b": "؉", "annot": {"value": "؉", "elements": "؊", "ink": "؊", "pilot_rule": "؊"}, "pid": "C547e1e46600e"}
+{"set": "conflict", "item": "gram-earth-vs-gyang", "order": 0, "a": "☷", "b": "⚌", "annot": {"lines": "☷", "yang": "⚌", "ink": "⚌", "pilot_rule": "☷"}, "pid": "C266ec52e238b"}
+{"set": "conflict", "item": "gram-earth-vs-gyang", "order": 1, "a": "⚌", "b": "☷", "annot": {"lines": "☷", "yang": "⚌", "ink": "⚌", "pilot_rule": "☷"}, "pid": "C7a07554a3653"}
+{"set": "conflict", "item": "gram-gyin-vs-yang", "order": 0, "a": "⚏", "b": "⚊", "annot": {"lines": "⚏", "yang": "⚊", "ink": "⚏", "pilot_rule": "⚏"}, "pid": "C0affdf3fe1a3"}
+{"set": "conflict", "item": "gram-gyin-vs-yang", "order": 1, "a": "⚊", "b": "⚏", "annot": {"lines": "⚏", "yang": "⚊", "ink": "⚏", "pilot_rule": "⚏"}, "pid": "C3bd8dfb9623f"}
+{"set": "conflict", "item": "gram-earth-vs-yang", "order": 0, "a": "☷", "b": "⚊", "annot": {"lines": "☷", "yang": "⚊", "ink": "☷", "pilot_rule": "☷"}, "pid": "C0a2c96e7a9e4"}
+{"set": "conflict", "item": "gram-earth-vs-yang", "order": 1, "a": "⚊", "b": "☷", "annot": {"lines": "☷", "yang": "⚊", "ink": "☷", "pilot_rule": "☷"}, "pid": "C72f1e24540a2"}
+{"set": "conflict", "item": "gram-earth-vs-heaven", "order": 0, "a": "☷", "b": "☰", "annot": {"lines": "=", "yang": "☰", "ink": "☰", "pilot_rule": "☰"}, "pid": "C4c53a45c736e"}
+{"set": "conflict", "item": "gram-earth-vs-heaven", "order": 1, "a": "☰", "b": "☷", "annot": {"lines": "=", "yang": "☰", "ink": "☰", "pilot_rule": "☰"}, "pid": "Cadd6f4ed30a5"}
+{"set": "conflict", "item": "gram-yin-vs-yang", "order": 0, "a": "⚋", "b": "⚊", "annot": {"lines": "=", "yang": "⚊", "ink": "⚊", "pilot_rule": "⚊"}, "pid": "C769f80fd0674"}
+{"set": "conflict", "item": "gram-yin-vs-yang", "order": 1, "a": "⚊", "b": "⚋", "annot": {"lines": "=", "yang": "⚊", "ink": "⚊", "pilot_rule": "⚊"}, "pid": "Cea87679d3eec"}
+{"set": "conflict", "item": "gram-gyin-vs-gyang", "order": 0, "a": "⚏", "b": "⚌", "annot": {"lines": "=", "yang": "⚌", "ink": "⚌", "pilot_rule": "⚌"}, "pid": "Cf39bb14c9370"}
+{"set": "conflict", "item": "gram-gyin-vs-gyang", "order": 1, "a": "⚌", "b": "⚏", "annot": {"lines": "=", "yang": "⚌", "ink": "⚌", "pilot_rule": "⚌"}, "pid": "C0a2c330fc786"}
+{"set": "conflict", "item": "hex-receptive-vs-heaven3", "order": 0, "a": "䷁", "b": "☰", "annot": {"lines": "䷁", "yang": "☰", "ink": "䷁", "pilot_rule": "䷁"}, "pid": "C32c11ae2eea1"}
+{"set": "conflict", "item": "hex-receptive-vs-heaven3", "order": 1, "a": "☰", "b": "䷁", "annot": {"lines": "䷁", "yang": "☰", "ink": "䷁", "pilot_rule": "䷁"}, "pid": "C96efb0dd589a"}
+{"set": "conflict", "item": "hex-receptive-vs-gyang", "order": 0, "a": "䷁", "b": "⚌", "annot": {"lines": "䷁", "yang": "⚌", "ink": "䷁", "pilot_rule": "䷁"}, "pid": "Cb8e040ab50fd"}
+{"set": "conflict", "item": "hex-receptive-vs-gyang", "order": 1, "a": "⚌", "b": "䷁", "annot": {"lines": "䷁", "yang": "⚌", "ink": "䷁", "pilot_rule": "䷁"}, "pid": "C22b528166ca9"}
+{"set": "conflict", "item": "hex-creative-vs-heaven3-aligned", "order": 0, "a": "☰", "b": "䷀", "annot": {"lines": "䷀", "yang": "䷀", "ink": "䷀", "pilot_rule": "䷀"}, "pid": "C234c0683fcce"}
+{"set": "conflict", "item": "hex-creative-vs-heaven3-aligned", "order": 1, "a": "䷀", "b": "☰", "annot": {"lines": "䷀", "yang": "䷀", "ink": "䷀", "pilot_rule": "䷀"}, "pid": "Ca417e563c89e"}
+{"set": "conflict", "item": "dots3-vs-disc", "order": 0, "a": "⁖", "b": "●", "annot": {"elements": "⁖", "size": "●", "ink": "●", "pilot_rule": "●"}, "pid": "C90108849c0f7"}
+{"set": "conflict", "item": "dots3-vs-disc", "order": 1, "a": "●", "b": "⁖", "annot": {"elements": "⁖", "size": "●", "ink": "●", "pilot_rule": "●"}, "pid": "C7bcce914a77e"}
+{"set": "conflict", "item": "dots4-vs-bigdisc", "order": 0, "a": "⁘", "b": "⬤", "annot": {"elements": "⁘", "size": "⬤", "ink": "⬤", "pilot_rule": "⬤"}, "pid": "C03e2c5a3ffa4"}
+{"set": "conflict", "item": "dots4-vs-bigdisc", "order": 1, "a": "⬤", "b": "⁘", "annot": {"elements": "⁘", "size": "⬤", "ink": "⬤", "pilot_rule": "⬤"}, "pid": "C32465292f27e"}
+{"set": "conflict", "item": "therefore-vs-bigdisc", "order": 0, "a": "∴", "b": "⬤", "annot": {"elements": "∴", "size": "⬤", "ink": "⬤", "pilot_rule": "⬤"}, "pid": "C5a63499535d8"}
+{"set": "conflict", "item": "therefore-vs-bigdisc", "order": 1, "a": "⬤", "b": "∴", "annot": {"elements": "∴", "size": "⬤", "ink": "⬤", "pilot_rule": "⬤"}, "pid": "Cbf1b21267b7e"}
+{"set": "conflict", "item": "braille8-vs-block", "order": 0, "a": "⣿", "b": "█", "annot": {"elements": "⣿", "ink": "█", "fill": "= (both 'full')", "pilot_rule": "█"}, "pid": "C5fa66ccae381"}
+{"set": "conflict", "item": "braille8-vs-block", "order": 1, "a": "█", "b": "⣿", "annot": {"elements": "⣿", "ink": "█", "fill": "= (both 'full')", "pilot_rule": "█"}, "pid": "C7574571b598c"}
+{"set": "conflict", "item": "die5-vs-5-equal", "order": 0, "a": "⚄", "b": "5", "annot": {"value": "=", "ink": "5", "pilot_rule": "="}, "pid": "C189f9f493fa1"}
+{"set": "conflict", "item": "die5-vs-5-equal", "order": 1, "a": "5", "b": "⚄", "annot": {"value": "=", "ink": "5", "pilot_rule": "="}, "pid": "Cf0cc0f90f863"}
+{"set": "conflict", "item": "die5-vs-circled6", "order": 0, "a": "⚄", "b": "⑥", "annot": {"value": "⑥", "elements": "⚄", "pilot_rule": "⑥"}, "pid": "C279d45611d79"}
+{"set": "conflict", "item": "die5-vs-circled6", "order": 1, "a": "⑥", "b": "⚄", "annot": {"value": "⑥", "elements": "⚄", "pilot_rule": "⑥"}, "pid": "C4c595444ab3e"}
+{"set": "conflict", "item": "die6-vs-circled5", "order": 0, "a": "⚅", "b": "⑤", "annot": {"value": "⚅", "elements": "⚅", "pilot_rule": "⚅"}, "pid": "C2b61e79d0f93"}
+{"set": "conflict", "item": "die6-vs-circled5", "order": 1, "a": "⑤", "b": "⚅", "annot": {"value": "⚅", "elements": "⚅", "pilot_rule": "⚅"}, "pid": "C3ceedcd3b7ed"}
+{"set": "conflict", "item": "tally-rod4-vs-roman5", "order": 0, "a": "𝍣", "b": "Ⅴ", "annot": {"value": "Ⅴ", "elements": "𝍣", "pilot_rule": "Ⅴ"}, "pid": "C8bdea5efae00"}
+{"set": "conflict", "item": "tally-rod4-vs-roman5", "order": 1, "a": "Ⅴ", "b": "𝍣", "annot": {"value": "Ⅴ", "elements": "𝍣", "pilot_rule": "Ⅴ"}, "pid": "C314f23b24b96"}

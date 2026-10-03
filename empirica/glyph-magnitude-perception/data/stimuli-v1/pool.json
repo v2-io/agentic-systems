@@ -1,0 +1,5203 @@
+{
+"protocol": "gmp-v1.0",
+"unicode_version": "14.0.0",
+"seed_records": [
+{
+"rec": "3bed002799068f92",
+"surveyor": "fable-1",
+"glyphs": [
+"➀",
+"➁",
+"➂",
+"➃",
+"➄",
+"➅",
+"➆",
+"➇",
+"➈",
+"➉"
+]
+},
+{
+"rec": "02da600a01f0b881",
+"surveyor": "fable-1",
+"glyphs": [
+"Ⅺ",
+"Ⅻ"
+]
+},
+{
+"rec": "603bfdc943ab4490",
+"surveyor": "fable-1",
+"glyphs": [
+"⁝",
+"⁞"
+]
+},
+{
+"rec": "38eae7c693e03066",
+"surveyor": "fable-1",
+"glyphs": [
+"⇒",
+"⇛"
+]
+},
+{
+"rec": "bb2bfadc44fddb2d",
+"surveyor": "fable-1",
+"glyphs": [
+"𝄖",
+"𝄗",
+"𝄘",
+"𝄙",
+"𝄚"
+]
+},
+{
+"rec": "64a3e2eb4962164e",
+"surveyor": "fable-1",
+"glyphs": [
+"¹",
+"²",
+"³"
+]
+},
+{
+"rec": "11ba9dbb49eefb4b",
+"surveyor": "fable-1",
+"glyphs": [
+"ˑ",
+"ː"
+]
+},
+{
+"rec": "5526c5f9e416fbcd",
+"surveyor": "fable-1",
+"glyphs": [
+"‐",
+"‒",
+"–",
+"—",
+"―"
+]
+},
+{
+"rec": "d51d706b1f3c701a",
+"surveyor": "fable-1",
+"glyphs": [
+"‵",
+"‶",
+"‷"
+]
+},
+{
+"rec": "589094543ff5e64e",
+"surveyor": "fable-1",
+"glyphs": [
+"‧",
+"⁚",
+"⁝",
+"⁞"
+]
+},
+{
+"rec": "7bedd0bd8b94e625",
+"surveyor": "fable-1",
+"glyphs": [
+"⁖",
+"⁘",
+"⁙"
+]
+},
+{
+"rec": "82170a45e6665dfd",
+"surveyor": "fable-1",
+"glyphs": [
+"⁰",
+"¹",
+"²",
+"³",
+"⁴",
+"⁵",
+"⁶",
+"⁷",
+"⁸",
+"⁹"
+]
+},
+{
+"rec": "d829d7e211965080",
+"surveyor": "fable-1",
+"glyphs": [
+"⅑",
+"⅐",
+"⅕",
+"⅓"
+]
+},
+{
+"rec": "f35d4563ece4c384",
+"surveyor": "fable-1",
+"glyphs": [
+"Ⅺ",
+"Ⅻ"
+]
+},
+{
+"rec": "e95efa638aaca674",
+"surveyor": "fable-1",
+"glyphs": [
+"Ⅽ",
+"Ⅾ",
+"Ⅿ",
+"ↁ",
+"ↂ",
+"ↇ",
+"ↈ"
+]
+},
+{
+"rec": "b15cd7fa52128013",
+"surveyor": "fable-1",
+"glyphs": [
+"⇒",
+"⇛"
+]
+},
+{
+"rec": "45963b95493989de",
+"surveyor": "fable-1",
+"glyphs": [
+"⇉",
+"⇶"
+]
+},
+{
+"rec": "4c6f3e80cb0620e9",
+"surveyor": "fable-1",
+"glyphs": [
+"√",
+"∛",
+"∜"
+]
+},
+{
+"rec": "7589a71c5bfcb084",
+"surveyor": "fable-1",
+"glyphs": [
+"∮",
+"∰"
+]
+},
+{
+"rec": "fff089efa1ffc7d6",
+"surveyor": "fable-1",
+"glyphs": [
+"∣",
+"∥",
+"⫴"
+]
+},
+{
+"rec": "e3532fc336f856fe",
+"surveyor": "fable-1",
+"glyphs": [
+"≡",
+"≣"
+]
+},
+{
+"rec": "a49576c1938ac57c",
+"surveyor": "fable-1",
+"glyphs": [
+"⋘"
+]
+},
+{
+"rec": "e7ee7fcf3a2d690a",
+"surveyor": "fable-1",
+"glyphs": [
+"⋅"
+]
+},
+{
+"rec": "e87affb000dc36c7",
+"surveyor": "fable-1",
+"glyphs": [
+"⑪"
+]
+},
+{
+"rec": "1757aee969fbf4ea",
+"surveyor": "fable-1",
+"glyphs": [
+"⑴",
+"⑵",
+"⑶"
+]
+},
+{
+"rec": "728ab7dd35bbe1d8",
+"surveyor": "fable-1",
+"glyphs": [
+"⒈",
+"⒉",
+"⒊"
+]
+},
+{
+"rec": "82714d0eb2fec5af",
+"surveyor": "fable-1",
+"glyphs": [
+"⓪"
+]
+},
+{
+"rec": "ad5123bb5497a9bc",
+"surveyor": "fable-1",
+"glyphs": [
+"⓵",
+"⓶",
+"⓹",
+"⓺",
+"⓻",
+"⓼",
+"⓽",
+"⓾"
+]
+},
+{
+"rec": "4946ad3b1856513c",
+"surveyor": "fable-1",
+"glyphs": [
+"⓫",
+"⓬",
+"⓴"
+]
+},
+{
+"rec": "e5365f143c882677",
+"surveyor": "fable-1",
+"glyphs": [
+"▫",
+"◻",
+"⬜"
+]
+},
+{
+"rec": "fafe1fffdce7a0d6",
+"surveyor": "fable-1",
+"glyphs": [
+"◦",
+"◯"
+]
+},
+{
+"rec": "08109eab89f78ab9",
+"surveyor": "fable-1",
+"glyphs": [
+"◎"
+]
+},
+{
+"rec": "9e807067ae2b250d",
+"surveyor": "fable-1",
+"glyphs": [
+"▤",
+"▦",
+"▩"
+]
+},
+{
+"rec": "bf302317d960a2e7",
+"surveyor": "fable-1",
+"glyphs": [
+"𝌆"
+]
+},
+{
+"rec": "5c6980f7ee52a2f3",
+"surveyor": "fable-1",
+"glyphs": [
+"☶",
+"☵",
+"☲"
+]
+},
+{
+"rec": "03bd9df6ac68035d",
+"surveyor": "fable-1",
+"glyphs": [
+"☀",
+"⛅",
+"☁",
+"☔",
+"⛈"
+]
+},
+{
+"rec": "cdea10ec6d733acc",
+"surveyor": "fable-1",
+"glyphs": [
+"⭐",
+"🌟"
+]
+},
+{
+"rec": "9bc8b941551d96bf",
+"surveyor": "fable-1",
+"glyphs": [
+"❶",
+"❷",
+"❸",
+"❺",
+"❻",
+"❼",
+"❽",
+"❾",
+"❿"
+]
+},
+{
+"rec": "5ad05e5195088609",
+"surveyor": "fable-1",
+"glyphs": [
+"✓",
+"✔",
+"✅"
+]
+},
+{
+"rec": "c4b48e35edb1a56f",
+"surveyor": "fable-1",
+"glyphs": [
+"⠀",
+"⢀",
+"⣦",
+"⣷"
+]
+},
+{
+"rec": "16d8a37854a704b8",
+"surveyor": "fable-1",
+"glyphs": [
+"⬞",
+"▫",
+"◽",
+"□",
+"◻",
+"⬜"
+]
+},
+{
+"rec": "bd7cc3e737f6ef2c",
+"surveyor": "fable-1",
+"glyphs": [
+"▲",
+"■",
+"⬟",
+"⬢"
+]
+},
+{
+"rec": "617ce16f8f6bf6e0",
+"surveyor": "fable-1",
+"glyphs": [
+"⩵",
+"⩶"
+]
+},
+{
+"rec": "63ebf0fcb49819be",
+"surveyor": "fable-1",
+"glyphs": [
+"〡",
+"〥"
+]
+},
+{
+"rec": "8eefa179aa082127",
+"surveyor": "fable-1",
+"glyphs": [
+"一",
+"二",
+"三",
+"四",
+"五",
+"六",
+"七",
+"八",
+"九",
+"十",
+"百",
+"千",
+"万"
+]
+},
+{
+"rec": "f80c87828653a67e",
+"surveyor": "fable-1",
+"glyphs": [
+"🀱",
+"🀲",
+"🀳",
+"🀴",
+"🀵",
+"🀶",
+"🀷"
+]
+},
+{
+"rec": "c81b911dcbda54d2",
+"surveyor": "fable-1",
+"glyphs": [
+"🀱",
+"🀹",
+"🁁",
+"🁉",
+"🁑",
+"🁙",
+"🁡"
+]
+},
+{
+"rec": "207564cf6f502c7b",
+"surveyor": "fable-1",
+"glyphs": [
+"🂡",
+"🂢",
+"🂣",
+"🂤",
+"🂥",
+"🂦",
+"🂧",
+"🂨",
+"🂩",
+"🂪",
+"🂫",
+"🂭"
+]
+},
+{
+"rec": "f1a70a7773cf5cd9",
+"surveyor": "fable-1",
+"glyphs": [
+"🂫",
+"🂭"
+]
+},
+{
+"rec": "d6888a9391947349",
+"surveyor": "fable-1",
+"glyphs": [
+"🞌",
+"🞄",
+"⚫"
+]
+},
+{
+"rec": "10d8d8ccfa964beb",
+"surveyor": "fable-1",
+"glyphs": [
+"🄀",
+"🄁",
+"🄂",
+"🄃",
+"🄄",
+"🄅",
+"🄆",
+"🄇",
+"🄈",
+"🄉"
+]
+},
+{
+"rec": "f6713c1e6db603ee",
+"surveyor": "fable-1",
+"glyphs": [
+"🕐",
+"🕑",
+"🕒",
+"🕓",
+"🕔",
+"🕕",
+"🕖",
+"🕗",
+"🕘",
+"🕙",
+"🕚"
+]
+},
+{
+"rec": "012cdfac40e3c3e2",
+"surveyor": "fable-1",
+"glyphs": [
+"🌰",
+"🌱",
+"🌳"
+]
+},
+{
+"rec": "7daecd136d105352",
+"surveyor": "fable-1",
+"glyphs": [
+"🥉",
+"🥈",
+"🥇"
+]
+},
+{
+"rec": "b1993575373fe130",
+"surveyor": "fable-1",
+"glyphs": [
+"🌥",
+"🌦",
+"🌧",
+"🌩",
+"🌪"
+]
+},
+{
+"rec": "32e1c78f4969b30d",
+"surveyor": "fable-1",
+"glyphs": [
+"🏠",
+"🏢",
+"🏙"
+]
+},
+{
+"rec": "ca0f05c3cad5d7e7",
+"surveyor": "fable-1",
+"glyphs": [
+"🥚",
+"🐤",
+"🐓"
+]
+},
+{
+"rec": "1a2a55f168c6b7ac",
+"surveyor": "fable-1",
+"glyphs": [
+"💧",
+"💦",
+"🌊"
+]
+},
+{
+"rec": "5475fc9cc765c106",
+"surveyor": "fable-1",
+"glyphs": [
+"꜖",
+"꜕",
+"꜔",
+"꜓",
+"꜒"
+]
+},
+{
+"rec": "0d2784a63aa7a07c",
+"surveyor": "fable-1",
+"glyphs": [
+"😆",
+"😂",
+"🤣"
+]
+},
+{
+"rec": "3fef66a043495efc",
+"surveyor": "fable-1",
+"glyphs": [
+"🀙",
+"🀚",
+"🀜",
+"🀝",
+"🀞",
+"🀟",
+"🀡"
+]
+},
+{
+"rec": "1beba3da9d605f2e",
+"surveyor": "fable-1",
+"glyphs": [
+"ẋ",
+"ẍ"
+]
+},
+{
+"rec": "6944b40680264cee",
+"surveyor": "fable-1",
+"glyphs": [
+"٠",
+"١",
+"٢",
+"٣",
+"٤",
+"٥",
+"٦",
+"٧",
+"٨",
+"٩"
+]
+},
+{
+"rec": "e06a3bc5ae6bb8a2",
+"surveyor": "fable-1",
+"glyphs": [
+"൰",
+"൱",
+"൲"
+]
+},
+{
+"rec": "99686d543ab27c0c",
+"surveyor": "fable-1",
+"glyphs": [
+"౼",
+"౽",
+"౾"
+]
+},
+{
+"rec": "d3f0819b96978c0a",
+"surveyor": "fable-1",
+"glyphs": [
+"༪",
+"༫",
+"༬",
+"༭",
+"༮",
+"༯",
+"༰",
+"༱",
+"༲",
+"༳"
+]
+},
+{
+"rec": "a9433994b41ca574",
+"surveyor": "fable-1",
+"glyphs": [
+"؊",
+"؉",
+"؈"
+]
+},
+{
+"rec": "16bde20442cf78f7",
+"surveyor": "fable-1",
+"glyphs": [
+"፩",
+"፲",
+"፻",
+"፼"
+]
+},
+{
+"rec": "a552a994572807df",
+"surveyor": "fable-1",
+"glyphs": [
+"៰",
+"៱",
+"៲",
+"៴",
+"៵",
+"៶",
+"៷",
+"៸",
+"៹"
+]
+},
+{
+"rec": "a3430f4b203affd0",
+"surveyor": "fable-1",
+"glyphs": [
+"ᛮ",
+"ᛯ",
+"ᛰ"
+]
+},
+{
+"rec": "534d384f1093dc17",
+"surveyor": "fable-1",
+"glyphs": [
+"ℵ",
+"ℶ",
+"ℷ",
+"ℸ"
+]
+},
+{
+"rec": "29261f8af9a25cc4",
+"surveyor": "fable-1",
+"glyphs": [
+"⼀",
+"⼈",
+"⼭",
+"⾦"
+]
+},
+{
+"rec": "7fbb20fdd3d36909",
+"surveyor": "fable-1",
+"glyphs": [
+"㊀",
+"㊂",
+"㊃",
+"㊄",
+"㊅",
+"㊆",
+"㊇",
+"㊉"
+]
+},
+{
+"rec": "4715d057caea1a58",
+"surveyor": "fable-1",
+"glyphs": [
+"㋀",
+"㋁",
+"㋋"
+]
+},
+{
+"rec": "ffb555885cb03896",
+"surveyor": "fable-1",
+"glyphs": [
+"꠰",
+"꠱",
+"꠲",
+"꠳"
+]
+},
+{
+"rec": "ccb99e1355810757",
+"surveyor": "fable-1",
+"glyphs": [
+"﹒",
+"．"
+]
+},
+{
+"rec": "8c9b4dd39f55ae70",
+"surveyor": "fable-1",
+"glyphs": [
+"㆔"
+]
+},
+{
+"rec": "edd1cbed2360022e",
+"surveyor": "fable-1",
+"glyphs": [
+"㆘",
+"㆖"
+]
+},
+{
+"rec": "45be196bbd67485a",
+"surveyor": "fable-1",
+"glyphs": [
+"🞵",
+"🞶"
+]
+},
+{
+"rec": "a21f79d85f45e008",
+"surveyor": "fable-1",
+"glyphs": [
+"🞼",
+"🞽",
+"🞾",
+"🞿"
+]
+},
+{
+"rec": "e81312c881be8112",
+"surveyor": "fable-1",
+"glyphs": [
+"﹡",
+"✱"
+]
+},
+{
+"rec": "95d6dfd67a045204",
+"surveyor": "fable-1",
+"glyphs": [
+"🟁",
+"🟅",
+"🟋",
+"🟎"
+]
+},
+{
+"rec": "e4fdfe39cbf3c6ea",
+"surveyor": "fable-1",
+"glyphs": [
+"✦",
+"✺"
+]
+},
+{
+"rec": "62d52eb8797016a2",
+"surveyor": "fable-1",
+"glyphs": [
+"⭒",
+"⭐"
+]
+},
+{
+"rec": "97b0429afba61eae",
+"surveyor": "fable-1",
+"glyphs": [
+"🌟"
+]
+},
+{
+"rec": "9b19becc3e54499b",
+"surveyor": "fable-1",
+"glyphs": [
+"❇",
+"✨",
+"🎇"
+]
+},
+{
+"rec": "724634220228cf17",
+"surveyor": "fable-1",
+"glyphs": [
+"⫽",
+"⫻"
+]
+},
+{
+"rec": "9a1f7af256903277",
+"surveyor": "fable-1",
+"glyphs": [
+"🡢",
+"🡪",
+"🡲",
+"🡺"
+]
+},
+{
+"rec": "994fd7a4679bed97",
+"surveyor": "fable-1",
+"glyphs": [
+"🮂",
+"🮃",
+"▀",
+"🮄",
+"🮅",
+"🮆"
+]
+},
+{
+"rec": "984d3ed3ad2a863e",
+"surveyor": "fable-1",
+"glyphs": [
+"⸪",
+"⸫",
+"⸬"
+]
+},
+{
+"rec": "0d4795b3ece8ff45",
+"surveyor": "fable-1",
+"glyphs": [
+"∣",
+"∥",
+"⦀"
+]
+},
+{
+"rec": "fa4a3f60f38e9c5f",
+"surveyor": "fable-1",
+"glyphs": [
+"🀙",
+"🀚",
+"🀜",
+"🀝",
+"🀞",
+"🀟",
+"🀡"
+]
+},
+{
+"rec": "42b5ded69c3cd7ad",
+"surveyor": "fable-1",
+"glyphs": [
+"‿",
+"⌣",
+"⌄",
+"∨"
+]
+},
+{
+"rec": "5c144a940b0ff001",
+"surveyor": "fable-1",
+"glyphs": [
+"🦠",
+"☀",
+"🌌"
+]
+},
+{
+"rec": "206f8d30720d2c83",
+"surveyor": "fable-1",
+"glyphs": [
+"🌫",
+"☁",
+"🌧",
+"💧",
+"🌊"
+]
+},
+{
+"rec": "d70678cbd59b4395",
+"surveyor": "fable-1",
+"glyphs": [
+"💧",
+"🧊"
+]
+},
+{
+"rec": "2e4bf18a2bb35833",
+"surveyor": "fable-1",
+"glyphs": [
+"🚶",
+"🏃",
+"🚲",
+"🚗",
+"🚄",
+"✈"
+]
+},
+{
+"rec": "0f7832af68ecfe7f",
+"surveyor": "fable-1",
+"glyphs": [
+"🤫",
+"🗣",
+"🔔",
+"📯"
+]
+},
+{
+"rec": "61b77795f82cc195",
+"surveyor": "fable-1",
+"glyphs": [
+"👥",
+"👪",
+"🏘",
+"🏙"
+]
+},
+{
+"rec": "2fbb6a4428a792cf",
+"surveyor": "fable-1",
+"glyphs": [
+"🪙",
+"💵",
+"🏦"
+]
+},
+{
+"rec": "afd7bb6a032b28b9",
+"surveyor": "fable-1",
+"glyphs": [
+"ɲ",
+"ɳ",
+"ŋ"
+]
+},
+{
+"rec": "f8e7d65b72780ff4",
+"surveyor": "sonnet-survey-1",
+"glyphs": [
+"◌",
+"◎"
+]
+},
+{
+"rec": "c0b724c92c4f7bc0",
+"surveyor": "sonnet-survey-1",
+"glyphs": [
+"▫",
+"◽",
+"◻",
+"□"
+]
+},
+{
+"rec": "5e46d9d849a503b1",
+"surveyor": "sonnet-survey-1",
+"glyphs": [
+"▪",
+"◾",
+"◼",
+"■"
+]
+},
+{
+"rec": "cee17f04d473347a",
+"surveyor": "sonnet-survey-1",
+"glyphs": [
+"▵",
+"△"
+]
+},
+{
+"rec": "53a964264f1ad02e",
+"surveyor": "sonnet-survey-1",
+"glyphs": [
+"▴",
+"▲"
+]
+},
+{
+"rec": "fea3d0a77f6e6831",
+"surveyor": "sonnet-survey-1",
+"glyphs": [
+"□",
+"▤",
+"▦",
+"◫",
+"▩",
+"■"
+]
+},
+{
+"rec": "3362981705ae4627",
+"surveyor": "sonnet-survey-1",
+"glyphs": [
+"⚆",
+"⚇"
+]
+},
+{
+"rec": "b4e0d89039fce4fd",
+"surveyor": "sonnet-survey-1",
+"glyphs": [
+"⚈",
+"⚉"
+]
+},
+{
+"rec": "4bf552fe884b8a37",
+"surveyor": "sonnet-survey-1",
+"glyphs": [
+"⚬",
+"⚫"
+]
+},
+{
+"rec": "41d5c061f6d52bcc",
+"surveyor": "sonnet-survey-1",
+"glyphs": [
+"▘",
+"▝",
+"▟"
+]
+},
+{
+"rec": "ac732c6fdafbfb85",
+"surveyor": "sonnet-survey-1",
+"glyphs": [
+"⁰",
+"⁴",
+"⁵",
+"⁶",
+"⁷",
+"⁸",
+"⁹",
+"₀",
+"₁",
+"₂",
+"₃",
+"₄",
+"₅",
+"₆",
+"₇",
+"₈",
+"₉"
+]
+},
+{
+"rec": "a975847d64cddb1d",
+"surveyor": "sonnet-survey-1",
+"glyphs": [
+"Ⅺ",
+"Ⅻ"
+]
+},
+{
+"rec": "0d544049a1fd1814",
+"surveyor": "sonnet-survey-1",
+"glyphs": [
+"⅑",
+"⅐",
+"⅕",
+"⅓",
+"⅖",
+"⅗",
+"⅔",
+"⅘"
+]
+},
+{
+"rec": "dd2a8d37661ed33e",
+"surveyor": "sonnet-survey-1",
+"glyphs": [
+"⇉",
+"⇶"
+]
+},
+{
+"rec": "9fcde3747d555bbc",
+"surveyor": "sonnet-survey-1",
+"glyphs": [
+"⇒",
+"⇛"
+]
+},
+{
+"rec": "608cafcbf3833deb",
+"surveyor": "sonnet-survey-1",
+"glyphs": [
+"⇷",
+"⇺"
+]
+},
+{
+"rec": "699cb8307a51095d",
+"surveyor": "sonnet-survey-1",
+"glyphs": [
+"⑪",
+"⑫",
+"⑬",
+"⑭",
+"⑮",
+"⑯",
+"⑱",
+"⑲",
+"⑳"
+]
+},
+{
+"rec": "ab1634446ee71cab",
+"surveyor": "sonnet-survey-2",
+"glyphs": [
+"⓪"
+]
+},
+{
+"rec": "71687da96407900f",
+"surveyor": "sonnet-survey-2",
+"glyphs": [
+"⑴",
+"⑵",
+"⑶",
+"⑷",
+"⑸",
+"⑹",
+"⑻",
+"⑼",
+"⑽"
+]
+},
+{
+"rec": "19ea1a84514564c7",
+"surveyor": "sonnet-survey-2",
+"glyphs": [
+"⑪",
+"⑫",
+"⑳"
+]
+},
+{
+"rec": "13779b99fac3bf28",
+"surveyor": "sonnet-survey-2",
+"glyphs": [
+"⓫",
+"⓬",
+"⓭",
+"⓴"
+]
+},
+{
+"rec": "b45014f50fbf0136",
+"surveyor": "sonnet-survey-2",
+"glyphs": [
+"⓵",
+"⓶",
+"⓹"
+]
+},
+{
+"rec": "3e2cce1c0eb355b0",
+"surveyor": "sonnet-survey-2",
+"glyphs": [
+"▪",
+"◽",
+"◻",
+"■"
+]
+},
+{
+"rec": "bd0ac369a4fb47a4",
+"surveyor": "sonnet-survey-2",
+"glyphs": [
+"▫",
+"◽",
+"◻",
+"□"
+]
+},
+{
+"rec": "7231707304f2e324",
+"surveyor": "sonnet-survey-2",
+"glyphs": [
+"▵",
+"▴",
+"△",
+"▲"
+]
+},
+{
+"rec": "5551ef023ed36abf",
+"surveyor": "sonnet-survey-2",
+"glyphs": [
+"□",
+"▤",
+"▩",
+"■"
+]
+},
+{
+"rec": "4c223d8374162b37",
+"surveyor": "sonnet-survey-2",
+"glyphs": [
+"⠀",
+"⠏",
+"⠿"
+]
+},
+{
+"rec": "41174f85dd92d774",
+"surveyor": "sonnet-survey-2",
+"glyphs": [
+"⋘"
+]
+},
+{
+"rec": "f76ee875bd7f55fb",
+"surveyor": "sonnet-survey-2",
+"glyphs": [
+"≫",
+"⋙"
+]
+},
+{
+"rec": "257a687a4f652c7b",
+"surveyor": "sonnet-survey-2",
+"glyphs": [
+"🞄",
+"🞅",
+"🞆",
+"🞇",
+"🞈"
+]
+},
+{
+"rec": "4456f7e46cb1aa46",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⅐",
+"⅑"
+]
+},
+{
+"rec": "2190ac650bda2867",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⅕",
+"⅖",
+"⅗",
+"⅘"
+]
+},
+{
+"rec": "71381e14a0aba772",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"Ⅺ",
+"Ⅻ"
+]
+},
+{
+"rec": "960a8ea2ed70c075",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"Ⅽ",
+"Ⅾ",
+"Ⅿ"
+]
+},
+{
+"rec": "bce9408476a9f86c",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ⅰ",
+"ⅱ",
+"ⅲ",
+"ⅳ",
+"ⅴ",
+"ⅵ",
+"ⅶ",
+"ⅷ",
+"ⅸ",
+"ⅹ",
+"ⅺ",
+"ⅻ"
+]
+},
+{
+"rec": "235116315fda98b9",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ↀ",
+"ↁ",
+"ↂ"
+]
+},
+{
+"rec": "a155ab0e819dde36",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⅟",
+"↉"
+]
+},
+{
+"rec": "411f843a07511bcb",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⚆",
+"⚇",
+"⚈",
+"⚉"
+]
+},
+{
+"rec": "537b20f564356b46",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⚬"
+]
+},
+{
+"rec": "bc7cdc9cf13155a5",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"♩",
+"♪",
+"♫",
+"♬"
+]
+},
+{
+"rec": "698bc34b575d2760",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"♳",
+"♴",
+"♵",
+"♶",
+"♸"
+]
+},
+{
+"rec": "03bfc8b917aee740",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⛀",
+"⛁"
+]
+},
+{
+"rec": "2f35e687e2178a31",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"◐"
+]
+},
+{
+"rec": "3bb899653e7146ab",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"◌",
+"◯"
+]
+},
+{
+"rec": "363165c3bff436b0",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"▪",
+"◽",
+"◻"
+]
+},
+{
+"rec": "642ae53960763231",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"▴",
+"▲"
+]
+},
+{
+"rec": "919585658f43c3a1",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"◇",
+"◈"
+]
+},
+{
+"rec": "e1c3e52cfd482650",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⓪",
+"⑪",
+"⑫",
+"⑬",
+"⑭",
+"⑮",
+"⑯",
+"⑱",
+"⑲",
+"⑳"
+]
+},
+{
+"rec": "7847d2b5b3735b14",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⑴",
+"⑵",
+"⑶",
+"⑷",
+"⑸",
+"⑹",
+"⑻",
+"⑼",
+"⑽",
+"⑾",
+"⑿",
+"⒀",
+"⒁",
+"⒃",
+"⒄",
+"⒅",
+"⒆",
+"⒇"
+]
+},
+{
+"rec": "4403da368790cac3",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⒈",
+"⒉",
+"⒊",
+"⒋",
+"⒌",
+"⒍",
+"⒎",
+"⒏",
+"⒐",
+"⒑",
+"⒒",
+"⒓",
+"⒔",
+"⒖",
+"⒗",
+"⒘",
+"⒙",
+"⒚",
+"⒛"
+]
+},
+{
+"rec": "827693ea3cbc8ff2",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⓿",
+"⓫",
+"⓬",
+"⓭",
+"⓮",
+"⓰",
+"⓱",
+"⓲",
+"⓳",
+"⓴"
+]
+},
+{
+"rec": "3498c7d019da301a",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⓵",
+"⓶",
+"⓹",
+"⓺",
+"⓻",
+"⓼",
+"⓽",
+"⓾"
+]
+},
+{
+"rec": "54fe74562b6abce8",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"√",
+"∛",
+"∜"
+]
+},
+{
+"rec": "1ea2cf6a057361ab",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⇒",
+"⇉",
+"⇛",
+"⇶"
+]
+},
+{
+"rec": "4a5c65c5c6895196",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⇒"
+]
+},
+{
+"rec": "9105a9ceb46c045f",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⇠"
+]
+},
+{
+"rec": "939083045a1781f7",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"❘",
+"❙",
+"❚"
+]
+},
+{
+"rec": "1f3a262a3cdd3138",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"❶",
+"❷",
+"❸",
+"❺",
+"❻",
+"❼",
+"❽",
+"❾",
+"❿"
+]
+},
+{
+"rec": "c89985d0233e067e",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"➀",
+"➁",
+"➂",
+"➃",
+"➄",
+"➅",
+"➆",
+"➇",
+"➈",
+"➉"
+]
+},
+{
+"rec": "cf94e132f982ccc4",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"✓",
+"✔"
+]
+},
+{
+"rec": "7248e881cf7db10e",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"✕",
+"✖"
+]
+},
+{
+"rec": "c1177b8ca0d685d2",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"✗",
+"✘"
+]
+},
+{
+"rec": "f4d44e819772862d",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"┃"
+]
+},
+{
+"rec": "e9c47c04eaf8fe75",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"═"
+]
+},
+{
+"rec": "89c4b1b9665c077d",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⁰",
+"⁴",
+"⁵",
+"⁶",
+"⁷",
+"⁸",
+"⁹"
+]
+},
+{
+"rec": "a9a1298a9f50a204",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"₀",
+"₁",
+"₂",
+"₃",
+"₄",
+"₅",
+"₆",
+"₇",
+"₈",
+"₉"
+]
+},
+{
+"rec": "7c8b881623fba766",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⠀",
+"⠏",
+"⠿"
+]
+},
+{
+"rec": "4c4834a830329292",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"‐",
+"–",
+"—"
+]
+},
+{
+"rec": "1dc4a3972d288e63",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"†",
+"‡"
+]
+},
+{
+"rec": "a3a3dd01dfafe1de",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⁚",
+"⁖",
+"⁘",
+"⁙"
+]
+},
+{
+"rec": "0e55d0e370bd2e13",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"¹",
+"²",
+"³"
+]
+},
+{
+"rec": "e87abebe3a5d804a",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"小",
+"中",
+"大"
+]
+},
+{
+"rec": "8426cc12d8cc6bf2",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"一",
+"二",
+"三",
+"四",
+"五"
+]
+},
+{
+"rec": "1cf0b3bc8c9f52b3",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"十",
+"百",
+"千",
+"万"
+]
+},
+{
+"rec": "9fbe8ce30135b5ef",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"✦",
+"✳",
+"✺"
+]
+},
+{
+"rec": "b1d8c84eb7e2895f",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🀱",
+"🀲",
+"🀳",
+"🀴",
+"🀵",
+"🀶",
+"🀷"
+]
+},
+{
+"rec": "c733d953623da617",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🀰",
+"🀱"
+]
+},
+{
+"rec": "886aafe9c99d85af",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🂡",
+"🂢",
+"🂣",
+"🂤",
+"🂥",
+"🂦",
+"🂧",
+"🂨",
+"🂩",
+"🂪"
+]
+},
+{
+"rec": "d0733a6083c592fa",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🂪",
+"🂫",
+"🂭"
+]
+},
+{
+"rec": "1dad97b25392ca22",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⏗",
+"⏘",
+"⏙"
+]
+},
+{
+"rec": "cf0b163849b28c82",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"▶",
+"⏩",
+"⏭"
+]
+},
+{
+"rec": "3e2db8ee50274b14",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㈠",
+"㈡",
+"㈢",
+"㈣",
+"㈥",
+"㈦",
+"㈧",
+"㈨",
+"㈩"
+]
+},
+{
+"rec": "26e02c9a4b784f28",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㉈",
+"㉉",
+"㉊",
+"㉋",
+"㉌",
+"㉍",
+"㉎"
+]
+},
+{
+"rec": "7fc64004dfa6ddd9",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"𝅝",
+"𝅗",
+"𝅘"
+]
+},
+{
+"rec": "0afb34ee01522853",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"𝆏",
+"𝆐",
+"𝆑"
+]
+},
+{
+"rec": "845b137556662e62",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⬝",
+"⬛"
+]
+},
+{
+"rec": "3551e2a9d85088f3",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⭑",
+"⭐"
+]
+},
+{
+"rec": "09cdbcc40cb202d6",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🀙",
+"🀚",
+"🀜",
+"🀝",
+"🀞",
+"🀟",
+"🀡"
+]
+},
+{
+"rec": "67929cbc1ceab757",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🀇",
+"🀐"
+]
+},
+{
+"rec": "e1e2b6ca6a4fd7b6",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🄁",
+"🄂",
+"🄃",
+"🄄",
+"🄅",
+"🄆",
+"🄇",
+"🄈",
+"🄉",
+"🄊"
+]
+},
+{
+"rec": "15fb977d32efa4de",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🌖",
+"🌘"
+]
+},
+{
+"rec": "420d6635f14fdd6a",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"😀",
+"😂"
+]
+},
+{
+"rec": "2702807398bb4489",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"😯",
+"😲",
+"😱"
+]
+},
+{
+"rec": "6a078d393849bc57",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ℵ",
+"ℶ",
+"ℷ",
+"ℸ"
+]
+},
+{
+"rec": "96fbdded1983b084",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⟨",
+"⟪"
+]
+},
+{
+"rec": "880ae91914ed189c",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⟶",
+"⟹"
+]
+},
+{
+"rec": "51254dbd52b08495",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⧺",
+"⧻"
+]
+},
+{
+"rec": "7583af2423887433",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"〡",
+"〥",
+"〦",
+"〧",
+"〨",
+"〩",
+"〹",
+"〺"
+]
+},
+{
+"rec": "3850b2b6c343df66",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"〈",
+"《"
+]
+},
+{
+"rec": "9a1fb7a6d4acf458",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"〡"
+]
+},
+{
+"rec": "fc640d7cb08d2413",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㌰",
+"㌨",
+"㍉",
+"㌢",
+"㌔",
+"㍋"
+]
+},
+{
+"rec": "6d295dcf64114dd0",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㎡",
+"㎢"
+]
+},
+{
+"rec": "c3cff9b016ede1b3",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㎣",
+"㎥",
+"㎦"
+]
+},
+{
+"rec": "46e54cacab5582e9",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㎑",
+"㎒",
+"㎓"
+]
+},
+{
+"rec": "e8a2f22a0a0bb3b9",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㎎",
+"㎏"
+]
+},
+{
+"rec": "d9e8e7491c5df580",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㎩",
+"㎪",
+"㎫"
+]
+},
+{
+"rec": "c3b296bddad901ed",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㎰",
+"㎱",
+"㎳"
+]
+},
+{
+"rec": "5014f4ec054ef2b6",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㎽",
+"㎾",
+"㎿"
+]
+},
+{
+"rec": "aa7fbd333b97b14d",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"０",
+"１",
+"２",
+"３",
+"４",
+"５",
+"６",
+"７",
+"８",
+"９"
+]
+},
+{
+"rec": "7b9cbd99598d18dd",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🈩",
+"🈔"
+]
+},
+{
+"rec": "840dc30f2b9e529a",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🌣",
+"🌥",
+"🌦"
+]
+},
+{
+"rec": "9812adad6bf93d9d",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🔆"
+]
+},
+{
+"rec": "3e98ec1b62149791",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🔸",
+"🔶"
+]
+},
+{
+"rec": "9ba905fc01207a91",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🔹",
+"🔷"
+]
+},
+{
+"rec": "8e05ac16d4dde2f9",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🔟"
+]
+},
+{
+"rec": "eb2ffd82c4908e6a",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"𐄇",
+"𐄈",
+"𐄉",
+"𐄊",
+"𐄋",
+"𐄌",
+"𐄍",
+"𐄎",
+"𐄏"
+]
+},
+{
+"rec": "e8ca5ccda28e9aa7",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"𐄐",
+"𐄑",
+"𐄒",
+"𐄓",
+"𐄔",
+"𐄕",
+"𐄖",
+"𐄗",
+"𐄘"
+]
+},
+{
+"rec": "e32cf3c4920563ec",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"𐄙",
+"𐄚",
+"𐄛",
+"𐄜",
+"𐄝",
+"𐄞",
+"𐄟",
+"𐄠",
+"𐄡"
+]
+},
+{
+"rec": "ae5e512fb9c11144",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"𐄢",
+"𐄣",
+"𐄤",
+"𐄥",
+"𐄦",
+"𐄧",
+"𐄨",
+"𐄩",
+"𐄪"
+]
+},
+{
+"rec": "15d21df699187a43",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⬝",
+"▪",
+"◽",
+"◻",
+"⬛"
+]
+},
+{
+"rec": "353306fbb3ab18a0",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"▫"
+]
+},
+{
+"rec": "d378667b40909d78",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⚬",
+"◐"
+]
+},
+{
+"rec": "3d9bd8c8b473cdb0",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"𐅀",
+"𐅁",
+"𐅂"
+]
+},
+{
+"rec": "faa1e916d18964fd",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"𐅃",
+"𐅄",
+"𐅅",
+"𐅆",
+"𐅇"
+]
+},
+{
+"rec": "002b853651d38f41",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"𐆚",
+"𐆘",
+"𐆗",
+"𐆖"
+]
+},
+{
+"rec": "f4e57662e8a5b419",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"𐋡",
+"𐋢",
+"𐋣",
+"𐋤",
+"𐋥",
+"𐋦",
+"𐋧",
+"𐋨",
+"𐋩"
+]
+},
+{
+"rec": "ffcbdc7d38fc711f",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"𝍲",
+"𝍳",
+"𝍴",
+"𝍵",
+"𝍶"
+]
+},
+{
+"rec": "bccbe21fae00c0ae",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"𝍷",
+"𝍸"
+]
+},
+{
+"rec": "497ede2b668c83d2",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🨀",
+"🨁",
+"🨂",
+"🨃",
+"🨄",
+"🨅"
+]
+},
+{
+"rec": "b1495782616c533b",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"𝋠",
+"𝋡",
+"𝋢",
+"𝋣",
+"𝋤",
+"𝋥",
+"𝋦",
+"𝋧",
+"𝋨",
+"𝋩",
+"𝋪",
+"𝋫",
+"𝋬",
+"𝋭",
+"𝋮",
+"𝋯",
+"𝋰",
+"𝋱",
+"𝋲",
+"𝋳"
+]
+},
+{
+"rec": "288590dd528ab7f8",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"𒐀",
+"𒐁",
+"𒐂",
+"𒐃",
+"𒐄",
+"𒐅",
+"𒐆",
+"𒐇"
+]
+},
+{
+"rec": "0edeeccf32f16f1b",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🥇",
+"🥈",
+"🥉"
+]
+},
+{
+"rec": "1817b9a88d80a66e",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🪫",
+"🔋"
+]
+},
+{
+"rec": "8b8359c575dd1c91",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"👤",
+"👥"
+]
+},
+{
+"rec": "e6a59a79f7a62582",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"👁",
+"👀"
+]
+},
+{
+"rec": "06f3cf54bb199358",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"௦",
+"௨",
+"௩",
+"௪",
+"௫",
+"௬",
+"௭",
+"௮"
+]
+},
+{
+"rec": "8e910296dccc1077",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"十",
+"百",
+"千",
+"万",
+"億",
+"兆"
+]
+},
+{
+"rec": "e0867566c1875688",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🞄",
+"🞅",
+"🞆",
+"🞇",
+"🞈"
+]
+},
+{
+"rec": "c61872f41167738c",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🞌",
+"🞍",
+"🞎",
+"🞏",
+"🞐",
+"🞑",
+"🞒",
+"🞓"
+]
+},
+{
+"rec": "2c04537711659111",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🞗",
+"🞘",
+"🞙"
+]
+},
+{
+"rec": "f94afd2abd4081e0",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🞝",
+"🞞"
+]
+},
+{
+"rec": "6957fe60c768db65",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🞡",
+"🞤",
+"🞥",
+"🞦",
+"🞧"
+]
+},
+{
+"rec": "ce3fbe8616d12dba",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🞨",
+"🞪",
+"🞫",
+"🞬",
+"🞭",
+"🞮"
+]
+},
+{
+"rec": "78a75b9e61f35e81",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🟀",
+"🟁",
+"🟂"
+]
+},
+{
+"rec": "7f0e31cdd258db72",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🬀",
+"🬆",
+"🬎",
+"🬝"
+]
+},
+{
+"rec": "84b263eab82f4338",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🮂",
+"🮃",
+"🮄",
+"🮅",
+"🮆"
+]
+},
+{
+"rec": "47db12f6d321d154",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🮇",
+"🮈",
+"🮉",
+"🮊",
+"🮋"
+]
+},
+{
+"rec": "8b6ebd9c0cf39185",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🯲",
+"🯳",
+"🯴",
+"🯵",
+"🯶",
+"🯷",
+"🯹"
+]
+},
+{
+"rec": "a255a7b0394b00f8",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🃡",
+"🃢",
+"🃣",
+"🃤",
+"🃥",
+"🃧",
+"🃨",
+"🃩",
+"🃪",
+"🃫",
+"🃬",
+"🃭",
+"🃮",
+"🃯"
+]
+},
+{
+"rec": "64f754e2b6fe9c9d",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🤅",
+"🤄"
+]
+},
+{
+"rec": "125ade71e08d5d1d",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"꜈",
+"꜉",
+"꜊",
+"꜋",
+"꜌"
+]
+},
+{
+"rec": "6e5851f45ebd8743",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"𐩀",
+"𐩁",
+"𐩂",
+"𐩃",
+"𐩄",
+"𐩅",
+"𐩆",
+"𐩇"
+]
+},
+{
+"rec": "d06e7cbfb6a5d47e",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"微",
+"小",
+"中",
+"大",
+"巨"
+]
+},
+{
+"rec": "a3bf348ef594339b",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"□",
+"▤",
+"▦",
+"▩",
+"■"
+]
+},
+{
+"rec": "8b7ab25252fab14e",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"𝄖",
+"𝄗",
+"𝄘",
+"𝄙",
+"𝄚",
+"𝄛"
+]
+},
+{
+"rec": "208a17ea22854d25",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"𝄻",
+"𝄼",
+"𝄽",
+"𝄾",
+"𝄿",
+"𝅀",
+"𝅁",
+"𝅂"
+]
+},
+{
+"rec": "bf2f154ac66718dc",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"𝄶",
+"𝄸"
+]
+},
+{
+"rec": "e66b6770e8908084",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"।",
+"॥"
+]
+},
+{
+"rec": "a4382517ff84141e",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🏻",
+"🏼",
+"🏽",
+"🏾",
+"🏿"
+]
+},
+{
+"rec": "c21ea6f299260a49",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🟁",
+"🟅",
+"🟋",
+"🟎"
+]
+},
+{
+"rec": "0b4bdb7afbdfea73",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⋘",
+"⪢"
+]
+},
+{
+"rec": "4a352db59bdbc38e",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⩵",
+"⩶"
+]
+},
+{
+"rec": "60fe67ba62829aa3",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ǀ",
+"ǁ"
+]
+},
+{
+"rec": "2c9a2b017da9c023",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"৴",
+"৵",
+"৶",
+"৷"
+]
+},
+{
+"rec": "de6905c1cee4f809",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"৴",
+"৸",
+"৹"
+]
+},
+{
+"rec": "cb56d5a308ad79cc",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"०",
+"१",
+"२",
+"३",
+"४",
+"५",
+"६",
+"७",
+"८",
+"९"
+]
+},
+{
+"rec": "8514e4dee1409b4a",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"٠",
+"١",
+"٢",
+"٣",
+"٤",
+"٥",
+"٦",
+"٧",
+"٨",
+"٩"
+]
+},
+{
+"rec": "b8336fa663979169",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"๐",
+"๑",
+"๒",
+"๓",
+"๔",
+"๕",
+"๖",
+"๗",
+"๘",
+"๙"
+]
+},
+{
+"rec": "23fd9ecd24c0c684",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"၀",
+"၁",
+"၂",
+"၃",
+"၄",
+"၆",
+"၇",
+"၈",
+"၉"
+]
+},
+{
+"rec": "4f510790aa13ed44",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"០",
+"១",
+"២",
+"៣",
+"៤",
+"៥",
+"៦",
+"៧",
+"៨",
+"៩"
+]
+},
+{
+"rec": "3fbcba7903db0bd5",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"᱐",
+"᱑",
+"᱒",
+"᱓",
+"᱔",
+"᱕",
+"᱖",
+"᱗",
+"᱘",
+"᱙"
+]
+},
+{
+"rec": "51a8de36e807289c",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"༠",
+"༡",
+"༢",
+"༣",
+"༤",
+"༥",
+"༦",
+"༧",
+"༨",
+"༩"
+]
+},
+{
+"rec": "10d15e3c7f7a2cd9",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"♣",
+"♦",
+"♥"
+]
+},
+{
+"rec": "317059453091426f",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㍘",
+"㍙",
+"㍚",
+"㍛",
+"㍜",
+"㍝",
+"㍞",
+"㍠",
+"㍡",
+"㍣",
+"㍤",
+"㍥",
+"㍦",
+"㍧",
+"㍨",
+"㍪",
+"㍫",
+"㍬",
+"㍮",
+"㍯",
+"㍰"
+]
+},
+{
+"rec": "25ee20a96936d6f9",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㎀",
+"㎁",
+"㎂",
+"㎃",
+"㎄"
+]
+},
+{
+"rec": "9d427899e85aff78",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㎅",
+"㎆",
+"㎇"
+]
+},
+{
+"rec": "42a50de5fff4741b",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㎈",
+"㎉"
+]
+},
+{
+"rec": "ea8717aa2dab8b40",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㍸",
+"㍹"
+]
+},
+{
+"rec": "69924fc6d608b55f",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㎑",
+"㎒",
+"㎓",
+"㎔"
+]
+},
+{
+"rec": "6eeb9809b909a381",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㎕",
+"㎖",
+"㎗",
+"㎘"
+]
+},
+{
+"rec": "0034608eefe52998",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㎙"
+]
+},
+{
+"rec": "58bc466987384b85",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㎩",
+"㎪",
+"㎫",
+"㎬"
+]
+},
+{
+"rec": "ced489d2c45f60ee",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㎰",
+"㎱",
+"㎲",
+"㎳"
+]
+},
+{
+"rec": "9c46155d3f5b2abc",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㎵",
+"㎶",
+"㎷",
+"㎸"
+]
+},
+{
+"rec": "998adf5227359b23",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㎺",
+"㎻",
+"㎽",
+"㎾"
+]
+},
+{
+"rec": "832be68495bdbd42",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㏀"
+]
+},
+{
+"rec": "6ad60fb64b425da3",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"㏠",
+"㏡",
+"㏢",
+"㏣",
+"㏧",
+"㏨",
+"㏩"
+]
+},
+{
+"rec": "794d7227aadec664",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"∈",
+"∊"
+]
+},
+{
+"rec": "cc4260ef83452697",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"∋",
+"∍"
+]
+},
+{
+"rec": "fbd9b06c81e9564c",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"≡",
+"≣"
+]
+},
+{
+"rec": "6ec5525bf3693115",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⊢",
+"⊨",
+"⊪"
+]
+},
+{
+"rec": "dada4c049a5a3110",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⊂",
+"⋐"
+]
+},
+{
+"rec": "dada77003cb5a6f9",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🤇",
+"🤆",
+"🤅",
+"🤄",
+"🤃"
+]
+},
+{
+"rec": "b628ddf19860dcc8",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🤂",
+"🤁"
+]
+},
+{
+"rec": "4fc69f26aca0af1f",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🧒",
+"🧓"
+]
+},
+{
+"rec": "067fc33b6b2cabce",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🧎"
+]
+},
+{
+"rec": "08e89fe951b8fbab",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🙋",
+"🙌"
+]
+},
+{
+"rec": "56c14dd97bdc1d27",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"☿",
+"♀",
+"♁",
+"♂",
+"♃",
+"♄",
+"♅",
+"♆",
+"♇"
+]
+},
+{
+"rec": "1de70aa78565ab0d",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"✊",
+"✌",
+"✋"
+]
+},
+{
+"rec": "d0839e241f567b16",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ŀ"
+]
+},
+{
+"rec": "3fd35923785f5dda",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"Ƨ",
+"ƽ",
+"Ƅ"
+]
+},
+{
+"rec": "cc60f4d01623457e",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"Ū",
+"Ǖ"
+]
+},
+{
+"rec": "bbf4c8ce0523eba4",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"Ḃ",
+"Ḉ"
+]
+},
+{
+"rec": "b9517f1961ff38d8",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ﬀ",
+"ﬁ",
+"ﬂ",
+"ﬃ",
+"ﬄ"
+]
+},
+{
+"rec": "ccc8271902c4ec04",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"à",
+"Ȁ"
+]
+},
+{
+"rec": "e57ad5bd36187e6e",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"™",
+"℠",
+"®"
+]
+},
+{
+"rec": "ea2917e6bf7a3d07",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"‹",
+"«",
+"»"
+]
+},
+{
+"rec": "352f154ad3c87bd3",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ß"
+]
+},
+{
+"rec": "be77df6a7ad90883",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ˑ",
+"ː"
+]
+},
+{
+"rec": "20aac231ceb6174c",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ˌ",
+"ˈ"
+]
+},
+{
+"rec": "b1f1f14181d663a4",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"¶",
+"§"
+]
+},
+{
+"rec": "04ea9d59c3c158a8",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ƚ",
+"Ⱡ"
+]
+},
+{
+"rec": "9627bf2d6539c25c",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"Ǆ",
+"ǆ"
+]
+},
+{
+"rec": "f6d93e4f59158245",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᴀ"
+]
+},
+{
+"rec": "fcef73872ea729db",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ˆ",
+"‾"
+]
+},
+{
+"rec": "769452680753d943",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⋮"
+]
+},
+{
+"rec": "cc8dcf8eb2b95084",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"∙",
+"⊂"
+]
+},
+{
+"rec": "33f8a66665570ff2",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"∾",
+"∿"
+]
+},
+{
+"rec": "6d50ab0224ced12f",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⊢",
+"□"
+]
+},
+{
+"rec": "155b5b76b1e1ffa6",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"◯"
+]
+},
+{
+"rec": "8e3e710552bc4579",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"◯"
+]
+},
+{
+"rec": "a24d912b427501ce",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"‸",
+"∧",
+"Λ",
+"▲"
+]
+},
+{
+"rec": "7b41967bdd86f6b4",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⟋"
+]
+},
+{
+"rec": "2349b71dacc02a17",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"˙",
+"⁝"
+]
+},
+{
+"rec": "09ed450dd4c5eab0",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"˅",
+"∨",
+"⋁",
+"▽"
+]
+},
+{
+"rec": "dbab89a32077e6f7",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"⌒"
+]
+},
+{
+"rec": "816c9134f543bced",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"҂"
+]
+},
+{
+"rec": "1e150ad68abc1eeb",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"װ"
+]
+},
+{
+"rec": "a8f51be1c2ef11eb",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"י",
+"ײ"
+]
+},
+{
+"rec": "2b71b5e9ba3b9f74",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᐃ",
+"ᐄ"
+]
+},
+{
+"rec": "4e17f46c12f4c1f1",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᐅ",
+"ᐆ"
+]
+},
+{
+"rec": "84fdd9bc4b29f8a6",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᐎ",
+"ᐐ",
+"ᐒ",
+"ᐔ",
+"ᐗ",
+"ᐙ"
+]
+},
+{
+"rec": "218928f63fd1a20a",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᐟ",
+"ᐥ"
+]
+},
+{
+"rec": "fd3fd0bdac3fbf73",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᚆ",
+"ᚇ",
+"ᚈ",
+"ᚉ",
+"ᚊ"
+]
+},
+{
+"rec": "73f0ac32a561883e",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᚋ",
+"ᚌ",
+"ᚍ",
+"ᚎ",
+"ᚏ"
+]
+},
+{
+"rec": "e8f4727c8aa47459",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᚐ",
+"ᚑ",
+"ᚒ",
+"ᚓ",
+"ᚔ"
+]
+},
+{
+"rec": "49e4d7761bbb821f",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᚭ",
+"ᚬ"
+]
+},
+{
+"rec": "e5d078fa6502258e",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᚽ",
+"ᚼ"
+]
+},
+{
+"rec": "44f7e7a8a6a71cfe",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᚿ",
+"ᚾ"
+]
+},
+{
+"rec": "afb650a77046c67a",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᛆ",
+"ᛅ"
+]
+},
+{
+"rec": "9a36c68aa50b0d29",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᛙ",
+"ᛘ"
+]
+},
+{
+"rec": "d7fa05b3863cd92e",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᛧ",
+"ᛦ"
+]
+},
+{
+"rec": "76b14162c68b45cc",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"᛫",
+"᛬"
+]
+},
+{
+"rec": "d662fab61539299b",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"᜵",
+"᜶"
+]
+},
+{
+"rec": "277d2b4abbc10004",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"᧡",
+"᧢",
+"᧣",
+"᧤",
+"᧥",
+"᧦",
+"᧧",
+"᧨",
+"᧩",
+"᧪",
+"᧫",
+"᧬",
+"᧭",
+"᧮",
+"᧯"
+]
+},
+{
+"rec": "717b584c3406848f",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"᠐",
+"᠑",
+"᠒",
+"᠓",
+"᠔",
+"᠕",
+"᠖",
+"᠗",
+"᠘",
+"᠙"
+]
+},
+{
+"rec": "37de2e9093967703",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᥰ",
+"ᥱ",
+"ᥲ",
+"ᥳ",
+"ᥴ"
+]
+},
+{
+"rec": "0fb9c803733ab226",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᧈ",
+"ᧉ"
+]
+},
+{
+"rec": "11fa0bfe06bd812e",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᬅ",
+"ᬆ"
+]
+},
+{
+"rec": "046c9ffcd820b42a",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᬇ",
+"ᬉ",
+"ᬊ",
+"ᬋ",
+"ᬌ",
+"ᬎ",
+"ᬑ",
+"ᬒ"
+]
+},
+{
+"rec": "64514520b9888cf5",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ἀ",
+"ἄ"
+]
+},
+{
+"rec": "ccfbd199d05ca3d4",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ᾰ",
+"ᾱ"
+]
+},
+{
+"rec": "f47456fc90080610",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"؆",
+"؇"
+]
+},
+{
+"rec": "da5b68cf9344cde2",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"؉",
+"؊"
+]
+},
+{
+"rec": "b5c12b78d9838bf6",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ؾ",
+"ؿ"
+]
+},
+{
+"rec": "8ec2aa83dd42186a",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ػ",
+"ؼ"
+]
+},
+{
+"rec": "03828d50823467f5",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ڏ",
+"ڐ"
+]
+},
+{
+"rec": "7b0aed9c96357cf9",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ڗ",
+"ڙ"
+]
+},
+{
+"rec": "bdf62f2ff814d1f6",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"܁",
+"܃"
+]
+},
+{
+"rec": "9fbd90a85a5fbf57",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"ߴ",
+"ߵ"
+]
+},
+{
+"rec": "1c43da4707c0c6b2",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"小",
+"中",
+"大",
+"特"
+]
+},
+{
+"rec": "a6ab5fc3640147a0",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"‼",
+"😱"
+]
+},
+{
+"rec": "85d1c4c9358ce61b",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🕯",
+"🎆"
+]
+},
+{
+"rec": "cd12638d8f280128",
+"surveyor": "sonnet5-1",
+"glyphs": [
+"🏠",
+"🏢",
+"🏙"
+]
+}
+],
+"seed_glyphs": [
+"§",
+"«",
+"®",
+"²",
+"³",
+"¶",
+"¹",
+"»",
+"ß",
+"à",
+"ŀ",
+"ŋ",
+"Ū",
+"Ƅ",
+"ƚ",
+"Ƨ",
+"ƽ",
+"ǀ",
+"ǁ",
+"Ǆ",
+"ǆ",
+"Ǖ",
+"Ȁ",
+"ɲ",
+"ɳ",
+"˅",
+"ˆ",
+"ˈ",
+"ˌ",
+"ː",
+"ˑ",
+"˙",
+"Λ",
+"҂",
+"י",
+"װ",
+"ײ",
+"؆",
+"؇",
+"؈",
+"؉",
+"؊",
+"ػ",
+"ؼ",
+"ؾ",
+"ؿ",
+"٠",
+"١",
+"٢",
+"٣",
+"٤",
+"٥",
+"٦",
+"٧",
+"٨",
+"٩",
+"ڏ",
+"ڐ",
+"ڗ",
+"ڙ",
+"܁",
+"܃",
+"ߴ",
+"ߵ",
+"।",
+"॥",
+"०",
+"१",
+"२",
+"३",
+"४",
+"५",
+"६",
+"७",
+"८",
+"९",
+"৴",
+"৵",
+"৶",
+"৷",
+"৸",
+"৹",
+"௦",
+"௨",
+"௩",
+"௪",
+"௫",
+"௬",
+"௭",
+"௮",
+"౼",
+"౽",
+"౾",
+"൰",
+"൱",
+"൲",
+"๐",
+"๑",
+"๒",
+"๓",
+"๔",
+"๕",
+"๖",
+"๗",
+"๘",
+"๙",
+"༠",
+"༡",
+"༢",
+"༣",
+"༤",
+"༥",
+"༦",
+"༧",
+"༨",
+"༩",
+"༪",
+"༫",
+"༬",
+"༭",
+"༮",
+"༯",
+"༰",
+"༱",
+"༲",
+"༳",
+"၀",
+"၁",
+"၂",
+"၃",
+"၄",
+"၆",
+"၇",
+"၈",
+"၉",
+"፩",
+"፲",
+"፻",
+"፼",
+"ᐃ",
+"ᐄ",
+"ᐅ",
+"ᐆ",
+"ᐎ",
+"ᐐ",
+"ᐒ",
+"ᐔ",
+"ᐗ",
+"ᐙ",
+"ᐟ",
+"ᐥ",
+"ᚆ",
+"ᚇ",
+"ᚈ",
+"ᚉ",
+"ᚊ",
+"ᚋ",
+"ᚌ",
+"ᚍ",
+"ᚎ",
+"ᚏ",
+"ᚐ",
+"ᚑ",
+"ᚒ",
+"ᚓ",
+"ᚔ",
+"ᚬ",
+"ᚭ",
+"ᚼ",
+"ᚽ",
+"ᚾ",
+"ᚿ",
+"ᛅ",
+"ᛆ",
+"ᛘ",
+"ᛙ",
+"ᛦ",
+"ᛧ",
+"᛫",
+"᛬",
+"ᛮ",
+"ᛯ",
+"ᛰ",
+"᜵",
+"᜶",
+"០",
+"១",
+"២",
+"៣",
+"៤",
+"៥",
+"៦",
+"៧",
+"៨",
+"៩",
+"៰",
+"៱",
+"៲",
+"៴",
+"៵",
+"៶",
+"៷",
+"៸",
+"៹",
+"᠐",
+"᠑",
+"᠒",
+"᠓",
+"᠔",
+"᠕",
+"᠖",
+"᠗",
+"᠘",
+"᠙",
+"ᥰ",
+"ᥱ",
+"ᥲ",
+"ᥳ",
+"ᥴ",
+"ᧈ",
+"ᧉ",
+"᧡",
+"᧢",
+"᧣",
+"᧤",
+"᧥",
+"᧦",
+"᧧",
+"᧨",
+"᧩",
+"᧪",
+"᧫",
+"᧬",
+"᧭",
+"᧮",
+"᧯",
+"ᬅ",
+"ᬆ",
+"ᬇ",
+"ᬉ",
+"ᬊ",
+"ᬋ",
+"ᬌ",
+"ᬎ",
+"ᬑ",
+"ᬒ",
+"᱐",
+"᱑",
+"᱒",
+"᱓",
+"᱔",
+"᱕",
+"᱖",
+"᱗",
+"᱘",
+"᱙",
+"ᴀ",
+"Ḃ",
+"Ḉ",
+"ẋ",
+"ẍ",
+"ἀ",
+"ἄ",
+"ᾰ",
+"ᾱ",
+"‐",
+"‒",
+"–",
+"—",
+"―",
+"†",
+"‡",
+"‧",
+"‵",
+"‶",
+"‷",
+"‸",
+"‹",
+"‼",
+"‾",
+"‿",
+"⁖",
+"⁘",
+"⁙",
+"⁚",
+"⁝",
+"⁞",
+"⁰",
+"⁴",
+"⁵",
+"⁶",
+"⁷",
+"⁸",
+"⁹",
+"₀",
+"₁",
+"₂",
+"₃",
+"₄",
+"₅",
+"₆",
+"₇",
+"₈",
+"₉",
+"℠",
+"™",
+"ℵ",
+"ℶ",
+"ℷ",
+"ℸ",
+"⅐",
+"⅑",
+"⅓",
+"⅔",
+"⅕",
+"⅖",
+"⅗",
+"⅘",
+"⅟",
+"Ⅺ",
+"Ⅻ",
+"Ⅽ",
+"Ⅾ",
+"Ⅿ",
+"ⅰ",
+"ⅱ",
+"ⅲ",
+"ⅳ",
+"ⅴ",
+"ⅵ",
+"ⅶ",
+"ⅷ",
+"ⅸ",
+"ⅹ",
+"ⅺ",
+"ⅻ",
+"ↀ",
+"ↁ",
+"ↂ",
+"ↇ",
+"ↈ",
+"↉",
+"⇉",
+"⇒",
+"⇛",
+"⇠",
+"⇶",
+"⇷",
+"⇺",
+"∈",
+"∊",
+"∋",
+"∍",
+"∙",
+"√",
+"∛",
+"∜",
+"∣",
+"∥",
+"∧",
+"∨",
+"∮",
+"∰",
+"∾",
+"∿",
+"≡",
+"≣",
+"≫",
+"⊂",
+"⊢",
+"⊨",
+"⊪",
+"⋁",
+"⋅",
+"⋐",
+"⋘",
+"⋙",
+"⋮",
+"⌄",
+"⌒",
+"⌣",
+"⏗",
+"⏘",
+"⏙",
+"⏩",
+"⏭",
+"⑪",
+"⑫",
+"⑬",
+"⑭",
+"⑮",
+"⑯",
+"⑱",
+"⑲",
+"⑳",
+"⑴",
+"⑵",
+"⑶",
+"⑷",
+"⑸",
+"⑹",
+"⑻",
+"⑼",
+"⑽",
+"⑾",
+"⑿",
+"⒀",
+"⒁",
+"⒃",
+"⒄",
+"⒅",
+"⒆",
+"⒇",
+"⒈",
+"⒉",
+"⒊",
+"⒋",
+"⒌",
+"⒍",
+"⒎",
+"⒏",
+"⒐",
+"⒑",
+"⒒",
+"⒓",
+"⒔",
+"⒖",
+"⒗",
+"⒘",
+"⒙",
+"⒚",
+"⒛",
+"⓪",
+"⓫",
+"⓬",
+"⓭",
+"⓮",
+"⓰",
+"⓱",
+"⓲",
+"⓳",
+"⓴",
+"⓵",
+"⓶",
+"⓹",
+"⓺",
+"⓻",
+"⓼",
+"⓽",
+"⓾",
+"⓿",
+"┃",
+"═",
+"▀",
+"▘",
+"▝",
+"▟",
+"■",
+"□",
+"▤",
+"▦",
+"▩",
+"▪",
+"▫",
+"▲",
+"△",
+"▴",
+"▵",
+"▶",
+"▽",
+"◇",
+"◈",
+"◌",
+"◎",
+"◐",
+"◦",
+"◫",
+"◯",
+"◻",
+"◼",
+"◽",
+"◾",
+"☀",
+"☁",
+"☔",
+"☲",
+"☵",
+"☶",
+"☿",
+"♀",
+"♁",
+"♂",
+"♃",
+"♄",
+"♅",
+"♆",
+"♇",
+"♣",
+"♥",
+"♦",
+"♩",
+"♪",
+"♫",
+"♬",
+"♳",
+"♴",
+"♵",
+"♶",
+"♸",
+"⚆",
+"⚇",
+"⚈",
+"⚉",
+"⚫",
+"⚬",
+"⛀",
+"⛁",
+"⛅",
+"⛈",
+"✅",
+"✈",
+"✊",
+"✋",
+"✌",
+"✓",
+"✔",
+"✕",
+"✖",
+"✗",
+"✘",
+"✦",
+"✨",
+"✱",
+"✳",
+"✺",
+"❇",
+"❘",
+"❙",
+"❚",
+"❶",
+"❷",
+"❸",
+"❺",
+"❻",
+"❼",
+"❽",
+"❾",
+"❿",
+"➀",
+"➁",
+"➂",
+"➃",
+"➄",
+"➅",
+"➆",
+"➇",
+"➈",
+"➉",
+"⟋",
+"⟨",
+"⟪",
+"⟶",
+"⟹",
+"⠀",
+"⠏",
+"⠿",
+"⢀",
+"⣦",
+"⣷",
+"⦀",
+"⧺",
+"⧻",
+"⩵",
+"⩶",
+"⪢",
+"⫴",
+"⫻",
+"⫽",
+"⬛",
+"⬜",
+"⬝",
+"⬞",
+"⬟",
+"⬢",
+"⭐",
+"⭑",
+"⭒",
+"Ⱡ",
+"⸪",
+"⸫",
+"⸬",
+"⼀",
+"⼈",
+"⼭",
+"⾦",
+"〈",
+"《",
+"〡",
+"〥",
+"〦",
+"〧",
+"〨",
+"〩",
+"〹",
+"〺",
+"㆔",
+"㆖",
+"㆘",
+"㈠",
+"㈡",
+"㈢",
+"㈣",
+"㈥",
+"㈦",
+"㈧",
+"㈨",
+"㈩",
+"㉈",
+"㉉",
+"㉊",
+"㉋",
+"㉌",
+"㉍",
+"㉎",
+"㊀",
+"㊂",
+"㊃",
+"㊄",
+"㊅",
+"㊆",
+"㊇",
+"㊉",
+"㋀",
+"㋁",
+"㋋",
+"㌔",
+"㌢",
+"㌨",
+"㌰",
+"㍉",
+"㍋",
+"㍘",
+"㍙",
+"㍚",
+"㍛",
+"㍜",
+"㍝",
+"㍞",
+"㍠",
+"㍡",
+"㍣",
+"㍤",
+"㍥",
+"㍦",
+"㍧",
+"㍨",
+"㍪",
+"㍫",
+"㍬",
+"㍮",
+"㍯",
+"㍰",
+"㍸",
+"㍹",
+"㎀",
+"㎁",
+"㎂",
+"㎃",
+"㎄",
+"㎅",
+"㎆",
+"㎇",
+"㎈",
+"㎉",
+"㎎",
+"㎏",
+"㎑",
+"㎒",
+"㎓",
+"㎔",
+"㎕",
+"㎖",
+"㎗",
+"㎘",
+"㎙",
+"㎡",
+"㎢",
+"㎣",
+"㎥",
+"㎦",
+"㎩",
+"㎪",
+"㎫",
+"㎬",
+"㎰",
+"㎱",
+"㎲",
+"㎳",
+"㎵",
+"㎶",
+"㎷",
+"㎸",
+"㎺",
+"㎻",
+"㎽",
+"㎾",
+"㎿",
+"㏀",
+"㏠",
+"㏡",
+"㏢",
+"㏣",
+"㏧",
+"㏨",
+"㏩",
+"一",
+"七",
+"万",
+"三",
+"中",
+"九",
+"二",
+"五",
+"億",
+"兆",
+"八",
+"六",
+"十",
+"千",
+"四",
+"大",
+"小",
+"巨",
+"微",
+"特",
+"百",
+"꜈",
+"꜉",
+"꜊",
+"꜋",
+"꜌",
+"꜒",
+"꜓",
+"꜔",
+"꜕",
+"꜖",
+"꠰",
+"꠱",
+"꠲",
+"꠳",
+"ﬀ",
+"ﬁ",
+"ﬂ",
+"ﬃ",
+"ﬄ",
+"﹒",
+"﹡",
+"．",
+"０",
+"１",
+"２",
+"３",
+"４",
+"５",
+"６",
+"７",
+"８",
+"９",
+"𐄇",
+"𐄈",
+"𐄉",
+"𐄊",
+"𐄋",
+"𐄌",
+"𐄍",
+"𐄎",
+"𐄏",
+"𐄐",
+"𐄑",
+"𐄒",
+"𐄓",
+"𐄔",
+"𐄕",
+"𐄖",
+"𐄗",
+"𐄘",
+"𐄙",
+"𐄚",
+"𐄛",
+"𐄜",
+"𐄝",
+"𐄞",
+"𐄟",
+"𐄠",
+"𐄡",
+"𐄢",
+"𐄣",
+"𐄤",
+"𐄥",
+"𐄦",
+"𐄧",
+"𐄨",
+"𐄩",
+"𐄪",
+"𐅀",
+"𐅁",
+"𐅂",
+"𐅃",
+"𐅄",
+"𐅅",
+"𐅆",
+"𐅇",
+"𐆖",
+"𐆗",
+"𐆘",
+"𐆚",
+"𐋡",
+"𐋢",
+"𐋣",
+"𐋤",
+"𐋥",
+"𐋦",
+"𐋧",
+"𐋨",
+"𐋩",
+"𐩀",
+"𐩁",
+"𐩂",
+"𐩃",
+"𐩄",
+"𐩅",
+"𐩆",
+"𐩇",
+"𒐀",
+"𒐁",
+"𒐂",
+"𒐃",
+"𒐄",
+"𒐅",
+"𒐆",
+"𒐇",
+"𝄖",
+"𝄗",
+"𝄘",
+"𝄙",
+"𝄚",
+"𝄛",
+"𝄶",
+"𝄸",
+"𝄻",
+"𝄼",
+"𝄽",
+"𝄾",
+"𝄿",
+"𝅀",
+"𝅁",
+"𝅂",
+"𝅗",
+"𝅘",
+"𝅝",
+"𝆏",
+"𝆐",
+"𝆑",
+"𝋠",
+"𝋡",
+"𝋢",
+"𝋣",
+"𝋤",
+"𝋥",
+"𝋦",
+"𝋧",
+"𝋨",
+"𝋩",
+"𝋪",
+"𝋫",
+"𝋬",
+"𝋭",
+"𝋮",
+"𝋯",
+"𝋰",
+"𝋱",
+"𝋲",
+"𝋳",
+"𝌆",
+"𝍲",
+"𝍳",
+"𝍴",
+"𝍵",
+"𝍶",
+"𝍷",
+"𝍸",
+"🀇",
+"🀐",
+"🀙",
+"🀚",
+"🀜",
+"🀝",
+"🀞",
+"🀟",
+"🀡",
+"🀰",
+"🀱",
+"🀲",
+"🀳",
+"🀴",
+"🀵",
+"🀶",
+"🀷",
+"🀹",
+"🁁",
+"🁉",
+"🁑",
+"🁙",
+"🁡",
+"🂡",
+"🂢",
+"🂣",
+"🂤",
+"🂥",
+"🂦",
+"🂧",
+"🂨",
+"🂩",
+"🂪",
+"🂫",
+"🂭",
+"🃡",
+"🃢",
+"🃣",
+"🃤",
+"🃥",
+"🃧",
+"🃨",
+"🃩",
+"🃪",
+"🃫",
+"🃬",
+"🃭",
+"🃮",
+"🃯",
+"🄀",
+"🄁",
+"🄂",
+"🄃",
+"🄄",
+"🄅",
+"🄆",
+"🄇",
+"🄈",
+"🄉",
+"🄊",
+"🈔",
+"🈩",
+"🌊",
+"🌌",
+"🌖",
+"🌘",
+"🌟",
+"🌣",
+"🌥",
+"🌦",
+"🌧",
+"🌩",
+"🌪",
+"🌫",
+"🌰",
+"🌱",
+"🌳",
+"🎆",
+"🎇",
+"🏃",
+"🏘",
+"🏙",
+"🏠",
+"🏢",
+"🏦",
+"🏻",
+"🏼",
+"🏽",
+"🏾",
+"🏿",
+"🐓",
+"🐤",
+"👀",
+"👁",
+"👤",
+"👥",
+"👪",
+"💦",
+"💧",
+"💵",
+"📯",
+"🔆",
+"🔋",
+"🔔",
+"🔟",
+"🔶",
+"🔷",
+"🔸",
+"🔹",
+"🕐",
+"🕑",
+"🕒",
+"🕓",
+"🕔",
+"🕕",
+"🕖",
+"🕗",
+"🕘",
+"🕙",
+"🕚",
+"🕯",
+"🗣",
+"😀",
+"😂",
+"😆",
+"😯",
+"😱",
+"😲",
+"🙋",
+"🙌",
+"🚄",
+"🚗",
+"🚲",
+"🚶",
+"🞄",
+"🞅",
+"🞆",
+"🞇",
+"🞈",
+"🞌",
+"🞍",
+"🞎",
+"🞏",
+"🞐",
+"🞑",
+"🞒",
+"🞓",
+"🞗",
+"🞘",
+"🞙",
+"🞝",
+"🞞",
+"🞡",
+"🞤",
+"🞥",
+"🞦",
+"🞧",
+"🞨",
+"🞪",
+"🞫",
+"🞬",
+"🞭",
+"🞮",
+"🞵",
+"🞶",
+"🞼",
+"🞽",
+"🞾",
+"🞿",
+"🟀",
+"🟁",
+"🟂",
+"🟅",
+"🟋",
+"🟎",
+"🡢",
+"🡪",
+"🡲",
+"🡺",
+"🤁",
+"🤂",
+"🤃",
+"🤄",
+"🤅",
+"🤆",
+"🤇",
+"🤣",
+"🤫",
+"🥇",
+"🥈",
+"🥉",
+"🥚",
+"🦠",
+"🧊",
+"🧎",
+"🧒",
+"🧓",
+"🨀",
+"🨁",
+"🨂",
+"🨃",
+"🨄",
+"🨅",
+"🪙",
+"🪫",
+"🬀",
+"🬆",
+"🬎",
+"🬝",
+"🮂",
+"🮃",
+"🮄",
+"🮅",
+"🮆",
+"🮇",
+"🮈",
+"🮉",
+"🮊",
+"🮋",
+"🯲",
+"🯳",
+"🯴",
+"🯵",
+"🯶",
+"🯷",
+"🯹"
+],
+"uniform_tail": [
+"﹕",
+"🀦",
+"ទ",
+"ꬶ",
+"ꥨ",
+"𑃱",
+"櫓",
+"𑥑",
+"𐮭",
+"ﾴ",
+"ᴡ",
+"ઓ",
+"𛋟",
+"𑗛",
+"𝁔",
+"ᶓ",
+"𐣬",
+"𑒕",
+"𛅦",
+"Ԍ",
+"⸭",
+"𑲌",
+"𞲠",
+"𑣇",
+"ᰎ",
+"ᝇ",
+"ᶝ",
+"︸",
+"𖦧",
+"タ",
+"ӊ",
+"𒉨",
+"᧘",
+"Ꮿ",
+"ស",
+"𛆆",
+"㇐",
+"况",
+"𐭘",
+"᳅",
+"Ⳅ",
+"𐎠",
+"ࡋ",
+"𞡋",
+"𘯲",
+"ᳺ",
+"Ᵽ",
+"ハ",
+"ת",
+"𑙬",
+"𐹭",
+"Ŕ",
+"𐮮",
+"ꩧ",
+"𘴀",
+"ۏ",
+"𘣭",
+"𐇧",
+"꡷",
+"ౡ",
+"එ",
+"☡",
+"𐕝",
+"㘹",
+"𐿩",
+"𐽷",
+"걐",
+"ᬥ",
+"𑧣",
+"🆕",
+"𐭡",
+"𐃈",
+"ꭤ",
+"𐎍",
+"𞅆",
+"𞺌",
+"⥔",
+"𐽰",
+"𛂨",
+"ᝍ",
+"𖿡",
+"𖹈",
+"𐰝",
+"𑰥",
+"𑱳",
+"ᱡ",
+"𐧌",
+"𐮌",
+"𝼅",
+"⤛",
+"ࡢ",
+"🝯",
+"𐛶",
+"ꡅ",
+"𛄍",
+"𖪂",
+"⹋",
+"𒆊",
+"꧌",
+"𑣡",
+"ߑ",
+"໔",
+"ᝉ",
+"ᯒ",
+"㯻",
+"ꧫ",
+"ꧨ",
+"𜽼",
+"𛇦",
+"𑻤",
+"𑚜",
+"ꤏ",
+"？",
+"ꬸ",
+"ᤌ",
+"𝈙",
+"𞲑",
+"ᯐ",
+"ᱏ",
+"𜽥",
+"𐊚",
+"ݙ",
+"🝐",
+"𐮇",
+"🭂",
+"ꯓ",
+"תּ",
+"ധ",
+"𒾮",
+"メ",
+"᧗",
+"ᩌ",
+"𑒖",
+"￼",
+"꜍",
+"╜",
+"Ԅ",
+"ᢱ",
+"𖭗",
+"𞄸",
+"🈸",
+"𐀔",
+"𝼋",
+"𑅄",
+"𜽮",
+"릩",
+"ⶼ",
+"𘳌",
+"ⵚ",
+"𑚍",
+"〟",
+"ꩣ",
+"᧻",
+"᧳",
+"𑜀",
+"Ꮵ",
+"𑇬",
+"💭",
+"ම",
+"ﾎ",
+"𐬤",
+"ꠞ",
+"𐭼",
+"㏜",
+"ꠔ",
+"꒹",
+"𞄠",
+"𐳊",
+"⊣",
+"ƴ",
+"𐭪",
+"𐩽",
+"𐖴",
+"ჩ",
+"𞋸",
+"𐡄",
+"ଔ",
+"ｘ",
+"𐎑",
+"𞟥",
+"𐘭",
+"ꯆ",
+"𞤩",
+"ㆣ",
+"ᨔ",
+"𐒠",
+"𐇹",
+"ᲀ",
+"ㆩ",
+"⧆",
+"ᨐ",
+"𑃢",
+"ᎍ",
+"ⴟ",
+"ᴒ",
+"𐖂",
+"ᎁ",
+"Ḧ",
+"ˁ",
+"𐤐",
+"ᜨ",
+"𐎕",
+"Ꮩ",
+"ϗ",
+"𑚹",
+"ᥘ",
+"᮸",
+"𐦆",
+"ɝ",
+"𐂾",
+"𑢢",
+"𞤶",
+"𐁗",
+"𐆒",
+"㇔",
+"⹔",
+"𑂜",
+"𑈟",
+"ϝ",
+"⡻",
+"⋉",
+"ㆲ",
+"𖪃",
+"𖠞",
+"𐨫",
+"ʃ",
+"ꬁ",
+"🁝",
+"අ",
+"𐰋",
+"𘴄",
+"ꤻ",
+"𐪞",
+"𑆅",
+"ꗯ",
+"𐿪",
+"˄",
+"퀎",
+"㆑",
+"𛄁",
+"ٶ",
+"⇡",
+"𐰃",
+"𑫃",
+"˾",
+"𖪛",
+"𐌯",
+"ꨤ",
+"𘴃",
+"Ꙅ",
+"𑵫",
+"𐬎",
+"𐨚",
+"𐡅",
+"𐧍",
+"𞴨",
+"ᶷ",
+"ප",
+"𐋸",
+"㇗",
+"ਓ",
+"𞡹",
+"⽲",
+"𛃷",
+"𑖨",
+"𘴅",
+"𑪿",
+"𑪸",
+"ኛ",
+"𞄎",
+"𞊭",
+"⤡",
+"ﬦ",
+"𐼱",
+"꤇",
+"ˀ",
+"ㄉ",
+"ꥰ",
+"𒾦",
+"𖩜",
+"ޛ",
+"ڞ",
+"▹",
+"ተ",
+"𑣀",
+"ᶌ",
+"𑿂",
+"꒧",
+"ゟ",
+"𐅗",
+"㇑",
+"𑁝",
+"𐍑",
+"⾩",
+"ꧣ",
+"𑙒",
+"𞟰",
+"𖼍",
+"ⱺ",
+"ᝏ",
+"𞄣",
+"ᲄ",
+"𐑖",
+"ⶆ",
+"𒒢",
+"﹩",
+"𐓠",
+"𐧵",
+"〳",
+"דּ",
+"ꫡ",
+"┆",
+"𐾀",
+"𞊕",
+"࿑",
+"𐹼",
+"ύ",
+"᥈",
+"쏵",
+"៘",
+"𑋛",
+"Ქ",
+"ޅ",
+"𑙠",
+"᳂",
+"﹦",
+"𑰅",
+"ɽ",
+"𛄔",
+"𑫎",
+"𛅐",
+"𞋇",
+"ဂ",
+"𚿵",
+"വ",
+"𐿥",
+"𑦱",
+"ࡣ",
+"𐤸",
+"ʶ",
+"𑶂",
+"𞋅",
+"𐿰",
+"⌻",
+"𝌷",
+"𛱏",
+"㟩",
+"𑇳",
+"𞢭",
+"꒚",
+"𑫶",
+"𞤺",
+"ᨒ",
+"𑪴",
+"🉐",
+"꠶",
+"ᢍ",
+"𑵭",
+"𐀪",
+"ꤾ",
+"ⴋ",
+"𛋊",
+"𐔣",
+"ࡤ",
+"᭻",
+"刺",
+"𖿠",
+"𐒍",
+"ⓨ",
+"⬓",
+"ܭ",
+"꯱",
+"੫",
+"ਧ",
+"𝀛",
+"˛",
+"ⰴ",
+"ࢹ",
+"⸸",
+"փ",
+"𐤨",
+"ᡵ",
+"𐑐",
+"⬋",
+"𐅵",
+"𑤫",
+"𞺹",
+"𐖔",
+"ꚳ",
+"ꬦ",
+"𐮂",
+"ߟ",
+"𐤶",
+"ᤍ",
+"⎧",
+"𖮈",
+"𓆉",
+"𐊪",
+"𑙥",
+"⤏"
+],
+"n_blocks_eligible": 294,
+"pilot_excluded": 1246,
+"rule": "seed = survey sequence-record glyphs minus every non-ASCII char in any pilot stimulus/key file; tail = block-uniform then codepoint-uniform over assigned L/N/P/S codepoints <= U+1FFFF, minus pilot glyphs, seed glyphs, and {≈,⟂,⊥}; single codepoints only, VS stripped; ASCII excluded from both strata (pilot used ASCII digits heavily)"
+}

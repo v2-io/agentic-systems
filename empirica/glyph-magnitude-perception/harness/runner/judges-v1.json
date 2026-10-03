@@ -1,0 +1,27 @@
+{
+  "version": "judges-v1.0",
+  "note": "Pinned judge registry. 'model' is what is requested; the ledger records what each provider reports back (model_reported). Reasoning/effort is set low everywhere it is settable, to approximate first-instinct judging; thinking-token counts are recorded per call as a covariate. API sampling temperature is provider default (not settable through these CLIs) — API judgments are therefore reproducible in kind, not bit-reproducible; local ollama judges run at temperature 0 with a fixed seed.",
+  "context_residue": {
+    "claude": "claude -p with --tools '' --strict-mcp-config (no MCP), --setting-sources '' and --system-prompt override. Verified 2026-10-03: the judge sees no CLAUDE.md content and nothing about glyphs; it DOES see an account-level note giving the user's email address (asked directly, sonnet-5-5 reported it). Not removable from this CLI; judged harmless to glyph perception.",
+    "grok": "grok -p under an isolated HOME holding only a symlink to ~/.grok/auth.json and a minimal config (no arch-expert agent, no ~/.claude/CLAUDE.md, no skills, no memory); --system-prompt-override, --tools '', no subagents, no web. Verified 2026-10-03: `grok inspect` shows 0 project instructions; judge reports no Joseph/glyph context. Grok's own built-in harness preamble (~13.5k input tokens) remains and cannot be stripped from the CLI.",
+    "codex": "codex exec under an isolated CODEX_HOME holding only a symlink to ~/.codex/auth.json (no AGENTS.md, memories, rules, skills); --ephemeral, read-only sandbox. No system-prompt override exists, so the study system line is prepended to the user turn. Codex's built-in agent preamble (~13k input tokens) remains. Verified 2026-10-03: judge reports no Joseph/glyph context.",
+    "agy": "Gemini via the Antigravity CLI (agy -p), run in an empty cwd; HOME not isolated (agy's knowledge/brain stores exist under ~/.gemini/antigravity-cli). Verified 2026-10-03: judge reports no Joseph/glyph context. Study system line prepended to the user turn; agy harness preamble (~12k tokens) remains.",
+    "ollama": "local /api/chat with the study system prompt only; temperature 0, seed 0."
+  },
+  "judges": {
+    "haiku45":      {"adapter": "claude", "model": "claude-haiku-4-5", "effort": "low"},
+    "sonnet5":      {"adapter": "claude", "model": "claude-sonnet-5", "effort": "low"},
+    "sonnet55":     {"adapter": "claude", "model": "claude-sonnet-5-5", "effort": "low"},
+    "opus55":       {"adapter": "claude", "model": "claude-opus-5-5", "effort": "low"},
+    "grok46":       {"adapter": "grok", "model": "grok-4.6", "effort": "low"},
+    "gpt56terra":   {"adapter": "codex", "model": "gpt-5.6-terra", "effort": "low"},
+    "gemini31pro":  {"adapter": "agy", "model": "gemini-3.1-pro-low"},
+    "gemini38flash":{"adapter": "agy", "model": "gemini-3.8-flash-low"},
+    "llama32-3b":   {"adapter": "ollama", "model": "llama3.2:3b"},
+    "qwen3-4b":     {"adapter": "ollama", "model": "qwen3:4b", "think": false},
+    "gemma3-4b":    {"adapter": "ollama", "model": "gemma3:4b"},
+    "phi4mini":     {"adapter": "ollama", "model": "phi4-mini"},
+    "mistral7b":    {"adapter": "ollama", "model": "mistral:7b"},
+    "gptoss20b":    {"adapter": "ollama", "model": "gpt-oss:20b", "think": "low", "num_predict": 600}
+  }
+}

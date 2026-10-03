@@ -1,0 +1,24 @@
+{
+  "version": "holistic-v1.0",
+  "authored": "2026-10-03 (v1.0 harness builder). Intended orders are the ORIGINATING SURVEYOR'S written orders (or the pilot's), carried as the reference for scoring direction-agnostic agreement; they are anecdote-tier, not ground truth.",
+  "registered_prior_prediction": "pilot-record.md L644 (Fable, 2026-08-25): elaboration ladders (Grok) 'behave as holistic/morph class (pairwise ⟂-heavy, gestalt-recoverable); pairwise survival would instead indicate appendage-count reads as immediate quantity.'",
+  "sets": [
+    {"name": "dice", "kind": "control-factorizable", "order": ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"], "src": "pilot control", "pairwise": true},
+    {"name": "ramp", "kind": "control-factorizable", "order": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"], "src": "pilot control", "pairwise": false},
+    {"name": "upper-eighths", "kind": "control-factorizable (held-out)", "order": ["🮂", "🮃", "▀", "🮄", "🮅", "🮆", "█"], "src": "fable-1 Legacy Computing pane (survey record; not in pilot stimuli)", "pairwise": false},
+    {"name": "unfold", "kind": "pilot-holistic", "order": ["-", "=", ">", "}", ")", "|"], "src": "Joseph (pilot)", "pairwise": true},
+    {"name": "risebar", "kind": "pilot-holistic", "order": ["_", "₋", "-", "⁻", "¯"], "src": "fable-1 (pilot)", "pairwise": true},
+    {"name": "rotate4", "kind": "pilot-holistic (circular)", "order": ["─", "╱", "│", "╲"], "src": "fable-1 (pilot)", "pairwise": false},
+    {"name": "drain", "kind": "pilot-authored", "order": ["☰", "☱", "☳", "☷", "⚌", "⚍", "⚏", "⚊", "⚋"], "src": "Joseph (pilot)", "pairwise": false},
+    {"name": "elab-n", "kind": "held-out holistic candidate (elaboration)", "order": ["n", "ɲ", "ɳ", "ŋ"], "src": "grok-1 via pilot-record L644", "pairwise": true},
+    {"name": "elab-s", "kind": "held-out holistic candidate (elaboration)", "order": ["s", "ſ", "ʃ", "ʆ"], "src": "grok-1 via pilot-record L644", "pairwise": true},
+    {"name": "elab-l", "kind": "held-out holistic candidate (elaboration)", "order": ["l", "ɫ", "ɬ", "ɭ", "ɮ"], "src": "grok-1 via pilot-record L644", "pairwise": true},
+    {"name": "elab-z", "kind": "held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)", "order": ["z", "ʒ", "ʓ"], "src": "grok-1 via pilot-record L644", "pairwise": true},
+    {"name": "rings", "kind": "held-out holistic candidate (morph)", "order": [".", "o", "⊙", "⊚", "◎", "◯"], "src": "grok-1 morph record L1069-L1071", "pairwise": true},
+    {"name": "rays", "kind": "held-out holistic candidate (morph)", "order": ["+", "×", "∗", "*", "✶", "✹"], "src": "grok-1 morph record L1063-L1065", "pairwise": true},
+    {"name": "nest", "kind": "held-out holistic candidate (morph)", "order": ["<", "⊂", "⊆", "⋐"], "src": "grok-1 morph record L1048", "pairwise": true},
+    {"name": "dimension", "kind": "held-out holistic candidate (morph)", "order": [".", "-", "□", "■"], "src": "grok-1 morph record L1035-L1037", "pairwise": true},
+    {"name": "stem", "kind": "held-out holistic candidate (morph, 3 rungs)", "order": ["|", "∥", "⦀"], "src": "grok-1 morph record L1041", "pairwise": true},
+    {"name": "check", "kind": "held-out holistic candidate (morph, 3 rungs)", "order": ["/", "√", "✓"], "src": "grok-1 morph record L1109-L1111", "pairwise": true}
+  ]
+}
