@@ -21,8 +21,9 @@ EXP = pathlib.Path(__file__).resolve().parents[2]
 STIMS = {"triads": "triads.jsonl", "format": "format-pairs.jsonl", "conflict": "conflict.jsonl",
          "holistic": "holistic-pairs.jsonl", "gestalt": "gestalt.jsonl",
          "signa": "consumer-signa-pairs.jsonl", "signa-gestalt": "consumer-signa-gestalt.jsonl",
-         "top40": "top40-steps.jsonl", "top40-gestalt": "top40-gestalt.jsonl"}
-GESTALT_STIMS = ("gestalt", "signa-gestalt", "top40-gestalt")
+         "top40": "top40-steps.jsonl", "top40-gestalt": "top40-gestalt.jsonl",
+         "top40b": "top40b-steps.jsonl", "top40b-gestalt": "top40b-gestalt.jsonl"}
+GESTALT_STIMS = ("gestalt", "signa-gestalt", "top40-gestalt", "top40b-gestalt")
 
 def sha(s):
     return hashlib.sha256(s.encode()).hexdigest()

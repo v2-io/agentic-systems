@@ -1,0 +1,20 @@
+{
+ "run_id": "top40b-gestalt-gestalt-single-llama32-3b",
+ "protocol": "gmp-v1.0",
+ "instrument": "top40b-gestalt",
+ "format": "gestalt",
+ "mode": "single",
+ "sheet_size": null,
+ "reps": 1,
+ "stimulus_file": "data/stimuli-v1/top40b-gestalt.jsonl",
+ "stimulus_digest": "833352bafbb7fcc09bc818b3f310f3b6adf6045a2b07fda04bfd08af7f8963e1",
+ "judge_label": "llama32-3b",
+ "judge": {
+  "adapter": "ollama",
+  "model": "llama3.2:3b"
+ },
+ "adapter_version": "a1",
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "context_residue": "local /api/chat with the study system prompt only; temperature 0, seed 0.",
+ "created": "2026-10-03T22:11:44.374766+00:00"
+}

@@ -1,0 +1,3143 @@
+{
+ "format": {
+  "gemini31pro[sheet]": {
+   "tie->perp": [
+    88,
+    122
+   ],
+   "forced->perp": [
+    108,
+    141
+   ],
+   "perp_share": [
+    444,
+    640
+   ],
+   "survival_local_minus_mixed": 0.6124999999999999,
+   "value_forced": [
+    41,
+    43
+   ],
+   "value_perp": [
+    20,
+    20
+   ]
+  },
+  "gemini38flash[sheet]": {
+   "tie->perp": [
+    93,
+    142
+   ],
+   "forced->perp": [
+    97,
+    147
+   ],
+   "perp_share": [
+    395,
+    640
+   ],
+   "survival_local_minus_mixed": 0.7374999999999999,
+   "value_forced": [
+    41,
+    42
+   ],
+   "value_perp": [
+    34,
+    34
+   ]
+  },
+  "gemma3-4b[single]": {
+   "tie->perp": [
+    1,
+    91
+   ],
+   "forced->perp": [
+    1,
+    92
+   ],
+   "perp_share": [
+    38,
+    640
+   ],
+   "survival_local_minus_mixed": -0.0625,
+   "value_forced": [
+    10,
+    23
+   ],
+   "value_perp": [
+    5,
+    9
+   ]
+  },
+  "gpt56terra[sheet]": {
+   "perp_share": [
+    0,
+    0
+   ],
+   "survival_local_minus_mixed": 0.0,
+   "value_forced": [
+    37,
+    37
+   ]
+  },
+  "grok46[sheet]": {
+   "tie->perp": [
+    31,
+    121
+   ],
+   "forced->perp": [
+    30,
+    96
+   ],
+   "perp_share": [
+    274,
+    640
+   ],
+   "survival_local_minus_mixed": 0.4,
+   "value_forced": [
+    29,
+    30
+   ],
+   "value_perp": [
+    24,
+    24
+   ]
+  },
+  "haiku45[single]": {
+   "tie->perp": [
+    49,
+    123
+   ],
+   "forced->perp": [
+    44,
+    118
+   ],
+   "perp_share": [
+    342,
+    640
+   ],
+   "survival_local_minus_mixed": 0.3125,
+   "value_forced": [
+    29,
+    34
+   ],
+   "value_perp": [
+    21,
+    23
+   ]
+  },
+  "llama32-3b[single]": {
+   "tie->perp": [
+    7,
+    107
+   ],
+   "forced->perp": [
+    7,
+    105
+   ],
+   "perp_share": [
+    118,
+    640
+   ],
+   "survival_local_minus_mixed": -0.07500000000000001,
+   "value_forced": [
+    13,
+    23
+   ],
+   "value_perp": [
+    9,
+    20
+   ]
+  },
+  "mistral7b[single]": {
+   "tie->perp": [
+    13,
+    96
+   ],
+   "forced->perp": [
+    15,
+    92
+   ],
+   "perp_share": [
+    214,
+    640
+   ],
+   "survival_local_minus_mixed": 0.0875,
+   "value_forced": [
+    13,
+    21
+   ],
+   "value_perp": [
+    4,
+    9
+   ]
+  },
+  "opus55[single]": {
+   "tie->perp": [
+    75,
+    143
+   ],
+   "forced->perp": [
+    76,
+    147
+   ],
+   "perp_share": [
+    320,
+    640
+   ],
+   "survival_local_minus_mixed": 0.65,
+   "value_forced": [
+    36,
+    38
+   ],
+   "value_perp": [
+    40,
+    40
+   ]
+  },
+  "qwen3-4b[single]": {
+   "tie->perp": [
+    0,
+    0
+   ],
+   "forced->perp": [
+    0,
+    1
+   ],
+   "perp_share": [
+    0,
+    640
+   ],
+   "survival_local_minus_mixed": 0.0,
+   "value_forced": [
+    0,
+    0
+   ],
+   "value_perp": [
+    0,
+    0
+   ]
+  },
+  "sonnet-agent[pilotcond]": {
+   "tie->perp": [
+    66,
+    114
+   ],
+   "perp_share": [
+    243,
+    320
+   ],
+   "survival_local_minus_mixed": 0.0,
+   "value_perp": [
+    7,
+    7
+   ]
+  },
+  "sonnet55[sheet]": {
+   "tie->perp": [
+    47,
+    135
+   ],
+   "forced->perp": [
+    48,
+    135
+   ],
+   "perp_share": [
+    303,
+    640
+   ],
+   "survival_local_minus_mixed": 0.5,
+   "value_forced": [
+    35,
+    39
+   ],
+   "value_perp": [
+    27,
+    28
+   ]
+  },
+  "sonnet55[single]": {
+   "tie->perp": [
+    39,
+    142
+   ],
+   "forced->perp": [
+    41,
+    146
+   ],
+   "perp_share": [
+    239,
+    640
+   ],
+   "survival_local_minus_mixed": 0.4625,
+   "value_forced": [
+    35,
+    39
+   ],
+   "value_perp": [
+    37,
+    37
+   ]
+  },
+  "sonnet5[single]": {
+   "tie->perp": [
+    43,
+    120
+   ],
+   "forced->perp": [
+    53,
+    140
+   ],
+   "perp_share": [
+    314,
+    640
+   ],
+   "survival_local_minus_mixed": 0.48750000000000004,
+   "value_forced": [
+    29,
+    33
+   ],
+   "value_perp": [
+    20,
+    20
+   ]
+  }
+ },
+ "triads": {
+  "gemini31pro[sheet]": {
+   "n": 1800,
+   "perp": [
+    1195,
+    1800
+   ],
+   "perp_uniform": [
+    537,
+    540
+   ],
+   "unparsed": [
+    0,
+    1800
+   ],
+   "cycles": [
+    0,
+    152
+   ],
+   "agree": [
+    811,
+    900
+   ],
+   "value": [
+    77,
+    77
+   ],
+   "ink": [
+    70,
+    84
+   ],
+   "edges": 252,
+   "thinking": 77.41304347826087,
+   "first_shown": [
+    297,
+    596
+   ]
+  },
+  "gemini38flash[sheet]": {
+   "n": 1800,
+   "perp": [
+    1077,
+    1800
+   ],
+   "perp_uniform": [
+    530,
+    540
+   ],
+   "unparsed": [
+    2,
+    1800
+   ],
+   "cycles": [
+    3,
+    173
+   ],
+   "agree": [
+    786,
+    900
+   ],
+   "value": [
+    86,
+    87
+   ],
+   "ink": [
+    74,
+    98
+   ],
+   "edges": 292,
+   "thinking": 0.0,
+   "first_shown": [
+    352,
+    705
+   ]
+  },
+  "gemma3-4b[single]": {
+   "n": 1800,
+   "perp": [
+    128,
+    1800
+   ],
+   "perp_uniform": [
+    46,
+    540
+   ],
+   "unparsed": [
+    7,
+    1800
+   ],
+   "cycles": [
+    40,
+    177
+   ],
+   "agree": [
+    361,
+    900
+   ],
+   "value": [
+    13,
+    28
+   ],
+   "ink": [
+    34,
+    62
+   ],
+   "edges": 256,
+   "thinking": null,
+   "first_shown": [
+    606,
+    1171
+   ]
+  },
+  "gpt56terra[sheet]": {
+   "n": 1800,
+   "perp": [
+    1019,
+    1800
+   ],
+   "perp_uniform": [
+    519,
+    540
+   ],
+   "unparsed": [
+    3,
+    1800
+   ],
+   "cycles": [
+    2,
+    138
+   ],
+   "agree": [
+    688,
+    900
+   ],
+   "value": [
+    79,
+    83
+   ],
+   "ink": [
+    49,
+    69
+   ],
+   "edges": 268,
+   "thinking": 4.5375,
+   "first_shown": [
+    382,
+    748
+   ]
+  },
+  "grok46[sheet]": {
+   "n": 1800,
+   "perp": [
+    809,
+    1800
+   ],
+   "perp_uniform": [
+    450,
+    540
+   ],
+   "unparsed": [
+    214,
+    1800
+   ],
+   "cycles": [
+    1,
+    127
+   ],
+   "agree": [
+    554,
+    900
+   ],
+   "value": [
+    65,
+    65
+   ],
+   "ink": [
+    66,
+    86
+   ],
+   "edges": 244,
+   "thinking": 10.598936170212767,
+   "first_shown": [
+    368,
+    736
+   ]
+  },
+  "haiku45[single]": {
+   "n": 1800,
+   "perp": [
+    1012,
+    1800
+   ],
+   "perp_uniform": [
+    392,
+    540
+   ],
+   "unparsed": [
+    2,
+    1800
+   ],
+   "cycles": [
+    5,
+    110
+   ],
+   "agree": [
+    595,
+    900
+   ],
+   "value": [
+    59,
+    60
+   ],
+   "ink": [
+    46,
+    72
+   ],
+   "edges": 214,
+   "thinking": 402.90277777777777,
+   "first_shown": [
+    356,
+    736
+   ]
+  },
+  "hermes3-3b[single]": {
+   "n": 774,
+   "perp": [
+    256,
+    774
+   ],
+   "perp_uniform": [
+    0,
+    0
+   ],
+   "unparsed": [
+    40,
+    774
+   ],
+   "cycles": [
+    32,
+    66
+   ],
+   "agree": [
+    118,
+    386
+   ],
+   "value": [
+    7,
+    17
+   ],
+   "ink": [
+    14,
+    26
+   ],
+   "edges": 65,
+   "thinking": null,
+   "first_shown": [
+    157,
+    471
+   ]
+  },
+  "llama32-3b[single]": {
+   "n": 1800,
+   "perp": [
+    412,
+    1800
+   ],
+   "perp_uniform": [
+    127,
+    540
+   ],
+   "unparsed": [
+    38,
+    1800
+   ],
+   "cycles": [
+    35,
+    273
+   ],
+   "agree": [
+    527,
+    900
+   ],
+   "value": [
+    23,
+    45
+   ],
+   "ink": [
+    59,
+    114
+   ],
+   "edges": 403,
+   "thinking": null,
+   "first_shown": [
+    590,
+    1238
+   ]
+  },
+  "mistral7b[single]": {
+   "n": 1800,
+   "perp": [
+    605,
+    1800
+   ],
+   "perp_uniform": [
+    172,
+    540
+   ],
+   "unparsed": [
+    17,
+    1800
+   ],
+   "cycles": [
+    42,
+    160
+   ],
+   "agree": [
+    339,
+    900
+   ],
+   "value": [
+    18,
+    32
+   ],
+   "ink": [
+    18,
+    63
+   ],
+   "edges": 212,
+   "thinking": null,
+   "first_shown": [
+    372,
+    1128
+   ]
+  },
+  "opus55[single]": {
+   "n": 1800,
+   "perp": [
+    894,
+    1800
+   ],
+   "perp_uniform": [
+    506,
+    540
+   ],
+   "unparsed": [
+    2,
+    1800
+   ],
+   "cycles": [
+    5,
+    205
+   ],
+   "agree": [
+    805,
+    900
+   ],
+   "value": [
+    116,
+    116
+   ],
+   "ink": [
+    92,
+    119
+   ],
+   "edges": 397,
+   "thinking": 29.09777777777778,
+   "first_shown": [
+    443,
+    892
+   ]
+  },
+  "phi4mini[single]": {
+   "n": 341,
+   "perp": [
+    37,
+    341
+   ],
+   "perp_uniform": [
+    0,
+    0
+   ],
+   "unparsed": [
+    3,
+    341
+   ],
+   "cycles": [
+    1,
+    3
+   ],
+   "agree": [
+    80,
+    170
+   ],
+   "value": [
+    0,
+    2
+   ],
+   "ink": [
+    0,
+    1
+   ],
+   "edges": 4,
+   "thinking": null,
+   "first_shown": [
+    65,
+    84
+   ]
+  },
+  "qwen3-4b[single]": {
+   "n": 1800,
+   "perp": [
+    0,
+    1800
+   ],
+   "perp_uniform": [
+    0,
+    540
+   ],
+   "unparsed": [
+    0,
+    1800
+   ],
+   "cycles": [
+    595,
+    600
+   ],
+   "agree": [
+    5,
+    900
+   ],
+   "value": [
+    0,
+    0
+   ],
+   "ink": [
+    0,
+    0
+   ],
+   "edges": 5,
+   "thinking": null,
+   "first_shown": [
+    1795,
+    1800
+   ]
+  },
+  "sonnet55[sheet]": {
+   "n": 1800,
+   "perp": [
+    973,
+    1800
+   ],
+   "perp_uniform": [
+    531,
+    540
+   ],
+   "unparsed": [
+    0,
+    1800
+   ],
+   "cycles": [
+    4,
+    161
+   ],
+   "agree": [
+    726,
+    900
+   ],
+   "value": [
+    83,
+    86
+   ],
+   "ink": [
+    65,
+    89
+   ],
+   "edges": 305,
+   "thinking": 0.0,
+   "first_shown": [
+    376,
+    790
+   ]
+  },
+  "sonnet55[single]": {
+   "n": 1800,
+   "perp": [
+    807,
+    1800
+   ],
+   "perp_uniform": [
+    501,
+    540
+   ],
+   "unparsed": [
+    1,
+    1800
+   ],
+   "cycles": [
+    3,
+    232
+   ],
+   "agree": [
+    766,
+    900
+   ],
+   "value": [
+    109,
+    109
+   ],
+   "ink": [
+    85,
+    123
+   ],
+   "edges": 418,
+   "thinking": 59.82611111111111,
+   "first_shown": [
+    487,
+    980
+   ]
+  },
+  "sonnet5[single]": {
+   "n": 1800,
+   "perp": [
+    870,
+    1800
+   ],
+   "perp_uniform": [
+    452,
+    540
+   ],
+   "unparsed": [
+    2,
+    1800
+   ],
+   "cycles": [
+    31,
+    181
+   ],
+   "agree": [
+    594,
+    900
+   ],
+   "value": [
+    62,
+    65
+   ],
+   "ink": [
+    69,
+    100
+   ],
+   "edges": 263,
+   "thinking": 0.0,
+   "first_shown": [
+    302,
+    918
+   ]
+  }
+ },
+ "conflict": {
+  "gemini31pro[sheet]": {
+   "P9": [
+    77,
+    77
+   ],
+   "P10a": [
+    4,
+    4
+   ],
+   "P10b": [
+    5,
+    9
+   ],
+   "P11": [
+    2,
+    6
+   ],
+   "P12": [
+    11,
+    12
+   ]
+  },
+  "gemini38flash[sheet]": {
+   "P9": [
+    77,
+    78
+   ],
+   "P10a": [
+    3,
+    3
+   ],
+   "P10b": [
+    6,
+    6
+   ],
+   "P11": [
+    0,
+    12
+   ],
+   "P12": [
+    11,
+    12
+   ]
+  },
+  "gemma3-4b[single]": {
+   "P9": [
+    16,
+    23
+   ],
+   "P10a": [
+    0,
+    2
+   ],
+   "P10b": [
+    5,
+    5
+   ],
+   "P11": [
+    0,
+    2
+   ],
+   "P12": [
+    2,
+    4
+   ]
+  },
+  "gpt56terra[sheet]": {
+   "P9": [
+    78,
+    78
+   ],
+   "P10a": [
+    4,
+    4
+   ],
+   "P10b": [
+    6,
+    6
+   ],
+   "P11": [
+    1,
+    12
+   ],
+   "P12": [
+    11,
+    12
+   ]
+  },
+  "grok46[sheet]": {
+   "P9": [
+    76,
+    78
+   ],
+   "P10a": [
+    6,
+    6
+   ],
+   "P10b": [
+    18,
+    18
+   ],
+   "P11": [
+    2,
+    12
+   ],
+   "P12": [
+    7,
+    12
+   ]
+  },
+  "haiku45[single]": {
+   "P9": [
+    70,
+    73
+   ],
+   "P10a": [
+    3,
+    3
+   ],
+   "P10b": [
+    5,
+    10
+   ],
+   "P11": [
+    0,
+    11
+   ],
+   "P12": [
+    4,
+    12
+   ]
+  },
+  "llama32-3b[single]": {
+   "P9": [
+    11,
+    20
+   ],
+   "P10a": [
+    2,
+    2
+   ],
+   "P10b": [
+    4,
+    6
+   ],
+   "P11": [
+    0,
+    2
+   ],
+   "P12": [
+    1,
+    4
+   ]
+  },
+  "mistral7b[single]": {
+   "P9": [
+    11,
+    19
+   ],
+   "P10a": [
+    1,
+    2
+   ],
+   "P10b": [
+    1,
+    3
+   ],
+   "P11": [
+    4,
+    4
+   ],
+   "P12": [
+    1,
+    4
+   ]
+  },
+  "opus55[single]": {
+   "P9": [
+    77,
+    78
+   ],
+   "P10a": [
+    6,
+    6
+   ],
+   "P10b": [
+    16,
+    18
+   ],
+   "P11": [
+    2,
+    12
+   ],
+   "P12": [
+    7,
+    12
+   ]
+  },
+  "qwen3-4b[single]": {
+   "P9": [
+    13,
+    26
+   ],
+   "P10a": [
+    1,
+    2
+   ],
+   "P10b": [
+    3,
+    6
+   ],
+   "P11": [
+    2,
+    4
+   ],
+   "P12": [
+    0,
+    4
+   ]
+  },
+  "sonnet55[sheet]": {
+   "P9": [
+    72,
+    77
+   ],
+   "P10a": [
+    5,
+    5
+   ],
+   "P10b": [
+    7,
+    14
+   ],
+   "P11": [
+    12,
+    12
+   ],
+   "P12": [
+    10,
+    12
+   ]
+  },
+  "sonnet55[single]": {
+   "P9": [
+    70,
+    78
+   ],
+   "P10a": [
+    6,
+    6
+   ],
+   "P10b": [
+    14,
+    18
+   ],
+   "P11": [
+    8,
+    12
+   ],
+   "P12": [
+    6,
+    12
+   ]
+  },
+  "sonnet5[single]": {
+   "P9": [
+    58,
+    72
+   ],
+   "P10a": [
+    6,
+    6
+   ],
+   "P10b": [
+    18,
+    18
+   ],
+   "P11": [
+    9,
+    12
+   ],
+   "P12": [
+    6,
+    12
+   ]
+  }
+ },
+ "holistic": {
+  "gemini31pro": {
+   "dice": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "ramp": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "upper-eighths": {
+    "tau": 0.9682539682539683,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "unfold": {
+    "tau": 0.2,
+    "perp": 1,
+    "pw_dir": 0.13333333333333333
+   },
+   "risebar": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.3
+   },
+   "rotate4": {
+    "tau": 0.3333333333333333,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "drain": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "elab-n": {
+    "tau": 0.7777777777777777,
+    "perp": 0,
+    "pw_dir": 0.3333333333333333
+   },
+   "elab-s": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.5
+   },
+   "elab-l": {
+    "tau": null,
+    "perp": 3,
+    "pw_dir": 0.3
+   },
+   "elab-z": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.6666666666666666
+   },
+   "rings": {
+    "tau": 0.4666666666666666,
+    "perp": 0,
+    "pw_dir": 0.9333333333333333
+   },
+   "rays": {
+    "tau": 0.8666666666666667,
+    "perp": 0,
+    "pw_dir": 0.8666666666666667
+   },
+   "nest": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.3333333333333333
+   },
+   "dimension": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.8333333333333334
+   },
+   "stem": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "check": {
+    "tau": 0.3333333333333333,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "noise-0": {
+    "tau": null,
+    "perp": 3,
+    "pw_dir": null
+   },
+   "noise-1": {
+    "tau": null,
+    "perp": 3,
+    "pw_dir": null
+   },
+   "noise-2": {
+    "tau": null,
+    "perp": 3,
+    "pw_dir": null
+   },
+   "noise-3": {
+    "tau": null,
+    "perp": 2,
+    "pw_dir": null
+   }
+  },
+  "gemini38flash": {
+   "dice": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "ramp": {
+    "tau": null,
+    "perp": null,
+    "pw_dir": null
+   },
+   "upper-eighths": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "unfold": {
+    "tau": 0.4666666666666666,
+    "perp": 0,
+    "pw_dir": 0.06666666666666667
+   },
+   "risebar": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.4
+   },
+   "rotate4": {
+    "tau": 0.3333333333333333,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "drain": {
+    "tau": 0.8148148148148149,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "elab-n": {
+    "tau": 0.7777777777777777,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "elab-s": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "elab-l": {
+    "tau": 0.6666666666666666,
+    "perp": 0,
+    "pw_dir": 0.2
+   },
+   "elab-z": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "rings": {
+    "tau": 0.6888888888888888,
+    "perp": 0,
+    "pw_dir": 0.9333333333333333
+   },
+   "rays": {
+    "tau": 0.9555555555555556,
+    "perp": 0,
+    "pw_dir": 0.7333333333333333
+   },
+   "nest": {
+    "tau": 0.7777777777777777,
+    "perp": 0,
+    "pw_dir": 0.3333333333333333
+   },
+   "dimension": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "stem": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "check": {
+    "tau": 0.5555555555555555,
+    "perp": 0,
+    "pw_dir": 0.3333333333333333
+   },
+   "noise-0": {
+    "tau": null,
+    "perp": 3,
+    "pw_dir": null
+   },
+   "noise-1": {
+    "tau": 0.3333333333333333,
+    "perp": 2,
+    "pw_dir": null
+   },
+   "noise-2": {
+    "tau": 0.6,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "noise-3": {
+    "tau": 0.5333333333333333,
+    "perp": 1,
+    "pw_dir": null
+   }
+  },
+  "gemma3-4b": {
+   "dice": {
+    "tau": 0.19999999999999998,
+    "perp": 0,
+    "pw_dir": 0.13333333333333333
+   },
+   "ramp": {
+    "tau": 0.2888888888888889,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "upper-eighths": {
+    "tau": 0.11428571428571428,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "unfold": {
+    "tau": 0.37777777777777777,
+    "perp": 0,
+    "pw_dir": 0.2
+   },
+   "risebar": {
+    "tau": 0.3333333333333333,
+    "perp": 0,
+    "pw_dir": 0.3
+   },
+   "rotate4": {
+    "tau": 0.4444444444444444,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "drain": {
+    "tau": 0.05555555555555555,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "elab-n": {
+    "tau": 0.3333333333333333,
+    "perp": 0,
+    "pw_dir": 0.6666666666666666
+   },
+   "elab-s": {
+    "tau": 0.1111111111111111,
+    "perp": 0,
+    "pw_dir": 0.3333333333333333
+   },
+   "elab-l": {
+    "tau": 0.6666666666666666,
+    "perp": 0,
+    "pw_dir": 0.6
+   },
+   "elab-z": {
+    "tau": 0.7777777777777778,
+    "perp": 0,
+    "pw_dir": 0.3333333333333333
+   },
+   "rings": {
+    "tau": 0.3111111111111111,
+    "perp": 0,
+    "pw_dir": 0.6
+   },
+   "rays": {
+    "tau": 0.37777777777777777,
+    "perp": 0,
+    "pw_dir": 0.4
+   },
+   "nest": {
+    "tau": 0.3333333333333333,
+    "perp": 0,
+    "pw_dir": 0.3333333333333333
+   },
+   "dimension": {
+    "tau": 0.3333333333333333,
+    "perp": 0,
+    "pw_dir": 0.16666666666666666
+   },
+   "stem": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.3333333333333333
+   },
+   "check": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "noise-0": {
+    "tau": 0.28148148148148144,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "noise-1": {
+    "tau": 0.3333333333333333,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "noise-2": {
+    "tau": 0.24444444444444446,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "noise-3": {
+    "tau": 0.688888888888889,
+    "perp": 0,
+    "pw_dir": null
+   }
+  },
+  "gpt56terra": {
+   "dice": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "ramp": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "upper-eighths": {
+    "tau": 0.873015873015873,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "unfold": {
+    "tau": 0.3833333333333333,
+    "perp": 1,
+    "pw_dir": 0.2
+   },
+   "risebar": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.2
+   },
+   "rotate4": {
+    "tau": 0.3333333333333333,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "drain": {
+    "tau": 0.6666666666666666,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "elab-n": {
+    "tau": 0.6666666666666666,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "elab-s": {
+    "tau": 0.4444444444444444,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "elab-l": {
+    "tau": 0.9333333333333332,
+    "perp": 0,
+    "pw_dir": 0.2
+   },
+   "elab-z": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "rings": {
+    "tau": 0.4666666666666666,
+    "perp": 0,
+    "pw_dir": 0.7333333333333333
+   },
+   "rays": {
+    "tau": 0.888888888888889,
+    "perp": 0,
+    "pw_dir": 0.6
+   },
+   "nest": {
+    "tau": 0.7777777777777777,
+    "perp": 0,
+    "pw_dir": 0.6666666666666666
+   },
+   "dimension": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.6666666666666666
+   },
+   "stem": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.6666666666666666
+   },
+   "check": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.3333333333333333
+   },
+   "noise-0": {
+    "tau": null,
+    "perp": 3,
+    "pw_dir": null
+   },
+   "noise-1": {
+    "tau": 0.2,
+    "perp": 1,
+    "pw_dir": null
+   },
+   "noise-2": {
+    "tau": 0.4,
+    "perp": 2,
+    "pw_dir": null
+   },
+   "noise-3": {
+    "tau": null,
+    "perp": 3,
+    "pw_dir": null
+   }
+  },
+  "grok46": {
+   "dice": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "ramp": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "upper-eighths": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "unfold": {
+    "tau": 0.4444444444444445,
+    "perp": 0,
+    "pw_dir": 0.13333333333333333
+   },
+   "risebar": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.2
+   },
+   "rotate4": {
+    "tau": 0.0,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "drain": {
+    "tau": 0.5370370370370371,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "elab-n": {
+    "tau": 0.6666666666666666,
+    "perp": 0,
+    "pw_dir": 0.5
+   },
+   "elab-s": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.6666666666666666
+   },
+   "elab-l": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.6
+   },
+   "elab-z": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.6666666666666666
+   },
+   "rings": {
+    "tau": 0.7333333333333334,
+    "perp": 0,
+    "pw_dir": 0.8666666666666667
+   },
+   "rays": {
+    "tau": 0.9111111111111111,
+    "perp": 0,
+    "pw_dir": 0.6666666666666666
+   },
+   "nest": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "dimension": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.8333333333333334
+   },
+   "stem": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "check": {
+    "tau": 0.7777777777777778,
+    "perp": 0,
+    "pw_dir": 0.6666666666666666
+   },
+   "noise-0": {
+    "tau": 0.0,
+    "perp": 2,
+    "pw_dir": null
+   },
+   "noise-1": {
+    "tau": 0.23056431826147913,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "noise-2": {
+    "tau": 0.5333333333333333,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "noise-3": {
+    "tau": 0.2,
+    "perp": 1,
+    "pw_dir": null
+   }
+  },
+  "haiku45": {
+   "dice": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "ramp": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "upper-eighths": {
+    "tau": 0.5873015873015873,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "unfold": {
+    "tau": 0.3333333333333333,
+    "perp": 0,
+    "pw_dir": 0.4
+   },
+   "risebar": {
+    "tau": 0.7333333333333334,
+    "perp": 0,
+    "pw_dir": 0.3
+   },
+   "rotate4": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "drain": {
+    "tau": 0.7777777777777778,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "elab-n": {
+    "tau": 0.8888888888888888,
+    "perp": 0,
+    "pw_dir": 0.16666666666666666
+   },
+   "elab-s": {
+    "tau": 0.6666666666666666,
+    "perp": 1,
+    "pw_dir": 0.16666666666666666
+   },
+   "elab-l": {
+    "tau": 0.6,
+    "perp": 0,
+    "pw_dir": 0.1
+   },
+   "elab-z": {
+    "tau": 1.0,
+    "perp": 2,
+    "pw_dir": 0.0
+   },
+   "rings": {
+    "tau": 0.4666666666666666,
+    "perp": 0,
+    "pw_dir": 0.8666666666666667
+   },
+   "rays": {
+    "tau": 0.8666666666666667,
+    "perp": 0,
+    "pw_dir": 0.5333333333333333
+   },
+   "nest": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "dimension": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "stem": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.6666666666666666
+   },
+   "check": {
+    "tau": 1.0,
+    "perp": 1,
+    "pw_dir": 0.3333333333333333
+   },
+   "noise-0": {
+    "tau": null,
+    "perp": 3,
+    "pw_dir": null
+   },
+   "noise-1": {
+    "tau": null,
+    "perp": 3,
+    "pw_dir": null
+   },
+   "noise-2": {
+    "tau": 0.6,
+    "perp": 2,
+    "pw_dir": null
+   },
+   "noise-3": {
+    "tau": 0.2,
+    "perp": 2,
+    "pw_dir": null
+   }
+  },
+  "llama32-3b": {
+   "dice": {
+    "tau": 0.3333333333333333,
+    "perp": 0,
+    "pw_dir": 0.7333333333333333
+   },
+   "ramp": {
+    "tau": 0.19047619047619047,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "upper-eighths": {
+    "tau": 0.3333333333333333,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "unfold": {
+    "tau": 0.17037037037037037,
+    "perp": 0,
+    "pw_dir": 0.6
+   },
+   "risebar": {
+    "tau": 0.6,
+    "perp": 0,
+    "pw_dir": 0.7
+   },
+   "rotate4": {
+    "tau": 0.2222222222222222,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "drain": {
+    "tau": 0.11119251119251121,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "elab-n": {
+    "tau": 0.0,
+    "perp": 0,
+    "pw_dir": 0.3333333333333333
+   },
+   "elab-s": {
+    "tau": 0.3333333333333333,
+    "perp": 0,
+    "pw_dir": 0.3333333333333333
+   },
+   "elab-l": {
+    "tau": 0.27619047619047615,
+    "perp": 0,
+    "pw_dir": 0.1
+   },
+   "elab-z": {
+    "tau": 0.5555555555555555,
+    "perp": 0,
+    "pw_dir": 0.3333333333333333
+   },
+   "rings": {
+    "tau": 0.24444444444444446,
+    "perp": 0,
+    "pw_dir": 0.8
+   },
+   "rays": {
+    "tau": 0.5333333333333333,
+    "perp": 0,
+    "pw_dir": 0.8666666666666667
+   },
+   "nest": {
+    "tau": 0.2222222222222222,
+    "perp": 0,
+    "pw_dir": 0.8333333333333334
+   },
+   "dimension": {
+    "tau": 0.5555555555555555,
+    "perp": 0,
+    "pw_dir": 0.8333333333333334
+   },
+   "stem": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.6666666666666666
+   },
+   "check": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.6666666666666666
+   },
+   "noise-0": {
+    "tau": 0.4444444444444445,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "noise-1": {
+    "tau": 0.3555555555555556,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "noise-2": {
+    "tau": 0.4000000000000001,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "noise-3": {
+    "tau": 0.37777777777777777,
+    "perp": 0,
+    "pw_dir": null
+   }
+  },
+  "mistral7b": {
+   "dice": {
+    "tau": 0.4666666666666666,
+    "perp": 0,
+    "pw_dir": 0.4
+   },
+   "ramp": {
+    "tau": 0.20634920634920637,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "upper-eighths": {
+    "tau": 0.15873015873015872,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "unfold": {
+    "tau": 0.13333333333333333,
+    "perp": 0,
+    "pw_dir": 0.5333333333333333
+   },
+   "risebar": {
+    "tau": 0.7333333333333334,
+    "perp": 0,
+    "pw_dir": 0.4
+   },
+   "rotate4": {
+    "tau": 0.4444444444444444,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "drain": {
+    "tau": 0.34920634920634924,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "elab-n": {
+    "tau": 0.4444444444444444,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "elab-s": {
+    "tau": 0.6666666666666666,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "elab-l": {
+    "tau": 0.26666666666666666,
+    "perp": 0,
+    "pw_dir": 0.1
+   },
+   "elab-z": {
+    "tau": 0.5555555555555555,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "rings": {
+    "tau": 0.5111111111111111,
+    "perp": 0,
+    "pw_dir": 0.3333333333333333
+   },
+   "rays": {
+    "tau": 0.4222222222222222,
+    "perp": 0,
+    "pw_dir": 0.4
+   },
+   "nest": {
+    "tau": 0.4444444444444444,
+    "perp": 0,
+    "pw_dir": 0.5
+   },
+   "dimension": {
+    "tau": 0.4444444444444444,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "stem": {
+    "tau": 0.5555555555555555,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "check": {
+    "tau": 0.7777777777777777,
+    "perp": 0,
+    "pw_dir": 0.3333333333333333
+   },
+   "noise-0": {
+    "tau": 0.4666666666666666,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "noise-1": {
+    "tau": 0.3111111111111111,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "noise-2": {
+    "tau": 0.48888888888888893,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "noise-3": {
+    "tau": 0.19999999999999998,
+    "perp": 0,
+    "pw_dir": null
+   }
+  },
+  "opus55": {
+   "dice": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "ramp": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "upper-eighths": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "unfold": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.2
+   },
+   "risebar": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.5
+   },
+   "rotate4": {
+    "tau": 0.0,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "drain": {
+    "tau": 0.8148148148148149,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "elab-n": {
+    "tau": 0.6666666666666666,
+    "perp": 0,
+    "pw_dir": 0.5
+   },
+   "elab-s": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.6666666666666666
+   },
+   "elab-l": {
+    "tau": 0.9333333333333332,
+    "perp": 0,
+    "pw_dir": 0.7
+   },
+   "elab-z": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "rings": {
+    "tau": 0.4222222222222222,
+    "perp": 0,
+    "pw_dir": 0.8666666666666667
+   },
+   "rays": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.8
+   },
+   "nest": {
+    "tau": 0.7777777777777777,
+    "perp": 0,
+    "pw_dir": 0.6666666666666666
+   },
+   "dimension": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "stem": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "check": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "noise-0": {
+    "tau": null,
+    "perp": 3,
+    "pw_dir": null
+   },
+   "noise-1": {
+    "tau": null,
+    "perp": 3,
+    "pw_dir": null
+   },
+   "noise-2": {
+    "tau": null,
+    "perp": 3,
+    "pw_dir": null
+   },
+   "noise-3": {
+    "tau": null,
+    "perp": 3,
+    "pw_dir": null
+   }
+  },
+  "qwen3-4b": {
+   "dice": {
+    "tau": 0.2888888888888889,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "ramp": {
+    "tau": 0.19047619047619047,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "upper-eighths": {
+    "tau": 0.2698412698412698,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "unfold": {
+    "tau": 0.19999999999999998,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "risebar": {
+    "tau": 0.19999999999999998,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "rotate4": {
+    "tau": 0.2222222222222222,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "drain": {
+    "tau": 0.11111111111111112,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "elab-n": {
+    "tau": 0.5512984248616433,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "elab-s": {
+    "tau": 0.0909090909090909,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "elab-l": {
+    "tau": 0.29411764705882354,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "elab-z": {
+    "tau": 0.7777777777777778,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "rings": {
+    "tau": 0.12929292929292932,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "rays": {
+    "tau": 0.24444444444444446,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "nest": {
+    "tau": 0.3333333333333333,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "dimension": {
+    "tau": 0.40740740740740744,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "stem": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "check": {
+    "tau": 0.7777777777777777,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "noise-0": {
+    "tau": 0.4000000000000001,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "noise-1": {
+    "tau": 0.3333333333333333,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "noise-2": {
+    "tau": 0.20000000000000004,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "noise-3": {
+    "tau": 0.2888888888888889,
+    "perp": 0,
+    "pw_dir": null
+   }
+  },
+  "sonnet5": {
+   "dice": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "ramp": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "upper-eighths": {
+    "tau": 0.619047619047619,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "unfold": {
+    "tau": 0.4666666666666666,
+    "perp": 0,
+    "pw_dir": 0.4
+   },
+   "risebar": {
+    "tau": 0.9333333333333332,
+    "perp": 0,
+    "pw_dir": 0.2
+   },
+   "rotate4": {
+    "tau": 0.6666666666666666,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "drain": {
+    "tau": 0.3783068783068783,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "elab-n": {
+    "tau": 0.7777777777777777,
+    "perp": 0,
+    "pw_dir": 0.5
+   },
+   "elab-s": {
+    "tau": 0.8888888888888888,
+    "perp": 0,
+    "pw_dir": 0.3333333333333333
+   },
+   "elab-l": {
+    "tau": 0.39999999999999997,
+    "perp": 0,
+    "pw_dir": 0.5
+   },
+   "elab-z": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "rings": {
+    "tau": 0.6888888888888888,
+    "perp": 0,
+    "pw_dir": 0.6666666666666666
+   },
+   "rays": {
+    "tau": 0.688888888888889,
+    "perp": 0,
+    "pw_dir": 0.6
+   },
+   "nest": {
+    "tau": 0.7777777777777777,
+    "perp": 0,
+    "pw_dir": 0.16666666666666666
+   },
+   "dimension": {
+    "tau": 0.8888888888888888,
+    "perp": 0,
+    "pw_dir": 0.5
+   },
+   "stem": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "check": {
+    "tau": 0.5555555555555555,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "noise-0": {
+    "tau": null,
+    "perp": 3,
+    "pw_dir": null
+   },
+   "noise-1": {
+    "tau": 0.4444444444444445,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "noise-2": {
+    "tau": 0.3111111111111111,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "noise-3": {
+    "tau": 0.15555555555555556,
+    "perp": 0,
+    "pw_dir": null
+   }
+  },
+  "sonnet55": {
+   "dice": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "ramp": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "upper-eighths": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "unfold": {
+    "tau": 0.7333333333333334,
+    "perp": 0,
+    "pw_dir": 0.4666666666666667
+   },
+   "risebar": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.7
+   },
+   "rotate4": {
+    "tau": 0.0,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "drain": {
+    "tau": 0.8148148148148149,
+    "perp": 0,
+    "pw_dir": null
+   },
+   "elab-n": {
+    "tau": 0.6666666666666666,
+    "perp": 0,
+    "pw_dir": 0.16666666666666666
+   },
+   "elab-s": {
+    "tau": 0.5555555555555555,
+    "perp": 0,
+    "pw_dir": 0.16666666666666666
+   },
+   "elab-l": {
+    "tau": 0.8000000000000002,
+    "perp": 0,
+    "pw_dir": 0.3
+   },
+   "elab-z": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.3333333333333333
+   },
+   "rings": {
+    "tau": 0.8222222222222223,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "rays": {
+    "tau": 0.9555555555555556,
+    "perp": 0,
+    "pw_dir": 0.8
+   },
+   "nest": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.5
+   },
+   "dimension": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.8333333333333334
+   },
+   "stem": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 1.0
+   },
+   "check": {
+    "tau": 1.0,
+    "perp": 0,
+    "pw_dir": 0.0
+   },
+   "noise-0": {
+    "tau": 0.4,
+    "perp": 2,
+    "pw_dir": null
+   },
+   "noise-1": {
+    "tau": null,
+    "perp": 3,
+    "pw_dir": null
+   },
+   "noise-2": {
+    "tau": 0.5,
+    "perp": 1,
+    "pw_dir": null
+   },
+   "noise-3": {
+    "tau": 0.2888888888888889,
+    "perp": 0,
+    "pw_dir": null
+   }
+  }
+ },
+ "seed_retest": {
+  "gemini31pro[sheet]": {
+   "ordered": 82,
+   "agree": 82,
+   "by_surveyor": {
+    "fable-1": [
+     24,
+     24
+    ],
+    "sonnet-survey-2": [
+     5,
+     5
+    ],
+    "sonnet5-1": [
+     51,
+     51
+    ],
+    "sonnet-survey-1": [
+     2,
+     2
+    ]
+   }
+  },
+  "gemini38flash[sheet]": {
+   "ordered": 93,
+   "agree": 89,
+   "by_surveyor": {
+    "sonnet5-1": [
+     54,
+     56
+    ],
+    "fable-1": [
+     28,
+     30
+    ],
+    "sonnet-survey-1": [
+     2,
+     2
+    ],
+    "sonnet-survey-2": [
+     5,
+     5
+    ]
+   }
+  },
+  "gemma3-4b[single]": {
+   "ordered": 27,
+   "agree": 18,
+   "by_surveyor": {
+    "sonnet5-1": [
+     9,
+     13
+    ],
+    "sonnet-survey-2": [
+     0,
+     2
+    ],
+    "sonnet-survey-1": [
+     1,
+     2
+    ],
+    "fable-1": [
+     8,
+     10
+    ]
+   }
+  },
+  "gpt56terra[sheet]": {
+   "ordered": 63,
+   "agree": 57,
+   "by_surveyor": {
+    "fable-1": [
+     20,
+     23
+    ],
+    "sonnet-survey-2": [
+     5,
+     5
+    ],
+    "sonnet5-1": [
+     30,
+     33
+    ],
+    "sonnet-survey-1": [
+     2,
+     2
+    ]
+   }
+  },
+  "grok46[sheet]": {
+   "ordered": 68,
+   "agree": 65,
+   "by_surveyor": {
+    "sonnet5-1": [
+     38,
+     39
+    ],
+    "fable-1": [
+     22,
+     24
+    ],
+    "sonnet-survey-2": [
+     4,
+     4
+    ],
+    "sonnet-survey-1": [
+     1,
+     1
+    ]
+   }
+  },
+  "haiku45[single]": {
+   "ordered": 54,
+   "agree": 49,
+   "by_surveyor": {
+    "fable-1": [
+     16,
+     20
+    ],
+    "sonnet5-1": [
+     27,
+     28
+    ],
+    "sonnet-survey-2": [
+     5,
+     5
+    ],
+    "sonnet-survey-1": [
+     1,
+     1
+    ]
+   }
+  },
+  "hermes3-3b[single]": {
+   "ordered": 10,
+   "agree": 7,
+   "by_surveyor": {
+    "sonnet5-1": [
+     4,
+     6
+    ],
+    "fable-1": [
+     3,
+     4
+    ]
+   }
+  },
+  "llama32-3b[single]": {
+   "ordered": 43,
+   "agree": 26,
+   "by_surveyor": {
+    "fable-1": [
+     8,
+     17
+    ],
+    "sonnet5-1": [
+     13,
+     19
+    ],
+    "sonnet-survey-2": [
+     3,
+     5
+    ],
+    "sonnet-survey-1": [
+     2,
+     2
+    ]
+   }
+  },
+  "mistral7b[single]": {
+   "ordered": 20,
+   "agree": 9,
+   "by_surveyor": {
+    "sonnet5-1": [
+     6,
+     10
+    ],
+    "sonnet-survey-1": [
+     1,
+     1
+    ],
+    "fable-1": [
+     2,
+     8
+    ],
+    "sonnet-survey-2": [
+     0,
+     1
+    ]
+   }
+  },
+  "opus55[single]": {
+   "ordered": 103,
+   "agree": 100,
+   "by_surveyor": {
+    "fable-1": [
+     30,
+     32
+    ],
+    "sonnet5-1": [
+     63,
+     64
+    ],
+    "sonnet-survey-2": [
+     5,
+     5
+    ],
+    "sonnet-survey-1": [
+     2,
+     2
+    ]
+   }
+  },
+  "phi4mini[single]": {
+   "ordered": 0,
+   "agree": 0,
+   "by_surveyor": {}
+  },
+  "qwen3-4b[single]": {
+   "ordered": 1,
+   "agree": 1,
+   "by_surveyor": {
+    "sonnet5-1": [
+     1,
+     1
+    ]
+   }
+  },
+  "sonnet55[sheet]": {
+   "ordered": 78,
+   "agree": 74,
+   "by_surveyor": {
+    "sonnet5-1": [
+     44,
+     45
+    ],
+    "fable-1": [
+     23,
+     26
+    ],
+    "sonnet-survey-1": [
+     2,
+     2
+    ],
+    "sonnet-survey-2": [
+     5,
+     5
+    ]
+   }
+  },
+  "sonnet55[single]": {
+   "ordered": 93,
+   "agree": 89,
+   "by_surveyor": {
+    "sonnet5-1": [
+     55,
+     56
+    ],
+    "fable-1": [
+     27,
+     30
+    ],
+    "sonnet-survey-2": [
+     5,
+     5
+    ],
+    "sonnet-survey-1": [
+     2,
+     2
+    ]
+   }
+  },
+  "sonnet5[single]": {
+   "ordered": 63,
+   "agree": 58,
+   "by_surveyor": {
+    "sonnet5-1": [
+     32,
+     33
+    ],
+    "fable-1": [
+     19,
+     23
+    ],
+    "sonnet-survey-2": [
+     5,
+     5
+    ],
+    "sonnet-survey-1": [
+     2,
+     2
+    ]
+   }
+  }
+ },
+ "signa": {
+  "gemini31pro[sheet]": {
+   "directed": 26,
+   "agree": 26,
+   "order": "·╶⚬╌○╍◎━◉═⬤",
+   "unconfirmed_adjacent": [
+    "·╶:mixed",
+    "═⚬:perp"
+   ],
+   "gestalt": [
+    1.0,
+    0
+   ]
+  },
+  "gemini38flash[sheet]": {
+   "directed": 26,
+   "agree": 26,
+   "order": "·╶⚬╌○╍◎━═◉⬤",
+   "unconfirmed_adjacent": [
+    "━═:mixed",
+    "═⚬:perp"
+   ],
+   "gestalt": [
+    1.0,
+    0
+   ]
+  },
+  "grok46[sheet]": {
+   "directed": 37,
+   "agree": 36,
+   "order": "·╶╌⚬╍○━◎◉═⬤",
+   "unconfirmed_adjacent": [
+    "═⚬:rev"
+   ],
+   "gestalt": [
+    1.0,
+    0
+   ]
+  },
+  "haiku45[single]": {
+   "directed": 34,
+   "agree": 32,
+   "order": "·╶╌╍○⚬━⬤◎◉═",
+   "unconfirmed_adjacent": [
+    "╶╌:perp",
+    "╌╍:mixed",
+    "═⚬:rev",
+    "⚬○:rev"
+   ],
+   "gestalt": [
+    0.6552188552188553,
+    0
+   ]
+  },
+  "llama32-3b[single]": {
+   "directed": 31,
+   "agree": 21,
+   "order": "·╍━╶═◎◉○╌⚬⬤",
+   "unconfirmed_adjacent": [
+    "·╶:mixed",
+    "╌╍:rev",
+    "╍━:mixed",
+    "━═:mixed",
+    "⚬○:rev",
+    "○◎:rev",
+    "◎◉:flip"
+   ],
+   "gestalt": [
+    0.20269360269360268,
+    0
+   ]
+  },
+  "opus55[single]": {
+   "directed": 41,
+   "agree": 40,
+   "order": "·╶╌⚬╍○━◎═◉⬤",
+   "unconfirmed_adjacent": [
+    "━═:flip",
+    "═⚬:rev"
+   ],
+   "gestalt": [
+    1.0,
+    0
+   ]
+  },
+  "sonnet55[sheet]": {
+   "directed": 48,
+   "agree": 47,
+   "order": "·╶╌⚬╍━═○◎◉⬤",
+   "unconfirmed_adjacent": [
+    "━═:flip",
+    "═⚬:rev"
+   ],
+   "gestalt": [
+    0.6242424242424242,
+    0
+   ]
+  },
+  "sonnet55[single]": {
+   "directed": 49,
+   "agree": 46,
+   "order": "·╶╌⚬╍○━═◎◉⬤",
+   "unconfirmed_adjacent": [
+    "━═:flip",
+    "═⚬:rev",
+    "◉⬤:flip"
+   ],
+   "gestalt": [
+    0.6242424242424242,
+    0
+   ]
+  },
+  "sonnet5[single]": {
+   "directed": 45,
+   "agree": 43,
+   "order": "·╶╌⚬╍○━═◎◉⬤",
+   "unconfirmed_adjacent": [
+    "╶╌:mixed",
+    "═⚬:mixed"
+   ],
+   "gestalt": [
+    0.8571428571428571,
+    0
+   ]
+  }
+ },
+ "predictions": [
+  {
+   "id": "P1",
+   "text": "tie→perp dissolution ≥0.60 (Claude) / ≥0.50 (other frontier)",
+   "cells": [
+    "gemini31pro[sheet]: 0.72 (n=122) PASS (thr 0.5)",
+    "gemini38flash[sheet]: 0.65 (n=142) PASS (thr 0.5)",
+    "grok46[sheet]: 0.26 (n=121) FAIL (thr 0.5)",
+    "haiku45[single]: 0.40 (n=123) FAIL (thr 0.6)",
+    "opus55[single]: 0.52 (n=143) FAIL (thr 0.6)",
+    "sonnet55[sheet]: 0.35 (n=135) FAIL (thr 0.6)",
+    "sonnet55[single]: 0.27 (n=142) FAIL (thr 0.6)",
+    "sonnet5[single]: 0.36 (n=120) FAIL (thr 0.6)"
+   ]
+  },
+  {
+   "id": "P2",
+   "text": "small local: ⟂ share of perp presentations <0.30",
+   "cells": [
+    "gemma3-4b[single]: 0.06 (n=640) PASS",
+    "llama32-3b[single]: 0.18 (n=640) PASS",
+    "qwen3-4b[single]: 0.00 (n=640) PASS"
+   ]
+  },
+  {
+   "id": "P2b",
+   "text": "small local: tie→perp dissolution <0.40",
+   "cells": [
+    "gemma3-4b[single]: 0.01 (n=91) PASS",
+    "llama32-3b[single]: 0.07 (n=107) PASS",
+    "qwen3-4b[single]: n<min (0)"
+   ]
+  },
+  {
+   "id": "P3",
+   "text": "frontier: perp survival fresh-seed-local minus fresh-mixed ≥ +0.30",
+   "cells": [
+    "gemini31pro[sheet]: +0.61 PASS",
+    "gemini38flash[sheet]: +0.74 PASS",
+    "grok46[sheet]: +0.40 PASS",
+    "haiku45[single]: +0.31 PASS",
+    "opus55[single]: +0.65 PASS",
+    "sonnet55[sheet]: +0.50 PASS",
+    "sonnet55[single]: +0.46 PASS",
+    "sonnet5[single]: +0.49 PASS"
+   ]
+  },
+  {
+   "id": "P4",
+   "text": "frontier: value-correlate higher under perp than forced",
+   "cells": [
+    "gemini31pro[sheet]: forced 0.95 → perp 1.00 PASS",
+    "gemini38flash[sheet]: forced 0.98 → perp 1.00 PASS",
+    "grok46[sheet]: forced 0.97 → perp 1.00 PASS",
+    "haiku45[single]: forced 0.85 → perp 0.91 PASS",
+    "opus55[single]: forced 0.95 → perp 1.00 PASS",
+    "sonnet55[sheet]: forced 0.90 → perp 0.96 PASS",
+    "sonnet55[single]: forced 0.90 → perp 1.00 PASS",
+    "sonnet5[single]: forced 0.88 → perp 1.00 PASS"
+   ]
+  },
+  {
+   "id": "P5f",
+   "text": "frontier triads: cycle rate ≤0.05",
+   "cells": [
+    "gemini31pro[sheet]: 0.00 (n=152) PASS",
+    "gemini38flash[sheet]: 0.02 (n=173) PASS",
+    "gpt56terra[sheet]: 0.01 (n=138) PASS",
+    "grok46[sheet]: 0.01 (n=127) PASS",
+    "haiku45[single]: 0.05 (n=110) PASS",
+    "opus55[single]: 0.02 (n=205) PASS",
+    "sonnet55[sheet]: 0.02 (n=161) PASS",
+    "sonnet55[single]: 0.01 (n=232) PASS",
+    "sonnet5[single]: 0.17 (n=181) FAIL"
+   ]
+  },
+  {
+   "id": "P5s",
+   "text": "small local triads: cycle rate ≥0.15",
+   "cells": [
+    "gemma3-4b[single]: 0.23 (n=177) PASS",
+    "llama32-3b[single]: 0.13 (n=273) FAIL",
+    "phi4mini[single]: n<min (3)",
+    "qwen3-4b[single]: 0.99 (n=600) PASS"
+   ]
+  },
+  {
+   "id": "P6",
+   "text": "frontier triads, uniform stratum: ⟂ ≥0.80",
+   "cells": [
+    "gemini31pro[sheet]: 0.99 (n=540) PASS",
+    "gemini38flash[sheet]: 0.98 (n=540) PASS",
+    "gpt56terra[sheet]: 0.96 (n=540) PASS",
+    "grok46[sheet]: 0.83 (n=540) PASS",
+    "haiku45[single]: 0.73 (n=540) FAIL",
+    "opus55[single]: 0.94 (n=540) PASS",
+    "sonnet55[sheet]: 0.98 (n=540) PASS",
+    "sonnet55[single]: 0.93 (n=540) PASS",
+    "sonnet5[single]: 0.84 (n=540) PASS"
+   ]
+  },
+  {
+   "id": "P7f",
+   "text": "frontier triads: value-correlate ≥0.90",
+   "cells": [
+    "gemini31pro[sheet]: 1.00 (n=77) PASS",
+    "gemini38flash[sheet]: 0.99 (n=87) PASS",
+    "gpt56terra[sheet]: 0.95 (n=83) PASS",
+    "grok46[sheet]: 1.00 (n=65) PASS",
+    "haiku45[single]: 0.98 (n=60) PASS",
+    "opus55[single]: 1.00 (n=116) PASS",
+    "sonnet55[sheet]: 0.97 (n=86) PASS",
+    "sonnet55[single]: 1.00 (n=109) PASS",
+    "sonnet5[single]: 0.95 (n=65) PASS"
+   ]
+  },
+  {
+   "id": "P7s",
+   "text": "small local triads: value-correlate ≤0.75",
+   "cells": [
+    "gemma3-4b[single]: 0.46 (n=28) PASS",
+    "llama32-3b[single]: 0.51 (n=45) PASS",
+    "phi4mini[single]: n<min (2)",
+    "qwen3-4b[single]: n<min (0)"
+   ]
+  },
+  {
+   "id": "P8f",
+   "text": "frontier triads: ink-correlate ≥0.65",
+   "cells": [
+    "gemini31pro[sheet]: 0.83 (n=84) PASS",
+    "gemini38flash[sheet]: 0.76 (n=98) PASS",
+    "gpt56terra[sheet]: 0.71 (n=69) PASS",
+    "grok46[sheet]: 0.77 (n=86) PASS",
+    "haiku45[single]: 0.64 (n=72) FAIL",
+    "opus55[single]: 0.77 (n=119) PASS",
+    "sonnet55[sheet]: 0.73 (n=89) PASS",
+    "sonnet55[single]: 0.69 (n=123) PASS",
+    "sonnet5[single]: 0.69 (n=100) PASS"
+   ]
+  },
+  {
+   "id": "P8s",
+   "text": "small local triads: ink-correlate ≥0.60 (≥30 edges)",
+   "cells": [
+    "gemma3-4b[single]: 0.55 (n=62) FAIL",
+    "llama32-3b[single]: 0.52 (n=114) FAIL",
+    "phi4mini[single]: n<min (1)",
+    "qwen3-4b[single]: n<min (0)"
+   ]
+  },
+  {
+   "id": "P9",
+   "text": "frontier conflict: value wins on 13 compiled-decode items ≥0.80",
+   "cells": [
+    "gemini31pro[sheet]: 1.00 (n=77) PASS",
+    "gemini38flash[sheet]: 0.99 (n=78) PASS",
+    "gpt56terra[sheet]: 1.00 (n=78) PASS",
+    "grok46[sheet]: 0.97 (n=78) PASS",
+    "haiku45[single]: 0.96 (n=73) PASS",
+    "opus55[single]: 0.99 (n=78) PASS",
+    "sonnet55[sheet]: 0.94 (n=77) PASS",
+    "sonnet55[single]: 0.90 (n=78) PASS",
+    "sonnet5[single]: 0.81 (n=72) PASS"
+   ]
+  },
+  {
+   "id": "P10a",
+   "text": "frontier: ☷ over ⚌ ≥0.75",
+   "cells": [
+    "gemini31pro[sheet]: 1.00 (n=4) PASS",
+    "gemini38flash[sheet]: n<min (3)",
+    "gpt56terra[sheet]: 1.00 (n=4) PASS",
+    "grok46[sheet]: 1.00 (n=6) PASS",
+    "haiku45[single]: n<min (3)",
+    "opus55[single]: 1.00 (n=6) PASS",
+    "sonnet55[sheet]: 1.00 (n=5) PASS",
+    "sonnet55[single]: 1.00 (n=6) PASS",
+    "sonnet5[single]: 1.00 (n=6) PASS"
+   ]
+  },
+  {
+   "id": "P10b",
+   "text": "frontier: yang/ink side on equal-line grams ≥0.75",
+   "cells": [
+    "gemini31pro[sheet]: 0.56 (n=9) FAIL",
+    "gemini38flash[sheet]: 1.00 (n=6) PASS",
+    "gpt56terra[sheet]: 1.00 (n=6) PASS",
+    "grok46[sheet]: 1.00 (n=18) PASS",
+    "haiku45[single]: 0.50 (n=10) FAIL",
+    "opus55[single]: 0.89 (n=18) PASS",
+    "sonnet55[sheet]: 0.50 (n=14) FAIL",
+    "sonnet55[single]: 0.78 (n=18) PASS",
+    "sonnet5[single]: 1.00 (n=18) PASS"
+   ]
+  },
+  {
+   "id": "P11",
+   "text": "frontier: ‱ over % and ‰ ≥0.60",
+   "cells": [
+    "gemini31pro[sheet]: 0.33 (n=6) FAIL",
+    "gemini38flash[sheet]: 0.00 (n=12) FAIL",
+    "gpt56terra[sheet]: 0.08 (n=12) FAIL",
+    "grok46[sheet]: 0.17 (n=12) FAIL",
+    "haiku45[single]: 0.00 (n=11) FAIL",
+    "opus55[single]: 0.17 (n=12) FAIL",
+    "sonnet55[sheet]: 1.00 (n=12) PASS",
+    "sonnet55[single]: 0.67 (n=12) PASS",
+    "sonnet5[single]: 0.75 (n=12) PASS"
+   ]
+  },
+  {
+   "id": "P12",
+   "text": "frontier: ≈/⟂ on equal-value probes ≥0.60",
+   "cells": [
+    "gemini31pro[sheet]: 0.92 (n=12) PASS",
+    "gemini38flash[sheet]: 0.92 (n=12) PASS",
+    "gpt56terra[sheet]: 0.92 (n=12) PASS",
+    "grok46[sheet]: 0.58 (n=12) FAIL",
+    "haiku45[single]: 0.33 (n=12) FAIL",
+    "opus55[single]: 0.58 (n=12) FAIL",
+    "sonnet55[sheet]: 0.83 (n=12) PASS",
+    "sonnet55[single]: 0.50 (n=12) FAIL",
+    "sonnet5[single]: 0.50 (n=12) FAIL"
+   ]
+  },
+  {
+   "id": "P13",
+   "text": "frontier: dice gestalt τ = 1 and noise foils ⟂ ≥0.80",
+   "cells": [
+    "gemini31pro: dice 1.00, noise ⟂ 11/12 PASS",
+    "gemini38flash: dice 1.00, noise ⟂ 6/12 FAIL",
+    "gpt56terra: dice 1.00, noise ⟂ 9/12 FAIL",
+    "grok46: dice 1.00, noise ⟂ 3/12 FAIL",
+    "haiku45: dice 1.00, noise ⟂ 10/12 PASS",
+    "opus55: dice 1.00, noise ⟂ 12/12 PASS",
+    "sonnet5: dice 1.00, noise ⟂ 3/12 FAIL",
+    "sonnet55: dice 1.00, noise ⟂ 6/12 FAIL"
+   ]
+  },
+  {
+   "id": "P14",
+   "text": "Claude: unfold & risebar gestalt τ ≥0.70 and pairwise consistent-directed ≤0.40",
+   "cells": [
+    "haiku45 unfold: τ 0.33, pw 0.40 FAIL",
+    "haiku45 risebar: τ 0.73, pw 0.30 PASS",
+    "opus55 unfold: τ 1.00, pw 0.20 PASS",
+    "opus55 risebar: τ 1.00, pw 0.50 FAIL",
+    "sonnet5 unfold: τ 0.47, pw 0.40 FAIL",
+    "sonnet5 risebar: τ 0.93, pw 0.20 PASS",
+    "sonnet55 unfold: τ 0.73, pw 0.47 FAIL",
+    "sonnet55 risebar: τ 1.00, pw 0.70 FAIL"
+   ]
+  },
+  {
+   "id": "P15",
+   "text": "frontier: elaboration ladders pairwise ≤0.40 and gestalt τ ≥0.60",
+   "cells": [
+    "gemini31pro elab-n: τ 0.78, pw 0.33 PASS",
+    "gemini31pro elab-s: τ 1.00, pw 0.50 FAIL",
+    "gemini31pro elab-l: τ ⟂, pw 0.30 FAIL",
+    "gemini38flash elab-n: τ 0.78, pw 0.00 PASS",
+    "gemini38flash elab-s: τ 1.00, pw 0.00 PASS",
+    "gemini38flash elab-l: τ 0.67, pw 0.20 PASS",
+    "gpt56terra elab-n: τ 0.67, pw 0.00 PASS",
+    "gpt56terra elab-s: τ 0.44, pw 0.00 FAIL",
+    "gpt56terra elab-l: τ 0.93, pw 0.20 PASS",
+    "grok46 elab-n: τ 0.67, pw 0.50 FAIL",
+    "grok46 elab-s: τ 1.00, pw 0.67 FAIL",
+    "grok46 elab-l: τ 1.00, pw 0.60 FAIL",
+    "haiku45 elab-n: τ 0.89, pw 0.17 PASS",
+    "haiku45 elab-s: τ 0.67, pw 0.17 PASS",
+    "haiku45 elab-l: τ 0.60, pw 0.10 PASS",
+    "opus55 elab-n: τ 0.67, pw 0.50 FAIL",
+    "opus55 elab-s: τ 1.00, pw 0.67 FAIL",
+    "opus55 elab-l: τ 0.93, pw 0.70 FAIL",
+    "sonnet5 elab-n: τ 0.78, pw 0.50 FAIL",
+    "sonnet5 elab-s: τ 0.89, pw 0.33 PASS",
+    "sonnet5 elab-l: τ 0.40, pw 0.50 FAIL",
+    "sonnet55 elab-n: τ 0.67, pw 0.17 PASS",
+    "sonnet55 elab-s: τ 0.56, pw 0.17 FAIL",
+    "sonnet55 elab-l: τ 0.80, pw 0.30 PASS"
+   ]
+  }
+ ]
+}

@@ -1,5 +1,5 @@
 {
- "rule": "Top-40 candidates (exploratory; answers Joseph 2026-10-03: 'a top-40 sequences by stability/universality').\n\nStep 1 (this script): from every surveys-v1 sequence record (pass-1 + capture-corrections), cluster records\nacross surveyors (Jaccard >= 0.5 on glyph sets), score each record by how many DISTINCT surveyors have a\nmatching record, and pick non-overlapping representatives (greedy; a representative suppresses later\nrecords with Jaccard >= 0.34). This is anecdote-tier concordance used only to choose what to TEST; the\nranking that answers the question comes from the judge panel (harness/top40/score.py).\nWrites data/stimuli-v1/top40-candidates.json and the test stimuli top40-steps.jsonl / top40-gestalt.jsonl.\n",
+ "rule": "Top-40 candidates (exploratory; answers Joseph 2026-10-03: 'a top-40 sequences by stability/universality').\n\nStep 1 (this script): from every surveys-v1 sequence record (pass-1 + capture-corrections), cluster records\nacross surveyors (Jaccard >= 0.5 on glyph sets), score each record by how many DISTINCT surveyors have a\nmatching record, and pick non-overlapping representatives (greedy; a representative suppresses later\nrecords with Jaccard >= 0.34). This is anecdote-tier concordance used only to choose what to TEST; the\nranking that answers the question comes from the judge panel (harness/top40/score.py).\nWrites data/stimuli-v1/top40-candidates.json and the test stimuli top40-steps.jsonl / top40-gestalt.jsonl.\n\nHistory: the first selection (batch a, candidates 0-63, already run) read only records whose kind is in `type`,\nwhich silently dropped grok-1, sonnet-survey-3 and sonnet-survey-4 (their extractions use `record_type`). This\nversion keeps batch a unchanged, recomputes every candidate's surveyor support over all 7 surveys, and appends a\nbatch-b supplement (records with support from >= 2 surveyors not already covered), tested via top40b-*.jsonl.\n",
  "candidates": [
   {
    "cand": 0,
@@ -15,14 +15,18 @@
     "▉",
     "█"
    ],
-   "n_surveyors": 4,
+   "n_surveyors": 7,
    "surveyors": [
     "fable-1",
+    "grok-1",
+    "sonnet-3",
     "sonnet-survey-1",
     "sonnet-survey-2",
+    "sonnet-survey-4",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": null
+   "felt_strength_verbatim": null,
+   "batch": "a"
   },
   {
    "cand": 1,
@@ -38,14 +42,18 @@
     "▇",
     "█"
    ],
-   "n_surveyors": 4,
+   "n_surveyors": 7,
    "surveyors": [
     "fable-1",
+    "grok-1",
+    "sonnet-3",
     "sonnet-survey-1",
     "sonnet-survey-2",
+    "sonnet-survey-4",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "STRENGTH: maximum — 'this is a literal bar-chart glyph set (sparkline characters), I'd stake everything on the ordering'"
+   "felt_strength_verbatim": "STRENGTH: maximum — 'this is a literal bar-chart glyph set (sparkline characters), I'd stake everything on the ordering'",
+   "batch": "a"
   },
   {
    "cand": 2,
@@ -59,14 +67,18 @@
     "⚄",
     "⚅"
    ],
-   "n_surveyors": 4,
+   "n_surveyors": 7,
    "surveyors": [
     "fable-1",
+    "grok-1",
+    "sonnet-3",
     "sonnet-survey-1",
     "sonnet-survey-2",
+    "sonnet-survey-4",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": null
+   "felt_strength_verbatim": null,
+   "batch": "a"
   },
   {
    "cand": 3,
@@ -87,7 +99,8 @@
     "sonnet-survey-2",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": null
+   "felt_strength_verbatim": null,
+   "batch": "a"
   },
   {
    "cand": 4,
@@ -100,14 +113,18 @@
     "◕",
     "●"
    ],
-   "n_surveyors": 4,
+   "n_surveyors": 7,
    "surveyors": [
     "fable-1",
+    "grok-1",
+    "sonnet-3",
     "sonnet-survey-1",
     "sonnet-survey-2",
+    "sonnet-survey-4",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": null
+   "felt_strength_verbatim": null,
+   "batch": "a"
   },
   {
    "cand": 5,
@@ -120,14 +137,18 @@
     "▓",
     "█"
    ],
-   "n_surveyors": 4,
+   "n_surveyors": 7,
    "surveyors": [
     "fable-1",
+    "grok-1",
+    "sonnet-3",
     "sonnet-survey-1",
     "sonnet-survey-2",
+    "sonnet-survey-4",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "high"
+   "felt_strength_verbatim": "high",
+   "batch": "a"
   },
   {
    "cand": 6,
@@ -147,13 +168,16 @@
     "Ⅺ",
     "Ⅻ"
    ],
-   "n_surveyors": 3,
+   "n_surveyors": 5,
    "surveyors": [
     "fable-1",
+    "grok-1",
+    "sonnet-3",
     "sonnet-survey-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very strong"
+   "felt_strength_verbatim": "very strong",
+   "batch": "a"
   },
   {
    "cand": 7,
@@ -171,13 +195,16 @@
     "⓽",
     "⓾"
    ],
-   "n_surveyors": 3,
+   "n_surveyors": 5,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet-survey-2",
+    "sonnet-survey-4",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 8,
@@ -197,7 +224,8 @@
     "sonnet-survey-1",
     "sonnet-survey-2"
    ],
-   "felt_strength_verbatim": "strong"
+   "felt_strength_verbatim": "strong",
+   "batch": "a"
   },
   {
    "cand": 9,
@@ -210,13 +238,17 @@
     "⪢",
     "⫸"
    ],
-   "n_surveyors": 3,
+   "n_surveyors": 6,
    "surveyors": [
     "fable-1",
+    "grok-1",
+    "sonnet-3",
     "sonnet-survey-2",
+    "sonnet-survey-4",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 10,
@@ -229,13 +261,17 @@
     "⇛",
     "⇶"
    ],
-   "n_surveyors": 3,
+   "n_surveyors": 6,
    "surveyors": [
     "fable-1",
+    "grok-1",
+    "sonnet-3",
     "sonnet-survey-1",
+    "sonnet-survey-4",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "high"
+   "felt_strength_verbatim": "high",
+   "batch": "a"
   },
   {
    "cand": 11,
@@ -254,12 +290,14 @@
     "9",
     "🔟"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 12,
@@ -278,12 +316,15 @@
     "⑨",
     "⑩"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 4,
    "surveyors": [
     "fable-1",
-    "sonnet-survey-2"
+    "sonnet-3",
+    "sonnet-survey-2",
+    "sonnet-survey-4"
    ],
-   "felt_strength_verbatim": "strength: very high"
+   "felt_strength_verbatim": "strength: very high",
+   "batch": "a"
   },
   {
    "cand": 13,
@@ -301,12 +342,14 @@
     "🄈",
     "🄉"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very strong"
+   "felt_strength_verbatim": "very strong",
+   "batch": "a"
   },
   {
    "cand": 14,
@@ -324,12 +367,14 @@
     "❾",
     "❿"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 15,
@@ -347,12 +392,14 @@
     "➈",
     "➉"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very strong"
+   "felt_strength_verbatim": "very strong",
+   "batch": "a"
   },
   {
    "cand": 16,
@@ -375,7 +422,8 @@
     "fable-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very strong recoverability (for agents with the script)"
+   "felt_strength_verbatim": "very strong recoverability (for agents with the script)",
+   "batch": "a"
   },
   {
    "cand": 17,
@@ -393,12 +441,14 @@
     "⁸",
     "⁹"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very strong"
+   "felt_strength_verbatim": "very strong",
+   "batch": "a"
   },
   {
    "cand": 18,
@@ -415,12 +465,14 @@
     "🀠",
     "🀡"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 19,
@@ -436,12 +488,16 @@
     "⠿",
     "⣿"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 5,
    "surveyors": [
+    "grok-1",
+    "sonnet-3",
     "sonnet-survey-2",
+    "sonnet-survey-4",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "STRENGTH: high for the *chosen* members"
+   "felt_strength_verbatim": "STRENGTH: high for the *chosen* members",
+   "batch": "a"
   },
   {
    "cand": 20,
@@ -456,12 +512,14 @@
     "¾",
     "⅞"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very strong"
+   "felt_strength_verbatim": "very strong",
+   "batch": "a"
   },
   {
    "cand": 21,
@@ -481,7 +539,8 @@
     "fable-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very strong"
+   "felt_strength_verbatim": "very strong",
+   "batch": "a"
   },
   {
    "cand": 22,
@@ -496,12 +555,14 @@
     "🀶",
     "🀷"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "sonnet-survey-4",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 23,
@@ -515,12 +576,15 @@
     "🞈",
     "🞉"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 4,
    "surveyors": [
+    "grok-1",
+    "sonnet-3",
     "sonnet-survey-2",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "'immediate at a glance though the top 2-3 members (very heavy vs extremely heavy) are close enough in my rendering that I underweight my own confidence slightly for that specific adjacent pair even though the ordering overall is obvious'"
+   "felt_strength_verbatim": "'immediate at a glance though the top 2-3 members (very heavy vs extremely heavy) are close enough in my rendering that I underweight my own confidence slightly for that specific adjacent pair even though the ordering overall is obvious'",
+   "batch": "a"
   },
   {
    "cand": 24,
@@ -534,12 +598,14 @@
     "♕",
     "♔"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
-    "sonnet-survey-1"
+    "sonnet-survey-1",
+    "sonnet-survey-4"
    ],
-   "felt_strength_verbatim": null
+   "felt_strength_verbatim": null,
+   "batch": "a"
   },
   {
    "cand": 25,
@@ -558,7 +624,8 @@
     "fable-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 26,
@@ -572,12 +639,14 @@
     "✹",
     "✺"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "sonnet-survey-4",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 27,
@@ -591,12 +660,14 @@
     "🞳",
     "🞴"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "strong"
+   "felt_strength_verbatim": "strong",
+   "batch": "a"
   },
   {
    "cand": 28,
@@ -609,12 +680,14 @@
     "˨",
     "˩"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 29,
@@ -627,12 +700,16 @@
     "🌔",
     "🌕"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 5,
    "surveyors": [
     "fable-1",
+    "grok-1",
+    "sonnet-3",
+    "sonnet-survey-4",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "extremely high"
+   "felt_strength_verbatim": "extremely high",
+   "batch": "a"
   },
   {
    "cand": 30,
@@ -650,7 +727,8 @@
     "sonnet-survey-2",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "high"
+   "felt_strength_verbatim": "high",
+   "batch": "a"
   },
   {
    "cand": 31,
@@ -663,12 +741,14 @@
     "—",
     "―"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "strong"
+   "felt_strength_verbatim": "strong",
+   "batch": "a"
   },
   {
    "cand": 32,
@@ -681,12 +761,14 @@
     "𝍣",
     "𝍤"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very strong"
+   "felt_strength_verbatim": "very strong",
+   "batch": "a"
   },
   {
    "cand": 33,
@@ -699,12 +781,14 @@
     "◉",
     "●"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
-    "sonnet-survey-1"
+    "sonnet-survey-1",
+    "sonnet-survey-4"
    ],
-   "felt_strength_verbatim": null
+   "felt_strength_verbatim": null,
+   "batch": "a"
   },
   {
    "cand": 34,
@@ -716,12 +800,14 @@
     "‴",
     "⁗"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very strong"
+   "felt_strength_verbatim": "very strong",
+   "batch": "a"
   },
   {
    "cand": 35,
@@ -733,12 +819,14 @@
     "🔉",
     "🔊"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "extremely high"
+   "felt_strength_verbatim": "extremely high",
+   "batch": "a"
   },
   {
    "cand": 36,
@@ -750,12 +838,15 @@
     "∭",
     "⨌"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 4,
    "surveyors": [
     "fable-1",
+    "grok-1",
+    "sonnet-survey-4",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 37,
@@ -767,12 +858,14 @@
     "௱",
     "௲"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "strong"
+   "felt_strength_verbatim": "strong",
+   "batch": "a"
   },
   {
    "cand": 38,
@@ -789,7 +882,8 @@
     "fable-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "moderate"
+   "felt_strength_verbatim": "moderate",
+   "batch": "a"
   },
   {
    "cand": 39,
@@ -806,7 +900,8 @@
     "fable-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "moderate-strong"
+   "felt_strength_verbatim": "moderate-strong",
+   "batch": "a"
   },
   {
    "cand": 40,
@@ -818,12 +913,14 @@
     "⁘",
     "⁙"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "high"
+   "felt_strength_verbatim": "high",
+   "batch": "a"
   },
   {
    "cand": 41,
@@ -840,7 +937,8 @@
     "fable-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "unstated"
+   "felt_strength_verbatim": "unstated",
+   "batch": "a"
   },
   {
    "cand": 42,
@@ -857,7 +955,8 @@
     "fable-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 43,
@@ -869,12 +968,14 @@
     "≡",
     "≣"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "strong"
+   "felt_strength_verbatim": "strong",
+   "batch": "a"
   },
   {
    "cand": 44,
@@ -890,7 +991,8 @@
     "fable-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 45,
@@ -901,12 +1003,14 @@
     "🥈",
     "🥉"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 46,
@@ -917,12 +1021,14 @@
     "‥",
     "…"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very strong"
+   "felt_strength_verbatim": "very strong",
+   "batch": "a"
   },
   {
    "cand": 47,
@@ -933,12 +1039,15 @@
     "○",
     "◯"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 4,
    "surveyors": [
     "fable-1",
+    "grok-1",
+    "sonnet-3",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "unstated"
+   "felt_strength_verbatim": "unstated",
+   "batch": "a"
   },
   {
    "cand": 48,
@@ -949,12 +1058,15 @@
     "∛",
     "∜"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 4,
    "surveyors": [
     "fable-1",
+    "grok-1",
+    "sonnet-survey-4",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very strong"
+   "felt_strength_verbatim": "very strong",
+   "batch": "a"
   },
   {
    "cand": 49,
@@ -965,12 +1077,14 @@
     "⁑",
     "⁂"
    ],
-   "n_surveyors": 2,
+   "n_surveyors": 3,
    "surveyors": [
     "fable-1",
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 50,
@@ -990,11 +1104,13 @@
     "〹",
     "〺"
    ],
-   "n_surveyors": 1,
+   "n_surveyors": 2,
    "surveyors": [
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 51,
@@ -1018,7 +1134,8 @@
    "surveyors": [
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 52,
@@ -1037,11 +1154,13 @@
     "⓳",
     "⓴"
    ],
-   "n_surveyors": 1,
+   "n_surveyors": 2,
    "surveyors": [
+    "sonnet-survey-4",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 53,
@@ -1060,11 +1179,13 @@
     "🕙",
     "🕚"
    ],
-   "n_surveyors": 1,
+   "n_surveyors": 2,
    "surveyors": [
-    "fable-1"
+    "fable-1",
+    "grok-1"
    ],
-   "felt_strength_verbatim": "recoverability strong"
+   "felt_strength_verbatim": "recoverability strong",
+   "batch": "a"
   },
   {
    "cand": 54,
@@ -1086,7 +1207,8 @@
    "surveyors": [
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "unstated"
+   "felt_strength_verbatim": "unstated",
+   "batch": "a"
   },
   {
    "cand": 55,
@@ -1108,7 +1230,8 @@
    "surveyors": [
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 56,
@@ -1130,7 +1253,8 @@
    "surveyors": [
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "low as a felt visual glide"
+   "felt_strength_verbatim": "low as a felt visual glide",
+   "batch": "a"
   },
   {
    "cand": 57,
@@ -1148,11 +1272,13 @@
     "㈨",
     "㈩"
    ],
-   "n_surveyors": 1,
+   "n_surveyors": 2,
    "surveyors": [
+    "grok-1",
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 58,
@@ -1174,7 +1300,8 @@
    "surveyors": [
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "not strong (no clean split along 'angular=strong')"
+   "felt_strength_verbatim": "not strong (no clean split along 'angular=strong')",
+   "batch": "a"
   },
   {
    "cand": 59,
@@ -1196,7 +1323,8 @@
    "surveyors": [
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "low (same honest assessment as Thai and Myanmar)"
+   "felt_strength_verbatim": "low (same honest assessment as Thai and Myanmar)",
+   "batch": "a"
   },
   {
    "cand": 60,
@@ -1218,7 +1346,8 @@
    "surveyors": [
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "medium — a genuine middle case"
+   "felt_strength_verbatim": "medium — a genuine middle case",
+   "batch": "a"
   },
   {
    "cand": 61,
@@ -1240,7 +1369,8 @@
    "surveyors": [
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
   },
   {
    "cand": 62,
@@ -1258,11 +1388,14 @@
     "⑼",
     "⑽"
    ],
-   "n_surveyors": 1,
+   "n_surveyors": 3,
    "surveyors": [
-    "sonnet-survey-2"
+    "sonnet-3",
+    "sonnet-survey-2",
+    "sonnet-survey-4"
    ],
-   "felt_strength_verbatim": "same strength [as circled digits: very high]; 'Notably *weaker feeling of magnitude* than the circled or negative-circled versions to me — the parens read more like \"footnote marker\" than \"quantity,\" even though the ordering is still perfectly recoverable.'"
+   "felt_strength_verbatim": "same strength [as circled digits: very high]; 'Notably *weaker feeling of magnitude* than the circled or negative-circled versions to me — the parens read more like \"footnote marker\" than \"quantity,\" even though the ordering is still perfectly recoverable.'",
+   "batch": "a"
   },
   {
    "cand": 63,
@@ -1284,7 +1417,1070 @@
    "surveyors": [
     "sonnet5-1"
    ],
-   "felt_strength_verbatim": "very high"
+   "felt_strength_verbatim": "very high",
+   "batch": "a"
+  },
+  {
+   "cand": 64,
+   "rec": "3ae044700ae54d5b",
+   "surveyor": "sonnet-3",
+   "glyphs": [
+    "🞌",
+    "🞍",
+    "🞎",
+    "🞏",
+    "🞐",
+    "🞑",
+    "🞒",
+    "🞓"
+   ],
+   "n_surveyors": 3,
+   "surveyors": [
+    "grok-1",
+    "sonnet-3",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "stated by reference: same as 🞅🞆🞇🞈🞉 (HIGH / MEDIUM), 'a bit more immediate'",
+   "batch": "b"
+  },
+  {
+   "cand": 65,
+   "rec": "607745668228f96f",
+   "surveyor": "sonnet-survey-4",
+   "glyphs": [
+    "♳",
+    "♴",
+    "♵",
+    "♶",
+    "♷",
+    "♸",
+    "♹"
+   ],
+   "n_surveyors": 3,
+   "surveyors": [
+    "grok-1",
+    "sonnet-survey-4",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "strength 4",
+   "batch": "b"
+  },
+  {
+   "cand": 66,
+   "rec": "5e46d9d849a503b1",
+   "surveyor": "sonnet-survey-1",
+   "glyphs": [
+    "▪",
+    "◾",
+    "◼",
+    "■"
+   ],
+   "n_surveyors": 3,
+   "surveyors": [
+    "grok-1",
+    "sonnet-survey-1",
+    "sonnet-survey-4"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 67,
+   "rec": "bbe5a4d7328c5efb",
+   "surveyor": "sonnet-survey-4",
+   "glyphs": [
+    "⏑",
+    "⏗",
+    "⏘",
+    "⏙"
+   ],
+   "n_surveyors": 3,
+   "surveyors": [
+    "grok-1",
+    "sonnet-survey-4",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "strength 3",
+   "batch": "b"
+  },
+  {
+   "cand": 68,
+   "rec": "43aef223b9ad5f52",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "∮",
+    "∯",
+    "∰"
+   ],
+   "n_surveyors": 3,
+   "surveyors": [
+    "fable-1",
+    "grok-1",
+    "sonnet-survey-4"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 69,
+   "rec": "7dece9dc10256574",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "Ⅰ",
+    "Ⅱ",
+    "Ⅲ"
+   ],
+   "n_surveyors": 3,
+   "surveyors": [
+    "grok-1",
+    "sonnet-survey-4",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high",
+   "batch": "b"
+  },
+  {
+   "cand": 70,
+   "rec": "0e39b32ed0fb2996",
+   "surveyor": "sonnet-survey-4",
+   "glyphs": [
+    "▖",
+    "▗",
+    "▘",
+    "▝",
+    "▚",
+    "▞",
+    "▙",
+    "▛",
+    "▜",
+    "▟"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "sonnet-survey-1",
+    "sonnet-survey-4"
+   ],
+   "felt_strength_verbatim": "strength only ~2",
+   "batch": "b"
+  },
+  {
+   "cand": 71,
+   "rec": "7fbb20fdd3d36909",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "㊀",
+    "㊁",
+    "㊂",
+    "㊃",
+    "㊄",
+    "㊅",
+    "㊆",
+    "㊇",
+    "㊈",
+    "㊉"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "grok-1"
+   ],
+   "felt_strength_verbatim": "very strong",
+   "batch": "b"
+  },
+  {
+   "cand": 72,
+   "rec": "886aafe9c99d85af",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "🂡",
+    "🂢",
+    "🂣",
+    "🂤",
+    "🂥",
+    "🂦",
+    "🂧",
+    "🂨",
+    "🂩",
+    "🂪"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high",
+   "batch": "b"
+  },
+  {
+   "cand": 73,
+   "rec": "8b6ebd9c0cf39185",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "🯰",
+    "🯱",
+    "🯲",
+    "🯳",
+    "🯴",
+    "🯵",
+    "🯶",
+    "🯷",
+    "🯸",
+    "🯹"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high",
+   "batch": "b"
+  },
+  {
+   "cand": 74,
+   "rec": "8c64af9cfe607e13",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "₀",
+    "₁",
+    "₂",
+    "₃",
+    "₄",
+    "₅",
+    "₆",
+    "₇",
+    "₈",
+    "₉"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 75,
+   "rec": "aa7fbd333b97b14d",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "０",
+    "１",
+    "２",
+    "３",
+    "４",
+    "５",
+    "６",
+    "７",
+    "８",
+    "９"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high",
+   "batch": "b"
+  },
+  {
+   "cand": 76,
+   "rec": "d3f0819b96978c0a",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "༪",
+    "༫",
+    "༬",
+    "༭",
+    "༮",
+    "༯",
+    "༰",
+    "༱",
+    "༲",
+    "༳"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "grok-1"
+   ],
+   "felt_strength_verbatim": "moderate",
+   "batch": "b"
+  },
+  {
+   "cand": 77,
+   "rec": "ff8a9431ed14abc2",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "一",
+    "二",
+    "三",
+    "四",
+    "五",
+    "六",
+    "七",
+    "八",
+    "九",
+    "十"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 78,
+   "rec": "055d0046e1ca527a",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "☰",
+    "☱",
+    "☳",
+    "☷",
+    "⚌",
+    "⚍",
+    "⚏",
+    "⚊",
+    "⚋"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "grok-1"
+   ],
+   "felt_strength_verbatim": "unstated",
+   "batch": "b"
+  },
+  {
+   "cand": 79,
+   "rec": "6f7e5ff7ed7d45d8",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "𐄇",
+    "𐄈",
+    "𐄉",
+    "𐄊",
+    "𐄋",
+    "𐄌",
+    "𐄍",
+    "𐄎",
+    "𐄏"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 80,
+   "rec": "a2fd22a5063e2966",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "𐄐",
+    "𐄑",
+    "𐄒",
+    "𐄓",
+    "𐄔",
+    "𐄕",
+    "𐄖",
+    "𐄗",
+    "𐄘"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 81,
+   "rec": "a9bf2bb4e206ab06",
+   "surveyor": "sonnet-survey-4",
+   "glyphs": [
+    "⅛",
+    "⅕",
+    "⅓",
+    "⅜",
+    "⅗",
+    "⅔",
+    "⅘",
+    "⅚",
+    "⅞"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "sonnet-3",
+    "sonnet-survey-4"
+   ],
+   "felt_strength_verbatim": "strength only ~2",
+   "batch": "b"
+  },
+  {
+   "cand": 82,
+   "rec": "e95efa638aaca674",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "Ⅹ",
+    "Ⅼ",
+    "Ⅽ",
+    "Ⅾ",
+    "Ⅿ",
+    "ↁ",
+    "ↂ",
+    "ↇ",
+    "ↈ"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "grok-1"
+   ],
+   "felt_strength_verbatim": "strong; 'downgrade tail to moderate'",
+   "batch": "b"
+  },
+  {
+   "cand": 83,
+   "rec": "208a17ea22854d25",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "𝄻",
+    "𝄼",
+    "𝄽",
+    "𝄾",
+    "𝄿",
+    "𝅀",
+    "𝅁",
+    "𝅂"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high",
+   "batch": "b"
+  },
+  {
+   "cand": 84,
+   "rec": "288590dd528ab7f8",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "𒐀",
+    "𒐁",
+    "𒐂",
+    "𒐃",
+    "𒐄",
+    "𒐅",
+    "𒐆",
+    "𒐇"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "medium-high",
+   "batch": "b"
+  },
+  {
+   "cand": 85,
+   "rec": "5c6980f7ee52a2f3",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "☷",
+    "☶",
+    "☵",
+    "☴",
+    "☳",
+    "☲",
+    "☱",
+    "☰"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "grok-1"
+   ],
+   "felt_strength_verbatim": "visual-fill reading strong; binary-value reading moderate",
+   "batch": "b"
+  },
+  {
+   "cand": 86,
+   "rec": "73dea79ee9ba43d3",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "㉈",
+    "㉉",
+    "㉊",
+    "㉋",
+    "㉌",
+    "㉍",
+    "㉎",
+    "㉏"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 87,
+   "rec": "d829d7e211965080",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "⅒",
+    "⅑",
+    "⅐",
+    "⅙",
+    "⅕",
+    "¼",
+    "⅓",
+    "½"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "grok-1"
+   ],
+   "felt_strength_verbatim": "strong",
+   "batch": "b"
+  },
+  {
+   "cand": 88,
+   "rec": "baa8b15f6dc094f5",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "🀱",
+    "🀹",
+    "🁁",
+    "🁉",
+    "🁑",
+    "🁙",
+    "🁡"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "grok-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 89,
+   "rec": "06c5ec744960056f",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "ᚐ",
+    "ᚑ",
+    "ᚒ",
+    "ᚓ",
+    "ᚔ"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 90,
+   "rec": "125ade71e08d5d1d",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "꜈",
+    "꜉",
+    "꜊",
+    "꜋",
+    "꜌"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high each",
+   "batch": "b"
+  },
+  {
+   "cand": 91,
+   "rec": "1ae397790770a2b6",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "ᚆ",
+    "ᚇ",
+    "ᚈ",
+    "ᚉ",
+    "ᚊ"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 92,
+   "rec": "2cabe8888246d93c",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "🡢",
+    "🡪",
+    "🡲",
+    "🡺",
+    "🢂"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "grok-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 93,
+   "rec": "324a3fa4e23d31df",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "𐅃",
+    "𐅄",
+    "𐅅",
+    "𐅆",
+    "𐅇"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 94,
+   "rec": "3c9f7f5b5f9b25c5",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "𝍲",
+    "𝍳",
+    "𝍴",
+    "𝍵",
+    "𝍶"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 95,
+   "rec": "47db12f6d321d154",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "🮇",
+    "🮈",
+    "🮉",
+    "🮊",
+    "🮋"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high",
+   "batch": "b"
+  },
+  {
+   "cand": 96,
+   "rec": "5475fc9cc765c106",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "꜖",
+    "꜕",
+    "꜔",
+    "꜓",
+    "꜒"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "grok-1"
+   ],
+   "felt_strength_verbatim": "strong",
+   "batch": "b"
+  },
+  {
+   "cand": 97,
+   "rec": "5fa368836cf82776",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "㎐",
+    "㎑",
+    "㎒",
+    "㎓",
+    "㎔"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 98,
+   "rec": "6f4cb7946f09bff7",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "🏻",
+    "🏼",
+    "🏽",
+    "🏾",
+    "🏿"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 99,
+   "rec": "70bb8106a42739e0",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "ᚁ",
+    "ᚂ",
+    "ᚃ",
+    "ᚄ",
+    "ᚅ"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high",
+   "batch": "b"
+  },
+  {
+   "cand": 100,
+   "rec": "080974737936c440",
+   "surveyor": "sonnet-survey-4",
+   "glyphs": [
+    "⚆",
+    "⚇",
+    "⚈",
+    "⚉"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "sonnet-survey-4",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "strength 3",
+   "batch": "b"
+  },
+  {
+   "cand": 101,
+   "rec": "2190ac650bda2867",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "⅕",
+    "⅖",
+    "⅗",
+    "⅘"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high",
+   "batch": "b"
+  },
+  {
+   "cand": 102,
+   "rec": "2c935ff53b3dd3c3",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "㆒",
+    "㆓",
+    "㆔",
+    "㆕"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "grok-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 103,
+   "rec": "61d62bc4dffbe865",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "·",
+    "•",
+    "●",
+    "⬤"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "grok-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 104,
+   "rec": "8511eaa1ff588ea3",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "ₐ",
+    "a",
+    "ᴀ",
+    "A"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 105,
+   "rec": "87bb89bf00f94165",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "n",
+    "ɲ",
+    "ɳ",
+    "ŋ"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "grok-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 106,
+   "rec": "ada0c4bd5335d67a",
+   "surveyor": "sonnet-survey-4",
+   "glyphs": [
+    "♩",
+    "♪",
+    "♫",
+    "♬"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "sonnet-survey-4",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "strength 3 ... Moderate confidence",
+   "batch": "b"
+  },
+  {
+   "cand": 107,
+   "rec": "017bdceeab0c3dff",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "⭒",
+    "⭑",
+    "⭐"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "grok-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 108,
+   "rec": "0d4795b3ece8ff45",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "∣",
+    "∥",
+    "⦀"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "grok-1"
+   ],
+   "felt_strength_verbatim": "moderate for style-mixed ↑⇈⤊-ish; ⦀ completes cleanly",
+   "batch": "b"
+  },
+  {
+   "cand": 109,
+   "rec": "235116315fda98b9",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "ↀ",
+    "ↁ",
+    "ↂ"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "sonnet-3",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "moderate",
+   "batch": "b"
+  },
+  {
+   "cand": 110,
+   "rec": "263b4cd859459229",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "❘",
+    "❙",
+    "❚"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 111,
+   "rec": "2c04537711659111",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "🞗",
+    "🞘",
+    "🞙"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "sonnet-3",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high",
+   "batch": "b"
+  },
+  {
+   "cand": 112,
+   "rec": "617ce16f8f6bf6e0",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "=",
+    "⩵",
+    "⩶"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "grok-1"
+   ],
+   "felt_strength_verbatim": "strong",
+   "batch": "b"
+  },
+  {
+   "cand": 113,
+   "rec": "724634220228cf17",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "/",
+    "⫽",
+    "⫻"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "grok-1"
+   ],
+   "felt_strength_verbatim": "unstated",
+   "batch": "b"
+  },
+  {
+   "cand": 114,
+   "rec": "c8818a03da7dcea4",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "〡",
+    "〢",
+    "〣"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "grok-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 115,
+   "rec": "cf54b574b4471bc3",
+   "surveyor": "grok-1",
+   "glyphs": [
+    "一",
+    "二",
+    "三"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "grok-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": null,
+   "batch": "b"
+  },
+  {
+   "cand": 116,
+   "rec": "e06a3bc5ae6bb8a2",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "൰",
+    "൱",
+    "൲"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "grok-1"
+   ],
+   "felt_strength_verbatim": "strong",
+   "batch": "b"
   }
  ]
 }

@@ -88,7 +88,7 @@ def load_runs(stim):
                 meta["failed-call"] += 1; continue
             if res.get("usage", {}).get("thinking_tokens") is not None:
                 think.append(res["usage"]["thinking_tokens"] / max(1, len(row["pids"])))
-            if row["instrument"] in ("gestalt", "signa-gestalt", "top40-gestalt"):
+            if row["instrument"] in ("gestalt", "signa-gestalt", "top40-gestalt", "top40b-gestalt"):
                 k = (row["rep"], row["pids"][0])
                 if k not in parsed:
                     parsed[k] = I.parse_gestalt(res["raw"], stim[row["pids"][0]]["glyphs"])
@@ -543,7 +543,7 @@ def score_predictions(js, out):
         lambda j: F[j].get("tie->perp"), lambda v: v < 0.40)
     cells = []
     for j in sorted(F):
-        if lab(j) in FRONTIER and "survival_local_minus_mixed" in F[j]:
+        if lab(j) in FRONTIER and "survival_local_minus_mixed" in F[j] and (F[j].get("perp_share") or [0, 0])[1] > 0:
             d = F[j]["survival_local_minus_mixed"]; cells.append(f"{j}: {d:+.2f} {'PASS' if d >= 0.30 else 'FAIL'}")
     rows.append(("P3", "frontier: perp survival fresh-seed-local minus fresh-mixed ≥ +0.30", cells))
     cells = []

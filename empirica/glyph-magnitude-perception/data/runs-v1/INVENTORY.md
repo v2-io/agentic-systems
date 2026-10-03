@@ -12,6 +12,7 @@ Rows whose names end in `-shakedown` or contain `-aborted` are excluded from eve
 | conflict-perp-single-gemma3-4b | 76 | 76 | 0 | 2026-10-03T21:49 → 21:49 | gemma3:4b@a2af6cc3eb7f | 0.00 | `9b01a2fc09ba0379` |
 | conflict-perp-single-haiku45 | 228 | 228 | 0 | 2026-10-03T20:47 → 20:52 | claude-haiku-4-5 | 0.64 | `98818cbaccf4c536` |
 | conflict-perp-single-llama32-3b | 76 | 76 | 0 | 2026-10-03T20:25 → 20:26 | llama3.2:3b@a80c4f17acd5 | 0.00 | `9d3e3ba21d259abf` |
+| conflict-perp-single-mistral7b | 76 | 76 | 0 | 2026-10-03T22:07 → 22:07 | mistral:7b@6577803aa9a0 | 0.00 | `8d533da15e8c5121` |
 | conflict-perp-single-opus55 | 228 | 228 | 0 | 2026-10-03T20:34 → 20:37 | claude-opus-5-5 | 1.12 | `8e2af67debf8dd43` |
 | conflict-perp-single-qwen3-4b | 76 | 76 | 0 | 2026-10-03T21:07 → 21:08 | qwen3:4b@359d7dd4bcda | 0.00 | `5bc4f3177ae07bc6` |
 | conflict-perp-single-sonnet5 | 228 | 228 | 0 | 2026-10-03T20:34 → 20:37 | claude-sonnet-5 | 0.35 | `f3579ebf449649ad` |
@@ -25,6 +26,7 @@ Rows whose names end in `-shakedown` or contain `-aborted` are excluded from eve
 | format-forced-single-haiku45 | 640 | 640 | 0 | 2026-10-03T21:00 → 21:12 | claude-haiku-4-5 | 1.55 | `5026c96ca5a7329c` |
 | format-forced-single-llama32-3b | 640 | 640 | 0 | 2026-10-03T20:27 → 20:29 | llama3.2:3b@a80c4f17acd5 | 0.00 | `f43c82d6385e0d4b` |
 | format-forced-single-llama32-3b-shakedown | 20 | 20 | 0 | 2026-10-03T20:05 → 20:05 | llama3.2:3b@a80c4f17acd5 | 0.00 | `cfa9ef2ed021351b` |
+| format-forced-single-mistral7b | 640 | 640 | 0 | 2026-10-03T22:09 → 22:13 | mistral:7b@6577803aa9a0 | 0.00 | `2c8d4d20a45eaf9c` |
 | format-forced-single-opus55 | 640 | 640 | 0 | 2026-10-03T20:40 → 20:47 | claude-opus-5-5 | 3.19 | `094fef9826ae7573` |
 | format-forced-single-qwen3-4b | 640 | 640 | 0 | 2026-10-03T21:13 → 21:27 | qwen3:4b@359d7dd4bcda | 0.00 | `cff1585318d31a3c` |
 | format-forced-single-sonnet5 | 640 | 640 | 0 | 2026-10-03T20:41 → 20:48 | claude-sonnet-5 | 0.85 | `1cd30e867eb89548` |
@@ -40,6 +42,7 @@ Rows whose names end in `-shakedown` or contain `-aborted` are excluded from eve
 | format-perp-single-gemma3-4b | 640 | 640 | 0 | 2026-10-03T21:54 → 21:56 | gemma3:4b@a2af6cc3eb7f | 0.00 | `913905769941faf6` |
 | format-perp-single-haiku45 | 640 | 640 | 0 | 2026-10-03T21:23 → 21:34 | claude-haiku-4-5 | 1.67 | `3118d04b79a24864` |
 | format-perp-single-llama32-3b | 640 | 640 | 0 | 2026-10-03T20:31 → 20:33 | llama3.2:3b@a80c4f17acd5 | 0.00 | `3e582c2656f9230a` |
+| format-perp-single-mistral7b | 640 | 640 | 0 | 2026-10-03T22:16 → 22:19 | mistral:7b@6577803aa9a0 | 0.00 | `c693fd716987fa92` |
 | format-perp-single-opus55 | 640 | 640 | 0 | 2026-10-03T20:55 → 21:02 | claude-opus-5-5 | 3.72 | `50259fc24dada9bc` |
 | format-perp-single-qwen3-4b | 640 | 640 | 0 | 2026-10-03T21:36 → 21:45 | qwen3:4b@359d7dd4bcda | 0.00 | `1e86c4ff5854bf78` |
 | format-perp-single-sonnet5 | 640 | 640 | 0 | 2026-10-03T20:55 → 21:03 | claude-sonnet-5 | 0.96 | `201faa1ad2dc604c` |
@@ -53,6 +56,7 @@ Rows whose names end in `-shakedown` or contain `-aborted` are excluded from eve
 | format-tie-single-gemma3-4b | 640 | 640 | 0 | 2026-10-03T21:52 → 21:54 | gemma3:4b@a2af6cc3eb7f | 0.00 | `5fcc82f3b36593b1` |
 | format-tie-single-haiku45 | 640 | 640 | 0 | 2026-10-03T21:13 → 21:23 | claude-haiku-4-5 | 1.60 | `d389a6c63bba77d8` |
 | format-tie-single-llama32-3b | 640 | 640 | 0 | 2026-10-03T20:29 → 20:31 | llama3.2:3b@a80c4f17acd5 | 0.00 | `b8f88f0dc90b4ea1` |
+| format-tie-single-mistral7b | 640 | 640 | 0 | 2026-10-03T22:13 → 22:16 | mistral:7b@6577803aa9a0 | 0.00 | `30007026b1bb4d39` |
 | format-tie-single-opus55 | 640 | 640 | 0 | 2026-10-03T20:48 → 20:55 | claude-opus-5-5 | 3.46 | `810dad1158cf3c3f` |
 | format-tie-single-qwen3-4b | 640 | 640 | 0 | 2026-10-03T21:27 → 21:36 | qwen3:4b@359d7dd4bcda | 0.00 | `5a35915290371259` |
 | format-tie-single-sonnet5 | 640 | 640 | 0 | 2026-10-03T20:48 → 20:55 | claude-sonnet-5 | 0.89 | `0b67e491af4b05c3` |
@@ -64,6 +68,7 @@ Rows whose names end in `-shakedown` or contain `-aborted` are excluded from eve
 | gestalt-gestalt-single-grok46 | 63 | 63 | 0 | 2026-10-03T20:33 → 20:38 | grok-4.6-build | 0.22 | `86dde2ca5190e6d6` |
 | gestalt-gestalt-single-haiku45 | 63 | 63 | 0 | 2026-10-03T20:56 → 21:00 | claude-haiku-4-5 | 0.74 | `75ea1e1706ca7303` |
 | gestalt-gestalt-single-llama32-3b | 63 | 63 | 0 | 2026-10-03T20:26 → 20:27 | llama3.2:3b@a80c4f17acd5 | 0.00 | `e7bada8eaa945b70` |
+| gestalt-gestalt-single-mistral7b | 63 | 63 | 0 | 2026-10-03T22:09 → 22:09 | mistral:7b@6577803aa9a0 | 0.00 | `f8163c69faca90a1` |
 | gestalt-gestalt-single-opus55 | 63 | 63 | 0 | 2026-10-03T20:39 → 20:40 | claude-opus-5-5 | 0.40 | `8f1d8f0e98946606` |
 | gestalt-gestalt-single-qwen3-4b | 63 | 63 | 0 | 2026-10-03T21:12 → 21:13 | qwen3:4b@359d7dd4bcda | 0.00 | `060c6abd03e11753` |
 | gestalt-gestalt-single-sonnet5 | 63 | 63 | 0 | 2026-10-03T20:40 → 20:41 | claude-sonnet-5 | 0.09 | `e676b383641769f7` |
@@ -77,6 +82,7 @@ Rows whose names end in `-shakedown` or contain `-aborted` are excluded from eve
 | holistic-perp-single-gemma3-4b | 226 | 226 | 0 | 2026-10-03T21:49 → 21:50 | gemma3:4b@a2af6cc3eb7f | 0.00 | `9e21432b4b378131` |
 | holistic-perp-single-haiku45 | 226 | 226 | 0 | 2026-10-03T20:52 → 20:56 | claude-haiku-4-5 | 0.59 | `c981f7b04bd9bdd9` |
 | holistic-perp-single-llama32-3b | 226 | 226 | 0 | 2026-10-03T20:26 → 20:26 | llama3.2:3b@a80c4f17acd5 | 0.00 | `588e111b82d24c6d` |
+| holistic-perp-single-mistral7b | 226 | 226 | 0 | 2026-10-03T22:07 → 22:09 | mistral:7b@6577803aa9a0 | 0.00 | `5539d5d37752708e` |
 | holistic-perp-single-opus55 | 226 | 226 | 0 | 2026-10-03T20:37 → 20:39 | claude-opus-5-5 | 1.22 | `fa3b2e7abc150c63` |
 | holistic-perp-single-qwen3-4b | 226 | 226 | 0 | 2026-10-03T21:08 → 21:12 | qwen3:4b@359d7dd4bcda | 0.00 | `ed6ff5f13f4873cf` |
 | holistic-perp-single-sonnet5 | 226 | 226 | 0 | 2026-10-03T20:37 → 20:40 | claude-sonnet-5 | 0.34 | `58d1e3b41e5ac878` |
@@ -112,6 +118,20 @@ Rows whose names end in `-shakedown` or contain `-aborted` are excluded from eve
 | top40-perp-single-llama32-3b | 772 | 772 | 0 | 2026-10-03T21:27 → 21:30 | llama3.2:3b@a80c4f17acd5 | 0.00 | `51b9a2aee58551cf` |
 | top40-perp-single-opus55 | 773 | 772 | 1 | 2026-10-03T21:13 → 21:20 | claude-opus-5-5 | 4.50 | `905528d71963fbd0` |
 | top40-perp-single-sonnet55 | 772 | 772 | 0 | 2026-10-03T21:13 → 21:19 | claude-sonnet-5-5 | 2.48 | `1fc3d92531af7c79` |
+| top40b-gestalt-gestalt-single-gemini31pro | 106 | 60 | 46 | 2026-10-03T22:12 → 22:21 | gemini-3.1-pro-low(requested) | 0.00 | `4640a9e3d27e8ec6` |
+| top40b-gestalt-gestalt-single-gemini38flash | 106 | 100 | 6 | 2026-10-03T22:10 → 22:14 | gemini-3.8-flash-low(requested) | 0.00 | `e0c8ebed27091f64` |
+| top40b-gestalt-gestalt-single-grok46 | 12 | 12 | 0 | 2026-10-03T22:21 → 22:22 | grok-4.6-build | 0.04 | `3fb9a3bb55341daa` |
+| top40b-gestalt-gestalt-single-haiku45 | 85 | 85 | 0 | 2026-10-03T22:18 → 22:22 | claude-haiku-4-5 | 0.84 | `33f4c5d077d89f07` |
+| top40b-gestalt-gestalt-single-llama32-3b | 106 | 106 | 0 | 2026-10-03T22:11 → 22:12 | llama3.2:3b@a80c4f17acd5 | 0.00 | `e7de85cda1fe2ad7` |
+| top40b-gestalt-gestalt-single-opus55 | 106 | 106 | 0 | 2026-10-03T22:14 → 22:15 | claude-opus-5-5 | 0.72 | `af3cd636d57fec70` |
+| top40b-gestalt-gestalt-single-sonnet55 | 106 | 106 | 0 | 2026-10-03T22:14 → 22:15 | claude-sonnet-5-5 | 0.40 | `2ac77eb793e4c1f0` |
+| top40b-perp-sheet-gemini31pro | 14 | 14 | 0 | 2026-10-03T22:09 → 22:12 | gemini-3.1-pro-low(requested) | 0.00 | `bd50d0099277c18b` |
+| top40b-perp-sheet-gemini38flash | 14 | 14 | 0 | 2026-10-03T22:09 → 22:10 | gemini-3.8-flash-low(requested) | 0.00 | `8a49267190d7c34b` |
+| top40b-perp-sheet-grok46 | 14 | 11 | 3 | 2026-10-03T22:09 → 22:20 | grok-4.6-build | 0.06 | `ee2c6f6cd49b19a2` |
+| top40b-perp-single-haiku45 | 522 | 522 | 0 | 2026-10-03T22:09 → 22:17 | claude-haiku-4-5 | 1.41 | `96c5dd416a59cfb0` |
+| top40b-perp-single-llama32-3b | 522 | 522 | 0 | 2026-10-03T22:09 → 22:11 | llama3.2:3b@a80c4f17acd5 | 0.00 | `4d899e1fdbac9150` |
+| top40b-perp-single-opus55 | 522 | 522 | 0 | 2026-10-03T22:09 → 22:14 | claude-opus-5-5 | 3.45 | `fd56e481471efdc4` |
+| top40b-perp-single-sonnet55 | 522 | 522 | 0 | 2026-10-03T22:09 → 22:14 | claude-sonnet-5-5 | 1.96 | `f5f10b934932fd61` |
 | triads-perp-sheet-gemini31pro | 46 | 46 | 0 | 2026-10-03T20:12 → 20:21 | gemini-3.1-pro-low(requested) | 0.00 | `5c201e98d562e242` |
 | triads-perp-sheet-gemini31pro-shakedown | 1 | 1 | 0 | 2026-10-03T20:06 → 20:06 | gemini-3.1-pro-low(requested) | 0.00 | `0b2b7a86ed239784` |
 | triads-perp-sheet-gemini38flash | 46 | 46 | 0 | 2026-10-03T20:12 → 20:15 | gemini-3.8-flash-low(requested) | 0.00 | `8bc9b1f5cf273e2b` |
@@ -127,9 +147,9 @@ Rows whose names end in `-shakedown` or contain `-aborted` are excluded from eve
 | triads-perp-single-haiku45-shakedown | 24 | 24 | 0 | 2026-10-03T20:05 → 20:05 | claude-haiku-4-5 | 0.06 | `569b242716c32b0c` |
 | triads-perp-single-hermes3-3b | 774 | 774 | 0 | 2026-10-03T21:14 → 21:20 | hermes3:3b@a8851c5041d4 | 0.00 | `3d7708b8b8508455` |
 | triads-perp-single-llama32-3b | 1800 | 1800 | 0 | 2026-10-03T20:19 → 20:25 | llama3.2:3b@a80c4f17acd5 | 0.00 | `3fa5f71cce00a992` |
-| triads-perp-single-mistral7b | 747 | 747 | 0 | 2026-10-03T21:13 → 22:01 | mistral:7b@6577803aa9a0 | 0.00 | `9a4586cc09b944fb` |
+| triads-perp-single-mistral7b | 1800 | 1800 | 0 | 2026-10-03T21:13 → 22:07 | mistral:7b@6577803aa9a0 | 0.00 | `44d1a39d5c960318` |
 | triads-perp-single-opus55 | 1801 | 1800 | 1 | 2026-10-03T20:12 → 21:03 | claude-opus-5-5 | 10.69 | `25ba4eb6b7ff739a` |
-| triads-perp-single-phi4mini | 3 | 3 | 0 | 2026-10-03T21:13 → 21:13 | phi4-mini@ | 0.00 | `25236ecbc3f57867` |
+| triads-perp-single-phi4mini | 343 | 342 | 1 | 2026-10-03T21:13 → 22:22 | phi4-mini@ | 0.00 | `2a23b579f5b06373` |
 | triads-perp-single-qwen3-4b | 1800 | 1800 | 0 | 2026-10-03T20:33 → 21:07 | qwen3:4b@359d7dd4bcda | 0.00 | `c4df644df59b9c6e` |
 | triads-perp-single-sonnet5 | 1800 | 1800 | 0 | 2026-10-03T20:11 → 20:34 | claude-sonnet-5 | 2.71 | `9820ae3ff1003767` |
 | triads-perp-single-sonnet55 | 1800 | 1800 | 0 | 2026-10-03T20:11 → 20:34 | claude-sonnet-5-5 | 5.93 | `57d77daf2e053337` |

@@ -1,0 +1,21 @@
+{
+ "run_id": "top40b-perp-sheet-grok46",
+ "protocol": "gmp-v1.0",
+ "instrument": "top40b",
+ "format": "perp",
+ "mode": "sheet",
+ "sheet_size": 40,
+ "reps": 1,
+ "stimulus_file": "data/stimuli-v1/top40b-steps.jsonl",
+ "stimulus_digest": "0f06cde3cc33bd818ef865699b54c3bbe3d3d70e3cd9da61e49d251c7a4d7b5e",
+ "judge_label": "grok46",
+ "judge": {
+  "adapter": "grok",
+  "model": "grok-4.6",
+  "effort": "low"
+ },
+ "adapter_version": "a2-no-tools",
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "context_residue": "grok -p under an isolated HOME holding only a symlink to ~/.grok/auth.json and a minimal config (no arch-expert agent, no ~/.claude/CLAUDE.md, no skills, no memory); --system-prompt-override, --tools '', no subagents, no web. Verified 2026-10-03: `grok inspect` shows 0 project instructions; judge reports no Joseph/glyph context. Grok's own built-in harness preamble (~13.5k input tokens) remains and cannot be stripped from the CLI.",
+ "created": "2026-10-03T22:09:25.518810+00:00"
+}
