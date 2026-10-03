@@ -90,3 +90,11 @@ Items:
 ## What stays out
 
 No mechanism registry and no mechanism-organized discovery sampling (Joseph, 2026-08-25). The conflict battery and the holistic sets are claim-targeted validation batteries for MANIFEST claims 2 and 5; their category labels are hypotheses for scoring, not a vocabulary for the corpus.
+
+## Post-freeze implementation notes (append-only; none of these changes a prompt, a stimulus, or a definition)
+
+- **2026-10-03, parser p1.0 → p1.1** (before any v1.0 result was computed): a bare stimulus glyph is matched before markdown-stripping (p1.0 stripped `*`, losing the glyph `*` itself); in sheet mode the answers `a`/`b` map to the item's `a`/`b` fields (gpt-5.6 and Gemini used the JSON field names); when a sheet response contains several `{"answers": …}` objects, the last one that parses is used (grok's stream sometimes restarts its answer mid-text). Raw responses are unchanged; every number is re-derived under p1.1.
+- **2026-10-03, grok adapter a1 → a2-no-tools**: `--tools ''` does not remove grok's tools, and grok-4.6 used its `search_tool` mid-sheet to try to look glyphs up by name ("unicode musical symbols forte piano"), garbling answers. The a1 run is kept verbatim as `data/runs-v1/triads-perp-sheet-grok46-aborted-toolleak/` and excluded from analysis; a2 leaves the judge an empty tool list (verified). The tool-seeking itself is recorded as an observation: a judge offered tools reached for name lookup, the grep-on-names behavior the pilot saw in surveyors.
+- **2026-10-03, sheet completeness gate**: `run.py` re-asks a sheet whose response parses for fewer than 90% of its items (the raw row stays in the ledger, flagged `sheet_incomplete`).
+- **2026-10-03, codex quota**: the gpt-5.6-terra judge exhausted the account's Codex usage limit partway through the format experiment ("try again at Nov 2nd, 2026"); its format-tie run is partial and its format-perp run is empty. Analyses report what exists and mark P1/P3/P4 untestable for that judge.
+- **2026-10-03, parser p1.1 → p1.2** (found while inspecting interim gestalt arrangements, before any result was written up): gestalt answers are no longer edge-stripped of `.`, `*`, quotes or backticks when those characters are themselves stimulus glyphs; p1.1 silently dropped the leading `.` of the rings and dimension sets and an edge `*` in rays.

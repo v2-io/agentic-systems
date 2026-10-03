@@ -1,0 +1,342 @@
+{
+ "qwen3-embedding": {
+  "LOFO_codepoint_ascending": [
+   0.72,
+   22
+  ],
+  "LOFO_not_codepoint_ascending": [
+   0.65,
+   9
+  ],
+  "not_ascending_families": {
+   "left-eighths": [
+    -1.0,
+    0.5
+   ],
+   "shade": [
+    -0.2,
+    1.0
+   ],
+   "pie": [
+    0.3,
+    0.7
+   ],
+   "eighths": [
+    0.5,
+    0.75
+   ],
+   "cjk": [
+    0.25,
+    0.97
+   ],
+   "medals": [
+    -1.0,
+    0.5
+   ],
+   "tally-lines": [
+    -0.5,
+    0.5
+   ],
+   "sovereign": [
+    0.11,
+    0.0
+   ],
+   "tone-bars": [
+    -1.0,
+    0.9
+   ]
+  },
+  "numeric->nonnumeric_mean": 0.51,
+  "numeric->nonnumeric": {
+   "dice": 0.94,
+   "lower-eighths": 0.88,
+   "left-eighths": 0.71,
+   "shade": 1.0,
+   "pie": 0.0,
+   "moon": 0.9,
+   "disc-size": 0.8,
+   "braille-fill": 1.0,
+   "primes": 0.4,
+   "integrals": 1.0,
+   "ogham": 0.6,
+   "medals": 0.5,
+   "volume": -0.5,
+   "dots-vert": -0.5,
+   "dot-count": 1.0,
+   "tally-lines": -0.5,
+   "sovereign": 0.0,
+   "tone-bars": 0.9
+  },
+  "nonnumeric->numeric_mean": 0.62,
+  "nonnumeric->numeric": {
+   "rods": -0.3,
+   "circled": 0.66,
+   "neg-circled": 0.92,
+   "roman": 0.62,
+   "roman-lc": 0.83,
+   "superscript": 0.81,
+   "subscript": 0.76,
+   "eighths": 0.82,
+   "cjk": 0.77,
+   "circled-cjk": 0.83,
+   "si-length": 0.0,
+   "suzhou": 0.67,
+   "dingbat-sans": 0.67
+  }
+ },
+ "embeddinggemma:300m": {
+  "LOFO_codepoint_ascending": [
+   0.49,
+   22
+  ],
+  "LOFO_not_codepoint_ascending": [
+   0.22,
+   9
+  ],
+  "not_ascending_families": {
+   "left-eighths": [
+    -1.0,
+    0.64
+   ],
+   "shade": [
+    -0.2,
+    0.4
+   ],
+   "pie": [
+    0.3,
+    -0.5
+   ],
+   "eighths": [
+    0.5,
+    0.21
+   ],
+   "cjk": [
+    0.25,
+    0.98
+   ],
+   "medals": [
+    -1.0,
+    0.5
+   ],
+   "tally-lines": [
+    -0.5,
+    -0.5
+   ],
+   "sovereign": [
+    0.11,
+    0.11
+   ],
+   "tone-bars": [
+    -1.0,
+    0.1
+   ]
+  },
+  "numeric->nonnumeric_mean": 0.31,
+  "numeric->nonnumeric": {
+   "dice": 0.54,
+   "lower-eighths": 0.29,
+   "left-eighths": 0.5,
+   "shade": 0.8,
+   "pie": -0.1,
+   "moon": -0.9,
+   "disc-size": 0.8,
+   "braille-fill": 0.8,
+   "primes": 0.4,
+   "integrals": 0.8,
+   "ogham": -0.3,
+   "medals": 0.5,
+   "volume": -0.5,
+   "dots-vert": 0.5,
+   "dot-count": 0.5,
+   "tally-lines": 0.5,
+   "sovereign": -0.18,
+   "tone-bars": 0.7
+  },
+  "nonnumeric->numeric_mean": 0.33,
+  "nonnumeric->numeric": {
+   "rods": -0.3,
+   "circled": 0.27,
+   "neg-circled": 0.77,
+   "roman": 0.64,
+   "roman-lc": 0.77,
+   "superscript": 0.27,
+   "subscript": 0.82,
+   "eighths": 0.61,
+   "cjk": 0.13,
+   "circled-cjk": 0.82,
+   "si-length": -0.3,
+   "suzhou": -0.92,
+   "dingbat-sans": 0.71
+  }
+ },
+ "snowflake-arctic-embed2": {
+  "LOFO_codepoint_ascending": [
+   0.38,
+   22
+  ],
+  "LOFO_not_codepoint_ascending": [
+   0.38,
+   9
+  ],
+  "not_ascending_families": {
+   "left-eighths": [
+    -1.0,
+    0.67
+   ],
+   "shade": [
+    -0.2,
+    1.0
+   ],
+   "pie": [
+    0.3,
+    -0.3
+   ],
+   "eighths": [
+    0.5,
+    0.36
+   ],
+   "cjk": [
+    0.25,
+    1.0
+   ],
+   "medals": [
+    -1.0,
+    0.87
+   ],
+   "tally-lines": [
+    -0.5,
+    -0.87
+   ],
+   "sovereign": [
+    0.11,
+    0.0
+   ],
+   "tone-bars": [
+    -1.0,
+    0.71
+   ]
+  },
+  "numeric->nonnumeric_mean": 0.08,
+  "numeric->nonnumeric": {
+   "dice": 0.0,
+   "lower-eighths": -0.05,
+   "left-eighths": 0.09,
+   "shade": 0.8,
+   "pie": 0.1,
+   "moon": 0.0,
+   "disc-size": 1.0,
+   "braille-fill": 0.0,
+   "primes": 0.8,
+   "integrals": 1.0,
+   "ogham": 0.0,
+   "medals": -0.87,
+   "volume": -0.87,
+   "dots-vert": 1.0,
+   "dot-count": 0.0,
+   "tally-lines": -0.87,
+   "sovereign": 0.0,
+   "tone-bars": -0.71
+  },
+  "nonnumeric->numeric_mean": 0.26,
+  "nonnumeric->numeric": {
+   "rods": 0.0,
+   "circled": 0.85,
+   "neg-circled": -0.16,
+   "roman": 0.75,
+   "roman-lc": 0.45,
+   "superscript": 0.31,
+   "subscript": 0.31,
+   "eighths": 0.14,
+   "cjk": 0.73,
+   "circled-cjk": 0.73,
+   "si-length": -0.2,
+   "suzhou": 0.0,
+   "dingbat-sans": -0.52
+  }
+ },
+ "bge-m3": {
+  "LOFO_codepoint_ascending": [
+   0.14,
+   22
+  ],
+  "LOFO_not_codepoint_ascending": [
+   0.45,
+   9
+  ],
+  "not_ascending_families": {
+   "left-eighths": [
+    -1.0,
+    -0.02
+   ],
+   "shade": [
+    -0.2,
+    0.2
+   ],
+   "pie": [
+    0.3,
+    -0.3
+   ],
+   "eighths": [
+    0.5,
+    0.71
+   ],
+   "cjk": [
+    0.25,
+    1.0
+   ],
+   "medals": [
+    -1.0,
+    0.87
+   ],
+   "tally-lines": [
+    -0.5,
+    0.87
+   ],
+   "sovereign": [
+    0.11,
+    0.0
+   ],
+   "tone-bars": [
+    -1.0,
+    0.71
+   ]
+  },
+  "numeric->nonnumeric_mean": -0.17,
+  "numeric->nonnumeric": {
+   "dice": 0.0,
+   "lower-eighths": -0.14,
+   "left-eighths": -0.23,
+   "shade": -0.8,
+   "pie": 0.0,
+   "moon": 0.0,
+   "disc-size": 1.0,
+   "braille-fill": 0.0,
+   "primes": -1.0,
+   "integrals": -0.8,
+   "ogham": 0.0,
+   "medals": -0.87,
+   "volume": -0.87,
+   "dots-vert": 0.5,
+   "dot-count": 0.0,
+   "tally-lines": 0.87,
+   "sovereign": 0.0,
+   "tone-bars": -0.71
+  },
+  "nonnumeric->numeric_mean": -0.03,
+  "nonnumeric->numeric": {
+   "rods": 0.0,
+   "circled": 0.14,
+   "neg-circled": -0.07,
+   "roman": 0.24,
+   "roman-lc": -0.02,
+   "superscript": 0.14,
+   "subscript": 0.14,
+   "eighths": -0.14,
+   "cjk": 0.12,
+   "circled-cjk": 0.12,
+   "si-length": -0.5,
+   "suzhou": 0.0,
+   "dingbat-sans": -0.52
+  }
+ }
+}

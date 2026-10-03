@@ -15,11 +15,12 @@ import argparse, concurrent.futures as cf, datetime as dt, hashlib, json, pathli
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 import instruments as I
 from fate import rng, digest
-from judges import make_judge
+from judges import make_judge, ADAPTER_VERSION
 
 EXP = pathlib.Path(__file__).resolve().parents[2]
 STIMS = {"triads": "triads.jsonl", "format": "format-pairs.jsonl", "conflict": "conflict.jsonl",
-         "holistic": "holistic-pairs.jsonl", "gestalt": "gestalt.jsonl"}
+         "holistic": "holistic-pairs.jsonl", "gestalt": "gestalt.jsonl",
+         "signa": "consumer-signa-pairs.jsonl", "signa-gestalt": "consumer-signa-gestalt.jsonl"}
 
 def sha(s):
     return hashlib.sha256(s.encode()).hexdigest()
@@ -33,10 +34,10 @@ def group_of(row):
 
 def build_calls(stim, rows, fmt, mode, sheet_size, reps):
     calls = []
-    if stim == "gestalt" or mode == "single":
+    if stim in ("gestalt", "signa-gestalt") or mode == "single":
         for rep in range(reps):
             for r in rows:
-                if stim == "gestalt":
+                if stim in ("gestalt", "signa-gestalt"):
                     prompt = I.gestalt_prompt(r["glyphs"])
                 else:
                     prompt = I.pair_prompt(r["a"], r["b"], fmt, {"pid": r["pid"], "fmt": fmt, "rep": rep})
@@ -68,7 +69,7 @@ def main():
     a = ap.parse_args()
     judges = json.load(open(EXP / "harness/runner/judges-v1.json"))
     jspec = judges["judges"][a.judge]
-    fmt = "gestalt" if a.stim == "gestalt" else a.format
+    fmt = "gestalt" if a.stim in ("gestalt", "signa-gestalt") else a.format
     rows = load_stim(a.stim)
     stim_digest = digest(rows)
     run_id = f"{a.stim}-{fmt}-{a.mode}-{a.judge}" + (f"-{a.tag}" if a.tag else "")
@@ -77,13 +78,16 @@ def main():
     spec = {"run_id": run_id, "protocol": I.PROTOCOL, "instrument": a.stim, "format": fmt, "mode": a.mode,
             "sheet_size": a.sheet_size if a.mode == "sheet" else None, "reps": a.reps,
             "stimulus_file": f"data/stimuli-v1/{STIMS[a.stim]}", "stimulus_digest": stim_digest,
-            "judge_label": a.judge, "judge": jspec, "system_prompt": I.SYSTEM,
+            "judge_label": a.judge, "judge": jspec, "adapter_version": ADAPTER_VERSION[jspec["adapter"]],
+            "system_prompt": I.SYSTEM,
             "context_residue": judges.get("context_residue", {}).get(jspec["adapter"]),
             "created": dt.datetime.now(dt.timezone.utc).isoformat()}
     sp = rdir / "spec.json"
     if sp.exists():
         old = json.load(open(sp))
-        for k in ("protocol", "instrument", "format", "mode", "sheet_size", "stimulus_digest", "judge"):
+        for k in ("protocol", "instrument", "format", "mode", "sheet_size", "stimulus_digest", "judge", "adapter_version"):
+            if k == "adapter_version" and k not in old:
+                continue  # specs written before adapter versioning (all a1 at that time)
             if old.get(k) != spec.get(k):
                 sys.exit(f"refusing to resume {run_id}: spec field {k!r} differs ({old.get(k)!r} vs {spec.get(k)!r})")
         if old.get("reps", 1) < a.reps:
@@ -99,7 +103,7 @@ def main():
                 r = json.loads(line)
             except Exception:
                 continue
-            if r["result"].get("raw") and not r["result"].get("error"):
+            if r["result"].get("raw") and not r["result"].get("error") and not r.get("sheet_incomplete"):
                 done.add((r["rep"], tuple(r["pids"])))
     todo = [c for c in calls if (c["rep"], tuple(c["pids"])) not in done]
     if a.limit:
@@ -111,19 +115,31 @@ def main():
     lock = threading.Lock()
     sys_sha = sha(I.SYSTEM)
     n_ok = n_err = 0
+    bypid = {r["pid"]: r for r in rows}
+    def sheet_coverage(c, raw):
+        items = [{"id": it["id"], "a": bypid[it["pid"]]["a"], "b": bypid[it["pid"]]["b"]} for it in c["items"]]
+        p = I.parse_sheet(raw, items)
+        return sum(1 for v in p.values() if v[0] != "unparsed") / max(1, len(items))
     def one(c):
         res = judge(I.SYSTEM, c["prompt"])
-        row = {"ledger_version": 1, "run_id": run_id, "protocol": I.PROTOCOL, "instrument": a.stim, "format": fmt,
+        incomplete = None
+        if c["sheet"] and res.get("raw") and not res.get("error"):
+            cov = sheet_coverage(c, res["raw"])
+            if cov < 0.9:  # completeness gate only (raw kept verbatim); a resume re-asks this sheet
+                incomplete = round(cov, 3)
+        row = {"sheet_incomplete": incomplete, "ledger_version": 1, "run_id": run_id, "protocol": I.PROTOCOL, "instrument": a.stim, "format": fmt,
                "mode": a.mode, "rep": c["rep"], "pids": c["pids"], "sheet": c["sheet"], "items": c.get("items"),
                "prompt_sha256": sha(c["prompt"]), "prompt": c["prompt"], "system_sha256": sys_sha,
                "judge_label": a.judge, "ts": dt.datetime.now(dt.timezone.utc).isoformat(), "result": res}
         with lock:
             with open(ledger, "a") as f:
                 f.write(json.dumps(row, ensure_ascii=False) + "\n")
+        if incomplete is not None:
+            res = dict(res, _incomplete=True, error=f"sheet-incomplete coverage={incomplete}")
         return res
     with cf.ThreadPoolExecutor(max_workers=a.workers) as ex:
         for i, res in enumerate(ex.map(one, todo)):
-            if res.get("error") or not res.get("raw"):
+            if res.get("error") or not res.get("raw") or res.get("_incomplete"):
                 n_err += 1
                 if n_err <= 5:
                     print(f"  error: {str(res.get('error'))[:300]}", flush=True)

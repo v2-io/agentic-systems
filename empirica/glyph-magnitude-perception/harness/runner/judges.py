@@ -88,7 +88,7 @@ def ollama_call(model, system, prompt, temperature=0.0, num_predict=48, think=No
                 adapter_meta={"thinking": (msg.get("thinking") or "")[:2000], "options": body["options"], "think": think})
 
 # ---------------------------------------------------------------- grok (isolated HOME)
-GROK_TOOLS = ("run_terminal_command,read_file,search_replace,list_dir,grep,kill_command_or_subagent,"
+GROK_TOOLS = ("search_tool,use_tool,todo_write,run_terminal_command,read_file,search_replace,list_dir,grep,kill_command_or_subagent,"
               "get_command_or_subagent_output,spawn_subagent,scheduler_create,scheduler_delete,scheduler_list,"
               "monitor,search_tool,use_tool,web_search,web_fetch,write_file,edit_file")
 def grok_call(model, system, prompt, effort="low", timeout=600):
@@ -103,9 +103,11 @@ def grok_call(model, system, prompt, effort="low", timeout=600):
     if not cfg.exists():
         cfg.write_text('[cli]\nauto_update = false\n\n[features]\ntelemetry = false\n')
     work = _empty_dir("grokhome/work")
-    # --tools '' does NOT remove tools (observed); restricting to the inert todo_write does (the judge then
-    # sees only todo_write + the search_tool/use_tool meta-pair; no file/shell/web capability).
-    cmd = ["grok", "-p", prompt, "-m", model, "--tools", "todo_write", "--disallowed-tools", GROK_TOOLS,
+    # --tools '' does NOT remove tools (observed 2026-10-03), and even --tools todo_write leaves the
+    # search_tool/use_tool meta-pair, which grok-4.6 used to try to look glyphs up by name mid-sheet
+    # (garbling the answer). Allow-listing todo_write and then disallowing it plus the meta-pair leaves
+    # the judge with an empty tool list (verified: available_commands tools == []).
+    cmd = ["grok", "-p", prompt, "-m", model, "--tools", "todo_write", "--disallowed-tools", GROK_TOOLS, "--no-plan",
            "--system-prompt-override", system, "--output-format", "streaming-json",
            "--no-subagents", "--disable-web-search", "--max-turns", "1"]
     if effort:
@@ -208,6 +210,8 @@ def agy_call(model, system, prompt, timeout=900):
                     error=f"parse-fail: {ex}; stderr={p.stderr[-300:]}; stdout={p.stdout[-300:]}", adapter_meta={})
 
 # ---------------------------------------------------------------- registry
+ADAPTER_VERSION = {"claude": "a1", "ollama": "a1", "grok": "a2-no-tools", "codex": "a1", "agy": "a1"}
+
 def make_judge(spec):
     """spec: {"adapter": ..., "model": ..., plus adapter kwargs} -> callable(system, prompt)"""
     a = spec["adapter"]; m = spec["model"]

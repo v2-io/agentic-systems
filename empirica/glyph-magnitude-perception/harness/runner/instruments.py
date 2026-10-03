@@ -10,7 +10,15 @@ import json, re
 from fate import rng
 
 PROTOCOL = "gmp-v1.0"
-PARSER_VERSION = "p1.0"
+PARSER_VERSION = "p1.2"
+# p1.2 (2026-10-03, found while inspecting interim gestalt arrangements, before any result was written up):
+#  gestalt answers are no longer edge-stripped of '.', '*', quotes or backticks when those characters are
+#  stimulus glyphs (p1.1 silently dropped the leading '.' of the rings/dimension sets and edge '*' of rays)
+# p1.1 (2026-10-03, before any v1.0 result was computed; raw data and prompts untouched):
+#  - a bare stimulus glyph is matched BEFORE markdown-strip (p1.0 stripped '*', losing the glyph *)
+#  - sheet mode: "a"/"b" answers map to the item's a/b fields (judges used the JSON field names)
+#  - sheet mode: when the text holds several {"answers": ...} objects (grok's stream sometimes restarts
+#    its answer mid-text), the LAST one that parses is used
 
 SYSTEM = "You are a participant in a short perception study. Answer exactly as asked."
 
@@ -75,8 +83,13 @@ def _strip(r):
     r = r.strip("`*\"' \t\n.")
     return r
 
-def parse_pair(raw, a, b):
+def parse_pair(raw, a, b, sheet=False):
     """-> (verdict, more, by) where verdict in {dir, tie, perp, unparsed}; more = glyph or None."""
+    r0 = (raw or "").strip()
+    head = re.split(r"[\s,;]+", r0)[0] if r0 else ""
+    if head in (a, b):
+        by0 = next((w for w in BY_WORDS if re.search(rf"\b{w}\b", r0.lower())), None)
+        return ("dir", head, by0)
     r = _strip(raw)
     if not r:
         return ("unparsed", None, None)
@@ -90,9 +103,9 @@ def parse_pair(raw, a, b):
         return ("dir", a, by)
     if has_b and not has_a:
         return ("dir", b, by)
-    if first_tok in ("first", "1st"):
+    if first_tok in ("first", "1st") or (sheet and first_tok == "a"):
         return ("dir", a, by)
-    if first_tok in ("second", "2nd"):
+    if first_tok in ("second", "2nd") or (sheet and first_tok == "b"):
         return ("dir", b, by)
     if "⟂" in r or "⊥" in r or first_tok in ("none", "neither", "no"):
         return ("perp", None, None)
@@ -103,32 +116,41 @@ def parse_pair(raw, a, b):
     return ("unparsed", None, None)
 
 def parse_sheet(raw, items):
-    """-> {id: (verdict, more, by)} from a JSON sheet answer; tolerant of prose wrappers."""
+    """-> {id: (verdict, more, by)} from a JSON sheet answer; tolerant of prose/code-fence wrappers and of
+    restarted answers (the last parseable {"answers": ...} object wins)."""
     out = {}
     if not raw:
         return out
-    m = re.search(r"\{.*\}", raw, re.S)
-    try:
-        d = json.loads(m.group(0)) if m else {}
-    except Exception:
-        d = {}
-    ans = d.get("answers") if isinstance(d, dict) else None
+    dec = json.JSONDecoder(); ans = None
+    starts = [m.start() for m in re.finditer(r'\{\s*"answers"', raw)]
+    for st in reversed(starts):
+        try:
+            d, _ = dec.raw_decode(raw[st:])
+            ans = d.get("answers"); break
+        except Exception:
+            continue
     byid = {it["id"]: it for it in items}
     for x in ans or []:
+        if not isinstance(x, dict):
+            continue
         it = byid.get(x.get("id"))
         if not it:
             continue
         more = str(x.get("more", ""))
-        v = parse_pair(more + ("," + x["by"] if x.get("by") else ""), it["a"], it["b"])
+        v = parse_pair(more + ("," + str(x["by"]) if x.get("by") else ""), it["a"], it["b"], sheet=True)
         out[it["id"]] = v
     return out
 
 def parse_gestalt(raw, glyphs):
     """-> dict(kind=perp|order|unparsed, order=[...], extra=[...], stray=[...])"""
-    r = _strip(raw)
+    gs0 = set(glyphs)
+    r = (raw or "").strip()
+    r = re.sub(r"^```[a-z]*\s*|\s*```$", "", r).strip()
+    keep = "".join(c for c in "`*\"' .\t\n" if c not in gs0)
+    r = r.strip(keep)
     if not r:
         return {"kind": "unparsed"}
-    if r in ("⟂", "⊥") or r.lower() in ("none", "none."):
+    if r in ("⟂", "⊥") or r.lower().rstrip(".") in ("none",):
         return {"kind": "perp"}
     main, _, extra = r.partition("EXTRA")
     gs = set(glyphs)
