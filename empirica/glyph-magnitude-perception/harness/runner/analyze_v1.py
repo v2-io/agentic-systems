@@ -503,6 +503,99 @@ def analyze_signa(runs, stim, out, js):
     out.append("")
     js["signa"] = jsg
 
+FRONTIER = {"haiku45", "sonnet5", "sonnet55", "opus55", "grok46", "gpt56terra", "gemini31pro", "gemini38flash"}
+CLAUDE = {"haiku45", "sonnet5", "sonnet55", "opus55"}
+SMALL_REG = {"llama32-3b", "qwen3-4b", "gemma3-4b", "phi4mini"}
+
+def score_predictions(js, out):
+    """Mechanical verdict for every registered prediction (PREDICTIONS-v1.0.md), per judge run."""
+    out.append("## Registered predictions — mechanical verdicts\n")
+    out.append("Each cell: point estimate, n, and PASS/FAIL against the registered threshold (point estimate vs threshold; intervals are in the sections above). `n<min` = too little data to judge (fewer than 10 units; 30 for P8 small models). Runs are labelled judge[mode].\n")
+    rows = []
+    def lab(j): return j.split("[")[0]
+    def rate(t): return (t[0] / t[1]) if t and t[1] else None
+    def cell(v, n, ok, minn=10):
+        if v is None or n < minn: return f"n<min ({n})"
+        return f"{v:.2f} (n={n}) {'PASS' if ok(v) else 'FAIL'}"
+    F = js.get("format", {}); T = js.get("triads", {}); C = js.get("conflict", {}); H = js.get("holistic", {})
+    def add(pid, text, runs, getter, ok, minn=10):
+        cells = []
+        for j in sorted(runs):
+            t = getter(j)
+            if t is None: continue
+            v = rate(t) if isinstance(t, tuple) else t[0]
+            n = t[1] if isinstance(t, tuple) else t[1]
+            cells.append(f"{j}: {cell(v, n, ok, minn)}")
+        rows.append((pid, text, cells))
+    add("P1", "tie→perp dissolution ≥0.60 (Claude) / ≥0.50 (other frontier)", [j for j in F if lab(j) in FRONTIER],
+        lambda j: F[j].get("tie->perp"), lambda v: True)
+    rows[-1] = ("P1", rows[-1][1], [c.replace("PASS", "") for c in rows[-1][2]])
+    # recompute P1 with judge-specific thresholds
+    cells = []
+    for j in sorted(F):
+        if lab(j) not in FRONTIER or "tie->perp" not in F[j]: continue
+        k, n = F[j]["tie->perp"]; thr = 0.60 if lab(j) in CLAUDE else 0.50
+        cells.append(f"{j}: {cell(k/n if n else None, n, lambda v: v >= thr)} (thr {thr})")
+    rows[-1] = ("P1", rows[-1][1], cells)
+    add("P2", "small local: ⟂ share of perp presentations <0.30", [j for j in F if lab(j) in SMALL_REG],
+        lambda j: F[j].get("perp_share"), lambda v: v < 0.30)
+    add("P2b", "small local: tie→perp dissolution <0.40", [j for j in F if lab(j) in SMALL_REG],
+        lambda j: F[j].get("tie->perp"), lambda v: v < 0.40)
+    cells = []
+    for j in sorted(F):
+        if lab(j) in FRONTIER and "survival_local_minus_mixed" in F[j]:
+            d = F[j]["survival_local_minus_mixed"]; cells.append(f"{j}: {d:+.2f} {'PASS' if d >= 0.30 else 'FAIL'}")
+    rows.append(("P3", "frontier: perp survival fresh-seed-local minus fresh-mixed ≥ +0.30", cells))
+    cells = []
+    for j in sorted(F):
+        if lab(j) in FRONTIER and "value_forced" in F[j] and "value_perp" in F[j]:
+            a = rate(tuple(F[j]["value_forced"])); b = rate(tuple(F[j]["value_perp"]))
+            if a is not None and b is not None:
+                cells.append(f"{j}: forced {a:.2f} → perp {b:.2f} {'PASS' if b > a else ('TIE' if b == a else 'FAIL')}")
+    rows.append(("P4", "frontier: value-correlate higher under perp than forced", cells))
+    add("P5f", "frontier triads: cycle rate ≤0.05", [j for j in T if lab(j) in FRONTIER], lambda j: tuple(T[j]["cycles"]), lambda v: v <= 0.05)
+    add("P5s", "small local triads: cycle rate ≥0.15", [j for j in T if lab(j) in SMALL_REG], lambda j: tuple(T[j]["cycles"]), lambda v: v >= 0.15)
+    add("P6", "frontier triads, uniform stratum: ⟂ ≥0.80", [j for j in T if lab(j) in FRONTIER], lambda j: tuple(T[j]["perp_uniform"]), lambda v: v >= 0.80)
+    add("P7f", "frontier triads: value-correlate ≥0.90", [j for j in T if lab(j) in FRONTIER], lambda j: tuple(T[j]["value"]), lambda v: v >= 0.90)
+    add("P7s", "small local triads: value-correlate ≤0.75", [j for j in T if lab(j) in SMALL_REG], lambda j: tuple(T[j]["value"]), lambda v: v <= 0.75)
+    add("P8f", "frontier triads: ink-correlate ≥0.65", [j for j in T if lab(j) in FRONTIER], lambda j: tuple(T[j]["ink"]), lambda v: v >= 0.65)
+    add("P8s", "small local triads: ink-correlate ≥0.60 (≥30 edges)", [j for j in T if lab(j) in SMALL_REG], lambda j: tuple(T[j]["ink"]), lambda v: v >= 0.60, 30)
+    add("P9", "frontier conflict: value wins on 13 compiled-decode items ≥0.80", [j for j in C if lab(j) in FRONTIER], lambda j: tuple(C[j]["P9"]), lambda v: v >= 0.80)
+    add("P10a", "frontier: ☷ over ⚌ ≥0.75", [j for j in C if lab(j) in FRONTIER], lambda j: tuple(C[j]["P10a"]), lambda v: v >= 0.75, 4)
+    add("P10b", "frontier: yang/ink side on equal-line grams ≥0.75", [j for j in C if lab(j) in FRONTIER], lambda j: tuple(C[j]["P10b"]), lambda v: v >= 0.75, 4)
+    add("P11", "frontier: ‱ over % and ‰ ≥0.60", [j for j in C if lab(j) in FRONTIER], lambda j: tuple(C[j]["P11"]), lambda v: v >= 0.60, 4)
+    add("P12", "frontier: ≈/⟂ on equal-value probes ≥0.60", [j for j in C if lab(j) in FRONTIER], lambda j: tuple(C[j]["P12"]), lambda v: v >= 0.60, 4)
+    # holistic
+    cells13 = []; cells14 = []; cells15 = []
+    for j in sorted(H):
+        if j not in FRONTIER: continue
+        d = H[j]
+        dice = d.get("dice", {}).get("tau"); nz = [d.get(f"noise-{i}", {}) for i in range(4)]
+        perp = sum((x.get("perp") or 0) for x in nz); tot = 3 * sum(1 for x in nz if x.get("perp") is not None or x.get("tau") is not None)
+        if dice is not None:
+            ok = dice == 1.0 and tot and perp / tot >= 0.80
+            cells13.append(f"{j}: dice {dice:.2f}, noise ⟂ {perp}/{tot} {'PASS' if ok else 'FAIL'}")
+        if j in CLAUDE:
+            for seq in ("unfold", "risebar"):
+                g = d.get(seq, {}); t = g.get("tau"); pw = g.get("pw_dir")
+                if t is not None and pw is not None:
+                    cells14.append(f"{j} {seq}: τ {t:.2f}, pw {pw:.2f} {'PASS' if (t >= 0.70 and pw <= 0.40) else 'FAIL'}")
+        for seq in ("elab-n", "elab-s", "elab-l"):
+            g = d.get(seq, {}); t = g.get("tau"); pw = g.get("pw_dir")
+            if pw is not None:
+                ok = (t or 0) >= 0.60 and pw <= 0.40
+                cells15.append(f"{j} {seq}: τ {('%.2f' % t) if t is not None else '⟂'}, pw {pw:.2f} {'PASS' if ok else 'FAIL'}")
+    rows.append(("P13", "frontier: dice gestalt τ = 1 and noise foils ⟂ ≥0.80", cells13))
+    rows.append(("P14", "Claude: unfold & risebar gestalt τ ≥0.70 and pairwise consistent-directed ≤0.40", cells14))
+    rows.append(("P15", "frontier: elaboration ladders pairwise ≤0.40 and gestalt τ ≥0.60", cells15))
+    for pid, text, cells in rows:
+        npass = sum("PASS" in c for c in cells); nfail = sum("FAIL" in c for c in cells)
+        out.append(f"**{pid}** — {text}: {npass} pass / {nfail} fail")
+        for c in cells:
+            out.append(f"- {c}")
+        out.append("")
+    js["predictions"] = [{"id": r[0], "text": r[1], "cells": r[2]} for r in rows]
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=str(EXP / "analysis/v1.0-results.md"))
@@ -526,6 +619,7 @@ def main():
     analyze_strata(runs, stim, out, js)
     analyze_seed_retest(runs, stim, out, js)
     analyze_signa(runs, stim, out, js)
+    score_predictions(js, out)
     pathlib.Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     open(a.out, "w").write("\n".join(out) + "\n")
     json.dump(js, open(a.json, "w"), ensure_ascii=False, indent=1, default=str)

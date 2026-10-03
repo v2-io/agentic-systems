@@ -1,0 +1,1290 @@
+{
+ "rule": "Top-40 candidates (exploratory; answers Joseph 2026-10-03: 'a top-40 sequences by stability/universality').\n\nStep 1 (this script): from every surveys-v1 sequence record (pass-1 + capture-corrections), cluster records\nacross surveyors (Jaccard >= 0.5 on glyph sets), score each record by how many DISTINCT surveyors have a\nmatching record, and pick non-overlapping representatives (greedy; a representative suppresses later\nrecords with Jaccard >= 0.34). This is anecdote-tier concordance used only to choose what to TEST; the\nranking that answers the question comes from the judge panel (harness/top40/score.py).\nWrites data/stimuli-v1/top40-candidates.json and the test stimuli top40-steps.jsonl / top40-gestalt.jsonl.\n",
+ "candidates": [
+  {
+   "cand": 0,
+   "rec": "0e5d7d508a1a95b8",
+   "surveyor": "sonnet-survey-1",
+   "glyphs": [
+    "▏",
+    "▎",
+    "▍",
+    "▌",
+    "▋",
+    "▊",
+    "▉",
+    "█"
+   ],
+   "n_surveyors": 4,
+   "surveyors": [
+    "fable-1",
+    "sonnet-survey-1",
+    "sonnet-survey-2",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": null
+  },
+  {
+   "cand": 1,
+   "rec": "2a920fa2de88062c",
+   "surveyor": "sonnet-survey-2",
+   "glyphs": [
+    "▁",
+    "▂",
+    "▃",
+    "▄",
+    "▅",
+    "▆",
+    "▇",
+    "█"
+   ],
+   "n_surveyors": 4,
+   "surveyors": [
+    "fable-1",
+    "sonnet-survey-1",
+    "sonnet-survey-2",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "STRENGTH: maximum — 'this is a literal bar-chart glyph set (sparkline characters), I'd stake everything on the ordering'"
+  },
+  {
+   "cand": 2,
+   "rec": "1418dd26aac48ef2",
+   "surveyor": "sonnet-survey-1",
+   "glyphs": [
+    "⚀",
+    "⚁",
+    "⚂",
+    "⚃",
+    "⚄",
+    "⚅"
+   ],
+   "n_surveyors": 4,
+   "surveyors": [
+    "fable-1",
+    "sonnet-survey-1",
+    "sonnet-survey-2",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": null
+  },
+  {
+   "cand": 3,
+   "rec": "fea3d0a77f6e6831",
+   "surveyor": "sonnet-survey-1",
+   "glyphs": [
+    "□",
+    "▤",
+    "▦",
+    "◫",
+    "▩",
+    "■"
+   ],
+   "n_surveyors": 4,
+   "surveyors": [
+    "fable-1",
+    "sonnet-survey-1",
+    "sonnet-survey-2",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": null
+  },
+  {
+   "cand": 4,
+   "rec": "2f0d706ed02e91fb",
+   "surveyor": "sonnet-survey-1",
+   "glyphs": [
+    "○",
+    "◔",
+    "◑",
+    "◕",
+    "●"
+   ],
+   "n_surveyors": 4,
+   "surveyors": [
+    "fable-1",
+    "sonnet-survey-1",
+    "sonnet-survey-2",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": null
+  },
+  {
+   "cand": 5,
+   "rec": "353306fbb3ab18a0",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "▫",
+    "░",
+    "▒",
+    "▓",
+    "█"
+   ],
+   "n_surveyors": 4,
+   "surveyors": [
+    "fable-1",
+    "sonnet-survey-1",
+    "sonnet-survey-2",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "high"
+  },
+  {
+   "cand": 6,
+   "rec": "02da600a01f0b881",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "Ⅰ",
+    "Ⅱ",
+    "Ⅲ",
+    "Ⅳ",
+    "Ⅴ",
+    "Ⅵ",
+    "Ⅶ",
+    "Ⅷ",
+    "Ⅸ",
+    "Ⅹ",
+    "Ⅺ",
+    "Ⅻ"
+   ],
+   "n_surveyors": 3,
+   "surveyors": [
+    "fable-1",
+    "sonnet-survey-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very strong"
+  },
+  {
+   "cand": 7,
+   "rec": "3498c7d019da301a",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "⓵",
+    "⓶",
+    "⓷",
+    "⓸",
+    "⓹",
+    "⓺",
+    "⓻",
+    "⓼",
+    "⓽",
+    "⓾"
+   ],
+   "n_surveyors": 3,
+   "surveyors": [
+    "fable-1",
+    "sonnet-survey-2",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 8,
+   "rec": "16d8a37854a704b8",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "⬞",
+    "▫",
+    "◽",
+    "□",
+    "◻",
+    "⬜"
+   ],
+   "n_surveyors": 3,
+   "surveyors": [
+    "fable-1",
+    "sonnet-survey-1",
+    "sonnet-survey-2"
+   ],
+   "felt_strength_verbatim": "strong"
+  },
+  {
+   "cand": 9,
+   "rec": "0b4bdb7afbdfea73",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "<",
+    "≪",
+    "⋘",
+    "⪢",
+    "⫸"
+   ],
+   "n_surveyors": 3,
+   "surveyors": [
+    "fable-1",
+    "sonnet-survey-2",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 10,
+   "rec": "1ea2cf6a057361ab",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "→",
+    "⇒",
+    "⇉",
+    "⇛",
+    "⇶"
+   ],
+   "n_surveyors": 3,
+   "surveyors": [
+    "fable-1",
+    "sonnet-survey-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "high"
+  },
+  {
+   "cand": 11,
+   "rec": "8e05ac16d4dde2f9",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "🔟"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 12,
+   "rec": "ab1634446ee71cab",
+   "surveyor": "sonnet-survey-2",
+   "glyphs": [
+    "⓪",
+    "①",
+    "②",
+    "③",
+    "④",
+    "⑤",
+    "⑥",
+    "⑦",
+    "⑧",
+    "⑨",
+    "⑩"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet-survey-2"
+   ],
+   "felt_strength_verbatim": "strength: very high"
+  },
+  {
+   "cand": 13,
+   "rec": "10d8d8ccfa964beb",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "🄀",
+    "🄁",
+    "🄂",
+    "🄃",
+    "🄄",
+    "🄅",
+    "🄆",
+    "🄇",
+    "🄈",
+    "🄉"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very strong"
+  },
+  {
+   "cand": 14,
+   "rec": "1f3a262a3cdd3138",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "❶",
+    "❷",
+    "❸",
+    "❹",
+    "❺",
+    "❻",
+    "❼",
+    "❽",
+    "❾",
+    "❿"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 15,
+   "rec": "3bed002799068f92",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "➀",
+    "➁",
+    "➂",
+    "➃",
+    "➄",
+    "➅",
+    "➆",
+    "➇",
+    "➈",
+    "➉"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very strong"
+  },
+  {
+   "cand": 16,
+   "rec": "6944b40680264cee",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "٠",
+    "١",
+    "٢",
+    "٣",
+    "٤",
+    "٥",
+    "٦",
+    "٧",
+    "٨",
+    "٩"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very strong recoverability (for agents with the script)"
+  },
+  {
+   "cand": 17,
+   "rec": "82170a45e6665dfd",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "⁰",
+    "¹",
+    "²",
+    "³",
+    "⁴",
+    "⁵",
+    "⁶",
+    "⁷",
+    "⁸",
+    "⁹"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very strong"
+  },
+  {
+   "cand": 18,
+   "rec": "09cdbcc40cb202d6",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "🀙",
+    "🀚",
+    "🀛",
+    "🀜",
+    "🀝",
+    "🀞",
+    "🀟",
+    "🀠",
+    "🀡"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 19,
+   "rec": "4c223d8374162b37",
+   "surveyor": "sonnet-survey-2",
+   "glyphs": [
+    "⠀",
+    "⠁",
+    "⠃",
+    "⠇",
+    "⠏",
+    "⠟",
+    "⠿",
+    "⣿"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "sonnet-survey-2",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "STRENGTH: high for the *chosen* members"
+  },
+  {
+   "cand": 20,
+   "rec": "7ef7bd2c094408eb",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "⅛",
+    "¼",
+    "⅜",
+    "½",
+    "⅝",
+    "¾",
+    "⅞"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very strong"
+  },
+  {
+   "cand": 21,
+   "rec": "994fd7a4679bed97",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "🮂",
+    "🮃",
+    "▀",
+    "🮄",
+    "🮅",
+    "🮆",
+    "█"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very strong"
+  },
+  {
+   "cand": 22,
+   "rec": "b1d8c84eb7e2895f",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "🀱",
+    "🀲",
+    "🀳",
+    "🀴",
+    "🀵",
+    "🀶",
+    "🀷"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 23,
+   "rec": "257a687a4f652c7b",
+   "surveyor": "sonnet-survey-2",
+   "glyphs": [
+    "🞄",
+    "🞅",
+    "🞆",
+    "🞇",
+    "🞈",
+    "🞉"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "sonnet-survey-2",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "'immediate at a glance though the top 2-3 members (very heavy vs extremely heavy) are close enough in my rendering that I underweight my own confidence slightly for that specific adjacent pair even though the ordering overall is obvious'"
+  },
+  {
+   "cand": 24,
+   "rec": "72e5a23cc88aa5e3",
+   "surveyor": "sonnet-survey-1",
+   "glyphs": [
+    "♙",
+    "♘",
+    "♗",
+    "♖",
+    "♕",
+    "♔"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet-survey-1"
+   ],
+   "felt_strength_verbatim": null
+  },
+  {
+   "cand": 25,
+   "rec": "8b7ab25252fab14e",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "𝄖",
+    "𝄗",
+    "𝄘",
+    "𝄙",
+    "𝄚",
+    "𝄛"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 26,
+   "rec": "9fbe8ce30135b5ef",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "✦",
+    "✶",
+    "✳",
+    "✴",
+    "✹",
+    "✺"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 27,
+   "rec": "ad8cc03efd485cc4",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "🞯",
+    "🞰",
+    "🞱",
+    "🞲",
+    "🞳",
+    "🞴"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "strong"
+  },
+  {
+   "cand": 28,
+   "rec": "032f4543297cb1e9",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "˥",
+    "˦",
+    "˧",
+    "˨",
+    "˩"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 29,
+   "rec": "1100a126d16fa1f8",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "🌑",
+    "🌒",
+    "🌓",
+    "🌔",
+    "🌕"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "extremely high"
+  },
+  {
+   "cand": 30,
+   "rec": "15d21df699187a43",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "⬝",
+    "▪",
+    "◽",
+    "◻",
+    "⬛"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "sonnet-survey-2",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "high"
+  },
+  {
+   "cand": 31,
+   "rec": "5526c5f9e416fbcd",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "‐",
+    "‒",
+    "–",
+    "—",
+    "―"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "strong"
+  },
+  {
+   "cand": 32,
+   "rec": "f3a2d36476adccc1",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "𝍠",
+    "𝍡",
+    "𝍢",
+    "𝍣",
+    "𝍤"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very strong"
+  },
+  {
+   "cand": 33,
+   "rec": "f8e7d65b72780ff4",
+   "surveyor": "sonnet-survey-1",
+   "glyphs": [
+    "◌",
+    "○",
+    "◎",
+    "◉",
+    "●"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet-survey-1"
+   ],
+   "felt_strength_verbatim": null
+  },
+  {
+   "cand": 34,
+   "rec": "0b81e822a9c3b8e9",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "′",
+    "″",
+    "‴",
+    "⁗"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very strong"
+  },
+  {
+   "cand": 35,
+   "rec": "0d4e90c5307aba73",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "🔇",
+    "🔈",
+    "🔉",
+    "🔊"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "extremely high"
+  },
+  {
+   "cand": 36,
+   "rec": "20d64e4517bb75c7",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "∫",
+    "∬",
+    "∭",
+    "⨌"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 37,
+   "rec": "48b425bc4ef95b63",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "௧",
+    "௰",
+    "௱",
+    "௲"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "strong"
+  },
+  {
+   "cand": 38,
+   "rec": "534d384f1093dc17",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "ℵ",
+    "ℶ",
+    "ℷ",
+    "ℸ"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "moderate"
+  },
+  {
+   "cand": 39,
+   "rec": "95d6dfd67a045204",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "🟁",
+    "🟅",
+    "🟋",
+    "🟎"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "moderate-strong"
+  },
+  {
+   "cand": 40,
+   "rec": "a3a3dd01dfafe1de",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "⁚",
+    "⁖",
+    "⁘",
+    "⁙"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "high"
+  },
+  {
+   "cand": 41,
+   "rec": "cd12638d8f280128",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "|",
+    "🏠",
+    "🏢",
+    "🏙"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "unstated"
+  },
+  {
+   "cand": 42,
+   "rec": "d0733a6083c592fa",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "🂪",
+    "🂫",
+    "🂭",
+    "🂮"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 43,
+   "rec": "e3532fc336f856fe",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "-",
+    "=",
+    "≡",
+    "≣"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "strong"
+  },
+  {
+   "cand": 44,
+   "rec": "0e55d0e370bd2e13",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "¹",
+    "²",
+    "³"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 45,
+   "rec": "0edeeccf32f16f1b",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "🥇",
+    "🥈",
+    "🥉"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 46,
+   "rec": "153dad861457fb52",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "․",
+    "‥",
+    "…"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very strong"
+  },
+  {
+   "cand": 47,
+   "rec": "155b5b76b1e1ffa6",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "∘",
+    "○",
+    "◯"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "unstated"
+  },
+  {
+   "cand": 48,
+   "rec": "4c6f3e80cb0620e9",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "√",
+    "∛",
+    "∜"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very strong"
+  },
+  {
+   "cand": 49,
+   "rec": "5091d3219da84d8b",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "*",
+    "⁑",
+    "⁂"
+   ],
+   "n_surveyors": 2,
+   "surveyors": [
+    "fable-1",
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 50,
+   "rec": "7583af2423887433",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "〡",
+    "〢",
+    "〣",
+    "〤",
+    "〥",
+    "〦",
+    "〧",
+    "〨",
+    "〩",
+    "〸",
+    "〹",
+    "〺"
+   ],
+   "n_surveyors": 1,
+   "surveyors": [
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 51,
+   "rec": "bce9408476a9f86c",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "ⅰ",
+    "ⅱ",
+    "ⅲ",
+    "ⅳ",
+    "ⅴ",
+    "ⅵ",
+    "ⅶ",
+    "ⅷ",
+    "ⅸ",
+    "ⅹ",
+    "ⅺ",
+    "ⅻ"
+   ],
+   "n_surveyors": 1,
+   "surveyors": [
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 52,
+   "rec": "827693ea3cbc8ff2",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "⓿",
+    "⓫",
+    "⓬",
+    "⓭",
+    "⓮",
+    "⓯",
+    "⓰",
+    "⓱",
+    "⓲",
+    "⓳",
+    "⓴"
+   ],
+   "n_surveyors": 1,
+   "surveyors": [
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 53,
+   "rec": "f6713c1e6db603ee",
+   "surveyor": "fable-1",
+   "glyphs": [
+    "🕐",
+    "🕑",
+    "🕒",
+    "🕓",
+    "🕔",
+    "🕕",
+    "🕖",
+    "🕗",
+    "🕘",
+    "🕙",
+    "🕚"
+   ],
+   "n_surveyors": 1,
+   "surveyors": [
+    "fable-1"
+   ],
+   "felt_strength_verbatim": "recoverability strong"
+  },
+  {
+   "cand": 54,
+   "rec": "046c9ffcd820b42a",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "ᬇ",
+    "ᬈ",
+    "ᬉ",
+    "ᬊ",
+    "ᬋ",
+    "ᬌ",
+    "ᬍ",
+    "ᬎ",
+    "ᬑ",
+    "ᬒ"
+   ],
+   "n_surveyors": 1,
+   "surveyors": [
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "unstated"
+  },
+  {
+   "cand": 55,
+   "rec": "06f3cf54bb199358",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "௦",
+    "௧",
+    "௨",
+    "௩",
+    "௪",
+    "௫",
+    "௬",
+    "௭",
+    "௮",
+    "௯"
+   ],
+   "n_surveyors": 1,
+   "surveyors": [
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 56,
+   "rec": "23fd9ecd24c0c684",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "၀",
+    "၁",
+    "၂",
+    "၃",
+    "၄",
+    "၅",
+    "၆",
+    "၇",
+    "၈",
+    "၉"
+   ],
+   "n_surveyors": 1,
+   "surveyors": [
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "low as a felt visual glide"
+  },
+  {
+   "cand": 57,
+   "rec": "3e2db8ee50274b14",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "㈠",
+    "㈡",
+    "㈢",
+    "㈣",
+    "㈤",
+    "㈥",
+    "㈦",
+    "㈧",
+    "㈨",
+    "㈩"
+   ],
+   "n_surveyors": 1,
+   "surveyors": [
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 58,
+   "rec": "3fbcba7903db0bd5",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "᱐",
+    "᱑",
+    "᱒",
+    "᱓",
+    "᱔",
+    "᱕",
+    "᱖",
+    "᱗",
+    "᱘",
+    "᱙"
+   ],
+   "n_surveyors": 1,
+   "surveyors": [
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "not strong (no clean split along 'angular=strong')"
+  },
+  {
+   "cand": 59,
+   "rec": "4f510790aa13ed44",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "០",
+    "១",
+    "២",
+    "៣",
+    "៤",
+    "៥",
+    "៦",
+    "៧",
+    "៨",
+    "៩"
+   ],
+   "n_surveyors": 1,
+   "surveyors": [
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "low (same honest assessment as Thai and Myanmar)"
+  },
+  {
+   "cand": 60,
+   "rec": "51a8de36e807289c",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "༠",
+    "༡",
+    "༢",
+    "༣",
+    "༤",
+    "༥",
+    "༦",
+    "༧",
+    "༨",
+    "༩"
+   ],
+   "n_surveyors": 1,
+   "surveyors": [
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "medium — a genuine middle case"
+  },
+  {
+   "cand": 61,
+   "rec": "6ad60fb64b425da3",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "㏠",
+    "㏡",
+    "㏢",
+    "㏣",
+    "㏤",
+    "㏥",
+    "㏦",
+    "㏧",
+    "㏨",
+    "㏩"
+   ],
+   "n_surveyors": 1,
+   "surveyors": [
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  },
+  {
+   "cand": 62,
+   "rec": "71687da96407900f",
+   "surveyor": "sonnet-survey-2",
+   "glyphs": [
+    "⑴",
+    "⑵",
+    "⑶",
+    "⑷",
+    "⑸",
+    "⑹",
+    "⑺",
+    "⑻",
+    "⑼",
+    "⑽"
+   ],
+   "n_surveyors": 1,
+   "surveyors": [
+    "sonnet-survey-2"
+   ],
+   "felt_strength_verbatim": "same strength [as circled digits: very high]; 'Notably *weaker feeling of magnitude* than the circled or negative-circled versions to me — the parens read more like \"footnote marker\" than \"quantity,\" even though the ordering is still perfectly recoverable.'"
+  },
+  {
+   "cand": 63,
+   "rec": "717b584c3406848f",
+   "surveyor": "sonnet5-1",
+   "glyphs": [
+    "᠐",
+    "᠑",
+    "᠒",
+    "᠓",
+    "᠔",
+    "᠕",
+    "᠖",
+    "᠗",
+    "᠘",
+    "᠙"
+   ],
+   "n_surveyors": 1,
+   "surveyors": [
+    "sonnet5-1"
+   ],
+   "felt_strength_verbatim": "very high"
+  }
+ ]
+}

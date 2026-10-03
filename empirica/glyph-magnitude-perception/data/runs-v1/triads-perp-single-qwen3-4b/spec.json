@@ -1,0 +1,21 @@
+{
+ "run_id": "triads-perp-single-qwen3-4b",
+ "protocol": "gmp-v1.0",
+ "instrument": "triads",
+ "format": "perp",
+ "mode": "single",
+ "sheet_size": null,
+ "reps": 1,
+ "stimulus_file": "data/stimuli-v1/triads.jsonl",
+ "stimulus_digest": "0938dc5a45a4e1feb0a8b333821d33b66da86972f0fb9df1195311be5c89c667",
+ "judge_label": "qwen3-4b",
+ "judge": {
+  "adapter": "ollama",
+  "model": "qwen3:4b",
+  "think": false
+ },
+ "adapter_version": "a1",
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "context_residue": "local /api/chat with the study system prompt only; temperature 0, seed 0.",
+ "created": "2026-10-03T20:33:41.665654+00:00"
+}

@@ -1,0 +1,19 @@
+{
+ "run_id": "format-perp-pilotcond-sonnetagent",
+ "protocol": "gmp-v1.0",
+ "instrument": "format",
+ "format": "perp",
+ "mode": "pilotcond",
+ "sheet_size": 80,
+ "reps": 1,
+ "stimulus_file": "data/stimuli-v1/format-pairs.jsonl (pilot-replication stratum) via data/stimuli-v1/pilotcond/",
+ "judge_label": "sonnet-agent",
+ "judge": {
+  "adapter": "claude-code Agent tool, subagent_type general-purpose",
+  "model": "sonnet (alias)"
+ },
+ "adapter_version": "pilotcond-1",
+ "note": "Pilot-condition arm: pilot walk5b brief wording, sheet delivered as a JSON file the agent reads with its tools, agent runs inside Claude Code's subagent harness (its system prompt and the user's global CLAUDE.md context load), 80 items per sheet, orders split across sheets. Built to test whether the pilot's ⟂ rates depend on judge context.",
+ "created": "2026-10-03T20:38:34.036384+00:00",
+ "transcripts": "kept outside git at ~/.cache/gmp-judges/pilotcond-transcripts/ (they embed the user's global instruction context); the ledger carries prompt + raw answer verbatim"
+}

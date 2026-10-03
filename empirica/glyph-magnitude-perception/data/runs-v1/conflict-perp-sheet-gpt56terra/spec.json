@@ -1,0 +1,20 @@
+{
+ "run_id": "conflict-perp-sheet-gpt56terra",
+ "protocol": "gmp-v1.0",
+ "instrument": "conflict",
+ "format": "perp",
+ "mode": "sheet",
+ "sheet_size": 40,
+ "reps": 3,
+ "stimulus_file": "data/stimuli-v1/conflict.jsonl",
+ "stimulus_digest": "70e6ce538aef9322ea00dab7b0ed2b2a76f4bb50c4578a545c0fb4250c90adb6",
+ "judge_label": "gpt56terra",
+ "judge": {
+  "adapter": "codex",
+  "model": "gpt-5.6-terra",
+  "effort": "low"
+ },
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "context_residue": "codex exec under an isolated CODEX_HOME holding only a symlink to ~/.codex/auth.json (no AGENTS.md, memories, rules, skills); --ephemeral, read-only sandbox. No system-prompt override exists, so the study system line is prepended to the user turn. Codex's built-in agent preamble (~13k input tokens) remains. Verified 2026-10-03: judge reports no Joseph/glyph context.",
+ "created": "2026-10-03T20:18:16.401042+00:00"
+}

@@ -1,0 +1,20 @@
+{
+ "run_id": "top40-perp-sheet-gemini38flash",
+ "protocol": "gmp-v1.0",
+ "instrument": "top40",
+ "format": "perp",
+ "mode": "sheet",
+ "sheet_size": 40,
+ "reps": 1,
+ "stimulus_file": "data/stimuli-v1/top40-steps.jsonl",
+ "stimulus_digest": "7d9c67f215e598de36771cce6c8f519ad4f3ef3297f2cbf16ea4470abbbfdb43",
+ "judge_label": "gemini38flash",
+ "judge": {
+  "adapter": "agy",
+  "model": "gemini-3.8-flash-low"
+ },
+ "adapter_version": "a1",
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "context_residue": "Gemini via the Antigravity CLI (agy -p), run in an empty cwd; HOME not isolated (agy's knowledge/brain stores exist under ~/.gemini/antigravity-cli). Verified 2026-10-03: judge reports no Joseph/glyph context. Study system line prepended to the user turn; agy harness preamble (~12k tokens) remains.",
+ "created": "2026-10-03T21:13:05.535547+00:00"
+}

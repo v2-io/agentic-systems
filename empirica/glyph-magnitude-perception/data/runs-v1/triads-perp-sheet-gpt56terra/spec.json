@@ -1,0 +1,20 @@
+{
+ "run_id": "triads-perp-sheet-gpt56terra",
+ "protocol": "gmp-v1.0",
+ "instrument": "triads",
+ "format": "perp",
+ "mode": "sheet",
+ "sheet_size": 40,
+ "reps": 1,
+ "stimulus_file": "data/stimuli-v1/triads.jsonl",
+ "stimulus_digest": "0938dc5a45a4e1feb0a8b333821d33b66da86972f0fb9df1195311be5c89c667",
+ "judge_label": "gpt56terra",
+ "judge": {
+  "adapter": "codex",
+  "model": "gpt-5.6-terra",
+  "effort": "low"
+ },
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "context_residue": "codex exec under an isolated CODEX_HOME holding only a symlink to ~/.codex/auth.json (no AGENTS.md, memories, rules, skills); --ephemeral, read-only sandbox. No system-prompt override exists, so the study system line is prepended to the user turn. Codex's built-in agent preamble (~13k input tokens) remains. Verified 2026-10-03: judge reports no Joseph/glyph context.",
+ "created": "2026-10-03T20:12:00.508602+00:00"
+}

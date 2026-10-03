@@ -1,0 +1,21 @@
+{
+ "run_id": "signa-gestalt-gestalt-single-grok46",
+ "protocol": "gmp-v1.0",
+ "instrument": "signa-gestalt",
+ "format": "gestalt",
+ "mode": "single",
+ "sheet_size": null,
+ "reps": 1,
+ "stimulus_file": "data/stimuli-v1/consumer-signa-gestalt.jsonl",
+ "stimulus_digest": "93e3e2dd5026438645421678bc0cc77df570b02efd2409f39efdf56fef5b605e",
+ "judge_label": "grok46",
+ "judge": {
+  "adapter": "grok",
+  "model": "grok-4.6",
+  "effort": "low"
+ },
+ "adapter_version": "a2-no-tools",
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "context_residue": "grok -p under an isolated HOME holding only a symlink to ~/.grok/auth.json and a minimal config (no arch-expert agent, no ~/.claude/CLAUDE.md, no skills, no memory); --system-prompt-override, --tools '', no subagents, no web. Verified 2026-10-03: `grok inspect` shows 0 project instructions; judge reports no Joseph/glyph context. Grok's own built-in harness preamble (~13.5k input tokens) remains and cannot be stripped from the CLI.",
+ "created": "2026-10-03T21:10:40.738223+00:00"
+}

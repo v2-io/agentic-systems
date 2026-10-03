@@ -1,0 +1,19 @@
+{
+ "run_id": "gestalt-gestalt-single-gemini38flash",
+ "protocol": "gmp-v1.0",
+ "instrument": "gestalt",
+ "format": "gestalt",
+ "mode": "single",
+ "sheet_size": null,
+ "reps": 1,
+ "stimulus_file": "data/stimuli-v1/gestalt.jsonl",
+ "stimulus_digest": "329ef87cc666061369693c3e9a4f9d79f82f82906febd3a1fca65cee4e5372ff",
+ "judge_label": "gemini38flash",
+ "judge": {
+  "adapter": "agy",
+  "model": "gemini-3.8-flash-low"
+ },
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "context_residue": "Gemini via the Antigravity CLI (agy -p), run in an empty cwd; HOME not isolated (agy's knowledge/brain stores exist under ~/.gemini/antigravity-cli). Verified 2026-10-03: judge reports no Joseph/glyph context. Study system line prepended to the user turn; agy harness preamble (~12k tokens) remains.",
+ "created": "2026-10-03T20:16:57.216668+00:00"
+}

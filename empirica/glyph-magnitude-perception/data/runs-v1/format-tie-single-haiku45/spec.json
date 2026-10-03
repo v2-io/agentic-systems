@@ -1,0 +1,21 @@
+{
+ "run_id": "format-tie-single-haiku45",
+ "protocol": "gmp-v1.0",
+ "instrument": "format",
+ "format": "tie",
+ "mode": "single",
+ "sheet_size": null,
+ "reps": 1,
+ "stimulus_file": "data/stimuli-v1/format-pairs.jsonl",
+ "stimulus_digest": "ede785ba2f87b3a56fa82de86a8432eedf02928b1384c6f86c0911797544e1a2",
+ "judge_label": "haiku45",
+ "judge": {
+  "adapter": "claude",
+  "model": "claude-haiku-4-5",
+  "effort": "low"
+ },
+ "adapter_version": "a1",
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "context_residue": "claude -p with --tools '' --strict-mcp-config (no MCP), --setting-sources '' and --system-prompt override. Verified 2026-10-03: the judge sees no CLAUDE.md content and nothing about glyphs; it DOES see an account-level note giving the user's email address (asked directly, sonnet-5-5 reported it). Not removable from this CLI; judged harmless to glyph perception.",
+ "created": "2026-10-03T21:12:58.532996+00:00"
+}
