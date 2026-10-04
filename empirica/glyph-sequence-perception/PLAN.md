@@ -123,9 +123,9 @@ The ⟂ space therefore costs one presentation per random triad. About 10% of fi
 
 ### What each looks like
 
-*These are illustrations. The exact wording, and the order of independent sentences, are permuted per sheet. One kind per sheet, because the instructions differ. Items from different sources are interleaved, so a sheet is never all-⟂ or all-structure.*
+*These are illustrations. The exact wording, and the order of independent sentences, are permuted per sheet. One kind per sheet, because the instructions differ. **A sheet holds 1–5 presentations** (Joseph, 2026-10-04: "only get one -- five (at most). Otherwise we have to put the turn number in the data and try to remove it as a confounder later"); each sheet's size is a fated draw from 1–5, and both the size and each presentation's position are recorded. Items from different sources are interleaved.*
 
-**triad**, ~30 per sheet:
+**triad**:
 
 ```
 Each item below shows three symbols.
@@ -143,7 +143,7 @@ Copy each symbol exactly, or write #1, #2, #3 for its position in the item.
 Reply with JSON only: {"answers":[{"id":0,"seq":["①","⑴","❶"]},{"id":1,"two":["▃","▆"]},{"id":2,"none":true}, …]}
 ```
 
-**order**, k = 4–8, ~10 per sheet:
+**order**, k = 4–8:
 
 ```
 Each item shows a set of symbols in scrambled order.
@@ -157,7 +157,7 @@ List symbols that belong to none under "extra". If none of them form a sequence,
 Reply: {"answers":[{"id":0,"seqs":[["░","▒","▓","█"]],"extra":["▫"]}, …]}
 ```
 
-**next**, ~10 per sheet:
+**next**:
 
 ```
 Each item shows symbols in a sequence. If something seems to come next after the last symbol,
@@ -183,10 +183,10 @@ Reply: {"answers":[{"id":0,"next":["☷"]}, …]}
 | **multiple sequences allowed** | — | always | — |
 | **salt** | — | when built from a candidate: 0–2 interlopers drawn from the co-membership neighbourhood | — |
 | **candidates requested** | — | — | up to 3 (fixed) |
-| **where repeat presentations go** | same sheet or split across sheets, 50/50 per item | same, 50/50 | — |
+| **where repeat presentations go** | same sheet or split across sheets, 50/50 per item; a same-sheet item gets enough other items beside it that its presentations are never adjacent | same, 50/50 | — |
 | **option order and instruction-sentence order** | permuted per sheet | permuted per sheet | permuted per sheet |
 | **item order on the sheet** | shuffled, with an item's presentations never adjacent | same | same |
-| **sheet size** | ~30 | ~10 | ~10 |
+| **sheet size** | 1–5, fated per sheet | 1–5 | 1–5 |
 
 **Why each random parameter exists:**
 
@@ -248,16 +248,18 @@ A `lattice` seed (the digit dress × value grid) is just a triad generator. It s
 
 ## 7. Roster
 
-**Core**, fixed so each mind's evidence accumulates:
+**Core** (Joseph, 2026-10-04: Glimmer over llama, and Haiku in), fixed so each mind's evidence accumulates:
 
-- Claude Sonnet 5.5;
+- Claude Sonnet 5.5 and Claude Haiku 4.5: two Claude minds, so universality is family-weighted;
 - Grok 4.6;
 - Gemini 3.8 Flash;
-- llama3.2-3b, locally, through single-item calls. Its slot bias is exposed by the rotations; answer log-probabilities are read if ollama gives them.
+- Meta Muse Glimmer 30B, locally through llama.cpp (`harness/core/glimmer-server.sh`). About 30–75 s per sheet.
 
-**Second minds:** a ~20% subsample of each round goes to Opus 5.5, Haiku 4.5, Gemini 3.1 Pro and Glimmer 30B. These measure spread within a family. OpenAI's frontier model joins the core after Nov 2.
+**Second minds:** a fated ~20% of each round's sheets also go to Opus 5.5 and Gemini 3.1 Pro, to measure spread within a family. OpenAI's frontier model joins the core after Nov 2.
 
-**Round size:** small early, so recalibration runs often. Round 0 is ~150 items, about 300 presentations. Rounds grow as T cools.
+**Round size:** small early, so recalibration runs often. Round 0 is ~300 presentations, which is ~100 calls per core mind. Rounds grow as T cools.
+
+The registry is `harness/core/minds.json`.
 
 ## 8. Build order
 

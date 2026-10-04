@@ -1,0 +1,956 @@
+{"bump": 1.5, "glyphs": ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"], "sid": "survey:bbbdfc1ef927538f", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["¼", "½", "¾"], "sid": "survey:8471f70bc5cade44", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["➀", "➁", "➂", "➃", "➄", "➅", "➆", "➇", "➈", "➉"], "sid": "survey:3bed002799068f92", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ", "Ⅶ", "Ⅷ", "Ⅸ", "Ⅹ", "Ⅺ", "Ⅻ"], "sid": "survey:02da600a01f0b881", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["·", "∶", "⁝", "⁞"], "sid": "survey:603bfdc943ab4490", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"], "sid": "survey:799abf8cc5412858", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["░", "▒", "▓", "█"], "sid": "survey:4edd456a3b71dfde", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": [".", "o", "O", "@"], "sid": "survey:231da4c373d74ade", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∅", "⊂", "⊆"], "sid": "survey:caedf2fd2dc9e270", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["→", "⇒", "⇛"], "sid": "survey:38eae7c693e03066", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], "sid": "survey:568ff614cdbaf84b", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🌑", "🌒", "🌓", "🌔", "🌕"], "sid": "survey:b8c3c3459c8b8131", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⣀", "⣤", "⣶", "⣿"], "sid": "survey:2481386591231ecc", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝄖", "𝄗", "𝄘", "𝄙", "𝄚"], "sid": "survey:bb2bfadc44fddb2d", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], "sid": "survey:5ee83340fc16b453", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["_", ".", "-", "~", "^"], "sid": "survey:b311b660ffc9cea7", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["a", "A"], "sid": "survey:1f20b970fb2f4915", "surveyor": "fable-1", "type": "question"}
+{"bump": 1.5, "glyphs": [",", ";", ":"], "sid": "survey:4529e788ad1efc6e", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⅛", "¼", "⅜", "½", "⅝", "¾", "⅞"], "sid": "survey:7ef7bd2c094408eb", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["¹", "²", "³"], "sid": "survey:64a3e2eb4962164e", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["·", "°"], "sid": "survey:00ab5eb0705c2a51", "surveyor": "fable-1", "type": "question"}
+{"bump": 1.5, "glyphs": ["˩", "˨", "˧", "˦", "˥"], "sid": "survey:4202d2fb821bdc22", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ʹ", "ʺ"], "sid": "survey:65914fd936b8eca4", "surveyor": "fable-1", "type": "question"}
+{"bump": 1.5, "glyphs": ["·", "ˑ", "ː"], "sid": "survey:11ba9dbb49eefb4b", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["‐", "‒", "–", "—", "―"], "sid": "survey:5526c5f9e416fbcd", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["․", "‥", "…"], "sid": "survey:153dad861457fb52", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["′", "″", "‴", "⁗"], "sid": "survey:0b81e822a9c3b8e9", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["‵", "‶", "‷"], "sid": "survey:d51d706b1f3c701a", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["%", "‰", "‱"], "sid": "survey:d5737dc5e43b6caa", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["!", "‼", "⁇", "⁈", "⁉"], "sid": "survey:531da1d70d587777", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["‧", "⁚", "⁝", "⁞"], "sid": "survey:589094543ff5e64e", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⁖", "⁘", "⁙"], "sid": "survey:7bedd0bd8b94e625", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⁎", "⁑", "⁂"], "sid": "survey:8c70b4baacffccaf", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["₉", "9", "⁹"], "sid": "survey:7db602882edd3811", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⁰", "¹", "²", "³", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹"], "sid": "survey:82170a45e6665dfd", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⅒", "⅑", "⅐", "⅙", "⅕", "¼", "⅓", "½"], "sid": "survey:d829d7e211965080", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⅛", "¼", "⅜", "½", "⅝", "¾", "⅞"], "sid": "survey:b3cb86da9eaec4f1", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ", "Ⅶ", "Ⅷ", "Ⅸ", "Ⅹ", "Ⅺ", "Ⅻ"], "sid": "survey:f35d4563ece4c384", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ⅹ", "Ⅼ", "Ⅽ", "Ⅾ", "Ⅿ", "ↁ", "ↂ", "ↇ", "ↈ"], "sid": "survey:e95efa638aaca674", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ⅰ", "Ⅱ", "Ⅲ"], "sid": "survey:347d1c30f54d7d83", "surveyor": "fable-1", "type": "meta"}
+{"bump": 1.5, "glyphs": ["→", "⇒", "⇛"], "sid": "survey:b15cd7fa52128013", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["→", "⇉", "⇶"], "sid": "survey:45963b95493989de", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["↑", "⇑", "↟", "⇞"], "sid": "survey:d666422bbb0cb231", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["↓", "↘", "→", "↗", "↑"], "sid": "survey:52fb8d4cab3acbbe", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["√", "∛", "∜"], "sid": "survey:4c6f3e80cb0620e9", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∫", "∬", "∭", "⨌"], "sid": "survey:68228abfabb348a7", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∮", "∯", "∰"], "sid": "survey:7589a71c5bfcb084", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∣", "∥", "⫴"], "sid": "survey:fff089efa1ffc7d6", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∼", "≋"], "sid": "survey:eb2451a8ea43a3e3", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["-", "=", "≡", "≣"], "sid": "survey:e3532fc336f856fe", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["<", "≪", "⋘"], "sid": "survey:a49576c1938ac57c", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⋅", "∶", "∷"], "sid": "survey:e7ee7fcf3a2d690a", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⋮", "⋯", "⋰", "⋱"], "sid": "survey:239798cb9bc314de", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["∅", "⊂", "⊊"], "sid": "survey:e9f4c5ebbd88bbbc", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⊂", "⊆", "⊏", "⊑", "≺", "≼"], "sid": "survey:97ce26db0674a1d4", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["∧", "⋀", "∨", "⋁", "∩", "⋂"], "sid": "survey:eaec27888550c421", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩", "⑪"], "sid": "survey:e87affb000dc36c7", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⑴", "⑵", "⑶"], "sid": "survey:1757aee969fbf4ea", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⒈", "⒉", "⒊"], "sid": "survey:728ab7dd35bbe1d8", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⓪", "①", "⑩"], "sid": "survey:82714d0eb2fec5af", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⓵", "⓶", "⓷", "⓸", "⓹", "⓺", "⓻", "⓼", "⓽", "⓾"], "sid": "survey:ad5123bb5497a9bc", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⓫", "⓬", "⓴"], "sid": "survey:4946ad3b1856513c", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ⓐ", "Ⓩ"], "sid": "survey:2f178f991caab70d", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"], "sid": "survey:f8d3ace9186dacba", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▏", "▎", "▍", "▌", "▋", "▊", "▉", "█"], "sid": "survey:57c36584503bb069", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["░", "▒", "▓", "█"], "sid": "survey:7058ed6926735026", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▖", "▚", "▙", "█"], "sid": "survey:c41aa353307a9b3d", "surveyor": "fable-1", "type": "generator"}
+{"bump": 1.5, "glyphs": ["▫", "◻", "⬜"], "sid": "survey:e5365f143c882677", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["·", "•", "●", "⬤"], "sid": "survey:e549043314a4420a", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["◦", "○", "◯"], "sid": "survey:fafe1fffdce7a0d6", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["○", "◔", "◑", "◕", "●"], "sid": "survey:b966487d935db483", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["○", "◎", "◉"], "sid": "survey:08109eab89f78ab9", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▴", "▲", "▵", "△", "▹", "▸", "▻", "►"], "sid": "survey:3f36ec5fa8c20c81", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["◜", "◠"], "sid": "survey:e4d7bba8951fd6e9", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["◴", "◵", "◶", "◷"], "sid": "survey:4edc993481fa0926", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["▤", "▦", "▩"], "sid": "survey:9e807067ae2b250d", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"], "sid": "survey:48cca18db7012eb6", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⚊", "⚌", "☰", "𝌆"], "sid": "survey:bf302317d960a2e7", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["☷", "☶", "☵", "☴", "☳", "☲", "☱", "☰"], "sid": "survey:5c6980f7ee52a2f3", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["☀", "⛅", "☁", "☔", "⛈"], "sid": "survey:03bd9df6ac68035d", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["♙", "♘", "♗", "♖", "♕", "♔"], "sid": "survey:ac5b2dda02f48936", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["☆", "⭐", "🌟"], "sid": "survey:cdea10ec6d733acc", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["☐", "☑"], "sid": "survey:d53cbe9667e03684", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⚪", "⚫"], "sid": "survey:10e42426300f0455", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["☚", "☛", "☜", "☝", "☞", "☟"], "sid": "survey:c9652f95e083d578", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["❶", "❷", "❸", "❹", "❺", "❻", "❼", "❽", "❾", "❿"], "sid": "survey:9bc8b941551d96bf", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["✓", "✔", "✅"], "sid": "survey:5ad05e5195088609", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["✱", "✲", "✳", "✴", "✵", "✶", "✷", "✸", "✹", "✺"], "sid": "survey:c512c47f0d9755db", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["➝", "➞", "➟", "➠"], "sid": "survey:011a2101bb1edcc7", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["❮", "❰"], "sid": "survey:679edd75d35fec77", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⠀", "⢀", "⣀", "⣄", "⣤", "⣦", "⣶", "⣷", "⣿"], "sid": "survey:c4b48e35edb1a56f", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⭒", "⭑", "☆", "★"], "sid": "survey:71cdb881e67a3b6d", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⬞", "▫", "◽", "□", "◻", "⬜"], "sid": "survey:16d8a37854a704b8", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["○", "◯", "⭘"], "sid": "survey:ef54bbf1e3897ecc", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["▲", "■", "⬟", "⬢"], "sid": "survey:bd7cc3e737f6ef2c", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⭅", "⭆"], "sid": "survey:a67e886350152fb0", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["∫", "∬", "∭", "⨌"], "sid": "survey:aef70d19d0bd4d19", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["=", "⩵", "⩶"], "sid": "survey:617ce16f8f6bf6e0", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∣", "∥", "⫴"], "sid": "survey:b74848cc5e3eca9a", "surveyor": "fable-1", "type": "meta"}
+{"bump": 1.5, "glyphs": ["⪅", "⪆", "⪉", "⪊"], "sid": "survey:4c6ee4d786c1abf4", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["∨", "⩔"], "sid": "survey:0ee4c3eeca694e85", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["〡", "〢", "〣", "〤", "〥"], "sid": "survey:63ebf0fcb49819be", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["〇", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "百", "千", "万"], "sid": "survey:8eefa179aa082127", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["〈", "《", "「", "『", "〔", "【"], "sid": "survey:0d8af550f5ae0936", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["𝍠", "𝍡", "𝍢", "𝍣", "𝍤"], "sid": "survey:f3a2d36476adccc1", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝍷", "𝍡", "𝍢", "𝍣", "𝍤"], "sid": "survey:963bbf54b22afe61", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["🀱", "🀲", "🀳", "🀴", "🀵", "🀶", "🀷"], "sid": "survey:f80c87828653a67e", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🀱", "🀹", "🁁", "🁉", "🁑", "🁙", "🁡"], "sid": "survey:c81b911dcbda54d2", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🂡", "🂢", "🂣", "🂤", "🂥", "🂦", "🂧", "🂨", "🂩", "🂪", "🂫", "🂭", "🂮"], "sid": "survey:207564cf6f502c7b", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🂫", "🂭", "🂮"], "sid": "survey:f1a70a7773cf5cd9", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞌", "🞄", "⚫", "⬤"], "sid": "survey:d6888a9391947349", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🟀", "🟁", "🟂", "🟃"], "sid": "survey:c850e61fab85b787", "surveyor": "fable-1", "type": "question"}
+{"bump": 1.5, "glyphs": ["🟥", "🟧", "🟨", "🟩", "🟦", "🟪"], "sid": "survey:9d93bcf5a79cbde4", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["🟦", "🟩", "🟨", "🟧", "🟥"], "sid": "survey:4eb1d9ca7839a5a9", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🄀", "🄁", "🄂", "🄃", "🄄", "🄅", "🄆", "🄇", "🄈", "🄉"], "sid": "survey:10d8d8ccfa964beb", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🕐", "🕑", "🕒", "🕓", "🕔", "🕕", "🕖", "🕗", "🕘", "🕙", "🕚"], "sid": "survey:f6713c1e6db603ee", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🌑", "🌒", "🌓", "🌔", "🌕"], "sid": "survey:4ddb8220d1b91c7a", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🌰", "🌱", "🌿", "🌳"], "sid": "survey:012cdfac40e3c3e2", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🥉", "🥈", "🥇"], "sid": "survey:7daecd136d105352", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🌤", "🌥", "🌦", "🌧", "🌩", "🌪"], "sid": "survey:b1993575373fe130", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🌡", "🎚", "🎛"], "sid": "survey:5c447e8a77e22c96", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["🏠", "🏢", "🏙"], "sid": "survey:32e1c78f4969b30d", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🔇", "🔈", "🔉", "🔊"], "sid": "survey:6a05e5e9a99e9cc5", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["👶", "👦", "👨", "👴"], "sid": "survey:c3a7f8bca23a93aa", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🥚", "🐣", "🐤", "🐓"], "sid": "survey:ca0f05c3cad5d7e7", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["💧", "💦", "🌊"], "sid": "survey:1a2a55f168c6b7ac", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🐜", "🐁", "🐈", "🐕", "🐎", "🐘", "🐋"], "sid": "survey:23026c6737854799", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["📈", "📉", "📊"], "sid": "survey:12f8f7ce308f1600", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["┈", "┄", "─", "━"], "sid": "survey:a32be2d143573b9d", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["꜖", "꜕", "꜔", "꜓", "꜒"], "sid": "survey:5475fc9cc765c106", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["😭", "😢", "🙁", "😐", "🙂", "😄", "😁"], "sid": "survey:396972c08a74178f", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🙂", "😄", "😆", "😂", "🤣"], "sid": "survey:0d2784a63aa7a07c", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🀙", "🀚", "🀛", "🀜", "🀝", "🀞", "🀟", "🀠", "🀡"], "sid": "survey:3fef66a043495efc", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ẋ", "ẍ", "x"], "sid": "survey:1beba3da9d605f2e", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["א", "ב", "ג", "ד", "ה", "ו", "ז", "ח", "ט"], "sid": "survey:18d3cf5fb083acf3", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"], "sid": "survey:6944b40680264cee", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["௧", "௰", "௱", "௲"], "sid": "survey:48b425bc4ef95b63", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["൰", "൱", "൲"], "sid": "survey:e06a3bc5ae6bb8a2", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["౼", "౽", "౾"], "sid": "survey:99686d543ab27c0c", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["༪", "༫", "༬", "༭", "༮", "༯", "༰", "༱", "༲", "༳"], "sid": "survey:d3f0819b96978c0a", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["؊", "؉", "؈"], "sid": "survey:a9433994b41ca574", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["፩", "፲", "፻", "፼"], "sid": "survey:16bde20442cf78f7", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᚁ", "ᚂ", "ᚃ", "ᚄ", "ᚅ"], "sid": "survey:ee1272a0708c5e5f", "surveyor": "fable-1", "type": "generator"}
+{"bump": 1.5, "glyphs": ["៰", "៱", "៲", "៳", "៴", "៵", "៶", "៷", "៸", "៹"], "sid": "survey:a552a994572807df", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᛮ", "ᛯ", "ᛰ"], "sid": "survey:a3430f4b203affd0", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ℵ", "ℶ", "ℷ", "ℸ"], "sid": "survey:534d384f1093dc17", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🯰", "🯱", "🯲", "🯳", "🯴", "🯵", "🯶", "🯷", "🯸", "🯹"], "sid": "survey:b7d0b6d8dfc9e9bb", "surveyor": "fable-1", "type": "meta"}
+{"bump": 1.5, "glyphs": ["⼀", "⼈", "⼭", "⾦", "⿓"], "sid": "survey:29261f8af9a25cc4", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㊀", "㊁", "㊂", "㊃", "㊄", "㊅", "㊆", "㊇", "㊈", "㊉"], "sid": "survey:7fbb20fdd3d36909", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㋀", "㋁", "㋋"], "sid": "survey:4715d057caea1a58", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["䷁", "䷗", "䷒", "䷊", "䷡", "䷪", "䷀"], "sid": "survey:6ca73851b5ceeeef", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["꠰", "꠱", "꠲", "꠳"], "sid": "survey:ffb555885cb03896", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": [".", "﹒", "．"], "sid": "survey:ccb99e1355810757", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㆒", "㆓", "㆔"], "sid": "survey:8c9b4dd39f55ae70", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㆘", "㆗", "㆖"], "sid": "survey:edd1cbed2360022e", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎚", "㎛", "㎜", "㎝", "㎞"], "sid": "survey:a53f8201c7cd053e", "surveyor": "fable-1", "type": "generator"}
+{"bump": 1.5, "glyphs": ["🞯", "🞰", "🞱", "🞲", "🞳", "🞴"], "sid": "survey:ad8cc03efd485cc4", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞵", "🞶", "🞷", "🞸", "🞹", "🞺"], "sid": "survey:45be196bbd67485a", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞻", "🞼", "🞽", "🞾", "🞿"], "sid": "survey:a21f79d85f45e008", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["﹡", "*", "✱"], "sid": "survey:e81312c881be8112", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🟁", "🟅", "🟋", "🟎"], "sid": "survey:95d6dfd67a045204", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["✦", "✶", "✴", "✹", "✺"], "sid": "survey:e4fdfe39cbf3c6ea", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["✯", "✻", "✽", "❉", "❋"], "sid": "survey:42e4ef9c582450f0", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⭒", "☆", "⭐"], "sid": "survey:62d52eb8797016a2", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⚝", "☆", "★", "🌟"], "sid": "survey:97b0429afba61eae", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["☆", "⯪", "★"], "sid": "survey:2743d6051169431f", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⯪", "⯫"], "sid": "survey:dde28a2e825b40b9", "surveyor": "fable-1", "type": "equivalence"}
+{"bump": 1.5, "glyphs": ["⁎", "⁑", "⁂"], "sid": "survey:b78bc59e9a8052df", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["❇", "✨", "🎇"], "sid": "survey:9b19becc3e54499b", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⁎", "*", "✱", "✦", "☆", "⯪", "★", "✹", "🌟", "✨"], "sid": "survey:5f34f97319c0c117", "surveyor": "fable-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⠀", "⠁", "⠃", "⠇", "⠏", "⠟", "⠿", "⡿", "⣿"], "sid": "survey:6ed824cc75c02458", "surveyor": "fable-1", "type": "generator"}
+{"bump": 1.5, "glyphs": ["🠢", "🠦", "🠪", "🠮", "🠲"], "sid": "survey:6b148619f825945a", "surveyor": "fable-1", "type": "meta"}
+{"bump": 1.5, "glyphs": ["/", "⫽", "⫻"], "sid": "survey:724634220228cf17", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🡢", "🡪", "🡲", "🡺", "🢂"], "sid": "survey:9a1f7af256903277", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["☰", "☱", "☳", "☷", "⚌", "⚍", "⚏", "⚊", "⚋"], "sid": "survey:055d0046e1ca527a", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🮂", "🮃", "▀", "🮄", "🮅", "🮆", "█"], "sid": "survey:994fd7a4679bed97", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⸪", "⸫", "⸬"], "sid": "survey:984d3ed3ad2a863e", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∣", "∥", "⦀"], "sid": "survey:0d4795b3ece8ff45", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🀙", "🀚", "🀛", "🀜", "🀝", "🀞", "🀟", "🀠", "🀡"], "sid": "survey:fa4a3f60f38e9c5f", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["-", "=", ">", "}", ")", "|"], "sid": "survey:423d8e85f24adfaf", "surveyor": "fable-1", "type": "generator"}
+{"bump": 1.5, "glyphs": ["≋", "∼", "-"], "sid": "survey:a0f9b25519a2caa4", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["_", "₋", "-", "⁻", "¯"], "sid": "survey:6df3e248105c9286", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["─", "╱", "│"], "sid": "survey:8f2ae8ebbd5aacc5", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["<", "(", "|"], "sid": "survey:8aede04ee1b3a38b", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["‿", "⌣", "⌄", "∨"], "sid": "survey:42b5ded69c3cd7ad", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🦠", "🐜", "🐘", "🌍", "☀", "🌌"], "sid": "survey:5c144a940b0ff001", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🌫", "☁", "🌧", "💧", "🌊"], "sid": "survey:206f8d30720d2c83", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["💨", "💧", "🧊"], "sid": "survey:d70678cbd59b4395", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🧍", "🚶", "🏃", "🚲", "🚗", "🚄", "✈", "🚀"], "sid": "survey:2e4bf18a2bb35833", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["┈", "┄", "─", "━", "▬", "█"], "sid": "survey:2ad7bf7a002a4f84", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🤫", "🗣", "📢", "🔔", "📯"], "sid": "survey:0f7832af68ecfe7f", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🪵", "🔥", "🌫"], "sid": "survey:33425bd69131c260", "surveyor": "fable-1", "type": "meta"}
+{"bump": 1.5, "glyphs": ["🧍", "👥", "👪", "🏘", "🏙"], "sid": "survey:61b77795f82cc195", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🪙", "💵", "💰", "🏦"], "sid": "survey:2fbb6a4428a792cf", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["n", "ɲ", "ɳ", "ŋ"], "sid": "survey:afd7bb6a032b28b9", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"], "sid": "survey:55419fea660ef3eb", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"], "sid": "survey:48e2ff08e80da22a", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▏", "▎", "▍", "▌", "▋", "▊", "▉", "█"], "sid": "survey:4e3efa4663ee7e6c", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["░", "▒", "▓", "█"], "sid": "survey:1535d22ab9e1b38c", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["☰", "☱", "☳", "☷"], "sid": "survey:37730021dfb3c0f1", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["☰", "☱", "☳", "☷", "⚌", "⚍", "⚏", "⚊", "⚋"], "sid": "survey:3ae6358e96c1c490", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⚊", "⚋"], "sid": "survey:1a6b05a6036e43cd", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⚌", "⚍", "⚏"], "sid": "survey:2ef54e1c6359e729", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["․", "‥", "…"], "sid": "survey:58981be7ffcb5d22", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["′", "″", "‴", "⁗"], "sid": "survey:863471926929f79c", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["‐", "‑", "‒", "–", "—"], "sid": "survey:6323f745dad70d7b", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["˥", "˦", "˧", "˨", "˩"], "sid": "survey:cd51e03a5425e0dc", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ⅰ", "Ⅱ", "Ⅲ"], "sid": "survey:c4c19fc1d5397b46", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["〡", "〢", "〣"], "sid": "survey:c8818a03da7dcea4", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᚁ", "ᚂ", "ᚃ", "ᚄ", "ᚅ"], "sid": "survey:a165661405cddb38", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⠀", "⠁", "⠃", "⠇", "⠏", "⠟", "⠿", "⣿"], "sid": "survey:5a674fd1d2ffe86f", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["❘", "❙", "❚"], "sid": "survey:263b4cd859459229", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["†", "‡"], "sid": "survey:48c053d6ca492151", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["√", "∛", "∜"], "sid": "survey:7328f1dcc7e0c8f3", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∫", "∬", "∭"], "sid": "survey:f15192ac6a893aaa", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["<", "≪", "⋘"], "sid": "survey:d1abe434a52a5d39", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["·", "•", "●", "⬤"], "sid": "survey:61d62bc4dffbe865", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["◦", "○", "◯"], "sid": "survey:0730f734ee75f613", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["○", "●"], "sid": "survey:82eacb148e9d95fd", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⊙", "⊚", "◎"], "sid": "survey:12d23a5baf9078d0", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▪", "■", "⬛"], "sid": "survey:33e7e3eabc0e6941", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["□", "■"], "sid": "survey:a4cf84600f6fd5f1", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⭒", "⭑", "⭐"], "sid": "survey:017bdceeab0c3dff", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], "sid": "survey:840aedfa04b78f02", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⓪", "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩", "⑪", "⑫", "⑬", "⑭", "⑮", "⑯", "⑰", "⑱", "⑲", "⑳"], "sid": "survey:485f6f90ad1ac840", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["❶", "❷", "❸", "❹", "❺", "❻", "❼", "❽", "❾", "❿"], "sid": "survey:f269094533cb6457", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["➀", "➁", "➂", "➃", "➄", "➅", "➆", "➇", "➈", "➉"], "sid": "survey:a83ee87e998f5e16", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["➊", "➋", "➌", "➍", "➎", "➏", "➐", "➑", "➒", "➓"], "sid": "survey:c1b98667ee1e3c8d", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⓵", "⓶", "⓷", "⓸", "⓹", "⓺", "⓻", "⓼", "⓽", "⓾"], "sid": "survey:fdf3983158a56870", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⑴", "⑵", "⑶", "⑷", "⑸", "⑹", "⑺", "⑻", "⑼", "⑽", "⑾", "⑿", "⒀", "⒁", "⒂", "⒃", "⒄", "⒅", "⒆", "⒇"], "sid": "survey:570d8e477d56a831", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⒈", "⒉", "⒊", "⒋", "⒌", "⒍", "⒎", "⒏", "⒐", "⒑", "⒒", "⒓", "⒔", "⒕", "⒖", "⒗", "⒘", "⒙", "⒚", "⒛"], "sid": "survey:dc9f8212e8e5f651", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["¹", "²", "³", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹", "⁰"], "sid": "survey:4536973480f989d9", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["₀", "₁", "₂", "₃", "₄", "₅", "₆", "₇", "₈", "₉"], "sid": "survey:8c64af9cfe607e13", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ", "Ⅶ", "Ⅷ", "Ⅸ", "Ⅹ", "Ⅺ", "Ⅻ"], "sid": "survey:0ea226e9e9187581", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["½", "⅓", "¼", "⅕", "⅙", "⅛", "⅒"], "sid": "survey:f3a896d502034a17", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["¼", "½", "¾"], "sid": "survey:a728c1e05cbe947a", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⅕", "⅖", "⅗", "⅘"], "sid": "survey:c877732d60d22620", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⅙", "⅚"], "sid": "survey:e33f653eb633f822", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⅛", "⅜", "⅝", "⅞"], "sid": "survey:860cbf77102008c9", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["一", "二", "三"], "sid": "survey:cf54b574b4471bc3", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"], "sid": "survey:ff8a9431ed14abc2", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["〡", "〢", "〣", "〤", "〥", "〦", "〧", "〨", "〩"], "sid": "survey:5fa3859bab1e1879", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🕐", "🕑", "🕒", "🕓", "🕔", "🕕", "🕖", "🕗", "🕘", "🕙", "🕚", "🕛"], "sid": "survey:7a87b4d516e133a4", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🌑", "🌒", "🌓", "🌔", "🌕"], "sid": "survey:30d9c9fa8ee91dcf", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["☰", "☱", "☲", "☳", "☴", "☵", "☶", "☷"], "sid": "survey:f0a957cdb802d88e", "surveyor": "grok-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["♩", "♪", "♫", "♬"], "sid": "survey:6fd7323058828029", "surveyor": "grok-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["─", "━"], "sid": "survey:48029512088bcb38", "surveyor": "grok-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["☹", "☺", "☻"], "sid": "survey:9230c00043eba9f7", "surveyor": "grok-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["ˑ", "ː"], "sid": "survey:6815a0db87e2ee33", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ʹ", "ʺ"], "sid": "survey:ecc33124fed58cd1", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ʼ", "ˮ"], "sid": "survey:d5a843383ea3a927", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⁎", "⁑", "⁂"], "sid": "survey:d341275323f18b36", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["′", "″", "‴", "⁗"], "sid": "survey:9190517198bcf516", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⁖", "⁘", "⁙"], "sid": "survey:2cf42c44f2e91db5", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["‰", "‱"], "sid": "survey:0544c2651f6e2d28", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["!", "‼"], "sid": "survey:04c2df3c5a313d4e", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ⅿ", "ↁ", "ↂ", "ↇ", "ↈ"], "sid": "survey:d151bf3d9a247487", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["→", "⇒", "⇛"], "sid": "survey:6e7718c280551d87", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["→", "⇉", "⇶"], "sid": "survey:9fe034b6fff61f71", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∮", "∯", "∰"], "sid": "survey:43aef223b9ad5f52", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∼", "≋"], "sid": "survey:d8d35e53deda3b12", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["=", "≡", "≣"], "sid": "survey:c705dbd3275d3224", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∣", "∥"], "sid": "survey:96f9870fbcd38de6", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∩", "⋂", "∪", "⋃", "∧", "⋀", "∨", "⋁"], "sid": "survey:219876b7cd3a03af", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⊂", "⋐"], "sid": "survey:9dfd80813be9ec13", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⏗", "⏘", "⏙"], "sid": "survey:427418f64d370e5d", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⎺", "⎻", "⎼", "⎽"], "sid": "survey:988c8dd0f5c02a99", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["○", "◔", "◐", "◕", "●"], "sid": "survey:286c70b72ccc9b87", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▪", "◾", "◼", "■", "⬛"], "sid": "survey:15ea163cc1043473", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▴", "▲"], "sid": "survey:a20a5c972c501b29", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⚆", "⚇"], "sid": "survey:076960ebf69d32f7", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⚐", "⚑"], "sid": "survey:1b09aacaf7eeab0b", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["♳", "♴", "♵", "♶", "♷", "♸", "♹"], "sid": "survey:9b77bbdd51b60dcf", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["✶", "✷", "✸", "✹"], "sid": "survey:e053590b1295ff55", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["❛", "❝"], "sid": "survey:cb84b76c088ed92b", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["✓", "✔"], "sid": "survey:a15714383c4f3ba5", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["➜", "➝", "➞", "➟", "➠", "➡"], "sid": "survey:2cbc6e7b95807f7e", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⟨", "⟪"], "sid": "survey:b8a2504c6399c63b", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["→", "⟶"], "sid": "survey:b3d57504004fa04d", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["+", "⧺", "⧻"], "sid": "survey:cf9f2b782d85bafe", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∣", "∥", "⦀"], "sid": "survey:baa73535e3dcdbbb", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∫", "∬", "∭", "⨌"], "sid": "survey:60e72282af06bc98", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["=", "⩵", "⩶"], "sid": "survey:d6517e9d859a81f5", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["<", "⪡", "⫷"], "sid": "survey:c49a0284c2dd905d", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["/", "⫽", "⫻"], "sid": "survey:d70c8d0f771aa756", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["○", "⭘", "⭕"], "sid": "survey:653a690fab88fdf2", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⬡", "⬢"], "sid": "survey:dbc757c1737540de", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⬩", "⬥"], "sid": "survey:7588779133af7d95", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞅", "🞆", "🞇", "🞈", "🞉"], "sid": "survey:25959efb0576788e", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞎", "🞏", "🞐", "🞑", "🞒", "🞓"], "sid": "survey:09d21c8bba534d8e", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞯", "🞰", "🞱", "🞲", "🞳", "🞴"], "sid": "survey:d57f19aca0e6ad53", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞯", "🞵", "🞻"], "sid": "survey:9f8ee343a31db3a7", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞊", "🞋"], "sid": "survey:a3c34559953c2d83", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["꜈", "꜉", "꜊", "꜋", "꜌"], "sid": "survey:60ab21152a67d3d2", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["꜒", "꜓", "꜔", "꜕", "꜖"], "sid": "survey:9bd1047677dbb84e", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["—", "⸺", "⸻"], "sid": "survey:ba0f08e8c0c21bd9", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⁝", "⁞", "⸽"], "sid": "survey:0fb57dc3ea972edc", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["(", "⸨"], "sid": "survey:5d28eff96971479b", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["〈", "《"], "sid": "survey:5ee77b7e2fb1efa1", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["〸", "〹", "〺"], "sid": "survey:b637a09f6194626d", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["┄", "┈"], "sid": "survey:59fd48fbd82adfa5", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝍲", "𝍳", "𝍴", "𝍵", "𝍶"], "sid": "survey:3c9f7f5b5f9b25c5", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝍠", "𝍡", "𝍢", "𝍣", "𝍤", "𝍥", "𝍦", "𝍧", "𝍨"], "sid": "survey:9f118a439c243713", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝌀", "𝌁", "𝌂", "𝌃", "𝌄", "𝌅"], "sid": "survey:8aa71584df75ee39", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🀙", "🀚", "🀛", "🀜", "🀝", "🀞", "🀟", "🀠", "🀡"], "sid": "survey:eb222b0ec7c0a743", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🀐", "🀑", "🀒", "🀓", "🀔", "🀕", "🀖", "🀗", "🀘"], "sid": "survey:70d8abb2fe7a302c", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🀇", "🀈", "🀉", "🀊", "🀋", "🀌", "🀍", "🀎", "🀏"], "sid": "survey:f6fe8410980614c8", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🀱", "🀹", "🁁", "🁉", "🁑", "🁙", "🁡"], "sid": "survey:baa8b15f6dc094f5", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🠂", "🠆", "🠊"], "sid": "survey:139cf5c9c4d2105b", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🠢", "🠦", "🠪", "🠮", "🠲"], "sid": "survey:625f8f27758ba5bf", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🡢", "🡪", "🡲", "🡺", "🢂"], "sid": "survey:2cabe8888246d93c", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🄁", "🄂", "🄃", "🄄", "🄅", "🄆", "🄇", "🄈", "🄉", "🄊"], "sid": "survey:0aaf2057fed31d51", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🥇", "🥈", "🥉"], "sid": "survey:4db9a47e419b9856", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🔇", "🔈", "🔉", "🔊"], "sid": "survey:180e843b96e92aca", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🔅", "🔆"], "sid": "survey:959338089fe9e1bb", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🏻", "🏼", "🏽", "🏾", "🏿"], "sid": "survey:6f4cb7946f09bff7", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⤍", "⤏"], "sid": "survey:4a0821c4807c9b75", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⤊", "⤋"], "sid": "survey:a031c2341031c4b8", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🂢", "🂣", "🂤", "🂥", "🂦", "🂧", "🂨", "🂩", "🂪"], "sid": "survey:bc27873a62079087", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🃡", "🃢", "🃣", "🃤", "🃥", "🃦", "🃧", "🃨", "🃩", "🃪", "🃫", "🃬", "🃭", "🃮", "🃯", "🃰", "🃱", "🃲", "🃳", "🃴", "🃵"], "sid": "survey:12a885fd029bcf4a", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㉑", "㉒", "㉓", "㉔", "㉕", "㉖", "㉗", "㉘", "㉙", "㉚", "㉛", "㉜", "㉝", "㉞", "㉟", "㊱", "㊲", "㊳", "㊴", "㊵", "㊶", "㊷", "㊸", "㊹", "㊺", "㊻", "㊼", "㊽", "㊾", "㊿"], "sid": "survey:2d68f9863fc3e7b5", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㈠", "㈡", "㈢", "㈣", "㈤", "㈥", "㈦", "㈧", "㈨", "㈩"], "sid": "survey:a30dd06812eb02c1", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㊀", "㊁", "㊂", "㊃", "㊄", "㊅", "㊆", "㊇", "㊈", "㊉"], "sid": "survey:cc573e4d8bb1ffd6", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㉈", "㉉", "㉊", "㉋", "㉌", "㉍", "㉎", "㉏"], "sid": "survey:73dea79ee9ba43d3", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㋀", "㋁", "㋂", "㋃", "㋄", "㋅", "㋆", "㋇", "㋈", "㋉", "㋊", "㋋"], "sid": "survey:cb5736088d5320b1", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝅝", "𝅗𝅥", "𝅘𝅥", "𝅘𝅥𝅮", "𝅘𝅥𝅯", "𝅘𝅥𝅰", "𝅘𝅥𝅱", "𝅘𝅥𝅲"], "sid": "survey:fa9464ecc9471ec5", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝄽", "𝄾", "𝄿", "𝅀", "𝅁", "𝅂"], "sid": "survey:9ee08afd7a7de211", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𐅃", "𐅄", "𐅅", "𐅆", "𐅇"], "sid": "survey:324a3fa4e23d31df", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["０", "１", "２", "３", "４", "５", "６", "７", "８", "９"], "sid": "survey:f3ca33c6ad47dc1e", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㆒", "㆓", "㆔", "㆕"], "sid": "survey:2c935ff53b3dd3c3", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㆙", "㆚", "㆛", "㆜"], "sid": "survey:9a99b3066552980f", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🮃", "🮄", "🮆"], "sid": "survey:51b54f27f32acbb9", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🮈", "🮉", "🮋"], "sid": "survey:5f7a3a61a84a2430", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🯰", "🯱", "🯲", "🯳", "🯴", "🯵", "🯶", "🯷", "🯸", "🯹"], "sid": "survey:a0e0fde24c909324", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𐄇", "𐄈", "𐄉", "𐄊", "𐄋", "𐄌", "𐄍", "𐄎", "𐄏"], "sid": "survey:6f7e5ff7ed7d45d8", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𐄐", "𐄑", "𐄒", "𐄓", "𐄔", "𐄕", "𐄖", "𐄗", "𐄘"], "sid": "survey:a2fd22a5063e2966", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🙐", "🙘", "🙜"], "sid": "survey:bb9ea299c9e9d695", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🙨", "🙪"], "sid": "survey:64744b236b52d484", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["؆", "؇"], "sid": "survey:c90f71e37c26b29c", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["؉", "؊"], "sid": "survey:215897fb43b83416", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["፩", "፪", "፫", "፬", "፭", "፮", "፯", "፰", "፱"], "sid": "survey:1e598c3fd50e29e9", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["፲", "፳", "፴", "፵", "፶", "፷", "፸", "፹", "፺"], "sid": "survey:0262de0a52be4f0a", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["᧡", "᧢", "᧣", "᧤", "᧥", "᧦", "᧧", "᧨", "᧩", "᧪", "᧫", "᧬", "᧭", "᧮", "᧯"], "sid": "survey:470af4e5e0624700", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᚆ", "ᚇ", "ᚈ", "ᚉ", "ᚊ"], "sid": "survey:1ae397790770a2b6", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᚐ", "ᚑ", "ᚒ", "ᚓ", "ᚔ"], "sid": "survey:06c5ec744960056f", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᚕ", "ᚖ", "ᚗ", "ᚘ", "ᚙ"], "sid": "survey:327d8ab237ffaea9", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["௰", "௱", "௲"], "sid": "survey:74d3581d0e907694", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["༪", "༫", "༬", "༭", "༮", "༯", "༰", "༱", "༲"], "sid": "survey:05b11441ca4cde5a", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▕", "▐"], "sid": "survey:828f3068f01361f6", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▖", "▌", "▙", "█"], "sid": "survey:9a278ca1606711b2", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⠀", "⠁", "⠃", "⠇", "⠏", "⠟", "⠿", "⡿", "⣿"], "sid": "survey:e84b0be910bc724f", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⢀", "⣀", "⣠", "⣰", "⣸", "⣼", "⣾", "⣿"], "sid": "survey:c8564ec95a1a3796", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝋠", "𝋡", "𝋢", "𝋣", "𝋤", "𝋥", "𝋦", "𝋧", "𝋨", "𝋩", "𝋪", "𝋫", "𝋬", "𝋭", "𝋮", "𝋯", "𝋰", "𝋱", "𝋲", "𝋳"], "sid": "survey:1cb34bf1d76fff95", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𒐀", "𒐁", "𒐂", "𒐃", "𒐄", "𒐅", "𒐆", "𒐇"], "sid": "survey:b569371769ace978", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𒑲", "𒑳", "𒑴"], "sid": "survey:a8b6b32450a23ea8", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⿰", "⿲"], "sid": "survey:9dddf90a6ca52e29", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⿱", "⿳"], "sid": "survey:fcb18d04001e0737", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⿴", "⿵", "⿶", "⿷", "⿸", "⿹", "⿺", "⿻"], "sid": "survey:9d213c05a1686972", "surveyor": "grok-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["൰", "൱", "൲"], "sid": "survey:fe29a9ee72aa804e", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㍘", "㍙", "㍚", "㍛", "㍜", "㍝", "㍞", "㍟", "㍠", "㍡", "㍢", "㍣", "㍤", "㍥", "㍦", "㍧", "㍨", "㍩", "㍪", "㍫", "㍬", "㍭", "㍮", "㍯", "㍰"], "sid": "survey:237715cf4030ac9c", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㏠", "㏡", "㏢", "㏣", "㏤", "㏥", "㏦", "㏧", "㏨", "㏩", "㏪", "㏫", "㏬", "㏭", "㏮", "㏯", "㏰", "㏱", "㏲", "㏳", "㏴", "㏵", "㏶", "㏷", "㏸", "㏹", "㏺", "㏻", "㏼", "㏽", "㏾"], "sid": "survey:ba9860a63e1689a1", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎐", "㎑", "㎒", "㎓", "㎔"], "sid": "survey:5fa368836cf82776", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𑁒", "𑁓", "𑁔"], "sid": "survey:a50f2f8198ff0042", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𐩀", "𐩁", "𐩂"], "sid": "survey:7e21b70ed61fed31", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𐡘", "𐡙", "𐡚"], "sid": "survey:b8220f8f39b28db9", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𐤖", "𐤚", "𐤛"], "sid": "survey:65d2b568a7c00a9e", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𐡹", "𐡺", "𐡻", "𐡼"], "sid": "survey:fc7206d1c926e0f2", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𐏑", "𐏒"], "sid": "survey:883bcc5e4ea3e04d", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["䷀", "䷁"], "sid": "survey:ee2a855d4c9620da", "surveyor": "grok-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["🪹", "🪺"], "sid": "survey:d4838a5bd4bded30", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🪫", "🔋"], "sid": "survey:5c518625c678e8ec", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝂅", "𝂆", "𝂇", "𝂈"], "sid": "survey:51b08b1bf175d1a3", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝀯", "𝀰", "𝀱"], "sid": "survey:05c28190c8a9dd8c", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝂊", "𝂋", "𝂌", "𝂍"], "sid": "survey:ae9cade6516072e1", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝂏", "𝂒", "𝂖"], "sid": "survey:6d06cbc0971f75d7", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝂗", "𝂘", "𝂙"], "sid": "survey:e3d0990762885c14", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝃐", "𝃑", "𝃒", "𝃓"], "sid": "survey:f77ebbe6ffde0b09", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝃞", "𝃟", "𝃠", "𝃡"], "sid": "survey:bc186e087a4d4b9f", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝁏", "𝁎"], "sid": "survey:099b426e8bc7e87c", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝀃", "𝀄", "𝀅", "𝀆", "𝀊", "𝀋", "𝀑", "𝀒"], "sid": "survey:314f4d64a859315a", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝂚", "𝂛", "𝂜", "𝂝", "𝂞", "𝂟", "𝂠", "𝂡"], "sid": "survey:0c6145e440625729", "surveyor": "grok-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["﮲", "﮴", "﮶", "﮺"], "sid": "survey:0a094bb2ca1f61db", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ₒ", "o", "ᴏ", "O"], "sid": "survey:b5ca2c428c63d82f", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ₐ", "a", "ᴀ", "A"], "sid": "survey:8511eaa1ff588ea3", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ₑ", "e", "ᴇ", "E"], "sid": "survey:638c93068e58ab41", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᵢ", "i", "ɪ", "I"], "sid": "survey:3c7cad8bc48eb5ac", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᵤ", "u", "ᴜ", "U"], "sid": "survey:fb10600b4d66ed65", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ₙ", "n", "ɴ", "N"], "sid": "survey:9c815e978b513ece", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ₘ", "m", "ᴍ", "M"], "sid": "survey:dc3eb55398e1c20b", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ₗ", "l", "ʟ", "L"], "sid": "survey:b2049e5f75d37e88", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ₕ", "h", "ʜ", "H"], "sid": "survey:a02b22af0345188d", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ₚ", "p", "ᴘ", "P"], "sid": "survey:8507c0a66863d866", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ₜ", "t", "ᴛ", "T"], "sid": "survey:4c03ceeb87645790", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ₛ", "s", "S"], "sid": "survey:cad52f47df62411c", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ₓ", "x", "X"], "sid": "survey:6aa44de1296188e3", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᵒ", "o", "O"], "sid": "survey:e976e0e984325bc8", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ª", "a", "A"], "sid": "survey:01e66ac5bd4b9ccc", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["º", "o", "O"], "sid": "survey:08b9d0d9df092662", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ı", "i", "ï"], "sid": "survey:695ae43dd2fac308", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["o", "ȯ", "ö"], "sid": "survey:0075ed68b1ba99fd", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["a", "ȧ", "ä"], "sid": "survey:2cfc597ae7c35a99", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["u", "ü"], "sid": "survey:14157ef2e331d8e9", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["o", "ó", "ő"], "sid": "survey:31973ae9f30acd47", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["o", "ò", "ȍ"], "sid": "survey:b65e2c8efcd42a82", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["e", "é"], "sid": "survey:0497d46cd126165e", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["l", "ḷ", "ḹ"], "sid": "survey:0f6b7d9c5164aea9", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["r", "ṛ", "ṝ"], "sid": "survey:094b40489f172dd0", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["o", "ô", "ộ"], "sid": "survey:af26864d28ede68a", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["o", "ơ", "ợ"], "sid": "survey:6f341d6e8b2c611e", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ø", "ǿ"], "sid": "survey:c938a7a2c6afeb0b", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["a", "å"], "sid": "survey:fbbbac8bda69f8af", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["˙", "¨"], "sid": "survey:3bd87ddd22f51dfa", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["n", "m"], "sid": "survey:9571733efecb1dee", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["v", "w"], "sid": "survey:70570344179a47c4", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ǀ", "ǁ"], "sid": "survey:f025a04a962543e3", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["c", "o"], "sid": "survey:ac48d9ac85a2039f", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": [".", ":"], "sid": "survey:8bd303b3237cd5ed", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": [",", ";"], "sid": "survey:f5a22bd314eff879", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["'", "\""], "sid": "survey:dc065f863679e0f9", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["n", "ɲ", "ɳ", "ŋ"], "sid": "survey:87bb89bf00f94165", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["d", "ɖ", "ɗ"], "sid": "survey:afa37910c5532d19", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["l", "ɫ", "ɬ", "ɭ", "ɮ"], "sid": "survey:0af674e71744b97d", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["s", "ſ", "ʃ", "ʆ"], "sid": "survey:aa16eafee83feed4", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["z", "ʒ", "ʓ"], "sid": "survey:78aeb1b44545e344", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["t", "ʈ", "ƫ"], "sid": "survey:1a2204dee097bdd9", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["b", "ɓ"], "sid": "survey:0ebde39e23cb4600", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["g", "ɠ", "ɢ"], "sid": "survey:c2c36f2a14b631c1", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["r", "ɹ", "ɻ", "ʀ"], "sid": "survey:f0f3440908ad35d6", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["°", "º", "ₒ", "o", "ᴏ", "O", "ɵ", "ɔ", "ɶ", "ʘ", "ⱺ"], "sid": "survey:757bfdde07858574", "surveyor": "grok-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["ₒ", "o", "ᴏ", "O"], "sid": "survey:dd82950b568fb1a5", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ɵ", "o"], "sid": "survey:830a5439128a568d", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["o", "ɔ"], "sid": "survey:3c58160daeef0dbc", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["o", "ɶ"], "sid": "survey:d9b61168125a041b", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["o", "ʘ"], "sid": "survey:b8538a7a5d9959ec", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᄀ", "ᄁ", "ᄃ", "ᄄ", "ᄇ", "ᄈ", "ᄉ", "ᄊ", "ᄌ", "ᄍ"], "sid": "survey:37fa7e42f5c01d8e", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["α", "ἀ", "ἄ", "ἆ", "ᾳ", "ᾷ"], "sid": "survey:bca6dc9f8735a3c3", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["῍", "῎", "῏"], "sid": "survey:9bb053984a53c6a5", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ለ", "ሉ", "ሊ", "ላ", "ሌ", "ል", "ሎ"], "sid": "survey:6d60803e9b5fb39e", "surveyor": "grok-1", "type": "generator"}
+{"bump": 1.5, "glyphs": ["፡", "።"], "sid": "survey:d96a412ee0cc275f", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["᎒", "᎓"], "sid": "survey:c361043d308fb105", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᐁ", "ᐃ", "ᐅ", "ᐊ"], "sid": "survey:d88ff4ea9b2a7a41", "surveyor": "grok-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["ᐃ", "ᐄ", "ᐅ", "ᐆ", "ᐊ", "ᐋ"], "sid": "survey:81c07897ff0bba70", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᐱ", "ᑉ"], "sid": "survey:5fe4e9b9fed91c23", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᐡ", "ᐢ", "ᐣ", "ᐤ"], "sid": "survey:28b87bd5dd5e59ae", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᐟ", "ᐥ"], "sid": "survey:8e4d33460ee19382", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᐌ", "ᐍ"], "sid": "survey:8c1ec610a446f564", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᖕ", "ᖖ"], "sid": "survey:e5bddef86fe7ed91", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᗆ", "ᗇ"], "sid": "survey:1ff6fde25c12c8f0", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᢱ", "ᢲ"], "sid": "survey:990b7dda34fcdcb1", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᐃ", "ᐁ", "ᐅ", "ᐊ"], "sid": "survey:ed65d186fec80b7a", "surveyor": "grok-1", "type": "cyclic"}
+{"bump": 1.5, "glyphs": ["ᖰ", "ᖱ", "ᖲ", "ᖳ"], "sid": "survey:45f14e334c9d93b6", "surveyor": "grok-1", "type": "cyclic"}
+{"bump": 1.5, "glyphs": ["᜵", "᜶"], "sid": "survey:520d641d15b99e2f", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["។", "៕"], "sid": "survey:bc06075ee7e321c0", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["᠄", "᠅"], "sid": "survey:e90fd6c7e353b5e1", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᧈ", "ᧉ"], "sid": "survey:f1ab065ee98bbbcd", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᥰ", "ᥱ", "ᥲ", "ᥳ", "ᥴ"], "sid": "survey:4b261eb4e81e44ca", "surveyor": "grok-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["ᬅ", "ᬆ"], "sid": "survey:85762249db8b4efa", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["᭞", "᭟"], "sid": "survey:9b0091acd9a3fd64", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["᭚", "᭽"], "sid": "survey:5262ea0dd78854fe", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["᱾", "᱿"], "sid": "survey:2674a98c18d26bc8", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ⴀ", "ა", "Ა", "Ⴀ"], "sid": "survey:7447d385e58f4e0a", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ⰰ", "ⰰ"], "sid": "survey:0981a5e16e8b2b6c", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ⴷ", "ⴸ", "ⴹ", "ⴺ"], "sid": "survey:98f73e63deba8147", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["᳀", "᳁", "᳂"], "sid": "survey:7c2e9581565c681b", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ⶠ", "ⶡ", "ⶢ", "ⶣ", "ⶤ", "ⶥ", "ⶦ"], "sid": "survey:b279f936a471ca4c", "surveyor": "grok-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": [")", "}", "|", "{", "("], "sid": "survey:4fa70ce2a837a8af", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["-", "→", "}", ")"], "sid": "survey:e3e7b35c2c9386cd", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": [".", "-", "□", "■"], "sid": "survey:60934f02190f1c89", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["|", "∥", "⦀"], "sid": "survey:041c652d010f0ef5", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["❘", "❙", "❚"], "sid": "survey:3e678d2580ca7a56", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["<", "⊂", "⊆", "⋐"], "sid": "survey:f7f104f9396834f9", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["<", "≪", "⋘"], "sid": "survey:c6d814eb6d9b53f9", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["<", "⟨", "⟪"], "sid": "survey:f18668c0888da197", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["-", "~", "≋"], "sid": "survey:ba18c5f00e576e6d", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["‐", "‑", "‒", "–", "—"], "sid": "survey:01b35d31e2b431f7", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["+", "×", "∗", "*", "✶", "✹"], "sid": "survey:090ddefd3d1a1e5f", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": [".", "o", "⊙", "⊚", "◎", "◯"], "sid": "survey:f9017bf43c28e1b6", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["c", "o", "ɔ"], "sid": "survey:6594a67a23d63c3f", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["v", "w"], "sid": "survey:0bdbb2ef281c74a6", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["v", "∨", "⋁"], "sid": "survey:467dd73e78afd2e1", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["n", "m"], "sid": "survey:66fb5dabe9492c19", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["∠", "△", "▲"], "sid": "survey:a2c14160f19e1ab1", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["<", "△"], "sid": "survey:e12354c07db8636f", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["△", "▷", "▽", "◁"], "sid": "survey:17df7ec142d79cee", "surveyor": "grok-1", "type": "cyclic"}
+{"bump": 1.5, "glyphs": ["-", "→", "↔"], "sid": "survey:a3d7754fd06ce1f1", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["←", "→", "↔"], "sid": "survey:21960e97c37b0050", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["/", "√", "✓"], "sid": "survey:592815bd7634e851", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["☰", "☱", "☳", "☷"], "sid": "survey:d7795e23dd2e7ae1", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": [">", "}", ")", "|", "(", "{", "<"], "sid": "survey:5a068dac858ee2d6", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["•", "o", "⊃", ")", "}", "|", "{", "(", "⊂"], "sid": "survey:635870e8ef21c7cf", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["┌", "┐", "┘", "└"], "sid": "survey:8f141b034ea0ed3c", "surveyor": "grok-1", "type": "cyclic"}
+{"bump": 1.5, "glyphs": ["⌈", "⌉", "⌋", "⌊"], "sid": "survey:ce0e2d4b963aabd9", "surveyor": "grok-1", "type": "cyclic"}
+{"bump": 1.5, "glyphs": ["╭", "╮", "╯", "╰"], "sid": "survey:630fb2c92605c643", "surveyor": "grok-1", "type": "cyclic"}
+{"bump": 1.5, "glyphs": ["⊢", "⊤", "⊣"], "sid": "survey:fb48d33fb9fee8e8", "surveyor": "grok-1", "type": "cyclic"}
+{"bump": 1.5, "glyphs": ["∈", "∋", "⊂", "⊃", "∀", "ʌ"], "sid": "survey:92a5c813fc654233", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["6", "9"], "sid": "survey:a73d817c3e69ae52", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["∇", "∆"], "sid": "survey:978793e905ea7e40", "surveyor": "grok-1", "type": "morph"}
+{"bump": 1.5, "glyphs": ["○", "◔", "◑", "◕", "●"], "sid": "survey:2f0d706ed02e91fb", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["◐", "◑"], "sid": "survey:828fa02489f0cc67", "surveyor": "sonnet-survey-1", "type": "equivalence"}
+{"bump": 1.5, "glyphs": ["◌", "○", "◎", "◉", "●"], "sid": "survey:f8e7d65b72780ff4", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▫", "◽", "◻", "□"], "sid": "survey:c0b724c92c4f7bc0", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▪", "◾", "◼", "■"], "sid": "survey:5e46d9d849a503b1", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▵", "△"], "sid": "survey:cee17f04d473347a", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▴", "▲"], "sid": "survey:53a964264f1ad02e", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["□", "▤", "▦", "◫", "▩", "■"], "sid": "survey:fea3d0a77f6e6831", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▤", "▥"], "sid": "survey:928a829e597c70ee", "surveyor": "sonnet-survey-1", "type": "equivalence"}
+{"bump": 1.5, "glyphs": ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"], "sid": "survey:1418dd26aac48ef2", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["☽", "☾"], "sid": "survey:4bd6754fbf8ef968", "surveyor": "sonnet-survey-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⚆", "⚇"], "sid": "survey:3362981705ae4627", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⚈", "⚉"], "sid": "survey:b4e0d89039fce4fd", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⚆", "⚇", "⚈", "⚉"], "sid": "survey:de5afb5c68a20f7d", "surveyor": "sonnet-survey-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⚊", "⚋", "⚌", "⚍", "⚎", "⚏"], "sid": "survey:46c8007fd3763284", "surveyor": "sonnet-survey-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["♙", "♘", "♗", "♖", "♕", "♔"], "sid": "survey:72e5a23cc88aa5e3", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⚬", "⚪", "⚫"], "sid": "survey:4bf552fe884b8a37", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"], "sid": "survey:80e36aa099ce0d1e", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▏", "▎", "▍", "▌", "▋", "▊", "▉", "█"], "sid": "survey:0e5d7d508a1a95b8", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["░", "▒", "▓", "█"], "sid": "survey:e4fdd992dd32912b", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▘", "▖", "▝", "▗", "▙", "▛", "▜", "▟"], "sid": "survey:41d5c061f6d52bcc", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▘", "▖", "▝", "▗"], "sid": "survey:37a8b5ce4687ed90", "surveyor": "sonnet-survey-1", "type": "equivalence"}
+{"bump": 1.5, "glyphs": ["▙", "▛", "▜", "▟"], "sid": "survey:88135beea799655a", "surveyor": "sonnet-survey-1", "type": "equivalence"}
+{"bump": 1.5, "glyphs": ["⁰", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹", "₀", "₁", "₂", "₃", "₄", "₅", "₆", "₇", "₈", "₉"], "sid": "survey:ac732c6fdafbfb85", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ", "Ⅶ", "Ⅷ", "Ⅸ", "Ⅹ", "Ⅺ", "Ⅻ"], "sid": "survey:a975847d64cddb1d", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⅒", "⅑", "⅛", "⅐", "⅙", "⅕", "⅓", "⅖", "⅗", "⅔", "¾", "⅘", "⅚", "⅞"], "sid": "survey:0d544049a1fd1814", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["→", "⇉", "⇶"], "sid": "survey:dd2a8d37661ed33e", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["→", "⇒", "⇛"], "sid": "survey:9fcde3747d555bbc", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⇷", "⇺"], "sid": "survey:608cafcbf3833deb", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩", "⑪", "⑫", "⑬", "⑭", "⑮", "⑯", "⑰", "⑱", "⑲", "⑳"], "sid": "survey:699cb8307a51095d", "surveyor": "sonnet-survey-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⓪", "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩"], "sid": "survey:ab1634446ee71cab", "surveyor": "sonnet-survey-2", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⑴", "⑵", "⑶", "⑷", "⑸", "⑹", "⑺", "⑻", "⑼", "⑽"], "sid": "survey:71687da96407900f", "surveyor": "sonnet-survey-2", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⓵", "⓶", "⓷", "⓸", "⓹"], "sid": "survey:b45014f50fbf0136", "surveyor": "sonnet-survey-2", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["○", "◔", "◑", "◕", "●"], "sid": "survey:77f12f0c6d608ecf", "surveyor": "sonnet-survey-2", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["◐", "◑"], "sid": "survey:62882ee99dcecb96", "surveyor": "sonnet-survey-2", "type": "equivalence"}
+{"bump": 1.5, "glyphs": ["▪", "◽", "◻", "■"], "sid": "survey:3e2cce1c0eb355b0", "surveyor": "sonnet-survey-2", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▫", "◽", "◻", "□"], "sid": "survey:bd0ac369a4fb47a4", "surveyor": "sonnet-survey-2", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▵", "▴", "△", "▲"], "sid": "survey:7231707304f2e324", "surveyor": "sonnet-survey-2", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["△", "▲"], "sid": "survey:03e6e24e3defa1cb", "surveyor": "sonnet-survey-2", "type": "negative"}
+{"bump": 1.5, "glyphs": ["□", "▤", "▨", "▩", "■"], "sid": "survey:5551ef023ed36abf", "surveyor": "sonnet-survey-2", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["◯", "●", "○"], "sid": "survey:f53c9bd0e2a02cf7", "surveyor": "sonnet-survey-2", "type": "negative"}
+{"bump": 1.5, "glyphs": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"], "sid": "survey:2a920fa2de88062c", "surveyor": "sonnet-survey-2", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["░", "▒", "▓", "█"], "sid": "survey:a5037ee9e125394b", "surveyor": "sonnet-survey-2", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▏", "▎", "▍", "▌", "▋", "▊", "▉", "█"], "sid": "survey:1d6bbdaafb0d33e3", "surveyor": "sonnet-survey-2", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▀", "▄", "▐", "▌"], "sid": "survey:e734af96effd5ff6", "surveyor": "sonnet-survey-2", "type": "equivalence"}
+{"bump": 1.5, "glyphs": ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"], "sid": "survey:c90c454f234639e6", "surveyor": "sonnet-survey-2", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⠀", "⠁", "⠃", "⠇", "⠏", "⠟", "⠿", "⣿"], "sid": "survey:4c223d8374162b37", "surveyor": "sonnet-survey-2", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["<", "≪", "⋘"], "sid": "survey:41174f85dd92d774", "surveyor": "sonnet-survey-2", "type": "sequence"}
+{"bump": 1.5, "glyphs": [">", "≫", "⋙"], "sid": "survey:f76ee875bd7f55fb", "surveyor": "sonnet-survey-2", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞄", "🞅", "🞆", "🞇", "🞈", "🞉"], "sid": "survey:257a687a4f652c7b", "surveyor": "sonnet-survey-2", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩"], "sid": "survey:9af58f48524b3398", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⓪", "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩"], "sid": "survey:d85dc44f55271cae", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⑴", "⑵", "⑶", "⑷", "⑸", "⑹", "⑺", "⑻", "⑼", "⑽"], "sid": "survey:10eed8bd5f965a02", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["①", "⑴", "⒈"], "sid": "survey:aeb65733dbea25db", "surveyor": "sonnet-3", "type": "equivalence"}
+{"bump": 1.5, "glyphs": ["Ⓐ", "①", "ⓐ"], "sid": "survey:89d5dcd02ea53ebc", "surveyor": "sonnet-3", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⓪", "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩", "⑪", "⑫", "⑬", "⑭", "⑮", "⑯", "⑰", "⑱", "⑲", "⑳"], "sid": "survey:3a6d16a5c016de96", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["◌", "○", "◔", "◑", "◕", "●"], "sid": "survey:ab0e01f6f48fa916", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["◐", "◑", "◒", "◓"], "sid": "survey:8a24c3bc801775bd", "surveyor": "sonnet-3", "type": "equivalence"}
+{"bump": 1.5, "glyphs": ["▫", "▪", "◽", "◾", "□", "■"], "sid": "survey:fc883059f19007a5", "surveyor": "sonnet-3", "type": "negative"}
+{"bump": 1.5, "glyphs": ["▪", "◻", "◼"], "sid": "survey:8b5ebc7fb86df081", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▹", "▸", "►"], "sid": "survey:77f3d2e3f38ec255", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▵", "▴", "▽", "▾"], "sid": "survey:f5565e01511e1d3b", "surveyor": "sonnet-3", "type": "negative"}
+{"bump": 1.5, "glyphs": ["◦", "○", "◯"], "sid": "survey:f76b530279a55312", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⠀", "⠁", "⠃", "⠇", "⠏", "⠟", "⠿"], "sid": "survey:9b4eee5002cc4936", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⅛", "⅕", "⅓", "⅜", "⅔", "⅝", "⅞"], "sid": "survey:a0f046150bb05591", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ", "Ⅶ", "Ⅷ", "Ⅸ", "Ⅹ"], "sid": "survey:57d2f7f779e5a7e7", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ↀ", "ↁ", "ↂ"], "sid": "survey:6bf8661964135624", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🌑", "🌒", "🌓", "🌔", "🌕"], "sid": "survey:29f538e6bfdb2c74", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞅", "🞆", "🞇", "🞈", "🞉"], "sid": "survey:36b0e197329b9b52", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞌", "🞍", "🞎", "🞏", "🞐", "🞑", "🞒", "🞓"], "sid": "survey:3ae044700ae54d5b", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞗", "🞘", "🞙"], "sid": "survey:804111bad60d3525", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["→", "⇒", "⇛"], "sid": "survey:91e68f13b4a0b530", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⇀", "⇒"], "sid": "survey:9ee16b2acc77a620", "surveyor": "sonnet-3", "type": "negative"}
+{"bump": 1.5, "glyphs": ["<", "≪", "⋘"], "sid": "survey:3163b459d404569e", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["≤", "≦", "⊆", "⊂"], "sid": "survey:b2c1a9c4bef4c8e3", "surveyor": "sonnet-3", "type": "negative"}
+{"bump": 1.5, "glyphs": ["≺", "≼"], "sid": "survey:364a8db159d8f911", "surveyor": "sonnet-3", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"], "sid": "survey:a058e1ac7be87039", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["☰", "☱", "☲", "☳", "☴", "☵", "☶", "☷"], "sid": "survey:6f0a302bf3651139", "surveyor": "sonnet-3", "type": "negative"}
+{"bump": 1.5, "glyphs": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"], "sid": "survey:4480ec023016b636", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["░", "▒", "▓", "█"], "sid": "survey:e4a1181496a4c002", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▏", "▎", "▍", "▌", "▋", "▊", "▉", "█"], "sid": "survey:24f1838e52ff9d39", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▖", "▗", "▘", "▝", "▚", "▞", "▄", "▀", "▌", "▐", "▙", "▛", "▜", "▟", "█"], "sid": "survey:e617217ef0191fe0", "surveyor": "sonnet-3", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩"], "sid": "survey:152323b281c3f31d", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⑴", "⑵", "⑶", "⑷", "⑸", "⑹", "⑺", "⑻", "⑼", "⑽"], "sid": "survey:30540aaf476fcf19", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ⓐ", "Ⓑ", "Ⓒ", "Ⓩ"], "sid": "survey:037925d12bccdfc1", "surveyor": "sonnet-survey-4", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⓪", "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩"], "sid": "survey:02e238c05fa00b87", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⓵", "⓶", "⓷", "⓸", "⓹", "⓺", "⓻", "⓼", "⓽", "⓾"], "sid": "survey:ead55c44e4bb68e2", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⓫", "⓬", "⓭", "⓮", "⓯", "⓰", "⓱", "⓲", "⓳", "⓴"], "sid": "survey:7a25a15d0848826d", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"], "sid": "survey:04adafd4bee6e5de", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["░", "▒", "▓", "█"], "sid": "survey:be4bfbc4c7f8c666", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▏", "▎", "▍", "▌", "▋", "▊", "▉", "█"], "sid": "survey:29ed5890a6b5613f", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▖", "▗", "▘", "▝", "▚", "▞", "▙", "▛", "▜", "▟"], "sid": "survey:0e39b32ed0fb2996", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["○", "◔", "◑", "◕", "●"], "sid": "survey:2fb461bc86be7733", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["◌", "○", "◍", "◎", "●"], "sid": "survey:66ec37bc878b6a5a", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▫", "▪", "◽", "◾", "□", "■", "◻", "◼"], "sid": "survey:f61415f302c79768", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▱", "▰"], "sid": "survey:20e322f0872ef947", "surveyor": "sonnet-survey-4", "type": "negative"}
+{"bump": 1.5, "glyphs": ["▵", "▴", "▹", "▸", "▿", "▾", "◃", "◂"], "sid": "survey:07ea85b849a51b0e", "surveyor": "sonnet-survey-4", "type": "negative"}
+{"bump": 1.5, "glyphs": ["▵", "▴", "▷", "▸", "▶"], "sid": "survey:152c9530818d16b4", "surveyor": "sonnet-survey-4", "type": "negative"}
+{"bump": 1.5, "glyphs": ["◰", "◱", "◲", "◳"], "sid": "survey:cd915beffc5fc9be", "surveyor": "sonnet-survey-4", "type": "cyclic"}
+{"bump": 1.5, "glyphs": ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"], "sid": "survey:6d11e926c0964201", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["☰", "☱", "☲", "☳", "☴", "☵", "☶", "☷"], "sid": "survey:9d6787f09ad7e80b", "surveyor": "sonnet-survey-4", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⚌", "⚍", "⚎", "⚏"], "sid": "survey:be2c3eafc22fdd40", "surveyor": "sonnet-survey-4", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⚊", "⚋"], "sid": "survey:7ea15fff23d1e524", "surveyor": "sonnet-survey-4", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⚆", "⚇", "⚈", "⚉"], "sid": "survey:080974737936c440", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⚪", "⚫", "⚬"], "sid": "survey:5db7f4f4f14e029c", "surveyor": "sonnet-survey-4", "type": "negative"}
+{"bump": 1.5, "glyphs": ["♩", "♪", "♫", "♬"], "sid": "survey:ada0c4bd5335d67a", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["♳", "♴", "♵", "♶", "♷", "♸", "♹"], "sid": "survey:607745668228f96f", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ"], "sid": "survey:b215b76e83a7e37a", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ⅰ", "Ⅴ", "Ⅹ", "Ⅼ", "Ⅽ", "Ⅾ", "Ⅿ"], "sid": "survey:8a3ecca6f9b26493", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⅛", "⅕", "⅓", "⅜", "⅗", "⅔", "⅘", "⅚", "⅞"], "sid": "survey:a9bf2bb4e206ab06", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["♙", "♘", "♗", "♖", "♕", "♔"], "sid": "survey:bcf890ce196b7b90", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["→", "⇒", "⇛"], "sid": "survey:f58f0a42cf3133e1", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⇉", "⇒"], "sid": "survey:ee2ad4f693f8c3da", "surveyor": "sonnet-survey-4", "type": "question"}
+{"bump": 1.5, "glyphs": ["←", "↚", "⇍"], "sid": "survey:a86d1c546d1bb005", "surveyor": "sonnet-survey-4", "type": "negative"}
+{"bump": 1.5, "glyphs": ["↑", "⇑"], "sid": "survey:768904ef382e279f", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∫", "∬", "∭"], "sid": "survey:0c1c6a5381a24e11", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∮", "∯", "∰"], "sid": "survey:54cb9e0e7ea46fdb", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["<", "≪", "⋘"], "sid": "survey:d01391bc6882efc9", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["√", "∛", "∜"], "sid": "survey:6797150602028199", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⊂", "⊆", "⊊"], "sid": "survey:ad0bf102a4d531c1", "surveyor": "sonnet-survey-4", "type": "negative"}
+{"bump": 1.5, "glyphs": ["∀", "∃"], "sid": "survey:8d5ea050358fafab", "surveyor": "sonnet-survey-4", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⠀", "⠁", "⠃", "⠇", "⠏", "⠟", "⠿", "⣿"], "sid": "survey:68c3397aa5507d11", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⏑", "⏗", "⏘", "⏙"], "sid": "survey:bbe5a4d7328c5efb", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⏴", "⏵", "⏶", "⏷"], "sid": "survey:4044df5d3f3b39e3", "surveyor": "sonnet-survey-4", "type": "cyclic"}
+{"bump": 1.5, "glyphs": ["▶", "⏩"], "sid": "survey:812d1a5bf7e7f794", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⎺", "⎻", "⎼", "⎽"], "sid": "survey:40e40ce37b1b53a5", "surveyor": "sonnet-survey-4", "type": "negative"}
+{"bump": 1.5, "glyphs": ["🀱", "🀲", "🀳", "🀴", "🀵", "🀶", "🀷"], "sid": "survey:04961a0b0148641d", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🀱", "🀹", "🁁"], "sid": "survey:3b7e5d061f4fe07a", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["✶", "✴", "✹"], "sid": "survey:2393a1e62047d2d1", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["✩", "✫", "✬", "✭", "✮"], "sid": "survey:3c7cc3fdf20a8501", "surveyor": "sonnet-survey-4", "type": "negative"}
+{"bump": 1.5, "glyphs": ["➙", "➔", "➡"], "sid": "survey:997e24868810c4f9", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🌑", "🌒", "🌓", "🌔", "🌕"], "sid": "survey:0f90cefac2bdeea7", "surveyor": "sonnet-survey-4", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🌖", "🌗", "🌘"], "sid": "survey:fbf5e7704c3ec881", "surveyor": "sonnet-survey-4", "type": "cyclic"}
+{"bump": 1.5, "glyphs": ["⅐", "⅑", "⅒"], "sid": "survey:4456f7e46cb1aa46", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⅛", "⅜", "⅝", "⅞"], "sid": "survey:1b5901720c8670de", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⅙", "⅚"], "sid": "survey:b4c0d06ed03ab915", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⅕", "⅖", "⅗", "⅘"], "sid": "survey:2190ac650bda2867", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ", "Ⅶ", "Ⅷ", "Ⅸ", "Ⅹ", "Ⅺ", "Ⅻ"], "sid": "survey:71381e14a0aba772", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ⅰ", "Ⅼ", "Ⅽ", "Ⅾ", "Ⅿ"], "sid": "survey:960a8ea2ed70c075", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ⅰ", "ⅱ", "ⅲ", "ⅳ", "ⅴ", "ⅵ", "ⅶ", "ⅷ", "ⅸ", "ⅹ", "ⅺ", "ⅻ"], "sid": "survey:bce9408476a9f86c", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ↀ", "ↁ", "ↂ"], "sid": "survey:235116315fda98b9", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⅟", "↉"], "sid": "survey:a155ab0e819dde36", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"], "sid": "survey:da8584984cda9707", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⚆", "⚇", "⚈", "⚉"], "sid": "survey:411f843a07511bcb", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⚊", "⚌"], "sid": "survey:cedb70afd826128a", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⚬", "⚪"], "sid": "survey:537b20f564356b46", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["♩", "♪", "♫", "♬"], "sid": "survey:bc7cdc9cf13155a5", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["♳", "♴", "♵", "♶", "♷", "♸", "♹"], "sid": "survey:698bc34b575d2760", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["☆", "★"], "sid": "survey:2c00a77598ff5186", "surveyor": "sonnet5-1", "type": "question"}
+{"bump": 1.5, "glyphs": ["⚹", "⚺", "⚻", "⚼"], "sid": "survey:fedba374bce53c78", "surveyor": "sonnet5-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⛀", "⛁"], "sid": "survey:03bfc8b917aee740", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["♔", "♕", "♖", "♗", "♘", "♙"], "sid": "survey:f3ac055da5c53ae2", "surveyor": "sonnet5-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["○", "◔", "◐", "◕", "●"], "sid": "survey:2f35e687e2178a31", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["◌", "○", "◯"], "sid": "survey:3bb899653e7146ab", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▪", "◽", "◻"], "sid": "survey:363165c3bff436b0", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▴", "▲"], "sid": "survey:642ae53960763231", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▬", "▮"], "sid": "survey:633e2c77d3f8d54e", "surveyor": "sonnet5-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["◇", "◈"], "sid": "survey:919585658f43c3a1", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["○", "◎", "◉", "●"], "sid": "survey:4c69c3eeac9556b4", "surveyor": "sonnet5-1", "type": "question"}
+{"bump": 1.5, "glyphs": ["◰", "◱", "◲", "◳"], "sid": "survey:5af976df294965a8", "surveyor": "sonnet5-1", "type": "cyclic"}
+{"bump": 1.5, "glyphs": ["⓪", "①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩", "⑪", "⑫", "⑬", "⑭", "⑮", "⑯", "⑰", "⑱", "⑲", "⑳"], "sid": "survey:e1c3e52cfd482650", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⑴", "⑵", "⑶", "⑷", "⑸", "⑹", "⑺", "⑻", "⑼", "⑽", "⑾", "⑿", "⒀", "⒁", "⒂", "⒃", "⒄", "⒅", "⒆", "⒇"], "sid": "survey:7847d2b5b3735b14", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⒈", "⒉", "⒊", "⒋", "⒌", "⒍", "⒎", "⒏", "⒐", "⒑", "⒒", "⒓", "⒔", "⒕", "⒖", "⒗", "⒘", "⒙", "⒚", "⒛"], "sid": "survey:4403da368790cac3", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["①", "⑴", "⒈"], "sid": "survey:212d1687f0f9be73", "surveyor": "sonnet5-1", "type": "equivalence"}
+{"bump": 1.5, "glyphs": ["⓿", "⓫", "⓬", "⓭", "⓮", "⓯", "⓰", "⓱", "⓲", "⓳", "⓴"], "sid": "survey:827693ea3cbc8ff2", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⓵", "⓶", "⓷", "⓸", "⓹", "⓺", "⓻", "⓼", "⓽", "⓾"], "sid": "survey:3498c7d019da301a", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⒜", "Ⓐ", "ⓐ"], "sid": "survey:13a5f232152de8d9", "surveyor": "sonnet5-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["∫", "∬", "∭"], "sid": "survey:ecbfc45618f4c50f", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["√", "∛", "∜"], "sid": "survey:54fe74562b6abce8", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["<", "≤", "≪"], "sid": "survey:0ba1b5b87052bee7", "surveyor": "sonnet5-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⊂", "⊆"], "sid": "survey:c3195d1319b013c8", "surveyor": "sonnet5-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⋮", "⋯", "⋰", "⋱"], "sid": "survey:1f85f710230e509f", "surveyor": "sonnet5-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["→", "⇒", "⇉", "⇛", "⇶"], "sid": "survey:1ea2cf6a057361ab", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["→", "⇒"], "sid": "survey:4a5c65c5c6895196", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⇀", "⇉"], "sid": "survey:bc27baaae6861342", "surveyor": "sonnet5-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⇠", "→"], "sid": "survey:9105a9ceb46c045f", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["↺", "↻"], "sid": "survey:376c20d663b365e4", "surveyor": "sonnet5-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["❘", "❙", "❚"], "sid": "survey:939083045a1781f7", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["❶", "❷", "❸", "❹", "❺", "❻", "❼", "❽", "❾", "❿"], "sid": "survey:1f3a262a3cdd3138", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["➀", "➁", "➂", "➃", "➄", "➅", "➆", "➇", "➈", "➉"], "sid": "survey:c89985d0233e067e", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["✓", "✔"], "sid": "survey:cf94e132f982ccc4", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["✕", "✖"], "sid": "survey:7248e881cf7db10e", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["✗", "✘"], "sid": "survey:c1177b8ca0d685d2", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["✱", "✲", "✳"], "sid": "survey:66eda84965ca5e0b", "surveyor": "sonnet5-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["✦", "✧"], "sid": "survey:95aa865e63e939b7", "surveyor": "sonnet5-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["─", "━"], "sid": "survey:6769baf29ba21135", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["│", "┃"], "sid": "survey:f4d44e819772862d", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["┈", "┄"], "sid": "survey:9c62fe9e92b3e7ab", "surveyor": "sonnet5-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["─", "═"], "sid": "survey:e9c47c04eaf8fe75", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["˥", "˦", "˧", "˨", "˩"], "sid": "survey:032f4543297cb1e9", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⁰", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹"], "sid": "survey:89c4b1b9665c077d", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["₀", "₁", "₂", "₃", "₄", "₅", "₆", "₇", "₈", "₉"], "sid": "survey:a9a1298a9f50a204", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⁵", "₅"], "sid": "survey:67b748799dee2f03", "surveyor": "sonnet5-1", "type": "equivalence"}
+{"bump": 1.5, "glyphs": ["⠀", "⠁", "⠃", "⠇", "⠏", "⠟", "⠿"], "sid": "survey:7c8b881623fba766", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"], "sid": "survey:66d246eb0ae2040e", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["░", "▒", "▓", "█"], "sid": "survey:06ee29b7ab82d805", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▏", "▎", "▍", "▌", "▋", "▊", "▉", "█"], "sid": "survey:afe00e557aaaa4ba", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["‐", "–", "—"], "sid": "survey:4c4834a830329292", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["․", "‥", "…"], "sid": "survey:3c044efd55b05968", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["†", "‡"], "sid": "survey:1dc4a3972d288e63", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["′", "″", "‴", "⁗"], "sid": "survey:3c4efe5ac52a87e3", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["‰", "‱"], "sid": "survey:6328dcc5e1387dc3", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⁚", "⁖", "⁘", "⁙"], "sid": "survey:a3a3dd01dfafe1de", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["¹", "²", "³"], "sid": "survey:0e55d0e370bd2e13", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["¼", "½", "¾"], "sid": "survey:e4e70a40174754b5", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["小", "中", "大"], "sid": "survey:e87abebe3a5d804a", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["一", "二", "三", "四", "五"], "sid": "survey:8426cc12d8cc6bf2", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["十", "百", "千", "万"], "sid": "survey:1cf0b3bc8c9f52b3", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["*", "⁑", "⁂"], "sid": "survey:5091d3219da84d8b", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["✦", "✶", "✳", "✴", "✹", "✺"], "sid": "survey:9fbe8ce30135b5ef", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🀱", "🀲", "🀳", "🀴", "🀵", "🀶", "🀷"], "sid": "survey:b1d8c84eb7e2895f", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🀰", "🀱"], "sid": "survey:c733d953623da617", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🂡", "🂢", "🂣", "🂤", "🂥", "🂦", "🂧", "🂨", "🂩", "🂪"], "sid": "survey:886aafe9c99d85af", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🂪", "🂫", "🂭", "🂮"], "sid": "survey:d0733a6083c592fa", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⏗", "⏘", "⏙"], "sid": "survey:1dad97b25392ca22", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▶", "⏩", "⏭"], "sid": "survey:cf0b163849b28c82", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⏺", "⏹"], "sid": "survey:b25fcfd1db056417", "surveyor": "sonnet5-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["㈠", "㈡", "㈢", "㈣", "㈤", "㈥", "㈦", "㈧", "㈨", "㈩"], "sid": "survey:3e2db8ee50274b14", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㉈", "㉉", "㉊", "㉋", "㉌", "㉍", "㉎"], "sid": "survey:26e02c9a4b784f28", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝅝", "𝅗", "𝅘"], "sid": "survey:7fc64004dfa6ddd9", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝆏", "𝆐", "𝆑"], "sid": "survey:0afb34ee01522853", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝆒", "𝆓"], "sid": "survey:2885438caffde6c0", "surveyor": "sonnet5-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["⬝", "⬛"], "sid": "survey:845b137556662e62", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⭑", "⭐"], "sid": "survey:3551e2a9d85088f3", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⬅", "⬆", "➡", "⬇"], "sid": "survey:602e7955ee45ee0f", "surveyor": "sonnet5-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["🀙", "🀚", "🀛", "🀜", "🀝", "🀞", "🀟", "🀠", "🀡"], "sid": "survey:09cdbcc40cb202d6", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🀇", "🀐"], "sid": "survey:67929cbc1ceab757", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🄁", "🄂", "🄃", "🄄", "🄅", "🄆", "🄇", "🄈", "🄉", "🄊"], "sid": "survey:e1e2b6ca6a4fd7b6", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🌑", "🌒", "🌓", "🌔", "🌕"], "sid": "survey:1100a126d16fa1f8", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🌕", "🌖", "🌗", "🌘", "🌑"], "sid": "survey:15fb977d32efa4de", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["😀", "😁", "😂"], "sid": "survey:420d6635f14fdd6a", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["😢", "😭"], "sid": "survey:67a66e68abfb5bec", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["😮", "😯", "😲", "😱"], "sid": "survey:2702807398bb4489", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ℵ", "ℶ", "ℷ", "ℸ"], "sid": "survey:6a078d393849bc57", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⟨", "⟪"], "sid": "survey:96fbdded1983b084", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⟶", "⟹"], "sid": "survey:880ae91914ed189c", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⧺", "⧻"], "sid": "survey:51254dbd52b08495", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["〡", "〢", "〣", "〤", "〥", "〦", "〧", "〨", "〩", "〸", "〹", "〺"], "sid": "survey:7583af2423887433", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["〈", "《"], "sid": "survey:3850b2b6c343df66", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["〇", "〡"], "sid": "survey:9a1fb7a6d4acf458", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㌰", "㌨", "㍉", "㌢", "㌔", "㍋", "㌐"], "sid": "survey:fc640d7cb08d2413", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎜", "㎝", "㎞"], "sid": "survey:0cae52a558b0dd8d", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎟", "㎠", "㎡", "㎢"], "sid": "survey:6d295dcf64114dd0", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎣", "㎤", "㎥", "㎦"], "sid": "survey:c3cff9b016ede1b3", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎐", "㎑", "㎒", "㎓"], "sid": "survey:46e54cacab5582e9", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎎", "㎏"], "sid": "survey:e8a2f22a0a0bb3b9", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎩", "㎪", "㎫"], "sid": "survey:d9e8e7491c5df580", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎰", "㎱", "㎳"], "sid": "survey:c3b296bddad901ed", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎽", "㎾", "㎿"], "sid": "survey:5014f4ec054ef2b6", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["０", "１", "２", "３", "４", "５", "６", "７", "８", "９"], "sid": "survey:aa7fbd333b97b14d", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🈩", "🈔", "🈪"], "sid": "survey:7b9cbd99598d18dd", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🌣", "🌤", "🌥", "🌦"], "sid": "survey:840dc30f2b9e529a", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🔇", "🔈", "🔉", "🔊"], "sid": "survey:0d4e90c5307aba73", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🔅", "🔆"], "sid": "survey:9812adad6bf93d9d", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🔍", "🔎"], "sid": "survey:8af9eb720a11b19f", "surveyor": "sonnet5-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["🔸", "🔶"], "sid": "survey:3e98ec1b62149791", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🔹", "🔷"], "sid": "survey:9ba905fc01207a91", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🔼", "🔺"], "sid": "survey:ff0e3c13a96f4654", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "🔟"], "sid": "survey:8e05ac16d4dde2f9", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𐄇", "𐄈", "𐄉", "𐄊", "𐄋", "𐄌", "𐄍", "𐄎", "𐄏"], "sid": "survey:eb2ffd82c4908e6a", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𐄐", "𐄑", "𐄒", "𐄓", "𐄔", "𐄕", "𐄖", "𐄗", "𐄘"], "sid": "survey:e8ca5ccda28e9aa7", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𐄙", "𐄚", "𐄛", "𐄜", "𐄝", "𐄞", "𐄟", "𐄠", "𐄡"], "sid": "survey:e32cf3c4920563ec", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𐄢", "𐄣", "𐄤", "𐄥", "𐄦", "𐄧", "𐄨", "𐄩", "𐄪"], "sid": "survey:ae5e512fb9c11144", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⬝", "▪", "◽", "◻", "⬛"], "sid": "survey:15d21df699187a43", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["▫", "░", "▒", "▓", "█"], "sid": "survey:353306fbb3ab18a0", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🔅", "░", "▒", "▓", "█", "🔆"], "sid": "survey:c383c1f5bd9004be", "surveyor": "sonnet5-1", "type": "meta"}
+{"bump": 1.5, "glyphs": ["⚬", "○", "◔", "◐", "◕", "●", "⬤", "🌕"], "sid": "survey:d378667b40909d78", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𐅀", "𐅁", "𐅂"], "sid": "survey:3d9bd8c8b473cdb0", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𐅃", "𐅄", "𐅅", "𐅆", "𐅇"], "sid": "survey:faa1e916d18964fd", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𐆚", "𐆘", "𐆗", "𐆖"], "sid": "survey:002b853651d38f41", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𐆐", "𐆑", "𐆒", "𐆓", "𐆔"], "sid": "survey:23fdba9c3aac24d4", "surveyor": "sonnet5-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["𐋡", "𐋢", "𐋣", "𐋤", "𐋥", "𐋦", "𐋧", "𐋨", "𐋩"], "sid": "survey:f4e57662e8a5b419", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝍠", "𝍡", "𝍢", "𝍣"], "sid": "survey:7f495f0b9b43cae5", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝍲", "𝍳", "𝍴", "𝍵", "𝍶"], "sid": "survey:ffcbdc7d38fc711f", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝍷", "𝍸"], "sid": "survey:bccbe21fae00c0ae", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🨀", "🨁", "🨂", "🨃", "🨄", "🨅"], "sid": "survey:497ede2b668c83d2", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝋠", "𝋡", "𝋢", "𝋣", "𝋤", "𝋥", "𝋦", "𝋧", "𝋨", "𝋩", "𝋪", "𝋫", "𝋬", "𝋭", "𝋮", "𝋯", "𝋰", "𝋱", "𝋲", "𝋳"], "sid": "survey:b1495782616c533b", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𒐀", "𒐁", "𒐂", "𒐃", "𒐄", "𒐅", "𒐆", "𒐇"], "sid": "survey:288590dd528ab7f8", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🥇", "🥈", "🥉"], "sid": "survey:0edeeccf32f16f1b", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🪫", "🔋"], "sid": "survey:1817b9a88d80a66e", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["👤", "👥"], "sid": "survey:8b8359c575dd1c91", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["👁", "👀"], "sid": "survey:e6a59a79f7a62582", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["௦", "௧", "௨", "௩", "௪", "௫", "௬", "௭", "௮", "௯"], "sid": "survey:06f3cf54bb199358", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["௰", "௱", "௲"], "sid": "survey:cd2a28d1a817cb6f", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["十", "百", "千", "万", "億", "兆"], "sid": "survey:8e910296dccc1077", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞄", "🞅", "🞆", "🞇", "🞈", "🞉"], "sid": "survey:e0867566c1875688", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞌", "🞍", "🞎", "🞏", "🞐", "🞑", "🞒", "🞓"], "sid": "survey:c61872f41167738c", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞗", "🞘", "🞙"], "sid": "survey:2c04537711659111", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞝", "🞞", "🞟"], "sid": "survey:f94afd2abd4081e0", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞡", "🞢", "🞣", "🞤", "🞥", "🞦", "🞧"], "sid": "survey:6957fe60c768db65", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞨", "🞩", "🞪", "🞫", "🞬", "🞭", "🞮"], "sid": "survey:ce3fbe8616d12dba", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🞯", "🞰", "🞱", "🞲", "🞳", "🞴"], "sid": "survey:ccac435efc2fcd2f", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🟀", "🟁", "🟂"], "sid": "survey:78a75b9e61f35e81", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🬀", "🬂", "🬆", "🬎", "🬝"], "sid": "survey:7f0e31cdd258db72", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🮂", "🮃", "🮄", "🮅", "🮆"], "sid": "survey:84b263eab82f4338", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🮇", "🮈", "🮉", "🮊", "🮋"], "sid": "survey:47db12f6d321d154", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🯰", "🯱", "🯲", "🯳", "🯴", "🯵", "🯶", "🯷", "🯸", "🯹"], "sid": "survey:8b6ebd9c0cf39185", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🃡", "🃢", "🃣", "🃤", "🃥", "🃦", "🃧", "🃨", "🃩", "🃪", "🃫", "🃬", "🃭", "🃮", "🃯"], "sid": "survey:a255a7b0394b00f8", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🤅", "🤄"], "sid": "survey:64f754e2b6fe9c9d", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⼀", "⿕"], "sid": "survey:d659919e7e18fdf6", "surveyor": "sonnet5-1", "type": "meta"}
+{"bump": 1.5, "glyphs": ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"], "sid": "survey:6280fc0c76ec5b8d", "surveyor": "sonnet5-1", "type": "meta"}
+{"bump": 1.5, "glyphs": ["꜈", "꜉", "꜊", "꜋", "꜌"], "sid": "survey:125ade71e08d5d1d", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𐩀", "𐩁", "𐩂", "𐩃", "𐩄", "𐩅", "𐩆", "𐩇"], "sid": "survey:6e5851f45ebd8743", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["微", "小", "中", "大", "巨"], "sid": "survey:d06e7cbfb6a5d47e", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["□", "▤", "▦", "▩", "■"], "sid": "survey:a3bf348ef594339b", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝄖", "𝄗", "𝄘", "𝄙", "𝄚", "𝄛"], "sid": "survey:8b7ab25252fab14e", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝄻", "𝄼", "𝄽", "𝄾", "𝄿", "𝅀", "𝅁", "𝅂"], "sid": "survey:208a17ea22854d25", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["𝄶", "𝄸"], "sid": "survey:bf2f154ac66718dc", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["α", "β", "γ", "δ", "ε"], "sid": "survey:af393a087c8fa10b", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["।", "॥"], "sid": "survey:e66b6770e8908084", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🏻", "🏼", "🏽", "🏾", "🏿"], "sid": "survey:a4382517ff84141e", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∫", "∬", "∭", "⨌"], "sid": "survey:20d64e4517bb75c7", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🟁", "🟅", "🟋", "🟎"], "sid": "survey:c21ea6f299260a49", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["<", "≪", "⋘", "⪢", "⫸"], "sid": "survey:0b4bdb7afbdfea73", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⩵", "⩶"], "sid": "survey:4a352db59bdbc38e", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ǀ", "ǁ"], "sid": "survey:60fe67ba62829aa3", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["৴", "৵", "৶", "৷"], "sid": "survey:2c9a2b017da9c023", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["৴", "৸", "৹"], "sid": "survey:de6905c1cee4f809", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["०", "१", "२", "३", "४", "५", "६", "७", "८", "९"], "sid": "survey:cb56d5a308ad79cc", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"], "sid": "survey:8514e4dee1409b4a", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["๐", "๑", "๒", "๓", "๔", "๕", "๖", "๗", "๘", "๙"], "sid": "survey:b8336fa663979169", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["၀", "၁", "၂", "၃", "၄", "၅", "၆", "၇", "၈", "၉"], "sid": "survey:23fd9ecd24c0c684", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["០", "១", "២", "៣", "៤", "៥", "៦", "៧", "៨", "៩"], "sid": "survey:4f510790aa13ed44", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["᱐", "᱑", "᱒", "᱓", "᱔", "᱕", "᱖", "᱗", "᱘", "᱙"], "sid": "survey:3fbcba7903db0bd5", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["༠", "༡", "༢", "༣", "༤", "༥", "༦", "༧", "༨", "༩"], "sid": "survey:51a8de36e807289c", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["♣", "♦", "♥", "♠"], "sid": "survey:10d15e3c7f7a2cd9", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㍘", "㍙", "㍚", "㍛", "㍜", "㍝", "㍞", "㍟", "㍠", "㍡", "㍢", "㍣", "㍤", "㍥", "㍦", "㍧", "㍨", "㍩", "㍪", "㍫", "㍬", "㍭", "㍮", "㍯", "㍰"], "sid": "survey:317059453091426f", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎀", "㎁", "㎂", "㎃", "㎄"], "sid": "survey:25ee20a96936d6f9", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎅", "㎆", "㎇"], "sid": "survey:9d427899e85aff78", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎈", "㎉"], "sid": "survey:42a50de5fff4741b", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㍸", "㍹"], "sid": "survey:ea8717aa2dab8b40", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎑", "㎒", "㎓", "㎔"], "sid": "survey:69924fc6d608b55f", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎕", "㎖", "㎗", "㎘"], "sid": "survey:6eeb9809b909a381", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎙", "㎚", "㎛", "㎜", "㎝", "㎞"], "sid": "survey:0034608eefe52998", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎩", "㎪", "㎫", "㎬"], "sid": "survey:58bc466987384b85", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎰", "㎱", "㎲", "㎳"], "sid": "survey:ced489d2c45f60ee", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎴", "㎵", "㎶", "㎷", "㎸"], "sid": "survey:9c46155d3f5b2abc", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㎺", "㎻", "㎼", "㎽", "㎾"], "sid": "survey:998adf5227359b23", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㏀", "㏁"], "sid": "survey:832be68495bdbd42", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["㏠", "㏡", "㏢", "㏣", "㏤", "㏥", "㏦", "㏧", "㏨", "㏩"], "sid": "survey:6ad60fb64b425da3", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∈", "∊"], "sid": "survey:794d7227aadec664", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∋", "∍"], "sid": "survey:cc4260ef83452697", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∶", "∷"], "sid": "survey:9b112864fd0f268a", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∼", "≋"], "sid": "survey:00a2dcc63f9a4445", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["=", "≡", "≣"], "sid": "survey:fbd9b06c81e9564c", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⊢", "⊨", "⊪"], "sid": "survey:6ec5525bf3693115", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⊂", "⋐"], "sid": "survey:dada4c049a5a3110", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⌒", "⌓", "⌔"], "sid": "survey:91f14b1707a7b741", "surveyor": "sonnet5-1", "type": "question"}
+{"bump": 1.5, "glyphs": ["🤇", "🤆", "🤅", "🤄", "🤃"], "sid": "survey:dada77003cb5a6f9", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🤂", "🤁", "🤀"], "sid": "survey:b628ddf19860dcc8", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🧒", "🧑", "🧓"], "sid": "survey:4fc69f26aca0af1f", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🧍", "🧎"], "sid": "survey:067fc33b6b2cabce", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["🙋", "🙌"], "sid": "survey:08e89fe951b8fbab", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["☷", "☰"], "sid": "survey:f5f4e6b7c1ce2330", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["☿", "♀", "♁", "♂", "♃", "♄", "♅", "♆", "♇"], "sid": "survey:56c14dd97bdc1d27", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["✊", "✌", "✋"], "sid": "survey:1de70aa78565ab0d", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], "sid": "survey:d5ab46c863bb2dde", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["l", "ŀ"], "sid": "survey:d0839e241f567b16", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ƨ", "ƽ", "Ƅ"], "sid": "survey:3fd35923785f5dda", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ū", "Ǖ"], "sid": "survey:cc60f4d01623457e", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ḃ", "Ḉ"], "sid": "survey:bbf4c8ce0523eba4", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ﬀ", "ﬁ", "ﬂ", "ﬃ", "ﬄ"], "sid": "survey:b9517f1961ff38d8", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["à", "Ȁ"], "sid": "survey:ccc8271902c4ec04", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["'", "\""], "sid": "survey:2f8b06643d4110e9", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["(", ")", "[", "]", "{", "}"], "sid": "survey:10921fe193763772", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["™", "℠", "®"], "sid": "survey:e57ad5bd36187e6e", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["‹", "›", "«", "»"], "sid": "survey:ea2917e6bf7a3d07", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["s", "ß"], "sid": "survey:352f154ad3c87bd3", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ˑ", "ː"], "sid": "survey:be77df6a7ad90883", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ˌ", "ˈ"], "sid": "survey:20aac231ceb6174c", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["¶", "§"], "sid": "survey:b1f1f14181d663a4", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ƚ", "Ⱡ"], "sid": "survey:04ea9d59c3c158a8", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ǆ", "ǅ", "ǆ"], "sid": "survey:9627bf2d6539c25c", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ⅰ", "Ⅱ", "Ⅲ"], "sid": "survey:7dece9dc10256574", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["Ⅲ", "Ⅳ"], "sid": "survey:d55613fe3e2a1262", "surveyor": "sonnet5-1", "type": "negative"}
+{"bump": 1.5, "glyphs": ["a", "ᴀ", "A"], "sid": "survey:f6d93e4f59158245", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["|", "S", "@"], "sid": "survey:4954b0aab69059ea", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ˆ", "~", "‾", "_"], "sid": "survey:fcef73872ea729db", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["|", "⋮"], "sid": "survey:769452680753d943", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∙", "⊂", "○"], "sid": "survey:cc8dcf8eb2b95084", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["-", "=", "∾", "∿"], "sid": "survey:33f8a66665570ff2", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⊢", "□"], "sid": "survey:6d50ab0224ced12f", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["∘", "○", "◯"], "sid": "survey:155b5b76b1e1ffa6", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["·", "o", "O", "○", "◯"], "sid": "survey:8e3e710552bc4579", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["‸", "∧", "Λ", "▲"], "sid": "survey:a24d912b427501ce", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["`", "/", "⟋"], "sid": "survey:7b41967bdd86f6b4", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["˙", ":", "⁝", "⣿"], "sid": "survey:2349b71dacc02a17", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["˅", "∨", "⋁", "▽"], "sid": "survey:09ed450dd4c5eab0", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⌒", "◠", "○"], "sid": "survey:dbab89a32077e6f7", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ו", "װ"], "sid": "survey:1e150ad68abc1eeb", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["י", "ײ"], "sid": "survey:a8f51be1c2ef11eb", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᐃ", "ᐄ"], "sid": "survey:2b71b5e9ba3b9f74", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᐅ", "ᐆ"], "sid": "survey:4e17f46c12f4c1f1", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᐎ", "ᐐ", "ᐒ", "ᐔ", "ᐗ", "ᐙ"], "sid": "survey:84fdd9bc4b29f8a6", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᐟ", "ᐥ"], "sid": "survey:218928f63fd1a20a", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᐸ", "ᐹ", "ᑕ", "ᑖ"], "sid": "survey:956365411db00e41", "surveyor": "sonnet5-1", "type": "generator"}
+{"bump": 1.5, "glyphs": ["ᚁ", "ᚂ", "ᚃ", "ᚄ", "ᚅ"], "sid": "survey:70bb8106a42739e0", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᚆ", "ᚇ", "ᚈ", "ᚉ", "ᚊ"], "sid": "survey:fd3fd0bdac3fbf73", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᚋ", "ᚌ", "ᚍ", "ᚎ", "ᚏ"], "sid": "survey:73f0ac32a561883e", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᚐ", "ᚑ", "ᚒ", "ᚓ", "ᚔ"], "sid": "survey:e8f4727c8aa47459", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᚭ", "ᚬ"], "sid": "survey:49e4d7761bbb821f", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᚽ", "ᚼ"], "sid": "survey:e5d078fa6502258e", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᚿ", "ᚾ"], "sid": "survey:44f7e7a8a6a71cfe", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᛆ", "ᛅ"], "sid": "survey:afb650a77046c67a", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᛙ", "ᛘ"], "sid": "survey:9a36c68aa50b0d29", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᛧ", "ᛦ"], "sid": "survey:d7fa05b3863cd92e", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["᛫", "᛬"], "sid": "survey:76b14162c68b45cc", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["᜵", "᜶"], "sid": "survey:d662fab61539299b", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["᧡", "᧢", "᧣", "᧤", "᧥", "᧦", "᧧", "᧨", "᧩", "᧪", "᧫", "᧬", "᧭", "᧮", "᧯"], "sid": "survey:277d2b4abbc10004", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["᠐", "᠑", "᠒", "᠓", "᠔", "᠕", "᠖", "᠗", "᠘", "᠙"], "sid": "survey:717b584c3406848f", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᥰ", "ᥱ", "ᥲ", "ᥳ", "ᥴ"], "sid": "survey:37de2e9093967703", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᧈ", "ᧉ"], "sid": "survey:0fb9c803733ab226", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᬅ", "ᬆ"], "sid": "survey:11fa0bfe06bd812e", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᬇ", "ᬈ", "ᬉ", "ᬊ", "ᬋ", "ᬌ", "ᬍ", "ᬎ", "ᬑ", "ᬒ"], "sid": "survey:046c9ffcd820b42a", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ἀ", "ἄ"], "sid": "survey:64514520b9888cf5", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ᾰ", "ᾱ"], "sid": "survey:ccfbd199d05ca3d4", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["؆", "؇"], "sid": "survey:f47456fc90080610", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["؉", "؊"], "sid": "survey:da5b68cf9344cde2", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ؾ", "ؿ"], "sid": "survey:b5c12b78d9838bf6", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ػ", "ؼ"], "sid": "survey:8ec2aa83dd42186a", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ڏ", "ڐ"], "sid": "survey:03828d50823467f5", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ڗ", "ڙ"], "sid": "survey:7b0aed9c96357cf9", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["܁", "܃"], "sid": "survey:bdf62f2ff814d1f6", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["ߴ", "ߵ"], "sid": "survey:9fbd90a85a5fbf57", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["A", "𝐀"], "sid": "survey:db6ec1aa6c468770", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["小", "中", "大", "特"], "sid": "survey:1c43da4707c0c6b2", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": [".", ",", "!", "‼", "😱"], "sid": "survey:a6ab5fc3640147a0", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["'", "🕯", "🔥", "🎆"], "sid": "survey:85d1c4c9358ce61b", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["|", "🏠", "🏢", "🏙"], "sid": "survey:cd12638d8f280128", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["-", "∼", "≋"], "sid": "survey:b941ff914442dc0e", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["😭", "😢", "🙁", "😐", "🙂", "😄", "😁"], "sid": "survey:df786c642debecaf", "surveyor": "fable-1", "type": "sequence"}
+{"bump": 1.5, "glyphs": ["⪡", "⫷"], "sid": "survey:8703f8619eb84810", "surveyor": "sonnet5-1", "type": "sequence"}
+{"bump": 2.0, "glyphs": ["1", "¹", "₁", "①", "⑴", "⒈", "❶", "➀", "➊", "⓵", "１", "🄂", "🯱", "𝟏", "𝟙", "𝟣", "𝟭", "𝟷"], "sid": "c4a1e3cde14177ae:dress@1", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["2", "²", "₂", "②", "⑵", "⒉", "❷", "➁", "➋", "⓶", "２", "🄃", "🯲", "𝟐", "𝟚", "𝟤", "𝟮", "𝟸"], "sid": "c4a1e3cde14177ae:dress@2", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["3", "³", "₃", "③", "⑶", "⒊", "❸", "➂", "➌", "⓷", "３", "🄄", "🯳", "𝟑", "𝟛", "𝟥", "𝟯", "𝟹"], "sid": "c4a1e3cde14177ae:dress@3", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["4", "⁴", "₄", "④", "⑷", "⒋", "❹", "➃", "➍", "⓸", "４", "🄅", "🯴", "𝟒", "𝟜", "𝟦", "𝟰", "𝟺"], "sid": "c4a1e3cde14177ae:dress@4", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["5", "⁵", "₅", "⑤", "⑸", "⒌", "❺", "➄", "➎", "⓹", "５", "🄆", "🯵", "𝟓", "𝟝", "𝟧", "𝟱", "𝟻"], "sid": "c4a1e3cde14177ae:dress@5", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["6", "⁶", "₆", "⑥", "⑹", "⒍", "❻", "➅", "➏", "⓺", "６", "🄇", "🯶", "𝟔", "𝟞", "𝟨", "𝟲", "𝟼"], "sid": "c4a1e3cde14177ae:dress@6", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["7", "⁷", "₇", "⑦", "⑺", "⒎", "❼", "➆", "➐", "⓻", "７", "🄈", "🯷", "𝟕", "𝟟", "𝟩", "𝟳", "𝟽"], "sid": "c4a1e3cde14177ae:dress@7", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["8", "⁸", "₈", "⑧", "⑻", "⒏", "❽", "➇", "➑", "⓼", "８", "🄉", "🯸", "𝟖", "𝟠", "𝟪", "𝟴", "𝟾"], "sid": "c4a1e3cde14177ae:dress@8", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["9", "⁹", "₉", "⑨", "⑼", "⒐", "❾", "➈", "➒", "⓽", "９", "🄊", "🯹", "𝟗", "𝟡", "𝟫", "𝟵", "𝟿"], "sid": "c4a1e3cde14177ae:dress@9", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["1", "2", "3", "4", "5", "6", "7", "8", "9"], "sid": "c4a1e3cde14177ae:value@1", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["¹", "²", "³", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹"], "sid": "c4a1e3cde14177ae:value@¹", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["₁", "₂", "₃", "₄", "₅", "₆", "₇", "₈", "₉"], "sid": "c4a1e3cde14177ae:value@₁", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨"], "sid": "c4a1e3cde14177ae:value@①", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["⑴", "⑵", "⑶", "⑷", "⑸", "⑹", "⑺", "⑻", "⑼"], "sid": "c4a1e3cde14177ae:value@⑴", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["⒈", "⒉", "⒊", "⒋", "⒌", "⒍", "⒎", "⒏", "⒐"], "sid": "c4a1e3cde14177ae:value@⒈", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["❶", "❷", "❸", "❹", "❺", "❻", "❼", "❽", "❾"], "sid": "c4a1e3cde14177ae:value@❶", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["➀", "➁", "➂", "➃", "➄", "➅", "➆", "➇", "➈"], "sid": "c4a1e3cde14177ae:value@➀", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["➊", "➋", "➌", "➍", "➎", "➏", "➐", "➑", "➒"], "sid": "c4a1e3cde14177ae:value@➊", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["⓵", "⓶", "⓷", "⓸", "⓹", "⓺", "⓻", "⓼", "⓽"], "sid": "c4a1e3cde14177ae:value@⓵", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["１", "２", "３", "４", "５", "６", "７", "８", "９"], "sid": "c4a1e3cde14177ae:value@１", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["🄂", "🄃", "🄄", "🄅", "🄆", "🄇", "🄈", "🄉", "🄊"], "sid": "c4a1e3cde14177ae:value@🄂", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["🯱", "🯲", "🯳", "🯴", "🯵", "🯶", "🯷", "🯸", "🯹"], "sid": "c4a1e3cde14177ae:value@🯱", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["𝟏", "𝟐", "𝟑", "𝟒", "𝟓", "𝟔", "𝟕", "𝟖", "𝟗"], "sid": "c4a1e3cde14177ae:value@𝟏", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["𝟙", "𝟚", "𝟛", "𝟜", "𝟝", "𝟞", "𝟟", "𝟠", "𝟡"], "sid": "c4a1e3cde14177ae:value@𝟙", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["𝟣", "𝟤", "𝟥", "𝟦", "𝟧", "𝟨", "𝟩", "𝟪", "𝟫"], "sid": "c4a1e3cde14177ae:value@𝟣", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["𝟭", "𝟮", "𝟯", "𝟰", "𝟱", "𝟲", "𝟳", "𝟴", "𝟵"], "sid": "c4a1e3cde14177ae:value@𝟭", "type": "lattice"}
+{"bump": 2.0, "glyphs": ["𝟷", "𝟸", "𝟹", "𝟺", "𝟻", "𝟼", "𝟽", "𝟾", "𝟿"], "sid": "c4a1e3cde14177ae:value@𝟷", "type": "lattice"}
