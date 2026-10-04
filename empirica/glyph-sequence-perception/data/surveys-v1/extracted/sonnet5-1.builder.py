@@ -3,8 +3,8 @@
 # The verbatim note is the primary; each record is an index into it.
 import hashlib, json, sys, unicodedata
 
-SRC = "/Users/josephwecker-v2/src/arch/asf/empirica/glyph-magnitude-perception/data/surveys-v1/sonnet5-1.md"
-OUT = "/Users/josephwecker-v2/src/arch/asf/empirica/glyph-magnitude-perception/data/surveys-v1/extracted/sonnet5-1.jsonl"
+SRC = "/Users/josephwecker-v2/src/arch/asf/empirica/glyph-sequence-perception/data/surveys-v1/sonnet5-1.md"
+OUT = "/Users/josephwecker-v2/src/arch/asf/empirica/glyph-sequence-perception/data/surveys-v1/extracted/sonnet5-1.jsonl"
 LINES = open(SRC, encoding="utf-8").read().split("\n")
 
 RECORDS = []

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import hashlib, json, re, sys
-SRC="/Users/josephwecker-v2/src/arch/asf/empirica/glyph-magnitude-perception/data/surveys-v1/fable-1.md"
-OUT="/Users/josephwecker-v2/src/arch/asf/empirica/glyph-magnitude-perception/data/surveys-v1/extracted/fable-1.jsonl"
+SRC="/Users/josephwecker-v2/src/arch/asf/empirica/glyph-sequence-perception/data/surveys-v1/fable-1.md"
+OUT="/Users/josephwecker-v2/src/arch/asf/empirica/glyph-sequence-perception/data/surveys-v1/extracted/fable-1.jsonl"
 lines=open(SRC).read().split("\n")
 def span_text(span):
     m=re.match(r"L(\d+)(?:-L?(\d+))?",span)

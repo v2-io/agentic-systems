@@ -1,4 +1,4 @@
--- glyph-magnitude-perception: derived index over the append-only JSONL truth.
+-- glyph-sequence-perception: derived index over the append-only JSONL truth.
 -- The database is DISPOSABLE — rebuildable at any time via ingest.py; nothing
 -- lives here that is not derivable from data/. psql-18 (PostgreSQL 18) target.
 

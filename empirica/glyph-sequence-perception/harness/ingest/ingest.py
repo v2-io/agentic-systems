@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """Rebuild the derived Postgres index from the append-only JSONL truth.
 
-Usage:  ingest.py [dbname]        (default: empirica_glyph)
+Usage:  ingest.py [dbname]        (default: empirica_glyph_sequence)
 Idempotent by construction: drops and re-fills survey_records from data/.
 Requires psql-18 on PATH (the machine's versioned Postgres 18 binary).
 """
 import csv, io, json, pathlib, subprocess, sys
 
-DB = sys.argv[1] if len(sys.argv) > 1 else "empirica_glyph"
+DB = sys.argv[1] if len(sys.argv) > 1 else "empirica_glyph_sequence"
 HERE = pathlib.Path(__file__).resolve()
-ROOT = HERE.parents[2]                     # .../glyph-magnitude-perception
+ROOT = HERE.parents[2]                     # .../glyph-sequence-perception
 EXTRACTED = ROOT / "data" / "surveys-v1" / "extracted"
 
 def psql(*args, dbname=DB, input=None, check=True):

@@ -3,7 +3,7 @@
 # note_verbatim is pulled directly from the source file by line span so it cannot drift.
 import hashlib, json, os
 
-BASE = "/Users/josephwecker-v2/src/arch/asf/empirica/glyph-magnitude-perception/data/surveys-v1"
+BASE = "/Users/josephwecker-v2/src/arch/asf/empirica/glyph-sequence-perception/data/surveys-v1"
 SRC = os.path.join(BASE, "sonnet-survey-2.md")
 OUT = os.path.join(BASE, "extracted", "sonnet-survey-2.jsonl")
 SURVEYOR = "sonnet-survey-2"

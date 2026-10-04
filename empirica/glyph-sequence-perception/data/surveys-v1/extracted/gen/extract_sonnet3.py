@@ -4,7 +4,7 @@ note_verbatim is pulled from the source file by line range (verbatim guarantee);
 codepoints computed from the glyph strings themselves."""
 import hashlib, json, os, unicodedata
 
-BASE = "/Users/josephwecker-v2/src/arch/asf/empirica/glyph-magnitude-perception/data/surveys-v1"
+BASE = "/Users/josephwecker-v2/src/arch/asf/empirica/glyph-sequence-perception/data/surveys-v1"
 SRC = os.path.join(BASE, "sonnet-survey-3.md")
 OUT = os.path.join(BASE, "extracted", "sonnet-survey-3.jsonl")
 

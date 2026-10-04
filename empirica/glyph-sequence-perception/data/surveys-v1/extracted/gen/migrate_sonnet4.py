@@ -3,7 +3,7 @@
 # Verbatim notes are sliced from the source file by line span (source is primary; records index into it).
 import hashlib, json, unicodedata, os
 
-BASE = "/Users/josephwecker-v2/src/arch/asf/empirica/glyph-magnitude-perception/data/surveys-v1"
+BASE = "/Users/josephwecker-v2/src/arch/asf/empirica/glyph-sequence-perception/data/surveys-v1"
 SRC = os.path.join(BASE, "sonnet-survey-4.md")
 OUT = os.path.join(BASE, "extracted", "sonnet-survey-4.jsonl")
 SURVEYOR = "sonnet-survey-4"

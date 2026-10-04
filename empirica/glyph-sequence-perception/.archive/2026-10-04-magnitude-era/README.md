@@ -1,6 +1,8 @@
 # Archive — the magnitude era (2026-08-25 pilot data through 2026-10-04)
 
-Archived 2026-10-04 at Joseph's request:
+Archived 2026-10-04 at Joseph's request. The study directory was renamed the same day from `glyph-magnitude-perception` to `glyph-sequence-perception`; absolute paths inside the archived files use the old name.
+
+His words:
 
 > *"Archive all of the garbage data, please, in a .archive within the glyph project. It's become untenable, IMO, to keep trying to massage something that was wrong from the beginning."*
 

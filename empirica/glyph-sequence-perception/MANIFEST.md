@@ -1,4 +1,4 @@
-# MANIFEST — glyph-magnitude-perception
+# MANIFEST — glyph-sequence-perception
 
 *Restated 2026-10-04. Canonization contract per `empirica/README.md`.*
 

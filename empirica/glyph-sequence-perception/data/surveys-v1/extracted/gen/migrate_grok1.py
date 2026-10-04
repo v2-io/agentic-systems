@@ -17,8 +17,8 @@ carries the whole subsection). Ids: sha256("survey-rec|grok-1|"+span)[:16].
 """
 import hashlib, json, re, sys
 
-SRC = "/Users/josephwecker-v2/src/arch/asf/empirica/glyph-magnitude-perception/data/surveys-v1/grok-1.md"
-OUT = "/Users/josephwecker-v2/src/arch/asf/empirica/glyph-magnitude-perception/data/surveys-v1/extracted/grok-1.jsonl"
+SRC = "/Users/josephwecker-v2/src/arch/asf/empirica/glyph-sequence-perception/data/surveys-v1/grok-1.md"
+OUT = "/Users/josephwecker-v2/src/arch/asf/empirica/glyph-sequence-perception/data/surveys-v1/extracted/grok-1.jsonl"
 
 raw = open(SRC, encoding="utf-8").read().split("\n")
 L = lambda i: raw[i-1]  # 1-indexed

@@ -4,7 +4,7 @@
 # so the primary text is carried mechanically, never retyped.
 import hashlib, json, unicodedata, os
 
-BASE = "/Users/josephwecker-v2/src/arch/asf/empirica/glyph-magnitude-perception/data/surveys-v1"
+BASE = "/Users/josephwecker-v2/src/arch/asf/empirica/glyph-sequence-perception/data/surveys-v1"
 SRC = os.path.join(BASE, "sonnet-survey-1.md")
 OUT = os.path.join(BASE, "extracted", "sonnet-survey-1.jsonl")
 SURVEYOR = "sonnet-survey-1"
