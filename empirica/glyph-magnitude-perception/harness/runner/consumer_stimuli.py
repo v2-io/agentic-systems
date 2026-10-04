@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Consumer probe stimuli (NOT part of the registered v1.0 program; no predictions attached).
 
-The aspectus age column renders SIGNA time-deltas with the ladder below
-(~/src/_core/zoetica/docs/messaging/06-temporal-coherence.md §SIGNA). This probe measures, across the
+The glyph string below is an old SIGNA sample string: a rough proof-of-concept from an old SIGNA
+implementation (zoetica 06-temporal-coherence.md), not SIGNA itself; the builder's brief presented it as the
+aspectus age-column ladder. This probe measures, across the
 v1.0 judge panel, how that existing ladder is perceived as single glyphs: all pairs both orders (perp
 format) and whole-set reconstruction. It says nothing about run-length reading in a column.
 """

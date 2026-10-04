@@ -2,7 +2,7 @@
 
 Rows whose names end in `-shakedown` or contain `-aborted` are excluded from every analysis. 'ok' = calls with a raw answer, no adapter error, and (sheet mode) ≥ 90% of items parseable at write time. Failed or incomplete calls stay in the ledger verbatim; resumed runs re-ask them.
 
-Lineage: A = fixed by rule or pilot, B = builder-chosen, C = SIGNA-driven (data/stimuli-v1/LINEAGE.md).
+Lineage: A = fixed by rule or pilot, B = builder-chosen, C = old-SIGNA-sample-string-driven (data/stimuli-v1/LINEAGE.md).
 
 | run | lineage | calls | ok | failed / incomplete | UTC span | model reported | list cost USD | ledger sha256[:16] |
 |---|---|---|---|---|---|---|---|---|

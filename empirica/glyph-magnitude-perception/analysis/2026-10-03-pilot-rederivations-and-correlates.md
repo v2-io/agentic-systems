@@ -1,6 +1,6 @@
 # Pilot re-derivations and first feature correlates (2026-10-03)
 
-> **Status (2026-10-03).** This document is the v1.0 builder's interpretive layer. The builder worked under a brief whose SIGNA paragraph and other framing were the coordinating agent's interpolation, not Joseph's (`data/stimuli-v1/LINEAGE.md`). It is kept as written, pending an independent re-reading by an analyst who has not seen it; the comparison between the two readings is itself data.
+> **Status (2026-10-03).** This document is the v1.0 builder's interpretive layer. The builder worked under a brief whose paragraph about an old SIGNA sample string, and other framing, were the coordinating agent's interpolation, not Joseph's (`data/stimuli-v1/LINEAGE.md`). It is kept as written, pending an independent re-reading by an analyst who has not seen it; the comparison between the two readings is itself data.
 
 *Working notes, exploratory/pilot tier unless a line says otherwise. Written by the agent that ran the analyses. An independent audit is at `verification/2026-10-03-audit-rederivations.md`, and this version incorporates its corrections (history at the end). Numbers in §1–§2 come from the scripts named beside them. §3's ink values are read straight from `firmatum/utils/utf/bmp-metrics-ghostty.tsv`, and its vote tallies from the pilot record and `wa9ugjfju.json`.*
 

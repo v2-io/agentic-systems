@@ -2,9 +2,9 @@
 
 *Entered 2026-08-25 (pilot day); claims restated 2026-10-03 after the registered v1.0 run. Canonization contract per `empirica/README.md`.*
 
-> **Status (2026-10-03).** The v1.0 claims below are the builder's reading. The builder worked under a brief that, apart from one sentence of Joseph's ("round out the data more and more"), was the coordinating agent's interpolation. That interpolation included a paragraph about the aspectus SIGNA ladder, which Joseph has said is being discarded. The claims are pending an independent re-reading by an analyst who has not seen them. Stimulus and run lineage is recorded in `data/stimuli-v1/LINEAGE.md`.
+> **Status (2026-10-03).** The v1.0 claims below are the builder's reading. The builder worked under a brief that, apart from one sentence of Joseph's ("round out the data more and more"), was the coordinating agent's interpolation. That interpolation included a paragraph about an old SIGNA sample string (a rough proof-of-concept from an old SIGNA implementation, not SIGNA itself), presented as if it were the aspectus SIGNA ladder. The claims are pending an independent re-reading by an analyst who has not seen them. Stimulus and run lineage is recorded in `data/stimuli-v1/LINEAGE.md`.
 >
-> Joseph's post-hoc reframing (2026-10-03) treats the SIGNA ladder as a plausible human-created sequence that serves as a control on how unbiased the results are. Its limits: n = 1, not randomly chosen, and its role assigned after its data had been seen.
+> Joseph's post-hoc reframing (2026-10-03) treats the old SIGNA sample string as one plausible human-created sequence that serves as a control on how unbiased the results are. Its limits: n = 1, not randomly chosen, and its role assigned after its data had been seen.
 
 ## What it studies
 
@@ -53,7 +53,7 @@ How language-model minds perceive **order among Unicode glyphs** — which glyph
   - Single-item and 40-item-sheet modes are recorded as a factor.
 - **Pools.** The seed stratum draws on four Anthropic-family surveys only (coverage defect noted in PROTOCOL); the uniform tail is block-uniform.
 - **Instruments.** Triads, format experiment, conflict battery, holistic pairs, gestalt reconstruction.
-- **Exploratory batteries.** Top-40 (`analysis/top40.md`; Joseph's request) and the SIGNA probe (driven by the coordinator's paragraph; see the status note above).
+- **Exploratory batteries.** Top-40 (`analysis/top40.md`; Joseph's request) and the old-SIGNA-sample-string probe (driven by the coordinator's paragraph; see the status note above).
 
 ## Consumers
 

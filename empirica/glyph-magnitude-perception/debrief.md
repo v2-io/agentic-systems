@@ -3,9 +3,10 @@
 Joseph,
 
 > **Correction and status (2026-10-03, after this debrief was written).**
-> - **What came from you.** The brief quoted one sentence of yours ("round out the data more and more"). Everything else in it was the coordinator's interpolation of your intent, including its SIGNA paragraph and its "token spend isn't the constraint" line.
+> - **What came from you.** The brief quoted one sentence of yours ("round out the data more and more"). Everything else in it was the coordinator's interpolation of your intent, including its paragraph about an old SIGNA sample string and its "token spend isn't the constraint" line.
 > - **What you've since confirmed or ratified.** You ratified the coordinator's reading that your request was the opt-in for judge panels, quota cost included. You also confirmed that the mid-session notes about llama-server, Glimmer, the T7 drive and the top-40 were yours. The agy tip's source was not confirmed.
-> - **Where this letter misattributes.** Wherever it treats the brief's intent or the SIGNA material as yours, it is wrong. The lines in question are marked inline below.
+> - **Where this letter misattributes.** Wherever it treats the brief's intent or the old-sample-string material as yours, it is wrong. The lines in question are marked inline below.
+> - **Terminology (2026-10-04).** The string `·╶╌╍━═⚬○◎◉⬤` I called "SIGNA" is not SIGNA. It is a rough proof-of-concept sample from an old SIGNA implementation, and the wording below has been relabelled accordingly.
 > - **Status.** This letter's interpretive content is pending an independent re-reading by an analyst who hasn't seen it. Stimulus and run lineage is in `data/stimuli-v1/LINEAGE.md`.
 
 The coordinator asked me to pick up the glyph study, carrying your request to round out the data. The rest of the brief, including that I should understand the work more deeply than anyone had, was the coordinator's framing, not yours. This letter says where the study stood, what I ran, what changed in what we can honestly claim, what went wrong on my side (including two things that cost you), and what is open. I wrote it by re-reading the files named here, not from memory. Two independent auditors went through my work along the way. Most of the corrections to my first drafts are theirs.
@@ -35,10 +36,10 @@ Nothing had happened since the evening of August 25. That day ended with the pil
 4. **Ran the campaign.** About 51,700 judge calls came back answered. A further 1,000 failed and stay in the ledger, and the 4,085 calls from the withdrawn qwen3 judge are kept but excluded.
    - **Frontier:** Claude Haiku 4.5, Sonnet 5, Sonnet 5.5 and Opus 5.5; Grok 4.6; GPT-5.6 (partial, see below); Gemini 3.1 Pro and 3.8 Flash. The Gemini judges came through agy, thanks to a mid-session tip (source not confirmed).
    - **Local:** llama3.2 3B, gemma3 4B, mistral 7B, phi-4-mini and hermes3 3B. qwen2.5 3B stands in for qwen3 4B, whose data turned out invalid.
-   - **Your Muse Glimmer 30B** got key datapoints only: conflict, SIGNA, holistic pairs. Its reasoning runs about 4 minutes per 38-item sheet.
+   - **Your Muse Glimmer 30B** got key datapoints only: conflict, the old SIGNA sample string, holistic pairs. Its reasoning runs about 4 minutes per 38-item sheet.
      - Compiled decode won all 18 of its committed compiled-decode answers.
      - It declined the gram and per-mille conflicts.
-     - On SIGNA it committed to only 15 pairs, all in the SIGNA direction, and placed ⚬ below ╶ (5 seconds).
+     - On the old sample string it committed to only 15 pairs, all in the string's written direction, and placed ⚬ below ╶.
      - I shut its server down afterwards.
    - **Instruments:**
      - 300 held-out triads;
@@ -48,8 +49,8 @@ Nothing had happened since the evening of August 25. That day ended with the pil
    - **Plus a pilot-condition arm:** Claude Sonnet 5.5 run inside a Claude Code subagent, with the pilot's wording, to see whether the pilot's effect sizes came from context.
 5. **Two independent audits with bare briefs** (`analysis/verification/`). Each changed what I can claim; details below.
 6. **Your top-40** (`analysis/top40.md`). It ranks 117 survey sequences by rung-by-rung confirmation across the frontier panel, with a small-model column.
-7. **A SIGNA probe.** It is not registered, and its stimuli are the ladder as given, with no alternatives tested.
-   - *(Correction, 2026-10-03.)* I built it because of the coordinator's SIGNA paragraph, not because you asked. The ladder is one you have said is being discarded, so calling it "the current ladder" was wrong.
+7. **A probe of an old SIGNA sample string.** That string is a rough proof-of-concept from an old SIGNA implementation, not SIGNA itself (terminology corrected 2026-10-04; I originally called it "SIGNA"). The probe is not registered, and its stimuli are the string as given, with no alternatives tested.
+   - *(Correction, 2026-10-03.)* I built it because of the coordinator's paragraph about the string, not because you asked. Calling it "the current ladder" was wrong.
    - You have since reframed it, post hoc, as a plausible human-created sequence that serves as a control on how unbiased the results are. The limits of that: n = 1, not randomly chosen, and its role assigned after its data had been seen.
 8. **An embedding probe** for your linear-vector question. Exploratory.
 
@@ -98,21 +99,21 @@ Noise sets drew ⟂ only 64% of the time across frontier judges. Gemini 3.1 Pro,
 
 When a frontier judge sees an order in a seed triad, it matches the surveyor's written order 90–100% of the time, against a chance rate near 30%. But see the coverage defect below: only Anthropic-family surveys were retested.
 
-## Top-40, and SIGNA
+## Top-40, and the old SIGNA sample string
 
 **Top-40** (`analysis/top40.md`):
 
 - Frontier judges saturate. Dice, Western and circled digits, eighths, `¹²³`, medals (read descending), `ⅠⅡⅢ`, `·•●⬤`, `⭒⭑⭐` and dot leaders all reach full stability.
 - The *floor* and *small-model* columns discriminate more than the rank does.
 
-**SIGNA** (`analysis/v1.0-results.md` §Consumer probe).
+**The old SIGNA sample string** `·╶╌╍━═⚬○◎◉⬤` (not SIGNA itself; `analysis/v1.0-results.md` §Probe).
 
 *(Correction, 2026-10-03.)* This section and the ladder advice after it answer the coordinator's paragraph, not a request of yours. They are kept as written, pending the independent re-reading.
 
-- Where frontier judges commit, they commit in the SIGNA direction.
-- None confirms the seam where the line family hands to the circle family (═ → ⚬). Almost all place ⚬ (4 hours) below ╍ (1 minute), and the Geminis place it below ╌ (10 seconds) too.
+- Where frontier judges commit, they commit in the string's written direction.
+- None confirms the seam where the line family hands to the circle family (═ → ⚬). Almost all place ⚬ below ╍, and the Geminis place it below ╌ too.
 - Read glyph by glyph, the perceived order interleaves the families by visual weight: `·╶╌⚬╍○━═◎◉⬤`.
-- Shown the whole set, Gemini, Grok and Opus rebuild the written SIGNA order perfectly.
+- Shown the whole set, Gemini, Grok and Opus rebuild the string's written order perfectly.
 - None of this addresses run length in a column.
 
 If you're choosing a ladder for a column read across rows, the single-glyph evidence says:
