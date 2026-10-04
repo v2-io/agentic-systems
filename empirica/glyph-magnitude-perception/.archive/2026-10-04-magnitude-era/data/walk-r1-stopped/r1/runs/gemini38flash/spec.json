@@ -1,0 +1,16 @@
+{
+ "protocol": "gmp-walk-0.1",
+ "round": "r1",
+ "judge_label": "gemini38flash",
+ "judge": {
+  "adapter": "agy",
+  "model": "gemini-3.8-flash-low"
+ },
+ "adapter_version": "a1",
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "stimulus_digest": "9393255b166d3ba9e3817e7b14340912640fca70d2e1330e7cdc2975d1299c53",
+ "format": "perp",
+ "sheet_size": 40,
+ "context_residue": "Gemini via the Antigravity CLI (agy -p), run in an empty cwd; HOME not isolated (agy's knowledge/brain stores exist under ~/.gemini/antigravity-cli). Verified 2026-10-03: judge reports no Joseph/glyph context. Study system line prepended to the user turn; agy harness preamble (~12k tokens) remains.",
+ "created": "2026-10-04T19:02:42.767220+00:00"
+}
