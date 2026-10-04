@@ -109,3 +109,13 @@ No mechanism registry and no mechanism-organized discovery sampling (Joseph, 202
   - *Held-out leakage.* The pilot-glyph census skipped workflow output files, and `wr2n0is6k.json` holds the pilot's salted sequences. Eight salt glyphs (🀰 ◐ 🌖 🌘 ‵ ‶ ‷ ‾) therefore sit in the seed stratum, and four of them appear in 20 triad presentations (1.1%).
   - *gpt-oss timing.* The "local panel changes" note above was written before gpt-oss had run; at that time it had produced no data. Its eventual coverage is recorded in `data/runs-v1/INVENTORY.md`.
   - *The grok search query* quoted in the grok-adapter note ("unicode musical symbols forte piano") came from an adapter-debugging call made outside any ledger. The ledgers record only event types, so the quote has no in-repository source.
+- **2026-10-03, provenance correction (after the campaign).** The v1.0 builder's brief contained one sentence of Joseph's, *"round out the data more and more"*. The rest was the coordinating agent's interpolation of his intent. That interpolation included:
+  - a paragraph about the aspectus SIGNA age-column ladder, which Joseph has said is being discarded, with the coordinator's own observations offered as "measured facts";
+  - the line "token spend isn't the constraint".
+
+  Joseph has since ratified the coordinator's reading that his request was the opt-in for judge panels. Nothing from the SIGNA paragraph reached any judge prompt; judges saw only the templates above. Its effects were on what the builder selected and spent judge calls on:
+  - the `signa` and `signa-gestalt` sets;
+  - one of Glimmer's three instrument slots;
+  - the route by which the Ghostty ink table entered the analyses.
+
+  Every stimulus set and run family is labelled by lineage in `data/stimuli-v1/LINEAGE.md`. That file also records Joseph's post-hoc reframing of the SIGNA ladder as a control, with its limits. The builder's interpretive layer (findings, debrief, MANIFEST v1.0 wording, the generated reports) is marked as pending an independent re-reading.

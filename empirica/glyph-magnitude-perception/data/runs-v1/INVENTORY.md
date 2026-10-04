@@ -2,185 +2,187 @@
 
 Rows whose names end in `-shakedown` or contain `-aborted` are excluded from every analysis. 'ok' = calls with a raw answer, no adapter error, and (sheet mode) ≥ 90% of items parseable at write time. Failed or incomplete calls stay in the ledger verbatim; resumed runs re-ask them.
 
-| run | calls | ok | failed / incomplete | UTC span | model reported | list cost USD | ledger sha256[:16] |
-|---|---|---|---|---|---|---|---|
-| conflict-perp-sheet-gemini31pro | 6 | 6 | 0 | 2026-10-03T20:21 → 20:22 | gemini-3.1-pro-low(requested) | 0.00 | `706c273c14f85f0f` |
-| conflict-perp-sheet-gemini38flash | 6 | 6 | 0 | 2026-10-03T20:16 → 20:16 | gemini-3.8-flash-low(requested) | 0.00 | `e18498bac151e568` |
-| conflict-perp-sheet-glimmer30b-sheet | 2 | 2 | 0 | 2026-10-03T23:06 → 23:10 | muse-glimmer-30B-kquant-dynamic.gguf | 0.00 | `3f079c2dac20d66a` |
-| conflict-perp-sheet-gpt56terra | 6 | 5 | 1 | 2026-10-03T20:18 → 20:19 | gpt-5.6-terra(requested; codex exec does not echo) | 0.00 | `79d647e98b75de11` |
-| conflict-perp-sheet-grok46 | 6 | 6 | 0 | 2026-10-03T20:31 → 20:32 | grok-4.6-build | 0.04 | `103c5381f80aa1f8` |
-| conflict-perp-sheet-sonnet55 | 6 | 6 | 0 | 2026-10-03T20:13 → 20:14 | claude-sonnet-5-5 | 0.10 | `dcb31b918f5d24d6` |
-| conflict-perp-single-gemma3-4b | 76 | 76 | 0 | 2026-10-03T21:49 → 21:49 | gemma3:4b@a2af6cc3eb7f | 0.00 | `9b01a2fc09ba0379` |
-| conflict-perp-single-haiku45 | 228 | 228 | 0 | 2026-10-03T20:47 → 20:52 | claude-haiku-4-5 | 0.64 | `98818cbaccf4c536` |
-| conflict-perp-single-hermes3-3b | 76 | 76 | 0 | 2026-10-03T22:44 → 22:44 | hermes3:3b@a8851c5041d4 | 0.00 | `c6363f2631231cb0` |
-| conflict-perp-single-llama32-3b | 76 | 76 | 0 | 2026-10-03T20:25 → 20:26 | llama3.2:3b@a80c4f17acd5 | 0.00 | `9d3e3ba21d259abf` |
-| conflict-perp-single-mistral7b | 76 | 76 | 0 | 2026-10-03T22:07 → 22:07 | mistral:7b@6577803aa9a0 | 0.00 | `8d533da15e8c5121` |
-| conflict-perp-single-opus55 | 228 | 228 | 0 | 2026-10-03T20:34 → 20:37 | claude-opus-5-5 | 1.12 | `8e2af67debf8dd43` |
-| conflict-perp-single-phi4mini | 76 | 76 | 0 | 2026-10-03T22:29 → 22:30 | phi4-mini@ | 0.00 | `0fa84174a84fde9d` |
-| conflict-perp-single-qwen25-3b | 81 | 71 | 10 | 2026-10-03T22:59 → 23:26 | qwen2.5:3b@357c53fb659c | 0.00 | `8dec6f9a53c15139` |
-| conflict-perp-single-qwen3-4b | 76 | 76 | 0 | 2026-10-03T21:07 → 21:08 | qwen3:4b@359d7dd4bcda | 0.00 | `5bc4f3177ae07bc6` |
-| conflict-perp-single-sonnet5 | 228 | 228 | 0 | 2026-10-03T20:34 → 20:37 | claude-sonnet-5 | 0.35 | `f3579ebf449649ad` |
-| conflict-perp-single-sonnet55 | 228 | 228 | 0 | 2026-10-03T20:34 → 20:37 | claude-sonnet-5-5 | 0.60 | `b540995ed40901fc` |
-| format-forced-sheet-gemini31pro | 16 | 16 | 0 | 2026-10-03T20:30 → 20:33 | gemini-3.1-pro-low(requested) | 0.00 | `e4dfe8715a02279f` |
-| format-forced-sheet-gemini38flash | 16 | 16 | 0 | 2026-10-03T20:21 → 20:22 | gemini-3.8-flash-low(requested) | 0.00 | `25ebbb6d9622e932` |
-| format-forced-sheet-gpt56terra | 16 | 16 | 0 | 2026-10-03T20:24 → 20:26 | gpt-5.6-terra(requested; codex exec does not echo) | 0.00 | `e7bc728d0a2a6a25` |
-| format-forced-sheet-grok46 | 19 | 16 | 3 | 2026-10-03T20:38 → 22:50 | grok-4.6-build | 0.17 | `d3adcba5ee0b0183` |
-| format-forced-sheet-sonnet55 | 16 | 16 | 0 | 2026-10-03T20:16 → 20:17 | claude-sonnet-5-5 | 0.25 | `af8da334eb3e5e36` |
-| format-forced-single-gemma3-4b | 640 | 640 | 0 | 2026-10-03T21:50 → 21:52 | gemma3:4b@a2af6cc3eb7f | 0.00 | `05520f0e8edc211f` |
-| format-forced-single-haiku45 | 640 | 640 | 0 | 2026-10-03T21:00 → 21:12 | claude-haiku-4-5 | 1.55 | `5026c96ca5a7329c` |
-| format-forced-single-hermes3-3b | 640 | 640 | 0 | 2026-10-03T22:45 → 22:46 | hermes3:3b@a8851c5041d4 | 0.00 | `ba0c1671f56d5cb7` |
-| format-forced-single-llama32-3b | 640 | 640 | 0 | 2026-10-03T20:27 → 20:29 | llama3.2:3b@a80c4f17acd5 | 0.00 | `f43c82d6385e0d4b` |
-| format-forced-single-llama32-3b-shakedown | 20 | 20 | 0 | 2026-10-03T20:05 → 20:05 | llama3.2:3b@a80c4f17acd5 | 0.00 | `cfa9ef2ed021351b` |
-| format-forced-single-mistral7b | 640 | 640 | 0 | 2026-10-03T22:09 → 22:13 | mistral:7b@6577803aa9a0 | 0.00 | `2c8d4d20a45eaf9c` |
-| format-forced-single-opus55 | 640 | 640 | 0 | 2026-10-03T20:40 → 20:47 | claude-opus-5-5 | 3.19 | `094fef9826ae7573` |
-| format-forced-single-phi4mini | 640 | 640 | 0 | 2026-10-03T22:31 → 22:35 | phi4-mini@ | 0.00 | `25a6cc8dfb57a51c` |
-| format-forced-single-qwen25-3b | 640 | 640 | 0 | 2026-10-03T23:00 → 23:04 | qwen2.5:3b@357c53fb659c | 0.00 | `bcd6b3f239f20e01` |
-| format-forced-single-qwen3-4b | 640 | 640 | 0 | 2026-10-03T21:13 → 21:27 | qwen3:4b@359d7dd4bcda | 0.00 | `cff1585318d31a3c` |
-| format-forced-single-sonnet5 | 640 | 640 | 0 | 2026-10-03T20:41 → 20:48 | claude-sonnet-5 | 0.85 | `1cd30e867eb89548` |
-| format-forced-single-sonnet55 | 640 | 640 | 0 | 2026-10-03T20:39 → 20:46 | claude-sonnet-5-5 | 1.58 | `2514a224dd391115` |
-| format-perp-pilotcond-sonnetagent | 4 | 4 | 0 | 2026-10-03T20:38 → 20:38 | claude-sonnet-5-5 | 0.00 | `bc4d77ca53f129eb` |
-| format-perp-sheet-gemini31pro | 17 | 16 | 1 | 2026-10-03T20:36 → 20:54 | gemini-3.1-pro-low(requested) | 0.00 | `fdb71d5a1eac53e5` |
-| format-perp-sheet-gemini38flash | 16 | 16 | 0 | 2026-10-03T20:24 → 20:25 | gemini-3.8-flash-low(requested) | 0.00 | `6175aa26ff5e709f` |
-| format-perp-sheet-gemini38flash-shakedown | 1 | 1 | 0 | 2026-10-03T20:09 → 20:09 | gemini-3.8-flash-low(requested) | 0.00 | `484d236be9599e33` |
-| format-perp-sheet-gpt56terra | 16 | 0 | 16 | 2026-10-03T20:27 → 20:28 | gpt-5.6-terra(requested; codex exec does not echo) | 0.00 | `7d04acd0dca58153` |
-| format-perp-sheet-gpt56terra-shakedown | 1 | 1 | 0 | 2026-10-03T20:09 → 20:09 | gpt-5.6-terra(requested; codex exec does not echo) | 0.00 | `976f9405b31d42ea` |
-| format-perp-sheet-grok46 | 19 | 14 | 5 | 2026-10-03T20:55 → 22:59 | grok-4.6-build | 0.07 | `3398b4d24312f86c` |
-| format-perp-sheet-sonnet55 | 16 | 16 | 0 | 2026-10-03T20:18 → 20:18 | claude-sonnet-5-5 | 0.25 | `35a163943626bb88` |
-| format-perp-single-gemma3-4b | 640 | 640 | 0 | 2026-10-03T21:54 → 21:56 | gemma3:4b@a2af6cc3eb7f | 0.00 | `913905769941faf6` |
-| format-perp-single-haiku45 | 640 | 640 | 0 | 2026-10-03T21:23 → 21:34 | claude-haiku-4-5 | 1.67 | `3118d04b79a24864` |
-| format-perp-single-hermes3-3b | 640 | 639 | 1 | 2026-10-03T22:48 → 22:50 | hermes3:3b@a8851c5041d4 | 0.00 | `b5530ef3e7b45dce` |
-| format-perp-single-llama32-3b | 640 | 640 | 0 | 2026-10-03T20:31 → 20:33 | llama3.2:3b@a80c4f17acd5 | 0.00 | `3e582c2656f9230a` |
-| format-perp-single-mistral7b | 640 | 640 | 0 | 2026-10-03T22:16 → 22:19 | mistral:7b@6577803aa9a0 | 0.00 | `c693fd716987fa92` |
-| format-perp-single-opus55 | 640 | 640 | 0 | 2026-10-03T20:55 → 21:02 | claude-opus-5-5 | 3.72 | `50259fc24dada9bc` |
-| format-perp-single-phi4mini | 640 | 640 | 0 | 2026-10-03T22:38 → 22:42 | phi4-mini@ | 0.00 | `54b360410a511492` |
-| format-perp-single-qwen25-3b | 675 | 605 | 70 | 2026-10-03T23:08 → 23:27 | qwen2.5:3b@357c53fb659c | 0.00 | `9c17a51c22cef674` |
-| format-perp-single-qwen3-4b | 640 | 640 | 0 | 2026-10-03T21:36 → 21:45 | qwen3:4b@359d7dd4bcda | 0.00 | `1e86c4ff5854bf78` |
-| format-perp-single-sonnet5 | 640 | 640 | 0 | 2026-10-03T20:55 → 21:03 | claude-sonnet-5 | 0.96 | `201faa1ad2dc604c` |
-| format-perp-single-sonnet55 | 640 | 640 | 0 | 2026-10-03T20:53 → 21:00 | claude-sonnet-5-5 | 1.98 | `42d7de5b6b1ac09b` |
-| format-tie-pilotcond-sonnetagent | 4 | 4 | 0 | 2026-10-03T20:37 → 20:38 | claude-sonnet-5-5 | 0.00 | `8fdec9541967bab7` |
-| format-tie-sheet-gemini31pro | 16 | 16 | 0 | 2026-10-03T20:33 → 20:35 | gemini-3.1-pro-low(requested) | 0.00 | `2884e08ab5ca7d5a` |
-| format-tie-sheet-gemini38flash | 16 | 16 | 0 | 2026-10-03T20:22 → 20:24 | gemini-3.8-flash-low(requested) | 0.00 | `5bc7b952e0e3842b` |
-| format-tie-sheet-gpt56terra | 16 | 9 | 7 | 2026-10-03T20:26 → 20:27 | gpt-5.6-terra(requested; codex exec does not echo) | 0.00 | `db6817bf055b7c91` |
-| format-tie-sheet-grok46 | 19 | 15 | 4 | 2026-10-03T20:45 → 22:58 | grok-4.6-build | 0.26 | `550b95429dcaa845` |
-| format-tie-sheet-sonnet55 | 16 | 16 | 0 | 2026-10-03T20:17 → 20:17 | claude-sonnet-5-5 | 0.25 | `ea3a42b9ec584feb` |
-| format-tie-single-gemma3-4b | 640 | 640 | 0 | 2026-10-03T21:52 → 21:54 | gemma3:4b@a2af6cc3eb7f | 0.00 | `5fcc82f3b36593b1` |
-| format-tie-single-haiku45 | 640 | 640 | 0 | 2026-10-03T21:13 → 21:23 | claude-haiku-4-5 | 1.60 | `d389a6c63bba77d8` |
-| format-tie-single-hermes3-3b | 640 | 639 | 1 | 2026-10-03T22:46 → 22:48 | hermes3:3b@a8851c5041d4 | 0.00 | `19af960576b48c53` |
-| format-tie-single-llama32-3b | 640 | 640 | 0 | 2026-10-03T20:29 → 20:31 | llama3.2:3b@a80c4f17acd5 | 0.00 | `b8f88f0dc90b4ea1` |
-| format-tie-single-mistral7b | 640 | 640 | 0 | 2026-10-03T22:13 → 22:16 | mistral:7b@6577803aa9a0 | 0.00 | `30007026b1bb4d39` |
-| format-tie-single-opus55 | 640 | 640 | 0 | 2026-10-03T20:48 → 20:55 | claude-opus-5-5 | 3.46 | `810dad1158cf3c3f` |
-| format-tie-single-phi4mini | 640 | 640 | 0 | 2026-10-03T22:35 → 22:38 | phi4-mini@ | 0.00 | `a2a309c6444bdaca` |
-| format-tie-single-qwen25-3b | 688 | 593 | 95 | 2026-10-03T23:04 → 23:27 | qwen2.5:3b@357c53fb659c | 0.00 | `20b46657c34411b8` |
-| format-tie-single-qwen3-4b | 640 | 640 | 0 | 2026-10-03T21:27 → 21:36 | qwen3:4b@359d7dd4bcda | 0.00 | `5a35915290371259` |
-| format-tie-single-sonnet5 | 640 | 640 | 0 | 2026-10-03T20:48 → 20:55 | claude-sonnet-5 | 0.89 | `0b67e491af4b05c3` |
-| format-tie-single-sonnet55 | 640 | 640 | 0 | 2026-10-03T20:46 → 20:53 | claude-sonnet-5-5 | 1.84 | `b1ef07057dc94590` |
-| gestalt-gestalt-single-gemini31pro | 68 | 61 | 7 | 2026-10-03T20:23 → 20:54 | gemini-3.1-pro-low(requested) | 0.00 | `947566dc18165daa` |
-| gestalt-gestalt-single-gemini38flash | 70 | 59 | 11 | 2026-10-03T20:17 → 20:55 | gemini-3.8-flash-low(requested) | 0.00 | `80e1be0df8422499` |
-| gestalt-gestalt-single-gemma3-4b | 63 | 63 | 0 | 2026-10-03T21:50 → 21:50 | gemma3:4b@a2af6cc3eb7f | 0.00 | `b2754412ebb84694` |
-| gestalt-gestalt-single-gpt56terra | 63 | 63 | 0 | 2026-10-03T20:20 → 20:24 | gpt-5.6-terra(requested; codex exec does not echo) | 0.00 | `a9f9178b9bcb2a16` |
-| gestalt-gestalt-single-grok46 | 63 | 63 | 0 | 2026-10-03T20:33 → 20:38 | grok-4.6-build | 0.22 | `86dde2ca5190e6d6` |
-| gestalt-gestalt-single-haiku45 | 63 | 63 | 0 | 2026-10-03T20:56 → 21:00 | claude-haiku-4-5 | 0.74 | `75ea1e1706ca7303` |
-| gestalt-gestalt-single-hermes3-3b | 63 | 63 | 0 | 2026-10-03T22:45 → 22:45 | hermes3:3b@a8851c5041d4 | 0.00 | `6112ef1b38256a68` |
-| gestalt-gestalt-single-llama32-3b | 63 | 63 | 0 | 2026-10-03T20:26 → 20:27 | llama3.2:3b@a80c4f17acd5 | 0.00 | `e7bada8eaa945b70` |
-| gestalt-gestalt-single-mistral7b | 63 | 63 | 0 | 2026-10-03T22:09 → 22:09 | mistral:7b@6577803aa9a0 | 0.00 | `f8163c69faca90a1` |
-| gestalt-gestalt-single-opus55 | 63 | 63 | 0 | 2026-10-03T20:39 → 20:40 | claude-opus-5-5 | 0.40 | `8f1d8f0e98946606` |
-| gestalt-gestalt-single-phi4mini | 63 | 63 | 0 | 2026-10-03T22:31 → 22:31 | phi4-mini@ | 0.00 | `afef1147fab64efe` |
-| gestalt-gestalt-single-qwen25-3b | 69 | 57 | 12 | 2026-10-03T23:00 → 23:26 | qwen2.5:3b@357c53fb659c | 0.00 | `cb148e7db385b608` |
-| gestalt-gestalt-single-qwen3-4b | 63 | 63 | 0 | 2026-10-03T21:12 → 21:13 | qwen3:4b@359d7dd4bcda | 0.00 | `060c6abd03e11753` |
-| gestalt-gestalt-single-sonnet5 | 63 | 63 | 0 | 2026-10-03T20:40 → 20:41 | claude-sonnet-5 | 0.09 | `e676b383641769f7` |
-| gestalt-gestalt-single-sonnet55 | 63 | 63 | 0 | 2026-10-03T20:14 → 20:16 | claude-sonnet-5-5 | 0.17 | `01adf40660f8570a` |
-| gestalt-gestalt-single-sonnet55-shakedown | 6 | 6 | 0 | 2026-10-03T20:05 → 20:05 | claude-sonnet-5-5 | 0.02 | `f8e53ffa546392dc` |
-| holistic-perp-sheet-gemini31pro | 6 | 6 | 0 | 2026-10-03T20:22 → 20:23 | gemini-3.1-pro-low(requested) | 0.00 | `3ab2a5f304c0a632` |
-| holistic-perp-sheet-gemini38flash | 6 | 6 | 0 | 2026-10-03T20:16 → 20:16 | gemini-3.8-flash-low(requested) | 0.00 | `8034633b86cbb834` |
-| holistic-perp-sheet-glimmer30b-sheet | 6 | 6 | 0 | 2026-10-03T23:27 → 23:37 | muse-glimmer-30B-kquant-dynamic.gguf | 0.00 | `2b8d566a46d9c2ec` |
-| holistic-perp-sheet-gpt56terra | 6 | 5 | 1 | 2026-10-03T20:19 → 20:20 | gpt-5.6-terra(requested; codex exec does not echo) | 0.00 | `239a7b6a071cffc9` |
-| holistic-perp-sheet-grok46 | 6 | 6 | 0 | 2026-10-03T20:32 → 20:33 | grok-4.6-build | 0.03 | `c1f269f229db8f2c` |
-| holistic-perp-sheet-sonnet55 | 6 | 6 | 0 | 2026-10-03T20:14 → 20:14 | claude-sonnet-5-5 | 0.09 | `7e0f84d5f7166ebb` |
-| holistic-perp-single-gemma3-4b | 226 | 226 | 0 | 2026-10-03T21:49 → 21:50 | gemma3:4b@a2af6cc3eb7f | 0.00 | `9e21432b4b378131` |
-| holistic-perp-single-haiku45 | 226 | 226 | 0 | 2026-10-03T20:52 → 20:56 | claude-haiku-4-5 | 0.59 | `c981f7b04bd9bdd9` |
-| holistic-perp-single-hermes3-3b | 226 | 226 | 0 | 2026-10-03T22:45 → 22:45 | hermes3:3b@a8851c5041d4 | 0.00 | `3c5029441c725e19` |
-| holistic-perp-single-llama32-3b | 226 | 226 | 0 | 2026-10-03T20:26 → 20:26 | llama3.2:3b@a80c4f17acd5 | 0.00 | `588e111b82d24c6d` |
-| holistic-perp-single-mistral7b | 226 | 226 | 0 | 2026-10-03T22:07 → 22:09 | mistral:7b@6577803aa9a0 | 0.00 | `5539d5d37752708e` |
-| holistic-perp-single-opus55 | 226 | 226 | 0 | 2026-10-03T20:37 → 20:39 | claude-opus-5-5 | 1.22 | `fa3b2e7abc150c63` |
-| holistic-perp-single-phi4mini | 226 | 226 | 0 | 2026-10-03T22:30 → 22:31 | phi4-mini@ | 0.00 | `14892589e48ff184` |
-| holistic-perp-single-qwen25-3b | 228 | 224 | 4 | 2026-10-03T22:59 → 23:26 | qwen2.5:3b@357c53fb659c | 0.00 | `d91504dd684b219d` |
-| holistic-perp-single-qwen3-4b | 226 | 226 | 0 | 2026-10-03T21:08 → 21:12 | qwen3:4b@359d7dd4bcda | 0.00 | `ed6ff5f13f4873cf` |
-| holistic-perp-single-sonnet5 | 226 | 226 | 0 | 2026-10-03T20:37 → 20:40 | claude-sonnet-5 | 0.34 | `58d1e3b41e5ac878` |
-| holistic-perp-single-sonnet55 | 226 | 226 | 0 | 2026-10-03T20:37 → 20:39 | claude-sonnet-5-5 | 0.62 | `a1b9981613373fc3` |
-| signa-gestalt-gestalt-single-gemini31pro | 3 | 3 | 0 | 2026-10-03T20:56 → 20:56 | gemini-3.1-pro-low(requested) | 0.00 | `bac2a2232a51cad0` |
-| signa-gestalt-gestalt-single-gemini38flash | 3 | 3 | 0 | 2026-10-03T20:39 → 20:39 | gemini-3.8-flash-low(requested) | 0.00 | `d6b0e1a13f74560d` |
-| signa-gestalt-gestalt-single-glimmer30b | 3 | 1 | 2 | 2026-10-03T23:22 → 23:25 | muse-glimmer-30B-kquant-dynamic.gguf | 0.00 | `974741f76aa2a3ec` |
-| signa-gestalt-gestalt-single-grok46 | 3 | 3 | 0 | 2026-10-03T21:10 → 21:11 | grok-4.6-build | 0.01 | `57c8ac26fba23ef2` |
-| signa-gestalt-gestalt-single-haiku45 | 3 | 3 | 0 | 2026-10-03T21:53 → 21:53 | claude-haiku-4-5 | 0.07 | `751e9eeb521e84f8` |
-| signa-gestalt-gestalt-single-llama32-3b | 3 | 3 | 0 | 2026-10-03T21:11 → 21:11 | llama3.2:3b@a80c4f17acd5 | 0.00 | `a6f0dc46eb2486c6` |
-| signa-gestalt-gestalt-single-opus55 | 3 | 3 | 0 | 2026-10-03T21:05 → 21:05 | claude-opus-5-5 | 0.02 | `621f7d1daa288634` |
-| signa-gestalt-gestalt-single-qwen25-3b | 3 | 3 | 0 | 2026-10-03T23:25 → 23:25 | qwen2.5:3b@357c53fb659c | 0.00 | `518a91207e88a428` |
-| signa-gestalt-gestalt-single-sonnet5 | 3 | 3 | 0 | 2026-10-03T21:05 → 21:05 | claude-sonnet-5 | 0.00 | `7186325512600a3b` |
-| signa-gestalt-gestalt-single-sonnet55 | 3 | 3 | 0 | 2026-10-03T20:40 → 20:40 | claude-sonnet-5-5 | 0.02 | `f409a8b335890b4c` |
-| signa-perp-sheet-gemini31pro | 4 | 4 | 0 | 2026-10-03T20:55 → 20:55 | gemini-3.1-pro-low(requested) | 0.00 | `1cbb02e6cee8af59` |
-| signa-perp-sheet-gemini38flash | 4 | 4 | 0 | 2026-10-03T20:39 → 20:39 | gemini-3.8-flash-low(requested) | 0.00 | `3be8e37e5aa5c743` |
-| signa-perp-sheet-glimmer30b-sheet | 4 | 4 | 0 | 2026-10-03T23:13 → 23:20 | muse-glimmer-30B-kquant-dynamic.gguf | 0.00 | `2ec144bb8686f241` |
-| signa-perp-sheet-grok46 | 4 | 4 | 0 | 2026-10-03T21:10 → 21:10 | grok-4.6-build | 0.02 | `6290468ba900ca40` |
-| signa-perp-sheet-sonnet55 | 4 | 4 | 0 | 2026-10-03T20:39 → 20:40 | claude-sonnet-5-5 | 0.05 | `9070c56ee6e0c1f5` |
-| signa-perp-single-haiku45 | 110 | 110 | 0 | 2026-10-03T21:51 → 21:52 | claude-haiku-4-5 | 0.28 | `0200e32caea8d2ff` |
-| signa-perp-single-llama32-3b | 110 | 110 | 0 | 2026-10-03T21:11 → 21:11 | llama3.2:3b@a80c4f17acd5 | 0.00 | `6cd6db4be62943a8` |
-| signa-perp-single-opus55 | 110 | 110 | 0 | 2026-10-03T21:03 → 21:05 | claude-opus-5-5 | 0.59 | `bd53117998d08714` |
-| signa-perp-single-qwen25-3b | 110 | 110 | 0 | 2026-10-03T23:24 → 23:25 | qwen2.5:3b@357c53fb659c | 0.00 | `dc4363d69862850e` |
-| signa-perp-single-sonnet5 | 110 | 110 | 0 | 2026-10-03T21:03 → 21:05 | claude-sonnet-5 | 0.17 | `e717c42ca500fa2a` |
-| signa-perp-single-sonnet55 | 110 | 110 | 0 | 2026-10-03T21:03 → 21:05 | claude-sonnet-5-5 | 0.30 | `ec2209e539ccfa4f` |
-| top40-gestalt-gestalt-single-gemini31pro | 128 | 122 | 6 | 2026-10-03T21:16 → 21:24 | gemini-3.1-pro-low(requested) | 0.00 | `29f158c4c74b12e4` |
-| top40-gestalt-gestalt-single-gemini38flash | 134 | 122 | 12 | 2026-10-03T21:14 → 23:26 | gemini-3.8-flash-low(requested) | 0.00 | `db05483c63047f99` |
-| top40-gestalt-gestalt-single-grok46 | 129 | 127 | 2 | 2026-10-03T21:24 → 23:09 | grok-4.6-build | 0.31 | `dd55aa4c63d2f0ff` |
-| top40-gestalt-gestalt-single-haiku45 | 128 | 128 | 0 | 2026-10-03T21:46 → 21:51 | claude-haiku-4-5 | 0.91 | `2fe7e44119a54041` |
-| top40-gestalt-gestalt-single-llama32-3b | 128 | 128 | 0 | 2026-10-03T21:30 → 21:31 | llama3.2:3b@a80c4f17acd5 | 0.00 | `76319d0f190d68ff` |
-| top40-gestalt-gestalt-single-mistral7b | 8 | 8 | 0 | 2026-10-03T22:59 → 22:59 | mistral:7b@6577803aa9a0 | 0.00 | `86b9955d7736f71f` |
-| top40-gestalt-gestalt-single-opus55 | 128 | 128 | 0 | 2026-10-03T21:19 → 21:20 | claude-opus-5-5 | 0.82 | `dd5bc45510d6d946` |
-| top40-gestalt-gestalt-single-qwen25-3b | 154 | 102 | 52 | 2026-10-03T23:18 → 23:27 | qwen2.5:3b@357c53fb659c | 0.00 | `6882964e3fed2fcc` |
-| top40-gestalt-gestalt-single-sonnet55 | 128 | 128 | 0 | 2026-10-03T21:19 → 21:20 | claude-sonnet-5-5 | 0.45 | `ac4555daab62d064` |
-| top40-perp-sheet-gemini31pro | 20 | 20 | 0 | 2026-10-03T21:13 → 21:16 | gemini-3.1-pro-low(requested) | 0.00 | `73d1f6f44169a0e8` |
-| top40-perp-sheet-gemini38flash | 20 | 20 | 0 | 2026-10-03T21:13 → 21:14 | gemini-3.8-flash-low(requested) | 0.00 | `6b5a8a4caee34612` |
-| top40-perp-sheet-grok46 | 21 | 20 | 1 | 2026-10-03T21:13 → 21:37 | grok-4.6-build | 0.12 | `175c3bc800f0d791` |
-| top40-perp-single-haiku45 | 772 | 772 | 0 | 2026-10-03T21:34 → 21:46 | claude-haiku-4-5 | 2.01 | `789d33bc2dd01c74` |
-| top40-perp-single-llama32-3b | 772 | 772 | 0 | 2026-10-03T21:27 → 21:30 | llama3.2:3b@a80c4f17acd5 | 0.00 | `51b9a2aee58551cf` |
-| top40-perp-single-mistral7b | 772 | 772 | 0 | 2026-10-03T22:51 → 22:59 | mistral:7b@6577803aa9a0 | 0.00 | `ad47d98c77f82198` |
-| top40-perp-single-opus55 | 773 | 772 | 1 | 2026-10-03T21:13 → 21:20 | claude-opus-5-5 | 4.50 | `905528d71963fbd0` |
-| top40-perp-single-qwen25-3b | 919 | 724 | 195 | 2026-10-03T23:12 → 23:27 | qwen2.5:3b@357c53fb659c | 0.00 | `f5a747dc88501be4` |
-| top40-perp-single-sonnet55 | 772 | 772 | 0 | 2026-10-03T21:13 → 21:19 | claude-sonnet-5-5 | 2.48 | `1fc3d92531af7c79` |
-| top40b-gestalt-gestalt-single-gemini31pro | 106 | 60 | 46 | 2026-10-03T22:12 → 22:21 | gemini-3.1-pro-low(requested) | 0.00 | `4640a9e3d27e8ec6` |
-| top40b-gestalt-gestalt-single-gemini38flash | 112 | 100 | 12 | 2026-10-03T22:10 → 23:25 | gemini-3.8-flash-low(requested) | 0.00 | `a690413fffa44627` |
-| top40b-gestalt-gestalt-single-grok46 | 106 | 106 | 0 | 2026-10-03T22:21 → 22:30 | grok-4.6-build | 0.32 | `478d1fca6b927919` |
-| top40b-gestalt-gestalt-single-haiku45 | 106 | 106 | 0 | 2026-10-03T22:18 → 22:22 | claude-haiku-4-5 | 0.98 | `29913116e93cc903` |
-| top40b-gestalt-gestalt-single-llama32-3b | 106 | 106 | 0 | 2026-10-03T22:11 → 22:12 | llama3.2:3b@a80c4f17acd5 | 0.00 | `e7de85cda1fe2ad7` |
-| top40b-gestalt-gestalt-single-opus55 | 106 | 106 | 0 | 2026-10-03T22:14 → 22:15 | claude-opus-5-5 | 0.72 | `af3cd636d57fec70` |
-| top40b-gestalt-gestalt-single-qwen25-3b | 140 | 72 | 68 | 2026-10-03T23:23 → 23:27 | qwen2.5:3b@357c53fb659c | 0.00 | `c73d09dc33d70f46` |
-| top40b-gestalt-gestalt-single-sonnet55 | 106 | 106 | 0 | 2026-10-03T22:14 → 22:15 | claude-sonnet-5-5 | 0.40 | `2ac77eb793e4c1f0` |
-| top40b-perp-sheet-gemini31pro | 14 | 14 | 0 | 2026-10-03T22:09 → 22:12 | gemini-3.1-pro-low(requested) | 0.00 | `bd50d0099277c18b` |
-| top40b-perp-sheet-gemini38flash | 22 | 10 | 12 | 2026-10-03T22:09 → 23:25 | gemini-3.8-flash-low(requested) | 0.00 | `16fed0e63789102b` |
-| top40b-perp-sheet-grok46 | 20 | 13 | 7 | 2026-10-03T22:09 → 23:25 | grok-4.6-build | 0.16 | `b3c8a5cad6528e2c` |
-| top40b-perp-single-haiku45 | 522 | 522 | 0 | 2026-10-03T22:09 → 22:17 | claude-haiku-4-5 | 1.41 | `96c5dd416a59cfb0` |
-| top40b-perp-single-llama32-3b | 522 | 522 | 0 | 2026-10-03T22:09 → 22:11 | llama3.2:3b@a80c4f17acd5 | 0.00 | `4d899e1fdbac9150` |
-| top40b-perp-single-opus55 | 522 | 522 | 0 | 2026-10-03T22:09 → 22:14 | claude-opus-5-5 | 3.45 | `fd56e481471efdc4` |
-| top40b-perp-single-qwen25-3b | 600 | 496 | 104 | 2026-10-03T23:19 → 23:27 | qwen2.5:3b@357c53fb659c | 0.00 | `3b52e480b2aec8bb` |
-| top40b-perp-single-sonnet55 | 522 | 522 | 0 | 2026-10-03T22:09 → 22:14 | claude-sonnet-5-5 | 1.96 | `f5f10b934932fd61` |
-| triads-perp-sheet-gemini31pro | 46 | 46 | 0 | 2026-10-03T20:12 → 20:21 | gemini-3.1-pro-low(requested) | 0.00 | `5c201e98d562e242` |
-| triads-perp-sheet-gemini31pro-shakedown | 1 | 1 | 0 | 2026-10-03T20:06 → 20:06 | gemini-3.1-pro-low(requested) | 0.00 | `0b2b7a86ed239784` |
-| triads-perp-sheet-gemini38flash | 46 | 46 | 0 | 2026-10-03T20:12 → 20:15 | gemini-3.8-flash-low(requested) | 0.00 | `8bc9b1f5cf273e2b` |
-| triads-perp-sheet-gpt56terra | 46 | 46 | 0 | 2026-10-03T20:12 → 20:18 | gpt-5.6-terra(requested; codex exec does not echo) | 0.00 | `4aa8ffb66ee03c49` |
-| triads-perp-sheet-gpt56terra-shakedown | 1 | 1 | 0 | 2026-10-03T20:06 → 20:06 | gpt-5.6-terra(requested; codex exec does not echo) | 0.00 | `ed81db3ab87c2cb8` |
-| triads-perp-sheet-grok46 | 57 | 45 | 12 | 2026-10-03T20:19 → 22:50 | grok-4.6-build | 0.39 | `48177a9da67f6b72` |
-| triads-perp-sheet-grok46-aborted-toolleak | 25 | 23 | 2 | 2026-10-03T20:12 → 20:13 | grok-4.6-build | 0.13 | `018b54aff48aaec8` |
-| triads-perp-sheet-grok46-shakedown | 5 | 4 | 1 | 2026-10-03T20:07 → 20:08 | grok-4.6-build | 0.04 | `0ed2308a7424478d` |
-| triads-perp-sheet-sonnet55 | 46 | 46 | 0 | 2026-10-03T20:12 → 20:13 | claude-sonnet-5-5 | 0.70 | `c5b84af768b37977` |
-| triads-perp-sheet-sonnet55-shakedown | 1 | 1 | 0 | 2026-10-03T20:06 → 20:06 | claude-sonnet-5-5 | 0.02 | `35481a332826545f` |
-| triads-perp-single-gemma3-4b | 1800 | 1800 | 0 | 2026-10-03T21:13 → 21:49 | gemma3:4b@a2af6cc3eb7f | 0.00 | `0155845c2a7229bd` |
-| triads-perp-single-haiku45 | 1800 | 1800 | 0 | 2026-10-03T20:12 → 20:47 | claude-haiku-4-5 | 4.71 | `575ca69cb1e78f38` |
-| triads-perp-single-haiku45-shakedown | 24 | 24 | 0 | 2026-10-03T20:05 → 20:05 | claude-haiku-4-5 | 0.06 | `569b242716c32b0c` |
-| triads-perp-single-hermes3-3b | 1800 | 1800 | 0 | 2026-10-03T21:14 → 22:44 | hermes3:3b@a8851c5041d4 | 0.00 | `e8a86e1530e0561a` |
-| triads-perp-single-llama32-3b | 1800 | 1800 | 0 | 2026-10-03T20:19 → 20:25 | llama3.2:3b@a80c4f17acd5 | 0.00 | `3fa5f71cce00a992` |
-| triads-perp-single-mistral7b | 1800 | 1800 | 0 | 2026-10-03T21:13 → 22:07 | mistral:7b@6577803aa9a0 | 0.00 | `44d1a39d5c960318` |
-| triads-perp-single-opus55 | 1801 | 1800 | 1 | 2026-10-03T20:12 → 21:03 | claude-opus-5-5 | 10.69 | `25ba4eb6b7ff739a` |
-| triads-perp-single-phi4mini | 1800 | 1799 | 1 | 2026-10-03T21:13 → 22:29 | phi4-mini@ | 0.00 | `1982d96f0c27912f` |
-| triads-perp-single-qwen25-3b | 1928 | 1672 | 256 | 2026-10-03T22:48 → 23:26 | qwen2.5:3b@357c53fb659c | 0.00 | `c77d1a1f96af3626` |
-| triads-perp-single-qwen3-4b | 1800 | 1800 | 0 | 2026-10-03T20:33 → 21:07 | qwen3:4b@359d7dd4bcda | 0.00 | `c4df644df59b9c6e` |
-| triads-perp-single-sonnet5 | 1800 | 1800 | 0 | 2026-10-03T20:11 → 20:34 | claude-sonnet-5 | 2.71 | `9820ae3ff1003767` |
-| triads-perp-single-sonnet55 | 1800 | 1800 | 0 | 2026-10-03T20:11 → 20:34 | claude-sonnet-5-5 | 5.93 | `57d77daf2e053337` |
+Lineage: A = fixed by rule or pilot, B = builder-chosen, C = SIGNA-driven (data/stimuli-v1/LINEAGE.md).
+
+| run | lineage | calls | ok | failed / incomplete | UTC span | model reported | list cost USD | ledger sha256[:16] |
+|---|---|---|---|---|---|---|---|---|
+| conflict-perp-sheet-gemini31pro | B | 6 | 6 | 0 | 2026-10-03T20:21 → 20:22 | gemini-3.1-pro-low(requested) | 0.00 | `706c273c14f85f0f` |
+| conflict-perp-sheet-gemini38flash | B | 6 | 6 | 0 | 2026-10-03T20:16 → 20:16 | gemini-3.8-flash-low(requested) | 0.00 | `e18498bac151e568` |
+| conflict-perp-sheet-glimmer30b-sheet | B | 2 | 2 | 0 | 2026-10-03T23:06 → 23:10 | muse-glimmer-30B-kquant-dynamic.gguf | 0.00 | `3f079c2dac20d66a` |
+| conflict-perp-sheet-gpt56terra | B | 6 | 5 | 1 | 2026-10-03T20:18 → 20:19 | gpt-5.6-terra(requested; codex exec does not echo) | 0.00 | `79d647e98b75de11` |
+| conflict-perp-sheet-grok46 | B | 6 | 6 | 0 | 2026-10-03T20:31 → 20:32 | grok-4.6-build | 0.04 | `103c5381f80aa1f8` |
+| conflict-perp-sheet-sonnet55 | B | 6 | 6 | 0 | 2026-10-03T20:13 → 20:14 | claude-sonnet-5-5 | 0.10 | `dcb31b918f5d24d6` |
+| conflict-perp-single-gemma3-4b | B | 76 | 76 | 0 | 2026-10-03T21:49 → 21:49 | gemma3:4b@a2af6cc3eb7f | 0.00 | `9b01a2fc09ba0379` |
+| conflict-perp-single-haiku45 | B | 228 | 228 | 0 | 2026-10-03T20:47 → 20:52 | claude-haiku-4-5 | 0.64 | `98818cbaccf4c536` |
+| conflict-perp-single-hermes3-3b | B | 76 | 76 | 0 | 2026-10-03T22:44 → 22:44 | hermes3:3b@a8851c5041d4 | 0.00 | `c6363f2631231cb0` |
+| conflict-perp-single-llama32-3b | B | 76 | 76 | 0 | 2026-10-03T20:25 → 20:26 | llama3.2:3b@a80c4f17acd5 | 0.00 | `9d3e3ba21d259abf` |
+| conflict-perp-single-mistral7b | B | 76 | 76 | 0 | 2026-10-03T22:07 → 22:07 | mistral:7b@6577803aa9a0 | 0.00 | `8d533da15e8c5121` |
+| conflict-perp-single-opus55 | B | 228 | 228 | 0 | 2026-10-03T20:34 → 20:37 | claude-opus-5-5 | 1.12 | `8e2af67debf8dd43` |
+| conflict-perp-single-phi4mini | B | 76 | 76 | 0 | 2026-10-03T22:29 → 22:30 | phi4-mini@ | 0.00 | `0fa84174a84fde9d` |
+| conflict-perp-single-qwen25-3b | B | 81 | 71 | 10 | 2026-10-03T22:59 → 23:26 | qwen2.5:3b@357c53fb659c | 0.00 | `8dec6f9a53c15139` |
+| conflict-perp-single-qwen3-4b | B | 76 | 76 | 0 | 2026-10-03T21:07 → 21:08 | qwen3:4b@359d7dd4bcda | 0.00 | `5bc4f3177ae07bc6` |
+| conflict-perp-single-sonnet5 | B | 228 | 228 | 0 | 2026-10-03T20:34 → 20:37 | claude-sonnet-5 | 0.35 | `f3579ebf449649ad` |
+| conflict-perp-single-sonnet55 | B | 228 | 228 | 0 | 2026-10-03T20:34 → 20:37 | claude-sonnet-5-5 | 0.60 | `b540995ed40901fc` |
+| format-forced-sheet-gemini31pro | A | 16 | 16 | 0 | 2026-10-03T20:30 → 20:33 | gemini-3.1-pro-low(requested) | 0.00 | `e4dfe8715a02279f` |
+| format-forced-sheet-gemini38flash | A | 16 | 16 | 0 | 2026-10-03T20:21 → 20:22 | gemini-3.8-flash-low(requested) | 0.00 | `25ebbb6d9622e932` |
+| format-forced-sheet-gpt56terra | A | 16 | 16 | 0 | 2026-10-03T20:24 → 20:26 | gpt-5.6-terra(requested; codex exec does not echo) | 0.00 | `e7bc728d0a2a6a25` |
+| format-forced-sheet-grok46 | A | 19 | 16 | 3 | 2026-10-03T20:38 → 22:50 | grok-4.6-build | 0.17 | `d3adcba5ee0b0183` |
+| format-forced-sheet-sonnet55 | A | 16 | 16 | 0 | 2026-10-03T20:16 → 20:17 | claude-sonnet-5-5 | 0.25 | `af8da334eb3e5e36` |
+| format-forced-single-gemma3-4b | A | 640 | 640 | 0 | 2026-10-03T21:50 → 21:52 | gemma3:4b@a2af6cc3eb7f | 0.00 | `05520f0e8edc211f` |
+| format-forced-single-haiku45 | A | 640 | 640 | 0 | 2026-10-03T21:00 → 21:12 | claude-haiku-4-5 | 1.55 | `5026c96ca5a7329c` |
+| format-forced-single-hermes3-3b | A | 640 | 640 | 0 | 2026-10-03T22:45 → 22:46 | hermes3:3b@a8851c5041d4 | 0.00 | `ba0c1671f56d5cb7` |
+| format-forced-single-llama32-3b | A | 640 | 640 | 0 | 2026-10-03T20:27 → 20:29 | llama3.2:3b@a80c4f17acd5 | 0.00 | `f43c82d6385e0d4b` |
+| format-forced-single-llama32-3b-shakedown | A | 20 | 20 | 0 | 2026-10-03T20:05 → 20:05 | llama3.2:3b@a80c4f17acd5 | 0.00 | `cfa9ef2ed021351b` |
+| format-forced-single-mistral7b | A | 640 | 640 | 0 | 2026-10-03T22:09 → 22:13 | mistral:7b@6577803aa9a0 | 0.00 | `2c8d4d20a45eaf9c` |
+| format-forced-single-opus55 | A | 640 | 640 | 0 | 2026-10-03T20:40 → 20:47 | claude-opus-5-5 | 3.19 | `094fef9826ae7573` |
+| format-forced-single-phi4mini | A | 640 | 640 | 0 | 2026-10-03T22:31 → 22:35 | phi4-mini@ | 0.00 | `25a6cc8dfb57a51c` |
+| format-forced-single-qwen25-3b | A | 640 | 640 | 0 | 2026-10-03T23:00 → 23:04 | qwen2.5:3b@357c53fb659c | 0.00 | `bcd6b3f239f20e01` |
+| format-forced-single-qwen3-4b | A | 640 | 640 | 0 | 2026-10-03T21:13 → 21:27 | qwen3:4b@359d7dd4bcda | 0.00 | `cff1585318d31a3c` |
+| format-forced-single-sonnet5 | A | 640 | 640 | 0 | 2026-10-03T20:41 → 20:48 | claude-sonnet-5 | 0.85 | `1cd30e867eb89548` |
+| format-forced-single-sonnet55 | A | 640 | 640 | 0 | 2026-10-03T20:39 → 20:46 | claude-sonnet-5-5 | 1.58 | `2514a224dd391115` |
+| format-perp-pilotcond-sonnetagent | A | 4 | 4 | 0 | 2026-10-03T20:38 → 20:38 | claude-sonnet-5-5 | 0.00 | `bc4d77ca53f129eb` |
+| format-perp-sheet-gemini31pro | A | 17 | 16 | 1 | 2026-10-03T20:36 → 20:54 | gemini-3.1-pro-low(requested) | 0.00 | `fdb71d5a1eac53e5` |
+| format-perp-sheet-gemini38flash | A | 16 | 16 | 0 | 2026-10-03T20:24 → 20:25 | gemini-3.8-flash-low(requested) | 0.00 | `6175aa26ff5e709f` |
+| format-perp-sheet-gemini38flash-shakedown | A | 1 | 1 | 0 | 2026-10-03T20:09 → 20:09 | gemini-3.8-flash-low(requested) | 0.00 | `484d236be9599e33` |
+| format-perp-sheet-gpt56terra | A | 16 | 0 | 16 | 2026-10-03T20:27 → 20:28 | gpt-5.6-terra(requested; codex exec does not echo) | 0.00 | `7d04acd0dca58153` |
+| format-perp-sheet-gpt56terra-shakedown | A | 1 | 1 | 0 | 2026-10-03T20:09 → 20:09 | gpt-5.6-terra(requested; codex exec does not echo) | 0.00 | `976f9405b31d42ea` |
+| format-perp-sheet-grok46 | A | 19 | 14 | 5 | 2026-10-03T20:55 → 22:59 | grok-4.6-build | 0.07 | `3398b4d24312f86c` |
+| format-perp-sheet-sonnet55 | A | 16 | 16 | 0 | 2026-10-03T20:18 → 20:18 | claude-sonnet-5-5 | 0.25 | `35a163943626bb88` |
+| format-perp-single-gemma3-4b | A | 640 | 640 | 0 | 2026-10-03T21:54 → 21:56 | gemma3:4b@a2af6cc3eb7f | 0.00 | `913905769941faf6` |
+| format-perp-single-haiku45 | A | 640 | 640 | 0 | 2026-10-03T21:23 → 21:34 | claude-haiku-4-5 | 1.67 | `3118d04b79a24864` |
+| format-perp-single-hermes3-3b | A | 640 | 639 | 1 | 2026-10-03T22:48 → 22:50 | hermes3:3b@a8851c5041d4 | 0.00 | `b5530ef3e7b45dce` |
+| format-perp-single-llama32-3b | A | 640 | 640 | 0 | 2026-10-03T20:31 → 20:33 | llama3.2:3b@a80c4f17acd5 | 0.00 | `3e582c2656f9230a` |
+| format-perp-single-mistral7b | A | 640 | 640 | 0 | 2026-10-03T22:16 → 22:19 | mistral:7b@6577803aa9a0 | 0.00 | `c693fd716987fa92` |
+| format-perp-single-opus55 | A | 640 | 640 | 0 | 2026-10-03T20:55 → 21:02 | claude-opus-5-5 | 3.72 | `50259fc24dada9bc` |
+| format-perp-single-phi4mini | A | 640 | 640 | 0 | 2026-10-03T22:38 → 22:42 | phi4-mini@ | 0.00 | `54b360410a511492` |
+| format-perp-single-qwen25-3b | A | 675 | 605 | 70 | 2026-10-03T23:08 → 23:27 | qwen2.5:3b@357c53fb659c | 0.00 | `9c17a51c22cef674` |
+| format-perp-single-qwen3-4b | A | 640 | 640 | 0 | 2026-10-03T21:36 → 21:45 | qwen3:4b@359d7dd4bcda | 0.00 | `1e86c4ff5854bf78` |
+| format-perp-single-sonnet5 | A | 640 | 640 | 0 | 2026-10-03T20:55 → 21:03 | claude-sonnet-5 | 0.96 | `201faa1ad2dc604c` |
+| format-perp-single-sonnet55 | A | 640 | 640 | 0 | 2026-10-03T20:53 → 21:00 | claude-sonnet-5-5 | 1.98 | `42d7de5b6b1ac09b` |
+| format-tie-pilotcond-sonnetagent | A | 4 | 4 | 0 | 2026-10-03T20:37 → 20:38 | claude-sonnet-5-5 | 0.00 | `8fdec9541967bab7` |
+| format-tie-sheet-gemini31pro | A | 16 | 16 | 0 | 2026-10-03T20:33 → 20:35 | gemini-3.1-pro-low(requested) | 0.00 | `2884e08ab5ca7d5a` |
+| format-tie-sheet-gemini38flash | A | 16 | 16 | 0 | 2026-10-03T20:22 → 20:24 | gemini-3.8-flash-low(requested) | 0.00 | `5bc7b952e0e3842b` |
+| format-tie-sheet-gpt56terra | A | 16 | 9 | 7 | 2026-10-03T20:26 → 20:27 | gpt-5.6-terra(requested; codex exec does not echo) | 0.00 | `db6817bf055b7c91` |
+| format-tie-sheet-grok46 | A | 19 | 15 | 4 | 2026-10-03T20:45 → 22:58 | grok-4.6-build | 0.26 | `550b95429dcaa845` |
+| format-tie-sheet-sonnet55 | A | 16 | 16 | 0 | 2026-10-03T20:17 → 20:17 | claude-sonnet-5-5 | 0.25 | `ea3a42b9ec584feb` |
+| format-tie-single-gemma3-4b | A | 640 | 640 | 0 | 2026-10-03T21:52 → 21:54 | gemma3:4b@a2af6cc3eb7f | 0.00 | `5fcc82f3b36593b1` |
+| format-tie-single-haiku45 | A | 640 | 640 | 0 | 2026-10-03T21:13 → 21:23 | claude-haiku-4-5 | 1.60 | `d389a6c63bba77d8` |
+| format-tie-single-hermes3-3b | A | 640 | 639 | 1 | 2026-10-03T22:46 → 22:48 | hermes3:3b@a8851c5041d4 | 0.00 | `19af960576b48c53` |
+| format-tie-single-llama32-3b | A | 640 | 640 | 0 | 2026-10-03T20:29 → 20:31 | llama3.2:3b@a80c4f17acd5 | 0.00 | `b8f88f0dc90b4ea1` |
+| format-tie-single-mistral7b | A | 640 | 640 | 0 | 2026-10-03T22:13 → 22:16 | mistral:7b@6577803aa9a0 | 0.00 | `30007026b1bb4d39` |
+| format-tie-single-opus55 | A | 640 | 640 | 0 | 2026-10-03T20:48 → 20:55 | claude-opus-5-5 | 3.46 | `810dad1158cf3c3f` |
+| format-tie-single-phi4mini | A | 640 | 640 | 0 | 2026-10-03T22:35 → 22:38 | phi4-mini@ | 0.00 | `a2a309c6444bdaca` |
+| format-tie-single-qwen25-3b | A | 688 | 593 | 95 | 2026-10-03T23:04 → 23:27 | qwen2.5:3b@357c53fb659c | 0.00 | `20b46657c34411b8` |
+| format-tie-single-qwen3-4b | A | 640 | 640 | 0 | 2026-10-03T21:27 → 21:36 | qwen3:4b@359d7dd4bcda | 0.00 | `5a35915290371259` |
+| format-tie-single-sonnet5 | A | 640 | 640 | 0 | 2026-10-03T20:48 → 20:55 | claude-sonnet-5 | 0.89 | `0b67e491af4b05c3` |
+| format-tie-single-sonnet55 | A | 640 | 640 | 0 | 2026-10-03T20:46 → 20:53 | claude-sonnet-5-5 | 1.84 | `b1ef07057dc94590` |
+| gestalt-gestalt-single-gemini31pro | A+B | 68 | 61 | 7 | 2026-10-03T20:23 → 20:54 | gemini-3.1-pro-low(requested) | 0.00 | `947566dc18165daa` |
+| gestalt-gestalt-single-gemini38flash | A+B | 70 | 59 | 11 | 2026-10-03T20:17 → 20:55 | gemini-3.8-flash-low(requested) | 0.00 | `80e1be0df8422499` |
+| gestalt-gestalt-single-gemma3-4b | A+B | 63 | 63 | 0 | 2026-10-03T21:50 → 21:50 | gemma3:4b@a2af6cc3eb7f | 0.00 | `b2754412ebb84694` |
+| gestalt-gestalt-single-gpt56terra | A+B | 63 | 63 | 0 | 2026-10-03T20:20 → 20:24 | gpt-5.6-terra(requested; codex exec does not echo) | 0.00 | `a9f9178b9bcb2a16` |
+| gestalt-gestalt-single-grok46 | A+B | 63 | 63 | 0 | 2026-10-03T20:33 → 20:38 | grok-4.6-build | 0.22 | `86dde2ca5190e6d6` |
+| gestalt-gestalt-single-haiku45 | A+B | 63 | 63 | 0 | 2026-10-03T20:56 → 21:00 | claude-haiku-4-5 | 0.74 | `75ea1e1706ca7303` |
+| gestalt-gestalt-single-hermes3-3b | A+B | 63 | 63 | 0 | 2026-10-03T22:45 → 22:45 | hermes3:3b@a8851c5041d4 | 0.00 | `6112ef1b38256a68` |
+| gestalt-gestalt-single-llama32-3b | A+B | 63 | 63 | 0 | 2026-10-03T20:26 → 20:27 | llama3.2:3b@a80c4f17acd5 | 0.00 | `e7bada8eaa945b70` |
+| gestalt-gestalt-single-mistral7b | A+B | 63 | 63 | 0 | 2026-10-03T22:09 → 22:09 | mistral:7b@6577803aa9a0 | 0.00 | `f8163c69faca90a1` |
+| gestalt-gestalt-single-opus55 | A+B | 63 | 63 | 0 | 2026-10-03T20:39 → 20:40 | claude-opus-5-5 | 0.40 | `8f1d8f0e98946606` |
+| gestalt-gestalt-single-phi4mini | A+B | 63 | 63 | 0 | 2026-10-03T22:31 → 22:31 | phi4-mini@ | 0.00 | `afef1147fab64efe` |
+| gestalt-gestalt-single-qwen25-3b | A+B | 69 | 57 | 12 | 2026-10-03T23:00 → 23:26 | qwen2.5:3b@357c53fb659c | 0.00 | `cb148e7db385b608` |
+| gestalt-gestalt-single-qwen3-4b | A+B | 63 | 63 | 0 | 2026-10-03T21:12 → 21:13 | qwen3:4b@359d7dd4bcda | 0.00 | `060c6abd03e11753` |
+| gestalt-gestalt-single-sonnet5 | A+B | 63 | 63 | 0 | 2026-10-03T20:40 → 20:41 | claude-sonnet-5 | 0.09 | `e676b383641769f7` |
+| gestalt-gestalt-single-sonnet55 | A+B | 63 | 63 | 0 | 2026-10-03T20:14 → 20:16 | claude-sonnet-5-5 | 0.17 | `01adf40660f8570a` |
+| gestalt-gestalt-single-sonnet55-shakedown | A+B | 6 | 6 | 0 | 2026-10-03T20:05 → 20:05 | claude-sonnet-5-5 | 0.02 | `f8e53ffa546392dc` |
+| holistic-perp-sheet-gemini31pro | A+B | 6 | 6 | 0 | 2026-10-03T20:22 → 20:23 | gemini-3.1-pro-low(requested) | 0.00 | `3ab2a5f304c0a632` |
+| holistic-perp-sheet-gemini38flash | A+B | 6 | 6 | 0 | 2026-10-03T20:16 → 20:16 | gemini-3.8-flash-low(requested) | 0.00 | `8034633b86cbb834` |
+| holistic-perp-sheet-glimmer30b-sheet | A+B | 6 | 6 | 0 | 2026-10-03T23:27 → 23:37 | muse-glimmer-30B-kquant-dynamic.gguf | 0.00 | `2b8d566a46d9c2ec` |
+| holistic-perp-sheet-gpt56terra | A+B | 6 | 5 | 1 | 2026-10-03T20:19 → 20:20 | gpt-5.6-terra(requested; codex exec does not echo) | 0.00 | `239a7b6a071cffc9` |
+| holistic-perp-sheet-grok46 | A+B | 6 | 6 | 0 | 2026-10-03T20:32 → 20:33 | grok-4.6-build | 0.03 | `c1f269f229db8f2c` |
+| holistic-perp-sheet-sonnet55 | A+B | 6 | 6 | 0 | 2026-10-03T20:14 → 20:14 | claude-sonnet-5-5 | 0.09 | `7e0f84d5f7166ebb` |
+| holistic-perp-single-gemma3-4b | A+B | 226 | 226 | 0 | 2026-10-03T21:49 → 21:50 | gemma3:4b@a2af6cc3eb7f | 0.00 | `9e21432b4b378131` |
+| holistic-perp-single-haiku45 | A+B | 226 | 226 | 0 | 2026-10-03T20:52 → 20:56 | claude-haiku-4-5 | 0.59 | `c981f7b04bd9bdd9` |
+| holistic-perp-single-hermes3-3b | A+B | 226 | 226 | 0 | 2026-10-03T22:45 → 22:45 | hermes3:3b@a8851c5041d4 | 0.00 | `3c5029441c725e19` |
+| holistic-perp-single-llama32-3b | A+B | 226 | 226 | 0 | 2026-10-03T20:26 → 20:26 | llama3.2:3b@a80c4f17acd5 | 0.00 | `588e111b82d24c6d` |
+| holistic-perp-single-mistral7b | A+B | 226 | 226 | 0 | 2026-10-03T22:07 → 22:09 | mistral:7b@6577803aa9a0 | 0.00 | `5539d5d37752708e` |
+| holistic-perp-single-opus55 | A+B | 226 | 226 | 0 | 2026-10-03T20:37 → 20:39 | claude-opus-5-5 | 1.22 | `fa3b2e7abc150c63` |
+| holistic-perp-single-phi4mini | A+B | 226 | 226 | 0 | 2026-10-03T22:30 → 22:31 | phi4-mini@ | 0.00 | `14892589e48ff184` |
+| holistic-perp-single-qwen25-3b | A+B | 228 | 224 | 4 | 2026-10-03T22:59 → 23:26 | qwen2.5:3b@357c53fb659c | 0.00 | `d91504dd684b219d` |
+| holistic-perp-single-qwen3-4b | A+B | 226 | 226 | 0 | 2026-10-03T21:08 → 21:12 | qwen3:4b@359d7dd4bcda | 0.00 | `ed6ff5f13f4873cf` |
+| holistic-perp-single-sonnet5 | A+B | 226 | 226 | 0 | 2026-10-03T20:37 → 20:40 | claude-sonnet-5 | 0.34 | `58d1e3b41e5ac878` |
+| holistic-perp-single-sonnet55 | A+B | 226 | 226 | 0 | 2026-10-03T20:37 → 20:39 | claude-sonnet-5-5 | 0.62 | `a1b9981613373fc3` |
+| signa-gestalt-gestalt-single-gemini31pro | C | 3 | 3 | 0 | 2026-10-03T20:56 → 20:56 | gemini-3.1-pro-low(requested) | 0.00 | `bac2a2232a51cad0` |
+| signa-gestalt-gestalt-single-gemini38flash | C | 3 | 3 | 0 | 2026-10-03T20:39 → 20:39 | gemini-3.8-flash-low(requested) | 0.00 | `d6b0e1a13f74560d` |
+| signa-gestalt-gestalt-single-glimmer30b | C | 3 | 1 | 2 | 2026-10-03T23:22 → 23:25 | muse-glimmer-30B-kquant-dynamic.gguf | 0.00 | `974741f76aa2a3ec` |
+| signa-gestalt-gestalt-single-grok46 | C | 3 | 3 | 0 | 2026-10-03T21:10 → 21:11 | grok-4.6-build | 0.01 | `57c8ac26fba23ef2` |
+| signa-gestalt-gestalt-single-haiku45 | C | 3 | 3 | 0 | 2026-10-03T21:53 → 21:53 | claude-haiku-4-5 | 0.07 | `751e9eeb521e84f8` |
+| signa-gestalt-gestalt-single-llama32-3b | C | 3 | 3 | 0 | 2026-10-03T21:11 → 21:11 | llama3.2:3b@a80c4f17acd5 | 0.00 | `a6f0dc46eb2486c6` |
+| signa-gestalt-gestalt-single-opus55 | C | 3 | 3 | 0 | 2026-10-03T21:05 → 21:05 | claude-opus-5-5 | 0.02 | `621f7d1daa288634` |
+| signa-gestalt-gestalt-single-qwen25-3b | C | 3 | 3 | 0 | 2026-10-03T23:25 → 23:25 | qwen2.5:3b@357c53fb659c | 0.00 | `518a91207e88a428` |
+| signa-gestalt-gestalt-single-sonnet5 | C | 3 | 3 | 0 | 2026-10-03T21:05 → 21:05 | claude-sonnet-5 | 0.00 | `7186325512600a3b` |
+| signa-gestalt-gestalt-single-sonnet55 | C | 3 | 3 | 0 | 2026-10-03T20:40 → 20:40 | claude-sonnet-5-5 | 0.02 | `f409a8b335890b4c` |
+| signa-perp-sheet-gemini31pro | C | 4 | 4 | 0 | 2026-10-03T20:55 → 20:55 | gemini-3.1-pro-low(requested) | 0.00 | `1cbb02e6cee8af59` |
+| signa-perp-sheet-gemini38flash | C | 4 | 4 | 0 | 2026-10-03T20:39 → 20:39 | gemini-3.8-flash-low(requested) | 0.00 | `3be8e37e5aa5c743` |
+| signa-perp-sheet-glimmer30b-sheet | C | 4 | 4 | 0 | 2026-10-03T23:13 → 23:20 | muse-glimmer-30B-kquant-dynamic.gguf | 0.00 | `2ec144bb8686f241` |
+| signa-perp-sheet-grok46 | C | 4 | 4 | 0 | 2026-10-03T21:10 → 21:10 | grok-4.6-build | 0.02 | `6290468ba900ca40` |
+| signa-perp-sheet-sonnet55 | C | 4 | 4 | 0 | 2026-10-03T20:39 → 20:40 | claude-sonnet-5-5 | 0.05 | `9070c56ee6e0c1f5` |
+| signa-perp-single-haiku45 | C | 110 | 110 | 0 | 2026-10-03T21:51 → 21:52 | claude-haiku-4-5 | 0.28 | `0200e32caea8d2ff` |
+| signa-perp-single-llama32-3b | C | 110 | 110 | 0 | 2026-10-03T21:11 → 21:11 | llama3.2:3b@a80c4f17acd5 | 0.00 | `6cd6db4be62943a8` |
+| signa-perp-single-opus55 | C | 110 | 110 | 0 | 2026-10-03T21:03 → 21:05 | claude-opus-5-5 | 0.59 | `bd53117998d08714` |
+| signa-perp-single-qwen25-3b | C | 110 | 110 | 0 | 2026-10-03T23:24 → 23:25 | qwen2.5:3b@357c53fb659c | 0.00 | `dc4363d69862850e` |
+| signa-perp-single-sonnet5 | C | 110 | 110 | 0 | 2026-10-03T21:03 → 21:05 | claude-sonnet-5 | 0.17 | `e717c42ca500fa2a` |
+| signa-perp-single-sonnet55 | C | 110 | 110 | 0 | 2026-10-03T21:03 → 21:05 | claude-sonnet-5-5 | 0.30 | `ec2209e539ccfa4f` |
+| top40-gestalt-gestalt-single-gemini31pro | A | 128 | 122 | 6 | 2026-10-03T21:16 → 21:24 | gemini-3.1-pro-low(requested) | 0.00 | `29f158c4c74b12e4` |
+| top40-gestalt-gestalt-single-gemini38flash | A | 134 | 122 | 12 | 2026-10-03T21:14 → 23:26 | gemini-3.8-flash-low(requested) | 0.00 | `db05483c63047f99` |
+| top40-gestalt-gestalt-single-grok46 | A | 129 | 127 | 2 | 2026-10-03T21:24 → 23:09 | grok-4.6-build | 0.31 | `dd55aa4c63d2f0ff` |
+| top40-gestalt-gestalt-single-haiku45 | A | 128 | 128 | 0 | 2026-10-03T21:46 → 21:51 | claude-haiku-4-5 | 0.91 | `2fe7e44119a54041` |
+| top40-gestalt-gestalt-single-llama32-3b | A | 128 | 128 | 0 | 2026-10-03T21:30 → 21:31 | llama3.2:3b@a80c4f17acd5 | 0.00 | `76319d0f190d68ff` |
+| top40-gestalt-gestalt-single-mistral7b | A | 8 | 8 | 0 | 2026-10-03T22:59 → 22:59 | mistral:7b@6577803aa9a0 | 0.00 | `86b9955d7736f71f` |
+| top40-gestalt-gestalt-single-opus55 | A | 128 | 128 | 0 | 2026-10-03T21:19 → 21:20 | claude-opus-5-5 | 0.82 | `dd5bc45510d6d946` |
+| top40-gestalt-gestalt-single-qwen25-3b | A | 154 | 102 | 52 | 2026-10-03T23:18 → 23:27 | qwen2.5:3b@357c53fb659c | 0.00 | `6882964e3fed2fcc` |
+| top40-gestalt-gestalt-single-sonnet55 | A | 128 | 128 | 0 | 2026-10-03T21:19 → 21:20 | claude-sonnet-5-5 | 0.45 | `ac4555daab62d064` |
+| top40-perp-sheet-gemini31pro | A | 20 | 20 | 0 | 2026-10-03T21:13 → 21:16 | gemini-3.1-pro-low(requested) | 0.00 | `73d1f6f44169a0e8` |
+| top40-perp-sheet-gemini38flash | A | 20 | 20 | 0 | 2026-10-03T21:13 → 21:14 | gemini-3.8-flash-low(requested) | 0.00 | `6b5a8a4caee34612` |
+| top40-perp-sheet-grok46 | A | 21 | 20 | 1 | 2026-10-03T21:13 → 21:37 | grok-4.6-build | 0.12 | `175c3bc800f0d791` |
+| top40-perp-single-haiku45 | A | 772 | 772 | 0 | 2026-10-03T21:34 → 21:46 | claude-haiku-4-5 | 2.01 | `789d33bc2dd01c74` |
+| top40-perp-single-llama32-3b | A | 772 | 772 | 0 | 2026-10-03T21:27 → 21:30 | llama3.2:3b@a80c4f17acd5 | 0.00 | `51b9a2aee58551cf` |
+| top40-perp-single-mistral7b | A | 772 | 772 | 0 | 2026-10-03T22:51 → 22:59 | mistral:7b@6577803aa9a0 | 0.00 | `ad47d98c77f82198` |
+| top40-perp-single-opus55 | A | 773 | 772 | 1 | 2026-10-03T21:13 → 21:20 | claude-opus-5-5 | 4.50 | `905528d71963fbd0` |
+| top40-perp-single-qwen25-3b | A | 919 | 724 | 195 | 2026-10-03T23:12 → 23:27 | qwen2.5:3b@357c53fb659c | 0.00 | `f5a747dc88501be4` |
+| top40-perp-single-sonnet55 | A | 772 | 772 | 0 | 2026-10-03T21:13 → 21:19 | claude-sonnet-5-5 | 2.48 | `1fc3d92531af7c79` |
+| top40b-gestalt-gestalt-single-gemini31pro | A | 106 | 60 | 46 | 2026-10-03T22:12 → 22:21 | gemini-3.1-pro-low(requested) | 0.00 | `4640a9e3d27e8ec6` |
+| top40b-gestalt-gestalt-single-gemini38flash | A | 112 | 100 | 12 | 2026-10-03T22:10 → 23:25 | gemini-3.8-flash-low(requested) | 0.00 | `a690413fffa44627` |
+| top40b-gestalt-gestalt-single-grok46 | A | 106 | 106 | 0 | 2026-10-03T22:21 → 22:30 | grok-4.6-build | 0.32 | `478d1fca6b927919` |
+| top40b-gestalt-gestalt-single-haiku45 | A | 106 | 106 | 0 | 2026-10-03T22:18 → 22:22 | claude-haiku-4-5 | 0.98 | `29913116e93cc903` |
+| top40b-gestalt-gestalt-single-llama32-3b | A | 106 | 106 | 0 | 2026-10-03T22:11 → 22:12 | llama3.2:3b@a80c4f17acd5 | 0.00 | `e7de85cda1fe2ad7` |
+| top40b-gestalt-gestalt-single-opus55 | A | 106 | 106 | 0 | 2026-10-03T22:14 → 22:15 | claude-opus-5-5 | 0.72 | `af3cd636d57fec70` |
+| top40b-gestalt-gestalt-single-qwen25-3b | A | 140 | 72 | 68 | 2026-10-03T23:23 → 23:27 | qwen2.5:3b@357c53fb659c | 0.00 | `c73d09dc33d70f46` |
+| top40b-gestalt-gestalt-single-sonnet55 | A | 106 | 106 | 0 | 2026-10-03T22:14 → 22:15 | claude-sonnet-5-5 | 0.40 | `2ac77eb793e4c1f0` |
+| top40b-perp-sheet-gemini31pro | A | 14 | 14 | 0 | 2026-10-03T22:09 → 22:12 | gemini-3.1-pro-low(requested) | 0.00 | `bd50d0099277c18b` |
+| top40b-perp-sheet-gemini38flash | A | 22 | 10 | 12 | 2026-10-03T22:09 → 23:25 | gemini-3.8-flash-low(requested) | 0.00 | `16fed0e63789102b` |
+| top40b-perp-sheet-grok46 | A | 20 | 13 | 7 | 2026-10-03T22:09 → 23:25 | grok-4.6-build | 0.16 | `b3c8a5cad6528e2c` |
+| top40b-perp-single-haiku45 | A | 522 | 522 | 0 | 2026-10-03T22:09 → 22:17 | claude-haiku-4-5 | 1.41 | `96c5dd416a59cfb0` |
+| top40b-perp-single-llama32-3b | A | 522 | 522 | 0 | 2026-10-03T22:09 → 22:11 | llama3.2:3b@a80c4f17acd5 | 0.00 | `4d899e1fdbac9150` |
+| top40b-perp-single-opus55 | A | 522 | 522 | 0 | 2026-10-03T22:09 → 22:14 | claude-opus-5-5 | 3.45 | `fd56e481471efdc4` |
+| top40b-perp-single-qwen25-3b | A | 600 | 496 | 104 | 2026-10-03T23:19 → 23:27 | qwen2.5:3b@357c53fb659c | 0.00 | `3b52e480b2aec8bb` |
+| top40b-perp-single-sonnet55 | A | 522 | 522 | 0 | 2026-10-03T22:09 → 22:14 | claude-sonnet-5-5 | 1.96 | `f5f10b934932fd61` |
+| triads-perp-sheet-gemini31pro | A | 46 | 46 | 0 | 2026-10-03T20:12 → 20:21 | gemini-3.1-pro-low(requested) | 0.00 | `5c201e98d562e242` |
+| triads-perp-sheet-gemini31pro-shakedown | A | 1 | 1 | 0 | 2026-10-03T20:06 → 20:06 | gemini-3.1-pro-low(requested) | 0.00 | `0b2b7a86ed239784` |
+| triads-perp-sheet-gemini38flash | A | 46 | 46 | 0 | 2026-10-03T20:12 → 20:15 | gemini-3.8-flash-low(requested) | 0.00 | `8bc9b1f5cf273e2b` |
+| triads-perp-sheet-gpt56terra | A | 46 | 46 | 0 | 2026-10-03T20:12 → 20:18 | gpt-5.6-terra(requested; codex exec does not echo) | 0.00 | `4aa8ffb66ee03c49` |
+| triads-perp-sheet-gpt56terra-shakedown | A | 1 | 1 | 0 | 2026-10-03T20:06 → 20:06 | gpt-5.6-terra(requested; codex exec does not echo) | 0.00 | `ed81db3ab87c2cb8` |
+| triads-perp-sheet-grok46 | A | 57 | 45 | 12 | 2026-10-03T20:19 → 22:50 | grok-4.6-build | 0.39 | `48177a9da67f6b72` |
+| triads-perp-sheet-grok46-aborted-toolleak | A | 25 | 23 | 2 | 2026-10-03T20:12 → 20:13 | grok-4.6-build | 0.13 | `018b54aff48aaec8` |
+| triads-perp-sheet-grok46-shakedown | A | 5 | 4 | 1 | 2026-10-03T20:07 → 20:08 | grok-4.6-build | 0.04 | `0ed2308a7424478d` |
+| triads-perp-sheet-sonnet55 | A | 46 | 46 | 0 | 2026-10-03T20:12 → 20:13 | claude-sonnet-5-5 | 0.70 | `c5b84af768b37977` |
+| triads-perp-sheet-sonnet55-shakedown | A | 1 | 1 | 0 | 2026-10-03T20:06 → 20:06 | claude-sonnet-5-5 | 0.02 | `35481a332826545f` |
+| triads-perp-single-gemma3-4b | A | 1800 | 1800 | 0 | 2026-10-03T21:13 → 21:49 | gemma3:4b@a2af6cc3eb7f | 0.00 | `0155845c2a7229bd` |
+| triads-perp-single-haiku45 | A | 1800 | 1800 | 0 | 2026-10-03T20:12 → 20:47 | claude-haiku-4-5 | 4.71 | `575ca69cb1e78f38` |
+| triads-perp-single-haiku45-shakedown | A | 24 | 24 | 0 | 2026-10-03T20:05 → 20:05 | claude-haiku-4-5 | 0.06 | `569b242716c32b0c` |
+| triads-perp-single-hermes3-3b | A | 1800 | 1800 | 0 | 2026-10-03T21:14 → 22:44 | hermes3:3b@a8851c5041d4 | 0.00 | `e8a86e1530e0561a` |
+| triads-perp-single-llama32-3b | A | 1800 | 1800 | 0 | 2026-10-03T20:19 → 20:25 | llama3.2:3b@a80c4f17acd5 | 0.00 | `3fa5f71cce00a992` |
+| triads-perp-single-mistral7b | A | 1800 | 1800 | 0 | 2026-10-03T21:13 → 22:07 | mistral:7b@6577803aa9a0 | 0.00 | `44d1a39d5c960318` |
+| triads-perp-single-opus55 | A | 1801 | 1800 | 1 | 2026-10-03T20:12 → 21:03 | claude-opus-5-5 | 10.69 | `25ba4eb6b7ff739a` |
+| triads-perp-single-phi4mini | A | 1800 | 1799 | 1 | 2026-10-03T21:13 → 22:29 | phi4-mini@ | 0.00 | `1982d96f0c27912f` |
+| triads-perp-single-qwen25-3b | A | 1928 | 1672 | 256 | 2026-10-03T22:48 → 23:26 | qwen2.5:3b@357c53fb659c | 0.00 | `c77d1a1f96af3626` |
+| triads-perp-single-qwen3-4b | A | 1800 | 1800 | 0 | 2026-10-03T20:33 → 21:07 | qwen3:4b@359d7dd4bcda | 0.00 | `c4df644df59b9c6e` |
+| triads-perp-single-sonnet5 | A | 1800 | 1800 | 0 | 2026-10-03T20:11 → 20:34 | claude-sonnet-5 | 2.71 | `9820ae3ff1003767` |
+| triads-perp-single-sonnet55 | A | 1800 | 1800 | 0 | 2026-10-03T20:11 → 20:34 | claude-sonnet-5-5 | 5.93 | `57d77daf2e053337` |

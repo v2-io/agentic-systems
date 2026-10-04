@@ -2,6 +2,10 @@
 
 *Entered 2026-08-25 (pilot day); claims restated 2026-10-03 after the registered v1.0 run. Canonization contract per `empirica/README.md`.*
 
+> **Status (2026-10-03).** The v1.0 claims below are the builder's reading. The builder worked under a brief that, apart from one sentence of Joseph's ("round out the data more and more"), was the coordinating agent's interpolation. That interpolation included a paragraph about the aspectus SIGNA ladder, which Joseph has said is being discarded. The claims are pending an independent re-reading by an analyst who has not seen them. Stimulus and run lineage is recorded in `data/stimuli-v1/LINEAGE.md`.
+>
+> Joseph's post-hoc reframing (2026-10-03) treats the SIGNA ladder as a plausible human-created sequence that serves as a control on how unbiased the results are. Its limits: n = 1, not randomly chosen, and its role assigned after its data had been seen.
+
 ## What it studies
 
 How language-model minds perceive **order among Unicode glyphs** — which glyph sequences carry monotonic magnitude perceptually, by what mechanisms, with what substrate-dependence — and, co-equally, **how measurement formats and contexts manufacture or suppress perceived order** (demand characteristics, answer-channel priors, position habits, articulation filters, judge context). The experimental object is dual: the glyph-order structure AND the measurement protocol itself.
@@ -49,7 +53,7 @@ How language-model minds perceive **order among Unicode glyphs** — which glyph
   - Single-item and 40-item-sheet modes are recorded as a factor.
 - **Pools.** The seed stratum draws on four Anthropic-family surveys only (coverage defect noted in PROTOCOL); the uniform tail is block-uniform.
 - **Instruments.** Triads, format experiment, conflict battery, holistic pairs, gestalt reconstruction.
-- **Exploratory batteries.** Top-40 (`analysis/top40.md`) and the SIGNA consumer probe.
+- **Exploratory batteries.** Top-40 (`analysis/top40.md`; Joseph's request) and the SIGNA probe (driven by the coordinator's paragraph; see the status note above).
 
 ## Consumers
 
@@ -58,7 +62,7 @@ None yet. Candidate landing sites: 03-llm-core (perception/representation segmen
 ## Provenance
 
 - **Pilot (2026-08-25):** session with Joseph + Fable; narrative at `pilot/pilot-record.md`; raw data at `data/judgments-v0/`.
-- **v1.0 (2026-10-03):** built and run by a Claude Opus 5.5 subagent commissioned through the aspectus session.
+- **v1.0 (2026-10-03):** built and run by a Claude Opus 5.5 subagent commissioned through the aspectus session. The brief's only words from Joseph were "round out the data more and more"; the rest of it was the coordinating agent's interpolation (lineage: `data/stimuli-v1/LINEAGE.md`).
   - Ledgers: `data/runs-v1/` (inventory in `data/runs-v1/INVENTORY.md`).
   - Stimuli: `data/stimuli-v1/`.
   - Harness: `harness/runner/`.
