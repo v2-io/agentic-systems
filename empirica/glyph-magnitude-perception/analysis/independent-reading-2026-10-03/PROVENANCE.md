@@ -1,0 +1,10 @@
+# Provenance — independent reading of v1.0 (2026-10-03)
+
+This directory is a verbatim copy of `reading/` from a clean room assembled outside this repo (no `.git`), preserved here so it outlives the session that produced it. Nothing in it was edited on copy.
+
+- **Why it exists.** The v1.0 campaign's brief (written by the coordinating session, not Joseph) carried a priming paragraph about the aspectus SIGNA ladder. The record of that, and the lineage labels, are in `../../data/stimuli-v1/LINEAGE.md`. This reading was commissioned so v1.0 could be read by a mind that had not seen the primed analysis.
+- **What the analyst saw.** Only the clean room: ledgers, stimuli, frozen protocol, parser and harness code, pilot materials, survey seeds, Joseph's recorded rulings, and the registered predictions (labelled as chosen under the primed brief). The full file list is `CLEANROOM-MANIFEST.txt`, and the facts-only README it was given is `CLEANROOM-README.md`. Excluded: the builder's findings, results, top-40 write-up, debrief, v1.0 MANIFEST claims, `analyze_v1.py`, and anything framing SIGNA beyond its stimulus files and run labels.
+- **Its brief** carried the study's two questions, Joseph's one question about SIGNA as a post-hoc control (verbatim), and his *"The more truth the better, over all other concerns."* It was asked to report new-data needs rather than collect data, so a different mind designs the next round.
+- **Verification.** An independent adversarial pass with a bare brief (`verification/`) re-derived the numbers with its own loader. The analyst folded its corrections into 01–04. The verification report is unedited, so it describes the pre-correction text.
+- **Re-running.** The scripts expect the clean room's layout (`harness/runner/instruments.py`, `data/…`, `pilot/…` relative to the clean room root), which mirrors this study directory. Run from a copy of that layout, or adjust `scripts/common.py`.
+- **Status.** Not yet integrated. How it relates to the builder's primed reading (`../2026-10-03-v1.0-findings.md`, `../../debrief.md`) is Joseph's to decide. The divergences between the two are themselves data on the priming.

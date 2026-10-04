@@ -1,0 +1,18 @@
+Are the edges that ⟂ removes noise, or weak-but-shared signal?
+For each frontier judge J and each format-pair that J calls consistent-perp under PERP but consistent-directed
+under FORCED (a 'dissolved' edge), compare J's forced winner with every OTHER frontier judge's forced winner on the
+same pair (where that judge is cdir under forced). Agreement near 0.5 = the forced edge is idiosyncratic noise;
+well above 0.5 = a shared, sub-threshold ordering that ⟂ suppresses. Baseline: the same agreement computed on
+pairs J keeps as cdir under perp ('surviving' edges).
+judge                  dissolved n  agree w/ others (forced) surviving n  agree (forced)
+opus55                         124     682/  799=0.85               132   911/  953=0.96
+sonnet55                        73     336/  451=0.75               154  1084/ 1131=0.96
+sonnet5                         90     470/  585=0.80                90   652/  681=0.96
+haiku45                         74     365/  501=0.73                75   543/  571=0.95
+sonnet55[sheet]                 92     523/  608=0.86               116   838/  864=0.97
+grok46[sheet]                   86     457/  551=0.83                85   610/  632=0.97
+gemini31pro[sheet]             176    1031/ 1182=0.87                72   521/  532=0.98
+gemini38flash[sheet]           159     894/ 1050=0.85                96   668/  693=0.96
+gpt56terra[sheet]                0       0/    0=nan                 0     0/    0=nan
+pooled: dissolved 4758/5727=0.83; surviving 5827/6057=0.96
+cross-family only: dissolved 3338/4008=0.83; surviving 3682/3807=0.97

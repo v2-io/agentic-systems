@@ -1,0 +1,21 @@
+Each triad orientation set is cyclically arranged (AB, BC, CA), so a judge that picks by POSITION
+(always the first-shown, or always the second-shown symbol) produces a 3-cycle every time. This splits each
+judge's cycles into position-pure cycles (all three winners in the same slot) vs mixed-slot cycles, and reports
+the judge's overall slot preference among directed triad presentations.
+judge                  cycles pos-pure  mixed  P(first|dir)  n dir
+gemini31pro[sheet]          0        0      0          0.50    596
+gemini38flash[sheet]        3        3      0          0.50    705
+gpt56terra[sheet]           2        2      0          0.51    748
+grok46[sheet]               2        2      0          0.50    800
+sonnet55[sheet]             4        4      0          0.48    790
+gemma3-4b                  40       40      0          0.52   1171
+gptoss20b                   0        0      0           nan      0
+haiku45                     5        5      0          0.48    736
+hermes3-3b                 38       38      0          0.42    984
+llama32-3b                 27       27      0          0.45   1163
+mistral7b                  34       34      0          0.27    999
+opus55                      2        2      0          0.49    883
+phi4mini                    2        2      0          0.69    208
+qwen25-3b                  51       51      0          0.72    993
+sonnet5                    31       31      0          0.33    918
+sonnet55                    3        3      0          0.50    978

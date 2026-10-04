@@ -1,0 +1,121 @@
+
+=== signa-perp-sheet-gemini31pro
+ presentations: {'dir': 54, 'perp': 56}
+ pair verdicts: {'mixed': 2, 'cperp': 27, 'cdir': 26}
+  lines    n=15 {'mixed': 2, 'cperp': 2, 'cdir': 11}  cdir agree-with-author 11 / against 0
+  circles  n=10 {'cdir': 10}  cdir agree-with-author 10 / against 0
+  seam     n=30 {'cdir': 5, 'cperp': 25}  cdir agree-with-author 5 / against 0
+ 3-cycles among fully-directed triples: 0/30
+ Copeland order (low->high): ·╶⚬╌○╍◎◉━═⬤  tau vs author +0.60
+ score: ·-6 ╶-4 ╌-2 ╍+0 ━+3 ═+4 ⚬-3 ○-1 ◎+1 ◉+3 ⬤+5
+ edges against author (winner<loser in author's order): 
+
+=== signa-perp-sheet-gemini38flash
+ presentations: {'dir': 56, 'perp': 53, 'tie': 1}
+ pair verdicts: {'cdir': 26, 'mixed': 4, 'cperp': 25}
+  lines    n=15 {'cdir': 11, 'mixed': 4}  cdir agree-with-author 11 / against 0
+  circles  n=10 {'cdir': 10}  cdir agree-with-author 10 / against 0
+  seam     n=30 {'cdir': 5, 'cperp': 25}  cdir agree-with-author 5 / against 0
+ 3-cycles among fully-directed triples: 0/28
+ Copeland order (low->high): ·⚬╶○╌╍◎◉═━⬤  tau vs author +0.49
+ score: ·-7 ╶-3 ╌-1 ╍+0 ━+3 ═+3 ⚬-3 ○-1 ◎+1 ◉+3 ⬤+5
+ edges against author (winner<loser in author's order): 
+
+=== signa-perp-sheet-glimmer30b-sheet
+ presentations: {'dir': 37, 'perp': 69, 'tie': 4}
+ pair verdicts: {'cperp': 33, 'cdir': 15, 'mixed': 7}
+  lines    n=15 {'cperp': 8, 'mixed': 4, 'cdir': 3}  cdir agree-with-author 3 / against 0
+  circles  n=10 {'cdir': 8, 'mixed': 2}  cdir agree-with-author 8 / against 0
+  seam     n=30 {'cdir': 4, 'mixed': 1, 'cperp': 25}  cdir agree-with-author 4 / against 0
+ 3-cycles among fully-directed triples: 0/11
+ Copeland order (low->high): ·⚬╌○╶═━╍◉◎⬤  tau vs author +0.49
+ score: ·-4 ╶+0 ╌-3 ╍+1 ━+1 ═+1 ⚬-3 ○-1 ◎+2 ◉+2 ⬤+4
+ edges against author (winner<loser in author's order): 
+
+=== signa-perp-sheet-grok46
+ presentations: {'dir': 83, 'perp': 27}
+ pair verdicts: {'cdir': 37, 'mixed': 9, 'cperp': 9}
+  lines    n=15 {'cdir': 14, 'mixed': 1}  cdir agree-with-author 14 / against 0
+  circles  n=10 {'cdir': 10}  cdir agree-with-author 10 / against 0
+  seam     n=30 {'cdir': 13, 'mixed': 8, 'cperp': 9}  cdir agree-with-author 12 / against 1
+ 3-cycles among fully-directed triples: 0/53
+ Copeland order (low->high): ·╶⚬╌╍○◎━◉═⬤  tau vs author +0.67
+ score: ·-9 ╶-5 ╌-4 ╍-1 ━+2 ═+6 ⚬-4 ○+0 ◎+2 ◉+4 ⬤+9
+ edges against author (winner<loser in author's order): ═>⚬
+
+=== signa-perp-sheet-sonnet55
+ presentations: {'dir': 107, 'perp': 3}
+ pair verdicts: {'cdir': 48, 'flip': 4, 'mixed': 3}
+  lines    n=15 {'cdir': 14, 'flip': 1}  cdir agree-with-author 14 / against 0
+  circles  n=10 {'cdir': 10}  cdir agree-with-author 10 / against 0
+  seam     n=30 {'cdir': 24, 'flip': 3, 'mixed': 3}  cdir agree-with-author 23 / against 1
+ 3-cycles among fully-directed triples: 0/110
+ Copeland order (low->high): ·╶╌⚬╍━○═◎◉⬤  tau vs author +0.85
+ score: ·-10 ╶-8 ╌-5 ╍-2 ━+1 ═+2 ⚬-3 ○+2 ◎+5 ◉+8 ⬤+10
+ edges against author (winner<loser in author's order): ═>⚬
+
+=== signa-perp-single-haiku45
+ presentations: {'dir': 82, 'unparsed': 7, 'perp': 20, 'tie': 1}
+ pair verdicts: {'cdir': 34, 'incomplete': 5, 'cperp': 5, 'mixed': 11}
+  lines    n=15 {'cdir': 13, 'cperp': 1, 'mixed': 1}  cdir agree-with-author 13 / against 0
+  circles  n=10 {'cdir': 7, 'mixed': 1, 'incomplete': 2}  cdir agree-with-author 6 / against 1
+  seam     n=30 {'cdir': 14, 'incomplete': 3, 'mixed': 9, 'cperp': 4}  cdir agree-with-author 13 / against 1
+ 3-cycles among fully-directed triples: 0/41
+ Copeland order (low->high): ·╶╌○╍⚬━⬤◎◉═  tau vs author +0.60
+ score: ·-9 ╶-7 ╌-3 ╍-1 ━+2 ═+6 ⚬+1 ○-1 ◎+4 ◉+5 ⬤+3
+ edges against author (winner<loser in author's order): ═>⚬ ⚬>○
+
+=== signa-perp-single-llama32-3b
+ presentations: {'perp': 14, 'dir': 89, 'tie': 5, 'unparsed': 2}
+ pair verdicts: {'mixed': 15, 'cdir': 31, 'cperp': 1, 'flip': 6, 'incomplete': 2}
+  lines    n=15 {'mixed': 7, 'cdir': 6, 'cperp': 1, 'flip': 1}  cdir agree-with-author 3 / against 3
+  circles  n=10 {'cdir': 9, 'incomplete': 1}  cdir agree-with-author 4 / against 5
+  seam     n=30 {'mixed': 8, 'cdir': 16, 'flip': 5, 'incomplete': 1}  cdir agree-with-author 14 / against 2
+ 3-cycles among fully-directed triples: 0/35
+ Copeland order (low->high): ·╍━◉◎═╶○╌⚬⬤  tau vs author +0.31
+ score: ·-5 ╶-2 ╌+4 ╍-4 ━-3 ═-2 ⚬+6 ○+1 ◎-2 ◉-2 ⬤+9
+ edges against author (winner<loser in author's order): ╶>╍ ╌>╍ ╌>═ ╌>○ ╌>◉ ⚬>○ ⚬>◎ ⚬>◉ ○>◎ ○>◉
+
+=== signa-perp-single-opus55
+ presentations: {'dir': 87, 'perp': 23}
+ pair verdicts: {'cdir': 41, 'cperp': 10, 'mixed': 3, 'flip': 1}
+  lines    n=15 {'cdir': 14, 'flip': 1}  cdir agree-with-author 14 / against 0
+  circles  n=10 {'cdir': 10}  cdir agree-with-author 10 / against 0
+  seam     n=30 {'cdir': 17, 'cperp': 10, 'mixed': 3}  cdir agree-with-author 16 / against 1
+ 3-cycles among fully-directed triples: 0/72
+ Copeland order (low->high): ·╶⚬╌╍○◎━═◉⬤  tau vs author +0.71
+ score: ·-10 ╶-7 ╌-4 ╍-1 ━+3 ═+4 ⚬-4 ○+0 ◎+3 ◉+6 ⬤+10
+ edges against author (winner<loser in author's order): ═>⚬
+
+=== signa-perp-single-qwen25-3b
+ presentations: {'dir': 73, 'unparsed': 7, 'tie': 11, 'perp': 19}
+ pair verdicts: {'cdir': 15, 'incomplete': 7, 'mixed': 21, 'flip': 10, 'ctie': 1, 'cperp': 1}
+  lines    n=15 {'cdir': 4, 'incomplete': 4, 'mixed': 3, 'flip': 4}  cdir agree-with-author 1 / against 3
+  circles  n=10 {'cdir': 4, 'cperp': 1, 'mixed': 4, 'incomplete': 1}  cdir agree-with-author 3 / against 1
+  seam     n=30 {'cdir': 7, 'flip': 6, 'ctie': 1, 'incomplete': 2, 'mixed': 14}  cdir agree-with-author 3 / against 4
+ 3-cycles among fully-directed triples: 0/4
+ Copeland order (low->high): ◎⚬╍╶◉═━╌⬤○·  tau vs author -0.16
+ score: ·+7 ╶-2 ╌+0 ╍-2 ━-1 ═-1 ⚬-2 ○+3 ◎-2 ◉-1 ⬤+1
+ edges against author (winner<loser in author's order): ·>╶ ·>╍ ·>━ ·>⚬ ·>○ ·>◎ ·>◉ ○>⬤
+
+=== signa-perp-single-sonnet5
+ presentations: {'dir': 98, 'tie': 1, 'perp': 11}
+ pair verdicts: {'cdir': 45, 'mixed': 8, 'cperp': 2}
+  lines    n=15 {'cdir': 14, 'mixed': 1}  cdir agree-with-author 14 / against 0
+  circles  n=10 {'cdir': 10}  cdir agree-with-author 10 / against 0
+  seam     n=30 {'cdir': 21, 'mixed': 7, 'cperp': 2}  cdir agree-with-author 19 / against 2
+ 3-cycles among fully-directed triples: 0/90
+ Copeland order (low->high): ·╶╌⚬╍○◎═━⬤◉  tau vs author +0.67
+ score: ·-10 ╶-7 ╌-6 ╍-2 ━+4 ═+4 ⚬-3 ○+0 ◎+4 ◉+8 ⬤+8
+ edges against author (winner<loser in author's order): ━>⚬ ━>○
+
+=== signa-perp-single-sonnet55
+ presentations: {'dir': 103, 'perp': 7}
+ pair verdicts: {'cdir': 49, 'mixed': 1, 'cperp': 3, 'flip': 2}
+  lines    n=15 {'cdir': 14, 'flip': 1}  cdir agree-with-author 14 / against 0
+  circles  n=10 {'cdir': 9, 'flip': 1}  cdir agree-with-author 9 / against 0
+  seam     n=30 {'cdir': 26, 'mixed': 1, 'cperp': 3}  cdir agree-with-author 23 / against 3
+ 3-cycles among fully-directed triples: 0/115
+ Copeland order (low->high): ·╶⚬╌╍○═━◎⬤◉  tau vs author +0.71
+ score: ·-10 ╶-8 ╌-5 ╍-1 ━+2 ═+2 ⚬-5 ○+1 ◎+6 ◉+9 ⬤+9
+ edges against author (winner<loser in author's order): ╍>⚬ ━>⚬ ═>⚬

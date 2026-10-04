@@ -1,0 +1,1220 @@
+family	seq	glyphs	info	judge	n_steps	with	against	perp	other
+top40	cand-0	▏▎▍▌▋▊▉█	7	gemini31pro[sheet]	7	7	0	0	0
+top40	cand-1	▁▂▃▄▅▆▇█	7	gemini31pro[sheet]	7	6	0	1	0
+top40	cand-2	⚀⚁⚂⚃⚄⚅	7	gemini31pro[sheet]	5	5	0	0	0
+top40	cand-3	□▤▦◫▩■	4	gemini31pro[sheet]	5	4	1	0	0
+top40	cand-4	○◔◑◕●	7	gemini31pro[sheet]	4	4	0	0	0
+top40	cand-5	▫░▒▓█	7	gemini31pro[sheet]	4	3	0	0	1
+top40	cand-6	ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ	5	gemini31pro[sheet]	11	11	0	0	0
+top40	cand-7	⓵⓶⓷⓸⓹⓺⓻⓼⓽⓾	5	gemini31pro[sheet]	9	9	0	0	0
+top40	cand-8	⬞▫◽□◻⬜	3	gemini31pro[sheet]	5	3	0	0	2
+top40	cand-9	<≪⋘⪢⫸	6	gemini31pro[sheet]	4	3	0	1	0
+top40	cand-10	→⇒⇉⇛⇶	6	gemini31pro[sheet]	4	3	0	0	1
+top40	cand-11	0123456789🔟	3	gemini31pro[sheet]	10	10	0	0	0
+top40	cand-12	⓪①②③④⑤⑥⑦⑧⑨⑩	4	gemini31pro[sheet]	10	10	0	0	0
+top40	cand-13	🄀🄁🄂🄃🄄🄅🄆🄇🄈🄉	3	gemini31pro[sheet]	9	7	0	1	1
+top40	cand-14	❶❷❸❹❺❻❼❽❾❿	3	gemini31pro[sheet]	9	9	0	0	0
+top40	cand-15	➀➁➂➃➄➅➆➇➈➉	3	gemini31pro[sheet]	9	9	0	0	0
+top40	cand-16	٠١٢٣٤٥٦٧٨٩	2	gemini31pro[sheet]	9	9	0	0	0
+top40	cand-17	⁰¹²³⁴⁵⁶⁷⁸⁹	3	gemini31pro[sheet]	9	9	0	0	0
+top40	cand-18	🀙🀚🀛🀜🀝🀞🀟🀠🀡	3	gemini31pro[sheet]	8	8	0	0	0
+top40	cand-19	⠀⠁⠃⠇⠏⠟⠿⣿	5	gemini31pro[sheet]	7	7	0	0	0
+top40	cand-20	⅛¼⅜½⅝¾⅞	3	gemini31pro[sheet]	6	6	0	0	0
+top40	cand-21	🮂🮃▀🮄🮅🮆█	2	gemini31pro[sheet]	6	5	0	0	1
+top40	cand-22	🀱🀲🀳🀴🀵🀶🀷	3	gemini31pro[sheet]	6	6	0	0	0
+top40	cand-23	🞄🞅🞆🞇🞈🞉	4	gemini31pro[sheet]	5	5	0	0	0
+top40	cand-24	♙♘♗♖♕♔	3	gemini31pro[sheet]	5	2	0	1	2
+top40	cand-25	𝄖𝄗𝄘𝄙𝄚𝄛	2	gemini31pro[sheet]	5	1	0	2	2
+top40	cand-26	✦✶✳✴✹✺	3	gemini31pro[sheet]	5	3	0	1	1
+top40	cand-27	🞯🞰🞱🞲🞳🞴	3	gemini31pro[sheet]	5	5	0	0	0
+top40	cand-28	˥˦˧˨˩	3	gemini31pro[sheet]	4	0	2	1	1
+top40	cand-29	🌑🌒🌓🌔🌕	5	gemini31pro[sheet]	4	4	0	0	0
+top40	cand-30	⬝▪◽◻⬛	2	gemini31pro[sheet]	4	3	0	0	1
+top40	cand-31	‐‒–—―	3	gemini31pro[sheet]	4	4	0	0	0
+top40	cand-32	𝍠𝍡𝍢𝍣𝍤	3	gemini31pro[sheet]	4	3	0	0	1
+top40	cand-33	◌○◎◉●	3	gemini31pro[sheet]	4	2	0	0	2
+top40	cand-34	′″‴⁗	3	gemini31pro[sheet]	3	3	0	0	0
+top40	cand-35	🔇🔈🔉🔊	3	gemini31pro[sheet]	3	3	0	0	0
+top40	cand-36	∫∬∭⨌	4	gemini31pro[sheet]	3	3	0	0	0
+top40	cand-37	௧௰௱௲	3	gemini31pro[sheet]	3	3	0	0	0
+top40	cand-38	ℵℶℷℸ	2	gemini31pro[sheet]	3	1	0	0	2
+top40	cand-39	🟁🟅🟋🟎	2	gemini31pro[sheet]	3	2	0	0	1
+top40	cand-40	⁚⁖⁘⁙	3	gemini31pro[sheet]	3	3	0	0	0
+top40	cand-41	|🏠🏢🏙	2	gemini31pro[sheet]	3	2	0	1	0
+top40	cand-42	🂪🂫🂭🂮	2	gemini31pro[sheet]	3	3	0	0	0
+top40	cand-43	-=≡≣	3	gemini31pro[sheet]	3	3	0	0	0
+top40	cand-44	¹²³	2	gemini31pro[sheet]	2	2	0	0	0
+top40	cand-45	🥇🥈🥉	3	gemini31pro[sheet]	2	0	2	0	0
+top40	cand-46	․‥…	3	gemini31pro[sheet]	2	2	0	0	0
+top40	cand-47	∘○◯	4	gemini31pro[sheet]	2	2	0	0	0
+top40	cand-48	√∛∜	4	gemini31pro[sheet]	2	2	0	0	0
+top40	cand-49	*⁑⁂	3	gemini31pro[sheet]	2	2	0	0	0
+top40	cand-50	〡〢〣〤〥〦〧〨〩〸〹〺	2	gemini31pro[sheet]	11	9	0	1	1
+top40	cand-51	ⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹⅺⅻ	1	gemini31pro[sheet]	11	11	0	0	0
+top40	cand-52	⓿⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴	2	gemini31pro[sheet]	10	10	0	0	0
+top40	cand-53	🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚	2	gemini31pro[sheet]	10	10	0	0	0
+top40	cand-54	ᬇᬈᬉᬊᬋᬌᬍᬎᬑᬒ	1	gemini31pro[sheet]	9	0	0	8	1
+top40	cand-55	௦௧௨௩௪௫௬௭௮௯	1	gemini31pro[sheet]	9	9	0	0	0
+top40	cand-56	၀၁၂၃၄၅၆၇၈၉	1	gemini31pro[sheet]	9	9	0	0	0
+top40	cand-57	㈠㈡㈢㈣㈤㈥㈦㈧㈨㈩	2	gemini31pro[sheet]	9	9	0	0	0
+top40	cand-58	᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙	1	gemini31pro[sheet]	9	9	0	0	0
+top40	cand-59	០១២៣៤៥៦៧៨៩	1	gemini31pro[sheet]	9	9	0	0	0
+top40	cand-60	༠༡༢༣༤༥༦༧༨༩	1	gemini31pro[sheet]	9	9	0	0	0
+top40	cand-61	㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩	1	gemini31pro[sheet]	9	4	0	0	5
+top40	cand-62	⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽	3	gemini31pro[sheet]	9	9	0	0	0
+top40	cand-63	᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙	1	gemini31pro[sheet]	9	9	0	0	0
+top40	cand-0	▏▎▍▌▋▊▉█	7	gemini38flash[sheet]	7	7	0	0	0
+top40	cand-1	▁▂▃▄▅▆▇█	7	gemini38flash[sheet]	7	6	0	0	1
+top40	cand-2	⚀⚁⚂⚃⚄⚅	7	gemini38flash[sheet]	5	5	0	0	0
+top40	cand-3	□▤▦◫▩■	4	gemini38flash[sheet]	5	4	1	0	0
+top40	cand-4	○◔◑◕●	7	gemini38flash[sheet]	4	4	0	0	0
+top40	cand-5	▫░▒▓█	7	gemini38flash[sheet]	4	3	0	0	1
+top40	cand-6	ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ	5	gemini38flash[sheet]	11	11	0	0	0
+top40	cand-7	⓵⓶⓷⓸⓹⓺⓻⓼⓽⓾	5	gemini38flash[sheet]	9	9	0	0	0
+top40	cand-8	⬞▫◽□◻⬜	3	gemini38flash[sheet]	5	3	0	0	2
+top40	cand-9	<≪⋘⪢⫸	6	gemini38flash[sheet]	4	3	0	1	0
+top40	cand-10	→⇒⇉⇛⇶	6	gemini38flash[sheet]	4	4	0	0	0
+top40	cand-11	0123456789🔟	3	gemini38flash[sheet]	10	10	0	0	0
+top40	cand-12	⓪①②③④⑤⑥⑦⑧⑨⑩	4	gemini38flash[sheet]	10	10	0	0	0
+top40	cand-13	🄀🄁🄂🄃🄄🄅🄆🄇🄈🄉	3	gemini38flash[sheet]	9	9	0	0	0
+top40	cand-14	❶❷❸❹❺❻❼❽❾❿	3	gemini38flash[sheet]	9	9	0	0	0
+top40	cand-15	➀➁➂➃➄➅➆➇➈➉	3	gemini38flash[sheet]	9	9	0	0	0
+top40	cand-16	٠١٢٣٤٥٦٧٨٩	2	gemini38flash[sheet]	9	8	0	0	1
+top40	cand-17	⁰¹²³⁴⁵⁶⁷⁸⁹	3	gemini38flash[sheet]	9	9	0	0	0
+top40	cand-18	🀙🀚🀛🀜🀝🀞🀟🀠🀡	3	gemini38flash[sheet]	8	8	0	0	0
+top40	cand-19	⠀⠁⠃⠇⠏⠟⠿⣿	5	gemini38flash[sheet]	7	7	0	0	0
+top40	cand-20	⅛¼⅜½⅝¾⅞	3	gemini38flash[sheet]	6	6	0	0	0
+top40	cand-21	🮂🮃▀🮄🮅🮆█	2	gemini38flash[sheet]	6	5	0	0	1
+top40	cand-22	🀱🀲🀳🀴🀵🀶🀷	3	gemini38flash[sheet]	6	5	0	0	1
+top40	cand-23	🞄🞅🞆🞇🞈🞉	4	gemini38flash[sheet]	5	5	0	0	0
+top40	cand-24	♙♘♗♖♕♔	3	gemini38flash[sheet]	5	3	0	1	1
+top40	cand-25	𝄖𝄗𝄘𝄙𝄚𝄛	2	gemini38flash[sheet]	5	3	0	1	1
+top40	cand-26	✦✶✳✴✹✺	3	gemini38flash[sheet]	5	4	0	0	1
+top40	cand-27	🞯🞰🞱🞲🞳🞴	3	gemini38flash[sheet]	5	4	0	0	1
+top40	cand-28	˥˦˧˨˩	3	gemini38flash[sheet]	4	0	4	0	0
+top40	cand-29	🌑🌒🌓🌔🌕	5	gemini38flash[sheet]	4	4	0	0	0
+top40	cand-30	⬝▪◽◻⬛	2	gemini38flash[sheet]	4	3	0	0	1
+top40	cand-31	‐‒–—―	3	gemini38flash[sheet]	4	3	0	0	1
+top40	cand-32	𝍠𝍡𝍢𝍣𝍤	3	gemini38flash[sheet]	4	4	0	0	0
+top40	cand-33	◌○◎◉●	3	gemini38flash[sheet]	4	3	0	0	1
+top40	cand-34	′″‴⁗	3	gemini38flash[sheet]	3	3	0	0	0
+top40	cand-35	🔇🔈🔉🔊	3	gemini38flash[sheet]	3	3	0	0	0
+top40	cand-36	∫∬∭⨌	4	gemini38flash[sheet]	3	3	0	0	0
+top40	cand-37	௧௰௱௲	3	gemini38flash[sheet]	3	3	0	0	0
+top40	cand-38	ℵℶℷℸ	2	gemini38flash[sheet]	3	2	0	1	0
+top40	cand-39	🟁🟅🟋🟎	2	gemini38flash[sheet]	3	1	0	0	2
+top40	cand-40	⁚⁖⁘⁙	3	gemini38flash[sheet]	3	2	0	0	1
+top40	cand-41	|🏠🏢🏙	2	gemini38flash[sheet]	3	2	0	1	0
+top40	cand-42	🂪🂫🂭🂮	2	gemini38flash[sheet]	3	3	0	0	0
+top40	cand-43	-=≡≣	3	gemini38flash[sheet]	3	3	0	0	0
+top40	cand-44	¹²³	2	gemini38flash[sheet]	2	2	0	0	0
+top40	cand-45	🥇🥈🥉	3	gemini38flash[sheet]	2	0	2	0	0
+top40	cand-46	․‥…	3	gemini38flash[sheet]	2	2	0	0	0
+top40	cand-47	∘○◯	4	gemini38flash[sheet]	2	2	0	0	0
+top40	cand-48	√∛∜	4	gemini38flash[sheet]	2	2	0	0	0
+top40	cand-49	*⁑⁂	3	gemini38flash[sheet]	2	2	0	0	0
+top40	cand-50	〡〢〣〤〥〦〧〨〩〸〹〺	2	gemini38flash[sheet]	11	10	0	0	1
+top40	cand-51	ⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹⅺⅻ	1	gemini38flash[sheet]	11	11	0	0	0
+top40	cand-52	⓿⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴	2	gemini38flash[sheet]	10	10	0	0	0
+top40	cand-53	🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚	2	gemini38flash[sheet]	10	10	0	0	0
+top40	cand-54	ᬇᬈᬉᬊᬋᬌᬍᬎᬑᬒ	1	gemini38flash[sheet]	9	0	0	5	4
+top40	cand-55	௦௧௨௩௪௫௬௭௮௯	1	gemini38flash[sheet]	9	9	0	0	0
+top40	cand-56	၀၁၂၃၄၅၆၇၈၉	1	gemini38flash[sheet]	9	9	0	0	0
+top40	cand-57	㈠㈡㈢㈣㈤㈥㈦㈧㈨㈩	2	gemini38flash[sheet]	9	9	0	0	0
+top40	cand-58	᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙	1	gemini38flash[sheet]	9	7	0	0	2
+top40	cand-59	០១២៣៤៥៦៧៨៩	1	gemini38flash[sheet]	9	9	0	0	0
+top40	cand-60	༠༡༢༣༤༥༦༧༨༩	1	gemini38flash[sheet]	9	9	0	0	0
+top40	cand-61	㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩	1	gemini38flash[sheet]	9	9	0	0	0
+top40	cand-62	⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽	3	gemini38flash[sheet]	9	9	0	0	0
+top40	cand-63	᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙	1	gemini38flash[sheet]	9	8	0	0	1
+top40	cand-0	▏▎▍▌▋▊▉█	7	grok46[sheet]	7	7	0	0	0
+top40	cand-1	▁▂▃▄▅▆▇█	7	grok46[sheet]	7	7	0	0	0
+top40	cand-2	⚀⚁⚂⚃⚄⚅	7	grok46[sheet]	5	5	0	0	0
+top40	cand-3	□▤▦◫▩■	4	grok46[sheet]	5	4	1	0	0
+top40	cand-4	○◔◑◕●	7	grok46[sheet]	4	4	0	0	0
+top40	cand-5	▫░▒▓█	7	grok46[sheet]	4	4	0	0	0
+top40	cand-6	ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ	5	grok46[sheet]	11	10	0	0	1
+top40	cand-7	⓵⓶⓷⓸⓹⓺⓻⓼⓽⓾	5	grok46[sheet]	9	9	0	0	0
+top40	cand-8	⬞▫◽□◻⬜	3	grok46[sheet]	5	3	0	0	2
+top40	cand-9	<≪⋘⪢⫸	6	grok46[sheet]	4	3	0	0	1
+top40	cand-10	→⇒⇉⇛⇶	6	grok46[sheet]	4	3	0	0	1
+top40	cand-11	0123456789🔟	3	grok46[sheet]	10	10	0	0	0
+top40	cand-12	⓪①②③④⑤⑥⑦⑧⑨⑩	4	grok46[sheet]	10	10	0	0	0
+top40	cand-13	🄀🄁🄂🄃🄄🄅🄆🄇🄈🄉	3	grok46[sheet]	9	8	0	0	1
+top40	cand-14	❶❷❸❹❺❻❼❽❾❿	3	grok46[sheet]	9	9	0	0	0
+top40	cand-15	➀➁➂➃➄➅➆➇➈➉	3	grok46[sheet]	9	9	0	0	0
+top40	cand-16	٠١٢٣٤٥٦٧٨٩	2	grok46[sheet]	9	9	0	0	0
+top40	cand-17	⁰¹²³⁴⁵⁶⁷⁸⁹	3	grok46[sheet]	9	9	0	0	0
+top40	cand-18	🀙🀚🀛🀜🀝🀞🀟🀠🀡	3	grok46[sheet]	8	7	0	1	0
+top40	cand-19	⠀⠁⠃⠇⠏⠟⠿⣿	5	grok46[sheet]	7	7	0	0	0
+top40	cand-20	⅛¼⅜½⅝¾⅞	3	grok46[sheet]	6	6	0	0	0
+top40	cand-21	🮂🮃▀🮄🮅🮆█	2	grok46[sheet]	6	5	1	0	0
+top40	cand-22	🀱🀲🀳🀴🀵🀶🀷	3	grok46[sheet]	6	1	0	1	4
+top40	cand-23	🞄🞅🞆🞇🞈🞉	4	grok46[sheet]	5	5	0	0	0
+top40	cand-24	♙♘♗♖♕♔	3	grok46[sheet]	5	4	0	1	0
+top40	cand-25	𝄖𝄗𝄘𝄙𝄚𝄛	2	grok46[sheet]	5	0	0	0	5
+top40	cand-26	✦✶✳✴✹✺	3	grok46[sheet]	5	3	0	0	2
+top40	cand-27	🞯🞰🞱🞲🞳🞴	3	grok46[sheet]	5	4	0	0	1
+top40	cand-28	˥˦˧˨˩	3	grok46[sheet]	4	0	2	1	1
+top40	cand-29	🌑🌒🌓🌔🌕	5	grok46[sheet]	4	3	0	0	1
+top40	cand-30	⬝▪◽◻⬛	2	grok46[sheet]	4	4	0	0	0
+top40	cand-31	‐‒–—―	3	grok46[sheet]	4	1	0	0	3
+top40	cand-32	𝍠𝍡𝍢𝍣𝍤	3	grok46[sheet]	4	4	0	0	0
+top40	cand-33	◌○◎◉●	3	grok46[sheet]	4	3	0	0	1
+top40	cand-34	′″‴⁗	3	grok46[sheet]	3	3	0	0	0
+top40	cand-35	🔇🔈🔉🔊	3	grok46[sheet]	3	3	0	0	0
+top40	cand-36	∫∬∭⨌	4	grok46[sheet]	3	3	0	0	0
+top40	cand-37	௧௰௱௲	3	grok46[sheet]	3	3	0	0	0
+top40	cand-38	ℵℶℷℸ	2	grok46[sheet]	3	0	0	2	1
+top40	cand-39	🟁🟅🟋🟎	2	grok46[sheet]	3	3	0	0	0
+top40	cand-40	⁚⁖⁘⁙	3	grok46[sheet]	3	3	0	0	0
+top40	cand-41	|🏠🏢🏙	2	grok46[sheet]	3	2	0	1	0
+top40	cand-42	🂪🂫🂭🂮	2	grok46[sheet]	3	2	0	0	1
+top40	cand-43	-=≡≣	3	grok46[sheet]	3	3	0	0	0
+top40	cand-44	¹²³	2	grok46[sheet]	2	2	0	0	0
+top40	cand-45	🥇🥈🥉	3	grok46[sheet]	2	0	2	0	0
+top40	cand-46	․‥…	3	grok46[sheet]	2	2	0	0	0
+top40	cand-47	∘○◯	4	grok46[sheet]	2	2	0	0	0
+top40	cand-48	√∛∜	4	grok46[sheet]	2	2	0	0	0
+top40	cand-49	*⁑⁂	3	grok46[sheet]	2	2	0	0	0
+top40	cand-50	〡〢〣〤〥〦〧〨〩〸〹〺	2	grok46[sheet]	11	9	0	0	2
+top40	cand-51	ⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹⅺⅻ	1	grok46[sheet]	11	11	0	0	0
+top40	cand-52	⓿⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴	2	grok46[sheet]	10	9	0	0	1
+top40	cand-53	🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚	2	grok46[sheet]	10	9	0	0	1
+top40	cand-54	ᬇᬈᬉᬊᬋᬌᬍᬎᬑᬒ	1	grok46[sheet]	9	0	0	9	0
+top40	cand-55	௦௧௨௩௪௫௬௭௮௯	1	grok46[sheet]	9	5	0	1	3
+top40	cand-56	၀၁၂၃၄၅၆၇၈၉	1	grok46[sheet]	9	3	0	0	6
+top40	cand-57	㈠㈡㈢㈣㈤㈥㈦㈧㈨㈩	2	grok46[sheet]	9	7	0	0	2
+top40	cand-58	᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙	1	grok46[sheet]	9	1	0	2	6
+top40	cand-59	០១២៣៤៥៦៧៨៩	1	grok46[sheet]	9	1	0	2	6
+top40	cand-60	༠༡༢༣༤༥༦༧༨༩	1	grok46[sheet]	9	7	0	0	2
+top40	cand-61	㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩	1	grok46[sheet]	9	2	0	3	4
+top40	cand-62	⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽	3	grok46[sheet]	9	9	0	0	0
+top40	cand-63	᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙	1	grok46[sheet]	9	0	0	2	7
+top40	cand-0	▏▎▍▌▋▊▉█	7	haiku45	7	6	0	0	1
+top40	cand-1	▁▂▃▄▅▆▇█	7	haiku45	7	7	0	0	0
+top40	cand-2	⚀⚁⚂⚃⚄⚅	7	haiku45	5	5	0	0	0
+top40	cand-3	□▤▦◫▩■	4	haiku45	5	1	0	0	4
+top40	cand-4	○◔◑◕●	7	haiku45	4	2	0	0	2
+top40	cand-5	▫░▒▓█	7	haiku45	4	4	0	0	0
+top40	cand-6	ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ	5	haiku45	11	11	0	0	0
+top40	cand-7	⓵⓶⓷⓸⓹⓺⓻⓼⓽⓾	5	haiku45	9	8	0	0	1
+top40	cand-8	⬞▫◽□◻⬜	3	haiku45	5	3	2	0	0
+top40	cand-9	<≪⋘⪢⫸	6	haiku45	4	1	0	0	3
+top40	cand-10	→⇒⇉⇛⇶	6	haiku45	4	3	1	0	0
+top40	cand-11	0123456789🔟	3	haiku45	10	10	0	0	0
+top40	cand-12	⓪①②③④⑤⑥⑦⑧⑨⑩	4	haiku45	10	10	0	0	0
+top40	cand-13	🄀🄁🄂🄃🄄🄅🄆🄇🄈🄉	3	haiku45	9	3	0	2	4
+top40	cand-14	❶❷❸❹❺❻❼❽❾❿	3	haiku45	9	8	0	0	1
+top40	cand-15	➀➁➂➃➄➅➆➇➈➉	3	haiku45	9	7	0	0	2
+top40	cand-16	٠١٢٣٤٥٦٧٨٩	2	haiku45	9	9	0	0	0
+top40	cand-17	⁰¹²³⁴⁵⁶⁷⁸⁹	3	haiku45	9	8	0	0	1
+top40	cand-18	🀙🀚🀛🀜🀝🀞🀟🀠🀡	3	haiku45	8	0	0	4	4
+top40	cand-19	⠀⠁⠃⠇⠏⠟⠿⣿	5	haiku45	7	7	0	0	0
+top40	cand-20	⅛¼⅜½⅝¾⅞	3	haiku45	6	6	0	0	0
+top40	cand-21	🮂🮃▀🮄🮅🮆█	2	haiku45	6	1	0	2	3
+top40	cand-22	🀱🀲🀳🀴🀵🀶🀷	3	haiku45	6	0	0	3	3
+top40	cand-23	🞄🞅🞆🞇🞈🞉	4	haiku45	5	0	0	1	4
+top40	cand-24	♙♘♗♖♕♔	3	haiku45	5	3	1	1	0
+top40	cand-25	𝄖𝄗𝄘𝄙𝄚𝄛	2	haiku45	5	1	0	1	3
+top40	cand-26	✦✶✳✴✹✺	3	haiku45	5	3	0	0	2
+top40	cand-27	🞯🞰🞱🞲🞳🞴	3	haiku45	5	0	1	0	4
+top40	cand-28	˥˦˧˨˩	3	haiku45	4	0	0	0	4
+top40	cand-29	🌑🌒🌓🌔🌕	5	haiku45	4	3	0	0	1
+top40	cand-30	⬝▪◽◻⬛	2	haiku45	4	1	1	0	2
+top40	cand-31	‐‒–—―	3	haiku45	4	3	0	0	1
+top40	cand-32	𝍠𝍡𝍢𝍣𝍤	3	haiku45	4	0	0	4	0
+top40	cand-33	◌○◎◉●	3	haiku45	4	3	0	0	1
+top40	cand-34	′″‴⁗	3	haiku45	3	2	0	0	1
+top40	cand-35	🔇🔈🔉🔊	3	haiku45	3	2	0	0	1
+top40	cand-36	∫∬∭⨌	4	haiku45	3	2	0	0	1
+top40	cand-37	௧௰௱௲	3	haiku45	3	2	0	0	1
+top40	cand-38	ℵℶℷℸ	2	haiku45	3	0	0	1	2
+top40	cand-39	🟁🟅🟋🟎	2	haiku45	3	0	0	1	2
+top40	cand-40	⁚⁖⁘⁙	3	haiku45	3	2	0	0	1
+top40	cand-41	|🏠🏢🏙	2	haiku45	3	2	0	0	1
+top40	cand-42	🂪🂫🂭🂮	2	haiku45	3	1	0	0	2
+top40	cand-43	-=≡≣	3	haiku45	3	1	0	0	2
+top40	cand-44	¹²³	2	haiku45	2	2	0	0	0
+top40	cand-45	🥇🥈🥉	3	haiku45	2	0	2	0	0
+top40	cand-46	․‥…	3	haiku45	2	2	0	0	0
+top40	cand-47	∘○◯	4	haiku45	2	1	0	0	1
+top40	cand-48	√∛∜	4	haiku45	2	0	0	1	1
+top40	cand-49	*⁑⁂	3	haiku45	2	1	0	0	1
+top40	cand-50	〡〢〣〤〥〦〧〨〩〸〹〺	2	haiku45	11	3	0	0	8
+top40	cand-51	ⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹⅺⅻ	1	haiku45	11	9	0	0	2
+top40	cand-52	⓿⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴	2	haiku45	10	8	0	0	2
+top40	cand-53	🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚	2	haiku45	10	1	0	5	4
+top40	cand-54	ᬇᬈᬉᬊᬋᬌᬍᬎᬑᬒ	1	haiku45	9	0	0	5	4
+top40	cand-55	௦௧௨௩௪௫௬௭௮௯	1	haiku45	9	5	0	1	3
+top40	cand-56	၀၁၂၃၄၅၆၇၈၉	1	haiku45	9	9	0	0	0
+top40	cand-57	㈠㈡㈢㈣㈤㈥㈦㈧㈨㈩	2	haiku45	9	6	0	1	2
+top40	cand-58	᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙	1	haiku45	9	6	0	0	3
+top40	cand-59	០១២៣៤៥៦៧៨៩	1	haiku45	9	9	0	0	0
+top40	cand-60	༠༡༢༣༤༥༦༧༨༩	1	haiku45	9	8	0	0	1
+top40	cand-61	㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩	1	haiku45	9	0	1	3	5
+top40	cand-62	⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽	3	haiku45	9	8	0	0	1
+top40	cand-63	᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙	1	haiku45	9	3	0	1	5
+top40	cand-0	▏▎▍▌▋▊▉█	7	llama32-3b	7	0	4	0	3
+top40	cand-1	▁▂▃▄▅▆▇█	7	llama32-3b	7	2	3	0	2
+top40	cand-2	⚀⚁⚂⚃⚄⚅	7	llama32-3b	5	1	1	0	3
+top40	cand-3	□▤▦◫▩■	4	llama32-3b	5	1	1	0	3
+top40	cand-4	○◔◑◕●	7	llama32-3b	4	2	2	0	0
+top40	cand-5	▫░▒▓█	7	llama32-3b	4	1	2	0	1
+top40	cand-6	ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ	5	llama32-3b	11	5	5	0	1
+top40	cand-7	⓵⓶⓷⓸⓹⓺⓻⓼⓽⓾	5	llama32-3b	9	6	3	0	0
+top40	cand-8	⬞▫◽□◻⬜	3	llama32-3b	5	2	0	0	3
+top40	cand-9	<≪⋘⪢⫸	6	llama32-3b	4	1	2	0	1
+top40	cand-10	→⇒⇉⇛⇶	6	llama32-3b	4	2	2	0	0
+top40	cand-11	0123456789🔟	3	llama32-3b	10	2	1	0	7
+top40	cand-12	⓪①②③④⑤⑥⑦⑧⑨⑩	4	llama32-3b	10	5	3	0	2
+top40	cand-13	🄀🄁🄂🄃🄄🄅🄆🄇🄈🄉	3	llama32-3b	9	0	1	1	7
+top40	cand-14	❶❷❸❹❺❻❼❽❾❿	3	llama32-3b	9	4	3	0	2
+top40	cand-15	➀➁➂➃➄➅➆➇➈➉	3	llama32-3b	9	2	2	0	5
+top40	cand-16	٠١٢٣٤٥٦٧٨٩	2	llama32-3b	9	3	1	0	5
+top40	cand-17	⁰¹²³⁴⁵⁶⁷⁸⁹	3	llama32-3b	9	2	1	0	6
+top40	cand-18	🀙🀚🀛🀜🀝🀞🀟🀠🀡	3	llama32-3b	8	0	0	5	3
+top40	cand-19	⠀⠁⠃⠇⠏⠟⠿⣿	5	llama32-3b	7	2	0	0	5
+top40	cand-20	⅛¼⅜½⅝¾⅞	3	llama32-3b	6	2	1	0	3
+top40	cand-21	🮂🮃▀🮄🮅🮆█	2	llama32-3b	6	0	1	3	2
+top40	cand-22	🀱🀲🀳🀴🀵🀶🀷	3	llama32-3b	6	0	0	4	2
+top40	cand-23	🞄🞅🞆🞇🞈🞉	4	llama32-3b	5	0	0	0	5
+top40	cand-24	♙♘♗♖♕♔	3	llama32-3b	5	2	1	0	2
+top40	cand-25	𝄖𝄗𝄘𝄙𝄚𝄛	2	llama32-3b	5	0	0	2	3
+top40	cand-26	✦✶✳✴✹✺	3	llama32-3b	5	1	2	0	2
+top40	cand-27	🞯🞰🞱🞲🞳🞴	3	llama32-3b	5	0	1	2	2
+top40	cand-28	˥˦˧˨˩	3	llama32-3b	4	2	1	0	1
+top40	cand-29	🌑🌒🌓🌔🌕	5	llama32-3b	4	1	0	1	2
+top40	cand-30	⬝▪◽◻⬛	2	llama32-3b	4	2	0	0	2
+top40	cand-31	‐‒–—―	3	llama32-3b	4	1	1	0	2
+top40	cand-32	𝍠𝍡𝍢𝍣𝍤	3	llama32-3b	4	0	0	0	4
+top40	cand-33	◌○◎◉●	3	llama32-3b	4	2	1	0	1
+top40	cand-34	′″‴⁗	3	llama32-3b	3	1	0	0	2
+top40	cand-35	🔇🔈🔉🔊	3	llama32-3b	3	0	0	0	3
+top40	cand-36	∫∬∭⨌	4	llama32-3b	3	2	1	0	0
+top40	cand-37	௧௰௱௲	3	llama32-3b	3	0	0	1	2
+top40	cand-38	ℵℶℷℸ	2	llama32-3b	3	2	1	0	0
+top40	cand-39	🟁🟅🟋🟎	2	llama32-3b	3	0	0	0	3
+top40	cand-40	⁚⁖⁘⁙	3	llama32-3b	3	1	1	0	1
+top40	cand-41	|🏠🏢🏙	2	llama32-3b	3	1	0	0	2
+top40	cand-42	🂪🂫🂭🂮	2	llama32-3b	3	0	0	1	2
+top40	cand-43	-=≡≣	3	llama32-3b	3	1	1	0	1
+top40	cand-44	¹²³	2	llama32-3b	2	0	0	0	2
+top40	cand-45	🥇🥈🥉	3	llama32-3b	2	0	0	0	2
+top40	cand-46	․‥…	3	llama32-3b	2	1	0	0	1
+top40	cand-47	∘○◯	4	llama32-3b	2	1	1	0	0
+top40	cand-48	√∛∜	4	llama32-3b	2	1	0	0	1
+top40	cand-49	*⁑⁂	3	llama32-3b	2	1	0	0	1
+top40	cand-50	〡〢〣〤〥〦〧〨〩〸〹〺	2	llama32-3b	11	0	0	0	11
+top40	cand-51	ⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹⅺⅻ	1	llama32-3b	11	4	3	0	4
+top40	cand-52	⓿⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴	2	llama32-3b	10	4	3	0	3
+top40	cand-53	🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚	2	llama32-3b	10	0	1	0	9
+top40	cand-54	ᬇᬈᬉᬊᬋᬌᬍᬎᬑᬒ	1	llama32-3b	9	0	0	1	8
+top40	cand-55	௦௧௨௩௪௫௬௭௮௯	1	llama32-3b	9	3	0	4	2
+top40	cand-56	၀၁၂၃၄၅၆၇၈၉	1	llama32-3b	9	0	0	3	6
+top40	cand-57	㈠㈡㈢㈣㈤㈥㈦㈧㈨㈩	2	llama32-3b	9	2	1	0	6
+top40	cand-58	᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙	1	llama32-3b	9	0	0	2	7
+top40	cand-59	០១២៣៤៥៦៧៨៩	1	llama32-3b	9	4	2	0	3
+top40	cand-60	༠༡༢༣༤༥༦༧༨༩	1	llama32-3b	9	2	4	0	3
+top40	cand-61	㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩	1	llama32-3b	9	2	3	0	4
+top40	cand-62	⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽	3	llama32-3b	9	4	2	0	3
+top40	cand-63	᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙	1	llama32-3b	9	0	0	1	8
+top40	cand-0	▏▎▍▌▋▊▉█	7	mistral7b	7	2	2	0	3
+top40	cand-1	▁▂▃▄▅▆▇█	7	mistral7b	7	2	1	0	4
+top40	cand-2	⚀⚁⚂⚃⚄⚅	7	mistral7b	5	0	0	1	4
+top40	cand-3	□▤▦◫▩■	4	mistral7b	5	1	1	1	2
+top40	cand-4	○◔◑◕●	7	mistral7b	4	1	0	0	3
+top40	cand-5	▫░▒▓█	7	mistral7b	4	1	1	1	1
+top40	cand-6	ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ	5	mistral7b	11	1	0	3	7
+top40	cand-7	⓵⓶⓷⓸⓹⓺⓻⓼⓽⓾	5	mistral7b	9	1	0	2	6
+top40	cand-8	⬞▫◽□◻⬜	3	mistral7b	5	0	2	0	3
+top40	cand-9	<≪⋘⪢⫸	6	mistral7b	4	1	1	0	2
+top40	cand-10	→⇒⇉⇛⇶	6	mistral7b	4	1	0	0	3
+top40	cand-11	0123456789🔟	3	mistral7b	10	1	1	0	8
+top40	cand-12	⓪①②③④⑤⑥⑦⑧⑨⑩	4	mistral7b	10	0	0	2	8
+top40	cand-13	🄀🄁🄂🄃🄄🄅🄆🄇🄈🄉	3	mistral7b	9	0	0	1	8
+top40	cand-14	❶❷❸❹❺❻❼❽❾❿	3	mistral7b	9	2	1	0	6
+top40	cand-15	➀➁➂➃➄➅➆➇➈➉	3	mistral7b	9	0	0	2	7
+top40	cand-16	٠١٢٣٤٥٦٧٨٩	2	mistral7b	9	0	0	5	4
+top40	cand-17	⁰¹²³⁴⁵⁶⁷⁸⁹	3	mistral7b	9	0	0	7	2
+top40	cand-18	🀙🀚🀛🀜🀝🀞🀟🀠🀡	3	mistral7b	8	0	1	2	5
+top40	cand-19	⠀⠁⠃⠇⠏⠟⠿⣿	5	mistral7b	7	1	2	1	3
+top40	cand-20	⅛¼⅜½⅝¾⅞	3	mistral7b	6	2	0	0	4
+top40	cand-21	🮂🮃▀🮄🮅🮆█	2	mistral7b	6	0	0	1	5
+top40	cand-22	🀱🀲🀳🀴🀵🀶🀷	3	mistral7b	6	2	0	1	3
+top40	cand-23	🞄🞅🞆🞇🞈🞉	4	mistral7b	5	0	0	3	2
+top40	cand-24	♙♘♗♖♕♔	3	mistral7b	5	0	1	0	4
+top40	cand-25	𝄖𝄗𝄘𝄙𝄚𝄛	2	mistral7b	5	0	0	2	3
+top40	cand-26	✦✶✳✴✹✺	3	mistral7b	5	1	0	0	4
+top40	cand-27	🞯🞰🞱🞲🞳🞴	3	mistral7b	5	0	0	3	2
+top40	cand-28	˥˦˧˨˩	3	mistral7b	4	0	0	2	2
+top40	cand-29	🌑🌒🌓🌔🌕	5	mistral7b	4	1	0	0	3
+top40	cand-30	⬝▪◽◻⬛	2	mistral7b	4	0	0	1	3
+top40	cand-31	‐‒–—―	3	mistral7b	4	0	0	2	2
+top40	cand-32	𝍠𝍡𝍢𝍣𝍤	3	mistral7b	4	0	0	0	4
+top40	cand-33	◌○◎◉●	3	mistral7b	4	1	0	0	3
+top40	cand-34	′″‴⁗	3	mistral7b	3	0	1	0	2
+top40	cand-35	🔇🔈🔉🔊	3	mistral7b	3	0	0	0	3
+top40	cand-36	∫∬∭⨌	4	mistral7b	3	0	1	0	2
+top40	cand-37	௧௰௱௲	3	mistral7b	3	0	1	1	1
+top40	cand-38	ℵℶℷℸ	2	mistral7b	3	0	1	0	2
+top40	cand-39	🟁🟅🟋🟎	2	mistral7b	3	1	0	0	2
+top40	cand-40	⁚⁖⁘⁙	3	mistral7b	3	0	0	3	0
+top40	cand-41	|🏠🏢🏙	2	mistral7b	3	1	0	0	2
+top40	cand-42	🂪🂫🂭🂮	2	mistral7b	3	0	0	0	3
+top40	cand-43	-=≡≣	3	mistral7b	3	0	1	0	2
+top40	cand-44	¹²³	2	mistral7b	2	0	0	0	2
+top40	cand-45	🥇🥈🥉	3	mistral7b	2	0	1	0	1
+top40	cand-46	․‥…	3	mistral7b	2	0	0	0	2
+top40	cand-47	∘○◯	4	mistral7b	2	0	0	0	2
+top40	cand-48	√∛∜	4	mistral7b	2	0	2	0	0
+top40	cand-49	*⁑⁂	3	mistral7b	2	0	1	0	1
+top40	cand-50	〡〢〣〤〥〦〧〨〩〸〹〺	2	mistral7b	11	1	3	0	7
+top40	cand-51	ⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹⅺⅻ	1	mistral7b	11	0	1	1	9
+top40	cand-52	⓿⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴	2	mistral7b	10	0	0	4	6
+top40	cand-53	🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚	2	mistral7b	10	1	0	1	8
+top40	cand-54	ᬇᬈᬉᬊᬋᬌᬍᬎᬑᬒ	1	mistral7b	9	0	0	3	6
+top40	cand-55	௦௧௨௩௪௫௬௭௮௯	1	mistral7b	9	3	0	0	6
+top40	cand-56	၀၁၂၃၄၅၆၇၈၉	1	mistral7b	9	0	0	0	9
+top40	cand-57	㈠㈡㈢㈣㈤㈥㈦㈧㈨㈩	2	mistral7b	9	1	2	1	5
+top40	cand-58	᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙	1	mistral7b	9	0	1	4	4
+top40	cand-59	០១២៣៤៥៦៧៨៩	1	mistral7b	9	0	0	1	8
+top40	cand-60	༠༡༢༣༤༥༦༧༨༩	1	mistral7b	9	1	1	1	6
+top40	cand-61	㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩	1	mistral7b	9	1	0	0	8
+top40	cand-62	⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽	3	mistral7b	9	0	0	2	7
+top40	cand-63	᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙	1	mistral7b	9	1	0	5	3
+top40	cand-0	▏▎▍▌▋▊▉█	7	opus55	7	7	0	0	0
+top40	cand-1	▁▂▃▄▅▆▇█	7	opus55	7	7	0	0	0
+top40	cand-2	⚀⚁⚂⚃⚄⚅	7	opus55	5	5	0	0	0
+top40	cand-3	□▤▦◫▩■	4	opus55	5	4	1	0	0
+top40	cand-4	○◔◑◕●	7	opus55	4	4	0	0	0
+top40	cand-5	▫░▒▓█	7	opus55	4	4	0	0	0
+top40	cand-6	ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ	5	opus55	11	11	0	0	0
+top40	cand-7	⓵⓶⓷⓸⓹⓺⓻⓼⓽⓾	5	opus55	9	9	0	0	0
+top40	cand-8	⬞▫◽□◻⬜	3	opus55	5	4	1	0	0
+top40	cand-9	<≪⋘⪢⫸	6	opus55	4	3	0	0	1
+top40	cand-10	→⇒⇉⇛⇶	6	opus55	4	4	0	0	0
+top40	cand-11	0123456789🔟	3	opus55	10	10	0	0	0
+top40	cand-12	⓪①②③④⑤⑥⑦⑧⑨⑩	4	opus55	10	10	0	0	0
+top40	cand-13	🄀🄁🄂🄃🄄🄅🄆🄇🄈🄉	3	opus55	9	8	0	0	1
+top40	cand-14	❶❷❸❹❺❻❼❽❾❿	3	opus55	9	9	0	0	0
+top40	cand-15	➀➁➂➃➄➅➆➇➈➉	3	opus55	9	9	0	0	0
+top40	cand-16	٠١٢٣٤٥٦٧٨٩	2	opus55	9	9	0	0	0
+top40	cand-17	⁰¹²³⁴⁵⁶⁷⁸⁹	3	opus55	9	9	0	0	0
+top40	cand-18	🀙🀚🀛🀜🀝🀞🀟🀠🀡	3	opus55	8	8	0	0	0
+top40	cand-19	⠀⠁⠃⠇⠏⠟⠿⣿	5	opus55	7	6	0	0	1
+top40	cand-20	⅛¼⅜½⅝¾⅞	3	opus55	6	6	0	0	0
+top40	cand-21	🮂🮃▀🮄🮅🮆█	2	opus55	6	6	0	0	0
+top40	cand-22	🀱🀲🀳🀴🀵🀶🀷	3	opus55	6	6	0	0	0
+top40	cand-23	🞄🞅🞆🞇🞈🞉	4	opus55	5	5	0	0	0
+top40	cand-24	♙♘♗♖♕♔	3	opus55	5	3	1	0	1
+top40	cand-25	𝄖𝄗𝄘𝄙𝄚𝄛	2	opus55	5	5	0	0	0
+top40	cand-26	✦✶✳✴✹✺	3	opus55	5	4	1	0	0
+top40	cand-27	🞯🞰🞱🞲🞳🞴	3	opus55	5	4	0	0	1
+top40	cand-28	˥˦˧˨˩	3	opus55	4	0	4	0	0
+top40	cand-29	🌑🌒🌓🌔🌕	5	opus55	4	4	0	0	0
+top40	cand-30	⬝▪◽◻⬛	2	opus55	4	4	0	0	0
+top40	cand-31	‐‒–—―	3	opus55	4	2	0	0	2
+top40	cand-32	𝍠𝍡𝍢𝍣𝍤	3	opus55	4	4	0	0	0
+top40	cand-33	◌○◎◉●	3	opus55	4	3	0	0	1
+top40	cand-34	′″‴⁗	3	opus55	3	3	0	0	0
+top40	cand-35	🔇🔈🔉🔊	3	opus55	3	3	0	0	0
+top40	cand-36	∫∬∭⨌	4	opus55	3	3	0	0	0
+top40	cand-37	௧௰௱௲	3	opus55	3	3	0	0	0
+top40	cand-38	ℵℶℷℸ	2	opus55	3	2	0	0	1
+top40	cand-39	🟁🟅🟋🟎	2	opus55	3	3	0	0	0
+top40	cand-40	⁚⁖⁘⁙	3	opus55	3	3	0	0	0
+top40	cand-41	|🏠🏢🏙	2	opus55	3	2	0	0	1
+top40	cand-42	🂪🂫🂭🂮	2	opus55	3	3	0	0	0
+top40	cand-43	-=≡≣	3	opus55	3	3	0	0	0
+top40	cand-44	¹²³	2	opus55	2	2	0	0	0
+top40	cand-45	🥇🥈🥉	3	opus55	2	0	2	0	0
+top40	cand-46	․‥…	3	opus55	2	2	0	0	0
+top40	cand-47	∘○◯	4	opus55	2	2	0	0	0
+top40	cand-48	√∛∜	4	opus55	2	2	0	0	0
+top40	cand-49	*⁑⁂	3	opus55	2	2	0	0	0
+top40	cand-50	〡〢〣〤〥〦〧〨〩〸〹〺	2	opus55	11	11	0	0	0
+top40	cand-51	ⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹⅺⅻ	1	opus55	11	11	0	0	0
+top40	cand-52	⓿⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴	2	opus55	10	10	0	0	0
+top40	cand-53	🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚	2	opus55	10	10	0	0	0
+top40	cand-54	ᬇᬈᬉᬊᬋᬌᬍᬎᬑᬒ	1	opus55	9	3	0	4	2
+top40	cand-55	௦௧௨௩௪௫௬௭௮௯	1	opus55	9	9	0	0	0
+top40	cand-56	၀၁၂၃၄၅၆၇၈၉	1	opus55	9	9	0	0	0
+top40	cand-57	㈠㈡㈢㈣㈤㈥㈦㈧㈨㈩	2	opus55	9	9	0	0	0
+top40	cand-58	᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙	1	opus55	9	9	0	0	0
+top40	cand-59	០១២៣៤៥៦៧៨៩	1	opus55	9	9	0	0	0
+top40	cand-60	༠༡༢༣༤༥༦༧༨༩	1	opus55	9	9	0	0	0
+top40	cand-61	㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩	1	opus55	9	8	0	0	1
+top40	cand-62	⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽	3	opus55	9	9	0	0	0
+top40	cand-63	᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙	1	opus55	9	9	0	0	0
+top40	cand-0	▏▎▍▌▋▊▉█	7	qwen25-3b	7	1	1	0	5
+top40	cand-1	▁▂▃▄▅▆▇█	7	qwen25-3b	7	1	1	0	5
+top40	cand-2	⚀⚁⚂⚃⚄⚅	7	qwen25-3b	5	0	0	0	5
+top40	cand-3	□▤▦◫▩■	4	qwen25-3b	5	0	0	0	5
+top40	cand-4	○◔◑◕●	7	qwen25-3b	4	1	0	0	3
+top40	cand-5	▫░▒▓█	7	qwen25-3b	4	0	0	0	4
+top40	cand-6	ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ	5	qwen25-3b	11	2	0	0	9
+top40	cand-7	⓵⓶⓷⓸⓹⓺⓻⓼⓽⓾	5	qwen25-3b	9	0	0	0	9
+top40	cand-8	⬞▫◽□◻⬜	3	qwen25-3b	5	1	2	0	2
+top40	cand-9	<≪⋘⪢⫸	6	qwen25-3b	4	2	0	0	2
+top40	cand-10	→⇒⇉⇛⇶	6	qwen25-3b	4	0	0	0	4
+top40	cand-11	0123456789🔟	3	qwen25-3b	10	4	2	0	4
+top40	cand-12	⓪①②③④⑤⑥⑦⑧⑨⑩	4	qwen25-3b	10	4	0	0	6
+top40	cand-13	🄀🄁🄂🄃🄄🄅🄆🄇🄈🄉	3	qwen25-3b	9	0	0	0	9
+top40	cand-14	❶❷❸❹❺❻❼❽❾❿	3	qwen25-3b	9	1	1	0	7
+top40	cand-15	➀➁➂➃➄➅➆➇➈➉	3	qwen25-3b	9	0	0	0	9
+top40	cand-16	٠١٢٣٤٥٦٧٨٩	2	qwen25-3b	9	0	0	2	7
+top40	cand-17	⁰¹²³⁴⁵⁶⁷⁸⁹	3	qwen25-3b	9	2	0	0	7
+top40	cand-18	🀙🀚🀛🀜🀝🀞🀟🀠🀡	3	qwen25-3b	8	0	0	0	8
+top40	cand-19	⠀⠁⠃⠇⠏⠟⠿⣿	5	qwen25-3b	7	0	0	0	7
+top40	cand-20	⅛¼⅜½⅝¾⅞	3	qwen25-3b	6	0	1	0	5
+top40	cand-21	🮂🮃▀🮄🮅🮆█	2	qwen25-3b	6	0	0	0	6
+top40	cand-22	🀱🀲🀳🀴🀵🀶🀷	3	qwen25-3b	6	0	0	0	6
+top40	cand-23	🞄🞅🞆🞇🞈🞉	4	qwen25-3b	5	0	0	1	4
+top40	cand-24	♙♘♗♖♕♔	3	qwen25-3b	5	0	0	0	5
+top40	cand-25	𝄖𝄗𝄘𝄙𝄚𝄛	2	qwen25-3b	5	0	0	0	5
+top40	cand-26	✦✶✳✴✹✺	3	qwen25-3b	5	0	0	0	5
+top40	cand-27	🞯🞰🞱🞲🞳🞴	3	qwen25-3b	5	0	0	0	5
+top40	cand-28	˥˦˧˨˩	3	qwen25-3b	4	0	0	0	4
+top40	cand-29	🌑🌒🌓🌔🌕	5	qwen25-3b	4	0	0	0	4
+top40	cand-30	⬝▪◽◻⬛	2	qwen25-3b	4	0	0	0	4
+top40	cand-31	‐‒–—―	3	qwen25-3b	4	0	1	0	3
+top40	cand-32	𝍠𝍡𝍢𝍣𝍤	3	qwen25-3b	4	1	1	0	2
+top40	cand-33	◌○◎◉●	3	qwen25-3b	4	0	0	0	4
+top40	cand-34	′″‴⁗	3	qwen25-3b	3	0	0	0	3
+top40	cand-35	🔇🔈🔉🔊	3	qwen25-3b	3	0	0	0	3
+top40	cand-36	∫∬∭⨌	4	qwen25-3b	3	1	1	0	1
+top40	cand-37	௧௰௱௲	3	qwen25-3b	3	0	0	0	3
+top40	cand-38	ℵℶℷℸ	2	qwen25-3b	3	0	1	0	2
+top40	cand-39	🟁🟅🟋🟎	2	qwen25-3b	3	0	0	0	3
+top40	cand-40	⁚⁖⁘⁙	3	qwen25-3b	3	0	0	0	3
+top40	cand-41	|🏠🏢🏙	2	qwen25-3b	3	0	0	1	2
+top40	cand-42	🂪🂫🂭🂮	2	qwen25-3b	3	0	0	0	3
+top40	cand-43	-=≡≣	3	qwen25-3b	3	0	1	0	2
+top40	cand-44	¹²³	2	qwen25-3b	2	0	0	0	2
+top40	cand-45	🥇🥈🥉	3	qwen25-3b	2	0	0	0	2
+top40	cand-46	․‥…	3	qwen25-3b	2	0	0	0	2
+top40	cand-47	∘○◯	4	qwen25-3b	2	1	0	0	1
+top40	cand-48	√∛∜	4	qwen25-3b	2	0	1	0	1
+top40	cand-49	*⁑⁂	3	qwen25-3b	2	0	0	0	2
+top40	cand-50	〡〢〣〤〥〦〧〨〩〸〹〺	2	qwen25-3b	11	1	1	0	9
+top40	cand-51	ⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹⅺⅻ	1	qwen25-3b	11	1	0	0	10
+top40	cand-52	⓿⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴	2	qwen25-3b	10	0	0	5	5
+top40	cand-53	🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚	2	qwen25-3b	10	0	0	0	10
+top40	cand-54	ᬇᬈᬉᬊᬋᬌᬍᬎᬑᬒ	1	qwen25-3b	9	0	0	1	8
+top40	cand-55	௦௧௨௩௪௫௬௭௮௯	1	qwen25-3b	9	1	1	1	6
+top40	cand-56	၀၁၂၃၄၅၆၇၈၉	1	qwen25-3b	9	1	1	0	7
+top40	cand-57	㈠㈡㈢㈣㈤㈥㈦㈧㈨㈩	2	qwen25-3b	9	1	0	0	8
+top40	cand-58	᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙	1	qwen25-3b	9	0	0	0	9
+top40	cand-59	០១២៣៤៥៦៧៨៩	1	qwen25-3b	9	0	1	0	8
+top40	cand-60	༠༡༢༣༤༥༦༧༨༩	1	qwen25-3b	9	1	3	0	5
+top40	cand-61	㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩	1	qwen25-3b	9	1	1	0	7
+top40	cand-62	⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽	3	qwen25-3b	9	2	0	0	7
+top40	cand-63	᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙	1	qwen25-3b	9	0	1	1	7
+top40	cand-0	▏▎▍▌▋▊▉█	7	sonnet55	7	7	0	0	0
+top40	cand-1	▁▂▃▄▅▆▇█	7	sonnet55	7	7	0	0	0
+top40	cand-2	⚀⚁⚂⚃⚄⚅	7	sonnet55	5	5	0	0	0
+top40	cand-3	□▤▦◫▩■	4	sonnet55	5	3	1	0	1
+top40	cand-4	○◔◑◕●	7	sonnet55	4	3	0	0	1
+top40	cand-5	▫░▒▓█	7	sonnet55	4	4	0	0	0
+top40	cand-6	ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ	5	sonnet55	11	11	0	0	0
+top40	cand-7	⓵⓶⓷⓸⓹⓺⓻⓼⓽⓾	5	sonnet55	9	9	0	0	0
+top40	cand-8	⬞▫◽□◻⬜	3	sonnet55	5	4	0	0	1
+top40	cand-9	<≪⋘⪢⫸	6	sonnet55	4	3	1	0	0
+top40	cand-10	→⇒⇉⇛⇶	6	sonnet55	4	4	0	0	0
+top40	cand-11	0123456789🔟	3	sonnet55	10	10	0	0	0
+top40	cand-12	⓪①②③④⑤⑥⑦⑧⑨⑩	4	sonnet55	10	10	0	0	0
+top40	cand-13	🄀🄁🄂🄃🄄🄅🄆🄇🄈🄉	3	sonnet55	9	5	0	1	3
+top40	cand-14	❶❷❸❹❺❻❼❽❾❿	3	sonnet55	9	9	0	0	0
+top40	cand-15	➀➁➂➃➄➅➆➇➈➉	3	sonnet55	9	9	0	0	0
+top40	cand-16	٠١٢٣٤٥٦٧٨٩	2	sonnet55	9	9	0	0	0
+top40	cand-17	⁰¹²³⁴⁵⁶⁷⁸⁹	3	sonnet55	9	9	0	0	0
+top40	cand-18	🀙🀚🀛🀜🀝🀞🀟🀠🀡	3	sonnet55	8	8	0	0	0
+top40	cand-19	⠀⠁⠃⠇⠏⠟⠿⣿	5	sonnet55	7	7	0	0	0
+top40	cand-20	⅛¼⅜½⅝¾⅞	3	sonnet55	6	6	0	0	0
+top40	cand-21	🮂🮃▀🮄🮅🮆█	2	sonnet55	6	6	0	0	0
+top40	cand-22	🀱🀲🀳🀴🀵🀶🀷	3	sonnet55	6	6	0	0	0
+top40	cand-23	🞄🞅🞆🞇🞈🞉	4	sonnet55	5	4	0	0	1
+top40	cand-24	♙♘♗♖♕♔	3	sonnet55	5	4	0	0	1
+top40	cand-25	𝄖𝄗𝄘𝄙𝄚𝄛	2	sonnet55	5	3	0	1	1
+top40	cand-26	✦✶✳✴✹✺	3	sonnet55	5	4	0	0	1
+top40	cand-27	🞯🞰🞱🞲🞳🞴	3	sonnet55	5	4	0	0	1
+top40	cand-28	˥˦˧˨˩	3	sonnet55	4	0	3	0	1
+top40	cand-29	🌑🌒🌓🌔🌕	5	sonnet55	4	4	0	0	0
+top40	cand-30	⬝▪◽◻⬛	2	sonnet55	4	3	1	0	0
+top40	cand-31	‐‒–—―	3	sonnet55	4	2	0	0	2
+top40	cand-32	𝍠𝍡𝍢𝍣𝍤	3	sonnet55	4	4	0	0	0
+top40	cand-33	◌○◎◉●	3	sonnet55	4	3	0	0	1
+top40	cand-34	′″‴⁗	3	sonnet55	3	3	0	0	0
+top40	cand-35	🔇🔈🔉🔊	3	sonnet55	3	3	0	0	0
+top40	cand-36	∫∬∭⨌	4	sonnet55	3	2	1	0	0
+top40	cand-37	௧௰௱௲	3	sonnet55	3	3	0	0	0
+top40	cand-38	ℵℶℷℸ	2	sonnet55	3	1	0	1	1
+top40	cand-39	🟁🟅🟋🟎	2	sonnet55	3	0	0	0	3
+top40	cand-40	⁚⁖⁘⁙	3	sonnet55	3	3	0	0	0
+top40	cand-41	|🏠🏢🏙	2	sonnet55	3	2	0	0	1
+top40	cand-42	🂪🂫🂭🂮	2	sonnet55	3	3	0	0	0
+top40	cand-43	-=≡≣	3	sonnet55	3	3	0	0	0
+top40	cand-44	¹²³	2	sonnet55	2	2	0	0	0
+top40	cand-45	🥇🥈🥉	3	sonnet55	2	0	2	0	0
+top40	cand-46	․‥…	3	sonnet55	2	2	0	0	0
+top40	cand-47	∘○◯	4	sonnet55	2	2	0	0	0
+top40	cand-48	√∛∜	4	sonnet55	2	1	0	0	1
+top40	cand-49	*⁑⁂	3	sonnet55	2	2	0	0	0
+top40	cand-50	〡〢〣〤〥〦〧〨〩〸〹〺	2	sonnet55	11	10	0	0	1
+top40	cand-51	ⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹⅺⅻ	1	sonnet55	11	10	0	0	1
+top40	cand-52	⓿⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴	2	sonnet55	10	10	0	0	0
+top40	cand-53	🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚	2	sonnet55	10	9	0	0	1
+top40	cand-54	ᬇᬈᬉᬊᬋᬌᬍᬎᬑᬒ	1	sonnet55	9	0	0	9	0
+top40	cand-55	௦௧௨௩௪௫௬௭௮௯	1	sonnet55	9	9	0	0	0
+top40	cand-56	၀၁၂၃၄၅၆၇၈၉	1	sonnet55	9	9	0	0	0
+top40	cand-57	㈠㈡㈢㈣㈤㈥㈦㈧㈨㈩	2	sonnet55	9	9	0	0	0
+top40	cand-58	᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙	1	sonnet55	9	9	0	0	0
+top40	cand-59	០១២៣៤៥៦៧៨៩	1	sonnet55	9	9	0	0	0
+top40	cand-60	༠༡༢༣༤༥༦༧༨༩	1	sonnet55	9	9	0	0	0
+top40	cand-61	㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩	1	sonnet55	9	8	0	0	1
+top40	cand-62	⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽	3	sonnet55	9	9	0	0	0
+top40	cand-63	᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙	1	sonnet55	9	8	0	0	1
+top40	cand-64	🞌🞍🞎🞏🞐🞑🞒🞓	3	gemini31pro[sheet]	7	2	0	0	5
+top40	cand-65	♳♴♵♶♷♸♹	3	gemini31pro[sheet]	6	6	0	0	0
+top40	cand-66	▪◾◼■	3	gemini31pro[sheet]	3	3	0	0	0
+top40	cand-67	⏑⏗⏘⏙	3	gemini31pro[sheet]	3	0	0	1	2
+top40	cand-68	∮∯∰	3	gemini31pro[sheet]	2	2	0	0	0
+top40	cand-69	ⅠⅡⅢ	3	gemini31pro[sheet]	2	2	0	0	0
+top40	cand-70	▖▗▘▝▚▞▙▛▜▟	2	gemini31pro[sheet]	9	2	0	0	7
+top40	cand-71	㊀㊁㊂㊃㊄㊅㊆㊇㊈㊉	2	gemini31pro[sheet]	9	9	0	0	0
+top40	cand-72	🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪	2	gemini31pro[sheet]	9	8	0	0	1
+top40	cand-73	🯰🯱🯲🯳🯴🯵🯶🯷🯸🯹	2	gemini31pro[sheet]	9	9	0	0	0
+top40	cand-74	₀₁₂₃₄₅₆₇₈₉	2	gemini31pro[sheet]	9	9	0	0	0
+top40	cand-75	０１２３４５６７８９	2	gemini31pro[sheet]	9	9	0	0	0
+top40	cand-76	༪༫༬༭༮༯༰༱༲༳	2	gemini31pro[sheet]	9	2	0	2	5
+top40	cand-77	一二三四五六七八九十	2	gemini31pro[sheet]	9	9	0	0	0
+top40	cand-78	☰☱☳☷⚌⚍⚏⚊⚋	2	gemini31pro[sheet]	8	0	3	1	4
+top40	cand-79	𐄇𐄈𐄉𐄊𐄋𐄌𐄍𐄎𐄏	2	gemini31pro[sheet]	8	6	0	1	1
+top40	cand-80	𐄐𐄑𐄒𐄓𐄔𐄕𐄖𐄗𐄘	2	gemini31pro[sheet]	8	2	0	0	6
+top40	cand-81	⅛⅕⅓⅜⅗⅔⅘⅚⅞	2	gemini31pro[sheet]	8	8	0	0	0
+top40	cand-82	ⅩⅬⅭⅮⅯↁↂↇↈ	2	gemini31pro[sheet]	8	8	0	0	0
+top40	cand-83	𝄻𝄼𝄽𝄾𝄿𝅀𝅁𝅂	2	gemini31pro[sheet]	7	1	0	3	3
+top40	cand-84	𒐀𒐁𒐂𒐃𒐄𒐅𒐆𒐇	2	gemini31pro[sheet]	7	2	0	1	4
+top40	cand-85	☷☶☵☴☳☲☱☰	2	gemini31pro[sheet]	7	1	0	6	0
+top40	cand-86	㉈㉉㉊㉋㉌㉍㉎㉏	2	gemini31pro[sheet]	7	4	0	0	3
+top40	cand-87	⅒⅑⅐⅙⅕¼⅓½	2	gemini31pro[sheet]	7	7	0	0	0
+top40	cand-88	🀱🀹🁁🁉🁑🁙🁡	2	gemini31pro[sheet]	6	4	0	0	2
+top40	cand-89	ᚐᚑᚒᚓᚔ	2	gemini31pro[sheet]	4	3	0	0	1
+top40	cand-90	꜈꜉꜊꜋꜌	2	gemini31pro[sheet]	4	0	0	2	2
+top40	cand-91	ᚆᚇᚈᚉᚊ	2	gemini31pro[sheet]	4	4	0	0	0
+top40	cand-92	🡢🡪🡲🡺🢂	2	gemini31pro[sheet]	4	3	0	0	1
+top40	cand-93	𐅃𐅄𐅅𐅆𐅇	2	gemini31pro[sheet]	4	0	0	0	4
+top40	cand-94	𝍲𝍳𝍴𝍵𝍶	2	gemini31pro[sheet]	4	3	0	0	1
+top40	cand-95	🮇🮈🮉🮊🮋	2	gemini31pro[sheet]	4	2	0	0	2
+top40	cand-96	꜖꜕꜔꜓꜒	2	gemini31pro[sheet]	4	0	0	3	1
+top40	cand-97	㎐㎑㎒㎓㎔	2	gemini31pro[sheet]	4	4	0	0	0
+top40	cand-98	🏻🏼🏽🏾🏿	2	gemini31pro[sheet]	4	1	0	0	3
+top40	cand-99	ᚁᚂᚃᚄᚅ	2	gemini31pro[sheet]	4	3	0	0	1
+top40	cand-100	⚆⚇⚈⚉	2	gemini31pro[sheet]	3	2	0	1	0
+top40	cand-101	⅕⅖⅗⅘	2	gemini31pro[sheet]	3	3	0	0	0
+top40	cand-102	㆒㆓㆔㆕	2	gemini31pro[sheet]	3	2	0	1	0
+top40	cand-103	·•●⬤	2	gemini31pro[sheet]	3	3	0	0	0
+top40	cand-104	ₐaᴀA	2	gemini31pro[sheet]	3	1	0	0	2
+top40	cand-105	nɲɳŋ	2	gemini31pro[sheet]	3	0	0	2	1
+top40	cand-106	♩♪♫♬	2	gemini31pro[sheet]	3	1	0	1	1
+top40	cand-107	⭒⭑⭐	2	gemini31pro[sheet]	2	2	0	0	0
+top40	cand-108	∣∥⦀	2	gemini31pro[sheet]	2	2	0	0	0
+top40	cand-109	ↀↁↂ	2	gemini31pro[sheet]	2	2	0	0	0
+top40	cand-110	❘❙❚	2	gemini31pro[sheet]	2	2	0	0	0
+top40	cand-111	🞗🞘🞙	2	gemini31pro[sheet]	2	2	0	0	0
+top40	cand-112	=⩵⩶	2	gemini31pro[sheet]	2	2	0	0	0
+top40	cand-113	/⫽⫻	2	gemini31pro[sheet]	2	1	0	1	0
+top40	cand-114	〡〢〣	2	gemini31pro[sheet]	2	2	0	0	0
+top40	cand-115	一二三	2	gemini31pro[sheet]	2	2	0	0	0
+top40	cand-116	൰൱൲	2	gemini31pro[sheet]	2	2	0	0	0
+top40	cand-64	🞌🞍🞎🞏🞐🞑🞒🞓	3	gemini38flash[sheet]	7	1	0	0	6
+top40	cand-65	♳♴♵♶♷♸♹	3	gemini38flash[sheet]	6	1	0	0	5
+top40	cand-66	▪◾◼■	3	gemini38flash[sheet]	3	2	0	0	1
+top40	cand-67	⏑⏗⏘⏙	3	gemini38flash[sheet]	3	0	0	1	2
+top40	cand-68	∮∯∰	3	gemini38flash[sheet]	2	2	0	0	0
+top40	cand-69	ⅠⅡⅢ	3	gemini38flash[sheet]	2	2	0	0	0
+top40	cand-70	▖▗▘▝▚▞▙▛▜▟	2	gemini38flash[sheet]	9	1	0	0	8
+top40	cand-71	㊀㊁㊂㊃㊄㊅㊆㊇㊈㊉	2	gemini38flash[sheet]	9	4	0	0	5
+top40	cand-72	🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪	2	gemini38flash[sheet]	9	4	0	0	5
+top40	cand-73	🯰🯱🯲🯳🯴🯵🯶🯷🯸🯹	2	gemini38flash[sheet]	9	0	0	0	9
+top40	cand-74	₀₁₂₃₄₅₆₇₈₉	2	gemini38flash[sheet]	9	6	0	0	3
+top40	cand-75	０１２３４５６７８９	2	gemini38flash[sheet]	9	6	0	0	3
+top40	cand-76	༪༫༬༭༮༯༰༱༲༳	2	gemini38flash[sheet]	9	4	0	0	5
+top40	cand-77	一二三四五六七八九十	2	gemini38flash[sheet]	9	5	0	0	4
+top40	cand-78	☰☱☳☷⚌⚍⚏⚊⚋	2	gemini38flash[sheet]	8	0	0	2	6
+top40	cand-79	𐄇𐄈𐄉𐄊𐄋𐄌𐄍𐄎𐄏	2	gemini38flash[sheet]	8	6	0	0	2
+top40	cand-80	𐄐𐄑𐄒𐄓𐄔𐄕𐄖𐄗𐄘	2	gemini38flash[sheet]	8	6	0	0	2
+top40	cand-81	⅛⅕⅓⅜⅗⅔⅘⅚⅞	2	gemini38flash[sheet]	8	5	0	0	3
+top40	cand-82	ⅩⅬⅭⅮⅯↁↂↇↈ	2	gemini38flash[sheet]	8	3	0	0	5
+top40	cand-83	𝄻𝄼𝄽𝄾𝄿𝅀𝅁𝅂	2	gemini38flash[sheet]	7	1	1	0	5
+top40	cand-84	𒐀𒐁𒐂𒐃𒐄𒐅𒐆𒐇	2	gemini38flash[sheet]	7	1	0	0	6
+top40	cand-85	☷☶☵☴☳☲☱☰	2	gemini38flash[sheet]	7	0	0	2	5
+top40	cand-86	㉈㉉㉊㉋㉌㉍㉎㉏	2	gemini38flash[sheet]	7	3	0	0	4
+top40	cand-87	⅒⅑⅐⅙⅕¼⅓½	2	gemini38flash[sheet]	7	3	0	0	4
+top40	cand-88	🀱🀹🁁🁉🁑🁙🁡	2	gemini38flash[sheet]	6	2	0	0	4
+top40	cand-89	ᚐᚑᚒᚓᚔ	2	gemini38flash[sheet]	4	4	0	0	0
+top40	cand-90	꜈꜉꜊꜋꜌	2	gemini38flash[sheet]	4	3	0	0	1
+top40	cand-91	ᚆᚇᚈᚉᚊ	2	gemini38flash[sheet]	4	1	0	0	3
+top40	cand-92	🡢🡪🡲🡺🢂	2	gemini38flash[sheet]	4	0	0	0	4
+top40	cand-93	𐅃𐅄𐅅𐅆𐅇	2	gemini38flash[sheet]	4	2	0	0	2
+top40	cand-94	𝍲𝍳𝍴𝍵𝍶	2	gemini38flash[sheet]	4	3	0	0	1
+top40	cand-95	🮇🮈🮉🮊🮋	2	gemini38flash[sheet]	4	2	0	0	2
+top40	cand-96	꜖꜕꜔꜓꜒	2	gemini38flash[sheet]	4	1	0	0	3
+top40	cand-97	㎐㎑㎒㎓㎔	2	gemini38flash[sheet]	4	1	0	0	3
+top40	cand-98	🏻🏼🏽🏾🏿	2	gemini38flash[sheet]	4	3	0	0	1
+top40	cand-99	ᚁᚂᚃᚄᚅ	2	gemini38flash[sheet]	4	1	0	0	3
+top40	cand-100	⚆⚇⚈⚉	2	gemini38flash[sheet]	3	2	0	0	1
+top40	cand-101	⅕⅖⅗⅘	2	gemini38flash[sheet]	3	1	0	0	2
+top40	cand-102	㆒㆓㆔㆕	2	gemini38flash[sheet]	3	1	0	0	2
+top40	cand-103	·•●⬤	2	gemini38flash[sheet]	3	3	0	0	0
+top40	cand-104	ₐaᴀA	2	gemini38flash[sheet]	3	0	0	0	3
+top40	cand-105	nɲɳŋ	2	gemini38flash[sheet]	3	0	0	1	2
+top40	cand-106	♩♪♫♬	2	gemini38flash[sheet]	3	2	0	0	1
+top40	cand-107	⭒⭑⭐	2	gemini38flash[sheet]	2	2	0	0	0
+top40	cand-108	∣∥⦀	2	gemini38flash[sheet]	2	2	0	0	0
+top40	cand-109	ↀↁↂ	2	gemini38flash[sheet]	2	0	0	0	2
+top40	cand-110	❘❙❚	2	gemini38flash[sheet]	2	0	0	0	2
+top40	cand-111	🞗🞘🞙	2	gemini38flash[sheet]	2	0	0	0	2
+top40	cand-112	=⩵⩶	2	gemini38flash[sheet]	2	1	0	0	1
+top40	cand-113	/⫽⫻	2	gemini38flash[sheet]	2	0	1	0	1
+top40	cand-114	〡〢〣	2	gemini38flash[sheet]	2	1	0	0	1
+top40	cand-115	一二三	2	gemini38flash[sheet]	2	1	0	0	1
+top40	cand-116	൰൱൲	2	gemini38flash[sheet]	2	2	0	0	0
+top40	cand-64	🞌🞍🞎🞏🞐🞑🞒🞓	3	grok46[sheet]	7	4	0	0	3
+top40	cand-65	♳♴♵♶♷♸♹	3	grok46[sheet]	6	0	0	1	5
+top40	cand-66	▪◾◼■	3	grok46[sheet]	3	1	0	0	2
+top40	cand-67	⏑⏗⏘⏙	3	grok46[sheet]	3	0	0	0	3
+top40	cand-68	∮∯∰	3	grok46[sheet]	2	2	0	0	0
+top40	cand-69	ⅠⅡⅢ	3	grok46[sheet]	2	2	0	0	0
+top40	cand-70	▖▗▘▝▚▞▙▛▜▟	2	grok46[sheet]	9	2	0	0	7
+top40	cand-71	㊀㊁㊂㊃㊄㊅㊆㊇㊈㊉	2	grok46[sheet]	9	6	0	0	3
+top40	cand-72	🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪	2	grok46[sheet]	9	6	0	0	3
+top40	cand-73	🯰🯱🯲🯳🯴🯵🯶🯷🯸🯹	2	grok46[sheet]	9	8	0	0	1
+top40	cand-74	₀₁₂₃₄₅₆₇₈₉	2	grok46[sheet]	9	7	0	0	2
+top40	cand-75	０１２３４５６７８９	2	grok46[sheet]	9	9	0	0	0
+top40	cand-76	༪༫༬༭༮༯༰༱༲༳	2	grok46[sheet]	9	5	0	0	4
+top40	cand-77	一二三四五六七八九十	2	grok46[sheet]	9	7	0	0	2
+top40	cand-78	☰☱☳☷⚌⚍⚏⚊⚋	2	grok46[sheet]	8	1	3	1	3
+top40	cand-79	𐄇𐄈𐄉𐄊𐄋𐄌𐄍𐄎𐄏	2	grok46[sheet]	8	4	0	0	4
+top40	cand-80	𐄐𐄑𐄒𐄓𐄔𐄕𐄖𐄗𐄘	2	grok46[sheet]	8	6	0	0	2
+top40	cand-81	⅛⅕⅓⅜⅗⅔⅘⅚⅞	2	grok46[sheet]	8	6	0	0	2
+top40	cand-82	ⅩⅬⅭⅮⅯↁↂↇↈ	2	grok46[sheet]	8	7	0	0	1
+top40	cand-83	𝄻𝄼𝄽𝄾𝄿𝅀𝅁𝅂	2	grok46[sheet]	7	0	0	0	7
+top40	cand-84	𒐀𒐁𒐂𒐃𒐄𒐅𒐆𒐇	2	grok46[sheet]	7	7	0	0	0
+top40	cand-85	☷☶☵☴☳☲☱☰	2	grok46[sheet]	7	1	0	2	4
+top40	cand-86	㉈㉉㉊㉋㉌㉍㉎㉏	2	grok46[sheet]	7	7	0	0	0
+top40	cand-87	⅒⅑⅐⅙⅕¼⅓½	2	grok46[sheet]	7	7	0	0	0
+top40	cand-88	🀱🀹🁁🁉🁑🁙🁡	2	grok46[sheet]	6	5	0	0	1
+top40	cand-89	ᚐᚑᚒᚓᚔ	2	grok46[sheet]	4	2	0	1	1
+top40	cand-90	꜈꜉꜊꜋꜌	2	grok46[sheet]	4	0	0	0	4
+top40	cand-91	ᚆᚇᚈᚉᚊ	2	grok46[sheet]	4	0	0	4	0
+top40	cand-92	🡢🡪🡲🡺🢂	2	grok46[sheet]	4	2	0	0	2
+top40	cand-93	𐅃𐅄𐅅𐅆𐅇	2	grok46[sheet]	4	2	0	0	2
+top40	cand-94	𝍲𝍳𝍴𝍵𝍶	2	grok46[sheet]	4	2	0	0	2
+top40	cand-95	🮇🮈🮉🮊🮋	2	grok46[sheet]	4	4	0	0	0
+top40	cand-96	꜖꜕꜔꜓꜒	2	grok46[sheet]	4	0	0	1	3
+top40	cand-97	㎐㎑㎒㎓㎔	2	grok46[sheet]	4	3	0	0	1
+top40	cand-98	🏻🏼🏽🏾🏿	2	grok46[sheet]	4	3	0	0	1
+top40	cand-99	ᚁᚂᚃᚄᚅ	2	grok46[sheet]	4	1	0	0	3
+top40	cand-100	⚆⚇⚈⚉	2	grok46[sheet]	3	2	0	0	1
+top40	cand-101	⅕⅖⅗⅘	2	grok46[sheet]	3	3	0	0	0
+top40	cand-102	㆒㆓㆔㆕	2	grok46[sheet]	3	2	0	0	1
+top40	cand-103	·•●⬤	2	grok46[sheet]	3	3	0	0	0
+top40	cand-104	ₐaᴀA	2	grok46[sheet]	3	0	0	0	3
+top40	cand-105	nɲɳŋ	2	grok46[sheet]	3	0	0	2	1
+top40	cand-106	♩♪♫♬	2	grok46[sheet]	3	1	1	0	1
+top40	cand-107	⭒⭑⭐	2	grok46[sheet]	2	2	0	0	0
+top40	cand-108	∣∥⦀	2	grok46[sheet]	2	1	0	0	1
+top40	cand-109	ↀↁↂ	2	grok46[sheet]	2	1	0	0	1
+top40	cand-110	❘❙❚	2	grok46[sheet]	2	2	0	0	0
+top40	cand-111	🞗🞘🞙	2	grok46[sheet]	2	2	0	0	0
+top40	cand-112	=⩵⩶	2	grok46[sheet]	2	1	0	0	1
+top40	cand-113	/⫽⫻	2	grok46[sheet]	2	1	0	0	1
+top40	cand-114	〡〢〣	2	grok46[sheet]	2	2	0	0	0
+top40	cand-115	一二三	2	grok46[sheet]	2	2	0	0	0
+top40	cand-116	൰൱൲	2	grok46[sheet]	2	0	0	0	2
+top40	cand-64	🞌🞍🞎🞏🞐🞑🞒🞓	3	haiku45	7	0	0	0	7
+top40	cand-65	♳♴♵♶♷♸♹	3	haiku45	6	0	0	3	3
+top40	cand-66	▪◾◼■	3	haiku45	3	2	0	0	1
+top40	cand-67	⏑⏗⏘⏙	3	haiku45	3	1	0	2	0
+top40	cand-68	∮∯∰	3	haiku45	2	0	0	0	2
+top40	cand-69	ⅠⅡⅢ	3	haiku45	2	2	0	0	0
+top40	cand-70	▖▗▘▝▚▞▙▛▜▟	2	haiku45	9	1	0	3	5
+top40	cand-71	㊀㊁㊂㊃㊄㊅㊆㊇㊈㊉	2	haiku45	9	0	0	2	7
+top40	cand-72	🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪	2	haiku45	9	5	0	0	4
+top40	cand-73	🯰🯱🯲🯳🯴🯵🯶🯷🯸🯹	2	haiku45	9	1	0	1	7
+top40	cand-74	₀₁₂₃₄₅₆₇₈₉	2	haiku45	9	8	0	0	1
+top40	cand-75	０１２３４５６７８９	2	haiku45	9	8	0	0	1
+top40	cand-76	༪༫༬༭༮༯༰༱༲༳	2	haiku45	9	0	1	4	4
+top40	cand-77	一二三四五六七八九十	2	haiku45	9	9	0	0	0
+top40	cand-78	☰☱☳☷⚌⚍⚏⚊⚋	2	haiku45	8	0	3	3	2
+top40	cand-79	𐄇𐄈𐄉𐄊𐄋𐄌𐄍𐄎𐄏	2	haiku45	8	0	0	4	4
+top40	cand-80	𐄐𐄑𐄒𐄓𐄔𐄕𐄖𐄗𐄘	2	haiku45	8	1	0	2	5
+top40	cand-81	⅛⅕⅓⅜⅗⅔⅘⅚⅞	2	haiku45	8	7	0	0	1
+top40	cand-82	ⅩⅬⅭⅮⅯↁↂↇↈ	2	haiku45	8	6	0	0	2
+top40	cand-83	𝄻𝄼𝄽𝄾𝄿𝅀𝅁𝅂	2	haiku45	7	0	0	3	4
+top40	cand-84	𒐀𒐁𒐂𒐃𒐄𒐅𒐆𒐇	2	haiku45	7	0	0	1	6
+top40	cand-85	☷☶☵☴☳☲☱☰	2	haiku45	7	1	0	0	6
+top40	cand-86	㉈㉉㉊㉋㉌㉍㉎㉏	2	haiku45	7	0	0	3	4
+top40	cand-87	⅒⅑⅐⅙⅕¼⅓½	2	haiku45	7	6	0	0	1
+top40	cand-88	🀱🀹🁁🁉🁑🁙🁡	2	haiku45	6	0	0	4	2
+top40	cand-89	ᚐᚑᚒᚓᚔ	2	haiku45	4	0	0	2	2
+top40	cand-90	꜈꜉꜊꜋꜌	2	haiku45	4	0	0	4	0
+top40	cand-91	ᚆᚇᚈᚉᚊ	2	haiku45	4	1	0	2	1
+top40	cand-92	🡢🡪🡲🡺🢂	2	haiku45	4	1	0	1	2
+top40	cand-93	𐅃𐅄𐅅𐅆𐅇	2	haiku45	4	1	0	0	3
+top40	cand-94	𝍲𝍳𝍴𝍵𝍶	2	haiku45	4	0	0	2	2
+top40	cand-95	🮇🮈🮉🮊🮋	2	haiku45	4	0	0	0	4
+top40	cand-96	꜖꜕꜔꜓꜒	2	haiku45	4	0	0	0	4
+top40	cand-97	㎐㎑㎒㎓㎔	2	haiku45	4	2	0	1	1
+top40	cand-98	🏻🏼🏽🏾🏿	2	haiku45	4	3	0	0	1
+top40	cand-99	ᚁᚂᚃᚄᚅ	2	haiku45	4	0	0	3	1
+top40	cand-100	⚆⚇⚈⚉	2	haiku45	3	0	0	0	3
+top40	cand-101	⅕⅖⅗⅘	2	haiku45	3	3	0	0	0
+top40	cand-102	㆒㆓㆔㆕	2	haiku45	3	0	0	1	2
+top40	cand-103	·•●⬤	2	haiku45	3	3	0	0	0
+top40	cand-104	ₐaᴀA	2	haiku45	3	2	0	0	1
+top40	cand-105	nɲɳŋ	2	haiku45	3	0	0	2	1
+top40	cand-106	♩♪♫♬	2	haiku45	3	1	1	0	1
+top40	cand-107	⭒⭑⭐	2	haiku45	2	2	0	0	0
+top40	cand-108	∣∥⦀	2	haiku45	2	1	0	1	0
+top40	cand-109	ↀↁↂ	2	haiku45	2	2	0	0	0
+top40	cand-110	❘❙❚	2	haiku45	2	2	0	0	0
+top40	cand-111	🞗🞘🞙	2	haiku45	2	0	0	0	2
+top40	cand-112	=⩵⩶	2	haiku45	2	0	0	1	1
+top40	cand-113	/⫽⫻	2	haiku45	2	0	0	0	2
+top40	cand-114	〡〢〣	2	haiku45	2	1	0	0	1
+top40	cand-115	一二三	2	haiku45	2	2	0	0	0
+top40	cand-116	൰൱൲	2	haiku45	2	0	0	1	1
+top40	cand-64	🞌🞍🞎🞏🞐🞑🞒🞓	3	llama32-3b	7	0	0	2	5
+top40	cand-65	♳♴♵♶♷♸♹	3	llama32-3b	6	0	2	0	4
+top40	cand-66	▪◾◼■	3	llama32-3b	3	1	1	0	1
+top40	cand-67	⏑⏗⏘⏙	3	llama32-3b	3	1	0	0	2
+top40	cand-68	∮∯∰	3	llama32-3b	2	0	0	0	2
+top40	cand-69	ⅠⅡⅢ	3	llama32-3b	2	1	1	0	0
+top40	cand-70	▖▗▘▝▚▞▙▛▜▟	2	llama32-3b	9	3	1	1	4
+top40	cand-71	㊀㊁㊂㊃㊄㊅㊆㊇㊈㊉	2	llama32-3b	9	3	1	0	5
+top40	cand-72	🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪	2	llama32-3b	9	0	0	2	7
+top40	cand-73	🯰🯱🯲🯳🯴🯵🯶🯷🯸🯹	2	llama32-3b	9	0	0	0	9
+top40	cand-74	₀₁₂₃₄₅₆₇₈₉	2	llama32-3b	9	0	0	0	9
+top40	cand-75	０１２３４５６７８９	2	llama32-3b	9	2	0	0	7
+top40	cand-76	༪༫༬༭༮༯༰༱༲༳	2	llama32-3b	9	3	3	0	3
+top40	cand-77	一二三四五六七八九十	2	llama32-3b	9	1	2	1	5
+top40	cand-78	☰☱☳☷⚌⚍⚏⚊⚋	2	llama32-3b	8	2	4	0	2
+top40	cand-79	𐄇𐄈𐄉𐄊𐄋𐄌𐄍𐄎𐄏	2	llama32-3b	8	3	1	0	4
+top40	cand-80	𐄐𐄑𐄒𐄓𐄔𐄕𐄖𐄗𐄘	2	llama32-3b	8	0	2	0	6
+top40	cand-81	⅛⅕⅓⅜⅗⅔⅘⅚⅞	2	llama32-3b	8	2	0	0	6
+top40	cand-82	ⅩⅬⅭⅮⅯↁↂↇↈ	2	llama32-3b	8	0	3	0	5
+top40	cand-83	𝄻𝄼𝄽𝄾𝄿𝅀𝅁𝅂	2	llama32-3b	7	0	0	1	6
+top40	cand-84	𒐀𒐁𒐂𒐃𒐄𒐅𒐆𒐇	2	llama32-3b	7	1	1	0	5
+top40	cand-85	☷☶☵☴☳☲☱☰	2	llama32-3b	7	1	3	0	3
+top40	cand-86	㉈㉉㉊㉋㉌㉍㉎㉏	2	llama32-3b	7	1	0	0	6
+top40	cand-87	⅒⅑⅐⅙⅕¼⅓½	2	llama32-3b	7	3	2	0	2
+top40	cand-88	🀱🀹🁁🁉🁑🁙🁡	2	llama32-3b	6	0	0	1	5
+top40	cand-89	ᚐᚑᚒᚓᚔ	2	llama32-3b	4	0	0	1	3
+top40	cand-90	꜈꜉꜊꜋꜌	2	llama32-3b	4	0	0	3	1
+top40	cand-91	ᚆᚇᚈᚉᚊ	2	llama32-3b	4	0	1	1	2
+top40	cand-92	🡢🡪🡲🡺🢂	2	llama32-3b	4	0	0	0	4
+top40	cand-93	𐅃𐅄𐅅𐅆𐅇	2	llama32-3b	4	1	0	0	3
+top40	cand-94	𝍲𝍳𝍴𝍵𝍶	2	llama32-3b	4	0	1	0	3
+top40	cand-95	🮇🮈🮉🮊🮋	2	llama32-3b	4	0	0	1	3
+top40	cand-96	꜖꜕꜔꜓꜒	2	llama32-3b	4	0	0	2	2
+top40	cand-97	㎐㎑㎒㎓㎔	2	llama32-3b	4	0	0	0	4
+top40	cand-98	🏻🏼🏽🏾🏿	2	llama32-3b	4	0	0	0	4
+top40	cand-99	ᚁᚂᚃᚄᚅ	2	llama32-3b	4	0	0	1	3
+top40	cand-100	⚆⚇⚈⚉	2	llama32-3b	3	0	3	0	0
+top40	cand-101	⅕⅖⅗⅘	2	llama32-3b	3	0	1	0	2
+top40	cand-102	㆒㆓㆔㆕	2	llama32-3b	3	0	0	0	3
+top40	cand-103	·•●⬤	2	llama32-3b	3	2	1	0	0
+top40	cand-104	ₐaᴀA	2	llama32-3b	3	0	0	0	3
+top40	cand-105	nɲɳŋ	2	llama32-3b	3	0	0	1	2
+top40	cand-106	♩♪♫♬	2	llama32-3b	3	1	2	0	0
+top40	cand-107	⭒⭑⭐	2	llama32-3b	2	0	1	0	1
+top40	cand-108	∣∥⦀	2	llama32-3b	2	2	0	0	0
+top40	cand-109	ↀↁↂ	2	llama32-3b	2	1	1	0	0
+top40	cand-110	❘❙❚	2	llama32-3b	2	2	0	0	0
+top40	cand-111	🞗🞘🞙	2	llama32-3b	2	0	0	1	1
+top40	cand-112	=⩵⩶	2	llama32-3b	2	1	0	0	1
+top40	cand-113	/⫽⫻	2	llama32-3b	2	1	1	0	0
+top40	cand-114	〡〢〣	2	llama32-3b	2	0	0	0	2
+top40	cand-115	一二三	2	llama32-3b	2	0	1	0	1
+top40	cand-116	൰൱൲	2	llama32-3b	2	1	1	0	0
+top40	cand-64	🞌🞍🞎🞏🞐🞑🞒🞓	3	opus55	7	6	0	0	1
+top40	cand-65	♳♴♵♶♷♸♹	3	opus55	6	1	0	2	3
+top40	cand-66	▪◾◼■	3	opus55	3	3	0	0	0
+top40	cand-67	⏑⏗⏘⏙	3	opus55	3	1	0	0	2
+top40	cand-68	∮∯∰	3	opus55	2	2	0	0	0
+top40	cand-69	ⅠⅡⅢ	3	opus55	2	2	0	0	0
+top40	cand-70	▖▗▘▝▚▞▙▛▜▟	2	opus55	9	2	0	0	7
+top40	cand-71	㊀㊁㊂㊃㊄㊅㊆㊇㊈㊉	2	opus55	9	9	0	0	0
+top40	cand-72	🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪	2	opus55	9	8	1	0	0
+top40	cand-73	🯰🯱🯲🯳🯴🯵🯶🯷🯸🯹	2	opus55	9	8	0	0	1
+top40	cand-74	₀₁₂₃₄₅₆₇₈₉	2	opus55	9	9	0	0	0
+top40	cand-75	０１２３４５６７８９	2	opus55	9	9	0	0	0
+top40	cand-76	༪༫༬༭༮༯༰༱༲༳	2	opus55	9	8	1	0	0
+top40	cand-77	一二三四五六七八九十	2	opus55	9	9	0	0	0
+top40	cand-78	☰☱☳☷⚌⚍⚏⚊⚋	2	opus55	8	0	5	0	3
+top40	cand-79	𐄇𐄈𐄉𐄊𐄋𐄌𐄍𐄎𐄏	2	opus55	8	8	0	0	0
+top40	cand-80	𐄐𐄑𐄒𐄓𐄔𐄕𐄖𐄗𐄘	2	opus55	8	8	0	0	0
+top40	cand-81	⅛⅕⅓⅜⅗⅔⅘⅚⅞	2	opus55	8	8	0	0	0
+top40	cand-82	ⅩⅬⅭⅮⅯↁↂↇↈ	2	opus55	8	8	0	0	0
+top40	cand-83	𝄻𝄼𝄽𝄾𝄿𝅀𝅁𝅂	2	opus55	7	0	5	2	0
+top40	cand-84	𒐀𒐁𒐂𒐃𒐄𒐅𒐆𒐇	2	opus55	7	7	0	0	0
+top40	cand-85	☷☶☵☴☳☲☱☰	2	opus55	7	1	1	2	3
+top40	cand-86	㉈㉉㉊㉋㉌㉍㉎㉏	2	opus55	7	4	0	0	3
+top40	cand-87	⅒⅑⅐⅙⅕¼⅓½	2	opus55	7	7	0	0	0
+top40	cand-88	🀱🀹🁁🁉🁑🁙🁡	2	opus55	6	6	0	0	0
+top40	cand-89	ᚐᚑᚒᚓᚔ	2	opus55	4	4	0	0	0
+top40	cand-90	꜈꜉꜊꜋꜌	2	opus55	4	0	4	0	0
+top40	cand-91	ᚆᚇᚈᚉᚊ	2	opus55	4	4	0	0	0
+top40	cand-92	🡢🡪🡲🡺🢂	2	opus55	4	2	0	0	2
+top40	cand-93	𐅃𐅄𐅅𐅆𐅇	2	opus55	4	3	0	0	1
+top40	cand-94	𝍲𝍳𝍴𝍵𝍶	2	opus55	4	4	0	0	0
+top40	cand-95	🮇🮈🮉🮊🮋	2	opus55	4	4	0	0	0
+top40	cand-96	꜖꜕꜔꜓꜒	2	opus55	4	4	0	0	0
+top40	cand-97	㎐㎑㎒㎓㎔	2	opus55	4	3	0	0	1
+top40	cand-98	🏻🏼🏽🏾🏿	2	opus55	4	4	0	0	0
+top40	cand-99	ᚁᚂᚃᚄᚅ	2	opus55	4	4	0	0	0
+top40	cand-100	⚆⚇⚈⚉	2	opus55	3	3	0	0	0
+top40	cand-101	⅕⅖⅗⅘	2	opus55	3	3	0	0	0
+top40	cand-102	㆒㆓㆔㆕	2	opus55	3	3	0	0	0
+top40	cand-103	·•●⬤	2	opus55	3	3	0	0	0
+top40	cand-104	ₐaᴀA	2	opus55	3	2	0	0	1
+top40	cand-105	nɲɳŋ	2	opus55	3	1	0	2	0
+top40	cand-106	♩♪♫♬	2	opus55	3	2	0	0	1
+top40	cand-107	⭒⭑⭐	2	opus55	2	2	0	0	0
+top40	cand-108	∣∥⦀	2	opus55	2	2	0	0	0
+top40	cand-109	ↀↁↂ	2	opus55	2	2	0	0	0
+top40	cand-110	❘❙❚	2	opus55	2	2	0	0	0
+top40	cand-111	🞗🞘🞙	2	opus55	2	2	0	0	0
+top40	cand-112	=⩵⩶	2	opus55	2	2	0	0	0
+top40	cand-113	/⫽⫻	2	opus55	2	2	0	0	0
+top40	cand-114	〡〢〣	2	opus55	2	2	0	0	0
+top40	cand-115	一二三	2	opus55	2	2	0	0	0
+top40	cand-116	൰൱൲	2	opus55	2	2	0	0	0
+top40	cand-64	🞌🞍🞎🞏🞐🞑🞒🞓	3	qwen25-3b	7	0	0	1	6
+top40	cand-65	♳♴♵♶♷♸♹	3	qwen25-3b	6	0	0	0	6
+top40	cand-66	▪◾◼■	3	qwen25-3b	3	1	0	0	2
+top40	cand-67	⏑⏗⏘⏙	3	qwen25-3b	3	0	0	2	1
+top40	cand-68	∮∯∰	3	qwen25-3b	2	0	0	0	2
+top40	cand-69	ⅠⅡⅢ	3	qwen25-3b	2	0	0	0	2
+top40	cand-70	▖▗▘▝▚▞▙▛▜▟	2	qwen25-3b	9	0	0	1	8
+top40	cand-71	㊀㊁㊂㊃㊄㊅㊆㊇㊈㊉	2	qwen25-3b	9	0	1	0	8
+top40	cand-72	🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪	2	qwen25-3b	9	0	0	2	7
+top40	cand-73	🯰🯱🯲🯳🯴🯵🯶🯷🯸🯹	2	qwen25-3b	9	1	1	0	7
+top40	cand-74	₀₁₂₃₄₅₆₇₈₉	2	qwen25-3b	9	3	1	0	5
+top40	cand-75	０１２３４５６７８９	2	qwen25-3b	9	0	0	0	9
+top40	cand-76	༪༫༬༭༮༯༰༱༲༳	2	qwen25-3b	9	3	1	0	5
+top40	cand-77	一二三四五六七八九十	2	qwen25-3b	9	1	2	1	5
+top40	cand-78	☰☱☳☷⚌⚍⚏⚊⚋	2	qwen25-3b	8	1	0	2	5
+top40	cand-79	𐄇𐄈𐄉𐄊𐄋𐄌𐄍𐄎𐄏	2	qwen25-3b	8	1	2	0	5
+top40	cand-80	𐄐𐄑𐄒𐄓𐄔𐄕𐄖𐄗𐄘	2	qwen25-3b	8	3	1	0	4
+top40	cand-81	⅛⅕⅓⅜⅗⅔⅘⅚⅞	2	qwen25-3b	8	0	0	0	8
+top40	cand-82	ⅩⅬⅭⅮⅯↁↂↇↈ	2	qwen25-3b	8	1	3	0	4
+top40	cand-83	𝄻𝄼𝄽𝄾𝄿𝅀𝅁𝅂	2	qwen25-3b	7	0	0	1	6
+top40	cand-84	𒐀𒐁𒐂𒐃𒐄𒐅𒐆𒐇	2	qwen25-3b	7	0	0	0	7
+top40	cand-85	☷☶☵☴☳☲☱☰	2	qwen25-3b	7	0	0	0	7
+top40	cand-86	㉈㉉㉊㉋㉌㉍㉎㉏	2	qwen25-3b	7	2	0	0	5
+top40	cand-87	⅒⅑⅐⅙⅕¼⅓½	2	qwen25-3b	7	1	1	0	5
+top40	cand-88	🀱🀹🁁🁉🁑🁙🁡	2	qwen25-3b	6	0	0	2	4
+top40	cand-89	ᚐᚑᚒᚓᚔ	2	qwen25-3b	4	0	0	0	4
+top40	cand-90	꜈꜉꜊꜋꜌	2	qwen25-3b	4	0	0	1	3
+top40	cand-91	ᚆᚇᚈᚉᚊ	2	qwen25-3b	4	0	0	1	3
+top40	cand-92	🡢🡪🡲🡺🢂	2	qwen25-3b	4	0	0	2	2
+top40	cand-93	𐅃𐅄𐅅𐅆𐅇	2	qwen25-3b	4	1	0	0	3
+top40	cand-94	𝍲𝍳𝍴𝍵𝍶	2	qwen25-3b	4	0	1	0	3
+top40	cand-95	🮇🮈🮉🮊🮋	2	qwen25-3b	4	0	0	2	2
+top40	cand-96	꜖꜕꜔꜓꜒	2	qwen25-3b	4	0	0	2	2
+top40	cand-97	㎐㎑㎒㎓㎔	2	qwen25-3b	4	0	0	0	4
+top40	cand-98	🏻🏼🏽🏾🏿	2	qwen25-3b	4	0	0	0	4
+top40	cand-99	ᚁᚂᚃᚄᚅ	2	qwen25-3b	4	0	0	0	4
+top40	cand-100	⚆⚇⚈⚉	2	qwen25-3b	3	0	0	0	3
+top40	cand-101	⅕⅖⅗⅘	2	qwen25-3b	3	0	0	0	3
+top40	cand-102	㆒㆓㆔㆕	2	qwen25-3b	3	0	0	2	1
+top40	cand-103	·•●⬤	2	qwen25-3b	3	1	1	0	1
+top40	cand-104	ₐaᴀA	2	qwen25-3b	3	0	0	0	3
+top40	cand-105	nɲɳŋ	2	qwen25-3b	3	0	0	0	3
+top40	cand-106	♩♪♫♬	2	qwen25-3b	3	0	0	0	3
+top40	cand-107	⭒⭑⭐	2	qwen25-3b	2	0	0	2	0
+top40	cand-108	∣∥⦀	2	qwen25-3b	2	0	0	0	2
+top40	cand-109	ↀↁↂ	2	qwen25-3b	2	0	2	0	0
+top40	cand-110	❘❙❚	2	qwen25-3b	2	0	0	1	1
+top40	cand-111	🞗🞘🞙	2	qwen25-3b	2	0	0	0	2
+top40	cand-112	=⩵⩶	2	qwen25-3b	2	0	0	1	1
+top40	cand-113	/⫽⫻	2	qwen25-3b	2	0	0	0	2
+top40	cand-114	〡〢〣	2	qwen25-3b	2	0	1	1	0
+top40	cand-115	一二三	2	qwen25-3b	2	0	1	0	1
+top40	cand-116	൰൱൲	2	qwen25-3b	2	1	0	1	0
+top40	cand-64	🞌🞍🞎🞏🞐🞑🞒🞓	3	sonnet55	7	1	0	0	6
+top40	cand-65	♳♴♵♶♷♸♹	3	sonnet55	6	3	0	0	3
+top40	cand-66	▪◾◼■	3	sonnet55	3	2	0	0	1
+top40	cand-67	⏑⏗⏘⏙	3	sonnet55	3	0	0	2	1
+top40	cand-68	∮∯∰	3	sonnet55	2	2	0	0	0
+top40	cand-69	ⅠⅡⅢ	3	sonnet55	2	2	0	0	0
+top40	cand-70	▖▗▘▝▚▞▙▛▜▟	2	sonnet55	9	2	0	2	5
+top40	cand-71	㊀㊁㊂㊃㊄㊅㊆㊇㊈㊉	2	sonnet55	9	9	0	0	0
+top40	cand-72	🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪	2	sonnet55	9	8	0	0	1
+top40	cand-73	🯰🯱🯲🯳🯴🯵🯶🯷🯸🯹	2	sonnet55	9	9	0	0	0
+top40	cand-74	₀₁₂₃₄₅₆₇₈₉	2	sonnet55	9	9	0	0	0
+top40	cand-75	０１２３４５６７８９	2	sonnet55	9	9	0	0	0
+top40	cand-76	༪༫༬༭༮༯༰༱༲༳	2	sonnet55	9	3	1	3	2
+top40	cand-77	一二三四五六七八九十	2	sonnet55	9	8	0	0	1
+top40	cand-78	☰☱☳☷⚌⚍⚏⚊⚋	2	sonnet55	8	1	4	0	3
+top40	cand-79	𐄇𐄈𐄉𐄊𐄋𐄌𐄍𐄎𐄏	2	sonnet55	8	7	0	0	1
+top40	cand-80	𐄐𐄑𐄒𐄓𐄔𐄕𐄖𐄗𐄘	2	sonnet55	8	8	0	0	0
+top40	cand-81	⅛⅕⅓⅜⅗⅔⅘⅚⅞	2	sonnet55	8	8	0	0	0
+top40	cand-82	ⅩⅬⅭⅮⅯↁↂↇↈ	2	sonnet55	8	6	0	0	2
+top40	cand-83	𝄻𝄼𝄽𝄾𝄿𝅀𝅁𝅂	2	sonnet55	7	0	4	0	3
+top40	cand-84	𒐀𒐁𒐂𒐃𒐄𒐅𒐆𒐇	2	sonnet55	7	7	0	0	0
+top40	cand-85	☷☶☵☴☳☲☱☰	2	sonnet55	7	1	1	2	3
+top40	cand-86	㉈㉉㉊㉋㉌㉍㉎㉏	2	sonnet55	7	7	0	0	0
+top40	cand-87	⅒⅑⅐⅙⅕¼⅓½	2	sonnet55	7	7	0	0	0
+top40	cand-88	🀱🀹🁁🁉🁑🁙🁡	2	sonnet55	6	6	0	0	0
+top40	cand-89	ᚐᚑᚒᚓᚔ	2	sonnet55	4	0	0	3	1
+top40	cand-90	꜈꜉꜊꜋꜌	2	sonnet55	4	0	2	1	1
+top40	cand-91	ᚆᚇᚈᚉᚊ	2	sonnet55	4	0	0	4	0
+top40	cand-92	🡢🡪🡲🡺🢂	2	sonnet55	4	1	0	0	3
+top40	cand-93	𐅃𐅄𐅅𐅆𐅇	2	sonnet55	4	4	0	0	0
+top40	cand-94	𝍲𝍳𝍴𝍵𝍶	2	sonnet55	4	4	0	0	0
+top40	cand-95	🮇🮈🮉🮊🮋	2	sonnet55	4	4	0	0	0
+top40	cand-96	꜖꜕꜔꜓꜒	2	sonnet55	4	0	0	1	3
+top40	cand-97	㎐㎑㎒㎓㎔	2	sonnet55	4	4	0	0	0
+top40	cand-98	🏻🏼🏽🏾🏿	2	sonnet55	4	4	0	0	0
+top40	cand-99	ᚁᚂᚃᚄᚅ	2	sonnet55	4	2	0	2	0
+top40	cand-100	⚆⚇⚈⚉	2	sonnet55	3	2	0	0	1
+top40	cand-101	⅕⅖⅗⅘	2	sonnet55	3	3	0	0	0
+top40	cand-102	㆒㆓㆔㆕	2	sonnet55	3	3	0	0	0
+top40	cand-103	·•●⬤	2	sonnet55	3	3	0	0	0
+top40	cand-104	ₐaᴀA	2	sonnet55	3	2	1	0	0
+top40	cand-105	nɲɳŋ	2	sonnet55	3	0	0	2	1
+top40	cand-106	♩♪♫♬	2	sonnet55	3	1	0	0	2
+top40	cand-107	⭒⭑⭐	2	sonnet55	2	2	0	0	0
+top40	cand-108	∣∥⦀	2	sonnet55	2	2	0	0	0
+top40	cand-109	ↀↁↂ	2	sonnet55	2	2	0	0	0
+top40	cand-110	❘❙❚	2	sonnet55	2	2	0	0	0
+top40	cand-111	🞗🞘🞙	2	sonnet55	2	0	0	1	1
+top40	cand-112	=⩵⩶	2	sonnet55	2	2	0	0	0
+top40	cand-113	/⫽⫻	2	sonnet55	2	1	0	0	1
+top40	cand-114	〡〢〣	2	sonnet55	2	2	0	0	0
+top40	cand-115	一二三	2	sonnet55	2	2	0	0	0
+top40	cand-116	൰൱൲	2	sonnet55	2	2	0	0	0
+holistic	dice	⚀⚁⚂⚃⚄⚅	control-factorizable	gemini31pro[sheet]	5	5	0	0	0
+holistic	unfold	-=>})|	pilot-holistic	gemini31pro[sheet]	5	1	1	2	1
+holistic	risebar	_₋-⁻¯	pilot-holistic	gemini31pro[sheet]	4	1	2	0	1
+holistic	elab-n	nɲɳŋ	held-out holistic candidate (elaboration)	gemini31pro[sheet]	3	0	0	3	0
+holistic	elab-s	sſʃʆ	held-out holistic candidate (elaboration)	gemini31pro[sheet]	3	0	0	1	2
+holistic	elab-l	lɫɬɭɮ	held-out holistic candidate (elaboration)	gemini31pro[sheet]	4	1	0	2	1
+holistic	elab-z	zʒʓ	held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)	gemini31pro[sheet]	2	1	0	1	0
+holistic	rings	.o⊙⊚◎◯	held-out holistic candidate (morph)	gemini31pro[sheet]	5	2	1	0	2
+holistic	rays	+×∗*✶✹	held-out holistic candidate (morph)	gemini31pro[sheet]	5	3	0	0	2
+holistic	nest	<⊂⊆⋐	held-out holistic candidate (morph)	gemini31pro[sheet]	3	1	0	1	1
+holistic	dimension	.-□■	held-out holistic candidate (morph)	gemini31pro[sheet]	3	2	0	0	1
+holistic	stem	|∥⦀	held-out holistic candidate (morph, 3 rungs)	gemini31pro[sheet]	2	2	0	0	0
+holistic	check	/√✓	held-out holistic candidate (morph, 3 rungs)	gemini31pro[sheet]	2	0	0	0	2
+holistic	dice	⚀⚁⚂⚃⚄⚅	control-factorizable	gemini38flash[sheet]	5	5	0	0	0
+holistic	unfold	-=>})|	pilot-holistic	gemini38flash[sheet]	5	1	0	4	0
+holistic	risebar	_₋-⁻¯	pilot-holistic	gemini38flash[sheet]	4	2	2	0	0
+holistic	elab-n	nɲɳŋ	held-out holistic candidate (elaboration)	gemini38flash[sheet]	3	0	0	3	0
+holistic	elab-s	sſʃʆ	held-out holistic candidate (elaboration)	gemini38flash[sheet]	3	0	0	2	1
+holistic	elab-l	lɫɬɭɮ	held-out holistic candidate (elaboration)	gemini38flash[sheet]	4	0	0	3	1
+holistic	elab-z	zʒʓ	held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)	gemini38flash[sheet]	2	0	0	1	1
+holistic	rings	.o⊙⊚◎◯	held-out holistic candidate (morph)	gemini38flash[sheet]	5	2	1	0	2
+holistic	rays	+×∗*✶✹	held-out holistic candidate (morph)	gemini38flash[sheet]	5	2	0	0	3
+holistic	nest	<⊂⊆⋐	held-out holistic candidate (morph)	gemini38flash[sheet]	3	1	0	1	1
+holistic	dimension	.-□■	held-out holistic candidate (morph)	gemini38flash[sheet]	3	3	0	0	0
+holistic	stem	|∥⦀	held-out holistic candidate (morph, 3 rungs)	gemini38flash[sheet]	2	2	0	0	0
+holistic	check	/√✓	held-out holistic candidate (morph, 3 rungs)	gemini38flash[sheet]	2	1	0	1	0
+holistic	dice	⚀⚁⚂⚃⚄⚅	control-factorizable	glimmer30b[sheet]	5	5	0	0	0
+holistic	unfold	-=>})|	pilot-holistic	glimmer30b[sheet]	5	1	0	3	1
+holistic	risebar	_₋-⁻¯	pilot-holistic	glimmer30b[sheet]	4	0	1	1	2
+holistic	elab-n	nɲɳŋ	held-out holistic candidate (elaboration)	glimmer30b[sheet]	3	0	0	2	1
+holistic	elab-s	sſʃʆ	held-out holistic candidate (elaboration)	glimmer30b[sheet]	3	0	0	2	1
+holistic	elab-l	lɫɬɭɮ	held-out holistic candidate (elaboration)	glimmer30b[sheet]	4	0	0	4	0
+holistic	elab-z	zʒʓ	held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)	glimmer30b[sheet]	2	0	0	1	1
+holistic	rings	.o⊙⊚◎◯	held-out holistic candidate (morph)	glimmer30b[sheet]	5	2	1	0	2
+holistic	rays	+×∗*✶✹	held-out holistic candidate (morph)	glimmer30b[sheet]	5	1	0	2	2
+holistic	nest	<⊂⊆⋐	held-out holistic candidate (morph)	glimmer30b[sheet]	3	1	0	0	2
+holistic	dimension	.-□■	held-out holistic candidate (morph)	glimmer30b[sheet]	3	2	0	0	1
+holistic	stem	|∥⦀	held-out holistic candidate (morph, 3 rungs)	glimmer30b[sheet]	2	1	0	1	0
+holistic	check	/√✓	held-out holistic candidate (morph, 3 rungs)	glimmer30b[sheet]	2	1	0	0	1
+holistic	dice	⚀⚁⚂⚃⚄⚅	control-factorizable	gpt56terra[sheet]	5	3	0	0	2
+holistic	unfold	-=>})|	pilot-holistic	gpt56terra[sheet]	5	1	1	2	1
+holistic	risebar	_₋-⁻¯	pilot-holistic	gpt56terra[sheet]	4	0	0	0	4
+holistic	elab-n	nɲɳŋ	held-out holistic candidate (elaboration)	gpt56terra[sheet]	3	0	0	2	1
+holistic	elab-s	sſʃʆ	held-out holistic candidate (elaboration)	gpt56terra[sheet]	3	0	0	2	1
+holistic	elab-l	lɫɬɭɮ	held-out holistic candidate (elaboration)	gpt56terra[sheet]	4	1	0	1	2
+holistic	elab-z	zʒʓ	held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)	gpt56terra[sheet]	2	0	0	1	1
+holistic	rings	.o⊙⊚◎◯	held-out holistic candidate (morph)	gpt56terra[sheet]	5	1	1	0	3
+holistic	rays	+×∗*✶✹	held-out holistic candidate (morph)	gpt56terra[sheet]	5	2	0	0	3
+holistic	nest	<⊂⊆⋐	held-out holistic candidate (morph)	gpt56terra[sheet]	3	1	0	0	2
+holistic	dimension	.-□■	held-out holistic candidate (morph)	gpt56terra[sheet]	3	0	0	0	3
+holistic	stem	|∥⦀	held-out holistic candidate (morph, 3 rungs)	gpt56terra[sheet]	2	1	0	0	1
+holistic	check	/√✓	held-out holistic candidate (morph, 3 rungs)	gpt56terra[sheet]	2	1	0	0	1
+holistic	dice	⚀⚁⚂⚃⚄⚅	control-factorizable	grok46[sheet]	5	5	0	0	0
+holistic	unfold	-=>})|	pilot-holistic	grok46[sheet]	5	1	1	2	1
+holistic	risebar	_₋-⁻¯	pilot-holistic	grok46[sheet]	4	0	0	0	4
+holistic	elab-n	nɲɳŋ	held-out holistic candidate (elaboration)	grok46[sheet]	3	1	0	1	1
+holistic	elab-s	sſʃʆ	held-out holistic candidate (elaboration)	grok46[sheet]	3	2	0	0	1
+holistic	elab-l	lɫɬɭɮ	held-out holistic candidate (elaboration)	grok46[sheet]	4	2	0	2	0
+holistic	elab-z	zʒʓ	held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)	grok46[sheet]	2	1	0	0	1
+holistic	rings	.o⊙⊚◎◯	held-out holistic candidate (morph)	grok46[sheet]	5	2	1	0	2
+holistic	rays	+×∗*✶✹	held-out holistic candidate (morph)	grok46[sheet]	5	2	0	0	3
+holistic	nest	<⊂⊆⋐	held-out holistic candidate (morph)	grok46[sheet]	3	3	0	0	0
+holistic	dimension	.-□■	held-out holistic candidate (morph)	grok46[sheet]	3	2	0	0	1
+holistic	stem	|∥⦀	held-out holistic candidate (morph, 3 rungs)	grok46[sheet]	2	2	0	0	0
+holistic	check	/√✓	held-out holistic candidate (morph, 3 rungs)	grok46[sheet]	2	1	0	0	1
+holistic	dice	⚀⚁⚂⚃⚄⚅	control-factorizable	sonnet55[sheet]	5	5	0	0	0
+holistic	unfold	-=>})|	pilot-holistic	sonnet55[sheet]	5	1	0	3	1
+holistic	risebar	_₋-⁻¯	pilot-holistic	sonnet55[sheet]	4	1	1	0	2
+holistic	elab-n	nɲɳŋ	held-out holistic candidate (elaboration)	sonnet55[sheet]	3	0	0	3	0
+holistic	elab-s	sſʃʆ	held-out holistic candidate (elaboration)	sonnet55[sheet]	3	0	0	2	1
+holistic	elab-l	lɫɬɭɮ	held-out holistic candidate (elaboration)	sonnet55[sheet]	4	0	0	3	1
+holistic	elab-z	zʒʓ	held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)	sonnet55[sheet]	2	0	0	2	0
+holistic	rings	.o⊙⊚◎◯	held-out holistic candidate (morph)	sonnet55[sheet]	5	2	0	0	3
+holistic	rays	+×∗*✶✹	held-out holistic candidate (morph)	sonnet55[sheet]	5	2	0	0	3
+holistic	nest	<⊂⊆⋐	held-out holistic candidate (morph)	sonnet55[sheet]	3	0	0	1	2
+holistic	dimension	.-□■	held-out holistic candidate (morph)	sonnet55[sheet]	3	3	0	0	0
+holistic	stem	|∥⦀	held-out holistic candidate (morph, 3 rungs)	sonnet55[sheet]	2	2	0	0	0
+holistic	check	/√✓	held-out holistic candidate (morph, 3 rungs)	sonnet55[sheet]	2	0	0	2	0
+holistic	dice	⚀⚁⚂⚃⚄⚅	control-factorizable	gemma3-4b	5	0	0	0	5
+holistic	unfold	-=>})|	pilot-holistic	gemma3-4b	5	0	1	0	4
+holistic	risebar	_₋-⁻¯	pilot-holistic	gemma3-4b	4	0	1	0	3
+holistic	elab-n	nɲɳŋ	held-out holistic candidate (elaboration)	gemma3-4b	3	2	1	0	0
+holistic	elab-s	sſʃʆ	held-out holistic candidate (elaboration)	gemma3-4b	3	1	0	0	2
+holistic	elab-l	lɫɬɭɮ	held-out holistic candidate (elaboration)	gemma3-4b	4	0	2	0	2
+holistic	elab-z	zʒʓ	held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)	gemma3-4b	2	0	1	0	1
+holistic	rings	.o⊙⊚◎◯	held-out holistic candidate (morph)	gemma3-4b	5	2	1	0	2
+holistic	rays	+×∗*✶✹	held-out holistic candidate (morph)	gemma3-4b	5	2	1	0	2
+holistic	nest	<⊂⊆⋐	held-out holistic candidate (morph)	gemma3-4b	3	1	0	0	2
+holistic	dimension	.-□■	held-out holistic candidate (morph)	gemma3-4b	3	0	0	0	3
+holistic	stem	|∥⦀	held-out holistic candidate (morph, 3 rungs)	gemma3-4b	2	0	0	0	2
+holistic	check	/√✓	held-out holistic candidate (morph, 3 rungs)	gemma3-4b	2	0	0	0	2
+holistic	dice	⚀⚁⚂⚃⚄⚅	control-factorizable	haiku45	5	5	0	0	0
+holistic	unfold	-=>})|	pilot-holistic	haiku45	5	2	1	0	2
+holistic	risebar	_₋-⁻¯	pilot-holistic	haiku45	4	1	1	0	2
+holistic	elab-n	nɲɳŋ	held-out holistic candidate (elaboration)	haiku45	3	0	0	2	1
+holistic	elab-s	sſʃʆ	held-out holistic candidate (elaboration)	haiku45	3	0	0	2	1
+holistic	elab-l	lɫɬɭɮ	held-out holistic candidate (elaboration)	haiku45	4	0	0	2	2
+holistic	elab-z	zʒʓ	held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)	haiku45	2	0	0	1	1
+holistic	rings	.o⊙⊚◎◯	held-out holistic candidate (morph)	haiku45	5	1	1	0	3
+holistic	rays	+×∗*✶✹	held-out holistic candidate (morph)	haiku45	5	2	1	0	2
+holistic	nest	<⊂⊆⋐	held-out holistic candidate (morph)	haiku45	3	0	0	1	2
+holistic	dimension	.-□■	held-out holistic candidate (morph)	haiku45	3	3	0	0	0
+holistic	stem	|∥⦀	held-out holistic candidate (morph, 3 rungs)	haiku45	2	1	0	1	0
+holistic	check	/√✓	held-out holistic candidate (morph, 3 rungs)	haiku45	2	1	0	1	0
+holistic	dice	⚀⚁⚂⚃⚄⚅	control-factorizable	hermes3-3b	5	0	0	1	4
+holistic	unfold	-=>})|	pilot-holistic	hermes3-3b	5	2	1	0	2
+holistic	risebar	_₋-⁻¯	pilot-holistic	hermes3-3b	4	1	0	0	3
+holistic	elab-n	nɲɳŋ	held-out holistic candidate (elaboration)	hermes3-3b	3	0	0	0	3
+holistic	elab-s	sſʃʆ	held-out holistic candidate (elaboration)	hermes3-3b	3	0	0	1	2
+holistic	elab-l	lɫɬɭɮ	held-out holistic candidate (elaboration)	hermes3-3b	4	0	0	2	2
+holistic	elab-z	zʒʓ	held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)	hermes3-3b	2	1	0	0	1
+holistic	rings	.o⊙⊚◎◯	held-out holistic candidate (morph)	hermes3-3b	5	0	0	0	5
+holistic	rays	+×∗*✶✹	held-out holistic candidate (morph)	hermes3-3b	5	0	0	1	4
+holistic	nest	<⊂⊆⋐	held-out holistic candidate (morph)	hermes3-3b	3	0	0	0	3
+holistic	dimension	.-□■	held-out holistic candidate (morph)	hermes3-3b	3	0	0	0	3
+holistic	stem	|∥⦀	held-out holistic candidate (morph, 3 rungs)	hermes3-3b	2	0	1	0	1
+holistic	check	/√✓	held-out holistic candidate (morph, 3 rungs)	hermes3-3b	2	0	0	0	2
+holistic	dice	⚀⚁⚂⚃⚄⚅	control-factorizable	llama32-3b	5	1	2	0	2
+holistic	unfold	-=>})|	pilot-holistic	llama32-3b	5	1	2	0	2
+holistic	risebar	_₋-⁻¯	pilot-holistic	llama32-3b	4	2	0	0	2
+holistic	elab-n	nɲɳŋ	held-out holistic candidate (elaboration)	llama32-3b	3	0	1	1	1
+holistic	elab-s	sſʃʆ	held-out holistic candidate (elaboration)	llama32-3b	3	0	0	1	2
+holistic	elab-l	lɫɬɭɮ	held-out holistic candidate (elaboration)	llama32-3b	4	0	0	0	4
+holistic	elab-z	zʒʓ	held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)	llama32-3b	2	0	1	0	1
+holistic	rings	.o⊙⊚◎◯	held-out holistic candidate (morph)	llama32-3b	5	1	3	0	1
+holistic	rays	+×∗*✶✹	held-out holistic candidate (morph)	llama32-3b	5	2	0	0	3
+holistic	nest	<⊂⊆⋐	held-out holistic candidate (morph)	llama32-3b	3	1	2	0	0
+holistic	dimension	.-□■	held-out holistic candidate (morph)	llama32-3b	3	2	1	0	0
+holistic	stem	|∥⦀	held-out holistic candidate (morph, 3 rungs)	llama32-3b	2	1	0	0	1
+holistic	check	/√✓	held-out holistic candidate (morph, 3 rungs)	llama32-3b	2	1	1	0	0
+holistic	dice	⚀⚁⚂⚃⚄⚅	control-factorizable	mistral7b	5	1	0	1	3
+holistic	unfold	-=>})|	pilot-holistic	mistral7b	5	2	2	0	1
+holistic	risebar	_₋-⁻¯	pilot-holistic	mistral7b	4	0	1	1	2
+holistic	elab-n	nɲɳŋ	held-out holistic candidate (elaboration)	mistral7b	3	0	0	1	2
+holistic	elab-s	sſʃʆ	held-out holistic candidate (elaboration)	mistral7b	3	0	0	0	3
+holistic	elab-l	lɫɬɭɮ	held-out holistic candidate (elaboration)	mistral7b	4	0	0	3	1
+holistic	elab-z	zʒʓ	held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)	mistral7b	2	0	0	0	2
+holistic	rings	.o⊙⊚◎◯	held-out holistic candidate (morph)	mistral7b	5	1	1	0	3
+holistic	rays	+×∗*✶✹	held-out holistic candidate (morph)	mistral7b	5	1	1	0	3
+holistic	nest	<⊂⊆⋐	held-out holistic candidate (morph)	mistral7b	3	1	1	0	1
+holistic	dimension	.-□■	held-out holistic candidate (morph)	mistral7b	3	0	0	1	2
+holistic	stem	|∥⦀	held-out holistic candidate (morph, 3 rungs)	mistral7b	2	0	0	0	2
+holistic	check	/√✓	held-out holistic candidate (morph, 3 rungs)	mistral7b	2	0	1	1	0
+holistic	dice	⚀⚁⚂⚃⚄⚅	control-factorizable	opus55	5	5	0	0	0
+holistic	unfold	-=>})|	pilot-holistic	opus55	5	1	1	2	1
+holistic	risebar	_₋-⁻¯	pilot-holistic	opus55	4	1	2	0	1
+holistic	elab-n	nɲɳŋ	held-out holistic candidate (elaboration)	opus55	3	1	0	2	0
+holistic	elab-s	sſʃʆ	held-out holistic candidate (elaboration)	opus55	3	1	0	1	1
+holistic	elab-l	lɫɬɭɮ	held-out holistic candidate (elaboration)	opus55	4	2	0	1	1
+holistic	elab-z	zʒʓ	held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)	opus55	2	2	0	0	0
+holistic	rings	.o⊙⊚◎◯	held-out holistic candidate (morph)	opus55	5	2	1	0	2
+holistic	rays	+×∗*✶✹	held-out holistic candidate (morph)	opus55	5	3	0	0	2
+holistic	nest	<⊂⊆⋐	held-out holistic candidate (morph)	opus55	3	2	0	0	1
+holistic	dimension	.-□■	held-out holistic candidate (morph)	opus55	3	3	0	0	0
+holistic	stem	|∥⦀	held-out holistic candidate (morph, 3 rungs)	opus55	2	2	0	0	0
+holistic	check	/√✓	held-out holistic candidate (morph, 3 rungs)	opus55	2	0	0	2	0
+holistic	dice	⚀⚁⚂⚃⚄⚅	control-factorizable	phi4mini	5	0	0	0	5
+holistic	unfold	-=>})|	pilot-holistic	phi4mini	5	0	0	0	5
+holistic	risebar	_₋-⁻¯	pilot-holistic	phi4mini	4	0	0	0	4
+holistic	elab-n	nɲɳŋ	held-out holistic candidate (elaboration)	phi4mini	3	0	0	0	3
+holistic	elab-s	sſʃʆ	held-out holistic candidate (elaboration)	phi4mini	3	0	0	0	3
+holistic	elab-l	lɫɬɭɮ	held-out holistic candidate (elaboration)	phi4mini	4	0	0	0	4
+holistic	elab-z	zʒʓ	held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)	phi4mini	2	0	0	0	2
+holistic	rings	.o⊙⊚◎◯	held-out holistic candidate (morph)	phi4mini	5	0	0	0	5
+holistic	rays	+×∗*✶✹	held-out holistic candidate (morph)	phi4mini	5	0	0	1	4
+holistic	nest	<⊂⊆⋐	held-out holistic candidate (morph)	phi4mini	3	0	0	0	3
+holistic	dimension	.-□■	held-out holistic candidate (morph)	phi4mini	3	0	0	0	3
+holistic	stem	|∥⦀	held-out holistic candidate (morph, 3 rungs)	phi4mini	2	0	0	0	2
+holistic	check	/√✓	held-out holistic candidate (morph, 3 rungs)	phi4mini	2	0	0	0	2
+holistic	dice	⚀⚁⚂⚃⚄⚅	control-factorizable	qwen25-3b	5	2	0	0	3
+holistic	unfold	-=>})|	pilot-holistic	qwen25-3b	5	0	0	0	5
+holistic	risebar	_₋-⁻¯	pilot-holistic	qwen25-3b	4	1	0	0	3
+holistic	elab-n	nɲɳŋ	held-out holistic candidate (elaboration)	qwen25-3b	3	0	0	0	3
+holistic	elab-s	sſʃʆ	held-out holistic candidate (elaboration)	qwen25-3b	3	0	0	0	3
+holistic	elab-l	lɫɬɭɮ	held-out holistic candidate (elaboration)	qwen25-3b	4	0	1	0	3
+holistic	elab-z	zʒʓ	held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)	qwen25-3b	2	0	0	0	2
+holistic	rings	.o⊙⊚◎◯	held-out holistic candidate (morph)	qwen25-3b	5	0	2	0	3
+holistic	rays	+×∗*✶✹	held-out holistic candidate (morph)	qwen25-3b	5	1	1	0	3
+holistic	nest	<⊂⊆⋐	held-out holistic candidate (morph)	qwen25-3b	3	1	1	0	1
+holistic	dimension	.-□■	held-out holistic candidate (morph)	qwen25-3b	3	0	0	0	3
+holistic	stem	|∥⦀	held-out holistic candidate (morph, 3 rungs)	qwen25-3b	2	0	0	0	2
+holistic	check	/√✓	held-out holistic candidate (morph, 3 rungs)	qwen25-3b	2	1	0	0	1
+holistic	dice	⚀⚁⚂⚃⚄⚅	control-factorizable	sonnet5	5	5	0	0	0
+holistic	unfold	-=>})|	pilot-holistic	sonnet5	5	2	0	0	3
+holistic	risebar	_₋-⁻¯	pilot-holistic	sonnet5	4	0	0	0	4
+holistic	elab-n	nɲɳŋ	held-out holistic candidate (elaboration)	sonnet5	3	1	0	1	1
+holistic	elab-s	sſʃʆ	held-out holistic candidate (elaboration)	sonnet5	3	0	0	1	2
+holistic	elab-l	lɫɬɭɮ	held-out holistic candidate (elaboration)	sonnet5	4	1	0	2	1
+holistic	elab-z	zʒʓ	held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)	sonnet5	2	2	0	0	0
+holistic	rings	.o⊙⊚◎◯	held-out holistic candidate (morph)	sonnet5	5	2	1	0	2
+holistic	rays	+×∗*✶✹	held-out holistic candidate (morph)	sonnet5	5	2	1	0	2
+holistic	nest	<⊂⊆⋐	held-out holistic candidate (morph)	sonnet5	3	1	0	1	1
+holistic	dimension	.-□■	held-out holistic candidate (morph)	sonnet5	3	2	0	0	1
+holistic	stem	|∥⦀	held-out holistic candidate (morph, 3 rungs)	sonnet5	2	2	0	0	0
+holistic	check	/√✓	held-out holistic candidate (morph, 3 rungs)	sonnet5	2	0	0	2	0
+holistic	dice	⚀⚁⚂⚃⚄⚅	control-factorizable	sonnet55	5	5	0	0	0
+holistic	unfold	-=>})|	pilot-holistic	sonnet55	5	2	1	1	1
+holistic	risebar	_₋-⁻¯	pilot-holistic	sonnet55	4	2	2	0	0
+holistic	elab-n	nɲɳŋ	held-out holistic candidate (elaboration)	sonnet55	3	0	0	2	1
+holistic	elab-s	sſʃʆ	held-out holistic candidate (elaboration)	sonnet55	3	0	0	1	2
+holistic	elab-l	lɫɬɭɮ	held-out holistic candidate (elaboration)	sonnet55	4	1	0	3	0
+holistic	elab-z	zʒʓ	held-out holistic candidate (elaboration, 3 rungs: below ~4 onset)	sonnet55	2	0	0	1	1
+holistic	rings	.o⊙⊚◎◯	held-out holistic candidate (morph)	sonnet55	5	3	1	0	1
+holistic	rays	+×∗*✶✹	held-out holistic candidate (morph)	sonnet55	5	4	1	0	0
+holistic	nest	<⊂⊆⋐	held-out holistic candidate (morph)	sonnet55	3	1	0	1	1
+holistic	dimension	.-□■	held-out holistic candidate (morph)	sonnet55	3	2	0	0	1
+holistic	stem	|∥⦀	held-out holistic candidate (morph, 3 rungs)	sonnet55	2	2	0	0	0
+holistic	check	/√✓	held-out holistic candidate (morph, 3 rungs)	sonnet55	2	0	0	1	1
+signa	signa	·╶╌╍━═⚬○◎◉⬤	human-authored (C)	gemini31pro[sheet]	10	8	0	1	1
+signa	signa	·╶╌╍━═⚬○◎◉⬤	human-authored (C)	gemini38flash[sheet]	10	8	0	1	1
+signa	signa	·╶╌╍━═⚬○◎◉⬤	human-authored (C)	glimmer30b[sheet]	10	4	0	3	3
+signa	signa	·╶╌╍━═⚬○◎◉⬤	human-authored (C)	grok46[sheet]	10	9	1	0	0
+signa	signa	·╶╌╍━═⚬○◎◉⬤	human-authored (C)	sonnet55[sheet]	10	8	1	0	1
+signa	signa	·╶╌╍━═⚬○◎◉⬤	human-authored (C)	haiku45	10	6	2	1	1
+signa	signa	·╶╌╍━═⚬○◎◉⬤	human-authored (C)	llama32-3b	10	3	3	0	4
+signa	signa	·╶╌╍━═⚬○◎◉⬤	human-authored (C)	opus55	10	8	1	0	1
+signa	signa	·╶╌╍━═⚬○◎◉⬤	human-authored (C)	qwen25-3b	10	4	1	0	5
+signa	signa	·╶╌╍━═⚬○◎◉⬤	human-authored (C)	sonnet5	10	8	0	0	2
+signa	signa	·╶╌╍━═⚬○◎◉⬤	human-authored (C)	sonnet55	10	7	1	0	2

@@ -1,0 +1,21 @@
+Does a step's rendered-ink change predict whether judges endorse the author's direction?
+Over adjacent steps of every authored sequence tested pairwise (top-40 a+b, holistic sets, signa), restricted to
+steps where both glyphs are in the Ghostty BMP table and neither has a UCD numeric value: bin by ink change
+(later - earlier rung) and report, per bin, the fraction of (judge x step) verdicts that are consistent-directed
+WITH the author, AGAINST, ⟂, other. Frontier judges only. Signa's own steps are listed individually.
+Authored-sequence adjacent steps (top-40 + holistic, excluding signa), frontier judges, by ink change:
+  ink drops >0.01  n= 255  with 0.27  against 0.14  ⟂ 0.21  other 0.38
+  |Δink| <= 0.01   n= 456  with 0.39  against 0.08  ⟂ 0.21  other 0.32
+  ink rises >0.01  n= 939  with 0.68  against 0.02  ⟂ 0.09  other 0.21
+
+Signa steps (frontier judges):
+  ·→╶  Δink=-0.004  with 7  against 0  perp 0  other 1
+  ╶→╌  Δink=+0.011  with 6  against 0  perp 1  other 1
+  ╌→╍  Δink=+0.026  with 7  against 0  perp 0  other 1
+  ╍→━  Δink=+0.020  with 8  against 0  perp 0  other 0
+  ━→═  Δink=+0.000  with 4  against 0  perp 0  other 4
+  ═→⚬  Δink=-0.011  with 0  against 5  perp 2  other 1
+  ⚬→○  Δink=+0.088  with 7  against 1  perp 0  other 0
+  ○→◎  Δink=+0.064  with 8  against 0  perp 0  other 0
+  ◎→◉  Δink=-0.009  with 8  against 0  perp 0  other 0
+  ◉→⬤  Δink=+0.074  with 7  against 0  perp 0  other 1

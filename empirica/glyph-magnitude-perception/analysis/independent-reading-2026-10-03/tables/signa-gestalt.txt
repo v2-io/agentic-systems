@@ -1,0 +1,40 @@
+=== signa-gestalt-gestalt-single-gemini31pro
+  sh2: ·⚬○◎◉⬤  EXTRA=╶╍╌═━  n=6 tau=+1.00  dup=0  rawtail='·⚬○◎◉⬤ EXTRA ╶╍╌═━'
+  sh0: ·⚬○◎◉⬤  EXTRA=╶━═╍╌  n=6 tau=+1.00  dup=0  rawtail='·⚬○◎◉⬤EXTRA╶━═╍╌'
+  sh1: ·⚬○◎◉⬤  EXTRA=═╌━╶╍  n=6 tau=+1.00  dup=0  rawtail='·⚬○◎◉⬤ EXTRA ═╌━╶╍'
+=== signa-gestalt-gestalt-single-gemini38flash
+  sh1: ·⚬○◎◉⬤  EXTRA=╶╌╍━═  n=6 tau=+1.00  dup=0  rawtail='·⚬○◎◉⬤ EXTRA ╶╌╍━═'
+  sh2: ·⚬○◎◉⬤  EXTRA=╶╌╍━═  n=6 tau=+1.00  dup=0  rawtail='·⚬○◎◉⬤ EXTRA ╶╌╍━═'
+  sh0: ·⚬○◎◉⬤  EXTRA=╶╌╍━═  n=6 tau=+1.00  dup=0  rawtail='·⚬○◎◉⬤ EXTRA ╶╌╍━═'
+=== signa-gestalt-gestalt-single-glimmer30b
+  sh0: ERROR 'empty (finish=length)'
+  sh1: ERROR 'empty (finish=length)'
+  sh2: ·⚬○◎◉⬤  EXTRA=╶╍╌═━  n=6 tau=+1.00  dup=0  rawtail='·⚬○◎◉⬤EXTRA╶╍╌═━'
+=== signa-gestalt-gestalt-single-grok46
+  sh0: ·⚬○◎◉⬤  EXTRA=╶━═╍╌  n=6 tau=+1.00  dup=0  rawtail='·⚬○◎◉⬤ EXTRA ╶━═╍╌'
+  sh1: ·⚬○◎◉⬤  EXTRA=═╌━╶╍  n=6 tau=+1.00  dup=0  rawtail='·⚬○◎◉⬤ EXTRA ═╌━╶╍'
+  sh2: ·╶╌╍━═⚬○◎◉⬤  EXTRA=  n=11 tau=+1.00  dup=0  rawtail='·╶╌╍━═⚬○◎◉⬤'
+=== signa-gestalt-gestalt-single-haiku45
+  sh0: ·╶╌╍━═○◎⚬◉⬤  EXTRA=  n=11 tau=+0.93  dup=0  rawtail='·╶╌╍━═○◎⚬◉⬤'
+  sh1: ·╶╌╍━═○◎⚬◉⬤  EXTRA=  n=11 tau=+0.93  dup=0  rawtail='·╶╌╍━═○◎⚬◉⬤'
+  sh2: ·⚬○◎◉╶╌╍━═  EXTRA=  n=10 tau=+0.11  dup=0  rawtail='·⚬○◎◉⬪╶╌╍━═'
+=== signa-gestalt-gestalt-single-llama32-3b
+  sh2: ◉╶╍╌═◎○⬤⚬  EXTRA=·  n=9 tau=+0.33  dup=0  rawtail='◉╶╍╌═◎○⬤⚬EXTRA·'
+  sh1: ═◎╌⚬◉━○╶╍⬤·  EXTRA=  n=11 tau=-0.16  dup=0  rawtail='═ ◎ ╌ ⚬ ◉ ━ ○ ╶ ╍ ⬤ · EXTRA'
+  sh0: ⬤╶○◎━═╍╌◉⚬  EXTRA=  n=10 tau=-0.11  dup=0  rawtail='⬤ ╶ ○ ◎ ━ ═ ╍ ╌ ◉ ⚬ EXTRA'
+=== signa-gestalt-gestalt-single-opus55
+  sh1: ·⚬○◎◉⬤  EXTRA=╶╌╍━═  n=6 tau=+1.00  dup=0  rawtail='·⚬○◎◉⬤ EXTRA ╶╌╍━═'
+  sh2: ·⚬○◎◉⬤  EXTRA=╶╌╍━═  n=6 tau=+1.00  dup=0  rawtail='·⚬○◎◉⬤ EXTRA ╶╌╍━═'
+  sh0: ·⚬○◎◉⬤  EXTRA=╶╌╍━═  n=6 tau=+1.00  dup=0  rawtail='·⚬○◎◉⬤ EXTRA ╶╌╍━═'
+=== signa-gestalt-gestalt-single-qwen25-3b
+  sh0: perp  raw='none'
+  sh1: perp  raw='none'
+  sh2: ◉╶╍╌═━◎○⬤⚬  EXTRA=  n=10 tau=+0.38  dup=0  rawtail='◉  ╶  ╍  ╌  ═  ━  ◎  ○  ⬤  ⚬'
+=== signa-gestalt-gestalt-single-sonnet5
+  sh2: ·⚬○◎◉⬤  EXTRA=╶╌╍━═  n=6 tau=+1.00  dup=0  rawtail='·⚬○◎◉⬤EXTRA╶╌╍━═'
+  sh0: ⚬○◎⬤  EXTRA=╶━═╍╌·◉  n=4 tau=+1.00  dup=0  rawtail='⚬○◎⬤ EXTRA ╶━═╍╌·◉'
+  sh1: ·╌━═⬤◉◎○  EXTRA=╶╍  n=8 tau=+0.57  dup=0  rawtail='·╌━═⬤◉◎○EXTRA╶╍'
+=== signa-gestalt-gestalt-single-sonnet55
+  sh2: ·⚬○◎◉⬤  EXTRA=╶╌╍━═  n=6 tau=+1.00  dup=0  rawtail='·⚬○◎◉⬤ EXTRA ╶╌╍━═'
+  sh0: ·⚬○◎◉⬤╶╌╍━═  EXTRA=  n=11 tau=+0.09  dup=0  rawtail='·⚬○◎◉⬤╶╌╍━═'
+  sh1: ╶╌╍═━·⚬○◎◉⬤  EXTRA=  n=11 tau=+0.78  dup=0  rawtail='╶╌╍═━·⚬○◎◉⬤'

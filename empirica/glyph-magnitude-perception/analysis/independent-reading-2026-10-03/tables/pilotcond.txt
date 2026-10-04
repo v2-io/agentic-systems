@@ -1,0 +1,4 @@
+sonnet-agent pilotcond: tie mix {'mixed': 30, 'cdir': 114, 'flip': 16}
+   perp mix {'cperp': 110, 'mixed': 23, 'cdir': 27}; perp presentation verdicts {'perp': 243, 'dir': 76, 'tie': 1}
+   P1 dissolution 66/114 = 0.58 [0.49,0.67]; any-⟂-retreat (not cdir under perp) = 0.76
+   model_reported: claude-sonnet-5-5 tool_uses: {'transcript': 'a2204398d0267d7a6.jsonl', 'tool_uses': 1}

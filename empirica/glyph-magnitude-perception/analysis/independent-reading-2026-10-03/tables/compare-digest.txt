@@ -1,0 +1,19 @@
+ADJACENT-STEP 'with author' fraction: signa vs top-40 survey sequences (same judge)
+  gemini31pro[sheet]     signa with=0.80 perp=0.10 against=0.00 | top40 n=117 median with=1.00 mean=0.77  signa percentile=0.39
+  gemini38flash[sheet]   signa with=0.80 perp=0.10 against=0.00 | top40 n=117 median with=0.75 mean=0.67  signa percentile=0.54
+  grok46[sheet]          signa with=0.90 perp=0.00 against=0.10 | top40 n=117 median with=0.78 mean=0.68  signa percentile=0.60
+  haiku45                signa with=0.60 perp=0.10 against=0.20 | top40 n=117 median with=0.50 mean=0.46  signa percentile=0.56
+  llama32-3b             signa with=0.30 perp=0.00 against=0.30 | top40 n=117 median with=0.22 mean=0.22  signa percentile=0.62
+  opus55                 signa with=0.80 perp=0.00 against=0.10 | top40 n=117 median with=1.00 mean=0.87  signa percentile=0.21
+  qwen25-3b              signa with=0.40 perp=0.00 against=0.10 | top40 n=117 median with=0.00 mean=0.07  signa percentile=0.97
+  sonnet55               signa with=0.70 perp=0.00 against=0.10 | top40 n=117 median with=1.00 mean=0.77  signa percentile=0.28
+
+GESTALT mean |tau| and coverage: signa vs top-40 (same judge)
+  gemini31pro            signa tau=1.0 cov=0.5454545454545454 extra=3/3 perp=0 | top40 n=97 median tau=1.00 median cov=1.00 extra-used seqs=9
+  gemini38flash          signa tau=1.0 cov=0.5454545454545454 extra=3/3 perp=0 | top40 n=113 median tau=1.00 median cov=1.00 extra-used seqs=4
+  grok46                 signa tau=1.0 cov=0.6969696969696969 extra=2/3 perp=0 | top40 n=115 median tau=1.00 median cov=1.00 extra-used seqs=4
+  haiku45                signa tau=0.6552188552188551 cov=0.9696969696969697 extra=0/3 perp=0 | top40 n=117 median tau=1.00 median cov=1.00 extra-used seqs=20
+  llama32-3b             signa tau=0.20269360269360268 cov=0.9090909090909091 extra=1/3 perp=0 | top40 n=116 median tau=0.33 median cov=1.00 extra-used seqs=3
+  opus55                 signa tau=1.0 cov=0.5454545454545454 extra=3/3 perp=0 | top40 n=117 median tau=1.00 median cov=1.00 extra-used seqs=13
+  qwen25-3b              signa tau=0.37777777777777777 cov=0.9090909090909091 extra=0/3 perp=2 | top40 n=52 median tau=0.48 median cov=0.90 extra-used seqs=9
+  sonnet55               signa tau=0.6242424242424243 cov=0.8484848484848485 extra=1/3 perp=0 | top40 n=117 median tau=1.00 median cov=1.00 extra-used seqs=2

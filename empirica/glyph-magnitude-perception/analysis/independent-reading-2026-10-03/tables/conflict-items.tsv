@@ -1,0 +1,39 @@
+item	a	b	designer-predict	gemini31pro[sheet]	gemini38flash[sheet]	gemma3-4b	glimmer30b[sheet]	gpt56terra[sheet]	grok46[sheet]	haiku45	hermes3-3b	llama32-3b	mistral7b	opus55	phi4mini	qwen25-3b	sonnet5	sonnet55	sonnet55[sheet]
+roman-8-9	Ⅷ	Ⅸ	{"value": "Ⅸ", "elements": "Ⅷ", "ink": "Ⅷ", "pilot_rule": "Ⅸ"}	Ⅸ6	Ⅸ6	Ⅷ2	Ⅸ2	Ⅸ5	Ⅸ6	Ⅸ6	⟂2	Ⅸ1 Ⅷ1	Ⅸ1 Ⅷ1	Ⅸ6	?2	Ⅸ2	Ⅸ6	Ⅸ6	Ⅸ6
+roman-3-5	Ⅲ	Ⅴ	{"value": "Ⅴ", "elements": "Ⅲ", "ink": "Ⅲ", "pilot_rule": "Ⅴ"}	Ⅴ6	Ⅴ6	Ⅴ2	Ⅴ2	Ⅴ5	Ⅴ6	Ⅴ6	Ⅴ1 ⟂1	Ⅲ1 Ⅴ1	Ⅴ1 Ⅲ1	Ⅴ6	⟂1 ≈1	Ⅴ2	Ⅴ6	Ⅴ6	Ⅴ6
+roman-lc-8-9	ⅷ	ⅸ	{"value": "ⅸ", "elements": "ⅷ", "ink": "ⅷ", "pilot_rule": "ⅸ"}	ⅸ6	ⅸ6	ⅷ1 ⅸ1	ⅸ2	ⅸ5	ⅸ6	ⅸ5 ?1	⟂1 ⅸ1	ⅷ1 ⅸ1	ⅸ1 ⅷ1	ⅸ6	⟂1 ?1	ⅷ1 ?1	ⅸ6	ⅸ6	ⅸ6
+roman-lc-3-4	ⅲ	ⅳ	{"value": "ⅳ", "elements": "ⅲ", "ink": "ⅲ", "pilot_rule": "ⅳ"}	ⅳ6	ⅳ6	ⅳ2	ⅳ2	ⅳ5	ⅳ6	ⅳ6	ⅳ1 ⟂1	ⅲ2	⟂1 ⅳ1	ⅳ6	?1 ≈1	?1 ⅳ1	ⅳ6	ⅳ6	ⅳ6
+roman-lc-4-5	ⅳ	ⅴ	{"value": "ⅴ", "elements": "ⅳ", "ink": "ⅳ", "pilot_rule": "ⅴ"}	ⅴ6	ⅴ6	ⅴ2	ⅴ2	ⅴ5	ⅴ6	ⅴ6	⟂2	ⅴ2	ⅴ1 ⟂1	ⅴ6	⟂1 ?1	ⅳ1 ⅴ1	ⅴ4 ⅳ2	ⅴ5 ⅳ1	ⅴ6
+roman-10-12-aligned	Ⅹ	Ⅻ	{"value": "Ⅻ", "elements": "Ⅻ", "ink": "Ⅻ", "pilot_rule": "Ⅻ"}	Ⅻ6	Ⅻ6	Ⅹ2	Ⅻ2	Ⅻ5	Ⅻ6	Ⅻ6	Ⅹ2	Ⅹ2	Ⅻ1 Ⅹ1	Ⅻ6	Ⅹ1 Ⅻ1	?1 Ⅻ1	Ⅻ6	Ⅻ6	Ⅻ6
+sup9-vs-2	⁹	2	{"value": "⁹", "size": "2", "ink": "2", "pilot_rule": "⁹"}	⁹6	⁹6	≈1 ⁹1	⟂1 ⁹1	⁹5	⁹6	⁹6	⟂1 ⁹1	≈1 21	22	⁹6	≈2	⁹2	23 ⁹2 ?1	⁹6	⁹5 21
+sub8-vs-3	₈	3	{"value": "₈", "size": "3", "ink": "3", "pilot_rule": "₈"}	₈5 ⟂1	₈5 31	₈2	⟂2	₈5	₈5 31	₈5 31	⟂1 ₈1	⟂1 ?1	31 ⟂1	₈6	⟂1 ?1	₈2	34 ₈1 ⟂1	36	33 ₈2 ⟂1
+sup7-vs-1	⁷	1	{"value": "⁷", "size": "1", "ink": "1", "pilot_rule": "⁷"}	⁷6	⁷6	⁷2	⟂1 ⁷1	⁷5	⁷5 11	⁷6	?1 ⟂1	?1 11	≈1 ⟂1	⁷6	≈2	⟂1 11	⟂2 ?2 ⁷1 11	⁷5 11	⁷5 11
+sup9-vs-9-equal	⁹	9	{"value": "=", "size": "9", "ink": "9", "pilot_rule": "="}	≈5 91	≈5 91	⁹1 ≈1	≈2	≈5	95 ≈1	96	⟂1 ⁹1	⁹1 ≈1	92	95 ≈1	≈2	⁹1 91	96	93 ⁹3	≈4 92
+seg-0-vs-1	🯰	🯱	{"value": "🯱", "elements": "🯰", "ink": "🯰 (est: 6 vs 2 segments)", "pilot_rule": "🯱"}	🯱6	🯱6	🯰1 🯱1	⟂2	🯱5	🯱6	🯱5 ⟂1	?2	⟂2	⟂1 ?1	🯱6	≈2	🯱2	🯱5 🯰1	🯱6	🯱6
+seg-0-vs-7	🯰	🯷	{"value": "🯷", "elements": "🯰", "ink": "🯰 (est: 6 vs 3 segments)", "pilot_rule": "🯷"}	🯷6	🯷6	🯰1 🯷1	⟂2	🯷5	🯷6	🯰2 ⟂2 🯷1 ≈1	🯷2	🯷2	🯷1 ⟂1	🯷6	🯰1 ?1	?1 ⟂1	🯷3 🯰3	🯷6	🯷6
+seg-1-vs-8-aligned	🯱	🯸	{"value": "🯸", "elements": "🯸", "ink": "🯸 (est)", "pilot_rule": "🯸"}	🯸6	🯸6	≈1 🯸1	⟂2	🯸5	🯸6	⟂3 🯸2 ≈1	⟂1 🯱1	⟂1 🯱1	?1 🯱1	🯸6	≈1 ?1	🯱1 🯸1	🯸3 🯱3	🯸6	🯸5 🯱1
+frac-8th-vs-half	⅛	½	{"value": "½", "denominator_digit": "⅛", "pilot_rule": "½"}	½6	½6	½1 ⅛1	½2	½5	½6	½6	½2	⅛1 ½1	½2	½6	?1 ≈1	?2	½6	½6	½6
+frac-9th-vs-3rd	⅑	⅓	{"value": "⅓", "denominator_digit": "⅑", "pilot_rule": "⅓"}	⅓6	⅓6	≈1 ⅓1	⅓2	⅓5	⅓6	⅓6	⅓1 ⟂1	⅓1 ⟂1	⅑2	⅓6	≈2	⅑1 ⅓1	⅓6	⅓6	⅓6
+frac-10th-vs-5th	⅒	⅕	{"value": "⅕", "denominator_digit": "⅒", "pilot_rule": "⅕"}	⅕6	⅕6	≈1 ⅒1	⅕2	⅕5	⅕6	⅕6	⅒2	⅕2	?1 ⅕1	⅕6	?1 ⟂1	⅒1 ⅕1	⅕6	⅕6	⅕6
+permille-pct-vs-mille	%	‰	{"value": "%", "elements": "‰", "ink": "%", "pilot_rule": "‰"}	⟂3 %2 ‰1	%6	≈1 ‰1	%1 ⟂1	%5	%5 ‰1	%5 ⟂1	⟂1 ‰1	‰2	%2	%4 ‰2	≈1 ⟂1	%1 ‰1	‰6	%3 ‰3	‰6
+permille-mille-vs-myriad	‰	‱	{"value": "‰", "elements": "‱", "ink": "‰", "pilot_rule": "‱"}	⟂3 ‰2 ‱1	‰6	‰1 ≈1	‰2	‰4 ‱1	‰5 ‱1	‰6	‰2	‰1 ≈1	‱2	‰4 ‱2	⟂1 ≈1	‰2	‱6	‱5 ‰1	‱6
+permille-pct-vs-myriad	%	‱	{"value": "%", "elements": "‱", "ink": "%", "pilot_rule": "‱"}	⟂3 %2 ‱1	%6	%1 ≈1	⟂2	%5	%5 ‱1	%5 ⟂1	⟂2	%1 ≈1	‱2	%6	⟂1 ≈1	%1 ‱1	‱3 %3	%4 ‱2	‱6
+arabic-pct-vs-mille	٪	؉	{"value": "٪", "elements": "؉", "ink": "؉", "pilot_rule": "؉"}	⟂3 ؉2 ٪1	٪4 ⟂1 ؉1	٪1 ؉1	⟂2	٪5	٪4 ⟂1 ؉1	⟂5 ٪1	?1 ٪1	≈2	⟂2	٪4 ؉2	≈2	٪2	؉3 ٪2 ⟂1	؉3 ٪3	؉5 ٪1
+arabic-mille-vs-myriad	؉	؊	{"value": "؉", "elements": "؊", "ink": "؊", "pilot_rule": "؊"}	⟂3 ؊2 ؉1	؉3 ؊2 ⟂1	≈1 ؉1	؊1 ⟂1	⟂2 ؉2 ؊1	؉4 ؊2	≈4 ⟂2	⟂1 ؊1	⟂1 ؉1	⟂1 ≈1	؊6	≈1 ⟂1	؉1 ⟂1	⟂6	؉6	؊6
+gram-earth-vs-gyang	☷	⚌	{"lines": "☷", "yang": "⚌", "ink": "⚌", "pilot_rule": "☷"}	☷4 ⟂2	⟂3 ☷3	⚌2	⟂2	☷3 ⟂2	☷6	☷3 ⟂3	☷1 ⚌1	☷2	⚌1 ☷1	☷6	?2	☷1 ≈1	☷6	☷6	☷5 ⟂1
+gram-gyin-vs-yang	⚏	⚊	{"lines": "⚏", "yang": "⚊", "ink": "⚏", "pilot_rule": "⚏"}	⚏5 ⟂1	⚏4 ⟂2	≈1 ⚊1	⟂2	⟂4 ⚊1	⚏6	⟂3 ⚊2 ≈1	⚊1 ?1	⚊1 ⚏1	⚏1 ⟂1	⚏6	≈1 ?1	⚏1 ⟂1	⚊3 ⚏3	⚏6	⚏6
+gram-earth-vs-yang	☷	⚊	{"lines": "☷", "yang": "⚊", "ink": "☷", "pilot_rule": "☷"}	☷5 ⟂1	⟂3 ☷3	⚊1 ≈1	⟂2	☷4 ⟂1	☷6	☷6	⟂2	☷2	⟂1 ☷1	☷6	?1 ≈1	⚊1	☷5 ⟂1	☷6	☷5 ⟂1
+gram-earth-vs-heaven	☷	☰	{"lines": "=", "yang": "☰", "ink": "☰", "pilot_rule": "☰"}	⟂3 ☰2 ☷1	⟂3 ☰2 ≈1	≈1 ☰1	⟂2	☰3 ⟂1 ≈1	☰6	☰4 ≈2	⟂1 ☷1	☷2	?1 ☷1	☰4 ☷2	⟂1 ?1	☷2	☰6	☷3 ☰3	≈2 ☷2 ☰1 ⟂1
+gram-yin-vs-yang	⚋	⚊	{"lines": "=", "yang": "⚊", "ink": "⚊", "pilot_rule": "⚊"}	⟂3 ⚊3	⚊3 ⟂2 ≈1	⚊2	⟂2	⟂3 ⚊2	⚊6	⚋4 ⚊1 ≈1	⟂1 ⚋1	⚊2	⟂2	⚊6	≈1 ?1	⚋1 ⟂1	⚊6	⚊6	⚊6
+gram-gyin-vs-gyang	⚏	⚌	{"lines": "=", "yang": "⚌", "ink": "⚌", "pilot_rule": "⚌"}	⟂3 ⚏3	⟂4 ≈1 ⚌1	⚌2	⟂2	⟂4 ⚌1	⚌6	⟂4 ⚏1 ≈1	⚏1 ⚌1	⚌2	⟂1 ⚏1	⚌6	≈1 ⟂1	≈2	⚌6	⚌5 ⚏1	⚏5 ≈1
+hex-receptive-vs-heaven3	䷁	☰	{"lines": "䷁", "yang": "☰", "ink": "䷁", "pilot_rule": "䷁"}	䷁5 ⟂1	䷁4 ⟂2	☰2	⟂2	䷁2 ⟂2 ☰1	䷁4 ☰2	䷁4 ☰1 ⟂1	䷁1 ⟂1	☰2	⟂1 ☰1	☰4 ䷁1 ⟂1	?1 ⟂1	䷁1	☰3 ䷁3	䷁3 ☰1 ⟂1 ≈1	䷁5 ⟂1
+hex-receptive-vs-gyang	䷁	⚌	{"lines": "䷁", "yang": "⚌", "ink": "䷁", "pilot_rule": "䷁"}	䷁5 ⟂1	䷁4 ⟂2	⚌2	⟂2	⟂3 ䷁2	䷁6	⟂5 ䷁1	⟂2	⚌1 ?1	⟂1 ≈1	䷁6	≈2	⚌1	䷁5 ?1	䷁6	䷁5 ⟂1
+hex-creative-vs-heaven3-aligned	☰	䷀	{"lines": "䷀", "yang": "䷀", "ink": "䷀", "pilot_rule": "䷀"}	䷀5 ⟂1	䷀6	☰2	䷀1 ⟂1	䷀4 ⟂1	䷀6	䷀6	䷀2	☰2	⟂2	䷀6	⟂1 ?1	䷀1	䷀3 ≈3	䷀3 ≈3	䷀4 ⟂1 ≈1
+dots3-vs-disc	⁖	●	{"elements": "⁖", "size": "●", "ink": "●", "pilot_rule": "●"}	●4 ⟂2	●6	≈1 ⁖1	⟂2	●3 ⁖1 ⟂1	●6	●6	●2	●2	⟂1 ●1	●6	≈1 ?1	●2	⁖4 ●2	●6	●6
+dots4-vs-bigdisc	⁘	⬤	{"elements": "⁘", "size": "⬤", "ink": "⬤", "pilot_rule": "⬤"}	⬤4 ⟂2	⬤6	⬤2	⟂2	⬤3 ⁘1 ⟂1	⬤6	⬤4 ⟂1 ?1	⬤2	⬤2	⟂1 ⬤1	⬤6	≈1 ⬤1	⟂1	⬤6	⬤6	⬤6
+therefore-vs-bigdisc	∴	⬤	{"elements": "∴", "size": "⬤", "ink": "⬤", "pilot_rule": "⬤"}	⬤4 ⟂2	⬤6	∴2	⟂2	⬤4 ⟂1	⬤6	⬤4 ?2	⟂2	⬤2	⟂1 ?1	⬤6	?1 ≈1	?1 ⬤1	⬤6	⬤6	⬤6
+braille8-vs-block	⣿	█	{"elements": "⣿", "ink": "█", "fill": "= (both 'full')", "pilot_rule": "█"}	█4 ⟂1 ≈1	█6	█2	≈1 ⟂1	≈4 █1	█6	█4 ≈2	⣿2	⣿2	█1 ⟂1	█6	≈2	█1 ⣿1	█5 ⣿1	█6	█6
+die5-vs-5-equal	⚄	5	{"value": "=", "ink": "5", "pilot_rule": "="}	≈6	≈6	51 ≈1	52	≈5	≈6	≈4 52	⚄1 ⟂1	⚄2	51 ⟂1	≈6	?1 ≈1	52	≈4 ⟂2	≈6	≈6
+die5-vs-circled6	⚄	⑥	{"value": "⑥", "elements": "⚄", "pilot_rule": "⑥"}	⑥6	⑥6	⑥1 ⚄1	⑥2	⑥5	⑥6	⑥6	⚄1 ⑥1	⑥2	⚄2	⑥6	?2	⚄2	⑥5 ≈1	⑥6	⑥6
+die6-vs-circled5	⚅	⑤	{"value": "⚅", "elements": "⚅", "pilot_rule": "⚅"}	⚅6	⚅6	⑤2	≈2	⚅5	⚅6	⚅4 ≈2	⑤1 ⟂1	⑤2	⚅1 ⟂1	⚅6	?2	⑤1 ?1	≈3 ⚅2 ⑤1	⚅6	⚅6
+tally-rod4-vs-roman5	𝍣	Ⅴ	{"value": "Ⅴ", "elements": "𝍣", "pilot_rule": "Ⅴ"}	Ⅴ4 ⟂2	⟂6	Ⅴ1 ≈1	⟂2	Ⅴ3 ≈2	Ⅴ4 ≈2	⟂6	𝍣2	Ⅴ2	⟂1 Ⅴ1	Ⅴ6	?1 ≈1	⟂1 ≈1	⟂4 Ⅴ2	Ⅴ6	Ⅴ3 ≈3

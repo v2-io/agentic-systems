@@ -1,0 +1,40 @@
+P13: dice gestalt |tau| per shuffle per frontier judge; noise-foil ⟂ share of parsed frontier presentations
+(errored/unparsed calls excluded from the denominator, reported separately). Also the noise-foil orders verbatim,
+to show cross-judge agreement on random sets.
+dice gemini31pro    shuffle 1: order tau=1.0 n=6
+dice gemini31pro    shuffle 0: order tau=1.0 n=6
+dice gemini31pro    shuffle 2: order tau=1.0 n=6
+dice gemini38flash  shuffle 2: order tau=1.0 n=6
+dice gemini38flash  shuffle 0: order tau=1.0 n=6
+dice gemini38flash  shuffle 1: order tau=1.0 n=6
+dice gpt56terra     shuffle 0: order tau=1.0 n=6
+dice gpt56terra     shuffle 1: order tau=1.0 n=6
+dice gpt56terra     shuffle 2: order tau=1.0 n=6
+dice grok46         shuffle 1: order tau=1.0 n=6
+dice grok46         shuffle 0: order tau=1.0 n=6
+dice grok46         shuffle 2: order tau=1.0 n=6
+dice haiku45        shuffle 2: order tau=1.0 n=6
+dice haiku45        shuffle 0: order tau=1.0 n=6
+dice haiku45        shuffle 1: order tau=1.0 n=6
+dice opus55         shuffle 2: order tau=1.0 n=6
+dice opus55         shuffle 0: order tau=1.0 n=6
+dice opus55         shuffle 1: order tau=1.0 n=6
+dice sonnet5        shuffle 2: order tau=1.0 n=6
+dice sonnet5        shuffle 1: order tau=1.0 n=6
+dice sonnet5        shuffle 0: order tau=1.0 n=6
+dice sonnet55       shuffle 2: order tau=1.0 n=6
+dice sonnet55       shuffle 0: order tau=1.0 n=6
+dice sonnet55       shuffle 1: order tau=1.0 n=6
+noise opus55         ⟂ 12  order 0  err/unparsed 0  ⟂/parsed=1.00
+noise sonnet55       ⟂ 6  order 6  err/unparsed 0  ⟂/parsed=0.50
+noise sonnet5        ⟂ 3  order 9  err/unparsed 0  ⟂/parsed=0.25
+noise haiku45        ⟂ 10  order 2  err/unparsed 0  ⟂/parsed=0.83
+noise grok46         ⟂ 4  order 8  err/unparsed 0  ⟂/parsed=0.33
+noise gpt56terra     ⟂ 9  order 3  err/unparsed 0  ⟂/parsed=0.75
+noise gemini31pro    ⟂ 11  order 0  err/unparsed 3  ⟂/parsed=1.00
+noise gemini38flash  ⟂ 6  order 6  err/unparsed 3  ⟂/parsed=0.50
+noise POOLED frontier ⟂/parsed = 61/95 = 0.64
+noise-0: grok46:⸸ㆲ𐨚𑒕𛇦 | sonnet55:𐨚𑒕ㆲ𛇦⸸
+noise-1: gemini38flash:ᳺࡤ꧌ɽ᧳𚿵 | gpt56terra:ɽࡤ᧳ᳺ꧌𚿵 | gpt56terra:ɽࡤ᧳ᳺ꧌𚿵 | grok46:ᳺࡤ᧳ɽ꧌ᳺࡤ᧳ɽ꧌ | grok46:ɽࡤ᧳ᳺ꧌ | sonnet5:ɽᳺ᧳꧌𚿵 | sonnet5:ɽᳺ᧳꧌ࡤ𚿵 | sonnet5:ɽᳺ᧳꧌ࡤ𚿵
+noise-2: gemini38flash:꠶᳂𐤨𖪛𒉨 | gemini38flash:꠶᳂𐤨𖪛𒉨 | gemini38flash:꠶᳂𐤨𖪛𒉨 | gpt56terra:𒉨𐤨᳂꠶𖪛 | grok46:𐤨᳂꠶𖪛𒉨 | grok46:꠶᳂𐤨𖪛𒉨 | grok46:᳂𐤨꠶𖪛𒉨 | haiku45:᳂𐤨꠶𖪛𒉨 | sonnet5:𒉨𐤨᳂𖪛꠶ | sonnet5:᳂𒉨𖪛𐤨꠶ | sonnet5:𖪛𒉨᳂꠶ | sonnet55:᳂𐤨꠶𖪛𒉨 | sonnet55:᳂𐤨꠶𒉨𖪛
+noise-3: gemini38flash:˛ꤻ𐿥𐊚꠶𝼋 | gemini38flash:˛𐊚ꤻ꠶𐿥𝼋 | grok46:˛꠶ꤻ𐊚𐿥𝼋 | grok46:˛꠶𐊚𐿥ꤻ𝼋 | haiku45:˛꠶ꤻ𐊚𐿥𝼋 | sonnet5:˛꠶𐊚𐿥 | sonnet5:˛𐊚꠶ꤻ𝼋 | sonnet5:˛꠶ꤻ𝼋𐊚𐿥 | sonnet55:˛𐊚꠶ꤻ𐿥𝼋 | sonnet55:˛꠶ꤻ𐊚𐿥𝼋 | sonnet55:˛ꤻ꠶𐿥𐊚𝼋
