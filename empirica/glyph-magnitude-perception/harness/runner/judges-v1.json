@@ -104,5 +104,5 @@
    "note": "Meta Muse Glimmer 30B (GGUF k-quant dynamic, Joseph's T7 copy) via llama.cpp llama-server b10358 with DFlash drafter; 'Reasoning strength: low' appended to the study system prompt per the model's control convention; temperature 0. Added 2026-10-03 at Joseph's suggestion (exploratory, key datapoints only). Sheet-mode variant: max_tokens 6000 so the reasoning plus a 40-item JSON answer fits."
   }
  },
- "note_local_weights": "Most chat-model weights live on Joseph's external T7 drive (symlinked blobs; ~/.ollama/README-models-on-T7.md). It was unplugged when this registry was first written, so qwen3:4b, gemma3:4b, phi4-mini, mistral:7b were pulled to internal disk on 2026-10-03 (qwen3:4b's blob was previously a T7 symlink and is now a local copy). gpt-oss:latest (20B) is the T7 copy."
+ "note_local_weights": "Chat-model weights live on Joseph's external T7 drive (symlinked blobs; ~/.ollama/README-models-on-T7.md). On 2026-10-03, with the drive briefly unplugged, qwen3:4b, gemma3:4b, phi4-mini, mistral:7b and qwen2.5:3b were pulled to internal disk for this study. Later that day, per Joseph, the qwen3:4b (and an older llama3.2:3b) duplicates were replaced by symlinks to their digest-verified T7 copies, and the other four were moved to T7 and symlinked. The T7 drive must be mounted for any local judge to load."
 }
