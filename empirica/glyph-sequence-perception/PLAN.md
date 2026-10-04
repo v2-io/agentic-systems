@@ -1,230 +1,280 @@
-# PLAN — stochastic discovery of glyph sequences, done the way it was headed on 2026-08-25
+# PLAN — stochastic discovery of glyph sequences
 
-*2026-10-04. Claude Opus 5.5, for Joseph.*
+*2026-10-04, revised the same day. Claude Opus 5.5, for Joseph.*
 
 *Built from:*
 
-- *Joseph's direction today, quoted below;*
+- *Joseph's direction today;*
 - *his 08-25 turns in the pilot session;*
 - *`pilot/pilot-record.md` and `pilot/DESIGN-scale-up.md`, with its addenda;*
 - *`data/surveys-v1/RECONCILIATION-QUEUE.md`.*
 
-*The extraction of the 08-25 method from those sources is `.archive/2026-10-04-magnitude-era/harness/walk-r1-stopped/METHOD.md`. Earlier data and plans are in `.archive/` (its README says what and why).*
+*The method extraction from those sources is `.archive/2026-10-04-magnitude-era/harness/walk-r1-stopped/METHOD.md`. Earlier data and plans are in `.archive/`.*
 
 ---
 
-## 0. What is being found
+## 0. The object
 
 > *"Magnitude is no longer a 'critical' factor — neither is which way is 'up' — just sequencing."*
 >
-> *"Privileged domain models knowledge (like `①` vs `⑴` vs `❶` vs `🯱`) can be put in as seed work that bumps up its priority in the stochastic queue."*
->
 > *"There's going to be some level of simulated annealing to find other minima."*
 >
-> *"There should be intermediate analysis runs, I would expect, that help recalibrate the stochastic slope for what is given more statistics."* — Joseph, 2026-10-04
+> *"There should be intermediate analysis runs … that help recalibrate the stochastic slope."* — Joseph, 2026-10-04
 
-**The object is sequences:** sets of glyphs that LLM minds place in a linear order. Direction-free: a sequence and its reverse are the same sequence. No axis needs a name, and no Unicode property or rendering measurement is a reference.
+**A sequence** is a set of glyphs placed in a linear order, where an order and its reverse count as the same sequence. Two glyphs may sit at the same step, and no axis needs a name. Sequences may cross, so one glyph can belong to several.
 
-**Universality** is how widely a sequence, and each of its links, is shared across LLM families.
+**What the study produces** is the set of sequences that LLM minds perceive, with how strongly each LLM family perceives each one.
 
-**The search is stochastic and prior-free in its sampling.** Seeds only raise the priority of where to look first. Each round ends in an analysis pass that decides where the next round's statistics go.
+**The centre of gravity is the emergent sequences** inferred from many small judgments. Survey records and other seeds only decide where to look first. That saves the tokens of searching the enormous ⟂ space blind. Seeds are not data.
 
-## 1. What a judge is asked
+## 1. Terminology
 
-Pairs are dropped. A pair carries no sequencing information without a direction or a "more".
+I had used **panel** for the set of judging minds, as in a "judge panel". From your message, you use it for one generated task. To avoid the clash I've stopped using the word. The terms below are used everywhere else; tell me if you'd like different words.
 
-**1a. Triads: the workhorse of the walk.** Three glyphs, shuffled.
-
-*The prompt, roughly:* "If these feel like they go in a sequence, write them in that order, either end first. If only two of them go together, write those two and put the third after EXTRA. If they don't, answer ⟂."
-
-Why triads carry most of the walk:
-
-- **A triad is the smallest set that carries sequence information without a direction.** Its answer is a *betweenness* relation (which glyph sits in the middle), and betweenness has no orientation. That is exactly the object.
-- **One currency for everything.** Every larger arrangement decomposes into the betweenness of its triples, so triads and bigger sets feed the same evidence and the annealer needs one likelihood.
-- **Cheap and easy for the judge.** Each answer is fast and needs no articulation, so the walk can be area-filling: many triads, spread widely.
-- **The pair information is kept, undirected.** "Two go together, the third doesn't" records which glyphs belong to a common sequence. Pairs used to supply that.
-
-*Presentation: a Latin rotation.* Each triad is shown three times, rotated so that each glyph sits in the **middle screen slot exactly once**. Which end goes first is randomized. Each presentation is a separate item, and where the three items sit (same sheet or split across sheets) follows §2.
-
-- **True betweenness** gives the same middle glyph in all three presentations.
-- **An answer driven by position** ("the one shown in the middle is the middle") gives three different middles.
-
-So position bias exposes itself *per triad*, not only in aggregate. The pilot's cyclic pair unit could never do that.
-
-*Where triads fall short, and what covers it:*
-
-- **Holistic orders.** Some orders appear only with four or more glyphs present (the pilot's `-=>})|` and risebar). Larger sets are therefore generated by the queue around candidates.
-- **Random triads are mostly ⟂.** Density depends on the queue's neighbourhood sampling (§4), not on the triad.
-
-**1b. Larger sets, k = 4 to 8.** This is the pilot's gestalt instrument, the one that saw holistic orders.
-
-- *The prompt:* the same, with EXTRA for any glyphs that don't belong.
-- *Presentation:* ≥ 2 fated shuffles each.
-- *Generated from:* candidates, windows of candidates with lookalike salt, and sets that mix two candidates.
-- *Each answer gives:* betweenness for every ordered triple, adjacencies, membership, and whole-set ⟂.
-
-**1b. Continuation.** This is the pilot's articulation-free generator.
-
-- **What is shown:** 2–5 glyphs of a candidate sequence, presented from either end.
-- **The prompt, roughly:** *"If something comes next, give it; it may have no name; otherwise none."*
-- **What it gives:** proposals that enter the queue as new glyphs and rungs.
-
-Neither instrument asks for an axis, a name, a direction or "more". The pilot measured three separate times that requiring articulation filters out exactly the liminal perception the study is after (memory: articulation-filter-clamps-liminal-perception).
-
-## 2. Randomization: what has to vary, and where each rule came from
-
-| rule | origin |
+| term | meaning |
 |---|---|
-| Glyph order within every presentation is shuffled by fated draw; each set is shown in ≥ 2 different shuffles. | Pilot side bias: 3B chose the '>' answer token in 85% of answers; Joseph, 08-25: *"randomize the 'symbols you are choosing from' each time"* |
-| The shuffles of one set sit **on the same sheet or a nearby one**, as Joseph asked on 08-25. Same-sheet vs split is itself a fated, recorded factor, assigned at random per set. | Joseph, 08-25; same-sheet presentation changes consistency (measured 2026-10-03) |
-| Every triad is shown in a Latin rotation: three presentations, each glyph in the middle slot once, with the leading end randomized. A "middle = the glyph shown in the middle" answer then contradicts itself within the triad. | The pilot's cyclic triad unit made cycles indistinguishable from same-slot answers |
-| Presentations of one set go to **independent fresh instances** of the same mind: one sheet per call, no memory. | Pilot walk5: reverse cycles split across a judge pair |
-| The response options **and the order of independent instruction sentences** are permuted per sheet by fated draw. | Pilot walk5b: option order moved the commit-vs-⟂ threshold by ~6 points |
-| Sheet items are shuffled. Two presentations of the same set are never adjacent. Item kinds and set sizes are mixed. | Pilot sheets; *"judge each item on its own as it comes rather than building a scheme"* |
-| ⟂ and EXTRA are always offered, with *"⟂ is expected often and is fully valuable."* | Pilot walk3: forced formats manufactured most cross-domain edges |
-| No axis words in any instruction. The old prompt listed "magnitude, amount, intensity, size, value"; that list is gone. | Today's direction; the articulation filter |
-| The answer gives each element as glyph **and** shown position, `[{"p":3,"g":"⑴"},…]`. A mismatch between the two is unparsed, never imputed. Echo failures are recorded per glyph, because they are not missing at random. | Pilot 3B echo loss (14%); a 2026-10-03 judge couldn't echo `⬤` |
-| Response-vocabulary glyphs (⟂, ⊥, ≈) never appear as stimuli. | Pilot: the ≈ glyph collided with the ≈ answer |
-| Judges are isolated, with tools stripped. Model id, effort and thinking tokens are recorded per call. Context, effort and sheet size are recorded factors, never silent constants. | DESIGN fix #5; a judge offered tools looked glyphs up by name |
-| Every stochastic choice is fated: `seed = H(protocol ‖ purpose ‖ canonical(object))`, including queue draws. | DESIGN addendum (vivarium convention) |
-| Every glyph and item carries a lineage label (survey-seed / domain-seed / frontier-proposal / uniform-tail). It is metadata only; no analysis conditions on it. | DESIGN addendum; RECONCILIATION-QUEUE lineage ruling |
+| **glyph** | one codepoint shown as a symbol |
+| **item** | one task about a fixed set of glyphs. Kinds: **triad**, **order**, **next**, **between** (§3) |
+| **presentation** | one rendering of an item with its fated randomization: glyph positions, option order, offered options. An item usually has several presentations |
+| **sheet** | the presentations sent in one call, as one prompt with one JSON answer |
+| **call** | one stateless request to one mind |
+| **mind** | one model under one configuration, e.g. claude-sonnet-5-5 at low effort through an isolated CLI |
+| **family** | the LLM family a mind belongs to (Claude, Grok, Gemini, Llama, …). Universality is measured across families |
+| **roster** | the minds a round's sheets go to (my former "panel") |
+| **round** | one draw from the queue, its calls, and the analysis pass that follows |
+| **queue** | pending items, each with a priority and the reason for it |
+| **evidence** | every parsed answer, stored per mind |
+| **candidate** | a hypothesized sequence in the current model (§2) |
+| **seed** | a starting point: a survey record or a `data/seeds/` entry. It generates items, and its order is never evidence |
 
-## 3. Storage: append-only JSONL truth, a Postgres 18 index
+## 2. From first principles: evidence, inference, and why chains longer than three matter
 
-Raw truth goes in `data/`, append-only:
+### What a sequence implies at the smallest scale
 
-- `stimuli/<round>.jsonl`: every presentation, with its shown order and every fated factor;
-- `raw/<round>/<judge>/ledger.jsonl`: every call, with the verbatim prompt and response;
-- `queue/<round>.jsonl`: the queue snapshot each round was drawn from, with its priorities and reasons.
+**A linear order on n glyphs is exactly its betweenness relations:** for every three glyphs in it, which one is in the middle. An order and its reverse imply the same relations, so betweenness carries no direction. That is why the triad is the atomic probe for this object. A pair carries nothing about sequencing once direction is gone.
 
-The index is database `empirica_glyph_sequence` (`psql-18`, pgvector installed; built 2026-10-04 by `harness/ingest/ingest.py`, with the 1,235 survey records already in). The old `empirica_glyph` is disposable and was left in place. The current schema is extended and stays rebuildable from `data/`:
+**What a triad answer tells us:**
 
-- `glyph`: codepoint, first lineage, comparison counts, and an embedding column for later correlates.
-- `presentation`, `call`, `response`: the parse is versioned and re-runnable over the raw text.
-- **Derived views:**
-  - per-mind betweenness counts `(mind, a, mid, c)`;
-  - adjacency counts;
-  - keep/EXTRA membership counts;
-  - ⟂ rates;
-  - per-LLM-family aggregates.
-- `candidate`: annealed sequences, each with per-link support per mind and per family.
-- `queue`: pending items, each with priority, reason and lineage.
+- **an order, "a b c":** the three lie on one sequence, with b between;
+- **"only these two go together":** two lie on a common sequence and the third doesn't, an undirected co-membership;
+- **⟂:** no shared sequence.
 
-`survey_records`, already ingested (1,235 records), stays as the seed table.
+### Why triads are not enough on their own
 
-## 4. The queue and the annealing
+Three things can't be seen in triads, and each is why longer chains matter.
 
-**State:**
+1. **Splices.**
+   - *The problem.* A glyph can belong to two sequences, like ⑩ in the circled digits and in the dresses of ten. Local triads can then be true while the chain they suggest is false. The pilot's forced-choice walks produced exactly such chains: `ᚂ③🟌❹⑩🟥9`.
+   - *The check.* For a candidate a–b–c–d–…, a real sequence also implies its **long-range triples**, such as (a, c, e) or (a, d, g). Testing a sample of long-range triples, from both ends across the middle, is what separates a sequence from a splice. If the long-range triples fail, the candidate splits at the bridge glyph.
+2. **Holistic orders.** The pilot found orders that appear only when four or more glyphs are present (`-=>})|`, the risebar). For those, triads come back ⟂ or noisy. **Order items** show 4–8 glyphs at once to see them.
+3. **Growth.** Triads only test glyphs already in the pool. New members come from minds proposing what comes next, or between, given a stretch of a candidate. The pilot found continuation needs about four glyphs of context before holistic orders continue reliably.
 
-- the evidence, which is everything in the views above;
-- a population of **candidate sequences**, unoriented ordered glyph lists.
+### The model the evidence is fitted to
 
-**Fit of a candidate to a mind.** Betweenness constraints the candidate satisfies, minus those it violates, plus the adjacency and membership evidence. Each constraint is weighted by its posterior certainty. The panel fit is family-weighted, so several models from one company count as about one family.
+**The state.** The state is a set Σ of candidate sequences. Candidates may share glyphs, contain ties, and appear in either orientation. Each mind m and candidate σ also has a **perception strength** s(m, σ) between 0 and 1: how reliably m perceives σ.
 
-**Simulated annealing.** Moves on a candidate:
+**Answer probabilities.** Under Σ, each answer kind has a probability:
 
-- insert a glyph from its evidence neighbourhood;
-- delete a glyph;
-- swap neighbours;
-- reverse a segment;
-- split a candidate in two;
-- join two candidates end to end.
+- **Triad answer.** Take the sequences that contain the triad's glyphs:
+  - if one contains all three, an order with that sequence's middle (several such sequences give a mixture);
+  - else, if one contains two, "only these two";
+  - else ⟂;
 
-Moves are accepted by the Metropolis rule at temperature T.
+  each passed through the mind's perception strength and its nuisance parameters: ⟂-propensity, guess rate, and slot bias (the tendency to name the glyph shown in the middle, or to keep the shown order).
+- **Order answer.** Each line the mind writes should be the restriction of some σ to the shown glyphs. EXTRA means glyphs on no perceived σ shared with the others.
+- **Next/between answers** are not likelihood evidence. They are proposals: new glyphs and new items, which enter the evidence only once triads and orders test them.
 
-**Restarts** begin from each survey record, each domain seed, and random walks on the adjacency graph. Any minimum already found is tabu for later restarts. The result is a *set* of distinct minima, so alternative linearizations of the same glyphs (the drain's case) and crossing sequences (dress against number) both survive as separate candidates.
+**Fitting.** Σ, s and the nuisance parameters are fitted to maximize the likelihood minus a description-length penalty, which charges for every candidate and every member so that Σ doesn't grow to fit noise.
 
-**Generating items.** Each candidate generates queue items where its evidence is thin or contested:
+- Σ is fitted by **simulated annealing**, with these moves:
+  - insert or delete a glyph;
+  - swap neighbours;
+  - reverse a segment;
+  - tie or untie two neighbours;
+  - split a candidate, or merge two;
+  - spawn a candidate from a strongly supported triad;
+  - drop a candidate.
+- The rest is fitted in closed form, or by EM, given Σ.
+- **Distinct minima** come from restarts and a tabu on minima already found. They are kept as alternative explanations; the drain's several linearizations are the case in point.
+- **Running at T > 0** gives *posterior samples* of Σ. The spread across samples is the uncertainty that drives the next round's queue.
 
-- windows of its glyphs, with fated lookalike salt;
-- continuation from either end;
-- **cross-candidate sets** that mix glyphs of two candidates sharing a neighbourhood. These ask the inter-family question directly: does `①` sit in a sequence with `⑴` and `❶`?
+**Universality** is then read directly from the fit: σ is universal to the degree that s(m, σ) is high across families. The same fit reports, per link, which families see it.
 
-**Priority** of an item is its expected information (posterior variance of the constraints it tests, for the minds it would go to), times a novelty factor for glyphs below the density target, times a seed bump:
+## 3. The item kinds
 
-- **domain seeds:** bump b, set by you;
-- **survey seeds:** a smaller bump;
-- **duration:** the bump lasts until the seed's glyphs reach the density target, then decays. It never excludes anything.
+### The mix
 
-**Sampling** is fated, with P(item) ∝ exp(priority / T).
+These are starting proportions. After round 1 the analysis pass re-allocates them by expected information per token (§5), within the floors shown.
 
-- **Cooling:** T falls across rounds, so the queue moves from broad exploration to densifying contested structure.
-- **Long tail:** a **standing uniform-tail quota** (~15%, the pilot's figure) never closes.
-- **Reheating:** T rises again when a round turns up new structure.
+| kind | rounds 0–1 (no candidates yet) | once candidates exist | floor |
+|---|---|---|---|
+| **triad** | 65% of items: 15% uniform tail, 50% decomposed seeds | 55%: 15% uniform tail, 25% long-range or contested triples of candidates, 15% neighbourhood expansion (two candidate glyphs plus a co-member) | uniform tail ≥ 10% |
+| **order** (k = 4–8) | 15%: seed windows | 25%: candidate windows, salted windows, crossings of two candidates | — |
+| **next** | 15%: 8% from seed ends, 7% from uniform glyph pairs (prior-free discovery) | 12%: candidate ends, plus ~4% uniform | ≥ 5% uniform-start |
+| **between** | 5%: seed gaps | 8%: candidate gaps, and steps marked as gaps | — |
+
+**Cost is in presentations, not items:**
+
+- a triad gets 1 presentation at first; if it isn't ⟂, it gets 2 more later (the rotation, below);
+- an order item gets 2 shuffles;
+- next and between get 1 presentation each.
+
+The ⟂ space therefore costs one presentation per random triad. About 10% of first-presentation ⟂ triads get a second presentation anyway, to measure how often ⟂ itself is unreliable.
+
+### What each looks like
+
+*These are illustrations. The exact wording, and the order of independent sentences, are permuted per sheet. One kind per sheet, because the instructions differ. Items from different sources are interleaved, so a sheet is never all-⟂ or all-structure.*
+
+**triad**, ~30 per sheet:
+
+```
+Each item below shows three symbols.
+For each item, answer with one of:
+  - all three, written in the sequence they seem to form (either end first)
+  - just two, if only two of them seem to go together
+  - ⟂, if they don't seem to go in any sequence
+[when offered] Join symbols that seem to be the same step with "=".
+⟂ is expected often and is fully valuable. First impressions; judge each item on its own.
+Copy each symbol exactly, or write #1, #2, #3 for its position in the item.
+
+{"id":0,"s":["⑴","❶","①"]}
+{"id":1,"s":["▃","𐤨","▆"]}
+…
+Reply with JSON only: {"answers":[{"id":0,"seq":["①","⑴","❶"]},{"id":1,"two":["▃","▆"]},{"id":2,"none":true}, …]}
+```
+
+**order**, k = 4–8, ~10 per sheet:
+
+```
+Each item shows a set of symbols in scrambled order.
+For each item: if some of them seem to go in a sequence, write that sequence (either end first).
+If you see more than one separate sequence, give each one.
+List symbols that belong to none under "extra". If none of them form a sequence, answer ⟂.
+[when offered] Join symbols that seem to be the same step with "=".
+[when offered] Write "…" where a step seems to be missing.
+
+{"id":0,"s":["░","▫","▓","█","▒"]}
+Reply: {"answers":[{"id":0,"seqs":[["░","▒","▓","█"]],"extra":["▫"]}, …]}
+```
+
+**next**, ~10 per sheet:
+
+```
+Each item shows symbols in a sequence. If something seems to come next after the last symbol,
+give up to three candidates, most fitting first. It may have no name. If nothing comes next, answer none.
+
+{"id":0,"s":["☰","☱","☳"]}
+Reply: {"answers":[{"id":0,"next":["☷"]}, …]}
+```
+
+**between:** the same as next, but showing two glyphs with a gap, and asking what goes between them.
+
+### What is randomized, and which parameters are random
+
+*All of it is fated: `seed = H(protocol ‖ purpose ‖ object)`.*
+
+| | triad | order | next / between |
+|---|---|---|---|
+| **glyph display order** | Latin rotation over 3 presentations: each glyph in the middle slot once, leading end random | ≥ 2 independent shuffles | the sequence direction shown is random; prefix length 2–5 (next) |
+| **⟂ / none offered** | 90% of presentations; 10% forced, without ⟂ or the "two" option | 90%; 10% forced, without ⟂ or EXTRA | always: "none" is the generative ⟂ |
+| **tie "=" offered** | 50% | 50% | — |
+| **gap "…" offered** | — | 50% | — |
+| **"two go together" offered** | always, except in forced presentations | (EXTRA plays this role) | — |
+| **multiple sequences allowed** | — | always | — |
+| **salt** | — | when built from a candidate: 0–2 interlopers drawn from the co-membership neighbourhood | — |
+| **candidates requested** | — | — | up to 3 (fixed) |
+| **where repeat presentations go** | same sheet or split across sheets, 50/50 per item | same, 50/50 | — |
+| **option order and instruction-sentence order** | permuted per sheet | permuted per sheet | permuted per sheet |
+| **item order on the sheet** | shuffled, with an item's presentations never adjacent | same | same |
+| **sheet size** | ~30 | ~10 | ~10 |
+
+**Why each random parameter exists:**
+
+- **⟂ is withheld in 10% of presentations** to measure the co-equal object: how much order the format manufactures, and whether what ⟂ suppresses is shared across families. The clean-room reading found it was (83%).
+- **Tie and gap are offered half the time** so that their effect on answers is measurable, while their data still accrue.
+- **No confidence rating.** Consistency across presentations — the same middle 3/3, or 2/3 — is the behavioural measure of how clearly an order comes through. I'd rather measure it than ask for it. The felt quantity that does earn a place is the **gap** "…": it says where rungs are missing, and so where between items should go.
+- **No axis words, ever:** no "magnitude", "amount", "size" or "value". The articulation filter (memory) is why.
+- **Fixed for every presentation:** the system prompt (one neutral line), isolation, and effort. Model id and thinking tokens are recorded per call.
+
+## 4. Seeds: decomposed, then they fade
+
+A seed is a starting point. It is broken into primitive items the moment it enters:
+
+- **its glyphs** join the pool;
+- **adjacent triads** along its written order;
+- **a sample of long-range triads;**
+- **one order item:** a window of up to 8 glyphs, shuffled;
+- **next items** from both ends;
+- **an annealing restart point.**
+
+Each generated item carries the seed's id in its lineage, as metadata.
+
+After that, a seed has **no standing** in the model. Its written order is never evidence and never a reference. If the triads support it, a candidate like it emerges; if not, nothing remains. The priority bump on its items is spent once those items have been answered.
+
+A `lattice` seed (the digit dress × value grid) is just a triad generator. It samples triples along each factor (same value with different dresses; same dress with different values) and mixed across them.
+
+`data/seeds/` is the dropspot for new seeds as they come up in analysis and ideation. The survey records are already seeds.
 
 ## 5. A round, and the analysis between rounds
 
-1. **Draw** N items from the queue: fated draws, recorded snapshot.
-2. **Build sheets** under §2's rules.
-3. **Run** the panel and append to the ledgers.
-4. **Analysis pass,** which recalibrates the slope:
-   - **Ingest and parse.** Unparsed and echo-failure rates per mind and per glyph.
-   - **Bias diagnostics per mind:**
-     - tendency to keep the shown order;
-     - middle-slot preference on triads;
-     - first- or last-kept preference;
-     - ⟂ and EXTRA rates by set size and by sheet position;
-     - same-sheet vs split agreement.
+1. **Draw** items from the queue. Sampling is fated, P ∝ exp(priority / T), and the queue snapshot is recorded.
+2. **Build sheets** (§3).
+3. **Send** the sheets to the roster and append to the ledgers. Re-ask sheets that fail or are incomplete; the raw answers are kept.
+4. **Analysis pass:**
+   - **parse;** report unparsed and echo-failure rates per mind and per glyph (they aren't missing at random);
+   - **re-fit the model (§2):** anneal, warm-started from the last round, with fresh restarts. This also re-estimates each mind's nuisance parameters, and so its slot bias. Where a bias is large, that mind's next sheets lean harder on the rotations that cancel it;
+   - **take posterior samples** at T > 0;
+   - **recalibrate the slope.** An item's priority is its expected information for the minds it would go to: the disagreement among posterior samples about its answer. Then:
+     - settled structure gets less sampling;
+     - contested links, splits between families, and splice tests get more;
+     - candidates whose ends are still growing get more next and between items;
+     - the kind mix in §3 shifts toward whichever kinds produced the most information per token last round, within the floors;
+   - **round report:** new, merged, split and dropped candidates; per-family strengths; the new allocation, with reasons.
+5. **Cool T,** or reheat it when new structure appears. Repeat.
 
-     Where a bias shows up, the next draw adds the counterbalancing that cancels it for that mind.
-   - **Evidence update:** posteriors per triple and per adjacency, per mind and per family.
-   - **Re-anneal** the candidates, warm-started from the last round's, plus fresh restarts.
-   - **Recalibrate the slope:**
-     - regions where every family already agrees with low variance get **less** sampling;
-     - contested links, splits between families, and glyphs below the density target get **more**;
-     - set sizes and continuation lengths are re-weighted toward what produced information last round.
-   - **Round report:** what changed. New candidates, merges, splits, broken links, and the new allocation with its reasons.
-5. **Cool** T, or reheat it, and repeat.
+**Stop rule:** K rounds with no new accepted glyph and no change in Σ beyond a threshold (the 08-25 "loop until dry"). The uniform floor keeps running throughout.
 
-**Stop rule:** K consecutive rounds with no new accepted rung and no change in candidates beyond a threshold (DESIGN: loop until dry). The uniform quota keeps running until then.
+## 6. Storage
 
-## 6. Panel
+**Truth** is append-only JSONL in `data/`:
 
-**A fixed core, one mind per LLM family.** It is fixed so each mind's evidence keeps accumulating; rotating models would thin every mind's statistics.
+- `items/`: items with their lineage;
+- `presentations/`: each presentation's fated factors;
+- `raw/<round>/<mind>/ledger.jsonl`: verbatim prompts and answers;
+- `queue/`: snapshots per round;
+- `fits/`: each round's Σ samples, parameters and report.
+
+**Index:** Postgres 18, database `empirica_glyph_sequence` (pgvector; the 1,235 survey records are already in), with views per mind of triad outcomes, order lines, co-membership and proposals. It is rebuildable from `data/` at any time.
+
+## 7. Roster
+
+**Core**, fixed so each mind's evidence accumulates:
 
 - Claude Sonnet 5.5;
 - Grok 4.6;
-- Gemini 3.8 Flash (Pro is slower and more rate-limited);
-- llama3.2-3b, locally, through single-item calls. It is the pilot's floor model, and the Latin rotation exposes its slot bias per triad. If ollama exposes answer log-probabilities, those are read too.
+- Gemini 3.8 Flash;
+- llama3.2-3b, locally, through single-item calls. Its slot bias is exposed by the rotations; answer log-probabilities are read if ollama gives them.
 
-**A ~20% subsample of every round also goes to second minds:** Opus 5.5, Haiku 4.5, Gemini 3.1 Pro, and Glimmer 30B. These measure the spread *within* a family, which is what family weighting needs. OpenAI's frontier model joins the core after Nov 2 as a new family.
+**Second minds:** a ~20% subsample of each round goes to Opus 5.5, Haiku 4.5, Gemini 3.1 Pro and Glimmer 30B. These measure spread within a family. OpenAI's frontier model joins the core after Nov 2.
 
-**Round size: small rounds early, larger as T cools.** Recalibration between rounds is the point, so frequent rounds beat big ones. A starting round:
-
-- ~200 triads × 3 rotations;
-- ~30 larger sets × 2 shuffles;
-- ~30 continuations.
-
-That is ~700 presentations, or ~25 sheet calls of ~30 items per API mind, and a few hours locally. Reaching ~15 appearances per glyph over the whole ~3,100-glyph pool would take on the order of 15,000 triads. The queue does not need that: glyphs that settle as ⟂ with everything stop drawing samples, and density goes where the structure is.
-
-Each mind's evidence stays separate. Agreement across families is the measure of universality.
-
-## 7. Seeds
-
-**Survey seeds.** All 1,235 survey records:
-
-- 849 sequences become initial candidates, unoriented, with no strength filter;
-- equivalences, generators, negatives and questions become set items;
-- morph and cyclic records become set and continuation items.
-
-**Domain seeds** land in `data/seeds/`. Its README gives the format: `set`, unoriented `sequence`, or `lattice`, plus author, date, origin and an optional bump. That is the dropspot for seeds as they come up in analysis and ideation. The first entry is the digit-dress × value lattice (162 glyphs), from Joseph's `①`/`⑴`/`❶`/`🯱` question. Seeds raise queue priority and nothing else.
+**Round size:** small early, so recalibration runs often. Round 0 is ~150 items, about 300 presentations. Rounds grow as T cools.
 
 ## 8. Build order
 
-Each step is committed, and each is checked before the next one starts.
+Each step is committed and checked before the next.
 
 1. **`harness/core/`:** judge adapters and fated seeds, copied from the archive.
-2. **Instruments and parser:** set arrangement and continuation, with unit tests on crafted answers, including adversarial ones (echo mismatch, a reversed sequence, duplicates).
-3. **Schema extension and ingest.**
-4. **Queue, sampler and sheet builder,** with every rule in §2 and a check that a rebuild is byte-identical.
-5. **The analysis pass and the annealer,** validated on synthetic judges with planted sequences and planted biases. Planted structure must be recovered and planted biases cancelled before any real judge call.
-6. **Round 0:** a ~150-item shakedown on three families, reviewed with you. Then the rounds.
+2. **Item builders and parsers** for triad, order, next and between, with unit tests on crafted answers, including adversarial ones: echo mismatch, `#n` position answers, ties, two sequences, a glyph answered twice.
+3. **Storage and ingest.**
+4. **Queue, sampler and sheet builder,** with a check that a rebuild is byte-identical.
+5. **The model and the annealer (§2),** validated on **synthetic minds** with planted sequences (crossings, ties, a holistic one, a splice trap) and planted biases (slot, ⟂-propensity, guessing). Planted structure must be recovered and planted biases estimated before any real call.
+6. **Round 0** with you. Then rounds.
 
-## 9. Decisions (2026-10-04)
+## 9. Decisions so far (2026-10-04)
 
-1. **Primitive.** Triads as the walk's workhorse, larger sets around candidates, and continuation. Pairs are dropped. *(My lean; Joseph asked about triads and the reasoning is in §1.)*
-2. **Domain seeds.** The surveys already serve as domain seeds. New ones go to `data/seeds/` as they come up (Joseph). A broader agent sweep for more is optional; I'd run it after round 0, once the queue exists to use them.
-3. **Panel and round size.** As in §6. *(My lean.)*
-4. **Database.** A fresh `empirica_glyph_sequence`. *(My lean; built.)*
-5. **Name.** Renamed to `glyph-sequence-perception` (Joseph: yes).
-6. **`empirica/INDEX.md`.** Updated (Joseph: yes).
+- **Primitive:** triad as the workhorse; order, next and between around it; pairs dropped.
+- **Seeds:** decomposed and fading, as in §4. The dropspot is `data/seeds/`.
+- **Roster and round size:** my lean, as in §7.
+- **Database:** `empirica_glyph_sequence`, built.
+- **Name:** `glyph-sequence-perception`.
+- **Index:** `empirica/INDEX.md` updated.

@@ -1,6 +1,6 @@
 # seeds/ — where seed ideas land
 
-Every idea about where the stochastic queue should look goes here, as it comes up in analysis, hypothesizing or conversation. A seed **only raises the priority** of its glyphs and sets in the queue (`../../PLAN.md` §4, §7). It never excludes anything, never sets a reference order, and never enters a statistic.
+Every idea about where the stochastic queue should look goes here, as it comes up in analysis, hypothesizing or conversation. A seed is a starting point. It is decomposed into triads, order windows and next items, which get a priority bump until they have been answered (`../../PLAN.md` §4). Its written order is never evidence, never a reference, and never enters a statistic; the emergent sequences are inferred from the answers alone.
 
 The surveys in `../surveys-v1/` are already seeds. Their 1,235 records are ingested as-is, so nothing from them needs re-entering here.
 
