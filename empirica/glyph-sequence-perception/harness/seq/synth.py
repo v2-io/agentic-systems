@@ -82,8 +82,9 @@ class Truth:
 
     def answer_order(self, m, shown, f, r):
         fam, th, sv = self.minds[m]
-        if r.random() < th["eps"]:
-            n = r.randint(3, len(shown)); return {"seqs": [shown[:n]], "extra": shown[n:]}
+        if r.random() < th["eps"]:   # noise: a random subset in a random order (the fit's noise assumes no shown-order preference here)
+            sub = list(shown); r.shuffle(sub); n = r.randint(3, len(shown))
+            return {"seqs": [sub[:n]], "extra": sub[n:]}
         lines, used = [], set()
         for k in self.names:
             st = [[g for g in s if g in shown and g not in used] for s in self.world["seqs"][k]]

@@ -49,6 +49,8 @@ def main():
             print(f"{k}: no candidates"); continue
         cg = set(flat(cands[best]["steps"]))
         j = len(tg & cg) / len(tg | cg)
+        if j == 0:
+            print(f"{k} | {len(tg)} | not found"); continue
         oa, ns = order_agree(steps, cands[best]["steps"])
         fams = sorted(set(fam.values()))
         tr = {f: max(max(minds[m][2][k]) for m in minds if fam[m] == f) for f in fams}

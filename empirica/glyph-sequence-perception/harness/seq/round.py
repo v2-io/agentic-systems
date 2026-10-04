@@ -421,6 +421,21 @@ def report(rid, fit, fam, items, pres, parsed):
     L += ["", "## Minds: nuisance parameters", "", "| mind | eps | nn | nt | beta | tau |", "|---|---|---|---|---|---|"]
     for m, th in sorted(best["theta"].items()):
         L.append(f"| {m} | {th['eps']} | {th['nn']} | {th['nt']} | {th['beta']} | {th['tau']} |")
+    L += ["", "## Minds: slot bias read directly from the Latin rotations (no model)", "",
+          "Over triads whose three rotations were all answered with an order: share of answers naming the glyph shown in the middle (1/3 = no slot preference), and share of triads given the same middle in all three rotations.", "",
+          "| mind | triads | middle = shown middle | same middle 3/3 |", "|---|---|---|---|"]
+    rot = collections.defaultdict(lambda: collections.defaultdict(dict))
+    for r in parsed:
+        p = pres[r["pid"]]
+        if p["kind"] == "triad" and r["status"] == "ok":
+            rot[r["mind"]][p["iid"]][p["rep"]] = (r["answer"], p["shown"])
+    for m in sorted(rot):
+        full = [d for d in rot[m].values() if all(k in d for k in (0, 1, 2)) and all(d[k][0][0] == "mid" for k in (0, 1, 2))]
+        if not full:
+            continue
+        hit = sum(d[k][0][1] == d[k][1][1] for d in full for k in (0, 1, 2)) / (3 * len(full))
+        same = sum(len({d[k][0][1] for k in (0, 1, 2)}) == 1 for d in full) / len(full)
+        L.append(f"| {m} | {len(full)} | {hit:.2f} | {same:.2f} |")
     L += ["", "## Parse status this round", ""]
     L += [f"- {k}: {v}" for k, v in sorted(fit["parse"].items())]
     return "\n".join(L) + "\n"

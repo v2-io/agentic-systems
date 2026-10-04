@@ -244,7 +244,7 @@ ADAPTER_VERSION = {"claude": "a1", "ollama": "a2-format", "grok": "a2-no-tools",
 def make_judge(spec):
     """spec: {"adapter": ..., "model": ..., plus adapter kwargs} -> callable(system, prompt)"""
     a = spec["adapter"]; m = spec["model"]
-    kw = {k: v for k, v in spec.items() if k not in ("adapter", "model", "mode", "sheet_size", "workers", "label", "note", "INVALID")}
+    kw = {k: v for k, v in spec.items() if k not in ("adapter", "model", "mode", "sheet_size", "workers", "label", "note", "INVALID", "family")}
     fn = {"claude": claude_call, "ollama": ollama_call, "grok": grok_call,
           "codex": codex_call, "agy": agy_call, "llamacpp": llamacpp_call}[a]
     return lambda system, prompt: fn(m, system, prompt, **kw)

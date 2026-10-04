@@ -29,6 +29,7 @@ OUTS = None  # outcomes are tuples: ("mid", g) ("tie2", end, a, b) ("tie3",) ("t
 GRID = (0.0, 0.03, 0.1, 0.2, 0.35, 0.5, 0.65, 0.8, 0.9, 0.97)
 LAMBDA_C, LAMBDA_G, LAMBDA_W = 1.0, 2.0, 12.0
 GRID_COARSE = (0.0, 0.1, 0.35, 0.65, 0.9)
+WITNESS_MIN = 2
 MIN_LEN = 3
 P_TIE_NOISE = 0.02
 
@@ -306,8 +307,8 @@ class Model:
         return [i for i, n in cnt.items() if n >= 2]
 
     def witness_parts(self, cand):
-        """Number of separately-witnessed pieces of `cand`: triples observed with an answer in the candidate's
-        order (any mind) are linked when they share two glyphs; glyphs in no such triple count as pieces of
+        """Number of separately-witnessed pieces of `cand`: triples answered in the candidate's order at least
+        twice, and by at least half of the answers they received (any minds, any presentations), are linked when they share two glyphs; glyphs in no such triple count as pieces of
         their own. A sequence claim is built from overlapping perceived triples, so pieces beyond one are
         claims nothing witnessed (interleavings, splices through a single bridge glyph)."""
         parent = {}
@@ -316,21 +317,26 @@ class Model:
                 parent[x] = parent[parent[x]]; x = parent[x]
             return x
         covered = set()
+        tally = collections.defaultdict(lambda: [0, 0])     # triple -> [answers in the candidate's order, all answers]
         for i in self.obs_for(cand):
             o = self.obs[i]
-            if len(set(o["tri"]) & set(cand.pos)) < 3 or o["out"][0] not in ("mid", "tie2", "tie3"):
+            if len(set(o["tri"]) & set(cand.pos)) < 3:
                 continue
-            pred = _pred_cand(cand.pos, o["tri"], True, 0.5)
-            if pred.get(o["out"], 0) <= 0 and not (o["out"][0] == "mid" and any(k[0] == "mid" and k[1] == o["out"][1] for k in pred)):
+            t = tally[o["tri"]]
+            t[1] += 1
+            if o["out"][0] in ("mid", "tie2", "tie3") and _pred_cand(cand.pos, o["tri"], True, 0.5).get(o["out"], 0) > 0:
+                t[0] += 1
+        for tri, (ok, n) in tally.items():
+            if ok < WITNESS_MIN or ok < 0.5 * n:   # witnessed: >= 2 answers in this order, and at least half of all answers
                 continue
-            a, b, c = o["tri"]
+            a, b, c = tri
             prs = [(a, b), (a, c), (b, c)]
             for q in prs:
                 parent.setdefault(q, q)
             r0 = find(prs[0])
             for q in prs[1:]:
                 parent[find(q)] = r0
-            covered.update(o["tri"])
+            covered.update(tri)
         roots = {find(q) for q in parent}
         return len(roots) + len(set(cand.pos) - covered)
 
