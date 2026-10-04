@@ -123,7 +123,13 @@ That suggests a shared representational direction coexisting with judges who, gi
   - qwen3:4b, a *duplicate* of a T7 blob, which is now a local file instead of a symlink: 2.5 GB;
   - gemma3:4b, phi4-mini, mistral:7b and qwen2.5:3b: about 12 GB in all.
 
-  I deleted a partial gpt-oss download. `ollama rm` reverses the new ones. For qwen3:4b, deleting the local blob and restoring the symlink returns it to T7-only.
+  I deleted a partial gpt-oss download.
+
+  *Resolved after this debrief, at your request:*
+  - qwen3:4b's duplicate is gone, and so is an older llama3.2:3b duplicate dated 2026-10-02, from before my session. Both were checked by SHA-256 against their T7 copies and turned back into symlinks.
+  - gemma3:4b, phi4-mini, mistral:7b and qwen2.5:3b were copied to T7, checked, and symlinked.
+  - All six load. About 16.6 GB of internal disk was recovered.
+  - The T7 README lists the additions.
 - **Resource contention.** For a while I ran several local models at once (your "three llama-servers"). I moved to one at a time after your note.
 - **Errors the audits caught:**
   - **qwen3 4B produced no valid answers.** Its reasoning leaked into the reply and was truncated. My parser read "First, the user is asking…" as the answer *first*. All of its numbers are withdrawn.
