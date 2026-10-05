@@ -9,11 +9,13 @@ from common import R, ok_glyph
 import items as I
 import model as M
 
+SUPPORT_SHARE = 0.20   # of each round's items, once candidates exist: tests of unsupported links and unwitnessed ties
 EARLY = {("triad", "tail"): .15, ("triad", "seed"): .50, ("order", "seed"): .15,
          ("next", "seed"): .08, ("next", "tail"): .07, ("between", "seed"): .05}
-LATE = {("triad", "tail"): .15, ("triad", "seed"): .10, ("triad", "cand"): .30, ("order", "seed"): .05,
-        ("order", "cand"): .20, ("next", "cand"): .08, ("next", "tail"): .05, ("next", "seed"): .02,
-        ("between", "cand"): .05}
+LATE = {("triad", "tail"): .15, ("triad", "seed"): .08, ("triad", "support"): .15, ("triad", "cand"): .20,
+        ("order", "seed"): .04, ("order", "support"): .05, ("order", "cand"): .16, ("next", "cand"): .07,
+        ("next", "tail"): .05, ("next", "seed"): .02, ("between", "cand"): .03}
+FLOORS_SUPPORT = {("triad", "support"): .10}
 FLOORS = {("triad", "tail"): .10, ("next", "tail"): .05}
 P_PERP_RECHECK = 0.10      # share of first-presentation-⟂ triads that get a second presentation
 SEED_BUMP = 2.0
@@ -135,8 +137,41 @@ def reweight(base, realized):
         return dict(base)
     tot = sum(realized.get(c, 0.0) for c in base) or 1.0
     q = {c: 0.7 * base[c] + 0.3 * realized.get(c, 0.0) / tot for c in base}
-    for c, f in FLOORS.items():
+    for c, f in list(FLOORS.items()) + list(FLOORS_SUPPORT.items()):
         if c in q and q[c] < f:
             q[c] = f
     z = sum(q.values())
     return {c: v / z for c, v in q.items()}
+
+
+def support_items(mod, cid, round_id):
+    """Items that test candidate `cid`'s unsupported links and unwitnessed ties (Joseph, 2026-10-04: the standings'
+    untested links show "what kind of sheets need higher priority"). For a link between steps i and i+1: triads with
+    each outside neighbour (step i-1 or i+2) and one triad with a glyph two steps away, so both the link and its
+    position are asked; for a tie: the tied pair with each neighbour. Plus one order window spanning the gap.
+    Priority: 3 when never asked together, else 2 / (1 + in-order answers so far)."""
+    c = mod.cands[cid]
+    links, ties, weak = M.link_support(mod, c)
+    steps = c.steps
+    idx = {g: i for i, st in enumerate(steps) for g in st}
+    out = []
+    r = R("support-items", {"round": round_id, "cand": c.key()})
+    def pr(k):
+        w = weak.get(k, 0)
+        return 3.0 if w == 0 else 2.0 / (1 + w)
+    for a, b in links:
+        i = idx[a]
+        around = [steps[j][0] for j in (i - 1, i + 2, i - 2, i + 3) if 0 <= j < len(steps)]
+        for g in around[:3]:
+            if g not in (a, b):
+                out.append((I.make_item("triad", [a, b, g], source={"kind": "support", "ref": "link", "link": a + b}), pr((a, b))))
+        lo, hi = max(0, i - 2), min(len(steps), i + 4)
+        win = [st[0] for st in steps[lo:hi]]
+        if len(set(win)) >= 4:
+            out.append((I.make_item("order", win[:8], source={"kind": "support", "ref": "window", "link": a + b}), pr((a, b))))
+    for x, y in ties:
+        i = idx[x]
+        around = [steps[j][0] for j in (i - 1, i + 1) if 0 <= j < len(steps) and steps[j][0] not in (x, y)]
+        for g in around:
+            out.append((I.make_item("triad", [x, y, g], source={"kind": "support", "ref": "tie", "tie": x + y}), pr((x, y))))
+    return out

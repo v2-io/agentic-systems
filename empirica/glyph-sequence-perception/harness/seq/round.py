@@ -207,6 +207,13 @@ def cmd_plan(a):
         cats[(it["kind"], "tail")].append((it, 0.0))
     if fit and fit["best"]["cands"]:
         snap = fit["best"]
+        # link-support tests: every unsupported link and unwitnessed tie of every candidate in the last fit
+        cur = M.from_snapshot(snap, M.observations(parsed, pres), sorted({r["mind"] for r in parsed}))
+        n_sup = 0
+        for cid in list(cur.cands):
+            for it, pri in Q.support_items(cur, cid, rid):
+                cats[(it["kind"], "support")].append((it, pri)); n_sup += 1
+        print(f"{rid}: {n_sup} link/tie support items generated")
         nb = _neighbours(snap, parsed, pres, props)
         for ci in range(len(snap["cands"])):
             for it in Q.cand_items(snap, nb.get(ci, []), rid, ci):

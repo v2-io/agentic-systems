@@ -428,6 +428,32 @@ class Model:
                           for ci, c in sorted(self.cands.items())],
                 "theta": self.theta, "objective": self.objective(), "loglik": self.total}
 
+# ------------------------------------------------------------------ link support (shared by standings and the queue)
+def link_support(model, cand):
+    """-> (unsupported_links, unsupported_ties, weak): links between consecutive steps and ties inside steps that no
+    WITNESSED triple (>= 2 answers in the candidate's order, and a majority) holds both glyphs of. `weak` maps each
+    link/tie to the number of in-order answers it has so far (0 = never asked together)."""
+    tl = collections.defaultdict(lambda: [0, 0])
+    for i in model.obs_for(cand):
+        o = model.obs[i]
+        if len(set(o["tri"]) & set(cand.pos)) == 3:
+            t = tl[o["tri"]]; t[1] += 1; t[0] += o["out"] == _strict(cand.pos, o["tri"])
+    wit = {tri for tri, (ok, n) in tl.items() if ok >= WITNESS_MIN and ok >= 0.5 * n}
+    def held(x, y, trs):
+        return any(x in t and y in t for t in trs)
+    def inorder(x, y):
+        return sum(ok for tri, (ok, n) in tl.items() if x in tri and y in tri)
+    links, ties, weak = [], [], {}
+    for a, b in zip(cand.steps, cand.steps[1:]):
+        if not any(held(x, y, wit) for x in a for y in b):
+            k = (a[0], b[0]); links.append(k); weak[k] = max(inorder(x, y) for x in a for y in b)
+    for st in cand.steps:
+        for x in st:
+            for y in st:
+                if x < y and not held(x, y, wit):
+                    ties.append((x, y)); weak[(x, y)] = inorder(x, y)
+    return links, ties, weak
+
 # ------------------------------------------------------------------ annealing
 def _neighbours(model, cand, k=40):
     """glyphs that co-occur with members of `cand` in a non-none outcome, most frequent first."""

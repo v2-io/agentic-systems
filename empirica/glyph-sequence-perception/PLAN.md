@@ -233,6 +233,12 @@ A `lattice` seed (the digit dress × value grid) is just a triad generator. It s
    - **parse;** report unparsed and echo-failure rates per mind and per glyph (they aren't missing at random);
    - **re-fit the model (§2):** anneal, warm-started from the last round, with fresh restarts. This also re-estimates each mind's nuisance parameters, and so its slot bias. Where a bias is large, that mind's next sheets lean harder on the rotations that cancel it;
    - **take posterior samples** at T > 0;
+   - **find the unsupported links.** For every candidate, list its links and ties that no witnessed triple supports yet: two or more answers in the candidate's order, and a majority. These become **support items**, a dedicated category of about 20% of each round, with a floor of 10% (Joseph, 2026-10-04: the standings' untested links show *"what kind of sheets need higher priority"*).
+     - *Triads* pair the two glyphs of the link with each neighbour.
+     - *Order windows* span the gap.
+     - *Priority:* highest when the two glyphs have never been asked together.
+
+     A warm-started fit cannot surface these through posterior disagreement, because every warm chain inherits the same arbitrary choice.
    - **recalibrate the slope.** An item's priority is its expected information for the minds it would go to: the disagreement among posterior samples about its answer. Then:
      - settled structure gets less sampling;
      - contested links, splits between families, and splice tests get more;
