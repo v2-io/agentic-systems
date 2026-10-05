@@ -31,7 +31,8 @@ k*: per walked step, the shortest asked suffix whose top continuation is the ste
 suffix agreeing. It is KNOWN when every shorter suffix down to 2 glyphs has been asked; otherwise it is an upper bound.
 CYCLES (METHODOLOGY §3): only where a continue answer MANIFESTS one: the shown context plus what the mind wrote holds a
 stretch with period p of length >= 2p + 1 (2p edges, "the entire pattern has repeated itself"), of which the mind
-wrote at least p + 1. Periods with fewer than 4 distinct glyphs are recorded but out of scope for now.
+wrote at least p + 1 and was shown less than one whole period (writing again a period that was shown whole is
+repetition, not closure: METHODOLOGY §4; found 2026-10-05 on end questions over 4-glyph runs). Periods with fewer than 4 distinct glyphs are recorded but out of scope for now.
 """
 import collections, json, pathlib, sys
 
@@ -53,7 +54,10 @@ def canon_cycle(P):
     return min(rots + [tuple(reversed(r)) for r in rots])
 
 def manifest(S, shown):
-    """smallest period p with a stretch of length >= 2p+1 in S, >= p+1 of it written (index >= shown) -> P or None"""
+    """smallest period p with a stretch of length >= 2p+1 in S, >= p+1 of it written (index >= shown), and less than a
+    whole period of it shown -> P or None. The last condition (2026-10-05): end questions on 4-glyph runs showed the whole
+    period (`◁ ▽ ▷ △ | ◁ ▽ ▷ △ …`), and writing it again is repeating what was shown, not closing a cycle oneself;
+    METHODOLOGY §4: a repeat must be the mind's own."""
     n = len(S)
     for p in range(2, n // 2 + 1):
         run_start = 0
@@ -61,7 +65,10 @@ def manifest(S, shown):
             if j + p < n and S[j] == S[j + p]:
                 # stretch [run_start, j + p] is p-periodic
                 L = j + p - run_start + 1
-                if L >= 2 * p + 1 and (j + p + 1 - max(shown, run_start)) >= p + 1:
+                P = S[run_start:run_start + p]
+                if any(p % q == 0 and P == P[:q] * (p // q) for q in range(1, p)):
+                    continue                     # a repeat of a shorter period, already judged at that period
+                if L >= 2 * p + 1 and (j + p + 1 - max(shown, run_start)) >= p + 1 and max(0, shown - run_start) < p:
                     return S[run_start:run_start + p]
             else:
                 run_start = j + 1

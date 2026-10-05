@@ -271,6 +271,8 @@ def commit(rid):
     rel = ROOT.relative_to(STUDY.parents[1])
     paths = [str(rel / "data" / "rounds" / r) for r in ctx_rounds()] + [str(rel / f) for f in ("SEQUENCES.md", "PROGRESS.md", "BEST.md")]
     git("add", *paths)
+    if git("diff", "--cached", "--quiet", "--", *paths).returncode == 0:
+        return None                                          # nothing new (e.g. a resumed round already committed)
     r = git("commit", "-q", "-m", f"empirica/glyph-sequence: context-tree round {rid} (planned, Claude answered; drained answers "
             "of earlier rounds; SEQUENCES + PROGRESS)\n\n"
             "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\n"
@@ -281,16 +283,24 @@ def cmd_record_all(a):
     for rid in ctx_rounds():
         cmd_record(argparse.Namespace(round=rid))
 
-def cmd_round(a):
+def cmd_round(a, resume=False):
+    """plan (unless resuming a planned round), ask the drivers, record every round, tree, progress, commit. Asking
+    resumes from the ledgers, so a loop restarted mid-round finishes that round before planning the next."""
     drivers = sorted(driver_minds(minds()))
-    steps = ((cmd_plan, a), (cmd_ask, argparse.Namespace(round=a.round, minds=drivers)), (cmd_record_all, a),
-             (cmd_tree, a), (cmd_progress, a))
+    steps = (() if resume else ((cmd_plan, a),)) + ((cmd_ask, argparse.Namespace(round=a.round, minds=drivers)),
+             (cmd_record_all, a), (cmd_tree, a), (cmd_progress, a))
     for f, aa in steps:
         print(f"== {a.round} {f.__name__} {dt.datetime.now():%H:%M:%S}", flush=True)
         f(aa)
-    print(f"== {a.round} committed" if commit(a.round) else f"!! {a.round} commit failed", flush=True)
+    c = commit(a.round)
+    print(f"== {a.round} committed" if c else (f"== {a.round} nothing new to commit" if c is None else f"!! {a.round} commit failed"), flush=True)
 
 def cmd_loop(a):
+    done = ctx_rounds()
+    if done and not (DATA / "rounds" / "STOP").exists():          # finish the last round first (a restart mid-round)
+        print(f"== {done[-1]} resumed {dt.datetime.now():%H:%M:%S}", flush=True)
+        cmd_round(argparse.Namespace(round=done[-1], budget=a.budget), resume=True)
+        round_gap()
     while not (DATA / "rounds" / "STOP").exists():
         done = ctx_rounds()
         rid = f"c{(int(done[-1][1:]) + 1) if done else 1:03d}"
@@ -298,15 +308,19 @@ def cmd_loop(a):
             cmd_round(argparse.Namespace(round=rid, budget=a.budget))
         except Exception as ex:
             print(f"!! {rid} failed: {ex!r}", flush=True); raise
-        gap = 0
-        try:
-            gap = json.load(open(ROOT / "pace.json")).get("round_gap_min", 0)
-        except Exception:
-            pass
-        t_end = time.time() + 60 * gap
-        while time.time() < t_end and not (DATA / "rounds" / "STOP").exists():
-            time.sleep(30)
+        round_gap()
     print("== STOP found", flush=True)
+
+def round_gap():
+    """pause between rounds: pace.json round_gap_min, re-read; cut short by STOP"""
+    gap = 0
+    try:
+        gap = json.load(open(ROOT / "pace.json")).get("round_gap_min", 0)
+    except Exception:
+        pass
+    t_end = time.time() + 60 * gap
+    while time.time() < t_end and not (DATA / "rounds" / "STOP").exists():
+        time.sleep(30)
 
 MIN_UNICODE = 16          # what counts as a glyph is unicodedata's call (probe.is_glyph): on older data a newer character
                           # reads as unassigned, so it can never be asked and an answer naming it is cut there. Found
