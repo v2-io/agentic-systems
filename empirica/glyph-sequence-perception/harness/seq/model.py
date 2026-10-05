@@ -335,7 +335,7 @@ class Model:
             if o["out"] == _strict(cand.pos, o["tri"]):   # strict: a tie is witnessed only by a tie answer
                 t[0] += 1
         for tri, (ok, n) in tally.items():
-            if ok < WITNESS_MIN or ok < 0.5 * n:   # witnessed: >= 2 answers in this order, and at least half of all answers
+            if ok < WITNESS_MIN:   # witnessed: >= 2 answers in this order (no majority; 2026-10-04)
                 continue
             a, b, c = tri
             prs = [(a, b), (a, c), (b, c)]
@@ -438,7 +438,7 @@ def link_support(model, cand):
         o = model.obs[i]
         if len(set(o["tri"]) & set(cand.pos)) == 3:
             t = tl[o["tri"]]; t[1] += 1; t[0] += o["out"] == _strict(cand.pos, o["tri"])
-    wit = {tri for tri, (ok, n) in tl.items() if ok >= WITNESS_MIN and ok >= 0.5 * n}
+    wit = {tri for tri, (ok, n) in tl.items() if ok >= WITNESS_MIN}
     def held(x, y, trs):
         return any(x in t and y in t for t in trs)
     def inorder(x, y):
@@ -481,7 +481,7 @@ def supported_pieces(model, cand):
         o = model.obs[i]
         if len(set(o["tri"]) & set(cand.pos)) == 3:
             t = tl[o["tri"]]; t[1] += 1; t[0] += o["out"] == _strict(cand.pos, o["tri"])
-    wit = {tri for tri, (ok, n) in tl.items() if ok >= WITNESS_MIN and ok >= 0.5 * n}
+    wit = {tri for tri, (ok, n) in tl.items() if ok >= WITNESS_MIN}
     def held(x, y):
         return any(x in t and y in t for t in wit)
     runs, cur = [], []

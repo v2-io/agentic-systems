@@ -289,7 +289,7 @@ def sequence_work(pc, ends, cooc, seed_next, support_by_glyph, follow_by_glyph, 
     work = []
     tri_extra = []
     for st in ends:
-        if st["closed"]:
+        if st["closed"] or pc.get("cyclic"):
             continue
         nb = list(pc.get("hints", [])) + [x for x in cooc.get(st["end"], []) if x not in pc.get("hints", [])]
         gen = extension_items(pc, st, nb, round_id, seed_next)
@@ -300,6 +300,17 @@ def sequence_work(pc, ends, cooc, seed_next, support_by_glyph, follow_by_glyph, 
         work += [(1, it) for it in tr[:1]]
         tri_extra += tr[1:] + orw
     g = set(pc["glyphs"])
+    for t in pc.get("untested", []):          # consecutive triples of the sequence no answer has given yet
+        try:
+            work.append((2, I.make_item("triad", list(t), source={"kind": "step", "ref": "".join(pc["glyphs"])})))
+        except AssertionError:
+            pass
+    # unresolved forks at this sequence: ask q x y (does one lie beyond the other, or is it a real branch?)
+    for f in pc.get("forks", []):
+        try:
+            work.append((2, I.make_item("triad", [f["at"], f["x"], f["y"]], source={"kind": "fork", "at": f["at"]})))
+        except AssertionError:
+            pass
     seen = set()
     for x in pc["glyphs"]:
         for it in support_by_glyph.get(x, []):

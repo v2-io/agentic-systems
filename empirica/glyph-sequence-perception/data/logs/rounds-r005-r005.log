@@ -3,3 +3,6 @@ r005: 191 established sequences; extend/between 338, explore/next 80, extend/nex
 r005: 500 new items + 105 follow-up presentations -> 696 presentations, 228 sheets (T=0.50)
 r005 done
 COMMITTED r005 fa5c4f28
+STANDINGS r005
+== r005 done 22:08:43
+/Users/josephwecker-v2/src/arch/asf/empirica/glyph-sequence-perception/harness/seq/rounds.sh: line 28: o: command not found

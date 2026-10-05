@@ -19,7 +19,7 @@ for spec in $1; do
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01MfWNNnWTnFYD1Y8Jh7KFHF" -- "empirica/glyph-sequence-perception/data" ) && echo "COMMITTED $rid $(git -C "$ASF" log -1 --format=%h)"
-  python3 standings.py "$rid" > /dev/null && python3 evidence_view.py "$rid" > /dev/null && python3 progress.py > /dev/null && ( cd "$ASF" && git add "empirica/glyph-sequence-perception/STANDINGS.md" "empirica/glyph-sequence-perception/PROGRESS.md" "empirica/glyph-sequence-perception/data" && git commit -q -m "empirica/glyph-sequence: standings + progress after $rid
+  python3 growth.py "$rid" > /dev/null && python3 progress.py > /dev/null && ( cd "$ASF" && git add "empirica/glyph-sequence-perception/STANDINGS.md" "empirica/glyph-sequence-perception/PROGRESS.md" "empirica/glyph-sequence-perception/data" && git commit -q -m "empirica/glyph-sequence: standings + progress after $rid
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01MfWNNnWTnFYD1Y8Jh7KFHF" -- "empirica/glyph-sequence-perception/STANDINGS.md" "empirica/glyph-sequence-perception/PROGRESS.md" "empirica/glyph-sequence-perception/data" ) && echo "STANDINGS $rid"

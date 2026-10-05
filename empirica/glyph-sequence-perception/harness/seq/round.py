@@ -18,7 +18,7 @@ import items as I
 import parse as P
 import model as M
 import squeue as Q
-import evidence_view as EV
+import growth as G
 
 def D(a):
     return pathlib.Path(a.data) if a.data else EXP / "data"
@@ -179,9 +179,9 @@ def cmd_plan(a):
     obs = M.observations(parsed, pres)
     cur = M.from_snapshot(fit["best"], obs, sorted({r["mind"] for r in parsed})) if fit and fit["best"]["cands"] else None
     fam = family_of(d)
-    # established sequences: chained from witnessed triples (evidence_view), not from the likelihood fit, which can drop
-    # or merge valid sequences (2026-10-04). The fit's candidates remain a source of guesses, asked in the link tier.
-    pieces = EV.piece_table(obs, fam) if obs else []
+    # sequences: every one the answers grow (growth.py), most stable first; nothing filtered (Joseph, 2026-10-04).
+    # The fit's candidates remain a source of guesses, asked in the link tier.
+    pieces = G.piece_table(obs, parsed, pres, fam) if obs else []
     in_piece = set()
     for pc in pieces:
         in_piece.update(pc["glyphs"])
@@ -233,9 +233,9 @@ def cmd_plan(a):
         sel_items.setdefault(it["iid"], dict(it, category=list(cat), round_created=it.get("round"), round=rid))
         new_pres.append(I.presentation(it, rp, rid)); spent += 1
         return True
-    # (1) exploration: first confirm exploratory kernels (follow-ups of triads >= 2 minds ordered, outside any sequence),
+    # (1) exploration: first confirm exploratory kernels (follow-ups of triads any mind ordered, most minds first),
     #     up to a third of the share; then hot items in their fated (seed-bumped) random order
-    kern = sorted([f for f in follows if f[2] >= 2 and not all(g in in_piece for g in f[0]["glyphs"])],
+    kern = sorted([f for f in follows if not all(g in in_piece for g in f[0]["glyphs"])],
                   key=lambda f: (-f[2], f[0]["iid"], f[1]))
     for f in kern:
         if spent >= B_explore / 3:

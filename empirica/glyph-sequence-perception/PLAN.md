@@ -98,9 +98,11 @@ Three things can't be seen in triads, and each is why longer chains matter.
 - **Distinct minima** come from restarts and a tabu on minima already found. They are kept as alternative explanations; the drain's several linearizations are the case in point.
 - **Running at T > 0** gives *posterior samples* of Σ. The spread across samples is the uncertainty that drives the next round's queue.
 
+*Since 2026-10-04 (night), the fit only proposes guesses (§3); sequences are grown directly from the answers by `growth.py`.*
+
 **Three constraints the validation and the first real rounds showed are necessary.** Each fixes a way the fit could explain the answers with structure nobody perceived:
 
-1. **A sequence claim must be witnessed as one piece.** Triples answered in the candidate's order at least twice, and by at least half of their answers, are linked when they share two glyphs. Every separately witnessed piece beyond one costs heavily.
+1. **A sequence claim must be witnessed as one piece.** Triples answered in the candidate's order at least twice are linked when they share two glyphs. Every separately witnessed piece beyond one costs heavily.
    - *Why:* interleaving two sequences preserves every within-sequence relation, so the likelihood alone cannot object. A splice through a single bridge glyph also breaks the chain.
    - *Where seen:* the first synthetic run, and real r000.
    - *How strict:* a tie is witnessed only by tie answers. Ties across families had served as a loophole.
@@ -121,15 +123,19 @@ Joseph's rule, as he stated it:
 
 It is implemented as stated, in two parts (`harness/seq/squeue.py`, `round.cmd_plan`):
 
-**Established sequences come from the witnessed triples directly** (`harness/seq/evidence_view.py`, since 2026-10-04, late). Each is a chain in which every step is the middle of a triple the minds answered in that order at least twice, and by a majority:
+**Sequences are grown from the answers, and nothing is filtered out** (`harness/seq/growth.py`, since 2026-10-04, night). Joseph: *"I don't understand why there is some sort of consolidation work anymore at all, really, that throws away good data because it's not supported* enough *… when we're still hot and exploring even completely random stuff."* The growth is his methodology, applied as written:
 
-- *Reduction:* chains are transitively reduced.
-- *Forks:* a chain forks where an end has several mutually unordered witnessed continuations. That is natural branching, found stochastically by the system.
-- *Folding:* near-restatements are folded in, and their extra glyphs are kept as extension hints.
+- **Kernel:** any triad that some answer gave a middle to. A triad given two different middles yields two kernels.
+- **Growth:** glyphs are placed one at a time, best-supported first, wherever some answer puts them: beyond an end (`p q x`, answered with `q` as the middle) or between two neighbours (`u x v`, answered with `x` as the middle). Adjacency is not asserted; it is simply where no answer has yet placed anything between.
+- **Branches:** each kernel grows into its own row, so a branch shows up as rows that share a stretch.
+- **Cycles:** a cycle closes when answers put the first glyph beyond the last (four or more glyphs, both wrap triples answered). It is clamped there.
+- **Same growth, earlier stage:** a row whose glyphs all lie in a longer row, in the same order, is that longer row.
 
-The likelihood fit had been dropping or merging valid creative sequences: `ⅠⅡⅤⅧⅨⅩⅫ`, `꜖꜔꜒`, `♕♖♗`, `ₐaᴀA` and `😢🙁😐` all fell out of it while fully witnessed (Joseph noticed). It now only proposes guesses, which the link tier asks about. `STANDINGS.md` is this view, with nothing cut off. The fit's list is kept in `data/standings/rNNN.md`.
+Support is the number of answers and families behind each step, shown per row. It orders the planner's work and never removes a row. Steps that no answer has given yet, which insertion can create, are asked next (tier 2 below). The minds' proposals (what comes next, what goes between) decide what gets asked, and are listed at each end of a row until an answer tests them.
 
-1. **15% hot exploration.** First, the rotation follow-ups that confirm a kernel: an exploratory triad that two or more minds ordered (up to a third of the share). Then tests of what minds proposed **between** two glyphs (a triad `a g b`, up to a sixth). Then stochastic items over the whole pool, each glyph weighted by its seed's bump, interleaved in a fated order:
+This replaced, the same night, a chaining view (`evidence_view.py`, now in git history). Its two-answer witness rule, transitive reduction, folding and fork rules discarded single answers and stalled growth. The likelihood fit only proposes guesses, which the link tier asks about. Its list is not shown.
+
+1. **15% hot exploration.** First, the rotation follow-ups that confirm a kernel: an exploratory triad any mind ordered, most minds first (up to a third of the share). Then tests of what minds proposed **between** two glyphs (a triad `a g b`, up to a sixth). Then stochastic items over the whole pool, each glyph weighted by its seed's bump, interleaved in a fated order:
 
 - triads;
 - sets of 4–6 glyphs (holistic kernels are invisible to triads);
@@ -137,17 +143,15 @@ The likelihood fit had been dropping or merging valid creative sequences: `Ⅰ�
 - **far-pair `between` questions.** Joseph: *"Given two glyphs, even quite far apart, there's some chance an LLM can detect some more glyphs that are linear to those in semantic space — or a liminal feel."* The pairs are two glyphs several steps apart in one seed, or two seed-bumped glyphs from anywhere.
 
 Half of these come from one seed's neighbourhood.
-2. **The rest is one ordered list.** Established sequences are the supported pieces, with restatements folded in (`model.supported_pieces`, `squeue.piece_table`), ranked most stable first. Each sequence brings its work in this order:
+2. **The rest is one ordered list.** Every grown sequence (`growth.piece_table`), ranked most stable first: the mean, over its steps, of the share of LLM families whose minds gave that step. Each sequence brings its work in this order:
    1. its open ends: the what-comes-next question at each end, then the best untested glyph beyond each end. Candidates come from the minds' proposals first, then what seeds write there, then co-occurring glyphs;
-   2. its unconfirmed links and ties;
+   2. its steps no answer has given yet, and the fit's guesses about its links and ties;
    3. the rotation follow-ups of its triads;
    4. the remaining candidates beyond its ends;
    5. one squaring window and one long-range check;
    6. one branch check and one gap check.
 
-   Items are taken greedily until the round's budget is spent. **An end closes** once it has six or more what-comes-next answers, 70% or more of them "none", and every proposal made at it has been tested.
-
-On the r004 data, a 700-presentation round fully serves the 48 most stable sequences; the rest wait their turn.
+   Items are taken greedily until the round's budget is spent. A cycle has no ends. **An end closes** once it has six or more what-comes-next answers, 70% or more of them "none", and every proposal made at it has been tested.
 
 **This replaced, the same evening, two schemes that did not implement the rule:**
 
@@ -259,7 +263,7 @@ A `lattice` seed (the digit dress × value grid) is just a triad generator. It s
    - **parse;** report unparsed and echo-failure rates per mind and per glyph (they aren't missing at random);
    - **re-fit the model (§2):** anneal, warm-started from the last round, with fresh restarts. This also re-estimates each mind's nuisance parameters, and so its slot bias. Where a bias is large, that mind's next sheets lean harder on the rotations that cancel it;
    - **take posterior samples** at T > 0;
-   - **find the unsupported links.** For every candidate, list its links and ties that no witnessed triple supports yet: two or more answers in the candidate's order, and a majority. These become **support items**, a dedicated category of about 20% of each round, with a floor of 10% (Joseph, 2026-10-04: the standings' untested links show *"what kind of sheets need higher priority"*).
+   - **find the unsupported links.** For every candidate, list its links and ties that no witnessed triple supports yet: fewer than two answers in the candidate's order. These become **support items**, asked in tier 2 of the sequences that hold those glyphs (Joseph, 2026-10-04: the standings' untested links show *"what kind of sheets need higher priority"*).
      - *Triads* pair the two glyphs of the link with each neighbour.
      - *Order windows* span the gap.
      - *Priority:* highest when the two glyphs have never been asked together.
@@ -329,16 +333,14 @@ Joseph, 2026-10-04: *"I'm so sick of rules invented for no reason."* Every numbe
 | parameter | value | where | origin |
 |---|---|---|---|
 | hot exploration share | 15% | `squeue.EXPLORE_SHARE` | Joseph |
-| witness: answers in the same order | ≥ 2, and ≥ half of all answers on the triple | `model.WITNESS_MIN`, `evidence_view.witnessed` | mine: the smallest repeat that rules out one stray answer |
+| a step counts | one answer giving that middle | `growth.py` | the data's own unit. The two-answer witness rule and the majority rule before it, both mine, were removed on 2026-10-04 |
+| stable (a read-off in `STANDINGS.md` and `PROGRESS.md`; gates nothing) | every step given by minds of ≥ 2 families | `growth.stable` | mine |
 | fresh draws from the whole symbol space vs seed-bumped pool draws | 1 : 1 | `squeue.explore_items` | mine |
 | seed-local vs whole-space exploration sets | 1 : 1 | `squeue.explore_items` | mine |
 | seed bump | 2 (domain seeds), 1.5 (survey records) | `data/seeds/*`, `round.survey_seeds` | mine |
 | kernel-confirming follow-ups / between-proposal tests | ≤ ⅓ / ≤ ½ of the exploration share | `round.cmd_plan` | mine |
 | what-comes-next context length | 3–5 glyphs | `squeue.extension_items` | the pilot found continuation reliable from about 4 |
 | an end closes after | ≥ 6 answers, ≥ 70% of them "none", every proposal tested | `squeue.END_*` | mine |
-| near-restatement folding | ≥ 70% shared glyphs, same order | `evidence_view.build` | mine |
-| family measured on a triple | ≥ 2 answers from that family | `evidence_view.family_shares` | mine |
-| stable | ≥ 2 families measured, U ≥ 0.8 | `progress.py`, `evidence_view.py` | mine |
 | order items per presentation set | 2 shuffles | `round.cmd_plan` | the pilot (gestalt) |
 | sheet size | 1–5 presentations | `items.MAX_SHEET` | Joseph |
 | ⟂ / tie / gap offered | 90% / 50% / 50% of sheets | `items.P_*` | mine |
@@ -346,5 +348,5 @@ Joseph, 2026-10-04: *"I'm so sick of rules invented for no reason."* Every numbe
 **Two restrictions removed the same evening, because they had no reason behind them:**
 
 - **A glyph pool frozen at the start.** Exploration had drawn only from the survey glyphs and about 1,000 random ones, for r000–r005. That was the opposite of the design's long tail that never closes. Joseph's canary, the spinner `|/-\`, could never have been found: `\` was outside the pool. Exploration now draws fresh glyphs from the whole symbol space every round.
-- **Sequences forced to be linear.** Cycles are now allowed: a chain whose witnessed continuation is its own first glyph closes, and is clamped after that one repeat (Joseph).
+- **Sequences forced to be linear.** Cycles are now allowed: a sequence closes when answers put its first glyph beyond its last, and is clamped after that one repeat (Joseph).
 
