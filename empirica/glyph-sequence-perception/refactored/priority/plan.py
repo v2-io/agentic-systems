@@ -39,6 +39,7 @@ import probe as PR                                          # noqa: E402
 import tree as TR                                           # noqa: E402
 
 EXPLORE_SHARE = 0.15
+REASONED_PER_ROUND = 20      # reasoned-pass questions a round (chosen without evidence; the reasoner is the costly mind)
 FRESH_TIERS = {"1-byte": (4, [(0x21, 0x7E)]), "2-byte": (3, [(0xA1, 0x7FF)]),
                "3-byte": (2, [(0x2000, 0x2BFF), (0x2E80, 0x33FF)]), "4-byte": (1, [(0x1D300, 0x1D7FF), (0x1F000, 0x1FBFF)])}
 
@@ -58,20 +59,46 @@ class Plan:
         self.qs, self.keys = [], set()
     def full(self):
         return len(self.qs) >= self.budget
-    def add(self, kind, ctx, cand=None, **src):
+    def add(self, kind, ctx, cand=None, variant=None, **src):
         ctx = list(ctx)
         if not (2 <= len(ctx) <= 8) or len(set(ctx)) != len(ctx) or not all(PR.is_glyph(x) for x in ctx):
             return False
-        key = (kind, tuple(ctx), cand)
-        if key in self.keys or (kind == "continue" and tuple(ctx) in self.asked):
+        key = (kind, tuple(ctx), cand, variant)
+        if key in self.keys:
+            return False
+        if kind == "continue" and variant is None and tuple(ctx) in self.asked:
+            return False
+        if variant == "reasoned" and tuple(ctx) in self.T.reasoned:
             return False
         if kind == "inhibit" and ((tuple(ctx), cand) in self.T.inhibit or cand in ctx or not PR.is_glyph(cand)):
             return False
         self.keys.add(key)
-        self.qs.append(PR.question(kind, ctx, cand, source=dict(src, round=self.rid)))
+        self.qs.append(dict(PR.question(kind, ctx, cand, source=dict(src, round=self.rid), variant=variant),
+                            **({"variant": variant} if variant else {})))
         return True
 
-TIER = {"end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "branch": 4, "inside": 5}
+TIER = {"recognize": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "branch": 4, "inside": 5}
+
+def reasoned_work(P, seqs, rid):
+    """the reasoned pass (METHODOLOGY §4): generation at felt ends, then recognition of what it generates.
+    -> (recognition inhibit questions, reasoned continue questions)"""
+    T = P.T
+    recog = []
+    for ctx, rows in T.reasoned.items():
+        top = T.top(ctx)
+        for x in dict.fromkeys(r["continuation"][0] for r in rows if r["continuation"]):
+            if x != top and x not in ctx and PR.is_glyph(x) and (ctx, x) not in T.inhibit:
+                recog.append(("inhibit", list(ctx), x, {"why": "recognize", "reasoned_by": sorted({r["mind"] for r in rows})}))
+    gen = []
+    for s in seqs:
+        g = s["glyphs"]
+        for side, stop in (("right", s["stop_right"]), ("left", s["stop_left"])):
+            if stop != "end":
+                continue
+            run = g if side == "right" else g[::-1]
+            k = min(len(run), PR.R("reasoned-k", {"round": rid, "seq": g, "side": side}).randint(3, 8))
+            gen.append(("continue", run[-k:], None, {"why": "reasoned", "seq": "".join(g), "side": side, "rank": round(s["rank"], 4)}))
+    return recog, gen
 
 def sequence_work(P, s, r):
     g = s["glyphs"]; T = P.T
@@ -166,13 +193,24 @@ def plan(rid, recs, seeds, budget):
         r = PR.R("sequence-work", {"round": rid, "seq": s["glyphs"]})
         for ii, (kind, ctx, cand, src) in enumerate(sequence_work(P, s, r)):
             work.append((TIER[src["why"]], si, ii, kind, ctx, cand, dict(src, rank=round(s["rank"], 4))))
+    recog, gen = reasoned_work(P, seqs, rid)
+    work += [(1, -1, ii, kind, ctx, cand, src) for ii, (kind, ctx, cand, src) in enumerate(recog)]
     work.sort(key=lambda w: w[:3])
+    n_reasoned = 0
+    for kind, ctx, cand, src in gen:                       # outside the budget's tiers: asked only of reasoner minds
+        if n_reasoned >= REASONED_PER_ROUND:
+            break
+        if P.add(kind, ctx, cand, variant="reasoned", **src):
+            n_reasoned += 1
+    P.budget += n_reasoned
     served, tiers_reached = set(), collections.Counter()
     for tier, si, ii, kind, ctx, cand, src in work:
         if P.full():
             break
         if P.add(kind, ctx, cand, **src):
-            served.add(si); tiers_reached[tier] += 1
+            tiers_reached[tier] += 1
+            if si >= 0:                                  # recognition questions belong to no one sequence
+                served.add(si)
     last_rank = min((seqs[i]["rank"] for i in served), default=None)
     served = len(served)
     if not P.full():                                         # few sequences yet: more exploration
@@ -182,5 +220,6 @@ def plan(rid, recs, seeds, budget):
              "by_kind": dict(collections.Counter(q["kind"] for q in P.qs)),
              "sequences": len(seqs), "sequences_served": served, "lowest_rank_served": last_rank,
              "by_tier": {str(k): v for k, v in sorted(tiers_reached.items())},
+             "by_variant": dict(collections.Counter(q.get("variant") or "plain" for q in P.qs)),
              "contexts_in_tree": len(T.nodes)}
     return P.qs, stats

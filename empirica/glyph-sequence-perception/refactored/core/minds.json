@@ -1,5 +1,5 @@
 {
- "version": "minds-0.3 (2026-10-05: Claude thinking budgets pinned; haiku45nt)",
+ "version": "minds-0.4 (2026-10-05: reasoner sonnet55r with utf-mcp tools)",
  "note": "Roster registry for glyph-sequence-perception. Adapter specs copied from the archived judges-v1.json; family and mode added. family = LLM family for universality; mode = sheet (several presentations per call) or single (one per call). Copied into refactored/ on 2026-10-05. Glimmer (muse) is not on the roster: it was paused in r003 of the triad era (Joseph: pause glimmer, skip local models for now).",
  "context_residue": {
   "claude": "claude -p with --tools '' --strict-mcp-config (no MCP), --setting-sources '' and --system-prompt override. Verified 2026-10-03: the judge sees no CLAUDE.md content and nothing about glyphs; it DOES see an account-level note giving the user's email address (asked directly, sonnet-5-5 reported it). Not removable from this CLI; judged harmless to glyph perception. Thinking budget: until 2026-10-05 the judges inherited MAX_THINKING_TOKENS=31000 from the launching shell (unrecorded; very likely true of the triad era too); since then it is set per mind here and recorded in each ledger row's judge spec.",
@@ -22,7 +22,10 @@
    "haiku45"
   ],
   "second_share": 0.2,
-  "note": "Core minds answer every sheet; each second mind is added to a sheet with probability second_share (fated). Claude has two core minds, so universality is computed per family. From c002: haiku45nt (thinking off) is core and haiku45 (thinking on) a second mind, so the reasoned condition stays sampled (2026-10-05, the independent session's call, for Joseph to overturn)."
+  "note": "Core minds answer every sheet; each second mind is added to a sheet with probability second_share (fated). Claude has two core minds, so universality is computed per family. From c002: haiku45nt (thinking off) is core and haiku45 (thinking on) a second mind, so the reasoned condition stays sampled (2026-10-05, the independent session's call, for Joseph to overturn). Reasoners answer only reasoned-pass sheets (generation at felt ends; METHODOLOGY s4).",
+  "reasoners": [
+   "sonnet55r"
+  ]
  },
  "minds": {
   "sonnet55": {
@@ -85,6 +88,16 @@
    "family": "claude",
    "mode": "sheet",
    "note": "Haiku with thinking off (MAX_THINKING_TOKENS=0): ~0 thinking tokens and ~2.4 s a sheet, against ~6k and ~56 s with the 31000 budget every earlier Claude answer inherited from Joseph's shell. Closer to recognition than retrieval, and noisier (spikes/thinking-felt-2026-10-05). The same lever does NOT reach claude-sonnet-5-5, which thinks ~600 tokens either way."
+  },
+  "sonnet55r": {
+   "adapter": "claude",
+   "model": "claude-sonnet-5-5",
+   "effort": "medium",
+   "max_thinking_tokens": 31000,
+   "unicode_tools": true,
+   "family": "claude",
+   "mode": "sheet",
+   "note": "The reasoned pass (2026-10-05): Sonnet with thinking and utf-mcp's four read-only Unicode lookup tools (~/src/arch/firmatum/utils/utf-mcp, verified), asked to reason and look things up at sequence ends where first-impression minds stopped. Its answers are candidates, never pooled with first impressions; what it looked up is copied into each ledger row. Effort medium: chosen without evidence."
   }
  }
 }

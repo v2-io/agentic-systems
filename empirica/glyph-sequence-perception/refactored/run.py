@@ -86,6 +86,9 @@ def cmd_plan(a):
     reg = minds(); core, second = reg["roster"]["core"], reg["roster"]["second"]
     share = reg["roster"].get("second_share", 0.2)
     for s in sh:
+        if s.get("variant") == "reasoned":                # the reasoned pass goes to reasoner minds only
+            s["minds"] = list(reg["roster"].get("reasoners", []))
+            continue
         s["minds"] = list(core) + [m for m in second if PR.R("second-mind", {"sid": s["sid"], "m": m}).random() < share]
     wj(rd / "questions.jsonl", qs); wj(rd / "sheets.jsonl", sh)
     stats["sheets"] = len(sh)
@@ -94,7 +97,7 @@ def cmd_plan(a):
     print(json.dumps(stats, ensure_ascii=False))
 
 # ------------------------------------------------------------------ ask
-MAX_ATTEMPTS = {None: 3, "no-lookup": 2}   # calls per (sheet, mind, prompt variant) before it is left unanswered;
+MAX_ATTEMPTS = {None: 3, "no-lookup": 2, "reasoned": 3}   # calls per (sheet, mind, prompt variant) before it is left unanswered;
                           # 3 is the triad era's resume passes, 2 for the re-ask variant is a choice made without evidence
 DEFAULT_PACE = {"workers": 2, "interval_s": 0}
 
@@ -125,16 +128,17 @@ def ask_mind(rid, m, reg, stop=None):
     by = collections.defaultdict(list)
     for r in rows:
         by[r["sid"]].append(r)
-    def target(sid):
-        """-> the variant this sheet should be asked in next, or None-tuple if nothing more to ask"""
-        rs = by[sid]
-        v = "no-lookup" if any(PR.tool_attempt(r) for r in rs) else None
+    def target(sh):
+        """-> (variant,) this sheet should be asked in next, or () if nothing more to ask. A sheet's own variant
+        (reasoned) is kept; a plain sheet that drew a tool attempt is re-asked as no-lookup."""
+        sid = sh["sid"]; rs = by[sid]; base = sh.get("variant")
+        v = "no-lookup" if base is None and any(PR.tool_attempt(r) for r in rs) else base
         if any(PR.good_row(r) for r in rs if r.get("variant") == v) or (v and any(PR.good_row(r) for r in rs)):
             return ()
         if sum(1 for r in rs if r.get("variant") == v) >= MAX_ATTEMPTS[v]:
             return ()
         return (v,)
-    todo = collections.deque(s for s in sheets if target(s["sid"]))
+    todo = collections.deque(s for s in sheets if target(s))
     calls = [0]
     def worker(i):
         while not (stop and stop()):
@@ -149,11 +153,11 @@ def ask_mind(rid, m, reg, stop=None):
             if s is None:
                 time.sleep(5); continue
             with lock:
-                t = target(s["sid"])
+                t = target(s)
             if not t:
                 continue
             variant = t[0]
-            text = s["prompt"] if variant is None else PR.prompt(s, variant)
+            text = s["prompt"] if variant == s.get("variant") else PR.prompt(s, variant)
             res = judge(PR.SYSTEM, text)
             row = {"protocol": PR.PROTOCOL, "round": rid, "sid": s["sid"], "mind": m, "judge": spec,
                    "adapter_version": ADAPTER_VERSION[spec["adapter"]], "system_sha256": sha(PR.SYSTEM),
@@ -164,7 +168,7 @@ def ask_mind(rid, m, reg, stop=None):
             with lock:
                 wj(led, [row], "a")
                 by[s["sid"]].append(row); calls[0] += 1
-                if target(s["sid"]):
+                if target(s):
                     todo.append(s)                         # re-asked after the rest, as the old resume passes did
             time.sleep(pc["interval_s"])
     nmax = max(pace(m, spec)["workers"], 8)

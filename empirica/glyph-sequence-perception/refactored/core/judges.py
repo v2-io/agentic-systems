@@ -11,7 +11,7 @@ instruction files and agent profiles stripped (grok/codex run under an isolated
 HOME / CODEX_HOME holding only a symlink to the real auth file). What could not be
 stripped is recorded in the run spec's `context_residue` note, never silently.
 """
-import json, os, pathlib, subprocess, time, urllib.request
+import hashlib, json, os, pathlib, subprocess, time, urllib.request
 
 SCRATCH = pathlib.Path(os.environ.get("GMP_JUDGE_SCRATCH",
                        pathlib.Path.home() / ".cache" / "gmp-judges"))
@@ -28,13 +28,39 @@ def _empty_dir(name):
     return d
 
 # ---------------------------------------------------------------- Claude (claude -p)
-def claude_call(model, system, prompt, effort="low", timeout=300, max_thinking_tokens=None):
+UTF_MCP = pathlib.Path.home() / "src" / "arch" / "firmatum" / "utils" / "utf-mcp" / "target" / "release" / "utf-mcp"
+UTF_MCP_LOG = pathlib.Path(__file__).resolve().parents[1] / "data" / "utf-mcp" / "calls.jsonl"
+UTF_MCP_TOOLS = ["mcp__unicode__identify", "mcp__unicode__range", "mcp__unicode__search", "mcp__unicode__blocks"]
+
+def utf_mcp_calls(tag):
+    """the utf-mcp call-log records of one judge call (by its tag): what the mind looked up, verbatim"""
+    out = []
+    try:
+        for l in open(UTF_MCP_LOG):
+            if tag in l:
+                r = json.loads(l)
+                if r.get("tag") == tag and r.get("kind", r.get("event")) not in ("start", "exit"):
+                    out.append(r)
+    except FileNotFoundError:
+        pass
+    return out
+
+def claude_call(model, system, prompt, effort="low", timeout=300, max_thinking_tokens=None, unicode_tools=False):
     """max_thinking_tokens: the thinking budget, set explicitly (MAX_THINKING_TOKENS). Unset, the judge inherits whatever
     the launching shell exports -- Joseph's exports 31000, found 2026-10-05. 0 turns thinking off for claude-haiku-4-5
     (0 thinking tokens); claude-sonnet-5-5 still thinks ~600 tokens a sheet with it (spikes/thinking-felt-2026-10-05)."""
+    tag = None
+    mcp = {"mcpServers": {}}
+    if unicode_tools:    # the reasoned pass: utf-mcp's four read-only lookup tools and nothing else (utf-mcp README)
+        tag = "gsp-" + hashlib.sha256(f"{time.time_ns()}{prompt}".encode()).hexdigest()[:16]
+        UTF_MCP_LOG.parent.mkdir(parents=True, exist_ok=True)
+        mcp = {"mcpServers": {"unicode": {"type": "stdio", "command": str(UTF_MCP),
+                                          "args": ["--log", str(UTF_MCP_LOG), "--tag", tag]}}}
     cmd = ["claude", "-p", "--model", model, "--tools", "", "--strict-mcp-config",
-           "--mcp-config", '{"mcpServers":{}}', "--no-session-persistence",
+           "--mcp-config", json.dumps(mcp), "--no-session-persistence",
            "--setting-sources", "", "--system-prompt", system, "--output-format", "json"]
+    if unicode_tools:
+        cmd += ["--allowedTools", ",".join(UTF_MCP_TOOLS)]
     if effort:
         cmd += ["--effort", effort]
     cmd.append(prompt)
@@ -42,7 +68,8 @@ def claude_call(model, system, prompt, effort="low", timeout=300, max_thinking_t
     try:
         p = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout,
                            cwd=_empty_dir("claude-cwd"), stdin=subprocess.DEVNULL,
-                           env=_clean_env(None if max_thinking_tokens is None else {"MAX_THINKING_TOKENS": str(max_thinking_tokens)}))
+                           env=_clean_env(dict({} if max_thinking_tokens is None else {"MAX_THINKING_TOKENS": str(max_thinking_tokens)},
+                                               **({"CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1"} if unicode_tools else {}))))
     except subprocess.TimeoutExpired:
         return dict(raw=None, model_reported=None, usage={}, cost_usd=None,
                     latency_s=time.time() - t0, error="timeout", adapter_meta={})
@@ -58,7 +85,8 @@ def claude_call(model, system, prompt, effort="low", timeout=300, max_thinking_t
                            "cache_read": u.get("cache_read_input_tokens")},
                     cost_usd=res.get("total_cost_usd"), latency_s=dt,
                     error=("is_error" if res.get("is_error") else None),
-                    adapter_meta={"tools": init.get("tools"), "session_id": res.get("session_id")})
+                    adapter_meta=dict({"tools": init.get("tools"), "session_id": res.get("session_id")},
+                                      **({"utf_mcp_tag": tag, "utf_mcp_calls": utf_mcp_calls(tag)} if tag else {})))
     except Exception as ex:
         return dict(raw=None, model_reported=None, usage={}, cost_usd=None, latency_s=dt,
                     error=f"parse-fail: {ex}; stderr={p.stderr[-400:]}; stdout={p.stdout[-400:]}", adapter_meta={})
@@ -270,7 +298,7 @@ def llamacpp_call(model, system, prompt, url="http://127.0.0.1:8080/v1/chat/comp
                 adapter_meta={"reasoning": (msg.get("reasoning_content") or "")[:2000], "finish": ch.get("finish_reason"),
                               "system_suffix": system_suffix})
 
-ADAPTER_VERSION = {"claude": "a1", "ollama": "a2-format", "grok": "a2-no-tools", "codex": "a1", "agy": "a2-transcript", "llamacpp": "a1"}
+ADAPTER_VERSION = {"claude": "a2-tools-optional", "ollama": "a2-format", "grok": "a2-no-tools", "codex": "a1", "agy": "a2-transcript", "llamacpp": "a1"}
 
 def make_judge(spec):
     """spec: {"adapter": ..., "model": ..., plus adapter kwargs} -> callable(system, prompt)"""

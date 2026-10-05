@@ -48,13 +48,15 @@ def content_class(t):
     return "unassigned" if c == "Cn" else ("mark" if c[0] == "M" else "other")
 
 # ------------------------------------------------------------------ questions
-def question(kind, context, candidate=None, source=None):
+def question(kind, context, candidate=None, source=None, variant=None):
     c = list(context)
     assert 2 <= len(c) <= 8 and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c
     key = {"kind": kind, "context": c}
     if kind == "inhibit":
         assert is_glyph(candidate) and candidate not in c, candidate
         key["candidate"] = candidate
+    if variant:
+        key["variant"] = variant                       # a different question from the plain one at the same context
     q = dict(key, qid=uid({"continue": "Q", "inhibit": "I"}[kind], key), source=source or {})
     return q
 
@@ -85,12 +87,31 @@ def _lines(kind, sheet):
 # sheet after the mind reached for a tool on it (Joseph, 2026-10-05: "have the second / subsequent attempt give a more
 # explicit 'without looking up …' — just based on your best initial guess"). The wording avoids naming Unicode or its
 # tables, which could itself steer a mind toward chart order.
-VARIANTS = {None: None, "no-lookup": "Please answer without looking anything up: just your best initial guess."}
+VARIANTS = {None: None, "no-lookup": "Please answer without looking anything up: just your best initial guess.",
+            "reasoned": None}
+# "reasoned" (Joseph, 2026-10-05: a pass "where the tool works and you can have them give their reasoned one as well
+# (probably especially useful for extending a sequence etc. -- where reasoning is fine -- verification/recognition !=
+# generation (more complex))"): asked of reasoner minds that have utf-mcp's lookup tools. It differs from the plain
+# prompt only where it must: no "first impressions", and leave to reason and look things up. Its answers are candidates
+# (generation), kept apart from the tree's evidence; recognition of them is asked separately (inhibit questions).
+REASONED_OPENER = "Take your time with this task."
+FIRST_IMPRESSIONS = "Go by first impressions, and judge each item on its own rather than building a scheme across items."
+REASONED_SENTENCE = ("Reason as much as you like, and look symbols up with the tools provided if that helps; judge each "
+                     "item on its own rather than building a scheme across items.")
+NONE_INVITE = '"none" is expected often and is fully valuable.'
+# The plain prompt's NONE_INVITE suits first impressions; for generation it invited a quiet "none" even where a reasoned
+# answer exists (live check 2026-10-05: `𐄉 𐄈 𐄇` (Aegean 9 8 7) -> none, no lookup made). The reasoned variant asks for
+# the worked-out continuation instead, keeping "none" as an answer.
+REASONED_NONE = 'If you can work out what comes next, give it, even if that takes some effort; "none" if nothing does.'
 
 def prompt(sheet, variant=None):
     intro, opts, sents, reply = _lines(sheet["kind"], sheet)
     extra = [VARIANTS[variant]] if VARIANTS.get(variant) else []
-    L = [OPENER, intro, "For each item, answer with one of:"] + [f"  - {o}" for o in opts] + sents + extra + ["", "Items:"]
+    opener = OPENER
+    if variant == "reasoned":
+        opener = REASONED_OPENER
+        sents = [REASONED_SENTENCE if x == FIRST_IMPRESSIONS else REASONED_NONE if x == NONE_INVITE else x for x in sents]
+    L = [opener, intro, "For each item, answer with one of:"] + [f"  - {o}" for o in opts] + sents + extra + ["", "Items:"]
     for e in sheet["entries"]:
         o = {"id": e["id"], "s": e["context"]}
         if sheet["kind"] == "inhibit":
@@ -101,12 +122,14 @@ def prompt(sheet, variant=None):
 
 # ------------------------------------------------------------------ sheets
 def sheets(round_id, questions):
-    """questions of one round -> sheets (1-5 of one kind each), fated."""
+    """questions of one round -> sheets (1-5 of one kind and prompt variant each), fated. A question's variant is
+    q["variant"] (None: the plain first-impression prompt)."""
     out = []
-    for kind in KINDS:
-        qs = [q for q in questions if q["kind"] == kind]
-        R("sheet-order", {"round": round_id, "kind": kind}).shuffle(qs)
-        r = R("sheet-sizes", {"round": round_id, "kind": kind})
+    for kind, variant in sorted({(q["kind"], q.get("variant")) for q in questions}, key=lambda kv: (kv[0], kv[1] or "")):
+        qs = [q for q in questions if q["kind"] == kind and q.get("variant") == variant]
+        fk = {"round": round_id, "kind": kind} if variant is None else {"round": round_id, "kind": kind, "variant": variant}
+        R("sheet-order", fk).shuffle(qs)
+        r = R("sheet-sizes", fk)
         i = 0
         while i < len(qs):
             n = min(len(qs) - i, r.randint(1, MAX_SHEET))
@@ -121,7 +144,9 @@ def sheets(round_id, questions):
                     e["candidate"] = q["candidate"]
                 ents.append(e)
             sh = {"sid": sid, "round": round_id, "kind": kind, "protocol": PROTOCOL, "entries": ents, "sheet_n": len(ents)}
-            sh["prompt"] = prompt(sh)
+            if variant:
+                sh["variant"] = variant
+            sh["prompt"] = prompt(sh, variant)
             out.append(sh)
     return out
 

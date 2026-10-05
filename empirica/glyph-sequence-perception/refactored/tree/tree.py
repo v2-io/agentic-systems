@@ -83,6 +83,7 @@ class Tree:
         self.cycles = {}
         self.real = set()                       # contexts some real mind answered (not only seed votes)
         self.unreasoned = collections.defaultdict(list)   # ctx -> [first] from answers given with 0 thinking tokens
+        self.reasoned = collections.defaultdict(list)     # ctx -> [{mind, family, continuation, tools}] (reasoned pass)
         self.seeded = set()
         for r in recs:
             k, o = r["kind"], r["outcome"]
@@ -90,6 +91,12 @@ class Tree:
                 if seeds:
                     ctx = tuple(r["context"])
                     self.nodes[ctx][r["family"]].append(r["continuation"][0]); self.seeded.add(ctx)
+                continue
+            if k == "continue" and (r.get("tags") or {}).get("variant") == "reasoned":
+                # generation, not evidence: kept apart (METHODOLOGY §4); its candidates are put to recognition
+                if o in ("continuation", "none"):
+                    self.reasoned[tuple(r["context"])].append({"mind": r["mind"], "family": r["family"],
+                                                               "continuation": r.get("continuation") or [], "outcome": o})
                 continue
             if k in ("next", "continue") and o in ("proposals", "continuation", "none", "other"):
                 ctx = tuple(r["context"])
