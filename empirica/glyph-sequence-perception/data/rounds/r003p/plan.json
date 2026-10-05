@@ -1,0 +1,20 @@
+{
+ "round": "r003p",
+ "probe": [
+  "65e79aed2b071edb",
+  "2f72418370797f73",
+  "1b4d825a8345d435"
+ ],
+ "items": 95,
+ "presentations": 265,
+ "sheets": 59,
+ "minds": [
+  "sonnet55",
+  "haiku45",
+  "grok46",
+  "gemini38flash",
+  "opus55",
+  "gemini31pro"
+ ],
+ "why": "Joseph 2026-10-04: get additional data points with a good spread on the fill ramp, especially both ends (▁▂ and ▇█); plus the SentencePiece/BPE marker hypothesis from OBSERVATIONS.md"
+}

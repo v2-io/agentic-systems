@@ -147,6 +147,18 @@ def cmd_plan(a):
         sys.exit(f"{rid} already planned (truth is append-only; plan a new round id)")
     pool = json.load(open(d / "pool.json"))["pool"]
     seeds = read_jsonl(d / "seeds.jsonl")
+    if not json.load(open(d / "pool.json")).get("synth"):
+        # the dropspot: seeds added to data/seeds/ since the last plan enter now (append-only), with their glyphs
+        have = {x["sid"] for x in seeds}
+        new = [x for x in domain_seeds() if x["sid"] not in have]
+        if new:
+            for x in new:
+                x["added_round"] = rid
+                append_jsonl(d / "seeds.jsonl", x)
+                for g in x["glyphs"]:
+                    pool.setdefault(g, "seed")
+            seeds += new
+            print(f"{rid}: {len(new)} new seed(s) from data/seeds/")
     items, pres, parsed, sheets = load_all(d)
     prev = rounds(d)
     fit = json.load(open(d / "rounds" / prev[-1] / "fit.json")) if prev and (d / "rounds" / prev[-1] / "fit.json").exists() else None
@@ -183,8 +195,10 @@ def cmd_plan(a):
         nov = _novelty(it, parsed, pres)
         return (bump if cat[1] == "seed" else 1.0) * (inf + 0.1 * nov) if samples else math.log(bump) + 0.1 * nov
     rs = R("seed-subset", {"round": rid})
-    sub = list(seeds); rs.shuffle(sub)
-    for s in sub[:400]:
+    surveyed = [x for x in seeds if x["sid"].startswith("survey:")]
+    rs.shuffle(surveyed)
+    sub = [x for x in seeds if not x["sid"].startswith("survey:")] + surveyed[:400]   # domain seeds always considered
+    for s in sub:
         for it in Q.seed_items(s):
             cat = (it["kind"], "seed")
             cats[cat].append((it, score(it, cat, s.get("bump", Q.SEED_BUMP))))
@@ -450,6 +464,54 @@ def report(rid, fit, fam, items, pres, parsed):
     L += [f"- {k}: {v}" for k, v in sorted(fit["parse"].items())]
     return "\n".join(L) + "\n"
 
+
+# ------------------------------------------------------------------ probe
+def cmd_probe(a):
+    """A targeted probe round (Joseph, 2026-10-04: "get additional data points so we have a good spread"): for each
+    named seed, EVERY triad of its glyphs (all three Latin rotations) and order items over the whole set and over
+    fated subsets (2 shuffles each), sent to every API mind on the roster, not to a sample. Same instruments, same
+    randomization, same parser; category ("<kind>", "probe") so the analysis and the record can tell it apart."""
+    import itertools
+    d = D(a); rid = a.round; rd = d / "rounds" / rid
+    if (rd / "sheets.jsonl").exists():
+        sys.exit(f"{rid} already planned")
+    seeds = {x["sid"]: x for x in read_jsonl(d / "seeds.jsonl")}
+    for x in domain_seeds():
+        seeds.setdefault(x["sid"], x)
+    sel, pres = {}, []
+    for sid in a.seeds:
+        g = [x for x in dict.fromkeys(seeds[sid]["glyphs"]) if ok_glyph(x)]
+        src = {"kind": "probe", "ref": sid}
+        for t in itertools.combinations(g, 3):
+            it = dict(I.make_item("triad", list(t), source=src), category=["triad", "probe"], round=rid)
+            if it["iid"] not in sel:
+                sel[it["iid"]] = it; pres += [I.presentation(it, r, rid) for r in (0, 1, 2)]
+        subsets = [g] if 4 <= len(g) <= 8 else []
+        r = R("probe-subsets", {"round": rid, "sid": sid})
+        for _ in range(a.subsets):
+            if len(g) >= 5:
+                k = r.randint(4, min(7, len(g) - 1)); subsets.append(r.sample(g, k))
+        for sub in subsets:
+            it = dict(I.make_item("order", sub, source=src), category=["order", "probe"], round=rid)
+            if it["iid"] not in sel:
+                sel[it["iid"]] = it; pres += [I.presentation(it, rep, rid) for rep in range(a.shuffles)]
+    sheets_out = []
+    for k in I.KINDS:
+        ps = [p for p in pres if p["kind"] == k]
+        if ps:
+            sheets_out += I.build_sheets(rid, sel, ps, k)
+    reg = load_minds()
+    api = [m for m in reg["roster"]["core"] + reg["roster"]["second"] if reg["minds"][m]["adapter"] != "llamacpp"]
+    for s in sheets_out:
+        s["minds"] = api
+    rd.mkdir(parents=True, exist_ok=True)
+    write_jsonl(rd / "items.jsonl", list(sel.values()))
+    write_jsonl(rd / "presentations.jsonl", pres)
+    write_jsonl(rd / "sheets.jsonl", sheets_out)
+    json.dump({"round": rid, "probe": a.seeds, "items": len(sel), "presentations": len(pres), "sheets": len(sheets_out),
+               "minds": api, "why": a.why}, open(rd / "plan.json", "w"), ensure_ascii=False, indent=1)
+    print(f"{rid}: probe of {len(a.seeds)} seed(s): {len(sel)} items, {len(pres)} presentations, {len(sheets_out)} sheets, to {', '.join(api)}")
+
 # ------------------------------------------------------------------ loop
 def cmd_loop(a):
     d = D(a)
@@ -470,6 +532,9 @@ def main():
     p.add_argument("--workers", type=int, default=0); p.add_argument("--limit", type=int, default=0); p.set_defaults(f=cmd_run)
     p = sub.add_parser("analyze"); p.add_argument("round"); p.add_argument("--chains", type=int, default=4)
     p.add_argument("--iters", type=int, default=0); p.set_defaults(f=cmd_analyze)
+    p = sub.add_parser("probe"); p.add_argument("round"); p.add_argument("seeds", nargs="+")
+    p.add_argument("--subsets", type=int, default=8); p.add_argument("--shuffles", type=int, default=2)
+    p.add_argument("--why", default=""); p.set_defaults(f=cmd_probe)
     p = sub.add_parser("loop"); p.add_argument("n", type=int); p.add_argument("--synth", action="store_true")
     p.add_argument("--budget", type=int, default=300); p.add_argument("--chains", type=int, default=4)
     p.add_argument("--iters", type=int, default=0); p.add_argument("--workers", type=int, default=0); p.set_defaults(f=cmd_loop)
