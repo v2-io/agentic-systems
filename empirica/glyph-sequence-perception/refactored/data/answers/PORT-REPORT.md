@@ -46,10 +46,10 @@
 
 ## Proposal content (next and between)
 
-- **10841 proposals are single glyphs** and enter the tree as continuations or fills.
-- **341 proposals are not single glyphs.** They are kept in `other_content` with their rank and class, never split:
+- **10844 proposals are single glyphs** and enter the tree as continuations or fills.
+- **338 proposals are not single glyphs.** They are kept in `other_content` with their rank and class, never split:
   - **string** (272): `10` ×19, `¹⁰` ×12, `⁻¹` ×12, `11` ×11, `١٠` ×10, `१०` ×7, `１０` ×7, `km` ×7, `𝟏𝟎` ×6, `-1` ×6, `dm` ×5, `ⅩⅢ` ×5, `mm` ×4, `ⅩⅣ` ×4…
-  - **unassigned** (38): `𝋴` (U+1D2F4) ×5, `🀯` (U+1F02F) ×5, `᥵` (U+1975) ×4, `𝋵` (U+1D2F5) ×3, `𝋶` (U+1D2F6) ×3, `𝍹` (U+1D379) ×3, `᥶` (U+1976) ×2, `🀮` (U+1F02E) ×2, `𑁐` (U+11050) ×1, `᥷` (U+1977) ×1, `᥯` (U+196F) ×1, `᥮` (U+196E) ×1, `῜` (U+1FDC) ×1, `𐄆` (U+10106) ×1…
+  - **unassigned** (35): `𝋴` (U+1D2F4) ×5, `🀯` (U+1F02F) ×5, `᥵` (U+1975) ×4, `𝋵` (U+1D2F5) ×3, `𝋶` (U+1D2F6) ×3, `𝍹` (U+1D379) ×3, `᥶` (U+1976) ×2, `🀮` (U+1F02E) ×2, `𑁐` (U+11050) ×1, `᥷` (U+1977) ×1, `᥯` (U+196F) ×1, `᥮` (U+196E) ×1, `῜` (U+1FDC) ×1, `𐄆` (U+10106) ×1…
   - **mark** (31): `ᬄ` (U+1B04) ×14, `ᬃ` (U+1B03) ×6, `ᬂ` (U+1B02) ×5, `𝅥` (U+1D165) ×3, `𝅦` (U+1D166) ×1, `𝅧` (U+1D167) ×1, `〪` (U+302A) ×1
 - **58 answers had a variation selector (U+FE0E/U+FE0F) stripped** from a proposal before the glyph check (`vs_stripped`).
 
