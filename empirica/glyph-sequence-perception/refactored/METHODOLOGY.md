@@ -110,6 +110,18 @@ A cycle is closed rather than statistically ended. It is fully determined at eve
   - **Re-asks name the condition.** A sheet that drew a tool attempt is re-asked with one added sentence, *"Please answer without looking anything up: just your best initial guess."* That is prompt variant `no-lookup`, and every record is tagged with its variant. The wording deliberately doesn't name Unicode or its tables, which could steer a mind toward chart order. Joseph's own phrasing was "without looking up any unicode tables".
   - **A reasoned pass is a different measurement.** Joseph: a pass *"where the tool works and you can have them give their reasoned one as well (probably especially useful for extending a sequence etc. — where reasoning is fine — verification/recognition != generation (more complex))"*. A Unicode-lookup tool that is safe to hand to any family, with no shell, is being built as a spike: `firmatum/utils/`, 2026-10-05. Reasoned answers will be their own tagged kind, never pooled with first impressions.
   - **Chart knowledge versus sequence knowledge.** The embedding spike's verifier found that the minds put the *alphabet* letter first wherever Unicode order and the alphabet disagree. The chart glyph shows up as runner-up for Claude and Gemini, never for Grok (`spikes/embedding-tendrils-2026-10-05/de-novo-feedback-1.md`, small n). So a ±1-codepoint link is not by itself a chart artefact.
+  - **A clean marker of code-point arithmetic.** Some continuations name code points that are unassigned in Unicode 16, so they can never have been seen in text. Through c001 [measured, from `other_content` "unassigned" proposals, per 1,000 continuation answers]:
+
+    | mind | rate |
+    |---|---|
+    | haiku45 (thinking 31000) | 35 |
+    | gemini31pro | 21 |
+    | gemini38flash | 15 |
+    | sonnet55 | 9 |
+    | grok46 | 8 |
+    | opus55 | 0 |
+
+    The flagship case is the Mayan numerals `𝋠 … 𝋳` (0–19). After `𝋱 𝋲 𝋳`, every family writes U+1D2F4 onward. These answers are kept as their own outcome, never as glyphs. The rate per mind and per thinking condition is a read-off of chart-following. *(Until c002, the pipeline ran on Unicode 14 data, so 3 such answers were in fact assigned characters (🯯 🩷 🩵). From then on, `run.py` requires Unicode 16+, and each plan and record carries its Unicode version.)*
   - **Recognition versus retrieval: the thinking budget is a probing factor.** Joseph: reasoning can be needed *"to discover the candidate sequences/branches/etc. that can be felt without much reasoning"*, which he called *"analogous to 'recognition vs retrieval'"*.
     - **How much the minds deliberate.** In c001, median thinking tokens per sheet ran from 0 (Gemini Flash) through ~500 (Sonnet) and ~900 (Grok) to ~2,400 (Gemini Pro) and ~5,100 (Haiku).
     - **An inherited budget.** Until 2026-10-05, the Claude judges inherited `MAX_THINKING_TOKENS=31000` from Joseph's shell, unrecorded. Budgets are now set per mind in `core/minds.json` and recorded in every ledger row.

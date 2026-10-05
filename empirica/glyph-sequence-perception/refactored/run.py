@@ -89,6 +89,7 @@ def cmd_plan(a):
         s["minds"] = list(core) + [m for m in second if PR.R("second-mind", {"sid": s["sid"], "m": m}).random() < share]
     wj(rd / "questions.jsonl", qs); wj(rd / "sheets.jsonl", sh)
     stats["sheets"] = len(sh)
+    import unicodedata; stats["unicode"] = unicodedata.unidata_version
     json.dump(stats, open(rd / "plan.json", "w"), ensure_ascii=False, indent=1)
     print(json.dumps(stats, ensure_ascii=False))
 
@@ -307,7 +308,15 @@ def cmd_loop(a):
             time.sleep(30)
     print("== STOP found", flush=True)
 
+MIN_UNICODE = 16          # what counts as a glyph is unicodedata's call (probe.is_glyph): on older data a newer character
+                          # reads as unassigned, so it can never be asked and an answer naming it is cut there. Found
+                          # 2026-10-05: everything through c002 ran on mise's Python 3.11 (Unicode 14); Homebrew's 3.14 has 16.
+
 def main():
+    import unicodedata
+    if int(unicodedata.unidata_version.split(".")[0]) < MIN_UNICODE:
+        sys.exit(f"run.py: this Python's Unicode data is {unicodedata.unidata_version}; it needs {MIN_UNICODE}+. "
+                 "On Joseph's machine: /opt/homebrew/bin/python3 run.py ...")
     ap = argparse.ArgumentParser(); sub = ap.add_subparsers(required=True)
     p = sub.add_parser("plan"); p.add_argument("round"); p.add_argument("--budget", type=int, default=700); p.set_defaults(f=cmd_plan)
     p = sub.add_parser("ask"); p.add_argument("round"); p.add_argument("--minds", nargs="*"); p.set_defaults(f=cmd_ask)

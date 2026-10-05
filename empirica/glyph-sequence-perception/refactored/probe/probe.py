@@ -186,7 +186,8 @@ def _records(sheet, ledger_rows, mind, family, judge, questions, variant):
                "model": judge.get("model"), "adapter": judge.get("adapter"), "kind": sheet["kind"], "context": list(e["context"]),
                "tags": {"protocol": PROTOCOL, "sheet_n": sheet["sheet_n"], "sheet_pos": e["id"], "calls_for_sheet": len(ledger_rows),
                         "prompt_sha256": last.get("prompt_sha256"), "system_sha256": last.get("system_sha256"),
-                        "adapter_version": last.get("adapter_version"), "variant": variant, "tool_attempts": len(attempts)},
+                        "adapter_version": last.get("adapter_version"), "variant": variant, "tool_attempts": len(attempts),
+                        "unicode": U.unidata_version},
                "source": q.get("source", {})}
         if sheet["kind"] == "inhibit":
             rec["candidate"] = e["candidate"]
