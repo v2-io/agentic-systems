@@ -7,14 +7,22 @@
   run.py record RID                 ledgers -> data/answers/RID.jsonl (canonical records; regenerable)
   run.py tree                       SEQUENCES.md (+ data/tree/*.json) and BEST.md (report/best.py, a read-off)
   run.py progress                   PROGRESS.md: what the tree holds after each round
-  run.py round RID [--budget N]     all of the above, then commit
+  run.py round RID [--budget N]     plan, ask the DRIVER minds (Claude), record every round, tree, progress, commit
   run.py loop [--budget N]          rounds c001, c002, ... until data/rounds/STOP exists or a round fails
+  run.py drain --minds m ...        a separate process: asks these minds' open sheets in every round, oldest first,
+                                    paced by pace.json, until data/rounds/STOP exists
+
+Cadence (Joseph, 2026-10-05: "let claude go ahead ideally so we can start at least getting the claude-supported
+sequences well defined in the data"; then "move forward without stopping on claude responses … start slowing down the
+claude responses a bit … once they are running asynchronously … really slow down gemini"): Claude drives the rounds;
+every other family drains its sheets asynchronously and is folded in whenever a round re-records. pace.json is re-read
+before every call, so pacing can be retuned while everything runs.
 
 Truth: data/rounds/<RID>/{questions,sheets}.jsonl, plan.json and raw/<mind>/ledger.jsonl (verbatim prompts and
 answers), committed. Everything in data/answers/ and data/tree/ is rebuilt from them (and from the triad era's
 ledgers via port/port_triad_era.py).
 """
-import argparse, collections, concurrent.futures as cf, datetime as dt, hashlib, json, pathlib, subprocess, sys, threading
+import argparse, collections, concurrent.futures as cf, datetime as dt, hashlib, json, pathlib, subprocess, sys, threading, time
 
 ROOT = pathlib.Path(__file__).resolve().parent
 STUDY = ROOT.parent
@@ -27,8 +35,19 @@ import plan as PL                                           # noqa: E402
 import best as BE                                           # noqa: E402  (a read-off; nothing reads it back)
 
 def rj(p):
+    """jsonl -> rows; a last line still being written by another process (drain) is skipped, not fatal"""
     p = pathlib.Path(p)
-    return [json.loads(l) for l in open(p) if l.strip()] if p.exists() else []
+    if not p.exists():
+        return []
+    rows = []
+    for l in open(p):
+        if l.strip():
+            try:
+                rows.append(json.loads(l))
+            except json.JSONDecodeError:
+                if l.endswith("\n"):
+                    raise
+    return rows
 
 def wj(p, rows, mode="w"):
     p = pathlib.Path(p); p.parent.mkdir(parents=True, exist_ok=True)
@@ -74,59 +93,115 @@ def cmd_plan(a):
     print(json.dumps(stats, ensure_ascii=False))
 
 # ------------------------------------------------------------------ ask
-AGY_WORKERS = 3           # Gemini via agy: 3 concurrent calls (Joseph, 2026-10-05: "go ahead and speed up gemini")
-GRACE_MIN = 20            # once every Claude mind has finished, other minds get this many more minutes, then the round
-                          # moves on (Joseph: "when we start hitting rate limits we can let claude go ahead"); their
-                          # unanswered sheets stay open and `run.py ask RID` later backfills them (ledgers resume)
+MAX_ATTEMPTS = {None: 3, "no-lookup": 2}   # calls per (sheet, mind, prompt variant) before it is left unanswered;
+                          # 3 is the triad era's resume passes, 2 for the re-ask variant is a choice made without evidence
+DEFAULT_PACE = {"workers": 2, "interval_s": 0}
 
-def cmd_ask(a):
-    rd = DATA / "rounds" / a.round
-    sheets = rj(rd / "sheets.jsonl")
-    reg = minds()
+def pace(m, spec):
+    """pacing for one mind from pace.json, re-read on every call: minds.<m> overrides adapters.<adapter>"""
+    try:
+        P = json.load(open(ROOT / "pace.json"))
+    except Exception:
+        P = {}
+    out = dict(DEFAULT_PACE)
+    out.update((P.get("adapters") or {}).get(spec["adapter"], {}))
+    out.update((P.get("minds") or {}).get(m, {}))
+    return out
+
+def driver_minds(reg):
+    return {m for m, s in reg["minds"].items() if s.get("family") == "claude"}
+
+def ask_mind(rid, m, reg, stop=None):
+    """ask one mind every sheet of round `rid` it is on and has not answered (up to MAX_ATTEMPTS calls a sheet),
+    paced by pace.json -> (answered, assigned, calls made now)"""
     sys.path.insert(0, str(ROOT / "core"))
     from judges import make_judge, ADAPTER_VERSION
-    want = a.minds or sorted({m for s in sheets for m in s["minds"]})
-    stop = threading.Event()
-    def run_mind(m):
-        spec = reg["minds"][m]; judge = make_judge(spec)
-        led = rd / "raw" / m / "ledger.jsonl"; lock = threading.Lock()
-        for p in range(3):                                   # resume passes: failed sheets are re-asked
-            if stop.is_set() and reg["minds"][m]["family"] != "claude":
-                break
-            done = {r["sid"] for r in rj(led) if r["result"].get("raw") and not r["result"].get("error")}
-            todo = [s for s in sheets if m in s["minds"] and s["sid"] not in done]
-            if not todo:
-                break
-            def one(s):
-                if stop.is_set() and reg["minds"][m]["family"] != "claude":
+    rd = DATA / "rounds" / rid
+    sheets = [s for s in rj(rd / "sheets.jsonl") if m in s["minds"]]
+    spec = reg["minds"][m]; judge = make_judge(spec)
+    led = rd / "raw" / m / "ledger.jsonl"; lock = threading.Lock()
+    rows = rj(led)
+    by = collections.defaultdict(list)
+    for r in rows:
+        by[r["sid"]].append(r)
+    def target(sid):
+        """-> the variant this sheet should be asked in next, or None-tuple if nothing more to ask"""
+        rs = by[sid]
+        v = "no-lookup" if any(PR.tool_attempt(r) for r in rs) else None
+        if any(PR.good_row(r) for r in rs if r.get("variant") == v) or (v and any(PR.good_row(r) for r in rs)):
+            return ()
+        if sum(1 for r in rs if r.get("variant") == v) >= MAX_ATTEMPTS[v]:
+            return ()
+        return (v,)
+    todo = collections.deque(s for s in sheets if target(s["sid"]))
+    calls = [0]
+    def worker(i):
+        while not (stop and stop()):
+            pc = pace(m, spec)
+            with lock:
+                if not todo:
                     return
-                res = judge(PR.SYSTEM, s["prompt"])
-                row = {"protocol": PR.PROTOCOL, "round": a.round, "sid": s["sid"], "mind": m, "judge": spec,
-                       "adapter_version": ADAPTER_VERSION[spec["adapter"]], "system_sha256": sha(PR.SYSTEM),
-                       "prompt_sha256": sha(s["prompt"]), "prompt": s["prompt"],
-                       "ts": dt.datetime.now(dt.timezone.utc).isoformat(), "result": res}
-                if res.get("raw") and not res.get("error") and PR._answers(res["raw"]) is None:
-                    row["result"] = dict(res, error="no-answers-object")      # raw kept; re-asked next pass
-                with lock:
-                    wj(led, [row], "a")
-            workers = AGY_WORKERS if spec["adapter"] == "agy" else 6
-            with cf.ThreadPoolExecutor(max_workers=workers) as ex:
-                list(ex.map(one, todo))
-        n = len({r["sid"] for r in rj(led) if r["result"].get("raw") and not r["result"].get("error")})
-        return m, n, sum(1 for s in sheets if m in s["minds"])
+                if i >= pc["workers"]:                   # pace.json lowered the worker count: this one idles
+                    s = None
+                else:
+                    s = todo.popleft()
+            if s is None:
+                time.sleep(5); continue
+            with lock:
+                t = target(s["sid"])
+            if not t:
+                continue
+            variant = t[0]
+            text = s["prompt"] if variant is None else PR.prompt(s, variant)
+            res = judge(PR.SYSTEM, text)
+            row = {"protocol": PR.PROTOCOL, "round": rid, "sid": s["sid"], "mind": m, "judge": spec,
+                   "adapter_version": ADAPTER_VERSION[spec["adapter"]], "system_sha256": sha(PR.SYSTEM),
+                   "prompt_sha256": sha(text), "prompt": text, "variant": variant,
+                   "ts": dt.datetime.now(dt.timezone.utc).isoformat(), "result": res}
+            if res.get("raw") and not res.get("error") and PR._answers(res["raw"]) is None:
+                row["result"] = dict(res, error="no-answers-object")      # raw kept; re-asked
+            with lock:
+                wj(led, [row], "a")
+                by[s["sid"]].append(row); calls[0] += 1
+                if target(s["sid"]):
+                    todo.append(s)                         # re-asked after the rest, as the old resume passes did
+            time.sleep(pc["interval_s"])
+    nmax = max(pace(m, spec)["workers"], 8)
+    with cf.ThreadPoolExecutor(max_workers=nmax) as ex:
+        list(ex.map(worker, range(nmax)))
+    n = len({r["sid"] for r in rj(led) if PR.good_row(r)})
+    return n, len(sheets), calls[0]
+
+def cmd_ask(a):
+    """ask RID: the named minds (default: every mind on the round's sheets), in parallel"""
+    reg = minds()
+    want = a.minds or sorted({m for s in rj(DATA / "rounds" / a.round / "sheets.jsonl") for m in s["minds"]})
     with cf.ThreadPoolExecutor(max_workers=len(want)) as ex:
-        futs = {m: ex.submit(run_mind, m) for m in want}
-        claude = [f for m, f in futs.items() if reg["minds"][m]["family"] == "claude"]
-        cf.wait(claude)
-        rest = [f for m, f in futs.items() if reg["minds"][m]["family"] != "claude"]
-        _, pending = cf.wait(rest, timeout=GRACE_MIN * 60)
-        if pending:
-            print(f"{a.round}: grace of {GRACE_MIN} min after Claude finished is over; stopping "
-                  f"{[m for m, f in futs.items() if f in pending]} (backfill later with `run.py ask {a.round}`)", flush=True)
-            stop.set()
+        futs = {m: ex.submit(ask_mind, a.round, m, reg) for m in want}
         for m, f in futs.items():
-            mm, n, tot = f.result()
-            print(f"{a.round}/{mm}: {n}/{tot} sheets answered", flush=True)
+            n, tot, _ = f.result()
+            print(f"{a.round}/{m}: {n}/{tot} sheets answered", flush=True)
+
+def ctx_rounds():
+    return sorted(p.name for p in (DATA / "rounds").glob("c[0-9][0-9][0-9]") if (p / "sheets.jsonl").exists())
+
+def cmd_drain(a):
+    """drain --minds m ...: until STOP, ask these minds' open sheets, oldest round first; idle when caught up"""
+    reg = minds(); stopf = DATA / "rounds" / "STOP"
+    stop = stopf.exists
+    while not stop():
+        worked = False
+        for rid in ctx_rounds():
+            if stop():
+                break
+            with cf.ThreadPoolExecutor(max_workers=len(a.minds)) as ex:
+                res = dict(zip(a.minds, ex.map(lambda m: ask_mind(rid, m, reg, stop), a.minds)))
+            line = ", ".join(f"{m} {n}/{t} ({c} calls)" for m, (n, t, c) in res.items() if c)
+            if line:
+                print(f"{dt.datetime.now():%H:%M:%S} drain {rid}: {line}", flush=True)
+                worked = True
+        time.sleep(10 if worked else 120)
+    print("== drain: STOP found", flush=True)
 
 # ------------------------------------------------------------------ record
 def cmd_record(a):
@@ -191,29 +266,45 @@ def git(*args):
     return subprocess.run(["git", "-C", str(STUDY.parents[1]), *args], capture_output=True, text=True)
 
 def commit(rid):
+    """the round just planned, plus every earlier round's ledgers (drain minds keep appending to them)"""
     rel = ROOT.relative_to(STUDY.parents[1])
-    paths = [str(rel / "data" / "rounds" / rid), str(rel / "SEQUENCES.md"), str(rel / "PROGRESS.md"), str(rel / "BEST.md")]
+    paths = [str(rel / "data" / "rounds" / r) for r in ctx_rounds()] + [str(rel / f) for f in ("SEQUENCES.md", "PROGRESS.md", "BEST.md")]
     git("add", *paths)
-    r = git("commit", "-q", "-m", f"empirica/glyph-sequence: context-tree round {rid} (planned, answered, recorded; SEQUENCES + PROGRESS)\n\n"
+    r = git("commit", "-q", "-m", f"empirica/glyph-sequence: context-tree round {rid} (planned, Claude answered; drained answers "
+            "of earlier rounds; SEQUENCES + PROGRESS)\n\n"
             "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\n"
-            "Claude-Session: https://claude.ai/code/session_01MfWNNnWTnFYD1Y8Jh7KFHF", "--", *paths)
+            "Claude-Session: https://claude.ai/code/session_01BwM1CTwT2mSbZ8jq3JFDTH", "--", *paths)
     return r.returncode == 0
 
+def cmd_record_all(a):
+    for rid in ctx_rounds():
+        cmd_record(argparse.Namespace(round=rid))
+
 def cmd_round(a):
-    for f, aa in ((cmd_plan, a), (cmd_ask, argparse.Namespace(round=a.round, minds=None)), (cmd_record, a),
-                  (cmd_tree, a), (cmd_progress, a)):
+    drivers = sorted(driver_minds(minds()))
+    steps = ((cmd_plan, a), (cmd_ask, argparse.Namespace(round=a.round, minds=drivers)), (cmd_record_all, a),
+             (cmd_tree, a), (cmd_progress, a))
+    for f, aa in steps:
         print(f"== {a.round} {f.__name__} {dt.datetime.now():%H:%M:%S}", flush=True)
         f(aa)
     print(f"== {a.round} committed" if commit(a.round) else f"!! {a.round} commit failed", flush=True)
 
 def cmd_loop(a):
     while not (DATA / "rounds" / "STOP").exists():
-        done = sorted(p.name for p in (DATA / "rounds").glob("c[0-9][0-9][0-9]") if (p / "sheets.jsonl").exists())
+        done = ctx_rounds()
         rid = f"c{(int(done[-1][1:]) + 1) if done else 1:03d}"
         try:
             cmd_round(argparse.Namespace(round=rid, budget=a.budget))
         except Exception as ex:
             print(f"!! {rid} failed: {ex!r}", flush=True); raise
+        gap = 0
+        try:
+            gap = json.load(open(ROOT / "pace.json")).get("round_gap_min", 0)
+        except Exception:
+            pass
+        t_end = time.time() + 60 * gap
+        while time.time() < t_end and not (DATA / "rounds" / "STOP").exists():
+            time.sleep(30)
     print("== STOP found", flush=True)
 
 def main():
@@ -225,6 +316,7 @@ def main():
     p = sub.add_parser("progress"); p.set_defaults(f=cmd_progress)
     p = sub.add_parser("round"); p.add_argument("round"); p.add_argument("--budget", type=int, default=700); p.set_defaults(f=cmd_round)
     p = sub.add_parser("loop"); p.add_argument("--budget", type=int, default=700); p.set_defaults(f=cmd_loop)
+    p = sub.add_parser("drain"); p.add_argument("--minds", nargs="+", required=True); p.set_defaults(f=cmd_drain)
     a = ap.parse_args(); a.f(a)
 
 if __name__ == "__main__":

@@ -1,0 +1,10 @@
+{
+ "note": "Pacing for run.py, re-read before every call, so edits take effect while the loop and the drains run. workers = concurrent calls per mind; interval_s = pause after each call, per worker. minds.<m> overrides adapters.<adapter>. round_gap_min = pause between rounds of the Claude-driven loop. Chosen without evidence (2026-10-05): Claude slowed 'a bit' so the quota lasts until it resets tomorrow morning (c001 at full speed: sonnet 230 calls in 4 min, haiku 230 in 33 min); Gemini slowed hard (Joseph: 'really slow down gemini again to see if that helps'); Grok unchanged.",
+ "adapters": {
+  "claude": {"workers": 2, "interval_s": 20},
+  "grok": {"workers": 6, "interval_s": 0},
+  "agy": {"workers": 1, "interval_s": 60}
+ },
+ "minds": {},
+ "round_gap_min": 0
+}

@@ -81,9 +81,16 @@ def _lines(kind, sheet):
     r.shuffle(opts); r.shuffle(sents)
     return intro, opts, sents, reply
 
-def prompt(sheet):
+# Prompt variants (concern 1: tagged, never mixed silently). None is the sheet's own prompt. "no-lookup" re-asks a
+# sheet after the mind reached for a tool on it (Joseph, 2026-10-05: "have the second / subsequent attempt give a more
+# explicit 'without looking up …' — just based on your best initial guess"). The wording avoids naming Unicode or its
+# tables, which could itself steer a mind toward chart order.
+VARIANTS = {None: None, "no-lookup": "Please answer without looking anything up: just your best initial guess."}
+
+def prompt(sheet, variant=None):
     intro, opts, sents, reply = _lines(sheet["kind"], sheet)
-    L = [OPENER, intro, "For each item, answer with one of:"] + [f"  - {o}" for o in opts] + sents + ["", "Items:"]
+    extra = [VARIANTS[variant]] if VARIANTS.get(variant) else []
+    L = [OPENER, intro, "For each item, answer with one of:"] + [f"  - {o}" for o in opts] + sents + extra + ["", "Items:"]
     for e in sheet["entries"]:
         o = {"id": e["id"], "s": e["context"]}
         if sheet["kind"] == "inhibit":
@@ -132,9 +139,38 @@ def _answers(raw):
             continue
     return None
 
+AGY_HARVEST = HERE.parents[1] / "data" / "agy" / "brain"
+
+def tool_calls(row):
+    """the tools a call reached for: from the ledger (agy adapter a2-transcript on), else from the harvested agy
+    transcript of older calls (data/agy/brain, copied 2026-10-05)"""
+    res = row.get("result") or {}
+    meta = res.get("adapter_meta") or {}
+    if "tool_calls" in meta:
+        return meta["tool_calls"]
+    cid = meta.get("conversation")
+    p = AGY_HARVEST / str(cid) / ".system_generated" / "logs" / "transcript_full.jsonl"
+    if not cid or not p.exists():
+        return []
+    return [t for l in open(p) for t in (json.loads(l).get("tool_calls") or [])]
+
+def tool_attempt(row):
+    res = row.get("result") or {}
+    return res.get("error") == "tool-attempt" or (not (res.get("raw") or "").strip() and bool(tool_calls(row)))
+
+def good_row(row):
+    return bool(row["result"].get("raw")) and not row["result"].get("error")
+
 def records(sheet, ledger_rows, mind, family, judge, questions):
-    """All ledger rows of one (sheet, mind) -> one canonical record per entry (METHODOLOGY §6 record shape)."""
-    good = [r for r in ledger_rows if r["result"].get("raw") and not r["result"].get("error")]
+    """All ledger rows of one (sheet, mind) -> one canonical record per entry and prompt variant (METHODOLOGY §6)."""
+    out = []
+    for variant in dict.fromkeys(r.get("variant") for r in ledger_rows):
+        out += _records(sheet, [r for r in ledger_rows if r.get("variant") == variant], mind, family, judge, questions, variant)
+    return out
+
+def _records(sheet, ledger_rows, mind, family, judge, questions, variant):
+    good = [r for r in ledger_rows if good_row(r)]
+    attempts = [r for r in ledger_rows if tool_attempt(r)]
     last = good[-1] if good else ledger_rows[-1]
     ans = _answers(last["result"].get("raw")) if good else None
     byid = {}
@@ -144,15 +180,20 @@ def records(sheet, ledger_rows, mind, family, judge, questions):
     out = []
     for e in sheet["entries"]:
         q = questions[e["qid"]]
-        rec = {"aid": "A" + hashlib.sha256(json.dumps([sheet["round"], sheet["sid"], mind, e["qid"]], ensure_ascii=False).encode()).hexdigest()[:16],
+        key = [sheet["round"], sheet["sid"], mind, e["qid"]] + ([variant] if variant else [])
+        rec = {"aid": "A" + hashlib.sha256(json.dumps(key, ensure_ascii=False).encode()).hexdigest()[:16],
                "era": "ctx", "round": sheet["round"], "sid": sheet["sid"], "qid": e["qid"], "mind": mind, "family": family,
                "model": judge.get("model"), "adapter": judge.get("adapter"), "kind": sheet["kind"], "context": list(e["context"]),
                "tags": {"protocol": PROTOCOL, "sheet_n": sheet["sheet_n"], "sheet_pos": e["id"], "calls_for_sheet": len(ledger_rows),
                         "prompt_sha256": last.get("prompt_sha256"), "system_sha256": last.get("system_sha256"),
-                        "adapter_version": last.get("adapter_version")},
+                        "adapter_version": last.get("adapter_version"), "variant": variant, "tool_attempts": len(attempts)},
                "source": q.get("source", {})}
         if sheet["kind"] == "inhibit":
             rec["candidate"] = e["candidate"]
+        if not good and attempts:
+            rec["outcome"] = "tool-attempt"
+            rec["tools"] = [{"name": t.get("name"), "args": t.get("args")} for r in attempts for t in tool_calls(r)][:6]
+            out.append(rec); continue
         if not good:
             rec["outcome"] = "call-failed"; rec["reason"] = str(last["result"].get("error") or "empty output")[:200]
             out.append(rec); continue
