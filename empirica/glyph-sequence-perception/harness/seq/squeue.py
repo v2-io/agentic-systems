@@ -202,6 +202,7 @@ GROW = {
 }
 EXPLORE_FLOOR = 0.15
 EXPLORE_CATS = [("triad", "explore"), ("order", "explore"), ("next", "explore")]
+TOP_ENDS = 40             # the most stable sequences whose open ends are asked every round (reserved, not sampled)
 FOLLOW_SHARE = 0.15        # of presentations: Latin-rotation follow-ups, for triads inside established sequences first
 END_MIN_ANSWERS = 6        # an end is closed once >= this many next-answers have been given at it ...
 END_NONE_SHARE = 0.7       # ... and >= this share of them were "none", and every proposal made at it has been tested

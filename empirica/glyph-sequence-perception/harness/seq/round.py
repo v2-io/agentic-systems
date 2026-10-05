@@ -232,10 +232,25 @@ def cmd_plan(a):
         for cid in list(cur.cands):
             for it, pri in Q.support_items(cur, cid, rid):
                 cats[(it["kind"], "support")].append((it, pri))
-    print(f"{rid}: {len(pieces)} established sequences; " + ", ".join(f"{c[1]}/{c[0]} {len(v)}" for c, v in sorted(cats.items())))
+    # ---- RESERVED, not sampled (Joseph: "If the #1 item on the list isn't getting its ends extended, we have a
+    #      prioritization problem"): for the TOP_ENDS most stable sequences, every open end gets, every round, its next
+    #      question and its best untested extension triad, ahead of all drawn items
+    reserved = []
+    if cur:
+        for pc in pieces[:Q.TOP_ENDS]:
+            for side in ("right", "left"):
+                st = Q.end_state(pc, side, parsed, pres, items)
+                if st["closed"]:
+                    continue
+                gen = Q.extension_items(pc, st, cooc.get(st["end"], []), rid, seed_next)
+                nx = [it for it, _ in gen if it["kind"] == "next" and it["iid"] not in asked0]
+                tr = [it for it, _ in gen if it["kind"] == "triad" and it["iid"] not in asked0]
+                for it in (nx[:1] + tr[:1]):
+                    reserved.append((it, ("next" if it["kind"] == "next" else "triad", "reserved-end"), pc["stability"]))
+    print(f"{rid}: {len(pieces)} established sequences; {len(reserved)} reserved end items; " + ", ".join(f"{c[1]}/{c[0]} {len(v)}" for c, v in sorted(cats.items())))
     # ---- quotas: GROW; whatever a category cannot fill (not enough candidates) goes to hot exploration
     cost = {"triad": 1, "order": 2, "next": 1, "between": 1}
-    n_new = max(10, a.budget - len(follow))
+    n_new = max(10, a.budget - len(follow) - len(reserved))
     quotas = dict(Q.GROW)
     mean_cost = sum(quotas[c] * cost[c[0]] for c in quotas)
     N = int(n_new / mean_cost)
@@ -250,7 +265,8 @@ def cmd_plan(a):
     for c in Q.EXPLORE_CATS:
         quotas[c] += spare * quotas[c] / ex_tot
     T = 0.5
-    chosen = Q.draw(cats, quotas, N, T, rid, asked0)
+    chosen = Q.draw(cats, quotas, N, T, rid, asked0 | {it["iid"] for it, _, _ in reserved})
+    chosen = reserved + chosen
     sel_items, new_pres = {}, []
     for it, cat, pri in chosen:
         it = dict(it, category=list(cat), priority=pri, round=rid)
@@ -277,7 +293,7 @@ def cmd_plan(a):
     write_jsonl(rd / "presentations.jsonl", new_pres)
     write_jsonl(rd / "sheets.jsonl", sheets_out)
     json.dump({"round": rid, "scheme": "kernel-growth (PLAN §4, 2026-10-04)", "quotas": {"|".join(c): round(v, 4) for c, v in quotas.items()},
-               "established_sequences": len(pieces), "T": T, "follow_ups": len(follow), "follow_ups_wanted": fu_wanted, "new_items": len(chosen),
+               "established_sequences": len(pieces), "reserved_end_items": len(reserved), "T": T, "follow_ups": len(follow), "follow_ups_wanted": fu_wanted, "new_items": len(chosen),
                "presentations": len(new_pres), "sheets": len(sheets_out)}, open(rd / "plan.json", "w"), indent=1)
     print(f"{rid}: {len(chosen)} new items + {len(follow)} follow-up presentations -> {len(new_pres)} presentations, "
           f"{len(sheets_out)} sheets (T={T:.2f})")

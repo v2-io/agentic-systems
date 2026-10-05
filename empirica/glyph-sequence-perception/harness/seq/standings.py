@@ -36,6 +36,7 @@ import argparse, collections, json, math, pathlib, sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from common import EXP, read_jsonl, minds as load_minds
 import model as M
+import squeue as Q
 import round as RD
 
 MIN_EVID = 3
@@ -144,7 +145,11 @@ def main():
         holistic = [f for f in roster_fams if f in per and
                     sum(cs["s"][m]["s4"] - cs["s"][m]["s3"] for m in fit["minds"] if fam.get(m) == f and evid[m] >= MIN_EVID) /
                     max(1, sum(1 for m in fit["minds"] if fam.get(m) == f and evid[m] >= MIN_EVID)) >= 0.5]
-        rows.append({"seq": " ".join("=".join(st) for st in c.steps), "n": len(g), "U": U, "coverage": cov, "per": per,
+        ends = []
+        for side in ("left", "right"):
+            es = Q.end_state({"glyphs": g}, side, parsed, pres, items)
+            ends.append(f"{es['end']} {'closed' if es['closed'] else str(es['answers']) + ' asked'}")
+        rows.append({"ends": " · ".join(ends), "seq": " ".join("=".join(st) for st in c.steps), "n": len(g), "U": U, "coverage": cov, "per": per,
                      "support": sup, "untested": ["".join(t) for t in untested], "agree": agree, "weakest": [weak[1], weak[0]], "answers": tot, "rounds": rounds_in, "first": first, "witnessed": witnessed,
                      "origin": "seeded" if best_seed >= 0.8 else "emergent",
                      "branches": "".join(x for x in g if owners[x] >= 2), "sets_only": holistic,
@@ -166,11 +171,12 @@ def main():
          "- **origin:** whether a seed holds 80% or more of it. Metadata only.",
          "- **sets only:** families that perceive it in sets but not in triads.",
          "- **untested:** adjacent links that no question has yet tested, because the two glyphs were never shown together. Their order is the fit's arbitrary choice, not evidence.",
+         "- **ends:** for each end of the sequence, how many what-comes-next answers it has had, or `closed` once the minds have repeatedly said nothing follows and every proposal has been tested. The 40 most stable sequences get their open ends asked every round.",
          "- **branches at:** glyphs this sequence shares with another ranked sequence, where two sequences cross or fork. A sequence contained in a longer one, in the same order, is folded into the longer one and not listed.",
          "- **Rank:** support × U × √cov, among pieces measured in two or more families.", "",
          "**Every candidate is first split at its unsupported links.** A link is supported when a triple holding both of its glyphs was answered in this order by two or more answers and a majority. Only supported pieces of three or more glyphs are ranked. Splits are listed under the table.", "",
-         "| # | sequence | n | " + " | ".join(roster_fams) + " | U | cov | support | rounds | witn | agree | weakest | untested | branches at | origin | sets only |",
-         "|---|---|---|" + "---|" * len(roster_fams) + "---|---|---|---|---|---|---|---|---|---|---|"]
+         "| # | sequence | n | " + " | ".join(roster_fams) + " | U | cov | support | rounds | witn | agree | weakest | untested | branches at | ends (what-comes-next answers) | origin | sets only |",
+         "|---|---|---|" + "---|" * len(roster_fams) + "---|---|---|---|---|---|---|---|---|---|---|---|"]
     shown = 0
     for r in ranked:
         if r["score"] <= 0 or shown >= a.top:
@@ -178,7 +184,7 @@ def main():
         shown += 1
         seq = r["seq"].replace("|", "\\|")
         L.append(f"| {shown} | `{seq}` | {r['n']} | " + " | ".join(f"{r['per'][f]:.2f}" if f in r["per"] else "–" for f in roster_fams)
-                 + f" | {r['U']:.2f} | {r['coverage']:.2f} | {r['support']:.2f} | {r['rounds']}/{len(past)} | {r['witnessed']} | {r['agree']:.2f} ({r['answers']}) | {r['weakest'][0]} {r['weakest'][1]:.2f} | {' '.join(r['untested'])} | {r['branches']} | {r['origin']} | "
+                 + f" | {r['U']:.2f} | {r['coverage']:.2f} | {r['support']:.2f} | {r['rounds']}/{len(past)} | {r['witnessed']} | {r['agree']:.2f} ({r['answers']}) | {r['weakest'][0]} {r['weakest'][1]:.2f} | {' '.join(r['untested'])} | {r['branches']} | {r['ends']} | {r['origin']} | "
                  + (", ".join(r["sets_only"]) or "") + " |")
     rest = [r for r in ranked if r["score"] <= 0]
     L += ["", f"{folded} pieces were restatements of longer sequences and are folded into them."]
