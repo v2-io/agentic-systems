@@ -16,6 +16,8 @@
 "b6_7": 6,
 "b8_9": 1,
 "b10": 0,
+"ev_stable": 26,
+"ev_stable_glyphs": 113,
 "untested": 13,
 "ends_open": 153,
 "new": 77
@@ -37,6 +39,8 @@
 "b6_7": 7,
 "b8_9": 3,
 "b10": 0,
+"ev_stable": 43,
+"ev_stable_glyphs": 185,
 "untested": 41,
 "ends_open": 186,
 "new": 31
@@ -58,6 +62,8 @@
 "b6_7": 8,
 "b8_9": 5,
 "b10": 0,
+"ev_stable": 66,
+"ev_stable_glyphs": 291,
 "untested": 54,
 "ends_open": 202,
 "new": 29
@@ -79,6 +85,8 @@
 "b6_7": 18,
 "b8_9": 8,
 "b10": 0,
+"ev_stable": 77,
+"ev_stable_glyphs": 375,
 "untested": 51,
 "ends_open": 254,
 "new": 42
@@ -100,6 +108,8 @@
 "b6_7": 23,
 "b8_9": 10,
 "b10": 8,
+"ev_stable": 110,
+"ev_stable_glyphs": 556,
 "untested": 104,
 "ends_open": 340,
 "new": 80

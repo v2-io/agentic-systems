@@ -14,10 +14,12 @@
 
 *Stable: established, measured in two or more families, U ≥ 0.8. Counts by length bucket. **stable_glyphs:** total glyphs in stable sequences. **cum calls:** cumulative sheets answered. The line to watch is stable_glyphs against cum calls: is each round still adding stable structure?*
 
-| round | cum calls | stable | stable_glyphs | median len | len 3 | 4–5 | 6–7 | 8–9 | 10+ |
-|---|---|---|---|---|---|---|---|---|---|
-| r000 | 505 | 13 | 71 | 6 | 0 | 6 | 6 | 1 | 0 |
-| r001 | 900 | 37 | 167 | 4 | 15 | 12 | 7 | 3 | 0 |
-| r002 | 1265 | 50 | 233 | 4 | 19 | 18 | 8 | 5 | 0 |
-| r003 | 1816 | 79 | 387 | 4 | 21 | 32 | 18 | 8 | 0 |
-| r004 | 2514 | 95 | 515 | 5 | 22 | 32 | 23 | 10 | 8 |
+The last two columns repeat the count with no likelihood model at all (`evidence_view.py`: sequences chained only from witnessed triples). If both views grow together, the growth is not an artifact of the fit.
+
+| round | cum calls | stable | stable_glyphs | median len | len 3 | 4–5 | 6–7 | 8–9 | 10+ | stable (evidence view) | their glyphs |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| r000 | 505 | 13 | 71 | 6 | 0 | 6 | 6 | 1 | 0 | 26 | 113 |
+| r001 | 900 | 37 | 167 | 4 | 15 | 12 | 7 | 3 | 0 | 43 | 185 |
+| r002 | 1265 | 50 | 233 | 4 | 19 | 18 | 8 | 5 | 0 | 66 | 291 |
+| r003 | 1816 | 79 | 387 | 4 | 21 | 32 | 18 | 8 | 0 | 77 | 375 |
+| r004 | 2514 | 95 | 515 | 5 | 22 | 32 | 23 | 10 | 8 | 110 | 556 |

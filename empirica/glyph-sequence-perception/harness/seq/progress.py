@@ -21,6 +21,7 @@ from common import EXP, read_jsonl
 import model as M
 import round as RD
 import squeue as Q
+import evidence_view as EV
 
 def jac(a, b):
     a, b = set(a), set(b)
@@ -51,6 +52,22 @@ def main():
         sl = sorted(len(pc["glyphs"]) for pc in stab_pcs)
         buckets = collections.Counter("3" if n == 3 else "4-5" if n <= 5 else "6-7" if n <= 7 else "8-9" if n <= 9 else "10+" for n in sl)
         new = sum(1 for pc in pieces if not any(jac(pc["glyphs"], q) >= 0.7 for q in prev_pieces))
+        # the model-free view (evidence_view.py): sequences chained from witnessed triples only
+        ev_chains, _, ev_byfam, _ = EV.build(obs, fam)
+        fams_all = sorted(set(fam.values()))
+        ev_stable = []
+        for c in ev_chains:
+            per = {}
+            for f in fams_all:
+                meas = ok = 0
+                for t3 in zip(c, c[1:], c[2:]):
+                    tal = ev_byfam[tuple(sorted(t3))].get(f)
+                    if tal and sum(tal.values()) >= 2:
+                        meas += 1; w = EV.witnessed(tal); ok += w is not None and w == ("mid", t3[1])
+                if meas:
+                    per[f] = ok / meas
+            if len(per) >= 2 and sum(per.values()) / len(per) >= 0.8:
+                ev_stable.append(len(c))
         mine = [r for r in parsed if r["round"] == rid]
         calls = sum(1 for f in (d / "rounds" / rid / "raw").glob("*/ledger.jsonl") for row in read_jsonl(f)
                     if row["result"].get("raw") and not row["result"].get("error"))
@@ -60,6 +77,7 @@ def main():
                "glyphs": sum(lens), "longest": max(lens, default=0), "mean_len": (sum(lens) / len(lens)) if lens else 0,
                "stable": stable, "stable_glyphs": sum(sl), "stable_median": sl[len(sl) // 2] if sl else 0,
                "b3": buckets["3"], "b4_5": buckets["4-5"], "b6_7": buckets["6-7"], "b8_9": buckets["8-9"], "b10": buckets["10+"],
+               "ev_stable": len(ev_stable), "ev_stable_glyphs": sum(ev_stable),
                "untested": untested, "ends_open": ends_open, "new": new}
         if synth:
             import synth as S
@@ -95,11 +113,12 @@ def main():
         L.append("| " + " | ".join(f"{r[c]:.1f}" if isinstance(r[c], float) else str(r[c]) for c in cols) + " |")
     L += ["", "## Growth of stable sequences", "",
           "*Stable: established, measured in two or more families, U ≥ 0.8. Counts by length bucket. **stable_glyphs:** total glyphs in stable sequences. **cum calls:** cumulative sheets answered. The line to watch is stable_glyphs against cum calls: is each round still adding stable structure?*", "",
-          "| round | cum calls | stable | stable_glyphs | median len | len 3 | 4–5 | 6–7 | 8–9 | 10+ |", "|---|---|---|---|---|---|---|---|---|---|"]
+          "The last two columns repeat the count with no likelihood model at all (`evidence_view.py`: sequences chained only from witnessed triples). If both views grow together, the growth is not an artifact of the fit.", "",
+          "| round | cum calls | stable | stable_glyphs | median len | len 3 | 4–5 | 6–7 | 8–9 | 10+ | stable (evidence view) | their glyphs |", "|---|---|---|---|---|---|---|---|---|---|---|---|"]
     cum = 0
     for r in rows:
         cum += r["calls"]
-        L.append(f"| {r['round']} | {cum} | {r['stable']} | {r['stable_glyphs']} | {r['stable_median']} | {r['b3']} | {r['b4_5']} | {r['b6_7']} | {r['b8_9']} | {r['b10']} |")
+        L.append(f"| {r['round']} | {cum} | {r['stable']} | {r['stable_glyphs']} | {r['stable_median']} | {r['b3']} | {r['b4_5']} | {r['b6_7']} | {r['b8_9']} | {r['b10']} | {r['ev_stable']} | {r['ev_stable_glyphs']} |")
     json.dump(rows, open(d / "progress.json", "w"), indent=0)
     out = "\n".join(L) + "\n"
     (d / "PROGRESS.md").write_text(out)
