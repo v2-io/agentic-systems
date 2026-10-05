@@ -1,0 +1,104 @@
+{
+ "all-minilm": {
+  "hf": "sentence-transformers/all-MiniLM-L6-v2",
+  "unk_share": 0.9281996687958363,
+  "single_token_share": 0.07176090213705544,
+  "tokens_per_glyph": {
+   "0": 1,
+   "1": 25361
+  }
+ },
+ "bge-m3": {
+  "hf": "BAAI/bge-m3",
+  "unk_share": 0.7103935020897405,
+  "single_token_share": 0.12755303209526062,
+  "tokens_per_glyph": {
+   "1": 3235,
+   "2": 21847,
+   "3": 230,
+   "4": 43,
+   "5": 7
+  }
+ },
+ "paraphrase-multilingual": {
+  "hf": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+  "unk_share": 0.7103935020897405,
+  "single_token_share": 0.12747417396104407,
+  "tokens_per_glyph": {
+   "0": 2,
+   "1": 3233,
+   "2": 21847,
+   "3": 230,
+   "4": 43,
+   "5": 7
+  }
+ },
+ "mxbai-embed-large / bge-large": {
+  "hf": "BAAI/bge-large-en-v1.5",
+  "unk_share": 0.9281996687958363,
+  "single_token_share": 0.07176090213705544,
+  "tokens_per_glyph": {
+   "0": 1,
+   "1": 25361
+  }
+ },
+ "nomic-embed-text": {
+  "hf": "nomic-ai/nomic-embed-text-v1.5",
+  "unk_share": 0.9281996687958363,
+  "single_token_share": 0.07176090213705544,
+  "tokens_per_glyph": {
+   "0": 1,
+   "1": 25361
+  }
+ },
+ "snowflake-arctic-embed2": {
+  "hf": "Snowflake/snowflake-arctic-embed-l-v2.0",
+  "unk_share": 0.7103935020897405,
+  "single_token_share": 0.12755303209526062,
+  "tokens_per_glyph": {
+   "1": 3235,
+   "2": 21847,
+   "3": 230,
+   "4": 43,
+   "5": 7
+  }
+ },
+ "granite-embedding:30m": {
+  "hf": "ibm-granite/granite-embedding-30m-english",
+  "unk_share": 0.0,
+  "single_token_share": 0.014036747890544909,
+  "tokens_per_glyph": {
+   "1": 356,
+   "2": 3168,
+   "3": 14655,
+   "4": 7183
+  }
+ },
+ "qwen3-embedding": {
+  "hf": "Qwen/Qwen3-Embedding-0.6B",
+  "unk_share": 0.0,
+  "single_token_share": 0.24406592540020502,
+  "tokens_per_glyph": {
+   "1": 6190,
+   "2": 9137,
+   "3": 7997,
+   "4": 2026,
+   "5": 12
+  }
+ },
+ "embeddinggemma (gemma tokenizer)": {
+  "error": "You are trying to access a gated repo.\nMake sure to have access to it at https://huggingface.co/google/embeddinggemma-30"
+ },
+ "Qwen3-8B (LLM)": {
+  "hf": "Qwen/Qwen3-8B",
+  "unk_share": 0.0,
+  "single_token_share": 0.24406592540020502,
+  "tokens_per_glyph": {
+   "1": 6190,
+   "2": 9137,
+   "3": 7997,
+   "4": 2026,
+   "5": 12
+  }
+ }
+}

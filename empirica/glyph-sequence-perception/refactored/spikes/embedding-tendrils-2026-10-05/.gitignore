@@ -1,0 +1,3 @@
+# Embedding matrices are large (~820 MB) and regenerable with work/embed.py / work/embed_hf.py (see work/run_all.sh).
+derived/emb/*.npy
+__pycache__/

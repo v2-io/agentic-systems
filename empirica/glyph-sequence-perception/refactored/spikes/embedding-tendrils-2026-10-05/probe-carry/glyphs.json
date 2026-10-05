@@ -1,0 +1,342 @@
+[
+{
+"g": "𐕿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𓸿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𓳯",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𓟿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𛀟",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𓳿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "ꖤ",
+"bytes": 3,
+"arm": "control"
+},
+{
+"g": "ḿ",
+"bytes": 3,
+"arm": "boundary"
+},
+{
+"g": "Ṯ",
+"bytes": 3,
+"arm": "control"
+},
+{
+"g": "𓦿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𝙿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𝕣",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𛀿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𑦡",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𝕿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𓈫",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𓈿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "ｦ",
+"bytes": 3,
+"arm": "control"
+},
+{
+"g": "𒊐",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𒾖",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𘯓",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𐙿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𖧔",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𖠿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𑦿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "ṿ",
+"bytes": 3,
+"arm": "boundary"
+},
+{
+"g": "𛊐",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𖠯",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𓚿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𐕔",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "ꙿ",
+"bytes": 3,
+"arm": "boundary"
+},
+{
+"g": "𔍣",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𓠮",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "ᚡ",
+"bytes": 3,
+"arm": "control"
+},
+{
+"g": "𑱿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𓄠",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𓟟",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𓘩",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "ꖿ",
+"bytes": 3,
+"arm": "boundary"
+},
+{
+"g": "𓼞",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𓦬",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "ᑜ",
+"bytes": 3,
+"arm": "control"
+},
+{
+"g": "ᑿ",
+"bytes": 3,
+"arm": "boundary"
+},
+{
+"g": "𓼿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "ᚿ",
+"bytes": 3,
+"arm": "boundary"
+},
+{
+"g": "𖩿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "ｿ",
+"bytes": 3,
+"arm": "boundary"
+},
+{
+"g": "𓄿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𒃿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𖧿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𒾿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𓸕",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𔓕",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𓠿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𐙝",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𘯿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𒃢",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𔍿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𛊿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𓘿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𔓿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𝙫",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "𖩕",
+"bytes": 4,
+"arm": "control"
+},
+{
+"g": "Ꙛ",
+"bytes": 3,
+"arm": "control"
+},
+{
+"g": "𐽿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "𒊿",
+"bytes": 4,
+"arm": "boundary"
+},
+{
+"g": "Ḗ",
+"bytes": 3,
+"arm": "control"
+},
+{
+"g": "𓚬",
+"bytes": 4,
+"arm": "control"
+}
+]

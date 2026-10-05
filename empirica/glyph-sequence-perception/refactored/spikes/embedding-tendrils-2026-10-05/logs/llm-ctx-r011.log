@@ -1,0 +1,8 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 84.99it/s]
+0/1822 4s  'Symbol sequence: 𝌇 ჱ' -> ჲ ჱ ჴ ȝ ჰ ჷ Ⴢ ဧ
+100/1822 240s  'Symbol sequence: ㍙ ⅛' -> ㍙ ⅞ ⅜ ㍚ ⅛ ㎎ ㍘ ㍛
+200/1822 766s  'Symbol sequence: ㎫ ㎬' -> ㎭ ㎯ 
+ i ㎐ ㎎ ㎾ ㎧
+/Users/josephwecker-v2/.local/share/mise/installs/python/3.11.14/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

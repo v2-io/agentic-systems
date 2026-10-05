@@ -1,0 +1,6 @@
+Fetching 14 files:   0%|          | 0/14 [00:00<?, ?it/s]Fetching 14 files:   7%|▋         | 1/14 [00:00<00:08,  1.58it/s]Fetching 14 files:  21%|██▏       | 3/14 [00:00<00:02,  4.90it/s]Fetching 14 files:  50%|█████     | 7/14 [00:01<00:00,  8.07it/s]Fetching 14 files:  50%|█████     | 7/14 [00:20<00:00,  8.07it/s]Fetching 14 files:  57%|█████▋    | 8/14 [16:54<19:47, 197.97s/it]Fetching 14 files: 100%|██████████| 14/14 [16:54<00:00, 72.48s/it]
+/Users/josephwecker-v2/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B/snapshots/5cf2132abc99cad020ac570b19d031efec650f2b
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.41s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  7.13s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:14<00:00,  7.03s/it]
+hf-Qwen3-Embedding-4B glyph: (25362, 2560) in 256s
+/Users/josephwecker-v2/.local/share/mise/installs/python/3.11.14/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

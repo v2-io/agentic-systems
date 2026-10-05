@@ -1,0 +1,38 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 66.79it/s]
+0/1822 4s  'Symbol sequence: ჱ' -> ,   ჱ ჲ ဧ 
+ ȝ  
+100/1822 168s  'Symbol sequence: ⅛' -> , ¼ 1 + ½ ⅜ ; ，
+200/1822 340s  'Symbol sequence: ㎬' -> , ㎭ ㎬ 
+ ㎪ ㎩ ㎫ (
+300/1822 536s  'Symbol sequence: ㆜' -> , 
+ ㆝ ㆜ ( ㆟ i  
+400/1822 780s  'Symbol sequence: ㋄' -> , ㋅ ㋆ ㋄ 
+ ㋂ ㋀ ㋃
+500/1822 912s  'Symbol sequence: ⎼' -> ⎼ 
+ , ( ⎽ 1   i
+600/1822 1011s  'Symbol sequence: 🄇' -> , 
+ 🅞 🅒 🄐 🄀 🅑 1
+700/1822 1102s  'Symbol sequence: 🄄' -> , 🅞 
+ 🄅 🅒 🄄 🄀 🄁
+800/1822 1131s  'Symbol sequence: ꜉' -> 
+ , ꜉ ( i .   -
+900/1822 1185s  'Symbol sequence: 🧍' -> ‍ 🧍 🏻 ♂ 
+ ♀ , (
+1000/1822 1283s  'Symbol sequence: 🚄' -> 
+ , 🚂 🚄 🚆 1 | 🚀
+1100/1822 1356s  'Symbol sequence: 🏼' -> 🪵 , 
+ 🧼 🧺 🪞 1 |
+1200/1822 1412s  'Symbol sequence: 𝟚' -> 𝟙 , 𝟟 𝟛 𝟚 𝟜 𝟝 𝟘
+1300/1822 1494s  'Symbol sequence: 😐' -> , 😐 
+ 😢 😊 🙂 😁 (
+1400/1822 1541s  'Symbol sequence: 🀙' -> 🀚 , 🀘 🀙 
+ 🀛 🍀 (
+1500/1822 1591s  'Symbol sequence: ٩' -> ( ٩ ٨ 
+ ٠ , . ◕
+1600/1822 1648s  'Symbol sequence: 🄇' -> , 
+ 🅞 🅒 🄐 🄀 🅑 1
+1700/1822 1714s  'Symbol sequence: ⑳' -> , ⑳ ① ⑬ ⑰ 
+ ⑯ ，
+1800/1822 1742s  'Symbol sequence: ⁶' -> ¹ ³ , C ⁄ ² P L
+done 1822 1748s

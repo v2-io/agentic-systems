@@ -1,0 +1,47 @@
+{
+ "cp": {
+  "middle_acc": 0.797112462006079,
+  "n_mid": 1316,
+  "yield_auc": 0.7915399720719148
+ },
+ "name>cp": {
+  "middle_acc": 0.7477203647416414,
+  "n_mid": 1316,
+  "yield_auc": 0.7235233024960727
+ },
+ "name>cp+num": {
+  "middle_acc": 0.7553191489361702,
+  "n_mid": 1316,
+  "yield_auc": 0.6905960900680747
+ },
+ "emb:all-minilm__name": {
+  "middle_acc": 0.547112462006079,
+  "n_mid": 1316,
+  "yield_auc": 0.7583906440914645
+ },
+ "emb:all-minilm__glyph": {
+  "middle_acc": 0.3829787234042553,
+  "n_mid": 1316,
+  "yield_auc": 0.5677413161110142
+ },
+ "emb:bge-m3__glyph": {
+  "middle_acc": 0.5144376899696048,
+  "n_mid": 1316,
+  "yield_auc": 0.6059626461860709
+ },
+ "emb:hf-Qwen3-Embedding-0.6B__glyph": {
+  "middle_acc": 0.46656534954407297,
+  "n_mid": 1316,
+  "yield_auc": 0.6749807994414383
+ },
+ "emb:hf-Qwen3-Embedding-0.6B__name": {
+  "middle_acc": 0.4635258358662614,
+  "n_mid": 1316,
+  "yield_auc": 0.7313998952696805
+ },
+ "emb:hf-Qwen3-Embedding-0.6B__both": {
+  "middle_acc": 0.49544072948328266,
+  "n_mid": 1316,
+  "yield_auc": 0.7064164775702566
+ }
+}

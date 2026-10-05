@@ -1,0 +1,27 @@
+{
+ "cp": {
+  "middle_acc": 0.42857142857142855,
+  "n_mid": 7,
+  "yield_auc": 0.5376647834274952
+ },
+ "name>cp+num": {
+  "middle_acc": 0.42857142857142855,
+  "n_mid": 7,
+  "yield_auc": 0.4378531073446328
+ },
+ "emb:all-minilm__name": {
+  "middle_acc": 0.42857142857142855,
+  "n_mid": 7,
+  "yield_auc": 0.53954802259887
+ },
+ "emb:hf-Qwen3-Embedding-0.6B__glyph": {
+  "middle_acc": 0.14285714285714285,
+  "n_mid": 7,
+  "yield_auc": 0.4397363465160075
+ },
+ "emb:hf-Qwen3-Embedding-0.6B__name": {
+  "middle_acc": 0.2857142857142857,
+  "n_mid": 7,
+  "yield_auc": 0.4792843691148776
+ }
+}
