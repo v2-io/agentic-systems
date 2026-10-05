@@ -10,10 +10,10 @@ Triads: agreement with the written order (direction-free), per mind.
 
 | mind | triads | answers | agree | ⟂ | two | other order | 3/3 same | most left out |
 |---|---|---|---|---|---|---|---|---|
-| gemini31pro | 4 | 4 | 0.75 | 0.00 | 0.25 | 0.00 | 0.00 (0) | `▁` 1.00 |
-| gemini38flash | 8 | 12 | 0.67 | 0.00 | 0.17 | 0.17 | 0.50 (2) | `▁` 0.40 |
-| grok46 | 22 | 43 | 0.91 | 0.00 | 0.09 | 0.00 | 1.00 (9) | `▂` 0.23 |
-| haiku45 | 4 | 6 | 1.00 | 0.00 | 0.00 | 0.00 | 1.00 (1) | — |
+| gemini31pro | 42 | 98 | 0.63 | 0.10 | 0.27 | 0.00 | 0.87 (23) | `▁` 0.48 |
+| gemini38flash | 56 | 168 | 0.64 | 0.02 | 0.32 | 0.02 | 0.84 (56) | `▁` 0.81 |
+| grok46 | 56 | 168 | 0.77 | 0.05 | 0.18 | 0.00 | 0.71 (56) | `█` 0.14 |
+| haiku45 | 56 | 168 | 0.81 | 0.15 | 0.04 | 0.00 | 0.61 (56) | `█` 0.03 |
 | opus55 | 56 | 168 | 0.92 | 0.00 | 0.08 | 0.00 | 0.89 (56) | `█` 0.11 |
 | sonnet55 | 56 | 168 | 0.93 | 0.01 | 0.07 | 0.00 | 0.88 (56) | `▁` 0.06 |
 
@@ -21,38 +21,104 @@ Agreement per adjacent link of the written order: triads holding both glyphs of 
 
 | link | gemini31pro | gemini38flash | grok46 | haiku45 | opus55 | sonnet55 |
 |---|---|---|---|---|---|---|
-| `▁▂` | 0/0 | 0/0 | 3/3 | 0/0 | 15/18 | 15/18 |
-| `▂▃` | 0/0 | 0/0 | 5/5 | 0/0 | 15/18 | 17/18 |
-| `▃▄` | 1/1 | 1/1 | 2/2 | 1/1 | 17/18 | 17/18 |
-| `▄▅` | 0/0 | 0/0 | 0/0 | 0/0 | 18/18 | 18/18 |
-| `▅▆` | 0/0 | 0/0 | 4/7 | 0/0 | 15/18 | 14/18 |
-| `▆▇` | 0/0 | 3/3 | 3/3 | 0/0 | 17/18 | 16/18 |
-| `▇█` | 0/0 | 1/1 | 4/5 | 3/3 | 16/18 | 17/18 |
+| `▁▂` | 2/15 | 0/18 | 13/18 | 14/18 | 15/18 | 15/18 |
+| `▂▃` | 6/9 | 13/18 | 13/18 | 8/18 | 15/18 | 17/18 |
+| `▃▄` | 5/7 | 14/18 | 15/18 | 12/18 | 17/18 | 17/18 |
+| `▄▅` | 2/2 | 15/18 | 14/18 | 18/18 | 18/18 | 18/18 |
+| `▅▆` | 13/16 | 15/18 | 11/18 | 15/18 | 15/18 | 14/18 |
+| `▆▇` | 10/10 | 16/18 | 16/18 | 15/18 | 17/18 | 16/18 |
+| `▇█` | 11/13 | 18/18 | 12/18 | 16/18 | 16/18 | 17/18 |
 
 Order items: every answer (sequence lines; extra).
 
+- gemini38flash: shown `▅▂▁▄▆▇▃` → ▂ ▃ ▄ ▅ ▆ ▇  · extra: ▁
+- gemini38flash: shown `▂▁▆▃` → ▂ ▃ ▆  · extra: ▁
+- gemini38flash: shown `█▆▄▁▃▂▅` → ▂ ▃ ▄ ▅ ▆ … █  · extra: ▁
+- gemini38flash: shown `▄▆▁▅▇` → ▄ ▅ … ▆ ▇  · extra: ▁
+- gemini38flash: shown `▆▂█▁▇` → ▂ ▆ ▇ █  · extra: ▁
+- gemini38flash: shown `▁▅▃▇█` → ▃ … ▅ … ▇ █  · extra: ▁
+- gemini38flash: shown `█▄▆▃▁▂▅` → ▂ ▃ ▄ ▅ ▆ … █  · extra: ▁
+- gemini38flash: shown `█▇▆▃▂▁▄▅` → ▂ ▃ ▄ ▅ ▆ ▇ █  · extra: ▁
+- gemini38flash: shown `▃▁▇▅█` → ▃ … ▅ … ▇ █  · extra: ▁
+- gemini38flash: shown `▂▇▅▆▁▃▄` → ▂ ▃ ▄ ▅ ▆ ▇  · extra: ▁
+- gemini38flash: shown `▂▆▁▇█` → ▂ ▆ ▇ █  · extra: ▁
+- gemini38flash: shown `▄▂▆█` → ▂ ▄ ▆ █
+- gemini38flash: shown `▂▄▅▃` → ▂ ▃ ▄ ▅
+- gemini38flash: shown `█▂▅▄▁▃▇▆` → ▂ ▃ ▄ ▅ ▆ ▇ █  · extra: ▁
+- gemini38flash: shown `▄▂▃▅` → ▂ ▃ ▄ ▅
+- gemini38flash: shown `▇▆▁▄▅` → ▄ ▅ … ▆ ▇  · extra: ▁
+- gemini38flash: shown `▆▃▂▁` → ▂ ▃ ▆  · extra: ▁
+- gemini38flash: shown `▂▄█▆` → ▂ ▄ ▆ █
+- grok46: shown `▅▂▁▄▆▇▃` → ▁ ▂ ▃ ▄ ▅ ▆ ▇
+- grok46: shown `▂▁▆▃` → ▁ ▂ ▃ ▆
+- grok46: shown `█▆▄▁▃▂▅` → ▁ ▂ ▃ ▄ ▅ ▆ … █
+- grok46: shown `▄▆▁▅▇` → ▁ … ▄ ▅ ▆ ▇
+- grok46: shown `▆▂█▁▇` → ▁ ▂ ▆ ▇ █
+- grok46: shown `▁▅▃▇█` → ▁ … ▃ … ▅ … ▇ █
+- grok46: shown `█▄▆▃▁▂▅` → ▁ ▂ ▃ ▄ ▅ ▆ … █
+- grok46: shown `█▇▆▃▂▁▄▅` → ▁ ▂ ▃ ▄ ▅ ▆ ▇ █
+- grok46: shown `▃▁▇▅█` → ▁ … ▃ … ▅ … ▇ █
+- grok46: shown `▂▇▅▆▁▃▄` → ▁ ▂ ▃ ▄ ▅ ▆ ▇
+- grok46: shown `▂▆▁▇█` → ▁ ▂ ▆ ▇ █
+- grok46: shown `▄▂▆█` → ▂ ▄ ▆ █
+- grok46: shown `▂▄▅▃` → ▂ ▃ ▄ ▅
+- grok46: shown `█▂▅▄▁▃▇▆` → ▁ ▂ ▃ ▄ ▅ ▆ ▇ █
+- grok46: shown `▄▂▃▅` → ▂ ▃ ▄ ▅
+- grok46: shown `▇▆▁▄▅` → ▁ … ▄ ▅ ▆ ▇
+- grok46: shown `▆▃▂▁` → ▁ ▂ ▃ ▆
+- grok46: shown `▂▄█▆` → ▂ ▄ ▆ █
+- haiku45: shown `▅▂▁▄▆▇▃` → ▁ ▂ ▃ ▄ ▅ ▆ ▇
+- haiku45: shown `▂▁▆▃` → ▆ ▃ ▂ ▁
+- haiku45: shown `█▆▄▁▃▂▅` → ▁ ▂ ▃ ▄ ▅ ▆ … █
+- haiku45: shown `▄▆▁▅▇` → ▇ ▆ ▅ ▄ … ▁
+- haiku45: shown `▆▂█▁▇` → █ ▇ ▆ ▂ ▁
+- haiku45: shown `▁▅▃▇█` → ▁ … ▃ … ▅ … ▇ █
+- haiku45: shown `█▄▆▃▁▂▅` → ▁ ▂ ▃ ▄ ▅ ▆ … █
+- haiku45: shown `█▇▆▃▂▁▄▅` → █ ▇ ▆ ▅ ▄ ▃ ▂ ▁
+- haiku45: shown `▃▁▇▅█` → ▁ … ▃ … ▅ … ▇ █
+- haiku45: shown `▂▇▅▆▁▃▄` → ▁ ▂ ▃ ▄ ▅ ▆ ▇
+- haiku45: shown `▂▆▁▇█` → ▁ ▂ ▆ ▇ █
+- haiku45: shown `▄▂▆█` → ▂ ▄ ▆ █
+- haiku45: shown `▂▄▅▃` → ▂ ▃ ▄ ▅
+- haiku45: shown `█▂▅▄▁▃▇▆` → █ ▇ ▆ ▅ ▄ ▃ ▂ ▁
+- haiku45: shown `▄▂▃▅` → ▂ ▃ ▄ ▅
+- haiku45: shown `▇▆▁▄▅` → ▇ ▆ ▅ ▄ … ▁
+- haiku45: shown `▆▃▂▁` → ▆ ▃ ▂ ▁
+- haiku45: shown `▂▄█▆` → ▂ ▄ ▆ █
 - opus55: shown `▅▂▁▄▆▇▃` → ▁ ▂ ▃ ▄ ▅ ▆ ▇
 - opus55: shown `▂▁▆▃` → ▁ ▂ ▃  · extra: ▆
+- opus55: shown `█▆▄▁▃▂▅` → ▁ ▂ ▃ ▄ ▅ ▆ … █
+- opus55: shown `▄▆▁▅▇` → ▁ … ▄ ▅ ▆ ▇
 - opus55: shown `▆▂█▁▇` → ▆ ▇ █ / ▁ ▂
+- opus55: shown `▁▅▃▇█` → ▁ … ▃ … ▅ … ▇ █
+- opus55: shown `█▄▆▃▁▂▅` → ▁ ▂ ▃ ▄ ▅ ▆ … █
+- opus55: shown `█▇▆▃▂▁▄▅` → ▁ ▂ ▃ ▄ ▅ ▆ ▇ █
+- opus55: shown `▃▁▇▅█` → ▁ … ▃ … ▅ … ▇ █
 - opus55: shown `▂▇▅▆▁▃▄` → ▁ ▂ ▃ ▄ ▅ ▆ ▇
 - opus55: shown `▂▆▁▇█` → ▁ ▂ / ▆ ▇ █
 - opus55: shown `▄▂▆█` → ▂ ▄ ▆ █
 - opus55: shown `▂▄▅▃` → ▂ ▃ ▄ ▅
+- opus55: shown `█▂▅▄▁▃▇▆` → ▁ ▂ ▃ ▄ ▅ ▆ ▇ █
 - opus55: shown `▄▂▃▅` → ▂ ▃ ▄ ▅
+- opus55: shown `▇▆▁▄▅` → ▁ … ▄ ▅ ▆ ▇
 - opus55: shown `▆▃▂▁` → ▁ ▂ ▃  · extra: ▆
 - opus55: shown `▂▄█▆` → ▂ ▄ ▆ █
 - sonnet55: shown `▅▂▁▄▆▇▃` → ▁ ▂ ▃ ▄ ▅ ▆ ▇
 - sonnet55: shown `▂▁▆▃` → ▁ ▂ ▃ ▆
 - sonnet55: shown `█▆▄▁▃▂▅` → ▁ ▂ ▃ ▄ ▅ ▆ █
+- sonnet55: shown `▄▆▁▅▇` → ▁ … ▄ ▅ ▆ ▇
 - sonnet55: shown `▆▂█▁▇` → ▁ ▂ ▆ ▇ █
 - sonnet55: shown `▁▅▃▇█` → ▁ … ▃ ▅ ▇ █
 - sonnet55: shown `█▄▆▃▁▂▅` → ▁ ▂ ▃ ▄ ▅ ▆ █
+- sonnet55: shown `█▇▆▃▂▁▄▅` → ▁ ▂ ▃ ▄ ▅ ▆ ▇ █
 - sonnet55: shown `▃▁▇▅█` → ▁ … ▃ ▅ … ▇ █
 - sonnet55: shown `▂▇▅▆▁▃▄` → ▁ ▂ ▃ ▄ ▅ ▆ ▇
 - sonnet55: shown `▂▆▁▇█` → ▁ ▂ ▆ ▇ █
 - sonnet55: shown `▄▂▆█` → ▂ ▄ ▆ █
 - sonnet55: shown `▂▄▅▃` → ▂ ▃ ▄ ▅
+- sonnet55: shown `█▂▅▄▁▃▇▆` → ▁ ▂ ▃ ▄ ▅ ▆ ▇ █
 - sonnet55: shown `▄▂▃▅` → ▂ ▃ ▄ ▅
+- sonnet55: shown `▇▆▁▄▅` → ▁ … ▄ ▅ ▆ ▇
 - sonnet55: shown `▆▃▂▁` → ▁ ▂ ▃ ▆
 - sonnet55: shown `▂▄█▆` → ▂ ▄ ▆ █
 
@@ -62,29 +128,69 @@ Triads (no reference order), per mind.
 
 | mind | triads | answers | ordered | ⟂ | two | 3/3 same | most left out |
 |---|---|---|---|---|---|---|---|
-| gemini31pro | 1 | 1 | 0.00 | 1.00 | 0.00 | 0.00 (0) | — |
-| gemini38flash | 1 | 1 | 0.00 | 1.00 | 0.00 | 0.00 (0) | — |
-| grok46 | 3 | 6 | 0.17 | 0.00 | 0.83 | 0.00 (1) | `‗` 0.67 |
-| haiku45 | 1 | 1 | 1.00 | 0.00 | 0.00 | 0.00 (0) | — |
+| gemini31pro | 7 | 16 | 0.44 | 0.44 | 0.12 | 0.50 (4) | `▁` 0.10 |
+| gemini38flash | 9 | 27 | 0.41 | 0.37 | 0.22 | 0.56 (9) | `▁` 0.33 |
+| grok46 | 9 | 27 | 0.41 | 0.00 | 0.59 | 0.44 (9) | `‗` 0.39 |
+| haiku45 | 9 | 27 | 0.37 | 0.37 | 0.26 | 0.11 (9) | `‗` 0.22 |
 | opus55 | 9 | 27 | 0.74 | 0.00 | 0.15 | 0.67 (9) | `▁` 0.20 |
 | sonnet55 | 9 | 27 | 1.00 | 0.00 | 0.00 | 0.78 (9) | — |
 
 Order items: every answer (sequence lines; extra).
 
+- gemini38flash: shown `▁_▂▃` → _ ▂ ▃  · extra: ▁
+- gemini38flash: shown `▁▂_‗▃` → _ ▂ ▃  · extra: ▁‗
+- gemini38flash: shown `‗▃▂_` → _ ▂ ▃  · extra: ‗
+- gemini38flash: shown `_▂‗▁` → ⟂
+- gemini38flash: shown `▁‗▃_` → _ ‗ ▃ ▁
+- gemini38flash: shown `▁_▃▂‗` → _ ▂ ▃  · extra: ▁‗
+- gemini38flash: shown `▁▃▂‗` → ▂ ▃  · extra: ▁‗
+- gemini38flash: shown `_‗▁▃` → ⟂
+- gemini38flash: shown `‗_▁▂` → ⟂
+- gemini38flash: shown `_‗▃▂` → _ ▂ ▃  · extra: ‗
+- gemini38flash: shown `▃▁▂_` → _ ▂ ▃  · extra: ▁
+- gemini38flash: shown `‗▂▃▁` → ▂ ▃  · extra: ‗▁
+- grok46: shown `▁_▂▃` → _ ▁ ▂ ▃
+- grok46: shown `▁▂_‗▃` → ▁ ▂ ▃ / _ ‗
+- grok46: shown `‗▃▂_` → _ ‗ ▂ ▃
+- grok46: shown `_▂‗▁` → ▁ ▂ / _ ‗
+- grok46: shown `▁‗▃_` → ▁ … ▃  · extra: ‗_
+- grok46: shown `▁_▃▂‗` → ▁ ▂ ▃ / _ ‗
+- grok46: shown `▁▃▂‗` → ▁ ▂ ▃  · extra: ‗
+- grok46: shown `_‗▁▃` → _ ‗ / ▁ … ▃
+- grok46: shown `‗_▁▂` → _ ‗ ▁ ▂
+- grok46: shown `_‗▃▂` → _ ‗ ▂ ▃
+- grok46: shown `▃▁▂_` → _ ▁ ▂ ▃
+- grok46: shown `‗▂▃▁` → ▁ ▂ ▃  · extra: ‗
+- haiku45: shown `▁_▂▃` → _ ▁ ▂ ▃
+- haiku45: shown `▁▂_‗▃` → ▁ ▂ ▃  · extra: _‗
+- haiku45: shown `‗▃▂_` → ‗ ▃ ▂ _
+- haiku45: shown `_▂‗▁` → ⟂
+- haiku45: shown `▁‗▃_` → _ ▁ ▃ ‗
+- haiku45: shown `▁_▃▂‗` → ▁ ▂ ▃  · extra: _‗
+- haiku45: shown `▁▃▂‗` → ‗ ▁ ▂ ▃
+- haiku45: shown `_‗▁▃` → _ ‗ ▁ … ▃
+- haiku45: shown `‗_▁▂` → _ ▁ ▂  · extra: ‗
+- haiku45: shown `_‗▃▂` → ‗ ▃ ▂ _
+- haiku45: shown `▃▁▂_` → _ ▁ ▂ ▃
+- haiku45: shown `‗▂▃▁` → ‗ ▁ ▂ ▃
 - opus55: shown `▁_▂▃` → _ ▁ ▂ ▃
 - opus55: shown `▁▂_‗▃` → ▁ ▂ ▃  · extra: _‗
+- opus55: shown `‗▃▂_` → _ ‗ ▂ ▃
 - opus55: shown `_▂‗▁` → ⟂
 - opus55: shown `▁‗▃_` → _ ▁ … ▃  · extra: ‗
 - opus55: shown `▁_▃▂‗` → ▁ ▂ ▃  · extra: _‗
 - opus55: shown `▁▃▂‗` → ▁ ▂ ▃  · extra: ‗
 - opus55: shown `_‗▁▃` → ▁ … ▃  · extra: _‗
 - opus55: shown `‗_▁▂` → ‗=_ ▁ ▂
+- opus55: shown `_‗▃▂` → _ ‗ ▂ ▃
 - opus55: shown `▃▁▂_` → _ ▁ ▂ ▃
 - opus55: shown `‗▂▃▁` → ▁ ▂ ▃  · extra: ‗
 - sonnet55: shown `▁_▂▃` → _ ▁ ▂ ▃
+- sonnet55: shown `▁▂_‗▃` → _=‗ ▁ ▂ ▃
 - sonnet55: shown `‗▃▂_` → _ ‗ ▂ ▃
 - sonnet55: shown `_▂‗▁` → ▁ ▂  · extra: _‗
 - sonnet55: shown `▁‗▃_` → _ ‗ ▁ ▃
+- sonnet55: shown `▁_▃▂‗` → _=‗ ▁ ▂ ▃
 - sonnet55: shown `▁▃▂‗` → ▁ ▂ ▃  · extra: ‗
 - sonnet55: shown `_‗▁▃` → _ ▁ … ▃  · extra: ‗
 - sonnet55: shown `‗_▁▂` → ‗ _ ▁ ▂
@@ -98,15 +204,48 @@ Triads (no reference order), per mind.
 
 | mind | triads | answers | ordered | ⟂ | two | 3/3 same | most left out |
 |---|---|---|---|---|---|---|---|
-| gemini38flash | 1 | 2 | 0.50 | 0.50 | 0.00 | 0.00 (0) | — |
-| grok46 | 3 | 6 | 0.17 | 0.00 | 0.83 | 1.00 (1) | `Ċ` 1.00 |
+| gemini31pro | 7 | 16 | 0.00 | 0.38 | 0.56 | 1.00 (4) | `ĉ` 0.33 |
+| gemini38flash | 10 | 30 | 0.23 | 0.03 | 0.70 | 0.80 (10) | `ĉ` 0.39 |
+| grok46 | 10 | 30 | 0.13 | 0.03 | 0.73 | 0.90 (10) | `ĉ` 0.56 |
+| haiku45 | 10 | 30 | 0.23 | 0.47 | 0.30 | 0.70 (10) | `Ċ` 0.17 |
 | opus55 | 10 | 30 | 0.20 | 0.00 | 0.77 | 0.80 (10) | `ĉ` 0.50 |
 | sonnet55 | 10 | 30 | 0.17 | 0.13 | 0.70 | 0.60 (10) | `ĉ` 0.39 |
 
 Order items: every answer (sequence lines; extra).
 
+- gemini38flash: shown `ĠGĉg` → ⟂
+- gemini38flash: shown `ĊĠGĉ` → Ċ ĉ  · extra: ĠG
+- gemini38flash: shown `ĠgGĊ` → ⟂
+- gemini38flash: shown `ĠGgĊĉ` → ⟂
+- gemini38flash: shown `GĊĉĠ` → Ċ ĉ  · extra: GĠ
+- gemini38flash: shown `gGĠĊĉ` → ⟂
+- gemini38flash: shown `GgĠĉ` → G Ġ g  · extra: ĉ
+- gemini38flash: shown `gĊĉĠ` → ⟂
+- gemini38flash: shown `ĠĊgĉ` → Ċ ĉ  · extra: Ġg
+- gemini38flash: shown `gĊĠG` → G g / Ċ Ġ
+- grok46: shown `ĠGĉg` → ⟂
+- grok46: shown `ĊĠGĉ` → ⟂
+- grok46: shown `ĠgGĊ` → g G Ġ  · extra: Ċ
+- grok46: shown `ĠGgĊĉ` → g G Ġ  · extra: Ċĉ
+- grok46: shown `GĊĉĠ` → ⟂
+- grok46: shown `gGĠĊĉ` → g G Ġ  · extra: Ċĉ
+- grok46: shown `GgĠĉ` → g G Ġ  · extra: ĉ
+- grok46: shown `gĊĉĠ` → ⟂
+- grok46: shown `ĠĊgĉ` → ⟂
+- grok46: shown `gĊĠG` → g G Ġ  · extra: Ċ
+- haiku45: shown `ĠGĉg` → ⟂
+- haiku45: shown `ĊĠGĉ` → ⟂
+- haiku45: shown `ĠgGĊ` → ⟂
+- haiku45: shown `ĠGgĊĉ` → ⟂
+- haiku45: shown `GĊĉĠ` → ⟂
+- haiku45: shown `gGĠĊĉ` → ⟂
+- haiku45: shown `GgĠĉ` → G g Ġ ĉ
+- haiku45: shown `gĊĉĠ` → ⟂
+- haiku45: shown `ĠĊgĉ` → ⟂
+- haiku45: shown `gĊĠG` → ⟂
 - opus55: shown `ĠGĉg` → ⟂
 - opus55: shown `ĊĠGĉ` → ĉ Ċ  · extra: ĠG
+- opus55: shown `ĠgGĊ` → ⟂
 - opus55: shown `ĠGgĊĉ` → ⟂
 - opus55: shown `GĊĉĠ` → ĉ Ċ  · extra: GĠ
 - opus55: shown `gGĠĊĉ` → ⟂

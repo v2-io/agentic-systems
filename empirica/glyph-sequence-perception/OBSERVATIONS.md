@@ -85,3 +85,41 @@ At r003, 21 of 147 candidates were split. Among them:
 
 **Status:** the fix is in place. The `9=𝟵` tie is a candidate observation for the digit-dress lattice seed to extend.
 
+---
+
+## 2026-10-04 · Probe r003p: the ramp's ends, tested directly
+
+The probe was Joseph's ask: *"get additional data points so we have a good spread, and especially get the other end of the sequence sorted out."* It asked all 56 triads of `▁▂▃▄▅▆▇█`, each in all three Latin rotations, plus 9 order items in two shuffles each, of every API mind. Report: `data/rounds/r003p/probe-report.md`. Gemini 3.1 Pro had answered 29 of its 59 sheets when this was written; the others were complete.
+
+**The top end (`▇█`) is not swapped for anyone.** Answers agreeing with the ramp order on triads holding both `▇` and `█`:
+
+| mind | `▇█` agreement |
+|---|---|
+| Gemini Flash | 18/18 |
+| Sonnet | 17/18 |
+| Opus | 16/18 |
+| Haiku | 16/18 |
+| Gemini Pro | 11/13 |
+| Grok | 12/18 |
+
+Grok's misses on that link are "only two go together" answers, not reversals. The r002 swap was the fit's arbitrary placement on an untested link, as recorded above.
+
+**The bottom end splits by family, and the split matches the tokenizer hypothesis.** Agreement on the `▁▂` link:
+
+| mind | `▁▂` agreement |
+|---|---|
+| Sonnet | 15/18 |
+| Opus | 15/18 |
+| Haiku | 14/18 |
+| Grok | 13/18 |
+| **Gemini Pro** | **2/15** |
+| **Gemini Flash** | **0/18** |
+
+Gemini Flash leaves `▁` out of 81% of the triads that hold it. In every one of its 11 order answers on probe sets containing `▁`, it orders the rest of the ramp and puts `▁` in extra, for example `▂ ▃ ▄ ▅ ▆ ▇ █ · extra: ▁`. Gemini Pro leaves `▁` out of 48% of the triads that hold it. Claude and Grok leave it out of 6% or less.
+
+**Reading.** Both Gemini minds, and only they, decline to place U+2581 on the fill ramp. That is the prediction if their (SentencePiece) tokenizer delivers it as a word-boundary metasymbol. The prediction is now confirmed in direction, with substantial n: 168 Gemini Flash triad answers, 98 Gemini Pro, 11 order answers. It is still a behavioural inference: the tokenizer itself has not been inspected.
+
+**The byte-level-BPE contrast (`Ġ Ċ G g ĉ`) is inconclusive.** Every mind mostly answers "only two go together" on these, with no family-specific pattern. There is no byte-level-BPE family on the roster yet to compare (OpenAI joins after Nov 2).
+
+**Status:** the `▁` finding is a supported observation across the Gemini family, mechanism hypothesized. The `▇█` question is closed: no swap.
+
