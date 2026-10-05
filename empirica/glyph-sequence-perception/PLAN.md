@@ -111,38 +111,35 @@ Three things can't be seen in triads, and each is why longer chains matter.
 
 ## 3. The item kinds
 
-### The mix: kernel growth (since 2026-10-04 evening)
+### What each round asks: one priority order (since 2026-10-04, late)
 
-Joseph's model, adopted with four amendments:
+Joseph's rule, as he stated it:
 
-> *"various minds start to find a sequence — call it a sequence of three glyphs. The priority is then to extend that sequence to the right and to the left as far as they will go while still spending time looking for other 'kernels' from which to explore … square away the most obvious and stable (empirically) sequences"* — and *"15% of our effort was always 'hot' — exploring the space for more kernels … based on bumps from the original seed."*
+> *"various minds start to find a sequence — call it a sequence of three glyphs. The priority is then to extend that sequence to the right and to the left as far as they will go while still spending time looking for other 'kernels' from which to explore … square away the most obvious and stable (empirically) sequences"*
+>
+> *"15% of our effort was always 'hot' — exploring the space for more kernels … based on bumps from the original seed."*
 
-**Established sequences** are the supported pieces of the fit's candidates: every link and tie witnessed by two or more in-order answers, and a majority (`model.supported_pieces`). Each carries a stability score: support × U × √(family coverage), the same measure as the standings.
+It is implemented as stated, in two parts (`harness/seq/squeue.py`, `round.cmd_plan`):
 
-**Every round splits its items concurrently** (`squeue.GROW`):
+1. **15% hot exploration.** First, the rotation follow-ups that confirm a kernel: an exploratory triad that two or more minds ordered (up to a third of the share). Then stochastic items over the whole pool, each glyph weighted by its seed's bump: triads, sets of 4–6 glyphs (holistic kernels are invisible to triads), and what-comes-next questions. Half of them come from one seed's neighbourhood.
+2. **The rest is one ordered list.** Established sequences are the supported pieces, with restatements folded in (`model.supported_pieces`, `squeue.piece_table`), ranked most stable first. Each sequence brings its work in this order:
+   1. its open ends: the what-comes-next question at each end, then the best untested glyph beyond each end. Candidates come from the minds' proposals first, then what seeds write there, then co-occurring glyphs;
+   2. its unconfirmed links and ties;
+   3. the rotation follow-ups of its triads;
+   4. the remaining candidates beyond its ends;
+   5. one squaring window and one long-range check;
+   6. one branch check and one gap check.
 
-| share | what | how |
-|---|---|---|
-| ≥ 15%, ~20% planned | **hot exploration** | One stochastic draw over the whole pool. Glyphs are weighted 1, or by their seed's bump; half the items come from one seed's neighbourhood. A third are sets of 4–6 glyphs, so holistic kernels (invisible to triads) can be found. Absorbs any share the other categories can't fill. |
-| ~45% | **extension** at both ends of every established sequence that is still open, most stable first, drawn nearly greedily (T = 0.1; exploration stays at T = 1) | `next` items (20% of the round: the most direct extension question, one presentation each; outward context of 3–5 glyphs); triads (20%) testing what lies beyond the end's last two glyphs, in this order of preference: what the minds proposed there, then what seeds write there, then co-occurring glyphs; an order window with the top proposal; `between` items inside the sequence. **Diminishing returns:** priority × 1/(1 + effort already spent at that end / 8), so many kernels grow in parallel and no single ladder takes the budget. **An end closes** once it has ≥ 6 next-answers, ≥ 70% of them none, and every proposal made at it has been tested (≥ 3 answers). |
-| ~5% | **branching** | Triads holding a mid-sequence glyph, its neighbour, and an outside glyph it co-occurs with. These find other sequences crossing this one (the digit-dress kind of question), which ends alone never reach. |
-| ~30% | **squaring away** | Support items for every unsupported link and unwitnessed tie (~15%); order windows; long-range splice checks. |
-| ≤ 15% of presentations | **Latin-rotation follow-ups** | Triads inside established sequences first, then triads two or more minds ordered, plus a small ⟂-recheck share. |
+   Items are taken greedily until the round's budget is spent. **An end closes** once it has six or more what-comes-next answers, 70% or more of them "none", and every proposal made at it has been tested.
 
-**My four amendments to Joseph's model**, each explained to him:
+On the r004 data, a 700-presentation round fully serves the 48 most stable sequences; the rest wait their turn.
 
-1. diminishing returns on extension;
-2. a branch share;
-3. sets inside the exploration;
-4. exploration absorbs unused share early on.
+**This replaced, the same evening, two schemes that did not implement the rule:**
 
-**What it replaced.** Ranking items by disagreement between posterior samples ("BALD") is no longer used. It never surfaced untested links, because warm-started samples inherit the same arbitrary choices. Measured on r002–r003, it had left extension under 10% and rotation follow-ups at 40–50% of every round.
+- **Disagreement ranking (rounds r000–r004).** It never surfaced untested links, and left extension under 10% of each round.
+- **A dozen category shares with per-category temperatures, a decay factor and a reserved top-40 list (planned for r005 only).** These were patches on a structure that didn't express the priority. Joseph caught it by asking why the top sequence's ends had never been asked, and then *"Why are we special casing?"*
 
-**Cost** is counted in presentations:
-
-- a new triad gets one presentation; its two other rotations come later, as follow-ups;
-- an order item gets 2 shuffles;
-- next and between items get 1 presentation each.
+Each round's `plan.json` names its scheme.
 
 ### What each looks like
 

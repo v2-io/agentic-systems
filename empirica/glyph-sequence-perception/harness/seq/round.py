@@ -183,99 +183,98 @@ def cmd_plan(a):
     in_piece = set()
     for pc in pieces:
         in_piece.update(pc["glyphs"])
-    # ---- follow-ups (Latin rotation reps 1-2): triads inside established sequences first, then triads that >= 2 minds
-    #      ordered; a small ⟂-recheck share; capped at FOLLOW_SHARE of the round
+    bump = {}
+    for sd in seeds:
+        for g in sd["glyphs"]:
+            bump[g] = max(bump.get(g, 1.0), sd.get("bump", Q.SEED_BUMP))
+    cooc = _cooc(parsed, pres, props) if cur else {}
+    seed_next = Q.seed_continuations(seeds) if cur else {}
+    # ---- ONE priority order (Joseph's rule; squeue: "one priority order"). Two parts:
+    #      (1) EXPLORE_SHARE: hot exploration + rotation follow-ups that confirm exploratory kernels;
+    #      (2) the rest: established sequences, most stable first, each with its work in a fixed order, taken greedily.
     first = collections.defaultdict(list)
     for r in parsed:
         p = pres[r["pid"]]
         if p["kind"] == "triad" and p["rep"] == 0 and r["status"] == "ok":
             first[p["iid"]].append(r["answer"][0])
-    fu = []
-    for iid, outs in first.items():
-        it = items[iid]
+    follows = []                       # (item, rep, minds that ordered it at rep 0)
+    for iid in sorted(first):
+        outs = first[iid]; it = items[iid]
         n_ord = sum(o != "none" for o in outs)
-        inside = all(g in in_piece for g in it["glyphs"])
-        if n_ord >= 1 and (inside or n_ord >= 2):
-            fu += [(0 if inside else 1, it, rp) for rp in (1, 2) if rp not in asked_rep[iid]]
-        elif n_ord == 0 and R("perp-recheck", {"iid": iid}).random() < Q.P_PERP_RECHECK and 1 not in asked_rep[iid]:
-            fu.append((2, it, 1))
-    fu.sort(key=lambda t: (t[0], t[1]["iid"], t[2]))
-    fu_wanted = len(fu)
-    follow = [(it, rp) for _, it, rp in fu[: int(Q.FOLLOW_SHARE * a.budget)]]
-    # ---- candidate items by category (PLAN §4: hot exploration + extend + branch + square away; no disagreement ranking)
-    cats = collections.defaultdict(list)
-    bump = {}
-    for sd in seeds:
-        for g in sd["glyphs"]:
-            bump[g] = max(bump.get(g, 1.0), sd.get("bump", Q.SEED_BUMP))
-    pl = sorted(pool)
-    for it, pri in Q.explore_items(pl, bump, seeds, rid, n_tri=600, n_set=200, n_next=80):
-        cats[(it["kind"], "explore")].append((it, 0.0))
-    if cur:
-        cooc = _cooc(parsed, pres, props)
-        seed_next = Q.seed_continuations(seeds)
-        for pc in pieces:
-            for side in ("right", "left"):
-                st = Q.end_state(pc, side, parsed, pres, items)
-                if st["closed"]:
-                    continue
-                spent = st["answers"] + sum(st["tested"].values())
-                decay = 1.0 / (1.0 + spent / 8.0)          # diminishing returns: many kernels grow in parallel
-                for it, pri in Q.extension_items(pc, st, cooc.get(st["end"], []), rid, seed_next):
-                    cats[(it["kind"], "extend")].append((it, pri * decay))
-            for it, pri in Q.gap_items(pc, rid):
-                cats[(it["kind"], "extend")].append((it, pri))
-            for it, pri in Q.square_items(pc, rid):
-                cats[(it["kind"], "square")].append((it, pri))
-            for it, pri in Q.branch_items(pc, cooc, rid):
-                cats[(it["kind"], "branch")].append((it, pri))
-        for cid in list(cur.cands):
-            for it, pri in Q.support_items(cur, cid, rid):
-                cats[(it["kind"], "support")].append((it, pri))
-    # ---- RESERVED, not sampled (Joseph: "If the #1 item on the list isn't getting its ends extended, we have a
-    #      prioritization problem"): for the TOP_ENDS most stable sequences, every open end gets, every round, its next
-    #      question and its best untested extension triad, ahead of all drawn items
-    reserved = []
-    if cur:
-        for pc in pieces[:Q.TOP_ENDS]:
-            for side in ("right", "left"):
-                st = Q.end_state(pc, side, parsed, pres, items)
-                if st["closed"]:
-                    continue
-                gen = Q.extension_items(pc, st, cooc.get(st["end"], []), rid, seed_next)
-                nx = [it for it, _ in gen if it["kind"] == "next" and it["iid"] not in asked0]
-                tr = [it for it, _ in gen if it["kind"] == "triad" and it["iid"] not in asked0]
-                for it in (nx[:1] + tr[:1]):
-                    reserved.append((it, ("next" if it["kind"] == "next" else "triad", "reserved-end"), pc["stability"]))
-    print(f"{rid}: {len(pieces)} established sequences; {len(reserved)} reserved end items; " + ", ".join(f"{c[1]}/{c[0]} {len(v)}" for c, v in sorted(cats.items())))
-    # ---- quotas: GROW; whatever a category cannot fill (not enough candidates) goes to hot exploration
-    cost = {"triad": 1, "order": 2, "next": 1, "between": 1}
-    n_new = max(10, a.budget - len(follow) - len(reserved))
-    quotas = dict(Q.GROW)
-    mean_cost = sum(quotas[c] * cost[c[0]] for c in quotas)
-    N = int(n_new / mean_cost)
-    spare = 0.0
-    for c in list(quotas):
-        if c in Q.EXPLORE_CATS:
-            continue
-        have = sum(1 for it, _ in cats.get(c, []) if it["iid"] not in asked0)
-        if have < quotas[c] * N:
-            spare += quotas[c] - have / max(1, N); quotas[c] = have / max(1, N)
-    ex_tot = sum(quotas[c] for c in Q.EXPLORE_CATS)
-    for c in Q.EXPLORE_CATS:
-        quotas[c] += spare * quotas[c] / ex_tot
-    T = 0.5
-    chosen = Q.draw(cats, quotas, N, T, rid, asked0 | {it["iid"] for it, _, _ in reserved})
-    chosen = reserved + chosen
-    sel_items, new_pres = {}, []
-    for it, cat, pri in chosen:
-        it = dict(it, category=list(cat), priority=pri, round=rid)
-        sel_items[it["iid"]] = it
+        if n_ord >= 1:
+            follows += [(it, rp, n_ord) for rp in (1, 2) if rp not in asked_rep[iid]]
+        elif R("perp-recheck", {"iid": iid}).random() < Q.P_PERP_RECHECK and 1 not in asked_rep[iid]:
+            follows.append((it, 1, 0))
+    follow_by_glyph = collections.defaultdict(list)
+    for f in follows:
+        for g in f[0]["glyphs"]:
+            follow_by_glyph[g].append(f)
+    B = a.budget
+    B_explore = round(Q.EXPLORE_SHARE * B) if cur else B
+    sel_items, new_pres, spent = {}, [], 0
+    used_follow = set()
+    def take_item(it, cat):
+        nonlocal spent
+        if it["iid"] in sel_items or it["iid"] in asked0:
+            return False
+        sel_items[it["iid"]] = dict(it, category=list(cat), round=rid)
         reps = [0, 1] if it["kind"] == "order" else [0]
-        new_pres += [I.presentation(it, rp, rid) for rp in reps]
-    for it, rp in follow:
-        sel_items.setdefault(it["iid"], dict(it, category=["triad", "followup"], round_created=it.get("round"), round=rid))
-        new_pres.append(I.presentation(it, rp, rid))
+        new_pres.extend(I.presentation(it, rp, rid) for rp in reps)
+        spent += len(reps)
+        return True
+    def take_follow(f, cat):
+        nonlocal spent
+        it, rp, _ = f
+        if (it["iid"], rp) in used_follow:
+            return False
+        used_follow.add((it["iid"], rp))
+        sel_items.setdefault(it["iid"], dict(it, category=list(cat), round_created=it.get("round"), round=rid))
+        new_pres.append(I.presentation(it, rp, rid)); spent += 1
+        return True
+    # (1) exploration: first confirm exploratory kernels (follow-ups of triads >= 2 minds ordered, outside any sequence),
+    #     up to a third of the share; then hot items in their fated (seed-bumped) random order
+    kern = sorted([f for f in follows if f[2] >= 2 and not all(g in in_piece for g in f[0]["glyphs"])],
+                  key=lambda f: (-f[2], f[0]["iid"], f[1]))
+    for f in kern:
+        if spent >= B_explore / 3:
+            break
+        take_follow(f, ["triad", "kernel-followup"])
+    for it, _ in Q.explore_items(sorted(pool), bump, seeds, rid, n_tri=600, n_set=200, n_next=80):
+        if spent >= B_explore:
+            break
+        take_item(it, [it["kind"], "explore"])
+    n_explore = spent
+    # (2) sequences in stability order, each with its full work list, greedily
+    served, last_stab = 0, None
+    if cur:
+        support_by_glyph = collections.defaultdict(list)
+        for cid in list(cur.cands):
+            for it, _ in Q.support_items(cur, cid, rid):
+                key = it["source"].get("link") or it["source"].get("tie") or ""
+                for g in key:
+                    support_by_glyph[g].append(it)
+        for pc in pieces:
+            if spent >= B:
+                break
+            ends = [Q.end_state(pc, side, parsed, pres, items) for side in ("right", "left")]
+            got = 0
+            for tier, w in Q.sequence_work(pc, ends, cooc, seed_next, support_by_glyph, follow_by_glyph, rid):
+                if spent >= B:
+                    break
+                name = {1: "end", 2: "link", 3: "followup", 4: "end", 5: "square", 6: "branch"}[tier]
+                if isinstance(w, tuple):
+                    got += take_follow(w, ["triad", name])
+                else:
+                    got += take_item(dict(w, source=dict(w["source"], seq="".join(pc["glyphs"]), stability=round(pc["stability"], 4))),
+                                     [w["kind"], name])
+            if got:
+                served += 1; last_stab = pc["stability"]
+    # anything left (few sequences yet): more exploration
+    if spent < B:
+        for it, _ in Q.explore_items(sorted(pool), bump, seeds, rid + "-more", n_tri=600, n_set=100, n_next=40):
+            if spent >= B:
+                break
+            take_item(it, [it["kind"], "explore"])
     sheets_out = []
     for k in I.KINDS:
         ps = [p for p in new_pres if p["kind"] == k]
@@ -287,16 +286,16 @@ def cmd_plan(a):
     rd.mkdir(parents=True, exist_ok=True)
     if fit:   # provenance: the exact fit this round was drawn from (a later re-analysis may overwrite fit.json)
         json.dump(dict(fit, basis_of=rid, basis_from=prev[-1]), open(rd / "basis-fit.json", "w"), ensure_ascii=False)
-    write_jsonl(rd / "queue.jsonl", [{"iid": it["iid"], "cat": list(c), "priority": p, "kind": it["kind"], "glyphs": it["glyphs"],
-                                      "source": it["source"]} for c, lst in sorted(cats.items()) for it, p in lst])
     write_jsonl(rd / "items.jsonl", list(sel_items.values()))
     write_jsonl(rd / "presentations.jsonl", new_pres)
     write_jsonl(rd / "sheets.jsonl", sheets_out)
-    json.dump({"round": rid, "scheme": "kernel-growth (PLAN §4, 2026-10-04)", "quotas": {"|".join(c): round(v, 4) for c, v in quotas.items()},
-               "established_sequences": len(pieces), "reserved_end_items": len(reserved), "T": T, "follow_ups": len(follow), "follow_ups_wanted": fu_wanted, "new_items": len(chosen),
-               "presentations": len(new_pres), "sheets": len(sheets_out)}, open(rd / "plan.json", "w"), indent=1)
-    print(f"{rid}: {len(chosen)} new items + {len(follow)} follow-up presentations -> {len(new_pres)} presentations, "
-          f"{len(sheets_out)} sheets (T={T:.2f})")
+    cats_n = collections.Counter("/".join(it["category"]) for it in sel_items.values())
+    json.dump({"round": rid, "scheme": "single-priority (Joseph's rule, 2026-10-04)", "explore_share": Q.EXPLORE_SHARE,
+               "explore_presentations": n_explore, "established_sequences": len(pieces), "sequences_served": served,
+               "lowest_stability_served": last_stab, "items_by_category": dict(cats_n),
+               "presentations": len(new_pres), "sheets": len(sheets_out)}, open(rd / "plan.json", "w"), ensure_ascii=False, indent=1)
+    print(f"{rid}: {len(new_pres)} presentations on {len(sheets_out)} sheets; exploration {n_explore}; "
+          f"{served} of {len(pieces)} sequences served (lowest stability served {last_stab})")
 
 def _cooc(parsed, pres, props):
     """glyph -> other glyphs it has been placed in a sequence with (non-none triad answers, order lines) or proposed
@@ -327,51 +326,8 @@ def _cooc(parsed, pres, props):
             cnt[x["ctx"][-1]][x["g"]] += 2
     return {g: [h for h, _ in c.most_common(20)] for g, c in cnt.items()}
 
-def _top_mean(ps, k):
-    ps = sorted(ps, reverse=True)[:max(1, k)]
-    return sum(ps) / len(ps) if ps else 0.0
 
-def _novelty(it, parsed, pres, _cache={}):
-    key = id(parsed)
-    if key not in _cache:
-        cnt = collections.Counter()
-        for r in parsed:
-            for g in pres[r["pid"]]["shown"]:
-                cnt[g] += 1
-        _cache.clear(); _cache[key] = cnt
-    cnt = _cache[key]
-    return sum(1 / (1 + cnt[g] / 15) for g in it["glyphs"]) / len(it["glyphs"])
 
-def _neighbours(snap, parsed, pres, props):
-    """per candidate: glyphs that co-occur with its members in non-none answers, or were proposed next to them."""
-    mem = {ci: set(g for st in c["steps"] for g in st) for ci, c in enumerate(snap["cands"])}
-    g2c = collections.defaultdict(set)
-    for ci, s in mem.items():
-        for g in s:
-            g2c[g].add(ci)
-    cnt = collections.defaultdict(collections.Counter)
-    for r in parsed:
-        if r["status"] != "ok":
-            continue
-        p = pres[r["pid"]]
-        a = r["answer"]
-        if p["kind"] == "triad" and a[0] != "none":
-            gs = [g for g in p["shown"]]
-        elif p["kind"] == "order" and isinstance(a, dict) and a.get("lines"):
-            gs = [g for line in a["lines"] for st in line if st != "GAP" for g in st]
-        else:
-            continue
-        for g in gs:
-            for ci in g2c.get(g, ()):
-                for h in gs:
-                    if h not in mem[ci]:
-                        cnt[ci][h] += 1
-    for x in props:
-        for g in x["ctx"]:
-            for ci in g2c.get(g, ()):
-                if x["g"] not in mem[ci]:
-                    cnt[ci][x["g"]] += 2
-    return {ci: [g for g, _ in c.most_common(12)] for ci, c in cnt.items()}
 
 # ------------------------------------------------------------------ run
 def core_minds(a, d):
