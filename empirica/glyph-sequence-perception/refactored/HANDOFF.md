@@ -48,6 +48,10 @@ The drains ask their minds' open sheets, oldest round first, and idle when caugh
 
 **`tree.sequences()` fixed 2026-10-05:** a sequence now holds supported links only. Walk start contexts carried the triad era's gaps (`⑩ ⑪ ⑬ ⑭`, `㊳ ㊲ ㉒ ㉑`).
 
+**utf-mcp is installed for Joseph's own tools** (2026-10-05 ~15:45, at his go-ahead: "make the mcp server available as a tool wherever you see fit"): `claude mcp` user scope, `~/.grok/config.toml` and `~/.codex/config.toml`, each tagged (`claude-code-user`, `grok-user`, `codex-user`). The study's judges can't see it: Claude judges use `--strict-mcp-config`, which was checked live and reported `tools: []`, and grok and codex judges run in isolated homes. **It is deliberately not in agy.** The study's Gemini judges run agy in Joseph's own HOME, so a global agy server (plus the allow-rule it needs) would hand the lookup tool to the first-impression Gemini judges. Don't add it there unless the agy adapter gets its own isolated configuration first.
+
+**Paused 2026-10-05 ~15:40** for Joseph's global md-press update: the loop and both drains were stopped mid-c004. To resume, from `refactored/`, start the loop and the two drains with `/opt/homebrew/bin/python3 -u` as in *Running now*. The loop finishes c004 first.
+
 **More from the same afternoon, all committed:**
 - **Run on Python with Unicode 16+:** `/opt/homebrew/bin/python3 run.py …`. `run.py` refuses older data. Everything through c002 had run on mise's 3.11 (Unicode 14), so Unicode 15–16 characters were unaskable and read as "unassigned". The triad-era port, seeds and c001–c002 were re-recorded (spot checks 1,588/0).
 - **Continuations into truly unassigned code points** (e.g. `𝋱 𝋲 𝋳 → U+1D2F4`) are a clean marker of code-point arithmetic. Per 1,000: haiku45 (thinking) 35, Gemini Pro 21, Flash 15, Sonnet 9, Grok 8, Opus 0. Recorded in METHODOLOGY §4.
