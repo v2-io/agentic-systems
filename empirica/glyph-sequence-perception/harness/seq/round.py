@@ -160,8 +160,10 @@ def cmd_plan(a):
             seeds += new
             print(f"{rid}: {len(new)} new seed(s) from data/seeds/")
     items, pres, parsed, sheets = load_all(d)
-    prev = rounds(d)
-    fit = json.load(open(d / "rounds" / prev[-1] / "fit.json")) if prev and (d / "rounds" / prev[-1] / "fit.json").exists() else None
+    # the basis is the latest round that HAS a fit: probe rounds (round.py probe) carry evidence but no fit of their own
+    # (bug found 2026-10-04: r004 was planned against probe round r003p, i.e. as if nothing had been fit)
+    prev = [r for r in rounds(d) if r != rid and (d / "rounds" / r / "fit.json").exists()]
+    fit = json.load(open(d / "rounds" / prev[-1] / "fit.json")) if prev else None
     mind_names = core_minds(a, d)
     samples = [M.from_snapshot(s, [], mind_names) for s in (fit or {}).get("samples", [])][:12]
     T = (fit or {}).get("next_T", 1.0)
@@ -383,9 +385,9 @@ def cmd_analyze(a):
     items, pres, parsed, sheets = load_all(d, upto=rid)
     mind_names = sorted({r["mind"] for r in parsed})
     obs = M.observations(parsed, pres)
-    prev = [r for r in rounds(d) if r < rid]
+    prev = [r for r in rounds(d) if r < rid and (d / "rounds" / r / "fit.json").exists()]
     warm = []
-    if prev and (d / "rounds" / prev[-1] / "fit.json").exists():
+    if prev:
         warm = [c["steps"] for c in json.load(open(d / "rounds" / prev[-1] / "fit.json"))["best"]["cands"]]
     iters = a.iters or min(20000, 1500 + 3 * len(obs) // 10)
     # restart points (PLAN §4): even chains warm-start from the last round's fit; odd chains from the seeds whose
@@ -414,7 +416,7 @@ def cmd_analyze(a):
     support = _support(best, [b for b, _ in cold] + [s for _, smp in cold for s in smp])
     pr = collections.Counter((r["mind"], r["status"]) for r in parsed if r["round"] == rid)
     fit = {"round": rid, "n_obs": len(obs), "minds": mind_names, "best": best, "support": support,
-           "alternatives": [c[1] for c in chains[1:]], "cold_chains": len(cold), "samples": samples, "next_T": max(0.2, 0.8 * json.load(open(rd / "plan.json")).get("T", 1.0)),
+           "alternatives": [c[1] for c in chains[1:]], "cold_chains": len(cold), "samples": samples, "next_T": max(0.2, 0.8 * (json.load(open(d / "rounds" / prev[-1] / "fit.json")).get("next_T", 1.0) if prev else 1.0)),
            "parse": {f"{m}|{s}": n for (m, s), n in pr.items()}}
     json.dump(fit, open(rd / "fit.json", "w"), ensure_ascii=False)
     (rd / "report.md").write_text(report(rid, fit, fam, items, pres, parsed))
