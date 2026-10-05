@@ -22,6 +22,26 @@ A **context** is an oriented run of glyphs: what a mind was shown, ending at the
 - **Edge.** The answers at a node. Each continuation `x` at node `c` is an edge `c → x`, with its supporting answers and the families behind them.
 - **Orientation.** A sequence and its reverse are the same sequence, but contexts are oriented. Extending a sequence leftward means asking the continuation of its reversed run. Both directions are ordinary continuation questions.
 
+## 2a. Three concerns, kept apart
+
+> *"The context tree should give us a very clean way of distinguishing between these three concerns/responsibilities: meaningful generalizable probing (e.g., preventing sheet-caused confounders & biases), the raw emergent sequences, and probing priority & efficiency (including seeding)."* — Joseph, 2026-10-05
+
+1. **Probing: is an answer a valid measurement?** This covers how a question is put:
+   - sheet composition, neighbours on the sheet, position, option order, forced versus optional "none";
+   - context length, and whether the context spoils the answer;
+   - parsing and echo failures.
+
+   Its output is answers, each tagged with everything about how it was obtained. It knows nothing about which sequences exist.
+2. **The tree: what the minds perceive.** It is built only from answers: contexts and the continuations given at them, per mind and family. Sequences, branches, ends, cycles and stability are read off it. It knows nothing about why a question was asked (priority, seeds, exploration), so where a question came from can never become evidence. The only route from (1) into (2) is a tagged answer. If a probing factor turns out to bias answers, the tree can weight or split by that tag without being rebuilt.
+3. **Priority: what to ask next.** It reads the tree and decides where effort goes: extension, k\*, branch points, cycle probes, hot exploration, seeds, and how settled each node is. It writes questions, never evidence. Seeds live entirely here.
+
+The triad era mixed these concerns:
+- seeds supplied the glyphs that sequences were tested with;
+- the fit's guesses steered what was asked within sequences;
+- the growth rules carried priority judgments.
+
+Each mix-up produced an incident (see `../OBSERVATIONS.md` and the seam note in `../PLAN.md`).
+
 ## 3. Definitions
 
 **Shortest sufficient context, k\*.** For a glyph `x` that follows a run `… u v w` along some path, k\* is the length of the shortest suffix of that run (`w`, `v w`, `u v w`, …) at which minds name `x` as the continuation.
@@ -89,7 +109,7 @@ This is Joseph's priority rule, restated on the tree:
 ## 7. Open questions
 
 - **Embeddings as tendrils.** Do a glyph's embedding neighbours predict confirmed edges better than its codepoint neighbours do? It's worth a fresh-agent spike that scores both against the stable sequences found so far. If they do, embeddings would choose what to probe. They would never be evidence. (Doubt: local models handle Unicode poorly.)
-- **Agreement threshold.** What counts as "the minds agree" at a node, for the read-off of stability: ≥ 2 families? A plurality? It is to be chosen with the data in view, and listed as a parameter chosen without evidence.
+- **Agreement: soft, not a gate.** Agreement at a node is a quantity: the share of answers, and of families, giving the continuation. Priority (concern 3) uses it continuously, as a weight in the stochastic choice of what to ask. Nothing is filtered by it. Any "stable / not stable" label in a report is a read-off, and its cut-off is listed as a parameter chosen without evidence. (Joseph: *"I suspect it will be kind of a relative number or a soft threshold for the stochastic prioritization."*)
 - **Reflection-symmetric cycles**, as in §3.
 
 ---
