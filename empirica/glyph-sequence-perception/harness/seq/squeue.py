@@ -164,6 +164,15 @@ def square_items(piece, round_id):
     return out
 
 
+# fresh glyphs by UTF-8 length: weight, codepoint spans (within a tier, uniform over codepoints). Printable ASCII first,
+# then 2-byte, then the symbol-rich 3-byte and 4-byte blocks the pilot's long tail used.
+FRESH_TIERS = {
+    "1-byte": (4, [(0x21, 0x7E)]),
+    "2-byte": (3, [(0xA1, 0x7FF)]),
+    "3-byte": (2, [(0x2000, 0x2BFF), (0x2E80, 0x33FF)]),
+    "4-byte": (1, [(0x1D300, 0x1D7FF), (0x1F000, 0x1FBFF)]),
+}
+
 def explore_items(pool, lineage_bump, seeds, round_id, n_tri, n_set, n_next, n_between=0):
     """Hot exploration (Joseph: "15% of our effort was always 'hot' ... based on bumps from the original seed").
     Glyphs are drawn with weight 1, or the seed's bump for glyphs any seed names. With probability 1/2 an item's glyphs
@@ -182,7 +191,12 @@ def explore_items(pool, lineage_bump, seeds, round_id, n_tri, n_set, n_next, n_b
         symbol space can be asked, not only those in the pool (fixed 2026-10-04: a pool frozen at init had made
         glyphs like '\\' unreachable -- Joseph's spinner |/-\\ could never have been found)"""
         while True:
-            cp = r.choice([r.randint(0x20, 0x2BFF), r.randint(0x1F000, 0x1FBFF), r.randint(0x2E80, 0x33FF), r.randint(0x1D300, 0x1D7FF)])
+            # search order only (Joseph, 2026-10-05: "bumping printable ascii in probability is fine, same with 2-byte
+            # over 3-byte unicode ... it isn't a bias in the atomic data except in determining the search space order")
+            tier = r.choices(list(FRESH_TIERS), weights=[FRESH_TIERS[t][0] for t in FRESH_TIERS])[0]
+            spans = FRESH_TIERS[tier][1]
+            lo, hi = r.choices(spans, weights=[b - a_ + 1 for a_, b in spans])[0]
+            cp = r.randint(lo, hi)
             ch = chr(cp)
             try:
                 _U.name(ch)

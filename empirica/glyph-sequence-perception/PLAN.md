@@ -330,6 +330,7 @@ Joseph, 2026-10-04: *"I'm so sick of rules invented for no reason."* Every numbe
 | a step counts | one answer giving that middle | `growth.py` | the data's own unit. The two-answer witness rule and the majority rule before it, both mine, were removed on 2026-10-04 |
 | stable (a read-off in `STANDINGS.md` and `PROGRESS.md`; gates nothing) | every step given by minds of ≥ 2 families | `growth.stable` | mine |
 | fresh draws from the whole symbol space vs seed-bumped pool draws | 1 : 1 | `squeue.explore_items` | mine |
+| fresh draws by UTF-8 length: printable ASCII : 2-byte : 3-byte symbol blocks : 4-byte symbol blocks | 4 : 3 : 2 : 1 | `squeue.FRESH_TIERS` | Joseph's direction (2026-10-05: *"bumping printable ascii in probability is fine, same with 2-byte over 3-byte unicode … it isn't a bias in the atomic data except in determining the search space order"*); the ratios are mine. It shapes coverage (which regions are searched first), not any answer |
 | seed-local vs whole-space exploration sets | 1 : 1 | `squeue.explore_items` | mine |
 | seed bump | 2 (domain seeds), 1.5 (survey records) | `data/seeds/*`, `round.survey_seeds` | mine |
 | kernel-confirming follow-ups / between-proposal tests | ≤ ⅓ / ≤ ½ of the exploration share | `round.cmd_plan` | mine |
