@@ -21,7 +21,7 @@
 - **Five `missing` Vol-3 segments** (`obs-backward-inference-empathy`, `form-structured-rich-context`, `der-active-salience-management`, `der-self-referential-closure`, `def-cognitive-fusion`): write at honest tier, or recast the three `03-llm-core/src/impl-*` passages that describe them in the present tense ("carries", "defines", "addresses") as anticipated. Forward refs per se are sanctioned by FORMAT; the present-tense content claims are the defect.
 - **Nine scope-first OUTLINE orderings in 03/04** — whitelist (`OUTLINE-accepted.md`, mechanism proven in 01) if deliberate, else reorder. (Also in the valve.)
 - **GitHub v0.4.0 release body** still says the root CURRENT-VOL1 files are byte-identical to the assets — `gh release edit v0.4.0 --notes-file releases/v0.4.0.md` would sync it.
-- **Corpus press.** Every tracker, `CHANGELOG.md`, and several segments fail `md-press --check` at HEAD (pre-existing wrap debt). Pressing them in place is mechanical once the two md-press bugs filed 2026-08-22 (`firmatum/utils/md-press/FEEDBACK-2026-08-22.md`: pseudo-display `$$` join; missing GitHub math-compat checks) are fixed — your call whether to press before or after.
+- **Corpus press.** Every tracker, `CHANGELOG.md`, and several segments fail `md-press --check` at HEAD (pre-existing wrap debt). Pressing them in place is mechanical (`md-press --fix`, after reading the report's unsure decisions). Of the two md-press bugs filed 2026-08-22 (`firmatum/utils/md-press/FEEDBACK-2026-08-22.md`), the pseudo-display `$$` join is fixed (released 2026-10-05); the missing GitHub math-compat checks are still open — your call whether to press before or after those land.
 
 ## Small, outside-repo, only-you (migrated from the drained NEXT-UP, 2026-06-02 vintage)
 
