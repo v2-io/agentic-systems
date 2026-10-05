@@ -1,6 +1,6 @@
-# HANDOFF: state of the refactored study (2026-10-05, ~11:40 MDT)
+# HANDOFF: state of the refactored study (2026-10-05, ~12:05 MDT; the coordinating session ends here)
 
-*Written by the coordinating instance (Claude Opus 5.5) near the end of its context window, for whoever continues: me after compaction, or a fresh instance. Read METHODOLOGY.md first; this file is state and open threads, not method.*
+*Written by the coordinating instance (Claude Opus 5.5) for the session that continues the work on its own (Joseph, 2026-10-05: "pick up a new one that doesn't have a coordinator attached to it to continue the work here in glyph-land independently"). Read METHODOLOGY.md first; this file is state and open threads, not method. Joseph's earlier sessions also hold context: his messages relayed through the coordinator are quoted here where they matter.*
 
 ## What exists
 
@@ -25,12 +25,15 @@ Everything in `data/answers/` and `data/tree/` is regenerable and gitignored. To
 - **The loop:** `nohup python3 -u run.py loop --budget 700 >> data/logs/loop.log` (started from `refactored/`). Round c001 was planned with the old sequence-first order and finishes around 12:15 MDT. `data/rounds/STOP` was set, so the loop stops after c001; a background waiter then removes STOP and restarts the loop. **Check:** `tail data/logs/loop.log`, and confirm that c002's `plan.json` has `by_tier`.
   - Each round commits itself (ledgers, SEQUENCES.md, PROGRESS.md, BEST.md) and takes about 50–60 minutes. The bottleneck is Gemini Flash, whose agy adapter runs one call at a time.
   - **To stop it:** `touch data/rounds/STOP`; the loop stops after the current round.
+- **Restart after c001, detached from the coordinating session:** `data/logs/restart-after-c001.sh`, run with nohup. It waits for "STOP found" in `loop.log`, removes STOP, and restarts the loop with the current code. It won't start a second loop, and it won't restart after a failure. If c002 hasn't started by about 12:30 MDT, check `pgrep -fl "run.py loop"` and the tail of `loop.log`.
 - **The triad-era loop is finished:** r012 was committed, and its fit was killed because it fed nothing.
 - **Embedding spike: landed and committed** (`cc05dc89`; entry point `spikes/embedding-tendrils-2026-10-05/README.md`, `debrief.md` for Joseph, `no-go.md`). **An independent verification is running** (bare brief). Its report goes to `de-novo-feedback-1.md` in the spike directory: commit it, then act. The spiker's claims, *unverified until then*:
   - Bare-glyph embeddings fail.
   - Unicode *names* help on jumps between blocks: interleaved with codepoint order, they raise recall@30 where codepoint order fails from 0.52 to 0.67–0.74. A no-model name matcher is in `work/rankers.py` (`name_num_scores`).
   - **Codepoint order leaks into the minds' answers.** About 80% of first proposals on never-shown glyphs are the next code point; Claude about 57%, Gemini about 30% and Grok rarely on the obscurest glyphs. Their tests at the boundaries of UTF-8 byte-length ranges point to knowledge of the Unicode charts, not a tokenizer artefact.
   - Lines and axes in embedding space are a no-go in the spaces tested.
+- **The verifier may not survive the end of the coordinating session.** It was a subagent of that session. If `spikes/embedding-tendrils-2026-10-05/de-novo-feedback-1.md` doesn't exist, launch a fresh verifier with this brief, verbatim; the bare brief is the method:
+  > *I am working on `~/src/arch/asf/empirica/glyph-sequence-perception/refactored/spikes/embedding-tendrils-2026-10-05/`. It should be self-explanatory once you're there; the study it belongs to is described in `refactored/METHODOLOGY.md`. Would you please do an independent critical/adversarial pass on that spike and write your report to `refactored/spikes/embedding-tendrils-2026-10-05/de-novo-feedback-1.md`? There are no limits on what aspect you audit, what findings you share, or the breadth of search available to you. Re-derive from what is written rather than from what you can tell was intended. One machine fact: other jobs share this machine (live LLM rounds via CLIs), so please ask before starting any long GPU or local-model run. Please don't commit; I'll commit your report.*
 - **What follows if it verifies, all pending:**
   - **(a) A "chart order" read-off.** Mark links where the next glyph is the codepoint neighbour (±1). That is a property of the glyph pair, so it is a legitimate read-off, not provenance. It would let chart-following sequences be weighed or split out in SEQUENCES.md, BEST.md and PROGRESS.md.
   - **(b) Unicode-name siblings in exploration,** alternating with codepoint-neighbour partners (`priority/plan.py` `explore`).
