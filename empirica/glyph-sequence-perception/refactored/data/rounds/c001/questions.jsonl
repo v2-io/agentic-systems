@@ -1,0 +1,700 @@
+{"context": ["⑵", "⑶"], "kind": "continue", "qid": "Q8c307415ded7", "source": {"how": "seed", "round": "c001", "seed": "survey:30540aaf476fcf19", "why": "explore"}}
+{"context": ["ↁ", "ↂ"], "kind": "continue", "qid": "Q933932d5b695", "source": {"how": "seed", "round": "c001", "seed": "survey:6bf8661964135624", "why": "explore"}}
+{"context": ["o", "ױ"], "kind": "continue", "qid": "Q275b5bf75b22", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["b", "u"], "kind": "continue", "qid": "Qcc4ffd619723", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["ᚅ", "ᚄ"], "kind": "continue", "qid": "Qbf39beeb03ed", "source": {"how": "seed", "round": "c001", "seed": "survey:70bb8106a42739e0", "why": "explore"}}
+{"context": ["⼱", "⼲"], "kind": "continue", "qid": "Q169775cb8b72", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["🔍", "🔎"], "kind": "continue", "qid": "Qaf95f0e8746e", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["ᴜ", "u"], "kind": "continue", "qid": "Q9e72e51badde", "source": {"how": "seed", "round": "c001", "seed": "survey:fb10600b4d66ed65", "why": "explore"}}
+{"context": ["ƫ", "ʈ"], "kind": "continue", "qid": "Qe6e03c215cc9", "source": {"how": "seed", "round": "c001", "seed": "survey:1a2204dee097bdd9", "why": "explore"}}
+{"context": ["☳", "☲"], "kind": "continue", "qid": "Q9970ce76c5c7", "source": {"how": "seed", "round": "c001", "seed": "survey:9d6787f09ad7e80b", "why": "explore"}}
+{"context": ["ʤ", "ʣ"], "kind": "continue", "qid": "Q9d03e5ce20f8", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["八", "九"], "kind": "continue", "qid": "Qb2a86da657a2", "source": {"how": "seed", "round": "c001", "seed": "survey:ff8a9431ed14abc2", "why": "explore"}}
+{"context": ["⊂", "∙"], "kind": "continue", "qid": "Q33bcc3ae32c4", "source": {"how": "seed", "round": "c001", "seed": "survey:cc8dcf8eb2b95084", "why": "explore"}}
+{"context": ["č", "Ď"], "kind": "continue", "qid": "Q8e2dec25b3b5", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["▅", "▆"], "kind": "continue", "qid": "Q5d5d1a98b611", "source": {"how": "seed", "round": "c001", "seed": "survey:48e2ff08e80da22a", "why": "explore"}}
+{"context": ["c", "b"], "kind": "continue", "qid": "Qafdf81a26082", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["‴", "″"], "kind": "continue", "qid": "Q59e051d98193", "source": {"how": "seed", "round": "c001", "seed": "survey:9190517198bcf516", "why": "explore"}}
+{"context": ["３", "２"], "kind": "continue", "qid": "Q43a76387482e", "source": {"how": "seed", "round": "c001", "seed": "survey:aa7fbd333b97b14d", "why": "explore"}}
+{"context": ["`", "_"], "kind": "continue", "qid": "Q1a2ac1873fb7", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["Х", "⩬"], "kind": "continue", "qid": "Q45619d2af5bb", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["🠦", "🠪"], "kind": "continue", "qid": "Q798a123d6f25", "source": {"how": "seed", "round": "c001", "seed": "survey:6b148619f825945a", "why": "explore"}}
+{"context": ["2", "1"], "kind": "continue", "qid": "Q7b1d91a7c17d", "source": {"how": "seed", "round": "c001", "seed": "survey:5ee83340fc16b453", "why": "explore"}}
+{"context": ["{", "⍚"], "kind": "continue", "qid": "Qc3e59a7d3691", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["🔉", "🔊"], "kind": "continue", "qid": "Q70d59637788f", "source": {"how": "seed", "round": "c001", "seed": "survey:6a05e5e9a99e9cc5", "why": "explore"}}
+{"context": ["🀚", "🀛"], "kind": "continue", "qid": "Qf1296541b316", "source": {"how": "seed", "round": "c001", "seed": "survey:fa4a3f60f38e9c5f", "why": "explore"}}
+{"context": ["∬", "∫"], "kind": "continue", "qid": "Q7cf71874a2c8", "source": {"how": "seed", "round": "c001", "seed": "survey:f15192ac6a893aaa", "why": "explore"}}
+{"context": ["3", "㌏"], "kind": "continue", "qid": "Q28f654e927e0", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["𝟯", "𝟮"], "kind": "continue", "qid": "Q81f8a977b7fa", "source": {"how": "seed", "round": "c001", "seed": "c4a1e3cde14177ae:value@𝟭", "why": "explore"}}
+{"context": ["⣿", "⁝"], "kind": "continue", "qid": "Q99181f2a4810", "source": {"how": "seed", "round": "c001", "seed": "survey:2349b71dacc02a17", "why": "explore"}}
+{"context": ["≛", "u"], "kind": "continue", "qid": "Qc696712bc54d", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["៧", "៦"], "kind": "continue", "qid": "Q29eebcf527c5", "source": {"how": "seed", "round": "c001", "seed": "survey:4f510790aa13ed44", "why": "explore"}}
+{"context": ["˒", "˓"], "kind": "continue", "qid": "Qaecb51b093f9", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["ı", "Ĳ"], "kind": "continue", "qid": "Q3ea9141252b5", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["⁘", "⁖"], "kind": "continue", "qid": "Q86688e33ccac", "source": {"how": "seed", "round": "c001", "seed": "survey:a3a3dd01dfafe1de", "why": "explore"}}
+{"context": ["🞪", "🞫"], "kind": "continue", "qid": "Q0e9a3d12a5bf", "source": {"how": "seed", "round": "c001", "seed": "survey:ce3fbe8616d12dba", "why": "explore"}}
+{"context": ["꜔", "꜓"], "kind": "continue", "qid": "Q8db47372c6b4", "source": {"how": "seed", "round": "c001", "seed": "survey:9bd1047677dbb84e", "why": "explore"}}
+{"context": ["🧉", "2"], "kind": "continue", "qid": "Q82ddd7594daf", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["P", "ᴘ"], "kind": "continue", "qid": "Qc3786fb94c28", "source": {"how": "seed", "round": "c001", "seed": "survey:8507c0a66863d866", "why": "explore"}}
+{"context": ["ܘ", "ڳ"], "kind": "continue", "qid": "Q86007faf4467", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["☳", "☴"], "kind": "continue", "qid": "Q0b09181ee705", "source": {"how": "seed", "round": "c001", "seed": "survey:6f0a302bf3651139", "why": "explore"}}
+{"context": ["🠪", "🠮"], "kind": "continue", "qid": "Q11221930775a", "source": {"how": "seed", "round": "c001", "seed": "survey:6b148619f825945a", "why": "explore"}}
+{"context": ["➷", "➶"], "kind": "continue", "qid": "Q83ac5593262e", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["Ͷ", "k"], "kind": "continue", "qid": "Qe0b1f77fd6d4", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["🠆", "🠂"], "kind": "continue", "qid": "Q112073856942", "source": {"how": "seed", "round": "c001", "seed": "survey:139cf5c9c4d2105b", "why": "explore"}}
+{"context": ["ä", "ȧ"], "kind": "continue", "qid": "Q6a4caea5baa5", "source": {"how": "seed", "round": "c001", "seed": "survey:2cfc597ae7c35a99", "why": "explore"}}
+{"context": ["✶", "✦"], "kind": "continue", "qid": "Q173b093e35ad", "source": {"how": "seed", "round": "c001", "seed": "survey:9fbe8ce30135b5ef", "why": "explore"}}
+{"context": ["⠀", "⠁"], "kind": "continue", "qid": "Qa194a4ca5afb", "source": {"how": "seed", "round": "c001", "seed": "survey:68c3397aa5507d11", "why": "explore"}}
+{"context": ["て", "ߚ"], "kind": "continue", "qid": "Qaf9c73599a3f", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["🌫", "🔥"], "kind": "continue", "qid": "Qa464fde92425", "source": {"how": "seed", "round": "c001", "seed": "survey:33425bd69131c260", "why": "explore"}}
+{"context": ["𝘳", "⿁"], "kind": "continue", "qid": "Q34460891d5b3", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["➇", "➆"], "kind": "continue", "qid": "Q3792bb348fa9", "source": {"how": "seed", "round": "c001", "seed": "survey:3bed002799068f92", "why": "explore"}}
+{"context": ["🪵", "🔥"], "kind": "continue", "qid": "Q8df618aafabd", "source": {"how": "seed", "round": "c001", "seed": "survey:33425bd69131c260", "why": "explore"}}
+{"context": ["⎋", "☝"], "kind": "continue", "qid": "Q33aa811c7894", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["⑴", "⒈"], "kind": "continue", "qid": "Q9aba4139430a", "source": {"how": "seed", "round": "c001", "seed": "survey:aeb65733dbea25db", "why": "explore"}}
+{"context": ["Q", "R"], "kind": "continue", "qid": "Q1b2563e23761", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["🄂", "🄁"], "kind": "continue", "qid": "Qa579ab2216f1", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["🂤", "🂣"], "kind": "continue", "qid": "Qdf0f057215fc", "source": {"how": "seed", "round": "c001", "seed": "survey:886aafe9c99d85af", "why": "explore"}}
+{"context": ["⺵", "⺶"], "kind": "continue", "qid": "Q0ee00e25e33c", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["⚁", "⚂"], "kind": "continue", "qid": "Q7d5767aa77b5", "source": {"how": "seed", "round": "c001", "seed": "survey:55419fea660ef3eb", "why": "explore"}}
+{"context": ["☷", "☳"], "kind": "continue", "qid": "Q16c82edd15e5", "source": {"how": "seed", "round": "c001", "seed": "survey:37730021dfb3c0f1", "why": "explore"}}
+{"context": ["𝗒", "("], "kind": "continue", "qid": "Qc7731d2df66c", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["t", "s"], "kind": "continue", "qid": "Q2cbcbc6c2195", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["Փ", "_"], "kind": "continue", "qid": "Qbc688f9449f2", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["﮴", "﮲"], "kind": "continue", "qid": "Q99ae4830614b", "source": {"how": "seed", "round": "c001", "seed": "survey:0a094bb2ca1f61db", "why": "explore"}}
+{"context": ["Y", "Z"], "kind": "continue", "qid": "Qa4ff6659ac09", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["ℵ", "ℶ"], "kind": "continue", "qid": "Q7b346b0899e4", "source": {"how": "seed", "round": "c001", "seed": "survey:6a078d393849bc57", "why": "explore"}}
+{"context": ["⓹", "⓺"], "kind": "continue", "qid": "Qb093c195176f", "source": {"how": "seed", "round": "c001", "seed": "survey:ead55c44e4bb68e2", "why": "explore"}}
+{"context": ["⑼", "⑻"], "kind": "continue", "qid": "Q326607f4d67e", "source": {"how": "seed", "round": "c001", "seed": "c4a1e3cde14177ae:value@⑴", "why": "explore"}}
+{"context": ["X", "x"], "kind": "continue", "qid": "Qcb0949fc32f0", "source": {"how": "seed", "round": "c001", "seed": "survey:6aa44de1296188e3", "why": "explore"}}
+{"context": ["ㇼ", "ߨ"], "kind": "continue", "qid": "Qdf09ad9be873", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["ˏ", "я"], "kind": "continue", "qid": "Q277e83cf0938", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["😁", "😀"], "kind": "continue", "qid": "Qc9496e9ef375", "source": {"how": "seed", "round": "c001", "seed": "survey:420d6635f14fdd6a", "why": "explore"}}
+{"context": ["∯", "∮"], "kind": "continue", "qid": "Q7a415a5c769c", "source": {"how": "seed", "round": "c001", "seed": "survey:43aef223b9ad5f52", "why": "explore"}}
+{"context": ["⒐", "⒏"], "kind": "continue", "qid": "Qc42fab3eacc8", "source": {"how": "seed", "round": "c001", "seed": "survey:4403da368790cac3", "why": "explore"}}
+{"context": ["🞳", "🞴"], "kind": "continue", "qid": "Q0031df2a6e6c", "source": {"how": "seed", "round": "c001", "seed": "survey:d57f19aca0e6ad53", "why": "explore"}}
+{"context": ["ሎ", "ል"], "kind": "continue", "qid": "Qf5401fd0d057", "source": {"how": "seed", "round": "c001", "seed": "survey:6d60803e9b5fb39e", "why": "explore"}}
+{"context": ["𝙲", "𝙳"], "kind": "continue", "qid": "Qbc3bbb61e6e6", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["∙", "⊂"], "kind": "continue", "qid": "Q2429fe62a74e", "source": {"how": "seed", "round": "c001", "seed": "survey:cc8dcf8eb2b95084", "why": "explore"}}
+{"context": ["E", "D"], "kind": "continue", "qid": "Q25281b2845a7", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["⻍", "⻌"], "kind": "continue", "qid": "Q3d44d44f7a57", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["∫", "∬"], "kind": "continue", "qid": "Q5e94ad8d26f9", "source": {"how": "seed", "round": "c001", "seed": "survey:ecbfc45618f4c50f", "why": "explore"}}
+{"context": ["⁎", "⁑"], "kind": "continue", "qid": "Q73d6d8d7ba75", "source": {"how": "seed", "round": "c001", "seed": "survey:8c70b4baacffccaf", "why": "explore"}}
+{"context": ["⇒", "→"], "kind": "continue", "qid": "Qba22c6cb5ac4", "source": {"how": "seed", "round": "c001", "seed": "survey:f58f0a42cf3133e1", "why": "explore"}}
+{"context": ["∗", "×"], "kind": "continue", "qid": "Q20bad328f947", "source": {"how": "seed", "round": "c001", "seed": "survey:090ddefd3d1a1e5f", "why": "explore"}}
+{"context": ["L", "ʹ"], "kind": "continue", "qid": "Qf141e4c1c1f3", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": [")", "}"], "kind": "continue", "qid": "Q4338b386a0e4", "source": {"how": "seed", "round": "c001", "seed": "survey:4fa70ce2a837a8af", "why": "explore"}}
+{"context": ["c", "d"], "kind": "continue", "qid": "Q24968a8c5f53", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["·", "Ά"], "kind": "continue", "qid": "Q32d3be673174", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["⭝", "D"], "kind": "continue", "qid": "Q960686d4a9c7", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["🁬", "ձ"], "kind": "continue", "qid": "Q34aeab19a5dc", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["_", "º"], "kind": "continue", "qid": "Q53b7bd9d4716", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["ڜ", "ڛ"], "kind": "continue", "qid": "Q69de0ca364e9", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["𝙹", "𝙸"], "kind": "continue", "qid": "Q6dbe4f09e587", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["&", "⏈"], "kind": "continue", "qid": "Q830bd39e209d", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["U", "T"], "kind": "continue", "qid": "Q31d0e371adf0", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["🄂", "🄃"], "kind": "continue", "qid": "Qace19d1fcec4", "source": {"how": "seed", "round": "c001", "seed": "survey:10d8d8ccfa964beb", "why": "explore"}}
+{"context": ["Ǵ", "ǵ"], "kind": "continue", "qid": "Q8ef907ce08b9", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["𝃐", "𝃑"], "kind": "continue", "qid": "Qccaa25aa7fbf", "source": {"how": "seed", "round": "c001", "seed": "survey:f77ebbe6ffde0b09", "why": "explore"}}
+{"context": ["ϟ", "║"], "kind": "continue", "qid": "Q5d42016ecf54", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["˳", "˴"], "kind": "continue", "qid": "Qd00d58f83ca3", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["l", "x"], "kind": "continue", "qid": "Q8a0d2f821cbd", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["▜", "▟"], "kind": "continue", "qid": "Q1467e637c094", "source": {"how": "seed", "round": "c001", "seed": "survey:41d5c061f6d52bcc", "why": "explore"}}
+{"context": ["ޢ", "+"], "kind": "continue", "qid": "Q35c5f506816c", "source": {"how": "fresh", "round": "c001", "why": "explore"}}
+{"context": ["🀚", "🀙"], "kind": "continue", "qid": "Q66b11b84d206", "source": {"how": "seed", "round": "c001", "seed": "survey:3fef66a043495efc", "why": "explore"}}
+{"context": ["⋐", "⋑"], "kind": "continue", "qid": "Q76e12bf16c4b", "source": {"how": "codepoint-neighbour", "round": "c001", "why": "explore"}}
+{"context": ["㊸", "㊹", "㊺", "㊻", "㊼", "㊽", "㊾", "㊿"], "kind": "continue", "qid": "Q9d98831c3482", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "side": "right", "why": "end"}}
+{"context": ["①", "②", "③", "④", "⑤"], "kind": "continue", "qid": "Qc6c835dd9a4e", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑥", "why": "seed-step"}}
+{"context": ["①", "②", "③", "④", "⑤", "⑥"], "kind": "continue", "qid": "Q7da8b9b8edbc", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑦", "why": "seed-step"}}
+{"context": ["①", "②", "③", "④", "⑤", "⑥", "⑦"], "kind": "continue", "qid": "Qaafa7ac57674", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑧", "why": "seed-step"}}
+{"context": ["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧"], "kind": "continue", "qid": "Q680d3748dfa0", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑨", "why": "seed-step"}}
+{"context": ["②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨"], "kind": "continue", "qid": "Qf84b5c0f55f3", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑩", "why": "seed-step"}}
+{"context": ["③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩"], "kind": "continue", "qid": "Q5b4ed86dfb21", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑪", "why": "seed-step"}}
+{"context": ["④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩", "⑪"], "kind": "continue", "qid": "Q11a72b32cad8", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑫", "why": "seed-step"}}
+{"context": ["⑤", "⑥", "⑦", "⑧", "⑨", "⑩", "⑪", "⑫"], "kind": "continue", "qid": "Q082619a60cd9", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑬", "why": "seed-step"}}
+{"context": ["⑥", "⑦", "⑧", "⑨", "⑩", "⑪", "⑫", "⑬"], "kind": "continue", "qid": "Qb38a515bee8e", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑭", "why": "seed-step"}}
+{"context": ["⑦", "⑧", "⑨", "⑩", "⑪", "⑫", "⑬", "⑭"], "kind": "continue", "qid": "Q0bd3ca13b44a", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑮", "why": "seed-step"}}
+{"context": ["⑧", "⑨", "⑩", "⑪", "⑫", "⑬", "⑭", "⑮"], "kind": "continue", "qid": "Qaa713889be89", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑯", "why": "seed-step"}}
+{"context": ["⑨", "⑩", "⑪", "⑫", "⑬", "⑭", "⑮", "⑯"], "kind": "continue", "qid": "Q7a6b27e7fbea", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑰", "why": "seed-step"}}
+{"context": ["⑩", "⑪", "⑫", "⑬", "⑭", "⑮", "⑯", "⑰"], "kind": "continue", "qid": "Q8adf9e5da950", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑱", "why": "seed-step"}}
+{"context": ["⑪", "⑫", "⑬", "⑭", "⑮", "⑯", "⑰", "⑱"], "kind": "continue", "qid": "Qc87f4cf8f383", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑲", "why": "seed-step"}}
+{"context": ["⑫", "⑬", "⑭", "⑮", "⑯", "⑰", "⑱", "⑲"], "kind": "continue", "qid": "Q7c7f6e28961e", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑳", "why": "seed-step"}}
+{"context": ["㉑", "㉒", "㉓", "㉔", "㉕"], "kind": "continue", "qid": "Qf63fe9051fd4", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉖", "why": "seed-step"}}
+{"context": ["㉑", "㉒", "㉓", "㉔", "㉕", "㉖"], "kind": "continue", "qid": "Q6d16b207f947", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉗", "why": "seed-step"}}
+{"context": ["㉑", "㉒", "㉓", "㉔", "㉕", "㉖", "㉗"], "kind": "continue", "qid": "Q00724e14497e", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉘", "why": "seed-step"}}
+{"context": ["㉑", "㉒", "㉓", "㉔", "㉕", "㉖", "㉗", "㉘"], "kind": "continue", "qid": "Q6c2d8f02fadc", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉙", "why": "seed-step"}}
+{"context": ["㉒", "㉓", "㉔", "㉕", "㉖", "㉗", "㉘", "㉙"], "kind": "continue", "qid": "Q1f6861ddd0ba", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉚", "why": "seed-step"}}
+{"context": ["㉓", "㉔", "㉕", "㉖", "㉗", "㉘", "㉙", "㉚"], "kind": "continue", "qid": "Qb786e4cb7ccf", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉛", "why": "seed-step"}}
+{"context": ["㉔", "㉕", "㉖", "㉗", "㉘", "㉙", "㉚", "㉛"], "kind": "continue", "qid": "Qd49c732a0725", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉜", "why": "seed-step"}}
+{"context": ["㉕", "㉖", "㉗", "㉘", "㉙", "㉚", "㉛", "㉜"], "kind": "continue", "qid": "Q3af7fa1bdef8", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉝", "why": "seed-step"}}
+{"context": ["㉖", "㉗", "㉘", "㉙", "㉚", "㉛", "㉜", "㉝"], "kind": "continue", "qid": "Q100a0cdb3350", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉞", "why": "seed-step"}}
+{"context": ["㉗", "㉘", "㉙", "㉚", "㉛", "㉜", "㉝", "㉞"], "kind": "continue", "qid": "Q9926d8778545", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉟", "why": "seed-step"}}
+{"context": ["㉘", "㉙", "㉚", "㉛", "㉜", "㉝", "㉞", "㉟"], "kind": "continue", "qid": "Qe939e410268d", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊱", "why": "seed-step"}}
+{"context": ["㉙", "㉚", "㉛", "㉜", "㉝", "㉞", "㉟", "㊱"], "kind": "continue", "qid": "Q83a91563d984", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊲", "why": "seed-step"}}
+{"context": ["㉚", "㉛", "㉜", "㉝", "㉞", "㉟", "㊱", "㊲"], "kind": "continue", "qid": "Q808d4f4c4317", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊳", "why": "seed-step"}}
+{"context": ["㉛", "㉜", "㉝", "㉞", "㉟", "㊱", "㊲", "㊳"], "kind": "continue", "qid": "Q04ec9f092743", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊴", "why": "seed-step"}}
+{"context": ["㉜", "㉝", "㉞", "㉟", "㊱", "㊲", "㊳", "㊴"], "kind": "continue", "qid": "Qec18485c7e72", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊵", "why": "seed-step"}}
+{"context": ["㉝", "㉞", "㉟", "㊱", "㊲", "㊳", "㊴", "㊵"], "kind": "continue", "qid": "Q63e8f1a1a955", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊶", "why": "seed-step"}}
+{"context": ["㉞", "㉟", "㊱", "㊲", "㊳", "㊴", "㊵", "㊶"], "kind": "continue", "qid": "Q36cbc47ce08b", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊷", "why": "seed-step"}}
+{"context": ["㉟", "㊱", "㊲", "㊳", "㊴", "㊵", "㊶", "㊷"], "kind": "continue", "qid": "Q166f01445f24", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊸", "why": "seed-step"}}
+{"context": ["㊱", "㊲", "㊳", "㊴", "㊵", "㊶", "㊷", "㊸"], "kind": "continue", "qid": "Q636cc60abd14", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊹", "why": "seed-step"}}
+{"context": ["㊲", "㊳", "㊴", "㊵", "㊶", "㊷", "㊸", "㊹"], "kind": "continue", "qid": "Qc4261cdead62", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊺", "why": "seed-step"}}
+{"context": ["㊳", "㊴", "㊵", "㊶", "㊷", "㊸", "㊹", "㊺"], "kind": "continue", "qid": "Q466450c047e9", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊻", "why": "seed-step"}}
+{"context": ["㊴", "㊵", "㊶", "㊷", "㊸", "㊹", "㊺", "㊻"], "kind": "continue", "qid": "Qc48aac7b416c", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊼", "why": "seed-step"}}
+{"context": ["㊵", "㊶", "㊷", "㊸", "㊹", "㊺", "㊻", "㊼"], "kind": "continue", "qid": "Qa9af3744ef35", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊽", "why": "seed-step"}}
+{"context": ["㊶", "㊷", "㊸", "㊹", "㊺", "㊻", "㊼", "㊽"], "kind": "continue", "qid": "Q93ffbdee66a7", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊾", "why": "seed-step"}}
+{"context": ["㊷", "㊸", "㊹", "㊺", "㊻", "㊼", "㊽", "㊾"], "kind": "continue", "qid": "Qa8f49ee55fd0", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊿", "why": "seed-step"}}
+{"context": ["②", "③"], "kind": "continue", "qid": "Q6471cac08c6b", "source": {"k": 3, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "④", "why": "kstar"}}
+{"context": ["③", "④"], "kind": "continue", "qid": "Q95122053ddcf", "source": {"k": 4, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑤", "why": "kstar"}}
+{"context": ["④", "⑤"], "kind": "continue", "qid": "Qc3eaf82c8ba7", "source": {"k": 5, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑥", "why": "kstar"}}
+{"context": ["⑤", "⑥"], "kind": "continue", "qid": "Q58c7aa5c4a50", "source": {"k": 6, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑦", "why": "kstar"}}
+{"context": ["⑥", "⑦"], "kind": "continue", "qid": "Q1a6f8cca959a", "source": {"k": 7, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑧", "why": "kstar"}}
+{"context": ["⑦", "⑧"], "kind": "continue", "qid": "Q41e88f5db877", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑨", "why": "kstar"}}
+{"context": ["⑧", "⑨"], "kind": "continue", "qid": "Qe4b9e4dc7172", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑩", "why": "kstar"}}
+{"context": ["⑨", "⑩"], "kind": "continue", "qid": "Q2eb460e75496", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑪", "why": "kstar"}}
+{"context": ["⑩", "⑪"], "kind": "continue", "qid": "Q9ba82a712c0c", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑫", "why": "kstar"}}
+{"context": ["⑪", "⑫"], "kind": "continue", "qid": "Qd2e0fb08d87a", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑬", "why": "kstar"}}
+{"context": ["⑫", "⑬"], "kind": "continue", "qid": "Q5735e1fbec4a", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑭", "why": "kstar"}}
+{"context": ["⑬", "⑭"], "kind": "continue", "qid": "Qbbf29d5f6651", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑮", "why": "kstar"}}
+{"context": ["⑭", "⑮"], "kind": "continue", "qid": "Q52c4efce1ce2", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑯", "why": "kstar"}}
+{"context": ["⑮", "⑯"], "kind": "continue", "qid": "Q34ba8426c956", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑰", "why": "kstar"}}
+{"context": ["⑯", "⑰"], "kind": "continue", "qid": "Q66739f36a99d", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑱", "why": "kstar"}}
+{"context": ["⑰", "⑱"], "kind": "continue", "qid": "Q51def2d12b38", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑲", "why": "kstar"}}
+{"context": ["⑱", "⑲"], "kind": "continue", "qid": "Q93bd79ea47b6", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⑳", "why": "kstar"}}
+{"context": ["⑲", "⑳"], "kind": "continue", "qid": "Qcf7af1deebb6", "source": {"k": 5, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉑", "why": "kstar"}}
+{"context": ["⑳", "㉑"], "kind": "continue", "qid": "Qab5bbfa18e1f", "source": {"k": 3, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉒", "why": "kstar"}}
+{"context": ["㉑", "㉒"], "kind": "continue", "qid": "Qfc35d7797cdd", "source": {"k": 5, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉓", "why": "kstar"}}
+{"context": ["㉒", "㉓"], "kind": "continue", "qid": "Qfafaab9a6091", "source": {"k": 5, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉔", "why": "kstar"}}
+{"context": ["㉓", "㉔"], "kind": "continue", "qid": "Q2b9a114ca468", "source": {"k": 5, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉕", "why": "kstar"}}
+{"context": ["㉔", "㉕"], "kind": "continue", "qid": "Q9896dd7dd0fa", "source": {"k": 5, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉖", "why": "kstar"}}
+{"context": ["㉕", "㉖"], "kind": "continue", "qid": "Qe9383fa0c119", "source": {"k": 6, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉗", "why": "kstar"}}
+{"context": ["㉖", "㉗"], "kind": "continue", "qid": "Qdefc52cde75e", "source": {"k": 7, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉘", "why": "kstar"}}
+{"context": ["㉗", "㉘"], "kind": "continue", "qid": "Q9488637e7312", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉙", "why": "kstar"}}
+{"context": ["㉘", "㉙"], "kind": "continue", "qid": "Q72c83dd36c25", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉚", "why": "kstar"}}
+{"context": ["㉙", "㉚"], "kind": "continue", "qid": "Q64621b42e19a", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉛", "why": "kstar"}}
+{"context": ["㉚", "㉛"], "kind": "continue", "qid": "Q39eaf8abd5fd", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉜", "why": "kstar"}}
+{"context": ["㉛", "㉜"], "kind": "continue", "qid": "Qd8928060c694", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉝", "why": "kstar"}}
+{"context": ["㉜", "㉝"], "kind": "continue", "qid": "Q9e54e6721e59", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉞", "why": "kstar"}}
+{"context": ["㉝", "㉞"], "kind": "continue", "qid": "Qa3c221b985fc", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㉟", "why": "kstar"}}
+{"context": ["㉞", "㉟"], "kind": "continue", "qid": "Q6588d66f6a64", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊱", "why": "kstar"}}
+{"context": ["㉟", "㊱"], "kind": "continue", "qid": "Q7f8f68ebde6c", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊲", "why": "kstar"}}
+{"context": ["㊱", "㊲"], "kind": "continue", "qid": "Q2126330d3b49", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊳", "why": "kstar"}}
+{"context": ["㊲", "㊳"], "kind": "continue", "qid": "Q3fa21ebd5497", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊴", "why": "kstar"}}
+{"context": ["㊳", "㊴"], "kind": "continue", "qid": "Q959d93a989fd", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊵", "why": "kstar"}}
+{"context": ["㊴", "㊵"], "kind": "continue", "qid": "Q5a19124dfa10", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊶", "why": "kstar"}}
+{"context": ["㊵", "㊶"], "kind": "continue", "qid": "Q23b33c54fab3", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊷", "why": "kstar"}}
+{"context": ["㊶", "㊷"], "kind": "continue", "qid": "Qad99870b3beb", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊸", "why": "kstar"}}
+{"context": ["㊷", "㊸"], "kind": "continue", "qid": "Q2a471b55b73c", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊹", "why": "kstar"}}
+{"context": ["㊸", "㊹"], "kind": "continue", "qid": "Q137c0c20cb08", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊺", "why": "kstar"}}
+{"context": ["㊺", "㊻"], "kind": "continue", "qid": "Qa03a68015583", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊼", "why": "kstar"}}
+{"context": ["㊻", "㊼"], "kind": "continue", "qid": "Q2f8971474c48", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊽", "why": "kstar"}}
+{"context": ["㊼", "㊽"], "kind": "continue", "qid": "Q38dfae64354a", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊾", "why": "kstar"}}
+{"context": ["㊽", "㊾"], "kind": "continue", "qid": "Qca31949ff9a2", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "㊿", "why": "kstar"}}
+{"context": ["㉟", "㉞"], "kind": "continue", "qid": "Qe5b193d33e65", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑫", "⑪"], "kind": "continue", "qid": "Q5ffbe7ebe4e1", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑭", "⑬"], "kind": "continue", "qid": "Q11fb2f5d5184", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉒", "㉑", "⑳", "⑲"], "kind": "continue", "qid": "Q4f680cd3bf2c", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑩", "⑨", "⑧"], "kind": "continue", "qid": "Q57c4f38d6c85", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑥", "⑤", "④", "③"], "kind": "continue", "qid": "Qd2e5aca55e11", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑯", "⑰", "⑱"], "kind": "continue", "qid": "Q72ae490cbdbc", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉛", "㉚"], "kind": "continue", "qid": "Q033ad1bbd735", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉕", "㉔"], "kind": "continue", "qid": "Q930d5265a6b4", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉖", "㉕"], "kind": "continue", "qid": "Qed7bab9b4a21", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑩", "⑪", "⑫", "⑬"], "kind": "continue", "qid": "Q5ec4856f8cbe", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉙", "㉚", "㉛", "㉜"], "kind": "continue", "qid": "Qa729154e7921", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑱", "⑰"], "kind": "continue", "qid": "Q7ffc67e5abdd", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉞", "㉝", "㉜"], "kind": "continue", "qid": "Q8da72ca23e71", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑦", "⑥", "⑤", "④"], "kind": "continue", "qid": "Q13b755a15aea", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉒", "㉑", "⑳"], "kind": "continue", "qid": "Qf7721aa08ef1", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊲", "㊱", "㉟"], "kind": "continue", "qid": "Qcfd68a2e50ac", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊴", "㊵", "㊶", "㊷"], "kind": "continue", "qid": "Qce5ab0c62b3b", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊺", "㊹", "㊸"], "kind": "continue", "qid": "Q15f3916b4d4b", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑱", "⑰", "⑯"], "kind": "continue", "qid": "Qdd31d001594d", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉙", "㉚", "㉛"], "kind": "continue", "qid": "Qaeb0d4c9d87b", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊸", "㊹", "㊺"], "kind": "continue", "qid": "Q12fa4b4b1077", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["③", "②"], "kind": "continue", "qid": "Qb7efb2408dfb", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉔", "㉕", "㉖", "㉗"], "kind": "continue", "qid": "Q4452aa02c162", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉜", "㉛", "㉚", "㉙"], "kind": "continue", "qid": "Qc31ab3d340a5", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉒", "㉑"], "kind": "continue", "qid": "Q85c42d3fe512", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊾", "㊽", "㊼", "㊻"], "kind": "continue", "qid": "Q4c32eed81756", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉓", "㉔", "㉕"], "kind": "continue", "qid": "Qe292c7f06895", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉞", "㉝", "㉜", "㉛"], "kind": "continue", "qid": "Q209077b2691f", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["③", "④", "⑤", "⑥"], "kind": "continue", "qid": "Qe78457f34386", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊶", "㊷", "㊸", "㊹"], "kind": "continue", "qid": "Qcc3c3d1c333d", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊵", "㊴"], "kind": "continue", "qid": "Q3a6ed79e5d08", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊶", "㊷", "㊸"], "kind": "continue", "qid": "Qa2c00f2c4f92", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["②", "③", "④"], "kind": "continue", "qid": "Qdc7a6b4e6da1", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊺", "㊹"], "kind": "continue", "qid": "Q990c2539aa9d", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉚", "㉛", "㉜", "㉝"], "kind": "continue", "qid": "Qfcf07043f7c6", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊸", "㊷", "㊶", "㊵"], "kind": "continue", "qid": "Q0ab82ab3372b", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉙", "㉘", "㉗", "㉖"], "kind": "continue", "qid": "Qdbc7a2660ba6", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊴", "㊳"], "kind": "continue", "qid": "Q4379e90cde2d", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊳", "㊲", "㊱"], "kind": "continue", "qid": "Q6fe677de92d5", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉗", "㉘", "㉙", "㉚"], "kind": "continue", "qid": "Qf873de4cbf9c", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊸", "㊹", "㊺", "㊻"], "kind": "continue", "qid": "Q334cc94e7700", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉚", "㉙", "㉘", "㉗"], "kind": "continue", "qid": "Q9de4f01f98b3", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉛", "㉜", "㉝", "㉞"], "kind": "continue", "qid": "Q043c84812ca1", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊼", "㊻", "㊺"], "kind": "continue", "qid": "Q99468f560931", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊹", "㊺", "㊻", "㊼"], "kind": "continue", "qid": "Qaf92bdbc38cb", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊿", "㊾", "㊽"], "kind": "continue", "qid": "Q32597e84d535", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑨", "⑧", "⑦", "⑥"], "kind": "continue", "qid": "Qc6ffc7cf4dd0", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑪", "⑫", "⑬", "⑭"], "kind": "continue", "qid": "Q896c48e3ff2e", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉞", "㉝"], "kind": "continue", "qid": "Q3b91194b075a", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑬", "⑫", "⑪", "⑩"], "kind": "continue", "qid": "Q42c29d706c78", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑩", "⑨"], "kind": "continue", "qid": "Q8e427389693d", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉞", "㉟", "㊱", "㊲"], "kind": "continue", "qid": "Q443a267c237b", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑧", "⑨", "⑩"], "kind": "continue", "qid": "Q4d47249a98ea", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑮", "⑭", "⑬", "⑫"], "kind": "continue", "qid": "Qdfd1687a7fe0", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑥", "⑤"], "kind": "continue", "qid": "Qe3ca6a832b02", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉟", "㊱", "㊲", "㊳"], "kind": "continue", "qid": "Q5af2238091a6", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊳", "㊴", "㊵"], "kind": "continue", "qid": "Q814d0f89862f", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊽", "㊼"], "kind": "continue", "qid": "Q75c23a140e7d", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉑", "⑳", "⑲", "⑱"], "kind": "continue", "qid": "Q7435f05ac8e6", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊺", "㊹", "㊸", "㊷"], "kind": "continue", "qid": "Q006955f5bd4c", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉖", "㉗", "㉘"], "kind": "continue", "qid": "Qfbc82fc129ae", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊺", "㊻", "㊼", "㊽"], "kind": "continue", "qid": "Qc320330cac73", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉙", "㉘"], "kind": "continue", "qid": "Qf0a2b526c1a7", "source": {"rank": 1.0, "round": "c001", "seq": "0①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊺", "㊻", "㊼", "㊽", "㊾", "㊿"], "kind": "continue", "qid": "Q397ac4d777a3", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "side": "right", "why": "end"}}
+{"context": ["⑧", "⑦", "⑥", "⑤", "④", "③", "②", "①"], "kind": "continue", "qid": "Qaad532660efe", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⓪", "why": "seed-step"}}
+{"context": ["②", "①"], "kind": "continue", "qid": "Qfe4ab084e66d", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "step": "⓪", "why": "kstar"}}
+{"context": ["㉜", "㉛"], "kind": "continue", "qid": "Q60dfa3b7069a", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉗", "㉖"], "kind": "continue", "qid": "Qed09a9ee7888", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊽", "㊼", "㊻", "㊺"], "kind": "continue", "qid": "Qeb1f0990b1dd", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊽", "㊼", "㊻"], "kind": "continue", "qid": "Q0e215db7e911", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑥", "⑦", "⑧"], "kind": "continue", "qid": "Qdf5ca5892fe0", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉘", "㉙", "㉚", "㉛"], "kind": "continue", "qid": "Q4c620424a070", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉜", "㉝", "㉞"], "kind": "continue", "qid": "Q1b1a52658e9c", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉓", "㉒"], "kind": "continue", "qid": "Q2414b189ca13", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑫", "⑪", "⑩"], "kind": "continue", "qid": "Q8f643dbff72e", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑳", "⑲", "⑱"], "kind": "continue", "qid": "Qfe8234538df9", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉕", "㉖", "㉗"], "kind": "continue", "qid": "Q33d7e549eb5a", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉘", "㉙", "㉚"], "kind": "continue", "qid": "Q8fb00937f253", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑰", "⑯"], "kind": "continue", "qid": "Q958ab20a9d27", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊼", "㊽", "㊾"], "kind": "continue", "qid": "Qd684ef3060d7", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉛", "㉚", "㉙", "㉘"], "kind": "continue", "qid": "Q6566f6b9ff96", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["④", "③"], "kind": "continue", "qid": "Q173a2f44dd05", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑧", "⑦"], "kind": "continue", "qid": "Qe879c0772316", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊼", "㊻", "㊺", "㊹"], "kind": "continue", "qid": "Q47c4a4648b72", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑮", "⑯", "⑰"], "kind": "continue", "qid": "Q281931f28cb0", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊸", "㊷", "㊶"], "kind": "continue", "qid": "Q9daf07b542e1", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑬", "⑭", "⑮"], "kind": "continue", "qid": "Q62988cafa458", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊾", "㊽", "㊼"], "kind": "continue", "qid": "Q53c22e7895be", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑯", "⑮"], "kind": "continue", "qid": "Q8bbf4fdee8c7", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉛", "㉚", "㉙"], "kind": "continue", "qid": "Q5c0d019cabb9", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉜", "㉛", "㉚"], "kind": "continue", "qid": "Q8e707078d6d4", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊱", "㉟"], "kind": "continue", "qid": "Q9d128e23367b", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑤", "④"], "kind": "continue", "qid": "Q93e1f3c73a63", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑭", "⑬", "⑫", "⑪"], "kind": "continue", "qid": "Q225392dabad4", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉖", "㉗", "㉘", "㉙"], "kind": "continue", "qid": "Q097655f54158", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊵", "㊴", "㊳"], "kind": "continue", "qid": "Qe3aa1525e377", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⓪", "①", "②"], "kind": "continue", "qid": "Q15b26a71057e", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑰", "⑯", "⑮", "⑭"], "kind": "continue", "qid": "Qd203d4e73e49", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊵", "㊶", "㊷", "㊸"], "kind": "continue", "qid": "Q7e4097529323", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑦", "⑥", "⑤"], "kind": "continue", "qid": "Q974342ed1213", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑬", "⑫"], "kind": "continue", "qid": "Q0094744ef9f9", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊱", "㉟", "㉞", "㉝"], "kind": "continue", "qid": "Qb023086fe278", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊶", "㊵"], "kind": "continue", "qid": "Q54c14f6dddf4", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊲", "㊱"], "kind": "continue", "qid": "Q16bd0f7e5519", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊷", "㊶", "㊵", "㊴"], "kind": "continue", "qid": "Qcce2c7a06ac5", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊲", "㊳", "㊴"], "kind": "continue", "qid": "Q6ff5186e6a37", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉗", "㉖", "㉕", "㉔"], "kind": "continue", "qid": "Qb2da361077e0", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉝", "㉞", "㉟", "㊱"], "kind": "continue", "qid": "Qfcfba4209a06", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑳", "⑲", "⑱", "⑰"], "kind": "continue", "qid": "Q81a8c7ea555a", "source": {"rank": 1.0, "round": "c001", "seq": "⓪①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊻", "㊼", "㊽", "㊾", "㊿"], "kind": "continue", "qid": "Q213dd8061866", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "side": "right", "why": "end"}}
+{"context": ["⑩", "⑨", "⑧", "⑦"], "kind": "continue", "qid": "Q8f0f6cad8588", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊴", "㊵", "㊶"], "kind": "continue", "qid": "Qc8a86af95e01", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉝", "㉜"], "kind": "continue", "qid": "Q1fa30b63e4be", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉟", "㉞", "㉝"], "kind": "continue", "qid": "Qa83ce2180ae6", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊲", "㊳", "㊴", "㊵"], "kind": "continue", "qid": "Q8eac3154c919", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊶", "㊵", "㊴", "㊳"], "kind": "continue", "qid": "Q68552cc8b8d9", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊲", "㊱", "㉟", "㉞"], "kind": "continue", "qid": "Q33ee6ac14798", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㊴", "㊳", "㊲"], "kind": "continue", "qid": "Qc26ab7125324", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["④", "③", "②", "①"], "kind": "continue", "qid": "Q37ac74e4c59b", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉑", "⑳", "⑲"], "kind": "continue", "qid": "Q16fd007580fa", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉘", "㉗"], "kind": "continue", "qid": "Qe9a309aad3bb", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⓿", "①", "②", "③"], "kind": "continue", "qid": "Q052563904ff1", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑪", "⑩"], "kind": "continue", "qid": "Q1e2311d2a17e", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉚", "㉛", "㉜"], "kind": "continue", "qid": "Qb7a541ef023f", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉜", "㉝", "㉞", "㉟"], "kind": "continue", "qid": "Qbc91805fdbf4", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑦", "⑧", "⑨", "⑩"], "kind": "continue", "qid": "Qf073586218bd", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑦", "⑧", "⑨"], "kind": "continue", "qid": "Q18f7e3c5daf7", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑪", "⑩", "⑨", "⑧"], "kind": "continue", "qid": "Q5d6f09b93051", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑦", "⑥"], "kind": "continue", "qid": "Q68b6dfed8683", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉞", "㉟", "㊱"], "kind": "continue", "qid": "Qa0e8081d1403", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉔", "㉓"], "kind": "continue", "qid": "Q9f156e11f5e7", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑤", "④", "③", "②"], "kind": "continue", "qid": "Q269e47109ddc", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⓿", "①", "②"], "kind": "continue", "qid": "Qf628ea184118", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑧", "⑨", "⑩", "⑪"], "kind": "continue", "qid": "Qff7f0ab7c83a", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["⑪", "⑩", "⑨"], "kind": "continue", "qid": "Qd377b72ae915", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉛", "㉜", "㉝"], "kind": "continue", "qid": "Q0347867361e8", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉝", "㉜", "㉛"], "kind": "continue", "qid": "Qe4a0f36f9d72", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㉗", "㉖", "㉕"], "kind": "continue", "qid": "Q4f3914fc54f3", "source": {"rank": 1.0, "round": "c001", "seq": "⓿①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳㉑㉒㉓㉔㉕㉖㉗㉘㉙㉚㉛㉜㉝㉞㉟㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿", "why": "inside"}}
+{"context": ["㏺", "㏻", "㏼", "㏽", "㏾"], "kind": "continue", "qid": "Q38635f524796", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "side": "right", "why": "end"}}
+{"context": ["㏠", "㏡"], "kind": "continue", "qid": "Q9a1b12f5b8db", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏢", "why": "seed-step"}}
+{"context": ["㏠", "㏡", "㏢"], "kind": "continue", "qid": "Q36035c8e7e9a", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏣", "why": "seed-step"}}
+{"context": ["㏠", "㏡", "㏢", "㏣"], "kind": "continue", "qid": "Q2fe878a7ca79", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏤", "why": "seed-step"}}
+{"context": ["㏠", "㏡", "㏢", "㏣", "㏤"], "kind": "continue", "qid": "Q427c28221abe", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏥", "why": "seed-step"}}
+{"context": ["㏠", "㏡", "㏢", "㏣", "㏤", "㏥"], "kind": "continue", "qid": "Q4fcf7b8c8f8f", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏦", "why": "seed-step"}}
+{"context": ["㏠", "㏡", "㏢", "㏣", "㏤", "㏥", "㏦"], "kind": "continue", "qid": "Q34ef5da18f6a", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏧", "why": "seed-step"}}
+{"context": ["㏠", "㏡", "㏢", "㏣", "㏤", "㏥", "㏦", "㏧"], "kind": "continue", "qid": "Qbcb72e9d114d", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏨", "why": "seed-step"}}
+{"context": ["㏡", "㏢", "㏣", "㏤", "㏥", "㏦", "㏧", "㏨"], "kind": "continue", "qid": "Q4553e86af6d1", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏩", "why": "seed-step"}}
+{"context": ["㏢", "㏣", "㏤", "㏥", "㏦", "㏧", "㏨", "㏩"], "kind": "continue", "qid": "Q30ec44f0410c", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏪", "why": "seed-step"}}
+{"context": ["㏣", "㏤", "㏥", "㏦", "㏧", "㏨", "㏩", "㏪"], "kind": "continue", "qid": "Q72ecd51af0c1", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏫", "why": "seed-step"}}
+{"context": ["㏤", "㏥", "㏦", "㏧", "㏨", "㏩", "㏪", "㏫"], "kind": "continue", "qid": "Q45278086c2a9", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏬", "why": "seed-step"}}
+{"context": ["㏥", "㏦", "㏧", "㏨", "㏩", "㏪", "㏫", "㏬"], "kind": "continue", "qid": "Qf7819a699ba9", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏭", "why": "seed-step"}}
+{"context": ["㏦", "㏧", "㏨", "㏩", "㏪", "㏫", "㏬", "㏭"], "kind": "continue", "qid": "Qa749a63ecaab", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏮", "why": "seed-step"}}
+{"context": ["㏧", "㏨", "㏩", "㏪", "㏫", "㏬", "㏭", "㏮"], "kind": "continue", "qid": "Q133f607e3589", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏯", "why": "seed-step"}}
+{"context": ["㏨", "㏩", "㏪", "㏫", "㏬", "㏭", "㏮", "㏯"], "kind": "continue", "qid": "Q35f01ad16f24", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏰", "why": "seed-step"}}
+{"context": ["㏩", "㏪", "㏫", "㏬", "㏭", "㏮", "㏯", "㏰"], "kind": "continue", "qid": "Qa7e5f40b364c", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏱", "why": "seed-step"}}
+{"context": ["㏪", "㏫", "㏬", "㏭", "㏮", "㏯", "㏰", "㏱"], "kind": "continue", "qid": "Qbd1df143174d", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏲", "why": "seed-step"}}
+{"context": ["㏫", "㏬", "㏭", "㏮", "㏯", "㏰", "㏱", "㏲"], "kind": "continue", "qid": "Qa91c83da32d6", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏳", "why": "seed-step"}}
+{"context": ["㏬", "㏭", "㏮", "㏯", "㏰", "㏱", "㏲", "㏳"], "kind": "continue", "qid": "Qe01787bcce21", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏴", "why": "seed-step"}}
+{"context": ["㏭", "㏮", "㏯", "㏰", "㏱", "㏲", "㏳", "㏴"], "kind": "continue", "qid": "Q349e9f8896dc", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏵", "why": "seed-step"}}
+{"context": ["㏮", "㏯", "㏰", "㏱", "㏲", "㏳", "㏴", "㏵"], "kind": "continue", "qid": "Qf264686c0954", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏶", "why": "seed-step"}}
+{"context": ["㏯", "㏰", "㏱", "㏲", "㏳", "㏴", "㏵", "㏶"], "kind": "continue", "qid": "Q337f25a703f2", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏷", "why": "seed-step"}}
+{"context": ["㏰", "㏱", "㏲", "㏳", "㏴", "㏵", "㏶", "㏷"], "kind": "continue", "qid": "Qc7664a638365", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏸", "why": "seed-step"}}
+{"context": ["㏱", "㏲", "㏳", "㏴", "㏵", "㏶", "㏷", "㏸"], "kind": "continue", "qid": "Q3853d938bea0", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏹", "why": "seed-step"}}
+{"context": ["㏲", "㏳", "㏴", "㏵", "㏶", "㏷", "㏸", "㏹"], "kind": "continue", "qid": "Q741cc99b191b", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏺", "why": "seed-step"}}
+{"context": ["㏳", "㏴", "㏵", "㏶", "㏷", "㏸", "㏹", "㏺"], "kind": "continue", "qid": "Qd8f3d511724e", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏻", "why": "seed-step"}}
+{"context": ["㏴", "㏵", "㏶", "㏷", "㏸", "㏹", "㏺", "㏻"], "kind": "continue", "qid": "Q3352a302cb95", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏼", "why": "seed-step"}}
+{"context": ["㏵", "㏶", "㏷", "㏸", "㏹", "㏺", "㏻", "㏼"], "kind": "continue", "qid": "Q4d78f67993e8", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏽", "why": "seed-step"}}
+{"context": ["㏶", "㏷", "㏸", "㏹", "㏺", "㏻", "㏼", "㏽"], "kind": "continue", "qid": "Q5d65933f6402", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏾", "why": "seed-step"}}
+{"context": ["㏡", "㏢"], "kind": "continue", "qid": "Q6586d8d04a5b", "source": {"k": 3, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏣", "why": "kstar"}}
+{"context": ["㏢", "㏣"], "kind": "continue", "qid": "Q5dc47fa76fa3", "source": {"k": 4, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏤", "why": "kstar"}}
+{"context": ["㏣", "㏤"], "kind": "continue", "qid": "Qea1a76002046", "source": {"k": 5, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏥", "why": "kstar"}}
+{"context": ["㏤", "㏥"], "kind": "continue", "qid": "Q267dd656754c", "source": {"k": 6, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏦", "why": "kstar"}}
+{"context": ["㏥", "㏦"], "kind": "continue", "qid": "Qbd465ecbae03", "source": {"k": 7, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏧", "why": "kstar"}}
+{"context": ["㏦", "㏧"], "kind": "continue", "qid": "Q192313156de2", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏨", "why": "kstar"}}
+{"context": ["㏧", "㏨"], "kind": "continue", "qid": "Qcd9f029b3107", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏩", "why": "kstar"}}
+{"context": ["㏨", "㏩"], "kind": "continue", "qid": "Qa146dc1a4fdc", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏪", "why": "kstar"}}
+{"context": ["㏩", "㏪"], "kind": "continue", "qid": "Qb56c6862021f", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏫", "why": "kstar"}}
+{"context": ["㏪", "㏫"], "kind": "continue", "qid": "Qc83d36b912af", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏬", "why": "kstar"}}
+{"context": ["㏫", "㏬"], "kind": "continue", "qid": "Q6e7a3fac0cf8", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏭", "why": "kstar"}}
+{"context": ["㏬", "㏭"], "kind": "continue", "qid": "Q1ab0c6555633", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏮", "why": "kstar"}}
+{"context": ["㏭", "㏮"], "kind": "continue", "qid": "Q4f4bfe27f11c", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏯", "why": "kstar"}}
+{"context": ["㏮", "㏯"], "kind": "continue", "qid": "Q6fe4e30091b9", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏰", "why": "kstar"}}
+{"context": ["㏯", "㏰"], "kind": "continue", "qid": "Qb16558fac993", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏱", "why": "kstar"}}
+{"context": ["㏰", "㏱"], "kind": "continue", "qid": "Qe14113a4bf7c", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏲", "why": "kstar"}}
+{"context": ["㏱", "㏲"], "kind": "continue", "qid": "Q087321ffef46", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏳", "why": "kstar"}}
+{"context": ["㏲", "㏳"], "kind": "continue", "qid": "Q7e2568984a7e", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏴", "why": "kstar"}}
+{"context": ["㏳", "㏴"], "kind": "continue", "qid": "Q4584773aa21d", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏵", "why": "kstar"}}
+{"context": ["㏴", "㏵"], "kind": "continue", "qid": "Q8a6b86c66ca7", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏶", "why": "kstar"}}
+{"context": ["㏵", "㏶"], "kind": "continue", "qid": "Qd35abf2ecc5a", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏷", "why": "kstar"}}
+{"context": ["㏶", "㏷"], "kind": "continue", "qid": "Q911724098077", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏸", "why": "kstar"}}
+{"context": ["㏷", "㏸"], "kind": "continue", "qid": "Q495297964701", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏹", "why": "kstar"}}
+{"context": ["㏸", "㏹"], "kind": "continue", "qid": "Qc5dd976617f5", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏺", "why": "kstar"}}
+{"context": ["㏹", "㏺"], "kind": "continue", "qid": "Q091dda05fcf1", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏻", "why": "kstar"}}
+{"context": ["㏺", "㏻"], "kind": "continue", "qid": "Qe502bb705bd1", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏼", "why": "kstar"}}
+{"context": ["㏻", "㏼"], "kind": "continue", "qid": "Q1ae22193cc86", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏽", "why": "kstar"}}
+{"context": ["㏼", "㏽"], "kind": "continue", "qid": "Q7b17cff2d28d", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "step": "㏾", "why": "kstar"}}
+{"context": ["㏾", "㏽", "㏼"], "kind": "continue", "qid": "Q81cb053eec17", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏲", "㏳", "㏴"], "kind": "continue", "qid": "Qad6f87f1f5b5", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏳", "㏲", "㏱", "㏰"], "kind": "continue", "qid": "Q956ff41585ad", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏥", "㏤"], "kind": "continue", "qid": "Q500936e7c37a", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏺", "㏹"], "kind": "continue", "qid": "Q1298c74753bd", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏥", "㏤", "㏣"], "kind": "continue", "qid": "Q8abd148df45a", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏮", "㏭", "㏬", "㏫"], "kind": "continue", "qid": "Qfdcb09a42f15", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏱", "㏲", "㏳"], "kind": "continue", "qid": "Q9354d11b2935", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏨", "㏩", "㏪"], "kind": "continue", "qid": "Q8d1e0d8c2960", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏢", "㏣", "㏤"], "kind": "continue", "qid": "Q9f82c1e7c685", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏣", "㏢", "㏡"], "kind": "continue", "qid": "Q2f21a2be6a91", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏣", "㏢"], "kind": "continue", "qid": "Q709e03e50c0b", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏫", "㏪", "㏩", "㏨"], "kind": "continue", "qid": "Q5c57d9cdf981", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏫", "㏪"], "kind": "continue", "qid": "Qbe48869dbd86", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏱", "㏰", "㏯", "㏮"], "kind": "continue", "qid": "Q2a4757b6d0db", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏧", "㏨", "㏩"], "kind": "continue", "qid": "Qad9f5c70663f", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏶", "㏵", "㏴"], "kind": "continue", "qid": "Qe61a20e36701", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏮", "㏭", "㏬"], "kind": "continue", "qid": "Q07ed2396ab83", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏴", "㏳", "㏲", "㏱"], "kind": "continue", "qid": "Q64ab0ad32c38", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏺", "㏹", "㏸", "㏷"], "kind": "continue", "qid": "Qa7d15946ac7b", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏽", "㏼", "㏻"], "kind": "continue", "qid": "Qd74906997731", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏧", "㏦"], "kind": "continue", "qid": "Qd12698055203", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏩", "㏨", "㏧"], "kind": "continue", "qid": "Qb30d558491ca", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏵", "㏶", "㏷"], "kind": "continue", "qid": "Qb63212ccdeb0", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏹", "㏺", "㏻", "㏼"], "kind": "continue", "qid": "Q7be71ea53649", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏸", "㏷", "㏶"], "kind": "continue", "qid": "Q230e013b9450", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏵", "㏶", "㏷", "㏸"], "kind": "continue", "qid": "Q141ebf2b1ff6", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏳", "㏴", "㏵", "㏶"], "kind": "continue", "qid": "Q0f416bb732f5", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏰", "㏯", "㏮", "㏭"], "kind": "continue", "qid": "Q6fc95394184c", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏬", "㏭", "㏮"], "kind": "continue", "qid": "Qfde2cf2de2d1", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏳", "㏴", "㏵"], "kind": "continue", "qid": "Qb108329b9e3d", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏶", "㏵"], "kind": "continue", "qid": "Q97d2daed2aeb", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏻", "㏺"], "kind": "continue", "qid": "Q2ef7f98e8847", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏮", "㏯", "㏰", "㏱"], "kind": "continue", "qid": "Qf7b2ef2c9272", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏶", "㏵", "㏴", "㏳"], "kind": "continue", "qid": "Q33392fa30add", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏣", "㏤", "㏥", "㏦"], "kind": "continue", "qid": "Q6a91f2aaf4d2", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏶", "㏷", "㏸", "㏹"], "kind": "continue", "qid": "Q00a2bccf52b3", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏳", "㏲"], "kind": "continue", "qid": "Q1215b3ec3b57", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏹", "㏺", "㏻"], "kind": "continue", "qid": "Q473fdbd62154", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏢", "㏣", "㏤", "㏥"], "kind": "continue", "qid": "Qe08b59610f97", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏺", "㏹", "㏸"], "kind": "continue", "qid": "Q97bae7acb22e", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏫", "㏬", "㏭"], "kind": "continue", "qid": "Q2e1b9281aa33", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏰", "㏯"], "kind": "continue", "qid": "Q40077c3db105", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏥", "㏦", "㏧", "㏨"], "kind": "continue", "qid": "Q42bec48c2ea4", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏬", "㏫", "㏪", "㏩"], "kind": "continue", "qid": "Q936efeb539f5", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㏦", "㏥"], "kind": "continue", "qid": "Q90dceb19a571", "source": {"rank": 1.0, "round": "c001", "seq": "㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾", "why": "inside"}}
+{"context": ["㍬", "㍭", "㍮", "㍯", "㍰"], "kind": "continue", "qid": "Qa5e792ad7545", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "side": "right", "why": "end"}}
+{"context": ["㍚", "㍙", "㍘"], "kind": "continue", "qid": "Q6dad8f990c05", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "side": "left", "why": "end"}}
+{"context": ["㍘", "㍙"], "kind": "continue", "qid": "Q67559d4dec11", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍚", "why": "seed-step"}}
+{"context": ["㍘", "㍙", "㍚"], "kind": "continue", "qid": "Qc9f955ca72d3", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍛", "why": "seed-step"}}
+{"context": ["㍘", "㍙", "㍚", "㍛"], "kind": "continue", "qid": "Q43a5bafd5c00", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍜", "why": "seed-step"}}
+{"context": ["㍘", "㍙", "㍚", "㍛", "㍜"], "kind": "continue", "qid": "Qb71a5f3c6e4a", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍝", "why": "seed-step"}}
+{"context": ["㍘", "㍙", "㍚", "㍛", "㍜", "㍝"], "kind": "continue", "qid": "Qbb2bfbcfd79d", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍞", "why": "seed-step"}}
+{"context": ["㍘", "㍙", "㍚", "㍛", "㍜", "㍝", "㍞"], "kind": "continue", "qid": "Qcbace74ec50f", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍟", "why": "seed-step"}}
+{"context": ["㍘", "㍙", "㍚", "㍛", "㍜", "㍝", "㍞", "㍟"], "kind": "continue", "qid": "Qc5cd63ef63c1", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍠", "why": "seed-step"}}
+{"context": ["㍙", "㍚", "㍛", "㍜", "㍝", "㍞", "㍟", "㍠"], "kind": "continue", "qid": "Qcee8b7518083", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍡", "why": "seed-step"}}
+{"context": ["㍚", "㍛", "㍜", "㍝", "㍞", "㍟", "㍠", "㍡"], "kind": "continue", "qid": "Q89eb7b59a48b", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍢", "why": "seed-step"}}
+{"context": ["㍛", "㍜", "㍝", "㍞", "㍟", "㍠", "㍡", "㍢"], "kind": "continue", "qid": "Q6c1319d6ca1d", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍣", "why": "seed-step"}}
+{"context": ["㍜", "㍝", "㍞", "㍟", "㍠", "㍡", "㍢", "㍣"], "kind": "continue", "qid": "Qe827331a7cc0", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍤", "why": "seed-step"}}
+{"context": ["㍝", "㍞", "㍟", "㍠", "㍡", "㍢", "㍣", "㍤"], "kind": "continue", "qid": "Q30fafc64823b", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍥", "why": "seed-step"}}
+{"context": ["㍞", "㍟", "㍠", "㍡", "㍢", "㍣", "㍤", "㍥"], "kind": "continue", "qid": "Q4cde9f1ce9a9", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍦", "why": "seed-step"}}
+{"context": ["㍟", "㍠", "㍡", "㍢", "㍣", "㍤", "㍥", "㍦"], "kind": "continue", "qid": "Q9ef69c597d27", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍧", "why": "seed-step"}}
+{"context": ["㍠", "㍡", "㍢", "㍣", "㍤", "㍥", "㍦", "㍧"], "kind": "continue", "qid": "Q6e66d1f3db73", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍨", "why": "seed-step"}}
+{"context": ["㍡", "㍢", "㍣", "㍤", "㍥", "㍦", "㍧", "㍨"], "kind": "continue", "qid": "Q0d0ddc1fd7ba", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍩", "why": "seed-step"}}
+{"context": ["㍢", "㍣", "㍤", "㍥", "㍦", "㍧", "㍨", "㍩"], "kind": "continue", "qid": "Qf6d0dcc367c7", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍪", "why": "seed-step"}}
+{"context": ["㍣", "㍤", "㍥", "㍦", "㍧", "㍨", "㍩", "㍪"], "kind": "continue", "qid": "Q54b21018a246", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍫", "why": "seed-step"}}
+{"context": ["㍤", "㍥", "㍦", "㍧", "㍨", "㍩", "㍪", "㍫"], "kind": "continue", "qid": "Q54b0ab1b8cc9", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍬", "why": "seed-step"}}
+{"context": ["㍥", "㍦", "㍧", "㍨", "㍩", "㍪", "㍫", "㍬"], "kind": "continue", "qid": "Qaca1ead0366c", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍭", "why": "seed-step"}}
+{"context": ["㍦", "㍧", "㍨", "㍩", "㍪", "㍫", "㍬", "㍭"], "kind": "continue", "qid": "Q293c9a93ceae", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍮", "why": "seed-step"}}
+{"context": ["㍧", "㍨", "㍩", "㍪", "㍫", "㍬", "㍭", "㍮"], "kind": "continue", "qid": "Q3d0dbc4f326a", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍯", "why": "seed-step"}}
+{"context": ["㍨", "㍩", "㍪", "㍫", "㍬", "㍭", "㍮", "㍯"], "kind": "continue", "qid": "Q39c982abe66a", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍰", "why": "seed-step"}}
+{"context": ["㍙", "㍚"], "kind": "continue", "qid": "Q468028c47ef0", "source": {"k": 3, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍛", "why": "kstar"}}
+{"context": ["㍚", "㍛"], "kind": "continue", "qid": "Q334a87d66fbf", "source": {"k": 4, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍜", "why": "kstar"}}
+{"context": ["㍛", "㍜"], "kind": "continue", "qid": "Q075c451337fd", "source": {"k": 5, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍝", "why": "kstar"}}
+{"context": ["㍜", "㍝"], "kind": "continue", "qid": "Q4601048bab4a", "source": {"k": 6, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍞", "why": "kstar"}}
+{"context": ["㍝", "㍞"], "kind": "continue", "qid": "Q14451bb6f9cb", "source": {"k": 7, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍟", "why": "kstar"}}
+{"context": ["㍞", "㍟"], "kind": "continue", "qid": "Q69e45630f739", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍠", "why": "kstar"}}
+{"context": ["㍟", "㍠"], "kind": "continue", "qid": "Q2720dc21f4b7", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍡", "why": "kstar"}}
+{"context": ["㍠", "㍡"], "kind": "continue", "qid": "Q5b2593a2459c", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍢", "why": "kstar"}}
+{"context": ["㍡", "㍢"], "kind": "continue", "qid": "Q263c9d013148", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍣", "why": "kstar"}}
+{"context": ["㍣", "㍤"], "kind": "continue", "qid": "Q1f1dafdfe7c7", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍥", "why": "kstar"}}
+{"context": ["㍤", "㍥"], "kind": "continue", "qid": "Qa9764670ceab", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍦", "why": "kstar"}}
+{"context": ["㍥", "㍦"], "kind": "continue", "qid": "Qb2cae5d05cf3", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍧", "why": "kstar"}}
+{"context": ["㍦", "㍧"], "kind": "continue", "qid": "Qfbc5dd2832d0", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍨", "why": "kstar"}}
+{"context": ["㍧", "㍨"], "kind": "continue", "qid": "Qa2f4768da644", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍩", "why": "kstar"}}
+{"context": ["㍨", "㍩"], "kind": "continue", "qid": "Q76c817542a17", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍪", "why": "kstar"}}
+{"context": ["㍩", "㍪"], "kind": "continue", "qid": "Q8c552b861373", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍫", "why": "kstar"}}
+{"context": ["㍪", "㍫"], "kind": "continue", "qid": "Qc5682cbd739d", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍬", "why": "kstar"}}
+{"context": ["㍫", "㍬"], "kind": "continue", "qid": "Q15fa4b4ff34a", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍭", "why": "kstar"}}
+{"context": ["㍬", "㍭"], "kind": "continue", "qid": "Q6f2ec0c820cb", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍮", "why": "kstar"}}
+{"context": ["㍭", "㍮"], "kind": "continue", "qid": "Qd2ba536d7c72", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍯", "why": "kstar"}}
+{"context": ["㍮", "㍯"], "kind": "continue", "qid": "Qc7fb5b6c3d7f", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "step": "㍰", "why": "kstar"}}
+{"context": ["㍰", "㍯", "㍮"], "kind": "continue", "qid": "Q0ecd4776189e", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍩", "㍪", "㍫"], "kind": "continue", "qid": "Qd69fe994fbde", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍛", "㍚", "㍙"], "kind": "continue", "qid": "Q1f4f778927f8", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍪", "㍫", "㍬"], "kind": "continue", "qid": "Q31c93faacf43", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍪", "㍩"], "kind": "continue", "qid": "Q627937e68a36", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍙", "㍚", "㍛", "㍜"], "kind": "continue", "qid": "Q351714847aa1", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍪", "㍩", "㍨"], "kind": "continue", "qid": "Qe45ccad95a0d", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍢", "㍡", "㍠", "㍟"], "kind": "continue", "qid": "Qccc34658c2c7", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍦", "㍧", "㍨", "㍩"], "kind": "continue", "qid": "Qdf809b926c71", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍰", "㍯", "㍮", "㍭"], "kind": "continue", "qid": "Q2f60f1ae06e3", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍝", "㍜"], "kind": "continue", "qid": "Q3c6c963e884e", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍝", "㍜", "㍛", "㍚"], "kind": "continue", "qid": "Qe05ea6e1a13d", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍫", "㍬", "㍭", "㍮"], "kind": "continue", "qid": "Q219424324e5c", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍝", "㍜", "㍛"], "kind": "continue", "qid": "Qa8988344b2be", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍧", "㍦"], "kind": "continue", "qid": "Q4e6c0ca9d46f", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍪", "㍩", "㍨", "㍧"], "kind": "continue", "qid": "Q769e75317761", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍮", "㍭", "㍬"], "kind": "continue", "qid": "Q9769ebcffe74", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍞", "㍝"], "kind": "continue", "qid": "Qa371f7407d81", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍫", "㍪"], "kind": "continue", "qid": "Q21594c0edb3c", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍢", "㍣", "㍤", "㍥"], "kind": "continue", "qid": "Q0ee9a08e776e", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍭", "㍮", "㍯"], "kind": "continue", "qid": "Q657f2890f284", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍥", "㍤"], "kind": "continue", "qid": "Q199c87baa798", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍨", "㍩", "㍪"], "kind": "continue", "qid": "Q29aeec311778", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍛", "㍜", "㍝"], "kind": "continue", "qid": "Q181be22662b3", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍠", "㍟", "㍞"], "kind": "continue", "qid": "Q6d700c621671", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍣", "㍢", "㍡", "㍠"], "kind": "continue", "qid": "Qa620c4806fc9", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍤", "㍣"], "kind": "continue", "qid": "Q4bebbce92103", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍧", "㍦", "㍥"], "kind": "continue", "qid": "Qdf05ad34bb8f", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍣", "㍤", "㍥", "㍦"], "kind": "continue", "qid": "Qd45a12391c15", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍬", "㍫"], "kind": "continue", "qid": "Q09cb113203ac", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍤", "㍣", "㍢", "㍡"], "kind": "continue", "qid": "Q161520d10b12", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍥", "㍤", "㍣", "㍢"], "kind": "continue", "qid": "Q5349743bbb6c", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍥", "㍦", "㍧"], "kind": "continue", "qid": "Qc458a2af2364", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["㍦", "㍧", "㍨"], "kind": "continue", "qid": "Qbc246fd40795", "source": {"rank": 1.0, "round": "c001", "seq": "㍘㍙㍚㍛㍜㍝㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰", "why": "inside"}}
+{"context": ["🃯", "🃰", "🃱", "🃲", "🃳", "🃴", "🃵"], "kind": "continue", "qid": "Q5032d7c1e4da", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "side": "right", "why": "end"}}
+{"context": ["🃧", "🃦", "🃥", "🃤", "🃣", "🃢", "🃡"], "kind": "continue", "qid": "Qc3e9f15f9d4c", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "side": "left", "why": "end"}}
+{"context": ["🃡", "🃢"], "kind": "continue", "qid": "Qd6be793615d1", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃣", "why": "seed-step"}}
+{"context": ["🃡", "🃢", "🃣"], "kind": "continue", "qid": "Q6198e213612c", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃤", "why": "seed-step"}}
+{"context": ["🃡", "🃢", "🃣", "🃤"], "kind": "continue", "qid": "Q9784a583d3ca", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃥", "why": "seed-step"}}
+{"context": ["🃡", "🃢", "🃣", "🃤", "🃥"], "kind": "continue", "qid": "Q436f7757dffe", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃦", "why": "seed-step"}}
+{"context": ["🃡", "🃢", "🃣", "🃤", "🃥", "🃦"], "kind": "continue", "qid": "Qc9343b7c361a", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃧", "why": "seed-step"}}
+{"context": ["🃡", "🃢", "🃣", "🃤", "🃥", "🃦", "🃧"], "kind": "continue", "qid": "Q5bcda4e0837b", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃨", "why": "seed-step"}}
+{"context": ["🃡", "🃢", "🃣", "🃤", "🃥", "🃦", "🃧", "🃨"], "kind": "continue", "qid": "Q829c96027a4b", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃩", "why": "seed-step"}}
+{"context": ["🃢", "🃣", "🃤", "🃥", "🃦", "🃧", "🃨", "🃩"], "kind": "continue", "qid": "Q47c29383255d", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃪", "why": "seed-step"}}
+{"context": ["🃣", "🃤", "🃥", "🃦", "🃧", "🃨", "🃩", "🃪"], "kind": "continue", "qid": "Q32e121412629", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃫", "why": "seed-step"}}
+{"context": ["🃤", "🃥", "🃦", "🃧", "🃨", "🃩", "🃪", "🃫"], "kind": "continue", "qid": "Q923e2a2de2f6", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃬", "why": "seed-step"}}
+{"context": ["🃥", "🃦", "🃧", "🃨", "🃩", "🃪", "🃫", "🃬"], "kind": "continue", "qid": "Q3cb001baa5e7", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃭", "why": "seed-step"}}
+{"context": ["🃦", "🃧", "🃨", "🃩", "🃪", "🃫", "🃬", "🃭"], "kind": "continue", "qid": "Qcb1c23235f72", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃮", "why": "seed-step"}}
+{"context": ["🃧", "🃨", "🃩", "🃪", "🃫", "🃬", "🃭", "🃮"], "kind": "continue", "qid": "Q7fb7411e28db", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃯", "why": "seed-step"}}
+{"context": ["🃨", "🃩", "🃪", "🃫", "🃬", "🃭", "🃮", "🃯"], "kind": "continue", "qid": "Q58e6414f1233", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃰", "why": "seed-step"}}
+{"context": ["🃩", "🃪", "🃫", "🃬", "🃭", "🃮", "🃯", "🃰"], "kind": "continue", "qid": "Q11719a24ae94", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃱", "why": "seed-step"}}
+{"context": ["🃪", "🃫", "🃬", "🃭", "🃮", "🃯", "🃰", "🃱"], "kind": "continue", "qid": "Q084684f199ce", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃲", "why": "seed-step"}}
+{"context": ["🃫", "🃬", "🃭", "🃮", "🃯", "🃰", "🃱", "🃲"], "kind": "continue", "qid": "Qcb653b7368e0", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃳", "why": "seed-step"}}
+{"context": ["🃬", "🃭", "🃮", "🃯", "🃰", "🃱", "🃲", "🃳"], "kind": "continue", "qid": "Qe167a027fd83", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃴", "why": "seed-step"}}
+{"context": ["🃭", "🃮", "🃯", "🃰", "🃱", "🃲", "🃳", "🃴"], "kind": "continue", "qid": "Q3722f2592c11", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃵", "why": "seed-step"}}
+{"context": ["🃢", "🃣"], "kind": "continue", "qid": "Q73afded8e645", "source": {"k": 3, "rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃤", "why": "kstar"}}
+{"context": ["🃣", "🃤"], "kind": "continue", "qid": "Q490a758934ba", "source": {"k": 4, "rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃥", "why": "kstar"}}
+{"context": ["🃤", "🃥"], "kind": "continue", "qid": "Qfb440f47d336", "source": {"k": 5, "rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃦", "why": "kstar"}}
+{"context": ["🃥", "🃦"], "kind": "continue", "qid": "Q0bc92d6d523d", "source": {"k": 6, "rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃧", "why": "kstar"}}
+{"context": ["🃦", "🃧"], "kind": "continue", "qid": "Q6eaf2fcfe792", "source": {"k": 7, "rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃨", "why": "kstar"}}
+{"context": ["🃧", "🃨"], "kind": "continue", "qid": "Q395a35edde12", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃩", "why": "kstar"}}
+{"context": ["🃨", "🃩"], "kind": "continue", "qid": "Q7518fc9e5a9d", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃪", "why": "kstar"}}
+{"context": ["🃩", "🃪"], "kind": "continue", "qid": "Q0704aa34ce31", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃫", "why": "kstar"}}
+{"context": ["🃪", "🃫"], "kind": "continue", "qid": "Q3fdd54e01b4f", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃬", "why": "kstar"}}
+{"context": ["🃫", "🃬"], "kind": "continue", "qid": "Q497debf0820f", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃭", "why": "kstar"}}
+{"context": ["🃬", "🃭"], "kind": "continue", "qid": "Q46d011b39c8f", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃮", "why": "kstar"}}
+{"context": ["🃭", "🃮"], "kind": "continue", "qid": "Q79190b80f9b3", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃯", "why": "kstar"}}
+{"context": ["🃮", "🃯"], "kind": "continue", "qid": "Q4e5b6ad34bdc", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃰", "why": "kstar"}}
+{"context": ["🃯", "🃰"], "kind": "continue", "qid": "Q98362da6aff9", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃱", "why": "kstar"}}
+{"context": ["🃰", "🃱"], "kind": "continue", "qid": "Q3671d7ae2d0c", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃲", "why": "kstar"}}
+{"context": ["🃱", "🃲"], "kind": "continue", "qid": "Q95ffd19e28d3", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃳", "why": "kstar"}}
+{"context": ["🃲", "🃳"], "kind": "continue", "qid": "Qe7c34889ae19", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃴", "why": "kstar"}}
+{"context": ["🃳", "🃴"], "kind": "continue", "qid": "Q140e72ae7bdd", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "step": "🃵", "why": "kstar"}}
+{"context": ["🃰", "🃯"], "kind": "continue", "qid": "Q7838dfafe0b8", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃥", "🃤"], "kind": "continue", "qid": "Qd1ee1ec2a5b0", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃯", "🃰", "🃱"], "kind": "continue", "qid": "Qe066f7a85758", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃪", "🃫", "🃬"], "kind": "continue", "qid": "Qaaa675cbf657", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃧", "🃦"], "kind": "continue", "qid": "Qf1ef24beffb9", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃬", "🃭", "🃮", "🃯"], "kind": "continue", "qid": "Q06c39bbd2fdc", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃨", "🃧"], "kind": "continue", "qid": "Q53919eb469fb", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃥", "🃤", "🃣", "🃢"], "kind": "continue", "qid": "Q923701baa675", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃥", "🃦", "🃧"], "kind": "continue", "qid": "Q0a413e6a1610", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃳", "🃲", "🃱", "🃰"], "kind": "continue", "qid": "Q05ecdcee3593", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃰", "🃯", "🃮"], "kind": "continue", "qid": "Qc6cba3cf0f39", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃮", "🃭", "🃬"], "kind": "continue", "qid": "Qc42ea0023bda", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃪", "🃫", "🃬", "🃭"], "kind": "continue", "qid": "Q17e63d3bc5f9", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃮", "🃯", "🃰"], "kind": "continue", "qid": "Q19bc6c230784", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃯", "🃮", "🃭"], "kind": "continue", "qid": "Q217b4337c183", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃥", "🃦", "🃧", "🃨"], "kind": "continue", "qid": "Q0017c7e2f31b", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃬", "🃫"], "kind": "continue", "qid": "Q70b243f4e3e4", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃧", "🃦", "🃥"], "kind": "continue", "qid": "Qe1eef019b147", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃳", "🃲"], "kind": "continue", "qid": "Q38fe9d1de410", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃱", "🃲", "🃳", "🃴"], "kind": "continue", "qid": "Q3505ea6bdc5b", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃫", "🃪", "🃩", "🃨"], "kind": "continue", "qid": "Q5a29bdce9916", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃴", "🃳"], "kind": "continue", "qid": "Q865dc916b04c", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃬", "🃫", "🃪", "🃩"], "kind": "continue", "qid": "Qe99e51977f61", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃦", "🃥", "🃤", "🃣"], "kind": "continue", "qid": "Qa064d733205a", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃬", "🃫", "🃪"], "kind": "continue", "qid": "Q341ef43b38bf", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["🃳", "🃲", "🃱"], "kind": "continue", "qid": "Qc5a27c9ec4a8", "source": {"rank": 1.0, "round": "c001", "seq": "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵", "why": "inside"}}
+{"context": ["⑹", "⑸", "⑷", "⑶", "⑵", "⑴"], "kind": "continue", "qid": "Q661c3adc8b28", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "side": "left", "why": "end"}}
+{"context": ["⑴", "⑵"], "kind": "continue", "qid": "Q031ac0f9ef0f", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⑶", "why": "seed-step"}}
+{"context": ["⑴", "⑵", "⑶"], "kind": "continue", "qid": "Q3c0a725b2a39", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⑷", "why": "seed-step"}}
+{"context": ["⑴", "⑵", "⑶", "⑷"], "kind": "continue", "qid": "Q482b350dc7d3", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⑸", "why": "seed-step"}}
+{"context": ["⑴", "⑵", "⑶", "⑷", "⑸"], "kind": "continue", "qid": "Q79611db06b54", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⑹", "why": "seed-step"}}
+{"context": ["⑴", "⑵", "⑶", "⑷", "⑸", "⑹"], "kind": "continue", "qid": "Q0a96642343f3", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⑺", "why": "seed-step"}}
+{"context": ["⑴", "⑵", "⑶", "⑷", "⑸", "⑹", "⑺"], "kind": "continue", "qid": "Qdd26a14d2b73", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⑻", "why": "seed-step"}}
+{"context": ["⑴", "⑵", "⑶", "⑷", "⑸", "⑹", "⑺", "⑻"], "kind": "continue", "qid": "Q3cd5b37669ba", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⑼", "why": "seed-step"}}
+{"context": ["⑵", "⑶", "⑷", "⑸", "⑹", "⑺", "⑻", "⑼"], "kind": "continue", "qid": "Qcc75937853ef", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⑽", "why": "seed-step"}}
+{"context": ["⑶", "⑷", "⑸", "⑹", "⑺", "⑻", "⑼", "⑽"], "kind": "continue", "qid": "Qaf83832f920a", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⑾", "why": "seed-step"}}
+{"context": ["⑷", "⑸", "⑹", "⑺", "⑻", "⑼", "⑽", "⑾"], "kind": "continue", "qid": "Q946873f6acaa", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⑿", "why": "seed-step"}}
+{"context": ["⑸", "⑹", "⑺", "⑻", "⑼", "⑽", "⑾", "⑿"], "kind": "continue", "qid": "Q69eb7de7050e", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⒀", "why": "seed-step"}}
+{"context": ["⑹", "⑺", "⑻", "⑼", "⑽", "⑾", "⑿", "⒀"], "kind": "continue", "qid": "Q560ef099bef1", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⒁", "why": "seed-step"}}
+{"context": ["⑺", "⑻", "⑼", "⑽", "⑾", "⑿", "⒀", "⒁"], "kind": "continue", "qid": "Q69099102b234", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⒂", "why": "seed-step"}}
+{"context": ["⑻", "⑼", "⑽", "⑾", "⑿", "⒀", "⒁", "⒂"], "kind": "continue", "qid": "Q684c2b0d9347", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⒃", "why": "seed-step"}}
+{"context": ["⑼", "⑽", "⑾", "⑿", "⒀", "⒁", "⒂", "⒃"], "kind": "continue", "qid": "Q0936388c036e", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⒄", "why": "seed-step"}}
+{"context": ["⑽", "⑾", "⑿", "⒀", "⒁", "⒂", "⒃", "⒄"], "kind": "continue", "qid": "Q7adea7c04c0b", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⒅", "why": "seed-step"}}
+{"context": ["⑾", "⑿", "⒀", "⒁", "⒂", "⒃", "⒄", "⒅"], "kind": "continue", "qid": "Q88a1cf6c9240", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⒆", "why": "seed-step"}}
+{"context": ["⑿", "⒀", "⒁", "⒂", "⒃", "⒄", "⒅", "⒆"], "kind": "continue", "qid": "Qb1476001e19b", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⒇", "why": "seed-step"}}
+{"context": ["⑶", "⑷"], "kind": "continue", "qid": "Qce86de5cb6d3", "source": {"k": 4, "rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⑸", "why": "kstar"}}
+{"context": ["⑷", "⑸"], "kind": "continue", "qid": "Qfb1db6383976", "source": {"k": 5, "rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⑹", "why": "kstar"}}
+{"context": ["⑸", "⑹"], "kind": "continue", "qid": "Q42083cb72de9", "source": {"k": 6, "rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⑺", "why": "kstar"}}
+{"context": ["⑹", "⑺"], "kind": "continue", "qid": "Qe52fc1ca1316", "source": {"k": 7, "rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⑻", "why": "kstar"}}
+{"context": ["⑺", "⑻"], "kind": "continue", "qid": "Q2e4bcb7075b6", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⑼", "why": "kstar"}}
+{"context": ["⑻", "⑼"], "kind": "continue", "qid": "Qc68d94451ef1", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⑽", "why": "kstar"}}
+{"context": ["⑼", "⑽"], "kind": "continue", "qid": "Q54b798f97795", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⑾", "why": "kstar"}}
+{"context": ["⑽", "⑾"], "kind": "continue", "qid": "Q8a9f22684ff6", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⑿", "why": "kstar"}}
+{"context": ["⑿", "⒀"], "kind": "continue", "qid": "Q57780425a992", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⒁", "why": "kstar"}}
+{"context": ["⒀", "⒁"], "kind": "continue", "qid": "Q4efdf98c5601", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⒂", "why": "kstar"}}
+{"context": ["⒁", "⒂"], "kind": "continue", "qid": "Qccbfe95b594b", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⒃", "why": "kstar"}}
+{"context": ["⒄", "⒅"], "kind": "continue", "qid": "Qf6123de9e05e", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⒆", "why": "kstar"}}
+{"context": ["⒅", "⒆"], "kind": "continue", "qid": "Q90b06a5f94c6", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "step": "⒇", "why": "kstar"}}
+{"context": ["⑼", "⑻", "⑺"], "kind": "continue", "qid": "Qa0af3cace828", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⑸", "⑹", "⑺", "⑻"], "kind": "continue", "qid": "Qf45bb4e54ffc", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⒄", "⒃", "⒂"], "kind": "continue", "qid": "Qe445c8c9e733", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⒀", "⑿", "⑾"], "kind": "continue", "qid": "Q69eecd5d78cf", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⒀", "⒁", "⒂", "⒃"], "kind": "continue", "qid": "Q59ace2b340ff", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⒂", "⒃", "⒄", "⒅"], "kind": "continue", "qid": "Q42e2e56ac096", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⑹", "⑸", "⑷", "⑶"], "kind": "continue", "qid": "Q5789d9de8510", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⑻", "⑺", "⑹", "⑸"], "kind": "continue", "qid": "Q32399e725d68", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⑸", "⑷", "⑶", "⑵"], "kind": "continue", "qid": "Q21128806b360", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⑶", "⑷", "⑸", "⑹"], "kind": "continue", "qid": "Q30a819747d51", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⑷", "⑸", "⑹", "⑺"], "kind": "continue", "qid": "Q023244fa945c", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⒁", "⒂", "⒃", "⒄"], "kind": "continue", "qid": "Q859ad083e337", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⒃", "⒂", "⒁", "⒀"], "kind": "continue", "qid": "Q988bdcd736d1", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⑶", "⑷", "⑸"], "kind": "continue", "qid": "Q624d279e4282", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⑻", "⑺", "⑹"], "kind": "continue", "qid": "Q0567a97e6036", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⑼", "⑽", "⑾"], "kind": "continue", "qid": "Q5580211d495a", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⑿", "⑾", "⑽", "⑼"], "kind": "continue", "qid": "Q1245ca73b0c0", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⑸", "⑷"], "kind": "continue", "qid": "Q8d24f78e9967", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⑾", "⑽"], "kind": "continue", "qid": "Q63edcd99dfc6", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⑽", "⑾", "⑿", "⒀"], "kind": "continue", "qid": "Qdfd9e152e1e5", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⑿", "⒀", "⒁", "⒂"], "kind": "continue", "qid": "Q75253b33e603", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⑹", "⑺", "⑻", "⑼"], "kind": "continue", "qid": "Q6ed4617c6e91", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⒄", "⒃"], "kind": "continue", "qid": "Qb7244c919386", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⒄", "⒃", "⒂", "⒁"], "kind": "continue", "qid": "Q055da03d7a30", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⑼", "⑽", "⑾", "⑿"], "kind": "continue", "qid": "Q59056452c346", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["⑾", "⑽", "⑼", "⑻"], "kind": "continue", "qid": "Q0fe118d70531", "source": {"rank": 1.0, "round": "c001", "seq": "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇", "why": "inside"}}
+{"context": ["𝋤", "𝋣", "𝋢", "𝋡", "𝋠"], "kind": "continue", "qid": "Qf0ace4f64522", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "side": "left", "why": "end"}}
+{"context": ["𝋠", "𝋡"], "kind": "continue", "qid": "Q251ee3c64173", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋢", "why": "seed-step"}}
+{"context": ["𝋠", "𝋡", "𝋢"], "kind": "continue", "qid": "Qdcd6218581db", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋣", "why": "seed-step"}}
+{"context": ["𝋠", "𝋡", "𝋢", "𝋣"], "kind": "continue", "qid": "Q1389a0af07d6", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋤", "why": "seed-step"}}
+{"context": ["𝋠", "𝋡", "𝋢", "𝋣", "𝋤"], "kind": "continue", "qid": "Q33220bacb301", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋥", "why": "seed-step"}}
+{"context": ["𝋠", "𝋡", "𝋢", "𝋣", "𝋤", "𝋥"], "kind": "continue", "qid": "Q1c53d02ca1e5", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋦", "why": "seed-step"}}
+{"context": ["𝋠", "𝋡", "𝋢", "𝋣", "𝋤", "𝋥", "𝋦"], "kind": "continue", "qid": "Q5233049e551e", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋧", "why": "seed-step"}}
+{"context": ["𝋠", "𝋡", "𝋢", "𝋣", "𝋤", "𝋥", "𝋦", "𝋧"], "kind": "continue", "qid": "Qe9ccd2db5724", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋨", "why": "seed-step"}}
+{"context": ["𝋡", "𝋢", "𝋣", "𝋤", "𝋥", "𝋦", "𝋧", "𝋨"], "kind": "continue", "qid": "Q0f391dd97c38", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋩", "why": "seed-step"}}
+{"context": ["𝋢", "𝋣", "𝋤", "𝋥", "𝋦", "𝋧", "𝋨", "𝋩"], "kind": "continue", "qid": "Q532cdfac1d50", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋪", "why": "seed-step"}}
+{"context": ["𝋣", "𝋤", "𝋥", "𝋦", "𝋧", "𝋨", "𝋩", "𝋪"], "kind": "continue", "qid": "Q04cd338dabfc", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋫", "why": "seed-step"}}
+{"context": ["𝋤", "𝋥", "𝋦", "𝋧", "𝋨", "𝋩", "𝋪", "𝋫"], "kind": "continue", "qid": "Q7b1daef5c6ff", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋬", "why": "seed-step"}}
+{"context": ["𝋥", "𝋦", "𝋧", "𝋨", "𝋩", "𝋪", "𝋫", "𝋬"], "kind": "continue", "qid": "Q5e544ef61613", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋭", "why": "seed-step"}}
+{"context": ["𝋦", "𝋧", "𝋨", "𝋩", "𝋪", "𝋫", "𝋬", "𝋭"], "kind": "continue", "qid": "Q070712852edf", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋮", "why": "seed-step"}}
+{"context": ["𝋧", "𝋨", "𝋩", "𝋪", "𝋫", "𝋬", "𝋭", "𝋮"], "kind": "continue", "qid": "Q95b518d13f8f", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋯", "why": "seed-step"}}
+{"context": ["𝋨", "𝋩", "𝋪", "𝋫", "𝋬", "𝋭", "𝋮", "𝋯"], "kind": "continue", "qid": "Qc6ce827751c0", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋰", "why": "seed-step"}}
+{"context": ["𝋩", "𝋪", "𝋫", "𝋬", "𝋭", "𝋮", "𝋯", "𝋰"], "kind": "continue", "qid": "Q4ae3abbd2e88", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋱", "why": "seed-step"}}
+{"context": ["𝋪", "𝋫", "𝋬", "𝋭", "𝋮", "𝋯", "𝋰", "𝋱"], "kind": "continue", "qid": "Q71ad9b1a9921", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋲", "why": "seed-step"}}
+{"context": ["𝋫", "𝋬", "𝋭", "𝋮", "𝋯", "𝋰", "𝋱", "𝋲"], "kind": "continue", "qid": "Qb3b0df014337", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋳", "why": "seed-step"}}
+{"context": ["𝋡", "𝋢"], "kind": "continue", "qid": "Qe9b0f700a8e6", "source": {"k": 3, "rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋣", "why": "kstar"}}
+{"context": ["𝋢", "𝋣"], "kind": "continue", "qid": "Q3f1c46af2ac4", "source": {"k": 4, "rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋤", "why": "kstar"}}
+{"context": ["𝋣", "𝋤"], "kind": "continue", "qid": "Q56cf72305818", "source": {"k": 5, "rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋥", "why": "kstar"}}
+{"context": ["𝋤", "𝋥"], "kind": "continue", "qid": "Q00b1dd789fc2", "source": {"k": 6, "rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋦", "why": "kstar"}}
+{"context": ["𝋥", "𝋦"], "kind": "continue", "qid": "Q52a11b226956", "source": {"k": 7, "rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋧", "why": "kstar"}}
+{"context": ["𝋦", "𝋧"], "kind": "continue", "qid": "Q25c30a5ace91", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋨", "why": "kstar"}}
+{"context": ["𝋧", "𝋨"], "kind": "continue", "qid": "Q0b0992669ede", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋩", "why": "kstar"}}
+{"context": ["𝋨", "𝋩"], "kind": "continue", "qid": "Q42fd0a80d79c", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋪", "why": "kstar"}}
+{"context": ["𝋩", "𝋪"], "kind": "continue", "qid": "Q7e085bf8747c", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋫", "why": "kstar"}}
+{"context": ["𝋪", "𝋫"], "kind": "continue", "qid": "Qc9736986d84b", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋬", "why": "kstar"}}
+{"context": ["𝋫", "𝋬"], "kind": "continue", "qid": "Q44e277af3af3", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋭", "why": "kstar"}}
+{"context": ["𝋬", "𝋭"], "kind": "continue", "qid": "Q509605b3f5eb", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋮", "why": "kstar"}}
+{"context": ["𝋭", "𝋮"], "kind": "continue", "qid": "Q500c9f87b723", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋯", "why": "kstar"}}
+{"context": ["𝋮", "𝋯"], "kind": "continue", "qid": "Q215cf842fc72", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋰", "why": "kstar"}}
+{"context": ["𝋯", "𝋰"], "kind": "continue", "qid": "Qb75569a04a50", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋱", "why": "kstar"}}
+{"context": ["𝋰", "𝋱"], "kind": "continue", "qid": "Q201ac9dbdaac", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋲", "why": "kstar"}}
+{"context": ["𝋱", "𝋲"], "kind": "continue", "qid": "Q9d6fff7aec0e", "source": {"k": 8, "rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "step": "𝋳", "why": "kstar"}}
+{"context": ["𝋩", "𝋪", "𝋫"], "kind": "continue", "qid": "Qccc75fd65901", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "why": "inside"}}
+{"context": ["𝋱", "𝋰", "𝋯"], "kind": "continue", "qid": "Q347a37bfb8dd", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "why": "inside"}}
+{"context": ["𝋯", "𝋮", "𝋭"], "kind": "continue", "qid": "Q09fd880a1878", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "why": "inside"}}
+{"context": ["𝋭", "𝋮", "𝋯"], "kind": "continue", "qid": "Qd363a7182561", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "why": "inside"}}
+{"context": ["𝋬", "𝋫", "𝋪", "𝋩"], "kind": "continue", "qid": "Qe867f43747fe", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "why": "inside"}}
+{"context": ["𝋣", "𝋢", "𝋡"], "kind": "continue", "qid": "Q887ed1537041", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "why": "inside"}}
+{"context": ["𝋳", "𝋲", "𝋱"], "kind": "continue", "qid": "Q39a6aadaffa3", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "why": "inside"}}
+{"context": ["𝋫", "𝋪"], "kind": "continue", "qid": "Qff5331367435", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "why": "inside"}}
+{"context": ["𝋭", "𝋬"], "kind": "continue", "qid": "Qf076496b70f3", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "why": "inside"}}
+{"context": ["𝋭", "𝋮", "𝋯", "𝋰"], "kind": "continue", "qid": "Q50b3a32890d4", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "why": "inside"}}
+{"context": ["𝋤", "𝋣", "𝋢"], "kind": "continue", "qid": "Q317c2158c941", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "why": "inside"}}
+{"context": ["𝋯", "𝋰", "𝋱"], "kind": "continue", "qid": "Q12b27ce266bb", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "why": "inside"}}
+{"context": ["𝋦", "𝋥", "𝋤", "𝋣"], "kind": "continue", "qid": "Q4cb6c1f1fe79", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "why": "inside"}}
+{"context": ["𝋨", "𝋧", "𝋦"], "kind": "continue", "qid": "Q8eed60bb90b3", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "why": "inside"}}
+{"context": ["𝋪", "𝋩", "𝋨", "𝋧"], "kind": "continue", "qid": "Qdb5cf9c7c30f", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "why": "inside"}}
+{"context": ["𝋱", "𝋰"], "kind": "continue", "qid": "Q4f277a7f019f", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "why": "inside"}}
+{"context": ["𝋬", "𝋫"], "kind": "continue", "qid": "Qc0418713c110", "source": {"rank": 1.0, "round": "c001", "seq": "𝋠𝋡𝋢𝋣𝋤𝋥𝋦𝋧𝋨𝋩𝋪𝋫𝋬𝋭𝋮𝋯𝋰𝋱𝋲𝋳", "why": "inside"}}
+{"context": ["🀗", "🀖", "🀕", "🀔", "🀓", "🀒", "🀑", "🀐"], "kind": "continue", "qid": "Qa36bdc80e6f8", "source": {"rank": 1.0, "round": "c001", "seq": "🀐🀑🀒🀓🀔🀕🀖🀗🀘🀙🀚🀛🀜🀝🀞🀟🀠🀡", "side": "left", "why": "end"}}
+{"context": ["🀙", "🀚", "🀛", "🀜"], "kind": "continue", "qid": "Q8eb33088f740", "source": {"rank": 1.0, "round": "c001", "seq": "🀐🀑🀒🀓🀔🀕🀖🀗🀘🀙🀚🀛🀜🀝🀞🀟🀠🀡", "step": "🀝", "why": "seed-step"}}
+{"context": ["🀙", "🀚", "🀛", "🀜", "🀝"], "kind": "continue", "qid": "Q4c9077ed0954", "source": {"rank": 1.0, "round": "c001", "seq": "🀐🀑🀒🀓🀔🀕🀖🀗🀘🀙🀚🀛🀜🀝🀞🀟🀠🀡", "step": "🀞", "why": "seed-step"}}
+{"context": ["🀙", "🀚", "🀛", "🀜", "🀝", "🀞"], "kind": "continue", "qid": "Q7a8534ca513d", "source": {"rank": 1.0, "round": "c001", "seq": "🀐🀑🀒🀓🀔🀕🀖🀗🀘🀙🀚🀛🀜🀝🀞🀟🀠🀡", "step": "🀟", "why": "seed-step"}}
+{"context": ["🀙", "🀚", "🀛", "🀜", "🀝", "🀞", "🀟"], "kind": "continue", "qid": "Qc7c42ac9fc8f", "source": {"rank": 1.0, "round": "c001", "seq": "🀐🀑🀒🀓🀔🀕🀖🀗🀘🀙🀚🀛🀜🀝🀞🀟🀠🀡", "step": "🀠", "why": "seed-step"}}
+{"context": ["🀙", "🀚", "🀛", "🀜", "🀝", "🀞", "🀟", "🀠"], "kind": "continue", "qid": "Q5557101a909a", "source": {"rank": 1.0, "round": "c001", "seq": "🀐🀑🀒🀓🀔🀕🀖🀗🀘🀙🀚🀛🀜🀝🀞🀟🀠🀡", "step": "🀡", "why": "seed-step"}}
+{"context": ["🀘", "🀗"], "kind": "continue", "qid": "Qd9b9d8054e68", "source": {"rank": 1.0, "round": "c001", "seq": "🀐🀑🀒🀓🀔🀕🀖🀗🀘🀙🀚🀛🀜🀝🀞🀟🀠🀡", "step": "🀖", "why": "seed-step"}}
+{"context": ["🀘", "🀗", "🀖"], "kind": "continue", "qid": "Q821b60a8558d", "source": {"rank": 1.0, "round": "c001", "seq": "🀐🀑🀒🀓🀔🀕🀖🀗🀘🀙🀚🀛🀜🀝🀞🀟🀠🀡", "step": "🀕", "why": "seed-step"}}
+{"context": ["🀘", "🀗", "🀖", "🀕"], "kind": "continue", "qid": "Qccc7a231306c", "source": {"rank": 1.0, "round": "c001", "seq": "🀐🀑🀒🀓🀔🀕🀖🀗🀘🀙🀚🀛🀜🀝🀞🀟🀠🀡", "step": "🀔", "why": "seed-step"}}

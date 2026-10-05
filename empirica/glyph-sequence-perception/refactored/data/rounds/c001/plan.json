@@ -1,0 +1,21 @@
+{
+ "round": "c001",
+ "protocol": "ctx-0.1",
+ "questions": 700,
+ "budget": 700,
+ "by_why": {
+  "explore": 105,
+  "end": 11,
+  "seed-step": 156,
+  "kstar": 144,
+  "inside": 284
+ },
+ "by_kind": {
+  "continue": 700
+ },
+ "sequences": 540,
+ "sequences_served": 9,
+ "lowest_rank_served": 1.0,
+ "contexts_in_tree": 4146,
+ "sheets": 230
+}
