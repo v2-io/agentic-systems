@@ -23,7 +23,10 @@ SEQUENCES: walks. At each step take the longest suffix (2-8 glyphs) of the path 
 most-agreed continuation (ties: families, answers, codepoint). Stops: end (the node's top answer is "none"), open (no
 suffix of the path was asked: the planner's work), other (top answer not a glyph), wrap (the continuation is already
 in the path). Each walk runs both ways (a sequence and its reverse are one sequence); a walk contained in a longer one
-in the same order is that one at an earlier stage.
+in the same order is that one at an earlier stage. A sequence holds SUPPORTED LINKS only: the starting context was shown,
+not walked, and an asked context may hold a gap (the triad era asked `⑩ ⑪ ⑬ ⑭`, `㊳ ㊲ ㉒ ㉑`), so each link that no step
+walked is checked against the tree (the longest asked context ending at either glyph names the other as its top), and
+the walk is split where none does; a split end is open (found 2026-10-05: 18 "settled" sequences carried such gaps).
 k*: per walked step, the shortest asked suffix whose top continuation is the step's glyph, with every asked longer
 suffix agreeing. It is KNOWN when every shorter suffix down to 2 glyphs has been asked; otherwise it is an upper bound.
 CYCLES (METHODOLOGY §3): only where a continue answer MANIFESTS one: the shown context plus what the mind wrote holds a
@@ -202,10 +205,29 @@ def sequences(T):
         fwd, fsteps, fstop = T.walk(list(ctx))
         bwd, bsteps, bstop = T.walk(fwd[::-1])
         g = bwd[::-1]
-        key = tuple(min(g, g[::-1]))
-        if key not in found:
-            found[key] = {"glyphs": g, "start": list(ctx), "stop_left": bstop, "stop_right": fstop,
-                          "steps": fsteps + bsteps}
+        steps = fsteps + bsteps
+        # A sequence is made only of walked links (METHODOLOGY §3). The starting context was SHOWN, not walked, and an
+        # asked context can hold a gap (the triad era asked `⑩ ⑪ ⑬ ⑭` and `㊳ ㊲ ㉒ ㉑`, cut from its own gapped rows).
+        # So split wherever neighbouring glyphs are joined by no walked step in either direction; a split end is open.
+        linked = {frozenset((st["ctx"][-1], st["x"])) for st in steps}
+        def supported(i):
+            """g[i]-g[i+1] is walked, or the tree's longest asked context ending at either one names the other as top"""
+            if frozenset((g[i], g[i + 1])) in linked:
+                return True
+            fc, bc = T.lookup(g[:i + 1]), T.lookup(g[i + 1:][::-1])
+            return bool((fc and T.top(fc) == g[i + 1]) or (bc and T.top(bc) == g[i]))
+        cuts = [i for i in range(len(g) - 1) if not supported(i)]
+        bounds = [0] + [i + 1 for i in cuts] + [len(g)]
+        for a, b in zip(bounds, bounds[1:]):
+            piece = g[a:b]
+            if len(piece) < 2:
+                continue
+            pl = {frozenset(p) for p in zip(piece, piece[1:])}
+            key = tuple(min(piece, piece[::-1]))
+            if key not in found:
+                found[key] = {"glyphs": piece, "start": list(ctx), "stop_left": bstop if a == 0 else "open",
+                              "stop_right": fstop if b == len(g) else "open",
+                              "steps": [st for st in steps if frozenset((st["ctx"][-1], st["x"])) in pl]}
     seqs = sorted(found.values(), key=lambda s: -len(s["glyphs"]))
     def contained(a, b):
         n = len(a)
