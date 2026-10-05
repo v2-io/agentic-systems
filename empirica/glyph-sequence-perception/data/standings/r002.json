@@ -158,8 +158,8 @@
 "score": 0.8525
 },
 {
-"seq": "㊁ ㊂ ㊃ ㊄ ㊅ ㊆ ㊇ ㊈ ㊉",
-"n": 9,
+"seq": "㊁ ㊂ ㊃ ㊄ ㊅ ㊆ ㊇ ㊈",
+"n": 8,
 "U": 0.9700000000000001,
 "coverage": 0.75,
 "per": {
@@ -169,17 +169,44 @@
 },
 "support": 1.0,
 "untested": [],
-"agree": 0.9846678023850085,
+"agree": 0.9965156794425087,
 "weakest": [
-"㊉",
-0.46153846153846156
+"㊃",
+0.9910714285714286
 ],
-"answers": 587,
+"answers": 574,
 "rounds": 1,
 "first": "r002",
 "witnessed": 56,
 "origin": "seeded",
 "sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"seq": "𝋧 𝋨 𝋩 𝋪 𝋫 𝋬 𝋭",
+"n": 7,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.9700000000000001,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"𝋧",
+1.0
+],
+"answers": 435,
+"rounds": 0,
+"first": "r002",
+"witnessed": 35,
+"origin": "seeded",
+"sets_only": [
+"grok"
+],
 "score": 0.8400446416709055
 },
 {
@@ -483,6 +510,33 @@
 "score": 0.8400446416709055
 },
 {
+"seq": "𝋮 𝋯 𝋰",
+"n": 3,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.7857142857142857,
+"weakest": [
+"𝋮",
+0.7857142857142857
+],
+"answers": 14,
+"rounds": 1,
+"first": "r000",
+"witnessed": 1,
+"origin": "seeded",
+"sets_only": [
+"grok"
+],
+"score": 0.8400446416709055
+},
+{
 "seq": "⒗ ⒊ ⒉",
 "n": 3,
 "U": 0.9700000000000001,
@@ -611,8 +665,8 @@
 "score": 0.80625
 },
 {
-"seq": "⚊ ⚋ ⚌ ⚍ ⚎ ⚏",
-"n": 6,
+"seq": "⚌ ⚍ ⚎ ⚏",
+"n": 4,
 "U": 0.8062499999999999,
 "coverage": 1.0,
 "per": {
@@ -623,15 +677,15 @@
 },
 "support": 1.0,
 "untested": [],
-"agree": 0.5231143552311436,
+"agree": 0.7053571428571429,
 "weakest": [
-"⚊",
-0.45685279187817257
+"⚍",
+0.6904761904761905
 ],
-"answers": 411,
+"answers": 112,
 "rounds": 2,
-"first": "r001",
-"witnessed": 5,
+"first": "r000",
+"witnessed": 4,
 "origin": "seeded",
 "sets_only": [],
 "score": 0.8062499999999999
@@ -767,6 +821,31 @@
 "score": 0.7433384715816432
 },
 {
+"seq": "▃ ▄ ▅ ▆ █",
+"n": 5,
+"U": 0.855,
+"coverage": 0.75,
+"per": {
+"claude": 0.935,
+"gemini": 0.6599999999999999,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9186046511627907,
+"weakest": [
+"█",
+0.8
+],
+"answers": 86,
+"rounds": 1,
+"first": "r002",
+"witnessed": 7,
+"origin": "seeded",
+"sets_only": [],
+"score": 0.7404517202356949
+},
+{
 "seq": "Ⅰ Ⅱ Ⅴ Ⅷ Ⅸ Ⅹ Ⅻ",
 "n": 7,
 "U": 0.7375,
@@ -791,6 +870,32 @@
 "origin": "seeded",
 "sets_only": [],
 "score": 0.7375
+},
+{
+"seq": "0 1 4 5 6 8",
+"n": 6,
+"U": 0.73,
+"coverage": 1.0,
+"per": {
+"claude": 0.65,
+"gemini": 0.97,
+"grok": 0.65,
+"muse": 0.65
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.5970149253731343,
+"weakest": [
+"0",
+0.4
+],
+"answers": 134,
+"rounds": 2,
+"first": "r001",
+"witnessed": 6,
+"origin": "seeded",
+"sets_only": [],
+"score": 0.73
 },
 {
 "seq": "⠀ ⠁ ⠃ ⠇ ⠏ ⠟ ⠿ ⡿ ⣿",
@@ -915,6 +1020,32 @@
 0.813953488372093
 ],
 "answers": 57,
+"rounds": 3,
+"first": "r000",
+"witnessed": 4,
+"origin": "seeded",
+"sets_only": [],
+"score": 0.7275
+},
+{
+"seq": "· ∶ ⁝ ⁞",
+"n": 4,
+"U": 0.7275,
+"coverage": 1.0,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.0
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.8301886792452831,
+"weakest": [
+"·",
+0.8292682926829268
+],
+"answers": 53,
 "rounds": 3,
 "first": "r000",
 "witnessed": 4,
@@ -1076,6 +1207,33 @@
 "origin": "seeded",
 "sets_only": [],
 "score": 0.7008333333333333
+},
+{
+"seq": "▂ ▃ ▄ ▅ ▆ ▇",
+"n": 6,
+"U": 0.8083333333333332,
+"coverage": 0.75,
+"per": {
+"claude": 0.485,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9945652173913043,
+"weakest": [
+"▄",
+0.9903846153846154
+],
+"answers": 184,
+"rounds": 1,
+"first": "r002",
+"witnessed": 20,
+"origin": "seeded",
+"sets_only": [
+"grok"
+],
+"score": 0.7000372013924211
 },
 {
 "seq": "꜖ ꜔ ꜒",
@@ -1406,35 +1564,6 @@
 "score": 0.5953924651018015
 },
 {
-"seq": "▂ ▃ ▄ ▅ ▆ ▇ █",
-"n": 7,
-"U": 0.8083333333333332,
-"coverage": 0.75,
-"per": {
-"claude": 0.485,
-"gemini": 0.97,
-"grok": 0.97
-},
-"support": 1.0,
-"untested": [
-"▇█"
-],
-"agree": 0.9672897196261683,
-"weakest": [
-"█",
-0.8
-],
-"answers": 214,
-"rounds": 1,
-"first": "r002",
-"witnessed": 23,
-"origin": "seeded",
-"sets_only": [
-"grok"
-],
-"score": 0.5833643344936843
-},
-{
 "seq": "🯳 🯵 🯸",
 "n": 3,
 "U": 0.66,
@@ -1485,34 +1614,6 @@
 "score": 0.5484827557301445
 },
 {
-"seq": ": · ∶ ⁝ ⁞",
-"n": 5,
-"U": 0.7275,
-"coverage": 1.0,
-"per": {
-"claude": 0.97,
-"gemini": 0.97,
-"grok": 0.97,
-"muse": 0.0
-},
-"support": 1.0,
-"untested": [
-":·"
-],
-"agree": 0.8245614035087719,
-"weakest": [
-":",
-0.75
-],
-"answers": 57,
-"rounds": 3,
-"first": "r000",
-"witnessed": 5,
-"origin": "seeded",
-"sets_only": [],
-"score": 0.545625
-},
-{
 "seq": "' 🕯 🔥 🎆",
 "n": 4,
 "U": 0.7275,
@@ -1541,35 +1642,6 @@
 "grok"
 ],
 "score": 0.545625
-},
-{
-"seq": "0 1 4 5 6 8 𝟵 9",
-"n": 8,
-"U": 0.7566666666666666,
-"coverage": 1.0,
-"per": {
-"claude": 0.7566666666666667,
-"gemini": 0.97,
-"grok": 0.65,
-"muse": 0.65
-},
-"support": 1.0,
-"untested": [
-"8𝟵",
-"𝟵9"
-],
-"agree": 0.625,
-"weakest": [
-"1",
-0.4566929133858268
-],
-"answers": 208,
-"rounds": 2,
-"first": "r001",
-"witnessed": 17,
-"origin": "seeded",
-"sets_only": [],
-"score": 0.5404761904761904
 },
 {
 "seq": "♳ ♴ ♵ ♶ ♷ ♸ ♹",
@@ -1677,36 +1749,6 @@
 "score": 0.5123983639057929
 },
 {
-"seq": "▂ ▁ ▃ ▄ ▅ ▆ █ ▇",
-"n": 8,
-"U": 0.8866666666666665,
-"coverage": 1.0,
-"per": {
-"claude": 0.9466666666666667,
-"gemini": 0.6599999999999999,
-"grok": 0.97,
-"muse": 0.97
-},
-"support": 1.0,
-"untested": [
-"▂▁",
-"▁▃",
-"█▇"
-],
-"agree": 0.9341085271317829,
-"weakest": [
-"▁",
-0.7727272727272727
-],
-"answers": 258,
-"rounds": 1,
-"first": "r002",
-"witnessed": 26,
-"origin": "seeded",
-"sets_only": [],
-"score": 0.5066666666666665
-},
-{
 "seq": "𝅀 𝅁 𝅂",
 "n": 3,
 "U": 0.5777777777777778,
@@ -1730,6 +1772,33 @@
 "origin": "seeded",
 "sets_only": [],
 "score": 0.5003702332976757
+},
+{
+"seq": "ᚑ ᚒ ᚓ ᚔ",
+"n": 4,
+"U": 0.7600000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.575,
+"gemini": 0.735,
+"grok": 0.97
+},
+"support": 0.75,
+"untested": [
+"ᚓᚔ"
+],
+"agree": 0.8095238095238095,
+"weakest": [
+"ᚓ",
+0.7333333333333333
+],
+"answers": 21,
+"rounds": 2,
+"first": "r001",
+"witnessed": 2,
+"origin": "seeded",
+"sets_only": [],
+"score": 0.4936344801571301
 },
 {
 "seq": "¹ 1 ₁",
@@ -1833,34 +1902,6 @@
 "score": 0.425
 },
 {
-"seq": "◌ ○ ◑ ◍ ● ◎",
-"n": 6,
-"U": 0.7029166666666666,
-"coverage": 1.0,
-"per": {
-"claude": 0.7566666666666667,
-"gemini": 0.585,
-"grok": 0.5,
-"muse": 0.97
-},
-"support": 0.75,
-"untested": [
-"◍●"
-],
-"agree": 0.3313253012048193,
-"weakest": [
-"◎",
-0.24299065420560748
-],
-"answers": 166,
-"rounds": 2,
-"first": "r001",
-"witnessed": 2,
-"origin": "seeded",
-"sets_only": [],
-"score": 0.42174999999999996
-},
-{
 "seq": "𐄉 𐄊 𐄏",
 "n": 3,
 "U": 0.48500000000000004,
@@ -1912,32 +1953,6 @@
 "score": 0.41666666666666663
 },
 {
-"seq": "◔=○ ◑=◐ ● ◕",
-"n": 6,
-"U": 0.4083333333333333,
-"coverage": 1.0,
-"per": {
-"claude": 0.6333333333333334,
-"gemini": 0.0,
-"grok": 0.1,
-"muse": 0.9
-},
-"support": 1.0,
-"untested": [],
-"agree": 0.35334476843910806,
-"weakest": [
-"◔",
-0.3006134969325153
-],
-"answers": 583,
-"rounds": 3,
-"first": "r000",
-"witnessed": 8,
-"origin": "seeded",
-"sets_only": [],
-"score": 0.4083333333333333
-},
-{
 "seq": "4 5 6 8 9",
 "n": 5,
 "U": 0.9416666666666668,
@@ -1965,39 +1980,6 @@
 "grok"
 ],
 "score": 0.4077536276151732
-},
-{
-"seq": "𝋢 𝋤 𝋧 𝋨 𝋩 𝋪 𝋫 𝋬 𝋭 𝋮 𝋯 𝋰 𝋳",
-"n": 13,
-"U": 0.60625,
-"coverage": 1.0,
-"per": {
-"claude": 0.9700000000000001,
-"gemini": 0.485,
-"grok": 0.97,
-"muse": 0.0
-},
-"support": 1.0,
-"untested": [
-"𝋢𝋤",
-"𝋤𝋧",
-"𝋭𝋮",
-"𝋰𝋳"
-],
-"agree": 0.9524793388429752,
-"weakest": [
-"𝋤",
-0.38095238095238093
-],
-"answers": 484,
-"rounds": 2,
-"first": "r001",
-"witnessed": 37,
-"origin": "seeded",
-"sets_only": [
-"grok"
-],
-"score": 0.4041666666666667
 },
 {
 "seq": "✩ ✫ ✬ ✭ ✮",
@@ -2104,35 +2086,8 @@
 "score": 0.3897114317029974
 },
 {
-"seq": "ᚐ ᚑ ᚒ ᚓ ᚔ",
-"n": 5,
-"U": 0.7600000000000001,
-"coverage": 0.75,
-"per": {
-"claude": 0.575,
-"gemini": 0.735,
-"grok": 0.97
-},
-"support": 0.75,
-"untested": [
-"ᚐᚑ"
-],
-"agree": 0.7352941176470589,
-"weakest": [
-"ᚐ",
-0.6153846153846154
-],
-"answers": 34,
-"rounds": 1,
-"first": "r002",
-"witnessed": 3,
-"origin": "seeded",
-"sets_only": [],
-"score": 0.3702258601178475
-},
-{
-"seq": "☰ ☵ ☶ ☷",
-"n": 4,
+"seq": "☵ ☶ ☷",
+"n": 3,
 "U": 0.4166666666666667,
 "coverage": 0.75,
 "per": {
@@ -2142,12 +2097,12 @@
 },
 "support": 1.0,
 "untested": [],
-"agree": 0.48148148148148145,
+"agree": 0.5384615384615384,
 "weakest": [
-"☰",
-0.42857142857142855
+"☵",
+0.5384615384615384
 ],
-"answers": 27,
+"answers": 13,
 "rounds": 3,
 "first": "r000",
 "witnessed": 1,
@@ -2232,37 +2187,8 @@
 "score": 0.3375
 },
 {
-"seq": "┉ ┈ ┄ ╌ ─=━",
-"n": 6,
-"U": 0.675,
-"coverage": 1.0,
-"per": {
-"claude": 0.9,
-"gemini": 0.9,
-"grok": 0.9,
-"muse": 0.0
-},
-"support": 0.75,
-"untested": [
-"╌─",
-"╌━"
-],
-"agree": 0.5185185185185185,
-"weakest": [
-"━",
-0.26666666666666666
-],
-"answers": 54,
-"rounds": 2,
-"first": "r001",
-"witnessed": 4,
-"origin": "emergent",
-"sets_only": [],
-"score": 0.30375
-},
-{
-"seq": "● ◕ ◑ ◔ ○ ▪ ◾ ◼ ■",
-"n": 9,
+"seq": "● ◕ ◑ ◔ ○",
+"n": 5,
 "U": 0.95,
 "coverage": 1.0,
 "per": {
@@ -2272,105 +2198,219 @@
 "muse": 0.97
 },
 "support": 0.25,
-"untested": [
-"○▪"
-],
-"agree": 0.8309037900874635,
+"untested": [],
+"agree": 0.8193146417445483,
 "weakest": [
 "◑",
 0.7708333333333334
 ],
-"answers": 343,
-"rounds": 1,
-"first": "r002",
-"witnessed": 13,
-"origin": "emergent",
-"sets_only": [],
-"score": 0.20781249999999998
-},
-{
-"seq": "𝟚 𝟛 𝟜 𝟝 𝟞 𝟟 𝟠 𝟡",
-"n": 8,
-"U": 0.9,
-"coverage": 1.0,
-"per": {
-"claude": 0.9,
-"gemini": 0.9,
-"grok": 0.9,
-"muse": 0.9
-},
-"support": 0.25,
-"untested": [
-"𝟜𝟝"
-],
-"agree": 0.9465648854961832,
-"weakest": [
-"𝟛",
-0.8235294117647058
-],
-"answers": 131,
-"rounds": 1,
-"first": "r002",
-"witnessed": 11,
+"answers": 321,
+"rounds": 3,
+"first": "r000",
+"witnessed": 10,
 "origin": "seeded",
 "sets_only": [],
-"score": 0.19285714285714287
+"score": 0.2375
 },
 {
-"seq": "⚌ ⚍=⚎ ⚏",
+"seq": "⑷ ⑶ ⑵ ⑴",
 "n": 4,
-"U": 0.37625,
-"coverage": 1.0,
+"U": 0.9700000000000001,
+"coverage": 0.75,
 "per": {
-"claude": 0.0,
-"gemini": 0.535,
-"grok": 0.97,
-"muse": 0.0
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
 },
-"support": 0.5,
+"support": 0.25,
 "untested": [],
-"agree": 0.4107142857142857,
+"agree": 1.0,
 "weakest": [
-"⚍",
-0.2976190476190476
+"⑴",
+1.0
 ],
-"answers": 112,
+"answers": 45,
+"rounds": 1,
+"first": "r000",
+"witnessed": 4,
+"origin": "seeded",
+"sets_only": [],
+"score": 0.21001116041772638
+},
+{
+"seq": "▪ ◾ ◼ ■",
+"n": 4,
+"U": 0.93,
+"coverage": 0.75,
+"per": {
+"claude": 0.8500000000000001,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 0.25,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"■",
+1.0
+],
+"answers": 22,
 "rounds": 2,
 "first": "r000",
-"witnessed": 2,
+"witnessed": 3,
 "origin": "seeded",
 "sets_only": [],
-"score": 0.188125
+"score": 0.20135090637988198
 },
 {
-"seq": "㉑ ㉒ ㉓ ㉔ ㉕ ㉖ ㊵ ㊶ ㊷ ㊹ ㊺ ㊻",
-"n": 12,
+"seq": "𝟝 𝟞 𝟟 𝟠 𝟡",
+"n": 5,
 "U": 0.9,
-"coverage": 1.0,
+"coverage": 0.75,
 "per": {
 "claude": 0.9,
 "gemini": 0.9,
-"grok": 0.9,
-"muse": 0.9
+"grok": 0.9
 },
 "support": 0.25,
-"untested": [
-"㉓㉔",
-"㉖㊵",
-"㊷㊹"
+"untested": [],
+"agree": 0.9649122807017544,
+"weakest": [
+"𝟟",
+0.9487179487179487
 ],
-"agree": 0.9636363636363636,
+"answers": 114,
+"rounds": 1,
+"first": "r001",
+"witnessed": 10,
+"origin": "seeded",
+"sets_only": [],
+"score": 0.1948557158514987
+},
+{
+"seq": "𝟚 𝟛 𝟜",
+"n": 3,
+"U": 0.9,
+"coverage": 0.75,
+"per": {
+"claude": 0.9,
+"gemini": 0.9,
+"grok": 0.9
+},
+"support": 0.25,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"𝟚",
+1.0
+],
+"answers": 14,
+"rounds": 2,
+"first": "r000",
+"witnessed": 1,
+"origin": "seeded",
+"sets_only": [],
+"score": 0.1948557158514987
+},
+{
+"seq": "㉑ ㉒ ㉓",
+"n": 3,
+"U": 0.9,
+"coverage": 0.75,
+"per": {
+"claude": 0.9,
+"gemini": 0.9,
+"grok": 0.9
+},
+"support": 0.25,
+"untested": [],
+"agree": 0.9230769230769231,
 "weakest": [
 "㉑",
 0.9230769230769231
 ],
-"answers": 55,
-"rounds": 1,
-"first": "r002",
-"witnessed": 4,
+"answers": 13,
+"rounds": 2,
+"first": "r000",
+"witnessed": 1,
 "origin": "seeded",
 "sets_only": [],
-"score": 0.16363636363636364
+"score": 0.1948557158514987
+},
+{
+"seq": "㉔ ㉕ ㉖",
+"n": 3,
+"U": 0.9,
+"coverage": 0.75,
+"per": {
+"claude": 0.9,
+"gemini": 0.9,
+"grok": 0.9
+},
+"support": 0.25,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"㉔",
+1.0
+],
+"answers": 13,
+"rounds": 2,
+"first": "r000",
+"witnessed": 1,
+"origin": "seeded",
+"sets_only": [],
+"score": 0.1948557158514987
+},
+{
+"seq": "㊵ ㊶ ㊷",
+"n": 3,
+"U": 0.9,
+"coverage": 0.75,
+"per": {
+"claude": 0.9,
+"gemini": 0.9,
+"grok": 0.9
+},
+"support": 0.25,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"㊵",
+1.0
+],
+"answers": 16,
+"rounds": 2,
+"first": "r000",
+"witnessed": 1,
+"origin": "seeded",
+"sets_only": [],
+"score": 0.1948557158514987
+},
+{
+"seq": "㊹ ㊺ ㊻",
+"n": 3,
+"U": 0.9,
+"coverage": 0.75,
+"per": {
+"claude": 0.9,
+"gemini": 0.9,
+"grok": 0.9
+},
+"support": 0.25,
+"untested": [],
+"agree": 0.9230769230769231,
+"weakest": [
+"㊹",
+0.9230769230769231
+],
+"answers": 13,
+"rounds": 2,
+"first": "r000",
+"witnessed": 1,
+"origin": "seeded",
+"sets_only": [],
+"score": 0.1948557158514987
 },
 {
 "seq": "③ ④ ⑤",
@@ -2424,147 +2464,29 @@
 "score": 0.14000744027848422
 },
 {
-"seq": "ₐ ᴀ a A",
-"n": 4,
-"U": 0.16166666666666665,
+"seq": "Ⅽ Ⅾ Ⅿ ↁ ↂ ↇ",
+"n": 6,
+"U": 0.6,
 "coverage": 0.75,
-"per": {
-"claude": 0.485,
-"gemini": 0.0,
-"grok": 0.0
-},
-"support": 1.0,
-"untested": [],
-"agree": 0.53125,
-"weakest": [
-"a",
-0.4166666666666667
-],
-"answers": 32,
-"rounds": 2,
-"first": "r001",
-"witnessed": 2,
-"origin": "seeded",
-"sets_only": [],
-"score": 0.14000744027848422
-},
-{
-"seq": "⑹ ⑸ ⑼ ⑷ ⑶ ⑵ ⑴ 🟥 🟧 ፱ 🟨 🟩 🟦",
-"n": 13,
-"U": 0.9700000000000001,
-"coverage": 0.75,
-"per": {
-"claude": 0.97,
-"gemini": 0.97,
-"grok": 0.97
-},
-"support": 0.25,
-"untested": [
-"⑸⑼",
-"⑼⑷",
-"⑴🟥",
-"🟧፱",
-"፱🟨"
-],
-"agree": 1.0,
-"weakest": [
-"⑴",
-1.0
-],
-"answers": 294,
-"rounds": 1,
-"first": "r002",
-"witnessed": 30,
-"origin": "emergent",
-"sets_only": [],
-"score": 0.1225065102436737
-},
-{
-"seq": "🮂 🮃 ▀ 🮄 🮅 █ 🮆",
-"n": 7,
-"U": 0.6875,
-"coverage": 1.0,
-"per": {
-"claude": 0.5,
-"gemini": 0.45,
-"grok": 0.9,
-"muse": 0.9
-},
-"support": 0.5,
-"untested": [
-"🮃▀",
-"▀🮄",
-"🮄🮅",
-"█🮆"
-],
-"agree": 0.6666666666666666,
-"weakest": [
-"▀",
-0.42857142857142855
-],
-"answers": 42,
-"rounds": 1,
-"first": "r002",
-"witnessed": 2,
-"origin": "seeded",
-"sets_only": [],
-"score": 0.11458333333333334
-},
-{
-"seq": "Ⅽ Ⅾ Ⅿ ↁ ↂ ↇ ⅓ ↈ ⅕ ⅙ ⅐ ⅛ ⅑",
-"n": 13,
-"U": 0.6125,
-"coverage": 1.0,
 "per": {
 "claude": 0.9,
 "gemini": 0.9,
-"grok": 0.65,
 "muse": 0.0
 },
 "support": 0.25,
-"untested": [
-"ↇ⅓",
-"⅓ↈ",
-"ↈ⅕",
-"⅕⅙",
-"⅐⅛",
-"⅛⅑"
-],
-"agree": 0.8793103448275862,
+"untested": [],
+"agree": 0.8823529411764706,
 "weakest": [
-"⅐",
-0.6153846153846154
+"ↇ",
+0.8243243243243243
 ],
-"answers": 290,
+"answers": 136,
 "rounds": 1,
-"first": "r002",
-"witnessed": 37,
-"origin": "emergent",
-"sets_only": [],
-"score": 0.0765625
-},
-{
-"seq": "𝂕 𝂖 𝂗 𝂘",
-"n": 4,
-"U": 0.0,
-"coverage": 0.0,
-"per": {},
-"support": 1.0,
-"untested": [
-"𝂕𝂖"
-],
-"agree": 0.875,
-"weakest": [
-"𝂖",
-0.75
-],
-"answers": 8,
-"rounds": 2,
 "first": "r001",
-"witnessed": 2,
-"origin": "emergent",
+"witnessed": 20,
+"origin": "seeded",
 "sets_only": [],
-"score": 0.0
+"score": 0.12990381056766578
 },
 {
 "seq": "★ ✦ ✹ 🌟",
@@ -2592,47 +2514,20 @@
 "score": 0.0
 },
 {
-"seq": "⊆ } ) ⊂",
+"seq": "┉ ┈ ┄ ╌",
 "n": 4,
 "U": 0.0,
 "coverage": 0.0,
 "per": {},
-"support": 0.25,
-"untested": [
-"⊆}",
-"})",
-")⊂"
-],
-"agree": 0.0,
+"support": 0.75,
+"untested": [],
+"agree": 0.7777777777777778,
 "weakest": [
-"",
-NaN
+"╌",
+0.5
 ],
-"answers": 0,
-"rounds": 1,
-"first": "r002",
-"witnessed": 0,
-"origin": "emergent",
-"sets_only": [],
-"score": 0.0
-},
-{
-"seq": "ᴏ O Ｏ ⭕",
-"n": 4,
-"U": 0.0,
-"coverage": 0.0,
-"per": {},
-"support": 1.0,
-"untested": [
-"Ｏ⭕"
-],
-"agree": 0.9,
-"weakest": [
-"Ｏ",
-0.8
-],
-"answers": 10,
-"rounds": 1,
+"answers": 9,
+"rounds": 0,
 "first": "r002",
 "witnessed": 2,
 "origin": "emergent",
@@ -2661,22 +2556,43 @@ NaN
 "score": 0.0
 },
 {
-"seq": "∧ ⋀=∨",
+"seq": "𝂖 𝂗 𝂘",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 0.75,
+"weakest": [
+"𝂖",
+0.75
+],
+"answers": 4,
+"rounds": 2,
+"first": "r001",
+"witnessed": 1,
+"origin": "emergent",
+"sets_only": [],
+"score": 0.0
+},
+{
+"seq": "🟨 🟩 🟦",
 "n": 3,
 "U": 0.0,
 "coverage": 0.0,
 "per": {},
 "support": 0.25,
 "untested": [],
-"agree": 0.0,
+"agree": 1.0,
 "weakest": [
-"∧",
-0.0
+"🟦",
+1.0
 ],
-"answers": 12,
-"rounds": 1,
+"answers": 10,
+"rounds": 0,
 "first": "r002",
-"witnessed": 0,
+"witnessed": 1,
 "origin": "seeded",
 "sets_only": [],
 "score": 0.0
@@ -2762,6 +2678,27 @@ NaN
 "first": "r002",
 "witnessed": 1,
 "origin": "seeded",
+"sets_only": [],
+"score": 0.0
+},
+{
+"seq": "ᴏ O Ｏ",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 0.8,
+"weakest": [
+"O",
+0.8
+],
+"answers": 5,
+"rounds": 1,
+"first": "r002",
+"witnessed": 1,
+"origin": "emergent",
 "sets_only": [],
 "score": 0.0
 }

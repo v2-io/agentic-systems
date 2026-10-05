@@ -55,3 +55,33 @@ If it holds, it is a real fact about how these minds perceive the glyph: the tok
 
 **Status:** both are fit artifacts, now flagged; the seeds are queued.
 
+---
+
+## 2026-10-04 · The first fix for untested links was partial; the standings now rank only supported pieces
+
+Joseph: *"I thought you said you already fixed that bug?"* He had. Two things still let untested structure into the ranked list:
+
+- **The discount was proportional.** #59 had one untested link out of four, so it kept 75% of its score and stayed ranked.
+- **The support fix applies only to new fits.** STANDINGS.md was still built from the r002 fit.
+
+**The rule now** (`harness/seq/standings.py`):
+
+- Every candidate is **split at its unsupported links** before ranking. A link is supported only when some triple inside the candidate holding both of its glyphs was answered in the candidate's order by at least two answers and a majority.
+- A tie inside a step needs the same support, from tie answers. Otherwise the tie is cut out on its own.
+- Only supported pieces of three or more glyphs are ranked.
+- The splits are listed under the table as open questions for the queue.
+
+At r003, 21 of 147 candidates were split. Among them:
+
+- `· : ∶ ⁝ ⁞` became `·` | `:` | `∶ ⁝ ⁞`;
+- the Roman-and-fraction chain lost its unwitnessed cross-family ties `Ⅿ=⅙` and `⅓=ↂ`.
+
+**What survived as a real tie: `9=𝟵`** (plain nine and MATHEMATICAL SANS-SERIF BOLD DIGIT NINE). This bears on Joseph's digit-dress question.
+
+- **In order items:** shown with other digits, Gemini Flash, Grok, Opus and Sonnet placed `9` and `𝟵` at the same step, as tie answers in their own order lines, for each of the digits 0, 1, 4, 5, 6 and 8 shown beside them.
+- **In a triad beside an unrelated glyph** (Ethiopic `ላ`): every mind answered "only `9` and `𝟵` go together".
+- **Haiku** mostly answered ⟂ or "two" instead.
+- **Reading:** a dress of the same digit read as the same step, by four of the five frontier minds. This is anecdote tier: one digit, one dress, one round's sets.
+
+**Status:** the fix is in place. The `9=𝟵` tie is a candidate observation for the digit-dress lattice seed to extend.
+
