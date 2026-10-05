@@ -28,7 +28,10 @@ def _empty_dir(name):
     return d
 
 # ---------------------------------------------------------------- Claude (claude -p)
-def claude_call(model, system, prompt, effort="low", timeout=300):
+def claude_call(model, system, prompt, effort="low", timeout=300, max_thinking_tokens=None):
+    """max_thinking_tokens: the thinking budget, set explicitly (MAX_THINKING_TOKENS). Unset, the judge inherits whatever
+    the launching shell exports -- Joseph's exports 31000, found 2026-10-05. 0 turns thinking off for claude-haiku-4-5
+    (0 thinking tokens); claude-sonnet-5-5 still thinks ~600 tokens a sheet with it (spikes/thinking-felt-2026-10-05)."""
     cmd = ["claude", "-p", "--model", model, "--tools", "", "--strict-mcp-config",
            "--mcp-config", '{"mcpServers":{}}', "--no-session-persistence",
            "--setting-sources", "", "--system-prompt", system, "--output-format", "json"]
@@ -38,7 +41,8 @@ def claude_call(model, system, prompt, effort="low", timeout=300):
     t0 = time.time()
     try:
         p = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout,
-                           cwd=_empty_dir("claude-cwd"), env=_clean_env(), stdin=subprocess.DEVNULL)
+                           cwd=_empty_dir("claude-cwd"), stdin=subprocess.DEVNULL,
+                           env=_clean_env(None if max_thinking_tokens is None else {"MAX_THINKING_TOKENS": str(max_thinking_tokens)}))
     except subprocess.TimeoutExpired:
         return dict(raw=None, model_reported=None, usage={}, cost_usd=None,
                     latency_s=time.time() - t0, error="timeout", adapter_meta={})
