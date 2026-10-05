@@ -217,7 +217,7 @@ def piece_table(cur, snap, fam, min_evid=3):
                     per[f] = sum(max(cs["s"][m]["s3"], cs["s"][m]["s4"]) for m in ms) / len(ms)
             U = sum(per.values()) / len(per) if per else 0.0
             stab = sup * U * math.sqrt(len(per) / max(1, len(fams)))
-            out.append({"steps": steps, "glyphs": g, "stability": stab, "families": len(per)})
+            out.append({"steps": steps, "glyphs": g, "stability": stab, "families": len(per), "U": U, "support": sup})
     return sorted(out, key=lambda x: -x["stability"])
 
 def end_state(piece, side, parsed, pres, items):

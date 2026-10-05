@@ -10,7 +10,7 @@ Triads: agreement with the written order (direction-free), per mind.
 
 | mind | triads | answers | agree | ⟂ | two | other order | 3/3 same | most left out |
 |---|---|---|---|---|---|---|---|---|
-| gemini31pro | 42 | 98 | 0.63 | 0.10 | 0.27 | 0.00 | 0.87 (23) | `▁` 0.48 |
+| gemini31pro | 56 | 168 | 0.64 | 0.10 | 0.26 | 0.00 | 0.70 (56) | `▁` 0.51 |
 | gemini38flash | 56 | 168 | 0.64 | 0.02 | 0.32 | 0.02 | 0.84 (56) | `▁` 0.81 |
 | grok46 | 56 | 168 | 0.77 | 0.05 | 0.18 | 0.00 | 0.71 (56) | `█` 0.14 |
 | haiku45 | 56 | 168 | 0.81 | 0.15 | 0.04 | 0.00 | 0.61 (56) | `█` 0.03 |
@@ -21,16 +21,34 @@ Agreement per adjacent link of the written order: triads holding both glyphs of 
 
 | link | gemini31pro | gemini38flash | grok46 | haiku45 | opus55 | sonnet55 |
 |---|---|---|---|---|---|---|
-| `▁▂` | 2/15 | 0/18 | 13/18 | 14/18 | 15/18 | 15/18 |
-| `▂▃` | 6/9 | 13/18 | 13/18 | 8/18 | 15/18 | 17/18 |
-| `▃▄` | 5/7 | 14/18 | 15/18 | 12/18 | 17/18 | 17/18 |
-| `▄▅` | 2/2 | 15/18 | 14/18 | 18/18 | 18/18 | 18/18 |
-| `▅▆` | 13/16 | 15/18 | 11/18 | 15/18 | 15/18 | 14/18 |
-| `▆▇` | 10/10 | 16/18 | 16/18 | 15/18 | 17/18 | 16/18 |
-| `▇█` | 11/13 | 18/18 | 12/18 | 16/18 | 16/18 | 17/18 |
+| `▁▂` | 3/18 | 0/18 | 13/18 | 14/18 | 15/18 | 15/18 |
+| `▂▃` | 13/18 | 13/18 | 13/18 | 8/18 | 15/18 | 17/18 |
+| `▃▄` | 14/18 | 14/18 | 15/18 | 12/18 | 17/18 | 17/18 |
+| `▄▅` | 13/18 | 15/18 | 14/18 | 18/18 | 18/18 | 18/18 |
+| `▅▆` | 14/18 | 15/18 | 11/18 | 15/18 | 15/18 | 14/18 |
+| `▆▇` | 16/18 | 16/18 | 16/18 | 15/18 | 17/18 | 16/18 |
+| `▇█` | 15/18 | 18/18 | 12/18 | 16/18 | 16/18 | 17/18 |
 
 Order items: every answer (sequence lines; extra).
 
+- gemini31pro: shown `▅▂▁▄▆▇▃` → ▂ ▃ ▄ ▅ ▆ ▇  · extra: ▁
+- gemini31pro: shown `▂▁▆▃` → ▂ ▃ ▆  · extra: ▁
+- gemini31pro: shown `█▆▄▁▃▂▅` → ▁ ▂ ▃ ▄ ▅ ▆ … █
+- gemini31pro: shown `▄▆▁▅▇` → ▁ … ▄ ▅ ▆ ▇
+- gemini31pro: shown `▆▂█▁▇` → ▂ ▆ ▇ █  · extra: ▁
+- gemini31pro: shown `▁▅▃▇█` → ▁ ▃ ▅ ▇  · extra: █
+- gemini31pro: shown `█▄▆▃▁▂▅` → ▁ ▂ ▃ ▄ ▅ ▆ … █
+- gemini31pro: shown `█▇▆▃▂▁▄▅` → ▁ ▂ ▃ ▄ ▅ ▆ ▇ █
+- gemini31pro: shown `▃▁▇▅█` → ▁ ▃ ▅ ▇  · extra: █
+- gemini31pro: shown `▂▇▅▆▁▃▄` → ▂ ▃ ▄ ▅ ▆ ▇  · extra: ▁
+- gemini31pro: shown `▂▆▁▇█` → ▂ ▆ ▇ █  · extra: ▁
+- gemini31pro: shown `▄▂▆█` → ▂ ▄ ▆ █
+- gemini31pro: shown `▂▄▅▃` → ▂ ▃ ▄ ▅
+- gemini31pro: shown `█▂▅▄▁▃▇▆` → ▁ ▂ ▃ ▄ ▅ ▆ ▇ █
+- gemini31pro: shown `▄▂▃▅` → ▂ ▃ ▄ ▅
+- gemini31pro: shown `▇▆▁▄▅` → ▁ … ▄ ▅ ▆ ▇
+- gemini31pro: shown `▆▃▂▁` → ▂ ▃ ▆  · extra: ▁
+- gemini31pro: shown `▂▄█▆` → ▂ ▄ ▆ █
 - gemini38flash: shown `▅▂▁▄▆▇▃` → ▂ ▃ ▄ ▅ ▆ ▇  · extra: ▁
 - gemini38flash: shown `▂▁▆▃` → ▂ ▃ ▆  · extra: ▁
 - gemini38flash: shown `█▆▄▁▃▂▅` → ▂ ▃ ▄ ▅ ▆ … █  · extra: ▁
@@ -128,7 +146,7 @@ Triads (no reference order), per mind.
 
 | mind | triads | answers | ordered | ⟂ | two | 3/3 same | most left out |
 |---|---|---|---|---|---|---|---|
-| gemini31pro | 7 | 16 | 0.44 | 0.44 | 0.12 | 0.50 (4) | `▁` 0.10 |
+| gemini31pro | 9 | 27 | 0.44 | 0.37 | 0.19 | 0.56 (9) | `▁` 0.27 |
 | gemini38flash | 9 | 27 | 0.41 | 0.37 | 0.22 | 0.56 (9) | `▁` 0.33 |
 | grok46 | 9 | 27 | 0.41 | 0.00 | 0.59 | 0.44 (9) | `‗` 0.39 |
 | haiku45 | 9 | 27 | 0.37 | 0.37 | 0.26 | 0.11 (9) | `‗` 0.22 |
@@ -137,6 +155,18 @@ Triads (no reference order), per mind.
 
 Order items: every answer (sequence lines; extra).
 
+- gemini31pro: shown `▁_▂▃` → _ ▂ ▃  · extra: ▁
+- gemini31pro: shown `▁▂_‗▃` → _ ‗ ▂ ▃  · extra: ▁
+- gemini31pro: shown `‗▃▂_` → _ ‗ ▂ ▃
+- gemini31pro: shown `_▂‗▁` → ⟂
+- gemini31pro: shown `▁‗▃_` → ⟂
+- gemini31pro: shown `▁_▃▂‗` → _ ‗ ▂ ▃  · extra: ▁
+- gemini31pro: shown `▁▃▂‗` → ▁ ▂ ▃  · extra: ‗
+- gemini31pro: shown `_‗▁▃` → ⟂
+- gemini31pro: shown `‗_▁▂` → ⟂
+- gemini31pro: shown `_‗▃▂` → _ ‗ ▂ ▃
+- gemini31pro: shown `▃▁▂_` → _ ▂ ▃  · extra: ▁
+- gemini31pro: shown `‗▂▃▁` → ▁ ▂ ▃  · extra: ‗
 - gemini38flash: shown `▁_▂▃` → _ ▂ ▃  · extra: ▁
 - gemini38flash: shown `▁▂_‗▃` → _ ▂ ▃  · extra: ▁‗
 - gemini38flash: shown `‗▃▂_` → _ ▂ ▃  · extra: ‗
@@ -204,7 +234,7 @@ Triads (no reference order), per mind.
 
 | mind | triads | answers | ordered | ⟂ | two | 3/3 same | most left out |
 |---|---|---|---|---|---|---|---|
-| gemini31pro | 7 | 16 | 0.00 | 0.38 | 0.56 | 1.00 (4) | `ĉ` 0.33 |
+| gemini31pro | 10 | 30 | 0.00 | 0.20 | 0.67 | 0.80 (10) | `ĉ` 0.44 |
 | gemini38flash | 10 | 30 | 0.23 | 0.03 | 0.70 | 0.80 (10) | `ĉ` 0.39 |
 | grok46 | 10 | 30 | 0.13 | 0.03 | 0.73 | 0.90 (10) | `ĉ` 0.56 |
 | haiku45 | 10 | 30 | 0.23 | 0.47 | 0.30 | 0.70 (10) | `Ċ` 0.17 |
@@ -213,6 +243,16 @@ Triads (no reference order), per mind.
 
 Order items: every answer (sequence lines; extra).
 
+- gemini31pro: shown `ĠGĉg` → ⟂
+- gemini31pro: shown `ĊĠGĉ` → ⟂
+- gemini31pro: shown `ĠgGĊ` → ⟂
+- gemini31pro: shown `ĠGgĊĉ` → ⟂
+- gemini31pro: shown `GĊĉĠ` → ⟂
+- gemini31pro: shown `gGĠĊĉ` → ⟂
+- gemini31pro: shown `GgĠĉ` → ⟂
+- gemini31pro: shown `gĊĉĠ` → ⟂
+- gemini31pro: shown `ĠĊgĉ` → ⟂
+- gemini31pro: shown `gĊĠG` → ⟂
 - gemini38flash: shown `ĠGĉg` → ⟂
 - gemini38flash: shown `ĊĠGĉ` → Ċ ĉ  · extra: ĠG
 - gemini38flash: shown `ĠgGĊ` → ⟂
