@@ -98,6 +98,15 @@ Three things can't be seen in triads, and each is why longer chains matter.
 - **Distinct minima** come from restarts and a tabu on minima already found. They are kept as alternative explanations; the drain's several linearizations are the case in point.
 - **Running at T > 0** gives *posterior samples* of Σ. The spread across samples is the uncertainty that drives the next round's queue.
 
+**Three constraints the validation and the first real rounds showed are necessary.** Each fixes a way the fit could explain the answers with structure nobody perceived:
+
+1. **A sequence claim must be witnessed as one piece.** Triples answered in the candidate's order at least twice, and by at least half of their answers, are linked when they share two glyphs. Every separately witnessed piece beyond one costs heavily.
+   - *Why:* interleaving two sequences preserves every within-sequence relation, so the likelihood alone cannot object. A splice through a single bridge glyph also breaks the chain.
+   - *Where seen:* the first synthetic run, and real r000.
+   - *How strict:* a tie is witnessed only by tie answers. Ties across families had served as a loophole.
+2. **A mind perceives a triple through a sequence:** perception of a triple is the maximum over the candidates holding it, not a compounding of them. Otherwise overlapping or restated candidates raise the likelihood (seen on real r001).
+3. **Structure first, noise second.** Each mind's nuisance parameters are held at their defaults for the first half of each anneal, under a mild prior against a mind being mostly noise. Otherwise an empty model settles into "every answer is noise" (seen on real r000).
+
 **Universality** is then read directly from the fit: σ is universal to the degree that s(m, σ) is high across families. The same fit reports, per link, which families see it.
 
 ## 3. The item kinds
