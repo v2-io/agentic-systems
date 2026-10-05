@@ -4,7 +4,7 @@ Item kinds
   triad    3 glyphs. Presentations are a Latin rotation: rep r shows the fated base order rotated by r, so each
            glyph sits in the middle slot exactly once over reps 0,1,2; the leading end of each is a fated coin.
   order    4-8 glyphs. Each rep is an independent fated shuffle.
-  next     an ordered context (2-5 glyphs) ending at the glyph whose successor is asked for.
+  next     an ordered context (2-8 glyphs; up to 5 before 2026-10-05) ending at the glyph whose successor is asked for.
   between  left context + right context around a gap.
 
 Sheet-level random parameters (PLAN.md §3 table): perp_offered 0.9 (else forced), tie_offered 0.5,
@@ -29,7 +29,7 @@ def make_item(kind, glyphs=None, context=None, left=None, right=None, source=Non
         key = {"kind": kind, "glyphs": g}
         it = {"kind": kind, "glyphs": g}
     elif kind == "next":
-        c = list(context); assert 2 <= len(c) <= 5 and len(set(c)) == len(c) and all(ok_glyph(x) for x in c), c
+        c = list(context); assert 2 <= len(c) <= 8 and len(set(c)) == len(c) and all(ok_glyph(x) for x in c), c
         key = {"kind": kind, "context": c}
         it = {"kind": kind, "context": c, "glyphs": sorted(set(c))}
     elif kind == "between":

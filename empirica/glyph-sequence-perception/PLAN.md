@@ -131,6 +131,13 @@ It is implemented as stated, in two parts (`harness/seq/squeue.py`, `round.cmd_p
 - **Cycles:** a cycle closes when answers put the first glyph beyond the last (four or more glyphs, both wrap triples answered). It is clamped there.
 - **Same growth, earlier stage:** a row whose glyphs all lie in a longer row, in the same order, is that longer row.
 
+**Higher order: windows** (`harness/seq/windows.py`, since 2026-10-05). Joseph: *"many sequences don't really make sense until* more *than three glyphs in it are shown … which branch is chosen is almost certainly dependent on some n-gram of prior characters rather than a set of triads … We need to up our dimensions."* A window is a run of 4–8 consecutive glyphs of a row, judged as a whole by two kinds of answers that until then had been cut down to triples:
+
+- an **order answer** whose set contains the window gives it when the window's glyphs sit in one line in the window's order (either direction; on a cycle, up to rotation, since an answer is a line and has to start somewhere), and is against it otherwise (split across lines, set aside, out of order). Ties inside a window are neutral;
+- a **what-comes-next answer** whose context is the window minus its last glyph gives it when it proposes that glyph, and is against it otherwise.
+
+Growth takes a placement only where no window around it is answered against more often than for, so the preceding glyphs decide which branch continues a row; the other branch still grows into its own row. The rank is multiplied by the share of window answers that agree. Each served row asks up to three of its unasked windows as order items (tier 2), and what-comes-next contexts run 3–8 glyphs (they were 3–5). Through r011 the data already held 6,224 order answers and 3,791 next answers with three or more glyphs of context.
+
 Support is the number of answers and families behind each step, shown per row. It orders the planner's work and never removes a row. Steps that no answer has given yet, which insertion can create, are asked next (tier 2 below). The minds' proposals (what comes next, what goes between) decide what gets asked, and are listed at each end of a row until an answer tests them.
 
 This replaced, the same night, a chaining view (`evidence_view.py`, now in git history). Its two-answer witness rule, transitive reduction, folding and fork rules discarded single answers and stalled growth. The likelihood fit no longer feeds the planner at all: its guesses had been asked in a link tier, and its cold chains start from seeds, so they were another channel for seed order. It still runs after each round, for its per-mind nuisance estimates.
@@ -334,7 +341,8 @@ Joseph, 2026-10-04: *"I'm so sick of rules invented for no reason."* Every numbe
 | seed-local vs whole-space exploration sets | 1 : 1 | `squeue.explore_items` | mine |
 | seed bump | 2 (domain seeds), 1.5 (survey records) | `data/seeds/*`, `round.survey_seeds` | mine |
 | kernel-confirming follow-ups / between-proposal tests | ≤ ⅓ / ≤ ½ of the exploration share | `round.cmd_plan` | mine |
-| what-comes-next context length | 3–5 glyphs | `squeue.extension_items` | the pilot found continuation reliable from about 4 |
+| what-comes-next context length | 3–8 glyphs (3–5 until 2026-10-05) | `squeue.extension_items`, `squeue.unasked_next` | the pilot found continuation reliable from about 4; longer contexts carry the n-gram that decides branches (Joseph, 2026-10-05) |
+| window sizes judged whole | 4–8 glyphs; up to 3 unasked windows asked per served row | `windows.py`, `squeue.sequence_work` | 8 is the order item's maximum; the count is mine |
 | an end closes after | ≥ 6 answers, ≥ 70% of them "none", every proposal tested | `squeue.END_*` | mine |
 | order items per presentation set | 2 shuffles | `round.cmd_plan` | the pilot (gestalt) |
 | sheet size | 1–5 presentations | `items.MAX_SHEET` | Joseph |

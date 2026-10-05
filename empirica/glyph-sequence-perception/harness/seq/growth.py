@@ -32,6 +32,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from common import EXP
 import model as M
 import round as RD
+import windows as W
 
 def tallies(obs, fam):
     """triple -> Counter(outcome -> answers); outcome is ('mid', g), ('none',) or ('two', x, y).
@@ -81,20 +82,43 @@ def build(obs, parsed, pres, fam):
         return cnt.get(tuple(sorted((a, m, b))), {}).get(("mid", m), 0)
     def pairk(u, v):
         return (u, v) if u <= v else (v, u)
+    ix = W.index(parsed, pres, fam)
+    memo = {}
+    def tally(win, cyc=False):
+        key = (tuple(min(win, win[::-1])), cyc)
+        if key not in memo:
+            memo[key] = W.window_tally(list(key[0]), ix, cyc)
+        return memo[key]
+    def windows_allow(seq, at, cyc):
+        """Higher-order check on placing seq[at]: no window of 4-8 consecutive glyphs containing it that the minds,
+        seeing it whole (order answers, what-comes-next contexts), answered against more often than for."""
+        n = len(seq)
+        ring = seq + seq[:7] if cyc else seq
+        for k in range(4, min(8, n) + 1):
+            for i in range(max(0, at - k + 1), (at + 1) if cyc else min(at, n - k) + 1):
+                win = ring[i:i + k]
+                if len(win) < k:
+                    continue
+                gv, ag, _ = tally(win, cyc)
+                if ag > gv:
+                    return False
+        return True
     def grow(s):
         """Place, one at a time and best-supported first, every glyph some answer puts beyond an end or between two
-        neighbours; close a cycle when answers put the first glyph beyond the last (>= 4 glyphs)."""
+        neighbours; close a cycle when answers put the first glyph beyond the last (>= 4 glyphs). A placement is taken
+        only if no longer window containing it was answered against more than for (the n-gram context decides which
+        branch continues the row; the other kernel still grows into its own row)."""
         cyc = False
         while True:
-            best = None
+            cands = []
             ins = set(s)
             pairs = list(zip(s, s[1:])) + ([(s[-1], s[0])] if cyc else [])
             for i, (u, v) in enumerate(pairs):            # between u and v
                 for x in third.get(pairk(u, v), ()):
                     if x not in ins:
                         k = mid(u, x, v)
-                        if k and (best is None or (k, x) > best[0]):
-                            best = ((k, x), "in", i, x)
+                        if k:
+                            cands.append(((k, x), "in", i, x))
             if not cyc:
                 for side in ("R", "L"):
                     p, q = (s[-2], s[-1]) if side == "R" else (s[1], s[0])
@@ -103,19 +127,24 @@ def build(obs, parsed, pres, fam):
                             k = mid(p, q, x)
                             if k and x in ins:      # closing: the wrap triple must be answered too
                                 k = min(k, mid(q, x, s[1] if side == "R" else s[-2]))
-                            if k and (best is None or (k, x) > best[0]):
-                                best = ((k, x), side, None, x)
-            if best is None:
+                            if k:
+                                cands.append(((k, x), side, None, x))
+            cands.sort(key=lambda c: c[0], reverse=True)
+            nxt = None
+            for _, how, i, x in cands:
+                if how == "in":
+                    t = s[:i + 1] + [x] + s[i + 1:]; at = i + 1; c2 = cyc
+                elif x in s:
+                    t = s; at = 0 if how == "R" else len(s) - 1; c2 = True
+                elif how == "R":
+                    t = s + [x]; at = len(t) - 1; c2 = False
+                else:
+                    t = [x] + s; at = 0; c2 = False
+                if windows_allow(t, at, c2):
+                    nxt = (t, c2); break
+            if nxt is None:
                 return s, cyc
-            _, how, i, x = best
-            if how == "in":
-                s = s[:i + 1] + [x] + s[i + 1:]
-            elif x in s:
-                cyc = True
-            elif how == "R":
-                s = s + [x]
-            else:
-                s = [x] + s
+            s, cyc = nxt
     found, seen = [], set()
     for t, c in sorted(cnt.items()):
         for out in sorted(c):
@@ -194,6 +223,14 @@ def build(obs, parsed, pres, fam):
             if st["answers"] + st["other"] and fa:
                 scored.append(len(set(st["families"]) & fa) / len(fa) * st["answers"] / (st["answers"] + st["other"]))
         s["stability"] = sum(scored) / len(scored) if scored else 0.0
+        # higher order: windows of 4-8 glyphs judged whole. The rank is scaled by their agreement where asked.
+        ws = W.row_windows(g, s["cyclic"], ix)
+        gv = sum(w[3] for w in ws); ag = sum(w[4] for w in ws)
+        s["window_agreement"] = gv / (gv + ag) if gv + ag else None
+        if gv + ag:
+            s["stability"] *= gv / (gv + ag)
+        sm = W.summarize_ws(ws)
+        s["windows"] = sm
         s["weakest"] = min(st["answers"] for st in steps)
         s["answers"] = sum(st["answers"] for st in steps)
         s["proposed"] = {}
@@ -268,7 +305,9 @@ def piece_table(obs, parsed, pres, fam):
     seqs, fams, live = build(obs, parsed, pres, fam)
     return [{"steps": [[x] for x in s["glyphs"]], "glyphs": s["glyphs"], "cyclic": s["cyclic"], "stability": s["stability"],
              "U": s["stability"], "families": sum(bool(v) for v in s["family_share"].values()), "support": 1.0,
-             "hints": [], "forks": [], "untested": [st["triple"] for st in s["steps"] if st["answers"] == 0]} for s in seqs]
+             "hints": [], "forks": [], "untested": [st["triple"] for st in s["steps"] if st["answers"] == 0],
+             "unasked_windows": [((s["glyphs"] + s["glyphs"][:7]) if s["cyclic"] else s["glyphs"])[i:i + k]
+                                 for i, k in s["windows"]["unasked"]]} for s in seqs]
 
 def bucket(n):
     return "3" if n == 3 else "4–5" if n <= 5 else "6–7" if n <= 7 else "8–9" if n <= 9 else "10+"
@@ -294,18 +333,21 @@ def main():
          "**How to read a row.** A row is a sequence; a **step** is three consecutive glyphs `p q r`, and a mind *gave* the step when it answered that `q` lies between `p` and `r`. Example: `0 1 2 3` has two steps, `0 1 2` and `1 2 3`.", "",
          "- **rank**: what the rows are sorted by (and the order the planner works in). It measures consensus only where there is evidence: for each step some mind has answered, (families that gave it ÷ families that answered that triad, among those still being asked: " + ", ".join(live) + ") × (answers that gave it ÷ all answers to that triad), averaged over those steps. 1.00 = every family that answered gave every step and no answer disagreed. Steps nobody has answered yet don't lower it (see **answered**).",
          "- **family columns** (" + ", ".join(fams) + "): of the row's steps that family's minds answered, the share they gave. 1.00 = it gave every step it was asked; 0.50 = half; 0.00 = it was asked some and gave none; **–** = no mind of that family has answered any of the row's triads. So a value below 1.00 is disagreement, not missing coverage. " + ("" if set(fams) == set(live) else "Families not being asked any more (" + ", ".join(f for f in fams if f not in live) + ": " + ", ".join(m for m, f_ in fam.items() if f_ not in live) + ", paused) show – on rows found since."),
+         "- **windows**: higher-order evidence, runs of 4–8 consecutive glyphs judged as a whole (a mind ordering exactly those glyphs, shown shuffled, or proposing the next glyph after the run's first ones). Shown as *whole/asked of all*: windows answered more often in the row's order than not / windows any answer bears on / all windows of the row. ✗ marks the shortest window answered against more than for (given:against), where a false join sits. The rank is multiplied by the share of window answers that agree, and growth takes a step only where no window around it is answered against more than for: which branch continues a row is decided by the preceding glyphs, not by a triad alone.",
          "- **n**: glyphs in the row. **answered**: steps some mind has answered, of all the row's steps (coverage). **weakest**: the fewest answers that gave any one step (0 = a step no answer has given yet; the planner asks it). **against**: other answers to the row's triads (a different middle, “only two go together”, or ⟂).",
          "- **shared**: glyphs that also sit in other rows (branch points). **proposed beyond**: glyphs minds proposed next to an end that no answer has tested yet, per end (`end→proposals`, up to six). **proposed inside**: the same at glyphs inside the row, every glyph of a cycle: possible branches (`glyph→proposals`, up to four).", "",
-         "| # | sequence | n | answered | rank | " + " | ".join(fams) + " | weakest | against | shared | proposed beyond | proposed inside |",
-         "|---|---|---|---|---|" + "---|" * len(fams) + "---|---|---|---|---|"]
+         "| # | sequence | n | answered | windows | rank | " + " | ".join(fams) + " | weakest | against | shared | proposed beyond | proposed inside |",
+         "|---|---|---|---|---|---|" + "---|" * len(fams) + "---|---|---|---|---|"]
     for i, s in enumerate(seqs[:a.top], 1):
         shown = " ".join(s["glyphs"]) + (" ↻" if s["cyclic"] else "")
         # line breaks for rendering (Joseph, 2026-10-05): shared every 6 glyphs, proposals after each ';'
         prop = ";<br>".join(f"{q}→{''.join(xs[:6])}" for q, xs in s["proposed"].items() if xs)
         inside = ";<br>".join(f"{q}→{''.join(xs[:4])}" for q, xs in s["proposed_inside"].items())
         sh = [x for x in s["glyphs"] if owners[x] >= 2]
+        w_ = s["windows"]
+        wcell = f"{w_['whole']}/{w_['asked']} of {w_['windows']}" + (f"<br>✗ {w_['breaks'][0]}" if w_["breaks"] else "")
         shared = "<br> ".join("".join(sh[k:k + 6]) for k in range(0, len(sh), 6))
-        L.append(f"| {i} | `{shown}` | {len(s['glyphs'])} | {s['answered_steps']}/{len(s['steps'])} | {s['stability']:.2f} | " + " | ".join("–" if s['family_share'][f] is None else f"{s['family_share'][f]:.2f}" for f in fams)
+        L.append(f"| {i} | `{shown}` | {len(s['glyphs'])} | {s['answered_steps']}/{len(s['steps'])} | {wcell} | {s['stability']:.2f} | " + " | ".join("–" if s['family_share'][f] is None else f"{s['family_share'][f]:.2f}" for f in fams)
                  + f" | {s['weakest']} | {sum(x['other'] for x in s['steps'])} | {shared} | {prop} | {inside} |")
     if len(seqs) > a.top:
         L += ["", f"*{len(seqs) - a.top} more rows (lower stability) in `data/growth/{rid}.json`.*"]

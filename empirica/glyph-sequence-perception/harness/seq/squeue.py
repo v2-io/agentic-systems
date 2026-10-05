@@ -119,7 +119,7 @@ def extension_items(piece, st, neighbours, round_id):
     src = {"kind": "extend", "ref": "".join(piece["glyphs"]), "end": b}
     r = R("extend", {"round": round_id, "piece": piece["glyphs"], "end": b})
     out = []
-    k = min(len(g), r.randint(3, 5))
+    k = min(len(g), r.randint(3, 8))
     out.append((I.make_item("next", context=g[-k:], source=src), piece["stability"] + 0.3))
     # candidates beyond this end, in order: what minds proposed here; what minds placed with the end in their answers.
     # Seeds supply none (2026-10-04: seed-written continuations were tested here and could move an end -- Joseph: "a
@@ -282,7 +282,7 @@ def unasked_next(piece, asked_next, round_id):
         for j in range(2, len(ring) + 1):
             if (ring[j - 2], ring[j - 1]) in asked_next or (piece.get("cyclic") and j - 1 >= n + 1):
                 continue
-            k = min(j, r.randint(3, 5)); ctx = ring[j - k:j]
+            k = min(j, r.randint(3, 8)); ctx = ring[j - k:j]
             if len(set(ctx)) == len(ctx) and not (j == len(ring) and not piece.get("cyclic")):
                 out.append(I.make_item("next", context=ctx, source={"kind": "extend", "how": "unasked", "ref": "".join(g), "at": ctx[-1]}))
     return out
@@ -299,7 +299,7 @@ def unasked_next(piece, asked_next, round_id):
 #   the rest: ONE ordered list. Sequences most stable first; within each sequence, its work in this order:
 #       1 open ends: what-comes-next question at each end, then the best untested candidate beyond each end; then a
 #         what-comes-next at every other glyph, each direction, where it has never been asked
-#       2 its steps no answer has given yet
+#       2 up to three of its unasked windows (4-8 glyphs, as order items), its steps no answer has given yet
 #       3 rotation follow-ups of its triads
 #       4 the remaining candidates beyond its ends
 #       5 one squaring window (order item) and one long-range check, if long
@@ -324,6 +324,20 @@ def sequence_work(pc, ends, cooc, follow_by_glyph, round_id, asked_next=None):
         tri_extra += tr[1:] + orw
     g = set(pc["glyphs"])
     work += [(1, it) for it in unasked_next(pc, asked_next or set(), round_id)]
+    # windows of 4-8 consecutive glyphs no answer bears on, as order items (the minds see them whole): longest first,
+    # spread along the row, up to three -- they are what separates a real sequence from a chain of locally-good triads
+    wins = sorted(pc.get("unasked_windows", []), key=lambda w: -len(w))
+    taken = []
+    for w in wins:
+        if len(taken) >= 3:
+            break
+        if any(len(set(w) & set(u)) > len(w) // 2 for u in taken):
+            continue
+        try:
+            work.append((2, I.make_item("order", list(w), source={"kind": "window", "ref": "".join(pc["glyphs"])})))
+            taken.append(w)
+        except AssertionError:
+            pass
     for t in pc.get("untested", []):          # consecutive triples of the sequence no answer has given yet
         try:
             work.append((2, I.make_item("triad", list(t), source={"kind": "step", "ref": "".join(pc["glyphs"])})))
