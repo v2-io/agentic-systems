@@ -142,5 +142,23 @@
 "b6–7": 28,
 "b8–9": 17,
 "b10+": 8
+},
+{
+"round": "r007",
+"scheme": "single-priority",
+"calls": 1028,
+"sequences": 875,
+"longest": 28,
+"glyphs": 5929,
+"stable": 212,
+"stable_glyphs": 959,
+"stable_longest": 15,
+"cycles": 50,
+"untested": 791,
+"b3": 104,
+"b4–5": 55,
+"b6–7": 31,
+"b8–9": 16,
+"b10+": 6
 }
 ]
