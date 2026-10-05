@@ -144,12 +144,12 @@ This replaced, the same night, a chaining view (`evidence_view.py`, now in git h
 
 Half of these come from one seed's neighbourhood.
 2. **The rest is one ordered list.** Every grown sequence (`growth.piece_table`), ranked most stable first: the mean, over its steps, of the share of LLM families whose minds gave that step. Each sequence brings its work in this order:
-   1. its open ends: the what-comes-next question at each end, then the best untested glyph beyond each end. Candidates come from the minds' proposals first, then what seeds write there, then co-occurring glyphs;
+   1. its open ends: the what-comes-next question at each end, then the best untested glyph beyond each end. Candidates come from the minds' proposals first, then what seeds write there, then co-occurring glyphs. Then the what-comes-next question at **every other glyph of the sequence, in each direction, where it has never been asked**. *Added 2026-10-04 (night), from Joseph's question: `0…9` had reached `🔟` through a survey seed's triads, so no mind was ever asked what follows `…8 9`, and hex's `9 A` could not appear. A glyph can stop being an end before anyone has asked what follows it; the minds' answers there are where branches come from.*;
    2. its steps no answer has given yet, and the fit's guesses about its links and ties;
    3. the rotation follow-ups of its triads;
    4. the remaining candidates beyond its ends;
    5. one squaring window and one long-range check;
-   6. one what-comes-next question whose context stops inside the sequence, at a fated-random glyph and direction (anywhere on a cycle), so the minds can name a branch where one could leave; then one branch check and one gap check. *Added 2026-10-04 (night): once `0…9` grew on to `🔟`, nothing asked again what follows `…8 9`, so hex's `9 A` could only turn up by chance (Joseph: "surprised that it hasn't started finding obvious ones like '0123456789ABCDEF'").*
+   6. one branch check and one gap check.
 
    Items are taken greedily until the round's budget is spent. A cycle has no ends. **An end closes** once it has six or more what-comes-next answers, 70% or more of them "none", and every proposal made at it has been tested.
 

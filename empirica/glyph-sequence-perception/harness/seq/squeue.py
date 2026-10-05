@@ -265,26 +265,24 @@ def branch_items(piece, neighbours_by_glyph, round_id):
             out.append((I.make_item("triad", [nb, g[i], x], source={"kind": "branch", "ref": "".join(g), "at": g[i]}), piece["stability"] * 0.7))
     return out
 
-def interior_next(piece, round_id):
-    """A what-comes-next question whose context stops INSIDE the sequence (or anywhere on a cycle), at a fated-random
-    glyph and direction: where a branch could leave, the minds say what they see next there. (Found 2026-10-04: once
-    0..9 grew on to 🔟, nothing ever asked what follows ...8 9 again, so 9 -> A for hex could only turn up by chance;
-    co-occurrence-based branch checks cannot propose a glyph nobody has shown.)"""
+def unasked_next(piece, asked_next, round_id):
+    """What-comes-next questions at every glyph of the sequence, in each direction, where the minds have never been
+    asked what follows (no next question whose context ended ...p q, coming from inside the sequence). Extending is
+    asked at each glyph the sequence passes through, not only at today's ends: a glyph can stop being an end before
+    anyone asked what follows it -- 0..9 reached 🔟 through a survey seed's triads, so nobody was ever asked what
+    follows ...8 9, and hex's 9 A could not appear (found 2026-10-04 from Joseph's question)."""
     g = piece["glyphs"]; n = len(g)
-    if n < 4 and not piece.get("cyclic"):
-        return []
-    r = R("interior-next", {"round": round_id, "piece": g})
-    seq = g if r.random() < 0.5 else g[::-1]
-    if piece.get("cyclic"):
-        k = r.randrange(n); seq = seq[k:] + seq[:k]
-        stop = n
-    else:
-        stop = r.randrange(2, n)                    # context ends at seq[stop-1], an interior glyph
-    k = min(stop, r.randint(3, 5))
-    ctx = seq[stop - k:stop]
-    if len(ctx) < 2:
-        return []
-    return [I.make_item("next", context=ctx, source={"kind": "branch", "how": "interior-next", "ref": "".join(g), "at": ctx[-1]})]
+    r = R("unasked-next", {"round": round_id, "piece": g})
+    out = []
+    for seq in (g, g[::-1]):
+        ring = seq + seq[:4] if piece.get("cyclic") else seq
+        for j in range(2, len(ring) + 1):
+            if (ring[j - 2], ring[j - 1]) in asked_next or (piece.get("cyclic") and j - 1 >= n + 1):
+                continue
+            k = min(j, r.randint(3, 5)); ctx = ring[j - k:j]
+            if len(set(ctx)) == len(ctx) and not (j == len(ring) and not piece.get("cyclic")):
+                out.append(I.make_item("next", context=ctx, source={"kind": "extend", "how": "unasked", "ref": "".join(g), "at": ctx[-1]}))
+    return out
 
 
 # ================================================================== one priority order (Joseph's rule, as stated)
@@ -296,16 +294,17 @@ def interior_next(piece, round_id):
 #   EXPLORE_SHARE of presentations: hot exploration (stochastic, seed-bumped), and the rotation follow-ups that turn
 #                                   an exploratory triad two minds ordered into a confirmed kernel;
 #   the rest: ONE ordered list. Sequences most stable first; within each sequence, its work in this order:
-#       1 open ends: what-comes-next question at each end, then the best untested candidate beyond each end
+#       1 open ends: what-comes-next question at each end, then the best untested candidate beyond each end; then a
+#         what-comes-next at every other glyph, each direction, where it has never been asked
 #       2 its unconfirmed links (support triads)
 #       3 rotation follow-ups of its triads
 #       4 the remaining candidates beyond its ends
 #       5 one squaring window (order item) and one long-range check, if long
-#       6 one interior what-comes-next (where a branch could leave), one branch check, gaps (between)
+#       6 one branch check, gaps (between)
 #   taken greedily until the budget is spent. Ties are broken by fated order.
 EXPLORE_SHARE = 0.15
 
-def sequence_work(pc, ends, cooc, seed_next, support_by_glyph, follow_by_glyph, round_id):
+def sequence_work(pc, ends, cooc, seed_next, support_by_glyph, follow_by_glyph, round_id, asked_next=None):
     """The ordered work list for one established sequence: [(tier, item_or_followup)]."""
     work = []
     tri_extra = []
@@ -321,6 +320,7 @@ def sequence_work(pc, ends, cooc, seed_next, support_by_glyph, follow_by_glyph, 
         work += [(1, it) for it in tr[:1]]
         tri_extra += tr[1:] + orw
     g = set(pc["glyphs"])
+    work += [(1, it) for it in unasked_next(pc, asked_next or set(), round_id)]
     for t in pc.get("untested", []):          # consecutive triples of the sequence no answer has given yet
         try:
             work.append((2, I.make_item("triad", list(t), source={"kind": "step", "ref": "".join(pc["glyphs"])})))
@@ -345,7 +345,6 @@ def sequence_work(pc, ends, cooc, seed_next, support_by_glyph, follow_by_glyph, 
     work += [(4, it) for it in tri_extra]
     sq = square_items(pc, round_id)
     work += [(5, it) for it, _ in sq[:2]]
-    work += [(6, it) for it in interior_next(pc, round_id)]
     br = branch_items(pc, cooc, round_id)
     work += [(6, it) for it, _ in br[:1]]
     work += [(6, it) for it, _ in gap_items(pc, round_id)[:1]]

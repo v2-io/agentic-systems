@@ -275,12 +275,16 @@ def cmd_plan(a):
                 key = it["source"].get("link") or it["source"].get("tie") or ""
                 for g in key:
                     support_by_glyph[g].append(it)
+        asked_next = {tuple(p_["shown"][-2:]) for p_ in pres.values() if p_["kind"] == "next"}
+        for p_ in new_pres:
+            if p_["kind"] == "next":
+                asked_next.add(tuple(p_["shown"][-2:]))
         for pc in pieces:
             if spent >= B:
                 break
             ends = [Q.end_state(pc, side, parsed, pres, items) for side in ("right", "left")]
             got = 0
-            for tier, w in Q.sequence_work(pc, ends, cooc, seed_next, support_by_glyph, follow_by_glyph, rid):
+            for tier, w in Q.sequence_work(pc, ends, cooc, seed_next, support_by_glyph, follow_by_glyph, rid, asked_next):
                 if spent >= B:
                     break
                 name = {1: "end", 2: "link", 3: "followup", 4: "end", 5: "square", 6: "branch"}[tier]
