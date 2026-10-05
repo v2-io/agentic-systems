@@ -35,6 +35,8 @@ A **context** is an oriented run of glyphs: what a mind was shown, ending at the
 2. **The tree: what the minds perceive.** It is built only from answers: contexts and the continuations given at them, per mind and family. Sequences, branches, ends, cycles and stability are read off it. It knows nothing about why a question was asked (priority, seeds, exploration), so where a question came from can never become evidence. The only route from (1) into (2) is a tagged answer. If a probing factor turns out to bias answers, the tree can weight or split by that tag without being rebuilt.
 3. **Priority: what to ask next.** It reads the tree and decides where effort goes: extension, k\*, branch points, cycle probes, hot exploration, seeds, and how settled each node is. It writes questions, never evidence. Seeds live entirely here.
 
+4. **Porting: bringing the triad era's answers in without corrupting the tree.** Joseph: *"correctly porting triad-era data into the context tree as much as possible without introducing any incorrect or biased or otherwise invalid data."* It is an adapter at the boundary, written once and audited, and it feeds concern 2 exactly as concern 1 does: answers with tags. §6 states what is ported as what.
+
 The triad era mixed these concerns:
 - seeds supplied the glyphs that sequences were tested with;
 - the fit's guesses steered what was asked within sequences;
@@ -116,11 +118,29 @@ This is Joseph's priority rule, restated on the tree:
 - **Hot exploration** (15%). Fresh glyphs from the whole symbol space, weighted toward printable ASCII, then 2-byte, then 3- and 4-byte (Joseph, 2026-10-05). Exploration also favours **nodes that are still reaching out**: nodes with few settled edges get more tendrils. Settled nodes keep a floor of exploration, because creative sequences (`3E[|]3E[|]`) come from nodes that look settled.
 - **Seeds** are proposed *contexts to query*, never edges. A seed's written order says which contexts to ask first; each of its edges is then checked from short context upward. Their only standing is priority.
 
-## 6. What carries over from rounds r000–r012
+## 6. Porting the triad era (concern 4)
 
-- **Continuation evidence:** what-comes-next answers and their 3–8-glyph contexts (5,443 answers through r011). They drop straight into the tree, as the first glyph of a continuation.
-- **Consistency evidence:** triad answers (17,928) and order answers (6,224), as checks and as kernel hints.
-- **Machinery:** the judge adapters, sheets, fate, parser and ledgers in `../harness/core` and `../harness/seq`.
+Rounds r000–r012 ported **answers only**. Nothing derived is ported: no grown rows, fits, standings or stable counts, because each of those carries a rule of the old machinery. Every ported answer keeps all of its tags: round, sheet, position, sheet size, offered options (⟂ / tie / gap, forced or not), mind, family, prompt version, and the item's source as metadata. Concern 2 never reads the source.
+
+| triad-era answer | ported as | not ported as, and why |
+|---|---|---|
+| what-comes-next: context (2–8 glyphs) → up to 3 proposals, best first, or "none" | continuation answers at that context node, with each proposal's rank; "none" as an end answer | — |
+| triad: middle / only two / none / ties | short-context betweenness and orthogonality among the three glyphs (§2b) | **not edges.** A middle says `q` lies between `p` and `r`, not that `q` is adjacent to either |
+| order: lines over a shown set, extras, none, ties, gaps | ordering and orthogonality constraints over the set (§2b) | **not edges.** A line orders a *subset*, so neighbours in a line need not be adjacent in any sequence |
+| between: left run, GAP, right run → proposals or "none" | two-sided fill answers, their own kind | not continuations: the answer is conditioned on both sides |
+| unparsed answers | recorded as an outcome with their reason | **not dropped silently.** The pilot found that failures cluster by glyph, so they are not missing at random |
+
+**Checks before an answer enters the tree:**
+- **Proposal content.** Each proposal must be one glyph, after NFC normalization. Words, fragments (`cir` was seen) and multi-glyph strings are kept as their own outcome and reported, never split into glyphs.
+- **Selection.** Which contexts were asked, and how often, was steered by seeds, the old fit and the old planner, and the roster changed (glimmer early, second minds sampled). So agreement is always read as a *share* of the answers given at a node, per family, never as a raw count that rewards over-asked contexts.
+- **Roster balance.** Families answered different volumes in different rounds, so per-family shares come before any pooling.
+- **Out of scope.** The magnitude-era data in `../.archive/` asked a different question and is not ported.
+
+The port writes a report: counts in and out by kind, everything excluded with its reason, and spot checks of ported nodes against the raw ledgers. That report is the audit trail.
+
+## 6a. Machinery that carries over
+
+The judge adapters, sheets, fate, parser and ledgers in `../harness/core` and `../harness/seq` are reference and copy source.
 
 ## 7. Open questions
 
