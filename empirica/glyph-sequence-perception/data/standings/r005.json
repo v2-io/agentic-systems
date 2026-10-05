@@ -1,0 +1,5886 @@
+[
+{
+"ends": "▏ 0 asked · █ 0 asked",
+"seq": "▏ ▎ ▍ ▌ ▋ ▊ ▉ █",
+"n": 8,
+"U": 0.97,
+"coverage": 1.0,
+"per": {
+"claude": 0.9700000000000001,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9834574028122415,
+"weakest": [
+"▊",
+0.9715370018975332
+],
+"answers": 1209,
+"rounds": 6,
+"first": "r000",
+"witnessed": 56,
+"origin": "seeded",
+"branches": "▉█",
+"sets_only": [],
+"score": 0.97
+},
+{
+"ends": "㉈ 0 asked · ㉏ 0 asked",
+"seq": "㉈ ㉉ ㉊ ㉋ ㉌ ㉍ ㉎ ㉏",
+"n": 8,
+"U": 0.97,
+"coverage": 1.0,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9746588693957114,
+"weakest": [
+"㉏",
+0.4
+],
+"answers": 513,
+"rounds": 6,
+"first": "r000",
+"witnessed": 37,
+"origin": "seeded",
+"branches": "",
+"sets_only": [
+"claude",
+"grok"
+],
+"score": 0.97
+},
+{
+"ends": "➋ 0 asked · ➐ 0 asked",
+"seq": "➋ ➌ ➍ ➎ ➏ ➐",
+"n": 6,
+"U": 0.97,
+"coverage": 1.0,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"➋",
+1.0
+],
+"answers": 234,
+"rounds": 6,
+"first": "r000",
+"witnessed": 20,
+"origin": "seeded",
+"branches": "➍",
+"sets_only": [],
+"score": 0.97
+},
+{
+"ends": "꜈ 0 asked · ꜌ 0 asked",
+"seq": "꜈ ꜉ ꜊ ꜋ ꜌",
+"n": 5,
+"U": 0.97,
+"coverage": 1.0,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9826086956521739,
+"weakest": [
+"꜉",
+0.9733333333333334
+],
+"answers": 115,
+"rounds": 6,
+"first": "r000",
+"witnessed": 10,
+"origin": "seeded",
+"branches": "",
+"sets_only": [
+"muse"
+],
+"score": 0.97
+},
+{
+"ends": "╭ 0 asked · ╰ 0 asked",
+"seq": "╭ ╮ ╯ ╰",
+"n": 4,
+"U": 0.97,
+"coverage": 1.0,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"╭",
+1.0
+],
+"answers": 40,
+"rounds": 6,
+"first": "r000",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.97
+},
+{
+"ends": "৴ 0 asked · ৷ 5 asked",
+"seq": "৴ ৵ ৶ ৷",
+"n": 4,
+"U": 0.97,
+"coverage": 1.0,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"৴",
+1.0
+],
+"answers": 53,
+"rounds": 6,
+"first": "r000",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.97
+},
+{
+"ends": "㆙ 0 asked · ㆜ 5 asked",
+"seq": "㆙ ㆚ ㆛ ㆜",
+"n": 4,
+"U": 0.97,
+"coverage": 1.0,
+"per": {
+"claude": 0.9700000000000001,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.95,
+"weakest": [
+"㆙",
+0.9375
+],
+"answers": 60,
+"rounds": 6,
+"first": "r000",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "",
+"sets_only": [
+"grok"
+],
+"score": 0.97
+},
+{
+"ends": "௧ 4 asked · ௲ 0 asked",
+"seq": "௧ ௰ ௱ ௲",
+"n": 4,
+"U": 0.97,
+"coverage": 1.0,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"௧",
+1.0
+],
+"answers": 40,
+"rounds": 5,
+"first": "r000",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.97
+},
+{
+"ends": "٠ 0 asked · ٩ 0 asked",
+"seq": "٠ ١ ٢ ٣ ٤ ٥ ٦ ٧ ٨ ٩",
+"n": 10,
+"U": 0.9558333333333333,
+"coverage": 1.0,
+"per": {
+"claude": 0.9133333333333334,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9451923076923077,
+"weakest": [
+"٩",
+0.75
+],
+"answers": 1040,
+"rounds": 6,
+"first": "r000",
+"witnessed": 72,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.9558333333333333
+},
+{
+"ends": "○ 0 asked · ● 0 asked",
+"seq": "○ ◔ ◑=◐ ◕ ●",
+"n": 6,
+"U": 0.9558333333333333,
+"coverage": 1.0,
+"per": {
+"claude": 0.9133333333333334,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.7462148521989906,
+"weakest": [
+"◐",
+0.583044982698962
+],
+"answers": 1387,
+"rounds": 6,
+"first": "r000",
+"witnessed": 20,
+"origin": "seeded",
+"branches": "○◔◐◕",
+"sets_only": [],
+"score": 0.9558333333333333
+},
+{
+"ends": "░ 0 asked · █ 4 asked",
+"seq": "░ ▒ ▓ █",
+"n": 4,
+"U": 0.9554166666666666,
+"coverage": 1.0,
+"per": {
+"claude": 0.9466666666666667,
+"gemini": 0.935,
+"grok": 0.97,
+"muse": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9554140127388535,
+"weakest": [
+"█",
+0.9375
+],
+"answers": 157,
+"rounds": 6,
+"first": "r000",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "░▒█",
+"sets_only": [],
+"score": 0.9554166666666666
+},
+{
+"ends": "⚀ 5 asked · ⚅ closed",
+"seq": "⚀ ⚁ ⚂ ⚃ ⚄ ⚅",
+"n": 6,
+"U": 0.9433333333333334,
+"coverage": 1.0,
+"per": {
+"claude": 0.8633333333333333,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.8747697974217311,
+"weakest": [
+"⚀",
+0.8524590163934426
+],
+"answers": 543,
+"rounds": 6,
+"first": "r000",
+"witnessed": 20,
+"origin": "seeded",
+"branches": "⚀⚁⚂⚃⚄⚅",
+"sets_only": [],
+"score": 0.9433333333333334
+},
+{
+"ends": "㎟ 0 asked · ㎢ 4 asked",
+"seq": "㎟ ㎠ ㎡ ㎢",
+"n": 4,
+"U": 0.9299999999999999,
+"coverage": 1.0,
+"per": {
+"claude": 0.81,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.868421052631579,
+"weakest": [
+"㎠",
+0.8421052631578947
+],
+"answers": 76,
+"rounds": 6,
+"first": "r000",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "㎡㎢",
+"sets_only": [
+"claude"
+],
+"score": 0.9299999999999999
+},
+{
+"ends": "⓵ 0 asked · ⓾ 0 asked",
+"seq": "⓵ ⓶ ⓷ ⓸ ⓹ ⓺ ⓻ ⓼ ⓽ ⓾",
+"n": 10,
+"U": 0.9283333333333332,
+"coverage": 1.0,
+"per": {
+"claude": 0.9233333333333333,
+"gemini": 0.8500000000000001,
+"grok": 0.97,
+"muse": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9153911564625851,
+"weakest": [
+"⓽",
+0.7820823244552058
+],
+"answers": 2352,
+"rounds": 6,
+"first": "r000",
+"witnessed": 81,
+"origin": "seeded",
+"branches": "⓵⓺⓻",
+"sets_only": [
+"claude",
+"gemini",
+"grok"
+],
+"score": 0.9283333333333332
+},
+{
+"ends": "𝟚 5 asked · 𝟡 0 asked",
+"seq": "𝟚 𝟛 𝟜 𝟝 𝟞 𝟟 𝟠 𝟡",
+"n": 8,
+"U": 0.9275,
+"coverage": 1.0,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.8
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9454545454545454,
+"weakest": [
+"𝟟",
+0.9026845637583892
+],
+"answers": 660,
+"rounds": 4,
+"first": "r002",
+"witnessed": 56,
+"origin": "seeded",
+"branches": "𝟝",
+"sets_only": [],
+"score": 0.9275
+},
+{
+"ends": "🄁 0 asked · 🄉 0 asked",
+"seq": "🄁 🄂 🄃 🄄 🄅 🄆 🄇 🄈 🄉",
+"n": 9,
+"U": 0.8466666666666667,
+"coverage": 1.0,
+"per": {
+"claude": 0.9466666666666667,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.5
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9479836353009936,
+"weakest": [
+"🄁",
+0.8779527559055118
+],
+"answers": 1711,
+"rounds": 5,
+"first": "r001",
+"witnessed": 76,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8466666666666667
+},
+{
+"ends": "༠ 4 asked · ༩ 0 asked",
+"seq": "༠ ༡ ༢ ༣ ༤ ༥ ༦ ༧ ༨ ༩",
+"n": 10,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"༠",
+1.0
+],
+"answers": 961,
+"rounds": 2,
+"first": "r004",
+"witnessed": 78,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "⑴ 0 asked · ⑽ 5 asked",
+"seq": "⑴ ⑵ ⑶ ⑷ ⑸ ⑹ ⑺ ⑻ ⑼ ⑽",
+"n": 10,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.9700000000000001,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9975349219391948,
+"weakest": [
+"⑼",
+0.9897610921501706
+],
+"answers": 1217,
+"rounds": 2,
+"first": "r004",
+"witnessed": 81,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "⒈ 4 asked · ⒑ 4 asked",
+"seq": "⒈ ⒉ ⒊ ⒋ ⒌ ⒍ ⒎ ⒏ ⒐ ⒑",
+"n": 10,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.9700000000000001,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.99302649930265,
+"weakest": [
+"⒈",
+0.9411764705882353
+],
+"answers": 717,
+"rounds": 2,
+"first": "r004",
+"witnessed": 64,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "🀙 0 asked · 🀡 0 asked",
+"seq": "🀙 🀚 🀛 🀜 🀝 🀞 🀟 🀠 🀡",
+"n": 9,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.9700000000000001,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9527806925498427,
+"weakest": [
+"🀙",
+0.8333333333333334
+],
+"answers": 953,
+"rounds": 3,
+"first": "r003",
+"witnessed": 57,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "㊁ 0 asked · ㊉ 0 asked",
+"seq": "㊁ ㊂ ㊃ ㊄ ㊅ ㊆ ㊇ ㊈ ㊉",
+"n": 9,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.9700000000000001,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9879518072289156,
+"weakest": [
+"㊉",
+0.46153846153846156
+],
+"answers": 747,
+"rounds": 4,
+"first": "r002",
+"witnessed": 57,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "០ 0 asked · ៩ 5 asked",
+"seq": "០ ១ ២ ៣ ៤ ៥ ៦ ៧ ៩",
+"n": 9,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9086161879895561,
+"weakest": [
+"៩",
+0.6584158415841584
+],
+"answers": 766,
+"rounds": 2,
+"first": "r004",
+"witnessed": 57,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "𝟏 5 asked · 𝟖 0 asked",
+"seq": "𝟏 𝟐 𝟑 𝟒 𝟓=𝟝 𝟔 𝟕 𝟖",
+"n": 9,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [
+"𝟒𝟝"
+],
+"agree": 0.9891540130151844,
+"weakest": [
+"𝟝",
+0.75
+],
+"answers": 461,
+"rounds": 2,
+"first": "r004",
+"witnessed": 57,
+"origin": "seeded",
+"branches": "𝟏𝟐𝟝",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "🧍 0 asked · 🚀 0 asked",
+"seq": "🧍 🚶 🏃 🚲 🚗 🚄 ✈ 🚀",
+"n": 8,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9903474903474904,
+"weakest": [
+"🚄",
+0.9753694581280788
+],
+"answers": 518,
+"rounds": 2,
+"first": "r004",
+"witnessed": 56,
+"origin": "seeded",
+"branches": "",
+"sets_only": [
+"claude"
+],
+"score": 0.8400446416709055
+},
+{
+"ends": "𐄈 0 asked · 𐄏 4 asked",
+"seq": "𐄈 𐄉 𐄊 𐄋 𐄌 𐄍 𐄎 𐄏",
+"n": 8,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9848484848484849,
+"weakest": [
+"𐄉",
+0.9615384615384616
+],
+"answers": 462,
+"rounds": 2,
+"first": "r004",
+"witnessed": 56,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "¹ 8 asked · ⁷ 4 asked",
+"seq": "¹ ² ³ ⁴ ⁵ ⁶ ⁷",
+"n": 7,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.968299711815562,
+"weakest": [
+"⁵",
+0.9308176100628931
+],
+"answers": 347,
+"rounds": 5,
+"first": "r001",
+"witnessed": 35,
+"origin": "seeded",
+"branches": "¹²⁴⁶",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "ⅱ 0 asked · ⅷ 0 asked",
+"seq": "ⅱ ⅲ ⅳ ⅴ ⅵ ⅶ ⅷ",
+"n": 7,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"ⅱ",
+1.0
+],
+"answers": 429,
+"rounds": 2,
+"first": "r004",
+"witnessed": 30,
+"origin": "seeded",
+"branches": "ⅳⅴⅶⅷ",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "㉑ 0 asked · ㉖ 0 asked",
+"seq": "㉑ ㉒ ㉓ ㉔ ㉕ ㉖",
+"n": 6,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.9700000000000001,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9974619289340102,
+"weakest": [
+"㉑",
+0.9948186528497409
+],
+"answers": 394,
+"rounds": 3,
+"first": "r003",
+"witnessed": 20,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "🯴 0 asked · 🯹 0 asked",
+"seq": "🯴 🯵 🯶 🯷 🯸 🯹",
+"n": 6,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9574468085106383,
+"weakest": [
+"🯹",
+0.9150943396226415
+],
+"answers": 282,
+"rounds": 2,
+"first": "r004",
+"witnessed": 20,
+"origin": "seeded",
+"branches": "🯴🯵",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "❷ 0 asked · ❼ 0 asked",
+"seq": "❷ ❸ ❹ ❺ ❻ ❼",
+"n": 6,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"❷",
+1.0
+],
+"answers": 286,
+"rounds": 3,
+"first": "r003",
+"witnessed": 20,
+"origin": "seeded",
+"branches": "❺❻",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "㋀ 0 asked · ㋋ 0 asked",
+"seq": "㋀ ㋂ ㋄ ㋅ ㋇ ㋋",
+"n": 6,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"㋀",
+1.0
+],
+"answers": 160,
+"rounds": 1,
+"first": "r005",
+"witnessed": 20,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "४ 5 asked · ९ 0 asked",
+"seq": "४ ५ ६ ७ ८ ९",
+"n": 6,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"४",
+1.0
+],
+"answers": 160,
+"rounds": 2,
+"first": "r004",
+"witnessed": 20,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "˩ closed · ˥ 4 asked",
+"seq": "˩ ˨ ˧ ˦ ˥",
+"n": 5,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9711538461538461,
+"weakest": [
+"˨",
+0.9558823529411765
+],
+"answers": 104,
+"rounds": 2,
+"first": "r004",
+"witnessed": 10,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "〡 5 asked · 〥 0 asked",
+"seq": "〡 〢 〣 〤 〥",
+"n": 5,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9629629629629629,
+"weakest": [
+"〥",
+0.9375
+],
+"answers": 108,
+"rounds": 5,
+"first": "r001",
+"witnessed": 10,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "🮇 0 asked · 🮋 0 asked",
+"seq": "🮇 🮈 🮉 🮊 🮋",
+"n": 5,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9642857142857143,
+"weakest": [
+"🮋",
+0.9418604651162791
+],
+"answers": 140,
+"rounds": 5,
+"first": "r001",
+"witnessed": 10,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "🀵 0 asked · 🀱 4 asked",
+"seq": "🀵 🀴 🀳 🀲 🀱",
+"n": 5,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9245283018867925,
+"weakest": [
+"🀱",
+0.8852459016393442
+],
+"answers": 106,
+"rounds": 3,
+"first": "r003",
+"witnessed": 10,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "ᚐ 4 asked · ᚔ 0 asked",
+"seq": "ᚐ ᚑ ᚒ ᚓ ᚔ",
+"n": 5,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9178082191780822,
+"weakest": [
+"ᚓ",
+0.9021739130434783
+],
+"answers": 146,
+"rounds": 4,
+"first": "r002",
+"witnessed": 10,
+"origin": "seeded",
+"branches": "",
+"sets_only": [
+"claude",
+"gemini"
+],
+"score": 0.8400446416709055
+},
+{
+"ends": "𝍠 0 asked · 𝍤 5 asked",
+"seq": "𝍠 𝍡 𝍢 𝍣 𝍤",
+"n": 5,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9842105263157894,
+"weakest": [
+"𝍠",
+0.9722222222222222
+],
+"answers": 190,
+"rounds": 3,
+"first": "r003",
+"witnessed": 10,
+"origin": "seeded",
+"branches": "𝍣𝍤",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "🥚 0 asked · 🐓 0 asked",
+"seq": "🥚 🐣 🐤 🐓",
+"n": 4,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"🐓",
+1.0
+],
+"answers": 32,
+"rounds": 3,
+"first": "r003",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "⑾ 0 asked · ⒁ 0 asked",
+"seq": "⑾ ⑿ ⒀ ⒁",
+"n": 4,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.9700000000000001,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9420289855072463,
+"weakest": [
+"⒁",
+0.9069767441860465
+],
+"answers": 69,
+"rounds": 4,
+"first": "r000",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "⎺ 0 asked · ⎽ 0 asked",
+"seq": "⎺ ⎻ ⎼ ⎽",
+"n": 4,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9545454545454546,
+"weakest": [
+"⎺",
+0.9444444444444444
+],
+"answers": 44,
+"rounds": 5,
+"first": "r001",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "ℵ 0 asked · ℸ 6 asked",
+"seq": "ℵ ℶ ℷ ℸ",
+"n": 4,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"ℵ",
+1.0
+],
+"answers": 50,
+"rounds": 3,
+"first": "r003",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "ሎ 0 asked · ሊ 0 asked",
+"seq": "ሎ ል ሌ ሊ",
+"n": 4,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.9700000000000001,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.7536231884057971,
+"weakest": [
+"ሊ",
+0.7391304347826086
+],
+"answers": 69,
+"rounds": 4,
+"first": "r001",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "㎩ 0 asked · ㎬ 5 asked",
+"seq": "㎩ ㎪ ㎫ ㎬",
+"n": 4,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9285714285714286,
+"weakest": [
+"㎫",
+0.9047619047619048
+],
+"answers": 28,
+"rounds": 1,
+"first": "r005",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "🔇 5 asked · 🔊 0 asked",
+"seq": "🔇 🔈 🔉 🔊",
+"n": 4,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"🔇",
+1.0
+],
+"answers": 36,
+"rounds": 3,
+"first": "r003",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "· 0 asked · ⁝ 0 asked",
+"seq": "· ∶=: ⁝",
+"n": 4,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.9700000000000001,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9615384615384616,
+"weakest": [
+"·",
+0.9523809523809523
+],
+"answers": 52,
+"rounds": 2,
+"first": "r002",
+"witnessed": 4,
+"origin": "seeded",
+"branches": ":⁝",
+"sets_only": [
+"claude"
+],
+"score": 0.8400446416709055
+},
+{
+"ends": "˅ 0 asked · ▽ 0 asked",
+"seq": "˅ ∨ ⋁ ▽",
+"n": 4,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.5,
+"weakest": [
+"˅",
+0.5
+],
+"answers": 32,
+"rounds": 2,
+"first": "r004",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "∨⋁",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "Ⅰ 0 asked · Ⅳ 0 asked",
+"seq": "Ⅰ Ⅱ Ⅲ Ⅳ",
+"n": 4,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.9700000000000001,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"Ⅰ",
+1.0
+],
+"answers": 68,
+"rounds": 2,
+"first": "r004",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "",
+"sets_only": [
+"claude"
+],
+"score": 0.8400446416709055
+},
+{
+"ends": "Ⅷ 0 asked · Ⅻ 0 asked",
+"seq": "Ⅷ Ⅸ Ⅹ Ⅻ",
+"n": 4,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9318181818181818,
+"weakest": [
+"Ⅸ",
+0.9166666666666666
+],
+"answers": 44,
+"rounds": 2,
+"first": "r002",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "Ⅸ",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "․ 4 asked · … 4 asked",
+"seq": "․ ‥ …",
+"n": 3,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"․",
+1.0
+],
+"answers": 15,
+"rounds": 6,
+"first": "r000",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "→ 4 asked · ↑ 4 asked",
+"seq": "→ ↗ ↑",
+"n": 3,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9230769230769231,
+"weakest": [
+"↑",
+0.9230769230769231
+],
+"answers": 13,
+"rounds": 6,
+"first": "r000",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "㈦ 0 asked · ㈤ 0 asked",
+"seq": "㈦ ㈥ ㈤",
+"n": 3,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"㈤",
+1.0
+],
+"answers": 12,
+"rounds": 3,
+"first": "r003",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "ᚁ 3 asked · ᚃ 0 asked",
+"seq": "ᚁ ᚂ ᚃ",
+"n": 3,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"ᚁ",
+1.0
+],
+"answers": 19,
+"rounds": 0,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "⣰ 0 asked · ⣿ 0 asked",
+"seq": "⣰ ⣾ ⣿",
+"n": 3,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9375,
+"weakest": [
+"⣰",
+0.9375
+],
+"answers": 16,
+"rounds": 6,
+"first": "r000",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "⣿",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "√ 0 asked · ∜ 0 asked",
+"seq": "√ ∛ ∜",
+"n": 3,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"√",
+1.0
+],
+"answers": 14,
+"rounds": 4,
+"first": "r002",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "▵ 0 asked · ▿ 4 asked",
+"seq": "▵ ▹ ▿",
+"n": 3,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9230769230769231,
+"weakest": [
+"▵",
+0.9230769230769231
+],
+"answers": 13,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8400446416709055
+},
+{
+"ends": "㎡ 0 asked · ㎦ 0 asked",
+"seq": "㎡ ㎢ ㎦",
+"n": 3,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.3076923076923077,
+"weakest": [
+"㎡",
+0.3076923076923077
+],
+"answers": 13,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "㎡㎢",
+"sets_only": [
+"claude",
+"gemini",
+"grok"
+],
+"score": 0.8400446416709055
+},
+{
+"ends": "➀ 0 asked · ➇ 0 asked",
+"seq": "➀ ➁ ➂ ➃ ➄ ➅ ➆ ➇",
+"n": 8,
+"U": 0.9622222222222222,
+"coverage": 0.75,
+"per": {
+"claude": 0.9466666666666667,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9126074498567335,
+"weakest": [
+"➁",
+0.8858695652173914
+],
+"answers": 698,
+"rounds": 3,
+"first": "r003",
+"witnessed": 56,
+"origin": "seeded",
+"branches": "➀➃➆➇",
+"sets_only": [],
+"score": 0.8333088885303598
+},
+{
+"ends": "𝋢 0 asked · 𝋰 0 asked",
+"seq": "𝋢 𝋤 𝋥 𝋦 𝋧 𝋨 𝋩 𝋪 𝋫 𝋬 𝋭 𝋮 𝋯 𝋰",
+"n": 14,
+"U": 0.9511111111111111,
+"coverage": 0.75,
+"per": {
+"claude": 0.9133333333333334,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9272445820433437,
+"weakest": [
+"𝋤",
+0.5111111111111111
+],
+"answers": 1292,
+"rounds": 5,
+"first": "r001",
+"witnessed": 79,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8236863840438661
+},
+{
+"ends": "¼ 4 asked · ¾ 0 asked",
+"seq": "¼ ⅜ ½ ⅝ ¾",
+"n": 5,
+"U": 0.9466666666666667,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.9
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9777777777777777,
+"weakest": [
+"⅝",
+0.9587628865979382
+],
+"answers": 180,
+"rounds": 4,
+"first": "r002",
+"witnessed": 10,
+"origin": "seeded",
+"branches": "¼⅜½⅝¾",
+"sets_only": [],
+"score": 0.8198373822492685
+},
+{
+"ends": "🞯 0 asked · 🞴 0 asked",
+"seq": "🞯 🞰 🞱 🞲 🞳 🞴",
+"n": 6,
+"U": 0.9416666666666668,
+"coverage": 0.75,
+"per": {
+"claude": 0.885,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.91015625,
+"weakest": [
+"🞯",
+0.8488372093023255
+],
+"answers": 256,
+"rounds": 2,
+"first": "r004",
+"witnessed": 20,
+"origin": "seeded",
+"branches": "🞯",
+"sets_only": [],
+"score": 0.8155072552303464
+},
+{
+"ends": "㎐ 5 asked · ㎔ 0 asked",
+"seq": "㎐ ㎑ ㎒ ㎓ ㎔",
+"n": 5,
+"U": 0.9416666666666668,
+"coverage": 0.75,
+"per": {
+"claude": 0.885,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9066666666666666,
+"weakest": [
+"㎔",
+0.8641975308641975
+],
+"answers": 150,
+"rounds": 2,
+"first": "r004",
+"witnessed": 10,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8155072552303464
+},
+{
+"ends": "▪ 4 asked · ■ 0 asked",
+"seq": "▪ ◾ ◼ ■",
+"n": 4,
+"U": 0.9344444444444444,
+"coverage": 0.75,
+"per": {
+"claude": 0.8633333333333333,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9212598425196851,
+"weakest": [
+"◼",
+0.90625
+],
+"answers": 127,
+"rounds": 5,
+"first": "r000",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "▪◼■",
+"sets_only": [],
+"score": 0.8092526273141254
+},
+{
+"ends": "𐄑 0 asked · 𐄗 0 asked",
+"seq": "𐄑 𐄒 𐄓 𐄔 𐄕 𐄗",
+"n": 6,
+"U": 0.8091666666666667,
+"coverage": 1.0,
+"per": {
+"claude": 0.9466666666666667,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.35
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9444444444444444,
+"weakest": [
+"𐄗",
+0.9209039548022598
+],
+"answers": 360,
+"rounds": 5,
+"first": "r001",
+"witnessed": 20,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.8091666666666667
+},
+{
+"ends": "𝂕 0 asked · 𝂘 0 asked",
+"seq": "𝂕 𝂖 𝂗 𝂘",
+"n": 4,
+"U": 0.93,
+"coverage": 0.75,
+"per": {
+"claude": 0.8500000000000001,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.8947368421052632,
+"weakest": [
+"𝂘",
+0.84
+],
+"answers": 38,
+"rounds": 5,
+"first": "r001",
+"witnessed": 3,
+"origin": "emergent",
+"branches": "",
+"sets_only": [],
+"score": 0.8054036255195279
+},
+{
+"ends": "０ 0 asked · ６ 0 asked",
+"seq": "０ １ ２ ３ ４ ５ ６",
+"n": 7,
+"U": 0.9177777777777777,
+"coverage": 0.75,
+"per": {
+"claude": 0.8133333333333334,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9783653846153846,
+"weakest": [
+"６",
+0.9521276595744681
+],
+"answers": 416,
+"rounds": 4,
+"first": "r002",
+"witnessed": 35,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.7948188705843847
+},
+{
+"ends": "🀋 0 asked · 🀍 0 asked",
+"seq": "🀋 🀌 🀍",
+"n": 3,
+"U": 0.9166666666666666,
+"coverage": 0.75,
+"per": {
+"claude": 0.81,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9285714285714286,
+"weakest": [
+"🀋",
+0.9285714285714286
+],
+"answers": 14,
+"rounds": 6,
+"first": "r000",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.7938566201357353
+},
+{
+"ends": "🀔 0 asked · 🀖 0 asked",
+"seq": "🀔 🀕 🀖",
+"n": 3,
+"U": 0.9166666666666666,
+"coverage": 0.75,
+"per": {
+"claude": 0.81,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9285714285714286,
+"weakest": [
+"🀔",
+0.9285714285714286
+],
+"answers": 14,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.7938566201357353
+},
+{
+"ends": "∮ 0 asked · ∰ 0 asked",
+"seq": "∮ ∯ ∰",
+"n": 3,
+"U": 0.9166666666666666,
+"coverage": 0.75,
+"per": {
+"claude": 0.81,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9166666666666666,
+"weakest": [
+"∮",
+0.9166666666666666
+],
+"answers": 12,
+"rounds": 5,
+"first": "r001",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.7938566201357353
+},
+{
+"ends": "𝟹 4 asked · 𝟿 0 asked",
+"seq": "𝟹 𝟺 𝟻 𝟼 𝟽 𝟾 𝟿",
+"n": 7,
+"U": 0.9,
+"coverage": 0.75,
+"per": {
+"claude": 0.9,
+"gemini": 0.9,
+"grok": 0.9
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9546313799621928,
+"weakest": [
+"𝟻",
+0.9357429718875502
+],
+"answers": 529,
+"rounds": 3,
+"first": "r003",
+"witnessed": 35,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.7794228634059948
+},
+{
+"ends": "🞉 4 asked · 🞄 0 asked",
+"seq": "🞉 🞈 🞇 🞆 🞅 🞄",
+"n": 6,
+"U": 0.9,
+"coverage": 0.75,
+"per": {
+"claude": 0.9,
+"gemini": 0.9,
+"grok": 0.9
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9883720930232558,
+"weakest": [
+"🞅",
+0.9772727272727273
+],
+"answers": 172,
+"rounds": 2,
+"first": "r004",
+"witnessed": 20,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.7794228634059948
+},
+{
+"ends": "🟥 0 asked · 🟪 0 asked",
+"seq": "🟥 🟧 🟨 🟩 🟦 🟪",
+"n": 6,
+"U": 0.8988888888888887,
+"coverage": 0.75,
+"per": {
+"claude": 0.7566666666666667,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9222689075630253,
+"weakest": [
+"🟨",
+0.8884615384615384
+],
+"answers": 476,
+"rounds": 4,
+"first": "r002",
+"witnessed": 20,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.7784606129573453
+},
+{
+"ends": "🐁 0 asked · 🐘 0 asked",
+"seq": "🐁 🐈 🐕 🐎 🐘",
+"n": 5,
+"U": 0.8916666666666666,
+"coverage": 0.75,
+"per": {
+"claude": 0.735,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.75,
+"weakest": [
+"🐁",
+0.75
+],
+"answers": 80,
+"rounds": 3,
+"first": "r003",
+"witnessed": 10,
+"origin": "seeded",
+"branches": "🐎🐘",
+"sets_only": [],
+"score": 0.7722059850411244
+},
+{
+"ends": "╌ 0 asked · ┉ 0 asked",
+"seq": "╌ ┄ ┈ ┉",
+"n": 4,
+"U": 0.8722222222222222,
+"coverage": 0.75,
+"per": {
+"claude": 0.8166666666666668,
+"gemini": 0.9,
+"grok": 0.9
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.7037037037037037,
+"weakest": [
+"╌",
+0.5
+],
+"answers": 27,
+"rounds": 2,
+"first": "r004",
+"witnessed": 2,
+"origin": "emergent",
+"branches": "┄┈",
+"sets_only": [],
+"score": 0.7553666021897604
+},
+{
+"ends": "Ġ 0 asked · g 0 asked",
+"seq": "Ġ G g",
+"n": 3,
+"U": 0.8472222222222222,
+"coverage": 0.75,
+"per": {
+"claude": 0.7566666666666667,
+"gemini": 0.885,
+"grok": 0.9
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.25925925925925924,
+"weakest": [
+"G",
+0.25925925925925924
+],
+"answers": 54,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "Ġg",
+"sets_only": [],
+"score": 0.7337159670951493
+},
+{
+"ends": "' 0 asked · 🎆 5 asked",
+"seq": "' 🕯 🔥 🎆",
+"n": 4,
+"U": 0.7275,
+"coverage": 1.0,
+"per": {
+"claude": 0.9700000000000001,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.0
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.6349206349206349,
+"weakest": [
+"'",
+0.5882352941176471
+],
+"answers": 63,
+"rounds": 6,
+"first": "r000",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "🔥",
+"sets_only": [
+"claude",
+"gemini",
+"grok"
+],
+"score": 0.7275
+},
+{
+"ends": "⚊ 0 asked · ⚏ 4 asked",
+"seq": "⚊ ⚋ ⚌ ⚍ ⚎ ⚏",
+"n": 6,
+"U": 0.725,
+"coverage": 1.0,
+"per": {
+"claude": 0.65,
+"gemini": 0.45,
+"grok": 0.9,
+"muse": 0.9
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.5256166982922201,
+"weakest": [
+"⚊",
+0.45353159851301117
+],
+"answers": 527,
+"rounds": 5,
+"first": "r001",
+"witnessed": 20,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.725
+},
+{
+"ends": "_ 0 asked · █ 0 asked",
+"seq": "_ ▂ ▃ ▄ ▅ ▆ ▇ █",
+"n": 8,
+"U": 0.831111111111111,
+"coverage": 0.75,
+"per": {
+"claude": 0.6233333333333334,
+"gemini": 0.97,
+"grok": 0.9
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9680091402456441,
+"weakest": [
+"_",
+0.9482758620689655
+],
+"answers": 3501,
+"rounds": 4,
+"first": "r002",
+"witnessed": 50,
+"origin": "seeded",
+"branches": "_▂▃▄▅▆▇█",
+"sets_only": [
+"grok"
+],
+"score": 0.7197633355897334
+},
+{
+"ends": "< 0 asked · ⋘ 0 asked",
+"seq": "< «=≪ ⋘",
+"n": 4,
+"U": 0.8249999999999998,
+"coverage": 0.75,
+"per": {
+"claude": 0.535,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.7142857142857143,
+"weakest": [
+"«",
+0.5833333333333334
+],
+"answers": 49,
+"rounds": 2,
+"first": "r004",
+"witnessed": 4,
+"origin": "emergent",
+"branches": "",
+"sets_only": [],
+"score": 0.7144709581221617
+},
+{
+"ends": "▫ 0 asked · ⬜ 0 asked",
+"seq": "▫ ◽ ◻ □ ⬜",
+"n": 5,
+"U": 0.7008333333333333,
+"coverage": 1.0,
+"per": {
+"claude": 0.8633333333333333,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.0
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.7010869565217391,
+"weakest": [
+"◻",
+0.6324786324786325
+],
+"answers": 184,
+"rounds": 6,
+"first": "r000",
+"witnessed": 10,
+"origin": "seeded",
+"branches": "▫◻□⬜",
+"sets_only": [],
+"score": 0.7008333333333333
+},
+{
+"ends": "‿ 0 asked · ∨ 0 asked",
+"seq": "‿=⌣ ⌄ ∨",
+"n": 4,
+"U": 0.8083333333333332,
+"coverage": 0.75,
+"per": {
+"claude": 0.485,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.3111111111111111,
+"weakest": [
+"‿",
+0.22857142857142856
+],
+"answers": 45,
+"rounds": 3,
+"first": "r003",
+"witnessed": 3,
+"origin": "seeded",
+"branches": "∨",
+"sets_only": [],
+"score": 0.7000372013924211
+},
+{
+"ends": "🮃 0 asked · 🮅 0 asked",
+"seq": "🮃=🮆=🮅",
+"n": 3,
+"U": 0.8083333333333332,
+"coverage": 0.75,
+"per": {
+"claude": 0.485,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.0,
+"weakest": [
+"🮃",
+0.0
+],
+"answers": 18,
+"rounds": 0,
+"first": "r005",
+"witnessed": 0,
+"origin": "seeded",
+"branches": "🮃🮆🮅",
+"sets_only": [],
+"score": 0.7000372013924211
+},
+{
+"ends": "♙ 0 asked · ♔ 0 asked",
+"seq": "♙ ♗ ♖ ♕ ♔",
+"n": 5,
+"U": 0.8066666666666666,
+"coverage": 0.75,
+"per": {
+"claude": 0.65,
+"gemini": 0.97,
+"grok": 0.8
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.6785714285714286,
+"weakest": [
+"♕",
+0.631578947368421
+],
+"answers": 28,
+"rounds": 2,
+"first": "r004",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.6985938257194471
+},
+{
+"ends": "♳ 0 asked · ♹ 0 asked",
+"seq": "♳ ♴ ♵ ♶ ♷ ♸ ♹",
+"n": 7,
+"U": 0.6975,
+"coverage": 1.0,
+"per": {
+"claude": 0.9700000000000001,
+"gemini": 0.97,
+"grok": 0.35,
+"muse": 0.5
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9185303514376997,
+"weakest": [
+"♸",
+0.8604651162790697
+],
+"answers": 626,
+"rounds": 6,
+"first": "r000",
+"witnessed": 35,
+"origin": "seeded",
+"branches": "",
+"sets_only": [
+"muse"
+],
+"score": 0.6975
+},
+{
+"ends": "⠀ 4 asked · ⣿ 0 asked",
+"seq": "⠀ ⠁ ⠃ ⠇ ⠏ ⠟ ⠿ ⡿ ⣿",
+"n": 9,
+"U": 0.6875,
+"coverage": 1.0,
+"per": {
+"claude": 0.9700000000000001,
+"gemini": 0.81,
+"grok": 0.97,
+"muse": 0.0
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9826489300173511,
+"weakest": [
+"⠀",
+0.9631728045325779
+],
+"answers": 1729,
+"rounds": 6,
+"first": "r000",
+"witnessed": 77,
+"origin": "seeded",
+"branches": "⠀⡿⣿",
+"sets_only": [],
+"score": 0.6875
+},
+{
+"ends": "⓻ 0 asked · ➍ 0 asked",
+"seq": "⓻ ⓺ ➍",
+"n": 3,
+"U": 0.97,
+"coverage": 0.5,
+"per": {
+"claude": 0.97,
+"gemini": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.5384615384615384,
+"weakest": [
+"⓺",
+0.5384615384615384
+],
+"answers": 13,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "⓻⓺➍",
+"sets_only": [],
+"score": 0.6858935777509512
+},
+{
+"ends": "🞍 0 asked · 🞓 0 asked",
+"seq": "🞍 🞎 🞏 🞐 🞑 🞒 🞓",
+"n": 7,
+"U": 0.6833333333333333,
+"coverage": 1.0,
+"per": {
+"claude": 0.8633333333333333,
+"gemini": 0.97,
+"grok": 0.9,
+"muse": 0.0
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.7561797752808989,
+"weakest": [
+"🞍",
+0.7263843648208469
+],
+"answers": 890,
+"rounds": 6,
+"first": "r000",
+"witnessed": 35,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.6833333333333333
+},
+{
+"ends": "二 4 asked · 八 0 asked",
+"seq": "二 三 四 五 八",
+"n": 5,
+"U": 0.7888888888888889,
+"coverage": 0.75,
+"per": {
+"claude": 0.8166666666666668,
+"gemini": 0.9,
+"grok": 0.65
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9642857142857143,
+"weakest": [
+"八",
+0.75
+],
+"answers": 56,
+"rounds": 2,
+"first": "r004",
+"witnessed": 5,
+"origin": "seeded",
+"branches": "二五八",
+"sets_only": [
+"claude",
+"gemini",
+"grok"
+],
+"score": 0.6831978185410571
+},
+{
+"ends": "ᄌ 8 asked · ᄄ 0 asked",
+"seq": "ᄌ ᄊ ᄉ ᄈ ᄇ ᄄ",
+"n": 6,
+"U": 0.785,
+"coverage": 0.75,
+"per": {
+"claude": 0.885,
+"gemini": 0.5,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.48627450980392156,
+"weakest": [
+"ᄉ",
+0.4755244755244755
+],
+"answers": 255,
+"rounds": 5,
+"first": "r001",
+"witnessed": 20,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.6798299419707843
+},
+{
+"ends": "ᴏ 0 asked · Ｏ 0 asked",
+"seq": "ᴏ O Ｏ",
+"n": 3,
+"U": 0.785,
+"coverage": 0.75,
+"per": {
+"claude": 0.735,
+"gemini": 0.97,
+"grok": 0.65
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.6923076923076923,
+"weakest": [
+"O",
+0.6923076923076923
+],
+"answers": 13,
+"rounds": 2,
+"first": "r002",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "O",
+"sets_only": [],
+"score": 0.6798299419707843
+},
+{
+"ends": "⠀ 4 asked · ⣶ 0 asked",
+"seq": "⠀ ⢀ ⣀ ⣄ ⣤ ⣦ ⣶",
+"n": 7,
+"U": 0.7822222222222223,
+"coverage": 0.75,
+"per": {
+"claude": 0.6466666666666666,
+"gemini": 0.8,
+"grok": 0.9
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.6258205689277899,
+"weakest": [
+"⣦",
+0.5804878048780487
+],
+"answers": 457,
+"rounds": 2,
+"first": "r004",
+"witnessed": 35,
+"origin": "seeded",
+"branches": "⠀",
+"sets_only": [],
+"score": 0.6774243158491609
+},
+{
+"ends": "🦠 0 asked · 🌌 0 asked",
+"seq": "🦠 🐜 🐘 🌍 ☀ 🌌",
+"n": 6,
+"U": 0.65125,
+"coverage": 1.0,
+"per": {
+"claude": 0.735,
+"gemini": 0.97,
+"grok": 0.9,
+"muse": 0.0
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.7288135593220338,
+"weakest": [
+"🌌",
+0.7017543859649122
+],
+"answers": 354,
+"rounds": 6,
+"first": "r000",
+"witnessed": 20,
+"origin": "seeded",
+"branches": "🐜🐘",
+"sets_only": [
+"grok"
+],
+"score": 0.65125
+},
+{
+"ends": "꜖ 0 asked · ꜒ 0 asked",
+"seq": "꜖ ꜔ ꜓ ꜒",
+"n": 4,
+"U": 0.7516666666666666,
+"coverage": 0.75,
+"per": {
+"claude": 0.485,
+"gemini": 0.97,
+"grok": 0.8
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.7142857142857143,
+"weakest": [
+"꜓",
+0.625
+],
+"answers": 21,
+"rounds": 6,
+"first": "r000",
+"witnessed": 3,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.6509624285113029
+},
+{
+"ends": "¹ 0 asked · ₁ 0 asked",
+"seq": "¹ 1 ₁",
+"n": 3,
+"U": 0.7399999999999999,
+"coverage": 0.75,
+"per": {
+"claude": 0.35,
+"gemini": 0.9,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.8571428571428571,
+"weakest": [
+"1",
+0.8571428571428571
+],
+"answers": 14,
+"rounds": 5,
+"first": "r000",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "¹1₁",
+"sets_only": [],
+"score": 0.6408587988004845
+},
+{
+"ends": "🮁 0 asked · 🮆 0 asked",
+"seq": "🮁 🮂 🮃 🮄 🮅 🮆",
+"n": 6,
+"U": 0.7388888888888889,
+"coverage": 0.75,
+"per": {
+"claude": 0.4166666666666667,
+"gemini": 0.9,
+"grok": 0.9
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.9402390438247012,
+"weakest": [
+"🮁",
+0.6666666666666666
+],
+"answers": 251,
+"rounds": 3,
+"first": "r003",
+"witnessed": 14,
+"origin": "seeded",
+"branches": "🮂🮃🮄🮅🮆",
+"sets_only": [],
+"score": 0.6398965483518352
+},
+{
+"ends": "◔ 0 asked · ◎ 0 asked",
+"seq": "◔=◕=◍=◎",
+"n": 4,
+"U": 0.7333333333333334,
+"coverage": 0.75,
+"per": {
+"claude": 0.65,
+"gemini": 0.9,
+"grok": 0.65
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.0,
+"weakest": [
+"◎",
+0.0
+],
+"answers": 17,
+"rounds": 0,
+"first": "r005",
+"witnessed": 0,
+"origin": "emergent",
+"branches": "◔◕",
+"sets_only": [],
+"score": 0.6350852961085883
+},
+{
+"ends": "! 9 asked · 😱 0 asked",
+"seq": "! ‼ 😱",
+"n": 3,
+"U": 0.7283333333333334,
+"coverage": 0.75,
+"per": {
+"claude": 0.735,
+"gemini": 0.65,
+"grok": 0.8
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.6923076923076923,
+"weakest": [
+"!",
+0.6923076923076923
+],
+"answers": 13,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "!‼",
+"sets_only": [],
+"score": 0.6307551690896661
+},
+{
+"ends": "⊂ 0 asked · ⊑ 0 asked",
+"seq": "⊂ ⊆ ⊑",
+"n": 3,
+"U": 0.725,
+"coverage": 0.75,
+"per": {
+"claude": 0.625,
+"gemini": 0.65,
+"grok": 0.9
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.41935483870967744,
+"weakest": [
+"⊂",
+0.41935483870967744
+],
+"answers": 31,
+"rounds": 4,
+"first": "r000",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "⊂⊆",
+"sets_only": [],
+"score": 0.6278684177437179
+},
+{
+"ends": "😐 0 asked · 😢 0 asked",
+"seq": "😐 🙁 😢",
+"n": 3,
+"U": 0.7166666666666667,
+"coverage": 0.75,
+"per": {
+"claude": 0.9,
+"gemini": 0.9,
+"grok": 0.35
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.5384615384615384,
+"weakest": [
+"😐",
+0.5384615384615384
+],
+"answers": 13,
+"rounds": 3,
+"first": "r002",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.6206515393788476
+},
+{
+"ends": "₀ 0 asked · ₉ 0 asked",
+"seq": "₀ ₁ ₆ ₇ ₈ ₉",
+"n": 6,
+"U": 0.7138888888888889,
+"coverage": 0.75,
+"per": {
+"claude": 0.7566666666666667,
+"gemini": 0.885,
+"grok": 0.5
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.6342857142857142,
+"weakest": [
+"₁",
+0.5392670157068062
+],
+"answers": 350,
+"rounds": 6,
+"first": "r000",
+"witnessed": 20,
+"origin": "seeded",
+"branches": "₀₁₆",
+"sets_only": [],
+"score": 0.6182459132572242
+},
+{
+"ends": "! 9 asked · ‽ 0 asked",
+"seq": "! ‼ ‽",
+"n": 3,
+"U": 0.71,
+"coverage": 0.75,
+"per": {
+"claude": 0.6599999999999999,
+"gemini": 0.97,
+"grok": 0.5
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.6153846153846154,
+"weakest": [
+"!",
+0.6153846153846154
+],
+"answers": 13,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "!‼",
+"sets_only": [],
+"score": 0.6148780366869514
+},
+{
+"ends": "} 0 asked · | 0 asked",
+"seq": "} ) |",
+"n": 3,
+"U": 0.6733333333333333,
+"coverage": 0.75,
+"per": {
+"claude": 0.25,
+"gemini": 0.97,
+"grok": 0.8
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.2727272727272727,
+"weakest": [
+")",
+0.2727272727272727
+],
+"answers": 33,
+"rounds": 4,
+"first": "r001",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "|",
+"sets_only": [],
+"score": 0.583123771881522
+},
+{
+"ends": "🞵 0 asked · 🞻 0 asked",
+"seq": "🞵 🞶 🞷 🞸 🞹 🞺 🞻",
+"n": 7,
+"U": 0.5625,
+"coverage": 1.0,
+"per": {
+"claude": 0.9,
+"gemini": 0.45,
+"grok": 0.9,
+"muse": 0.0
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.8864229765013055,
+"weakest": [
+"🞵",
+0.861198738170347
+],
+"answers": 766,
+"rounds": 5,
+"first": "r001",
+"witnessed": 35,
+"origin": "seeded",
+"branches": "🞵🞻",
+"sets_only": [
+"claude"
+],
+"score": 0.5625
+},
+{
+"ends": "ⴷ 0 asked · ⴺ 0 asked",
+"seq": "ⴷ ⴸ ⴹ ⴺ",
+"n": 4,
+"U": 0.6466666666666666,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.0,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.8125,
+"weakest": [
+"ⴸ",
+0.7916666666666666
+],
+"answers": 32,
+"rounds": 2,
+"first": "r004",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.5600297611139369
+},
+{
+"ends": "✩ 0 asked · ✮ 0 asked",
+"seq": "✩ ✫ ✬ ✭ ✮",
+"n": 5,
+"U": 0.5425,
+"coverage": 1.0,
+"per": {
+"claude": 0.885,
+"gemini": 0.485,
+"grok": 0.8,
+"muse": 0.0
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.6541353383458647,
+"weakest": [
+"✩",
+0.6470588235294118
+],
+"answers": 133,
+"rounds": 4,
+"first": "r000",
+"witnessed": 10,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.5425
+},
+{
+"ends": "🮂 5 asked · █ 0 asked",
+"seq": "🮂 🮃 ▀ 🮄 🮅 🮆 █",
+"n": 7,
+"U": 0.5254166666666666,
+"coverage": 1.0,
+"per": {
+"claude": 0.6466666666666666,
+"gemini": 0.485,
+"grok": 0.97,
+"muse": 0.0
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.7927927927927928,
+"weakest": [
+"█",
+0.6044776119402985
+],
+"answers": 555,
+"rounds": 4,
+"first": "r002",
+"witnessed": 35,
+"origin": "seeded",
+"branches": "🮂🮃🮄🮅🮆█",
+"sets_only": [],
+"score": 0.5254166666666666
+},
+{
+"ends": "🌥 0 asked · 🌩 0 asked",
+"seq": "🌥 🌦 🌩",
+"n": 3,
+"U": 0.6033333333333334,
+"coverage": 0.75,
+"per": {
+"claude": 0.81,
+"gemini": 0.35,
+"grok": 0.65
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.5384615384615384,
+"weakest": [
+"🌥",
+0.5384615384615384
+],
+"answers": 13,
+"rounds": 5,
+"first": "r001",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.5225019936166113
+},
+{
+"ends": "0 0 asked · 9 0 asked",
+"seq": "0 1 4 5 6 7 8 𝟵=9",
+"n": 9,
+"U": 0.5208333333333334,
+"coverage": 1.0,
+"per": {
+"claude": 0.6333333333333333,
+"gemini": 0.45,
+"grok": 0.65,
+"muse": 0.35
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.8464017185821697,
+"weakest": [
+"𝟵",
+0.7638888888888888
+],
+"answers": 1862,
+"rounds": 5,
+"first": "r001",
+"witnessed": 80,
+"origin": "seeded",
+"branches": "01456789",
+"sets_only": [
+"claude",
+"grok"
+],
+"score": 0.5208333333333334
+},
+{
+"ends": "Ⅿ 4 asked · ↇ 0 asked",
+"seq": "Ⅿ ↁ ↂ ↇ",
+"n": 4,
+"U": 0.6,
+"coverage": 0.75,
+"per": {
+"claude": 0.9,
+"gemini": 0.9,
+"muse": 0.0
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.7833333333333333,
+"weakest": [
+"ↇ",
+0.7692307692307693
+],
+"answers": 60,
+"rounds": 1,
+"first": "r000",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "ↁↂↇ",
+"sets_only": [],
+"score": 0.5196152422706631
+},
+{
+"ends": "ơ 4 asked · ợ 0 asked",
+"seq": "ơ ỡ ợ",
+"n": 3,
+"U": 0.6,
+"coverage": 0.75,
+"per": {
+"claude": 0.5,
+"gemini": 0.65,
+"grok": 0.65
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.5833333333333334,
+"weakest": [
+"ơ",
+0.5833333333333334
+],
+"answers": 12,
+"rounds": 3,
+"first": "r003",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "",
+"sets_only": [],
+"score": 0.5196152422706631
+},
+{
+"ends": "⁝ 4 asked · : 0 asked",
+"seq": "⁝ ⁞ :",
+"n": 3,
+"U": 0.5833333333333334,
+"coverage": 0.75,
+"per": {
+"claude": 0.45,
+"gemini": 0.65,
+"grok": 0.65
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.09090909090909091,
+"weakest": [
+":",
+0.09090909090909091
+],
+"answers": 22,
+"rounds": 2,
+"first": "r001",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "⁝⁞:",
+"sets_only": [],
+"score": 0.5051814855409226
+},
+{
+"ends": "𝅀 0 asked · 𝅂 0 asked",
+"seq": "𝅀 𝅁 𝅂",
+"n": 3,
+"U": 0.5777777777777778,
+"coverage": 0.75,
+"per": {
+"claude": 0.7633333333333333,
+"gemini": 0.97,
+"grok": 0.0
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.6875,
+"weakest": [
+"𝅀",
+0.6875
+],
+"answers": 16,
+"rounds": 5,
+"first": "r000",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.5003702332976757
+},
+{
+"ends": "ⶠ 0 asked · ⶦ 0 asked",
+"seq": "ⶠ ⶡ ⶦ",
+"n": 3,
+"U": 0.5733333333333334,
+"coverage": 0.75,
+"per": {
+"claude": 0.25,
+"gemini": 0.97,
+"grok": 0.5
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.38461538461538464,
+"weakest": [
+"ⶠ",
+0.38461538461538464
+],
+"answers": 13,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.49652123150307814
+},
+{
+"ends": "二 0 asked · 十 0 asked",
+"seq": "二 五 六 八 十",
+"n": 5,
+"U": 0.5666666666666668,
+"coverage": 0.75,
+"per": {
+"claude": 0.45,
+"gemini": 0.9,
+"grok": 0.35
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.6375,
+"weakest": [
+"六",
+0.625
+],
+"answers": 80,
+"rounds": 1,
+"first": "r005",
+"witnessed": 10,
+"origin": "seeded",
+"branches": "二五八",
+"sets_only": [
+"gemini"
+],
+"score": 0.49074772881118195
+},
+{
+"ends": "ᬇ 6 asked · ᬍ 4 asked",
+"seq": "ᬇ ᬈ ᬉ ᬊ ᬋ ᬌ ᬍ",
+"n": 7,
+"U": 0.97,
+"coverage": 1.0,
+"per": {
+"claude": 0.9700000000000001,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.97
+},
+"support": 0.5,
+"untested": [],
+"agree": 0.9216417910447762,
+"weakest": [
+"ᬇ",
+0.8918918918918919
+],
+"answers": 536,
+"rounds": 6,
+"first": "r000",
+"witnessed": 35,
+"origin": "seeded",
+"branches": "ᬇᬈ",
+"sets_only": [],
+"score": 0.485
+},
+{
+"ends": "☷ 0 asked · ☰ 4 asked",
+"seq": "☷ ☶ ☵ ☴ ☳ ☲ ☱ ☰",
+"n": 8,
+"U": 0.4833333333333334,
+"coverage": 1.0,
+"per": {
+"claude": 0.43333333333333335,
+"gemini": 0.5,
+"grok": 0.65,
+"muse": 0.35
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.5918367346938775,
+"weakest": [
+"☲",
+0.3404255319148936
+],
+"answers": 392,
+"rounds": 3,
+"first": "r003",
+"witnessed": 34,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.4833333333333334
+},
+{
+"ends": "🁁 4 asked · 🁡 4 asked",
+"seq": "🁁 🁉 🁑 🁙 🁡",
+"n": 5,
+"U": 0.4775,
+"coverage": 1.0,
+"per": {
+"claude": 0.43999999999999995,
+"gemini": 0.97,
+"grok": 0.5,
+"muse": 0.0
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.5902777777777778,
+"weakest": [
+"🁡",
+0.5824175824175825
+],
+"answers": 144,
+"rounds": 6,
+"first": "r000",
+"witnessed": 10,
+"origin": "seeded",
+"branches": "🁙🁡",
+"sets_only": [],
+"score": 0.4775
+},
+{
+"ends": "㍉ 0 asked · ㍋ 0 asked",
+"seq": "㍉ ㌢ ㍋",
+"n": 3,
+"U": 0.5483333333333333,
+"coverage": 0.75,
+"per": {
+"claude": 0.175,
+"gemini": 0.97,
+"grok": 0.5
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.46153846153846156,
+"weakest": [
+"㌢",
+0.46153846153846156
+],
+"answers": 13,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.4748705964084672
+},
+{
+"ends": "㎰ 4 asked · ㎮ 0 asked",
+"seq": "㎰ ㎱ ㎮",
+"n": 3,
+"U": 0.54,
+"coverage": 0.75,
+"per": {
+"claude": 0.0,
+"gemini": 0.65,
+"grok": 0.97
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.5,
+"weakest": [
+"㎮",
+0.5
+],
+"answers": 12,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "",
+"sets_only": [],
+"score": 0.4676537180435969
+},
+{
+"ends": "Ⅸ 0 asked · ↈ 0 asked",
+"seq": "Ⅸ ↂ ↁ ↇ ↈ",
+"n": 5,
+"U": 0.86875,
+"coverage": 1.0,
+"per": {
+"claude": 0.775,
+"gemini": 0.9,
+"grok": 0.9,
+"muse": 0.9
+},
+"support": 0.5,
+"untested": [],
+"agree": 0.6176470588235294,
+"weakest": [
+"ↁ",
+0.4358974358974359
+],
+"answers": 68,
+"rounds": 1,
+"first": "r005",
+"witnessed": 6,
+"origin": "seeded",
+"branches": "Ⅸↂↁↇ",
+"sets_only": [
+"muse"
+],
+"score": 0.434375
+},
+{
+"ends": "𝟮 0 asked · 𝟳 4 asked",
+"seq": "𝟮 𝟯 𝟰 𝟱 𝟲 𝟳",
+"n": 6,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 0.5,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"𝟮",
+1.0
+],
+"answers": 164,
+"rounds": 2,
+"first": "r004",
+"witnessed": 20,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.42002232083545277
+},
+{
+"ends": "□ 0 asked · ▩ 0 asked",
+"seq": "□ ▤ ▦ ▩",
+"n": 4,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 0.5,
+"untested": [],
+"agree": 0.8448275862068966,
+"weakest": [
+"▩",
+0.8108108108108109
+],
+"answers": 58,
+"rounds": 3,
+"first": "r003",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "□",
+"sets_only": [],
+"score": 0.42002232083545277
+},
+{
+"ends": "🯰 0 asked · 🯲 0 asked",
+"seq": "🯰 🯱 🯲",
+"n": 3,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 0.5,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"🯰",
+1.0
+],
+"answers": 12,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "🯱",
+"sets_only": [],
+"score": 0.42002232083545277
+},
+{
+"ends": "⒄ 0 asked · ⒆ 0 asked",
+"seq": "⒄ ⒅ ⒆",
+"n": 3,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 0.5,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"⒄",
+1.0
+],
+"answers": 13,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.42002232083545277
+},
+{
+"ends": "𝄛 0 asked · 𝄖 0 asked",
+"seq": "𝄛 𝄚 𝄙 𝄘 𝄗 𝄖",
+"n": 6,
+"U": 0.8033333333333332,
+"coverage": 1.0,
+"per": {
+"claude": 0.9233333333333333,
+"gemini": 0.97,
+"grok": 0.35,
+"muse": 0.97
+},
+"support": 0.5,
+"untested": [],
+"agree": 0.690537084398977,
+"weakest": [
+"𝄛",
+0.6040268456375839
+],
+"answers": 391,
+"rounds": 6,
+"first": "r000",
+"witnessed": 20,
+"origin": "seeded",
+"branches": "",
+"sets_only": [
+"muse"
+],
+"score": 0.4016666666666666
+},
+{
+"ends": "𝍲 0 asked · 𝍴 0 asked",
+"seq": "𝍲 𝍳 𝍴",
+"n": 3,
+"U": 0.9166666666666666,
+"coverage": 0.75,
+"per": {
+"claude": 0.81,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 0.5,
+"untested": [],
+"agree": 0.9166666666666666,
+"weakest": [
+"𝍲",
+0.9166666666666666
+],
+"answers": 12,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.39692831006786766
+},
+{
+"ends": "♩ 0 asked · ♬ 0 asked",
+"seq": "♩ ♪ ♫ ♬",
+"n": 4,
+"U": 0.735,
+"coverage": 1.0,
+"per": {
+"claude": 0.5,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.5
+},
+"support": 0.5,
+"untested": [],
+"agree": 0.7,
+"weakest": [
+"♩",
+0.7
+],
+"answers": 40,
+"rounds": 6,
+"first": "r000",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.3675
+},
+{
+"ends": "1 0 asked · 9 0 asked",
+"seq": "1 2 3 4 5 6 7 8 9",
+"n": 9,
+"U": 0.8422222222222221,
+"coverage": 0.75,
+"per": {
+"claude": 0.6566666666666666,
+"gemini": 0.97,
+"grok": 0.9
+},
+"support": 0.5,
+"untested": [],
+"agree": 0.8791286015460296,
+"weakest": [
+"1",
+0.8181818181818182
+],
+"answers": 1423,
+"rounds": 1,
+"first": "r004",
+"witnessed": 60,
+"origin": "seeded",
+"branches": "1456789",
+"sets_only": [],
+"score": 0.36469292003811354
+},
+{
+"ends": "༬ 0 asked · ༱ 0 asked",
+"seq": "༬ ༭ ༮ ༯ ༰ ༱",
+"n": 6,
+"U": 0.7275,
+"coverage": 1.0,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97,
+"muse": 0.0
+},
+"support": 0.5,
+"untested": [],
+"agree": 0.7954545454545454,
+"weakest": [
+"༬",
+0.7058823529411765
+],
+"answers": 88,
+"rounds": 2,
+"first": "r004",
+"witnessed": 8,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.36375
+},
+{
+"ends": "_ 0 asked · ▃ 0 asked",
+"seq": "_=‗ ▁ ▂ ▃",
+"n": 5,
+"U": 0.4188888888888889,
+"coverage": 0.75,
+"per": {
+"claude": 0.7566666666666667,
+"gemini": 0.15000000000000002,
+"grok": 0.35
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.40793650793650793,
+"weakest": [
+"‗",
+0.1882716049382716
+],
+"answers": 630,
+"rounds": 2,
+"first": "r004",
+"witnessed": 10,
+"origin": "seeded",
+"branches": "_▁▂▃",
+"sets_only": [],
+"score": 0.36276841914081487
+},
+{
+"ends": "🞯 0 asked · 🞻 0 asked",
+"seq": "🞯 🞵 🞻",
+"n": 3,
+"U": 0.4166666666666667,
+"coverage": 0.75,
+"per": {
+"claude": 0.0,
+"gemini": 0.9,
+"grok": 0.35
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.3076923076923077,
+"weakest": [
+"🞯",
+0.3076923076923077
+],
+"answers": 13,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "🞯🞵🞻",
+"sets_only": [],
+"score": 0.3608439182435161
+},
+{
+"ends": "⪅ 4 asked · ⪊ 5 asked",
+"seq": "⪅ ⪆ ⪉ ⪊",
+"n": 4,
+"U": 0.4116666666666666,
+"coverage": 0.75,
+"per": {
+"claude": 0.735,
+"gemini": 0.5,
+"grok": 0.0
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.5714285714285714,
+"weakest": [
+"⪅",
+0.5714285714285714
+],
+"answers": 28,
+"rounds": 5,
+"first": "r001",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.35651379122459387
+},
+{
+"ends": "♠ 0 asked · ♦ 0 asked",
+"seq": "♠ ♥ ♦",
+"n": 3,
+"U": 0.4083333333333334,
+"coverage": 0.75,
+"per": {
+"claude": 0.325,
+"gemini": 0.0,
+"grok": 0.9
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.2857142857142857,
+"weakest": [
+"♠",
+0.2857142857142857
+],
+"answers": 14,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.3536270398786458
+},
+{
+"ends": "⚂ 0 asked · ⚆ 0 asked",
+"seq": "⚂ ⚃ ⚄ ⚅ ⚆",
+"n": 5,
+"U": 0.33625,
+"coverage": 1.0,
+"per": {
+"claude": 0.6599999999999999,
+"gemini": 0.585,
+"grok": 0.1,
+"muse": 0.0
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.6111111111111112,
+"weakest": [
+"⚆",
+0.21428571428571427
+],
+"answers": 252,
+"rounds": 1,
+"first": "r005",
+"witnessed": 10,
+"origin": "seeded",
+"branches": "⚂⚃⚄⚅⚆",
+"sets_only": [],
+"score": 0.33625
+},
+{
+"ends": "📯 0 asked · 🤫 0 asked",
+"seq": "📯 🔔 🤫",
+"n": 3,
+"U": 0.38166666666666665,
+"coverage": 0.75,
+"per": {
+"claude": 0.175,
+"gemini": 0.97,
+"grok": 0.0
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.23076923076923078,
+"weakest": [
+"📯",
+0.23076923076923078
+],
+"answers": 13,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.3305330291110607
+},
+{
+"ends": "■ 0 asked · ▫ 0 asked",
+"seq": "■ ◼ ▫",
+"n": 3,
+"U": 0.75,
+"coverage": 0.75,
+"per": {
+"claude": 0.45,
+"gemini": 0.9,
+"grok": 0.9
+},
+"support": 0.5,
+"untested": [],
+"agree": 0.6428571428571429,
+"weakest": [
+"■",
+0.6428571428571429
+],
+"answers": 14,
+"rounds": 3,
+"first": "r003",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "■◼▫",
+"sets_only": [],
+"score": 0.3247595264191645
+},
+{
+"ends": "㊵ 0 asked · ㊷ 0 asked",
+"seq": "㊵ ㊶ ㊷",
+"n": 3,
+"U": 0.9166666666666666,
+"coverage": 0.75,
+"per": {
+"claude": 0.81,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 0.4,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"㊵",
+1.0
+],
+"answers": 16,
+"rounds": 5,
+"first": "r000",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.31754264805429416
+},
+{
+"ends": "∅ 0 asked · ⊆ 0 asked",
+"seq": "∅ ⊂ ⊆",
+"n": 3,
+"U": 0.7166666666666667,
+"coverage": 0.75,
+"per": {
+"claude": 0.35,
+"gemini": 0.9,
+"grok": 0.9
+},
+"support": 0.5,
+"untested": [],
+"agree": 0.25,
+"weakest": [
+"∅",
+0.25
+],
+"answers": 12,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "⊂⊆",
+"sets_only": [
+"grok"
+],
+"score": 0.3103257696894238
+},
+{
+"ends": "ᐁ 0 asked · ᐃ 0 asked",
+"seq": "ᐁ ᐅ ᐃ",
+"n": 3,
+"U": 0.7016666666666667,
+"coverage": 0.75,
+"per": {
+"claude": 0.485,
+"gemini": 0.65,
+"grok": 0.97
+},
+"support": 0.5,
+"untested": [],
+"agree": 0.4666666666666667,
+"weakest": [
+"ᐁ",
+0.4666666666666667
+],
+"answers": 15,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.30383057916104056
+},
+{
+"ends": "🮀 0 asked · 🮅 0 asked",
+"seq": "🮀 🮂 🮃 🮄 🮅",
+"n": 5,
+"U": 0.7000000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.3,
+"gemini": 0.9,
+"grok": 0.9
+},
+"support": 0.5,
+"untested": [],
+"agree": 0.8258064516129032,
+"weakest": [
+"🮀",
+0.6153846153846154
+],
+"answers": 155,
+"rounds": 1,
+"first": "r005",
+"witnessed": 10,
+"origin": "seeded",
+"branches": "🮂🮃🮄🮅",
+"sets_only": [],
+"score": 0.30310889132455354
+},
+{
+"ends": "⁎ 0 asked · ★ 0 asked",
+"seq": "⁎ ✱ ★",
+"n": 3,
+"U": 0.33888888888888885,
+"coverage": 0.75,
+"per": {
+"claude": 0.11666666666666665,
+"gemini": 0.9,
+"grok": 0.0
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.25,
+"weakest": [
+"⁎",
+0.25
+],
+"answers": 16,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.2934863868380597
+},
+{
+"ends": "▪ 0 asked · ◻ 0 asked",
+"seq": "▪ ■ □ ◻",
+"n": 4,
+"U": 0.6316666666666667,
+"coverage": 0.75,
+"per": {
+"claude": 0.575,
+"gemini": 0.97,
+"grok": 0.35
+},
+"support": 0.5,
+"untested": [],
+"agree": 0.29411764705882354,
+"weakest": [
+"◻",
+0.15
+],
+"answers": 34,
+"rounds": 5,
+"first": "r000",
+"witnessed": 2,
+"origin": "seeded",
+"branches": "▪■□◻",
+"sets_only": [],
+"score": 0.2735196900285852
+},
+{
+"ends": "𝌁 0 asked · 𝌅 0 asked",
+"seq": "𝌁 𝌂 𝌅",
+"n": 3,
+"U": 0.6066666666666666,
+"coverage": 0.75,
+"per": {
+"claude": 0.6599999999999999,
+"gemini": 0.6599999999999999,
+"grok": 0.5
+},
+"support": 0.5,
+"untested": [],
+"agree": 0.4782608695652174,
+"weakest": [
+"𝌁",
+0.4782608695652174
+],
+"answers": 23,
+"rounds": 2,
+"first": "r003",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "𝌁𝌂",
+"sets_only": [],
+"score": 0.2626943724812797
+},
+{
+"ends": "➀ 0 asked · ➊ 0 asked",
+"seq": "➀ ⓵ ➊",
+"n": 3,
+"U": 0.27499999999999997,
+"coverage": 0.75,
+"per": {
+"claude": 0.175,
+"gemini": 0.65,
+"grok": 0.0
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.2857142857142857,
+"weakest": [
+"⓵",
+0.2857142857142857
+],
+"answers": 14,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "➀⓵",
+"sets_only": [],
+"score": 0.23815698604072058
+},
+{
+"ends": "𝟙 0 asked · 𝟭 0 asked",
+"seq": "𝟙 𝟣 𝟭",
+"n": 3,
+"U": 0.26666666666666666,
+"coverage": 0.75,
+"per": {
+"claude": 0.1,
+"gemini": 0.35,
+"grok": 0.35
+},
+"support": 1.0,
+"untested": [],
+"agree": 0.3125,
+"weakest": [
+"𝟙",
+0.3125
+],
+"answers": 16,
+"rounds": 2,
+"first": "r001",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.2309401076758503
+},
+{
+"ends": "- 0 asked · | 4 asked",
+"seq": "- ⋮ |",
+"n": 3,
+"U": 0.3,
+"coverage": 0.75,
+"per": {
+"claude": 0.0,
+"gemini": 0.9,
+"grok": 0.0
+},
+"support": 0.5,
+"untested": [],
+"agree": 0.14285714285714285,
+"weakest": [
+"-",
+0.14285714285714285
+],
+"answers": 14,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "-|",
+"sets_only": [],
+"score": 0.12990381056766578
+},
+{
+"ends": "① 0 asked · ⑪ 0 asked",
+"seq": "① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪",
+"n": 11,
+"U": 0.9,
+"coverage": 1.0,
+"per": {
+"claude": 0.9,
+"gemini": 0.9,
+"grok": 0.9,
+"muse": 0.9
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.9857723577235772,
+"weakest": [
+"①",
+0.9622641509433962
+],
+"answers": 1476,
+"rounds": 2,
+"first": "r002",
+"witnessed": 78,
+"origin": "seeded",
+"branches": "①⑨⑪",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "㏨ 0 asked · ㏡ 0 asked",
+"seq": "㏨ ㏧ ㏦ ㏥ ㏤ ㏣ ㏢ ㏡",
+"n": 8,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.9586466165413534,
+"weakest": [
+"㏨",
+0.5384615384615384
+],
+"answers": 266,
+"rounds": 0,
+"first": "r005",
+"witnessed": 25,
+"origin": "seeded",
+"branches": "",
+"sets_only": [
+"claude"
+],
+"score": 0.0
+},
+{
+"ends": "▁ 0 asked · █ 0 asked",
+"seq": "▁ ▂ ▃ ▄ ▅ ▆ ▇ █",
+"n": 8,
+"U": 0.7687499999999999,
+"coverage": 1.0,
+"per": {
+"claude": 0.9,
+"gemini": 0.375,
+"grok": 0.9,
+"muse": 0.9
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.8868447082096934,
+"weakest": [
+"▁",
+0.7285879629629629
+],
+"answers": 5055,
+"rounds": 4,
+"first": "r002",
+"witnessed": 56,
+"origin": "seeded",
+"branches": "▁▂▃▄▅▆▇█",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "⑭ 0 asked · ⑳ 0 asked",
+"seq": "⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳",
+"n": 7,
+"U": 0.9,
+"coverage": 0.75,
+"per": {
+"claude": 0.9,
+"gemini": 0.9,
+"grok": 0.9
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.9933774834437086,
+"weakest": [
+"⑭",
+0.9838709677419355
+],
+"answers": 302,
+"rounds": 1,
+"first": "r003",
+"witnessed": 35,
+"origin": "seeded",
+"branches": "⑲",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "🞣 0 asked · 🞧 0 asked",
+"seq": "🞣 🞤 🞥 🞦 🞧",
+"n": 5,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.975,
+"weakest": [
+"🞤",
+0.9615384615384616
+],
+"answers": 120,
+"rounds": 2,
+"first": "r002",
+"witnessed": 10,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "⅞ 0 asked · ¼ 0 asked",
+"seq": "⅞ ⅝ ⅜ ⅓ ¼",
+"n": 5,
+"U": 0.9166666666666666,
+"coverage": 0.75,
+"per": {
+"claude": 0.81,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.8823529411764706,
+"weakest": [
+"⅓",
+0.6666666666666666
+],
+"answers": 34,
+"rounds": 0,
+"first": "r005",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "⅝⅜⅓¼",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "½ 0 asked · ⅙ 0 asked",
+"seq": "½ ⅜ ⅓ ⅕ ⅙",
+"n": 5,
+"U": 0.7016666666666667,
+"coverage": 0.75,
+"per": {
+"claude": 0.65,
+"gemini": 0.485,
+"grok": 0.97
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.6,
+"weakest": [
+"⅜",
+0.5344827586206896
+],
+"answers": 90,
+"rounds": 1,
+"first": "r005",
+"witnessed": 6,
+"origin": "seeded",
+"branches": "½⅜⅓",
+"sets_only": [
+"grok"
+],
+"score": 0.0
+},
+{
+"ends": "𒐀 0 asked · 𒐃 0 asked",
+"seq": "𒐀 𒐁 𒐂 𒐃",
+"n": 4,
+"U": 0.97,
+"coverage": 0.5,
+"per": {
+"claude": 0.9700000000000001,
+"grok": 0.97
+},
+"support": 0.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"𒐀",
+1.0
+],
+"answers": 28,
+"rounds": 2,
+"first": "r004",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "β 0 asked · ε 4 asked",
+"seq": "β γ δ ε",
+"n": 4,
+"U": 0.9416666666666668,
+"coverage": 0.75,
+"per": {
+"claude": 0.885,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 0.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"β",
+1.0
+],
+"answers": 48,
+"rounds": 1,
+"first": "r004",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "¾ 0 asked · ¼ 0 asked",
+"seq": "¾ ½ ⅓ ¼",
+"n": 4,
+"U": 0.8416666666666667,
+"coverage": 0.75,
+"per": {
+"claude": 0.585,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.9411764705882353,
+"weakest": [
+"⅓",
+0.8333333333333334
+],
+"answers": 34,
+"rounds": 3,
+"first": "r003",
+"witnessed": 2,
+"origin": "emergent",
+"branches": "¾½⅓¼",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "𝂝 0 asked · 𝂠 0 asked",
+"seq": "𝂝 𝂞 𝂟 𝂠",
+"n": 4,
+"U": 0.77,
+"coverage": 0.75,
+"per": {
+"claude": 0.54,
+"gemini": 0.97,
+"grok": 0.8
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.75,
+"weakest": [
+"𝂝",
+0.75
+],
+"answers": 32,
+"rounds": 1,
+"first": "r004",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "𝂞",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "∘ 0 asked · ◯ 0 asked",
+"seq": "∘ ◦ ○ ◯",
+"n": 4,
+"U": 0.8666666666666666,
+"coverage": 0.75,
+"per": {
+"claude": 0.6599999999999999,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.7,
+"weakest": [
+"∘",
+0.625
+],
+"answers": 20,
+"rounds": 1,
+"first": "r004",
+"witnessed": 3,
+"origin": "emergent",
+"branches": "○",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "₋ 0 asked · ¯ 0 asked",
+"seq": "₋ - ⁻ ¯",
+"n": 4,
+"U": 0.7055555555555556,
+"coverage": 0.75,
+"per": {
+"claude": 0.6466666666666666,
+"gemini": 0.97,
+"grok": 0.5
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.5625,
+"weakest": [
+"¯",
+0.5
+],
+"answers": 32,
+"rounds": 1,
+"first": "r005",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "-",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "₁ 0 asked · ₆ 0 asked",
+"seq": "₁ ₃ ₄ ₆",
+"n": 4,
+"U": 0.5233333333333333,
+"coverage": 0.75,
+"per": {
+"claude": 0.25,
+"gemini": 0.97,
+"grok": 0.35
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.5,
+"weakest": [
+"₁",
+0.5
+],
+"answers": 32,
+"rounds": 1,
+"first": "r005",
+"witnessed": 4,
+"origin": "seeded",
+"branches": "₁₆",
+"sets_only": [
+"gemini"
+],
+"score": 0.0
+},
+{
+"ends": "o 0 asked · ◐ 0 asked",
+"seq": "o ○ ◔ ◐",
+"n": 4,
+"U": 0.8722222222222222,
+"coverage": 0.75,
+"per": {
+"claude": 0.8166666666666668,
+"gemini": 0.9,
+"grok": 0.9
+},
+"support": 0.0,
+"untested": [
+"o○"
+],
+"agree": 0.759493670886076,
+"weakest": [
+"○",
+0.759493670886076
+],
+"answers": 79,
+"rounds": 0,
+"first": "r005",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "○◔◐",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "🌑 0 asked · 🌖 0 asked",
+"seq": "🌑 🌗 🌖",
+"n": 3,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.7692307692307693,
+"weakest": [
+"🌑",
+0.7692307692307693
+],
+"answers": 13,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "🌗",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "🕔 0 asked · 🕖 5 asked",
+"seq": "🕔 🕕 🕖",
+"n": 3,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 0.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"🕔",
+1.0
+],
+"answers": 13,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "🕖",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "㎛ 0 asked · ㎝ 0 asked",
+"seq": "㎛ ㎜ ㎝",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"㎛",
+1.0
+],
+"answers": 5,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "㎜㎝",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "🯱 0 asked · 🯵 0 asked",
+"seq": "🯱 🯴 🯵",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.0,
+"untested": [],
+"agree": 0.5,
+"weakest": [
+"🯱",
+0.5
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "🯱🯴🯵",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "⚀ 5 asked · ⚆ 0 asked",
+"seq": "⚀ ⚁ ⚆",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.5,
+"untested": [],
+"agree": 0.25,
+"weakest": [
+"⚀",
+0.25
+],
+"answers": 8,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "⚀⚁⚆",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "𝀯 0 asked · 𝀱 0 asked",
+"seq": "𝀯 𝀰 𝀱",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"𝀯",
+1.0
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": ", 4 asked · : 0 asked",
+"seq": ", ; :",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 0.75,
+"weakest": [
+",",
+0.75
+],
+"answers": 4,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": ":",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "㎜ 5 asked · ㎞ 5 asked",
+"seq": "㎜ ㎝ ㎞",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"㎜",
+1.0
+],
+"answers": 4,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "㎜㎝",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "፮ 0 asked · ፬ 0 asked",
+"seq": "፮ ፭ ፬",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.5,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"፬",
+1.0
+],
+"answers": 4,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "ⅹ 0 asked · ⅻ 0 asked",
+"seq": "ⅹ ⅺ ⅻ",
+"n": 3,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 0.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"ⅹ",
+1.0
+],
+"answers": 13,
+"rounds": 2,
+"first": "r003",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "ⅹⅺⅻ",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "▇ 0 asked · █ 0 asked",
+"seq": "▇ ▉ █",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.0,
+"untested": [],
+"agree": 0.625,
+"weakest": [
+"▇",
+0.625
+],
+"answers": 8,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "▇▉█",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "ᚈ 0 asked · ᚅ 6 asked",
+"seq": "ᚈ ᚄ ᚅ",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 0.5,
+"weakest": [
+"ᚄ",
+0.5
+],
+"answers": 4,
+"rounds": 0,
+"first": "r005",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "𝅝 0 asked · 𝅘𝅥𝅰 0 asked",
+"seq": "𝅝 𝅘𝅥𝅯 𝅘𝅥𝅰",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.9,
+"untested": [],
+"agree": 0.5,
+"weakest": [
+"𝅝",
+0.5
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "㍞ 0 asked · ㍠ 0 asked",
+"seq": "㍞ ㍟ ㍠",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 0.75,
+"weakest": [
+"㍞",
+0.75
+],
+"answers": 4,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "㍞",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "𒐅 0 asked · 𒐇 0 asked",
+"seq": "𒐅 𒐆 𒐇",
+"n": 3,
+"U": 0.8666666666666666,
+"coverage": 0.75,
+"per": {
+"claude": 0.6599999999999999,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.7142857142857143,
+"weakest": [
+"𒐅",
+0.7142857142857143
+],
+"answers": 14,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "➇ 0 asked · ➍ 0 asked",
+"seq": "➇ ➆ ➍",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.5,
+"untested": [],
+"agree": 0.4444444444444444,
+"weakest": [
+"➆",
+0.4444444444444444
+],
+"answers": 9,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "➇➆➍",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "🞪 0 asked · 🞭 0 asked",
+"seq": "🞪 🞬 🞭",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.0,
+"untested": [],
+"agree": 0.75,
+"weakest": [
+"🞪",
+0.75
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "🞪",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "🡪 0 asked · 🡺 0 asked",
+"seq": "🡪 🡲 🡺",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.5,
+"untested": [],
+"agree": 0.5,
+"weakest": [
+"🡪",
+0.5
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "⨌ 0 asked · ∬ 0 asked",
+"seq": "⨌ ∭ ∬",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"∬",
+1.0
+],
+"answers": 6,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "🌫 0 asked · 🪵 0 asked",
+"seq": "🌫 🔥 🪵",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"🌫",
+1.0
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "🔥",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "⁰ 0 asked · ⁶ 0 asked",
+"seq": "⁰ ⁴ ⁶",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.0,
+"untested": [],
+"agree": 0.6,
+"weakest": [
+"⁰",
+0.6
+],
+"answers": 5,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "⁰⁴⁶",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "🕖 0 asked · 🕘 0 asked",
+"seq": "🕖 🕗 🕘",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"🕖",
+1.0
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "🕖",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "┌ 0 asked · ┘ 0 asked",
+"seq": "┌ └ ┘",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 0.8333333333333334,
+"weakest": [
+"┌",
+0.8333333333333334
+],
+"answers": 6,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "㍜ 0 asked · ㍞ 0 asked",
+"seq": "㍜ ㍝ ㍞",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 0.8333333333333334,
+"weakest": [
+"㍜",
+0.8333333333333334
+],
+"answers": 6,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "㍞",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "㊳ 0 asked · ㊲ 0 asked",
+"seq": "㊳=㉚=㊲",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.0,
+"untested": [],
+"agree": 0.0,
+"weakest": [
+"㉚",
+0.0
+],
+"answers": 5,
+"rounds": 2,
+"first": "r004",
+"witnessed": 0,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "𝂚 0 asked · 𝂡 0 asked",
+"seq": "𝂚 𝂞 𝂡",
+"n": 3,
+"U": 0.6566666666666666,
+"coverage": 0.75,
+"per": {
+"claude": 0.5,
+"gemini": 0.97,
+"grok": 0.5
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.6923076923076923,
+"weakest": [
+"𝂚",
+0.6923076923076923
+],
+"answers": 13,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "𝂞",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "⡿ 0 asked · ⣿ 0 asked",
+"seq": "⡿ ⣷ ⣿",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.5,
+"untested": [],
+"agree": 0.4,
+"weakest": [
+"⡿",
+0.4
+],
+"answers": 5,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "⡿⣿",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "² 0 asked · ⁰ 0 asked",
+"seq": "² ¹ ⁰",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"²",
+1.0
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "²¹⁰",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "🐘 0 asked · 🐜 0 asked",
+"seq": "🐘 🐎 🐜",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.0,
+"untested": [],
+"agree": 0.75,
+"weakest": [
+"🐎",
+0.75
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "🐘🐎🐜",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "㍫ 0 asked · ㍭ 0 asked",
+"seq": "㍫ ㍬ ㍭",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 0.8,
+"weakest": [
+"㍫",
+0.8
+],
+"answers": 5,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "🁙 0 asked · 🁩 0 asked",
+"seq": "🁙 🁡 🁩",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"🁙",
+1.0
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "🁙🁡",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "〸 0 asked · 〺 0 asked",
+"seq": "〸 〹 〺",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 0.75,
+"weakest": [
+"〸",
+0.75
+],
+"answers": 8,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "ⅶ 0 asked · ⅺ 0 asked",
+"seq": "ⅶ ⅷ ⅺ",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.0,
+"untested": [],
+"agree": 0.5,
+"weakest": [
+"ⅶ",
+0.5
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "ⅶⅷⅺ",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "𝍣 0 asked · 𝍧 0 asked",
+"seq": "𝍣 𝍤 𝍧",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.0,
+"untested": [],
+"agree": 0.5,
+"weakest": [
+"𝍣",
+0.5
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "𝍣𝍤",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "㎁ 0 asked · ㎄ 0 asked",
+"seq": "㎁ ㎂ ㎄",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 0.8,
+"weakest": [
+"㎁",
+0.8
+],
+"answers": 5,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "𝌂 4 asked · 𝌀 0 asked",
+"seq": "𝌂 𝌁 𝌀",
+"n": 3,
+"U": 0.9700000000000001,
+"coverage": 0.75,
+"per": {
+"claude": 0.97,
+"gemini": 0.97,
+"grok": 0.97
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.875,
+"weakest": [
+"𝌀",
+0.875
+],
+"answers": 24,
+"rounds": 4,
+"first": "r000",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "𝌂𝌁",
+"sets_only": [
+"grok"
+],
+"score": 0.0
+},
+{
+"ends": "⚇ 0 asked · ⚉ 0 asked",
+"seq": "⚇ ⚈ ⚉",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.9,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"⚇",
+1.0
+],
+"answers": 4,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "ᬆ 0 asked · ᬈ 0 asked",
+"seq": "ᬆ ᬇ ᬈ",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"ᬆ",
+1.0
+],
+"answers": 5,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "ᬇᬈ",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "𐄠 4 asked · 𐄞 0 asked",
+"seq": "𐄠 𐄟 𐄞",
+"n": 3,
+"U": 0.6333333333333333,
+"coverage": 0.75,
+"per": {
+"claude": 0.9,
+"gemini": 0.1,
+"grok": 0.9
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.9230769230769231,
+"weakest": [
+"𐄞",
+0.9230769230769231
+],
+"answers": 13,
+"rounds": 0,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "ⅷ 0 asked · ⅻ 0 asked",
+"seq": "ⅷ ⅺ ⅻ",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.0,
+"untested": [],
+"agree": 0.5,
+"weakest": [
+"ⅷ",
+0.5
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "ⅷⅺⅻ",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "0 0 asked · 𝟐 0 asked",
+"seq": "0 𝟏 𝟐",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"0",
+1.0
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "0𝟏𝟐",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "E 0 asked · e 0 asked",
+"seq": "E ᴇ e",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.6,
+"untested": [],
+"agree": 0.5,
+"weakest": [
+"E",
+0.5
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "㎶ 0 asked · ㎸ 0 asked",
+"seq": "㎶ ㎷ ㎸",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 0.8,
+"weakest": [
+"㎶",
+0.8
+],
+"answers": 5,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "㍣ 0 asked · ㍥ 0 asked",
+"seq": "㍣ ㍤ ㍥",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"㍣",
+1.0
+],
+"answers": 4,
+"rounds": 2,
+"first": "r004",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "❺ 0 asked · ❿ 0 asked",
+"seq": "❺ ❻ ❿",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.0,
+"untested": [],
+"agree": 0.5,
+"weakest": [
+"❺",
+0.5
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "❺❻",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "𝟎 0 asked · 𝟐 0 asked",
+"seq": "𝟎 𝟏 𝟐",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.5,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"𝟎",
+1.0
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "𝟏𝟐",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "① 0 asked · ⑲ 0 asked",
+"seq": "① ⑬ ⑲",
+"n": 3,
+"U": 0.688888888888889,
+"coverage": 0.75,
+"per": {
+"claude": 0.8166666666666668,
+"gemini": 0.9,
+"grok": 0.35
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.8,
+"weakest": [
+"①",
+0.8
+],
+"answers": 15,
+"rounds": 2,
+"first": "r003",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "①⑬⑲",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "🞨 0 asked · 🞮 0 asked",
+"seq": "🞨 🞪 🞮",
+"n": 3,
+"U": 0.9,
+"coverage": 0.75,
+"per": {
+"claude": 0.9,
+"gemini": 0.9,
+"grok": 0.9
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.7142857142857143,
+"weakest": [
+"🞨",
+0.7142857142857143
+],
+"answers": 14,
+"rounds": 6,
+"first": "r000",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "🞪",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "▫ 0 asked · ⬜ 0 asked",
+"seq": "▫ ◼ ⬜",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.5,
+"untested": [],
+"agree": 0.5,
+"weakest": [
+"▫",
+0.5
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "▫◼⬜",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "ⅳ 4 asked · ⅹ 0 asked",
+"seq": "ⅳ ⅴ ⅹ",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.0,
+"untested": [],
+"agree": 0.5,
+"weakest": [
+"ⅳ",
+0.5
+],
+"answers": 6,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "ⅳⅴⅹ",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "⑨ 0 asked · ⑬ 0 asked",
+"seq": "⑨ ⑪ ⑬",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.0,
+"untested": [],
+"agree": 1.0,
+"weakest": [
+"⑨",
+1.0
+],
+"answers": 4,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "⑨⑪⑬",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "➆ 0 asked · ➍ 0 asked",
+"seq": "➆ ➃ ➍",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.0,
+"untested": [],
+"agree": 0.3333333333333333,
+"weakest": [
+"➃",
+0.3333333333333333
+],
+"answers": 9,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "➆➃➍",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "⋀ 0 asked · ⋁ 0 asked",
+"seq": "⋀ ⋂ ⋁",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 0.3,
+"weakest": [
+"⋀",
+0.3
+],
+"answers": 10,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "⋁",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "O 0 asked · ⁞ 0 asked",
+"seq": "O ⚁ ⁞",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.5,
+"untested": [],
+"agree": 0.4,
+"weakest": [
+"O",
+0.4
+],
+"answers": 5,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "O⚁⁞",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "⁹ 0 asked · ₀ 0 asked",
+"seq": "⁹ ₁ ₀",
+"n": 3,
+"U": 0.375,
+"coverage": 0.75,
+"per": {
+"claude": 0.375,
+"gemini": 0.1,
+"grok": 0.65
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.08695652173913043,
+"weakest": [
+"⁹",
+0.08695652173913043
+],
+"answers": 23,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "₁₀",
+"sets_only": [
+"grok"
+],
+"score": 0.0
+},
+{
+"ends": "🌗 0 asked · 🌓 0 asked",
+"seq": "🌗=🌘=🌓",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 1.0,
+"untested": [],
+"agree": 0.0,
+"weakest": [
+"",
+NaN
+],
+"answers": 0,
+"rounds": 0,
+"first": "r005",
+"witnessed": 0,
+"origin": "emergent",
+"branches": "🌗",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "▁ 0 asked · ▒ 0 asked",
+"seq": "▁ ░ ▒",
+"n": 3,
+"U": 0.3333333333333333,
+"coverage": 0.75,
+"per": {
+"claude": 0.65,
+"gemini": 0.0,
+"grok": 0.35
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.4444444444444444,
+"weakest": [
+"▁",
+0.4444444444444444
+],
+"answers": 18,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "▁░▒",
+"sets_only": [
+"claude"
+],
+"score": 0.0
+},
+{
+"ends": "g 0 asked · Ċ 0 asked",
+"seq": "g=Ġ Ċ",
+"n": 3,
+"U": 0.21388888888888888,
+"coverage": 0.75,
+"per": {
+"claude": 0.06666666666666667,
+"gemini": 0.22499999999999998,
+"grok": 0.35
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.037037037037037035,
+"weakest": [
+"g",
+0.037037037037037035
+],
+"answers": 54,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "gĠ",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "┈ 6 asked · ─ 0 asked",
+"seq": "┈ ┄ ─",
+"n": 3,
+"U": 0.8166666666666668,
+"coverage": 0.75,
+"per": {
+"claude": 0.9,
+"gemini": 0.9,
+"grok": 0.65
+},
+"support": 0.0,
+"untested": [],
+"agree": 0.8260869565217391,
+"weakest": [
+"─",
+0.8260869565217391
+],
+"answers": 23,
+"rounds": 1,
+"first": "r000",
+"witnessed": 1,
+"origin": "seeded",
+"branches": "┈┄",
+"sets_only": [],
+"score": 0.0
+},
+{
+"ends": "␥ 0 asked · 👶 0 asked",
+"seq": "␥ ㄊ 👶",
+"n": 3,
+"U": 0.0,
+"coverage": 0.0,
+"per": {},
+"support": 0.0,
+"untested": [],
+"agree": 0.625,
+"weakest": [
+"␥",
+0.625
+],
+"answers": 8,
+"rounds": 1,
+"first": "r005",
+"witnessed": 1,
+"origin": "emergent",
+"branches": "",
+"sets_only": [],
+"score": 0.0
+}
+]
