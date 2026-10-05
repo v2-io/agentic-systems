@@ -1,5 +1,11 @@
 [
 {
+"full_support": [
+"claude",
+"gemini",
+"grok",
+"muse"
+],
 "seq": [
 "①",
 "②",
@@ -23,15 +29,67 @@
 "families": 4,
 "branch_at": [
 "①",
+"②",
+"③",
+"④",
 "⑤",
 "⑥",
+"⑦",
 "⑧"
 ],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok",
+"muse"
+],
+"seq": [
+"⓵",
+"⓶",
+"⓷",
+"⓸",
+"⓹",
+"⓺",
+"⓻",
+"⓼",
+"⓽",
+"⓾"
+],
+"n": 10,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0,
+"muse": 1.0
+},
+"U": 1.0,
+"families": 4,
+"branch_at": [
+"⓵",
+"⓶",
+"⓷",
+"⓸",
+"⓹",
+"⓺",
+"⓻",
+"⓼",
+"⓽",
+"⓾"
+],
 "hints": [
-"⑪"
+"➍"
 ]
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok",
+"muse"
+],
 "seq": [
 "█",
 "▉",
@@ -52,11 +110,59 @@
 "U": 1.0,
 "families": 4,
 "branch_at": [
-"█"
+"█",
+"▉",
+"▊",
+"▋",
+"▌",
+"▍",
+"▎",
+"▏"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok",
+"muse"
+],
+"seq": [
+"①",
+"②",
+"③",
+"④",
+"⑤",
+"⑦",
+"⑪"
+],
+"n": 7,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0,
+"muse": 1.0
+},
+"U": 1.0,
+"families": 4,
+"branch_at": [
+"①",
+"②",
+"③",
+"④",
+"⑤",
+"⑦"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok",
+"muse"
+],
 "seq": [
 "㉈",
 "㉉",
@@ -75,12 +181,20 @@
 },
 "U": 1.0,
 "families": 4,
-"branch_at": [],
-"hints": [
-"㉏"
-]
+"branch_at": [
+"㉈",
+"㉉",
+"㉊"
+],
+"hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok",
+"muse"
+],
 "seq": [
 "➋",
 "➌",
@@ -98,10 +212,18 @@
 },
 "U": 1.0,
 "families": 4,
-"branch_at": [],
+"branch_at": [
+"➍"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok",
+"muse"
+],
 "seq": [
 "🞵",
 "🞶",
@@ -119,35 +241,18 @@
 },
 "U": 1.0,
 "families": 4,
-"branch_at": [],
+"branch_at": [
+"🞵"
+],
 "hints": []
 },
 {
-"seq": [
-"○",
-"◔",
-"◑",
-"◕",
-"●"
+"full_support": [
+"claude",
+"gemini",
+"grok",
+"muse"
 ],
-"n": 5,
-"per": {
-"claude": 1.0,
-"gemini": 1.0,
-"grok": 1.0,
-"muse": 1.0
-},
-"U": 1.0,
-"families": 4,
-"branch_at": [
-"○",
-"●"
-],
-"hints": [
-"◐"
-]
-},
-{
 "seq": [
 "꜈",
 "꜉",
@@ -168,6 +273,12 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok",
+"muse"
+],
 "seq": [
 "৴",
 "৵",
@@ -187,6 +298,12 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok",
+"muse"
+],
 "seq": [
 "௧",
 "௰",
@@ -206,6 +323,12 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok",
+"muse"
+],
 "seq": [
 "╭",
 "╮",
@@ -225,28 +348,12 @@
 "hints": []
 },
 {
-"seq": [
-"█",
-"▓",
-"▒",
-"░"
+"full_support": [
+"claude",
+"gemini",
+"grok",
+"muse"
 ],
-"n": 4,
-"per": {
-"claude": 1.0,
-"gemini": 1.0,
-"grok": 1.0,
-"muse": 1.0
-},
-"U": 1.0,
-"families": 4,
-"branch_at": [
-"█",
-"▓"
-],
-"hints": []
-},
-{
 "seq": [
 "㆙",
 "㆚",
@@ -266,28 +373,11 @@
 "hints": []
 },
 {
-"seq": [
-"🎆",
-"🔥",
-"🕯"
+"full_support": [
+"gemini",
+"grok",
+"muse"
 ],
-"n": 3,
-"per": {
-"claude": 1.0,
-"gemini": 1.0,
-"grok": 1.0,
-"muse": 1.0
-},
-"U": 1.0,
-"families": 4,
-"branch_at": [
-"🎆",
-"🔥",
-"🕯"
-],
-"hints": []
-},
-{
 "seq": [
 "٠",
 "١",
@@ -313,6 +403,10 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"muse"
+],
 "seq": [
 "⓵",
 "⓶",
@@ -321,23 +415,98 @@
 "⓹",
 "⓺",
 "⓻",
-"⓼",
 "⓽",
+"⓼",
 "⓾"
 ],
 "n": 10,
 "per": {
-"claude": 0.875,
-"gemini": 1.0,
-"grok": 1.0,
+"claude": 1.0,
+"gemini": 0.75,
+"grok": 0.75,
 "muse": 1.0
 },
-"U": 0.96875,
+"U": 0.875,
 "families": 4,
-"branch_at": [],
+"branch_at": [
+"⓵",
+"⓶",
+"⓷",
+"⓸",
+"⓹",
+"⓺",
+"⓻",
+"⓽",
+"⓼",
+"⓾"
+],
+"hints": [
+"➍"
+]
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"'",
+"🕯",
+"🔥",
+"🎆"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0,
+"muse": 0.5
+},
+"U": 0.875,
+"families": 4,
+"branch_at": [
+"'",
+"🕯",
+"🔥",
+"🎆"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"muse"
+],
+"seq": [
+"㉈",
+"㉉",
+"㉊",
+"㉏"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 0.5,
+"muse": 1.0
+},
+"U": 0.875,
+"families": 4,
+"branch_at": [
+"㉈",
+"㉉",
+"㉊"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "⑴",
 "⑵",
@@ -359,11 +528,20 @@
 "U": 1.0,
 "families": 3,
 "branch_at": [
+"⑴",
+"⑵",
+"⑶",
+"⑷",
 "⑹"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "𝋧",
 "𝋨",
@@ -385,11 +563,23 @@
 "U": 1.0,
 "families": 3,
 "branch_at": [
-"𝋧"
+"𝋧",
+"𝋨",
+"𝋫",
+"𝋬",
+"𝋭",
+"𝋮",
+"𝋯",
+"𝋰"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "1",
 "2",
@@ -410,15 +600,26 @@
 "U": 1.0,
 "families": 3,
 "branch_at": [
-"1"
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"8",
+"9",
+"🔟"
 ],
 "hints": [
-"0",
-"7",
-"𝟵"
+"7"
 ]
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "０",
 "１",
@@ -445,34 +646,11 @@
 "hints": []
 },
 {
-"seq": [
-"_",
-"▂",
-"▃",
-"▄",
-"▅",
-"▆",
-"▇",
-"█"
+"full_support": [
+"claude",
+"gemini",
+"grok"
 ],
-"n": 8,
-"per": {
-"claude": 1.0,
-"gemini": 1.0,
-"grok": 1.0
-},
-"U": 1.0,
-"families": 3,
-"branch_at": [
-"▅",
-"█"
-],
-"hints": [
-"‗",
-"▁"
-]
-},
-{
 "seq": [
 "༠",
 "༡",
@@ -497,6 +675,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "០",
 "១",
@@ -515,12 +698,21 @@
 },
 "U": 1.0,
 "families": 3,
-"branch_at": [],
-"hints": [
-"៩"
-]
+"branch_at": [
+"០",
+"១",
+"២",
+"៣",
+"៧"
+],
+"hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "⒊",
 "⒋",
@@ -547,6 +739,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "➀",
 "➁",
@@ -565,10 +762,54 @@
 },
 "U": 1.0,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"➀",
+"➃",
+"➄",
+"➅",
+"➆",
+"➇"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"⠀",
+"⢀",
+"⣀",
+"⣄",
+"⣤",
+"⣦",
+"⣶",
+"⣷"
+],
+"n": 8,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0
+},
+"U": 1.0,
+"families": 3,
+"branch_at": [
+"⠀",
+"⢀",
+"⣀",
+"⣄"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "㊁",
 "㊂",
@@ -587,10 +828,22 @@
 },
 "U": 1.0,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"㊁",
+"㊂",
+"㊃",
+"㊄",
+"㊅",
+"㊈"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "𐄈",
 "𐄉",
@@ -613,6 +866,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "𝟏",
 "𝟐",
@@ -635,6 +893,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "𝟚",
 "𝟛",
@@ -653,10 +916,17 @@
 },
 "U": 1.0,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"𝟡"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "🚀",
 "✈",
@@ -679,6 +949,44 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"0",
+"1",
+"4",
+"5",
+"6",
+"7",
+"8"
+],
+"n": 7,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0
+},
+"U": 1.0,
+"families": 3,
+"branch_at": [
+"0",
+"1",
+"4",
+"5",
+"6",
+"8"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "¹",
 "²",
@@ -702,6 +1010,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "Ⅰ",
 "Ⅱ",
@@ -729,6 +1042,11 @@
 ]
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "ⅱ",
 "ⅲ",
@@ -750,6 +1068,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "⑭",
 "⑮",
@@ -768,11 +1091,17 @@
 "U": 1.0,
 "families": 3,
 "branch_at": [
+"⑱",
 "⑲"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "㏠",
 "㏡",
@@ -794,6 +1123,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "𝟹",
 "𝟺",
@@ -811,10 +1145,17 @@
 },
 "U": 1.0,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"𝟼"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "🀛",
 "🀜",
@@ -838,6 +1179,46 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"0",
+"1",
+"4",
+"8",
+"9",
+"🔟"
+],
+"n": 6,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0
+},
+"U": 1.0,
+"families": 3,
+"branch_at": [
+"0",
+"1",
+"4",
+"8",
+"9",
+"🔟"
+],
+"hints": [
+"5",
+"6"
+]
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "४",
 "५",
@@ -858,6 +1239,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "❷",
 "❸",
@@ -874,12 +1260,21 @@
 },
 "U": 1.0,
 "families": 3,
-"branch_at": [],
-"hints": [
-"❿"
-]
+"branch_at": [
+"❷",
+"❸",
+"❹",
+"❺",
+"❻"
+],
+"hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "㉑",
 "㉒",
@@ -896,10 +1291,17 @@
 },
 "U": 1.0,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"㉑"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "𐄑",
 "𐄒",
@@ -916,10 +1318,17 @@
 },
 "U": 1.0,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"𐄔"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "𝟮",
 "𝟯",
@@ -940,6 +1349,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "🞄",
 "🞅",
@@ -960,6 +1374,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "🞢",
 "🞣",
@@ -980,6 +1399,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "🟥",
 "🟧",
@@ -996,36 +1420,17 @@
 },
 "U": 1.0,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"🟨"
+],
 "hints": []
 },
 {
-"seq": [
-"¼",
-"⅜",
-"½",
-"⅝",
-"¾"
+"full_support": [
+"claude",
+"gemini",
+"grok"
 ],
-"n": 5,
-"per": {
-"claude": 1.0,
-"gemini": 1.0,
-"grok": 1.0
-},
-"U": 1.0,
-"families": 3,
-"branch_at": [
-"¼",
-"⅜",
-"½",
-"⅝"
-],
-"hints": [
-"⅛"
-]
-},
-{
 "seq": [
 "˥",
 "˦",
@@ -1042,11 +1447,18 @@
 "U": 1.0,
 "families": 3,
 "branch_at": [
-"˨"
+"˧",
+"˨",
+"˩"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "α",
 "β",
@@ -1066,6 +1478,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "ᚁ",
 "ᚂ",
@@ -1085,6 +1502,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "ᚐ",
 "ᚑ",
@@ -1100,10 +1522,18 @@
 },
 "U": 1.0,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"ᚐ",
+"ᚑ"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "Ⅰ",
 "Ⅱ",
@@ -1127,6 +1557,41 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"◌",
+"○",
+"◎",
+"◍",
+"●"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0
+},
+"U": 1.0,
+"families": 3,
+"branch_at": [
+"◌",
+"○",
+"◎",
+"◍",
+"●"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "〡",
 "〢",
@@ -1142,10 +1607,19 @@
 },
 "U": 1.0,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"〡",
+"〤",
+"〥"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "㎐",
 "㎑",
@@ -1165,6 +1639,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "𝍠",
 "𝍡",
@@ -1181,11 +1660,17 @@
 "U": 1.0,
 "families": 3,
 "branch_at": [
+"𝍠",
 "𝍢"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "🀱",
 "🀲",
@@ -1205,6 +1690,37 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"🐁",
+"🐈",
+"🐕",
+"🐎",
+"🐘"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0
+},
+"U": 1.0,
+"families": 3,
+"branch_at": [
+"🐘"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "🞰",
 "🞱",
@@ -1220,12 +1736,19 @@
 },
 "U": 1.0,
 "families": 3,
-"branch_at": [],
-"hints": [
-"🞯"
-]
+"branch_at": [
+"🞰",
+"🞳",
+"🞴"
+],
+"hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "🮇",
 "🮈",
@@ -1245,6 +1768,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "🯴",
 "🯵",
@@ -1261,14 +1789,20 @@
 "U": 1.0,
 "families": 3,
 "branch_at": [
+"🯴",
 "🯵",
+"🯶",
+"🯷",
 "🯸"
 ],
-"hints": [
-"🯹"
-]
+"hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "·",
 ":",
@@ -1284,13 +1818,47 @@
 "U": 1.0,
 "families": 3,
 "branch_at": [
-":"
+"·",
+":",
+"⁝",
+"⁞"
 ],
-"hints": [
-"∶"
-]
+"hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"ሊ",
+"ሌ",
+"ል",
+"ሎ"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0
+},
+"U": 1.0,
+"families": 3,
+"branch_at": [
+"ሊ",
+"ሌ",
+"ል",
+"ሎ"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "ℵ",
 "ℶ",
@@ -1309,6 +1877,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "⅛",
 "⅜",
@@ -1324,12 +1897,18 @@
 "U": 1.0,
 "families": 3,
 "branch_at": [
+"⅛",
 "⅜",
 "⅝"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "⎺",
 "⎻",
@@ -1348,6 +1927,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "⑾",
 "⑿",
@@ -1366,6 +1950,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "▙",
 "▟",
@@ -1380,15 +1969,24 @@
 },
 "U": 1.0,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"▙",
+"▜",
+"▛"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
-"■",
-"◼",
-"◾",
-"▪"
+"□",
+"▤",
+"▦",
+"▩"
 ],
 "n": 4,
 "per": {
@@ -1399,13 +1997,18 @@
 "U": 1.0,
 "families": 3,
 "branch_at": [
-"■",
-"◼",
-"▪"
+"□",
+"▤",
+"▦"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "㆒",
 "㆓",
@@ -1424,6 +2027,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "二",
 "三",
@@ -1442,6 +2050,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "𝂕",
 "𝂖",
@@ -1460,6 +2073,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "🐓",
 "🐤",
@@ -1478,6 +2096,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "🔇",
 "🔈",
@@ -1496,6 +2119,36 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"<",
+"≪",
+"⋘"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0
+},
+"U": 1.0,
+"families": 3,
+"branch_at": [
+"<",
+"≪"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "¹",
 "1",
@@ -1517,6 +2170,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "¼",
 "⅓",
@@ -1538,6 +2196,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "ơ",
 "ỡ",
@@ -1555,6 +2218,33 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"ᐁ",
+"ᐅ",
+"ᐃ"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0
+},
+"U": 1.0,
+"families": 3,
+"branch_at": [],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "ᴏ",
 "O",
@@ -1576,6 +2266,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "ᴏ",
 "O",
@@ -1596,6 +2291,36 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"ᴏ",
+"O",
+"Ｏ"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0
+},
+"U": 1.0,
+"families": 3,
+"branch_at": [
+"ᴏ",
+"O"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "․",
 "‥",
@@ -1609,10 +2334,17 @@
 },
 "U": 1.0,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"…"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "⁂",
 "⁑",
@@ -1626,10 +2358,17 @@
 },
 "U": 1.0,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"⁎"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "ⅹ",
 "ⅺ",
@@ -1647,6 +2386,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "↑",
 "↗",
@@ -1664,6 +2408,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "√",
 "∛",
@@ -1681,6 +2430,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "∮",
 "∯",
@@ -1698,90 +2452,11 @@
 "hints": []
 },
 {
-"seq": [
-"○",
-"◍",
-"●"
+"full_support": [
+"claude",
+"gemini",
+"grok"
 ],
-"n": 3,
-"per": {
-"claude": 1.0,
-"gemini": 1.0,
-"grok": 1.0
-},
-"U": 1.0,
-"families": 3,
-"branch_at": [
-"○",
-"◍",
-"●"
-],
-"hints": []
-},
-{
-"seq": [
-"◌",
-"◍",
-"●"
-],
-"n": 3,
-"per": {
-"claude": 1.0,
-"gemini": 1.0,
-"grok": 1.0
-},
-"U": 1.0,
-"families": 3,
-"branch_at": [
-"◌",
-"◍",
-"●"
-],
-"hints": []
-},
-{
-"seq": [
-"◌",
-"◎",
-"●"
-],
-"n": 3,
-"per": {
-"claude": 1.0,
-"gemini": 1.0,
-"grok": 1.0
-},
-"U": 1.0,
-"families": 3,
-"branch_at": [
-"◌",
-"◎",
-"●"
-],
-"hints": []
-},
-{
-"seq": [
-"◎",
-"◍",
-"●"
-],
-"n": 3,
-"per": {
-"claude": 1.0,
-"gemini": 1.0,
-"grok": 1.0
-},
-"U": 1.0,
-"families": 3,
-"branch_at": [
-"◎",
-"◍",
-"●"
-],
-"hints": []
-},
-{
 "seq": [
 "♕",
 "♖",
@@ -1796,11 +2471,18 @@
 "U": 1.0,
 "families": 3,
 "branch_at": [
-"♖"
+"♕",
+"♖",
+"♗"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "✅",
 "✔",
@@ -1818,6 +2500,36 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"✶",
+"✷",
+"✸"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0
+},
+"U": 1.0,
+"families": 3,
+"branch_at": [
+"✶",
+"✸"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "⣰",
 "⣾",
@@ -1837,6 +2549,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "㈤",
 "㈥",
@@ -1854,6 +2571,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "㊵",
 "㊶",
@@ -1871,6 +2593,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "㊹",
 "㊺",
@@ -1888,6 +2615,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "꜒",
 "꜔",
@@ -1908,6 +2640,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "𝂚",
 "𝂞",
@@ -1927,6 +2664,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "🀋",
 "🀌",
@@ -1944,6 +2686,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "🀙",
 "🀚",
@@ -1963,6 +2710,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "🂡",
 "🂧",
@@ -1976,10 +2728,17 @@
 },
 "U": 1.0,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"🂧"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "🌑",
 "🌔",
@@ -2001,6 +2760,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "🞨",
 "🞪",
@@ -2014,10 +2778,19 @@
 },
 "U": 1.0,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"🞨",
+"🞪",
+"🞮"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "Ⅽ",
 "Ⅾ",
@@ -2037,6 +2810,9 @@
 "U": 0.8333333333333334,
 "families": 4,
 "branch_at": [
+"Ⅽ",
+"Ⅿ",
+"ↁ",
 "ↂ",
 "ↇ",
 "ↈ"
@@ -2044,30 +2820,301 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"muse"
+],
 "seq": [
-"⠀",
-"⢀",
-"⣀",
-"⣄",
-"⣤",
-"⣦",
-"⣶",
-"⣷"
+"⅛",
+"⅕",
+"⅓",
+"⅜",
+"Ⅼ",
+"ↂ",
+"ↇ",
+"ↈ"
 ],
 "n": 8,
 "per": {
-"claude": 0.8333333333333334,
-"gemini": 1.0,
-"grok": 1.0
+"claude": 1.0,
+"gemini": 0.6666666666666666,
+"grok": 0.6666666666666666,
+"muse": 1.0
 },
-"U": 0.9444444444444445,
-"families": 3,
+"U": 0.8333333333333333,
+"families": 4,
 "branch_at": [
-"⠀"
+"⅛",
+"⅕",
+"⅓",
+"⅜",
+"Ⅼ",
+"ↂ",
+"ↇ",
+"ↈ"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"muse"
+],
+"seq": [
+"━",
+"─",
+"┄",
+"┈",
+"┉"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.6666666666666666,
+"grok": 0.6666666666666666,
+"muse": 1.0
+},
+"U": 0.8333333333333333,
+"families": 4,
+"branch_at": [
+"━",
+"─",
+"┄",
+"┈",
+"┉"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini"
+],
+"seq": [
+"𝋤",
+"𝋨",
+"𝋫",
+"𝋬",
+"𝋭",
+"𝋮",
+"𝋯",
+"𝋰"
+],
+"n": 8,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 0.8333333333333334
+},
+"U": 0.9444444444444445,
+"families": 3,
+"branch_at": [
+"𝋨",
+"𝋫",
+"𝋬",
+"𝋭",
+"𝋮",
+"𝋯",
+"𝋰"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini"
+],
+"seq": [
+"0",
+"1",
+"4",
+"5",
+"6",
+"8",
+"𝟵"
+],
+"n": 7,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 0.8
+},
+"U": 0.9333333333333332,
+"families": 3,
+"branch_at": [
+"0",
+"1",
+"4",
+"5",
+"6",
+"8",
+"𝟵"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini"
+],
+"seq": [
+"㊁",
+"㊂",
+"㊃",
+"㊄",
+"㊅",
+"㊈",
+"㊉"
+],
+"n": 7,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 0.8
+},
+"U": 0.9333333333333332,
+"families": 3,
+"branch_at": [
+"㊁",
+"㊂",
+"㊃",
+"㊄",
+"㊅",
+"㊈"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini"
+],
+"seq": [
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"8",
+"𝟵"
+],
+"n": 8,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 0.75
+},
+"U": 0.9166666666666666,
+"families": 3,
+"branch_at": [
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"8",
+"𝟵"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini"
+],
+"seq": [
+"០",
+"១",
+"២",
+"៣",
+"៧",
+"៩"
+],
+"n": 6,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 0.75
+},
+"U": 0.9166666666666666,
+"families": 3,
+"branch_at": [
+"០",
+"១",
+"២",
+"៣",
+"៧"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini"
+],
+"seq": [
+"⑴",
+"⑵",
+"⑶",
+"⑷",
+"⑹",
+"⒆"
+],
+"n": 6,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 0.75
+},
+"U": 0.9166666666666666,
+"families": 3,
+"branch_at": [
+"⑴",
+"⑵",
+"⑶",
+"⑷",
+"⑹",
+"⒆"
+],
+"hints": []
+},
+{
+"full_support": [
+"gemini",
+"grok"
+],
+"seq": [
+"❷",
+"❸",
+"❹",
+"❺",
+"❻",
+"❿"
+],
+"n": 6,
+"per": {
+"claude": 0.75,
+"gemini": 1.0,
+"grok": 1.0
+},
+"U": 0.9166666666666666,
+"families": 3,
+"branch_at": [
+"❷",
+"❸",
+"❹",
+"❺",
+"❻"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"muse"
+],
 "seq": [
 "⅙",
 "⅕",
@@ -2092,15 +3139,118 @@
 "⅕",
 "⅓",
 "⅜",
+"Ⅼ",
 "ↂ",
 "ↇ",
 "ↈ"
 ],
 "hints": [
-"⅛"
+"ↁ"
 ]
 },
 {
+"full_support": [
+"claude",
+"grok"
+],
+"seq": [
+"○",
+"◌",
+"◎",
+"◍",
+"●"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.6666666666666666,
+"grok": 1.0
+},
+"U": 0.8888888888888888,
+"families": 3,
+"branch_at": [
+"○",
+"◌",
+"◎",
+"◍",
+"●"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini"
+],
+"seq": [
+"🯴",
+"🯵",
+"🯶",
+"🯷",
+"🯹"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 0.6666666666666666
+},
+"U": 0.8888888888888888,
+"families": 3,
+"branch_at": [
+"🯴",
+"🯵",
+"🯶",
+"🯷",
+"🯹"
+],
+"hints": [
+"🯸"
+]
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"_",
+"‗",
+"▁",
+"▂",
+"▃",
+"▄",
+"▅",
+"▆",
+"▇",
+"█"
+],
+"n": 10,
+"per": {
+"claude": 1.0,
+"gemini": 0.75,
+"grok": 0.875
+},
+"U": 0.875,
+"families": 3,
+"branch_at": [
+"_",
+"‗",
+"▁",
+"▂",
+"▃",
+"▄",
+"▅",
+"▇",
+"█"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "⠀",
 "⠁",
@@ -2128,6 +3278,11 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "🄁",
 "🄂",
@@ -2148,10 +3303,20 @@
 },
 "U": 0.75,
 "families": 4,
-"branch_at": [],
+"branch_at": [
+"🄁",
+"🄂",
+"🄅",
+"🄇"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "ᬇ",
 "ᬈ",
@@ -2174,70 +3339,43 @@
 "hints": []
 },
 {
-"seq": [
-"🞍",
-"🞎",
-"🞏",
-"🞐",
-"🞑",
-"🞒",
-"🞓"
+"full_support": [
+"claude",
+"muse"
 ],
-"n": 7,
-"per": {
-"claude": 1.0,
-"gemini": 1.0,
-"grok": 1.0,
-"muse": 0.0
-},
-"U": 0.75,
-"families": 4,
-"branch_at": [],
-"hints": []
-},
-{
 "seq": [
-"⚀",
-"⚁",
-"⚂",
-"⚃",
-"⚄",
-"⚅"
+"▁",
+"▅",
+"░",
+"▒",
+"▓",
+"█"
 ],
 "n": 6,
 "per": {
 "claude": 1.0,
-"gemini": 1.0,
-"grok": 1.0,
-"muse": 0.0
-},
-"U": 0.75,
-"families": 4,
-"branch_at": [],
-"hints": []
-},
-{
-"seq": [
-"𝄖",
-"𝄗",
-"𝄘",
-"𝄙",
-"𝄚",
-"𝄛"
-],
-"n": 6,
-"per": {
-"claude": 1.0,
-"gemini": 1.0,
-"grok": 0.0,
+"gemini": 0.5,
+"grok": 0.5,
 "muse": 1.0
 },
 "U": 0.75,
 "families": 4,
-"branch_at": [],
+"branch_at": [
+"▁",
+"▅",
+"░",
+"▒",
+"▓",
+"█"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "🌌",
 "☀",
@@ -2256,33 +3394,136 @@
 "U": 0.75,
 "families": 4,
 "branch_at": [
+"🌌",
+"☀",
+"🌍",
 "🐘"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"muse"
+],
 "seq": [
 "━",
 "─",
 "┄",
 "┈",
-"┉"
+"╌"
 ],
 "n": 5,
 "per": {
-"claude": 0.6666666666666666,
+"claude": 1.0,
 "gemini": 0.6666666666666666,
-"grok": 0.6666666666666666,
+"grok": 0.3333333333333333,
 "muse": 1.0
 },
 "U": 0.75,
 "families": 4,
-"branch_at": [],
-"hints": [
+"branch_at": [
+"━",
+"─",
+"┄",
+"┈",
 "╌"
-]
+],
+"hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"▪",
+"◽",
+"◻",
+"□",
+"⬜"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0,
+"muse": 0.0
+},
+"U": 0.75,
+"families": 4,
+"branch_at": [
+"▪",
+"◽",
+"◻",
+"□",
+"⬜"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"▫",
+"◽",
+"◻",
+"□",
+"⬜"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0,
+"muse": 0.0
+},
+"U": 0.75,
+"families": 4,
+"branch_at": [
+"▫",
+"◽",
+"◻",
+"□",
+"⬜"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"✩",
+"✫",
+"✬",
+"✭",
+"✮"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0,
+"muse": 0.0
+},
+"U": 0.75,
+"families": 4,
+"branch_at": [],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
 "༮",
 "༯",
@@ -2300,35 +3541,18 @@
 "families": 4,
 "branch_at": [
 "༮",
-"༰"
+"༯",
+"༰",
+"༱"
 ],
 "hints": []
 },
 {
-"seq": [
-"□",
-"◻",
-"◽",
-"▫"
+"full_support": [
+"claude",
+"gemini",
+"grok"
 ],
-"n": 4,
-"per": {
-"claude": 1.0,
-"gemini": 1.0,
-"grok": 1.0,
-"muse": 0.0
-},
-"U": 0.75,
-"families": 4,
-"branch_at": [
-"□",
-"▫"
-],
-"hints": [
-"⬜"
-]
-},
-{
 "seq": [
 "♩",
 "♪",
@@ -2348,11 +3572,76 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"muse"
+],
 "seq": [
-"⚌",
-"⚍",
-"⚎",
-"⚏"
+"𝄖",
+"𝄗",
+"𝄘",
+"𝄙"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 0.0,
+"muse": 1.0
+},
+"U": 0.75,
+"families": 4,
+"branch_at": [
+"𝄖",
+"𝄗",
+"𝄘",
+"𝄙"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"muse"
+],
+"seq": [
+"𝄖",
+"𝄗",
+"𝄚",
+"𝄛"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 0.0,
+"muse": 1.0
+},
+"U": 0.75,
+"families": 4,
+"branch_at": [
+"𝄖",
+"𝄗",
+"𝄚",
+"𝄛"
+],
+"hints": [
+"𝄘"
+]
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"🞍",
+"🞎",
+"🞒",
+"🞓"
 ],
 "n": 4,
 "per": {
@@ -2364,34 +3653,27 @@
 "U": 0.75,
 "families": 4,
 "branch_at": [
-"⚏"
+"🞍",
+"🞎",
+"🞒",
+"🞓"
 ],
-"hints": []
+"hints": [
+"🞏",
+"🞐",
+"🞑"
+]
 },
 {
-"seq": [
-"㎟",
-"㎠",
-"㎡",
-"㎢"
+"full_support": [
+"claude",
+"gemini",
+"grok"
 ],
-"n": 4,
-"per": {
-"claude": 1.0,
-"gemini": 1.0,
-"grok": 1.0,
-"muse": 0.0
-},
-"U": 0.75,
-"families": 4,
-"branch_at": [],
-"hints": []
-},
-{
 "seq": [
-"'",
-"🔥",
-"🎆"
+"🞍",
+"🞎",
+"🞏"
 ],
 "n": 3,
 "per": {
@@ -2403,17 +3685,22 @@
 "U": 0.75,
 "families": 4,
 "branch_at": [
-"'",
-"🔥",
-"🎆"
+"🞍",
+"🞎",
+"🞏"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
 "seq": [
-"'",
-"🕯",
-"🎆"
+"🞍",
+"🞎",
+"🞐"
 ],
 "n": 3,
 "per": {
@@ -2425,13 +3712,155 @@
 "U": 0.75,
 "families": 4,
 "branch_at": [
-"'",
-"🕯",
-"🎆"
+"🞍",
+"🞎",
+"🞐"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"🞍",
+"🞎",
+"🞑"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0,
+"muse": 0.0
+},
+"U": 0.75,
+"families": 4,
+"branch_at": [
+"🞍",
+"🞎",
+"🞑"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"🞍",
+"🞏",
+"🞐"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0,
+"muse": 0.0
+},
+"U": 0.75,
+"families": 4,
+"branch_at": [
+"🞍",
+"🞏",
+"🞐"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"🞍",
+"🞏",
+"🞑"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0,
+"muse": 0.0
+},
+"U": 0.75,
+"families": 4,
+"branch_at": [
+"🞍",
+"🞏",
+"🞑"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini",
+"grok"
+],
+"seq": [
+"🞍",
+"🞐",
+"🞑"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 1.0,
+"muse": 0.0
+},
+"U": 0.75,
+"families": 4,
+"branch_at": [
+"🞍",
+"🞐",
+"🞑"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"¼",
+"⅜",
+"½",
+"⅝",
+"¾",
+"𐄔"
+],
+"n": 6,
+"per": {
+"claude": 1.0,
+"gemini": 0.75,
+"grok": 0.75
+},
+"U": 0.8333333333333334,
+"families": 3,
+"branch_at": [
+"¼",
+"⅜",
+"½",
+"⅝",
+"¾",
+"𐄔"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"grok"
+],
 "seq": [
 "☰",
 "☱",
@@ -2451,30 +3880,103 @@
 "branch_at": [
 "☰",
 "☱",
+"☳",
+"☵",
 "☶",
 "☷"
 ],
 "hints": []
 },
 {
-"seq": [
-"ሊ",
-"ሌ",
-"ል",
-"ሎ"
+"full_support": [
+"gemini"
 ],
-"n": 4,
+"seq": [
+"➇",
+"➆",
+"➅",
+"➄",
+"➃",
+"➍"
+],
+"n": 6,
 "per": {
-"claude": 0.5,
+"claude": 0.75,
 "gemini": 1.0,
-"grok": 1.0
+"grok": 0.75
 },
 "U": 0.8333333333333334,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"➇",
+"➆",
+"➅",
+"➄",
+"➃",
+"➍"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
+"seq": [
+"○",
+"◌",
+"◍",
+"◎",
+"○"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.75,
+"grok": 0.75
+},
+"U": 0.8333333333333334,
+"families": 3,
+"branch_at": [
+"○",
+"◌",
+"◍",
+"◎",
+"○"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini"
+],
+"seq": [
+"‿",
+"⌣",
+"⌄",
+"∨"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 0.5
+},
+"U": 0.8333333333333334,
+"families": 3,
+"branch_at": [
+"‿",
+"⌣",
+"⌄",
+"∨"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
 "𝌀",
 "𝌁",
@@ -2493,6 +3995,124 @@
 "hints": []
 },
 {
+"full_support": [
+"gemini",
+"grok"
+],
+"seq": [
+"🞯",
+"🞰",
+"🞳",
+"🞴"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 1.0,
+"grok": 1.0
+},
+"U": 0.8333333333333334,
+"families": 3,
+"branch_at": [
+"🞯",
+"🞰",
+"🞳",
+"🞴"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"█",
+"▉",
+"▊",
+"▌",
+"▋"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.6666666666666666,
+"grok": 0.6666666666666666,
+"muse": 0.5
+},
+"U": 0.7083333333333333,
+"families": 4,
+"branch_at": [
+"█",
+"▉",
+"▊",
+"▌",
+"▋"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"◌",
+"○",
+"●",
+"◕",
+"◑"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.6666666666666666,
+"grok": 0.6666666666666666,
+"muse": 0.5
+},
+"U": 0.7083333333333333,
+"families": 4,
+"branch_at": [
+"◌",
+"○",
+"●",
+"◕",
+"◑"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"◐",
+"◕",
+"●",
+"◑",
+"◔"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.6666666666666666,
+"grok": 0.6666666666666666,
+"muse": 0.5
+},
+"U": 0.7083333333333333,
+"families": 4,
+"branch_at": [
+"◐",
+"◕",
+"●",
+"◑",
+"◔"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"grok"
+],
 "seq": [
 "𒐀",
 "𒐁",
@@ -2510,6 +4130,10 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
 "༧",
 "༨",
@@ -2528,6 +4152,10 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
 "∬",
 "∭",
@@ -2544,6 +4172,10 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
 "㍜",
 "㍝",
@@ -2562,6 +4194,10 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
 "𐄞",
 "𐄟",
@@ -2578,6 +4214,10 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
 "𒐅",
 "𒐆",
@@ -2594,6 +4234,10 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
 "🌑",
 "🌗",
@@ -2612,6 +4256,10 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
 "🌓",
 "🌔",
@@ -2631,6 +4279,195 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"muse"
+],
+"seq": [
+"◌",
+"○",
+"◔",
+"◐",
+"◑",
+"◕",
+"●"
+],
+"n": 7,
+"per": {
+"claude": 1.0,
+"gemini": 0.4,
+"grok": 0.4,
+"muse": 1.0
+},
+"U": 0.7,
+"families": 4,
+"branch_at": [
+"◌",
+"○",
+"◔",
+"◐",
+"◑",
+"◕",
+"●"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"muse"
+],
+"seq": [
+"▁",
+"░",
+"▅",
+"▒",
+"▓",
+"█"
+],
+"n": 6,
+"per": {
+"claude": 1.0,
+"gemini": 0.25,
+"grok": 0.5,
+"muse": 1.0
+},
+"U": 0.6875,
+"families": 4,
+"branch_at": [
+"▁",
+"░",
+"▅",
+"▒",
+"▓",
+"█"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"grok"
+],
+"seq": [
+"⚊",
+"⚋",
+"⚌",
+"⚍",
+"⚎",
+"⚏"
+],
+"n": 6,
+"per": {
+"claude": 1.0,
+"gemini": 0.75,
+"grok": 1.0,
+"muse": 0.0
+},
+"U": 0.6875,
+"families": 4,
+"branch_at": [
+"⚊",
+"⚋",
+"⚌",
+"⚍",
+"⚎"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"₁",
+"4",
+"5",
+"6",
+"8",
+"9",
+"🔟"
+],
+"n": 7,
+"per": {
+"claude": 0.8,
+"gemini": 0.8,
+"grok": 0.75
+},
+"U": 0.7833333333333333,
+"families": 3,
+"branch_at": [
+"₁",
+"4",
+"5",
+"6",
+"8",
+"9",
+"🔟"
+],
+"hints": [
+"7"
+]
+},
+{
+"full_support": [
+"claude",
+"gemini"
+],
+"seq": [
+"█",
+"🮆",
+"🮅",
+"🮄",
+"▀",
+"🮃",
+"🮂",
+"🮁"
+],
+"n": 8,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 0.3333333333333333
+},
+"U": 0.7777777777777778,
+"families": 3,
+"branch_at": [
+"█"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"_",
+"‗",
+"▃",
+"▂",
+"▁"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.6666666666666666,
+"grok": 0.6666666666666666
+},
+"U": 0.7777777777777777,
+"families": 3,
+"branch_at": [
+"_",
+"‗",
+"▃",
+"▂",
+"▁"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"grok"
+],
 "seq": [
 "ᥰ",
 "ᥱ",
@@ -2639,6 +4476,376 @@
 "ᥴ"
 ],
 "n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.3333333333333333,
+"grok": 1.0
+},
+"U": 0.7777777777777777,
+"families": 3,
+"branch_at": [],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"⅛",
+"⅜",
+"⅝",
+"¾",
+"𐄔"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.6666666666666666,
+"grok": 0.6666666666666666
+},
+"U": 0.7777777777777777,
+"families": 3,
+"branch_at": [
+"⅛",
+"⅜",
+"⅝",
+"¾",
+"𐄔"
+],
+"hints": []
+},
+{
+"full_support": [
+"gemini"
+],
+"seq": [
+"▪",
+"◾",
+"◼",
+"■",
+"▫"
+],
+"n": 5,
+"per": {
+"claude": 0.6666666666666666,
+"gemini": 1.0,
+"grok": 0.6666666666666666
+},
+"U": 0.7777777777777777,
+"families": 3,
+"branch_at": [
+"▪",
+"◾",
+"◼",
+"■",
+"▫"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"muse"
+],
+"seq": [
+"█",
+"▓",
+"░",
+"▅",
+"▒"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.3333333333333333,
+"grok": 0.3333333333333333,
+"muse": 1.0
+},
+"U": 0.6666666666666666,
+"families": 4,
+"branch_at": [
+"█",
+"▓",
+"░",
+"▅",
+"▒"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"muse"
+],
+"seq": [
+"◌",
+"○",
+"◔",
+"◑",
+"◐"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.3333333333333333,
+"grok": 0.3333333333333333,
+"muse": 1.0
+},
+"U": 0.6666666666666666,
+"families": 4,
+"branch_at": [
+"◌",
+"○",
+"◔",
+"◑",
+"◐"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"muse"
+],
+"seq": [
+"◌",
+"◑",
+"◕",
+"●",
+"◐"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.3333333333333333,
+"grok": 0.3333333333333333,
+"muse": 1.0
+},
+"U": 0.6666666666666666,
+"families": 4,
+"branch_at": [
+"◌",
+"◑",
+"◕",
+"●",
+"◐"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"⚀",
+"⚁",
+"⚂",
+"⚃",
+"⚄",
+"⚅",
+"⚆"
+],
+"n": 7,
+"per": {
+"claude": 1.0,
+"gemini": 0.8,
+"grok": 0.8,
+"muse": 0.0
+},
+"U": 0.65,
+"families": 4,
+"branch_at": [],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"🞍",
+"🞓",
+"🞒",
+"🞑",
+"🞐",
+"🞏",
+"🞎"
+],
+"n": 7,
+"per": {
+"claude": 1.0,
+"gemini": 0.8,
+"grok": 0.8,
+"muse": 0.0
+},
+"U": 0.65,
+"families": 4,
+"branch_at": [
+"🞍",
+"🞓",
+"🞒",
+"🞑",
+"🞐",
+"🞏",
+"🞎"
+],
+"hints": []
+},
+{
+"full_support": [
+"gemini"
+],
+"seq": [
+"𝄖",
+"𝄛",
+"𝄚",
+"𝄙",
+"𝄘",
+"𝄗"
+],
+"n": 6,
+"per": {
+"claude": 0.75,
+"gemini": 1.0,
+"grok": 0.0,
+"muse": 0.75
+},
+"U": 0.625,
+"families": 4,
+"branch_at": [
+"𝄖",
+"𝄛",
+"𝄚",
+"𝄙",
+"𝄘",
+"𝄗"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"▋",
+"▌",
+"▊",
+"▍",
+"▎",
+"▏"
+],
+"n": 6,
+"per": {
+"claude": 1.0,
+"gemini": 0.5,
+"grok": 0.5,
+"muse": 0.3333333333333333
+},
+"U": 0.5833333333333334,
+"families": 4,
+"branch_at": [
+"▋",
+"▌",
+"▊",
+"▍",
+"▎",
+"▏"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini"
+],
+"seq": [
+"🁁",
+"🁉",
+"🁑",
+"🁙",
+"🁡"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 0.3333333333333333,
+"muse": 0.0
+},
+"U": 0.5833333333333334,
+"families": 4,
+"branch_at": [
+"🁁",
+"🁙",
+"🁡"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+":",
+"⁞",
+"⁝",
+"∶",
+"·"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.6666666666666666,
+"grok": 0.6666666666666666,
+"muse": 0.0
+},
+"U": 0.5833333333333333,
+"families": 4,
+"branch_at": [
+":",
+"⁞",
+"⁝",
+"∶",
+"·"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"㎟",
+"㎠",
+"㎡",
+"㎢",
+"㎦"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.6666666666666666,
+"grok": 0.6666666666666666,
+"muse": 0.0
+},
+"U": 0.5833333333333333,
+"families": 4,
+"branch_at": [],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"grok"
+],
+"seq": [
+"ᄄ",
+"ᄇ",
+"ᄈ",
+"ᄉ",
+"ᄊ",
+"ᄌ"
+],
+"n": 6,
 "per": {
 "claude": 1.0,
 "gemini": 0.0,
@@ -2650,50 +4857,68 @@
 "hints": []
 },
 {
+"full_support": [],
 "seq": [
-"₀",
 "₁",
-"₇",
-"₈",
-"₉"
+"4",
+"5",
+"6",
+"8",
+"𝟵"
 ],
-"n": 5,
+"n": 6,
 "per": {
-"claude": 1.0,
-"gemini": 1.0,
-"grok": 0.0
+"claude": 0.75,
+"gemini": 0.75,
+"grok": 0.5
 },
 "U": 0.6666666666666666,
 "families": 3,
 "branch_at": [
-"₁"
-],
-"hints": [
-"₆"
-]
-},
-{
-"seq": [
-"🐁",
-"🐈",
-"🐕",
-"🐎",
-"🐘"
-],
-"n": 5,
-"per": {
-"claude": 0.0,
-"gemini": 1.0,
-"grok": 1.0
-},
-"U": 0.6666666666666666,
-"families": 3,
-"branch_at": [
-"🐘"
+"₁",
+"4",
+"5",
+"6",
+"8",
+"𝟵"
 ],
 "hints": []
 },
 {
+"full_support": [
+"gemini"
+],
+"seq": [
+"☰",
+"☱",
+"☵",
+"☳",
+"☶",
+"☷"
+],
+"n": 6,
+"per": {
+"claude": 0.5,
+"gemini": 1.0,
+"grok": 0.5
+},
+"U": 0.6666666666666666,
+"families": 3,
+"branch_at": [
+"☰",
+"☱",
+"☵",
+"☳",
+"☶",
+"☷"
+],
+"hints": []
+},
+{
+"full_support": [
+"gemini",
+"grok"
+],
 "seq": [
 "A",
 "ᴀ",
@@ -2708,15 +4933,50 @@
 },
 "U": 0.6666666666666666,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"A",
+"ᴀ",
+"a",
+"ₐ"
+],
 "hints": []
 },
 {
+"full_support": [
+"gemini"
+],
 "seq": [
-"ᄇ",
-"ᄈ",
-"ᄉ",
-"ᄊ"
+"|",
+")",
+"}",
+"⊂"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 1.0,
+"grok": 0.5
+},
+"U": 0.6666666666666666,
+"families": 3,
+"branch_at": [
+"|",
+")",
+"}",
+"⊂"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"grok"
+],
+"seq": [
+"˅",
+"∨",
+"⋁",
+"▽"
 ],
 "n": 4,
 "per": {
@@ -2727,12 +4987,43 @@
 "U": 0.6666666666666666,
 "families": 3,
 "branch_at": [
-"ᄇ",
-"ᄈ"
+"∨",
+"⋁",
+"▽"
 ],
 "hints": []
 },
 {
+"full_support": [
+"grok"
+],
+"seq": [
+"∨",
+"⌄",
+"‿",
+"⌣"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 0.5,
+"grok": 1.0
+},
+"U": 0.6666666666666666,
+"families": 3,
+"branch_at": [
+"∨",
+"⌄",
+"‿",
+"⌣"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
 "⒈",
 "⒉",
@@ -2748,33 +5039,120 @@
 "U": 0.6666666666666666,
 "families": 3,
 "branch_at": [
+"⒈",
 "⒊"
 ],
 "hints": []
 },
 {
+"full_support": [
+"grok"
+],
 "seq": [
-"▁",
-"▅",
-"▓",
-"█"
+"┉",
+"┈",
+"┄",
+"╌"
 ],
 "n": 4,
 "per": {
-"claude": 1.0,
-"gemini": 0.0,
+"claude": 0.5,
+"gemini": 0.5,
 "grok": 1.0
 },
 "U": 0.6666666666666666,
 "families": 3,
 "branch_at": [
-"▅",
-"▓",
+"┉",
+"┈",
+"┄",
+"╌"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"┉",
+"┈",
+"┄",
+"█"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.5,
+"grok": 0.5
+},
+"U": 0.6666666666666666,
+"families": 3,
+"branch_at": [
+"┉",
+"┈",
+"┄",
 "█"
 ],
 "hints": []
 },
 {
+"full_support": [
+"gemini"
+],
+"seq": [
+"▄",
+"▁",
+"▇",
+"█"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 1.0,
+"grok": 0.5
+},
+"U": 0.6666666666666666,
+"families": 3,
+"branch_at": [
+"▄",
+"▁",
+"▇",
+"█"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"○",
+"◍",
+"◎",
+"◌"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.5,
+"grok": 0.5
+},
+"U": 0.6666666666666666,
+"families": 3,
+"branch_at": [
+"○",
+"◍",
+"◎",
+"◌"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"grok"
+],
 "seq": [
 "ⴷ",
 "ⴸ",
@@ -2793,6 +5171,37 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini"
+],
+"seq": [
+"🠢",
+"🠦",
+"🠪",
+"🠮"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 0.0
+},
+"U": 0.6666666666666666,
+"families": 3,
+"branch_at": [
+"🠢",
+"🠦",
+"🠪",
+"🠮"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
 "!",
 "‼",
@@ -2813,27 +5222,14 @@
 "hints": []
 },
 {
-"seq": [
-"<",
-"≪",
-"⋘"
+"full_support": [
+"claude",
+"grok"
 ],
-"n": 3,
-"per": {
-"claude": 0.0,
-"gemini": 1.0,
-"grok": 1.0
-},
-"U": 0.6666666666666666,
-"families": 3,
-"branch_at": [],
-"hints": []
-},
-{
 "seq": [
-"ᄇ",
-"ᄈ",
-"ᄌ"
+"g",
+"G",
+"Ġ"
 ],
 "n": 3,
 "per": {
@@ -2844,32 +5240,64 @@
 "U": 0.6666666666666666,
 "families": 3,
 "branch_at": [
-"ᄇ",
-"ᄈ"
+"g",
+"G",
+"Ġ"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
-"ᴏ",
-"O",
-"Ｏ"
+"o",
+"ⱺ",
+"ʘ"
 ],
 "n": 3,
 "per": {
-"claude": 0.0,
+"claude": 1.0,
 "gemini": 1.0,
-"grok": 1.0
+"grok": 0.0
 },
 "U": 0.6666666666666666,
 "families": 3,
 "branch_at": [
-"ᴏ",
-"O"
+"o"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini"
+],
+"seq": [
+"ᚍ",
+"ᚑ",
+"ᚐ"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 0.0
+},
+"U": 0.6666666666666666,
+"families": 3,
+"branch_at": [
+"ᚑ",
+"ᚐ"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
 "⁇",
 "⁈",
@@ -2883,10 +5311,43 @@
 },
 "U": 0.6666666666666666,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"⁇",
+"⁈",
+"⁉"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini"
+],
+"seq": [
+"⁝",
+"⁚",
+"∶"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 0.0
+},
+"U": 0.6666666666666666,
+"families": 3,
+"branch_at": [
+"⁝",
+"⁚",
+"∶"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
 "⅑",
 "⅐",
@@ -2906,6 +5367,10 @@
 "hints": []
 },
 {
+"full_support": [
+"gemini",
+"grok"
+],
 "seq": [
 "∘",
 "◦",
@@ -2920,28 +5385,17 @@
 "U": 0.6666666666666666,
 "families": 3,
 "branch_at": [
+"∘",
+"◦",
 "◯"
 ],
 "hints": []
 },
 {
-"seq": [
-"⋰",
-"⋮",
-"⋱"
+"full_support": [
+"claude",
+"gemini"
 ],
-"n": 3,
-"per": {
-"claude": 0.0,
-"gemini": 1.0,
-"grok": 1.0
-},
-"U": 0.6666666666666666,
-"families": 3,
-"branch_at": [],
-"hints": []
-},
-{
 "seq": [
 "①",
 "⑬",
@@ -2962,6 +5416,10 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"grok"
+],
 "seq": [
 "■",
 "◼",
@@ -2983,6 +5441,10 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
 "□",
 "■",
@@ -3004,30 +5466,14 @@
 "hints": []
 },
 {
-"seq": [
-"☴",
-"☶",
-"☷"
+"full_support": [
+"claude",
+"grok"
 ],
-"n": 3,
-"per": {
-"claude": 1.0,
-"gemini": 1.0,
-"grok": 0.0
-},
-"U": 0.6666666666666666,
-"families": 3,
-"branch_at": [
-"☶",
-"☷"
-],
-"hints": []
-},
-{
 "seq": [
-"⚊",
-"⚋",
-"⚏"
+"⿷",
+"⿸",
+"⿹"
 ],
 "n": 3,
 "per": {
@@ -3038,21 +5484,27 @@
 "U": 0.6666666666666666,
 "families": 3,
 "branch_at": [
-"⚏"
+"⿷",
+"⿸",
+"⿹"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
-"〸",
-"〹",
-"〺"
+"㍉",
+"㌢",
+"㍋"
 ],
 "n": 3,
 "per": {
-"claude": 0.0,
+"claude": 1.0,
 "gemini": 1.0,
-"grok": 1.0
+"grok": 0.0
 },
 "U": 0.6666666666666666,
 "families": 3,
@@ -3060,6 +5512,10 @@
 "hints": []
 },
 {
+"full_support": [
+"gemini",
+"grok"
+],
 "seq": [
 "㎮",
 "㎱",
@@ -3073,10 +5529,18 @@
 },
 "U": 0.6666666666666666,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"㎮",
+"㎱",
+"㎰"
+],
 "hints": []
 },
 {
+"full_support": [
+"gemini",
+"grok"
+],
 "seq": [
 "１",
 "４",
@@ -3097,6 +5561,10 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
 "𝅀",
 "𝅁",
@@ -3114,6 +5582,34 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini"
+],
+"seq": [
+"𝋢",
+"𝋨",
+"𝋳"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 0.0
+},
+"U": 0.6666666666666666,
+"families": 3,
+"branch_at": [
+"𝋢",
+"𝋨"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
 "𝍢",
 "𝍦",
@@ -3133,6 +5629,35 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini"
+],
+"seq": [
+"𝟙",
+"𝟭",
+"𝟣"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 1.0,
+"grok": 0.0
+},
+"U": 0.6666666666666666,
+"families": 3,
+"branch_at": [
+"𝟙",
+"𝟭",
+"𝟣"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"grok"
+],
 "seq": [
 "🌥",
 "🌦",
@@ -3150,6 +5675,10 @@
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
 "😐",
 "🙁",
@@ -3163,10 +5692,18 @@
 },
 "U": 0.6666666666666666,
 "families": 3,
-"branch_at": [],
+"branch_at": [
+"😐",
+"🙁",
+"😢"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
 "🯳",
 "🯵",
@@ -3187,6 +5724,123 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
+"seq": [
+"◌",
+"○",
+"◔",
+"◐",
+"◕",
+"●",
+"◑"
+],
+"n": 7,
+"per": {
+"claude": 1.0,
+"gemini": 0.6,
+"grok": 0.6,
+"muse": 0.0
+},
+"U": 0.55,
+"families": 4,
+"branch_at": [
+"◌",
+"○",
+"◔",
+"◐",
+"◕",
+"●",
+"◑"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"─",
+"━",
+"┄",
+"┈",
+"┉"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.3333333333333333,
+"grok": 0.3333333333333333,
+"muse": 0.5
+},
+"U": 0.5416666666666666,
+"families": 4,
+"branch_at": [
+"─",
+"━",
+"┄",
+"┈",
+"┉"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"◌",
+"○",
+"◑",
+"●",
+"◕"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.3333333333333333,
+"grok": 0.3333333333333333,
+"muse": 0.5
+},
+"U": 0.5416666666666666,
+"families": 4,
+"branch_at": [
+"◌",
+"○",
+"◑",
+"●",
+"◕"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"¯",
+"⁻",
+"-",
+"₋"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"grok": 0.5
+},
+"U": 0.75,
+"families": 2,
+"branch_at": [
+"-"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude",
+"gemini"
+],
 "seq": [
 "♳",
 "♴",
@@ -3209,13 +5863,16 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
-"☆",
 "★",
 "✦",
 "✹",
 "🌟",
-"⯪"
+"⯪",
+"☆"
 ],
 "n": 6,
 "per": {
@@ -3224,51 +5881,74 @@
 "U": 1.0,
 "families": 1,
 "branch_at": [
-"★"
+"★",
+"✦",
+"✹",
+"🌟",
+"⯪",
+"☆"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
-"✩",
-"✫",
-"✬",
-"✭",
-"✮"
+"☆",
+"⯪",
+"★",
+"✹",
+"🌟"
 ],
 "n": 5,
 "per": {
+"claude": 1.0
+},
+"U": 1.0,
+"families": 1,
+"branch_at": [
+"☆",
+"⯪",
+"★",
+"✹",
+"🌟"
+],
+"hints": [
+"✦"
+]
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"'",
+"🕯",
+"🎆",
+"🔥"
+],
+"n": 4,
+"per": {
 "claude": 1.0,
-"gemini": 0.0,
-"grok": 1.0,
+"gemini": 0.5,
+"grok": 0.5,
 "muse": 0.0
 },
 "U": 0.5,
 "families": 4,
-"branch_at": [],
-"hints": []
-},
-{
-"seq": [
-"🁁",
-"🁉",
-"🁑",
-"🁙",
-"🁡"
+"branch_at": [
+"'",
+"🕯",
+"🎆",
+"🔥"
 ],
-"n": 5,
-"per": {
-"claude": 1.0,
-"gemini": 1.0,
-"grok": 0.0,
-"muse": 0.0
-},
-"U": 0.5,
-"families": 4,
-"branch_at": [],
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "■",
 "▦",
@@ -3283,13 +5963,94 @@
 "families": 1,
 "branch_at": [
 "■",
+"▦",
+"▤",
 "□"
 ],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"▫",
+"□",
+"◻",
+"⬜"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.5,
+"grok": 0.5,
+"muse": 0.0
+},
+"U": 0.5,
+"families": 4,
+"branch_at": [
+"▫",
+"□",
+"◻",
+"⬜"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"☆",
+"★",
+"🌟",
+"⯪"
+],
+"n": 4,
+"per": {
+"claude": 1.0
+},
+"U": 1.0,
+"families": 1,
+"branch_at": [
+"☆",
+"★",
+"🌟",
+"⯪"
+],
 "hints": [
-"▩"
+"✦",
+"✹"
 ]
 },
 {
+"full_support": [
+"claude"
+],
+"seq": [
+"☆",
+"⯪",
+"★",
+"✦"
+],
+"n": 4,
+"per": {
+"claude": 1.0
+},
+"U": 1.0,
+"families": 1,
+"branch_at": [
+"☆",
+"⯪",
+"★",
+"✦"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
 "seq": [
 "!",
 "‼",
@@ -3308,6 +6069,9 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "-",
 "∼",
@@ -3325,6 +6089,9 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "o",
 "○",
@@ -3337,12 +6104,16 @@
 "U": 1.0,
 "families": 1,
 "branch_at": [
+"o",
 "○",
 "◯"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "༬",
 "༭",
@@ -3361,6 +6132,9 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "፬",
 "፭",
@@ -3376,6 +6150,9 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "‸",
 "⑤",
@@ -3393,6 +6170,9 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "⑹",
 "⑥",
@@ -3412,6 +6192,9 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "⒄",
 "⒅",
@@ -3423,10 +6206,15 @@
 },
 "U": 1.0,
 "families": 1,
-"branch_at": [],
+"branch_at": [
+"⒆"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "⒏",
 "⑧",
@@ -3446,6 +6234,9 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "○",
 "◉",
@@ -3464,24 +6255,9 @@
 "hints": []
 },
 {
-"seq": [
-"☰",
-"☱",
-"☲"
+"full_support": [
+"claude"
 ],
-"n": 3,
-"per": {
-"claude": 1.0
-},
-"U": 1.0,
-"families": 1,
-"branch_at": [
-"☰",
-"☱"
-],
-"hints": []
-},
-{
 "seq": [
 "♔",
 "♖",
@@ -3499,6 +6275,9 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "⚇",
 "⚈",
@@ -3514,6 +6293,9 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "➑",
 "➒",
@@ -3529,6 +6311,9 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "〦",
 "〧",
@@ -3540,10 +6325,15 @@
 },
 "U": 1.0,
 "families": 1,
-"branch_at": [],
+"branch_at": [
+"〨"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "ㅁ",
 "🏾",
@@ -3555,10 +6345,15 @@
 },
 "U": 1.0,
 "families": 1,
-"branch_at": [],
+"branch_at": [
+"📯"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "㋁",
 "㋂",
@@ -3574,6 +6369,9 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "㍣",
 "㍤",
@@ -3589,6 +6387,9 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "㍫",
 "㍬",
@@ -3600,10 +6401,15 @@
 },
 "U": 1.0,
 "families": 1,
-"branch_at": [],
+"branch_at": [
+"㍭"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "㎜",
 "㎝",
@@ -3619,6 +6425,9 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "万",
 "億",
@@ -3634,6 +6443,9 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "𝋥",
 "𝋦",
@@ -3651,6 +6463,9 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "𝖮",
 "𝋢",
@@ -3662,10 +6477,15 @@
 },
 "U": 1.0,
 "families": 1,
-"branch_at": [],
+"branch_at": [
+"𝋢"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "🕐",
 "🕑",
@@ -3677,10 +6497,15 @@
 },
 "U": 1.0,
 "families": 1,
-"branch_at": [],
+"branch_at": [
+"🕐"
+],
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "🕔",
 "🕕",
@@ -3698,6 +6523,9 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "🕖",
 "🕗",
@@ -3715,6 +6543,9 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "🯰",
 "🯱",
@@ -3730,49 +6561,832 @@
 "hints": []
 },
 {
-"seq": [
-"█",
-"🮆",
-"🮅",
-"🮄",
-"▀",
-"🮃",
-"🮂",
-"🮁"
+"full_support": [
+"claude"
 ],
-"n": 8,
+"seq": [
+"○",
+"◌",
+"◍",
+"◎",
+"●"
+],
+"n": 5,
 "per": {
-"claude": 0.3333333333333333,
-"gemini": 1.0,
+"claude": 1.0,
+"gemini": 0.3333333333333333,
 "grok": 0.3333333333333333
 },
 "U": 0.5555555555555555,
 "families": 3,
 "branch_at": [
+"○",
+"◌",
+"◍",
+"◎",
+"●"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"◌",
+"○",
+"◍",
+"◎",
+"●"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.3333333333333333,
+"grok": 0.3333333333333333
+},
+"U": 0.5555555555555555,
+"families": 3,
+"branch_at": [
+"◌",
+"○",
+"◍",
+"◎",
+"●"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"☰",
+"☱",
+"☵",
+"☳",
+"☲"
+],
+"n": 5,
+"per": {
+"claude": 0.6666666666666666,
+"gemini": 0.6666666666666666,
+"grok": 0.3333333333333333
+},
+"U": 0.5555555555555555,
+"families": 3,
+"branch_at": [
+"☰",
+"☱",
+"☵",
+"☳",
+"☲"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"〨",
+"〩",
+"〸",
+"〹",
+"〺"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.3333333333333333,
+"grok": 0.3333333333333333
+},
+"U": 0.5555555555555555,
+"families": 3,
+"branch_at": [
+"〨"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"─",
+"━",
+"┄",
+"┈",
+"╌"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.3333333333333333,
+"grok": 0.0,
+"muse": 0.5
+},
+"U": 0.4583333333333333,
+"families": 4,
+"branch_at": [
+"─",
+"━",
+"┄",
+"┈",
+"╌"
+],
+"hints": []
+},
+{
+"full_support": [
+"grok"
+],
+"seq": [
+"▁",
+"░",
+"▒",
+"▅",
+"▓",
+"█"
+],
+"n": 6,
+"per": {
+"claude": 0.5,
+"gemini": 0.0,
+"grok": 1.0
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+"▁",
+"░",
+"▒",
+"▅",
+"▓",
 "█"
 ],
 "hints": []
 },
 {
-"seq": [
-"¯",
-"⁻",
-"-",
-"₋"
+"full_support": [
+"claude"
 ],
-"n": 4,
+"seq": [
+"▪",
+"◾",
+"◼",
+"◔",
+"○",
+"◌"
+],
+"n": 6,
 "per": {
-"claude": 0.5,
-"grok": 0.5
+"claude": 1.0,
+"gemini": 0.25,
+"grok": 0.25
 },
 "U": 0.5,
-"families": 2,
+"families": 3,
 "branch_at": [
-"-"
+"▪",
+"◾",
+"◼",
+"◔",
+"○",
+"◌"
+],
+"hints": [
+"◑",
+"◕"
+]
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"☲",
+"☳",
+"☴",
+"☵",
+"☶",
+"☷"
+],
+"n": 6,
+"per": {
+"claude": 1.0,
+"gemini": 0.25,
+"grok": 0.25
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+"☲",
+"☳",
+"☵",
+"☶",
+"☷"
 ],
 "hints": []
 },
 {
+"full_support": [],
+"seq": [
+">",
+")",
+"}",
+"⊂"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 0.5,
+"grok": 0.5
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+">",
+")",
+"}",
+"⊂"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"G",
+"g",
+"Ġ",
+"Ċ"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.5,
+"grok": 0.0
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+"G",
+"g",
+"Ġ",
+"Ċ"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"_",
+"▁",
+"▃",
+"‗"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 0.5,
+"grok": 0.5
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+"_",
+"▁",
+"▃",
+"‗"
+],
+"hints": [
+"▂"
+]
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"…",
+"┄",
+"┈",
+"┉"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.5
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+"…",
+"┄",
+"┈",
+"┉"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"ↇ",
+"ↂ",
+"ↁ",
+"ↈ"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 0.5,
+"muse": 0.5
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+"ↇ",
+"ↂ",
+"ↁ",
+"ↈ"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"∅",
+"⊂",
+"⊆",
+"⊑"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 0.5,
+"grok": 0.5
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+"⊂"
+],
+"hints": []
+},
+{
+"full_support": [
+"grok"
+],
+"seq": [
+"⋯",
+"⋰",
+"⋮",
+"⋱"
+],
+"n": 4,
+"per": {
+"claude": 0.0,
+"gemini": 0.5,
+"grok": 1.0
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+"⋯",
+"⋰",
+"⋮",
+"⋱"
+],
+"hints": []
+},
+{
+"full_support": [
+"gemini"
+],
+"seq": [
+"⋯",
+"⋱",
+"⋮",
+"⋰"
+],
+"n": 4,
+"per": {
+"claude": 0.0,
+"gemini": 1.0,
+"grok": 0.5
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+"⋯",
+"⋱",
+"⋮",
+"⋰"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"╌",
+"┈",
+"┄",
+"█"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.5,
+"grok": 0.0
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+"╌",
+"┈",
+"┄",
+"█"
+],
+"hints": []
+},
+{
+"full_support": [
+"gemini"
+],
+"seq": [
+"★",
+"☆",
+"⭑",
+"⭒"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 1.0,
+"grok": 0.0
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+"★",
+"☆",
+"⭑",
+"⭒"
+],
+"hints": []
+},
+{
+"full_support": [
+"gemini"
+],
+"seq": [
+"★",
+"⭑",
+"⭒",
+"☆"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 1.0,
+"grok": 0.0
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+"★",
+"⭑",
+"⭒",
+"☆"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"⠀",
+"⢀",
+"⣄",
+"⣀"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.5
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+"⠀",
+"⢀",
+"⣄",
+"⣀"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"🄁",
+"🄂",
+"🄅",
+"🞵"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.5
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+"🄁",
+"🄂",
+"🄅",
+"🞵"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"🠢",
+"🠦",
+"🠮",
+"🠪"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.5,
+"grok": 0.0
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+"🠢",
+"🠦",
+"🠮",
+"🠪"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"🠢",
+"🠪",
+"🠮",
+"🠦"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.5,
+"grok": 0.0
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+"🠢",
+"🠪",
+"🠮",
+"🠦"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"🠦",
+"🠢",
+"🠪",
+"🠮"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.5,
+"grok": 0.0
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+"🠦",
+"🠢",
+"🠪",
+"🠮"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"🠪",
+"🠢",
+"🠦",
+"🠮"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.5,
+"grok": 0.0
+},
+"U": 0.5,
+"families": 3,
+"branch_at": [
+"🠪",
+"🠢",
+"🠦",
+"🠮"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"◌",
+"○",
+"●",
+"◑",
+"◕"
+],
+"n": 5,
+"per": {
+"claude": 1.0,
+"gemini": 0.3333333333333333,
+"grok": 0.3333333333333333,
+"muse": 0.0
+},
+"U": 0.41666666666666663,
+"families": 4,
+"branch_at": [
+"◌",
+"○",
+"●",
+"◑",
+"◕"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"⚊",
+"⚋",
+"⚌",
+"⚎",
+"⚍"
+],
+"n": 5,
+"per": {
+"claude": 0.6666666666666666,
+"gemini": 0.3333333333333333,
+"grok": 0.6666666666666666,
+"muse": 0.0
+},
+"U": 0.41666666666666663,
+"families": 4,
+"branch_at": [
+"⚊",
+"⚋",
+"⚌",
+"⚎",
+"⚍"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"𝄖",
+"𝄚",
+"𝄛",
+"𝄘",
+"𝄗"
+],
+"n": 5,
+"per": {
+"claude": 0.6666666666666666,
+"gemini": 0.3333333333333333,
+"grok": 0.0,
+"muse": 0.6666666666666666
+},
+"U": 0.41666666666666663,
+"families": 4,
+"branch_at": [
+"𝄖",
+"𝄚",
+"𝄛",
+"𝄘",
+"𝄗"
+],
+"hints": [
+"𝄙"
+]
+},
+{
+"full_support": [],
+"seq": [
+"·",
+"∶",
+"⁝",
+"⁚"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 0.5,
+"grok": 0.5,
+"muse": 0.0
+},
+"U": 0.375,
+"families": 4,
+"branch_at": [
+"·",
+"∶",
+"⁝",
+"⁚"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"༮",
+"༯",
+"༱",
+"༰"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 0.5,
+"grok": 0.5,
+"muse": 0.0
+},
+"U": 0.375,
+"families": 4,
+"branch_at": [
+"༮",
+"༯",
+"༱",
+"༰"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"▪",
+"◾",
+"◼",
+"◔",
+"○",
+"◐"
+],
+"n": 6,
+"per": {
+"claude": 0.75,
+"gemini": 0.25,
+"grok": 0.25
+},
+"U": 0.4166666666666667,
+"families": 3,
+"branch_at": [
+"▪",
+"◾",
+"◼",
+"◔",
+"○",
+"◐"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
 "seq": [
 "⪅",
 "⪆",
@@ -3790,6 +7404,9 @@
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
 "𝂝",
 "𝂞",
@@ -3809,6 +7426,9 @@
 "hints": []
 },
 {
+"full_support": [
+"gemini"
+],
 "seq": [
 "㎶",
 "㎷",
@@ -3825,11 +7445,217 @@
 "hints": []
 },
 {
+"full_support": [],
 "seq": [
-"🠢",
-"🠦",
-"🠪",
-"🠮"
+"₀",
+"¹",
+"₆",
+"₇",
+"₈",
+"₉"
+],
+"n": 6,
+"per": {
+"claude": 0.5,
+"gemini": 0.3333333333333333,
+"grok": 0.3333333333333333
+},
+"U": 0.38888888888888884,
+"families": 3,
+"branch_at": [
+"₀",
+"¹",
+"₆",
+"₇",
+"₈"
+],
+"hints": [
+"₁"
+]
+},
+{
+"full_support": [],
+"seq": [
+"9",
+"0",
+"1",
+"𝟵"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 0.5,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"9",
+"0",
+"1",
+"𝟵"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"A",
+"a",
+"ᴀ",
+"ₐ"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"A",
+"a",
+"ᴀ",
+"ₐ"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"G",
+"g",
+"Ġ",
+"ĉ"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"G",
+"g",
+"Ġ"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"_",
+"▁",
+"‗",
+"▃"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"_",
+"▁",
+"‗",
+"▃"
+],
+"hints": [
+"▂"
+]
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"_",
+"▃",
+"‗",
+"▁"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"_",
+"▃",
+"‗",
+"▁"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"_",
+"▃",
+"▁",
+"‗"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 0.5,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"_",
+"▃",
+"▁",
+"‗"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"ɫ",
+"ɬ",
+"ɭ",
+"ɮ"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [],
+"hints": []
+},
+{
+"full_support": [
+"gemini"
+],
+"seq": [
+"ᐡ",
+"ᐣ",
+"ᐢ",
+"ᐤ"
 ],
 "n": 4,
 "per": {
@@ -3843,50 +7669,139 @@
 "hints": []
 },
 {
-"seq": [
-"‿",
-"⌄",
-"∨"
+"full_support": [
+"claude"
 ],
-"n": 3,
+"seq": [
+"‗",
+"▃",
+"_",
+"▁"
+],
+"n": 4,
 "per": {
-"claude": 0.0,
+"claude": 1.0,
 "gemini": 0.0,
-"grok": 1.0
+"grok": 0.0
 },
 "U": 0.3333333333333333,
 "families": 3,
 "branch_at": [
-"⌄",
-"∨"
+"‗",
+"▃",
+"_",
+"▁"
 ],
 "hints": []
 },
 {
-"seq": [
-"∨",
-"⌄",
-"⌣"
+"full_support": [
+"claude"
 ],
-"n": 3,
+"seq": [
+"…",
+"┄",
+"┈",
+"╌"
+],
+"n": 4,
 "per": {
-"claude": 0.0,
+"claude": 1.0,
 "gemini": 0.0,
-"grok": 1.0
+"grok": 0.0
 },
 "U": 0.3333333333333333,
 "families": 3,
 "branch_at": [
-"∨",
-"⌄"
+"…",
+"┄",
+"┈",
+"╌"
 ],
 "hints": []
 },
 {
+"full_support": [],
 "seq": [
-"◌",
-"○",
-"◎"
+"┉",
+"┄",
+"┈",
+"╌"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 0.5,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"┉",
+"┄",
+"┈",
+"╌"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"▁",
+"▒",
+"▅",
+"░"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 0.0,
+"grok": 0.5
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"▁",
+"▒",
+"▅",
+"░"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"🠦",
+"🠮",
+"🠢",
+"🠪"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"🠦",
+"🠮",
+"🠢",
+"🠪"
+],
+"hints": []
+},
+{
+"full_support": [
+"gemini"
+],
+"seq": [
+"-",
+"⋮",
+"|"
 ],
 "n": 3,
 "per": {
@@ -3897,17 +7812,43 @@
 "U": 0.3333333333333333,
 "families": 3,
 "branch_at": [
-"◌",
-"○",
-"◎"
+"-",
+"⋮",
+"|"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
 "seq": [
-"★",
-"⭑",
-"⭒"
+"<",
+"≪",
+"⪢"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"<",
+"≪"
+],
+"hints": []
+},
+{
+"full_support": [
+"gemini"
+],
+"seq": [
+"G",
+"Ġ",
+"g"
 ],
 "n": 3,
 "per": {
@@ -3918,11 +7859,1283 @@
 "U": 0.3333333333333333,
 "families": 3,
 "branch_at": [
+"G",
+"Ġ",
+"g"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"g",
+"Ċ",
+"Ġ"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"g",
+"Ċ",
+"Ġ"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"˨",
+"˧",
+"˩"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"˨",
+"˧",
+"˩"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"ሌ",
+"ሊ",
+"ል"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"ሌ",
+"ሊ",
+"ል"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"ል",
+"ሌ",
+"ሎ"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"ል",
+"ሌ",
+"ሎ"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"ᐌ",
+"ჱ",
+"🪖"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [],
+"hints": []
+},
+{
+"full_support": [
+"grok"
+],
+"seq": [
+"⁇",
+"⁉",
+"⁈"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 0.0,
+"grok": 1.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"⁇",
+"⁉",
+"⁈"
+],
+"hints": []
+},
+{
+"full_support": [
+"gemini"
+],
+"seq": [
+"⁎",
+"✱",
+"★"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 1.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"⁎",
+"✱",
 "★"
 ],
 "hints": []
 },
 {
+"full_support": [
+"claude"
+],
+"seq": [
+"₁",
+"¹",
+"①"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"₁",
+"¹",
+"①"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"Ⅰ",
+"Ⅵ",
+"Ⅶ"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"Ⅰ"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"Ⅽ",
+"ↁ",
+"Ⅿ"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"Ⅽ",
+"ↁ",
+"Ⅿ"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"○",
+"◐",
+"◼"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"○",
+"◐",
+"◼"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"◦",
+"∘",
+"◯"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"◦",
+"∘",
+"◯"
+],
+"hints": []
+},
+{
+"full_support": [
+"gemini"
+],
+"seq": [
+"☚",
+"☝",
+"☞"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 1.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"☚",
+"☝",
+"☞"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"☚",
+"☞",
+"☝"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"☚",
+"☞",
+"☝"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"♠",
+"♥",
+"♦"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [],
+"hints": []
+},
+{
+"full_support": [
+"gemini"
+],
+"seq": [
+"➀",
+"⓵",
+"➊"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 1.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"➀",
+"⓵"
+],
+"hints": []
+},
+{
+"full_support": [
+"gemini"
+],
+"seq": [
+"ⶠ",
+"ⶡ",
+"ⶦ"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 1.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [],
+"hints": []
+},
+{
+"full_support": [
+"gemini"
+],
+"seq": [
+"⿷",
+"⿹",
+"⿸"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 1.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"⿷",
+"⿹",
+"⿸"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"〡",
+"〥",
+"〤"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"〡",
+"〥",
+"〤"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"㉑",
+"㊲",
+"㊳"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"㉑"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"㎮",
+"㎰",
+"㎱"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"㎮",
+"㎰",
+"㎱"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"𝀆",
+"𝀋",
+"𝀑"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"𝍠",
+"🙨",
+"🟨"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"𝍠",
+"🟨"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"𝖘",
+"𝗕",
+"🕐"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"𝖘",
+"𝗕",
+"🕐"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"𝖘",
+"🕐",
+"𝗕"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"𝖘",
+"🕐",
+"𝗕"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"𝟙",
+"𝟣",
+"𝟭"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"𝟙",
+"𝟣",
+"𝟭"
+],
+"hints": []
+},
+{
+"full_support": [
+"gemini"
+],
+"seq": [
+"𝟣",
+"𝟙",
+"𝟭"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 1.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"𝟣",
+"𝟙",
+"𝟭"
+],
+"hints": []
+},
+{
+"full_support": [
+"gemini"
+],
+"seq": [
+"📯",
+"🔔",
+"🤫"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 1.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"📯"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"😢",
+"😐",
+"🙁"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"😢",
+"😐",
+"🙁"
+],
+"hints": []
+},
+{
+"full_support": [
+"gemini"
+],
+"seq": [
+"🞯",
+"🞵",
+"🞻"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 1.0,
+"grok": 0.0
+},
+"U": 0.3333333333333333,
+"families": 3,
+"branch_at": [
+"🞯",
+"🞵"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"◐",
+"●",
+"◑",
+"◕"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0,
+"muse": 0.0
+},
+"U": 0.25,
+"families": 4,
+"branch_at": [
+"◐",
+"●",
+"◑",
+"◕"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"◔",
+"●",
+"◑",
+"◕"
+],
+"n": 4,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0,
+"muse": 0.0
+},
+"U": 0.25,
+"families": 4,
+"branch_at": [
+"◔",
+"●",
+"◑",
+"◕"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"𝄖",
+"𝄘",
+"𝄛",
+"𝄚"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 0.0,
+"grok": 0.0,
+"muse": 0.5
+},
+"U": 0.25,
+"families": 4,
+"branch_at": [
+"𝄖",
+"𝄘",
+"𝄛",
+"𝄚"
+],
+"hints": [
+"𝄗"
+]
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"🁙",
+"🁁",
+"🁡"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0,
+"muse": 0.0
+},
+"U": 0.25,
+"families": 4,
+"branch_at": [
+"🁙",
+"🁁",
+"🁡"
+],
+"hints": []
+},
+{
+"full_support": [
+"claude"
+],
+"seq": [
+"🌊",
+"🌧",
+"💧"
+],
+"n": 3,
+"per": {
+"claude": 1.0,
+"gemini": 0.0,
+"grok": 0.0,
+"muse": 0.0
+},
+"U": 0.25,
+"families": 4,
+"branch_at": [
+"🌊",
+"🌧",
+"💧"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"¹",
+"❶",
+"➀",
+"①",
+"⑴",
+"⒈"
+],
+"n": 6,
+"per": {
+"claude": 0.0,
+"gemini": 0.75,
+"grok": 0.0
+},
+"U": 0.25,
+"families": 3,
+"branch_at": [
+"¹",
+"❶",
+"➀",
+"①",
+"⑴",
+"⒈"
+],
+"hints": [
+"₁"
+]
+},
+{
+"full_support": [],
+"seq": [
+"¹",
+"➀",
+"❶",
+"①",
+"⑴",
+"⒈"
+],
+"n": 6,
+"per": {
+"claude": 0.25,
+"gemini": 0.5,
+"grok": 0.0
+},
+"U": 0.25,
+"families": 3,
+"branch_at": [
+"¹",
+"➀",
+"❶",
+"①",
+"⑴",
+"⒈"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"⁹",
+"₈",
+"₇",
+"₆",
+"¹",
+"₀"
+],
+"n": 6,
+"per": {
+"claude": 0.25,
+"gemini": 0.25,
+"grok": 0.25
+},
+"U": 0.25,
+"families": 3,
+"branch_at": [
+"₈",
+"₇",
+"₆",
+"¹",
+"₀"
+],
+"hints": [
+"₁"
+]
+},
+{
+"full_support": [],
+"seq": [
+"¹",
+"₁",
+"①",
+"➀",
+"❶"
+],
+"n": 5,
+"per": {
+"claude": 0.0,
+"gemini": 0.6666666666666666,
+"grok": 0.0
+},
+"U": 0.2222222222222222,
+"families": 3,
+"branch_at": [
+"¹",
+"₁",
+"①",
+"➀",
+"❶"
+],
+"hints": [
+"⑴",
+"⒈"
+]
+},
+{
+"full_support": [],
+"seq": [
+"¹",
+"₁",
+"⒈",
+"⑴",
+"①"
+],
+"n": 5,
+"per": {
+"claude": 0.0,
+"gemini": 0.6666666666666666,
+"grok": 0.0
+},
+"U": 0.2222222222222222,
+"families": 3,
+"branch_at": [
+"¹",
+"₁",
+"⒈",
+"⑴",
+"①"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"¹",
+"₁",
+"⒈",
+"⑴",
+"①",
+"¹"
+],
+"n": 6,
+"per": {
+"claude": 0.2,
+"gemini": 0.4,
+"grok": 0.0
+},
+"U": 0.20000000000000004,
+"families": 3,
+"branch_at": [
+"¹",
+"₁",
+"⒈",
+"⑴",
+"①",
+"¹"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"◌",
+"○",
+"◕",
+"◑",
+"●"
+],
+"n": 5,
+"per": {
+"claude": 0.6666666666666666,
+"gemini": 0.0,
+"grok": 0.0,
+"muse": 0.0
+},
+"U": 0.16666666666666666,
+"families": 4,
+"branch_at": [
+"◌",
+"○",
+"◕",
+"◑",
+"●"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"🌊",
+"💧",
+"🌧",
+"☁",
+"🌫"
+],
+"n": 5,
+"per": {
+"claude": 0.6666666666666666,
+"gemini": 0.0,
+"grok": 0.0,
+"muse": 0.0
+},
+"U": 0.16666666666666666,
+"families": 4,
+"branch_at": [
+"🌊",
+"💧",
+"🌧",
+"☁",
+"🌫"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"¹",
+"₁",
+"⑴",
+"①",
+"¹"
+],
+"n": 5,
+"per": {
+"claude": 0.25,
+"gemini": 0.25,
+"grok": 0.0
+},
+"U": 0.16666666666666666,
+"families": 3,
+"branch_at": [
+"¹",
+"₁",
+"⑴",
+"①",
+"¹"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"¹",
+"₁",
+"⒈",
+"①",
+"¹"
+],
+"n": 5,
+"per": {
+"claude": 0.25,
+"gemini": 0.25,
+"grok": 0.0
+},
+"U": 0.16666666666666666,
+"families": 3,
+"branch_at": [
+"¹",
+"₁",
+"⒈",
+"①",
+"¹"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+">",
+")",
+"}",
+"|"
+],
+"n": 4,
+"per": {
+"claude": 0.0,
+"gemini": 0.0,
+"grok": 0.5
+},
+"U": 0.16666666666666666,
+"families": 3,
+"branch_at": [
+">",
+")",
+"}",
+"|"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"|",
+"}",
+")",
+"⊂"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.16666666666666666,
+"families": 3,
+"branch_at": [
+"|",
+"}",
+")",
+"⊂"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"¹",
+"①",
+"❶",
+"➀"
+],
+"n": 4,
+"per": {
+"claude": 0.5,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.16666666666666666,
+"families": 3,
+"branch_at": [
+"¹",
+"①",
+"❶",
+"➀"
+],
+"hints": [
+"⑴"
+]
+},
+{
+"full_support": [],
+"seq": [
+"⋀",
+"∩",
+"⋂",
+"∨",
+"⋁",
+"▽"
+],
+"n": 6,
+"per": {
+"claude": 0.25,
+"gemini": 0.0,
+"grok": 0.25,
+"muse": 0.0
+},
+"U": 0.125,
+"families": 4,
+"branch_at": [
+"∨",
+"⋁",
+"▽"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"𝄖",
+"𝄚",
+"𝄗",
+"𝄛"
+],
+"n": 4,
+"per": {
+"claude": 0.0,
+"gemini": 0.5,
+"grok": 0.0,
+"muse": 0.0
+},
+"U": 0.125,
+"families": 4,
+"branch_at": [
+"𝄖",
+"𝄚",
+"𝄗",
+"𝄛"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"-",
+"=",
+"∿",
+"∾"
+],
+"n": 4,
+"per": {
+"claude": 0.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.0,
+"families": 3,
+"branch_at": [
+"-"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"*",
+"✦",
+"✱"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.0,
+"families": 3,
+"branch_at": [
+"✦",
+"✱"
+],
+"hints": []
+},
+{
+"full_support": [],
 "seq": [
 ",",
 ";",
@@ -3940,6 +9153,7 @@
 "hints": []
 },
 {
+"full_support": [],
 "seq": [
 "E",
 "ᴇ",
@@ -3955,6 +9169,7 @@
 "hints": []
 },
 {
+"full_support": [],
 "seq": [
 "½",
 "⅕",
@@ -3974,6 +9189,7 @@
 "hints": []
 },
 {
+"full_support": [],
 "seq": [
 "ȁ",
 "㏨",
@@ -3991,6 +9207,7 @@
 "hints": []
 },
 {
+"full_support": [],
 "seq": [
 "༬",
 "༰",
@@ -4009,6 +9226,7 @@
 "hints": []
 },
 {
+"full_support": [],
 "seq": [
 "ᚌ",
 "ᚎ",
@@ -4020,10 +9238,51 @@
 },
 "U": 0.0,
 "families": 1,
+"branch_at": [
+"ᚌ",
+"ᚎ",
+"ᚏ"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"ᚎ",
+"ᚌ",
+"ᚏ"
+],
+"n": 3,
+"per": {
+"claude": 0.0
+},
+"U": 0.0,
+"families": 1,
+"branch_at": [
+"ᚎ",
+"ᚌ",
+"ᚏ"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"῍",
+"῎",
+"῏"
+],
+"n": 3,
+"per": {
+"claude": 0.0
+},
+"U": 0.0,
+"families": 1,
 "branch_at": [],
 "hints": []
 },
 {
+"full_support": [],
 "seq": [
 "∣",
 "∥",
@@ -4039,6 +9298,51 @@
 "hints": []
 },
 {
+"full_support": [],
+"seq": [
+"⑱",
+"㈐",
+"⽦"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.0,
+"families": 3,
+"branch_at": [
+"⑱",
+"㈐",
+"⽦"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"▙",
+"▛",
+"▜"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.0,
+"families": 3,
+"branch_at": [
+"▙",
+"▛",
+"▜"
+],
+"hints": []
+},
+{
+"full_support": [],
 "seq": [
 "▵",
 "▹",
@@ -4054,6 +9358,75 @@
 "hints": []
 },
 {
+"full_support": [],
+"seq": [
+"☀",
+"🌍",
+"🌌"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 0.0,
+"grok": 0.0,
+"muse": 0.0
+},
+"U": 0.0,
+"families": 4,
+"branch_at": [
+"☀",
+"🌍",
+"🌌"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"☁",
+"🌫",
+"🌊"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 0.0,
+"grok": 0.0,
+"muse": 0.0
+},
+"U": 0.0,
+"families": 4,
+"branch_at": [
+"☁",
+"🌫",
+"🌊"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"♕",
+"♗",
+"♖"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.0,
+"families": 3,
+"branch_at": [
+"♕",
+"♗",
+"♖"
+],
+"hints": []
+},
+{
+"full_support": [],
 "seq": [
 "✶",
 "✵",
@@ -4065,10 +9438,56 @@
 },
 "U": 0.0,
 "families": 1,
-"branch_at": [],
+"branch_at": [
+"✶",
+"✸"
+],
 "hints": []
 },
 {
+"full_support": [],
+"seq": [
+"⽦",
+"⑱",
+"㈐"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.0,
+"families": 3,
+"branch_at": [
+"⽦",
+"⑱",
+"㈐"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"㌹",
+"ŋ",
+"🂧"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.0,
+"families": 3,
+"branch_at": [
+"🂧"
+],
+"hints": []
+},
+{
+"full_support": [],
 "seq": [
 "㍞",
 "㍟",
@@ -4086,6 +9505,25 @@
 "hints": []
 },
 {
+"full_support": [],
+"seq": [
+"㍭",
+"㍮",
+"㍯"
+],
+"n": 3,
+"per": {
+"claude": 0.0
+},
+"U": 0.0,
+"families": 1,
+"branch_at": [
+"㍭"
+],
+"hints": []
+},
+{
+"full_support": [],
 "seq": [
 "꜒",
 "꜓",
@@ -4104,6 +9542,7 @@
 "hints": []
 },
 {
+"full_support": [],
 "seq": [
 "𝍲",
 "𝍳",
@@ -4119,6 +9558,70 @@
 "hints": []
 },
 {
+"full_support": [],
+"seq": [
+"𝗕",
+"𝖘",
+"🕐"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.0,
+"families": 3,
+"branch_at": [
+"𝗕",
+"𝖘",
+"🕐"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"𝟗",
+"𝟡",
+"🯹"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.0,
+"families": 3,
+"branch_at": [
+"𝟡",
+"🯹"
+],
+"hints": []
+},
+{
+"full_support": [],
+"seq": [
+"𝟼",
+"⑥",
+"🄇"
+],
+"n": 3,
+"per": {
+"claude": 0.0
+},
+"U": 0.0,
+"families": 1,
+"branch_at": [
+"𝟼",
+"⑥",
+"🄇"
+],
+"hints": []
+},
+{
+"full_support": [],
 "seq": [
 "🀔",
 "🀕",
@@ -4134,6 +9637,29 @@
 "hints": []
 },
 {
+"full_support": [],
+"seq": [
+"🞪",
+"🞨",
+"🞮"
+],
+"n": 3,
+"per": {
+"claude": 0.0,
+"gemini": 0.0,
+"grok": 0.0
+},
+"U": 0.0,
+"families": 3,
+"branch_at": [
+"🞪",
+"🞨",
+"🞮"
+],
+"hints": []
+},
+{
+"full_support": [],
 "seq": [
 "🡪",
 "🡲",
@@ -4149,6 +9675,7 @@
 "hints": []
 },
 {
+"full_support": [],
 "seq": [
 "🬀",
 "🬆",
