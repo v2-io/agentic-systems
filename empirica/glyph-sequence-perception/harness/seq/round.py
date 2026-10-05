@@ -213,6 +213,7 @@ def cmd_plan(a):
         cats[(it["kind"], "explore")].append((it, 0.0))
     if cur:
         cooc = _cooc(parsed, pres, props)
+        seed_next = Q.seed_continuations(seeds)
         for pc in pieces:
             for side in ("right", "left"):
                 st = Q.end_state(pc, side, parsed, pres, items)
@@ -220,7 +221,7 @@ def cmd_plan(a):
                     continue
                 spent = st["answers"] + sum(st["tested"].values())
                 decay = 1.0 / (1.0 + spent / 8.0)          # diminishing returns: many kernels grow in parallel
-                for it, pri in Q.extension_items(pc, st, cooc.get(st["end"], []), rid):
+                for it, pri in Q.extension_items(pc, st, cooc.get(st["end"], []), rid, seed_next):
                     cats[(it["kind"], "extend")].append((it, pri * decay))
             for it, pri in Q.gap_items(pc, rid):
                 cats[(it["kind"], "extend")].append((it, pri))

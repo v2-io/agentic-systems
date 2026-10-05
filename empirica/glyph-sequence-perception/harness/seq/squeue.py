@@ -112,6 +112,11 @@ def tail_items(pool, round_id, n_tri, n_next):
         out.append(I.make_item("next", context=r.sample(pool, 2), source={"kind": "tail"}))
     return out
 
+T_BY_ROLE = {"explore": 1.0, "extend": 0.1, "support": 0.1, "square": 0.1, "branch": 0.2}
+# extension/support/squaring are drawn nearly greedily by priority (stability first: "square away the most obvious and
+# stable ... sequences"); exploration stays broad. Found 2026-10-04: at T = 0.5 the next question at ①'s end of ①…⑩
+# (priority 1.27) lost to co-occurrence triads (~1.0), so ⓪ was never asked about.
+
 def draw(cands_by_cat, quotas, N, T, round_id, asked):
     """Fated weighted sampling without replacement within each category. Items already asked at rep 0 are
     excluded (follow-ups are separate). Returns [(item, category, priority)]."""
@@ -120,8 +125,10 @@ def draw(cands_by_cat, quotas, N, T, round_id, asked):
         k = round(quotas[cat] * N)
         pool = [(it, p) for it, p in cands_by_cat.get(cat, []) if it["iid"] not in asked and it["iid"] not in seen]
         r = R("draw", {"round": round_id, "cat": list(cat)})
+        Tc = T_BY_ROLE.get(cat[1], T)
         for _ in range(min(k, len(pool))):
-            ws = [math.exp(min(50.0, p / max(T, 1e-6))) for _, p in pool]
+            top = max(p for _, p in pool)
+            ws = [math.exp(max(-50.0, (p - top) / max(Tc, 1e-6))) for _, p in pool]
             x, acc = r.random() * sum(ws), 0.0
             for j, w in enumerate(ws):
                 acc += w
@@ -187,7 +194,7 @@ GROW = {
     # the other categories cannot fill (early rounds, when few sequences are established yet)
     ("triad", "explore"): .12, ("order", "explore"): .06, ("next", "explore"): .02,
     # extend established sequences outward from both ends, most stable first, with diminishing returns per sequence
-    ("next", "extend"): .12, ("triad", "extend"): .25, ("order", "extend"): .03, ("between", "extend"): .05,
+    ("next", "extend"): .20, ("triad", "extend"): .20, ("order", "extend"): .03, ("between", "extend"): .02,
     # branch: other sequences crossing an established one at a middle glyph
     ("triad", "branch"): .05,
     # square away established sequences: unsupported links/ties, order windows, splice checks
@@ -254,7 +261,18 @@ def end_state(piece, side, parsed, pres, items):
     return {"end": b, "prev": a, "answers": len(ans), "none_share": none / len(ans) if ans else None,
             "proposals": props, "tested": tested, "closed": closed, "g": g}
 
-def extension_items(piece, st, neighbours, round_id):
+def seed_continuations(seeds):
+    """(prev, end) -> Counter of glyphs that some seed writes directly beyond `end`, coming from `prev` (either
+    reading direction). Seeds only raise priority (Joseph: "based on bumps from the original seed")."""
+    out = collections.defaultdict(collections.Counter)
+    for sd in seeds:
+        g = list(dict.fromkeys(sd["glyphs"]))
+        for seq in (g, g[::-1]):
+            for a, b, x in zip(seq, seq[1:], seq[2:]):
+                out[(a, b)][x] += 1
+    return out
+
+def extension_items(piece, st, neighbours, round_id, seed_next=None):
     """Items at one OPEN end of an established sequence: a next item (outward context of 3-5 glyphs), triads testing
     each proposal and the strongest co-occurring neighbours against the end's last two glyphs, and one order window
     at the end with the top proposal. Priority: the sequence's stability, plus 0.25 per mind that proposed the glyph."""
@@ -263,11 +281,16 @@ def extension_items(piece, st, neighbours, round_id):
     r = R("extend", {"round": round_id, "piece": piece["glyphs"], "end": b})
     out = []
     k = min(len(g), r.randint(3, 5))
-    out.append((I.make_item("next", context=g[-k:], source=src), piece["stability"]))
+    out.append((I.make_item("next", context=g[-k:], source=src), piece["stability"] + 0.3))
+    # candidates beyond this end, in order: what minds proposed here; what seeds write here; what co-occurs
+    sn = (seed_next or {}).get((a, b), collections.Counter())
     cands = [x for x, _ in st["proposals"].most_common() if st["tested"][x] < 3 and ok_glyph(x) and x not in g]
+    cands += [x for x, _ in sn.most_common() if x not in cands and x not in g and st["tested"][x] < 3 and ok_glyph(x)]
     cands += [x for x in neighbours if x not in cands and x not in g and st["tested"][x] < 3]
     for x in cands[:4]:
-        out.append((I.make_item("triad", [a, b, x], source=dict(src, test=x)), piece["stability"] + 0.25 * st["proposals"].get(x, 0)))
+        bonus = 0.25 * st["proposals"].get(x, 0) + (0.5 if sn.get(x) else 0.0)
+        out.append((I.make_item("triad", [a, b, x], source=dict(src, test=x, why="proposal" if st["proposals"].get(x) else
+                                ("seed" if sn.get(x) else "co-occurrence"))), piece["stability"] + bonus))
     if cands and len(g) >= 3:
         win = g[-min(len(g), 6):] + [cands[0]]
         if len(set(win)) >= 4:
