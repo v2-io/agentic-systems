@@ -34,3 +34,31 @@ Each `validate-rNNN.txt` is `harness/seq/validate.py` on the run's last complete
 ## shakedown-2026-10-04/ — first contact with the real minds
 
 A dry-run init and round-0 plan was made with the then-current code (120ac49d). Two sheets each went to sonnet55, haiku45, grok46, gemini38flash and glimmer30b-sheet, to check that every mind can answer the new sheet format and that the parser reads it. All five answered all their sheets. These answers are **not** part of the study's evidence: the round-0 plan in `data/rounds/r000/` was drawn independently.
+
+## Later runs on the evening of 2026-10-04, and what the synthetic checks can and cannot show
+
+| run | planner | status |
+|---|---|---|
+| `synth7-kernel-growth` | category-share planner (used for real r005 only) | Stopped during round 4, when that planner was replaced; it can't inform a planner no longer in use. |
+| `synth8-single-priority` | single priority order (Joseph's rule; real r006 onward) | Run once as a smoke test: does the new planner still recover the planted sequences? |
+
+**What the synthetic checks caught:**
+
+- interleaving of unrelated sequences, which led to the connectivity penalty;
+- splices knit by a noisy mind, which led to witnesses needing two or more in-order answers and a majority;
+- confirmation that holistic sequences are recoverable;
+- confirmation that the Latin rotations expose a slot-biased mind.
+
+**What they missed:** every problem Joseph caught on real data. Untested links ranked as stable (#3, #59); inflated support from warm chains; extension starved by the planner; a probe round taken as a planning basis; restated sequences double-counted; a top sequence's ends never asked. There are two reasons:
+
+- the world is tiny: five seeds, six planted sequences;
+- `validate.py` checks only whether planted sequences are recovered, never the standings, the ranking, or how a round's effort is spent.
+
+The real-data diagnostics are now the stronger checks:
+
+- `PROGRESS.md`, which counts stable growth both with the likelihood model and without it;
+- the standings' `ends` and `untested` columns;
+- each round's `plan.json`, which shows how far down the stability ranking the round reached.
+
+Further synthetic runs are worth it only with a harder world built to exercise those.
+

@@ -1,0 +1,24 @@
+{
+ "round": "r004",
+ "scheme": "kernel-growth (PLAN \u00a74, 2026-10-04)",
+ "quotas": {
+  "triad|explore": 0.4907,
+  "order|explore": 0.2453,
+  "next|explore": 0.0818,
+  "next|extend": 0.014,
+  "triad|extend": 0.0748,
+  "order|extend": 0.0187,
+  "between|extend": 0.0187,
+  "triad|branch": 0.0374,
+  "triad|support": 0.0,
+  "order|square": 0.0093,
+  "triad|square": 0.0093
+ },
+ "established_sequences": 6,
+ "T": 0.5,
+ "follow_ups": 45,
+ "follow_ups_wanted": 388,
+ "new_items": 213,
+ "presentations": 316,
+ "sheets": 100
+}

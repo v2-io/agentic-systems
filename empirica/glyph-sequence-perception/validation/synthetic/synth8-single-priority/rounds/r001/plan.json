@@ -1,0 +1,24 @@
+{
+ "round": "r001",
+ "scheme": "single-priority (Joseph's rule, 2026-10-04)",
+ "explore_share": 0.15,
+ "explore_presentations": 45,
+ "established_sequences": 1,
+ "sequences_served": 1,
+ "lowest_stability_served": 0.26166666666666666,
+ "items_by_category": {
+  "triad/kernel-followup": 8,
+  "triad/explore": 228,
+  "next/end": 2,
+  "triad/end": 2,
+  "triad/link": 5,
+  "order/link": 3,
+  "triad/followup": 17,
+  "order/end": 2,
+  "order/square": 1,
+  "triad/branch": 1,
+  "between/branch": 1
+ },
+ "presentations": 300,
+ "sheets": 99
+}
