@@ -74,6 +74,11 @@ def cmd_plan(a):
     print(json.dumps(stats, ensure_ascii=False))
 
 # ------------------------------------------------------------------ ask
+AGY_WORKERS = 3           # Gemini via agy: 3 concurrent calls (Joseph, 2026-10-05: "go ahead and speed up gemini")
+GRACE_MIN = 20            # once every Claude mind has finished, other minds get this many more minutes, then the round
+                          # moves on (Joseph: "when we start hitting rate limits we can let claude go ahead"); their
+                          # unanswered sheets stay open and `run.py ask RID` later backfills them (ledgers resume)
+
 def cmd_ask(a):
     rd = DATA / "rounds" / a.round
     sheets = rj(rd / "sheets.jsonl")
@@ -81,15 +86,20 @@ def cmd_ask(a):
     sys.path.insert(0, str(ROOT / "core"))
     from judges import make_judge, ADAPTER_VERSION
     want = a.minds or sorted({m for s in sheets for m in s["minds"]})
+    stop = threading.Event()
     def run_mind(m):
         spec = reg["minds"][m]; judge = make_judge(spec)
         led = rd / "raw" / m / "ledger.jsonl"; lock = threading.Lock()
         for p in range(3):                                   # resume passes: failed sheets are re-asked
+            if stop.is_set() and reg["minds"][m]["family"] != "claude":
+                break
             done = {r["sid"] for r in rj(led) if r["result"].get("raw") and not r["result"].get("error")}
             todo = [s for s in sheets if m in s["minds"] and s["sid"] not in done]
             if not todo:
                 break
             def one(s):
+                if stop.is_set() and reg["minds"][m]["family"] != "claude":
+                    return
                 res = judge(PR.SYSTEM, s["prompt"])
                 row = {"protocol": PR.PROTOCOL, "round": a.round, "sid": s["sid"], "mind": m, "judge": spec,
                        "adapter_version": ADAPTER_VERSION[spec["adapter"]], "system_sha256": sha(PR.SYSTEM),
@@ -99,14 +109,24 @@ def cmd_ask(a):
                     row["result"] = dict(res, error="no-answers-object")      # raw kept; re-asked next pass
                 with lock:
                     wj(led, [row], "a")
-            workers = 1 if spec["adapter"] == "agy" else 6
+            workers = AGY_WORKERS if spec["adapter"] == "agy" else 6
             with cf.ThreadPoolExecutor(max_workers=workers) as ex:
                 list(ex.map(one, todo))
         n = len({r["sid"] for r in rj(led) if r["result"].get("raw") and not r["result"].get("error")})
         return m, n, sum(1 for s in sheets if m in s["minds"])
     with cf.ThreadPoolExecutor(max_workers=len(want)) as ex:
-        for m, n, tot in ex.map(run_mind, want):
-            print(f"{a.round}/{m}: {n}/{tot} sheets answered", flush=True)
+        futs = {m: ex.submit(run_mind, m) for m in want}
+        claude = [f for m, f in futs.items() if reg["minds"][m]["family"] == "claude"]
+        cf.wait(claude)
+        rest = [f for m, f in futs.items() if reg["minds"][m]["family"] != "claude"]
+        _, pending = cf.wait(rest, timeout=GRACE_MIN * 60)
+        if pending:
+            print(f"{a.round}: grace of {GRACE_MIN} min after Claude finished is over; stopping "
+                  f"{[m for m, f in futs.items() if f in pending]} (backfill later with `run.py ask {a.round}`)", flush=True)
+            stop.set()
+        for m, f in futs.items():
+            mm, n, tot = f.result()
+            print(f"{a.round}/{mm}: {n}/{tot} sheets answered", flush=True)
 
 # ------------------------------------------------------------------ record
 def cmd_record(a):
