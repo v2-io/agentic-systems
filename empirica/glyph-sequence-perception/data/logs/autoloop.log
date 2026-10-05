@@ -2,3 +2,5 @@
 == r005 start 2026-10-04 20:48:59
 == r005 done 2026-10-04 22:08:43: growing (dry streak 0)
 == STOP-ROUNDS found; stopped 2026-10-04 22:08:43
+== autoloop start 2026-10-04 22:09:32 budget 700 dry_k 3
+== r006 start 2026-10-04 22:09:32
