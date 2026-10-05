@@ -5,7 +5,7 @@
   run.py plan RID [--budget N]      questions + sheets -> data/rounds/RID/
   run.py ask RID [--minds m ...]    call the judges; verbatim ledgers -> data/rounds/RID/raw/<mind>/ledger.jsonl
   run.py record RID                 ledgers -> data/answers/RID.jsonl (canonical records; regenerable)
-  run.py tree                       SEQUENCES.md (+ data/tree/*.json)
+  run.py tree                       SEQUENCES.md (+ data/tree/*.json) and BEST.md (report/best.py, a read-off)
   run.py progress                   PROGRESS.md: what the tree holds after each round
   run.py round RID [--budget N]     all of the above, then commit
   run.py loop [--budget N]          rounds c001, c002, ... until data/rounds/STOP exists or a round fails
@@ -19,11 +19,12 @@ import argparse, collections, concurrent.futures as cf, datetime as dt, hashlib,
 ROOT = pathlib.Path(__file__).resolve().parent
 STUDY = ROOT.parent
 DATA = ROOT / "data"
-for sub in ("core", "probe", "tree", "priority"):
+for sub in ("core", "probe", "tree", "priority", "report"):
     sys.path.insert(0, str(ROOT / sub))
 import probe as PR                                          # noqa: E402
 import tree as TR                                           # noqa: E402
 import plan as PL                                           # noqa: E402
+import best as BE                                           # noqa: E402  (a read-off; nothing reads it back)
 
 def rj(p):
     p = pathlib.Path(p)
@@ -128,6 +129,7 @@ def cmd_record(a):
 # ------------------------------------------------------------------ tree + progress
 def cmd_tree(a):
     TR.main()
+    BE.main()
 
 SETTLED_AGREEMENT = 0.75     # read-off only (PROGRESS): a sequence counts as settled when every walked step has at
                              # least this agreement and it walked >= 3 steps; chosen without evidence, gates nothing
@@ -170,7 +172,7 @@ def git(*args):
 
 def commit(rid):
     rel = ROOT.relative_to(STUDY.parents[1])
-    paths = [str(rel / "data" / "rounds" / rid), str(rel / "SEQUENCES.md"), str(rel / "PROGRESS.md")]
+    paths = [str(rel / "data" / "rounds" / rid), str(rel / "SEQUENCES.md"), str(rel / "PROGRESS.md"), str(rel / "BEST.md")]
     git("add", *paths)
     r = git("commit", "-q", "-m", f"empirica/glyph-sequence: context-tree round {rid} (planned, answered, recorded; SEQUENCES + PROGRESS)\n\n"
             "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\n"
