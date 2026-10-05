@@ -133,7 +133,7 @@ It is implemented as stated, in two parts (`harness/seq/squeue.py`, `round.cmd_p
 
 Support is the number of answers and families behind each step, shown per row. It orders the planner's work and never removes a row. Steps that no answer has given yet, which insertion can create, are asked next (tier 2 below). The minds' proposals (what comes next, what goes between) decide what gets asked, and are listed at each end of a row until an answer tests them.
 
-This replaced, the same night, a chaining view (`evidence_view.py`, now in git history). Its two-answer witness rule, transitive reduction, folding and fork rules discarded single answers and stalled growth. The likelihood fit only proposes guesses, which the link tier asks about. Its list is not shown.
+This replaced, the same night, a chaining view (`evidence_view.py`, now in git history). Its two-answer witness rule, transitive reduction, folding and fork rules discarded single answers and stalled growth. The likelihood fit no longer feeds the planner at all: its guesses had been asked in a link tier, and its cold chains start from seeds, so they were another channel for seed order. It still runs after each round, for its per-mind nuisance estimates.
 
 1. **15% hot exploration.** First, the rotation follow-ups that confirm a kernel: an exploratory triad any mind ordered, most minds first (up to a third of the share). Then tests of what minds proposed **between** two glyphs (a triad `a g b`, up to a sixth). Then stochastic items over the whole pool, each glyph weighted by its seed's bump, interleaved in a fated order:
 
@@ -144,8 +144,8 @@ This replaced, the same night, a chaining view (`evidence_view.py`, now in git h
 
 Half of these come from one seed's neighbourhood.
 2. **The rest is one ordered list.** Every grown sequence (`growth.piece_table`), ranked most stable first: the mean, over its steps, of the share of LLM families whose minds gave that step. Each sequence brings its work in this order:
-   1. its open ends: the what-comes-next question at each end, then the best untested glyph beyond each end. Candidates come from the minds' proposals first, then what seeds write there, then co-occurring glyphs. Then the what-comes-next question at **every other glyph of the sequence, in each direction, where it has never been asked**. *Added 2026-10-04 (night), from Joseph's question: `0…9` had reached `🔟` through a survey seed's triads, so no mind was ever asked what follows `…8 9`, and hex's `9 A` could not appear. A glyph can stop being an end before anyone has asked what follows it; the minds' answers there are where branches come from.*;
-   2. its steps no answer has given yet, and the fit's guesses about its links and ties;
+   1. its open ends: the what-comes-next question at each end, then the best untested glyph beyond each end. Candidates come from the minds' proposals first, then glyphs the minds placed with the end in their answers; seeds supply none (§4). Then the what-comes-next question at **every other glyph of the sequence, in each direction, where it has never been asked**. *Added 2026-10-04 (night), from Joseph's question: `0…9` had reached `🔟` through a survey seed's triads, so no mind was ever asked what follows `…8 9`, and hex's `9 A` could not appear. A glyph can stop being an end before anyone has asked what follows it; the minds' answers there are where branches come from.*;
+   2. its steps no answer has given yet;
    3. the rotation follow-ups of its triads;
    4. the remaining candidates beyond its ends;
    5. one squaring window and one long-range check;
@@ -237,18 +237,15 @@ Reply: {"answers":[{"id":0,"next":["☷"]}, …]}
 
 ## 4. Seeds: decomposed, then they fade
 
-A seed is a starting point. It is broken into primitive items the moment it enters:
+A seed is a starting point for **exploration only**:
 
-- **its glyphs** join the pool;
-- **adjacent triads** along its written order;
-- **a sample of long-range triads;**
-- **one order item:** a window of up to 8 glyphs, shuffled;
-- **next items** from both ends;
-- **an annealing restart point.**
+- **its glyphs** join the pool, weighted by the seed's bump when exploration draws glyphs;
+- **half of the exploration items** take their glyphs from one seed (a sample of its glyphs, in no particular order), so a seed can become a kernel;
+- **far-pair `between` questions** may take two glyphs several steps apart in one seed.
 
 Each generated item carries the seed's id in its lineage, as metadata.
 
-After that, a seed has **no standing** in the model. Its written order is never evidence and never a reference. If the triads support it, a candidate like it emerges; if not, nothing remains. The priority bump on its items is spent once those items have been answered.
+A seed has **no standing** in a sequence. Its written order is never evidence and never a reference, and it **never supplies the glyphs tested at a sequence's ends**: candidates there are only what the minds proposed in answer to open questions, or placed with the end in their own answers. *(Until 2026-10-04, night, seeds' written continuations were tested beyond ends, and r000–r005 asked each seed's adjacent triads directly. That is how `0…9` reached `🔟` from one surveyor's list before any mind was asked what follows `…8 9`. Joseph: "a more subtle example of the seeds having more prominence than they were intended to have." The what-comes-next question at every never-asked glyph, §3, is the other half of that fix.)*
 
 A `lattice` seed (the digit dress × value grid) is just a triad generator. It samples triples along each factor (same value with different dresses; same dress with different values) and mixed across them.
 
@@ -263,10 +260,7 @@ A `lattice` seed (the digit dress × value grid) is just a triad generator. It s
    - **parse;** report unparsed and echo-failure rates per mind and per glyph (they aren't missing at random);
    - **re-fit the model (§2):** anneal, warm-started from the last round, with fresh restarts. This also re-estimates each mind's nuisance parameters, and so its slot bias. Where a bias is large, that mind's next sheets lean harder on the rotations that cancel it;
    - **take posterior samples** at T > 0;
-   - **find the unsupported links.** For every candidate, list its links and ties that no witnessed triple supports yet: fewer than two answers in the candidate's order. These become **support items**, asked in tier 2 of the sequences that hold those glyphs (Joseph, 2026-10-04: the standings' untested links show *"what kind of sheets need higher priority"*).
-     - *Triads* pair the two glyphs of the link with each neighbour.
-     - *Order windows* span the gap.
-     - *Priority:* highest when the two glyphs have never been asked together.
+   - *(Until 2026-10-04, night: the fit's unsupported links became support items asked inside sequences. Retired with the fit's role in planning, §3; a sequence's untested steps now come from the growth itself.)*
 
      A warm-started fit cannot surface these through posterior disagreement, because every warm chain inherits the same arbitrary choice.
    - **recalibrate the slope.** An item's priority is its expected information for the minds it would go to: the disagreement among posterior samples about its answer. Then:

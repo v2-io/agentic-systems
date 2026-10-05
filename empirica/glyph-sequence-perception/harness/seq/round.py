@@ -190,7 +190,6 @@ def cmd_plan(a):
         for g in sd["glyphs"]:
             bump[g] = max(bump.get(g, 1.0), sd.get("bump", Q.SEED_BUMP))
     cooc = _cooc(parsed, pres, props) if pieces else {}
-    seed_next = Q.seed_continuations(seeds) if pieces else {}
     # ---- ONE priority order (Joseph's rule; squeue: "one priority order"). Two parts:
     #      (1) EXPLORE_SHARE: hot exploration + rotation follow-ups that confirm exploratory kernels;
     #      (2) the rest: established sequences, most stable first, each with its work in a fixed order, taken greedily.
@@ -269,12 +268,6 @@ def cmd_plan(a):
     # (2) sequences in stability order, each with its full work list, greedily
     served, last_stab = 0, None
     if pieces:
-        support_by_glyph = collections.defaultdict(list)
-        for cid in (list(cur.cands) if cur else []):
-            for it, _ in Q.support_items(cur, cid, rid):
-                key = it["source"].get("link") or it["source"].get("tie") or ""
-                for g in key:
-                    support_by_glyph[g].append(it)
         asked_next = {tuple(p_["shown"][-2:]) for p_ in pres.values() if p_["kind"] == "next"}
         for p_ in new_pres:
             if p_["kind"] == "next":
@@ -284,7 +277,7 @@ def cmd_plan(a):
                 break
             ends = [Q.end_state(pc, side, parsed, pres, items) for side in ("right", "left")]
             got = 0
-            for tier, w in Q.sequence_work(pc, ends, cooc, seed_next, support_by_glyph, follow_by_glyph, rid, asked_next):
+            for tier, w in Q.sequence_work(pc, ends, cooc, follow_by_glyph, rid, asked_next):
                 if spent >= B:
                     break
                 name = {1: "end", 2: "link", 3: "followup", 4: "end", 5: "square", 6: "branch"}[tier]

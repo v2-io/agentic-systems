@@ -111,18 +111,7 @@ def end_state(piece, side, parsed, pres, items):
     return {"end": b, "prev": a, "answers": len(ans), "none_share": none / len(ans) if ans else None,
             "proposals": props, "tested": tested, "closed": closed, "g": g}
 
-def seed_continuations(seeds):
-    """(prev, end) -> Counter of glyphs that some seed writes directly beyond `end`, coming from `prev` (either
-    reading direction). Seeds only raise priority (Joseph: "based on bumps from the original seed")."""
-    out = collections.defaultdict(collections.Counter)
-    for sd in seeds:
-        g = list(dict.fromkeys(sd["glyphs"]))
-        for seq in (g, g[::-1]):
-            for a, b, x in zip(seq, seq[1:], seq[2:]):
-                out[(a, b)][x] += 1
-    return out
-
-def extension_items(piece, st, neighbours, round_id, seed_next=None):
+def extension_items(piece, st, neighbours, round_id):
     """Items at one OPEN end of an established sequence: a next item (outward context of 3-5 glyphs), triads testing
     each proposal and the strongest co-occurring neighbours against the end's last two glyphs, and one order window
     at the end with the top proposal. Priority: the sequence's stability, plus 0.25 per mind that proposed the glyph."""
@@ -132,15 +121,15 @@ def extension_items(piece, st, neighbours, round_id, seed_next=None):
     out = []
     k = min(len(g), r.randint(3, 5))
     out.append((I.make_item("next", context=g[-k:], source=src), piece["stability"] + 0.3))
-    # candidates beyond this end, in order: what minds proposed here; what seeds write here; what co-occurs
-    sn = (seed_next or {}).get((a, b), collections.Counter())
+    # candidates beyond this end, in order: what minds proposed here; what minds placed with the end in their answers.
+    # Seeds supply none (2026-10-04: seed-written continuations were tested here and could move an end -- Joseph: "a
+    # more subtle example of the seeds having more prominence than they were intended to have")
     cands = [x for x, _ in st["proposals"].most_common() if st["tested"][x] < 3 and ok_glyph(x) and x not in g]
-    cands += [x for x, _ in sn.most_common() if x not in cands and x not in g and st["tested"][x] < 3 and ok_glyph(x)]
     cands += [x for x in neighbours if x not in cands and x not in g and st["tested"][x] < 3]
     for x in cands[:4]:
-        bonus = 0.25 * st["proposals"].get(x, 0) + (0.5 if sn.get(x) else 0.0)
+        bonus = 0.25 * st["proposals"].get(x, 0)
         out.append((I.make_item("triad", [a, b, x], source=dict(src, test=x, why="proposal" if st["proposals"].get(x) else
-                                ("seed" if sn.get(x) else "co-occurrence"))), piece["stability"] + bonus))
+                                "co-occurrence")), piece["stability"] + bonus))
     if cands and len(g) >= 3:
         win = g[-min(len(g), 6):] + [cands[0]]
         if len(set(win)) >= 4:
@@ -296,7 +285,7 @@ def unasked_next(piece, asked_next, round_id):
 #   the rest: ONE ordered list. Sequences most stable first; within each sequence, its work in this order:
 #       1 open ends: what-comes-next question at each end, then the best untested candidate beyond each end; then a
 #         what-comes-next at every other glyph, each direction, where it has never been asked
-#       2 its unconfirmed links (support triads)
+#       2 its steps no answer has given yet
 #       3 rotation follow-ups of its triads
 #       4 the remaining candidates beyond its ends
 #       5 one squaring window (order item) and one long-range check, if long
@@ -304,7 +293,7 @@ def unasked_next(piece, asked_next, round_id):
 #   taken greedily until the budget is spent. Ties are broken by fated order.
 EXPLORE_SHARE = 0.15
 
-def sequence_work(pc, ends, cooc, seed_next, support_by_glyph, follow_by_glyph, round_id, asked_next=None):
+def sequence_work(pc, ends, cooc, follow_by_glyph, round_id, asked_next=None):
     """The ordered work list for one established sequence: [(tier, item_or_followup)]."""
     work = []
     tri_extra = []
@@ -312,7 +301,7 @@ def sequence_work(pc, ends, cooc, seed_next, support_by_glyph, follow_by_glyph, 
         if st["closed"] or pc.get("cyclic"):
             continue
         nb = list(pc.get("hints", [])) + [x for x in cooc.get(st["end"], []) if x not in pc.get("hints", [])]
-        gen = extension_items(pc, st, nb, round_id, seed_next)
+        gen = extension_items(pc, st, nb, round_id)
         nx = [it for it, _ in gen if it["kind"] == "next"]
         tr = [it for it, _ in gen if it["kind"] == "triad"]
         orw = [it for it, _ in gen if it["kind"] == "order"]
@@ -332,11 +321,6 @@ def sequence_work(pc, ends, cooc, seed_next, support_by_glyph, follow_by_glyph, 
             work.append((2, I.make_item("triad", [f["at"], f["x"], f["y"]], source={"kind": "fork", "at": f["at"]})))
         except AssertionError:
             pass
-    seen = set()
-    for x in pc["glyphs"]:
-        for it in support_by_glyph.get(x, []):
-            if it["iid"] not in seen:
-                seen.add(it["iid"]); work.append((2, it))
     fseen = set()
     for x in pc["glyphs"]:
         for f in follow_by_glyph.get(x, []):
