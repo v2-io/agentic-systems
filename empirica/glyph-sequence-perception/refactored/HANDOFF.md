@@ -48,6 +48,14 @@ The drains ask their minds' open sheets, oldest round first, and idle when caugh
 
 **`tree.sequences()` fixed 2026-10-05:** a sequence now holds supported links only. Walk start contexts carried the triad era's gaps (`⑩ ⑪ ⑬ ⑭`, `㊳ ㊲ ㉒ ㉑`).
 
+**More from the same afternoon, all committed:**
+- **Run on Python with Unicode 16+:** `/opt/homebrew/bin/python3 run.py …`. `run.py` refuses older data. Everything through c002 had run on mise's 3.11 (Unicode 14), so Unicode 15–16 characters were unaskable and read as "unassigned". The triad-era port, seeds and c001–c002 were re-recorded (spot checks 1,588/0).
+- **Continuations into truly unassigned code points** (e.g. `𝋱 𝋲 𝋳 → U+1D2F4`) are a clean marker of code-point arithmetic. Per 1,000: haiku45 (thinking) 35, Gemini Pro 21, Flash 15, Sonnet 9, Grok 8, Opus 0. Recorded in METHODOLOGY §4.
+- **The cycle rule is tightened.** A manifested cycle now needs less than a whole period shown: end questions on 4-glyph runs had shown the whole period, and the mind's repeat of it had counted. 7 of c002's 11 cycles survive, including clocks and moon phases (Claude + Grok), each with the unseen part written by the mind.
+- **The loop resumes an unfinished round on start.** Restarting mid-round (`pkill -f "run.py loop"`, then start it again) is safe.
+- **Answers carry their measured `thinking_tokens`.** The tree keeps 0-thinking answers as their own vector, and BEST.md shows each stretch's *unreasoned* support (Joseph: *"potentially as distinct input vectors"*).
+- **The Unicode-lookup MCP server is built** at `~/src/arch/firmatum/utils/utf-mcp/` (arch commit `0420485`; README and debrief there). Its independent verification is running; its report goes to `de-novo-feedback-1.md` there. **Joseph's decision needed for agy:** it only allows MCP calls via an allow-rule in his `~/.gemini/antigravity-cli/settings.json` (`proposed-integration.md` §3). A tools-on *reasoned* pass in the study is not built yet.
+
 **Earlier pending follow-ups from the spike**, as the coordinating session left them, revised by the verification:
   - (a) A "chart order" read-off: superseded by the verifier's narrower tag, above.
   - (b) Unicode-name siblings in exploration (`priority/plan.py` `explore`). The verifier confirms a smaller gain (cp-far hit@30 0.54 → 0.68–0.74 without CJK). It also notes that names and codepoint are the *same* source (Unicode's own metadata), and suggests a share of kernels drawn from neither.
