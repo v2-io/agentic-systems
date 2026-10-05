@@ -300,10 +300,13 @@ def main():
          "|---|---|---|---|---|" + "---|" * len(fams) + "---|---|---|---|---|"]
     for i, s in enumerate(seqs[:a.top], 1):
         shown = " ".join(s["glyphs"]) + (" ↻" if s["cyclic"] else "")
-        prop = "; ".join(f"{q}→{''.join(xs[:6])}" for q, xs in s["proposed"].items() if xs)
-        inside = "; ".join(f"{q}→{''.join(xs[:4])}" for q, xs in s["proposed_inside"].items())
+        # line breaks for rendering (Joseph, 2026-10-05): shared every 6 glyphs, proposals after each ';'
+        prop = ";<br>".join(f"{q}→{''.join(xs[:6])}" for q, xs in s["proposed"].items() if xs)
+        inside = ";<br>".join(f"{q}→{''.join(xs[:4])}" for q, xs in s["proposed_inside"].items())
+        sh = [x for x in s["glyphs"] if owners[x] >= 2]
+        shared = "<br> ".join("".join(sh[k:k + 6]) for k in range(0, len(sh), 6))
         L.append(f"| {i} | `{shown}` | {len(s['glyphs'])} | {s['answered_steps']}/{len(s['steps'])} | {s['stability']:.2f} | " + " | ".join("–" if s['family_share'][f] is None else f"{s['family_share'][f]:.2f}" for f in fams)
-                 + f" | {s['weakest']} | {sum(x['other'] for x in s['steps'])} | {''.join(x for x in s['glyphs'] if owners[x] >= 2)} | {prop} | {inside} |")
+                 + f" | {s['weakest']} | {sum(x['other'] for x in s['steps'])} | {shared} | {prop} | {inside} |")
     if len(seqs) > a.top:
         L += ["", f"*{len(seqs) - a.top} more rows (lower stability) in `data/growth/{rid}.json`.*"]
     text = "\n".join(L) + "\n"
