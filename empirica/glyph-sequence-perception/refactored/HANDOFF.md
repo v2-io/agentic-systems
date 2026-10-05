@@ -26,10 +26,17 @@ Everything in `data/answers/` and `data/tree/` is regenerable and gitignored. To
   - Each round commits itself (ledgers, SEQUENCES.md, PROGRESS.md, BEST.md) and takes about 50–60 minutes. The bottleneck is Gemini Flash, whose agy adapter runs one call at a time.
   - **To stop it:** `touch data/rounds/STOP`; the loop stops after the current round.
 - **The triad-era loop is finished:** r012 was committed, and its fit was killed because it fed nothing.
-- **Embedding spike** (Joseph: *"might be meaningful to actually just use an embedding … worth a fresh agent spike?"*). It is still running when this file is written, as a background subagent working in `spikes/embedding-tendrils-2026-10-05/`. It is **not committed yet**: I promised to commit its directory when it reports. It is asked to write `debrief.md` to Joseph. After it reports:
-  1. Commit its directory, checking file sizes first; it holds `.npy` embeddings and copies of answers, so consider a `.gitignore` for anything large and regenerable.
-  2. **Commission an independent verification** with the bare-brief pattern in `~/src/arch/SPIKE-PROMPT.template.md` (option b's wording): no framing, and the report goes in the spike directory.
-  3. Decide whether embeddings enter `priority/` as candidate generation, never as evidence.
+- **Embedding spike: landed and committed** (`cc05dc89`; entry point `spikes/embedding-tendrils-2026-10-05/README.md`, `debrief.md` for Joseph, `no-go.md`). **An independent verification is running** (bare brief). Its report goes to `de-novo-feedback-1.md` in the spike directory: commit it, then act. The spiker's claims, *unverified until then*:
+  - Bare-glyph embeddings fail.
+  - Unicode *names* help on jumps between blocks: interleaved with codepoint order, they raise recall@30 where codepoint order fails from 0.52 to 0.67–0.74. A no-model name matcher is in `work/rankers.py` (`name_num_scores`).
+  - **Codepoint order leaks into the minds' answers.** About 80% of first proposals on never-shown glyphs are the next code point; Claude about 57%, Gemini about 30% and Grok rarely on the obscurest glyphs. Their tests at the boundaries of UTF-8 byte-length ranges point to knowledge of the Unicode charts, not a tokenizer artefact.
+  - Lines and axes in embedding space are a no-go in the spaces tested.
+- **What follows if it verifies, all pending:**
+  - **(a) A "chart order" read-off.** Mark links where the next glyph is the codepoint neighbour (±1). That is a property of the glyph pair, so it is a legitimate read-off, not provenance. It would let chart-following sequences be weighed or split out in SEQUENCES.md, BEST.md and PROGRESS.md.
+  - **(b) Unicode-name siblings in exploration,** alternating with codepoint-neighbour partners (`priority/plan.py` `explore`).
+  - **(c) For Joseph:** chart-following is a measurement-validity question. Answers that follow the chart may be chart knowledge rather than perception, especially from Claude and Gemini. The spike also suggests that some triad-era rows (`ⅱ … ⅻ ⅼ`, `㈠ … ㈨ ㈪`) follow the chart.
+  - **(d) Spiker feedback for future briefs:** state who else is using the machine. It ran a local LLM on the GPU for about an hour, and Joseph noticed the heat.
+  - **(e) Spike code still excludes `⟂ ⊥ ≈`.** Harmless to the study.
 
 ## Open threads and decisions
 
