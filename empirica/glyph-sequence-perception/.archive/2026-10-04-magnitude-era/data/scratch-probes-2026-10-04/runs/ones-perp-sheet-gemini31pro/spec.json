@@ -1,0 +1,20 @@
+{
+ "run_id": "ones-perp-sheet-gemini31pro",
+ "protocol": "gmp-v1.0",
+ "instrument": "ones",
+ "format": "perp",
+ "mode": "sheet",
+ "sheet_size": 40,
+ "reps": 1,
+ "stimulus_file": "data/stimuli-v1/ones-pairs.jsonl",
+ "stimulus_digest": "06241bf055b42352c3b4dfd397260d81b7498b3194905924b8e016e49e601175",
+ "judge_label": "gemini31pro",
+ "judge": {
+  "adapter": "agy",
+  "model": "gemini-3.1-pro-low"
+ },
+ "adapter_version": "a1",
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "context_residue": "Gemini via the Antigravity CLI (agy -p), run in an empty cwd; HOME not isolated (agy's knowledge/brain stores exist under ~/.gemini/antigravity-cli). Verified 2026-10-03: judge reports no Joseph/glyph context. Study system line prepended to the user turn; agy harness preamble (~12k tokens) remains.",
+ "created": "2026-10-04T18:52:14.733674+00:00"
+}

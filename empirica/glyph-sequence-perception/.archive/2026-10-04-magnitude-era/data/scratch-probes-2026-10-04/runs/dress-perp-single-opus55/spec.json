@@ -1,0 +1,21 @@
+{
+ "run_id": "dress-perp-single-opus55",
+ "protocol": "gmp-v1.0",
+ "instrument": "dress",
+ "format": "perp",
+ "mode": "single",
+ "sheet_size": null,
+ "reps": 1,
+ "stimulus_file": "data/stimuli-v1/dress-pairs.jsonl",
+ "stimulus_digest": "e3c888d9ace6390837bc89807c3a18ffb38543b45dc656e48211373ccd34ca94",
+ "judge_label": "opus55",
+ "judge": {
+  "adapter": "claude",
+  "model": "claude-opus-5-5",
+  "effort": "low"
+ },
+ "adapter_version": "a1",
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "context_residue": "claude -p with --tools '' --strict-mcp-config (no MCP), --setting-sources '' and --system-prompt override. Verified 2026-10-03: the judge sees no CLAUDE.md content and nothing about glyphs; it DOES see an account-level note giving the user's email address (asked directly, sonnet-5-5 reported it). Not removable from this CLI; judged harmless to glyph perception.",
+ "created": "2026-10-04T18:56:00.848943+00:00"
+}

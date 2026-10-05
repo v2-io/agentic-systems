@@ -1,0 +1,20 @@
+{
+ "run_id": "dress-perp-single-llama32-3b",
+ "protocol": "gmp-v1.0",
+ "instrument": "dress",
+ "format": "perp",
+ "mode": "single",
+ "sheet_size": null,
+ "reps": 1,
+ "stimulus_file": "data/stimuli-v1/dress-pairs.jsonl",
+ "stimulus_digest": "e3c888d9ace6390837bc89807c3a18ffb38543b45dc656e48211373ccd34ca94",
+ "judge_label": "llama32-3b",
+ "judge": {
+  "adapter": "ollama",
+  "model": "llama3.2:3b"
+ },
+ "adapter_version": "a1",
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "context_residue": "local /api/chat with the study system prompt only; temperature 0, seed 0.",
+ "created": "2026-10-04T18:56:36.943315+00:00"
+}

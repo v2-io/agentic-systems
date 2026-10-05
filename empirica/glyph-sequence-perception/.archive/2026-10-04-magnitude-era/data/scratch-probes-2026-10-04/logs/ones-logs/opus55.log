@@ -1,0 +1,8 @@
+ones-perp-single-opus55: 306 calls total, 0 done, 306 to run
+  50/306 ok=50 err=0
+  100/306 ok=100 err=0
+  150/306 ok=150 err=0
+  200/306 ok=200 err=0
+  250/306 ok=250 err=0
+  300/306 ok=300 err=0
+ones-perp-single-opus55: finished ok=306 err=0

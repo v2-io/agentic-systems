@@ -1,0 +1,21 @@
+{
+ "run_id": "ones-gestalt-gestalt-single-qwen25-3b",
+ "protocol": "gmp-v1.0",
+ "instrument": "ones-gestalt",
+ "format": "gestalt",
+ "mode": "single",
+ "sheet_size": null,
+ "reps": 1,
+ "stimulus_file": "data/stimuli-v1/ones-gestalt.jsonl",
+ "stimulus_digest": "94a6869d374cde71e035394cdc03c232be71df2ab9e3041941e4a83dcd0656e9",
+ "judge_label": "qwen25-3b",
+ "judge": {
+  "adapter": "ollama",
+  "model": "qwen2.5:3b",
+  "note": "added 2026-10-03 as the non-thinking Alibaba-family substitute for qwen3-4b (exploratory; not in the registered panel)"
+ },
+ "adapter_version": "a1",
+ "system_prompt": "You are a participant in a short perception study. Answer exactly as asked.",
+ "context_residue": "local /api/chat with the study system prompt only; temperature 0, seed 0.",
+ "created": "2026-10-04T18:53:46.467383+00:00"
+}
