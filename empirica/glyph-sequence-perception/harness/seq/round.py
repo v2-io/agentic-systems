@@ -394,16 +394,20 @@ def cmd_analyze(a):
         mod = M.Model(obs, mind_names, cands=warm if ch % 2 == 0 else seed_starts)
         mod.recompute_all()
         smp = M.anneal(mod, {"round": rid, "chain": ch}, iters=iters, sample_every=max(50, iters // 40), n_samples=4)
-        chains.append((mod.objective(), mod.snapshot(), smp))
+        chains.append((mod.objective(), mod.snapshot(), smp, ch % 2 == 0 and bool(warm)))
         print(f"  chain {ch}: objective {mod.objective():.1f}, {len(mod.cands)} candidates", flush=True)
     chains.sort(key=lambda t: -t[0])
     best = chains[0][1]
-    samples = [s for _, _, smp in chains for s in smp]
+    samples = [s for _, _, smp, _ in chains for s in smp]
     fam = family_of(d)
-    support = _support(best, [c[1] for c in chains] + samples)
+    # support counts only COLD chains (started from seeds, not from the last fit) and their samples: warm chains
+    # inherit the previous fit, so their agreement with it is not independent evidence (found 2026-10-04: an
+    # untested ordering showed support 1.00 because warm chains kept it)
+    cold = [(c[1], c[2]) for c in chains if not c[3]]
+    support = _support(best, [b for b, _ in cold] + [s for _, smp in cold for s in smp])
     pr = collections.Counter((r["mind"], r["status"]) for r in parsed if r["round"] == rid)
     fit = {"round": rid, "n_obs": len(obs), "minds": mind_names, "best": best, "support": support,
-           "alternatives": [c[1] for c in chains[1:]], "samples": samples, "next_T": max(0.2, 0.8 * json.load(open(rd / "plan.json")).get("T", 1.0)),
+           "alternatives": [c[1] for c in chains[1:]], "cold_chains": len(cold), "samples": samples, "next_T": max(0.2, 0.8 * json.load(open(rd / "plan.json")).get("T", 1.0)),
            "parse": {f"{m}|{s}": n for (m, s), n in pr.items()}}
     json.dump(fit, open(rd / "fit.json", "w"), ensure_ascii=False)
     (rd / "report.md").write_text(report(rid, fit, fam, items, pres, parsed))
@@ -428,7 +432,7 @@ def report(rid, fit, fam, items, pres, parsed):
     L = [f"# Round {rid} — fit report", "",
          f"Observations (triple-level, cumulative): {fit['n_obs']}. Minds: {', '.join(fit['minds'])}.", "",
          "## Candidate sequences (best chain), by family-mean perception", "",
-         "s3 = perception in triads, s4 = in sets of 4+, per family (mean over its minds). support = share of chains and posterior samples holding a matching candidate.", "",
+         "s3 = perception in triads, s4 = in sets of 4+, per family (mean over its minds). support = share of the cold-started chains (from seeds, not from the last fit) and their posterior samples holding a matching candidate.", "",
          "| # | sequence | n | support | " + " | ".join(f"{f} s3/s4" for f in fams) + " |",
          "|---|---|---|---|" + "---|" * len(fams)]
     rows = []

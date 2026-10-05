@@ -11,8 +11,9 @@ Per candidate sequence of the round's best fit:
                      triples inside the sequence; a family with no such mind is UNMEASURED (shown as -), not zero
   U                  mean perception over measured families (each family counts once)
   coverage           measured families / families on the roster
-  support            share of the round's annealing chains and posterior samples holding a matching sequence
-                     (glyph Jaccard >= 0.7)
+  support            share of the round's COLD-started annealing chains (and their posterior samples) holding a matching
+                     sequence (glyph Jaccard >= 0.7); warm chains start from the last fit, so their agreement is not
+                     independent. Fits before this change counted all chains: their support is overstated
   rounds             in how many rounds' best fits a matching sequence appears, of how many rounds fitted so far
   witnessed          distinct triples inside the sequence answered in its order by >= 2 answers and a majority
   weakest            the glyph whose triples inside the sequence agree least with its order (>= 3 answers), and
@@ -111,7 +112,7 @@ def main():
          "- **family columns:** perception, the mean over the family's minds of the higher of its triad and set perception. Only minds with at least "
          f"{MIN_EVID} answered triples inside the sequence count; `–` means the family has not been measured on it, not that it doesn't see it.",
          "- **U:** the mean over measured families. **cov:** the share of the roster's families measured.",
-         "- **support:** the share of this round's annealing chains and posterior samples holding the sequence.",
+         "- **support:** the share of this round's cold-started annealing chains (and their posterior samples) holding the sequence. Fits made before 2026-10-04 evening counted warm chains too, so their support is overstated.",
          "- **rounds:** how many of the rounds fitted so far found it.",
          "- **witn:** distinct triples answered in its order by at least two answers and a majority.",
          "- **agree:** the share of all answers on its triples that state exactly its order.",
