@@ -365,9 +365,17 @@ def cmd_analyze(a):
     if prev and (d / "rounds" / prev[-1] / "fit.json").exists():
         warm = [c["steps"] for c in json.load(open(d / "rounds" / prev[-1] / "fit.json"))["best"]["cands"]]
     iters = a.iters or min(20000, 1500 + 3 * len(obs) // 10)
+    # restart points (PLAN §4): even chains warm-start from the last round's fit; odd chains from the seeds whose
+    # glyphs have been asked (>= 3 asked glyphs, restricted to those glyphs), so seeds can only start a search
+    asked = {g for o in obs for g in o["tri"]}
+    seed_starts = []
+    for sd in read_jsonl(d / "seeds.jsonl"):
+        g = [x for x in sd["glyphs"] if x in asked]
+        if len(g) >= 3:
+            seed_starts.append([[x] for x in g])
     chains = []
     for ch in range(a.chains):
-        mod = M.Model(obs, mind_names, cands=warm if ch % 2 == 0 else None)
+        mod = M.Model(obs, mind_names, cands=warm if ch % 2 == 0 else seed_starts)
         mod.recompute_all()
         smp = M.anneal(mod, {"round": rid, "chain": ch}, iters=iters, sample_every=max(50, iters // 40), n_samples=4)
         chains.append((mod.objective(), mod.snapshot(), smp))

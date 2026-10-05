@@ -30,6 +30,7 @@ GRID = (0.0, 0.03, 0.1, 0.2, 0.35, 0.5, 0.65, 0.8, 0.9, 0.97)
 LAMBDA_C, LAMBDA_G, LAMBDA_W = 1.0, 2.0, 12.0
 GRID_COARSE = (0.0, 0.1, 0.35, 0.65, 0.9)
 WITNESS_MIN = 2
+EPS_PRIOR = 20.0   # log-prior weight: Beta(1, 21)-like on the noise rate
 MIN_LEN = 3
 P_TIE_NOISE = 0.02
 
@@ -406,6 +407,8 @@ class Model:
                             continue
                         self.theta[m][name] = v; self.theta_ver[m] += 1
                         t = sum(loglik(self.obs[i], self) for i in ii)
+                        if name == "eps":
+                            t += EPS_PRIOR * math.log(1 - v)   # mild prior against a mind being mostly noise
                         if t > bv:
                             bv, best = t, v
                     self.theta[m][name] = best; self.theta_ver[m] += 1
@@ -580,12 +583,16 @@ def step(model, T, r):
 def anneal(model, seed_obj, iters=4000, T0=8.0, T1=0.3, theta_every=800, sample_every=0, n_samples=0):
     """Cool from T0 to T1, then (optionally) sample at T = 1. Returns list of posterior snapshots."""
     r = R("anneal", seed_obj)
-    model.fit_theta(1)
+    for ci in list(model.cands):
+        model.fit_s(ci)
+    model.recompute_all()
     samples = []
     for it in range(iters):
         T = T0 * (T1 / T0) ** (it / max(1, iters - 1))
         step(model, T, r)
-        if theta_every and (it + 1) % theta_every == 0:
+        # structure first: nuisance parameters stay at their defaults for the first half, so that an empty model
+        # cannot settle into "every answer is noise" before any candidate has had a chance (seen on real r000 data)
+        if theta_every and it >= iters // 2 and (it + 1) % theta_every == 0:
             for ci in list(model.cands):
                 model.fit_s(ci)
             model.fit_theta(1)
