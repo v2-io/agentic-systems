@@ -3,8 +3,9 @@
 # and restart the loop with the current code (tier-first planner, agy x3, Claude-first grace).
 cd "$(dirname "$0")/../.."
 L=data/logs/loop.log
-until grep -qE "STOP found|failed|Traceback" "$L"; do sleep 30; done
-if grep -qE "failed|Traceback" "$L"; then echo "restart-after-c001: loop failed; not restarting" >> "$L"; exit 1; fi
+# Match only the loop's own markers: `record` prints outcome counts like "continue/call-failed": N on healthy rounds.
+until grep -qE "^== STOP found|^!! |Traceback" "$L"; do sleep 30; done
+if grep -qE "^!! |Traceback" "$L"; then echo "restart-after-c001: loop failed; not restarting" >> "$L"; exit 1; fi
 pgrep -f "run.py loop" >/dev/null && { echo "restart-after-c001: a loop is already running; not starting another" >> "$L"; exit 0; }
 rm -f data/rounds/STOP
 echo "== restart-after-c001: restarting loop $(date '+%F %T')" >> "$L"
