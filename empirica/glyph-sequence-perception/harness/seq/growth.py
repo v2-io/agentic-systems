@@ -174,14 +174,26 @@ def build(obs, parsed, pres, fam):
             ws = who.get(t, {}).get(m, set())
             rival = max((k for o, k in c.items() if o[0] == "mid" and o[1] != m), default=0)
             steps.append({"triple": [a, m, b], "answers": c[("mid", m)], "other": sum(c.values()) - c[("mid", m)],
-                          "rival": rival, "minds": sorted({w[0] for w in ws}), "families": sorted({w[1] for w in ws})})
+                          "rival": rival, "minds": sorted({w[0] for w in ws}), "families": sorted({w[1] for w in ws}),
+                          "asked": sorted({w[1] for w in who.get(t, {}).get("*asked", ())})})
         s["steps"] = steps
-        asked = {w[1] for x in zip(seq, seq[1:], seq[2:]) for w in who.get(tuple(sorted(x)), {}).get("*asked", ())}
-        s["family_share"] = {f: (sum(f in st["families"] for st in steps) / len(steps)) if f in asked else None for f in fams}
-        # how universally and how consistently the minds give each step: (families giving it / all families) x
-        # (answers giving it / all answers to that triad), averaged over steps. It orders rows; it removes none.
-        s["stability"] = sum(len(set(st["families"]) & set(live)) / len(live) * st["answers"] / max(1, st["answers"] + st["other"])
-                             for st in steps) / len(steps)
+        # consensus is measured only where there is evidence; coverage is reported separately (Joseph, 2026-10-05: are
+        # some < 1.00 values "due to lack of coverage instead of lack of consensus?" -- yes: on r011, 3,321 of 8,123
+        # live-family step cells below 1 were steps no mind had answered yet)
+        s["family_share"] = {}
+        for f in fams:
+            got = [st for st in steps if f in st["asked"]]
+            s["family_share"][f] = (sum(f in st["families"] for st in got) / len(got)) if got else None
+        s["answered_steps"] = sum(1 for st in steps if st["answers"] + st["other"] > 0)
+        # rank: for each ANSWERED step, (live families that gave it / live families that answered that triad) x (answers
+        # giving it / all answers to that triad), averaged over answered steps. Unanswered steps don't lower it; they are
+        # asked when the row is served. It orders rows; it removes none.
+        scored = []
+        for st in steps:
+            fa = set(st["asked"]) & set(live)
+            if st["answers"] + st["other"] and fa:
+                scored.append(len(set(st["families"]) & fa) / len(fa) * st["answers"] / (st["answers"] + st["other"]))
+        s["stability"] = sum(scored) / len(scored) if scored else 0.0
         s["weakest"] = min(st["answers"] for st in steps)
         s["answers"] = sum(st["answers"] for st in steps)
         s["proposed"] = {}
@@ -280,17 +292,17 @@ def main():
          f"**{len(seqs)} sequences.** {len(st)} **stable stretches**: runs of three or more glyphs in which every step was given by minds of two or more families, and no other middle more often; each counted once "
          f"(by length: " + ", ".join(f"{k}: {bk[k]}" for k in ("3", "4–5", "6–7", "8–9", "10+")) + ").", "",
          "**How to read a row.** A row is a sequence; a **step** is three consecutive glyphs `p q r`, and a mind *gave* the step when it answered that `q` lies between `p` and `r`. Example: `0 1 2 3` has two steps, `0 1 2` and `1 2 3`.", "",
-         "- **rank**: what the rows are sorted by (and the order the planner works in). For each step, (families whose minds gave it ÷ the families still being asked: " + ", ".join(live) + ") × (answers that gave it ÷ all answers to that triad), averaged over the row's steps. 1.00 = every family still being asked gave every step and no answer disagreed.",
-         "- **family columns** (" + ", ".join(fams) + "): the share of the row's steps that at least one mind of that family gave. 1.00 = that family gave every step; 0.50 = half of them; 0.00 = it answered some of these triads but gave none of the steps; **–** = no mind of that family has answered any of the row's triads. " + ("" if set(fams) == set(live) else "Families not being asked any more (" + ", ".join(f for f in fams if f not in live) + ": " + ", ".join(m for m, f_ in fam.items() if f_ not in live) + ", paused) show – on rows found since."),
-         "- **n**: glyphs in the row. **weakest**: the fewest answers that gave any one step (0 = a step no answer has given yet; the planner asks it). **against**: other answers to the row's triads (a different middle, “only two go together”, or ⟂).",
+         "- **rank**: what the rows are sorted by (and the order the planner works in). It measures consensus only where there is evidence: for each step some mind has answered, (families that gave it ÷ families that answered that triad, among those still being asked: " + ", ".join(live) + ") × (answers that gave it ÷ all answers to that triad), averaged over those steps. 1.00 = every family that answered gave every step and no answer disagreed. Steps nobody has answered yet don't lower it (see **answered**).",
+         "- **family columns** (" + ", ".join(fams) + "): of the row's steps that family's minds answered, the share they gave. 1.00 = it gave every step it was asked; 0.50 = half; 0.00 = it was asked some and gave none; **–** = no mind of that family has answered any of the row's triads. So a value below 1.00 is disagreement, not missing coverage. " + ("" if set(fams) == set(live) else "Families not being asked any more (" + ", ".join(f for f in fams if f not in live) + ": " + ", ".join(m for m, f_ in fam.items() if f_ not in live) + ", paused) show – on rows found since."),
+         "- **n**: glyphs in the row. **answered**: steps some mind has answered, of all the row's steps (coverage). **weakest**: the fewest answers that gave any one step (0 = a step no answer has given yet; the planner asks it). **against**: other answers to the row's triads (a different middle, “only two go together”, or ⟂).",
          "- **shared**: glyphs that also sit in other rows (branch points). **proposed beyond**: glyphs minds proposed next to an end that no answer has tested yet, per end (`end→proposals`, up to six). **proposed inside**: the same at glyphs inside the row, every glyph of a cycle: possible branches (`glyph→proposals`, up to four).", "",
-         "| # | sequence | n | rank | " + " | ".join(fams) + " | weakest | against | shared | proposed beyond | proposed inside |",
-         "|---|---|---|---|" + "---|" * len(fams) + "---|---|---|---|---|"]
+         "| # | sequence | n | answered | rank | " + " | ".join(fams) + " | weakest | against | shared | proposed beyond | proposed inside |",
+         "|---|---|---|---|---|" + "---|" * len(fams) + "---|---|---|---|---|"]
     for i, s in enumerate(seqs[:a.top], 1):
         shown = " ".join(s["glyphs"]) + (" ↻" if s["cyclic"] else "")
         prop = "; ".join(f"{q}→{''.join(xs[:6])}" for q, xs in s["proposed"].items() if xs)
         inside = "; ".join(f"{q}→{''.join(xs[:4])}" for q, xs in s["proposed_inside"].items())
-        L.append(f"| {i} | `{shown}` | {len(s['glyphs'])} | {s['stability']:.2f} | " + " | ".join("–" if s['family_share'][f] is None else f"{s['family_share'][f]:.2f}" for f in fams)
+        L.append(f"| {i} | `{shown}` | {len(s['glyphs'])} | {s['answered_steps']}/{len(s['steps'])} | {s['stability']:.2f} | " + " | ".join("–" if s['family_share'][f] is None else f"{s['family_share'][f]:.2f}" for f in fams)
                  + f" | {s['weakest']} | {sum(x['other'] for x in s['steps'])} | {''.join(x for x in s['glyphs'] if owners[x] >= 2)} | {prop} | {inside} |")
     if len(seqs) > a.top:
         L += ["", f"*{len(seqs) - a.top} more rows (lower stability) in `data/growth/{rid}.json`.*"]
