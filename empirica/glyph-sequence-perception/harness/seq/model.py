@@ -454,6 +454,31 @@ def link_support(model, cand):
                     ties.append((x, y)); weak[(x, y)] = inorder(x, y)
     return links, ties, weak
 
+def supported_pieces(model, cand):
+    """Split `cand` at every unsupported link and unwitnessed tie (see link_support): -> list of step-lists.
+    Only these pieces count as established sequences (standings and the queue use the same rule)."""
+    tl = collections.defaultdict(lambda: [0, 0])
+    for i in model.obs_for(cand):
+        o = model.obs[i]
+        if len(set(o["tri"]) & set(cand.pos)) == 3:
+            t = tl[o["tri"]]; t[1] += 1; t[0] += o["out"] == _strict(cand.pos, o["tri"])
+    wit = {tri for tri, (ok, n) in tl.items() if ok >= WITNESS_MIN and ok >= 0.5 * n}
+    def held(x, y):
+        return any(x in t and y in t for t in wit)
+    runs, cur = [], []
+    for st in cand.steps:
+        if any(not held(x, y) for x in st for y in st if x < y):
+            if cur:
+                runs.append(cur)
+            runs.append([st]); cur = []
+            continue
+        if cur and not any(held(x, y) for x in cur[-1] for y in st):
+            runs.append(cur); cur = []
+        cur.append(st)
+    if cur:
+        runs.append(cur)
+    return runs
+
 # ------------------------------------------------------------------ annealing
 def _neighbours(model, cand, k=40):
     """glyphs that co-occur with members of `cand` in a non-none outcome, most frequent first."""

@@ -111,24 +111,38 @@ Three things can't be seen in triads, and each is why longer chains matter.
 
 ## 3. The item kinds
 
-### The mix
+### The mix: kernel growth (since 2026-10-04 evening)
 
-These are starting proportions. After round 1 the analysis pass re-allocates them by expected information per token (§5), within the floors shown.
+Joseph's model, adopted with four amendments:
 
-| kind | rounds 0–1 (no candidates yet) | once candidates exist | floor |
-|---|---|---|---|
-| **triad** | 65% of items: 15% uniform tail, 50% decomposed seeds | 55%: 15% uniform tail, 25% long-range or contested triples of candidates, 15% neighbourhood expansion (two candidate glyphs plus a co-member) | uniform tail ≥ 10% |
-| **order** (k = 4–8) | 15%: seed windows | 25%: candidate windows, salted windows, crossings of two candidates | — |
-| **next** | 15%: 8% from seed ends, 7% from uniform glyph pairs (prior-free discovery) | 12%: candidate ends, plus ~4% uniform | ≥ 5% uniform-start |
-| **between** | 5%: seed gaps | 8%: candidate gaps, and steps marked as gaps | — |
+> *"various minds start to find a sequence — call it a sequence of three glyphs. The priority is then to extend that sequence to the right and to the left as far as they will go while still spending time looking for other 'kernels' from which to explore … square away the most obvious and stable (empirically) sequences"* — and *"15% of our effort was always 'hot' — exploring the space for more kernels … based on bumps from the original seed."*
 
-**Cost is in presentations, not items:**
+**Established sequences** are the supported pieces of the fit's candidates: every link and tie witnessed by two or more in-order answers, and a majority (`model.supported_pieces`). Each carries a stability score: support × U × √(family coverage), the same measure as the standings.
 
-- a triad gets 1 presentation at first; if it isn't ⟂, it gets 2 more later (the rotation, below);
+**Every round splits its items concurrently** (`squeue.GROW`):
+
+| share | what | how |
+|---|---|---|
+| ≥ 15%, ~20% planned | **hot exploration** | One stochastic draw over the whole pool. Glyphs are weighted 1, or by their seed's bump; half the items come from one seed's neighbourhood. A third are sets of 4–6 glyphs, so holistic kernels (invisible to triads) can be found. Absorbs any share the other categories can't fill. |
+| ~45% | **extension** at both ends of every established sequence that is still open, most stable first | `next` items (outward context of 3–5 glyphs); triads testing each proposal and each co-occurring neighbour against the end's last two glyphs; an order window with the top proposal; `between` items inside the sequence. **Diminishing returns:** priority × 1/(1 + effort already spent at that end / 8), so many kernels grow in parallel and no single ladder takes the budget. **An end closes** once it has ≥ 6 next-answers, ≥ 70% of them none, and every proposal made at it has been tested (≥ 3 answers). |
+| ~5% | **branching** | Triads holding a mid-sequence glyph, its neighbour, and an outside glyph it co-occurs with. These find other sequences crossing this one (the digit-dress kind of question), which ends alone never reach. |
+| ~30% | **squaring away** | Support items for every unsupported link and unwitnessed tie (~15%); order windows; long-range splice checks. |
+| ≤ 15% of presentations | **Latin-rotation follow-ups** | Triads inside established sequences first, then triads two or more minds ordered, plus a small ⟂-recheck share. |
+
+**My four amendments to Joseph's model**, each explained to him:
+
+1. diminishing returns on extension;
+2. a branch share;
+3. sets inside the exploration;
+4. exploration absorbs unused share early on.
+
+**What it replaced.** Ranking items by disagreement between posterior samples ("BALD") is no longer used. It never surfaced untested links, because warm-started samples inherit the same arbitrary choices. Measured on r002–r003, it had left extension under 10% and rotation follow-ups at 40–50% of every round.
+
+**Cost** is counted in presentations:
+
+- a new triad gets one presentation; its two other rotations come later, as follow-ups;
 - an order item gets 2 shuffles;
-- next and between get 1 presentation each.
-
-The ⟂ space therefore costs one presentation per random triad. About 10% of first-presentation ⟂ triads get a second presentation anyway, to measure how often ⟂ itself is unreliable.
+- next and between items get 1 presentation each.
 
 ### What each looks like
 

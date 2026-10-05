@@ -165,8 +165,6 @@ def cmd_plan(a):
     prev = [r for r in rounds(d) if r != rid and (d / "rounds" / r / "fit.json").exists()]
     fit = json.load(open(d / "rounds" / prev[-1] / "fit.json")) if prev else None
     mind_names = core_minds(a, d)
-    samples = [M.from_snapshot(s, [], mind_names) for s in (fit or {}).get("samples", [])][:12]
-    T = (fit or {}).get("next_T", 1.0)
     # proposals from next/between answers enter the pool
     props = proposals(parsed, pres)
     for x in props:
@@ -177,68 +175,80 @@ def cmd_plan(a):
     for p in pres.values():
         asked_rep[p["iid"]].add(p["rep"])
     asked0 = {iid for iid, reps in asked_rep.items() if 0 in reps}
-    # ---- follow-ups: Latin rotation reps 1,2 when any mind did not answer ⟂ at rep 0; a ⟂ recheck share
+    obs = M.observations(parsed, pres)
+    cur = M.from_snapshot(fit["best"], obs, sorted({r["mind"] for r in parsed})) if fit and fit["best"]["cands"] else None
+    fam = family_of(d)
+    snap = dict(fit["best"], support_list=fit.get("support", [])) if cur else None
+    pieces = Q.piece_table(cur, snap, fam) if cur else []
+    in_piece = set()
+    for pc in pieces:
+        in_piece.update(pc["glyphs"])
+    # ---- follow-ups (Latin rotation reps 1-2): triads inside established sequences first, then triads that >= 2 minds
+    #      ordered; a small ⟂-recheck share; capped at FOLLOW_SHARE of the round
     first = collections.defaultdict(list)
     for r in parsed:
         p = pres[r["pid"]]
         if p["kind"] == "triad" and p["rep"] == 0 and r["status"] == "ok":
             first[p["iid"]].append(r["answer"][0])
-    follow = []
+    fu = []
     for iid, outs in first.items():
         it = items[iid]
-        if any(o != "none" for o in outs):
-            follow += [(it, rp) for rp in (1, 2) if rp not in asked_rep[iid]]
-        elif R("perp-recheck", {"iid": iid}).random() < Q.P_PERP_RECHECK and 1 not in asked_rep[iid]:
-            follow.append((it, 1))
-    # ---- candidate items by category
+        n_ord = sum(o != "none" for o in outs)
+        inside = all(g in in_piece for g in it["glyphs"])
+        if n_ord >= 1 and (inside or n_ord >= 2):
+            fu += [(0 if inside else 1, it, rp) for rp in (1, 2) if rp not in asked_rep[iid]]
+        elif n_ord == 0 and R("perp-recheck", {"iid": iid}).random() < Q.P_PERP_RECHECK and 1 not in asked_rep[iid]:
+            fu.append((2, it, 1))
+    fu.sort(key=lambda t: (t[0], t[1]["iid"], t[2]))
+    fu_wanted = len(fu)
+    follow = [(it, rp) for _, it, rp in fu[: int(Q.FOLLOW_SHARE * a.budget)]]
+    # ---- candidate items by category (PLAN §4: hot exploration + extend + branch + square away; no disagreement ranking)
     cats = collections.defaultdict(list)
-    def score(it, cat, bump=1.0):
-        inf = Q.info(it, samples, mind_names)
-        nov = _novelty(it, parsed, pres)
-        return (bump if cat[1] == "seed" else 1.0) * (inf + 0.1 * nov) if samples else math.log(bump) + 0.1 * nov
-    rs = R("seed-subset", {"round": rid})
-    surveyed = [x for x in seeds if x["sid"].startswith("survey:")]
-    rs.shuffle(surveyed)
-    sub = [x for x in seeds if not x["sid"].startswith("survey:")] + surveyed[:400]   # domain seeds always considered
-    for s in sub:
-        for it in Q.seed_items(s):
-            cat = (it["kind"], "seed")
-            cats[cat].append((it, score(it, cat, s.get("bump", Q.SEED_BUMP))))
+    bump = {}
+    for sd in seeds:
+        for g in sd["glyphs"]:
+            bump[g] = max(bump.get(g, 1.0), sd.get("bump", Q.SEED_BUMP))
     pl = sorted(pool)
-    for it in Q.tail_items(pl, rid, 200, 60):
-        cats[(it["kind"], "tail")].append((it, 0.0))
-    if fit and fit["best"]["cands"]:
-        snap = fit["best"]
-        # link-support tests: every unsupported link and unwitnessed tie of every candidate in the last fit
-        cur = M.from_snapshot(snap, M.observations(parsed, pres), sorted({r["mind"] for r in parsed}))
-        n_sup = 0
+    for it, pri in Q.explore_items(pl, bump, seeds, rid, n_tri=600, n_set=200, n_next=80):
+        cats[(it["kind"], "explore")].append((it, 0.0))
+    if cur:
+        cooc = _cooc(parsed, pres, props)
+        for pc in pieces:
+            for side in ("right", "left"):
+                st = Q.end_state(pc, side, parsed, pres, items)
+                if st["closed"]:
+                    continue
+                spent = st["answers"] + sum(st["tested"].values())
+                decay = 1.0 / (1.0 + spent / 8.0)          # diminishing returns: many kernels grow in parallel
+                for it, pri in Q.extension_items(pc, st, cooc.get(st["end"], []), rid):
+                    cats[(it["kind"], "extend")].append((it, pri * decay))
+            for it, pri in Q.gap_items(pc, rid):
+                cats[(it["kind"], "extend")].append((it, pri))
+            for it, pri in Q.square_items(pc, rid):
+                cats[(it["kind"], "square")].append((it, pri))
+            for it, pri in Q.branch_items(pc, cooc, rid):
+                cats[(it["kind"], "branch")].append((it, pri))
         for cid in list(cur.cands):
             for it, pri in Q.support_items(cur, cid, rid):
-                cats[(it["kind"], "support")].append((it, pri)); n_sup += 1
-        print(f"{rid}: {n_sup} link/tie support items generated")
-        nb = _neighbours(snap, parsed, pres, props)
-        for ci in range(len(snap["cands"])):
-            for it in Q.cand_items(snap, nb.get(ci, []), rid, ci):
-                cat = (it["kind"], "cand")
-                cats[cat].append((it, score(it, cat)))
-        for x in props[-400:]:
-            if len(x["ctx"]) >= 2 and x["g"] not in x["ctx"]:
-                try:
-                    it = I.make_item("triad", [x["ctx"][-2], x["ctx"][-1], x["g"]] if x["kind"] == "next" else
-                                     [x["ctx"][0], x["g"], x["ctx"][-1]], source={"kind": "cand", "ref": "proposal", "mind": x["mind"]})
-                except AssertionError:
-                    continue
-                cats[("triad", "cand")].append((it, score(it, ("triad", "cand")) + 0.5))
-    base = Q.LATE if (fit and fit["best"]["cands"]) else Q.EARLY
-    avail = {c: _top_mean([p for _, p in cats.get(c, [])], round(base[c] * a.budget)) for c in base}
-    quotas = Q.reweight(base, avail) if samples else dict(base)
-    # ---- budget in presentations: follow-ups first
+                cats[(it["kind"], "support")].append((it, pri))
+    print(f"{rid}: {len(pieces)} established sequences; " + ", ".join(f"{c[1]}/{c[0]} {len(v)}" for c, v in sorted(cats.items())))
+    # ---- quotas: GROW; whatever a category cannot fill (not enough candidates) goes to hot exploration
     cost = {"triad": 1, "order": 2, "next": 1, "between": 1}
-    fu_cost = len(follow)
-    follow = follow[: int(0.5 * a.budget)]
     n_new = max(10, a.budget - len(follow))
+    quotas = dict(Q.GROW)
     mean_cost = sum(quotas[c] * cost[c[0]] for c in quotas)
     N = int(n_new / mean_cost)
+    spare = 0.0
+    for c in list(quotas):
+        if c in Q.EXPLORE_CATS:
+            continue
+        have = sum(1 for it, _ in cats.get(c, []) if it["iid"] not in asked0)
+        if have < quotas[c] * N:
+            spare += quotas[c] - have / max(1, N); quotas[c] = have / max(1, N)
+    ex_tot = sum(quotas[c] for c in Q.EXPLORE_CATS)
+    for c in Q.EXPLORE_CATS:
+        quotas[c] += spare * quotas[c] / ex_tot
+    T = 0.5
     chosen = Q.draw(cats, quotas, N, T, rid, asked0)
     sel_items, new_pres = {}, []
     for it, cat, pri in chosen:
@@ -265,11 +275,40 @@ def cmd_plan(a):
     write_jsonl(rd / "items.jsonl", list(sel_items.values()))
     write_jsonl(rd / "presentations.jsonl", new_pres)
     write_jsonl(rd / "sheets.jsonl", sheets_out)
-    json.dump({"round": rid, "quotas": {"|".join(c): v for c, v in quotas.items()}, "available_info": {"|".join(c): v for c, v in avail.items()},
-               "T": T, "follow_ups": len(follow), "follow_ups_wanted": fu_cost, "new_items": len(chosen),
+    json.dump({"round": rid, "scheme": "kernel-growth (PLAN §4, 2026-10-04)", "quotas": {"|".join(c): round(v, 4) for c, v in quotas.items()},
+               "established_sequences": len(pieces), "T": T, "follow_ups": len(follow), "follow_ups_wanted": fu_wanted, "new_items": len(chosen),
                "presentations": len(new_pres), "sheets": len(sheets_out)}, open(rd / "plan.json", "w"), indent=1)
     print(f"{rid}: {len(chosen)} new items + {len(follow)} follow-up presentations -> {len(new_pres)} presentations, "
           f"{len(sheets_out)} sheets (T={T:.2f})")
+
+def _cooc(parsed, pres, props):
+    """glyph -> other glyphs it has been placed in a sequence with (non-none triad answers, order lines) or proposed
+    next to, most frequent first."""
+    cnt = collections.defaultdict(collections.Counter)
+    for r in parsed:
+        if r["status"] != "ok":
+            continue
+        p = pres[r["pid"]]; a_ = r["answer"]
+        if p["kind"] == "triad" and a_[0] != "none":
+            gs = [g for g in p["shown"]] if a_[0] != "two" else list(a_[1:])
+        elif p["kind"] == "order" and isinstance(a_, dict) and a_.get("lines"):
+            for line in a_["lines"]:
+                gs = [g for st in line if st != "GAP" for g in st]
+                for x in gs:
+                    for y in gs:
+                        if x != y:
+                            cnt[x][y] += 1
+            continue
+        else:
+            continue
+        for x in gs:
+            for y in gs:
+                if x != y:
+                    cnt[x][y] += 1
+    for x in props:
+        if x["ctx"]:
+            cnt[x["ctx"][-1]][x["g"]] += 2
+    return {g: [h for h, _ in c.most_common(20)] for g, c in cnt.items()}
 
 def _top_mean(ps, k):
     ps = sorted(ps, reverse=True)[:max(1, k)]
