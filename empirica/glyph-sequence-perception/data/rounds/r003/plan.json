@@ -1,0 +1,31 @@
+{
+ "round": "r003",
+ "quotas": {
+  "triad|tail": 0.10344827586206898,
+  "triad|seed": 0.13423659126635185,
+  "triad|cand": 0.26605126405706875,
+  "order|seed": 0.1269664826260973,
+  "order|cand": 0.19217052447359748,
+  "next|cand": 0.06029738376026208,
+  "next|tail": 0.049261083743842374,
+  "next|seed": 0.028369822127670488,
+  "between|cand": 0.039198572083040686
+ },
+ "available_info": {
+  "triad|tail": 0.0,
+  "triad|seed": 0.8477408072000328,
+  "triad|cand": 0.7683014923826449,
+  "order|seed": 1.2011787459053127,
+  "order|cand": 0.7044625772414841,
+  "next|cand": 0.06656311760968932,
+  "next|tail": 0.0,
+  "next|seed": 0.18932244404113735,
+  "between|cand": 0.06124899231240934
+ },
+ "T": 0.5120000000000001,
+ "follow_ups": 163,
+ "follow_ups_wanted": 163,
+ "new_items": 180,
+ "presentations": 400,
+ "sheets": 125
+}
