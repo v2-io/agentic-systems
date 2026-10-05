@@ -89,7 +89,7 @@ At r003, 21 of 147 candidates were split. Among them:
 
 ## 2026-10-04 · Probe r003p: the ramp's ends, tested directly
 
-The probe was Joseph's ask: *"get additional data points so we have a good spread, and especially get the other end of the sequence sorted out."* It asked all 56 triads of `▁▂▃▄▅▆▇█`, each in all three Latin rotations, plus 9 order items in two shuffles each, of every API mind. Report: `data/rounds/r003p/probe-report.md`. Gemini 3.1 Pro had answered 29 of its 59 sheets when this was written; the others were complete.
+The probe was Joseph's ask: *"get additional data points so we have a good spread, and especially get the other end of the sequence sorted out."* It asked all 56 triads of `▁▂▃▄▅▆▇█`, each in all three Latin rotations, plus 9 order items in two shuffles each, of every API mind. Report: `data/rounds/r003p/probe-report.md`. Gemini 3.1 Pro had answered 29 of its 59 sheets when this entry was first written. All six minds completed later that evening; the figures below are from the complete probe.
 
 **The top end (`▇█`) is not swapped for anyone.** Answers agreeing with the ramp order on triads holding both `▇` and `█`:
 
@@ -99,7 +99,7 @@ The probe was Joseph's ask: *"get additional data points so we have a good sprea
 | Sonnet | 17/18 |
 | Opus | 16/18 |
 | Haiku | 16/18 |
-| Gemini Pro | 11/13 |
+| Gemini Pro | 15/18 |
 | Grok | 12/18 |
 
 Grok's misses on that link are "only two go together" answers, not reversals. The r002 swap was the fit's arbitrary placement on an untested link, as recorded above.
@@ -112,12 +112,12 @@ Grok's misses on that link are "only two go together" answers, not reversals. Th
 | Opus | 15/18 |
 | Haiku | 14/18 |
 | Grok | 13/18 |
-| **Gemini Pro** | **2/15** |
+| **Gemini Pro** | **3/18** |
 | **Gemini Flash** | **0/18** |
 
-Gemini Flash leaves `▁` out of 81% of the triads that hold it. In every one of its 11 order answers on probe sets containing `▁`, it orders the rest of the ramp and puts `▁` in extra, for example `▂ ▃ ▄ ▅ ▆ ▇ █ · extra: ▁`. Gemini Pro leaves `▁` out of 48% of the triads that hold it. Claude and Grok leave it out of 6% or less.
+Gemini Flash leaves `▁` out of 81% of the triads that hold it. In every one of its 11 order answers on probe sets containing `▁`, it orders the rest of the ramp and puts `▁` in extra, for example `▂ ▃ ▄ ▅ ▆ ▇ █ · extra: ▁`. Gemini Pro leaves `▁` out of 51% of the triads that hold it. Claude and Grok leave it out of 6% or less.
 
-**Reading.** Both Gemini minds, and only they, decline to place U+2581 on the fill ramp. That is the prediction if their (SentencePiece) tokenizer delivers it as a word-boundary metasymbol. The prediction is now confirmed in direction, with substantial n: 168 Gemini Flash triad answers, 98 Gemini Pro, 11 order answers. It is still a behavioural inference: the tokenizer itself has not been inspected.
+**Reading.** Both Gemini minds, and only they, decline to place U+2581 on the fill ramp. That is the prediction if their (SentencePiece) tokenizer delivers it as a word-boundary metasymbol. The prediction is now confirmed in direction, with substantial n: 168 triad answers each for Gemini Flash and Gemini Pro, plus Gemini Flash's 11 order answers. It is still a behavioural inference: the tokenizer itself has not been inspected.
 
 **The byte-level-BPE contrast (`Ġ Ċ G g ĉ`) is inconclusive.** Every mind mostly answers "only two go together" on these, with no family-specific pattern. There is no byte-level-BPE family on the roster yet to compare (OpenAI joins after Nov 2).
 
