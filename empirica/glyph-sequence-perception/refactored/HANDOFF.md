@@ -37,7 +37,16 @@ The drains ask their minds' open sheets, oldest round first, and idle when caugh
 
 **The embedding spike's verification landed** (`spikes/embedding-tendrils-2026-10-05/de-novo-feedback-1.md`, committed). Most numbers reproduce. The "~80% next code point" share is mostly alphabet knowledge: where alphabet and chart disagree, every family puts the alphabet first. **So follow-up (a) below, a plain ±1 "chart order" tag, would mark most genuine runs, and should not be built as written.** The report proposes a narrower tag (discriminator positions; the chart glyph as runner-up) and a cheap probe.
 
-**Haiku is the Claude quota hog:** ~5.7k output tokens per sheet at "low" effort (c001: $6.72-equivalent, against $2.23 for Sonnet). `pace.json` can slow it alone with `"minds": {"haiku45": {...}}`.
+**Claude thinking budgets** (found and changed 2026-10-05):
+- **The inherited budget.** Until c001, the Claude judges inherited `MAX_THINKING_TOKENS=31000` from Joseph's shell, unrecorded. Haiku used ~5–6k thinking tokens a sheet (c001: $6.72-equivalent, against $2.23 for Sonnet).
+- **Budgets are now set per mind** in `core/minds.json` and recorded in each ledger row's judge spec.
+- **From c002, `haiku45nt` (budget 0, thinking off) is core and `haiku45` (31000) a second mind.** The reasoned condition stays sampled, so the change is measurable. Evidence and reasoning: `spikes/thinking-felt-2026-10-05/README.md`.
+- **Sonnet isn't reached by the budget lever**; it thinks adaptively, about one sheet in five with zero.
+- **This is the independent session's call, made while Joseph was away.** It is reversible in `minds.json`.
+
+**Loop state.** c002 was started 12:51 MDT under all of the above, with `round_gap_min` 30 in `pace.json`, which gives roughly a dozen rounds by tomorrow morning.
+
+**`tree.sequences()` fixed 2026-10-05:** a sequence now holds supported links only. Walk start contexts carried the triad era's gaps (`⑩ ⑪ ⑬ ⑭`, `㊳ ㊲ ㉒ ㉑`).
 
 **Earlier pending follow-ups from the spike**, as the coordinating session left them, revised by the verification:
   - (a) A "chart order" read-off: superseded by the verifier's narrower tag, above.
