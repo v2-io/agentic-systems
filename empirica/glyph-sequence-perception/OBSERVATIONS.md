@@ -38,3 +38,20 @@ If it holds, it is a real fact about how these minds perceive the glyph: the tok
 - **A look at the tokenizers themselves**, where they are inspectable: Gemma for Gemini's family; Glimmer through llama.cpp's `/tokenize`.
 
 **Status:** hypothesis, seeded for testing. Seed: `data/seeds/tokenizer-markers.jsonl`.
+
+---
+
+## 2026-10-04 · Two of the r002 standings' sequences rested on untested links
+
+**#3** is `▂ ▁ ▃ ▄ ▅ ▆ █ ▇` (above). **#59** is `: · ∶ ⁝ ⁞`.
+
+- **What was asked.** The colon had been asked in exactly one triple, `: ⁝ ⁞`. That triple was shown three times, across r001 and r003, to four minds. Ten of the twelve answers put `⁝` in the middle, the order of rising dot count (2, 3, 4).
+- **What was never asked.** No question had shown `:` with `·` or with `∶`. The fit put the colon at the bottom arbitrarily.
+- **What the glyphs suggest.** `:` has two dots, like `∶` (RATIO), so it most likely sits level with `∶`, above `·`. That is untested.
+- **Fixes, made the same evening:**
+  - the standings list untested links and discount them;
+  - support counts only cold-started annealing chains, since warm chains inherit the previous fit and had made an untested ordering look settled (support 1.00);
+  - a dots-and-colons seed (`data/seeds/dots.jsonl`) puts the near-identical pairs (`:`/`∶`, `·`/`⋅`) in front of the minds. That tests the tie option, which has had little use so far.
+
+**Status:** both are fit artifacts, now flagged; the seeds are queued.
+

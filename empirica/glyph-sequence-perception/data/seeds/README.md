@@ -24,3 +24,4 @@ One JSON object per line, in any `*.jsonl` file here. Group related seeds into o
 
 - `digit-dresses.jsonl`: the digit "dresses" (plain, superscript, subscript, circled, parenthesized, full stop, negative circled, dingbat circled sans and its negative form, double circled, fullwidth, comma, segmented, and five math styles) × values 1–9, as one lattice. Joseph's `①` vs `⑴` vs `❶` vs `🯱` question. Built by `digit_dresses.py`.
 - `tokenizer-markers.jsonl`: the fill ramp with `▁`, `▁` beside underscore-like glyphs, and the byte-level-BPE markers `Ġ`/`Ċ` beside their letters. From OBSERVATIONS.md 2026-10-04: Gemini Flash leaves `▁` out of the ramp, and Joseph noted some models use it as a word separator.
+- `dots.jsonl`: dots and colons by dot count, with near-identical pairs (`:` and `∶`, `·` and `⋅`) that exercise the tie option; plus the r002 #59 candidate's own glyphs. From the #59 question: `:` sat below `·` on an untested link.
