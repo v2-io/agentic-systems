@@ -1,0 +1,30 @@
+{
+ "round": "c004",
+ "protocol": "ctx-0.1",
+ "questions": 720,
+ "budget": 700,
+ "by_why": {
+  "explore": 105,
+  "reasoned": 20,
+  "end": 303,
+  "cycle-probe": 16,
+  "seed-step": 276
+ },
+ "by_kind": {
+  "continue": 720
+ },
+ "sequences": 545,
+ "sequences_served": 249,
+ "lowest_rank_served": 0.125,
+ "by_tier": {
+  "1": 319,
+  "2": 276
+ },
+ "by_variant": {
+  "plain": 700,
+  "reasoned": 20
+ },
+ "contexts_in_tree": 5919,
+ "sheets": 238,
+ "unicode": "16.0.0"
+}
