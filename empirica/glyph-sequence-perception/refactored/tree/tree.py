@@ -82,6 +82,7 @@ class Tree:
         self.triads = collections.defaultdict(collections.Counter)
         self.cycles = {}
         self.real = set()                       # contexts some real mind answered (not only seed votes)
+        self.unreasoned = collections.defaultdict(list)   # ctx -> [first] from answers given with 0 thinking tokens
         self.seeded = set()
         for r in recs:
             k, o = r["kind"], r["outcome"]
@@ -113,6 +114,8 @@ class Tree:
                         if len(e["examples"]) < 3:
                             e["examples"].append(" ".join(ctx) + " | " + " ".join(seq))
                 self.nodes[ctx][r["family"]].append(first); self.real.add(ctx)
+                if (r.get("tags") or {}).get("thinking_tokens") == 0:
+                    self.unreasoned[ctx].append(first)
             elif k == "inhibit" and o in ("yes", "no", "cant-tell"):
                 self.inhibit[(tuple(r["context"]), r["candidate"])][r["family"]][o] += 1
             elif k == "triad" and o in ("mid", "two", "none"):

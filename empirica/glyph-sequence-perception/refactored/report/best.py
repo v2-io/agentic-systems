@@ -34,7 +34,8 @@ def support(Tp, left_run, x):
             if rk and rk[0][0] == x:
                 agr, nfam, _ = rk[0][1]
                 if agr >= THETA and nfam >= 2:
-                    return agr, nfam
+                    u = Tp.unreasoned.get(ctx, [])
+                    return agr, nfam, sum(1 for f in u if f == x), len(u)
             return None                                     # the longest asked context decides
     return None
 
@@ -58,7 +59,8 @@ def stretches(g, Tp):
             if len(cur) >= 2:
                 a, b = cur[0][0], cur[-1][0] + 1
                 out.append({"glyphs": g[a:b + 1], "agreement": sum(l[1][0] for l in cur) / len(cur),
-                            "families_min": min(l[1][1] for l in cur)})
+                            "families_min": min(l[1][1] for l in cur),
+                            "unreasoned": (sum(l[1][2] for l in cur), sum(l[1][3] for l in cur))})
             cur = []
     return out
 
@@ -89,9 +91,12 @@ def main():
         L += ["## Cycles (manifested: a mind wrote the whole period twice)", "", "| cycle | glyphs | answers | families |", "|---|---|---|---|"]
         L += [f"| `{' '.join(c['pattern'])} ↻` | {len(c['pattern'])} | {c['answers']} | {', '.join(sorted(c['families']))} |" for c in cyc[:40]]
         L.append("")
-    L += ["## Stretches", "", "| # | stretch | glyphs | mean agreement | families (min over links) |", "|---|---|---|---|---|"]
+    L += ["## Stretches", "",
+          "**Unreasoned** counts, over the stretch's links at their deciding contexts, the answers given with 0 thinking tokens (measured per answer: Gemini Flash, Haiku with thinking off, Sonnet when its adaptive thinking is 0) that name the link, out of all such answers there. It shows how far a link is *recognised* rather than worked out (METHODOLOGY §4). It confirms nothing, and it is a slice of the same answers that confirm the link, not independent evidence. *(none)*: no unreasoned answers at those contexts yet.", "",
+          "| # | stretch | glyphs | mean agreement | families (min over links) | unreasoned |", "|---|---|---|---|---|---|"]
     for i, s in enumerate(kept[:TOP], 1):
-        L.append(f"| {i} | `{' '.join(s['glyphs'])}` | {len(s['glyphs'])} | {s['agreement']:.2f} | {s['families_min']} |")
+        k, n = s["unreasoned"]
+        L.append(f"| {i} | `{' '.join(s['glyphs'])}` | {len(s['glyphs'])} | {s['agreement']:.2f} | {s['families_min']} | {f'{k}/{n}' if n else '(none)'} |")
     if len(kept) > TOP:
         L += ["", f"*{len(kept) - TOP} shorter stretches not shown.*"]
     (ROOT / "BEST.md").write_text("\n".join(L) + "\n")

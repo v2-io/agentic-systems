@@ -107,7 +107,9 @@ def main():
                 parsed = P.parse_sheet(last["result"]["raw"], sh) if good else {}
                 base_tags = {"protocol": last.get("protocol"), "prompt_sha256": last.get("prompt_sha256"),
                              "system_sha256": last.get("system_sha256"), "adapter_version": last.get("adapter_version"),
-                             "parser": P.PARSER, "calls_for_sheet": len(rs), "factors": sh.get("factors")}
+                             "parser": P.PARSER, "calls_for_sheet": len(rs), "factors": sh.get("factors"),
+                             # measured per answer (2026-10-05): recognition vs retrieval, METHODOLOGY §4
+                             "thinking_tokens": ((last.get("result") or {}).get("usage") or {}).get("thinking_tokens")}
                 judge = last.get("judge") or {}
                 for e in sh["entries"]:
                     p = pres[e["pid"]]; it = items.get(p["iid"], {})
