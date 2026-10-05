@@ -121,7 +121,22 @@ Joseph's rule, as he stated it:
 
 It is implemented as stated, in two parts (`harness/seq/squeue.py`, `round.cmd_plan`):
 
-1. **15% hot exploration.** First, the rotation follow-ups that confirm a kernel: an exploratory triad that two or more minds ordered (up to a third of the share). Then stochastic items over the whole pool, each glyph weighted by its seed's bump: triads, sets of 4–6 glyphs (holistic kernels are invisible to triads), and what-comes-next questions. Half of them come from one seed's neighbourhood.
+**Established sequences come from the witnessed triples directly** (`harness/seq/evidence_view.py`, since 2026-10-04, late). Each is a chain in which every step is the middle of a triple the minds answered in that order at least twice, and by a majority:
+
+- *Reduction:* chains are transitively reduced.
+- *Forks:* a chain forks where an end has several mutually unordered witnessed continuations. That is natural branching, found stochastically by the system.
+- *Folding:* near-restatements are folded in, and their extra glyphs are kept as extension hints.
+
+The likelihood fit had been dropping or merging valid creative sequences: `ⅠⅡⅤⅧⅨⅩⅫ`, `꜖꜔꜒`, `♕♖♗`, `ₐaᴀA` and `😢🙁😐` all fell out of it while fully witnessed (Joseph noticed). It now only proposes guesses, which the link tier asks about. `STANDINGS.md` is this view, with nothing cut off. The fit's list is kept in `data/standings/rNNN.md`.
+
+1. **15% hot exploration.** First, the rotation follow-ups that confirm a kernel: an exploratory triad that two or more minds ordered (up to a third of the share). Then tests of what minds proposed **between** two glyphs (a triad `a g b`, up to a sixth). Then stochastic items over the whole pool, each glyph weighted by its seed's bump, interleaved in a fated order:
+
+- triads;
+- sets of 4–6 glyphs (holistic kernels are invisible to triads);
+- what-comes-next questions;
+- **far-pair `between` questions.** Joseph: *"Given two glyphs, even quite far apart, there's some chance an LLM can detect some more glyphs that are linear to those in semantic space — or a liminal feel."* The pairs are two glyphs several steps apart in one seed, or two seed-bumped glyphs from anywhere.
+
+Half of these come from one seed's neighbourhood.
 2. **The rest is one ordered list.** Established sequences are the supported pieces, with restatements folded in (`model.supported_pieces`, `squeue.piece_table`), ranked most stable first. Each sequence brings its work in this order:
    1. its open ends: the what-comes-next question at each end, then the best untested glyph beyond each end. Candidates come from the minds' proposals first, then what seeds write there, then co-occurring glyphs;
    2. its unconfirmed links and ties;

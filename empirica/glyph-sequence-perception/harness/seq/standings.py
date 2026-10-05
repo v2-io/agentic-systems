@@ -201,8 +201,7 @@ def main():
     out = d / "standings"; out.mkdir(exist_ok=True)
     (out / f"{rid}.md").write_text("\n".join(L) + "\n")
     json.dump(ranked, open(out / f"{rid}.json", "w"), ensure_ascii=False, indent=0)
-    if d == EXP / "data":
-        (EXP / "STANDINGS.md").write_text("\n".join(L) + "\n")
+    # (STANDINGS.md is written by evidence_view.py since 2026-10-04; this file's list is the model's view)
     print("\n".join(L[:18 + min(45, shown)]))
 
 if __name__ == "__main__":

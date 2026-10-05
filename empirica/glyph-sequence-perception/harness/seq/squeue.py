@@ -175,7 +175,7 @@ def square_items(piece, round_id):
     return out
 
 
-def explore_items(pool, lineage_bump, seeds, round_id, n_tri, n_set, n_next):
+def explore_items(pool, lineage_bump, seeds, round_id, n_tri, n_set, n_next, n_between=0):
     """Hot exploration (Joseph: "15% of our effort was always 'hot' ... based on bumps from the original seed").
     Glyphs are drawn with weight 1, or the seed's bump for glyphs any seed names. With probability 1/2 an item's glyphs
     come from ONE seed (its local neighbourhood: the seed becomes a kernel candidate), else independently from the
@@ -202,6 +202,22 @@ def explore_items(pool, lineage_bump, seeds, round_id, n_tri, n_set, n_next):
                 out.append(x)
         return out, "weighted-pool"
     items = []
+    # far pairs (Joseph: "Given two glyphs, even quite far apart, there's some chance an LLM can detect some more glyphs
+    # that are linear to those in semantic space -- or a liminal feel"): what lies between them? From one seed, two
+    # glyphs >= 2 steps apart in its written order; or two seed-bumped glyphs from the whole pool.
+    made = 0
+    while made < n_between:
+        if sd and r.random() < 0.5:
+            g = [x for x in dict.fromkeys(r.choice(sd)["glyphs"]) if ok_glyph(x)]
+            if len(g) < 3:
+                continue
+            i = r.randrange(len(g) - 2); j = r.randrange(i + 2, len(g))
+            a, b, how = g[i], g[j], "seed-far-pair"
+        else:
+            a, b, how = draw_glyph(), draw_glyph(), "pool-far-pair"
+        if a == b or not ok_glyph(a) or not ok_glyph(b):
+            continue
+        items.append((I.make_item("between", left=[a], right=[b], source={"kind": "explore", "how": how}), 1.0)); made += 1
     for kind, n in (("triad", n_tri), ("order", n_set), ("next", n_next)):
         made = 0
         while made < n:
@@ -215,6 +231,9 @@ def explore_items(pool, lineage_bump, seeds, round_id, n_tri, n_set, n_next):
             except AssertionError:
                 continue
             items.append((it, sum(lineage_bump.get(x, 1.0) for x in g) / len(g))); made += 1
+    # interleave kinds in a fated order, so a round's exploration budget gets the mix and not just the first kind
+    # (bug found 2026-10-04: generated triads-first and taken in order, the 15% was nearly all triads)
+    r.shuffle(items)
     return items
 
 def branch_items(piece, neighbours_by_glyph, round_id):
@@ -256,7 +275,8 @@ def sequence_work(pc, ends, cooc, seed_next, support_by_glyph, follow_by_glyph, 
     for st in ends:
         if st["closed"]:
             continue
-        gen = extension_items(pc, st, cooc.get(st["end"], []), round_id, seed_next)
+        nb = list(pc.get("hints", [])) + [x for x in cooc.get(st["end"], []) if x not in pc.get("hints", [])]
+        gen = extension_items(pc, st, nb, round_id, seed_next)
         nx = [it for it, _ in gen if it["kind"] == "next"]
         tr = [it for it, _ in gen if it["kind"] == "triad"]
         orw = [it for it, _ in gen if it["kind"] == "order"]

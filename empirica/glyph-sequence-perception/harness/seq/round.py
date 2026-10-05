@@ -18,6 +18,7 @@ import items as I
 import parse as P
 import model as M
 import squeue as Q
+import evidence_view as EV
 
 def D(a):
     return pathlib.Path(a.data) if a.data else EXP / "data"
@@ -178,8 +179,9 @@ def cmd_plan(a):
     obs = M.observations(parsed, pres)
     cur = M.from_snapshot(fit["best"], obs, sorted({r["mind"] for r in parsed})) if fit and fit["best"]["cands"] else None
     fam = family_of(d)
-    snap = dict(fit["best"], support_list=fit.get("support", [])) if cur else None
-    pieces = Q.piece_table(cur, snap, fam) if cur else []
+    # established sequences: chained from witnessed triples (evidence_view), not from the likelihood fit, which can drop
+    # or merge valid sequences (2026-10-04). The fit's candidates remain a source of guesses, asked in the link tier.
+    pieces = EV.piece_table(obs, fam) if obs else []
     in_piece = set()
     for pc in pieces:
         in_piece.update(pc["glyphs"])
@@ -187,8 +189,8 @@ def cmd_plan(a):
     for sd in seeds:
         for g in sd["glyphs"]:
             bump[g] = max(bump.get(g, 1.0), sd.get("bump", Q.SEED_BUMP))
-    cooc = _cooc(parsed, pres, props) if cur else {}
-    seed_next = Q.seed_continuations(seeds) if cur else {}
+    cooc = _cooc(parsed, pres, props) if pieces else {}
+    seed_next = Q.seed_continuations(seeds) if pieces else {}
     # ---- ONE priority order (Joseph's rule; squeue: "one priority order"). Two parts:
     #      (1) EXPLORE_SHARE: hot exploration + rotation follow-ups that confirm exploratory kernels;
     #      (2) the rest: established sequences, most stable first, each with its work in a fixed order, taken greedily.
@@ -210,7 +212,7 @@ def cmd_plan(a):
         for g in f[0]["glyphs"]:
             follow_by_glyph[g].append(f)
     B = a.budget
-    B_explore = round(Q.EXPLORE_SHARE * B) if cur else B
+    B_explore = round(Q.EXPLORE_SHARE * B) if pieces else B
     sel_items, new_pres, spent = {}, [], 0
     used_follow = set()
     def take_item(it, cat):
@@ -239,16 +241,34 @@ def cmd_plan(a):
         if spent >= B_explore / 3:
             break
         take_follow(f, ["triad", "kernel-followup"])
-    for it, _ in Q.explore_items(sorted(pool), bump, seeds, rid, n_tri=600, n_set=200, n_next=80):
+    # test what minds proposed BETWEEN two glyphs (far pairs and gaps): triad (left, proposal, right), up to a sixth
+    bt = collections.Counter()
+    for r_ in parsed:
+        p_ = pres[r_["pid"]]
+        if p_["kind"] != "between" or r_["status"] != "ok":
+            continue
+        gi = p_["shown"].index("GAP"); lft, rgt = p_["shown"][gi - 1], p_["shown"][gi + 1]
+        for g_ in r_["answer"].get("proposals", []):
+            if ok_glyph(g_) and g_ not in (lft, rgt):
+                bt[(lft, g_, rgt)] += 1
+    for (lft, g_, rgt), n_ in sorted(bt.items(), key=lambda t: (-t[1], t[0])):
+        if spent >= B_explore / 2:
+            break
+        try:
+            take_item(I.make_item("triad", [lft, g_, rgt], source={"kind": "explore", "how": "between-proposal", "proposers": n_}),
+                      ["triad", "between-test"])
+        except AssertionError:
+            continue
+    for it, _ in Q.explore_items(sorted(pool), bump, seeds, rid, n_tri=600, n_set=200, n_next=80, n_between=120):
         if spent >= B_explore:
             break
         take_item(it, [it["kind"], "explore"])
     n_explore = spent
     # (2) sequences in stability order, each with its full work list, greedily
     served, last_stab = 0, None
-    if cur:
+    if pieces:
         support_by_glyph = collections.defaultdict(list)
-        for cid in list(cur.cands):
+        for cid in (list(cur.cands) if cur else []):
             for it, _ in Q.support_items(cur, cid, rid):
                 key = it["source"].get("link") or it["source"].get("tie") or ""
                 for g in key:
