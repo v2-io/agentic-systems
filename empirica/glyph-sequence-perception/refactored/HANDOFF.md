@@ -48,6 +48,8 @@ The drains ask their minds' open sheets, oldest round first, and idle when caugh
 
 **`tree.sequences()` fixed 2026-10-05:** a sequence now holds supported links only. Walk start contexts carried the triad era's gaps (`⑩ ⑪ ⑬ ⑭`, `㊳ ㊲ ㉒ ㉑`).
 
+**md-press here: always `--no-math`** (Joseph, 2026-10-05: *"this is the one case where you'll almost certainly want to run with --no-math"*). Since 2026-10-05, md-press only reports unless given `--fix`, and its math pass is on by default. This study's docs carry glyph sequences in plain prose (`⑳ → ㉑`, `↖ ↑ ↗`), which a Unicode-math promotion would turn into `$…$`. So use `md-press --no-math FILE`, then `md-press --fix --no-math FILE`.
+
 **utf-mcp is installed for Joseph's own tools** (2026-10-05 ~17:10, at his go-ahead: "make the mcp server available as a tool wherever you see fit"): `claude mcp` user scope, `~/.grok/config.toml` and `~/.codex/config.toml`, each tagged (`claude-code-user`, `grok-user`, `codex-user`). The study's judges can't see it: Claude judges use `--strict-mcp-config`, which was checked live and reported `tools: []`, and grok and codex judges run in isolated homes. **It is deliberately not in agy.** The study's Gemini judges run agy in Joseph's own HOME, so a global agy server (plus the allow-rule it needs) would hand the lookup tool to the first-impression Gemini judges. Don't add it there unless the agy adapter gets its own isolated configuration first.
 
 **Paused 2026-10-05 17:05–17:31** for Joseph's global md-press update: the loop and both drains were stopped mid-c005 (c004 had committed at 15:51) and restarted afterwards. The loop resumed c005.
