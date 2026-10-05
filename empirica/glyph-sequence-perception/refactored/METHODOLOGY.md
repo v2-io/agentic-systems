@@ -98,6 +98,7 @@ A cycle is closed rather than statistically ended. It is fully determined at eve
 - **Lengthening contexts.** To find k\* for an edge, ask its context at increasing lengths along the path, starting short.
 - **No spoiling.** A context never shows what the question is testing. For a suspected cycle, show only enough of the period's end that a repeat would be the mind's own. For an extension, never include glyphs from beyond the end.
 - **Triads and order sets** are cheap consistency checks. A sequence implies betweenness for each of its triples, and an order for each of its windows. A triad answer is also an unconditioned hint that a 3-glyph path exists, which makes it a cheap way to find **kernels** during exploration. They do not create edges.
+- **No reserved symbols.** Answer options are words or JSON keys ("none", "only two go together", "roughly the same step", "can't tell"), never glyphs (Joseph: *"You can just have them say 'roughly equivalent' or 'orthogonal' etc. instead of a glyph"*). So no glyph is ever excluded from the alphabet for being notation. The triad era's ban on `⟂ ⊥ ≈` is gone: none of them ever appeared in a prompt, and the ban had silently removed real `≈` proposals.
 - **Sheets** keep everything the pilot and rounds r000–r012 established: 1–5 presentations per call, fated randomization, recorded positions, and isolated judge adapters.
 
 ## 5. What gets asked next
