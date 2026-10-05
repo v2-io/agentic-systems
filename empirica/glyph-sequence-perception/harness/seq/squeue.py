@@ -265,6 +265,27 @@ def branch_items(piece, neighbours_by_glyph, round_id):
             out.append((I.make_item("triad", [nb, g[i], x], source={"kind": "branch", "ref": "".join(g), "at": g[i]}), piece["stability"] * 0.7))
     return out
 
+def interior_next(piece, round_id):
+    """A what-comes-next question whose context stops INSIDE the sequence (or anywhere on a cycle), at a fated-random
+    glyph and direction: where a branch could leave, the minds say what they see next there. (Found 2026-10-04: once
+    0..9 grew on to 🔟, nothing ever asked what follows ...8 9 again, so 9 -> A for hex could only turn up by chance;
+    co-occurrence-based branch checks cannot propose a glyph nobody has shown.)"""
+    g = piece["glyphs"]; n = len(g)
+    if n < 4 and not piece.get("cyclic"):
+        return []
+    r = R("interior-next", {"round": round_id, "piece": g})
+    seq = g if r.random() < 0.5 else g[::-1]
+    if piece.get("cyclic"):
+        k = r.randrange(n); seq = seq[k:] + seq[:k]
+        stop = n
+    else:
+        stop = r.randrange(2, n)                    # context ends at seq[stop-1], an interior glyph
+    k = min(stop, r.randint(3, 5))
+    ctx = seq[stop - k:stop]
+    if len(ctx) < 2:
+        return []
+    return [I.make_item("next", context=ctx, source={"kind": "branch", "how": "interior-next", "ref": "".join(g), "at": ctx[-1]})]
+
 
 # ================================================================== one priority order (Joseph's rule, as stated)
 # "The priority is then to extend that sequence to the right and to the left as far as they will go while still
@@ -280,7 +301,7 @@ def branch_items(piece, neighbours_by_glyph, round_id):
 #       3 rotation follow-ups of its triads
 #       4 the remaining candidates beyond its ends
 #       5 one squaring window (order item) and one long-range check, if long
-#       6 one branch check, gaps (between)
+#       6 one interior what-comes-next (where a branch could leave), one branch check, gaps (between)
 #   taken greedily until the budget is spent. Ties are broken by fated order.
 EXPLORE_SHARE = 0.15
 
@@ -324,6 +345,7 @@ def sequence_work(pc, ends, cooc, seed_next, support_by_glyph, follow_by_glyph, 
     work += [(4, it) for it in tri_extra]
     sq = square_items(pc, round_id)
     work += [(5, it) for it, _ in sq[:2]]
+    work += [(6, it) for it in interior_next(pc, round_id)]
     br = branch_items(pc, cooc, round_id)
     work += [(6, it) for it, _ in br[:1]]
     work += [(6, it) for it, _ in gap_items(pc, round_id)[:1]]

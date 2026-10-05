@@ -149,7 +149,7 @@ Half of these come from one seed's neighbourhood.
    3. the rotation follow-ups of its triads;
    4. the remaining candidates beyond its ends;
    5. one squaring window and one long-range check;
-   6. one branch check and one gap check.
+   6. one what-comes-next question whose context stops inside the sequence, at a fated-random glyph and direction (anywhere on a cycle), so the minds can name a branch where one could leave; then one branch check and one gap check. *Added 2026-10-04 (night): once `0…9` grew on to `🔟`, nothing asked again what follows `…8 9`, so hex's `9 A` could only turn up by chance (Joseph: "surprised that it hasn't started finding obvious ones like '0123456789ABCDEF'").*
 
    Items are taken greedily until the round's budget is spent. A cycle has no ends. **An end closes** once it has six or more what-comes-next answers, 70% or more of them "none", and every proposal made at it has been tested.
 
