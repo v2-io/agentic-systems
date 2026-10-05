@@ -42,6 +42,22 @@ The triad era mixed these concerns:
 
 Each mix-up produced an incident (see `../OBSERVATIONS.md` and the seam note in `../PLAN.md`).
 
+## 2b. Negative evidence: inhibitory edges
+
+> *"Do we have a way to also record 'inhibitory' responses — orthogonality — negative edges?"* — Joseph, 2026-10-05
+
+A node holds what minds rejected as well as what they continued with. There are three kinds, and the first two are already in the data. Counts through r011:
+
+| kind | what it says | from | count |
+|---|---|---|---|
+| **end** at a context | nothing comes after this run | a what-comes-next / continue "none" | 1,272 |
+| **orthogonality** among glyphs, at short context | these glyphs don't sit in one sequence, or only two of them do | triad "none" / "only two go together"; order "none", sets split into separate lines, or glyphs set aside | 3,563 / 3,761; 951, 245, 1,061 |
+| **inhibition** of a specific edge in a context | given this run, `x` does *not* come next | *nothing asks this directly yet* | none |
+
+A proposal list that omits `x` is not a rejection of `x`, since a mind names at most three. So explicit inhibition needs its own question: given a context and a candidate, does it continue the run? The answers would be yes, no, or "can't tell", with tagged forced and unforced variants (concern 1).
+
+Like positive edges, negative ones are **conditioned on their context**. A triad's "none" is a statement at very short context. It must never act as a global veto: `|` and `-` are orthogonal in most contexts and adjacent in the spinner, and `3E[|]` would be invisible to anything that let short-context rejection close the door. (The triad era learned this from its majority rule, which let ⟂ answers erase anything not every mind saw.) Negative edges are evidence in the tree, and they enter priority as soft weights, never as filters.
+
 ## 3. Definitions
 
 **Shortest sufficient context, k\*.** For a glyph `x` that follows a run `… u v w` along some path, k\* is the length of the shortest suffix of that run (`w`, `v w`, `u v w`, …) at which minds name `x` as the continuation.
