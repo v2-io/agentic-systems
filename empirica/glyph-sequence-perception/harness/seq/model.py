@@ -14,7 +14,8 @@ none / two), beta (noise preference for the shown middle), tau (tie use when a t
 Answer probability of a triple observation for mind m (no ⟂ offered = forced; see _predict):
     P = (1-eps) * Perc + eps * Noise
     Perc = p3 * Mix_{c in C3}[pred_c] + (1-p3) * (p2 * Mix_{c in C2}[two(pair_c)] + (1-p2) * none)
-where C3 / C2 are candidates holding all three / exactly two of the triple, p3 = 1 - prod(1 - s), and the
+where C3 / C2 are candidates holding all three / exactly two of the triple, p3 = max s over C3 (a mind perceives
+a triple through a sequence; restating the same structure in overlapping candidates must not compound), and the
 mixtures weight candidates by s.
 
 Fit. Maximise  sum_obs w * log P  -  LAMBDA_C * |Sigma|  -  LAMBDA_G * sum |c|  by simulated annealing over
@@ -164,13 +165,13 @@ def predict(o, model, mind):
         elif n == 2:
             c2.append((s, ci))
     perc = collections.defaultdict(float)
-    p3 = 1 - math.prod(1 - s for s, _ in c3) if c3 else 0.0
+    p3 = max(s for s, _ in c3) if c3 else 0.0
     if c3:
         z = sum(s for s, _ in c3)
         for s, ci in c3:
             for k, v in _pred_cand(model.cands[ci].pos, tri, o["tie_ok"], th["tau"]).items():
                 perc[k] += p3 * (s / z) * v
-    p2 = 1 - math.prod(1 - s for s, _ in c2) if c2 else 0.0
+    p2 = max(s for s, _ in c2) if c2 else 0.0
     rest = 1 - p3
     if c2:
         z = sum(s for s, _ in c2)
@@ -214,10 +215,7 @@ def prob_out(o, model):
     perc = 0.0
     p3 = 0.0
     if c3:
-        q = 1.0
-        for sv, _ in c3:
-            q *= 1 - sv
-        p3 = 1 - q
+        p3 = max(sv for sv, _ in c3)   # perceived through a sequence: restating structure does not compound
         z = sum(sv for sv, _ in c3)
         if out[0] != "none" and out[0] != "two":
             for sv, ci in c3:
@@ -225,10 +223,7 @@ def prob_out(o, model):
     rest = 1 - p3
     p2 = 0.0
     if c2:
-        q = 1.0
-        for sv, _ in c2:
-            q *= 1 - sv
-        p2 = 1 - q
+        p2 = max(sv for sv, _ in c2)
         z = sum(sv for sv, _ in c2)
         for sv, ci in c2:
             cp = model.cands[ci].pos
