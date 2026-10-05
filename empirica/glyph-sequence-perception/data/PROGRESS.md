@@ -8,3 +8,16 @@
 | r001 | disagreement-ranked | 395 | 1306 | 96 | 38 | 394 | 9 | 4.1 | 41 | 192 | 31 |
 | r002 | disagreement-ranked | 365 | 1302 | 107 | 51 | 480 | 9 | 4.5 | 54 | 214 | 34 |
 | r003 | disagreement-ranked | 551 | 1747 | 140 | 86 | 626 | 9 | 4.5 | 51 | 280 | 48 |
+| r004 | disagreement-ranked | 698 | 2155 | 191 | 100 | 872 | 12 | 4.6 | 104 | 382 | 92 |
+
+## Growth of stable sequences
+
+*Stable: established, measured in two or more families, U ≥ 0.8. Counts by length bucket. **stable_glyphs:** total glyphs in stable sequences. **cum calls:** cumulative sheets answered. The line to watch is stable_glyphs against cum calls: is each round still adding stable structure?*
+
+| round | cum calls | stable | stable_glyphs | median len | len 3 | 4–5 | 6–7 | 8–9 | 10+ |
+|---|---|---|---|---|---|---|---|---|---|
+| r000 | 505 | 13 | 71 | 6 | 0 | 6 | 6 | 1 | 0 |
+| r001 | 900 | 38 | 168 | 4 | 17 | 11 | 7 | 3 | 0 |
+| r002 | 1265 | 51 | 236 | 4 | 20 | 18 | 8 | 5 | 0 |
+| r003 | 1816 | 86 | 414 | 4 | 26 | 33 | 19 | 8 | 0 |
+| r004 | 2514 | 100 | 525 | 5 | 26 | 34 | 23 | 10 | 7 |

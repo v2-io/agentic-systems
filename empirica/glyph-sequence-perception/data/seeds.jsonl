@@ -954,3 +954,8 @@
 {"bump": 2.0, "glyphs": ["𝟣", "𝟤", "𝟥", "𝟦", "𝟧", "𝟨", "𝟩", "𝟪", "𝟫"], "sid": "c4a1e3cde14177ae:value@𝟣", "type": "lattice"}
 {"bump": 2.0, "glyphs": ["𝟭", "𝟮", "𝟯", "𝟰", "𝟱", "𝟲", "𝟳", "𝟴", "𝟵"], "sid": "c4a1e3cde14177ae:value@𝟭", "type": "lattice"}
 {"bump": 2.0, "glyphs": ["𝟷", "𝟸", "𝟹", "𝟺", "𝟻", "𝟼", "𝟽", "𝟾", "𝟿"], "sid": "c4a1e3cde14177ae:value@𝟷", "type": "lattice"}
+{"sid": "c1e648bc57c31743", "glyphs": [".", "·", "⋅", "‧", ":", "∶", "⁚", "⁖", "⁝", "⁘", "⁞", "⁙"], "bump": 2.0, "type": "set", "added_round": "r004"}
+{"sid": "d5ff4fb35771fa1c", "glyphs": [":", "∶", "·", "⁝", "⁞"], "bump": 2.0, "type": "set", "added_round": "r004"}
+{"sid": "65e79aed2b071edb", "glyphs": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"], "bump": 2.0, "type": "sequence", "added_round": "r004"}
+{"sid": "2f72418370797f73", "glyphs": ["▁", "▂", "▃", "_", "‗"], "bump": 2.0, "type": "set", "added_round": "r004"}
+{"sid": "1b4d825a8345d435", "glyphs": ["Ġ", "Ċ", "G", "g", "ĉ"], "bump": 2.0, "type": "set", "added_round": "r004"}
