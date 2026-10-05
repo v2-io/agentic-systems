@@ -40,6 +40,7 @@ def tallies(obs, fam):
     who = collections.defaultdict(lambda: collections.defaultdict(set))
     for o in obs:
         cnt[o["tri"]][tuple(o["out"])] += 1
+        who[o["tri"]]["*asked"].add((o["mind"], fam.get(o["mind"], o["mind"])))
         if o["out"][0] == "mid":
             who[o["tri"]][o["out"][1]].add((o["mind"], fam.get(o["mind"], o["mind"])))
     return cnt, who
@@ -175,7 +176,8 @@ def build(obs, parsed, pres, fam):
             steps.append({"triple": [a, m, b], "answers": c[("mid", m)], "other": sum(c.values()) - c[("mid", m)],
                           "rival": rival, "minds": sorted({w[0] for w in ws}), "families": sorted({w[1] for w in ws})})
         s["steps"] = steps
-        s["family_share"] = {f: sum(f in st["families"] for st in steps) / len(steps) for f in fams}
+        asked = {w[1] for x in zip(seq, seq[1:], seq[2:]) for w in who.get(tuple(sorted(x)), {}).get("*asked", ())}
+        s["family_share"] = {f: (sum(f in st["families"] for st in steps) / len(steps)) if f in asked else None for f in fams}
         # how universally and how consistently the minds give each step: (families giving it / all families) x
         # (answers giving it / all answers to that triad), averaged over steps. It orders rows; it removes none.
         s["stability"] = sum(len(set(st["families"]) & set(live)) / len(live) * st["answers"] / max(1, st["answers"] + st["other"])
@@ -253,7 +255,7 @@ def piece_table(obs, parsed, pres, fam):
     """All sequences for the planner (round.cmd_plan -> squeue.sequence_work), most stable first."""
     seqs, fams, live = build(obs, parsed, pres, fam)
     return [{"steps": [[x] for x in s["glyphs"]], "glyphs": s["glyphs"], "cyclic": s["cyclic"], "stability": s["stability"],
-             "U": s["stability"], "families": sum(v > 0 for v in s["family_share"].values()), "support": 1.0,
+             "U": s["stability"], "families": sum(bool(v) for v in s["family_share"].values()), "support": 1.0,
              "hints": [], "forks": [], "untested": [st["triple"] for st in s["steps"] if st["answers"] == 0]} for s in seqs]
 
 def bucket(n):
@@ -279,7 +281,7 @@ def main():
          f"(by length: " + ", ".join(f"{k}: {bk[k]}" for k in ("3", "4–5", "6–7", "8–9", "10+")) + ").", "",
          "**How to read a row.** A row is a sequence; a **step** is three consecutive glyphs `p q r`, and a mind *gave* the step when it answered that `q` lies between `p` and `r`. Example: `0 1 2 3` has two steps, `0 1 2` and `1 2 3`.", "",
          "- **rank**: what the rows are sorted by (and the order the planner works in). For each step, (families whose minds gave it ÷ the families still being asked: " + ", ".join(live) + ") × (answers that gave it ÷ all answers to that triad), averaged over the row's steps. 1.00 = every family still being asked gave every step and no answer disagreed.",
-         "- **family columns** (" + ", ".join(fams) + "): the share of the row's steps that at least one mind of that family gave. 1.00 = that family gave every step; 0.50 = half of them; 0.00 = none, usually because it was never asked them. " + ("" if set(fams) == set(live) else "Families not being asked any more (" + ", ".join(f for f in fams if f not in live) + ": " + ", ".join(m for m, f_ in fam.items() if f_ not in live) + ", paused) mostly show 0.00 on recent rows."),
+         "- **family columns** (" + ", ".join(fams) + "): the share of the row's steps that at least one mind of that family gave. 1.00 = that family gave every step; 0.50 = half of them; 0.00 = it answered some of these triads but gave none of the steps; **–** = no mind of that family has answered any of the row's triads. " + ("" if set(fams) == set(live) else "Families not being asked any more (" + ", ".join(f for f in fams if f not in live) + ": " + ", ".join(m for m, f_ in fam.items() if f_ not in live) + ", paused) show – on rows found since."),
          "- **n**: glyphs in the row. **weakest**: the fewest answers that gave any one step (0 = a step no answer has given yet; the planner asks it). **against**: other answers to the row's triads (a different middle, “only two go together”, or ⟂).",
          "- **shared**: glyphs that also sit in other rows (branch points). **proposed beyond**: glyphs minds proposed next to an end that no answer has tested yet, per end (`end→proposals`, up to six). **proposed inside**: the same at glyphs inside the row, every glyph of a cycle: possible branches (`glyph→proposals`, up to four).", "",
          "| # | sequence | n | rank | " + " | ".join(fams) + " | weakest | against | shared | proposed beyond | proposed inside |",
@@ -288,7 +290,7 @@ def main():
         shown = " ".join(s["glyphs"]) + (" ↻" if s["cyclic"] else "")
         prop = "; ".join(f"{q}→{''.join(xs[:6])}" for q, xs in s["proposed"].items() if xs)
         inside = "; ".join(f"{q}→{''.join(xs[:4])}" for q, xs in s["proposed_inside"].items())
-        L.append(f"| {i} | `{shown}` | {len(s['glyphs'])} | {s['stability']:.2f} | " + " | ".join(f"{s['family_share'][f]:.2f}" for f in fams)
+        L.append(f"| {i} | `{shown}` | {len(s['glyphs'])} | {s['stability']:.2f} | " + " | ".join("–" if s['family_share'][f] is None else f"{s['family_share'][f]:.2f}" for f in fams)
                  + f" | {s['weakest']} | {sum(x['other'] for x in s['steps'])} | {''.join(x for x in s['glyphs'] if owners[x] >= 2)} | {prop} | {inside} |")
     if len(seqs) > a.top:
         L += ["", f"*{len(seqs) - a.top} more rows (lower stability) in `data/growth/{rid}.json`.*"]
