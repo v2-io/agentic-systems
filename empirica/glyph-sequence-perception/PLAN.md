@@ -321,3 +321,30 @@ Each step is committed and checked before the next.
 - **Database:** `empirica_glyph_sequence`, built.
 - **Name:** `glyph-sequence-perception`.
 - **Index:** `empirica/INDEX.md` updated.
+
+## Parameters chosen without evidence (listed so they are visible and changeable)
+
+Joseph, 2026-10-04: *"I'm so sick of rules invented for no reason."* Every number below shapes what gets asked or counted, and none of them was derived from data. Each is set in one place.
+
+| parameter | value | where | origin |
+|---|---|---|---|
+| hot exploration share | 15% | `squeue.EXPLORE_SHARE` | Joseph |
+| witness: answers in the same order | ≥ 2, and ≥ half of all answers on the triple | `model.WITNESS_MIN`, `evidence_view.witnessed` | mine: the smallest repeat that rules out one stray answer |
+| fresh draws from the whole symbol space vs seed-bumped pool draws | 1 : 1 | `squeue.explore_items` | mine |
+| seed-local vs whole-space exploration sets | 1 : 1 | `squeue.explore_items` | mine |
+| seed bump | 2 (domain seeds), 1.5 (survey records) | `data/seeds/*`, `round.survey_seeds` | mine |
+| kernel-confirming follow-ups / between-proposal tests | ≤ ⅓ / ≤ ½ of the exploration share | `round.cmd_plan` | mine |
+| what-comes-next context length | 3–5 glyphs | `squeue.extension_items` | the pilot found continuation reliable from about 4 |
+| an end closes after | ≥ 6 answers, ≥ 70% of them "none", every proposal tested | `squeue.END_*` | mine |
+| near-restatement folding | ≥ 70% shared glyphs, same order | `evidence_view.build` | mine |
+| family measured on a triple | ≥ 2 answers from that family | `evidence_view.family_shares` | mine |
+| stable | ≥ 2 families measured, U ≥ 0.8 | `progress.py`, `evidence_view.py` | mine |
+| order items per presentation set | 2 shuffles | `round.cmd_plan` | the pilot (gestalt) |
+| sheet size | 1–5 presentations | `items.MAX_SHEET` | Joseph |
+| ⟂ / tie / gap offered | 90% / 50% / 50% of sheets | `items.P_*` | mine |
+
+**Two restrictions removed the same evening, because they had no reason behind them:**
+
+- **A glyph pool frozen at the start.** Exploration had drawn only from the survey glyphs and about 1,000 random ones, for r000–r005. That was the opposite of the design's long tail that never closes. Joseph's canary, the spinner `|/-\`, could never have been found: `\` was outside the pool. Exploration now draws fresh glyphs from the whole symbol space every round.
+- **Sequences forced to be linear.** Cycles are now allowed: a chain whose witnessed continuation is its own first glyph closes, and is clamped after that one repeat (Joseph).
+

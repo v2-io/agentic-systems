@@ -262,7 +262,9 @@ def cmd_plan(a):
     for it, _ in Q.explore_items(sorted(pool), bump, seeds, rid, n_tri=600, n_set=200, n_next=80, n_between=120):
         if spent >= B_explore:
             break
-        take_item(it, [it["kind"], "explore"])
+        if take_item(it, [it["kind"], "explore"]):
+            for g in it["glyphs"]:
+                pool.setdefault(g, "uniform-tail")      # fresh glyphs join the pool once asked
     n_explore = spent
     # (2) sequences in stability order, each with its full work list, greedily
     served, last_stab = 0, None
@@ -304,6 +306,8 @@ def cmd_plan(a):
     for s in sheets_out:
         s["minds"] = list(mind_names) + [m for m in second if R("second-mind", {"sid": s["sid"], "m": m}).random() < 0.2]
     rd.mkdir(parents=True, exist_ok=True)
+    json.dump({"protocol": PROTOCOL, "pool": pool, "synth": json.load(open(d / "pool.json")).get("synth")},
+              open(d / "pool.json", "w"), ensure_ascii=False, indent=0)
     if fit:   # provenance: the exact fit this round was drawn from (a later re-analysis may overwrite fit.json)
         json.dump(dict(fit, basis_of=rid, basis_from=prev[-1]), open(rd / "basis-fit.json", "w"), ensure_ascii=False)
     write_jsonl(rd / "items.jsonl", list(sel_items.values()))

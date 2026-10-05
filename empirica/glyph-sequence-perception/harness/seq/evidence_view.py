@@ -60,11 +60,18 @@ def build(obs, fam):
                 return True
         return False
     def extend(chain):
-        """all maximal right-extensions of chain (list), forking where several continuations are witnessed."""
+        """all maximal right-extensions of chain (list), forking where several continuations are witnessed. A chain
+        whose witnessed continuation is its own first glyph is a CYCLE (a spinner): it is closed and
+        clamped after that one repeat (Joseph, 2026-10-04: "|/-\\|/-\\ ... a spinner, essentially ... clamp after one
+        repeat"). A cycle is returned with its first glyph repeated at the end."""
         out, stack = [], [chain]
         while stack and len(out) < MAX_CHAINS:
             c = stack.pop()
+            if len(c) >= 2 and c[-1] == c[0]:
+                out.append(c); continue                       # closed cycle: clamp
             p, q = c[-2], c[-1]
+            if len(c) >= 3 and c[0] in nxt.get((p, q), ()):
+                stack.append(c + [c[0]])                      # closes the cycle
             xs = sorted(x for x in nxt.get((p, q), ()) if x not in c and not contradicts(c, q, x))
             # transitive reduction: a witnessed triple says its middle lies BETWEEN, not that the others are adjacent;
             # drop x when another candidate y is witnessed between q and x (x is reachable through y)
@@ -80,8 +87,15 @@ def build(obs, fam):
     for t, m in sorted(mid_of.items()):
         a, b = [g for g in t if g != m]
         for right in extend([a, m, b]):
-            for full in extend(right[::-1]):
-                key = tuple(full) if full[0] <= full[-1] else tuple(full[::-1])
+            for full in ([right] if right[-1] == right[0] else extend(right[::-1])):
+                if full[-1] == full[0]:                       # cycle: canonical rotation and direction
+                    ring = full[:-1]
+                    rots = [ring[i:] + ring[:i] for i in range(len(ring))]
+                    rots += [r[::-1] for r in rots]
+                    best = min(rots)
+                    key = tuple(best + [best[0]])
+                else:
+                    key = tuple(full) if full[0] <= full[-1] else tuple(full[::-1])
                 if key not in seen:
                     seen.add(key); chains.append(list(key))
         if len(chains) > MAX_CHAINS:
@@ -95,7 +109,11 @@ def build(obs, fam):
     kept, hints = [], collections.defaultdict(set)
     for c in chains:
         host = None
+        if c[-1] == c[0]:
+            kept.append(c); continue
         for k in kept:
+            if k[-1] == k[0]:
+                continue
             common = [g for g in c if g in set(k)]
             if len(common) >= 0.7 * len(c):
                 pk = {g: i for i, g in enumerate(k)}
@@ -114,7 +132,10 @@ def family_shares(chain, byfam, fams):
     per = {}
     for f in fams:
         meas = ok = 0
-        for t3 in zip(chain, chain[1:], chain[2:]):
+        seq = chain + chain[1:2] if (len(chain) >= 2 and chain[-1] == chain[0]) else chain
+        for t3 in zip(seq, seq[1:], seq[2:]):
+            if len(set(t3)) < 3:
+                continue
             tal = byfam[tuple(sorted(t3))].get(f)
             if tal and sum(tal.values()) >= 2:
                 meas += 1; w = witnessed(tal)
@@ -133,7 +154,9 @@ def piece_table(obs, fam):
     for c in chains:
         per = family_shares(c, byfam, fams)
         U = sum(per.values()) / len(per) if per else 0.0
-        out.append({"steps": [[g] for g in c], "glyphs": c, "U": U, "families": len(per), "support": 1.0,
+        cyc = len(c) >= 2 and c[-1] == c[0]
+        g = c[:-1] if cyc else c
+        out.append({"steps": [[x] for x in g], "glyphs": g, "cyclic": cyc, "U": U, "families": len(per), "support": 1.0,
                     "stability": U * (len(per) / max(1, len(fams))) ** 0.5, "hints": sorted(hints.get(tuple(c), ()))})
     return sorted(out, key=lambda x: (-x["stability"], -len(x["glyphs"]), x["glyphs"]))
 
@@ -163,7 +186,8 @@ def main():
          "**Family columns:** the share of the sequence's consecutive triples also witnessed using only that family's answers. `–` means unmeasured. **Branch at:** glyphs it shares with another sequence in this view.", "",
          "| # | sequence | n | " + " | ".join(fams) + " | U | branch at | folded-in glyphs (hints) |", "|---|---|---|" + "---|" * len(fams) + "---|---|---|"]
     for i, r in enumerate(rows[:a.top], 1):
-        L.append(f"| {i} | `{' '.join(r['seq'])}` | {r['n']} | " + " | ".join(f"{r['per'][f]:.2f}" if f in r["per"] else "–" for f in fams)
+        shown = (' '.join(r['seq'][:-1]) + ' ↻') if (len(r['seq']) >= 2 and r['seq'][-1] == r['seq'][0]) else ' '.join(r['seq'])
+        L.append(f"| {i} | `{shown}` | {r['n'] - (1 if shown.endswith('↻') else 0)} | " + " | ".join(f"{r['per'][f]:.2f}" if f in r["per"] else "–" for f in fams)
                  + f" | {r['U']:.2f} | {''.join(r['branch_at'])} | {''.join(r['hints'])} |")
     # comparison with the fit-based standings
     std = d / "standings" / f"{rid}.json"

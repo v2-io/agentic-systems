@@ -187,7 +187,23 @@ def explore_items(pool, lineage_bump, seeds, round_id, n_tri, n_set, n_next, n_b
     for x in w:
         acc += x; cum.append(acc)
     import bisect
+    import unicodedata as _U
+    def fresh_glyph():
+        """the pilot's standing long tail (walk2/4/5 rand_glyph ranges), drawn FRESH every round: any glyph in the
+        symbol space can be asked, not only those in the pool (fixed 2026-10-04: a pool frozen at init had made
+        glyphs like '\\' unreachable -- Joseph's spinner |/-\\ could never have been found)"""
+        while True:
+            cp = r.choice([r.randint(0x20, 0x2BFF), r.randint(0x1F000, 0x1FBFF), r.randint(0x2E80, 0x33FF), r.randint(0x1D300, 0x1D7FF)])
+            ch = chr(cp)
+            try:
+                _U.name(ch)
+            except ValueError:
+                continue
+            if ok_glyph(ch):
+                return ch
     def draw_glyph():
+        if r.random() < 0.5:
+            return fresh_glyph()                       # half the pool draws are fresh from the whole space
         return pool[min(len(pool) - 1, bisect.bisect_left(cum, r.random() * tot))]
     sd = [x for x in seeds if len(set(x["glyphs"])) >= 3]
     def draw_set(k):
