@@ -110,6 +110,18 @@ def _pred_cand(steps_pos, tri, tie_ok, tau):
         out[("tie2", lone, pair[0], pair[1])] = tau
     return out
 
+def _strict(steps_pos, tri):
+    """The single outcome a candidate asserts for `tri`: its middle, or its tie."""
+    pa = [steps_pos[g] for g in tri]
+    d = sorted(set(pa))
+    if len(d) == 3:
+        return ("mid", sorted(zip(pa, tri))[1][1])
+    if len(d) == 1:
+        return ("tie3",)
+    lone = next(g for g, x in zip(tri, pa) if pa.count(x) == 1)
+    a, b = sorted(g for g, x in zip(tri, pa) if pa.count(x) == 2)
+    return ("tie2", lone, a, b)
+
 def _noise(o, th):
     tri, shown = o["tri"], o["shown"]
     out = {}
@@ -325,7 +337,7 @@ class Model:
                 continue
             t = tally[o["tri"]]
             t[1] += 1
-            if o["out"][0] in ("mid", "tie2", "tie3") and _pred_cand(cand.pos, o["tri"], True, 0.5).get(o["out"], 0) > 0:
+            if o["out"] == _strict(cand.pos, o["tri"]):   # strict: a tie is witnessed only by a tie answer
                 t[0] += 1
         for tri, (ok, n) in tally.items():
             if ok < WITNESS_MIN or ok < 0.5 * n:   # witnessed: >= 2 answers in this order, and at least half of all answers
@@ -580,6 +592,36 @@ def step(model, T, r):
         u()
     return False
 
+def prune(model):
+    changed = True
+    while changed:
+        changed = False
+        for cid in sorted(model.cands):
+            if cid not in model.cands:
+                continue
+            before = model.objective()
+            res = _apply(model, "replace", (cid, None))
+            if res and model.objective() > before + 1e-9:
+                changed = True; continue
+            if res:
+                res[1]()
+            c = model.cands.get(cid)
+            if not c:
+                continue
+            for g in list(c.glyphs()):
+                c = model.cands.get(cid)
+                if not c or g not in c.pos or len(c) <= MIN_LEN:
+                    break
+                steps = [s for s in ([[x for x in st if x != g] for st in c.steps]) if s]
+                before = model.objective()
+                res = _apply(model, "replace", (cid, steps))
+                if res is None:
+                    continue
+                if model.objective() > before + 1e-9:
+                    changed = True; cid = res[2]
+                else:
+                    res[1]()
+
 def anneal(model, seed_obj, iters=4000, T0=8.0, T1=0.3, theta_every=800, sample_every=0, n_samples=0):
     """Cool from T0 to T1, then (optionally) sample at T = 1. Returns list of posterior snapshots."""
     r = R("anneal", seed_obj)
@@ -599,9 +641,10 @@ def anneal(model, seed_obj, iters=4000, T0=8.0, T1=0.3, theta_every=800, sample_
     for ci in list(model.cands):
         model.fit_s(ci)
     model.fit_theta(1)
-    # greedy polish at T -> 0
+    # greedy polish at T -> 0, then a deterministic prune: drop any candidate, or any glyph, whose removal improves the objective
     for it in range(iters // 4):
         step(model, 1e-3, r)
+    prune(model)
     if n_samples:
         for it in range(n_samples * sample_every):
             step(model, 1.0, r)

@@ -235,6 +235,8 @@ def cmd_plan(a):
     for s in sheets_out:
         s["minds"] = list(mind_names) + [m for m in second if R("second-mind", {"sid": s["sid"], "m": m}).random() < 0.2]
     rd.mkdir(parents=True, exist_ok=True)
+    if fit:   # provenance: the exact fit this round was drawn from (a later re-analysis may overwrite fit.json)
+        json.dump(dict(fit, basis_of=rid, basis_from=prev[-1]), open(rd / "basis-fit.json", "w"), ensure_ascii=False)
     write_jsonl(rd / "queue.jsonl", [{"iid": it["iid"], "cat": list(c), "priority": p, "kind": it["kind"], "glyphs": it["glyphs"],
                                       "source": it["source"]} for c, lst in sorted(cats.items()) for it, p in lst])
     write_jsonl(rd / "items.jsonl", list(sel_items.values()))
