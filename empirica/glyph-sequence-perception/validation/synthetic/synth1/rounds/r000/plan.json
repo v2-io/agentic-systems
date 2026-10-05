@@ -1,0 +1,25 @@
+{
+ "round": "r000",
+ "quotas": {
+  "triad|tail": 0.15,
+  "triad|seed": 0.5,
+  "order|seed": 0.15,
+  "next|seed": 0.08,
+  "next|tail": 0.07,
+  "between|seed": 0.05
+ },
+ "available_info": {
+  "triad|tail": 0.0,
+  "triad|seed": 0.5054651081081648,
+  "order|seed": 0.5054651081081644,
+  "next|seed": 0.5054651081081644,
+  "next|tail": 0.0,
+  "between|seed": 0.5054651081081644
+ },
+ "T": 1.0,
+ "follow_ups": 0,
+ "follow_ups_wanted": 0,
+ "new_items": 123,
+ "presentations": 128,
+ "sheets": 41
+}

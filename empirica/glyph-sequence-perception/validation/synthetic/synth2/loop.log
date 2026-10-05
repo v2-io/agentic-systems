@@ -1,0 +1,129 @@
+init: 198 glyphs in pool, 5 seeds -> /private/tmp/claude-505/-Users-josephwecker-v2-src-arch-firmatum-utils-aspectus/fcc2ed5a-ac92-4900-9048-7c0adcf7b4bf/scratchpad/synth2
+r000: 123 new items + 0 follow-up presentations -> 128 presentations, 41 sheets (T=1.00)
+r000/synA: 41 sheets, 0 done, 41 to run
+r000/synB: 41 sheets, 0 done, 41 to run
+r000/synC: 41 sheets, 0 done, 41 to run
+r000/synD: 41 sheets, 0 done, 41 to run
+  chain 0: objective -452.6, 6 candidates
+  chain 1: objective -470.7, 6 candidates
+  chain 2: objective -475.3, 7 candidates
+# Round r000 — fit report
+
+Observations (triple-level, cumulative): 1324. Minds: synA, synB, synC, synD.
+
+## Candidate sequences (best chain), by family-mean perception
+
+s3 = perception in triads, s4 = in sets of 4+, per family (mean over its minds). support = share of chains and posterior samples holding a matching candidate.
+
+| # | sequence | n | support | famX s3/s4 | famY s3/s4 | famZ s3/s4 |
+|---|---|---|---|---|---|---|
+| 1 | `⚀ ⚁ ⚂ ⚄ ⚅` | 5 | 0.67 | 0.48/0.97 | 0.65/0.97 | 0.97/0.97 |
+| 3 | `③=② ④ ⑤ ⑥ ⑦ ① ⑧` | 8 | 1.00 | 0.90/0.97 | 0.65/0.97 | 0.90/0.00 |
+| 0 | `⑤ ⑷ ⑸ ⑹` | 4 | 1.00 | 0.73/0.48 | 0.35/0.97 | 0.50/0.97 |
+| 2 | `▁ ▂ ▃ ▄ ▅ ▆ ▇` | 7 | 0.67 | 0.78/0.73 | 0.65/0.97 | 0.65/0.90 |
+| 4 | `○ ◔ ◑ ◕ ●` | 5 | 1.00 | 0.05/0.90 | 0.00/0.65 | 0.10/0.65 |
+| 5 | `⚁=⚃=⚂ ⚄ ⚅` | 5 | 1.00 | 0.62/0.00 | 0.65/0.00 | 0.90/0.00 |
+
+## Minds: nuisance parameters
+
+| mind | eps | nn | nt | beta | tau |
+|---|---|---|---|---|---|
+| synA | 0.1 | 0.05 | 0.0 | 0.2 | 0.1 |
+| synB | 0.25 | 0.4 | 0.2 | 0.5 | 0.1 |
+| synC | 0.15 | 0.05 | 0.2 | 0.65 | 0.1 |
+| synD | 0.4 | 0.4 | 0.1 | 0.95 | 0.1 |
+
+## Parse status this round
+
+- synA|ok: 124
+- synB|ok: 124
+- synC|ok: 124
+- synD|ok: 124
+
+r001: 89 new items + 110 follow-up presentations -> 213 presentations, 66 sheets (T=0.80)
+r001/synA: 66 sheets, 0 done, 66 to run
+r001/synB: 66 sheets, 0 done, 66 to run
+r001/synC: 66 sheets, 0 done, 66 to run
+r001/synD: 66 sheets, 0 done, 66 to run
+  chain 0: objective -1904.6, 5 candidates
+  chain 1: objective -1954.9, 6 candidates
+  chain 2: objective -1867.7, 5 candidates
+# Round r001 — fit report
+
+Observations (triple-level, cumulative): 4576. Minds: synA, synB, synC, synD.
+
+## Candidate sequences (best chain), by family-mean perception
+
+s3 = perception in triads, s4 = in sets of 4+, per family (mean over its minds). support = share of chains and posterior samples holding a matching candidate.
+
+| # | sequence | n | support | famX s3/s4 | famY s3/s4 | famZ s3/s4 |
+|---|---|---|---|---|---|---|
+| 1 | `▇ ▆ ▅ ▄ ▃ ▂ ▁` | 7 | 0.67 | 0.73/0.73 | 0.50/0.97 | 0.80/0.97 |
+| 2 | `⚀ ⚁ ● ◕ ◑ ⚂ ⚄ ⚅ ◔ ○` | 10 | 0.33 | 0.01/0.81 | 0.00/0.80 | 0.00/0.97 |
+| 0 | `⑧ ⑦ ⑥ ⑤ ④ ③ ② ①` | 8 | 1.00 | 0.78/0.94 | 0.50/0.80 | 0.80/0.10 |
+| 4 | `⚀ ⚁ ⚃=⚂ ⚄ ⚅` | 6 | 1.00 | 0.78/0.35 | 0.65/0.35 | 0.90/0.35 |
+| 3 | `⑤ ⑷ ⑸ ⑹` | 4 | 0.67 | 0.65/0.65 | 0.65/0.65 | 0.65/0.80 |
+
+## Minds: nuisance parameters
+
+| mind | eps | nn | nt | beta | tau |
+|---|---|---|---|---|---|
+| synA | 0.05 | 0.05 | 0.3 | 0.65 | 0.9 |
+| synB | 0.15 | 0.2 | 0.3 | 0.8 | 0.9 |
+| synC | 0.15 | 0.4 | 0.2 | 0.8 | 0.9 |
+| synD | 0.6 | 0.4 | 0.2 | 0.8 | 0.9 |
+
+## Parse status this round
+
+- synA|ok: 211
+- synB|ok: 211
+- synC|ok: 211
+- synD|ok: 211
+
+r002: 89 new items + 71 follow-up presentations -> 171 presentations, 49 sheets (T=0.64)
+r002/synA: 49 sheets, 0 done, 49 to run
+r002/synB: 49 sheets, 0 done, 49 to run
+r002/synC: 49 sheets, 0 done, 49 to run
+r002/synD: 49 sheets, 0 done, 49 to run
+  chain 0: objective -3186.8, 5 candidates
+  chain 1: objective -3179.2, 6 candidates
+  chain 2: objective -3186.5, 6 candidates
+# Round r002 — fit report
+
+Observations (triple-level, cumulative): 8544. Minds: synA, synB, synC, synD.
+
+## Candidate sequences (best chain), by family-mean perception
+
+s3 = perception in triads, s4 = in sets of 4+, per family (mean over its minds). support = share of chains and posterior samples holding a matching candidate.
+
+| # | sequence | n | support | famX s3/s4 | famY s3/s4 | famZ s3/s4 |
+|---|---|---|---|---|---|---|
+| 1 | `● ◕ ◑ ◔ ○` | 5 | 1.00 | 0.01/0.94 | 0.03/0.97 | 0.00/0.97 |
+| 2 | `▇ ▆ ▅ ▄ ▃ ▂ ▁` | 7 | 0.33 | 0.85/0.85 | 0.50/0.97 | 0.90/0.65 |
+| 0 | `⑧ ⑦ ⑥ ⑤ ④ ③ ② ①` | 8 | 0.67 | 0.94/0.97 | 0.50/0.80 | 0.80/0.35 |
+| 4 | `⚅ ⚄ ⚂ ⚁ ⚀` | 5 | 1.00 | 0.00/0.94 | 0.00/0.65 | 0.00/0.80 |
+| 3 | `⑶ ⑤ ⑷ ⑸ ⑹` | 5 | 1.00 | 0.80/0.73 | 0.65/0.65 | 0.65/0.90 |
+| 5 | `⚀ ▃=⚁ ⚃=⚂ ▅ ⚄=▇ ⚅` | 9 | 0.33 | 0.85/0.50 | 0.65/0.50 | 0.80/0.35 |
+
+## Minds: nuisance parameters
+
+| mind | eps | nn | nt | beta | tau |
+|---|---|---|---|---|---|
+| synA | 0.1 | 0.4 | 0.3 | 0.65 | 0.9 |
+| synB | 0.25 | 0.6 | 0.2 | 0.8 | 0.9 |
+| synC | 0.15 | 0.6 | 0.2 | 0.8 | 0.9 |
+| synD | 0.6 | 0.4 | 0.2 | 0.8 | 0.9 |
+
+## Parse status this round
+
+- synA|ok: 168
+- synB|ok: 168
+- synC|ok: 168
+- synD|ok: 168
+
+r003: 105 new items + 92 follow-up presentations -> 210 presentations, 67 sheets (T=0.51)
+r003/synA: 67 sheets, 0 done, 67 to run
+r003/synB: 67 sheets, 0 done, 67 to run
+r003/synC: 67 sheets, 0 done, 67 to run
+r003/synD: 67 sheets, 0 done, 67 to run
+python3 round.py --data $S loop 5 --synth --budget 300 --chains 3  793.16s user 2.68s system 99% cpu 13:15.91 total

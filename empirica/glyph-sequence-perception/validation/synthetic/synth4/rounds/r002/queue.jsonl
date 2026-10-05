@@ -1,0 +1,524 @@
+{"cat": ["between", "cand"], "glyphs": ["⑤", "⑷", "⑸"], "iid": "Be29884a15b63", "kind": "between", "priority": 0.01091331529153632, "source": {"kind": "cand", "part": "gap", "ref": 1}}
+{"cat": ["between", "cand"], "glyphs": ["▄", "▅", "▆", "⚁"], "iid": "B3946e66e00d6", "kind": "between", "priority": 0.009611015311188418, "source": {"kind": "cand", "part": "gap", "ref": 3}}
+{"cat": ["between", "cand"], "glyphs": ["▂", "▃", "❖", "➺"], "iid": "B88531673b526", "kind": "between", "priority": 0.040932014114109176, "source": {"kind": "cand", "part": "gap", "ref": 3}}
+{"cat": ["between", "cand"], "glyphs": ["▁", "▂", "❖"], "iid": "Bceac05a0ee24", "kind": "between", "priority": 0.03624202569989312, "source": {"kind": "cand", "part": "gap", "ref": 3}}
+{"cat": ["between", "cand"], "glyphs": ["⚀", "⚁", "⚂"], "iid": "B1edd7bff728a", "kind": "between", "priority": 0.014097858278160841, "source": {"kind": "cand", "part": "gap", "ref": 4}}
+{"cat": ["between", "cand"], "glyphs": ["⚀", "⚁", "⚂", "⚃"], "iid": "B5ccfdd758890", "kind": "between", "priority": 0.01395177208699901, "source": {"kind": "cand", "part": "gap", "ref": 4}}
+{"cat": ["between", "seed"], "glyphs": ["②", "④"], "iid": "B6d5c4aa2eebc", "kind": "between", "priority": 0.014333536214242241, "source": {"kind": "seed", "part": "gap", "ref": "seedA"}}
+{"cat": ["between", "seed"], "glyphs": ["④", "⑷"], "iid": "Be71485a59b9c", "kind": "between", "priority": 0.015663257957655195, "source": {"kind": "seed", "part": "gap", "ref": "seedSplice"}}
+{"cat": ["between", "seed"], "glyphs": ["⚃", "⚅"], "iid": "Bcb41429a7f6b", "kind": "between", "priority": 0.021057465232222516, "source": {"kind": "seed", "part": "gap", "ref": "seedE"}}
+{"cat": ["between", "seed"], "glyphs": ["◔", "◕"], "iid": "Ba96ceb1cb565", "kind": "between", "priority": 0.021977240398293033, "source": {"kind": "seed", "part": "gap", "ref": "seedD"}}
+{"cat": ["between", "seed"], "glyphs": ["▂", "▄"], "iid": "B2e7e13673985", "kind": "between", "priority": 0.015543856305683931, "source": {"kind": "seed", "part": "gap", "ref": "seedC"}}
+{"cat": ["next", "cand"], "glyphs": ["①", "②", "③"], "iid": "N5e801305bdb5", "kind": "next", "priority": 0.013451583509423978, "source": {"kind": "cand", "part": "end", "ref": 0}}
+{"cat": ["next", "cand"], "glyphs": ["⑤", "⑥", "⑦", "⑧"], "iid": "N3caa092f4c22", "kind": "next", "priority": 0.014391959977528769, "source": {"kind": "cand", "part": "end", "ref": 0}}
+{"cat": ["next", "cand"], "glyphs": ["⑤", "⑷", "⑸", "⑹"], "iid": "N7ded0ec6bc7e", "kind": "next", "priority": 0.011563364847030617, "source": {"kind": "cand", "part": "end", "ref": 1}}
+{"cat": ["next", "cand"], "glyphs": ["⑤", "⑷", "⑸", "⑹"], "iid": "N6adec064fd92", "kind": "next", "priority": 0.011563364847030617, "source": {"kind": "cand", "part": "end", "ref": 1}}
+{"cat": ["next", "cand"], "glyphs": ["○", "◑", "◔"], "iid": "Nab45c519a1f7", "kind": "next", "priority": 0.015746136435791605, "source": {"kind": "cand", "part": "end", "ref": 2}}
+{"cat": ["next", "cand"], "glyphs": ["●", "◑", "◕"], "iid": "N00903cae2b09", "kind": "next", "priority": 0.016504789826023946, "source": {"kind": "cand", "part": "end", "ref": 2}}
+{"cat": ["next", "cand"], "glyphs": ["▁", "▂", "▃", "❖", "➺"], "iid": "Na358ae028ea7", "kind": "next", "priority": 0.036543079645717715, "source": {"kind": "cand", "part": "end", "ref": 3}}
+{"cat": ["next", "cand"], "glyphs": ["▅", "▆", "▇", "⚁"], "iid": "N737cf1919909", "kind": "next", "priority": 0.010278832106780827, "source": {"kind": "cand", "part": "end", "ref": 3}}
+{"cat": ["next", "cand"], "glyphs": ["⚃", "⚄", "⚅"], "iid": "Na78a6edb5134", "kind": "next", "priority": 0.012955995738701612, "source": {"kind": "cand", "part": "end", "ref": 4}}
+{"cat": ["next", "cand"], "glyphs": ["⚀", "⚁", "⚂", "⚃"], "iid": "N800840416372", "kind": "next", "priority": 0.01395177208699901, "source": {"kind": "cand", "part": "end", "ref": 4}}
+{"cat": ["next", "seed"], "glyphs": ["②", "③", "④", "⑤"], "iid": "N95d1c29eaaa0", "kind": "next", "priority": 0.014416080388087317, "source": {"kind": "seed", "part": "end", "ref": "seedA"}}
+{"cat": ["next", "seed"], "glyphs": ["⑤", "⑥", "⑦", "⑧"], "iid": "N3caa092f4c22", "kind": "next", "priority": 0.021587939966293154, "source": {"kind": "seed", "part": "end", "ref": "seedA"}}
+{"cat": ["next", "seed"], "glyphs": ["⑷", "⑸", "⑹"], "iid": "N499def6be77f", "kind": "next", "priority": 0.019763500994509665, "source": {"kind": "seed", "part": "end", "ref": "seedSplice"}}
+{"cat": ["next", "seed"], "glyphs": ["①", "②", "③"], "iid": "N5e801305bdb5", "kind": "next", "priority": 0.020177375264135967, "source": {"kind": "seed", "part": "end", "ref": "seedSplice"}}
+{"cat": ["next", "seed"], "glyphs": ["⚃", "⚄", "⚅"], "iid": "Na78a6edb5134", "kind": "next", "priority": 0.019433993608052418, "source": {"kind": "seed", "part": "end", "ref": "seedE"}}
+{"cat": ["next", "seed"], "glyphs": ["⚀", "⚁", "⚂"], "iid": "Nd77bee27f818", "kind": "next", "priority": 0.021146787417241263, "source": {"kind": "seed", "part": "end", "ref": "seedE"}}
+{"cat": ["next", "seed"], "glyphs": ["●", "◕"], "iid": "N74a0b04ddfb3", "kind": "next", "priority": 0.02420474262579526, "source": {"kind": "seed", "part": "end", "ref": "seedD"}}
+{"cat": ["next", "seed"], "glyphs": ["○", "◔"], "iid": "Nce03bbc59211", "kind": "next", "priority": 0.022497772497772496, "source": {"kind": "seed", "part": "end", "ref": "seedD"}}
+{"cat": ["next", "seed"], "glyphs": ["▆", "▇"], "iid": "N89e6b359fb24", "kind": "next", "priority": 0.016355622003402587, "source": {"kind": "seed", "part": "end", "ref": "seedC"}}
+{"cat": ["next", "seed"], "glyphs": ["▁", "▂"], "iid": "Nd9bf9d190357", "kind": "next", "priority": 0.02233403150897004, "source": {"kind": "seed", "part": "end", "ref": "seedC"}}
+{"cat": ["next", "tail"], "glyphs": ["⚡", "⛾"], "iid": "N9446578a1e52", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⛟", "❖"], "iid": "Nbf411bf00aca", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["✫", "✳"], "iid": "N46ff7c04247d", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["✊", "⠽"], "iid": "Nb5bffd8a8b90", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["②", "⟋"], "iid": "N523e7f2a6c99", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⚐", "❀"], "iid": "Nd82859731995", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⡤", "⡼"], "iid": "Na10c1928912a", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["❺", "⠢"], "iid": "Nab5abffe5e56", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["✧", "⣷"], "iid": "N38919f6b0b42", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⢠", "⣊"], "iid": "Nb4c0259f379e", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⛗", "⢸"], "iid": "N2ac8d59e8f0c", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["✀", "⣡"], "iid": "Nca3e1b5ba77a", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["♛", "⠏"], "iid": "N28f031959754", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⚙", "⚺"], "iid": "Na5969991b0d2", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["➱", "⟝"], "iid": "Nd5ee8048984f", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⚫", "❺"], "iid": "N2a8f37d04c3f", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["❷", "⟝"], "iid": "N0b9a7b11e9d4", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⠮", "⣷"], "iid": "N735c349fe520", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⚺", "⢫"], "iid": "Nda3dc7ed9bb3", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["❹", "⡽"], "iid": "N6add23261ed7", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["❶", "➑"], "iid": "Nd00fa17d041c", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⚔", "⛾"], "iid": "N86d798da81d6", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["▄", "⟋"], "iid": "N2a3ee1009b93", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["♀", "⚙"], "iid": "N47771163cce4", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⠬", "⡛"], "iid": "Nd417b6d94083", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["☛", "♼"], "iid": "N6e0072c41daf", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["♮", "⣰"], "iid": "Nde210b655038", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⠬", "⢓"], "iid": "Nea517c082a67", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["▆", "⡶"], "iid": "Ne9440ad416ea", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⡽", "⣡"], "iid": "N68f97a6474f2", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["✊", "⟋"], "iid": "Nb28ed139d840", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["❏", "➣"], "iid": "N0055100c2f1a", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["✣", "⟸"], "iid": "Ne58675e7ccc3", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⛜", "❮"], "iid": "N9566effe0969", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⢸", "⣓"], "iid": "Ne2f9e233de5f", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["▁", "✵"], "iid": "N85dd75892508", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⚖", "⛝"], "iid": "N90c689bea9fa", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⑦", "⟸"], "iid": "Nccb2173779a5", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["▅", "⣾"], "iid": "Ne139a4f347ee", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["▄", "⠮"], "iid": "Nb36be663c686", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⡝", "⡻"], "iid": "Nd34f6edad294", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["✵", "⢾"], "iid": "Na4a5ef819e48", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["③", "⣾"], "iid": "N939af5ae5a8e", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⚁", "⛋"], "iid": "N9d5a94952f24", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["○", "⣷"], "iid": "N8e7c77141021", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⟖", "⠃"], "iid": "Nd4429c79b257", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["❖", "⡥"], "iid": "Nb5deb9b0d2aa", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⚺", "⟚"], "iid": "N9705a055a899", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⚢", "➈"], "iid": "N30d1ccd69dcc", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⑸", "✧"], "iid": "N1920d54c932b", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["▅", "⛝"], "iid": "N2d6ab255be4b", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["✫", "⢾"], "iid": "Na2632cdf6a73", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⛟", "➞"], "iid": "N44182e76f16a", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⚖", "⣉"], "iid": "N6ef525c53df9", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⚄", "⢎"], "iid": "Nbd290a215f30", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["④", "⛦"], "iid": "Ne63121cfaed3", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["♇", "✳"], "iid": "N40f786016396", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["❚", "⢾"], "iid": "N49b3578b6963", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["⑶", "▆"], "iid": "Nd549d6045a64", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["next", "tail"], "glyphs": ["☓", "⚅"], "iid": "Ne317e8375fe0", "kind": "next", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["order", "cand"], "glyphs": ["②", "③", "④", "⑤", "⑥"], "iid": "Od8ecaa85c497", "kind": "order", "priority": 0.04972690157391227, "source": {"kind": "cand", "part": "window", "ref": 0, "salt": []}}
+{"cat": ["order", "cand"], "glyphs": ["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑷"], "iid": "O6292b6933343", "kind": "order", "priority": 0.04894225921506111, "source": {"kind": "cand", "part": "window", "ref": 0, "salt": ["⑷", "⑹"]}}
+{"cat": ["order", "cand"], "glyphs": ["①", "②", "③", "④", "⑤", "⑥", "⑦"], "iid": "O082d1d59a700", "kind": "order", "priority": 0.05149669623550534, "source": {"kind": "cand", "part": "window", "ref": 0, "salt": []}}
+{"cat": ["order", "cand"], "glyphs": ["③", "④", "⑤", "⑷", "⑸", "⑹"], "iid": "Oc53b5fd5b77b", "kind": "order", "priority": 0.08615443236225462, "source": {"kind": "cand", "part": "window", "ref": 1, "salt": ["④", "③"]}}
+{"cat": ["order", "cand"], "glyphs": ["④", "⑤", "⑷", "⑸", "⑹"], "iid": "Oad81d6176020", "kind": "order", "priority": 0.08271322242996361, "source": {"kind": "cand", "part": "window", "ref": 1, "salt": ["④"]}}
+{"cat": ["order", "cand"], "glyphs": ["⑤", "⑷", "⑸", "⑹"], "iid": "O255debb1a5c6", "kind": "order", "priority": 0.06946162294212718, "source": {"kind": "cand", "part": "window", "ref": 1, "salt": []}}
+{"cat": ["order", "cand"], "glyphs": ["○", "●", "◑", "◔", "◕", "⣡"], "iid": "O352d1452508c", "kind": "order", "priority": 0.027826079711641517, "source": {"kind": "cand", "part": "window", "ref": 2, "salt": ["⣡"]}}
+{"cat": ["order", "cand"], "glyphs": ["○", "●", "◑", "◔", "◕"], "iid": "Oad1e69a04739", "kind": "order", "priority": 0.022924830336811426, "source": {"kind": "cand", "part": "window", "ref": 2, "salt": []}}
+{"cat": ["order", "cand"], "glyphs": ["○", "●", "◑", "◔", "◕"], "iid": "Oad1e69a04739", "kind": "order", "priority": 0.022924830336811426, "source": {"kind": "cand", "part": "window", "ref": 2, "salt": []}}
+{"cat": ["order", "cand"], "glyphs": ["▃", "▄", "▅", "▆", "⚁", "❖", "➺"], "iid": "O368242a44c08", "kind": "order", "priority": 1.400083428250619, "source": {"kind": "cand", "part": "window", "ref": 3, "salt": []}}
+{"cat": ["order", "cand"], "glyphs": ["▂", "▃", "❖", "➺", "⣔"], "iid": "O15328ca436de", "kind": "order", "priority": 0.9995552632584681, "source": {"kind": "cand", "part": "window", "ref": 3, "salt": ["⣔"]}}
+{"cat": ["order", "cand"], "glyphs": ["▄", "▅", "⚁", "➺", "⣔"], "iid": "O648970a3c684", "kind": "order", "priority": 0.985585194197229, "source": {"kind": "cand", "part": "window", "ref": 3, "salt": ["⣔"]}}
+{"cat": ["order", "cand"], "glyphs": ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅", "⠮"], "iid": "O2651b74e0c79", "kind": "order", "priority": 0.025517005914171415, "source": {"kind": "cand", "part": "window", "ref": 4, "salt": ["⠮"]}}
+{"cat": ["order", "cand"], "glyphs": ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅", "⠮"], "iid": "O2651b74e0c79", "kind": "order", "priority": 0.025517005914171415, "source": {"kind": "cand", "part": "window", "ref": 4, "salt": ["⠮"]}}
+{"cat": ["order", "cand"], "glyphs": ["⚁", "⚂", "⚃", "⚄", "⚅", "✫", "⠮"], "iid": "O1e79455bf914", "kind": "order", "priority": 0.027317359732568717, "source": {"kind": "cand", "part": "window", "ref": 4, "salt": ["⠮", "✫"]}}
+{"cat": ["order", "seed"], "glyphs": ["②", "③", "④", "⑤", "⑥", "⑦", "⑧"], "iid": "O37b488390dfd", "kind": "order", "priority": 0.05618370223970509, "source": {"kind": "seed", "part": "window", "ref": "seedA"}}
+{"cat": ["order", "seed"], "glyphs": ["⑤", "⑷", "⑸", "⑹"], "iid": "O255debb1a5c6", "kind": "order", "priority": 0.10419243441319077, "source": {"kind": "seed", "part": "window", "ref": "seedSplice"}}
+{"cat": ["order", "seed"], "glyphs": ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"], "iid": "O53499ada008d", "kind": "order", "priority": 0.03543474796315878, "source": {"kind": "seed", "part": "window", "ref": "seedE"}}
+{"cat": ["order", "seed"], "glyphs": ["○", "●", "◑", "◔", "◕"], "iid": "Oad1e69a04739", "kind": "order", "priority": 0.03438724550521714, "source": {"kind": "seed", "part": "window", "ref": "seedD"}}
+{"cat": ["order", "seed"], "glyphs": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "⣔"], "iid": "O8b74ed56bd6a", "kind": "order", "priority": 0.06379517624741857, "source": {"kind": "seed", "part": "window", "ref": "seedC"}}
+{"cat": ["triad", "cand"], "glyphs": ["①", "②", "⑧"], "iid": "T04583986b2e2", "kind": "triad", "priority": 0.18841838521770776, "source": {"kind": "cand", "part": "long-range", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["④", "⑥", "⑦"], "iid": "Tec49fa9452de", "kind": "triad", "priority": 0.017828918875212707, "source": {"kind": "cand", "part": "long-range", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["⑤", "⑥", "⑦"], "iid": "T91aa86651953", "kind": "triad", "priority": 0.016748757523901724, "source": {"kind": "cand", "part": "long-range", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["①", "③", "④"], "iid": "T5e7cf09547ee", "kind": "triad", "priority": 0.18046328798474245, "source": {"kind": "cand", "part": "long-range", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["①", "②", "⑥"], "iid": "T7614f05a6a6c", "kind": "triad", "priority": 0.18614572389971706, "source": {"kind": "cand", "part": "long-range", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["②", "④", "⑧"], "iid": "T0d4a577cc118", "kind": "triad", "priority": 0.18050557089967104, "source": {"kind": "cand", "part": "long-range", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["①", "②", "⑥"], "iid": "T7614f05a6a6c", "kind": "triad", "priority": 0.18614572389971706, "source": {"kind": "cand", "part": "long-range", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["④", "⑥", "⑦"], "iid": "Tec49fa9452de", "kind": "triad", "priority": 0.017828918875212707, "source": {"kind": "cand", "part": "long-range", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["③", "⑤", "⑧"], "iid": "T467165192a70", "kind": "triad", "priority": 0.018265477464382, "source": {"kind": "cand", "part": "long-range", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["③", "⑤", "⑦"], "iid": "T213d91fc536d", "kind": "triad", "priority": 0.0158999331456655, "source": {"kind": "cand", "part": "long-range", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["⑥", "⑦", "⑧"], "iid": "T698bd05d8e81", "kind": "triad", "priority": 0.021548858578660714, "source": {"kind": "cand", "part": "adjacent", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["⑤", "⑥", "⑦"], "iid": "T91aa86651953", "kind": "triad", "priority": 0.016748757523901724, "source": {"kind": "cand", "part": "adjacent", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["④", "⑤", "⑥"], "iid": "Td528d70bd1f2", "kind": "triad", "priority": 0.015216702409541613, "source": {"kind": "cand", "part": "adjacent", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["③", "④", "⑤"], "iid": "T4f3a16447381", "kind": "triad", "priority": 0.014367878031305497, "source": {"kind": "cand", "part": "adjacent", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["②", "③", "④"], "iid": "T6e850718e00f", "kind": "triad", "priority": 0.18269837007135806, "source": {"kind": "cand", "part": "adjacent", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["①", "②", "③"], "iid": "Te9bc5a039ae3", "kind": "triad", "priority": 0.018230974314042483, "source": {"kind": "cand", "part": "adjacent", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["⑥", "⑦", "⑷"], "iid": "Ta5fd1a05480a", "kind": "triad", "priority": 0.018555671300868624, "source": {"kind": "cand", "part": "insert", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["①", "②", "⑷"], "iid": "Taf299bbf8cd7", "kind": "triad", "priority": 0.017900700155479836, "source": {"kind": "cand", "part": "extend", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["②", "③", "⑹"], "iid": "T48e38304707d", "kind": "triad", "priority": 0.01676599505358131, "source": {"kind": "cand", "part": "insert", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["①", "②", "⑹"], "iid": "T182e1c88352d", "kind": "triad", "priority": 0.0185884107668546, "source": {"kind": "cand", "part": "extend", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["②", "③", "⑸"], "iid": "T11d3f470cfd6", "kind": "triad", "priority": 0.017115859481115724, "source": {"kind": "cand", "part": "insert", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["⑦", "⑧", "⑸"], "iid": "Ta55b8767b9a6", "kind": "triad", "priority": 0.02158499481039948, "source": {"kind": "cand", "part": "extend", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["②", "③", "⚙"], "iid": "T2204276c68fe", "kind": "triad", "priority": 0.02839052280714127, "source": {"kind": "cand", "part": "insert", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["①", "②", "⚙"], "iid": "Tf340071b5ff2", "kind": "triad", "priority": 0.030212938520414612, "source": {"kind": "cand", "part": "extend", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["⑦", "⑧", "⚌"], "iid": "T45ee205e40e7", "kind": "triad", "priority": 0.03101634016407493, "source": {"kind": "cand", "part": "insert", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["⑦", "⑧", "⚌"], "iid": "T45ee205e40e7", "kind": "triad", "priority": 0.03101634016407493, "source": {"kind": "cand", "part": "extend", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["①", "②", "⑶"], "iid": "T6d5e9cfc0b63", "kind": "triad", "priority": 0.03260242478086853, "source": {"kind": "cand", "part": "insert", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["①", "②", "⑶"], "iid": "T6d5e9cfc0b63", "kind": "triad", "priority": 0.03260242478086853, "source": {"kind": "cand", "part": "extend", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["①", "②", "⛟"], "iid": "Td72021e4b1dd", "kind": "triad", "priority": 0.032602424780868666, "source": {"kind": "cand", "part": "insert", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["①", "②", "⛟"], "iid": "Td72021e4b1dd", "kind": "triad", "priority": 0.032602424780868666, "source": {"kind": "cand", "part": "extend", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["③", "④", "✭"], "iid": "T9c984d1f4fea", "kind": "triad", "priority": 0.028309370443578737, "source": {"kind": "cand", "part": "insert", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["①", "②", "✭"], "iid": "Te1e3f11007b3", "kind": "triad", "priority": 0.030212938520414612, "source": {"kind": "cand", "part": "extend", "ref": 0}}
+{"cat": ["triad", "cand"], "glyphs": ["⑤", "⑷", "⑸"], "iid": "T74a6382d1842", "kind": "triad", "priority": 0.01899535608938795, "source": {"kind": "cand", "part": "long-range", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["⑷", "⑸", "⑹"], "iid": "Tdb887394d6c8", "kind": "triad", "priority": 0.0209148788031097, "source": {"kind": "cand", "part": "long-range", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["⑷", "⑸", "⑹"], "iid": "Tdb887394d6c8", "kind": "triad", "priority": 0.0209148788031097, "source": {"kind": "cand", "part": "long-range", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["⑤", "⑷", "⑹"], "iid": "T2d4e99a20a61", "kind": "triad", "priority": 0.018302662337438692, "source": {"kind": "cand", "part": "long-range", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["⑤", "⑷", "⑹"], "iid": "T2d4e99a20a61", "kind": "triad", "priority": 0.018302662337438692, "source": {"kind": "cand", "part": "long-range", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["⑤", "⑷", "⑸"], "iid": "T74a6382d1842", "kind": "triad", "priority": 0.01899535608938795, "source": {"kind": "cand", "part": "long-range", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["⑤", "⑷", "⑹"], "iid": "T2d4e99a20a61", "kind": "triad", "priority": 0.018302662337438692, "source": {"kind": "cand", "part": "long-range", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["⑤", "⑷", "⑸"], "iid": "T74a6382d1842", "kind": "triad", "priority": 0.01899535608938795, "source": {"kind": "cand", "part": "long-range", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["⑤", "⑷", "⑸"], "iid": "T74a6382d1842", "kind": "triad", "priority": 0.01899535608938795, "source": {"kind": "cand", "part": "adjacent", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["⑷", "⑸", "⑹"], "iid": "Tdb887394d6c8", "kind": "triad", "priority": 0.0209148788031097, "source": {"kind": "cand", "part": "adjacent", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["④", "⑤", "⑷"], "iid": "T5adaeb38272d", "kind": "triad", "priority": 0.014333653395043238, "source": {"kind": "cand", "part": "insert", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["④", "⑸", "⑹"], "iid": "T62a9f292e785", "kind": "triad", "priority": 0.02073416244092085, "source": {"kind": "cand", "part": "extend", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["③", "⑤", "⑷"], "iid": "T27edd2d09d57", "kind": "triad", "priority": 0.01539067997926183, "source": {"kind": "cand", "part": "insert", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["③", "⑸", "⑹"], "iid": "T058ba7f168ab", "kind": "triad", "priority": 0.02179118902513947, "source": {"kind": "cand", "part": "extend", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["②", "⑸", "⑹"], "iid": "T47e25950bd52", "kind": "triad", "priority": 0.020815314804483412, "source": {"kind": "cand", "part": "insert", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["②", "⑸", "⑹"], "iid": "T47e25950bd52", "kind": "triad", "priority": 0.020815314804483412, "source": {"kind": "cand", "part": "extend", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["⑥", "⑷", "⑸"], "iid": "Tc8bb3abe94d6", "kind": "triad", "priority": 0.021952302792000826, "source": {"kind": "cand", "part": "insert", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["⑤", "⑥", "⑷"], "iid": "T940f27d46024", "kind": "triad", "priority": 0.016239504357497863, "source": {"kind": "cand", "part": "extend", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["⑤", "⑦", "⑷"], "iid": "T32c7488fb0cb", "kind": "triad", "priority": 0.01604336823903176, "source": {"kind": "cand", "part": "insert", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["⑤", "⑦", "⑷"], "iid": "T32c7488fb0cb", "kind": "triad", "priority": 0.01604336823903176, "source": {"kind": "cand", "part": "extend", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["⑧", "⑸", "⑹"], "iid": "Tb5919670cb01", "kind": "triad", "priority": 0.02463176187399732, "source": {"kind": "cand", "part": "insert", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["⑧", "⑸", "⑹"], "iid": "Tb5919670cb01", "kind": "triad", "priority": 0.02463176187399732, "source": {"kind": "cand", "part": "extend", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["①", "⑸", "⑹"], "iid": "T13742ea46b83", "kind": "triad", "priority": 0.023613604738412706, "source": {"kind": "cand", "part": "insert", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["①", "⑤", "⑷"], "iid": "Ta696a7d8159f", "kind": "triad", "priority": 0.017213095692534923, "source": {"kind": "cand", "part": "extend", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["⑶", "⑷", "⑸"], "iid": "T4b11dacde949", "kind": "triad", "priority": 0.03542031626001435, "source": {"kind": "cand", "part": "insert", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["⑶", "⑸", "⑹"], "iid": "T9f464fdfb9ac", "kind": "triad", "priority": 0.036108026871389115, "source": {"kind": "cand", "part": "extend", "ref": 1}}
+{"cat": ["triad", "cand"], "glyphs": ["●", "◑", "◔"], "iid": "T5360a78ab929", "kind": "triad", "priority": 0.05347838163729797, "source": {"kind": "cand", "part": "long-range", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["○", "●", "◔"], "iid": "T6af8550bb964", "kind": "triad", "priority": 0.053225760695021856, "source": {"kind": "cand", "part": "long-range", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["○", "●", "◑"], "iid": "Tf03f39f4b907", "kind": "triad", "priority": 0.04947253949951965, "source": {"kind": "cand", "part": "long-range", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["◑", "◔", "◕"], "iid": "T3331e21508be", "kind": "triad", "priority": 0.04825119090975003, "source": {"kind": "cand", "part": "long-range", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["●", "◑", "◕"], "iid": "Tdb11d8f70802", "kind": "triad", "priority": 0.05423703502753034, "source": {"kind": "cand", "part": "long-range", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["◑", "◔", "◕"], "iid": "T3331e21508be", "kind": "triad", "priority": 0.04825119090975003, "source": {"kind": "cand", "part": "long-range", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["○", "●", "◑"], "iid": "Tf03f39f4b907", "kind": "triad", "priority": 0.04947253949951965, "source": {"kind": "cand", "part": "long-range", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["○", "◑", "◔"], "iid": "Tf5171bb31c25", "kind": "triad", "priority": 0.05347838163729794, "source": {"kind": "cand", "part": "long-range", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["○", "◔", "◕"], "iid": "T82a8d5888222", "kind": "triad", "priority": 0.04799856996747392, "source": {"kind": "cand", "part": "long-range", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["○", "●", "◔"], "iid": "T6af8550bb964", "kind": "triad", "priority": 0.053225760695021856, "source": {"kind": "cand", "part": "long-range", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["●", "◑", "◕"], "iid": "Tdb11d8f70802", "kind": "triad", "priority": 0.05423703502753034, "source": {"kind": "cand", "part": "adjacent", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["◑", "◔", "◕"], "iid": "T3331e21508be", "kind": "triad", "priority": 0.04825119090975003, "source": {"kind": "cand", "part": "adjacent", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["○", "◑", "◔"], "iid": "Tf5171bb31c25", "kind": "triad", "priority": 0.05347838163729794, "source": {"kind": "cand", "part": "adjacent", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["◑", "◔", "⣡"], "iid": "T0395dcba6d03", "kind": "triad", "priority": 0.05768507372354573, "source": {"kind": "cand", "part": "insert", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["●", "◕", "⣡"], "iid": "Tac7613bd0992", "kind": "triad", "priority": 0.05819110617150204, "source": {"kind": "cand", "part": "extend", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["●", "◕", "☏"], "iid": "T3aab9f882106", "kind": "triad", "priority": 0.05747809369378362, "source": {"kind": "cand", "part": "insert", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["○", "◔", "☏"], "iid": "Tcfa423bf4287", "kind": "triad", "priority": 0.05671944030355135, "source": {"kind": "cand", "part": "extend", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["○", "◔", "❏"], "iid": "T6b0268c321f0", "kind": "triad", "priority": 0.060449044033155014, "source": {"kind": "cand", "part": "insert", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["●", "◕", "❏"], "iid": "T9c6dbc97eb6d", "kind": "triad", "priority": 0.06120769742338752, "source": {"kind": "cand", "part": "extend", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["●", "◕", "⣓"], "iid": "T7b4dc3be8b84", "kind": "triad", "priority": 0.05902548247521501, "source": {"kind": "cand", "part": "insert", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["○", "◔", "⣓"], "iid": "T641cbfbf378f", "kind": "triad", "priority": 0.05826682908498262, "source": {"kind": "cand", "part": "extend", "ref": 2}}
+{"cat": ["triad", "cand"], "glyphs": ["▆", "▇", "❖"], "iid": "Tff34f6e701b5", "kind": "triad", "priority": 0.3387797965994315, "source": {"kind": "cand", "part": "long-range", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▃", "▅", "▆"], "iid": "T568df1c2dd9d", "kind": "triad", "priority": 0.01171185265720061, "source": {"kind": "cand", "part": "long-range", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▄", "❖", "➺"], "iid": "T138ccc2991d4", "kind": "triad", "priority": 0.283839579419249, "source": {"kind": "cand", "part": "long-range", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▅", "▇", "❖"], "iid": "Te3366eef5c18", "kind": "triad", "priority": 0.3384445523740133, "source": {"kind": "cand", "part": "long-range", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▁", "▃", "▄"], "iid": "Te5e0e26ff0d5", "kind": "triad", "priority": 0.015552499759661782, "source": {"kind": "cand", "part": "long-range", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▁", "▆", "❖"], "iid": "Tbdd81f90c978", "kind": "triad", "priority": 0.3336703275173459, "source": {"kind": "cand", "part": "long-range", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▁", "▄", "▅"], "iid": "T4108dc49e456", "kind": "triad", "priority": 0.015666211871633424, "source": {"kind": "cand", "part": "long-range", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▄", "▅", "▆"], "iid": "T27b5f6886c06", "kind": "triad", "priority": 0.01240458261015953, "source": {"kind": "cand", "part": "long-range", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▅", "❖", "➺"], "iid": "T5de6b4105803", "kind": "triad", "priority": 0.2760236592443943, "source": {"kind": "cand", "part": "long-range", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▂", "▆", "➺"], "iid": "T5bcc281a36bb", "kind": "triad", "priority": 0.3335985791904192, "source": {"kind": "cand", "part": "long-range", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▅", "▆", "▇"], "iid": "Tc82016491306", "kind": "triad", "priority": 0.013295005004282686, "source": {"kind": "cand", "part": "adjacent", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▅", "▆", "⚁"], "iid": "T45f2c7dddd51", "kind": "triad", "priority": 0.3074613682604731, "source": {"kind": "cand", "part": "adjacent", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▄", "▅", "⚁"], "iid": "T10c3e72a5cbc", "kind": "triad", "priority": 0.3149420442099095, "source": {"kind": "cand", "part": "adjacent", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▄", "⚁", "➺"], "iid": "T6d74af7184c9", "kind": "triad", "priority": 0.26122749364926834, "source": {"kind": "cand", "part": "adjacent", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▃", "▄", "➺"], "iid": "Td01b36217bf6", "kind": "triad", "priority": 0.33316920711201714, "source": {"kind": "cand", "part": "adjacent", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▃", "❖", "➺"], "iid": "Tecbd9ea25380", "kind": "triad", "priority": 0.2834522977492903, "source": {"kind": "cand", "part": "adjacent", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▂", "▃", "❖"], "iid": "T679bbf177a4d", "kind": "triad", "priority": 0.33803173017493127, "source": {"kind": "cand", "part": "adjacent", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▁", "▂", "❖"], "iid": "T37018cdfa45c", "kind": "triad", "priority": 0.3414368674907948, "source": {"kind": "cand", "part": "adjacent", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▅", "⚁", "⣔"], "iid": "T36539064937e", "kind": "triad", "priority": 0.2434944356569608, "source": {"kind": "cand", "part": "insert", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▆", "▇", "⣔"], "iid": "Ta2fe24850b6c", "kind": "triad", "priority": 0.01497603947313464, "source": {"kind": "cand", "part": "extend", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▃", "⚂", "❖"], "iid": "T3d0d5b93260f", "kind": "triad", "priority": 0.26601547216142, "source": {"kind": "cand", "part": "insert", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▁", "▂", "⚂"], "iid": "T1e0f6cb3f0ec", "kind": "triad", "priority": 0.017350324927948073, "source": {"kind": "cand", "part": "extend", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▅", "⚁", "⚄"], "iid": "T83c1e6ab1755", "kind": "triad", "priority": 0.13777113689258724, "source": {"kind": "cand", "part": "insert", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▆", "▇", "⚄"], "iid": "T3d734d5872ac", "kind": "triad", "priority": 0.014225335688336616, "source": {"kind": "cand", "part": "extend", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▃", "⚃", "➺"], "iid": "T9efe14782398", "kind": "triad", "priority": 0.2618782769766164, "source": {"kind": "cand", "part": "insert", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▁", "▂", "⚃"], "iid": "T6f55c5a69df4", "kind": "triad", "priority": 0.01778978878204613, "source": {"kind": "cand", "part": "extend", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▅", "⚀", "⚁"], "iid": "T7da26deaeb0c", "kind": "triad", "priority": 0.1405031285144796, "source": {"kind": "cand", "part": "insert", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▆", "▇", "⚀"], "iid": "T9c57f0384baa", "kind": "triad", "priority": 0.016957327310228976, "source": {"kind": "cand", "part": "extend", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▆", "▇", "⚅"], "iid": "T6c33d35372d5", "kind": "triad", "priority": 0.015482582318217149, "source": {"kind": "cand", "part": "insert", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▆", "▇", "⚅"], "iid": "T6c33d35372d5", "kind": "triad", "priority": 0.015482582318217149, "source": {"kind": "cand", "part": "extend", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▃", "❖", "⠮"], "iid": "T3cb9bf342bbb", "kind": "triad", "priority": 0.26941311807817764, "source": {"kind": "cand", "part": "insert", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▆", "▇", "⠮"], "iid": "T3b1427a54b86", "kind": "triad", "priority": 0.018090899953342357, "source": {"kind": "cand", "part": "extend", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▆", "▇", "⣾"], "iid": "T826772c5b85e", "kind": "triad", "priority": 0.032367343820961014, "source": {"kind": "cand", "part": "insert", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["▁", "▂", "⣾"], "iid": "T00df584b9b9b", "kind": "triad", "priority": 0.03502441471232424, "source": {"kind": "cand", "part": "extend", "ref": 3}}
+{"cat": ["triad", "cand"], "glyphs": ["⚀", "⚂", "⚃"], "iid": "T509c64a15969", "kind": "triad", "priority": 0.016376834921218653, "source": {"kind": "cand", "part": "long-range", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚀", "⚁", "⚅"], "iid": "T4e277676e3b0", "kind": "triad", "priority": 0.0167883480847383, "source": {"kind": "cand", "part": "long-range", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚀", "⚃", "⚄"], "iid": "T7daba82fa1ca", "kind": "triad", "priority": 0.01613249925417109, "source": {"kind": "cand", "part": "long-range", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚂", "⚄", "⚅"], "iid": "Tc058ad5acae2", "kind": "triad", "priority": 0.01421829040806118, "source": {"kind": "cand", "part": "long-range", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚀", "⚁", "⚄"], "iid": "Td8c54491453d", "kind": "triad", "priority": 0.01553110145485771, "source": {"kind": "cand", "part": "long-range", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚂", "⚄", "⚅"], "iid": "Tc058ad5acae2", "kind": "triad", "priority": 0.01421829040806118, "source": {"kind": "cand", "part": "long-range", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚃", "⚄", "⚅"], "iid": "Tc53aee274cfa", "kind": "triad", "priority": 0.014857157263646684, "source": {"kind": "cand", "part": "long-range", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚀", "⚁", "⚄"], "iid": "Td8c54491453d", "kind": "triad", "priority": 0.01553110145485771, "source": {"kind": "cand", "part": "long-range", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚀", "⚃", "⚅"], "iid": "Tb46f49c74147", "kind": "triad", "priority": 0.01758914888553907, "source": {"kind": "cand", "part": "long-range", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚀", "⚁", "⚄"], "iid": "Td8c54491453d", "kind": "triad", "priority": 0.01553110145485771, "source": {"kind": "cand", "part": "long-range", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚀", "⚁", "⚂"], "iid": "T88b2aeea34df", "kind": "triad", "priority": 0.0159990198031058, "source": {"kind": "cand", "part": "adjacent", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚁", "⚂", "⚃"], "iid": "T61feaf86f7cf", "kind": "triad", "priority": 0.01375142470087167, "source": {"kind": "cand", "part": "adjacent", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚂", "⚃", "⚄"], "iid": "Teb06c1023cd0", "kind": "triad", "priority": 0.013841339354543838, "source": {"kind": "cand", "part": "adjacent", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚃", "⚄", "⚅"], "iid": "Tc53aee274cfa", "kind": "triad", "priority": 0.014857157263646684, "source": {"kind": "cand", "part": "adjacent", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚄", "⚅", "⠮"], "iid": "T81fe709c2e89", "kind": "triad", "priority": 0.01781691473605757, "source": {"kind": "cand", "part": "insert", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚄", "⚅", "⠮"], "iid": "T81fe709c2e89", "kind": "triad", "priority": 0.01781691473605757, "source": {"kind": "cand", "part": "extend", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚂", "⚃", "✫"], "iid": "T0c73c75c90e4", "kind": "triad", "priority": 0.02475799637532147, "source": {"kind": "cand", "part": "insert", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚀", "⚁", "✫"], "iid": "T4ade556c1854", "kind": "triad", "priority": 0.026221268848164822, "source": {"kind": "cand", "part": "extend", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚃", "⚄", "➺"], "iid": "Tbc4907184f58", "kind": "triad", "priority": 0.031743494176141585, "source": {"kind": "cand", "part": "insert", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚀", "⚁", "➺"], "iid": "T027d21bb1cb3", "kind": "triad", "priority": 0.1595100185121037, "source": {"kind": "cand", "part": "extend", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚃", "⚄", "❖"], "iid": "Td4dd49c57c59", "kind": "triad", "priority": 0.03632015321504321, "source": {"kind": "cand", "part": "insert", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚄", "⚅", "❖"], "iid": "T37a393c73756", "kind": "triad", "priority": 0.036670017642577525, "source": {"kind": "cand", "part": "extend", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚁", "⚂", "⛄"], "iid": "T0a4dca9dd88c", "kind": "triad", "priority": 0.028189999807324992, "source": {"kind": "cand", "part": "insert", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚄", "⚅", "⛄"], "iid": "Tf3c681054591", "kind": "triad", "priority": 0.028872746687411854, "source": {"kind": "cand", "part": "extend", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚄", "⚅", "⢒"], "iid": "Td91545ccd6b6", "kind": "triad", "priority": 0.02317474098940621, "source": {"kind": "cand", "part": "insert", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚀", "⚁", "⢒"], "iid": "Tb8071eacb8e3", "kind": "triad", "priority": 0.02475606738296338, "source": {"kind": "cand", "part": "extend", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚁", "⚂", "➮"], "iid": "Td359b388debf", "kind": "triad", "priority": 0.028189999807324992, "source": {"kind": "cand", "part": "insert", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["⚄", "⚅", "➮"], "iid": "T1c3f1d27a7e6", "kind": "triad", "priority": 0.028872746687411924, "source": {"kind": "cand", "part": "extend", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["☤", "⚀", "⚁"], "iid": "T18fec79fd2db", "kind": "triad", "priority": 0.024756067382963366, "source": {"kind": "cand", "part": "insert", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["☤", "⚀", "⚁"], "iid": "T18fec79fd2db", "kind": "triad", "priority": 0.024756067382963366, "source": {"kind": "cand", "part": "extend", "ref": 4}}
+{"cat": ["triad", "cand"], "glyphs": ["▂", "▃", "▄"], "iid": "Tc148b2823ded", "kind": "triad", "priority": 0.5131259564207697, "source": {"kind": "cand", "mind": "synA", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["①", "②", "③"], "iid": "Te9bc5a039ae3", "kind": "triad", "priority": 0.5182309743140425, "source": {"kind": "cand", "mind": "synB", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["②", "③", "④"], "iid": "T6e850718e00f", "kind": "triad", "priority": 0.682698370071358, "source": {"kind": "cand", "mind": "synB", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["▂", "▃", "▄"], "iid": "Tc148b2823ded", "kind": "triad", "priority": 0.5131259564207697, "source": {"kind": "cand", "mind": "synB", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["①", "②", "③"], "iid": "Te9bc5a039ae3", "kind": "triad", "priority": 0.5182309743140425, "source": {"kind": "cand", "mind": "synC", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["②", "③", "④"], "iid": "T6e850718e00f", "kind": "triad", "priority": 0.682698370071358, "source": {"kind": "cand", "mind": "synC", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["▂", "▃", "▄"], "iid": "Tc148b2823ded", "kind": "triad", "priority": 0.5131259564207697, "source": {"kind": "cand", "mind": "synC", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["⛾", "➣", "⣘"], "iid": "Te32bf0290cbc", "kind": "triad", "priority": 0.5649355414195946, "source": {"kind": "cand", "mind": "synD", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["⑧", "✦", "⠦"], "iid": "Ta5d994a0a63d", "kind": "triad", "priority": 0.5612565473773686, "source": {"kind": "cand", "mind": "synD", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["⚐", "⚺", "⠃"], "iid": "T0659721f58db", "kind": "triad", "priority": 0.5681561533358588, "source": {"kind": "cand", "mind": "synD", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["⚸", "✀", "⟐"], "iid": "Tc8fe3d71d2a1", "kind": "triad", "priority": 0.5625460551591406, "source": {"kind": "cand", "mind": "synD", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["⚠", "⛍", "⢜"], "iid": "T6100dd3f62d2", "kind": "triad", "priority": 0.5668001062132212, "source": {"kind": "cand", "mind": "synD", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["▃", "⚯", "⠮"], "iid": "T097f45f3ad3c", "kind": "triad", "priority": 0.538285167557909, "source": {"kind": "cand", "mind": "synD", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["▄", "⠗", "⣾"], "iid": "T62c70d35c188", "kind": "triad", "priority": 0.5394536164423146, "source": {"kind": "cand", "mind": "synD", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["①", "②", "③"], "iid": "Te9bc5a039ae3", "kind": "triad", "priority": 0.5182309743140425, "source": {"kind": "cand", "mind": "synD", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["☛", "➈", "⡛"], "iid": "Tc8f8b269d969", "kind": "triad", "priority": 0.5875476271895752, "source": {"kind": "cand", "mind": "synA", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["⑤", "⑶", "⑷"], "iid": "T278ecee13838", "kind": "triad", "priority": 0.5328080997943433, "source": {"kind": "cand", "mind": "synA", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["⑤", "⑶", "⑷"], "iid": "T278ecee13838", "kind": "triad", "priority": 0.5328080997943433, "source": {"kind": "cand", "mind": "synB", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["⑤", "⑸", "⣰"], "iid": "T1250866c803f", "kind": "triad", "priority": 0.541642945788418, "source": {"kind": "cand", "mind": "synB", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["⑤", "⑶", "⑷"], "iid": "T278ecee13838", "kind": "triad", "priority": 0.5328080997943433, "source": {"kind": "cand", "mind": "synC", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["▆", "▇", "⚙"], "iid": "Tae5ec8aa1993", "kind": "triad", "priority": 0.5267572456442428, "source": {"kind": "cand", "mind": "synD", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["⚆", "❃", "➉"], "iid": "Te59ccf4711b0", "kind": "triad", "priority": 0.5751736971955078, "source": {"kind": "cand", "mind": "synD", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["⑤", "⑶", "⑷"], "iid": "T278ecee13838", "kind": "triad", "priority": 0.5328080997943433, "source": {"kind": "cand", "mind": "synD", "ref": "proposal"}}
+{"cat": ["triad", "cand"], "glyphs": ["▃", "▇", "⣾"], "iid": "T8b746acc5a87", "kind": "triad", "priority": 0.5322238357665713, "source": {"kind": "cand", "mind": "synD", "ref": "proposal"}}
+{"cat": ["triad", "seed"], "glyphs": ["⑥", "⑦", "⑧"], "iid": "T698bd05d8e81", "kind": "triad", "priority": 0.032323287867991074, "source": {"kind": "seed", "part": "adjacent", "ref": "seedA"}}
+{"cat": ["triad", "seed"], "glyphs": ["⑤", "⑥", "⑦"], "iid": "T91aa86651953", "kind": "triad", "priority": 0.025123136285852585, "source": {"kind": "seed", "part": "adjacent", "ref": "seedA"}}
+{"cat": ["triad", "seed"], "glyphs": ["④", "⑤", "⑥"], "iid": "Td528d70bd1f2", "kind": "triad", "priority": 0.02282505361431242, "source": {"kind": "seed", "part": "adjacent", "ref": "seedA"}}
+{"cat": ["triad", "seed"], "glyphs": ["③", "④", "⑤"], "iid": "T4f3a16447381", "kind": "triad", "priority": 0.021551817046958244, "source": {"kind": "seed", "part": "adjacent", "ref": "seedA"}}
+{"cat": ["triad", "seed"], "glyphs": ["②", "③", "④"], "iid": "T6e850718e00f", "kind": "triad", "priority": 0.2740475551070371, "source": {"kind": "seed", "part": "adjacent", "ref": "seedA"}}
+{"cat": ["triad", "seed"], "glyphs": ["③", "⑤", "⑥"], "iid": "T5b7e12e524cf", "kind": "triad", "priority": 0.024144103896197738, "source": {"kind": "seed", "part": "long-range", "ref": "seedA"}}
+{"cat": ["triad", "seed"], "glyphs": ["④", "⑤", "⑦"], "iid": "T868fbb123580", "kind": "triad", "priority": 0.022530849436613258, "source": {"kind": "seed", "part": "long-range", "ref": "seedA"}}
+{"cat": ["triad", "seed"], "glyphs": ["②", "⑤", "⑦"], "iid": "T74fb589769fb", "kind": "triad", "priority": 0.11831685102512418, "source": {"kind": "seed", "part": "long-range", "ref": "seedA"}}
+{"cat": ["triad", "seed"], "glyphs": ["①", "②", "③"], "iid": "Te9bc5a039ae3", "kind": "triad", "priority": 0.027346461471063725, "source": {"kind": "seed", "part": "adjacent", "ref": "seedSplice"}}
+{"cat": ["triad", "seed"], "glyphs": ["②", "③", "④"], "iid": "T6e850718e00f", "kind": "triad", "priority": 0.2740475551070371, "source": {"kind": "seed", "part": "adjacent", "ref": "seedSplice"}}
+{"cat": ["triad", "seed"], "glyphs": ["③", "④", "⑤"], "iid": "T4f3a16447381", "kind": "triad", "priority": 0.021551817046958244, "source": {"kind": "seed", "part": "adjacent", "ref": "seedSplice"}}
+{"cat": ["triad", "seed"], "glyphs": ["④", "⑤", "⑷"], "iid": "T5adaeb38272d", "kind": "triad", "priority": 0.021500480092564857, "source": {"kind": "seed", "part": "adjacent", "ref": "seedSplice"}}
+{"cat": ["triad", "seed"], "glyphs": ["⑤", "⑷", "⑸"], "iid": "T74a6382d1842", "kind": "triad", "priority": 0.028493034134081927, "source": {"kind": "seed", "part": "adjacent", "ref": "seedSplice"}}
+{"cat": ["triad", "seed"], "glyphs": ["⑷", "⑸", "⑹"], "iid": "Tdb887394d6c8", "kind": "triad", "priority": 0.03137231820466455, "source": {"kind": "seed", "part": "adjacent", "ref": "seedSplice"}}
+{"cat": ["triad", "seed"], "glyphs": ["②", "⑷", "⑹"], "iid": "T3bc633ecca9b", "kind": "triad", "priority": 0.029666609648361597, "source": {"kind": "seed", "part": "long-range", "ref": "seedSplice"}}
+{"cat": ["triad", "seed"], "glyphs": ["②", "④", "⑹"], "iid": "Tf37252de652e", "kind": "triad", "priority": 0.02356345270404407, "source": {"kind": "seed", "part": "long-range", "ref": "seedSplice"}}
+{"cat": ["triad", "seed"], "glyphs": ["②", "⑷", "⑹"], "iid": "T3bc633ecca9b", "kind": "triad", "priority": 0.029666609648361597, "source": {"kind": "seed", "part": "long-range", "ref": "seedSplice"}}
+{"cat": ["triad", "seed"], "glyphs": ["⑤", "⑸", "⑹"], "iid": "Teea361b0c725", "kind": "triad", "priority": 0.029524600051143983, "source": {"kind": "seed", "part": "long-range", "ref": "seedSplice"}}
+{"cat": ["triad", "seed"], "glyphs": ["⚀", "⚁", "⚂"], "iid": "T88b2aeea34df", "kind": "triad", "priority": 0.0239985297046587, "source": {"kind": "seed", "part": "adjacent", "ref": "seedE"}}
+{"cat": ["triad", "seed"], "glyphs": ["⚁", "⚂", "⚃"], "iid": "T61feaf86f7cf", "kind": "triad", "priority": 0.020627137051307504, "source": {"kind": "seed", "part": "adjacent", "ref": "seedE"}}
+{"cat": ["triad", "seed"], "glyphs": ["⚂", "⚃", "⚄"], "iid": "Teb06c1023cd0", "kind": "triad", "priority": 0.020762009031815756, "source": {"kind": "seed", "part": "adjacent", "ref": "seedE"}}
+{"cat": ["triad", "seed"], "glyphs": ["⚃", "⚄", "⚅"], "iid": "Tc53aee274cfa", "kind": "triad", "priority": 0.022285735895470025, "source": {"kind": "seed", "part": "adjacent", "ref": "seedE"}}
+{"cat": ["triad", "seed"], "glyphs": ["⚁", "⚃", "⚄"], "iid": "Tbf1dc8f69111", "kind": "triad", "priority": 0.020559738052967454, "source": {"kind": "seed", "part": "long-range", "ref": "seedE"}}
+{"cat": ["triad", "seed"], "glyphs": ["⚀", "⚂", "⚄"], "iid": "T604bde66af71", "kind": "triad", "priority": 0.023838657602340805, "source": {"kind": "seed", "part": "long-range", "ref": "seedE"}}
+{"cat": ["triad", "seed"], "glyphs": ["⚁", "⚃", "⚅"], "iid": "Te9c63f88ad45", "kind": "triad", "priority": 0.02214650349555712, "source": {"kind": "seed", "part": "long-range", "ref": "seedE"}}
+{"cat": ["triad", "seed"], "glyphs": ["⚁", "⚃", "⚄"], "iid": "Tbf1dc8f69111", "kind": "triad", "priority": 0.020559738052967454, "source": {"kind": "seed", "part": "long-range", "ref": "seedE"}}
+{"cat": ["triad", "seed"], "glyphs": ["⚁", "⚂", "⚄"], "iid": "Td0395a660d16", "kind": "triad", "priority": 0.019900542271820434, "source": {"kind": "seed", "part": "long-range", "ref": "seedE"}}
+{"cat": ["triad", "seed"], "glyphs": ["○", "◑", "◔"], "iid": "Tf5171bb31c25", "kind": "triad", "priority": 0.0802175724559469, "source": {"kind": "seed", "part": "adjacent", "ref": "seedD"}}
+{"cat": ["triad", "seed"], "glyphs": ["◑", "◔", "◕"], "iid": "T3331e21508be", "kind": "triad", "priority": 0.07237678636462505, "source": {"kind": "seed", "part": "adjacent", "ref": "seedD"}}
+{"cat": ["triad", "seed"], "glyphs": ["●", "◑", "◕"], "iid": "Tdb11d8f70802", "kind": "triad", "priority": 0.0813555525412955, "source": {"kind": "seed", "part": "adjacent", "ref": "seedD"}}
+{"cat": ["triad", "seed"], "glyphs": ["●", "◑", "◔"], "iid": "T5360a78ab929", "kind": "triad", "priority": 0.08021757245594696, "source": {"kind": "seed", "part": "long-range", "ref": "seedD"}}
+{"cat": ["triad", "seed"], "glyphs": ["●", "◑", "◔"], "iid": "T5360a78ab929", "kind": "triad", "priority": 0.08021757245594696, "source": {"kind": "seed", "part": "long-range", "ref": "seedD"}}
+{"cat": ["triad", "seed"], "glyphs": ["○", "●", "◕"], "iid": "Tbd84d3e5bb07", "kind": "triad", "priority": 0.07348285643621237, "source": {"kind": "seed", "part": "long-range", "ref": "seedD"}}
+{"cat": ["triad", "seed"], "glyphs": ["○", "●", "◔"], "iid": "T6af8550bb964", "kind": "triad", "priority": 0.07983864104253278, "source": {"kind": "seed", "part": "long-range", "ref": "seedD"}}
+{"cat": ["triad", "seed"], "glyphs": ["▁", "▂", "▃"], "iid": "Teec536a95339", "kind": "triad", "priority": 0.023757545675511624, "source": {"kind": "seed", "part": "adjacent", "ref": "seedC"}}
+{"cat": ["triad", "seed"], "glyphs": ["▂", "▃", "▄"], "iid": "Tc148b2823ded", "kind": "triad", "priority": 0.01968893463115463, "source": {"kind": "seed", "part": "adjacent", "ref": "seedC"}}
+{"cat": ["triad", "seed"], "glyphs": ["▃", "▄", "⣔"], "iid": "Tb7c540841960", "kind": "triad", "priority": 0.02091316353693315, "source": {"kind": "seed", "part": "adjacent", "ref": "seedC"}}
+{"cat": ["triad", "seed"], "glyphs": ["▄", "▅", "⣔"], "iid": "Teb71a73644f8", "kind": "triad", "priority": 0.02062555928039003, "source": {"kind": "seed", "part": "adjacent", "ref": "seedC"}}
+{"cat": ["triad", "seed"], "glyphs": ["▅", "▆", "⣔"], "iid": "Tb4516388fa2c", "kind": "triad", "priority": 0.0202598988570366, "source": {"kind": "seed", "part": "adjacent", "ref": "seedC"}}
+{"cat": ["triad", "seed"], "glyphs": ["▅", "▆", "▇"], "iid": "Tc82016491306", "kind": "triad", "priority": 0.01994250750642403, "source": {"kind": "seed", "part": "adjacent", "ref": "seedC"}}
+{"cat": ["triad", "seed"], "glyphs": ["▃", "▄", "▅"], "iid": "T87b054311ffd", "kind": "triad", "priority": 0.017933439409154633, "source": {"kind": "seed", "part": "long-range", "ref": "seedC"}}
+{"cat": ["triad", "seed"], "glyphs": ["▁", "▃", "▆"], "iid": "Tcc2cf5df114d", "kind": "triad", "priority": 0.023421261640639655, "source": {"kind": "seed", "part": "long-range", "ref": "seedC"}}
+{"cat": ["triad", "seed"], "glyphs": ["▃", "▅", "▇"], "iid": "T10b30c328a3b", "kind": "triad", "priority": 0.019727245424839786, "source": {"kind": "seed", "part": "long-range", "ref": "seedC"}}
+{"cat": ["triad", "seed"], "glyphs": ["▂", "▆", "⣔"], "iid": "Te651eba00171", "kind": "triad", "priority": 0.021557221654536343, "source": {"kind": "seed", "part": "long-range", "ref": "seedC"}}
+{"cat": ["triad", "seed"], "glyphs": ["▄", "▅", "▆"], "iid": "T27b5f6886c06", "kind": "triad", "priority": 0.018606873915239294, "source": {"kind": "seed", "part": "long-range", "ref": "seedC"}}
+{"cat": ["triad", "seed"], "glyphs": ["▃", "▅", "▇"], "iid": "T10b30c328a3b", "kind": "triad", "priority": 0.019727245424839786, "source": {"kind": "seed", "part": "long-range", "ref": "seedC"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚓", "➺", "⠽"], "iid": "T888e808d0d2e", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☧", "⛻", "➉"], "iid": "Td4984d2d4b76", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["❑", "❮", "⣉"], "iid": "Ta0280b84b4e0", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⛍", "⛻", "➱"], "iid": "T0ce70b4b48fc", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚥", "➺", "⣷"], "iid": "Tda63adfe1223", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["➏", "⟸", "⢒"], "iid": "Ta6a4886423a2", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▆", "●", "⢜"], "iid": "T7b116ee22395", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▂", "☞", "⣉"], "iid": "Taf65f5d023a4", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚢", "⟋", "⡻"], "iid": "T382e1eb5aaf0", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☟", "♣", "❚"], "iid": "Tbc88f4fcad93", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▆", "⛸", "❃"], "iid": "T56a5c5bceb64", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☏", "✦", "⠏"], "iid": "T88293ec1ece8", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["✳", "❶", "⟋"], "iid": "T9cc33415ea03", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑤", "✫", "⡤"], "iid": "T4b1bc8596fe7", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑧", "⚌", "⚠"], "iid": "T72e951538936", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☟", "⚁", "⛝"], "iid": "T637fbffca7b0", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⟚", "⡤", "⣡"], "iid": "Te7ce1700dda9", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑦", "⚢", "⡇"], "iid": "Td373e9350857", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☙", "✧", "⢸"], "iid": "Td5772d53f85a", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⛝", "⢎", "⢓"], "iid": "T525c8c46bfab", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["♀", "✧", "⢓"], "iid": "T7198e83b87cc", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑦", "♁", "⡮"], "iid": "T504ae46ee31c", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["➸", "⡇", "⡮"], "iid": "T067eb3b62cd8", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["♤", "➉", "⟸"], "iid": "T9f326cc5d80a", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☤", "⠄", "⡻"], "iid": "T7540107baed3", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["③", "♤", "❾"], "iid": "T0e56d70be19a", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑹", "❺", "➣"], "iid": "T8fc742587120", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑧", "⚋", "➱"], "iid": "T17c3dab9bc30", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▂", "⛍", "❚"], "iid": "T95f3df21cd0f", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["✥", "➏", "⠢"], "iid": "Tb929ba96a6b0", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["✭", "⠬", "⢦"], "iid": "Ta0b44d7a0f8b", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑧", "✊", "❃"], "iid": "T23cfee4f8ac5", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚖", "⟜", "⢯"], "iid": "Te70255466862", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▂", "⚢", "❚"], "iid": "Tc54e7d48b04d", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["✫", "❑", "❚"], "iid": "T4f3bdfa99762", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑷", "◑", "✸"], "iid": "T8701087c4e0c", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["●", "♮", "➑"], "iid": "T47c2330285e0", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["❜", "⠨", "⡮"], "iid": "T7d09bae73603", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☛", "☟", "➱"], "iid": "T188fcca1cc06", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚃", "➈", "➺"], "iid": "T1aca7bd5e653", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚔", "⛝", "❷"], "iid": "T52439da8ec69", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["●", "⛫", "✥"], "iid": "T29be4a5c2211", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["♼", "⚀", "➁"], "iid": "Teefd4c521bb5", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚀", "❮", "⢏"], "iid": "Td91b4741ffaa", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚥", "✸", "⡉"], "iid": "T2563a7c99397", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚀", "⚄", "⚋"], "iid": "Tb9df4b54baa5", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚯", "➈", "⡃"], "iid": "T8ac5b7155763", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⛾", "⡇", "⡼"], "iid": "T5e02ddcff8ce", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚙", "❺", "⟚"], "iid": "T81f6356f4a87", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["●", "♞", "⟖"], "iid": "T1d8236c68ae6", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☟", "♚", "⚌"], "iid": "Tae5b35bb448e", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚥", "✳", "➺"], "iid": "T56863c01dc8e", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⠨", "⡝", "⣘"], "iid": "T199ebdb9094c", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⟐", "⟜", "⢯"], "iid": "Tad262060d19a", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑵", "⚂", "✗"], "iid": "Td6a0b713acda", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚃", "⚖", "⣘"], "iid": "Tab8127e490ac", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▄", "⛻", "⢓"], "iid": "T9f29c0a37faf", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▃", "⟰", "⢦"], "iid": "Tf8f942f22063", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["➔", "➣", "⠽"], "iid": "T88b0b6376a86", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚆", "✼", "➯"], "iid": "Ta01a2a7507d4", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚫", "⠇", "⡉"], "iid": "Te0302a1d3cb1", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["♛", "⛾", "⟸"], "iid": "T831ca9d35ca1", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚸", "❏", "❷"], "iid": "T1e7407cf3a91", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚸", "✵", "⢎"], "iid": "Td60774275cd6", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▁", "➉", "⣓"], "iid": "T4ccdd4a8ede2", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["❾", "➸", "⠰"], "iid": "T38446bc0376c", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["♚", "❑", "⠦"], "iid": "T3f18490b3820", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["♣", "♨", "❺"], "iid": "T460d828f1a7d", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚁", "❷", "⟸"], "iid": "Tbfeee5a76fd6", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["①", "⑶", "✗"], "iid": "Tf6a7666d88ae", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["③", "⑴", "♚"], "iid": "Tac3eca2cc543", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚫", "⛇", "⡃"], "iid": "T98d518e78f3b", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⛍", "➑", "⡴"], "iid": "T7d2a0517a1b8", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚌", "⛗", "⛻"], "iid": "Tb3a77e00204a", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☟", "✀", "❼"], "iid": "T6672e5fa9bdc", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚖", "⛻", "⠄"], "iid": "T68313423fadf", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑸", "⚁", "➑"], "iid": "T3a6a1c665977", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑴", "⚡", "⡮"], "iid": "T80efbcd2cd9a", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▆", "○", "⣰"], "iid": "T2cbfb8437966", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☉", "♀", "⡛"], "iid": "T3c007524e564", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["➮", "➻", "⟸"], "iid": "Tf18288b25473", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⛸", "✥", "⟜"], "iid": "Tb1266d7d7526", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⛟", "❑", "⠇"], "iid": "Te827b0404926", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["✭", "⠢", "⡝"], "iid": "T5ecc1f4dd8f8", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["➱", "➸", "⟚"], "iid": "Td8525b047c0f", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["✼", "❟", "⠃"], "iid": "T46ff38e39ed2", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☧", "♚", "⟋"], "iid": "Tdca60e09544d", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑦", "◔", "✸"], "iid": "Tde3169516c3c", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚠", "⠤", "⠰"], "iid": "T41c7f241ba1f", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▂", "⠽", "⢸"], "iid": "Tb6e7802fd285", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["♞", "⚄", "⡤"], "iid": "T6a45330bf80d", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☤", "♻", "⡶"], "iid": "T7c07f4f42eae", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["❜", "❮", "➉"], "iid": "T37a88499ad0c", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["●", "☗", "⢫"], "iid": "T1afc556556e2", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["♨", "⚌", "⛻"], "iid": "T2ce50a63b435", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⛦", "➞", "⢦"], "iid": "T6fb900747303", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑹", "☞", "⛝"], "iid": "T100b1e7a3a19", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["②", "⠏", "⠤"], "iid": "T670b81fd40f9", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["♤", "➻", "⢓"], "iid": "Ta579147fd9c5", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⛗", "❊", "❑"], "iid": "T8a7cb97f6b7e", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☗", "⟓", "⠄"], "iid": "T50cbec1d9427", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☉", "➈", "⢯"], "iid": "T694cf4b1ccaf", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▇", "⚙", "⣾"], "iid": "T5d6da694655f", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚯", "⠏", "⡤"], "iid": "T1e56c4e1da77", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚂", "➯", "➸"], "iid": "Tec69197c7efa", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["♞", "⛍", "⢓"], "iid": "Tb5b942a9aac9", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☞", "⛟", "❺"], "iid": "T059cdd60cb55", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["♣", "❸", "⟸"], "iid": "T57f0060fd9b4", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⛝", "✵", "⡛"], "iid": "T0752d3b887d9", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["✗", "➔", "⣰"], "iid": "Tcf1d96ff485d", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚔", "⚙", "➱"], "iid": "T6af562b5325a", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▇", "☶", "⣔"], "iid": "T45cfcaf49db3", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑤", "♀", "⚠"], "iid": "T81e3196aae3d", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▅", "⚀", "❃"], "iid": "T71ec925c7786", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["❮", "➏", "⠽"], "iid": "T0e8792883aa2", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚅", "⛗", "⢜"], "iid": "T6ede4b7f3dd6", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["✦", "⟝", "⢒"], "iid": "T749d7667716a", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["♚", "⠗", "⠤"], "iid": "T2a566fc3cd55", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☏", "➔", "⡻"], "iid": "Tf1ab22626972", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▃", "♄", "♼"], "iid": "Tdaf2a792d3cf", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⟖", "⟸", "⢎"], "iid": "Tbf166099f340", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚳", "⛼", "⡴"], "iid": "T5b3270d26bcd", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▁", "▇", "◕"], "iid": "Tf2ca806f5b6a", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["✣", "⠽", "⢒"], "iid": "Td6a78ffc3426", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☛", "⛻", "❹"], "iid": "T08caef8ce7aa", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑴", "◑", "⚖"], "iid": "Te3298150ca57", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["③", "⛄", "⟝"], "iid": "T3db4d6235660", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["②", "◑", "⟓"], "iid": "T5a11c7f3cab5", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["○", "♤", "⣾"], "iid": "Te7a2703d3617", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚐", "⛦", "⢒"], "iid": "T938d585ed3c3", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▄", "⚋", "⠦"], "iid": "Td0eff083d6e4", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚡", "⚯", "➔"], "iid": "Tca399629617f", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚥", "⟸", "⣾"], "iid": "Ta5e0ac3f07d1", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚯", "✀", "❒"], "iid": "Td79eedb1c40a", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["②", "❟", "⠬"], "iid": "Tc050eb5feb93", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⠏", "⢯", "⢽"], "iid": "T27e731923952", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑥", "⚡", "➺"], "iid": "Tf5de79bf8d46", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑸", "▆", "⚺"], "iid": "T74718c33565b", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⛼", "⟋", "⠇"], "iid": "T44a233ac23db", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["★", "⚙", "⟓"], "iid": "Tf9e1b99e055d", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚀", "✫", "➁"], "iid": "T003f7edfc097", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["✦", "➸", "⢯"], "iid": "T335aa740e199", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["♁", "♻", "⛍"], "iid": "T2d9d8f279586", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑹", "♄", "⠬"], "iid": "T1457875caf4f", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["◔", "♀", "⢫"], "iid": "T072002d97337", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⛦", "⟋", "⣊"], "iid": "T581920d19c7f", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☧", "⛦", "⟝"], "iid": "T919c214894f9", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▄", "⠇", "⣷"], "iid": "Te7bc514ea566", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▁", "♀", "⚔"], "iid": "Tdcb54e724b13", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☏", "❹", "⠮"], "iid": "T6cd784784cc9", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["●", "⚂", "⡉"], "iid": "T156ba8a2b6c7", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑦", "❏", "⡥"], "iid": "Tfc64a712e8a0", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☏", "⛽", "➔"], "iid": "T2458333932cb", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☧", "⠬", "⡼"], "iid": "T7c3a005fbd70", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚢", "⟋", "⟖"], "iid": "T8360e7366e59", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑶", "◕", "⢦"], "iid": "Tb268208e0f5e", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⛋", "⡼", "⣓"], "iid": "T8d6c50cd0580", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["◑", "♇", "⣊"], "iid": "Tae12aac1f466", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["●", "◔", "⟚"], "iid": "Td68cccfe0485", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☑", "☧", "⛍"], "iid": "T6522a4144d2f", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚦", "❃", "❸"], "iid": "T0f0aec97a0e9", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚖", "⛸", "❒"], "iid": "T1a91412c9b30", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⛜", "⠰", "⢏"], "iid": "T45dd8103488c", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▁", "▂", "⢒"], "iid": "T82e05873a805", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☧", "⛻", "⡃"], "iid": "T5628c645c8ff", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▆", "⡼", "⣉"], "iid": "T4e45c8d39ed6", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☛", "☶", "➺"], "iid": "T521af7bba8cb", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⛃", "⛍", "➔"], "iid": "Tf81e8496aa9f", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["♮", "✊", "⢓"], "iid": "T35faa484e685", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["◕", "☛", "⡇"], "iid": "T3283a174ad6c", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☤", "➱", "⣔"], "iid": "Tad980b7f9c72", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚥", "⛽", "⟚"], "iid": "T6d94de042934", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["①", "✀", "⠽"], "iid": "T7e6d152f5fc9", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑶", "▃", "✗"], "iid": "Tac5900450239", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["✊", "❾", "⡋"], "iid": "T2aab97408ea0", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑴", "✼", "⟝"], "iid": "T26978615b632", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑤", "⚅", "⣓"], "iid": "T1dcfe814ee1b", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["①", "♻", "⠨"], "iid": "Tc915361b34c5", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑴", "⢽", "⣰"], "iid": "Tc4383d21ef79", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑦", "⠽", "⡽"], "iid": "T5d6357087e33", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▁", "☉", "♚"], "iid": "T87a44b1950fc", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["✚", "✴", "⣓"], "iid": "T4809ef2334bf", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑥", "⚄", "⠏"], "iid": "T2431afa3347e", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["✦", "⠽", "⡶"], "iid": "Td893685b4fe4", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▅", "❹", "⡤"], "iid": "T7f15fc54d53c", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▁", "♣", "⡽"], "iid": "T434b61bd5e0a", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▅", "➻", "⠇"], "iid": "T2ad805632e42", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▂", "⛫", "⡽"], "iid": "T888903eaeebc", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["✼", "➉", "⡝"], "iid": "T26a2c4fe1750", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑦", "⠗", "⠢"], "iid": "T8ca56f6d7c71", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⡴", "⢦", "⢾"], "iid": "Te48922ba59cb", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⚦", "✸", "❹"], "iid": "T3171657c0eb2", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["◑", "❖", "⡃"], "iid": "T7fe32cb41751", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["♀", "⢜", "⣘"], "iid": "T1d5eb77d9e87", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▅", "➉", "⟜"], "iid": "T280efd7f5ead", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["▆", "☓", "⛻"], "iid": "Tadffc44f841d", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["⑧", "⚺", "⢯"], "iid": "T43a1039db40a", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["♄", "⛼", "⢯"], "iid": "T4cd214d73872", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["♻", "❜", "➞"], "iid": "T70990338c142", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}
+{"cat": ["triad", "tail"], "glyphs": ["☗", "⛫", "⣰"], "iid": "Td3a76c503c12", "kind": "triad", "priority": 0.0, "source": {"kind": "tail"}}

@@ -1,0 +1,19 @@
+round r003: 7 candidates, 10040 triple observations
+
+planted | n | best cand | jaccard | order-agree (shared) | per-family max(s3,s4) truth -> fit
+A | 8 | #0 ⑧⑦⑥⑤④③②① | 1.00 | 1.00 (8) | famX:0.90->0.97 famY:0.80->0.97 famZ:0.60->0.80
+C | 7 | #3 ▁▂▃▄▅▆▇ | 1.00 | 1.00 (7) | famX:0.90->0.97 famY:0.80->0.97 famZ:0.60->0.65
+D | 5 | #2 ○◔◑◕● | 1.00 | 1.00 (5) | famX:0.90->0.97 famY:0.80->0.80 famZ:0.60->0.80
+   holistic: s3/s4 per mind synA:0.03/0.97 synB:0.03/0.65 synC:0.03/0.80 synD:0.00/0.80
+E | 6 | #6 ⚅⚄⚃⚂⚁⚀ | 1.00 | 1.00 (6) | famX:0.90->0.97 famY:0.80->0.65 famZ:0.60->0.65
+F | 7 | #5 ⑹⑸⑷⑤⑶⑵ | 0.86 | 1.00 (6) | famX:0.90->0.90 famY:0.80->0.50 famZ:0.60->0.97
+B | 6 | not found
+
+splices (candidates holding private glyphs of two planted sequences):
+  none
+
+nuisance parameters truth -> fit:
+  synA: eps 0.08->0.1 nn 0.7->0.8 nt 0.1->0.05 beta 0.34->0.34 tau 0.7->0.9
+  synB: eps 0.15->0.15 nn 0.7->0.6 nt 0.1->0.2 beta 0.7->0.65 tau 0.7->0.7
+  synC: eps 0.05->0.05 nn 0.95->0.6 nt 0.1->0.2 beta 0.34->0.34 tau 0.7->0.9
+  synD: eps 0.4->0.6 nn 0.2->0.4 nt 0.1->0.2 beta 0.6->0.5 tau 0.7->0.7

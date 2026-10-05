@@ -1,0 +1,226 @@
+init: 198 glyphs in pool, 5 seeds -> /private/tmp/claude-505/-Users-josephwecker-v2-src-arch-firmatum-utils-aspectus/fcc2ed5a-ac92-4900-9048-7c0adcf7b4bf/scratchpad/synth6
+r000: 123 new items + 0 follow-up presentations -> 128 presentations, 41 sheets (T=1.00)
+r000/synA: 41 sheets, 0 done, 41 to run
+r000/synB: 41 sheets, 0 done, 41 to run
+r000/synC: 41 sheets, 0 done, 41 to run
+r000/synD: 41 sheets, 0 done, 41 to run
+  chain 0: objective -551.1, 6 candidates
+  chain 1: objective -507.9, 6 candidates
+  chain 2: objective -497.4, 6 candidates
+# Round r000 — fit report
+
+Observations (triple-level, cumulative): 1324. Minds: synA, synB, synC, synD.
+
+## Candidate sequences (best chain), by family-mean perception
+
+s3 = perception in triads, s4 = in sets of 4+, per family (mean over its minds). support = share of chains and posterior samples holding a matching candidate.
+
+| # | sequence | n | support | famX s3/s4 | famY s3/s4 | famZ s3/s4 |
+|---|---|---|---|---|---|---|
+| 0 | `① ② ③ ④ ⑤ ⑥ ⑦ ⑧` | 8 | 1.00 | 0.78/0.97 | 0.65/0.97 | 0.80/0.80 |
+| 2 | `⚀ ⚁ ⚂ ⚄ ⚅` | 5 | 1.00 | 0.48/0.97 | 0.65/0.97 | 0.50/0.20 |
+| 1 | `⑤ ⑷ ⑸ ⑹` | 4 | 1.00 | 0.73/0.66 | 0.35/0.50 | 0.50/0.97 |
+| 3 | `▁ ▂ ▃ ▄ ▅ ▆ ▇` | 7 | 1.00 | 0.70/0.73 | 0.65/0.65 | 0.50/0.00 |
+| 4 | `○ ◔ ◑ ◕ ●` | 5 | 0.67 | 0.10/0.48 | 0.00/0.97 | 0.10/0.00 |
+| 5 | `▂ ▄=▅=▃=▆ ▇` | 6 | 1.00 | 0.00/0.00 | 0.65/0.90 | 0.00/0.65 |
+
+## Minds: nuisance parameters
+
+| mind | eps | nn | nt | beta | tau |
+|---|---|---|---|---|---|
+| synA | 0.05 | 0.05 | 0.0 | 0.34 | 0.1 |
+| synB | 0.1 | 0.05 | 0.3 | 0.34 | 0.1 |
+| synC | 0.1 | 0.05 | 0.2 | 0.34 | 0.1 |
+| synD | 0.4 | 0.05 | 0.3 | 0.65 | 0.1 |
+
+## Minds: slot bias read directly from the Latin rotations (no model)
+
+Over triads whose three rotations were all answered with an order: share of answers naming the glyph shown in the middle (1/3 = no slot preference), and share of triads given the same middle in all three rotations.
+
+| mind | triads | middle = shown middle | same middle 3/3 |
+|---|---|---|---|
+
+## Parse status this round
+
+- synA|ok: 124
+- synB|ok: 124
+- synC|ok: 124
+- synD|ok: 124
+
+r001: 84 new items + 110 follow-up presentations -> 205 presentations, 60 sheets (T=0.80)
+r001/synA: 60 sheets, 0 done, 60 to run
+r001/synB: 60 sheets, 0 done, 60 to run
+r001/synC: 60 sheets, 0 done, 60 to run
+r001/synD: 60 sheets, 0 done, 60 to run
+  chain 0: objective -1446.9, 6 candidates
+  chain 1: objective -1588.5, 5 candidates
+  chain 2: objective -1543.7, 5 candidates
+# Round r001 — fit report
+
+Observations (triple-level, cumulative): 3636. Minds: synA, synB, synC, synD.
+
+## Candidate sequences (best chain), by family-mean perception
+
+s3 = perception in triads, s4 = in sets of 4+, per family (mean over its minds). support = share of chains and posterior samples holding a matching candidate.
+
+| # | sequence | n | support | famX s3/s4 | famY s3/s4 | famZ s3/s4 |
+|---|---|---|---|---|---|---|
+| 0 | `① ② ③ ④ ⑤ ⑥ ⑦ ⑧` | 8 | 1.00 | 0.85/0.97 | 0.65/0.97 | 0.65/0.97 |
+| 2 | `⑤ ⑷ ⑸ ⑹` | 4 | 1.00 | 0.89/0.73 | 0.35/0.65 | 0.65/0.97 |
+| 1 | `▁ ▂ ▃ ▄ ▅ ▆ ▇` | 7 | 0.67 | 0.78/0.90 | 0.65/0.97 | 0.50/0.50 |
+| 3 | `⚀ ⚁ ⚂ ⚄ ⚅` | 5 | 1.00 | 0.00/0.85 | 0.00/0.97 | 0.00/0.50 |
+| 4 | `⚀ ⚁ ⚂=⚃ ⚄ ⚅` | 6 | 1.00 | 0.81/0.00 | 0.65/0.00 | 0.50/0.20 |
+| 5 | `○ ◔ ◑ ◕ ●` | 5 | 1.00 | 0.05/0.66 | 0.10/0.80 | 0.00/0.20 |
+
+## Minds: nuisance parameters
+
+| mind | eps | nn | nt | beta | tau |
+|---|---|---|---|---|---|
+| synA | 0.05 | 0.8 | 0.1 | 0.34 | 0.5 |
+| synB | 0.15 | 0.6 | 0.2 | 0.5 | 0.5 |
+| synC | 0.05 | 0.05 | 0.3 | 0.34 | 0.9 |
+| synD | 0.4 | 0.2 | 0.2 | 0.65 | 0.1 |
+
+## Minds: slot bias read directly from the Latin rotations (no model)
+
+Over triads whose three rotations were all answered with an order: share of answers naming the glyph shown in the middle (1/3 = no slot preference), and share of triads given the same middle in all three rotations.
+
+| mind | triads | middle = shown middle | same middle 3/3 |
+|---|---|---|---|
+| synA | 19 | 0.32 | 0.89 |
+| synB | 12 | 0.33 | 0.83 |
+| synC | 7 | 0.33 | 0.86 |
+| synD | 10 | 0.60 | 0.00 |
+
+## Parse status this round
+
+- synA|ok: 202
+- synB|ok: 202
+- synC|ok: 202
+- synD|ok: 202
+
+r002: 97 new items + 69 follow-up presentations -> 178 presentations, 52 sheets (T=0.64)
+r002/synA: 52 sheets, 0 done, 52 to run
+r002/synB: 52 sheets, 0 done, 52 to run
+r002/synC: 52 sheets, 0 done, 52 to run
+r002/synD: 52 sheets, 0 done, 52 to run
+  chain 0: objective -2365.1, 6 candidates
+  chain 1: objective -2397.0, 5 candidates
+  chain 2: objective -2377.4, 6 candidates
+# Round r002 — fit report
+
+Observations (triple-level, cumulative): 6936. Minds: synA, synB, synC, synD.
+
+## Candidate sequences (best chain), by family-mean perception
+
+s3 = perception in triads, s4 = in sets of 4+, per family (mean over its minds). support = share of chains and posterior samples holding a matching candidate.
+
+| # | sequence | n | support | famX s3/s4 | famY s3/s4 | famZ s3/s4 |
+|---|---|---|---|---|---|---|
+| 0 | `① ② ③ ④ ⑤ ⑥ ⑦ ⑧` | 8 | 0.67 | 0.85/0.94 | 0.65/0.97 | 0.80/0.90 |
+| 2 | `▁ ▂ ▃ ▄ ▅ ▆ ▇` | 7 | 0.67 | 0.89/0.94 | 0.65/0.97 | 0.65/0.90 |
+| 3 | `⑵ ⑶ ⑤ ⑷ ⑸ ⑹` | 6 | 0.67 | 0.89/0.70 | 0.50/0.80 | 0.65/0.97 |
+| 1 | `⚀ ⚁ ⚂ ⚄ ⚅` | 5 | 1.00 | 0.00/0.89 | 0.00/0.97 | 0.00/0.65 |
+| 4 | `⚀ ⚁ ⚂=⚃ ⚄ ⚅` | 6 | 1.00 | 0.78/0.10 | 0.65/0.10 | 0.65/0.00 |
+| 5 | `○ ◔ ◑ ◕ ●` | 5 | 1.00 | 0.05/0.78 | 0.10/0.65 | 0.00/0.65 |
+
+## Minds: nuisance parameters
+
+| mind | eps | nn | nt | beta | tau |
+|---|---|---|---|---|---|
+| synA | 0.1 | 0.8 | 0.1 | 0.5 | 0.7 |
+| synB | 0.1 | 0.4 | 0.3 | 0.65 | 0.5 |
+| synC | 0.1 | 0.6 | 0.2 | 0.34 | 0.9 |
+| synD | 0.6 | 0.4 | 0.2 | 0.65 | 0.1 |
+
+## Minds: slot bias read directly from the Latin rotations (no model)
+
+Over triads whose three rotations were all answered with an order: share of answers naming the glyph shown in the middle (1/3 = no slot preference), and share of triads given the same middle in all three rotations.
+
+| mind | triads | middle = shown middle | same middle 3/3 |
+|---|---|---|---|
+| synA | 25 | 0.32 | 0.92 |
+| synB | 16 | 0.35 | 0.81 |
+| synC | 9 | 0.33 | 0.89 |
+| synD | 13 | 0.54 | 0.00 |
+
+## Parse status this round
+
+- synA|ok: 177
+- synB|ok: 177
+- synC|ok: 177
+- synD|ok: 177
+
+r003: 98 new items + 106 follow-up presentations -> 213 presentations, 69 sheets (T=0.51)
+r003/synA: 69 sheets, 0 done, 69 to run
+r003/synB: 69 sheets, 0 done, 69 to run
+r003/synC: 69 sheets, 0 done, 69 to run
+r003/synD: 69 sheets, 0 done, 69 to run
+  chain 0: objective -3992.0, 6 candidates
+  chain 1: objective -3954.8, 7 candidates
+  chain 2: objective -3993.9, 6 candidates
+# Round r003 — fit report
+
+Observations (triple-level, cumulative): 10040. Minds: synA, synB, synC, synD.
+
+## Candidate sequences (best chain), by family-mean perception
+
+s3 = perception in triads, s4 = in sets of 4+, per family (mean over its minds). support = share of chains and posterior samples holding a matching candidate.
+
+| # | sequence | n | support | famX s3/s4 | famY s3/s4 | famZ s3/s4 |
+|---|---|---|---|---|---|---|
+| 0 | `⑧ ⑦ ⑥ ⑤ ④ ③ ② ①` | 8 | 1.00 | 0.85/0.97 | 0.65/0.97 | 0.80/0.65 |
+| 1 | `⚅ ⚄ ⚂ ⚁ ⚀` | 5 | 1.00 | 0.00/0.94 | 0.00/0.97 | 0.00/0.65 |
+| 3 | `▁ ▂ ▃ ▄ ▅ ▆ ▇` | 7 | 1.00 | 0.89/0.89 | 0.65/0.97 | 0.65/0.65 |
+| 2 | `○ ◔ ◑ ◕ ●` | 5 | 1.00 | 0.03/0.81 | 0.03/0.80 | 0.00/0.80 |
+| 5 | `⑹ ⑸ ⑷ ⑤ ⑶ ⑵` | 6 | 1.00 | 0.85/0.57 | 0.50/0.35 | 0.65/0.97 |
+| 4 | `⑹ ⑸ ⑷ ⑶ ⑵` | 5 | 1.00 | 0.00/0.48 | 0.00/0.80 | 0.00/0.97 |
+| 6 | `⚅ ⚄ ⚃=⚂ ⚁ ⚀` | 6 | 1.00 | 0.89/0.20 | 0.65/0.20 | 0.65/0.00 |
+
+## Minds: nuisance parameters
+
+| mind | eps | nn | nt | beta | tau |
+|---|---|---|---|---|---|
+| synA | 0.1 | 0.8 | 0.05 | 0.34 | 0.9 |
+| synB | 0.15 | 0.6 | 0.2 | 0.65 | 0.7 |
+| synC | 0.05 | 0.6 | 0.2 | 0.34 | 0.9 |
+| synD | 0.6 | 0.4 | 0.2 | 0.5 | 0.7 |
+
+## Minds: slot bias read directly from the Latin rotations (no model)
+
+Over triads whose three rotations were all answered with an order: share of answers naming the glyph shown in the middle (1/3 = no slot preference), and share of triads given the same middle in all three rotations.
+
+| mind | triads | middle = shown middle | same middle 3/3 |
+|---|---|---|---|
+| synA | 38 | 0.32 | 0.87 |
+| synB | 24 | 0.39 | 0.67 |
+| synC | 14 | 0.33 | 0.79 |
+| synD | 22 | 0.53 | 0.05 |
+
+## Parse status this round
+
+- synA|ok: 210
+- synB|ok: 210
+- synC|ok: 210
+- synD|ok: 210
+
+LOOP EXIT 0
+round r003: 7 candidates, 10040 triple observations
+
+planted | n | best cand | jaccard | order-agree (shared) | per-family max(s3,s4) truth -> fit
+A | 8 | #0 ⑧⑦⑥⑤④③②① | 1.00 | 1.00 (8) | famX:0.90->0.97 famY:0.80->0.97 famZ:0.60->0.80
+C | 7 | #3 ▁▂▃▄▅▆▇ | 1.00 | 1.00 (7) | famX:0.90->0.97 famY:0.80->0.97 famZ:0.60->0.65
+D | 5 | #2 ○◔◑◕● | 1.00 | 1.00 (5) | famX:0.90->0.97 famY:0.80->0.80 famZ:0.60->0.80
+   holistic: s3/s4 per mind synA:0.03/0.97 synB:0.03/0.65 synC:0.03/0.80 synD:0.00/0.80
+E | 6 | #6 ⚅⚄⚃⚂⚁⚀ | 1.00 | 1.00 (6) | famX:0.90->0.97 famY:0.80->0.65 famZ:0.60->0.65
+F | 7 | #5 ⑹⑸⑷⑤⑶⑵ | 0.86 | 1.00 (6) | famX:0.90->0.90 famY:0.80->0.50 famZ:0.60->0.97
+B | 6 | not found
+
+splices (candidates holding private glyphs of two planted sequences):
+  none
+
+nuisance parameters truth -> fit:
+  synA: eps 0.08->0.1 nn 0.7->0.8 nt 0.1->0.05 beta 0.34->0.34 tau 0.7->0.9
+  synB: eps 0.15->0.15 nn 0.7->0.6 nt 0.1->0.2 beta 0.7->0.65 tau 0.7->0.7
+  synC: eps 0.05->0.05 nn 0.95->0.6 nt 0.1->0.2 beta 0.34->0.34 tau 0.7->0.9
+  synD: eps 0.4->0.6 nn 0.2->0.4 nt 0.1->0.2 beta 0.6->0.5 tau 0.7->0.7
