@@ -218,7 +218,17 @@ def piece_table(cur, snap, fam, min_evid=3):
             U = sum(per.values()) / len(per) if per else 0.0
             stab = sup * U * math.sqrt(len(per) / max(1, len(fams)))
             out.append({"steps": steps, "glyphs": g, "stability": stab, "families": len(per), "U": U, "support": sup})
-    return sorted(out, key=lambda x: -x["stability"])
+    # fold restatements: a piece contained in a longer one (same order) is part of it, not a branch; keep the longer
+    # one, with the higher stability of the two (found 2026-10-04: ⓵…⓾, ⓵…⓹ and ⓷⓸⓹ were counted as three)
+    keep = M.maximal([x["steps"] for x in out])
+    kept = []
+    for i in keep:
+        x = dict(out[i])
+        for j, y in enumerate(out):
+            if j != i and M.contained_in(y["steps"], x["steps"]) and y["stability"] > x["stability"]:
+                x["stability"], x["U"], x["families"], x["support"] = y["stability"], y["U"], y["families"], y["support"]
+        kept.append(x)
+    return sorted(kept, key=lambda x: -x["stability"])
 
 def end_state(piece, side, parsed, pres, items):
     """What has been asked at one end: next-answers whose context ends with this end's last two glyphs (in the

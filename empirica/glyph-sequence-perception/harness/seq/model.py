@@ -454,6 +454,25 @@ def link_support(model, cand):
                     ties.append((x, y)); weak[(x, y)] = inorder(x, y)
     return links, ties, weak
 
+def contained_in(small, big):
+    """True if every glyph of `small` is in `big` and their order agrees (either direction; ties in `big` allow any
+    order of the tied glyphs). A contained sequence restates part of a longer one; it is not a branch."""
+    ps = {g: i for i, st in enumerate(big) for g in st}
+    g = [x for st in small for x in st]
+    if not all(x in ps for x in g):
+        return False
+    seq = [ps[x] for x in g]
+    return all(a <= b for a, b in zip(seq, seq[1:])) or all(a >= b for a, b in zip(seq, seq[1:]))
+
+def maximal(seqs, key=len):
+    """Indices of the sequences (step-lists) not contained in a longer (or, at equal length, earlier) one."""
+    order = sorted(range(len(seqs)), key=lambda i: (-sum(len(st) for st in seqs[i]), i))
+    keep = []
+    for i in order:
+        if not any(contained_in(seqs[i], seqs[j]) for j in keep):
+            keep.append(i)
+    return sorted(keep)
+
 def supported_pieces(model, cand):
     """Split `cand` at every unsupported link and unwitnessed tie (see link_support): -> list of step-lists.
     Only these pieces count as established sequences (standings and the queue use the same rule)."""

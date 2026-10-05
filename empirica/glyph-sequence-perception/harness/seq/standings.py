@@ -96,6 +96,11 @@ def main():
             split_log.append((" ".join("=".join(x) for x in c.steps), [" ".join("=".join(x) for x in r) for r in runs]))
         for r in keep:
             pieces.append((r, cs, sup))
+    # fold restatements (a piece contained in a longer one, same order); a glyph shared by kept pieces is a branch
+    keep = M.maximal([st for st, _, _ in pieces])
+    folded = len(pieces) - len(keep)
+    pieces = [pieces[i] for i in keep]
+    owners = collections.Counter(g for st, _, _ in pieces for x in st for g in x)
     for steps, cs, sup in pieces:
         c = M.Cand(steps)
         ci = mod.add(c)
@@ -141,7 +146,8 @@ def main():
                     max(1, sum(1 for m in fit["minds"] if fam.get(m) == f and evid[m] >= MIN_EVID)) >= 0.5]
         rows.append({"seq": " ".join("=".join(st) for st in c.steps), "n": len(g), "U": U, "coverage": cov, "per": per,
                      "support": sup, "untested": ["".join(t) for t in untested], "agree": agree, "weakest": [weak[1], weak[0]], "answers": tot, "rounds": rounds_in, "first": first, "witnessed": witnessed,
-                     "origin": "seeded" if best_seed >= 0.8 else "emergent", "sets_only": holistic,
+                     "origin": "seeded" if best_seed >= 0.8 else "emergent",
+                     "branches": "".join(x for x in g if owners[x] >= 2), "sets_only": holistic,
                      "score": (sup * U * math.sqrt(cov)) if len(per) >= 2 else 0.0})
     ranked = sorted(rows, key=lambda r: (-r["score"], -r["n"]))
     L = [f"# Standings after {rid}", "",
@@ -160,10 +166,11 @@ def main():
          "- **origin:** whether a seed holds 80% or more of it. Metadata only.",
          "- **sets only:** families that perceive it in sets but not in triads.",
          "- **untested:** adjacent links that no question has yet tested, because the two glyphs were never shown together. Their order is the fit's arbitrary choice, not evidence.",
+         "- **branches at:** glyphs this sequence shares with another ranked sequence, where two sequences cross or fork. A sequence contained in a longer one, in the same order, is folded into the longer one and not listed.",
          "- **Rank:** support × U × √cov, among pieces measured in two or more families.", "",
          "**Every candidate is first split at its unsupported links.** A link is supported when a triple holding both of its glyphs was answered in this order by two or more answers and a majority. Only supported pieces of three or more glyphs are ranked. Splits are listed under the table.", "",
-         "| # | sequence | n | " + " | ".join(roster_fams) + " | U | cov | support | rounds | witn | agree | weakest | untested | origin | sets only |",
-         "|---|---|---|" + "---|" * len(roster_fams) + "---|---|---|---|---|---|---|---|---|---|"]
+         "| # | sequence | n | " + " | ".join(roster_fams) + " | U | cov | support | rounds | witn | agree | weakest | untested | branches at | origin | sets only |",
+         "|---|---|---|" + "---|" * len(roster_fams) + "---|---|---|---|---|---|---|---|---|---|---|"]
     shown = 0
     for r in ranked:
         if r["score"] <= 0 or shown >= a.top:
@@ -171,9 +178,10 @@ def main():
         shown += 1
         seq = r["seq"].replace("|", "\\|")
         L.append(f"| {shown} | `{seq}` | {r['n']} | " + " | ".join(f"{r['per'][f]:.2f}" if f in r["per"] else "–" for f in roster_fams)
-                 + f" | {r['U']:.2f} | {r['coverage']:.2f} | {r['support']:.2f} | {r['rounds']}/{len(past)} | {r['witnessed']} | {r['agree']:.2f} ({r['answers']}) | {r['weakest'][0]} {r['weakest'][1]:.2f} | {' '.join(r['untested'])} | {r['origin']} | "
+                 + f" | {r['U']:.2f} | {r['coverage']:.2f} | {r['support']:.2f} | {r['rounds']}/{len(past)} | {r['witnessed']} | {r['agree']:.2f} ({r['answers']}) | {r['weakest'][0]} {r['weakest'][1]:.2f} | {' '.join(r['untested'])} | {r['branches']} | {r['origin']} | "
                  + (", ".join(r["sets_only"]) or "") + " |")
     rest = [r for r in ranked if r["score"] <= 0]
+    L += ["", f"{folded} pieces were restatements of longer sequences and are folded into them."]
     L += ["", f"{shown} ranked of {len(rows)} supported sequences. {len(rest)} are measured in fewer than two families, or have zero support or perception, and are not ranked.", "",
           f"## Longer sequences the model guessed, split where the evidence stops ({len(split_log)} of {len(fit['best']['cands'])})", "",
           "After each round, the analysis searches for the set of sequences that best explains every answer so far (\"the fit\"). "
