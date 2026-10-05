@@ -33,7 +33,12 @@ A **context** is an oriented run of glyphs: what a mind was shown, ending at the
 
    Its output is answers, each tagged with everything about how it was obtained. It knows nothing about which sequences exist.
 2. **The tree: what the minds perceive.** It is built only from answers: contexts and the continuations given at them, per mind and family. Sequences, branches, ends, cycles and stability are read off it. It knows nothing about why a question was asked (priority, seeds, exploration), so where a question came from can never become evidence. The only route from (1) into (2) is a tagged answer. If a probing factor turns out to bias answers, the tree can weight or split by that tag without being rebuilt.
-3. **Priority: what to ask next.** It reads the tree and decides where effort goes: extension, k\*, branch points, cycle probes, hot exploration, seeds, and how settled each node is. It writes questions, never evidence. Seeds live entirely here.
+3. **Priority: what to ask next.** It reads the tree and decides where effort goes: extension, k\*, branch points, cycle probes, hot exploration, seeds, and how settled each node is. It writes questions, never evidence.
+
+**Seeds, as tagged votes.** Joseph, 2026-10-05: *"I think you can add the seed edges as equivalent to a vote from that agent's LLM, wherever that makes sense — possibly marking it specifically as from the seed so potentially biased — it will be very useful for me from a practical engineering perspective to get the most relevant sequences as quickly as possible, while allowing us to segregate those out if we need a more pure analysis for a write-up."* So a survey sequence written by a known model enters the tree as that model's family voting for each glyph after its context (`port/port_seeds.py`).
+- **Tags:** every seed vote is tagged `era: seed`.
+- **Still asked:** a context counts as *asked* only once a real mind has answered it, so every seeded step is put to the real minds, and k\* is never "known" from seeds.
+- **Pure analysis:** `tree.py --pure` and the *settled without seeds* column of PROGRESS leave seeds out.
 
 4. **Porting: bringing the triad era's answers in without corrupting the tree.** Joseph: *"correctly porting triad-era data into the context tree as much as possible without introducing any incorrect or biased or otherwise invalid data."* It is an adapter at the boundary, written once and audited, and it feeds concern 2 exactly as concern 1 does: answers with tags. §6 states what is ported as what.
 
@@ -117,7 +122,7 @@ This is Joseph's priority rule, restated on the tree:
 
   Sequences are served most stable first.
 - **Hot exploration** (15%). Fresh glyphs from the whole symbol space, weighted toward printable ASCII, then 2-byte, then 3- and 4-byte (Joseph, 2026-10-05). Exploration also favours **nodes that are still reaching out**: nodes with few settled edges get more tendrils. Settled nodes keep a floor of exploration, because creative sequences (`3E[|]3E[|]`) come from nodes that look settled.
-- **Seeds** are proposed *contexts to query*, never edges. A seed's written order says which contexts to ask first; each of its edges is then checked from short context upward. Their only standing is priority.
+- **Seeds** are tagged votes (§2a) and *contexts to query*. A seeded step is asked of the real minds when its sequence is served (tier 1), and its k\* is then found from short context upward like any other step.
 
 ## 6. Porting the triad era (concern 4)
 

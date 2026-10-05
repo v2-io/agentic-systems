@@ -1,0 +1,77 @@
+{
+ "version": "minds-0.2 (2026-10-05, refactored)",
+ "note": "Roster registry for glyph-sequence-perception. Adapter specs copied from the archived judges-v1.json; family and mode added. family = LLM family for universality; mode = sheet (several presentations per call) or single (one per call). Copied into refactored/ on 2026-10-05. Glimmer (muse) is not on the roster: it was paused in r003 of the triad era (Joseph: pause glimmer, skip local models for now).",
+ "context_residue": {
+  "claude": "claude -p with --tools '' --strict-mcp-config (no MCP), --setting-sources '' and --system-prompt override. Verified 2026-10-03: the judge sees no CLAUDE.md content and nothing about glyphs; it DOES see an account-level note giving the user's email address (asked directly, sonnet-5-5 reported it). Not removable from this CLI; judged harmless to glyph perception.",
+  "grok": "grok -p under an isolated HOME holding only a symlink to ~/.grok/auth.json and a minimal config (no arch-expert agent, no ~/.claude/CLAUDE.md, no skills, no memory); --system-prompt-override, --tools '', no subagents, no web. Verified 2026-10-03: `grok inspect` shows 0 project instructions; judge reports no Joseph/glyph context. Grok's own built-in harness preamble (~13.5k input tokens) remains and cannot be stripped from the CLI.",
+  "codex": "codex exec under an isolated CODEX_HOME holding only a symlink to ~/.codex/auth.json (no AGENTS.md, memories, rules, skills); --ephemeral, read-only sandbox. No system-prompt override exists, so the study system line is prepended to the user turn. Codex's built-in agent preamble (~13k input tokens) remains. Verified 2026-10-03: judge reports no Joseph/glyph context.",
+  "agy": "Gemini via the Antigravity CLI (agy -p), run in an empty cwd; HOME not isolated (agy's knowledge/brain stores exist under ~/.gemini/antigravity-cli). Verified 2026-10-03: judge reports no Joseph/glyph context. Study system line prepended to the user turn; agy harness preamble (~12k tokens) remains.",
+  "ollama": "local /api/chat with the study system prompt only; temperature 0, seed 0.",
+  "llamacpp": "local llama-server, study system prompt plus the model's reasoning-strength line; no tools."
+ },
+ "roster": {
+  "core": [
+   "sonnet55",
+   "haiku45",
+   "grok46",
+   "gemini38flash"
+  ],
+  "second": [
+   "opus55",
+   "gemini31pro"
+  ],
+  "second_share": 0.2,
+  "note": "Core minds answer every sheet; each second mind is added to a sheet with probability second_share (fated). Claude has two core minds, so universality is computed per family."
+ },
+ "minds": {
+  "sonnet55": {
+   "adapter": "claude",
+   "model": "claude-sonnet-5-5",
+   "effort": "low",
+   "family": "claude",
+   "mode": "sheet"
+  },
+  "opus55": {
+   "adapter": "claude",
+   "model": "claude-opus-5-5",
+   "effort": "low",
+   "family": "claude",
+   "mode": "sheet"
+  },
+  "haiku45": {
+   "adapter": "claude",
+   "model": "claude-haiku-4-5",
+   "effort": "low",
+   "family": "claude",
+   "mode": "sheet"
+  },
+  "grok46": {
+   "adapter": "grok",
+   "model": "grok-4.6",
+   "effort": "low",
+   "family": "grok",
+   "mode": "sheet"
+  },
+  "gemini38flash": {
+   "adapter": "agy",
+   "model": "gemini-3.8-flash-low",
+   "family": "gemini",
+   "mode": "sheet"
+  },
+  "gemini31pro": {
+   "adapter": "agy",
+   "model": "gemini-3.1-pro-low",
+   "family": "gemini",
+   "mode": "sheet"
+  },
+  "glimmer30b-sheet": {
+   "adapter": "llamacpp",
+   "model": "muse-glimmer-30B-kquant-dynamic",
+   "system_suffix": "\nReasoning strength: low",
+   "max_tokens": 6000,
+   "note": "Meta Muse Glimmer 30B (GGUF k-quant dynamic, Joseph's T7 copy) via llama.cpp llama-server b10358 with DFlash drafter; 'Reasoning strength: low' appended to the study system prompt per the model's control convention; temperature 0. Added 2026-10-03 at Joseph's suggestion (exploratory, key datapoints only). Sheet-mode variant: max_tokens 6000 so the reasoning plus a 40-item JSON answer fits.",
+   "family": "muse",
+   "mode": "sheet"
+  }
+ }
+}

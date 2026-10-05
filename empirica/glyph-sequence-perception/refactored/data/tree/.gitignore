@@ -1,2 +1,2 @@
-sequences.json
-nodes.json
+*
+!.gitignore
