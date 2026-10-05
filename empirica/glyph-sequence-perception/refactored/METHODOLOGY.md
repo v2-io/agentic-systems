@@ -73,8 +73,7 @@ Like positive edges, negative ones are **conditioned on their context**. A triad
 - the minds agree on it at k\*;
 - the prediction stays put when the context is lengthened backward along the same path.
 
-A long k\* is not a weakness; it makes the edge specific. The spinner's `-` may need `\ | /` before it. The failure mode is the opposite: a prediction that flips when more context is shown (`7 8 9 → 🔟`, but `7 8 9 8 → 7`). Flips are where branches live.
-A node's **restfulness** is how settled its continuation already is at short context. `3` after `1 2` is restful.
+A long k\* is not a weakness; it makes the edge specific. The spinner's `-` may need `\ | /` before it. The failure mode is the opposite: a prediction that flips when more context is shown (`7 8 9 → 🔟`, but `7 8 9 8 → 7`). Flips are where branches live. A node's **restfulness** is how settled its continuation already is at short context. `3` after `1 2` is restful.
 
 **Sequence.** A path through the tree along which each next glyph is a stable edge in its own context. The minds' agreement and families are shown per position. A sequence's weakest position bounds it.
 
