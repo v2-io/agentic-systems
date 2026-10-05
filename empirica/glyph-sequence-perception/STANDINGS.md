@@ -82,9 +82,9 @@
 
 60 ranked of 191 supported sequences. 44 are measured in fewer than two families, or have zero support or perception, and are not ranked.
 
-## Candidates split at unsupported links (53 of 199)
+## Longer sequences the model guessed, split where the evidence stops (53 of 199)
 
-The fit proposed these. Each link marked `|` is not yet supported by any witnessed triple (two or more answers, and a majority, in this order) holding both of its glyphs. A tie (`=`) without that support is cut out on its own. Only the supported pieces of three or more glyphs are ranked above. A split is an open question for the queue, not a finding.
+After each round, the analysis searches for the set of sequences that best explains every answer so far ("the fit"). Putting two glyphs next to each other costs the fit nothing if no question has ever shown them together, so some of its sequences run past what the minds actually confirmed. Each line below is one of those sequences. The `|` marks show where it breaks into pieces the answers do support: a link counts as confirmed when some triple holding both of its glyphs was answered in this order at least twice, and by a majority. A tie (`=`) that no answer confirmed stands alone. Only the confirmed pieces of three or more glyphs are ranked above. The `|` links are open questions; each round's support items ask about them.
 
 - `㊁ ㊂ ㊃ ㊄ ㊅ ㊆ ㊇ ㊈ ㊉` → `㊁ ㊂ ㊃ ㊄ ㊅ ㊆ ㊇ ㊈` | `㊉`
 - `① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳` → `① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩` | `⑪` | `⑬` | `⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳`
