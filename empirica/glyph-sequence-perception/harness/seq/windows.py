@@ -8,14 +8,16 @@ Two kinds of answers already hold windows whole; until now both were cut down to
   ORDER answers   a mind shown a set S (4-8 glyphs, shuffled) writes lines. A window W (all of W in S) is GIVEN when W's
                   glyphs sit in one line in W's order (either direction); ties inside W are neutral; anything else
                   (W split across lines, set aside, or out of order) is AGAINST.
-  NEXT answers    a mind shown a context C (an oriented run of the row) proposes what comes next. The window C+x (x the
-                  row's next glyph) is GIVEN when x is among its proposals, AGAINST when it proposed other glyphs or none.
+  NEXT answers    a mind shown a context ending in C (an oriented run of the row, >= 3 glyphs) proposes what comes next.
+                  The window C+x (x the row's next glyph) is GIVEN when x is among its proposals, AGAINST otherwise.
+  CONTINUE answers  the same with the first written glyph; and every run of 4-8 distinct glyphs the mind wrote out
+                  (context + continuation, at least two written glyphs) is GIVEN.
 Read-off only: nothing is filtered or gated.
 """
 import collections
 
 def index(parsed, pres, fam):
-    orders, nexts = [], collections.defaultdict(list)
+    orders, nexts, written = [], collections.defaultdict(list), collections.defaultdict(list)
     by_glyph = collections.defaultdict(set)
     for r in parsed:
         if r["status"] != "ok" or not isinstance(r["answer"], dict):
@@ -36,9 +38,21 @@ def index(parsed, pres, fam):
             orders.append((S, pos, fam.get(r["mind"], r["mind"])))
             for g in S:
                 by_glyph[g].add(k)
-        elif p["kind"] == "next" and len(p["shown"]) >= 3:
-            nexts[tuple(p["shown"])].append((set(a.get("proposals") or []), fam.get(r["mind"], r["mind"])))
-    return orders, by_glyph, nexts
+        elif p["kind"] in ("next", "continue"):
+            ctx = list(p["shown"]); f = fam.get(r["mind"], r["mind"])
+            cont = a.get("continuation") or []
+            props = set(a.get("proposals") or []) if p["kind"] == "next" else set(cont[:1])
+            for j in range(3, len(ctx) + 1):        # every context suffix of >= 3 glyphs is the head of a window
+                nexts[tuple(ctx[-j:])].append((props, f))
+            # a continuation writes whole windows itself: each run of 4-8 distinct glyphs of context + continuation
+            # holding at least two written glyphs (a single written glyph is the suffix case above)
+            S = ctx + cont
+            for k in range(4, 9):
+                for i in range(max(0, len(ctx) + 2 - k), len(S) - k + 1):
+                    w = S[i:i + k]
+                    if len(set(w)) == k:
+                        written[tuple(min(w, w[::-1]))].append(f)
+    return orders, by_glyph, nexts, written
 
 def _monotone(st, cyclic):
     """st in order (either direction); on a cycle, up to rotation: an answer is a line, so a mind that sees the cycle
@@ -53,7 +67,7 @@ def _monotone(st, cyclic):
 
 def window_tally(W, ix, cyclic=False):
     """(given, against, families giving) for one oriented window W (cyclic: W is a stretch of a cycle)."""
-    orders, by_glyph, nexts = ix
+    orders, by_glyph, nexts, written = ix
     given = against = 0; fams = set()
     ids = None
     for g in W:
@@ -74,7 +88,9 @@ def window_tally(W, ix, cyclic=False):
             given += 1; fams.add(f)
         else:
             against += 1
-    for seq in (W, W[::-1]):                            # next answers: context = all but the last glyph
+    for f in written.get(tuple(min(W, W[::-1])), ()):   # continuations that wrote the window out
+        given += 1; fams.add(f)
+    for seq in (W, W[::-1]):                            # next/continue answers whose context ends with the head
         for props, f in nexts.get(tuple(seq[:-1]), ()):
             if seq[-1] in props:
                 given += 1; fams.add(f)

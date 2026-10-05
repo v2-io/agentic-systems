@@ -132,10 +132,11 @@ def load_all(d, upto=None):
 def proposals(parsed, pres):
     out = []
     for r in parsed:
-        if r["status"] == "ok" and r.get("answer", {}) and isinstance(r["answer"], dict) and r["answer"].get("proposals"):
+        if r["status"] == "ok" and r.get("answer", {}) and isinstance(r["answer"], dict) and \
+                (r["answer"].get("proposals") or r["answer"].get("continuation")):
             p = pres[r["pid"]]
             ctx = [g for g in p["shown"] if g != "GAP"]
-            for g in r["answer"]["proposals"]:
+            for g in r["answer"].get("proposals") or dict.fromkeys(r["answer"]["continuation"]):
                 if ok_glyph(g):
                     out.append({"mind": r["mind"], "kind": p["kind"], "ctx": ctx, "shown": p["shown"], "g": g})
     return out
@@ -240,6 +241,20 @@ def cmd_plan(a):
         if spent >= B_explore / 3:
             break
         take_follow(f, ["triad", "kernel-followup"])
+    # cycle probes: patterns minds have started to wrap back into, shown only by their end, so a repeat would be the
+    # minds' own (Joseph, 2026-10-05). Most-hinted first, up to half the share, already-manifested patterns skipped.
+    manif_ = G.manifested(parsed, pres, fam)
+    for key, h in sorted(G.cycle_hints(parsed, pres).items(), key=lambda kv: (-kv[1]["answers"], kv[0])):
+        if spent >= B_explore / 2:
+            break
+        if key in manif_:
+            continue
+        it = Q.cycle_probe(h["pattern"])
+        if it is not None:
+            try:
+                take_item(it, ["continue", "cycle-probe"])
+            except AssertionError:
+                pass
     # test what minds proposed BETWEEN two glyphs (far pairs and gaps): triad (left, proposal, right), up to a sixth
     bt = collections.Counter()
     for r_ in parsed:

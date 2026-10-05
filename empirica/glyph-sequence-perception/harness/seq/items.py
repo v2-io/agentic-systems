@@ -6,6 +6,9 @@ Item kinds
   order    4-8 glyphs. Each rep is an independent fated shuffle.
   next     an ordered context (2-8 glyphs; up to 5 before 2026-10-05) ending at the glyph whose successor is asked for.
   between  left context + right context around a gap.
+  continue an ordered context (2-8 glyphs); the mind writes what comes after it, in order, as many as come naturally
+           (up to 16). Added 2026-10-05: the only kind whose answer can show a pattern repeating itself (Joseph: a
+           cycle is a cycle "at the moment the entire pattern has repeated itself"), and an n-gram continuation.
 
 Sheet-level random parameters (PLAN.md §3 table): perp_offered 0.9 (else forced), tie_offered 0.5,
 gap_offered 0.5 (order only); option order and independent-sentence order permuted; item order shuffled with
@@ -16,7 +19,7 @@ position on the sheet are recorded per presentation.
 import json
 from common import R, uid, ok_glyph
 
-KINDS = ("triad", "order", "next", "between")
+KINDS = ("triad", "order", "next", "between", "continue")
 MAX_SHEET = 5
 P_PERP, P_TIE, P_GAP, P_SAME_SHEET = 0.9, 0.5, 0.5, 0.5
 
@@ -28,7 +31,7 @@ def make_item(kind, glyphs=None, context=None, left=None, right=None, source=Non
         assert (len(g) == 3) if kind == "triad" else (4 <= len(g) <= 8), (kind, g)
         key = {"kind": kind, "glyphs": g}
         it = {"kind": kind, "glyphs": g}
-    elif kind == "next":
+    elif kind in ("next", "continue"):
         c = list(context); assert 2 <= len(c) <= 8 and len(set(c)) == len(c) and all(ok_glyph(x) for x in c), c
         key = {"kind": kind, "context": c}
         it = {"kind": kind, "context": c, "glyphs": sorted(set(c))}
@@ -39,7 +42,7 @@ def make_item(kind, glyphs=None, context=None, left=None, right=None, source=Non
         it = {"kind": kind, "left": l, "right": r, "glyphs": sorted(set(l + r))}
     else:
         raise ValueError(kind)
-    it["iid"] = uid({"triad": "T", "order": "O", "next": "N", "between": "B"}[kind], key)
+    it["iid"] = uid({"triad": "T", "order": "O", "next": "N", "between": "B", "continue": "C"}[kind], key)
     it["source"] = source or {}
     return it
 
@@ -56,7 +59,7 @@ def shown_order(item, rep):
     if k == "order":
         s = list(item["glyphs"]); R("order-shuffle", {"iid": item["iid"], "rep": rep}).shuffle(s)
         return s
-    if k == "next":
+    if k in ("next", "continue"):
         return list(item["context"])
     if k == "between":
         return list(item["left"]) + ["GAP"] + list(item["right"])
@@ -73,6 +76,7 @@ def _intro(kind):
     return {"triad": "Each item below shows three symbols.",
             "order": "Each item below shows a set of symbols in scrambled order.",
             "next": "Each item below shows symbols in a sequence; the last one listed is where the sequence has got to.",
+            "continue": "Each item below shows symbols in a sequence; the last one listed is where the sequence has got to.",
             "between": "Each item below shows symbols in a sequence with one gap, marked GAP."}[kind]
 
 def _options(kind, f):
@@ -92,6 +96,9 @@ def _options(kind, f):
     if kind == "next":
         return ['"next": up to three symbols that could come next after the last one, most fitting first',
                 '"none": true, if nothing seems to come next']
+    if kind == "continue":
+        return ['"continue": the symbols that come after the last one, in order, as many as come naturally (up to 16)',
+                '"none": true, if nothing seems to come next']
     if kind == "between":
         return ['"between": up to three symbols that could fill the gap, most fitting first',
                 '"none": true, if nothing seems to fit there']
@@ -106,6 +113,8 @@ def _sentences(kind, f):
             s.append('Symbols that seem to be the same step go together in a nested list, like ["<s1>", ["<s2>", "<s3>"]].')
         if kind == "order" and f.get("gap"):
             s.append('Put "GAP" between two symbols where a step seems to be missing.')
+    elif kind == "continue":
+        s.append("Any symbol may come next, whether it is shown or not; it may have no name.")
     else:
         s.append("Any symbol may be proposed, including ones not shown; it may have no name.")
     return s
@@ -114,7 +123,8 @@ def _reply(kind, f):
     forms = {"triad": ['{"id": <id>, "seq": [...]}'] + (['{"id": <id>, "two": [...]}', '{"id": <id>, "none": true}'] if f["perp"] else []),
              "order": ['{"id": <id>, "seqs": [[...], ...], "extra": [...]}'] + (['{"id": <id>, "none": true}'] if f["perp"] else []),
              "next": ['{"id": <id>, "next": [...]}', '{"id": <id>, "none": true}'],
-             "between": ['{"id": <id>, "between": [...]}', '{"id": <id>, "none": true}']}[kind]
+             "between": ['{"id": <id>, "between": [...]}', '{"id": <id>, "none": true}'],
+             "continue": ['{"id": <id>, "continue": [...]}', '{"id": <id>, "none": true}']}[kind]
     return ('Reply with JSON only, no prose: {"answers": [ ... ]}, one entry per item, each one of: '
             + " or ".join(forms) + ".")
 

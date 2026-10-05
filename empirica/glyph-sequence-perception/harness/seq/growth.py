@@ -16,9 +16,11 @@ Every answer is data; support orders and is shown, it never removes anything.
            x between u v where x was claimed next to both and some answer gave x as the middle of {u, x, v}.
            Each end takes its best-supported step (answers for that middle, then claims); every other step there is
            itself a kernel and grows into its own sequence, so branches appear as sequences sharing a stretch.
-  CYCLE    a step back to the first glyph closes the sequence there (Joseph: "clamp after one repeat"). Needs >= 4
-           glyphs: on 3 glyphs all three triples are the same triad, so "each between the others" is three answers
-           disagreeing about one triad, not a loop.
+  CYCLE    only where a mind manifested it (Joseph, 2026-10-05: "see a cycle *manifested* by repeating itself
+           organically before deciding it is a cycle ... at the moment the entire pattern has repeated itself"): a
+           continue answer in which the whole pattern occurs twice in a row, the second time entirely written by the
+           mind. A row closes when its glyphs are such a pattern; every manifested pattern is also a row of its own
+           (2- and 3-glyph cycles included). Clamped after the one repeat.
   PROPOSED claims at an end that no answer has tested yet: listed at the end, not glued on (they are what the
            planner tests next).
   A row whose glyphs all lie in a longer row in the same order is that row at an earlier stage of growth, shown once
@@ -59,6 +61,11 @@ def claims(parsed, pres):
             for x in a.get("proposals", []):
                 if x != p["shown"][-1]:
                     c[frozenset((p["shown"][-1], x))] += 1
+        elif p["kind"] == "continue" and a.get("continuation"):
+            S = [p["shown"][-1]] + a["continuation"]
+            for x, y in zip(S, S[1:]):
+                if x != y:
+                    c[frozenset((x, y))] += 1
         elif p["kind"] == "between":
             gi = p["shown"].index("GAP"); l, rr = p["shown"][gi - 1], p["shown"][gi + 1]
             for x in a.get("proposals", []):
@@ -66,9 +73,98 @@ def claims(parsed, pres):
                     c[frozenset((l, x))] += 1; c[frozenset((x, rr))] += 1
     return c
 
+def canon_cycle(P):
+    rots = [P[i:] + P[:i] for i in range(len(P))]
+    return tuple(min(rots + [r[::-1] for r in rots]))
+
+def manifested(parsed, pres, fam):
+    """canonical cycle -> {"answers", "families", "minds"}: continue answers whose context + continuation holds a
+    pattern P (distinct glyphs, >= 2) twice in a row, the second copy wholly written by the mind and the first not
+    wholly shown (smallest such P)."""
+    out = {}
+    for r in parsed:
+        if r["status"] != "ok" or not isinstance(r["answer"], dict) or not r["answer"].get("continuation"):
+            continue
+        p = pres[r["pid"]]
+        if p["kind"] != "continue":
+            continue
+        ctx = list(p["shown"]); S = ctx + r["answer"]["continuation"]
+        hit = None
+        for per in range(2, len(S) // 2 + 1):
+            for i in range(0, len(S) - 2 * per + 1):
+                P = S[i:i + per]
+                # the second copy wholly written, and the first copy not wholly shown: the mind produced at least the
+                # pattern's beginning itself (Joseph: "without spoiling the beginning")
+                if i + per > len(ctx) and len(set(P)) == per and S[i + per:i + 2 * per] == P:
+                    hit = P; break
+            if hit:
+                break
+        if hit:
+            e = out.setdefault(canon_cycle(hit), {"answers": 0, "families": set(), "minds": set()})
+            e["answers"] += 1; e["families"].add(fam.get(r["mind"], r["mind"])); e["minds"].add(r["mind"])
+    return out
+
+def proposals_by_run(parsed, pres):
+    """oriented context run (every suffix of >= 2 glyphs of a what-comes-next or continue context) -> Counter of what
+    minds proposed directly after it (a continuation's first written glyph)."""
+    idx = collections.defaultdict(collections.Counter)
+    for r in parsed:
+        if r["status"] != "ok" or not isinstance(r["answer"], dict):
+            continue
+        p = pres[r["pid"]]
+        if p["kind"] == "next":
+            xs = r["answer"].get("proposals") or []
+        elif p["kind"] == "continue":
+            xs = (r["answer"].get("continuation") or [])[:1]
+        else:
+            continue
+        ctx = list(p["shown"])
+        for j in range(2, len(ctx) + 1):
+            for x in xs:
+                idx[tuple(ctx[-j:])][x] += 1
+    return idx
+
+def conditioned(run, idx):
+    """The longest suffix of `run` (>= 2 glyphs) the minds were shown, and what they proposed after it."""
+    for j in range(min(len(run), 8), 1, -1):
+        c = idx.get(tuple(run[-j:]))
+        if c:
+            return run[-j:], c
+    return None, None
+
+def cycle_hints(parsed, pres):
+    """Patterns the minds have started to wrap back into, without a full repeat yet -> answers hinting each, keyed by
+    canonical cycle, with one orientation (the order in which the pattern was written): a what-comes-next proposal of
+    a glyph already in its context, or a continuation that returns to an earlier glyph."""
+    hints = {}
+    for r in parsed:
+        if r["status"] != "ok" or not isinstance(r["answer"], dict):
+            continue
+        p = pres[r["pid"]]; ctx = list(p["shown"]); a = r["answer"]
+        pats = []
+        if p["kind"] == "next":
+            for x in a.get("proposals") or []:
+                if x in ctx[:-1]:
+                    pats.append(ctx[ctx.index(x):])
+        elif p["kind"] == "continue" and a.get("continuation"):
+            S = ctx + a["continuation"]
+            for t in range(len(ctx), len(S)):
+                if S[t] in S[:t]:
+                    P = S[S.index(S[t]):t]
+                    if len(set(P)) == len(P) >= 2:
+                        pats.append(P)
+                    break
+        for P in pats:
+            k = canon_cycle(P)
+            h = hints.setdefault(k, {"answers": 0, "pattern": P})
+            h["answers"] += 1
+    return hints
+
 def build(obs, parsed, pres, fam):
     cnt, who = tallies(obs, fam)
     adj = claims(parsed, pres)
+    manif = manifested(parsed, pres, fam)
+    runidx = proposals_by_run(parsed, pres)
     nbr = collections.defaultdict(set)
     for pair in adj:
         if len(pair) == 2:
@@ -105,7 +201,7 @@ def build(obs, parsed, pres, fam):
         return True
     def grow(s):
         """Place, one at a time and best-supported first, every glyph some answer puts beyond an end or between two
-        neighbours; close a cycle when answers put the first glyph beyond the last (>= 4 glyphs). A placement is taken
+        neighbours; close a cycle only when the row's glyphs are a pattern a mind manifested by repeating it. A placement is taken
         only if no longer window containing it was answered against more than for (the n-gram context decides which
         branch continues the row; the other kernel still grows into its own row)."""
         cyc = False
@@ -123,12 +219,13 @@ def build(obs, parsed, pres, fam):
                 for side in ("R", "L"):
                     p, q = (s[-2], s[-1]) if side == "R" else (s[1], s[0])
                     for x in third.get(pairk(p, q), ()):
-                        if x not in ins or (x == (s[0] if side == "R" else s[-1]) and len(s) >= 4):
+                        if x not in ins:
                             k = mid(p, q, x)
-                            if k and x in ins:      # closing: the wrap triple must be answered too
-                                k = min(k, mid(q, x, s[1] if side == "R" else s[-2]))
                             if k:
                                 cands.append(((k, x), side, None, x))
+            m_ = manif.get(canon_cycle(s)) if not cyc else None     # closing: only a manifested pattern
+            if m_:
+                cands.append(((m_["answers"], s[0]), "R", None, s[0]))
             cands.sort(key=lambda c: c[0], reverse=True)
             nxt = None
             for _, how, i, x in cands:
@@ -161,6 +258,9 @@ def build(obs, parsed, pres, fam):
                 key = ("line", tuple(min(s, s[::-1])))
             if key not in seen:
                 seen.add(key); found.append({"glyphs": list(key[1]), "cyclic": key[0] == "cycle"})
+    for P in sorted(manif):                       # every manifested pattern is a row of its own
+        if ("cycle", P) not in seen:
+            seen.add(("cycle", P)); found.append({"glyphs": list(P), "cyclic": True})
     def in_order(small, big):
         """small's glyphs appear in big in small's order (either direction; cyclically if big is a cycle)."""
         g = big["glyphs"]
@@ -197,6 +297,12 @@ def build(obs, parsed, pres, fam):
     for s in kept:
         g = s["glyphs"]
         seq = g + g[:2] if s["cyclic"] else g
+        if s["cyclic"] and len(g) <= 3:
+            seq = []                                # on 2-3 glyphs the triples of a cycle say nothing; the repeat does
+        s["manifest"] = None
+        if s["cyclic"]:
+            m_ = manif.get(canon_cycle(g), {"answers": 0, "families": set(), "minds": set()})
+            s["manifest"] = {"answers": m_["answers"], "families": sorted(m_["families"]), "minds": sorted(m_["minds"])}
         steps = []
         for a, m, b in zip(seq, seq[1:], seq[2:]):
             t = tuple(sorted((a, m, b))); c = cnt.get(t, collections.Counter())
@@ -222,7 +328,9 @@ def build(obs, parsed, pres, fam):
             fa = set(st["asked"]) & set(live)
             if st["answers"] + st["other"] and fa:
                 scored.append(len(set(st["families"]) & fa) / len(fa) * st["answers"] / (st["answers"] + st["other"]))
-        s["stability"] = sum(scored) / len(scored) if scored else 0.0
+        s["stability"] = sum(scored) / len(scored) if scored else (1.0 if s["cyclic"] else 0.0)
+        if s["cyclic"]:                             # x the share of live families whose minds manifested the repeat
+            s["stability"] *= len(set(s["manifest"]["families"]) & set(live)) / len(live)
         # higher order: windows of 4-8 glyphs judged whole. The rank is scaled by their agreement where asked.
         ws = W.row_windows(g, s["cyclic"], ix)
         gv = sum(w[3] for w in ws); ag = sum(w[4] for w in ws)
@@ -231,24 +339,34 @@ def build(obs, parsed, pres, fam):
             s["stability"] *= gv / (gv + ag)
         sm = W.summarize_ws(ws)
         s["windows"] = sm
-        s["weakest"] = min(st["answers"] for st in steps)
+        s["weakest"] = min((st["answers"] for st in steps), default=0)
         s["answers"] = sum(st["answers"] for st in steps)
-        s["proposed"] = {}
+        # what minds proposed after a run of THIS row (the longest run they were shown, >= 2 glyphs), not yet tested
+        # (no triad answer put the run's last glyph between its predecessor and the proposal). Keyed by the run, so a
+        # proposal is conditioned on the row's own context (Joseph, 2026-10-05), not pooled over every context ending
+        # in the same glyph.
+        def props_after(run):
+            ctx, c = conditioned(run, runidx)
+            if not ctx:
+                return None
+            xs = [x for x, _ in c.most_common() if x not in g and mid(ctx[-2], ctx[-1], x) == 0]
+            return ("".join(ctx), xs) if xs else None
+        s["proposed"] = []
         if not s["cyclic"]:
-            for p, q in ((g[-2], g[-1]), (g[1], g[0])):
-                s["proposed"][q] = sorted((x for x in nbr.get(q, ()) if x not in g and mid(p, q, x) == 0),
-                                          key=lambda x: (-adj[frozenset((q, x))], x))
-        # branch proposals inside the row: glyphs minds proposed next to an interior glyph q (every glyph of a cycle),
-        # not in the row, and not yet tested -- no answer has put q between x and either of q's neighbours
-        s["proposed_inside"] = {}
+            for run in (g, g[::-1]):
+                pr = props_after(run)
+                if pr:
+                    s["proposed"].append(pr)
+        # the same inside the row, in both directions: possible branches where the row's run so far leads elsewhere
+        s["proposed_inside"] = []
         n = len(g)
-        idx = range(n) if s["cyclic"] else range(1, n - 1)
-        for i in idx:
-            q = g[i]; nb = (g[i - 1], g[(i + 1) % n])
-            xs = sorted((x for x in nbr.get(q, ()) if x not in g and all(mid(u, q, x) == 0 for u in nb)),
-                        key=lambda x: (-adj[frozenset((q, x))], x))
-            if xs:
-                s["proposed_inside"][q] = xs
+        ring = g + g if s["cyclic"] else g
+        for i in (range(n) if s["cyclic"] else range(1, n - 1)):
+            for run in ((ring[max(0, i + n - 8):i + n + 1] if s["cyclic"] else g[:i + 1]),
+                        (ring[i:i + 8][::-1] if s["cyclic"] else g[i:][::-1])):
+                pr = props_after(run)
+                if pr:
+                    s["proposed_inside"].append(pr)
     kept.sort(key=lambda s: (-s["stability"], -len(s["glyphs"]), -s["answers"], s["glyphs"]))
     return kept, fams, live
 
@@ -265,13 +383,16 @@ def stable_stretches(seqs):
         g, steps = s["glyphs"], s["steps"]
         ok = [good_step(x) for x in steps]
         if s["cyclic"]:
-            if all(ok):
+            if all(ok) and len((s.get("manifest") or {}).get("families", [])) >= 2:
                 rots = [g[i:] + g[:i] for i in range(len(g))]
                 runs.add(("cycle", tuple(min(rots + [r[::-1] for r in rots])))); continue
-            k = ok.index(False)                    # rotate so the ring starts just after a gap
-            ring = g + g[:2]
-            order = list(range(k + 1, len(steps))) + list(range(0, k + 1))
-            seq_steps = [(ring[i:i + 3], ok[i]) for i in order]
+            if all(ok):                            # every step good but the repeat not manifested by 2 families:
+                seq_steps = [(g[i:i + 3], ok[i]) for i in range(len(g) - 2)]       # count it as the line it is
+            else:
+                k = ok.index(False)                # rotate so the ring starts just after a gap
+                ring = g + g[:2]
+                order = list(range(k + 1, len(steps))) + list(range(0, k + 1))
+                seq_steps = [(ring[i:i + 3], ok[i]) for i in order]
         else:
             seq_steps = [(g[i:i + 3], ok[i]) for i in range(len(steps))]
         cur = []
@@ -335,14 +456,14 @@ def main():
          "- **family columns** (" + ", ".join(fams) + "): of the row's steps that family's minds answered, the share they gave. 1.00 = it gave every step it was asked; 0.50 = half; 0.00 = it was asked some and gave none; **–** = no mind of that family has answered any of the row's triads. So a value below 1.00 is disagreement, not missing coverage. " + ("" if set(fams) == set(live) else "Families not being asked any more (" + ", ".join(f for f in fams if f not in live) + ": " + ", ".join(m for m, f_ in fam.items() if f_ not in live) + ", paused) show – on rows found since."),
          "- **windows**: higher-order evidence, runs of 4–8 consecutive glyphs judged as a whole (a mind ordering exactly those glyphs, shown shuffled, or proposing the next glyph after the run's first ones). Shown as *whole/asked of all*: windows answered more often in the row's order than not / windows any answer bears on / all windows of the row. ✗ marks the shortest window answered against more than for (given:against), where a false join sits. The rank is multiplied by the share of window answers that agree, and growth takes a step only where no window around it is answered against more than for: which branch continues a row is decided by the preceding glyphs, not by a triad alone.",
          "- **n**: glyphs in the row. **answered**: steps some mind has answered, of all the row's steps (coverage). **weakest**: the fewest answers that gave any one step (0 = a step no answer has given yet; the planner asks it). **against**: other answers to the row's triads (a different middle, “only two go together”, or ⟂).",
-         "- **shared**: glyphs that also sit in other rows (branch points). **proposed beyond**: glyphs minds proposed next to an end that no answer has tested yet, per end (`end→proposals`, up to six). **proposed inside**: the same at glyphs inside the row, every glyph of a cycle: possible branches (`glyph→proposals`, up to four).", "",
+         "- **shared**: glyphs that also sit in other rows (branch points). **proposed beyond**: what minds proposed after a run of this row's end (`run→proposals`; the run is the longest stretch of the row, in the direction of reading, that the minds were shown, at least two glyphs), not yet tested; up to six. **proposed inside**: the same after runs ending inside the row, in both directions (on a cycle, everywhere): possible branches; up to four.", "",
          "| # | sequence | n | answered | windows | rank | " + " | ".join(fams) + " | weakest | against | shared | proposed beyond | proposed inside |",
          "|---|---|---|---|---|---|" + "---|" * len(fams) + "---|---|---|---|---|"]
     for i, s in enumerate(seqs[:a.top], 1):
         shown = " ".join(s["glyphs"]) + (" ↻" if s["cyclic"] else "")
         # line breaks for rendering (Joseph, 2026-10-05): shared every 6 glyphs, proposals after each ';'
-        prop = ";<br>".join(f"{q}→{''.join(xs[:6])}" for q, xs in s["proposed"].items() if xs)
-        inside = ";<br>".join(f"{q}→{''.join(xs[:4])}" for q, xs in s["proposed_inside"].items())
+        prop = ";<br>".join(f"{run}→{''.join(xs[:6])}" for run, xs in s["proposed"])
+        inside = ";<br>".join(f"{run}→{''.join(xs[:4])}" for run, xs in s["proposed_inside"])
         sh = [x for x in s["glyphs"] if owners[x] >= 2]
         w_ = s["windows"]
         wcell = f"{w_['whole']}/{w_['asked']} of {w_['windows']}" + (f"<br>✗ {w_['breaks'][0]}" if w_["breaks"] else "")

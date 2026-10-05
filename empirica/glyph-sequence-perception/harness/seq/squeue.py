@@ -121,6 +121,8 @@ def extension_items(piece, st, neighbours, round_id):
     out = []
     k = min(len(g), r.randint(3, 8))
     out.append((I.make_item("next", context=g[-k:], source=src), piece["stability"] + 0.3))
+    kc = min(len(g), r.randint(3, 8))             # and a continuation: the minds write on from the end, in order
+    out.append((I.make_item("continue", context=g[-kc:], source=dict(src, how="continue")), piece["stability"] + 0.3))
     # candidates beyond this end, in order: what minds proposed here; what minds placed with the end in their answers.
     # Seeds supply none (2026-10-04: seed-written continuations were tested here and could move an end -- Joseph: "a
     # more subtle example of the seeds having more prominence than they were intended to have")
@@ -135,6 +137,18 @@ def extension_items(piece, st, neighbours, round_id):
         if len(set(win)) >= 4:
             out.append((I.make_item("order", win[:8], source=dict(src, test=cands[0])), piece["stability"]))
     return out
+
+def cycle_probe(pattern):
+    """A continue item for a suspected cycle that shows only the pattern's end, never its beginning (Joseph: "enough
+    of the end of the sequence without spoiling the beginning"): the last ceil(p/2) glyphs, at least 2. A 2-glyph
+    pattern cannot be shown without its beginning, so it gets no probe (it can still repeat organically elsewhere)."""
+    P = list(pattern)
+    if len(P) < 3:
+        return None
+    k = max(2, -(-len(P) // 2))
+    if k >= len(P):
+        return None
+    return I.make_item("continue", context=P[-k:], source={"kind": "cycle-probe", "pattern": "".join(P)})
 
 def gap_items(piece, round_id):
     """between items inside an established sequence (does anything belong between neighbours?)."""
@@ -316,7 +330,7 @@ def sequence_work(pc, ends, cooc, follow_by_glyph, round_id, asked_next=None):
             continue
         nb = list(pc.get("hints", [])) + [x for x in cooc.get(st["end"], []) if x not in pc.get("hints", [])]
         gen = extension_items(pc, st, nb, round_id)
-        nx = [it for it, _ in gen if it["kind"] == "next"]
+        nx = [it for it, _ in gen if it["kind"] in ("next", "continue")]
         tr = [it for it, _ in gen if it["kind"] == "triad"]
         orw = [it for it, _ in gen if it["kind"] == "order"]
         work += [(1, it) for it in nx]

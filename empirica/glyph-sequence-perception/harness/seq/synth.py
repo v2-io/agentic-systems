@@ -138,6 +138,14 @@ class Truth:
                 a = self.answer_triad(m, sh, f, r)
             elif sheet["kind"] == "order":
                 a = self.answer_order(m, sh, f, r)
+            elif sheet["kind"] == "continue":
+                seq, cont = list(sh), []
+                for _ in range(16):
+                    nx = self.answer_next(m, seq, f, r)
+                    if nx.get("none"):
+                        break
+                    cont.append(nx["next"][0]); seq.append(nx["next"][0])
+                a = {"continue": cont} if cont else {"none": True}
             else:
                 a = self.answer_next(m, sh, f, r, between=sheet["kind"] == "between")
             out.append({"id": e["id"], **a})

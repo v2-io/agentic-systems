@@ -130,6 +130,20 @@ def parse_props(a, key):
         raise Bad("props-empty")
     return {"proposals": out[:3]}
 
+def parse_continue(a):
+    """-> {"continuation": [...]} in the mind's order, repeats kept (they are the point), up to 16; or {"none": True}."""
+    if a.get("none") and not a.get("continue"):
+        return {"none": True}
+    v = a.get("continue")
+    if isinstance(v, str):
+        v = v.split() if " " in v.strip() else list(v.strip())
+    if not isinstance(v, list) or not v:
+        raise Bad("continue")
+    out = [U.normalize("NFC", str(x)).strip() for x in v if str(x).strip()]
+    if not out:
+        raise Bad("continue-empty")
+    return {"continuation": out[:16]}
+
 def parse_sheet(raw, sheet):
     """-> {pid: {"status": "ok"|"unparsed", "answer": ..., "why": ...}} for every entry of the sheet."""
     ans = _answers(raw)
@@ -151,6 +165,8 @@ def parse_sheet(raw, sheet):
                 v = parse_order(a, shown)
             elif k == "next":
                 v = parse_props(a, "next")
+            elif k == "continue":
+                v = parse_continue(a)
             else:
                 v = parse_props(a, "between")
             out[e["pid"]] = {"status": "ok", "answer": v}
