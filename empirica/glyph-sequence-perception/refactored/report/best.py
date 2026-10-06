@@ -21,7 +21,7 @@ WHAT IS TESTED
             control, REJECTED when "no" is. Evidence about that run only, never its sub-runs.
   A link    positive evidence, counted one way (§2a): GENERATED when >= 2 families name it as a continuation -- S on
             shown answers (the deciding context, the longest asked suffix, in either reading direction), else W on
-            written answers. A "none" or another continuation is not evidence against a link (§2b: "a proposal list
+            written answers, else P on forced picks (the generator pass, METHODOLOGY §4a). A "none" or another continuation is not evidence against a link (§2b: "a proposal list
             that omits x is not a rejection of x"); it is evidence about an end or a branch. RECOGNISED (R) when not
             generated but recognition answers at the link say "yes" beyond the near control. REJECTED (X) when they
             say "no" beyond it -- the only evidence against a link, and it overrides generation (shown as a conflict).
@@ -50,7 +50,7 @@ import tree as TR                                           # noqa: E402
 LEVEL = 0.5
 Z = 1.2816
 TOP = 150
-POSITIVE = ("S", "W", "R")
+POSITIVE = ("S", "W", "P", "R")
 FA = {"claude": "cl", "gemini": "ge", "grok": "gr", "muse": "mu"}
 
 # ------------------------------------------------------------------ the two decision forms
@@ -93,9 +93,10 @@ def link(g, i, Tp):
     shown = [d for d in (Tp.shown_dir(fwd, b), Tp.shown_dir(bwd, a)) if d]
     written = [w for w in (Tp.written_dir(fwd, b), Tp.written_dir(bwd, a)) if w]
     naming = lambda ds: set().union(*({f for f, (k, n) in d["counts"].items() if k > 0} for d in ds)) if ds else set()
-    sf, wf = naming(shown), naming(written)
-    gen = "S" if len(sf) >= 2 else ("W" if len(wf) >= 2 else None)
-    basis = written if gen == "W" or not shown else shown
+    picked = [d for d in (Tp.pick_dir(fwd, b), Tp.pick_dir(bwd, a)) if d]
+    sf, wf, pf = naming(shown), naming(written), naming(picked)
+    gen = "S" if len(sf) >= 2 else ("W" if len(wf) >= 2 else ("P" if len(pf) >= 2 else None))
+    basis = {"W": written, "P": picked}.get(gen) or shown or written or picked
     obs = TR.estimate([d["counts"] for d in basis])[0] if basis else None
     rc = collections.defaultdict(lambda: [0, 0])
     for d in (Tp.recognition_dir(fwd, b), Tp.recognition_dir(bwd, a)):
@@ -104,7 +105,7 @@ def link(g, i, Tp):
     rc = {f: tuple(v) for f, v in rc.items()}
     rec = yesno(rc, near(Tp, rc))[0] if rc else None
     status = "X" if rec == "below" else (gen or ("R" if rec == "beyond" else None))
-    return {"status": status, "gen": gen, "obs": obs, "fams": len(sf if gen == "S" else wf), "rec": rec,
+    return {"status": status, "gen": gen, "obs": obs, "fams": len({"S": sf, "W": wf, "P": pf}.get(gen, set())), "rec": rec,
             "uk": sum(d["uk"] for d in shown), "un": sum(d["un"] for d in shown)}
 
 def judge(g, Tp):
@@ -119,7 +120,7 @@ def link_summary(ls):
 
 def link_cell(s):
     c = s["kinds"]
-    out = " ".join(f"{k}{c[k]}" for k in ("S", "W", "R", "X", "–") if c.get(k))
+    out = " ".join(f"{k}{c[k]}" for k in ("S", "W", "P", "R", "X", "–") if c.get(k))
     return out + (f" ⚠{s['conflict']}" if s["conflict"] else "")
 
 def tests(Tp, g, cyclic=False):
@@ -270,7 +271,7 @@ def main():
           "- **n**: glyphs. **us**: the mean UTF-8 bytes per glyph (1 = ASCII … 4 = astral planes).",
           "- **yes − shuffled**: recognition strength. The posterior-mean difference between the families' \"yes, coherent\" rate for this run and their rate for shuffled runs, averaged over families. It orders runs within a length; length sorts the table.",
           "- **yes/n per family**: \"yes\" answers / answers about this run, either orientation (cl = Claude, ge = Gemini, gr = Grok).",
-          "- **links**: each link's strongest evidence. **S**: generated in shown answers by ≥ 2 families. **W**: generated in written answers by ≥ 2 families. **R**: not generated, but recognised (yes beyond the near control). **X**: rejected (no beyond the near control). **–**: no evidence either way yet. **⚠**: generated *and* rejected.",
+          "- **links**: each link's strongest evidence. **S**: generated in shown answers by ≥ 2 families. **W**: generated in written answers by ≥ 2 families. **P**: picked by ≥ 2 families in the forced generator pass (METHODOLOGY §4a). **R**: not generated, but recognised (yes beyond the near control). **X**: rejected (no beyond the near control). **–**: no evidence either way yet. **⚠**: generated *and* rejected.",
           "- **unr**: shown answers given with 0 thinking tokens that name the links, of all such answers there. Reasoned and first-impression answers stay apart until the data says whether they differ (METHODOLOGY §2a).",
           "- **tests**: passed/challenged. **s**: skip tests (a sequence predicts no). **t**: triads. **o**: order answers (triad era). A ⚠ marks a challenge; **–** means untested.",
           "- Display: a run monotonic in numeric value (else in code points) is shown ascending.", ""]

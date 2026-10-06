@@ -16,6 +16,15 @@ Question kinds (refactored protocol "ctx-0.1"):
              sequences out in chart order (a random window was `𝘭𝘮𝘯𝘰𝘱`, another `🕘🕗🕖🕕`), so its "yes" rate mixes
              real sequences with arbitrary walks and decides nothing. With the whys, it shows how readily each family
              calls a code-chart walk coherent.
+  pick       a known sequence (2-24 glyphs); the mind picks a single character that would extend it, and gives a
+             reason (saved, not scored). No "none" option: a forced write, the generator of METHODOLOGY §4a. Joseph,
+             2026-10-05: "Pick a single character that would extend this sequence. You may be creative, but give a
+             reason" -- sampled, so a sequence gets a distribution ({"d" => 72, "A" => 7, "1" => 13, "α" => 2}: a main
+             branch and weaker ones), and every branch is extended in turn ("abcdefg...", "abc123", "abcABC",
+             "abcαβ...": "Branching from seeds like tendrils, and then most of them are easier to recognize than to
+             generate"). Effort normal, not low. Asked of the generator minds, SAMPLES times each on separate sheets;
+             fresh random contexts asked the same way (probe {"null": true}) show how often a repeat happens by chance.
+             A mind that declines anyway is kept as outcome "none".
 Answer options are words, never glyphs, so no glyph is reserved (METHODOLOGY §4).
 
 Sheets hold 1-5 questions of one kind, in a fated order (no two questions sharing a context adjacent); the sheet
@@ -31,7 +40,8 @@ import fate                                                # noqa: E402
 PROTOCOL = "ctx-0.1"
 MAX_SHEET = 5
 MAX_CONTINUE = 24
-KINDS = ("continue", "inhibit", "triad", "cohere")
+KINDS = ("continue", "inhibit", "triad", "cohere", "pick")
+SAMPLES = 5                       # pick: samples per context per generator mind (chosen without evidence)
 MAX_RUN = 24                       # the longest run a cohere question shows (chosen without evidence)
 SYSTEM = "You are a participant in a short perception study. Answer exactly as asked."
 VS = {"︎", "️"}
@@ -123,8 +133,8 @@ def question(kind, context, candidate=None, source=None, variant=None, probe=Non
     c = list(context)
     if variant == "reflection":
         assert 3 <= len(c) <= 8 and all(is_glyph(x) for x in c), c
-    elif kind == "cohere":
-        assert 3 <= len(c) <= MAX_RUN and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c
+    elif kind in ("cohere", "pick"):
+        assert (3 if kind == "cohere" else 2) <= len(c) <= MAX_RUN and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c
     else:
         assert 2 <= len(c) <= 8 and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c
     if kind == "triad":
@@ -138,9 +148,11 @@ def question(kind, context, candidate=None, source=None, variant=None, probe=Non
         key["candidate"] = candidate
     if variant:
         key["variant"] = variant                       # a different question from the plain one at the same context
+    if kind == "pick":
+        key["sample"] = (probe or {}).get("sample", 0)  # each sample is its own question, so it lands on its own sheet
     if probe:
         key["probe"] = probe                           # e.g. {"control": "near"}: how the question was sampled
-    q = dict(key, qid=uid({"continue": "Q", "inhibit": "I", "cohere": "C"}[kind], key), source=source or {})
+    q = dict(key, qid=uid({"continue": "Q", "inhibit": "I", "cohere": "C", "pick": "P"}[kind], key), source=source or {})
     return q
 
 # ------------------------------------------------------------------ prompts
@@ -165,6 +177,13 @@ def _lines(kind, sheet):
                  '"none" is expected often and is fully valuable.',
                 'Copy each symbol exactly, or write "#1", "#2", … for its place in the item.']
         reply = '{"id": <id>, "seq": [...]} or {"id": <id>, "two": [...]} or {"id": <id>, "none": true}'
+    elif kind == "pick":       # Joseph's wording, 2026-10-05 ("a single", never "the one": no answer is expected)
+        intro = "Each item below shows a sequence of symbols. Pick a single character that would extend this sequence. You may be creative, but give a reason."
+        opts = ['"next": the single character you pick',
+                '"why": your reason, briefly']
+        sents = ["Judge each item on its own rather than building a scheme across items.",
+                 "Any symbol may come next, whether it is shown or not; it may have no name."]
+        reply = '{"id": <id>, "next": "<symbol>", "why": "..."}'
     elif kind == "cohere":     # Joseph, 2026-10-05: "does this look like a coherent sequence? why?"
         intro = "Each item below shows a run of symbols. Does it look like a coherent sequence? And why?"
         opts = ['"answer": "yes", if it looks like a coherent sequence',
@@ -198,6 +217,7 @@ VARIANTS = {None: None, "no-lookup": "Please answer without looking anything up:
 # prompt only where it must: no "first impressions", and leave to reason and look things up. Its answers are candidates
 # (generation), kept apart from the tree's evidence; recognition of them is asked separately (inhibit questions).
 REASONED_OPENER = "Take your time with this task."
+PICK_OPENER = "A short task. Think it through as much as you like."
 FIRST_IMPRESSIONS = "Go by first impressions, and judge each item on its own rather than building a scheme across items."
 REASONED_SENTENCE = ("Reason as much as you like, and look symbols up with the tools provided if that helps; judge each "
                      "item on its own rather than building a scheme across items.")
@@ -210,11 +230,12 @@ REASONED_NONE = 'If you can work out what comes next, give it, even if that take
 def prompt(sheet, variant=None):
     intro, opts, sents, reply = _lines(sheet["kind"], sheet)
     extra = [VARIANTS[variant]] if VARIANTS.get(variant) else []
-    opener = OPENER
+    opener = OPENER if sheet["kind"] != "pick" else PICK_OPENER
     if variant == "reasoned":
         opener = REASONED_OPENER
         sents = [REASONED_SENTENCE if x == FIRST_IMPRESSIONS else REASONED_NONE if x == NONE_INVITE else x for x in sents]
-    L = [opener, intro, "For each item, answer with one of:"] + [f"  - {o}" for o in opts] + sents + extra + ["", "Items:"]
+    head = "For each item, answer with:" if sheet["kind"] == "pick" else "For each item, answer with one of:"
+    L = [opener, intro, head] + [f"  - {o}" for o in opts] + sents + extra + ["", "Items:"]
     for e in sheet["entries"]:
         o = {"id": e["id"], "s": e["context"]}
         if sheet["kind"] == "inhibit":
@@ -234,10 +255,10 @@ def sheets(round_id, questions):
         R("sheet-order", fk).shuffle(qs)
         r = R("sheet-sizes", fk)
         i = 0
-        pending = []                                   # cohere: questions set aside so no sheet shows one glyph set twice
+        pending = []                                   # cohere / pick: set aside so no sheet shows one glyph set (or context) twice
         while i < len(qs) or pending:
             n = r.randint(1, MAX_SHEET)
-            if kind == "cohere":
+            if kind in ("cohere", "pick"):
                 chunk, seen, rest = [], set(), []
                 for q in pending + qs[i:]:
                     k = frozenset(q["context"])
@@ -371,6 +392,21 @@ def _records(sheet, ledger_rows, mind, family, judge, questions, variant):
                         rec["other_content"] = other
                     if vs:
                         rec["vs_stripped"] = True
+        elif sheet["kind"] == "pick":
+            rec["why"] = str(a.get("why", ""))[:600]
+            rec["tags"]["sample"] = q.get("sample", 0)
+            rec["tags"]["null"] = bool((q.get("probe") or {}).get("null"))
+            v = a.get("next")
+            if v is None or (isinstance(v, str) and v.strip().lower() in ("", "none", "null")) or a.get("none"):
+                rec["outcome"] = "none"
+            else:
+                t, s_ = clean(v if isinstance(v, str) else (v[0] if isinstance(v, list) and v else str(v)))
+                if s_:
+                    rec["vs_stripped"] = True
+                if is_glyph(t):
+                    rec["outcome"] = "continuation"; rec["continuation"] = [t]
+                else:
+                    rec["outcome"] = "other"; rec["other_content"] = [{"s": t[:40], "pos": 0, "class": content_class(t)}]
         elif sheet["kind"] == "triad":
             rec["shown"] = list(e["context"])
             rec["tags"]["factors"] = {"perp": True, "tie": False}      # comparable with the triad era's perp, no-tie

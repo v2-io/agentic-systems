@@ -28,6 +28,10 @@ run as shown (`cohere`); their controls -- the same glyphs shuffled -- and chart
 probe.py) apart (`cohere_ctl`, and per family and class in `cohere_rate`); the why of every answer kept (`cohere_why`),
 not read by anything yet. A run's coherence is evidence
 about that run only, never about its sub-runs.
+PICKS (METHODOLOGY §4a, the generator pass): forced single-symbol continuations, sampled, at normal effort, kept as
+their own channel (`picks`: ctx -> family -> [x | none | other]); answers at fresh random contexts asked the same way
+are the null, apart (`pick_null`). Positive evidence only, like every generation: a pick names a link, and picks
+elsewhere are a branch or noise, never a rejection.
 TRIADS and ORDER answers (§4: consistency checks; they create no edges): triads per family (`triads_fam`, both eras),
 order answers indexed by glyph (`orders`, the triad era's). REFLECTIONS (§3): answers to contexts that turn back on
 themselves, kept apart (`reflections`); they never grow a sequence.
@@ -56,6 +60,7 @@ ROOT = HERE.parents[1]
 ANS = ROOT / "data" / "answers"
 OUT = ROOT / "data" / "tree"
 MAXK = 8
+PICK_MAXK = 24             # picks are asked at whole known sequences, up to probe.MAX_RUN glyphs
 NONE, OTHER = "<none>", "<other>"
 
 def load():
@@ -147,6 +152,8 @@ class Tree:
         self.cohere_ctl = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # shuffled run -> ...
         self.cohere_rate = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # fam -> class -> verdict
         self.cohere_why = collections.defaultdict(list)     # run -> [(family, mind, verdict, why)]
+        self.picks = collections.defaultdict(lambda: collections.defaultdict(list))      # ctx -> fam -> [x|none|other]
+        self.pick_null = collections.defaultdict(lambda: collections.defaultdict(list))  # null ctx -> fam -> [...]
         self.control_pairs = set()                        # (ctx, candidate) asked as controls (kept out of `inhibit`)
         self.cycles = {}
         self.real = set()                       # contexts some real mind answered (not only seed votes)
@@ -218,6 +225,9 @@ class Tree:
                     self.control_pairs.add((tuple(r["context"]), r["candidate"]))
                 else:
                     self.inhibit[(tuple(r["context"]), r["candidate"])][r["family"]][o] += 1
+            elif k == "pick" and o in ("continuation", "none", "other"):
+                x = r["continuation"][0] if o == "continuation" else (NONE if o == "none" else OTHER)
+                ((self.pick_null if (r.get("tags") or {}).get("null") else self.picks)[tuple(r["context"])][r["family"]]).append(x)
             elif k == "cohere" and o in ("yes", "no", "cant-tell"):
                 ctl = (r.get("tags") or {}).get("control")
                 run = tuple(r["context"])
@@ -413,6 +423,22 @@ class Tree:
             if c:
                 return {f: (v["yes"], sum(v.values())) for f, v in c.items()}
         return None
+
+    def pick_dir(self, run, x):
+        """one reading direction of a link on forced picks: per family (k picking x, n) at the longest suffix of `run`
+        (2-24 glyphs) with picks -> {"counts": ...} or None"""
+        for j in range(min(PICK_MAXK, len(run)), 1, -1):
+            c = self.picks.get(tuple(run[-j:]))
+            if c:
+                return {"counts": {f: (sum(1 for y in xs if y == x), len(xs)) for f, xs in c.items()}}
+        return None
+
+    def pick_branches(self, ctx):
+        """the branches at a picked context: every pick, pooled over families -> Counter {x: draws} (none/other kept)"""
+        c = collections.Counter()
+        for xs in self.picks.get(tuple(ctx), {}).values():
+            c.update(xs)
+        return c
 
     def cohere_control_counts(self, family, cls="shuffled"):
         """a family's (yes, n) over cohere answers of a class: "shuffled" controls, "chart" windows, or "real" runs"""

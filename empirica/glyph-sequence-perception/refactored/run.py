@@ -89,6 +89,9 @@ def cmd_plan(a):
         if s.get("variant") == "reasoned":                # the reasoned pass goes to reasoner minds only
             s["minds"] = list(reg["roster"].get("reasoners", []))
             continue
+        if s["kind"] == "pick":                            # the generator pass goes to generator minds only (METHODOLOGY §4a)
+            s["minds"] = list(reg["roster"].get("generators", []))
+            continue
         s["minds"] = list(core) + [m for m in second if PR.R("second-mind", {"sid": s["sid"], "m": m}).random() < share]
     wj(rd / "questions.jsonl", qs); wj(rd / "sheets.jsonl", sh)
     stats["sheets"] = len(sh)

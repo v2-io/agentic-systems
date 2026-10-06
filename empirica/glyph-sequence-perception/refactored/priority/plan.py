@@ -49,6 +49,9 @@ JOIN_WEAK = 0.75             # the planner's own cut for a "weak" link inside a 
 # link "until it passes" is optional stopping, which would let noise carry links over any cut.
 WRITTEN_RECOGNIZE_PER_ROUND = 40   # recognition questions for written continuations past shown ends (chosen without evidence)
 COHERE_PER_ROUND = 80        # whole-run recognition questions a round, each with its shuffled control (chosen without evidence)
+PICK_PER_ROUND = 30          # forced-pick contexts a round, each sampled PR.SAMPLES times by each generator mind (chosen without evidence)
+BUMP_MIN = 2                 # a branch: an answer drawn at least this often at its context, a repeat (chosen without evidence; the nulls calibrate it)
+PICK_NULL_EVERY = 4          # one null (fresh random) context per this many real ones, same length (chosen without evidence)
 CHART_CONTROL_SHARE = 0.25   # share of runs that also get a chart window -- a descriptive measurement, not a decoy (chosen without evidence)
 FRESH_TIERS = {"1-byte": (4, [(0x21, 0x7E)]), "2-byte": (3, [(0xA1, 0x7FF)]),
                "3-byte": (2, [(0x2000, 0x2BFF), (0x2E80, 0x33FF)]), "4-byte": (1, [(0x1D300, 0x1D7FF), (0x1F000, 0x1FBFF)])}
@@ -78,6 +81,8 @@ class Plan:
         distinct = variant == "reflection" or len(set(ctx)) == len(ctx)       # reflections turn back on themselves
         lo, hi = (3, PR.MAX_RUN) if kind == "cohere" else (2, 8)
         if not (lo <= len(ctx) <= hi) or not distinct or not all(PR.is_glyph(x) for x in ctx):
+            return False
+        if kind == "pick" and tuple(ctx) in (self.T.pick_null if (probe or {}).get("null") else self.T.picks):
             return False
         if kind == "cohere" and (tuple(ctx) in self.T.cohere or tuple(ctx[::-1]) in self.T.cohere
                                  or tuple(ctx) in self.T.cohere_ctl):
@@ -142,8 +147,8 @@ def written_recognition(P, seqs):
 
 def cohere_work(P, seqs, written_seqs, seeds, rid):
     """Recognition of whole runs (METHODOLOGY §1, §4a: "best recognized sequences as sequences" is the goal). Candidates
-    from every source the planner has -- the tree's walks (most stable first), the runs written answers carry, and the
-    survey sequences (a fated order) -- interleaved, so no source crowds out the others. Each run is asked once, as it was
+    from every source the planner has -- the tree's walks (most stable first), the runs written answers carry, the
+    survey sequences (a fated order), and the branches the picks have grown (main branches first) -- interleaved, so no source crowds out the others. Each run is asked once, as it was
     found (orientation is not chosen by outcome), with its shuffled control: no stopping rule. Runs of 3-MAX_RUN glyphs;
     a seed whose glyphs repeat (other than a cycle's closing repeat) is not a run and is left out.
     -> [(kind, run, None, src)] with each control right after its run"""
@@ -158,8 +163,9 @@ def cohere_work(P, seqs, written_seqs, seeds, rid):
         if len(set(g)) == len(g):
             sd.append((g, x.get("sid")))
     PR.R("cohere-seed-order", {"round": rid}).shuffle(sd)
+    branches = sorted(pick_branches(P.T), key=lambda b: (-b[1] / b[2], b[0]))      # main branches first; each asked once
     sources = [runs_from([s["glyphs"] for s in seqs], "walk"), runs_from([s["glyphs"] for s in written_seqs], "written"),
-               ((g, "seed:" + str(sid)) for g, sid in sd)]
+               ((g, "seed:" + str(sid)) for g, sid in sd), runs_from([c for c, _, _ in branches], "pick-branch")]
     out, seen = [], set()
     n_runs = 0
     while sources and n_runs < COHERE_PER_ROUND:
@@ -187,6 +193,73 @@ def cohere_work(P, seqs, written_seqs, seeds, rid):
             n_runs += 1
             if n_runs >= COHERE_PER_ROUND:
                 break
+    return out
+
+def pick_branches(T):
+    """every branch the picks have grown so far: for each picked context c, each answer x drawn at least BUMP_MIN times
+    (a bump: a repeat, rare by chance -- the null contexts measure how rare) -> [(c + [x], draws, all draws at c)]"""
+    out = []
+    for ctx in T.picks:
+        b = T.pick_branches(ctx)
+        n = sum(b.values())
+        for x, k in b.items():
+            if k >= BUMP_MIN and x not in (TR.NONE, TR.OTHER) and x not in ctx and PR.is_glyph(x):
+                out.append((list(ctx) + [x], k, n))
+    return out
+
+def pick_work(P, seqs, seeds, rid):
+    """The generator: tendrils from known sequences (METHODOLOGY §4a; Joseph, 2026-10-05: "s = known sequence -- e.g.,
+    'abc' ... {"d" => 72, "A" => 7, "1" => 13, "α" => 2} now you have one 'main' branch and 3 weaker branches. Leading
+    to a strong 'abcdefg...' and weaker, more obscure, but equally easily recognized: 'abc123', 'abcABC', 'abcαβ...'
+    sequences. Branching from seeds like tendrils ... If, on the other hand, the responses are far more random and
+    spread out -- still follow any bumps, but the point is still on the recognition side.")
+      CHILDREN  every branch grown so far (pick_branches): the picked context extended by a bump, asked again. Drawn by
+                a fated weighted draw, weight = the branch's share of its context's draws -- the main branch more often,
+                weaker ones still (a soft weight, never a cut, §7).
+      ROOTS     known sequences not yet picked: the survey sequences and the tree's walks, each in both directions
+                (a sequence and its reverse are one sequence; extending leftward is extending the reverse), whole when
+                <= MAX_RUN glyphs, else their last MAX_RUN.
+      Half the round's contexts go to children and half to roots, either half lending to the other when short
+      (chosen without evidence). Each context is asked once, SAMPLES times by each generator mind; nulls -- fresh
+      random glyphs of the same length, asked the same way -- one per PICK_NULL_EVERY contexts.
+    Every branch path also goes to whole-run recognition (cohere_work): recognition decides, generation explores.
+    -> [(kind, ctx, None, src, probe)]"""
+    T = P.T
+    r = PR.R("pick-draw", {"round": rid})
+    kids = [(c, k / n) for c, k, n in pick_branches(T) if len(c) <= PR.MAX_RUN and tuple(c) not in T.picks]
+    chosen = []
+    while kids and len(chosen) < PICK_PER_ROUND // 2:
+        i = r.choices(range(len(kids)), weights=[w for _, w in kids])[0]
+        chosen.append((kids.pop(i)[0], "branch"))
+    roots = []
+    for g in [list(x["glyphs"]) for x in seeds] + [s["glyphs"] for s in seqs]:
+        if len(g) > 1 and g[-1] == g[0]:
+            g = g[:-1]
+        if len(g) < 2 or len(set(g)) != len(g):
+            continue
+        for h in (g, g[::-1]):
+            roots.append(h[-PR.MAX_RUN:])
+    r.shuffle(roots)
+    seen = {tuple(c) for c, _ in chosen}
+    for h in roots:
+        if len(chosen) >= PICK_PER_ROUND:
+            break
+        if tuple(h) not in seen and tuple(h) not in T.picks and all(PR.is_glyph(c) for c in h):
+            seen.add(tuple(h)); chosen.append((h, "root"))
+    while kids and len(chosen) < PICK_PER_ROUND:                 # roots ran short: the rest to children
+        i = r.choices(range(len(kids)), weights=[w for _, w in kids])[0]
+        chosen.append((kids.pop(i)[0], "branch"))
+    out = []
+    for n, (ctx, how) in enumerate(chosen, 1):
+        out += [("pick", ctx, None, {"why": "pick", "from": how}, {"sample": k}) for k in range(PR.SAMPLES)]
+        if n % PICK_NULL_EVERY == 0:
+            rn = PR.R("pick-null", {"round": rid, "ctx": ctx})
+            null = []
+            while len(null) < len(ctx):
+                c = fresh_glyph(rn)
+                if c not in null:
+                    null.append(c)
+            out += [("pick", null, None, {"why": "pick-null"}, {"sample": k, "null": True}) for k in range(PR.SAMPLES)]
     return out
 
 def reflection_work(P, seqs, rid):
@@ -462,7 +535,11 @@ def plan(rid, recs, seeds, budget):
             break
         if P.add(kind, ctx, cand, variant="reflection", **src):
             n_reflect += 1
-    P.budget += n_reasoned + n_reflect
+    n_pick = 0
+    for kind, ctx, cand, src, probe in pick_work(P, seqs, seeds, rid):   # outside the budget's tiers: generator minds only
+        if P.add(kind, ctx, cand, probe=probe, **src):
+            n_pick += 1
+    P.budget += n_reasoned + n_reflect + n_pick
     served, tiers_reached = set(), collections.Counter()
     for tier, si, ii, kind, ctx, cand, src in work:
         if P.full():

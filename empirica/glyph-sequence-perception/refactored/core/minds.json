@@ -1,5 +1,5 @@
 {
- "version": "minds-0.4 (2026-10-05: reasoner sonnet55r with utf-mcp tools)",
+ "version": "minds-0.5 (2026-10-05: generator minds for the forced-pick pass, effort medium)",
  "note": "Roster registry for glyph-sequence-perception. Adapter specs copied from the archived judges-v1.json; family and mode added. family = LLM family for universality; mode = sheet (several presentations per call) or single (one per call). Copied into refactored/ on 2026-10-05. Glimmer (muse) is not on the roster: it was paused in r003 of the triad era (Joseph: pause glimmer, skip local models for now).",
  "context_residue": {
   "claude": "claude -p with --tools '' --strict-mcp-config (no MCP), --setting-sources '' and --system-prompt override. Verified 2026-10-03: the judge sees no CLAUDE.md content and nothing about glyphs; it DOES see an account-level note giving the user's email address (asked directly, sonnet-5-5 reported it). Not removable from this CLI; judged harmless to glyph perception. Thinking budget: until 2026-10-05 the judges inherited MAX_THINKING_TOKENS=31000 from the launching shell (unrecorded; very likely true of the triad era too); since then it is set per mind here and recorded in each ledger row's judge spec.",
@@ -22,9 +22,15 @@
    "haiku45"
   ],
   "second_share": 0.2,
-  "note": "Core minds answer every sheet; each second mind is added to a sheet with probability second_share (fated). Claude has two core minds, so universality is computed per family. From c002: haiku45nt (thinking off) is core and haiku45 (thinking on) a second mind, so the reasoned condition stays sampled (2026-10-05, the independent session's call, for Joseph to overturn). Reasoners answer only reasoned-pass sheets (generation at felt ends; METHODOLOGY s4).",
+  "note": "Core minds answer every sheet; each second mind is added to a sheet with probability second_share (fated). Claude has two core minds, so universality is computed per family. From c002: haiku45nt (thinking off) is core and haiku45 (thinking on) a second mind, so the reasoned condition stays sampled (2026-10-05, the independent session's call, for Joseph to overturn). Reasoners answer only reasoned-pass sheets (generation at felt ends; METHODOLOGY s4). Generators answer only forced-pick sheets (METHODOLOGY s4a; Joseph: 'with effort set to normal (not low) for *generating* / creative work'): the core models at medium effort, thinking allowed.",
   "reasoners": [
    "sonnet55r"
+  ],
+  "generators": [
+   "sonnet55g",
+   "haiku45g",
+   "grok46g",
+   "gemini38flashg"
   ]
  },
  "minds": {
@@ -98,6 +104,39 @@
    "family": "claude",
    "mode": "sheet",
    "note": "The reasoned pass (2026-10-05): Sonnet with thinking and utf-mcp's four read-only Unicode lookup tools (~/src/arch/firmatum/utils/utf-mcp, verified), asked to reason and look things up at sequence ends where first-impression minds stopped. Its answers are candidates, never pooled with first impressions; what it looked up is copied into each ledger row. Effort medium: chosen without evidence."
+  },
+  "sonnet55g": {
+   "adapter": "claude",
+   "model": "claude-sonnet-5-5",
+   "effort": "medium",
+   "max_thinking_tokens": 31000,
+   "family": "claude",
+   "mode": "sheet",
+   "note": "The generator pass (METHODOLOGY s4a, 2026-10-05): forced single-symbol picks with reasoning, sampled. Effort medium for 'normal (not low)', Joseph's words; the thinking budget 31000 as for the other thinking minds."
+  },
+  "haiku45g": {
+   "adapter": "claude",
+   "model": "claude-haiku-4-5",
+   "effort": "medium",
+   "max_thinking_tokens": 31000,
+   "family": "claude",
+   "mode": "sheet",
+   "note": "The generator pass (METHODOLOGY s4a, 2026-10-05): forced single-symbol picks with reasoning, sampled. Effort medium for 'normal (not low)', Joseph's words; the thinking budget 31000 as for the other thinking minds."
+  },
+  "grok46g": {
+   "adapter": "grok",
+   "model": "grok-4.6",
+   "effort": "medium",
+   "family": "grok",
+   "mode": "sheet",
+   "note": "The generator pass (METHODOLOGY s4a, 2026-10-05): forced single-symbol picks with reasoning, sampled. Effort medium for 'normal (not low)', Joseph's words; the thinking budget 31000 as for the other thinking minds."
+  },
+  "gemini38flashg": {
+   "adapter": "agy",
+   "model": "gemini-3.8-flash-medium",
+   "family": "gemini",
+   "mode": "sheet",
+   "note": "The generator pass (METHODOLOGY s4a, 2026-10-05): forced single-symbol picks with reasoning, sampled. Effort medium for 'normal (not low)', Joseph's words; the thinking budget 31000 as for the other thinking minds. agy names the effort in the model id."
   }
  }
 }
