@@ -26,17 +26,20 @@ HOW A ROUND IS DRAWN
            re-ask what a slow family has not reached yet; a family whose core minds are all paused until a quota resets
            (data/logs/paused.json) has its term left out.
            RELEVANCE is how much the quantity bears on a sequence: an S-curve with a floor (scurve) on the strength
-           of the sequence it serves (the tree's rank), so "the most obvious and stable (empirically) sequences" are
-           squared away first (Joseph, 2026-10-05) and nothing falls to zero.
+           of the sequence it serves (the mean agreement of its walked links, not their number, so a new 3-glyph kernel
+           isn't put last), so "the most obvious and stable (empirically) sequences" are squared away first (Joseph,
+           2026-10-05) and nothing falls to zero.
            A source with no strength of its own gets UNRANKED_RELEVANCE, the curve's midpoint.
-  Draw     in two stages (Cands.draw): CLAIMS first -- what a unit's answer bears on: a sequence, a run, a position --
-           by a fated weighted draw on each claim's mean unit weight, then within each claim its units by weight,
-           breadth first (every drawn claim gives its best unit before any gives a second). Fated draws without
-           replacement (Efraimidis-Spirakis keys u^(1/w)): heavy items early, light ones anywhere. Anything asked before
-           and on no current sequence is one claim at REL_FLOOR: reachable, rarely.
+  Draw     in two stages (Cands.draw): CLAIM SLOTS -- what a unit's answer bears on: a sequence, a run, a position --
+           drawn with replacement, each in proportion to its claim's mean unit weight; each slot takes the claim's next
+           unit (its units in a fated weighted order, Efraimidis-Spirakis keys u^(1/w)). A heavy claim gets several
+           questions a round, a long one no more than a short one of the same weight. Anything asked before that serves
+           no current sequence, run or seed is its own claim at OFF_SEQUENCE_RELEVANCE: reachable, rarely, item by
+           item. Validity refuses a continue or pick context showing a whole period of a manifested cycle.
 The numbers are in PARAMS, BASE and BRANCH_*, all recorded in each round's plan.json, chosen without evidence unless
 they say otherwise; explore()'s own soft numbers (the top 200 sequences, rank 0.9, redraw one in two, thirds) are not.
-Planner "stochastic-2" (2026-10-06) follows a de novo audit of "stochastic-1" (audits/planner-stochastic-2026-10-06.md).
+Planner "stochastic-2" (2026-10-06) follows a de novo audit of "stochastic-1" (audits/planner-stochastic-2026-10-06.md);
+"stochastic-3" follows the auditor's check of stochastic-2 (audits/planner-stochastic-2-check-2026-10-06.md).
 
 STREAMS (each a kind of work; the sources are where candidates come from, never evidence):
   explore         2-glyph contexts never asked: seed bumps, fresh glyphs (printable ASCII 4 : 2-byte 3 : 3-byte 2 :
@@ -100,8 +103,12 @@ PARAMS = {                                                   # every one chosen 
     "VALIDATION_RELEVANCE": 3.0,   # the name-only question's validation sets
     "STEWARD_RELEVANCE": 3.0,      # Joseph's own seeds
     "UNRANKED_RELEVANCE": 0.5,     # a source with no strength of its own (the triad era's grown rows, other seeds, runs
-                                   # and sets asked before, choose splits): the S-curve's midpoint, not its ceiling
-                                   # (audit finding 2: at 1.0 such sources out-drew the tree's own walks)
+                                   # asked whole before, choose splits): the S-curve's midpoint, not its ceiling (audit
+                                   # finding 2: at 1.0 such sources out-drew the tree's own walks)
+    "OFF_SEQUENCE_RELEVANCE": 0.01,  # an item asked before that serves no current sequence, run or seed (a context, an
+                                   # inhibit pair, a triad, a set, a pick context), each its own claim: in the check's
+                                   # estimate about 2% of continue draws (0.05 gave about 10%). Chosen in the open, so the
+                                   # long tail reaches individual items (Joseph: "the most improbably things to sneak in")
     "CHART_CONTROL_SHARE": 0.25,   # cohere runs that also get a chart window (a measurement, not a decoy)
     "PICK_NULL_EVERY": 4,          # one null context per this many real pick contexts (sizes the pick-null base)
     "MAX_WINDOW_STEP": 0.5,        # windows of long runs overlap by half a window
@@ -149,9 +156,10 @@ def info(k, n):
     h = -(m * math.log(m) + (1 - m) * math.log(1 - m))
     return max(h + m * (psi(a + 1) - psi(a + b + 1)) + (1 - m) * (psi(b + 1) - psi(a + b + 1)), 1e-9)
 
-ACTIVE = set(FAMS)                  # the families able to answer this round (plan() sets it: a family whose core minds
-                                    # are all paused until a quota resets can't, and its term is left out, not counted
-                                    # as unasked -- audit finding 5)
+ACTIVE = set(FAMS)                  # the families able to answer the stream being drawn (plan() sets it per stream, from
+                                    # the roster that answers it: core, generators or reasoners). A family whose minds
+                                    # there are all paused until a quota resets can't, and its term is left out, not
+                                    # counted as unasked (audit finding 5; per stream since the check of stochastic-2)
 
 def info_fams(counts, pend=None):
     """summed over the core families able to answer: counts {family: (k, n)}; pend {family: answers asked but not yet
@@ -431,8 +439,19 @@ def names_counts(T):
 
 # ------------------------------------------------------------------ the round's questions
 class Plan:
-    def __init__(self, rid):
+    def __init__(self, rid, cycles=()):
         self.rid, self.qs, self.keys = rid, [], set()
+        self.cycles = {tuple(c) for c in cycles}                 # canonical periods of manifested cycles, >= 4 distinct
+        self.cycle_lens = sorted({len(c) for c in self.cycles})
+    def spoils(self, ctx):
+        """does the context show a whole period of a manifested cycle, in any rotation or direction? Then a continuation
+        repeats what was shown and tests nothing (METHODOLOGY §4, no spoiling; check of stochastic-2: 38 such contexts
+        reached the pool through other sequences that pass through a cycle's glyphs)"""
+        for p in self.cycle_lens:
+            for i in range(len(ctx) - p + 1):
+                if TR.canon_cycle(list(ctx[i:i + p])) in self.cycles:
+                    return True
+        return False
     def add(self, kind, ctx, cand=None, variant=None, probe=None, **src):
         """validity only (and one copy a round): nothing is refused for having been asked before"""
         ctx = list(ctx)
@@ -442,6 +461,8 @@ class Plan:
         if not (lo <= len(ctx) <= hi) or not distinct or not all(PR.is_glyph(x) for x in ctx):
             return False
         if kind == "triad" and len(ctx) != 3:
+            return False
+        if kind in ("continue", "pick") and variant != "reflection" and self.spoils(ctx):
             return False
         if kind == "names" and not all(U.name(x, None) for x in ctx):
             return False
@@ -490,41 +511,53 @@ class Cands:
     def claims(self):
         return len({c for _, _, c in self.best.values()})
     def draw(self, P, n, r):
+        """claim SLOTS drawn with replacement, each with probability proportional to its claim's weight (the mean of its
+        units' weights); each slot takes its claim's next unit (the units of a claim in a fated weighted order). A
+        heavy claim gets several questions in a round in proportion to its weight; a long claim no more than a short
+        one of the same weight. (Check of stochastic-2, 2026-10-06: drawn breadth first, about 170 draws over about
+        1,300 claims gave every sequence at most one question a round.)"""
         by = collections.defaultdict(list)
         for w, unit, c in self.best.values():
             by[c].append((w, unit))
         claims = list(by)
-        order = weighted_order(claims, lambda c: sum(w for w, _ in by[c]) / len(by[c]), r)
-        queues = {c: collections.deque(weighted_order(by[c], lambda it: it[0], r)) for c in order}
-        got = 0
-        while got < n and order:
-            nxt = []
-            for c in order:
-                if got >= n:
-                    break
-                q = queues[c]
-                while q:
-                    w, unit = q.popleft()
-                    u = unit() if callable(unit) else unit
-                    if u:
-                        k = P.add_unit(u)
-                        if k:
-                            got += k
-                            break
-                if q:
-                    nxt.append(c)
-            order = nxt
+        if not claims:
+            return 0
+        cw = [sum(w for w, _ in by[c]) / len(by[c]) for c in claims]
+        queues = {}
+        got = tries = 0
+        while got < n and claims and tries < 20 * n + 100:
+            tries += 1
+            i = r.choices(range(len(claims)), weights=cw)[0]
+            c = claims[i]
+            if c not in queues:
+                queues[c] = collections.deque(weighted_order(by[c], lambda it: it[0], r))
+            q = queues[c]
+            while q:
+                w, unit = q.popleft()
+                u = unit() if callable(unit) else unit
+                if u:
+                    k = P.add_unit(u)
+                    if k:
+                        got += k
+                        break
+            if not q:                                             # exhausted: the claim leaves the draw
+                del claims[i]; del cw[i]
         return got
 
 # ------------------------------------------------------------------ streams
 def rel_of(s):
-    return scurve(s["rank"])
+    """a sequence's relevance: the S-curve on the mean agreement of its walked links -- how strongly the links found so
+    far are felt, not how many there are. (Until stochastic-3 it read the tree's rank, mean agreement x min(1, walked/4),
+    which put newly found 3-glyph kernels last, against Joseph's "various minds start to find a sequence -- call it a
+    sequence of three glyphs. The priority is then to extend that sequence to the right and to the left as far as they
+    will go"; check of stochastic-2.)"""
+    return scurve(s.get("mean_agreement", s["rank"]))
 
-OFF_SEQUENCE = "(asked before, on no current sequence)"     # one claim for re-asks that serve no sequence
 
 def continue_cands(T, Tr, pend, seqs):
-    """contexts along the tree's sequences, each sequence one claim; and every context shown before (the off-sequence
-    ones one claim at relevance REL_FLOOR, so none is ever out of reach: audit finding 4)"""
+    """contexts along the tree's sequences, each sequence one claim; and every context shown before, each off-sequence
+    one its own claim at OFF_SEQUENCE_RELEVANCE (audit finding 4; pooled into one claim in stochastic-2, which made them
+    unreachable in practice -- check of stochastic-2)"""
     C = Cands()
     memo = {}
     def put(ctx, rel, why, claim, **src):
@@ -570,12 +603,12 @@ def continue_cands(T, Tr, pend, seqs):
                     put(run[i + 1 - k:i + 1], rel, "inside", sq, seq=sq)
     for ctx in Tr.real:                                          # every context shown before, so none is out of reach
         if ctx not in C.best:
-            put(ctx, PARAMS["REL_FLOOR"], "asked", OFF_SEQUENCE)
+            put(ctx, PARAMS["OFF_SEQUENCE_RELEVANCE"], "asked", ("asked", ctx))
     return C
 
 def inhibit_cands(T, Tr, pend, seqs, rid):
     """link recognition, each with its matched decoy: each sequence one claim, each reasoned-pass context one, and every
-    pair asked before (the off-sequence ones one claim at REL_FLOOR: audit finding 4)"""
+    pair asked before, each off-sequence one its own claim at OFF_SEQUENCE_RELEVANCE (audit finding 4)"""
     C = Cands()
     def put(ctx, x, rel, why, claim, **src):
         ctx = tuple(ctx)
@@ -619,7 +652,7 @@ def inhibit_cands(T, Tr, pend, seqs, rid):
                     put(st["ctx"], g[ic], rel * scurve(st["agreement"]), "falsify-skip", sq, seq=sq, link=a + b)
     for (ctx, x) in Tr.inhibit:                                    # every pair asked before, so none is out of reach
         if (ctx, x) not in C.best:
-            put(ctx, x, PARAMS["REL_FLOOR"], "asked", OFF_SEQUENCE)
+            put(ctx, x, PARAMS["OFF_SEQUENCE_RELEVANCE"], "asked", ("asked", ctx, x))
     return C
 
 def cohere_cands(T, Tr, pend, seqs, written_seqs, seeds, rid, recs):
@@ -747,7 +780,18 @@ def choose_cands(T, Tr, pend, seqs, seeds, rid):
     return C
 
 def choose_control_cands(T, Tr, pend, rid):
+    """D controls: each pair after a fresh neutral context (no canary glyph in it, so no new sealed answers). A pair once
+    asked after a neutral context holding a canary glyph is weighted by n alone (check of stochastic-2: 1 of 173 had
+    one), found from the questions asked, never from answers."""
     C = Cands()
+    tainted = set()
+    for rd in ctx_round_dirs():
+        if (rd / "questions.jsonl").exists():
+            for l in open(rd / "questions.jsonl"):
+                if '"neutral"' in l:
+                    q = json.loads(l)
+                    if q["kind"] == "choose" and (q.get("probe") or {}).get("control") == "neutral" and CANARY & set(q["context"]):
+                        tainted.add(frozenset(q.get("pair") or ()))
     pairs = {}
     for (ctx, pair), ch in T.choose_chart.items():
         pairs[pair] = ch
@@ -756,14 +800,15 @@ def choose_control_cands(T, Tr, pend, rid):
     for pair, ch in pairs.items():
         x, y = sorted(pair)
         fc = Tr.choose_ctl.get(pair, {})
-        cnt = blind({f: (c.get(x, 0), sum(c.values())) for f, c in fc.items()}, (x, y))
+        cnt = {f: (c.get(x, 0), sum(c.values())) for f, c in fc.items()}
+        cnt = blind(cnt, (x, y) + (tuple(CANARY) if pair in tainted else ()))   # pooled over a sealed neutral context
         w = info_fams(cnt, pend.get("choose-control", pair))
         r = PR.R("choose-neutral", {"pair": [x, y], "round": rid})
         avoid = {block(x), block(y)}
         ctx = []
         while len(ctx) < 3:
             g = fresh_glyph(r)
-            if g not in pair and g not in ctx and block(g) not in avoid:
+            if g not in pair and g not in ctx and block(g) not in avoid and g not in CANARY:   # no new sealed answers
                 ctx.append(g)
         C.put(pair, w, [Q("choose", ctx, (x, y), probe={"control": "neutral", "chart": ch}, why="choose-control", **{"from": "neutral"})])
     return C
@@ -793,7 +838,7 @@ def set_cands(kind, T, pend, counts, seqs, seeds, rid, extra=()):
     for s in seqs:
         put(s["glyphs"], rel_of(s), "walk")
     for key in counts:
-        put(sorted(key), PARAMS["UNRANKED_RELEVANCE"], "asked")
+        put(sorted(key), PARAMS["OFF_SEQUENCE_RELEVANCE"], "asked")
     return C
 
 def triad_cands(T, pend, seqs):
@@ -812,7 +857,7 @@ def triad_cands(T, pend, seqs):
         for i in range(len(g) - 2):
             put(g[i:i + 3], rel_of(s), "walk", "".join(g), seq="".join(g), mid=g[i + 1])
     for key in T.triads_fam:
-        put(list(key), PARAMS["UNRANKED_RELEVANCE"], "asked")
+        put(list(key), PARAMS["OFF_SEQUENCE_RELEVANCE"], "asked")
     return C
 
 def pick_branches(T):
@@ -847,7 +892,7 @@ def pick_cands(T, pend, seqs, seeds, rid):
     for c, w in pick_branches(T):
         put(c, w, "branch")
     for ctx in T.picks:
-        put(ctx, PARAMS["UNRANKED_RELEVANCE"], "asked")
+        put(ctx, PARAMS["OFF_SEQUENCE_RELEVANCE"], "asked")
     return C
 
 def pick_nulls(P, n_questions, rid):
@@ -981,14 +1026,18 @@ def plan(rid, recs, seeds, budget):
     global ACTIVE
     reg = json.load(open(ROOT / "core" / "minds.json"))
     paused = paused_minds()
-    ACTIVE = {reg["minds"][m]["family"] for m in reg["roster"]["core"] if m not in paused} & set(FAMS)
+    def active(roster):
+        return {reg["minds"][m]["family"] for m in reg["roster"].get(roster, []) if m not in paused} & set(FAMS)
+    ROSTER = {"pick": "generators", "reasoned": "reasoners"}
+    ACTIVE = active("core")
+    active_by = {}
     T = TR.Tree(recs)                                   # with seed votes: the walks seeds make walkable
     Tr = TR.Tree(recs, seeds=False)                     # real answers only: what information is computed from
     seqs = TR.sequences(T)
     written_seqs = TR.sequences(TR.Tree(recs, written=True))
     pend = Pending(recs, rid)
     want, scale = sizes(budget, rid)
-    P = Plan(rid)
+    P = Plan(rid, [k for k, c in T.cycles.items() if c["distinct"] >= 4])
     got, pool, claims = {}, {}, {}
     got["explore"] = explore(P, T, seqs, seeds, want["explore"], rid)
     streams = [
@@ -1008,6 +1057,7 @@ def plan(rid, recs, seeds, budget):
         ("pick", lambda: pick_cands(T, pend, seqs, seeds, rid)),
     ]
     for name, make in streams:
+        ACTIVE = active(ROSTER.get(name, "core")); active_by[name] = sorted(ACTIVE)
         C = make()
         pool[name] = len(C); claims[name] = C.claims()
         got[name] = C.draw(P, want[name], PR.R("draw-" + name, {"round": rid}))
@@ -1020,11 +1070,15 @@ def plan(rid, recs, seeds, budget):
         if round_num(rd.name) < here and (rd / "questions.jsonl").exists():
             asked_before |= {json.loads(l)["qid"] for l in open(rd / "questions.jsonl") if l.strip()}
     import hashlib
-    aids = sorted(r["aid"] for r in recs if r.get("aid"))
-    stats = {"round": rid, "protocol": PR.PROTOCOL, "planner": "stochastic-2", "questions": len(P.qs), "budget": budget,
+    h = hashlib.sha256()                     # what was read: every record's content, and the seeds (check of stochastic-2:
+    for line in sorted(json.dumps(r, sort_keys=True, ensure_ascii=False) for r in recs):   # an ID can change content)
+        h.update(line.encode()); h.update(b"\n")
+    for x in sorted(json.dumps(x, sort_keys=True, ensure_ascii=False) for x in seeds):
+        h.update(x.encode()); h.update(b"\n")
+    stats = {"round": rid, "protocol": PR.PROTOCOL, "planner": "stochastic-3", "questions": len(P.qs), "budget": budget,
              "size_scale": round(scale, 4), "wanted": want, "drawn": got, "candidates": pool, "claims": claims,
-             "active_families": sorted(ACTIVE), "paused_minds": sorted(paused),
-             "answers_read": {"n": len(aids), "sha256": hashlib.sha256("\n".join(aids).encode()).hexdigest()},
+             "active_families": active_by, "paused_minds": sorted(paused),
+             "answers_read": {"records": len(recs), "seeds": len(seeds), "sha256": h.hexdigest()},
              "reasks": sum(1 for q in P.qs if q["qid"] in asked_before),
              "by_why": dict(collections.Counter(q["source"].get("why") for q in P.qs)),
              "by_kind": dict(collections.Counter(q["kind"] for q in P.qs)),
