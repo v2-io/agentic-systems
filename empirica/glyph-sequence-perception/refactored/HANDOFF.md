@@ -1,4 +1,4 @@
-# HANDOFF: state of the refactored study (2026-10-05, ~12:05 MDT; the coordinating session ends here)
+# HANDOFF: state of the refactored study (updated 2026-10-05 ~22:15 MDT by the independent session)
 
 *Written by the coordinating instance (Claude Opus 5.5) for the session that continues the work on its own (Joseph, 2026-10-05: "pick up a new one that doesn't have a coordinator attached to it to continue the work here in glyph-land independently"). Read METHODOLOGY.md first; this file is state and open threads, not method. Joseph's earlier sessions also hold context: his messages relayed through the coordinator are quoted here where they matter.*
 
@@ -8,26 +8,31 @@ The study now lives in `refactored/`. It is to become the project root, and the 
 
 | path | concern | what it does |
 |---|---|---|
-| `METHODOLOGY.md` | — | the method: context tree, the 4 concerns, negative evidence, porting, seeds as tagged votes |
+| `METHODOLOGY.md` | — | the method: the goal (sequences recognised as sequences, §1), the 5 concerns and the one evidence standard (§2a), negative evidence, the questions (§4), the recognition tests and the generator (§4a), priority (§5), porting (§6) |
 | `port/port_triad_era.py`, `port/spotcheck.py` | 4 | ledgers r000–r012 → `data/answers/triad-era.jsonl` (34,196 records; 0 mismatches in 1,588 spot checks); `data/answers/PORT-REPORT.md` |
 | `port/port_seeds.py` | 3→2 | survey sequences → `data/answers/seeds.jsonl`: 4,850 tagged votes from the surveyor's family |
-| `probe/probe.py` | 1 | protocol `ctx-0.1`: `continue` and `inhibit` questions, prompts, fated sheets, raw answers → canonical records |
+| `probe/probe.py` | 1 | protocol `ctx-0.1`: question kinds `continue`, `inhibit`, `triad`, `cohere` (a whole run: coherent? why?), `pick` (forced single character, sampled); prompts, fated sheets, raw answers → canonical records |
 | `tree/tree.py` | 2 | context tree → `SEQUENCES.md` (`--pure` leaves seeds out) |
-| `priority/plan.py` | 3 | the planner: 15% hot exploration; tiers across sequences (ends + cycle probes, seed-only steps, k\*, branch inhibits, inside contexts) |
-| `report/best.py` | read-off | `BEST.md`, the stretches confirmed by real minds; nothing reads it back |
+| `priority/plan.py` | 3 | the planner: 15% hot exploration; tiers across sequences (ends + cycle probes, seed-only steps, k\*, branch inhibits, inside contexts); recognition with controls; whole-run coherence; the pick tendrils |
+| `report/best.py` | read-off | `BEST.md`: runs recognised as wholes, rejected wholes, candidates grown from the strongest edges; nothing reads it back; reloaded by the loop every round |
 | `run.py` | — | `plan / ask / record / tree / progress / round / loop` |
 | `core/` | — | judges, fate and the roster, copied from `../harness/core` |
 
 Everything in `data/answers/` and `data/tree/` is regenerable and gitignored. To rebuild it after a fresh clone, run `port/port_triad_era.py`, then `port/port_seeds.py`, then `run.py record <rid>` for each context round. The truth, which is committed, is the verbatim ledgers: `data/rounds/<rid>/raw/<mind>/ledger.jsonl`, plus `questions.jsonl`, `sheets.jsonl` and `plan.json`.
 
-## Running now (updated 2026-10-05 ~12:40 MDT by the independent session)
+## Running now (2026-10-05 ~22:15 MDT)
 
-**How rounds run now.** Claude drives the cadence, and every other family drains asynchronously (Joseph: *"go ahead and move forward without stopping on claude responses, but … start slowing down the claude responses a bit so that I don't hit my claude quota before it resets tomorrow AM. Once they are running asynchronously, we should go ahead and really slow down gemini again to see if that helps"*). Three processes run, all from `refactored/`:
-- `python3 -u run.py loop --budget 700 >> data/logs/loop.log`. Each round plans, asks only the Claude minds, re-records *every* round so that drained answers fold in, then builds the tree and progress and commits.
-- `python3 -u run.py drain --minds gemini38flash gemini31pro >> data/logs/drain-gemini.log`
-- `python3 -u run.py drain --minds grok46 >> data/logs/drain-grok.log`
+**Four processes**, all from `refactored/`, all on `/opt/homebrew/bin/python3` (Unicode 16+; `run.py` refuses older):
+- `run.py loop --budget 700 >> data/logs/loop.log`: plans a round, asks the Claude minds (core, second, generator `sonnet55g`/`haiku45g`), re-records every round so drained answers fold in, builds tree, BEST and progress, commits. Rounds take ~7 minutes (`round_gap_min` 0).
+- `run.py drain --minds gemini38flash gemini31pro gemini38flashg >> data/logs/drain-gemini.log`: at 1 worker / 60 s (Joseph's quota call), many rounds behind (at c003 at 22:00).
+- `run.py drain --minds grok46 >> data/logs/drain-grok.log`: about 40 minutes a round, slowed by a tail of 600 s timeouts; at c011 at 22:00, so its first coherence answers (c015) arrive around 00:30.
+- `run.py drain --minds grok46g >> data/logs/drain-grok-gen.log`: the Grok generator mind in its own drain (3 workers), since its sheets start at c017.
 
-The drains ask their minds' open sheets, oldest round first, and idle when caught up. **Pacing** is in `pace.json`, re-read before every call, so it can be edited live. It started at Claude 2 workers / 20 s, Gemini 1 worker / 60 s and Grok 6 workers. **To stop everything:** `touch data/rounds/STOP`. The loop stops after its current round; the drains stop at their next check.
+**Pacing** is in `pace.json`, re-read before every call. **To stop everything:** `touch data/rounds/STOP`.
+
+**Restarting safely.** The loop imports the planner, probe and tree once, so their changes need a restart. BEST is reloaded every round and doesn't. Restart while the log's last line is `cmd_ask`, by process ID: `kill <pid>` (from `pgrep -f "run.py loop"`), wait for it to exit, then start it again. It resumes the unfinished round. Two scars from tonight:
+- `pkill -f "run.py loop"` inside a script kills the script too, because its own command line matches.
+- A failed kill followed by a start leaves two loops. Check `pgrep -f "run.py loop"` after every restart.
 
 **Gemini's empty answers are tool attempts, not rate limits.** Every empty Gemini answer checked (172 in c001 and r012) was a soft-denied `run_command`, almost all `python3 -c … unicodedata.name(…)`, a few `chr()` ranges. No successful answer used a tool. So, as of this change:
 - **agy adapter `a2-transcript`** copies each call's thinking and tool calls into the ledger (`adapter_meta.steps` / `tool_calls`). agy keeps only its ~500 latest conversations; the 455 that survived from c001 and r012 were harvested to `data/agy/` (transcripts committed, sqlite dbs gitignored).
@@ -43,8 +48,6 @@ The drains ask their minds' open sheets, oldest round first, and idle when caugh
 - **From c002, `haiku45nt` (budget 0, thinking off) is core and `haiku45` (31000) a second mind.** The reasoned condition stays sampled, so the change is measurable. Evidence and reasoning: `spikes/thinking-felt-2026-10-05/README.md`.
 - **Sonnet isn't reached by the budget lever**; it thinks adaptively, about one sheet in five with zero.
 - **This is the independent session's call, made while Joseph was away.** It is reversible in `minds.json`.
-
-**Loop state.** c002 was started 12:51 MDT under all of the above, with `round_gap_min` 30 in `pace.json`, which gives roughly a dozen rounds by tomorrow morning.
 
 **`tree.sequences()` fixed 2026-10-05:** a sequence now holds supported links only. Walk start contexts carried the triad era's gaps (`⑩ ⑪ ⑬ ⑭`, `㊳ ㊲ ㉒ ㉑`).
 
@@ -98,23 +101,34 @@ The drains ask their minds' open sheets, oldest round first, and idle when caugh
   - (d) Spiker feedback for future briefs: state who else is using the machine.
   - (e) Spike code still excludes `⟂ ⊥ ≈`. Harmless.
 
+## The evening of 2026-10-05: recognition is the goal
+
+Joseph, after the cross-block sequences turned out to be invisible in BEST: *"generation is for exploring the space but also counts as a recognition, but recognition is the final goal — 'best recognized sequences as sequences' is the goal"*. METHODOLOGY §1, §2a, §4a and §5 now say so, and these were built (all committed):
+- **The cause.** BEST confirmed links only by majority in continue answers, with "none" counting against: one kind of evidence among many, used against §2b's own sentence. Joseph's morph ladder `-=>})|` (the founding example of the survey's morph family) was invisible. Its continue answers are "none" or `]`, while two families put `)` between `}` and `|` in triads. My first report called that "none" honest. That was wrong: it was my impression standing in for a measurement.
+- **Generation is one-way evidence.** "None" is about ends; only a "no" beyond a control counts against a link.
+- **The cohere question** (Joseph's wording: *"does this look like a coherent sequence? why?"*). 80 whole runs a round, each with a shuffled control and never on the same sheet. Chart windows are kept as a measurement, not a decoy. Shuffles a mind called coherent become candidate runs (Joseph: *"I can absolutely attest to seeing ideated sequences that are better after some shuffling"*).
+- **The generator: tendrils of forced picks** (Joseph's design, quoted in METHODOLOGY §4a). *"Pick a single character that would extend this sequence. You may be creative, but give a reason"*, at medium effort, 5 samples per generator mind. Every answer is a branch, extended in later rounds, prioritised on an S-curve with a long tail (Efraimidis–Spirakis order). Branch paths go to coherence. My first build stopped every path at one step; Joseph: *"do you not understand the mission here???"*. It grows now: `O o ᵒ ₒ`, `∰ ∯ ∮ ∫`, `→ ⇒ ⇉ ⇛ ⇶ ⟹ ⟾`, `⫴ ∥ ∣ ⊥ ⊤`.
+- **BEST.**
+  - The main table is runs recognised as wholes.
+  - Candidates are grown from the strongest edges along the strongest branch, with no merging.
+  - One family suffices (Joseph dropped the ≥ 2 cap). Per-family counts are on every row.
+  - **│** marks a break: a link confidently weaker than its run, judged from the links' posteriors (Joseph: *"Don't we have real confidences?"*).
+  - It builds in ~1 s.
+
+**What the first data say** [Claude only so far]:
+- **Coherence discriminates order.** Sonnet said yes to 76 of 80 real runs and 2 of 80 shuffled ones. Haiku with thinking off said yes to 12 of 80 shuffles, reading "coherent" as "a coherent set". Its own control rate absorbs that.
+- **It doesn't rank ordered runs.** 229 of 240 asked runs are recognised, chart walks and interleavings included.
+- **The whys show chart reasoning** (*"consecutive Unicode code points"*). For Joseph: does that count as felt, or as the reasoned arithmetic signa should replace? Haiku with thinking off also says yes to chart windows (16 of 21), so low effort alone won't separate them. The other families will show whether it's universal.
+- **Stopping branches on spread** (Joseph's suggested rule; he left the maths to me). First look, Claude only, 44 parent-to-child pairs: flat parents had flat children in 7 of 20 cases, structured parents in 9 of 24. That's no sign yet that flatness persists, so nothing is stopped. Re-run it when Grok's picks are in.
+
 ## Open threads and decisions
 
-- **Tier starvation.** With ends first, tiers 3–5 (k\*, branches, inside contexts) will get little budget while open ends are plentiful. This is Joseph's rule taken at its word. Watch PROGRESS: "k\* known / steps" and the open ends count. If k\* never moves, raise it with Joseph rather than inventing shares.
-- **The arrow row** `↓ ↘ → ↗ ↑ ↖ ←` is missing `↙` (Joseph caught it). Its end questions are in c002's plan. Cycle probes follow if the walk wraps.
-- **Hex:** whether `…8 9 → ?` yields `A` was Joseph's early question. The question is now in the tier-5 inside work.
-- **The spinner canary** `| / - \`: exploration draws printable ASCII at weight 4, and nothing is seeded. Watch BEST.md's cycles table.
-- **Gemini speed and rate limits** (Joseph: *"go ahead and speed up gemini for now. When we start hitting rate limits we can let claude go ahead ideally so we can start at least getting the claude-supported sequences well defined in the data."*). In `run.py`:
-  - `AGY_WORKERS = 3`, from c002.
-  - `GRACE_MIN = 20`: once every Claude mind has finished a round, the other minds get 20 more minutes. Then the round moves on, and their unanswered sheets stay open.
-  - **Backfill** with `run.py ask <rid>`, then `run.py record <rid>`, `tree` and `progress`. The ledgers resume.
-  - **Watch** each round's ledger for errors: rate limits show up as error strings in `result.error`. Also check that agy runs cleanly at 3 concurrent sessions; that's untested.
-- **The agreement cut-offs** (0.75 in BEST.md and in PROGRESS's "settled") are read-offs chosen without evidence. Joseph: *"I suspect it will be kind of a relative number or a soft threshold."*
-- **Not yet built:**
-  - the reflection probe (`7 8 9 8 → ?`), METHODOLOGY §3;
-  - triad and order checks in new rounds (the tree uses the ported triads only as a check column);
-  - a Postgres index (kept in reserve; the in-memory tree builds in about a second);
-  - per-family BEST.md views.
+- **The order question** (§4a): put a shuffled set in order. Next to build; it finds the *best* order, not only whether a given one holds.
+- **Not built from §4a:** swap detection, two-alternative next, gap fill, the effort contrast, and the rest of the list. Branch inhibits (tier 4) and inside contexts (tier 5) still get no budget.
+- **Runs over 24 glyphs** can't be asked whole. Windows of them would be fair game for coherence; nothing does that yet.
+- **The whys** (coherence and picks) are saved, not analysed, per Joseph.
+- **Gemini** lags many rounds (Joseph's pacing). Grok newest-first was offered and not decided.
+- **The arrow row** `↓ ↘ → ↗ ↑ ↖ ←` missing `↙`, the hex question (`…8 9 → ?`), and the spinner canary `| / - \` remain watch items.
 - **Archive move:** `../harness`, `../PLAN.md`, `../STANDINGS.md`, `../PROGRESS.md`, `../data/growth` and the rest of the triad era go to `.archive/triad-era/`, and `refactored/` becomes the root. **Wait for Joseph's word.**
 
 ## Joseph's standing directions this session
@@ -130,3 +144,7 @@ Verbatim where it matters:
 - **Local models:** skipped for now. Glimmer is not on the roster.
 - **Commits:** scoped to the study, with the attribution lines from the session's system reminder.
 - **Delegation:** use peer briefs (AGENTIC-DELEGATION). Joseph is persuadable, and wants honest pushback over compliance.
+- **The goal:** *"'best recognized sequences as sequences' is the goal"*. Generation explores and counts as a recognition, one way.
+- **Never exclude, weight:** *"I wouldn't outright exclude *anything* — when I do stochastic work I always use s-curves with there always being a long tail."*
+- **Prompt wording matters:** *"'Choose a single symbol' — not 'Choose the one symbol' which implies there is one expected answer."*
+- **BEST:** one family suffices (*"Let's drop the >= 2 model family cap in 'best'"*); sort by length, but length isn't the ranking; │ is *"just a visual aide"*.
