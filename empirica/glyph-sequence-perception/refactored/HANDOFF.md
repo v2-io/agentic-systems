@@ -1,4 +1,4 @@
-# HANDOFF: state of the refactored study (updated 2026-10-06 ~10:00 MDT by the independent session)
+# HANDOFF: state of the refactored study (updated 2026-10-06 ~14:30 MDT by the independent session)
 
 *Written by the coordinating instance (Claude Opus 5.5) for the session that continues the work on its own (Joseph, 2026-10-05: "pick up a new one that doesn't have a coordinator attached to it to continue the work here in glyph-land independently"). Read METHODOLOGY.md first; this file is state and open threads, not method. Joseph's earlier sessions also hold context: his messages relayed through the coordinator are quoted here where they matter.*
 
@@ -100,6 +100,32 @@ Everything in `data/answers/` and `data/tree/` is regenerable and gitignored. To
   - (d) Spiker feedback for future briefs: state who else is using the machine.
   - (e) Spike code still excludes `⟂ ⊥ ≈`. Harmless.
 
+## The afternoon of 2026-10-06: the catalog's design, the reasoned pass, the new instruments
+
+For whoever picks this up next. Joseph is focused elsewhere: *"OK, you're on your own."* Everything below is committed.
+
+- **The catalog went through five versions** (`CATALOG.md` v5). Versions 1–3 had de novo audits (`audits/catalog-design-*.md`), and the v3 auditor checked v4 against its own findings (`audits/catalog-design-v4-check-2026-10-06.md`). What v5 settles:
+  - **Independence instead of tiers.** Each record carries what its recognition is *independent of*: the code chart and the glyphs' names. These are measured at contested positions, and the default view is a reader computation.
+  - **Contested means within one Unicode block.** Triad departures from the code-point median are 0.13 within one block and 0.69 across three, which is chance (`spikes/contested-positions-2026-10-06/`).
+  - **Chart preferences are read asymmetrically.** A preference against a felt chart candidate is evidence. A preference for it is "chart or branch". So the view's "leaning" group stays nearly empty, and a side agent's warning about that is written into §11. Lookalike substitution is the instrument that can show leaning; it's first among those not yet built.
+  - **"Rational" isn't defined yet.** v4 defined it by who proposed a run, and that broke METHODOLOGY's one-way rule. **Joseph's to decide:** recognised only with deliberation (the Haiku 31000 vs 0 contrast), or leaning on the chart or names? The record carries both.
+- **The seal.** The canary's `choose` answers, and from c096 its name-only answers, are sealed until the model is frozen (`audits/SEAL-canary-choose-2026-10-06.md`, with an addendum). Don't query them. Aggregates that exclude the canary's glyphs are fine. First look at c095's 126 unsealed `choose` answers, Claude only: every one parsed; "a" chosen 0.63 of the time (the order is fated, so this is noise, not tilt); the chart neighbour chosen 0.36–0.49 by Claude minds.
+- **The reasoned pass, read before deciding** (Joseph's instruction; `spikes/reasoned-pass-2026-10-06/FINDINGS.md`). 79% of its continuations are chart walks, and its range lookups go with them. Joseph guessed they might predict intuitiveness, and they do, in the negative direction: a lookup-reached continuation marks a link *chart-reached*.
+- **New from c096:**
+  - **The continue prompt's soft target,** Joseph's change: *"around N or fewer"*, N uniform 3–24 per sheet, in `tags.soft_target`. The fixed "(up to 24)" had anchored 5,290 walks to the cap.
+  - **The name-only order question** (kind `names`). Its validation sets come first: names whose meaning and code points disagree (`⁰¹²³⁴`, `🕐🕜🕑🕝🕒`, …), and names with no order. If name-only orders follow the code points there, the question measures chart recall, and the name route is "unmeasured".
+  - **D controls:** each `choose` pair after three fresh glyphs from other blocks (`control: neutral`).
+  - **`choose` only at contested positions.**
+- **Processes.** The loop was stopped with STOP after c095 (which stops the drains too) and restarted at 13:58 with the new code. The drains were restarted; Gemini's takes `names` and `choose` first. Gemini prioritising newer questions was Joseph's call (*"there isn't any quota or cost associated with gemini -- just a low-granularity rate limiter"*, *"same with grok"*).
+- **Next, in order:**
+  1. Read the names validation once the non-Claude answers are in.
+  2. Build lookalike substitution.
+  3. Freeze the model (commit, then record the hash in the seal file).
+  4. Build the catalog (Python plus Postgres 18).
+  5. Repoint BEST and the planner at it.
+
+  Also not built: the basis question with "Other: ___", the two-shot consent framing (needs multi-turn adapter calls), saved thinking text, and the continue and order nulls.
+
 ## The morning of 2026-10-06
 
 - **The weekly-limit outage.** Claude's weekly limit answered every driver call of c027 (partly) through c079 with *"You've hit your weekly limit · resets 7am"*. The loop kept planning rounds on an unchanged tree, and about half of each round's questions repeated an earlier round's. Fixes, all committed:
@@ -145,8 +171,8 @@ Joseph, after the cross-block sequences turned out to be invisible in BEST: *"ge
 - **Not built from §4a:** swap detection, two-alternative next, gap fill, the effort contrast, and the rest of the list. Branch inhibits (tier 4) and inside contexts (tier 5) still get no budget.
 - **Runs over 24 glyphs** can't be asked whole. Windows of them would be fair game for coherence; nothing does that yet.
 - **The whys** (coherence and picks) are saved, not analysed, per Joseph.
-- **Gemini** lags many rounds (Joseph's pacing): at about one sheet a minute it will never reach the new question kinds. Letting its drain take the new kinds first was offered and not decided.
-- **The catalog** (`CATALOG.md`): audit, then build, then point the planner and BEST at it.
+- **Gemini** drains newest rounds and new kinds first (Joseph, 2026-10-06). Its generator mind `gemini38flashg` often reaches for tools (50 of 84 calls in one round); watch it.
+- **The catalog** (`CATALOG.md` v5): freeze, then build, then point the planner and BEST at it (see the afternoon section).
 - **The arrow row** `↓ ↘ → ↗ ↑ ↖ ←` missing `↙`, the hex question (`…8 9 → ?`), and the spinner canary `| / - \` remain watch items.
 - **Archive move:** `../harness`, `../PLAN.md`, `../STANDINGS.md`, `../PROGRESS.md`, `../data/growth` and the rest of the triad era go to `.archive/triad-era/`, and `refactored/` becomes the root. **Wait for Joseph's word.**
 
