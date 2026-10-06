@@ -212,7 +212,8 @@ From its positions' interpretations, by a frozen rule:
 | **mixed** | both |
 | **undiscriminable** | no contested position (§7a) |
 | **unmeasured** | the name route, while the name-only question is unvalidated or failed validation |
-| **undecided** | contested positions exist, but none is positive or negative yet: unasked, inconclusive, or branch preferences only |
+| **chart or branch** | at least one branch preference with certainty, and none positive or negative. The route's alternative was preferred, but it is also a felt continuation, so chart-following and a felt branch can't be told apart |
+| **undecided** | contested positions exist, but none is positive, negative or a branch preference yet: unasked or inconclusive |
 
 The record lists every position with its instruments, estimate and interpretation, so a reader can apply a different rule.
 
@@ -271,17 +272,20 @@ in $[-1, 1]$. Certainty is a Bayes factor for $p \neq b$ in the observed directi
 1. **Intuitive:** both routes positive.
 2. **Independent where measurable:** one route positive and the other undiscriminable. For example, "independent of the chart; the name route undiscriminable". Not folded into intuitive: undiscriminable means *we can't tell* whether the recognition rested on that route.
 3. **Leaning:** either route negative or mixed. For example "leans on the chart", "leans on the names", "mixed on the chart".
-4. **Undiscriminable:** both routes undiscriminable. For example `▁ ▂ ▃ ▄ ▅ ▆ ▇ █`.
-5. **Undecided:** everything else (a route undecided or unmeasured, with no route negative or mixed). Shown apart and never ranked against the decided groups. Where one route is positive, it says so.
+4. **Chart or branch:** either route "chart or branch" (§7c), with no route negative or mixed. The alternative the route offered was preferred, and it is also felt.
+5. **Undiscriminable:** both routes undiscriminable. For example `▁ ▂ ▃ ▄ ▅ ▆ ▇ █`.
+6. **Undecided:** everything else (a route undecided or unmeasured, with no route negative, mixed or "chart or branch"). Shown apart and never ranked against the decided groups. Where one route is positive, it says so.
 
-Joseph's sentence ranks group 1 first. Groups 2–4 are listed in that order for display only: his "fine" covers both rational and chart-monotone sequences, and the view doesn't rank them.
+**Reading group 3 against group 4.** D can rarely show leaning on the chart: the chart's glyph is accepted about 80% of the time, so it is nearly always felt, and a preference for it is a branch preference (§7b). Runs that really do follow the chart mostly land in group 4, not group 3. A near-empty "leaning" group doesn't mean few runs rely on the chart. (Pointed out by a side agent, 2026-10-06.) The instrument that can show leaning is lookalike substitution (§7b): if recognition falls to the non-lookalike control's level when a glyph is swapped for a confusable from another block, it rested on something the swap changed: the code point, or details of the look that confusables don't keep (they preserve identity, not style). Leaning is the likelier reading where the two glyphs look alike in the rendering minds see, and the instrument can't separate the two otherwise. It comes first among the additions (§12).
+
+Joseph's sentence ranks group 1 first. Groups 2–5 are listed in that order for display only: his "fine" covers both rational and chart-monotone sequences, and the view doesn't rank them.
 
 **"Rational" isn't a group yet.** Version 4 defined it by who proposed a run. That reads a mind's *not* generating something as evidence, which METHODOLOGY's one-way rule forbids, and it would move with the asking history. Joseph's words, "interpretable rational sequence (given some thought)", describe how a run is *recognised*. Two measured readings exist:
 
 - recognised only with deliberation: the deliberation contrast in the record (§10), identified within Haiku only;
-- the recognition leans on the chart or the names: group 3.
+- the recognition leans on the chart or the names: group 3, and possibly group 4.
 
-Which one he means is his to say. Until then, the record carries both, and the view shows group 3 under its descriptive name.
+Which one he means is his to say. Until then, the record carries both, and the view shows groups 3 and 4 under their descriptive names.
 
 **Other readers:**
 
@@ -296,7 +300,7 @@ Which one he means is his to say. Until then, the record carries both, and the v
 | D controls: the same pair after a neutral context | to build |
 | **The name-only order question.** Show the glyphs' Unicode *names*, scrambled, without the glyphs; ask for the order (the order question's wording). The name route's prediction (§7a). Its two validation sets come first | to build |
 | `choose` between the run's glyph and the names' predicted glyph, at name-contested positions | to build, after the name-only question |
-| Lookalike substitution, with the fated control of §7b | to build |
+| Lookalike substitution, with the fated control of §7b. The one instrument that can show leaning on the chart (§11) | to build, first among the instruments |
 | **Joseph's basis question.** After the verdict, in a separate turn where the adapter allows. Open first ("what did you notice that made it look that way, or not?"), then plain options: how the symbols look / what they stand for or are called / where they sit in the character encoding / can't say / **other: ___**. No value words. On a fated random half of sheets. Validated against D, not trusted on consistency with its own reply | to build |
 | **Joseph's two-shot framing.** Consent turn, then "immediate impressions … independent of …", with fated wording, never naming Unicode. A tagged condition; outcome the chart-class gap | to build; needs multi-turn adapter calls |
 | Thinking text saved by the Claude and Grok adapters | to build |
@@ -361,7 +365,7 @@ They test the catalog, not the minds.
 
 ## 15. Changes from version 4, by the check's findings
 
-- **V1, the felt-chart-candidate rule.** Reversed. A felt chart candidate now makes a preference *against* the chart informative, and it makes a preference *for* the chart ambiguous (a branch preference). Answers are pooled per position before interpretation, so the asymmetry costs power and doesn't bias toward independence (§7b).
+- **V1, the felt-chart-candidate rule.** Reversed. A felt chart candidate now makes a preference *against* the chart informative, and it makes a preference *for* the chart ambiguous (a branch preference). Answers are pooled per position before interpretation, so the asymmetry costs power and doesn't bias toward independence (§7b). That cost, a nearly empty leaning group, is made visible: "chart or branch" is a route state and a view group of its own (§7c, §11).
 - **V2, positions the chart never contested.** A position counts only where the chart's alternative pairs glyphs of one Unicode block, grounded in a measurement (`spikes/contested-positions-2026-10-06/`). Triads are gated the same way (§7a). The planner is to stop asking uncontested steps (§12).
 - **Q1, the default view.** Exclusive groups in a stated order. A leaning group covers the names as well as the chart. "Undiscriminable" is no longer a pass: a run positive on one route and undiscriminable on the other is its own group. "Rational" by provenance is withdrawn; the question of what it means goes to Joseph, with two measured readings carried in the record. Per-run aggregation is a frozen rule with a multiplicity correction (§7c, §11).
 - **Q2, the name-only question.** Three outcomes per set or position; only contested positions earn positive independence. Validated against chart recall before it counts. The canary's name status is measured, not asserted (§7a).

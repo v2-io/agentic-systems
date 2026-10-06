@@ -55,6 +55,7 @@ KINDS = ("continue", "inhibit", "triad", "cohere", "pick", "order", "choose")
 MAX_ORDER = 12                    # the largest set an order question shows (the triad era: 8; chosen without evidence)
 SAMPLES = 5                       # pick: samples per context per generator mind (chosen without evidence)
 MAX_RUN = 24                       # the longest run a cohere question shows (chosen without evidence)
+SOFT_TARGET = (3, 24)              # continue: "around N or fewer", N uniform per sheet (Joseph, 2026-10-06)
 SYSTEM = "You are a participant in a short perception study. Answer exactly as asked."
 VS = {"︎", "️"}
 
@@ -189,7 +190,11 @@ def _lines(kind, sheet):
     r = R("sentence-order", {"sid": sheet["sid"]})
     if kind == "continue":
         intro = "Each item below shows symbols in a sequence; the last one listed is where the sequence has got to."
-        opts = ['"continue": the symbols that come after the last one, in order, as many as come naturally (up to 24)',
+        # Joseph, 2026-10-06: a soft target, "around ... characters or fewer", a random number 3-24 per sheet. The fixed
+        # "(up to 24)" anchored walks to the cap: 5,290 answers stopped at exactly 24, against 248 at 23.
+        n = sheet.get("soft_target")
+        opts = ['"continue": the symbols that come after the last one, in order, as many as come naturally '
+                + (f'(around {n} or fewer)' if n else '(up to 24)'),
                 '"none": true, if nothing seems to come next']
         sents = ["Go by first impressions, and judge each item on its own rather than building a scheme across items.",
                  "Any symbol may come next, whether it is shown or not; it may have no name.",
@@ -330,6 +335,8 @@ def sheets(round_id, questions):
                     e["a"], e["b"] = q["shown_pair"]
                 ents.append(e)
             sh = {"sid": sid, "round": round_id, "kind": kind, "protocol": PROTOCOL, "entries": ents, "sheet_n": len(ents)}
+            if kind == "continue":
+                sh["soft_target"] = R("continue-target", {"sid": sid}).randint(SOFT_TARGET[0], SOFT_TARGET[1])
             if variant:
                 sh["variant"] = variant
             sh["prompt"] = prompt(sh, variant)
@@ -476,6 +483,7 @@ def _records(sheet, ledger_rows, mind, family, judge, questions, variant):
             out.append(rec); continue
         a = hits[0]
         if sheet["kind"] == "continue":
+            rec["tags"]["soft_target"] = sheet.get("soft_target")
             v = a.get("continue")
             if a.get("none") and not v:
                 rec["outcome"] = "none"
