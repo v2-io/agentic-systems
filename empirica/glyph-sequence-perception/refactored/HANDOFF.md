@@ -1,4 +1,4 @@
-# HANDOFF: state of the refactored study (updated 2026-10-05 ~22:15 MDT by the independent session)
+# HANDOFF: state of the refactored study (updated 2026-10-06 ~10:00 MDT by the independent session)
 
 *Written by the coordinating instance (Claude Opus 5.5) for the session that continues the work on its own (Joseph, 2026-10-05: "pick up a new one that doesn't have a coordinator attached to it to continue the work here in glyph-land independently"). Read METHODOLOGY.md first; this file is state and open threads, not method. Joseph's earlier sessions also hold context: his messages relayed through the coordinator are quoted here where they matter.*
 
@@ -101,6 +101,26 @@ Everything in `data/answers/` and `data/tree/` is regenerable and gitignored. To
   - (d) Spiker feedback for future briefs: state who else is using the machine.
   - (e) Spike code still excludes `⟂ ⊥ ≈`. Harmless.
 
+## The morning of 2026-10-06
+
+- **The weekly-limit outage.** Claude's weekly limit answered every driver call of c027 (partly) through c079 with *"You've hit your weekly limit · resets 7am"*. The loop kept planning rounds on an unchanged tree, and about half of each round's questions repeated an earlier round's. Fixes, all committed:
+  - **A usage limit is a pause, not an attempt.** `run.py` recognises the limit error, records it as `limit`, doesn't count it toward the 3 tries, and pauses that mind 600 s. The loop now waits inside its round.
+  - **`data/rounds/VOID.json` lists c028–c079.** The drains skip them. Their ledgers stay, answers already given stay, and their questions are planned again in live rounds.
+- **Pick contexts over 8 glyphs were silently refused.** `Plan.add` applied the continue limit. Tendrils stopped at 8 glyphs, and long roots (Joseph's block cycle among them) were never asked. Now up to 24.
+- **Dropspot seeds.** `../data/seeds/*.jsonl` had been read only in part: deduplicated by a `sid` they lack, so only the first entry ever reached the planner. Now normalised.
+- **Seeds by type.** Only seeds that propose an order are runs; sets and negatives go to the order question. Joseph's seeds come first. His block-fill cycle `▁▂▃▄▅▆▇█🮆🮅🮄…` is a seed from c087, with a completion his description implies, tagged as such.
+- **BEST.**
+  - Recognised runs are shown in length sections, so short cross-block runs are visible: 175 runs mixing UTF-8 sizes had been hidden by a single length-sorted table.
+  - They are ranked by a precision-weighted, Abbott-corrected strength. Joseph: equal family weighting *"was never a goal so much as a choice given no other understanding."*
+  - Folding happens only into a run at least as confidently recognised.
+  - "Orders found" is a new table.
+- **Grok's coherence answers.**
+  - Grok's shuffled baseline is 0.39, Claude's 0.21.
+  - Both families call chart windows coherent about equally often (0.82–0.85).
+  - By a rough keyword count, the whys cite the chart in 56% of Claude's and 40% of Grok's "yes" answers to chart windows.
+- **The stopping rule, measured** (METHODOLOGY §4a). Flatness persists: 69% of flat parents have flat children, against 37% after a focused step. The S-curve already applies the rule softly.
+- **The canary, and the catalog.** Joseph's block-fill cycle, which the triad era grew in r004–r006, appeared nowhere in the new pipeline, along with 232 of the triad era's 300 top rows. The cause: no reader generated candidates from the ported triads, and each reader derived sequences its own way. The answer is a new concern, the catalog (`CATALOG.md`; METHODOLOGY §2a concern 6): one stated model, Postgres 18, an audit trail of weights of evidence. **It is designed, not built.** A de novo audit of the design was commissioned 2026-10-06, to land at `audits/catalog-design-2026-10-06.md`, and nothing in it is built before that report is read.
+
 ## The evening of 2026-10-05: recognition is the goal
 
 Joseph, after the cross-block sequences turned out to be invisible in BEST: *"generation is for exploring the space but also counts as a recognition, but recognition is the final goal — 'best recognized sequences as sequences' is the goal"*. METHODOLOGY §1, §2a, §4a and §5 now say so, and these were built (all committed):
@@ -127,7 +147,8 @@ Joseph, after the cross-block sequences turned out to be invisible in BEST: *"ge
 - **Not built from §4a:** swap detection, two-alternative next, gap fill, the effort contrast, and the rest of the list. Branch inhibits (tier 4) and inside contexts (tier 5) still get no budget.
 - **Runs over 24 glyphs** can't be asked whole. Windows of them would be fair game for coherence; nothing does that yet.
 - **The whys** (coherence and picks) are saved, not analysed, per Joseph.
-- **Gemini** lags many rounds (Joseph's pacing). Grok newest-first was offered and not decided.
+- **Gemini** lags many rounds (Joseph's pacing): at about one sheet a minute it will never reach the new question kinds. Letting its drain take the new kinds first was offered and not decided.
+- **The catalog** (`CATALOG.md`): audit, then build, then point the planner and BEST at it.
 - **The arrow row** `↓ ↘ → ↗ ↑ ↖ ←` missing `↙`, the hex question (`…8 9 → ?`), and the spinner canary `| / - \` remain watch items.
 - **Archive move:** `../harness`, `../PLAN.md`, `../STANDINGS.md`, `../PROGRESS.md`, `../data/growth` and the rest of the triad era go to `.archive/triad-era/`, and `refactored/` becomes the root. **Wait for Joseph's word.**
 
