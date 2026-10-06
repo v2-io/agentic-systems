@@ -1,0 +1,34 @@
+kinds by era [(('ctx', 'continue'), 75872), (('triad', 'triad'), 19635), (('ctx', 'cohere'), 16971), (('ctx', 'inhibit'), 11098), (('ctx', 'pick'), 10260), (('triad', 'order'), 6897), (('triad', 'next'), 6248), (('seed', 'seed'), 4868), (('ctx', 'triad'), 2066), (('triad', 'between'), 1370), (('ctx', 'order'), 1284)]
+
+(a) inhibit acceptance of the chart next glyph
+('claude', 'cross-block') 30 0.7
+('claude', 'same-block') 1964 0.865
+('gemini', 'same-block') 56 0.804
+('grok', 'cross-block') 11 0.818
+('grok', 'same-block') 724 0.837
+
+example triad-era triad: {"adapter": "agy", "aid": "A3e74e6411988edac", "answer": ["none"], "era": "triad", "family": "gemini", "iid": "T58cd258f514d", "kind": "triad", "mind": "gemini31pro", "model": "gemini-3.1-pro-low", "outcome": "none", "pid": "P4333f01b3f45", "round": "r000", "shown": ["➊", "⓵", "➀"], "sid": "Sfe9a50fee4b9", "source": {"kind": "seed", "part": "adjacent", "ref": "c4a1e3cde14177ae:dress@1"}, "tags": {
+
+(b) triad middles departing from the code-point median, by distinct Unicode blocks in the triple
+(1, 'claude') 5303 0.136
+(1, 'gemini') 2679 0.139
+(1, 'grok') 2113 0.116
+(1, 'muse') 56 0.411
+(1,) 10151 0.134
+(2, 'claude') 666 0.458
+(2, 'gemini') 394 0.492
+(2, 'grok') 243 0.449
+(2, 'muse') 2 1.0
+(2,) 1305 0.467
+(3, 'claude') 147 0.667
+(3, 'gemini') 90 0.689
+(3, 'grok') 48 0.729
+(3, 'muse') 5 0.8
+(3,) 290 0.686
+
+(c) two-block triples: which middle
+all 1305 {'median': 0.533, 'lone-in-middle (splits the same-block pair)': 0.204, 'other same-block glyph in middle': 0.264}
+claude 666 {'median': 0.542, 'lone-in-middle (splits the same-block pair)': 0.176, 'other same-block glyph in middle': 0.282}
+grok 243 {'median': 0.551, 'lone-in-middle (splits the same-block pair)': 0.23, 'other same-block glyph in middle': 0.218}
+gemini 394 {'lone-in-middle (splits the same-block pair)': 0.231, 'median': 0.508, 'other same-block glyph in middle': 0.261}
+muse 2 {'lone-in-middle (splits the same-block pair)': 1.0}
