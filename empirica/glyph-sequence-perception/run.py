@@ -139,6 +139,36 @@ def limit_hit(res):
         return False
     return bool(LIMIT_RE.search(f"{res.get('raw') or ''} {err}"))
 
+RESET_RE = re.compile(r"resets? in\s*(?:(\d+)\s*h)?\s*(?:(\d+)\s*m)?\s*(?:(\d+)\s*s)?", re.I)
+PAUSED = DATA / "logs" / "paused.json"     # operational state, not truth: minds paused until a quota resets
+
+def reset_seconds(res):
+    """the service's own "Resets in 93h55m15s" -> seconds, or None (Claude's "resets 7am" gives no duration)"""
+    m = RESET_RE.search(f"{res.get('raw') or ''} {res.get('limit_detail') or ''} {res.get('error') or ''}")
+    if not m or not any(m.groups()):
+        return None
+    h, mi, se = (int(x) if x else 0 for x in m.groups())
+    return h * 3600 + mi * 60 + se
+
+def paused_until(m):
+    try:
+        return json.load(open(PAUSED)).get(m, 0)
+    except Exception:
+        return 0
+
+def pause_mind(m, seconds, why):
+    """found 2026-10-06: gemini38flashg's model (gemini-3.8-flash-medium) answered "Individual quota reached ...
+    Resets in 93h55m15s". Backing off 600 s at a time kept its drain waiting on it for four days, so the drain's
+    other minds made no calls. A limit the service says lasts longer than LIMIT_PAUSE_S pauses that mind until then."""
+    try:
+        d = json.load(open(PAUSED))
+    except Exception:
+        d = {}
+    d[m] = max(d.get(m, 0), time.time() + seconds)
+    PAUSED.parent.mkdir(parents=True, exist_ok=True)
+    json.dump(d, open(PAUSED, "w"), indent=1)
+    print(f"{dt.datetime.now():%H:%M:%S} {m}: paused for {seconds / 3600:.1f} h ({why[:100]!r})", flush=True)
+
 def void_rounds():
     """rounds not to be asked any further (data/rounds/VOID.json): planned while the driving minds could not answer,
     so their questions are planned again in live rounds. Their ledgers stay, and answers already given stay answers."""
@@ -186,8 +216,12 @@ def ask_mind(rid, m, reg, stop=None, kinds=None):
         return (v,)
     todo = collections.deque(s for s in sheets if target(s))
     calls = [0]; streak = [0]                     # limits in a row, for this mind in this round
+    if paused_until(m) > time.time():             # a quota the service says resets later: leave this mind's sheets
+        todo.clear()
     def worker(i):
         while not (stop and stop()):
+            if paused_until(m) > time.time():
+                return
             pc = pace(m, spec)
             with lock:
                 if not todo:
@@ -218,6 +252,11 @@ def ask_mind(rid, m, reg, stop=None, kinds=None):
                 by[s["sid"]].append(row); calls[0] += 1
                 if target(s):
                     todo.append(s)                         # re-asked after the rest, as the old resume passes did
+            if limit_hit(row["result"]):
+                rs = reset_seconds(row["result"])
+                if rs and rs > LIMIT_PAUSE_S:
+                    pause_mind(m, rs, row["result"].get("limit_detail") or row["result"].get("raw") or "")
+                    return
             with lock:
                 streak[0] = streak[0] + 1 if limit_hit(row["result"]) else 0
                 wait = min(LIMIT_PAUSE_S, LIMIT_BACKOFF_S * 2 ** (streak[0] - 1)) if streak[0] else 0
