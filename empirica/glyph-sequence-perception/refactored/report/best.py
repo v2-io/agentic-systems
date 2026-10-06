@@ -8,7 +8,8 @@ decision here follows one standard (§2a), stated once.
 THE STANDARD
   Estimate  Each family's proportion is a Beta posterior (Jeffreys); a test's estimate is the equal-weight mean over the
             families that answered, its spread treated as normal (an approximation). TR.estimate, TR.estimate_vs.
-  Decide    90% one-sided (Z), and >= 2 families, everywhere.
+  Decide    90% one-sided (Z), and >= FAMILIES_MIN families everywhere (1, Joseph, 2026-10-05: "Let's drop the >= 2
+            model family cap in 'best'"; the per-family counts stay on every row, so universality stays visible).
     choice  triad middles and order lines: SUPPORTED when the lower bound is >= LEVEL, CONTRADICTED when the upper
             bound is < LEVEL.
     yes/no  against the family's matched control: a whole run (cohere) against its SHUFFLED controls -- the same glyphs
@@ -19,7 +20,7 @@ THE STANDARD
 WHAT IS TESTED
   A run, as a whole  cohere answers about it in either orientation: RECOGNISED when "yes" is beyond the shuffled
             control, REJECTED when "no" is. Evidence about that run only, never its sub-runs.
-  A link    positive evidence, counted one way (§2a): GENERATED when >= 2 families name it as a continuation -- S on
+  A link    positive evidence, counted one way (§2a): GENERATED when >= FAMILIES_MIN families name it as a continuation -- S on
             shown answers (the deciding context, the longest asked suffix, in either reading direction), else W on
             written answers, else P on forced picks (the generator pass, METHODOLOGY §4a). A "none" or another continuation is not evidence against a link (§2b: "a proposal list
             that omits x is not a rejection of x"); it is evidence about an end or a branch. RECOGNISED (R) when not
@@ -48,6 +49,7 @@ sys.path.insert(0, str(ROOT / "tree"))
 import tree as TR                                           # noqa: E402
 
 LEVEL = 0.5
+FAMILIES_MIN = 1      # families a decision needs (Joseph, 2026-10-05: drop the >= 2 cap in BEST; until then 2)
 Z = 1.2816
 TOP = 150
 POSITIVE = ("S", "W", "P", "R")
@@ -60,7 +62,7 @@ def choice(units):
     if not units:
         return None, None, None, set()
     obs, mean, sd, fams = TR.estimate(units)
-    if len(set().union(*units)) < 2:
+    if len(set().union(*units)) < FAMILIES_MIN:
         return None, obs, mean - Z * sd, fams
     if mean - Z * sd >= LEVEL:
         return "supported", obs, mean - Z * sd, fams
@@ -71,7 +73,7 @@ def choice(units):
 def yesno(counts, control):
     """counts, control: {family: (yes, n)} -> (verdict, difference, sd); verdict "beyond" | "below" | None"""
     d, sd, fams = TR.estimate_vs(counts, control)
-    if d is None or len(fams) < 2:
+    if d is None or len(fams) < FAMILIES_MIN:
         return None, d, sd
     if d - Z * sd > 0:
         return "beyond", d, sd
@@ -95,7 +97,7 @@ def link(g, i, Tp):
     naming = lambda ds: set().union(*({f for f, (k, n) in d["counts"].items() if k > 0} for d in ds)) if ds else set()
     picked = [d for d in (Tp.pick_dir(fwd, b), Tp.pick_dir(bwd, a)) if d]
     sf, wf, pf = naming(shown), naming(written), naming(picked)
-    gen = "S" if len(sf) >= 2 else ("W" if len(wf) >= 2 else ("P" if len(pf) >= 2 else None))
+    gen = "S" if len(sf) >= FAMILIES_MIN else ("W" if len(wf) >= FAMILIES_MIN else ("P" if len(pf) >= FAMILIES_MIN else None))
     basis = {"W": written, "P": picked}.get(gen) or shown or written or picked
     obs = TR.estimate([d["counts"] for d in basis])[0] if basis else None
     rc = collections.defaultdict(lambda: [0, 0])
@@ -169,7 +171,7 @@ def follow(Tp, path, cap=64):
     path = list(path)
     while len(path) < cap:
         s = strongest(Tp, path)
-        if not s or s[0] in (TR.NONE, TR.OTHER) or s[2] < 2 or s[0] in path:
+        if not s or s[0] in (TR.NONE, TR.OTHER) or s[2] < FAMILIES_MIN or s[0] in path:
             break
         path.append(s[0])
     return path
@@ -177,18 +179,18 @@ def follow(Tp, path, cap=64):
 def strongest_paths(Tp):
     """Candidate runs for display (Joseph, 2026-10-05: "finding some of the strongest single edges, then following
     their strongest branch ... something that stops 'best' from pulling in too much of the cross-sequence jumps").
-    Edges: each context's strongest continuation, named by >= 2 families (shown contexts, and picked ones), strongest
+    Edges: each context's strongest continuation, named by >= FAMILIES_MIN families (shown contexts, and picked ones), strongest
     first. From each edge not yet in a path, follow the strongest branch forward and then backward; keep the stretch
     around the edge whose every link has positive evidence (S, W, P or R). A weaker branch is not erased: it is a row
     of its own once its own edge comes up. Nothing is merged."""
     edges = []
     for ctx in Tp.nodes:
         x, (agr, nf, _) = Tp.ranked(ctx)[0]
-        if x not in (TR.NONE, TR.OTHER) and nf >= 2 and x not in ctx:
+        if x not in (TR.NONE, TR.OTHER) and nf >= FAMILIES_MIN and x not in ctx:
             edges.append((agr, ctx, x))
     for ctx, fl in Tp.picks.items():
         x, (agr, nf, _) = fam_dist(fl)[0]
-        if x not in (TR.NONE, TR.OTHER) and nf >= 2 and x not in ctx:
+        if x not in (TR.NONE, TR.OTHER) and nf >= FAMILIES_MIN and x not in ctx:
             edges.append((agr, ctx, x))
     edges.sort(key=lambda e: (-e[0], e[1], e[2]))
     covered, out = set(), []
@@ -227,6 +229,9 @@ def shown_order(g):
     keys = vals if all(v is not None for v in vals) else [ord(c) for c in g]
     return g[::-1] if all(b < a for a, b in zip(keys, keys[1:])) else g
 
+def fold(w):
+    return f" (+{w['folded']})" if w.get("folded") else ""
+
 def us(g):
     return sum(len(c.encode("utf-8")) for c in g) / len(g)
 
@@ -254,6 +259,14 @@ def main():
         w["links"] = link_summary(judge(w["glyphs"], Tp))
         w["tests"] = tests(Tp, w["glyphs"])
     recognised.sort(key=lambda w: (-len(w["glyphs"]), -w["d"], w["glyphs"]))
+    kept = []                                            # display: a recognised run contained in a longer recognised one folds into it
+    for w in recognised:
+        host = next((k for k in kept if contained(w["glyphs"], k["glyphs"])), None)
+        if host:
+            host["folded"] = host.get("folded", 0) + 1
+        else:
+            kept.append(w)
+    n_recognised, recognised = len(recognised), kept
     rejected.sort(key=lambda w: (-len(w["glyphs"]), w["d"], w["glyphs"]))
 
     cand = [c for c in strongest_paths(Tp) if tuple(min(c["glyphs"], c["glyphs"][::-1])) not in whole]
@@ -266,20 +279,20 @@ def main():
     fa = lambda fs: " ".join(FA.get(f, f) for f in sorted(fs))
 
     L = ["# Sequences recognised as sequences", "",
-         f"*Generated by `refactored/report/best.py` after {rounds[-1]}. A read-off: nothing reads it back. The goal (METHODOLOGY §1) is sequences recognised as sequences: runs that minds of several families, shown the whole run, perceive as a progression. Decisions follow one standard (`best.py`): per family a Beta posterior (Jeffreys), averaged over families, 90% confidence, ≥ 2 families. A whole run is **recognised** when its families' \"yes, coherent\" rate is beyond their rate for runs shuffled out of order. Links carry positive evidence one way: a \"none\" or another continuation is never evidence against a link, only a \"no\" beyond the control is. Seed votes are never evidence. The full tree is in `SEQUENCES.md`.*", "",
-         f"**{len(recognised)} runs recognised as wholes**, {len(rejected)} rejected, {len(undecided)} undecided so far (of {len(whole)} asked); **{len(cand)} candidate runs** carried by positive link evidence, not yet asked as wholes; **{len(cyc)} manifested cycles**.", ""]
+         f"*Generated by `refactored/report/best.py` after {rounds[-1]}. A read-off: nothing reads it back. The goal (METHODOLOGY §1) is sequences recognised as sequences: runs that minds of several families, shown the whole run, perceive as a progression. Decisions follow one standard (`best.py`): per family a Beta posterior (Jeffreys), averaged over families, 90% confidence; one family suffices, and each row shows its families. A whole run is **recognised** when its families' \"yes, coherent\" rate is beyond their rate for runs shuffled out of order. Links carry positive evidence one way: a \"none\" or another continuation is never evidence against a link, only a \"no\" beyond the control is. Seed votes are never evidence. The full tree is in `SEQUENCES.md`.*", "",
+         f"**{n_recognised} runs recognised as wholes** ({len(recognised)} after folding runs contained in longer ones), {len(rejected)} rejected, {len(undecided)} undecided so far (of {len(whole)} asked); **{len(cand)} candidate runs** carried by positive link evidence, not yet asked as wholes; **{len(cyc)} manifested cycles**.", ""]
 
     L += ["## Recognised as wholes", "", "| # | run | n | us | yes − shuffled | yes/n per family | links | unr | tests |", "|---|---|---|---|---|---|---|---|---|"]
     for i, w in enumerate(recognised[:TOP], 1):
         k, n = w["links"]["unreasoned"]
-        L.append(f"| {i} | `{' '.join(shown_order(w['glyphs']))}` | {len(w['glyphs'])} | {us(w['glyphs']):.1f} | {w['d']:+.2f} | {fam_cells(w['counts'], fams_all)} | {link_cell(w['links'])} | {f'{k}/{n}' if n else '–'} | {test_cell(w['tests'])} |")
+        L.append(f"| {i} | `{' '.join(shown_order(w['glyphs']))}`{fold(w)} | {len(w['glyphs'])} | {us(w['glyphs']):.1f} | {w['d']:+.2f} | {fam_cells(w['counts'], fams_all)} | {link_cell(w['links'])} | {f'{k}/{n}' if n else '–'} | {test_cell(w['tests'])} |")
     if not recognised:
         L.append("| – | *none yet* | | | | | | | |")
     L += ["", "*Key:*",
-          "- **n**: glyphs. **us**: the mean UTF-8 bytes per glyph (1 = ASCII … 4 = astral planes).",
+          "- **n**: glyphs. **us**: the mean UTF-8 bytes per glyph (1 = ASCII … 4 = astral planes). **(+k)**: k recognised runs contained in this one, folded into it.",
           "- **yes − shuffled**: recognition strength. The posterior-mean difference between the families' \"yes, coherent\" rate for this run and their rate for shuffled runs, averaged over families. It orders runs within a length; length sorts the table.",
           "- **yes/n per family**: \"yes\" answers / answers about this run, either orientation (cl = Claude, ge = Gemini, gr = Grok).",
-          "- **links**: each link's strongest evidence. **S**: generated in shown answers by ≥ 2 families. **W**: generated in written answers by ≥ 2 families. **P**: picked by ≥ 2 families in the forced generator pass (METHODOLOGY §4a). **R**: not generated, but recognised (yes beyond the near control). **X**: rejected (no beyond the near control). **–**: no evidence either way yet. **⚠**: generated *and* rejected.",
+          "- **links**: each link's strongest evidence. **S**: generated in shown answers. **W**: generated in written answers. **P**: picked in the forced generator pass (METHODOLOGY §4a). **R**: not generated, but recognised (yes beyond the near control). **X**: rejected (no beyond the near control). **–**: no evidence either way yet. **⚠**: generated *and* rejected.",
           "- **unr**: shown answers given with 0 thinking tokens that name the links, of all such answers there. Reasoned and first-impression answers stay apart until the data says whether they differ (METHODOLOGY §2a).",
           "- **tests**: passed/challenged. **s**: skip tests (a sequence predicts no). **t**: triads. **o**: order answers (triad era). A ⚠ marks a challenge; **–** means untested.",
           "- Display: a run monotonic in numeric value (else in code points) is shown ascending.", ""]
@@ -298,7 +311,7 @@ def main():
         L.append(f"| {i} | `{' '.join(shown_order(c['glyphs']))}` | {len(c['glyphs'])} | {us(c['glyphs']):.1f} | {agr} | {link_cell(s)} | {c['fmin']} | {f'{k}/{n}' if n else '–'} |")
     if len(cand) > TOP:
         L += ["", f"*{len(cand) - TOP} shorter candidates not shown.*"]
-    L += ["", "*Strongest edges first: each context's strongest continuation named by ≥ 2 families, then the strongest branch followed forward and backward until \"none\" is the strongest answer, a branch thins to one family, or the path returns on itself. Each row is the stretch around its edge whose every link has positive evidence (S, W, P or R, as above). A weaker branch is its own row once its own edge comes up, and nothing is merged. Candidates, not findings: recognition of the whole run decides. **agr**: the mean share of answers naming each link where it was asked, a perceptual quantity and not a gate. **≥ fam**: the fewest families generating any one link (0 where a link rests on recognition alone).*", ""]
+    L += ["", "*Strongest edges first: each context's strongest continuation, then the strongest branch followed forward and backward until \"none\" is the strongest answer, or the path returns on itself. Each row is the stretch around its edge whose every link has positive evidence (S, W, P or R, as above). A weaker branch is its own row once its own edge comes up, and nothing is merged. Candidates, not findings: recognition of the whole run decides. **agr**: the mean share of answers naming each link where it was asked, a perceptual quantity and not a gate. **≥ fam**: the fewest families generating any one link (0 where a link rests on recognition alone).*", ""]
 
     if cyc:
         L += ["## Manifested cycles", "", "| cycle | n | ans | fam |", "|---|---|---|---|"]
@@ -324,7 +337,7 @@ def main():
         for r in rec:
             r["verdict"] = yesno(r["counts"], near(Tp, r["counts"]))[0]
         good = [r for r in rec if r["verdict"] == "beyond"]
-        L += ["## Link recognition", "", f"**{len(good)} of {len(rec)} candidate links recognised** (yes beyond the near control, ≥ 2 families).", "",
+        L += ["## Link recognition", "", f"**{len(good)} of {len(rec)} candidate links recognised** (yes beyond the near control).", "",
               "| context | cand. | rec. | yes/n per family |", "|---|---|---|---|"]
         for r in sorted(rec, key=lambda r: (r["verdict"] != "beyond", r["verdict"] != "below", r["x"]))[:80]:
             L.append(f"| `{' '.join(r['ctx'])}` | `{r['x']}` | {'yes' if r['verdict'] == 'beyond' else ('no' if r['verdict'] == 'below' else '–')} | {fam_cells(r['counts'], sorted(r['counts']))} |")
