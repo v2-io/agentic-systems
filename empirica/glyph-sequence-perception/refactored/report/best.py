@@ -26,9 +26,9 @@ Tables:
 Rotations of one run, all confirmed, are listed once and marked as wrapping: a cycle confirmed link by link (distinct
 from a manifested cycle, which a mind wrote round twice). Candidates are walks of the tree with seed votes, and of the tree with written answers pooled in; overlapping runs
 are merged and their links judged again on the merged run (a link's context depends on the run before it).
-Ranked by length, then mean agreement. Display only: a run monotonic in code points is shown ascending. THETA = 0.75 is a read-off cut chosen without evidence; it gates nothing.
+Ranked by length, then mean agreement. Display only: a run monotonic in numeric value (or else in code points) is shown ascending. THETA = 0.75 is a read-off cut chosen without evidence; it gates nothing.
 """
-import collections, pathlib, sys
+import collections, pathlib, sys, unicodedata
 
 HERE = pathlib.Path(__file__).resolve()
 ROOT = HERE.parents[1]
@@ -192,10 +192,13 @@ def table(allowed, need_w, cands, Tp):
     return dedupe(first + collect(merged, Tp, allowed, need_w))
 
 def shown_order(g):
-    """presentation only (a sequence and its reverse are one sequence): a run monotonic in code points is shown
+    """presentation only (a sequence and its reverse are one sequence): a run strictly monotonic in Unicode numeric value
+    (every glyph having one) is shown ascending by value -- digits split across blocks, like `¹ ² ³` (Latin-1) beside
+    `⁰ ⁴ … ⁹` (U+2070-2079), are not monotonic in code points -- otherwise a run monotonic in code points is shown
     ascending (Joseph, 2026-10-05); any other run keeps the orientation it was found in"""
-    cps = [ord(c) for c in g]
-    if all(b < a for a, b in zip(cps, cps[1:])):
+    vals = [unicodedata.numeric(c, None) for c in g]
+    keys = vals if all(v is not None for v in vals) else [ord(c) for c in g]
+    if all(b < a for a, b in zip(keys, keys[1:])):
         return g[::-1]
     return g
 

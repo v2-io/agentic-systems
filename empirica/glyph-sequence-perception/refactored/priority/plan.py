@@ -40,6 +40,9 @@ import tree as TR                                           # noqa: E402
 
 EXPLORE_SHARE = 0.15
 REASONED_PER_ROUND = 20      # reasoned-pass questions a round (chosen without evidence; the reasoner is the costly mind)
+JOIN_PER_ROUND = 60          # join probes a round (chosen without evidence)
+JOIN_WEAK = 0.75             # the planner's own cut for a "weak" link inside a strong run (chosen without evidence)
+JOIN_MAX_ANSWERS = 12        # a weak context is replicated only while it holds fewer answers than this
 WRITTEN_RECOGNIZE_PER_ROUND = 40   # recognition questions for written continuations past shown ends (chosen without evidence)
 FRESH_TIERS = {"1-byte": (4, [(0x21, 0x7E)]), "2-byte": (3, [(0xA1, 0x7FF)]),
                "3-byte": (2, [(0x2000, 0x2BFF), (0x2E80, 0x33FF)]), "4-byte": (1, [(0x1D300, 0x1D7FF), (0x1F000, 0x1FBFF)])}
@@ -58,17 +61,26 @@ class Plan:
         self.rid, self.T, self.budget = rid, T, budget
         self.asked = set(T.real)                 # seed-voted contexts are still asked of the real minds
         self.qs, self.keys = [], set()
+        self.n_join = 0
+        self.join_links = set()
     def full(self):
         return len(self.qs) >= self.budget
-    def add(self, kind, ctx, cand=None, variant=None, probe=None, **src):
+    def add(self, kind, ctx, cand=None, variant=None, probe=None, replicate=False, **src):
         ctx = list(ctx)
         if not (2 <= len(ctx) <= 8) or len(set(ctx)) != len(ctx) or not all(PR.is_glyph(x) for x in ctx):
             return False
         key = (kind, tuple(ctx), cand, variant, tuple(sorted((probe or {}).items())))
         if key in self.keys:
             return False
-        if kind == "continue" and variant is None and tuple(ctx) in self.asked:
+        if kind == "continue" and variant is None and tuple(ctx) in self.asked and not replicate:
             return False
+        if str(src.get("why", "")).startswith("join"):
+            lk = frozenset(src.get("link") or src.get("bridge") or "")      # one probe per link a round
+            if self.n_join >= JOIN_PER_ROUND or (lk and lk in self.join_links):
+                return False
+            self.n_join += 1
+            if lk:
+                self.join_links.add(lk)
         if variant == "reasoned" and tuple(ctx) in self.T.reasoned:
             return False
         if kind == "inhibit" and ((tuple(ctx), cand) in self.T.inhibit or cand in ctx or not PR.is_glyph(cand)):
@@ -78,7 +90,7 @@ class Plan:
                             **({"variant": variant} if variant else {}), **({"probe": probe} if probe else {})))
         return True
 
-TIER = {"recognize": 1, "recognize-written": 1, "control": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "branch": 4, "inside": 5}
+TIER = {"recognize": 1, "recognize-written": 1, "control": 1, "join-reverse": 1, "join-replicate": 1, "join-end": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "branch": 4, "inside": 5}
 
 def written_recognition(P, seqs):
     """Momentum past a felt end (METHODOLOGY §4): where the shown answers end a sequence (top answer "none") but minds
@@ -124,9 +136,52 @@ def reasoned_work(P, seqs, rid):
             gen.append(("continue", run[-k:], None, {"why": "reasoned", "seq": "".join(g), "side": side, "rank": round(s["rank"], 4)}))
     return recog, gen
 
-def sequence_work(P, s, r):
+def join_work(P, s, r, ends):
+    """Join probes (Joseph, 2026-10-05: "yes please -- for example, row #1 and row #14 will be joined hopefully soon"),
+    asked before the sequence's other tier-1 work:
+      a weak link inside a strong run (agreement < JOIN_WEAK, with >= 2 steps at or above it on each side): ask it from
+        the other direction, a context not yet asked; failing that, replicate the weak context itself (more answers),
+        while it holds fewer than JOIN_MAX_ANSWERS -- the one place the planner re-asks a context;
+      an open end whose written answers (>= 2) name an end glyph of another sequence: its end question, first."""
     g = s["glyphs"]; T = P.T
     out = []
+    pos = {x: i for i, x in enumerate(g)}
+    links = []
+    for st in s["steps"]:
+        a, b = st["ctx"][-1], st["x"]
+        if a in pos and b in pos and abs(pos[a] - pos[b]) == 1:
+            links.append((min(pos[a], pos[b]), st))
+    for i, st in links:
+        if st["agreement"] >= JOIN_WEAK:
+            continue
+        left = sum(1 for j, o in links if j < i and o["agreement"] >= JOIN_WEAK)
+        right = sum(1 for j, o in links if j > i and o["agreement"] >= JOIN_WEAK)
+        if left < 2 or right < 2:
+            continue
+        a, b = st["ctx"][-1], st["x"]
+        other = g[pos[b]:][::-1] if pos[b] > pos[a] else g[:pos[b] + 1]   # approaching b from the far side
+        k = min(len(other), r.randint(3, 8))
+        if tuple(other[-k:]) not in T.real:
+            out.append(("continue", other[-k:], None, {"why": "join-reverse", "seq": "".join(g), "link": a + b}))
+        elif sum(len(v) for v in T.nodes.get(tuple(st["ctx"]), {}).values()) < JOIN_MAX_ANSWERS:
+            out.append(("continue", st["ctx"], None, {"why": "join-replicate", "seq": "".join(g), "link": a + b, "replicate": True}))
+    for side, stop in (("right", s["stop_right"]), ("left", s["stop_left"])):
+        if stop != "open":
+            continue
+        run = g if side == "right" else g[::-1]
+        w = collections.Counter()
+        for j in range(2, min(TR.MAXK, len(run)) + 1):
+            for f, xs in T.written.get(tuple(run[-j:]), {}).items():
+                w.update(xs)
+        bridge = [(x, n) for x, n in w.most_common() if n >= 2 and x not in g and x in ends]
+        if bridge:
+            k = min(len(run), r.randint(3, 8))
+            out.append(("continue", run[-k:], None, {"why": "join-end", "seq": "".join(g), "side": side, "bridge": bridge[0][0]}))
+    return out
+
+def sequence_work(P, s, r, ends=frozenset()):
+    g = s["glyphs"]; T = P.T
+    out = join_work(P, s, r, ends)
     # 1 ends
     for side, stop in (("right", s["stop_right"]), ("left", s["stop_left"])):
         run = g if side == "right" else g[::-1]
@@ -212,10 +267,11 @@ def plan(rid, recs, seeds, budget):
     P.seqs = seqs
     n_explore = round(EXPLORE_SHARE * budget)
     explore(P, seeds, n_explore, rid)
+    ends = {x for q in seqs for x in (q["glyphs"][0], q["glyphs"][-1])}
     work = []                                                  # (tier, sequence order, item order, item)
     for si, s in enumerate(seqs):
         r = PR.R("sequence-work", {"round": rid, "seq": s["glyphs"]})
-        for ii, (kind, ctx, cand, src) in enumerate(sequence_work(P, s, r)):
+        for ii, (kind, ctx, cand, src) in enumerate(sequence_work(P, s, r, ends)):
             work.append((TIER[src["why"]], si, ii, kind, ctx, cand, dict(src, rank=round(s["rank"], 4))))
     recog, gen = reasoned_work(P, seqs, rid)
     recog += written_recognition(P, seqs)

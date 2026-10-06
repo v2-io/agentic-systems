@@ -157,6 +157,9 @@ This is Joseph's priority rule, restated on the tree:
   - probe the branch points the tree exposes.
 
   Sequences are served most stable first.
+- **Join probes** (2026-10-05; Joseph: *"yes please — for example, row #1 and row #14 will be joined hopefully soon"*). These are asked before each sequence's other tier-1 work, up to 60 a round, one per link. A number chosen without evidence. Two kinds:
+  - **A weak link inside a strong run.** Agreement below 0.75, the planner's own cut, chosen without evidence, with at least two strong links on each side, as at `㉟ → ㊱`. It is asked from the *other* direction, a new context. Failing that, the weak context is **replicated** while it holds fewer than 12 answers. That is the only place the planner re-asks a context.
+  - **An open end that written answers bridge to another sequence's end**, as at `A … N` and `O … Z`. Its end question goes first.
 - **Hot exploration** (15%). Fresh glyphs from the whole symbol space, weighted toward printable ASCII, then 2-byte, then 3- and 4-byte (Joseph, 2026-10-05). Exploration also favours **nodes that are still reaching out**: nodes with few settled edges get more tendrils. Settled nodes keep a floor of exploration, because creative sequences (`3E[|]3E[|]`) come from nodes that look settled.
 - **Seeds** are tagged votes (§2a) and *contexts to query*. A seeded step is asked of the real minds when its sequence is served (tier 1), and its k\* is then found from short context upward like any other step.
 
