@@ -243,8 +243,14 @@ def agy_steps(conversation):
         out.append({"type": "transcript-unreadable", "error": str(ex)[:200]})
     return out
 
+AGY_TOOL_NOTICE = ("Please don't use any tools: a tool call halts this session before you can answer.")
+# Joseph, 2026-10-06: "you may want to tell it that a tool call will halt the session". True of print mode, which
+# soft-denies tool confirmations and ends the turn with no text (outcome tool-attempt). Said to Gemini only, the one
+# family that is given tools; recorded in adapter_meta.notice and adapter version a4-tool-halt, so answers before and
+# after it can be told apart. A tool attempt is still recorded, and still re-asked as no-lookup.
+
 def agy_call(model, system, prompt, timeout=900):
-    full = f"{system}\n\n{prompt}"
+    full = f"{system}\n{AGY_TOOL_NOTICE}\n\n{prompt}"
     cmd = ["agy", "-p", full, "--model", model, "--output-format", "json", "--disable-slash-commands"]
     t0 = time.time()
     try:
@@ -270,7 +276,8 @@ def agy_call(model, system, prompt, timeout=900):
                     usage={"input_tokens": u.get("input_tokens"), "output_tokens": u.get("output_tokens"),
                            "thinking_tokens": u.get("thinking_tokens")},
                     cost_usd=None, latency_s=dt, error=err,
-                    adapter_meta={"system_prompt_mode": "prepended-to-user-turn", "conversation": d.get("conversation_id"),
+                    adapter_meta={"system_prompt_mode": "prepended-to-user-turn", "notice": AGY_TOOL_NOTICE,
+                                  "conversation": d.get("conversation_id"),
                                   "num_turns": d.get("num_turns"), "steps": steps, "tool_calls": tools})
     except Exception as ex:
         return dict(raw=None, model_reported=None, usage={}, cost_usd=None, latency_s=dt,
@@ -301,7 +308,7 @@ def llamacpp_call(model, system, prompt, url="http://127.0.0.1:8080/v1/chat/comp
                 adapter_meta={"reasoning": (msg.get("reasoning_content") or "")[:2000], "finish": ch.get("finish_reason"),
                               "system_suffix": system_suffix})
 
-ADAPTER_VERSION = {"claude": "a2-tools-optional", "ollama": "a2-format", "grok": "a2-no-tools", "codex": "a1", "agy": "a3-error-detail", "llamacpp": "a1"}
+ADAPTER_VERSION = {"claude": "a2-tools-optional", "ollama": "a2-format", "grok": "a2-no-tools", "codex": "a1", "agy": "a4-tool-halt", "llamacpp": "a1"}
 
 def make_judge(spec):
     """spec: {"adapter": ..., "model": ..., plus adapter kwargs} -> callable(system, prompt)"""
