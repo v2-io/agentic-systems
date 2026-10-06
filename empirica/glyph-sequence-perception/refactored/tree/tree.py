@@ -151,6 +151,7 @@ class Tree:
         self.cohere = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))      # run -> fam -> verdict
         self.cohere_ctl = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # shuffled run -> ...
         self.cohere_rate = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # fam -> class -> verdict
+        self.cohere_ctl_class = {}                          # control run -> "shuffled" | "chart"
         self.cohere_why = collections.defaultdict(list)     # run -> [(family, mind, verdict, why)]
         self.picks = collections.defaultdict(lambda: collections.defaultdict(list))      # ctx -> fam -> [x|none|other]
         self.pick_null = collections.defaultdict(lambda: collections.defaultdict(list))  # null ctx -> fam -> [...]
@@ -233,6 +234,8 @@ class Tree:
                 run = tuple(r["context"])
                 self.cohere_rate[r["family"]][ctl or "real"][o] += 1
                 (self.cohere_ctl if ctl else self.cohere)[run][r["family"]][o] += 1
+                if ctl:
+                    self.cohere_ctl_class[run] = ctl
                 self.cohere_why[run].append((r["family"], r["mind"], o, r.get("why", "")))
             elif k == "triad" and o in ("mid", "two", "none"):
                 t = tuple(sorted(r["shown"]))

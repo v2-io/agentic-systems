@@ -176,7 +176,8 @@ def cohere_work(P, seqs, written_seqs, seeds, rid):
     # seeing ideated sequences that are better after some shuffling"). Asked fresh as a run, with its own control; its
     # answers as a control stay in the baseline and never count for it. Most-yes first.
     found = sorted(((sum(c["yes"] for c in fc.values()), list(run)) for run, fc in P.T.cohere_ctl.items()
-                    if sum(c["yes"] for c in fc.values()) > 0), key=lambda t: (-t[0], t[1]))
+                    if P.T.cohere_ctl_class.get(run) == "shuffled" and sum(c["yes"] for c in fc.values()) > 0),
+                   key=lambda t: (-t[0], t[1]))
     sources = [runs_from([s["glyphs"] for s in seqs], "walk"), runs_from([s["glyphs"] for s in written_seqs], "written"),
                ((g, "seed:" + str(sid)) for g, sid in sd), runs_from([c for c, _ in branches], "pick-branch"),
                runs_from([g for _, g in found], "reordered")]
