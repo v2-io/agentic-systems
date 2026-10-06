@@ -30,9 +30,9 @@ WHAT IS TESTED
 
 TABLES, in this order: runs recognised as wholes (sorted by length, then recognition strength; Joseph: "sort by length
 but don't necessarily make that the 'ranking' number"); runs rejected as wholes; candidates -- runs carried by positive
-link evidence, not yet asked as wholes; manifested cycles; the controls; link recognition. Candidates come from walks of
-the tree (with seed votes, and with written answers pooled) and the survey sequences themselves; seed votes are never
-evidence. Reasoned and first-impression answers stay apart: the *unr* column. Display only: a run monotonic in numeric
+link evidence, not yet asked as wholes; manifested cycles; the controls; link recognition. Candidates are grown from the
+strongest single edges by following each context's strongest branch (strongest_paths; Joseph, 2026-10-05), so a
+minority answer at a sequence's boundary does not join two sequences; nothing is merged. Seed votes are never evidence. Reasoned and first-impression answers stay apart: the *unr* column. Display only: a run monotonic in numeric
 value (else in code points) is shown ascending.
 
 HISTORY: until 2026-10-05 this file confirmed links by continue answers alone, by majority (lower bound >= 0.5), with
@@ -138,66 +138,87 @@ def test_cell(t):
     detail = " ".join(f"{kind[0]}{p}/{c}" for kind, (p, c) in t.items() if p + c)
     return (("⚠ " if any(c for _, c in t.values()) else "") + detail) if detail else "–"
 
-# ------------------------------------------------------------------ candidate runs (positive link evidence)
-def runs(g, links):
-    """maximal runs of positive links (>= 2 links, so >= 3 glyphs)"""
-    out, cur = [], []
-    for i, lk in enumerate(links + [None]):
-        if lk and lk["status"] in POSITIVE:
-            cur.append(i); continue
-        if len(cur) >= 2:
-            a, b = cur[0], cur[-1] + 1
-            out.append({"glyphs": g[a:b + 1], "links": [links[j] for j in cur]})
-        cur = []
-    return out
+# ------------------------------------------------------------------ candidate runs: strongest edges, strongest branches
+def fam_dist(fl):
+    """{family: [answers]} -> ranked [(x, (agreement, families naming, answers))], as Tree.dist/ranked do"""
+    per = collections.defaultdict(dict); cnt = collections.Counter(); fams = collections.defaultdict(set)
+    for f, xs in fl.items():
+        for x, n in collections.Counter(xs).items():
+            per[x][f] = n / len(xs); cnt[x] += n; fams[x].add(f)
+    d = {x: (sum(per[x].values()) / len(fl), len(fams[x]), cnt[x]) for x in per}
+    return sorted(d.items(), key=lambda kv: (-kv[1][0], -kv[1][1], -kv[1][2], kv[0]))
 
-def join2(a, b):
-    """a and b overlapping by >= 2 glyphs (a's end = b's start) with no other shared glyph -> the joined run, else None"""
-    for k in range(min(len(a), len(b)) - 1, 1, -1):
-        if a[-k:] == b[:k] and not set(a[:-k]) & set(b[k:]):
-            return a + b[k:]
+def strongest(Tp, run):
+    """the strongest branch after `run`: at the deciding shown context (the longest asked suffix), else the longest
+    picked suffix (forced picks), else the longest written one -> (x, agreement, families) or None"""
+    ctx = Tp.lookup(run)
+    if ctx:
+        x, (agr, nf, _) = Tp.ranked(ctx)[0]
+        return x, agr, nf
+    for store, kmax in ((Tp.picks, TR.PICK_MAXK), (Tp.written, TR.MAXK)):
+        for j in range(min(kmax, len(run)), 1, -1):
+            fl = store.get(tuple(run[-j:]))
+            if fl:
+                x, (agr, nf, _) = fam_dist(fl)[0]
+                return x, agr, nf
     return None
 
-def merge(seqs):
-    """merge runs that overlap by >= 2 glyphs, in either orientation, until none do"""
-    seqs = [list(s) for s in seqs]
-    while True:
-        done = False
-        for i in range(len(seqs)):
-            for j in range(len(seqs)):
-                if i == j:
-                    continue
-                for b in (seqs[j], seqs[j][::-1]):
-                    m = join2(seqs[i], b)
-                    if m:
-                        seqs = [x for k, x in enumerate(seqs) if k not in (i, j)] + [m]
-                        done = True
-                        break
-                if done:
-                    break
-            if done:
-                break
-        if not done:
-            return seqs
+def follow(Tp, path, cap=64):
+    """extend `path` forward along the strongest branch until an end ("none" or another non-glyph is strongest), a
+    branch named by fewer than 2 families, a return to a glyph already in the path, or no evidence"""
+    path = list(path)
+    while len(path) < cap:
+        s = strongest(Tp, path)
+        if not s or s[0] in (TR.NONE, TR.OTHER) or s[2] < 2 or s[0] in path:
+            break
+        path.append(s[0])
+    return path
+
+def strongest_paths(Tp):
+    """Candidate runs for display (Joseph, 2026-10-05: "finding some of the strongest single edges, then following
+    their strongest branch ... something that stops 'best' from pulling in too much of the cross-sequence jumps").
+    Edges: each context's strongest continuation, named by >= 2 families (shown contexts, and picked ones), strongest
+    first. From each edge not yet in a path, follow the strongest branch forward and then backward; keep the stretch
+    around the edge whose every link has positive evidence (S, W, P or R). A weaker branch is not erased: it is a row
+    of its own once its own edge comes up. Nothing is merged."""
+    edges = []
+    for ctx in Tp.nodes:
+        x, (agr, nf, _) = Tp.ranked(ctx)[0]
+        if x not in (TR.NONE, TR.OTHER) and nf >= 2 and x not in ctx:
+            edges.append((agr, ctx, x))
+    for ctx, fl in Tp.picks.items():
+        x, (agr, nf, _) = fam_dist(fl)[0]
+        if x not in (TR.NONE, TR.OTHER) and nf >= 2 and x not in ctx:
+            edges.append((agr, ctx, x))
+    edges.sort(key=lambda e: (-e[0], e[1], e[2]))
+    covered, out = set(), []
+    for agr, ctx, x in edges:
+        if frozenset((ctx[-1], x)) in covered:
+            continue
+        full = follow(Tp, follow(Tp, list(ctx) + [x])[::-1])[::-1]
+        i = next(k for k in range(len(full) - 1) if full[k] == ctx[-1] and full[k + 1] == x)
+        ls = judge(full, Tp)
+        a, b = i, i
+        while a > 0 and ls[a - 1]["status"] in POSITIVE:
+            a -= 1
+        while b < len(ls) - 1 and ls[b + 1]["status"] in POSITIVE:
+            b += 1
+        if ls[i]["status"] not in POSITIVE:
+            covered.add(frozenset((ctx[-1], x))); continue
+        seg, sl = full[a:b + 2], ls[a:b + 1]
+        covered |= {frozenset(p) for p in zip(seg, seg[1:])}
+        if len(seg) >= 3:
+            out.append({"glyphs": seg, "links": sl, "seed": agr})
+    kept = []
+    for c in sorted(out, key=lambda c: -len(c["glyphs"])):
+        if not any(contained(c["glyphs"], k["glyphs"]) for k in kept):
+            kept.append(c)
+    return kept
 
 def contained(g, k):
     """is run g part of run k, in either direction?"""
     n = len(g)
     return n <= len(k) and any(list(k[i:i + n]) in (list(g), list(g)[::-1]) for i in range(len(k) - n + 1))
-
-def candidates(cands, Tp):
-    found = {}
-    for g in cands:
-        for st in runs(list(g), judge(list(g), Tp)):
-            found.setdefault(tuple(min(st["glyphs"], st["glyphs"][::-1])), st)
-    for g in merge([s["glyphs"] for s in found.values()]):
-        for st in runs(g, judge(g, Tp)):
-            found.setdefault(tuple(min(st["glyphs"], st["glyphs"][::-1])), st)
-    kept = []
-    for key in sorted(found, key=lambda k: -len(k)):
-        if not any(contained(list(key), k) for k in kept):
-            kept.append(key)
-    return [found[k] for k in kept]
 
 def shown_order(g):
     """display only: a run strictly monotonic in Unicode numeric value (every glyph having one) is shown ascending by
@@ -211,16 +232,6 @@ def us(g):
 
 def fam_cells(counts, fams):
     return " ".join(f"{FA.get(f, f)} {counts[f][0]}/{counts[f][1]}" for f in fams if f in counts) or "–"
-
-def survey_runs():
-    out = []
-    for l in open(STUDY / "data" / "seeds.jsonl"):
-        g = list(json.loads(l)["glyphs"])
-        if len(g) > 1 and g[-1] == g[0]:
-            g = g[:-1]                                   # a cycle written closed
-        if len(g) >= 3 and len(set(g)) == len(g):
-            out.append(g)
-    return out
 
 # ------------------------------------------------------------------ BEST.md
 def main():
@@ -245,10 +256,7 @@ def main():
     recognised.sort(key=lambda w: (-len(w["glyphs"]), -w["d"], w["glyphs"]))
     rejected.sort(key=lambda w: (-len(w["glyphs"]), w["d"], w["glyphs"]))
 
-    cands = [s["glyphs"] for s in TR.sequences(TR.Tree(recs, seeds=True))]
-    cands += [s["glyphs"] for s in TR.sequences(TR.Tree(recs, seeds=True, written=True))]
-    cands += survey_runs()
-    cand = [c for c in candidates(cands, Tp) if tuple(min(c["glyphs"], c["glyphs"][::-1])) not in whole]
+    cand = [c for c in strongest_paths(Tp) if tuple(min(c["glyphs"], c["glyphs"][::-1])) not in whole]
     for c in cand:
         c["summary"] = link_summary(c["links"])
         c["fmin"] = min(l["fams"] for l in c["links"])
@@ -290,7 +298,7 @@ def main():
         L.append(f"| {i} | `{' '.join(shown_order(c['glyphs']))}` | {len(c['glyphs'])} | {us(c['glyphs']):.1f} | {agr} | {link_cell(s)} | {c['fmin']} | {f'{k}/{n}' if n else '–'} |")
     if len(cand) > TOP:
         L += ["", f"*{len(cand) - TOP} shorter candidates not shown.*"]
-    L += ["", "*Maximal runs in which every link has positive evidence (S, W or R, as above), from walks of the tree and the survey sequences. Candidates, not findings: many are code-chart walks, and recognition of the whole run decides. **agr**: the mean share of answers naming each link where it was asked, a perceptual quantity and not a gate. **≥ fam**: the fewest families generating any one link (0 where a link rests on recognition alone).*", ""]
+    L += ["", "*Strongest edges first: each context's strongest continuation named by ≥ 2 families, then the strongest branch followed forward and backward until \"none\" is the strongest answer, a branch thins to one family, or the path returns on itself. Each row is the stretch around its edge whose every link has positive evidence (S, W, P or R, as above). A weaker branch is its own row once its own edge comes up, and nothing is merged. Candidates, not findings: recognition of the whole run decides. **agr**: the mean share of answers naming each link where it was asked, a perceptual quantity and not a gate. **≥ fam**: the fewest families generating any one link (0 where a link rests on recognition alone).*", ""]
 
     if cyc:
         L += ["## Manifested cycles", "", "| cycle | n | ans | fam |", "|---|---|---|---|"]
