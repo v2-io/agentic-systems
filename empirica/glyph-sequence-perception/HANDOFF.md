@@ -1,4 +1,4 @@
-# HANDOFF: state of the refactored study (updated 2026-10-06 ~14:30 MDT by the independent session)
+# HANDOFF: state of the study (updated 2026-10-06 ~16:00 MDT)
 
 *Written by the coordinating instance (Claude Opus 5.5) for the session that continues the work on its own (Joseph, 2026-10-05: "pick up a new one that doesn't have a coordinator attached to it to continue the work here in glyph-land independently"). Read METHODOLOGY.md first; this file is state and open threads, not method. Joseph's earlier sessions also hold context: his messages relayed through the coordinator are quoted here where they matter.*
 
@@ -13,14 +13,15 @@ The study's root is this directory. Until 2026-10-06 it lived in `refactored/`, 
 | `port/port_seeds.py` | 3→2 | survey sequences → `data/answers/seeds.jsonl`: 4,850 tagged votes from the surveyor's family |
 | `probe/probe.py` | 1 | protocol `ctx-0.1`: question kinds `continue`, `inhibit`, `triad`, `cohere` (a whole run: coherent? why?), `pick` (forced single character, sampled); prompts, fated sheets, raw answers → canonical records |
 | `tree/tree.py` | 2 | context tree → `SEQUENCES.md` (`--pure` leaves seeds out) |
-| `priority/plan.py` | 3 | the planner: 15% hot exploration; tiers across sequences (ends + cycle probes, seed-only steps, k\*, branch inhibits, inside contexts); recognition with controls; whole-run coherence; the pick tendrils |
+| `priority/plan.py` | 3 | the planner ("stochastic-1", from c102): every candidate question weighted relevance × expected information and drawn, stream sizes jittered; METHODOLOGY §5 |
+| `catalog/build.py` | 6 | the catalog, build 0 (CATALOG.md v5): R, the chart route, the view; Postgres 18 schema `catalog`; nothing reads it yet |
 | `report/best.py` | read-off | `BEST.md`: runs recognised as wholes, rejected wholes, candidates grown from the strongest edges; nothing reads it back; reloaded by the loop every round |
 | `run.py` | — | `plan / ask / record / tree / progress / round / loop` |
 | `core/` | — | judges, fate and the roster, copied from the triad era's `harness/core` |
 
 Everything in `data/answers/` and `data/tree/` is regenerable and gitignored. To rebuild it after a fresh clone, run `port/port_triad_era.py`, then `port/port_seeds.py`, then `run.py record <rid>` for each context round. The truth, which is committed, is the verbatim ledgers: `data/rounds/<rid>/raw/<mind>/ledger.jsonl`, plus `questions.jsonl`, `sheets.jsonl` and `plan.json`.
 
-## Running now (2026-10-06 15:14 MDT)
+## Running now (2026-10-06 15:55 MDT)
 
 **Four processes**, all from the study root, all on `/opt/homebrew/bin/python3` (Unicode 16+; `run.py` refuses older), each started with `nohup … < /dev/null &` and appending to its log:
 - `run.py loop --budget 700 >> data/logs/loop.log`: plans a round, asks the Claude minds (core, second, generator `sonnet55g`/`haiku45g`, reasoner `sonnet55r`), re-records every round so drained answers fold in, builds tree, BEST and progress, commits. Rounds take about 15 minutes (`round_gap_min` 0).
@@ -101,6 +102,15 @@ A drain logs a line per round only when it finishes that round, so a quiet log i
   - (c) For Joseph: chart-following is a measurement-validity question. It is now narrower; see METHODOLOGY §4.
   - (d) Spiker feedback for future briefs: state who else is using the machine.
   - (e) Spike code still excludes `⟂ ⊥ ≈`. Harmless.
+
+## 2026-10-06, 15:20–16:00 MDT: Joseph's mandate, the move, the stochastic planner
+
+Joseph, ~15:15: *"I'd like to give you a pretty broad mandate and authority if you're willing to double check and stay thoughtful and continue to look at the big picture in for the cause of Truth over all other concerns."* Then: *"Proceed as you see fit."* The session named what it would still bring to him (opening the seal, the freeze, what "rational" means, anything outside this study's directory); his reply: *"Sounds great! Proceed as you see fit."*
+- **The layout** (`a7dc48a4`): see *What exists*. Checked: both ports byte-identical after the move, spot check 1588/0, re-recorded rounds identical, the catalog identical but for survey seeds a broken baseline had lost.
+- **Gemini told a tool call halts the session** (`089d9fd0`, his suggestion; agy adapter `a4-tool-halt`). The study's Gemini judges still get no lookup tool: the session's judgement, which Joseph deferred to (*"I'll defer to your judgement on agy and the tool"*).
+- **The planner samples** (`5ce36fa0`, from c102). Joseph: *"stochastic probing, weight toward where it will be most clarifying"*; *"stochastic all the way down, including jitter"*; on the old planner's tiers, caps, thresholds and once-only rules: *"all contrived and contrary to the methodology and my instincts for experiment design."* METHODOLOGY §5 has the design and the history. A de novo audit of it is to be commissioned (`audits/`).
+- **Catalog order** (Joseph agreed the freeze-before-build order was wrong: *"probably just a reaction to having audited the statistics a few times"*): build the rest of the catalog now, sealed answers dropped in code; freeze when it is complete and the name validation is read; then open the seal.
+- **"Rational"**: Joseph wants to look at the data and the open-ended answers before ruling (*"I believe in looking carefully at the data and open-ended-answers before trying to rule on that sort of thing"*). The record carries both readings meanwhile.
 
 ## 2026-10-06, ~15:10 MDT: limit handling fixed, all four processes restarted
 
