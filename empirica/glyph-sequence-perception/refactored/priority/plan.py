@@ -40,6 +40,7 @@ import tree as TR                                           # noqa: E402
 
 EXPLORE_SHARE = 0.15
 REASONED_PER_ROUND = 20      # reasoned-pass questions a round (chosen without evidence; the reasoner is the costly mind)
+FALSIFY_PER_ROUND = 60       # falsification tests a round, highest-ranked sequences first (chosen without evidence)
 THIN_PER_ROUND = 80          # precision replications a round (chosen without evidence)
 JOIN_PER_ROUND = 60          # join probes a round (chosen without evidence)
 JOIN_WEAK = 0.75             # the planner's own cut for a "weak" link inside a strong run (chosen without evidence)
@@ -65,6 +66,7 @@ class Plan:
         self.qs, self.keys = [], set()
         self.n_join = 0
         self.n_thin = 0
+        self.n_falsify = 0
         self.join_links = set()
     def full(self):
         return len(self.qs) >= self.budget
@@ -77,6 +79,10 @@ class Plan:
             return False
         if kind == "continue" and variant is None and tuple(ctx) in self.asked and not replicate:
             return False
+        if str(src.get("why", "")).startswith("falsify"):
+            if self.n_falsify >= FALSIFY_PER_ROUND:
+                return False
+            self.n_falsify += 1
         if src.get("why") == "thin":
             if self.n_thin >= THIN_PER_ROUND:
                 return False
@@ -97,7 +103,7 @@ class Plan:
                             **({"variant": variant} if variant else {}), **({"probe": probe} if probe else {})))
         return True
 
-TIER = {"recognize": 1, "recognize-written": 1, "control": 1, "join-reverse": 1, "join-replicate": 1, "join-end": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "thin": 3, "branch": 4, "inside": 5}
+TIER = {"falsify-skip": 1, "falsify-lengthen": 1, "recognize": 1, "recognize-written": 1, "control": 1, "join-reverse": 1, "join-replicate": 1, "join-end": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "thin": 3, "branch": 4, "inside": 5}
 
 def written_recognition(P, seqs):
     """Momentum past a felt end (METHODOLOGY §4): where the shown answers end a sequence (top answer "none") but minds
@@ -186,9 +192,41 @@ def join_work(P, s, r, ends):
             out.append(("continue", run[-k:], None, {"why": "join-end", "seq": "".join(g), "side": side, "bridge": bridge[0][0]}))
     return out
 
+def falsify_work(P, s, r):
+    """Tests that could break a sequence (Joseph, 2026-10-05: "think in terms of the scientific method as well as a
+    counter-balance -- we're looking for things that disprove or call into question certain sequences"), aimed at the
+    strongest claims first (sequences are served by rank). For a walked step a -> b followed by c:
+      skip      inhibit at a's context with candidate c: does c come DIRECTLY after? A sequence predicts "no"; "yes"
+                beyond the family's control rate challenges the adjacency (order without adjacency, or a chart walk).
+      lengthen  a longer context along the same path, not yet asked (METHODOLOGY §3: a stable edge "stays put when the
+                context is lengthened backward ... flips are where branches live"). The longest context decides, so a
+                flip there breaks the link wherever links are judged.
+    At most one of each per sequence a round, alternating which step, so the tests spread across sequences."""
+    g = s["glyphs"]; T = P.T
+    pos = {x: i for i, x in enumerate(g)}
+    strong = [st for st in s["steps"] if st["agreement"] >= JOIN_WEAK and st["ctx"][-1] in pos and st["x"] in pos
+              and abs(pos[st["ctx"][-1]] - pos[st["x"]]) == 1]
+    if not strong:
+        return []
+    out = []
+    st = strong[r.randrange(len(strong))]
+    a, b = st["ctx"][-1], st["x"]
+    step = pos[b] - pos[a]                                      # +1 forward, -1 backward
+    ic = pos[b] + step
+    if 0 <= ic < len(g) and g[ic] not in st["ctx"]:
+        out.append(("inhibit", st["ctx"], g[ic], {"why": "falsify-skip", "seq": "".join(g), "link": a + b}))
+    st = strong[r.randrange(len(strong))]
+    a, b = st["ctx"][-1], st["x"]
+    path = g[:pos[a] + 1] if pos[b] > pos[a] else g[pos[a]:][::-1]      # the run up to a, in reading order
+    for k in range(len(st["ctx"]) + 2, min(TR.MAXK, len(path)) + 1):
+        if tuple(path[-k:]) not in T.real:
+            out.append(("continue", path[-k:], None, {"why": "falsify-lengthen", "seq": "".join(g), "link": a + b, "k": k}))
+            break
+    return out
+
 def sequence_work(P, s, r, ends=frozenset()):
     g = s["glyphs"]; T = P.T
-    out = join_work(P, s, r, ends)
+    out = falsify_work(P, s, r) + join_work(P, s, r, ends)
     # 1 ends
     for side, stop in (("right", s["stop_right"]), ("left", s["stop_left"])):
         run = g if side == "right" else g[::-1]
