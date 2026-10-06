@@ -42,6 +42,8 @@ A **context** is an oriented run of glyphs: what a mind was shown, ending at the
 
 4. **Porting: bringing the triad era's answers in without corrupting the tree.** Joseph: *"correctly porting triad-era data into the context tree as much as possible without introducing any incorrect or biased or otherwise invalid data."* It is an adapter at the boundary, written once and audited, and it feeds concern 2 exactly as concern 1 does: answers with tags. §6 states what is ported as what.
 
+5. **Read-offs: what the tree holds, presented.** BEST.md, SEQUENCES.md and PROGRESS.md each read the tree with their own stated criteria, and nothing reads them back. Joseph, 2026-10-05, on keeping them apart: *"I get the feeling like we are possibly mixing the 5 concerns that need to be independent? (if the BEST read of the context tree is considered a 5th concern)"*. A read-off's criteria are its own, never shared with the planner's read of the tree. If a read-off shows a defect, the fix belongs in the read-off, unless the defect is in the answers themselves. Found that day: a fix for a BEST.md symptom had been put into the walk, which is the planner's view of the tree, and coupled the two. It was undone.
+
 The triad era mixed these concerns:
 - seeds supplied the glyphs that sequences were tested with;
 - the fit's guesses steered what was asked within sequences;
@@ -99,6 +101,10 @@ A cycle is closed rather than statistically ended. It is fully determined at eve
 ## 4. Eliciting answers
 
 - **Continue** is the main question. Given a context, the mind writes what comes next, in order, as many glyphs as come naturally. It may write none. One answer yields a whole path of edges, each conditioned on everything before it.
+  - **Shown and written are two channels, both answers.** The first glyph answers the context the mind was *shown*. Each later glyph answers a context the mind *wrote* itself: everything shown and written before it. The tree keeps both, tagged by channel.
+  - **How each concern uses them.** The planner's walk and k\* read the shown answers. BEST.md reports the two channels separately: stretches confirmed by shown answers, and runs carried by written answers that await shown confirmation. The planner asks written-only contexts shown. Where minds keep writing past a point the shown answers call an end, which is momentum (Joseph: *"generating != recognizing or affirming, and … generating is the more difficult"*), the written continuation goes to **recognition**: an inhibit question at that shown context.
+  - **History.** Until 2026-10-05, nothing used the written channel, against this paragraph. That bug left about half of every multi-glyph answer unused. The alphabet's six never-asked links had each been written 27–53 times by all three families.
+  - **Momentum is real.** 715 of 8,937 continue answers kept writing past a point that shown answers end, e.g. `㍬ … ㍰ → ㍱` (24h → hPa) and `🃣 🃢 🃡 → 🃠`. Long written runs through unfamiliar blocks are mostly code-chart walks.
 - **Lengthening contexts.** To find k\* for an edge, ask its context at increasing lengths along the path, starting short.
 - **No spoiling.** A context never shows what the question is testing. For a suspected cycle, show only enough of the period's end that a repeat would be the mind's own. For an extension, never include glyphs from beyond the end.
 - **Triads and order sets** are cheap consistency checks. A sequence implies betweenness for each of its triples, and an order for each of its windows. A triad answer is also an unconditioned hint that a 3-glyph path exists, which makes it a cheap way to find **kernels** during exploration. They do not create edges.

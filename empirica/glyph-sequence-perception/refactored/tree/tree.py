@@ -8,9 +8,16 @@ NODES are contexts exactly as a mind was SHOWN them (oriented runs, 2-8 glyphs).
 continuation each answer gave (a what-comes-next proposal of rank 1, or a continue answer's first written glyph),
 "none" (an end), or "other" (not a glyph). Answers at a longer context are NOT pooled into its suffixes: k* needs each
 length asked as itself.
-WRITTEN edges: a continue answer writes a path; its later glyphs are continuations of contexts the mind produced
-itself (context + what it wrote so far). They are kept apart (`written`): a different measurement (the mind's own
-momentum) from a shown context. They feed cycle manifestation and the planner's candidates, not the walk.
+WRITTEN answers (METHODOLOGY §4: "One answer yields a whole path of edges, each conditioned on everything before it"):
+each glyph after a continue answer's first is that mind's continuation at its own context -- everything shown and
+written before it (its last <= 8 glyphs, trimmed back to the nearest repeat, so contexts hold distinct glyphs as shown
+ones do). They are stored as their own channel, `written` (ctx -> family -> [next]): an answer obtained from a context
+the mind wrote itself rather than one it was shown, a probing distinction (concern 1) the tree keeps, not a reason to
+drop anything. NODES stay answers to SHOWN contexts (plus seed votes): the walk below -- the planner's view of the
+tree -- and k* read them. Which read-off pools which channel is that read-off's own stated choice (BEST.md reports
+them separately). Tree(recs, written=True) pools written answers into the nodes, for read-offs that want candidates
+from them. History: until 2026-10-05 no read-off and not the planner used `written` (this docstring claimed the
+planner did), a bug against §4 that left about half of every multi-glyph answer unused.
 SEEDS (Joseph, 2026-10-05): survey sequences count as votes from the surveyor's family (port/port_seeds.py), tagged
 era "seed". They join nodes like any answer, so seeded paths are walkable at once; a context counts as ASKED only once
 a real mind answered it (`real`), so the planner still asks every seeded context and k* is never "known" from seeds.
@@ -75,7 +82,7 @@ def manifest(S, shown):
     return None
 
 class Tree:
-    def __init__(self, recs, seeds=True):
+    def __init__(self, recs, seeds=True, written=False):
         self.nodes = collections.defaultdict(lambda: collections.defaultdict(list))     # ctx -> family -> [first]
         self.written = collections.defaultdict(lambda: collections.defaultdict(list))   # ctx -> family -> [next]
         self.inhibit = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # (ctx,x)->fam->verdict
@@ -110,8 +117,17 @@ class Tree:
                     first = seq[0] if seq else OTHER
                     S = list(ctx) + seq
                     for i in range(1, len(seq)):
-                        c2 = tuple(S[max(0, len(ctx) + i - MAXK):len(ctx) + i])
+                        c2 = list(S[max(0, len(ctx) + i - MAXK):len(ctx) + i])
+                        while len(set(c2)) < len(c2):               # back to the nearest repeat
+                            c2 = c2[1:]
+                        if len(c2) < 2:
+                            continue
+                        c2 = tuple(c2)
                         self.written[c2][r["family"]].append(seq[i])
+                        if written:
+                            self.nodes[c2][r["family"]].append(seq[i])
+                            if (r.get("tags") or {}).get("thinking_tokens") == 0:
+                                self.unreasoned[c2].append(seq[i])
                     P = manifest(S, len(ctx))
                     if P:
                         key = canon_cycle(list(P))
@@ -150,6 +166,7 @@ class Tree:
         return r[0][0] if r else None
 
     def lookup(self, run):
+        """the longest suffix (2-8 glyphs) of `run` that has answers"""
         for j in range(min(MAXK, len(run)), 1, -1):
             if tuple(run[-j:]) in self.nodes:
                 return tuple(run[-j:])

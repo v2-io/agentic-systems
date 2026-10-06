@@ -40,6 +40,7 @@ import tree as TR                                           # noqa: E402
 
 EXPLORE_SHARE = 0.15
 REASONED_PER_ROUND = 20      # reasoned-pass questions a round (chosen without evidence; the reasoner is the costly mind)
+WRITTEN_RECOGNIZE_PER_ROUND = 40   # recognition questions for written continuations past shown ends (chosen without evidence)
 FRESH_TIERS = {"1-byte": (4, [(0x21, 0x7E)]), "2-byte": (3, [(0xA1, 0x7FF)]),
                "3-byte": (2, [(0x2000, 0x2BFF), (0x2E80, 0x33FF)]), "4-byte": (1, [(0x1D300, 0x1D7FF), (0x1F000, 0x1FBFF)])}
 
@@ -77,7 +78,30 @@ class Plan:
                             **({"variant": variant} if variant else {})))
         return True
 
-TIER = {"recognize": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "branch": 4, "inside": 5}
+TIER = {"recognize": 1, "recognize-written": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "branch": 4, "inside": 5}
+
+def written_recognition(P, seqs):
+    """Momentum past a felt end (METHODOLOGY §4): where the shown answers end a sequence (top answer "none") but minds
+    writing past that point continued with x, ask the first-impression roster whether x comes directly after the shown
+    context -- recognition of what was generated. Ordered by how many written answers carry x."""
+    T = P.T
+    cands = collections.Counter()
+    for s in seqs:
+        g = s["glyphs"]
+        for side, stop in (("right", s["stop_right"]), ("left", s["stop_left"])):
+            if stop != "end":
+                continue
+            run = g if side == "right" else g[::-1]
+            ctx = T.lookup(run)
+            if not ctx or T.top(ctx) != TR.NONE:
+                continue
+            for j in range(2, min(TR.MAXK, len(run)) + 1):
+                for f, xs in T.written.get(tuple(run[-j:]), {}).items():
+                    for x in xs:
+                        if x not in ctx and PR.is_glyph(x) and (ctx, x) not in T.inhibit:
+                            cands[(ctx, x)] += 1
+    return [("inhibit", list(ctx), x, {"why": "recognize-written", "written_answers": n})
+            for (ctx, x), n in cands.most_common(WRITTEN_RECOGNIZE_PER_ROUND)]
 
 def reasoned_work(P, seqs, rid):
     """the reasoned pass (METHODOLOGY §4): generation at felt ends, then recognition of what it generates.
@@ -194,6 +218,7 @@ def plan(rid, recs, seeds, budget):
         for ii, (kind, ctx, cand, src) in enumerate(sequence_work(P, s, r)):
             work.append((TIER[src["why"]], si, ii, kind, ctx, cand, dict(src, rank=round(s["rank"], 4))))
     recog, gen = reasoned_work(P, seqs, rid)
+    recog += written_recognition(P, seqs)
     work += [(1, -1, ii, kind, ctx, cand, src) for ii, (kind, ctx, cand, src) in enumerate(recog)]
     work.sort(key=lambda w: w[:3])
     n_reasoned = 0
