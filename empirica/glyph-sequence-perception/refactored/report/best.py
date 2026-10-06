@@ -11,7 +11,7 @@ Seed votes help find candidates but never confirm a link.
 A link a-b of a candidate run, read in either direction (a sequence and its reverse are one sequence, METHODOLOGY §2):
   SHOWN-CONFIRMED  one estimate from both reading directions: in each, the longest shown context ending at the earlier
                    glyph (within the run) gives the later glyph's agreement; the link's agreement is the MEAN over the
-                   directions (families pooled), >= THETA from >= 2 families. A direction whose top answer is "none"
+                   directions, CONFIDENTLY >= LEVEL (see estimate()) from >= 2 families. A direction whose top answer is "none"
                    is the end of that reading and is left out; one naming a different glyph counts against (e.g.
                    `㉏ ㉐ -> ㉑` forward, but `㉕ ... ㉑ -> ⑳` backward). The mean, not the better of the two, so
                    that asking a link from its other side (as the planner's join probes do) is a test, not a
@@ -27,7 +27,10 @@ Tables:
 Rotations of one run, all confirmed, are listed once and marked as wrapping: a cycle confirmed link by link (distinct
 from a manifested cycle, which a mind wrote round twice). Candidates are walks of the tree with seed votes, and of the tree with written answers pooled in; overlapping runs
 are merged and their links judged again on the merged run (a link's context depends on the run before it).
-Ranked by length, then mean agreement. Display only: a run monotonic in numeric value (or else in code points) is shown ascending. THETA = 0.75 is a read-off cut chosen without evidence; it gates nothing.
+Ranked by length, then the weakest link's lower bound. Display only: a run monotonic in numeric value (or else in code
+points) is shown ascending. LEVEL = 0.5 and the 90% confidence are read-off choices made without evidence; they gate
+nothing outside this file. Agreement is the perceptual quantity (how strongly the minds converge); the interval is how
+sure we are of it (Joseph, 2026-10-05: "Is 'agreement' a perceptual factor for BEST or a data integrity issue?").
 """
 import collections, pathlib, sys, unicodedata
 
@@ -36,7 +39,29 @@ ROOT = HERE.parents[1]
 sys.path.insert(0, str(ROOT / "tree"))
 import tree as TR                                           # noqa: E402
 
-THETA = 0.75
+LEVEL = 0.5     # a link is confirmed when its agreement is confidently >= LEVEL ("most answers name it")
+Z = 1.2816      # ... at 90% one-sided confidence. LEVEL and the 90% are read-off choices made without evidence.
+
+def beta_mv(k, n):
+    """posterior mean and variance of a family's share naming x, from k of n answers, Jeffreys prior Beta(1/2, 1/2)"""
+    a, b = k + 0.5, n - k + 0.5
+    return a / (a + b), a * b / ((a + b) ** 2 * (a + b + 1))
+
+def estimate(dirs):
+    """dirs: [ {family: (k, n)} per reading direction ] -> (observed agreement, lower bound, families naming x).
+    Agreement is the mean over directions of the mean over families of each family's share (perceptual strength, as
+    observed). The lower bound treats each family's share as a Beta posterior and the means as normal (an
+    approximation): mean - Z * sd. Thin evidence widens the interval; it cannot pass on a high point estimate."""
+    obs, mean, var, fams = [], [], [], set()
+    for d in dirs:
+        F = len(d)
+        mv = [beta_mv(k, n) for k, n in d.values()]
+        obs.append(sum(k / n for k, n in d.values()) / F)
+        mean.append(sum(m for m, _ in mv) / F)
+        var.append(sum(v for _, v in mv) / F ** 2)
+        fams |= {f for f, (k, n) in d.items() if k > 0}
+    D = len(dirs)
+    return sum(obs) / D, sum(mean) / D - Z * (sum(var) / D ** 2) ** 0.5, fams
 TOP = 150
 TOP_WRITTEN = 100
 
@@ -65,9 +90,8 @@ def shown_dir(Tp, run, x):
     ctx, rk = shown_top(Tp, run)
     if not rk:
         return None
-    fams = {f for f, xs in Tp.nodes[ctx].items() if x in xs}
     u = Tp.unreasoned.get(ctx, [])
-    return {"agr": Tp.dist(ctx).get(x, (0.0, 0, 0))[0], "fams": fams, "top": rk[0][0],
+    return {"counts": {f: (sum(1 for y in xs if y == x), len(xs)) for f, xs in Tp.nodes[ctx].items()}, "top": rk[0][0],
             "uk": sum(1 for f in u if f == x), "un": len(u)}
 
 def written_dir(Tp, run, x):
@@ -80,8 +104,7 @@ def written_dir(Tp, run, x):
             per[f] += xs
     if not per:
         return None
-    shares = {f: sum(1 for y in xs if y == x) / len(xs) for f, xs in per.items()}
-    return {"agr": sum(shares.values()) / len(shares), "fams": {f for f, v in shares.items() if v > 0}}
+    return {"counts": {f: (sum(1 for y in xs if y == x), len(xs)) for f, xs in per.items()}}
 
 def judge(g, Tp):
     """-> per link i (g[i]-g[i+1]): ("S", agr, fam, uk, un) | ("W", agr, fam, 0, 0) | None.
@@ -98,17 +121,15 @@ def judge(g, Tp):
         ds = [d for d in (shown_dir(Tp, fwd, b), shown_dir(Tp, bwd, a)) if d and d["top"] not in (TR.NONE, TR.OTHER)]
         st = None
         if ds:
-            agr = sum(d["agr"] for d in ds) / len(ds)
-            fams = set().union(*(d["fams"] for d in ds))
-            if agr >= THETA and len(fams) >= 2:
-                st = ("S", agr, len(fams), sum(d["uk"] for d in ds), sum(d["un"] for d in ds))
+            agr, lb, fams = estimate([d["counts"] for d in ds])
+            if lb >= LEVEL and len(fams) >= 2:
+                st = ("S", agr, len(fams), sum(d["uk"] for d in ds), sum(d["un"] for d in ds), lb)
         elif not any(contradicts(Tp, run, x, none_counts=True) for run, x in ((fwd, b), (bwd, a))):
             ws = [w for w in (written_dir(Tp, fwd, b), written_dir(Tp, bwd, a)) if w]
             if ws:
-                agr = sum(w["agr"] for w in ws) / len(ws)
-                fams = set().union(*(w["fams"] for w in ws))
-                if agr >= THETA and len(fams) >= 2:
-                    st = ("W", agr, len(fams), 0, 0)
+                agr, lb, fams = estimate([w["counts"] for w in ws])
+                if lb >= LEVEL and len(fams) >= 2:
+                    st = ("W", agr, len(fams), 0, 0, lb)
         out.append(st)
     return out
 
@@ -124,6 +145,7 @@ def runs(g, links, allowed, need_w):
             ls = [l for _, l in cur]
             out.append({"glyphs": g[a:b + 1], "agreement": sum(l[1] for l in ls) / len(ls),
                         "families_min": min(l[2] for l in ls),
+                        "lb": min(l[5] for l in ls),
                         "written_links": sum(1 for l in ls if l[0] == "W"), "shown_links": sum(1 for l in ls if l[0] == "S"),
                         "unreasoned": (sum(l[3] for l in ls if l[0] == "S"), sum(l[4] for l in ls if l[0] == "S"))})
         cur = []
@@ -192,7 +214,7 @@ def dedupe(items):
         g, n = s["glyphs"], len(s["glyphs"])
         if not any(n < len(k["glyphs"]) and any(k["glyphs"][i:i + n] in (g, g[::-1]) for i in range(len(k["glyphs"]) - n + 1)) for k in kept):
             kept.append(s)
-    kept.sort(key=lambda s: (-len(s["glyphs"]), -s["agreement"], s["glyphs"]))
+    kept.sort(key=lambda s: (-len(s["glyphs"]), -s.get("lb", 0), s["glyphs"]))
     return kept
 
 def table(allowed, need_w, cands, Tp):
@@ -258,45 +280,52 @@ def main():
     cyc = sorted((c for c in Tp.cycles.values() if c["distinct"] >= 4), key=lambda c: (-len(c["families"]), -c["answers"]))
     rounds = sorted({r["round"] for r in recs if r["round"] != "seed"}, key=lambda x: (x[0] != "r", x))
     lens = collections.Counter(min(len(s["glyphs"]), 10) for s in kept)
+    FA = {"claude": "cl", "gemini": "ge", "grok": "gr", "muse": "mu"}
+    fa = lambda fs: " ".join(FA.get(f, f) for f in sorted(fs))
     L = ["# Best-confirmed sequences", "",
-         f"*Generated by `refactored/report/best.py` after {rounds[-1]}. This is a read-off: nothing reads it back, so it never steers what is asked. Its criteria are its own (stated in `best.py`), not the walk's. Two channels of answers are kept apart (METHODOLOGY §4): **shown**, a mind's answer to a context it was shown; and **written**, the later glyphs of a continue answer, the mind's continuation at a context it wrote itself. A **stretch** is a run in which every link was confirmed by shown answers, reading in either direction: the longest shown context names the next glyph as its most-agreed continuation, with agreement ≥ {THETA} from ≥ 2 LLM families; and the other direction doesn't name a *different* glyph (that would make it a branch). Seed votes help find candidates but never confirm a link. The full tree, with branches and open ends, is in `SEQUENCES.md`.*", "",
+         f"*Generated by `refactored/report/best.py` after {rounds[-1]}. This is a read-off: nothing reads it back, so it never steers what is asked. Its criteria are its own, stated in `best.py`. Answers come in two channels, kept apart (METHODOLOGY §4): **shown**, a mind's answer to a context it was shown; and **written**, the later glyphs of a continue answer, its continuation at a context it wrote itself. A link's **agreement** is how strongly the minds converge on it, the perceptual quantity: per family, the share of answers at the deciding context naming the next glyph, averaged over families and over both reading directions. A direction whose top answer is \"none\" is the end of that reading and is left out. A link is **confirmed** when that agreement is *confidently* ≥ {LEVEL}: each family's share is treated as a Beta posterior (Jeffreys prior), the lower bound is taken at 90%, and ≥ 2 families must name the link. Thin evidence can't pass on a high point estimate. Seed votes help find candidates but never confirm. The full tree is in `SEQUENCES.md`.*", "",
          f"**{len(kept)} confirmed stretches of 3+ glyphs** (by length: " + ", ".join(f"{k if k < 10 else '10+'}: {lens[k]}" for k in sorted(lens)) + f"); **{len(cyc)} manifested cycles**; **{len(carried)} runs carried by written answers** awaiting shown confirmation.", ""]
     if cyc:
-        L += ["## Cycles (manifested: a mind wrote the whole period twice)", "", "| cycle | glyphs | answers | families |", "|---|---|---|---|"]
-        L += [f"| `{' '.join(c['pattern'])} ↻` | {len(c['pattern'])} | {c['answers']} | {', '.join(sorted(c['families']))} |" for c in cyc[:40]]
-        L.append("")
-    L += ["## Stretches", "",
-          "**Unreasoned** counts, over the stretch's links at their deciding contexts, the answers given with 0 thinking tokens (measured per answer: Gemini Flash, Haiku with thinking off, Sonnet when its adaptive thinking is 0) that name the link, out of all such answers there. It shows how far a link is *recognised* rather than worked out (METHODOLOGY §4). It confirms nothing, and it is a slice of the same answers that confirm the link, not independent evidence. *(none)*: no unreasoned answers at those contexts yet.", "",
-          "| # | stretch | glyphs | mean agreement | families (min over links) | unreasoned |", "|---|---|---|---|---|---|"]
+        L += ["## Cycles", "", "| cycle | n | ans | fam |", "|---|---|---|---|"]
+        L += [f"| `{' '.join(c['pattern'])} ↻` | {len(c['pattern'])} | {c['answers']} | {fa(c['families'])} |" for c in cyc[:40]]
+        L += ["", "*Manifested: a mind wrote the whole period twice, after being shown less than one period. **n**: glyphs in the period. **ans**: answers that manifested it. **fam**: families (cl = Claude, ge = Gemini, gr = Grok).*", ""]
+    L += ["## Stretches", "", "| # | stretch | n | agr | ≥ | fam | unr |", "|---|---|---|---|---|---|---|"]
     for i, s in enumerate(kept[:TOP], 1):
         k, n = s["unreasoned"]
-        L.append(f"| {i} | `{' '.join(shown_order(s['glyphs']))}`{' ↻ (wraps)' if s.get('wraps') else ''} | {len(s['glyphs'])} | {s['agreement']:.2f} | {s['families_min']} | {f'{k}/{n}' if n else '(none)'} |")
+        L.append(f"| {i} | `{' '.join(shown_order(s['glyphs']))}`{' ↻' if s.get('wraps') else ''} | {len(s['glyphs'])} | {s['agreement']:.2f} | {s['lb']:.2f} | {s['families_min']} | {f'{k}/{n}' if n else '–'} |")
     if len(kept) > TOP:
         L += ["", f"*{len(kept) - TOP} shorter stretches not shown.*"]
-    L += ["", "## Carried by written answers (awaiting shown confirmation)", "",
-          f"Runs in which some links are carried only by **written** answers. In the stated direction, all written answers whose context matches the run before the link name the next glyph, with agreement ≥ {THETA} from ≥ 2 families, and no shown answer contradicts it. In particular, a shown \"none\" at that point (momentum past a felt end) excludes the link. These are the minds' own generation, not yet confirmed when shown. Long runs here are often code-chart walks: a mind carrying on through a block in code-point order. The planner asks such contexts shown, and puts written continuations past shown ends to recognition.", "",
-          "| # | run | glyphs | written links / shown links | mean agreement | families (min over links) |", "|---|---|---|---|---|---|"]
+    L += ["", "*Key:*",
+          "- **n**: glyphs.",
+          "- **agr**: observed agreement, the mean over the stretch's links.",
+          f"- **≥**: the weakest link's 90% lower bound (every link is ≥ {LEVEL}).",
+          "- **fam**: families naming the link, the fewest over the links.",
+          "- **unr**: *unreasoned*, the answers given with 0 thinking tokens that name the links, out of all such answers at those contexts. A slice of the confirming answers, not independent evidence; it shows recognition rather than working-out (METHODOLOGY §4). **–**: none yet.",
+          "- **↻**: the run wraps. Its rotations are all confirmed, so it is a cycle confirmed link by link; not the same as manifested.",
+          "- Display: a run monotonic in numeric value (or else in code points) is shown ascending.", ""]
+    L += ["## Carried by written answers (awaiting shown confirmation)", "", "| # | run | n | W/S | agr | ≥ | fam |", "|---|---|---|---|---|---|---|"]
     for i, s in enumerate(carried[:TOP_WRITTEN], 1):
-        L.append(f"| {i} | `{' '.join(shown_order(s['glyphs']))}`{' ↻ (wraps)' if s.get('wraps') else ''} | {len(s['glyphs'])} | {s['written_links']} / {s['shown_links']} | {s['agreement']:.2f} | {s['families_min']} |")
+        L.append(f"| {i} | `{' '.join(shown_order(s['glyphs']))}`{' ↻' if s.get('wraps') else ''} | {len(s['glyphs'])} | {s['written_links']}/{s['shown_links']} | {s['agreement']:.2f} | {s['lb']:.2f} | {s['families_min']} |")
     if len(carried) > TOP_WRITTEN:
         L += ["", f"*{len(carried) - TOP_WRITTEN} shorter runs not shown.*"]
+    L += ["", "*Runs in which some links are carried only by **written** answers, the minds' own generation, not yet confirmed when shown. They are judged the same way on written answers whose context matches the run before the link, and dropped where a shown answer contradicts them (a shown \"none\" there is momentum past a felt end). Long runs here are often code-chart walks. The planner asks such contexts shown, and puts written continuations past shown ends to recognition. **W/S**: links carried by written answers / confirmed by shown answers. Other columns as above.*", ""]
     fams, yes, rec = recognition(recs)
     if rec:
-        L += ["", "## Recognition, and its controls", "",
-              "Recognition (inhibit) questions ask whether a candidate comes directly after a shown run: *yes / no / can't tell*. The candidates come from reasoned answers, and from written answers that run past where shown answers end. Each one has a matched **control** at the same context, shuffled onto the same sheets: a **near** decoy, from the same neighbourhood of the code chart but not adjacent, or a **far** one, from a distant part of Unicode. Control yes-rates show how readily a family says yes. A candidate is **recognised** when its yes share beats the family's near-control rate in ≥ 2 families. Controls began in c007; until a family has a control rate, nothing of its counts as recognised.", "",
-              "| family | yes: real candidates | yes: near controls | yes: far controls |", "|---|---|---|---|"]
+        L += ["## Recognition, and its controls", "", "| family | real | near | far |", "|---|---|---|---|"]
         for f in fams:
             cells = []
             for cls in ("real", "near", "far"):
                 v, n = yes(f, cls)
-                cells.append(f"{v:.2f} (n={n})" if v is not None else "—")
+                cells.append(f"{v:.2f} ({n})" if v is not None else "—")
             L.append(f"| {f} | " + " | ".join(cells) + " |")
         good = [r for r in rec if len(r["above"]) >= 2]
-        L += ["", f"**{len(good)} of {len(rec)} candidates recognised.**", "",
-              "| context | candidate | recognised | verdicts per family (yes / no / can't tell) |", "|---|---|---|---|"]
+        L += ["", "*Yes-rates (n), per family. Recognition (inhibit) questions ask whether a candidate comes directly after a shown run: yes / no / can't tell. **real**: candidates from reasoned answers, and from written answers that run past where shown answers end. **near** / **far**: their matched controls, decoys at the same context, shuffled onto the same sheets. Near decoys come from the same neighbourhood of the code chart, not adjacent; far ones from a distant part of Unicode. Controls began in c007.*", "",
+              f"**{len(good)} of {len(rec)} candidates recognised**: the yes share beats the family's near-control rate in ≥ 2 families.", "",
+              "| context | cand. | rec. | y/n/? per family |", "|---|---|---|---|"]
         for r in sorted(rec, key=lambda r: (-len(r["above"]), r["x"]))[:80]:
-            v = "; ".join(f"{f} {c.get('yes', 0)}/{c.get('no', 0)}/{c.get('cant-tell', 0)}" for f, c in sorted(r["verdicts"].items()))
-            L.append(f"| `{' '.join(r['ctx'])}` | `{r['x']}` | {'yes' if len(r['above']) >= 2 else 'not yet'} | {v} |")
+            v = "; ".join(f"{FA.get(f, f)} {c.get('yes', 0)}/{c.get('no', 0)}/{c.get('cant-tell', 0)}" for f, c in sorted(r["verdicts"].items()))
+            L.append(f"| `{' '.join(r['ctx'])}` | `{r['x']}` | {'yes' if len(r['above']) >= 2 else '–'} | {v} |")
+        L += ["", "*Answers per family: yes / no / can't tell. **rec.**: recognised; **–**: not (yet).*"]
     (ROOT / "BEST.md").write_text("\n".join(L) + "\n")
     print("\n".join(L[:6]))
 
