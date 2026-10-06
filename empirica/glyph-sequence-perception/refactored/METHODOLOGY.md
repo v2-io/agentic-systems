@@ -28,7 +28,7 @@ A **context** is an oriented run of glyphs: what a mind was shown, ending at the
 - **Edge.** The answers at a node. Each continuation `x` at node `c` is an edge `c → x`, with its supporting answers and the families behind them.
 - **Orientation.** A sequence and its reverse are the same sequence, but contexts are oriented. Extending a sequence leftward means asking the continuation of its reversed run. Both directions are ordinary continuation questions.
 
-## 2a. Three concerns, kept apart
+## 2a. The concerns, kept apart
 
 > *"The context tree should give us a very clean way of distinguishing between these three concerns/responsibilities: meaningful generalizable probing (e.g., preventing sheet-caused confounders & biases), the raw emergent sequences, and probing priority & efficiency (including seeding)."* — Joseph, 2026-10-05
 
@@ -49,6 +49,12 @@ A **context** is an oriented run of glyphs: what a mind was shown, ending at the
 4. **Porting: bringing the triad era's answers in without corrupting the tree.** Joseph: *"correctly porting triad-era data into the context tree as much as possible without introducing any incorrect or biased or otherwise invalid data."* It is an adapter at the boundary, written once and audited, and it feeds concern 2 exactly as concern 1 does: answers with tags. §6 states what is ported as what.
 
 5. **Read-offs: what the tree holds, presented.** BEST.md, SEQUENCES.md and PROGRESS.md each read the tree with their own stated criteria, and nothing reads them back. Joseph, 2026-10-05, on keeping them apart: *"I get the feeling like we are possibly mixing the 5 concerns that need to be independent? (if the BEST read of the context tree is considered a 5th concern)"*. A read-off's criteria are its own, never shared with the planner's read of the tree. If a read-off shows a defect, the fix belongs in the read-off, unless the defect is in the answers themselves. Found that day: a fix for a BEST.md symptom had been put into the walk, which is the planner's view of the tree, and coupled the two. It was undone.
+
+6. **The catalog: the tree's sequences, derived once, by one stated model** (designed 2026-10-06; not built: `CATALOG.md`). Readers had each derived sequences from the raw tree in their own way: the tree's walks, the planner's walks, BEST's paths and folding, triad chains. Each fix in one exposed a loss in another; most tellingly, 232 of the triad era's 300 top rows appeared nowhere. Joseph: *"we basically have a 'raw-data context-tree' and a 'canonical statistically sound context-tree' maybe?"*, and the catalog *"should actually end up being (if done right) the more correct* input *to the probing concern and the rating+extraction (best/reading) concern."*
+   - **What it is.** A deterministic build from answers alone: canonical records for links, runs, cycles and branches, each with a posterior score and its weight of evidence, itemised by channel, family and answer.
+   - **The model.** Families as noisy raters, with false-positive rates taken from the controls (Dawid–Skene). A hierarchical Pitman–Yor context tree for generation, with a prior from triads and order lines (Joseph's suggestion).
+   - **The engine.** Postgres 18.
+   - **Once built**, the planner (3) and the read-offs (5) read the catalog instead of re-deriving links. Until then they read the tree, and their criteria stay their own.
 
 **One standard for evidence** (2026-10-05; Joseph: *"make sure the evidence is very defensible and not a … mishmash of heuristics"*). The tree supplies facts: per family, how many answers gave the response a claim predicts, of how many. Every reader decides with one standard:
 - **The estimate.** Each family's proportion is a Beta posterior (Jeffreys). A test's estimate is the equal-weight mean over the families that answered, because the claims are about families, with its spread.
