@@ -51,7 +51,7 @@ import fate                                                # noqa: E402
 PROTOCOL = "ctx-0.1"
 MAX_SHEET = 5
 MAX_CONTINUE = 24
-KINDS = ("continue", "inhibit", "triad", "cohere", "pick", "order", "choose")
+KINDS = ("continue", "inhibit", "triad", "cohere", "pick", "order", "choose", "names")
 MAX_ORDER = 12                    # the largest set an order question shows (the triad era: 8; chosen without evidence)
 SAMPLES = 5                       # pick: samples per context per generator mind (chosen without evidence)
 MAX_RUN = 24                       # the longest run a cohere question shows (chosen without evidence)
@@ -146,8 +146,10 @@ def question(kind, context, candidate=None, source=None, variant=None, probe=Non
     c = list(context)
     if variant == "reflection":
         assert 3 <= len(c) <= 8 and all(is_glyph(x) for x in c), c
-    elif kind == "order":
+    elif kind in ("order", "names"):
         assert 4 <= len(c) <= MAX_ORDER and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c
+        if kind == "names":
+            assert all(U.name(x, None) for x in c), c
     elif kind in ("cohere", "pick"):
         assert (3 if kind == "cohere" else 2) <= len(c) <= MAX_RUN and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c
     else:
@@ -157,11 +159,10 @@ def question(kind, context, candidate=None, source=None, variant=None, probe=Non
         g = sorted(c); c = list(g); R("triad-shown", {"glyphs": g}).shuffle(c)
         key = {"kind": kind, "glyphs": g}
         return dict(key, context=c, qid=uid("T", key), source=source or {})
-    if kind == "order":
-        assert 4 <= len(c) <= MAX_ORDER, c
-        g = sorted(c); c = list(g); R("order-shown", {"glyphs": g}).shuffle(c)
+    if kind in ("order", "names"):
+        g = sorted(c); c = list(g); R(kind + "-shown", {"glyphs": g}).shuffle(c)
         key = {"kind": kind, "glyphs": g}
-        return dict(key, context=c, qid=uid("O", key), source=source or {})
+        return dict(key, context=c, qid=uid("O" if kind == "order" else "M", key), source=source or {})
     key = {"kind": kind, "context": c}
     if kind == "choose":
         pair = sorted(candidate)
@@ -228,6 +229,18 @@ def _lines(kind, sheet):
                  'Symbols that seem to be the same step go together in a nested list, like ["<s1>", ["<s2>", "<s3>"]].',
                  'Put "GAP" between two symbols where a step seems to be missing.']
         reply = '{"id": <id>, "seqs": [[...], ...], "extra": [...]} or {"id": <id>, "none": true}'
+    elif kind == "names":      # CATALOG v5 §7a, §12: the name route's prediction -- names only, the glyphs never shown
+        intro = "Each item below lists the names of some symbols, in scrambled order. The symbols themselves aren't shown."
+        opts = ['"seqs": the names that seem to go in a sequence, in that sequence (either end first); '
+                'if you see more than one separate sequence, give each as its own list. Put any names that '
+                'belong to none of them in "extra"',
+                '"none": true, if none of them seem to form a sequence']
+        sents = ["Go by first impressions, and judge each item on its own rather than building a scheme across items.",
+                 '"none" is expected often and is fully valuable.',
+                 'Refer to each name by its place in the item, "#1", "#2", …, or copy it exactly.',
+                 'Names that seem to be the same step go together in a nested list, like ["#1", ["#2", "#3"]].',
+                 'Put "GAP" between two names where a step seems to be missing.']
+        reply = '{"id": <id>, "seqs": [[...], ...], "extra": [...]} or {"id": <id>, "none": true}'
     elif kind == "pick":       # Joseph's wording, 2026-10-05 ("a single", never "the one": no answer is expected)
         intro = "Each item below shows a sequence of symbols. Pick a single character that would extend this sequence. You may be creative, but give a reason."
         opts = ['"next": the single character you pick',
@@ -288,7 +301,7 @@ def prompt(sheet, variant=None):
     head = "For each item, answer with:" if sheet["kind"] == "pick" else "For each item, answer with one of:"
     L = [opener, intro, head] + [f"  - {o}" for o in opts] + sents + extra + ["", "Items:"]
     for e in sheet["entries"]:
-        o = {"id": e["id"], "s": e["context"]}
+        o = {"id": e["id"], "s": e["context"]} if sheet["kind"] != "names" else {"id": e["id"], "names": [U.name(x) for x in e["context"]]}
         if sheet["kind"] == "inhibit":
             o["candidate"] = e["candidate"]
         if sheet["kind"] == "choose":
@@ -515,6 +528,23 @@ def _records(sheet, ledger_rows, mind, family, judge, questions, variant):
                 rec["outcome"] = "chose"; rec["choice"] = e[v]; rec["tags"]["chose_position"] = v
             else:
                 rec["outcome"] = "unparsed"; rec["reason"] = f"answer:{v[:20]}"
+        elif sheet["kind"] == "names":
+            rec["shown"] = list(e["context"])
+            rec["names"] = [U.name(x) for x in e["context"]]
+            rec["tags"]["factors"] = {"perp": True, "tie": True, "gap": True}
+            byname = {n.casefold(): f"#{i + 1}" for i, n in enumerate(rec["names"])}
+            def unname(v):                      # a copied name -> its place, so the order parser can read it
+                if isinstance(v, list):
+                    return [unname(y) for y in v]
+                return byname.get(v.strip().casefold(), v) if isinstance(v, str) else v
+            a2 = dict(a, seqs=unname(a.get("seqs")) if isinstance(a.get("seqs"), list) else a.get("seqs"),
+                      extra=unname(a.get("extra") or []))
+            try:
+                v = parse_order(a2, list(e["context"]))
+                rec["answer"] = v
+                rec["outcome"] = "none" if v.get("none") else "lines"
+            except Bad as ex:
+                rec["outcome"] = "unparsed"; rec["reason"] = f"names:{ex}"
         elif sheet["kind"] == "order":
             rec["shown"] = list(e["context"])
             rec["tags"]["factors"] = {"perp": True, "tie": True, "gap": True}

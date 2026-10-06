@@ -62,6 +62,13 @@ BRANCH_FLOOR, BRANCH_MID, BRANCH_WIDTH = 0.02, 0.10, 0.04
 PICK_NULL_EVERY = 4          # one null (fresh random) context per this many real ones, same length (chosen without evidence)
 CHOOSE_PER_ROUND = 60        # discriminator-position questions a round (chosen without evidence)
 ORDER_PER_ROUND = 40         # order questions a round (chosen without evidence)
+NAMES_PER_ROUND = 30         # name-only order questions a round (chosen without evidence)
+CHOOSE_CONTROLS_PER_ROUND = 20   # D controls a round: a discriminator pair after a neutral context (chosen without evidence)
+# CATALOG v5 §7a: before the name route counts, the name-only question is validated. Each set is written in the order
+# its names' MEANING gives; the first group's code-point order differs from it (so a name-only order that follows the
+# code points is chart recall through the names); the second group's names carry no order (expected: "none").
+NAME_VALIDATION = {"meaning-vs-code": ["⁰¹²³⁴", "⅕¼⅓½⅔¾", "🕐🕜🕑🕝🕒", "⓪①②③④", "❽❾❿⓫⓬", "▕🮇🮈▐🮉🮊🮋"],
+                   "uninformative": ["♠♣♥♦", "☂☃☄★☎", "§¶†•※"]}
 CHART_CONTROL_SHARE = 0.25   # share of runs that also get a chart window -- a descriptive measurement, not a decoy (chosen without evidence)
 FRESH_TIERS = {"1-byte": (4, [(0x21, 0x7E)]), "2-byte": (3, [(0xA1, 0x7FF)]),
                "3-byte": (2, [(0x2000, 0x2BFF), (0x2E80, 0x33FF)]), "4-byte": (1, [(0x1D300, 0x1D7FF), (0x1F000, 0x1FBFF)])}
@@ -89,7 +96,7 @@ class Plan:
     def add(self, kind, ctx, cand=None, variant=None, probe=None, replicate=False, **src):
         ctx = list(ctx)
         distinct = variant == "reflection" or len(set(ctx)) == len(ctx)       # reflections turn back on themselves
-        lo, hi = {"cohere": (3, PR.MAX_RUN), "order": (4, PR.MAX_ORDER), "pick": (2, PR.MAX_RUN)}.get(kind, (2, 8))   # (2, 8) for continue/inhibit/triad: chosen without evidence
+        lo, hi = {"cohere": (3, PR.MAX_RUN), "order": (4, PR.MAX_ORDER), "names": (4, PR.MAX_ORDER), "pick": (2, PR.MAX_RUN)}.get(kind, (2, 8))   # (2, 8) for continue/inhibit/triad: chosen without evidence
         # (until 2026-10-06 pick fell to the continue limit of 8, silently refusing every longer context: the
         # tendrils stopped at 8 glyphs, and roots longer than 8 -- Joseph's block cycle among them -- were never asked)
         if not (lo <= len(ctx) <= hi) or not distinct or not all(PR.is_glyph(x) for x in ctx):
@@ -99,6 +106,8 @@ class Plan:
                 self._ordered = {frozenset(sh) for items in self.T.orders.values() for _, sh, _ in items}
             if frozenset(ctx) in self._ordered:
                 return False
+        if kind == "names" and (frozenset(ctx) in self.T.names or not all(U.name(x, None) for x in ctx)):
+            return False
         if kind == "pick" and tuple(ctx) in (self.T.pick_null if (probe or {}).get("null") else self.T.picks):
             return False
         if kind == "cohere" and (tuple(ctx) in self.T.cohere or tuple(ctx[::-1]) in self.T.cohere
@@ -320,8 +329,67 @@ def choose_work(P, seqs, seeds, rid):
             seen.add(key)
             out.append(("choose", ctx, (x, ch), {"why": "choose", "from": how}, {"chart": ch}))
             if len(out) >= CHOOSE_PER_ROUND:
-                return out
+                break
+        if len(out) >= CHOOSE_PER_ROUND:
+            break
+    return out + choose_controls(T, out, rid)
+
+def choose_controls(T, asked_now, rid):
+    """D controls (CATALOG v5 §7b): each discriminator pair once more, after a NEUTRAL context -- three fresh glyphs from
+    blocks other than either candidate's -- so each candidate's standalone pull is measured. This round's pairs first,
+    then earlier ones; a pair is controlled once."""
+    pairs, seen = [], set(T.choose_ctl)
+    for _, ctx, pair, _, probe in asked_now:
+        pairs.append((frozenset(pair), probe.get("chart")))
+    for key in sorted(T.choose, key=lambda k: (k[0], sorted(k[1]))):
+        pairs.append((key[1], T.choose_chart.get(key)))
+    out = []
+    for pair, ch in pairs:
+        if pair in seen:
+            continue
+        seen.add(pair)
+        x, y = sorted(pair)
+        r = PR.R("choose-neutral", {"pair": [x, y]})
+        avoid = {block(x), block(y)}
+        ctx = []
+        while len(ctx) < 3:
+            g = fresh_glyph(r)
+            if g not in pair and g not in ctx and block(g) not in avoid:
+                ctx.append(g)
+        out.append(("choose", ctx, (x, y), {"why": "choose-control", "from": "neutral"}, {"control": "neutral", "chart": ch}))
+        if len(out) >= CHOOSE_CONTROLS_PER_ROUND:
+            break
     return out
+
+def names_work(P, seeds, rid):
+    """The name-only order question (CATALOG v5 §7a, §12): the validation sets first, then sets from Joseph's seeds, the
+    other ordered seeds and the runs some mind called coherent, 4-MAX_ORDER glyphs, every glyph named. Each set once.
+    -> [(kind, glyphs, None, src)]"""
+    T = P.T
+    out = [(list(g), "validation-" + grp) for grp, sets in NAME_VALIDATION.items() for g in sets]
+    out += [(g, "seed:" + str(sid)) for g, sid in seed_list(seeds, ORDERED_SEEDS, rid, "names-seed-order")]
+    runs = [list(run) for run, fc in sorted(T.cohere.items()) if sum(c["yes"] for c in fc.values()) > 0]
+    PR.R("names-run-order", {"round": rid}).shuffle(runs)
+    out += [(g, "run") for g in runs]
+    win = []                                   # a run longer than the question shows: overlapping windows, half a window apart
+    for g, how in out:
+        if len(g) > PR.MAX_ORDER:
+            step = PR.MAX_ORDER // 2
+            starts = sorted(set(list(range(0, len(g) - PR.MAX_ORDER + 1, step)) + [len(g) - PR.MAX_ORDER]))
+            win += [(list(g[i:i + PR.MAX_ORDER]), how + f"@{i}") for i in starts]
+        else:
+            win.append((g, how))
+    res, seen = [], set()
+    for g, how in win:
+        if not (4 <= len(g) <= PR.MAX_ORDER) or len(set(g)) != len(g) or frozenset(g) in seen:
+            continue
+        if frozenset(g) in T.names or not all(PR.is_glyph(c) and U.name(c, None) for c in g):
+            continue
+        seen.add(frozenset(g))
+        res.append(("names", g, None, {"why": "names", "from": how}))
+        if len(res) >= NAMES_PER_ROUND:
+            break
+    return res
 
 def order_work(P, seqs, seeds, rid):
     """The order question (METHODOLOGY §4a): a set, scrambled -- which order, if any, do minds put it in? Sets from the
@@ -683,8 +751,11 @@ def plan(rid, recs, seeds, budget):
     work += [(1, -1, len(paired) + ii, kind, ctx, cand, src) for ii, (kind, ctx, cand, src) in enumerate(cw)]
     ow = order_work(P, seqs, seeds, rid)
     work += [(1, -1, len(paired) + len(cw) + ii, kind, ctx, cand, src) for ii, (kind, ctx, cand, src) in enumerate(ow)]
+    cho = choose_work(P, seqs, seeds, rid)
     work += [(1, -1, len(paired) + len(cw) + len(ow) + ii, kind, ctx, cand, dict(src, probe=probe))
-             for ii, (kind, ctx, cand, src, probe) in enumerate(choose_work(P, seqs, seeds, rid))]
+             for ii, (kind, ctx, cand, src, probe) in enumerate(cho)]
+    nw = names_work(P, seeds, rid)
+    work += [(1, -1, len(paired) + len(cw) + len(ow) + len(cho) + ii, kind, ctx, cand, src) for ii, (kind, ctx, cand, src) in enumerate(nw)]
     work.sort(key=lambda w: w[:3])
     n_reasoned = 0
     for kind, ctx, cand, src in gen:                       # outside the budget's tiers: asked only of reasoner minds

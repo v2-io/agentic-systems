@@ -181,7 +181,7 @@ The canary's name route waits for the name-only question like every other run's.
 
 At contested positions, each instrument gives a preference for the run's glyph (or middle) over the route's alternative. **Answers are pooled into one estimate per position first**; only that estimate is interpreted.
 
-- **D, discriminator positions** (the `choose` question, built). A forced choice between the chart's candidate and the run's glyph. Read against a **D control** (to build): the same pair after a neutral context, which measures each candidate's standalone pull.
+- **D, discriminator positions** (the `choose` question, built). A forced choice between the chart's candidate and the run's glyph. Read against a **D control** (built): the same pair after a neutral context, which measures each candidate's standalone pull.
 - **Triad middles** at contested triples, from data that already exist. For the canary's `🮄 ▀ 🮃`, the middle given was `▀` from Gemini 3 of 3, Grok 3 of 3 and Claude 4 of 5 (public before the seal).
 - **Order lines** at the contested positions of the sets they order.
 - **Lookalike substitution** (to build, §12), against a matched control. A glyph is swapped for a Unicode confusable from another block, and the same position is swapped for a control glyph drawn by a fated rule: uniformly from the confusable's own block, excluding glyphs confusable with the original and glyphs already in the run. The signal is the difference, since R alone is near ceiling. Confusables preserve identity, not style (`data/unicode/README.md`), so for styled letters it measures independence from the chart via identity, not via the look. Coverage is 454 of 1,203 monotone runs, and almost none of the canary: only `█` and `▔` have confusables.
@@ -297,8 +297,8 @@ Which one he means is his to say. Until then, the record carries both, and the v
 | addition | status |
 |---|---|
 | D, discriminator positions (`choose`) | built 2026-10-06. The planner still asks uncontested steps; to change |
-| D controls: the same pair after a neutral context | to build |
-| **The name-only order question.** Show the glyphs' Unicode *names*, scrambled, without the glyphs; ask for the order (the order question's wording). The name route's prediction (§7a). Its two validation sets come first | to build |
+| D controls: the same pair after a neutral context (three fresh glyphs from blocks other than either candidate's; tag `control: neutral`), 20 a round, each pair once | built 2026-10-06, from c096 |
+| **The name-only order question.** Show the glyphs' Unicode *names*, scrambled, without the glyphs; ask for the order (the order question's wording). The name route's prediction (§7a). Its two validation sets come first (`NAME_VALIDATION` in `priority/plan.py`: six sets whose names' meaning and code points disagree, such as `⁰¹²³⁴`, `🕐🕜🕑🕝🕒` and `⓪①②③④`, and three whose names carry no order), then Joseph's seed, ordered seeds and recognised runs; runs longer than 12 in overlapping windows; 30 a round | built 2026-10-06, from c096 |
 | `choose` between the run's glyph and the names' predicted glyph, at name-contested positions | to build, after the name-only question |
 | Lookalike substitution, with the fated control of §7b. The one instrument that can show leaning on the chart (§11) | to build, first among the instruments |
 | **Joseph's basis question.** After the verdict, in a separate turn where the adapter allows. Open first ("what did you notice that made it look that way, or not?"), then plain options: how the symbols look / what they stand for or are called / where they sit in the character encoding / can't say / **other: ___**. No value words. On a fated random half of sheets. Validated against D, not trusted on consistency with its own reply | to build |

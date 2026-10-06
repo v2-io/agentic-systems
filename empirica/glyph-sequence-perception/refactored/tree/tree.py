@@ -167,6 +167,8 @@ class Tree:
         self.picks = collections.defaultdict(lambda: collections.defaultdict(list))      # ctx -> fam -> [x|none|other]
         self.choose = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # (ctx, pair) -> fam -> chosen
         self.choose_chart = {}                              # (ctx, pair) -> the chart-neighbour candidate
+        self.choose_ctl = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # pair -> fam -> chosen, after a neutral context (D control)
+        self.names = collections.defaultdict(list)        # glyph set -> [(family, mind, parsed answer)] (name-only order question)
         self.pick_null = collections.defaultdict(lambda: collections.defaultdict(list))  # null ctx -> fam -> [...]
         self.control_pairs = set()                        # (ctx, candidate) asked as controls (kept out of `inhibit`)
         self.cycles = {}
@@ -240,9 +242,14 @@ class Tree:
                 else:
                     self.inhibit[(tuple(r["context"]), r["candidate"])][r["family"]][o] += 1
             elif k == "choose" and o == "chose":
-                key = (tuple(r["context"]), frozenset(r["candidates"]))
-                self.choose[key][r["family"]][r["choice"]] += 1
-                self.choose_chart[key] = r.get("chart")
+                if (r.get("tags") or {}).get("control") == "neutral":     # the same pair after a neutral context
+                    self.choose_ctl[frozenset(r["candidates"])][r["family"]][r["choice"]] += 1
+                else:
+                    key = (tuple(r["context"]), frozenset(r["candidates"]))
+                    self.choose[key][r["family"]][r["choice"]] += 1
+                    self.choose_chart[key] = r.get("chart")
+            elif k == "names":
+                self.names[frozenset(r["context"])].append((r["family"], r["mind"], r.get("answer") if o in ("lines", "none") else o))
             elif k == "pick" and o in ("continuation", "none", "other"):
                 x = r["continuation"][0] if o == "continuation" else (NONE if o == "none" else OTHER)
                 ((self.pick_null if (r.get("tags") or {}).get("null") else self.picks)[tuple(r["context"])][r["family"]]).append(x)
