@@ -110,7 +110,7 @@ def main(first="c096", last="c105"):
     by_round = collections.defaultdict(list)
     for n, r, ko in recs:
         by_round[n].append((r, ko))
-    agg = collections.defaultdict(lambda: [0.0, 0.0, 0.0, 0])   # (kind, why) -> [KL, entropy fall, expected, answers]
+    agg = collections.defaultdict(lambda: [0.0, 0.0, 0.0, 0, 0.0])   # (kind, why) -> [KL, entropy fall, expected, answers, gain ratio]
     for n in sorted(by_round):
         group = collections.defaultdict(list)
         for r, (q, out) in by_round[n]:
@@ -125,6 +125,9 @@ def main(first="c096", last="c105"):
                 a = [after.get(o, 0) + 0.5 for o in order]
                 kl = kl_dirichlet(a, b)
                 dh = entropy_pred(b) - entropy_pred(a)
+                ha = entropy_pred(a)
+                gr = kl / ha if ha > 0 else 0.0     # gain ratio (C4.5): gain over the intrinsic information of the
+                                                    # outcome distribution it lands in -- scattered answers penalised
                 top = max(before.values()) if before else 0
                 expected = PL.info(top, sum(before.values()))       # per answer, as the planner computes it
                 for r, out in rows:
@@ -132,16 +135,16 @@ def main(first="c096", last="c105"):
                     if r.get("era") != "ctx":
                         why = "(triad era)"
                     e = agg[(q[0], why)]
-                    e[0] += kl / len(rows); e[1] += dh / len(rows); e[2] += expected; e[3] += 1
+                    e[0] += kl / len(rows); e[1] += dh / len(rows); e[2] += expected; e[3] += 1; e[4] += gr / len(rows)
             counts[(q, fam)].update(out for _, out in rows)
     out = []
-    for (kind, why), (kl, dh, ex, n) in agg.items():
-        out.append((kind, why, n, kl / n, dh / n, ex / n))
+    for (kind, why), (kl, dh, ex, n, gr) in agg.items():
+        out.append((kind, why, n, kl / n, dh / n, ex / n, gr / n))
     out.sort(key=lambda t: (t[0], -t[3]))
     print(f"realized information per answer, rounds {first}-{last} (KL nats = Bayesian surprise; dH = fall in predictive entropy; expected = the planner's per-answer information)")
-    print(f"{'kind':16} {'why':22} {'answers':>8} {'KL':>7} {'dH':>7} {'expected':>8}")
-    for kind, why, n, kl, dh, ex in out:
-        print(f"{kind:16} {why:22} {n:8d} {kl:7.3f} {dh:7.3f} {ex:8.3f}")
+    print(f"{'kind':20} {'why':20} {'answers':>8} {'KL':>7} {'dH':>7} {'ratio':>7} {'expected':>8}")
+    for kind, why, n, kl, dh, ex, gr in out:
+        print(f"{kind:20} {why:20} {n:8d} {kl:7.3f} {dh:7.3f} {gr:7.3f} {ex:8.3f}")
 
 if __name__ == "__main__":
     main(*sys.argv[1:3])

@@ -20,6 +20,21 @@ Both are credited to the question's kind and source, per answer. The planner's o
 
 Joseph's reading, on a side agent's note that these numbers reward noise: *"random answers would imply multiple answers spreading out == high entropy == low information gain. No?"* Yes, in the sense that matters. Scattered answers leave the next answer unpredictable, so they reduce uncertainty about what comes next very little: the entropy column, where null picks score 0.02. The KL column counts the same scatter as much information about the full answer distribution at a context. That is information about something nobody needs, so steering by it would favour noisy questions. Neither column is the criterion; the next section is.
 
+## Gain ratio: the decision-tree correction, measured [measured; the correction recalled, not looked up]
+
+Joseph: *"IIRC, decision trees or random forests have a solution for this that I can't quite remember"*. Information gain in ID3 decision trees is biased toward attributes with many values, which split the data into many scattered parts. C4.5's gain ratio divides the gain by the split's own intrinsic information, its entropy. Random forests' impurity importance has the same bias toward high-cardinality features; the usual remedies are permutation importance (gain over shuffled, null data) and conditional inference trees. These are from memory: Quinlan's C4.5, and Strobl, Boulesteix, Zeileis and Hothorn (2007) on the forest bias.
+
+The same correction here: realized KL divided by the predictive entropy of the answers after the update (`yield.py`, column "ratio"; rounds c096–c105, rerun at about 17:30 with the answers then on disk):
+
+| kind | KL | gain ratio |
+|---|---|---|
+| real picks | 0.250 | 0.300 |
+| pick nulls | 0.322 | 0.159 |
+| first asks of every other kind | 0.24–0.35 | 0.37–0.57 |
+| re-asks (replicate, join-replicate) | 0.07–0.14 | 0.12–0.15 |
+
+Surprise ranks the nulls above real picks; the ratio ranks them at about half. The gap between real picks and their nulls (0.30 against 0.16) is the permutation-importance reading: information above what noise gives. The ratio is still about each question's own quantity, so the section below stands; but any measure of what a question clarifies should be scatter-corrected, and the study's nulls give the baseline to subtract.
+
 ## What follows [inference]
 
 The defensible criterion isn't information about each question's own quantity. It is information about what the catalog reads: whether a run is recognised as a sequence, in what order, and how model-sensitive it is. A question's worth is then how much its answer is expected to move those readings. That puts relevance on the same footing as information, instead of beside it as a judgment.
