@@ -64,9 +64,17 @@ PICK_MAXK = 24             # picks are asked at whole known sequences, up to pro
 NONE, OTHER = "<none>", "<other>"
 
 def load():
-    recs = []
+    """every answer record, one per answer ID. (Found by the catalog audit, 2026-10-06: 46 triad-era records repeat
+    another record's ID, identical copies from 9 r003-r005 sheets that listed one presentation twice; until then the
+    tree counted those answers twice. Whether the port lost the second listing's own answer is an open question for
+    the port.)"""
+    recs, seen = [], set()
     for f in sorted(ANS.glob("*.jsonl")):
-        recs += [json.loads(l) for l in open(f) if l.strip()]
+        for l in open(f):
+            if l.strip():
+                r = json.loads(l)
+                if r.get("aid") not in seen:
+                    seen.add(r.get("aid")); recs.append(r)
     return recs
 
 def _in_order(ps, cyclic):

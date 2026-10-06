@@ -82,9 +82,12 @@ def seeds():
     return s
 
 def answers():
-    recs = []
+    """every answer record, one per answer ID (as tree.load: 46 triad-era records are identical repeats)"""
+    recs, seen = [], set()
     for f in sorted((DATA / "answers").glob("*.jsonl")):
-        recs += rj(f)
+        for r in rj(f):
+            if r.get("aid") not in seen:
+                seen.add(r.get("aid")); recs.append(r)
     return recs
 
 # ------------------------------------------------------------------ plan
