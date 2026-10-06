@@ -26,16 +26,16 @@ HOW A ROUND IS DRAWN
            re-ask what a slow family has not reached yet; a family whose core minds are all paused until a quota resets
            (data/logs/paused.json) has its term left out.
            RELEVANCE is how much the quantity bears on a sequence: an S-curve with a floor (scurve) on the strength
-           of the sequence it serves (the mean agreement of its walked links, not their number, so a new 3-glyph kernel
-           isn't put last), so "the most obvious and stable (empirically) sequences" are squared away first (Joseph,
-           2026-10-05) and nothing falls to zero.
+           of the sequence it serves (the mean 90% lower bound of its links' agreement: how surely they are felt,
+           whatever the sequence's length), so "the most obvious and stable (empirically) sequences" are squared away
+           first (Joseph, 2026-10-05), a new kernel is not put last, and nothing falls to zero.
            A source with no strength of its own gets UNRANKED_RELEVANCE, the curve's midpoint.
   Draw     in two stages (Cands.draw): CLAIM SLOTS -- what a unit's answer bears on: a sequence, a run, a position --
            drawn with replacement, each in proportion to its claim's mean unit weight; each slot takes the claim's next
            unit (its units in a fated weighted order, Efraimidis-Spirakis keys u^(1/w)). A heavy claim gets several
            questions a round, a long one no more than a short one of the same weight. Anything asked before that serves
            no current sequence, run or seed is its own claim at OFF_SEQUENCE_RELEVANCE: reachable, rarely, item by
-           item. Validity refuses a continue or pick context showing a whole period of a manifested cycle.
+           item. Validity refuses a continue context showing a whole period of a manifested cycle.
 The numbers are in PARAMS, BASE and BRANCH_*, all recorded in each round's plan.json, chosen without evidence unless
 they say otherwise; explore()'s own soft numbers (the top 200 sequences, rank 0.9, redraw one in two, thirds) are not.
 Planner "stochastic-2" (2026-10-06) follows a de novo audit of "stochastic-1" (audits/planner-stochastic-2026-10-06.md);
@@ -462,8 +462,8 @@ class Plan:
             return False
         if kind == "triad" and len(ctx) != 3:
             return False
-        if kind in ("continue", "pick") and variant != "reflection" and self.spoils(ctx):
-            return False
+        if kind == "continue" and variant != "reflection" and self.spoils(ctx):
+            return False           # (not picks: repeating a shown cycle is a legitimate pick, and its tendrils are the point)
         if kind == "names" and not all(U.name(x, None) for x in ctx):
             return False
         if kind == "inhibit" and (cand in ctx or not PR.is_glyph(cand)):
@@ -545,13 +545,30 @@ class Cands:
         return got
 
 # ------------------------------------------------------------------ streams
+REL_LB = {}                          # sequence -> its links' mean 90% lower bound of agreement (plan() fills it)
+
+def seq_lower_bound(s, Tr):
+    """the mean over a sequence's walked links of the 90% lower bound of their agreement -- the study's one evidence
+    standard (METHODOLOGY §2a, tree.estimate), on real answers only: per family a Jeffreys posterior on the share naming
+    the link at its deciding context, families averaged. A link named by its only answer gets about 0.57 (two families
+    answering), 2 of 2 about 0.81, 10 of 10 about 0.97."""
+    lbs = []
+    for st in s["steps"]:
+        fl = Tr.nodes.get(tuple(st["ctx"]), {})
+        cnt = {f: (sum(1 for y in xs if y == st["x"]), len(xs)) for f, xs in fl.items() if xs}
+        if not cnt:
+            lbs.append(0.0); continue
+        _, mean, sd, _ = TR.estimate([cnt])
+        lbs.append(max(0.0, mean - 1.2816 * sd))
+    return sum(lbs) / len(lbs) if lbs else 0.0
+
 def rel_of(s):
-    """a sequence's relevance: the S-curve on the mean agreement of its walked links -- how strongly the links found so
-    far are felt, not how many there are. (Until stochastic-3 it read the tree's rank, mean agreement x min(1, walked/4),
-    which put newly found 3-glyph kernels last, against Joseph's "various minds start to find a sequence -- call it a
-    sequence of three glyphs. The priority is then to extend that sequence to the right and to the left as far as they
-    will go"; check of stochastic-2.)"""
-    return scurve(s.get("mean_agreement", s["rank"]))
+    """a sequence's relevance: the S-curve on its links' mean lower bound of agreement (REL_LB) -- how surely its links
+    are felt, whatever its length. History: until stochastic-3 the tree's rank (mean agreement x min(1, walked/4)) put
+    new 3-glyph kernels last, against Joseph's "...call it a sequence of three glyphs. The priority is then to extend
+    that sequence to the right and to the left"; stochastic-3's raw mean agreement then put thinly evidenced ones near
+    the top (a link named by its one answer scored as 20 of 20) and flattened the weights (checks of stochastic-2, -3)."""
+    return scurve(REL_LB.get("".join(s["glyphs"]), 0.0))
 
 
 def continue_cands(T, Tr, pend, seqs):
@@ -924,6 +941,10 @@ def reasoned_cands(T, pend, seqs, rid):
                 n = len(T.reasoned.get(ctx, []))
                 w = rel_of(s) * info(0, n + sum(pend.get("reasoned", ctx).values()))
                 C.put(ctx, w, [Q("continue", ctx, variant="reasoned", why="reasoned", seq="".join(g), side=side)])
+    for ctx, rows in T.reasoned.items():                        # every context reasoned before, so none is out of reach
+        if ctx not in C.best and 2 <= len(ctx) <= MAXK:
+            w = PARAMS["OFF_SEQUENCE_RELEVANCE"] * info(0, len(rows) + sum(pend.get("reasoned", ctx).values()))
+            C.put(ctx, w, [Q("continue", ctx, variant="reasoned", why="reasoned", **{"from": "asked"})])
     return C
 
 def reflection_cands(T, pend, seqs, rid):
@@ -1035,6 +1056,9 @@ def plan(rid, recs, seeds, budget):
     Tr = TR.Tree(recs, seeds=False)                     # real answers only: what information is computed from
     seqs = TR.sequences(T)
     written_seqs = TR.sequences(TR.Tree(recs, written=True))
+    REL_LB.clear()
+    for sq in seqs + written_seqs:
+        REL_LB.setdefault("".join(sq["glyphs"]), seq_lower_bound(sq, Tr))
     pend = Pending(recs, rid)
     want, scale = sizes(budget, rid)
     P = Plan(rid, [k for k, c in T.cycles.items() if c["distinct"] >= 4])
