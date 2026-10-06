@@ -220,7 +220,9 @@ ORDERED_SEEDS = {"sequence", "morph", "cyclic", "generator"}   # seed types that
 ORDER_ONLY_SEEDS = {"set", "negative"}                         # no order proposed (a set; a proposed non-sequence): order question only
 
 def is_steward(x):
-    return "joseph" in str(x.get("surveyor") or x.get("author") or "").lower()
+    """Joseph's own seeds: the author is Joseph, exactly. (Until 2026-10-06 any author string containing "joseph"
+    matched, so the session's completion of his seed -- "completing Joseph's ..." -- got his priority; v3 audit.)"""
+    return str(x.get("surveyor") or x.get("author") or "").strip().lower() == "joseph"
 
 def seed_list(seeds, types, rid, purpose):
     """seeds of the given types as runs [(glyphs, sid)] in a fated order, the steward's first (Joseph's seeds are his
