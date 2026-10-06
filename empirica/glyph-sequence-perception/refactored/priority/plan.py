@@ -88,7 +88,7 @@ class Plan:
     def add(self, kind, ctx, cand=None, variant=None, probe=None, replicate=False, **src):
         ctx = list(ctx)
         distinct = variant == "reflection" or len(set(ctx)) == len(ctx)       # reflections turn back on themselves
-        lo, hi = {"cohere": (3, PR.MAX_RUN), "order": (4, PR.MAX_ORDER), "pick": (2, PR.MAX_RUN)}.get(kind, (2, 8))
+        lo, hi = {"cohere": (3, PR.MAX_RUN), "order": (4, PR.MAX_ORDER), "pick": (2, PR.MAX_RUN)}.get(kind, (2, 8))   # (2, 8) for continue/inhibit/triad: chosen without evidence
         # (until 2026-10-06 pick fell to the continue limit of 8, silently refusing every longer context: the
         # tendrils stopped at 8 glyphs, and roots longer than 8 -- Joseph's block cycle among them -- were never asked)
         if not (lo <= len(ctx) <= hi) or not distinct or not all(PR.is_glyph(x) for x in ctx):

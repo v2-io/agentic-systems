@@ -144,7 +144,7 @@ def question(kind, context, candidate=None, source=None, variant=None, probe=Non
     elif kind in ("cohere", "pick"):
         assert (3 if kind == "cohere" else 2) <= len(c) <= MAX_RUN and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c
     else:
-        assert 2 <= len(c) <= 8 and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c
+        assert 2 <= len(c) <= 8 and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c   # 8: chosen without evidence (the triad era's limit); it bounds every shown context
     if kind == "triad":
         assert len(c) == 3, c
         g = sorted(c); c = list(g); R("triad-shown", {"glyphs": g}).shuffle(c)

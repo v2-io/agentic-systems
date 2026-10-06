@@ -75,7 +75,6 @@ Everything in `data/answers/` and `data/tree/` is regenerable and gitignored. To
   - triad-agreed kernels: a third of exploration, weighted by agreement (§4, §7).
 - **Triad-era triads (19,665) and order answers (5,716)** were ported but unused until now. They test every confirmed stretch.
 - **Still open:**
-  - order questions in the new protocol;
   - orthogonality as a soft weight in exploration (§2b);
   - per-family views;
   - Gemini pacing (Joseph's call: it lags rounds behind at 1 worker / 60 s).
@@ -143,7 +142,6 @@ Joseph, after the cross-block sequences turned out to be invisible in BEST: *"ge
 
 ## Open threads and decisions
 
-- **The order question** (§4a): put a shuffled set in order. Next to build; it finds the *best* order, not only whether a given one holds.
 - **Not built from §4a:** swap detection, two-alternative next, gap fill, the effort contrast, and the rest of the list. Branch inhibits (tier 4) and inside contexts (tier 5) still get no budget.
 - **Runs over 24 glyphs** can't be asked whole. Windows of them would be fair game for coherence; nothing does that yet.
 - **The whys** (coherence and picks) are saved, not analysed, per Joseph.
