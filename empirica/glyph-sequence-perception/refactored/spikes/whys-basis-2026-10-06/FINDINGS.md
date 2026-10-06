@@ -38,7 +38,7 @@ Share of "yes, coherent" whys that cite the chart:
 | real, other | 0.09 (1,408) | 0.08 (665) |
 | chart window | 0.41 (1,052) | 0.20 (405) |
 
-On runs that walk the chart, Claude's reasons rest on the chart about twice as often as Grok's. On runs that don't, the two families are alike. This bears on Joseph's concern that the roster's Claude majority pulls the study toward "just do it like the codepoints had it". It also bears on the v2 audit's A3, which judged the question unsettled from the unassigned-code-point marker alone. On the whys, Claude is the more chart-reading family, wherever the run allows it.
+On runs that walk the chart, Claude's reasons *cite* the chart about twice as often as Grok's; on runs that don't, the two families are alike. This bears on Joseph's concern that the roster's Claude majority pulls the study toward "just do it like the codepoints had it", and on the v2 audit's A3, which judged the question unsettled from the unassigned-code-point marker alone. It is a difference in what the families *say*. Whether Claude's judgements also *rest* on the chart more often is the same open question as in §1: it needs the separate behavioural test at discriminator positions, where Claude's and Grok's choices of the chart's next glyph over the look's can be compared directly.
 
 ## Not done here
 
