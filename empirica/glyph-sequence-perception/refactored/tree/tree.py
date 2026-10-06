@@ -28,6 +28,9 @@ run as shown (`cohere`); their controls -- the same glyphs shuffled -- and chart
 probe.py) apart (`cohere_ctl`, and per family and class in `cohere_rate`); the why of every answer kept (`cohere_why`),
 not read by anything yet. A run's coherence is evidence
 about that run only, never about its sub-runs.
+CHOOSE (CATALOG v2 audit A1): forced two-way choices at discriminator positions -- one candidate the code-chart
+neighbour of the last glyph, the other not -- per family (`choose`), with which candidate was the chart's
+(`choose_chart`).
 PICKS (METHODOLOGY §4a, the generator pass): forced single-symbol continuations, sampled, at normal effort, kept as
 their own channel (`picks`: ctx -> family -> [x | none | other]); answers at fresh random contexts asked the same way
 are the null, apart (`pick_null`). Positive evidence only, like every generation: a pick names a link, and picks
@@ -162,6 +165,8 @@ class Tree:
         self.cohere_ctl_class = {}                          # control run -> "shuffled" | "chart"
         self.cohere_why = collections.defaultdict(list)     # run -> [(family, mind, verdict, why)]
         self.picks = collections.defaultdict(lambda: collections.defaultdict(list))      # ctx -> fam -> [x|none|other]
+        self.choose = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # (ctx, pair) -> fam -> chosen
+        self.choose_chart = {}                              # (ctx, pair) -> the chart-neighbour candidate
         self.pick_null = collections.defaultdict(lambda: collections.defaultdict(list))  # null ctx -> fam -> [...]
         self.control_pairs = set()                        # (ctx, candidate) asked as controls (kept out of `inhibit`)
         self.cycles = {}
@@ -234,6 +239,10 @@ class Tree:
                     self.control_pairs.add((tuple(r["context"]), r["candidate"]))
                 else:
                     self.inhibit[(tuple(r["context"]), r["candidate"])][r["family"]][o] += 1
+            elif k == "choose" and o == "chose":
+                key = (tuple(r["context"]), frozenset(r["candidates"]))
+                self.choose[key][r["family"]][r["choice"]] += 1
+                self.choose_chart[key] = r.get("chart")
             elif k == "pick" and o in ("continuation", "none", "other"):
                 x = r["continuation"][0] if o == "continuation" else (NONE if o == "none" else OTHER)
                 ((self.pick_null if (r.get("tags") or {}).get("null") else self.picks)[tuple(r["context"])][r["family"]]).append(x)

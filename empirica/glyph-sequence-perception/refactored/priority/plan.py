@@ -60,6 +60,7 @@ PICK_PER_ROUND = 30          # forced-pick contexts a round, each sampled PR.SAM
 # answer in 20 draws was followed ~6% of the time -- found by a side agent.)
 BRANCH_FLOOR, BRANCH_MID, BRANCH_WIDTH = 0.02, 0.10, 0.04
 PICK_NULL_EVERY = 4          # one null (fresh random) context per this many real ones, same length (chosen without evidence)
+CHOOSE_PER_ROUND = 60        # discriminator-position questions a round (chosen without evidence)
 ORDER_PER_ROUND = 40         # order questions a round (chosen without evidence)
 CHART_CONTROL_SHARE = 0.25   # share of runs that also get a chart window -- a descriptive measurement, not a decoy (chosen without evidence)
 FRESH_TIERS = {"1-byte": (4, [(0x21, 0x7E)]), "2-byte": (3, [(0xA1, 0x7FF)]),
@@ -136,7 +137,7 @@ class Plan:
                             **({"variant": variant} if variant else {}), **({"probe": probe} if probe else {})))
         return True
 
-TIER = {"falsify-skip": 1, "falsify-lengthen": 1, "falsify-triad": 1, "recognize": 1, "recognize-written": 1, "control": 1, "cohere": 1, "order": 1, "join-reverse": 1, "join-replicate": 1, "join-end": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "thin": 3, "branch": 4, "inside": 5}
+TIER = {"falsify-skip": 1, "falsify-lengthen": 1, "falsify-triad": 1, "recognize": 1, "recognize-written": 1, "control": 1, "cohere": 1, "order": 1, "choose": 1, "join-reverse": 1, "join-replicate": 1, "join-end": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "thin": 3, "branch": 4, "inside": 5}
 
 def written_recognition(P, seqs):
     """Momentum past a felt end (METHODOLOGY §4): where the shown answers end a sequence (top answer "none") but minds
@@ -236,6 +237,62 @@ def seed_list(seeds, types, rid, purpose):
     PR.R(purpose, {"round": rid}).shuffle(out)
     out.sort(key=lambda t: not t[2])
     return [(g, sid) for g, sid, _ in out]
+
+def chart_neighbour(prev, last):
+    """the code-chart neighbour of `last` in the run's direction (from prev to last), if it is an assigned glyph"""
+    d = 1 if ord(last) >= ord(prev) else -1
+    c = ord(last) + d
+    if 0x20 < c < 0x110000:
+        x = chr(c)
+        if PR.is_glyph(x) and U.category(x) != "Cn":
+            return x
+    return None
+
+def choose_work(P, seqs, seeds, rid):
+    """Discriminator positions (CATALOG v2 audit A1): contexts where the code chart's next glyph and another candidate
+    differ, asked as a forced two-way choice, so chart-following is measured in behaviour, in a question separate from
+    any stated reason. Two sources, interleaved:
+      SPLIT  contexts whose picks or shown continue answers include both a chart-adjacent glyph (±1 code point from the
+             last) and a non-adjacent one: the most-named of each.
+      STEP   steps inside known runs -- Joseph's seeds first, then runs asked whole and ordered seeds -- where the run's
+             next glyph is not the chart neighbour of the glyph before it (e.g. ▁ … █ → 🮆, against the chart's ▉).
+    Each (context, pair) once. -> [(kind, ctx, (x, y), src, probe)]"""
+    T = P.T
+    def adjacent(x, ctx):
+        return abs(ord(x) - ord(ctx[-1])) == 1
+    split = []
+    for store in (T.picks, T.nodes):
+        for ctx, fl in store.items():
+            if len(ctx) < 2 or len(ctx) > 8:
+                continue
+            cnt = collections.Counter(x for xs in fl.values() for x in xs if x not in (TR.NONE, TR.OTHER) and x not in ctx and PR.is_glyph(x))
+            ch = [x for x, _ in cnt.most_common() if adjacent(x, ctx)]
+            al = [x for x, _ in cnt.most_common() if not adjacent(x, ctx)]
+            if ch and al:
+                split.append((list(ctx), al[0], ch[0], "split"))
+    PR.R("choose-split-order", {"round": rid}).shuffle(split)
+    steps = []
+    runs = [g for g, _ in seed_list(seeds, ORDERED_SEEDS, rid, "choose-seed-order")] + [list(r) for r in sorted(T.cohere)]
+    for g in runs:
+        for i in range(1, len(g) - 1):
+            ctx, x = g[:i + 1][-8:], g[i + 1]
+            ch = chart_neighbour(g[i - 1], g[i])
+            if ch and ch != x and ch not in ctx and x not in ctx:
+                steps.append((ctx, x, ch, "step"))
+    out, seen = [], set()
+    for a, b in zip(steps + [None] * len(split), split + [None] * len(steps)):
+        for it in (a, b):
+            if it is None:
+                continue
+            ctx, x, ch, how = it
+            key = (tuple(ctx), frozenset((x, ch)))
+            if key in seen or key in T.choose:
+                continue
+            seen.add(key)
+            out.append(("choose", ctx, (x, ch), {"why": "choose", "from": how}, {"chart": ch}))
+            if len(out) >= CHOOSE_PER_ROUND:
+                return out
+    return out
 
 def order_work(P, seqs, seeds, rid):
     """The order question (METHODOLOGY §4a): a set, scrambled -- which order, if any, do minds put it in? Sets from the
@@ -595,8 +652,10 @@ def plan(rid, recs, seeds, budget):
     written_seqs = TR.sequences(TR.Tree(recs, written=True))
     cw = cohere_work(P, seqs, written_seqs, seeds, rid)
     work += [(1, -1, len(paired) + ii, kind, ctx, cand, src) for ii, (kind, ctx, cand, src) in enumerate(cw)]
-    work += [(1, -1, len(paired) + len(cw) + ii, kind, ctx, cand, src)
-             for ii, (kind, ctx, cand, src) in enumerate(order_work(P, seqs, seeds, rid))]
+    ow = order_work(P, seqs, seeds, rid)
+    work += [(1, -1, len(paired) + len(cw) + ii, kind, ctx, cand, src) for ii, (kind, ctx, cand, src) in enumerate(ow)]
+    work += [(1, -1, len(paired) + len(cw) + len(ow) + ii, kind, ctx, cand, dict(src, probe=probe))
+             for ii, (kind, ctx, cand, src, probe) in enumerate(choose_work(P, seqs, seeds, rid))]
     work.sort(key=lambda w: w[:3])
     n_reasoned = 0
     for kind, ctx, cand, src in gen:                       # outside the budget's tiers: asked only of reasoner minds

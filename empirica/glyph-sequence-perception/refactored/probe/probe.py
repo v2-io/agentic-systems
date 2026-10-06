@@ -30,6 +30,12 @@ Question kinds (refactored protocol "ctx-0.1"):
              triad era's own wording and answer shape with every option offered (perp, tie, gap), so new answers join
              the 5,716 ported ones (METHODOLOGY §4a: finds the best order of a set, not only whether a given order
              holds). Its parser is the triad era's (harness/seq/parse.py q0.1), copied.
+  choose     a context (2-8 glyphs) and two candidates, shown as "a" and "b" in a fated order: which comes directly
+             after the last symbol? Forced (no neither), so the baseline is 0.5. Asked at DISCRIMINATOR POSITIONS, where one
+             candidate is the code-chart neighbour of the last glyph and the other is not (CATALOG v2 audit A1; Joseph:
+             an intuitive sequence, one "that doesn't need internal arithmetic or thinking about the glyph's name and
+             codepoint", is much better). probe {"chart": <the chart neighbour>} says which is which; the minds are not
+             told. Behaviour in a separate question from any stated basis, so it can validate one (whys-basis spike).
 Answer options are words, never glyphs, so no glyph is reserved (METHODOLOGY §4).
 
 Sheets hold 1-5 questions of one kind, in a fated order (no two questions sharing a context adjacent); the sheet
@@ -45,7 +51,7 @@ import fate                                                # noqa: E402
 PROTOCOL = "ctx-0.1"
 MAX_SHEET = 5
 MAX_CONTINUE = 24
-KINDS = ("continue", "inhibit", "triad", "cohere", "pick", "order")
+KINDS = ("continue", "inhibit", "triad", "cohere", "pick", "order", "choose")
 MAX_ORDER = 12                    # the largest set an order question shows (the triad era: 8; chosen without evidence)
 SAMPLES = 5                       # pick: samples per context per generator mind (chosen without evidence)
 MAX_RUN = 24                       # the longest run a cohere question shows (chosen without evidence)
@@ -156,6 +162,14 @@ def question(kind, context, candidate=None, source=None, variant=None, probe=Non
         key = {"kind": kind, "glyphs": g}
         return dict(key, context=c, qid=uid("O", key), source=source or {})
     key = {"kind": kind, "context": c}
+    if kind == "choose":
+        pair = sorted(candidate)
+        assert len(pair) == 2 and pair[0] != pair[1] and all(is_glyph(x) and x not in c for x in pair), candidate
+        key["pair"] = pair
+        shown = list(pair); R("choose-shown", {"context": c, "pair": pair}).shuffle(shown)
+        if probe:
+            key["probe"] = probe
+        return dict(key, shown_pair=shown, qid=uid("D", key), source=source or {})
     if kind == "inhibit":
         assert is_glyph(candidate) and candidate not in c, candidate
         key["candidate"] = candidate
@@ -190,6 +204,13 @@ def _lines(kind, sheet):
                  '"none" is expected often and is fully valuable.',
                 'Copy each symbol exactly, or write "#1", "#2", … for its place in the item.']
         reply = '{"id": <id>, "seq": [...]} or {"id": <id>, "two": [...]} or {"id": <id>, "none": true}'
+    elif kind == "choose":     # a forced two-way choice at a discriminator position
+        intro = "Each item below shows symbols in a sequence, then two candidate symbols, a and b."
+        opts = ['"answer": "a", if a is the one that comes directly after the last symbol of the sequence',
+                '"answer": "b", if b is']
+        sents = ["Go by first impressions, and judge each item on its own rather than building a scheme across items.",
+                 "Choose one, even if neither seems quite right."]
+        reply = '{"id": <id>, "answer": "a" | "b"}'
     elif kind == "order":      # the triad era's wording, every option offered (harness/seq/items.py)
         intro = "Each item below shows a set of symbols in scrambled order."
         opts = ['"seqs": the symbols that seem to go in a sequence, in that sequence (either end first); '
@@ -265,6 +286,8 @@ def prompt(sheet, variant=None):
         o = {"id": e["id"], "s": e["context"]}
         if sheet["kind"] == "inhibit":
             o["candidate"] = e["candidate"]
+        if sheet["kind"] == "choose":
+            o["a"], o["b"] = e["a"], e["b"]
         L.append(json.dumps(o, ensure_ascii=False))
     L += ["", "Reply with JSON only, no prose: {\"answers\": [ ... ]}, one entry per item, each " + reply + "."]
     return "\n".join(L)
@@ -303,6 +326,8 @@ def sheets(round_id, questions):
                 e = {"id": pos, "qid": q["qid"], "context": q["context"]}
                 if kind == "inhibit":
                     e["candidate"] = q["candidate"]
+                if kind == "choose":
+                    e["a"], e["b"] = q["shown_pair"]
                 ents.append(e)
             sh = {"sid": sid, "round": round_id, "kind": kind, "protocol": PROTOCOL, "entries": ents, "sheet_n": len(ents)}
             if variant:
@@ -435,6 +460,9 @@ def _records(sheet, ledger_rows, mind, family, judge, questions, variant):
                "source": q.get("source", {})}
         if sheet["kind"] == "inhibit":
             rec["candidate"] = e["candidate"]
+        if sheet["kind"] == "choose":
+            rec["candidates"] = [e["a"], e["b"]]
+            rec["chart"] = (q.get("probe") or {}).get("chart")
         if not good and attempts:
             rec["outcome"] = "tool-attempt"
             rec["tools"] = [{"name": t.get("name"), "args": t.get("args")} for r in attempts for t in tool_calls(r)][:6]
@@ -473,6 +501,12 @@ def _records(sheet, ledger_rows, mind, family, judge, questions, variant):
                         rec["other_content"] = other
                     if vs:
                         rec["vs_stripped"] = True
+        elif sheet["kind"] == "choose":
+            v = str(a.get("answer", "")).strip().lower().strip('"\' .')
+            if v in ("a", "b"):
+                rec["outcome"] = "chose"; rec["choice"] = e[v]; rec["tags"]["chose_position"] = v
+            else:
+                rec["outcome"] = "unparsed"; rec["reason"] = f"answer:{v[:20]}"
         elif sheet["kind"] == "order":
             rec["shown"] = list(e["context"])
             rec["tags"]["factors"] = {"perp": True, "tie": True, "gap": True}
