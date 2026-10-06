@@ -20,7 +20,8 @@ HOW A ROUND IS DRAWN
                I(k, n) = h(m) + m (psi(a + 1) - psi(a + b + 1)) + (1 - m) (psi(b + 1) - psi(a + b + 1)),   m = a / (a + b)
            -- 0.307 nats unasked, about 1 / (2n) once n answers agree. Never zero: the most settled item is re-asked,
            exceedingly rarely. Answers ASKED BUT NOT YET GIVEN (the drains lag; pending()) count as expected answers,
-           so the planner does not re-ask what a slow family has not reached yet.
+           so the planner does not re-ask what a slow family has not reached yet -- unless that mind is paused until
+           a quota resets (data/logs/paused.json), when its answers are not expected.
            RELEVANCE is how much the quantity bears on a sequence: an S-curve with a floor (scurve) on the strength
            of the sequence it serves (the tree's rank), so "the most obvious and stable (empirically) sequences" are
            squared away first (Joseph, 2026-10-05) and nothing falls to zero.
@@ -267,6 +268,11 @@ def pending(recs, rid):
     except FileNotFoundError:
         void = set()
     fam = {m: s.get("family") for m, s in json.load(open(ROOT / "core" / "minds.json"))["minds"].items()}
+    try:                                       # a mind paused until its quota resets (run.py) is not about to answer
+        import time
+        paused = {m for m, t in json.load(open(DATA / "logs" / "paused.json")).items() if t > time.time()}
+    except Exception:
+        paused = set()
     asked = collections.defaultdict(collections.Counter)
     qs = {}
     for rd in sorted((DATA / "rounds").glob("c[0-9][0-9][0-9]")):
@@ -281,7 +287,8 @@ def pending(recs, rid):
             s = json.loads(l)
             for e in s["entries"]:
                 for m in s.get("minds", []):
-                    asked[e["qid"]][fam.get(m)] += 1
+                    if m not in paused:
+                        asked[e["qid"]][fam.get(m)] += 1
     for r in recs:
         if r.get("era") == "ctx" and r.get("qid") in asked:
             asked[r["qid"]][r["family"]] -= 1
