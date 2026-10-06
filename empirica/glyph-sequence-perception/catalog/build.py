@@ -7,10 +7,12 @@ implements part of CATALOG v5 and says which part:
   built   R (whole-run recognition against shuffled controls, per rater, Abbott-corrected, families combined by their
           discrimination on non-contiguous sets); certainty as a Bayes factor; the chart route's contested positions
           (steps and triples, CATALOG §7a) with D and triad preferences, read asymmetrically (§7b); route states (§7c);
-          the default view (§11); lookalike substitution as a run-level quantity.
-  not yet O (Plackett-Luce over order lines), L and G as parts of a record, B, seed raters, link states (§8), maximal
-          runs from links, order lines as position evidence, the name route (reported "unmeasured" until the
-          name-only question is validated, §7a), posterior predictive checks.
+          the default view (§11); lookalike substitution as a run-level quantity. Build 1 (catalog/links.py): every
+          link c -> x with G in three channels (shown, written, picked; raw per family) and L against near decoys
+          (Abbott, Bayes factor); and the state (§8) of every link of every record, summarised on the record.
+  not yet O (Plackett-Luce over order lines), G's calibrated likelihood ratio (§9), B, seed raters, maximal runs from
+          links, order lines as position evidence, the name route (reported "unmeasured" until the name-only question
+          is validated, §7a), posterior predictive checks.
 
 The seal (audits/SEAL-canary-choose-2026-10-06.md): until the seal file records the commit the model was frozen at,
 every `choose` and `names` answer touching a canary glyph is dropped before anything is computed, so no build can
@@ -28,10 +30,12 @@ HERE = pathlib.Path(__file__).resolve()
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(ROOT)); sys.path.insert(0, str(ROOT / "tree")); sys.path.insert(0, str(ROOT / "probe")); sys.path.insert(0, str(ROOT / "priority"))
 import run as RUN                                   # noqa: E402  answers(), seeds()
+sys.path.insert(0, str(ROOT / "catalog"))
+import links as LK                                  # noqa: E402  the link layer (CATALOG §4-§6, §8)
 import tree as TR                                   # noqa: E402
 import plan as PL                                   # noqa: E402  block()
 
-MODEL = "catalog-v5-build0"
+MODEL = "catalog-v5-build1"
 SEAL_FILE = ROOT / "audits" / "SEAL-canary-choose-2026-10-06.md"
 CANARY = set("▁▂▃▄▅▆▇█🮆🮅🮄▀🮃🮂▔▉")
 PARAMS = {                                           # every one chosen without evidence (CATALOG §13 freezes them)
@@ -421,9 +425,36 @@ def main():
                          "interp": ev.get("interp"), "controlled": ev.get("controlled"), "felt": ev.get("felt"),
                          "evidence": ev.get("aids") or []})
 
+    # links (build 1): every link with its G channels and L part; and the links of every record, with their states
+    LX = LK.Links(recs)
+    lrows = []
+    for ctx, x in LX.all_links():
+        Lp = LX.l_part(ctx, x, weights, bf_excess, PARAMS["GRID"])
+        lrows.append({"context": "".join(ctx), "k": len(ctx), "x": x,
+                      "g_shown": LX.channel_fam(LX.shown, ctx, x), "g_written": LX.channel_fam(LX.written, ctx, x),
+                      "g_picked": LX.channel_fam(LX.picks, ctx, x),
+                      "next_ranks": sorted(LX.ranks.get((ctx, x), [])),
+                      "l_families": Lp["families"] if Lp else None, "l_strength": Lp["strength"] if Lp else None,
+                      "l_sd": Lp["sd"] if Lp else None, "l_bf": Lp["bf"] if Lp else None,
+                      "evidence": {ch: LX.aids.get((ch, ctx, x), []) for ch in ("S", "W", "P", "L") if LX.aids.get((ch, ctx, x))}})
+    rlinks = []
+    for r in rows:
+        g = list(r["glyphs"])
+        sts = []
+        for i in range(len(g) - 1):
+            st = LX.state(g, i, PARAMS["EVIDENCE_MIN"])
+            sts.append(st["state"])
+            rlinks.append({"record": r["id"], "idx": i, "a": g[i], "b": g[i + 1], "state": st["state"],
+                           "direction": st["direction"], "context": st["context"], "flip": st["flip"]})
+        c = collections.Counter(sts)
+        r["link_states"] = {str(k): c.get(k, 0) for k in range(1, 6)}
+        r["weakest_link"] = max(sts) if sts else None
+        r["flips"] = sum(1 for x in rlinks[-len(sts):] if x["flip"]) if sts else 0
     rates = [{"rater": rt, "set_class": cls, "yes": y, "n": n} for (rt, cls), (y, n) in sorted(ctl.items())]
     manifest["finished"] = dt.datetime.now().isoformat(timespec="seconds")
-    manifest["counts"] = {"answers": len(recs), "records": len(rows), "positions": len(prow),
+    manifest["counts"] = {"answers": len(recs), "records": len(rows), "positions": len(prow), "links": len(lrows),
+                          "record_links": len(rlinks),
+                          "weakest_link": dict(collections.Counter(str(r["weakest_link"]) for r in rows)),
                           "recognised": sum(r["recognised"] for r in rows),
                           "view": dict(collections.Counter(r["view"] for r in rows if r["view"])),
                           "chart_state": dict(collections.Counter(r["chart_state"] for r in rows))}
@@ -434,10 +465,14 @@ def main():
             for r in rs:
                 w.writerow([json.dumps(r[c], ensure_ascii=False) if isinstance(r[c], (list, dict)) else ("" if r[c] is None else r[c]) for c in cols])
     RC = ["id", "glyphs", "length", "chart_class", "set_class", "sources", "r_strength", "r_sd", "r_bf", "r_families", "recognised",
-          "chart_state", "name_state", "view", "contested", "contested_asked", "lookalike", "evidence"]
+          "chart_state", "name_state", "view", "contested", "contested_asked", "lookalike", "link_states", "weakest_link", "flips",
+          "evidence"]
+    LC = ["context", "k", "x", "g_shown", "g_written", "g_picked", "next_ranks", "l_families", "l_strength", "l_sd", "l_bf", "evidence"]
+    RLC = ["record", "idx", "a", "b", "state", "direction", "context", "flip"]
     PC = ["record", "orientation", "kind", "idx", "context", "run_choice", "alternative", "state", "instrument", "n", "k", "p",
           "baseline", "delta", "bf", "interp", "controlled", "felt", "evidence"]
     write("records", rows, RC); write("positions", prow, PC); write("rates", rates, ["rater", "set_class", "yes", "n"])
+    write("links", lrows, LC); write("record_links", rlinks, RLC)
     print(json.dumps(manifest["counts"], ensure_ascii=False))
     print("sealed answers dropped:", meta["sealed_dropped"], "| frozen:", meta["frozen_commit"])
     if a.no_db:
@@ -449,7 +484,11 @@ CREATE SCHEMA {schema};
 CREATE TABLE {schema}.manifest (doc jsonb);
 CREATE TABLE {schema}.records (id text primary key, glyphs text, length int, chart_class text, set_class text, sources jsonb,
   r_strength double precision, r_sd double precision, r_bf double precision, r_families jsonb, recognised boolean,
-  chart_state text, name_state text, "view" text, contested int, contested_asked int, lookalike jsonb, evidence jsonb);
+  chart_state text, name_state text, "view" text, contested int, contested_asked int, lookalike jsonb, link_states jsonb,
+  weakest_link int, flips int, evidence jsonb);
+CREATE TABLE {schema}.links (context text, k int, x text, g_shown jsonb, g_written jsonb, g_picked jsonb, next_ranks jsonb,
+  l_families jsonb, l_strength double precision, l_sd double precision, l_bf double precision, evidence jsonb);
+CREATE TABLE {schema}.record_links (record text, idx int, a text, b text, state int, direction text, context text, flip boolean);
 CREATE TABLE {schema}.positions (record text, orientation text, kind text, idx int, context text, run_choice text, alternative text,
   state text, instrument text, n int, k int, p double precision, baseline double precision, delta double precision,
   bf double precision, interp text, controlled boolean, felt boolean, evidence jsonb);
@@ -457,8 +496,12 @@ CREATE TABLE {schema}.rates (rater text, set_class text, yes int, n int);
 \\copy {schema}.records FROM '{out / "records.csv"}' WITH (FORMAT csv)
 \\copy {schema}.positions FROM '{out / "positions.csv"}' WITH (FORMAT csv)
 \\copy {schema}.rates FROM '{out / "rates.csv"}' WITH (FORMAT csv)
+\\copy {schema}.links FROM '{out / "links.csv"}' WITH (FORMAT csv)
+\\copy {schema}.record_links FROM '{out / "record_links.csv"}' WITH (FORMAT csv)
 INSERT INTO {schema}.manifest VALUES ('{json.dumps(manifest, ensure_ascii=False).replace("'", "''")}'::jsonb);
 CREATE INDEX ON {schema}.positions (record);
+CREATE INDEX ON {schema}.record_links (record);
+CREATE INDEX ON {schema}.links (context, x);
 DROP SCHEMA IF EXISTS catalog_previous CASCADE;
 DO $$ BEGIN IF EXISTS (SELECT 1 FROM pg_namespace WHERE nspname = 'catalog') THEN ALTER SCHEMA catalog RENAME TO catalog_previous; END IF; END $$;
 ALTER SCHEMA {schema} RENAME TO catalog;

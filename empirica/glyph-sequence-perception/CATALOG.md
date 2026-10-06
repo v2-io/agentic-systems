@@ -1,6 +1,6 @@
 # CATALOG: the canonical catalog of sequences
 
-*Design, version 5 (2026-10-06), by the independent session (Claude Opus 5.5) with Joseph. Partly built: build 0 (§13) implements R, the chart route and the view; nothing reads it yet. The model is not frozen.*
+*Design, version 5 (2026-10-06), by the independent session (Claude Opus 5.5) with Joseph. Partly built: builds 0 and 1 (§13) implement R, the chart route, the view, and the link layer (G and L per link, link states); nothing reads it yet. The model is not frozen.*
 
 - *Versions 1–3 were audited de novo (`audits/catalog-design-2026-10-06.md`, `…-v2-…`, `…-v3-…`; findings F1–F12, A1–A11, C1–C10).*
 - *The v3 auditor checked version 4 against its own findings (`audits/catalog-design-v4-check-2026-10-06.md`: V1, V2, Q1, Q2). §15 maps that check to this version.*
@@ -330,6 +330,8 @@ Each build goes into a versioned schema, and an atomic switch makes it current.
 - the model version.
 
 **Fits** use EM with a fixed initialisation, order and tolerance, and sums are taken in a fixed order.
+
+**Build 1** (`catalog/links.py`, 2026-10-06; the build takes about 13 seconds) adds the link layer: every link `c → x` at its own context (79,220 at c101), with G in its three channels (shown, written, picked; raw per family, nothing pooled across context lengths) and L against each rater's near decoys (Abbott; a Bayes factor, as R); and the state (§8) of every link of every record, the better reading direction kept, summarised on the record (`link_states`, `weakest_link`, `flips`). Two readings fixed in building it: state 2 needs the longest showable context (the full prefix, or its last 8 glyphs) shown to minds with no other glyph on top; a flip is a longer asked context whose top answer is another glyph ("none" is an end, not a flip). First reading: 1,641 of the 2,990 runs asked whole have a link no mind was ever asked about (state 5), mostly short runs from pick branches, seeds and reordered shuffles: they were recognised whole while their links were never put as continuations.
 
 **Build 0** (`catalog/build.py`, 2026-10-06; about 6 seconds; schema `catalog` in database `empirica_glyph_sequence`, beside the triad era's `public`). Its docstring lists what it implements and what not yet. Built: R; the chart route's contested steps (D) and triples; route states; the view; lookalike as a run-level count. Not yet: O, L and G as record parts, B, seed raters, link states, maximal runs from links, order lines as position evidence. The name route is "unmeasured" for every run until its validation is read, so every recognised run is "undecided" in the view for now. Choices made in building it, each to be frozen:
 
