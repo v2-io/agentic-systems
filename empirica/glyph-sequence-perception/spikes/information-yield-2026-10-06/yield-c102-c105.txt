@@ -1,0 +1,27 @@
+realized information per answer, rounds c102-c105 (KL nats = Bayesian surprise; dH = fall in predictive entropy; expected = the planner's per-answer information)
+kind             why                     answers      KL      dH expected
+choose           choose                      498   0.298   0.109    0.303
+choose-control   choose-control              240   0.318   0.082    0.269
+cohere           cohere                      949   0.283   0.101    0.290
+cohere-chart     control                     216   0.287   0.112    0.303
+cohere-lookalike lookalike                   193   0.322   0.100    0.304
+cohere-lookalike-ctl lookalike                   207   0.309   0.102    0.307
+cohere-shuffled  control                     935   0.313   0.105    0.304
+continue         explore                     956   0.259   0.093    0.307
+continue         end                         534   0.251   0.070    0.277
+continue         lengthen                    241   0.248   0.098    0.298
+continue         kstar                       202   0.243   0.082    0.277
+continue         inside                      398   0.242   0.087    0.285
+continue         replicate                    43   0.068   0.042    0.112
+inhibit          branch                       58   0.319   0.101    0.307
+inhibit          falsify-skip                281   0.289   0.102    0.303
+inhibit          recognize-written            24   0.252   0.049    0.165
+inhibit          recognize                    52   0.129   0.075    0.173
+inhibit-control  control                     424   0.285   0.103    0.307
+names            names                       239   0.345   0.098    0.295
+order            order                       134   0.344   0.089    0.276
+pick             pick                       1121   0.231   0.041    0.295
+pick-null        pick-null                   267   0.299   0.018    0.307
+reasoned         reasoned                     73   0.297   0.127    0.298
+reflection       reflection                  165   0.278   0.063    0.307
+triad            triad                       128   0.238   0.058    0.235

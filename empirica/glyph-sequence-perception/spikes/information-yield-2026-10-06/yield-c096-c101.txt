@@ -1,0 +1,27 @@
+realized information per answer, rounds c096-c101 (KL nats = Bayesian surprise; dH = fall in predictive entropy; expected = the planner's per-answer information)
+kind             why                     answers      KL      dH expected
+choose           choose                     1510   0.312   0.113    0.307
+choose-control   choose-control              499   0.342   0.109    0.307
+cohere           cohere                     2063   0.322   0.112    0.307
+cohere-chart     control                     479   0.308   0.116    0.307
+cohere-lookalike lookalike                   514   0.332   0.109    0.307
+cohere-lookalike-ctl lookalike                   514   0.327   0.107    0.307
+cohere-shuffled  control                    1986   0.337   0.110    0.307
+continue         cycle-probe                   5   0.281   0.051    0.307
+continue         explore                    1474   0.264   0.093    0.307
+continue         join-reverse                571   0.264   0.093    0.307
+continue         end                        1419   0.260   0.096    0.307
+continue         join-end                    107   0.259   0.096    0.307
+continue         falsify-lengthen            127   0.257   0.105    0.307
+continue         join-replicate              166   0.139   0.049    0.112
+inhibit          recognize-written           483   0.328   0.112    0.307
+inhibit          recognize                   330   0.306   0.112    0.307
+inhibit          falsify-skip                309   0.294   0.113    0.307
+inhibit-control  control                     799   0.301   0.112    0.307
+names            names                       696   0.336   0.109    0.307
+order            order                       314   0.353   0.103    0.301
+pick             pick                       2184   0.265   0.045    0.307
+pick-null        pick-null                   501   0.338   0.022    0.307
+reasoned         reasoned                    120   0.302   0.130    0.303
+reflection       reflection                  278   0.275   0.071    0.307
+triad            falsify-triad               199   0.263   0.097    0.307
