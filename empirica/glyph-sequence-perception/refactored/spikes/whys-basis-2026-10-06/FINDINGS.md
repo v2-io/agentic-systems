@@ -10,7 +10,7 @@ From the 20 fated samples per category in `REPORT.md`:
 - **NAME: mostly right.** It also catches whys that name a Unicode block ("Spacing Modifier Letters block"); those count as CHART too, since the categories are multi-label.
 - **LOOK: noisy, about 6 of 20 false.** "Look like an arbitrary mix", "*square*d Latin letters", "*appear* randomized". LOOK shares are an upper bound and shouldn't be read finely.
 
-## 1. Self-report tracks behaviour
+## 1. Reasons are consistent with their own picks
 
 For forced picks at real contexts, here is the share where the picked glyph is ±1 code point from the last glyph shown, by what the reason cites:
 
@@ -21,9 +21,11 @@ For forced picks at real contexts, here is the share where the picked glyph is �
 | LOOK, not CHART | 0.19 (2,468) | 0.15 (353) |
 | none | 0.23 (1,118) | 0.16 (199) |
 
-A reason citing the chart goes with a chart-adjacent pick two to four times as often as any other reason, in both families. At null contexts (random glyphs, where there is no run to continue) the CHART group is not more chart-adjacent: Claude 0.08 against 0.07–0.16. So the association belongs to real runs, as it should if the reasons report the basis.
+A reason citing the chart goes with a chart-adjacent pick two to four times as often as any other reason, in both families. At null contexts (random glyphs, where there is no run to continue) the CHART group is not more chart-adjacent: Claude 0.08 against 0.07–0.16.
 
-**So a basis answer carries real signal about what a judgement rested on.** It isn't perfect: 44% of Claude's chart-citing picks weren't chart-adjacent, and some chart-adjacent picks cite only names. But it is evidence. Asking for it directly (Joseph's basis question) is worth a condition, and it can be validated against discriminator positions once those exist (CATALOG version 3).
+**What this does and doesn't show.** Each reason and its pick come from the same reply. A mind that picks the next code point will naturally explain the pick in code-point terms, even if the explanation is assembled after the fact. So the association shows that the reasons are *consistent* with the picks. It does not show that they reveal *what the pick rested on*. (Pointed out by a side agent on 2026-10-06. The first version of this file said "a basis answer carries real signal about what a judgement rested on", which overstated it.)
+
+The test that would show it compares a mind's stated basis in one question with its behaviour in a *separate* one. The separate question would be a discriminator position, where the next code point and the next glyph by look differ (CATALOG version 3). Until that test is run, whether a basis question measures the basis is open. The discriminator positions come first.
 
 ## 2. Claude cites the chart about twice as often as Grok
 
