@@ -118,18 +118,27 @@ MAX_ATTEMPTS = {None: 3, "no-lookup": 2, "reasoned": 3, "reflection": 3}   # cal
                           # 3 is the triad era's resume passes, 2 for the re-ask variant is a choice made without evidence
 DEFAULT_PACE = {"workers": 2, "interval_s": 0}
 LIMIT_RE = re.compile(r"hit your .{0,20}limit|usage limit|rate.?limit|quota|resets \d|\b429\b|resource.?exhausted", re.I)
-LIMIT_PAUSE_S = 600       # a mind that hit a usage limit waits this long before its next call (chosen without evidence)
+LIMIT_PAUSE_S = 600       # the longest wait after a limit (sized for Claude's weekly limit; chosen without evidence)
+LIMIT_BACKOFF_S = 30      # the first wait; it doubles with each limit in a row and resets on a call that is not one.
+                          # Most limits are rate limits (Joseph, 2026-10-06: "When there are limits, they are usually
+                          # rate-limits, not overall usage limits"), which a short wait clears; a usage limit reaches
+                          # the cap within five. Both numbers chosen without evidence.
 
 def limit_hit(res):
-    """a call refused for a usage limit (found 2026-10-06: Claude's weekly limit, "You've hit your weekly limit ·
+    """a call refused for a limit, a rate limit or a usage limit (found 2026-10-06: Claude's weekly limit, "You've hit your weekly limit ·
     resets 7am", answered every call of rounds c028-c079 with an error). Not an attempt at the sheet: it is not
     counted toward MAX_ATTEMPTS, and the mind pauses, so the loop waits inside its round instead of planning blind
     ones. A row already relabelled "limit" is one too: agy's detail lives only in the error, which the relabel moves
     to limit_detail (found 2026-10-06: Gemini's limits of c096-c097 were relabelled to a bare "limit" that this test
-    missed, so its drain never paused and each limit spent one of the sheet's attempts)."""
-    if res.get("error") == "limit":
+    missed, so its drain never paused and each limit spent one of the sheet's attempts). A call that returned an answer
+    is never a limit, even when the answer fails to parse: its text is the mind's, and glyph answers mention
+    "quotation" marks and code points such as 429 (found the same day: three false 600 s pauses of grok46g)."""
+    err = res.get("error")
+    if err == "limit":
         return True
-    return bool(res.get("error")) and bool(LIMIT_RE.search(f"{res.get('raw') or ''} {res.get('error') or ''}"))
+    if not err or err == "no-answers-object":
+        return False
+    return bool(LIMIT_RE.search(f"{res.get('raw') or ''} {err}"))
 
 def void_rounds():
     """rounds not to be asked any further (data/rounds/VOID.json): planned while the driving minds could not answer,
@@ -177,7 +186,7 @@ def ask_mind(rid, m, reg, stop=None, kinds=None):
             return ()
         return (v,)
     todo = collections.deque(s for s in sheets if target(s))
-    calls = [0]
+    calls = [0]; streak = [0]                     # limits in a row, for this mind in this round
     def worker(i):
         while not (stop and stop()):
             pc = pace(m, spec)
@@ -210,11 +219,15 @@ def ask_mind(rid, m, reg, stop=None, kinds=None):
                 by[s["sid"]].append(row); calls[0] += 1
                 if target(s):
                     todo.append(s)                         # re-asked after the rest, as the old resume passes did
-            if limit_hit(row["result"]):
-                print(f"{dt.datetime.now():%H:%M:%S} {rid}/{m}: usage limit ({(res.get('raw') or '')[:60]!r}); pausing {LIMIT_PAUSE_S} s", flush=True)
+            with lock:
+                streak[0] = streak[0] + 1 if limit_hit(row["result"]) else 0
+                wait = min(LIMIT_PAUSE_S, LIMIT_BACKOFF_S * 2 ** (streak[0] - 1)) if streak[0] else 0
+            if wait:
+                detail = row["result"].get("limit_detail") or row["result"].get("raw") or ""
+                print(f"{dt.datetime.now():%H:%M:%S} {rid}/{m}: limit ({detail[:80]!r}); limit {streak[0]} in a row, pausing {wait} s", flush=True)
                 t0 = time.time()
-                while time.time() - t0 < LIMIT_PAUSE_S and not (stop and stop()):
-                    time.sleep(10)
+                while time.time() - t0 < wait and not (stop and stop()):
+                    time.sleep(min(10, wait))
             time.sleep(pc["interval_s"])
     nmax = max(pace(m, spec)["workers"], 8)
     with cf.ThreadPoolExecutor(max_workers=nmax) as ex:
