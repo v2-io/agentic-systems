@@ -101,7 +101,7 @@ port (4) ────answers──▶       │                     ├──▶
 | `call-failed` (about 108,000, nearly all in the void rounds; reasons `is_error`, `timeout`, …) | excluded. Usage limits found after 2026-10-06 also carry reason `limit` |
 | `tool-attempt` (about 720) | a rater measurement (METHODOLOGY §4), not link evidence |
 | `unparsed`, `other`, unassigned code points | their own outcomes. A continuation into unassigned code points is an arithmetic marker (§7) |
-| a continuation that reaches the 24-glyph cap | **censored, not ended** |
+| a continuation that reaches the 24-glyph cap, or its soft target (`tags.soft_target`, from c096) | **censored, not ended**. Whether stopping at the target is censoring is measurable: compare where walks stop by target |
 | duplicate answer IDs | one record per ID |
 
 **Controls, identified structurally:**
@@ -305,7 +305,7 @@ Which one he means is his to say. Until then, the record carries both, and the v
 | **Joseph's two-shot framing.** Consent turn, then "immediate impressions … independent of …", with fated wording, never naming Unicode. A tagged condition; outcome the chart-class gap | to build; needs multi-turn adapter calls |
 | Thinking text saved by the Claude and Grok adapters | to build |
 | a continue null; order nulls (sets with no order) | to build |
-| **A probing finding to pass on.** 5,290 continue answers stop at exactly 24 glyphs, against 248 at 23. The prompt's "(up to 24)" anchors walks to the cap. Changing it would be a tagged prompt version, Joseph's call | for Joseph |
+| **The soft target.** 5,290 continue answers stopped at exactly 24 glyphs, against 248 at 23: the prompt's "(up to 24)" anchored walks to the cap. Joseph's change: "around N or fewer", N uniform 3–24 per sheet, recorded per answer (`tags.soft_target`) | built 2026-10-06, from c096 |
 
 Two things are out of scope. **Images** (Joseph: *"completely orthogonal to the unicode-token-perception issue"*). **Earlier minds' reasons**, used only in generator passes and never as evidence.
 
