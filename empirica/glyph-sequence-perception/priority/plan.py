@@ -99,7 +99,8 @@ PARAMS = {                                                   # every one chosen 
     "SIZE_SIGMA_STREAM": 0.25,     # lognormal sigma of each stream's own size factor
     "REL_FLOOR": 0.05, "REL_MID": 0.5, "REL_WIDTH": 0.12,   # relevance S-curve on a sequence's rank (tree rank, 0-1)
     "END_RELEVANCE": 5.0,          # a context at a sequence's end: only there can a question extend it (Joseph's rule,
-                                   # "extend that sequence to the right and to the left as far as they will go")
+                                   # "extend that sequence to the right and to the left as far as they will go"). It
+                                   # orders a sequence's own questions, ends first; it doesn't raise the sequence's claim
     "VALIDATION_RELEVANCE": 3.0,   # the name-only question's validation sets
     "STEWARD_RELEVANCE": 3.0,      # Joseph's own seeds
     "UNRANKED_RELEVANCE": 0.5,     # a source with no strength of its own (the triad era's grown rows, other seeds, runs
@@ -502,14 +503,17 @@ class Cands:
     its answers clarify: questions within one claim measure correlated things, so their information doesn't add."""
     def __init__(self):
         self.best = {}
-    def put(self, ident, weight, unit, claim=None):
-        """unit: a list of questions, or a function making one (built only if drawn: controls, decoys, windows)"""
-        if weight > 0 and (ident not in self.best or weight > self.best[ident][0]):
-            self.best[ident] = (weight, unit, ident if claim is None else claim)
+    def put(self, ident, weight, unit, claim=None, within=1.0):
+        """unit: a list of questions, or a function making one (built only if drawn: controls, decoys, windows).
+        `within` multiplies the unit's weight only when choosing among its claim's units, never the claim's own weight
+        (the end multiplier: check of stochastic-3's delta -- through the claim's mean it raised short sequences, whose
+        units are mostly ends, by about 3.3 against 1.5 for long ones)."""
+        if weight > 0 and (ident not in self.best or weight * within > self.best[ident][0] * self.best[ident][3]):
+            self.best[ident] = (weight, unit, ident if claim is None else claim, within)
     def __len__(self):
         return len(self.best)
     def claims(self):
-        return len({c for _, _, c in self.best.values()})
+        return len({c for _, _, c, _ in self.best.values()})
     def draw(self, P, n, r):
         """claim SLOTS drawn with replacement, each with probability proportional to its claim's weight (the mean of its
         units' weights); each slot takes its claim's next unit (the units of a claim in a fated weighted order). A
@@ -517,12 +521,12 @@ class Cands:
         one of the same weight. (Check of stochastic-2, 2026-10-06: drawn breadth first, about 170 draws over about
         1,300 claims gave every sequence at most one question a round.)"""
         by = collections.defaultdict(list)
-        for w, unit, c in self.best.values():
-            by[c].append((w, unit))
+        for w, unit, c, within in self.best.values():
+            by[c].append((w, unit, within))
         claims = list(by)
         if not claims:
             return 0
-        cw = [sum(w for w, _ in by[c]) / len(by[c]) for c in claims]
+        cw = [sum(w for w, _, _ in by[c]) / len(by[c]) for c in claims]
         queues = {}
         got = tries = 0
         while got < n and claims and tries < 20 * n + 100:
@@ -530,10 +534,10 @@ class Cands:
             i = r.choices(range(len(claims)), weights=cw)[0]
             c = claims[i]
             if c not in queues:
-                queues[c] = collections.deque(weighted_order(by[c], lambda it: it[0], r))
+                queues[c] = collections.deque(weighted_order(by[c], lambda it: it[0] * it[2], r))
             q = queues[c]
             while q:
-                w, unit = q.popleft()
+                w, unit, _ = q.popleft()
                 u = unit() if callable(unit) else unit
                 if u:
                     k = P.add_unit(u)
@@ -547,14 +551,17 @@ class Cands:
 # ------------------------------------------------------------------ streams
 REL_LB = {}                          # sequence -> its links' mean 90% lower bound of agreement (plan() fills it)
 
-def seq_lower_bound(s, Tr):
+def seq_lower_bound(s, store):
     """the mean over a sequence's walked links of the 90% lower bound of their agreement -- the study's one evidence
-    standard (METHODOLOGY §2a, tree.estimate), on real answers only: per family a Jeffreys posterior on the share naming
-    the link at its deciding context, families averaged. A link named by its only answer gets about 0.57 (two families
-    answering), 2 of 2 about 0.81, 10 of 10 about 0.97."""
+    standard (METHODOLOGY §2a, tree.estimate): per family a Jeffreys posterior on the share naming the link at its
+    deciding context, families averaged. A link named by its only answer gets about 0.57 (two families answering), 2 of
+    2 about 0.81, 10 of 10 about 0.97. `store` is the channel the sequence was walked from: the shown answers WITH seed
+    votes (relevance may use them, Joseph: seeds "to get the most relevant sequences as quickly as possible";
+    information never does), or the written answers for runs the written channel carries (check of stochastic-3's
+    delta: read from shown answers, 4,124 of 4,265 written runs fell to the floor)."""
     lbs = []
     for st in s["steps"]:
-        fl = Tr.nodes.get(tuple(st["ctx"]), {})
+        fl = store.get(tuple(st["ctx"]), {})
         cnt = {f: (sum(1 for y in xs if y == st["x"]), len(xs)) for f, xs in fl.items() if xs}
         if not cnt:
             lbs.append(0.0); continue
@@ -577,13 +584,13 @@ def continue_cands(T, Tr, pend, seqs):
     unreachable in practice -- check of stochastic-2)"""
     C = Cands()
     memo = {}
-    def put(ctx, rel, why, claim, **src):
+    def put(ctx, rel, why, claim, within=1.0, **src):
         ctx = tuple(ctx)
         if not (2 <= len(ctx) <= MAXK) or len(set(ctx)) != len(ctx):
             return
         if ctx not in memo:
             memo[ctx] = info_fams(counts_top(Tr.nodes.get(ctx, {})), pend.get("continue", ctx))
-        C.put(ctx, rel * memo[ctx], [Q("continue", ctx, why=why, **src)], claim)
+        C.put(ctx, rel * memo[ctx], [Q("continue", ctx, why=why, **src)], claim, within)
     for s in seqs:
         g, rel = s["glyphs"], rel_of(s)
         sq = "".join(g)
@@ -603,7 +610,7 @@ def continue_cands(T, Tr, pend, seqs):
                             put(period[-k:], rel, "cycle-probe", sq, seq=sq, period="".join(period))
                 continue
             for k in range(2, min(MAXK, len(run)) + 1):
-                put(run[-k:], rel * PARAMS["END_RELEVANCE"], "end", sq, seq=sq, side=side, stop=stop.split("→")[0])
+                put(run[-k:], rel, "end", sq, PARAMS["END_RELEVANCE"], seq=sq, side=side, stop=stop.split("→")[0])
         pos = {x: i for i, x in enumerate(g)}
         for st in s["steps"]:
             ctx = st["ctx"]
@@ -1057,8 +1064,11 @@ def plan(rid, recs, seeds, budget):
     seqs = TR.sequences(T)
     written_seqs = TR.sequences(TR.Tree(recs, written=True))
     REL_LB.clear()
-    for sq in seqs + written_seqs:
-        REL_LB.setdefault("".join(sq["glyphs"]), seq_lower_bound(sq, Tr))
+    for sq in seqs:
+        REL_LB["".join(sq["glyphs"])] = seq_lower_bound(sq, T.nodes)
+    Tw = TR.Tree(recs, seeds=False)
+    for sq in written_seqs:
+        REL_LB.setdefault("".join(sq["glyphs"]), seq_lower_bound(sq, Tw.written))
     pend = Pending(recs, rid)
     want, scale = sizes(budget, rid)
     P = Plan(rid, [k for k, c in T.cycles.items() if c["distinct"] >= 4])
