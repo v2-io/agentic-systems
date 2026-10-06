@@ -50,7 +50,15 @@ JOIN_WEAK = 0.75             # the planner's own cut for a "weak" link inside a 
 WRITTEN_RECOGNIZE_PER_ROUND = 40   # recognition questions for written continuations past shown ends (chosen without evidence)
 COHERE_PER_ROUND = 80        # whole-run recognition questions a round, each with its shuffled control (chosen without evidence)
 PICK_PER_ROUND = 30          # forced-pick contexts a round, each sampled PR.SAMPLES times by each generator mind (chosen without evidence)
-BUMP_MIN = 2                 # a branch: an answer drawn at least this often at its context, a repeat (chosen without evidence; the nulls calibrate it)
+# Every pick is a branch; nothing is excluded (Joseph, 2026-10-05: "I wouldn't outright exclude *anything* -- when I
+# do stochastic work I always use s-curves with there always being a long tail allowing for the most improbably things
+# to sneak in still"). A branch's priority is an S-curve on its share q of its context's draws:
+#   w(q) = FLOOR + (1 - FLOOR) / (1 + exp(-(q - MID) / WIDTH))
+# so a main branch (q ~ 0.7) weighs ~1, a weaker one at q = 0.13 (A in Joseph's example) ~0.67, a single draw of 20
+# (q = 0.05) ~0.24, and nothing falls below FLOOR. All three chosen without evidence; the nulls show what spread
+# chance alone produces. (Until 2026-10-05 an answer had to be drawn twice: a cut, against §7, under which a 2%
+# answer in 20 draws was followed ~6% of the time -- found by a side agent.)
+BRANCH_FLOOR, BRANCH_MID, BRANCH_WIDTH = 0.02, 0.10, 0.04
 PICK_NULL_EVERY = 4          # one null (fresh random) context per this many real ones, same length (chosen without evidence)
 CHART_CONTROL_SHARE = 0.25   # share of runs that also get a chart window -- a descriptive measurement, not a decoy (chosen without evidence)
 FRESH_TIERS = {"1-byte": (4, [(0x21, 0x7E)]), "2-byte": (3, [(0xA1, 0x7FF)]),
@@ -163,9 +171,9 @@ def cohere_work(P, seqs, written_seqs, seeds, rid):
         if len(set(g)) == len(g):
             sd.append((g, x.get("sid")))
     PR.R("cohere-seed-order", {"round": rid}).shuffle(sd)
-    branches = sorted(pick_branches(P.T), key=lambda b: (-b[1] / b[2], b[0]))      # main branches first; each asked once
+    branches = weighted_order(pick_branches(P.T), lambda b: b[1], PR.R("cohere-branch-order", {"round": rid}))  # S-curve draw; each asked once
     sources = [runs_from([s["glyphs"] for s in seqs], "walk"), runs_from([s["glyphs"] for s in written_seqs], "written"),
-               ((g, "seed:" + str(sid)) for g, sid in sd), runs_from([c for c, _, _ in branches], "pick-branch")]
+               ((g, "seed:" + str(sid)) for g, sid in sd), runs_from([c for c, _ in branches], "pick-branch")]
     out, seen = [], set()
     n_runs = 0
     while sources and n_runs < COHERE_PER_ROUND:
@@ -195,17 +203,26 @@ def cohere_work(P, seqs, written_seqs, seeds, rid):
                 break
     return out
 
+def branch_weight(k, n):
+    q = k / n
+    return BRANCH_FLOOR + (1 - BRANCH_FLOOR) / (1 + math.exp(-(q - BRANCH_MID) / BRANCH_WIDTH))
+
 def pick_branches(T):
-    """every branch the picks have grown so far: for each picked context c, each answer x drawn at least BUMP_MIN times
-    (a bump: a repeat, rare by chance -- the null contexts measure how rare) -> [(c + [x], draws, all draws at c)]"""
+    """every branch the picks have grown so far: for each picked context c, every answer x -> [(c + [x], weight)]"""
     out = []
     for ctx in T.picks:
         b = T.pick_branches(ctx)
         n = sum(b.values())
         for x, k in b.items():
-            if k >= BUMP_MIN and x not in (TR.NONE, TR.OTHER) and x not in ctx and PR.is_glyph(x):
-                out.append((list(ctx) + [x], k, n))
+            if x not in (TR.NONE, TR.OTHER) and x not in ctx and PR.is_glyph(x):
+                out.append((list(ctx) + [x], branch_weight(k, n)))
     return out
+
+def weighted_order(items, weight, r):
+    """a fated draw of every item without replacement, each next one with probability proportional to its weight
+    (Efraimidis-Spirakis keys u^(1/w)): heavy items early, light ones still anywhere -> list"""
+    keyed = [(r.random() ** (1 / weight(it)), i) for i, it in enumerate(items)]
+    return [items[i] for _, i in sorted(keyed, reverse=True)]
 
 def pick_work(P, seqs, seeds, rid):
     """The generator: tendrils from known sequences (METHODOLOGY §4a; Joseph, 2026-10-05: "s = known sequence -- e.g.,
@@ -213,9 +230,9 @@ def pick_work(P, seqs, seeds, rid):
     to a strong 'abcdefg...' and weaker, more obscure, but equally easily recognized: 'abc123', 'abcABC', 'abcαβ...'
     sequences. Branching from seeds like tendrils ... If, on the other hand, the responses are far more random and
     spread out -- still follow any bumps, but the point is still on the recognition side.")
-      CHILDREN  every branch grown so far (pick_branches): the picked context extended by a bump, asked again. Drawn by
-                a fated weighted draw, weight = the branch's share of its context's draws -- the main branch more often,
-                weaker ones still (a soft weight, never a cut, §7).
+      CHILDREN  every branch grown so far (pick_branches): the picked context extended by any answer, asked again. Drawn
+                by a fated weighted draw on the S-curve weight (BRANCH_*): the main branch most often, weaker ones
+                still, a single draw sometimes -- a long tail, never a cut (§7).
       ROOTS     known sequences not yet picked: the survey sequences and the tree's walks, each in both directions
                 (a sequence and its reverse are one sequence; extending leftward is extending the reverse), whole when
                 <= MAX_RUN glyphs, else their last MAX_RUN.
@@ -226,11 +243,10 @@ def pick_work(P, seqs, seeds, rid):
     -> [(kind, ctx, None, src, probe)]"""
     T = P.T
     r = PR.R("pick-draw", {"round": rid})
-    kids = [(c, k / n) for c, k, n in pick_branches(T) if len(c) <= PR.MAX_RUN and tuple(c) not in T.picks]
-    chosen = []
-    while kids and len(chosen) < PICK_PER_ROUND // 2:
-        i = r.choices(range(len(kids)), weights=[w for _, w in kids])[0]
-        chosen.append((kids.pop(i)[0], "branch"))
+    kids = weighted_order([(c, w) for c, w in pick_branches(T) if len(c) <= PR.MAX_RUN and tuple(c) not in T.picks],
+                          lambda kw: kw[1], r)
+    chosen = [(c, "branch") for c, _ in kids[:PICK_PER_ROUND // 2]]
+    kids = kids[PICK_PER_ROUND // 2:]
     roots = []
     for g in [list(x["glyphs"]) for x in seeds] + [s["glyphs"] for s in seqs]:
         if len(g) > 1 and g[-1] == g[0]:
@@ -247,8 +263,7 @@ def pick_work(P, seqs, seeds, rid):
         if tuple(h) not in seen and tuple(h) not in T.picks and all(PR.is_glyph(c) for c in h):
             seen.add(tuple(h)); chosen.append((h, "root"))
     while kids and len(chosen) < PICK_PER_ROUND:                 # roots ran short: the rest to children
-        i = r.choices(range(len(kids)), weights=[w for _, w in kids])[0]
-        chosen.append((kids.pop(i)[0], "branch"))
+        chosen.append((kids.pop(0)[0], "branch"))
     out = []
     for n, (ctx, how) in enumerate(chosen, 1):
         out += [("pick", ctx, None, {"why": "pick", "from": how}, {"sample": k}) for k in range(PR.SAMPLES)]
