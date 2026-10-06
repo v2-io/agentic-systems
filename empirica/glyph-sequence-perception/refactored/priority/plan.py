@@ -42,7 +42,8 @@ EXPLORE_SHARE = 0.15
 REASONED_PER_ROUND = 20      # reasoned-pass questions a round (chosen without evidence; the reasoner is the costly mind)
 JOIN_PER_ROUND = 60          # join probes a round (chosen without evidence)
 JOIN_WEAK = 0.75             # the planner's own cut for a "weak" link inside a strong run (chosen without evidence)
-JOIN_MAX_ANSWERS = 12        # a weak context is replicated only while it holds fewer answers than this
+# A weak context is replicated at most ONCE (one more round of answers there), whatever the result: re-asking a weak
+# link "until it passes" is optional stopping, which would let noise carry links over any cut.
 WRITTEN_RECOGNIZE_PER_ROUND = 40   # recognition questions for written continuations past shown ends (chosen without evidence)
 FRESH_TIERS = {"1-byte": (4, [(0x21, 0x7E)]), "2-byte": (3, [(0xA1, 0x7FF)]),
                "3-byte": (2, [(0x2000, 0x2BFF), (0x2E80, 0x33FF)]), "4-byte": (1, [(0x1D300, 0x1D7FF), (0x1F000, 0x1FBFF)])}
@@ -140,8 +141,8 @@ def join_work(P, s, r, ends):
     """Join probes (Joseph, 2026-10-05: "yes please -- for example, row #1 and row #14 will be joined hopefully soon"),
     asked before the sequence's other tier-1 work:
       a weak link inside a strong run (agreement < JOIN_WEAK, with >= 2 steps at or above it on each side): ask it from
-        the other direction, a context not yet asked; failing that, replicate the weak context itself (more answers),
-        while it holds fewer than JOIN_MAX_ANSWERS -- the one place the planner re-asks a context;
+        the other direction, a context not yet asked; failing that, replicate the weak context itself once (one more
+        round of answers, whatever they say) -- the one place the planner re-asks a context;
       an open end whose written answers (>= 2) name an end glyph of another sequence: its end question, first."""
     g = s["glyphs"]; T = P.T
     out = []
@@ -163,7 +164,7 @@ def join_work(P, s, r, ends):
         k = min(len(other), r.randint(3, 8))
         if tuple(other[-k:]) not in T.real:
             out.append(("continue", other[-k:], None, {"why": "join-reverse", "seq": "".join(g), "link": a + b}))
-        elif sum(len(v) for v in T.nodes.get(tuple(st["ctx"]), {}).values()) < JOIN_MAX_ANSWERS:
+        elif tuple(st["ctx"]) not in T.replicated:
             out.append(("continue", st["ctx"], None, {"why": "join-replicate", "seq": "".join(g), "link": a + b, "replicate": True}))
     for side, stop in (("right", s["stop_right"]), ("left", s["stop_left"])):
         if stop != "open":

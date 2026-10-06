@@ -9,15 +9,16 @@ Two channels of answers, never pooled (METHODOLOGY §4):
 Seed votes help find candidates but never confirm a link.
 
 A link a-b of a candidate run, read in either direction (a sequence and its reverse are one sequence, METHODOLOGY §2):
-  SHOWN-CONFIRMED  in one direction, the longest shown context ending at the earlier glyph (within the run) has the
-                   later glyph as its most-agreed continuation, with agreement >= THETA from >= 2 families; and in the
-                   other direction the longest shown context does not name a DIFFERENT glyph (that would make a-b a
-                   branch, not a link: e.g. `㉏ ㉐ -> ㉑` forward, but `㉕ ... ㉑ -> ⑳` backward).
-  WRITTEN-CARRIED  not shown-confirmed; in one direction, the written answers at every context that is a suffix of the
-                   run before the link (the minds' own preceding glyphs agreeing with the run) name the later glyph
-                   with agreement >= THETA, from >= 2 families; and no shown answer contradicts it: not the shown
-                   context in that direction (a different glyph, or "none" -- momentum past a felt end), nor a
-                   different glyph in the other direction.
+  SHOWN-CONFIRMED  one estimate from both reading directions: in each, the longest shown context ending at the earlier
+                   glyph (within the run) gives the later glyph's agreement; the link's agreement is the MEAN over the
+                   directions (families pooled), >= THETA from >= 2 families. A direction whose top answer is "none"
+                   is the end of that reading and is left out; one naming a different glyph counts against (e.g.
+                   `㉏ ㉐ -> ㉑` forward, but `㉕ ... ㉑ -> ⑳` backward). The mean, not the better of the two, so
+                   that asking a link from its other side (as the planner's join probes do) is a test, not a
+                   second chance.
+  WRITTEN-CARRIED  a link with no shown estimate, the same way on written answers whose context is a suffix of the
+                   run before the link (the minds' own preceding glyphs agreeing with the run), unless a shown answer
+                   contradicts it ("none" -- momentum past a felt end -- or a different glyph).
 Tables:
   Stretches: maximal runs of shown-confirmed links, >= 3 glyphs. The best-confirmed sequences.
   Carried by written answers: maximal runs of shown-confirmed or written-carried links holding at least one
@@ -44,29 +45,6 @@ def shown_top(Tp, run):
     ctx = Tp.lookup(run) if len(run) >= 2 else None
     return (ctx, Tp.ranked(ctx)) if ctx else (None, [])
 
-def shown_support(Tp, run, x):
-    """x after run, on shown answers -> (agreement, families, unreasoned k, n) or None"""
-    ctx, rk = shown_top(Tp, run)
-    if rk and rk[0][0] == x:
-        agr, nfam, _ = rk[0][1]
-        if agr >= THETA and nfam >= 2:
-            u = Tp.unreasoned.get(ctx, [])
-            return agr, nfam, sum(1 for f in u if f == x), len(u)
-    return None
-
-def written_support(Tp, run, x):
-    """x after run, on written answers whose context is a suffix of run -> (agreement, families naming x) or None"""
-    per = collections.defaultdict(list)
-    for j in range(2, min(TR.MAXK, len(run)) + 1):
-        for f, xs in Tp.written.get(tuple(run[-j:]), {}).items():
-            per[f] += xs
-    if not per:
-        return None
-    shares = {f: sum(1 for y in xs if y == x) / len(xs) for f, xs in per.items()}
-    agr = sum(shares.values()) / len(shares)
-    nfam = sum(1 for v in shares.values() if v > 0)
-    return (agr, nfam) if agr >= THETA and nfam >= 2 else None
-
 def contradicts(Tp, run, x, none_counts):
     """does the shown deciding context after `run` name something other than x? ("none" only if none_counts)"""
     _, rk = shown_top(Tp, run)
@@ -79,27 +57,58 @@ def contradicts(Tp, run, x, none_counts):
         return none_counts
     return top != TR.OTHER
 
+def shown_dir(Tp, run, x):
+    """one reading direction of a link, on shown answers: at the deciding context, x's agreement (mean over families of
+    each family's share naming x), the families naming x, unreasoned (k, n), and the top answer -> dict or None"""
+    if len(run) < 2:
+        return None
+    ctx, rk = shown_top(Tp, run)
+    if not rk:
+        return None
+    fams = {f for f, xs in Tp.nodes[ctx].items() if x in xs}
+    u = Tp.unreasoned.get(ctx, [])
+    return {"agr": Tp.dist(ctx).get(x, (0.0, 0, 0))[0], "fams": fams, "top": rk[0][0],
+            "uk": sum(1 for f in u if f == x), "un": len(u)}
+
+def written_dir(Tp, run, x):
+    """one reading direction, on written answers whose context is a suffix of run -> dict or None"""
+    if len(run) < 2:
+        return None
+    per = collections.defaultdict(list)
+    for j in range(2, min(TR.MAXK, len(run)) + 1):
+        for f, xs in Tp.written.get(tuple(run[-j:]), {}).items():
+            per[f] += xs
+    if not per:
+        return None
+    shares = {f: sum(1 for y in xs if y == x) / len(xs) for f, xs in per.items()}
+    return {"agr": sum(shares.values()) / len(shares), "fams": {f for f, v in shares.items() if v > 0}}
+
 def judge(g, Tp):
-    """-> per link i (g[i]-g[i+1]): ("S", agr, fam, uk, un) | ("W", agr, fam) | None"""
+    """-> per link i (g[i]-g[i+1]): ("S", agr, fam, uk, un) | ("W", agr, fam, 0, 0) | None.
+    ONE estimate per link from both reading directions (a sequence and its reverse are one sequence): the mean of the
+    directions' agreements, families pooled -- not the better of the two, which gave a link asked from both sides a
+    second chance (and the planner's join probes ask weak links from the other side). A direction whose deciding
+    context's top answer is "none" is the end of that reading and is left out; one naming a different glyph counts
+    against. Shown first; a link without a shown estimate may be carried by written answers, the same way, unless a
+    shown answer contradicts it (in the same direction: "none" -- momentum past a felt end -- or a different glyph)."""
     out = []
-    n = len(g)
-    for i in range(n - 1):
+    for i in range(len(g) - 1):
         a, b = g[i], g[i + 1]
         fwd, bwd = g[:i + 1], g[i + 1:][::-1]              # run before b (forward); run before a (backward)
-        s_f = shown_support(Tp, fwd, b) if len(fwd) >= 2 else None
-        s_b = shown_support(Tp, bwd, a) if len(bwd) >= 2 else None
+        ds = [d for d in (shown_dir(Tp, fwd, b), shown_dir(Tp, bwd, a)) if d and d["top"] not in (TR.NONE, TR.OTHER)]
         st = None
-        if s_f and not contradicts(Tp, bwd, a, none_counts=False):
-            st = ("S",) + s_f
-        if s_b and not contradicts(Tp, fwd, b, none_counts=False) and (st is None or s_b[0] > st[1]):
-            st = ("S",) + s_b
-        if st is None:
-            w_f = written_support(Tp, fwd, b) if len(fwd) >= 2 else None
-            w_b = written_support(Tp, bwd, a) if len(bwd) >= 2 else None
-            if w_f and not contradicts(Tp, fwd, b, none_counts=True) and not contradicts(Tp, bwd, a, none_counts=False):
-                st = ("W",) + w_f
-            elif w_b and not contradicts(Tp, bwd, a, none_counts=True) and not contradicts(Tp, fwd, b, none_counts=False):
-                st = ("W",) + w_b
+        if ds:
+            agr = sum(d["agr"] for d in ds) / len(ds)
+            fams = set().union(*(d["fams"] for d in ds))
+            if agr >= THETA and len(fams) >= 2:
+                st = ("S", agr, len(fams), sum(d["uk"] for d in ds), sum(d["un"] for d in ds))
+        elif not any(contradicts(Tp, run, x, none_counts=True) for run, x in ((fwd, b), (bwd, a))):
+            ws = [w for w in (written_dir(Tp, fwd, b), written_dir(Tp, bwd, a)) if w]
+            if ws:
+                agr = sum(w["agr"] for w in ws) / len(ws)
+                fams = set().union(*(w["fams"] for w in ws))
+                if agr >= THETA and len(fams) >= 2:
+                    st = ("W", agr, len(fams), 0, 0)
         out.append(st)
     return out
 

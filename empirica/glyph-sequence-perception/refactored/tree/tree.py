@@ -92,6 +92,8 @@ class Tree:
         self.unreasoned = collections.defaultdict(list)   # ctx -> [first] from answers given with 0 thinking tokens
         self.reasoned = collections.defaultdict(list)     # ctx -> [{mind, family, continuation, tools}] (reasoned pass)
         self.seeded = set()
+        self.replicated = set()                 # shown contexts answered in more than one round (asked again)
+        self._rounds = {}
         for r in recs:
             k, o = r["kind"], r["outcome"]
             if k == "seed":
@@ -137,6 +139,9 @@ class Tree:
                         if len(e["examples"]) < 3:
                             e["examples"].append(" ".join(ctx) + " | " + " ".join(seq))
                 self.nodes[ctx][r["family"]].append(first); self.real.add(ctx)
+                self._rounds.setdefault(ctx, set()).add(r.get("round"))
+                if len(self._rounds[ctx]) > 1:
+                    self.replicated.add(ctx)
                 if (r.get("tags") or {}).get("thinking_tokens") == 0:
                     self.unreasoned[ctx].append(first)
             elif k == "inhibit" and o in ("yes", "no", "cant-tell"):
