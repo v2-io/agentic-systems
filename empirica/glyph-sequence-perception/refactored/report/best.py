@@ -238,17 +238,19 @@ def main():
         L += ["## Cycles", "", "| cycle | n | ans | fam |", "|---|---|---|---|"]
         L += [f"| `{' '.join(c['pattern'])} ↻` | {len(c['pattern'])} | {c['answers']} | {fa(c['families'])} |" for c in cyc[:40]]
         L += ["", "*Manifested: a mind wrote the whole period twice, after being shown less than one period. **n**: glyphs in the period. **ans**: answers that manifested it. **fam**: families (cl = Claude, ge = Gemini, gr = Grok).*", ""]
-    L += ["## Stretches", "", "| # | stretch | n | agr | ≥ | fam | unr | tests |", "|---|---|---|---|---|---|---|---|"]
+    L += ["## Stretches", "", "| # | stretch | n | us | agr | ≥ | fam | unr | tests |", "|---|---|---|---|---|---|---|---|---|"]
     for i, s in enumerate(kept[:TOP], 1):
         k, n = s["unreasoned"]
         t = s["tests"]
         detail = " ".join(f"{kind[0]}{p}/{c}" for kind, (p, c) in t.items() if p + c)
         tcell = (("⚠ " if any(c for _, c in t.values()) else "") + detail) if detail else "–"
-        L.append(f"| {i} | `{' '.join(shown_order(s['glyphs']))}`{' ↻' if s.get('wraps') else ''} | {len(s['glyphs'])} | {s['agreement']:.2f} | {s['lb']:.2f} | {s['families_min']} | {f'{k}/{n}' if n else '–'} | {tcell} |")
+        us = sum(len(c.encode("utf-8")) for c in s["glyphs"]) / len(s["glyphs"])
+        L.append(f"| {i} | `{' '.join(shown_order(s['glyphs']))}`{' ↻' if s.get('wraps') else ''} | {len(s['glyphs'])} | {us:.1f} | {s['agreement']:.2f} | {s['lb']:.2f} | {s['families_min']} | {f'{k}/{n}' if n else '–'} | {tcell} |")
     if len(kept) > TOP:
         L += ["", f"*{len(kept) - TOP} shorter stretches not shown.*"]
     L += ["", "*Key:*",
           "- **n**: glyphs.",
+          "- **us**: Unicode size, the mean UTF-8 bytes per glyph in the stretch (1 = ASCII … 4 = astral planes).",
           "- **agr**: observed agreement, the mean over the stretch's links.",
           f"- **≥**: the weakest link's 90% lower bound (every link is ≥ {LEVEL}).",
           "- **fam**: families naming the link, the fewest over the links.",
