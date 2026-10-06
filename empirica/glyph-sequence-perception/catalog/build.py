@@ -10,7 +10,9 @@ implements part of CATALOG v5 and says which part:
           the default view (§11); lookalike substitution as a run-level quantity. Build 1 (catalog/links.py): every
           link c -> x with G in three channels (shown, written, picked; raw per family) and L against near decoys
           (Abbott, Bayes factor); and the state (§8) of every link of every record, summarised on the record.
-  not yet O (Plackett-Luce over order lines), G's calibrated likelihood ratio (§9), B, seed raters, maximal runs from
+          Build 2 (catalog/order.py): O, the agreement of every triad and order answer bearing on a run with its order,
+          against each unit's chance baseline (strength the common excess, a Bayes factor; other outcomes counted).
+  not yet O's Plackett-Luce fit (§9), G's calibrated likelihood ratio (§9), B, seed raters, maximal runs from
           links, order lines as position evidence, the name route (reported "unmeasured" until the name-only question
           is validated, §7a), posterior predictive checks.
 
@@ -32,10 +34,11 @@ sys.path.insert(0, str(ROOT)); sys.path.insert(0, str(ROOT / "tree")); sys.path.
 import run as RUN                                   # noqa: E402  answers(), seeds()
 sys.path.insert(0, str(ROOT / "catalog"))
 import links as LK                                  # noqa: E402  the link layer (CATALOG §4-§6, §8)
+import order as OR                                  # noqa: E402  the O part (CATALOG §6, §9)
 import tree as TR                                   # noqa: E402
 import plan as PL                                   # noqa: E402  block()
 
-MODEL = "catalog-v5-build1"
+MODEL = "catalog-v5-build2"
 SEAL_FILE = ROOT / "audits" / "SEAL-canary-choose-2026-10-06.md"
 CANARY = set("▁▂▃▄▅▆▇█🮆🮅🮄▀🮃🮂▔▉")
 PARAMS = {                                           # every one chosen without evidence (CATALOG §13 freezes them)
@@ -96,7 +99,8 @@ def bf_excess(obs, grid):
             s += y * math.log(p) + n_ * math.log(1 - p)
         return s
     pts = [(i + 0.5) / grid for i in range(grid)]
-    return math.exp(logsumexp([ll(b) for b in pts]) - math.log(grid) - ll(0.0))
+    return math.exp(min(logsumexp([ll(b) for b in pts]) - math.log(grid) - ll(0.0), 690.0))   # capped near 1e300: a float's
+                                                                                                  # range; decisions use >= 10
 
 def bf_preference(k, n, b):
     """Bayes factor for p != b (uniform prior on p) against p = b, from k of n: 1 / ((n + 1) C(n, k) b^k (1 - b)^(n - k))"""
@@ -450,11 +454,22 @@ def main():
         r["link_states"] = {str(k): c.get(k, 0) for k in range(1, 6)}
         r["weakest_link"] = max(sts) if sts else None
         r["flips"] = sum(1 for x in rlinks[-len(sts):] if x["flip"]) if sts else 0
+    OX = OR.Order(recs, rater)                       # O (build 2): agreement of order and triad answers with each run
+    for r in rows:
+        Op, other = OX.part(list(r["glyphs"]), weights, bf_excess, PARAMS["GRID"])
+        r["o_strength"] = Op["strength"] if Op else None
+        r["o_sd"] = Op["sd"] if Op else None
+        r["o_bf"] = Op["bf"] if Op else None
+        r["o_families"] = Op["families"] if Op else None
+        r["o_other"] = dict(other) or None
+        r["o_evidence"] = Op["aids"] if Op else []
     rates = [{"rater": rt, "set_class": cls, "yes": y, "n": n} for (rt, cls), (y, n) in sorted(ctl.items())]
     manifest["finished"] = dt.datetime.now().isoformat(timespec="seconds")
     manifest["counts"] = {"answers": len(recs), "records": len(rows), "positions": len(prow), "links": len(lrows),
                           "record_links": len(rlinks),
                           "weakest_link": dict(collections.Counter(str(r["weakest_link"]) for r in rows)),
+                          "o_scored": sum(1 for r in rows if r["o_strength"] is not None),
+                          "o_certain": sum(1 for r in rows if (r["o_bf"] or 0) >= PARAMS["BF_CERTAIN"] and (r["o_strength"] or 0) > 0),
                           "recognised": sum(r["recognised"] for r in rows),
                           "view": dict(collections.Counter(r["view"] for r in rows if r["view"])),
                           "chart_state": dict(collections.Counter(r["chart_state"] for r in rows))}
@@ -466,7 +481,7 @@ def main():
                 w.writerow([json.dumps(r[c], ensure_ascii=False) if isinstance(r[c], (list, dict)) else ("" if r[c] is None else r[c]) for c in cols])
     RC = ["id", "glyphs", "length", "chart_class", "set_class", "sources", "r_strength", "r_sd", "r_bf", "r_families", "recognised",
           "chart_state", "name_state", "view", "contested", "contested_asked", "lookalike", "link_states", "weakest_link", "flips",
-          "evidence"]
+          "o_strength", "o_sd", "o_bf", "o_families", "o_other", "evidence", "o_evidence"]
     LC = ["context", "k", "x", "g_shown", "g_written", "g_picked", "next_ranks", "l_families", "l_strength", "l_sd", "l_bf", "evidence"]
     RLC = ["record", "idx", "a", "b", "state", "direction", "context", "flip"]
     PC = ["record", "orientation", "kind", "idx", "context", "run_choice", "alternative", "state", "instrument", "n", "k", "p",
@@ -485,7 +500,8 @@ CREATE TABLE {schema}.manifest (doc jsonb);
 CREATE TABLE {schema}.records (id text primary key, glyphs text, length int, chart_class text, set_class text, sources jsonb,
   r_strength double precision, r_sd double precision, r_bf double precision, r_families jsonb, recognised boolean,
   chart_state text, name_state text, "view" text, contested int, contested_asked int, lookalike jsonb, link_states jsonb,
-  weakest_link int, flips int, evidence jsonb);
+  weakest_link int, flips int, o_strength double precision, o_sd double precision, o_bf double precision, o_families jsonb,
+  o_other jsonb, evidence jsonb, o_evidence jsonb);
 CREATE TABLE {schema}.links (context text, k int, x text, g_shown jsonb, g_written jsonb, g_picked jsonb, next_ranks jsonb,
   l_families jsonb, l_strength double precision, l_sd double precision, l_bf double precision, evidence jsonb);
 CREATE TABLE {schema}.record_links (record text, idx int, a text, b text, state int, direction text, context text, flip boolean);

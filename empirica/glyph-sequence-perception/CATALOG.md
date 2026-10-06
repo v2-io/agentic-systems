@@ -1,6 +1,6 @@
 # CATALOG: the canonical catalog of sequences
 
-*Design, version 5 (2026-10-06), by the independent session (Claude Opus 5.5) with Joseph. Partly built: builds 0 and 1 (§13) implement R, the chart route, the view, and the link layer (G and L per link, link states); nothing reads it yet. The model is not frozen.*
+*Design, version 5 (2026-10-06), by the independent session (Claude Opus 5.5) with Joseph. Partly built: builds 0–2 (§13) implement R, the chart route, the view, the link layer (G and L per link, link states) and O (agreement with order and triad answers); nothing reads it yet. The model is not frozen.*
 
 - *Versions 1–3 were audited de novo (`audits/catalog-design-2026-10-06.md`, `…-v2-…`, `…-v3-…`; findings F1–F12, A1–A11, C1–C10).*
 - *The v3 auditor checked version 4 against its own findings (`audits/catalog-design-v4-check-2026-10-06.md`: V1, V2, Q1, Q2). §15 maps that check to this version.*
@@ -330,6 +330,8 @@ Each build goes into a versioned schema, and an atomic switch makes it current.
 - the model version.
 
 **Fits** use EM with a fixed initialisation, order and tolerance, and sums are taken in a fixed order.
+
+**Build 2** (`catalog/order.py`, 2026-10-06; the build now takes about a minute) adds O. Every answer bearing on a run is a unit that agrees with its order or not, against its own chance baseline: an asked triple of the run's glyphs answered with a middle (1/3), and an order answer whose main line places at least 3 of the run's glyphs (2/m! for m glyphs). Strength is the excess over chance common to a family's units, with the same Bayes factor as R and L. "Only two", "none", glyphs put in "extra", ties and lines too short count as their own outcomes, never against the order. **This departs from §9**, which specifies a Plackett–Luce fit with "concentration about the hypothesised order"; that concentration isn't defined closely enough to compute without inventing it, while this scores a given order on the one standard and doesn't find the best order. The fit stays open. First reading: O is scored on 6,996 of 7,761 records and certain on 4,325; `①…⑩` at 0.98 (Claude 134/135 units, Grok 61/61, Gemini 73/73); shuffled block ramps that some mind called coherent, asked as runs, near 0.01.
 
 **Build 1** (`catalog/links.py`, 2026-10-06; the build takes about 13 seconds) adds the link layer: every link `c → x` at its own context (79,220 at c101), with G in its three channels (shown, written, picked; raw per family, nothing pooled across context lengths) and L against each rater's near decoys (Abbott; a Bayes factor, as R); and the state (§8) of every link of every record, the better reading direction kept, summarised on the record (`link_states`, `weakest_link`, `flips`). Two readings fixed in building it: state 2 needs the longest showable context (the full prefix, or its last 8 glyphs) shown to minds with no other glyph on top; a flip is a longer asked context whose top answer is another glyph ("none" is an end, not a flip). First reading: 1,641 of the 2,990 runs asked whole have a link no mind was ever asked about (state 5), mostly short runs from pick branches, seeds and reordered shuffles: they were recognised whole while their links were never put as continuations.
 
