@@ -133,3 +133,61 @@ A minor point [checked]: a claim's weight stays the mean of all its units after 
 - I didn't look at c104 or later, which stochastic-2 drew.
 
 Treat the findings above, not this list, as the check's content.
+
+---
+
+## Addendum: the delta `c32fdfbc..00daf720`
+
+*16:55–17:10. I read the delta (`priority/plan.py` only; the working tree matches `00daf720`) and dry-ran it as before, with round id `c999`.*
+
+*An overlap I caught.* My first run of the delta overlapped the loop's record step for c104, which rewrites `data/answers/`. I discarded that run and reran with a guard comparing every answer file's size and mtime before and after; the files were unchanged during the run. Before that I also caught a mistake in my own instrumentation: I'd wrapped only some streams, so one stream's claims overwrote another's. Every number below is from the corrected, guarded run (299,371 records).
+
+**Is the lower bound computed as I meant?** Yes [checked]. `seq_lower_bound`:
+
+- calls `TR.estimate` on each walked link's per-family counts at its deciding context, from real answers (`Tr`);
+- takes $\text{mean} - 1.2816\,\text{sd}$, which is the one-sided 90% bound of METHODOLOGY §2a, clamped at 0;
+- averages that over the sequence's links.
+
+Relevance now spreads across 0.1–0.9, with 12 sequences at 0.9 and none higher [measured]. A link with no real answers counts 0. Two consequences follow from that, the first sizeable.
+
+### 1. Written-channel runs drop to the floor (new, from the delta)
+
+`REL_LB` is filled for the written-tree sequences too, but from shown answers (`Tr.nodes`) at their steps' deciding contexts. Those are contexts the minds wrote, mostly never shown. Of the 4,265 written-tree sequences that aren't also shown-tree sequences, 4,124 get relevance about 0.06, the curve's floor [measured]. As a result:
+
+- In this dry run, written runs took **4 of 76** primary cohere draws. In stochastic-2 they took 29 of 76, and under stochastic-1 they were the largest cohere source by weight (41%).
+- METHODOLOGY §4 names these runs as awaiting shown confirmation, and the cohere question is that confirmation. The delta has, in effect, mostly stopped asking it.
+
+It isn't in the commit message, so I take it as unintended.
+
+What I'd change: compute a written sequence's lower bound on the evidence it was walked from. That means the written channel, `Tree(recs, written=True, seeds=False)`: written answers are answers, positive one-way evidence. Alternatively, give written-only sequences `UNRANKED_RELEVANCE`, since they have no shown strength of their own.
+
+### 2. Seed-only links count as 0 (small)
+
+28 sequences have at least one link carried by seed votes alone; 2 have only such links (relevance 0.1) [measured]. Relevance is priority, not evidence, and Joseph asked for seed votes to speed exactly that ("get the most relevant sequences as quickly as possible"). So computing the lower bound on `T`, with seed votes as tagged votes, and leaving information on `Tr`, would follow his instruction without letting seeds into the evidence. It's small at 28 sequences, but it is a reversal of his rule, so I'd note it.
+
+### 3. Why the kernels take the draw: the end multiplier, not information
+
+You read it as information's doing. The measurement says otherwise [measured]. Each continue claim's weight is the mean of its units' weights. Below, that mean is split into relevance, the share of the claim's units that are ends at $5\times$, and the information left over:
+
+| sequences | claims | mean relevance | mean end multiplier | information, net of it | share of claim weight | questions (of 170) |
+|---|---|---|---|---|---|---|
+| 3–5 glyphs, thin | 690 | 0.34 | 3.34 | 0.44 | 0.50 | 77 |
+| 3–5 glyphs, more | 58 | 0.60 | 2.55 | 0.40 | 0.05 | 6 |
+| 6+ glyphs, thin | 229 | 0.47 | 1.88 | 0.55 | 0.16 | 31 |
+| 6+ glyphs, more | 339 | 0.66 | 1.50 | 0.53 | 0.26 | 50 |
+| off-sequence | 4,873 | 0.01 | 1.00 | 0.31 | 0.02 | 6 |
+
+"Thin" is your cut: at most 4 answers per step. "Information, net of it" is the claim's mean weight divided by its relevance and its mean multiplier. That is an approximation, but a close one, since the multiplier is constant within each unit.
+
+Per claim, a thin kernel and a well-evidenced long sequence weigh about the same: $0.50/690 \approx 0.26/339$. Relevance halves the kernel's weight. The end multiplier more than doubles it back: a 3-glyph sequence's units are mostly its end contexts, while a long sequence's are mostly inside ones. Information is, if anything, slightly lower for the kernels. Their number does the rest.
+
+This is an interaction of the two-stage draw with `END_RELEVANCE`; it isn't new in the delta. `END_RELEVANCE` was meant to choose *which* question within a sequence: the end, since only an end can extend it. Since stochastic-2 it also chooses *which sequence*, and it favours short ones because ends make up more of them.
+
+If that isn't wanted, apply the multiplier within the claim only. Compute the claim's weight from its units' relevance times information, without `END_RELEVANCE`, and keep the multiplier in the within-claim order. Then a drawn sequence still asks its ends first, and kernels and long sequences compete on relevance and information. Whether kernels *should* take half of continue is Joseph's extend-first question; the point is that today a constant decides it, not the evidence.
+
+### 4. The other two changes
+
+- **The reasoned stream's asked-before source** works [checked, measured]. It sits at `OFF_SEQUENCE_RELEVANCE`, requires a context length of 2–8, and drew none this round, as expected.
+- **No-spoiling for continue only** is as described [checked].
+
+**Verdict.** The delta does what it says and breaks nothing that worked. It does introduce item 1, which I'd fix before switching the loop, because it silently retires the written-run recognition test. Items 2 and 3 can follow.
