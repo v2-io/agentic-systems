@@ -97,7 +97,7 @@ BASE = {                                                     # questions a round
 PARAMS = {                                                   # every one chosen without evidence
     "SIZE_SIGMA_ROUND": 0.15,      # lognormal sigma of the round-wide size factor
     "SIZE_SIGMA_STREAM": 0.25,     # lognormal sigma of each stream's own size factor
-    "REL_FLOOR": 0.05, "REL_MID": 0.5, "REL_WIDTH": 0.12,   # relevance S-curve on a sequence's rank (tree rank, 0-1)
+    "REL_FLOOR": 0.05, "REL_MID": 0.5, "REL_WIDTH": 0.12,   # relevance S-curve on a sequence's links' mean 90% lower bound
     "END_RELEVANCE": 5.0,          # a context at a sequence's end: only there can a question extend it (Joseph's rule,
                                    # "extend that sequence to the right and to the left as far as they will go"). It
                                    # orders a sequence's own questions, ends first; it doesn't raise the sequence's claim
@@ -1066,9 +1066,8 @@ def plan(rid, recs, seeds, budget):
     REL_LB.clear()
     for sq in seqs:
         REL_LB["".join(sq["glyphs"])] = seq_lower_bound(sq, T.nodes)
-    Tw = TR.Tree(recs, seeds=False)
     for sq in written_seqs:
-        REL_LB.setdefault("".join(sq["glyphs"]), seq_lower_bound(sq, Tw.written))
+        REL_LB.setdefault("".join(sq["glyphs"]), seq_lower_bound(sq, Tr.written))
     pend = Pending(recs, rid)
     want, scale = sizes(budget, rid)
     P = Plan(rid, [k for k, c in T.cycles.items() if c["distinct"] >= 4])

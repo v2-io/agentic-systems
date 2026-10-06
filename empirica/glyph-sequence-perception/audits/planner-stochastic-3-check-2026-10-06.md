@@ -191,3 +191,24 @@ If that isn't wanted, apply the multiplier within the claim only. Compute the cl
 - **No-spoiling for continue only** is as described [checked].
 
 **Verdict.** The delta does what it says and breaks nothing that worked. It does introduce item 1, which I'd fix before switching the loop, because it silently retires the written-run recognition test. Items 2 and 3 can follow.
+
+### Addendum 2: `00daf720..af53e317`
+
+*17:00–17:10. I read the `priority/plan.py` diff (the working tree matches `af53e317`) and the `tree/tree.py` change that landed with it in `2e934036`. I dry-ran the relevance computation with the same guard as before (299,371 records; answer files unchanged during the run).*
+
+All three are done as I meant [checked, measured]:
+
+1. **Written runs read the written channel.** Of the 4,265 written-only sequences, 90 now sit at relevance about 0.1 (4,124 under the delta). Their 130,292 walked steps include 794 whose deciding context has no written answers; 751 of those have shown answers. Reading the tree the runs were walked on (written, shown and seed answers pooled) would lift about 70 more off the floor. It's a refinement; nothing breaks without it.
+2. **Relevance reads `T.nodes`, with seed votes; information stays on `Tr`.** The two sequences carried only by seed votes now sit at 0.39 instead of the floor.
+3. **`END_RELEVANCE` is passed as `within`.** It multiplies a unit's weight only when choosing among its claim's units, through `weighted_order`. It is left out of the claim's mean. And `put()`'s deduplication compares weight times `within`, so an end keeps its place when another source puts the same context. Nothing else reads `Cands.best`'s tuples; `catalog/build.py` imports `plan` only for `block()`.
+
+**`tree.sequences`, changed alongside.** The new containment check looks only at kept walks that hold the candidate's first glyph. That is equivalent to the old all-pairs check: a walk containing $s$, in either orientation, holds $s$'s first glyph. Order and outcome are unchanged [checked].
+
+Two observations, neither a break:
+
+- **Written runs now carry the highest relevance of any cohere source.** Most are at 0.8–1.0, against a ceiling near 0.9 for shown-tree sequences. Popular written paths gather many answers per context, so their lower bounds are tight. METHODOLOGY §4 notes that long written runs through unfamiliar blocks are mostly code-chart walks. Cohere, with its controls, is the test that sorts them, so drawing them heavily is consistent. It's worth knowing when reading the cohere draw (your 31 written against 2 walks).
+- **Housekeeping:**
+  - `PARAMS`'s comment still says the relevance S-curve is "on a sequence's rank (tree rank, 0-1)"; it is now on the links' lower bound.
+  - `Tw = TR.Tree(recs, seeds=False)` builds the same tree as `Tr`. Reusing `Tr.written` saves one build.
+
+**Verdict:** clean to switch.
