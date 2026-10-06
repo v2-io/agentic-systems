@@ -1,6 +1,6 @@
 # CATALOG: the canonical catalog of sequences
 
-*Design, version 5 (2026-10-06), by the independent session (Claude Opus 5.5) with Joseph. Not built.*
+*Design, version 5 (2026-10-06), by the independent session (Claude Opus 5.5) with Joseph. Partly built: build 0 (§13) implements R, the chart route and the view; nothing reads it yet. The model is not frozen.*
 
 - *Versions 1–3 were audited de novo (`audits/catalog-design-2026-10-06.md`, `…-v2-…`, `…-v3-…`; findings F1–F12, A1–A11, C1–C10).*
 - *The v3 auditor checked version 4 against its own findings (`audits/catalog-design-v4-check-2026-10-06.md`: V1, V2, Q1, Q2). §15 maps that check to this version.*
@@ -55,7 +55,7 @@ port (4) ────answers──▶       │                     ├──▶
 - **Supersession.** Once built, its model supersedes the per-reader standard of METHODOLOGY §2a. The two then disagree about seeds, among other things: BEST.md's header says seeds are never evidence, which the catalog reverses.
 - **Candidate inputs** are named propositions to score:
   - survey seeds and Joseph's dropspot sequences;
-  - the triad era's grown rows (`../data/growth/r004–r012.json`);
+  - the triad era's grown rows (`data/triad-era/growth/r004–r012.json`);
   - triad chains;
   - reasoned continuations;
   - shuffles a mind called coherent.
@@ -296,7 +296,7 @@ Which one he means is his to say. Until then, the record carries both, and the v
 
 | addition | status |
 |---|---|
-| D, discriminator positions (`choose`) | built 2026-10-06. The planner still asks uncontested steps; to change |
+| D, discriminator positions (`choose`) | built 2026-10-06; asked only at contested positions from c096 (§7a) |
 | D controls: the same pair after a neutral context (three fresh glyphs from blocks other than either candidate's; tag `control: neutral`), 20 a round, each pair once | built 2026-10-06, from c096 |
 | **The name-only order question.** Show the glyphs' Unicode *names*, scrambled, without the glyphs; ask for the order (the order question's wording). The name route's prediction (§7a). Its two validation sets come first (`NAME_VALIDATION` in `priority/plan.py`: six sets whose names' meaning and code points disagree, such as `⁰¹²³⁴`, `🕐🕜🕑🕝🕒` and `⓪①②③④`, and three whose names carry no order), then Joseph's seed, ordered seeds and recognised runs; runs longer than 12 in overlapping windows; 30 a round | built 2026-10-06, from c096 |
 | `choose` between the run's glyph and the names' predicted glyph, at name-contested positions | to build, after the name-only question |
@@ -322,7 +322,7 @@ Each build goes into a versioned schema, and an atomic switch makes it current.
 **The manifest:**
 
 - hashes of every answer file;
-- the candidate inputs (`../data/growth/`, `../data/seeds/`);
+- the candidate inputs (`data/triad-era/growth/`, `data/seeds/`);
 - the Unicode reference files (`data/unicode/`);
 - the Unicode version;
 - the Python version (the engine is pure Python: no numpy or scipy, so nothing outside the manifest moves its sums);

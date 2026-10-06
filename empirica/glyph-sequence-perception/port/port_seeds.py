@@ -22,8 +22,8 @@ Surveyor -> family: grok-* -> grok; sonnet*, fable-* -> claude.
 import hashlib, json, pathlib, unicodedata as U
 
 HERE = pathlib.Path(__file__).resolve()
-STUDY = HERE.parents[2]
-OUT = HERE.parents[1] / "data" / "answers" / "seeds.jsonl"
+DATA = HERE.parents[1] / "data"
+OUT = DATA / "answers" / "seeds.jsonl"
 TYPES = {"sequence", "morph", "cyclic", "generator"}
 
 def family(surveyor):
@@ -38,7 +38,7 @@ def is_glyph(ch):
     return len(ch) == 1 and U.category(ch)[0] in "LNPS" and not ch.isspace()
 
 def main():
-    seeds = [json.loads(l) for l in open(STUDY / "data" / "seeds.jsonl") if l.strip()]
+    seeds = [json.loads(l) for l in open(DATA / "seeds.jsonl") if l.strip()]
     out, used, skipped = [], 0, {}
     for sd in seeds:
         fam = family(sd.get("surveyor"))
@@ -61,7 +61,7 @@ def main():
                             "era": "seed", "round": "seed", "kind": "seed", "outcome": "continuation",
                             "mind": sd["surveyor"], "family": fam, "context": ctx, "continuation": [seq[i]],
                             "tags": {"seed_type": sd["type"], "direction": direction}, "source": {"seed": sd["sid"]}})
-    for f in sorted((STUDY / "data" / "seeds").glob("*.jsonl")):          # the dropspot: Joseph's own sequences only
+    for f in sorted((DATA / "seeds").glob("*.jsonl")):          # the dropspot: Joseph's own sequences only
         rows = [json.loads(l) for l in open(f) if l.strip()]
         retracted = {x["retracts"] for x in rows if x.get("retracts")}
         for x in rows:

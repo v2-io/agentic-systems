@@ -1,6 +1,6 @@
 # METHODOLOGY: glyph sequences as a context tree
 
-*2026-10-05. Claude Opus 5.5 with Joseph. A clean restatement from first principles, written while the loop was paused. It replaces the triad-first structure in `../PLAN.md` §2–3, whose machinery was assembled piece by piece; each piece rediscovered part of the model below. Nothing here is built yet. Open questions are marked as open.*
+*2026-10-05. Claude Opus 5.5 with Joseph. A clean restatement from first principles, written while the loop was paused. It replaces the triad-first structure in `.archive/2026-10-06-triad-era/PLAN.md` §2–3, whose machinery was assembled piece by piece; each piece rediscovered part of the model below. Nothing here is built yet. Open questions are marked as open.*
 
 ---
 
@@ -75,7 +75,7 @@ The triad era mixed these concerns:
 - the fit's guesses steered what was asked within sequences;
 - the growth rules carried priority judgments.
 
-Each mix-up produced an incident (see `../OBSERVATIONS.md` and the seam note in `../PLAN.md`).
+Each mix-up produced an incident (see `OBSERVATIONS.md` and the seam note in `.archive/2026-10-06-triad-era/PLAN.md`).
 
 ## 2b. Negative evidence: inhibitory edges
 
@@ -227,6 +227,12 @@ Joseph, on finding that the planner spent ~82% of c009 on continue questions: *"
 
 ## 5. What gets asked next
 
+**The governing principle: stochastic probing, weighted toward where it will be most clarifying** (Joseph, 2026-10-06, after a review of the planner found it mostly selecting rather than sampling): *"The idea was that it is *stochastic probing, weight toward where it will be most clarifying* — If you need a quote from me — that's the one. If an arbitrary or discrete ceiling is needed on something in order for the catalog data to be unbiased in some way — the catalog can take care of that (and give some very strong reasoning or it will be immediately rejected …). … I prefer stochastic all the way down, including jitter and stuff (I don't even like having the same number of questions per round etc.)"* Earlier: *"I wouldn't outright exclude *anything* — when I do stochastic work I always use s-curves with there always being a long tail."*
+- **Every candidate question has a nonzero chance**, re-asking included. Its weight rises with how much its answer could clarify and falls, on an S-curve with a floor, as what it would test grows certain. Even the most settled link is re-asked, rarely.
+- **No hard zeros in the planner.** A rule that never asks something can never learn it was wrong. Where an answer is uninformative for some claim, that is the catalog's reading to make, and it says why.
+- **Counts vary too**: a round's size and its share per question kind are drawn, not fixed.
+- **Status (2026-10-06):** the planner below still selects by tiers, caps and once-only rules, contrary to this principle. Its redesign is under way (HANDOFF). Until it lands, the rules below describe what runs, not what is intended.
+
 **The aim of the budget** (2026-10-05; Joseph, on the planner's allocation: *"it really didn't understand the methodology"*). Recognition is the goal (§1), so most effort should go to recognition evidence for candidate sequences (§4a). Candidates come from generation, seeds, triads, reasoned passes and written momentum. Continue questions keep the share that exploring and extending need. The rule below still orders the work across sequences; what it does not yet say is which kinds of test each sequence's share buys. *(Open: how to apportion across kinds. Until it is settled, any shares are parameters chosen without evidence.)*
 
 This is Joseph's priority rule, restated on the tree:
@@ -271,13 +277,13 @@ Rounds r000–r012 ported **answers only**. Nothing derived is ported: no grown 
 - **Proposal content.** Each proposal must be one glyph, after NFC normalization. Words, fragments (`cir` was seen) and multi-glyph strings are kept as their own outcome and reported, never split into glyphs.
 - **Selection.** Which contexts were asked, and how often, was steered by seeds, the old fit and the old planner, and the roster changed (glimmer early, second minds sampled). So agreement is always read as a *share* of the answers given at a node, per family, never as a raw count that rewards over-asked contexts.
 - **Roster balance.** Families answered different volumes in different rounds, so per-family shares come before any pooling.
-- **Out of scope.** The magnitude-era data in `../.archive/` asked a different question and is not ported.
+- **Out of scope.** The magnitude-era data in `.archive/2026-10-04-magnitude-era/` asked a different question and is not ported.
 
 The port writes a report: counts in and out by kind, everything excluded with its reason, and spot checks of ported nodes against the raw ledgers. That report is the audit trail.
 
 ## 6a. Machinery that carries over
 
-The judge adapters, sheets, fate, parser and ledgers in `../harness/core` and `../harness/seq` are reference and copy source.
+The judge adapters, sheets, fate, parser and ledgers in `.archive/2026-10-06-triad-era/harness/core` and `.archive/2026-10-06-triad-era/harness/seq` are reference and copy source. The port still re-parses the triad era's ledgers (`data/triad-era/rounds/`) with that parser, which is kept frozen there.
 
 ## 7. Open questions
 
@@ -287,4 +293,4 @@ The judge adapters, sheets, fate, parser and ledgers in `../harness/core` and `.
 
 ---
 
-*Provenance: Joseph's turns on 2026-10-05 (quoted). The prior machinery and its incidents are in `../PLAN.md`, `../OBSERVATIONS.md` and the git log of `../harness/seq/`.*
+*Provenance: Joseph's turns on 2026-10-05 (quoted). The prior machinery and its incidents are in `.archive/2026-10-06-triad-era/PLAN.md`, `OBSERVATIONS.md` and the git log of `.archive/2026-10-06-triad-era/harness/seq/` (`harness/seq/` before 2026-10-06).*

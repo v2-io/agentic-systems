@@ -2,7 +2,7 @@
 (METHODOLOGY §2a, §4). Knows nothing about sequences or why a question is asked: a question arrives with an opaque
 `source` (carried as metadata only) and leaves as tagged records.
 
-Question kinds (refactored protocol "ctx-0.1"):
+Question kinds (context-tree protocol "ctx-0.1"):
   continue   a context (2-8 glyphs, oriented); the mind writes what comes after its last glyph, in order, as many as
              come naturally (up to 24), or "none". The study's main question.
   inhibit    a context and one candidate glyph; does the candidate come directly after the context's last glyph?

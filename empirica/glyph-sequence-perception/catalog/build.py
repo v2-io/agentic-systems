@@ -26,7 +26,6 @@ import argparse, collections, csv, datetime as dt, hashlib, json, math, pathlib,
 
 HERE = pathlib.Path(__file__).resolve()
 ROOT = HERE.parents[1]
-STUDY = ROOT.parent
 sys.path.insert(0, str(ROOT)); sys.path.insert(0, str(ROOT / "tree")); sys.path.insert(0, str(ROOT / "probe")); sys.path.insert(0, str(ROOT / "priority"))
 import run as RUN                                   # noqa: E402  answers(), seeds()
 import tree as TR                                   # noqa: E402
@@ -365,8 +364,8 @@ def main():
                 "python": platform.python_version(), "unicode": U.unidata_version,
                 "answer_files": {f.name: sha(f) for f in files},
                 "unicode_files": {f.name: sha(f) for f in sorted((ROOT / "data" / "unicode").glob("*.txt"))},
-                "seed_files": {f.name: sha(f) for f in sorted((STUDY / "data" / "seeds").glob("*.jsonl"))},
-                "growth_files": {f.name: sha(f) for f in sorted((STUDY / "data" / "growth").glob("*.json"))},
+                "seed_files": {f.name: sha(f) for f in sorted((ROOT / "data" / "seeds").glob("*.jsonl"))},
+                "growth_files": {f.name: sha(f) for f in sorted((ROOT / "data" / "triad-era" / "growth").glob("*.json"))},
                 "code": {p: sha(ROOT / p) for p in ("catalog/build.py", "priority/plan.py", "tree/tree.py", "run.py")},
                 "git_head": subprocess.run(["git", "-C", str(ROOT), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()}
 
@@ -380,7 +379,7 @@ def main():
     for g, sid in PL.seed_list(RUN.seeds(), PL.ORDERED_SEEDS, "catalog", "catalog-seeds"):
         if len(g) >= 3 and len(set(g)) == len(g):
             sources[canonical(g)].add("seed:" + str(sid))
-    for f in sorted((STUDY / "data" / "growth").glob("r0*.json")):
+    for f in sorted((ROOT / "data" / "triad-era" / "growth").glob("r0*.json")):
         for row in json.load(open(f)):
             g = row["glyphs"]
             if len(g) >= 3 and len(set(g)) == len(g):

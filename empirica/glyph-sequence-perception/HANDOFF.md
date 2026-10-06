@@ -4,7 +4,7 @@
 
 ## What exists
 
-The study now lives in `refactored/`. It is to become the project root, and the triad-era files one level up will move to `.archive/triad-era/` once Joseph and the coordinator are confident.
+The study's root is this directory. Until 2026-10-06 it lived in `refactored/`, with the triad era one level up; on 2026-10-06 `refactored/` became the root, the triad era's machinery and read-offs went to `.archive/2026-10-06-triad-era/` (with a README mapping old paths to new), and its verbatim ledgers and grown rows to `data/triad-era/`. Dated sections below keep the paths of their day.
 
 | path | concern | what it does |
 |---|---|---|
@@ -16,13 +16,13 @@ The study now lives in `refactored/`. It is to become the project root, and the 
 | `priority/plan.py` | 3 | the planner: 15% hot exploration; tiers across sequences (ends + cycle probes, seed-only steps, k\*, branch inhibits, inside contexts); recognition with controls; whole-run coherence; the pick tendrils |
 | `report/best.py` | read-off | `BEST.md`: runs recognised as wholes, rejected wholes, candidates grown from the strongest edges; nothing reads it back; reloaded by the loop every round |
 | `run.py` | — | `plan / ask / record / tree / progress / round / loop` |
-| `core/` | — | judges, fate and the roster, copied from `../harness/core` |
+| `core/` | — | judges, fate and the roster, copied from the triad era's `harness/core` |
 
 Everything in `data/answers/` and `data/tree/` is regenerable and gitignored. To rebuild it after a fresh clone, run `port/port_triad_era.py`, then `port/port_seeds.py`, then `run.py record <rid>` for each context round. The truth, which is committed, is the verbatim ledgers: `data/rounds/<rid>/raw/<mind>/ledger.jsonl`, plus `questions.jsonl`, `sheets.jsonl` and `plan.json`.
 
 ## Running now (2026-10-06 15:14 MDT)
 
-**Four processes**, all from `refactored/`, all on `/opt/homebrew/bin/python3` (Unicode 16+; `run.py` refuses older), each started with `nohup … < /dev/null &` and appending to its log:
+**Four processes**, all from the study root, all on `/opt/homebrew/bin/python3` (Unicode 16+; `run.py` refuses older), each started with `nohup … < /dev/null &` and appending to its log:
 - `run.py loop --budget 700 >> data/logs/loop.log`: plans a round, asks the Claude minds (core, second, generator `sonnet55g`/`haiku45g`, reasoner `sonnet55r`), re-records every round so drained answers fold in, builds tree, BEST and progress, commits. Rounds take about 15 minutes (`round_gap_min` 0).
 - `run.py drain --minds gemini38flash gemini31pro gemini38flashg --newest-first --kinds-first names choose cohere inhibit pick order >> data/logs/drain-gemini.log`: 3 workers, no pause (Joseph: a rate limiter, no quota).
 - `run.py drain --minds grok46 --newest-first --kinds-first names choose cohere inhibit pick order >> data/logs/drain-grok.log`: 10 workers.
@@ -186,7 +186,7 @@ Joseph, after the cross-block sequences turned out to be invisible in BEST: *"ge
 - **Gemini** drains newest rounds and new kinds first (Joseph, 2026-10-06). Its generator mind `gemini38flashg` often reaches for tools (50 of 84 calls in one round); watch it.
 - **The catalog** (`CATALOG.md` v5): freeze, then build, then point the planner and BEST at it (see the afternoon section).
 - **The arrow row** `↓ ↘ → ↗ ↑ ↖ ←` missing `↙`, the hex question (`…8 9 → ?`), and the spinner canary `| / - \` remain watch items.
-- **Archive move:** `../harness`, `../PLAN.md`, `../STANDINGS.md`, `../PROGRESS.md`, `../data/growth` and the rest of the triad era go to `.archive/triad-era/`, and `refactored/` becomes the root. **Wait for Joseph's word.**
+- **Archive move:** done 2026-10-06 (Joseph: *"Feel free to move data as appropriate in your estimation"*); see *What exists*.
 
 ## Joseph's standing directions this session
 

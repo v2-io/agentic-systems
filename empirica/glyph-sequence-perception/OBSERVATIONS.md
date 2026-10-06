@@ -2,6 +2,8 @@
 
 *Append-only, newest last. Each entry gives the evidence, its tier and its status. Entries are hypotheses until a later round tests them, and nothing here is a claim (MANIFEST holds claims). How the rounds were run is in `RUNS.md`; the per-round fits and reports are in `data/rounds/`; the ranked list is `STANDINGS.md`.*
 
+*The entries through 2026-10-04 come from the triad era. Their paths are as of their day: its `data/rounds/` is now `data/triad-era/rounds/`, and its `harness/` and `STANDINGS.md` are in `.archive/2026-10-06-triad-era/` (moved 2026-10-06).*
+
 ---
 
 ## 2026-10-04 · `▁` (U+2581) behaves like a word-boundary marker for Gemini Flash, not like the bottom rung of the fill ramp

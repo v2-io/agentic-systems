@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Spot-check ported records against the verbatim ledgers, independently of the parser (concern 4's audit trail).
 
-  spotcheck.py [N]     -> appends/replaces the "Spot checks" section of ../data/answers/PORT-REPORT.md
+  spotcheck.py [N]     -> appends/replaces the "Spot checks" section of data/answers/PORT-REPORT.md
 
 For a fated sample of N records per kind, find the raw model output in the ledger, pull that entry's JSON answer
 with a plain json.loads of the {"answers": ...} object (no triad-era parser), and compare it with what the port
@@ -10,17 +10,17 @@ recorded: the glyphs / proposals / outcome. Every mismatch is listed.
 import collections, json, pathlib, random, re, sys, unicodedata as U
 
 HERE = pathlib.Path(__file__).resolve()
-STUDY = HERE.parents[2]
+ROUNDS = HERE.parents[1] / "data" / "triad-era" / "rounds"
 ANS = HERE.parents[1] / "data" / "answers"
 
 def raw_answer(rec):
-    led = STUDY / "data" / "rounds" / rec["round"] / "raw" / rec["mind"] / "ledger.jsonl"
+    led = ROUNDS / rec["round"] / "raw" / rec["mind"] / "ledger.jsonl"
     rows = [json.loads(l) for l in open(led) if l.strip()]
     rows = [r for r in rows if r["sid"] == rec["sid"] and r["result"].get("raw") and not r["result"].get("error")]
     if not rows:
         return None, "no successful call"
     raw = rows[-1]["result"]["raw"]
-    sheet = next(json.loads(l) for l in open(STUDY / "data" / "rounds" / rec["round"] / "sheets.jsonl") if json.loads(l)["sid"] == rec["sid"])
+    sheet = next(json.loads(l) for l in open(ROUNDS / rec["round"] / "sheets.jsonl") if json.loads(l)["sid"] == rec["sid"])
     eid = next(e["id"] for e in sheet["entries"] if e["pid"] == rec["pid"])
     objs = []
     for m in re.finditer(r'\{\s*"answers"', raw):
@@ -104,7 +104,7 @@ def main():
         if not ok:
             bad.append((x, note))
     L = ["## Spot checks against the raw ledgers", "",
-         f"*`refactored/port/spotcheck.py`: {tot} records sampled by (kind, outcome) with a fixed seed, each re-read from the verbatim model output with a plain JSON parse (no triad-era parser) and compared with the ported record. **{len(bad)} mismatches.***", ""]
+         f"*`port/spotcheck.py`: {tot} records sampled by (kind, outcome) with a fixed seed, each re-read from the verbatim model output with a plain JSON parse (no triad-era parser) and compared with the ported record. **{len(bad)} mismatches.***", ""]
     for x, note in bad[:40]:
         L.append(f"- `{x['aid']}` {x['round']} {x['mind']} {x['kind']}/{x['outcome']}: {note}")
     rep = (ANS / "PORT-REPORT.md").read_text()
