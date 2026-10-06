@@ -40,6 +40,7 @@ import tree as TR                                           # noqa: E402
 
 EXPLORE_SHARE = 0.15
 REASONED_PER_ROUND = 20      # reasoned-pass questions a round (chosen without evidence; the reasoner is the costly mind)
+THIN_PER_ROUND = 80          # precision replications a round (chosen without evidence)
 JOIN_PER_ROUND = 60          # join probes a round (chosen without evidence)
 JOIN_WEAK = 0.75             # the planner's own cut for a "weak" link inside a strong run (chosen without evidence)
 # A weak context is replicated at most ONCE (one more round of answers there), whatever the result: re-asking a weak
@@ -63,6 +64,7 @@ class Plan:
         self.asked = set(T.real)                 # seed-voted contexts are still asked of the real minds
         self.qs, self.keys = [], set()
         self.n_join = 0
+        self.n_thin = 0
         self.join_links = set()
     def full(self):
         return len(self.qs) >= self.budget
@@ -75,6 +77,10 @@ class Plan:
             return False
         if kind == "continue" and variant is None and tuple(ctx) in self.asked and not replicate:
             return False
+        if src.get("why") == "thin":
+            if self.n_thin >= THIN_PER_ROUND:
+                return False
+            self.n_thin += 1
         if str(src.get("why", "")).startswith("join"):
             lk = frozenset(src.get("link") or src.get("bridge") or "")      # one probe per link a round
             if self.n_join >= JOIN_PER_ROUND or (lk and lk in self.join_links):
@@ -91,7 +97,7 @@ class Plan:
                             **({"variant": variant} if variant else {}), **({"probe": probe} if probe else {})))
         return True
 
-TIER = {"recognize": 1, "recognize-written": 1, "control": 1, "join-reverse": 1, "join-replicate": 1, "join-end": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "branch": 4, "inside": 5}
+TIER = {"recognize": 1, "recognize-written": 1, "control": 1, "join-reverse": 1, "join-replicate": 1, "join-end": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "thin": 3, "branch": 4, "inside": 5}
 
 def written_recognition(P, seqs):
     """Momentum past a felt end (METHODOLOGY §4): where the shown answers end a sequence (top answer "none") but minds
@@ -210,6 +216,14 @@ def sequence_work(P, s, r, ends=frozenset()):
             if tuple(ctx[-j:]) not in T.real:
                 out.append(("continue", ctx[-j:], None, {"why": "kstar", "seq": "".join(g), "step": st["x"], "k": len(ctx)}))
                 break
+    # 3b thin: precision where the strongest runs rest on few answers (METHODOLOGY §5, "square away the most obvious and
+    # stable (empirically) sequences"). A walked step whose deciding context some answering family answered fewer than
+    # twice is replicated once -- chosen by how many answers there are, never by what they say, so it cannot favour any
+    # outcome; at most once (Tree.replicated), so no stopping rule.
+    for st in s["steps"]:
+        c = tuple(st["ctx"])
+        if c in T.real and c not in T.replicated and min(len(v) for v in T.nodes[c].values()) < 2:
+            out.append(("continue", st["ctx"], None, {"why": "thin", "seq": "".join(g), "step": st["x"], "replicate": True}))
     # 3 branches: does the runner-up continue?
     for st in s["steps"]:
         if st["alt"] and st["alt"][1] > 0:
