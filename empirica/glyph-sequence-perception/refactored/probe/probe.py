@@ -321,13 +321,16 @@ def sheets(round_id, questions):
         R("sheet-order", fk).shuffle(qs)
         r = R("sheet-sizes", fk)
         i = 0
-        pending = []                                   # cohere / pick: set aside so no sheet shows one glyph set (or context) twice
+        pending = []                                   # cohere / pick / choose: set aside so no sheet shows one glyph set
+                                                       # (or context, or choose pair) twice
         while i < len(qs) or pending:
             n = r.randint(1, MAX_SHEET)
-            if kind in ("cohere", "pick"):
+            if kind in ("cohere", "pick", "choose"):
                 chunk, seen, rest = [], set(), []
                 for q in pending + qs[i:]:
-                    k = frozenset(q["context"])
+                    # a choose pair and its D control never share a sheet (found 2026-10-06: 3 did in c096, so the mind
+                    # saw the same a/b twice and could carry its answer across); keyed by the pair, not the context
+                    k = ("pair", frozenset(q["shown_pair"])) if kind == "choose" else frozenset(q["context"])
                     of = (q.get("probe") or {}).get("of")       # a substitution never shares a sheet with its run or its pair
                     ks = {k} | ({frozenset(of), "of:" + of} if of else set())
                     if len(chunk) < n and not (ks & seen):
