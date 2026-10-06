@@ -129,7 +129,8 @@
    "effort": "medium",
    "family": "grok",
    "mode": "sheet",
-   "note": "The generator pass (METHODOLOGY s4a, 2026-10-05): forced single-symbol picks with reasoning, sampled. Effort medium for 'normal (not low)', Joseph's words; the thinking budget 31000 as for the other thinking minds."
+   "note": "The generator pass (METHODOLOGY s4a, 2026-10-05): forced single-symbol picks with reasoning, sampled. Effort medium for 'normal (not low)', Joseph's words; the thinking budget 31000 as for the other thinking minds. Timeout 1800 s from 2026-10-06 ~17:30 (default 600): at medium effort its calls take a median 164 s, p90 394 s, and 216 of its first 877 (25%) hit the 600 s limit, against 1.4% for grok46; timeouts count as attempts, so the hardest contexts were being dropped.",
+   "timeout": 1800
   },
   "gemini38flashg": {
    "adapter": "agy",

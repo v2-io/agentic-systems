@@ -169,6 +169,19 @@ def pause_mind(m, seconds, why):
     json.dump(d, open(PAUSED, "w"), indent=1)
     print(f"{dt.datetime.now():%H:%M:%S} {m}: paused for {seconds / 3600:.1f} h ({why[:100]!r})", flush=True)
 
+def cut_short(row):
+    """a timeout under a shorter limit than this mind's limit now: not an attempt at the sheet (2026-10-06: grok46g's
+    limit went from 600 s to 1800 s after a quarter of its calls timed out; the sheets that ran out of attempts that
+    way are asked again)"""
+    if (row.get("result") or {}).get("error") != "timeout":
+        return False
+    then = (row.get("judge") or {}).get("timeout", 600)
+    try:
+        now = json.load(open(ROOT / "core" / "minds.json"))["minds"].get(row.get("mind"), {}).get("timeout", 600)
+    except Exception:
+        return False
+    return then < now
+
 def void_rounds():
     """rounds not to be asked any further (data/rounds/VOID.json): planned while the driving minds could not answer,
     so their questions are planned again in live rounds. Their ledgers stay, and answers already given stay answers."""
@@ -211,7 +224,7 @@ def ask_mind(rid, m, reg, stop=None, kinds=None):
         v = "no-lookup" if base is None and any(PR.tool_attempt(r) for r in rs) else base
         if any(PR.good_row(r) for r in rs if r.get("variant") == v) or (v and any(PR.good_row(r) for r in rs)):
             return ()
-        if sum(1 for r in rs if r.get("variant") == v and not limit_hit(r["result"])) >= MAX_ATTEMPTS[v]:
+        if sum(1 for r in rs if r.get("variant") == v and not limit_hit(r["result"]) and not cut_short(r)) >= MAX_ATTEMPTS[v]:
             return ()
         return (v,)
     todo = collections.deque(s for s in sheets if target(s))
