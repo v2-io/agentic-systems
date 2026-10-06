@@ -1,22 +1,22 @@
 {
- "note": "Pacing for run.py, re-read before every call, so edits take effect while the loop and the drains run. workers = concurrent calls per mind; interval_s = pause after each call, per worker. minds.<m> overrides adapters.<adapter>. round_gap_min = pause between rounds of the Claude-driven loop. Chosen without evidence (2026-10-05): Claude slowed 'a bit' so the quota lasts until it resets tomorrow morning (c001 at full speed: sonnet 230 calls in 4 min, haiku 230 in 33 min); Gemini slowed hard (Joseph: 'really slow down gemini again to see if that helps'); Grok unchanged. round_gap_min 30 (2026-10-05 ~12:55): Claude cost per round fell to ~40% of c001's once haiku45nt (thinking off) replaced haiku45 in the core; the gap keeps overnight use near a dozen rounds. round_gap_min 0 (2026-10-05 ~19:45, Joseph: 'please collapse it while I'm here -- let's get round 7 planning'). Claude back to 6 workers, no pause (2026-10-05 ~19:47, Joseph: 'the usage resets in about 10 hours and I think there's plenty now'). grok46g (the generator pass) 3 workers in its own drain (2026-10-05 ~22:00, the independent session): its sheets start at c017, so in the shared Grok drain it waited for grok46 to catch up through c011-c016; 3 rather than 6 keeps the two Grok drains together at 9 concurrent calls.",
+ "note": "Pacing for run.py, re-read before every call, so edits take effect while the loop and the drains run. workers = concurrent calls per mind; interval_s = pause after each call, per worker. minds.<m> overrides adapters.<adapter>. round_gap_min = pause between rounds of the Claude-driven loop. Chosen without evidence (2026-10-05): Claude slowed 'a bit' so the quota lasts until it resets tomorrow morning (c001 at full speed: sonnet 230 calls in 4 min, haiku 230 in 33 min); Gemini slowed hard (Joseph: 'really slow down gemini again to see if that helps'); Grok unchanged. round_gap_min 30 (2026-10-05 ~12:55): Claude cost per round fell to ~40% of c001's once haiku45nt (thinking off) replaced haiku45 in the core; the gap keeps overnight use near a dozen rounds. round_gap_min 0 (2026-10-05 ~19:45, Joseph: 'please collapse it while I'm here -- let's get round 7 planning'). Claude back to 6 workers, no pause (2026-10-05 ~19:47, Joseph: 'the usage resets in about 10 hours and I think there's plenty now'). grok46g (the generator pass) 3 workers in its own drain (2026-10-05 ~22:00, the independent session): its sheets start at c017, so in the shared Grok drain it waited for grok46 to catch up through c011-c016; 3 rather than 6 keeps the two Grok drains together at 9 concurrent calls. 2026-10-06 ~13:00, Joseph: 'there isn't any quota or cost associated with gemini-- just a low-granularity rate limiter', and 'same with grok'. So agy 1/60 s -> 3 workers, no pause; grok 6 -> 10; grok46g 3 -> 8. Rate limits now pause a mind (run.py limit_hit) instead of burning attempts, and agy keeps its own error detail (adapter a3) so a limit can be recognised.",
  "adapters": {
   "claude": {
    "workers": 6,
    "interval_s": 0
   },
   "grok": {
-   "workers": 6,
+   "workers": 10,
    "interval_s": 0
   },
   "agy": {
-   "workers": 1,
-   "interval_s": 60
+   "workers": 3,
+   "interval_s": 0
   }
  },
  "minds": {
   "grok46g": {
-   "workers": 3,
+   "workers": 8,
    "interval_s": 0
   }
  },

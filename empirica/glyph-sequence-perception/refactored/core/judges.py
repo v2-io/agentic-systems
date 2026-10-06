@@ -261,6 +261,9 @@ def agy_call(model, system, prompt, timeout=900):
         tools = [t for s in steps for t in s.get("tool_calls", [])]
         raw = d.get("response")
         err = None if d.get("status") == "SUCCESS" else d.get("status")
+        if err:                            # keep agy's own detail, so a rate limit can be told from other failures (a3)
+            detail = {k: v for k, v in d.items() if k not in ("response", "usage")}
+            err = f"{err}: {json.dumps(detail, ensure_ascii=False)[:400]}; stderr={p.stderr[-300:]}"
         if tools and not (raw or "").strip() and not err:
             err = "tool-attempt"          # print mode soft-denies tool confirmations; the turn then ends with no text
         return dict(raw=raw, model_reported=f"{model}(requested)",
@@ -298,7 +301,7 @@ def llamacpp_call(model, system, prompt, url="http://127.0.0.1:8080/v1/chat/comp
                 adapter_meta={"reasoning": (msg.get("reasoning_content") or "")[:2000], "finish": ch.get("finish_reason"),
                               "system_suffix": system_suffix})
 
-ADAPTER_VERSION = {"claude": "a2-tools-optional", "ollama": "a2-format", "grok": "a2-no-tools", "codex": "a1", "agy": "a2-transcript", "llamacpp": "a1"}
+ADAPTER_VERSION = {"claude": "a2-tools-optional", "ollama": "a2-format", "grok": "a2-no-tools", "codex": "a1", "agy": "a3-error-detail", "llamacpp": "a1"}
 
 def make_judge(spec):
     """spec: {"adapter": ..., "model": ..., plus adapter kwargs} -> callable(system, prompt)"""
