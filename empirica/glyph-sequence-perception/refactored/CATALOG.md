@@ -325,10 +325,19 @@ Each build goes into a versioned schema, and an atomic switch makes it current.
 - the candidate inputs (`../data/growth/`, `../data/seeds/`);
 - the Unicode reference files (`data/unicode/`);
 - the Unicode version;
-- Python, numpy and scipy versions;
+- the Python version (the engine is pure Python: no numpy or scipy, so nothing outside the manifest moves its sums);
+- the code's hashes and the git commit;
 - the model version.
 
 **Fits** use EM with a fixed initialisation, order and tolerance, and sums are taken in a fixed order.
+
+**Build 0** (`catalog/build.py`, 2026-10-06; about 6 seconds; schema `catalog` in database `empirica_glyph_sequence`, beside the triad era's `public`). Its docstring lists what it implements and what not yet. Built: R; the chart route's contested steps (D) and triples; route states; the view; lookalike as a run-level count. Not yet: O, L and G as record parts, B, seed raters, link states, maximal runs from links, order lines as position evidence. The name route is "unmeasured" for every run until its validation is read, so every recognised run is "undecided" in the view for now. Choices made in building it, each to be frozen:
+
+- **R's controls are indexed by glyph set,** contiguous or not, because a shuffle controls a set, not an order. A contiguous run takes the contiguous-set rate, and a monotone run the other.
+- **R's certainty** uses one $\beta$ common to a run's raters, with each rater's own $c_r$ (a simplification of §9's $s_r \theta_i$).
+- **D pools** the answers at the position's context and its suffixes down to 2 glyphs. The D control's baseline is the Jeffreys mean of the control's share.
+- **Triad preferences** count only answers naming the run's middle or the code-point median. A preference for the median is always "chart or branch": build 0 has no test of whether the median is felt as a middle.
+- **The seal** drops every sealed answer before anything is computed, until the seal file records the frozen commit.
 
 **The freeze.** Before the canary's sealed answers are queried, these are committed with a date:
 

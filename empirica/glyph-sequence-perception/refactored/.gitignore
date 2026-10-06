@@ -1,0 +1,2 @@
+data/catalog/*/*.csv
+data/catalog/*/load.sql
