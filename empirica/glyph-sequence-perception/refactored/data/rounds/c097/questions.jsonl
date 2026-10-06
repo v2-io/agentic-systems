@@ -1,0 +1,925 @@
+{"context": ["🐘", "🐗"], "kind": "continue", "qid": "Qc15d10941d0e", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["⩂", ","], "kind": "continue", "qid": "Q21902384354c", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["≶", "Β"], "kind": "continue", "qid": "Q7ae154c8c328", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["Ź", "Ÿ"], "kind": "continue", "qid": "Qfc3c444bb56b", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["🯫", "🯬"], "kind": "continue", "qid": "Q2f2ed459fc9d", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["ɪ", "ɩ"], "kind": "continue", "qid": "Q3c72226e1b37", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["ⓩ", "ⓨ"], "kind": "continue", "qid": "Q6335500e4b67", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["𝖈", "𝖇"], "kind": "continue", "qid": "Qc46883325d28", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["㊂", "㊃"], "kind": "continue", "qid": "Q1b2f91c7fd10", "source": {"how": "seed", "round": "c097", "seed": "survey:7fbb20fdd3d36909", "why": "explore"}}
+{"context": ["𐃠", "𐃞"], "kind": "continue", "qid": "Q5fd5f3ce7eb4", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["Ⓓ", "Ⓔ"], "kind": "continue", "qid": "Q2d807d711a4b", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["ݟ", "\""], "kind": "continue", "qid": "Q4ae6d4f3f473", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["ԇ", "Ԉ"], "kind": "continue", "qid": "Q9bae6c046207", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["𝍄", "𝍃"], "kind": "continue", "qid": "Qd69f99d026b7", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["ޖ", "۩"], "kind": "continue", "qid": "Q4164a45aa0b5", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["㈍", "㈌"], "kind": "continue", "qid": "Q94c56627b2cb", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["𝖆", "𝖇"], "kind": "continue", "qid": "Qab45672c12ed", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["┋", "┌"], "kind": "continue", "qid": "Q20ddc2a68686", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["𝓦", "𝓥"], "kind": "continue", "qid": "Q99f10aea3759", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["ヴ", "ン"], "kind": "continue", "qid": "Q568ba4ff5260", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["ɵ", "ɴ"], "kind": "continue", "qid": "Q1bf032bb3c4c", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["🌖", "🌕"], "kind": "continue", "qid": "Qd0876fb5afc9", "source": {"how": "seed", "round": "c097", "seed": "survey:15fb977d32efa4de", "why": "explore"}}
+{"context": ["⇾", "⇼"], "kind": "continue", "qid": "Qbfa99a256aee", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["J", "2"], "kind": "continue", "qid": "Qaad05a1c71ce", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["🄻", "🄺"], "kind": "continue", "qid": "Q36c8de264114", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["≞", "o"], "kind": "continue", "qid": "Qb2b3b173e61d", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["κ", "Q"], "kind": "continue", "qid": "Q058c9d889c8d", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["Ġ", "}"], "kind": "continue", "qid": "Qec4efd07af23", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["Ⓨ", "Ⓧ"], "kind": "continue", "qid": "Qe070e9e0c7d4", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["?", "㏷"], "kind": "continue", "qid": "Qda744e15bba3", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["🀹", "🀱"], "kind": "continue", "qid": "Q8202711c3832", "source": {"how": "seed", "round": "c097", "seed": "survey:3b7e5d061f4fe07a", "why": "explore"}}
+{"context": ["⠋", "⠍"], "kind": "continue", "qid": "Q5f447a9ee5c3", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["Ⓦ", "Ⓧ"], "kind": "continue", "qid": "Q0a39e9f48f71", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["𝟜", "]"], "kind": "continue", "qid": "Q99f5c1b0b975", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["~", "⟽"], "kind": "continue", "qid": "Q0bc8d1f7fbe6", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["𝘰", "𝘯"], "kind": "continue", "qid": "Q2a6bd48ae270", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["𝘮", "𝘯"], "kind": "continue", "qid": "Qaef201fd9a97", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["𝓤", "𝓥"], "kind": "continue", "qid": "Q2884cbb018cd", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["⿸", "⿷"], "kind": "continue", "qid": "Q86a9343b9c36", "source": {"how": "seed", "round": "c097", "seed": "survey:9d213c05a1686972", "why": "explore"}}
+{"context": ["Ⓕ", "Ⓔ"], "kind": "continue", "qid": "Q56bac9f94ccd", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["👸", "🗶"], "kind": "continue", "qid": "Qacca6f5b0944", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["䷗", "䷁"], "kind": "continue", "qid": "Q11f92bffc776", "source": {"how": "seed", "round": "c097", "seed": "survey:6ca73851b5ceeeef", "why": "explore"}}
+{"context": ["G", "Ċ"], "kind": "continue", "qid": "Q682b3f056388", "source": {"how": "seed", "round": "c097", "seed": "drop:tokenizer-markers:1b4d825a8345d435", "why": "explore"}}
+{"context": ["㏏", "㏎"], "kind": "continue", "qid": "Q71572f3735c0", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["ޜ", "ޝ"], "kind": "continue", "qid": "Q2cfb980d6e31", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["լ", "("], "kind": "continue", "qid": "Q3b4b24b1528f", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["🡺", "🡹"], "kind": "continue", "qid": "Qe55a847d20a2", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["𐃜", "𐃞"], "kind": "continue", "qid": "Qa75327bb3aaf", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["?", "U"], "kind": "continue", "qid": "Qc2ae704170f4", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["♦", "♥"], "kind": "continue", "qid": "Q2bb2eb70135f", "source": {"how": "seed", "round": "c097", "seed": "survey:10d15e3c7f7a2cd9", "why": "explore"}}
+{"context": ["Ѣ", "ѡ"], "kind": "continue", "qid": "Qc15effba67f9", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["ӗ", "ޛ"], "kind": "continue", "qid": "Q5d8cba33212f", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["❸", "➂"], "kind": "continue", "qid": "Q18794e7b0bc4", "source": {"how": "seed", "round": "c097", "seed": "c4a1e3cde14177ae:dress@3", "why": "explore"}}
+{"context": ["J", "ㅠ"], "kind": "continue", "qid": "Q8cafc0321290", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["⭅", "⭆"], "kind": "continue", "qid": "Q384909450d52", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["ԓ", "Ԓ"], "kind": "continue", "qid": "Q8dabc929a52e", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["𝚔", "𝚕"], "kind": "continue", "qid": "Qad362f014b77", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["ⓧ", "ⓨ"], "kind": "continue", "qid": "Q2b8e40c89cdc", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["𝜗", "𝜖"], "kind": "continue", "qid": "Qcc4f69ad1281", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["₆", "⁶"], "kind": "continue", "qid": "Q90add0585e26", "source": {"how": "seed", "round": "c097", "seed": "c4a1e3cde14177ae:dress@6", "why": "explore"}}
+{"context": ["𝍂", "𝍃"], "kind": "continue", "qid": "Q32c76248dd30", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["𝚖", "𝚕"], "kind": "continue", "qid": "Q2379a1421bba", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["˓", "˔"], "kind": "continue", "qid": "Q64ab2c459f21", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["𝐢", "🁐"], "kind": "continue", "qid": "Q78af85468c8a", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["🟩", "🟨"], "kind": "continue", "qid": "Q8412e9260242", "source": {"how": "seed", "round": "c097", "seed": "survey:9d93bcf5a79cbde4", "why": "explore"}}
+{"context": ["Ȏ", "ȏ"], "kind": "continue", "qid": "Q88f303e42462", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["ΐ", "n"], "kind": "continue", "qid": "Q1fdcccce84dd", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["⾡", "🀆"], "kind": "continue", "qid": "Q1d0e5e68e176", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["ޓ", "🀆"], "kind": "continue", "qid": "Qfba4aba46b87", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["⇽", "⇼"], "kind": "continue", "qid": "Qfe51b5b0ad0d", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["ކ", "Ϳ"], "kind": "continue", "qid": "Q31def24de519", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["👩", "_"], "kind": "continue", "qid": "Q4e1c0ae74aa3", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["⛿", "⿱"], "kind": "continue", "qid": "Q9af21063b0d3", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["マ", "ミ"], "kind": "continue", "qid": "Q32f29c9285c0", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["ە", "۔"], "kind": "continue", "qid": "Qf0bb306faebd", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["⡼", "⡽"], "kind": "continue", "qid": "Q6927066b257f", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["⠌", "⠍"], "kind": "continue", "qid": "Qa84534d5000e", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["ӓ", "Ӓ"], "kind": "continue", "qid": "Qae0ad588f19f", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["🯭", "🯬"], "kind": "continue", "qid": "Q6302c1195abd", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["⤉", "À"], "kind": "continue", "qid": "Qb488e22ef9cb", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["䷪", "䷀"], "kind": "continue", "qid": "Qe08325a63df3", "source": {"how": "seed", "round": "c097", "seed": "survey:6ca73851b5ceeeef", "why": "explore"}}
+{"context": [":", "5"], "kind": "continue", "qid": "Q3c67ae7b295d", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["𒐂", "𒐃"], "kind": "continue", "qid": "Q71707c1445ea", "source": {"how": "seed", "round": "c097", "seed": "survey:288590dd528ab7f8", "why": "explore"}}
+{"context": ["⏯", "⏰"], "kind": "continue", "qid": "Q328865f5f464", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["🈘", "🈗"], "kind": "continue", "qid": "Q8f48416cc76d", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["~", "≋"], "kind": "continue", "qid": "Q2094bb9a3358", "source": {"how": "seed", "round": "c097", "seed": "survey:ba18c5f00e576e6d", "why": "explore"}}
+{"context": ["ላ", "ሊ"], "kind": "continue", "qid": "Qfd09aefc13da", "source": {"how": "seed", "round": "c097", "seed": "survey:6d60803e9b5fb39e", "why": "explore"}}
+{"context": ["⿶", ":"], "kind": "continue", "qid": "Q25b7ca1a90ea", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["9", "$"], "kind": "continue", "qid": "Q1b6857b5f2ba", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["Ғ", "5"], "kind": "continue", "qid": "Qd9d2b0c5b0b0", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["ո", "չ"], "kind": "continue", "qid": "Q8f3c8b42acac", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["ۮ", "8"], "kind": "continue", "qid": "Qaddd4ec47da0", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["s", "|"], "kind": "continue", "qid": "Qdeeb3afe7fc4", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["Ԅ", "ԅ"], "kind": "continue", "qid": "Q482e496566cb", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["▐", "▌"], "kind": "continue", "qid": "Qe33e152985e4", "source": {"how": "seed", "round": "c097", "seed": "survey:e734af96effd5ff6", "why": "explore"}}
+{"context": ["n", "🟥"], "kind": "continue", "qid": "Qf24e796700d0", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["㋉", "㋈"], "kind": "continue", "qid": "Qec7e0e58d227", "source": {"how": "seed", "round": "c097", "seed": "survey:cb5736088d5320b1", "why": "explore"}}
+{"context": ["W", "Ȃ"], "kind": "continue", "qid": "Q0b41fc4e4db1", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["܃", "܄"], "kind": "continue", "qid": "Qa50ee5aa2eb8", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["𝝨", "𝝩"], "kind": "continue", "qid": "Q6d71c48d2465", "source": {"how": "codepoint-neighbour", "round": "c097", "why": "explore"}}
+{"context": ["x", "q"], "kind": "continue", "qid": "Qbc967efe06ce", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["|", "⌇"], "kind": "continue", "qid": "Q096187c6754e", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["н", "P"], "kind": "continue", "qid": "Qa55bddf2b66f", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["@", "Ƴ"], "kind": "continue", "qid": "Q6035a62dedeb", "source": {"how": "fresh", "round": "c097", "why": "explore"}}
+{"context": ["🄹", "🄺"], "kind": "continue", "qid": "Qe18bc9e80460", "source": {"how": "triad-kernel", "round": "c097", "why": "explore"}}
+{"context": ["𝍋", "𝍌", "𝍍", "𝍎"], "kind": "continue", "qid": "Q110efab855a2", "source": {"rank": 1.0, "round": "c097", "seq": "𝍀𝍁𝍂𝍃𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎", "side": "right", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["⇾", "⇽", "⇼", "⇻", "⇺"], "kind": "continue", "qid": "Q6ec9c529cbce", "source": {"rank": 1.0, "round": "c097", "seq": "⇿⇾⇽⇼⇻⇺", "side": "right", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["⇺", "⇻", "⇼", "⇽", "⇾", "⇿"], "kind": "continue", "qid": "Qa0b063ea6811", "source": {"rank": 1.0, "round": "c097", "seq": "⇿⇾⇽⇼⇻⇺", "side": "left", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["𝓢", "𝓣", "𝓤", "𝓥", "𝓦", "𝓧", "𝓨", "𝓩"], "kind": "continue", "qid": "Q2aa84aaff97a", "source": {"rank": 0.9917, "round": "c097", "seq": "𝓩𝓨𝓧𝓦𝓥𝓤𝓣𝓢𝓡𝓠𝓟𝓞𝓝𝓜𝓛𝓚𝓙𝓘𝓗𝓖𝓕𝓔𝓓𝓒𝓑𝓐", "side": "left", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["🙠", "🙟", "🙞", "🙝", "🙜", "🙛"], "kind": "continue", "qid": "Q5624343d6582", "source": {"rank": 0.9872, "round": "c097", "seq": "🙯🙮🙭🙬🙫🙪🙩🙨🙧🙦🙥🙤🙣🙢🙡🙠🙟🙞🙝🙜🙛", "side": "right", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["𝔳", "𝔴", "𝔵", "𝔶", "𝔷"], "kind": "continue", "qid": "Qba51fc0fb847", "source": {"rank": 0.9825, "round": "c097", "seq": "𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷", "side": "right", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["ë", "ì", "í", "î", "ï"], "kind": "continue", "qid": "Q8f2e7376fd42", "source": {"rank": 0.9821, "round": "c097", "seq": "ÙÚÛÜÝÞßàáâãäåæçèéêëìíîï", "side": "right", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["ᬤ", "ᬦ", "ᬨ", "ᬪ", "ᬬ", "ᬮ", "ᬰ", "ᬲ"], "kind": "continue", "qid": "Q6863b3d5a7f5", "source": {"rank": 0.9779, "round": "c097", "seq": "ᬎᬐᬒᬔᬖᬘᬚᬜᬞᬠᬢᬤᬦᬨᬪᬬᬮᬰᬲ", "side": "right", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["H", "F", "D", "B"], "kind": "continue", "qid": "Qca88ecd43cba", "source": {"rank": 0.9778, "round": "c097", "seq": "ZXVTRPNLJHFDB", "side": "right", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["V", "X", "Z"], "kind": "continue", "qid": "Qc138592e8b45", "source": {"rank": 0.9778, "round": "c097", "seq": "ZXVTRPNLJHFDB", "side": "left", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["🏪", "🏫", "🏬", "🏭", "🏮", "🏯"], "kind": "continue", "qid": "Q57ff9fb56ee3", "source": {"rank": 0.9773, "round": "c097", "seq": "🏯🏮🏭🏬🏫🏪🏩🏨🏧🏦🏥🏤🏣🏢🏡🏠🏟🏞🏝", "side": "left", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["𑁪", "𑁫", "𑁬", "𑁭", "𑁮", "𑁯"], "kind": "continue", "qid": "Q6e5c051d2d4d", "source": {"rank": 0.977, "round": "c097", "seq": "𑁒𑁓𑁔𑁕𑁖𑁗𑁘𑁙𑁚𑁛𑁜𑁝𑁞𑁟𑁠𑁡𑁢𑁣𑁤𑁥𑁦𑁧𑁨𑁩𑁪𑁫𑁬𑁭𑁮𑁯", "side": "right", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["𝁑", "𝁒", "𝁓", "𝁔", "𝁕", "𝁖", "𝁗"], "kind": "continue", "qid": "Q4b7a9f747a71", "source": {"rank": 0.9753, "round": "c097", "seq": "𝀘𝀙𝀚𝀛𝀜𝀝𝀞𝀟𝀠𝀡𝀢𝀣𝀤𝀥𝀦𝀧𝀨𝀩𝀪𝀫𝀬𝀭𝀮𝀯𝀰𝀱𝀲𝀳𝀴𝀵𝀶𝀷𝀸𝀹𝀺𝀻𝀼𝀽𝀾𝀿𝁀𝁁𝁂𝁃𝁄𝁅𝁆𝁇𝁈𝁉𝁊𝁋𝁌𝁍𝁎𝁏𝁐𝁑𝁒𝁓𝁔𝁕𝁖𝁗", "side": "right", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["ᐶ", "ᐷ", "ᐸ", "ᐹ"], "kind": "continue", "qid": "Q2faa98c40aed", "source": {"rank": 0.9753, "round": "c097", "seq": "ᐠᐡᐢᐣᐤᐥᐦᐧᐨᐩᐪᐫᐬᐭᐮᐯᐰᐱᐲᐳᐴᐵᐶᐷᐸᐹ", "side": "right", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["𝀔", "𝀓", "𝀒", "𝀑"], "kind": "continue", "qid": "Q3127d6b53c55", "source": {"rank": 0.975, "round": "c097", "seq": "𝁐𝁏𝁎𝁍𝁌𝁋𝁊𝁉𝁈𝁇𝁆𝁅𝁄𝁃𝁂𝁁𝁀𝀿𝀾𝀽𝀼𝀻𝀺𝀹𝀸𝀷𝀶𝀵𝀴𝀳𝀲𝀱𝀰𝀯𝀮𝀭𝀬𝀫𝀪𝀩𝀨𝀧𝀦𝀥𝀤𝀣𝀢𝀡𝀠𝀟𝀞𝀝𝀜𝀛𝀚𝀙𝀘𝀗𝀖𝀕𝀔𝀓𝀒𝀑", "side": "right", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["㋆", "㋃", "㋀"], "kind": "continue", "qid": "Qd607738689e8", "source": {"rank": 0.975, "round": "c097", "seq": "㋡㋞㋛㋘㋕㋒㋏㋌㋉㋆㋃㋀", "side": "right", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["᧣", "᧢", "᧡", "᧠"], "kind": "continue", "qid": "Qf8f42b46d2be", "source": {"rank": 0.9737, "round": "c097", "seq": "᧠᧡᧢᧣᧤᧥᧦᧧᧨᧩᧪᧫᧬᧭᧮᧯᧰᧱᧲᧳᧴᧵᧶᧷᧸᧹", "side": "left", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["≚", "≛", "≜", "≝", "≞", "≟"], "kind": "continue", "qid": "Q61f18c87e079", "source": {"rank": 0.9733, "round": "c097", "seq": "≓≔≕≖≗≘≙≚≛≜≝≞≟", "side": "right", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["🅓", "🅒", "🅑", "🅐"], "kind": "continue", "qid": "Qdcc9dbf48d33", "source": {"rank": 0.9733, "round": "c097", "seq": "🅩🅨🅧🅦🅥🅤🅣🅢🅡🅠🅟🅞🅝🅜🅛🅚🅙🅘🅗🅖🅕🅔🅓🅒🅑🅐", "side": "right", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["🅥", "🅦", "🅧", "🅨", "🅩"], "kind": "continue", "qid": "Q2c55b51e8cb2", "source": {"rank": 0.9733, "round": "c097", "seq": "🅩🅨🅧🅦🅥🅤🅣🅢🅡🅠🅟🅞🅝🅜🅛🅚🅙🅘🅗🅖🅕🅔🅓🅒🅑🅐", "side": "left", "why": "reasoned"}, "variant": "reasoned"}
+{"context": ["𝖋", "𝖌", "𝖍", "𝖌"], "kind": "continue", "qid": "Q9720356e2e36", "source": {"mirror": "𝖋", "round": "c097", "seq": "𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜", "why": "reflection"}, "variant": "reflection"}
+{"context": ["𝘴", "𝘳", "𝘲", "𝘳"], "kind": "continue", "qid": "Q78ed99c6532b", "source": {"mirror": "𝘴", "round": "c097", "seq": "𝘻𝘺𝘹𝘸𝘷𝘶𝘵𝘴𝘳𝘲𝘱𝘰𝘯𝘮𝘭𝘬𝘫𝘪𝘩𝘨𝘧𝘦", "why": "reflection"}, "variant": "reflection"}
+{"context": ["⺓", "⺒", "⺑", "⺒"], "kind": "continue", "qid": "Qc2a869d1c316", "source": {"mirror": "⺓", "round": "c097", "seq": "⺔⺓⺒⺑⺐⺏⺎⺍⺌⺋⺊⺉⺈⺇⺆⺅⺄⺃⺂⺁", "why": "reflection"}, "variant": "reflection"}
+{"context": ["Ⓥ", "Ⓦ", "Ⓧ", "Ⓦ"], "kind": "continue", "qid": "Q52839fcc8272", "source": {"mirror": "Ⓥ", "round": "c097", "seq": "ⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏ", "why": "reflection"}, "variant": "reflection"}
+{"context": ["𝍊", "𝍋", "𝍌", "𝍍", "𝍌"], "kind": "continue", "qid": "Qb8285a1a2347", "source": {"mirror": "𝍋", "round": "c097", "seq": "𝍀𝍁𝍂𝍃𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎", "why": "reflection"}, "variant": "reflection"}
+{"context": ["ж", "з", "и", "й", "и"], "kind": "continue", "qid": "Q3786c0758b32", "source": {"mirror": "з", "round": "c097", "seq": "ёжзийклмнопрст", "why": "reflection"}, "variant": "reflection"}
+{"context": ["🡧", "🡨", "🡩", "🡪", "🡩"], "kind": "continue", "qid": "Q8e47a6d068c2", "source": {"mirror": "🡨", "round": "c097", "seq": "🡠🡡🡢🡣🡤🡥🡦🡧🡨🡩🡪🡫", "why": "reflection"}, "variant": "reflection"}
+{"context": ["۶", "۵", "۴", "۳", "۴"], "kind": "continue", "qid": "Qcf46499db379", "source": {"mirror": "۵", "round": "c097", "seq": "۹۸۷۶۵۴۳۲۱۰", "why": "reflection"}, "variant": "reflection"}
+{"context": ["🄻", "🄺", "🄹", "🄸", "🄹"], "kind": "continue", "qid": "Q86adee431cc7", "source": {"mirror": "🄺", "round": "c097", "seq": "🄿🄾🄽🄼🄻🄺🄹🄸🄷", "why": "reflection"}, "variant": "reflection"}
+{"context": ["𝝮", "𝝭", "𝝬", "𝝭"], "kind": "continue", "qid": "Qd6ac551b33d2", "source": {"mirror": "𝝮", "round": "c097", "seq": "𝝯𝝮𝝭𝝬𝝫𝝪𝝩𝝨", "why": "reflection"}, "variant": "reflection"}
+{"context": ["⇽", "⇼", "⇻", "⇼"], "kind": "continue", "qid": "Q977e1ca392d3", "source": {"mirror": "⇽", "round": "c097", "seq": "⇿⇾⇽⇼⇻⇺", "why": "reflection"}, "variant": "reflection"}
+{"context": ["𝚙", "𝚚", "𝚛", "𝚜", "𝚛"], "kind": "continue", "qid": "Q56caddfe72a6", "source": {"mirror": "𝚚", "round": "c097", "seq": "𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣", "why": "reflection"}, "variant": "reflection"}
+{"context": ["𝑉", "𝑊", "𝑋", "𝑌", "𝑋"], "kind": "continue", "qid": "Qe1ab5c3451f5", "source": {"mirror": "𝑊", "round": "c097", "seq": "𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻𝐼𝐽𝐾𝐿𝑀𝑁𝑂𝑃𝑄𝑅𝑆𝑇𝑈𝑉𝑊𝑋𝑌𝑍", "why": "reflection"}, "variant": "reflection"}
+{"context": ["𝑶", "𝑷", "𝑸", "𝑷"], "kind": "continue", "qid": "Q4b72f91e5a6c", "source": {"mirror": "𝑶", "round": "c097", "seq": "𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁", "why": "reflection"}, "variant": "reflection"}
+{"context": ["𝌋", "𝌌", "𝌍", "𝌎", "𝌍"], "kind": "continue", "qid": "Q5cd0bc2450eb", "source": {"mirror": "𝌌", "round": "c097", "seq": "𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎𝌏𝌐𝌑𝌒𝌓𝌔𝌕𝌖𝌗𝌘𝌙𝌚𝌛𝌜𝌝𝌞𝌟𝌠𝌡𝌢𝌣𝌤𝌥𝌦𝌧𝌨𝌩", "why": "reflection"}, "variant": "reflection"}
+{"context": ["𐃂", "𐃀", "𐂾", "𐂼", "𐂾"], "kind": "continue", "qid": "Q45b49eb1b2d3", "source": {"mirror": "𐃀", "round": "c097", "seq": "𐃦𐃤𐃢𐃠𐃞𐃜𐃚𐃘𐃖𐃔𐃒𐃐𐃎𐃌𐃊𐃈𐃆𐃄𐃂𐃀𐂾𐂼𐂺𐂸𐂶𐂴𐂲𐂰𐂮𐂬𐂪𐂨𐂦𐂤𐂢", "why": "reflection"}, "variant": "reflection"}
+{"context": ["ⓜ", "ⓝ", "ⓞ", "ⓝ"], "kind": "continue", "qid": "Q273c145f85a1", "source": {"mirror": "ⓜ", "round": "c097", "seq": "ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ", "why": "reflection"}, "variant": "reflection"}
+{"context": ["Τ", "Υ", "Φ", "Χ", "Φ"], "kind": "continue", "qid": "Q86d48af4466e", "source": {"mirror": "Υ", "round": "c097", "seq": "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ", "why": "reflection"}, "variant": "reflection"}
+{"context": ["🕘", "🕗", "🕖", "🕗"], "kind": "continue", "qid": "Q2ab8cc062998", "source": {"mirror": "🕘", "round": "c097", "seq": "🕚🕙🕘🕗🕖🕕🕔🕓🕒🕑🕐🕛", "why": "reflection"}, "variant": "reflection"}
+{"context": ["🙣", "🙢", "🙡", "🙢"], "kind": "continue", "qid": "Q7d7f3d54a6f6", "source": {"mirror": "🙣", "round": "c097", "seq": "🙯🙮🙭🙬🙫🙪🙩🙨🙧🙦🙥🙤🙣🙢🙡🙠🙟🙞🙝🙜🙛", "why": "reflection"}, "variant": "reflection"}
+{"context": ["㎳", "㎱", "㎰", "㎲", "㎭", "㎬", "㎮"], "kind": "pick", "probe": {"sample": 0}, "qid": "P7327d236e819", "sample": 0, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["㎳", "㎱", "㎰", "㎲", "㎭", "㎬", "㎮"], "kind": "pick", "probe": {"sample": 1}, "qid": "P207cc88e9c34", "sample": 1, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["㎳", "㎱", "㎰", "㎲", "㎭", "㎬", "㎮"], "kind": "pick", "probe": {"sample": 2}, "qid": "P89ee92c2b9ac", "sample": 2, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["㎳", "㎱", "㎰", "㎲", "㎭", "㎬", "㎮"], "kind": "pick", "probe": {"sample": 3}, "qid": "P078e9222d1d8", "sample": 3, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["㎳", "㎱", "㎰", "㎲", "㎭", "㎬", "㎮"], "kind": "pick", "probe": {"sample": 4}, "qid": "P6d6f63c3a454", "sample": 4, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["㎳", "㎱", "㎰", "㎲", "㎴"], "kind": "pick", "probe": {"sample": 0}, "qid": "P08bc975df36a", "sample": 0, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["㎳", "㎱", "㎰", "㎲", "㎴"], "kind": "pick", "probe": {"sample": 1}, "qid": "Pf9a437cca1e4", "sample": 1, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["㎳", "㎱", "㎰", "㎲", "㎴"], "kind": "pick", "probe": {"sample": 2}, "qid": "Pdd0f32b04b15", "sample": 2, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["㎳", "㎱", "㎰", "㎲", "㎴"], "kind": "pick", "probe": {"sample": 3}, "qid": "P1c7bddcf1121", "sample": 3, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["㎳", "㎱", "㎰", "㎲", "㎴"], "kind": "pick", "probe": {"sample": 4}, "qid": "P12f16004e650", "sample": 4, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["⁎", "*", "∗", "★", "✭", "✶"], "kind": "pick", "probe": {"sample": 0}, "qid": "Pe4ebcab1681c", "sample": 0, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["⁎", "*", "∗", "★", "✭", "✶"], "kind": "pick", "probe": {"sample": 1}, "qid": "P565b97c5ce31", "sample": 1, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["⁎", "*", "∗", "★", "✭", "✶"], "kind": "pick", "probe": {"sample": 2}, "qid": "Pd43e77393ace", "sample": 2, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["⁎", "*", "∗", "★", "✭", "✶"], "kind": "pick", "probe": {"sample": 3}, "qid": "Pb87208a1b60b", "sample": 3, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["⁎", "*", "∗", "★", "✭", "✶"], "kind": "pick", "probe": {"sample": 4}, "qid": "P722f4c56b8ef", "sample": 4, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["ȏ", "Ȑ", "š", "ɍ"], "kind": "pick", "probe": {"sample": 0}, "qid": "Pe99bec3f5fb9", "sample": 0, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["ȏ", "Ȑ", "š", "ɍ"], "kind": "pick", "probe": {"sample": 1}, "qid": "P7dc755fb6c85", "sample": 1, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["ȏ", "Ȑ", "š", "ɍ"], "kind": "pick", "probe": {"sample": 2}, "qid": "P711768c8e0e2", "sample": 2, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["ȏ", "Ȑ", "š", "ɍ"], "kind": "pick", "probe": {"sample": 3}, "qid": "P8cccb123ee44", "sample": 3, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["ȏ", "Ȑ", "š", "ɍ"], "kind": "pick", "probe": {"sample": 4}, "qid": "P38e246f1e6e7", "sample": 4, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["ۊ", "S", "⌋", "/"], "kind": "pick", "probe": {"null": true, "sample": 0}, "qid": "P843e345fb158", "sample": 0, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["ۊ", "S", "⌋", "/"], "kind": "pick", "probe": {"null": true, "sample": 1}, "qid": "Pf0cfb1045a63", "sample": 1, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["ۊ", "S", "⌋", "/"], "kind": "pick", "probe": {"null": true, "sample": 2}, "qid": "Pb44822674987", "sample": 2, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["ۊ", "S", "⌋", "/"], "kind": "pick", "probe": {"null": true, "sample": 3}, "qid": "P428dc22ffb3a", "sample": 3, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["ۊ", "S", "⌋", "/"], "kind": "pick", "probe": {"null": true, "sample": 4}, "qid": "P1f99eb119003", "sample": 4, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["㎄", "㎃", "㎂", "㎁", "㎀", "㏘", "㏙"], "kind": "pick", "probe": {"sample": 0}, "qid": "P75674762996c", "sample": 0, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["㎄", "㎃", "㎂", "㎁", "㎀", "㏘", "㏙"], "kind": "pick", "probe": {"sample": 1}, "qid": "Pf446e06a57ea", "sample": 1, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["㎄", "㎃", "㎂", "㎁", "㎀", "㏘", "㏙"], "kind": "pick", "probe": {"sample": 2}, "qid": "P2b369c3146e4", "sample": 2, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["㎄", "㎃", "㎂", "㎁", "㎀", "㏘", "㏙"], "kind": "pick", "probe": {"sample": 3}, "qid": "P4c2ef03dec8b", "sample": 3, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["㎄", "㎃", "㎂", "㎁", "㎀", "㏘", "㏙"], "kind": "pick", "probe": {"sample": 4}, "qid": "P95302a7fcf8b", "sample": 4, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["☁", "☂", "☔", "⛱"], "kind": "pick", "probe": {"sample": 0}, "qid": "P8ff446f23ca5", "sample": 0, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["☁", "☂", "☔", "⛱"], "kind": "pick", "probe": {"sample": 1}, "qid": "P08a8e0511003", "sample": 1, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["☁", "☂", "☔", "⛱"], "kind": "pick", "probe": {"sample": 2}, "qid": "P366b3046231f", "sample": 2, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["☁", "☂", "☔", "⛱"], "kind": "pick", "probe": {"sample": 3}, "qid": "P8ee9355e1747", "sample": 3, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["☁", "☂", "☔", "⛱"], "kind": "pick", "probe": {"sample": 4}, "qid": "P81cadb94a5eb", "sample": 4, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["█", "▓", "▒", "░", "◻"], "kind": "pick", "probe": {"sample": 0}, "qid": "P72f7d29cacd6", "sample": 0, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["█", "▓", "▒", "░", "◻"], "kind": "pick", "probe": {"sample": 1}, "qid": "P1cd0864bde75", "sample": 1, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["█", "▓", "▒", "░", "◻"], "kind": "pick", "probe": {"sample": 2}, "qid": "P54bba3f2f682", "sample": 2, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["█", "▓", "▒", "░", "◻"], "kind": "pick", "probe": {"sample": 3}, "qid": "P6609874168bf", "sample": 3, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["█", "▓", "▒", "░", "◻"], "kind": "pick", "probe": {"sample": 4}, "qid": "P3645cdc26d10", "sample": 4, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["ö", "ô", "ò", "ð", "õ"], "kind": "pick", "probe": {"sample": 0}, "qid": "P47257b73f0a8", "sample": 0, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["ö", "ô", "ò", "ð", "õ"], "kind": "pick", "probe": {"sample": 1}, "qid": "P77e8bda841ec", "sample": 1, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["ö", "ô", "ò", "ð", "õ"], "kind": "pick", "probe": {"sample": 2}, "qid": "P3b8dde55b6d8", "sample": 2, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["ö", "ô", "ò", "ð", "õ"], "kind": "pick", "probe": {"sample": 3}, "qid": "Pa799a748bfa7", "sample": 3, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["ö", "ô", "ò", "ð", "õ"], "kind": "pick", "probe": {"sample": 4}, "qid": "P29824db0e97b", "sample": 4, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["ژ", "J", "ġ", "g", "ɳ"], "kind": "pick", "probe": {"null": true, "sample": 0}, "qid": "P67b57b5d24f6", "sample": 0, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["ژ", "J", "ġ", "g", "ɳ"], "kind": "pick", "probe": {"null": true, "sample": 1}, "qid": "P6a2e062ce06a", "sample": 1, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["ژ", "J", "ġ", "g", "ɳ"], "kind": "pick", "probe": {"null": true, "sample": 2}, "qid": "P8f9c0953f429", "sample": 2, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["ژ", "J", "ġ", "g", "ɳ"], "kind": "pick", "probe": {"null": true, "sample": 3}, "qid": "P883ccfaa7830", "sample": 3, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["ژ", "J", "ġ", "g", "ɳ"], "kind": "pick", "probe": {"null": true, "sample": 4}, "qid": "Pdf85310136cf", "sample": 4, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█", "🮆", "🮅", "🮄", "▀", "🮃", "🮂", "▔", "░"], "kind": "pick", "probe": {"sample": 0}, "qid": "P589239434652", "sample": 0, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█", "🮆", "🮅", "🮄", "▀", "🮃", "🮂", "▔", "░"], "kind": "pick", "probe": {"sample": 1}, "qid": "P9d29198b8a4e", "sample": 1, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█", "🮆", "🮅", "🮄", "▀", "🮃", "🮂", "▔", "░"], "kind": "pick", "probe": {"sample": 2}, "qid": "P435a7da56820", "sample": 2, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█", "🮆", "🮅", "🮄", "▀", "🮃", "🮂", "▔", "░"], "kind": "pick", "probe": {"sample": 3}, "qid": "P0fe05d05e0f7", "sample": 3, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█", "🮆", "🮅", "🮄", "▀", "🮃", "🮂", "▔", "░"], "kind": "pick", "probe": {"sample": 4}, "qid": "P02d4779c9ec0", "sample": 4, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["🯶", "🯴", "🯲", "▄", "▀"], "kind": "pick", "probe": {"sample": 0}, "qid": "Pb70caacfdbc8", "sample": 0, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["🯶", "🯴", "🯲", "▄", "▀"], "kind": "pick", "probe": {"sample": 1}, "qid": "P5643e947e315", "sample": 1, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["🯶", "🯴", "🯲", "▄", "▀"], "kind": "pick", "probe": {"sample": 2}, "qid": "P69a58aa65ed1", "sample": 2, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["🯶", "🯴", "🯲", "▄", "▀"], "kind": "pick", "probe": {"sample": 3}, "qid": "P84903a2a07fc", "sample": 3, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["🯶", "🯴", "🯲", "▄", "▀"], "kind": "pick", "probe": {"sample": 4}, "qid": "P6f84a6da32b8", "sample": 4, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["८", "४", "६", "२", "⓪"], "kind": "pick", "probe": {"sample": 0}, "qid": "P72c6a51afc70", "sample": 0, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["८", "४", "६", "२", "⓪"], "kind": "pick", "probe": {"sample": 1}, "qid": "P6bd18bf1ffbe", "sample": 1, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["८", "४", "६", "२", "⓪"], "kind": "pick", "probe": {"sample": 2}, "qid": "P134cc7ddd721", "sample": 2, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["८", "४", "६", "२", "⓪"], "kind": "pick", "probe": {"sample": 3}, "qid": "P6f8597faa272", "sample": 3, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["८", "४", "६", "२", "⓪"], "kind": "pick", "probe": {"sample": 4}, "qid": "P407f5638770c", "sample": 4, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["à", "Ȁ", "Ȃ"], "kind": "pick", "probe": {"sample": 0}, "qid": "P61a7e56638af", "sample": 0, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["à", "Ȁ", "Ȃ"], "kind": "pick", "probe": {"sample": 1}, "qid": "P1b570330cf6e", "sample": 1, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["à", "Ȁ", "Ȃ"], "kind": "pick", "probe": {"sample": 2}, "qid": "P7633dbd2c573", "sample": 2, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["à", "Ȁ", "Ȃ"], "kind": "pick", "probe": {"sample": 3}, "qid": "P30b9859c3a52", "sample": 3, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["à", "Ȁ", "Ȃ"], "kind": "pick", "probe": {"sample": 4}, "qid": "P5ca18c3ad35f", "sample": 4, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["q", ")", "۴"], "kind": "pick", "probe": {"null": true, "sample": 0}, "qid": "Pd92eecb4df6d", "sample": 0, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["q", ")", "۴"], "kind": "pick", "probe": {"null": true, "sample": 1}, "qid": "P7c3668fd3329", "sample": 1, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["q", ")", "۴"], "kind": "pick", "probe": {"null": true, "sample": 2}, "qid": "P8abd1efa9b95", "sample": 2, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["q", ")", "۴"], "kind": "pick", "probe": {"null": true, "sample": 3}, "qid": "P6b19e8c08609", "sample": 3, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["q", ")", "۴"], "kind": "pick", "probe": {"null": true, "sample": 4}, "qid": "Pc219ef26b808", "sample": 4, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["⁖", "⁘", "⁙", "⁚"], "kind": "pick", "probe": {"sample": 0}, "qid": "Pdc8f88995537", "sample": 0, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["⁖", "⁘", "⁙", "⁚"], "kind": "pick", "probe": {"sample": 1}, "qid": "P3c53881d7ca2", "sample": 1, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["⁖", "⁘", "⁙", "⁚"], "kind": "pick", "probe": {"sample": 2}, "qid": "P302035df41f1", "sample": 2, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["⁖", "⁘", "⁙", "⁚"], "kind": "pick", "probe": {"sample": 3}, "qid": "P41d115806665", "sample": 3, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["⁖", "⁘", "⁙", "⁚"], "kind": "pick", "probe": {"sample": 4}, "qid": "Pac7ea92430cf", "sample": 4, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["⣺", "⣸", "⣶", "⣴", "⣲", "⣰", "⣮", "⣬"], "kind": "pick", "probe": {"sample": 0}, "qid": "P71cdeb0dc301", "sample": 0, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["⣺", "⣸", "⣶", "⣴", "⣲", "⣰", "⣮", "⣬"], "kind": "pick", "probe": {"sample": 1}, "qid": "Pd46411fb5e6f", "sample": 1, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["⣺", "⣸", "⣶", "⣴", "⣲", "⣰", "⣮", "⣬"], "kind": "pick", "probe": {"sample": 2}, "qid": "P10eabb59ead7", "sample": 2, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["⣺", "⣸", "⣶", "⣴", "⣲", "⣰", "⣮", "⣬"], "kind": "pick", "probe": {"sample": 3}, "qid": "P7cd45db6aaa0", "sample": 3, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["⣺", "⣸", "⣶", "⣴", "⣲", "⣰", "⣮", "⣬"], "kind": "pick", "probe": {"sample": 4}, "qid": "Pb43ca7439ad0", "sample": 4, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["○", "◑", "●", "◕"], "kind": "pick", "probe": {"sample": 0}, "qid": "P96282a789e85", "sample": 0, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["○", "◑", "●", "◕"], "kind": "pick", "probe": {"sample": 1}, "qid": "Pc79373b1e71b", "sample": 1, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["○", "◑", "●", "◕"], "kind": "pick", "probe": {"sample": 2}, "qid": "P0a093339f15e", "sample": 2, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["○", "◑", "●", "◕"], "kind": "pick", "probe": {"sample": 3}, "qid": "P731ff662c4ff", "sample": 3, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["○", "◑", "●", "◕"], "kind": "pick", "probe": {"sample": 4}, "qid": "P720175811057", "sample": 4, "source": {"from": "branch", "round": "c097", "why": "pick"}}
+{"context": ["🅧", "🅦", "🅥", "🅤", "🅣", "🅢", "🅡", "🅠", "🅟", "🅞", "🅝", "🅜", "🅛", "🅚", "🅙", "🅘", "🅗", "🅖", "🅕", "🅔", "🅓", "🅒", "🅑", "🅐"], "kind": "pick", "probe": {"sample": 0}, "qid": "P898a89af0fc0", "sample": 0, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["🅧", "🅦", "🅥", "🅤", "🅣", "🅢", "🅡", "🅠", "🅟", "🅞", "🅝", "🅜", "🅛", "🅚", "🅙", "🅘", "🅗", "🅖", "🅕", "🅔", "🅓", "🅒", "🅑", "🅐"], "kind": "pick", "probe": {"sample": 1}, "qid": "Peebb3a7352cb", "sample": 1, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["🅧", "🅦", "🅥", "🅤", "🅣", "🅢", "🅡", "🅠", "🅟", "🅞", "🅝", "🅜", "🅛", "🅚", "🅙", "🅘", "🅗", "🅖", "🅕", "🅔", "🅓", "🅒", "🅑", "🅐"], "kind": "pick", "probe": {"sample": 2}, "qid": "Peb0d6589bd94", "sample": 2, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["🅧", "🅦", "🅥", "🅤", "🅣", "🅢", "🅡", "🅠", "🅟", "🅞", "🅝", "🅜", "🅛", "🅚", "🅙", "🅘", "🅗", "🅖", "🅕", "🅔", "🅓", "🅒", "🅑", "🅐"], "kind": "pick", "probe": {"sample": 3}, "qid": "P2559f948b154", "sample": 3, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["🅧", "🅦", "🅥", "🅤", "🅣", "🅢", "🅡", "🅠", "🅟", "🅞", "🅝", "🅜", "🅛", "🅚", "🅙", "🅘", "🅗", "🅖", "🅕", "🅔", "🅓", "🅒", "🅑", "🅐"], "kind": "pick", "probe": {"sample": 4}, "qid": "Paf86a12033a8", "sample": 4, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["⌾", "⨖", "む", "ߌ", "_", "Ш", "Y", "⡭", "ȁ", "🕶", "ܘ", "Ɖ", "q", "Ѩ", ";", "ݻ", "3", "Ԕ", "Φ", "0", "🪷", "K", "⚹", "℉"], "kind": "pick", "probe": {"null": true, "sample": 0}, "qid": "P06ae5e9d9a76", "sample": 0, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["⌾", "⨖", "む", "ߌ", "_", "Ш", "Y", "⡭", "ȁ", "🕶", "ܘ", "Ɖ", "q", "Ѩ", ";", "ݻ", "3", "Ԕ", "Φ", "0", "🪷", "K", "⚹", "℉"], "kind": "pick", "probe": {"null": true, "sample": 1}, "qid": "P29e770282878", "sample": 1, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["⌾", "⨖", "む", "ߌ", "_", "Ш", "Y", "⡭", "ȁ", "🕶", "ܘ", "Ɖ", "q", "Ѩ", ";", "ݻ", "3", "Ԕ", "Φ", "0", "🪷", "K", "⚹", "℉"], "kind": "pick", "probe": {"null": true, "sample": 2}, "qid": "Pdc784ed3ced2", "sample": 2, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["⌾", "⨖", "む", "ߌ", "_", "Ш", "Y", "⡭", "ȁ", "🕶", "ܘ", "Ɖ", "q", "Ѩ", ";", "ݻ", "3", "Ԕ", "Φ", "0", "🪷", "K", "⚹", "℉"], "kind": "pick", "probe": {"null": true, "sample": 3}, "qid": "Pf36e1a160d5e", "sample": 3, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["⌾", "⨖", "む", "ߌ", "_", "Ш", "Y", "⡭", "ȁ", "🕶", "ܘ", "Ɖ", "q", "Ѩ", ";", "ݻ", "3", "Ԕ", "Φ", "0", "🪷", "K", "⚹", "℉"], "kind": "pick", "probe": {"null": true, "sample": 4}, "qid": "Pce9a5f603458", "sample": 4, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["٩", "٨", "٧", "٦", "٥", "٤", "٣", "٢", "١", "٠"], "kind": "pick", "probe": {"sample": 0}, "qid": "Pce0b28ddda40", "sample": 0, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["٩", "٨", "٧", "٦", "٥", "٤", "٣", "٢", "١", "٠"], "kind": "pick", "probe": {"sample": 1}, "qid": "Pff3cd8b7f65d", "sample": 1, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["٩", "٨", "٧", "٦", "٥", "٤", "٣", "٢", "١", "٠"], "kind": "pick", "probe": {"sample": 2}, "qid": "P02e81650d3d4", "sample": 2, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["٩", "٨", "٧", "٦", "٥", "٤", "٣", "٢", "١", "٠"], "kind": "pick", "probe": {"sample": 3}, "qid": "P18ff794c9602", "sample": 3, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["٩", "٨", "٧", "٦", "٥", "٤", "٣", "٢", "١", "٠"], "kind": "pick", "probe": {"sample": 4}, "qid": "P330af9e7df8b", "sample": 4, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["🮈", "🮉", "🮋"], "kind": "pick", "probe": {"sample": 0}, "qid": "P01f03d880ce5", "sample": 0, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["🮈", "🮉", "🮋"], "kind": "pick", "probe": {"sample": 1}, "qid": "P8f56b9af1720", "sample": 1, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["🮈", "🮉", "🮋"], "kind": "pick", "probe": {"sample": 2}, "qid": "Pa75e7c173289", "sample": 2, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["🮈", "🮉", "🮋"], "kind": "pick", "probe": {"sample": 3}, "qid": "P98f785eec531", "sample": 3, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["🮈", "🮉", "🮋"], "kind": "pick", "probe": {"sample": 4}, "qid": "Pc1137c24962f", "sample": 4, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["Δ", "Ζ", "Η", "Ι", "Λ", "Ν", "Ο"], "kind": "pick", "probe": {"sample": 0}, "qid": "P23d6bade53e8", "sample": 0, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["Δ", "Ζ", "Η", "Ι", "Λ", "Ν", "Ο"], "kind": "pick", "probe": {"sample": 1}, "qid": "Pe045e240c821", "sample": 1, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["Δ", "Ζ", "Η", "Ι", "Λ", "Ν", "Ο"], "kind": "pick", "probe": {"sample": 2}, "qid": "P8d33bf45c8d8", "sample": 2, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["Δ", "Ζ", "Η", "Ι", "Λ", "Ν", "Ο"], "kind": "pick", "probe": {"sample": 3}, "qid": "Pd76a73482df8", "sample": 3, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["Δ", "Ζ", "Η", "Ι", "Λ", "Ν", "Ο"], "kind": "pick", "probe": {"sample": 4}, "qid": "Pc22536e28f48", "sample": 4, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["8", "6", "4", "2", "1", "0"], "kind": "pick", "probe": {"sample": 0}, "qid": "Pdd85f95afd51", "sample": 0, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["8", "6", "4", "2", "1", "0"], "kind": "pick", "probe": {"sample": 1}, "qid": "P4ff43f1e08b4", "sample": 1, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["8", "6", "4", "2", "1", "0"], "kind": "pick", "probe": {"sample": 2}, "qid": "Paf59ee570443", "sample": 2, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["8", "6", "4", "2", "1", "0"], "kind": "pick", "probe": {"sample": 3}, "qid": "Pbcc2c684a97b", "sample": 3, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["8", "6", "4", "2", "1", "0"], "kind": "pick", "probe": {"sample": 4}, "qid": "P2c82f9b8cfcc", "sample": 4, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["Ð", "H", "s", "b", "𝚈", "ד"], "kind": "pick", "probe": {"null": true, "sample": 0}, "qid": "P15521e45df41", "sample": 0, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["Ð", "H", "s", "b", "𝚈", "ד"], "kind": "pick", "probe": {"null": true, "sample": 1}, "qid": "P3ebab7fba33e", "sample": 1, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["Ð", "H", "s", "b", "𝚈", "ד"], "kind": "pick", "probe": {"null": true, "sample": 2}, "qid": "P90a721b6b088", "sample": 2, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["Ð", "H", "s", "b", "𝚈", "ד"], "kind": "pick", "probe": {"null": true, "sample": 3}, "qid": "P9ff4734f8d9a", "sample": 3, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["Ð", "H", "s", "b", "𝚈", "ד"], "kind": "pick", "probe": {"null": true, "sample": 4}, "qid": "Pb8eb8b7182dd", "sample": 4, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["𝚷", "𝐎"], "kind": "pick", "probe": {"sample": 0}, "qid": "P0fc3a7c70502", "sample": 0, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["𝚷", "𝐎"], "kind": "pick", "probe": {"sample": 1}, "qid": "Pda1784b21ae1", "sample": 1, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["𝚷", "𝐎"], "kind": "pick", "probe": {"sample": 2}, "qid": "Pad49b6460c65", "sample": 2, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["𝚷", "𝐎"], "kind": "pick", "probe": {"sample": 3}, "qid": "P63424ce9e86d", "sample": 3, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["𝚷", "𝐎"], "kind": "pick", "probe": {"sample": 4}, "qid": "P3da1d970f511", "sample": 4, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["ᛪ", "᛫", "᛬", "᛭", "ᛮ", "ᛯ", "ᛰ", "ᛱ", "ᛲ", "ᛳ", "ᛴ", "ᛵ", "ᛶ", "ᛷ", "ᛸ"], "kind": "pick", "probe": {"sample": 0}, "qid": "Pe6db1f5cb184", "sample": 0, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["ᛪ", "᛫", "᛬", "᛭", "ᛮ", "ᛯ", "ᛰ", "ᛱ", "ᛲ", "ᛳ", "ᛴ", "ᛵ", "ᛶ", "ᛷ", "ᛸ"], "kind": "pick", "probe": {"sample": 1}, "qid": "Pa84ff8c5fffc", "sample": 1, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["ᛪ", "᛫", "᛬", "᛭", "ᛮ", "ᛯ", "ᛰ", "ᛱ", "ᛲ", "ᛳ", "ᛴ", "ᛵ", "ᛶ", "ᛷ", "ᛸ"], "kind": "pick", "probe": {"sample": 2}, "qid": "P4a7463e09cbd", "sample": 2, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["ᛪ", "᛫", "᛬", "᛭", "ᛮ", "ᛯ", "ᛰ", "ᛱ", "ᛲ", "ᛳ", "ᛴ", "ᛵ", "ᛶ", "ᛷ", "ᛸ"], "kind": "pick", "probe": {"sample": 3}, "qid": "P588798580328", "sample": 3, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["ᛪ", "᛫", "᛬", "᛭", "ᛮ", "ᛯ", "ᛰ", "ᛱ", "ᛲ", "ᛳ", "ᛴ", "ᛵ", "ᛶ", "ᛷ", "ᛸ"], "kind": "pick", "probe": {"sample": 4}, "qid": "P6d51443757f1", "sample": 4, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["𒐗", "𒐖", "𒐕", "𒐔", "𒐓", "𒐒", "𒐑", "𒐐", "𒐏", "𒐎", "𒐍", "𒐌", "𒐋", "𒐊", "𒐉", "𒐈", "𒐇", "𒐆", "𒐅", "𒐄", "𒐃", "𒐂", "𒐁", "𒐀"], "kind": "pick", "probe": {"sample": 0}, "qid": "Pa18d516adcd4", "sample": 0, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["𒐗", "𒐖", "𒐕", "𒐔", "𒐓", "𒐒", "𒐑", "𒐐", "𒐏", "𒐎", "𒐍", "𒐌", "𒐋", "𒐊", "𒐉", "𒐈", "𒐇", "𒐆", "𒐅", "𒐄", "𒐃", "𒐂", "𒐁", "𒐀"], "kind": "pick", "probe": {"sample": 1}, "qid": "P429194d3c5f9", "sample": 1, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["𒐗", "𒐖", "𒐕", "𒐔", "𒐓", "𒐒", "𒐑", "𒐐", "𒐏", "𒐎", "𒐍", "𒐌", "𒐋", "𒐊", "𒐉", "𒐈", "𒐇", "𒐆", "𒐅", "𒐄", "𒐃", "𒐂", "𒐁", "𒐀"], "kind": "pick", "probe": {"sample": 2}, "qid": "Pef36d8761ebc", "sample": 2, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["𒐗", "𒐖", "𒐕", "𒐔", "𒐓", "𒐒", "𒐑", "𒐐", "𒐏", "𒐎", "𒐍", "𒐌", "𒐋", "𒐊", "𒐉", "𒐈", "𒐇", "𒐆", "𒐅", "𒐄", "𒐃", "𒐂", "𒐁", "𒐀"], "kind": "pick", "probe": {"sample": 3}, "qid": "Pc45618238f71", "sample": 3, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["𒐗", "𒐖", "𒐕", "𒐔", "𒐓", "𒐒", "𒐑", "𒐐", "𒐏", "𒐎", "𒐍", "𒐌", "𒐋", "𒐊", "𒐉", "𒐈", "𒐇", "𒐆", "𒐅", "𒐄", "𒐃", "𒐂", "𒐁", "𒐀"], "kind": "pick", "probe": {"sample": 4}, "qid": "P53d94d7c365a", "sample": 4, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["ƌ", "Ƌ", "Ɗ", "Ɖ"], "kind": "pick", "probe": {"sample": 0}, "qid": "P83818ac7edf6", "sample": 0, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["ƌ", "Ƌ", "Ɗ", "Ɖ"], "kind": "pick", "probe": {"sample": 1}, "qid": "Pc98dfbc3e2dd", "sample": 1, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["ƌ", "Ƌ", "Ɗ", "Ɖ"], "kind": "pick", "probe": {"sample": 2}, "qid": "Pe4c3cc39bea5", "sample": 2, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["ƌ", "Ƌ", "Ɗ", "Ɖ"], "kind": "pick", "probe": {"sample": 3}, "qid": "Pb007fdd6cf94", "sample": 3, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["ƌ", "Ƌ", "Ɗ", "Ɖ"], "kind": "pick", "probe": {"sample": 4}, "qid": "P37d75ba20d9a", "sample": 4, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["Ν", "ӷ", "ξ", "⼲"], "kind": "pick", "probe": {"null": true, "sample": 0}, "qid": "Pf14302a92720", "sample": 0, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["Ν", "ӷ", "ξ", "⼲"], "kind": "pick", "probe": {"null": true, "sample": 1}, "qid": "Pb2f63266e65f", "sample": 1, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["Ν", "ӷ", "ξ", "⼲"], "kind": "pick", "probe": {"null": true, "sample": 2}, "qid": "P8981e915af2c", "sample": 2, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["Ν", "ӷ", "ξ", "⼲"], "kind": "pick", "probe": {"null": true, "sample": 3}, "qid": "Pf76ae8cbee2f", "sample": 3, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["Ν", "ӷ", "ξ", "⼲"], "kind": "pick", "probe": {"null": true, "sample": 4}, "qid": "Pfd3221aa8963", "sample": 4, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["🂡", "🂢", "🂣", "🂤", "🂥", "🂦", "🂧", "🂨", "🂩", "🂪", "🂫", "🂬", "🂭", "🂮"], "kind": "pick", "probe": {"sample": 0}, "qid": "P94f26649abb1", "sample": 0, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["🂡", "🂢", "🂣", "🂤", "🂥", "🂦", "🂧", "🂨", "🂩", "🂪", "🂫", "🂬", "🂭", "🂮"], "kind": "pick", "probe": {"sample": 1}, "qid": "Pa1866fcb59fa", "sample": 1, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["🂡", "🂢", "🂣", "🂤", "🂥", "🂦", "🂧", "🂨", "🂩", "🂪", "🂫", "🂬", "🂭", "🂮"], "kind": "pick", "probe": {"sample": 2}, "qid": "P6172e3707b8b", "sample": 2, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["🂡", "🂢", "🂣", "🂤", "🂥", "🂦", "🂧", "🂨", "🂩", "🂪", "🂫", "🂬", "🂭", "🂮"], "kind": "pick", "probe": {"sample": 3}, "qid": "P387fbca05b02", "sample": 3, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["🂡", "🂢", "🂣", "🂤", "🂥", "🂦", "🂧", "🂨", "🂩", "🂪", "🂫", "🂬", "🂭", "🂮"], "kind": "pick", "probe": {"sample": 4}, "qid": "P048fcf112c31", "sample": 4, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["⣋", "⣊"], "kind": "pick", "probe": {"sample": 0}, "qid": "P6beee0566c04", "sample": 0, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["⣋", "⣊"], "kind": "pick", "probe": {"sample": 1}, "qid": "Pdaea6a49c21b", "sample": 1, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["⣋", "⣊"], "kind": "pick", "probe": {"sample": 2}, "qid": "P59ea3b6b89bf", "sample": 2, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["⣋", "⣊"], "kind": "pick", "probe": {"sample": 3}, "qid": "P1bd64800921b", "sample": 3, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["⣋", "⣊"], "kind": "pick", "probe": {"sample": 4}, "qid": "P25aa912d606a", "sample": 4, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["▽", "▼", "▻", "►", "▹", "▸", "▷", "▶", "▵", "▴", "△", "▲"], "kind": "pick", "probe": {"sample": 0}, "qid": "Pcb15cb91bce3", "sample": 0, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["▽", "▼", "▻", "►", "▹", "▸", "▷", "▶", "▵", "▴", "△", "▲"], "kind": "pick", "probe": {"sample": 1}, "qid": "Pad087f9f9e01", "sample": 1, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["▽", "▼", "▻", "►", "▹", "▸", "▷", "▶", "▵", "▴", "△", "▲"], "kind": "pick", "probe": {"sample": 2}, "qid": "P10ee03f6760c", "sample": 2, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["▽", "▼", "▻", "►", "▹", "▸", "▷", "▶", "▵", "▴", "△", "▲"], "kind": "pick", "probe": {"sample": 3}, "qid": "P4ff045e76f82", "sample": 3, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["▽", "▼", "▻", "►", "▹", "▸", "▷", "▶", "▵", "▴", "△", "▲"], "kind": "pick", "probe": {"sample": 4}, "qid": "Paf046d3e55b4", "sample": 4, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["Ղ", "Ճ", "Մ"], "kind": "pick", "probe": {"sample": 0}, "qid": "P7db4b7a14f27", "sample": 0, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["Ղ", "Ճ", "Մ"], "kind": "pick", "probe": {"sample": 1}, "qid": "P184359049ed4", "sample": 1, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["Ղ", "Ճ", "Մ"], "kind": "pick", "probe": {"sample": 2}, "qid": "Pb7b0d4d85f49", "sample": 2, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["Ղ", "Ճ", "Մ"], "kind": "pick", "probe": {"sample": 3}, "qid": "Pc6b398e1d099", "sample": 3, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["Ղ", "Ճ", "Մ"], "kind": "pick", "probe": {"sample": 4}, "qid": "Pe4361c05d8af", "sample": 4, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["߇", "Ӯ", "К"], "kind": "pick", "probe": {"null": true, "sample": 0}, "qid": "P5ff0bc749041", "sample": 0, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["߇", "Ӯ", "К"], "kind": "pick", "probe": {"null": true, "sample": 1}, "qid": "P306b431ab6a7", "sample": 1, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["߇", "Ӯ", "К"], "kind": "pick", "probe": {"null": true, "sample": 2}, "qid": "Pd40c49d62b1f", "sample": 2, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["߇", "Ӯ", "К"], "kind": "pick", "probe": {"null": true, "sample": 3}, "qid": "P0d1b750f3d62", "sample": 3, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["߇", "Ӯ", "К"], "kind": "pick", "probe": {"null": true, "sample": 4}, "qid": "P2a2403da9158", "sample": 4, "source": {"round": "c097", "why": "pick-null"}}
+{"context": ["🟩", "🟨", "🟧", "🟥", "🟪", "🟦"], "kind": "pick", "probe": {"sample": 0}, "qid": "P7c95d3818880", "sample": 0, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["🟩", "🟨", "🟧", "🟥", "🟪", "🟦"], "kind": "pick", "probe": {"sample": 1}, "qid": "Pa755c431032c", "sample": 1, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["🟩", "🟨", "🟧", "🟥", "🟪", "🟦"], "kind": "pick", "probe": {"sample": 2}, "qid": "P517e59b9ea50", "sample": 2, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["🟩", "🟨", "🟧", "🟥", "🟪", "🟦"], "kind": "pick", "probe": {"sample": 3}, "qid": "Pa8609754e219", "sample": 3, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["🟩", "🟨", "🟧", "🟥", "🟪", "🟦"], "kind": "pick", "probe": {"sample": 4}, "qid": "P2ee76e05aa1b", "sample": 4, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["█", "▉", "▊", "▋", "▌", "▍", "▎", "▏"], "kind": "pick", "probe": {"sample": 0}, "qid": "P234eb36e04be", "sample": 0, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["█", "▉", "▊", "▋", "▌", "▍", "▎", "▏"], "kind": "pick", "probe": {"sample": 1}, "qid": "P91670d6fe375", "sample": 1, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["█", "▉", "▊", "▋", "▌", "▍", "▎", "▏"], "kind": "pick", "probe": {"sample": 2}, "qid": "P4243a97e564b", "sample": 2, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["█", "▉", "▊", "▋", "▌", "▍", "▎", "▏"], "kind": "pick", "probe": {"sample": 3}, "qid": "P084e6a07b832", "sample": 3, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"context": ["█", "▉", "▊", "▋", "▌", "▍", "▎", "▏"], "kind": "pick", "probe": {"sample": 4}, "qid": "P64d5709734d7", "sample": 4, "source": {"from": "root", "round": "c097", "why": "pick"}}
+{"candidate": "🏜", "context": ["🏟", "🏞", "🏝"], "kind": "inhibit", "qid": "Id35838558353", "source": {"reasoned_by": ["sonnet55r"], "round": "c097", "why": "recognize"}}
+{"candidate": "🏅", "context": ["🏟", "🏞", "🏝"], "kind": "inhibit", "probe": {"control": "near"}, "qid": "I45a79aca04ec", "source": {"control": "near", "round": "c097", "why": "control"}}
+{"candidate": "Ⓖ", "context": ["Ⓙ", "Ⓘ", "Ⓗ"], "kind": "inhibit", "qid": "I400c154785cf", "source": {"reasoned_by": ["sonnet55r"], "round": "c097", "why": "recognize"}}
+{"candidate": "⒤", "context": ["Ⓙ", "Ⓘ", "Ⓗ"], "kind": "inhibit", "probe": {"control": "near"}, "qid": "I790d063501dc", "source": {"control": "near", "round": "c097", "why": "control"}}
+{"candidate": "🙚", "context": ["🙞", "🙝", "🙜", "🙛"], "kind": "inhibit", "qid": "I45e18f77a1b6", "source": {"reasoned_by": ["sonnet55r"], "round": "c097", "why": "recognize"}}
+{"candidate": "🙭", "context": ["🙞", "🙝", "🙜", "🙛"], "kind": "inhibit", "probe": {"control": "near"}, "qid": "I4c69bb6b7014", "source": {"control": "near", "round": "c097", "why": "control"}}
+{"candidate": "∀", "context": ["⇽", "⇾", "⇿"], "kind": "inhibit", "qid": "Ib5b73a648983", "source": {"reasoned_by": ["sonnet55r"], "round": "c097", "why": "recognize"}}
+{"candidate": "𝜢", "context": ["⇽", "⇾", "⇿"], "kind": "inhibit", "probe": {"control": "far"}, "qid": "I0bb0db221c13", "source": {"control": "far", "round": "c097", "why": "control"}}
+{"candidate": "⇹", "context": ["⇽", "⇼", "⇻", "⇺"], "kind": "inhibit", "qid": "I9ab14d887332", "source": {"reasoned_by": ["sonnet55r"], "round": "c097", "why": "recognize"}}
+{"candidate": "🖆", "context": ["⇽", "⇼", "⇻", "⇺"], "kind": "inhibit", "probe": {"control": "far"}, "qid": "Iaf387d2918a2", "source": {"control": "far", "round": "c097", "why": "control"}}
+{"candidate": "᧺", "context": ["᧲", "᧳", "᧴", "᧵", "᧶", "᧷", "᧸", "᧹"], "kind": "inhibit", "qid": "I73f56707ed1a", "source": {"reasoned_by": ["sonnet55r"], "round": "c097", "why": "recognize"}}
+{"candidate": "⿾", "context": ["᧲", "᧳", "᧴", "᧵", "᧶", "᧷", "᧸", "᧹"], "kind": "inhibit", "probe": {"control": "far"}, "qid": "I6886ec445759", "source": {"control": "far", "round": "c097", "why": "control"}}
+{"candidate": "ᐟ", "context": ["ᐢ", "ᐡ", "ᐠ"], "kind": "inhibit", "qid": "Idb7d0a9fd32d", "source": {"reasoned_by": ["sonnet55r"], "round": "c097", "why": "recognize"}}
+{"candidate": "🕢", "context": ["ᐢ", "ᐡ", "ᐠ"], "kind": "inhibit", "probe": {"control": "far"}, "qid": "I92f53ff22842", "source": {"control": "far", "round": "c097", "why": "control"}}
+{"candidate": "ܛ", "context": ["ܣ", "ܢ", "ܡ", "ܠ", "ܟ", "ܞ", "ܝ", "ܜ"], "kind": "inhibit", "qid": "I6404f5835557", "source": {"reasoned_by": ["sonnet55r"], "round": "c097", "why": "recognize"}}
+{"candidate": "۱", "context": ["ܣ", "ܢ", "ܡ", "ܠ", "ܟ", "ܞ", "ܝ", "ܜ"], "kind": "inhibit", "probe": {"control": "near"}, "qid": "I42778611ce9b", "source": {"control": "near", "round": "c097", "why": "control"}}
+{"candidate": "𝀐", "context": ["𝀗", "𝀖", "𝀕", "𝀔", "𝀓", "𝀒", "𝀑"], "kind": "inhibit", "qid": "Ibb90994da70d", "source": {"reasoned_by": ["sonnet55r"], "round": "c097", "why": "recognize"}}
+{"candidate": "𝀋", "context": ["𝀗", "𝀖", "𝀕", "𝀔", "𝀓", "𝀒", "𝀑"], "kind": "inhibit", "probe": {"control": "near"}, "qid": "I8eb181e83665", "source": {"control": "near", "round": "c097", "why": "control"}}
+{"candidate": "Ⓐ", "context": ["⒯", "⒰", "⒱", "⒲", "⒳", "⒴", "⒵"], "kind": "inhibit", "qid": "If27ae65d52a8", "source": {"reasoned_by": ["sonnet55r"], "round": "c097", "why": "recognize"}}
+{"candidate": "👙", "context": ["⒯", "⒰", "⒱", "⒲", "⒳", "⒴", "⒵"], "kind": "inhibit", "probe": {"control": "far"}, "qid": "I1be637a528e8", "source": {"control": "far", "round": "c097", "why": "control"}}
+{"candidate": "𝚤", "context": ["𝚟", "𝚠", "𝚡", "𝚢", "𝚣"], "kind": "inhibit", "qid": "I76df30437c17", "source": {"reasoned_by": ["sonnet55r"], "round": "c097", "why": "recognize"}}
+{"candidate": "𝚉", "context": ["𝚟", "𝚠", "𝚡", "𝚢", "𝚣"], "kind": "inhibit", "probe": {"control": "near"}, "qid": "Id883b3bdcce3", "source": {"control": "near", "round": "c097", "why": "control"}}
+{"candidate": "𝓪", "context": ["𝓤", "𝓥", "𝓦", "𝓧", "𝓨", "𝓩"], "kind": "inhibit", "qid": "I5b6cc87c8f8b", "source": {"reasoned_by": ["sonnet55r"], "round": "c097", "why": "recognize"}}
+{"candidate": "𝓇", "context": ["𝓤", "𝓥", "𝓦", "𝓧", "𝓨", "𝓩"], "kind": "inhibit", "probe": {"control": "near"}, "qid": "I8d0a35d0feb5", "source": {"control": "near", "round": "c097", "why": "control"}}
+{"candidate": "🏰", "context": ["🏨", "🏩", "🏪", "🏫", "🏬", "🏭", "🏮", "🏯"], "kind": "inhibit", "qid": "I0e24e70bdb32", "source": {"reasoned_by": ["sonnet55r"], "round": "c097", "why": "recognize"}}
+{"candidate": "🏵", "context": ["🏨", "🏩", "🏪", "🏫", "🏬", "🏭", "🏮", "🏯"], "kind": "inhibit", "probe": {"control": "near"}, "qid": "I2e3c9ff07486", "source": {"control": "near", "round": "c097", "why": "control"}}
+{"candidate": "𝁘", "context": ["𝁓", "𝁔", "𝁕", "𝁖", "𝁗"], "kind": "inhibit", "qid": "Ia446a6d5cf54", "source": {"reasoned_by": ["sonnet55r"], "round": "c097", "why": "recognize"}}
+{"candidate": "𝀶", "context": ["𝁓", "𝁔", "𝁕", "𝁖", "𝁗"], "kind": "inhibit", "probe": {"control": "near"}, "qid": "I149d34559b9b", "source": {"control": "near", "round": "c097", "why": "control"}}
+{"candidate": "ܓ", "context": ["ܕ", "ܔ"], "kind": "inhibit", "qid": "I02bdfd3c1035", "source": {"round": "c097", "why": "recognize-written", "written_answers": 40}}
+{"candidate": "ܨ", "context": ["ܕ", "ܔ"], "kind": "inhibit", "probe": {"control": "near"}, "qid": "I0c8a02d37bb6", "source": {"control": "near", "round": "c097", "why": "control"}}
+{"candidate": "㊌", "context": ["㊐", "㊏", "㊎", "㊍"], "kind": "inhibit", "qid": "I0763f7f73097", "source": {"round": "c097", "why": "recognize-written", "written_answers": 26}}
+{"candidate": "𝜢", "context": ["㊐", "㊏", "㊎", "㊍"], "kind": "inhibit", "probe": {"control": "far"}, "qid": "I51c9b5a32d97", "source": {"control": "far", "round": "c097", "why": "control"}}
+{"candidate": "Ù", "context": ["Õ", "Ö", "×", "Ø"], "kind": "inhibit", "qid": "I4c2ae5bb64a2", "source": {"round": "c097", "why": "recognize-written", "written_answers": 20}}
+{"candidate": "𝍤", "context": ["Õ", "Ö", "×", "Ø"], "kind": "inhibit", "probe": {"control": "far"}, "qid": "I09fb3d40ed35", "source": {"control": "far", "round": "c097", "why": "control"}}
+{"candidate": "⽹", "context": ["⾁", "⾀", "⽿", "⽾", "⽽", "⽼", "⽻", "⽺"], "kind": "inhibit", "qid": "I18991f18f281", "source": {"round": "c097", "why": "recognize-written", "written_answers": 20}}
+{"candidate": "⾙", "context": ["⾁", "⾀", "⽿", "⽾", "⽽", "⽼", "⽻", "⽺"], "kind": "inhibit", "probe": {"control": "near"}, "qid": "Iff9d9076090e", "source": {"control": "near", "round": "c097", "why": "control"}}
+{"candidate": "ㅿ", "context": ["ㆃ", "ㆂ", "ㆁ", "ㆀ"], "kind": "inhibit", "qid": "Ia881c738c660", "source": {"round": "c097", "why": "recognize-written", "written_answers": 9}}
+{"candidate": "🯘", "context": ["ㆃ", "ㆂ", "ㆁ", "ㆀ"], "kind": "inhibit", "probe": {"control": "far"}, "qid": "I3662a997befe", "source": {"control": "far", "round": "c097", "why": "control"}}
+{"candidate": "ㄸ", "context": ["ㄴ", "ㄵ", "ㄶ", "ㄷ"], "kind": "inhibit", "qid": "I05025190f47c", "source": {"round": "c097", "why": "recognize-written", "written_answers": 7}}
+{"candidate": "ㅠ", "context": ["ㄴ", "ㄵ", "ㄶ", "ㄷ"], "kind": "inhibit", "probe": {"control": "near"}, "qid": "I2da9422c6f2e", "source": {"control": "near", "round": "c097", "why": "control"}}
+{"candidate": "⇹", "context": ["⇻", "⇺"], "kind": "inhibit", "qid": "Ib89ad284a57f", "source": {"round": "c097", "why": "recognize-written", "written_answers": 3}}
+{"candidate": "∂", "context": ["⇻", "⇺"], "kind": "inhibit", "probe": {"control": "near"}, "qid": "Iba05b7ca368d", "source": {"control": "near", "round": "c097", "why": "control"}}
+{"candidate": "🯟", "context": ["🯦", "🯥", "🯤", "🯣", "🯢", "🯡", "🯠"], "kind": "inhibit", "qid": "Ic59d6a970cc5", "source": {"round": "c097", "why": "recognize-written", "written_answers": 3}}
+{"candidate": "🯵", "context": ["🯦", "🯥", "🯤", "🯣", "🯢", "🯡", "🯠"], "kind": "inhibit", "probe": {"control": "near"}, "qid": "I3ff3a2f77baa", "source": {"control": "near", "round": "c097", "why": "control"}}
+{"candidate": "𝝯", "context": ["𝝳", "𝝲", "𝝱", "𝝰"], "kind": "inhibit", "qid": "I63e011e51ab3", "source": {"round": "c097", "why": "recognize-written", "written_answers": 3}}
+{"candidate": "𝝻", "context": ["𝝳", "𝝲", "𝝱", "𝝰"], "kind": "inhibit", "probe": {"control": "near"}, "qid": "I44901f7c2336", "source": {"control": "near", "round": "c097", "why": "control"}}
+{"candidate": "🅾", "context": ["🅁", "🅀", "🅿"], "kind": "inhibit", "qid": "I3d6f79415434", "source": {"round": "c097", "why": "recognize-written", "written_answers": 2}}
+{"candidate": "🅘", "context": ["🅁", "🅀", "🅿"], "kind": "inhibit", "probe": {"control": "near"}, "qid": "I35053fb84ba9", "source": {"control": "near", "round": "c097", "why": "control"}}
+{"candidate": "Z", "context": ["P", "N", "L", "J", "H", "F", "D", "B"], "kind": "inhibit", "qid": "Icb8df30ae3dd", "source": {"round": "c097", "why": "recognize-written", "written_answers": 1}}
+{"candidate": "⫍", "context": ["P", "N", "L", "J", "H", "F", "D", "B"], "kind": "inhibit", "probe": {"control": "far"}, "qid": "I78eba06170ed", "source": {"control": "far", "round": "c097", "why": "control"}}
+{"candidate": "🅞", "context": ["🅁", "🅀", "🅿"], "kind": "inhibit", "qid": "Ib2d2d8fc0055", "source": {"round": "c097", "why": "recognize-written", "written_answers": 1}}
+{"candidate": "🅊", "context": ["🅁", "🅀", "🅿"], "kind": "inhibit", "probe": {"control": "near"}, "qid": "Ibb4f8713aa62", "source": {"control": "near", "round": "c097", "why": "control"}}
+{"candidate": "⬇", "context": ["⬋", "⬊", "⬉", "⬈"], "kind": "inhibit", "qid": "Ic2045ad29a20", "source": {"round": "c097", "why": "recognize-written", "written_answers": 1}}
+{"candidate": "🆤", "context": ["⬋", "⬊", "⬉", "⬈"], "kind": "inhibit", "probe": {"control": "far"}, "qid": "I14f70896270e", "source": {"control": "far", "round": "c097", "why": "control"}}
+{"context": ["𝖆", "𝖇", "𝖈", "𝖉", "𝖊", "𝖋", "𝖌", "𝖍", "𝖎", "𝖏", "𝖐", "𝖑", "𝖒", "𝖓", "𝖔", "𝖕", "𝖖", "𝖗", "𝖘", "𝖙", "𝖚", "𝖛", "𝖜"], "kind": "cohere", "qid": "Cbe4d1d71fbad", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["𝖜", "𝖙", "𝖆", "𝖗", "𝖇", "𝖈", "𝖑", "𝖛", "𝖔", "𝖋", "𝖏", "𝖌", "𝖉", "𝖕", "𝖊", "𝖍", "𝖐", "𝖎", "𝖓", "𝖚", "𝖖", "𝖘", "𝖒"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C408c81211f21", "source": {"control": "shuffled", "of": "𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜", "round": "c097", "why": "control"}}
+{"context": ["ㅗ", "ㅖ", "ㅕ", "ㅔ", "ㅓ", "ㅒ", "ㅑ", "ㅐ", "ㅏ", "ㅎ", "ㅍ", "ㅌ", "ㅋ", "ㅊ", "ㅈ", "ㅇ", "ㅅ", "ㅂ", "ㅁ", "ㄹ", "ㄷ", "ㄴ", "ㄱ"], "kind": "cohere", "qid": "C1a53da69bbf8", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["ㅗ", "ㅊ", "ㅔ", "ㄱ", "ㅌ", "ㅖ", "ㄹ", "ㅎ", "ㅒ", "ㅐ", "ㅋ", "ㅇ", "ㅁ", "ㅂ", "ㅕ", "ㅑ", "ㅍ", "ㅈ", "ㅅ", "ㅏ", "ㄷ", "ㄴ", "ㅓ"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C15c839b10093", "source": {"control": "shuffled", "of": "ㅗㅖㅕㅔㅓㅒㅑㅐㅏㅎㅍㅌㅋㅊㅈㅇㅅㅂㅁㄹㄷㄴㄱ", "round": "c097", "why": "control"}}
+{"context": ["𝑑", "𝑐", "𝑏", "𝑎", "𝑍", "𝑌", "𝑋", "𝑊", "𝑉", "𝑈", "𝑇", "𝑆", "𝑅", "𝑄", "𝑃", "𝑂", "𝑁", "𝑀", "𝐿", "𝐾", "𝐽", "𝐼", "𝐻"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "C67348d38f7f7", "source": {"control": "chart", "of": "ㅗㅖㅕㅔㅓㅒㅑㅐㅏㅎㅍㅌㅋㅊㅈㅇㅅㅂㅁㄹㄷㄴㄱ", "round": "c097", "why": "control"}}
+{"context": ["Ƨ", "ƽ", "Ƅ", "Ɔ"], "kind": "cohere", "qid": "C3794fad19b8e", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["Ɔ", "Ƅ", "Ƨ", "ƽ"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cc83f6401e799", "source": {"control": "shuffled", "of": "ƧƽƄƆ", "round": "c097", "why": "control"}}
+{"context": ["🨮", "🨭", "🨬", "🨫"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "C7da64eb552f4", "source": {"control": "chart", "of": "ƧƽƄƆ", "round": "c097", "why": "control"}}
+{"context": ["⿴", "⿱", "⿲", "⿳"], "kind": "cohere", "qid": "C2426ebc16aa2", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["⿱", "⿳", "⿴", "⿲"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C644970e936c8", "source": {"control": "shuffled", "of": "⿴⿱⿲⿳", "round": "c097", "why": "control"}}
+{"context": ["𝘻", "𝘺", "𝘹", "𝘸", "𝘷", "𝘶", "𝘵", "𝘴", "𝘳", "𝘲", "𝘱", "𝘰", "𝘯", "𝘮", "𝘭", "𝘬", "𝘫", "𝘪", "𝘩", "𝘨", "𝘧", "𝘦"], "kind": "cohere", "qid": "Cea9be47fc1fe", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["𝘱", "𝘫", "𝘶", "𝘯", "𝘰", "𝘧", "𝘳", "𝘵", "𝘨", "𝘴", "𝘲", "𝘬", "𝘷", "𝘩", "𝘻", "𝘦", "𝘸", "𝘺", "𝘮", "𝘪", "𝘹", "𝘭"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C365407834946", "source": {"control": "shuffled", "of": "𝘻𝘺𝘹𝘸𝘷𝘶𝘵𝘴𝘳𝘲𝘱𝘰𝘯𝘮𝘭𝘬𝘫𝘪𝘩𝘨𝘧𝘦", "round": "c097", "why": "control"}}
+{"context": ["ョ", "ヨ", "ュ", "ユ", "ャ", "ヤ", "モ", "メ", "ム", "ミ", "マ", "ポ", "ボ", "ホ", "ペ", "ベ", "ヘ", "プ"], "kind": "cohere", "qid": "C55cd1337dea4", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["ミ", "プ", "ポ", "モ", "ュ", "メ", "ヤ", "ペ", "ホ", "ム", "ャ", "マ", "ョ", "ボ", "ユ", "ベ", "ヘ", "ヨ"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C555eb267a9f4", "source": {"control": "shuffled", "of": "ョヨュユャヤモメムミマポボホペベヘプ", "round": "c097", "why": "control"}}
+{"context": ["💗", "💘", "💙", "💚", "💛", "💜", "💝", "💞", "💟", "💠", "💡", "💢", "💣", "💤", "💥", "💦", "💧", "💨"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "C1890fb52e531", "source": {"control": "chart", "of": "ョヨュユャヤモメムミマポボホペベヘプ", "round": "c097", "why": "control"}}
+{"context": ["◒", "◑", "◓", "◐", "◔", "●"], "kind": "cohere", "qid": "Cf4a78ee3d9e6", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["◔", "◒", "●", "◓", "◐", "◑"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C746043d0320d", "source": {"control": "shuffled", "of": "◒◑◓◐◔●", "round": "c097", "why": "control"}}
+{"context": ["🥟", "🥡", "🥢", "🥠", "🍥"], "kind": "cohere", "qid": "C0cd5f91cdb73", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["🥢", "🍥", "🥡", "🥠", "🥟"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C9f04317ea2cb", "source": {"control": "shuffled", "of": "🥟🥡🥢🥠🍥", "round": "c097", "why": "control"}}
+{"context": ["⌛", "⌜", "⌝", "⌞", "⌟"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "C0f3464b498b9", "source": {"control": "chart", "of": "🥟🥡🥢🥠🍥", "round": "c097", "why": "control"}}
+{"context": ["⺔", "⺓", "⺒", "⺑", "⺐", "⺏", "⺎", "⺍", "⺌", "⺋", "⺊", "⺉", "⺈", "⺇", "⺆", "⺅", "⺄", "⺃", "⺂", "⺁"], "kind": "cohere", "qid": "Cc6f2e52970e8", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["⺁", "⺌", "⺓", "⺈", "⺋", "⺒", "⺇", "⺅", "⺆", "⺍", "⺑", "⺉", "⺏", "⺃", "⺄", "⺐", "⺂", "⺊", "⺎", "⺔"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cea0d18ef1a2b", "source": {"control": "shuffled", "of": "⺔⺓⺒⺑⺐⺏⺎⺍⺌⺋⺊⺉⺈⺇⺆⺅⺄⺃⺂⺁", "round": "c097", "why": "control"}}
+{"context": ["ǧ", "Ǧ", "ǥ", "Ǥ", "ǣ", "Ǣ", "ǡ", "Ǡ", "ǟ", "Ǟ", "ǝ", "ǜ", "Ǜ", "ǚ", "Ǚ", "ǘ", "Ǘ", "ǖ", "Ǖ", "ǔ"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "Cd546393b1514", "source": {"control": "chart", "of": "⺔⺓⺒⺑⺐⺏⺎⺍⺌⺋⺊⺉⺈⺇⺆⺅⺄⺃⺂⺁", "round": "c097", "why": "control"}}
+{"context": ["🔿", "🔾", "🔽", "🔼", "🔻", "🔺", "🔹", "🔸", "🔷", "🔶", "🔵", "🔴", "🔳", "🔲", "🔱", "🔰", "🔯", "🌠"], "kind": "cohere", "qid": "Cc63c679f8917", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["🌠", "🔶", "🔲", "🔽", "🔷", "🔼", "🔾", "🔰", "🔹", "🔸", "🔯", "🔻", "🔿", "🔵", "🔴", "🔱", "🔺", "🔳"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Ce02acb715a30", "source": {"control": "shuffled", "of": "🔿🔾🔽🔼🔻🔺🔹🔸🔷🔶🔵🔴🔳🔲🔱🔰🔯🌠", "round": "c097", "why": "control"}}
+{"context": ["♓", "♈", "♉"], "kind": "cohere", "qid": "Cb27e1892d7b9", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["♉", "♓", "♈"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cf8ca189bfabf", "source": {"control": "shuffled", "of": "♓♈♉", "round": "c097", "why": "control"}}
+{"context": ["H", "ℍ", "ʜ", "ₕ", "h"], "kind": "cohere", "qid": "Cac63c2827fb2", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["ℍ", "ʜ", "h", "H", "ₕ"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C9c31f192f82d", "source": {"control": "shuffled", "of": "Hℍʜₕh", "round": "c097", "why": "control"}}
+{"context": ["Ⓐ", "Ⓑ", "Ⓒ", "Ⓓ", "Ⓔ", "Ⓕ", "Ⓖ", "Ⓗ", "Ⓘ", "Ⓙ", "Ⓚ", "Ⓛ", "Ⓜ", "Ⓝ", "Ⓞ", "Ⓟ", "Ⓠ", "Ⓡ"], "kind": "cohere", "qid": "C01dc37e0d619", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["Ⓝ", "Ⓠ", "Ⓟ", "Ⓡ", "Ⓑ", "Ⓙ", "Ⓒ", "Ⓗ", "Ⓓ", "Ⓛ", "Ⓚ", "Ⓘ", "Ⓞ", "Ⓐ", "Ⓜ", "Ⓖ", "Ⓔ", "Ⓕ"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Ce574e4caf397", "source": {"control": "shuffled", "of": "ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇ", "round": "c097", "why": "control"}}
+{"context": ["🬕", "🬔", "🬓", "🬒", "🬑", "🬐", "🬏", "🬎", "🬍", "🬌", "🬋", "🬊", "🬉", "🬈", "🬇", "🬆", "🬅", "🬄"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "C515122028f5c", "source": {"control": "chart", "of": "ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇ", "round": "c097", "why": "control"}}
+{"context": ["𝜮", "𝑷", "𝑶", "<", "𝑵", "𝑴", "𝚲", "𝑲", "𝑰", "𝚯", "𝑯", "𝒁", "𝑬", "𝚫", "𝚪", "𝑩", "𝑨"], "kind": "cohere", "qid": "Cfaf33e2ffd32", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["𝚪", "𝑬", "𝑶", "𝚫", "𝚲", "𝑷", "<", "𝑯", "𝑲", "𝑨", "𝑩", "𝒁", "𝜮", "𝚯", "𝑰", "𝑵", "𝑴"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C654b7ce7b1a7", "source": {"control": "shuffled", "of": "𝜮𝑷𝑶<𝑵𝑴𝚲𝑲𝑰𝚯𝑯𝒁𝑬𝚫𝚪𝑩𝑨", "round": "c097", "why": "control"}}
+{"context": ["⚅", "⚄", "⚃", "⚂", "⚁", "⚀", "🁢", "🁣"], "kind": "cohere", "qid": "C5b690466a9a6", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["⚅", "🁣", "⚄", "⚃", "⚁", "⚂", "⚀", "🁢"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cfc85b752e3b6", "source": {"control": "shuffled", "of": "⚅⚄⚃⚂⚁⚀🁢🁣", "round": "c097", "why": "control"}}
+{"context": ["𝙞", "𝙟", "𝙠", "𝙡", "𝙢", "𝙣", "𝙤", "𝙥"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "C9a133b131f5f", "source": {"control": "chart", "of": "⚅⚄⚃⚂⚁⚀🁢🁣", "round": "c097", "why": "control"}}
+{"context": ["M", "ᵐ", "ᴍ", "ₘ", "m", "𝐦"], "kind": "cohere", "qid": "C5960880ff00a", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["ₘ", "ᴍ", "𝐦", "M", "m", "ᵐ"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C896f52f3b2f2", "source": {"control": "shuffled", "of": "Mᵐᴍₘm𝐦", "round": "c097", "why": "control"}}
+{"context": ["💌", "💍", "💎", "💏", "💐", "💑"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "Cc43b08616d84", "source": {"control": "chart", "of": "Mᵐᴍₘm𝐦", "round": "c097", "why": "control"}}
+{"context": ["𝍀", "𝍁", "𝍂", "𝍃", "𝍄", "𝍅", "𝍆", "𝍇", "𝍈", "𝍉", "𝍊", "𝍋", "𝍌", "𝍍", "𝍎"], "kind": "cohere", "qid": "C2d9812f02aac", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["𝍊", "𝍎", "𝍋", "𝍉", "𝍈", "𝍃", "𝍂", "𝍌", "𝍇", "𝍀", "𝍄", "𝍍", "𝍁", "𝍆", "𝍅"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C18ee80141f1d", "source": {"control": "shuffled", "of": "𝍀𝍁𝍂𝍃𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎", "round": "c097", "why": "control"}}
+{"context": ["Ⓙ", "Ⓘ", "Ⓗ", "ⓖ", "Ⓕ", "ⓔ", "Ⓓ", "ⓒ", "Ⓑ", "ⓐ", "Ⓞ", "ⓝ", "Ⓜ", "ⓛ", "Ⓚ", "ⓙ"], "kind": "cohere", "qid": "Ce57c350ca272", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["Ⓘ", "Ⓕ", "ⓙ", "Ⓓ", "Ⓜ", "Ⓞ", "Ⓙ", "ⓖ", "ⓐ", "ⓛ", "ⓒ", "Ⓗ", "Ⓑ", "ⓝ", "Ⓚ", "ⓔ"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C2d2e7e11a09a", "source": {"control": "shuffled", "of": "ⒿⒾⒽⓖⒻⓔⒹⓒⒷⓐⓄⓝⓂⓛⓀⓙ", "round": "c097", "why": "control"}}
+{"context": ["ʓ", "ʒ", "z", "Z", "s"], "kind": "cohere", "qid": "Ce313f910101a", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["z", "s", "Z", "ʓ", "ʒ"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Ce27d5d129b82", "source": {"control": "shuffled", "of": "ʓʒzZs", "round": "c097", "why": "control"}}
+{"context": ["O", "o", "ᵒ", "∘", "ₒ", "⊙"], "kind": "cohere", "qid": "C9a88ad861319", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["∘", "O", "ᵒ", "ₒ", "o", "⊙"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C318125a1b25a", "source": {"control": "shuffled", "of": "Ooᵒ∘ₒ⊙", "round": "c097", "why": "control"}}
+{"context": ["ё", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т"], "kind": "cohere", "qid": "Cf08132ac8875", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["о", "з", "к", "и", "т", "с", "н", "й", "м", "л", "п", "р", "ж", "ё"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cf7dcc000536b", "source": {"control": "shuffled", "of": "ёжзийклмнопрст", "round": "c097", "why": "control"}}
+{"context": ["𒐀", "𒐂", "𒐄", "𒐆", "𒐈", "𒐊", "𒐌", "𒐎", "𒐐", "𒐒", "𒐔", "𒐖", "𒐘", "𒐚", "𒐜", "𒐞"], "kind": "cohere", "qid": "C86605e0c109c", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["𒐀", "𒐆", "𒐚", "𒐔", "𒐖", "𒐜", "𒐄", "𒐈", "𒐒", "𒐐", "𒐘", "𒐌", "𒐂", "𒐎", "𒐊", "𒐞"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C932ac48f9e55", "source": {"control": "shuffled", "of": "𒐀𒐂𒐄𒐆𒐈𒐊𒐌𒐎𒐐𒐒𒐔𒐖𒐘𒐚𒐜𒐞", "round": "c097", "why": "control"}}
+{"context": ["┉", "┈", "┄", "─", "━", "▬", "█", "⬛"], "kind": "cohere", "qid": "C0cc3dd1b821f", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["█", "─", "┈", "┉", "⬛", "━", "▬", "┄"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C298cef7549ea", "source": {"control": "shuffled", "of": "┉┈┄─━▬█⬛", "round": "c097", "why": "control"}}
+{"context": ["h", "ℋ", "Ｈ", "ₕ", "ʜ", "H"], "kind": "cohere", "qid": "C25b5c6910cde", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["Ｈ", "ʜ", "ℋ", "h", "ₕ", "H"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C33005daf8fee", "source": {"control": "shuffled", "of": "hℋＨₕʜH", "round": "c097", "why": "control"}}
+{"context": ["🄿", "🄾", "🄽", "🄼", "🄻", "🄺", "🄹", "🄸", "🄷"], "kind": "cohere", "qid": "Cb240da71c16e", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["🄾", "🄽", "🄿", "🄼", "🄹", "🄷", "🄻", "🄺", "🄸"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C26ed7ba7c2c6", "source": {"control": "shuffled", "of": "🄿🄾🄽🄼🄻🄺🄹🄸🄷", "round": "c097", "why": "control"}}
+{"context": ["𝝅", "𝒐", "𝝃", "𝝂", "𝝁", "𝝀", "𝜿", "𝜾", "𝜽", "𝜼", "𝜻", "𝜺", "𝜹", "𝜸", "𝜷", "𝜶"], "kind": "cohere", "qid": "C2cd3cd5f79ae", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["𝒐", "𝜺", "𝜷", "𝜸", "𝜶", "𝝅", "𝝂", "𝝃", "𝝀", "𝜿", "𝜾", "𝜽", "𝝁", "𝜹", "𝜻", "𝜼"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cf30f6fe5c8b5", "source": {"control": "shuffled", "of": "𝝅𝒐𝝃𝝂𝝁𝝀𝜿𝜾𝜽𝜼𝜻𝜺𝜹𝜸𝜷𝜶", "round": "c097", "why": "control"}}
+{"context": ["🮄", "🮅", "🮆", "█", "▇", "▆", "▅", "▄", "▃", "▂", "▁", "◻", "▀"], "kind": "cohere", "qid": "C42ac5df8130b", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["▃", "◻", "▅", "▁", "▇", "▀", "▄", "█", "▂", "🮅", "▆", "🮄", "🮆"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C423b05aa5e61", "source": {"control": "shuffled", "of": "🮄🮅🮆█▇▆▅▄▃▂▁◻▀", "round": "c097", "why": "control"}}
+{"context": ["o", ".", "O", "@"], "kind": "cohere", "qid": "C3651b69691e3", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["𝝯", "𝝮", "𝝭", "𝝬", "𝝫", "𝝪", "𝝩", "𝝨"], "kind": "cohere", "qid": "C659415e7a548", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["𝝩", "𝝨", "𝝯", "𝝪", "𝝮", "𝝬", "𝝫", "𝝭"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C93da882837c1", "source": {"control": "shuffled", "of": "𝝯𝝮𝝭𝝬𝝫𝝪𝝩𝝨", "round": "c097", "why": "control"}}
+{"context": ["🐧", "🐦", "🐥", "🐤", "🐣", "🐢", "🐡", "🐠", "🐟", "🐞", "🐝", "🐜", "🐛", "🐚", "🐙"], "kind": "cohere", "qid": "C7a5165d1205f", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["🐙", "🐚", "🐝", "🐞", "🐡", "🐦", "🐜", "🐠", "🐟", "🐤", "🐢", "🐥", "🐣", "🐧", "🐛"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cbacb06a5d84c", "source": {"control": "shuffled", "of": "🐧🐦🐥🐤🐣🐢🐡🐠🐟🐞🐝🐜🐛🐚🐙", "round": "c097", "why": "control"}}
+{"context": ["❡", "❠", "❟", "❞", "❝", "❜", "❛", "❚", "❙", "❘", "❗", "❖", "❕", "❔", "❓"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "C895798076054", "source": {"control": "chart", "of": "🐧🐦🐥🐤🐣🐢🐡🐠🐟🐞🐝🐜🐛🐚🐙", "round": "c097", "why": "control"}}
+{"context": ["⏵", "⏷", "⏴", "▲"], "kind": "cohere", "qid": "Ca2f1f845c99a", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["⏴", "⏵", "⏷", "▲"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C84f76effedeb", "source": {"control": "shuffled", "of": "⏵⏷⏴▲", "round": "c097", "why": "control"}}
+{"context": ["Ӗ", "ӛ", "Ӽ", "Ӑ", "Ӿ", "ӽ", "Ӕ", "Ӛ", "ә", "ӿ", "Ӏ", "Ә", "ӏ", "ӝ", "ӕ", "Ӝ", "ӗ", "ӑ"], "kind": "cohere", "qid": "C2f8c62f7db71", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["ӗ", "ә", "Ӕ", "ӛ", "Ӗ", "Ә", "Ӏ", "ӑ", "Ӽ", "Ӝ", "Ӿ", "Ӛ", "ӽ", "ӏ", "ӝ", "Ӑ", "ӕ", "ӿ"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C05e5db320dad", "source": {"control": "shuffled", "of": "ӖӛӼӐӾӽӔӚәӿӀӘӏӝӕӜӗӑ", "round": "c097", "why": "control"}}
+{"context": ["𝝵", "𝝴", "𝝳", "𝝲", "𝝱", "𝝰", "𝝯", "𝝮", "𝝭", "𝝬", "𝝫", "𝝪", "𝝩", "𝝨", "𝝧", "𝝦", "𝝥", "𝝤"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "Cc86ab4c67ffa", "source": {"control": "chart", "of": "ӖӛӼӐӾӽӔӚәӿӀӘӏӝӕӜӗӑ", "round": "c097", "why": "control"}}
+{"context": ["𝚎", "𝚏", "𝚐", "𝚑", "𝚒", "𝚓", "𝚔", "𝚕", "𝚖", "𝚗", "𝚘", "𝚙", "𝚚", "𝚛", "𝚜", "𝚝", "𝚞", "𝚟", "𝚠", "𝚡", "𝚢", "𝚣"], "kind": "cohere", "qid": "C8225dcb719e8", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["𝚖", "𝚙", "𝚓", "𝚐", "𝚒", "𝚎", "𝚕", "𝚗", "𝚠", "𝚔", "𝚢", "𝚘", "𝚡", "𝚝", "𝚛", "𝚚", "𝚏", "𝚟", "𝚣", "𝚑", "𝚜", "𝚞"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cc449195a0435", "source": {"control": "shuffled", "of": "𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣", "round": "c097", "why": "control"}}
+{"context": ["ሌ", "ሊ", "ሉ", "ለ", "ሇ", "ሆ", "ህ", "ሄ", "ሃ", "ሂ", "ሁ", "ሀ", "ᇿ"], "kind": "cohere", "qid": "C58169b27cc13", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["ሉ", "ሊ", "ሌ", "ሄ", "ለ", "ሀ", "ᇿ", "ሁ", "ህ", "ሃ", "ሂ", "ሆ", "ሇ"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cd015486f3eb8", "source": {"control": "shuffled", "of": "ሌሊሉለሇሆህሄሃሂሁሀᇿ", "round": "c097", "why": "control"}}
+{"context": ["▞", "▟", "■", "□", "▢", "▣", "▤", "▥", "▦", "▧", "▨", "▩", "▪"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "C759a9554a36e", "source": {"control": "chart", "of": "ሌሊሉለሇሆህሄሃሂሁሀᇿ", "round": "c097", "why": "control"}}
+{"context": ["ن", "س", "ك", "ل"], "kind": "cohere", "qid": "C365662d0525a", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["ك", "ن", "ل", "س"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cfd9ff1ce5d29", "source": {"control": "shuffled", "of": "نسكل", "round": "c097", "why": "control"}}
+{"context": ["ᴏ", "O", "o", "ₒ"], "kind": "cohere", "qid": "C1708db781d46", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["🙯", "🙮", "🙭", "🙬", "🙫", "🙪", "🙩", "🙨", "🙧", "🙦", "🙥", "🙤", "🙣", "🙢", "🙡", "🙠", "🙟", "🙞", "🙝", "🙜", "🙛"], "kind": "cohere", "qid": "C0d612284af32", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["🙪", "🙝", "🙢", "🙛", "🙡", "🙜", "🙥", "🙮", "🙤", "🙟", "🙧", "🙦", "🙞", "🙯", "🙣", "🙭", "🙫", "🙨", "🙩", "🙠", "🙬"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C617e38347bf5", "source": {"control": "shuffled", "of": "🙯🙮🙭🙬🙫🙪🙩🙨🙧🙦🙥🙤🙣🙢🙡🙠🙟🙞🙝🙜🙛", "round": "c097", "why": "control"}}
+{"context": ["⠒", "⠔", "⠖", "⠢", "⠭", "⠦", "⠧", "⠨"], "kind": "cohere", "qid": "Cca7a7f185b54", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["⠢", "⠖", "⠧", "⠨", "⠒", "⠭", "⠦", "⠔"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Ca457ae54a6fa", "source": {"control": "shuffled", "of": "⠒⠔⠖⠢⠭⠦⠧⠨", "round": "c097", "why": "control"}}
+{"context": ["⬡", "⬢", "⬣"], "kind": "cohere", "qid": "C452a4080309d", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["⬣", "⬡", "⬢"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C5b23acdfd88c", "source": {"control": "shuffled", "of": "⬡⬢⬣", "round": "c097", "why": "control"}}
+{"context": ["‒", "–", "‐", "‑", "—"], "kind": "cohere", "qid": "C122538f7ee06", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["‒", "‑", "—", "‐", "–"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cb001ef2f1fa5", "source": {"control": "shuffled", "of": "‒–‐‑—", "round": "c097", "why": "control"}}
+{"context": ["🗧", "🗨", "🗩", "🗪", "🗫"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "Ca2625b38526e", "source": {"control": "chart", "of": "‒–‐‑—", "round": "c097", "why": "control"}}
+{"context": ["𝗐", "𝗏", "𝗎", "𝗍", "𝗌", "𝗋", "𝗊", "𝗉", "𝗈", "𝗇", "𝗆", "𝗅", "𝗄", "𝗃", "𝗂", "𝗁", "𝗀", "𝖿", "𝖾", "𝖽", "𝖼", "𝖻", "𝖺"], "kind": "cohere", "qid": "Cbbe67f65367a", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["𝖻", "𝗊", "𝗌", "𝗍", "𝖺", "𝗈", "𝗇", "𝗐", "𝗏", "𝗋", "𝖾", "𝗎", "𝖽", "𝗀", "𝗄", "𝖿", "𝗃", "𝗆", "𝗁", "𝖼", "𝗉", "𝗂", "𝗅"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C3f8ee51d3150", "source": {"control": "shuffled", "of": "𝗐𝗏𝗎𝗍𝗌𝗋𝗊𝗉𝗈𝗇𝗆𝗅𝗄𝗃𝗂𝗁𝗀𝖿𝖾𝖽𝖼𝖻𝖺", "round": "c097", "why": "control"}}
+{"context": ["⠓", "⠙", "⠊", "⠚", "⠈", "⠏", "⠛", "⠋"], "kind": "cohere", "qid": "C41004516b371", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["⠊", "⠋", "⠙", "⠛", "⠏", "⠈", "⠚", "⠓"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cc277a95f9312", "source": {"control": "shuffled", "of": "⠓⠙⠊⠚⠈⠏⠛⠋", "round": "c097", "why": "control"}}
+{"context": ["⇒", "⇉", "⇶", "⇷"], "kind": "cohere", "qid": "Cf6f96dc7ed98", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["⇉", "⇶", "⇒", "⇷"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C8f4580fb76e7", "source": {"control": "shuffled", "of": "⇒⇉⇶⇷", "round": "c097", "why": "control"}}
+{"context": ["⇒", "→", "⟹", "⟾", "⇛", "⇉", "⟿", "⇶"], "kind": "cohere", "qid": "Cfb216970b405", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["⇉", "⇒", "⟹", "→", "⟾", "⇶", "⟿", "⇛"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C9742f67260d0", "source": {"control": "shuffled", "of": "⇒→⟹⟾⇛⇉⟿⇶", "round": "c097", "why": "control"}}
+{"context": ["🎵", "🎶", "🎷", "🎸", "🎹", "🎺", "🎻", "🎼"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "Cc181b5873683", "source": {"control": "chart", "of": "⇒→⟹⟾⇛⇉⟿⇶", "round": "c097", "why": "control"}}
+{"context": ["𝔢", "𝔣", "𝔤", "𝔥", "𝔦", "𝔧", "𝔨", "𝔩", "𝔪", "𝔫", "𝔬", "𝔭", "𝔮", "𝔯", "𝔰", "𝔱", "𝔲", "𝔳", "𝔴", "𝔵", "𝔶", "𝔷"], "kind": "cohere", "qid": "C771522e4142c", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["𝔥", "𝔮", "𝔳", "𝔣", "𝔶", "𝔲", "𝔫", "𝔯", "𝔪", "𝔭", "𝔴", "𝔧", "𝔷", "𝔤", "𝔵", "𝔩", "𝔢", "𝔦", "𝔰", "𝔨", "𝔬", "𝔱"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C11935e9777bc", "source": {"control": "shuffled", "of": "𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷", "round": "c097", "why": "control"}}
+{"context": ["⠫", "⠝", "⠍", "⠛", "⠙", "⠉", "⠘", "⠗"], "kind": "cohere", "qid": "C4387545c91a1", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["⠝", "⠫", "⠛", "⠙", "⠘", "⠉", "⠍", "⠗"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C61075e24d1ee", "source": {"control": "shuffled", "of": "⠫⠝⠍⠛⠙⠉⠘⠗", "round": "c097", "why": "control"}}
+{"context": ["🥉", "🥈", "🥇", "🏅", "🏆"], "kind": "cohere", "qid": "C62847c5eba42", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["🏆", "🥈", "🏅", "🥇", "🥉"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C47e7f83a63dd", "source": {"control": "shuffled", "of": "🥉🥈🥇🏅🏆", "round": "c097", "why": "control"}}
+{"context": ["⑦", "⑮", "⑳", "⑨", "⑰", "③", "⑫", "⑪", "④", "⑯", "⑥", "⑧", "①", "⑩", "⑲", "⑱", "⑤", "②", "⑬", "⑭"], "kind": "cohere", "qid": "Cf34192ab92a3", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["③", "⑲", "⑦", "⑰", "⑯", "⑱", "①", "⑩", "⑳", "⑨", "④", "⑬", "⑭", "⑧", "②", "⑪", "⑫", "⑥", "⑮", "⑤"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C82cbf42a2774", "source": {"control": "shuffled", "of": "⑦⑮⑳⑨⑰③⑫⑪④⑯⑥⑧①⑩⑲⑱⑤②⑬⑭", "round": "c097", "why": "control"}}
+{"context": ["ľ", "Ŀ", "ŀ", "Ł", "ł", "Ń", "ń", "Ņ", "ņ", "Ň", "ň", "ŉ", "Ŋ", "ŋ", "Ō", "ō", "Ŏ", "ŏ", "Ő", "ő"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "C1ead25972df6", "source": {"control": "chart", "of": "⑦⑮⑳⑨⑰③⑫⑪④⑯⑥⑧①⑩⑲⑱⑤②⑬⑭", "round": "c097", "why": "control"}}
+{"context": ["㋡", "㋞", "㋛", "㋘", "㋕", "㋒", "㋏", "㋌", "㋉", "㋆", "㋃", "㋀"], "kind": "cohere", "qid": "C47d14a892d17", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["㋉", "㋆", "㋕", "㋌", "㋡", "㋞", "㋒", "㋘", "㋏", "㋃", "㋀", "㋛"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C541bb2ca39a2", "source": {"control": "shuffled", "of": "㋡㋞㋛㋘㋕㋒㋏㋌㋉㋆㋃㋀", "round": "c097", "why": "control"}}
+{"context": ["⠴", "⠼", "⠲", "⠛", "⠍", "⠩", "⠪", "⠫"], "kind": "cohere", "qid": "Cf0fbddd2df56", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["⠲", "⠴", "⠫", "⠛", "⠩", "⠼", "⠍", "⠪"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cd8fcbf6ecc94", "source": {"control": "shuffled", "of": "⠴⠼⠲⠛⠍⠩⠪⠫", "round": "c097", "why": "control"}}
+{"context": ["🬀", "🬂", "🬄"], "kind": "cohere", "qid": "Ce61f468a2471", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["🬂", "🬀", "🬄"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Ceeb81441f946", "source": {"control": "shuffled", "of": "🬀🬂🬄", "round": "c097", "why": "control"}}
+{"context": ["□", "▒", "■"], "kind": "cohere", "qid": "C4f576b984c09", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["■", "□", "▒"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C21c15992cfd3", "source": {"control": "shuffled", "of": "□▒■", "round": "c097", "why": "control"}}
+{"context": ["⪿", "⪾", "⪽", "⪼", "⪻", "⪺", "⪹", "⪸", "⪷", "⪶", "⪵", "⪴", "⪳"], "kind": "cohere", "qid": "Cd0799c67066f", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["⪳", "⪹", "⪻", "⪾", "⪴", "⪺", "⪶", "⪿", "⪷", "⪸", "⪵", "⪼", "⪽"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C7941cd35ca04", "source": {"control": "shuffled", "of": "⪿⪾⪽⪼⪻⪺⪹⪸⪷⪶⪵⪴⪳", "round": "c097", "why": "control"}}
+{"context": ["🔇", "🔈", "🔉", "🔊", "🔋", "🔌", "🔍", "🔎", "🔏", "🔐", "🔑", "🔒", "🔓"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "C3ad28c914d00", "source": {"control": "chart", "of": "⪿⪾⪽⪼⪻⪺⪹⪸⪷⪶⪵⪴⪳", "round": "c097", "why": "control"}}
+{"context": ["⢀", "⢁", "⢂", "⢄", "⢈", "⢐", "⢠", "⣀"], "kind": "cohere", "qid": "C804fe9c47c43", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["⢠", "⢀", "⣀", "⢂", "⢁", "⢈", "⢐", "⢄"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cc034a885e699", "source": {"control": "shuffled", "of": "⢀⢁⢂⢄⢈⢐⢠⣀", "round": "c097", "why": "control"}}
+{"context": ["∰", "∯", "∮", "∫", "|", "′"], "kind": "cohere", "qid": "C21f73944038f", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["∰", "∯", "∮", "|", "∫", "′"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C74b8929f6de8", "source": {"control": "shuffled", "of": "∰∯∮∫|′", "round": "c097", "why": "control"}}
+{"context": ["◌", "●", "○", "◍", "◎"], "kind": "cohere", "qid": "C9c6485353b7a", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["○", "●", "◎", "◍", "◌"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C4cb3a5609a34", "source": {"control": "shuffled", "of": "◌●○◍◎", "round": "c097", "why": "control"}}
+{"context": ["𝗲", "𝗳", "𝗴", "𝗵", "𝗶", "𝗷", "𝗸", "𝗹", "𝗺", "𝗻", "𝗼", "𝗽", "𝗾", "𝗿", "𝘀", "𝘁", "𝘂", "𝘃", "𝘄", "𝘅", "𝘆", "𝘇"], "kind": "cohere", "qid": "C512cfed0c8ea", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["𝘂", "𝗾", "𝗶", "𝘆", "𝗷", "𝗲", "𝗻", "𝗼", "𝗽", "𝗴", "𝘅", "𝘇", "𝗿", "𝗺", "𝘁", "𝘀", "𝗵", "𝘃", "𝗹", "𝗸", "𝘄", "𝗳"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cfbd9802976c1", "source": {"control": "shuffled", "of": "𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇", "round": "c097", "why": "control"}}
+{"context": ["⢺", "⢒", "⡑", "⢀", "⣿", "⣶", "⣤", "⣀"], "kind": "cohere", "qid": "C6139b0bab410", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["⢺", "⣶", "⣤", "⡑", "⣿", "⢒", "⢀", "⣀"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C9f7897cea890", "source": {"control": "shuffled", "of": "⢺⢒⡑⢀⣿⣶⣤⣀", "round": "c097", "why": "control"}}
+{"context": ["㎳", "㎱", "㎰", "㎲", "㎭", "㎧", "㎤", "㎢"], "kind": "cohere", "qid": "C65d30577a890", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["㎰", "㎧", "㎤", "㎢", "㎭", "㎲", "㎳", "㎱"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Ca8fd110b9270", "source": {"control": "shuffled", "of": "㎳㎱㎰㎲㎭㎧㎤㎢", "round": "c097", "why": "control"}}
+{"context": ["●", "◎", "○", "◌", "◉"], "kind": "cohere", "qid": "C8295a9639971", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["●", "○", "◎", "◉", "◌"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cbb6bea39729c", "source": {"control": "shuffled", "of": "●◎○◌◉", "round": "c097", "why": "control"}}
+{"context": ["😏", "😐", "😑", "😒", "😓"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "C1e80c51a53ef", "source": {"control": "chart", "of": "●◎○◌◉", "round": "c097", "why": "control"}}
+{"context": ["𝛢", "𝛣", "𝛤", "𝛥", "𝛦", "𝛧", "𝛨", "𝛩", "𝛪", "𝛫", "𝛬", "𝛭", "𝛮", "𝛯", "𝛰", "𝛱", "𝛲", "𝛴", "𝛵", "𝛶", "𝛷", "𝛸", "𝛹", "𝛺"], "kind": "cohere", "qid": "Ce472aead1ccf", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["𝛤", "𝛢", "𝛲", "𝛨", "𝛵", "𝛰", "𝛧", "𝛫", "𝛶", "𝛺", "𝛴", "𝛱", "𝛩", "𝛭", "𝛬", "𝛯", "𝛹", "𝛦", "𝛷", "𝛣", "𝛪", "𝛸", "𝛥", "𝛮"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C0bea15bd4ad1", "source": {"control": "shuffled", "of": "𝛢𝛣𝛤𝛥𝛦𝛧𝛨𝛩𝛪𝛫𝛬𝛭𝛮𝛯𝛰𝛱𝛲𝛴𝛵𝛶𝛷𝛸𝛹𝛺", "round": "c097", "why": "control"}}
+{"context": ["⣻", "⢿", "⡿", "⣟", "⣾", "⣽", "⣼", "⣺"], "kind": "cohere", "qid": "C2541879741f2", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["⣻", "⣺", "⣽", "⣟", "⡿", "⣾", "⢿", "⣼"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C2f5bb9c7996e", "source": {"control": "shuffled", "of": "⣻⢿⡿⣟⣾⣽⣼⣺", "round": "c097", "why": "control"}}
+{"context": ["🠯", "🠰", "🠱", "🠲", "🠳", "🠴", "🠵", "🠶"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "Cd631b5ae3e3b", "source": {"control": "chart", "of": "⣻⢿⡿⣟⣾⣽⣼⣺", "round": "c097", "why": "control"}}
+{"context": ["⟶", "⟹", "⟾", "⟼", "⟿", "⟻", "→"], "kind": "cohere", "qid": "C0f61e2f16646", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["⟿", "→", "⟻", "⟶", "⟼", "⟾", "⟹"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cdf9b7d23fdbc", "source": {"control": "shuffled", "of": "⟶⟹⟾⟼⟿⟻→", "round": "c097", "why": "control"}}
+{"context": ["◓", "◑", "◐", "◒"], "kind": "cohere", "qid": "C58b428b89e98", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["◒", "◓", "◐", "◑"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C0ba951ef0793", "source": {"control": "shuffled", "of": "◓◑◐◒", "round": "c097", "why": "control"}}
+{"context": ["𝀱", "𝀳", "𝀵", "𝀷", "𝀹", "𝀻", "𝀽", "𝀿", "𝁁", "𝁃", "𝁅", "𝁇", "𝁉", "𝁋", "𝁍", "𝁏", "𝁑", "𝁓", "𝁕", "𝁗"], "kind": "cohere", "qid": "C3d1c2cde8882", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["𝁓", "𝁃", "𝁏", "𝀵", "𝁁", "𝁇", "𝀽", "𝁋", "𝀱", "𝀿", "𝀷", "𝀳", "𝀻", "𝁕", "𝁑", "𝁗", "𝁅", "𝀹", "𝁉", "𝁍"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C3cdebeb40e5a", "source": {"control": "shuffled", "of": "𝀱𝀳𝀵𝀷𝀹𝀻𝀽𝀿𝁁𝁃𝁅𝁇𝁉𝁋𝁍𝁏𝁑𝁓𝁕𝁗", "round": "c097", "why": "control"}}
+{"context": ["⬉", "⬊", "⬋", "←", "↖", "↗", "↘", "↙"], "kind": "cohere", "qid": "C512deb212d5e", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["↖", "⬉", "↗", "⬋", "⬊", "↘", "↙", "←"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cba55109a3105", "source": {"control": "shuffled", "of": "⬉⬊⬋←↖↗↘↙", "round": "c097", "why": "control"}}
+{"context": ["፩", "፲", "፻", "፼", "፧"], "kind": "cohere", "qid": "Cdbbf8e4ece22", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["፲", "፼", "፧", "፻", "፩"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Ce9700a6e2450", "source": {"control": "shuffled", "of": "፩፲፻፼፧", "round": "c097", "why": "control"}}
+{"context": ["☁", "💧", "🌊", "🌧", "🌫"], "kind": "cohere", "qid": "C7c162ef5655e", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["🌫", "🌊", "💧", "☁", "🌧"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cd6079f28842c", "source": {"control": "shuffled", "of": "☁💧🌊🌧🌫", "round": "c097", "why": "control"}}
+{"context": ["𝌒", "𝌓", "𝌔", "𝌕", "𝌖"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "Cda93ea89e22c", "source": {"control": "chart", "of": "☁💧🌊🌧🌫", "round": "c097", "why": "control"}}
+{"context": ["ᐧ", "ᐨ", "ᐩ", "ᐪ", "ᐫ", "ᐬ", "ᐭ", "ᐮ", "ᐯ", "ᐰ", "ᐱ", "ᐲ", "ᐳ", "ᐴ", "ᐵ", "ᐶ", "ᐷ", "ᐸ", "ᐹ", "ᑕ", "ᑖ", "ᑗ"], "kind": "cohere", "qid": "C88bc06439107", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["ᐳ", "ᐫ", "ᐱ", "ᐲ", "ᐬ", "ᐸ", "ᐪ", "ᐮ", "ᑕ", "ᐩ", "ᐵ", "ᐭ", "ᐧ", "ᑗ", "ᐹ", "ᑖ", "ᐰ", "ᐷ", "ᐨ", "ᐴ", "ᐶ", "ᐯ"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C297e513eed34", "source": {"control": "shuffled", "of": "ᐧᐨᐩᐪᐫᐬᐭᐮᐯᐰᐱᐲᐳᐴᐵᐶᐷᐸᐹᑕᑖᑗ", "round": "c097", "why": "control"}}
+{"context": ["☍", "☎", "☏", "☐", "☑", "☒", "☓", "☔", "☕", "☖", "☗", "☘", "☙", "☚", "☛", "☜", "☝", "☞", "☟", "☠", "☡", "☢"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "C1322e0973ff7", "source": {"control": "chart", "of": "ᐧᐨᐩᐪᐫᐬᐭᐮᐯᐰᐱᐲᐳᐴᐵᐶᐷᐸᐹᑕᑖᑗ", "round": "c097", "why": "control"}}
+{"context": ["⼯", "⼣", "⼢", "⼡", "⼠", "⼟", "⼞", "⼝"], "kind": "cohere", "qid": "C58aec3e22d1b", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["⼟", "⼝", "⼯", "⼞", "⼠", "⼢", "⼡", "⼣"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Ca4aad8954d77", "source": {"control": "shuffled", "of": "⼯⼣⼢⼡⼠⼟⼞⼝", "round": "c097", "why": "control"}}
+{"context": ["🥡", "🥢", "🥟", "🥠", "🍵", "🥮"], "kind": "cohere", "qid": "C2c88f80e431b", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["🥡", "🍵", "🥠", "🥢", "🥟", "🥮"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cd1e0bd1f3a5b", "source": {"control": "shuffled", "of": "🥡🥢🥟🥠🍵🥮", "round": "c097", "why": "control"}}
+{"context": ["☂", "☁", "☀"], "kind": "cohere", "qid": "Cbaca68c48a81", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["𝘗", "𝘖", "𝘕", "𝘔", "𝘓", "𝘒", "𝘑", "𝘐", "𝘏", "𝘎", "𝘍", "𝘌", "𝘋", "𝘊", "𝘉", "𝘈", "𝘡"], "kind": "cohere", "qid": "C241269440f52", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["𝘊", "𝘕", "𝘎", "𝘔", "𝘓", "𝘌", "𝘋", "𝘉", "𝘑", "𝘐", "𝘗", "𝘡", "𝘒", "𝘍", "𝘖", "𝘈", "𝘏"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cc12edc86a12b", "source": {"control": "shuffled", "of": "𝘗𝘖𝘕𝘔𝘓𝘒𝘑𝘐𝘏𝘎𝘍𝘌𝘋𝘊𝘉𝘈𝘡", "round": "c097", "why": "control"}}
+{"context": ["メ", "ヤ", "ョ", "リ", "ロ", "ヰ", "ン", "ヶ"], "kind": "cohere", "qid": "C4b17669fa836", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["リ", "ヰ", "ヶ", "メ", "ン", "ロ", "ョ", "ヤ"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cdcaf417f3116", "source": {"control": "shuffled", "of": "メヤョリロヰンヶ", "round": "c097", "why": "control"}}
+{"context": ["𝍰", "𝍱", "𝍲", "𝍳", "𝍴", "𝍵", "𝍶", "𝍷"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "Cb74e3f772558", "source": {"control": "chart", "of": "メヤョリロヰンヶ", "round": "c097", "why": "control"}}
+{"context": ["Ɨ", "Ɩ", "I"], "kind": "cohere", "qid": "C7288479b2218", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["Ɨ", "I", "Ɩ"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cb4aa0a7896d7", "source": {"control": "shuffled", "of": "ƗƖI", "round": "c097", "why": "control"}}
+{"context": ["★", "⁎", "*", "✱", "∗"], "kind": "cohere", "qid": "Cf7ca0d91ed14", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["★", "*", "∗", "✱", "⁎"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cc5ddebbc2a8a", "source": {"control": "shuffled", "of": "★⁎*✱∗", "round": "c097", "why": "control"}}
+{"context": ["𝚶", "𝚵", "𝚴", "𝚳", "𝚲"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "C54f4cde5575f", "source": {"control": "chart", "of": "★⁎*✱∗", "round": "c097", "why": "control"}}
+{"context": ["т", "с", "р", "п", "о", "н", "м", "л", "к", "й", "и", "з", "ж", "е", "д", "г", "в", "б"], "kind": "cohere", "qid": "C2dc9b46b7e85", "source": {"from": "walk", "round": "c097", "why": "cohere"}}
+{"context": ["н", "к", "б", "с", "г", "з", "е", "й", "л", "м", "ж", "д", "и", "т", "о", "р", "п", "в"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cc0deaac3975b", "source": {"control": "shuffled", "of": "тсрпонмлкйизжедгвб", "round": "c097", "why": "control"}}
+{"context": ["ㇿ", "ㇾ", "ㇽ", "ㇼ", "ㇻ", "ㇺ", "ㇹ", "ㇸ"], "kind": "cohere", "qid": "Cfb0715b21b32", "source": {"from": "written", "round": "c097", "why": "cohere"}}
+{"context": ["ㇻ", "ㇼ", "ㇿ", "ㇸ", "ㇹ", "ㇽ", "ㇺ", "ㇾ"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Cc1a732b968d8", "source": {"control": "shuffled", "of": "ㇿㇾㇽㇼㇻㇺㇹㇸ", "round": "c097", "why": "control"}}
+{"context": ["ǻ", "Ǿ", "ǽ", "ǿ"], "kind": "cohere", "qid": "C69c5a817ef3f", "source": {"from": "pick-branch", "round": "c097", "why": "cohere"}}
+{"context": ["ǽ", "ǻ", "ǿ", "Ǿ"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "Ce311a1f03adf", "source": {"control": "shuffled", "of": "ǻǾǽǿ", "round": "c097", "why": "control"}}
+{"context": ["🪶", "🪵", "🪴", "🪳"], "kind": "cohere", "probe": {"control": "chart"}, "qid": "C26e94d6327d6", "source": {"control": "chart", "of": "ǻǾǽǿ", "round": "c097", "why": "control"}}
+{"context": ["☞", "☝", "☟", "☜", "☛", "☚"], "kind": "cohere", "qid": "C7fe186f1435c", "source": {"from": "reordered", "round": "c097", "why": "cohere"}}
+{"context": ["☚", "☝", "☞", "☜", "☟", "☛"], "kind": "cohere", "probe": {"control": "shuffled"}, "qid": "C905bdfe8865a", "source": {"control": "shuffled", "of": "☞☝☟☜☛☚", "round": "c097", "why": "control"}}
+{"context": ["🚗", "🧍", "🚶", "🏍", "✈", "🪑", "🏃", "🚴", "🛌"], "glyphs": ["✈", "🏃", "🏍", "🚗", "🚴", "🚶", "🛌", "🧍", "🪑"], "kind": "order", "qid": "O7bdf56766fb5", "source": {"from": "pick-branch", "round": "c097", "why": "order"}}
+{"context": ["〣", "〤", "〺", "〧", "〹", "〩", "〥", "〡", "〢", "〦", "〨", "〸"], "glyphs": ["〡", "〢", "〣", "〤", "〥", "〦", "〧", "〨", "〩", "〸", "〹", "〺"], "kind": "order", "qid": "O83de617d79b3", "source": {"from": "seed:survey:7583af2423887433", "round": "c097", "why": "order"}}
+{"context": ["ː", "ˀ", "ˑ", "˯"], "glyphs": ["ˀ", "ː", "ˑ", "˯"], "kind": "order", "qid": "Obf44b737d203", "source": {"from": "pick-branch", "round": "c097", "why": "order"}}
+{"context": ["🌒", "🌑", "🌔", "🌓", "🌕"], "glyphs": ["🌑", "🌒", "🌓", "🌔", "🌕"], "kind": "order", "qid": "O79a9eae61ad6", "source": {"from": "seed:survey:0f90cefac2bdeea7", "round": "c097", "why": "order"}}
+{"context": ["⇒", "⇉", "⇐", "⇚", "←", "⇶", "⇛", "→", "↔"], "glyphs": ["←", "→", "↔", "⇉", "⇐", "⇒", "⇚", "⇛", "⇶"], "kind": "order", "qid": "O1bf996799137", "source": {"from": "pick-branch", "round": "c097", "why": "order"}}
+{"context": ["㎝", "㎜", "㎙", "㎚", "㎞", "㎛"], "glyphs": ["㎙", "㎚", "㎛", "㎜", "㎝", "㎞"], "kind": "order", "qid": "O37b1d3e9b4e4", "source": {"from": "seed:survey:0034608eefe52998", "round": "c097", "why": "order"}}
+{"context": ["0", "Ⅲ", "Ⅰ", "·", "Ⅱ"], "glyphs": ["0", "·", "Ⅰ", "Ⅱ", "Ⅲ"], "kind": "order", "qid": "Obbbd14b554fe", "source": {"from": "pick-branch", "round": "c097", "why": "order"}}
+{"context": ["‹", "›", "»", "«"], "glyphs": ["«", "»", "‹", "›"], "kind": "order", "qid": "O34936e05a977", "source": {"from": "seed:survey:ea2917e6bf7a3d07", "round": "c097", "why": "order"}}
+{"context": ["⋘", "《", "〈", "◁"], "glyphs": ["⋘", "◁", "〈", "《"], "kind": "order", "qid": "Oead34d5bb84e", "source": {"from": "pick-branch", "round": "c097", "why": "order"}}
+{"context": ["⊤", "⊣", "⊢", "⊥", "∣", "∥", "⫴", "="], "glyphs": ["=", "∣", "∥", "⊢", "⊣", "⊤", "⊥", "⫴"], "kind": "order", "qid": "O325d8df2d93d", "source": {"from": "pick-branch", "round": "c097", "why": "order"}}
+{"context": ["Ⅲ", "●", "◯", "Ⅱ", "Ⅰ", "·"], "glyphs": ["·", "Ⅰ", "Ⅱ", "Ⅲ", "●", "◯"], "kind": "order", "qid": "Oa95cabb356b2", "source": {"from": "pick-branch", "round": "c097", "why": "order"}}
+{"context": ["🥤", "🥡", "🥣", "🥢"], "glyphs": ["🥡", "🥢", "🥣", "🥤"], "kind": "order", "qid": "O139b0a8d95a9", "source": {"from": "pick-branch", "round": "c097", "why": "order"}}
+{"context": ["⇶", "⇛", "⇒", "⇉", "⇸"], "glyphs": ["⇉", "⇒", "⇛", "⇶", "⇸"], "kind": "order", "qid": "O579e98e70fe2", "source": {"from": "pick-branch", "round": "c097", "why": "order"}}
+{"context": ["♙", "♕", "♔", "♖", "♘", "♗"], "glyphs": ["♔", "♕", "♖", "♗", "♘", "♙"], "kind": "order", "qid": "O45b7f51d053a", "source": {"from": "seed:survey:72e5a23cc88aa5e3", "round": "c097", "why": "order"}}
+{"context": ["⇛", "⟹", "→", "⇶", "⇒", "⭆", "⇉"], "glyphs": ["→", "⇉", "⇒", "⇛", "⇶", "⟹", "⭆"], "kind": "order", "qid": "O2c142f56ac0c", "source": {"from": "pick-branch", "round": "c097", "why": "order"}}
+{"context": ["∶", "⋮", "⋯"], "kind": "choose", "pair": ["⋰", "⋱"], "probe": {"chart": "⋰"}, "qid": "De355b43020d4", "shown_pair": ["⋰", "⋱"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["⁰", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹"], "kind": "choose", "pair": ["¹", "⁺"], "probe": {"chart": "⁺"}, "qid": "Dff85a854735a", "shown_pair": ["⁺", "¹"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["🮈", "🮉"], "kind": "choose", "pair": ["🮊", "🮋"], "probe": {"chart": "🮊"}, "qid": "D30046400c0d4", "shown_pair": ["🮋", "🮊"], "source": {"from": "step", "round": "c097", "why": "choose"}}
+{"context": ["𝂌", "𝂋", "𝂊", "𝂉"], "kind": "choose", "pair": ["𝂈", "𝃈"], "probe": {"chart": "𝂈"}, "qid": "D544d77fc706d", "shown_pair": ["𝃈", "𝂈"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["<", "⊂"], "kind": "choose", "pair": ["⊃", "⊆"], "probe": {"chart": "⊃"}, "qid": "De845736c076d", "shown_pair": ["⊆", "⊃"], "source": {"from": "step", "round": "c097", "why": "choose"}}
+{"context": ["🯶", "🯸"], "kind": "choose", "pair": ["🯱", "🯹"], "probe": {"chart": "🯹"}, "qid": "Dd93ee9807394", "shown_pair": ["🯹", "🯱"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["<", "⊂", "⊆"], "kind": "choose", "pair": ["⊇", "⋐"], "probe": {"chart": "⊇"}, "qid": "D8393b616103f", "shown_pair": ["⋐", "⊇"], "source": {"from": "step", "round": "c097", "why": "choose"}}
+{"context": ["ȱ", "ȳ"], "kind": "choose", "pair": ["Ȳ", "ȵ"], "probe": {"chart": "Ȳ"}, "qid": "D71f47be66f51", "shown_pair": ["ȵ", "Ȳ"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["㎰", "㎱"], "kind": "choose", "pair": ["㎲", "㎳"], "probe": {"chart": "㎲"}, "qid": "Deb2c7f0519d0", "shown_pair": ["㎲", "㎳"], "source": {"from": "step", "round": "c097", "why": "choose"}}
+{"context": ["Ϯ", "ϭ", "Ϭ", "ϫ"], "kind": "choose", "pair": ["ϩ", "Ϫ"], "probe": {"chart": "Ϫ"}, "qid": "Dc5cfab19ef91", "shown_pair": ["Ϫ", "ϩ"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["▶", "⏩"], "kind": "choose", "pair": ["⏨", "⏭"], "probe": {"chart": "⏨"}, "qid": "D6b629b745e07", "shown_pair": ["⏨", "⏭"], "source": {"from": "step", "round": "c097", "why": "choose"}}
+{"context": ["㉓", "㉕", "㉗", "㉙", "㉛"], "kind": "choose", "pair": ["㉜", "㉝"], "probe": {"chart": "㉜"}, "qid": "D670f8e914e83", "shown_pair": ["㉜", "㉝"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["o", "ô", "ö"], "kind": "choose", "pair": ["ó", "õ"], "probe": {"chart": "õ"}, "qid": "D4e14e2b6e1fb", "shown_pair": ["ó", "õ"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["✦", "✶"], "kind": "choose", "pair": ["✳", "✷"], "probe": {"chart": "✷"}, "qid": "D0621bfc2c638", "shown_pair": ["✳", "✷"], "source": {"from": "step", "round": "c097", "why": "choose"}}
+{"context": ["😱", "😲", "😯", "😮"], "kind": "choose", "pair": ["😐", "😭"], "probe": {"chart": "😭"}, "qid": "D0c5edaaa6097", "shown_pair": ["😐", "😭"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["✦", "✶", "✳"], "kind": "choose", "pair": ["✲", "✴"], "probe": {"chart": "✲"}, "qid": "Dfeafb3f068e4", "shown_pair": ["✴", "✲"], "source": {"from": "step", "round": "c097", "why": "choose"}}
+{"context": ["—", "–", "‒"], "kind": "choose", "pair": ["‐", "‑"], "probe": {"chart": "‑"}, "qid": "D774487335972", "shown_pair": ["‐", "‑"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["✦", "✶", "✳", "✴"], "kind": "choose", "pair": ["✵", "✹"], "probe": {"chart": "✵"}, "qid": "D73d7c03e25c0", "shown_pair": ["✵", "✹"], "source": {"from": "step", "round": "c097", "why": "choose"}}
+{"context": ["🥡", "🥢", "🥣", "🥤"], "kind": "choose", "pair": ["🥠", "🥥"], "probe": {"chart": "🥥"}, "qid": "D97ad13f3f611", "shown_pair": ["🥠", "🥥"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["ވ", "މ", "ފ"], "kind": "choose", "pair": ["ހ", "ދ"], "probe": {"chart": "ދ"}, "qid": "De26a3506a402", "shown_pair": ["ދ", "ހ"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["▤", "▦"], "kind": "choose", "pair": ["▧", "▩"], "probe": {"chart": "▧"}, "qid": "D87bda3dcd40e", "shown_pair": ["▩", "▧"], "source": {"from": "step", "round": "c097", "why": "choose"}}
+{"context": ["┷", "┸", "┹", "┺", "┻", "┼"], "kind": "choose", "pair": ["┽", "⼁"], "probe": {"chart": "┽"}, "qid": "Dc250ed99e3c8", "shown_pair": ["⼁", "┽"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["𝓖", "𝓕", "𝓔", "𝓓", "𝓒", "𝓑"], "kind": "choose", "pair": ["𐓐", "𝓐"], "probe": {"chart": "𝓐"}, "qid": "D4ac259682c19", "shown_pair": ["𐓐", "𝓐"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["🚀", "✈", "🚄", "🚗", "🚲", "🏃", "🚶", "🧍"], "kind": "choose", "pair": ["🛌", "🧎"], "probe": {"chart": "🧎"}, "qid": "Dd3a7faf76dee", "shown_pair": ["🛌", "🧎"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["㉓", "㉒", "㉑"], "kind": "choose", "pair": ["⑳", "㉐"], "probe": {"chart": "㉐"}, "qid": "D430c5a221571", "shown_pair": ["⑳", "㉐"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["㉬", "㉫", "㉪"], "kind": "choose", "pair": ["㉩", "㊩"], "probe": {"chart": "㉩"}, "qid": "D2071f3f07467", "shown_pair": ["㉩", "㊩"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["à", "Ȁ"], "kind": "choose", "pair": ["á", "ȁ"], "probe": {"chart": "ȁ"}, "qid": "De5b6119b7777", "shown_pair": ["ȁ", "á"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["⼀", "⼈"], "kind": "choose", "pair": ["⼉", "⼭"], "probe": {"chart": "⼉"}, "qid": "Db07dfc252ae3", "shown_pair": ["⼭", "⼉"], "source": {"from": "step", "round": "c097", "why": "choose"}}
+{"context": ["🠲", "🠱", "🠰", "🠯", "🠮", "🠭", "🠬"], "kind": "choose", "pair": ["🠪", "🠫"], "probe": {"chart": "🠫"}, "qid": "D796367303bd7", "shown_pair": ["🠪", "🠫"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["⼀", "⼈", "⼭"], "kind": "choose", "pair": ["⼮", "⾦"], "probe": {"chart": "⼮"}, "qid": "D178fc8d8bdf7", "shown_pair": ["⼮", "⾦"], "source": {"from": "step", "round": "c097", "why": "choose"}}
+{"context": ["ܞ", "ܟ", "ܠ"], "kind": "choose", "pair": ["ܡ", "ܢ"], "probe": {"chart": "ܡ"}, "qid": "D3c5fe7556a71", "shown_pair": ["ܡ", "ܢ"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["⼀", "⼈", "⼭", "⾦"], "kind": "choose", "pair": ["⾧", "⿓"], "probe": {"chart": "⾧"}, "qid": "Ddf7b55303739", "shown_pair": ["⾧", "⿓"], "source": {"from": "step", "round": "c097", "why": "choose"}}
+{"context": ["Ɨ", "Ɩ"], "kind": "choose", "pair": ["I", "ƕ"], "probe": {"chart": "ƕ"}, "qid": "De0c271b06935", "shown_pair": ["I", "ƕ"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["𝜥", "𝜤", "𝜣", "𝜢", "𝜡", "𝜠", "𝜟"], "kind": "choose", "pair": ["𝛞", "𝜞"], "probe": {"chart": "𝜞"}, "qid": "Dd500e6225caa", "shown_pair": ["𝜞", "𝛞"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["█", "🮅"], "kind": "choose", "pair": ["▀", "🮄"], "probe": {"chart": "🮄"}, "qid": "Dcabcfe693de1", "shown_pair": ["🮄", "▀"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["𐄐", "𐄙"], "kind": "choose", "pair": ["𐄚", "𐄡"], "probe": {"chart": "𐄚"}, "qid": "Da6f6a1adf83c", "shown_pair": ["𐄡", "𐄚"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["▹", "▿"], "kind": "choose", "pair": ["◀", "◃"], "probe": {"chart": "◀"}, "qid": "D67235d218391", "shown_pair": ["◃", "◀"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["౾", "౽", "౼"], "kind": "choose", "pair": ["౸", "౻"], "probe": {"chart": "౻"}, "qid": "Dc138a4da973e", "shown_pair": ["౻", "౸"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["𝄚", "𝄙"], "kind": "choose", "pair": ["𝄘", "𝄞"], "probe": {"chart": "𝄘"}, "qid": "D972dfb03cb79", "shown_pair": ["𝄞", "𝄘"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["፩", "፲"], "kind": "choose", "pair": ["፳", "፻"], "probe": {"chart": "፳"}, "qid": "D9843ef50dad3", "shown_pair": ["፻", "፳"], "source": {"from": "step", "round": "c097", "why": "choose"}}
+{"context": ["▊", "▌"], "kind": "choose", "pair": ["▍", "▎"], "probe": {"chart": "▍"}, "qid": "D008932b1097a", "shown_pair": ["▎", "▍"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["-", "→"], "kind": "choose", "pair": ["↓", "↔"], "probe": {"chart": "↓"}, "qid": "D1a1e7f972460", "shown_pair": ["↓", "↔"], "source": {"from": "step", "round": "c097", "why": "choose"}}
+{"context": ["⑷", "⑸"], "kind": "choose", "pair": ["⑶", "⑹"], "probe": {"chart": "⑹"}, "qid": "D7f1727c5fae2", "shown_pair": ["⑹", "⑶"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["₆", "⁵", "₄"], "kind": "choose", "pair": ["³", "₃"], "probe": {"chart": "₃"}, "qid": "Df8f48212353d", "shown_pair": ["₃", "³"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["ₑ", "e"], "kind": "choose", "pair": ["d", "ᴇ"], "probe": {"chart": "d"}, "qid": "Dfc08ae310dda", "shown_pair": ["ᴇ", "d"], "source": {"from": "step", "round": "c097", "why": "choose"}}
+{"context": ["⠮", "⠭"], "kind": "choose", "pair": ["⠬", "⠼"], "probe": {"chart": "⠬"}, "qid": "D67c90b0b5d11", "shown_pair": ["⠼", "⠬"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["ₑ", "e", "ᴇ"], "kind": "choose", "pair": ["E", "ᴈ"], "probe": {"chart": "ᴈ"}, "qid": "D385c996c21cb", "shown_pair": ["E", "ᴈ"], "source": {"from": "step", "round": "c097", "why": "choose"}}
+{"context": ["𝟭", "𝟚"], "kind": "choose", "pair": ["𝟛", "𝟯"], "probe": {"chart": "𝟛"}, "qid": "Dc05519deaa31", "shown_pair": ["𝟯", "𝟛"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["⬡", "⬢", "⬣"], "kind": "choose", "pair": ["⬠", "⬤"], "probe": {"chart": "⬤"}, "qid": "D052b4b6b40a5", "shown_pair": ["⬠", "⬤"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["🬮", "🬭", "🬬", "🬫", "🬪", "🬩", "🬨"], "kind": "choose", "pair": ["🬦", "🬧"], "probe": {"chart": "🬧"}, "qid": "D9b2175ce70d4", "shown_pair": ["🬦", "🬧"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["⚏", "⚍", "⚌"], "kind": "choose", "pair": ["⚋", "⚎"], "probe": {"chart": "⚋"}, "qid": "Dc363446caef0", "shown_pair": ["⚋", "⚎"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["▪", "◽"], "kind": "choose", "pair": ["◻", "◾"], "probe": {"chart": "◾"}, "qid": "D65d788083140", "shown_pair": ["◻", "◾"], "source": {"from": "step", "round": "c097", "why": "choose"}}
+{"context": ["༦", "༧", "༨", "༩"], "kind": "choose", "pair": ["༠", "༪"], "probe": {"chart": "༪"}, "qid": "Dc0a95720bf16", "shown_pair": ["༪", "༠"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["▪", "◽", "◻"], "kind": "choose", "pair": ["■", "◺"], "probe": {"chart": "◺"}, "qid": "D7ce8728494f9", "shown_pair": ["■", "◺"], "source": {"from": "step", "round": "c097", "why": "choose"}}
+{"context": ["🌕", "⬤", "●", "◕"], "kind": "choose", "pair": ["◑", "◔"], "probe": {"chart": "◔"}, "qid": "Db8a0f1a63937", "shown_pair": ["◔", "◑"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["ᐎ", "ᐍ", "ᐌ"], "kind": "choose", "pair": ["ᐊ", "ᐋ"], "probe": {"chart": "ᐋ"}, "qid": "De633e2e20a6b", "shown_pair": ["ᐋ", "ᐊ"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["🟇", "🟅"], "kind": "choose", "pair": ["🟃", "🟆"], "probe": {"chart": "🟆"}, "qid": "D65d9af9b6d60", "shown_pair": ["🟆", "🟃"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["ú", "û", "ü"], "kind": "choose", "pair": ["ù", "ý"], "probe": {"chart": "ý"}, "qid": "Da773500fb7fd", "shown_pair": ["ù", "ý"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["🥚", "🐣", "🐤"], "kind": "choose", "pair": ["🐔", "🐥"], "probe": {"chart": "🐥"}, "qid": "D4ad98ccea426", "shown_pair": ["🐔", "🐥"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["🕖", "🕢", "🕗", "🕣", "🕘", "🕤", "🕙"], "kind": "choose", "pair": ["🕚", "🕥"], "probe": {"chart": "🕚"}, "qid": "D21ba8d5e5c7d", "shown_pair": ["🕥", "🕚"], "source": {"from": "split", "round": "c097", "why": "choose"}}
+{"context": ["Ų", "ҭ", "\\"], "kind": "choose", "pair": ["⋰", "⋱"], "probe": {"chart": "⋰", "control": "neutral"}, "qid": "Dcfeee9d67dce", "shown_pair": ["⋰", "⋱"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["ō", "ڔ", "𝌈"], "kind": "choose", "pair": ["¹", "⁺"], "probe": {"chart": "⁺", "control": "neutral"}, "qid": "Dbb9fdfd1663c", "shown_pair": ["¹", "⁺"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["☑", "4", "⧔"], "kind": "choose", "pair": ["🮊", "🮋"], "probe": {"chart": "🮊", "control": "neutral"}, "qid": "D1957deedb8a4", "shown_pair": ["🮋", "🮊"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["g", "🝅", "¿"], "kind": "choose", "pair": ["𝂈", "𝃈"], "probe": {"chart": "𝂈", "control": "neutral"}, "qid": "D0f8903975c81", "shown_pair": ["𝂈", "𝃈"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["➵", "2", "G"], "kind": "choose", "pair": ["⊃", "⊆"], "probe": {"chart": "⊃", "control": "neutral"}, "qid": "D2d5059690eee", "shown_pair": ["⊆", "⊃"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["9", "Ү", "⓺"], "kind": "choose", "pair": ["🯱", "🯹"], "probe": {"chart": "🯹", "control": "neutral"}, "qid": "Da55d56fc9fea", "shown_pair": ["🯱", "🯹"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["Ū", "բ", "🙶"], "kind": "choose", "pair": ["⊇", "⋐"], "probe": {"chart": "⊇", "control": "neutral"}, "qid": "Dbe5d01897754", "shown_pair": ["⊇", "⋐"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["⥾", "Z", "🤅"], "kind": "choose", "pair": ["Ȳ", "ȵ"], "probe": {"chart": "Ȳ", "control": "neutral"}, "qid": "Dfa8389d53f49", "shown_pair": ["ȵ", "Ȳ"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["ǒ", "‰", "d"], "kind": "choose", "pair": ["㎲", "㎳"], "probe": {"chart": "㎲", "control": "neutral"}, "qid": "Db59475654f83", "shown_pair": ["㎳", "㎲"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["⇄", "Ð", "𝝃"], "kind": "choose", "pair": ["ϩ", "Ϫ"], "probe": {"chart": "Ϫ", "control": "neutral"}, "qid": "D4c6c5b59b936", "shown_pair": ["Ϫ", "ϩ"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["a", "g", "Ћ"], "kind": "choose", "pair": ["⏨", "⏭"], "probe": {"chart": "⏨", "control": "neutral"}, "qid": "D143875e56e6e", "shown_pair": ["⏭", "⏨"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["H", "-", "𝌷"], "kind": "choose", "pair": ["㉜", "㉝"], "probe": {"chart": "㉜", "control": "neutral"}, "qid": "Dd5358ab08024", "shown_pair": ["㉜", "㉝"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["🂤", "h", "リ"], "kind": "choose", "pair": ["ó", "õ"], "probe": {"chart": "õ", "control": "neutral"}, "qid": "D75cbe869dca7", "shown_pair": ["ó", "õ"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["𝔶", "a", "z"], "kind": "choose", "pair": ["✳", "✷"], "probe": {"chart": "✷", "control": "neutral"}, "qid": "Dd81c187c5394", "shown_pair": ["✳", "✷"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["🦁", "ܓ", "⾱"], "kind": "choose", "pair": ["😐", "😭"], "probe": {"chart": "😭", "control": "neutral"}, "qid": "Dffc50033887f", "shown_pair": ["😭", "😐"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["M", "2", "y"], "kind": "choose", "pair": ["✲", "✴"], "probe": {"chart": "✲", "control": "neutral"}, "qid": "D6fcfd6a8583b", "shown_pair": ["✴", "✲"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["ߕ", "⨒", "e"], "kind": "choose", "pair": ["✵", "✹"], "probe": {"chart": "✵", "control": "neutral"}, "qid": "Dc7a319b41f2e", "shown_pair": ["✹", "✵"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["Q", "♔", "4"], "kind": "choose", "pair": ["🥠", "🥥"], "probe": {"chart": "🥥", "control": "neutral"}, "qid": "D59e1c9b42a47", "shown_pair": ["🥠", "🥥"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["4", "^", "⦚"], "kind": "choose", "pair": ["ހ", "ދ"], "probe": {"chart": "ދ", "control": "neutral"}, "qid": "D31efacb15215", "shown_pair": ["ދ", "ހ"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["¡", "i", "Ƒ"], "kind": "choose", "pair": ["▧", "▩"], "probe": {"chart": "▧", "control": "neutral"}, "qid": "D65f9a2a9f9cb", "shown_pair": ["▧", "▩"], "source": {"from": "neutral", "round": "c097", "why": "choose-control"}}
+{"context": ["▀", "🮆", "🮃", "🮄", "🮅", "🮂", "█"], "glyphs": ["▀", "█", "🮂", "🮃", "🮄", "🮅", "🮆"], "kind": "names", "qid": "M7761f34a2da6", "source": {"from": "seed:survey:994fd7a4679bed97", "round": "c097", "why": "names"}}
+{"context": ["🞴", "🞱", "🞰", "🞳", "🞯", "🞲"], "glyphs": ["🞯", "🞰", "🞱", "🞲", "🞳", "🞴"], "kind": "names", "qid": "M3c11c854619b", "source": {"from": "seed:survey:ad8cc03efd485cc4", "round": "c097", "why": "names"}}
+{"context": ["⣿", "⣀", "⣠", "⢀", "⣼", "⣾", "⣸", "⣰"], "glyphs": ["⢀", "⣀", "⣠", "⣰", "⣸", "⣼", "⣾", "⣿"], "kind": "names", "qid": "M307378a65268", "source": {"from": "seed:survey:c8564ec95a1a3796", "round": "c097", "why": "names"}}
+{"context": ["㋁", "㋃", "㋀", "㋂", "㋊", "㋆", "㋅", "㋋", "㋇", "㋉", "㋄", "㋈"], "glyphs": ["㋀", "㋁", "㋂", "㋃", "㋄", "㋅", "㋆", "㋇", "㋈", "㋉", "㋊", "㋋"], "kind": "names", "qid": "Ma5a1fe1b35b8", "source": {"from": "seed:survey:cb5736088d5320b1", "round": "c097", "why": "names"}}
+{"context": ["⁶", "²", "⁸", "⁰", "¹", "⁷", "⁵", "³", "⁴", "⁹"], "glyphs": ["²", "³", "¹", "⁰", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹"], "kind": "names", "qid": "Mbf41c50495e4", "source": {"from": "seed:survey:82170a45e6665dfd", "round": "c097", "why": "names"}}
+{"context": ["◔", "◕", "◑", "○", "●"], "glyphs": ["○", "●", "◑", "◔", "◕"], "kind": "names", "qid": "M8961fbc0dc68", "source": {"from": "seed:survey:2f0d706ed02e91fb", "round": "c097", "why": "names"}}
+{"context": ["ᚇ", "ᚆ", "ᚊ", "ᚈ", "ᚉ"], "glyphs": ["ᚆ", "ᚇ", "ᚈ", "ᚉ", "ᚊ"], "kind": "names", "qid": "M845298d80e12", "source": {"from": "seed:survey:fd3fd0bdac3fbf73", "round": "c097", "why": "names"}}
+{"context": ["🌔", "🌑", "🌕", "🌒", "🌓"], "glyphs": ["🌑", "🌒", "🌓", "🌔", "🌕"], "kind": "names", "qid": "Mf02b40cdc252", "source": {"from": "seed:survey:0f90cefac2bdeea7", "round": "c097", "why": "names"}}
+{"context": ["Ⴀ", "ა", "Ა", "ⴀ"], "glyphs": ["Ⴀ", "ა", "Ა", "ⴀ"], "kind": "names", "qid": "Mbb1c59d7dd93", "source": {"from": "seed:survey:7447d385e58f4e0a", "round": "c097", "why": "names"}}
+{"context": ["▽", "△", "◁", "▷"], "glyphs": ["△", "▷", "▽", "◁"], "kind": "names", "qid": "M583d9aaa1828", "source": {"from": "seed:survey:17df7ec142d79cee", "round": "c097", "why": "names"}}
+{"context": ["𝄘", "𝄙", "𝄗", "𝄚", "𝄖"], "glyphs": ["𝄖", "𝄗", "𝄘", "𝄙", "𝄚"], "kind": "names", "qid": "Mf7267c8d54bc", "source": {"from": "seed:survey:bb2bfadc44fddb2d", "round": "c097", "why": "names"}}
+{"context": ["🟅", "🟎", "🟋", "🟁"], "glyphs": ["🟁", "🟅", "🟋", "🟎"], "kind": "names", "qid": "M8b7345abfd31", "source": {"from": "seed:survey:95d6dfd67a045204", "round": "c097", "why": "names"}}
+{"context": ["¾", "⅝", "¼", "⅜", "⅞", "⅛", "½"], "glyphs": ["¼", "½", "¾", "⅛", "⅜", "⅝", "⅞"], "kind": "names", "qid": "M0df02cb8424e", "source": {"from": "seed:survey:b3cb86da9eaec4f1", "round": "c097", "why": "names"}}
+{"context": ["㎜", "㎛", "㎝", "㎙", "㎚", "㎞"], "glyphs": ["㎙", "㎚", "㎛", "㎜", "㎝", "㎞"], "kind": "names", "qid": "Mb7e8e131c0a1", "source": {"from": "seed:survey:0034608eefe52998", "round": "c097", "why": "names"}}
+{"context": ["◯", ".", "⊚", "◎", "o", "⊙"], "glyphs": [".", "o", "⊙", "⊚", "◎", "◯"], "kind": "names", "qid": "M1762f30395f6", "source": {"from": "seed:survey:f9017bf43c28e1b6", "round": "c097", "why": "names"}}
+{"context": ["😭", "😢", "🙂", "😄", "😐", "😁", "🙁"], "glyphs": ["😁", "😄", "😐", "😢", "😭", "🙁", "🙂"], "kind": "names", "qid": "Mf16bef193452", "source": {"from": "seed:survey:df786c642debecaf", "round": "c097", "why": "names"}}
+{"context": ["⑽", "⑸", "⑼", "⑹", "⑵", "⑶", "⑺", "⑷", "⑴", "⑻"], "glyphs": ["⑴", "⑵", "⑶", "⑷", "⑸", "⑹", "⑺", "⑻", "⑼", "⑽"], "kind": "names", "qid": "M1e71a6f56669", "source": {"from": "seed:survey:71687da96407900f", "round": "c097", "why": "names"}}
+{"context": ["㎤", "㎥", "㎦", "㎣"], "glyphs": ["㎣", "㎤", "㎥", "㎦"], "kind": "names", "qid": "M9913348b884e", "source": {"from": "seed:survey:c3cff9b016ede1b3", "round": "c097", "why": "names"}}
+{"context": ["▪", "◽", "■", "◻"], "glyphs": ["■", "▪", "◻", "◽"], "kind": "names", "qid": "M73c959eec497", "source": {"from": "seed:survey:3e2cce1c0eb355b0", "round": "c097", "why": "names"}}
+{"context": ["⚀", "⚅", "⚂", "⚃", "⚁", "⚄"], "glyphs": ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"], "kind": "names", "qid": "M9e00c5f77aef", "source": {"from": "seed:survey:bbbdfc1ef927538f", "round": "c097", "why": "names"}}
+{"context": ["🀔", "🀒", "🀓", "🀑", "🀘", "🀖", "🀐", "🀕", "🀗"], "glyphs": ["🀐", "🀑", "🀒", "🀓", "🀔", "🀕", "🀖", "🀗", "🀘"], "kind": "names", "qid": "M52ffa042a3db", "source": {"from": "seed:survey:70d8abb2fe7a302c", "round": "c097", "why": "names"}}
+{"context": ["ɮ", "ɬ", "l", "ɭ", "ɫ"], "glyphs": ["l", "ɫ", "ɬ", "ɭ", "ɮ"], "kind": "names", "qid": "Md39a4e0bc7ed", "source": {"from": "seed:survey:0af674e71744b97d", "round": "c097", "why": "names"}}
+{"context": ["㊅", "㊉", "㊀", "㊇", "㊂", "㊁", "㊄", "㊃", "㊆", "㊈"], "glyphs": ["㊀", "㊁", "㊂", "㊃", "㊄", "㊅", "㊆", "㊇", "㊈", "㊉"], "kind": "names", "qid": "M468be4834bd8", "source": {"from": "seed:survey:cc573e4d8bb1ffd6", "round": "c097", "why": "names"}}
+{"context": ["𐆗", "𐆘", "𐆚", "𐆖"], "glyphs": ["𐆖", "𐆗", "𐆘", "𐆚"], "kind": "names", "qid": "Md2482a02190e", "source": {"from": "seed:survey:002b853651d38f41", "round": "c097", "why": "names"}}
+{"context": ["⅜", "⅞", "⅝", "⅛"], "glyphs": ["⅛", "⅜", "⅝", "⅞"], "kind": "names", "qid": "M54379a0c1472", "source": {"from": "seed:survey:1b5901720c8670de", "round": "c097", "why": "names"}}
+{"context": ["ᐣ", "ᐤ", "ᐢ", "ᐡ"], "glyphs": ["ᐡ", "ᐢ", "ᐣ", "ᐤ"], "kind": "names", "qid": "M64b582010fb4", "source": {"from": "seed:survey:28b87bd5dd5e59ae", "round": "c097", "why": "names"}}
+{"context": ["⠟", "⠿", "⠀", "⠁", "⠃", "⠇", "⠏"], "glyphs": ["⠀", "⠁", "⠃", "⠇", "⠏", "⠟", "⠿"], "kind": "names", "qid": "M6d9f83fd114a", "source": {"from": "seed:survey:9b4eee5002cc4936", "round": "c097", "why": "names"}}
+{"context": ["‿", "∨", "⌄", "⌣"], "glyphs": ["‿", "∨", "⌄", "⌣"], "kind": "names", "qid": "M4a6c375f4196", "source": {"from": "seed:survey:42b5ded69c3cd7ad", "round": "c097", "why": "names"}}
+{"context": ["四", "一", "三", "二", "五"], "glyphs": ["一", "三", "二", "五", "四"], "kind": "names", "qid": "M0d8df29ae5fd", "source": {"from": "seed:survey:8426cc12d8cc6bf2", "round": "c097", "why": "names"}}
+{"context": ["🯶", "🯳", "🯵", "🯴", "🯰", "🯸", "🯲", "🯱", "🯷", "🯹"], "glyphs": ["🯰", "🯱", "🯲", "🯳", "🯴", "🯵", "🯶", "🯷", "🯸", "🯹"], "kind": "names", "qid": "M9b83f199efae", "source": {"from": "seed:survey:a0e0fde24c909324", "round": "c097", "why": "names"}}
+{"context": ["⊡", "⊠", "⊟", "⊞", "𝞗", "⊜", "⊛", "⊚", "⊙", "⊘", "⊗", "⊖", "⊕"], "kind": "cohere", "probe": {"control": "lookalike", "of": "⊡⊠⊟⊞⊝⊜⊛⊚⊙⊘⊗⊖⊕", "orig": "⊝", "pos": 4}, "qid": "Ce3da7e008c86", "source": {"control": "lookalike", "of": "⊡⊠⊟⊞⊝⊜⊛⊚⊙⊘⊗⊖⊕", "round": "c097", "why": "lookalike"}}
+{"context": ["⊡", "⊠", "⊟", "⊞", "𝕕", "⊜", "⊛", "⊚", "⊙", "⊘", "⊗", "⊖", "⊕"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "⊡⊠⊟⊞⊝⊜⊛⊚⊙⊘⊗⊖⊕", "orig": "⊝", "pos": 4}, "qid": "Ccf5c54d4ba1a", "source": {"control": "lookalike-ctl", "of": "⊡⊠⊟⊞⊝⊜⊛⊚⊙⊘⊗⊖⊕", "round": "c097", "why": "lookalike"}}
+{"context": ["⒤", "🄘", "⒪", "⒭", "⒰", "⒳", "Ⓐ", "Ⓓ", "Ⓖ", "Ⓙ", "Ⓜ", "Ⓟ"], "kind": "cohere", "probe": {"control": "lookalike", "of": "⒤⒧⒪⒭⒰⒳ⒶⒹⒼⒿⓂⓅ", "orig": "⒧", "pos": 1}, "qid": "C4ec2887d0ffa", "source": {"control": "lookalike", "of": "⒤⒧⒪⒭⒰⒳ⒶⒹⒼⒿⓂⓅ", "round": "c097", "why": "lookalike"}}
+{"context": ["⒤", "🅮", "⒪", "⒭", "⒰", "⒳", "Ⓐ", "Ⓓ", "Ⓖ", "Ⓙ", "Ⓜ", "Ⓟ"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "⒤⒧⒪⒭⒰⒳ⒶⒹⒼⒿⓂⓅ", "orig": "⒧", "pos": 1}, "qid": "Caceb73a859a1", "source": {"control": "lookalike-ctl", "of": "⒤⒧⒪⒭⒰⒳ⒶⒹⒼⒿⓂⓅ", "round": "c097", "why": "lookalike"}}
+{"context": ["ㅥ", "ㅦ", "ㅧ", "ㅨ", "ㅩ", "ㅪ", "ㅫ", "ㅬ", "ᇙ", "ㅮ", "ㅯ", "ㅰ"], "kind": "cohere", "probe": {"control": "lookalike", "of": "ㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰ", "orig": "ㅭ", "pos": 8}, "qid": "C9aae835105dd", "source": {"control": "lookalike", "of": "ㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰ", "round": "c097", "why": "lookalike"}}
+{"context": ["ㅥ", "ㅦ", "ㅧ", "ㅨ", "ㅩ", "ㅪ", "ㅫ", "ㅬ", "ᅷ", "ㅮ", "ㅯ", "ㅰ"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "ㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰ", "orig": "ㅭ", "pos": 8}, "qid": "Cafda3264d120", "source": {"control": "lookalike-ctl", "of": "ㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰ", "round": "c097", "why": "lookalike"}}
+{"context": ["ĕ", "ē", "Ē", "đ", "Đ", "ď", "Ď", "č", "Č", "ċ", "Ċ", "ĉ", "Ĉ", "ć", "Ć", "ą", "Ą", "ă", "Ǎ", "ā", "Ā"], "kind": "cohere", "probe": {"control": "lookalike", "of": "ĕēĒđĐďĎčČċĊĉĈćĆąĄăĂāĀ", "orig": "Ă", "pos": 18}, "qid": "Cf19dce31732d", "source": {"control": "lookalike", "of": "ĕēĒđĐďĎčČċĊĉĈćĆąĄăĂāĀ", "round": "c097", "why": "lookalike"}}
+{"context": ["ĕ", "ē", "Ē", "đ", "Đ", "ď", "Ď", "č", "Č", "ċ", "Ċ", "ĉ", "Ĉ", "ć", "Ć", "ą", "Ą", "ă", "Ư", "ā", "Ā"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "ĕēĒđĐďĎčČċĊĉĈćĆąĄăĂāĀ", "orig": "Ă", "pos": 18}, "qid": "Cc767ead04ff6", "source": {"control": "lookalike-ctl", "of": "ĕēĒđĐďĎčČċĊĉĈćĆąĄăĂāĀ", "round": "c097", "why": "lookalike"}}
+{"context": ["ⵎ", "ⵏ", "ⵓ", "𝟘", "ⵕ", "ⵖ", "ⵙ", "ⵚ", "ⵛ", "ⵜ", "ⵟ", "ⵡ", "ⵢ", "ⵣ", "ⵥ"], "kind": "cohere", "probe": {"control": "lookalike", "of": "ⵎⵏⵓⵔⵕⵖⵙⵚⵛⵜⵟⵡⵢⵣⵥ", "orig": "ⵔ", "pos": 3}, "qid": "Cc7525ca4c7c2", "source": {"control": "lookalike", "of": "ⵎⵏⵓⵔⵕⵖⵙⵚⵛⵜⵟⵡⵢⵣⵥ", "round": "c097", "why": "lookalike"}}
+{"context": ["ⵎ", "ⵏ", "ⵓ", "𝜯", "ⵕ", "ⵖ", "ⵙ", "ⵚ", "ⵛ", "ⵜ", "ⵟ", "ⵡ", "ⵢ", "ⵣ", "ⵥ"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "ⵎⵏⵓⵔⵕⵖⵙⵚⵛⵜⵟⵡⵢⵣⵥ", "orig": "ⵔ", "pos": 3}, "qid": "Ce95d07269eb3", "source": {"control": "lookalike-ctl", "of": "ⵎⵏⵓⵔⵕⵖⵙⵚⵛⵜⵟⵡⵢⵣⵥ", "round": "c097", "why": "lookalike"}}
+{"context": ["𝗏", "𝗎", "𝗍", "𝗌", "𝗋", "𝗊", "𝗉", "𝗈", "𝗇", "𝗆", "𝗅", "𝗄", "ј", "𝗂", "𝗁", "𝗀", "𝖿", "𝖾", "𝖽", "𝖼", "𝖻", "𝖺"], "kind": "cohere", "probe": {"control": "lookalike", "of": "𝗏𝗎𝗍𝗌𝗋𝗊𝗉𝗈𝗇𝗆𝗅𝗄𝗃𝗂𝗁𝗀𝖿𝖾𝖽𝖼𝖻𝖺", "orig": "𝗃", "pos": 12}, "qid": "Cce82a416f717", "source": {"control": "lookalike", "of": "𝗏𝗎𝗍𝗌𝗋𝗊𝗉𝗈𝗇𝗆𝗅𝗄𝗃𝗂𝗁𝗀𝖿𝖾𝖽𝖼𝖻𝖺", "round": "c097", "why": "lookalike"}}
+{"context": ["𝗏", "𝗎", "𝗍", "𝗌", "𝗋", "𝗊", "𝗉", "𝗈", "𝗇", "𝗆", "𝗅", "𝗄", "Ҕ", "𝗂", "𝗁", "𝗀", "𝖿", "𝖾", "𝖽", "𝖼", "𝖻", "𝖺"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "𝗏𝗎𝗍𝗌𝗋𝗊𝗉𝗈𝗇𝗆𝗅𝗄𝗃𝗂𝗁𝗀𝖿𝖾𝖽𝖼𝖻𝖺", "orig": "𝗃", "pos": 12}, "qid": "Cd107fa348b61", "source": {"control": "lookalike-ctl", "of": "𝗏𝗎𝗍𝗌𝗋𝗊𝗉𝗈𝗇𝗆𝗅𝗄𝗃𝗂𝗁𝗀𝖿𝖾𝖽𝖼𝖻𝖺", "round": "c097", "why": "lookalike"}}
+{"context": ["⯿", "⯾", "⯽", "⯼", "⯻", "⯺", "⯹", "⯸", "⯷", "⯶", "⯵", "⯴", "⯳", "⯲", "⯱", "⯰", "⯯", "↠", "⯭", "⯬"], "kind": "cohere", "probe": {"control": "lookalike", "of": "⯿⯾⯽⯼⯻⯺⯹⯸⯷⯶⯵⯴⯳⯲⯱⯰⯯⯮⯭⯬", "orig": "⯮", "pos": 17}, "qid": "C30dd815dd065", "source": {"control": "lookalike", "of": "⯿⯾⯽⯼⯻⯺⯹⯸⯷⯶⯵⯴⯳⯲⯱⯰⯯⯮⯭⯬", "round": "c097", "why": "lookalike"}}
+{"context": ["⯿", "⯾", "⯽", "⯼", "⯻", "⯺", "⯹", "⯸", "⯷", "⯶", "⯵", "⯴", "⯳", "⯲", "⯱", "⯰", "⯯", "↭", "⯭", "⯬"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "⯿⯾⯽⯼⯻⯺⯹⯸⯷⯶⯵⯴⯳⯲⯱⯰⯯⯮⯭⯬", "orig": "⯮", "pos": 17}, "qid": "Ca9723a58befd", "source": {"control": "lookalike-ctl", "of": "⯿⯾⯽⯼⯻⯺⯹⯸⯷⯶⯵⯴⯳⯲⯱⯰⯯⯮⯭⯬", "round": "c097", "why": "lookalike"}}
+{"context": ["⊂", "ᑐ", "⊆", "⊇", "⊈", "⊉", "⊊", "⊋"], "kind": "cohere", "probe": {"control": "lookalike", "of": "⊂⊃⊆⊇⊈⊉⊊⊋", "orig": "⊃", "pos": 1}, "qid": "C9902835433cd", "source": {"control": "lookalike", "of": "⊂⊃⊆⊇⊈⊉⊊⊋", "round": "c097", "why": "lookalike"}}
+{"context": ["⊂", "ᖆ", "⊆", "⊇", "⊈", "⊉", "⊊", "⊋"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "⊂⊃⊆⊇⊈⊉⊊⊋", "orig": "⊃", "pos": 1}, "qid": "C26cda1024d99", "source": {"control": "lookalike-ctl", "of": "⊂⊃⊆⊇⊈⊉⊊⊋", "round": "c097", "why": "lookalike"}}
+{"context": ["𝙽", "𑓐", "𝙿", "𝚀", "𝚁", "𝚂", "𝚃", "𝚄", "𝚅", "𝚆", "𝚇", "𝚈"], "kind": "cohere", "probe": {"control": "lookalike", "of": "𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈", "orig": "𝙾", "pos": 1}, "qid": "C3e89905b1a74", "source": {"control": "lookalike", "of": "𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈", "round": "c097", "why": "lookalike"}}
+{"context": ["𝙽", "𑓇", "𝙿", "𝚀", "𝚁", "𝚂", "𝚃", "𝚄", "𝚅", "𝚆", "𝚇", "𝚈"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈", "orig": "𝙾", "pos": 1}, "qid": "Ca5fb1710018b", "source": {"control": "lookalike-ctl", "of": "𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈", "round": "c097", "why": "lookalike"}}
+{"context": ["ծ", "է", "զ", "ե", "դ", "𝙦", "բ", "ա"], "kind": "cohere", "probe": {"control": "lookalike", "of": "ծէզեդգբա", "orig": "գ", "pos": 5}, "qid": "Cae9ced318284", "source": {"control": "lookalike", "of": "ծէզեդգբա", "round": "c097", "why": "lookalike"}}
+{"context": ["ծ", "է", "զ", "ե", "դ", "𝞚", "բ", "ա"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "ծէզեդգբա", "orig": "գ", "pos": 5}, "qid": "C17f76d39f243", "source": {"control": "lookalike-ctl", "of": "ծէզեդգբա", "round": "c097", "why": "lookalike"}}
+{"context": ["⾂", "⾃", "⾄", "臼", "⾆", "⾇", "⾈", "⾉"], "kind": "cohere", "probe": {"control": "lookalike", "of": "⾂⾃⾄⾅⾆⾇⾈⾉", "orig": "⾅", "pos": 3}, "qid": "Ccb7bd74fc2a7", "source": {"control": "lookalike", "of": "⾂⾃⾄⾅⾆⾇⾈⾉", "round": "c097", "why": "lookalike"}}
+{"context": ["⾂", "⾃", "⾄", "嫽", "⾆", "⾇", "⾈", "⾉"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "⾂⾃⾄⾅⾆⾇⾈⾉", "orig": "⾅", "pos": 3}, "qid": "C1a4317c722c5", "source": {"control": "lookalike-ctl", "of": "⾂⾃⾄⾅⾆⾇⾈⾉", "round": "c097", "why": "lookalike"}}
+{"context": ["ȯ", "ة", "o"], "kind": "cohere", "probe": {"control": "lookalike", "of": "ȯöo", "orig": "ö", "pos": 1}, "qid": "C666fba9a1c14", "source": {"control": "lookalike", "of": "ȯöo", "round": "c097", "why": "lookalike"}}
+{"context": ["ȯ", "ز", "o"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "ȯöo", "orig": "ö", "pos": 1}, "qid": "Ca30df56afe6e", "source": {"control": "lookalike-ctl", "of": "ȯöo", "round": "c097", "why": "lookalike"}}
+{"context": ["⩷", "⩶", "⩵", "⩴", "⩳", "⩲", "⩱", "⩰", "⩯", "⩮", "⩭", "⩬", "⩫", "⸞", "⩩"], "kind": "cohere", "probe": {"control": "lookalike", "of": "⩷⩶⩵⩴⩳⩲⩱⩰⩯⩮⩭⩬⩫⩪⩩", "orig": "⩪", "pos": 13}, "qid": "Ca23cba4a7fd8", "source": {"control": "lookalike", "of": "⩷⩶⩵⩴⩳⩲⩱⩰⩯⩮⩭⩬⩫⩪⩩", "round": "c097", "why": "lookalike"}}
+{"context": ["⩷", "⩶", "⩵", "⩴", "⩳", "⩲", "⩱", "⩰", "⩯", "⩮", "⩭", "⩬", "⩫", "⹂", "⩩"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "⩷⩶⩵⩴⩳⩲⩱⩰⩯⩮⩭⩬⩫⩪⩩", "orig": "⩪", "pos": 13}, "qid": "C3606a3b2925e", "source": {"control": "lookalike-ctl", "of": "⩷⩶⩵⩴⩳⩲⩱⩰⩯⩮⩭⩬⩫⩪⩩", "round": "c097", "why": "lookalike"}}
+{"context": ["ᛮ", "ⵣ", "ᛰ"], "kind": "cohere", "probe": {"control": "lookalike", "of": "ᛮᛯᛰ", "orig": "ᛯ", "pos": 1}, "qid": "C1b055a71b09d", "source": {"control": "lookalike", "of": "ᛮᛯᛰ", "round": "c097", "why": "lookalike"}}
+{"context": ["ᛮ", "ⵜ", "ᛰ"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "ᛮᛯᛰ", "orig": "ᛯ", "pos": 1}, "qid": "Cc33649b89875", "source": {"control": "lookalike-ctl", "of": "ᛮᛯᛰ", "round": "c097", "why": "lookalike"}}
+{"context": ["ㅢ", "ㅣ", "ㅤ", "ㅥ", "ㅦ", "ㅧ", "ㅨ", "ㅩ", "ㅪ", "ㅫ", "ㅬ", "ㅭ", "ㅮ", "ᇝ", "ㅰ", "ㅱ", "ㅲ", "ㅳ", "ㅴ"], "kind": "cohere", "probe": {"control": "lookalike", "of": "ㅢㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲㅳㅴ", "orig": "ㅯ", "pos": 13}, "qid": "Cede231bb3bc1", "source": {"control": "lookalike", "of": "ㅢㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲㅳㅴ", "round": "c097", "why": "lookalike"}}
+{"context": ["ㅢ", "ㅣ", "ㅤ", "ㅥ", "ㅦ", "ㅧ", "ㅨ", "ㅩ", "ㅪ", "ㅫ", "ㅬ", "ㅭ", "ㅮ", "ᄇ", "ㅰ", "ㅱ", "ㅲ", "ㅳ", "ㅴ"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "ㅢㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲㅳㅴ", "orig": "ㅯ", "pos": 13}, "qid": "C6c5cdd45c137", "source": {"control": "lookalike-ctl", "of": "ㅢㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲㅳㅴ", "round": "c097", "why": "lookalike"}}
+{"context": ["㉝", "㉛", "㉙", "㉗", "㉕", "㉓", "㉑", "⑲", "⑰", "⑮", "⑬", "⑪", "➈", "⑦", "⑤", "③"], "kind": "cohere", "probe": {"control": "lookalike", "of": "㉝㉛㉙㉗㉕㉓㉑⑲⑰⑮⑬⑪⑨⑦⑤③", "orig": "⑨", "pos": 12}, "qid": "Ce6e67727de8b", "source": {"control": "lookalike", "of": "㉝㉛㉙㉗㉕㉓㉑⑲⑰⑮⑬⑪⑨⑦⑤③", "round": "c097", "why": "lookalike"}}
+{"context": ["㉝", "㉛", "㉙", "㉗", "㉕", "㉓", "㉑", "⑲", "⑰", "⑮", "⑬", "⑪", "➜", "⑦", "⑤", "③"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "㉝㉛㉙㉗㉕㉓㉑⑲⑰⑮⑬⑪⑨⑦⑤③", "orig": "⑨", "pos": 12}, "qid": "Caad6466f3ac7", "source": {"control": "lookalike-ctl", "of": "㉝㉛㉙㉗㉕㉓㉑⑲⑰⑮⑬⑪⑨⑦⑤③", "round": "c097", "why": "lookalike"}}
+{"context": ["ñ", "ð", "ï", "î", "í", "ì", "ë", "ê", "é", "è", "ҫ", "æ", "å", "ä", "ã", "â", "á", "à"], "kind": "cohere", "probe": {"control": "lookalike", "of": "ñðïîíìëêéèçæåäãâáà", "orig": "ç", "pos": 10}, "qid": "Cc9da4cca6dd0", "source": {"control": "lookalike", "of": "ñðïîíìëêéèçæåäãâáà", "round": "c097", "why": "lookalike"}}
+{"context": ["ñ", "ð", "ï", "î", "í", "ì", "ë", "ê", "é", "è", "ӭ", "æ", "å", "ä", "ã", "â", "á", "à"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "ñðïîíìëêéèçæåäãâáà", "orig": "ç", "pos": 10}, "qid": "Cddc7dffae221", "source": {"control": "lookalike-ctl", "of": "ñðïîíìëêéèçæåäãâáà", "round": "c097", "why": "lookalike"}}
+{"context": ["𝛸", "𝛷", "𝛶", "𝛵", "𝛴", "𝛳", "𝛲", "𝛱", "𜳰", "𝛯"], "kind": "cohere", "probe": {"control": "lookalike", "of": "𝛸𝛷𝛶𝛵𝛴𝛳𝛲𝛱𝛰𝛯", "orig": "𝛰", "pos": 8}, "qid": "C308e8076fec1", "source": {"control": "lookalike", "of": "𝛸𝛷𝛶𝛵𝛴𝛳𝛲𝛱𝛰𝛯", "round": "c097", "why": "lookalike"}}
+{"context": ["𝛸", "𝛷", "𝛶", "𝛵", "𝛴", "𝛳", "𝛲", "𝛱", "𜷟", "𝛯"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "𝛸𝛷𝛶𝛵𝛴𝛳𝛲𝛱𝛰𝛯", "orig": "𝛰", "pos": 8}, "qid": "Cc82411c84287", "source": {"control": "lookalike-ctl", "of": "𝛸𝛷𝛶𝛵𝛴𝛳𝛲𝛱𝛰𝛯", "round": "c097", "why": "lookalike"}}
+{"context": ["९", "८", "७", "६", "५", "४", "३", "२", "१", "೦", "ॐ"], "kind": "cohere", "probe": {"control": "lookalike", "of": "९८७६५४३२१०ॐ", "orig": "०", "pos": 9}, "qid": "C607a4fc3b7f1", "source": {"control": "lookalike", "of": "९८७६५४३२१०ॐ", "round": "c097", "why": "lookalike"}}
+{"context": ["९", "८", "७", "६", "५", "४", "३", "२", "१", "ಓ", "ॐ"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "९८७६५४३२१०ॐ", "orig": "०", "pos": 9}, "qid": "C06c5131ecb12", "source": {"control": "lookalike-ctl", "of": "९८७६५४३२१०ॐ", "round": "c097", "why": "lookalike"}}
+{"context": ["Ⅲ", "Ⅱ", "𝗅", "⅟"], "kind": "cohere", "probe": {"control": "lookalike", "of": "ⅢⅡⅠ⅟", "orig": "Ⅰ", "pos": 2}, "qid": "C9a2756af41cb", "source": {"control": "lookalike", "of": "ⅢⅡⅠ⅟", "round": "c097", "why": "lookalike"}}
+{"context": ["Ⅲ", "Ⅱ", "𝛾", "⅟"], "kind": "cohere", "probe": {"control": "lookalike-ctl", "of": "ⅢⅡⅠ⅟", "orig": "Ⅰ", "pos": 2}, "qid": "C69180f4887b4", "source": {"control": "lookalike-ctl", "of": "ⅢⅡⅠ⅟", "round": "c097", "why": "lookalike"}}
+{"candidate": "𝖐", "context": ["𝖌", "𝖍", "𝖎"], "kind": "inhibit", "qid": "I852489c2954e", "source": {"link": "𝖎𝖏", "rank": 1.0, "round": "c097", "seq": "𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜", "why": "falsify-skip"}}
+{"context": ["𝖚", "𝖛", "𝖙"], "glyphs": ["𝖙", "𝖚", "𝖛"], "kind": "triad", "qid": "Tf46748a6f8e7", "source": {"mid": "𝖚", "rank": 1.0, "round": "c097", "seq": "𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜", "why": "falsify-triad"}}
+{"context": ["𝖖", "𝖗", "𝖘", "𝖙", "𝖚", "𝖛", "𝖜"], "kind": "continue", "qid": "Q498122fc47bd", "source": {"rank": 1.0, "round": "c097", "seq": "𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜", "side": "right", "why": "end"}}
+{"candidate": "𝘵", "context": ["𝘺", "𝘹", "𝘸", "𝘷"], "kind": "inhibit", "qid": "Id24af351c0f7", "source": {"link": "𝘷𝘶", "rank": 1.0, "round": "c097", "seq": "𝘻𝘺𝘹𝘸𝘷𝘶𝘵𝘴𝘳𝘲𝘱𝘰𝘯𝘮𝘭𝘬𝘫𝘪𝘩𝘨𝘧𝘦", "why": "falsify-skip"}}
+{"context": ["𝘨", "𝘩", "𝘧"], "glyphs": ["𝘧", "𝘨", "𝘩"], "kind": "triad", "qid": "T8732fab9936c", "source": {"mid": "𝘨", "rank": 1.0, "round": "c097", "seq": "𝘻𝘺𝘹𝘸𝘷𝘶𝘵𝘴𝘳𝘲𝘱𝘰𝘯𝘮𝘭𝘬𝘫𝘪𝘩𝘨𝘧𝘦", "why": "falsify-triad"}}
+{"context": ["𝘷", "𝘶", "𝘵", "𝘴", "𝘳", "𝘲", "𝘱", "𝘰"], "kind": "continue", "qid": "Qbfd6de9004b9", "source": {"k": 8, "link": "𝘰𝘯", "rank": 1.0, "round": "c097", "seq": "𝘻𝘺𝘹𝘸𝘷𝘶𝘵𝘴𝘳𝘲𝘱𝘰𝘯𝘮𝘭𝘬𝘫𝘪𝘩𝘨𝘧𝘦", "why": "falsify-lengthen"}}
+{"context": ["𝘨", "𝘧", "𝘦"], "kind": "continue", "qid": "Q6b7de3614788", "source": {"rank": 1.0, "round": "c097", "seq": "𝘻𝘺𝘹𝘸𝘷𝘶𝘵𝘴𝘳𝘲𝘱𝘰𝘯𝘮𝘭𝘬𝘫𝘪𝘩𝘨𝘧𝘦", "side": "right", "why": "end"}}
+{"context": ["⺄", "⺃", "⺅"], "glyphs": ["⺃", "⺄", "⺅"], "kind": "triad", "qid": "Tb0b5e81c0f02", "source": {"mid": "⺄", "rank": 1.0, "round": "c097", "seq": "⺔⺓⺒⺑⺐⺏⺎⺍⺌⺋⺊⺉⺈⺇⺆⺅⺄⺃⺂⺁", "why": "falsify-triad"}}
+{"context": ["⺆", "⺅", "⺄", "⺃", "⺂", "⺁"], "kind": "continue", "qid": "Q22580c066d4e", "source": {"rank": 1.0, "round": "c097", "seq": "⺔⺓⺒⺑⺐⺏⺎⺍⺌⺋⺊⺉⺈⺇⺆⺅⺄⺃⺂⺁", "side": "right", "why": "end"}}
+{"context": ["⺏", "⺐", "⺑", "⺒", "⺓", "⺔"], "kind": "continue", "qid": "Q9837a96607d4", "source": {"rank": 1.0, "round": "c097", "seq": "⺔⺓⺒⺑⺐⺏⺎⺍⺌⺋⺊⺉⺈⺇⺆⺅⺄⺃⺂⺁", "side": "left", "why": "end"}}
+{"candidate": "Ⓗ", "context": ["Ⓛ", "Ⓚ", "Ⓙ"], "kind": "inhibit", "qid": "Ib1cd308bb8de", "source": {"link": "ⒿⒾ", "rank": 1.0, "round": "c097", "seq": "ⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏ", "why": "falsify-skip"}}
+{"context": ["Ⓞ", "Ⓟ", "Ⓝ"], "glyphs": ["Ⓝ", "Ⓞ", "Ⓟ"], "kind": "triad", "qid": "Tc69fec98ed2d", "source": {"mid": "Ⓞ", "rank": 1.0, "round": "c097", "seq": "ⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏ", "why": "falsify-triad"}}
+{"context": ["Ⓓ", "Ⓔ", "Ⓕ", "Ⓖ", "Ⓗ", "Ⓘ", "Ⓙ"], "kind": "continue", "qid": "Q380a0944a35c", "source": {"k": 7, "link": "ⒿⓀ", "rank": 1.0, "round": "c097", "seq": "ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇ", "why": "falsify-lengthen"}}
+{"context": ["Ⓜ", "Ⓝ", "Ⓞ", "Ⓟ", "Ⓠ", "Ⓡ"], "kind": "continue", "qid": "Qbde69a3bc7a8", "source": {"rank": 1.0, "round": "c097", "seq": "ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇ", "side": "right", "why": "end"}}
+{"candidate": "𝍂", "context": ["𝍋", "𝍊", "𝍉", "𝍈", "𝍇", "𝍆", "𝍅", "𝍄"], "kind": "inhibit", "qid": "If9721e553c15", "source": {"link": "𝍄𝍃", "rank": 1.0, "round": "c097", "seq": "𝍀𝍁𝍂𝍃𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎", "why": "falsify-skip"}}
+{"context": ["𝍀", "𝍁", "𝍂"], "glyphs": ["𝍀", "𝍁", "𝍂"], "kind": "triad", "qid": "T74c557b2cead", "source": {"mid": "𝍁", "rank": 1.0, "round": "c097", "seq": "𝍀𝍁𝍂𝍃𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎", "why": "falsify-triad"}}
+{"context": ["𝍂", "𝍁", "𝍀"], "kind": "continue", "qid": "Q7f6ff86293b7", "source": {"rank": 1.0, "round": "c097", "seq": "𝍀𝍁𝍂𝍃𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎", "side": "left", "why": "end"}}
+{"candidate": "п", "context": ["з", "и", "й", "к", "л", "м", "н"], "kind": "inhibit", "qid": "I33d0f00e0c26", "source": {"link": "но", "rank": 1.0, "round": "c097", "seq": "ёжзийклмнопрст", "why": "falsify-skip"}}
+{"context": ["о", "н", "п"], "glyphs": ["н", "о", "п"], "kind": "triad", "qid": "Tb909b2f7fa93", "source": {"mid": "о", "rank": 1.0, "round": "c097", "seq": "ёжзийклмнопрст", "why": "falsify-triad"}}
+{"context": ["н", "о", "п", "р", "с", "т"], "kind": "continue", "qid": "Qd175c40752af", "source": {"rank": 1.0, "round": "c097", "seq": "ёжзийклмнопрст", "side": "right", "why": "end"}}
+{"context": ["к", "й", "и", "з", "ж", "ё"], "kind": "continue", "qid": "Q082685938ad2", "source": {"rank": 1.0, "round": "c097", "seq": "ёжзийклмнопрст", "side": "left", "why": "end"}}
+{"candidate": "🡪", "context": ["🡢", "🡣", "🡤", "🡥", "🡦", "🡧", "🡨"], "kind": "inhibit", "qid": "Id7af4627668b", "source": {"link": "🡨🡩", "rank": 1.0, "round": "c097", "seq": "🡠🡡🡢🡣🡤🡥🡦🡧🡨🡩🡪🡫", "why": "falsify-skip"}}
+{"context": ["۷", "۶", "۵", "۴"], "kind": "continue", "qid": "Q5538c2949489", "source": {"k": 4, "link": "۴۳", "rank": 1.0, "round": "c097", "seq": "۹۸۷۶۵۴۳۲۱۰", "why": "falsify-lengthen"}}
+{"context": ["🄻", "🄼", "🄽"], "glyphs": ["🄻", "🄼", "🄽"], "kind": "triad", "qid": "T3dc3fa071e39", "source": {"mid": "🄼", "rank": 1.0, "round": "c097", "seq": "🄿🄾🄽🄼🄻🄺🄹🄸🄷", "why": "falsify-triad"}}
+{"context": ["🄹", "🄸", "🄷"], "kind": "continue", "qid": "Q6bca7f9d3671", "source": {"rank": 1.0, "round": "c097", "seq": "🄿🄾🄽🄼🄻🄺🄹🄸🄷", "side": "right", "why": "end"}}
+{"context": ["🄹", "🄺", "🄻", "🄼", "🄽", "🄾", "🄿"], "kind": "continue", "qid": "Q6d1641ebda7e", "source": {"rank": 1.0, "round": "c097", "seq": "🄿🄾🄽🄼🄻🄺🄹🄸🄷", "side": "left", "why": "end"}}
+{"candidate": "𝝪", "context": ["𝝮", "𝝭", "𝝬"], "kind": "inhibit", "qid": "Idfa83ed9b89d", "source": {"link": "𝝬𝝫", "rank": 1.0, "round": "c097", "seq": "𝝯𝝮𝝭𝝬𝝫𝝪𝝩𝝨", "why": "falsify-skip"}}
+{"context": ["𝝨", "𝝩", "𝝪"], "glyphs": ["𝝨", "𝝩", "𝝪"], "kind": "triad", "qid": "T70cc8117a0e1", "source": {"mid": "𝝩", "rank": 1.0, "round": "c097", "seq": "𝝯𝝮𝝭𝝬𝝫𝝪𝝩𝝨", "why": "falsify-triad"}}
+{"context": ["𝝬", "𝝫", "𝝪", "𝝩", "𝝨"], "kind": "continue", "qid": "Q86fdcf8400b3", "source": {"rank": 1.0, "round": "c097", "seq": "𝝯𝝮𝝭𝝬𝝫𝝪𝝩𝝨", "side": "right", "why": "end"}}
+{"context": ["𝝨", "𝝩", "𝝪", "𝝫", "𝝬", "𝝭", "𝝮", "𝝯"], "kind": "continue", "qid": "Qa740b3cd9b53", "source": {"rank": 1.0, "round": "c097", "seq": "𝝯𝝮𝝭𝝬𝝫𝝪𝝩𝝨", "side": "left", "why": "end"}}
+{"candidate": "⇾", "context": ["⇺", "⇻", "⇼"], "kind": "inhibit", "qid": "Ia5f252b68f7c", "source": {"link": "⇼⇽", "rank": 1.0, "round": "c097", "seq": "⇿⇾⇽⇼⇻⇺", "why": "falsify-skip"}}
+{"context": ["⇿", "⇾", "⇽", "⇼", "⇻"], "kind": "continue", "qid": "Q3369c33a634f", "source": {"k": 5, "link": "⇻⇺", "rank": 1.0, "round": "c097", "seq": "⇿⇾⇽⇼⇻⇺", "why": "falsify-lengthen"}}
+{"candidate": "𝚢", "context": ["𝚞", "𝚟", "𝚠"], "kind": "inhibit", "qid": "Idea05b6a7574", "source": {"link": "𝚠𝚡", "rank": 0.9929, "round": "c097", "seq": "𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣", "why": "falsify-skip"}}
+{"context": ["𝚠", "𝚟", "𝚞"], "glyphs": ["𝚞", "𝚟", "𝚠"], "kind": "triad", "qid": "T2ef58e485353", "source": {"mid": "𝚟", "rank": 0.9929, "round": "c097", "seq": "𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣", "why": "falsify-triad"}}
+{"context": ["𝚑", "𝚐", "𝚏", "𝚎"], "kind": "continue", "qid": "Qe4f27d0a6603", "source": {"rank": 0.9929, "round": "c097", "seq": "𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣", "side": "left", "why": "end"}}
+{"candidate": "𝐹", "context": ["𝑁", "𝑀", "𝐿", "𝐾", "𝐽", "𝐼", "𝐻"], "kind": "inhibit", "qid": "I58c5fed1278d", "source": {"link": "𝐻𝐺", "rank": 0.9924, "round": "c097", "seq": "𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻𝐼𝐽𝐾𝐿𝑀𝑁𝑂𝑃𝑄𝑅𝑆𝑇𝑈𝑉𝑊𝑋𝑌𝑍", "why": "falsify-skip"}}
+{"context": ["𝑈", "𝑉", "𝑊"], "glyphs": ["𝑈", "𝑉", "𝑊"], "kind": "triad", "qid": "T1d56cfe08efe", "source": {"mid": "𝑉", "rank": 0.9924, "round": "c097", "seq": "𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻𝐼𝐽𝐾𝐿𝑀𝑁𝑂𝑃𝑄𝑅𝑆𝑇𝑈𝑉𝑊𝑋𝑌𝑍", "why": "falsify-triad"}}
+{"candidate": "𝑸", "context": ["𝑵", "𝑶"], "kind": "inhibit", "qid": "I426c7a7aa142", "source": {"link": "𝑶𝑷", "rank": 0.9924, "round": "c097", "seq": "𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁", "why": "falsify-skip"}}
+{"context": ["𝑰", "𝑯", "𝑱"], "glyphs": ["𝑯", "𝑰", "𝑱"], "kind": "triad", "qid": "Ta1bebb594408", "source": {"mid": "𝑰", "rank": 0.9924, "round": "c097", "seq": "𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁", "why": "falsify-triad"}}
+{"context": ["𝑲", "𝑳", "𝑴", "𝑵", "𝑶"], "kind": "continue", "qid": "Qe2cc9094b3ef", "source": {"k": 5, "link": "𝑶𝑷", "rank": 0.9924, "round": "c097", "seq": "𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁", "why": "falsify-lengthen"}}
+{"candidate": "𝌢", "context": ["𝌜", "𝌝", "𝌞", "𝌟", "𝌠"], "kind": "inhibit", "qid": "I0cfcc18ae71c", "source": {"link": "𝌠𝌡", "rank": 0.9921, "round": "c097", "seq": "𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎𝌏𝌐𝌑𝌒𝌓𝌔𝌕𝌖𝌗𝌘𝌙𝌚𝌛𝌜𝌝𝌞𝌟𝌠𝌡𝌢𝌣𝌤𝌥𝌦𝌧𝌨𝌩", "why": "falsify-skip"}}
+{"context": ["𝌣", "𝌡", "𝌢"], "glyphs": ["𝌡", "𝌢", "𝌣"], "kind": "triad", "qid": "Tc21f7a37838c", "source": {"mid": "𝌢", "rank": 0.9921, "round": "c097", "seq": "𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎𝌏𝌐𝌑𝌒𝌓𝌔𝌕𝌖𝌗𝌘𝌙𝌚𝌛𝌜𝌝𝌞𝌟𝌠𝌡𝌢𝌣𝌤𝌥𝌦𝌧𝌨𝌩", "why": "falsify-triad"}}
+{"context": ["𝌣", "𝌤", "𝌥", "𝌦", "𝌧", "𝌨", "𝌩"], "kind": "continue", "qid": "Q7f0fe422aeb5", "source": {"rank": 0.9921, "round": "c097", "seq": "𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎𝌏𝌐𝌑𝌒𝌓𝌔𝌕𝌖𝌗𝌘𝌙𝌚𝌛𝌜𝌝𝌞𝌟𝌠𝌡𝌢𝌣𝌤𝌥𝌦𝌧𝌨𝌩", "side": "right", "why": "end"}}
+{"candidate": "𐃈", "context": ["𐂸", "𐂺", "𐂼", "𐂾", "𐃀", "𐃂", "𐃄"], "kind": "inhibit", "qid": "I1aab3d6af689", "source": {"link": "𐃄𐃆", "rank": 0.9919, "round": "c097", "seq": "𐃦𐃤𐃢𐃠𐃞𐃜𐃚𐃘𐃖𐃔𐃒𐃐𐃎𐃌𐃊𐃈𐃆𐃄𐃂𐃀𐂾𐂼𐂺𐂸𐂶𐂴𐂲𐂰𐂮𐂬𐂪𐂨𐂦𐂤𐂢", "why": "falsify-skip"}}
+{"context": ["𐃒", "𐃔", "𐃐"], "glyphs": ["𐃐", "𐃒", "𐃔"], "kind": "triad", "qid": "T1b484e0bb549", "source": {"mid": "𐃒", "rank": 0.9919, "round": "c097", "seq": "𐃦𐃤𐃢𐃠𐃞𐃜𐃚𐃘𐃖𐃔𐃒𐃐𐃎𐃌𐃊𐃈𐃆𐃄𐃂𐃀𐂾𐂼𐂺𐂸𐂶𐂴𐂲𐂰𐂮𐂬𐂪𐂨𐂦𐂤𐂢", "why": "falsify-triad"}}
+{"context": ["𐃘", "𐃚", "𐃜", "𐃞", "𐃠", "𐃢", "𐃤", "𐃦"], "kind": "continue", "qid": "Q94717876a7d4", "source": {"rank": 0.9919, "round": "c097", "seq": "𐃦𐃤𐃢𐃠𐃞𐃜𐃚𐃘𐃖𐃔𐃒𐃐𐃎𐃌𐃊𐃈𐃆𐃄𐃂𐃀𐂾𐂼𐂺𐂸𐂶𐂴𐂲𐂰𐂮𐂬𐂪𐂨𐂦𐂤𐂢", "side": "left", "why": "end"}}
+{"candidate": "ⓠ", "context": ["ⓛ", "ⓜ", "ⓝ", "ⓞ"], "kind": "inhibit", "qid": "I569a1f06c894", "source": {"link": "ⓞⓟ", "rank": 0.9917, "round": "c097", "seq": "ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ", "why": "falsify-skip"}}
+{"context": ["ⓤ", "ⓥ", "ⓦ"], "glyphs": ["ⓤ", "ⓥ", "ⓦ"], "kind": "triad", "qid": "T7b88fc4759b7", "source": {"mid": "ⓥ", "rank": 0.9917, "round": "c097", "seq": "ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ", "why": "falsify-triad"}}
+{"candidate": "𝓥", "context": ["𝓞", "𝓟", "𝓠", "𝓡", "𝓢", "𝓣"], "kind": "inhibit", "qid": "I73c4bf6c0d74", "source": {"link": "𝓣𝓤", "rank": 0.9917, "round": "c097", "seq": "𝓩𝓨𝓧𝓦𝓥𝓤𝓣𝓢𝓡𝓠𝓟𝓞𝓝𝓜𝓛𝓚𝓙𝓘𝓗𝓖𝓕𝓔𝓓𝓒𝓑𝓐", "why": "falsify-skip"}}
+{"context": ["𝓜", "𝓛", "𝓚"], "glyphs": ["𝓚", "𝓛", "𝓜"], "kind": "triad", "qid": "Tca931ed5b92d", "source": {"mid": "𝓛", "rank": 0.9917, "round": "c097", "seq": "𝓩𝓨𝓧𝓦𝓥𝓤𝓣𝓢𝓡𝓠𝓟𝓞𝓝𝓜𝓛𝓚𝓙𝓘𝓗𝓖𝓕𝓔𝓓𝓒𝓑𝓐", "why": "falsify-triad"}}
+{"context": ["𝓢", "𝓣", "𝓤", "𝓥", "𝓦", "𝓧"], "kind": "continue", "qid": "Q7ad334a3d6a5", "source": {"k": 6, "link": "𝓧𝓨", "rank": 0.9917, "round": "c097", "seq": "𝓩𝓨𝓧𝓦𝓥𝓤𝓣𝓢𝓡𝓠𝓟𝓞𝓝𝓜𝓛𝓚𝓙𝓘𝓗𝓖𝓕𝓔𝓓𝓒𝓑𝓐", "why": "falsify-lengthen"}}
+{"context": ["♕", "♖", "♗", "♘", "♙"], "kind": "continue", "qid": "Qfe3020daafa5", "source": {"k": 5, "link": "♙♚", "rank": 0.9917, "round": "c097", "seq": "♔♕♖♗♘♙♚", "why": "falsify-lengthen"}}
+{"context": ["🙪", "🙫", "🙬", "🙭", "🙮", "🙯"], "kind": "continue", "qid": "Q3ef40ce24f8b", "source": {"rank": 0.9872, "round": "c097", "seq": "🙯🙮🙭🙬🙫🙪🙩🙨🙧🙦🙥🙤🙣🙢🙡🙠🙟🙞🙝🙜🙛", "side": "left", "why": "end"}}
+{"context": ["𝗎", "𝗏", "𝗐"], "kind": "continue", "qid": "Q8ea8bc18ba0b", "source": {"rank": 0.9861, "round": "c097", "seq": "𝗐𝗏𝗎𝗍𝗌𝗋𝗊𝗉𝗈𝗇𝗆𝗅𝗄𝗃𝗂𝗁𝗀𝖿𝖾𝖽𝖼𝖻𝖺", "side": "left", "why": "end"}}
+{"context": ["𝔨", "𝔧", "𝔦", "𝔥", "𝔤", "𝔣", "𝔢"], "kind": "continue", "qid": "Q47fb58d51581", "source": {"rank": 0.9825, "round": "c097", "seq": "𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷", "side": "left", "why": "end"}}
+{"context": ["ⵣ", "ⵤ", "ⵥ", "ⵦ"], "kind": "continue", "qid": "Q208837caad80", "source": {"rank": 0.9793, "round": "c097", "seq": "ⵦⵥⵤⵣⵢⵡⵠⵟⵞⵝⵜⵛⵚⵙⵘⵗⵖⵕⵔⵓⵒⵑⵐⵏⵎⵍⵌⵋⵊⵉⵈⵇⵆⵅⵄⵃⵂⵁⵀⴿⴾⴽⴼⴻⴺⴹⴸⴷⴶⴵⴴⴳⴲⴱⴰ", "side": "left", "why": "end"}}
+{"context": ["🁫", "🁬", "🁭", "🁮"], "kind": "continue", "qid": "Q9ad9a71f84a3", "source": {"link": "🁮🁯", "rank": 0.976, "round": "c097", "seq": "🀵🀶🀷🀸🀹🀺🀻🀼🀽🀾🀿🁀🁁🁂🁃🁄🁅🁆🁇🁈🁉🁊🁋🁌🁍🁎🁏🁐🁑🁒🁓🁔🁕🁖🁗🁘🁙🁚🁛🁜🁝🁞🁟🁠🁡🁢🁣🁤🁥🁦🁧🁨🁩🁪🁫🁬🁭🁮🁯🁰🁱🁲🁳🁴", "why": "join-replicate"}}
+{"context": ["㋛", "㋞", "㋡"], "kind": "continue", "qid": "Q961e095c4730", "source": {"rank": 0.975, "round": "c097", "seq": "㋡㋞㋛㋘㋕㋒㋏㋌㋉㋆㋃㋀", "side": "left", "why": "end"}}
+{"context": ["ߘ", "ߙ", "ߚ"], "kind": "continue", "qid": "Qea3419624977", "source": {"rank": 0.97, "round": "c097", "seq": "ߚߙߘߗߖߕߔߓߒߑߐߏߎߍߌߋߊ߉߈߇߆߅߄߃߂߁߀", "side": "left", "why": "end"}}
+{"context": ["⪿", "⪾", "⪽", "⪼", "⪻"], "kind": "continue", "qid": "Q55e47d0b83c9", "source": {"link": "⪺⪻", "rank": 0.9697, "round": "c097", "seq": "⪿⪾⪽⪼⪻⪺⪹⪸⪷⪶⪵⪴⪳", "why": "join-reverse"}}
+{"context": ["⪽", "⪾", "⪿"], "kind": "continue", "qid": "Q8ca397246fac", "source": {"rank": 0.9697, "round": "c097", "seq": "⪿⪾⪽⪼⪻⪺⪹⪸⪷⪶⪵⪴⪳", "side": "left", "why": "end"}}
+{"context": ["𝗵", "𝗴", "𝗳", "𝗲"], "kind": "continue", "qid": "Q35f7f1f78e58", "source": {"rank": 0.9676, "round": "c097", "seq": "𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇", "side": "left", "why": "end"}}
+{"context": ["㋚", "㋙", "㋘", "㋗", "㋖", "㋕"], "kind": "continue", "qid": "Qaa1770c0c001", "source": {"rank": 0.9654, "round": "c097", "seq": "㋴㋳㋲㋱㋰㋯㋮㋭㋬㋫㋪㋩㋨㋧㋦㋥㋤㋣㋢㋡㋠㋟㋞㋝㋜㋛㋚㋙㋘㋗㋖㋕", "side": "right", "why": "end"}}
+{"context": ["㋯", "㋰", "㋱", "㋲", "㋳", "㋴"], "kind": "continue", "qid": "Qc7b6336a3b45", "source": {"rank": 0.9654, "round": "c097", "seq": "㋴㋳㋲㋱㋰㋯㋮㋭㋬㋫㋪㋩㋨㋧㋦㋥㋤㋣㋢㋡㋠㋟㋞㋝㋜㋛㋚㋙㋘㋗㋖㋕", "side": "left", "why": "end"}}
+{"context": ["🜲", "🜳", "🜴"], "kind": "continue", "qid": "Qf2d882643099", "source": {"rank": 0.9644, "round": "c097", "seq": "🜆🜇🜈🜉🜊🜋🜌🜍🜎🜏🜐🜑🜒🜓🜔🜕🜖🜗🜘🜙🜚🜛🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪🜫🜬🜭🜮🜯🜰🜱🜲🜳🜴", "side": "right", "why": "end"}}
+{"context": ["🜈", "🜇", "🜆"], "kind": "continue", "qid": "Qdd479b22a8b1", "source": {"rank": 0.9644, "round": "c097", "seq": "🜆🜇🜈🜉🜊🜋🜌🜍🜎🜏🜐🜑🜒🜓🜔🜕🜖🜗🜘🜙🜚🜛🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪🜫🜬🜭🜮🜯🜰🜱🜲🜳🜴", "side": "left", "why": "end"}}
+{"context": ["𝁑", "𝁓", "𝁕", "𝁗"], "kind": "continue", "qid": "Qb9c6756344e8", "source": {"rank": 0.963, "round": "c097", "seq": "𝀱𝀳𝀵𝀷𝀹𝀻𝀽𝀿𝁁𝁃𝁅𝁇𝁉𝁋𝁍𝁏𝁑𝁓𝁕𝁗", "side": "right", "why": "end"}}
+{"context": ["ᐪ", "ᐩ", "ᐨ", "ᐧ"], "kind": "continue", "qid": "Q6eac6e41082d", "source": {"rank": 0.9611, "round": "c097", "seq": "ᐧᐨᐩᐪᐫᐬᐭᐮᐯᐰᐱᐲᐳᐴᐵᐶᐷᐸᐹᑕᑖᑗ", "side": "left", "why": "end"}}
+{"context": ["𝘒", "𝘓", "𝘔", "𝘕", "𝘖", "𝘗"], "kind": "continue", "qid": "Qb0ee974caa28", "source": {"rank": 0.9611, "round": "c097", "seq": "𝘗𝘖𝘕𝘔𝘓𝘒𝘑𝘐𝘏𝘎𝘍𝘌𝘋𝘊𝘉𝘈𝘡", "side": "left", "why": "end"}}
+{"context": ["к", "й", "и", "з", "ж"], "kind": "continue", "qid": "Qa4c4b39bd0ba", "source": {"link": "еж", "rank": 0.9609, "round": "c097", "seq": "тсрпонмлкйизжедгвб", "why": "join-reverse"}}
+{"context": ["о", "п", "р", "с", "т"], "kind": "continue", "qid": "Q80aa59145291", "source": {"rank": 0.9609, "round": "c097", "seq": "тсрпонмлкйизжедгвб", "side": "left", "why": "end"}}
+{"context": ["⾸", "⾹", "⾺", "⾻", "⾼"], "kind": "continue", "qid": "Qf6ee20297ec4", "source": {"rank": 0.9583, "round": "c097", "seq": "⾯⾰⾱⾲⾳⾴⾵⾶⾷⾸⾹⾺⾻⾼", "side": "right", "why": "end"}}
+{"context": ["⾳", "⾲", "⾱", "⾰", "⾯"], "kind": "continue", "qid": "Qa76a6a2166c5", "source": {"rank": 0.9583, "round": "c097", "seq": "⾯⾰⾱⾲⾳⾴⾵⾶⾷⾸⾹⾺⾻⾼", "side": "left", "why": "end"}}
+{"context": ["⾂", "⾁", "⾀", "⽿"], "kind": "continue", "qid": "Q68d93ae7ad73", "source": {"link": "⽿⽾", "rank": 0.9574, "round": "c097", "seq": "⽺⽻⽼⽽⽾⽿⾀⾁⾂⾃⾄⾅⾆⾇⾈⾉⾊⾋⾌⾍⾎⾏⾐⾑⾒⾓⾔⾕⾖", "why": "join-replicate"}}
+{"context": ["㌅", "㌆", "㌇", "㌈", "㌉", "㌊"], "kind": "continue", "qid": "Qab77aaeae397", "source": {"link": "㌋㌊", "rank": 0.9567, "round": "c097", "seq": "㌟㌞㌝㌜㌛㌚㌙㌘㌗㌖㌕㌔㌓㌒㌑㌐㌏㌎㌍㌌㌋㌊㌉㌈㌇㌆㌅㌄㌃", "why": "join-reverse"}}
+{"context": ["㌟", "㌞", "㌝", "㌜", "㌛", "㌚"], "kind": "continue", "qid": "Qe504c163b261", "source": {"link": "㌙㌚", "rank": 0.9567, "round": "c097", "seq": "㌟㌞㌝㌜㌛㌚㌙㌘㌗㌖㌕㌔㌓㌒㌑㌐㌏㌎㌍㌌㌋㌊㌉㌈㌇㌆㌅㌄㌃", "why": "join-reverse"}}
+{"context": ["㌆", "㌅", "㌄", "㌃"], "kind": "continue", "qid": "Qfc7f06aff9eb", "source": {"rank": 0.9567, "round": "c097", "seq": "㌟㌞㌝㌜㌛㌚㌙㌘㌗㌖㌕㌔㌓㌒㌑㌐㌏㌎㌍㌌㌋㌊㌉㌈㌇㌆㌅㌄㌃", "side": "right", "why": "end"}}
+{"context": ["㌜", "㌝", "㌞", "㌟"], "kind": "continue", "qid": "Q120bec3478fd", "source": {"rank": 0.9567, "round": "c097", "seq": "㌟㌞㌝㌜㌛㌚㌙㌘㌗㌖㌕㌔㌓㌒㌑㌐㌏㌎㌍㌌㌋㌊㌉㌈㌇㌆㌅㌄㌃", "side": "left", "why": "end"}}
+{"context": ["⠎", "⠏", "⠐", "⠑", "⠒", "⠓", "⠔", "⠕"], "kind": "continue", "qid": "Q8a9aacb8b925", "source": {"rank": 0.9559, "round": "c097", "seq": "⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎⠏⠐⠑⠒⠓⠔⠕", "side": "right", "why": "end"}}
+{"context": ["⻐", "⻑", "⻒", "⻓", "⻔"], "kind": "continue", "qid": "Qe86cedf5df3f", "source": {"link": "⻔⻕", "rank": 0.9546, "round": "c097", "seq": "⺴⺵⺶⺷⺸⺹⺺⺻⺼⺽⺾⺿⻀⻁⻂⻃⻄⻅⻆⻇⻈⻉⻊⻋⻌⻍⻎⻏⻐⻑⻒⻓⻔⻕⻖⻗⻘⻙⻚⻛⻜⻝⻞", "why": "join-replicate"}}
+{"context": ["⻚", "⻛", "⻜", "⻝", "⻞"], "kind": "continue", "qid": "Qd7da00cfc978", "source": {"rank": 0.9546, "round": "c097", "seq": "⺴⺵⺶⺷⺸⺹⺺⺻⺼⺽⺾⺿⻀⻁⻂⻃⻄⻅⻆⻇⻈⻉⻊⻋⻌⻍⻎⻏⻐⻑⻒⻓⻔⻕⻖⻗⻘⻙⻚⻛⻜⻝⻞", "side": "right", "why": "end"}}
+{"context": ["ㆄ", "ㆃ", "ㆂ", "ㆁ", "ㆀ"], "kind": "continue", "qid": "Qffed53efb562", "source": {"link": "ㅿㆀ", "rank": 0.9545, "round": "c097", "seq": "ㅢㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲㅳㅴㅵㅶㅷㅸㅹㅺㅻㅼㅽㅾㅿㆀㆁㆂㆃㆄ", "why": "join-reverse"}}
+{"context": ["ㅾ", "ㅿ", "ㆀ", "ㆁ", "ㆂ", "ㆃ", "ㆄ"], "kind": "continue", "qid": "Q91c51a22b8f4", "source": {"rank": 0.9545, "round": "c097", "seq": "ㅢㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲㅳㅴㅵㅶㅷㅸㅹㅺㅻㅼㅽㅾㅿㆀㆁㆂㆃㆄ", "side": "right", "why": "end"}}
+{"context": ["ف", "ق", "ك"], "kind": "continue", "qid": "Qc0d4b23e5bda", "source": {"rank": 0.9542, "round": "c097", "seq": "ثجحخدذرزسشصضطظعغفقك", "side": "right", "why": "end"}}
+{"context": ["🀥", "🀤", "🀣", "🀢"], "kind": "continue", "qid": "Qa76ea0fc1cfd", "source": {"link": "🀡🀢", "rank": 0.9528, "round": "c097", "seq": "🀇🀈🀉🀊🀋🀌🀍🀎🀏🀐🀑🀒🀓🀔🀕🀖🀗🀘🀙🀚🀛🀜🀝🀞🀟🀠🀡🀢🀣🀤🀥🀦🀧🀨🀩🀪🀫", "why": "join-reverse"}}
+{"context": ["ݖ", "ݗ", "ݘ", "ݙ", "ݚ", "ݛ"], "kind": "continue", "qid": "Q8be9e1d6bd58", "source": {"bridge": "ݜ", "rank": 0.9524, "round": "c097", "seq": "ݓݔݕݖݗݘݙݚݛ", "side": "right", "why": "join-end"}}
+{"context": ["ݙ", "ݚ", "ݛ"], "kind": "continue", "qid": "Q1968f254587c", "source": {"rank": 0.9524, "round": "c097", "seq": "ݓݔݕݖݗݘݙݚݛ", "side": "right", "why": "end"}}
+{"context": ["⩙", "⩚", "⩛", "⩜", "⩝"], "kind": "continue", "qid": "Qa536674d5183", "source": {"rank": 0.9524, "round": "c097", "seq": "⩕⩖⩗⩘⩙⩚⩛⩜⩝", "side": "right", "why": "end"}}
+{"context": ["𒐈", "𒐊", "𒐌", "𒐎", "𒐐"], "kind": "continue", "qid": "Qdcd011c231fb", "source": {"rank": 0.9524, "round": "c097", "seq": "𒐀𒐂𒐄𒐆𒐈𒐊𒐌𒐎𒐐", "side": "right", "why": "end"}}
+{"context": ["➤", "➥", "➦"], "kind": "continue", "qid": "Q467ae1a9e834", "source": {"link": "➧➦", "rank": 0.9514, "round": "c097", "seq": "➤➥➦➧➨➩➪➫➬➭➮➯➰➱", "why": "join-reverse"}}
+{"context": ["➩", "➨", "➧", "➦", "➥", "➤"], "kind": "continue", "qid": "Q428c0c4b2f6a", "source": {"bridge": "➣", "rank": 0.9514, "round": "c097", "seq": "➤➥➦➧➨➩➪➫➬➭➮➯➰➱", "side": "left", "why": "join-end"}}
+{"context": ["➪", "➫", "➬", "➭", "➮", "➯", "➰", "➱"], "kind": "continue", "qid": "Qa85244e74e91", "source": {"rank": 0.9514, "round": "c097", "seq": "➤➥➦➧➨➩➪➫➬➭➮➯➰➱", "side": "right", "why": "end"}}
+{"context": ["➪", "➩", "➨", "➧", "➦", "➥", "➤"], "kind": "continue", "qid": "Qbdb294f610eb", "source": {"rank": 0.9514, "round": "c097", "seq": "➤➥➦➧➨➩➪➫➬➭➮➯➰➱", "side": "left", "why": "end"}}
+{"context": ["㊒", "㊓", "㊔", "㊕", "㊖", "㊗", "㊘"], "kind": "continue", "qid": "Q971ee4998380", "source": {"bridge": "㊙", "rank": 0.95, "round": "c097", "seq": "㊘㊗㊖㊕㊔㊓㊒㊑㊐㊏㊎㊍", "side": "left", "why": "join-end"}}
+{"context": ["㊕", "㊖", "㊗", "㊘"], "kind": "continue", "qid": "Q18151c47cd17", "source": {"rank": 0.95, "round": "c097", "seq": "㊘㊗㊖㊕㊔㊓㊒㊑㊐㊏㊎㊍", "side": "left", "why": "end"}}
+{"context": ["դ", "ե", "զ", "է", "ը", "թ", "ժ", "ի"], "kind": "continue", "qid": "Q59c9ab73be1e", "source": {"rank": 0.95, "round": "c097", "seq": "աբգդեզէըթժի", "side": "right", "why": "end"}}
+{"context": ["㊲", "㉟", "㉝"], "kind": "continue", "qid": "Qaf6a8811c42a", "source": {"link": "㉛㉝", "rank": 0.9471, "round": "c097", "seq": "①③⑤⑦⑨⑪⑬⑮⑰⑲㉑㉓㉕㉗㉙㉛㉝㉟㊲", "why": "join-reverse"}}
+{"context": ["Ⓕ", "ⓖ", "Ⓗ"], "kind": "continue", "qid": "Q5fa0a8c83147", "source": {"link": "ⒽⒾ", "rank": 0.9461, "round": "c097", "seq": "ⓐⒷⓒⒹⓔⒻⓖⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇ", "why": "join-replicate"}}
+{"context": ["Ⓞ", "Ⓟ", "Ⓠ", "Ⓡ"], "kind": "continue", "qid": "Q231f5d0f7f21", "source": {"rank": 0.9461, "round": "c097", "seq": "ⓐⒷⓒⒹⓔⒻⓖⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇ", "side": "right", "why": "end"}}
+{"context": ["⽰", "⽱", "⽲", "⽳", "⽴", "⽵"], "kind": "continue", "qid": "Q74011c48f258", "source": {"rank": 0.9456, "round": "c097", "seq": "⽵⽴⽳⽲⽱⽰⽯⽮⽭⽬⽫⽪⽩⽨⽧⽦⽥⽤⽣⽢⽡⽠⽟⽞⽝⽜⽛", "side": "left", "why": "end"}}
+{"context": ["⼆", "⼇", "⼈", "⼉", "⼊"], "kind": "continue", "qid": "Q08abd932b854", "source": {"rank": 0.9444, "round": "c097", "seq": "⼀⼁⼂⼃⼄⼅⼆⼇⼈⼉⼊", "side": "right", "why": "end"}}
+{"context": ["Ц", "Ч", "Ш", "Щ", "Ъ", "Ы", "Ь", "Э"], "kind": "continue", "qid": "Q4cfd18df6f17", "source": {"rank": 0.9431, "round": "c097", "seq": "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭ", "side": "right", "why": "end"}}
+{"context": ["𐅟", "𐅞", "𐅝", "𐅜"], "kind": "continue", "qid": "Q3f9f44f50d26", "source": {"link": "𐅛𐅜", "rank": 0.9409, "round": "c097", "seq": "𐅣𐅢𐅡𐅠𐅟𐅞𐅝𐅜𐅛𐅚𐅙𐅘𐅗𐅖𐅕𐅔𐅓𐅒𐅑𐅐𐅏𐅎𐅍𐅌𐅋𐅊𐅉𐅈𐅇𐅆𐅅𐅄𐅃𐅂𐅁𐅀", "why": "join-reverse"}}
+{"context": ["𐅜", "𐅝", "𐅞", "𐅟", "𐅠", "𐅡", "𐅢", "𐅣"], "kind": "continue", "qid": "Q749ae351d826", "source": {"rank": 0.9409, "round": "c097", "seq": "𐅣𐅢𐅡𐅠𐅟𐅞𐅝𐅜𐅛𐅚𐅙𐅘𐅗𐅖𐅕𐅔𐅓𐅒𐅑𐅐𐅏𐅎𐅍𐅌𐅋𐅊𐅉𐅈𐅇𐅆𐅅𐅄𐅃𐅂𐅁𐅀", "side": "left", "why": "end"}}
+{"context": ["ᗇ", "ᗆ", "ᗅ", "ᗄ", "ᗃ", "ᗂ", "ᗁ", "ᗀ"], "kind": "continue", "qid": "Qeeacb3bfa528", "source": {"link": "ᖿᗀ", "rank": 0.94, "round": "c097", "seq": "ᖰᖱᖲᖳᖴᖵᖶᖷᖸᖹᖺᖻᖼᖽᖾᖿᗀᗁᗂᗃᗄᗅᗆᗇᗈᗉᗊᗋᗌᗍᗎᗏᗐᗑᗒᗓᗔᗕᗖᗗᗘᗙᗚᗛᗜᗝᗞᗟ", "why": "join-reverse"}}
+{"context": ["ᗘ", "ᗗ", "ᗖ", "ᗕ", "ᗔ", "ᗓ", "ᗒ", "ᗑ"], "kind": "continue", "qid": "Qe0a09eb82ba8", "source": {"link": "ᗐᗑ", "rank": 0.94, "round": "c097", "seq": "ᖰᖱᖲᖳᖴᖵᖶᖷᖸᖹᖺᖻᖼᖽᖾᖿᗀᗁᗂᗃᗄᗅᗆᗇᗈᗉᗊᗋᗌᗍᗎᗏᗐᗑᗒᗓᗔᗕᗖᗗᗘᗙᗚᗛᗜᗝᗞᗟ", "why": "join-reverse"}}
+{"context": ["ᗟ", "ᗞ", "ᗝ", "ᗜ", "ᗛ"], "kind": "continue", "qid": "Qe098928b9b52", "source": {"link": "ᗚᗛ", "rank": 0.94, "round": "c097", "seq": "ᖰᖱᖲᖳᖴᖵᖶᖷᖸᖹᖺᖻᖼᖽᖾᖿᗀᗁᗂᗃᗄᗅᗆᗇᗈᗉᗊᗋᗌᗍᗎᗏᗐᗑᗒᗓᗔᗕᗖᗗᗘᗙᗚᗛᗜᗝᗞᗟ", "why": "join-reverse"}}
+{"context": ["ᗝ", "ᗞ", "ᗟ"], "kind": "continue", "qid": "Qd57738b67da4", "source": {"rank": 0.94, "round": "c097", "seq": "ᖰᖱᖲᖳᖴᖵᖶᖷᖸᖹᖺᖻᖼᖽᖾᖿᗀᗁᗂᗃᗄᗅᗆᗇᗈᗉᗊᗋᗌᗍᗎᗏᗐᗑᗒᗓᗔᗕᗖᗗᗘᗙᗚᗛᗜᗝᗞᗟ", "side": "right", "why": "end"}}
+{"context": ["𝓽", "𝓼", "𝓻", "𝓺", "𝓹", "𝓸", "𝓷"], "kind": "continue", "qid": "Qe179f59ae56b", "source": {"link": "𝓷𝓶", "rank": 0.9396, "round": "c097", "seq": "𝔃𝔂𝔁𝔀𝓿𝓾𝓽𝓼𝓻𝓺𝓹𝓸𝓷𝓶𝓵𝓴𝓳𝓲", "why": "join-replicate"}}
+{"context": ["𝓲", "𝓳", "𝓴"], "kind": "continue", "qid": "Q7cff123b06da", "source": {"link": "𝓵𝓴", "rank": 0.9396, "round": "c097", "seq": "𝔃𝔂𝔁𝔀𝓿𝓾𝓽𝓼𝓻𝓺𝓹𝓸𝓷𝓶𝓵𝓴𝓳𝓲", "why": "join-reverse"}}
+{"context": ["𝓷", "𝓶", "𝓵", "𝓴", "𝓳", "𝓲"], "kind": "continue", "qid": "Q4f5bedeeaa19", "source": {"rank": 0.9396, "round": "c097", "seq": "𝔃𝔂𝔁𝔀𝓿𝓾𝓽𝓼𝓻𝓺𝓹𝓸𝓷𝓶𝓵𝓴𝓳𝓲", "side": "right", "why": "end"}}
+{"context": ["𝛓", "𝛒", "𝛑", "𝛐"], "kind": "continue", "qid": "Qfebf82e19aa5", "source": {"link": "𝛏𝛐", "rank": 0.9375, "round": "c097", "seq": "𝛓𝛒𝛑𝛐𝛏𝛎𝛍𝛌𝛋𝛊𝛉𝛈𝛇𝛆𝛅𝛄𝛃𝛂", "why": "join-reverse"}}
+{"context": ["𝛍", "𝛎", "𝛏", "𝛐", "𝛑", "𝛒", "𝛓"], "kind": "continue", "qid": "Qb190f4979165", "source": {"bridge": "𝛔", "rank": 0.9375, "round": "c097", "seq": "𝛓𝛒𝛑𝛐𝛏𝛎𝛍𝛌𝛋𝛊𝛉𝛈𝛇𝛆𝛅𝛄𝛃𝛂", "side": "left", "why": "join-end"}}
+{"context": ["𝛌", "𝛍", "𝛎", "𝛏", "𝛐", "𝛑", "𝛒", "𝛓"], "kind": "continue", "qid": "Q7ee31962342c", "source": {"rank": 0.9375, "round": "c097", "seq": "𝛓𝛒𝛑𝛐𝛏𝛎𝛍𝛌𝛋𝛊𝛉𝛈𝛇𝛆𝛅𝛄𝛃𝛂", "side": "left", "why": "end"}}
+{"context": ["⽌", "⽍", "⽎"], "kind": "continue", "qid": "Q69d69e538fef", "source": {"rank": 0.9375, "round": "c097", "seq": "⽅⽆⽇⽈⽉⽊⽋⽌⽍⽎", "side": "right", "why": "end"}}
+{"context": ["⽉", "⽈", "⽇", "⽆", "⽅"], "kind": "continue", "qid": "Qdfec95fc90ec", "source": {"rank": 0.9375, "round": "c097", "seq": "⽅⽆⽇⽈⽉⽊⽋⽌⽍⽎", "side": "left", "why": "end"}}
+{"context": ["⼪", "⼫", "⼬", "⼭", "⼮"], "kind": "continue", "qid": "Q8395ea35cc83", "source": {"link": "⼯⼮", "rank": 0.9369, "round": "c097", "seq": "⼖⼗⼘⼙⼚⼛⼜⼝⼞⼟⼠⼡⼢⼣⼤⼥⼦⼧⼨⼩⼪⼫⼬⼭⼮⼯⼰⼱⼲⼳", "why": "join-reverse"}}
+{"context": ["㉜", "㉞", "㊱", "㊳", "㊵", "㊷", "㊹"], "kind": "continue", "qid": "Q267e9f266bf4", "source": {"rank": 0.9369, "round": "c097", "seq": "㊹㊷㊵㊳㊱㉞㉜㉚㉘㉖㉔㉒⑳⑱⑯⑭⑫⑩⑧⑥④②⓪", "side": "left", "why": "end"}}
+{"context": ["🅌", "🅋", "🅊", "🅉"], "kind": "continue", "qid": "Qb8b4ff13c722", "source": {"rank": 0.9333, "round": "c097", "seq": "🅉🅊🅋🅌🅍🅎🅏", "side": "left", "why": "end"}}
+{"context": ["Ο", "𝚵", "𝚴", "𝚳", "𝚲", "𝚱"], "kind": "continue", "qid": "Q203e9e8586ae", "source": {"rank": 0.9318, "round": "c097", "seq": "𝚱𝚲𝚳𝚴𝚵ΟΠΡΣΤΥΦΧΨΩ", "side": "left", "why": "end"}}
+{"context": ["⒈", "⒊", "⒌", "⒎", "⒐"], "kind": "continue", "qid": "Qc17323f9f03a", "source": {"link": "⒐⒑", "rank": 0.9286, "round": "c097", "seq": "⒛⒚⒙⒘⒗⒖⒕⒔⒓⒒⒑⒐⒎⒌⒊⒈", "why": "join-replicate"}}
+{"context": ["⋴", "⋵", "⋶", "⋷", "⋸", "⋹"], "kind": "continue", "qid": "Q26cd3a78517a", "source": {"rank": 0.9286, "round": "c097", "seq": "⋹⋸⋷⋶⋵⋴⋳⋲⋱", "side": "left", "why": "end"}}
+{"context": ["𒐢", "𒐡", "𒐠", "𒐟"], "kind": "continue", "qid": "Qd6da7eb8026d", "source": {"link": "𒐞𒐟", "rank": 0.9267, "round": "c097", "seq": "𒐀𒐁𒐂𒐃𒐄𒐅𒐆𒐇𒐈𒐉𒐊𒐋𒐌𒐍𒐎𒐏𒐐𒐑𒐒𒐓𒐔𒐕𒐖𒐗𒐘𒐙𒐚𒐛𒐜𒐝𒐞𒐟𒐠𒐡𒐢", "why": "join-reverse"}}
+{"context": ["𒐠", "𒐡", "𒐢"], "kind": "continue", "qid": "Qc883aaafed02", "source": {"rank": 0.9267, "round": "c097", "seq": "𒐀𒐁𒐂𒐃𒐄𒐅𒐆𒐇𒐈𒐉𒐊𒐋𒐌𒐍𒐎𒐏𒐐𒐑𒐒𒐓𒐔𒐕𒐖𒐗𒐘𒐙𒐚𒐛𒐜𒐝𒐞𒐟𒐠𒐡𒐢", "side": "right", "why": "end"}}
+{"context": ["d", "e", "f", "g", "h", "𝔦"], "kind": "continue", "qid": "Qf2cc87102164", "source": {"link": "𝖏𝔦", "rank": 0.9254, "round": "c097", "seq": "𝖜𝖛𝖚𝖙𝖘𝖗𝖖𝖕𝖔𝖓𝖒𝖑𝖐𝖏𝔦hgfedcba", "why": "join-reverse"}}
+{"context": ["d", "e", "f", "g", "h"], "kind": "continue", "qid": "Q8b24c1ce3f6e", "source": {"link": "𝔦h", "rank": 0.9254, "round": "c097", "seq": "𝖜𝖛𝖚𝖙𝖘𝖗𝖖𝖕𝖔𝖓𝖒𝖑𝖐𝖏𝔦hgfedcba", "why": "join-reverse"}}
+{"context": ["𝖚", "𝖛", "𝖜"], "kind": "continue", "qid": "Q7f1a6d165497", "source": {"rank": 0.9254, "round": "c097", "seq": "𝖜𝖛𝖚𝖙𝖘𝖗𝖖𝖕𝖔𝖓𝖒𝖑𝖐𝖏𝔦hgfedcba", "side": "left", "why": "end"}}
+{"context": ["l", "K", "j", "I"], "kind": "continue", "qid": "Q965f1b77fb8b", "source": {"link": "hI", "rank": 0.9242, "round": "c097", "seq": "lKjIhGfEdCbA", "why": "join-reverse"}}
+{"context": ["G", "h", "I", "j", "K", "l"], "kind": "continue", "qid": "Qe87db92b39f6", "source": {"bridge": "M", "rank": 0.9242, "round": "c097", "seq": "lKjIhGfEdCbA", "side": "left", "why": "join-end"}}
+{"context": ["h", "G", "f", "E", "d", "C", "b", "A"], "kind": "continue", "qid": "Q79933356f66a", "source": {"rank": 0.9242, "round": "c097", "seq": "lKjIhGfEdCbA", "side": "right", "why": "end"}}
+{"context": ["f", "G", "h", "I", "j", "K", "l"], "kind": "continue", "qid": "Q90b118a146c7", "source": {"rank": 0.9242, "round": "c097", "seq": "lKjIhGfEdCbA", "side": "left", "why": "end"}}
+{"context": ["▆", "▇", "█", "🮆", "🮅", "🮄"], "kind": "continue", "qid": "Qbd0836203db6", "source": {"link": "🮄🮃", "rank": 0.9241, "round": "c097", "seq": "▀▁▂▃▄▅▆▇█🮆🮅🮄🮃🮂🮁🮀", "why": "join-replicate"}}
+{"context": ["▂", "▁", "▀"], "kind": "continue", "qid": "Qc184a2040836", "source": {"rank": 0.9241, "round": "c097", "seq": "▀▁▂▃▄▅▆▇█🮆🮅🮄🮃🮂🮁🮀", "side": "left", "why": "end"}}
+{"context": ["𝝹", "𝝸", "𝝷", "𝝶", "𝝵"], "kind": "continue", "qid": "Q86a04c5a60fc", "source": {"link": "𝝴𝝵", "rank": 0.9231, "round": "c097", "seq": "𝝰𝝱𝝲𝝳𝝴𝝵𝝶𝝷𝝸𝝹𝝺𝝻𝝼𝝽𝝾", "why": "join-reverse"}}
+{"context": ["𝝹", "𝝸", "𝝷"], "kind": "continue", "qid": "Qa8ebb3900580", "source": {"link": "𝝶𝝷", "rank": 0.9231, "round": "c097", "seq": "𝝰𝝱𝝲𝝳𝝴𝝵𝝶𝝷𝝸𝝹𝝺𝝻𝝼𝝽𝝾", "why": "join-reverse"}}
+{"context": ["𝝻", "𝝼", "𝝽", "𝝾"], "kind": "continue", "qid": "Q0fc9b7b03662", "source": {"rank": 0.9231, "round": "c097", "seq": "𝝰𝝱𝝲𝝳𝝴𝝵𝝶𝝷𝝸𝝹𝝺𝝻𝝼𝝽𝝾", "side": "right", "why": "end"}}
+{"context": ["🀔", "🀒", "🀐", "🀎", "🀌"], "kind": "continue", "qid": "Qbdb39c45db4f", "source": {"rank": 0.9222, "round": "c097", "seq": "🀌🀎🀐🀒🀔🀖🀘🀚🀜🀞🀠🀢🀤🀦🀨🀪", "side": "left", "why": "end"}}
+{"context": ["㍶", "㍵", "㍴", "㍳", "㍲", "㍱"], "kind": "continue", "qid": "Q7b1919c9f31e", "source": {"bridge": "㍰", "rank": 0.9167, "round": "c097", "seq": "㍱㍲㍳㍴㍵㍶㍷㍸㍹", "side": "left", "why": "join-end"}}
+{"context": ["🮪", "🮫", "🮬", "🮭", "🮮"], "kind": "continue", "qid": "Q056b1d4e7034", "source": {"rank": 0.9167, "round": "c097", "seq": "🮡🮢🮣🮤🮥🮦🮧🮨🮩🮪🮫🮬🮭🮮", "side": "right", "why": "end"}}
+{"context": ["𝙩", "𝙨", "𝙧", "𝙦", "𝙥", "𝙠"], "kind": "continue", "qid": "Qc53532d0acf2", "source": {"rank": 0.9167, "round": "c097", "seq": "𝙫𝙪𝙩𝙨𝙧𝙦𝙥𝙠", "side": "right", "why": "end"}}
+{"context": ["𝙠", "𝙥", "𝙦", "𝙧", "𝙨", "𝙩", "𝙪", "𝙫"], "kind": "continue", "qid": "Q12f99cc9fe81", "source": {"rank": 0.9167, "round": "c097", "seq": "𝙫𝙪𝙩𝙨𝙧𝙦𝙥𝙠", "side": "left", "why": "end"}}
+{"context": ["🭑", "🭒", "🭓", "🭔", "🭕", "🭖", "🭗"], "kind": "continue", "qid": "Qb74a910be50f", "source": {"link": "🭘🭗", "rank": 0.9147, "round": "c097", "seq": "🭿🭾🭽🭼🭻🭺🭹🭸🭷🭶🭵🭴🭳🭲🭱🭰🭯🭮🭭🭬🭫🭪🭩🭨🭧🭦🭥🭤🭣🭢🭡🭠🭟🭞🭝🭜🭛🭚🭙🭘🭗🭖🭕🭔🭓🭒🭑🭐🭏🭎🭍🭌", "why": "join-reverse"}}
+{"context": ["🭌", "🭍", "🭎", "🭏"], "kind": "continue", "qid": "Qe6b71dbe5ce9", "source": {"link": "🭐🭏", "rank": 0.9147, "round": "c097", "seq": "🭿🭾🭽🭼🭻🭺🭹🭸🭷🭶🭵🭴🭳🭲🭱🭰🭯🭮🭭🭬🭫🭪🭩🭨🭧🭦🭥🭤🭣🭢🭡🭠🭟🭞🭝🭜🭛🭚🭙🭘🭗🭖🭕🭔🭓🭒🭑🭐🭏🭎🭍🭌", "why": "join-reverse"}}
+{"context": ["🭎", "🭍", "🭌"], "kind": "continue", "qid": "Q34a5af8fdc07", "source": {"rank": 0.9147, "round": "c097", "seq": "🭿🭾🭽🭼🭻🭺🭹🭸🭷🭶🭵🭴🭳🭲🭱🭰🭯🭮🭭🭬🭫🭪🭩🭨🭧🭦🭥🭤🭣🭢🭡🭠🭟🭞🭝🭜🭛🭚🭙🭘🭗🭖🭕🭔🭓🭒🭑🭐🭏🭎🭍🭌", "side": "right", "why": "end"}}
+{"context": ["🠯", "🠮", "🠭", "🠬", "🠪", "🠩", "🠨", "🠧"], "kind": "continue", "qid": "Q45ccec607d53", "source": {"rank": 0.9139, "round": "c097", "seq": "🠧🠨🠩🠪🠬🠭🠮🠯🠰🠱🠲🠳🠴🠵🠶🠷🠸", "side": "left", "why": "end"}}
+{"context": ["Ԫ", "Ԩ", "Ԧ", "Ԥ", "Ԣ", "Ԡ"], "kind": "continue", "qid": "Q739d3e2efd61", "source": {"link": "ԞԠ", "rank": 0.913, "round": "c097", "seq": "ԖԘԚԜԞԠԢԤԦԨԪ", "why": "join-reverse"}}
+{"context": ["Ԝ", "Ԟ", "Ԡ", "Ԣ", "Ԥ", "Ԧ", "Ԩ", "Ԫ"], "kind": "continue", "qid": "Qa4a4e1f1d939", "source": {"rank": 0.913, "round": "c097", "seq": "ԖԘԚԜԞԠԢԤԦԨԪ", "side": "right", "why": "end"}}
+{"context": ["⢉", "⢊", "⢋", "⢌", "⢍", "⢎", "⢏"], "kind": "continue", "qid": "Q975a37cf493b", "source": {"rank": 0.9091, "round": "c097", "seq": "⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋⢌⢍⢎⢏", "side": "right", "why": "end"}}
+{"context": ["⢂", "⢁", "⢀"], "kind": "continue", "qid": "Qac5461d3b838", "source": {"rank": 0.9091, "round": "c097", "seq": "⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋⢌⢍⢎⢏", "side": "left", "why": "end"}}
+{"context": ["V", "u", "T", "s", "R", "q"], "kind": "continue", "qid": "Qff48b897496d", "source": {"link": "Pq", "rank": 0.9087, "round": "c097", "seq": "aBcDeFgHiJkLmNoPqRsTuVwX", "why": "join-reverse"}}
+{"context": ["X", "w", "V", "u", "T", "s", "R"], "kind": "continue", "qid": "Q52c646b437ee", "source": {"link": "qR", "rank": 0.9087, "round": "c097", "seq": "aBcDeFgHiJkLmNoPqRsTuVwX", "why": "join-reverse"}}
+{"context": ["X", "w", "V", "u", "T"], "kind": "continue", "qid": "Q991f39e7e44e", "source": {"link": "sT", "rank": 0.9087, "round": "c097", "seq": "aBcDeFgHiJkLmNoPqRsTuVwX", "why": "join-reverse"}}
+{"context": ["R", "s", "T", "u", "V", "w", "X"], "kind": "continue", "qid": "Qd3fbf179f8b8", "source": {"rank": 0.9087, "round": "c097", "seq": "aBcDeFgHiJkLmNoPqRsTuVwX", "side": "right", "why": "end"}}
+{"context": ["ㆍ", "ㆌ", "ㆋ"], "kind": "continue", "qid": "Qfe3270ab5d94", "source": {"link": "ㆊㆋ", "rank": 0.9071, "round": "c097", "seq": "ㆀㆁㆂㆃㆄㆅㆆㆇㆈㆉㆊㆋㆌㆍㆎ", "why": "join-reverse"}}
+{"context": ["í", "ì", "ë", "ê", "é", "è", "ç"], "kind": "continue", "qid": "Q20dc91a9d593", "source": {"rank": 0.9069, "round": "c097", "seq": "çèéêëìíîïðñòóôõö÷øùúûüýþÿ", "side": "left", "why": "end"}}
+{"context": ["𝁼", "𝁽", "𝁾", "𝁿", "𝂀", "𝂁"], "kind": "continue", "qid": "Q9705c9f549fc", "source": {"link": "𝂂𝂁", "rank": 0.9062, "round": "c097", "seq": "𝁼𝁽𝁾𝁿𝂀𝂁𝂂𝂃𝂄𝂅𝂆𝂇𝂈𝂉𝂊𝂋𝂌𝂍𝂎𝂏𝂐𝂑𝂒𝂓𝂔𝂕𝂖𝂗𝂘𝂙𝂚𝂛𝂜𝂝𝂞𝂟𝂠𝂡𝂢𝂣𝂤𝂥𝂦𝂧𝂨𝂩𝂪𝂫𝂬𝂭𝂮", "why": "join-reverse"}}
+{"context": ["𝁼", "𝁽", "𝁾", "𝁿"], "kind": "continue", "qid": "Q02ce01502fbc", "source": {"link": "𝂀𝁿", "rank": 0.9062, "round": "c097", "seq": "𝁼𝁽𝁾𝁿𝂀𝂁𝂂𝂃𝂄𝂅𝂆𝂇𝂈𝂉𝂊𝂋𝂌𝂍𝂎𝂏𝂐𝂑𝂒𝂓𝂔𝂕𝂖𝂗𝂘𝂙𝂚𝂛𝂜𝂝𝂞𝂟𝂠𝂡𝂢𝂣𝂤𝂥𝂦𝂧𝂨𝂩𝂪𝂫𝂬𝂭𝂮", "why": "join-reverse"}}
+{"context": ["𝂁", "𝂀", "𝁿", "𝁾", "𝁽", "𝁼"], "kind": "continue", "qid": "Qf29bb8af270d", "source": {"rank": 0.9062, "round": "c097", "seq": "𝁼𝁽𝁾𝁿𝂀𝂁𝂂𝂃𝂄𝂅𝂆𝂇𝂈𝂉𝂊𝂋𝂌𝂍𝂎𝂏𝂐𝂑𝂒𝂓𝂔𝂕𝂖𝂗𝂘𝂙𝂚𝂛𝂜𝂝𝂞𝂟𝂠𝂡𝂢𝂣𝂤𝂥𝂦𝂧𝂨𝂩𝂪𝂫𝂬𝂭𝂮", "side": "left", "why": "end"}}
+{"context": ["␚", "␙", "␘", "␗"], "kind": "continue", "qid": "Qccf83dd50e96", "source": {"link": "␗␖", "rank": 0.9046, "round": "c097", "seq": "␀␁␂␃␄␅␆␇␈␉␊␋␌␍␎␏␐␑␒␓␔␕␖␗␘␙␚␛␜␝␞␟␠␡␢␣␤␥␦", "why": "join-replicate"}}
+{"context": ["␂", "␃", "␄", "␅", "␆"], "kind": "continue", "qid": "Qb635c0d73b19", "source": {"link": "␇␆", "rank": 0.9046, "round": "c097", "seq": "␀␁␂␃␄␅␆␇␈␉␊␋␌␍␎␏␐␑␒␓␔␕␖␗␘␙␚␛␜␝␞␟␠␡␢␣␤␥␦", "why": "join-reverse"}}
+{"context": ["🁽", "🁾", "🁿"], "kind": "continue", "qid": "Q2f6b0fac129c", "source": {"bridge": "🂀", "rank": 0.9, "round": "c097", "seq": "🁹🁺🁻🁼🁽🁾🁿", "side": "right", "why": "join-end"}}
+{"context": ["🁹", "🁺", "🁻", "🁼", "🁽", "🁾", "🁿"], "kind": "continue", "qid": "Q2aee0bf05c9c", "source": {"rank": 0.9, "round": "c097", "seq": "🁹🁺🁻🁼🁽🁾🁿", "side": "right", "why": "end"}}
+{"context": ["🞌", "🞍", "🞎"], "kind": "continue", "qid": "Q804c3ce44903", "source": {"link": "🞏🞎", "rank": 0.8992, "round": "c097", "seq": "🞿🞾🞽🞼🞻🞺🞹🞸🞷🞶🞵🞴🞳🞲🞱🞰🞯🞮🞭🞬🞫🞪🞩🞨🞧🞦🞥🞤🞣🞢🞡🞠🞟🞞🞝🞜🞛🞚🞙🞘🞗🞖🞕🞔🞓🞒🞑🞐🞏🞎🞍🞌🞋🞊", "why": "join-reverse"}}
+{"context": ["ℊ", "𝒻", "ℯ", "𝒹", "𝒸"], "kind": "continue", "qid": "Q00daf0fff4db", "source": {"rank": 0.8965, "round": "c097", "seq": "𝓏𝓎𝓍𝓌𝓋𝓊𝓉𝓈𝓇𝓆𝓅ℴ𝓃𝓂𝓁𝓀𝒿𝒾𝒽ℊ𝒻ℯ𝒹𝒸", "side": "right", "why": "end"}}
+{"context": ["𝍲", "𝍱", "𝍰", "𝍯", "𝍮", "𝍭"], "kind": "continue", "qid": "Qca985e873307", "source": {"rank": 0.8889, "round": "c097", "seq": "𝍸𝍷𝍶𝍵𝍴𝍳𝍲𝍱𝍰𝍯𝍮𝍭", "side": "right", "why": "end"}}
+{"context": ["⍍", "⍌", "⍋", "⍊", "⍉"], "kind": "continue", "qid": "Q81d2f0ebef75", "source": {"link": "⍉⍈", "rank": 0.8889, "round": "c097", "seq": "⍅⍆⍇⍈⍉⍊⍋⍌⍍⍎⍏", "why": "join-replicate"}}
+{"context": ["⍊", "⍉", "⍈"], "kind": "continue", "qid": "Qa5fe4af24e5c", "source": {"link": "⍈⍇", "rank": 0.8889, "round": "c097", "seq": "⍅⍆⍇⍈⍉⍊⍋⍌⍍⍎⍏", "why": "join-replicate"}}
+{"context": ["⨦", "⨥", "⨤", "⨣", "⨢", "⨡", "⨠", "⨟"], "kind": "continue", "qid": "Q0440eb3f6040", "source": {"rank": 0.8889, "round": "c097", "seq": "⨟⨠⨡⨢⨣⨤⨥⨦", "side": "left", "why": "end"}}
+{"context": ["Ձ", "Հ", "Կ", "Ծ", "Խ", "Լ"], "kind": "continue", "qid": "Q2f6818101432", "source": {"link": "ԻԼ", "rank": 0.8833, "round": "c097", "seq": "ԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿՀՁ", "why": "join-reverse"}}
+{"context": ["Զ", "Է", "Ը", "Թ", "Ժ", "Ի", "Լ"], "kind": "continue", "qid": "Qf5f89a44032a", "source": {"link": "ԼԽ", "rank": 0.8833, "round": "c097", "seq": "ԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿՀՁ", "why": "join-replicate"}}
+{"context": ["Կ", "Հ", "Ձ"], "kind": "continue", "qid": "Q1b220ea1d0c3", "source": {"bridge": "Ղ", "rank": 0.8833, "round": "c097", "seq": "ԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿՀՁ", "side": "right", "why": "join-end"}}
+{"context": ["Ծ", "Կ", "Հ", "Ձ"], "kind": "continue", "qid": "Q3ca172211ab0", "source": {"rank": 0.8833, "round": "c097", "seq": "ԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿՀՁ", "side": "right", "why": "end"}}
+{"context": ["≂", "≃", "≄", "≅"], "kind": "continue", "qid": "Q6a9c4190a04c", "source": {"rank": 0.8774, "round": "c097", "seq": "∶∷∸∹∺∻∼∽∾∿≀≁≂≃≄≅", "side": "right", "why": "end"}}
+{"context": ["⢫", "⢪", "⢩", "⢨"], "kind": "continue", "qid": "Q03b857424109", "source": {"rank": 0.875, "round": "c097", "seq": "⢸⢷⢶⢵⢴⢳⢲⢱⢰⢯⢮⢭⢬⢫⢪⢩⢨", "side": "right", "why": "end"}}
+{"context": ["⒅", "⒇", "㉒", "㉔", "㉖", "㉘", "㉚"], "kind": "continue", "qid": "Q3f16fe99bb19", "source": {"rank": 0.875, "round": "c097", "seq": "㉚㉘㉖㉔㉒⒇⒅⒃⒁⑿⑽⑻⑹⑷⑵", "side": "left", "why": "end"}}
+{"context": ["⥉", "⥊", "⥋"], "kind": "continue", "qid": "Qd88e4167eaac", "source": {"link": "⥌⥋", "rank": 0.875, "round": "c097", "seq": "⥉⥊⥋⥌⥍⥎⥏⥐⥑⥒", "why": "join-reverse"}}
+{"context": ["⥎", "⥏", "⥐", "⥑", "⥒"], "kind": "continue", "qid": "Qa983bbe2d030", "source": {"rank": 0.875, "round": "c097", "seq": "⥉⥊⥋⥌⥍⥎⥏⥐⥑⥒", "side": "right", "why": "end"}}
+{"context": ["⥎", "⥍", "⥌", "⥋", "⥊", "⥉"], "kind": "continue", "qid": "Qe256cd7622e6", "source": {"rank": 0.875, "round": "c097", "seq": "⥉⥊⥋⥌⥍⥎⥏⥐⥑⥒", "side": "left", "why": "end"}}
+{"context": ["⑫", "⑮", "⑱", "㉑", "㉔", "㉗"], "kind": "continue", "qid": "Qca8ea48e0d88", "source": {"bridge": "㉚", "rank": 0.875, "round": "c097", "seq": "⑫⑮⑱㉑㉔㉗", "side": "right", "why": "join-end"}}
+{"context": ["㉗", "㉔", "㉑", "⑱", "⑮", "⑫"], "kind": "continue", "qid": "Q789533704162", "source": {"bridge": "⑨", "rank": 0.875, "round": "c097", "seq": "⑫⑮⑱㉑㉔㉗", "side": "left", "why": "join-end"}}
+{"context": ["⑮", "⑱", "㉑", "㉔", "㉗"], "kind": "continue", "qid": "Q674a7cf479ba", "source": {"rank": 0.875, "round": "c097", "seq": "⑫⑮⑱㉑㉔㉗", "side": "right", "why": "end"}}
+{"context": ["⑱", "⑮", "⑫"], "kind": "continue", "qid": "Q72b06db53e07", "source": {"rank": 0.875, "round": "c097", "seq": "⑫⑮⑱㉑㉔㉗", "side": "left", "why": "end"}}
+{"context": ["𝒿", "𝒾", "𝒽", "ℊ", "𝒻", "ℯ", "𝒹", "𝒸"], "kind": "continue", "qid": "Q07830a12ee20", "source": {"rank": 0.8742, "round": "c097", "seq": "𝒸𝒹ℯ𝒻ℊ𝒽𝒾𝒿𝓀𝓁𝓂𝓃𝑜𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏", "side": "left", "why": "end"}}
+{"context": ["ܝ", "ܛ", "ܚ", "ܙ", "ܘ", "ܗ", "ܕ"], "kind": "continue", "qid": "Q4bb0a55172b6", "source": {"rank": 0.8725, "round": "c097", "seq": "ܕܗܘܙܚܛܝܟܠܡܢܣܥܦܧܨܩܪܫܬ", "side": "left", "why": "end"}}
+{"context": ["𝜴", "𝜳", "𝜲", "𝜱", "𝜰", "𝜯", "𝜮", "𝜭"], "kind": "continue", "qid": "Q34c636db116a", "source": {"link": "𝜬𝜭", "rank": 0.869, "round": "c097", "seq": "𝜥𝜦𝜧𝜨𝜩𝜪𝜫𝜬𝜭𝜮𝜯𝜰𝜱𝜲𝜳𝜴𝜵𝜶𝜷𝜸", "why": "join-reverse"}}
+{"context": ["𝜱", "𝜰", "𝜯"], "kind": "continue", "qid": "Qf3edde3f7626", "source": {"link": "𝜮𝜯", "rank": 0.869, "round": "c097", "seq": "𝜥𝜦𝜧𝜨𝜩𝜪𝜫𝜬𝜭𝜮𝜯𝜰𝜱𝜲𝜳𝜴𝜵𝜶𝜷𝜸", "why": "join-reverse"}}
+{"context": ["𝜵", "𝜴", "𝜳", "𝜲"], "kind": "continue", "qid": "Q48f89824701c", "source": {"link": "𝜱𝜲", "rank": 0.869, "round": "c097", "seq": "𝜥𝜦𝜧𝜨𝜩𝜪𝜫𝜬𝜭𝜮𝜯𝜰𝜱𝜲𝜳𝜴𝜵𝜶𝜷𝜸", "why": "join-reverse"}}
+{"context": ["𝜲", "𝜳", "𝜴"], "kind": "continue", "qid": "Qbf804707b621", "source": {"link": "𝜴𝜵", "rank": 0.869, "round": "c097", "seq": "𝜥𝜦𝜧𝜨𝜩𝜪𝜫𝜬𝜭𝜮𝜯𝜰𝜱𝜲𝜳𝜴𝜵𝜶𝜷𝜸", "why": "join-replicate"}}
+{"context": ["🕜", "🕐", "🕧", "🕛", "🕦"], "kind": "continue", "qid": "Qec7818b766fb", "source": {"rank": 0.8674, "round": "c097", "seq": "🕚🕥🕙🕤🕘🕣🕗🕢🕖🕡🕕🕠🕔🕟🕓🕞🕒🕝🕑🕜🕐🕧🕛🕦", "side": "right", "why": "end"}}
+{"context": ["🕓", "🕞", "🕒", "🕝", "🕑", "🕜", "🕐", "🕧"], "kind": "continue", "qid": "Q06b3b864c52a", "source": {"rank": 0.8674, "round": "c097", "seq": "🕛🕦🕚🕥🕙🕤🕘🕣🕗🕢🕖🕡🕕🕠🕔🕟🕓🕞🕒🕝🕑🕜🕐🕧", "side": "right", "why": "end"}}
+{"context": ["❊", "❉", "❈", "❇"], "kind": "continue", "qid": "Q229d37d0c9e1", "source": {"link": "❆❇", "rank": 0.8642, "round": "c097", "seq": "❍❌❋❊❉❈❇❆❅❄❃❂❁❀✿✾✽✼✻✺✹✸✷✶✵✴✳✲✱✰✯✮✭✬✫✪✩✨", "why": "join-reverse"}}
+{"context": ["┸", "┹", "┺", "┻", "┼", "┽"], "kind": "continue", "qid": "Q9841300db1aa", "source": {"rank": 0.8627, "round": "c097", "seq": "┬┭┮┯┰┱┲┳┴┵┶┷┸┹┺┻┼┽", "side": "right", "why": "end"}}
+{"context": ["⢼", "⢽", "⢾", "⢿", "⣀", "⣁", "⣂"], "kind": "continue", "qid": "Q732854b4faeb", "source": {"rank": 0.8611, "round": "c097", "seq": "⢺⢻⢼⢽⢾⢿⣀⣁⣂", "side": "right", "why": "end"}}
+{"context": ["⢿", "⢾", "⢽", "⢼", "⢻", "⢺"], "kind": "continue", "qid": "Q6d60e6acebe2", "source": {"rank": 0.8611, "round": "c097", "seq": "⢺⢻⢼⢽⢾⢿⣀⣁⣂", "side": "left", "why": "end"}}
+{"context": ["ʞ", "ʝ", "ʜ", "ʛ", "ʚ", "ʙ"], "kind": "continue", "qid": "Qcdd702c19cc6", "source": {"rank": 0.8611, "round": "c097", "seq": "ʙʚʛʜʝʞʟʠ", "side": "left", "why": "end"}}
+{"context": ["𐄕", "𐄘", "𐄛", "𐄞"], "kind": "continue", "qid": "Qab5bb46c7a28", "source": {"rank": 0.8611, "round": "c097", "seq": "𐄞𐄛𐄘𐄕𐄒𐄏𐄌𐄉", "side": "left", "why": "end"}}
+{"context": ["𐄙", "𐄛", "𐄝", "𐄟", "𐄡", "𐄣"], "kind": "continue", "qid": "Q51839c108d03", "source": {"rank": 0.8611, "round": "c097", "seq": "𐄣𐄡𐄟𐄝𐄛𐄙𐄗𐄕", "side": "left", "why": "end"}}
