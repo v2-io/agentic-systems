@@ -51,6 +51,17 @@ def written_contexts(ctx, seq):
             out.append((tuple(c2), seq[i]))
     return out
 
+_GRID = [(i + 0.5) / 400 for i in range(400)]
+
+def p_more(k1, k2):
+    """P(theta > 1/2) for theta ~ Beta(k1 + 1/2, k2 + 1/2): the posterior probability that the first of two outcomes is
+    the more often named, from their counts alone"""
+    a, b = k1 + 0.5, k2 + 0.5
+    lw = [(a - 1) * math.log(t) + (b - 1) * math.log(1 - t) for t in _GRID]
+    mx = max(lw)
+    w = [math.exp(x - mx) for x in lw]
+    return sum(wi for wi, t in zip(w, _GRID) if t > 0.5) / sum(w)
+
 class Links:
     def __init__(self, recs):
         self.shown = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))     # ctx -> rater -> first
@@ -147,6 +158,62 @@ class Links:
             if sum(c.get(x, 0) for c in self.picks.get(tuple(F[-j:]), {}).values()) >= minimum:
                 return {"state": 4, "context": "".join(F[-j:]), "flip": False}
         return {"state": 5, "context": "", "flip": False}
+
+    # ---- content splits (the family-disagreement spike's proposal 3, its verified part)
+    def family_modes(self, ctx):
+        """per family at a shown context: (its most named glyph, answers naming it, answers) -- "none" and non-glyphs
+        count among the answers but are never a mode"""
+        out = {}
+        by = collections.defaultdict(collections.Counter)
+        for rt, c in self.shown.get(tuple(ctx), {}).items():
+            by[self.fam[rt]].update(c)
+        for f, c in by.items():
+            gl = [(k, x) for x, k in c.items() if x not in (NONE, OTHER)]
+            if gl:
+                k, x = max(gl, key=lambda kv: (kv[0], kv[1]))
+                out[f] = (x, k, sum(c.values()))
+        return out
+
+    def deciding(self, F):
+        """the longest suffix (2-8 glyphs) of a prefix that minds were shown"""
+        for j in range(min(MAXK, len(F)), 1, -1):
+            if tuple(F[-j:]) in self.shown:
+                return tuple(F[-j:])
+        return None
+
+    def splits(self, run, chart_next):
+        """links of a run where two families' modal continuations differ at the deciding context, either reading
+        direction: every family's mode, count and total, the chart's next glyph, and a CERTAINTY -- for the pair of
+        families most surely split, the smaller of their two posterior probabilities that each family names its own
+        glyph more often than the other's (Jeffreys Betas on the two counts). Facts and a probability; no cut."""
+        out = []
+        for i in range(len(run) - 1):
+            for d, F in (("forward", list(run[:i + 1])), ("backward", list(run[i + 1:])[::-1])):
+                ctx = self.deciding(F)
+                if not ctx:
+                    continue
+                m = self.family_modes(ctx)
+                if len({x for x, _, _ in m.values()}) < 2:
+                    continue
+                counts = collections.defaultdict(collections.Counter)
+                for rt, c in self.shown.get(ctx, {}).items():
+                    counts[self.fam[rt]].update(c)
+                best = (0.0, None)
+                fams = sorted(m)
+                for a in range(len(fams)):
+                    for b in range(a + 1, len(fams)):
+                        f1, f2 = fams[a], fams[b]
+                        x1, x2 = m[f1][0], m[f2][0]
+                        if x1 == x2:
+                            continue
+                        p1 = p_more(counts[f1].get(x1, 0), counts[f1].get(x2, 0))
+                        p2 = p_more(counts[f2].get(x2, 0), counts[f2].get(x1, 0))
+                        if min(p1, p2) > best[0]:
+                            best = (min(p1, p2), [f1, f2])
+                out.append({"idx": i, "direction": d, "context": "".join(ctx), "chart_next": chart_next(ctx),
+                            "families": {f: list(v) for f, v in sorted(m.items())},
+                            "certainty": round(best[0], 4), "pair": best[1]})
+        return out
 
     # ---- the link table
     def all_links(self):

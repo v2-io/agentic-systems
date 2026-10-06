@@ -125,3 +125,29 @@ Gemini Flash leaves `▁` out of 81% of the triads that hold it. In every one of
 
 **Status:** the `▁` finding is a supported observation across the Gemini family, mechanism hypothesized. The `▇█` question is closed: no swap.
 
+
+---
+
+## 2026-10-06 · Where families firmly disagree about the next glyph: seven cases, mostly form against the chart
+
+**How it came up.** Catalog build 4 records, on every run, the links where two families' most named continuations differ at the deciding context, with a certainty: for the most surely split pair of families, the smaller of their posterior probabilities that each names its own glyph more often than the other's. Of 14,705 records, 5,540 carry some split, but almost all rest on a family's single answer (one answer gives at most 0.82). At certainty ≥ 0.9 (a reading, chosen without evidence) there are 97 records, and they share seven contexts. The family-disagreement spike's verification had already found firm content splits rare.
+
+**The seven** [measured; glyph identities from the Unicode database]:
+
+| context | Claude | Grok | Gemini | the chart's next |
+|---|---|---|---|---|
+| `⒅⒄⒃⒂⒁⒀⑿⑾` (parenthesized 18…11) | `⑽` parenthesized ten (2 of 4) | `⑩` circled ten (2/2) | | `⑽` |
+| `⒥⒦` (parenthesized j, k) | `⒧` parenthesized l (4/4) | `ⓛ` circled l (2/2) | | `⒧` |
+| `𝞠𝞡𝞢𝞣𝞤𝞥` (sans-serif bold italic capitals) | `𝞦` the same style's Chi (4/5) | `Χ` plain Greek Chi (2/2) | | `𝞦` |
+| `㊳㊲㊱` (circled 38, 37, 36) | `㊰` CIRCLED IDEOGRAPH NIGHT (4/5) | `㉟` circled 35 (2/2) | `㊰` (1/1) | `㊰` |
+| `┟┠┡┢┣┤┥` (box drawing) | `┦` (5/5) | `┒` (2/2) | | `┦` |
+| `⬊↓` | `↙` light arrow (2 of 5) | `⬋` black arrow (2/2) | `⬋` (1/1) | `→` |
+| `#$%` | `&` (2 of 4) | `&` (2/2) | `^` (2/2) | `&` |
+
+**Reading** [inference, seven cases]:
+- In three, Grok keeps the meaning and drops the form (circled for parenthesized, plain Greek for the styled letter). Claude keeps the form, which here is also the chart's next glyph. The spike found the same lean on its whole data: Grok leaves the "dress" a little more often.
+- In one, `㊳㊲㊱`, the chart's next glyph is not a number at all, and Claude (and Gemini's one answer) follow it; Grok continues the count. This is the clearest case so far of chart-following against the sequence's meaning, and it's Claude's.
+- `#$%` → `^` is Gemini continuing the US keyboard's shifted digit row (3 4 5 6) where the others continue ASCII order: a model-sensitive sequence by convention, not by perception.
+- `⬊↓` → `⬋` (Grok, Gemini) keeps the black style of `⬊`; Claude's `↙` keeps the direction in the light style of `↓`.
+
+**Status:** observation, n = 7, Grok's side resting on two answers each. Gemini has been paused since 16:08. The catalog field (`content_splits`) is there for every record, so these can be re-read as answers accumulate.

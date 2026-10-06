@@ -10,6 +10,8 @@ implements part of CATALOG v5 and says which part:
           the default view (§11); lookalike substitution as a run-level quantity. Build 1 (catalog/links.py): every
           link c -> x with G in three channels (shown, written, picked; raw per family) and L against near decoys
           (Abbott, Bayes factor); and the state (§8) of every link of every record, summarised on the record.
+          Build 4: content splits on every record -- links where two families' most named continuations differ at
+          the deciding context, each family's mode with its counts and the chart's next glyph (facts, no cut).
           Build 3: the rest of §3's candidate inputs as records (the tree's walks, written walks, BEST's strongest
           paths, triad chains, reasoned continuations), and seed raters (who proposed each run) on every record.
           Build 2 (catalog/order.py): O, the agreement of every triad and order answer bearing on a run with its order,
@@ -42,7 +44,7 @@ import best as BE                                   # noqa: E402  strongest_path
 import tree as TR                                   # noqa: E402
 import plan as PL                                   # noqa: E402  block()
 
-MODEL = "catalog-v5-build3"
+MODEL = "catalog-v5-build4"
 SEAL_FILE = ROOT / "audits" / "SEAL-canary-choose-2026-10-06.md"
 CANARY = set("▁▂▃▄▅▆▇█🮆🮅🮄▀🮃🮂▔▉")
 PARAMS = {                                           # every one chosen without evidence (CATALOG §13 freezes them)
@@ -486,6 +488,7 @@ def main():
             rlinks.append({"record": r["id"], "idx": i, "a": g[i], "b": g[i + 1], "state": st["state"],
                            "direction": st["direction"], "context": st["context"], "flip": st["flip"]})
         c = collections.Counter(sts)
+        r["content_splits"] = LX.splits(g, lambda ctx: PL.chart_neighbour(ctx[-2], ctx[-1])) or None
         r["link_states"] = {str(k): c.get(k, 0) for k in range(1, 6)}
         r["weakest_link"] = max(sts) if sts else None
         r["flips"] = sum(1 for x in rlinks[-len(sts):] if x["flip"]) if sts else 0
@@ -504,6 +507,10 @@ def main():
                           "record_links": len(rlinks),
                           "weakest_link": dict(collections.Counter(str(r["weakest_link"]) for r in rows)),
                           "o_scored": sum(1 for r in rows if r["o_strength"] is not None),
+                          "content_splits_by_certainty": dict(collections.Counter(
+                              ("certainty >= 0.9" if max(x["certainty"] for x in r["content_splits"]) >= 0.9 else
+                               "0.5-0.9" if max(x["certainty"] for x in r["content_splits"]) >= 0.5 else "< 0.5")
+                              for r in rows if r["content_splits"])),   # the bands are a reading, chosen without evidence
                           "o_certain": sum(1 for r in rows if (r["o_bf"] or 0) >= PARAMS["BF_CERTAIN"] and (r["o_strength"] or 0) > 0),
                           "recognised": sum(r["recognised"] for r in rows),
                           "view": dict(collections.Counter(r["view"] for r in rows if r["view"])),
@@ -516,7 +523,7 @@ def main():
                 w.writerow([json.dumps(r[c], ensure_ascii=False) if isinstance(r[c], (list, dict)) else ("" if r[c] is None else r[c]) for c in cols])
     RC = ["id", "glyphs", "length", "chart_class", "set_class", "sources", "r_strength", "r_sd", "r_bf", "r_families", "recognised",
           "chart_state", "name_state", "view", "contested", "contested_asked", "lookalike", "link_states", "weakest_link", "flips",
-          "o_strength", "o_sd", "o_bf", "o_families", "o_other", "seed_raters", "evidence", "o_evidence"]
+          "o_strength", "o_sd", "o_bf", "o_families", "o_other", "seed_raters", "content_splits", "evidence", "o_evidence"]
     LC = ["context", "k", "x", "g_shown", "g_written", "g_picked", "next_ranks", "l_families", "l_strength", "l_sd", "l_bf", "evidence"]
     RLC = ["record", "idx", "a", "b", "state", "direction", "context", "flip"]
     PC = ["record", "orientation", "kind", "idx", "context", "run_choice", "alternative", "state", "instrument", "n", "k", "p",
@@ -536,7 +543,7 @@ CREATE TABLE {schema}.records (id text primary key, glyphs text, length int, cha
   r_strength double precision, r_sd double precision, r_bf double precision, r_families jsonb, recognised boolean,
   chart_state text, name_state text, "view" text, contested int, contested_asked int, lookalike jsonb, link_states jsonb,
   weakest_link int, flips int, o_strength double precision, o_sd double precision, o_bf double precision, o_families jsonb,
-  o_other jsonb, seed_raters jsonb, evidence jsonb, o_evidence jsonb);
+  o_other jsonb, seed_raters jsonb, content_splits jsonb, evidence jsonb, o_evidence jsonb);
 CREATE TABLE {schema}.links (context text, k int, x text, g_shown jsonb, g_written jsonb, g_picked jsonb, next_ranks jsonb,
   l_families jsonb, l_strength double precision, l_sd double precision, l_bf double precision, evidence jsonb);
 CREATE TABLE {schema}.record_links (record text, idx int, a text, b text, state int, direction text, context text, flip boolean);
