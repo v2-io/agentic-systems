@@ -1,241 +1,287 @@
 # CATALOG: the canonical catalog of sequences
 
-*Design, version 2 (2026-10-06), by the independent session (Claude Opus 5.5) with Joseph. Not built. Version 1 was audited de novo the same day (`audits/catalog-design-2026-10-06.md`, findings F1–F12). §13 maps each finding to what changed. A fresh audit of this version comes before anything is built. METHODOLOGY §2a lists the catalog as concern 6. References to "METHODOLOGY §n" are to that file; a bare "§n" is a section of this one.*
+*Design, version 3 (2026-10-06), by the independent session (Claude Opus 5.5) with Joseph. Not built. Earlier versions were audited de novo: version 1 in `audits/catalog-design-2026-10-06.md` (findings F1–F12), version 2 in `audits/catalog-design-v2-2026-10-06.md` (A1–A11). §14 maps each finding to what changed. A fresh audit of this version comes before anything is built. METHODOLOGY §2a lists the catalog as concern 6. "METHODOLOGY §n" refers to that file; a bare "§n" is a section of this one.*
 
 ## 1. Why
 
-METHODOLOGY §2a says that sequences, branches, ends, cycles and stability are *read off* the tree. What exists instead is a sound store of raw answers indexed by context, and readers that each derive sequences their own way: the tree's walks, the planner's walks and branch draws, BEST's paths, folding and ranking, and triad chains. Each is a partial model of one question, and each correction in one has exposed a loss in another. In two days:
+METHODOLOGY §2a says that sequences, branches, ends, cycles and stability are *read off* the tree. What exists instead is a sound store of raw answers indexed by context, and readers that each derive sequences their own way: the tree's walks, the planner's walks and branch draws, BEST's paths, folding and ranking, and triad chains. Each is a partial model of one question, and each correction in one has exposed a loss in another:
 
-- **Majority rule.** BEST confirmed links by majority in continue answers alone, so a "none" counted against a link. Morph ladders such as `-=>})|` disappeared.
-- **Ranking.** Sorting by length hid every short cross-block run. Equal family weighting ranked a run two families confirmed below one only Claude had answered.
+- **Majority rule.** BEST confirmed links by majority in continue answers alone, so a "none" counted against a link, and morph ladders such as `-=>})|` disappeared.
+- **Ranking.** Sorting by length hid every short cross-block run.
 - **The cap at 8.** Pick contexts were silently capped at 8 glyphs.
-- **The triad era's rows.** No reader generated candidates from the ported triads. Joseph's block-fill cycle `▁▂▃▄▅▆▇█🮆🮅🮄…`, which the triad era grew in r004–r006, appeared nowhere.
+- **The triad era's rows.** Of the 300 rows of the triad era's last STANDINGS.md (r012), 232 appeared nowhere. Joseph's block-fill cycle `▁▂▃▄▅▆▇█🮆🮅🮄…` was among them.
 
-Joseph, 2026-10-06: *"would it make sense … to somehow create a script that gives a 'canonical' source of all 'possibly meaningful sequences + cycles', deduplicated, same-directioned, canonical starting point for cycles, every plausible branch getting its own 'record', and the edges in the chain being determined from the raw data in a defensible and proper way, auditable, giving the ultimate score for that branch/sequence etc.? … or is that what context-tree was already supposed to be and we basically have a 'raw-data context-tree' and a 'canonical statistically sound context-tree' maybe?"*
+Joseph, 2026-10-06: *"we basically have a 'raw-data context-tree' and a 'canonical statistically sound context-tree' maybe?"*
 
-**A precedent, and what is different this time.** The triad era also had a global fit that ordered glyphs. It *"dropped/merged valid creative sequences"* (commit `b1a78dbe`), placed glyphs arbitrarily on links nobody had asked (OBSERVATIONS, 2026-10-04), and was demoted to a guess-proposer. The catalog is the second global model proposed as the source of sequences. What differs:
+**A precedent, and what is different this time.** The triad era also had a global fit that ordered glyphs. It *"dropped/merged valid creative sequences"* (commit `b1a78dbe`), placed glyphs arbitrarily on links nobody had asked (OBSERVATIONS, 2026-10-04), and was demoted to a guess-proposer. What differs:
 
 - Evidence is answers only, and every number is itemised to them.
-- An untested link is shown as untested, never filled in by a prior (§7).
-- Nothing is folded, merged or cut: containment and branches are relations (§4).
-- Each kind of contrast is its own part of a record, never pooled into one rate (§6b).
+- An untested link is shown as untested, never filled in (§8).
+- Nothing is folded, merged or cut.
+- Each kind of contrast is its own part (§6).
+- The model is frozen before the canaries are computed (§13).
 
 ## 2. What it is for
 
-Recognition is the goal (METHODOLOGY §1), and Joseph has said which recognition matters most:
+Recognition is the goal (METHODOLOGY §1). Joseph has said which recognition matters most:
 
 > *"An interpretable rational sequence (given some thought) is fine. Originally I gave more weight to monotonic perceptual sequences that were also monotonic in chart order / code-point magnitude. … one place where I feel the preponderance of claude models here who find it easy to look at sequences in terms of code-point location is potentially giving us, after everything, a very 'obvious answer -- just do it like the codepoints had it'. It's fine. It's not anything I'm excited about rediscovering. An 'intuitive' sequence that doesn't need internal arithmetic or thinking about the glyph's name and codepoint is (much) better."*
 
-So the catalog must keep three things apart, and rank them in this order:
+So the catalog sorts recognition into four tiers, ranked in this order. A tier is defined by **what the recognition survives**, not by how much the mind deliberated (§7):
 
-1. **Intuitive recognition.** It holds without deliberation and without the code chart.
-2. **Rational recognition.** It is interpretable given some thought.
-3. **Chart-borne recognition.** Code-point order, with nothing else holding it.
+1. **Intuitive.** Recognised, and it holds where the code chart points elsewhere.
+2. **Rational.** Recognised, interpretable with thought, and not reached by chart arithmetic.
+3. **Chart-congruent, undiscriminated.** Recognised, but the chart and the look agree everywhere, and nothing yet tells them apart. This is an honest state, not a verdict.
+4. **Chart-borne.** Recognised only where the chart supports it: it fails where the chart points elsewhere, or it was reached by code-point lookup and not felt.
 
-The roster makes this harder. Claude gives about two thirds of the answers, and its minds most readily read glyphs as chart positions. The rater model (§6c) and the contrast parts (§6b) exist largely so that volume from one family and fluency with the chart can't stand in for perception.
+**Why the roster makes this hard.** Claude gives about two thirds of the answers, and on runs that walk the chart its reasons cite the chart about twice as often as Grok's (0.38 against 0.18; `spikes/whys-basis-2026-10-06/FINDINGS.md`). That's a difference in what the families *say*. Whether it is also a difference in what their judgements rest on is what the discriminator positions (§6c) measure.
 
 ## 3. Where it sits
 
 ```
 probing (1) ──answers──▶ raw tree (2) ──▶ CATALOG (6) ──▶ priority (3): what to ask next
 port (4) ────answers──▶       │                     ├──▶ read-offs (5): BEST, SEQUENCES, PROGRESS
-                              │                     └──▶ probing (1): measurement findings (sheet position, conditions)
+                              │                     └──▶ probing (1): measurement findings (conditions, sheet position)
 ```
 
-- **Inputs.** The catalog reads answer records and their tags only, never `source` (why a question was asked). §5 says which records count.
-- **Determinism.** The same inputs, recorded as a manifest of file hashes, and the same model version give the same catalog (§10).
-- **Readers.** Priority and the read-offs read the catalog for anything about sequences. A reader that wants a view, such as BEST's length sections or a ranking key, makes it from catalog records and never re-derives links. Strength and certainty sit side by side on every record (§6a); choosing the ranking key is the read-off's job.
-- **Probing.** Rater conditions and sheet-position effects, once estimated (§6c), are measurement-validity findings for concern 1.
-- **Candidate inputs** may be named propositions to score: survey and dropspot seeds, the triad era's grown rows (`../data/growth/r004–r012.json`), triad chains, and shuffles a mind called coherent. **Seed votes are evidence, as their own rater** (§6c). Joseph's standing direction is that seeds are tagged votes, *"segregate those out if we need a more pure analysis"*. Grown rows and chains are candidates only: they were derived by rules, not answered.
+- **Inputs.** The catalog reads answer records and their tags, never `source` (why a question was asked). Whatever it needs from that, such as which inhibit questions were skip tests, it derives structurally (§5).
+- **Determinism.** The same inputs, recorded as a manifest of file hashes, and the same frozen model version give the same catalog (§11).
+- **Readers.** Priority and the read-offs read the catalog for anything about sequences. Strength and certainty sit side by side on every record (§7), and choosing a ranking key is the read-off's job. Joseph: *"side-by-side is canonical."*
+- **Candidate inputs** are named propositions to score: survey and dropspot seeds, the triad era's grown rows (`../data/growth/r004–r012.json`), triad chains (`tree.triad_chains`), reasoned continuations, and shuffles a mind called coherent. Of these, **seed votes are evidence, as their own rater** (§7): Joseph's standing direction is that seeds are tagged votes, and *"a mind that generates a sequence recognizes it"*. The others are candidates only.
+- **Once built,** its model supersedes the per-reader standard of METHODOLOGY §2a for every reader.
 
 ## 4. Objects and canonical forms
 
-- **A link** is `c → x` at its own context `c` (an oriented run, any length that was asked). A link at a long context and the same link at its suffix are different propositions. Nothing pools long contexts into short ones, so k\* and stability (METHODOLOGY §3) read from per-context counts as before.
-- **A run** is an ordered list of distinct glyphs, of any length. A run and its reverse are one sequence (METHODOLOGY §2). Its **canonical orientation** puts first whichever end gives the smaller tuple of code points; a display may reorient it.
+- **A link** is `c → x` at its own shown context `c`. Shown contexts run 2–8 glyphs: the probe caps them at 8 (chosen without evidence; it bounds every link's reach). A link at a long context and the same link at its suffix are different propositions, and nothing pools them. k\* and stability (METHODOLOGY §3) read from per-context counts.
+- **A run** is an ordered list of distinct glyphs, of any length. A run and its reverse are one sequence (METHODOLOGY §2). Its **canonical orientation** puts first whichever end gives the smaller tuple of code points.
 - **Which runs are records:**
   - every candidate input (§3);
   - every run asked whole (cohere or order);
-  - every maximal run of links that each carry evidence of their own (§7);
+  - every maximal run whose links each have shown evidence at their full prefix, or are **stable** (§8): their suffix evidence was lengthened backward and nothing flipped;
   - every contiguous window of these that was itself asked whole.
 
-  That is a stated rule, not a cut on score: a run with weak evidence is a record with a weak score. Sub-runs that were never asked and never proposed are not records, which keeps the count linear in the candidates rather than quadratic in length.
-- **Containment** between records is a stored relation, never a deletion.
-- **A branch** is a pair of records sharing a terminal sub-run (at either end, in either orientation) and then continuing differently. It records the shared run and the glyphs that separate them.
-- **A cycle** follows METHODOLOGY §3. A cycle is a path that returns to a context state with every step determined, so a period may repeat glyphs (the bouncing spinner `- \ | / - / | \`). It counts only once a mind has *manifested* it. Its canonical form is the smallest code-point tuple over all rotations of the period, in both orientations.
-- **Long runs.** Whole-run questions show at most 24 glyphs (`probe.MAX_RUN`), but runs are not bounded. A longer run's whole-run evidence comes from its windows that were asked, and its record says which stretches are covered. Coverage is a fact about the record, not a score.
+  It is a stated rule, not a cut on score. Sub-runs never asked and never proposed are not records, which keeps the count linear in the candidates.
+- **Containment** is a stored relation, never a deletion.
+- **A branch** follows METHODOLOGY §3: a context (≥ 2 glyphs) at which two continuations each have evidence. A branch record holds that context and its continuations, and two runs are related as branches when one of them passes through it.
+- **A cycle** follows METHODOLOGY §3: a path returning to a context state with every step determined, so a period may repeat glyphs, and it counts once a mind has *manifested* it. Its canonical form is the smallest code-point tuple over all rotations of the period, in both orientations. **Manifestability is bounded by the caps.** A mind manifests a period P by writing 2P minus the shown glyphs, at most 24 written from at most 8 shown, so P ≤ 16. The record says so.
+- **Long runs.** Whole-run questions show at most 24 glyphs. A longer run's whole-run evidence comes from its windows that were asked, and the record shows which stretches are covered.
 
 ## 5. Inputs: which records count
 
 | records | how they enter |
 |---|---|
-| real answers (continue, pick, inhibit, cohere, order, triad, next, between) | evidence |
-| `call-failed` (about 107,000, nearly all from the void rounds c028–c079) | excluded: a failure is no answer |
-| `limit` (usage limits) | excluded |
-| `tool-attempt` (673) | its own outcome: the mind did not answer from impression (METHODOLOGY §4); kept as a rater-condition finding, not evidence about a link |
-| `unparsed`, `other` (not a glyph), unassigned code points | their own outcomes; never glyphs |
-| reasoned (`sonnet55r`), no-lookup, the protocols `gsp-0.1` and `ctx-0.1` | evidence, as distinct rater conditions (§6c) |
-| reflections | apart: the minds' grammar of sequences, never evidence about a link (METHODOLOGY §3) |
-| seed votes | evidence, as their own rater (§6c) |
-| the muse family (Glimmer, 257 triad-era answers) | evidence, its own rater |
+| real answers: continue, pick, inhibit, cohere, order, triad, choose, next | evidence, by part (§6) |
+| `between` (1,370, triad era: two-sided fills) | a part of its own, B (a two-sided fill at a gap), at the rational tier; never a link |
+| `call-failed`, including reason `limit` (usage limits); about 107,000, nearly all from the void rounds c028–c079 | excluded: a failure is no answer |
+| `tool-attempt` (673) | its own outcome: a measurement about the rater (METHODOLOGY §4), not about a link |
+| `unparsed`, `other`, unassigned code points | their own outcomes. A continuation into unassigned code points is a marker of code-point arithmetic for its run (§6c) |
+| a continuation that reaches the 24-glyph cap | **censored, not ended**: no "end" is read from it |
+| reasoned answers (`sonnet55r`) | by what they contain (`spikes/reasoned-pass-2026-10-06/FINDINGS.md`): continuations reached by code-point lookup mark their link **chart-reached** (§6c); "none" is end evidence at the rational tier; continuations are candidates; never evidence of a felt link |
+| reflections | apart: the minds' grammar of sequences (METHODOLOGY §3) |
+| seed votes | evidence, as their own rater (§7), **clustered by seed**: one survey sequence yields votes at every prefix, and they count as one unit |
 | duplicate answer IDs | one record per ID (46 triad-era records were identical repeats) |
 
-`GAP` in a `between` context is a structure, not a glyph.
+**Controls are identified structurally,** not from `source`:
 
-## 6. The model
+- A **skip test** is an inhibit whose candidate is the glyph two steps on in the record's own run.
+- A **shuffle** carries `tags.control: shuffled`, and is paired with runs by glyph set. Reordered candidates share their original's glyph set, so the pairing is many-to-many and is stored as such.
+- **Chart windows** are `tags.control: chart`.
 
-### 6a. Two quantities per part
+**Joseph's and the dropspot seeds** reach the planner but are not yet answer records. Porting them as tagged votes (`port/port_seeds.py` reading the dropspot) is a prerequisite, so that "Joseph when he proposes a run" has an input.
 
-Every part of a record carries both quantities. They are never collapsed into one.
+## 6. Parts: each claim with its own contrast
 
-- **Strength** is how strongly the minds converge, beyond the matched control. Per rater it is the rate beyond the control's rate, as a share of what is possible beyond it: Abbott's correction, $(p - c)/(1 - c)$. It is combined over raters as in §6c, with its interval.
-- **Certainty** is how sure we are that the strength is above zero: a weight of evidence in decibans, itemised by answer.
-
-A run at 60% and a run at 95% both become certain as answers accumulate; only strength keeps them apart. Certainty also grows with how often a run was asked, which the planner chooses. METHODOLOGY §2a: *"Agreement is the perceptual quantity … The interval is how sure we are of it"*. Joseph, 2026-10-06: *"side-by-side is canonical."*
-
-### 6b. Parts: each claim with its own contrast
-
-There is no single "false" population. What a "yes" is worth depends on what it is contrasted with. Claude calls shuffled runs coherent 21% of the time, chart windows 84%, and real candidates 75% [measured, the audit]. So each part names its contrast and takes its own control:
+### 6a. The parts
 
 | part | claim | evidence | contrast / control |
 |---|---|---|---|
-| **R-shuffle** | this order of these glyphs is recognised | cohere | the same glyphs shuffled |
-| **R-chart** | recognised beyond what code-point order alone explains | cohere and order questions on runs whose visible order and code-point order disagree | the same glyphs in code-point order (a new control; §11) |
-| **O** | the set is ordered this way | order lines and triads, through an ordering model (§6e) | lines and middles that break the order; "only two", "none" |
-| **L-near** | `x` comes directly after `c` | inhibit | near decoys (same chart neighbourhood) |
-| **L-skip** | `x` comes *directly* after, not just later | inhibit | skip tests (the glyph two steps on): plausible, in-sequence, wrong |
-| **G** | minds produce `x` after `c` unprompted | continue (shown), picks; written answers as one unit per answer (§6d) | a measured likelihood of being named (§6d) |
-| **Seed** | a surveyor proposed this run | seed votes | its rater's reliability, estimated from the other parts (§6c) |
+| **R** | this order of these glyphs is recognised | cohere | the same glyphs shuffled, with false-positive rates **by chart class** (contiguous, monotone, other), since Claude says yes to 0.13, 0.20 and 0.28 of their shuffles respectively |
+| **O** | the set is ordered this way | order lines and triads, every asked triple (§6d) | lines and middles that break the order; "only two", "none", "extra" |
+| **L** | `x` comes directly after `c` | inhibit | near decoys, and skip tests: an upper bound on the false-positive rate, since the glyph two on is sometimes right (`▁ ▃ ▅ ▇` is a sequence too) |
+| **D** | at this position, the look (or meaning) wins over the chart | choose: a forced choice between the chart's next glyph and another | the 0.5 baseline; the two are shown in a fated order |
+| **G** | minds produce `x` after `c` unprompted | continue (shown), picks, `next` (rank kept); written answers as one unit per answer | a measured likelihood (§6e) |
+| **B** | `x` fills the gap between two runs | between | none yet |
+| **Seed** | a surveyor proposed this run | seed votes | its rater's reliability (§7) |
 
-**How Joseph's ordering is applied:**
+### 6b. What R can't say
 
-- **Intuitive** recognition is R-shuffle, L-near and G evidence from raters in conditions without deliberation (§6c), together with R-chart wherever its control exists.
-- **Rational** recognition is the same parts from deliberating raters (thinking on, reasoned).
-- **Chart-borne** recognition is a run whose R-chart part is near zero while R-shuffle is high. It is recognised because the chart is in order.
+R measures whether an order is felt beyond its own scramble. Code-point order is a strongly felt order, so chart walks lead on R by construction:
 
-Every record also carries a descriptive **chart-congruence** fact: whether the run is monotone in code points, and its largest code-point step. It is a fact, not a part, and it lets a read-off show chart-borne runs as such.
+| family | contiguous runs | monotone | other |
+|---|---|---|---|
+| Claude, yes | 0.97 | 0.79 | 0.59 |
+| Grok, yes | 0.96 | 0.88 | 0.75 |
 
-### 6c. Raters: minds in conditions, pooled toward their family
+No false-positive rate changes that ordering. So R contributes to recognition, but never to telling the intuitive tier from the chart tiers. That job belongs to D and the markers in §6c.
 
-Within Claude, "yes" to shuffles runs from 0.11 (Sonnet) to 0.34 (Haiku with thinking off). On near decoys it runs from 0.002 to 0.061 [measured, the audit]. So:
+### 6c. Telling the look from the chart
 
-- **A rater is a mind in a condition:** thinking budget, effort, prompt variant, protocol era. Seed sources (per surveyor) are raters too, and so is Joseph when he proposes a run.
-- **Pooling.** Raters are pooled toward their family with a hierarchical prior, so a thinly observed rater borrows strength from its siblings. A family with many minds can't outvote another by volume: each family's pooled contribution enters once, weighted by its own measured discrimination.
-- **Rates come from data.** Each rater, on each part, has a true-positive and a false-positive rate per response category: yes, no and can't tell (Dawid–Skene with three categories, fitted by EM). The false-positive rates come from that part's own controls. The true-positive rates come from items the other parts and raters support, with held-out controls used to check calibration (§12).
-- **Conditions as measurements.** Whether a condition matters (thinking off against on, low effort against medium) is read off the fit, not assumed. This answers METHODOLOGY §4's question of whether the thinking budget is a probing factor.
-- **Seeds.** Seeds weigh as their measured reliability says, which may be more than an ordinary generator: Joseph, *"it can weigh slightly more than the usual generative mind's sequence, and it has more n-gram length to work with."* A survey seed is reasoned generation, so it counts fully as recognition and less as evidence that the recognition is intuitive.
-- **Rater-by-item effects are findings, not noise.** Gemini Flash leaving `▁` out of the fill ramp, probably for tokenizer reasons (OBSERVATIONS, 2026-10-04), is an example. Residual checks (§12) flag items where one rater departs from its own rates, and they are listed, not absorbed.
+These instruments are behavioural, and they come from questions separate from any reason a mind states.
 
-### 6d. Generation, one-way, with a measured likelihood
+- **D: discriminator positions** (built 2026-10-06, the `choose` question). At a context, a forced choice between the chart's next glyph and an alternative. Positions come from two sources:
+  - **Steps inside known runs** where the run's next glyph isn't the chart neighbour: `▁ … █ → 🮆` against the chart's `▉`, and `🮄 → ▀` against `🮃`.
+  - **Contexts where answers split** between a chart-adjacent glyph and another.
 
-Generation is evidence one way (METHODOLOGY §2a): naming `x` counts for `c → x`, and not naming it is never a rejection. Rather than assert that rule, the catalog measures it.
+  D's strength for a run is its preference for the run's own glyph over the chart's, per rater, combined as in §7.
+- **Lookalike substitution** (to build). One glyph of a monotone run is replaced by a near-identical glyph from another block, so the chart order breaks and the look doesn't. If recognition survives, the chart wasn't needed. The source of lookalikes would be Unicode's own confusables data, a published, principled list, not a hand pick.
+- **The unassigned marker.** Continuations into unassigned code points at a run's open ends are "a clean marker of code-point arithmetic" (METHODOLOGY §4) for that run.
+- **Chart-reached links.** A continuation reached by a reasoned mind after a code-point range lookup, at a point where first-impression minds stopped.
+- **A class-level control for monotone runs.** Chart windows (contiguous code-point runs from elsewhere) draw yes 0.84 (Claude) and 0.82 (Grok). A monotone run's R against that rate is a weak but real chart contrast; weak, because both sit near the ceiling.
 
-- **The likelihood of being named.** For links that the other parts recognise, how often are they named at their context? From the audit's first look, the median share of first continuations naming such a link is 0.5, and 14% are never named. G's weight for a link is the likelihood ratio of its naming counts under that distribution against the distribution for links the other parts reject. So "not named" becomes weak evidence, of a size the data set, and the morph case (recognised, rarely named) stays recognisable.
-- **Branch shares.** At each context, the share of answers naming each continuation, "end" included. These come from interpolated Kneser–Ney, which is closed-form, deterministic and recomputable from counts. Raw per-context counts sit beside them for k\* and stability.
-- **Written answers.** One continue answer that writes a 24-glyph chart walk is one piece of evidence about that run, not 23 independent links. Written continuations enter G clustered by answer.
-- **No continue null exists yet.** The only nulls are forced picks at medium effort, a different condition. A continue null needs tagged random contexts asked the continue way, a probing addition (§11).
+**How the tiers are assigned** (§2):
 
-### 6e. Order of a set: triads and order lines
+1. A run whose D positions prefer its own glyphs, or whose lookalike substitution leaves it recognised, is **intuitive** where its recognition holds.
+2. A run with no discriminator position and no substitution yet is **chart-congruent, undiscriminated**.
+3. A run whose D positions prefer the chart, or whose links are chart-reached, or whose ends draw unassigned continuations, is **chart-borne** at those points.
+4. A run recognised with deliberation, not chart-reached, and not discriminated is **rational**.
 
-Triads and order lines are evidence about the **order of a set**, not about adjacency (METHODOLOGY §6: *"A middle says `q` lies between `p` and `r`, not that `q` is adjacent to either"*). They enter part O through a model of orderings: a Mallows or Plackett–Luce likelihood of each rater's middles and lines given a hypothesised order. "Only two", "none" and "extra" are their own outcomes. Two consequences:
+Each assignment lists the instruments that made it.
 
-- **Every asked triple counts**, consecutive or long-range, so the long-range triads the triad era asked bear on a run.
-- **Nothing becomes a transition prior.** No pseudo-counts are added to generation.
+### 6d. Order of a set
 
-The triad era's knowledge comes back by two routes: its rows and chains are *candidates* (§3), and its triads and lines are *evidence of order* (O). Neither is evidence of adjacency.
+Triads and order lines are evidence about the **order of a set**, not adjacency (METHODOLOGY §6). They enter O through a model of orderings: a Mallows dispersion or Plackett–Luce worths, from each rater's middles and lines given a hypothesised order. Every asked triple counts, long-range ones included, and nothing becomes a transition prior.
 
-### 6f. Dependence
+### 6e. Generation, one-way, calibrated without selection
 
-Where independence is assumed, the record says so. The known dependencies and how each is handled:
+Generation is evidence one way (METHODOLOGY §2a). G's weight is the likelihood of a link's naming counts, under the naming distribution of links recognised by other parts, against that of links they reject. Two corrections from the v2 audit (A6):
 
-| dependence | treatment |
-|---|---|
-| within a family; minds in conditions | hierarchical pooling (§6c) |
-| one written answer, many links | clustered: one unit per answer (§6d) |
-| nested contexts | none: each context is its own proposition (§4) |
-| a link inside many runs | the evidence table records it; a run's parts use its own whole-run evidence, and its links' parts are reported, not multiplied (§7) |
-| across channels within one mind | parts are kept apart, so a mind's continue, pick, inhibit and cohere answers about one run aren't summed into one certainty |
-| errors correlated across families (all learned the Unicode charts) | the R-chart part: cross-family agreement on chart walks earns nothing there |
-| within a sheet (position, size, neighbours) | tagged; estimated as rater-condition effects (§6c) |
+- **Calibrate on unselected links.** The links used must have had their recognition question chosen independently of their generation. The largest class of recognised links (`recognize-written`) was asked *because* generation had stopped there, which would bake "not named" into the recognised distribution. Usable sets: the tendril branches (asked whatever their generation), and a tagged random sample of recognition targets going forward.
+- **Carry the reason for asking into tags.** It has to be in `tags`, not `source`, so the catalog can condition on it.
 
-## 7. Untested is a state
+Branch shares at a context are the **raw shares**, per rater and family, with their intervals. There is no smoothing in a record. A smoothed view may exist for priority, labelled as a reader view.
 
-Every link in a record carries one of three states:
+## 7. One model for strength and certainty
 
-- **evidence at its own context**, from any part;
-- **evidence only at a suffix** (shorter context): reported as such, never substituted;
-- **none.**
+For rater $r$ answering item $i$ on a yes/no part, with $c_r$ the false-positive rate (from that part's controls, by chart class for R) and $s_r$ the sensitivity:
 
-A run's record lists its untested links. No prior, backoff or neighbouring evidence fills them in. A run's parts are never a product of link probabilities. That product would penalise length ($0.95^{20} \approx 0.36$), against Joseph's direction that length organises and does not rank. It would also pull a long run with one untested link toward the prior. A run's parts come from whole-run evidence (R, O), and its links are summarised as counts by state and the weakest supported link.
+$$P(\text{yes}_{ri}) = c_r + (1 - c_r)\, s_r\, \theta_i, \qquad \theta_i \in [0, 1]$$
 
-## 8. A record
+- **Strength** is the posterior of $\theta_i$: how strongly the item is recognised, graded.
+- **Certainty** is the weight of evidence for $\theta_i \gt 0$ against $\theta_i = 0$, at a stated alternative ($\theta_i$ at its posterior mean). It is itemised as each answer's log-likelihood ratio, so a hand audit can reproduce it.
+- **"Can't tell"** is a third category with its own rates.
+- **Hierarchical priors** on $c_r$ and $s_r$ pool raters toward their family.
+- **The family combination rule.** Each family's $\theta_i$ is estimated within the family, and the families are combined as a weighted mean, weighted by their measured discrimination, so a family's answer volume can't outvote another family. The likelihood's own rule, where every answer counts, is reported beside it as the "all answers" view.
+- **For the other parts:**
+  - D: the preference probability over the 0.5 baseline.
+  - O: the ordering model's concentration about the hypothesised order.
+  - G: the likelihood ratio of §6e, mapped to the probability of the naming pattern under recognition.
+  - Seed: the rater's reliability.
+- **Raters** are minds in **assigned** conditions: thinking budget (`haiku45nt` 0, `haiku45` 31000), effort (the generator minds at medium), prompt variant, protocol era. Sonnet's and Opus's zero-thinking sheets are *their own choice per sheet*, an outcome of the item, so they enter as a covariate, never as a condition. Deliberation is a measured covariate whose effect is reported, the answer to METHODOLOGY §4's question, and never the definition of a tier.
+- **Seed raters** (per surveyor, and Joseph) are not pooled with the first-impression minds of their family.
+- **Seeds and the complexity offset** (Joseph: recognition is easier than generation, as verifying is easier than finding). A generator's weight on the intuitive tier is measured per chart class. It is the rate at which raters of a family other than the generator's, in an assigned no-deliberation condition, recognise its runs beyond the class-matched control. It applies only as a prior for runs without whole-run evidence of their own, so the same answers are never counted twice. Until a non-Claude assigned no-deliberation rater answers cohere (Gemini Flash, now answering the new kinds first), it is unidentified for Claude-generated seeds, and stated as such.
+
+## 8. Untested is a state
+
+Every link in a record carries one of four states:
+
+1. **evidence at its own (full-prefix) context**;
+2. **stable**: evidence at a suffix, with lengthening tested up to the 8-glyph cap and no flip (METHODOLOGY §3);
+3. **evidence at a suffix only**, lengthening untested;
+4. **none.**
+
+Nothing fills in states 3 or 4. A run's parts come from whole-run evidence (R, O, D) and its links' states and parts are summarised, never multiplied into a product, which would penalise length.
+
+## 9. A record
 
 Each record (a link, run, cycle or branch) carries:
 
 - **Identity:** canonical form, glyphs, kind, containment and branch relations.
-- **Parts (§6b):** strength and certainty for each, with per-rater contributions.
-- **Facts:** chart congruence, coverage per part (answers per rater), link states (§7).
+- **Parts (§6):** strength and certainty for each, with per-rater contributions.
+- **Tier (§6c)** with the instruments that assigned it.
+- **Facts:** chart class, link states (§8), chart-reached links, unassigned continuations at its ends, coverage per part.
 - **Evidence:** the answer IDs behind every number.
 - **Model version** and the fitted rates it was scored under.
 
-## 9. Readers
+Cycles carry their manifestations per rater (period written twice, after less than one period shown) and R on the period. Branches carry the shares at their branch context.
 
-- **Priority (3)** reads parts and their certainty. The most valuable next question is the one most likely to move a record's *intuitive* parts: R-chart controls for chart-congruent candidates, conditions without deliberation, untested links inside strong runs. Replacing the hand-set tiers with this is for METHODOLOGY §5 to decide and Joseph to ratify.
-- **Read-offs (5).** BEST becomes a view of the catalog, showing strength and certainty side by side. Its ranking key is its own, and one overall number only if Joseph asks for one.
-- **Probing (1)** receives the condition and sheet-position findings (§6c).
+## 10. Readers
 
-## 10. Engine and determinism
+- **Priority (3)** reads parts and tiers. The most valuable next question is the one most likely to move a record out of *chart-congruent, undiscriminated*, or to settle a D position: the purpose stated in §2. Certainty grows with asking, and strength intervals are mildly biased under outcome-dependent sampling. Both are noted wherever priority uses them.
+- **Read-offs (5).** BEST becomes a view of the catalog: tiers, strength and certainty side by side, and its own ranking key.
+- **Probing (1)** receives the condition and sheet-position findings.
 
-**Size.** Through c090 there are about 143,500 real answers. The rest of the ~251,000 records are failures (§5). Postgres 18.6 runs locally (`psql-18`). This is small for it.
+## 11. Engine and determinism
 
-**Shape:**
+**Data.** Through c094, about 150,000 real answers (the rest of the ~260,000 records are failures, §5). Postgres 18.6 is local.
 
-- **`answers`:** loaded from `data/answers/*.jsonl`, one row per answer ID. The JSONL ledgers stay the truth.
-- **`evidence`:** one row per (part, proposition, answer, rater), with its contribution.
-- **`raters`, `rates`:** the fitted rates per model version.
-- **`records`, `relations`:** the catalog.
-- **Builds.** Each build is written into a versioned schema, and an atomic switch makes it current, so readers always see a whole build.
+**Computation lives in Python:** the rater fit, the ordering model and the shares. Postgres stores and serves the results:
+
+- `answers` (one row per answer ID);
+- `evidence` (part, proposition, answer, rater, contribution);
+- `raters` and `rates`;
+- `records` and `relations`.
+
+Each build goes into a versioned schema, and an atomic switch makes it current. With one implementation, parity with the JSONL reference is a load check.
 
 **Determinism:**
 
-- **A manifest:** the hashes of every input file, the Unicode version and the model version, stored with the build.
-- **Closed form where possible:** Kneser–Ney for branch shares, EM with a fixed initialisation, a fixed order and a stated tolerance for the raters.
-- **Sums** are done in Python in a fixed order (or as `numeric`), never by a parallel float aggregate.
+- **A manifest:** hashes of every answer file and candidate input (`../data/growth/`, `../data/seeds/`, which HANDOFF schedules to move: hashes don't care, paths do), the Unicode version and the model version.
+- **Fits:** EM with a fixed initialisation, order and tolerance.
+- **Sums:** in Python in a fixed order.
 
-**Reference implementation.** The JSONL-over-Python path stays as the reference until the database reproduces it record for record.
+## 12. Probing additions it needs
 
-## 11. Probing additions it needs
+| addition | status |
+|---|---|
+| discriminator positions (`choose`) | built 2026-10-06 |
+| lookalike substitution, from Unicode's confusables data | to build |
+| **Joseph's basis question.** Asked after the verdict, in a separate turn where the adapter allows. An open prompt first ("what did you notice that made it look that way, or not?"), then plain, even-handed options: how the symbols look / what they stand for or are called / where they sit in the character encoding / can't say / **other: ___**. No value words such as "instinctive" or "immediate". The encoding is named only in the last option. On a fated random half of sheets, so the other half shows whether asking changes the verdict. Its scoring frozen before use. | to build; validated against D, not trusted on consistency with its own reply |
+| **Joseph's two-shot framing.** A consent turn, then "immediate impressions … independent of …", with fated variation in the wording, which never names Unicode. A tagged condition whose outcome is the gap between chart classes (contiguous against other), not the yes rate. Its control is a single turn with the same text. | to build; needs multi-turn adapter calls |
+| **Thinking text.** Claude's and Grok's adapters don't save it (agy does). A record of the reasoning is stronger than a report about it. | to build |
+| the reason for asking, carried in `tags` (§6e) | to build |
+| a continue null (random contexts asked the continue way); order nulls (sets with no order) | to build |
+| porting Joseph's and the dropspot seeds as tagged votes (§5) | to build |
 
-- **The R-chart control.** Runs whose visible order and code-point order disagree, asked both ways: in the run's order, and with the same glyphs in code-point order. For cohere and the order question alike. Candidates come from recognised runs that aren't monotone in code points, and from places where the picks preferred the chart (the canary: after `🮄`, `🮃` ×8, `▀` ×2).
-- **A continue null.** Random contexts asked the continue way, tagged as nulls.
-- **Order-question nulls.** Sets with no order, so part O has a false-positive rate.
+Two things are out of scope. **Images** (Joseph: *"completely orthogonal to the unicode-token-perception issue we are studying"*). **Earlier minds' reasons**, which are used only in generator passes, from a different family, never as evidence.
 
-## 12. Before building
+## 13. Before building
 
-**A fresh de novo audit of this version.** It is briefed only that the design is new and unbuilt.
+**A fresh de novo audit of this version.**
 
-**Acceptance tests, stated before the build:**
+**The model is frozen before the canaries are computed.** The parts, strata, priors, combination rule and tolerances are committed with a date, and the canary results are computed after. That order is recorded, so tests 3 and 4 can't be met by tuning.
+
+**Acceptance tests:**
 
 1. **Determinism.** Rebuilding from the same manifest gives identical catalogs.
-2. **Calibration on held-out controls.** Fit each part's rates on half its controls; the other half must score at its own false-positive rate within the interval.
-3. **The canary, positively.** On the intuitive parts, `▁ ▂ ▃ ▄ ▅ ▆ ▇ █` and the top-down `█ 🮆 🮅 🮄 ▀ 🮃 🮂 ▔` must rank in the upper quarter of recognised runs of their length band, and so must the full cycle once its answers are in.
-4. **The canary, negatively.** Chart walks the study treats as chart-borne (`🨀 🨁 🨂 …`, the `Ý Þ ß à` crossing) must score lower on R-chart than the felt runs of test 3. This test needs §11's control, and it is the reason to build that control first.
-5. **The triad era accounted for.** All 4,905 distinct rows grown in r004–r012 are records with parts, or each is explained.
-6. **Agreement with what is plain.** Where BEST's current recognised and rejected sets rest on plain evidence, the catalog agrees, and every disagreement is explained.
+2. **Transfer of the control rates.** Fit without one whole control class (for example, without chart windows), then predict that class's yes rate from the model's covariates.
+3. **The canary, positively.** At its D positions, `▁ ▂ ▃ ▄ ▅ ▆ ▇ █ → 🮆` (against `▉`) and the top-down steps `🮄 → ▀` (against `🮃`), the run's own glyph is preferred over the chart's, and so the canary is assigned the intuitive tier there.
+   - **Provenance.** Joseph typed `▁▂▃▄▅▆▇█🮆🮅🮄…`. The completion `… ▀ 🮃 🮂 ▔` is the session's, from his description. A fable-1 survey seed corroborates `🮂 🮃 ▀ 🮄 🮅 🮆 █`, while the triad era's grown row has `▉` and ends at `🮀` or `🮁`.
+   - **First look** (a single answer per mind, not a test result). Shown `… 🮄`, the forced picks went to `🮃` (the chart) 8 times and to `▀` twice, so the test can fail.
+4. **The canary, negatively.** Chart-borne candidates are assigned the chart-borne tier at their D positions, or by their markers. Examples are `🨀 🨁 🨂 …` and the reasoned `♖ ♕ ♔ → ♓`.
+5. **The triad era, informatively.** Of the 4,905 grown rows, the fraction with any whole-run evidence, and what their parts and tiers say.
+6. **Agreement with what is plain.** BEST's current recognised and rejected sets: the catalog agrees, and every disagreement is explained.
 7. **Hand audit.** For a sample of records, recomputing each part from the listed answers and rates gives the stored numbers.
-8. **Posterior predictive checks.** The rater model reproduces the observed spread of yes counts per item. Overdispersion is reported, not hidden.
-9. **Stability.** Records' parts move little when one more round is added, and the top of each section is insensitive to which half of the controls was used.
+8. **Posterior predictive checks.** Item-level spread of yes counts against the model, with overdispersion reported.
+9. **Stability.** The parts move little when one more round is added.
 
-## 13. Changes from version 1, by audit finding
+## 14. Changes, by audit finding
 
-- **F1, the contrast class.** Parts with their own controls (§6b); the R-chart part and its control (§11); chart congruence as a fact.
-- **F2, raters.** Minds in conditions, pooled toward families; three response categories; rater-by-item residuals listed (§6c).
-- **F3, generation.** No Pitman–Yor posterior. A measured one-way likelihood (§6d), Kneser–Ney branch shares, raw counts per context. The continue-null claim is removed and the null is listed as needed (§11).
-- **F4, triads.** Evidence of order through an ordering model (§6e), never an adjacency prior.
-- **F5, the run layer.** Stated enumeration rule, containment and branches (§4); no length bound on runs; no product of links; untested as a state (§7).
-- **F6, two quantities.** Strength and certainty side by side (§6a).
-- **F7, dependence.** The table in §6f.
-- **F8, inputs.** §5; size corrected (§10).
-- **F9, seeds.** Restored as evidence, as a rater (§3, §6c).
-- **F10, cycles.** METHODOLOGY §3's definition and manifestation rule (§4).
-- **F11, tests.** Rewritten (§12).
-- **F12, references.** "METHODOLOGY §n" throughout; the probing reader added (§3, §9); the precedent addressed (§1).
+**From version 1's audit (F1–F12)** see version 2's notes, carried forward. In brief:
+
+- contrasts as parts;
+- raters as minds in conditions;
+- a measured one-way G;
+- triads and lines as order evidence;
+- a stated run layer;
+- strength and certainty side by side;
+- a dependence table (now in §6–§7);
+- inputs (§5);
+- seeds restored as a rater;
+- cycles per METHODOLOGY;
+- rewritten tests;
+- explicit references.
+
+**From version 2's audit (A1–A11):**
+
+- **A1, monotone runs.** D, lookalike substitution, the unassigned marker, chart-reached links, a class-level control, and the "chart-congruent, undiscriminated" tier (§2, §6c).
+- **A2, R ranks chart walks first.** Said plainly (§6b): R recognises, but never assigns a tier. Its false-positive rates are taken by chart class.
+- **A3, deliberation as a tier.** Tiers are defined by what recognition survives. Deliberation is a measured covariate. Only assigned conditions count as conditions (§7).
+- **A4, one model.** The latent-strength model of §7, with the family combination rule stated.
+- **A5, Kneser–Ney.** Removed. Raw shares, and a smoothed view only as a labelled reader view (§6e).
+- **A6, G's selection.** Calibrated on unselected links; the reason for asking goes into tags (§6e, §12).
+- **A7, the 8-glyph cap.** Stated; four link states with the stability bridge; censoring at 24 (§4, §5, §8).
+- **A8, inputs.** Reasoned answers decided from what they contain. `next` folded into G, `between` made part B. `limit` is a reason, not an outcome. The dropspot seeds need porting. Seed votes are clustered, seed raters not pooled. Controls are identified structurally, and the skip-control caveat is stated (§5–§7).
+- **A9, cycles and branches.** Their parts, and branches per METHODOLOGY §3. Manifestability bounded by the caps (§4, §9).
+- **A10, tests.** The canary restated against D. Provenance stated. The model frozen first. Transfer tested. Test 5 made informative (§13).
+- **A11.** Priority's target, the manifest, and where computation lives (§10, §11).
+- **The seed refinement.** The auditor's sharper wording (§7).
