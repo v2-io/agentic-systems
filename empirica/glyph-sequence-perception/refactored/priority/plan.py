@@ -240,6 +240,31 @@ def seed_list(seeds, types, rid, purpose):
     out.sort(key=lambda t: not t[2])
     return [(g, sid) for g, sid, _ in out]
 
+_BLOCKS = None
+
+def block(ch):
+    """the Unicode 16 block of a glyph (data/unicode/Blocks-16.0.0.txt), or None"""
+    global _BLOCKS
+    if _BLOCKS is None:
+        _BLOCKS = []
+        for l in open(HERE.parents[1] / "data" / "unicode" / "Blocks-16.0.0.txt", encoding="utf-8"):
+            l = l.split("#")[0].strip()
+            if l:
+                r, n = l.split(";")
+                a, b = r.split("..")
+                _BLOCKS.append((int(a, 16), int(b, 16), n.strip()))
+    o = ord(ch)
+    for a, b, n in _BLOCKS:
+        if a <= o <= b:
+            return n
+    return None
+
+def contested(chart, last):
+    """CATALOG v5 §7a: the chart's candidate is a real alternative only within the block of the glyph before it.
+    Triad departures from the code-point median are 0.13 within one block and 0.69 across three, which is chance
+    (spikes/contested-positions-2026-10-06)."""
+    return block(chart) is not None and block(chart) == block(last)
+
 def chart_neighbour(prev, last):
     """the code-chart neighbour of `last` in the run's direction (from prev to last), if it is an assigned glyph"""
     d = 1 if ord(last) >= ord(prev) else -1
@@ -258,6 +283,7 @@ def choose_work(P, seqs, seeds, rid):
              last) and a non-adjacent one: the most-named of each.
       STEP   steps inside known runs -- Joseph's seeds first, then runs asked whole and ordered seeds -- where the run's
              next glyph is not the chart neighbour of the glyph before it (e.g. ▁ … █ → 🮆, against the chart's ▉).
+    Only contested positions (CATALOG v5 §7a): the chart's glyph in the same Unicode block as the last glyph.
     Each (context, pair) once. -> [(kind, ctx, (x, y), src, probe)]"""
     T = P.T
     def adjacent(x, ctx):
@@ -270,6 +296,7 @@ def choose_work(P, seqs, seeds, rid):
             cnt = collections.Counter(x for xs in fl.values() for x in xs if x not in (TR.NONE, TR.OTHER) and x not in ctx and PR.is_glyph(x))
             ch = [x for x, _ in cnt.most_common() if adjacent(x, ctx)]
             al = [x for x, _ in cnt.most_common() if not adjacent(x, ctx)]
+            ch = [x for x in ch if contested(x, ctx[-1])]
             if ch and al:
                 split.append((list(ctx), al[0], ch[0], "split"))
     PR.R("choose-split-order", {"round": rid}).shuffle(split)
@@ -279,7 +306,7 @@ def choose_work(P, seqs, seeds, rid):
         for i in range(1, len(g) - 1):
             ctx, x = g[:i + 1][-8:], g[i + 1]
             ch = chart_neighbour(g[i - 1], g[i])
-            if ch and ch != x and ch not in ctx and x not in ctx:
+            if ch and ch != x and ch not in ctx and x not in ctx and contested(ch, g[i]):
                 steps.append((ctx, x, ch, "step"))
     out, seen = [], set()
     for a, b in zip(steps + [None] * len(split), split + [None] * len(steps)):
