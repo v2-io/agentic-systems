@@ -90,3 +90,7 @@ The nine Sonnet–Grok splits (identified with the Unicode MCP): styled capital 
 ## 18:30 Literature [read]
 
 Cacioli 2026 (arXiv 2603.14893): signal-detection decomposition of LLM judgements into sensitivity and criterion; calibration metrics conflate them. Panickssery, Bowman & Feng, NeurIPS 2024: LLM evaluators recognise and favour their own generations. TokSuite (arXiv 2512.20757): tokenizer choice measurably changes behaviour. Nothing found on cross-family perception of Unicode sequences.
+
+## 17:30 (clock time) Strengthening after the verification
+
+The verifier's report (`de-novo-feedback-1.md`) and the strengthening attempts it named are answered in `strengthening-1.md`. Correction to this log: its section times from 16:45 to 18:30 above are estimates, not clock readings, as the README says; from here on, times are from `date`.

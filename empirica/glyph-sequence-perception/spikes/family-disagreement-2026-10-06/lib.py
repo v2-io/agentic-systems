@@ -55,6 +55,30 @@ def load(refresh=False):
 
 FAMS = ("claude", "grok", "gemini")
 
+def from_manifest():
+    """rebuild the snapshot from snapshot/manifest.json + snapshot/kept-aids.txt.gz: keep exactly those answer IDs from
+    the current data/answers files (seal applied first, as always), then compare content digests per round."""
+    import gzip
+    here = pathlib.Path(__file__).resolve().parent / "snapshot"
+    m = json.load(open(here / "manifest.json"))
+    want = set(gzip.open(here / "kept-aids.txt.gz", "rt").read().split())
+    keep, seen = [], set()
+    for f in sorted((ROOT / "data" / "answers").glob("*.jsonl")):
+        for line in f.read_text().splitlines():
+            if not line.strip(): continue
+            r = json.loads(line)
+            if sealed(r) or r.get("aid") in seen or r.get("aid") not in want: continue
+            seen.add(r["aid"]); keep.append(r)
+    h = lambda r: hashlib.sha256(json.dumps(r, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+    by = collections.defaultdict(list)
+    for r in keep: by[r["round"]].append(h(r))
+    dig = {k: hashlib.sha256("".join(sorted(v)).encode()).hexdigest()[:16] for k, v in by.items()}
+    bad = sorted(k for k in m["record_digest_by_round"] if dig.get(k) != m["record_digest_by_round"][k])
+    print(f"kept {len(keep)} of {len(want)} listed; rounds whose content differs: {bad or 'none'}")
+    return keep, m
+
 if __name__ == "__main__":
+    if "--from-manifest" in sys.argv:
+        from_manifest(); sys.exit()
     keep, man = load(refresh="--refresh" in sys.argv)
     print(json.dumps({k: v for k, v in man.items() if k != "files"}, indent=1))
