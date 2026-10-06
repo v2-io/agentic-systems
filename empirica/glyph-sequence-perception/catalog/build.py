@@ -10,10 +10,12 @@ implements part of CATALOG v5 and says which part:
           the default view (§11); lookalike substitution as a run-level quantity. Build 1 (catalog/links.py): every
           link c -> x with G in three channels (shown, written, picked; raw per family) and L against near decoys
           (Abbott, Bayes factor); and the state (§8) of every link of every record, summarised on the record.
+          Build 3: the rest of §3's candidate inputs as records (the tree's walks, written walks, BEST's strongest
+          paths, triad chains, reasoned continuations), and seed raters (who proposed each run) on every record.
           Build 2 (catalog/order.py): O, the agreement of every triad and order answer bearing on a run with its order,
           against each unit's chance baseline (strength the common excess, a Bayes factor; other outcomes counted).
-  not yet O's Plackett-Luce fit (§9), G's calibrated likelihood ratio (§9), B, seed raters, maximal runs from
-          links, order lines as position evidence, the name route (reported "unmeasured" until the name-only question
+  not yet O's Plackett-Luce fit (§9), G's calibrated likelihood ratio (§9), B, the seed rater's measured prior
+          (§9), maximal runs enumerated from links (§4; candidate runs come from the sources above), order lines as position evidence, the name route (reported "unmeasured" until the name-only question
           is validated, §7a), posterior predictive checks.
 
 The seal (audits/SEAL-canary-choose-2026-10-06.md): until the seal file records the commit the model was frozen at,
@@ -35,10 +37,12 @@ import run as RUN                                   # noqa: E402  answers(), see
 sys.path.insert(0, str(ROOT / "catalog"))
 import links as LK                                  # noqa: E402  the link layer (CATALOG §4-§6, §8)
 import order as OR                                  # noqa: E402  the O part (CATALOG §6, §9)
+sys.path.insert(0, str(ROOT / "report"))
+import best as BE                                   # noqa: E402  strongest_paths, a candidate source (CATALOG §3)
 import tree as TR                                   # noqa: E402
 import plan as PL                                   # noqa: E402  block()
 
-MODEL = "catalog-v5-build2"
+MODEL = "catalog-v5-build3"
 SEAL_FILE = ROOT / "audits" / "SEAL-canary-choose-2026-10-06.md"
 CANARY = set("▁▂▃▄▅▆▇█🮆🮅🮄▀🮃🮂▔▉")
 PARAMS = {                                           # every one chosen without evidence (CATALOG §13 freezes them)
@@ -392,6 +396,36 @@ def main():
             g = row["glyphs"]
             if len(g) >= 3 and len(set(g)) == len(g):
                 sources[canonical(g)].add("grown:" + f.stem)
+    # build 3: the rest of CATALOG §3's candidate inputs -- named propositions, scored like every other record
+    def cand(g, name):
+        g = list(g)
+        if len(g) >= 3 and len(set(g)) == len(g) and all(len(x) == 1 for x in g):
+            sources[canonical(g)].add(name)
+    T_seed = TR.Tree(recs); T_pure = TR.Tree(recs, seeds=False)
+    for sq in TR.sequences(T_seed):
+        cand(sq["glyphs"], "walk")
+    for sq in TR.sequences(TR.Tree(recs, written=True)):
+        cand(sq["glyphs"], "written walk")
+    for c in BE.strongest_paths(T_pure):
+        cand(c["glyphs"], "strongest path")
+    for c in TR.triad_chains(T_pure):
+        cand(c["glyphs"], "triad chain")
+    for r in recs:
+        if r["kind"] == "continue" and (r.get("tags") or {}).get("variant") == "reasoned" and r.get("outcome") == "continuation":
+            cand(list(r["context"]) + list(r.get("continuation") or []), "reasoned:" + r["mind"])
+    # seeds as their own rater (§9): who proposed each run, kept apart from the first-impression minds
+    seed_raters = collections.defaultdict(list)
+    for x in RUN.seeds():
+        if (x.get("type") or x.get("kind")) not in PL.ORDERED_SEEDS or not isinstance(x.get("glyphs"), list):
+            continue
+        g = list(x["glyphs"])
+        if len(g) > 1 and g[-1] == g[0]:
+            g = g[:-1]
+        if len(g) >= 3 and len(set(g)) == len(g):
+            sv = str(x.get("surveyor") or x.get("author") or "")
+            fam = "human" if PL.is_steward(x) else ("grok" if sv.lower().startswith("grok") else
+                                                    "claude" if sv.lower().startswith(("sonnet", "fable")) else None)
+            seed_raters[canonical(g)].append({"sid": x.get("sid"), "surveyor": sv, "family": fam, "steward": PL.is_steward(x)})
     ix = Index(recs)
 
     rows, prow = [], []
@@ -419,6 +453,7 @@ def main():
                      "contested": sum(1 for p in positions if p["state"] == "contested"),
                      "contested_asked": sum(1 for p in positions if p["ev"] and p["ev"]["n"]),
                      "lookalike": ({k: {"yes": v[0], "n": v[1]} for k, v in la.items()} if la else None),
+                     "seed_raters": seed_raters.get(g) or None,
                      "evidence": raids.get(g, [])})
         for p in positions:
             ev = p["ev"] or {}
@@ -481,7 +516,7 @@ def main():
                 w.writerow([json.dumps(r[c], ensure_ascii=False) if isinstance(r[c], (list, dict)) else ("" if r[c] is None else r[c]) for c in cols])
     RC = ["id", "glyphs", "length", "chart_class", "set_class", "sources", "r_strength", "r_sd", "r_bf", "r_families", "recognised",
           "chart_state", "name_state", "view", "contested", "contested_asked", "lookalike", "link_states", "weakest_link", "flips",
-          "o_strength", "o_sd", "o_bf", "o_families", "o_other", "evidence", "o_evidence"]
+          "o_strength", "o_sd", "o_bf", "o_families", "o_other", "seed_raters", "evidence", "o_evidence"]
     LC = ["context", "k", "x", "g_shown", "g_written", "g_picked", "next_ranks", "l_families", "l_strength", "l_sd", "l_bf", "evidence"]
     RLC = ["record", "idx", "a", "b", "state", "direction", "context", "flip"]
     PC = ["record", "orientation", "kind", "idx", "context", "run_choice", "alternative", "state", "instrument", "n", "k", "p",
@@ -501,7 +536,7 @@ CREATE TABLE {schema}.records (id text primary key, glyphs text, length int, cha
   r_strength double precision, r_sd double precision, r_bf double precision, r_families jsonb, recognised boolean,
   chart_state text, name_state text, "view" text, contested int, contested_asked int, lookalike jsonb, link_states jsonb,
   weakest_link int, flips int, o_strength double precision, o_sd double precision, o_bf double precision, o_families jsonb,
-  o_other jsonb, evidence jsonb, o_evidence jsonb);
+  o_other jsonb, seed_raters jsonb, evidence jsonb, o_evidence jsonb);
 CREATE TABLE {schema}.links (context text, k int, x text, g_shown jsonb, g_written jsonb, g_picked jsonb, next_ranks jsonb,
   l_families jsonb, l_strength double precision, l_sd double precision, l_bf double precision, evidence jsonb);
 CREATE TABLE {schema}.record_links (record text, idx int, a text, b text, state int, direction text, context text, flip boolean);

@@ -1,6 +1,6 @@
 # CATALOG: the canonical catalog of sequences
 
-*Design, version 5 (2026-10-06), by the independent session (Claude Opus 5.5) with Joseph. Partly built: builds 0–2 (§13) implement R, the chart route, the view, the link layer (G and L per link, link states) and O (agreement with order and triad answers); nothing reads it yet. The model is not frozen.*
+*Design, version 5 (2026-10-06), by the independent session (Claude Opus 5.5) with Joseph. Partly built: builds 0–3 (§13) implement R, the chart route, the view, the link layer (G and L per link, link states), O (agreement with order and triad answers), §3's candidate inputs as records, and seed raters; nothing reads it yet. The model is not frozen.*
 
 - *Versions 1–3 were audited de novo (`audits/catalog-design-2026-10-06.md`, `…-v2-…`, `…-v3-…`; findings F1–F12, A1–A11, C1–C10).*
 - *The v3 auditor checked version 4 against its own findings (`audits/catalog-design-v4-check-2026-10-06.md`: V1, V2, Q1, Q2). §15 maps that check to this version.*
@@ -330,6 +330,8 @@ Each build goes into a versioned schema, and an atomic switch makes it current.
 - the model version.
 
 **Fits** use EM with a fixed initialisation, order and tolerance, and sums are taken in a fixed order.
+
+**Build 3** (2026-10-06; the build takes about 4½ minutes, mostly the chart positions of long walks) adds the rest of §3's candidate inputs as records: the tree's walks, the runs written answers carry, BEST's strongest-edge paths, triad chains, and reasoned continuations (context plus continuation), each a named source on the record; 14,156 records. And seed raters: on every record, the seeds that proposed it (surveyor, family, whether Joseph's), kept apart from the first-impression minds; their measured prior (§9) isn't built. Maximal runs enumerated from links (§4) aren't built either: candidate runs come from these sources instead.
 
 **Build 2** (`catalog/order.py`, 2026-10-06; the build now takes about a minute) adds O. Every answer bearing on a run is a unit that agrees with its order or not, against its own chance baseline: an asked triple of the run's glyphs answered with a middle (1/3), and an order answer whose main line places at least 3 of the run's glyphs (2/m! for m glyphs). Strength is the excess over chance common to a family's units, with the same Bayes factor as R and L. "Only two", "none", glyphs put in "extra", ties and lines too short count as their own outcomes, never against the order. **This departs from §9**, which specifies a Plackett–Luce fit with "concentration about the hypothesised order"; that concentration isn't defined closely enough to compute without inventing it, while this scores a given order on the one standard and doesn't find the best order. The fit stays open. First reading: O is scored on 6,996 of 7,761 records and certain on 4,325; `①…⑩` at 0.98 (Claude 134/135 units, Grok 61/61, Gemini 73/73); shuffled block ramps that some mind called coherent, asked as runs, near 0.01.
 
