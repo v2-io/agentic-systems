@@ -149,13 +149,13 @@ def pace(m, spec):
 def driver_minds(reg):
     return {m for m, s in reg["minds"].items() if s.get("family") == "claude"}
 
-def ask_mind(rid, m, reg, stop=None):
+def ask_mind(rid, m, reg, stop=None, kinds=None):
     """ask one mind every sheet of round `rid` it is on and has not answered (up to MAX_ATTEMPTS calls a sheet),
     paced by pace.json -> (answered, assigned, calls made now)"""
     sys.path.insert(0, str(ROOT / "core"))
     from judges import make_judge, ADAPTER_VERSION
     rd = DATA / "rounds" / rid
-    sheets = [s for s in rj(rd / "sheets.jsonl") if m in s["minds"]]
+    sheets = [s for s in rj(rd / "sheets.jsonl") if m in s["minds"] and (kinds is None or s["kind"] in kinds)]
     spec = reg["minds"][m]; judge = make_judge(spec)
     led = rd / "raw" / m / "ledger.jsonl"; lock = threading.Lock()
     rows = rj(led)
@@ -232,23 +232,34 @@ def ctx_rounds():
     return sorted(p.name for p in (DATA / "rounds").glob("c[0-9][0-9][0-9]") if (p / "sheets.jsonl").exists())
 
 def cmd_drain(a):
-    """drain --minds m ...: until STOP, ask these minds' open sheets, oldest round first; idle when caught up"""
+    """drain --minds m ...: until STOP, ask these minds' open sheets, oldest round first; idle when caught up.
+    --newest-first: newest round first. --kinds-first K ...: first the sheets of these question kinds (every round, in
+    round order), then the rest. (Joseph, 2026-10-06, for Gemini: "Go ahead and have Gemini prioritize newer
+    questions": at its pacing it never reached the kinds asked from c015 on -- cohere, picks, order -- and it is the
+    only non-Claude mind that answers without thinking.) After each pass it starts again from the top, so the newest
+    work always comes first."""
     reg = minds(); stopf = DATA / "rounds" / "STOP"
     stop = stopf.exists
+    passes = [set(a.kinds_first), None] if a.kinds_first else [None]
     while not stop():
         worked = False
         void = void_rounds()
-        for rid in ctx_rounds():
-            if stop():
+        rounds = [r for r in ctx_rounds() if r not in void]
+        if a.newest_first:
+            rounds = rounds[::-1]
+        for kinds in passes:
+            for rid in rounds:
+                if stop():
+                    break
+                with cf.ThreadPoolExecutor(max_workers=len(a.minds)) as ex:
+                    res = dict(zip(a.minds, ex.map(lambda m: ask_mind(rid, m, reg, stop, kinds), a.minds)))
+                line = ", ".join(f"{m} {n}/{t} ({c} calls)" for m, (n, t, c) in res.items() if c)
+                if line:
+                    print(f"{dt.datetime.now():%H:%M:%S} drain {rid}{' ' + ','.join(sorted(kinds)) if kinds else ''}: {line}", flush=True)
+                    worked = True
+                    break                                   # back to the top: the newest work first
+            if worked:
                 break
-            if rid in void:
-                continue
-            with cf.ThreadPoolExecutor(max_workers=len(a.minds)) as ex:
-                res = dict(zip(a.minds, ex.map(lambda m: ask_mind(rid, m, reg, stop), a.minds)))
-            line = ", ".join(f"{m} {n}/{t} ({c} calls)" for m, (n, t, c) in res.items() if c)
-            if line:
-                print(f"{dt.datetime.now():%H:%M:%S} drain {rid}: {line}", flush=True)
-                worked = True
         time.sleep(10 if worked else 120)
     print("== drain: STOP found", flush=True)
 
@@ -391,7 +402,9 @@ def main():
     p = sub.add_parser("progress"); p.set_defaults(f=cmd_progress)
     p = sub.add_parser("round"); p.add_argument("round"); p.add_argument("--budget", type=int, default=700); p.set_defaults(f=cmd_round)
     p = sub.add_parser("loop"); p.add_argument("--budget", type=int, default=700); p.set_defaults(f=cmd_loop)
-    p = sub.add_parser("drain"); p.add_argument("--minds", nargs="+", required=True); p.set_defaults(f=cmd_drain)
+    p = sub.add_parser("drain"); p.add_argument("--minds", nargs="+", required=True)
+    p.add_argument("--newest-first", action="store_true"); p.add_argument("--kinds-first", nargs="*", default=[])
+    p.set_defaults(f=cmd_drain)
     a = ap.parse_args(); a.f(a)
 
 if __name__ == "__main__":
