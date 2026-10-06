@@ -20,7 +20,7 @@ Both are credited to the question's kind and source, per answer. The planner's o
 
 The defensible criterion isn't information about each question's own quantity. It is information about what the catalog reads: whether a run is recognised as a sequence, in what order, and how model-sensitive it is. A question's worth is then how much its answer is expected to move those readings. That puts relevance on the same footing as information, instead of beside it as a judgment.
 
-It also connects to the family-disagreement spike (`spikes/family-disagreement-2026-10-06/`, not yet verified). If its threshold model holds (one threshold per mind and question kind, one shared strength per item), the quantity a record's reading rests on is that shared strength. The information an answer from a given mind carries about it is largest where that mind's predicted chance of committing is near one half. That is the spike's $p(1-p)$, and it would replace both the current information term and much of relevance.
+It also connects to the family-disagreement spike (`spikes/family-disagreement-2026-10-06/`; its verification found the threshold model not yet calibrated, so this connection waits on the strengthening attempt). If its threshold model holds (one threshold per mind and question kind, one shared strength per item), the quantity a record's reading rests on is that shared strength. The information an answer from a given mind carries about it is largest where that mind's predicted chance of committing is near one half. That is the spike's $p(1-p)$, and it would replace both the current information term and much of relevance.
 
 ## Limits
 
