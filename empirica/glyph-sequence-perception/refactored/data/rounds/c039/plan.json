@@ -1,0 +1,52 @@
+{
+ "round": "c039",
+ "protocol": "ctx-0.1",
+ "questions": 915,
+ "budget": 700,
+ "by_why": {
+  "explore": 105,
+  "reasoned": 20,
+  "reflection": 20,
+  "pick": 140,
+  "pick-null": 35,
+  "recognize": 12,
+  "control": 140,
+  "recognize-written": 33,
+  "cohere": 80,
+  "order": 23,
+  "falsify-skip": 14,
+  "falsify-lengthen": 10,
+  "falsify-triad": 17,
+  "end": 197,
+  "join-end": 10,
+  "join-reverse": 34,
+  "join-replicate": 16,
+  "seed-step": 4,
+  "thin": 2,
+  "kstar": 3
+ },
+ "by_kind": {
+  "continue": 421,
+  "pick": 175,
+  "inhibit": 104,
+  "cohere": 175,
+  "order": 23,
+  "triad": 17
+ },
+ "sequences": 940,
+ "sequences_served": 170,
+ "lowest_rank_served": 0.0,
+ "by_tier": {
+  "1": 586,
+  "2": 4,
+  "3": 5
+ },
+ "by_variant": {
+  "plain": 875,
+  "reasoned": 20,
+  "reflection": 20
+ },
+ "contexts_in_tree": 15603,
+ "sheets": 300,
+ "unicode": "16.0.0"
+}
