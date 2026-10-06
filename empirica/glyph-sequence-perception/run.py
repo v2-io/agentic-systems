@@ -284,7 +284,10 @@ def cmd_ask(a):
             print(f"{a.round}/{m}: {n}/{tot} sheets answered", flush=True)
 
 def ctx_rounds():
-    return sorted(p.name for p in (DATA / "rounds").glob("c[0-9][0-9][0-9]") if (p / "sheets.jsonl").exists())
+    """context rounds in order, by number (c1000 after c999: a three-digit glob and a string sort would have stalled the
+    loop there; planner audit 2026-10-06)"""
+    return sorted((p.name for p in (DATA / "rounds").iterdir() if p.is_dir() and p.name[:1] == "c" and p.name[1:].isdigit()
+                   and (p / "sheets.jsonl").exists()), key=lambda n: int(n[1:]))
 
 def cmd_drain(a):
     """drain --minds m ...: until STOP, ask these minds' open sheets, oldest round first; idle when caught up.
@@ -348,7 +351,7 @@ SETTLED_AGREEMENT = 0.75     # read-off only (PROGRESS): a sequence counts as se
 
 def cmd_progress(a):
     recs = answers()
-    order = sorted({r["round"] for r in recs if r["round"] != "seed"}, key=lambda x: (x[0] != "r", x))
+    order = sorted({r["round"] for r in recs if r["round"] != "seed"}, key=lambda x: (x[0] != "r", int("".join(c for c in x[1:] if c.isdigit()) or 0), x))
     seedrecs = [r for r in recs if r["round"] == "seed"]
     # A row is the tree as it stood when its round closed: every answer recorded by then, for that round and earlier
     # ones (plus the seed votes). It is computed once and kept. Answers drained later into earlier rounds count from the

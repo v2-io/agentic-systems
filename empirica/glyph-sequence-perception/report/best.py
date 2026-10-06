@@ -303,7 +303,7 @@ def fam_cells(counts, fams):
 def main():
     recs = TR.load()
     Tp = TR.Tree(recs, seeds=False)
-    rounds = sorted({r["round"] for r in recs if r["round"] != "seed"}, key=lambda x: (x[0] != "r", x))
+    rounds = sorted({r["round"] for r in recs if r["round"] != "seed"}, key=lambda x: (x[0] != "r", int("".join(c for c in x[1:] if c.isdigit()) or 0), x))
     fams_all = sorted(set(Tp.cohere_rate) | set(Tp.inhibit_rate))
 
     whole = {}                                           # runs asked as wholes, one entry per run (either orientation)
