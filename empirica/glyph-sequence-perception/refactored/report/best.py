@@ -26,7 +26,7 @@ Tables:
 Rotations of one run, all confirmed, are listed once and marked as wrapping: a cycle confirmed link by link (distinct
 from a manifested cycle, which a mind wrote round twice). Candidates are walks of the tree with seed votes, and of the tree with written answers pooled in; overlapping runs
 are merged and their links judged again on the merged run (a link's context depends on the run before it).
-Ranked by length, then mean agreement. THETA = 0.75 is a read-off cut chosen without evidence; it gates nothing.
+Ranked by length, then mean agreement. Display only: a run monotonic in code points is shown ascending. THETA = 0.75 is a read-off cut chosen without evidence; it gates nothing.
 """
 import collections, pathlib, sys
 
@@ -191,6 +191,14 @@ def table(allowed, need_w, cands, Tp):
     merged = merge([s["glyphs"] for s in first])               # overlapping windows -> one run, judged again
     return dedupe(first + collect(merged, Tp, allowed, need_w))
 
+def shown_order(g):
+    """presentation only (a sequence and its reverse are one sequence): a run monotonic in code points is shown
+    ascending (Joseph, 2026-10-05); any other run keeps the orientation it was found in"""
+    cps = [ord(c) for c in g]
+    if all(b < a for a, b in zip(cps, cps[1:])):
+        return g[::-1]
+    return g
+
 def main():
     recs = TR.load()
     Tp = TR.Tree(recs, seeds=False)                            # shown answers (nodes) + written answers (written)
@@ -223,14 +231,14 @@ def main():
           "| # | stretch | glyphs | mean agreement | families (min over links) | unreasoned |", "|---|---|---|---|---|---|"]
     for i, s in enumerate(kept[:TOP], 1):
         k, n = s["unreasoned"]
-        L.append(f"| {i} | `{' '.join(s['glyphs'])}`{' ↻ (wraps)' if s.get('wraps') else ''} | {len(s['glyphs'])} | {s['agreement']:.2f} | {s['families_min']} | {f'{k}/{n}' if n else '(none)'} |")
+        L.append(f"| {i} | `{' '.join(shown_order(s['glyphs']))}`{' ↻ (wraps)' if s.get('wraps') else ''} | {len(s['glyphs'])} | {s['agreement']:.2f} | {s['families_min']} | {f'{k}/{n}' if n else '(none)'} |")
     if len(kept) > TOP:
         L += ["", f"*{len(kept) - TOP} shorter stretches not shown.*"]
     L += ["", "## Carried by written answers (awaiting shown confirmation)", "",
           f"Runs in which some links are carried only by **written** answers. In the stated direction, all written answers whose context matches the run before the link name the next glyph, with agreement ≥ {THETA} from ≥ 2 families, and no shown answer contradicts it. In particular, a shown \"none\" at that point (momentum past a felt end) excludes the link. These are the minds' own generation, not yet confirmed when shown. Long runs here are often code-chart walks: a mind carrying on through a block in code-point order. The planner asks such contexts shown, and puts written continuations past shown ends to recognition.", "",
           "| # | run | glyphs | written links / shown links | mean agreement | families (min over links) |", "|---|---|---|---|---|---|"]
     for i, s in enumerate(carried[:TOP_WRITTEN], 1):
-        L.append(f"| {i} | `{' '.join(s['glyphs'])}`{' ↻ (wraps)' if s.get('wraps') else ''} | {len(s['glyphs'])} | {s['written_links']} / {s['shown_links']} | {s['agreement']:.2f} | {s['families_min']} |")
+        L.append(f"| {i} | `{' '.join(shown_order(s['glyphs']))}`{' ↻ (wraps)' if s.get('wraps') else ''} | {len(s['glyphs'])} | {s['written_links']} / {s['shown_links']} | {s['agreement']:.2f} | {s['families_min']} |")
     if len(carried) > TOP_WRITTEN:
         L += ["", f"*{len(carried) - TOP_WRITTEN} shorter runs not shown.*"]
     (ROOT / "BEST.md").write_text("\n".join(L) + "\n")
