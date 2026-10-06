@@ -21,3 +21,9 @@ No read-off reads `choose` answers today (`report/best.py` and `run.py`), so not
 **The v3 audit also suggests** (C6) restating tests 3 and 4 procedurally: *the catalog's assignment at these positions follows from the listed answers by the frozen rules, and a hand audit agrees.* Under that form, whether the canary turns out intuitive becomes a finding the catalog reports, not a pass/fail condition. Version 4 will consider it. The seal holds either way, since knowing the answers would still steer the choices the freeze fixes.
 
 **Model frozen at commit:** *(to be filled when it happens)*
+
+## Addendum, 2026-10-06 (before round c096 is planned)
+
+**Extended to the name-only order question.** Every `names` answer whose glyph set contains a canary glyph is sealed on the same terms. CATALOG v5 §7a measures the canary's name route with that question, and knowing its answers would steer the name route's rules, which the freeze fixes. The first `names` questions are planned in c096. D controls (`choose` after a neutral context) whose pair contains a canary glyph are already covered by the rule above.
+
+**What the seal doesn't cover.** The canary's triad, pick and continue answers were public before the seal and are quoted in CATALOG §7b and §14. So the seal protects against tuning on the discriminator and name-only answers only. (Suggested by the v4 check, `catalog-design-v4-check-2026-10-06.md`.)
