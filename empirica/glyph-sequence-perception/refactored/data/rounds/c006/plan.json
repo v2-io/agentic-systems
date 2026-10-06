@@ -1,0 +1,33 @@
+{
+ "round": "c006",
+ "protocol": "ctx-0.1",
+ "questions": 720,
+ "budget": 700,
+ "by_why": {
+  "explore": 105,
+  "reasoned": 20,
+  "recognize": 2,
+  "recognize-written": 40,
+  "end": 236,
+  "cycle-probe": 7,
+  "seed-step": 310
+ },
+ "by_kind": {
+  "continue": 678,
+  "inhibit": 42
+ },
+ "sequences": 574,
+ "sequences_served": 295,
+ "lowest_rank_served": 0.0,
+ "by_tier": {
+  "1": 285,
+  "2": 310
+ },
+ "by_variant": {
+  "plain": 700,
+  "reasoned": 20
+ },
+ "contexts_in_tree": 6698,
+ "sheets": 239,
+ "unicode": "16.0.0"
+}
