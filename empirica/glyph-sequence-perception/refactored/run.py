@@ -97,7 +97,7 @@ def cmd_plan(a):
     print(json.dumps(stats, ensure_ascii=False))
 
 # ------------------------------------------------------------------ ask
-MAX_ATTEMPTS = {None: 3, "no-lookup": 2, "reasoned": 3}   # calls per (sheet, mind, prompt variant) before it is left unanswered;
+MAX_ATTEMPTS = {None: 3, "no-lookup": 2, "reasoned": 3, "reflection": 3}   # calls per (sheet, mind, prompt variant) before it is left unanswered;
                           # 3 is the triad era's resume passes, 2 for the re-ask variant is a choice made without evidence
 DEFAULT_PACE = {"workers": 2, "interval_s": 0}
 

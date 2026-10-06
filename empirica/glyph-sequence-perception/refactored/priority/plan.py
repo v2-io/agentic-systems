@@ -40,6 +40,7 @@ import tree as TR                                           # noqa: E402
 
 EXPLORE_SHARE = 0.15
 REASONED_PER_ROUND = 20      # reasoned-pass questions a round (chosen without evidence; the reasoner is the costly mind)
+REFLECT_PER_ROUND = 20       # reflection questions a round, outside the budget (chosen without evidence)
 FALSIFY_PER_ROUND = 60       # falsification tests a round, highest-ranked sequences first (chosen without evidence)
 THIN_PER_ROUND = 80          # precision replications a round (chosen without evidence)
 JOIN_PER_ROUND = 60          # join probes a round (chosen without evidence)
@@ -72,7 +73,12 @@ class Plan:
         return len(self.qs) >= self.budget
     def add(self, kind, ctx, cand=None, variant=None, probe=None, replicate=False, **src):
         ctx = list(ctx)
-        if not (2 <= len(ctx) <= 8) or len(set(ctx)) != len(ctx) or not all(PR.is_glyph(x) for x in ctx):
+        distinct = variant == "reflection" or len(set(ctx)) == len(ctx)       # reflections turn back on themselves
+        if not (2 <= len(ctx) <= 8) or not distinct or not all(PR.is_glyph(x) for x in ctx):
+            return False
+        if kind == "triad" and (len(ctx) != 3 or tuple(sorted(ctx)) in self.T.triads_fam):
+            return False
+        if variant == "reflection" and tuple(ctx) in self.T.reflections:
             return False
         key = (kind, tuple(ctx), cand, variant, tuple(sorted((probe or {}).items())))
         if key in self.keys:
@@ -103,7 +109,7 @@ class Plan:
                             **({"variant": variant} if variant else {}), **({"probe": probe} if probe else {})))
         return True
 
-TIER = {"falsify-skip": 1, "falsify-lengthen": 1, "recognize": 1, "recognize-written": 1, "control": 1, "join-reverse": 1, "join-replicate": 1, "join-end": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "thin": 3, "branch": 4, "inside": 5}
+TIER = {"falsify-skip": 1, "falsify-lengthen": 1, "falsify-triad": 1, "recognize": 1, "recognize-written": 1, "control": 1, "join-reverse": 1, "join-replicate": 1, "join-end": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "thin": 3, "branch": 4, "inside": 5}
 
 def written_recognition(P, seqs):
     """Momentum past a felt end (METHODOLOGY §4): where the shown answers end a sequence (top answer "none") but minds
@@ -127,6 +133,22 @@ def written_recognition(P, seqs):
                             cands[(ctx, x)] += 1
     return [("inhibit", list(ctx), x, {"why": "recognize-written", "written_answers": n})
             for (ctx, x), n in cands.most_common(WRITTEN_RECOGNIZE_PER_ROUND)]
+
+def reflection_work(P, seqs, rid):
+    """Reflection (METHODOLOGY §3; Joseph's postulate that any linear sequence becomes periodic played backwards at its
+    end): `a b c b -> ?` -- does a family turn round (a), or not? Asked of the first-impression roster at points inside
+    the best-ranked sequences, worded as a plain continue question; answers kept apart, never growing a sequence."""
+    out = []
+    for s in seqs:
+        g = s["glyphs"]
+        if len(g) < 4 or s["rank"] < JOIN_WEAK:
+            continue
+        r = PR.R("reflection-at", {"round": rid, "seq": g})
+        i = r.randint(2, len(g) - 2)
+        k = r.randint(2, 3)
+        ctx = g[max(0, i - k):i + 1] + [g[i - 1]]                       # ... a b c, then back to b
+        out.append(("continue", ctx, None, {"why": "reflection", "seq": "".join(g), "mirror": g[i - 2]}))
+    return out
 
 def reasoned_work(P, seqs, rid):
     """the reasoned pass (METHODOLOGY §4): generation at felt ends, then recognition of what it generates.
@@ -215,6 +237,13 @@ def falsify_work(P, s, r):
     ic = pos[b] + step
     if 0 <= ic < len(g) and g[ic] not in st["ctx"]:
         out.append(("inhibit", st["ctx"], g[ic], {"why": "falsify-skip", "seq": "".join(g), "link": a + b}))
+    # triad: a triple of the run whose two links are both strong predicts its middle (§4); never asked as a triad
+    sl = {frozenset((x["ctx"][-1], x["x"])) for x in strong}
+    triples = [g[i:i + 3] for i in range(len(g) - 2)
+               if frozenset(g[i:i + 2]) in sl and frozenset(g[i + 1:i + 3]) in sl and tuple(sorted(g[i:i + 3])) not in T.triads_fam]
+    if triples:
+        t = triples[r.randrange(len(triples))]
+        out.append(("triad", t, None, {"why": "falsify-triad", "seq": "".join(g), "mid": t[1]}))
     st = strong[r.randrange(len(strong))]
     a, b = st["ctx"][-1], st["x"]
     path = g[:pos[a] + 1] if pos[b] > pos[a] else g[pos[a]:][::-1]      # the run up to a, in reading order
@@ -342,7 +371,13 @@ def plan(rid, recs, seeds, budget):
             break
         if P.add(kind, ctx, cand, variant="reasoned", **src):
             n_reasoned += 1
-    P.budget += n_reasoned
+    n_reflect = 0
+    for kind, ctx, cand, src in reflection_work(P, seqs, rid):          # outside the budget's tiers, like the reasoned pass
+        if n_reflect >= REFLECT_PER_ROUND:
+            break
+        if P.add(kind, ctx, cand, variant="reflection", **src):
+            n_reflect += 1
+    P.budget += n_reasoned + n_reflect
     served, tiers_reached = set(), collections.Counter()
     for tier, si, ii, kind, ctx, cand, src in work:
         if P.full():

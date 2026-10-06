@@ -22,7 +22,7 @@ import fate                                                # noqa: E402
 PROTOCOL = "ctx-0.1"
 MAX_SHEET = 5
 MAX_CONTINUE = 24
-KINDS = ("continue", "inhibit")
+KINDS = ("continue", "inhibit", "triad")
 SYSTEM = "You are a participant in a short perception study. Answer exactly as asked."
 VS = {"︎", "️"}
 
@@ -76,8 +76,19 @@ def control_candidate(context, x, kind, rid):
             return chr(c)
 
 def question(kind, context, candidate=None, source=None, variant=None, probe=None):
+    """context: the run shown. A triad's identity is its three glyphs, and its shown order is a fated uniform shuffle
+    (so no hypothesised middle is shown in the middle except by chance). A reflection question's context repeats a
+    glyph by design (`7 8 9 8`, METHODOLOGY §3)."""
     c = list(context)
-    assert 2 <= len(c) <= 8 and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c
+    if variant == "reflection":
+        assert 3 <= len(c) <= 8 and all(is_glyph(x) for x in c), c
+    else:
+        assert 2 <= len(c) <= 8 and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c
+    if kind == "triad":
+        assert len(c) == 3, c
+        g = sorted(c); c = list(g); R("triad-shown", {"glyphs": g}).shuffle(c)
+        key = {"kind": kind, "glyphs": g}
+        return dict(key, context=c, qid=uid("T", key), source=source or {})
     key = {"kind": kind, "context": c}
     if kind == "inhibit":
         assert is_glyph(candidate) and candidate not in c, candidate
@@ -102,6 +113,15 @@ def _lines(kind, sheet):
                  "Any symbol may come next, whether it is shown or not; it may have no name.",
                  '"none" is expected often and is fully valuable.']
         reply = '{"id": <id>, "continue": [...]} or {"id": <id>, "none": true}'
+    elif kind == "triad":       # the triad era's wording and options (harness/seq/items.py), "none" always offered
+        intro = "Each item below shows three symbols."
+        opts = ['"seq": all three, written in the sequence they seem to form (either end first)',
+                '"two": just two of them, if only those two seem to go together',
+                '"none": true, if they don\'t seem to go in any sequence']
+        sents = ["Go by first impressions, and judge each item on its own rather than building a scheme across items.",
+                 '"none" is expected often and is fully valuable.',
+                'Copy each symbol exactly, or write "#1", "#2", … for its place in the item.']
+        reply = '{"id": <id>, "seq": [...]} or {"id": <id>, "two": [...]} or {"id": <id>, "none": true}'
     else:
         intro = "Each item below shows symbols in a sequence, then one candidate symbol."
         opts = ['"answer": "yes", if the candidate comes directly after the last symbol of the sequence',
@@ -117,7 +137,10 @@ def _lines(kind, sheet):
 # explicit 'without looking up …' — just based on your best initial guess"). The wording avoids naming Unicode or its
 # tables, which could itself steer a mind toward chart order.
 VARIANTS = {None: None, "no-lookup": "Please answer without looking anything up: just your best initial guess.",
-            "reasoned": None}
+            "reasoned": None, "reflection": None}
+# "reflection" (METHODOLOGY §3): a continue question whose context turns back on itself (`7 8 9 8`), worded exactly as a
+# plain one. Its answers measure whether a family treats a sequence as reversible, and are kept apart: they never grow
+# a sequence (after the turnaround the context hands the mind its answer).
 # "reasoned" (Joseph, 2026-10-05: a pass "where the tool works and you can have them give their reasoned one as well
 # (probably especially useful for extending a sequence etc. -- where reasoning is fine -- verification/recognition !=
 # generation (more complex))"): asked of reasoner minds that have utf-mcp's lookup tools. It differs from the plain
@@ -285,6 +308,33 @@ def _records(sheet, ledger_rows, mind, family, judge, questions, variant):
                         rec["other_content"] = other
                     if vs:
                         rec["vs_stripped"] = True
+        elif sheet["kind"] == "triad":
+            rec["shown"] = list(e["context"])
+            rec["tags"]["factors"] = {"perp": True, "tie": False}      # comparable with the triad era's perp, no-tie
+            rec["tags"]["shown_mid"] = e["context"][1]
+            def glyphs(v):
+                out = []
+                for x in v if isinstance(v, list) else []:
+                    t, _ = clean(x)
+                    m_ = re.fullmatch(r"#\s*([123])", t)
+                    out.append(e["context"][int(m_.group(1)) - 1] if m_ else t)
+                return out
+            if a.get("none") and not a.get("seq") and not a.get("two"):
+                rec["outcome"] = "none"; rec["answer"] = ["none"]
+            elif a.get("seq") is not None:
+                q3 = glyphs(a["seq"])
+                if sorted(q3) == sorted(e["context"]):
+                    rec["outcome"] = "mid"; rec["answer"] = ["mid", q3[1]]
+                else:
+                    rec["outcome"] = "unparsed"; rec["reason"] = "seq"
+            elif a.get("two") is not None:
+                q2 = glyphs(a["two"])
+                if len(q2) == 2 and set(q2) <= set(e["context"]) and q2[0] != q2[1]:
+                    rec["outcome"] = "two"; rec["answer"] = ["two"] + q2
+                else:
+                    rec["outcome"] = "unparsed"; rec["reason"] = "two"
+            else:
+                rec["outcome"] = "unparsed"; rec["reason"] = "triad"
         else:
             v = str(a.get("answer", "")).strip().lower().replace("’", "'")
             m = {"yes": "yes", "no": "no", "can't tell": "cant-tell", "cant tell": "cant-tell", "can not tell": "cant-tell",

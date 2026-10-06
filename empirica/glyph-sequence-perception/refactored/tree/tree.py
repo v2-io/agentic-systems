@@ -23,6 +23,9 @@ era "seed". They join nodes like any answer, so seeded paths are walkable at onc
 a real mind answered it (`real`), so the planner still asks every seeded context and k* is never "known" from seeds.
 Tree(recs, seeds=False) gives the pure tree for a write-up.
 INHIBITION: inhibit answers at (context, candidate): yes / no / can't tell, per family (METHODOLOGY §2b).
+TRIADS and ORDER answers (§4: consistency checks; they create no edges): triads per family (`triads_fam`, both eras),
+order answers indexed by glyph (`orders`, the triad era's). REFLECTIONS (§3): answers to contexts that turn back on
+themselves, kept apart (`reflections`); they never grow a sequence.
 AGREEMENT for a continuation x at a node: per family, the share of its answers naming x first; mean over the families
 that answered. Soft: it orders and is shown, nothing is cut by it.
 
@@ -56,6 +59,50 @@ def load():
         recs += [json.loads(l) for l in open(f) if l.strip()]
     return recs
 
+def _in_order(ps, cyclic):
+    """positions in order, either direction; for a cycle, monotone round the circle (at most one wrap)"""
+    for q in (ps, ps[::-1]):
+        drops = sum(1 for x, y in zip(q, q[1:]) if y < x)
+        if drops == 0 or (cyclic and drops == 1 and q[-1] < q[0]):
+            return True
+    return False
+
+def beta_mv(k, n):
+    """posterior mean and variance of a family's share naming x, from k of n answers, Jeffreys prior Beta(1/2, 1/2)"""
+    a, b = k + 0.5, n - k + 0.5
+    return a / (a + b), a * b / ((a + b) ** 2 * (a + b + 1))
+
+def estimate(dirs):
+    """A link's agreement from its reading directions. dirs: [{family: (k, n)}] -> (observed, mean, sd, families naming).
+    observed: the mean over directions of the mean over families of each family's share (the perceptual quantity);
+    mean / sd: the same over Beta posteriors (Jeffreys), the means treated as normal (an approximation) -- how sure we
+    are of it. Readers choose their own confidence (lower bound = mean - z * sd)."""
+    obs, mean, var, fams = [], [], [], set()
+    for d in dirs:
+        F = len(d)
+        mv = [beta_mv(k, n) for k, n in d.values()]
+        obs.append(sum(k / n for k, n in d.values()) / F)
+        mean.append(sum(m for m, _ in mv) / F)
+        var.append(sum(v for _, v in mv) / F ** 2)
+        fams |= {f for f, (k, n) in d.items() if k > 0}
+    D = len(dirs)
+    return sum(obs) / D, sum(mean) / D, (sum(var) / D ** 2) ** 0.5, fams
+
+def estimate_vs(counts, control):
+    """A yes/no proportion against a control. counts, control: {family: (k, n)} -> (difference, sd, families used): per
+    family the Beta-posterior (Jeffreys) mean of counts minus that of its control, variances added; the equal-weight
+    mean over the families that have both, sd as in estimate()."""
+    d, v, fams = [], [], []
+    for f, (k, n) in counts.items():
+        ck, cn = control.get(f, (0, 0))
+        if n and cn:
+            (m1, v1), (m2, v2) = beta_mv(k, n), beta_mv(ck, cn)
+            d.append(m1 - m2); v.append(v1 + v2); fams.append(f)
+    if not d:
+        return None, None, []
+    F = len(d)
+    return sum(d) / F, (sum(v) / F ** 2) ** 0.5, fams
+
 def canon_cycle(P):
     rots = [tuple(P[i:] + P[:i]) for i in range(len(P))]
     return min(rots + [tuple(reversed(r)) for r in rots])
@@ -87,6 +134,11 @@ class Tree:
         self.written = collections.defaultdict(lambda: collections.defaultdict(list))   # ctx -> family -> [next]
         self.inhibit = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # (ctx,x)->fam->verdict
         self.triads = collections.defaultdict(collections.Counter)
+        self.triads_fam = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # glyphs->fam->ans
+        self.orders = collections.defaultdict(list)       # glyph -> [(family, shown, lines)] for order answers (triad era)
+        self.reflections = collections.defaultdict(list)  # ctx -> [{family, mind, continuation, outcome}] (§3)
+        self.inhibit_rate = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # fam->class->verdict
+        self.control_pairs = set()                        # (ctx, candidate) asked as controls (kept out of `inhibit`)
         self.cycles = {}
         self.real = set()                       # contexts some real mind answered (not only seed votes)
         self.unreasoned = collections.defaultdict(list)   # ctx -> [first] from answers given with 0 thinking tokens
@@ -100,6 +152,12 @@ class Tree:
                 if seeds:
                     ctx = tuple(r["context"])
                     self.nodes[ctx][r["family"]].append(r["continuation"][0]); self.seeded.add(ctx)
+                continue
+            if k == "continue" and (r.get("tags") or {}).get("variant") == "reflection":
+                # METHODOLOGY §3: the minds' grammar of sequences, not their perception of the glyphs; never grows one
+                if o in ("continuation", "none", "other"):
+                    self.reflections[tuple(r["context"])].append({"family": r["family"], "mind": r["mind"], "outcome": o,
+                                                                  "continuation": r.get("continuation") or []})
                 continue
             if k == "continue" and (r.get("tags") or {}).get("variant") == "reasoned":
                 # generation, not evidence: kept apart (METHODOLOGY §4); its candidates are put to recognition
@@ -145,10 +203,22 @@ class Tree:
                 if (r.get("tags") or {}).get("thinking_tokens") == 0:
                     self.unreasoned[ctx].append(first)
             elif k == "inhibit" and o in ("yes", "no", "cant-tell"):
-                self.inhibit[(tuple(r["context"]), r["candidate"])][r["family"]][o] += 1
+                ctl = (r.get("tags") or {}).get("control")
+                self.inhibit_rate[r["family"]][ctl or "real"][o] += 1     # probing tag (§2a: the tree may split by it)
+                if ctl:
+                    self.control_pairs.add((tuple(r["context"]), r["candidate"]))
+                else:
+                    self.inhibit[(tuple(r["context"]), r["candidate"])][r["family"]][o] += 1
             elif k == "triad" and o in ("mid", "two", "none"):
                 t = tuple(sorted(r["shown"]))
-                self.triads[t][tuple(r["answer"]) if o != "none" else ("none",)] += 1
+                ans = tuple(r["answer"]) if o != "none" else ("none",)
+                self.triads[t][ans] += 1
+                self.triads_fam[t][r["family"]][ans] += 1
+            elif k == "order" and o == "lines":
+                lines = (r.get("answer") or {}).get("lines") or []
+                item = (r["family"], tuple(r["shown"]), lines)
+                for x in set(r["shown"]):
+                    self.orders[x].append(item)
 
     # ---- node read-offs
     def dist(self, ctx):
@@ -224,6 +294,93 @@ class Tree:
                 return path, steps + [st], "wrap→" + x
             steps.append(st); path.append(x)
         return path, steps, "cap"
+
+    # ---- what the evidence says about a link or a path (read by SEQUENCES, BEST and the planner alike)
+    def shown_dir(self, run, x):
+        """one reading direction of a link on shown answers: per-family (k naming x, n) at the deciding context (the
+        longest asked suffix of `run`), its top answer, and the unreasoned (k, n) there -> dict or None"""
+        if len(run) < 2:
+            return None
+        ctx = self.lookup(run)
+        if not ctx:
+            return None
+        u = self.unreasoned.get(ctx, [])
+        return {"counts": {f: (sum(1 for y in xs if y == x), len(xs)) for f, xs in self.nodes[ctx].items()},
+                "top": self.top(ctx), "uk": sum(1 for f in u if f == x), "un": len(u)}
+
+    def written_dir(self, run, x):
+        """one reading direction on written answers whose context is a suffix of `run` -> {"counts": ...} or None"""
+        if len(run) < 2:
+            return None
+        per = collections.defaultdict(list)
+        for j in range(2, min(MAXK, len(run)) + 1):
+            for f, xs in self.written.get(tuple(run[-j:]), {}).items():
+                per[f] += xs
+        return {"counts": {f: (sum(1 for y in xs if y == x), len(xs)) for f, xs in per.items()}} if per else None
+
+    def contradicts(self, run, x, none_counts):
+        """does the shown deciding context after `run` name something other than x? ("none" only if none_counts)"""
+        ctx = self.lookup(run) if len(run) >= 2 else None
+        if not ctx:
+            return False
+        top = self.top(ctx)
+        if top == x:
+            return False
+        if top == NONE:
+            return none_counts
+        return top != OTHER
+
+    def control_counts(self, family, cls="near"):
+        """a family's (yes, n) over its inhibit answers of a class ("real", "near", "far")"""
+        c = self.inhibit_rate.get(family, {}).get(cls) or {}
+        return c.get("yes", 0), sum(c.values())
+
+    def consistency_evidence(self, g, cyclic=False):
+        """FACTS for testing a path against the non-edge evidence (§2b, §4, §6); decisions are the reader's. Each unit
+        is {family: (k, n)} -- k answers giving the response the unit counts, of n:
+          skip   for each a -> b -> c (either reading direction), inhibit answers at the longest context ending at a
+                 (within the run) that asked about c: k = "yes" (c directly after?), to be read against controls
+          triad  for each triple a b c, its triad answers (both eras): k = middle named b
+          order  for each order answer set within g (>= 3 glyphs, triad era): k = answers whose every line runs in g's
+                 order, either direction -- round the circle if g is a cycle (cyclic=True: a line starting elsewhere on
+                 the circle is in order)
+        -> {"skip": [...], "triad": [...], "order": [...]}"""
+        out = {"skip": [], "triad": [], "order": []}
+        for run in (g, g[::-1]):
+            for i in range(len(run) - 2):
+                prefix, x = run[:i + 1], run[i + 2]
+                for j in range(min(MAXK, len(prefix)), 1, -1):          # the longest context asked about x decides
+                    fam = self.inhibit.get((tuple(prefix[-j:]), x))
+                    if fam:
+                        out["skip"].append({f: (c["yes"], sum(c.values())) for f, c in fam.items()})
+                        break
+        for i in range(len(g) - 2):
+            fam = self.triads_fam.get(tuple(sorted(g[i:i + 3])))
+            if fam:
+                out["triad"].append({f: (c[("mid", g[i + 1])], sum(c.values())) for f, c in fam.items()})
+        pos = {x: i for i, x in enumerate(g)}
+        sets = collections.defaultdict(lambda: collections.defaultdict(lambda: [0, 0]))
+        seen = set()
+        for x in g:
+            for item in self.orders.get(x, []):
+                fam, shown, lines = item
+                if id(item) in seen or len(shown) < 3 or not all(y in pos for y in shown):
+                    continue
+                seen.add(id(item))
+                agree = True
+                for line in lines:
+                    ps = [pos[y] for step in line for y in (step if isinstance(step, list) else [step]) if y in pos]
+                    if len(ps) >= 2 and not _in_order(ps, cyclic):
+                        agree = False
+                sets[shown][fam][0] += agree
+                sets[shown][fam][1] += 1
+        out["order"] = [{f: tuple(v) for f, v in fam.items()} for fam in sets.values()]
+        return out
+
+    def recognition_evidence(self):
+        """FACTS for recognition: per candidate (controls excluded), per family (yes, n) -> [{ctx, x, counts}]"""
+        return [{"ctx": ctx, "x": x, "counts": {f: (c["yes"], sum(c.values())) for f, c in fc.items()}}
+                for (ctx, x), fc in self.inhibit.items()]
 
     def triad_check(self, g):
         agree = against = 0

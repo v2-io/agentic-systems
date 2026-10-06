@@ -44,6 +44,15 @@ A **context** is an oriented run of glyphs: what a mind was shown, ending at the
 
 5. **Read-offs: what the tree holds, presented.** BEST.md, SEQUENCES.md and PROGRESS.md each read the tree with their own stated criteria, and nothing reads them back. Joseph, 2026-10-05, on keeping them apart: *"I get the feeling like we are possibly mixing the 5 concerns that need to be independent? (if the BEST read of the context tree is considered a 5th concern)"*. A read-off's criteria are its own, never shared with the planner's read of the tree. If a read-off shows a defect, the fix belongs in the read-off, unless the defect is in the answers themselves. Found that day: a fix for a BEST.md symptom had been put into the walk, which is the planner's view of the tree, and coupled the two. It was undone.
 
+**One standard for evidence** (2026-10-05; Joseph: *"make sure the evidence is very defensible and not a … mishmash of heuristics"*). The tree supplies facts: per family, how many answers gave the response a claim predicts, of how many. Every reader decides with one standard:
+- **The estimate.** Each family's proportion is a Beta posterior (Jeffreys). A test's estimate is the equal-weight mean over the families that answered, because the claims are about families, with its spread.
+- **Choice answers** (continuations, triad middles, order lines) are *supported* when the 90% lower bound is ≥ 0.5 and *contradicted* when the upper bound is < 0.5.
+- **Yes/no answers** (recognition, skip tests) are compared with the family's near control.
+- **≥ 2 families everywhere.** The 0.5 and the 90% are choices made without evidence.
+- **Agreement is the perceptual quantity**, how strongly minds converge. The interval is how sure we are of it.
+
+The triad era's triads and order answers are part of this, as §2b and §6 say: betweenness and ordering are evidence in the tree. Until 2026-10-05 they were ported and verified but almost unused: triads fed one display column and order answers nothing, the same class of bug as the written answers. They now test every confirmed stretch, with order tested round the circle for stretches that wrap.
+
 The triad era mixed these concerns:
 - seeds supplied the glyphs that sequences were tested with;
 - the fit's guesses steered what was asked within sequences;
@@ -91,7 +100,7 @@ A cycle is closed rather than statistically ended. It is fully determined at eve
 - **Manifestation.** A cycle counts only once a mind has *manifested* it, writing the entire period a second time itself (Joseph: *"at the moment the entire pattern has repeated itself"*). A 4-glyph cycle therefore takes 8 edges to nail down.
 - **Scope.** Cycles whose period holds fewer than 4 distinct glyphs are not of interest at this time. 2- and 3-cycles may be valid, but they are out of scope. *(The one 3-cycle the minds produced so far, `▿ ▹ ▵ → ▿`, is probably the 4-orientation triangle `▵ ▹ ▿ ◃` with `◃` missing.)*
 
-**Reflection** (Joseph's postulate). Any linear sequence becomes periodic if it is played backwards at its end: `7 8 9 8 7 …`. That is consistent with treating a sequence and its reverse as one object.
+**Reflection** (Joseph's postulate; asked from 2026-10-05, up to 20 a round outside the budget, as `a b c b → ?` at points inside the best-ranked sequences, worded as a plain continue question, stored apart in `Tree.reflections`). Any linear sequence becomes periodic if it is played backwards at its end: `7 8 9 8 7 …`. That is consistent with treating a sequence and its reverse as one object.
 - **What it can test:**
   - whether a family treats sequences as reversible, a direct test of the unoriented assumption;
   - whether an end behaves as a line (it reflects) or as a cycle (it wraps).
@@ -160,7 +169,7 @@ This is Joseph's priority rule, restated on the tree:
 - **Falsification** (2026-10-05; Joseph: *"think in terms of the scientific method as well as a counter-balance — we're looking for things that disprove or call into question certain sequences"*). The strongest claims are tested hardest: sequences are served by rank, up to 60 tests a round, a number chosen without evidence. At most one of each kind per sequence a round, for a walked step `a → b` followed by `c`:
   - **Skip test.** An inhibit question at `a`'s context: does `c` come *directly* after? A sequence predicts no. Yes, above the family's control rate in ≥ 2 families, challenges the adjacency: order without adjacency, or a chart walk. BEST.md shows each stretch's skip tests as passed / challenged and flags challenged ones; it doesn't hide them.
   - **Lengthening test.** A longer context along the same path, not yet asked. Per §3, a stable edge stays put when lengthened backward, and a flip is a branch. The longest context decides, so a flip there breaks the link wherever links are judged.
-  - **Not yet built: triad and order checks for the new protocol** (§4: *"cheap consistency checks"*). A confirmed stretch predicts the middle of each triple and the order of each window, and shuffled presentations could contradict it. They need a question kind of their own.
+  - **Triad test** (built 2026-10-05). A triple whose two links are both strong, never asked as a triad, is asked in the triad era's own wording and record shape (`seq` / `two` / `none`), so new answers join the 19,665 ported ones. Shown order is a fated uniform shuffle, so the hypothesised middle sits in the middle only by chance, and `shown_mid` records what was displayed there. Order answers are not asked in the new protocol yet. The 5,716 ported ones are used as tests.
 - **Join probes** (2026-10-05; Joseph: *"yes please — for example, row #1 and row #14 will be joined hopefully soon"*). These are asked before each sequence's other tier-1 work, up to 60 a round, one per link. A number chosen without evidence. Two kinds:
   - **A weak link inside a strong run.** Agreement below 0.75, the planner's own cut, chosen without evidence, with at least two strong links on each side, as at `㉟ → ㊱`. It is asked from the *other* direction, a new context. Failing that, the weak context is **replicated** while it holds fewer than 12 answers. That is the only place the planner re-asks a context.
   - **An open end that written answers bridge to another sequence's end**, as at `A … N` and `O … Z`. Its end question goes first.
