@@ -1,0 +1,5 @@
+{
+ "rounds": ["c028","c029","c030","c031","c032","c033","c034","c035","c036","c037","c038","c039","c040","c041","c042","c043","c044","c045","c046","c047","c048","c049","c050","c051","c052","c053","c054","c055","c056","c057","c058","c059","c060","c061","c062","c063","c064","c065","c066","c067","c068","c069","c070","c071","c072","c073","c074","c075","c076","c077","c078","c079"],
+ "reason": "2026-10-06: Claude's weekly usage limit answered every driver call of these rounds with an error ('You've hit your weekly limit · resets 7am (America/Denver)'), so each was planned on an unchanged tree and about half of each round's questions repeat an earlier round's. Drains skip them; their questions are planned again in live rounds. Ledgers stay as committed truth, and answers already given (Grok in c028-c031) stay answers. c027 (partly answered) and c080 on are live.",
+ "decided_by": "the independent session (Claude Opus 5.5), 2026-10-06 09:40 MDT, reversible by editing this file"
+}

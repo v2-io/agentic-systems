@@ -22,7 +22,7 @@ Truth: data/rounds/<RID>/{questions,sheets}.jsonl, plan.json and raw/<mind>/ledg
 answers), committed. Everything in data/answers/ and data/tree/ is rebuilt from them (and from the triad era's
 ledgers via port/port_triad_era.py).
 """
-import argparse, collections, concurrent.futures as cf, datetime as dt, hashlib, json, pathlib, subprocess, sys, threading, time
+import argparse, collections, concurrent.futures as cf, datetime as dt, hashlib, json, pathlib, re, subprocess, sys, threading, time
 
 ROOT = pathlib.Path(__file__).resolve().parent
 STUDY = ROOT.parent
@@ -103,6 +103,23 @@ def cmd_plan(a):
 MAX_ATTEMPTS = {None: 3, "no-lookup": 2, "reasoned": 3, "reflection": 3}   # calls per (sheet, mind, prompt variant) before it is left unanswered;
                           # 3 is the triad era's resume passes, 2 for the re-ask variant is a choice made without evidence
 DEFAULT_PACE = {"workers": 2, "interval_s": 0}
+LIMIT_RE = re.compile(r"hit your .{0,20}limit|usage limit|rate.?limit|quota|resets \d|\b429\b|resource.?exhausted", re.I)
+LIMIT_PAUSE_S = 600       # a mind that hit a usage limit waits this long before its next call (chosen without evidence)
+
+def limit_hit(res):
+    """a call refused for a usage limit (found 2026-10-06: Claude's weekly limit, "You've hit your weekly limit ·
+    resets 7am", answered every call of rounds c028-c079 with an error). Not an attempt at the sheet: it is not
+    counted toward MAX_ATTEMPTS, and the mind pauses, so the loop waits inside its round instead of planning blind
+    ones."""
+    return bool(res.get("error")) and bool(LIMIT_RE.search(f"{res.get('raw') or ''} {res.get('error') or ''}"))
+
+def void_rounds():
+    """rounds not to be asked any further (data/rounds/VOID.json): planned while the driving minds could not answer,
+    so their questions are planned again in live rounds. Their ledgers stay, and answers already given stay answers."""
+    try:
+        return set(json.load(open(DATA / "rounds" / "VOID.json"))["rounds"])
+    except FileNotFoundError:
+        return set()
 
 def pace(m, spec):
     """pacing for one mind from pace.json, re-read on every call: minds.<m> overrides adapters.<adapter>"""
@@ -138,7 +155,7 @@ def ask_mind(rid, m, reg, stop=None):
         v = "no-lookup" if base is None and any(PR.tool_attempt(r) for r in rs) else base
         if any(PR.good_row(r) for r in rs if r.get("variant") == v) or (v and any(PR.good_row(r) for r in rs)):
             return ()
-        if sum(1 for r in rs if r.get("variant") == v) >= MAX_ATTEMPTS[v]:
+        if sum(1 for r in rs if r.get("variant") == v and not limit_hit(r["result"])) >= MAX_ATTEMPTS[v]:
             return ()
         return (v,)
     todo = collections.deque(s for s in sheets if target(s))
@@ -168,11 +185,18 @@ def ask_mind(rid, m, reg, stop=None):
                    "ts": dt.datetime.now(dt.timezone.utc).isoformat(), "result": res}
             if res.get("raw") and not res.get("error") and PR._answers(res["raw"]) is None:
                 row["result"] = dict(res, error="no-answers-object")      # raw kept; re-asked
+            if limit_hit(res):
+                row["result"] = dict(res, error="limit")
             with lock:
                 wj(led, [row], "a")
                 by[s["sid"]].append(row); calls[0] += 1
                 if target(s):
                     todo.append(s)                         # re-asked after the rest, as the old resume passes did
+            if limit_hit(row["result"]):
+                print(f"{dt.datetime.now():%H:%M:%S} {rid}/{m}: usage limit ({(res.get('raw') or '')[:60]!r}); pausing {LIMIT_PAUSE_S} s", flush=True)
+                t0 = time.time()
+                while time.time() - t0 < LIMIT_PAUSE_S and not (stop and stop()):
+                    time.sleep(10)
             time.sleep(pc["interval_s"])
     nmax = max(pace(m, spec)["workers"], 8)
     with cf.ThreadPoolExecutor(max_workers=nmax) as ex:
@@ -199,9 +223,12 @@ def cmd_drain(a):
     stop = stopf.exists
     while not stop():
         worked = False
+        void = void_rounds()
         for rid in ctx_rounds():
             if stop():
                 break
+            if rid in void:
+                continue
             with cf.ThreadPoolExecutor(max_workers=len(a.minds)) as ex:
                 res = dict(zip(a.minds, ex.map(lambda m: ask_mind(rid, m, reg, stop), a.minds)))
             line = ", ".join(f"{m} {n}/{t} ({c} calls)" for m, (n, t, c) in res.items() if c)
