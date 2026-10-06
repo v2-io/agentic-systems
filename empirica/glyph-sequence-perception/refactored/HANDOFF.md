@@ -68,12 +68,12 @@ The drains ask their minds' open sheets, oldest round first, and idle when caugh
   - join probes (the other direction; replicate at most once);
   - thin-link replication (by answer count only);
   - falsification: skip, lengthening, and new triad questions in the triad era's wording;
-  - reflection questions (§3), kept apart.
+  - reflection questions (§3), kept apart;
+  - triad-agreed kernels: a third of exploration, weighted by agreement (§4, §7).
 - **Triad-era triads (19,665) and order answers (5,716)** were ported but unused until now. They test every confirmed stretch.
 - **Still open:**
   - order questions in the new protocol;
   - orthogonality as a soft weight in exploration (§2b);
-  - triad-agreed kernels for exploration (§4);
   - per-family views;
   - Gemini pacing (Joseph's call: it lags rounds behind at 1 worker / 60 s).
 

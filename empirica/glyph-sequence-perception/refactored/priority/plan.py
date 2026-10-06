@@ -307,8 +307,30 @@ def sequence_work(P, s, r, ends=frozenset()):
     out += [("continue", c, None, {"why": "inside", "seq": "".join(g)}) for c in inside]
     return out
 
+def triad_kernels(T):
+    """§4: "a triad answer is also an unconditioned hint that a 3-glyph path exists, which makes it a cheap way to find
+    kernels". Per triad (both eras), its most-named middle m: the path a m c, if the tree has not been shown it
+    (neither [a, m] nor [c, m] asked). Weight: the estimated agreement on m (TR.estimate's posterior mean, families
+    equal) -- a soft weight, never a cut (§7: "Priority uses it continuously, as a weight in the stochastic choice").
+    -> [(a, m, c, weight)]"""
+    out = []
+    for t, fam in T.triads_fam.items():
+        mids = collections.Counter(ans[1] for c in fam.values() for ans, n in c.items() for _ in range(n) if ans[0] == "mid")
+        if not mids:
+            continue
+        m = mids.most_common(1)[0][0]
+        a, c = [x for x in t if x != m]
+        if tuple([a, m]) in T.real or tuple([c, m]) in T.real:
+            continue
+        _, mean, _, _ = TR.estimate([{f: (cnt[("mid", m)], sum(cnt.values())) for f, cnt in fam.items()}])
+        out.append((a, m, c, mean))
+    return out
+
 def explore(P, seeds, n, rid):
+    """Hot exploration (§5), in thirds by a fated draw (chosen without evidence): seed bumps, fresh glyphs (with their
+    code-point neighbour or another fresh glyph), and triad-agreed kernels (§4) weighted by their middle's agreement."""
     r = PR.R("explore", {"round": rid})
+    kernels = triad_kernels(P.T)
     settled = set()
     for s in P.seqs[:200]:
         if s["rank"] >= 0.9:
@@ -319,7 +341,12 @@ def explore(P, seeds, n, rid):
     added = 0
     while added < n and tries < n * 50:
         tries += 1
-        if sd and r.random() < 0.5:
+        u = r.random()
+        if kernels and u < 1 / 3:
+            a_, m_, c_ = r.choices(kernels, weights=[k[3] for k in kernels])[0][:3]
+            ctx = [a_, m_] if r.random() < 0.5 else [c_, m_]
+            how = {"why": "explore", "how": "triad-kernel"}
+        elif sd and (u < 2 / 3 if kernels else u < 0.5):
             x = r.choices(sd, weights=weights)[0]
             gl = list(dict.fromkeys(x["glyphs"]))
             i = r.randrange(len(gl) - 1)
