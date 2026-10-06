@@ -60,6 +60,7 @@ PICK_PER_ROUND = 30          # forced-pick contexts a round, each sampled PR.SAM
 # answer in 20 draws was followed ~6% of the time -- found by a side agent.)
 BRANCH_FLOOR, BRANCH_MID, BRANCH_WIDTH = 0.02, 0.10, 0.04
 PICK_NULL_EVERY = 4          # one null (fresh random) context per this many real ones, same length (chosen without evidence)
+ORDER_PER_ROUND = 40         # order questions a round (chosen without evidence)
 CHART_CONTROL_SHARE = 0.25   # share of runs that also get a chart window -- a descriptive measurement, not a decoy (chosen without evidence)
 FRESH_TIERS = {"1-byte": (4, [(0x21, 0x7E)]), "2-byte": (3, [(0xA1, 0x7FF)]),
                "3-byte": (2, [(0x2000, 0x2BFF), (0x2E80, 0x33FF)]), "4-byte": (1, [(0x1D300, 0x1D7FF), (0x1F000, 0x1FBFF)])}
@@ -87,9 +88,14 @@ class Plan:
     def add(self, kind, ctx, cand=None, variant=None, probe=None, replicate=False, **src):
         ctx = list(ctx)
         distinct = variant == "reflection" or len(set(ctx)) == len(ctx)       # reflections turn back on themselves
-        lo, hi = (3, PR.MAX_RUN) if kind == "cohere" else (2, 8)
+        lo, hi = {"cohere": (3, PR.MAX_RUN), "order": (4, PR.MAX_ORDER)}.get(kind, (2, 8))
         if not (lo <= len(ctx) <= hi) or not distinct or not all(PR.is_glyph(x) for x in ctx):
             return False
+        if kind == "order":
+            if not hasattr(self, "_ordered"):
+                self._ordered = {frozenset(sh) for items in self.T.orders.values() for _, sh, _ in items}
+            if frozenset(ctx) in self._ordered:
+                return False
         if kind == "pick" and tuple(ctx) in (self.T.pick_null if (probe or {}).get("null") else self.T.picks):
             return False
         if kind == "cohere" and (tuple(ctx) in self.T.cohere or tuple(ctx[::-1]) in self.T.cohere
@@ -128,7 +134,7 @@ class Plan:
                             **({"variant": variant} if variant else {}), **({"probe": probe} if probe else {})))
         return True
 
-TIER = {"falsify-skip": 1, "falsify-lengthen": 1, "falsify-triad": 1, "recognize": 1, "recognize-written": 1, "control": 1, "cohere": 1, "join-reverse": 1, "join-replicate": 1, "join-end": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "thin": 3, "branch": 4, "inside": 5}
+TIER = {"falsify-skip": 1, "falsify-lengthen": 1, "falsify-triad": 1, "recognize": 1, "recognize-written": 1, "control": 1, "cohere": 1, "order": 1, "join-reverse": 1, "join-replicate": 1, "join-end": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "thin": 3, "branch": 4, "inside": 5}
 
 def written_recognition(P, seqs):
     """Momentum past a felt end (METHODOLOGY §4): where the shown answers end a sequence (top answer "none") but minds
@@ -213,6 +219,41 @@ def cohere_work(P, seqs, written_seqs, seeds, rid):
 def branch_weight(k, n):
     q = k / n
     return BRANCH_FLOOR + (1 - BRANCH_FLOOR) / (1 + math.exp(-(q - BRANCH_MID) / BRANCH_WIDTH))
+
+def order_work(P, seqs, seeds, rid):
+    """The order question (METHODOLOGY §4a): a set, scrambled -- which order, if any, do minds put it in? Sets from the
+    survey sequences (a fated order), the shuffles a mind called coherent, the pick branches (S-curve draw) and the
+    tree's walks, 4-MAX_ORDER glyphs, interleaved; each set asked once. A longer run is not asked (yet).
+    -> [(kind, glyphs, None, src)]"""
+    T = P.T
+    def ok(g):
+        return 4 <= len(g) <= PR.MAX_ORDER and len(set(g)) == len(g) and all(PR.is_glyph(c) for c in g)
+    sd = []
+    for x in seeds:
+        g = list(x["glyphs"])
+        if len(g) > 1 and g[-1] == g[0]:
+            g = g[:-1]
+        if ok(g):
+            sd.append((g, "seed:" + str(x.get("sid"))))
+    PR.R("order-seed-order", {"round": rid}).shuffle(sd)
+    reord = [(list(run), "reordered") for run, fc in sorted(T.cohere_ctl.items())
+             if T.cohere_ctl_class.get(run) == "shuffled" and sum(c["yes"] for c in fc.values()) > 0 and ok(list(run))]
+    br = [(c, "pick-branch") for c, _ in weighted_order(pick_branches(T), lambda b: b[1], PR.R("order-branch", {"round": rid})) if ok(c)]
+    wk = [(s["glyphs"], "walk") for s in seqs if ok(s["glyphs"])]
+    sources = [iter(sd), iter(reord), iter(br), iter(wk)]
+    out, seen = [], set()
+    while sources and len(out) < ORDER_PER_ROUND:
+        for src in list(sources):
+            nxt = next(src, None)
+            while nxt is not None and frozenset(nxt[0]) in seen:
+                nxt = next(src, None)
+            if nxt is None:
+                sources.remove(src); continue
+            seen.add(frozenset(nxt[0]))
+            out.append(("order", nxt[0], None, {"why": "order", "from": nxt[1]}))
+            if len(out) >= ORDER_PER_ROUND:
+                break
+    return out
 
 def pick_branches(T):
     """every branch the picks have grown so far: for each picked context c, every answer x -> [(c + [x], weight)]"""
@@ -542,8 +583,10 @@ def plan(rid, recs, seeds, budget):
         paired.append((kind, ctx, PR.control_candidate(ctx, cand, ck, rid), {"why": "control", "control": ck, "probe": {"control": ck}}))
     work += [(1, -1, ii, kind, ctx, cand, src) for ii, (kind, ctx, cand, src) in enumerate(paired)]
     written_seqs = TR.sequences(TR.Tree(recs, written=True))
-    work += [(1, -1, len(paired) + ii, kind, ctx, cand, src)
-             for ii, (kind, ctx, cand, src) in enumerate(cohere_work(P, seqs, written_seqs, seeds, rid))]
+    cw = cohere_work(P, seqs, written_seqs, seeds, rid)
+    work += [(1, -1, len(paired) + ii, kind, ctx, cand, src) for ii, (kind, ctx, cand, src) in enumerate(cw)]
+    work += [(1, -1, len(paired) + len(cw) + ii, kind, ctx, cand, src)
+             for ii, (kind, ctx, cand, src) in enumerate(order_work(P, seqs, seeds, rid))]
     work.sort(key=lambda w: w[:3])
     n_reasoned = 0
     for kind, ctx, cand, src in gen:                       # outside the budget's tiers: asked only of reasoner minds

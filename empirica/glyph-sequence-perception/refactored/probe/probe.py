@@ -25,6 +25,11 @@ Question kinds (refactored protocol "ctx-0.1"):
              generate"). Effort normal, not low. Asked of the generator minds, SAMPLES times each on separate sheets;
              fresh random contexts asked the same way (probe {"null": true}) show how often a repeat happens by chance.
              A mind that declines anyway is kept as outcome "none".
+  order      a set of 4-12 glyphs, shown in a fated scrambled order: put them in the sequence they seem to form, as
+             one line or several, ties nested, GAP where a step seems missing, the rest in "extra", or "none". The
+             triad era's own wording and answer shape with every option offered (perp, tie, gap), so new answers join
+             the 5,716 ported ones (METHODOLOGY §4a: finds the best order of a set, not only whether a given order
+             holds). Its parser is the triad era's (harness/seq/parse.py q0.1), copied.
 Answer options are words, never glyphs, so no glyph is reserved (METHODOLOGY §4).
 
 Sheets hold 1-5 questions of one kind, in a fated order (no two questions sharing a context adjacent); the sheet
@@ -40,7 +45,8 @@ import fate                                                # noqa: E402
 PROTOCOL = "ctx-0.1"
 MAX_SHEET = 5
 MAX_CONTINUE = 24
-KINDS = ("continue", "inhibit", "triad", "cohere", "pick")
+KINDS = ("continue", "inhibit", "triad", "cohere", "pick", "order")
+MAX_ORDER = 12                    # the largest set an order question shows (the triad era: 8; chosen without evidence)
 SAMPLES = 5                       # pick: samples per context per generator mind (chosen without evidence)
 MAX_RUN = 24                       # the longest run a cohere question shows (chosen without evidence)
 SYSTEM = "You are a participant in a short perception study. Answer exactly as asked."
@@ -133,6 +139,8 @@ def question(kind, context, candidate=None, source=None, variant=None, probe=Non
     c = list(context)
     if variant == "reflection":
         assert 3 <= len(c) <= 8 and all(is_glyph(x) for x in c), c
+    elif kind == "order":
+        assert 4 <= len(c) <= MAX_ORDER and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c
     elif kind in ("cohere", "pick"):
         assert (3 if kind == "cohere" else 2) <= len(c) <= MAX_RUN and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c
     else:
@@ -142,6 +150,11 @@ def question(kind, context, candidate=None, source=None, variant=None, probe=Non
         g = sorted(c); c = list(g); R("triad-shown", {"glyphs": g}).shuffle(c)
         key = {"kind": kind, "glyphs": g}
         return dict(key, context=c, qid=uid("T", key), source=source or {})
+    if kind == "order":
+        assert 4 <= len(c) <= MAX_ORDER, c
+        g = sorted(c); c = list(g); R("order-shown", {"glyphs": g}).shuffle(c)
+        key = {"kind": kind, "glyphs": g}
+        return dict(key, context=c, qid=uid("O", key), source=source or {})
     key = {"kind": kind, "context": c}
     if kind == "inhibit":
         assert is_glyph(candidate) and candidate not in c, candidate
@@ -177,6 +190,18 @@ def _lines(kind, sheet):
                  '"none" is expected often and is fully valuable.',
                 'Copy each symbol exactly, or write "#1", "#2", … for its place in the item.']
         reply = '{"id": <id>, "seq": [...]} or {"id": <id>, "two": [...]} or {"id": <id>, "none": true}'
+    elif kind == "order":      # the triad era's wording, every option offered (harness/seq/items.py)
+        intro = "Each item below shows a set of symbols in scrambled order."
+        opts = ['"seqs": the symbols that seem to go in a sequence, in that sequence (either end first); '
+                'if you see more than one separate sequence, give each as its own list. Put any symbols that '
+                'belong to none of them in "extra"',
+                '"none": true, if none of them seem to form a sequence']
+        sents = ["Go by first impressions, and judge each item on its own rather than building a scheme across items.",
+                 '"none" is expected often and is fully valuable.',
+                 'Copy each symbol exactly, or write "#1", "#2", … for its place in the item.',
+                 'Symbols that seem to be the same step go together in a nested list, like ["<s1>", ["<s2>", "<s3>"]].',
+                 'Put "GAP" between two symbols where a step seems to be missing.']
+        reply = '{"id": <id>, "seqs": [[...], ...], "extra": [...]} or {"id": <id>, "none": true}'
     elif kind == "pick":       # Joseph's wording, 2026-10-05 ("a single", never "the one": no answer is expected)
         intro = "Each item below shows a sequence of symbols. Pick a single character that would extend this sequence. You may be creative, but give a reason."
         opts = ['"next": the single character you pick',
@@ -319,6 +344,62 @@ def tool_attempt(row):
     res = row.get("result") or {}
     return res.get("error") == "tool-attempt" or (not (res.get("raw") or "").strip() and bool(tool_calls(row)))
 
+class Bad(Exception):
+    pass
+
+def _elem(x, shown, allow_gap=False, allow_tie=True):
+    """-> a step: list of glyphs (len > 1 = tie), or 'GAP'. Copied from harness/seq/parse.py (q0.1)."""
+    if isinstance(x, list):
+        if not allow_tie or not x:
+            raise Bad("nested")
+        out = []
+        for y in x:
+            if isinstance(y, list):
+                raise Bad("deep-nest")
+            out += _elem(y, shown, allow_gap=False)
+        return out
+    if not isinstance(x, str):
+        raise Bad("type")
+    t = U.normalize("NFC", x).strip()
+    if allow_gap and t.upper() == "GAP":
+        return "GAP"
+    if t in shown:
+        return [t]
+    m = re.fullmatch(r"#\s*(\d+)", t)
+    if m and 1 <= int(m.group(1)) <= len(shown):
+        return [shown[int(m.group(1)) - 1]]
+    raise Bad(f"unknown:{t[:12]}")
+
+def parse_order(a, shown):
+    """-> {"lines": [[step, ...], ...], "extra": [...], "omitted": [...]} or {"none": True, ...}. Copied from
+    harness/seq/parse.py (q0.1): a glyph used twice, or anything not shown, makes the answer unparsed (Bad)."""
+    if a.get("none") and not a.get("seqs"):
+        return {"none": True}
+    seqs = a.get("seqs")
+    if not isinstance(seqs, list) or not seqs:
+        raise Bad("seqs")
+    if all(isinstance(x, str) for x in seqs):
+        seqs = [seqs]                      # a single flat list: one sequence
+    lines, seen = [], []
+    for sq in seqs:
+        if not isinstance(sq, list) or not sq:
+            raise Bad("seq")
+        st = [_elem(x, shown, allow_gap=True) for x in sq]
+        glyph_steps = [x for x in st if x != "GAP"]
+        if not glyph_steps:
+            continue
+        seen += [g for x in glyph_steps for g in x]
+        lines.append(st)
+    extra = []
+    for x in a.get("extra") or []:
+        extra += _elem(x, shown, allow_tie=False)
+    if len(seen + extra) != len(set(seen + extra)):
+        raise Bad("dup")
+    omitted = [g for g in shown if g not in set(seen + extra)]
+    if not lines:
+        return {"none": True, "extra": extra, "omitted": omitted}
+    return {"lines": lines, "extra": extra, "omitted": omitted}
+
 def good_row(row):
     return bool(row["result"].get("raw")) and not row["result"].get("error")
 
@@ -392,6 +473,15 @@ def _records(sheet, ledger_rows, mind, family, judge, questions, variant):
                         rec["other_content"] = other
                     if vs:
                         rec["vs_stripped"] = True
+        elif sheet["kind"] == "order":
+            rec["shown"] = list(e["context"])
+            rec["tags"]["factors"] = {"perp": True, "tie": True, "gap": True}
+            try:
+                v = parse_order(a, list(e["context"]))
+                rec["answer"] = v
+                rec["outcome"] = "none" if v.get("none") else "lines"
+            except Bad as ex:
+                rec["outcome"] = "unparsed"; rec["reason"] = f"order:{ex}"
         elif sheet["kind"] == "pick":
             rec["why"] = str(a.get("why", ""))[:600]
             rec["tags"]["sample"] = q.get("sample", 0)

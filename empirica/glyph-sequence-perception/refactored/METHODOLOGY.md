@@ -161,7 +161,7 @@ A cycle is closed rather than statistically ended. It is fully determined at eve
     - **No off switch for Sonnet or Grok.** Sonnet's thinking isn't reached by the budget, and Grok's floor is `low`.
     - **What counts as felt.** A link is best evidenced as felt when it holds across conditions and families whose deliberation differs. Reasoned answers generate candidates; recognition-condition answers test them.
 
-## 4a. Testing recognition (proposed 2026-10-05; none of it built yet)
+## 4a. Testing recognition (proposed 2026-10-05; built so far: coherence, the generator, and ordering a shuffled set)
 
 Joseph, on finding that the planner spent ~82% of c009 on continue questions: *"there are at least a handful of different kinds of better tests it could be running."* Each test below checks a different prediction of one hypothesis: *this run is a sequence*. Each gets its own question kind and tags (concern 1), is stored in the tree as its own primitive (concern 2), and is decided by the one standard (§2a): choice answers against 0.5, yes/no answers against controls.
 
@@ -185,14 +185,14 @@ Joseph, on finding that the planner spent ~82% of c009 on continue questions: *"
   - **Recognition decides.** Every branch path also goes to the coherence question.
   - **The null.** Fresh random contexts of the same length are asked the same way, one per four contexts. They show how often a repeat, and how much spread, happens by chance; that is what calibrates "a branch" and "flat".
   - **Weight of a pick** (Joseph: *"I wouldn't be opposed to a *forced* 'next character' being slightly weaker than a full 'recognition' — but not too much"*). A pick is positive link evidence of its own kind (P in BEST.md), never pooled with free continuations. Recognition of the whole run is the verdict.
-  - **Stopping** (open; Joseph: *"if one highly dispersed/high-entropy response answer goes on to get high-entropy second-order responses — that's probably a justified reason to stop a branch — but I trust you to do the math and see if that's true"*). To be tested once picks have two generations: does a step whose spread is indistinguishable from the null's tend to lead to another such step, and do branches through two such steps ever end up recognised as wholes? Until then, no branch is stopped for its spread.
+  - **Stopping** (open; Joseph: *"if one highly dispersed/high-entropy response answer goes on to get high-entropy second-order responses — that's probably a justified reason to stop a branch — but I trust you to do the math and see if that's true"*). To be tested once picks have two generations: does a step whose spread is indistinguishable from the null's tend to lead to another such step, and do branches through two such steps ever end up recognised as wholes? Until then, no branch is stopped for its spread. First look, 2026-10-05 [measured; Claude's two generator minds only, c017–c020]. A step counts as "flat" when its entropy is at least the 10th percentile of the nulls' (2.32 bits over about 10 draws; nulls' median 2.65, real contexts' median 1.57). Of 44 parent-to-child pairs, flat parents had flat children in 7 of 20 cases and structured parents in 9 of 24 (correlation of entropies 0.30). That is no sign yet that flatness persists, so nothing is stopped; the test is to be re-run with the other families' picks.
 - **Coherence** (evidence): *"does this look like a coherent sequence? why?"* The yes/no is scored; the why is saved but not analysed at this stage. Control: the same glyphs shuffled, which separates "these belong together" from "this order is felt". A shuffle is an order the run doesn't predict, not necessarily a wrong one. Joseph: *"I can absolutely attest to seeing ideated sequences that are better after some shuffling."* In c015, the seed `: ∶ · ⁝ ⁞` drew "no" and "can't tell", while its shuffle `∶ · : ⁝ ⁞` drew a "yes": *"colon variants progressing from double to quadruple dots"*. So a shuffle that any mind calls coherent becomes a candidate run in its own right. It is asked fresh, with its own control; its answers as a control stay in the baseline and never count for it.
 
 **Further tests,** each with its null:
 
 | test | question | what it isolates | control / null |
 |---|---|---|---|
-| order a shuffled set | put these in order, if they have one (ties, separate lines, none) | the axis read from the set alone, the whole ladder shown as a signum would show it | sets with no order; agreement across shuffles |
+| order a shuffled set (built) | put these in order, if they have one (ties, separate lines, none; the triad era's wording) | the axis read from the set alone, the whole ladder shown as a signum would show it | sets with no order; agreement across shuffles |
 | swap detection | two adjacent glyphs swapped: is anything out of place, and where? | order sensitivity at each link | the unaltered run (false alarms) |
 | intruder | one glyph replaced by a near decoy: which doesn't belong? | coherence of the axis as a set | the unaltered run |
 | gap fill | `- = > _ ) \|`: what fills the gap? | context on both sides fixes the axis | gaps in shuffled runs |

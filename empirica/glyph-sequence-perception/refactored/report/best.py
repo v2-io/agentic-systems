@@ -243,6 +243,34 @@ def render(g, links):
         g, flags = g[::-1], flags[::-1]
     return g[0] + "".join((" " if f else "│") + x for f, x in zip(flags, g[1:]))
 
+def orders_found(Tp):
+    """per shown set, the order its answers most often give (METHODOLOGY §4a, the order question; both eras pooled):
+    each answer's main line (its longest), steps in order, a tie as one step, either direction counted as one ->
+    [{set, best, k, n, per family {f: (k, n)}}]"""
+    by = collections.defaultdict(list)
+    for x, items in Tp.orders.items():
+        for f, shown, lines in items:
+            by[frozenset(shown)].append((f, tuple(shown), lines))
+    out = []
+    for key, rows in by.items():
+        seen, cnt, fam = set(), collections.Counter(), collections.defaultdict(lambda: [0, 0])
+        canon_of = []
+        for f, shown, lines in rows:
+            if (f, shown, id(lines)) in seen:
+                continue
+            seen.add((f, shown, id(lines)))
+            main = max(lines, key=lambda ln: sum(len(st) for st in ln if st != "GAP"))
+            c = tuple("…" if st == "GAP" else "=".join(sorted(st)) for st in main)
+            c = min(c, c[::-1])
+            canon_of.append((f, c))
+        for f, c in canon_of:
+            cnt[c] += 1
+        best, k = cnt.most_common(1)[0]
+        for f, c in canon_of:
+            fam[f][1] += 1; fam[f][0] += c == best
+        out.append({"set": key, "best": best, "k": k, "n": len(canon_of), "fam": {f: tuple(v) for f, v in fam.items()}})
+    return out
+
 def fold(w):
     return f" (+{w['folded']})" if w.get("folded") else ""
 
@@ -329,6 +357,15 @@ def main():
         L += ["", f"*{len(cand) - TOP} shorter candidates not shown.*"]
     L += ["", "*Strongest edges first: each context's strongest continuation, then the strongest branch followed forward and backward until \"none\" is the strongest answer, or the path returns on itself. Each row is the stretch around its edge whose every link has positive evidence (S, W, P or R, as above). A weaker branch is its own row once its own edge comes up, and nothing is merged. Candidates, not findings: recognition of the whole run decides. **agr**: the mean share of answers naming each link where it was asked, a perceptual quantity and not a gate. **≥ fam**: the fewest families generating any one link (0 where a link rests on recognition alone).*", ""]
 
+    od = [o for o in orders_found(Tp) if o["k"] >= 2]
+    od.sort(key=lambda o: (-sum(1 for st in o["best"] if st != "…"), -o["k"] / o["n"], o["best"]))
+    L += ["## Orders found", "", "| # | order | set | agree | per family |", "|---|---|---|---|---|"]
+    for i, o in enumerate(od[:TOP], 1):
+        b = list(o["best"]); vals = [st for st in b if st != "…" and "=" not in st]
+        if len(vals) == len(b) and shown_order(vals) != vals:
+            b = b[::-1]
+        L.append(f"| {i} | `{' '.join(b)}` | {len(o['set'])} | {o['k']}/{o['n']} | {fam_cells(o['fam'], sorted(o['fam']))} |")
+    L += ["", "*Order questions (a set shown scrambled: put it in the sequence it seems to form; the triad era's and the new rounds' pooled): per set, the order its answers most often give as their main line, either direction counted as one. **=** joins symbols put at the same step; **…** is a GAP, a step the mind thinks is missing. **set**: glyphs shown. **agree**: answers giving this order / answers with a line. Sets where at least two answers agree; sorted by how many glyphs the order places.*", ""]
     if cyc:
         L += ["## Manifested cycles", "", "| cycle | n | ans | fam |", "|---|---|---|---|"]
         L += [f"| `{' '.join(c['pattern'])} ↻` | {len(c['pattern'])} | {c['answers']} | {fa(c['families'])} |" for c in cyc[:40]]
