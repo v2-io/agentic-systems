@@ -93,8 +93,8 @@ class Plan:
         if kind == "pick" and tuple(ctx) in (self.T.pick_null if (probe or {}).get("null") else self.T.picks):
             return False
         if kind == "cohere" and (tuple(ctx) in self.T.cohere or tuple(ctx[::-1]) in self.T.cohere
-                                 or tuple(ctx) in self.T.cohere_ctl):
-            return False
+                                 or ((probe or {}).get("control") and tuple(ctx) in self.T.cohere_ctl)):
+            return False                         # a run asked once; a control once (a former control may be asked as a run)
         if kind == "triad" and (len(ctx) != 3 or tuple(sorted(ctx)) in self.T.triads_fam):
             return False
         if variant == "reflection" and tuple(ctx) in self.T.reflections:
