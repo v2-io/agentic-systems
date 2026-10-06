@@ -328,8 +328,10 @@ def sheets(round_id, questions):
                 chunk, seen, rest = [], set(), []
                 for q in pending + qs[i:]:
                     k = frozenset(q["context"])
-                    if len(chunk) < n and k not in seen:
-                        chunk.append(q); seen.add(k)
+                    of = (q.get("probe") or {}).get("of")       # a substitution never shares a sheet with its run or its pair
+                    ks = {k} | ({frozenset(of), "of:" + of} if of else set())
+                    if len(chunk) < n and not (ks & seen):
+                        chunk.append(q); seen |= ks
                     else:
                         rest.append(q)
                 pending, i = rest, len(qs)
@@ -476,7 +478,8 @@ def _records(sheet, ledger_rows, mind, family, judge, questions, variant):
                         "adapter_version": last.get("adapter_version"), "variant": variant, "tool_attempts": len(attempts),
                         "unicode": U.unidata_version,
                         "thinking_tokens": ((last.get("result") or {}).get("usage") or {}).get("thinking_tokens"),
-                        "control": (q.get("probe") or {}).get("control")},
+                        "control": (q.get("probe") or {}).get("control"),
+                        "of": (q.get("probe") or {}).get("of")},
                "source": q.get("source", {})}
         if sheet["kind"] == "inhibit":
             rec["candidate"] = e["candidate"]

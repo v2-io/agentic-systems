@@ -116,10 +116,11 @@ For whoever picks this up next. Joseph is focused elsewhere: *"OK, you're on you
   - **The name-only order question** (kind `names`). Its validation sets come first: names whose meaning and code points disagree (`⁰¹²³⁴`, `🕐🕜🕑🕝🕒`, …), and names with no order. If name-only orders follow the code points there, the question measures chart recall, and the name route is "unmeasured".
   - **D controls:** each `choose` pair after three fresh glyphs from other blocks (`control: neutral`).
   - **`choose` only at contested positions.**
-- **Processes.** The loop was stopped with STOP after c095 (which stops the drains too) and restarted at 13:58 with the new code. The drains were restarted; Gemini's takes `names` and `choose` first. Gemini prioritising newer questions was Joseph's call (*"there isn't any quota or cost associated with gemini -- just a low-granularity rate limiter"*, *"same with grok"*).
+  - **Lookalike substitution** (`why: lookalike`): 20 pairs a round, each with its matched control.
+- **Processes.** The loop was stopped with STOP after c095 (which stops the drains too) and restarted at 13:59 with the new code, and again at about 14:05 for lookalike substitution. The drains were restarted; Gemini's takes `names` and `choose` first. Gemini prioritising newer questions was Joseph's call (*"there isn't any quota or cost associated with gemini -- just a low-granularity rate limiter"*, *"same with grok"*).
 - **Next, in order:**
   1. Read the names validation once the non-Claude answers are in.
-  2. Build lookalike substitution.
+  2. Read the first lookalike pairs: does the control fall where the lookalike holds?
   3. Freeze the model (commit, then record the hash in the seal file).
   4. Build the catalog (Python plus Postgres 18).
   5. Repoint BEST and the planner at it.

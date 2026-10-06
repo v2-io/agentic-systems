@@ -63,6 +63,7 @@ PICK_NULL_EVERY = 4          # one null (fresh random) context per this many rea
 CHOOSE_PER_ROUND = 60        # discriminator-position questions a round (chosen without evidence)
 ORDER_PER_ROUND = 40         # order questions a round (chosen without evidence)
 NAMES_PER_ROUND = 30         # name-only order questions a round (chosen without evidence)
+LOOKALIKE_PER_ROUND = 20     # lookalike substitutions a round, each with its matched control (chosen without evidence)
 CHOOSE_CONTROLS_PER_ROUND = 20   # D controls a round: a discriminator pair after a neutral context (chosen without evidence)
 # CATALOG v5 §7a: before the name route counts, the name-only question is validated. Each set is written in the order
 # its names' MEANING gives; the first group's code-point order differs from it (so a name-only order that follows the
@@ -358,6 +359,71 @@ def choose_controls(T, asked_now, rid):
                 ctx.append(g)
         out.append(("choose", ctx, (x, y), {"why": "choose-control", "from": "neutral"}, {"control": "neutral", "chart": ch}))
         if len(out) >= CHOOSE_CONTROLS_PER_ROUND:
+            break
+    return out
+
+_SKELETON = None
+
+def confusables(g):
+    """single glyphs confusable with g (UTS #39, data/unicode/confusables-16.0.0.txt): the same skeleton"""
+    global _SKELETON
+    if _SKELETON is None:
+        sk = {}
+        for l in open(HERE.parents[1] / "data" / "unicode" / "confusables-16.0.0.txt", encoding="utf-8-sig"):
+            l = l.split("#")[0].strip()
+            if not l:
+                continue
+            src, tgt = [f.strip() for f in l.split(";")[:2]]
+            if " " in src:
+                continue
+            sk[chr(int(src, 16))] = "".join(chr(int(h, 16)) for h in tgt.split())
+        groups = collections.defaultdict(set)
+        for c, t in sk.items():
+            groups[t].add(c)
+            if len(t) == 1:
+                groups[t].add(t)
+        _SKELETON = (sk, groups)
+    sk, groups = _SKELETON
+    return sorted(x for x in groups.get(sk.get(g, g), ()) if x != g)
+
+def lookalike_work(P, rid):
+    """Lookalike substitution (CATALOG v5 §7b, §11): a recognised run, strictly monotone in code points, with one interior
+    glyph swapped for a confusable from ANOTHER block, asked whole; and, as its matched control, the same position swapped
+    for a glyph drawn uniformly from the confusable's own block that is confusable with neither. Recognition that holds for
+    the lookalike and falls for the control did not rest on the code point. -> [(kind, run, None, src)], pairs adjacent"""
+    T = P.T
+    runs = []
+    for run, fc in sorted(T.cohere.items()):
+        y = sum(c["yes"] for c in fc.values()); n = sum(sum(c.values()) for c in fc.values())
+        d = [ord(b) - ord(a) for a, b in zip(run, run[1:])]
+        if n and y / n >= 0.5 and len(run) >= 3 and (all(x > 0 for x in d) or all(x < 0 for x in d)):
+            runs.append(list(run))
+    PR.R("lookalike-order", {"round": rid}).shuffle(runs)
+    out = []
+    for g in runs:
+        r = PR.R("lookalike", {"run": g})
+        opts = [(i, c) for i in range(1, len(g) - 1) for c in confusables(g[i])
+                if c not in g and PR.is_glyph(c) and U.category(c) != "Cn" and block(c) != block(g[i])]
+        if not opts:
+            continue
+        i, c = opts[r.randrange(len(opts))]
+        bn = block(c)
+        lo, hi = next((a, b) for a, b, n in _BLOCKS if n == bn)
+        near = set(confusables(g[i])) | set(confusables(c)) | {g[i], c}
+        pool = [chr(o) for o in range(lo, hi + 1) if PR.is_glyph(chr(o)) and U.category(chr(o)) != "Cn"
+                and chr(o) not in near and chr(o) not in g]
+        if not pool:
+            continue
+        d = pool[r.randrange(len(pool))]
+        la, ct = g[:i] + [c] + g[i + 1:], g[:i] + [d] + g[i + 1:]
+        if tuple(la) in T.cohere_ctl or tuple(ct) in T.cohere_ctl:
+            continue
+        of = "".join(g)
+        out.append(("cohere", la, None, {"why": "lookalike", "control": "lookalike", "of": of,
+                                         "probe": {"control": "lookalike", "of": of, "pos": i, "orig": g[i]}}))
+        out.append(("cohere", ct, None, {"why": "lookalike", "control": "lookalike-ctl", "of": of,
+                                         "probe": {"control": "lookalike-ctl", "of": of, "pos": i, "orig": g[i]}}))
+        if len(out) >= 2 * LOOKALIKE_PER_ROUND:
             break
     return out
 
@@ -755,6 +821,8 @@ def plan(rid, recs, seeds, budget):
     work += [(1, -1, len(paired) + len(cw) + len(ow) + ii, kind, ctx, cand, dict(src, probe=probe))
              for ii, (kind, ctx, cand, src, probe) in enumerate(cho)]
     nw = names_work(P, seeds, rid)
+    lw = lookalike_work(P, rid)
+    nw = nw + lw
     work += [(1, -1, len(paired) + len(cw) + len(ow) + len(cho) + ii, kind, ctx, cand, src) for ii, (kind, ctx, cand, src) in enumerate(nw)]
     work.sort(key=lambda w: w[:3])
     n_reasoned = 0
