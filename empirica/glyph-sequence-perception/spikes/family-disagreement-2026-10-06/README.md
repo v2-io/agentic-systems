@@ -1,0 +1,15 @@
+# Spike: family disagreement (2026-10-06)
+
+**The question.** Where do the model families agree about which runs are sequences, and where don't they? Which sequences are model-sensitive, and which are (at least among frontier families) model-agnostic? And what does the disagreement rest on? Asked by Joseph before any planner term was built on disagreement: *"look at the data, and then we'll probably need to have a model-sensitive vs agnostic finding / parameter on found sequences, or possibly something else depending on what the data is actually showing, if anything"*.
+
+**What happened.** Disagreement between families turned out to be mostly about whether to commit, at thresholds that belong to a mind and a question kind, not about what the sequence is. Frontier minds that commit agree on content 93–99% of the time. The family-shaped effects are few and nameable. See `FINDINGS.md`.
+
+**Where everything is:**
+- `FINDINGS.md`: the findings;
+- `proposed-integration-plan.md`: the agent's suggestions for the planner and the catalog;
+- `debrief.md`: the agent's debrief to Joseph;
+- `MAP.md`: the map written before any computing, with its expectations;
+- `NOTES.md`: the timestamped working log, including the readings withdrawn;
+- `*.py`: the scripts, all loading through `lib.py`, which drops sealed answers first.
+
+**Provenance.** The spike agent (Claude Opus 5.5) wrote `MAP.md`, `NOTES.md` and the scripts. The harness refused its writes of the report files, so the coordinating session landed `FINDINGS.md`, `proposed-integration-plan.md` and `debrief.md` unchanged from the agent's final report. The same write succeeded from the coordinating session, so the refusal was particular to the agent's session. **Status:** awaiting independent verification, commissioned by the coordinating session.
