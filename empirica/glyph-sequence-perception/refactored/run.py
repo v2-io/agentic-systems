@@ -124,7 +124,11 @@ def limit_hit(res):
     """a call refused for a usage limit (found 2026-10-06: Claude's weekly limit, "You've hit your weekly limit ·
     resets 7am", answered every call of rounds c028-c079 with an error). Not an attempt at the sheet: it is not
     counted toward MAX_ATTEMPTS, and the mind pauses, so the loop waits inside its round instead of planning blind
-    ones."""
+    ones. A row already relabelled "limit" is one too: agy's detail lives only in the error, which the relabel moves
+    to limit_detail (found 2026-10-06: Gemini's limits of c096-c097 were relabelled to a bare "limit" that this test
+    missed, so its drain never paused and each limit spent one of the sheet's attempts)."""
+    if res.get("error") == "limit":
+        return True
     return bool(res.get("error")) and bool(LIMIT_RE.search(f"{res.get('raw') or ''} {res.get('error') or ''}"))
 
 def void_rounds():
@@ -200,7 +204,7 @@ def ask_mind(rid, m, reg, stop=None, kinds=None):
             if res.get("raw") and not res.get("error") and PR._answers(res["raw"]) is None:
                 row["result"] = dict(res, error="no-answers-object")      # raw kept; re-asked
             if limit_hit(res):
-                row["result"] = dict(res, error="limit")
+                row["result"] = dict(res, error="limit", limit_detail=res.get("error"))
             with lock:
                 wj(led, [row], "a")
                 by[s["sid"]].append(row); calls[0] += 1
