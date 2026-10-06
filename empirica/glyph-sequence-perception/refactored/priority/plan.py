@@ -60,11 +60,11 @@ class Plan:
         self.qs, self.keys = [], set()
     def full(self):
         return len(self.qs) >= self.budget
-    def add(self, kind, ctx, cand=None, variant=None, **src):
+    def add(self, kind, ctx, cand=None, variant=None, probe=None, **src):
         ctx = list(ctx)
         if not (2 <= len(ctx) <= 8) or len(set(ctx)) != len(ctx) or not all(PR.is_glyph(x) for x in ctx):
             return False
-        key = (kind, tuple(ctx), cand, variant)
+        key = (kind, tuple(ctx), cand, variant, tuple(sorted((probe or {}).items())))
         if key in self.keys:
             return False
         if kind == "continue" and variant is None and tuple(ctx) in self.asked:
@@ -74,11 +74,11 @@ class Plan:
         if kind == "inhibit" and ((tuple(ctx), cand) in self.T.inhibit or cand in ctx or not PR.is_glyph(cand)):
             return False
         self.keys.add(key)
-        self.qs.append(dict(PR.question(kind, ctx, cand, source=dict(src, round=self.rid), variant=variant),
-                            **({"variant": variant} if variant else {})))
+        self.qs.append(dict(PR.question(kind, ctx, cand, source=dict(src, round=self.rid), variant=variant, probe=probe),
+                            **({"variant": variant} if variant else {}), **({"probe": probe} if probe else {})))
         return True
 
-TIER = {"recognize": 1, "recognize-written": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "branch": 4, "inside": 5}
+TIER = {"recognize": 1, "recognize-written": 1, "control": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "branch": 4, "inside": 5}
 
 def written_recognition(P, seqs):
     """Momentum past a felt end (METHODOLOGY §4): where the shown answers end a sequence (top answer "none") but minds
@@ -219,7 +219,13 @@ def plan(rid, recs, seeds, budget):
             work.append((TIER[src["why"]], si, ii, kind, ctx, cand, dict(src, rank=round(s["rank"], 4))))
     recog, gen = reasoned_work(P, seqs, rid)
     recog += written_recognition(P, seqs)
-    work += [(1, -1, ii, kind, ctx, cand, src) for ii, (kind, ctx, cand, src) in enumerate(recog)]
+    # each recognition question gets a matched control at the same context (PR.control_candidate), near or far by fate
+    paired = []
+    for kind, ctx, cand, src in recog:
+        paired.append((kind, ctx, cand, src))
+        ck = "near" if PR.R("control-kind", {"round": rid, "context": ctx, "x": cand}).random() < 0.5 else "far"
+        paired.append((kind, ctx, PR.control_candidate(ctx, cand, ck, rid), {"why": "control", "control": ck, "probe": {"control": ck}}))
+    work += [(1, -1, ii, kind, ctx, cand, src) for ii, (kind, ctx, cand, src) in enumerate(paired)]
     work.sort(key=lambda w: w[:3])
     n_reasoned = 0
     for kind, ctx, cand, src in gen:                       # outside the budget's tiers: asked only of reasoner minds
@@ -232,7 +238,8 @@ def plan(rid, recs, seeds, budget):
     for tier, si, ii, kind, ctx, cand, src in work:
         if P.full():
             break
-        if P.add(kind, ctx, cand, **src):
+        src = dict(src); probe = src.pop("probe", None)
+        if P.add(kind, ctx, cand, probe=probe, **src):
             tiers_reached[tier] += 1
             if si >= 0:                                  # recognition questions belong to no one sequence
                 served.add(si)

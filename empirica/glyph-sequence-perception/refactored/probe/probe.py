@@ -48,7 +48,34 @@ def content_class(t):
     return "unassigned" if c == "Cn" else ("mark" if c[0] == "M" else "other")
 
 # ------------------------------------------------------------------ questions
-def question(kind, context, candidate=None, source=None, variant=None):
+# Controls for recognition (inhibit) questions (Joseph, 2026-10-05: "wrt 'yes' -- can't you add controls?"): a matched
+# decoy at the same context, a candidate that should not continue it, put on the same sheets indistinguishably. It
+# measures how readily each mind says "yes" -- acquiescence ("far": a glyph from a distant part of Unicode) and
+# block-membership ("near": the same neighbourhood of the code chart, but not adjacent). The control kind is a probing
+# tag on the question and its records (tags.control); a control's answers are also ordinary answers about its pair.
+CONTROL_NEAR = 48                 # near decoys: within this many code points of the candidate, more than 2 away
+FAR_POOL = [(0x21, 0x7E), (0xA1, 0x24F), (0x370, 0x3FF), (0x2000, 0x2BFF), (0x2E80, 0x33FF), (0x1D300, 0x1D7FF),
+            (0x1F000, 0x1FBFF)]
+
+def control_candidate(context, x, kind, rid):
+    """a fated decoy for the recognition question (context, x): kind "near" or "far" -> glyph"""
+    r = R("control", {"round": rid, "context": list(context), "x": x, "kind": kind})
+    bad = set(context) | {x}
+    last = ord(context[-1])
+    if kind == "near":
+        pool = [c for c in range(ord(x) - CONTROL_NEAR, ord(x) + CONTROL_NEAR + 1)
+                if abs(c - ord(x)) > 2 and abs(c - last) > 2 and c > 0x20 and is_glyph(chr(c))
+                and U.category(chr(c)) != "Cn" and chr(c) not in bad]
+        if pool:
+            return chr(r.choice(pool))
+    while True:
+        lo, hi = r.choices(FAR_POOL, weights=[b - a + 1 for a, b in FAR_POOL])[0]
+        c = r.randint(lo, hi)
+        if abs(c - ord(x)) > 4096 and abs(c - last) > 4096 and is_glyph(chr(c)) and U.category(chr(c)) != "Cn" \
+                and chr(c) not in bad:
+            return chr(c)
+
+def question(kind, context, candidate=None, source=None, variant=None, probe=None):
     c = list(context)
     assert 2 <= len(c) <= 8 and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c
     key = {"kind": kind, "context": c}
@@ -57,6 +84,8 @@ def question(kind, context, candidate=None, source=None, variant=None):
         key["candidate"] = candidate
     if variant:
         key["variant"] = variant                       # a different question from the plain one at the same context
+    if probe:
+        key["probe"] = probe                           # e.g. {"control": "near"}: how the question was sampled
     q = dict(key, qid=uid({"continue": "Q", "inhibit": "I"}[kind], key), source=source or {})
     return q
 
@@ -213,7 +242,8 @@ def _records(sheet, ledger_rows, mind, family, judge, questions, variant):
                         "prompt_sha256": last.get("prompt_sha256"), "system_sha256": last.get("system_sha256"),
                         "adapter_version": last.get("adapter_version"), "variant": variant, "tool_attempts": len(attempts),
                         "unicode": U.unidata_version,
-                        "thinking_tokens": ((last.get("result") or {}).get("usage") or {}).get("thinking_tokens")},
+                        "thinking_tokens": ((last.get("result") or {}).get("usage") or {}).get("thinking_tokens"),
+                        "control": (q.get("probe") or {}).get("control")},
                "source": q.get("source", {})}
         if sheet["kind"] == "inhibit":
             rec["candidate"] = e["candidate"]

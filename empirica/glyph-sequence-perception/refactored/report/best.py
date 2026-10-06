@@ -199,6 +199,33 @@ def shown_order(g):
         return g[::-1]
     return g
 
+def recognition(recs):
+    """Recognition (inhibit) answers against their controls. Per family: the share of "yes" among answers to real
+    candidates, to near controls and to far controls. A candidate counts as RECOGNISED when, in >= 2 families, its yes
+    share is above that family's near-control yes rate (the stricter control; far where no near rate exists yet)."""
+    inh = [r for r in recs if r.get("kind") == "inhibit" and r.get("outcome") in ("yes", "no", "cant-tell")]
+    rate = collections.defaultdict(lambda: collections.Counter())
+    for r in inh:
+        rate[(r["family"], (r.get("tags") or {}).get("control") or "real")][r["outcome"]] += 1
+    def yes(f, cls):
+        c = rate.get((f, cls))
+        return (c["yes"] / sum(c.values()), sum(c.values())) if c else (None, 0)
+    fams = sorted({r["family"] for r in inh})
+    per = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))
+    for r in inh:
+        if not (r.get("tags") or {}).get("control"):
+            per[(tuple(r["context"]), r["candidate"])][r["family"]][r["outcome"]] += 1
+    rec = []
+    for (ctx, x), fc in per.items():
+        above = []
+        for f, c in fc.items():
+            base = yes(f, "near")[0] if yes(f, "near")[0] is not None else yes(f, "far")[0]
+            share = c["yes"] / sum(c.values())
+            if base is not None and share > base:
+                above.append(f)
+        rec.append({"ctx": ctx, "x": x, "verdicts": {f: dict(c) for f, c in fc.items()}, "above": above})
+    return fams, yes, rec
+
 def main():
     recs = TR.load()
     Tp = TR.Tree(recs, seeds=False)                            # shown answers (nodes) + written answers (written)
@@ -241,6 +268,23 @@ def main():
         L.append(f"| {i} | `{' '.join(shown_order(s['glyphs']))}`{' ↻ (wraps)' if s.get('wraps') else ''} | {len(s['glyphs'])} | {s['written_links']} / {s['shown_links']} | {s['agreement']:.2f} | {s['families_min']} |")
     if len(carried) > TOP_WRITTEN:
         L += ["", f"*{len(carried) - TOP_WRITTEN} shorter runs not shown.*"]
+    fams, yes, rec = recognition(recs)
+    if rec:
+        L += ["", "## Recognition, and its controls", "",
+              "Recognition (inhibit) questions ask whether a candidate comes directly after a shown run: *yes / no / can't tell*. The candidates come from reasoned answers, and from written answers that run past where shown answers end. Each one has a matched **control** at the same context, shuffled onto the same sheets: a **near** decoy, from the same neighbourhood of the code chart but not adjacent, or a **far** one, from a distant part of Unicode. Control yes-rates show how readily a family says yes. A candidate is **recognised** when its yes share beats the family's near-control rate in ≥ 2 families. Controls began in c007; until a family has a control rate, nothing of its counts as recognised.", "",
+              "| family | yes: real candidates | yes: near controls | yes: far controls |", "|---|---|---|---|"]
+        for f in fams:
+            cells = []
+            for cls in ("real", "near", "far"):
+                v, n = yes(f, cls)
+                cells.append(f"{v:.2f} (n={n})" if v is not None else "—")
+            L.append(f"| {f} | " + " | ".join(cells) + " |")
+        good = [r for r in rec if len(r["above"]) >= 2]
+        L += ["", f"**{len(good)} of {len(rec)} candidates recognised.**", "",
+              "| context | candidate | recognised | verdicts per family (yes / no / can't tell) |", "|---|---|---|---|"]
+        for r in sorted(rec, key=lambda r: (-len(r["above"]), r["x"]))[:80]:
+            v = "; ".join(f"{f} {c.get('yes', 0)}/{c.get('no', 0)}/{c.get('cant-tell', 0)}" for f, c in sorted(r["verdicts"].items()))
+            L.append(f"| `{' '.join(r['ctx'])}` | `{r['x']}` | {'yes' if len(r['above']) >= 2 else 'not yet'} | {v} |")
     (ROOT / "BEST.md").write_text("\n".join(L) + "\n")
     print("\n".join(L[:6]))
 
