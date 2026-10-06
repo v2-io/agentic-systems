@@ -1,79 +1,158 @@
-"""Concern 3: what to ask next (METHODOLOGY §5). Reads the tree; writes questions, never evidence. Seeds live here
-only, as contexts to query.
+"""Concern 3: what to ask next (METHODOLOGY §5). Reads the tree; writes questions, never evidence.
 
-Joseph's rule, as written:
-  "various minds start to find a sequence -- call it a sequence of three glyphs. The priority is then to extend that
-   sequence to the right and to the left as far as they will go while still spending time looking for other 'kernels'
-   ... square away the most obvious and stable (empirically) sequences"
-  "15% of our effort was always 'hot' -- exploring the space for more kernels ... based on bumps from the original seed"
+THE PRINCIPLE (Joseph, 2026-10-06): "stochastic probing, weight toward where it will be most clarifying" -- "I prefer
+stochastic all the way down, including jitter and stuff (I don't even like having the same number of questions per
+round etc.)". Earlier: "I wouldn't outright exclude *anything* -- when I do stochastic work I always use s-curves with
+there always being a long tail". So every candidate question has a nonzero chance every round, re-asking included,
+and nothing here is a cut. What the planner may refuse is only what cannot be asked validly (a glyph that is not one,
+a context that repeats a glyph, a length the prompts do not support) and a second copy within one round.
 
-ONE ORDER for 85% of a round: by TIER first, then sequences most stable first within each tier (tree rank: mean
-agreement, scaled down for walks shorter than 4 steps), taken greedily until the budget is spent. So every sequence's
-ends are asked before any sequence's deeper squaring-away. (Until c001 the order was sequence first: each sequence
-brought all its tiers, and c001 served only the top 9 of 540. Joseph noticed the arrow row `↓ ↘ → ↗ ↑ ↖ ←` missing
-`↙`, at rank 75, with both ends never asked: "extend ... to the right and to the left as far as they will go" comes
-before squaring away.) Tiers:
-  1 ends    an OPEN end: a continue question from the end, outward (context 3-8 glyphs, fated). A WRAP end: a cycle
-            probe -- a continue question showing only the end of the suspected period (ceil(p/2) glyphs, >= 2), so a
-            repeat would be the mind's own; periods with < 4 distinct glyphs are out of scope and not probed.
-  2 seeds   each walked step carried only by seed votes: the seeded context put to the real minds. (Seeds already
-            count as votes, so confirming them comes after every sequence's ends.)
-  3 k*      for each walked step whose shortest sufficient context is not yet known: the SHORTEST unasked suffix of its
-            run (down to 2 glyphs), as a continue question.
-  4 branch  where a step had a runner-up continuation: an inhibit question (context, runner-up) -- does it continue?
-  5 inside  continue questions at contexts ending on interior glyphs, either direction, never asked (2-4 glyphs).
-15% HOT: continue questions on 2-glyph contexts never asked: half from seeds (two adjacent glyphs of a seed's written
-order, either direction, drawn by bump), half fresh -- a first glyph from the whole symbol space (printable ASCII 4 :
-2-byte 3 : 3-byte symbol blocks 2 : 4-byte symbol blocks 1), and a second glyph that is its codepoint neighbour
-(the faint prior edge, METHODOLOGY §1) or another fresh glyph, 1:1. Glyphs already settled in a top-ranked sequence
-(restful) are redrawn with probability 1/2.
-A context already asked in any round is not asked again (more answers at the same context add replication, which the
-rank does not yet need).
+HOW A ROUND IS DRAWN
+  Size     each STREAM (a kind of work, below) has a base size, the mean of what c096-c100 asked; this round's size of
+           each is base x (budget / 700) x a round-wide factor x a per-stream factor, both lognormal (sigmas
+           SIZE_SIGMA_ROUND, SIZE_SIGMA_STREAM). So neither the round nor any share is the same twice.
+  Weight   every candidate UNIT (a question, or a question with its controls) gets
+               weight = relevance x information
+           INFORMATION is the expected information (nats) that one more answer from each family adds about the
+           quantity the question measures, summed over the families that answer it: for a share with k of n
+           answers, a Beta(k + 1/2, n - k + 1/2) posterior (Jeffreys), the mutual information between the next
+           answer and the share,
+               I(k, n) = h(m) + m (psi(a + 1) - psi(a + b + 1)) + (1 - m) (psi(b + 1) - psi(a + b + 1)),   m = a / (a + b)
+           -- 0.307 nats unasked, about 1 / (2n) once n answers agree. Never zero: the most settled item is re-asked,
+           exceedingly rarely. Answers ASKED BUT NOT YET GIVEN (the drains lag; pending()) count as expected answers,
+           so the planner does not re-ask what a slow family has not reached yet.
+           RELEVANCE is how much the quantity bears on a sequence: an S-curve with a floor (scurve) on the strength
+           of the sequence it serves (the tree's rank), so "the most obvious and stable (empirically) sequences" are
+           squared away first (Joseph, 2026-10-05) and nothing falls to zero.
+  Draw     within a stream, a fated weighted draw without replacement (Efraimidis-Spirakis keys u^(1/w)): heavy
+           units early, light ones anywhere, until the stream's size is reached.
+Every number named here is listed in PARAMS, chosen without evidence unless it says otherwise.
+
+STREAMS (each a kind of work; the sources are where candidates come from, never evidence):
+  explore         2-glyph contexts never asked: seed bumps, fresh glyphs (printable ASCII 4 : 2-byte 3 : 3-byte 2 :
+                  4-byte 1) with a code-point neighbour or another fresh glyph, and triad-agreed kernels (§4).
+  continue        contexts along the tree's sequences: every end (open, ended, and cycle probes showing less than a
+                  period; at END_RELEVANCE, since only an end can extend a sequence), every suffix of every walked step's context (k*), longer contexts along the path
+                  (lengthening, the stability test of §3), contexts ending on interior glyphs, contexts approaching a
+                  weak link from the far side, and the deciding contexts themselves (replication).
+  inhibit         link recognition, each with a matched near or far decoy: candidates the reasoned pass and written
+                  momentum produced, runners-up at branch points, and skip tests (the glyph after next: a sequence
+                  predicts "no"), weighted by how strong the claim tested is (the strongest tested hardest).
+  cohere          whole runs, each with its shuffled control (and a chart window at CHART_CONTROL_SHARE): the tree's
+                  walks, runs written answers carry, ordered seeds, pick branches, shuffles some mind called coherent,
+                  the triad era's grown rows (CATALOG §3), and every run asked before; runs longer than the question
+                  shows in overlapping windows. Shown in a fated orientation each time.
+  lookalike       a run some mind called coherent, strictly monotone in code points, with one interior glyph swapped
+                  for a confusable from another block, and its fated non-confusable control (CATALOG §7b, §11).
+  choose          discriminator positions: the chart's next glyph against the run's glyph (steps of runs), and
+                  contexts whose answers include both a chart-adjacent and a non-adjacent glyph (splits). Positions
+                  the chart does not contest (another Unicode block, CATALOG §7a) are candidates on equal terms
+                  (about 1% of positions): what they test is the block rule itself. Tagged probe.contested.
+  choose-control  D controls: a pair after three fresh glyphs from other blocks, fated per round.
+  names           the name-only order question: its validation sets (relevance VALIDATION_RELEVANCE, since the name
+                  route waits on them), ordered seeds, and runs some mind called coherent.
+  order, triad    order a scrambled set; the middle of a triple: sets and triples from runs and seeds, and every
+                  one asked before.
+  pick, pick-null the generator (§4a): known sequences and every branch grown so far, SAMPLES times per generator
+                  mind; the null, fresh random contexts of the same lengths.
+  reasoned        felt ends of sequences, for the reasoner minds (generation, kept apart).
+  reflection      `a b c b -> ?` inside sequences (§3, kept apart).
+Joseph's own seeds get STEWARD_RELEVANCE wherever seeds are a source.
+
+History: until 2026-10-06 this module selected rather than sampled: fixed tiers filled greedily (tiers 4 and 5 never
+got budget), fixed per-round caps over fixed orders, hard thresholds (agreement 0.75, yes share 0.5, rank 0.75), and
+every question asked once (a weak context re-asked at most once). Each rule had a local reason (git log; METHODOLOGY
+§5) and none could be revisited by the data. Joseph, on reading the list: "every 'rule' you just noted, were all
+contrived and contrary to the methodology and my instincts for experiment design."
 """
-import collections, math, pathlib, sys, unicodedata as U
+import collections, json, math, pathlib, sys, unicodedata as U
 
 HERE = pathlib.Path(__file__).resolve()
-sys.path.insert(0, str(HERE.parents[1] / "probe"))
-sys.path.insert(0, str(HERE.parents[1] / "tree"))
+ROOT = HERE.parents[1]
+DATA = ROOT / "data"
+sys.path.insert(0, str(ROOT / "probe"))
+sys.path.insert(0, str(ROOT / "tree"))
 import probe as PR                                          # noqa: E402
 import tree as TR                                           # noqa: E402
 
-EXPLORE_SHARE = 0.15
-REASONED_PER_ROUND = 20      # reasoned-pass questions a round (chosen without evidence; the reasoner is the costly mind)
-REFLECT_PER_ROUND = 20       # reflection questions a round, outside the budget (chosen without evidence)
-FALSIFY_PER_ROUND = 60       # falsification tests a round, highest-ranked sequences first (chosen without evidence)
-THIN_PER_ROUND = 80          # precision replications a round (chosen without evidence)
-JOIN_PER_ROUND = 60          # join probes a round (chosen without evidence)
-JOIN_WEAK = 0.75             # the planner's own cut for a "weak" link inside a strong run (chosen without evidence)
-# A weak context is replicated at most ONCE (one more round of answers there), whatever the result: re-asking a weak
-# link "until it passes" is optional stopping, which would let noise carry links over any cut.
-WRITTEN_RECOGNIZE_PER_ROUND = 40   # recognition questions for written continuations past shown ends (chosen without evidence)
-COHERE_PER_ROUND = 80        # whole-run recognition questions a round, each with its shuffled control (chosen without evidence)
-PICK_PER_ROUND = 30          # forced-pick contexts a round, each sampled PR.SAMPLES times by each generator mind (chosen without evidence)
-# Every pick is a branch; nothing is excluded (Joseph, 2026-10-05: "I wouldn't outright exclude *anything* -- when I
-# do stochastic work I always use s-curves with there always being a long tail allowing for the most improbably things
-# to sneak in still"). A branch's priority is an S-curve on its share q of its context's draws:
-#   w(q) = FLOOR + (1 - FLOOR) / (1 + exp(-(q - MID) / WIDTH))
-# so a main branch (q ~ 0.7) weighs ~1, a weaker one at q = 0.13 (A in Joseph's example) ~0.67, a single draw of 20
-# (q = 0.05) ~0.24, and nothing falls below FLOOR. All three chosen without evidence; the nulls show what spread
-# chance alone produces. (Until 2026-10-05 an answer had to be drawn twice: a cut, against §7, under which a 2%
-# answer in 20 draws was followed ~6% of the time -- found by a side agent.)
-BRANCH_FLOOR, BRANCH_MID, BRANCH_WIDTH = 0.02, 0.10, 0.04
-PICK_NULL_EVERY = 4          # one null (fresh random) context per this many real ones, same length (chosen without evidence)
-CHOOSE_PER_ROUND = 60        # discriminator-position questions a round (chosen without evidence)
-ORDER_PER_ROUND = 40         # order questions a round (chosen without evidence)
-NAMES_PER_ROUND = 30         # name-only order questions a round (chosen without evidence)
-LOOKALIKE_PER_ROUND = 20     # lookalike substitutions a round, each with its matched control (chosen without evidence)
-CHOOSE_CONTROLS_PER_ROUND = 20   # D controls a round: a discriminator pair after a neutral context (chosen without evidence)
-# CATALOG v5 §7a: before the name route counts, the name-only question is validated. Each set is written in the order
-# its names' MEANING gives; the first group's code-point order differs from it (so a name-only order that follows the
-# code points is chart recall through the names); the second group's names carry no order (expected: "none").
+FAMS = ("claude", "gemini", "grok")                         # the families the core roster answers with
+BASE = {                                                     # questions a round per stream: the c096-c100 means
+    "explore": 105, "continue": 167, "inhibit": 74, "cohere": 176, "lookalike": 40, "choose": 60,
+    "choose-control": 20, "names": 30, "order": 13, "triad": 15, "pick": 150, "pick-null": 35,
+    "reasoned": 20, "reflection": 20}
+PARAMS = {                                                   # every one chosen without evidence
+    "SIZE_SIGMA_ROUND": 0.15,      # lognormal sigma of the round-wide size factor
+    "SIZE_SIGMA_STREAM": 0.25,     # lognormal sigma of each stream's own size factor
+    "REL_FLOOR": 0.05, "REL_MID": 0.5, "REL_WIDTH": 0.12,   # relevance S-curve on a sequence's rank (tree rank, 0-1)
+    "END_RELEVANCE": 5.0,          # a context at a sequence's end: only there can a question extend it (Joseph's rule,
+                                   # "extend that sequence to the right and to the left as far as they will go")
+    "VALIDATION_RELEVANCE": 3.0,   # the name-only question's validation sets
+    "STEWARD_RELEVANCE": 3.0,      # Joseph's own seeds
+    "CHART_CONTROL_SHARE": 0.25,   # cohere runs that also get a chart window (a measurement, not a decoy)
+    "PICK_NULL_EVERY": 4,          # one null context per this many real pick contexts (sizes the pick-null base)
+    "MAX_WINDOW_STEP": 0.5,        # windows of long runs overlap by half a window
+}
+BRANCH_FLOOR, BRANCH_MID, BRANCH_WIDTH = 0.02, 0.10, 0.04  # pick branches: S-curve on a branch's share of its draws
+# A branch's weight w(q) = FLOOR + (1 - FLOOR) / (1 + exp(-(q - MID) / WIDTH)): a main branch ~1, a single draw of 20
+# ~0.24, nothing below FLOOR (Joseph's tendril design, METHODOLOGY §4a).
 NAME_VALIDATION = {"meaning-vs-code": ["⁰¹²³⁴", "⅕¼⅓½⅔¾", "🕐🕜🕑🕝🕒", "⓪①②③④", "❽❾❿⓫⓬", "▕🮇🮈▐🮉🮊🮋"],
                    "uninformative": ["♠♣♥♦", "☂☃☄★☎", "§¶†•※"]}
-CHART_CONTROL_SHARE = 0.25   # share of runs that also get a chart window -- a descriptive measurement, not a decoy (chosen without evidence)
+# CATALOG v5 §7a: each set is written in the order its names' MEANING gives; the first group's code-point order
+# differs from it (a name-only order that follows the code points is chart recall through the names); the second
+# group's names carry no order (expected: "none").
 FRESH_TIERS = {"1-byte": (4, [(0x21, 0x7E)]), "2-byte": (3, [(0xA1, 0x7FF)]),
                "3-byte": (2, [(0x2000, 0x2BFF), (0x2E80, 0x33FF)]), "4-byte": (1, [(0x1D300, 0x1D7FF), (0x1F000, 0x1FBFF)])}
+ORDERED_SEEDS = {"sequence", "morph", "cyclic", "generator"}   # seed types that propose an order: runs
+ORDER_ONLY_SEEDS = {"set", "negative"}                         # no order proposed: the order question only
+MAXK = 8                                                       # the longest shown context (probe's limit)
 
+# ------------------------------------------------------------------ the numbers
+def psi(x):
+    """digamma, by recurrence to x >= 6 and the asymptotic series (pure Python, so nothing outside the code moves it)"""
+    r = 0.0
+    while x < 6:
+        r -= 1 / x; x += 1
+    f = 1 / (x * x)
+    return r + math.log(x) - 0.5 / x - f * (1 / 12 - f * (1 / 120 - f * (1 / 252 - f * (1 / 240 - f / 132))))
+
+def info(k, n):
+    """expected information (nats) one more yes/no answer adds about a share with k of n so far (Jeffreys prior)"""
+    a, b = k + 0.5, n - k + 0.5
+    m = a / (a + b)
+    h = -(m * math.log(m) + (1 - m) * math.log(1 - m))
+    return max(h + m * (psi(a + 1) - psi(a + b + 1)) + (1 - m) * (psi(b + 1) - psi(a + b + 1)), 1e-9)
+
+def info_fams(counts, pend=None):
+    """summed over the core families: counts {family: (k, n)}; pend {family: answers asked but not yet given}, counted
+    as answers at the family's current posterior mean"""
+    tot = 0.0
+    for f in FAMS:
+        k, n = counts.get(f, (0, 0))
+        p = (pend or {}).get(f, 0)
+        if p:
+            k, n = k + p * (k + 0.5) / (n + 1), n + p
+        tot += info(k, n)
+    return tot
+
+def scurve(v, mid=None, width=None, floor=None):
+    mid = PARAMS["REL_MID"] if mid is None else mid
+    width = PARAMS["REL_WIDTH"] if width is None else width
+    floor = PARAMS["REL_FLOOR"] if floor is None else floor
+    return floor + (1 - floor) / (1 + math.exp(-(v - mid) / width))
+
+def branch_weight(k, n):
+    return scurve(k / n, BRANCH_MID, BRANCH_WIDTH, BRANCH_FLOOR)
+
+def weighted_order(items, weight, r):
+    """a fated draw of every item without replacement, each next one with probability proportional to its weight
+    (Efraimidis-Spirakis keys u^(1/w)): heavy items early, light ones still anywhere -> list"""
+    keyed = []
+    for i, it in enumerate(items):
+        w = weight(it)
+        keyed.append((math.log(max(r.random(), 1e-300)) / w, i))
+    return [items[i] for _, i in sorted(keyed, reverse=True)]
+
+# ------------------------------------------------------------------ helpers (also used by the catalog)
 def fresh_glyph(r):
     while True:
         tier = r.choices(list(FRESH_TIERS), weights=[FRESH_TIERS[t][0] for t in FRESH_TIERS])[0]
@@ -83,160 +162,14 @@ def fresh_glyph(r):
         if PR.is_glyph(ch) and U.category(ch) != "Cn":
             return ch
 
-class Plan:
-    def __init__(self, rid, T, budget):
-        self.rid, self.T, self.budget = rid, T, budget
-        self.asked = set(T.real)                 # seed-voted contexts are still asked of the real minds
-        self.qs, self.keys = [], set()
-        self.n_join = 0
-        self.n_thin = 0
-        self.n_falsify = 0
-        self.join_links = set()
-    def full(self):
-        return len(self.qs) >= self.budget
-    def add(self, kind, ctx, cand=None, variant=None, probe=None, replicate=False, **src):
-        ctx = list(ctx)
-        distinct = variant == "reflection" or len(set(ctx)) == len(ctx)       # reflections turn back on themselves
-        lo, hi = {"cohere": (3, PR.MAX_RUN), "order": (4, PR.MAX_ORDER), "names": (4, PR.MAX_ORDER), "pick": (2, PR.MAX_RUN)}.get(kind, (2, 8))   # (2, 8) for continue/inhibit/triad: chosen without evidence
-        # (until 2026-10-06 pick fell to the continue limit of 8, silently refusing every longer context: the
-        # tendrils stopped at 8 glyphs, and roots longer than 8 -- Joseph's block cycle among them -- were never asked)
-        if not (lo <= len(ctx) <= hi) or not distinct or not all(PR.is_glyph(x) for x in ctx):
-            return False
-        if kind == "order":
-            if not hasattr(self, "_ordered"):
-                self._ordered = {frozenset(sh) for items in self.T.orders.values() for _, sh, _ in items}
-            if frozenset(ctx) in self._ordered:
-                return False
-        if kind == "names" and (frozenset(ctx) in self.T.names or not all(U.name(x, None) for x in ctx)):
-            return False
-        if kind == "pick" and tuple(ctx) in (self.T.pick_null if (probe or {}).get("null") else self.T.picks):
-            return False
-        if kind == "cohere" and (tuple(ctx) in self.T.cohere or tuple(ctx[::-1]) in self.T.cohere
-                                 or ((probe or {}).get("control") and tuple(ctx) in self.T.cohere_ctl)):
-            return False                         # a run asked once; a control once (a former control may be asked as a run)
-        if kind == "triad" and (len(ctx) != 3 or tuple(sorted(ctx)) in self.T.triads_fam):
-            return False
-        if variant == "reflection" and tuple(ctx) in self.T.reflections:
-            return False
-        key = (kind, tuple(ctx), cand, variant, tuple(sorted((probe or {}).items())))
-        if key in self.keys:
-            return False
-        if kind == "continue" and variant is None and tuple(ctx) in self.asked and not replicate:
-            return False
-        if str(src.get("why", "")).startswith("falsify"):
-            if self.n_falsify >= FALSIFY_PER_ROUND:
-                return False
-            self.n_falsify += 1
-        if src.get("why") == "thin":
-            if self.n_thin >= THIN_PER_ROUND:
-                return False
-            self.n_thin += 1
-        if str(src.get("why", "")).startswith("join"):
-            lk = frozenset(src.get("link") or src.get("bridge") or "")      # one probe per link a round
-            if self.n_join >= JOIN_PER_ROUND or (lk and lk in self.join_links):
-                return False
-            self.n_join += 1
-            if lk:
-                self.join_links.add(lk)
-        if variant == "reasoned" and tuple(ctx) in self.T.reasoned:
-            return False
-        if kind == "inhibit" and ((tuple(ctx), cand) in self.T.inhibit or cand in ctx or not PR.is_glyph(cand)):
-            return False
-        self.keys.add(key)
-        self.qs.append(dict(PR.question(kind, ctx, cand, source=dict(src, round=self.rid), variant=variant, probe=probe),
-                            **({"variant": variant} if variant else {}), **({"probe": probe} if probe else {})))
-        return True
-
-TIER = {"falsify-skip": 1, "falsify-lengthen": 1, "falsify-triad": 1, "recognize": 1, "recognize-written": 1, "control": 1, "cohere": 1, "order": 1, "choose": 1, "join-reverse": 1, "join-replicate": 1, "join-end": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "thin": 3, "branch": 4, "inside": 5}
-
-def written_recognition(P, seqs):
-    """Momentum past a felt end (METHODOLOGY §4): where the shown answers end a sequence (top answer "none") but minds
-    writing past that point continued with x, ask the first-impression roster whether x comes directly after the shown
-    context -- recognition of what was generated. Ordered by how many written answers carry x."""
-    T = P.T
-    cands = collections.Counter()
-    for s in seqs:
-        g = s["glyphs"]
-        for side, stop in (("right", s["stop_right"]), ("left", s["stop_left"])):
-            if stop != "end":
-                continue
-            run = g if side == "right" else g[::-1]
-            ctx = T.lookup(run)
-            if not ctx or T.top(ctx) != TR.NONE:
-                continue
-            for j in range(2, min(TR.MAXK, len(run)) + 1):
-                for f, xs in T.written.get(tuple(run[-j:]), {}).items():
-                    for x in xs:
-                        if x not in ctx and PR.is_glyph(x) and (ctx, x) not in T.inhibit:
-                            cands[(ctx, x)] += 1
-    return [("inhibit", list(ctx), x, {"why": "recognize-written", "written_answers": n})
-            for (ctx, x), n in cands.most_common(WRITTEN_RECOGNIZE_PER_ROUND)]
-
-def cohere_work(P, seqs, written_seqs, seeds, rid):
-    """Recognition of whole runs (METHODOLOGY §1, §4a: "best recognized sequences as sequences" is the goal). Candidates
-    from every source the planner has -- the tree's walks (most stable first), the runs written answers carry, the
-    survey sequences (a fated order), and the branches the picks have grown (main branches first) -- interleaved, so no source crowds out the others. Each run is asked once, as it was
-    found (orientation is not chosen by outcome), with its shuffled control: no stopping rule. Runs of 3-MAX_RUN glyphs;
-    a seed whose glyphs repeat (other than a cycle's closing repeat) is not a run and is left out.
-    -> [(kind, run, None, src)] with each control right after its run"""
-    def runs_from(gs, how):
-        for g in gs:
-            yield list(g), how
-    sd = seed_list(seeds, ORDERED_SEEDS, rid, "cohere-seed-order")
-    branches = weighted_order(pick_branches(P.T), lambda b: b[1], PR.R("cohere-branch-order", {"round": rid}))  # S-curve draw; each asked once
-    # shuffles a mind called coherent: an order the shuffle discovered (Joseph, 2026-10-05: "I can absolutely attest to
-    # seeing ideated sequences that are better after some shuffling"). Asked fresh as a run, with its own control; its
-    # answers as a control stay in the baseline and never count for it. Most-yes first.
-    found = sorted(((sum(c["yes"] for c in fc.values()), list(run)) for run, fc in P.T.cohere_ctl.items()
-                    if P.T.cohere_ctl_class.get(run) == "shuffled" and sum(c["yes"] for c in fc.values()) > 0),
-                   key=lambda t: (-t[0], t[1]))
-    sources = [runs_from([s["glyphs"] for s in seqs], "walk"), runs_from([s["glyphs"] for s in written_seqs], "written"),
-               ((g, "seed:" + str(sid)) for g, sid in sd), runs_from([c for c, _ in branches], "pick-branch"),
-               runs_from([g for _, g in found], "reordered")]
-    out, seen = [], set()
-    n_runs = 0
-    while sources and n_runs < COHERE_PER_ROUND:
-        for src in list(sources):                        # each source adds one run per pass
-            while True:
-                nxt = next(src, None)
-                if nxt is None:
-                    sources.remove(src); break
-                g, how = nxt
-                key = tuple(min(g, g[::-1]))
-                if key in seen or not (3 <= len(g) <= PR.MAX_RUN) or tuple(g) in P.T.cohere or tuple(g[::-1]) in P.T.cohere:
-                    continue
-                ctl = PR.shuffled_control(g, rid)
-                if ctl is not None:
-                    break
-            if nxt is None:
-                continue
-            seen.add(key)
-            out.append(("cohere", g, None, {"why": "cohere", "from": how}))
-            out.append(("cohere", ctl, None, {"why": "control", "control": "shuffled", "probe": {"control": "shuffled"}, "of": "".join(g)}))
-            if PR.R("cohere-chart-draw", {"round": rid, "run": g}).random() < CHART_CONTROL_SHARE:
-                ch = PR.chart_control(g, rid)
-                if ch:
-                    out.append(("cohere", ch, None, {"why": "control", "control": "chart", "probe": {"control": "chart"}, "of": "".join(g)}))
-            n_runs += 1
-            if n_runs >= COHERE_PER_ROUND:
-                break
-    return out
-
-def branch_weight(k, n):
-    q = k / n
-    return BRANCH_FLOOR + (1 - BRANCH_FLOOR) / (1 + math.exp(-(q - BRANCH_MID) / BRANCH_WIDTH))
-
-ORDERED_SEEDS = {"sequence", "morph", "cyclic", "generator"}   # seed types that propose an order: runs
-ORDER_ONLY_SEEDS = {"set", "negative"}                         # no order proposed (a set; a proposed non-sequence): order question only
-
 def is_steward(x):
-    """Joseph's own seeds: the author is Joseph, exactly. (Until 2026-10-06 any author string containing "joseph"
-    matched, so the session's completion of his seed -- "completing Joseph's ..." -- got his priority; v3 audit.)"""
+    """Joseph's own seeds: the author is Joseph, exactly (until 2026-10-06 any author containing "joseph" matched, so
+    the session's completion of his seed got his priority; v3 audit)"""
     return str(x.get("surveyor") or x.get("author") or "").strip().lower() == "joseph"
 
 def seed_list(seeds, types, rid, purpose):
-    """seeds of the given types as runs [(glyphs, sid)] in a fated order, the steward's first (Joseph's seeds are his
-    questions to the study); a cycle written closed is opened; glyphs that repeat are not a run"""
+    """seeds of the given types as runs [(glyphs, sid)] in a fated order, the steward's first; a cycle written closed is
+    opened; glyphs that repeat are not a run"""
     out = []
     for x in seeds:
         if (x.get("type") or x.get("kind")) not in types or not isinstance(x.get("glyphs"), list):
@@ -250,6 +183,9 @@ def seed_list(seeds, types, rid, purpose):
     out.sort(key=lambda t: not t[2])
     return [(g, sid) for g, sid, _ in out]
 
+def steward_seeds(seeds):
+    return {tuple(x["glyphs"]) for x in seeds if is_steward(x) and isinstance(x.get("glyphs"), list)}
+
 _BLOCKS = None
 
 def block(ch):
@@ -257,7 +193,7 @@ def block(ch):
     global _BLOCKS
     if _BLOCKS is None:
         _BLOCKS = []
-        for l in open(HERE.parents[1] / "data" / "unicode" / "Blocks-16.0.0.txt", encoding="utf-8"):
+        for l in open(DATA / "unicode" / "Blocks-16.0.0.txt", encoding="utf-8"):
             l = l.split("#")[0].strip()
             if l:
                 r, n = l.split(";")
@@ -270,9 +206,9 @@ def block(ch):
     return None
 
 def contested(chart, last):
-    """CATALOG v5 §7a: the chart's candidate is a real alternative only within the block of the glyph before it.
-    Triad departures from the code-point median are 0.13 within one block and 0.69 across three, which is chance
-    (spikes/contested-positions-2026-10-06)."""
+    """CATALOG v5 §7a: the chart's candidate is a contested alternative when it is in the block of the glyph before it
+    (triad departures from the code-point median: 0.13 within one block, 0.69 across three; spikes/contested-positions).
+    A READING rule. The planner asks uncontested positions too, at lower relevance: that is how the rule gets tested."""
     return block(chart) is not None and block(chart) == block(last)
 
 def chart_neighbour(prev, last):
@@ -285,83 +221,6 @@ def chart_neighbour(prev, last):
             return x
     return None
 
-def choose_work(P, seqs, seeds, rid):
-    """Discriminator positions (CATALOG v2 audit A1): contexts where the code chart's next glyph and another candidate
-    differ, asked as a forced two-way choice, so chart-following is measured in behaviour, in a question separate from
-    any stated reason. Two sources, interleaved:
-      SPLIT  contexts whose picks or shown continue answers include both a chart-adjacent glyph (±1 code point from the
-             last) and a non-adjacent one: the most-named of each.
-      STEP   steps inside known runs -- Joseph's seeds first, then runs asked whole and ordered seeds -- where the run's
-             next glyph is not the chart neighbour of the glyph before it (e.g. ▁ … █ → 🮆, against the chart's ▉).
-    Only contested positions (CATALOG v5 §7a): the chart's glyph in the same Unicode block as the last glyph.
-    Each (context, pair) once. -> [(kind, ctx, (x, y), src, probe)]"""
-    T = P.T
-    def adjacent(x, ctx):
-        return abs(ord(x) - ord(ctx[-1])) == 1
-    split = []
-    for store in (T.picks, T.nodes):
-        for ctx, fl in store.items():
-            if len(ctx) < 2 or len(ctx) > 8:
-                continue
-            cnt = collections.Counter(x for xs in fl.values() for x in xs if x not in (TR.NONE, TR.OTHER) and x not in ctx and PR.is_glyph(x))
-            ch = [x for x, _ in cnt.most_common() if adjacent(x, ctx)]
-            al = [x for x, _ in cnt.most_common() if not adjacent(x, ctx)]
-            ch = [x for x in ch if contested(x, ctx[-1])]
-            if ch and al:
-                split.append((list(ctx), al[0], ch[0], "split"))
-    PR.R("choose-split-order", {"round": rid}).shuffle(split)
-    steps = []
-    runs = [g for g, _ in seed_list(seeds, ORDERED_SEEDS, rid, "choose-seed-order")] + [list(r) for r in sorted(T.cohere)]
-    for g in runs:
-        for i in range(1, len(g) - 1):
-            ctx, x = g[:i + 1][-8:], g[i + 1]
-            ch = chart_neighbour(g[i - 1], g[i])
-            if ch and ch != x and ch not in ctx and x not in ctx and contested(ch, g[i]):
-                steps.append((ctx, x, ch, "step"))
-    out, seen = [], set()
-    for a, b in zip(steps + [None] * len(split), split + [None] * len(steps)):
-        for it in (a, b):
-            if it is None:
-                continue
-            ctx, x, ch, how = it
-            key = (tuple(ctx), frozenset((x, ch)))
-            if key in seen or key in T.choose:
-                continue
-            seen.add(key)
-            out.append(("choose", ctx, (x, ch), {"why": "choose", "from": how}, {"chart": ch}))
-            if len(out) >= CHOOSE_PER_ROUND:
-                break
-        if len(out) >= CHOOSE_PER_ROUND:
-            break
-    return out + choose_controls(T, out, rid)
-
-def choose_controls(T, asked_now, rid):
-    """D controls (CATALOG v5 §7b): each discriminator pair once more, after a NEUTRAL context -- three fresh glyphs from
-    blocks other than either candidate's -- so each candidate's standalone pull is measured. This round's pairs first,
-    then earlier ones; a pair is controlled once."""
-    pairs, seen = [], set(T.choose_ctl)
-    for _, ctx, pair, _, probe in asked_now:
-        pairs.append((frozenset(pair), probe.get("chart")))
-    for key in sorted(T.choose, key=lambda k: (k[0], sorted(k[1]))):
-        pairs.append((key[1], T.choose_chart.get(key)))
-    out = []
-    for pair, ch in pairs:
-        if pair in seen:
-            continue
-        seen.add(pair)
-        x, y = sorted(pair)
-        r = PR.R("choose-neutral", {"pair": [x, y]})
-        avoid = {block(x), block(y)}
-        ctx = []
-        while len(ctx) < 3:
-            g = fresh_glyph(r)
-            if g not in pair and g not in ctx and block(g) not in avoid:
-                ctx.append(g)
-        out.append(("choose", ctx, (x, y), {"why": "choose-control", "from": "neutral"}, {"control": "neutral", "chart": ch}))
-        if len(out) >= CHOOSE_CONTROLS_PER_ROUND:
-            break
-    return out
-
 _SKELETON = None
 
 def confusables(g):
@@ -369,7 +228,7 @@ def confusables(g):
     global _SKELETON
     if _SKELETON is None:
         sk = {}
-        for l in open(HERE.parents[1] / "data" / "unicode" / "confusables-16.0.0.txt", encoding="utf-8-sig"):
+        for l in open(DATA / "unicode" / "confusables-16.0.0.txt", encoding="utf-8-sig"):
             l = l.split("#")[0].strip()
             if not l:
                 continue
@@ -386,104 +245,472 @@ def confusables(g):
     sk, groups = _SKELETON
     return sorted(x for x in groups.get(sk.get(g, g), ()) if x != g)
 
-def lookalike_work(P, rid):
-    """Lookalike substitution (CATALOG v5 §7b, §11): a recognised run, strictly monotone in code points, with one interior
-    glyph swapped for a confusable from ANOTHER block, asked whole; and, as its matched control, the same position swapped
-    for a glyph drawn uniformly from the confusable's own block that is confusable with neither. Recognition that holds for
-    the lookalike and falls for the control did not rest on the code point. -> [(kind, run, None, src)], pairs adjacent"""
-    T = P.T
-    runs = []
-    for run, fc in sorted(T.cohere.items()):
+def runlike(g, lo=3, hi=PR.MAX_RUN):
+    return lo <= len(g) <= hi and len(set(g)) == len(g) and all(PR.is_glyph(c) for c in g)
+
+def windows(g, size):
+    """g itself if it fits, else overlapping windows of `size`, about half a window apart, the last flush with the end"""
+    g = list(g)
+    if len(g) <= size:
+        return [g]
+    step = max(1, int(size * PARAMS["MAX_WINDOW_STEP"]))
+    starts = sorted(set(list(range(0, len(g) - size + 1, step)) + [len(g) - size]))
+    return [g[i:i + size] for i in starts]
+
+# ------------------------------------------------------------------ what has been asked, and not yet answered
+def pending(recs, rid):
+    """answers asked but not yet given, per question identity and family: for every context round before `rid` (void
+    rounds excluded), each sheet's entries x the minds assigned, less the records that exist for them (a record exists
+    once a mind answered or gave up). -> {qid: {family: count}}, and {qid: question}"""
+    try:
+        void = set(json.load(open(DATA / "rounds" / "VOID.json"))["rounds"])
+    except FileNotFoundError:
+        void = set()
+    fam = {m: s.get("family") for m, s in json.load(open(ROOT / "core" / "minds.json"))["minds"].items()}
+    asked = collections.defaultdict(collections.Counter)
+    qs = {}
+    for rd in sorted((DATA / "rounds").glob("c[0-9][0-9][0-9]")):
+        if rd.name in void or rd.name >= rid or not (rd / "sheets.jsonl").exists():
+            continue
+        for l in open(rd / "questions.jsonl"):
+            if l.strip():
+                q = json.loads(l); qs[q["qid"]] = q
+        for l in open(rd / "sheets.jsonl"):
+            if not l.strip():
+                continue
+            s = json.loads(l)
+            for e in s["entries"]:
+                for m in s.get("minds", []):
+                    asked[e["qid"]][fam.get(m)] += 1
+    for r in recs:
+        if r.get("era") == "ctx" and r.get("qid") in asked:
+            asked[r["qid"]][r["family"]] -= 1
+    return {q: {f: n for f, n in c.items() if n > 0} for q, c in asked.items() if any(n > 0 for n in c.values())}, qs
+
+class Pending:
+    """pending answers indexed by what each question measures"""
+    def __init__(self, recs, rid):
+        pend, qs = pending(recs, rid)
+        self.by = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))
+        for qid, fc in pend.items():
+            q = qs.get(qid)
+            if not q:
+                continue
+            k, c = q["kind"], tuple(q.get("context") or ())
+            v = (q.get("variant") or "")
+            if k == "continue":
+                key = (("reasoned" if v == "reasoned" else "reflection" if v == "reflection" else "continue"), c)
+            elif k == "inhibit":
+                key = ("inhibit", (c, q.get("candidate")))
+            elif k == "cohere":
+                key = ("cohere", tuple(min(list(c), list(c)[::-1])))
+            elif k == "choose":
+                pair = frozenset(q.get("pair") or ())
+                key = ("choose-control", pair) if (q.get("probe") or {}).get("control") == "neutral" else ("choose", (c, pair))
+            elif k in ("order", "names", "triad"):
+                key = (k, frozenset(q.get("glyphs") or c) if k != "triad" else tuple(sorted(q.get("glyphs") or c)))
+            elif k == "pick":
+                key = ("pick", c)
+            else:
+                continue
+            self.by[key[0]][key[1]].update(fc)
+    def get(self, kind, key):
+        return self.by.get(kind, {}).get(key, {})
+
+# ------------------------------------------------------------------ counts per family, from the tree
+def counts_top(fl):
+    """{family: [answers]} -> {family: (k naming the pooled top answer, n)}"""
+    pooled = collections.Counter(x for xs in fl.values() for x in xs)
+    if not pooled:
+        return {}
+    top = max(pooled.items(), key=lambda kv: (kv[1], str(kv[0])))[0]
+    return {f: (sum(1 for x in xs if x == top), len(xs)) for f, xs in fl.items()}
+
+def counts_yes(fc):
+    """{family: Counter(yes/no/cant-tell)} -> {family: (yes, n)}"""
+    return {f: (c.get("yes", 0), sum(c.values())) for f, c in fc.items()}
+
+def order_counts(T):
+    """per shown set (frozenset), per family: (answers giving the set's modal main line, answers) -- the order question,
+    both eras; a main line is an answer's longest line, either direction one, ties as one step"""
+    by = collections.defaultdict(list)
+    seen = set()
+    for x, items in T.orders.items():
+        for f, shown, lines in items:
+            if id(lines) in seen:
+                continue
+            seen.add(id(lines))
+            main = max(lines, key=lambda ln: sum(len(st) for st in ln if st != "GAP")) if lines else []
+            c = tuple("…" if st == "GAP" else "=".join(sorted(st)) for st in main)
+            by[frozenset(shown)].append((f, min(c, c[::-1])))
+    out = {}
+    for key, rows in by.items():
+        top = collections.Counter(c for _, c in rows).most_common(1)[0][0]
+        fc = collections.defaultdict(lambda: [0, 0])
+        for f, c in rows:
+            fc[f][1] += 1; fc[f][0] += c == top
+        out[key] = {f: tuple(v) for f, v in fc.items()}
+    return out
+
+def names_counts(T):
+    out = {}
+    for key, rows in T.names.items():
+        canon = []
+        for f, m, a in rows:
+            if isinstance(a, dict):
+                lines = a.get("lines") or []
+                main = max(lines, key=lambda ln: sum(len(st) for st in ln if st != "GAP")) if lines else []
+                c = tuple("…" if st == "GAP" else "=".join(sorted(st)) for st in main)
+                canon.append((f, min(c, c[::-1]) if c else ("none",)))
+            else:
+                canon.append((f, (str(a),)))
+        top = collections.Counter(c for _, c in canon).most_common(1)[0][0]
+        fc = collections.defaultdict(lambda: [0, 0])
+        for f, c in canon:
+            fc[f][1] += 1; fc[f][0] += c == top
+        out[key] = {f: tuple(v) for f, v in fc.items()}
+    return out
+
+# ------------------------------------------------------------------ the round's questions
+class Plan:
+    def __init__(self, rid):
+        self.rid, self.qs, self.keys = rid, [], set()
+    def add(self, kind, ctx, cand=None, variant=None, probe=None, **src):
+        """validity only (and one copy a round): nothing is refused for having been asked before"""
+        ctx = list(ctx)
+        distinct = variant == "reflection" or len(set(ctx)) == len(ctx)
+        lo, hi = {"cohere": (3, PR.MAX_RUN), "order": (4, PR.MAX_ORDER), "names": (4, PR.MAX_ORDER),
+                  "pick": (2, PR.MAX_RUN)}.get(kind, (2, MAXK))
+        if not (lo <= len(ctx) <= hi) or not distinct or not all(PR.is_glyph(x) for x in ctx):
+            return False
+        if kind == "triad" and len(ctx) != 3:
+            return False
+        if kind == "names" and not all(U.name(x, None) for x in ctx):
+            return False
+        if kind == "inhibit" and (cand in ctx or not PR.is_glyph(cand)):
+            return False
+        if kind == "choose" and (len(set(cand)) != 2 or any(x in ctx or not PR.is_glyph(x) for x in cand)):
+            return False
+        key = (kind, tuple(ctx) if kind not in ("order", "names", "triad") else tuple(sorted(ctx)),
+               cand if kind != "choose" else tuple(sorted(cand)), variant, tuple(sorted((probe or {}).items())))
+        if key in self.keys:
+            return False
+        self.keys.add(key)
+        self.qs.append(dict(PR.question(kind, ctx, cand, source=dict(src, round=self.rid), variant=variant, probe=probe),
+                            **({"variant": variant} if variant else {}), **({"probe": probe} if probe else {})))
+        return True
+    def add_unit(self, unit):
+        """a unit: [(kind, ctx, cand, variant, probe, src)]; its first question decides; controls follow it"""
+        kind, ctx, cand, variant, probe, src = unit[0]
+        if not self.add(kind, ctx, cand, variant=variant, probe=probe, **src):
+            return 0
+        n = 1
+        for kind, ctx, cand, variant, probe, src in unit[1:]:
+            n += self.add(kind, ctx, cand, variant=variant, probe=probe, **src)
+        return n
+
+def Q(kind, ctx, cand=None, variant=None, probe=None, **src):
+    return (kind, list(ctx), cand, variant, probe, src)
+
+class Cands:
+    """candidate units of one stream, deduplicated by identity, keeping the highest weight"""
+    def __init__(self):
+        self.best = {}
+    def put(self, ident, weight, unit):
+        """unit: a list of questions, or a function making one (built only if drawn: controls, decoys, windows)"""
+        if weight > 0 and (ident not in self.best or weight > self.best[ident][0]):
+            self.best[ident] = (weight, unit)
+    def __len__(self):
+        return len(self.best)
+    def draw(self, P, n, r):
+        items = list(self.best.values())
+        got = 0
+        for w, unit in weighted_order(items, lambda it: it[0], r):
+            if got >= n:
+                break
+            u = unit() if callable(unit) else unit
+            if u:
+                got += P.add_unit(u)
+        return got
+
+# ------------------------------------------------------------------ streams
+def rel_of(s):
+    return scurve(s["rank"])
+
+def continue_cands(T, Tr, pend, seqs):
+    """contexts along the tree's sequences, weighted by relevance x information at each context"""
+    C = Cands()
+    memo = {}
+    def put(ctx, rel, why, **src):
+        ctx = tuple(ctx)
+        if not (2 <= len(ctx) <= MAXK) or len(set(ctx)) != len(ctx):
+            return
+        if ctx not in memo:
+            memo[ctx] = info_fams(counts_top(Tr.nodes.get(ctx, {})), pend.get("continue", ctx))
+        C.put(ctx, rel * memo[ctx], [Q("continue", ctx, why=why, **src)])
+    for s in seqs:
+        g, rel = s["glyphs"], rel_of(s)
+        sq = "".join(g)
+        for side, stop in (("right", s["stop_right"]), ("left", s["stop_left"])):
+            run = g if side == "right" else g[::-1]
+            if stop.startswith("wrap→"):
+                x = stop.split("→", 1)[1]
+                if x in run:
+                    period = run[run.index(x):]
+                    if len(set(period)) >= 4:                    # Joseph's scope: cycles of >= 4 distinct glyphs
+                        k = max(2, math.ceil(len(period) / 2))
+                        if k < len(period):
+                            put(period[-k:], rel, "cycle-probe", seq=sq, period="".join(period))
+                continue
+            for k in range(2, min(MAXK, len(run)) + 1):
+                put(run[-k:], rel * PARAMS["END_RELEVANCE"], "end", seq=sq, side=side, stop=stop.split("→")[0])
+        pos = {x: i for i, x in enumerate(g)}
+        for st in s["steps"]:
+            ctx = st["ctx"]
+            for j in range(2, len(ctx) + 1):                     # k*: every suffix, and the deciding context itself
+                put(ctx[-j:], rel, "kstar" if j < len(ctx) else "replicate", seq=sq, step=st["x"])
+            a, b = ctx[-1], st["x"]
+            if a in pos and b in pos:
+                path = g[:pos[a] + 1] if pos[b] > pos[a] else g[pos[a]:][::-1]
+                for k in range(len(ctx) + 1, min(MAXK, len(path)) + 1):       # lengthening (§3)
+                    put(path[-k:], rel, "lengthen", seq=sq, link=a + b, k=k)
+        for run in (g, g[::-1]):              # contexts ending on interior glyphs, both ways (so every link from its far side)
+            for i in range(1, len(run) - 1):
+                for k in range(2, min(MAXK, i + 1) + 1):
+                    put(run[i + 1 - k:i + 1], rel, "inside", seq=sq)
+    return C
+
+def inhibit_cands(T, Tr, pend, seqs, rid):
+    """link recognition, each with its matched decoy"""
+    C = Cands()
+    def put(ctx, x, rel, why, **src):
+        ctx = tuple(ctx)
+        if not (2 <= len(ctx) <= MAXK) or len(set(ctx)) != len(ctx) or x in ctx or not PR.is_glyph(x):
+            return
+        w = rel * info_fams(counts_yes(Tr.inhibit.get((ctx, x), {})), pend.get("inhibit", (ctx, x)))
+        def unit(ctx=ctx, x=x, why=why, src=src):
+            ck = "near" if PR.R("control-kind", {"round": rid, "context": list(ctx), "x": x}).random() < 0.5 else "far"
+            dec = PR.control_candidate(list(ctx), x, ck, rid)
+            return [Q("inhibit", ctx, x, why=why, **src), Q("inhibit", ctx, dec, probe={"control": ck}, why="control", control=ck)]
+        C.put((ctx, x), w, unit)
+    for ctx, rows in T.reasoned.items():                          # the reasoned pass's candidates
+        top = T.top(ctx)
+        for x in dict.fromkeys(r["continuation"][0] for r in rows if r["continuation"]):
+            if x != top:
+                put(ctx, x, 1.0, "recognize", reasoned_by=sorted({r["mind"] for r in rows}))
+    for s in seqs:
+        g, rel = s["glyphs"], rel_of(s)
+        sq = "".join(g)
+        for side, stop in (("right", s["stop_right"]), ("left", s["stop_left"])):    # written momentum past an end
+            if stop != "end":
+                continue
+            run = g if side == "right" else g[::-1]
+            ctx = T.lookup(run)
+            if not ctx:
+                continue
+            w = collections.Counter()
+            for j in range(2, min(MAXK, len(run)) + 1):
+                for xs in T.written.get(tuple(run[-j:]), {}).values():
+                    w.update(xs)
+            for x, n in w.items():
+                put(ctx, x, rel * branch_weight(n, sum(w.values())), "recognize-written", seq=sq, written_answers=n)
+        pos = {x: i for i, x in enumerate(g)}
+        for st in s["steps"]:
+            a, b = st["ctx"][-1], st["x"]
+            if st["alt"] and st["alt"][0] not in (TR.NONE, TR.OTHER):     # the runner-up at a branch point
+                put(st["ctx"], st["alt"][0], rel * scurve(st["alt"][1], BRANCH_MID, BRANCH_WIDTH, BRANCH_FLOOR), "branch", seq=sq, step=b)
+            if a in pos and b in pos:                                       # skip test: strongest claims hardest
+                ic = pos[b] + (pos[b] - pos[a])
+                if 0 <= ic < len(g):
+                    put(st["ctx"], g[ic], rel * scurve(st["agreement"]), "falsify-skip", seq=sq, link=a + b)
+    return C
+
+def cohere_cands(T, Tr, pend, seqs, written_seqs, seeds, rid, recs):
+    """whole runs, each with its shuffled control (and sometimes a chart window); every run asked before is a candidate"""
+    C = Cands()
+    memo = {}
+    stew = steward_seeds(seeds)
+    def put(g, rel, how):
+        for h in windows(g, PR.MAX_RUN):
+            if not runlike(h):
+                continue
+            key = tuple(min(h, h[::-1]))
+            if key not in memo:
+                memo[key] = info_fams(counts_yes_run(Tr, h), pend.get("cohere", key))
+            def unit(key=key, how=how):
+                r = PR.R("cohere-orientation", {"round": rid, "run": list(key)})
+                shown = list(key) if r.random() < 0.5 else list(key)[::-1]      # orientation fated, never by outcome
+                ctl = PR.shuffled_control(shown, rid)
+                if ctl is None:
+                    return None
+                u = [Q("cohere", shown, why="cohere", **{"from": how}),
+                     Q("cohere", ctl, probe={"control": "shuffled"}, why="control", control="shuffled", of="".join(shown))]
+                if PR.R("cohere-chart-draw", {"round": rid, "run": shown}).random() < PARAMS["CHART_CONTROL_SHARE"]:
+                    ch = PR.chart_control(shown, rid)
+                    if ch:
+                        u.append(Q("cohere", ch, probe={"control": "chart"}, why="control", control="chart", of="".join(shown)))
+                return u
+            C.put(key, rel * memo[key], unit)
+    for s in seqs:
+        put(s["glyphs"], rel_of(s), "walk")
+    for s in written_seqs:
+        put(s["glyphs"], rel_of(s), "written")
+    for g, sid in seed_list(seeds, ORDERED_SEEDS, rid, "cohere-seed-order"):
+        put(g, PARAMS["STEWARD_RELEVANCE"] if tuple(g) in stew else 1.0, "seed:" + str(sid))
+    for c, w in pick_branches(T):
+        put(c, w, "pick-branch")
+    for run, fc in T.cohere_ctl.items():                            # shuffles some mind called coherent
+        if T.cohere_ctl_class.get(run) == "shuffled":
+            y = sum(c["yes"] for c in fc.values()); n = sum(sum(c.values()) for c in fc.values())
+            put(list(run), scurve(y / n if n else 0), "reordered")
+    for f in sorted((DATA / "triad-era" / "growth").glob("r0*.json")):     # the triad era's grown rows (CATALOG §3)
+        for row in json.load(open(f)):
+            put(row["glyphs"], 1.0, "grown:" + f.stem)
+    for run in T.cohere:                                                   # every run asked before
+        put(list(run), 1.0, "asked")
+    return C
+
+def counts_yes_run(Tr, g):
+    return Tr.coherence(list(g))
+
+def lookalike_cands(T, Tr, recs, rid):
+    """a run some mind called coherent, strictly monotone in code points: one interior glyph swapped for a confusable
+    from another block, with its fated non-confusable control (CATALOG v5 §7b); weighted by how strongly the run is
+    recognised and by information on its lookalike answers so far"""
+    C = Cands()
+    la_counts = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))
+    for r in recs:
+        t = r.get("tags") or {}
+        if r["kind"] == "cohere" and t.get("control") == "lookalike" and r.get("outcome") in ("yes", "no", "cant-tell"):
+            la_counts[t.get("of")][r["family"]][r["outcome"]] += 1
+    for run, fc in T.cohere.items():
         y = sum(c["yes"] for c in fc.values()); n = sum(sum(c.values()) for c in fc.values())
         d = [ord(b) - ord(a) for a, b in zip(run, run[1:])]
-        if n and y / n >= 0.5 and len(run) >= 3 and (all(x > 0 for x in d) or all(x < 0 for x in d)):
-            runs.append(list(run))
-    PR.R("lookalike-order", {"round": rid}).shuffle(runs)
-    out = []
-    for g in runs:
-        r = PR.R("lookalike", {"run": g})
+        if not n or len(run) < 3 or not (all(x > 0 for x in d) or all(x < 0 for x in d)):
+            continue
+        g = list(run)
+        r = PR.R("lookalike", {"run": g, "round": rid})
         opts = [(i, c) for i in range(1, len(g) - 1) for c in confusables(g[i])
                 if c not in g and PR.is_glyph(c) and U.category(c) != "Cn" and block(c) != block(g[i])]
         if not opts:
             continue
         i, c = opts[r.randrange(len(opts))]
         bn = block(c)
-        lo, hi = next((a, b) for a, b, n in _BLOCKS if n == bn)
+        lo, hi = next((a, b) for a, b, nm in _BLOCKS if nm == bn)
         near = set(confusables(g[i])) | set(confusables(c)) | {g[i], c}
         pool = [chr(o) for o in range(lo, hi + 1) if PR.is_glyph(chr(o)) and U.category(chr(o)) != "Cn"
                 and chr(o) not in near and chr(o) not in g]
         if not pool:
             continue
-        d = pool[r.randrange(len(pool))]
-        la, ct = g[:i] + [c] + g[i + 1:], g[:i] + [d] + g[i + 1:]
-        if tuple(la) in T.cohere_ctl or tuple(ct) in T.cohere_ctl:
-            continue
+        dd = pool[r.randrange(len(pool))]
+        la, ct = g[:i] + [c] + g[i + 1:], g[:i] + [dd] + g[i + 1:]
         of = "".join(g)
-        out.append(("cohere", la, None, {"why": "lookalike", "control": "lookalike", "of": of,
-                                         "probe": {"control": "lookalike", "of": of, "pos": i, "orig": g[i]}}))
-        out.append(("cohere", ct, None, {"why": "lookalike", "control": "lookalike-ctl", "of": of,
-                                         "probe": {"control": "lookalike-ctl", "of": of, "pos": i, "orig": g[i]}}))
-        if len(out) >= 2 * LOOKALIKE_PER_ROUND:
-            break
-    return out
+        w = scurve(y / n) * info_fams(counts_yes(la_counts.get(of, {})))
+        C.put(of, w, [Q("cohere", la, probe={"control": "lookalike", "of": of, "pos": i, "orig": g[i]}, why="lookalike", control="lookalike", of=of),
+                      Q("cohere", ct, probe={"control": "lookalike-ctl", "of": of, "pos": i, "orig": g[i]}, why="lookalike", control="lookalike-ctl", of=of)])
+    return C
 
-def names_work(P, seeds, rid):
-    """The name-only order question (CATALOG v5 §7a, §12): the validation sets first, then sets from Joseph's seeds, the
-    other ordered seeds and the runs some mind called coherent, 4-MAX_ORDER glyphs, every glyph named. Each set once.
-    -> [(kind, glyphs, None, src)]"""
-    T = P.T
-    out = [(list(g), "validation-" + grp) for grp, sets in NAME_VALIDATION.items() for g in sets]
-    out += [(g, "seed:" + str(sid)) for g, sid in seed_list(seeds, ORDERED_SEEDS, rid, "names-seed-order")]
-    runs = [list(run) for run, fc in sorted(T.cohere.items()) if sum(c["yes"] for c in fc.values()) > 0]
-    PR.R("names-run-order", {"round": rid}).shuffle(runs)
-    out += [(g, "run") for g in runs]
-    win = []                                   # a run longer than the question shows: overlapping windows, half a window apart
-    for g, how in out:
-        if len(g) > PR.MAX_ORDER:
-            step = PR.MAX_ORDER // 2
-            starts = sorted(set(list(range(0, len(g) - PR.MAX_ORDER + 1, step)) + [len(g) - PR.MAX_ORDER]))
-            win += [(list(g[i:i + PR.MAX_ORDER]), how + f"@{i}") for i in starts]
-        else:
-            win.append((g, how))
-    res, seen = [], set()
-    for g, how in win:
-        if not (4 <= len(g) <= PR.MAX_ORDER) or len(set(g)) != len(g) or frozenset(g) in seen:
-            continue
-        if frozenset(g) in T.names or not all(PR.is_glyph(c) and U.name(c, None) for c in g):
-            continue
-        seen.add(frozenset(g))
-        res.append(("names", g, None, {"why": "names", "from": how}))
-        if len(res) >= NAMES_PER_ROUND:
-            break
-    return res
+def choose_cands(T, Tr, pend, seqs, seeds, rid):
+    """discriminator positions: steps of runs where the chart's next glyph differs from the run's, and contexts whose
+    answers split between a chart-adjacent and a non-adjacent glyph; uncontested ones at lower relevance"""
+    C = Cands()
+    def put(ctx, x, ch, rel, how):
+        ctx = tuple(ctx[-MAXK:])
+        if len(ctx) < 2 or x in ctx or ch in ctx or x == ch:
+            return
+        con = contested(ch, ctx[-1])
+        pair = frozenset((x, ch))
+        fc = Tr.choose.get((ctx, pair), {})
+        cnt = {f: (c.get(x, 0), sum(c.values())) for f, c in fc.items()}
+        w = rel * info_fams(cnt, pend.get("choose", (ctx, pair)))
+        C.put((ctx, pair), w, [Q("choose", ctx, (x, ch), probe={"chart": ch, "contested": con}, why="choose", **{"from": how})])
+    def adjacent(x, ctx):
+        return abs(ord(x) - ord(ctx[-1])) == 1
+    for store in (T.picks, T.nodes):
+        for ctx, fl in store.items():
+            if not (2 <= len(ctx) <= MAXK):
+                continue
+            cnt = collections.Counter(x for xs in fl.values() for x in xs if x not in (TR.NONE, TR.OTHER) and x not in ctx and PR.is_glyph(x))
+            ch = [x for x, _ in cnt.most_common() if adjacent(x, ctx)]
+            al = [x for x, _ in cnt.most_common() if not adjacent(x, ctx)]
+            if ch and al:
+                put(ctx, al[0], ch[0], 1.0, "split")
+    stew = steward_seeds(seeds)
+    runs = [(g, PARAMS["STEWARD_RELEVANCE"] if tuple(g) in stew else 1.0) for g, _ in seed_list(seeds, ORDERED_SEEDS, rid, "choose-seed-order")]
+    runs += [(list(r), 1.0) for r in T.cohere] + [(s["glyphs"], rel_of(s)) for s in seqs]
+    for g, rel in runs:
+        for i in range(1, len(g) - 1):
+            ch = chart_neighbour(g[i - 1], g[i])
+            if ch:
+                put(g[:i + 1], g[i + 1], ch, rel, "step")
+    return C
 
-def order_work(P, seqs, seeds, rid):
-    """The order question (METHODOLOGY §4a): a set, scrambled -- which order, if any, do minds put it in? Sets from the
-    survey sequences (a fated order), the shuffles a mind called coherent, the pick branches (S-curve draw) and the
-    tree's walks, 4-MAX_ORDER glyphs, interleaved; each set asked once. A longer run is not asked (yet).
-    -> [(kind, glyphs, None, src)]"""
-    T = P.T
-    def ok(g):
-        return 4 <= len(g) <= PR.MAX_ORDER and len(set(g)) == len(g) and all(PR.is_glyph(c) for c in g)
-    sd = [(g, "seed:" + str(sid)) for g, sid in seed_list(seeds, ORDERED_SEEDS | ORDER_ONLY_SEEDS, rid, "order-seed-order") if ok(g)]
-    reord = [(list(run), "reordered") for run, fc in sorted(T.cohere_ctl.items())
-             if T.cohere_ctl_class.get(run) == "shuffled" and sum(c["yes"] for c in fc.values()) > 0 and ok(list(run))]
-    br = [(c, "pick-branch") for c, _ in weighted_order(pick_branches(T), lambda b: b[1], PR.R("order-branch", {"round": rid})) if ok(c)]
-    wk = [(s["glyphs"], "walk") for s in seqs if ok(s["glyphs"])]
-    sources = [iter(sd), iter(reord), iter(br), iter(wk)]
-    out, seen = [], set()
-    while sources and len(out) < ORDER_PER_ROUND:
-        for src in list(sources):
-            nxt = next(src, None)
-            while nxt is not None and frozenset(nxt[0]) in seen:
-                nxt = next(src, None)
-            if nxt is None:
-                sources.remove(src); continue
-            seen.add(frozenset(nxt[0]))
-            out.append(("order", nxt[0], None, {"why": "order", "from": nxt[1]}))
-            if len(out) >= ORDER_PER_ROUND:
-                break
-    return out
+def choose_control_cands(T, Tr, pend, rid):
+    C = Cands()
+    pairs = {}
+    for (ctx, pair), ch in T.choose_chart.items():
+        pairs[pair] = ch
+    for pair in T.choose_ctl:
+        pairs.setdefault(pair, None)
+    for pair, ch in pairs.items():
+        x, y = sorted(pair)
+        fc = Tr.choose_ctl.get(pair, {})
+        cnt = {f: (c.get(x, 0), sum(c.values())) for f, c in fc.items()}
+        w = info_fams(cnt, pend.get("choose-control", pair))
+        r = PR.R("choose-neutral", {"pair": [x, y], "round": rid})
+        avoid = {block(x), block(y)}
+        ctx = []
+        while len(ctx) < 3:
+            g = fresh_glyph(r)
+            if g not in pair and g not in ctx and block(g) not in avoid:
+                ctx.append(g)
+        C.put(pair, w, [Q("choose", ctx, (x, y), probe={"control": "neutral", "chart": ch}, why="choose-control", **{"from": "neutral"})])
+    return C
+
+def set_cands(kind, T, pend, counts, seqs, seeds, rid, extra=()):
+    """sets for the order and name-only questions: seeds, runs some mind called coherent, walks, (names: the
+    validation sets), and every set asked before; windows of longer runs"""
+    C = Cands()
+    stew = steward_seeds(seeds)
+    def put(g, rel, how):
+        for h in windows(g, PR.MAX_ORDER):
+            if not runlike(h, 4, PR.MAX_ORDER) or (kind == "names" and not all(U.name(c, None) for c in h)):
+                continue
+            key = frozenset(h)
+            w = rel * info_fams(counts.get(key, {}), pend.get(kind, key))
+            C.put(key, w, [Q(kind, h, why=kind, **{"from": how})])
+    for g, how, rel in extra:
+        put(g, rel, how)
+    types = ORDERED_SEEDS | (ORDER_ONLY_SEEDS if kind == "order" else set())
+    for g, sid in seed_list(seeds, types, rid, kind + "-seed-order"):
+        put(g, PARAMS["STEWARD_RELEVANCE"] if tuple(g) in stew else 1.0, "seed:" + str(sid))
+    for run, fc in T.cohere.items():
+        y = sum(c["yes"] for c in fc.values()); n = sum(sum(c.values()) for c in fc.values())
+        put(list(run), scurve(y / n if n else 0), "run")
+    for s in seqs:
+        put(s["glyphs"], rel_of(s), "walk")
+    for key in counts:
+        put(sorted(key), 1.0, "asked")
+    return C
+
+def triad_cands(T, pend, seqs):
+    C = Cands()
+    def put(t, rel, how, **src):
+        if len(set(t)) != 3 or not all(PR.is_glyph(c) for c in t):
+            return
+        key = tuple(sorted(t))
+        fam = T.triads_fam.get(key, {})
+        pooled = collections.Counter(a for c in fam.values() for a, n in c.items() for _ in range(n))
+        top = pooled.most_common(1)[0][0] if pooled else None
+        cnt = {f: (c.get(top, 0), sum(c.values())) for f, c in fam.items()}
+        C.put(key, rel * info_fams(cnt, pend.get("triad", key)), [Q("triad", list(t), why="triad", **{"from": how}, **src)])
+    for s in seqs:
+        g = s["glyphs"]
+        for i in range(len(g) - 2):
+            put(g[i:i + 3], rel_of(s), "walk", seq="".join(g), mid=g[i + 1])
+    for key in T.triads_fam:
+        put(list(key), 1.0, "asked")
+    return C
 
 def pick_branches(T):
     """every branch the picks have grown so far: for each picked context c, every answer x -> [(c + [x], weight)]"""
@@ -496,244 +723,78 @@ def pick_branches(T):
                 out.append((list(ctx) + [x], branch_weight(k, n)))
     return out
 
-def weighted_order(items, weight, r):
-    """a fated draw of every item without replacement, each next one with probability proportional to its weight
-    (Efraimidis-Spirakis keys u^(1/w)): heavy items early, light ones still anywhere -> list"""
-    keyed = [(r.random() ** (1 / weight(it)), i) for i, it in enumerate(items)]
-    return [items[i] for _, i in sorted(keyed, reverse=True)]
-
-def pick_work(P, seqs, seeds, rid):
-    """The generator: tendrils from known sequences (METHODOLOGY §4a; Joseph, 2026-10-05: "s = known sequence -- e.g.,
-    'abc' ... {"d" => 72, "A" => 7, "1" => 13, "α" => 2} now you have one 'main' branch and 3 weaker branches. Leading
-    to a strong 'abcdefg...' and weaker, more obscure, but equally easily recognized: 'abc123', 'abcABC', 'abcαβ...'
-    sequences. Branching from seeds like tendrils ... If, on the other hand, the responses are far more random and
-    spread out -- still follow any bumps, but the point is still on the recognition side.")
-      CHILDREN  every branch grown so far (pick_branches): the picked context extended by any answer, asked again. Drawn
-                by a fated weighted draw on the S-curve weight (BRANCH_*): the main branch most often, weaker ones
-                still, a single draw sometimes -- a long tail, never a cut (§7).
-      ROOTS     known sequences not yet picked: the survey sequences and the tree's walks, each in both directions
-                (a sequence and its reverse are one sequence; extending leftward is extending the reverse), whole when
-                <= MAX_RUN glyphs, else their last MAX_RUN.
-      Half the round's contexts go to children and half to roots, either half lending to the other when short
-      (chosen without evidence). Each context is asked once, SAMPLES times by each generator mind; nulls -- fresh
-      random glyphs of the same length, asked the same way -- one per PICK_NULL_EVERY contexts.
-    Every branch path also goes to whole-run recognition (cohere_work): recognition decides, generation explores.
-    -> [(kind, ctx, None, src, probe)]"""
-    T = P.T
-    r = PR.R("pick-draw", {"round": rid})
-    kids = weighted_order([(c, w) for c, w in pick_branches(T) if len(c) <= PR.MAX_RUN and tuple(c) not in T.picks],
-                          lambda kw: kw[1], r)
-    chosen = [(c, "branch") for c, _ in kids[:PICK_PER_ROUND // 2]]
-    kids = kids[PICK_PER_ROUND // 2:]
-    steward = [g for g, _ in seed_list([x for x in seeds if is_steward(x)], ORDERED_SEEDS, rid, "pick-steward")]
-    roots = []
-    for g in [g for g, _ in seed_list(seeds, ORDERED_SEEDS, rid, "pick-seed-order")] + [s["glyphs"] for s in seqs]:
-        if len(g) < 2 or len(set(g)) != len(g):
-            continue
-        for h in (g, g[::-1]):
-            roots.append(h[-PR.MAX_RUN:])
-    r.shuffle(roots)
-    roots = [h for g in steward for h in (g[-PR.MAX_RUN:], g[::-1][-PR.MAX_RUN:])] + roots     # the steward's first
-    seen = {tuple(c) for c, _ in chosen}
-    for h in roots:
-        if len(chosen) >= PICK_PER_ROUND:
-            break
-        if tuple(h) not in seen and tuple(h) not in T.picks and all(PR.is_glyph(c) for c in h):
-            seen.add(tuple(h)); chosen.append((h, "root"))
-    while kids and len(chosen) < PICK_PER_ROUND:                 # roots ran short: the rest to children
-        chosen.append((kids.pop(0)[0], "branch"))
-    out = []
-    for n, (ctx, how) in enumerate(chosen, 1):
-        out += [("pick", ctx, None, {"why": "pick", "from": how}, {"sample": k}) for k in range(PR.SAMPLES)]
-        if n % PICK_NULL_EVERY == 0:
-            rn = PR.R("pick-null", {"round": rid, "ctx": ctx})
-            null = []
-            while len(null) < len(ctx):
-                c = fresh_glyph(rn)
-                if c not in null:
-                    null.append(c)
-            out += [("pick", null, None, {"why": "pick-null"}, {"sample": k, "null": True}) for k in range(PR.SAMPLES)]
-    return out
-
-def reflection_work(P, seqs, rid):
-    """Reflection (METHODOLOGY §3; Joseph's postulate that any linear sequence becomes periodic played backwards at its
-    end): `a b c b -> ?` -- does a family turn round (a), or not? Asked of the first-impression roster at points inside
-    the best-ranked sequences, worded as a plain continue question; answers kept apart, never growing a sequence."""
-    out = []
+def pick_cands(T, pend, seqs, seeds, rid):
+    """the generator's contexts: known sequences both ways (roots), every branch grown so far (children), and every
+    context picked before; SAMPLES questions each (one per sample, each its own sheet)"""
+    C = Cands()
+    stew = steward_seeds(seeds)
+    def put(ctx, rel, how):
+        ctx = list(ctx)[-PR.MAX_RUN:]
+        if not runlike(ctx, 2):
+            return
+        w = rel * info_fams(counts_top(T.picks.get(tuple(ctx), {})), pend.get("pick", tuple(ctx)))
+        C.put(tuple(ctx), w, [Q("pick", ctx, probe={"sample": k}, why="pick", **{"from": how}) for k in range(PR.SAMPLES)])
+    for g, _ in seed_list(seeds, ORDERED_SEEDS, rid, "pick-seed-order"):
+        rel = PARAMS["STEWARD_RELEVANCE"] if tuple(g) in stew else 1.0
+        put(g, rel, "root"); put(g[::-1], rel, "root")
     for s in seqs:
-        g = s["glyphs"]
-        if len(g) < 4 or s["rank"] < JOIN_WEAK:
-            continue
-        r = PR.R("reflection-at", {"round": rid, "seq": g})
-        i = r.randint(2, len(g) - 2)
-        k = r.randint(2, 3)
-        ctx = g[max(0, i - k):i + 1] + [g[i - 1]]                       # ... a b c, then back to b
-        out.append(("continue", ctx, None, {"why": "reflection", "seq": "".join(g), "mirror": g[i - 2]}))
-    return out
+        put(s["glyphs"], rel_of(s), "root"); put(s["glyphs"][::-1], rel_of(s), "root")
+    for c, w in pick_branches(T):
+        put(c, w, "branch")
+    for ctx in T.picks:
+        put(ctx, 1.0, "asked")
+    return C
 
-def reasoned_work(P, seqs, rid):
-    """the reasoned pass (METHODOLOGY §4): generation at felt ends, then recognition of what it generates.
-    -> (recognition inhibit questions, reasoned continue questions)"""
-    T = P.T
-    recog = []
-    for ctx, rows in T.reasoned.items():
-        top = T.top(ctx)
-        for x in dict.fromkeys(r["continuation"][0] for r in rows if r["continuation"]):
-            if x != top and x not in ctx and PR.is_glyph(x) and (ctx, x) not in T.inhibit:
-                recog.append(("inhibit", list(ctx), x, {"why": "recognize", "reasoned_by": sorted({r["mind"] for r in rows})}))
-    gen = []
+def pick_nulls(P, n_questions, rid):
+    """fresh random contexts, asked like picks: the null (lengths drawn from this round's pick contexts)"""
+    lens = [len(q["context"]) for q in P.qs if q["kind"] == "pick" and not (q.get("probe") or {}).get("null")] or [3]
+    r = PR.R("pick-null", {"round": rid})
+    got = 0
+    while got < n_questions:
+        L = r.choice(lens)
+        null = []
+        while len(null) < L:
+            c = fresh_glyph(r)
+            if c not in null:
+                null.append(c)
+        for k in range(PR.SAMPLES):
+            got += P.add("pick", null, probe={"sample": k, "null": True}, why="pick-null")
+    return got
+
+def reasoned_cands(T, pend, seqs, rid):
+    C = Cands()
     for s in seqs:
         g = s["glyphs"]
         for side, stop in (("right", s["stop_right"]), ("left", s["stop_left"])):
             if stop != "end":
                 continue
             run = g if side == "right" else g[::-1]
-            k = min(len(run), PR.R("reasoned-k", {"round": rid, "seq": g, "side": side}).randint(3, 8))
-            gen.append(("continue", run[-k:], None, {"why": "reasoned", "seq": "".join(g), "side": side, "rank": round(s["rank"], 4)}))
-    return recog, gen
+            for k in range(3, min(MAXK, len(run)) + 1):
+                ctx = tuple(run[-k:])
+                n = len(T.reasoned.get(ctx, []))
+                w = rel_of(s) * info(0, n + sum(pend.get("reasoned", ctx).values()))
+                C.put(ctx, w, [Q("continue", ctx, variant="reasoned", why="reasoned", seq="".join(g), side=side)])
+    return C
 
-def join_work(P, s, r, ends):
-    """Join probes (Joseph, 2026-10-05: "yes please -- for example, row #1 and row #14 will be joined hopefully soon"),
-    asked before the sequence's other tier-1 work:
-      a weak link inside a strong run (agreement < JOIN_WEAK, with >= 2 steps at or above it on each side): ask it from
-        the other direction, a context not yet asked; failing that, replicate the weak context itself once (one more
-        round of answers, whatever they say) -- the one place the planner re-asks a context;
-      an open end whose written answers (>= 2) name an end glyph of another sequence: its end question, first."""
-    g = s["glyphs"]; T = P.T
-    out = []
-    pos = {x: i for i, x in enumerate(g)}
-    links = []
-    for st in s["steps"]:
-        a, b = st["ctx"][-1], st["x"]
-        if a in pos and b in pos and abs(pos[a] - pos[b]) == 1:
-            links.append((min(pos[a], pos[b]), st))
-    for i, st in links:
-        if st["agreement"] >= JOIN_WEAK:
+def reflection_cands(T, pend, seqs, rid):
+    C = Cands()
+    for s in seqs:
+        g = s["glyphs"]
+        if len(g) < 4:
             continue
-        left = sum(1 for j, o in links if j < i and o["agreement"] >= JOIN_WEAK)
-        right = sum(1 for j, o in links if j > i and o["agreement"] >= JOIN_WEAK)
-        if left < 2 or right < 2:
-            continue
-        a, b = st["ctx"][-1], st["x"]
-        other = g[pos[b]:][::-1] if pos[b] > pos[a] else g[:pos[b] + 1]   # approaching b from the far side
-        k = min(len(other), r.randint(3, 8))
-        if tuple(other[-k:]) not in T.real:
-            out.append(("continue", other[-k:], None, {"why": "join-reverse", "seq": "".join(g), "link": a + b}))
-        elif tuple(st["ctx"]) not in T.replicated:
-            out.append(("continue", st["ctx"], None, {"why": "join-replicate", "seq": "".join(g), "link": a + b, "replicate": True}))
-    for side, stop in (("right", s["stop_right"]), ("left", s["stop_left"])):
-        if stop != "open":
-            continue
-        run = g if side == "right" else g[::-1]
-        w = collections.Counter()
-        for j in range(2, min(TR.MAXK, len(run)) + 1):
-            for f, xs in T.written.get(tuple(run[-j:]), {}).items():
-                w.update(xs)
-        bridge = [(x, n) for x, n in w.most_common() if n >= 2 and x not in g and x in ends]
-        if bridge:
-            k = min(len(run), r.randint(3, 8))
-            out.append(("continue", run[-k:], None, {"why": "join-end", "seq": "".join(g), "side": side, "bridge": bridge[0][0]}))
-    return out
+        for i in range(2, len(g) - 1):
+            for k in (2, 3):
+                ctx = tuple(g[max(0, i - k):i + 1] + [g[i - 1]])
+                rows = T.reflections.get(ctx, [])
+                kk = sum(1 for x in rows if x["continuation"][:1] == [g[i - 2]])
+                w = rel_of(s) * info(kk, len(rows) + sum(pend.get("reflection", ctx).values()))
+                C.put(ctx, w, [Q("continue", ctx, variant="reflection", why="reflection", seq="".join(g), mirror=g[i - 2])])
+    return C
 
-def falsify_work(P, s, r):
-    """Tests that could break a sequence (Joseph, 2026-10-05: "think in terms of the scientific method as well as a
-    counter-balance -- we're looking for things that disprove or call into question certain sequences"), aimed at the
-    strongest claims first (sequences are served by rank). For a walked step a -> b followed by c:
-      skip      inhibit at a's context with candidate c: does c come DIRECTLY after? A sequence predicts "no"; "yes"
-                beyond the family's control rate challenges the adjacency (order without adjacency, or a chart walk).
-      lengthen  a longer context along the same path, not yet asked (METHODOLOGY §3: a stable edge "stays put when the
-                context is lengthened backward ... flips are where branches live"). The longest context decides, so a
-                flip there breaks the link wherever links are judged.
-    At most one of each per sequence a round, alternating which step, so the tests spread across sequences."""
-    g = s["glyphs"]; T = P.T
-    pos = {x: i for i, x in enumerate(g)}
-    strong = [st for st in s["steps"] if st["agreement"] >= JOIN_WEAK and st["ctx"][-1] in pos and st["x"] in pos
-              and abs(pos[st["ctx"][-1]] - pos[st["x"]]) == 1]
-    if not strong:
-        return []
-    out = []
-    st = strong[r.randrange(len(strong))]
-    a, b = st["ctx"][-1], st["x"]
-    step = pos[b] - pos[a]                                      # +1 forward, -1 backward
-    ic = pos[b] + step
-    if 0 <= ic < len(g) and g[ic] not in st["ctx"]:
-        out.append(("inhibit", st["ctx"], g[ic], {"why": "falsify-skip", "seq": "".join(g), "link": a + b}))
-    # triad: a triple of the run whose two links are both strong predicts its middle (§4); never asked as a triad
-    sl = {frozenset((x["ctx"][-1], x["x"])) for x in strong}
-    triples = [g[i:i + 3] for i in range(len(g) - 2)
-               if frozenset(g[i:i + 2]) in sl and frozenset(g[i + 1:i + 3]) in sl and tuple(sorted(g[i:i + 3])) not in T.triads_fam]
-    if triples:
-        t = triples[r.randrange(len(triples))]
-        out.append(("triad", t, None, {"why": "falsify-triad", "seq": "".join(g), "mid": t[1]}))
-    st = strong[r.randrange(len(strong))]
-    a, b = st["ctx"][-1], st["x"]
-    path = g[:pos[a] + 1] if pos[b] > pos[a] else g[pos[a]:][::-1]      # the run up to a, in reading order
-    for k in range(len(st["ctx"]) + 2, min(TR.MAXK, len(path)) + 1):
-        if tuple(path[-k:]) not in T.real:
-            out.append(("continue", path[-k:], None, {"why": "falsify-lengthen", "seq": "".join(g), "link": a + b, "k": k}))
-            break
-    return out
-
-def sequence_work(P, s, r, ends=frozenset()):
-    g = s["glyphs"]; T = P.T
-    out = falsify_work(P, s, r) + join_work(P, s, r, ends)
-    # 1 ends
-    for side, stop in (("right", s["stop_right"]), ("left", s["stop_left"])):
-        run = g if side == "right" else g[::-1]
-        if stop == "open":
-            k = min(len(run), r.randint(3, 8))
-            out.append(("continue", run[-k:], None, {"why": "end", "seq": "".join(g), "side": side}))
-        elif stop.startswith("wrap→"):
-            x = stop.split("→", 1)[1]
-            if x in run:
-                period = run[run.index(x):]
-                if len(set(period)) >= 4:
-                    k = max(2, math.ceil(len(period) / 2))
-                    if k < len(period):
-                        out.append(("continue", period[-k:], None, {"why": "cycle-probe", "seq": "".join(g), "period": "".join(period)}))
-    # 1b seed-only steps: ask the seeded context itself of the real minds
-    for st in s["steps"]:
-        if st.get("seed_only"):
-            out.append(("continue", st["ctx"], None, {"why": "seed-step", "seq": "".join(g), "step": st["x"]}))
-    # 2 k*: the shortest unasked suffix of each walked step's run
-    for st in s["steps"]:
-        if st["kstar_known"]:
-            continue
-        ctx = st["ctx"]
-        for j in range(2, len(ctx)):
-            if tuple(ctx[-j:]) not in T.real:
-                out.append(("continue", ctx[-j:], None, {"why": "kstar", "seq": "".join(g), "step": st["x"], "k": len(ctx)}))
-                break
-    # 3b thin: precision where the strongest runs rest on few answers (METHODOLOGY §5, "square away the most obvious and
-    # stable (empirically) sequences"). A walked step whose deciding context some answering family answered fewer than
-    # twice is replicated once -- chosen by how many answers there are, never by what they say, so it cannot favour any
-    # outcome; at most once (Tree.replicated), so no stopping rule.
-    for st in s["steps"]:
-        c = tuple(st["ctx"])
-        if c in T.real and c not in T.replicated and min(len(v) for v in T.nodes[c].values()) < 2:
-            out.append(("continue", st["ctx"], None, {"why": "thin", "seq": "".join(g), "step": st["x"], "replicate": True}))
-    # 3 branches: does the runner-up continue?
-    for st in s["steps"]:
-        if st["alt"] and st["alt"][1] > 0:
-            out.append(("inhibit", st["ctx"], st["alt"][0], {"why": "branch", "seq": "".join(g), "step": st["x"]}))
-    # 4 inside: contexts ending on interior glyphs, either direction
-    inside = []
-    for run in (g, g[::-1]):
-        for i in range(2, len(run) - 1):
-            k = min(i + 1, r.randint(2, 4))
-            ctx = run[i + 1 - k:i + 1]
-            if tuple(ctx) not in T.real:
-                inside.append(ctx)
-    r.shuffle(inside)
-    out += [("continue", c, None, {"why": "inside", "seq": "".join(g)}) for c in inside]
-    return out
-
+# ------------------------------------------------------------------ exploration (fresh contexts)
 def triad_kernels(T):
-    """§4: "a triad answer is also an unconditioned hint that a 3-glyph path exists, which makes it a cheap way to find
-    kernels". Per triad (both eras), its most-named middle m: the path a m c, if the tree has not been shown it
-    (neither [a, m] nor [c, m] asked). Weight: the estimated agreement on m (TR.estimate's posterior mean, families
-    equal) -- a soft weight, never a cut (§7: "Priority uses it continuously, as a weight in the stochastic choice").
-    -> [(a, m, c, weight)]"""
+    """§4: a triad answer is an unconditioned hint that a 3-glyph path exists. Per triad, its most-named middle m: the
+    path a m c, if the tree has not been shown it. Weight: the estimated agreement on m (soft, never a cut)."""
     out = []
     for t, fam in T.triads_fam.items():
         mids = collections.Counter(ans[1] for c in fam.values() for ans, n in c.items() for _ in range(n) if ans[0] == "mid")
@@ -747,24 +808,24 @@ def triad_kernels(T):
         out.append((a, m, c, mean))
     return out
 
-def explore(P, seeds, n, rid):
-    """Hot exploration (§5), in thirds by a fated draw (chosen without evidence): seed bumps, fresh glyphs (with their
-    code-point neighbour or another fresh glyph), and triad-agreed kernels (§4) weighted by their middle's agreement."""
+def explore(P, T, seqs, seeds, n, rid):
+    """2-glyph contexts no mind has been shown, in thirds by a fated draw: seed bumps, fresh glyphs (with their
+    code-point neighbour or another fresh glyph), and triad-agreed kernels weighted by their middle's agreement.
+    A glyph already in a top sequence is redrawn with probability 1/2 (soft)."""
     r = PR.R("explore", {"round": rid})
-    kernels = triad_kernels(P.T)
+    kernels = triad_kernels(T)
     settled = set()
-    for s in P.seqs[:200]:
+    for s in seqs[:200]:
         if s["rank"] >= 0.9:
             settled.update(s["glyphs"])
-    sd = [x for x in seeds if len(list(dict.fromkeys(x["glyphs"]))) >= 3]
+    sd = [x for x in seeds if isinstance(x.get("glyphs"), list) and len(list(dict.fromkeys(x["glyphs"]))) >= 3]
     weights = [x.get("bump", 1.0) for x in sd]
-    tries = 0
-    added = 0
+    tries = added = 0
     while added < n and tries < n * 50:
         tries += 1
         u = r.random()
         if kernels and u < 1 / 3:
-            a_, m_, c_ = r.choices(kernels, weights=[k[3] for k in kernels])[0][:3]
+            a_, m_, c_ = r.choices(kernels, weights=[max(k[3], 1e-6) for k in kernels])[0][:3]
             ctx = [a_, m_] if r.random() < 0.5 else [c_, m_]
             how = {"why": "explore", "how": "triad-kernel"}
         elif sd and (u < 2 / 3 if kernels else u < 0.5):
@@ -786,80 +847,62 @@ def explore(P, seeds, n, rid):
                 b = fresh_glyph(r)
                 how = {"why": "explore", "how": "fresh"}
             ctx = [a, b]
+        if tuple(ctx) in T.real:
+            continue                                     # exploration is of contexts no mind has been shown
         if P.add("continue", ctx, **how):
             added += 1
     return added
 
+# ------------------------------------------------------------------ the round
+def sizes(budget, rid):
+    r = PR.R("round-size", {"round": rid})
+    scale = math.exp(r.gauss(0, PARAMS["SIZE_SIGMA_ROUND"]))
+    out = {}
+    for k, base in BASE.items():
+        m = math.exp(r.gauss(0, PARAMS["SIZE_SIGMA_STREAM"]))
+        out[k] = max(1, round(base * (budget / 700) * scale * m))
+    return out, scale
+
 def plan(rid, recs, seeds, budget):
-    T = TR.Tree(recs)
+    T = TR.Tree(recs)                                   # with seed votes: the walks seeds make walkable
+    Tr = TR.Tree(recs, seeds=False)                     # real answers only: what information is computed from
     seqs = TR.sequences(T)
-    P = Plan(rid, T, budget)
-    P.seqs = seqs
-    n_explore = round(EXPLORE_SHARE * budget)
-    explore(P, seeds, n_explore, rid)
-    ends = {x for q in seqs for x in (q["glyphs"][0], q["glyphs"][-1])}
-    work = []                                                  # (tier, sequence order, item order, item)
-    for si, s in enumerate(seqs):
-        r = PR.R("sequence-work", {"round": rid, "seq": s["glyphs"]})
-        for ii, (kind, ctx, cand, src) in enumerate(sequence_work(P, s, r, ends)):
-            work.append((TIER[src["why"]], si, ii, kind, ctx, cand, dict(src, rank=round(s["rank"], 4))))
-    recog, gen = reasoned_work(P, seqs, rid)
-    recog += written_recognition(P, seqs)
-    # each recognition question gets a matched control at the same context (PR.control_candidate), near or far by fate
-    paired = []
-    for kind, ctx, cand, src in recog:
-        paired.append((kind, ctx, cand, src))
-        ck = "near" if PR.R("control-kind", {"round": rid, "context": ctx, "x": cand}).random() < 0.5 else "far"
-        paired.append((kind, ctx, PR.control_candidate(ctx, cand, ck, rid), {"why": "control", "control": ck, "probe": {"control": ck}}))
-    work += [(1, -1, ii, kind, ctx, cand, src) for ii, (kind, ctx, cand, src) in enumerate(paired)]
     written_seqs = TR.sequences(TR.Tree(recs, written=True))
-    cw = cohere_work(P, seqs, written_seqs, seeds, rid)
-    work += [(1, -1, len(paired) + ii, kind, ctx, cand, src) for ii, (kind, ctx, cand, src) in enumerate(cw)]
-    ow = order_work(P, seqs, seeds, rid)
-    work += [(1, -1, len(paired) + len(cw) + ii, kind, ctx, cand, src) for ii, (kind, ctx, cand, src) in enumerate(ow)]
-    cho = choose_work(P, seqs, seeds, rid)
-    work += [(1, -1, len(paired) + len(cw) + len(ow) + ii, kind, ctx, cand, dict(src, probe=probe))
-             for ii, (kind, ctx, cand, src, probe) in enumerate(cho)]
-    nw = names_work(P, seeds, rid)
-    lw = lookalike_work(P, rid)
-    nw = nw + lw
-    work += [(1, -1, len(paired) + len(cw) + len(ow) + len(cho) + ii, kind, ctx, cand, src) for ii, (kind, ctx, cand, src) in enumerate(nw)]
-    work.sort(key=lambda w: w[:3])
-    n_reasoned = 0
-    for kind, ctx, cand, src in gen:                       # outside the budget's tiers: asked only of reasoner minds
-        if n_reasoned >= REASONED_PER_ROUND:
-            break
-        if P.add(kind, ctx, cand, variant="reasoned", **src):
-            n_reasoned += 1
-    n_reflect = 0
-    for kind, ctx, cand, src in reflection_work(P, seqs, rid):          # outside the budget's tiers, like the reasoned pass
-        if n_reflect >= REFLECT_PER_ROUND:
-            break
-        if P.add(kind, ctx, cand, variant="reflection", **src):
-            n_reflect += 1
-    n_pick = 0
-    for kind, ctx, cand, src, probe in pick_work(P, seqs, seeds, rid):   # outside the budget's tiers: generator minds only
-        if P.add(kind, ctx, cand, probe=probe, **src):
-            n_pick += 1
-    P.budget += n_reasoned + n_reflect + n_pick
-    served, tiers_reached = set(), collections.Counter()
-    for tier, si, ii, kind, ctx, cand, src in work:
-        if P.full():
-            break
-        src = dict(src); probe = src.pop("probe", None)
-        if P.add(kind, ctx, cand, probe=probe, **src):
-            tiers_reached[tier] += 1
-            if si >= 0:                                  # recognition questions belong to no one sequence
-                served.add(si)
-    last_rank = min((seqs[i]["rank"] for i in served), default=None)
-    served = len(served)
-    if not P.full():                                         # few sequences yet: more exploration
-        explore(P, seeds, budget - len(P.qs), rid + "-more")
-    stats = {"round": rid, "protocol": PR.PROTOCOL, "questions": len(P.qs), "budget": budget,
+    pend = Pending(recs, rid)
+    want, scale = sizes(budget, rid)
+    P = Plan(rid)
+    got, pool = {}, {}
+    got["explore"] = explore(P, T, seqs, seeds, want["explore"], rid)
+    streams = [
+        ("reasoned", lambda: reasoned_cands(T, pend, seqs, rid)),
+        ("reflection", lambda: reflection_cands(T, pend, seqs, rid)),
+        ("continue", lambda: continue_cands(T, Tr, pend, seqs)),
+        ("inhibit", lambda: inhibit_cands(T, Tr, pend, seqs, rid)),
+        ("cohere", lambda: cohere_cands(T, Tr, pend, seqs, written_seqs, seeds, rid, recs)),
+        ("lookalike", lambda: lookalike_cands(T, Tr, recs, rid)),
+        ("choose", lambda: choose_cands(T, Tr, pend, seqs, seeds, rid)),
+        ("choose-control", lambda: choose_control_cands(T, Tr, pend, rid)),
+        ("names", lambda: set_cands("names", T, pend, names_counts(T), seqs, seeds, rid,
+                                    extra=[(list(g), "validation-" + grp, PARAMS["VALIDATION_RELEVANCE"])
+                                           for grp, gs in NAME_VALIDATION.items() for g in gs])),
+        ("order", lambda: set_cands("order", T, pend, order_counts(T), seqs, seeds, rid)),
+        ("triad", lambda: triad_cands(T, pend, seqs)),
+        ("pick", lambda: pick_cands(T, pend, seqs, seeds, rid)),
+    ]
+    for name, make in streams:
+        C = make()
+        pool[name] = len(C)
+        got[name] = C.draw(P, want[name], PR.R("draw-" + name, {"round": rid}))
+    got["pick-null"] = pick_nulls(P, want["pick-null"], rid)
+    asked_before = set()
+    for rd in (DATA / "rounds").glob("c[0-9][0-9][0-9]"):
+        if rd.name < rid and (rd / "questions.jsonl").exists():
+            asked_before |= {json.loads(l)["qid"] for l in open(rd / "questions.jsonl") if l.strip()}
+    stats = {"round": rid, "protocol": PR.PROTOCOL, "planner": "stochastic-1", "questions": len(P.qs), "budget": budget,
+             "size_scale": round(scale, 4), "wanted": want, "drawn": got, "candidates": pool,
+             "reasks": sum(1 for q in P.qs if q["qid"] in asked_before),
              "by_why": dict(collections.Counter(q["source"].get("why") for q in P.qs)),
              "by_kind": dict(collections.Counter(q["kind"] for q in P.qs)),
-             "sequences": len(seqs), "sequences_served": served, "lowest_rank_served": last_rank,
-             "by_tier": {str(k): v for k, v in sorted(tiers_reached.items())},
              "by_variant": dict(collections.Counter(q.get("variant") or "plain" for q in P.qs)),
-             "contexts_in_tree": len(T.nodes)}
+             "sequences": len(seqs), "contexts_in_tree": len(T.nodes), "params": PARAMS}
     return P.qs, stats

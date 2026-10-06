@@ -144,6 +144,7 @@ def question(kind, context, candidate=None, source=None, variant=None, probe=Non
     (so no hypothesised middle is shown in the middle except by chance). A reflection question's context repeats a
     glyph by design (`7 8 9 8`, METHODOLOGY §3)."""
     c = list(context)
+    rid = (source or {}).get("round")      # shown orders are fated per round too, so a question asked again is shown afresh
     if variant == "reflection":
         assert 3 <= len(c) <= 8 and all(is_glyph(x) for x in c), c
     elif kind in ("order", "names"):
@@ -156,11 +157,11 @@ def question(kind, context, candidate=None, source=None, variant=None, probe=Non
         assert 2 <= len(c) <= 8 and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c   # 8: chosen without evidence (the triad era's limit); it bounds every shown context
     if kind == "triad":
         assert len(c) == 3, c
-        g = sorted(c); c = list(g); R("triad-shown", {"glyphs": g}).shuffle(c)
+        g = sorted(c); c = list(g); R("triad-shown", {"glyphs": g, "round": rid}).shuffle(c)
         key = {"kind": kind, "glyphs": g}
         return dict(key, context=c, qid=uid("T", key), source=source or {})
     if kind in ("order", "names"):
-        g = sorted(c); c = list(g); R(kind + "-shown", {"glyphs": g}).shuffle(c)
+        g = sorted(c); c = list(g); R(kind + "-shown", {"glyphs": g, "round": rid}).shuffle(c)
         key = {"kind": kind, "glyphs": g}
         return dict(key, context=c, qid=uid("O" if kind == "order" else "M", key), source=source or {})
     key = {"kind": kind, "context": c}
@@ -168,7 +169,7 @@ def question(kind, context, candidate=None, source=None, variant=None, probe=Non
         pair = sorted(candidate)
         assert len(pair) == 2 and pair[0] != pair[1] and all(is_glyph(x) and x not in c for x in pair), candidate
         key["pair"] = pair
-        shown = list(pair); R("choose-shown", {"context": c, "pair": pair}).shuffle(shown)
+        shown = list(pair); R("choose-shown", {"context": c, "pair": pair, "round": rid}).shuffle(shown)
         if probe:
             key["probe"] = probe
         return dict(key, shown_pair=shown, qid=uid("D", key), source=source or {})
