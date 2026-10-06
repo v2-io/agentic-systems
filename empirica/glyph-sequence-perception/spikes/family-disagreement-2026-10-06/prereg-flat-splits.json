@@ -1,0 +1,1580 @@
+{
+ "what": "Pre-registered prediction (family-disagreement spike, strengthening-1): the 43 continue contexts where Sonnet continued every time (>= 2 answers) and Grok stopped every time (>= 2 answers), on the snapshot of 2026-10-06 16:36 (snapshot/manifest.json).",
+ "model": "irt.py variant 2mf (2PL mixture with per-mind familiarity), fitted on all continue answers in the snapshot; predictions use each context's posterior given all its answers",
+ "written": "2026-10-06T17:28:50-06:00",
+ "git_head_at_writing": "dfc1dfb25717a7ba1a7d7cb0d293e4042a3b6d0c",
+ "prediction": {
+  "grok46_next_answer_stops_share": {
+   "median_and_95": [
+    0.442,
+    0.581,
+    0.721
+   ]
+  },
+  "sonnet55_next_answer_continues_share": {
+   "median_and_95": [
+    0.698,
+    0.814,
+    0.907
+   ]
+  }
+ },
+ "how_to_check": "Ask each context once more, shown, plain continue question, to sonnet55 and grok46 (fresh sheets). Count the share of Grok's answers that are 'none' and of Sonnet's that continue. A Grok share inside the band supports 'flat splits here are mostly borderline contexts, partly chance'; a share near 1 (above the band) supports 'settled, a stable mind x context difference' and means the calibrated model misses an interaction.",
+ "contexts": [
+  {
+   "context": "Ȱȱ",
+   "context_glyphs": [
+    "Ȱ",
+    "ȱ"
+   ],
+   "answers_so_far": {
+    "gemini38flash": [
+     1
+    ],
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45": [
+     0
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.443,
+    "opus55": 0.285,
+    "haiku45nt": 0.604,
+    "haiku45": 0.736,
+    "grok46": 0.611,
+    "gemini38flash": 0.499,
+    "gemini31pro": 0.682
+   },
+   "unfamiliar_last_glyph": 0
+  },
+  {
+   "context": "ϩϫϭϯ",
+   "context_glyphs": [
+    "ϩ",
+    "ϫ",
+    "ϭ",
+    "ϯ"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.177,
+    "opus55": 0.262,
+    "haiku45nt": 0.458,
+    "haiku45": 0.488,
+    "grok46": 0.626,
+    "gemini38flash": 0.389,
+    "gemini31pro": 0.756
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "ݺݹݸ",
+   "context_glyphs": [
+    "ݺ",
+    "ݹ",
+    "ݸ"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45": [
+     0
+    ],
+    "haiku45nt": [
+     0,
+     1
+    ],
+    "opus55": [
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.127,
+    "opus55": 0.153,
+    "haiku45nt": 0.467,
+    "haiku45": 0.47,
+    "grok46": 0.57,
+    "gemini38flash": 0.337,
+    "gemini31pro": 0.732
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "ߑߐߏߎߍߌߋߊ",
+   "context_glyphs": [
+    "ߑ",
+    "ߐ",
+    "ߏ",
+    "ߎ",
+    "ߍ",
+    "ߌ",
+    "ߋ",
+    "ߊ"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     1
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.469,
+    "opus55": 0.318,
+    "haiku45nt": 0.62,
+    "haiku45": 0.761,
+    "grok46": 0.638,
+    "gemini38flash": 0.523,
+    "gemini31pro": 0.708
+   },
+   "unfamiliar_last_glyph": 0
+  },
+  {
+   "context": "ᄇᄈᄉᄊᄌᄍ",
+   "context_glyphs": [
+    "ᄇ",
+    "ᄈ",
+    "ᄉ",
+    "ᄊ",
+    "ᄌ",
+    "ᄍ"
+   ],
+   "answers_so_far": {
+    "gemini38flash": [
+     0
+    ],
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.136,
+    "opus55": 0.183,
+    "haiku45nt": 0.435,
+    "haiku45": 0.446,
+    "grok46": 0.551,
+    "gemini38flash": 0.332,
+    "gemini31pro": 0.688
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "ላሌልሎሏ",
+   "context_glyphs": [
+    "ላ",
+    "ሌ",
+    "ል",
+    "ሎ",
+    "ሏ"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.177,
+    "opus55": 0.262,
+    "haiku45nt": 0.458,
+    "haiku45": 0.488,
+    "grok46": 0.626,
+    "gemini38flash": 0.389,
+    "gemini31pro": 0.756
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "ᐐᐒᐔᐗᐙᐛᐝ",
+   "context_glyphs": [
+    "ᐐ",
+    "ᐒ",
+    "ᐔ",
+    "ᐗ",
+    "ᐙ",
+    "ᐛ",
+    "ᐝ"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.382,
+    "opus55": 0.246,
+    "haiku45nt": 0.541,
+    "haiku45": 0.641,
+    "grok46": 0.528,
+    "gemini38flash": 0.432,
+    "gemini31pro": 0.592
+   },
+   "unfamiliar_last_glyph": 0
+  },
+  {
+   "context": "ᖰᖱᖲᖳ",
+   "context_glyphs": [
+    "ᖰ",
+    "ᖱ",
+    "ᖲ",
+    "ᖳ"
+   ],
+   "answers_so_far": {
+    "gemini31pro": [
+     0
+    ],
+    "gemini38flash": [
+     0
+    ],
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45": [
+     0
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.046,
+    "opus55": 0.038,
+    "haiku45nt": 0.289,
+    "haiku45": 0.258,
+    "grok46": 0.262,
+    "gemini38flash": 0.152,
+    "gemini31pro": 0.352
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "↡↢↣",
+   "context_glyphs": [
+    "↡",
+    "↢",
+    "↣"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45": [
+     1
+    ],
+    "haiku45nt": [
+     0,
+     1
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.493,
+    "opus55": 0.346,
+    "haiku45nt": 0.63,
+    "haiku45": 0.779,
+    "grok46": 0.666,
+    "gemini38flash": 0.546,
+    "gemini31pro": 0.736
+   },
+   "unfamiliar_last_glyph": 0
+  },
+  {
+   "context": "␜␝␞␟",
+   "context_glyphs": [
+    "␜",
+    "␝",
+    "␞",
+    "␟"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45": [
+     0
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.143,
+    "opus55": 0.2,
+    "haiku45nt": 0.43,
+    "haiku45": 0.445,
+    "grok46": 0.556,
+    "gemini38flash": 0.339,
+    "gemini31pro": 0.686
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "┧┨┩",
+   "context_glyphs": [
+    "┧",
+    "┨",
+    "┩"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.382,
+    "opus55": 0.246,
+    "haiku45nt": 0.541,
+    "haiku45": 0.641,
+    "grok46": 0.528,
+    "gemini38flash": 0.432,
+    "gemini31pro": 0.592
+   },
+   "unfamiliar_last_glyph": 0
+  },
+  {
+   "context": "❄❅❆",
+   "context_glyphs": [
+    "❄",
+    "❅",
+    "❆"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ],
+    "haiku45": [
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.224,
+    "opus55": 0.124,
+    "haiku45nt": 0.393,
+    "haiku45": 0.413,
+    "grok46": 0.326,
+    "gemini38flash": 0.265,
+    "gemini31pro": 0.378
+   },
+   "unfamiliar_last_glyph": 0
+  },
+  {
+   "context": "➌④",
+   "context_glyphs": [
+    "➌",
+    "④"
+   ],
+   "answers_so_far": {
+    "gemini38flash": [
+     0
+    ],
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     1
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.161,
+    "opus55": 0.224,
+    "haiku45nt": 0.476,
+    "haiku45": 0.496,
+    "grok46": 0.621,
+    "gemini38flash": 0.379,
+    "gemini31pro": 0.77
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "⡆⡅⡄⡃⡂⡁⡀",
+   "context_glyphs": [
+    "⡆",
+    "⡅",
+    "⡄",
+    "⡃",
+    "⡂",
+    "⡁",
+    "⡀"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45": [
+     0
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.143,
+    "opus55": 0.2,
+    "haiku45nt": 0.43,
+    "haiku45": 0.445,
+    "grok46": 0.556,
+    "gemini38flash": 0.339,
+    "gemini31pro": 0.686
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "⢳⢴",
+   "context_glyphs": [
+    "⢳",
+    "⢴"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "opus55": [
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.125,
+    "opus55": 0.155,
+    "haiku45nt": 0.439,
+    "haiku45": 0.446,
+    "grok46": 0.547,
+    "gemini38flash": 0.324,
+    "gemini31pro": 0.694
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "⣛⣚",
+   "context_glyphs": [
+    "⣛",
+    "⣚"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     1,
+     1
+    ],
+    "opus55": [
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.161,
+    "opus55": 0.21,
+    "haiku45nt": 0.481,
+    "haiku45": 0.501,
+    "grok46": 0.629,
+    "gemini38flash": 0.38,
+    "gemini31pro": 0.782
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "⣜⣝",
+   "context_glyphs": [
+    "⣜",
+    "⣝"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     1,
+     1
+    ],
+    "opus55": [
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.161,
+    "opus55": 0.21,
+    "haiku45nt": 0.481,
+    "haiku45": 0.501,
+    "grok46": 0.629,
+    "gemini38flash": 0.38,
+    "gemini31pro": 0.782
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "⧯⧰⧱",
+   "context_glyphs": [
+    "⧯",
+    "⧰",
+    "⧱"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "opus55": [
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.125,
+    "opus55": 0.155,
+    "haiku45nt": 0.439,
+    "haiku45": 0.446,
+    "grok46": 0.547,
+    "gemini38flash": 0.324,
+    "gemini31pro": 0.694
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "⧱⧰",
+   "context_glyphs": [
+    "⧱",
+    "⧰"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     1
+    ],
+    "sonnet55": [
+     0,
+     0
+    ],
+    "opus55": [
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.143,
+    "opus55": 0.184,
+    "haiku45nt": 0.473,
+    "haiku45": 0.486,
+    "grok46": 0.605,
+    "gemini38flash": 0.36,
+    "gemini31pro": 0.762
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "⧲⧱",
+   "context_glyphs": [
+    "⧲",
+    "⧱"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     1,
+     1
+    ],
+    "opus55": [
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.161,
+    "opus55": 0.21,
+    "haiku45nt": 0.481,
+    "haiku45": 0.501,
+    "grok46": 0.629,
+    "gemini38flash": 0.38,
+    "gemini31pro": 0.782
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "⸫⸪⸩⸨",
+   "context_glyphs": [
+    "⸫",
+    "⸪",
+    "⸩",
+    "⸨"
+   ],
+   "answers_so_far": {
+    "gemini38flash": [
+     1
+    ],
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "opus55": [
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.166,
+    "opus55": 0.233,
+    "haiku45nt": 0.478,
+    "haiku45": 0.508,
+    "grok46": 0.662,
+    "gemini38flash": 0.397,
+    "gemini31pro": 0.81
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "ㅪㅩㅨㅧㅦㅥ",
+   "context_glyphs": [
+    "ㅪ",
+    "ㅩ",
+    "ㅨ",
+    "ㅧ",
+    "ㅦ",
+    "ㅥ"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.177,
+    "opus55": 0.262,
+    "haiku45nt": 0.458,
+    "haiku45": 0.488,
+    "grok46": 0.626,
+    "gemini38flash": 0.389,
+    "gemini31pro": 0.756
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "㈽㈾㈿㉀㉁㉂㉃",
+   "context_glyphs": [
+    "㈽",
+    "㈾",
+    "㈿",
+    "㉀",
+    "㉁",
+    "㉂",
+    "㉃"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.281,
+    "opus55": 0.473,
+    "haiku45nt": 0.503,
+    "haiku45": 0.585,
+    "grok46": 0.809,
+    "gemini38flash": 0.53,
+    "gemini31pro": 0.912
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "㉀㉁㉂㉃㉄㉅㉆㉇",
+   "context_glyphs": [
+    "㉀",
+    "㉁",
+    "㉂",
+    "㉃",
+    "㉄",
+    "㉅",
+    "㉆",
+    "㉇"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.177,
+    "opus55": 0.262,
+    "haiku45nt": 0.458,
+    "haiku45": 0.488,
+    "grok46": 0.626,
+    "gemini38flash": 0.389,
+    "gemini31pro": 0.756
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "㎅㎆㎇",
+   "context_glyphs": [
+    "㎅",
+    "㎆",
+    "㎇"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.177,
+    "opus55": 0.262,
+    "haiku45nt": 0.458,
+    "haiku45": 0.488,
+    "grok46": 0.626,
+    "gemini38flash": 0.389,
+    "gemini31pro": 0.756
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "㎓㎔",
+   "context_glyphs": [
+    "㎓",
+    "㎔"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.177,
+    "opus55": 0.262,
+    "haiku45nt": 0.458,
+    "haiku45": 0.488,
+    "grok46": 0.626,
+    "gemini38flash": 0.389,
+    "gemini31pro": 0.756
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "㎻㎺㎹㎸",
+   "context_glyphs": [
+    "㎻",
+    "㎺",
+    "㎹",
+    "㎸"
+   ],
+   "answers_so_far": {
+    "gemini38flash": [
+     0
+    ],
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "opus55": [
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.105,
+    "opus55": 0.118,
+    "haiku45nt": 0.421,
+    "haiku45": 0.416,
+    "grok46": 0.493,
+    "gemini38flash": 0.289,
+    "gemini31pro": 0.638
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "꜊꜈",
+   "context_glyphs": [
+    "꜊",
+    "꜈"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     1
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.207,
+    "opus55": 0.311,
+    "haiku45nt": 0.488,
+    "haiku45": 0.529,
+    "grok46": 0.684,
+    "gemini38flash": 0.432,
+    "gemini31pro": 0.817
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "꜋꜊꜉꜈꜇",
+   "context_glyphs": [
+    "꜋",
+    "꜊",
+    "꜉",
+    "꜈",
+    "꜇"
+   ],
+   "answers_so_far": {
+    "gemini38flash": [
+     0
+    ],
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.136,
+    "opus55": 0.183,
+    "haiku45nt": 0.435,
+    "haiku45": 0.446,
+    "grok46": 0.551,
+    "gemini38flash": 0.332,
+    "gemini31pro": 0.688
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "꜓꜔꜕꜖",
+   "context_glyphs": [
+    "꜓",
+    "꜔",
+    "꜕",
+    "꜖"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.177,
+    "opus55": 0.262,
+    "haiku45nt": 0.458,
+    "haiku45": 0.488,
+    "grok46": 0.626,
+    "gemini38flash": 0.389,
+    "gemini31pro": 0.756
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "𐡡𐡠𐡟𐡞𐡝𐡛",
+   "context_glyphs": [
+    "𐡡",
+    "𐡠",
+    "𐡟",
+    "𐡞",
+    "𐡝",
+    "𐡛"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45": [
+     0
+    ],
+    "haiku45nt": [
+     1,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.172,
+    "opus55": 0.248,
+    "haiku45nt": 0.477,
+    "haiku45": 0.503,
+    "grok46": 0.637,
+    "gemini38flash": 0.392,
+    "gemini31pro": 0.781
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "𐡹𐡺𐡻𐡼",
+   "context_glyphs": [
+    "𐡹",
+    "𐡺",
+    "𐡻",
+    "𐡼"
+   ],
+   "answers_so_far": {
+    "gemini38flash": [
+     0
+    ],
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "opus55": [
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ],
+    "haiku45": [
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.088,
+    "opus55": 0.092,
+    "haiku45nt": 0.387,
+    "haiku45": 0.375,
+    "grok46": 0.432,
+    "gemini38flash": 0.252,
+    "gemini31pro": 0.566
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "𒐉𒐊𒐋𒐌𒐍",
+   "context_glyphs": [
+    "𒐉",
+    "𒐊",
+    "𒐋",
+    "𒐌",
+    "𒐍"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ],
+    "opus55": [
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.125,
+    "opus55": 0.155,
+    "haiku45nt": 0.439,
+    "haiku45": 0.446,
+    "grok46": 0.547,
+    "gemini38flash": 0.324,
+    "gemini31pro": 0.694
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "𝂠𝂢𝂤𝂦𝂨𝂪𝂬𐂮",
+   "context_glyphs": [
+    "𝂠",
+    "𝂢",
+    "𝂤",
+    "𝂦",
+    "𝂨",
+    "𝂪",
+    "𝂬",
+    "𐂮"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.177,
+    "opus55": 0.262,
+    "haiku45nt": 0.458,
+    "haiku45": 0.488,
+    "grok46": 0.626,
+    "gemini38flash": 0.389,
+    "gemini31pro": 0.756
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "𝍠𝍢𝍤𝍦𝍨",
+   "context_glyphs": [
+    "𝍠",
+    "𝍢",
+    "𝍤",
+    "𝍦",
+    "𝍨"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.177,
+    "opus55": 0.262,
+    "haiku45nt": 0.458,
+    "haiku45": 0.488,
+    "grok46": 0.626,
+    "gemini38flash": 0.389,
+    "gemini31pro": 0.756
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "𝞟𝞠𝞡𝞢𝞣",
+   "context_glyphs": [
+    "𝞟",
+    "𝞠",
+    "𝞡",
+    "𝞢",
+    "𝞣"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "opus55": [
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.125,
+    "opus55": 0.155,
+    "haiku45nt": 0.439,
+    "haiku45": 0.446,
+    "grok46": 0.547,
+    "gemini38flash": 0.324,
+    "gemini31pro": 0.694
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "𝞠𝞡𝞢",
+   "context_glyphs": [
+    "𝞠",
+    "𝞡",
+    "𝞢"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "opus55": [
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.125,
+    "opus55": 0.155,
+    "haiku45nt": 0.439,
+    "haiku45": 0.446,
+    "grok46": 0.547,
+    "gemini38flash": 0.324,
+    "gemini31pro": 0.694
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "𝞡𝞢𝞣𝞤",
+   "context_glyphs": [
+    "𝞡",
+    "𝞢",
+    "𝞣",
+    "𝞤"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ],
+    "haiku45": [
+     0
+    ],
+    "opus55": [
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.106,
+    "opus55": 0.123,
+    "haiku45nt": 0.412,
+    "haiku45": 0.409,
+    "grok46": 0.489,
+    "gemini38flash": 0.287,
+    "gemini31pro": 0.629
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "🀠🀟🀞🀝🀜🀛🀚🀙",
+   "context_glyphs": [
+    "🀠",
+    "🀟",
+    "🀞",
+    "🀝",
+    "🀜",
+    "🀛",
+    "🀚",
+    "🀙"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "opus55": [
+     1
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.323,
+    "opus55": 0.562,
+    "haiku45nt": 0.509,
+    "haiku45": 0.608,
+    "grok46": 0.847,
+    "gemini38flash": 0.573,
+    "gemini31pro": 0.932
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "🀡🀞🀛",
+   "context_glyphs": [
+    "🀡",
+    "🀞",
+    "🀛"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45": [
+     0
+    ],
+    "haiku45nt": [
+     0,
+     1
+    ],
+    "sonnet55": [
+     0,
+     0
+    ],
+    "opus55": [
+     1
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.307,
+    "opus55": 0.535,
+    "haiku45nt": 0.507,
+    "haiku45": 0.601,
+    "grok46": 0.838,
+    "gemini38flash": 0.56,
+    "gemini31pro": 0.929
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "🕨🕩🕪🕫🕬",
+   "context_glyphs": [
+    "🕨",
+    "🕩",
+    "🕪",
+    "🕫",
+    "🕬"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.177,
+    "opus55": 0.262,
+    "haiku45nt": 0.458,
+    "haiku45": 0.488,
+    "grok46": 0.626,
+    "gemini38flash": 0.389,
+    "gemini31pro": 0.756
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "🞙🞘🞗🞖",
+   "context_glyphs": [
+    "🞙",
+    "🞘",
+    "🞗",
+    "🞖"
+   ],
+   "answers_so_far": {
+    "gemini31pro": [
+     0
+    ],
+    "gemini38flash": [
+     0
+    ],
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45": [
+     0
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ],
+    "opus55": [
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.042,
+    "opus55": 0.032,
+    "haiku45nt": 0.283,
+    "haiku45": 0.251,
+    "grok46": 0.248,
+    "gemini38flash": 0.144,
+    "gemini31pro": 0.338
+   },
+   "unfamiliar_last_glyph": 1
+  },
+  {
+   "context": "🬫🬬",
+   "context_glyphs": [
+    "🬫",
+    "🬬"
+   ],
+   "answers_so_far": {
+    "grok46": [
+     1,
+     1
+    ],
+    "haiku45": [
+     0,
+     0
+    ],
+    "haiku45nt": [
+     0,
+     0
+    ],
+    "sonnet55": [
+     0,
+     0
+    ]
+   },
+   "p_stop_next": {
+    "sonnet55": 0.113,
+    "opus55": 0.148,
+    "haiku45nt": 0.391,
+    "haiku45": 0.394,
+    "grok46": 0.477,
+    "gemini38flash": 0.286,
+    "gemini31pro": 0.599
+   },
+   "unfamiliar_last_glyph": 1
+  }
+ ]
+}
