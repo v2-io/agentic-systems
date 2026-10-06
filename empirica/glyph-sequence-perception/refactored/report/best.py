@@ -100,6 +100,9 @@ def link(g, i, Tp):
     gen = "S" if len(sf) >= FAMILIES_MIN else ("W" if len(wf) >= FAMILIES_MIN else ("P" if len(pf) >= FAMILIES_MIN else None))
     basis = {"W": written, "P": picked}.get(gen) or shown or written or picked
     obs = TR.estimate([d["counts"] for d in basis])[0] if basis else None
+    # display only: is the link named by a confident majority in its channel (the choice form of the standard)? A link
+    # without generation evidence is not. BEST draws a link that is not as "│" (Joseph, 2026-10-05).
+    strong = bool(gen) and choice([d["counts"] for d in basis])[0] == "supported"
     rc = collections.defaultdict(lambda: [0, 0])
     for d in (Tp.recognition_dir(fwd, b), Tp.recognition_dir(bwd, a)):
         for f, (y, n) in (d or {}).items():
@@ -107,7 +110,7 @@ def link(g, i, Tp):
     rc = {f: tuple(v) for f, v in rc.items()}
     rec = yesno(rc, near(Tp, rc))[0] if rc else None
     status = "X" if rec == "below" else (gen or ("R" if rec == "beyond" else None))
-    return {"status": status, "gen": gen, "obs": obs, "fams": len({"S": sf, "W": wf, "P": pf}.get(gen, set())), "rec": rec,
+    return {"status": status, "gen": gen, "obs": obs, "strong": strong, "fams": len({"S": sf, "W": wf, "P": pf}.get(gen, set())), "rec": rec,
             "uk": sum(d["uk"] for d in shown), "un": sum(d["un"] for d in shown)}
 
 def judge(g, Tp):
@@ -229,6 +232,14 @@ def shown_order(g):
     keys = vals if all(v is not None for v in vals) else [ord(c) for c in g]
     return g[::-1] if all(b < a for a, b in zip(keys, keys[1:])) else g
 
+def render(g, links):
+    """a run for display: glyphs joined by a space where the link is named by a confident majority, by "│" where it is
+    weaker; shown ascending when monotonic (shown_order), the link marks following"""
+    g, flags = list(g), [l["strong"] for l in links]
+    if shown_order(g) != g:
+        g, flags = g[::-1], flags[::-1]
+    return g[0] + "".join((" " if f else "│") + x for f, x in zip(flags, g[1:]))
+
 def fold(w):
     return f" (+{w['folded']})" if w.get("folded") else ""
 
@@ -256,7 +267,8 @@ def main():
     rejected = [w for w in whole.values() if w["verdict"] == "below"]
     undecided = [w for w in whole.values() if w["verdict"] is None]
     for w in recognised + rejected:
-        w["links"] = link_summary(judge(w["glyphs"], Tp))
+        w["ls"] = judge(w["glyphs"], Tp)
+        w["links"] = link_summary(w["ls"])
         w["tests"] = tests(Tp, w["glyphs"])
     recognised.sort(key=lambda w: (-len(w["glyphs"]), -w["d"], w["glyphs"]))
     kept = []                                            # display: a recognised run contained in a longer recognised one folds into it
@@ -285,7 +297,7 @@ def main():
     L += ["## Recognised as wholes", "", "| # | run | n | us | yes − shuffled | yes/n per family | links | unr | tests |", "|---|---|---|---|---|---|---|---|---|"]
     for i, w in enumerate(recognised[:TOP], 1):
         k, n = w["links"]["unreasoned"]
-        L.append(f"| {i} | `{' '.join(shown_order(w['glyphs']))}`{fold(w)} | {len(w['glyphs'])} | {us(w['glyphs']):.1f} | {w['d']:+.2f} | {fam_cells(w['counts'], fams_all)} | {link_cell(w['links'])} | {f'{k}/{n}' if n else '–'} | {test_cell(w['tests'])} |")
+        L.append(f"| {i} | `{render(w['glyphs'], w['ls'])}`{fold(w)} | {len(w['glyphs'])} | {us(w['glyphs']):.1f} | {w['d']:+.2f} | {fam_cells(w['counts'], fams_all)} | {link_cell(w['links'])} | {f'{k}/{n}' if n else '–'} | {test_cell(w['tests'])} |")
     if not recognised:
         L.append("| – | *none yet* | | | | | | | |")
     L += ["", "*Key:*",
@@ -295,11 +307,12 @@ def main():
           "- **links**: each link's strongest evidence. **S**: generated in shown answers. **W**: generated in written answers. **P**: picked in the forced generator pass (METHODOLOGY §4a). **R**: not generated, but recognised (yes beyond the near control). **X**: rejected (no beyond the near control). **–**: no evidence either way yet. **⚠**: generated *and* rejected.",
           "- **unr**: shown answers given with 0 thinking tokens that name the links, of all such answers there. Reasoned and first-impression answers stay apart until the data says whether they differ (METHODOLOGY §2a).",
           "- **tests**: passed/challenged. **s**: skip tests (a sequence predicts no). **t**: triads. **o**: order answers (triad era). A ⚠ marks a challenge; **–** means untested.",
+          "- **│** between two glyphs: a weaker link, one that a confident majority of answers doesn't name (90% lower bound below 0.5, in the channel that carries it), or one with no generation evidence. A space: a confident majority names it. Display only; it decides nothing.",
           "- Display: a run monotonic in numeric value (else in code points) is shown ascending.", ""]
 
     L += ["## Rejected as wholes", "", "| # | run | n | yes − shuffled | yes/n per family | links | tests |", "|---|---|---|---|---|---|---|"]
     for i, w in enumerate(rejected[:TOP], 1):
-        L.append(f"| {i} | `{' '.join(w['glyphs'])}` | {len(w['glyphs'])} | {w['d']:+.2f} | {fam_cells(w['counts'], fams_all)} | {link_cell(w['links'])} | {test_cell(w['tests'])} |")
+        L.append(f"| {i} | `{render(w['glyphs'], w['ls'])}` | {len(w['glyphs'])} | {w['d']:+.2f} | {fam_cells(w['counts'], fams_all)} | {link_cell(w['links'])} | {test_cell(w['tests'])} |")
     if not rejected:
         L.append("| – | *none yet* | | | | | |")
     L += ["", "*\"No, not coherent\" beyond the shuffled control: the families find this run *less* coherent than runs shuffled out of order. Shown as asked, not reordered.*", ""]
@@ -308,7 +321,7 @@ def main():
     for i, c in enumerate(cand[:TOP], 1):
         s = c["summary"]; k, n = s["unreasoned"]
         agr = f"{s['agreement']:.2f}" if s["agreement"] is not None else "–"
-        L.append(f"| {i} | `{' '.join(shown_order(c['glyphs']))}` | {len(c['glyphs'])} | {us(c['glyphs']):.1f} | {agr} | {link_cell(s)} | {c['fmin']} | {f'{k}/{n}' if n else '–'} |")
+        L.append(f"| {i} | `{render(c['glyphs'], c['links'])}` | {len(c['glyphs'])} | {us(c['glyphs']):.1f} | {agr} | {link_cell(s)} | {c['fmin']} | {f'{k}/{n}' if n else '–'} |")
     if len(cand) > TOP:
         L += ["", f"*{len(cand) - TOP} shorter candidates not shown.*"]
     L += ["", "*Strongest edges first: each context's strongest continuation, then the strongest branch followed forward and backward until \"none\" is the strongest answer, or the path returns on itself. Each row is the stretch around its edge whose every link has positive evidence (S, W, P or R, as above). A weaker branch is its own row once its own edge comes up, and nothing is merged. Candidates, not findings: recognition of the whole run decides. **agr**: the mean share of answers naming each link where it was asked, a perceptual quantity and not a gate. **≥ fam**: the fewest families generating any one link (0 where a link rests on recognition alone).*", ""]
