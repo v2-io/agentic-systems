@@ -57,6 +57,26 @@ The drains ask their minds' open sheets, oldest round first, and idle when caugh
 - **Dropped.** A "two-family deciding context" rule, tried in between, was dropped: it fixed a read-off symptom inside the tree and the planner.
 - **Don't reintroduce either kind of mixing.** If a read-off looks wrong, fix the read-off unless the answers themselves are wrong.
 
+**Evidence and tests (2026-10-05, late evening; all in METHODOLOGY §2a, §4, §5).**
+- **One standard.** The tree supplies facts (per-family counts). BEST.md decides with one rule:
+  - Beta–Jeffreys per family, an equal-weight mean, 90% confidence, ≥ 2 families;
+  - choice answers against 0.5, yes/no answers against near controls.
+
+  Agreement is perceptual strength; the interval is the evidence.
+- **The planner's question set:**
+  - recognition with matched controls;
+  - join probes (the other direction; replicate at most once);
+  - thin-link replication (by answer count only);
+  - falsification: skip, lengthening, and new triad questions in the triad era's wording;
+  - reflection questions (§3), kept apart.
+- **Triad-era triads (19,665) and order answers (5,716)** were ported but unused until now. They test every confirmed stretch.
+- **Still open:**
+  - order questions in the new protocol;
+  - orthogonality as a soft weight in exploration (§2b);
+  - triad-agreed kernels for exploration (§4);
+  - per-family views;
+  - Gemini pacing (Joseph's call: it lags rounds behind at 1 worker / 60 s).
+
 **md-press here: always `--no-math`** (Joseph, 2026-10-05: *"this is the one case where you'll almost certainly want to run with --no-math"*). Since 2026-10-05, md-press only reports unless given `--fix`, and its math pass is on by default. This study's docs carry glyph sequences in plain prose (`⑳ → ㉑`, `↖ ↑ ↗`), which a Unicode-math promotion would turn into `$…$`. So use `md-press --no-math FILE`, then `md-press --fix --no-math FILE`.
 
 **utf-mcp is installed for Joseph's own tools** (2026-10-05 ~17:10, at his go-ahead: "make the mcp server available as a tool wherever you see fit"): `claude mcp` user scope, `~/.grok/config.toml` and `~/.codex/config.toml`, each tagged (`claude-code-user`, `grok-user`, `codex-user`). The study's judges can't see it: Claude judges use `--strict-mcp-config`, which was checked live and reported `tools: []`, and grok and codex judges run in isolated homes. **It is deliberately not in agy.** The study's Gemini judges run agy in Joseph's own HOME, so a global agy server (plus the allow-rule it needs) would hand the lookup tool to the first-impression Gemini judges. Don't add it there unless the agy adapter gets its own isolated configuration first.
