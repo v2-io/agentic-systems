@@ -496,7 +496,7 @@ def main():
         r["o_sd"] = Op["sd"] if Op else None
         r["o_bf"] = Op["bf"] if Op else None
         r["o_families"] = Op["families"] if Op else None
-        r["o_other"] = dict(other) or None
+        r["o_other"] = dict(sorted(other.items())) or None
         r["o_evidence"] = Op["aids"] if Op else []
     rates = [{"rater": rt, "set_class": cls, "yes": y, "n": n} for (rt, cls), (y, n) in sorted(ctl.items())]
     manifest["finished"] = dt.datetime.now().isoformat(timespec="seconds")

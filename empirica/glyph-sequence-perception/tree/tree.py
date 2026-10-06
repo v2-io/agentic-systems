@@ -561,10 +561,13 @@ def sequences(T):
     def contained(a, b):
         n = len(a)
         return n < len(b) and any(b[i:i + n] in (a, a[::-1]) for i in range(len(b) - n + 1))
-    kept = []
-    for s in seqs:
-        if not any(contained(s["glyphs"], k["glyphs"]) for k in kept):
+    kept, by_glyph = [], collections.defaultdict(list)    # a walk containing s holds s's first glyph: only those are
+    for s in seqs:                                          # checked (2026-10-06: the all-pairs check was half of every
+        g = s["glyphs"]                                     # plan's and catalog build's time)
+        if not any(contained(g, k["glyphs"]) for k in by_glyph.get(g[0], ())):
             kept.append(s)
+            for x in set(g):
+                by_glyph[x].append(s)
     for s in kept:
         w = [st for st in s["steps"] if not st["x"] in s["glyphs"][:0]]
         s["walked"] = len(w)

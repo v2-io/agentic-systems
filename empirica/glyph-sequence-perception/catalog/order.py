@@ -43,7 +43,8 @@ class Order:
         """-> (units [(rater, family, agree 0/1, baseline, aid)], counts of the other outcomes)"""
         pos = {x: i for i, x in enumerate(g)}
         units, other = [], collections.Counter()
-        for t in set().union(*(self.triads_of.get(x, set()) for x in g)) if g else ():
+        # sorted: a set's order follows Python's per-process string hashing, and the build must be deterministic (CATALOG §13)
+        for t in sorted(set().union(*(self.triads_of.get(x, set()) for x in g))) if g else ():
             rows = self.triads[t]
             if not all(x in pos for x in t):
                 continue
@@ -83,26 +84,31 @@ class Order:
         if not units:
             return None, other
         pts = [(i + 0.5) / grid for i in range(grid)]
-        by = collections.defaultdict(list)
-        for rt, f, a, b, aid in units:
-            by[f].append((a, b))
+        by = collections.defaultdict(lambda: collections.defaultdict(lambda: [0, 0]))   # family -> baseline -> [agree, not]
+        for rt, f, a, b, aid in units:                    # grouped by baseline: units of one baseline share their
+            by[f][b][0 if a else 1] += 1                  # likelihood terms (2026-10-06: per unit it was a third of the build)
         fams = {}
-        for f, us in by.items():
+        for f, bs in by.items():
             ll = []
             for beta in pts:
                 s = 0.0
-                for a, b in us:
+                for b, (k, m_) in bs.items():
                     p = min(max(b + (1 - b) * beta, 1e-12), 1 - 1e-12)
-                    s += math.log(p) if a else math.log(1 - p)
+                    s += k * math.log(p) + m_ * math.log(1 - p)
                 ll.append(s)
             m = max(ll); w = [math.exp(x - m) for x in ll]; z = sum(w)
             mean = sum(wi * bt for wi, bt in zip(w, pts)) / z
             sd = (sum(wi * (bt - mean) ** 2 for wi, bt in zip(w, pts)) / z) ** 0.5
-            fams[f] = {"strength": round(mean, 4), "sd": round(sd, 4), "agree": sum(a for a, _ in us), "n": len(us)}
+            fams[f] = {"strength": round(mean, 4), "sd": round(sd, 4), "agree": sum(k for k, _ in bs.values()),
+                       "n": sum(k + m_ for k, m_ in bs.values())}
         num = den = var = 0.0
         for f, v in fams.items():
             wt = weights.get(f, 0.0)
             num += wt * v["strength"]; den += wt; var += (wt * v["sd"]) ** 2
-        bf = bf_excess([(a, 1 - a, b) for _, _, a, b, _ in units], grid)
+        pooled = collections.defaultdict(lambda: [0, 0])
+        for _, _, a, b, _ in units:
+            pooled[b][0 if a else 1] += 1
+        bf = bf_excess([(k, m_, b) for b, (k, m_) in sorted(pooled.items())], grid)
+        fams = dict(sorted(fams.items()))
         return {"families": fams, "strength": (num / den) if den else None, "sd": (var ** 0.5 / den) if den else None,
                 "bf": bf, "aids": [aid for *_, aid in units]}, other
