@@ -290,7 +290,7 @@ Which one he means is his to say. Until then, the record carries both, and the v
 **Other readers:**
 
 - **Priority (3)** asks where a question would move a record most: an unasked contested position, a D control, a name-only order for a run with possible name-contested positions, an untested link inside a strong run. Uncontested positions aren't asked. Certainty grows with asking, and that's stated wherever priority uses it.
-- **BEST** becomes a view of the catalog.
+- **BEST** becomes a view of the catalog. Until then the view is rendered beside it: `CATALOG-VIEW.md`, written each round by `report/view.py` from the catalog in Postgres (from 2026-10-06). It prints its own limits at the top, and sets BEST's verdict beside the catalog's on every run, so the two standards can be compared. In its first build the catalog's recognised runs were, all but one, a subset of BEST's (1,923 of 1,924); BEST's 807 others had catalog Bayes factors below 10.
 
 ## 12. Probing additions
 

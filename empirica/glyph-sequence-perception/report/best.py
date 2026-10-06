@@ -300,13 +300,11 @@ def fam_cells(counts, fams):
     return " ".join(f"{FA.get(f, f)} {counts[f][0]}/{counts[f][1]}" for f in fams if f in counts) or "–"
 
 # ------------------------------------------------------------------ BEST.md
-def main():
-    recs = TR.load()
-    Tp = TR.Tree(recs, seeds=False)
-    rounds = sorted({r["round"] for r in recs if r["round"] != "seed"}, key=lambda x: (x[0] != "r", int("".join(c for c in x[1:] if c.isdigit()) or 0), x))
-    fams_all = sorted(set(Tp.cohere_rate) | set(Tp.inhibit_rate))
-
-    whole = {}                                           # runs asked as wholes, one entry per run (either orientation)
+def wholes(Tp):
+    """runs asked as wholes, one entry per run (either orientation), keyed by the lesser orientation -> {key: {glyphs,
+    counts, verdict (yesno's: "beyond" | "below" | None), d, s, lb}}. Also read by report/view.py, which sets BEST's
+    verdicts beside the catalog's."""
+    whole = {}
     for run in Tp.cohere:
         key = tuple(min(list(run), list(run)[::-1]))
         if key not in whole:
@@ -315,6 +313,15 @@ def main():
             sm, ss = strength(counts, shuffled(Tp, counts))
             whole[key] = {"glyphs": list(run), "counts": counts, "verdict": v, "d": d, "s": sm,
                           "lb": (sm - Z * ss) if sm is not None else None}
+    return whole
+
+def main():
+    recs = TR.load()
+    Tp = TR.Tree(recs, seeds=False)
+    rounds = sorted({r["round"] for r in recs if r["round"] != "seed"}, key=lambda x: (x[0] != "r", int("".join(c for c in x[1:] if c.isdigit()) or 0), x))
+    fams_all = sorted(set(Tp.cohere_rate) | set(Tp.inhibit_rate))
+
+    whole = wholes(Tp)
     recognised = [w for w in whole.values() if w["verdict"] == "beyond"]
     rejected = [w for w in whole.values() if w["verdict"] == "below"]
     undecided = [w for w in whole.values() if w["verdict"] is None]
