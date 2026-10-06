@@ -20,13 +20,15 @@ The study now lives in `refactored/`. It is to become the project root, and the 
 
 Everything in `data/answers/` and `data/tree/` is regenerable and gitignored. To rebuild it after a fresh clone, run `port/port_triad_era.py`, then `port/port_seeds.py`, then `run.py record <rid>` for each context round. The truth, which is committed, is the verbatim ledgers: `data/rounds/<rid>/raw/<mind>/ledger.jsonl`, plus `questions.jsonl`, `sheets.jsonl` and `plan.json`.
 
-## Running now (2026-10-05 ~22:15 MDT)
+## Running now (2026-10-06 15:14 MDT)
 
-**Four processes**, all from `refactored/`, all on `/opt/homebrew/bin/python3` (Unicode 16+; `run.py` refuses older):
-- `run.py loop --budget 700 >> data/logs/loop.log`: plans a round, asks the Claude minds (core, second, generator `sonnet55g`/`haiku45g`), re-records every round so drained answers fold in, builds tree, BEST and progress, commits. Rounds take ~7 minutes (`round_gap_min` 0).
-- `run.py drain --minds gemini38flash gemini31pro gemini38flashg >> data/logs/drain-gemini.log`: at 1 worker / 60 s (Joseph's quota call), many rounds behind (at c003 at 22:00).
-- `run.py drain --minds grok46 >> data/logs/drain-grok.log`: about 40 minutes a round, slowed by a tail of 600 s timeouts; at c011 at 22:00, so its first coherence answers (c015) arrive around 00:30.
-- `run.py drain --minds grok46g >> data/logs/drain-grok-gen.log`: the Grok generator mind in its own drain (3 workers), since its sheets start at c017.
+**Four processes**, all from `refactored/`, all on `/opt/homebrew/bin/python3` (Unicode 16+; `run.py` refuses older), each started with `nohup … < /dev/null &` and appending to its log:
+- `run.py loop --budget 700 >> data/logs/loop.log`: plans a round, asks the Claude minds (core, second, generator `sonnet55g`/`haiku45g`, reasoner `sonnet55r`), re-records every round so drained answers fold in, builds tree, BEST and progress, commits. Rounds take about 15 minutes (`round_gap_min` 0).
+- `run.py drain --minds gemini38flash gemini31pro gemini38flashg --newest-first --kinds-first names choose cohere inhibit pick order >> data/logs/drain-gemini.log`: 3 workers, no pause (Joseph: a rate limiter, no quota).
+- `run.py drain --minds grok46 --newest-first --kinds-first names choose cohere inhibit pick order >> data/logs/drain-grok.log`: 10 workers.
+- `run.py drain --minds grok46g --newest-first >> data/logs/drain-grok-gen.log`: the Grok generator mind, 8 workers.
+
+A drain logs a line per round only when it finishes that round, so a quiet log isn't a stalled drain; the ledgers' `ts` show live calls.
 
 **Pacing** is in `pace.json`, re-read before every call. **To stop everything:** `touch data/rounds/STOP`.
 
@@ -106,8 +108,8 @@ A new session (Claude Opus 5.5), orienting at Joseph's request, found the follow
 - **Gemini's rate limits spent attempts.** Between 14:39 and 14:52, 950 agy calls came back rate-limited. agy's detail lives only in the error, and the relabel to `"limit"` erased it. `LIMIT_RE` didn't match a bare `"limit"`, so the drain never paused, and each limit counted as one of the sheet's 3 attempts. That gave up about 216 sheet-variants in c096–c097. Fixed in `0d1169a3`: a relabelled row is a limit, and agy's detail is kept as `limit_detail`. The given-up sheets are askable again. Their failed rows are `call-failed` records in c096–c097.
 - **False limits.** `LIMIT_RE` also ran over answers that failed to parse: "quotation" matched `quota`, and a code-point list matched `\b429\b`, which caused grok46g's three 600 s pauses at 14:52–14:55. A call that returned text is never a limit now (`f1892bc2`).
 - **Backoff.** Joseph: *"When there are limits, they are usually rate-limits, not overall usage limits."* The fixed 600 s pause is now a backoff: 30 s, doubling with each limit in a row for that mind, capped at 600 s, reset by any call that isn't a limit.
-- **Open: D controls can share a sheet with their pair.** `probe.sheets` keeps cohere and pick questions (lookalike included) apart from their runs, but not `choose`. In c096, 3 controls sat on the same sheet as the pair they control, so the mind saw the identical a/b pair twice. None did in c097–c098, but that's chance. The co-occurrence is recoverable from `sid`. The fix is a probe change, so it needs a loop restart; it awaits Joseph's word.
-- **Open: Grok hasn't reached the new kinds.** The Grok drain goes oldest-first, at c090 at 15:00 and about 30 minutes a round, so its first `names`, `choose` and lookalike answers (c095+) are hours off. "Next, in order" step 1 below needs non-Claude answers, and so far only Gemini's are coming in: 37 usable `names` answers (canary sets excluded, not tabulated). `--newest-first --kinds-first` for Grok is Joseph's call, as it was for Gemini.
+- **D controls no longer share a sheet with their pair** (`1e5ea452`, Joseph: "Do what is right"). `probe.sheets` kept cohere and pick questions (lookalike included) apart from their runs, but not `choose`: in c096, 3 controls sat on the sheet of the pair they control, so the mind saw the same a/b twice. Those answers are identifiable by `sid`. From c100 (or the next round planned), choose questions are packed by their shown pair.
+- **Grok drains newest first** (Joseph: *"FILO is just as valid as FIFO"*). From 15:14: `run.py drain --minds grok46 --newest-first --kinds-first names choose cohere inhibit pick order` and `run.py drain --minds grok46g --newest-first`, both appending to their old logs. The Gemini drain's command is unchanged.
 
 ## The afternoon of 2026-10-06: the catalog's design, the reasoned pass, the new instruments
 
