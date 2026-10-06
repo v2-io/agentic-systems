@@ -1,0 +1,12 @@
+{
+ "round": "p001",
+ "what": "pre-registered test of the family-disagreement spike's flat-split prediction",
+ "prediction": "spikes/family-disagreement-2026-10-06/prereg-flat-splits.json (committed dc42b1cb)",
+ "questions": 43,
+ "sheets": 43,
+ "minds": [
+  "sonnet55",
+  "grok46"
+ ],
+ "unicode": "16.0.0"
+}

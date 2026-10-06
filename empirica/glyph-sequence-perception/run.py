@@ -302,6 +302,13 @@ def ctx_rounds():
     return sorted((p.name for p in (DATA / "rounds").iterdir() if p.is_dir() and p.name[:1] == "c" and p.name[1:].isdigit()
                    and (p / "sheets.jsonl").exists()), key=lambda n: int(n[1:]))
 
+def test_rounds():
+    """pre-registered test rounds (p001, ...): a fixed set of questions asked once to named minds, to check a prediction
+    written before they were asked (first: the family-disagreement spike's flat splits, 2026-10-06). Not planned and
+    not drained; recorded and committed with the context rounds, and their answers are ordinary evidence."""
+    return sorted((p.name for p in (DATA / "rounds").iterdir() if p.is_dir() and p.name[:1] == "p" and p.name[1:].isdigit()
+                   and (p / "sheets.jsonl").exists()), key=lambda n: int(n[1:]))
+
 def cmd_drain(a):
     """drain --minds m ...: until STOP, ask these minds' open sheets, oldest round first; idle when caught up.
     --newest-first: newest round first. --kinds-first K ...: first the sheets of these question kinds (every round, in
@@ -364,7 +371,9 @@ SETTLED_AGREEMENT = 0.75     # read-off only (PROGRESS): a sequence counts as se
 
 def cmd_progress(a):
     recs = answers()
-    order = sorted({r["round"] for r in recs if r["round"] != "seed"}, key=lambda x: (x[0] != "r", int("".join(c for c in x[1:] if c.isdigit()) or 0), x))
+    order = sorted({r["round"] for r in recs if r["round"][:1] in "rc"}, key=lambda x: (x[0] != "r", int("".join(c for c in x[1:] if c.isdigit()) or 0), x))
+    extra = {r["round"] for r in recs if r["round"] != "seed" and r["round"][:1] not in "rc"}   # test rounds: no row of their
+                                     # own; like answers drained later, they count from the next row computed after they arrive
     seedrecs = [r for r in recs if r["round"] == "seed"]
     # A row is the tree as it stood when its round closed: every answer recorded by then, for that round and earlier
     # ones (plus the seed votes). It is computed once and kept. Answers drained later into earlier rounds count from the
@@ -386,7 +395,7 @@ def cmd_progress(a):
         sig = hashlib.sha256((sig + content(by_round[rid])).encode()).hexdigest()
         if rid in cache:
             rows.append(cache[rid]); continue
-        upto = set(order[:i + 1])
+        upto = set(order[:i + 1]) | extra
         T = TR.Tree(seedrecs + [r for r in recs if r["round"] in upto])
         seqs = TR.sequences(T)
         settled = [s for s in seqs if s["walked"] >= 3 and s["agreement"] >= SETTLED_AGREEMENT]
@@ -418,7 +427,7 @@ def git(*args):
 
 def commit(rid):
     """the round just planned, plus every earlier round's ledgers (drain minds keep appending to them)"""
-    paths = [f"data/rounds/{r}" for r in ctx_rounds()] + ["SEQUENCES.md", "PROGRESS.md", "BEST.md", "data/catalog"]   # relative to ROOT (git -C); data/catalog: manifests only (.gitignore)
+    paths = [f"data/rounds/{r}" for r in ctx_rounds() + test_rounds()] + ["SEQUENCES.md", "PROGRESS.md", "BEST.md", "data/catalog"]   # relative to ROOT (git -C); data/catalog: manifests only (.gitignore)
     git("add", *paths)
     if git("diff", "--cached", "--quiet", "--", *paths).returncode == 0:
         return None                                          # nothing new (e.g. a resumed round already committed)
@@ -429,7 +438,7 @@ def commit(rid):
     return r.returncode == 0
 
 def cmd_record_all(a):
-    for rid in ctx_rounds():
+    for rid in ctx_rounds() + test_rounds():
         cmd_record(argparse.Namespace(round=rid))
 
 def cmd_catalog(a):
