@@ -12,8 +12,11 @@ Where it makes sense: a survey record of type sequence / morph / cyclic / genera
 model, is that model writing a path. Each glyph after the first two becomes a vote, from the surveyor's family, for
 that glyph as the continuation of the context before it (its last <= 8 glyphs, back to the nearest repeat), in both
 reading directions (a sequence and its reverse are one sequence). Not used: the survey's `negative` records (they
-judged magnitude ladders, a different question), equivalence / set / question / meta records, and the domain seeds
-in data/seeds/ (generated lattices and lists, not anyone's perception).
+judged magnitude ladders, a different question), equivalence / set / question / meta records, and the dropspot's
+generated lattices, sets and agent-written sequences (questions to ask, not anyone's perception).
+JOSEPH'S OWN SEQUENCES (2026-10-06): a dropspot seed of kind `sequence` whose author is Joseph is his perception of a
+run, the study's first human vote, family `human`, mind `joseph` (CATALOG §5, §7: "Joseph when he proposes a run" is
+a rater of his own). Retracted dropspot lines are honoured.
 Surveyor -> family: grok-* -> grok; sonnet*, fable-* -> claude.
 """
 import hashlib, json, pathlib, unicodedata as U
@@ -58,6 +61,28 @@ def main():
                             "era": "seed", "round": "seed", "kind": "seed", "outcome": "continuation",
                             "mind": sd["surveyor"], "family": fam, "context": ctx, "continuation": [seq[i]],
                             "tags": {"seed_type": sd["type"], "direction": direction}, "source": {"seed": sd["sid"]}})
+    for f in sorted((STUDY / "data" / "seeds").glob("*.jsonl")):          # the dropspot: Joseph's own sequences only
+        rows = [json.loads(l) for l in open(f) if l.strip()]
+        retracted = {x["retracts"] for x in rows if x.get("retracts")}
+        for x in rows:
+            if x.get("retracts") or x.get("id") in retracted or x.get("kind") != "sequence" or x.get("author") != "Joseph":
+                continue
+            g = [U.normalize("NFC", c) for c in (list(x["glyphs"]) if isinstance(x["glyphs"], str) else x["glyphs"])]
+            if len(g) < 3 or not all(is_glyph(c) for c in g):
+                continue
+            used += 1
+            sid = f"drop:{f.stem}:{x['id']}"
+            for direction, seq in (("forward", g), ("reverse", g[::-1])):
+                for i in range(2, len(seq)):
+                    ctx = seq[max(0, i - 8):i]
+                    while len(set(ctx)) < len(ctx):
+                        ctx = ctx[1:]
+                    if len(ctx) < 2 or seq[i] in ctx:
+                        continue
+                    out.append({"aid": "A" + hashlib.sha256(json.dumps([sid, direction, i]).encode()).hexdigest()[:16],
+                                "era": "seed", "round": "seed", "kind": "seed", "outcome": "continuation",
+                                "mind": "joseph", "family": "human", "context": ctx, "continuation": [seq[i]],
+                                "tags": {"seed_type": "sequence", "direction": direction}, "source": {"seed": sid}})
     OUT.parent.mkdir(parents=True, exist_ok=True)
     with open(OUT, "w") as f:
         for r in out:
