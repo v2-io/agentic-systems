@@ -405,9 +405,18 @@ class Tree:
                 tot[f].update(c)
         return {f: (c["yes"], sum(c.values())) for f, c in tot.items()}
 
-    def cohere_control_counts(self, family):
-        """a family's (yes, n) over cohere answers to shuffled controls"""
-        c = self.cohere_rate.get(family, {}).get("shuffled") or {}
+    def recognition_dir(self, run, x):
+        """one reading direction of a link on recognition (inhibit) answers: per family (yes, n) at the longest suffix
+        of `run` (2-8 glyphs) asked about x -> {family: (yes, n)} or None (controls are not in `inhibit`)"""
+        for j in range(min(MAXK, len(run)), 1, -1):
+            c = self.inhibit.get((tuple(run[-j:]), x))
+            if c:
+                return {f: (v["yes"], sum(v.values())) for f, v in c.items()}
+        return None
+
+    def cohere_control_counts(self, family, cls="shuffled"):
+        """a family's (yes, n) over cohere answers of a class: "shuffled" controls, "chart" windows, or "real" runs"""
+        c = self.cohere_rate.get(family, {}).get(cls) or {}
         return c.get("yes", 0), sum(c.values())
 
     def recognition_evidence(self):

@@ -53,7 +53,7 @@ A **context** is an oriented run of glyphs: what a mind was shown, ending at the
 **One standard for evidence** (2026-10-05; Joseph: *"make sure the evidence is very defensible and not a … mishmash of heuristics"*). The tree supplies facts: per family, how many answers gave the response a claim predicts, of how many. Every reader decides with one standard:
 - **The estimate.** Each family's proportion is a Beta posterior (Jeffreys). A test's estimate is the equal-weight mean over the families that answered, because the claims are about families, with its spread.
 - **Choice answers** (continuations, triad middles, order lines) are *supported* when the 90% lower bound is ≥ 0.5 and *contradicted* when the upper bound is < 0.5.
-- **Yes/no answers** (recognition, skip tests) are compared with the family's near control.
+- **Yes/no answers** are compared with the family's matched control: a whole run's coherence with the same glyphs shuffled (§4a), and a link's recognition, or a skip test, with near decoys (§4).
 - **≥ 2 families everywhere.** The 0.5 and the 90% are choices made without evidence.
 - **Agreement is the perceptual quantity**, how strongly minds converge. The interval is how sure we are of it.
 - **Generation counts one way** (§1). A continuation naming `x` is evidence for the link. A "none", or a different continuation, is not evidence against `x`. A "none" is evidence about an end, and a different continuation is evidence of a branch. Only explicit rejection counts against a sequence: a "no" beyond the control, a decoy chosen, an order that breaks it, or a swap judged right.
