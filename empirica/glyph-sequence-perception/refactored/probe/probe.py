@@ -7,6 +7,15 @@ Question kinds (refactored protocol "ctx-0.1"):
              come naturally (up to 24), or "none". The study's main question.
   inhibit    a context and one candidate glyph; does the candidate come directly after the context's last glyph?
              "yes" / "no" / "can't tell". Context-conditioned negative (and positive) evidence (METHODOLOGY §2b).
+  cohere     a whole run (3-24 glyphs): "does this look like a coherent sequence? why?" -- "yes" / "no" / "can't
+             tell", and a few words of why (saved, not scored). Recognition of a run as a sequence (METHODOLOGY §1,
+             §4a; Joseph's wording). Its control is the same glyphs in a fated shuffle (probe {"control": "shuffled"}),
+             which separates "these belong together" from "this order is felt"; a run and its shuffle never share a
+             sheet. Some runs are also paired with a CHART WINDOW ({"control": "chart"}): a contiguous code-point run
+             of the same length from a distant part of Unicode. It is a measurement, not a decoy: Unicode lays many real
+             sequences out in chart order (a random window was `𝘭𝘮𝘯𝘰𝘱`, another `🕘🕗🕖🕕`), so its "yes" rate mixes
+             real sequences with arbitrary walks and decides nothing. With the whys, it shows how readily each family
+             calls a code-chart walk coherent.
 Answer options are words, never glyphs, so no glyph is reserved (METHODOLOGY §4).
 
 Sheets hold 1-5 questions of one kind, in a fated order (no two questions sharing a context adjacent); the sheet
@@ -22,7 +31,8 @@ import fate                                                # noqa: E402
 PROTOCOL = "ctx-0.1"
 MAX_SHEET = 5
 MAX_CONTINUE = 24
-KINDS = ("continue", "inhibit", "triad")
+KINDS = ("continue", "inhibit", "triad", "cohere")
+MAX_RUN = 24                       # the longest run a cohere question shows (chosen without evidence)
 SYSTEM = "You are a participant in a short perception study. Answer exactly as asked."
 VS = {"︎", "️"}
 
@@ -75,6 +85,37 @@ def control_candidate(context, x, kind, rid):
                 and chr(c) not in bad:
             return chr(c)
 
+def shuffled_control(run, rid):
+    """the cohere control for `run`: the same glyphs in a fated order that is neither the run nor its reverse, nor (for
+    4+ glyphs) a rotation of either -- an order the run's sequence does not predict. -> list, or None if none exists"""
+    g = list(run)
+    bad = {tuple(g), tuple(g[::-1])}
+    if len(g) >= 4:
+        for h in (g, g[::-1]):
+            bad |= {tuple(h[i:] + h[:i]) for i in range(len(h))}
+    r = R("cohere-shuffle", {"round": rid, "run": g})
+    for _ in range(200):
+        c = list(g); r.shuffle(c)
+        if tuple(c) not in bad:
+            return c
+    return None
+
+def chart_control(run, rid):
+    """a chart window for `run`: a contiguous run of code points of the same length (every one an assigned glyph), in a
+    fated direction, from a distant part of Unicode (> 4096 code points from every glyph of the run). A measurement, not
+    a decoy (see the module docstring). -> list, or None"""
+    n = len(run)
+    r = R("cohere-chart", {"round": rid, "run": list(run)})
+    for _ in range(2000):
+        lo, hi = r.choices(FAR_POOL, weights=[b - a + 1 for a, b in FAR_POOL])[0]
+        if hi - lo + 1 < n:
+            continue
+        c0 = r.randint(lo, hi - n + 1)
+        g = [chr(c) for c in range(c0, c0 + n)]
+        if all(is_glyph(x) and U.category(x) != "Cn" for x in g) and all(abs(ord(x) - ord(y)) > 4096 for x in g for y in run):
+            return g[::-1] if r.random() < 0.5 else g
+    return None
+
 def question(kind, context, candidate=None, source=None, variant=None, probe=None):
     """context: the run shown. A triad's identity is its three glyphs, and its shown order is a fated uniform shuffle
     (so no hypothesised middle is shown in the middle except by chance). A reflection question's context repeats a
@@ -82,6 +123,8 @@ def question(kind, context, candidate=None, source=None, variant=None, probe=Non
     c = list(context)
     if variant == "reflection":
         assert 3 <= len(c) <= 8 and all(is_glyph(x) for x in c), c
+    elif kind == "cohere":
+        assert 3 <= len(c) <= MAX_RUN and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c
     else:
         assert 2 <= len(c) <= 8 and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c
     if kind == "triad":
@@ -97,7 +140,7 @@ def question(kind, context, candidate=None, source=None, variant=None, probe=Non
         key["variant"] = variant                       # a different question from the plain one at the same context
     if probe:
         key["probe"] = probe                           # e.g. {"control": "near"}: how the question was sampled
-    q = dict(key, qid=uid({"continue": "Q", "inhibit": "I"}[kind], key), source=source or {})
+    q = dict(key, qid=uid({"continue": "Q", "inhibit": "I", "cohere": "C"}[kind], key), source=source or {})
     return q
 
 # ------------------------------------------------------------------ prompts
@@ -122,6 +165,14 @@ def _lines(kind, sheet):
                  '"none" is expected often and is fully valuable.',
                 'Copy each symbol exactly, or write "#1", "#2", … for its place in the item.']
         reply = '{"id": <id>, "seq": [...]} or {"id": <id>, "two": [...]} or {"id": <id>, "none": true}'
+    elif kind == "cohere":     # Joseph, 2026-10-05: "does this look like a coherent sequence? why?"
+        intro = "Each item below shows a run of symbols. Does it look like a coherent sequence? And why?"
+        opts = ['"answer": "yes", if it looks like a coherent sequence',
+                '"answer": "no", if it does not',
+                '"answer": "can\'t tell", if you can\'t tell']
+        sents = ["Go by first impressions, and judge each item on its own rather than building a scheme across items.",
+                 'Add "why": a few words on what you see.']
+        reply = '{"id": <id>, "answer": "yes" | "no" | "can\'t tell", "why": "..."}'
     else:
         intro = "Each item below shows symbols in a sequence, then one candidate symbol."
         opts = ['"answer": "yes", if the candidate comes directly after the last symbol of the sequence',
@@ -183,9 +234,21 @@ def sheets(round_id, questions):
         R("sheet-order", fk).shuffle(qs)
         r = R("sheet-sizes", fk)
         i = 0
-        while i < len(qs):
-            n = min(len(qs) - i, r.randint(1, MAX_SHEET))
-            chunk = qs[i:i + n]; i += n
+        pending = []                                   # cohere: questions set aside so no sheet shows one glyph set twice
+        while i < len(qs) or pending:
+            n = r.randint(1, MAX_SHEET)
+            if kind == "cohere":
+                chunk, seen, rest = [], set(), []
+                for q in pending + qs[i:]:
+                    k = frozenset(q["context"])
+                    if len(chunk) < n and k not in seen:
+                        chunk.append(q); seen.add(k)
+                    else:
+                        rest.append(q)
+                pending, i = rest, len(qs)
+            else:
+                n = min(len(qs) - i, n)
+                chunk = qs[i:i + n]; i += n
             # no two questions sharing a context next to each other where avoidable
             chunk.sort(key=lambda q: (R("pos", {"qid": q["qid"], "round": round_id}).random()))
             sid = uid("S", {"round": round_id, "qids": [q["qid"] for q in chunk]})
@@ -336,6 +399,8 @@ def _records(sheet, ledger_rows, mind, family, judge, questions, variant):
             else:
                 rec["outcome"] = "unparsed"; rec["reason"] = "triad"
         else:
+            if sheet["kind"] == "cohere":
+                rec["why"] = str(a.get("why", ""))[:400]
             v = str(a.get("answer", "")).strip().lower().replace("’", "'")
             m = {"yes": "yes", "no": "no", "can't tell": "cant-tell", "cant tell": "cant-tell", "can not tell": "cant-tell",
                  "cannot tell": "cant-tell"}.get(v)

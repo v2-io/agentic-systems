@@ -23,6 +23,11 @@ era "seed". They join nodes like any answer, so seeded paths are walkable at onc
 a real mind answered it (`real`), so the planner still asks every seeded context and k* is never "known" from seeds.
 Tree(recs, seeds=False) gives the pure tree for a write-up.
 INHIBITION: inhibit answers at (context, candidate): yes / no / can't tell, per family (METHODOLOGY §2b).
+COHERENCE (METHODOLOGY §1, §4a): cohere answers about a whole shown run, yes / no / can't tell per family, keyed by the
+run as shown (`cohere`); their controls -- the same glyphs shuffled -- and chart windows (a measurement, not a decoy:
+probe.py) apart (`cohere_ctl`, and per family and class in `cohere_rate`); the why of every answer kept (`cohere_why`),
+not read by anything yet. A run's coherence is evidence
+about that run only, never about its sub-runs.
 TRIADS and ORDER answers (§4: consistency checks; they create no edges): triads per family (`triads_fam`, both eras),
 order answers indexed by glyph (`orders`, the triad era's). REFLECTIONS (§3): answers to contexts that turn back on
 themselves, kept apart (`reflections`); they never grow a sequence.
@@ -138,6 +143,10 @@ class Tree:
         self.orders = collections.defaultdict(list)       # glyph -> [(family, shown, lines)] for order answers (triad era)
         self.reflections = collections.defaultdict(list)  # ctx -> [{family, mind, continuation, outcome}] (§3)
         self.inhibit_rate = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # fam->class->verdict
+        self.cohere = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))      # run -> fam -> verdict
+        self.cohere_ctl = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # shuffled run -> ...
+        self.cohere_rate = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # fam -> class -> verdict
+        self.cohere_why = collections.defaultdict(list)     # run -> [(family, mind, verdict, why)]
         self.control_pairs = set()                        # (ctx, candidate) asked as controls (kept out of `inhibit`)
         self.cycles = {}
         self.real = set()                       # contexts some real mind answered (not only seed votes)
@@ -209,6 +218,12 @@ class Tree:
                     self.control_pairs.add((tuple(r["context"]), r["candidate"]))
                 else:
                     self.inhibit[(tuple(r["context"]), r["candidate"])][r["family"]][o] += 1
+            elif k == "cohere" and o in ("yes", "no", "cant-tell"):
+                ctl = (r.get("tags") or {}).get("control")
+                run = tuple(r["context"])
+                self.cohere_rate[r["family"]][ctl or "real"][o] += 1
+                (self.cohere_ctl if ctl else self.cohere)[run][r["family"]][o] += 1
+                self.cohere_why[run].append((r["family"], r["mind"], o, r.get("why", "")))
             elif k == "triad" and o in ("mid", "two", "none"):
                 t = tuple(sorted(r["shown"]))
                 ans = tuple(r["answer"]) if o != "none" else ("none",)
@@ -376,6 +391,24 @@ class Tree:
                 sets[shown][fam][1] += 1
         out["order"] = [{f: tuple(v) for f, v in fam.items()} for fam in sets.values()]
         return out
+
+    def coherence(self, g, cyclic=False):
+        """FACTS for "g is recognised as a sequence": cohere answers about g as shown in either direction (a sequence and
+        its reverse are one sequence), and round the circle if cyclic -> {family: (yes, n)}, or {} if never asked"""
+        g = list(g)
+        runs = {tuple(g), tuple(g[::-1])}
+        if cyclic:
+            runs |= {tuple(h[i:] + h[:i]) for h in (g, g[::-1]) for i in range(len(h))}
+        tot = collections.defaultdict(collections.Counter)
+        for run in runs:
+            for f, c in self.cohere.get(run, {}).items():
+                tot[f].update(c)
+        return {f: (c["yes"], sum(c.values())) for f, c in tot.items()}
+
+    def cohere_control_counts(self, family):
+        """a family's (yes, n) over cohere answers to shuffled controls"""
+        c = self.cohere_rate.get(family, {}).get("shuffled") or {}
+        return c.get("yes", 0), sum(c.values())
 
     def recognition_evidence(self):
         """FACTS for recognition: per candidate (controls excluded), per family (yes, n) -> [{ctx, x, counts}]"""

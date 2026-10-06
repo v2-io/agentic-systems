@@ -48,6 +48,8 @@ JOIN_WEAK = 0.75             # the planner's own cut for a "weak" link inside a 
 # A weak context is replicated at most ONCE (one more round of answers there), whatever the result: re-asking a weak
 # link "until it passes" is optional stopping, which would let noise carry links over any cut.
 WRITTEN_RECOGNIZE_PER_ROUND = 40   # recognition questions for written continuations past shown ends (chosen without evidence)
+COHERE_PER_ROUND = 80        # whole-run recognition questions a round, each with its shuffled control (chosen without evidence)
+CHART_CONTROL_SHARE = 0.25   # share of runs that also get a chart window -- a descriptive measurement, not a decoy (chosen without evidence)
 FRESH_TIERS = {"1-byte": (4, [(0x21, 0x7E)]), "2-byte": (3, [(0xA1, 0x7FF)]),
                "3-byte": (2, [(0x2000, 0x2BFF), (0x2E80, 0x33FF)]), "4-byte": (1, [(0x1D300, 0x1D7FF), (0x1F000, 0x1FBFF)])}
 
@@ -74,7 +76,11 @@ class Plan:
     def add(self, kind, ctx, cand=None, variant=None, probe=None, replicate=False, **src):
         ctx = list(ctx)
         distinct = variant == "reflection" or len(set(ctx)) == len(ctx)       # reflections turn back on themselves
-        if not (2 <= len(ctx) <= 8) or not distinct or not all(PR.is_glyph(x) for x in ctx):
+        lo, hi = (3, PR.MAX_RUN) if kind == "cohere" else (2, 8)
+        if not (lo <= len(ctx) <= hi) or not distinct or not all(PR.is_glyph(x) for x in ctx):
+            return False
+        if kind == "cohere" and (tuple(ctx) in self.T.cohere or tuple(ctx[::-1]) in self.T.cohere
+                                 or tuple(ctx) in self.T.cohere_ctl):
             return False
         if kind == "triad" and (len(ctx) != 3 or tuple(sorted(ctx)) in self.T.triads_fam):
             return False
@@ -109,7 +115,7 @@ class Plan:
                             **({"variant": variant} if variant else {}), **({"probe": probe} if probe else {})))
         return True
 
-TIER = {"falsify-skip": 1, "falsify-lengthen": 1, "falsify-triad": 1, "recognize": 1, "recognize-written": 1, "control": 1, "join-reverse": 1, "join-replicate": 1, "join-end": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "thin": 3, "branch": 4, "inside": 5}
+TIER = {"falsify-skip": 1, "falsify-lengthen": 1, "falsify-triad": 1, "recognize": 1, "recognize-written": 1, "control": 1, "cohere": 1, "join-reverse": 1, "join-replicate": 1, "join-end": 1, "end": 1, "cycle-probe": 1, "seed-step": 2, "kstar": 3, "thin": 3, "branch": 4, "inside": 5}
 
 def written_recognition(P, seqs):
     """Momentum past a felt end (METHODOLOGY §4): where the shown answers end a sequence (top answer "none") but minds
@@ -133,6 +139,55 @@ def written_recognition(P, seqs):
                             cands[(ctx, x)] += 1
     return [("inhibit", list(ctx), x, {"why": "recognize-written", "written_answers": n})
             for (ctx, x), n in cands.most_common(WRITTEN_RECOGNIZE_PER_ROUND)]
+
+def cohere_work(P, seqs, written_seqs, seeds, rid):
+    """Recognition of whole runs (METHODOLOGY §1, §4a: "best recognized sequences as sequences" is the goal). Candidates
+    from every source the planner has -- the tree's walks (most stable first), the runs written answers carry, and the
+    survey sequences (a fated order) -- interleaved, so no source crowds out the others. Each run is asked once, as it was
+    found (orientation is not chosen by outcome), with its shuffled control: no stopping rule. Runs of 3-MAX_RUN glyphs;
+    a seed whose glyphs repeat (other than a cycle's closing repeat) is not a run and is left out.
+    -> [(kind, run, None, src)] with each control right after its run"""
+    def runs_from(gs, how):
+        for g in gs:
+            yield list(g), how
+    sd = []
+    for x in seeds:
+        g = list(x["glyphs"])
+        if len(g) > 1 and g[-1] == g[0]:
+            g = g[:-1]                                   # a cycle written closed
+        if len(set(g)) == len(g):
+            sd.append((g, x.get("sid")))
+    PR.R("cohere-seed-order", {"round": rid}).shuffle(sd)
+    sources = [runs_from([s["glyphs"] for s in seqs], "walk"), runs_from([s["glyphs"] for s in written_seqs], "written"),
+               ((g, "seed:" + str(sid)) for g, sid in sd)]
+    out, seen = [], set()
+    n_runs = 0
+    while sources and n_runs < COHERE_PER_ROUND:
+        for src in list(sources):                        # each source adds one run per pass
+            while True:
+                nxt = next(src, None)
+                if nxt is None:
+                    sources.remove(src); break
+                g, how = nxt
+                key = tuple(min(g, g[::-1]))
+                if key in seen or not (3 <= len(g) <= PR.MAX_RUN) or tuple(g) in P.T.cohere or tuple(g[::-1]) in P.T.cohere:
+                    continue
+                ctl = PR.shuffled_control(g, rid)
+                if ctl is not None:
+                    break
+            if nxt is None:
+                continue
+            seen.add(key)
+            out.append(("cohere", g, None, {"why": "cohere", "from": how}))
+            out.append(("cohere", ctl, None, {"why": "control", "control": "shuffled", "probe": {"control": "shuffled"}, "of": "".join(g)}))
+            if PR.R("cohere-chart-draw", {"round": rid, "run": g}).random() < CHART_CONTROL_SHARE:
+                ch = PR.chart_control(g, rid)
+                if ch:
+                    out.append(("cohere", ch, None, {"why": "control", "control": "chart", "probe": {"control": "chart"}, "of": "".join(g)}))
+            n_runs += 1
+            if n_runs >= COHERE_PER_ROUND:
+                break
+    return out
 
 def reflection_work(P, seqs, rid):
     """Reflection (METHODOLOGY §3; Joseph's postulate that any linear sequence becomes periodic played backwards at its
@@ -391,6 +446,9 @@ def plan(rid, recs, seeds, budget):
         ck = "near" if PR.R("control-kind", {"round": rid, "context": ctx, "x": cand}).random() < 0.5 else "far"
         paired.append((kind, ctx, PR.control_candidate(ctx, cand, ck, rid), {"why": "control", "control": ck, "probe": {"control": ck}}))
     work += [(1, -1, ii, kind, ctx, cand, src) for ii, (kind, ctx, cand, src) in enumerate(paired)]
+    written_seqs = TR.sequences(TR.Tree(recs, written=True))
+    work += [(1, -1, len(paired) + ii, kind, ctx, cand, src)
+             for ii, (kind, ctx, cand, src) in enumerate(cohere_work(P, seqs, written_seqs, seeds, rid))]
     work.sort(key=lambda w: w[:3])
     n_reasoned = 0
     for kind, ctx, cand, src in gen:                       # outside the budget's tiers: asked only of reasoner minds
