@@ -316,14 +316,16 @@ def cmd_loop(a):
     print("== STOP found", flush=True)
 
 def round_gap():
-    """pause between rounds: pace.json round_gap_min, re-read; cut short by STOP"""
-    gap = 0
-    try:
-        gap = json.load(open(ROOT / "pace.json")).get("round_gap_min", 0)
-    except Exception:
-        pass
-    t_end = time.time() + 60 * gap
-    while time.time() < t_end and not (DATA / "rounds" / "STOP").exists():
+    """pause between rounds: pace.json round_gap_min, re-read every 30 s (so lowering it shortens a wait already under
+    way); cut short by STOP"""
+    t0 = time.time()
+    while not (DATA / "rounds" / "STOP").exists():
+        try:
+            gap = json.load(open(ROOT / "pace.json")).get("round_gap_min", 0)
+        except Exception:
+            gap = 0
+        if time.time() >= t0 + 60 * gap:
+            return
         time.sleep(30)
 
 MIN_UNICODE = 16          # what counts as a glyph is unicodedata's call (probe.is_glyph): on older data a newer character
