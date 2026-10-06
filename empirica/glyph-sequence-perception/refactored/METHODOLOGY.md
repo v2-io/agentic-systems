@@ -52,7 +52,11 @@ A **context** is an oriented run of glyphs: what a mind was shown, ending at the
 
 6. **The catalog: the tree's sequences, derived once, by one stated model** (designed 2026-10-06; not built: `CATALOG.md`). Readers had each derived sequences from the raw tree in their own way: the tree's walks, the planner's walks, BEST's paths and folding, triad chains. Each fix in one exposed a loss in another; most tellingly, 232 of the triad era's 300 top rows appeared nowhere. Joseph: *"we basically have a 'raw-data context-tree' and a 'canonical statistically sound context-tree' maybe?"*, and the catalog *"should actually end up being (if done right) the more correct* input *to the probing concern and the rating+extraction (best/reading) concern."*
    - **What it is.** A deterministic build from answers alone: canonical records for links, runs, cycles and branches, each with a posterior score and its weight of evidence, itemised by channel, family and answer.
-   - **The model.** Families as noisy raters, with false-positive rates taken from the controls (Dawid–Skene). A hierarchical Pitman–Yor context tree for generation, with a prior from triads and order lines (Joseph's suggestion).
+   - **The model** (version 2, after a de novo audit of version 1: `audits/catalog-design-2026-10-06.md`).
+     - **Parts.** Each claim is a part with its own contrast and control: recognised beyond shuffles, beyond code-point order, link beyond near decoys and beyond in-sequence skips, generation as a measured one-way likelihood, and order of a set from triads and lines.
+     - **Raters.** Minds in conditions, pooled toward their family; seeds are a rater of their own.
+     - **Two quantities.** Every part carries strength and certainty side by side.
+     - **The ranking.** Joseph: an intuitive sequence, one *"that doesn't need internal arithmetic or thinking about the glyph's name and codepoint"*, is much better than one held up by the code chart, so intuitive recognition ranks first.
    - **The engine.** Postgres 18.
    - **Once built**, the planner (3) and the read-offs (5) read the catalog instead of re-deriving links. Until then they read the tree, and their criteria stay their own.
 
