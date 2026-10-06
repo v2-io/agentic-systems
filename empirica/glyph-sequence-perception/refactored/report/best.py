@@ -99,7 +99,7 @@ def link(g, i, Tp):
     sf, wf, pf = naming(shown), naming(written), naming(picked)
     gen = "S" if len(sf) >= FAMILIES_MIN else ("W" if len(wf) >= FAMILIES_MIN else ("P" if len(pf) >= FAMILIES_MIN else None))
     basis = {"W": written, "P": picked}.get(gen) or shown or written or picked
-    obs = TR.estimate([d["counts"] for d in basis])[0] if basis else None
+    obs, mean, sd = (TR.estimate([d["counts"] for d in basis])[:3]) if basis else (None, None, None)
     rc = collections.defaultdict(lambda: [0, 0])
     for d in (Tp.recognition_dir(fwd, b), Tp.recognition_dir(bwd, a)):
         for f, (y, n) in (d or {}).items():
@@ -107,7 +107,7 @@ def link(g, i, Tp):
     rc = {f: tuple(v) for f, v in rc.items()}
     rec = yesno(rc, near(Tp, rc))[0] if rc else None
     status = "X" if rec == "below" else (gen or ("R" if rec == "beyond" else None))
-    return {"status": status, "gen": gen, "obs": obs, "fams": len({"S": sf, "W": wf, "P": pf}.get(gen, set())), "rec": rec,
+    return {"status": status, "gen": gen, "obs": obs, "mean": mean, "sd": sd, "fams": len({"S": sf, "W": wf, "P": pf}.get(gen, set())), "rec": rec,
             "uk": sum(d["uk"] for d in shown), "un": sum(d["un"] for d in shown)}
 
 def judge(g, Tp):
@@ -229,16 +229,16 @@ def shown_order(g):
     keys = vals if all(v is not None for v in vals) else [ord(c) for c in g]
     return g[::-1] if all(b < a for a, b in zip(keys, keys[1:])) else g
 
-BREAK = 0.5           # display only: a link is drawn "│" when its agreement is below this share of the run's median (chosen without evidence)
-
 def render(g, links):
     """a run for display, a visual aid (Joseph, 2026-10-05): glyphs joined by a space, or by "│" at a BREAK -- a link
-    whose agreement is less than BREAK x the run's median link agreement (a link without generation evidence counts 0).
-    A uniformly weak run shows no breaks; a strong run with one soft join shows it. Shown ascending when monotonic
-    (shown_order), the marks following."""
-    agr = [l["obs"] if l["gen"] and l["obs"] is not None else 0.0 for l in links]
-    med = sorted(agr)[len(agr) // 2] if agr else 0.0
-    g, flags = list(g), [a >= BREAK * med for a in agr]
+    confidently weaker than the run's typical link, from the links' posteriors (Joseph: "Aren't there bayesian updates
+    happening? Don't we have real confidences?"): its 90% upper bound is below the median posterior mean of the run's
+    links. A link on thin evidence (a wide interval) or without generation evidence is not marked: it is not known to be
+    weak. Shown ascending when monotonic (shown_order), the marks following."""
+    means = sorted(l["mean"] for l in links if l["gen"] and l["mean"] is not None)
+    med = means[len(means) // 2] if means else None
+    flags = [not (med is not None and l["gen"] and l["mean"] is not None and l["mean"] + Z * l["sd"] < med) for l in links]
+    g = list(g)
     if shown_order(g) != g:
         g, flags = g[::-1], flags[::-1]
     return g[0] + "".join((" " if f else "│") + x for f, x in zip(flags, g[1:]))
@@ -310,7 +310,7 @@ def main():
           "- **links**: each link's strongest evidence. **S**: generated in shown answers. **W**: generated in written answers. **P**: picked in the forced generator pass (METHODOLOGY §4a). **R**: not generated, but recognised (yes beyond the near control). **X**: rejected (no beyond the near control). **–**: no evidence either way yet. **⚠**: generated *and* rejected.",
           "- **unr**: shown answers given with 0 thinking tokens that name the links, of all such answers there. Reasoned and first-impression answers stay apart until the data says whether they differ (METHODOLOGY §2a).",
           "- **tests**: passed/challenged. **s**: skip tests (a sequence predicts no). **t**: triads. **o**: order answers (triad era). A ⚠ marks a challenge; **–** means untested.",
-          f"- **│** between two glyphs: a break, a link whose agreement is below {BREAK} × the run's median link agreement (a link without generation evidence counts 0). A run that is weak throughout shows no breaks. A visual aid only; it decides nothing.",
+          "- **│** between two glyphs: a break, a link confidently weaker than the run's typical link. Its 90% upper bound (from the link's posterior) is below the median posterior mean of the run's links. A link on thin evidence, or without generation evidence, is not marked, because it isn't known to be weak. A visual aid only; it decides nothing.",
           "- Display: a run monotonic in numeric value (else in code points) is shown ascending.", ""]
 
     L += ["## Rejected as wholes", "", "| # | run | n | yes − shuffled | yes/n per family | links | tests |", "|---|---|---|---|---|---|---|"]
