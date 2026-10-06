@@ -232,6 +232,8 @@ def cmd_record(a):
 # ------------------------------------------------------------------ tree + progress
 def cmd_tree(a):
     TR.main()
+    import importlib
+    importlib.reload(BE)          # a read-off nothing reads back: safe to pick up its latest code every round
     BE.main()
 
 SETTLED_AGREEMENT = 0.75     # read-off only (PROGRESS): a sequence counts as settled when every walked step has at
