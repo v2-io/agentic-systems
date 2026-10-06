@@ -88,7 +88,9 @@ class Plan:
     def add(self, kind, ctx, cand=None, variant=None, probe=None, replicate=False, **src):
         ctx = list(ctx)
         distinct = variant == "reflection" or len(set(ctx)) == len(ctx)       # reflections turn back on themselves
-        lo, hi = {"cohere": (3, PR.MAX_RUN), "order": (4, PR.MAX_ORDER)}.get(kind, (2, 8))
+        lo, hi = {"cohere": (3, PR.MAX_RUN), "order": (4, PR.MAX_ORDER), "pick": (2, PR.MAX_RUN)}.get(kind, (2, 8))
+        # (until 2026-10-06 pick fell to the continue limit of 8, silently refusing every longer context: the
+        # tendrils stopped at 8 glyphs, and roots longer than 8 -- Joseph's block cycle among them -- were never asked)
         if not (lo <= len(ctx) <= hi) or not distinct or not all(PR.is_glyph(x) for x in ctx):
             return False
         if kind == "order":
@@ -169,14 +171,7 @@ def cohere_work(P, seqs, written_seqs, seeds, rid):
     def runs_from(gs, how):
         for g in gs:
             yield list(g), how
-    sd = []
-    for x in seeds:
-        g = list(x["glyphs"])
-        if len(g) > 1 and g[-1] == g[0]:
-            g = g[:-1]                                   # a cycle written closed
-        if len(set(g)) == len(g):
-            sd.append((g, x.get("sid")))
-    PR.R("cohere-seed-order", {"round": rid}).shuffle(sd)
+    sd = seed_list(seeds, ORDERED_SEEDS, rid, "cohere-seed-order")
     branches = weighted_order(pick_branches(P.T), lambda b: b[1], PR.R("cohere-branch-order", {"round": rid}))  # S-curve draw; each asked once
     # shuffles a mind called coherent: an order the shuffle discovered (Joseph, 2026-10-05: "I can absolutely attest to
     # seeing ideated sequences that are better after some shuffling"). Asked fresh as a run, with its own control; its
@@ -220,6 +215,28 @@ def branch_weight(k, n):
     q = k / n
     return BRANCH_FLOOR + (1 - BRANCH_FLOOR) / (1 + math.exp(-(q - BRANCH_MID) / BRANCH_WIDTH))
 
+ORDERED_SEEDS = {"sequence", "morph", "cyclic", "generator"}   # seed types that propose an order: runs
+ORDER_ONLY_SEEDS = {"set", "negative"}                         # no order proposed (a set; a proposed non-sequence): order question only
+
+def is_steward(x):
+    return "joseph" in str(x.get("surveyor") or x.get("author") or "").lower()
+
+def seed_list(seeds, types, rid, purpose):
+    """seeds of the given types as runs [(glyphs, sid)] in a fated order, the steward's first (Joseph's seeds are his
+    questions to the study); a cycle written closed is opened; glyphs that repeat are not a run"""
+    out = []
+    for x in seeds:
+        if (x.get("type") or x.get("kind")) not in types or not isinstance(x.get("glyphs"), list):
+            continue
+        g = list(x["glyphs"])
+        if len(g) > 1 and g[-1] == g[0]:
+            g = g[:-1]
+        if len(set(g)) == len(g):
+            out.append((g, x.get("sid"), is_steward(x)))
+    PR.R(purpose, {"round": rid}).shuffle(out)
+    out.sort(key=lambda t: not t[2])
+    return [(g, sid) for g, sid, _ in out]
+
 def order_work(P, seqs, seeds, rid):
     """The order question (METHODOLOGY §4a): a set, scrambled -- which order, if any, do minds put it in? Sets from the
     survey sequences (a fated order), the shuffles a mind called coherent, the pick branches (S-curve draw) and the
@@ -228,14 +245,7 @@ def order_work(P, seqs, seeds, rid):
     T = P.T
     def ok(g):
         return 4 <= len(g) <= PR.MAX_ORDER and len(set(g)) == len(g) and all(PR.is_glyph(c) for c in g)
-    sd = []
-    for x in seeds:
-        g = list(x["glyphs"])
-        if len(g) > 1 and g[-1] == g[0]:
-            g = g[:-1]
-        if ok(g):
-            sd.append((g, "seed:" + str(x.get("sid"))))
-    PR.R("order-seed-order", {"round": rid}).shuffle(sd)
+    sd = [(g, "seed:" + str(sid)) for g, sid in seed_list(seeds, ORDERED_SEEDS | ORDER_ONLY_SEEDS, rid, "order-seed-order") if ok(g)]
     reord = [(list(run), "reordered") for run, fc in sorted(T.cohere_ctl.items())
              if T.cohere_ctl_class.get(run) == "shuffled" and sum(c["yes"] for c in fc.values()) > 0 and ok(list(run))]
     br = [(c, "pick-branch") for c, _ in weighted_order(pick_branches(T), lambda b: b[1], PR.R("order-branch", {"round": rid})) if ok(c)]
@@ -295,15 +305,15 @@ def pick_work(P, seqs, seeds, rid):
                           lambda kw: kw[1], r)
     chosen = [(c, "branch") for c, _ in kids[:PICK_PER_ROUND // 2]]
     kids = kids[PICK_PER_ROUND // 2:]
+    steward = [g for g, _ in seed_list([x for x in seeds if is_steward(x)], ORDERED_SEEDS, rid, "pick-steward")]
     roots = []
-    for g in [list(x["glyphs"]) for x in seeds] + [s["glyphs"] for s in seqs]:
-        if len(g) > 1 and g[-1] == g[0]:
-            g = g[:-1]
+    for g in [g for g, _ in seed_list(seeds, ORDERED_SEEDS, rid, "pick-seed-order")] + [s["glyphs"] for s in seqs]:
         if len(g) < 2 or len(set(g)) != len(g):
             continue
         for h in (g, g[::-1]):
             roots.append(h[-PR.MAX_RUN:])
     r.shuffle(roots)
+    roots = [h for g in steward for h in (g[-PR.MAX_RUN:], g[::-1][-PR.MAX_RUN:])] + roots     # the steward's first
     seen = {tuple(c) for c, _ in chosen}
     for h in roots:
         if len(chosen) >= PICK_PER_ROUND:

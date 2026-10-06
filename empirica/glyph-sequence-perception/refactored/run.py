@@ -62,12 +62,23 @@ def minds():
     return json.load(open(ROOT / "core" / "minds.json"))
 
 def seeds():
+    """the survey seeds, plus the dropspot (../data/seeds/*.jsonl; its README gives the format: id, kind, glyphs as a
+    string or list, author, ...), normalised to the survey shape (sid, type, glyphs as a list, surveyor). Retracted
+    dropspot seeds are left out. (Until 2026-10-06 dropspot seeds were deduplicated by a `sid` they don't have, so only
+    the first one was ever read.)"""
     s = rj(STUDY / "data" / "seeds.jsonl")
     have = {x.get("sid") for x in s}
     for f in sorted((STUDY / "data" / "seeds").glob("*.jsonl")):          # the dropspot
-        for x in rj(f):
-            if x.get("sid") not in have:
-                s.append(x); have.add(x.get("sid"))
+        rows = rj(f)
+        retracted = {x["retracts"] for x in rows if x.get("retracts")}
+        for x in rows:
+            if x.get("retracts") or x.get("id") in retracted:
+                continue
+            g = x.get("glyphs")
+            x = dict(x, sid=x.get("sid") or f"drop:{f.stem}:{x.get('id')}", type=x.get("type") or x.get("kind"),
+                     surveyor=x.get("surveyor") or x.get("author"), glyphs=list(g) if isinstance(g, str) else g)
+            if x["sid"] not in have:
+                s.append(x); have.add(x["sid"])
     return s
 
 def answers():

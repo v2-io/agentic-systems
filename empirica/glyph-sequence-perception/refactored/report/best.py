@@ -83,6 +83,24 @@ def yesno(counts, control):
         return "below", d, sd
     return None, d, sd
 
+def strength(counts, control):
+    """how surely a whole run is recognised, for RANKING only (the verdict stays yesno's). Per family, "yes" beyond its
+    shuffled rate as a share of what is possible beyond it -- Abbott's correction, (p - c) / (1 - c), so families with
+    different baselines are on one scale (Grok calls 39% of shuffles coherent, Claude 21%) -- then the families
+    combined by precision (inverse variance; the fixed-effect estimate), so a family with one answer adds a little and
+    more answers raise confidence instead of diluting it (2026-10-06: an equal-weight mean ranked the block ladder,
+    Claude 3/3 and Grok 1/1, below a chart walk only Claude had answered) -> (mean, sd)"""
+    num = den = 0.0
+    for f, (k, n) in counts.items():
+        ck, cn = control.get(f, (0, 0))
+        if not n or not cn:
+            continue
+        (m, v), (mc, vc) = TR.beta_mv(k, n), TR.beta_mv(ck, cn)
+        a = (m - mc) / (1 - mc)
+        va = (v + vc * ((1 - m) / (1 - mc)) ** 2) / (1 - mc) ** 2      # delta method
+        num += a / va; den += 1 / va
+    return (num / den, (1 / den) ** 0.5) if den else (None, None)
+
 def near(Tp, counts):
     return {f: Tp.control_counts(f, "near") for f in counts}
 
@@ -295,7 +313,9 @@ def main():
         if key not in whole:
             counts = Tp.coherence(list(run))
             v, d, _ = yesno(counts, shuffled(Tp, counts))
-            whole[key] = {"glyphs": list(run), "counts": counts, "verdict": v, "d": d}
+            sm, ss = strength(counts, shuffled(Tp, counts))
+            whole[key] = {"glyphs": list(run), "counts": counts, "verdict": v, "d": d, "s": sm,
+                          "lb": (sm - Z * ss) if sm is not None else None}
     recognised = [w for w in whole.values() if w["verdict"] == "beyond"]
     rejected = [w for w in whole.values() if w["verdict"] == "below"]
     undecided = [w for w in whole.values() if w["verdict"] is None]
@@ -303,10 +323,10 @@ def main():
         w["ls"] = judge(w["glyphs"], Tp)
         w["links"] = link_summary(w["ls"])
         w["tests"] = tests(Tp, w["glyphs"])
-    recognised.sort(key=lambda w: (-len(w["glyphs"]), -w["d"], w["glyphs"]))
-    kept = []                                            # display: a recognised run contained in a longer recognised one folds into it
-    for w in recognised:
-        host = next((k for k in kept if contained(w["glyphs"], k["glyphs"])), None)
+    recognised.sort(key=lambda w: (-len(w["glyphs"]), -w["lb"], w["glyphs"]))
+    kept = []                                            # display: a recognised run folds into a longer recognised one that
+    for w in recognised:                                 # contains it AND is at least as confidently recognised (lower bound);
+        host = next((k for k in kept if contained(w["glyphs"], k["glyphs"]) and k["lb"] >= w["lb"]), None)   # else it stands
         if host:
             host["folded"] = host.get("folded", 0) + 1
         else:
@@ -330,20 +350,21 @@ def main():
     L += ["## Recognised as wholes", "",
           f"*In sections by length (the organiser), each ordered by recognition strength, so short runs are not pushed off the page by long ones (2026-10-06: the single length-sorted table showed only runs of ~14+ glyphs, almost all single-block, and hid every short cross-block run). Up to {BAND_TOP} rows a section.*", ""]
     for lo, hi in BANDS:
-        band = sorted((w for w in recognised if lo <= len(w["glyphs"]) <= hi), key=lambda w: (-w["d"], -len(w["glyphs"]), w["glyphs"]))
+        band = sorted((w for w in recognised if lo <= len(w["glyphs"]) <= hi), key=lambda w: (-w["lb"], -len(w["glyphs"]), w["glyphs"]))
         L += [f"### {lo}–{hi} glyphs ({len(band)})" if hi < 99 else f"### {lo}+ glyphs ({len(band)})", "",
-              "| # | run | n | us | yes − shuffled | yes/n per family | links | unr | tests |", "|---|---|---|---|---|---|---|---|---|"]
+              "| # | run | n | us | ≥ | beyond chance | yes/n per family | links | unr | tests |", "|---|---|---|---|---|---|---|---|---|---|"]
         for i, w in enumerate(band[:BAND_TOP], 1):
             k, n = w["links"]["unreasoned"]
-            L.append(f"| {i} | `{render(w['glyphs'], w['ls'])}`{fold(w)} | {len(w['glyphs'])} | {us(w['glyphs']):.1f} | {w['d']:+.2f} | {fam_cells(w['counts'], fams_all)} | {link_cell(w['links'])} | {f'{k}/{n}' if n else '–'} | {test_cell(w['tests'])} |")
+            L.append(f"| {i} | `{render(w['glyphs'], w['ls'])}`{fold(w)} | {len(w['glyphs'])} | {us(w['glyphs']):.1f} | {w['lb']:+.2f} | {w['s']:+.2f} | {fam_cells(w['counts'], fams_all)} | {link_cell(w['links'])} | {f'{k}/{n}' if n else '–'} | {test_cell(w['tests'])} |")
         if not band:
-            L.append("| – | *none yet* | | | | | | | |")
+            L.append("| – | *none yet* | | | | | | | | |")
         if len(band) > BAND_TOP:
             L += ["", f"*{len(band) - BAND_TOP} more in this section, weaker.*"]
         L.append("")
     L += ["", "*Key:*",
-          "- **n**: glyphs. **us**: the mean UTF-8 bytes per glyph (1 = ASCII … 4 = astral planes). **(+k)**: k recognised runs contained in this one, folded into it.",
-          "- **yes − shuffled**: recognition strength. The posterior-mean difference between the families' \"yes, coherent\" rate for this run and their rate for shuffled runs, averaged over families. It orders runs within a section.",
+          "- **n**: glyphs. **us**: the mean UTF-8 bytes per glyph (1 = ASCII … 4 = astral planes). **(+k)**: k recognised runs contained in this one, and no more confidently recognised than it, folded into it. A contained run recognised more confidently than the run around it stands as its own row.",
+          "- **beyond chance**: recognition strength. Per family, \"yes, coherent\" beyond its rate for shuffled runs, as a share of what is possible beyond that rate (Abbott's correction, so families with different baselines share one scale). The families are combined by precision, so a family with one answer adds a little. 1 = every answer yes; 0 = no better than shuffled.",
+          "- **≥**: how surely, the 90% lower bound of *beyond chance*. It orders runs within a section, so more answers and more families raise a run rather than dilute it. The verdict, recognised or not, is the yes/no standard above, unchanged. (Until 2026-10-06 an equal-weight mean ordered the runs, and the block ladder, Claude 3/3 and Grok 1/1, ranked below a chart walk only Claude had answered.)",
           "- **yes/n per family**: \"yes\" answers / answers about this run, either orientation (cl = Claude, ge = Gemini, gr = Grok).",
           "- **links**: each link's strongest evidence. **S**: generated in shown answers. **W**: generated in written answers. **P**: picked in the forced generator pass (METHODOLOGY §4a). **R**: not generated, but recognised (yes beyond the near control). **X**: rejected (no beyond the near control). **–**: no evidence either way yet. **⚠**: generated *and* rejected.",
           "- **unr**: shown answers given with 0 thinking tokens that name the links, of all such answers there. Reasoned and first-impression answers stay apart until the data says whether they differ (METHODOLOGY §2a).",

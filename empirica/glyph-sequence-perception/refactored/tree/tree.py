@@ -463,6 +463,44 @@ class Tree:
                     against += n
         return agree, against
 
+def triad_chains(T, cap=24):
+    """Candidate runs from BETWEENNESS (METHODOLOGY §2b, §4): chains of triad middles, as the triad era's growth.py grew
+    its rows -- `p q r` with q named the middle, then `q r s` with r the middle, and so on. Each triad's most-named
+    middle counts, weighted by its share of that triad's answers (none and "only two" included). From every triad,
+    grow both ways along the best-weighted next triad. Candidates only (a generator, never evidence): until
+    2026-10-06 the 19,665 ported triads only tested runs found otherwise, and 232 of the triad era's 300 top rows --
+    the sad-face ladders, ⅛ ⅜ ½ ⅝ ⅞, the block-fill cycle -- appeared nowhere. -> [{glyphs, weakest}]"""
+    nxt = collections.defaultdict(dict)            # (x, y) -> {z: share}: z follows x y with y between them
+    for t, fam in T.triads_fam.items():
+        tot = collections.Counter()
+        for c in fam.values():
+            tot.update(c)
+        n = sum(tot.values())
+        mids = {ans[1]: k for ans, k in tot.items() if ans[0] == "mid"}
+        if not mids:
+            continue
+        m, k = max(mids.items(), key=lambda kv: (kv[1], kv[0]))
+        a, c = [x for x in t if x != m]
+        nxt[(a, m)][c] = k / n
+        nxt[(c, m)][a] = k / n
+    def grow(path, w):
+        while len(path) < cap:
+            opts = {z: v for z, v in nxt.get((path[-2], path[-1]), {}).items() if z not in path}
+            if not opts:
+                break
+            z, v = max(opts.items(), key=lambda kv: (kv[1], kv[0]))
+            path.append(z); w = min(w, v)
+        return path, w
+    found = {}
+    for (a, m), zs in list(nxt.items()):
+        for c, v in zs.items():
+            fwd, w = grow([a, m, c], v)
+            full, w = grow(fwd[::-1], w)
+            key = tuple(min(full, full[::-1]))
+            if key not in found or w > found[key]:
+                found[key] = w
+    return [{"glyphs": list(k), "weakest": w} for k, w in found.items()]
+
 def sequences(T):
     found = {}
     for ctx in list(T.nodes):
