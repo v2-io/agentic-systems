@@ -41,3 +41,15 @@ From planner stochastic-1 (c102) the question planner weights candidate question
 - **What has already been read.** Test round p003 asked insert and remove of Joseph's own run `┉┈┄─━▬█▌▍`, which holds `█`. Three of four minds inserted `▉▊▋` between `█` and `▌`; `▉` is a canary glyph. Those answers were read and shown to Joseph and to the stochastic-5 auditor at about 20:45.
 - **Interim step, reversible.** From stochastic-5, the planner asks insert and remove of no run holding a canary glyph.
 - **Joseph's ruling is needed** on whether insert and remove answers touching the canary are sealed as `names` is.
+
+## Addendum, 2026-10-06, about 21:50: whose idea the seal is, and the ruling on insert and remove
+
+*The coordinating session (Claude Opus 5.5).*
+
+**Attribution.** The seal is an agent's design, not Joseph's. Joseph, at 21:45: *"The seal wasn't my idea-- I told a prior agent that I was disappointed I hadn't seen that pattern that minds had found before and that it had been in my mind as a canary. That's all. Your call on what to do with any kind of seal?"* Where this file or others imply that Joseph asked for it, read it as an agent's construction from his remark.
+
+**The ruling (the coordinating session's, delegated by Joseph).**
+
+- **The seal stays.** A held-out test, one run whose discriminating answers nobody has looked at while the catalog's rules change, costs little, and it's the study's only check that its rules weren't tuned to a known answer. Its value depends on the rules being frozen before it's opened; until then it is a promise, not a result.
+- **It covers insert and remove.** Answers to those questions on runs holding canary glyphs fall under it like `names`, and from planner stochastic-5 such questions aren't asked until the freeze.
+- **The p003 exposure stands as recorded above.** Three insertions of `▉▊▋` beside `█` were read; it's a minor exposure, and the test remains usable for `choose` and `names`.

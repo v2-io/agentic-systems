@@ -144,6 +144,8 @@ PARAMS = {                                                   # every one chosen 
     "GIVEN_RELEVANCE": 0.1,        # a question about a walk over a given (stochastic-4): its relevance times this. Joseph
                                    # chose the direction ("focus on probing things that aren't given"); the size is
                                    # chosen without evidence. About 9% of catalog records are given walks
+    "SEQ_MID": 0.1, "SEQ_WIDTH": 0.08,   # seq_rel's S-curve on a run's lower bound against its own shuffles (check of
+                                   # stochastic-5, C2): 0 (not shown) -> about 0.24, 0.3 -> about 0.92
     "ENCODED_RELEVANCE": 0.1,      # a question about a run whose order the encoding supplies (code points monotone,
                                    # rotated or interleaved: catalog/code_order.py), stochastic-5. Joseph: "Far too many
                                    # resources spent ... on 'given' sequences ... and snippets of the unicode panes". The
@@ -222,6 +224,8 @@ def _sha(path):
     import hashlib
     return hashlib.sha256(pathlib.Path(path).read_bytes()).hexdigest()
 
+STEWARD_RUNS = set()                              # Joseph's own seeds as runs (both directions as one), filled in plan()
+
 def given_factor(glyphs, as_set=False, served=None, encoded=True):
     """GIVEN_RELEVANCE when a question is about a run related to a given (catalog/given_walk.py; any dress, as on the
     view), ENCODED_RELEVANCE when its order is a snippet of a chart pane (catalog/code_order.py) unless encoded=False
@@ -229,6 +233,10 @@ def given_factor(glyphs, as_set=False, served=None, encoded=True):
     A question that serves a sequence or run (its claim: a string or tuple of 3+ glyphs) takes the factor from what it
     serves, so a sequence's skip tests, 2-glyph contexts and reflections share its factor (audit G2); it follows that a
     given window inside a sequence that isn't given keeps full weight. Otherwise the question's own glyphs decide."""
+    for x in (served, glyphs):                    # Joseph's own seeds are his questions (digit-dresses: whether the dresses
+        if (isinstance(x, (str, tuple, list)) and len(x) >= 2 and all(isinstance(c, str) and len(c) == 1 for c in x)
+                and tuple(min(list(x), list(x)[::-1])) in STEWARD_RUNS):
+            return 1.0                            # of a digit are ordered): exempt (check of stochastic-5, C3)
     if isinstance(served, (str, tuple)) and len(served) >= 3 and all(isinstance(c, str) and len(c) == 1 for c in served):
         g = tuple(served)
         if GW.classify_cached(g, 3):              # any given relation, dress included (stochastic-5 audit, P9: as the
@@ -790,7 +798,8 @@ def seq_rel(Tr, g):
     never asked. It replaces the raw "called coherent" share, which a set coherent in any order scored high on.
     (Revised after the stochastic-5 audit, P5: the 90% lower bound, and the curve at 0 for unmeasured runs.)"""
     d, sd, _ = Tr.as_sequence(list(g))           # the lower bound, the study's standard (as rel_of); a run never compared
-    return scurve(0.0) if d is None else scurve(max(d - 1.2816 * sd, 0.0))   # with its shuffles: the curve at 0 (audit P5)
+    v = 0.0 if d is None else d - 1.2816 * sd    # with its shuffles: the curve at 0 (audit P5); centred for lower bounds
+    return scurve(v, PARAMS["SEQ_MID"], PARAMS["SEQ_WIDTH"])   # (check C2: on the agreement curve most runs sat at its floor)
 
 def fill_cands(kind, T, Tr, pend, rid):
     """insert / remove (Joseph, 2026-10-06): every run asked whole, by its recognition as a sequence, each asked beside
@@ -800,8 +809,8 @@ def fill_cands(kind, T, Tr, pend, rid):
         key = tuple(min(list(run), list(run)[::-1]))
         if len(key) < 3 or len(set(key)) != len(key) or len(key) > PR.MAX_RUN or key in C.best:
             continue
-        if CANARY & set(key):                     # stochastic-5 audit, P8: an insertion beside a canary glyph is the
-            continue                              # sealed discriminator in another form; off until Joseph rules
+        if CANARY & set(key):                     # sealed (audits/SEAL-canary-choose-2026-10-06.md, addendum of 21:50):
+            continue                              # an insertion beside a canary glyph is the discriminator in another form
         fc = T.fills.get(kind, {}).get(key, {})
         cnt = {f: (c.get("found", 0), sum(c.values())) for f, c in fc.items()}
         w = seq_rel(Tr, key) * info_fams(cnt, pend.get(kind, key)) * given_factor(key)
@@ -1126,7 +1135,7 @@ def explore(P, T, seqs, seeds, n, rid):
             ctx = [a, b]
         if tuple(ctx) in T.real:
             continue                                     # exploration is of contexts no mind has been shown
-        if GW.is_given(GW.classify_cached(tuple(ctx), 2)) and r.random() >= PARAMS["GIVEN_RELEVANCE"]:
+        if GW.classify_cached(tuple(ctx), 2) and r.random() >= PARAMS["GIVEN_RELEVANCE"]:   # any relation (check C4)
             continue                                     # one step along a given: kept at GIVEN_RELEVANCE (stochastic-4)
         if P.add("continue", ctx, **how):
             added += 1
@@ -1156,6 +1165,8 @@ def plan(rid, recs, seeds, budget):
     ROSTER = {"pick": "generators", "reasoned": "reasoners"}
     ACTIVE = active("core")
     active_by = {}
+    STEWARD_RUNS.clear()
+    STEWARD_RUNS.update(tuple(min(list(g), list(g)[::-1])) for g in steward_seeds(seeds))
     T = TR.Tree(recs)                                   # with seed votes: the walks seeds make walkable
     Tr = TR.Tree(recs, seeds=False)                     # real answers only: what information is computed from
     seqs = TR.sequences(T)

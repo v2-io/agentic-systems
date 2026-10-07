@@ -23,6 +23,9 @@ implements part of CATALOG v5 and says which part:
           Build 7 (2026-10-06, Joseph: "Our entire premise was based on recognizing sequences-- not sets"): a record is
           RECOGNISED when it is recognised as a sequence -- its order beats its own glyphs shuffled, by the study's one
           standard (tree.estimate_vs). R against pooled control rates stays on the record (r_*, recognised_pooled).
+          Build 8 (2026-10-06): code_order is a snippet of a chart pane -- consecutive code points, or monotone, rotated or
+          interleaved within one Unicode block (catalog/code_order.py; stochastic-5 audit P1 and its check C1); number
+          lines in mixed dress are a given relation (given_walk).
           Build 4: content splits on every record -- links where two families' most named continuations differ at
           the deciding context, each family's mode with its counts and the chart's next glyph (facts, no cut).
           Build 3: the rest of §3's candidate inputs as records (the tree's walks, written walks, BEST's strongest
@@ -59,7 +62,7 @@ import best as BE                                   # noqa: E402  strongest_path
 import tree as TR                                   # noqa: E402
 import plan as PL                                   # noqa: E402  block()
 
-MODEL = "catalog-v5-build7"
+MODEL = "catalog-v5-build8"
 SEAL_FILE = ROOT / "audits" / "SEAL-canary-choose-2026-10-06.md"
 CANARY = set("▁▂▃▄▅▆▇█🮆🮅🮄▀🮃🮂▔▉")
 PARAMS = {                                           # every one chosen without evidence (CATALOG §13 freezes them)

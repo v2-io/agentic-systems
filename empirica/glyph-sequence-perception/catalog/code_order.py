@@ -57,13 +57,15 @@ def _code_order(g):
             x, y = cp[:k], cp[k:]
             mx, my = mono(x), mono(y)
             d = mx if mx in (1, -1) else my
-            if d in (1, -1) and mx in (d, 0) and my in (d, 0) and {x[-1], y[0]} == {lo, hi}:
+            if (d in (1, -1) and mx in (d, 0) and my in (d, 0) and {x[-1], y[0]} == {lo, hi}
+                    and (max(x) < min(y) or max(y) < min(x))):      # the pieces' ranges don't overlap: a true wrap
                 return "rotated"
     def rot(x, d):                                # monotone after one wrap between its extremes, from 5 glyphs
         if len(x) < 5:
             return False
         lo, hi = min(x), max(x)
-        return any(mono(x[:k]) in (d, 0) and mono(x[k:]) in (d, 0) and {x[k - 1], x[k]} == {lo, hi} for k in range(1, len(x)))
+        return any(mono(x[:k]) in (d, 0) and mono(x[k:]) in (d, 0) and {x[k - 1], x[k]} == {lo, hi}
+                   and (max(x[:k]) < min(x[k:]) or max(x[k:]) < min(x[:k])) for k in range(1, len(x)))
     if len(cp) >= 6:                              # halves of 3 or more, each monotone (or, from 5, rotated), one direction
         a, b = cp[0::2], cp[1::2]
         for d in (1, -1):

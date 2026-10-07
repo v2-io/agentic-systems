@@ -1,6 +1,6 @@
 # CATALOG: the canonical catalog of sequences
 
-*Design, version 5 (2026-10-06), by the independent session (Claude Opus 5.5) with Joseph. Partly built: builds 0–5 (§13) implement R, the chart route, the view, the link layer (G and L per link, link states), O (agreement with order and triad answers), §3's candidate inputs as records, seed raters, content splits, and the givens (each record's relation to orders that exist before any mind answers); its read-offs are `CATALOG-VIEW.md` and `CATALOG-GIVEN.md`, and nothing reads it back. The model is not frozen.*
+*Design, version 5 (2026-10-06), by the independent session (Claude Opus 5.5) with Joseph. Partly built: builds 0–8 (§13) implement R, the chart route, the view, the link layer (G and L per link, link states), O (agreement with order and triad answers), §3's candidate inputs as records, seed raters, content splits, and the givens (each record's relation to orders that exist before any mind answers); its read-offs are `CATALOG-VIEW.md` and `CATALOG-GIVEN.md`, and nothing reads it back. The model is not frozen.*
 
 - *Versions 1–3 were audited de novo (`audits/catalog-design-2026-10-06.md`, `…-v2-…`, `…-v3-…`; findings F1–F12, A1–A11, C1–C10).*
 - *The v3 auditor checked version 4 against its own findings (`audits/catalog-design-v4-check-2026-10-06.md`: V1, V2, Q1, Q2). §15 maps that check to this version.*
@@ -267,7 +267,7 @@ in $[-1, 1]$. Certainty is a Bayes factor for $p \neq b$ in the observed directi
 
 ## 11. Readers and the default view
 
-**The default view.** A labelled reader computation, not stored, its rule frozen with the model. Only recognised runs appear: R, O or L beyond its contrast with certainty. Given walks don't (single-dress walks over an order that exists before any mind answers, build 5): they are on `CATALOG-GIVEN.md` (Joseph: *"focus CATALOG-VIEW.md on things that aren't given"*). Groups are exclusive and evaluated in this order, and each shows both routes' states.
+**The default view.** A labelled reader computation, not stored, its rule frozen with the model. Since build 7 a run is recognised when it is **recognised as a sequence** (its order beats its own shuffled glyphs; §15's build notes), and the view leads with the recognised runs that have no relation to a given and no order the encoding supplies (`code_order`, build 8). Given walks are on `CATALOG-GIVEN.md` (Joseph: *"focus CATALOG-VIEW.md on things that aren't given"*). Groups are exclusive and evaluated in this order, and each shows both routes' states.
 
 *Since build 7 the view (`CATALOG-VIEW.md`) leads with **perceived orders**: runs recognised as sequences (their order beats their own shuffled glyphs), with no relation to a given, and with no order the encoding supplies (`code_order`). Every other recognised run follows, by reason. The groups below are on every record as `view`; with the name route unmeasured, nearly all fall in "undecided".*
 
