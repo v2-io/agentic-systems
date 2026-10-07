@@ -1,15 +1,13 @@
 # Proposed integration plan (suggestions, not a work order)
 
-*The spike agent's proposals, 2026-10-06, landed by the coordinating session from the agent's final report, unchanged but for one formula put in LaTeX (the harness refused the agent's own write). Not yet independently verified; the findings they rest on are in `FINDINGS.md`.*
+*The spike agent's proposals, revised 2026-10-06 ~19:30 MDT after two verifications and two strengthening rounds. The findings they rest on are in `FINDINGS.md`; the reasoning is in `strengthening-2.md` §7.*
 
-1. **Planner:** don't add a term that rewards disagreement. A flat split between families is mostly a context sitting between two minds' thresholds: settled, not unclear. What a new answer clarifies is the context's shared strength, as seen through that mind's threshold. Its information is $p(1-p)$, where $p$ is that mind's predicted chance of committing. That points at the mind whose threshold sits nearest the context, or at a different question. Where two minds commit to different content, a `choose` between the two alternatives, asked of every family with its control, is the clarifying question.
-2. **Catalog combination rule (§9):** replace the per-family weights, which currently come from Abbott discrimination on the "other" class. Instead, model a threshold per mind, condition and question kind, with one shared strength per item.
-3. **The per-sequence quantity Joseph anticipated** has three parts, each with a statement of how much data backs it:
-   - the threshold-corrected shared strength;
-   - content splits, with the alternatives listed;
-   - departures of a mind or family from the threshold model on that sequence.
-
-   Most records can't measure the third part yet.
-4. **Universality:** read it on content and on corrected strength, so that "Grok stops where Sonnet continues" isn't counted as Claude-only recognition.
-5. **On Saturday:** plan Gemini questions that test `▁` outside triads.
-6. **To separate self-preference from chart reliance:** ask contiguous runs that Grok or Gemini wrote, which don't exist in the data yet.
+1. **Planner: no disagreement term.** A flat split's Sonnet side is settled; its Grok side repeats about seven times in ten; a third mind is the more informative question (verifier 2 §3). Two changes with stronger support:
+   - **Treat the sequence as what an answer informs.** A context's answers carry 1,500 to 2,500 nats about its sibling contexts, held out, so "how settled" belongs to sequences, not to contexts one at a time.
+   - **Keep contexts of one sequence off a shared sheet**, as the probe already does for cohere and `choose`, or tag the sheet and model it. Same-sequence sheet-mates move continue answers by −0.70 logit.
+2. **Catalog combination rule (§9).** Replace Abbott with a logit model with a criterion and slope per mind and kind, with shuffled controls as heterogeneous items; it wins by about 640 nats on cohere (three reproductions). Weights between minds then come from fitted slopes. For continue evidence, model each mind's reading of a sequence at the sequence level.
+3. **The per-sequence quantity Joseph anticipated.** For each sequence and mind: the mind's own propensity on that sequence against the other minds' there, with its evidence count. This is the largest mind-specific structure found. Before it becomes a catalog number it needs (a) a calibrated home model (none yet passes every check), (b) seed votes and sheet composition modelled or removed, and (c) a principled unit for "the sequence" (the block set is a proxy). Alongside it, list content splits (both minds commit, differently), read off the chart.
+4. **Universality** is read on content and on the sequence-level propensity, never on raw yes or stop counts.
+5. **Probe design.** Tag seed-targeted questions, and keep them apart (or model them) when consistency is read: selection on seeds isn't ignorable for models that don't see the seeds.
+6. **On Saturday:** Gemini questions that test `▁` outside triads.
+7. **Round p002** (`prereg-third-minds.json`): the 43 flat contexts asked of Opus and both Haikus, scored by per-mind log score between three models.

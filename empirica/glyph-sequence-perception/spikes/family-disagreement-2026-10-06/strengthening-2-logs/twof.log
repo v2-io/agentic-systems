@@ -1,0 +1,58 @@
+== 1-factor: ll -36263.3 iters 149
+   sonnet55       a +0.00 s 1.00 t +0.00 g +0.00
+   opus55         a -0.60 s 1.46 t +0.00 g +1.30
+   haiku45nt      a +0.42 s 0.48 t +0.00 g +0.15
+   haiku45        a +1.24 s 0.91 t +0.00 g +0.41
+   grok46         a +0.96 s 1.11 t +0.00 g +1.15
+   gemini38flash  a +0.11 s 0.87 t +0.00 g +0.51
+   gemini31pro    a +1.46 s 1.20 t +0.00 g +1.24
+   held-out by item: -0.4683 per answer
+    sonnet55      /opus55         n= 4538 obs   425 / pred   500.1 [458-542] ratio 0.85  <--
+    sonnet55      /haiku45nt      n=21408 obs  5247 / pred  5397.6 [5281-5529] ratio 0.97  <--
+    sonnet55      /haiku45        n= 4917 obs   890 / pred   935.8 [885-993] ratio 0.95
+    sonnet55      /grok46         n=18433 obs  3027 / pred  3087.6 [2992-3191] ratio 0.98
+    sonnet55      /gemini38flash  n= 3046 obs   487 / pred   461.0 [423-501] ratio 1.06
+    sonnet55      /gemini31pro    n=  676 obs   130 / pred   123.9 [105-144] ratio 1.05
+    opus55        /haiku45nt      n= 4391 obs  1119 / pred  1067.6 [1013-1122] ratio 1.05
+    opus55        /haiku45        n=  997 obs   202 / pred   177.7 [154-202] ratio 1.14
+    opus55        /grok46         n= 3768 obs   575 / pred   571.1 [529-613] ratio 1.01
+    opus55        /gemini38flash  n=  588 obs    96 / pred    79.6 [63-96] ratio 1.21
+    haiku45nt     /haiku45        n= 4205 obs  1039 / pred  1138.6 [1082-1199] ratio 0.91  <--
+    haiku45nt     /grok46         n=17683 obs  4798 / pred  4539.6 [4428-4656] ratio 1.06  <--
+    haiku45nt     /gemini38flash  n= 2443 obs   700 / pred   640.3 [598-685] ratio 1.09  <--
+    haiku45nt     /gemini31pro    n=  553 obs   168 / pred   143.2 [124-163] ratio 1.17  <--
+    haiku45       /grok46         n= 4168 obs   780 / pred   744.8 [701-792] ratio 1.05
+    haiku45       /gemini38flash  n= 1077 obs   194 / pred   210.6 [185-236] ratio 0.92
+    grok46        /gemini38flash  n= 3034 obs   465 / pred   529.2 [491-570] ratio 0.88  <--
+    grok46        /gemini31pro    n=  675 obs    97 / pred   105.7 [88-123] ratio 0.92
+    gemini38flash /gemini31pro    n=  528 obs    87 / pred    97.0 [80-114] ratio 0.90
+   pairs outside band: 7
+== 2-factor: ll -36165.4 iters 149
+   sonnet55       a +0.00 s 1.00 t +0.56 g +0.00
+   opus55         a -0.61 s 1.61 t +0.04 g +1.56
+   haiku45nt      a +0.57 s 0.68 t +1.94 g +0.15
+   haiku45        a +1.21 s 0.93 t +0.97 g +0.35
+   grok46         a +1.13 s 1.28 t +0.04 g +1.42
+   gemini38flash  a +0.12 s 0.89 t +0.11 g +0.58
+   gemini31pro    a +1.60 s 1.28 t -0.11 g +1.36
+   held-out by item: -0.4671 per answer
+    sonnet55      /opus55         n= 4538 obs   425 / pred   515.4 [472-558] ratio 0.82  <--
+    sonnet55      /haiku45nt      n=21408 obs  5247 / pred  5295.8 [5179-5422] ratio 0.99
+    sonnet55      /haiku45        n= 4917 obs   890 / pred   952.8 [902-1009] ratio 0.93  <--
+    sonnet55      /grok46         n=18433 obs  3027 / pred  3070.7 [2974-3174] ratio 0.99
+    sonnet55      /gemini38flash  n= 3046 obs   487 / pred   472.1 [433-511] ratio 1.03
+    sonnet55      /gemini31pro    n=  676 obs   130 / pred   127.2 [108-147] ratio 1.02
+    opus55        /haiku45nt      n= 4391 obs  1119 / pred  1118.7 [1063-1175] ratio 1.00
+    opus55        /haiku45        n=  997 obs   202 / pred   186.6 [162-211] ratio 1.08
+    opus55        /grok46         n= 3768 obs   575 / pred   542.3 [501-583] ratio 1.06
+    opus55        /gemini38flash  n=  588 obs    96 / pred    79.0 [63-95] ratio 1.22  <--
+    haiku45nt     /haiku45        n= 4205 obs  1039 / pred  1013.6 [960-1068] ratio 1.03
+    haiku45nt     /grok46         n=17683 obs  4798 / pred  4702.5 [4589-4820] ratio 1.02
+    haiku45nt     /gemini38flash  n= 2443 obs   700 / pred   663.8 [622-710] ratio 1.05
+    haiku45nt     /gemini31pro    n=  553 obs   168 / pred   154.0 [133-174] ratio 1.09
+    haiku45       /grok46         n= 4168 obs   780 / pred   775.0 [728-822] ratio 1.01
+    haiku45       /gemini38flash  n= 1077 obs   194 / pred   220.7 [194-247] ratio 0.88
+    grok46        /gemini38flash  n= 3034 obs   465 / pred   509.8 [471-550] ratio 0.91  <--
+    grok46        /gemini31pro    n=  675 obs    97 / pred    96.9 [80-115] ratio 1.00
+    gemini38flash /gemini31pro    n=  528 obs    87 / pred    96.5 [80-114] ratio 0.90
+   pairs outside band: 4

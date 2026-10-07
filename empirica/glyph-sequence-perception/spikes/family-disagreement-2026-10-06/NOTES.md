@@ -94,3 +94,25 @@ Cacioli 2026 (arXiv 2603.14893): signal-detection decomposition of LLM judgement
 ## 17:30 (clock time) Strengthening after the verification
 
 The verifier's report (`de-novo-feedback-1.md`) and the strengthening attempts it named are answered in `strengthening-1.md`. Correction to this log: its section times from 16:45 to 18:30 above are estimates, not clock readings, as the README says; from here on, times are from `date`.
+
+## 18:03 (clock) Strengthening 2: the criterion, written before any fit
+
+After `de-novo-feedback-2.md` and `prereg-result-1.md`. I know p001's aggregate counts (Grok 29/42 stops, Sonnet 42/43 continues) from the coordinator's message; I have not read any per-context p001 answer. Model choice uses the snapshot only, by these criteria, in this order:
+1. 5-fold held-out log-likelihood per answer on continue (irt.heldout's folds);
+2. cross-mind single-answer disagreement, observed / predicted, every pair in irt.PAIRS, item posterior from the other minds;
+3. within-mind disagreement of a mind's first two answers from different rounds, observed / predicted (posterior from the other minds), overall and by predicted-probability bin, for every mind with at least 100 such items;
+4. flat-split counts in both directions for every pair with at least 20 flat-eligible items.
+
+A model is "calibrated" only if 2–4 all fall within their 95% bands (or ratio 0.85–1.15 where there is no band). After choosing, p001 is scored per context for the chosen model, irtu (the verifier's competitor) and 2mf, by log score and count, as held-out data.
+
+## 18:35 (clock) A prediction, written before its result
+
+Held out (5 folds by item / by block): LNB with block-set features 3569JNRXghkl0.4186$ / 3569JNRXghkl0.4200$ per answer, against 2mf 3569JNRXghkl0.4676$ / 3569JNRXghkl0.4730$ and the same model without features 3569JNRXghkl0.4680$ / 3569JNRXghkl0.4732$. Hypothesis: the item-level models' shared misfit on *repeat* answers (every mind stops less on re-asks than predicted, concentrated in c001–c027) comes from the planner re-asking contexts because of evidence at neighbouring contexts of the same sequence, which item-level models can't see. **Prediction:** under LNB with block-set features, prequential repeat-stop calibration for Sonnet, Grok and Haiku-without-thinking falls inside its 95% band, or at least most of the gap closes (Sonnet's observed 34 against 55–62 predicted by the item-level models). If it doesn't, the hypothesis is wrong or incomplete.
+
+## 19:17 (clock) Model choice, before reading any p001 answer per context
+
+None of the models passes every pre-stated calibration check (2mf, irtu, beta-binomial, LNB with block or block-set features, sparse-interaction SPX; see strengthening-2). By held-out likelihood the best is LNB with block-set features (by item 3569JNRXghkl0.4186$, by block 3569JNRXghkl0.4200$; SPX ties). That is the 'chosen' model for p001 scoring, chosen on held-out likelihood alone, uncalibrated. My prediction about repeats under it failed (Sonnet's repeat stops 34 observed against 69.8 predicted, strict prequential).
+
+## 19:25 (clock) Strengthening 2 landed in `strengthening-2.md`
+
+Two-factor model held out: 3569JNRXghkl0.4671$ against one factor's 3569JNRXghkl0.4683$; pairs outside band 7 → 4; loadings put the second dimension on the Haiku model (both conditions) and partly Sonnet. p001 favoured `irtu` over the sequence model, which was best on snapshot likelihood. FINDINGS.md was rewritten by replacement (sent to the coordinator to land: the harness refused the write). Withdrawn in this round: the flat-split reading of strengthening 1 ("borderline contexts, partly chance") and "slopes nearly equal". Failed prediction: the sequence features would close the repeat-stop gap.
