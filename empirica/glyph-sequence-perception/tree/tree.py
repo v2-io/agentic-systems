@@ -163,6 +163,10 @@ class Tree:
         self.cohere_ctl = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # shuffled run -> ...
         self.cohere_rate = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # fam -> class -> verdict
         self.cohere_ctl_class = {}                          # control run -> "shuffled" | "chart"
+        self.fills = collections.defaultdict(lambda: collections.defaultdict(lambda: collections.defaultdict(collections.Counter)))
+                                                            # kind (insert/remove) -> run (min of directions) -> fam ->
+                                                            # Counter of "found" (an inside insertion, or a removal) / "not"
+        self.fill_runs = []                                 # (kind, run, proposed run): candidates from those answers
         self.cohere_own = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # run (either
                                                             # direction, as min of the two) -> fam -> verdict on ITS OWN
                                                             # glyphs shuffled (a control's source.of)
@@ -256,6 +260,13 @@ class Tree:
             elif k == "pick" and o in ("continuation", "none", "other"):
                 x = r["continuation"][0] if o == "continuation" else (NONE if o == "none" else OTHER)
                 ((self.pick_null if (r.get("tags") or {}).get("null") else self.picks)[tuple(r["context"])][r["family"]]).append(x)
+            elif k in ("insert", "remove") and o in ("inserted", "removed", "same", "none", "rewritten"):
+                if not (r.get("tags") or {}).get("control"):
+                    run = tuple(r["context"])
+                    found = (o == "inserted" and any(x.get("where") == "inside" for x in r.get("inserted") or [])) or o == "removed"
+                    self.fills[k][min(run, run[::-1])][r["family"]]["found" if found else "not"] += 1
+                    if found and len(set(r.get("sequence") or [])) == len(r.get("sequence") or []) >= 3:
+                        self.fill_runs.append((k, run, tuple(r["sequence"])))
             elif k == "cohere" and o in ("yes", "no", "cant-tell"):
                 ctl = (r.get("tags") or {}).get("control")
                 run = tuple(r["context"])

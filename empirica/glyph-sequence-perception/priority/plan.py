@@ -40,6 +40,15 @@ The numbers are in PARAMS, BASE and BRANCH_*, all recorded in each round's plan.
 they say otherwise; explore()'s own soft numbers (the top 200 sequences, rank 0.9, redraw one in two, thirds) are not.
 Planner "stochastic-2" (2026-10-06) follows a de novo audit of "stochastic-1" (audits/planner-stochastic-2026-10-06.md);
 "stochastic-3" follows the auditor's check of stochastic-2 (audits/planner-stochastic-2-check-2026-10-06.md).
+"stochastic-5" (2026-10-06): Joseph's insert and remove questions ("can you make this sequence longer by inserting one or
+more missing symbols?"; "occasionally -- by removing one or more symbols") as two streams over every run asked whole,
+each question beside the same question about its own glyphs shuffled, weighted by the run's recognition AS A SEQUENCE
+(seq_rel: how far its order beats its own shuffles), information on whether minds find something, and the given factor;
+the runs their answers propose become cohere candidates. A question about a run whose order the ENCODING supplies (code
+points monotone, rotated or interleaved; catalog/code_order.py) is weighted by ENCODED_RELEVANCE wherever the given
+factor applies (lookalike, whose job is testing those runs, stays exempt). The names/order and lookalike streams weigh runs by recognition
+as a sequence too, in place of the raw "called coherent" share (Joseph: "Our entire premise was based on recognizing
+sequences-- not sets").
 "stochastic-4" (2026-10-06) adds GIVENS: a question about a walk over a given -- an order that exists before any mind
 answers, an alphabet or a number line in some dress (catalog/given_walk.py, data/unicode/givens.json, CATALOG-GIVEN.md)
 -- has its relevance multiplied by GIVEN_RELEVANCE (Joseph: "we'll focus on probing things that aren't given"). Never
@@ -97,13 +106,15 @@ sys.path.insert(0, str(ROOT / "tree"))
 sys.path.insert(0, str(ROOT / "catalog"))
 import probe as PR                                          # noqa: E402
 import given_walk as GW                                     # noqa: E402  the givens (stochastic-4)
+from code_order import code_order                           # noqa: E402  encoded orders (stochastic-5)
 import tree as TR                                           # noqa: E402
 
 FAMS = ("claude", "gemini", "grok")                         # the families the core roster answers with
 BASE = {                                                     # questions a round per stream: the c096-c100 means, drawn by
     "continue": 167, "inhibit": 74, "cohere": 176, "lookalike": 40, "choose": 60,   # the planner this one replaced (an
     "choose-control": 20, "names": 30, "order": 13, "triad": 15, "pick": 150,     # inherited allocation, to revisit);
-    "reasoned": 20, "reflection": 20}                         # exploration is EXPLORE_SHARE of the round, the pick nulls
+    "reasoned": 20, "reflection": 20,                         # exploration is EXPLORE_SHARE of the round, the pick nulls
+    "insert": 30, "remove": 10}                               # insert/remove (stochastic-5): chosen without evidence
                                                               # one context per PICK_NULL_EVERY picked
 PARAMS = {                                                   # every one chosen without evidence
     "SIZE_SIGMA_ROUND": 0.15,      # lognormal sigma of the round-wide size factor
@@ -129,6 +140,10 @@ PARAMS = {                                                   # every one chosen 
     "GIVEN_RELEVANCE": 0.1,        # a question about a walk over a given (stochastic-4): its relevance times this. Joseph
                                    # chose the direction ("focus on probing things that aren't given"); the size is
                                    # chosen without evidence. About 9% of catalog records are given walks
+    "ENCODED_RELEVANCE": 0.1,      # a question about a run whose order the encoding supplies (code points monotone,
+                                   # rotated or interleaved: catalog/code_order.py), stochastic-5. Joseph: "Far too many
+                                   # resources spent ... on 'given' sequences ... and snippets of the unicode panes". The
+                                   # size is chosen without evidence (as GIVEN_RELEVANCE's); never zero
     "EXPLORE_SHARE": 0.15,         # exploration's share of a round, before jitter (Joseph: "15% of our effort was always
                                    # 'hot'"; until 2026-10-06 a base of 105, 11% of the round)
 }
@@ -209,8 +224,15 @@ def given_factor(glyphs, as_set=False, served=None):
     serves, so a sequence's skip tests, 2-glyph contexts and reflections share its factor (audit G2); it follows that a
     given window inside a sequence that isn't given keeps full weight. Otherwise the question's own glyphs decide."""
     if isinstance(served, (str, tuple)) and len(served) >= 3 and all(isinstance(c, str) and len(c) == 1 for c in served):
-        return PARAMS["GIVEN_RELEVANCE"] if GW.is_given(GW.classify_cached(tuple(served), 3)) else 1.0
-    return PARAMS["GIVEN_RELEVANCE"] if GW.is_given(GW.classify_cached(tuple(glyphs), 2, as_set)) else 1.0
+        g = tuple(served)
+        if GW.is_given(GW.classify_cached(g, 3)):
+            return PARAMS["GIVEN_RELEVANCE"]
+        return PARAMS["ENCODED_RELEVANCE"] if code_order(g) != "none" else 1.0
+    if GW.is_given(GW.classify_cached(tuple(glyphs), 2, as_set)):
+        return PARAMS["GIVEN_RELEVANCE"]
+    if not as_set and len(glyphs) >= 3 and code_order(tuple(glyphs)) != "none":   # stochastic-5: an encoded order
+        return PARAMS["ENCODED_RELEVANCE"]
+    return 1.0
 
 def weighted_order(items, weight, r):
     """a fated draw of every item without replacement, each next one with probability proportional to its weight
@@ -401,6 +423,8 @@ class Pending:
                 key = (k, frozenset(q.get("glyphs") or c) if k != "triad" else tuple(sorted(q.get("glyphs") or c)))
             elif k == "pick":
                 key = ("pick", c)
+            elif k in ("insert", "remove"):
+                key = (k, tuple(min(list(c), list(c)[::-1])))
             else:
                 continue
             self.by[key[0]][key[1]].update(fc)
@@ -741,6 +765,8 @@ def cohere_cands(T, Tr, pend, seqs, written_seqs, seeds, rid, recs):
         put(g, PARAMS["STEWARD_RELEVANCE"] if tuple(g) in stew else PARAMS["UNRANKED_RELEVANCE"], "seed:" + str(sid))
     for c, w in pick_branches(T):
         put(c, w, "pick-branch")
+    for kind, run, prop in T.fill_runs:                             # runs an insertion or removal proposed (stochastic-5)
+        put(list(prop), PARAMS["UNRANKED_RELEVANCE"], kind + "ed" if kind == "insert" else "removed")
     for run, fc in T.cohere_ctl.items():                            # shuffles some mind called coherent
         if T.cohere_ctl_class.get(run) == "shuffled":
             y = sum(c["yes"] for c in fc.values()); n = sum(sum(c.values()) for c in fc.values())
@@ -750,6 +776,35 @@ def cohere_cands(T, Tr, pend, seqs, written_seqs, seeds, rid, recs):
             put(row["glyphs"], PARAMS["UNRANKED_RELEVANCE"], "grown:" + f.stem, cyclic=bool(row.get("cyclic")))
     for run in T.cohere:                                                   # every run asked before
         put(list(run), PARAMS["UNRANKED_RELEVANCE"], "asked")
+    return C
+
+def seq_rel(Tr, g):
+    """relevance of a run from its recognition AS A SEQUENCE (stochastic-5): the S-curve on how far its order beats its
+    own glyphs shuffled (tree.as_sequence's difference, the study's standard); UNRANKED_RELEVANCE where its shuffles were
+    never asked. It replaces the raw "called coherent" share, which a set coherent in any order scored high on."""
+    d, _, _ = Tr.as_sequence(list(g))
+    return PARAMS["UNRANKED_RELEVANCE"] if d is None else scurve(max(d, 0.0))
+
+def fill_cands(kind, T, Tr, pend, rid):
+    """insert / remove (Joseph, 2026-10-06): every run asked whole, by its recognition as a sequence, each asked beside
+    the same question about its own glyphs shuffled; information on whether minds find something to insert / remove"""
+    C = Cands()
+    for run in T.cohere:
+        key = tuple(min(list(run), list(run)[::-1]))
+        if len(key) < 3 or len(set(key)) != len(key) or len(key) > PR.MAX_RUN or key in C.best:
+            continue
+        fc = T.fills.get(kind, {}).get(key, {})
+        cnt = {f: (c.get("found", 0), sum(c.values())) for f, c in fc.items()}
+        w = seq_rel(Tr, key) * info_fams(cnt, pend.get(kind, key)) * given_factor(key)
+        def unit(key=key):
+            r = PR.R(kind + "-orientation", {"round": rid, "run": list(key)})
+            shown = list(key) if r.random() < 0.5 else list(key)[::-1]
+            ctl = PR.shuffled_control(shown, rid)
+            if ctl is None:
+                return None
+            return [Q(kind, shown, why=kind),
+                    Q(kind, ctl, probe={"control": "shuffled", "of": "".join(shown)}, why="control", control="shuffled", of="".join(shown))]
+        C.put(key, w, unit)
     return C
 
 def counts_yes_run(Tr, g, cyclic=False):
@@ -787,7 +842,7 @@ def lookalike_cands(T, Tr, recs, rid):
         dd = pool[r.randrange(len(pool))]
         la, ct = g[:i] + [c] + g[i + 1:], g[:i] + [dd] + g[i + 1:]
         of = "".join(g)
-        w = scurve(y / n) * info_fams(counts_yes(la_counts.get(of, {})))
+        w = seq_rel(T, g) * info_fams(counts_yes(la_counts.get(of, {})))    # stochastic-5: as a sequence
         C.put(of, w, [Q("cohere", la, probe={"control": "lookalike", "of": of, "pos": i, "orig": g[i]}, why="lookalike", control="lookalike", of=of),
                       Q("cohere", ct, probe={"control": "lookalike-ctl", "of": of, "pos": i, "orig": g[i]}, why="lookalike", control="lookalike-ctl", of=of)])
     return C
@@ -888,9 +943,8 @@ def set_cands(kind, T, pend, counts, seqs, seeds, rid, extra=()):
     for g, sid in seed_list(seeds, types, rid, kind + "-seed-order"):
         put(g, PARAMS["STEWARD_RELEVANCE"] if tuple(g) in stew else PARAMS["UNRANKED_RELEVANCE"], "seed:" + str(sid),
             ordered=stype.get(sid) in ORDERED_SEEDS)
-    for run, fc in T.cohere.items():
-        y = sum(c["yes"] for c in fc.values()); n = sum(sum(c.values()) for c in fc.values())
-        put(list(run), scurve(y / n if n else 0), "run")
+    for run in T.cohere:
+        put(list(run), seq_rel(T, run), "run")              # stochastic-5: recognition as a sequence, not the yes share
     for s in seqs:
         put(s["glyphs"], rel_of(s), "walk")
     for key in counts:
@@ -1122,6 +1176,8 @@ def plan(rid, recs, seeds, budget):
         ("order", lambda: set_cands("order", T, pend, order_counts(recs), seqs, seeds, rid)),
         ("triad", lambda: triad_cands(T, pend, seqs)),
         ("pick", lambda: pick_cands(T, pend, seqs, seeds, rid)),
+        ("insert", lambda: fill_cands("insert", T, Tr, pend, rid)),
+        ("remove", lambda: fill_cands("remove", T, Tr, pend, rid)),
     ]
     for name, make in streams:
         ACTIVE = active(ROSTER.get(name, "core")); active_by[name] = sorted(ACTIVE)
@@ -1142,7 +1198,7 @@ def plan(rid, recs, seeds, budget):
         h.update(line.encode()); h.update(b"\n")
     for x in sorted(json.dumps(x, sort_keys=True, ensure_ascii=False) for x in seeds):
         h.update(x.encode()); h.update(b"\n")
-    stats = {"round": rid, "protocol": PR.PROTOCOL, "planner": "stochastic-4",
+    stats = {"round": rid, "protocol": PR.PROTOCOL, "planner": "stochastic-5",
              "givens": {"givens_json": _sha(ROOT / "data" / "unicode" / "givens.json"), "given_walk_py": _sha(ROOT / "catalog" / "given_walk.py")}, "questions": len(P.qs), "budget": budget,
              "size_scale": round(scale, 4), "wanted": want, "drawn": got, "candidates": pool, "claims": claims,
              "active_families": active_by, "paused_minds": sorted(paused),

@@ -53,6 +53,7 @@ sys.path.insert(0, str(ROOT / "catalog"))
 import links as LK                                  # noqa: E402  the link layer (CATALOG §4-§6, §8)
 import order as OR                                  # noqa: E402  the O part (CATALOG §6, §9)
 import given_walk as GW                             # noqa: E402  the givens (build 5)
+from code_order import code_order                   # noqa: E402  build 6, shared with the planner
 sys.path.insert(0, str(ROOT / "report"))
 import best as BE                                   # noqa: E402  strongest_paths, a candidate source (CATALOG §3)
 import tree as TR                                   # noqa: E402
@@ -215,30 +216,6 @@ def paired_record(g, own, shuf):
     return {"own": [oy, on], "shuffles": [sy, sn], "families": fams, "used": sorted(used),
             "d": round(d, 4), "sd": round(sd, 4), "lb": round(d - 1.2816 * sd, 4)}   # the study's one standard
                                                      # (METHODOLOGY §2a: per family Jeffreys, equal-weight mean, 90%)
-
-def code_order(g):
-    """whether the encoding supplies the run's order: "monotone" (code points strictly up or down), "rotated" (monotone
-    after one wrap: a cycle encoded in order, 🕙🕚🕛🕐), "interleaved" (two monotone halves, alternate glyphs, in one
-    direction: a b A B, hours and half-hours), or "none"."""
-    cp = [ord(c) for c in g]
-    def mono(x, d=None):
-        ups = all(b > a for a, b in zip(x, x[1:])); downs = all(b < a for a, b in zip(x, x[1:]))
-        return ("up" if ups else "down" if downs else None) if d is None else (ups if d == "up" else downs)
-    def rot(x, d):                                # a rotation counts only from 5 glyphs: a random order of n is a
-        return len(x) >= 5 and any(mono(x[k:] + x[:k], d) for k in range(1, len(x)))   # rotation of a monotone
-                                                  # one with probability 2n/n! (1 at n = 3, 1/3 at 4, 1/12 at 5)
-    if len(cp) < 3:
-        return "none"
-    if mono(cp):
-        return "monotone"
-    if rot(cp, "up") or rot(cp, "down"):
-        return "rotated"
-    if len(cp) >= 6:                              # halves of 3 or more, each monotone (or rotated, from 5) in one direction
-        a, b = cp[0::2], cp[1::2]
-        for d in ("up", "down"):
-            if (mono(a, d) or rot(a, d)) and (mono(b, d) or rot(b, d)):
-                return "interleaved"
-    return "none"
 
 def rater_c(ctl, rt, cls):
     y, n = ctl.get((rt, cls), (0, 0))

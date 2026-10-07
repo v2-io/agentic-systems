@@ -506,6 +506,8 @@ def _insertions(short, long):
             pending.append(x)
     if pending:
         out.append({"after": i - 1, "glyphs": pending})
+    for x in out:                                     # inside the run, or at an end (an extension: the continue
+        x["where"] = "start" if x["after"] < 0 else "end" if x["after"] >= len(short) - 1 else "inside"   # question's job)
     return out
 
 def _records(sheet, ledger_rows, mind, family, judge, questions, variant):
