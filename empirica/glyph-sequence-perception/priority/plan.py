@@ -869,7 +869,7 @@ def set_cands(kind, T, pend, counts, seqs, seeds, rid, extra=()):
     validation sets), and every set asked before; windows of longer runs"""
     C = Cands()
     stew = steward_seeds(seeds)
-    def put(g, rel, how):
+    def put(g, rel, how, ordered=True):
         claim = tuple(min(list(g), list(g)[::-1]))                 # a long run's windows are one claim
         for h in windows(g, PR.MAX_ORDER):
             if not runlike(h, 4, PR.MAX_ORDER) or (kind == "names" and not all(U.name(c, None) for c in h)):
@@ -878,20 +878,23 @@ def set_cands(kind, T, pend, counts, seqs, seeds, rid, extra=()):
             cnt = counts.get(key, {})
             w = rel * info_fams(blind(cnt, h) if kind == "names" else cnt, pend.get(kind, key))
             if not str(how).startswith("validation"):          # validation sets are given orders by design
-                w *= given_factor(h, as_set=True, served=claim)
+                w *= given_factor(h, as_set=True, served=claim if ordered else None)   # a set's claim is a run only
+                                                                     # when it came from one (check of stochastic-4, N2)
             C.put(key, w, [Q(kind, h, why=kind, **{"from": how})], claim)
     for g, how, rel in extra:
         put(g, rel, how)
     types = ORDERED_SEEDS | (ORDER_ONLY_SEEDS if kind == "order" else set())
+    stype = {x.get("sid"): x.get("type") for x in seeds}
     for g, sid in seed_list(seeds, types, rid, kind + "-seed-order"):
-        put(g, PARAMS["STEWARD_RELEVANCE"] if tuple(g) in stew else PARAMS["UNRANKED_RELEVANCE"], "seed:" + str(sid))
+        put(g, PARAMS["STEWARD_RELEVANCE"] if tuple(g) in stew else PARAMS["UNRANKED_RELEVANCE"], "seed:" + str(sid),
+            ordered=stype.get(sid) in ORDERED_SEEDS)
     for run, fc in T.cohere.items():
         y = sum(c["yes"] for c in fc.values()); n = sum(sum(c.values()) for c in fc.values())
         put(list(run), scurve(y / n if n else 0), "run")
     for s in seqs:
         put(s["glyphs"], rel_of(s), "walk")
     for key in counts:
-        put(sorted(key), PARAMS["OFF_SEQUENCE_RELEVANCE"], "asked")
+        put(sorted(key), PARAMS["OFF_SEQUENCE_RELEVANCE"], "asked", ordered=False)
     return C
 
 def triad_cands(T, pend, seqs):

@@ -19,11 +19,11 @@ definition says "same stylistic class", so a dress run (1 ¹ ① 𝟏, or a lett
 walks (planner stochastic-4 audit, G1, 2026-10-06; the minds recognise single-dress windows asked whole 94% of the
 time, dress runs 38%).
 
-Which alphabet: a window or rotation counts in ANY language's alphabet holding the run's letters (a window of a real
-alphabet is that language's own order: а-е in Russian, ا ب ت ث in Arabic, though Serbian and Pashto alphabets are used
-by as many CLDR languages). A stride or reflection counts only in the alphabets used by the most languages (locale ids
-collapsed to languages; ties all evaluated): with ~400 alphabets, some alphabet's spacing makes almost any run regular
-(a b d f is a stride of 2 in Ligurian's). Audit G4, 2026-10-06. A pair counts only as a window: two glyphs can't tell a wrap from a jump
+Which alphabet: the alphabets used by the most languages that hold every letter of the run (CLDR locale ids collapsed
+to languages, ties all evaluated: Russian ties Serbian for а-е). Not any of ~400: many alphabets leave letters out, so a
+run skipping a letter of the usual one (a b d, u w y, a e i o u) would be a window somewhere (Northern Sotho, Tswana,
+Hawaiian), and some alphabet's spacing makes almost any run a stride (a b d f in Ligurian's). Audit G4 and its check
+(N1), 2026-10-06. In a script whose alphabets each have one CLDR language (Arabic's), all tie and none is preferred. A pair counts only as a window: two glyphs can't tell a wrap from a jump
 across the order (audit G8: a z, 0 9 were rotations).
 """
 import functools, json, pathlib, unicodedata as U
@@ -99,11 +99,10 @@ def classify(glyphs, min_len=3):
         tops = set(cands)                            # numbers: every dress holding the values
     else:
         common = {g for g in set.intersection(*[{g for g, _ in h} for h, _ in located]) if givens[g]["kind"] == "alphabet"}
-        # windows and rotations in any alphabet holding every letter; strides and reflections only in the ones used by
-        # the most languages (tops), where a rare alphabet's spacing can't make an arbitrary run regular
+        # the alphabets used by the most languages that hold every letter (tops), ties all kept
         top = max((len(languages(givens[g])) for g in common), default=0)
         tops = {g for g in common if len(languages(givens[g])) == top}
-        for gid in common:
+        for gid in tops:
             idx = []
             for h, _ in located:
                 ii = sorted(i for g, i in h if g == gid)
@@ -121,7 +120,7 @@ def classify(glyphs, min_len=3):
     for gid, idx in cands.items():
         n = len(givens[gid]["positions"])
         k = _kind(idx, n, len(set(dresses)) > 1 or len(set(glyphs)) != len(set(idx)))
-        if k is None or (k[0] in ("stride", "reflection") and gid not in tops):
+        if k is None or gid not in tops:
             continue
         key = (KINDS.index(k[0]), -len(languages(givens[gid])), gid)
         if best is None or key < best[0]:
