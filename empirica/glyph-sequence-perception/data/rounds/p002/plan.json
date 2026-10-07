@@ -1,0 +1,13 @@
+{
+ "round": "p002",
+ "what": "pre-registered test of the family-disagreement spike's flat-split prediction",
+ "prediction": "spikes/family-disagreement-2026-10-06/prereg-third-minds.json",
+ "questions": 43,
+ "sheets": 43,
+ "minds": [
+  "opus55",
+  "haiku45nt",
+  "haiku45"
+ ],
+ "unicode": "16.0.0"
+}
