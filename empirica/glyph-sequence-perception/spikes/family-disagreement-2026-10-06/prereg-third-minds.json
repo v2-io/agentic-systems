@@ -1,0 +1,1650 @@
+{
+ "what": "Pre-registration 2 (proposed round p002): the 43 flat Sonnet-continues / Grok-stops contexts of prereg-flat-splits.json,\nasked once each, as a plain continue question on one-question sheets, of third minds: opus55, haiku45nt, haiku45 (the\nGemini minds are paused). For each context and mind, each model's P(stop), conditioned on every snapshot answer AND the\np001 answers (round p001 counted as one more round), with each model's parameters as fitted on the snapshot:\n  2mf   irt.py variant 2mf (no mind x item term)\n  irtu  the verifier's model (de-novo-2/irtu.py, parameters de-novo-2/tau-pred.json)\n  lnb   lnb.py with block-set features (strengthening 2's chosen model), features from the snapshot\nReading, fixed here: per mind, the per-context log score of each model, and the log likelihood ratio between models\n(sum over that mind's answered contexts). A model 'wins' a mind when its log score beats each other model's by more\nthan log(10) (a Bayes factor of 10 between point predictions); otherwise the result is reported as not discriminating.\nThe count of stops per mind is also reported against each model's 95% Poisson-binomial band.",
+ "written": "2026-10-06T19:18:10-06:00",
+ "git_head_at_writing": "c98ada5b89b23636630f87873735d0b2b625a5d1",
+ "expected_stops_of_43": {
+  "opus55": {
+   "2mf": 9.47,
+   "irtu": 6.9,
+   "lnb": 7.96
+  },
+  "haiku45nt": {
+   "2mf": 20.34,
+   "irtu": 12.08,
+   "lnb": 13.05
+  },
+  "haiku45": {
+   "2mf": 21.85,
+   "irtu": 20.41,
+   "lnb": 19.86
+  }
+ },
+ "contexts": [
+  {
+   "context": "Ȱȱ",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "haiku45": [
+     0,
+     1
+    ],
+    "grok46": [
+     3,
+     3
+    ],
+    "gemini38flash": [
+     1,
+     1
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.2775,
+     "irtu": 0.2052,
+     "lnb": 0.1682
+    },
+    "haiku45nt": {
+     "2mf": 0.6227,
+     "irtu": 0.228,
+     "lnb": 0.2977
+    },
+    "haiku45": {
+     "2mf": 0.7657,
+     "irtu": 0.6873,
+     "lnb": 0.6968
+    }
+   }
+  },
+  {
+   "context": "ϩϫϭϯ",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.3011,
+     "irtu": 0.2111,
+     "lnb": 0.2239
+    },
+    "haiku45nt": {
+     "2mf": 0.4839,
+     "irtu": 0.1874,
+     "lnb": 0.2268
+    },
+    "haiku45": {
+     "2mf": 0.5282,
+     "irtu": 0.4849,
+     "lnb": 0.5093
+    }
+   }
+  },
+  {
+   "context": "ݺݹݸ",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "opus55": [
+     0,
+     1
+    ],
+    "haiku45nt": [
+     1,
+     2
+    ],
+    "haiku45": [
+     0,
+     1
+    ],
+    "grok46": [
+     2,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.0735,
+     "irtu": 0.039,
+     "lnb": 0.0653
+    },
+    "haiku45nt": {
+     "2mf": 0.4508,
+     "irtu": 0.4338,
+     "lnb": 0.4609
+    },
+    "haiku45": {
+     "2mf": 0.4221,
+     "irtu": 0.3474,
+     "lnb": 0.3035
+    }
+   }
+  },
+  {
+   "context": "ߑߐߏߎߍߌߋߊ",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     1,
+     2
+    ],
+    "grok46": [
+     2,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.1144,
+     "irtu": 0.0951,
+     "lnb": 0.2178
+    },
+    "haiku45nt": {
+     "2mf": 0.5742,
+     "irtu": 0.5109,
+     "lnb": 0.4955
+    },
+    "haiku45": {
+     "2mf": 0.67,
+     "irtu": 0.6771,
+     "lnb": 0.1848
+    }
+   }
+  },
+  {
+   "context": "ᄇᄈᄉᄊᄌᄍ",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ],
+    "gemini38flash": [
+     0,
+     1
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.2326,
+     "irtu": 0.147,
+     "lnb": 0.0558
+    },
+    "haiku45nt": {
+     "2mf": 0.4757,
+     "irtu": 0.1824,
+     "lnb": 0.2854
+    },
+    "haiku45": {
+     "2mf": 0.5042,
+     "irtu": 0.4608,
+     "lnb": 0.4574
+    }
+   }
+  },
+  {
+   "context": "ላሌልሎሏ",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.3011,
+     "irtu": 0.2111,
+     "lnb": 0.2419
+    },
+    "haiku45nt": {
+     "2mf": 0.4839,
+     "irtu": 0.1874,
+     "lnb": 0.2606
+    },
+    "haiku45": {
+     "2mf": 0.5282,
+     "irtu": 0.4849,
+     "lnb": 0.6806
+    }
+   }
+  },
+  {
+   "context": "ᐐᐒᐔᐗᐙᐛᐝ",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.2674,
+     "irtu": 0.1965,
+     "lnb": 0.1214
+    },
+    "haiku45nt": {
+     "2mf": 0.6103,
+     "irtu": 0.2266,
+     "lnb": 0.2526
+    },
+    "haiku45": {
+     "2mf": 0.7458,
+     "irtu": 0.7521,
+     "lnb": 0.4495
+    }
+   }
+  },
+  {
+   "context": "ᖰᖱᖲᖳ",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "haiku45": [
+     0,
+     1
+    ],
+    "grok46": [
+     3,
+     3
+    ],
+    "gemini38flash": [
+     0,
+     1
+    ],
+    "gemini31pro": [
+     0,
+     1
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.0786,
+     "irtu": 0.0337,
+     "lnb": 0.0324
+    },
+    "haiku45nt": {
+     "2mf": 0.4278,
+     "irtu": 0.1666,
+     "lnb": 0.1958
+    },
+    "haiku45": {
+     "2mf": 0.408,
+     "irtu": 0.3441,
+     "lnb": 0.2769
+    }
+   }
+  },
+  {
+   "context": "↡↢↣",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     1,
+     2
+    ],
+    "haiku45": [
+     1,
+     1
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.3134,
+     "irtu": 0.2507,
+     "lnb": 0.4345
+    },
+    "haiku45nt": {
+     "2mf": 0.6289,
+     "irtu": 0.5538,
+     "lnb": 0.5045
+    },
+    "haiku45": {
+     "2mf": 0.7776,
+     "irtu": 0.7921,
+     "lnb": 0.6601
+    }
+   }
+  },
+  {
+   "context": "␜␝␞␟",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "haiku45": [
+     0,
+     1
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.2539,
+     "irtu": 0.1635,
+     "lnb": 0.2169
+    },
+    "haiku45nt": {
+     "2mf": 0.4769,
+     "irtu": 0.1833,
+     "lnb": 0.2519
+    },
+    "haiku45": {
+     "2mf": 0.5101,
+     "irtu": 0.4099,
+     "lnb": 0.4532
+    }
+   }
+  },
+  {
+   "context": "┧┨┩",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.2674,
+     "irtu": 0.1965,
+     "lnb": 0.1964
+    },
+    "haiku45nt": {
+     "2mf": 0.6103,
+     "irtu": 0.2266,
+     "lnb": 0.2277
+    },
+    "haiku45": {
+     "2mf": 0.7458,
+     "irtu": 0.7521,
+     "lnb": 0.5961
+    }
+   }
+  },
+  {
+   "context": "❄❅❆",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     1,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "haiku45": [
+     0,
+     1
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.3985,
+     "irtu": 0.31,
+     "lnb": 0.3217
+    },
+    "haiku45nt": {
+     "2mf": 0.6349,
+     "irtu": 0.2349,
+     "lnb": 0.2425
+    },
+    "haiku45": {
+     "2mf": 0.7934,
+     "irtu": 0.7132,
+     "lnb": 0.6107
+    }
+   }
+  },
+  {
+   "context": "➌④",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     1,
+     2
+    ],
+    "grok46": [
+     2,
+     3
+    ],
+    "gemini38flash": [
+     0,
+     1
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.0905,
+     "irtu": 0.0719,
+     "lnb": 0.165
+    },
+    "haiku45nt": {
+     "2mf": 0.4546,
+     "irtu": 0.4412,
+     "lnb": 0.4047
+    },
+    "haiku45": {
+     "2mf": 0.4318,
+     "irtu": 0.4088,
+     "lnb": 0.398
+    }
+   }
+  },
+  {
+   "context": "⡆⡅⡄⡃⡂⡁⡀",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "haiku45": [
+     0,
+     1
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.2539,
+     "irtu": 0.1635,
+     "lnb": 0.0946
+    },
+    "haiku45nt": {
+     "2mf": 0.4769,
+     "irtu": 0.1833,
+     "lnb": 0.1634
+    },
+    "haiku45": {
+     "2mf": 0.5101,
+     "irtu": 0.4099,
+     "lnb": 0.4779
+    }
+   }
+  },
+  {
+   "context": "⢳⢴",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "opus55": [
+     0,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.1979,
+     "irtu": 0.0872,
+     "lnb": 0.1155
+    },
+    "haiku45nt": {
+     "2mf": 0.4739,
+     "irtu": 0.1812,
+     "lnb": 0.172
+    },
+    "haiku45": {
+     "2mf": 0.4964,
+     "irtu": 0.4538,
+     "lnb": 0.55
+    }
+   }
+  },
+  {
+   "context": "⣛⣚",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "opus55": [
+     0,
+     1
+    ],
+    "haiku45nt": [
+     2,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.2316,
+     "irtu": 0.1214,
+     "lnb": 0.1825
+    },
+    "haiku45nt": {
+     "2mf": 0.4817,
+     "irtu": 0.7829,
+     "lnb": 0.6742
+    },
+    "haiku45": {
+     "2mf": 0.5131,
+     "irtu": 0.4774,
+     "lnb": 0.6311
+    }
+   }
+  },
+  {
+   "context": "⣜⣝",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "opus55": [
+     0,
+     1
+    ],
+    "haiku45nt": [
+     2,
+     2
+    ],
+    "grok46": [
+     2,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.0974,
+     "irtu": 0.0607,
+     "lnb": 0.0915
+    },
+    "haiku45nt": {
+     "2mf": 0.4613,
+     "irtu": 0.7739,
+     "lnb": 0.6364
+    },
+    "haiku45": {
+     "2mf": 0.445,
+     "irtu": 0.4323,
+     "lnb": 0.5143
+    }
+   }
+  },
+  {
+   "context": "⧯⧰⧱",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "opus55": [
+     0,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.1979,
+     "irtu": 0.0872,
+     "lnb": 0.0282
+    },
+    "haiku45nt": {
+     "2mf": 0.4739,
+     "irtu": 0.1812,
+     "lnb": 0.2054
+    },
+    "haiku45": {
+     "2mf": 0.4964,
+     "irtu": 0.4538,
+     "lnb": 0.3558
+    }
+   }
+  },
+  {
+   "context": "⧱⧰",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "opus55": [
+     0,
+     1
+    ],
+    "haiku45nt": [
+     1,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.2144,
+     "irtu": 0.1044,
+     "lnb": 0.0436
+    },
+    "haiku45nt": {
+     "2mf": 0.4789,
+     "irtu": 0.4656,
+     "lnb": 0.4544
+    },
+    "haiku45": {
+     "2mf": 0.5058,
+     "irtu": 0.4669,
+     "lnb": 0.4147
+    }
+   }
+  },
+  {
+   "context": "⧲⧱",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "opus55": [
+     0,
+     1
+    ],
+    "haiku45nt": [
+     2,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.2316,
+     "irtu": 0.1214,
+     "lnb": 0.066
+    },
+    "haiku45nt": {
+     "2mf": 0.4817,
+     "irtu": 0.7829,
+     "lnb": 0.7188
+    },
+    "haiku45": {
+     "2mf": 0.5131,
+     "irtu": 0.4774,
+     "lnb": 0.4728
+    }
+   }
+  },
+  {
+   "context": "⸫⸪⸩⸨",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "opus55": [
+     0,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     2,
+     3
+    ],
+    "gemini38flash": [
+     1,
+     1
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.1188,
+     "irtu": 0.0744,
+     "lnb": 0.1733
+    },
+    "haiku45nt": {
+     "2mf": 0.4605,
+     "irtu": 0.1802,
+     "lnb": 0.179
+    },
+    "haiku45": {
+     "2mf": 0.4567,
+     "irtu": 0.4483,
+     "lnb": 0.4413
+    }
+   }
+  },
+  {
+   "context": "ㅪㅩㅨㅧㅦㅥ",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     2,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.0918,
+     "irtu": 0.0772,
+     "lnb": 0.0893
+    },
+    "haiku45nt": {
+     "2mf": 0.3959,
+     "irtu": 0.1672,
+     "lnb": 0.2432
+    },
+    "haiku45": {
+     "2mf": 0.38,
+     "irtu": 0.3926,
+     "lnb": 0.2819
+    }
+   }
+  },
+  {
+   "context": "㈽㈾㈿㉀㉁㉂㉃",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     6,
+     6
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.4586,
+     "irtu": 0.2752,
+     "lnb": 0.473
+    },
+    "haiku45nt": {
+     "2mf": 0.5009,
+     "irtu": 0.1929,
+     "lnb": 0.2774
+    },
+    "haiku45": {
+     "2mf": 0.5812,
+     "irtu": 0.5111,
+     "lnb": 0.5925
+    }
+   }
+  },
+  {
+   "context": "㉀㉁㉂㉃㉄㉅㉆㉇",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.3011,
+     "irtu": 0.2111,
+     "lnb": 0.3245
+    },
+    "haiku45nt": {
+     "2mf": 0.4839,
+     "irtu": 0.1874,
+     "lnb": 0.2463
+    },
+    "haiku45": {
+     "2mf": 0.5282,
+     "irtu": 0.4849,
+     "lnb": 0.483
+    }
+   }
+  },
+  {
+   "context": "㎅㎆㎇",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     2,
+     2
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.2151,
+     "irtu": 0.1737,
+     "lnb": 0.209
+    },
+    "haiku45nt": {
+     "2mf": 0.4477,
+     "irtu": 0.1818,
+     "lnb": 0.2921
+    },
+    "haiku45": {
+     "2mf": 0.4673,
+     "irtu": 0.4591,
+     "lnb": 0.5098
+    }
+   }
+  },
+  {
+   "context": "㎓㎔",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.3011,
+     "irtu": 0.2111,
+     "lnb": 0.2814
+    },
+    "haiku45nt": {
+     "2mf": 0.4839,
+     "irtu": 0.1874,
+     "lnb": 0.3133
+    },
+    "haiku45": {
+     "2mf": 0.5282,
+     "irtu": 0.4849,
+     "lnb": 0.5803
+    }
+   }
+  },
+  {
+   "context": "㎻㎺㎹㎸",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "opus55": [
+     0,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     2,
+     3
+    ],
+    "gemini38flash": [
+     0,
+     1
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.0532,
+     "irtu": 0.0282,
+     "lnb": 0.0943
+    },
+    "haiku45nt": {
+     "2mf": 0.3652,
+     "irtu": 0.1598,
+     "lnb": 0.2574
+    },
+    "haiku45": {
+     "2mf": 0.3366,
+     "irtu": 0.3592,
+     "lnb": 0.3934
+    }
+   }
+  },
+  {
+   "context": "꜊꜈",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     1,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.329,
+     "irtu": 0.2579,
+     "lnb": 0.3914
+    },
+    "haiku45nt": {
+     "2mf": 0.4892,
+     "irtu": 0.4802,
+     "lnb": 0.5299
+    },
+    "haiku45": {
+     "2mf": 0.5399,
+     "irtu": 0.5039,
+     "lnb": 0.6681
+    }
+   }
+  },
+  {
+   "context": "꜋꜊꜉꜈꜇",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ],
+    "gemini38flash": [
+     0,
+     1
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.2326,
+     "irtu": 0.147,
+     "lnb": 0.2171
+    },
+    "haiku45nt": {
+     "2mf": 0.4757,
+     "irtu": 0.1824,
+     "lnb": 0.2471
+    },
+    "haiku45": {
+     "2mf": 0.5042,
+     "irtu": 0.4608,
+     "lnb": 0.5475
+    }
+   }
+  },
+  {
+   "context": "꜓꜔꜕꜖",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.3011,
+     "irtu": 0.2111,
+     "lnb": 0.301
+    },
+    "haiku45nt": {
+     "2mf": 0.4839,
+     "irtu": 0.1874,
+     "lnb": 0.2661
+    },
+    "haiku45": {
+     "2mf": 0.5282,
+     "irtu": 0.4849,
+     "lnb": 0.607
+    }
+   }
+  },
+  {
+   "context": "𐡡𐡠𐡟𐡞𐡝𐡛",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     1,
+     2
+    ],
+    "haiku45": [
+     0,
+     1
+    ],
+    "grok46": [
+     2,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.0965,
+     "irtu": 0.0779,
+     "lnb": 0.0792
+    },
+    "haiku45nt": {
+     "2mf": 0.4544,
+     "irtu": 0.439,
+     "lnb": 0.3474
+    },
+    "haiku45": {
+     "2mf": 0.4334,
+     "irtu": 0.3591,
+     "lnb": 0.3355
+    }
+   }
+  },
+  {
+   "context": "𐡹𐡺𐡻𐡼",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "opus55": [
+     0,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "haiku45": [
+     0,
+     1
+    ],
+    "grok46": [
+     2,
+     3
+    ],
+    "gemini38flash": [
+     0,
+     1
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.0412,
+     "irtu": 0.0216,
+     "lnb": 0.045
+    },
+    "haiku45nt": {
+     "2mf": 0.3217,
+     "irtu": 0.1531,
+     "lnb": 0.147
+    },
+    "haiku45": {
+     "2mf": 0.2911,
+     "irtu": 0.291,
+     "lnb": 0.2054
+    }
+   }
+  },
+  {
+   "context": "𒐉𒐊𒐋𒐌𒐍",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "opus55": [
+     0,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     2,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.0684,
+     "irtu": 0.038,
+     "lnb": 0.0667
+    },
+    "haiku45nt": {
+     "2mf": 0.3873,
+     "irtu": 0.1642,
+     "lnb": 0.2006
+    },
+    "haiku45": {
+     "2mf": 0.3644,
+     "irtu": 0.3782,
+     "lnb": 0.3522
+    }
+   }
+  },
+  {
+   "context": "𝂠𝂢𝂤𝂦𝂨𝂪𝂬𐂮",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.3011,
+     "irtu": 0.2111,
+     "lnb": 0.2707
+    },
+    "haiku45nt": {
+     "2mf": 0.4839,
+     "irtu": 0.1874,
+     "lnb": 0.2688
+    },
+    "haiku45": {
+     "2mf": 0.5282,
+     "irtu": 0.4849,
+     "lnb": 0.6811
+    }
+   }
+  },
+  {
+   "context": "𝍠𝍢𝍤𝍦𝍨",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.3011,
+     "irtu": 0.2111,
+     "lnb": 0.3021
+    },
+    "haiku45nt": {
+     "2mf": 0.4839,
+     "irtu": 0.1874,
+     "lnb": 0.2741
+    },
+    "haiku45": {
+     "2mf": 0.5282,
+     "irtu": 0.4849,
+     "lnb": 0.456
+    }
+   }
+  },
+  {
+   "context": "𝞟𝞠𝞡𝞢𝞣",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "opus55": [
+     0,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.1979,
+     "irtu": 0.0872,
+     "lnb": 0.1819
+    },
+    "haiku45nt": {
+     "2mf": 0.4739,
+     "irtu": 0.1812,
+     "lnb": 0.1619
+    },
+    "haiku45": {
+     "2mf": 0.4964,
+     "irtu": 0.4538,
+     "lnb": 0.3133
+    }
+   }
+  },
+  {
+   "context": "𝞠𝞡𝞢",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "opus55": [
+     0,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     2,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.0684,
+     "irtu": 0.038,
+     "lnb": 0.0769
+    },
+    "haiku45nt": {
+     "2mf": 0.3873,
+     "irtu": 0.1642,
+     "lnb": 0.1284
+    },
+    "haiku45": {
+     "2mf": 0.3644,
+     "irtu": 0.3782,
+     "lnb": 0.1955
+    }
+   }
+  },
+  {
+   "context": "𝞡𝞢𝞣𝞤",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "opus55": [
+     0,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "haiku45": [
+     0,
+     1
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.1715,
+     "irtu": 0.0709,
+     "lnb": 0.1459
+    },
+    "haiku45nt": {
+     "2mf": 0.4679,
+     "irtu": 0.1784,
+     "lnb": 0.1533
+    },
+    "haiku45": {
+     "2mf": 0.4829,
+     "irtu": 0.3881,
+     "lnb": 0.2621
+    }
+   }
+  },
+  {
+   "context": "🀠🀟🀞🀝🀜🀛🀚🀙",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "opus55": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.5405,
+     "irtu": 0.6741,
+     "lnb": 0.4297
+    },
+    "haiku45nt": {
+     "2mf": 0.507,
+     "irtu": 0.2104,
+     "lnb": 0.3033
+    },
+    "haiku45": {
+     "2mf": 0.6021,
+     "irtu": 0.6011,
+     "lnb": 0.5311
+    }
+   }
+  },
+  {
+   "context": "🀡🀞🀛",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "opus55": [
+     1,
+     1
+    ],
+    "haiku45nt": [
+     1,
+     2
+    ],
+    "haiku45": [
+     0,
+     1
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.517,
+     "irtu": 0.6619,
+     "lnb": 0.4057
+    },
+    "haiku45nt": {
+     "2mf": 0.5051,
+     "irtu": 0.5153,
+     "lnb": 0.5487
+    },
+    "haiku45": {
+     "2mf": 0.5958,
+     "irtu": 0.5272,
+     "lnb": 0.4816
+    }
+   }
+  },
+  {
+   "context": "🕨🕩🕪🕫🕬",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "grok46": [
+     3,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.3011,
+     "irtu": 0.2111,
+     "lnb": 0.2349
+    },
+    "haiku45nt": {
+     "2mf": 0.4839,
+     "irtu": 0.1874,
+     "lnb": 0.2284
+    },
+    "haiku45": {
+     "2mf": 0.5282,
+     "irtu": 0.4849,
+     "lnb": 0.6007
+    }
+   }
+  },
+  {
+   "context": "🞙🞘🞗🞖",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "opus55": [
+     0,
+     1
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "haiku45": [
+     0,
+     1
+    ],
+    "grok46": [
+     2,
+     3
+    ],
+    "gemini38flash": [
+     0,
+     1
+    ],
+    "gemini31pro": [
+     0,
+     1
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.0183,
+     "irtu": 0.0091,
+     "lnb": 0.0313
+    },
+    "haiku45nt": {
+     "2mf": 0.2303,
+     "irtu": 0.1392,
+     "lnb": 0.1664
+    },
+    "haiku45": {
+     "2mf": 0.1939,
+     "irtu": 0.2381,
+     "lnb": 0.3526
+    }
+   }
+  },
+  {
+   "context": "🬫🬬",
+   "answers_so_far_incl_p001": {
+    "sonnet55": [
+     0,
+     3
+    ],
+    "haiku45nt": [
+     0,
+     2
+    ],
+    "haiku45": [
+     0,
+     2
+    ],
+    "grok46": [
+     2,
+     3
+    ]
+   },
+   "p_stop": {
+    "opus55": {
+     "2mf": 0.0505,
+     "irtu": 0.0419,
+     "lnb": 0.0487
+    },
+    "haiku45nt": {
+     "2mf": 0.3069,
+     "irtu": 0.1533,
+     "lnb": 0.1382
+    },
+    "haiku45": {
+     "2mf": 0.2819,
+     "irtu": 0.2616,
+     "lnb": 0.2929
+    }
+   }
+  }
+ ]
+}
