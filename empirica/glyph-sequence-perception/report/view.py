@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""A read-off (concern 5): the catalog's default view (CATALOG §11), written to CATALOG-VIEW.md beside BEST.md.
+"""A read-off (concern 5): perceived orders, the catalog's view, written to CATALOG-VIEW.md beside BEST.md.
+
+Since 2026-10-06 (catalog build 6) it leads with the runs whose ORDER the minds are shown to perceive: recognised by the
+catalog, beyond their own shuffled glyphs (the paired contrast), with no relation to a given, and with no code-point
+order (monotone, rotated or interleaved) that the encoding could supply. Every other recognised run follows, by reason.
+Joseph: "It's become very difficult to find any interesting / meaningful sequences"; "so many of these are basically
+just snippets of the unicode spec". The earlier design below is kept as history.
 
 It reads the catalog as loaded into Postgres (schema `catalog`, the latest build) and renders §11's groups as the
 build computed them (`catalog/build.py`: view_group, route_state). It decides nothing of its own: every verdict on the
@@ -68,103 +74,96 @@ def splits(cs):
     firm = sum(1 for s in cs if (s.get("certainty") or 0) >= 0.9)
     return f"{len(cs)} ({firm} firm)" if cs else "–"
 
+def pair_cell(pr):
+    if not pr:
+        return "–"
+    return f"{pr['own'][0]}/{pr['own'][1]} vs {pr['shuffles'][0]}/{pr['shuffles'][1]}"
+
+def reason(r):
+    """why a recognised run is not on the perceived list (the first that applies), or None"""
+    if r["given_kind"]:
+        return "given"
+    if r["code_order"] and r["code_order"] != "none":
+        return "encoded:" + r["code_order"]
+    if not r["paired"]:
+        return "shuffles never asked"
+    if r["paired"]["lb"] <= 0:
+        return "not beyond its own shuffles"
+    return None
+
+REASONS = [("given", "Related to a given", "an alphabet or number line in some dress, or one glyph across dresses (single-dress given walks are on `CATALOG-GIVEN.md`)"),
+           ("encoded:monotone", "Order supplied by the encoding: code points monotone", "every step up, or every step down, in code points: the code chart's own order"),
+           ("encoded:rotated", "Order supplied by the encoding: a rotated code-point order", "monotone after one wrap (a cycle encoded in order: clocks, zodiac, a block's end back to its start); counted from 5 glyphs"),
+           ("encoded:interleaved", "Order supplied by the encoding: two code-point orders interleaved", "alternate glyphs form two monotone code-point orders in one direction (hours and half-hours, two cases of an alphabet); counted from 6 glyphs"),
+           ("not beyond its own shuffles", "Not beyond its own shuffles", "the minds call the same glyphs coherent in other orders about as often: the set coheres, the order isn't shown to"),
+           ("shuffles never asked", "Its own shuffles never asked", "recognised against pooled controls only")]
+
+def table(L, rs, whole, numbered=True):
+    L += ["| # | run | n | bytes | own vs its shuffles | order ≥ | R | BF | yes/n | weakest | splits | BEST |",
+          "|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    for i, r in enumerate(rs, 1):
+        w = whole.get(key(r["glyphs"]))
+        bv = {"beyond": "recognised", "below": "rejected", None: "undecided"}[w["verdict"]] if w else "–"
+        lb = num(r["paired"]["lb"]) if r["paired"] else "–"
+        L.append(f"| {i} | {code(''.join(BE.shown_order(list(r['glyphs']))))} | {r['length']} | {BE.us(r['glyphs']):.1f} | "
+                 f"{pair_cell(r['paired'])} | {lb} | {num(r['r_strength'])} ± {num(r['r_sd'], '{:.2f}')} | {bf(r['r_bf'])} | "
+                 f"{fams(r['r_families'])} | {r['weakest_link'] if r['weakest_link'] is not None else '–'} | {splits(r['content_splits'])} | {bv} |")
+    L.append("")
+
 def main():
     man = q("select doc from catalog.manifest")
     man = man[0] if man else {}
     rows = q("select row_to_json(r) from (select glyphs, length, chart_class, sources, r_strength, r_sd, r_bf, r_families, "
              "recognised, chart_state, name_state, view, contested, contested_asked, weakest_link, o_strength, o_bf, "
-             "content_splits, given_kind, given_walk from catalog.records) r")
+             "content_splits, given_kind, given_walk, paired, code_order from catalog.records) r")
     bfc = man.get("params", {}).get("BF_CERTAIN", 10.0)
-
-    # BEST's verdicts on the same answers as they stand now (the catalog's build may be a round older: see the header)
-    recs = TR.load()
+    recs = TR.load()                                 # BEST's verdicts, on the answers as they stand now
     Tp = TR.Tree(recs, seeds=False)
     whole = BE.wholes(Tp)
 
+    rec = [r for r in rows if r["recognised"]]
+    perceived = [r for r in rec if reason(r) is None]
+    perceived.sort(key=lambda r: (-r["paired"]["lb"], -r["length"], r["glyphs"]))
+    by_reason = collections.defaultdict(list)
+    for r in rec:
+        if reason(r):
+            by_reason[reason(r)].append(r)
+
     cat = {key(r["glyphs"]): r for r in rows}
     asked = {k: r for k, r in cat.items() if "asked whole" in (r.get("sources") or [])}
-    groups = collections.defaultdict(list)
-    given_rec = [r for r in rows if r["recognised"] and r["given_walk"]]
-    for r in rows:
-        if r["recognised"] and not r["given_walk"]:       # given walks are on CATALOG-GIVEN.md (Joseph, 2026-10-06)
-            groups[r["view"]].append(r)
-    n_rec = sum(len(v) for v in groups.values())
-    name_states = collections.Counter(r["name_state"] for r in rows)
-    o_only = sum(1 for r in rows if not r["recognised"] and (r["o_bf"] or 0) >= bfc and (r["o_strength"] or 0) > 0)
-
-    # reconciliation, over runs asked whole
     best_rec = {k for k, w in whole.items() if w["verdict"] == "beyond"}
     cat_rec = {k for k, r in asked.items() if r["recognised"]}
-    both = best_rec & cat_rec
-    best_only = best_rec - cat_rec
-    cat_only = cat_rec - best_rec
-    not_in_cat = {k for k in best_rec if k not in asked}
 
-    def why_best_only(k):
-        r = asked.get(k)
-        if r is None:
-            return "not a catalog record asked whole"
-        if r["r_bf"] is None:
-            return "catalog has no R (no rater with controls)"
-        if (r["r_strength"] or 0) <= 0:
-            return "catalog strength ≤ 0"
-        if r["r_bf"] < 3:
-            return "catalog BF < 3"
-        return f"catalog BF 3–{bfc:g}"
-    reasons = collections.Counter(why_best_only(k) for k in best_only)
-    def why_cat_only(k):
-        w = whole.get(k)
-        if w is None:
-            return "BEST has no whole-run entry"
-        return "BEST rejects" if w["verdict"] == "below" else "BEST undecided"
-    reasons_c = collections.Counter(why_cat_only(k) for k in cat_only)
-
-    L = ["# The catalog's default view", "",
-         f"*Generated by `report/view.py` from the catalog in Postgres: build `{man.get('build', '?')}`, model `{man.get('model', '?')}`, finished {man.get('finished', '?')}, {man.get('counts', {}).get('answers', '?')} answers, sealed answers dropped {man.get('sealed_dropped', '?')}. A read-off: nothing reads it back. This is CATALOG §11's default view, the groups as the catalog's build computed them. It stands **beside** `BEST.md` and doesn't replace it yet, for the reasons under *Where the view stands*. The BEST column is BEST's own verdict on the answers as they stood when this page was written, which may be a round newer than the build.*", "",
-         "## Where the view stands", "",
-         f"**{n_rec} runs recognised** by the catalog (R, whole-run recognition beyond shuffled controls, Bayes factor ≥ {bfc:g} with positive strength) that aren't walks over a given, of {len(rows)} records. Another **{len(given_rec)}** recognised runs walk a given (an alphabet or a number line in one dress: windows, rotations, strides…); they are on `CATALOG-GIVEN.md` (Joseph: *\"we'll focus on probing things that aren't given, and focus CATALOG-VIEW.md on things that aren't given\"*).", "",
-         "| group | meaning | runs |", "|---|---|---|"]
-    for g in GROUPS:
-        L.append(f"| {g} | {GROUP_TEXT[g]} | {len(groups.get(g, []))} |")
-    L += ["",
-          "**What limits it now** (each computed from this build):", "",
-          f"- **The name route is not measured.** Name route states on all {len(rows)} records: " + ", ".join(f"{s} {n}" for s, n in name_states.most_common()) + ". The build holds it at \"unmeasured\" until the name-only question is validated (CATALOG §7a), so groups 1, 2 and 5 cannot be reached, and nearly every recognised run lands in group 6. This is the main thing between this view and a useful one.",
-          f"- **\"Recognised\" is R alone.** §11 says R, O or L beyond its contrast. Counting O as built would add {o_only} records not recognised by R. That is about {o_only / max(n_rec, 1):.0f} times R's count, large enough that O's certainty needs checking before it can recognise anything (it is agreement of triad and order answers against chance, the build's stand-in for Plackett–Luce). L isn't counted either.",
-          "- **R's combination rule is under review.** In the family-disagreement spike, a logit model with a criterion and a slope per mind, controls treated as items, beat this build's Abbott model on held-out cohere answers. Two independent verifications reproduced that comparison (`spikes/family-disagreement-2026-10-06/de-novo-feedback-2.md`); the second found the model still lacks a mind × item term, so it isn't in the catalog yet.", "",
-          "## Beside BEST", "",
-          f"Both decide the same thing, a run asked whole, by different standards. BEST: per family, the yes rate against the family's shuffled rate, families averaged with equal weight, 90% one-sided. The catalog: per rater against its controls by chart class (Abbott), families weighted by their discrimination, Bayes factor ≥ {bfc:g}.", "",
-          "| | runs |", "|---|---|",
-          f"| asked whole (catalog records) | {len(asked)} |",
-          f"| asked whole (BEST) | {len(whole)} |",
-          f"| recognised by both | {len(both)} |",
-          f"| by BEST only | {len(best_only)} |",
-          f"| by the catalog only | {len(cat_only)} |", ""]
-    if best_only:
-        L += ["*BEST only, by the catalog's reading:* " + "; ".join(f"{r} {n}" for r, n in reasons.most_common()) + ".", ""]
-    if cat_only:
-        L += ["*Catalog only, by BEST's reading:* " + "; ".join(f"{r} {n}" for r, n in reasons_c.most_common()) + ".", ""]
-    L += ["## The groups", "",
-          "*Each group ordered by length, then by R's 90% lower bound (strength − 1.28 sd). **bytes**: the mean UTF-8 length of the run's glyphs (1 = ASCII … 4 = astral planes; BEST's *us*). **R**: the catalog's strength on the identified scale (the excess yes rate beyond the controls), ± sd. **BF**: its Bayes factor. **yes/n**: per family. **chart**: the chart route's state; contested positions asked / contested. **weakest**: the weakest link state on the run (CATALOG §8: 1 evidence at the link's full context; 2 stable at a suffix; 3 at a suffix only, lengthening untested; 4 picks beyond 8 glyphs; 5 none). **splits**: links where families' most named continuations differ (firm: certainty ≥ 0.9). **O**: order agreement's strength and Bayes factor (not used for recognition in this build). **BEST**: BEST's verdict on the same run.*", ""]
-    for g in GROUPS:
-        rs = groups.get(g, [])
-        L += [f"### {g} ({len(rs)})", ""]
-        if not rs:
-            L += ["*None in this build.*", ""]
-            continue
-        rs.sort(key=lambda r: (-r["length"], -((r["r_strength"] or 0) - 1.2816 * (r["r_sd"] or 0)), r["glyphs"]))
-        L += ["| # | run | n | bytes | class | R | BF | yes/n | chart | weakest | splits | O | BEST |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
-        for i, r in enumerate(rs, 1):
-            w = whole.get(key(r["glyphs"]))
-            bv = {"beyond": "recognised", "below": "rejected", None: "undecided"}[w["verdict"]] if w else "–"
-            ca = f"{r['chart_state']} {r['contested_asked']}/{r['contested']}" if r["contested"] else r["chart_state"]
-            o = f"{num(r['o_strength'])} ({bf(r['o_bf'])})" if r["o_strength"] is not None else "–"
-            L.append(f"| {i} | {code(''.join(BE.shown_order(list(r['glyphs']))))} | {r['length']} | {BE.us(r['glyphs']):.1f} | {r['chart_class']} | "
-                     f"{num(r['r_strength'])} ± {num(r['r_sd'], '{:.2f}')} | {bf(r['r_bf'])} | {fams(r['r_families'])} | {ca} | "
-                     f"{r['weakest_link'] if r['weakest_link'] is not None else '–'} | {splits(r['content_splits'])} | {o} | {bv} |")
-        L.append("")
+    L = ["# Perceived orders: the catalog's view", "",
+         f"*Generated by `report/view.py` from the catalog in Postgres: build `{man.get('build', '?')}`, model `{man.get('model', '?')}`, finished {man.get('finished', '?')}, {man.get('counts', {}).get('answers', '?')} answers, sealed answers dropped {man.get('sealed_dropped', '?')}. A read-off: nothing reads it back. The BEST column is BEST's own verdict on the answers as they stood when this page was written.*", "",
+         "## What this page shows", "",
+         "Runs whose **order** the minds perceive, as far as the data can tell it apart from two things that look the same in a yes/no answer (Joseph, 2026-10-06: *\"so many of these are basically just snippets of the unicode spec\"*; *\"they believe this is a meaningful sequence??\"* of `1₁𝟷𝟏𝟙⓵➊¹①⑴🯱𝟭➀１⒈𝟣❶🄂`):", "",
+         "- **A set that coheres in any order.** The catalog's recognition (R) compares a run's \"yes, coherent\" rate with *pooled* control rates, so eighteen ones, or a block of related symbols, pass it in any order. Here a run must also beat **its own glyphs shuffled** (its paired controls, asked beside it): the 90% lower bound of own − shuffles above zero (**order ≥**).",
+         "- **An order the encoding supplies.** A run whose code points are monotone, monotone after one wrap, or two monotone orders interleaved can be called coherent by reading the code chart, without perceiving anything. Those are listed below by kind, not here. Real orders Unicode happens to encode in order (zodiac, moon phases, clock faces) fall there too: from these answers, perceiving them can't be told apart from reading the chart.",
+         "- **The givens.** A run related to an alphabet or number line, in any dress (Joseph: *\"all the different encodings of essentially the same alphabet and digits ... a whole world that we can just call 'given'\"*).", "",
+         f"Of the {len(rec):,} runs the catalog recognises (R, Bayes factor ≥ {bfc:g}), **{len(perceived):,}** pass all three:", "",
+         "| | runs |", "|---|---|", f"| recognised by the catalog | {len(rec):,} |"]
+    for k, title, _ in REASONS:
+        L.append(f"| {title.lower()} | {len(by_reason.get(k, [])):,} |")
+    L += [f"| **perceived orders** | **{len(perceived):,}** |", "",
+          "*Columns. **bytes**: the mean UTF-8 length of the run's glyphs (1 = ASCII … 4 = astral planes). **own vs its shuffles**: \"yes\"/answers for the run, then for its own glyphs shuffled. **order ≥**: the 90% lower bound of the difference (Jeffreys means). **R**: the catalog's recognition strength against pooled controls ± sd, and **BF** its Bayes factor. **yes/n**: per family. **weakest**: the weakest link state on the run (CATALOG §8: 1 evidence at the link's full context … 5 none). **splits**: links where families' most named continuations differ (firm: certainty ≥ 0.9). **BEST**: BEST's verdict on the same run.*", "",
+          f"## Perceived orders ({len(perceived):,})", "", "*Ordered by **order ≥**, then length.*", ""]
+    table(L, perceived, whole)
+    L += ["## Recognised, but the order isn't shown to be perceived", ""]
+    for k, title, text in REASONS:
+        rs = sorted(by_reason.get(k, []), key=lambda r: (-r["length"], r["glyphs"]))
+        L += [f"### {title} ({len(rs):,})", "", f"*{text[0].upper() + text[1:]}.*", ""]
+        if rs:
+            table(L, rs, whole)
+        else:
+            L += ["*None.*", ""]
+    L += ["## Limits of this build", "",
+          "- **Recognition is R against pooled controls, filtered here by the paired contrast.** CATALOG §9's combination rule is under review: a logit model with a criterion and slope per mind beat it on held-out cohere answers (`spikes/family-disagreement-2026-10-06/`), and isn't in the catalog yet.",
+          "- **The routes.** CATALOG §11's groups (by the chart and name routes) are on every record as `view`; the name route is unmeasured on every record, so nearly all fall in \"undecided\" and the groups don't sort anything yet.",
+          "- **The encoded-order rule** reads code points only. A perceived order that happens to be monotone in code points (most real orders Unicode encodes in sequence) is listed with the encoded ones; the instruments that could separate them (lookalike substitution, the name-only question) haven't decided enough runs yet.",
+          f"- **Beside BEST:** of runs asked whole, BEST recognises {len(best_rec):,}, the catalog {len(cat_rec):,}, both {len(best_rec & cat_rec):,}. BEST also compares against pooled shuffles, so it carries the same set-coherence problem.", ""]
     (ROOT / "CATALOG-VIEW.md").write_text("\n".join(L) + "\n")
-    print(f"CATALOG-VIEW.md: {n_rec} recognised; " + ", ".join(f"{g.split(' ', 1)[1]} {len(groups.get(g, []))}" for g in GROUPS)
-          + f"; beside BEST: both {len(both)}, BEST only {len(best_only)}, catalog only {len(cat_only)}")
+    print(f"CATALOG-VIEW.md: {len(rec)} recognised; perceived {len(perceived)}; " + ", ".join(f"{k} {len(by_reason.get(k, []))}" for k, _, _ in REASONS))
 
 if __name__ == "__main__":
     main()

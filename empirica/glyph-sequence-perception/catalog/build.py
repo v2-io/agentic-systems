@@ -15,6 +15,11 @@ implements part of CATALOG v5 and says which part:
           given relation (window, rotation, stride, across dresses, reflection; which given, how) and given_walk:
           whether it IS a given walk, which needs one dress (Joseph's "same stylistic class"; audit G1).
           Nothing is removed; readers decide what to show (CATALOG-VIEW.md shows runs that aren't given walks).
+          Build 6 (2026-10-06, Joseph: "so many of these are basically just snippets of the unicode spec"): on every
+          record, its order against ITS OWN shuffled controls (paired: own yes/n, its shuffles' yes/n, pooled and per
+          family, and the 90% lower bound of the difference) -- R compares a run with pooled control rates, so a set
+          that is coherent in any order (1 ¹ ① 𝟏) passes it -- and its code-point order (monotone, rotated: monotone
+          after one wrap, interleaved: two monotone halves in one direction, or none): an order the encoding supplies.
           Build 4: content splits on every record -- links where two families' most named continuations differ at
           the deciding context, each family's mode with its counts and the chart's next glyph (facts, no cut).
           Build 3: the rest of §3's candidate inputs as records (the tree's walks, written walks, BEST's strongest
@@ -50,7 +55,7 @@ import best as BE                                   # noqa: E402  strongest_path
 import tree as TR                                   # noqa: E402
 import plan as PL                                   # noqa: E402  block()
 
-MODEL = "catalog-v5-build5"
+MODEL = "catalog-v5-build6"
 SEAL_FILE = ROOT / "audits" / "SEAL-canary-choose-2026-10-06.md"
 CANARY = set("▁▂▃▄▅▆▇█🮆🮅🮄▀🮃🮂▔▉")
 PARAMS = {                                           # every one chosen without evidence (CATALOG §13 freezes them)
@@ -173,6 +178,61 @@ def r_part(recs):
             g = canonical(r["context"])
             runs[g][rt][0] += y; runs[g][rt][1] += 1; aids[g].append(r["aid"])
     return runs, aids, ctl, fam_of
+
+def paired_part(recs):
+    """per real run (canonical): its own cohere answers and its OWN shuffled controls' (source.of), (yes, n), pooled
+    over raters and per family. A run is recognised as an ORDER only when its own order beats its own glyphs shuffled."""
+    own = collections.defaultdict(lambda: collections.defaultdict(lambda: [0, 0]))
+    shuf = collections.defaultdict(lambda: collections.defaultdict(lambda: [0, 0]))
+    for r in recs:
+        if r["kind"] != "cohere" or r.get("outcome") not in ("yes", "no", "cant-tell"):
+            continue
+        t = r.get("tags") or {}; s = r.get("source") or {}
+        y = 1 if r["outcome"] == "yes" else 0
+        if t.get("control") == "shuffled":
+            of = s.get("of") or t.get("of")
+            if of:
+                c = shuf[canonical(of)][r["family"]]; c[0] += y; c[1] += 1
+        elif not t.get("control"):
+            c = own[canonical(r["context"])][r["family"]]; c[0] += y; c[1] += 1
+    return own, shuf
+
+def paired_record(g, own, shuf):
+    """-> {"own": [y, n], "shuffles": [y, n], "families": {f: {...}}, "lb": 90% lower bound of own - shuffles}, the
+    study's standard (Jeffreys means, normal approximation, one-sided 90%); None where the shuffles were never asked"""
+    o, sh = own.get(g, {}), shuf.get(g, {})
+    oy, on = sum(v[0] for v in o.values()), sum(v[1] for v in o.values())
+    sy, sn = sum(v[0] for v in sh.values()), sum(v[1] for v in sh.values())
+    if not on or not sn:
+        return None
+    mo, ms = (oy + 0.5) / (on + 1), (sy + 0.5) / (sn + 1)
+    sd = math.sqrt(mo * (1 - mo) / (on + 2) + ms * (1 - ms) / (sn + 2))
+    fams = {f: {"own": list(o.get(f, [0, 0])), "shuffles": list(sh.get(f, [0, 0]))} for f in sorted(set(o) | set(sh))}
+    return {"own": [oy, on], "shuffles": [sy, sn], "families": fams, "lb": round(mo - ms - 1.2816 * sd, 4)}
+
+def code_order(g):
+    """whether the encoding supplies the run's order: "monotone" (code points strictly up or down), "rotated" (monotone
+    after one wrap: a cycle encoded in order, 🕙🕚🕛🕐), "interleaved" (two monotone halves, alternate glyphs, in one
+    direction: a b A B, hours and half-hours), or "none"."""
+    cp = [ord(c) for c in g]
+    def mono(x, d=None):
+        ups = all(b > a for a, b in zip(x, x[1:])); downs = all(b < a for a, b in zip(x, x[1:]))
+        return ("up" if ups else "down" if downs else None) if d is None else (ups if d == "up" else downs)
+    def rot(x, d):                                # a rotation counts only from 5 glyphs: a random order of n is a
+        return len(x) >= 5 and any(mono(x[k:] + x[:k], d) for k in range(1, len(x)))   # rotation of a monotone
+                                                  # one with probability 2n/n! (1 at n = 3, 1/3 at 4, 1/12 at 5)
+    if len(cp) < 3:
+        return "none"
+    if mono(cp):
+        return "monotone"
+    if rot(cp, "up") or rot(cp, "down"):
+        return "rotated"
+    if len(cp) >= 6:                              # halves of 3 or more, each monotone (or rotated, from 5) in one direction
+        a, b = cp[0::2], cp[1::2]
+        for d in ("up", "down"):
+            if (mono(a, d) or rot(a, d)) and (mono(b, d) or rot(b, d)):
+                return "interleaved"
+    return "none"
 
 def rater_c(ctl, rt, cls):
     y, n = ctl.get((rt, cls), (0, 0))
@@ -411,6 +471,7 @@ def main():
 
     # records: runs asked whole, ordered seeds, the triad era's grown rows
     runs, raids, ctl, fam_of = r_part(recs)
+    p_own, p_shuf = paired_part(recs)                # build 6
     weights = family_weights(runs, ctl, fam_of)
     manifest["family_weights"] = weights
     sources = collections.defaultdict(set)
@@ -482,6 +543,7 @@ def main():
                      "contested_asked": sum(1 for p in positions if p["ev"] and p["ev"]["n"]),
                      "lookalike": ({k: {"yes": v[0], "n": v[1]} for k, v in la.items()} if la else None),
                      "seed_raters": seed_raters.get(g) or None,
+                     "paired": paired_record(g, p_own, p_shuf), "code_order": code_order(g),
                      "evidence": raids.get(g, [])})
         for p in positions:
             ev = p["ev"] or {}
@@ -561,7 +623,7 @@ def main():
     RC = ["id", "glyphs", "length", "chart_class", "set_class", "sources", "r_strength", "r_sd", "r_bf", "r_families", "recognised",
           "chart_state", "name_state", "view", "contested", "contested_asked", "lookalike", "link_states", "weakest_link", "flips",
           "o_strength", "o_sd", "o_bf", "o_families", "o_other", "seed_raters", "content_splits", "evidence", "o_evidence",
-          "given_kind", "given_id", "given_label", "given_dresses", "given_step", "given_start", "given_walk"]
+          "given_kind", "given_id", "given_label", "given_dresses", "given_step", "given_start", "given_walk", "paired", "code_order"]
     givens = [{"id": g["id"], "kind": g["kind"], "reading": g.get("reading"), "case": g.get("case"), "script": g.get("script"),
                "languages": g.get("languages"), "dress": g.get("dress"), "n": len(g["positions"]), "label": GW.label(g),
                "positions": g["positions"], "vals": g.get("values")} for g in GW.load()[0].values()]
@@ -587,7 +649,7 @@ CREATE TABLE {schema}.records (id text primary key, glyphs text, length int, cha
   weakest_link int, flips int, o_strength double precision, o_sd double precision, o_bf double precision, o_families jsonb,
   o_other jsonb, seed_raters jsonb, content_splits jsonb, evidence jsonb, o_evidence jsonb,
   given_kind text, given_id text, given_label text, given_dresses jsonb, given_step double precision, given_start int,
-  given_walk boolean);
+  given_walk boolean, paired jsonb, code_order text);
 CREATE TABLE {schema}.givens (id text primary key, kind text, reading text, "case" text, script text, languages jsonb,
   dress text, n int, label text, positions jsonb, vals jsonb);
 CREATE TABLE {schema}.links (context text, k int, x text, g_shown jsonb, g_written jsonb, g_picked jsonb, next_ranks jsonb,
