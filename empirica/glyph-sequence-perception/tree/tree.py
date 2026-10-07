@@ -163,6 +163,9 @@ class Tree:
         self.cohere_ctl = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # shuffled run -> ...
         self.cohere_rate = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # fam -> class -> verdict
         self.cohere_ctl_class = {}                          # control run -> "shuffled" | "chart"
+        self.cohere_own = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # run (either
+                                                            # direction, as min of the two) -> fam -> verdict on ITS OWN
+                                                            # glyphs shuffled (a control's source.of)
         self.cohere_why = collections.defaultdict(list)     # run -> [(family, mind, verdict, why)]
         self.picks = collections.defaultdict(lambda: collections.defaultdict(list))      # ctx -> fam -> [x|none|other]
         self.choose = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))  # (ctx, pair) -> fam -> chosen
@@ -260,6 +263,9 @@ class Tree:
                 (self.cohere_ctl if ctl else self.cohere)[run][r["family"]][o] += 1
                 if ctl:
                     self.cohere_ctl_class[run] = ctl
+                    of = (r.get("source") or {}).get("of") or (r.get("tags") or {}).get("of")
+                    if ctl == "shuffled" and of:
+                        self.cohere_own[min(tuple(of), tuple(of)[::-1])][r["family"]][o] += 1
                 self.cohere_why[run].append((r["family"], r["mind"], o, r.get("why", "")))
             elif k == "triad" and o in ("mid", "two", "none"):
                 t = tuple(sorted(r["shown"]))
@@ -441,6 +447,19 @@ class Tree:
             for f, c in self.cohere.get(run, {}).items():
                 tot[f].update(c)
         return {f: (c["yes"], sum(c.values())) for f, c in tot.items()}
+
+    def own_shuffles(self, g):
+        """FACTS for the contrast of "g is recognised as a sequence": cohere answers about g's own glyphs shuffled (the
+        controls asked beside it, METHODOLOGY §4a: "separates 'these belong together' from 'this order is felt'") ->
+        {family: (yes, n)}, or {} if never asked"""
+        g = tuple(g)
+        return {f: (c["yes"], sum(c.values())) for f, c in self.cohere_own.get(min(g, g[::-1]), {}).items()}
+
+    def as_sequence(self, g, cyclic=False):
+        """g recognised as a sequence: its own order against its own glyphs shuffled, by the study's one standard
+        (estimate_vs: per family Jeffreys means, run minus its shuffles, equal-weight mean) -> (difference, sd, families)
+        or (None, None, []) when its shuffles were never asked"""
+        return estimate_vs(self.coherence(g, cyclic), self.own_shuffles(g))
 
     def recognition_dir(self, run, x):
         """one reading direction of a link on recognition (inhibit) answers: per family (yes, n) at the longest suffix

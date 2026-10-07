@@ -20,6 +20,9 @@ implements part of CATALOG v5 and says which part:
           family, and the 90% lower bound of the difference) -- R compares a run with pooled control rates, so a set
           that is coherent in any order (1 ¹ ① 𝟏) passes it -- and its code-point order (monotone, rotated: monotone
           after one wrap, interleaved: two monotone halves in one direction, or none): an order the encoding supplies.
+          Build 7 (2026-10-06, Joseph: "Our entire premise was based on recognizing sequences-- not sets"): a record is
+          RECOGNISED when it is recognised as a sequence -- its order beats its own glyphs shuffled, by the study's one
+          standard (tree.estimate_vs). R against pooled control rates stays on the record (r_*, recognised_pooled).
           Build 4: content splits on every record -- links where two families' most named continuations differ at
           the deciding context, each family's mode with its counts and the chart's next glyph (facts, no cut).
           Build 3: the rest of §3's candidate inputs as records (the tree's walks, written walks, BEST's strongest
@@ -55,7 +58,7 @@ import best as BE                                   # noqa: E402  strongest_path
 import tree as TR                                   # noqa: E402
 import plan as PL                                   # noqa: E402  block()
 
-MODEL = "catalog-v5-build6"
+MODEL = "catalog-v5-build7"
 SEAL_FILE = ROOT / "audits" / "SEAL-canary-choose-2026-10-06.md"
 CANARY = set("▁▂▃▄▅▆▇█🮆🮅🮄▀🮃🮂▔▉")
 PARAMS = {                                           # every one chosen without evidence (CATALOG §13 freezes them)
@@ -205,10 +208,13 @@ def paired_record(g, own, shuf):
     sy, sn = sum(v[0] for v in sh.values()), sum(v[1] for v in sh.values())
     if not on or not sn:
         return None
-    mo, ms = (oy + 0.5) / (on + 1), (sy + 0.5) / (sn + 1)
-    sd = math.sqrt(mo * (1 - mo) / (on + 2) + ms * (1 - ms) / (sn + 2))
+    d, sd, used = TR.estimate_vs({f: tuple(v) for f, v in o.items()}, {f: tuple(v) for f, v in sh.items()})
+    if d is None:                                    # no family answered both the run and its shuffles
+        return {"own": [oy, on], "shuffles": [sy, sn], "families": {}, "d": None, "sd": None, "lb": None}
     fams = {f: {"own": list(o.get(f, [0, 0])), "shuffles": list(sh.get(f, [0, 0]))} for f in sorted(set(o) | set(sh))}
-    return {"own": [oy, on], "shuffles": [sy, sn], "families": fams, "lb": round(mo - ms - 1.2816 * sd, 4)}
+    return {"own": [oy, on], "shuffles": [sy, sn], "families": fams, "used": sorted(used),
+            "d": round(d, 4), "sd": round(sd, 4), "lb": round(d - 1.2816 * sd, 4)}   # the study's one standard
+                                                     # (METHODOLOGY §2a: per family Jeffreys, equal-weight mean, 90%)
 
 def code_order(g):
     """whether the encoding supplies the run's order: "monotone" (code points strictly up or down), "rotated" (monotone
@@ -521,7 +527,11 @@ def main():
     for g in sorted(sources, key=lambda s: [ord(x) for x in s]):
         by = runs.get(g, {})
         R = r_record(g, by, ctl, fam_of, weights, PARAMS["GRID"]) if by else {"families": {}, "strength": None, "sd": None, "bf": None}
-        recognised = bool(R["bf"] is not None and R["bf"] >= PARAMS["BF_CERTAIN"] and (R["strength"] or 0) > 0)
+        recognised_pooled = bool(R["bf"] is not None and R["bf"] >= PARAMS["BF_CERTAIN"] and (R["strength"] or 0) > 0)
+        pr = paired_record(g, p_own, p_shuf)
+        recognised = bool(pr and pr["lb"] is not None and pr["lb"] > 0)   # build 7: recognised AS A SEQUENCE -- this
+                                                     # order beats its own glyphs shuffled (METHODOLOGY §4a's control,
+                                                     # used as designed). R against pooled rates is kept beside it.
         positions = []
         for orient, s in (("forward", list(g)), ("reverse", list(g)[::-1])):
             for p in chart_positions(s):
@@ -543,7 +553,7 @@ def main():
                      "contested_asked": sum(1 for p in positions if p["ev"] and p["ev"]["n"]),
                      "lookalike": ({k: {"yes": v[0], "n": v[1]} for k, v in la.items()} if la else None),
                      "seed_raters": seed_raters.get(g) or None,
-                     "paired": paired_record(g, p_own, p_shuf), "code_order": code_order(g),
+                     "paired": pr, "code_order": code_order(g), "recognised_pooled": recognised_pooled,
                      "evidence": raids.get(g, [])})
         for p in positions:
             ev = p["ev"] or {}
@@ -623,7 +633,7 @@ def main():
     RC = ["id", "glyphs", "length", "chart_class", "set_class", "sources", "r_strength", "r_sd", "r_bf", "r_families", "recognised",
           "chart_state", "name_state", "view", "contested", "contested_asked", "lookalike", "link_states", "weakest_link", "flips",
           "o_strength", "o_sd", "o_bf", "o_families", "o_other", "seed_raters", "content_splits", "evidence", "o_evidence",
-          "given_kind", "given_id", "given_label", "given_dresses", "given_step", "given_start", "given_walk", "paired", "code_order"]
+          "given_kind", "given_id", "given_label", "given_dresses", "given_step", "given_start", "given_walk", "paired", "code_order", "recognised_pooled"]
     givens = [{"id": g["id"], "kind": g["kind"], "reading": g.get("reading"), "case": g.get("case"), "script": g.get("script"),
                "languages": g.get("languages"), "dress": g.get("dress"), "n": len(g["positions"]), "label": GW.label(g),
                "positions": g["positions"], "vals": g.get("values")} for g in GW.load()[0].values()]
@@ -649,7 +659,7 @@ CREATE TABLE {schema}.records (id text primary key, glyphs text, length int, cha
   weakest_link int, flips int, o_strength double precision, o_sd double precision, o_bf double precision, o_families jsonb,
   o_other jsonb, seed_raters jsonb, content_splits jsonb, evidence jsonb, o_evidence jsonb,
   given_kind text, given_id text, given_label text, given_dresses jsonb, given_step double precision, given_start int,
-  given_walk boolean, paired jsonb, code_order text);
+  given_walk boolean, paired jsonb, code_order text, recognised_pooled boolean);
 CREATE TABLE {schema}.givens (id text primary key, kind text, reading text, "case" text, script text, languages jsonb,
   dress text, n int, label text, positions jsonb, vals jsonb);
 CREATE TABLE {schema}.links (context text, k int, x text, g_shown jsonb, g_written jsonb, g_picked jsonb, next_ranks jsonb,
