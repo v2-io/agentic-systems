@@ -144,7 +144,7 @@ def main():
     if cat_only:
         L += ["*Catalog only, by BEST's reading:* " + "; ".join(f"{r} {n}" for r, n in reasons_c.most_common()) + ".", ""]
     L += ["## The groups", "",
-          "*Each group ordered by length, then by R's 90% lower bound (strength − 1.28 sd). **R**: the catalog's strength on the identified scale (the excess yes rate beyond the controls), ± sd. **BF**: its Bayes factor. **yes/n**: per family. **chart**: the chart route's state; contested positions asked / contested. **weakest**: the weakest link state on the run (CATALOG §8: 1 evidence at the link's full context; 2 stable at a suffix; 3 at a suffix only, lengthening untested; 4 picks beyond 8 glyphs; 5 none). **splits**: links where families' most named continuations differ (firm: certainty ≥ 0.9). **O**: order agreement's strength and Bayes factor (not used for recognition in this build). **BEST**: BEST's verdict on the same run.*", ""]
+          "*Each group ordered by length, then by R's 90% lower bound (strength − 1.28 sd). **bytes**: the mean UTF-8 length of the run's glyphs (1 = ASCII … 4 = astral planes; BEST's *us*). **R**: the catalog's strength on the identified scale (the excess yes rate beyond the controls), ± sd. **BF**: its Bayes factor. **yes/n**: per family. **chart**: the chart route's state; contested positions asked / contested. **weakest**: the weakest link state on the run (CATALOG §8: 1 evidence at the link's full context; 2 stable at a suffix; 3 at a suffix only, lengthening untested; 4 picks beyond 8 glyphs; 5 none). **splits**: links where families' most named continuations differ (firm: certainty ≥ 0.9). **O**: order agreement's strength and Bayes factor (not used for recognition in this build). **BEST**: BEST's verdict on the same run.*", ""]
     for g in GROUPS:
         rs = groups.get(g, [])
         L += [f"### {g} ({len(rs)})", ""]
@@ -152,13 +152,13 @@ def main():
             L += ["*None in this build.*", ""]
             continue
         rs.sort(key=lambda r: (-r["length"], -((r["r_strength"] or 0) - 1.2816 * (r["r_sd"] or 0)), r["glyphs"]))
-        L += ["| # | run | n | class | R | BF | yes/n | chart | weakest | splits | O | BEST |", "|---|---|---|---|---|---|---|---|---|---|---|---|"]
+        L += ["| # | run | n | bytes | class | R | BF | yes/n | chart | weakest | splits | O | BEST |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
         for i, r in enumerate(rs, 1):
             w = whole.get(key(r["glyphs"]))
             bv = {"beyond": "recognised", "below": "rejected", None: "undecided"}[w["verdict"]] if w else "–"
             ca = f"{r['chart_state']} {r['contested_asked']}/{r['contested']}" if r["contested"] else r["chart_state"]
             o = f"{num(r['o_strength'])} ({bf(r['o_bf'])})" if r["o_strength"] is not None else "–"
-            L.append(f"| {i} | {code(''.join(BE.shown_order(list(r['glyphs']))))} | {r['length']} | {r['chart_class']} | "
+            L.append(f"| {i} | {code(''.join(BE.shown_order(list(r['glyphs']))))} | {r['length']} | {BE.us(r['glyphs']):.1f} | {r['chart_class']} | "
                      f"{num(r['r_strength'])} ± {num(r['r_sd'], '{:.2f}')} | {bf(r['r_bf'])} | {fams(r['r_families'])} | {ca} | "
                      f"{r['weakest_link'] if r['weakest_link'] is not None else '–'} | {splits(r['content_splits'])} | {o} | {bv} |")
         L.append("")

@@ -37,7 +37,7 @@ Both decide the same thing, a run asked whole, by different standards. BEST: per
 
 ## The groups
 
-*Each group ordered by length, then by R's 90% lower bound (strength − 1.28 sd). **R**: the catalog's strength on the identified scale (the excess yes rate beyond the controls), ± sd. **BF**: its Bayes factor. **yes/n**: per family. **chart**: the chart route's state; contested positions asked / contested. **weakest**: the weakest link state on the run (CATALOG §8: 1 evidence at the link's full context; 2 stable at a suffix; 3 at a suffix only, lengthening untested; 4 picks beyond 8 glyphs; 5 none). **splits**: links where families' most named continuations differ (firm: certainty ≥ 0.9). **O**: order agreement's strength and Bayes factor (not used for recognition in this build). **BEST**: BEST's verdict on the same run.*
+*Each group ordered by length, then by R's 90% lower bound (strength − 1.28 sd). **bytes**: the mean UTF-8 length of the run's glyphs (1 = ASCII … 4 = astral planes; BEST's *us*). **R**: the catalog's strength on the identified scale (the excess yes rate beyond the controls), ± sd. **BF**: its Bayes factor. **yes/n**: per family. **chart**: the chart route's state; contested positions asked / contested. **weakest**: the weakest link state on the run (CATALOG §8: 1 evidence at the link's full context; 2 stable at a suffix; 3 at a suffix only, lengthening untested; 4 picks beyond 8 glyphs; 5 none). **splits**: links where families' most named continuations differ (firm: certainty ≥ 0.9). **O**: order agreement's strength and Bayes factor (not used for recognition in this build). **BEST**: BEST's verdict on the same run.*
 
 ### 1 intuitive (0)
 
@@ -49,27 +49,27 @@ Both decide the same thing, a run asked whole, by different standards. BEST: per
 
 ### 3 leaning (1)
 
-| # | run | n | class | R | BF | yes/n | chart | weakest | splits | O | BEST |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | `⚊⚌☰𝌆` | 4 | other | +0.56 ± 0.20 | 18.8 | cl 2/3 ge 1/1 gr 1/1 | negative 2/5 | 5 | 2 (0 firm) | +0.64 (52.3) | recognised |
+| # | run | n | bytes | class | R | BF | yes/n | chart | weakest | splits | O | BEST |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | `⚊⚌☰𝌆` | 4 | 3.2 | other | +0.56 ± 0.20 | 18.8 | cl 2/3 ge 1/1 gr 1/1 | negative 2/5 | 5 | 2 (0 firm) | +0.64 (52.3) | recognised |
 
 ### 4 chart or branch (13)
 
-| # | run | n | class | R | BF | yes/n | chart | weakest | splits | O | BEST |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | `┉┈┄─━▬█▌▏▎` | 10 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | chart or branch 2/14 | 5 | 2 (0 firm) | +0.37 (≥1e4) | recognised |
-| 2 | `⢀⢁⢂⢄⢈⢐⢠⣀` | 8 | monotone | +0.63 ± 0.20 | 50.8 | cl 2/2 ge 1/1 gr 1/1 | chart or branch 1/9 | 3 | 1 (0 firm) | +0.66 (≥1e4) | recognised |
-| 3 | `▉▋▊▌▍▎▏` | 7 | other | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | chart or branch 1/2 | 3 | 2 (0 firm) | +0.35 (≥1e4) | recognised |
-| 4 | `˙:⁝⣿█` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | chart or branch 2/4 | 5 | 2 (0 firm) | +0.78 (≥1e4) | recognised |
-| 5 | `㎛㎚㎜㎞㎝` | 5 | other | +0.56 ± 0.21 | 17.5 | cl 2/3 gr 1/1 | chart or branch 2/6 | 5 | – | +0.10 (0.0826) | recognised |
-| 6 | `㎜㎚㎝㎛㎞` | 5 | other | +0.46 ± 0.17 | 17.5 | cl 2/2 ge 0/1 gr 1/1 | chart or branch 1/5 | 5 | – | +0.05 (0.0163) | recognised |
-| 7 | `˙:⁝⣿` | 4 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | chart or branch 2/4 | 5 | 2 (0 firm) | +0.78 (≥1e4) | recognised |
-| 8 | `Iᵢiɪ` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | chart or branch 2/5 | 5 | 1 (0 firm) | +0.13 (0.0519) | recognised |
-| 9 | `dǆǅǄ` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | chart or branch 1/2 | 3 | – | +0.67 (410) | recognised |
-| 10 | `ℵℶℸℷ` | 4 | other | +0.39 ± 0.20 | 34.4 | cl 3/5 gr 1/2 | chart or branch 1/3 | 5 | 1 (0 firm) | +0.14 (0.0951) | recognised |
-| 11 | `■◾◼▪` | 4 | other | +0.34 ± 0.20 | 18.1 | cl 3/3 ge 0/1 gr 1/1 | chart or branch 1/5 | 5 | – | +0.11 (0.0602) | recognised |
-| 12 | `㎰㎱㎳` | 3 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | chart or branch 1/1 | 5 | – | +0.78 (≥1e4) | recognised |
-| 13 | `㎝㎜㎞` | 3 | other | +0.44 ± 0.17 | 36.4 | cl 2/2 ge 1/1 gr 0/1 | chart or branch 1/3 | 5 | 1 (0 firm) | +0.05 (0.0178) | recognised |
+| # | run | n | bytes | class | R | BF | yes/n | chart | weakest | splits | O | BEST |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | `┉┈┄─━▬█▌▏▎` | 10 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | chart or branch 2/14 | 5 | 2 (0 firm) | +0.37 (≥1e4) | recognised |
+| 2 | `⢀⢁⢂⢄⢈⢐⢠⣀` | 8 | 3.0 | monotone | +0.63 ± 0.20 | 50.8 | cl 2/2 ge 1/1 gr 1/1 | chart or branch 1/9 | 3 | 1 (0 firm) | +0.66 (≥1e4) | recognised |
+| 3 | `▉▋▊▌▍▎▏` | 7 | 3.0 | other | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | chart or branch 1/2 | 3 | 2 (0 firm) | +0.35 (≥1e4) | recognised |
+| 4 | `˙:⁝⣿█` | 5 | 2.4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | chart or branch 2/4 | 5 | 2 (0 firm) | +0.78 (≥1e4) | recognised |
+| 5 | `㎛㎚㎜㎞㎝` | 5 | 3.0 | other | +0.56 ± 0.21 | 17.5 | cl 2/3 gr 1/1 | chart or branch 2/6 | 5 | – | +0.10 (0.0826) | recognised |
+| 6 | `㎜㎚㎝㎛㎞` | 5 | 3.0 | other | +0.46 ± 0.17 | 17.5 | cl 2/2 ge 0/1 gr 1/1 | chart or branch 1/5 | 5 | – | +0.05 (0.0163) | recognised |
+| 7 | `˙:⁝⣿` | 4 | 2.2 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | chart or branch 2/4 | 5 | 2 (0 firm) | +0.78 (≥1e4) | recognised |
+| 8 | `Iᵢiɪ` | 4 | 1.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | chart or branch 2/5 | 5 | 1 (0 firm) | +0.13 (0.0519) | recognised |
+| 9 | `dǆǅǄ` | 4 | 1.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | chart or branch 1/2 | 3 | – | +0.67 (410) | recognised |
+| 10 | `ℵℶℸℷ` | 4 | 3.0 | other | +0.39 ± 0.20 | 34.4 | cl 3/5 gr 1/2 | chart or branch 1/3 | 5 | 1 (0 firm) | +0.14 (0.0951) | recognised |
+| 11 | `■◾◼▪` | 4 | 3.0 | other | +0.34 ± 0.20 | 18.1 | cl 3/3 ge 0/1 gr 1/1 | chart or branch 1/5 | 5 | – | +0.11 (0.0602) | recognised |
+| 12 | `㎰㎱㎳` | 3 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | chart or branch 1/1 | 5 | – | +0.78 (≥1e4) | recognised |
+| 13 | `㎝㎜㎞` | 3 | 3.0 | other | +0.44 ± 0.17 | 36.4 | cl 2/2 ge 1/1 gr 0/1 | chart or branch 1/3 | 5 | 1 (0 firm) | +0.05 (0.0178) | recognised |
 
 ### 5 undiscriminable (0)
 
@@ -77,1784 +77,1784 @@ Both decide the same thing, a run asked whole, by different standards. BEST: per
 
 ### 6 undecided (1778)
 
-| # | run | n | class | R | BF | yes/n | chart | weakest | splits | O | BEST |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | `𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎𝌏𝌐𝌑𝌒𝌓𝌔𝌕𝌖𝌗` | 24 | contiguous | +0.87 ± 0.16 | 40.8 | gr 5/5 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
-| 2 | `㏃㏄㏅㏆㏇㏈㏉㏊㏋㏌㏍㏎㏏㏐㏑㏒㏓㏔㏕㏖㏗㏘㏙㏚` | 24 | contiguous | +0.78 ± 0.15 | ≥1e4 | cl 8/8 gr 2/2 | undiscriminable | 3 | – | +0.71 (10) | recognised |
-| 3 | `┳┴┵┶┷┸┹┺┻┼┽┾┿╀╁╂╃╄╅╆╇╈╉╊` | 24 | contiguous | +0.77 ± 0.16 | 8.83e+03 | cl 4/4 gr 2/2 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 4 | `㍴㍵㍶㍷㍸㍹㍺㍻㍼㍽㍾㍿㎀㎁㎂㎃㎄㎅㎆㎇㎈㎉㎊㎋` | 24 | contiguous | +0.77 ± 0.16 | 8.83e+03 | cl 4/4 gr 2/2 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
-| 5 | `⼪⼫⼬⼭⼮⼯⼰⼱⼲⼳⼴⼵⼶⼷⼸⼹⼺⼻⼼⼽⼾⼿⽀⽁` | 24 | contiguous | +0.76 ± 0.16 | ≥1e4 | cl 5/5 gr 2/2 | undiscriminable | 3 | 1 (0 firm) | +0.70 (3.2e+03) | recognised |
-| 6 | `𝀌𝀍𝀎𝀏𝀐𝀑𝀒𝀓𝀔𝀕𝀖𝀗𝀘𝀙𝀚𝀛𝀜𝀝𝀞𝀟𝀠𝀡𝀢𝀣` | 24 | contiguous | +0.76 ± 0.16 | ≥1e4 | cl 5/5 gr 2/2 | undiscriminable | 3 | – | +0.65 (4.33) | recognised |
-| 7 | `⺁⺂⺃⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑⺒⺓⺔⺕⺖⺗⺘` | 24 | contiguous | +0.72 ± 0.14 | 3.83e+03 | cl 4/4 | undiscriminable | 3 | – | +0.85 (≥1e4) | recognised |
-| 8 | `㏞㏟㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵` | 24 | contiguous | +0.72 ± 0.14 | 3.83e+03 | cl 4/4 | undiscriminable | 3 | – | +0.90 (≥1e4) | recognised |
-| 9 | `∷∸∹∺∻∼∽∾∿≀≁≂≃≄≅≆≇≈≉≊≋≌≍≎` | 24 | contiguous | +0.72 ± 0.16 | 555 | cl 3/3 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 10 | `⧘⧙⧚⧛⧜⧝⧞⧟⧠⧡⧢⧣⧤⧥⧦⧧⧨⧩⧪⧫⧬⧭⧮⧯` | 24 | contiguous | +0.72 ± 0.16 | 555 | cl 3/3 | undiscriminable | 3 | – | – | recognised |
-| 11 | `㎝㎞㎟㎠㎡㎢㎣㎤㎥㎦㎧㎨㎩㎪㎫㎬㎭㎮㎯㎰㎱㎲㎳㎴` | 24 | contiguous | +0.72 ± 0.16 | 555 | cl 3/3 | undiscriminable | 3 | 3 (0 firm) | +0.80 (≥1e4) | recognised |
-| 12 | `𝃂𝃃𝃄𝃅𝃆𝃇𝃈𝃉𝃊𝃋𝃌𝃍𝃎𝃏𝃐𝃑𝃒𝃓𝃔𝃕𝃖𝃗𝃘𝃙` | 24 | contiguous | +0.72 ± 0.16 | 555 | cl 3/3 | undiscriminable | 3 | – | +0.69 (471) | recognised |
-| 13 | `𝕺𝕻𝕼𝕽𝕾𝕿𝖀𝖁𝖂𝖃𝖄𝖅𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑` | 24 | contiguous | +0.72 ± 0.16 | 555 | cl 3/3 | undiscriminable | 3 | 1 (0 firm) | +0.93 (≥1e4) | recognised |
-| 14 | `㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾㏿㐀㐁㐂` | 24 | contiguous | +0.71 ± 0.16 | ≥1e4 | cl 5/6 gr 2/2 | undiscriminable | 3 | – | +0.62 (10) | recognised |
-| 15 | `SrQpOnMlKjIhGfEdCbAzYxWv` | 24 | other | +0.73 ± 0.18 | 2.54e+03 | cl 5/5 gr 2/2 | undecided 2/66 | 3 | 2 (0 firm) | +0.77 (≥1e4) | recognised |
-| 16 | `ȗȘșȚțȜȝȞȟȠȡȢȣȤȥȦȧȨȩȪȫȬȭȮ` | 24 | contiguous | +0.71 ± 0.17 | 200 | cl 3/3 | undiscriminable | 3 | – | +0.58 (2) | recognised |
-| 17 | `🞜🞝🞞🞟🞠🞡🞢🞣🞤🞥🞦🞧🞨🞩🞪🞫🞬🞭🞮🞯🞰🞱🞲🞳` | 24 | contiguous | +0.71 ± 0.17 | 200 | cl 3/3 | undiscriminable | 3 | – | +0.93 (≥1e4) | recognised |
-| 18 | `⺀⺁⺂⺃⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑⺒⺓⺔⺕⺖⺗` | 24 | contiguous | +0.67 ± 0.15 | ≥1e4 | cl 3/3 ge 2/2 gr 1/1 | undiscriminable | 3 | – | +0.85 (≥1e4) | recognised |
-| 19 | `⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎⠏⠐⠑⠒⠓⠔⠕⠖⠗⠘` | 24 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.94 (≥1e4) | recognised |
-| 20 | `㎯㎰㎱㎲㎳㎴㎵㎶㎷㎸㎹㎺㎻㎼㎽㎾㎿㏀㏁㏂㏃㏄㏅㏆` | 24 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.82 (≥1e4) | recognised |
-| 21 | `⼣⼤⼥⼦⼧⼨⼩⼪⼫⼬⼭⼮⼯⼰⼱⼲⼳⼴⼵⼶⼷⼸⼹⼺` | 24 | contiguous | +0.70 ± 0.20 | ≥1e4 | cl 5/5 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.70 (3.2e+03) | recognised |
-| 22 | `▮▯▰▱▲△▴▵▶▷▸▹►▻▼▽▾▿◀◁◂◃◄◅` | 24 | contiguous | +0.70 ± 0.20 | ≥1e4 | cl 6/6 gr 1/1 | undiscriminable | 5 | 3 (0 firm) | +0.68 (≥1e4) | recognised |
-| 23 | `ǹǺǻǼǽǾǿȀȁȂȃȄȅȆȇȈȉȊȋȌȍȎȏȐ` | 24 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | 1 (0 firm) | +0.64 (823) | recognised |
-| 24 | `ˌˍˎˏːˑ˒˓˔˕˖˗˘˙˚˛˜˝˞˟ˠˡˢˣ` | 24 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
-| 25 | `ЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗ` | 24 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | 2 (0 firm) | +0.68 (≥1e4) | recognised |
-| 26 | `ЊЉЈЇІЅЄЃЂЋЌЍЎЏАБВГДЕЖЗИЙ` | 24 | other | +0.71 ± 0.21 | 31.1 | cl 2/2 | undecided 0/3 | 3 | 1 (0 firm) | +0.59 (≥1e4) | recognised |
-| 27 | `ӕӖӗӘәӚӛӜӝӞӟӠӡӢӣӤӥӦӧӨөӪӫӬ` | 24 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | – | – | recognised |
-| 28 | `ݱݲݳݴݵݶݷݸݹݺݻݼݽݾݿހށނރބޅކއވ` | 24 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 29 | `ᗃᗄᗅᗆᗇᗈᗉᗊᗋᗌᗍᗎᗏᗐᗑᗒᗓᗔᗕᗖᗗᗘᗙᗚ` | 24 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | 1 (0 firm) | +0.58 (2) | recognised |
-| 30 | `ⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜ` | 24 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | – | +0.96 (≥1e4) | recognised |
-| 31 | `⩫⩬⩭⩮⩯⩰⩱⩲⩳⩴⩵⩶⩷⩸⩹⩺⩻⩼⩽⩾⩿⪀⪁⪂` | 24 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | 1 (0 firm) | +0.89 (≥1e4) | recognised |
-| 32 | `⽵⽶⽷⽸⽹⽺⽻⽼⽽⽾⽿⾀⾁⾂⾃⾄⾅⾆⾇⾈⾉⾊⾋⾌` | 24 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
-| 33 | `㌠㌡㌢㌣㌤㌥㌦㌧㌨㌩㌪㌫㌬㌭㌮㌯㌰㌱㌲㌳㌴㌵㌶㌷` | 24 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
-| 34 | `𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩𝓪𝓫𝓬𝓭` | 24 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
-| 35 | `𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜𝖝𝖞𝖟𝖠𝖡𝖢` | 24 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | 2 (0 firm) | +0.90 (≥1e4) | recognised |
-| 36 | `🀿🁀🁁🁂🁃🁄🁅🁆🁇🁈🁉🁊🁋🁌🁍🁎🁏🁐🁑🁒🁓🁔🁕🁖` | 24 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | – | +0.79 (≥1e4) | recognised |
-| 37 | `𝖈𝖉𝖊𝖋𝗀𝗁𝗂𝗃𝗄𝗅𝗆𝗇𝗈𝗉𝗊𝗋𝗌𝗍𝗎𝗏𝗐𝗑𝗒𝗓` | 24 | monotone | +0.68 ± 0.19 | 31 | cl 3/3 | undecided 0/2 | 3 | – | +0.89 (≥1e4) | recognised |
-| 38 | `ɢɣɤɥɦɧɨɩɪɫɬɭɮɯɰɱɲɳɴɵɶɷɸɹ` | 24 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.72 (≥1e4) | recognised |
-| 39 | `᧠᧡᧢᧣᧤᧥᧦᧧᧨᧩᧪᧫᧬᧭᧮᧯᧰᧱᧲᧳᧴᧵᧶᧷` | 24 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 40 | `⏏⏐⏑⏒⏓⏔⏕⏖⏗⏘⏙⏚⏛⏜⏝⏞⏟⏠⏡⏢⏣⏤⏥⏦` | 24 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.60 (12.9) | recognised |
-| 41 | `⽀⽁⽂⽃⽄⽅⽆⽇⽈⽉⽊⽋⽌⽍⽎⽏⽐⽑⽒⽓⽔⽕⽖⽗` | 24 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
-| 42 | `㈅㈆㈇㈈㈉㈊㈋㈌㈍㈎㈏㈐㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚㈛㈜` | 24 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
-| 43 | `𝃙𝃚𝃛𝃜𝃝𝃞𝃟𝃠𝃡𝃢𝃣𝃤𝃥𝃦𝃧𝃨𝃩𝃪𝃫𝃬𝃭𝃮𝃯𝃰` | 24 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.72 (3.16e+03) | recognised |
-| 44 | `ȸȹȺȻȼȽȾȿɀɁɂɃɄɅɆɇɈɉɊɋɌɍɎɏ` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 45 | `ɠɡɢɣɤɥɦɧɨɩɪɫɬɭɮɯɰɱɲɳɴɵɶɷ` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.72 (≥1e4) | recognised |
-| 46 | `ɡɢɣɤɥɦɧɨɩɪɫɬɭɮɯɰɱɲɳɴɵɶɷɸ` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.72 (≥1e4) | recognised |
-| 47 | `ʉʊʋʌʍʎʏʐʑʒʓʔʕʖʗʘʙʚʛʜʝʞʟʠ` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.32 (0.267) | recognised |
-| 48 | `˨˩˪˫ˬ˭ˮ˯˰˱˲˳˴˵˶˷˸˹˺˻˼˽˾˿` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.74 (≥1e4) | recognised |
-| 49 | `ЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦ` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.68 (60.7) | recognised |
-| 50 | `ԉԊԋԌԍԎԏԐԑԒԓԔԕԖԗԘԙԚԛԜԝԞԟԠ` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 51 | `հձղճմյնշոչպջռսվտրցւփքօֆև` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.51 (≥1e4) | recognised |
-| 52 | `ٶٷٸٹٺٻټٽپٿڀځڂڃڄڅچڇڈډڊڋڌڍ` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | +0.67 (≥1e4) | recognised |
-| 53 | `ټٽپٿڀځڂڃڄڅچڇڈډڊڋڌڍڎڏڐڑڒړ` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.67 (≥1e4) | recognised |
-| 54 | `ٿڀځڂڃڄڅچڇڈډڊڋڌڍڎڏڐڑڒړڔڕږ` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.67 (≥1e4) | recognised |
-| 55 | `ݦݧݨݩݪݫݬݭݮݯݰݱݲݳݴݵݶݷݸݹݺݻݼݽ` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 56 | `ߓߔߕߖߗߘߙߚߛߜߝߞߟߠߡߢߣߤߥߦߧߨߩߪ` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.77 (≥1e4) | recognised |
-| 57 | `ᐲᐳᐴᐵᐶᐷᐸᐹᐺᐻᐼᐽᐾᐿᑀᑁᑂᑃᑄᑅᑆᑇᑈᑉ` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 58 | `ᖦᖧᖨᖩᖪᖫᖬᖭᖮᖯᖰᖱᖲᖳᖴᖵᖶᖷᖸᖹᖺᖻᖼᖽ` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
-| 59 | `≗≘≙≚≛≜≝≞≟≠≡≢≣≤≥≦≧≨≩≪≫≬≭≮` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.55 (5.97) | recognised |
-| 60 | `⒰⒱⒲⒳⒴⒵ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇ` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | 1 (0 firm) | +0.89 (≥1e4) | recognised |
-| 61 | `ⓇⓈⓉⓊⓋⓌⓍⓎⓏⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞ` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.96 (≥1e4) | recognised |
-| 62 | `⠾⠿⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓⡔⡕` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.33 (0.5) | recognised |
-| 63 | `⣥⣦⣧⣨⣩⣪⣫⣬⣭⣮⣯⣰⣱⣲⣳⣴⣵⣶⣷⣸⣹⣺⣻⣼` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 5 (0 firm) | +0.75 (≥1e4) | recognised |
-| 64 | `⧝⧞⧟⧠⧡⧢⧣⧤⧥⧦⧧⧨⧩⧪⧫⧬⧭⧮⧯⧰⧱⧲⧳⧴` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | – | recognised |
-| 65 | `⩱⩲⩳⩴⩵⩶⩷⩸⩹⩺⩻⩼⩽⩾⩿⪀⪁⪂⪃⪄⪅⪆⪇⪈` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.86 (≥1e4) | recognised |
-| 66 | `ⲚⲛⲜⲝⲞⲟⲠⲡⲢⲣⲤⲥⲦⲧⲨⲩⲪⲫⲬⲭⲮⲯⲰⲱ` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 67 | `⼴⼵⼶⼷⼸⼹⼺⼻⼼⼽⼾⼿⽀⽁⽂⽃⽄⽅⽆⽇⽈⽉⽊⽋` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 68 | `⼶⼷⼸⼹⼺⼻⼼⼽⼾⼿⽀⽁⽂⽃⽄⽅⽆⽇⽈⽉⽊⽋⽌⽍` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 69 | `㉱㉲㉳㉴㉵㉶㉷㉸㉹㉺㉻㉼㉽㉾㉿㊀㊁㊂㊃㊄㊅㊆㊇㊈` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.92 (≥1e4) | recognised |
-| 70 | `㍆㍇㍈㍉㍊㍋㍌㍍㍎㍏㍐㍑㍒㍓㍔㍕㍖㍗㍘㍙㍚㍛㍜㍝` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.81 (≥1e4) | recognised |
-| 71 | `𒐐𒐑𒐒𒐓𒐔𒐕𒐖𒐗𒐘𒐙𒐚𒐛𒐜𒐝𒐞𒐟𒐠𒐡𒐢𒐣𒐤𒐥𒐦𒐧` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
-| 72 | `𝁾𝁿𝂀𝂁𝂂𝂃𝂄𝂅𝂆𝂇𝂈𝂉𝂊𝂋𝂌𝂍𝂎𝂏𝂐𝂑𝂒𝂓𝂔𝂕` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.58 (10) | recognised |
-| 73 | `𝂹𝂺𝂻𝂼𝂽𝂾𝂿𝃀𝃁𝃂𝃃𝃄𝃅𝃆𝃇𝃈𝃉𝃊𝃋𝃌𝃍𝃎𝃏𝃐` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 74 | `𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻𝘼𝘽𝘾𝘿𝙀𝙁𝙂𝙃𝙄` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.88 (≥1e4) | recognised |
-| 75 | `𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕𝙖𝙗𝙘𝙙𝙚𝙛𝙜𝙝𝙞𝙟𝙠𝙡𝙢` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.71 (10) | recognised |
-| 76 | `𝛑𝛒𝛓𝛔𝛕𝛖𝛗𝛘𝛙𝛚𝛛𝛜𝛝𝛞𝛟𝛠𝛡𝛢𝛣𝛤𝛥𝛦𝛧𝛨` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.80 (≥1e4) | recognised |
-| 77 | `𝛻𝛼𝛽𝛾𝛿𝜀𝜁𝜂𝜃𝜄𝜅𝜆𝜇𝜈𝜉𝜊𝜋𝜌𝜍𝜎𝜏𝜐𝜑𝜒` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.65 (4.33) | recognised |
-| 78 | `𝝝𝝞𝝟𝝠𝝡𝝢𝝣𝝤𝝥𝝦𝝧𝝨𝝩𝝪𝝫𝝬𝝭𝝮𝝯𝝰𝝱𝝲𝝳𝝴` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.75 (24.2) | recognised |
-| 79 | `🁑🁒🁓🁔🁕🁖🁗🁘🁙🁚🁛🁜🁝🁞🁟🁠🁡🁢🁣🁤🁥🁦🁧🁨` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.72 (6.57e+03) | recognised |
-| 80 | `🄡🄢🄣🄤🄥🄦🄧🄨🄩🄪🄫🄬🄭🄮🄯🄰🄱🄲🄳🄴🄵🄶🄷🄸` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
-| 81 | `🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦🕛🕧🕐🕜🕑🕝🕒🕞🕓🕟🕔🕠` | 24 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 6/26 | 3 | 7 (0 firm) | +0.57 (≥1e4) | recognised |
-| 82 | `🕰🕱🕲🕳🕴🕵🕶🕷🕸🕹🕺🕻🕼🕽🕾🕿🖀🖁🖂🖃🖄🖅🖆🖇` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 83 | `🬎🬏🬐🬑🬒🬓🬔🬕🬖🬗🬘🬙🬚🬛🬜🬝🬞🬟🬠🬡🬢🬣🬤🬥` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 84 | `🭍🭎🭏🭐🭑🭒🭓🭔🭕🭖🭗🭘🭙🭚🭛🭜🭝🭞🭟🭠🭡🭢🭣🭤` | 24 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.73 (≥1e4) | recognised |
-| 85 | `ÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèé` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.76 (≥1e4) | recognised |
-| 86 | `ĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃń` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | – | recognised |
-| 87 | `ƆƇƈƉƊƋƌƍƎƏƐƑƒƓƔƕƖƗƘƙƚƛƜƝ` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.50 (2.33) | recognised |
-| 88 | `ƦƧƨƩƪƫƬƭƮƯưƱƲƳƴƵƶƷƸƹƺƻƼƽ` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 89 | `ǚǛǜǝǞǟǠǡǢǣǤǥǦǧǨǩǪǫǬǭǮǯǰǱ` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.85 (≥1e4) | recognised |
-| 90 | `ɕɖɗɘəɚɛɜɝɞɟɠɡɢɣɤɥɦɧɨɩɪɫɬ` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.75 (≥1e4) | recognised |
-| 91 | `ɮɯɰɱɲɳɴɵɶɷɸɹɺɻɼɽɾɿʀʁʂʃʄʅ` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.49 (1.5) | recognised |
-| 92 | `ʛʜʝʞʟʠʡʢʣʤʥʦʧʨʩʪʫʬʭʮʯʰʱʲ` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 93 | `ˍˎˏːˑ˒˓˔˕˖˗˘˙˚˛˜˝˞˟ˠˡˢˣˤ` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
-| 94 | `ҩҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀ` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 95 | `ڮگڰڱڲڳڴڵڶڷڸڹںڻڼڽھڿۀہۂۃۄۅ` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.55 (≥1e4) | recognised |
-| 96 | `ڷڸڹںڻڼڽھڿۀہۂۃۄۅۆۇۈۉۊۋیۍێ` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.55 (≥1e4) | recognised |
-| 97 | `ᇿሀሁሂሃሄህሆሇለሉሊላሌልሎሏሐሑሒሓሔሕሖ` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | +0.76 (≥1e4) | recognised |
-| 98 | `ᗅᗆᗇᗈᗉᗊᗋᗌᗍᗎᗏᗐᗑᗒᗓᗔᗕᗖᗗᗘᗙᗚᗛᗜ` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.58 (2) | recognised |
-| 99 | `ᗐᗑᗒᗓᗔᗕᗖᗗᗘᗙᗚᗛᗜᗝᗞᗟᗠᗡᗢᗣᗤᗥᗦᗧ` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 100 | `ᗑᗒᗓᗔᗕᗖᗗᗘᗙᗚᗛᗜᗝᗞᗟᗠᗡᗢᗣᗤᗥᗦᗧᗨ` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 101 | `ᗔᗕᗖᗗᗘᗙᗚᗛᗜᗝᗞᗟᗠᗡᗢᗣᗤᗥᗦᗧᗨᗩᗪᗫ` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 102 | `⒜⒝⒞⒟⒠⒡⒢⒣⒤⒥⒦⒧⒨⒩⒪⒫⒬⒭⒮⒯⒰⒱⒲⒳` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.80 (≥1e4) | recognised |
-| 103 | `┣┤┥┦┧┨┩┪┫┬┭┮┯┰┱┲┳┴┵┶┷┸┹┺` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 6 (0 firm) | – | recognised |
-| 104 | `▪▫▬▭▮▯▰▱▲△▴▵▶▷▸▹►▻▼▽▾▿◀◁` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 5 | 3 (0 firm) | +0.69 (≥1e4) | recognised |
-| 105 | `⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓⡔⡕⡖⡗⡘⡙⡚⡛⡜⡝⡞⡟⡠` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.67 (≥1e4) | recognised |
-| 106 | `⢪⢫⢬⢭⢮⢯⢰⢱⢲⢳⢴⢵⢶⢷⢸⢹⢺⢻⢼⢽⢾⢿⣀⣁` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 5 (0 firm) | +0.50 (1.5) | recognised |
-| 107 | `⢫⢬⢭⢮⢯⢰⢱⢲⢳⢴⢵⢶⢷⢸⢹⢺⢻⢼⢽⢾⢿⣀⣁⣂` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 5 (0 firm) | +0.50 (1.5) | recognised |
-| 108 | `⣌⣍⣎⣏⣐⣑⣒⣓⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟⣠⣡⣢⣣` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 7 (0 firm) | +0.64 (≥1e4) | recognised |
-| 109 | `⻀⻁⻂⻃⻄⻅⻆⻇⻈⻉⻊⻋⻌⻍⻎⻏⻐⻑⻒⻓⻔⻕⻖⻗` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.65 (4.33) | recognised |
-| 110 | `⼦⼧⼨⼩⼪⼫⼬⼭⼮⼯⼰⼱⼲⼳⼴⼵⼶⼷⼸⼹⼺⼻⼼⼽` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.70 (3.2e+03) | recognised |
-| 111 | `⽏⽐⽑⽒⽓⽔⽕⽖⽗⽘⽙⽚⽛⽜⽝⽞⽟⽠⽡⽢⽣⽤⽥⽦` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | – | recognised |
-| 112 | `⽦⽧⽨⽩⽪⽫⽬⽭⽮⽯⽰⽱⽲⽳⽴⽵⽶⽷⽸⽹⽺⽻⽼⽽` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 113 | `⽱⽲⽳⽴⽵⽶⽷⽸⽹⽺⽻⽼⽽⽾⽿⾀⾁⾂⾃⾄⾅⾆⾇⾈` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.76 (≥1e4) | recognised |
-| 114 | `⽷⽸⽹⽺⽻⽼⽽⽾⽿⾀⾁⾂⾃⾄⾅⾆⾇⾈⾉⾊⾋⾌⾍⾎` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
-| 115 | `ㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲㅳㅴㅵㅶㅷㅸㅹㅺㅻㅼㅽㅾㅿ` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
-| 116 | `㈲㈳㈴㈵㈶㈷㈸㈹㈺㈻㈼㈽㈾㈿㉀㉁㉂㉃㉄㉅㉆㉇㉈㉉` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.53 (2.9) | recognised |
-| 117 | `㊢㊣㊤㊥㊦㊧㊨㊩㊪㊫㊬㊭㊮㊯㊰㊱㊲㊳㊴㊵㊶㊷㊸㊹` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.81 (≥1e4) | recognised |
-| 118 | `㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰㍱㍲㍳㍴㍵` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
-| 119 | `㎸㎹㎺㎻㎼㎽㎾㎿㏀㏁㏂㏃㏄㏅㏆㏇㏈㏉㏊㏋㏌㏍㏎㏏` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.58 (10) | recognised |
-| 120 | `㏚㏛㏜㏝㏞㏟㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
-| 121 | `𐩢𐩣𐩤𐩥𐩦𐩧𐩨𐩩𐩪𐩫𐩬𐩭𐩮𐩯𐩰𐩱𐩲𐩳𐩴𐩵𐩶𐩷𐩸𐩹` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 122 | `𝁄𝁅𝁆𝁇𝁈𝁉𝁊𝁋𝁌𝁍𝁎𝁏𝁐𝁑𝁒𝁓𝁔𝁕𝁖𝁗𝁘𝁙𝁚𝁛` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.66 (≥1e4) | recognised |
-| 123 | `𝁱𝁲𝁳𝁴𝁵𝁶𝁷𝁸𝁹𝁺𝁻𝁼𝁽𝁾𝁿𝂀𝂁𝂂𝂃𝂄𝂅𝂆𝂇𝂈` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 124 | `𝖄𝖅𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.91 (≥1e4) | recognised |
-| 125 | `𝘡𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | +0.89 (≥1e4) | recognised |
-| 126 | `𝙊𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕𝙖𝙗𝙘𝙙𝙚𝙛𝙜𝙝𝙞𝙟𝙠𝙡` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.84 (8.38e+03) | recognised |
-| 127 | `🁟🁠🁡🁢🁣🁤🁥🁦🁧🁨🁩🁪🁫🁬🁭🁮🁯🁰🁱🁲🁳🁴🁵🁶` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.71 (10) | recognised |
-| 128 | `🕓🕟🕔🕠🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦🕛🕧🕐🕜🕑🕝🕒🕞` | 24 | other | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undecided 5/26 | 3 | 5 (0 firm) | +0.51 (≥1e4) | recognised |
-| 129 | `🕔🕟🕓🕞🕒🕝🕑🕜🕐🕧🕛🕦🕚🕥🕙🕤🕘🕣🕗🕢🕖🕡🕕🕠` | 24 | other | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undecided 6/26 | 3 | 7 (0 firm) | +0.57 (≥1e4) | recognised |
-| 130 | `🞋🞌🞍🞎🞏🞐🞑🞒🞓🞔🞕🞖🞗🞘🞙🞚🞛🞜🞝🞞🞟🞠🞡🞢` | 24 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.88 (≥1e4) | recognised |
-| 131 | `ԀԂԄԆԈԊԌԎԐԒԔԖԘԚԜԞԠԢԤԦԨԪԬԮ` | 24 | monotone | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 0/44 | 3 | – | – | recognised |
-| 132 | `¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.86 (≥1e4) | recognised |
-| 133 | `ÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 134 | `ÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
-| 135 | `ëìíîïðñòóôõö÷øùúûüýþÿĀāĂ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.65 (4.33) | recognised |
-| 136 | `þÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.69 (≥1e4) | recognised |
-| 137 | `īĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁł` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | – | recognised |
-| 138 | `ƁƂƃƄƅƆƇƈƉƊƋƌƍƎƏƐƑƒƓƔƕƖƗƘ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
-| 139 | `ƑƒƓƔƕƖƗƘƙƚƛƜƝƞƟƠơƢƣƤƥƦƧƨ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.50 (2.33) | recognised |
-| 140 | `ƠơƢƣƤƥƦƧƨƩƪƫƬƭƮƯưƱƲƳƴƵƶƷ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 141 | `ƾƿǀǁǂǃǄǅǆǇǈǉǊǋǌǍǎǏǐǑǒǓǔǕ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.67 (410) | recognised |
-| 142 | `ǲǳǴǵǶǷǸǹǺǻǼǽǾǿȀȁȂȃȄȅȆȇȈȉ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.64 (≥1e4) | recognised |
-| 143 | `ȆȇȈȉȊȋȌȍȎȏȐȑȒȓȔȕȖȗȘșȚțȜȝ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 144 | `ȉȊȋȌȍȎȏȐȑȒȓȔȕȖȗȘșȚțȜȝȞȟȠ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 145 | `ȌȍȎȏȐȑȒȓȔȕȖȗȘșȚțȜȝȞȟȠȡȢȣ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
-| 146 | `ȟȠȡȢȣȤȥȦȧȨȩȪȫȬȭȮȯȰȱȲȳȴȵȶ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.65 (4.33) | recognised |
-| 147 | `ɗɘəɚɛɜɝɞɟɠɡɢɣɤɥɦɧɨɩɪɫɬɭɮ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.72 (≥1e4) | recognised |
-| 148 | `ɜɝɞɟɠɡɢɣɤɥɦɧɨɩɪɫɬɭɮɯɰɱɲɳ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.72 (≥1e4) | recognised |
-| 149 | `ɣɤɥɦɧɨɩɪɫɬɭɮɯɰɱɲɳɴɵɶɷɸɹɺ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.72 (≥1e4) | recognised |
-| 150 | `ɨɩɪɫɬɭɮɯɰɱɲɳɴɵɶɷɸɹɺɻɼɽɾɿ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.69 (≥1e4) | recognised |
-| 151 | `ɩɪɫɬɭɮɯɰɱɲɳɴɵɶɷɸɹɺɻɼɽɾɿʀ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.69 (≥1e4) | recognised |
-| 152 | `ʁʂʃʄʅʆʇʈʉʊʋʌʍʎʏʐʑʒʓʔʕʖʗʘ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.38 (0.8) | recognised |
-| 153 | `ʌʍʎʏʐʑʒʓʔʕʖʗʘʙʚʛʜʝʞʟʠʡʢʣ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.32 (0.267) | recognised |
-| 154 | `˂˃˄˅ˆˇˈˉˊˋˌˍˎˏːˑ˒˓˔˕˖˗˘˙` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
-| 155 | `˜˝˞˟ˠˡˢˣˤ˥˦˧˨˩˪˫ˬ˭ˮ˯˰˱˲˳` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
-| 156 | `ϜϝϞϟϠϡϢϣϤϥϦϧϨϩϪϫϬϭϮϯϰϱϲϳ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | +0.75 (≥1e4) | recognised |
-| 157 | `ЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.68 (60.7) | recognised |
-| 158 | `ьэюяѐёђѓєѕіїјљњћќѝўџѠѡѢѣ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.73 (≥1e4) | recognised |
-| 159 | `ҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀӁ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 160 | `אבגדהוזחטיךכלםמןנסעףפץצק` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.75 (1.09e+03) | recognised |
-| 161 | `ٷٸٹٺٻټٽپٿڀځڂڃڄڅچڇڈډڊڋڌڍڎ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | +0.67 (≥1e4) | recognised |
-| 162 | `ڈډڊڋڌڍڎڏڐڑڒړڔڕږڗژڙښڛڜڝڞڟ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.58 (4.33) | recognised |
-| 163 | `ڝڞڟڠڡڢڣڤڥڦڧڨکڪګڬڭڮگڰڱڲڳڴ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.71 (≥1e4) | recognised |
-| 164 | `ڦڧڨکڪګڬڭڮگڰڱڲڳڴڵڶڷڸڹںڻڼڽ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.66 (≥1e4) | recognised |
-| 165 | `ڸڹںڻڼڽھڿۀہۂۃۄۅۆۇۈۉۊۋیۍێۏ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.55 (≥1e4) | recognised |
-| 166 | `ݐݑݒݓݔݕݖݗݘݙݚݛݜݝݞݟݠݡݢݣݤݥݦݧ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.71 (156) | recognised |
-| 167 | `ݗݘݙݚݛݜݝݞݟݠݡݢݣݤݥݦݧݨݩݪݫݬݭݮ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.71 (156) | recognised |
-| 168 | `ᄄᄅᄆᄇᄈᄉᄊᄋᄌᄍᄎᄏᄐᄑᄒᄓᄔᄕᄖᄗᄘᄙᄚᄛ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.67 (≥1e4) | recognised |
-| 169 | `ᐘᐙᐚᐛᐜᐝᐞᐟᐠᐡᐢᐣᐤᐥᐦᐧᐨᐩᐪᐫᐬᐭᐮᐯ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.32 (0.35) | recognised |
-| 170 | `ᐣᐤᐥᐦᐧᐨᐩᐪᐫᐬᐭᐮᐯᐰᐱᐲᐳᐴᐵᐶᐷᐸᐹᐺ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.58 (2) | recognised |
-| 171 | `ᐳᐴᐵᐶᐷᐸᐹᐺᐻᐼᐽᐾᐿᑀᑁᑂᑃᑄᑅᑆᑇᑈᑉᑊ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 172 | `ᖟᖠᖡᖢᖣᖤᖥᖦᖧᖨᖩᖪᖫᖬᖭᖮᖯᖰᖱᖲᖳᖴᖵᖶ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
-| 173 | `ᖤᖥᖦᖧᖨᖩᖪᖫᖬᖭᖮᖯᖰᖱᖲᖳᖴᖵᖶᖷᖸᖹᖺᖻ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
-| 174 | `ᖨᖩᖪᖫᖬᖭᖮᖯᖰᖱᖲᖳᖴᖵᖶᖷᖸᖹᖺᖻᖼᖽᖾᖿ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
-| 175 | `ᚮᚯᚰᚱᚲᚳᚴᚵᚶᚷᚸᚹᚺᚻᚼᚽᚾᚿᛀᛁᛂᛃᛄᛅ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 176 | `↬↭↮↯↰↱↲↳↴↵↶↷↸↹↺↻↼↽↾↿⇀⇁⇂⇃` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.43 (≥1e4) | recognised |
-| 177 | `∫∬∭∮∯∰∱∲∳∴∵∶∷∸∹∺∻∼∽∾∿≀≁≂` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.84 (≥1e4) | recognised |
-| 178 | `∱∲∳∴∵∶∷∸∹∺∻∼∽∾∿≀≁≂≃≄≅≆≇≈` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 179 | `∲∳∴∵∶∷∸∹∺∻∼∽∾∿≀≁≂≃≄≅≆≇≈≉` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 180 | `∳∴∵∶∷∸∹∺∻∼∽∾∿≀≁≂≃≄≅≆≇≈≉≊` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 181 | `∴∵∶∷∸∹∺∻∼∽∾∿≀≁≂≃≄≅≆≇≈≉≊≋` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 182 | `≃≄≅≆≇≈≉≊≋≌≍≎≏≐≑≒≓≔≕≖≗≘≙≚` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 183 | `⌌⌍⌎⌏⌐⌑⌒⌓⌔⌕⌖⌗⌘⌙⌚⌛⌜⌝⌞⌟⌠⌡⌢⌣` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.50 (2.49) | recognised |
-| 184 | `⎯⎰⎱⎲⎳⎴⎵⎶⎷⎸⎹⎺⎻⎼⎽⎾⎿⏀⏁⏂⏃⏄⏅⏆` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | 1 (0 firm) | +0.73 (≥1e4) | recognised |
-| 185 | `⏘⏙⏚⏛⏜⏝⏞⏟⏠⏡⏢⏣⏤⏥⏦⏧⏨⏩⏪⏫⏬⏭⏮⏯` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | 1 (0 firm) | – | recognised |
-| 186 | `⒎⒏⒐⒑⒒⒓⒔⒕⒖⒗⒘⒙⒚⒛⒜⒝⒞⒟⒠⒡⒢⒣⒤⒥` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.94 (≥1e4) | recognised |
-| 187 | `⒐⒑⒒⒓⒔⒕⒖⒗⒘⒙⒚⒛⒜⒝⒞⒟⒠⒡⒢⒣⒤⒥⒦⒧` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
-| 188 | `⒨⒩⒪⒫⒬⒭⒮⒯⒰⒱⒲⒳⒴⒵ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.88 (≥1e4) | recognised |
-| 189 | `⒪⒫⒬⒭⒮⒯⒰⒱⒲⒳⒴⒵ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.87 (≥1e4) | recognised |
-| 190 | `┏┐┑┒┓└┕┖┗┘┙┚┛├┝┞┟┠┡┢┣┤┥┦` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (1 firm) | +0.70 (≥1e4) | recognised |
-| 191 | `╄╅╆╇╈╉╊╋╌╍╎╏═║╒╓╔╕╖╗╘╙╚╛` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 192 | `▦▧▨▩▪▫▬▭▮▯▰▱▲△▴▵▶▷▸▹►▻▼▽` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | 3 (0 firm) | +0.47 (2.34) | recognised |
-| 193 | `☃☄★☆☇☈☉☊☋☌☍☎☏☐☑☒☓☔☕☖☗☘☙☚` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 194 | `⚤⚥⚦⚧⚨⚩⚪⚫⚬⚭⚮⚯⚰⚱⚲⚳⚴⚵⚶⚷⚸⚹⚺⚻` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.45 (1.34) | recognised |
-| 195 | `⠖⠗⠘⠙⠚⠛⠜⠝⠞⠟⠠⠡⠢⠣⠤⠥⠦⠧⠨⠩⠪⠫⠬⠭` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | – | recognised |
-| 196 | `⠡⠢⠣⠤⠥⠦⠧⠨⠩⠪⠫⠬⠭⠮⠯⠰⠱⠲⠳⠴⠵⠶⠷⠸` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | – | recognised |
-| 197 | `⠴⠵⠶⠷⠸⠹⠺⠻⠼⠽⠾⠿⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.46 (0.833) | recognised |
-| 198 | `⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓⡔⡕⡖⡗⡘` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.46 (0.833) | recognised |
-| 199 | `⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓⡔⡕⡖⡗⡘⡙⡚⡛⡜⡝⡞⡟⡠⡡` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.67 (≥1e4) | recognised |
-| 200 | `⡧⡨⡩⡪⡫⡬⡭⡮⡯⡰⡱⡲⡳⡴⡵⡶⡷⡸⡹⡺⡻⡼⡽⡾` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 201 | `⡭⡮⡯⡰⡱⡲⡳⡴⡵⡶⡷⡸⡹⡺⡻⡼⡽⡾⡿⢀⢁⢂⢃⢄` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.66 (≥1e4) | recognised |
-| 202 | `⡱⡲⡳⡴⡵⡶⡷⡸⡹⡺⡻⡼⡽⡾⡿⢀⢁⢂⢃⢄⢅⢆⢇⢈` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.71 (≥1e4) | recognised |
-| 203 | `⡿⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋⢌⢍⢎⢏⢐⢑⢒⢓⢔⢕⢖` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | +0.64 (≥1e4) | recognised |
-| 204 | `⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋⢌⢍⢎⢏⢐⢑⢒⢓⢔⢕⢖⢗` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.64 (≥1e4) | recognised |
-| 205 | `⢙⢚⢛⢜⢝⢞⢟⢠⢡⢢⢣⢤⢥⢦⢧⢨⢩⢪⢫⢬⢭⢮⢯⢰` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 206 | `⢟⢠⢡⢢⢣⢤⢥⢦⢧⢨⢩⢪⢫⢬⢭⢮⢯⢰⢱⢲⢳⢴⢵⢶` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.46 (0.833) | recognised |
-| 207 | `⢯⢰⢱⢲⢳⢴⢵⢶⢷⢸⢹⢺⢻⢼⢽⢾⢿⣀⣁⣂⣃⣄⣅⣆` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 5 (0 firm) | +0.50 (1.5) | recognised |
-| 208 | `⣋⣌⣍⣎⣏⣐⣑⣒⣓⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟⣠⣡⣢` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 6 (0 firm) | +0.64 (≥1e4) | recognised |
-| 209 | `⣣⣤⣥⣦⣧⣨⣩⣪⣫⣬⣭⣮⣯⣰⣱⣲⣳⣴⣵⣶⣷⣸⣹⣺` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 8 (0 firm) | +0.74 (≥1e4) | recognised |
-| 210 | `⤁⤂⤃⤄⤅⤆⤇⤈⤉⤊⤋⤌⤍⤎⤏⤐⤑⤒⤓⤔⤕⤖⤗⤘` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 211 | `⥉⥊⥋⥌⥍⥎⥏⥐⥑⥒⥓⥔⥕⥖⥗⥘⥙⥚⥛⥜⥝⥞⥟⥠` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.65 (4.33) | recognised |
-| 212 | `⧄⧅⧆⧇⧈⧉⧊⧋⧌⧍⧎⧏⧐⧑⧒⧓⧔⧕⧖⧗⧘⧙⧚⧛` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.69 (156) | recognised |
-| 213 | `⧎⧏⧐⧑⧒⧓⧔⧕⧖⧗⧘⧙⧚⧛⧜⧝⧞⧟⧠⧡⧢⧣⧤⧥` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 214 | `⧚⧛⧜⧝⧞⧟⧠⧡⧢⧣⧤⧥⧦⧧⧨⧩⧪⧫⧬⧭⧮⧯⧰⧱` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | – | recognised |
-| 215 | `⩷⩸⩹⩺⩻⩼⩽⩾⩿⪀⪁⪂⪃⪄⪅⪆⪇⪈⪉⪊⪋⪌⪍⪎` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | 1 (0 firm) | +0.71 (4.52e+03) | recognised |
-| 216 | `⩻⩼⩽⩾⩿⪀⪁⪂⪃⪄⪅⪆⪇⪈⪉⪊⪋⪌⪍⪎⪏⪐⪑⪒` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.71 (4.52e+03) | recognised |
-| 217 | `⪂⪃⪄⪅⪆⪇⪈⪉⪊⪋⪌⪍⪎⪏⪐⪑⪒⪓⪔⪕⪖⪗⪘⪙` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.71 (4.52e+03) | recognised |
-| 218 | `⯜⯝⯞⯟⯠⯡⯢⯣⯤⯥⯦⯧⯨⯩⯪⯫⯬⯭⯮⯯⯰⯱⯲⯳` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
-| 219 | `ⵄⵅⵆⵇⵈⵉⵊⵋⵌⵍⵎⵏⵐⵑⵒⵓⵔⵕⵖⵗⵘⵙⵚⵛ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.58 (4.33) | recognised |
-| 220 | `⼯⼰⼱⼲⼳⼴⼵⼶⼷⼸⼹⼺⼻⼼⼽⼾⼿⽀⽁⽂⽃⽄⽅⽆` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.65 (24.2) | recognised |
-| 221 | `⽚⽛⽜⽝⽞⽟⽠⽡⽢⽣⽤⽥⽦⽧⽨⽩⽪⽫⽬⽭⽮⽯⽰⽱` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | – | recognised |
-| 222 | `⽜⽝⽞⽟⽠⽡⽢⽣⽤⽥⽦⽧⽨⽩⽪⽫⽬⽭⽮⽯⽰⽱⽲⽳` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 223 | `⽣⽤⽥⽦⽧⽨⽩⽪⽫⽬⽭⽮⽯⽰⽱⽲⽳⽴⽵⽶⽷⽸⽹⽺` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 224 | `⽺⽻⽼⽽⽾⽿⾀⾁⾂⾃⾄⾅⾆⾇⾈⾉⾊⾋⾌⾍⾎⾏⾐⾑` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
-| 225 | `⾐⾑⾒⾓⾔⾕⾖⾗⾘⾙⾚⾛⾜⾝⾞⾟⾠⾡⾢⾣⾤⾥⾦⾧` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 226 | `ㄒㄓㄔㄕㄖㄗㄘㄙㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦㄧㄨㄩ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.49 (1.5) | recognised |
-| 227 | `ㅀㅁㅂㅃㅄㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎㅏㅐㅑㅒㅓㅔㅕㅖㅗ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.67 (≥1e4) | recognised |
-| 228 | `ㅍㅎㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣㅤ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.47 (1.5) | recognised |
-| 229 | `ㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣㅤㅥㅦㅧ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.71 (5.44e+03) | recognised |
-| 230 | `ㅛㅜㅝㅞㅟㅠㅡㅢㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
-| 231 | `ㅳㅴㅵㅶㅷㅸㅹㅺㅻㅼㅽㅾㅿㆀㆁㆂㆃㆄㆅㆆㆇㆈㆉㆊ` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 232 | `㇌㇍㇎㇏㇐㇑㇒㇓㇔㇕㇖㇗㇘㇙㇚㇛㇜㇝㇞㇟㇠㇡㇢㇣` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.73 (≥1e4) | recognised |
-| 233 | `㈪㈫㈬㈭㈮㈯㈰㈱㈲㈳㈴㈵㈶㈷㈸㈹㈺㈻㈼㈽㈾㈿㉀㉁` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.40 (0.833) | recognised |
-| 234 | `㉢㉣㉤㉥㉦㉧㉨㉩㉪㉫㉬㉭㉮㉯㉰㉱㉲㉳㉴㉵㉶㉷㉸㉹` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
-| 235 | `㉺㉻㉼㉽㉾㉿㊀㊁㊂㊃㊄㊅㊆㊇㊈㊉㊊㊋㊌㊍㊎㊏㊐㊑` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.93 (≥1e4) | recognised |
-| 236 | `㊃㊄㊅㊆㊇㊈㊉㊊㊋㊌㊍㊎㊏㊐㊑㊒㊓㊔㊕㊖㊗㊘㊙㊚` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
-| 237 | `㊄㊅㊆㊇㊈㊉㊊㊋㊌㊍㊎㊏㊐㊑㊒㊓㊔㊕㊖㊗㊘㊙㊚㊛` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
-| 238 | `㊕㊖㊗㊘㊙㊚㊛㊜㊝㊞㊟㊠㊡㊢㊣㊤㊥㊦㊧㊨㊩㊪㊫㊬` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.50 (4.36e+03) | recognised |
-| 239 | `㌈㌉㌊㌋㌌㌍㌎㌏㌐㌑㌒㌓㌔㌕㌖㌗㌘㌙㌚㌛㌜㌝㌞㌟` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.74 (≥1e4) | recognised |
-| 240 | `㌐㌑㌒㌓㌔㌕㌖㌗㌘㌙㌚㌛㌜㌝㌞㌟㌠㌡㌢㌣㌤㌥㌦㌧` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
-| 241 | `㌒㌓㌔㌕㌖㌗㌘㌙㌚㌛㌜㌝㌞㌟㌠㌡㌢㌣㌤㌥㌦㌧㌨㌩` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 242 | `㌙㌚㌛㌜㌝㌞㌟㌠㌡㌢㌣㌤㌥㌦㌧㌨㌩㌪㌫㌬㌭㌮㌯㌰` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 243 | `㌥㌦㌧㌨㌩㌪㌫㌬㌭㌮㌯㌰㌱㌲㌳㌴㌵㌶㌷㌸㌹㌺㌻㌼` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.67 (≥1e4) | recognised |
-| 244 | `㌳㌴㌵㌶㌷㌸㌹㌺㌻㌼㌽㌾㌿㍀㍁㍂㍃㍄㍅㍆㍇㍈㍉㍊` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
-| 245 | `㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰㍱㍲㍳㍴㍵㍶` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
-| 246 | `㍺㍻㍼㍽㍾㍿㎀㎁㎂㎃㎄㎅㎆㎇㎈㎉㎊㎋㎌㎍㎎㎏㎐㎑` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.72 (≥1e4) | recognised |
-| 247 | `㎵㎶㎷㎸㎹㎺㎻㎼㎽㎾㎿㏀㏁㏂㏃㏄㏅㏆㏇㏈㏉㏊㏋㏌` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.66 (5.44e+03) | recognised |
-| 248 | `㏄㏅㏆㏇㏈㏉㏊㏋㏌㏍㏎㏏㏐㏑㏒㏓㏔㏕㏖㏗㏘㏙㏚㏛` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (10) | recognised |
-| 249 | `㏊㏋㏌㏍㏎㏏㏐㏑㏒㏓㏔㏕㏖㏗㏘㏙㏚㏛㏜㏝㏞㏟㏠㏡` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (10) | recognised |
-| 250 | `㏒㏓㏔㏕㏖㏗㏘㏙㏚㏛㏜㏝㏞㏟㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.90 (≥1e4) | recognised |
-| 251 | `㏙㏚㏛㏜㏝㏞㏟㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
-| 252 | `㏜㏝㏞㏟㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.90 (≥1e4) | recognised |
-| 253 | `𐄺𐄻𐄼𐄽𐄾𐄿𐅀𐅁𐅂𐅃𐅄𐅅𐅆𐅇𐅈𐅉𐅊𐅋𐅌𐅍𐅎𐅏𐅐𐅑` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.72 (≥1e4) | recognised |
-| 254 | `𐅅𐅆𐅇𐅈𐅉𐅊𐅋𐅌𐅍𐅎𐅏𐅐𐅑𐅒𐅓𐅔𐅕𐅖𐅗𐅘𐅙𐅚𐅛𐅜` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.65 (24.2) | recognised |
-| 255 | `𐡨𐡩𐡪𐡫𐡬𐡭𐡮𐡯𐡰𐡱𐡲𐡳𐡴𐡵𐡶𐡷𐡸𐡹𐡺𐡻𐡼𐡽𐡾𐡿` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
-| 256 | `𝀔𝀕𝀖𝀗𝀘𝀙𝀚𝀛𝀜𝀝𝀞𝀟𝀠𝀡𝀢𝀣𝀤𝀥𝀦𝀧𝀨𝀩𝀪𝀫` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.65 (4.33) | recognised |
-| 257 | `𝀗𝀘𝀙𝀚𝀛𝀜𝀝𝀞𝀟𝀠𝀡𝀢𝀣𝀤𝀥𝀦𝀧𝀨𝀩𝀪𝀫𝀬𝀭𝀮` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 258 | `𝀙𝀚𝀛𝀜𝀝𝀞𝀟𝀠𝀡𝀢𝀣𝀤𝀥𝀦𝀧𝀨𝀩𝀪𝀫𝀬𝀭𝀮𝀯𝀰` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.94 (≥1e4) | recognised |
-| 259 | `𝂈𝂉𝂊𝂋𝂌𝂍𝂎𝂏𝂐𝂑𝂒𝂓𝂔𝂕𝂖𝂗𝂘𝂙𝂚𝂛𝂜𝂝𝂞𝂟` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.95 (≥1e4) | recognised |
-| 260 | `𝂉𝂊𝂋𝂌𝂍𝂎𝂏𝂐𝂑𝂒𝂓𝂔𝂕𝂖𝂗𝂘𝂙𝂚𝂛𝂜𝂝𝂞𝂟𝂠` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
-| 261 | `𝂏𝂐𝂑𝂒𝂓𝂔𝂕𝂖𝂗𝂘𝂙𝂚𝂛𝂜𝂝𝂞𝂟𝂠𝂡𝂢𝂣𝂤𝂥𝂦` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.96 (≥1e4) | recognised |
-| 262 | `𝂔𝂕𝂖𝂗𝂘𝂙𝂚𝂛𝂜𝂝𝂞𝂟𝂠𝂡𝂢𝂣𝂤𝂥𝂦𝂧𝂨𝂩𝂪𝂫` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.96 (≥1e4) | recognised |
-| 263 | `𝂣𝂤𝂥𝂦𝂧𝂨𝂩𝂪𝂫𝂬𝂭𝂮𝂯𝂰𝂱𝂲𝂳𝂴𝂵𝂶𝂷𝂸𝂹𝂺` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.65 (24.2) | recognised |
-| 264 | `𝂬𝂭𝂮𝂯𝂰𝂱𝂲𝂳𝂴𝂵𝂶𝂷𝂸𝂹𝂺𝂻𝂼𝂽𝂾𝂿𝃀𝃁𝃂𝃃` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
-| 265 | `𝂰𝂱𝂲𝂳𝂴𝂵𝂶𝂷𝂸𝂹𝂺𝂻𝂼𝂽𝂾𝂿𝃀𝃁𝃂𝃃𝃄𝃅𝃆𝃇` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 266 | `𝃀𝃁𝃂𝃃𝃄𝃅𝃆𝃇𝃈𝃉𝃊𝃋𝃌𝃍𝃎𝃏𝃐𝃑𝃒𝃓𝃔𝃕𝃖𝃗` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.69 (471) | recognised |
-| 267 | `𝃅𝃆𝃇𝃈𝃉𝃊𝃋𝃌𝃍𝃎𝃏𝃐𝃑𝃒𝃓𝃔𝃕𝃖𝃗𝃘𝃙𝃚𝃛𝃜` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.69 (471) | recognised |
-| 268 | `𝃏𝃐𝃑𝃒𝃓𝃔𝃕𝃖𝃗𝃘𝃙𝃚𝃛𝃜𝃝𝃞𝃟𝃠𝃡𝃢𝃣𝃤𝃥𝃦` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.79 (≥1e4) | recognised |
-| 269 | `𝃘𝃙𝃚𝃛𝃜𝃝𝃞𝃟𝃠𝃡𝃢𝃣𝃤𝃥𝃦𝃧𝃨𝃩𝃪𝃫𝃬𝃭𝃮𝃯` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.72 (3.16e+03) | recognised |
-| 270 | `𝌨𝌩𝌪𝌫𝌬𝌭𝌮𝌯𝌰𝌱𝌲𝌳𝌴𝌵𝌶𝌷𝌸𝌹𝌺𝌻𝌼𝌽𝌾𝌿` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 271 | `𝕻𝕼𝕽𝕾𝕿𝖀𝖁𝖂𝖃𝖄𝖅𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.93 (≥1e4) | recognised |
-| 272 | `𝖃𝖄𝖅𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.91 (≥1e4) | recognised |
-| 273 | `𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜𝖝𝖞𝖟𝖠𝖡` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.90 (≥1e4) | recognised |
-| 274 | `𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡𝘢𝘣` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 275 | `𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡𝘢𝘣𝘤𝘥𝘦𝘧𝘨` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 276 | `𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.81 (156) | recognised |
-| 277 | `𝘶𝘷𝘸𝘹𝘺𝘻𝘼𝘽𝘾𝘿𝙀𝙁𝙂𝙃𝙄𝙅𝙆𝙇𝙈𝙉𝙊𝙋𝙌𝙍` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.87 (≥1e4) | recognised |
-| 278 | `𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣𝚤𝚥` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
-| 279 | `𝛕𝛖𝛗𝛘𝛙𝛚𝛛𝛜𝛝𝛞𝛟𝛠𝛡𝛢𝛣𝛤𝛥𝛦𝛧𝛨𝛩𝛪𝛫𝛬` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.69 (≥1e4) | recognised |
-| 280 | `𝛚𝛛𝛜𝛝𝛞𝛟𝛠𝛡𝛢𝛣𝛤𝛥𝛦𝛧𝛨𝛩𝛪𝛫𝛬𝛭𝛮𝛯𝛰𝛱` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.77 (≥1e4) | recognised |
-| 281 | `𝛢𝛣𝛤𝛥𝛦𝛧𝛨𝛩𝛪𝛫𝛬𝛭𝛮𝛯𝛰𝛱𝛲𝛳𝛴𝛵𝛶𝛷𝛸𝛹` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.76 (≥1e4) | recognised |
-| 282 | `𝝩𝝪𝝫𝝬𝝭𝝮𝝯𝝰𝝱𝝲𝝳𝝴𝝵𝝶𝝷𝝸𝝹𝝺𝝻𝝼𝝽𝝾𝝿𝞀` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.75 (24.2) | recognised |
-| 283 | `𝝶𝝷𝝸𝝹𝝺𝝻𝝼𝝽𝝾𝝿𝞀𝞁𝞂𝞃𝞄𝞅𝞆𝞇𝞈𝞉𝞊𝞋𝞌𝞍` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.33 (0.5) | recognised |
-| 284 | `🀈🀉🀊🀋🀌🀍🀎🀏🀐🀑🀒🀓🀔🀕🀖🀗🀘🀙🀚🀛🀜🀝🀞🀟` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.97 (≥1e4) | recognised |
-| 285 | `🀳🀴🀵🀶🀷🀸🀹🀺🀻🀼🀽🀾🀿🁀🁁🁂🁃🁄🁅🁆🁇🁈🁉🁊` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
-| 286 | `🀴🀵🀶🀷🀸🀹🀺🀻🀼🀽🀾🀿🁀🁁🁂🁃🁄🁅🁆🁇🁈🁉🁊🁋` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.94 (≥1e4) | recognised |
-| 287 | `🀸🀹🀺🀻🀼🀽🀾🀿🁀🁁🁂🁃🁄🁅🁆🁇🁈🁉🁊🁋🁌🁍🁎🁏` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.62 (10) | recognised |
-| 288 | `🁍🁎🁏🁐🁑🁒🁓🁔🁕🁖🁗🁘🁙🁚🁛🁜🁝🁞🁟🁠🁡🁢🁣🁤` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.70 (403) | recognised |
-| 289 | `🁎🁏🁐🁑🁒🁓🁔🁕🁖🁗🁘🁙🁚🁛🁜🁝🁞🁟🁠🁡🁢🁣🁤🁥` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.72 (6.57e+03) | recognised |
-| 290 | `🁜🁝🁞🁟🁠🁡🁢🁣🁤🁥🁦🁧🁨🁩🁪🁫🁬🁭🁮🁯🁰🁱🁲🁳` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (10) | recognised |
-| 291 | `🁺🁻🁼🁽🁾🁿🂀🂁🂂🂃🂄🂅🂆🂇🂈🂉🂊🂋🂌🂍🂎🂏🂐🂑` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.82 (≥1e4) | recognised |
-| 292 | `🄌🄍🄎🄏🄐🄑🄒🄓🄔🄕🄖🄗🄘🄙🄚🄛🄜🄝🄞🄟🄠🄡🄢🄣` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
-| 293 | `🄐🄑🄒🄓🄔🄕🄖🄗🄘🄙🄚🄛🄜🄝🄞🄟🄠🄡🄢🄣🄤🄥🄦🄧` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.90 (≥1e4) | recognised |
-| 294 | `🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉🅊🅋🅌` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
-| 295 | `🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩🅪🅫🅬🅭🅮🅯🅰🅱🅲🅳🅴🅵` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 296 | `🅡🅢🅣🅤🅥🅦🅧🅨🅩🅪🅫🅬🅭🅮🅯🅰🅱🅲🅳🅴🅵🅶🅷🅸` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 297 | `🏞🏟🏠🏡🏢🏣🏤🏥🏦🏧🏨🏩🏪🏫🏬🏭🏮🏯🏰🏱🏲🏳🏴🏵` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.57 (164) | recognised |
-| 298 | `🕐🕜🕑🕝🕒🕞🕓🕟🕔🕠🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦🕛🕧` | 24 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 6/22 | 3 | 7 (0 firm) | +0.81 (≥1e4) | recognised |
-| 299 | `🕐🕧🕛🕦🕚🕥🕙🕤🕘🕣🕗🕢🕖🕡🕕🕠🕔🕟🕓🕞🕒🕝🕑🕜` | 24 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 5/24 | 3 | 7 (0 firm) | +0.52 (≥1e4) | recognised |
-| 300 | `🕑🕜🕐🕧🕛🕦🕚🕥🕙🕤🕘🕣🕗🕢🕖🕡🕕🕠🕔🕟🕓🕞🕒🕝` | 24 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 6/26 | 3 | 7 (0 firm) | +0.43 (≥1e4) | recognised |
-| 301 | `🕑🕝🕒🕞🕓🕟🕔🕠🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦🕛🕧🕐🕜` | 24 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 5/26 | 3 | 7 (0 firm) | +0.52 (≥1e4) | recognised |
-| 302 | `🕒🕞🕓🕟🕔🕠🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦🕛🕧🕐🕜🕑🕝` | 24 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 6/26 | 3 | 8 (0 firm) | +0.43 (≥1e4) | recognised |
-| 303 | `🕓🕞🕒🕝🕑🕜🕐🕧🕛🕦🕚🕥🕙🕤🕘🕣🕗🕢🕖🕡🕕🕠🕔🕟` | 24 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 6/26 | 3 | 7 (0 firm) | +0.69 (≥1e4) | recognised |
-| 304 | `🕔🕠🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦🕛🕧🕐🕜🕑🕝🕒🕞🕓🕟` | 24 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 6/26 | 3 | 7 (0 firm) | +0.68 (≥1e4) | recognised |
-| 305 | `🕖🕡🕕🕠🕔🕟🕓🕞🕒🕝🕑🕜🕐🕧🕛🕦🕚🕥🕙🕤🕘🕣🕗🕢` | 24 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 5/26 | 3 | 5 (0 firm) | +0.50 (≥1e4) | recognised |
-| 306 | `🕗🕢🕖🕡🕕🕠🕔🕟🕓🕞🕒🕝🕑🕜🕐🕧🕛🕦🕚🕥🕙🕤🕘🕣` | 24 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 5/26 | 3 | 5 (0 firm) | +0.62 (≥1e4) | recognised |
-| 307 | `🕛🕦🕚🕥🕙🕤🕘🕣🕗🕢🕖🕡🕕🕠🕔🕟🕓🕞🕒🕝🕑🕜🕐🕧` | 24 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 5/24 | 3 | 7 (0 firm) | +0.81 (≥1e4) | recognised |
-| 308 | `🕛🕧🕐🕜🕑🕝🕒🕞🕓🕟🕔🕠🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦` | 24 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 5/26 | 3 | 7 (0 firm) | +0.89 (≥1e4) | recognised |
-| 309 | `😮😯😰😱😲😳😴😵😶😷😸😹😺😻😼😽😾😿🙀🙁🙂🙃🙄🙅` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.31 (0.567) | recognised |
-| 310 | `🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪🜫🜬🜭🜮🜯🜰🜱🜲🜳` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
-| 311 | `🜧🜨🜩🜪🜫🜬🜭🜮🜯🜰🜱🜲🜳🜴🜵🜶🜷🜸🜹🜺🜻🜼🜽🜾` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.68 (≥1e4) | recognised |
-| 312 | `🜸🜹🜺🜻🜼🜽🜾🜿🝀🝁🝂🝃🝄🝅🝆🝇🝈🝉🝊🝋🝌🝍🝎🝏` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 313 | `🞍🞎🞏🞐🞑🞒🞓🞔🞕🞖🞗🞘🞙🞚🞛🞜🞝🞞🞟🞠🞡🞢🞣🞤` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.89 (≥1e4) | recognised |
-| 314 | `🪟🪠🪡🪢🪣🪤🪥🪦🪧🪨🪩🪪🪫🪬🪭🪮🪯🪰🪱🪲🪳🪴🪵🪶` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 315 | `🬍🬎🬏🬐🬑🬒🬓🬔🬕🬖🬗🬘🬙🬚🬛🬜🬝🬞🬟🬠🬡🬢🬣🬤` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 316 | `🬝🬞🬟🬠🬡🬢🬣🬤🬥🬦🬧🬨🬩🬪🬫🬬🬭🬮🬯🬰🬱🬲🬳🬴` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (156) | recognised |
-| 317 | `🬢🬣🬤🬥🬦🬧🬨🬩🬪🬫🬬🬭🬮🬯🬰🬱🬲🬳🬴🬵🬶🬷🬸🬹` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (156) | recognised |
-| 318 | `🬦🬧🬨🬩🬪🬫🬬🬭🬮🬯🬰🬱🬲🬳🬴🬵🬶🬷🬸🬹🬺🬻🬼🬽` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (156) | recognised |
-| 319 | `🬬🬭🬮🬯🬰🬱🬲🬳🬴🬵🬶🬷🬸🬹🬺🬻🬼🬽🬾🬿🭀🭁🭂🭃` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.62 (10) | recognised |
-| 320 | `🬷🬸🬹🬺🬻🬼🬽🬾🬿🭀🭁🭂🭃🭄🭅🭆🭇🭈🭉🭊🭋🭌🭍🭎` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.67 (60.7) | recognised |
-| 321 | `🭄🭅🭆🭇🭈🭉🭊🭋🭌🭍🭎🭏🭐🭑🭒🭓🭔🭕🭖🭗🭘🭙🭚🭛` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.74 (≥1e4) | recognised |
-| 322 | `🭖🭗🭘🭙🭚🭛🭜🭝🭞🭟🭠🭡🭢🭣🭤🭥🭦🭧🭨🭩🭪🭫🭬🭭` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.88 (≥1e4) | recognised |
-| 323 | `🭛🭜🭝🭞🭟🭠🭡🭢🭣🭤🭥🭦🭧🭨🭩🭪🭫🭬🭭🭮🭯🭰🭱🭲` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.86 (≥1e4) | recognised |
-| 324 | `🭥🭦🭧🭨🭩🭪🭫🭬🭭🭮🭯🭰🭱🭲🭳🭴🭵🭶🭷🭸🭹🭺🭻🭼` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.86 (≥1e4) | recognised |
-| 325 | `🭧🭨🭩🭪🭫🭬🭭🭮🭯🭰🭱🭲🭳🭴🭵🭶🭷🭸🭹🭺🭻🭼🭽🭾` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.87 (≥1e4) | recognised |
-| 326 | `🭪🭫🭬🭭🭮🭯🭰🭱🭲🭳🭴🭵🭶🭷🭸🭹🭺🭻🭼🭽🭾🭿🮀🮁` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.84 (≥1e4) | recognised |
-| 327 | `🮬🮭🮮🮯🮰🮱🮲🮳🮴🮵🮶🮷🮸🮹🮺🮻🮼🮽🮾🮿🯀🯁🯂🯃` | 24 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 328 | `⒨Ⓜ⒧Ⓛ⒦Ⓚ⒥Ⓙ⒤Ⓘ⒣Ⓗ⒢Ⓖ⒡Ⓕ⒠Ⓔ⒟Ⓓ⒞Ⓒ⒝Ⓑ` | 24 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/26 | 5 | – | +0.86 (≥1e4) | recognised |
-| 329 | `𝐴𝐵𝛤𝛥𝐸𝑍𝛨𝛩𝛪𝛫𝛬𝑀𝑁𝛯𝑂𝛱𝑅𝛴𝑇𝛶𝛷𝛸𝛹𝛺` | 24 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/34 | 3 | 1 (0 firm) | +0.70 (≥1e4) | recognised |
-| 330 | `┉┊┋┌┍┎┏┐┑┒┓└┕┖┗┘┙┚┛├┝┞┟┠` | 24 | contiguous | +0.61 ± 0.20 | 555 | cl 3/4 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.68 (7.64e+03) | recognised |
-| 331 | `ڹںڻڼڽھڿۀہۂۃۄۅۆۇۈۉۊۋیۍێۏې` | 24 | contiguous | +0.59 ± 0.21 | 97 | cl 2/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.55 (310) | recognised |
-| 332 | `ⓈⓢⓇⓡⓆⓠⓅⓟⓄⓞⓃⓝⓂⓜⓁⓛⓀⓚⒿⓙⒾⓘⒽⓗ` | 24 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/26 | 5 | – | +0.89 (≥1e4) | recognised |
-| 333 | `㉤㉧㉪㉭㉰㉳㉶㉹㉼㉿㊂㊅㊈㊋㊎㊑㊔㊗㊚㊝㊠㊣㊦㊩` | 24 | monotone | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/44 | 5 | – | +0.79 (≥1e4) | recognised |
-| 334 | `ȃȅȇȉȋȍȏȑȓȕȗșțȝȟȡȣȥȧȩȫȭȯȱ` | 24 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/44 | 5 | – | – | recognised |
-| 335 | `🬂🬄🬆🬈🬊🬌🬎🬐🬒🬔🬖🬘🬚🬜🬞🬠🬢🬤🬦🬨🬪🬬🬮🬰` | 24 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/44 | 5 | – | +0.66 (3.16e+03) | recognised |
-| 336 | `ǇǈǉǊǋǌǍǎǏǐǑǒǓǔǕǖǗǘǙǚǛǜǝǞ` | 24 | contiguous | +0.58 ± 0.21 | 36.1 | cl 2/3 gr 1/1 | undiscriminable | 3 | – | +0.48 (2.33) | recognised |
-| 337 | `ሆሉሌሏሒሕመማሞሡሤሧሪርሰሳሶሹሼሿቂቅቈቋ` | 24 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 2/43 | 3 | 2 (0 firm) | +0.65 (24.2) | recognised |
-| 338 | `⠶⠷⠾⠿⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓` | 24 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/2 | 5 | 3 (0 firm) | +0.33 (0.5) | recognised |
-| 339 | `⡂⡁⡀⣿⣾⣽⣼⣻⣺⣹⣸⣷⣶⣵⣴⣳⣲⣱⣰⣯⣮⣭⣬⣫` | 24 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | 8 (0 firm) | +0.79 (≥1e4) | recognised |
-| 340 | `⢠⢜⢘⢔⢐⢌⢈⢄⢀⣼⣸⣴⣰⣬⣨⣤⣠⣜⣘⣔⣐⣌⣈⣄` | 24 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/46 | 5 | 2 (0 firm) | +0.25 (0.373) | recognised |
-| 341 | `⢨⢤⢠⢜⢘⢔⢐⢌⢈⢄⢀⣼⣸⣴⣰⣬⣨⣤⣠⣜⣘⣔⣐⣌` | 24 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/46 | 5 | 1 (0 firm) | +0.60 (244) | recognised |
-| 342 | `㉗㉚㉝㉠㉣㉦㉩㉬㉯㉲㉵㉸㉻㉾㊁㊄㊇㊊㊍㊐㊓㊖㊙㊜` | 24 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/44 | 3 | – | +0.81 (≥1e4) | recognised |
-| 343 | `𝟞𝟝𝟜𝟛𝟚𝟙𝟘𝟿𝟾𝟽𝟼𝟻𝟺𝟹𝟸𝟷𝟶𝟵𝟴𝟳𝟲𝟱𝟰𝟯` | 24 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/4 | 3 | – | +0.96 (≥1e4) | recognised |
-| 344 | `𝟭𝟬𝟫𝟪𝟩𝟨𝟧𝟦𝟥𝟤𝟣𝟢𝟡𝟠𝟟𝟞𝟝𝟜𝟛𝟚𝟙𝟘𝟿𝟾` | 24 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/4 | 5 | – | +0.91 (≥1e4) | recognised |
-| 345 | `އޏސޑޒޓޔޕޖޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 24 | monotone | +0.56 ± 0.20 | 24.1 | cl 3/4 ge 1/1 gr 1/1 | undecided 0/1 | 5 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
-| 346 | `CdEfGhIjKlMnOpQrStUvWxYz` | 24 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/66 | 3 | 2 (0 firm) | +0.77 (≥1e4) | recognised |
-| 347 | `UtSrQpOnMlKjIhGfEdCbAzYx` | 24 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/66 | 3 | – | +0.77 (≥1e4) | recognised |
-| 348 | `WvUtSrQpOnMlKjIhGfEdCbAz` | 24 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/66 | 3 | – | +0.85 (≥1e4) | recognised |
-| 349 | `XaWbVcUdTeSfRgQhPiOjNkMl` | 24 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/24 | 5 | – | +0.89 (≥1e4) | recognised |
-| 350 | `ZyXwVuTsRqPoNmLkJiHgFeDc` | 24 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/66 | 3 | 1 (0 firm) | +0.82 (≥1e4) | recognised |
-| 351 | `bʙcᴄdᴅeᴇfꜰgɢhʜiɪjᴊkᴋlʟmᴍ` | 24 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/34 | 5 | – | +0.79 (≥1e4) | recognised |
-| 352 | `ÒÓÔÖÙÚÛÜÝÞßàáâãäåæçèéêëì` | 24 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.76 (≥1e4) | recognised |
-| 353 | `ǕǖǗǘǙǚǛǜǝǞǟǠǡǢǣǤǥǦǧǨǩŲųǪ` | 24 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | 2 (0 firm) | +0.76 (≥1e4) | recognised |
-| 354 | `ϓϕϗϙϛϝϟϡϣϥϦϧϨϩϪϫϬϭϮϯϰϱϲϳ` | 24 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/17 | 3 | 3 (0 firm) | +0.75 (≥1e4) | recognised |
-| 355 | `ЀЇЈЉЊЋЌЎЏАБВГДЕЖЗИЙКЛМНО` | 24 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | 2 (0 firm) | +0.53 (2.9) | recognised |
-| 356 | `ԧԨԩԪԫԬԭԮԯԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿ` | 24 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
-| 357 | `ԬԭԮԯԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿՀՁՂՃՄ` | 24 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.77 (≥1e4) | recognised |
-| 358 | `ٽپٿڀځڂڃڄڅچڇڈډڊڋڌڍڎڏڐڑڒڛڜ` | 24 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | 3 (0 firm) | +0.67 (≥1e4) | recognised |
-| 359 | `ڌڍڎڏڐڑڒڛڜڝڞڟݐݑݒݓݔݕݖݗݘݙݚݛ` | 24 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | +0.58 (4.33) | recognised |
-| 360 | `᐀ᐂᐄᐆᐈᐊᐌᐎᐐᐒᐔᐗᐙᐛᐝᐟᐡᐣᐥᐧᐩᐫᐭᐯ` | 24 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/44 | 5 | 2 (0 firm) | +0.55 (≥1e4) | recognised |
-| 361 | `ᕸᕹᕺᕻᕼᕽᕾᕿᗀᗁᗂᗃᗄᗅᗆᗇᗈᗉᗊᗋᗌᗍᗎᗏ` | 24 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 3 | 1 (0 firm) | +0.58 (2) | recognised |
-| 362 | `⒋⒌⒍⒎⒐⒑⒒⒓⒔⒕⒖⒗⒘⒙⒚⒛⒜⒝⒞⒟⒠⒡⒢⒣` | 24 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.95 (≥1e4) | recognised |
-| 363 | `ⒶⓑⒸⓓⒺⓕⒼⓗⒾⓙⓀⓛⓂⓝⓄⓟⓆⓡⓈⓣⓊⓥⓌⓧ` | 24 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/66 | 3 | 1 (0 firm) | +0.88 (≥1e4) | recognised |
-| 364 | `⡀⣿⣾⣽⣼⣻⣺⣹⣸⣷⣶⣵⣴⣳⣲⣱⣰⣯⣮⣭⣬⣫⣪⣩` | 24 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | 8 (0 firm) | +0.79 (≥1e4) | recognised |
-| 365 | `⡍⡌⡋⡊⡉⡈⡇⡆⡅⡄⡃⡂⡁⡀⣿⣾⣽⣼⣻⣺⣹⣸⣷⣶` | 24 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 3 | 7 (0 firm) | +0.68 (≥1e4) | recognised |
-| 366 | `⡕⡔⡓⡒⡑⡐⡏⡎⡍⡌⡋⡊⡉⡈⡇⡆⡅⡄⡃⡂⡁⡀⣿⣾` | 24 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 3 | 2 (0 firm) | +0.33 (0.5) | recognised |
-| 367 | `⢌⢋⢊⢉⢈⢇⢆⢅⢄⢃⢂⢁⢀⣿⣽⣼⣺⣹⣸⣴⣲⣱⣰⣤` | 24 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/12 | 5 | 4 (0 firm) | +0.55 (≥1e4) | recognised |
-| 368 | `⣀⣂⣄⣆⣈⣊⣌⣎⣐⣒⣔⣖⣘⣚⣜⣞⣠⣢⣤⣦⣨⣪⣬⣮` | 24 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/44 | 3 | 1 (0 firm) | +0.82 (≥1e4) | recognised |
-| 369 | `⧡⧠⧟⧞⧝⧜⧛⧚⧙⧘⧗⧖⧕⧔⧓⧒⧑⧐⧯⧮⧭⧬⧫⧪` | 24 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 3 | – | – | recognised |
-| 370 | `ヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン` | 24 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/20 | 3 | 1 (0 firm) | – | recognised |
-| 371 | `一二三四五六七八九十百千万億兆京垓秭穰溝澗正載極` | 24 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 15/61 | 3 | 4 (0 firm) | +0.99 (≥1e4) | recognised |
-| 372 | `𝌣𝌥𝌧𝌩𝌫𝌭𝌯𝌱𝌳𝌵𝌷𝌹𝌻𝌽𝌿𝍁𝍃𝍅𝍇𝍉𝍋𝍍𝍏𝍑` | 24 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/44 | 5 | – | +0.82 (≥1e4) | recognised |
-| 373 | `𝒶𝒷𝒸𝒹𝑒𝒻𝑔𝒽𝒾𝒿𝓀𝓁𝓂𝓃𝑜𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍` | 24 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/12 | 3 | 1 (0 firm) | +0.62 (10) | recognised |
-| 374 | `𝛝𝛞𝛟𝛠𝛡𝛢𝛣𝛤𝛥𝛦𝛧𝛨𝛩𝛪𝛫𝛬𝛭𝛮𝛯𝛰𝛱𝛲𝛴𝛵` | 24 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 3 | 2 (0 firm) | +0.79 (≥1e4) | recognised |
-| 375 | `𝛮𝛯𝛰𝛱𝛲𝛴𝛵𝛶𝛷𝛸𝛹𝛺𝛻𝛼𝛽𝛾𝛿𝜀𝜁𝜂𝜃𝜄𝜅𝜆` | 24 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 3 | 1 (0 firm) | +0.81 (≥1e4) | recognised |
-| 376 | `𝞫𝞬𝞭𝞮𝞯𝞰𝞱𝞲𝞳𝞴𝞵𝞶𝞷𝞸𝞹𝞺𝞼𝞽𝞾𝞿𝟀𝟁𝟂𝟃` | 24 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 3 | 6 (0 firm) | +0.74 (≥1e4) | recognised |
-| 377 | `🀶🀺🀾🁂🁆🁊🁎🁒🁖🁚🁞🁢🁦🁪🁮🁲🁶🁺🁾🂂🂆🂊🂎🂒` | 24 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/44 | 5 | – | +0.64 (68.3) | recognised |
-| 378 | `🏚🏘🏠🏡🏢🏣🏤🏥🏦🏧🏨🏩🏪🏫🏬🏭🏮🏯🏰🏱🏲🏳🏴🏵` | 24 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 3 | – | +0.41 (7.45) | recognised |
-| 379 | `🏚🏠🏡🏢🏣🏤🏥🏦🏧🏨🏩🏪🏫🏬🏭🏮🏯🏰🏱🏲🏳🏴🏵🏶` | 24 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.57 (164) | recognised |
-| 380 | `㍸㍹㍺㍻㍼㍽㍾㍿㎀㎁㎂㎃㎄㎅㎆㎇㎈㎉㎊㎋㎌㎍㎎㎏` | 24 | contiguous | +0.56 ± 0.21 | 20.1 | cl 2/3 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
-| 381 | `🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦🕛🕧🕐🕜🕑🕝🕒🕞🕓🕟🕔🕠🕕🕡` | 24 | other | +0.53 ± 0.20 | 36.9 | cl 2/4 gr 1/1 | undecided 5/26 | 3 | 6 (0 firm) | +0.50 (≥1e4) | recognised |
-| 382 | `🧆🧇🧈🧉🧊🧋🧌🧍🧎🧏🧐🧑🧒🧓🧔🧕🧖🧗🧘🧙🧚🧛🧜🧝` | 24 | contiguous | +0.29 ± 0.21 | 125 | cl 3/3 gr 0/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 383 | `┷┸┹┺┻┼┽┾┿╀╁╂╃╄╅╆╇╈╉╊╋╌╍╎` | 24 | contiguous | +0.29 ± 0.21 | 46.2 | cl 3/3 gr 0/1 | undiscriminable | 5 | 1 (0 firm) | – | recognised |
-| 384 | `𝝪𝝫𝝬𝝭𝝮𝝯𝝰𝝱𝝲𝝳𝝴𝝵𝝶𝝷𝝸𝝹𝝺𝝻𝝼𝝽𝝾𝝿𝞀𝞁` | 24 | contiguous | +0.29 ± 0.21 | 46.2 | cl 3/3 gr 0/1 | undiscriminable | 3 | 3 (0 firm) | +0.75 (24.2) | recognised |
-| 385 | `𝞡𝞢𝞣𝞤𝞥𝞦𝞧𝞨𝞩𝞪𝞫𝞬𝞭𝞮𝞯𝞰𝞱𝞲𝞳𝞴𝞵𝞶𝞷𝞸` | 24 | contiguous | +0.29 ± 0.21 | 46.2 | cl 3/3 gr 0/1 | undiscriminable | 3 | 6 (0 firm) | – | recognised |
-| 386 | `⺀⺁⺂⺃⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑⺒⺓⺔⺕⺖` | 23 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.85 (≥1e4) | recognised |
-| 387 | `ޏސޑޒޓޔޕޖޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 23 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
-| 388 | `🙙🙚🙛🙜🙝🙞🙟🙠🙡🙢🙣🙤🙥🙦🙧🙨🙩🙪🙫🙬🙭🙮🙯` | 23 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
-| 389 | `ÙÚÛÜÝÞßàáâãäåæçèéêëìíîï` | 23 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.76 (≥1e4) | recognised |
-| 390 | `⛁⛂⛃⛄⛅⛆⛇⛈⛉⛊⛋⛌⛍⛎⛏⛐⛑⛒⛓⛔⛕⛖⛗` | 23 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 391 | `ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅏㅐㅑㅒㅓㅔㅕㅖㅗ` | 23 | monotone | +0.63 ± 0.18 | 644 | cl 3/3 ge 2/2 gr 1/1 | undecided 1/13 | 3 | – | +0.67 (≥1e4) | recognised |
-| 392 | `𝀱𝀳𝀵𝀷𝀹𝀻𝀽𝀿𝁁𝁃𝁅𝁇𝁉𝁋𝁍𝁏𝁑𝁓𝁕𝁗𝁙𝁛𝁝` | 23 | monotone | +0.62 ± 0.18 | 470 | cl 3/3 ge 2/2 gr 1/1 | undecided 0/42 | 3 | – | +0.56 (≥1e4) | recognised |
-| 393 | `⍚⍛⍜⍝⍞⍟⍠⍡⍢⍣⍤⍥⍦⍧⍨⍩⍪⍫⍬⍭⍮⍯⍰` | 23 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
-| 394 | `⒜⒝⒞⒟⒠⒡⒢⒣⒤⒥⒦⒧⒨⒩⒪⒫⒬⒭⒮⒯⒰⒱⒲` | 23 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.80 (≥1e4) | recognised |
-| 395 | `𝍀𝍁𝍂𝍃𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎𝍏𝍐𝍑𝍒𝍓𝍔𝍕𝍖` | 23 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
-| 396 | `数大量無議思可不他由那祇僧阿沙河恒極載正澗溝𥝱` | 23 | other | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 0/56 | 5 | – | – | recognised |
-| 397 | `ߔߕߖߗߘߙߚߛߜߝߞߟߠߡߢߣߤߥߦߧߨߩߪ` | 23 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.77 (≥1e4) | recognised |
-| 398 | `ᥗᥘᥙᥚᥛᥜᥝᥞᥟᥠᥡᥢᥣᥤᥥᥦᥧᥨᥩᥪᥫᥬᥭ` | 23 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 399 | `𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎𝌏𝌐𝌑𝌒𝌓𝌔𝌕𝌖` | 23 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
-| 400 | `🎴🎵🎶🎷🎸🎹🎺🎻🎼🎽🎾🎿🏀🏁🏂🏃🏄🏅🏆🏇🏈🏉🏊` | 23 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 401 | `ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅏㅐㅓㅔㅗㅛㅜㅠㅡ` | 23 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 3/21 | 5 | – | +0.67 (≥1e4) | recognised |
-| 402 | `ⓐⒷⓑⒸⓒⒹⓓⒺⓔⒻⓕⒼⓖⒽⓗⒾⓘⒿⓙⓀⓚⓁⓛ` | 23 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/23 | 5 | – | +0.89 (≥1e4) | recognised |
-| 403 | `𐂢𐂤𐂦𐂨𐂪𐂬𐂮𐂰𐂲𐂴𐂶𐂸𐂺𐂼𐂾𐃀𐃂𐃄𐃆𐃈𐃊𐃌𐃎` | 23 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/42 | 3 | – | +0.88 (≥1e4) | recognised |
-| 404 | `ЀЇЈЉЊЋЌЎЏАБВГДЕЖЗИЙКЛМН` | 23 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | 2 (0 firm) | +0.53 (2.9) | recognised |
-| 405 | `ἐἒἔἘἚἜἠἢἤἦἨἪἬἮἰἲἴἶἸἺἼἾὀ` | 23 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/40 | 5 | 1 (0 firm) | – | recognised |
-| 406 | `Ⓓ⒠Ⓕ⒢Ⓗ⒤Ⓙ⒦Ⓛ⒨Ⓝ⒪Ⓟ⒬Ⓡ⒮Ⓣ⒰Ⓥ⒲Ⓧ⒴Ⓩ` | 23 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/63 | 5 | – | +0.84 (≥1e4) | recognised |
-| 407 | `ㅋㅌㅍㅎㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅜㅝㅞㅟㅠㅡㅢ` | 23 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.64 (6.5) | recognised |
-| 408 | `🄍🄏🄑🄓🄕🄗🄙🄛🄝🄟🄡🄣🄥🄧🄩🄫🄭🄯🄱🄳🄵🄷🄹` | 23 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/42 | 5 | – | +0.69 (1.09e+03) | recognised |
-| 409 | `🏚🏠🏡🏢🏣🏤🏥🏦🏧🏨🏩🏪🏫🏬🏭🏮🏯🏰🏱🏲🏳🏴🏵` | 23 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.57 (164) | recognised |
-| 410 | `🙚🙛🙜🙝🙞🙟🙠🙡🙢🙣🙤🙥🙦🙧🙨🙩🙪🙫🙬🙭🙮🙯` | 22 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
-| 411 | `⺀⺁⺂⺃⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑⺒⺓⺔⺕` | 22 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
-| 412 | `⦃⦄⦅⦆⦇⦈⦉⦊⦋⦌⦍⦎⦏⦐⦑⦒⦓⦔⦕⦖⦗⦘` | 22 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 413 | `⽛⽜⽝⽞⽟⽠⽡⽢⽣⽤⽥⽦⽧⽨⽩⽪⽫⽬⽭⽮⽯⽰` | 22 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 414 | `ㅋㅌㅍㅎㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅝㅞㅟㅜㅠㅛ` | 22 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 0/5 | 5 | – | +0.64 (6.5) | recognised |
-| 415 | `⩣⩤⩥⩦⩧⩨⩩⩪⩫⩬⩭⩮⩯⩰⩱⩲⩳⩴⩵⩶⩷⩸` | 22 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.89 (≥1e4) | recognised |
-| 416 | `㉥㉦㉧㉨㉩㉪㉫㉬㉭㉮㉯㉰㉱㉲㉳㉴㉵㉶㉷㉸㉹㉺` | 22 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
-| 417 | `𝑒𝒻𝑔ℎ𝒾𝒿𝓀𝓁𝓂𝓃𝑜𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏` | 22 | other | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | positive 1/10 | 5 | 1 (0 firm) | – | recognised |
-| 418 | `ќѝўџѠѡѢѣѤѥѬѭѨѩѪѫѦѧѰѱѮѯ` | 22 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/8 | 5 | – | – | recognised |
-| 419 | `ҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿ` | 22 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 420 | `ސޑޒޓޔޕޖޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 22 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
-| 421 | `ㅢㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲㅳㅴㅵㅶㅷ` | 22 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
-| 422 | `𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎𝌏𝌐𝌑𝌒𝌓𝌔𝌕` | 22 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
-| 423 | `𝛀𝛁𝛂𝛃𝛄𝛅𝛆𝛇𝛈𝛉𝛊𝛋𝛌𝛍𝛎𝛏𝛐𝛑𝛒𝛓𝛔𝛕` | 22 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.82 (≥1e4) | recognised |
-| 424 | `𝛂𝛃𝛄𝛅𝛆𝛇𝛈𝛉𝛊𝛋𝛌𝛍𝛎𝛏𝛐𝛑𝛒𝛓𝛔𝛕𝛖𝛗` | 22 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.82 (≥1e4) | recognised |
-| 425 | `🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪🜫🜬🜭🜮🜯🜰🜱` | 22 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
-| 426 | `езйлнпсухчщыэяёѓѕїљћѝџ` | 22 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/40 | 5 | – | +0.79 (≥1e4) | recognised |
-| 427 | `𝀱𝀳𝀵𝀷𝀹𝀻𝀽𝀿𝁁𝁃𝁅𝁇𝁉𝁋𝁍𝁏𝁑𝁓𝁕𝁗𝁙𝁛` | 22 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/40 | 3 | – | +0.56 (≥1e4) | recognised |
-| 428 | `ᐧᐨᐩᐪᐫᐬᐭᐮᐯᐰᐱᐲᐳᐴᐵᐶᐷᐸᐹᑕᑖᑗ` | 22 | monotone | +0.58 ± 0.19 | 35.7 | cl 3/4 ge 1/1 gr 1/1 | undecided 1/2 | 5 | 1 (0 firm) | – | recognised |
-| 429 | `ȟȡȣȤȥȦȧȨȩȪȫȬȭȮȯȰȱȲȳȴȵȶ` | 22 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | 3 (0 firm) | +0.58 (2) | recognised |
-| 430 | `ሌሏሒሕመማሞሡሤሧሪርሰሳሶሹሼሿቂቅቈቋ` | 22 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/39 | 5 | – | +0.58 (4.33) | recognised |
-| 431 | `ȞȟȡȣȤȥȦȧȨȩȪȫȬȭȮȯȰȱȲȳȴȵ` | 22 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | 1 (0 firm) | +0.58 (2) | recognised |
-| 432 | `⢄⢆⢈⢊⢌⢎⢐⢒⢔⢖⢘⢚⢜⢞⢠⣢⢰⢶⢸⢺⢼⢾` | 22 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/42 | 5 | – | +0.61 (≥1e4) | recognised |
-| 433 | `OnMlKjIhGfEdCbAzYxWvUt` | 22 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/60 | 3 | 2 (0 firm) | +0.75 (≥1e4) | recognised |
-| 434 | `ŸŹźŻżŽžſƀƁƆƇƈƉƊƋƌƏƎƐƑƒ` | 22 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/7 | 5 | 1 (0 firm) | +0.50 (60.3) | recognised |
-| 435 | `ȡȣȤȥȦȧȨȩȪȫȬȭȮȯȰȱȲȳȴȵȶȷ` | 22 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | 3 (0 firm) | +0.58 (2) | recognised |
-| 436 | `ȴȳȲȱȰȯȮȭȬȫȪȩȨȧȦȥȤȣȡȟȞȽ` | 22 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/7 | 5 | 2 (0 firm) | +0.58 (2) | recognised |
-| 437 | `ܐܒܓܕܗܘܙܚܛܝܟܠܡܢܣܥܦܨܩܪܫܬ` | 22 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/12 | 3 | 2 (0 firm) | +0.86 (≥1e4) | recognised |
-| 438 | `ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅏㅐㅓㅔㅗㅛㅜㅠ` | 22 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/20 | 5 | – | +0.67 (≥1e4) | recognised |
-| 439 | `𐂢𐂤𐂦𐂨𐂪𐂬𐂮𐂰𐂲𐂴𐂶𐂸𐂺𐂼𐂾𐃀𐃂𐃄𐃆𐃈𐃊𐃌` | 22 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/40 | 3 | – | +0.88 (≥1e4) | recognised |
-| 440 | `𝔷𝔶𝔵𝔴𝔳𝔲𝔱𝔰𝔯𝔮𝔭𝔬𝔫𝔪𝔩𝔨𝔧𝔦ℌ𝔾𝔽𝔸` | 22 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | – | – | recognised |
-| 441 | `🀀🀂🀄🀆🀈🀊🀌🀎🀐🀒🀔🀖🀘🀚🀜🀞🀠🀢🀤🀦🀨🀪` | 22 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/40 | 3 | – | +0.96 (≥1e4) | recognised |
-| 442 | `🀁🀃🀅🀇🀉🀋🀍🀏🀑🀓🀕🀗🀙🀛🀝🀟🀡🀣🀥🀧🀩🀫` | 22 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 4/40 | 3 | 2 (0 firm) | +0.97 (≥1e4) | recognised |
-| 443 | `⽛⽜⽝⽞⽟⽠⽡⽢⽣⽤⽥⽦⽧⽨⽩⽪⽫⽬⽭⽮⽯` | 21 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 444 | `🐀🐁🐂🐃🐄🐅🐆🐇🐈🐉🐊🐋🐌🐍🐎🐏🐐🐑🐒🐓🐔` | 21 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 5 | – | +0.65 (156) | recognised |
-| 445 | `🯒🯓🯔🯕🯖🯗🯘🯙🯚🯛🯜🯝🯞🯟🯠🯡🯢🯣🯤🯥🯦` | 21 | contiguous | +0.71 ± 0.20 | 3.62e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
-| 446 | `⓿❶❷❸❹❺❻❼❽❾❿⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴` | 21 | other | +0.63 ± 0.18 | 644 | cl 3/3 ge 2/2 gr 1/1 | undecided 1/5 | 3 | 1 (0 firm) | +0.98 (≥1e4) | recognised |
-| 447 | `ѠѡѢѣѤѥѦѧѨѩѪѫѬѭѮѯѰѱѲѳѴ` | 21 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 448 | `ޑޒޓޔޕޖޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 21 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
-| 449 | `𝀱𝀳𝀵𝀷𝀹𝀻𝀽𝀿𝁁𝁃𝁅𝁇𝁉𝁋𝁍𝁏𝁑𝁓𝁕𝁗𝁙` | 21 | monotone | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 0/38 | 3 | – | +0.56 (≥1e4) | recognised |
-| 450 | `♔♕♖♗♘♙♚♛♜♝♞♟♠♡♢♣♤♥♦♧♨` | 21 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.77 (≥1e4) | recognised |
-| 451 | `ㅢㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲㅳㅴㅵㅶ` | 21 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
-| 452 | `🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵` | 21 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 2 | 1 (0 firm) | – | recognised |
-| 453 | `🙛🙜🙝🙞🙟🙠🙡🙢🙣🙤🙥🙦🙧🙨🙩🙪🙫🙬🙭🙮🙯` | 21 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
-| 454 | `🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪🜫🜬🜭🜮🜯🜰` | 21 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
-| 455 | `ㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ` | 21 | other | +0.59 ± 0.17 | 28.5 | cl 1/2 ge 1/1 gr 1/1 | undecided 1/4 | 5 | – | +0.49 (1.5) | recognised |
-| 456 | `ĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĕ` | 21 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/1 | 5 | 1 (0 firm) | +0.69 (≥1e4) | recognised |
-| 457 | `𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎𝌏𝌐𝌑𝌒𝌓𝌔` | 21 | contiguous | +0.59 ± 0.21 | 97 | cl 2/3 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
-| 458 | `ⲇⲉⲋⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲯⲱ` | 21 | monotone | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/38 | 5 | – | – | recognised |
-| 459 | `⓪➀➁➂➃➄➅➆➇➈➉➊➋➌➍➎➏➐➑➒➓` | 21 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/1 | 3 | 1 (0 firm) | +0.95 (≥1e4) | recognised |
-| 460 | `ڡݠݟݞݝݜݛݚݙݘݗݖݕݔݓݒݑݐݏݎݍ` | 21 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | 1 (0 firm) | – | recognised |
-| 461 | `ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅬⅭⅮↀↁↂↇↈ↉↊↋` | 21 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 3 | 3 (0 firm) | +0.98 (≥1e4) | recognised |
-| 462 | `⓪①②③④⑤⑥⑦⑧⑨⑩⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴` | 21 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/2 | 3 | 1 (0 firm) | +0.98 (≥1e4) | recognised |
-| 463 | `⓪③⑥⑨⑫⑮⑱㉑㉔㉗㉚㉝㊱㊴㊷㊺㊽㋀㋃㋆㋉` | 21 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/39 | 3 | – | +0.94 (≥1e4) | recognised |
-| 464 | `㉠㉣㉦㉩㉬㉯㉲㉵㉸㉻㉾㊁㊄㊇㊊㊍㊐㊓㊖㊙㊜` | 21 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/38 | 5 | – | +0.80 (≥1e4) | recognised |
-| 465 | `𐂢𐂤𐂦𐂨𐂪𐂬𐂮𐂰𐂲𐂴𐂶𐂸𐂺𐂼𐂾𐃀𐃂𐃄𐃆𐃈𐃊` | 21 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/38 | 3 | – | +0.88 (≥1e4) | recognised |
-| 466 | `⺁⺂⺃⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑⺒⺓⺔` | 20 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
-| 467 | `🙛🙜🙝🙞🙟🙠🙡🙢🙣🙤🙥🙦🙧🙨🙩🙪🙫🙬🙭🙮` | 20 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
-| 468 | `༠༡༢༣༤༥༦༧༨༩༪༫༬༭༮༯༰༱༲༳` | 20 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.91 (≥1e4) | recognised |
-| 469 | `ㅢㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲㅳㅴㅵ` | 20 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
-| 470 | `🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪🜫🜬🜭🜮🜯` | 20 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
-| 471 | `✅✆✇✈✉✊✋✌✍✎✏✐✑✒✓✔✕✖✗✘` | 20 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.26 (0.279) | recognised |
-| 472 | `⯬⯭⯮⯯⯰⯱⯲⯳⯴⯵⯶⯷⯸⯹⯺⯻⯼⯽⯾⯿` | 20 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 473 | `ㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ` | 20 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | – | +0.49 (1.5) | recognised |
-| 474 | `㈉㈊㈋㈌㈍㈎㈏㈐㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚㈛㈜` | 20 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
-| 475 | `𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎𝌏𝌐𝌑𝌒𝌓` | 20 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
-| 476 | `𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡` | 20 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.78 (≥1e4) | recognised |
-| 477 | `🠴🠵🠶🠷🠸🠹🠺🠻🠼🠽🠾🠿🡀🡁🡂🡃🡄🡅🡆🡇` | 20 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.62 (10) | recognised |
-| 478 | `ѢѣѤѥѦѧѨѩѠѡѰѱѮѯѬѭѲѳѴѵ` | 20 | other | +0.66 ± 0.23 | 917 | cl 5/5 gr 1/1 | undecided 0/12 | 5 | – | – | recognised |
-| 479 | `ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠῬ𝔖𝔗𝜰` | 20 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/4 | 5 | – | +0.91 (≥1e4) | recognised |
-| 480 | `㈀㈃㈆㈉㈌㈏㈒㈕㈘㈛㈞㈡㈤㈧㈪㈭㈰㈳㈶㈹` | 20 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/35 | 5 | – | +0.92 (≥1e4) | recognised |
-| 481 | `𒐀𒐂𒐄𒐆𒐈𒐊𒐌𒐎𒐐𒐒𒐔𒐖𒐘𒐚𒐜𒐞𒐠𒐢𒐤𒐦` | 20 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/36 | 3 | – | +0.64 (6.5) | recognised |
-| 482 | `☷☶☵☴☳☲☱☰☯☮☭☬☫☪☩☨☧☦☥⛨` | 20 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | – | +0.79 (≥1e4) | recognised |
-| 483 | `αγεηικλμνξοπρστυφχψω` | 20 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/9 | 3 | 3 (0 firm) | +0.92 (≥1e4) | recognised |
-| 484 | `ܔܕܗܘܙܚܛܝܟܠܡܢܣܥܦܨܩܪܫܬ` | 20 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/10 | 5 | 2 (0 firm) | +0.86 (≥1e4) | recognised |
-| 485 | `❶❷❸❹❺❻❼❽❾⓾⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴` | 20 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/7 | 3 | 2 (0 firm) | +0.98 (≥1e4) | recognised |
-| 486 | `➊➋➌➍➎➏➐➑➒➓⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴` | 20 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 3 | 1 (0 firm) | +0.95 (≥1e4) | recognised |
-| 487 | `𐂢𐂤𐂦𐂨𐂪𐂬𐂮𐂰𐂲𐂴𐂶𐂸𐂺𐂼𐂾𐃀𐃂𐃄𐃆𐃈` | 20 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/36 | 3 | – | +0.88 (≥1e4) | recognised |
-| 488 | `𝀱𝀳𝀵𝀷𝀹𝀻𝀽𝀿𝁁𝁃𝁅𝁇𝁉𝁋𝁍𝁏𝁑𝁓𝁕𝁗` | 20 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/36 | 3 | – | +0.56 (≥1e4) | recognised |
-| 489 | `🀄🀆🀈🀊🀌🀎🀐🀒🀔🀖🀘🀚🀜🀞🀠🀢🀤🀦🀨🀪` | 20 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/36 | 3 | – | +0.96 (≥1e4) | recognised |
-| 490 | `⣇⣉⣋⣍⣏⣑⣓⣕⣗⣙⣛⣝⣟⣡⣣⣥⣧⣩⣫⣭` | 20 | monotone | +0.19 ± 0.24 | 10.5 | cl 3/3 gr 0/1 | undecided 0/36 | 5 | – | +0.85 (≥1e4) | recognised |
-| 491 | `🜘🜙🜚🜛🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪` | 19 | contiguous | +0.87 ± 0.16 | 40.8 | gr 5/5 | undiscriminable | 3 | – | +0.87 (≥1e4) | recognised |
-| 492 | `🭠🭡🭢🭣🭤🭥🭦🭧🭨🭩🭪🭫🭬🭭🭮🭯🭰🭱🭲` | 19 | contiguous | +0.87 ± 0.16 | 40.8 | gr 5/5 | undiscriminable | 3 | 1 (0 firm) | +0.86 (≥1e4) | recognised |
-| 493 | `🙛🙜🙝🙞🙟🙠🙡🙢🙣🙤🙥🙦🙧🙨🙩🙪🙫🙬🙭` | 19 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
-| 494 | `aBcDeFgHiJkLmNoPqRs` | 19 | other | +0.68 ± 0.18 | 126 | cl 4/5 gr 2/2 | undecided 4/51 | 3 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
-| 495 | `₠₡₢₣₤₥₦₧₨₩₪₫€₭₮₯₰₱₲` | 19 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 496 | `𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡` | 19 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.78 (≥1e4) | recognised |
-| 497 | `ㅢㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲㅳㅴ` | 19 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
-| 498 | `㈳㈴㈵㈶㈷㈸㈹㈺㈻㈼㈽㈾㈿㉀㉁㉂㉃㉄㉅` | 19 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.40 (0.833) | recognised |
-| 499 | `𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎𝌏𝌐𝌑𝌒` | 19 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
-| 500 | `🜛🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪🜫🜬🜭` | 19 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.87 (≥1e4) | recognised |
-| 501 | `àáâãäåæçèéêëìíîïðñò` | 19 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.62 (≥1e4) | recognised |
-| 502 | `⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒` | 19 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.33 (0.5) | recognised |
-| 503 | `㈊㈋㈌㈍㈎㈏㈐㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚㈛㈜` | 19 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
-| 504 | `🕗🕘🕙🕚🕛🕐🕜🕑🕝🕒🕞🕓🕟🕔🕠🕕🕡🕖🕢` | 19 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 4/16 | 3 | 3 (0 firm) | +0.52 (≥1e4) | recognised |
-| 505 | `🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪🜫🜬🜭🜮` | 19 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
-| 506 | `🏝🏞🏟🏠🏡🏢🏣🏤🏥🏦🏧🏨🏩🏪🏫🏬🏭🏮🏯` | 19 | contiguous | +0.57 ± 0.16 | 75.4 | cl 2/2 ge 1/2 gr 1/1 | undiscriminable | 3 | – | +0.57 (164) | recognised |
-| 507 | `🀆🀈🀊🀌🀎🀐🀒🀔🀖🀘🀚🀜🀞🀠🀢🀤🀦🀨🀪` | 19 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 2/34 | 3 | – | +0.96 (≥1e4) | recognised |
-| 508 | `EdCbAzYxWvUtSrQpOnM` | 19 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 2/51 | 3 | 2 (0 firm) | +0.39 (9.16) | recognised |
-| 509 | `GfEdCbAzYxWvUtSrQpO` | 19 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 2/51 | 3 | 2 (0 firm) | +0.53 (≥1e4) | recognised |
-| 510 | `IhGfEdCbAzYxWvUtSrQ` | 19 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/51 | 3 | 2 (0 firm) | +0.53 (≥1e4) | recognised |
-| 511 | `MlKjIhGfEdCbAzYxWvU` | 19 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/51 | 3 | 2 (0 firm) | +0.75 (≥1e4) | recognised |
-| 512 | `lKjIhGfEdCbAzYxWvUt` | 19 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/51 | 3 | 2 (0 firm) | +0.71 (≥1e4) | recognised |
-| 513 | `𝑆𝑹𝑸𝑷𝑶𝑵𝑴𝑳𝑲𝑱𝑰𝑯𝑮𝑭𝑬𝑫𝑪𝑩𝑨` | 19 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/3 | 3 | – | +0.92 (≥1e4) | recognised |
-| 514 | `AzYxWvUtSrQpOnMlKjI` | 19 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/51 | 3 | 2 (0 firm) | +0.25 (0.2) | recognised |
-| 515 | `BcDeFgHiJkLmNoPqRsT` | 19 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/51 | 3 | 1 (0 firm) | +0.81 (≥1e4) | recognised |
-| 516 | `CbAzYxWvUtSrQpOnMlK` | 19 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/51 | 3 | 2 (0 firm) | +0.27 (0.267) | recognised |
-| 517 | `KjIhGfEdCbAzYxWvUtS` | 19 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/51 | 3 | 2 (0 firm) | +0.53 (≥1e4) | recognised |
-| 518 | `bAzYxWvUtSrQpOnMlKj` | 19 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/51 | 3 | 2 (0 firm) | +0.25 (0.2) | recognised |
-| 519 | `fEdCbAzYxWvUtSrQpOn` | 19 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/51 | 3 | 2 (0 firm) | +0.68 (7.04e+03) | recognised |
-| 520 | `hGfEdCbAzYxWvUtSrQp` | 19 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/51 | 3 | 2 (0 firm) | +0.53 (≥1e4) | recognised |
-| 521 | `ሐሑሒሓሔሕሖመሙሚማሜምሞሠሡሢሣሤ` | 19 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 3 | 1 (0 firm) | +0.67 (≥1e4) | recognised |
-| 522 | `ᬎᬐᬒᬔᬖᬘᬚᬜᬞᬠᬢᬤᬦᬨᬪᬬᬮᬰᬲ` | 19 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/34 | 3 | – | +0.62 (60.7) | recognised |
-| 523 | `⓵➁⓶➂⓷➃⓸➄⓹➅⓺➆⓻➇⓼➈⓽➉⓾` | 19 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/19 | 5 | – | +0.98 (≥1e4) | recognised |
-| 524 | `➪➫➬➭➮➯➱➲➳➴➵➶➷➸➹➺➻➼➽` | 19 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | 1 (0 firm) | – | recognised |
-| 525 | `ㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅏㅐㅓㅔㅗㅛㅜㅠㅡ` | 19 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/14 | 5 | – | +0.67 (≥1e4) | recognised |
-| 526 | `𐂢𐂤𐂦𐂨𐂪𐂬𐂮𐂰𐂲𐂴𐂶𐂸𐂺𐂼𐂾𐃀𐃂𐃄𐃆` | 19 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/34 | 3 | – | +0.88 (≥1e4) | recognised |
-| 527 | `𝚨𝚩𝚪𝚫𝚬𝚭𝚮𝚯𝛰𝛱𝛲𝛳𝛴𝛵𝛶𝛷𝛸𝛹𝛺` | 19 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 3 | 2 (0 firm) | +0.72 (≥1e4) | recognised |
-| 528 | `🏚🏘🏠🏡🏢🏣🏤🏥🏦🏧🏨🏩🏪🏫🏬🏭🏮🏯🏰` | 19 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 3 | – | +0.41 (7.45) | recognised |
-| 529 | `༚༜༞༠༢༤༦༨༪༬༮༰༲༴༶༸༺༼༽` | 19 | monotone | +0.46 ± 0.23 | 48.9 | cl 4/4 gr 1/2 | undecided 1/27 | 3 | – | +0.91 (≥1e4) | recognised |
-| 530 | `5⁵₅⑤⑸⒌❺➄➎⓹５🄆🯵𝟓𝟝𝟧𝟱𝟻` | 18 | other | +0.74 ± 0.18 | 495 | cl 4/4 gr 2/2 | undecided 0/32 | 5 | – | +0.34 (0.426) | recognised |
-| 531 | `8⁸₈⑧⑻⒏❽➇➑⓼８🄉🯸𝟖𝟠𝟪𝟴𝟾` | 18 | other | +0.73 ± 0.18 | 1.85e+03 | cl 5/5 gr 2/2 | undecided 1/32 | 5 | – | +0.30 (0.214) | recognised |
-| 532 | `ᬠᬢᬤᬥᬦᬧᬨᬩᬪᬫᬬᬭᬮᬯᬰᬱᬲᬳ` | 18 | monotone | +0.73 ± 0.18 | 1.85e+03 | cl 5/5 gr 2/2 | undecided 1/3 | 5 | – | +0.61 (29.2) | recognised |
-| 533 | `🙛🙜🙝🙞🙟🙠🙡🙢🙣🙤🙥🙦🙧🙨🙩🙪🙫🙬` | 18 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
-| 534 | `𝆘𝆙𝆚𝆛𝆜𝆝𝆞𝆟𝆠𝆡𝆢𝆣𝆤𝆥𝆦𝆧𝆨𝆩` | 18 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 535 | `プヘベペホボポマミムメモヤャユュヨョ` | 18 | other | +0.66 ± 0.19 | 215 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/7 | 5 | 1 (0 firm) | – | recognised |
-| 536 | `ㅢㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲㅳ` | 18 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
-| 537 | `𝍠𝍡𝍢𝍣𝍤𝍥𝍦𝍧𝍨𝍩𝍪𝍫𝍬𝍭𝍮𝍯𝍰𝍱` | 18 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.94 (≥1e4) | recognised |
-| 538 | `🭡🭢🭣🭤🭥🭦🭧🭨🭩🭪🭫🭬🭭🭮🭯🭰🭱🭲` | 18 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.86 (≥1e4) | recognised |
-| 539 | `àáâãäåæçèéêëìíîïðñ` | 18 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.62 (≥1e4) | recognised |
-| 540 | `ѡѠѱѰѯѮѭѬѫѪѩѨѧѦѥѤѣѢ` | 18 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 5 | – | – | recognised |
-| 541 | `ޔޕޖޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 18 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
-| 542 | `‖‗‘’‚‛“”„‟†‡•‣․‥…‧` | 18 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | 1 (0 firm) | +0.87 (≥1e4) | recognised |
-| 543 | `⾀⾁⾂⾃⾄⾅⾆⾇⾈⾉⾊⾋⾌⾍⾎⾏⾐⾑` | 18 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
-| 544 | `㈋㈌㈍㈎㈏㈐㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚㈛㈜` | 18 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
-| 545 | `𐡮𐡯𐡰𐡱𐡲𐡳𐡴𐡵𐡶𐡷𐡸𐡹𐡺𐡻𐡼𐡽𐡾𐡿` | 18 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
-| 546 | `🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪🜫🜬🜭` | 18 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
-| 547 | `↦↧↨↩↪↫↬↭↮↯↰↱↲↳↴↵↶↷` | 18 | contiguous | +0.57 ± 0.16 | 75.4 | cl 2/2 ge 1/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.40 (≥1e4) | recognised |
-| 548 | `ӝӜӛӚәӘӗӖӕӔӑӐӏӀӿӾӽӼ` | 18 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/7 | 5 | – | – | recognised |
-| 549 | `𒐀𒐂𒐄𒐆𒐈𒐊𒐌𒐎𒐐𒐒𒐔𒐖𒐘𒐚𒐜𒐞𒐠𒐢` | 18 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/32 | 3 | – | +0.64 (6.5) | recognised |
-| 550 | `𝀱𝀳𝀵𝀷𝀹𝀻𝀽𝀿𝁁𝁃𝁅𝁇𝁉𝁋𝁍𝁏𝁑𝁓` | 18 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/32 | 3 | – | +0.56 (3.87e+03) | recognised |
-| 551 | `3³₃③⑶⒊❸➂➌⓷３🄄🯳𝟑𝟛𝟥𝟯𝟹` | 18 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/32 | 5 | 1 (0 firm) | +0.45 (0.833) | recognised |
-| 552 | `⍩⍨⍧⍦⍥⍤⍣⍢⍡⍠⍟⍞⍝⍜⍛⍚⍙⍪` | 18 | other | +0.58 ± 0.21 | 36.1 | cl 2/3 gr 1/1 | undecided 0/3 | 5 | – | +0.33 (0.5) | recognised |
-| 553 | `7⁷₇⑦⑺⒎❼➆➐⓻７🄈🯷𝟕𝟟𝟩𝟳𝟽` | 18 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/32 | 5 | 1 (0 firm) | +0.25 (0.2) | recognised |
-| 554 | `②ⓑ③ⓒ④ⓓ⑤ⓔ⑥ⓕ⑦ⓖ⑧ⓗ⑨ⓘ⑩ⓙ` | 18 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/16 | 5 | – | +0.98 (≥1e4) | recognised |
-| 555 | `⒊𝟥3🯳③³🄄➂₃➌𝟯𝟹⓷❸３⑶𝟑𝟛` | 18 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/33 | 5 | – | +0.33 (0.333) | recognised |
-| 556 | `❸➌③🯳⒊➂𝟹⓷𝟛³𝟥𝟑🄄𝟯3₃⑶３` | 18 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/36 | 5 | – | +0.33 (0.333) | recognised |
-| 557 | `0)9(8*7&6^5%4$3#2@` | 18 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/22 | 5 | – | +0.62 (≥1e4) | recognised |
-| 558 | `1¹₁①⑴⒈❶➀➊⓵１🄂🯱𝟏𝟙𝟣𝟭𝟷` | 18 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/31 | 5 | 1 (0 firm) | +0.11 (0.0509) | recognised |
-| 559 | `1₁𝟷𝟏𝟙⓵➊¹①⑴🯱𝟭➀１⒈𝟣❶🄂` | 18 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/32 | 5 | 1 (0 firm) | +0.11 (0.0449) | recognised |
-| 560 | `9⁹₉⑨⑼⒐❾➈➒⓽９🄊🯹𝟗𝟡𝟫𝟵𝟿` | 18 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/30 | 5 | 1 (0 firm) | +0.23 (0.167) | recognised |
-| 561 | `ܐܬܫܪܩܨܧܦܥܤܣܢܡܠܟܞܝܖ` | 18 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 4 | 2 (0 firm) | +0.82 (≥1e4) | recognised |
-| 562 | `ႡᲑბႢᲒგႣᲓდႤᲔეႥᲕვႦᲖზ` | 18 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/9 | 5 | – | – | recognised |
-| 563 | `ማምሞሡሤሧሪርሰሳሶሹሼሿቂቅቈቋ` | 18 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/29 | 5 | – | +0.62 (10) | recognised |
-| 564 | `ᬎᬐᬒᬔᬖᬘᬚᬜᬞᬠᬢᬤᬦᬨᬪᬬᬮᬰ` | 18 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/32 | 3 | – | +0.62 (60.7) | recognised |
-| 565 | `ᬞᬠᬢᬤᬦᬧᬨᬩᬪᬫᬬᬭᬮᬯᬰᬱᬲᬳ` | 18 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/7 | 3 | – | +0.69 (156) | recognised |
-| 566 | `⑶3３³₃🄄⒊𝟯❸➂𝟛🯳③𝟑𝟹𝟥➌⓷` | 18 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/33 | 5 | 1 (0 firm) | +0.33 (0.333) | recognised |
-| 567 | `⑶３➂⓷³𝟹𝟯➌₃③🄄3❸⒊🯳𝟛𝟥𝟑` | 18 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/33 | 5 | – | +0.33 (0.333) | recognised |
-| 568 | `⓾➉⓽➈⓼➇⓻➆⓺➅⓹➄⓸➃⓷➂⓶➁` | 18 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/20 | 5 | – | +0.98 (≥1e4) | recognised |
-| 569 | `㊀㊃㊆㊉㊌㊏㊒㊕㊘㊛㊞㊡㊤㊧㊪㊭㊰㊳` | 18 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/32 | 5 | – | +0.73 (≥1e4) | recognised |
-| 570 | `𐂢𐂤𐂦𐂨𐂪𐂬𐂮𐂰𐂲𐂴𐂶𐂸𐂺𐂼𐂾𐃀𐃂𐃄` | 18 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/32 | 3 | – | +0.88 (≥1e4) | recognised |
-| 571 | `🏚🏠🏡🏢🏣🏤🏥🏦🏧🏨🏩🏪🏫🏬🏭🏮🏯🏰` | 18 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.57 (164) | recognised |
-| 572 | `🜑🜒🜓🜔🜕🜖🜗🜘🜙🜚🜛🜜🜝🜞🜟🜠🜡` | 17 | contiguous | +0.82 ± 0.12 | ≥1e4 | cl 7/7 gr 3/3 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 573 | `ᬎᬐᬒᬔᬖᬘᬚᬜᬞᬠᬢᬤᬦᬨᬪᬬᬮ` | 17 | monotone | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 1/30 | 3 | – | +0.62 (60.7) | recognised |
-| 574 | `㉛㉝㉟㉡㉣㉥㉧㉩㉫㉭㉯㉱㉳㉵㉷㉹㉻` | 17 | monotone | +0.74 ± 0.18 | 495 | cl 4/4 gr 2/2 | undecided 2/30 | 3 | – | +0.85 (≥1e4) | recognised |
-| 575 | `ÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×Ø` | 17 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 576 | `㈌㈍㈎㈏㈐㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚㈛㈜` | 17 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
-| 577 | `ዷዸዹዺዻዼዽዾዿጀጁጂጃጄጅጆጇ` | 17 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 578 | `𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎𝌏𝌐` | 17 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.91 (≥1e4) | recognised |
-| 579 | `㋏㋒㋕㋘㋛㋞㋡㋤㋧㋪㋭㋰㋳㋶㋹㋼㋿` | 17 | monotone | +0.63 ± 0.18 | 644 | cl 3/3 ge 2/2 gr 1/1 | undecided 1/30 | 3 | – | +0.58 (4.33) | recognised |
-| 580 | `ޕޖޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 17 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
-| 581 | `㇀㇁㇂㇃㇄㇅㇆㇇㇈㇉㇊㇋㇌㇍㇎㇏㇐` | 17 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
-| 582 | `ךכלםמןנסעףפץצקרשת` | 17 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.67 (164) | recognised |
-| 583 | `⡠⡡⡢⡣⡤⡥⡦⡧⡨⡩⡪⡫⡬⡭⡮⡯⡰` | 17 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 584 | `⧅⧆⧇⧈⧉⧊⧋⧌⧍⧎⧏⧐⧑⧒⧓⧔⧕` | 17 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.69 (156) | recognised |
-| 585 | `⽃⽄⽅⽆⽇⽈⽉⽊⽋⽌⽍⽎⽏⽐⽑⽒⽓` | 17 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
-| 586 | `㈵㈶㈷㈸㈹㈺㈻㈼㈽㈾㈿㉀㉁㉂㉃㉄㉅` | 17 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.40 (0.833) | recognised |
-| 587 | `🜙🜚🜛🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩` | 17 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.87 (≥1e4) | recognised |
-| 588 | `🭢🭣🭤🭥🭦🭧🭨🭩🭪🭫🭬🭭🭮🭯🭰🭱🭲` | 17 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.86 (≥1e4) | recognised |
-| 589 | `ᬒᬔᬖᬘᬚᬜᬞᬠᬢᬤᬦᬨᬪᬬᬮᬰᬲ` | 17 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/30 | 3 | – | +0.65 (4.33) | recognised |
-| 590 | `ᬢᬤᬥᬦᬧᬨᬩᬪᬫᬬᬭᬮᬯᬰᬱᬲᬳ` | 17 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/1 | 5 | – | +0.61 (29.2) | recognised |
-| 591 | `ⅠⅡⅢⅣⅤⅩⅬⅭⅮↀↁↂↇↈ↉↊↋` | 17 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/8 | 3 | 3 (0 firm) | +0.96 (≥1e4) | recognised |
-| 592 | `⠘⠗⠐⠟⠻⠿⣷⣿⣾⣶⣴⣤⣠⣄⣆⡆⡄` | 17 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/28 | 5 | 3 (0 firm) | +0.65 (≥1e4) | recognised |
-| 593 | `𐂢𐂤𐂦𐂨𐂪𐂬𐂮𐂰𐂲𐂴𐂶𐂸𐂺𐂼𐂾𐃀𐃂` | 17 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/30 | 3 | – | +0.87 (≥1e4) | recognised |
-| 594 | `🤣😂😆😁😄😊🙂😐😞😢😭😩😫😤😠😡🤬` | 17 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/33 | 3 | 4 (0 firm) | +0.89 (≥1e4) | recognised |
-| 595 | `↧↨↩↪↫↬↭↮↯↰↱↲↳↴↵↶↷` | 17 | contiguous | +0.46 ± 0.17 | 17.5 | cl 2/2 ge 0/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.40 (≥1e4) | recognised |
-| 596 | `𝝫𝝬𝝭𝝮𝝯𝝰𝝱𝝲𝝳𝝴𝝵𝝶𝝷𝝸𝝹𝝺𝝻` | 17 | contiguous | +0.44 ± 0.17 | 36.4 | cl 2/2 ge 1/1 gr 0/1 | undiscriminable | 3 | 3 (0 firm) | +0.75 (24.2) | recognised |
-| 597 | `ޖޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 16 | contiguous | +0.87 ± 0.16 | 40.8 | gr 5/5 | undiscriminable | 3 | – | +0.91 (≥1e4) | recognised |
-| 598 | `ÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×` | 16 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 599 | `⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎⠏⠐` | 16 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.94 (≥1e4) | recognised |
-| 600 | `⁹₉⁸₈⁷₇⁶₆⁵₅⁴₄³₃²₂` | 16 | other | +0.69 ± 0.18 | 6.83e+03 | cl 5/5 ge 1/1 gr 2/2 | undecided 0/17 | 5 | – | +0.99 (≥1e4) | recognised |
-| 601 | `⺃⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑⺒` | 16 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
-| 602 | `㌎㌏㌐㌑㌒㌓㌔㌕㌖㌗㌘㌙㌚㌛㌜㌝` | 16 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.69 (≥1e4) | recognised |
-| 603 | `ԱԲԳԴԵԶԷԸԹԺԻԽԼԾԿՀ` | 16 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/2 | 5 | – | +0.29 (0.25) | recognised |
-| 604 | `⾮⾯⾰⾱⾲⾳⾴⾵⾶⾷⾸⾹⾺⾻⾼⾽` | 16 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.58 (4.33) | recognised |
-| 605 | `㇀㇁㇂㇃㇄㇅㇆㇇㇈㇉㇊㇋㇌㇍㇎㇏` | 16 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
-| 606 | `𒐰𒐱𒐲𒐳𒐴𒐵𒐶𒐷𒐸𒐹𒐺𒐻𒐼𒐽𒐾𒐿` | 16 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 607 | `ㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲ` | 16 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 608 | `àáâãäåæçèéêëìíîï` | 16 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.62 (≥1e4) | recognised |
-| 609 | `ሏሎልሌላሊሉለሗሖሕሔሓሒሑሐ` | 16 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 3 | 3 (0 firm) | +0.75 (≥1e4) | recognised |
-| 610 | `⊕⊖⊗⊘⊙⊚⊛⊜⊝⊞⊟⊠⊡⊢⊣⊤` | 16 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.58 (2) | recognised |
-| 611 | `▀▁▂▃▄▅▆▇█▉▊▋▌▍▎▏` | 16 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.96 (≥1e4) | recognised |
-| 612 | `◰◱◲◳◴◵◶◷◸◹◺◻◼◽◾◿` | 16 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 6 (0 firm) | +0.63 (≥1e4) | recognised |
-| 613 | `⛠⛡⛢⛣⛤⛥⛦⛧⛨⛩⛪⛫⛬⛭⛮⛯` | 16 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 614 | `⽃⽄⽅⽆⽇⽈⽉⽊⽋⽌⽍⽎⽏⽐⽑⽒` | 16 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
-| 615 | `〰〱〲〳〴〵〶〷〸〹〺〻〼〽〾〿` | 16 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.69 (6.57e+03) | recognised |
-| 616 | `㆐㆑㆒㆓㆔㆕㆖㆗㆘㆙㆚㆛㆜㆝㆞㆟` | 16 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
-| 617 | `㈍㈎㈏㈐㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚㈛㈜` | 16 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
-| 618 | `㈶㈷㈸㈹㈺㈻㈼㈽㈾㈿㉀㉁㉂㉃㉄㉅` | 16 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.40 (0.833) | recognised |
-| 619 | `㊰㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿` | 16 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.93 (≥1e4) | recognised |
-| 620 | `𝃏𝃞𝃝𝃜𝃛𝃚𝃙𝃘𝃗𝃖𝃕𝃔𝃓𝃒𝃑𝃐` | 16 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | +0.69 (471) | recognised |
-| 621 | `𝍀𝍁𝍂𝍃𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎𝍏` | 16 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
-| 622 | `🄒🄓🄔🄕🄖🄗🄘🄙🄚🄛🄜🄝🄞🄟🄠🄡` | 16 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
-| 623 | `🜒🜓🜔🜕🜖🜗🜘🜙🜚🜛🜜🜝🜞🜟🜠🜡` | 16 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 624 | `🭣🭤🭥🭦🭧🭨🭩🭪🭫🭬🭭🭮🭯🭰🭱🭲` | 16 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.85 (≥1e4) | recognised |
-| 625 | `🮠🮡🮢🮣🮤🮥🮦🮧🮨🮩🮪🮫🮬🮭🮮🮯` | 16 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
-| 626 | `🏟🏠🏡🏢🏣🏤🏥🏦🏧🏨🏩🏪🏫🏬🏭🏮` | 16 | contiguous | +0.57 ± 0.16 | 75.4 | cl 2/2 ge 1/2 gr 1/1 | undiscriminable | 3 | – | +0.57 (164) | recognised |
-| 627 | `𝜶𝜷𝜸𝜹𝜺𝜻𝜼𝜽𝜾𝜿𝝀𝝁𝝂𝝃𝒐𝝅` | 16 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/6 | 5 | – | – | recognised |
-| 628 | `↨↩↪↫↬↭↮↯↰↱↲↳↴↵↶↷` | 16 | contiguous | +0.54 ± 0.16 | 46.1 | cl 2/2 ge 1/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.43 (≥1e4) | recognised |
-| 629 | `⫌⫍⫎⫏⫐⫑⫒⫓⫔⫕⫖⫗⫘⫙⫚⫛` | 16 | contiguous | +0.59 ± 0.20 | 95.9 | cl 3/4 gr 1/1 | undiscriminable | 3 | – | +0.65 (≥1e4) | recognised |
-| 630 | `㋀㋃㋆㋉㋌㋏㋒㋕㋘㋛㋞㋡㋤㋧㋪㋭` | 16 | monotone | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 1/28 | 3 | 1 (0 firm) | +0.85 (≥1e4) | recognised |
-| 631 | `☾☽☼☻☺☹☸☷☶☵☴☳☲☱☰⚌` | 16 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | – | +0.78 (≥1e4) | recognised |
-| 632 | `𒐀𒐂𒐄𒐆𒐈𒐊𒐌𒐎𒐐𒐒𒐔𒐖𒐘𒐚𒐜𒐞` | 16 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/28 | 3 | – | +0.64 (6.5) | recognised |
-| 633 | `αγεηιλνορστυφχψω` | 16 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/17 | 3 | 3 (0 firm) | +0.92 (≥1e4) | recognised |
-| 634 | `абвгфхцчшщъыьэюя` | 16 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 3 | – | +0.58 (2) | recognised |
-| 635 | `ᬎᬐᬒᬔᬖᬘᬚᬜᬞᬠᬢᬤᬦᬨᬪᬬ` | 16 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/28 | 3 | – | +0.62 (60.7) | recognised |
-| 636 | `⠁⠃⠉⠙⠑⠋⠛⠓⠊⠚⠅⠇⠍⠝⠕⠏` | 16 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/26 | 5 | – | +0.93 (≥1e4) | recognised |
-| 637 | `一十百千万亿兆京垓秭穣溝澗正載極` | 16 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/37 | 3 | 3 (0 firm) | +0.99 (≥1e4) | recognised |
-| 638 | `一十百千万億兆京垓𥝱穣溝澗正載極` | 16 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 5/37 | 3 | 4 (0 firm) | +0.98 (≥1e4) | recognised |
-| 639 | `🕗🕢🕖🕡🕕🕠🕔🕟🕓🕞🕒🕝🕑🕜🕐🕧` | 16 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 5/18 | 3 | 5 (0 firm) | +0.93 (≥1e4) | recognised |
-| 640 | `⏰⏱⏲⏳⏴⏵⏶⏷⏸⏹⏺⏻⏼⏽⏾⏿` | 16 | contiguous | +0.46 ± 0.17 | 17.5 | cl 2/2 ge 0/1 gr 1/1 | undiscriminable | 5 | 1 (0 firm) | +0.25 (0.339) | recognised |
-| 641 | `➢➣➤➥➦➧➨➩➪➫➬➭➮➯➰➱` | 16 | contiguous | +0.46 ± 0.17 | 17.5 | cl 2/2 ge 0/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 642 | `𝠀𝠁𝠂𝠃𝠄𝠅𝠆𝠇𝠈𝠉𝠊𝠋𝠌𝠍𝠎` | 15 | contiguous | +0.67 ± 0.15 | ≥1e4 | cl 3/3 ge 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 643 | `⽃⽄⽅⽆⽇⽈⽉⽊⽋⽌⽍⽎⽏⽐⽑` | 15 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
-| 644 | `⩏⩐⩑⩒⩓⩔⩕⩖⩗⩘⩙⩚⩛⩜⩝` | 15 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 645 | `㌅㌆㌇㌈㌉㌊㌋㌌㌍㌎㌏㌐㌑㌒㌓` | 15 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.75 (≥1e4) | recognised |
-| 646 | `ʝʞʡʢʣʤʥʦʧʨʩʪʫʬʭ` | 15 | monotone | +0.69 ± 0.20 | 32.8 | cl 2/2 gr 2/2 | undecided 0/2 | 5 | – | – | recognised |
-| 647 | `🠪🠫🠬🠭🠮🠯🠰🠱🠲🠳🠴🠵🠶🠷🠸` | 15 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.68 (3.2e+03) | recognised |
-| 648 | `⯟⯠⯡⯢⯣⯤⯥⯦⯧⯨⯩⯪⯫⯬⯭` | 15 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
-| 649 | `𝍀𝍁𝍂𝍃𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎` | 15 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
-| 650 | `᧡᧢᧣᧤᧥᧦᧧᧨᧩᧪᧫᧬᧭᧮᧯` | 15 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 651 | `㈷㈸㈹㈺㈻㈼㈽㈾㈿㉀㉁㉂㉃㉄㉅` | 15 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.40 (0.833) | recognised |
-| 652 | `𝛪𝛫𝛬𝛭𝛮𝛯𝛰𝛱𝛲𝛳𝛴𝛵𝛶𝛷𝛸` | 15 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.76 (≥1e4) | recognised |
-| 653 | `🜓🜔🜕🜖🜗🜘🜙🜚🜛🜜🜝🜞🜟🜠🜡` | 15 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 654 | `ޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 15 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.91 (≥1e4) | recognised |
-| 655 | `↩↪↫↬↭↮↯↰↱↲↳↴↵↶↷` | 15 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.43 (≥1e4) | recognised |
-| 656 | `⊸⊹⊺⊻⊼⊽⊾⊿⋀⋁⋂⋃⋄⋅⋆` | 15 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.40 (0.843) | recognised |
-| 657 | `␀␁␂␃␄␅␆␇␈␉␊␋␌␍␎` | 15 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.67 (60.7) | recognised |
-| 658 | `␒␓␔␕␖␗␘␙␚␛␜␝␞␟␠` | 15 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.49 (1.5) | recognised |
-| 659 | `␘␙␚␛␜␝␞␟␠␡␢␣␤␥␦` | 15 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.52 (4.79) | recognised |
-| 660 | `▁▂▃▄▅▆▇█▉▊▋▌▍▎▏` | 15 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.96 (≥1e4) | recognised |
-| 661 | `⧬⧭⧮⧯⧰⧱⧲⧳⧴⧵⧶⧷⧸⧹⧺` | 15 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.58 (5.97) | recognised |
-| 662 | `⩩⩪⩫⩬⩭⩮⩯⩰⩱⩲⩳⩴⩵⩶⩷` | 15 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.89 (≥1e4) | recognised |
-| 663 | `𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎` | 15 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.91 (≥1e4) | recognised |
-| 664 | `🜚🜛🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨` | 15 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
-| 665 | `🟇🟈🟉🟊🟋🟌🟍🟎🟏🟐🟑🟒🟓🟔🟕` | 15 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
-| 666 | `🢐🢑🢒🢓🢔🢕🢖🢗🢘🢙🢚🢛🢜🢝🢞` | 15 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 667 | `🭤🭥🭦🭧🭨🭩🭪🭫🭬🭭🭮🭯🭰🭱🭲` | 15 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.83 (≥1e4) | recognised |
-| 668 | `🀎🀐🀒🀔🀖🀘🀚🀜🀞🀠🀢🀤🀦🀨🀪` | 15 | monotone | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 2/26 | 3 | – | +0.94 (≥1e4) | recognised |
-| 669 | `㋀㋃㋆㋉㋌㋏㋒㋕㋘㋛㋞㋡㋤㋧㋪` | 15 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/26 | 3 | 1 (0 firm) | +0.85 (≥1e4) | recognised |
-| 670 | `🐙🐚🐛🐜🐝🐞🐟🐠🐡🐢🐣🐤🐥🐦🐧` | 15 | contiguous | +0.59 ± 0.21 | 97 | cl 2/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 671 | `ڛښڙݘݗݖݕݔݓݒݑݐݏݎݍ` | 15 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
-| 672 | `ᬉᬌᬏᬒᬕᬘᬛᬞᬡᬤᬧᬪᬭᬰᬳ` | 15 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/26 | 5 | – | +0.80 (≥1e4) | recognised |
-| 673 | `ⅰⅠⅱⅡⅲⅢⅳⅣⅴⅤⅵⅥⅶⅦⅷ` | 15 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/15 | 5 | 1 (0 firm) | +0.98 (≥1e4) | recognised |
-| 674 | `𝌁𝌃𝌅𝌇𝌉𝌋𝌍𝌏𝌑𝌓𝌕𝌗𝌙𝌛𝌝` | 15 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/26 | 5 | – | +0.67 (181) | recognised |
-| 675 | `aBcDeFgHiJkLmNo` | 15 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 4/39 | 3 | – | +0.81 (≥1e4) | recognised |
-| 676 | `бвгфхцчшщъыьэюя` | 15 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/2 | 3 | – | +0.58 (2) | recognised |
-| 677 | `ᚋᚍᚎᚏᚐᚑᚒᚓᚔᚕᚖᚗᚘᚙᚚ` | 15 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/1 | 5 | – | +0.83 (≥1e4) | recognised |
-| 678 | `▁▂▃▄▅▆▇█🮆🮅🮄▀🮃🮂▔` | 15 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/5 | 3 | 2 (0 firm) | +0.98 (≥1e4) | recognised |
-| 679 | `🀀🀃🀆🀉🀌🀏🀒🀕🀘🀛🀞🀡🀤🀧🀪` | 15 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/26 | 3 | – | +0.90 (≥1e4) | recognised |
-| 680 | `ίϋωχυσρονλιηεγα` | 15 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/27 | 5 | 2 (0 firm) | +0.93 (≥1e4) | recognised |
-| 681 | `ԱԲԳԴԵԶԷԸԹԺԻԼԽՁՂ` | 15 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.71 (≥1e4) | recognised |
-| 682 | `ܝܟܠܡܢܣܤܥܦܧܨܩܪܫܬ` | 15 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 3 | 1 (0 firm) | +0.78 (≥1e4) | recognised |
-| 683 | `┽┼┻┺┹┸┷┶┵┴┳┲┱┰┿` | 15 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | 1 (0 firm) | – | recognised |
-| 684 | `➔🠒🠖🠚🠞🠢🠦🠪🠮🠲🠶🠺🠾🡂🡆` | 15 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/26 | 3 | – | +0.71 (≥1e4) | recognised |
-| 685 | `➭➯➱➲➳➴➵➶➷➸➹➺➻➼➽` | 15 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | 1 (0 firm) | – | recognised |
-| 686 | `㋍㋏㋑㋓㋕㋗㋙㋛㋝㋟㋡㋣㋥㋧㋩` | 15 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/26 | 5 | – | +0.66 (1.22e+03) | recognised |
-| 687 | `🀁🀄🀇🀊🀍🀐🀓🀖🀙🀜🀟🀢🀥🀨🀫` | 15 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/26 | 3 | – | +0.87 (≥1e4) | recognised |
-| 688 | `🥟🥮🥭🥬🥫🥪🥩🥨🥧🥦🥥🥤🥣🥢🥡` | 15 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | +0.33 (0.333) | recognised |
-| 689 | `ⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹⅼⅽⅾⅿ` | 14 | monotone | +0.74 ± 0.18 | 495 | cl 4/4 gr 2/2 | undecided 0/2 | 3 | 1 (0 firm) | +0.95 (≥1e4) | recognised |
-| 690 | `😄🙂😐🙁😟😞😢😭😩😫😤😠😡🤬` | 14 | other | +0.74 ± 0.18 | 495 | cl 4/4 gr 2/2 | undecided 2/23 | 5 | 4 (0 firm) | +0.88 (≥1e4) | recognised |
-| 691 | `⼀⼁⼂⼃⼄⼅⼆⼇⼈⼉⼊⼋⼌⼍` | 14 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 692 | `🯠🯡🯢🯣🯤🯥🯦🯧🯨🯩🯪🯫🯬🯭` | 14 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 693 | `㌏㌐㌑㌒㌓㌔㌕㌖㌗㌘㌙㌚㌛㌜` | 14 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.62 (88.1) | recognised |
-| 694 | `𝍁𝍂𝍃𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎` | 14 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 2 | – | +0.84 (≥1e4) | recognised |
-| 695 | `𝅐𝅑𝅒𝅓𝅔𝅕𝅖𝅗𝅘𝅙𝅚𝅛𝅜𝅝` | 14 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.46 (2.33) | recognised |
-| 696 | `˥˦˧˨˩˪˫ˬ˭ˮ˯˰˱˲` | 14 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
-| 697 | `⽃⽄⽅⽆⽇⽈⽉⽊⽋⽌⽍⽎⽏⽐` | 14 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
-| 698 | `🂱🂲🂳🂴🂵🂶🂷🂸🂹🂺🂻🂼🂽🂾` | 14 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 699 | `🜔🜕🜖🜗🜘🜙🜚🜛🜜🜝🜞🜟🜠🜡` | 14 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 700 | `🂡🂮🂭🂬🂫🂪🂩🂨🂧🂦🂥🂤🂣🂢` | 14 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 0/1 | 3 | 1 (0 firm) | +0.57 (≥1e4) | recognised |
-| 701 | `ŲųŴŵŶŷŸŹźŻżŽžſ` | 14 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.50 (≥1e4) | recognised |
-| 702 | `ٱٲٳٴٵٶٷٸٹٺٻټٽپ` | 14 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 703 | `ޘޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 14 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.91 (≥1e4) | recognised |
-| 704 | `␙␚␛␜␝␞␟␠␡␢␣␤␥␦` | 14 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.52 (4.79) | recognised |
-| 705 | `⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎` | 14 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.89 (≥1e4) | recognised |
-| 706 | `⧬⧭⧮⧯⧰⧱⧲⧳⧴⧵⧶⧷⧸⧹` | 14 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.58 (5.97) | recognised |
-| 707 | `ㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱ` | 14 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 708 | `㈸㈹㈺㈻㈼㈽㈾㈿㉀㉁㉂㉃㉄㉅` | 14 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.40 (0.833) | recognised |
-| 709 | `𐡚𐡛𐡜𐡝𐡞𐡟𐡠𐡡𐡢𐡣𐡤𐡥𐡦𐡧` | 14 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 710 | `𝛫𝛬𝛭𝛮𝛯𝛰𝛱𝛲𝛳𝛴𝛵𝛶𝛷𝛸` | 14 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.73 (≥1e4) | recognised |
-| 711 | `🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪🂫🂬🂭🂮` | 14 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.90 (≥1e4) | recognised |
-| 712 | `🃑🃒🃓🃔🃕🃖🃗🃘🃙🃚🃛🃜🃝🃞` | 14 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 713 | `🄓🄔🄕🄖🄗🄘🄙🄚🄛🄜🄝🄞🄟🄠` | 14 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
-| 714 | `🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪🜫🜬🜭` | 14 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.85 (≥1e4) | recognised |
-| 715 | `⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑` | 14 | contiguous | +0.57 ± 0.16 | 75.4 | cl 2/2 ge 1/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 716 | `㋀㋃㋆㋉㋌㋏㋒㋕㋘㋛㋞㋡㋤㋧` | 14 | monotone | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 1/24 | 3 | 1 (0 firm) | +0.85 (≥1e4) | recognised |
-| 717 | `⡁⡃⡅⡇⡉⡋⡍⡏⡑⡓⡕⡗⡙⡛` | 14 | monotone | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/24 | 5 | – | +0.58 (2) | recognised |
-| 718 | `BcDeFgHiJkLmNo` | 14 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/36 | 3 | – | +0.78 (≥1e4) | recognised |
-| 719 | `ڕݙݘݗݖݕݔݓݒݑݐݏݎݍ` | 14 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
-| 720 | `ᚁᚃᚅᚇᚉᚋᚍᚏᚑᚓᚕᚗᚙ᚛` | 14 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/24 | 3 | – | +0.76 (≥1e4) | recognised |
-| 721 | `ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅬⅭⅮⅯ` | 14 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 3 | – | +0.99 (≥1e4) | recognised |
-| 722 | `⡝⡟⡼⡽⡾⡿⣸⣹⣺⣻⣼⣽⣾⣿` | 14 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | 4 (0 firm) | +0.70 (≥1e4) | recognised |
-| 723 | `⢄⢂⢀⢞⢜⢚⢘⢖⢔⢒⢐⢎⢌⢊` | 14 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/26 | 5 | – | +0.44 (225) | recognised |
-| 724 | `〇一二三四五六七八九十百千万` | 14 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 10/32 | 3 | 2 (0 firm) | +0.98 (≥1e4) | recognised |
-| 725 | `꜆꜈꜊꜌꜎꜐꜒꜔꜖ꜘꜚꜜꜞ꜠` | 14 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/24 | 3 | – | +0.85 (≥1e4) | recognised |
-| 726 | `🂮🂭🂫🂪🂩🂨🂧🂦🂥🂤🂣🂢🂡🃞` | 14 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 4 | 2 (0 firm) | +0.89 (≥1e4) | recognised |
-| 727 | `🕒🕝🕑🕜🕐🕧🕦🕥🕤🕣🕢🕡🕠🕟` | 14 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/11 | 5 | – | +0.89 (≥1e4) | recognised |
-| 728 | `ݓݔݕݖݗݘݙݚݛݜݝݞݟ` | 13 | contiguous | +0.68 ± 0.17 | ≥1e4 | cl 4/4 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 729 | `𝍂𝍃𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎` | 13 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
-| 730 | `🯡🯢🯣🯤🯥🯦🯧🯨🯩🯪🯫🯬🯭` | 13 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 731 | `ӃӄӅӆӇӈӉӊӋӌӍӎӏ` | 13 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 732 | `㌆㌇㌈㌉㌊㌋㌌㌍㌎㌏㌐㌑㌒` | 13 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.74 (≥1e4) | recognised |
-| 733 | `🆡🆢🆣🆤🆥🆦🆧🆨🆩🆪🆫🆬🆭` | 13 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.74 (≥1e4) | recognised |
-| 734 | `ѠѡѢѣѤѥѦѧѨѩѪѫѬ` | 13 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 735 | `≓≔≕≖≗≘≙≚≛≜≝≞≟` | 13 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.55 (5.97) | recognised |
-| 736 | `ޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 13 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.90 (≥1e4) | recognised |
-| 737 | `⊕⊖⊗⊘⊙⊚⊛⊜⊝⊞⊟⊠⊡` | 13 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 738 | `🮣🮤🮥🮦🮧🮨🮩🮪🮫🮬🮭🮮🮯` | 13 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
-| 739 | `🯐🯑🯒🯓🯔🯕🯖🯗🯘🯙🯚🯛🯜` | 13 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.76 (≥1e4) | recognised |
-| 740 | `⪳⪴⪵⪶⪷⪸⪹⪺⪻⪼⪽⪾⪿` | 13 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 741 | `⺛⺜⺝⺞⺟⺠⺡⺢⺣⺤⺥⺦⺧` | 13 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 2 | – | +0.58 (4.33) | recognised |
-| 742 | `𐆐𐆑𐆒𐆓𐆔𐆕𐆖𐆗𐆘𐆙𐆚𐆛𐆜` | 13 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.68 (4.17e+03) | recognised |
-| 743 | `𝜥𝜦𝜧𝜨𝜩𝜪𝜫𝜬𝜭𝜮𝜯𝜰𝜱` | 13 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 6 (0 firm) | +0.78 (≥1e4) | recognised |
-| 744 | `🌠🌡🌢🌣🌤🌥🌦🌧🌨🌩🌪🌫🌬` | 13 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.59 (154) | recognised |
-| 745 | `🜛🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧` | 13 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.85 (≥1e4) | recognised |
-| 746 | `ᄆᄇᄈᄉᄊᄋᄌᄍᄎᄏᄐᄑᄒ` | 13 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.67 (≥1e4) | recognised |
-| 747 | `⋳⋴⋵⋶⋷⋸⋹⋺⋻⋼⋽⋾⋿` | 13 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
-| 748 | `⣓⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟` | 13 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | +0.64 (≥1e4) | recognised |
-| 749 | `⩕⩖⩗⩘⩙⩚⩛⩜⩝⩞⩟⩠⩡` | 13 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 750 | `⩩⩪⩫⩬⩭⩮⩯⩰⩱⩲⩳⩴⩵` | 13 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.88 (≥1e4) | recognised |
-| 751 | `𐡛𐡜𐡝𐡞𐡟𐡠𐡡𐡢𐡣𐡤𐡥𐡦𐡧` | 13 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 752 | `🟅🟆🟇🟈🟉🟊🟋🟌🟍🟎🟏🟐🟑` | 13 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.88 (≥1e4) | recognised |
-| 753 | `ԖԘԚԜԞԠԢԤԦԨԪԬԮ` | 13 | monotone | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/22 | 3 | – | – | recognised |
-| 754 | `ⓗⓘⒿⓚⓛⓂⓝⓞⓅⓠⓡⓈⓣ` | 13 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/27 | 5 | – | +0.87 (≥1e4) | recognised |
-| 755 | `🕐🕜🕝🕞🕟🕠🕡🕢🕣🕤🕥🕦🕧` | 13 | monotone | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/1 | 5 | – | +0.78 (≥1e4) | recognised |
-| 756 | `ᚃᚅᚇᚉᚋᚍᚏᚑᚓᚕᚗᚙ᚛` | 13 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/22 | 3 | – | +0.82 (≥1e4) | recognised |
-| 757 | `ᬒᬔᬖᬘᬚᬜᬞᬠᬢᬤᬦᬨᬪ` | 13 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/22 | 3 | – | +0.65 (4.33) | recognised |
-| 758 | `⊈⊉⊊⊋⊌⊍⊎⊐⊒⊑⊔⊓⊠` | 13 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/8 | 5 | – | – | recognised |
-| 759 | `❽❾⓾⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴` | 13 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/7 | 3 | 2 (0 firm) | +0.88 (≥1e4) | recognised |
-| 760 | `▁▃▅▆▇█▉▊▋▌▍▎▏` | 13 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | +0.95 (≥1e4) | recognised |
-| 761 | `𝍠𝍢𝍤𝍦𝍨𝍪𝍬𝍮𝍰𝍲𝍴𝍶𝍸` | 13 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/22 | 3 | – | +0.89 (≥1e4) | recognised |
-| 762 | `𝑁𝛯𝑂𝛱Ρ𝛳𝛴𝑇𝛶𝛷𝛸𝛹𝛺` | 13 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/17 | 5 | 1 (0 firm) | +0.70 (≥1e4) | recognised |
-| 763 | `🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪🂫🂭🂮` | 13 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 2 | 1 (0 firm) | +0.89 (≥1e4) | recognised |
-| 764 | `🙂😐🙁😟😞😢😭😩😫😤😠😡🤬` | 13 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/20 | 5 | 2 (0 firm) | +0.86 (≥1e4) | recognised |
-| 765 | `㈏㈐㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚` | 12 | contiguous | +0.87 ± 0.16 | 40.8 | gr 5/5 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
-| 766 | `⩕⩖⩗⩘⩙⩚⩛⩜⩝⩞⩟⩠` | 12 | contiguous | +0.74 ± 0.15 | ≥1e4 | cl 5/5 ge 1/1 gr 2/2 | undiscriminable | 3 | – | – | recognised |
-| 767 | `ԘԚԜԞԠԢԤԦԨԪԬԮ` | 12 | monotone | +0.72 ± 0.18 | 9.65e+03 | cl 6/6 gr 2/2 | undecided 0/20 | 3 | – | – | recognised |
-| 768 | `♏♎♍♌♋♊♉♈♓♒♑♐` | 12 | other | +0.68 ± 0.17 | ≥1e4 | cl 4/4 ge 1/1 gr 1/1 | positive 1/6 | 3 | – | – | recognised |
-| 769 | `♔♕♖♗♘♙♚♛♜♝♞♟` | 12 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 3 | – | +0.77 (≥1e4) | recognised |
-| 770 | `𝍃𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎` | 12 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 2 | – | +0.84 (≥1e4) | recognised |
-| 771 | `♊♉♈♓♒♑♐♏♎♍♌♋` | 12 | other | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | positive 1/6 | 3 | – | – | recognised |
-| 772 | `♌♋♊♉♈♓♒♑♐♏♎♍` | 12 | other | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | positive 1/6 | 3 | – | – | recognised |
-| 773 | `♒♑♐♏♎♍♌♋♊♉♈♓` | 12 | other | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/3 | 3 | – | – | recognised |
-| 774 | `ݓݔݕݖݗݘݙݚݛݜݝݞ` | 12 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 775 | `♈♓♒♑♐♏♎♍♌♋♊♉` | 12 | other | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/3 | 3 | – | – | recognised |
-| 776 | `♍♌♋♊♉♈♓♒♑♐♏♎` | 12 | other | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | positive 1/6 | 3 | – | – | recognised |
-| 777 | `🔴🔵🔶🔷🔸🔹🔺🔻🔼🔽🔾🔿` | 12 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 778 | `♉♈♓♒♑♐♏♎♍♌♋♊` | 12 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | positive 1/6 | 3 | – | – | recognised |
-| 779 | `♋♊♉♈♓♒♑♐♏♎♍♌` | 12 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | positive 1/6 | 3 | – | – | recognised |
-| 780 | `♎♍♌♋♊♉♈♓♒♑♐♏` | 12 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | positive 1/6 | 3 | – | – | recognised |
-| 781 | `♐♏♎♍♌♋♊♉♈♓♒♑` | 12 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | positive 1/6 | 3 | – | – | recognised |
-| 782 | `♑♐♏♎♍♌♋♊♉♈♓♒` | 12 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | positive 1/6 | 3 | – | – | recognised |
-| 783 | `⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋` | 12 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.61 (≥1e4) | recognised |
-| 784 | `⪳⪴⪵⪶⪷⪸⪹⪺⪻⪼⪽⪾` | 12 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 785 | `⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐` | 12 | contiguous | +0.63 ± 0.17 | 435 | cl 2/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 786 | `ɜɝɞɟɠɡɢɣɤɥɦɧ` | 12 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.75 (≥1e4) | recognised |
-| 787 | `𝄛𝄜𝄝𝄞𝄟𝄠𝄡𝄢𝄣𝄤𝄥𝄦` | 12 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 5 | – | +0.75 (≥1e4) | recognised |
-| 788 | `🕜🕝🕞🕟🕠🕡🕢🕣🕤🕥🕦🕧` | 12 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 5 | – | +0.74 (≥1e4) | recognised |
-| 789 | `ޚޛޜޝޞޟޠޡޢޣޤޥ` | 12 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.90 (≥1e4) | recognised |
-| 790 | `␒␓␔␕␖␗␘␙␚␛␜␝` | 12 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.49 (1.5) | recognised |
-| 791 | `⫐⫑⫒⫓⫔⫕⫖⫗⫘⫙⫚⫛` | 12 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.65 (≥1e4) | recognised |
-| 792 | `🕚🕙🕘🕗🕖🕕🕔🕓🕒🕑🕐🕛` | 12 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 2/3 | 2 | – | +0.90 (≥1e4) | recognised |
-| 793 | `🄔🄕🄖🄗🄘🄙🄚🄛🄜🄝🄞🄟` | 12 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
-| 794 | `🕔🕓🕒🕑🕐🕛🕚🕙🕘🕗🕖🕕` | 12 | other | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undecided 5/6 | 3 | – | +0.55 (≥1e4) | recognised |
-| 795 | `🕗🕖🕕🕔🕓🕒🕑🕐🕛🕚🕙🕘` | 12 | other | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undecided 5/6 | 3 | – | +0.62 (≥1e4) | recognised |
-| 796 | `🕙🕘🕗🕖🕕🕔🕓🕒🕑🕐🕛🕚` | 12 | other | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undecided 4/6 | 2 | – | +0.85 (≥1e4) | recognised |
-| 797 | `🟅🟆🟇🟈🟉🟊🟋🟌🟍🟎🟏🟐` | 12 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.87 (≥1e4) | recognised |
-| 798 | `🭴🭵🭶🭷🭸🭹🭺🭻🭼🭽🭾🭿` | 12 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.81 (≥1e4) | recognised |
-| 799 | `àáâãäåæçèéêë` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.62 (≥1e4) | recognised |
-| 800 | `ǔǕǖǗǘǙǚǛǜǝǞǟ` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.48 (2.33) | recognised |
-| 801 | `ԔԕԖԗԘԙԚԛԜԝԞԟ` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 802 | `↫↬↭↮↯↰↱↲↳↴↵↶` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.43 (≥1e4) | recognised |
-| 803 | `∴∵∶∷∸∹∺∻∼∽∾∿` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 804 | `▔▕▖▗▘▙▚▛▜▝▞▟` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.13 (30.9) | recognised |
-| 805 | `⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.59 (≥1e4) | recognised |
-| 806 | `⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | +0.64 (≥1e4) | recognised |
-| 807 | `⨻⨼⨽⨾⨿⩀⩁⩂⩃⩄⩅⩆` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 808 | `⩩⩪⩫⩬⩭⩮⩯⩰⩱⩲⩳⩴` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
-| 809 | `⭕⭖⭗⭘⭙⭚⭛⭜⭝⭞⭟⭠` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 810 | `ㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰ` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.82 (≥1e4) | recognised |
-| 811 | `㉪㉫㉬㉭㉮㉯㉰㉱㉲㉳㉴㉵` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.91 (≥1e4) | recognised |
-| 812 | `㋀㋁㋂㋃㋄㋅㋆㋇㋈㋉㋊㋋` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 2 | – | +0.93 (≥1e4) | recognised |
-| 813 | `㋁㋀㋋㋊㋉㋈㋇㋆㋅㋄㋃㋂` | 12 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 3 | 1 (0 firm) | +0.11 (≥1e4) | recognised |
-| 814 | `㋂㋁㋀㋋㋊㋉㋈㋇㋆㋅㋄㋃` | 12 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 3 | 1 (0 firm) | +0.03 (0.01) | recognised |
-| 815 | `㋄㋃㋂㋁㋀㋋㋊㋉㋈㋇㋆㋅` | 12 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 3 | 1 (0 firm) | +0.15 (8.12e+03) | recognised |
-| 816 | `㋅㋄㋃㋂㋁㋀㋋㋊㋉㋈㋇㋆` | 12 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 3 | 1 (0 firm) | +0.47 (≥1e4) | recognised |
-| 817 | `𐡜𐡝𐡞𐡟𐡠𐡡𐡢𐡣𐡤𐡥𐡦𐡧` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 818 | `🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚🕛` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 2 | – | +0.82 (≥1e4) | recognised |
-| 819 | `🕐🕛🕚🕙🕘🕗🕖🕕🕔🕓🕒🕑` | 12 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 2/3 | 2 | – | +0.51 (≥1e4) | recognised |
-| 820 | `🕒🕑🕐🕛🕚🕙🕘🕗🕖🕕🕔🕓` | 12 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 5/6 | 2 | – | +0.50 (≥1e4) | recognised |
-| 821 | `🕓🕒🕑🕐🕛🕚🕙🕘🕗🕖🕕🕔` | 12 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 5/6 | 3 | – | +0.67 (≥1e4) | recognised |
-| 822 | `🕕🕔🕓🕒🕑🕐🕛🕚🕙🕘🕗🕖` | 12 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 4/6 | 3 | – | +0.50 (≥1e4) | recognised |
-| 823 | `🕖🕕🕔🕓🕒🕑🕐🕛🕚🕙🕘🕗` | 12 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 4/6 | 3 | – | +0.50 (≥1e4) | recognised |
-| 824 | `🕘🕗🕖🕕🕔🕓🕒🕑🕐🕛🕚🕙` | 12 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 4/6 | 2 | – | +0.76 (≥1e4) | recognised |
-| 825 | `🕨🕩🕪🕫🕬🕭🕮🕯🕰🕱🕲🕳` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
-| 826 | `🞀🞁🞂🞃🞄🞅🞆🞇🞈🞉🞊🞋` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.93 (≥1e4) | recognised |
-| 827 | `🟆🟇🟈🟉🟊🟋🟌🟍🟎🟏🟐🟑` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.85 (≥1e4) | recognised |
-| 828 | `🟉🟊🟋🟌🟍🟎🟏🟐🟑🟒🟓🟔` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
-| 829 | `🡠🡡🡢🡣🡤🡥🡦🡧🡨🡩🡪🡫` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.58 (≥1e4) | recognised |
-| 830 | `🯢🯣🯤🯥🯦🯧🯨🯩🯪🯫🯬🯭` | 12 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 831 | `𒐦𒐨𒐪𒐬𒐮𒐰𒐲𒐴𒐶𒐸𒐺𒐼` | 12 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/20 | 5 | – | – | recognised |
-| 832 | `㊚㊜㊞㊠㊢㊤㊦㊨㊪㊬㊮㊰` | 12 | monotone | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/20 | 5 | – | – | recognised |
-| 833 | `ⅪⅺⅫⅻⅬⅼⅭⅽⅮⅾⅯⅿ` | 12 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/10 | 5 | – | +0.83 (≥1e4) | recognised |
-| 834 | `⒤⒧⒪⒭⒰⒳ⒶⒹⒼⒿⓂⓅ` | 12 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/20 | 5 | – | +0.78 (≥1e4) | recognised |
-| 835 | `🕗🕖🕕🕔🕓🕒🕑🕐🕧🕦🕥🕤` | 12 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/6 | 3 | – | +0.95 (≥1e4) | recognised |
-| 836 | `0123456789🔟⑪` | 12 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/3 | 5 | 2 (0 firm) | +0.96 (≥1e4) | recognised |
-| 837 | `ⓒⓔⓖⓘⓚⓜⓞⓡⓣⓥⓧⓩ` | 12 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/20 | 5 | – | +0.86 (≥1e4) | recognised |
-| 838 | `꜀꜂꜄꜆꜈꜊꜌꜎꜐꜒꜔꜖` | 12 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/20 | 3 | – | +0.86 (≥1e4) | recognised |
-| 839 | `_▁▂▃▄▅▆▇█🮆🮅🮄` | 12 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 4 | – | +0.98 (≥1e4) | recognised |
-| 840 | `ԀԂԄԆԈԊԌԎԐԒԔԖ` | 12 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/20 | 5 | – | – | recognised |
-| 841 | `ᑲᑳᒐᒑᒪᒫᓇᓈᓴᓵᔭᔮ` | 12 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/10 | 5 | – | – | recognised |
-| 842 | `ᚅᚇᚉᚋᚍᚏᚑᚓᚕᚗᚙ᚛` | 12 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/20 | 3 | – | +0.82 (≥1e4) | recognised |
-| 843 | `⊕⊗⊘⊙⊚⊛⊜⊝⊞⊟⊠⊡` | 12 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 3 | – | – | recognised |
-| 844 | `♷⚅⚆⚇⚈⚉⚊⚋⚌⚍⚎⚏` | 12 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | 1 (0 firm) | +0.82 (≥1e4) | recognised |
-| 845 | `𝙉𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕` | 12 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.78 (471) | recognised |
-| 846 | `🀁🀃🀅🀇🀉🀋🀍🀏🀑🀓🀕🀗` | 12 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/20 | 3 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
-| 847 | `🕖🕕🕔🕓🕒🕑🕐🕧🕦🕥🕤🕣` | 12 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/6 | 5 | – | +0.94 (≥1e4) | recognised |
-| 848 | `./0123456789` | 12 | contiguous | +0.56 ± 0.21 | 17.5 | cl 2/3 gr 1/1 | undiscriminable | 2 | 2 (0 firm) | +0.96 (≥1e4) | recognised |
-| 849 | `🦤🦥🦦🦧🦨🦩🦪🦫🦬🦭🦮🦯` | 12 | contiguous | +0.29 ± 0.21 | 125 | cl 3/3 gr 0/1 | undiscriminable | 5 | – | – | recognised |
-| 850 | `⓿➊➋➌➍➎➏➐➑➒➓` | 11 | monotone | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 0/1 | 3 | – | +0.95 (≥1e4) | recognised |
-| 851 | `𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎` | 11 | contiguous | +0.67 ± 0.15 | ≥1e4 | cl 3/3 ge 2/2 gr 1/1 | undiscriminable | 2 | – | +0.84 (≥1e4) | recognised |
-| 852 | `⥵⥶⥷⥸⥹⥺⥻⥼⥽⥾⥿` | 11 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 853 | `ݓݔݕݖݗݘݙݚݛݜݝ` | 11 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 854 | `⩕⩖⩗⩘⩙⩚⩛⩜⩝⩞⩟` | 11 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 855 | `⪳⪴⪵⪶⪷⪸⪹⪺⪻⪼⪽` | 11 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 856 | `㌇㌈㌉㌊㌋㌌㌍㌎㌏㌐㌑` | 11 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.74 (≥1e4) | recognised |
-| 857 | `⑀⑁⑂⑃⑄⑅⑆⑇⑈⑉⑊` | 11 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.75 (≥1e4) | recognised |
-| 858 | `⫤⫥⫦⫧⫨⫩⫪⫫⫬⫭⫮` | 11 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 859 | `𝞸𝞹𝞺𝞻𝞼𝞽𝞾𝞿𝟀𝟁𝟂` | 11 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.73 (≥1e4) | recognised |
-| 860 | `🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚` | 11 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 2 | – | +0.95 (≥1e4) | recognised |
-| 861 | `↫↬↭↮↯↰↱↲↳↴↵` | 11 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.41 (≥1e4) | recognised |
-| 862 | `☠☡☢☣☤☥☦☧☨☩☪` | 11 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 863 | `🆡🆢🆣🆤🆥🆦🆧🆨🆩🆪🆫` | 11 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | +0.73 (≥1e4) | recognised |
-| 864 | `🜕🜖🜗🜘🜙🜚🜛🜜🜝🜞🜟` | 11 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.82 (≥1e4) | recognised |
-| 865 | `🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦` | 11 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
-| 866 | `⅒⅛⅙¼⅓½⅔¾⅘⅚⅞` | 11 | other | +0.63 ± 0.18 | 644 | cl 3/3 ge 2/2 gr 1/1 | positive 2/13 | 3 | 6 (0 firm) | +0.91 (≥1e4) | recognised |
-| 867 | `ޛޜޝޞޟޠޡޢޣޤޥ` | 11 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
-| 868 | `⩬⩭⩮⩯⩰⩱⩲⩳⩴⩵⩶` | 11 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.89 (≥1e4) | recognised |
-| 869 | `၉၈၇၆၅၄၃၂၁၀−` | 11 | other | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 0/2 | 4 | – | +0.91 (≥1e4) | recognised |
-| 870 | `˵˶˷˸˹˺˻˼˽˾˿` | 11 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.74 (≥1e4) | recognised |
-| 871 | `⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟` | 11 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.64 (≥1e4) | recognised |
-| 872 | `⭕⭖⭗⭘⭙⭚⭛⭜⭝⭞⭟` | 11 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 873 | `㈐㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚` | 11 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.94 (≥1e4) | recognised |
-| 874 | `🁹🁺🁻🁼🁽🁾🁿🂀🂁🂂🂃` | 11 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
-| 875 | `🭦🭧🭨🭩🭪🭫🭬🭭🭮🭯🭰` | 11 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.81 (≥1e4) | recognised |
-| 876 | `⎐⎑⎒⎓⎔⎕⎖⎗⎘⎙⎚` | 11 | contiguous | +0.57 ± 0.16 | 75.4 | cl 2/2 ge 1/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 877 | `-၀၁၂၃၄၅၆၇၈၉` | 11 | monotone | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/1 | 4 | – | +0.91 (≥1e4) | recognised |
-| 878 | `𝓸𝝅𝝆𝜍𝝈𝝉𝝊𝝋𝝌𝝍𝝎` | 11 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/8 | 5 | – | – | recognised |
-| 879 | `˫˭˯˱˳˵˷˹˻˽˿` | 11 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/18 | 5 | – | +0.74 (≥1e4) | recognised |
-| 880 | `0123456789🔟` | 11 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/1 | 5 | 1 (0 firm) | +0.96 (≥1e4) | recognised |
-| 881 | `ᇿሀሁሂሃሄህሆሇለላ` | 11 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | – | recognised |
-| 882 | `㈠㈡㈢㈣㈤㈥㈦㈧㈨㈩⑪` | 11 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 4 | 2 (0 firm) | +0.99 (≥1e4) | recognised |
-| 883 | `🄁🄂🄃🄄🄅🄆🄇🄈🄉🄊⒑` | 11 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 4 | – | +0.98 (≥1e4) | recognised |
-| 884 | `⓿❷❹❻❽❿⓬⓮⓰⓲⓴` | 11 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/18 | 3 | 2 (0 firm) | +0.95 (≥1e4) | recognised |
-| 885 | `▁▂▃▄▅▆▇█🮆🮅🮄` | 11 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | +0.98 (≥1e4) | recognised |
-| 886 | `♈♓♒♑♐♏♎♍♌♋♊` | 11 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | – | recognised |
-| 887 | `😂😆😁😄😊🙂😐🙁☹😢😭` | 11 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/21 | 3 | 4 (0 firm) | +0.88 (≥1e4) | recognised |
-| 888 | `🞢🞤🞦🞨🞪🞬🞮🞰🞲🞴🞶` | 11 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/18 | 3 | – | +0.91 (≥1e4) | recognised |
-| 889 | `𐡝𐡞𐡟𐡠𐡡𐡢𐡣𐡤𐡥𐡦𐡧` | 11 | contiguous | +0.56 ± 0.21 | 17.5 | cl 2/3 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 890 | `💵💶💷💸💹💺💻💼💽💾💿` | 11 | contiguous | +0.44 ± 0.17 | 36.4 | cl 2/2 ge 1/1 gr 0/1 | undiscriminable | 5 | – | – | recognised |
-| 891 | `𝞊𝞋𝞌𝞍𝞎𝞏𝞐𝞑𝞒𝞓` | 10 | contiguous | +0.87 ± 0.16 | 40.8 | gr 5/5 | undiscriminable | 3 | 1 (0 firm) | +0.33 (0.5) | recognised |
-| 892 | `ⅦⅷⅨⅩⅪⅫⅬⅭⅮⅯ` | 10 | other | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 1/6 | 5 | – | +0.92 (≥1e4) | recognised |
-| 893 | `♔♕♖♗♘♙♚♛♜♝` | 10 | contiguous | +0.84 ± 0.19 | 17.8 | gr 4/4 | undiscriminable | 3 | – | +0.79 (≥1e4) | recognised |
-| 894 | `🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪` | 10 | contiguous | +0.77 ± 0.16 | 8.83e+03 | cl 4/4 gr 2/2 | undiscriminable | 2 | – | +0.90 (≥1e4) | recognised |
-| 895 | `😟😞😢😭😩😫😤😠😡🤬` | 10 | other | +0.73 ± 0.18 | 2.54e+03 | cl 5/5 gr 2/2 | undecided 0/16 | 5 | 2 (0 firm) | +0.39 (2.41) | recognised |
-| 896 | `⺂⺃⺄⺅⺆⺇⺈⺉⺊⺋` | 10 | contiguous | +0.68 ± 0.17 | ≥1e4 | cl 4/4 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 897 | `🮡🮢🮣🮤🮥🮦🮧🮨🮩🮪` | 10 | contiguous | +0.68 ± 0.17 | ≥1e4 | cl 4/4 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
-| 898 | `⪯⪰⪱⪲⪳⪴⪵⪶⪷⪸` | 10 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 899 | `𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎` | 10 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 2 | – | +0.83 (≥1e4) | recognised |
-| 900 | `🛳🛴🛵🛶🛷🛸🛹🛺🛻🛼` | 10 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 901 | `⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏` | 10 | contiguous | +0.66 ± 0.16 | 5.2e+03 | cl 3/3 ge 2/2 gr 1/1 | undiscriminable | 3 | – | +0.82 (≥1e4) | recognised |
-| 902 | `○▫▢□⚀⚁⚂⚃⚄⚅` | 10 | other | +0.69 ± 0.18 | 42 | cl 3/3 | undecided 0/6 | 4 | – | +0.97 (≥1e4) | recognised |
-| 903 | `ᛀᛁᛂᛃᛄᛅᛆᛇᛈᛉ` | 10 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 904 | `▖▗▘▝▚▞▙▛▜▟` | 10 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | 5 (0 firm) | +0.12 (0.0402) | recognised |
-| 905 | `⨨⨩⨪⨫⨬⨭⨮⨯⨰⨱` | 10 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 906 | `⩬⩭⩮⩯⩰⩱⩲⩳⩴⩵` | 10 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.88 (≥1e4) | recognised |
-| 907 | `🂅🂆🂇🂈🂉🂊🂋🂌🂍🂎` | 10 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.73 (≥1e4) | recognised |
-| 908 | `ǠǡǢǣǤǥǦǧǨǩ` | 10 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
-| 909 | `⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟` | 10 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.64 (≥1e4) | recognised |
-| 910 | `⺞⺟⺠⺡⺢⺣⺤⺥⺦⺧` | 10 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 2 | – | +0.58 (2) | recognised |
-| 911 | `㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩` | 10 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 2 | 1 (0 firm) | +0.89 (≥1e4) | recognised |
-| 912 | `🄀🄁🄂🄃🄄🄅🄆🄇🄈🄉` | 10 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.98 (≥1e4) | recognised |
-| 913 | `🟊🟋🟌🟍🟎🟏🟐🟑🟒🟓` | 10 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.80 (≥1e4) | recognised |
-| 914 | `؆؇؈؉؊؋،؍؎؏` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 915 | `ڟڠڡڢڣڤڥڦڧڨ` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.70 (≥1e4) | recognised |
-| 916 | `ޜޝޞޟޠޡޢޣޤޥ` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
-| 917 | `ߡߢߣߤߥߦߧߨߩߪ` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
-| 918 | `៰៱៲៳៴៵៶៷៸៹` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 919 | `▗▘▙▚▛▜▝▞▟■` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.13 (3.89) | recognised |
-| 920 | `♉♊♋♌♍♎♏♐♑♒` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 921 | `♊♋♌♍♎♏♐♑♒♓` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 922 | `✱✲✳✴✵✶✷✸✹✺` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.47 (13.5) | recognised |
-| 923 | `⫒⫓⫔⫕⫖⫗⫘⫙⫚⫛` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.65 (≥1e4) | recognised |
-| 924 | `⮉⮊⮋⮌⮍⮎⮏⮐⮑⮒` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 925 | `⾁⾂⾃⾄⾅⾆⾇⾈⾉⾊` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
-| 926 | `ㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯ` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 927 | `㇚㇛㇜㇝㇞㇟㇠㇡㇢㇣` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
-| 928 | `㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.94 (≥1e4) | recognised |
-| 929 | `㉫㉬㉭㉮㉯㉰㉱㉲㉳㉴` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.91 (≥1e4) | recognised |
-| 930 | `꠰꠱꠲꠳꠴꠵꠶꠷꠸꠹` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 931 | `𐡞𐡟𐡠𐡡𐡢𐡣𐡤𐡥𐡦𐡧` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 932 | `𝀀𝀁𝀂𝀃𝀄𝀅𝀆𝀇𝀈𝀉` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.65 (24.2) | recognised |
-| 933 | `𝜥𝜦𝜧𝜨𝜩𝜪𝜫𝜬𝜭𝜮` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | +0.82 (≥1e4) | recognised |
-| 934 | `𝟟𝟞𝟝𝟜𝟛𝟚𝟙𝟘𝟗𝟠` | 10 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | +0.70 (≥1e4) | recognised |
-| 935 | `🄕🄖🄗🄘🄙🄚🄛🄜🄝🄞` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.82 (≥1e4) | recognised |
-| 936 | `🯗🯘🯙🯚🯛🯜🯝🯞🯟🯠` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.79 (≥1e4) | recognised |
-| 937 | `🯣🯤🯥🯦🯧🯨🯩🯪🯫🯬` | 10 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
-| 938 | `🅆🅇🅈🅉🅊🅋🅌🅍🅎🅏` | 10 | contiguous | +0.57 ± 0.16 | 75.4 | cl 2/2 ge 1/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 939 | `𝚶𝚷Ρ𝚺𝚻𝚼𝚽𝚾𝚿𝛀` | 10 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/6 | 5 | – | – | recognised |
-| 940 | `ҢҤҦҨҪҬҮҰҲҴ` | 10 | monotone | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/16 | 5 | – | – | recognised |
-| 941 | `ᄀᄁᄃᄄᄇᄈᄉᄊᄌᄍ` | 10 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/6 | 5 | 2 (0 firm) | +0.65 (≥1e4) | recognised |
-| 942 | `┉┈┄─━▬█■⬛⬜` | 10 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/12 | 5 | 2 (0 firm) | +0.68 (≥1e4) | recognised |
-| 943 | `☠⚰🛌🧍🚶🏃🚴🏍🚗✈` | 10 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | positive 2/20 | 4 | 4 (0 firm) | +0.90 (≥1e4) | recognised |
-| 944 | `㊡㊣㊥㊧㊩㊫㊭㊯㊱㊳` | 10 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/16 | 3 | – | +0.60 (≥1e4) | recognised |
-| 945 | `⇰⇱⇲⇳⇴⇵⇶⇷⇸⇹` | 10 | contiguous | +0.59 ± 0.20 | 261 | cl 3/4 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 946 | `.·⚬○◔◐◕●⬤🌕` | 10 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | positive 7/15 | 5 | 5 (0 firm) | +0.93 (≥1e4) | recognised |
-| 947 | `012345678𝟵` | 10 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/1 | 5 | 1 (0 firm) | +0.98 (≥1e4) | recognised |
-| 948 | `🌱🐌🧍🚶🏃🚲🚗🚄✈🚀` | 10 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/18 | 5 | 8 (0 firm) | +0.95 (≥1e4) | recognised |
-| 949 | `①③⑤⑦⑨⓫⓭⓯⓱⓳` | 10 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/16 | 3 | 2 (0 firm) | +0.96 (≥1e4) | recognised |
-| 950 | `ÀÂÄÆÈÊÌÎÐÒ` | 10 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/16 | 5 | – | – | recognised |
-| 951 | `ሊሉለሗሖሕሔሓሒሑ` | 10 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 3 | – | +0.67 (≥1e4) | recognised |
-| 952 | `ᚏᚑᚓᚔᚕᚖᚗᚘᚙᚚ` | 10 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | +0.86 (≥1e4) | recognised |
-| 953 | `ᬇᬈᬉᬊᬋᬌᬍᬎᬑᬒ` | 10 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | 1 (0 firm) | +0.98 (≥1e4) | recognised |
-| 954 | `❷❹❻❽❿⓬⓮⓰⓲⓴` | 10 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/16 | 3 | 2 (0 firm) | +0.95 (≥1e4) | recognised |
-| 955 | `⚰💤🛌🧍🚶🏃🚴🏍🚗✈` | 10 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/20 | 4 | 4 (0 firm) | +0.90 (≥1e4) | recognised |
-| 956 | `✈🚗🏍🚴🏃🚶🧍🛌💤💀` | 10 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/20 | 4 | 4 (0 firm) | +0.90 (≥1e4) | recognised |
-| 957 | `㈠㈡㈢㈣㈤㈥㈦㈧㈪㈫` | 10 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.99 (≥1e4) | recognised |
-| 958 | `㉟㉢㉥㉨㉫㉮㉱㉴㉷㉺` | 10 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/16 | 5 | 1 (0 firm) | +0.82 (≥1e4) | recognised |
-| 959 | `㉢㉥㉨㉫㉮㉱㉴㉷㉺㉽` | 10 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/16 | 5 | 1 (0 firm) | +0.82 (≥1e4) | recognised |
-| 960 | `一十百千万億兆京秭𥝱` | 10 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 4/20 | 5 | 5 (0 firm) | +0.96 (≥1e4) | recognised |
-| 961 | `🀅🀇🀉🀋🀍🀏🀑🀓🀕🀗` | 10 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/16 | 3 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
-| 962 | `🀙🀛🀝🀟🀡🀣🀥🀧🀩🀫` | 10 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/16 | 3 | 1 (0 firm) | +0.94 (≥1e4) | recognised |
-| 963 | `🞀🞁🞂🞃🞇🞋🞏🞓🞗🞛` | 10 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/11 | 3 | – | +0.56 (5.97) | recognised |
-| 964 | `𝜩𝜪𝜫𝜬𝜭𝜮𝜯𝜰𝜱𝜲` | 10 | contiguous | +0.56 ± 0.21 | 20.1 | cl 2/3 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.78 (≥1e4) | recognised |
-| 965 | `˥˦˧˨˩˪˫ˬ˭ˮ` | 10 | contiguous | +0.46 ± 0.17 | 95.9 | cl 3/3 ge 0/1 gr 1/1 | undiscriminable | 5 | – | +0.92 (≥1e4) | recognised |
-| 966 | `𒐀𒐂𒐄𒐆𒐈𒐊𒐌𒐎𒐐𒐒` | 10 | monotone | +0.34 ± 0.20 | 18.1 | cl 3/3 ge 0/1 gr 1/1 | undecided 0/16 | 3 | – | +0.64 (6.5) | recognised |
-| 967 | `⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌` | 10 | contiguous | +0.29 ± 0.20 | 720 | cl 4/4 gr 0/1 | undiscriminable | 3 | 1 (0 firm) | +0.67 (≥1e4) | recognised |
-| 968 | `𝜚𝜛𝜜𝜝𝜞𝜟𝜠𝜡𝜢𝜣` | 10 | contiguous | +0.29 ± 0.21 | 46.2 | cl 3/3 gr 0/1 | undiscriminable | 3 | 1 (0 firm) | +0.46 (2.49) | recognised |
-| 969 | `🀐🀑🀒🀓🀔🀕🀖🀗🀘` | 9 | contiguous | +0.72 ± 0.18 | 161 | cl 2/2 gr 2/2 | undiscriminable | 1 | – | +0.94 (≥1e4) | recognised |
-| 970 | `𝄺𝄻𝄼𝄽𝄾𝄿𝅀𝅁𝅂` | 9 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.52 (≥1e4) | recognised |
-| 971 | `㊎㊏㊐㊑㊒㊓㊔㊕㊖` | 9 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 1 | – | – | recognised |
-| 972 | `🮡🮢🮣🮤🮥🮦🮧🮨🮩` | 9 | contiguous | +0.66 ± 0.16 | 5.2e+03 | cl 3/3 ge 2/2 gr 1/1 | undiscriminable | 3 | – | +0.77 (≥1e4) | recognised |
-| 973 | `⿴⿵⿶⿷⿸⿹⿺⿻⿼` | 9 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.56 (≥1e4) | recognised |
-| 974 | `🌀🌁🌂🌃🌄🌅🌆🌇🌈` | 9 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 975 | `↬↭↮↯↰↱↲↳↴` | 9 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.42 (≥1e4) | recognised |
-| 976 | `㈒㈓㈔㈕㈖㈗㈘㈙㈚` | 9 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.94 (≥1e4) | recognised |
-| 977 | `🀙🀚🀛🀜🀝🀞🀟🀠🀡` | 9 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.96 (≥1e4) | recognised |
-| 978 | `🀰🀱🀲🀳🀴🀵🀶🀷🀸` | 9 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.97 (≥1e4) | recognised |
-| 979 | `🂢🂣🂤🂥🂦🂧🂨🂩🂪` | 9 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.87 (≥1e4) | recognised |
-| 980 | `ǡǢǣǤǥǦǧǨǩ` | 9 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.83 (≥1e4) | recognised |
-| 981 | `␅␆␇␈␉␊␋␌␍` | 9 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.67 (60.7) | recognised |
-| 982 | `🭧🭨🭩🭪🭫🭬🭭🭮🭯` | 9 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.77 (≥1e4) | recognised |
-| 983 | `🚀✈🚄🚗🚲🏃🚶🧍🧎` | 9 | other | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 0/15 | 5 | 9 (0 firm) | +0.96 (≥1e4) | recognised |
-| 984 | `ǠǡǢǣǤǥǦǧǨ` | 9 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
-| 985 | `ɠɡɢɣɤɥɦɧɨ` | 9 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.75 (≥1e4) | recognised |
-| 986 | `ϿЀЁЂЃЄЅІЇ` | 9 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.75 (≥1e4) | recognised |
-| 987 | `ݐݑݒݓݔݕݖݗݘ` | 9 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 988 | `ޝޞޟޠޡޢޣޤޥ` | 9 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
-| 989 | `ᑎᑏᑐᑑᑒᑓᑔᑕᑖ` | 9 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 990 | `☯☰☱☲☳☴☵☶☷` | 9 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.79 (≥1e4) | recognised |
-| 991 | `⩬⩭⩮⩯⩰⩱⩲⩳⩴` | 9 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
-| 992 | `⩸⩹⩺⩻⩼⩽⩾⩿⪀` | 9 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 993 | `⫒⫓⫔⫕⫖⫗⫘⫙⫚` | 9 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.64 (≥1e4) | recognised |
-| 994 | `𐡟𐡠𐡡𐡢𐡣𐡤𐡥𐡦𐡧` | 9 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.83 (≥1e4) | recognised |
-| 995 | `🀇🀈🀉🀊🀋🀌🀍🀎🀏` | 9 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.96 (≥1e4) | recognised |
-| 996 | `🀱🀲🀳🀴🀵🀶🀷🀸🀹` | 9 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.96 (≥1e4) | recognised |
-| 997 | `😀😁😂😃😄😅😆😇😈` | 9 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.45 (≥1e4) | recognised |
-| 998 | `🜝🜞🜟🜠🜡🜢🜣🜤🜥` | 9 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.81 (≥1e4) | recognised |
-| 999 | `✈🚗🏍🚴🏃🚶🧍🛌💀` | 9 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 3/18 | 3 | 4 (0 firm) | +0.90 (≥1e4) | recognised |
-| 1000 | `⡟⡡⡣⡥⡧⡩⡫⡭⡯` | 9 | monotone | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 2/14 | 5 | – | – | recognised |
-| 1001 | `↗→↘↓↙←↖↑➚` | 9 | other | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | positive 2/8 | 5 | 1 (0 firm) | +0.07 (0.0271) | recognised |
-| 1002 | `ⒶⓑⒷⓒⒸⓓⒹⓔⒺ` | 9 | other | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/9 | 5 | – | +0.87 (≥1e4) | recognised |
-| 1003 | `րտվսռջչոց` | 9 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/5 | 5 | – | +0.25 (0.167) | recognised |
-| 1004 | `⅛⅕⅓⅜⅗⅔⅘⅚⅞` | 9 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/11 | 5 | 7 (0 firm) | +0.90 (≥1e4) | recognised |
-| 1005 | `┉┈┄─━▬█▌▍` | 9 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/10 | 5 | 2 (0 firm) | +0.77 (≥1e4) | recognised |
-| 1006 | `㌰㌱㌲㌳㌴㌵㌶㌸㌹` | 9 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/2 | 5 | – | +0.67 (≥1e4) | recognised |
-| 1007 | `🕑🕞🕒🕟🕓🕠🕔🕡🕕` | 9 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/9 | 5 | 2 (0 firm) | +0.76 (≥1e4) | recognised |
-| 1008 | `ƷƸƹƺƻƼƽƾƿ` | 9 | contiguous | +0.59 ± 0.20 | 261 | cl 3/4 gr 1/1 | undiscriminable | 1 | – | – | recognised |
-| 1009 | `¬⋁∨⋀∧⋃∪⋂∩` | 9 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/10 | 5 | 2 (0 firm) | +0.25 (0.1) | recognised |
-| 1010 | `✈🚗🏍🚴🏃🚶🧍🛌🪦` | 9 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 3/18 | 3 | 4 (0 firm) | +0.90 (≥1e4) | recognised |
-| 1011 | `∩⋂∪⋃∧⋀∨⋁⊓` | 9 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/11 | 5 | 2 (0 firm) | +0.25 (0.1) | recognised |
-| 1012 | `⠀⠁⠃⠇⠏⠟⠿⡿⣿` | 9 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 7/13 | 3 | 1 (0 firm) | +0.97 (≥1e4) | recognised |
-| 1013 | `⠀⡀⣀⣄⣤⣦⣶⣷⣿` | 9 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/12 | 1 | 3 (0 firm) | +0.91 (≥1e4) | recognised |
-| 1014 | `⣮⣰⣲⣴⣶⣸⣺⣼⣾` | 9 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/14 | 1 | – | +0.66 (≥1e4) | recognised |
-| 1015 | `⬛■◼◾▪▫□◻⬜` | 9 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | positive 2/12 | 3 | 2 (0 firm) | +0.51 (≥1e4) | recognised |
-| 1016 | `〇〡〢〣〤〥〦〧〨` | 9 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/1 | 3 | – | +0.96 (≥1e4) | recognised |
-| 1017 | `🀇🀉🀋🀍🀏🀑🀓🀕🀗` | 9 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 2/14 | 1 | – | +0.92 (≥1e4) | recognised |
-| 1018 | `😭😢😞🙁😐😶🙂😄🤣` | 9 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 3/16 | 5 | 4 (0 firm) | +0.90 (≥1e4) | recognised |
-| 1019 | `0⅛¼⅜½⅝¾⅞1` | 9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 3/9 | 3 | 1 (0 firm) | +0.95 (≥1e4) | recognised |
-| 1020 | `⅕¼⅓⅜½⅝¾⅞1` | 9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/10 | 5 | 1 (0 firm) | +0.95 (≥1e4) | recognised |
-| 1021 | `·▪□⚀⚁⚂⚃⚄⚅` | 9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/5 | 3 | – | +0.97 (≥1e4) | recognised |
-| 1022 | `·⚬○◔◐◕●⬤🌕` | 9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 7/13 | 5 | 5 (0 firm) | +0.93 (≥1e4) | recognised |
-| 1023 | `ȀȂȄȆȈȊȌȎȐ` | 9 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/14 | 3 | – | – | recognised |
-| 1024 | `ѠѡѼѽѾѿҀҁ҂` | 9 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
-| 1025 | `ᬆᬇᬈᬉᬊᬋᬌᬍᬐ` | 9 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | 1 (0 firm) | +0.98 (≥1e4) | recognised |
-| 1026 | `ᲓდⴃᲒგⴂᲑბⴁ` | 9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | – | – | recognised |
-| 1027 | `↗↑↖←↙↓⬊→⬈` | 9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/10 | 3 | 4 (0 firm) | +0.06 (0.0236) | recognised |
-| 1028 | `↘↓↙←↖↑⬈→⬊` | 9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/12 | 3 | 5 (0 firm) | +0.36 (≥1e4) | recognised |
-| 1029 | `┉┈┄─━▬█■⬛` | 9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/11 | 5 | 2 (0 firm) | +0.68 (≥1e4) | recognised |
-| 1030 | `○∅⚪⚀⚁⚂⚃⚄⚅` | 9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/7 | 3 | – | +0.97 (≥1e4) | recognised |
-| 1031 | `☷☶☵☴☳☲☱☰⚌` | 9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | +0.78 (≥1e4) | recognised |
-| 1032 | `⚰🛌🧍🚶🏃🚴🏍🚗✈` | 9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/18 | 3 | 4 (0 firm) | +0.90 (≥1e4) | recognised |
-| 1033 | `✈🚗🏍🚴🏃🚶🧍🛌😴` | 9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/18 | 3 | 4 (0 firm) | +0.90 (≥1e4) | recognised |
-| 1034 | `⠀⢀⣀⣄⣤⣦⣶⣷⣿` | 9 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/12 | 3 | 5 (0 firm) | +0.89 (≥1e4) | recognised |
-| 1035 | `𐂦𐂨𐂪𐂬𐂮𐂰𐂲𐂴𐂶` | 9 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/14 | 3 | – | +0.81 (≥1e4) | recognised |
-| 1036 | `🟉🟋🟍🟏🟑🟓🟕🟗🟙` | 9 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/14 | 3 | – | +0.73 (52.3) | recognised |
-| 1037 | `🌐🌑🌒🌓🌔🌕🌖🌗🌘` | 9 | contiguous | +0.56 ± 0.21 | 17.5 | cl 2/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.67 (≥1e4) | recognised |
-| 1038 | `ΟΠΡΤΥΦΧΨΩ` | 9 | monotone | +0.50 ± 0.18 | 11.8 | cl 2/2 ge 1/2 gr 1/1 | undecided 0/1 | 5 | – | +0.89 (≥1e4) | recognised |
-| 1039 | `🕐🕖🕑🕗🕒🕘🕓🕙🕔` | 9 | other | +0.55 ± 0.23 | 25.4 | cl 3/4 gr 1/1 | undecided 0/9 | 5 | – | +0.64 (≥1e4) | recognised |
-| 1040 | `😔😢😭😞😖😣😩😤😠` | 9 | other | +0.53 ± 0.23 | 10.9 | cl 3/4 gr 1/1 | undecided 1/13 | 5 | 2 (0 firm) | +0.17 (0.0714) | recognised |
-| 1041 | `ȏȑȐȓȒȕȔȗȖ` | 9 | other | +0.29 ± 0.21 | 46.2 | cl 3/3 gr 0/1 | undecided 0/9 | 5 | – | – | recognised |
-| 1042 | `𝞹𝞺𝞻𝞼𝞽𝞾𝞿𝟀𝟁` | 9 | contiguous | +0.29 ± 0.21 | 46.2 | cl 3/3 gr 0/1 | undiscriminable | 1 | 3 (0 firm) | +0.72 (≥1e4) | recognised |
-| 1043 | `ᑎᑏᑐᑑᑒᑓᑔᑕ` | 8 | contiguous | +0.87 ± 0.16 | 40.8 | gr 5/5 | undiscriminable | 5 | – | – | recognised |
-| 1044 | `ᑯᑰᑱᑲᑳᑴᑵᑶ` | 8 | contiguous | +0.87 ± 0.16 | 40.8 | gr 5/5 | undiscriminable | 5 | – | – | recognised |
-| 1045 | `2109876၅` | 8 | other | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 1/8 | 5 | 1 (0 firm) | +0.38 (≥1e4) | recognised |
-| 1046 | `ǸǺǼǾȀȂȄȆ` | 8 | monotone | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 0/12 | 1 | – | +0.58 (2) | recognised |
-| 1047 | `ابتثجحخد` | 8 | monotone | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 0/2 | 3 | – | +0.71 (≥1e4) | recognised |
-| 1048 | `🈐🈑🈒🈓🈔🈕🈖🈗` | 8 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 1049 | `🚅🚆🚇🚈🚉🚊🚋🚌` | 8 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 1050 | `ㇸㇹㇺㇻㇼㇽㇾㇿ` | 8 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 1051 | `ꠙꠚꠛꠜꠝꠞꠟꠠ` | 8 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 1052 | `🠄🠅🠆🠇🠈🠉🠊🠋` | 8 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 1053 | `ₕhʜHＨℌℍℎ` | 8 | other | +0.69 ± 0.18 | 42 | cl 3/3 | undecided 0/11 | 5 | 2 (0 firm) | +0.57 (391) | recognised |
-| 1054 | `𝀃𝀄𝀅𝀆𝀊𝀋𝀑𝀒` | 8 | monotone | +0.69 ± 0.20 | 32.8 | cl 2/2 gr 2/2 | undecided 0/4 | 5 | – | +0.63 (403) | recognised |
-| 1055 | `🌗🌖🌕🌔🌓🌒🌑🌘` | 8 | other | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undecided 2/3 | 3 | 1 (0 firm) | +0.41 (≥1e4) | recognised |
-| 1056 | `ޞޟޠޡޢޣޤޥ` | 8 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.88 (≥1e4) | recognised |
-| 1057 | `⠁⠂⠃⠄⠅⠆⠇⠈` | 8 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
-| 1058 | `⯢⯣⯤⯥⯦⯧⯨⯩` | 8 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.83 (≥1e4) | recognised |
-| 1059 | `⾂⾃⾄⾅⾆⾇⾈⾉` | 8 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.78 (≥1e4) | recognised |
-| 1060 | `⿴⿵⿶⿷⿸⿹⿺⿻` | 8 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.56 (≥1e4) | recognised |
-| 1061 | `㈓㈔㈕㈖㈗㈘㈙㈚` | 8 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.93 (≥1e4) | recognised |
-| 1062 | `🌓🌒🌑🌘🌗🌖🌕🌔` | 8 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 3/6 | 1 | – | +0.16 (≥1e4) | recognised |
-| 1063 | `🬃🬇🬋🬏🬓🬗🬛🬟` | 8 | monotone | +0.62 ± 0.18 | 470 | cl 3/3 ge 2/2 gr 1/1 | undecided 0/12 | 5 | – | – | recognised |
-| 1064 | `ɠɡɢɣɤɥɦɧ` | 8 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.75 (≥1e4) | recognised |
-| 1065 | `├┝┞┟┠┡┢┣` | 8 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.70 (≥1e4) | recognised |
-| 1066 | `▁▂▃▄▅▆▇█` | 8 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.99 (≥1e4) | recognised |
-| 1067 | `☰☱☲☳☴☵☶☷` | 8 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.79 (≥1e4) | recognised |
-| 1068 | `⩬⩭⩮⩯⩰⩱⩲⩳` | 8 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 1069 | `ㅧㅨㅩㅪㅫㅬㅭㅮ` | 8 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
-| 1070 | `𝅝𝅗𝅥𝅘𝅥𝅘𝅥𝅮𝅘𝅥𝅯𝅘𝅥𝅰𝅘𝅥𝅱𝅘𝅥𝅲` | 8 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | +0.68 (≥1e4) | recognised |
-| 1071 | `🭌🭍🭎🭏🭐🭑🭒🭓` | 8 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.74 (≥1e4) | recognised |
-| 1072 | `աբգդեզէծ` | 8 | monotone | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.62 (232) | recognised |
-| 1073 | `→↘↓↙←↖↑↗` | 8 | other | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | positive 2/8 | 1 | 1 (0 firm) | +0.06 (0.0236) | recognised |
-| 1074 | `🛳🛴🛵🛶🛷🛸🛹🛺` | 8 | contiguous | +0.61 ± 0.17 | 31.9 | cl 2/3 ge 1/1 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 1075 | `ǠǡǢǣǤǥǦǧ` | 8 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.84 (2.21e+03) | recognised |
-| 1076 | `ڟڠڡڢڣڤڥڦ` | 8 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.65 (≥1e4) | recognised |
-| 1077 | `᳀᳁᳂᳃᳄᳅᳆᳇` | 8 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.76 (2.95e+03) | recognised |
-| 1078 | `█▉▊▋▌▍▎▏` | 8 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.96 (≥1e4) | recognised |
-| 1079 | `⣗⣘⣙⣚⣛⣜⣝⣞` | 8 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.63 (≥1e4) | recognised |
-| 1080 | `⫒⫓⫔⫕⫖⫗⫘⫙` | 8 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.63 (≥1e4) | recognised |
-| 1081 | `𝄻𝄼𝄽𝄾𝄿𝅀𝅁𝅂` | 8 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | 2 (0 firm) | +0.52 (≥1e4) | recognised |
-| 1082 | `🄖🄗🄘🄙🄚🄛🄜🄝` | 8 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.78 (8.05e+03) | recognised |
-| 1083 | `🌔🌓🌒🌑🌘🌗🌖🌕` | 8 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 3/6 | 1 | – | +0.18 (≥1e4) | recognised |
-| 1084 | `🌖🌕🌔🌓🌒🌑🌘🌗` | 8 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 3/6 | 1 | – | +0.15 (8.15e+03) | recognised |
-| 1085 | `🞌🞍🞎🞏🞐🞑🞒🞓` | 8 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.88 (≥1e4) | recognised |
-| 1086 | `🡤🡥🡦🡧🡨🡩🡪🡫` | 8 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.56 (1.29e+03) | recognised |
-| 1087 | `🮡🮢🮣🮤🮥🮦🮧🮨` | 8 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.77 (≥1e4) | recognised |
-| 1088 | `→⇒⇉⇛⇶⟹⟾⟿` | 8 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 1/13 | 3 | 2 (0 firm) | +0.82 (≥1e4) | recognised |
-| 1089 | `┉┈┄─━▬█⬛` | 8 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 1/9 | 5 | 2 (0 firm) | +0.68 (≥1e4) | recognised |
-| 1090 | `⣈⣌⣐⣔⣘⣜⣠⣤` | 8 | monotone | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/12 | 5 | 2 (0 firm) | +0.58 (2) | recognised |
-| 1091 | `䷜䷡䷦䷫䷰䷵䷺䷿` | 8 | monotone | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 1/12 | 5 | – | – | recognised |
-| 1092 | `ĎďĖėĞǧĘę` | 8 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/7 | 5 | – | – | recognised |
-| 1093 | `ހށނރބޅކވ` | 8 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/1 | 3 | – | – | recognised |
-| 1094 | `ₘmᴍMᵐᴹｍＭ` | 8 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 2/14 | 5 | 2 (0 firm) | +0.46 (2.11) | recognised |
-| 1095 | `⊂⊃⊆⊇⊈⊉⊊⊋` | 8 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/2 | 5 | – | +0.33 (0.25) | recognised |
-| 1096 | `ⒺⓓⒸⓒⒷⓑⒶⓐ` | 8 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/10 | 5 | – | +0.85 (≥1e4) | recognised |
-| 1097 | `⼝⼞⼟⼠⼡⼢⼣⼯` | 8 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/1 | 5 | – | – | recognised |
-| 1098 | `㈪㈬㈮㈰㈲㈴㈶㈸` | 8 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/12 | 5 | – | – | recognised |
-| 1099 | `㉁㉃㉅㉇㉉㉋㉍㉏` | 8 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/12 | 5 | – | +0.69 (8.05e+03) | recognised |
-| 1100 | `㉂㉅㉈㉋㉎㉑㉔㉗` | 8 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/12 | 5 | – | +0.71 (≥1e4) | recognised |
-| 1101 | `🚀✈🚄🚗🚲🏃🚶🧍` | 8 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/14 | 5 | 7 (0 firm) | +0.95 (≥1e4) | recognised |
-| 1102 | `⢀⣀⣠⣰⣸⣼⣾⣿` | 8 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 2/11 | 3 | 7 (0 firm) | +0.83 (≥1e4) | recognised |
-| 1103 | `⣮⣰⣲⣴⣶⣸⣺⣼` | 8 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/12 | 1 | 1 (0 firm) | +0.63 (≥1e4) | recognised |
-| 1104 | `ðθvfszʒʓ` | 8 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 2/12 | 5 | – | +0.76 (≥1e4) | recognised |
-| 1105 | `ԔԖԘԚԜԞԠԢ` | 8 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/12 | 3 | – | – | recognised |
-| 1106 | `⁎*∗★✭✮✯✰` | 8 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/7 | 5 | – | +0.24 (0.14) | recognised |
-| 1107 | `⅒⅑⅐⅙⅕¼⅓½` | 8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 7/12 | 1 | 1 (0 firm) | +0.88 (≥1e4) | recognised |
-| 1108 | `ȀȂȄȆȈȊȌȎ` | 8 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/12 | 3 | – | – | recognised |
-| 1109 | `ѦѨѪѬѮѰѲѴ` | 8 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/12 | 5 | – | – | recognised |
-| 1110 | `∩⋂∪⋃∧⋀∨⋁` | 8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/10 | 5 | 1 (0 firm) | +0.25 (0.1) | recognised |
-| 1111 | `▪□⚀⚁⚂⚃⚄⚅` | 8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | +0.97 (≥1e4) | recognised |
-| 1112 | `▴▲▵△▹▸▻►` | 8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/14 | 5 | 1 (0 firm) | +0.36 (0.5) | recognised |
-| 1113 | `▵▴▹▸▿▾◃◂` | 8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/18 | 5 | – | +0.75 (≥1e4) | recognised |
-| 1114 | `⚅⚄⚃⚂⚁⚀🁢🁡` | 8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 3 | – | +0.97 (≥1e4) | recognised |
-| 1115 | `⚬○◔◐◕●⬤🌕` | 8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 7/11 | 5 | 4 (0 firm) | +0.92 (≥1e4) | recognised |
-| 1116 | `✈🚗🏍🚴🏃🚶🧍😴` | 8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/15 | 5 | 4 (0 firm) | +0.93 (≥1e4) | recognised |
-| 1117 | `✈🚗🏍🚴🏃🚶🧍🛌` | 8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/16 | 3 | 4 (0 firm) | +0.90 (≥1e4) | recognised |
-| 1118 | `⠀⠁⠃⠇⠏⠟⠿⣿` | 8 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 6/11 | 5 | 1 (0 firm) | +0.97 (≥1e4) | recognised |
-| 1119 | `⠀⢀⣀⣄⣤⣦⣶⣷` | 8 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/11 | 3 | 4 (0 firm) | +0.85 (≥1e4) | recognised |
-| 1120 | `🀉🀋🀍🀏🀑🀓🀕🀗` | 8 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/12 | 3 | – | +0.92 (≥1e4) | recognised |
-| 1121 | `🀩🀱🀹🁁🁉🁑🁙🁡` | 8 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 5/12 | 3 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
-| 1122 | `🕒🕟🕕🕢🕘🕥🕛🕜` | 8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/18 | 3 | 2 (0 firm) | +0.34 (11.3) | recognised |
-| 1123 | `▜▛▚▙▘▖▗▝` | 8 | other | +0.56 ± 0.21 | 20.1 | cl 2/3 gr 1/1 | undecided 0/3 | 3 | 2 (0 firm) | +0.10 (0.0361) | recognised |
-| 1124 | `ėďǧęĎĖĞĘ` | 8 | other | +0.55 ± 0.20 | 10.1 | cl 2/3 ge 1/1 gr 1/1 | undecided 0/11 | 5 | – | – | recognised |
-| 1125 | `┉┈┄─━▬█▀` | 8 | other | +0.55 ± 0.20 | 10.1 | cl 2/3 ge 1/1 gr 1/1 | undecided 1/9 | 5 | 2 (0 firm) | +0.68 (≥1e4) | recognised |
-| 1126 | `㉑㉎㉋㉈㉅㉂㉟㉜` | 8 | other | +0.55 ± 0.20 | 10.1 | cl 2/3 ge 1/1 gr 1/1 | undecided 1/14 | 5 | – | +0.69 (8.05e+03) | recognised |
-| 1127 | `🐋🐘🐎🐕🐈🐁🐜🦠` | 8 | other | +0.55 ± 0.23 | 25.4 | cl 3/4 gr 1/1 | positive 6/16 | 5 | 1 (0 firm) | +0.90 (≥1e4) | recognised |
-| 1128 | `ₘmᴍMᵐᴹｍ𝑚` | 8 | other | +0.53 ± 0.23 | 10.9 | cl 3/4 gr 1/1 | undecided 3/14 | 5 | 2 (0 firm) | +0.44 (1.31) | recognised |
-| 1129 | `✹⯪🌟✦★☆⭑⭒` | 8 | other | +0.53 ± 0.23 | 10.9 | cl 3/4 gr 1/1 | undecided 0/10 | 5 | – | +0.39 (3.56) | recognised |
-| 1130 | `𝝿𝞄𝞅𝞆𝞇𝞈𝞉𝞊` | 8 | monotone | +0.35 ± 0.20 | 17.2 | cl 3/3 ge 1/1 gr 0/1 | undecided 0/1 | 5 | – | – | recognised |
-| 1131 | `╸╹╺╻╼╽╾` | 7 | contiguous | +0.87 ± 0.16 | 40.8 | gr 5/5 | undiscriminable | 3 | 1 (0 firm) | +0.49 (1.5) | recognised |
-| 1132 | `␅␆␇␈␉␊␋` | 7 | contiguous | +0.76 ± 0.16 | ≥1e4 | cl 5/5 gr 2/2 | undiscriminable | 1 | – | +0.67 (60.7) | recognised |
-| 1133 | `⋑⋒⋓⋔⋕⋖⋗` | 7 | contiguous | +0.74 ± 0.15 | ≥1e4 | cl 5/5 ge 1/1 gr 2/2 | undiscriminable | 5 | – | – | recognised |
-| 1134 | `ㄱㄲㄳㄴㄵㄶㄷ` | 7 | contiguous | +0.70 ± 0.15 | 2.93e+03 | cl 4/5 ge 1/1 gr 2/2 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
-| 1135 | `█🮆🮅🮄▀🮃🮂` | 7 | other | +0.74 ± 0.18 | 495 | cl 4/4 gr 2/2 | undecided 0/3 | 1 | 2 (0 firm) | +0.87 (≥1e4) | recognised |
-| 1136 | `WxXyYzZ` | 7 | other | +0.73 ± 0.18 | 1.85e+03 | cl 5/5 gr 2/2 | undecided 0/7 | 3 | 2 (0 firm) | +0.65 (24.2) | recognised |
-| 1137 | `├┢┡┠┟┞┝` | 7 | other | +0.69 ± 0.15 | 458 | cl 3/4 ge 1/1 gr 2/2 | undecided 1/3 | 5 | – | +0.47 (1.5) | recognised |
-| 1138 | `ߴߵ߶߷߸߹ߺ` | 7 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 1139 | `₷₸₹₺₻₼₽` | 7 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 1 | – | +0.65 (4.33) | recognised |
-| 1140 | `←↙↓↘→↗➡` | 7 | other | +0.65 ± 0.18 | 52.2 | cl 4/5 gr 2/2 | positive 3/9 | 5 | 1 (0 firm) | +0.85 (≥1e4) | recognised |
-| 1141 | `♳♴♵♶♷♸♹` | 7 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | 4 (0 firm) | +0.88 (≥1e4) | recognised |
-| 1142 | `🜞🜟🜠🜡🜢🜣🜤` | 7 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | – | +0.82 (≥1e4) | recognised |
-| 1143 | `⩬⩭⩮⩯⩰⩱⩲` | 7 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
-| 1144 | `ⅵⅦⅧⅨⅩⅪⅫ` | 7 | other | +0.63 ± 0.18 | 644 | cl 3/3 ge 2/2 gr 1/1 | undecided 0/3 | 5 | – | +0.91 (≥1e4) | recognised |
-| 1145 | `ݞݟݠݡݢݣݤ` | 7 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.71 (156) | recognised |
-| 1146 | `ⶠⶡⶢⶣⶤⶥⶦ` | 7 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.63 (60.7) | recognised |
-| 1147 | `㈔㈕㈖㈗㈘㈙㈚` | 7 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.93 (≥1e4) | recognised |
-| 1148 | `🀛🀜🀝🀞🀟🀠🀡` | 7 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.95 (≥1e4) | recognised |
-| 1149 | `🞨🞩🞪🞫🞬🞭🞮` | 7 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.74 (≥1e4) | recognised |
-| 1150 | `ɡɢɣɤɥɦɧ` | 7 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.75 (7.14e+03) | recognised |
-| 1151 | `ޟޠޡޢޣޤޥ` | 7 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.87 (≥1e4) | recognised |
-| 1152 | `⠉⠊⠋⠌⠍⠎⠏` | 7 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.55 (3.92e+03) | recognised |
-| 1153 | `㋀㋁㋂㋃㋄㋅㋆` | 7 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.97 (≥1e4) | recognised |
-| 1154 | `𝄕𝄖𝄗𝄘𝄙𝄚𝄛` | 7 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.68 (≥1e4) | recognised |
-| 1155 | `𝞺𝞻𝞼𝞽𝞾𝞿𝟀` | 7 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.72 (≥1e4) | recognised |
-| 1156 | `🀱🀲🀳🀴🀵🀶🀷` | 7 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.96 (≥1e4) | recognised |
-| 1157 | `🞡🞢🞣🞤🞥🞦🞧` | 7 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.91 (≥1e4) | recognised |
-| 1158 | `🞮🞯🞰🞱🞲🞳🞴` | 7 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
-| 1159 | `🠱🠲🠳🠴🠵🠶🠷` | 7 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.67 (60.7) | recognised |
-| 1160 | `🮡🮢🮣🮤🮥🮦🮧` | 7 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.77 (≥1e4) | recognised |
-| 1161 | `🐋🐘🐎🐕🐈🐁🐜` | 7 | other | +0.67 ± 0.23 | 250 | cl 4/4 gr 1/1 | positive 6/14 | 5 | 1 (0 firm) | +0.79 (≥1e4) | recognised |
-| 1162 | `■▩▨▧▦▥▤` | 7 | other | +0.62 ± 0.20 | 753 | cl 4/4 ge 1/1 gr 1/1 | undecided 0/3 | 5 | – | +0.70 (≥1e4) | recognised |
-| 1163 | `.․‥…⁘⁙⁛` | 7 | monotone | +0.65 ± 0.23 | 4.73e+03 | cl 6/6 gr 1/1 | undecided 0/4 | 3 | 1 (0 firm) | +0.90 (≥1e4) | recognised |
-| 1164 | `ⓥⓌⓦⓍⓧⓎⓨ` | 7 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/7 | 5 | – | +0.66 (403) | recognised |
-| 1165 | `ɕʃsʐzʒʓ` | 7 | other | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 3/12 | 5 | – | +0.55 (≥1e4) | recognised |
-| 1166 | `ĀĂĄĆČĈĊ` | 7 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | positive 2/12 | 5 | – | +0.29 (0.25) | recognised |
-| 1167 | `⁎*∗★✭✶✹` | 7 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/10 | 5 | – | +0.20 (0.0809) | recognised |
-| 1168 | `☆★✮✭✬✫✩` | 7 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/5 | 5 | – | +0.66 (≥1e4) | recognised |
-| 1169 | `🍣🍥🍵🥠🥟🥢🥡` | 7 | other | +0.55 ± 0.18 | 20.9 | cl 2/3 ge 2/2 gr 1/1 | undecided 1/10 | 5 | – | +0.43 (0.5) | recognised |
-| 1170 | `ₘmᴍMᵐμ𝐦` | 7 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 2/12 | 5 | 2 (0 firm) | +0.44 (1.31) | recognised |
-| 1171 | `○⚀⚁⚂⚃⚄⚅` | 7 | monotone | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 1/1 | 3 | – | +0.97 (≥1e4) | recognised |
-| 1172 | `✩✫✬✭✮★🌟` | 7 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/5 | 5 | – | +0.73 (≥1e4) | recognised |
-| 1173 | `⅒⅛⅙⅕¼⅓½` | 7 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | positive 8/13 | 3 | 4 (0 firm) | +0.87 (≥1e4) | recognised |
-| 1174 | `●🔅░▒▓█🔆` | 7 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | positive 1/7 | 5 | – | +0.94 (≥1e4) | recognised |
-| 1175 | `⣸⣼⣤⣴⣶⣾⣿` | 7 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/11 | 5 | 2 (0 firm) | +0.86 (≥1e4) | recognised |
-| 1176 | `🀋🀍🀏🀑🀓🀕🀗` | 7 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/10 | 1 | – | +0.90 (≥1e4) | recognised |
-| 1177 | `⊚∘◦o○⭘◯` | 7 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/12 | 5 | – | +0.69 (≥1e4) | recognised |
-| 1178 | `🀱🀹🁁🁉🁑🁙🁡` | 7 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | positive 5/10 | 3 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
-| 1179 | `🍥🥠🥟🍵🥢🥮🥡` | 7 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/8 | 5 | – | +0.43 (0.5) | recognised |
-| 1180 | `0⚀⚁⚂⚃⚄⚅` | 7 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 3 | – | +0.97 (≥1e4) | recognised |
-| 1181 | `<{(\|)}>` | 7 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/9 | 1 | 1 (0 firm) | +0.52 (≥1e4) | recognised |
-| 1182 | `Tᴛtₜᵗ𝑡𝕥` | 7 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/9 | 5 | 2 (0 firm) | +0.25 (0.167) | recognised |
-| 1183 | `·🔅░▒▓█🔆` | 7 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/7 | 5 | – | +0.94 (≥1e4) | recognised |
-| 1184 | `ἂἄἆἈἊἌἎ` | 7 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/10 | 3 | 1 (0 firm) | – | recognised |
-| 1185 | `—–‒‑‐−―` | 7 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | 1 (0 firm) | +0.60 (1.18e+03) | recognised |
-| 1186 | `ₕhʜHＨ𝐇ℍ` | 7 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/11 | 5 | 1 (0 firm) | +0.56 (66.3) | recognised |
-| 1187 | `⅛⅕⅓⅜⅔⅝⅞` | 7 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/6 | 5 | 3 (0 firm) | +0.89 (≥1e4) | recognised |
-| 1188 | `ⅠⅤⅩⅬⅭⅮⅯ` | 7 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/5 | 1 | 1 (0 firm) | +0.87 (≥1e4) | recognised |
-| 1189 | `→⇒⇉⇛⇶⟹⇴` | 7 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/13 | 3 | 2 (0 firm) | +0.83 (≥1e4) | recognised |
-| 1190 | `⋂∩⋁∨⋀∧⋃` | 7 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/7 | 5 | – | +0.38 (0.307) | recognised |
-| 1191 | `□⚀⚁⚂⚃⚄⚅` | 7 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 3 | – | +0.97 (≥1e4) | recognised |
-| 1192 | `➞➣➨➭➲➷➼` | 7 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/10 | 5 | – | – | recognised |
-| 1193 | `⟶⟹⇒→›˃〉` | 7 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/10 | 5 | – | +0.17 (0.221) | recognised |
-| 1194 | `⠀⠁⠂⠄⠈⠐⠠` | 7 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/7 | 3 | – | +0.65 (24.2) | recognised |
-| 1195 | `⠀⠁⠃⠇⠏⠟⠿` | 7 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 5/9 | 1 | 1 (0 firm) | +0.97 (≥1e4) | recognised |
-| 1196 | `⠿⠾⠽⠻⢾⢽⢻` | 7 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/8 | 5 | – | +0.58 (2) | recognised |
-| 1197 | `⣄⣆⣇⣍⣎⣏⣟` | 7 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.65 (4.33) | recognised |
-| 1198 | `꜀꜂꜄꜆꜈꜊꜌` | 7 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/10 | 1 | – | +0.86 (≥1e4) | recognised |
-| 1199 | `🄀🄂🄄🄆🄈🄊🄌` | 7 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/10 | 3 | – | +0.97 (≥1e4) | recognised |
-| 1200 | `😁😄🙂😐🙁😢😭` | 7 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 7/12 | 3 | 2 (0 firm) | +0.90 (≥1e4) | recognised |
-| 1201 | `🥡🥢🥟🥠🍵🍥🥮` | 7 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/10 | 5 | – | +0.43 (0.5) | recognised |
-| 1202 | `pɸfszʒʓ` | 7 | other | +0.53 ± 0.23 | 13.6 | cl 3/4 gr 1/1 | undecided 1/10 | 5 | – | +0.76 (≥1e4) | recognised |
-| 1203 | `◌○◔◐◕●` | 6 | other | +0.73 ± 0.18 | 2.54e+03 | cl 5/5 gr 2/2 | positive 3/8 | 3 | 1 (0 firm) | +0.91 (≥1e4) | recognised |
-| 1204 | `Oo°ₒ◦ᵒ` | 6 | other | +0.72 ± 0.18 | 9.65e+03 | cl 6/6 gr 2/2 | undecided 0/8 | 5 | – | +0.65 (≥1e4) | recognised |
-| 1205 | `垓兆億万千百` | 6 | other | +0.72 ± 0.18 | 9.65e+03 | cl 6/6 gr 2/2 | positive 1/9 | 5 | 3 (0 firm) | +0.98 (≥1e4) | recognised |
-| 1206 | `⇺⇻⇼⇽⇾⇿` | 6 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 1 | – | +0.24 (0.35) | recognised |
-| 1207 | `⠀⠏⠟⠿⡿⣿` | 6 | monotone | +0.69 ± 0.18 | 42 | cl 3/3 | undecided 0/8 | 5 | 2 (0 firm) | +0.94 (≥1e4) | recognised |
-| 1208 | `μᵐMᴍmₘ` | 6 | other | +0.69 ± 0.20 | 32.8 | cl 2/2 gr 2/2 | undecided 2/10 | 5 | 2 (0 firm) | +0.46 (2.11) | recognised |
-| 1209 | `➜➝➞➟➠➡` | 6 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.33 (0.5) | recognised |
-| 1210 | `꜇꜈꜉꜊꜋꜌` | 6 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | – | +0.88 (≥1e4) | recognised |
-| 1211 | `🨀🨁🨂🨃🨄🨅` | 6 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | – | +0.82 (≥1e4) | recognised |
-| 1212 | `⧅⧆⧇⧈⧉⧊` | 6 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.67 (60.7) | recognised |
-| 1213 | `〰〱〲〳〴〵` | 6 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.62 (10) | recognised |
-| 1214 | `ㅨㅩㅪㅫㅬㅭ` | 6 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.80 (≥1e4) | recognised |
-| 1215 | `𝌀𝌁𝌂𝌃𝌄𝌅` | 6 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
-| 1216 | `𝛳𝛴𝛵𝛶𝛷𝛸` | 6 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.78 (≥1e4) | recognised |
-| 1217 | `🂃🂄🂅🂆🂇🂈` | 6 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.82 (≥1e4) | recognised |
-| 1218 | `🄗🄘🄙🄚🄛🄜` | 6 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.71 (156) | recognised |
-| 1219 | `🞄🞅🞆🞇🞈🞉` | 6 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.93 (≥1e4) | recognised |
-| 1220 | `ޠޡޢޣޤޥ` | 6 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
-| 1221 | `🞎🞏🞐🞑🞒🞓` | 6 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.89 (≥1e4) | recognised |
-| 1222 | `🞵🞶🞷🞸🞹🞺` | 6 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.93 (≥1e4) | recognised |
-| 1223 | `𝄿𝅂𝄾𝅁𝄽𝅀` | 6 | other | +0.61 ± 0.17 | 75.4 | cl 2/3 ge 1/1 gr 1/1 | undecided 0/8 | 5 | – | +0.53 (61.5) | recognised |
-| 1224 | `⛈☔☁⛅☀🌙` | 6 | other | +0.64 ± 0.19 | 16.9 | cl 3/4 gr 2/2 | undecided 2/6 | 5 | 1 (0 firm) | +0.58 (≥1e4) | recognised |
-| 1225 | `ϒϓϔϕϖϗ` | 6 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.62 (10) | recognised |
-| 1226 | `ݟݠݡݢݣݤ` | 6 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (156) | recognised |
-| 1227 | `ݣݟݠݡݢݤ` | 6 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | 1 (0 firm) | +0.21 (0.143) | recognised |
-| 1228 | `☚☛☜☝☞☟` | 6 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | 1 (0 firm) | +0.58 (75.1) | recognised |
-| 1229 | `♔♕♖♗♘♙` | 6 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.80 (≥1e4) | recognised |
-| 1230 | `⚀⚁⚂⚃⚄⚅` | 6 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.97 (≥1e4) | recognised |
-| 1231 | `➜➟➠➝➞➡` | 6 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.33 (0.5) | recognised |
-| 1232 | `⢲⢳⢴⢵⢶⢷` | 6 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.46 (0.833) | recognised |
-| 1233 | `⫓⫔⫕⫖⫗⫘` | 6 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.74 (≥1e4) | recognised |
-| 1234 | `⾃⾄⾅⾆⾇⾈` | 6 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
-| 1235 | `㈕㈖㈗㈘㈙㈚` | 6 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
-| 1236 | `㎹㎺㎻㎼㎽㎾` | 6 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
-| 1237 | `𝄽𝄾𝄿𝅀𝅁𝅂` | 6 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | 2 (0 firm) | +0.66 (≥1e4) | recognised |
-| 1238 | `🞢🞣🞤🞥🞦🞧` | 6 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.90 (≥1e4) | recognised |
-| 1239 | `🞯🞰🞱🞲🞳🞴` | 6 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
-| 1240 | `🟥🟧🟨🟩🟦🟪` | 6 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/2 | 1 | – | +0.94 (≥1e4) | recognised |
-| 1241 | `🟥🟪🟦🟩🟨🟧` | 6 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/5 | 3 | – | +0.06 (0.0231) | recognised |
-| 1242 | `🭹🭺🭻🭼🭽🭾` | 6 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.81 (≥1e4) | recognised |
-| 1243 | `Mᵐᴍₘm𝐦` | 6 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/8 | 5 | 1 (0 firm) | +0.25 (0.125) | recognised |
-| 1244 | `〇㈠㈢㈤㈦㈨` | 6 | monotone | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 1/7 | 3 | 1 (0 firm) | +0.97 (≥1e4) | recognised |
-| 1245 | `ₕhʜHＨℋ` | 6 | other | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/9 | 5 | 1 (0 firm) | +0.55 (14.3) | recognised |
-| 1246 | `■▩◫▦▤□` | 6 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/9 | 5 | 1 (0 firm) | +0.79 (≥1e4) | recognised |
-| 1247 | `★✮✭✬✫✩` | 6 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/3 | 5 | – | +0.73 (≥1e4) | recognised |
-| 1248 | `′\|∫∮∯∰` | 6 | other | +0.57 ± 0.18 | 49.7 | cl 2/3 ge 2/2 gr 1/1 | undecided 1/5 | 3 | 1 (0 firm) | +0.90 (≥1e4) | recognised |
-| 1249 | `HʜₕＨℋh` | 6 | other | +0.55 ± 0.18 | 20.9 | cl 2/3 ge 2/2 gr 1/1 | undecided 0/8 | 5 | – | +0.29 (0.25) | recognised |
-| 1250 | `Ooᵒₒ◦●` | 6 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/8 | 5 | 1 (0 firm) | +0.73 (≥1e4) | recognised |
-| 1251 | `◌○◔◑◕●` | 6 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | positive 5/10 | 5 | 4 (0 firm) | +0.91 (≥1e4) | recognised |
-| 1252 | `⬜◽◻□▫⬞` | 6 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 2/9 | 5 | 2 (0 firm) | +0.39 (≥1e4) | recognised |
-| 1253 | `.o⊙⊚◎◯` | 6 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/6 | 5 | 1 (0 firm) | +0.40 (0.833) | recognised |
-| 1254 | `sʃʐzʒʓ` | 6 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/8 | 5 | – | +0.55 (≥1e4) | recognised |
-| 1255 | `ᚎᚐᚑᚒᚓᚔ` | 6 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/1 | 3 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
-| 1256 | `ₘmᴍM𝐦𝑚` | 6 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/9 | 5 | 2 (0 firm) | +0.40 (0.567) | recognised |
-| 1257 | `∧⋀∨⋁∩⋂` | 6 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | +0.44 (1.34) | recognised |
-| 1258 | `│─╰╯╮╭` | 6 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 3 | – | +0.63 (≥1e4) | recognised |
-| 1259 | `🠢🠦🠪🠮🠲🠶` | 6 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/8 | 3 | – | +0.71 (≥1e4) | recognised |
-| 1260 | `-‐‑‒–—` | 6 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.70 (≥1e4) | recognised |
-| 1261 | `•⬝▪◾◼■` | 6 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | positive 1/9 | 3 | 1 (0 firm) | +0.91 (≥1e4) | recognised |
-| 1262 | `┈┄─━▬█` | 6 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/6 | 5 | 2 (0 firm) | +0.70 (≥1e4) | recognised |
-| 1263 | `𒐯𒑰𒑱𒑲𒑳𒑴` | 6 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.70 (≥1e4) | recognised |
-| 1264 | `𒑮𒑰𒑱𒑲𒑳𒑴` | 6 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.70 (≥1e4) | recognised |
-| 1265 | `🀍🀏🀑🀓🀕🀗` | 6 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/8 | 1 | – | +0.87 (≥1e4) | recognised |
-| 1266 | `˚˙·∣∥⫴` | 6 | other | +0.53 ± 0.18 | 12.3 | cl 1/2 ge 2/2 gr 1/1 | undecided 0/7 | 5 | 1 (0 firm) | +0.83 (≥1e4) | recognised |
-| 1267 | `⁎*∗★✦✧` | 6 | other | +0.53 ± 0.18 | 12.3 | cl 1/2 ge 2/2 gr 1/1 | undecided 0/7 | 5 | – | +0.20 (0.0809) | recognised |
-| 1268 | `+×∗*✶✹` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/8 | 5 | – | +0.33 (0.5) | recognised |
-| 1269 | `2➋3➌4➍` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.94 (≥1e4) | recognised |
-| 1270 | `Ooᵒₒ∘⊙` | 6 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/8 | 5 | 1 (0 firm) | +0.72 (≥1e4) | recognised |
-| 1271 | `Ooᵒₒ◦°` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/8 | 5 | 1 (0 firm) | +0.72 (≥1e4) | recognised |
-| 1272 | `Tᴛtₜᵗ𝐭` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/7 | 5 | 2 (0 firm) | +0.23 (0.143) | recognised |
-| 1273 | `αἀἄἆᾳᾷ` | 6 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/7 | 5 | 1 (0 firm) | – | recognised |
-| 1274 | `ᐎᐐᐒᐔᐗᐙ` | 6 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/8 | 5 | – | +0.52 (3.26e+03) | recognised |
-| 1275 | `ᚅᚇᚉᚋᚍᚏ` | 6 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/8 | 5 | – | +0.75 (≥1e4) | recognised |
-| 1276 | `ᚔᚓᚒᚑᚐ᚛` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | 1 (0 firm) | +0.94 (≥1e4) | recognised |
-| 1277 | `ᴍM𝐦m𝑚ₘ` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/10 | 5 | – | +0.32 (0.267) | recognised |
-| 1278 | `ᵐ𝐦Mᴍmₘ` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/9 | 5 | 2 (0 firm) | +0.44 (1.31) | recognised |
-| 1279 | `—–‒‑‐−` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.69 (≥1e4) | recognised |
-| 1280 | `‾⎯⎺⎻⎼⎽` | 6 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | 1 (0 firm) | +0.73 (≥1e4) | recognised |
-| 1281 | `⁎*∗★✭✶` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/8 | 5 | – | +0.20 (0.0809) | recognised |
-| 1282 | `ₕhʜHℍℌ` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/9 | 5 | 2 (0 firm) | +0.44 (1.25) | recognised |
-| 1283 | `⊚◦∘○⭘◯` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/11 | 5 | – | +0.35 (10.9) | recognised |
-| 1284 | `⛈☔☁⛅☀🌞` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/6 | 5 | 1 (0 firm) | +0.51 (60.3) | recognised |
-| 1285 | `✩✫✬✭✮✯` | 6 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.73 (≥1e4) | recognised |
-| 1286 | `⟵⟸⟽⟾⟹⟶` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/6 | 5 | – | +0.45 (5.5) | recognised |
-| 1287 | `⪡⟨⫷⋘《〈` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/9 | 5 | – | +0.62 (10) | recognised |
-| 1288 | `⬜□▫◽◻⬞` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/9 | 5 | 1 (0 firm) | +0.06 (0.0219) | recognised |
-| 1289 | `㎄㎃㎂㎁㎀㏘` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | +0.80 (≥1e4) | recognised |
-| 1290 | `兆億万千百十` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/10 | 1 | 2 (0 firm) | +0.98 (≥1e4) | recognised |
-| 1291 | `🌌☀🌍🐘🐜🦠` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/6 | 5 | – | +0.87 (≥1e4) | recognised |
-| 1292 | `🌤🌥🌦🌧🌩🌪` | 6 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | – | +0.58 (44.7) | recognised |
-| 1293 | `🐔🐓🐥🐤🐣🥚` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/8 | 5 | 1 (0 firm) | +0.78 (≥1e4) | recognised |
-| 1294 | `🕔🕒🕐🕚🕘🕖` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/10 | 1 | – | +0.25 (0.64) | recognised |
-| 1295 | `😦😧😨😰😢😭` | 6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/7 | 5 | – | – | recognised |
-| 1296 | `ᚏᚐᚑᚒᚓᚔ` | 6 | contiguous | +0.46 ± 0.17 | 17.5 | cl 2/2 ge 0/1 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.93 (≥1e4) | recognised |
-| 1297 | `⣮⣰⣲⣴⣶⣸` | 6 | monotone | +0.17 ± 0.18 | 10.1 | cl 4/4 gr 0/2 | undecided 0/8 | 3 | 1 (0 firm) | +0.59 (2.94e+03) | recognised |
-| 1298 | `⎹⎯⎺⎻⎼⎽` | 6 | other | +0.19 ± 0.24 | 10.5 | cl 3/3 gr 0/1 | undecided 0/3 | 3 | 1 (0 firm) | +0.73 (≥1e4) | recognised |
-| 1299 | `ᴍmMₘ𝐌` | 5 | other | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 0/6 | 5 | – | +0.31 (0.2) | recognised |
-| 1300 | `🥟🥡🥮🥢🥠` | 5 | other | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 0/4 | 5 | – | +0.43 (0.5) | recognised |
-| 1301 | `lɮɭɫɬ` | 5 | other | +0.77 ± 0.14 | 488 | cl 2/2 gr 6/6 | undecided 0/5 | 5 | – | +0.25 (0.111) | recognised |
-| 1302 | `ᚕᚖᚗᚘᚙ` | 5 | contiguous | +0.76 ± 0.16 | ≥1e4 | cl 5/5 gr 2/2 | undiscriminable | 1 | – | – | recognised |
-| 1303 | `‐‑‒–—` | 5 | contiguous | +0.73 ± 0.16 | 3.13e+03 | cl 3/3 gr 2/2 | undiscriminable | 1 | 1 (0 firm) | +0.69 (≥1e4) | recognised |
-| 1304 | `○◔◐◕●` | 5 | other | +0.73 ± 0.18 | 1.85e+03 | cl 5/5 gr 2/2 | positive 3/5 | 3 | – | +0.92 (≥1e4) | recognised |
-| 1305 | `🙂😄😆😂🤣` | 5 | other | +0.73 ± 0.18 | 1.85e+03 | cl 5/5 gr 2/2 | undecided 3/8 | 5 | 1 (0 firm) | +0.73 (≥1e4) | recognised |
-| 1306 | `ᥰᥱᥲᥳᥴ` | 5 | contiguous | +0.67 ± 0.15 | ≥1e4 | cl 3/3 ge 2/2 gr 1/1 | undiscriminable | 1 | – | +0.76 (≥1e4) | recognised |
-| 1307 | `◌○◍◎●` | 5 | other | +0.67 ± 0.15 | ≥1e4 | cl 3/3 ge 2/2 gr 1/1 | positive 1/3 | 5 | 3 (0 firm) | +0.46 (≥1e4) | recognised |
-| 1308 | `○◌◍◎●` | 5 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 3 | – | +0.26 (3.89) | recognised |
-| 1309 | `▪◾◼■⬛` | 5 | other | +0.69 ± 0.18 | 6.83e+03 | cl 5/5 ge 1/1 gr 2/2 | positive 1/5 | 3 | – | +0.90 (≥1e4) | recognised |
-| 1310 | `◳◴◵◶◷` | 5 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.63 (≥1e4) | recognised |
-| 1311 | `꜕꜒꜓꜔꜖` | 5 | other | +0.71 ± 0.21 | 31.1 | cl 2/2 | undecided 0/3 | 5 | – | +0.47 (8.88) | recognised |
-| 1312 | `ﬀﬄﬂﬃﬁ` | 5 | other | +0.71 ± 0.21 | 31.1 | cl 2/2 | undecided 0/5 | 5 | – | +0.29 (0.25) | recognised |
-| 1313 | `ᚐᚑᚒᚓᚔ` | 5 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.94 (≥1e4) | recognised |
-| 1314 | `⢹⢺⢻⢼⢽` | 5 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
-| 1315 | `🌑🌒🌓🌔🌕` | 5 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.92 (≥1e4) | recognised |
-| 1316 | `🏻🏼🏽🏾🏿` | 5 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
-| 1317 | `🟥🟧🟨🟩🟦` | 5 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 1/3 | 1 | 2 (0 firm) | +0.93 (≥1e4) | recognised |
-| 1318 | `V∨⌄⌣‿` | 5 | other | +0.63 ± 0.18 | 644 | cl 3/3 ge 2/2 gr 1/1 | undecided 2/6 | 5 | 1 (0 firm) | +0.51 (97.1) | recognised |
-| 1319 | `‐‒–—―` | 5 | monotone | +0.63 ± 0.18 | 644 | cl 3/3 ge 2/2 gr 1/1 | positive 1/1 | 1 | 1 (0 firm) | +0.73 (≥1e4) | recognised |
-| 1320 | `_-₋⁻¯` | 5 | other | +0.62 ± 0.18 | 470 | cl 3/3 ge 2/2 gr 1/1 | undecided 0/6 | 5 | – | +0.23 (0.1) | recognised |
-| 1321 | `ᚋᚌᚍᚎᚏ` | 5 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.51 (4.79) | recognised |
-| 1322 | `ʰHhʜₕ` | 5 | other | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 0/6 | 5 | – | +0.40 (1.25) | recognised |
-| 1323 | `ᚁᚂᚃᚄᚅ` | 5 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.88 (≥1e4) | recognised |
-| 1324 | `⎺⎻⎹⎼⎽` | 5 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
-| 1325 | `␢␣␤␥␦` | 5 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.53 (2.9) | recognised |
-| 1326 | `♚♛♜♝♞` | 5 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.60 (67.3) | recognised |
-| 1327 | `♛♚♜♞♝` | 5 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 5 | – | +0.22 (0.167) | recognised |
-| 1328 | `⭠⭡⭢⭣⭤` | 5 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | – | recognised |
-| 1329 | `㎀㎁㎂㎃㎄` | 5 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.80 (≥1e4) | recognised |
-| 1330 | `㎐㎑㎒㎓㎔` | 5 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.90 (≥1e4) | recognised |
-| 1331 | `㎚㎛㎜㎝㎞` | 5 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.95 (≥1e4) | recognised |
-| 1332 | `㎴㎵㎶㎷㎸` | 5 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.62 (8.53e+03) | recognised |
-| 1333 | `꜒꜓꜔꜕꜖` | 5 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.71 (≥1e4) | recognised |
-| 1334 | `ﬀﬁﬂﬃﬄ` | 5 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
-| 1335 | `𐆐𐆑𐆒𐆓𐆔` | 5 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.65 (410) | recognised |
-| 1336 | `𝄖𝄗𝄘𝄙𝄚` | 5 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.71 (≥1e4) | recognised |
-| 1337 | `🞻🞼🞽🞾🞿` | 5 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | – | recognised |
-| 1338 | `🮂🮃🮄🮅🮆` | 5 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.93 (≥1e4) | recognised |
-| 1339 | `🮇🮈🮉🮊🮋` | 5 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
-| 1340 | `-⁻₋¯_` | 5 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/6 | 5 | – | +0.23 (0.1) | recognised |
-| 1341 | `ʰHʜhₕ` | 5 | other | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/7 | 5 | 1 (0 firm) | +0.55 (14.3) | recognised |
-| 1342 | `🏙🏘👪👥🧍` | 5 | other | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 3/8 | 5 | – | +0.67 (3.04e+03) | recognised |
-| 1343 | `hHʰₕʜ` | 5 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/5 | 5 | – | +0.29 (0.25) | recognised |
-| 1344 | `ᵤuᴜU𝐔` | 5 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 2/8 | 5 | 1 (0 firm) | +0.51 (4.5) | recognised |
-| 1345 | `ₕhʜHℍ` | 5 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/7 | 5 | 1 (0 firm) | +0.56 (66.3) | recognised |
-| 1346 | `↠⟹⟶⟾↣` | 5 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/7 | 5 | – | +0.14 (0.095) | recognised |
-| 1347 | `🡪🢂🡢🡺🡲` | 5 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/9 | 5 | – | +0.16 (0.0714) | recognised |
-| 1348 | `.ₘmᴍM` | 5 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/8 | 5 | 2 (0 firm) | +0.42 (0.8) | recognised |
-| 1349 | `0⅛⅜⅝⅞` | 5 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/1 | 3 | – | +0.86 (≥1e4) | recognised |
-| 1350 | `→⇒⇉⇛⇶` | 5 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/8 | 3 | 2 (0 firm) | +0.83 (≥1e4) | recognised |
-| 1351 | `−⎻⎯⎼⎽` | 5 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/3 | 5 | 1 (0 firm) | +0.68 (≥1e4) | recognised |
-| 1352 | `⣄⣠⣰⣸⣿` | 5 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/6 | 1 | 1 (0 firm) | +0.64 (6.5) | recognised |
-| 1353 | `🏆🏅🥇🥈🥉` | 5 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/3 | 3 | – | +0.74 (≥1e4) | recognised |
-| 1354 | `📢🔊🔉🔈🔇` | 5 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/3 | 3 | 1 (0 firm) | +0.78 (≥1e4) | recognised |
-| 1355 | `🠠🠢🠤🠦🠨` | 5 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/6 | 5 | – | – | recognised |
-| 1356 | `🠢🠦🠪🠮🠲` | 5 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/6 | 1 | – | +0.71 (≥1e4) | recognised |
-| 1357 | `꜈꜉꜊꜋꜌` | 5 | contiguous | +0.58 ± 0.21 | 36.1 | cl 2/3 gr 1/1 | undiscriminable | 1 | – | +0.87 (≥1e4) | recognised |
-| 1358 | `0·ⅠⅡⅢ` | 5 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/3 | 3 | – | +0.95 (≥1e4) | recognised |
-| 1359 | `Hℍʜₕh` | 5 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/6 | 5 | – | +0.29 (0.25) | recognised |
-| 1360 | `·oO○◯` | 5 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/6 | 5 | – | +0.74 (≥1e4) | recognised |
-| 1361 | `‾⎺⎻⎼⎽` | 5 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/1 | 3 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
-| 1362 | `∬∮∯∰∱` | 5 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/1 | 3 | 1 (0 firm) | +0.76 (≥1e4) | recognised |
-| 1363 | `■▩▨▤□` | 5 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/6 | 5 | – | +0.73 (≥1e4) | recognised |
-| 1364 | `🚀✈🚗🚲🚶` | 5 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/7 | 5 | 2 (0 firm) | +0.89 (≥1e4) | recognised |
-| 1365 | `({\|})` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/4 | 2 | – | +0.41 (1.65e+03) | recognised |
-| 1366 | `2Zzʒʓ` | 5 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/5 | 5 | – | +0.66 (≥1e4) | recognised |
-| 1367 | `<≪⋘⪢⫸` | 5 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/6 | 5 | 1 (0 firm) | +0.86 (≥1e4) | recognised |
-| 1368 | `=>→⇒⇛` | 5 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/5 | 3 | 1 (0 firm) | +0.87 (≥1e4) | recognised |
-| 1369 | `Hʜℍhₕ` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | – | +0.44 (1.25) | recognised |
-| 1370 | `Mᴍmₘᵐ` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/7 | 5 | 2 (0 firm) | +0.38 (0.429) | recognised |
-| 1371 | `M𝐌ₘᴍm` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | – | +0.31 (0.2) | recognised |
-| 1372 | `Ooᵒₒ°` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | 1 (0 firm) | +0.72 (≥1e4) | recognised |
-| 1373 | `_₋-⁻¯` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/8 | 1 | 3 (0 firm) | +0.63 (≥1e4) | recognised |
-| 1374 | `lɫɬɭɮ` | 5 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.73 (≥1e4) | recognised |
-| 1375 | `oôöòõ` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/7 | 5 | – | – | recognised |
-| 1376 | `·∶:⁝⁞` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | 3 (0 firm) | +0.81 (≥1e4) | recognised |
-| 1377 | `ᴍ𝐌mMₘ` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | – | +0.31 (0.2) | recognised |
-| 1378 | `ᵒoO⬤🔵` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | 1 (0 firm) | +0.79 (≥1e4) | recognised |
-| 1379 | `›>→⇒⇛` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/6 | 3 | 1 (0 firm) | +0.87 (≥1e4) | recognised |
-| 1380 | `‿⌣⌄∨∪` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/6 | 5 | 1 (0 firm) | +0.51 (97.1) | recognised |
-| 1381 | `⁎*★🌟🌠` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | – | +0.26 (0.111) | recognised |
-| 1382 | `⁎*✱❋✲` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | – | +0.35 (0.576) | recognised |
-| 1383 | `ₘmᴍM𝐌` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/7 | 5 | 2 (0 firm) | +0.42 (0.8) | recognised |
-| 1384 | `⅒⅑⅐⅙⅕` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/4 | 3 | – | +0.80 (≥1e4) | recognised |
-| 1385 | `↉⅛⅜⅝⅞` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | +0.86 (≥1e4) | recognised |
-| 1386 | `ⅢⅡⅠ0∅` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | +0.95 (≥1e4) | recognised |
-| 1387 | `Ⅿↁↂↇↈ` | 5 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 1 | 1 (0 firm) | +0.83 (≥1e4) | recognised |
-| 1388 | `↑↗→↘↓` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 3/5 | 1 | – | +0.93 (≥1e4) | recognised |
-| 1389 | `∂∫∮∯∰` | 5 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 3 | 1 (0 firm) | +0.90 (≥1e4) | recognised |
-| 1390 | `∅💨🌫🔥🪵` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/7 | 5 | – | +0.63 (1.31e+03) | recognised |
-| 1391 | `⎯⎺⎻⎼⎽` | 5 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 3 | 1 (0 firm) | +0.73 (≥1e4) | recognised |
-| 1392 | `①③⓹⓻⓽` | 5 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | 1 (0 firm) | +0.91 (≥1e4) | recognised |
-| 1393 | `█▓▒░▫` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/5 | 5 | – | +0.94 (≥1e4) | recognised |
-| 1394 | `■▩▦▤□` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/7 | 5 | 1 (0 firm) | +0.79 (≥1e4) | recognised |
-| 1395 | `▢□◻◽▫` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/8 | 3 | – | +0.78 (≥1e4) | recognised |
-| 1396 | `○◔◑◕●` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 5/7 | 1 | 2 (0 firm) | +0.92 (≥1e4) | recognised |
-| 1397 | `◌○◎◉●` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/7 | 5 | 4 (0 firm) | +0.60 (≥1e4) | recognised |
-| 1398 | `☀⛅☁☔⛈` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/6 | 5 | 1 (0 firm) | +0.58 (≥1e4) | recognised |
-| 1399 | `☁☂☔⛱🌈` | 5 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/5 | 5 | – | – | recognised |
-| 1400 | `✩✫✬✭✮` | 5 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.73 (≥1e4) | recognised |
-| 1401 | `⟶⟹⟾⟼⟿` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/6 | 5 | – | +0.35 (0.91) | recognised |
-| 1402 | `⟹⟶⟼⟿⟾` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | – | +0.11 (0.0519) | recognised |
-| 1403 | `⬛◻◽▪⬝` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/7 | 5 | 2 (0 firm) | +0.71 (≥1e4) | recognised |
-| 1404 | `巨大中小微` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/7 | 3 | 1 (0 firm) | +0.62 (10) | recognised |
-| 1405 | `꜀꜂꜄꜆꜈` | 5 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/6 | 1 | – | +0.62 (10) | recognised |
-| 1406 | `🌊💧🌧☁🌫` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/8 | 5 | – | +0.50 (409) | recognised |
-| 1407 | `🌑🌘🌗🌖🌕` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 1 | – | +0.56 (≥1e4) | recognised |
-| 1408 | `📯🔔📢🗣🤫` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/8 | 5 | – | +0.54 (2.9) | recognised |
-| 1409 | `😄😊🙂😐😞` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/8 | 5 | 2 (0 firm) | +0.86 (≥1e4) | recognised |
-| 1410 | `😐😟😞😢😭` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/8 | 5 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
-| 1411 | `😐😮😯😲😱` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/5 | 5 | 1 (0 firm) | +0.33 (0.567) | recognised |
-| 1412 | `😱😲😯😮😳` | 5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | 1 (0 firm) | +0.33 (0.567) | recognised |
-| 1413 | `🡢🡪🡲🡺🢂` | 5 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/6 | 5 | – | +0.63 (≥1e4) | recognised |
-| 1414 | `🬀🬂🬄🬆🬈` | 5 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | – | +0.70 (≥1e4) | recognised |
-| 1415 | `.·0ʘo` | 5 | other | +0.55 ± 0.20 | 136 | cl 5/6 gr 2/3 | undecided 0/8 | 5 | – | +0.19 (0.111) | recognised |
-| 1416 | `㎺㎻㎼㎽㎾` | 5 | contiguous | +0.56 ± 0.21 | 17.5 | cl 2/3 gr 1/1 | undiscriminable | 1 | – | – | recognised |
-| 1417 | `ⅠⅬⅭⅮⅯ` | 5 | monotone | +0.50 ± 0.18 | 47.8 | cl 3/3 ge 1/2 gr 1/1 | undecided 0/1 | 5 | – | +0.76 (≥1e4) | recognised |
-| 1418 | `⁎✱∗*★` | 5 | other | +0.49 ± 0.18 | 40.5 | cl 3/3 ge 1/2 gr 1/1 | undecided 0/6 | 5 | – | +0.24 (0.117) | recognised |
-| 1419 | `>→⇒⟹⟶` | 5 | other | +0.49 ± 0.18 | 10.1 | cl 2/2 ge 1/2 gr 1/1 | undecided 1/6 | 5 | – | +0.17 (0.221) | recognised |
-| 1420 | `‒–‐‑—` | 5 | other | +0.46 ± 0.17 | 17.5 | cl 2/2 ge 0/1 gr 1/1 | undecided 1/2 | 5 | – | +0.29 (0.23) | recognised |
-| 1421 | `🏆🎖🥇🥈🥉` | 5 | other | +0.53 ± 0.23 | 10.9 | cl 3/4 gr 1/1 | undecided 0/3 | 3 | – | +0.83 (≥1e4) | recognised |
-| 1422 | `🥟🥡🥢🥠🥮` | 5 | other | +0.53 ± 0.23 | 10.9 | cl 3/4 gr 1/1 | undecided 0/4 | 5 | – | +0.43 (0.5) | recognised |
-| 1423 | `☁💧🌊🌧🌫` | 5 | other | +0.43 ± 0.17 | 27.1 | cl 4/6 ge 2/2 gr 1/2 | undecided 0/7 | 5 | – | +0.21 (0.0909) | recognised |
-| 1424 | `⎹⎺⎻⎼⎽` | 5 | contiguous | +0.29 ± 0.21 | 125 | cl 3/3 gr 0/1 | undiscriminable | 3 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
-| 1425 | `⅒⅑⅐¼⅓` | 5 | other | +0.19 ± 0.24 | 10.5 | cl 3/3 gr 0/1 | undecided 0/3 | 3 | 1 (0 firm) | +0.74 (≥1e4) | recognised |
-| 1426 | `ⅢⅡⅠ○●` | 5 | other | +0.19 ± 0.24 | 10.5 | cl 3/3 gr 0/1 | undecided 0/4 | 3 | – | +0.95 (≥1e4) | recognised |
-| 1427 | `⋮⋯⋰⋱` | 4 | contiguous | +0.79 ± 0.13 | ≥1e4 | cl 5/6 gr 3/3 | undiscriminable | 1 | – | +0.14 (0.0556) | recognised |
-| 1428 | `Ppᴘₚ` | 4 | monotone | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 0/4 | 5 | – | +0.40 (1.25) | recognised |
-| 1429 | `ɲnŋɳ` | 4 | other | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 1/4 | 5 | – | +0.33 (0.333) | recognised |
-| 1430 | `•ʘo◉` | 4 | other | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 0/4 | 5 | – | – | recognised |
-| 1431 | `◴◵◶◷` | 4 | contiguous | +0.77 ± 0.16 | 8.83e+03 | cl 4/4 gr 2/2 | undiscriminable | 1 | 1 (0 firm) | +0.63 (≥1e4) | recognised |
-| 1432 | `🍜🥢🥟🥡` | 4 | other | +0.73 ± 0.18 | 2.54e+03 | cl 5/5 gr 2/2 | undecided 0/5 | 5 | – | +0.33 (0.5) | recognised |
-| 1433 | `ᵒoO◯` | 4 | other | +0.73 ± 0.18 | 1.85e+03 | cl 5/5 gr 2/2 | undecided 0/4 | 5 | 2 (0 firm) | +0.79 (≥1e4) | recognised |
-| 1434 | `⎺⎻⎼⎽` | 4 | contiguous | +0.72 ± 0.18 | 161 | cl 2/2 gr 2/2 | undiscriminable | 1 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
-| 1435 | `㎣㎤㎥㎦` | 4 | contiguous | +0.72 ± 0.18 | 161 | cl 2/2 gr 2/2 | undiscriminable | 1 | 1 (0 firm) | +0.69 (471) | recognised |
-| 1436 | `⿳⿲⿱⿴` | 4 | other | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undecided 0/3 | 5 | 1 (0 firm) | – | recognised |
-| 1437 | `⌈⌉⌋⌊` | 4 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/3 | 5 | – | +0.60 (154) | recognised |
-| 1438 | `◐◑◓◒` | 4 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/3 | 5 | 1 (0 firm) | +0.17 (0.111) | recognised |
-| 1439 | `◑◐◓◒` | 4 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/6 | 5 | 1 (0 firm) | +0.17 (0.111) | recognised |
-| 1440 | `◒◐◑◓` | 4 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/3 | 5 | 1 (0 firm) | +0.17 (0.111) | recognised |
-| 1441 | `𝂅𝂆𝂇𝂈` | 4 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 1 | – | – | recognised |
-| 1442 | `⁎*✱✳` | 4 | other | +0.69 ± 0.20 | 32.8 | cl 2/2 gr 2/2 | undecided 0/4 | 5 | – | +0.33 (0.654) | recognised |
-| 1443 | `㎕㎖㎗㎘` | 4 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | 2 (0 firm) | +0.70 (≥1e4) | recognised |
-| 1444 | `↠↟↞↡` | 4 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 0/3 | 1 | – | – | recognised |
-| 1445 | `⋯⋮⋰⋱` | 4 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 1/3 | 5 | – | +0.20 (0.156) | recognised |
-| 1446 | `⏴⏵⏶⏷` | 4 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.25 (0.339) | recognised |
-| 1447 | `◐◑◒◓` | 4 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | 2 (0 firm) | +0.29 (1.02) | recognised |
-| 1448 | `◴◷◶◵` | 4 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 0/3 | 1 | 1 (0 firm) | +0.23 (0.152) | recognised |
-| 1449 | `𝂊𝂋𝂌𝂍` | 4 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 1450 | `🌣🌤🌥🌦` | 4 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.48 (2.33) | recognised |
-| 1451 | `⏴⏵⏷⏶` | 4 | other | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undecided 1/3 | 5 | 1 (0 firm) | +0.34 (0.543) | recognised |
-| 1452 | `𝃐𝃑𝃒𝃓` | 4 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.69 (471) | recognised |
-| 1453 | `𝃞𝃟𝃠𝃡` | 4 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.72 (3.16e+03) | recognised |
-| 1454 | `◶◵◴◷` | 4 | other | +0.61 ± 0.17 | 31.9 | cl 2/3 ge 1/1 gr 1/1 | undecided 1/3 | 1 | – | +0.23 (0.152) | recognised |
-| 1455 | `ᖰᖱᖲᖳ` | 4 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.69 (471) | recognised |
-| 1456 | `ᥰᥱᥲᥳ` | 4 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.64 (≥1e4) | recognised |
-| 1457 | `⋮⋰⋯⋱` | 4 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/2 | 1 | – | +0.21 (0.267) | recognised |
-| 1458 | `⋰⋮⋯⋱` | 4 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | +0.17 (0.0788) | recognised |
-| 1459 | `⏴⏶⏵⏷` | 4 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/2 | 1 | 1 (0 firm) | +0.19 (0.125) | recognised |
-| 1460 | `⏵⏷⏴⏶` | 4 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 1 | 1 (0 firm) | +0.22 (0.179) | recognised |
-| 1461 | `╭╮╯╰` | 4 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.82 (≥1e4) | recognised |
-| 1462 | `╭╰╯╮` | 4 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/3 | 1 | 1 (0 firm) | +0.11 (0.0385) | recognised |
-| 1463 | `▲△▴▵` | 4 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.47 (0.833) | recognised |
-| 1464 | `▲▴▵△` | 4 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | +0.47 (0.833) | recognised |
-| 1465 | `△▲▵▴` | 4 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 2/6 | 5 | 1 (0 firm) | +0.45 (0.833) | recognised |
-| 1466 | `△▵▲▴` | 4 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 5 | 1 (0 firm) | +0.45 (0.833) | recognised |
-| 1467 | `◰◱◲◳` | 4 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.54 (14.3) | recognised |
-| 1468 | `♩♪♫♬` | 4 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.73 (≥1e4) | recognised |
-| 1469 | `♪♬♩♫` | 4 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 5 | – | +0.25 (0.125) | recognised |
-| 1470 | `⚆⚇⚈⚉` | 4 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.63 (≥1e4) | recognised |
-| 1471 | `ⴷⴸⴹⴺ` | 4 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.61 (≥1e4) | recognised |
-| 1472 | `〸〹〺〻` | 4 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.65 (403) | recognised |
-| 1473 | `㆙㆚㆛㆜` | 4 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.83 (≥1e4) | recognised |
-| 1474 | `㎑㎒㎓㎔` | 4 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.88 (≥1e4) | recognised |
-| 1475 | `㎟㎠㎡㎢` | 4 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.85 (≥1e4) | recognised |
-| 1476 | `㎩㎪㎫㎬` | 4 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.88 (≥1e4) | recognised |
-| 1477 | `㎰㎱㎲㎳` | 4 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.82 (≥1e4) | recognised |
-| 1478 | `꠰꠱꠲꠳` | 4 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.77 (≥1e4) | recognised |
-| 1479 | `🔇🔈🔉🔊` | 4 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.78 (≥1e4) | recognised |
-| 1480 | `ᴏOoₒ` | 4 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/4 | 5 | – | +0.30 (0.537) | recognised |
-| 1481 | `‹«»›` | 4 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/4 | 5 | – | +0.33 (0.333) | recognised |
-| 1482 | `‿⌣⌄∨` | 4 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 2/4 | 5 | 1 (0 firm) | +0.51 (97.1) | recognised |
-| 1483 | `∨⌣‿⌄` | 4 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 2/5 | 5 | – | +0.20 (0.1) | recognised |
-| 1484 | `十百千万` | 4 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | positive 1/5 | 1 | – | +0.97 (≥1e4) | recognised |
-| 1485 | `*⁑⁕⁂` | 4 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/5 | 5 | 1 (0 firm) | +0.83 (≥1e4) | recognised |
-| 1486 | `*🌟★⁎` | 4 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/4 | 5 | – | +0.26 (0.111) | recognised |
-| 1487 | `>→⇒⇛` | 4 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/4 | 3 | 1 (0 firm) | +0.87 (≥1e4) | recognised |
-| 1488 | `Aaªᵃ` | 4 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
-| 1489 | `Lʟlₗ` | 4 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | positive 1/5 | 5 | 1 (0 firm) | +0.55 (14.3) | recognised |
-| 1490 | `rɻɹʀ` | 4 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/5 | 5 | – | +0.33 (0.5) | recognised |
-| 1491 | `█▙▌▖` | 4 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/6 | 5 | 1 (0 firm) | – | recognised |
-| 1492 | `■◼◾▪` | 4 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | positive 1/5 | 1 | – | +0.91 (≥1e4) | recognised |
-| 1493 | `⚫◐⚪⚬` | 4 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/4 | 5 | 1 (0 firm) | +0.29 (0.25) | recognised |
-| 1494 | `🥡🥢🥣🥤` | 4 | contiguous | +0.62 ± 0.21 | 45.6 | cl 3/4 gr 1/1 | undiscriminable | 5 | – | +0.33 (0.5) | recognised |
-| 1495 | `⬠⬣⬢⬡` | 4 | other | +0.59 ± 0.21 | 97 | cl 2/3 gr 1/1 | undecided 1/3 | 5 | – | +0.58 (4.33) | recognised |
-| 1496 | `Mᴍmₘ` | 4 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 1/5 | 5 | 2 (0 firm) | +0.42 (0.8) | recognised |
-| 1497 | `Oᴏₒo` | 4 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/4 | 5 | – | +0.15 (0.0588) | recognised |
-| 1498 | `‧⁚⁝⁞` | 4 | monotone | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/3 | 1 | 3 (0 firm) | +0.64 (6.5) | recognised |
-| 1499 | `穰𥝱粟米` | 4 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/5 | 5 | – | +0.25 (0.333) | recognised |
-| 1500 | `😋🍜🥢🥡` | 4 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
-| 1501 | `0oơợ` | 4 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/4 | 5 | – | +0.71 (156) | recognised |
-| 1502 | `Aᴀaₐ` | 4 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/5 | 5 | 1 (0 firm) | +0.57 (385) | recognised |
-| 1503 | `Ooᵒ°` | 4 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | 1 (0 firm) | +0.73 (≥1e4) | recognised |
-| 1504 | `Ooₒᵒ` | 4 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | +0.70 (≥1e4) | recognised |
-| 1505 | `nɲɳŋ` | 4 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | 1 (0 firm) | +0.50 (2.33) | recognised |
-| 1506 | `sſʃʆ` | 4 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | – | +0.75 (≥1e4) | recognised |
-| 1507 | `\|❘❙❚` | 4 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/1 | 3 | – | +0.62 (10) | recognised |
-| 1508 | `Λ▲∧‸` | 4 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
-| 1509 | `፩፲፻፼` | 4 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/3 | 3 | 1 (0 firm) | +0.69 (471) | recognised |
-| 1510 | `ⅸⅩⅪⅫ` | 4 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | – | +0.71 (156) | recognised |
-| 1511 | `≤≦⊂⊆` | 4 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
-| 1512 | `⊂⋐⫅⫇` | 4 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
-| 1513 | `△▷▽◁` | 4 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 1 | – | – | recognised |
-| 1514 | `◦⚬⚪⚫` | 4 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | positive 1/5 | 5 | 2 (0 firm) | +0.33 (0.286) | recognised |
-| 1515 | `☑✔✓🗸` | 4 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | 1 (0 firm) | +0.50 (1.5) | recognised |
-| 1516 | `🍡🍥🥢🥡` | 4 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/4 | 5 | – | – | recognised |
-| 1517 | `💰💵🏦🪙` | 4 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/5 | 5 | – | +0.33 (0.5) | recognised |
-| 1518 | `💵🏦💰🪙` | 4 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/5 | 5 | – | +0.33 (0.5) | recognised |
-| 1519 | `🛌🚶🏃🤸` | 4 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | +0.91 (≥1e4) | recognised |
-| 1520 | `🧢🧣🧦🧥` | 4 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
-| 1521 | `Aaₐᴀ` | 4 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/4 | 5 | 1 (0 firm) | +0.19 (0.0833) | recognised |
-| 1522 | `Oo°ᵒ` | 4 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | +0.57 (440) | recognised |
-| 1523 | `Uᴜuᵤ` | 4 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/6 | 5 | 1 (0 firm) | +0.51 (4.5) | recognised |
-| 1524 | `iIɪᵢ` | 4 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | +0.11 (0.0454) | recognised |
-| 1525 | `oʘ0·` | 4 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/5 | 5 | – | +0.16 (0.1) | recognised |
-| 1526 | `ʘo•●` | 4 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
-| 1527 | `↟↑⇑⇞` | 4 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/5 | 5 | 1 (0 firm) | – | recognised |
-| 1528 | `│❘❙❚` | 4 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/1 | 3 | – | +0.62 (10) | recognised |
-| 1529 | `□◻◽▫` | 4 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/5 | 1 | – | +0.78 (≥1e4) | recognised |
-| 1530 | `▲▶▼◀` | 4 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/4 | 1 | – | +0.58 (5.97) | recognised |
-| 1531 | `☱☲☳☵` | 4 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/1 | 5 | – | +0.59 (≥1e4) | recognised |
-| 1532 | `🐓🐤🐣🥚` | 4 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 2/5 | 5 | 2 (0 firm) | +0.92 (≥1e4) | recognised |
-| 1533 | `😕😔😞😢` | 4 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/5 | 5 | 1 (0 firm) | – | recognised |
-| 1534 | `aᴀA𝐚` | 4 | other | +0.56 ± 0.20 | 24.1 | cl 3/4 ge 1/1 gr 1/1 | undecided 0/5 | 5 | – | +0.53 (4.12) | recognised |
-| 1535 | `ᐸᑖᑕᐹ` | 4 | other | +0.56 ± 0.20 | 18.8 | cl 2/3 ge 1/1 gr 1/1 | undecided 1/4 | 5 | – | – | recognised |
-| 1536 | `▲■⬟⬢` | 4 | other | +0.56 ± 0.20 | 18.8 | cl 2/3 ge 1/1 gr 1/1 | undecided 0/2 | 5 | 1 (0 firm) | +0.64 (52.3) | recognised |
-| 1537 | `'🕯🔥🎆` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | 1 (0 firm) | +0.70 (≥1e4) | recognised |
-| 1538 | `*∗⁎★` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | – | +0.48 (2.41) | recognised |
-| 1539 | `-=≡≣` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/4 | 3 | 1 (0 firm) | +0.72 (4.52e+03) | recognised |
-| 1540 | `.oO@` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | – | +0.62 (10) | recognised |
-| 1541 | `<⊂⊆⋐` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/4 | 5 | – | +0.57 (5.97) | recognised |
-| 1542 | `AᴀＡa` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | +0.49 (4.12) | recognised |
-| 1543 | `Eᴇeₑ` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/5 | 5 | 1 (0 firm) | +0.52 (10.9) | recognised |
-| 1544 | `Iɪᵢi` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.13 (0.0604) | recognised |
-| 1545 | `Nɴₙn` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
-| 1546 | `Ooᵒₒ` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | 1 (0 firm) | +0.76 (≥1e4) | recognised |
-| 1547 | `Oᴏoₒ` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/5 | 5 | 1 (0 firm) | +0.49 (208) | recognised |
-| 1548 | `Pₚᴘp` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.29 (0.25) | recognised |
-| 1549 | `Tᴛtₜ` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | 1 (0 firm) | +0.65 (4.33) | recognised |
-| 1550 | `Uuᴜᵤ` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.52 (4.5) | recognised |
-| 1551 | `Zzʒʓ` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | +0.69 (≥1e4) | recognised |
-| 1552 | `_-∼≋` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | 1 (0 firm) | +0.80 (≥1e4) | recognised |
-| 1553 | `aᴀAＡ` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | – | +0.57 (54.5) | recognised |
-| 1554 | `oòôö` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | – | – | recognised |
-| 1555 | `·0oʘ` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.22 (0.133) | recognised |
-| 1556 | `·•●⬤` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/4 | 3 | 1 (0 firm) | +0.71 (≥1e4) | recognised |
-| 1557 | `·∶⁝⁞` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 3 | 2 (0 firm) | +0.91 (≥1e4) | recognised |
-| 1558 | `·⚬⚪⚫` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/5 | 5 | 2 (0 firm) | +0.29 (0.25) | recognised |
-| 1559 | `⅒⅑⅐¼` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
-| 1560 | `ʘo•◉` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
-| 1561 | `˅∨⋁▽` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.73 (4.52e+03) | recognised |
-| 1562 | `Λ∧‸▲` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | – | – | recognised |
-| 1563 | `௧௰௱௲` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 3 | – | +0.84 (≥1e4) | recognised |
-| 1564 | `ልሊሌሎ` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | – | +0.10 (0.0473) | recognised |
-| 1565 | `ᴛTtₜ` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | – | +0.65 (4.33) | recognised |
-| 1566 | `ᵒoOＯ` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | 1 (0 firm) | +0.81 (≥1e4) | recognised |
-| 1567 | `′″‴⁗` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/1 | 1 | 1 (0 firm) | +0.93 (≥1e4) | recognised |
-| 1568 | `‸∧Λ▲` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/4 | 5 | 1 (0 firm) | – | recognised |
-| 1569 | `→⇒⇛⇉` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/5 | 3 | – | +0.80 (≥1e4) | recognised |
-| 1570 | `→⇒⇛⇾` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 3 | – | +0.87 (≥1e4) | recognised |
-| 1571 | `→🠂🠆🠊` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 3 | – | +0.68 (60.7) | recognised |
-| 1572 | `−=⩵⩶` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | 2 (0 firm) | – | recognised |
-| 1573 | `∨˅⋁▽` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | – | +0.25 (0.2) | recognised |
-| 1574 | `∫∬∭⨌` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/1 | 1 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
-| 1575 | `⓪⑴⑵⑶` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | +0.90 (≥1e4) | recognised |
-| 1576 | `█▓▒░` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/3 | 1 | – | +0.94 (≥1e4) | recognised |
-| 1577 | `█🮅▀🮀` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | – | +0.70 (≥1e4) | recognised |
-| 1578 | `█🮋🮉🮈` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | 1 (0 firm) | +0.76 (≥1e4) | recognised |
-| 1579 | `▏❘❙❚` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 3 | – | +0.69 (471) | recognised |
-| 1580 | `▙▟▜▛` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 1 | – | +0.72 (≥1e4) | recognised |
-| 1581 | `▛▜▙▟` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/6 | 5 | 2 (0 firm) | +0.11 (0.0794) | recognised |
-| 1582 | `▜▙▛▟` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | 1 (0 firm) | +0.07 (0.0255) | recognised |
-| 1583 | `▪▫◻⬜` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | 1 (0 firm) | +0.75 (≥1e4) | recognised |
-| 1584 | `△▷◁▽` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | 1 (0 firm) | – | recognised |
-| 1585 | `△▽▷◁` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | – | – | recognised |
-| 1586 | `△◁▷▽` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/6 | 5 | – | – | recognised |
-| 1587 | `▵▴▽▾` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
-| 1588 | `▵▹▿◁` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 3 | – | +0.77 (≥1e4) | recognised |
-| 1589 | `▷△◁▽` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 1 | 1 (0 firm) | – | recognised |
-| 1590 | `○◎◉●` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | 2 (0 firm) | +0.78 (≥1e4) | recognised |
-| 1591 | `★☆⭑⭒` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.37 (2.45) | recognised |
-| 1592 | `⚐⚑🚩🏴` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | – | recognised |
-| 1593 | `➔➡⟹⟶` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
-| 1594 | `➡⇛⟹⟶` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.48 (13.9) | recognised |
-| 1595 | `⟶⟿⟹⟾` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | – | +0.47 (25.1) | recognised |
-| 1596 | `⣀⣤⣶⣿` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 1 | – | +0.74 (≥1e4) | recognised |
-| 1597 | `小中大特` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/5 | 5 | – | +0.62 (10) | recognised |
-| 1598 | `𝟚𝟛𝟜𝟡` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.95 (≥1e4) | recognised |
-| 1599 | `🌰🌱🌿🌳` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/4 | 5 | – | – | recognised |
-| 1600 | `🍗🐔🐤🐣` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/5 | 5 | 1 (0 firm) | +0.72 (8.05e+03) | recognised |
-| 1601 | `🍽🥣🥢🥡` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.33 (0.5) | recognised |
-| 1602 | `🏙🏢🏠🏡` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 3/6 | 1 | 2 (0 firm) | +0.70 (≥1e4) | recognised |
-| 1603 | `👴👨👦👶` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 1 | 2 (0 firm) | – | recognised |
-| 1604 | `💰🏦🪙💵` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | – | +0.33 (0.5) | recognised |
-| 1605 | `🕒🕛🕘🕕` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/5 | 1 | 1 (0 firm) | +0.16 (0.106) | recognised |
-| 1606 | `😯😮😲😱` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | 1 (0 firm) | +0.52 (37.4) | recognised |
-| 1607 | `🟉🟍🟑🟕` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
-| 1608 | `🠀🠂🠆🠊` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/4 | 3 | – | +0.68 (60.7) | recognised |
-| 1609 | `🥟🥡🍵🥢` | 4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | +0.58 (2) | recognised |
-| 1610 | `🬀🬂🬄🬈` | 4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.68 (471) | recognised |
-| 1611 | `▴▲△▵` | 4 | other | +0.56 ± 0.21 | 20.1 | cl 2/3 gr 1/1 | undecided 1/3 | 5 | – | +0.45 (0.833) | recognised |
-| 1612 | `◐◒◑◓` | 4 | other | +0.56 ± 0.21 | 20.1 | cl 2/3 gr 1/1 | undecided 0/2 | 3 | 1 (0 firm) | +0.17 (0.111) | recognised |
-| 1613 | `:¦\|⋮` | 4 | other | +0.49 ± 0.18 | 40.5 | cl 3/3 ge 1/2 gr 1/1 | undecided 0/5 | 5 | 1 (0 firm) | – | recognised |
-| 1614 | `\|:¦⋮` | 4 | other | +0.54 ± 0.23 | 18.1 | cl 3/4 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
-| 1615 | `◒◑◐◓` | 4 | other | +0.46 ± 0.17 | 17.5 | cl 2/2 ge 0/1 gr 1/1 | undecided 1/3 | 1 | 2 (0 firm) | +0.17 (0.111) | recognised |
-| 1616 | `≤≦⊆⊂` | 4 | other | +0.53 ± 0.23 | 13.6 | cl 3/4 gr 1/1 | undecided 0/5 | 5 | – | – | recognised |
-| 1617 | `>→⇉⇶` | 4 | monotone | +0.53 ± 0.23 | 10.9 | cl 3/4 gr 1/1 | undecided 1/4 | 3 | – | +0.68 (≥1e4) | recognised |
-| 1618 | `Nnɴₙ` | 4 | monotone | +0.53 ± 0.23 | 10.9 | cl 3/4 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
-| 1619 | `·▁▂▅` | 4 | monotone | +0.53 ± 0.23 | 10.9 | cl 3/4 gr 1/1 | undecided 0/2 | 5 | – | +0.87 (≥1e4) | recognised |
-| 1620 | `=-∼≋` | 4 | other | +0.34 ± 0.20 | 18.1 | cl 3/3 ge 0/1 gr 1/1 | undecided 1/4 | 5 | 1 (0 firm) | +0.36 (2.65) | recognised |
-| 1621 | `८४०−` | 4 | other | +0.19 ± 0.24 | 10.5 | cl 3/3 gr 0/1 | undecided 0/4 | 3 | – | +0.85 (≥1e4) | recognised |
-| 1622 | `⅒⅑⅐` | 3 | contiguous | +0.73 ± 0.15 | ≥1e4 | cl 6/7 gr 2/2 | undiscriminable | 1 | – | – | recognised |
-| 1623 | `⋮⋰⋯` | 3 | other | +0.72 ± 0.17 | 490 | cl 3/4 gr 2/2 | undecided 0/3 | 1 | – | +0.35 (0.616) | recognised |
-| 1624 | `㆖㆗㆘` | 3 | contiguous | +0.72 ± 0.17 | 490 | cl 3/4 gr 2/2 | undiscriminable | 1 | – | – | recognised |
-| 1625 | `→⇒⇛` | 3 | monotone | +0.73 ± 0.18 | 1.85e+03 | cl 5/5 gr 2/2 | undecided 1/2 | 1 | – | +0.87 (≥1e4) | recognised |
-| 1626 | `⭐☆⭒` | 3 | other | +0.69 ± 0.18 | 170 | cl 4/5 gr 2/2 | undecided 1/3 | 5 | – | +0.58 (2) | recognised |
-| 1627 | `𝄶𝄷𝄸` | 3 | contiguous | +0.71 ± 0.20 | ≥1e4 | cl 7/7 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 1628 | `⬡⬢⬣` | 3 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 5 | – | +0.58 (4.33) | recognised |
-| 1629 | `Ooᵒ` | 3 | monotone | +0.66 ± 0.18 | 70.2 | cl 4/5 gr 2/2 | undecided 0/2 | 5 | 1 (0 firm) | +0.79 (≥1e4) | recognised |
-| 1630 | `Ǆǅǆ` | 3 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | – | +0.67 (410) | recognised |
-| 1631 | `‵‶‷` | 3 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.86 (≥1e4) | recognised |
-| 1632 | `𐅀𐅁𐅂` | 3 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | – | – | recognised |
-| 1633 | `🥇🥈🥉` | 3 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | – | +0.85 (≥1e4) | recognised |
-| 1634 | `ᐡᐢᐣ` | 3 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | +0.41 (0.5) | recognised |
-| 1635 | `῍῎῏` | 3 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.58 (4.33) | recognised |
-| 1636 | `♉♈♓` | 3 | other | +0.63 ± 0.18 | 644 | cl 3/3 ge 2/2 gr 1/1 | undecided 0/3 | 1 | – | – | recognised |
-| 1637 | `⚪⚬⚫` | 3 | other | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | 1 (0 firm) | +0.49 (1.5) | recognised |
-| 1638 | `✊✋✌` | 3 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 1639 | `⸪⸫⸬` | 3 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | – | recognised |
-| 1640 | `Aaᴀ` | 3 | monotone | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 1/2 | 5 | – | +0.24 (0.142) | recognised |
-| 1641 | `dɖɗ` | 3 | monotone | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 0/1 | 5 | – | – | recognised |
-| 1642 | `◯○⭘` | 3 | other | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 1/2 | 5 | – | +0.51 (1.5) | recognised |
-| 1643 | `☁☀☂` | 3 | other | +0.61 ± 0.17 | 31.9 | cl 2/3 ge 1/1 gr 1/1 | undecided 0/1 | 5 | – | – | recognised |
-| 1644 | `ᛮᛯᛰ` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | – | recognised |
-| 1645 | `․‥…` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.87 (≥1e4) | recognised |
-| 1646 | `ↀↁↂ` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | – | recognised |
-| 1647 | `√∛∜` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.77 (≥1e4) | recognised |
-| 1648 | `∮∯∰` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.87 (≥1e4) | recognised |
-| 1649 | `∰∯∱` | 3 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | +0.36 (0.248) | recognised |
-| 1650 | `⋮⋯⋰` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.19 (0.0833) | recognised |
-| 1651 | `⏗⏘⏙` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.53 (2.9) | recognised |
-| 1652 | `▹▸►` | 3 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | +0.58 (2) | recognised |
-| 1653 | `☹☺☻` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 1654 | `✋✊✌` | 3 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | – | recognised |
-| 1655 | `❘❙❚` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.62 (10) | recognised |
-| 1656 | `⭐⭑⭒` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | – | recognised |
-| 1657 | `㎅㎆㎇` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 1658 | `㎜㎝㎞` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.92 (≥1e4) | recognised |
-| 1659 | `㎩㎪㎫` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.86 (≥1e4) | recognised |
-| 1660 | `㎽㎾㎿` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.58 (10) | recognised |
-| 1661 | `𒑲𒑳𒑴` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.62 (10) | recognised |
-| 1662 | `𝀯𝀰𝀱` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.94 (≥1e4) | recognised |
-| 1663 | `𝂗𝂘𝂙` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.89 (≥1e4) | recognised |
-| 1664 | `𝆐𝆏𝆑` | 3 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | – | recognised |
-| 1665 | `🌖🌗🌘` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.91 (≥1e4) | recognised |
-| 1666 | `😀😁😂` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.58 (4.33) | recognised |
-| 1667 | `🞊🞋🞌` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.58 (2) | recognised |
-| 1668 | `🞝🞞🞟` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 1669 | `🢥🢦🢧` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 1670 | `🤀🤁🤂` | 3 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 1671 | `🧒🧑🧓` | 3 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | – | recognised |
-| 1672 | `⚊⚋⚌` | 3 | contiguous | +0.59 ± 0.16 | 76.2 | cl 1/2 ge 2/2 gr 1/1 | undiscriminable | 1 | – | +0.68 (≥1e4) | recognised |
-| 1673 | `➙➔➡` | 3 | other | +0.62 ± 0.20 | 753 | cl 4/4 ge 1/1 gr 1/1 | undecided 1/3 | 5 | – | – | recognised |
-| 1674 | `⭑⭐🌟` | 3 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
-| 1675 | `大中小` | 3 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 1/3 | 1 | – | +0.62 (10) | recognised |
-| 1676 | `<⟨⟪` | 3 | monotone | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 1/2 | 5 | 1 (0 firm) | – | recognised |
-| 1677 | `xẋẍ` | 3 | monotone | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
-| 1678 | `🏠🏙🏢` | 3 | other | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 1/3 | 5 | – | +0.09 (0.0343) | recognised |
-| 1679 | `.．﹒` | 3 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/2 | 5 | – | +0.31 (0.2) | recognised |
-| 1680 | `oóő` | 3 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/2 | 5 | 1 (0 firm) | +0.81 (≥1e4) | recognised |
-| 1681 | `\|⋮⋯` | 3 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/1 | 5 | – | – | recognised |
-| 1682 | `ɖdɗ` | 3 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/3 | 5 | – | – | recognised |
-| 1683 | `∶⋮⋯` | 3 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/1 | 5 | – | – | recognised |
-| 1684 | `⏺⏹▶` | 3 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
-| 1685 | `〈《「` | 3 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/2 | 5 | – | +0.58 (2) | recognised |
-| 1686 | `®℠™` | 3 | monotone | +0.58 ± 0.19 | 11.1 | cl 3/5 gr 2/2 | undecided 0/2 | 5 | – | – | recognised |
-| 1687 | `🍜🥢🥡` | 3 | other | +0.58 ± 0.19 | 11.1 | cl 3/5 gr 2/2 | undecided 0/2 | 5 | – | – | recognised |
-| 1688 | `⏘⏗⏙` | 3 | other | +0.57 ± 0.18 | 13.2 | cl 2/4 gr 2/2 | undecided 1/3 | 5 | – | +0.25 (0.2) | recognised |
-| 1689 | `ĎďĐ` | 3 | contiguous | +0.59 ± 0.21 | 97 | cl 2/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 1690 | `𝆏𝆐𝆑` | 3 | contiguous | +0.59 ± 0.21 | 97 | cl 2/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 1691 | `🟀🟁🟂` | 3 | contiguous | +0.59 ± 0.21 | 97 | cl 2/3 gr 1/1 | undiscriminable | 1 | – | +0.65 (156) | recognised |
-| 1692 | `-~≋` | 3 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/1 | 5 | – | +0.58 (4.33) | recognised |
-| 1693 | `=∾∿` | 3 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/1 | 5 | – | +0.41 (0.5) | recognised |
-| 1694 | `aȧä` | 3 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/2 | 5 | 1 (0 firm) | – | recognised |
-| 1695 | `oơợ` | 3 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/2 | 5 | – | +0.71 (156) | recognised |
-| 1696 | `rṛṝ` | 3 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/2 | 5 | – | +0.58 (10) | recognised |
-| 1697 | `∣∥⫴` | 3 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/2 | 5 | 1 (0 firm) | +0.82 (≥1e4) | recognised |
-| 1698 | `⊢□⊣` | 3 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | – | +0.33 (0.5) | recognised |
-| 1699 | `▪◻◼` | 3 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/1 | 5 | – | – | recognised |
-| 1700 | `⼀⼈⼤` | 3 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
-| 1701 | `穣𥝱穰` | 3 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | – | – | recognised |
-| 1702 | `🌊💦💧` | 3 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/1 | 5 | – | +0.58 (4.33) | recognised |
-| 1703 | `⏠⏡⏢` | 3 | contiguous | +0.58 ± 0.21 | 36.1 | cl 2/3 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | – | recognised |
-| 1704 | `-→↔` | 3 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/2 | 5 | – | – | recognised |
-| 1705 | `Aᴀa` | 3 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | – | +0.56 (16.7) | recognised |
-| 1706 | `®™℠` | 3 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/2 | 5 | – | – | recognised |
-| 1707 | `⁂⁑⁎` | 3 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | positive 1/3 | 1 | 1 (0 firm) | +0.75 (≥1e4) | recognised |
-| 1708 | `⁖⁘⁙` | 3 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/1 | 1 | 1 (0 firm) | +0.66 (410) | recognised |
-| 1709 | `⋰⋮⋱` | 3 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/3 | 1 | – | +0.55 (34.8) | recognised |
-| 1710 | `⌒◠○` | 3 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/2 | 5 | – | +0.61 (24.2) | recognised |
-| 1711 | `▫◻⬜` | 3 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/2 | 5 | 1 (0 firm) | +0.76 (≥1e4) | recognised |
-| 1712 | `⩵=⩶` | 3 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | – | – | recognised |
-| 1713 | `🏙🏢🏠` | 3 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | positive 1/3 | 1 | 2 (0 firm) | +0.84 (≥1e4) | recognised |
-| 1714 | `😐😞😭` | 3 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/2 | 1 | 2 (0 firm) | +0.84 (≥1e4) | recognised |
-| 1715 | `😐🙁😢` | 3 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/3 | 1 | 1 (0 firm) | +0.55 (8.31) | recognised |
-| 1716 | `○⭘◯` | 3 | other | +0.53 ± 0.18 | 12.3 | cl 1/2 ge 2/2 gr 1/1 | undecided 1/3 | 5 | – | +0.41 (0.5) | recognised |
-| 1717 | `%‰‱` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.91 (≥1e4) | recognised |
-| 1718 | `(\|)` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | +0.65 (24.2) | recognised |
-| 1719 | `*⁑⁂` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 1 | 2 (0 firm) | +0.88 (≥1e4) | recognised |
-| 1720 | `-∼≋` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | – | +0.80 (≥1e4) | recognised |
-| 1721 | `0oʘ` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.19 (0.111) | recognised |
-| 1722 | `0ʘo` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | +0.19 (0.111) | recognised |
-| 1723 | `9⁹₉` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | 1 (0 firm) | – | recognised |
-| 1724 | `9₉⁹` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | 1 (0 firm) | – | recognised |
-| 1725 | `<≪⋘` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 1 | – | +0.86 (≥1e4) | recognised |
-| 1726 | `<⋘≪` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.10 (0.0357) | recognised |
-| 1727 | `<⪡⫷` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
-| 1728 | `=≡≣` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 1 | – | +0.65 (24.2) | recognised |
-| 1729 | `>≫⋙` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 1 | – | +0.55 (5.97) | recognised |
-| 1730 | `Aaª` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
-| 1731 | `Ooº` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
-| 1732 | `Ssₛ` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
-| 1733 | `aAᴀ` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.21 (0.106) | recognised |
-| 1734 | `aäȧ` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
-| 1735 | `oöȯ` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.33 (0.333) | recognised |
-| 1736 | `tʈƫ` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
-| 1737 | `v∨⋁` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
-| 1738 | `·ˑː` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.58 (2) | recognised |
-| 1739 | `¹①❶` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.41 (0.517) | recognised |
-| 1740 | `ïiı` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | 1 (0 firm) | – | recognised |
-| 1741 | `ˑː⁝` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | – | – | recognised |
-| 1742 | `←→↔` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
-| 1743 | `←↔→` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | – | recognised |
-| 1744 | `←↚⇍` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.62 (10) | recognised |
-| 1745 | `←⇍↚` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | +0.29 (0.25) | recognised |
-| 1746 | `∅⊂⊆` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.62 (10) | recognised |
-| 1747 | `∬∭⨌` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/1 | 1 | 1 (0 firm) | +0.87 (≥1e4) | recognised |
-| 1748 | `∶⁝⋮` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | – | recognised |
-| 1749 | `≺⊏⊂` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/3 | 5 | – | +0.45 (0.8) | recognised |
-| 1750 | `⊂⊆⊊` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.33 (0.25) | recognised |
-| 1751 | `⊙⊚◎` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/1 | 5 | 1 (0 firm) | +0.33 (0.333) | recognised |
-| 1752 | `⊚⊙◎` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.46 (0.833) | recognised |
-| 1753 | `①⑴⒈` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | 1 (0 firm) | +0.55 (5.97) | recognised |
-| 1754 | `■▒□` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | – | recognised |
-| 1755 | `▤▦▩` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | – | +0.76 (≥1e4) | recognised |
-| 1756 | `▪■⬛` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
-| 1757 | `◉◎○` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | +0.65 (4.33) | recognised |
-| 1758 | `○⭘⭕` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | – | – | recognised |
-| 1759 | `●○◯` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | – | recognised |
-| 1760 | `✅✔✓` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/3 | 5 | – | +0.73 (≥1e4) | recognised |
-| 1761 | `✱*﹡` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.58 (4.33) | recognised |
-| 1762 | `⟪《〈` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
-| 1763 | `⭕○⭘` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | – | recognised |
-| 1764 | `〈《【` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.58 (2) | recognised |
-| 1765 | `🀱🀹🁁` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | – | +0.68 (1.09e+03) | recognised |
-| 1766 | `🂫🂭🂮` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 1 | – | +0.62 (10) | recognised |
-| 1767 | `🌊💧💦` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | +0.33 (0.333) | recognised |
-| 1768 | `🌡🎚🎛` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | – | recognised |
-| 1769 | `🍥🥢🥡` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
-| 1770 | `💨💧🧊` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 1 | 2 (0 firm) | – | recognised |
-| 1771 | `😐😔😢` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 1 | 1 (0 firm) | – | recognised |
-| 1772 | `🥡🍜🥢` | 3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | – | recognised |
-| 1773 | `🬀🬂🬃` | 3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | – | recognised |
-| 1774 | `=⩵⩶` | 3 | monotone | +0.55 ± 0.23 | 25.4 | cl 3/4 gr 1/1 | undecided 0/1 | 1 | 1 (0 firm) | – | recognised |
-| 1775 | `★⯪☆` | 3 | other | +0.55 ± 0.23 | 25.4 | cl 3/4 gr 1/1 | undecided 0/3 | 5 | – | +0.35 (0.8) | recognised |
-| 1776 | `ƵƶƷ` | 3 | contiguous | +0.38 ± 0.17 | 17.9 | cl 2/4 ge 0/1 gr 1/1 | undiscriminable | 1 | – | – | recognised |
-| 1777 | `؈؉؊` | 3 | contiguous | +0.29 ± 0.21 | 125 | cl 3/3 gr 0/1 | undiscriminable | 1 | 1 (0 firm) | – | recognised |
-| 1778 | `⚐⚑⚒` | 3 | contiguous | +0.23 ± 0.17 | 46.3 | cl 3/3 ge 0/1 gr 0/1 | undiscriminable | 5 | – | – | recognised |
+| # | run | n | bytes | class | R | BF | yes/n | chart | weakest | splits | O | BEST |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | `𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎𝌏𝌐𝌑𝌒𝌓𝌔𝌕𝌖𝌗` | 24 | 4.0 | contiguous | +0.87 ± 0.16 | 40.8 | gr 5/5 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
+| 2 | `㏃㏄㏅㏆㏇㏈㏉㏊㏋㏌㏍㏎㏏㏐㏑㏒㏓㏔㏕㏖㏗㏘㏙㏚` | 24 | 3.0 | contiguous | +0.78 ± 0.15 | ≥1e4 | cl 8/8 gr 2/2 | undiscriminable | 3 | – | +0.71 (10) | recognised |
+| 3 | `┳┴┵┶┷┸┹┺┻┼┽┾┿╀╁╂╃╄╅╆╇╈╉╊` | 24 | 3.0 | contiguous | +0.77 ± 0.16 | 8.83e+03 | cl 4/4 gr 2/2 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 4 | `㍴㍵㍶㍷㍸㍹㍺㍻㍼㍽㍾㍿㎀㎁㎂㎃㎄㎅㎆㎇㎈㎉㎊㎋` | 24 | 3.0 | contiguous | +0.77 ± 0.16 | 8.83e+03 | cl 4/4 gr 2/2 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
+| 5 | `⼪⼫⼬⼭⼮⼯⼰⼱⼲⼳⼴⼵⼶⼷⼸⼹⼺⼻⼼⼽⼾⼿⽀⽁` | 24 | 3.0 | contiguous | +0.76 ± 0.16 | ≥1e4 | cl 5/5 gr 2/2 | undiscriminable | 3 | 1 (0 firm) | +0.70 (3.2e+03) | recognised |
+| 6 | `𝀌𝀍𝀎𝀏𝀐𝀑𝀒𝀓𝀔𝀕𝀖𝀗𝀘𝀙𝀚𝀛𝀜𝀝𝀞𝀟𝀠𝀡𝀢𝀣` | 24 | 4.0 | contiguous | +0.76 ± 0.16 | ≥1e4 | cl 5/5 gr 2/2 | undiscriminable | 3 | – | +0.65 (4.33) | recognised |
+| 7 | `⺁⺂⺃⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑⺒⺓⺔⺕⺖⺗⺘` | 24 | 3.0 | contiguous | +0.72 ± 0.14 | 3.83e+03 | cl 4/4 | undiscriminable | 3 | – | +0.85 (≥1e4) | recognised |
+| 8 | `㏞㏟㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵` | 24 | 3.0 | contiguous | +0.72 ± 0.14 | 3.83e+03 | cl 4/4 | undiscriminable | 3 | – | +0.90 (≥1e4) | recognised |
+| 9 | `∷∸∹∺∻∼∽∾∿≀≁≂≃≄≅≆≇≈≉≊≋≌≍≎` | 24 | 3.0 | contiguous | +0.72 ± 0.16 | 555 | cl 3/3 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 10 | `⧘⧙⧚⧛⧜⧝⧞⧟⧠⧡⧢⧣⧤⧥⧦⧧⧨⧩⧪⧫⧬⧭⧮⧯` | 24 | 3.0 | contiguous | +0.72 ± 0.16 | 555 | cl 3/3 | undiscriminable | 3 | – | – | recognised |
+| 11 | `㎝㎞㎟㎠㎡㎢㎣㎤㎥㎦㎧㎨㎩㎪㎫㎬㎭㎮㎯㎰㎱㎲㎳㎴` | 24 | 3.0 | contiguous | +0.72 ± 0.16 | 555 | cl 3/3 | undiscriminable | 3 | 3 (0 firm) | +0.80 (≥1e4) | recognised |
+| 12 | `𝃂𝃃𝃄𝃅𝃆𝃇𝃈𝃉𝃊𝃋𝃌𝃍𝃎𝃏𝃐𝃑𝃒𝃓𝃔𝃕𝃖𝃗𝃘𝃙` | 24 | 4.0 | contiguous | +0.72 ± 0.16 | 555 | cl 3/3 | undiscriminable | 3 | – | +0.69 (471) | recognised |
+| 13 | `𝕺𝕻𝕼𝕽𝕾𝕿𝖀𝖁𝖂𝖃𝖄𝖅𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑` | 24 | 4.0 | contiguous | +0.72 ± 0.16 | 555 | cl 3/3 | undiscriminable | 3 | 1 (0 firm) | +0.93 (≥1e4) | recognised |
+| 14 | `㏫㏬㏭㏮㏯㏰㏱㏲㏳㏴㏵㏶㏷㏸㏹㏺㏻㏼㏽㏾㏿㐀㐁㐂` | 24 | 3.0 | contiguous | +0.71 ± 0.16 | ≥1e4 | cl 5/6 gr 2/2 | undiscriminable | 3 | – | +0.62 (10) | recognised |
+| 15 | `SrQpOnMlKjIhGfEdCbAzYxWv` | 24 | 1.0 | other | +0.73 ± 0.18 | 2.54e+03 | cl 5/5 gr 2/2 | undecided 2/66 | 3 | 2 (0 firm) | +0.77 (≥1e4) | recognised |
+| 16 | `ȗȘșȚțȜȝȞȟȠȡȢȣȤȥȦȧȨȩȪȫȬȭȮ` | 24 | 2.0 | contiguous | +0.71 ± 0.17 | 200 | cl 3/3 | undiscriminable | 3 | – | +0.58 (2) | recognised |
+| 17 | `🞜🞝🞞🞟🞠🞡🞢🞣🞤🞥🞦🞧🞨🞩🞪🞫🞬🞭🞮🞯🞰🞱🞲🞳` | 24 | 4.0 | contiguous | +0.71 ± 0.17 | 200 | cl 3/3 | undiscriminable | 3 | – | +0.93 (≥1e4) | recognised |
+| 18 | `⺀⺁⺂⺃⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑⺒⺓⺔⺕⺖⺗` | 24 | 3.0 | contiguous | +0.67 ± 0.15 | ≥1e4 | cl 3/3 ge 2/2 gr 1/1 | undiscriminable | 3 | – | +0.85 (≥1e4) | recognised |
+| 19 | `⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎⠏⠐⠑⠒⠓⠔⠕⠖⠗⠘` | 24 | 3.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.94 (≥1e4) | recognised |
+| 20 | `㎯㎰㎱㎲㎳㎴㎵㎶㎷㎸㎹㎺㎻㎼㎽㎾㎿㏀㏁㏂㏃㏄㏅㏆` | 24 | 3.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.82 (≥1e4) | recognised |
+| 21 | `⼣⼤⼥⼦⼧⼨⼩⼪⼫⼬⼭⼮⼯⼰⼱⼲⼳⼴⼵⼶⼷⼸⼹⼺` | 24 | 3.0 | contiguous | +0.70 ± 0.20 | ≥1e4 | cl 5/5 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.70 (3.2e+03) | recognised |
+| 22 | `▮▯▰▱▲△▴▵▶▷▸▹►▻▼▽▾▿◀◁◂◃◄◅` | 24 | 3.0 | contiguous | +0.70 ± 0.20 | ≥1e4 | cl 6/6 gr 1/1 | undiscriminable | 5 | 3 (0 firm) | +0.68 (≥1e4) | recognised |
+| 23 | `ǹǺǻǼǽǾǿȀȁȂȃȄȅȆȇȈȉȊȋȌȍȎȏȐ` | 24 | 2.0 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | 1 (0 firm) | +0.64 (823) | recognised |
+| 24 | `ˌˍˎˏːˑ˒˓˔˕˖˗˘˙˚˛˜˝˞˟ˠˡˢˣ` | 24 | 2.0 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
+| 25 | `ЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗ` | 24 | 2.0 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | 2 (0 firm) | +0.68 (≥1e4) | recognised |
+| 26 | `ЊЉЈЇІЅЄЃЂЋЌЍЎЏАБВГДЕЖЗИЙ` | 24 | 2.0 | other | +0.71 ± 0.21 | 31.1 | cl 2/2 | undecided 0/3 | 3 | 1 (0 firm) | +0.59 (≥1e4) | recognised |
+| 27 | `ӕӖӗӘәӚӛӜӝӞӟӠӡӢӣӤӥӦӧӨөӪӫӬ` | 24 | 2.0 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | – | – | recognised |
+| 28 | `ݱݲݳݴݵݶݷݸݹݺݻݼݽݾݿހށނރބޅކއވ` | 24 | 2.0 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 29 | `ᗃᗄᗅᗆᗇᗈᗉᗊᗋᗌᗍᗎᗏᗐᗑᗒᗓᗔᗕᗖᗗᗘᗙᗚ` | 24 | 3.0 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | 1 (0 firm) | +0.58 (2) | recognised |
+| 30 | `ⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜ` | 24 | 3.0 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | – | +0.96 (≥1e4) | recognised |
+| 31 | `⩫⩬⩭⩮⩯⩰⩱⩲⩳⩴⩵⩶⩷⩸⩹⩺⩻⩼⩽⩾⩿⪀⪁⪂` | 24 | 3.0 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | 1 (0 firm) | +0.89 (≥1e4) | recognised |
+| 32 | `⽵⽶⽷⽸⽹⽺⽻⽼⽽⽾⽿⾀⾁⾂⾃⾄⾅⾆⾇⾈⾉⾊⾋⾌` | 24 | 3.0 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
+| 33 | `㌠㌡㌢㌣㌤㌥㌦㌧㌨㌩㌪㌫㌬㌭㌮㌯㌰㌱㌲㌳㌴㌵㌶㌷` | 24 | 3.0 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
+| 34 | `𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩𝓪𝓫𝓬𝓭` | 24 | 4.0 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
+| 35 | `𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜𝖝𝖞𝖟𝖠𝖡𝖢` | 24 | 4.0 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | 2 (0 firm) | +0.90 (≥1e4) | recognised |
+| 36 | `🀿🁀🁁🁂🁃🁄🁅🁆🁇🁈🁉🁊🁋🁌🁍🁎🁏🁐🁑🁒🁓🁔🁕🁖` | 24 | 4.0 | contiguous | +0.71 ± 0.21 | 31.1 | cl 2/2 | undiscriminable | 3 | – | +0.79 (≥1e4) | recognised |
+| 37 | `𝖈𝖉𝖊𝖋𝗀𝗁𝗂𝗃𝗄𝗅𝗆𝗇𝗈𝗉𝗊𝗋𝗌𝗍𝗎𝗏𝗐𝗑𝗒𝗓` | 24 | 4.0 | monotone | +0.68 ± 0.19 | 31 | cl 3/3 | undecided 0/2 | 3 | – | +0.89 (≥1e4) | recognised |
+| 38 | `ɢɣɤɥɦɧɨɩɪɫɬɭɮɯɰɱɲɳɴɵɶɷɸɹ` | 24 | 2.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.72 (≥1e4) | recognised |
+| 39 | `᧠᧡᧢᧣᧤᧥᧦᧧᧨᧩᧪᧫᧬᧭᧮᧯᧰᧱᧲᧳᧴᧵᧶᧷` | 24 | 3.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 40 | `⏏⏐⏑⏒⏓⏔⏕⏖⏗⏘⏙⏚⏛⏜⏝⏞⏟⏠⏡⏢⏣⏤⏥⏦` | 24 | 3.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.60 (12.9) | recognised |
+| 41 | `⽀⽁⽂⽃⽄⽅⽆⽇⽈⽉⽊⽋⽌⽍⽎⽏⽐⽑⽒⽓⽔⽕⽖⽗` | 24 | 3.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
+| 42 | `㈅㈆㈇㈈㈉㈊㈋㈌㈍㈎㈏㈐㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚㈛㈜` | 24 | 3.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
+| 43 | `𝃙𝃚𝃛𝃜𝃝𝃞𝃟𝃠𝃡𝃢𝃣𝃤𝃥𝃦𝃧𝃨𝃩𝃪𝃫𝃬𝃭𝃮𝃯𝃰` | 24 | 4.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.72 (3.16e+03) | recognised |
+| 44 | `ȸȹȺȻȼȽȾȿɀɁɂɃɄɅɆɇɈɉɊɋɌɍɎɏ` | 24 | 2.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 45 | `ɠɡɢɣɤɥɦɧɨɩɪɫɬɭɮɯɰɱɲɳɴɵɶɷ` | 24 | 2.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.72 (≥1e4) | recognised |
+| 46 | `ɡɢɣɤɥɦɧɨɩɪɫɬɭɮɯɰɱɲɳɴɵɶɷɸ` | 24 | 2.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.72 (≥1e4) | recognised |
+| 47 | `ʉʊʋʌʍʎʏʐʑʒʓʔʕʖʗʘʙʚʛʜʝʞʟʠ` | 24 | 2.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.32 (0.267) | recognised |
+| 48 | `˨˩˪˫ˬ˭ˮ˯˰˱˲˳˴˵˶˷˸˹˺˻˼˽˾˿` | 24 | 2.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.74 (≥1e4) | recognised |
+| 49 | `ЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦ` | 24 | 2.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.68 (60.7) | recognised |
+| 50 | `ԉԊԋԌԍԎԏԐԑԒԓԔԕԖԗԘԙԚԛԜԝԞԟԠ` | 24 | 2.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 51 | `հձղճմյնշոչպջռսվտրցւփքօֆև` | 24 | 2.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.51 (≥1e4) | recognised |
+| 52 | `ٶٷٸٹٺٻټٽپٿڀځڂڃڄڅچڇڈډڊڋڌڍ` | 24 | 2.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | +0.67 (≥1e4) | recognised |
+| 53 | `ټٽپٿڀځڂڃڄڅچڇڈډڊڋڌڍڎڏڐڑڒړ` | 24 | 2.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.67 (≥1e4) | recognised |
+| 54 | `ٿڀځڂڃڄڅچڇڈډڊڋڌڍڎڏڐڑڒړڔڕږ` | 24 | 2.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.67 (≥1e4) | recognised |
+| 55 | `ݦݧݨݩݪݫݬݭݮݯݰݱݲݳݴݵݶݷݸݹݺݻݼݽ` | 24 | 2.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 56 | `ߓߔߕߖߗߘߙߚߛߜߝߞߟߠߡߢߣߤߥߦߧߨߩߪ` | 24 | 2.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.77 (≥1e4) | recognised |
+| 57 | `ᐲᐳᐴᐵᐶᐷᐸᐹᐺᐻᐼᐽᐾᐿᑀᑁᑂᑃᑄᑅᑆᑇᑈᑉ` | 24 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 58 | `ᖦᖧᖨᖩᖪᖫᖬᖭᖮᖯᖰᖱᖲᖳᖴᖵᖶᖷᖸᖹᖺᖻᖼᖽ` | 24 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
+| 59 | `≗≘≙≚≛≜≝≞≟≠≡≢≣≤≥≦≧≨≩≪≫≬≭≮` | 24 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.55 (5.97) | recognised |
+| 60 | `⒰⒱⒲⒳⒴⒵ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇ` | 24 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | 1 (0 firm) | +0.89 (≥1e4) | recognised |
+| 61 | `ⓇⓈⓉⓊⓋⓌⓍⓎⓏⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞ` | 24 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.96 (≥1e4) | recognised |
+| 62 | `⠾⠿⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓⡔⡕` | 24 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.33 (0.5) | recognised |
+| 63 | `⣥⣦⣧⣨⣩⣪⣫⣬⣭⣮⣯⣰⣱⣲⣳⣴⣵⣶⣷⣸⣹⣺⣻⣼` | 24 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 5 (0 firm) | +0.75 (≥1e4) | recognised |
+| 64 | `⧝⧞⧟⧠⧡⧢⧣⧤⧥⧦⧧⧨⧩⧪⧫⧬⧭⧮⧯⧰⧱⧲⧳⧴` | 24 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | – | recognised |
+| 65 | `⩱⩲⩳⩴⩵⩶⩷⩸⩹⩺⩻⩼⩽⩾⩿⪀⪁⪂⪃⪄⪅⪆⪇⪈` | 24 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.86 (≥1e4) | recognised |
+| 66 | `ⲚⲛⲜⲝⲞⲟⲠⲡⲢⲣⲤⲥⲦⲧⲨⲩⲪⲫⲬⲭⲮⲯⲰⲱ` | 24 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 67 | `⼴⼵⼶⼷⼸⼹⼺⼻⼼⼽⼾⼿⽀⽁⽂⽃⽄⽅⽆⽇⽈⽉⽊⽋` | 24 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 68 | `⼶⼷⼸⼹⼺⼻⼼⼽⼾⼿⽀⽁⽂⽃⽄⽅⽆⽇⽈⽉⽊⽋⽌⽍` | 24 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 69 | `㉱㉲㉳㉴㉵㉶㉷㉸㉹㉺㉻㉼㉽㉾㉿㊀㊁㊂㊃㊄㊅㊆㊇㊈` | 24 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.92 (≥1e4) | recognised |
+| 70 | `㍆㍇㍈㍉㍊㍋㍌㍍㍎㍏㍐㍑㍒㍓㍔㍕㍖㍗㍘㍙㍚㍛㍜㍝` | 24 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.81 (≥1e4) | recognised |
+| 71 | `𒐐𒐑𒐒𒐓𒐔𒐕𒐖𒐗𒐘𒐙𒐚𒐛𒐜𒐝𒐞𒐟𒐠𒐡𒐢𒐣𒐤𒐥𒐦𒐧` | 24 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
+| 72 | `𝁾𝁿𝂀𝂁𝂂𝂃𝂄𝂅𝂆𝂇𝂈𝂉𝂊𝂋𝂌𝂍𝂎𝂏𝂐𝂑𝂒𝂓𝂔𝂕` | 24 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.58 (10) | recognised |
+| 73 | `𝂹𝂺𝂻𝂼𝂽𝂾𝂿𝃀𝃁𝃂𝃃𝃄𝃅𝃆𝃇𝃈𝃉𝃊𝃋𝃌𝃍𝃎𝃏𝃐` | 24 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 74 | `𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻𝘼𝘽𝘾𝘿𝙀𝙁𝙂𝙃𝙄` | 24 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.88 (≥1e4) | recognised |
+| 75 | `𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕𝙖𝙗𝙘𝙙𝙚𝙛𝙜𝙝𝙞𝙟𝙠𝙡𝙢` | 24 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.71 (10) | recognised |
+| 76 | `𝛑𝛒𝛓𝛔𝛕𝛖𝛗𝛘𝛙𝛚𝛛𝛜𝛝𝛞𝛟𝛠𝛡𝛢𝛣𝛤𝛥𝛦𝛧𝛨` | 24 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.80 (≥1e4) | recognised |
+| 77 | `𝛻𝛼𝛽𝛾𝛿𝜀𝜁𝜂𝜃𝜄𝜅𝜆𝜇𝜈𝜉𝜊𝜋𝜌𝜍𝜎𝜏𝜐𝜑𝜒` | 24 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.65 (4.33) | recognised |
+| 78 | `𝝝𝝞𝝟𝝠𝝡𝝢𝝣𝝤𝝥𝝦𝝧𝝨𝝩𝝪𝝫𝝬𝝭𝝮𝝯𝝰𝝱𝝲𝝳𝝴` | 24 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.75 (24.2) | recognised |
+| 79 | `🁑🁒🁓🁔🁕🁖🁗🁘🁙🁚🁛🁜🁝🁞🁟🁠🁡🁢🁣🁤🁥🁦🁧🁨` | 24 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.72 (6.57e+03) | recognised |
+| 80 | `🄡🄢🄣🄤🄥🄦🄧🄨🄩🄪🄫🄬🄭🄮🄯🄰🄱🄲🄳🄴🄵🄶🄷🄸` | 24 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
+| 81 | `🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦🕛🕧🕐🕜🕑🕝🕒🕞🕓🕟🕔🕠` | 24 | 4.0 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 6/26 | 3 | 7 (0 firm) | +0.57 (≥1e4) | recognised |
+| 82 | `🕰🕱🕲🕳🕴🕵🕶🕷🕸🕹🕺🕻🕼🕽🕾🕿🖀🖁🖂🖃🖄🖅🖆🖇` | 24 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 83 | `🬎🬏🬐🬑🬒🬓🬔🬕🬖🬗🬘🬙🬚🬛🬜🬝🬞🬟🬠🬡🬢🬣🬤🬥` | 24 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 84 | `🭍🭎🭏🭐🭑🭒🭓🭔🭕🭖🭗🭘🭙🭚🭛🭜🭝🭞🭟🭠🭡🭢🭣🭤` | 24 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.73 (≥1e4) | recognised |
+| 85 | `ÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèé` | 24 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.76 (≥1e4) | recognised |
+| 86 | `ĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃń` | 24 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | – | recognised |
+| 87 | `ƆƇƈƉƊƋƌƍƎƏƐƑƒƓƔƕƖƗƘƙƚƛƜƝ` | 24 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.50 (2.33) | recognised |
+| 88 | `ƦƧƨƩƪƫƬƭƮƯưƱƲƳƴƵƶƷƸƹƺƻƼƽ` | 24 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 89 | `ǚǛǜǝǞǟǠǡǢǣǤǥǦǧǨǩǪǫǬǭǮǯǰǱ` | 24 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.85 (≥1e4) | recognised |
+| 90 | `ɕɖɗɘəɚɛɜɝɞɟɠɡɢɣɤɥɦɧɨɩɪɫɬ` | 24 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.75 (≥1e4) | recognised |
+| 91 | `ɮɯɰɱɲɳɴɵɶɷɸɹɺɻɼɽɾɿʀʁʂʃʄʅ` | 24 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.49 (1.5) | recognised |
+| 92 | `ʛʜʝʞʟʠʡʢʣʤʥʦʧʨʩʪʫʬʭʮʯʰʱʲ` | 24 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 93 | `ˍˎˏːˑ˒˓˔˕˖˗˘˙˚˛˜˝˞˟ˠˡˢˣˤ` | 24 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
+| 94 | `ҩҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀ` | 24 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 95 | `ڮگڰڱڲڳڴڵڶڷڸڹںڻڼڽھڿۀہۂۃۄۅ` | 24 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.55 (≥1e4) | recognised |
+| 96 | `ڷڸڹںڻڼڽھڿۀہۂۃۄۅۆۇۈۉۊۋیۍێ` | 24 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.55 (≥1e4) | recognised |
+| 97 | `ᇿሀሁሂሃሄህሆሇለሉሊላሌልሎሏሐሑሒሓሔሕሖ` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | +0.76 (≥1e4) | recognised |
+| 98 | `ᗅᗆᗇᗈᗉᗊᗋᗌᗍᗎᗏᗐᗑᗒᗓᗔᗕᗖᗗᗘᗙᗚᗛᗜ` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.58 (2) | recognised |
+| 99 | `ᗐᗑᗒᗓᗔᗕᗖᗗᗘᗙᗚᗛᗜᗝᗞᗟᗠᗡᗢᗣᗤᗥᗦᗧ` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 100 | `ᗑᗒᗓᗔᗕᗖᗗᗘᗙᗚᗛᗜᗝᗞᗟᗠᗡᗢᗣᗤᗥᗦᗧᗨ` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 101 | `ᗔᗕᗖᗗᗘᗙᗚᗛᗜᗝᗞᗟᗠᗡᗢᗣᗤᗥᗦᗧᗨᗩᗪᗫ` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 102 | `⒜⒝⒞⒟⒠⒡⒢⒣⒤⒥⒦⒧⒨⒩⒪⒫⒬⒭⒮⒯⒰⒱⒲⒳` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.80 (≥1e4) | recognised |
+| 103 | `┣┤┥┦┧┨┩┪┫┬┭┮┯┰┱┲┳┴┵┶┷┸┹┺` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 6 (0 firm) | – | recognised |
+| 104 | `▪▫▬▭▮▯▰▱▲△▴▵▶▷▸▹►▻▼▽▾▿◀◁` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 5 | 3 (0 firm) | +0.69 (≥1e4) | recognised |
+| 105 | `⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓⡔⡕⡖⡗⡘⡙⡚⡛⡜⡝⡞⡟⡠` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.67 (≥1e4) | recognised |
+| 106 | `⢪⢫⢬⢭⢮⢯⢰⢱⢲⢳⢴⢵⢶⢷⢸⢹⢺⢻⢼⢽⢾⢿⣀⣁` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 5 (0 firm) | +0.50 (1.5) | recognised |
+| 107 | `⢫⢬⢭⢮⢯⢰⢱⢲⢳⢴⢵⢶⢷⢸⢹⢺⢻⢼⢽⢾⢿⣀⣁⣂` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 5 (0 firm) | +0.50 (1.5) | recognised |
+| 108 | `⣌⣍⣎⣏⣐⣑⣒⣓⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟⣠⣡⣢⣣` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 7 (0 firm) | +0.64 (≥1e4) | recognised |
+| 109 | `⻀⻁⻂⻃⻄⻅⻆⻇⻈⻉⻊⻋⻌⻍⻎⻏⻐⻑⻒⻓⻔⻕⻖⻗` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.65 (4.33) | recognised |
+| 110 | `⼦⼧⼨⼩⼪⼫⼬⼭⼮⼯⼰⼱⼲⼳⼴⼵⼶⼷⼸⼹⼺⼻⼼⼽` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.70 (3.2e+03) | recognised |
+| 111 | `⽏⽐⽑⽒⽓⽔⽕⽖⽗⽘⽙⽚⽛⽜⽝⽞⽟⽠⽡⽢⽣⽤⽥⽦` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | – | recognised |
+| 112 | `⽦⽧⽨⽩⽪⽫⽬⽭⽮⽯⽰⽱⽲⽳⽴⽵⽶⽷⽸⽹⽺⽻⽼⽽` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 113 | `⽱⽲⽳⽴⽵⽶⽷⽸⽹⽺⽻⽼⽽⽾⽿⾀⾁⾂⾃⾄⾅⾆⾇⾈` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.76 (≥1e4) | recognised |
+| 114 | `⽷⽸⽹⽺⽻⽼⽽⽾⽿⾀⾁⾂⾃⾄⾅⾆⾇⾈⾉⾊⾋⾌⾍⾎` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
+| 115 | `ㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲㅳㅴㅵㅶㅷㅸㅹㅺㅻㅼㅽㅾㅿ` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
+| 116 | `㈲㈳㈴㈵㈶㈷㈸㈹㈺㈻㈼㈽㈾㈿㉀㉁㉂㉃㉄㉅㉆㉇㉈㉉` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.53 (2.9) | recognised |
+| 117 | `㊢㊣㊤㊥㊦㊧㊨㊩㊪㊫㊬㊭㊮㊯㊰㊱㊲㊳㊴㊵㊶㊷㊸㊹` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.81 (≥1e4) | recognised |
+| 118 | `㍞㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰㍱㍲㍳㍴㍵` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
+| 119 | `㎸㎹㎺㎻㎼㎽㎾㎿㏀㏁㏂㏃㏄㏅㏆㏇㏈㏉㏊㏋㏌㏍㏎㏏` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.58 (10) | recognised |
+| 120 | `㏚㏛㏜㏝㏞㏟㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱` | 24 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
+| 121 | `𐩢𐩣𐩤𐩥𐩦𐩧𐩨𐩩𐩪𐩫𐩬𐩭𐩮𐩯𐩰𐩱𐩲𐩳𐩴𐩵𐩶𐩷𐩸𐩹` | 24 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 122 | `𝁄𝁅𝁆𝁇𝁈𝁉𝁊𝁋𝁌𝁍𝁎𝁏𝁐𝁑𝁒𝁓𝁔𝁕𝁖𝁗𝁘𝁙𝁚𝁛` | 24 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.66 (≥1e4) | recognised |
+| 123 | `𝁱𝁲𝁳𝁴𝁵𝁶𝁷𝁸𝁹𝁺𝁻𝁼𝁽𝁾𝁿𝂀𝂁𝂂𝂃𝂄𝂅𝂆𝂇𝂈` | 24 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 124 | `𝖄𝖅𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛` | 24 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.91 (≥1e4) | recognised |
+| 125 | `𝘡𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸` | 24 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | +0.89 (≥1e4) | recognised |
+| 126 | `𝙊𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕𝙖𝙗𝙘𝙙𝙚𝙛𝙜𝙝𝙞𝙟𝙠𝙡` | 24 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.84 (8.38e+03) | recognised |
+| 127 | `🁟🁠🁡🁢🁣🁤🁥🁦🁧🁨🁩🁪🁫🁬🁭🁮🁯🁰🁱🁲🁳🁴🁵🁶` | 24 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.71 (10) | recognised |
+| 128 | `🕓🕟🕔🕠🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦🕛🕧🕐🕜🕑🕝🕒🕞` | 24 | 4.0 | other | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undecided 5/26 | 3 | 5 (0 firm) | +0.51 (≥1e4) | recognised |
+| 129 | `🕔🕟🕓🕞🕒🕝🕑🕜🕐🕧🕛🕦🕚🕥🕙🕤🕘🕣🕗🕢🕖🕡🕕🕠` | 24 | 4.0 | other | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undecided 6/26 | 3 | 7 (0 firm) | +0.57 (≥1e4) | recognised |
+| 130 | `🞋🞌🞍🞎🞏🞐🞑🞒🞓🞔🞕🞖🞗🞘🞙🞚🞛🞜🞝🞞🞟🞠🞡🞢` | 24 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.88 (≥1e4) | recognised |
+| 131 | `ԀԂԄԆԈԊԌԎԐԒԔԖԘԚԜԞԠԢԤԦԨԪԬԮ` | 24 | 2.0 | monotone | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 0/44 | 3 | – | – | recognised |
+| 132 | `¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.86 (≥1e4) | recognised |
+| 133 | `ÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 134 | `ÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
+| 135 | `ëìíîïðñòóôõö÷øùúûüýþÿĀāĂ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.65 (4.33) | recognised |
+| 136 | `þÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.69 (≥1e4) | recognised |
+| 137 | `īĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁł` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | – | recognised |
+| 138 | `ƁƂƃƄƅƆƇƈƉƊƋƌƍƎƏƐƑƒƓƔƕƖƗƘ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
+| 139 | `ƑƒƓƔƕƖƗƘƙƚƛƜƝƞƟƠơƢƣƤƥƦƧƨ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.50 (2.33) | recognised |
+| 140 | `ƠơƢƣƤƥƦƧƨƩƪƫƬƭƮƯưƱƲƳƴƵƶƷ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 141 | `ƾƿǀǁǂǃǄǅǆǇǈǉǊǋǌǍǎǏǐǑǒǓǔǕ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.67 (410) | recognised |
+| 142 | `ǲǳǴǵǶǷǸǹǺǻǼǽǾǿȀȁȂȃȄȅȆȇȈȉ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.64 (≥1e4) | recognised |
+| 143 | `ȆȇȈȉȊȋȌȍȎȏȐȑȒȓȔȕȖȗȘșȚțȜȝ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 144 | `ȉȊȋȌȍȎȏȐȑȒȓȔȕȖȗȘșȚțȜȝȞȟȠ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 145 | `ȌȍȎȏȐȑȒȓȔȕȖȗȘșȚțȜȝȞȟȠȡȢȣ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
+| 146 | `ȟȠȡȢȣȤȥȦȧȨȩȪȫȬȭȮȯȰȱȲȳȴȵȶ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.65 (4.33) | recognised |
+| 147 | `ɗɘəɚɛɜɝɞɟɠɡɢɣɤɥɦɧɨɩɪɫɬɭɮ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.72 (≥1e4) | recognised |
+| 148 | `ɜɝɞɟɠɡɢɣɤɥɦɧɨɩɪɫɬɭɮɯɰɱɲɳ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.72 (≥1e4) | recognised |
+| 149 | `ɣɤɥɦɧɨɩɪɫɬɭɮɯɰɱɲɳɴɵɶɷɸɹɺ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.72 (≥1e4) | recognised |
+| 150 | `ɨɩɪɫɬɭɮɯɰɱɲɳɴɵɶɷɸɹɺɻɼɽɾɿ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.69 (≥1e4) | recognised |
+| 151 | `ɩɪɫɬɭɮɯɰɱɲɳɴɵɶɷɸɹɺɻɼɽɾɿʀ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.69 (≥1e4) | recognised |
+| 152 | `ʁʂʃʄʅʆʇʈʉʊʋʌʍʎʏʐʑʒʓʔʕʖʗʘ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.38 (0.8) | recognised |
+| 153 | `ʌʍʎʏʐʑʒʓʔʕʖʗʘʙʚʛʜʝʞʟʠʡʢʣ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.32 (0.267) | recognised |
+| 154 | `˂˃˄˅ˆˇˈˉˊˋˌˍˎˏːˑ˒˓˔˕˖˗˘˙` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
+| 155 | `˜˝˞˟ˠˡˢˣˤ˥˦˧˨˩˪˫ˬ˭ˮ˯˰˱˲˳` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
+| 156 | `ϜϝϞϟϠϡϢϣϤϥϦϧϨϩϪϫϬϭϮϯϰϱϲϳ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | +0.75 (≥1e4) | recognised |
+| 157 | `ЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.68 (60.7) | recognised |
+| 158 | `ьэюяѐёђѓєѕіїјљњћќѝўџѠѡѢѣ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.73 (≥1e4) | recognised |
+| 159 | `ҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀӁ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 160 | `אבגדהוזחטיךכלםמןנסעףפץצק` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.75 (1.09e+03) | recognised |
+| 161 | `ٷٸٹٺٻټٽپٿڀځڂڃڄڅچڇڈډڊڋڌڍڎ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | +0.67 (≥1e4) | recognised |
+| 162 | `ڈډڊڋڌڍڎڏڐڑڒړڔڕږڗژڙښڛڜڝڞڟ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.58 (4.33) | recognised |
+| 163 | `ڝڞڟڠڡڢڣڤڥڦڧڨکڪګڬڭڮگڰڱڲڳڴ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.71 (≥1e4) | recognised |
+| 164 | `ڦڧڨکڪګڬڭڮگڰڱڲڳڴڵڶڷڸڹںڻڼڽ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.66 (≥1e4) | recognised |
+| 165 | `ڸڹںڻڼڽھڿۀہۂۃۄۅۆۇۈۉۊۋیۍێۏ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.55 (≥1e4) | recognised |
+| 166 | `ݐݑݒݓݔݕݖݗݘݙݚݛݜݝݞݟݠݡݢݣݤݥݦݧ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.71 (156) | recognised |
+| 167 | `ݗݘݙݚݛݜݝݞݟݠݡݢݣݤݥݦݧݨݩݪݫݬݭݮ` | 24 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.71 (156) | recognised |
+| 168 | `ᄄᄅᄆᄇᄈᄉᄊᄋᄌᄍᄎᄏᄐᄑᄒᄓᄔᄕᄖᄗᄘᄙᄚᄛ` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.67 (≥1e4) | recognised |
+| 169 | `ᐘᐙᐚᐛᐜᐝᐞᐟᐠᐡᐢᐣᐤᐥᐦᐧᐨᐩᐪᐫᐬᐭᐮᐯ` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.32 (0.35) | recognised |
+| 170 | `ᐣᐤᐥᐦᐧᐨᐩᐪᐫᐬᐭᐮᐯᐰᐱᐲᐳᐴᐵᐶᐷᐸᐹᐺ` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.58 (2) | recognised |
+| 171 | `ᐳᐴᐵᐶᐷᐸᐹᐺᐻᐼᐽᐾᐿᑀᑁᑂᑃᑄᑅᑆᑇᑈᑉᑊ` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 172 | `ᖟᖠᖡᖢᖣᖤᖥᖦᖧᖨᖩᖪᖫᖬᖭᖮᖯᖰᖱᖲᖳᖴᖵᖶ` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
+| 173 | `ᖤᖥᖦᖧᖨᖩᖪᖫᖬᖭᖮᖯᖰᖱᖲᖳᖴᖵᖶᖷᖸᖹᖺᖻ` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
+| 174 | `ᖨᖩᖪᖫᖬᖭᖮᖯᖰᖱᖲᖳᖴᖵᖶᖷᖸᖹᖺᖻᖼᖽᖾᖿ` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
+| 175 | `ᚮᚯᚰᚱᚲᚳᚴᚵᚶᚷᚸᚹᚺᚻᚼᚽᚾᚿᛀᛁᛂᛃᛄᛅ` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 176 | `↬↭↮↯↰↱↲↳↴↵↶↷↸↹↺↻↼↽↾↿⇀⇁⇂⇃` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.43 (≥1e4) | recognised |
+| 177 | `∫∬∭∮∯∰∱∲∳∴∵∶∷∸∹∺∻∼∽∾∿≀≁≂` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.84 (≥1e4) | recognised |
+| 178 | `∱∲∳∴∵∶∷∸∹∺∻∼∽∾∿≀≁≂≃≄≅≆≇≈` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 179 | `∲∳∴∵∶∷∸∹∺∻∼∽∾∿≀≁≂≃≄≅≆≇≈≉` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 180 | `∳∴∵∶∷∸∹∺∻∼∽∾∿≀≁≂≃≄≅≆≇≈≉≊` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 181 | `∴∵∶∷∸∹∺∻∼∽∾∿≀≁≂≃≄≅≆≇≈≉≊≋` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 182 | `≃≄≅≆≇≈≉≊≋≌≍≎≏≐≑≒≓≔≕≖≗≘≙≚` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 183 | `⌌⌍⌎⌏⌐⌑⌒⌓⌔⌕⌖⌗⌘⌙⌚⌛⌜⌝⌞⌟⌠⌡⌢⌣` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.50 (2.49) | recognised |
+| 184 | `⎯⎰⎱⎲⎳⎴⎵⎶⎷⎸⎹⎺⎻⎼⎽⎾⎿⏀⏁⏂⏃⏄⏅⏆` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | 1 (0 firm) | +0.73 (≥1e4) | recognised |
+| 185 | `⏘⏙⏚⏛⏜⏝⏞⏟⏠⏡⏢⏣⏤⏥⏦⏧⏨⏩⏪⏫⏬⏭⏮⏯` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | 1 (0 firm) | – | recognised |
+| 186 | `⒎⒏⒐⒑⒒⒓⒔⒕⒖⒗⒘⒙⒚⒛⒜⒝⒞⒟⒠⒡⒢⒣⒤⒥` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.94 (≥1e4) | recognised |
+| 187 | `⒐⒑⒒⒓⒔⒕⒖⒗⒘⒙⒚⒛⒜⒝⒞⒟⒠⒡⒢⒣⒤⒥⒦⒧` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
+| 188 | `⒨⒩⒪⒫⒬⒭⒮⒯⒰⒱⒲⒳⒴⒵ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿ` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.88 (≥1e4) | recognised |
+| 189 | `⒪⒫⒬⒭⒮⒯⒰⒱⒲⒳⒴⒵ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁ` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.87 (≥1e4) | recognised |
+| 190 | `┏┐┑┒┓└┕┖┗┘┙┚┛├┝┞┟┠┡┢┣┤┥┦` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (1 firm) | +0.70 (≥1e4) | recognised |
+| 191 | `╄╅╆╇╈╉╊╋╌╍╎╏═║╒╓╔╕╖╗╘╙╚╛` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 192 | `▦▧▨▩▪▫▬▭▮▯▰▱▲△▴▵▶▷▸▹►▻▼▽` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | 3 (0 firm) | +0.47 (2.34) | recognised |
+| 193 | `☃☄★☆☇☈☉☊☋☌☍☎☏☐☑☒☓☔☕☖☗☘☙☚` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 194 | `⚤⚥⚦⚧⚨⚩⚪⚫⚬⚭⚮⚯⚰⚱⚲⚳⚴⚵⚶⚷⚸⚹⚺⚻` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.45 (1.34) | recognised |
+| 195 | `⠖⠗⠘⠙⠚⠛⠜⠝⠞⠟⠠⠡⠢⠣⠤⠥⠦⠧⠨⠩⠪⠫⠬⠭` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | – | recognised |
+| 196 | `⠡⠢⠣⠤⠥⠦⠧⠨⠩⠪⠫⠬⠭⠮⠯⠰⠱⠲⠳⠴⠵⠶⠷⠸` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | – | recognised |
+| 197 | `⠴⠵⠶⠷⠸⠹⠺⠻⠼⠽⠾⠿⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.46 (0.833) | recognised |
+| 198 | `⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓⡔⡕⡖⡗⡘` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.46 (0.833) | recognised |
+| 199 | `⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓⡔⡕⡖⡗⡘⡙⡚⡛⡜⡝⡞⡟⡠⡡` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.67 (≥1e4) | recognised |
+| 200 | `⡧⡨⡩⡪⡫⡬⡭⡮⡯⡰⡱⡲⡳⡴⡵⡶⡷⡸⡹⡺⡻⡼⡽⡾` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 201 | `⡭⡮⡯⡰⡱⡲⡳⡴⡵⡶⡷⡸⡹⡺⡻⡼⡽⡾⡿⢀⢁⢂⢃⢄` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.66 (≥1e4) | recognised |
+| 202 | `⡱⡲⡳⡴⡵⡶⡷⡸⡹⡺⡻⡼⡽⡾⡿⢀⢁⢂⢃⢄⢅⢆⢇⢈` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.71 (≥1e4) | recognised |
+| 203 | `⡿⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋⢌⢍⢎⢏⢐⢑⢒⢓⢔⢕⢖` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | +0.64 (≥1e4) | recognised |
+| 204 | `⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋⢌⢍⢎⢏⢐⢑⢒⢓⢔⢕⢖⢗` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.64 (≥1e4) | recognised |
+| 205 | `⢙⢚⢛⢜⢝⢞⢟⢠⢡⢢⢣⢤⢥⢦⢧⢨⢩⢪⢫⢬⢭⢮⢯⢰` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 206 | `⢟⢠⢡⢢⢣⢤⢥⢦⢧⢨⢩⢪⢫⢬⢭⢮⢯⢰⢱⢲⢳⢴⢵⢶` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.46 (0.833) | recognised |
+| 207 | `⢯⢰⢱⢲⢳⢴⢵⢶⢷⢸⢹⢺⢻⢼⢽⢾⢿⣀⣁⣂⣃⣄⣅⣆` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 5 (0 firm) | +0.50 (1.5) | recognised |
+| 208 | `⣋⣌⣍⣎⣏⣐⣑⣒⣓⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟⣠⣡⣢` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 6 (0 firm) | +0.64 (≥1e4) | recognised |
+| 209 | `⣣⣤⣥⣦⣧⣨⣩⣪⣫⣬⣭⣮⣯⣰⣱⣲⣳⣴⣵⣶⣷⣸⣹⣺` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 8 (0 firm) | +0.74 (≥1e4) | recognised |
+| 210 | `⤁⤂⤃⤄⤅⤆⤇⤈⤉⤊⤋⤌⤍⤎⤏⤐⤑⤒⤓⤔⤕⤖⤗⤘` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 211 | `⥉⥊⥋⥌⥍⥎⥏⥐⥑⥒⥓⥔⥕⥖⥗⥘⥙⥚⥛⥜⥝⥞⥟⥠` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.65 (4.33) | recognised |
+| 212 | `⧄⧅⧆⧇⧈⧉⧊⧋⧌⧍⧎⧏⧐⧑⧒⧓⧔⧕⧖⧗⧘⧙⧚⧛` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.69 (156) | recognised |
+| 213 | `⧎⧏⧐⧑⧒⧓⧔⧕⧖⧗⧘⧙⧚⧛⧜⧝⧞⧟⧠⧡⧢⧣⧤⧥` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 214 | `⧚⧛⧜⧝⧞⧟⧠⧡⧢⧣⧤⧥⧦⧧⧨⧩⧪⧫⧬⧭⧮⧯⧰⧱` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | – | recognised |
+| 215 | `⩷⩸⩹⩺⩻⩼⩽⩾⩿⪀⪁⪂⪃⪄⪅⪆⪇⪈⪉⪊⪋⪌⪍⪎` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | 1 (0 firm) | +0.71 (4.52e+03) | recognised |
+| 216 | `⩻⩼⩽⩾⩿⪀⪁⪂⪃⪄⪅⪆⪇⪈⪉⪊⪋⪌⪍⪎⪏⪐⪑⪒` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.71 (4.52e+03) | recognised |
+| 217 | `⪂⪃⪄⪅⪆⪇⪈⪉⪊⪋⪌⪍⪎⪏⪐⪑⪒⪓⪔⪕⪖⪗⪘⪙` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.71 (4.52e+03) | recognised |
+| 218 | `⯜⯝⯞⯟⯠⯡⯢⯣⯤⯥⯦⯧⯨⯩⯪⯫⯬⯭⯮⯯⯰⯱⯲⯳` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
+| 219 | `ⵄⵅⵆⵇⵈⵉⵊⵋⵌⵍⵎⵏⵐⵑⵒⵓⵔⵕⵖⵗⵘⵙⵚⵛ` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.58 (4.33) | recognised |
+| 220 | `⼯⼰⼱⼲⼳⼴⼵⼶⼷⼸⼹⼺⼻⼼⼽⼾⼿⽀⽁⽂⽃⽄⽅⽆` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.65 (24.2) | recognised |
+| 221 | `⽚⽛⽜⽝⽞⽟⽠⽡⽢⽣⽤⽥⽦⽧⽨⽩⽪⽫⽬⽭⽮⽯⽰⽱` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | – | recognised |
+| 222 | `⽜⽝⽞⽟⽠⽡⽢⽣⽤⽥⽦⽧⽨⽩⽪⽫⽬⽭⽮⽯⽰⽱⽲⽳` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 223 | `⽣⽤⽥⽦⽧⽨⽩⽪⽫⽬⽭⽮⽯⽰⽱⽲⽳⽴⽵⽶⽷⽸⽹⽺` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 224 | `⽺⽻⽼⽽⽾⽿⾀⾁⾂⾃⾄⾅⾆⾇⾈⾉⾊⾋⾌⾍⾎⾏⾐⾑` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
+| 225 | `⾐⾑⾒⾓⾔⾕⾖⾗⾘⾙⾚⾛⾜⾝⾞⾟⾠⾡⾢⾣⾤⾥⾦⾧` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 226 | `ㄒㄓㄔㄕㄖㄗㄘㄙㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦㄧㄨㄩ` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.49 (1.5) | recognised |
+| 227 | `ㅀㅁㅂㅃㅄㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎㅏㅐㅑㅒㅓㅔㅕㅖㅗ` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.67 (≥1e4) | recognised |
+| 228 | `ㅍㅎㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣㅤ` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.47 (1.5) | recognised |
+| 229 | `ㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣㅤㅥㅦㅧ` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.71 (5.44e+03) | recognised |
+| 230 | `ㅛㅜㅝㅞㅟㅠㅡㅢㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲ` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
+| 231 | `ㅳㅴㅵㅶㅷㅸㅹㅺㅻㅼㅽㅾㅿㆀㆁㆂㆃㆄㆅㆆㆇㆈㆉㆊ` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 232 | `㇌㇍㇎㇏㇐㇑㇒㇓㇔㇕㇖㇗㇘㇙㇚㇛㇜㇝㇞㇟㇠㇡㇢㇣` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.73 (≥1e4) | recognised |
+| 233 | `㈪㈫㈬㈭㈮㈯㈰㈱㈲㈳㈴㈵㈶㈷㈸㈹㈺㈻㈼㈽㈾㈿㉀㉁` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.40 (0.833) | recognised |
+| 234 | `㉢㉣㉤㉥㉦㉧㉨㉩㉪㉫㉬㉭㉮㉯㉰㉱㉲㉳㉴㉵㉶㉷㉸㉹` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
+| 235 | `㉺㉻㉼㉽㉾㉿㊀㊁㊂㊃㊄㊅㊆㊇㊈㊉㊊㊋㊌㊍㊎㊏㊐㊑` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.93 (≥1e4) | recognised |
+| 236 | `㊃㊄㊅㊆㊇㊈㊉㊊㊋㊌㊍㊎㊏㊐㊑㊒㊓㊔㊕㊖㊗㊘㊙㊚` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
+| 237 | `㊄㊅㊆㊇㊈㊉㊊㊋㊌㊍㊎㊏㊐㊑㊒㊓㊔㊕㊖㊗㊘㊙㊚㊛` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
+| 238 | `㊕㊖㊗㊘㊙㊚㊛㊜㊝㊞㊟㊠㊡㊢㊣㊤㊥㊦㊧㊨㊩㊪㊫㊬` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.50 (4.36e+03) | recognised |
+| 239 | `㌈㌉㌊㌋㌌㌍㌎㌏㌐㌑㌒㌓㌔㌕㌖㌗㌘㌙㌚㌛㌜㌝㌞㌟` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.74 (≥1e4) | recognised |
+| 240 | `㌐㌑㌒㌓㌔㌕㌖㌗㌘㌙㌚㌛㌜㌝㌞㌟㌠㌡㌢㌣㌤㌥㌦㌧` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
+| 241 | `㌒㌓㌔㌕㌖㌗㌘㌙㌚㌛㌜㌝㌞㌟㌠㌡㌢㌣㌤㌥㌦㌧㌨㌩` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 242 | `㌙㌚㌛㌜㌝㌞㌟㌠㌡㌢㌣㌤㌥㌦㌧㌨㌩㌪㌫㌬㌭㌮㌯㌰` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 243 | `㌥㌦㌧㌨㌩㌪㌫㌬㌭㌮㌯㌰㌱㌲㌳㌴㌵㌶㌷㌸㌹㌺㌻㌼` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.67 (≥1e4) | recognised |
+| 244 | `㌳㌴㌵㌶㌷㌸㌹㌺㌻㌼㌽㌾㌿㍀㍁㍂㍃㍄㍅㍆㍇㍈㍉㍊` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
+| 245 | `㍟㍠㍡㍢㍣㍤㍥㍦㍧㍨㍩㍪㍫㍬㍭㍮㍯㍰㍱㍲㍳㍴㍵㍶` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
+| 246 | `㍺㍻㍼㍽㍾㍿㎀㎁㎂㎃㎄㎅㎆㎇㎈㎉㎊㎋㎌㎍㎎㎏㎐㎑` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.72 (≥1e4) | recognised |
+| 247 | `㎵㎶㎷㎸㎹㎺㎻㎼㎽㎾㎿㏀㏁㏂㏃㏄㏅㏆㏇㏈㏉㏊㏋㏌` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.66 (5.44e+03) | recognised |
+| 248 | `㏄㏅㏆㏇㏈㏉㏊㏋㏌㏍㏎㏏㏐㏑㏒㏓㏔㏕㏖㏗㏘㏙㏚㏛` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (10) | recognised |
+| 249 | `㏊㏋㏌㏍㏎㏏㏐㏑㏒㏓㏔㏕㏖㏗㏘㏙㏚㏛㏜㏝㏞㏟㏠㏡` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (10) | recognised |
+| 250 | `㏒㏓㏔㏕㏖㏗㏘㏙㏚㏛㏜㏝㏞㏟㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.90 (≥1e4) | recognised |
+| 251 | `㏙㏚㏛㏜㏝㏞㏟㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
+| 252 | `㏜㏝㏞㏟㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩㏪㏫㏬㏭㏮㏯㏰㏱㏲㏳` | 24 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.90 (≥1e4) | recognised |
+| 253 | `𐄺𐄻𐄼𐄽𐄾𐄿𐅀𐅁𐅂𐅃𐅄𐅅𐅆𐅇𐅈𐅉𐅊𐅋𐅌𐅍𐅎𐅏𐅐𐅑` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.72 (≥1e4) | recognised |
+| 254 | `𐅅𐅆𐅇𐅈𐅉𐅊𐅋𐅌𐅍𐅎𐅏𐅐𐅑𐅒𐅓𐅔𐅕𐅖𐅗𐅘𐅙𐅚𐅛𐅜` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.65 (24.2) | recognised |
+| 255 | `𐡨𐡩𐡪𐡫𐡬𐡭𐡮𐡯𐡰𐡱𐡲𐡳𐡴𐡵𐡶𐡷𐡸𐡹𐡺𐡻𐡼𐡽𐡾𐡿` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
+| 256 | `𝀔𝀕𝀖𝀗𝀘𝀙𝀚𝀛𝀜𝀝𝀞𝀟𝀠𝀡𝀢𝀣𝀤𝀥𝀦𝀧𝀨𝀩𝀪𝀫` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.65 (4.33) | recognised |
+| 257 | `𝀗𝀘𝀙𝀚𝀛𝀜𝀝𝀞𝀟𝀠𝀡𝀢𝀣𝀤𝀥𝀦𝀧𝀨𝀩𝀪𝀫𝀬𝀭𝀮` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 258 | `𝀙𝀚𝀛𝀜𝀝𝀞𝀟𝀠𝀡𝀢𝀣𝀤𝀥𝀦𝀧𝀨𝀩𝀪𝀫𝀬𝀭𝀮𝀯𝀰` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.94 (≥1e4) | recognised |
+| 259 | `𝂈𝂉𝂊𝂋𝂌𝂍𝂎𝂏𝂐𝂑𝂒𝂓𝂔𝂕𝂖𝂗𝂘𝂙𝂚𝂛𝂜𝂝𝂞𝂟` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.95 (≥1e4) | recognised |
+| 260 | `𝂉𝂊𝂋𝂌𝂍𝂎𝂏𝂐𝂑𝂒𝂓𝂔𝂕𝂖𝂗𝂘𝂙𝂚𝂛𝂜𝂝𝂞𝂟𝂠` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
+| 261 | `𝂏𝂐𝂑𝂒𝂓𝂔𝂕𝂖𝂗𝂘𝂙𝂚𝂛𝂜𝂝𝂞𝂟𝂠𝂡𝂢𝂣𝂤𝂥𝂦` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.96 (≥1e4) | recognised |
+| 262 | `𝂔𝂕𝂖𝂗𝂘𝂙𝂚𝂛𝂜𝂝𝂞𝂟𝂠𝂡𝂢𝂣𝂤𝂥𝂦𝂧𝂨𝂩𝂪𝂫` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.96 (≥1e4) | recognised |
+| 263 | `𝂣𝂤𝂥𝂦𝂧𝂨𝂩𝂪𝂫𝂬𝂭𝂮𝂯𝂰𝂱𝂲𝂳𝂴𝂵𝂶𝂷𝂸𝂹𝂺` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.65 (24.2) | recognised |
+| 264 | `𝂬𝂭𝂮𝂯𝂰𝂱𝂲𝂳𝂴𝂵𝂶𝂷𝂸𝂹𝂺𝂻𝂼𝂽𝂾𝂿𝃀𝃁𝃂𝃃` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
+| 265 | `𝂰𝂱𝂲𝂳𝂴𝂵𝂶𝂷𝂸𝂹𝂺𝂻𝂼𝂽𝂾𝂿𝃀𝃁𝃂𝃃𝃄𝃅𝃆𝃇` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 266 | `𝃀𝃁𝃂𝃃𝃄𝃅𝃆𝃇𝃈𝃉𝃊𝃋𝃌𝃍𝃎𝃏𝃐𝃑𝃒𝃓𝃔𝃕𝃖𝃗` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.69 (471) | recognised |
+| 267 | `𝃅𝃆𝃇𝃈𝃉𝃊𝃋𝃌𝃍𝃎𝃏𝃐𝃑𝃒𝃓𝃔𝃕𝃖𝃗𝃘𝃙𝃚𝃛𝃜` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.69 (471) | recognised |
+| 268 | `𝃏𝃐𝃑𝃒𝃓𝃔𝃕𝃖𝃗𝃘𝃙𝃚𝃛𝃜𝃝𝃞𝃟𝃠𝃡𝃢𝃣𝃤𝃥𝃦` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.79 (≥1e4) | recognised |
+| 269 | `𝃘𝃙𝃚𝃛𝃜𝃝𝃞𝃟𝃠𝃡𝃢𝃣𝃤𝃥𝃦𝃧𝃨𝃩𝃪𝃫𝃬𝃭𝃮𝃯` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.72 (3.16e+03) | recognised |
+| 270 | `𝌨𝌩𝌪𝌫𝌬𝌭𝌮𝌯𝌰𝌱𝌲𝌳𝌴𝌵𝌶𝌷𝌸𝌹𝌺𝌻𝌼𝌽𝌾𝌿` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 271 | `𝕻𝕼𝕽𝕾𝕿𝖀𝖁𝖂𝖃𝖄𝖅𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.93 (≥1e4) | recognised |
+| 272 | `𝖃𝖄𝖅𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.91 (≥1e4) | recognised |
+| 273 | `𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜𝖝𝖞𝖟𝖠𝖡` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.90 (≥1e4) | recognised |
+| 274 | `𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡𝘢𝘣` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 275 | `𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡𝘢𝘣𝘤𝘥𝘦𝘧𝘨` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 276 | `𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.81 (156) | recognised |
+| 277 | `𝘶𝘷𝘸𝘹𝘺𝘻𝘼𝘽𝘾𝘿𝙀𝙁𝙂𝙃𝙄𝙅𝙆𝙇𝙈𝙉𝙊𝙋𝙌𝙍` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.87 (≥1e4) | recognised |
+| 278 | `𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣𝚤𝚥` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
+| 279 | `𝛕𝛖𝛗𝛘𝛙𝛚𝛛𝛜𝛝𝛞𝛟𝛠𝛡𝛢𝛣𝛤𝛥𝛦𝛧𝛨𝛩𝛪𝛫𝛬` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.69 (≥1e4) | recognised |
+| 280 | `𝛚𝛛𝛜𝛝𝛞𝛟𝛠𝛡𝛢𝛣𝛤𝛥𝛦𝛧𝛨𝛩𝛪𝛫𝛬𝛭𝛮𝛯𝛰𝛱` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.77 (≥1e4) | recognised |
+| 281 | `𝛢𝛣𝛤𝛥𝛦𝛧𝛨𝛩𝛪𝛫𝛬𝛭𝛮𝛯𝛰𝛱𝛲𝛳𝛴𝛵𝛶𝛷𝛸𝛹` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.76 (≥1e4) | recognised |
+| 282 | `𝝩𝝪𝝫𝝬𝝭𝝮𝝯𝝰𝝱𝝲𝝳𝝴𝝵𝝶𝝷𝝸𝝹𝝺𝝻𝝼𝝽𝝾𝝿𝞀` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.75 (24.2) | recognised |
+| 283 | `𝝶𝝷𝝸𝝹𝝺𝝻𝝼𝝽𝝾𝝿𝞀𝞁𝞂𝞃𝞄𝞅𝞆𝞇𝞈𝞉𝞊𝞋𝞌𝞍` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.33 (0.5) | recognised |
+| 284 | `🀈🀉🀊🀋🀌🀍🀎🀏🀐🀑🀒🀓🀔🀕🀖🀗🀘🀙🀚🀛🀜🀝🀞🀟` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.97 (≥1e4) | recognised |
+| 285 | `🀳🀴🀵🀶🀷🀸🀹🀺🀻🀼🀽🀾🀿🁀🁁🁂🁃🁄🁅🁆🁇🁈🁉🁊` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
+| 286 | `🀴🀵🀶🀷🀸🀹🀺🀻🀼🀽🀾🀿🁀🁁🁂🁃🁄🁅🁆🁇🁈🁉🁊🁋` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.94 (≥1e4) | recognised |
+| 287 | `🀸🀹🀺🀻🀼🀽🀾🀿🁀🁁🁂🁃🁄🁅🁆🁇🁈🁉🁊🁋🁌🁍🁎🁏` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.62 (10) | recognised |
+| 288 | `🁍🁎🁏🁐🁑🁒🁓🁔🁕🁖🁗🁘🁙🁚🁛🁜🁝🁞🁟🁠🁡🁢🁣🁤` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.70 (403) | recognised |
+| 289 | `🁎🁏🁐🁑🁒🁓🁔🁕🁖🁗🁘🁙🁚🁛🁜🁝🁞🁟🁠🁡🁢🁣🁤🁥` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.72 (6.57e+03) | recognised |
+| 290 | `🁜🁝🁞🁟🁠🁡🁢🁣🁤🁥🁦🁧🁨🁩🁪🁫🁬🁭🁮🁯🁰🁱🁲🁳` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (10) | recognised |
+| 291 | `🁺🁻🁼🁽🁾🁿🂀🂁🂂🂃🂄🂅🂆🂇🂈🂉🂊🂋🂌🂍🂎🂏🂐🂑` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.82 (≥1e4) | recognised |
+| 292 | `🄌🄍🄎🄏🄐🄑🄒🄓🄔🄕🄖🄗🄘🄙🄚🄛🄜🄝🄞🄟🄠🄡🄢🄣` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
+| 293 | `🄐🄑🄒🄓🄔🄕🄖🄗🄘🄙🄚🄛🄜🄝🄞🄟🄠🄡🄢🄣🄤🄥🄦🄧` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.90 (≥1e4) | recognised |
+| 294 | `🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉🅊🅋🅌` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
+| 295 | `🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩🅪🅫🅬🅭🅮🅯🅰🅱🅲🅳🅴🅵` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 296 | `🅡🅢🅣🅤🅥🅦🅧🅨🅩🅪🅫🅬🅭🅮🅯🅰🅱🅲🅳🅴🅵🅶🅷🅸` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 297 | `🏞🏟🏠🏡🏢🏣🏤🏥🏦🏧🏨🏩🏪🏫🏬🏭🏮🏯🏰🏱🏲🏳🏴🏵` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.57 (164) | recognised |
+| 298 | `🕐🕜🕑🕝🕒🕞🕓🕟🕔🕠🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦🕛🕧` | 24 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 6/22 | 3 | 7 (0 firm) | +0.81 (≥1e4) | recognised |
+| 299 | `🕐🕧🕛🕦🕚🕥🕙🕤🕘🕣🕗🕢🕖🕡🕕🕠🕔🕟🕓🕞🕒🕝🕑🕜` | 24 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 5/24 | 3 | 7 (0 firm) | +0.52 (≥1e4) | recognised |
+| 300 | `🕑🕜🕐🕧🕛🕦🕚🕥🕙🕤🕘🕣🕗🕢🕖🕡🕕🕠🕔🕟🕓🕞🕒🕝` | 24 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 6/26 | 3 | 7 (0 firm) | +0.43 (≥1e4) | recognised |
+| 301 | `🕑🕝🕒🕞🕓🕟🕔🕠🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦🕛🕧🕐🕜` | 24 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 5/26 | 3 | 7 (0 firm) | +0.52 (≥1e4) | recognised |
+| 302 | `🕒🕞🕓🕟🕔🕠🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦🕛🕧🕐🕜🕑🕝` | 24 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 6/26 | 3 | 8 (0 firm) | +0.43 (≥1e4) | recognised |
+| 303 | `🕓🕞🕒🕝🕑🕜🕐🕧🕛🕦🕚🕥🕙🕤🕘🕣🕗🕢🕖🕡🕕🕠🕔🕟` | 24 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 6/26 | 3 | 7 (0 firm) | +0.69 (≥1e4) | recognised |
+| 304 | `🕔🕠🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦🕛🕧🕐🕜🕑🕝🕒🕞🕓🕟` | 24 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 6/26 | 3 | 7 (0 firm) | +0.68 (≥1e4) | recognised |
+| 305 | `🕖🕡🕕🕠🕔🕟🕓🕞🕒🕝🕑🕜🕐🕧🕛🕦🕚🕥🕙🕤🕘🕣🕗🕢` | 24 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 5/26 | 3 | 5 (0 firm) | +0.50 (≥1e4) | recognised |
+| 306 | `🕗🕢🕖🕡🕕🕠🕔🕟🕓🕞🕒🕝🕑🕜🕐🕧🕛🕦🕚🕥🕙🕤🕘🕣` | 24 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 5/26 | 3 | 5 (0 firm) | +0.62 (≥1e4) | recognised |
+| 307 | `🕛🕦🕚🕥🕙🕤🕘🕣🕗🕢🕖🕡🕕🕠🕔🕟🕓🕞🕒🕝🕑🕜🕐🕧` | 24 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 5/24 | 3 | 7 (0 firm) | +0.81 (≥1e4) | recognised |
+| 308 | `🕛🕧🕐🕜🕑🕝🕒🕞🕓🕟🕔🕠🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦` | 24 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 5/26 | 3 | 7 (0 firm) | +0.89 (≥1e4) | recognised |
+| 309 | `😮😯😰😱😲😳😴😵😶😷😸😹😺😻😼😽😾😿🙀🙁🙂🙃🙄🙅` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.31 (0.567) | recognised |
+| 310 | `🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪🜫🜬🜭🜮🜯🜰🜱🜲🜳` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
+| 311 | `🜧🜨🜩🜪🜫🜬🜭🜮🜯🜰🜱🜲🜳🜴🜵🜶🜷🜸🜹🜺🜻🜼🜽🜾` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.68 (≥1e4) | recognised |
+| 312 | `🜸🜹🜺🜻🜼🜽🜾🜿🝀🝁🝂🝃🝄🝅🝆🝇🝈🝉🝊🝋🝌🝍🝎🝏` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 313 | `🞍🞎🞏🞐🞑🞒🞓🞔🞕🞖🞗🞘🞙🞚🞛🞜🞝🞞🞟🞠🞡🞢🞣🞤` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.89 (≥1e4) | recognised |
+| 314 | `🪟🪠🪡🪢🪣🪤🪥🪦🪧🪨🪩🪪🪫🪬🪭🪮🪯🪰🪱🪲🪳🪴🪵🪶` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 315 | `🬍🬎🬏🬐🬑🬒🬓🬔🬕🬖🬗🬘🬙🬚🬛🬜🬝🬞🬟🬠🬡🬢🬣🬤` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 316 | `🬝🬞🬟🬠🬡🬢🬣🬤🬥🬦🬧🬨🬩🬪🬫🬬🬭🬮🬯🬰🬱🬲🬳🬴` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (156) | recognised |
+| 317 | `🬢🬣🬤🬥🬦🬧🬨🬩🬪🬫🬬🬭🬮🬯🬰🬱🬲🬳🬴🬵🬶🬷🬸🬹` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (156) | recognised |
+| 318 | `🬦🬧🬨🬩🬪🬫🬬🬭🬮🬯🬰🬱🬲🬳🬴🬵🬶🬷🬸🬹🬺🬻🬼🬽` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (156) | recognised |
+| 319 | `🬬🬭🬮🬯🬰🬱🬲🬳🬴🬵🬶🬷🬸🬹🬺🬻🬼🬽🬾🬿🭀🭁🭂🭃` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.62 (10) | recognised |
+| 320 | `🬷🬸🬹🬺🬻🬼🬽🬾🬿🭀🭁🭂🭃🭄🭅🭆🭇🭈🭉🭊🭋🭌🭍🭎` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.67 (60.7) | recognised |
+| 321 | `🭄🭅🭆🭇🭈🭉🭊🭋🭌🭍🭎🭏🭐🭑🭒🭓🭔🭕🭖🭗🭘🭙🭚🭛` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.74 (≥1e4) | recognised |
+| 322 | `🭖🭗🭘🭙🭚🭛🭜🭝🭞🭟🭠🭡🭢🭣🭤🭥🭦🭧🭨🭩🭪🭫🭬🭭` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.88 (≥1e4) | recognised |
+| 323 | `🭛🭜🭝🭞🭟🭠🭡🭢🭣🭤🭥🭦🭧🭨🭩🭪🭫🭬🭭🭮🭯🭰🭱🭲` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.86 (≥1e4) | recognised |
+| 324 | `🭥🭦🭧🭨🭩🭪🭫🭬🭭🭮🭯🭰🭱🭲🭳🭴🭵🭶🭷🭸🭹🭺🭻🭼` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.86 (≥1e4) | recognised |
+| 325 | `🭧🭨🭩🭪🭫🭬🭭🭮🭯🭰🭱🭲🭳🭴🭵🭶🭷🭸🭹🭺🭻🭼🭽🭾` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.87 (≥1e4) | recognised |
+| 326 | `🭪🭫🭬🭭🭮🭯🭰🭱🭲🭳🭴🭵🭶🭷🭸🭹🭺🭻🭼🭽🭾🭿🮀🮁` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.84 (≥1e4) | recognised |
+| 327 | `🮬🮭🮮🮯🮰🮱🮲🮳🮴🮵🮶🮷🮸🮹🮺🮻🮼🮽🮾🮿🯀🯁🯂🯃` | 24 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 328 | `⒨Ⓜ⒧Ⓛ⒦Ⓚ⒥Ⓙ⒤Ⓘ⒣Ⓗ⒢Ⓖ⒡Ⓕ⒠Ⓔ⒟Ⓓ⒞Ⓒ⒝Ⓑ` | 24 | 3.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/26 | 5 | – | +0.86 (≥1e4) | recognised |
+| 329 | `𝐴𝐵𝛤𝛥𝐸𝑍𝛨𝛩𝛪𝛫𝛬𝑀𝑁𝛯𝑂𝛱𝑅𝛴𝑇𝛶𝛷𝛸𝛹𝛺` | 24 | 4.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/34 | 3 | 1 (0 firm) | +0.70 (≥1e4) | recognised |
+| 330 | `┉┊┋┌┍┎┏┐┑┒┓└┕┖┗┘┙┚┛├┝┞┟┠` | 24 | 3.0 | contiguous | +0.61 ± 0.20 | 555 | cl 3/4 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.68 (7.64e+03) | recognised |
+| 331 | `ڹںڻڼڽھڿۀہۂۃۄۅۆۇۈۉۊۋیۍێۏې` | 24 | 2.0 | contiguous | +0.59 ± 0.21 | 97 | cl 2/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.55 (310) | recognised |
+| 332 | `ⓈⓢⓇⓡⓆⓠⓅⓟⓄⓞⓃⓝⓂⓜⓁⓛⓀⓚⒿⓙⒾⓘⒽⓗ` | 24 | 3.0 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/26 | 5 | – | +0.89 (≥1e4) | recognised |
+| 333 | `㉤㉧㉪㉭㉰㉳㉶㉹㉼㉿㊂㊅㊈㊋㊎㊑㊔㊗㊚㊝㊠㊣㊦㊩` | 24 | 3.0 | monotone | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/44 | 5 | – | +0.79 (≥1e4) | recognised |
+| 334 | `ȃȅȇȉȋȍȏȑȓȕȗșțȝȟȡȣȥȧȩȫȭȯȱ` | 24 | 2.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/44 | 5 | – | – | recognised |
+| 335 | `🬂🬄🬆🬈🬊🬌🬎🬐🬒🬔🬖🬘🬚🬜🬞🬠🬢🬤🬦🬨🬪🬬🬮🬰` | 24 | 4.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/44 | 5 | – | +0.66 (3.16e+03) | recognised |
+| 336 | `ǇǈǉǊǋǌǍǎǏǐǑǒǓǔǕǖǗǘǙǚǛǜǝǞ` | 24 | 2.0 | contiguous | +0.58 ± 0.21 | 36.1 | cl 2/3 gr 1/1 | undiscriminable | 3 | – | +0.48 (2.33) | recognised |
+| 337 | `ሆሉሌሏሒሕመማሞሡሤሧሪርሰሳሶሹሼሿቂቅቈቋ` | 24 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 2/43 | 3 | 2 (0 firm) | +0.65 (24.2) | recognised |
+| 338 | `⠶⠷⠾⠿⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓` | 24 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/2 | 5 | 3 (0 firm) | +0.33 (0.5) | recognised |
+| 339 | `⡂⡁⡀⣿⣾⣽⣼⣻⣺⣹⣸⣷⣶⣵⣴⣳⣲⣱⣰⣯⣮⣭⣬⣫` | 24 | 3.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | 8 (0 firm) | +0.79 (≥1e4) | recognised |
+| 340 | `⢠⢜⢘⢔⢐⢌⢈⢄⢀⣼⣸⣴⣰⣬⣨⣤⣠⣜⣘⣔⣐⣌⣈⣄` | 24 | 3.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/46 | 5 | 2 (0 firm) | +0.25 (0.373) | recognised |
+| 341 | `⢨⢤⢠⢜⢘⢔⢐⢌⢈⢄⢀⣼⣸⣴⣰⣬⣨⣤⣠⣜⣘⣔⣐⣌` | 24 | 3.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/46 | 5 | 1 (0 firm) | +0.60 (244) | recognised |
+| 342 | `㉗㉚㉝㉠㉣㉦㉩㉬㉯㉲㉵㉸㉻㉾㊁㊄㊇㊊㊍㊐㊓㊖㊙㊜` | 24 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/44 | 3 | – | +0.81 (≥1e4) | recognised |
+| 343 | `𝟞𝟝𝟜𝟛𝟚𝟙𝟘𝟿𝟾𝟽𝟼𝟻𝟺𝟹𝟸𝟷𝟶𝟵𝟴𝟳𝟲𝟱𝟰𝟯` | 24 | 4.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/4 | 3 | – | +0.96 (≥1e4) | recognised |
+| 344 | `𝟭𝟬𝟫𝟪𝟩𝟨𝟧𝟦𝟥𝟤𝟣𝟢𝟡𝟠𝟟𝟞𝟝𝟜𝟛𝟚𝟙𝟘𝟿𝟾` | 24 | 4.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/4 | 5 | – | +0.91 (≥1e4) | recognised |
+| 345 | `އޏސޑޒޓޔޕޖޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 24 | 2.0 | monotone | +0.56 ± 0.20 | 24.1 | cl 3/4 ge 1/1 gr 1/1 | undecided 0/1 | 5 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
+| 346 | `CdEfGhIjKlMnOpQrStUvWxYz` | 24 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/66 | 3 | 2 (0 firm) | +0.77 (≥1e4) | recognised |
+| 347 | `UtSrQpOnMlKjIhGfEdCbAzYx` | 24 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/66 | 3 | – | +0.77 (≥1e4) | recognised |
+| 348 | `WvUtSrQpOnMlKjIhGfEdCbAz` | 24 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/66 | 3 | – | +0.85 (≥1e4) | recognised |
+| 349 | `XaWbVcUdTeSfRgQhPiOjNkMl` | 24 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/24 | 5 | – | +0.89 (≥1e4) | recognised |
+| 350 | `ZyXwVuTsRqPoNmLkJiHgFeDc` | 24 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/66 | 3 | 1 (0 firm) | +0.82 (≥1e4) | recognised |
+| 351 | `bʙcᴄdᴅeᴇfꜰgɢhʜiɪjᴊkᴋlʟmᴍ` | 24 | 1.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/34 | 5 | – | +0.79 (≥1e4) | recognised |
+| 352 | `ÒÓÔÖÙÚÛÜÝÞßàáâãäåæçèéêëì` | 24 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.76 (≥1e4) | recognised |
+| 353 | `ǕǖǗǘǙǚǛǜǝǞǟǠǡǢǣǤǥǦǧǨǩŲųǪ` | 24 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | 2 (0 firm) | +0.76 (≥1e4) | recognised |
+| 354 | `ϓϕϗϙϛϝϟϡϣϥϦϧϨϩϪϫϬϭϮϯϰϱϲϳ` | 24 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/17 | 3 | 3 (0 firm) | +0.75 (≥1e4) | recognised |
+| 355 | `ЀЇЈЉЊЋЌЎЏАБВГДЕЖЗИЙКЛМНО` | 24 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | 2 (0 firm) | +0.53 (2.9) | recognised |
+| 356 | `ԧԨԩԪԫԬԭԮԯԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿ` | 24 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
+| 357 | `ԬԭԮԯԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿՀՁՂՃՄ` | 24 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.77 (≥1e4) | recognised |
+| 358 | `ٽپٿڀځڂڃڄڅچڇڈډڊڋڌڍڎڏڐڑڒڛڜ` | 24 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | 3 (0 firm) | +0.67 (≥1e4) | recognised |
+| 359 | `ڌڍڎڏڐڑڒڛڜڝڞڟݐݑݒݓݔݕݖݗݘݙݚݛ` | 24 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | +0.58 (4.33) | recognised |
+| 360 | `᐀ᐂᐄᐆᐈᐊᐌᐎᐐᐒᐔᐗᐙᐛᐝᐟᐡᐣᐥᐧᐩᐫᐭᐯ` | 24 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/44 | 5 | 2 (0 firm) | +0.55 (≥1e4) | recognised |
+| 361 | `ᕸᕹᕺᕻᕼᕽᕾᕿᗀᗁᗂᗃᗄᗅᗆᗇᗈᗉᗊᗋᗌᗍᗎᗏ` | 24 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 3 | 1 (0 firm) | +0.58 (2) | recognised |
+| 362 | `⒋⒌⒍⒎⒐⒑⒒⒓⒔⒕⒖⒗⒘⒙⒚⒛⒜⒝⒞⒟⒠⒡⒢⒣` | 24 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.95 (≥1e4) | recognised |
+| 363 | `ⒶⓑⒸⓓⒺⓕⒼⓗⒾⓙⓀⓛⓂⓝⓄⓟⓆⓡⓈⓣⓊⓥⓌⓧ` | 24 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/66 | 3 | 1 (0 firm) | +0.88 (≥1e4) | recognised |
+| 364 | `⡀⣿⣾⣽⣼⣻⣺⣹⣸⣷⣶⣵⣴⣳⣲⣱⣰⣯⣮⣭⣬⣫⣪⣩` | 24 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | 8 (0 firm) | +0.79 (≥1e4) | recognised |
+| 365 | `⡍⡌⡋⡊⡉⡈⡇⡆⡅⡄⡃⡂⡁⡀⣿⣾⣽⣼⣻⣺⣹⣸⣷⣶` | 24 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 3 | 7 (0 firm) | +0.68 (≥1e4) | recognised |
+| 366 | `⡕⡔⡓⡒⡑⡐⡏⡎⡍⡌⡋⡊⡉⡈⡇⡆⡅⡄⡃⡂⡁⡀⣿⣾` | 24 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 3 | 2 (0 firm) | +0.33 (0.5) | recognised |
+| 367 | `⢌⢋⢊⢉⢈⢇⢆⢅⢄⢃⢂⢁⢀⣿⣽⣼⣺⣹⣸⣴⣲⣱⣰⣤` | 24 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/12 | 5 | 4 (0 firm) | +0.55 (≥1e4) | recognised |
+| 368 | `⣀⣂⣄⣆⣈⣊⣌⣎⣐⣒⣔⣖⣘⣚⣜⣞⣠⣢⣤⣦⣨⣪⣬⣮` | 24 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/44 | 3 | 1 (0 firm) | +0.82 (≥1e4) | recognised |
+| 369 | `⧡⧠⧟⧞⧝⧜⧛⧚⧙⧘⧗⧖⧕⧔⧓⧒⧑⧐⧯⧮⧭⧬⧫⧪` | 24 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 3 | – | – | recognised |
+| 370 | `ヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン` | 24 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/20 | 3 | 1 (0 firm) | – | recognised |
+| 371 | `一二三四五六七八九十百千万億兆京垓秭穰溝澗正載極` | 24 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 15/61 | 3 | 4 (0 firm) | +0.99 (≥1e4) | recognised |
+| 372 | `𝌣𝌥𝌧𝌩𝌫𝌭𝌯𝌱𝌳𝌵𝌷𝌹𝌻𝌽𝌿𝍁𝍃𝍅𝍇𝍉𝍋𝍍𝍏𝍑` | 24 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/44 | 5 | – | +0.82 (≥1e4) | recognised |
+| 373 | `𝒶𝒷𝒸𝒹𝑒𝒻𝑔𝒽𝒾𝒿𝓀𝓁𝓂𝓃𝑜𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍` | 24 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/12 | 3 | 1 (0 firm) | +0.62 (10) | recognised |
+| 374 | `𝛝𝛞𝛟𝛠𝛡𝛢𝛣𝛤𝛥𝛦𝛧𝛨𝛩𝛪𝛫𝛬𝛭𝛮𝛯𝛰𝛱𝛲𝛴𝛵` | 24 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 3 | 2 (0 firm) | +0.79 (≥1e4) | recognised |
+| 375 | `𝛮𝛯𝛰𝛱𝛲𝛴𝛵𝛶𝛷𝛸𝛹𝛺𝛻𝛼𝛽𝛾𝛿𝜀𝜁𝜂𝜃𝜄𝜅𝜆` | 24 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 3 | 1 (0 firm) | +0.81 (≥1e4) | recognised |
+| 376 | `𝞫𝞬𝞭𝞮𝞯𝞰𝞱𝞲𝞳𝞴𝞵𝞶𝞷𝞸𝞹𝞺𝞼𝞽𝞾𝞿𝟀𝟁𝟂𝟃` | 24 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 3 | 6 (0 firm) | +0.74 (≥1e4) | recognised |
+| 377 | `🀶🀺🀾🁂🁆🁊🁎🁒🁖🁚🁞🁢🁦🁪🁮🁲🁶🁺🁾🂂🂆🂊🂎🂒` | 24 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/44 | 5 | – | +0.64 (68.3) | recognised |
+| 378 | `🏚🏘🏠🏡🏢🏣🏤🏥🏦🏧🏨🏩🏪🏫🏬🏭🏮🏯🏰🏱🏲🏳🏴🏵` | 24 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 3 | – | +0.41 (7.45) | recognised |
+| 379 | `🏚🏠🏡🏢🏣🏤🏥🏦🏧🏨🏩🏪🏫🏬🏭🏮🏯🏰🏱🏲🏳🏴🏵🏶` | 24 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.57 (164) | recognised |
+| 380 | `㍸㍹㍺㍻㍼㍽㍾㍿㎀㎁㎂㎃㎄㎅㎆㎇㎈㎉㎊㎋㎌㎍㎎㎏` | 24 | 3.0 | contiguous | +0.56 ± 0.21 | 20.1 | cl 2/3 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
+| 381 | `🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦🕛🕧🕐🕜🕑🕝🕒🕞🕓🕟🕔🕠🕕🕡` | 24 | 4.0 | other | +0.53 ± 0.20 | 36.9 | cl 2/4 gr 1/1 | undecided 5/26 | 3 | 6 (0 firm) | +0.50 (≥1e4) | recognised |
+| 382 | `🧆🧇🧈🧉🧊🧋🧌🧍🧎🧏🧐🧑🧒🧓🧔🧕🧖🧗🧘🧙🧚🧛🧜🧝` | 24 | 4.0 | contiguous | +0.29 ± 0.21 | 125 | cl 3/3 gr 0/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 383 | `┷┸┹┺┻┼┽┾┿╀╁╂╃╄╅╆╇╈╉╊╋╌╍╎` | 24 | 3.0 | contiguous | +0.29 ± 0.21 | 46.2 | cl 3/3 gr 0/1 | undiscriminable | 5 | 1 (0 firm) | – | recognised |
+| 384 | `𝝪𝝫𝝬𝝭𝝮𝝯𝝰𝝱𝝲𝝳𝝴𝝵𝝶𝝷𝝸𝝹𝝺𝝻𝝼𝝽𝝾𝝿𝞀𝞁` | 24 | 4.0 | contiguous | +0.29 ± 0.21 | 46.2 | cl 3/3 gr 0/1 | undiscriminable | 3 | 3 (0 firm) | +0.75 (24.2) | recognised |
+| 385 | `𝞡𝞢𝞣𝞤𝞥𝞦𝞧𝞨𝞩𝞪𝞫𝞬𝞭𝞮𝞯𝞰𝞱𝞲𝞳𝞴𝞵𝞶𝞷𝞸` | 24 | 4.0 | contiguous | +0.29 ± 0.21 | 46.2 | cl 3/3 gr 0/1 | undiscriminable | 3 | 6 (0 firm) | – | recognised |
+| 386 | `⺀⺁⺂⺃⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑⺒⺓⺔⺕⺖` | 23 | 3.0 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.85 (≥1e4) | recognised |
+| 387 | `ޏސޑޒޓޔޕޖޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 23 | 2.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
+| 388 | `🙙🙚🙛🙜🙝🙞🙟🙠🙡🙢🙣🙤🙥🙦🙧🙨🙩🙪🙫🙬🙭🙮🙯` | 23 | 4.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
+| 389 | `ÙÚÛÜÝÞßàáâãäåæçèéêëìíîï` | 23 | 2.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.76 (≥1e4) | recognised |
+| 390 | `⛁⛂⛃⛄⛅⛆⛇⛈⛉⛊⛋⛌⛍⛎⛏⛐⛑⛒⛓⛔⛕⛖⛗` | 23 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 391 | `ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅏㅐㅑㅒㅓㅔㅕㅖㅗ` | 23 | 3.0 | monotone | +0.63 ± 0.18 | 644 | cl 3/3 ge 2/2 gr 1/1 | undecided 1/13 | 3 | – | +0.67 (≥1e4) | recognised |
+| 392 | `𝀱𝀳𝀵𝀷𝀹𝀻𝀽𝀿𝁁𝁃𝁅𝁇𝁉𝁋𝁍𝁏𝁑𝁓𝁕𝁗𝁙𝁛𝁝` | 23 | 4.0 | monotone | +0.62 ± 0.18 | 470 | cl 3/3 ge 2/2 gr 1/1 | undecided 0/42 | 3 | – | +0.56 (≥1e4) | recognised |
+| 393 | `⍚⍛⍜⍝⍞⍟⍠⍡⍢⍣⍤⍥⍦⍧⍨⍩⍪⍫⍬⍭⍮⍯⍰` | 23 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
+| 394 | `⒜⒝⒞⒟⒠⒡⒢⒣⒤⒥⒦⒧⒨⒩⒪⒫⒬⒭⒮⒯⒰⒱⒲` | 23 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.80 (≥1e4) | recognised |
+| 395 | `𝍀𝍁𝍂𝍃𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎𝍏𝍐𝍑𝍒𝍓𝍔𝍕𝍖` | 23 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
+| 396 | `数大量無議思可不他由那祇僧阿沙河恒極載正澗溝𥝱` | 23 | 3.0 | other | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 0/56 | 5 | – | – | recognised |
+| 397 | `ߔߕߖߗߘߙߚߛߜߝߞߟߠߡߢߣߤߥߦߧߨߩߪ` | 23 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.77 (≥1e4) | recognised |
+| 398 | `ᥗᥘᥙᥚᥛᥜᥝᥞᥟᥠᥡᥢᥣᥤᥥᥦᥧᥨᥩᥪᥫᥬᥭ` | 23 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 399 | `𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎𝌏𝌐𝌑𝌒𝌓𝌔𝌕𝌖` | 23 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
+| 400 | `🎴🎵🎶🎷🎸🎹🎺🎻🎼🎽🎾🎿🏀🏁🏂🏃🏄🏅🏆🏇🏈🏉🏊` | 23 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 401 | `ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅏㅐㅓㅔㅗㅛㅜㅠㅡ` | 23 | 3.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 3/21 | 5 | – | +0.67 (≥1e4) | recognised |
+| 402 | `ⓐⒷⓑⒸⓒⒹⓓⒺⓔⒻⓕⒼⓖⒽⓗⒾⓘⒿⓙⓀⓚⓁⓛ` | 23 | 3.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/23 | 5 | – | +0.89 (≥1e4) | recognised |
+| 403 | `𐂢𐂤𐂦𐂨𐂪𐂬𐂮𐂰𐂲𐂴𐂶𐂸𐂺𐂼𐂾𐃀𐃂𐃄𐃆𐃈𐃊𐃌𐃎` | 23 | 4.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/42 | 3 | – | +0.88 (≥1e4) | recognised |
+| 404 | `ЀЇЈЉЊЋЌЎЏАБВГДЕЖЗИЙКЛМН` | 23 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | 2 (0 firm) | +0.53 (2.9) | recognised |
+| 405 | `ἐἒἔἘἚἜἠἢἤἦἨἪἬἮἰἲἴἶἸἺἼἾὀ` | 23 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/40 | 5 | 1 (0 firm) | – | recognised |
+| 406 | `Ⓓ⒠Ⓕ⒢Ⓗ⒤Ⓙ⒦Ⓛ⒨Ⓝ⒪Ⓟ⒬Ⓡ⒮Ⓣ⒰Ⓥ⒲Ⓧ⒴Ⓩ` | 23 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/63 | 5 | – | +0.84 (≥1e4) | recognised |
+| 407 | `ㅋㅌㅍㅎㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅜㅝㅞㅟㅠㅡㅢ` | 23 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.64 (6.5) | recognised |
+| 408 | `🄍🄏🄑🄓🄕🄗🄙🄛🄝🄟🄡🄣🄥🄧🄩🄫🄭🄯🄱🄳🄵🄷🄹` | 23 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/42 | 5 | – | +0.69 (1.09e+03) | recognised |
+| 409 | `🏚🏠🏡🏢🏣🏤🏥🏦🏧🏨🏩🏪🏫🏬🏭🏮🏯🏰🏱🏲🏳🏴🏵` | 23 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.57 (164) | recognised |
+| 410 | `🙚🙛🙜🙝🙞🙟🙠🙡🙢🙣🙤🙥🙦🙧🙨🙩🙪🙫🙬🙭🙮🙯` | 22 | 4.0 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
+| 411 | `⺀⺁⺂⺃⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑⺒⺓⺔⺕` | 22 | 3.0 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
+| 412 | `⦃⦄⦅⦆⦇⦈⦉⦊⦋⦌⦍⦎⦏⦐⦑⦒⦓⦔⦕⦖⦗⦘` | 22 | 3.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 413 | `⽛⽜⽝⽞⽟⽠⽡⽢⽣⽤⽥⽦⽧⽨⽩⽪⽫⽬⽭⽮⽯⽰` | 22 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 414 | `ㅋㅌㅍㅎㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅝㅞㅟㅜㅠㅛ` | 22 | 3.0 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 0/5 | 5 | – | +0.64 (6.5) | recognised |
+| 415 | `⩣⩤⩥⩦⩧⩨⩩⩪⩫⩬⩭⩮⩯⩰⩱⩲⩳⩴⩵⩶⩷⩸` | 22 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.89 (≥1e4) | recognised |
+| 416 | `㉥㉦㉧㉨㉩㉪㉫㉬㉭㉮㉯㉰㉱㉲㉳㉴㉵㉶㉷㉸㉹㉺` | 22 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
+| 417 | `𝑒𝒻𝑔ℎ𝒾𝒿𝓀𝓁𝓂𝓃𝑜𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏` | 22 | 4.0 | other | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | positive 1/10 | 5 | 1 (0 firm) | – | recognised |
+| 418 | `ќѝўџѠѡѢѣѤѥѬѭѨѩѪѫѦѧѰѱѮѯ` | 22 | 2.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/8 | 5 | – | – | recognised |
+| 419 | `ҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿ` | 22 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 420 | `ސޑޒޓޔޕޖޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 22 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
+| 421 | `ㅢㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲㅳㅴㅵㅶㅷ` | 22 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
+| 422 | `𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎𝌏𝌐𝌑𝌒𝌓𝌔𝌕` | 22 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
+| 423 | `𝛀𝛁𝛂𝛃𝛄𝛅𝛆𝛇𝛈𝛉𝛊𝛋𝛌𝛍𝛎𝛏𝛐𝛑𝛒𝛓𝛔𝛕` | 22 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.82 (≥1e4) | recognised |
+| 424 | `𝛂𝛃𝛄𝛅𝛆𝛇𝛈𝛉𝛊𝛋𝛌𝛍𝛎𝛏𝛐𝛑𝛒𝛓𝛔𝛕𝛖𝛗` | 22 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.82 (≥1e4) | recognised |
+| 425 | `🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪🜫🜬🜭🜮🜯🜰🜱` | 22 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
+| 426 | `езйлнпсухчщыэяёѓѕїљћѝџ` | 22 | 2.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/40 | 5 | – | +0.79 (≥1e4) | recognised |
+| 427 | `𝀱𝀳𝀵𝀷𝀹𝀻𝀽𝀿𝁁𝁃𝁅𝁇𝁉𝁋𝁍𝁏𝁑𝁓𝁕𝁗𝁙𝁛` | 22 | 4.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/40 | 3 | – | +0.56 (≥1e4) | recognised |
+| 428 | `ᐧᐨᐩᐪᐫᐬᐭᐮᐯᐰᐱᐲᐳᐴᐵᐶᐷᐸᐹᑕᑖᑗ` | 22 | 3.0 | monotone | +0.58 ± 0.19 | 35.7 | cl 3/4 ge 1/1 gr 1/1 | undecided 1/2 | 5 | 1 (0 firm) | – | recognised |
+| 429 | `ȟȡȣȤȥȦȧȨȩȪȫȬȭȮȯȰȱȲȳȴȵȶ` | 22 | 2.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | 3 (0 firm) | +0.58 (2) | recognised |
+| 430 | `ሌሏሒሕመማሞሡሤሧሪርሰሳሶሹሼሿቂቅቈቋ` | 22 | 3.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/39 | 5 | – | +0.58 (4.33) | recognised |
+| 431 | `ȞȟȡȣȤȥȦȧȨȩȪȫȬȭȮȯȰȱȲȳȴȵ` | 22 | 2.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | 1 (0 firm) | +0.58 (2) | recognised |
+| 432 | `⢄⢆⢈⢊⢌⢎⢐⢒⢔⢖⢘⢚⢜⢞⢠⣢⢰⢶⢸⢺⢼⢾` | 22 | 3.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/42 | 5 | – | +0.61 (≥1e4) | recognised |
+| 433 | `OnMlKjIhGfEdCbAzYxWvUt` | 22 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/60 | 3 | 2 (0 firm) | +0.75 (≥1e4) | recognised |
+| 434 | `ŸŹźŻżŽžſƀƁƆƇƈƉƊƋƌƏƎƐƑƒ` | 22 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/7 | 5 | 1 (0 firm) | +0.50 (60.3) | recognised |
+| 435 | `ȡȣȤȥȦȧȨȩȪȫȬȭȮȯȰȱȲȳȴȵȶȷ` | 22 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | 3 (0 firm) | +0.58 (2) | recognised |
+| 436 | `ȴȳȲȱȰȯȮȭȬȫȪȩȨȧȦȥȤȣȡȟȞȽ` | 22 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/7 | 5 | 2 (0 firm) | +0.58 (2) | recognised |
+| 437 | `ܐܒܓܕܗܘܙܚܛܝܟܠܡܢܣܥܦܨܩܪܫܬ` | 22 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/12 | 3 | 2 (0 firm) | +0.86 (≥1e4) | recognised |
+| 438 | `ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅏㅐㅓㅔㅗㅛㅜㅠ` | 22 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/20 | 5 | – | +0.67 (≥1e4) | recognised |
+| 439 | `𐂢𐂤𐂦𐂨𐂪𐂬𐂮𐂰𐂲𐂴𐂶𐂸𐂺𐂼𐂾𐃀𐃂𐃄𐃆𐃈𐃊𐃌` | 22 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/40 | 3 | – | +0.88 (≥1e4) | recognised |
+| 440 | `𝔷𝔶𝔵𝔴𝔳𝔲𝔱𝔰𝔯𝔮𝔭𝔬𝔫𝔪𝔩𝔨𝔧𝔦ℌ𝔾𝔽𝔸` | 22 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | – | – | recognised |
+| 441 | `🀀🀂🀄🀆🀈🀊🀌🀎🀐🀒🀔🀖🀘🀚🀜🀞🀠🀢🀤🀦🀨🀪` | 22 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/40 | 3 | – | +0.96 (≥1e4) | recognised |
+| 442 | `🀁🀃🀅🀇🀉🀋🀍🀏🀑🀓🀕🀗🀙🀛🀝🀟🀡🀣🀥🀧🀩🀫` | 22 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 4/40 | 3 | 2 (0 firm) | +0.97 (≥1e4) | recognised |
+| 443 | `⽛⽜⽝⽞⽟⽠⽡⽢⽣⽤⽥⽦⽧⽨⽩⽪⽫⽬⽭⽮⽯` | 21 | 3.0 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 444 | `🐀🐁🐂🐃🐄🐅🐆🐇🐈🐉🐊🐋🐌🐍🐎🐏🐐🐑🐒🐓🐔` | 21 | 4.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 5 | – | +0.65 (156) | recognised |
+| 445 | `🯒🯓🯔🯕🯖🯗🯘🯙🯚🯛🯜🯝🯞🯟🯠🯡🯢🯣🯤🯥🯦` | 21 | 4.0 | contiguous | +0.71 ± 0.20 | 3.62e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
+| 446 | `⓿❶❷❸❹❺❻❼❽❾❿⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴` | 21 | 3.0 | other | +0.63 ± 0.18 | 644 | cl 3/3 ge 2/2 gr 1/1 | undecided 1/5 | 3 | 1 (0 firm) | +0.98 (≥1e4) | recognised |
+| 447 | `ѠѡѢѣѤѥѦѧѨѩѪѫѬѭѮѯѰѱѲѳѴ` | 21 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 448 | `ޑޒޓޔޕޖޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 21 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
+| 449 | `𝀱𝀳𝀵𝀷𝀹𝀻𝀽𝀿𝁁𝁃𝁅𝁇𝁉𝁋𝁍𝁏𝁑𝁓𝁕𝁗𝁙` | 21 | 4.0 | monotone | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 0/38 | 3 | – | +0.56 (≥1e4) | recognised |
+| 450 | `♔♕♖♗♘♙♚♛♜♝♞♟♠♡♢♣♤♥♦♧♨` | 21 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.77 (≥1e4) | recognised |
+| 451 | `ㅢㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲㅳㅴㅵㅶ` | 21 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
+| 452 | `🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵` | 21 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 2 | 1 (0 firm) | – | recognised |
+| 453 | `🙛🙜🙝🙞🙟🙠🙡🙢🙣🙤🙥🙦🙧🙨🙩🙪🙫🙬🙭🙮🙯` | 21 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
+| 454 | `🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪🜫🜬🜭🜮🜯🜰` | 21 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
+| 455 | `ㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ` | 21 | 3.0 | other | +0.59 ± 0.17 | 28.5 | cl 1/2 ge 1/1 gr 1/1 | undecided 1/4 | 5 | – | +0.49 (1.5) | recognised |
+| 456 | `ĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĕ` | 21 | 2.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/1 | 5 | 1 (0 firm) | +0.69 (≥1e4) | recognised |
+| 457 | `𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎𝌏𝌐𝌑𝌒𝌓𝌔` | 21 | 4.0 | contiguous | +0.59 ± 0.21 | 97 | cl 2/3 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
+| 458 | `ⲇⲉⲋⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲯⲱ` | 21 | 3.0 | monotone | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/38 | 5 | – | – | recognised |
+| 459 | `⓪➀➁➂➃➄➅➆➇➈➉➊➋➌➍➎➏➐➑➒➓` | 21 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/1 | 3 | 1 (0 firm) | +0.95 (≥1e4) | recognised |
+| 460 | `ڡݠݟݞݝݜݛݚݙݘݗݖݕݔݓݒݑݐݏݎݍ` | 21 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | 1 (0 firm) | – | recognised |
+| 461 | `ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅬⅭⅮↀↁↂↇↈ↉↊↋` | 21 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 3 | 3 (0 firm) | +0.98 (≥1e4) | recognised |
+| 462 | `⓪①②③④⑤⑥⑦⑧⑨⑩⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴` | 21 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/2 | 3 | 1 (0 firm) | +0.98 (≥1e4) | recognised |
+| 463 | `⓪③⑥⑨⑫⑮⑱㉑㉔㉗㉚㉝㊱㊴㊷㊺㊽㋀㋃㋆㋉` | 21 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/39 | 3 | – | +0.94 (≥1e4) | recognised |
+| 464 | `㉠㉣㉦㉩㉬㉯㉲㉵㉸㉻㉾㊁㊄㊇㊊㊍㊐㊓㊖㊙㊜` | 21 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/38 | 5 | – | +0.80 (≥1e4) | recognised |
+| 465 | `𐂢𐂤𐂦𐂨𐂪𐂬𐂮𐂰𐂲𐂴𐂶𐂸𐂺𐂼𐂾𐃀𐃂𐃄𐃆𐃈𐃊` | 21 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/38 | 3 | – | +0.88 (≥1e4) | recognised |
+| 466 | `⺁⺂⺃⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑⺒⺓⺔` | 20 | 3.0 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
+| 467 | `🙛🙜🙝🙞🙟🙠🙡🙢🙣🙤🙥🙦🙧🙨🙩🙪🙫🙬🙭🙮` | 20 | 4.0 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
+| 468 | `༠༡༢༣༤༥༦༧༨༩༪༫༬༭༮༯༰༱༲༳` | 20 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.91 (≥1e4) | recognised |
+| 469 | `ㅢㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲㅳㅴㅵ` | 20 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
+| 470 | `🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪🜫🜬🜭🜮🜯` | 20 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
+| 471 | `✅✆✇✈✉✊✋✌✍✎✏✐✑✒✓✔✕✖✗✘` | 20 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.26 (0.279) | recognised |
+| 472 | `⯬⯭⯮⯯⯰⯱⯲⯳⯴⯵⯶⯷⯸⯹⯺⯻⯼⯽⯾⯿` | 20 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 473 | `ㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ` | 20 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | – | +0.49 (1.5) | recognised |
+| 474 | `㈉㈊㈋㈌㈍㈎㈏㈐㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚㈛㈜` | 20 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
+| 475 | `𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎𝌏𝌐𝌑𝌒𝌓` | 20 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
+| 476 | `𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡` | 20 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.78 (≥1e4) | recognised |
+| 477 | `🠴🠵🠶🠷🠸🠹🠺🠻🠼🠽🠾🠿🡀🡁🡂🡃🡄🡅🡆🡇` | 20 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.62 (10) | recognised |
+| 478 | `ѢѣѤѥѦѧѨѩѠѡѰѱѮѯѬѭѲѳѴѵ` | 20 | 2.0 | other | +0.66 ± 0.23 | 917 | cl 5/5 gr 1/1 | undecided 0/12 | 5 | – | – | recognised |
+| 479 | `ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠῬ𝔖𝔗𝜰` | 20 | 2.4 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/4 | 5 | – | +0.91 (≥1e4) | recognised |
+| 480 | `㈀㈃㈆㈉㈌㈏㈒㈕㈘㈛㈞㈡㈤㈧㈪㈭㈰㈳㈶㈹` | 20 | 3.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/35 | 5 | – | +0.92 (≥1e4) | recognised |
+| 481 | `𒐀𒐂𒐄𒐆𒐈𒐊𒐌𒐎𒐐𒐒𒐔𒐖𒐘𒐚𒐜𒐞𒐠𒐢𒐤𒐦` | 20 | 4.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/36 | 3 | – | +0.64 (6.5) | recognised |
+| 482 | `☷☶☵☴☳☲☱☰☯☮☭☬☫☪☩☨☧☦☥⛨` | 20 | 3.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | – | +0.79 (≥1e4) | recognised |
+| 483 | `αγεηικλμνξοπρστυφχψω` | 20 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/9 | 3 | 3 (0 firm) | +0.92 (≥1e4) | recognised |
+| 484 | `ܔܕܗܘܙܚܛܝܟܠܡܢܣܥܦܨܩܪܫܬ` | 20 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/10 | 5 | 2 (0 firm) | +0.86 (≥1e4) | recognised |
+| 485 | `❶❷❸❹❺❻❼❽❾⓾⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴` | 20 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/7 | 3 | 2 (0 firm) | +0.98 (≥1e4) | recognised |
+| 486 | `➊➋➌➍➎➏➐➑➒➓⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴` | 20 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 3 | 1 (0 firm) | +0.95 (≥1e4) | recognised |
+| 487 | `𐂢𐂤𐂦𐂨𐂪𐂬𐂮𐂰𐂲𐂴𐂶𐂸𐂺𐂼𐂾𐃀𐃂𐃄𐃆𐃈` | 20 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/36 | 3 | – | +0.88 (≥1e4) | recognised |
+| 488 | `𝀱𝀳𝀵𝀷𝀹𝀻𝀽𝀿𝁁𝁃𝁅𝁇𝁉𝁋𝁍𝁏𝁑𝁓𝁕𝁗` | 20 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/36 | 3 | – | +0.56 (≥1e4) | recognised |
+| 489 | `🀄🀆🀈🀊🀌🀎🀐🀒🀔🀖🀘🀚🀜🀞🀠🀢🀤🀦🀨🀪` | 20 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/36 | 3 | – | +0.96 (≥1e4) | recognised |
+| 490 | `⣇⣉⣋⣍⣏⣑⣓⣕⣗⣙⣛⣝⣟⣡⣣⣥⣧⣩⣫⣭` | 20 | 3.0 | monotone | +0.19 ± 0.24 | 10.5 | cl 3/3 gr 0/1 | undecided 0/36 | 5 | – | +0.85 (≥1e4) | recognised |
+| 491 | `🜘🜙🜚🜛🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪` | 19 | 4.0 | contiguous | +0.87 ± 0.16 | 40.8 | gr 5/5 | undiscriminable | 3 | – | +0.87 (≥1e4) | recognised |
+| 492 | `🭠🭡🭢🭣🭤🭥🭦🭧🭨🭩🭪🭫🭬🭭🭮🭯🭰🭱🭲` | 19 | 4.0 | contiguous | +0.87 ± 0.16 | 40.8 | gr 5/5 | undiscriminable | 3 | 1 (0 firm) | +0.86 (≥1e4) | recognised |
+| 493 | `🙛🙜🙝🙞🙟🙠🙡🙢🙣🙤🙥🙦🙧🙨🙩🙪🙫🙬🙭` | 19 | 4.0 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
+| 494 | `aBcDeFgHiJkLmNoPqRs` | 19 | 1.0 | other | +0.68 ± 0.18 | 126 | cl 4/5 gr 2/2 | undecided 4/51 | 3 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
+| 495 | `₠₡₢₣₤₥₦₧₨₩₪₫€₭₮₯₰₱₲` | 19 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 496 | `𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡` | 19 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.78 (≥1e4) | recognised |
+| 497 | `ㅢㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲㅳㅴ` | 19 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
+| 498 | `㈳㈴㈵㈶㈷㈸㈹㈺㈻㈼㈽㈾㈿㉀㉁㉂㉃㉄㉅` | 19 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.40 (0.833) | recognised |
+| 499 | `𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎𝌏𝌐𝌑𝌒` | 19 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
+| 500 | `🜛🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪🜫🜬🜭` | 19 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.87 (≥1e4) | recognised |
+| 501 | `àáâãäåæçèéêëìíîïðñò` | 19 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.62 (≥1e4) | recognised |
+| 502 | `⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒` | 19 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.33 (0.5) | recognised |
+| 503 | `㈊㈋㈌㈍㈎㈏㈐㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚㈛㈜` | 19 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
+| 504 | `🕗🕘🕙🕚🕛🕐🕜🕑🕝🕒🕞🕓🕟🕔🕠🕕🕡🕖🕢` | 19 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 4/16 | 3 | 3 (0 firm) | +0.52 (≥1e4) | recognised |
+| 505 | `🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪🜫🜬🜭🜮` | 19 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
+| 506 | `🏝🏞🏟🏠🏡🏢🏣🏤🏥🏦🏧🏨🏩🏪🏫🏬🏭🏮🏯` | 19 | 4.0 | contiguous | +0.57 ± 0.16 | 75.4 | cl 2/2 ge 1/2 gr 1/1 | undiscriminable | 3 | – | +0.57 (164) | recognised |
+| 507 | `🀆🀈🀊🀌🀎🀐🀒🀔🀖🀘🀚🀜🀞🀠🀢🀤🀦🀨🀪` | 19 | 4.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 2/34 | 3 | – | +0.96 (≥1e4) | recognised |
+| 508 | `EdCbAzYxWvUtSrQpOnM` | 19 | 1.0 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 2/51 | 3 | 2 (0 firm) | +0.39 (9.16) | recognised |
+| 509 | `GfEdCbAzYxWvUtSrQpO` | 19 | 1.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 2/51 | 3 | 2 (0 firm) | +0.53 (≥1e4) | recognised |
+| 510 | `IhGfEdCbAzYxWvUtSrQ` | 19 | 1.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/51 | 3 | 2 (0 firm) | +0.53 (≥1e4) | recognised |
+| 511 | `MlKjIhGfEdCbAzYxWvU` | 19 | 1.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/51 | 3 | 2 (0 firm) | +0.75 (≥1e4) | recognised |
+| 512 | `lKjIhGfEdCbAzYxWvUt` | 19 | 1.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/51 | 3 | 2 (0 firm) | +0.71 (≥1e4) | recognised |
+| 513 | `𝑆𝑹𝑸𝑷𝑶𝑵𝑴𝑳𝑲𝑱𝑰𝑯𝑮𝑭𝑬𝑫𝑪𝑩𝑨` | 19 | 4.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/3 | 3 | – | +0.92 (≥1e4) | recognised |
+| 514 | `AzYxWvUtSrQpOnMlKjI` | 19 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/51 | 3 | 2 (0 firm) | +0.25 (0.2) | recognised |
+| 515 | `BcDeFgHiJkLmNoPqRsT` | 19 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/51 | 3 | 1 (0 firm) | +0.81 (≥1e4) | recognised |
+| 516 | `CbAzYxWvUtSrQpOnMlK` | 19 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/51 | 3 | 2 (0 firm) | +0.27 (0.267) | recognised |
+| 517 | `KjIhGfEdCbAzYxWvUtS` | 19 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/51 | 3 | 2 (0 firm) | +0.53 (≥1e4) | recognised |
+| 518 | `bAzYxWvUtSrQpOnMlKj` | 19 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/51 | 3 | 2 (0 firm) | +0.25 (0.2) | recognised |
+| 519 | `fEdCbAzYxWvUtSrQpOn` | 19 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/51 | 3 | 2 (0 firm) | +0.68 (7.04e+03) | recognised |
+| 520 | `hGfEdCbAzYxWvUtSrQp` | 19 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/51 | 3 | 2 (0 firm) | +0.53 (≥1e4) | recognised |
+| 521 | `ሐሑሒሓሔሕሖመሙሚማሜምሞሠሡሢሣሤ` | 19 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 3 | 1 (0 firm) | +0.67 (≥1e4) | recognised |
+| 522 | `ᬎᬐᬒᬔᬖᬘᬚᬜᬞᬠᬢᬤᬦᬨᬪᬬᬮᬰᬲ` | 19 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/34 | 3 | – | +0.62 (60.7) | recognised |
+| 523 | `⓵➁⓶➂⓷➃⓸➄⓹➅⓺➆⓻➇⓼➈⓽➉⓾` | 19 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/19 | 5 | – | +0.98 (≥1e4) | recognised |
+| 524 | `➪➫➬➭➮➯➱➲➳➴➵➶➷➸➹➺➻➼➽` | 19 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | 1 (0 firm) | – | recognised |
+| 525 | `ㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅏㅐㅓㅔㅗㅛㅜㅠㅡ` | 19 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/14 | 5 | – | +0.67 (≥1e4) | recognised |
+| 526 | `𐂢𐂤𐂦𐂨𐂪𐂬𐂮𐂰𐂲𐂴𐂶𐂸𐂺𐂼𐂾𐃀𐃂𐃄𐃆` | 19 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/34 | 3 | – | +0.88 (≥1e4) | recognised |
+| 527 | `𝚨𝚩𝚪𝚫𝚬𝚭𝚮𝚯𝛰𝛱𝛲𝛳𝛴𝛵𝛶𝛷𝛸𝛹𝛺` | 19 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 3 | 2 (0 firm) | +0.72 (≥1e4) | recognised |
+| 528 | `🏚🏘🏠🏡🏢🏣🏤🏥🏦🏧🏨🏩🏪🏫🏬🏭🏮🏯🏰` | 19 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 3 | – | +0.41 (7.45) | recognised |
+| 529 | `༚༜༞༠༢༤༦༨༪༬༮༰༲༴༶༸༺༼༽` | 19 | 3.0 | monotone | +0.46 ± 0.23 | 48.9 | cl 4/4 gr 1/2 | undecided 1/27 | 3 | – | +0.91 (≥1e4) | recognised |
+| 530 | `5⁵₅⑤⑸⒌❺➄➎⓹５🄆🯵𝟓𝟝𝟧𝟱𝟻` | 18 | 3.3 | other | +0.74 ± 0.18 | 495 | cl 4/4 gr 2/2 | undecided 0/32 | 5 | – | +0.34 (0.426) | recognised |
+| 531 | `8⁸₈⑧⑻⒏❽➇➑⓼８🄉🯸𝟖𝟠𝟪𝟴𝟾` | 18 | 3.3 | other | +0.73 ± 0.18 | 1.85e+03 | cl 5/5 gr 2/2 | undecided 1/32 | 5 | – | +0.30 (0.214) | recognised |
+| 532 | `ᬠᬢᬤᬥᬦᬧᬨᬩᬪᬫᬬᬭᬮᬯᬰᬱᬲᬳ` | 18 | 3.0 | monotone | +0.73 ± 0.18 | 1.85e+03 | cl 5/5 gr 2/2 | undecided 1/3 | 5 | – | +0.61 (29.2) | recognised |
+| 533 | `🙛🙜🙝🙞🙟🙠🙡🙢🙣🙤🙥🙦🙧🙨🙩🙪🙫🙬` | 18 | 4.0 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
+| 534 | `𝆘𝆙𝆚𝆛𝆜𝆝𝆞𝆟𝆠𝆡𝆢𝆣𝆤𝆥𝆦𝆧𝆨𝆩` | 18 | 4.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 535 | `プヘベペホボポマミムメモヤャユュヨョ` | 18 | 3.0 | other | +0.66 ± 0.19 | 215 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/7 | 5 | 1 (0 firm) | – | recognised |
+| 536 | `ㅢㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲㅳ` | 18 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
+| 537 | `𝍠𝍡𝍢𝍣𝍤𝍥𝍦𝍧𝍨𝍩𝍪𝍫𝍬𝍭𝍮𝍯𝍰𝍱` | 18 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.94 (≥1e4) | recognised |
+| 538 | `🭡🭢🭣🭤🭥🭦🭧🭨🭩🭪🭫🭬🭭🭮🭯🭰🭱🭲` | 18 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.86 (≥1e4) | recognised |
+| 539 | `àáâãäåæçèéêëìíîïðñ` | 18 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.62 (≥1e4) | recognised |
+| 540 | `ѡѠѱѰѯѮѭѬѫѪѩѨѧѦѥѤѣѢ` | 18 | 2.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 5 | – | – | recognised |
+| 541 | `ޔޕޖޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 18 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
+| 542 | `‖‗‘’‚‛“”„‟†‡•‣․‥…‧` | 18 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | 1 (0 firm) | +0.87 (≥1e4) | recognised |
+| 543 | `⾀⾁⾂⾃⾄⾅⾆⾇⾈⾉⾊⾋⾌⾍⾎⾏⾐⾑` | 18 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
+| 544 | `㈋㈌㈍㈎㈏㈐㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚㈛㈜` | 18 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
+| 545 | `𐡮𐡯𐡰𐡱𐡲𐡳𐡴𐡵𐡶𐡷𐡸𐡹𐡺𐡻𐡼𐡽𐡾𐡿` | 18 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
+| 546 | `🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪🜫🜬🜭` | 18 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
+| 547 | `↦↧↨↩↪↫↬↭↮↯↰↱↲↳↴↵↶↷` | 18 | 3.0 | contiguous | +0.57 ± 0.16 | 75.4 | cl 2/2 ge 1/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.40 (≥1e4) | recognised |
+| 548 | `ӝӜӛӚәӘӗӖӕӔӑӐӏӀӿӾӽӼ` | 18 | 2.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/7 | 5 | – | – | recognised |
+| 549 | `𒐀𒐂𒐄𒐆𒐈𒐊𒐌𒐎𒐐𒐒𒐔𒐖𒐘𒐚𒐜𒐞𒐠𒐢` | 18 | 4.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/32 | 3 | – | +0.64 (6.5) | recognised |
+| 550 | `𝀱𝀳𝀵𝀷𝀹𝀻𝀽𝀿𝁁𝁃𝁅𝁇𝁉𝁋𝁍𝁏𝁑𝁓` | 18 | 4.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/32 | 3 | – | +0.56 (3.87e+03) | recognised |
+| 551 | `3³₃③⑶⒊❸➂➌⓷３🄄🯳𝟑𝟛𝟥𝟯𝟹` | 18 | 3.2 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/32 | 5 | 1 (0 firm) | +0.45 (0.833) | recognised |
+| 552 | `⍩⍨⍧⍦⍥⍤⍣⍢⍡⍠⍟⍞⍝⍜⍛⍚⍙⍪` | 18 | 3.0 | other | +0.58 ± 0.21 | 36.1 | cl 2/3 gr 1/1 | undecided 0/3 | 5 | – | +0.33 (0.5) | recognised |
+| 553 | `7⁷₇⑦⑺⒎❼➆➐⓻７🄈🯷𝟕𝟟𝟩𝟳𝟽` | 18 | 3.3 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/32 | 5 | 1 (0 firm) | +0.25 (0.2) | recognised |
+| 554 | `②ⓑ③ⓒ④ⓓ⑤ⓔ⑥ⓕ⑦ⓖ⑧ⓗ⑨ⓘ⑩ⓙ` | 18 | 3.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/16 | 5 | – | +0.98 (≥1e4) | recognised |
+| 555 | `⒊𝟥3🯳③³🄄➂₃➌𝟯𝟹⓷❸３⑶𝟑𝟛` | 18 | 3.2 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/33 | 5 | – | +0.33 (0.333) | recognised |
+| 556 | `❸➌③🯳⒊➂𝟹⓷𝟛³𝟥𝟑🄄𝟯3₃⑶３` | 18 | 3.2 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/36 | 5 | – | +0.33 (0.333) | recognised |
+| 557 | `0)9(8*7&6^5%4$3#2@` | 18 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/22 | 5 | – | +0.62 (≥1e4) | recognised |
+| 558 | `1¹₁①⑴⒈❶➀➊⓵１🄂🯱𝟏𝟙𝟣𝟭𝟷` | 18 | 3.2 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/31 | 5 | 1 (0 firm) | +0.11 (0.0509) | recognised |
+| 559 | `1₁𝟷𝟏𝟙⓵➊¹①⑴🯱𝟭➀１⒈𝟣❶🄂` | 18 | 3.2 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/32 | 5 | 1 (0 firm) | +0.11 (0.0449) | recognised |
+| 560 | `9⁹₉⑨⑼⒐❾➈➒⓽９🄊🯹𝟗𝟡𝟫𝟵𝟿` | 18 | 3.3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/30 | 5 | 1 (0 firm) | +0.23 (0.167) | recognised |
+| 561 | `ܐܬܫܪܩܨܧܦܥܤܣܢܡܠܟܞܝܖ` | 18 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 4 | 2 (0 firm) | +0.82 (≥1e4) | recognised |
+| 562 | `ႡᲑბႢᲒგႣᲓდႤᲔეႥᲕვႦᲖზ` | 18 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/9 | 5 | – | – | recognised |
+| 563 | `ማምሞሡሤሧሪርሰሳሶሹሼሿቂቅቈቋ` | 18 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/29 | 5 | – | +0.62 (10) | recognised |
+| 564 | `ᬎᬐᬒᬔᬖᬘᬚᬜᬞᬠᬢᬤᬦᬨᬪᬬᬮᬰ` | 18 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/32 | 3 | – | +0.62 (60.7) | recognised |
+| 565 | `ᬞᬠᬢᬤᬦᬧᬨᬩᬪᬫᬬᬭᬮᬯᬰᬱᬲᬳ` | 18 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/7 | 3 | – | +0.69 (156) | recognised |
+| 566 | `⑶3３³₃🄄⒊𝟯❸➂𝟛🯳③𝟑𝟹𝟥➌⓷` | 18 | 3.2 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/33 | 5 | 1 (0 firm) | +0.33 (0.333) | recognised |
+| 567 | `⑶３➂⓷³𝟹𝟯➌₃③🄄3❸⒊🯳𝟛𝟥𝟑` | 18 | 3.2 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/33 | 5 | – | +0.33 (0.333) | recognised |
+| 568 | `⓾➉⓽➈⓼➇⓻➆⓺➅⓹➄⓸➃⓷➂⓶➁` | 18 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/20 | 5 | – | +0.98 (≥1e4) | recognised |
+| 569 | `㊀㊃㊆㊉㊌㊏㊒㊕㊘㊛㊞㊡㊤㊧㊪㊭㊰㊳` | 18 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/32 | 5 | – | +0.73 (≥1e4) | recognised |
+| 570 | `𐂢𐂤𐂦𐂨𐂪𐂬𐂮𐂰𐂲𐂴𐂶𐂸𐂺𐂼𐂾𐃀𐃂𐃄` | 18 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/32 | 3 | – | +0.88 (≥1e4) | recognised |
+| 571 | `🏚🏠🏡🏢🏣🏤🏥🏦🏧🏨🏩🏪🏫🏬🏭🏮🏯🏰` | 18 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.57 (164) | recognised |
+| 572 | `🜑🜒🜓🜔🜕🜖🜗🜘🜙🜚🜛🜜🜝🜞🜟🜠🜡` | 17 | 4.0 | contiguous | +0.82 ± 0.12 | ≥1e4 | cl 7/7 gr 3/3 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 573 | `ᬎᬐᬒᬔᬖᬘᬚᬜᬞᬠᬢᬤᬦᬨᬪᬬᬮ` | 17 | 3.0 | monotone | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 1/30 | 3 | – | +0.62 (60.7) | recognised |
+| 574 | `㉛㉝㉟㉡㉣㉥㉧㉩㉫㉭㉯㉱㉳㉵㉷㉹㉻` | 17 | 3.0 | monotone | +0.74 ± 0.18 | 495 | cl 4/4 gr 2/2 | undecided 2/30 | 3 | – | +0.85 (≥1e4) | recognised |
+| 575 | `ÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×Ø` | 17 | 2.0 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 576 | `㈌㈍㈎㈏㈐㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚㈛㈜` | 17 | 3.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
+| 577 | `ዷዸዹዺዻዼዽዾዿጀጁጂጃጄጅጆጇ` | 17 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 578 | `𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎𝌏𝌐` | 17 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.91 (≥1e4) | recognised |
+| 579 | `㋏㋒㋕㋘㋛㋞㋡㋤㋧㋪㋭㋰㋳㋶㋹㋼㋿` | 17 | 3.0 | monotone | +0.63 ± 0.18 | 644 | cl 3/3 ge 2/2 gr 1/1 | undecided 1/30 | 3 | – | +0.58 (4.33) | recognised |
+| 580 | `ޕޖޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 17 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
+| 581 | `㇀㇁㇂㇃㇄㇅㇆㇇㇈㇉㇊㇋㇌㇍㇎㇏㇐` | 17 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
+| 582 | `ךכלםמןנסעףפץצקרשת` | 17 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.67 (164) | recognised |
+| 583 | `⡠⡡⡢⡣⡤⡥⡦⡧⡨⡩⡪⡫⡬⡭⡮⡯⡰` | 17 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 584 | `⧅⧆⧇⧈⧉⧊⧋⧌⧍⧎⧏⧐⧑⧒⧓⧔⧕` | 17 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.69 (156) | recognised |
+| 585 | `⽃⽄⽅⽆⽇⽈⽉⽊⽋⽌⽍⽎⽏⽐⽑⽒⽓` | 17 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
+| 586 | `㈵㈶㈷㈸㈹㈺㈻㈼㈽㈾㈿㉀㉁㉂㉃㉄㉅` | 17 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.40 (0.833) | recognised |
+| 587 | `🜙🜚🜛🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩` | 17 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.87 (≥1e4) | recognised |
+| 588 | `🭢🭣🭤🭥🭦🭧🭨🭩🭪🭫🭬🭭🭮🭯🭰🭱🭲` | 17 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.86 (≥1e4) | recognised |
+| 589 | `ᬒᬔᬖᬘᬚᬜᬞᬠᬢᬤᬦᬨᬪᬬᬮᬰᬲ` | 17 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/30 | 3 | – | +0.65 (4.33) | recognised |
+| 590 | `ᬢᬤᬥᬦᬧᬨᬩᬪᬫᬬᬭᬮᬯᬰᬱᬲᬳ` | 17 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/1 | 5 | – | +0.61 (29.2) | recognised |
+| 591 | `ⅠⅡⅢⅣⅤⅩⅬⅭⅮↀↁↂↇↈ↉↊↋` | 17 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/8 | 3 | 3 (0 firm) | +0.96 (≥1e4) | recognised |
+| 592 | `⠘⠗⠐⠟⠻⠿⣷⣿⣾⣶⣴⣤⣠⣄⣆⡆⡄` | 17 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/28 | 5 | 3 (0 firm) | +0.65 (≥1e4) | recognised |
+| 593 | `𐂢𐂤𐂦𐂨𐂪𐂬𐂮𐂰𐂲𐂴𐂶𐂸𐂺𐂼𐂾𐃀𐃂` | 17 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/30 | 3 | – | +0.87 (≥1e4) | recognised |
+| 594 | `🤣😂😆😁😄😊🙂😐😞😢😭😩😫😤😠😡🤬` | 17 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/33 | 3 | 4 (0 firm) | +0.89 (≥1e4) | recognised |
+| 595 | `↧↨↩↪↫↬↭↮↯↰↱↲↳↴↵↶↷` | 17 | 3.0 | contiguous | +0.46 ± 0.17 | 17.5 | cl 2/2 ge 0/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.40 (≥1e4) | recognised |
+| 596 | `𝝫𝝬𝝭𝝮𝝯𝝰𝝱𝝲𝝳𝝴𝝵𝝶𝝷𝝸𝝹𝝺𝝻` | 17 | 4.0 | contiguous | +0.44 ± 0.17 | 36.4 | cl 2/2 ge 1/1 gr 0/1 | undiscriminable | 3 | 3 (0 firm) | +0.75 (24.2) | recognised |
+| 597 | `ޖޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 16 | 2.0 | contiguous | +0.87 ± 0.16 | 40.8 | gr 5/5 | undiscriminable | 3 | – | +0.91 (≥1e4) | recognised |
+| 598 | `ÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×` | 16 | 2.0 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 599 | `⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎⠏⠐` | 16 | 3.0 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.94 (≥1e4) | recognised |
+| 600 | `⁹₉⁸₈⁷₇⁶₆⁵₅⁴₄³₃²₂` | 16 | 2.9 | other | +0.69 ± 0.18 | 6.83e+03 | cl 5/5 ge 1/1 gr 2/2 | undecided 0/17 | 5 | – | +0.99 (≥1e4) | recognised |
+| 601 | `⺃⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑⺒` | 16 | 3.0 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
+| 602 | `㌎㌏㌐㌑㌒㌓㌔㌕㌖㌗㌘㌙㌚㌛㌜㌝` | 16 | 3.0 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.69 (≥1e4) | recognised |
+| 603 | `ԱԲԳԴԵԶԷԸԹԺԻԽԼԾԿՀ` | 16 | 2.0 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/2 | 5 | – | +0.29 (0.25) | recognised |
+| 604 | `⾮⾯⾰⾱⾲⾳⾴⾵⾶⾷⾸⾹⾺⾻⾼⾽` | 16 | 3.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.58 (4.33) | recognised |
+| 605 | `㇀㇁㇂㇃㇄㇅㇆㇇㇈㇉㇊㇋㇌㇍㇎㇏` | 16 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
+| 606 | `𒐰𒐱𒐲𒐳𒐴𒐵𒐶𒐷𒐸𒐹𒐺𒐻𒐼𒐽𒐾𒐿` | 16 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 607 | `ㅣㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱㅲ` | 16 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 608 | `àáâãäåæçèéêëìíîï` | 16 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.62 (≥1e4) | recognised |
+| 609 | `ሏሎልሌላሊሉለሗሖሕሔሓሒሑሐ` | 16 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 3 | 3 (0 firm) | +0.75 (≥1e4) | recognised |
+| 610 | `⊕⊖⊗⊘⊙⊚⊛⊜⊝⊞⊟⊠⊡⊢⊣⊤` | 16 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.58 (2) | recognised |
+| 611 | `▀▁▂▃▄▅▆▇█▉▊▋▌▍▎▏` | 16 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.96 (≥1e4) | recognised |
+| 612 | `◰◱◲◳◴◵◶◷◸◹◺◻◼◽◾◿` | 16 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 6 (0 firm) | +0.63 (≥1e4) | recognised |
+| 613 | `⛠⛡⛢⛣⛤⛥⛦⛧⛨⛩⛪⛫⛬⛭⛮⛯` | 16 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 614 | `⽃⽄⽅⽆⽇⽈⽉⽊⽋⽌⽍⽎⽏⽐⽑⽒` | 16 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
+| 615 | `〰〱〲〳〴〵〶〷〸〹〺〻〼〽〾〿` | 16 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.69 (6.57e+03) | recognised |
+| 616 | `㆐㆑㆒㆓㆔㆕㆖㆗㆘㆙㆚㆛㆜㆝㆞㆟` | 16 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
+| 617 | `㈍㈎㈏㈐㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚㈛㈜` | 16 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
+| 618 | `㈶㈷㈸㈹㈺㈻㈼㈽㈾㈿㉀㉁㉂㉃㉄㉅` | 16 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.40 (0.833) | recognised |
+| 619 | `㊰㊱㊲㊳㊴㊵㊶㊷㊸㊹㊺㊻㊼㊽㊾㊿` | 16 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.93 (≥1e4) | recognised |
+| 620 | `𝃏𝃞𝃝𝃜𝃛𝃚𝃙𝃘𝃗𝃖𝃕𝃔𝃓𝃒𝃑𝃐` | 16 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | +0.69 (471) | recognised |
+| 621 | `𝍀𝍁𝍂𝍃𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎𝍏` | 16 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
+| 622 | `🄒🄓🄔🄕🄖🄗🄘🄙🄚🄛🄜🄝🄞🄟🄠🄡` | 16 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
+| 623 | `🜒🜓🜔🜕🜖🜗🜘🜙🜚🜛🜜🜝🜞🜟🜠🜡` | 16 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 624 | `🭣🭤🭥🭦🭧🭨🭩🭪🭫🭬🭭🭮🭯🭰🭱🭲` | 16 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.85 (≥1e4) | recognised |
+| 625 | `🮠🮡🮢🮣🮤🮥🮦🮧🮨🮩🮪🮫🮬🮭🮮🮯` | 16 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
+| 626 | `🏟🏠🏡🏢🏣🏤🏥🏦🏧🏨🏩🏪🏫🏬🏭🏮` | 16 | 4.0 | contiguous | +0.57 ± 0.16 | 75.4 | cl 2/2 ge 1/2 gr 1/1 | undiscriminable | 3 | – | +0.57 (164) | recognised |
+| 627 | `𝜶𝜷𝜸𝜹𝜺𝜻𝜼𝜽𝜾𝜿𝝀𝝁𝝂𝝃𝒐𝝅` | 16 | 4.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/6 | 5 | – | – | recognised |
+| 628 | `↨↩↪↫↬↭↮↯↰↱↲↳↴↵↶↷` | 16 | 3.0 | contiguous | +0.54 ± 0.16 | 46.1 | cl 2/2 ge 1/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.43 (≥1e4) | recognised |
+| 629 | `⫌⫍⫎⫏⫐⫑⫒⫓⫔⫕⫖⫗⫘⫙⫚⫛` | 16 | 3.0 | contiguous | +0.59 ± 0.20 | 95.9 | cl 3/4 gr 1/1 | undiscriminable | 3 | – | +0.65 (≥1e4) | recognised |
+| 630 | `㋀㋃㋆㋉㋌㋏㋒㋕㋘㋛㋞㋡㋤㋧㋪㋭` | 16 | 3.0 | monotone | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 1/28 | 3 | 1 (0 firm) | +0.85 (≥1e4) | recognised |
+| 631 | `☾☽☼☻☺☹☸☷☶☵☴☳☲☱☰⚌` | 16 | 3.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | – | +0.78 (≥1e4) | recognised |
+| 632 | `𒐀𒐂𒐄𒐆𒐈𒐊𒐌𒐎𒐐𒐒𒐔𒐖𒐘𒐚𒐜𒐞` | 16 | 4.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/28 | 3 | – | +0.64 (6.5) | recognised |
+| 633 | `αγεηιλνορστυφχψω` | 16 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/17 | 3 | 3 (0 firm) | +0.92 (≥1e4) | recognised |
+| 634 | `абвгфхцчшщъыьэюя` | 16 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 3 | – | +0.58 (2) | recognised |
+| 635 | `ᬎᬐᬒᬔᬖᬘᬚᬜᬞᬠᬢᬤᬦᬨᬪᬬ` | 16 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/28 | 3 | – | +0.62 (60.7) | recognised |
+| 636 | `⠁⠃⠉⠙⠑⠋⠛⠓⠊⠚⠅⠇⠍⠝⠕⠏` | 16 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/26 | 5 | – | +0.93 (≥1e4) | recognised |
+| 637 | `一十百千万亿兆京垓秭穣溝澗正載極` | 16 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/37 | 3 | 3 (0 firm) | +0.99 (≥1e4) | recognised |
+| 638 | `一十百千万億兆京垓𥝱穣溝澗正載極` | 16 | 3.1 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 5/37 | 3 | 4 (0 firm) | +0.98 (≥1e4) | recognised |
+| 639 | `🕗🕢🕖🕡🕕🕠🕔🕟🕓🕞🕒🕝🕑🕜🕐🕧` | 16 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 5/18 | 3 | 5 (0 firm) | +0.93 (≥1e4) | recognised |
+| 640 | `⏰⏱⏲⏳⏴⏵⏶⏷⏸⏹⏺⏻⏼⏽⏾⏿` | 16 | 3.0 | contiguous | +0.46 ± 0.17 | 17.5 | cl 2/2 ge 0/1 gr 1/1 | undiscriminable | 5 | 1 (0 firm) | +0.25 (0.339) | recognised |
+| 641 | `➢➣➤➥➦➧➨➩➪➫➬➭➮➯➰➱` | 16 | 3.0 | contiguous | +0.46 ± 0.17 | 17.5 | cl 2/2 ge 0/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 642 | `𝠀𝠁𝠂𝠃𝠄𝠅𝠆𝠇𝠈𝠉𝠊𝠋𝠌𝠍𝠎` | 15 | 4.0 | contiguous | +0.67 ± 0.15 | ≥1e4 | cl 3/3 ge 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 643 | `⽃⽄⽅⽆⽇⽈⽉⽊⽋⽌⽍⽎⽏⽐⽑` | 15 | 3.0 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
+| 644 | `⩏⩐⩑⩒⩓⩔⩕⩖⩗⩘⩙⩚⩛⩜⩝` | 15 | 3.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 645 | `㌅㌆㌇㌈㌉㌊㌋㌌㌍㌎㌏㌐㌑㌒㌓` | 15 | 3.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.75 (≥1e4) | recognised |
+| 646 | `ʝʞʡʢʣʤʥʦʧʨʩʪʫʬʭ` | 15 | 2.0 | monotone | +0.69 ± 0.20 | 32.8 | cl 2/2 gr 2/2 | undecided 0/2 | 5 | – | – | recognised |
+| 647 | `🠪🠫🠬🠭🠮🠯🠰🠱🠲🠳🠴🠵🠶🠷🠸` | 15 | 4.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.68 (3.2e+03) | recognised |
+| 648 | `⯟⯠⯡⯢⯣⯤⯥⯦⯧⯨⯩⯪⯫⯬⯭` | 15 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
+| 649 | `𝍀𝍁𝍂𝍃𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎` | 15 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
+| 650 | `᧡᧢᧣᧤᧥᧦᧧᧨᧩᧪᧫᧬᧭᧮᧯` | 15 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 651 | `㈷㈸㈹㈺㈻㈼㈽㈾㈿㉀㉁㉂㉃㉄㉅` | 15 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.40 (0.833) | recognised |
+| 652 | `𝛪𝛫𝛬𝛭𝛮𝛯𝛰𝛱𝛲𝛳𝛴𝛵𝛶𝛷𝛸` | 15 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.76 (≥1e4) | recognised |
+| 653 | `🜓🜔🜕🜖🜗🜘🜙🜚🜛🜜🜝🜞🜟🜠🜡` | 15 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 654 | `ޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 15 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.91 (≥1e4) | recognised |
+| 655 | `↩↪↫↬↭↮↯↰↱↲↳↴↵↶↷` | 15 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.43 (≥1e4) | recognised |
+| 656 | `⊸⊹⊺⊻⊼⊽⊾⊿⋀⋁⋂⋃⋄⋅⋆` | 15 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.40 (0.843) | recognised |
+| 657 | `␀␁␂␃␄␅␆␇␈␉␊␋␌␍␎` | 15 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.67 (60.7) | recognised |
+| 658 | `␒␓␔␕␖␗␘␙␚␛␜␝␞␟␠` | 15 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.49 (1.5) | recognised |
+| 659 | `␘␙␚␛␜␝␞␟␠␡␢␣␤␥␦` | 15 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.52 (4.79) | recognised |
+| 660 | `▁▂▃▄▅▆▇█▉▊▋▌▍▎▏` | 15 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.96 (≥1e4) | recognised |
+| 661 | `⧬⧭⧮⧯⧰⧱⧲⧳⧴⧵⧶⧷⧸⧹⧺` | 15 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.58 (5.97) | recognised |
+| 662 | `⩩⩪⩫⩬⩭⩮⩯⩰⩱⩲⩳⩴⩵⩶⩷` | 15 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.89 (≥1e4) | recognised |
+| 663 | `𝌀𝌁𝌂𝌃𝌄𝌅𝌆𝌇𝌈𝌉𝌊𝌋𝌌𝌍𝌎` | 15 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.91 (≥1e4) | recognised |
+| 664 | `🜚🜛🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧🜨` | 15 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
+| 665 | `🟇🟈🟉🟊🟋🟌🟍🟎🟏🟐🟑🟒🟓🟔🟕` | 15 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
+| 666 | `🢐🢑🢒🢓🢔🢕🢖🢗🢘🢙🢚🢛🢜🢝🢞` | 15 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 667 | `🭤🭥🭦🭧🭨🭩🭪🭫🭬🭭🭮🭯🭰🭱🭲` | 15 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.83 (≥1e4) | recognised |
+| 668 | `🀎🀐🀒🀔🀖🀘🀚🀜🀞🀠🀢🀤🀦🀨🀪` | 15 | 4.0 | monotone | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 2/26 | 3 | – | +0.94 (≥1e4) | recognised |
+| 669 | `㋀㋃㋆㋉㋌㋏㋒㋕㋘㋛㋞㋡㋤㋧㋪` | 15 | 3.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/26 | 3 | 1 (0 firm) | +0.85 (≥1e4) | recognised |
+| 670 | `🐙🐚🐛🐜🐝🐞🐟🐠🐡🐢🐣🐤🐥🐦🐧` | 15 | 4.0 | contiguous | +0.59 ± 0.21 | 97 | cl 2/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 671 | `ڛښڙݘݗݖݕݔݓݒݑݐݏݎݍ` | 15 | 2.0 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
+| 672 | `ᬉᬌᬏᬒᬕᬘᬛᬞᬡᬤᬧᬪᬭᬰᬳ` | 15 | 3.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/26 | 5 | – | +0.80 (≥1e4) | recognised |
+| 673 | `ⅰⅠⅱⅡⅲⅢⅳⅣⅴⅤⅵⅥⅶⅦⅷ` | 15 | 3.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/15 | 5 | 1 (0 firm) | +0.98 (≥1e4) | recognised |
+| 674 | `𝌁𝌃𝌅𝌇𝌉𝌋𝌍𝌏𝌑𝌓𝌕𝌗𝌙𝌛𝌝` | 15 | 4.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/26 | 5 | – | +0.67 (181) | recognised |
+| 675 | `aBcDeFgHiJkLmNo` | 15 | 1.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 4/39 | 3 | – | +0.81 (≥1e4) | recognised |
+| 676 | `бвгфхцчшщъыьэюя` | 15 | 2.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/2 | 3 | – | +0.58 (2) | recognised |
+| 677 | `ᚋᚍᚎᚏᚐᚑᚒᚓᚔᚕᚖᚗᚘᚙᚚ` | 15 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/1 | 5 | – | +0.83 (≥1e4) | recognised |
+| 678 | `▁▂▃▄▅▆▇█🮆🮅🮄▀🮃🮂▔` | 15 | 3.3 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/5 | 3 | 2 (0 firm) | +0.98 (≥1e4) | recognised |
+| 679 | `🀀🀃🀆🀉🀌🀏🀒🀕🀘🀛🀞🀡🀤🀧🀪` | 15 | 4.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/26 | 3 | – | +0.90 (≥1e4) | recognised |
+| 680 | `ίϋωχυσρονλιηεγα` | 15 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/27 | 5 | 2 (0 firm) | +0.93 (≥1e4) | recognised |
+| 681 | `ԱԲԳԴԵԶԷԸԹԺԻԼԽՁՂ` | 15 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.71 (≥1e4) | recognised |
+| 682 | `ܝܟܠܡܢܣܤܥܦܧܨܩܪܫܬ` | 15 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 3 | 1 (0 firm) | +0.78 (≥1e4) | recognised |
+| 683 | `┽┼┻┺┹┸┷┶┵┴┳┲┱┰┿` | 15 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | 1 (0 firm) | – | recognised |
+| 684 | `➔🠒🠖🠚🠞🠢🠦🠪🠮🠲🠶🠺🠾🡂🡆` | 15 | 3.9 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/26 | 3 | – | +0.71 (≥1e4) | recognised |
+| 685 | `➭➯➱➲➳➴➵➶➷➸➹➺➻➼➽` | 15 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | 1 (0 firm) | – | recognised |
+| 686 | `㋍㋏㋑㋓㋕㋗㋙㋛㋝㋟㋡㋣㋥㋧㋩` | 15 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/26 | 5 | – | +0.66 (1.22e+03) | recognised |
+| 687 | `🀁🀄🀇🀊🀍🀐🀓🀖🀙🀜🀟🀢🀥🀨🀫` | 15 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/26 | 3 | – | +0.87 (≥1e4) | recognised |
+| 688 | `🥟🥮🥭🥬🥫🥪🥩🥨🥧🥦🥥🥤🥣🥢🥡` | 15 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | +0.33 (0.333) | recognised |
+| 689 | `ⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹⅼⅽⅾⅿ` | 14 | 3.0 | monotone | +0.74 ± 0.18 | 495 | cl 4/4 gr 2/2 | undecided 0/2 | 3 | 1 (0 firm) | +0.95 (≥1e4) | recognised |
+| 690 | `😄🙂😐🙁😟😞😢😭😩😫😤😠😡🤬` | 14 | 4.0 | other | +0.74 ± 0.18 | 495 | cl 4/4 gr 2/2 | undecided 2/23 | 5 | 4 (0 firm) | +0.88 (≥1e4) | recognised |
+| 691 | `⼀⼁⼂⼃⼄⼅⼆⼇⼈⼉⼊⼋⼌⼍` | 14 | 3.0 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 692 | `🯠🯡🯢🯣🯤🯥🯦🯧🯨🯩🯪🯫🯬🯭` | 14 | 4.0 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 693 | `㌏㌐㌑㌒㌓㌔㌕㌖㌗㌘㌙㌚㌛㌜` | 14 | 3.0 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.62 (88.1) | recognised |
+| 694 | `𝍁𝍂𝍃𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎` | 14 | 4.0 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 2 | – | +0.84 (≥1e4) | recognised |
+| 695 | `𝅐𝅑𝅒𝅓𝅔𝅕𝅖𝅗𝅘𝅙𝅚𝅛𝅜𝅝` | 14 | 4.0 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.46 (2.33) | recognised |
+| 696 | `˥˦˧˨˩˪˫ˬ˭ˮ˯˰˱˲` | 14 | 2.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
+| 697 | `⽃⽄⽅⽆⽇⽈⽉⽊⽋⽌⽍⽎⽏⽐` | 14 | 3.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
+| 698 | `🂱🂲🂳🂴🂵🂶🂷🂸🂹🂺🂻🂼🂽🂾` | 14 | 4.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 699 | `🜔🜕🜖🜗🜘🜙🜚🜛🜜🜝🜞🜟🜠🜡` | 14 | 4.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 700 | `🂡🂮🂭🂬🂫🂪🂩🂨🂧🂦🂥🂤🂣🂢` | 14 | 4.0 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 0/1 | 3 | 1 (0 firm) | +0.57 (≥1e4) | recognised |
+| 701 | `ŲųŴŵŶŷŸŹźŻżŽžſ` | 14 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.50 (≥1e4) | recognised |
+| 702 | `ٱٲٳٴٵٶٷٸٹٺٻټٽپ` | 14 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 703 | `ޘޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 14 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.91 (≥1e4) | recognised |
+| 704 | `␙␚␛␜␝␞␟␠␡␢␣␤␥␦` | 14 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.52 (4.79) | recognised |
+| 705 | `⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎` | 14 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.89 (≥1e4) | recognised |
+| 706 | `⧬⧭⧮⧯⧰⧱⧲⧳⧴⧵⧶⧷⧸⧹` | 14 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.58 (5.97) | recognised |
+| 707 | `ㅤㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰㅱ` | 14 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 708 | `㈸㈹㈺㈻㈼㈽㈾㈿㉀㉁㉂㉃㉄㉅` | 14 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.40 (0.833) | recognised |
+| 709 | `𐡚𐡛𐡜𐡝𐡞𐡟𐡠𐡡𐡢𐡣𐡤𐡥𐡦𐡧` | 14 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 710 | `𝛫𝛬𝛭𝛮𝛯𝛰𝛱𝛲𝛳𝛴𝛵𝛶𝛷𝛸` | 14 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.73 (≥1e4) | recognised |
+| 711 | `🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪🂫🂬🂭🂮` | 14 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.90 (≥1e4) | recognised |
+| 712 | `🃑🃒🃓🃔🃕🃖🃗🃘🃙🃚🃛🃜🃝🃞` | 14 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 713 | `🄓🄔🄕🄖🄗🄘🄙🄚🄛🄜🄝🄞🄟🄠` | 14 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
+| 714 | `🜠🜡🜢🜣🜤🜥🜦🜧🜨🜩🜪🜫🜬🜭` | 14 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.85 (≥1e4) | recognised |
+| 715 | `⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑` | 14 | 3.0 | contiguous | +0.57 ± 0.16 | 75.4 | cl 2/2 ge 1/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 716 | `㋀㋃㋆㋉㋌㋏㋒㋕㋘㋛㋞㋡㋤㋧` | 14 | 3.0 | monotone | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 1/24 | 3 | 1 (0 firm) | +0.85 (≥1e4) | recognised |
+| 717 | `⡁⡃⡅⡇⡉⡋⡍⡏⡑⡓⡕⡗⡙⡛` | 14 | 3.0 | monotone | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/24 | 5 | – | +0.58 (2) | recognised |
+| 718 | `BcDeFgHiJkLmNo` | 14 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/36 | 3 | – | +0.78 (≥1e4) | recognised |
+| 719 | `ڕݙݘݗݖݕݔݓݒݑݐݏݎݍ` | 14 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
+| 720 | `ᚁᚃᚅᚇᚉᚋᚍᚏᚑᚓᚕᚗᚙ᚛` | 14 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/24 | 3 | – | +0.76 (≥1e4) | recognised |
+| 721 | `ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅬⅭⅮⅯ` | 14 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 3 | – | +0.99 (≥1e4) | recognised |
+| 722 | `⡝⡟⡼⡽⡾⡿⣸⣹⣺⣻⣼⣽⣾⣿` | 14 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | 4 (0 firm) | +0.70 (≥1e4) | recognised |
+| 723 | `⢄⢂⢀⢞⢜⢚⢘⢖⢔⢒⢐⢎⢌⢊` | 14 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/26 | 5 | – | +0.44 (225) | recognised |
+| 724 | `〇一二三四五六七八九十百千万` | 14 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 10/32 | 3 | 2 (0 firm) | +0.98 (≥1e4) | recognised |
+| 725 | `꜆꜈꜊꜌꜎꜐꜒꜔꜖ꜘꜚꜜꜞ꜠` | 14 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/24 | 3 | – | +0.85 (≥1e4) | recognised |
+| 726 | `🂮🂭🂫🂪🂩🂨🂧🂦🂥🂤🂣🂢🂡🃞` | 14 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 4 | 2 (0 firm) | +0.89 (≥1e4) | recognised |
+| 727 | `🕒🕝🕑🕜🕐🕧🕦🕥🕤🕣🕢🕡🕠🕟` | 14 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/11 | 5 | – | +0.89 (≥1e4) | recognised |
+| 728 | `ݓݔݕݖݗݘݙݚݛݜݝݞݟ` | 13 | 2.0 | contiguous | +0.68 ± 0.17 | ≥1e4 | cl 4/4 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 729 | `𝍂𝍃𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎` | 13 | 4.0 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
+| 730 | `🯡🯢🯣🯤🯥🯦🯧🯨🯩🯪🯫🯬🯭` | 13 | 4.0 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 731 | `ӃӄӅӆӇӈӉӊӋӌӍӎӏ` | 13 | 2.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 732 | `㌆㌇㌈㌉㌊㌋㌌㌍㌎㌏㌐㌑㌒` | 13 | 3.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.74 (≥1e4) | recognised |
+| 733 | `🆡🆢🆣🆤🆥🆦🆧🆨🆩🆪🆫🆬🆭` | 13 | 4.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.74 (≥1e4) | recognised |
+| 734 | `ѠѡѢѣѤѥѦѧѨѩѪѫѬ` | 13 | 2.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 735 | `≓≔≕≖≗≘≙≚≛≜≝≞≟` | 13 | 3.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.55 (5.97) | recognised |
+| 736 | `ޙޚޛޜޝޞޟޠޡޢޣޤޥ` | 13 | 2.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.90 (≥1e4) | recognised |
+| 737 | `⊕⊖⊗⊘⊙⊚⊛⊜⊝⊞⊟⊠⊡` | 13 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 738 | `🮣🮤🮥🮦🮧🮨🮩🮪🮫🮬🮭🮮🮯` | 13 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
+| 739 | `🯐🯑🯒🯓🯔🯕🯖🯗🯘🯙🯚🯛🯜` | 13 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.76 (≥1e4) | recognised |
+| 740 | `⪳⪴⪵⪶⪷⪸⪹⪺⪻⪼⪽⪾⪿` | 13 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 741 | `⺛⺜⺝⺞⺟⺠⺡⺢⺣⺤⺥⺦⺧` | 13 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 2 | – | +0.58 (4.33) | recognised |
+| 742 | `𐆐𐆑𐆒𐆓𐆔𐆕𐆖𐆗𐆘𐆙𐆚𐆛𐆜` | 13 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.68 (4.17e+03) | recognised |
+| 743 | `𝜥𝜦𝜧𝜨𝜩𝜪𝜫𝜬𝜭𝜮𝜯𝜰𝜱` | 13 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 6 (0 firm) | +0.78 (≥1e4) | recognised |
+| 744 | `🌠🌡🌢🌣🌤🌥🌦🌧🌨🌩🌪🌫🌬` | 13 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.59 (154) | recognised |
+| 745 | `🜛🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦🜧` | 13 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.85 (≥1e4) | recognised |
+| 746 | `ᄆᄇᄈᄉᄊᄋᄌᄍᄎᄏᄐᄑᄒ` | 13 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.67 (≥1e4) | recognised |
+| 747 | `⋳⋴⋵⋶⋷⋸⋹⋺⋻⋼⋽⋾⋿` | 13 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
+| 748 | `⣓⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟` | 13 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | +0.64 (≥1e4) | recognised |
+| 749 | `⩕⩖⩗⩘⩙⩚⩛⩜⩝⩞⩟⩠⩡` | 13 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 750 | `⩩⩪⩫⩬⩭⩮⩯⩰⩱⩲⩳⩴⩵` | 13 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.88 (≥1e4) | recognised |
+| 751 | `𐡛𐡜𐡝𐡞𐡟𐡠𐡡𐡢𐡣𐡤𐡥𐡦𐡧` | 13 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 752 | `🟅🟆🟇🟈🟉🟊🟋🟌🟍🟎🟏🟐🟑` | 13 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.88 (≥1e4) | recognised |
+| 753 | `ԖԘԚԜԞԠԢԤԦԨԪԬԮ` | 13 | 2.0 | monotone | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/22 | 3 | – | – | recognised |
+| 754 | `ⓗⓘⒿⓚⓛⓂⓝⓞⓅⓠⓡⓈⓣ` | 13 | 3.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/27 | 5 | – | +0.87 (≥1e4) | recognised |
+| 755 | `🕐🕜🕝🕞🕟🕠🕡🕢🕣🕤🕥🕦🕧` | 13 | 4.0 | monotone | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/1 | 5 | – | +0.78 (≥1e4) | recognised |
+| 756 | `ᚃᚅᚇᚉᚋᚍᚏᚑᚓᚕᚗᚙ᚛` | 13 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/22 | 3 | – | +0.82 (≥1e4) | recognised |
+| 757 | `ᬒᬔᬖᬘᬚᬜᬞᬠᬢᬤᬦᬨᬪ` | 13 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/22 | 3 | – | +0.65 (4.33) | recognised |
+| 758 | `⊈⊉⊊⊋⊌⊍⊎⊐⊒⊑⊔⊓⊠` | 13 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/8 | 5 | – | – | recognised |
+| 759 | `❽❾⓾⓫⓬⓭⓮⓯⓰⓱⓲⓳⓴` | 13 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/7 | 3 | 2 (0 firm) | +0.88 (≥1e4) | recognised |
+| 760 | `▁▃▅▆▇█▉▊▋▌▍▎▏` | 13 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | +0.95 (≥1e4) | recognised |
+| 761 | `𝍠𝍢𝍤𝍦𝍨𝍪𝍬𝍮𝍰𝍲𝍴𝍶𝍸` | 13 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/22 | 3 | – | +0.89 (≥1e4) | recognised |
+| 762 | `𝑁𝛯𝑂𝛱Ρ𝛳𝛴𝑇𝛶𝛷𝛸𝛹𝛺` | 13 | 3.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/17 | 5 | 1 (0 firm) | +0.70 (≥1e4) | recognised |
+| 763 | `🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪🂫🂭🂮` | 13 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 2 | 1 (0 firm) | +0.89 (≥1e4) | recognised |
+| 764 | `🙂😐🙁😟😞😢😭😩😫😤😠😡🤬` | 13 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/20 | 5 | 2 (0 firm) | +0.86 (≥1e4) | recognised |
+| 765 | `㈏㈐㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚` | 12 | 3.0 | contiguous | +0.87 ± 0.16 | 40.8 | gr 5/5 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
+| 766 | `⩕⩖⩗⩘⩙⩚⩛⩜⩝⩞⩟⩠` | 12 | 3.0 | contiguous | +0.74 ± 0.15 | ≥1e4 | cl 5/5 ge 1/1 gr 2/2 | undiscriminable | 3 | – | – | recognised |
+| 767 | `ԘԚԜԞԠԢԤԦԨԪԬԮ` | 12 | 2.0 | monotone | +0.72 ± 0.18 | 9.65e+03 | cl 6/6 gr 2/2 | undecided 0/20 | 3 | – | – | recognised |
+| 768 | `♏♎♍♌♋♊♉♈♓♒♑♐` | 12 | 3.0 | other | +0.68 ± 0.17 | ≥1e4 | cl 4/4 ge 1/1 gr 1/1 | positive 1/6 | 3 | – | – | recognised |
+| 769 | `♔♕♖♗♘♙♚♛♜♝♞♟` | 12 | 3.0 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 3 | – | +0.77 (≥1e4) | recognised |
+| 770 | `𝍃𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎` | 12 | 4.0 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 2 | – | +0.84 (≥1e4) | recognised |
+| 771 | `♊♉♈♓♒♑♐♏♎♍♌♋` | 12 | 3.0 | other | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | positive 1/6 | 3 | – | – | recognised |
+| 772 | `♌♋♊♉♈♓♒♑♐♏♎♍` | 12 | 3.0 | other | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | positive 1/6 | 3 | – | – | recognised |
+| 773 | `♒♑♐♏♎♍♌♋♊♉♈♓` | 12 | 3.0 | other | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/3 | 3 | – | – | recognised |
+| 774 | `ݓݔݕݖݗݘݙݚݛݜݝݞ` | 12 | 2.0 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 775 | `♈♓♒♑♐♏♎♍♌♋♊♉` | 12 | 3.0 | other | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/3 | 3 | – | – | recognised |
+| 776 | `♍♌♋♊♉♈♓♒♑♐♏♎` | 12 | 3.0 | other | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | positive 1/6 | 3 | – | – | recognised |
+| 777 | `🔴🔵🔶🔷🔸🔹🔺🔻🔼🔽🔾🔿` | 12 | 4.0 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 778 | `♉♈♓♒♑♐♏♎♍♌♋♊` | 12 | 3.0 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | positive 1/6 | 3 | – | – | recognised |
+| 779 | `♋♊♉♈♓♒♑♐♏♎♍♌` | 12 | 3.0 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | positive 1/6 | 3 | – | – | recognised |
+| 780 | `♎♍♌♋♊♉♈♓♒♑♐♏` | 12 | 3.0 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | positive 1/6 | 3 | – | – | recognised |
+| 781 | `♐♏♎♍♌♋♊♉♈♓♒♑` | 12 | 3.0 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | positive 1/6 | 3 | – | – | recognised |
+| 782 | `♑♐♏♎♍♌♋♊♉♈♓♒` | 12 | 3.0 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | positive 1/6 | 3 | – | – | recognised |
+| 783 | `⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋` | 12 | 3.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.61 (≥1e4) | recognised |
+| 784 | `⪳⪴⪵⪶⪷⪸⪹⪺⪻⪼⪽⪾` | 12 | 3.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 785 | `⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐` | 12 | 3.0 | contiguous | +0.63 ± 0.17 | 435 | cl 2/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 786 | `ɜɝɞɟɠɡɢɣɤɥɦɧ` | 12 | 2.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.75 (≥1e4) | recognised |
+| 787 | `𝄛𝄜𝄝𝄞𝄟𝄠𝄡𝄢𝄣𝄤𝄥𝄦` | 12 | 4.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 5 | – | +0.75 (≥1e4) | recognised |
+| 788 | `🕜🕝🕞🕟🕠🕡🕢🕣🕤🕥🕦🕧` | 12 | 4.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 5 | – | +0.74 (≥1e4) | recognised |
+| 789 | `ޚޛޜޝޞޟޠޡޢޣޤޥ` | 12 | 2.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.90 (≥1e4) | recognised |
+| 790 | `␒␓␔␕␖␗␘␙␚␛␜␝` | 12 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.49 (1.5) | recognised |
+| 791 | `⫐⫑⫒⫓⫔⫕⫖⫗⫘⫙⫚⫛` | 12 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.65 (≥1e4) | recognised |
+| 792 | `🕚🕙🕘🕗🕖🕕🕔🕓🕒🕑🕐🕛` | 12 | 4.0 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 2/3 | 2 | – | +0.90 (≥1e4) | recognised |
+| 793 | `🄔🄕🄖🄗🄘🄙🄚🄛🄜🄝🄞🄟` | 12 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.84 (≥1e4) | recognised |
+| 794 | `🕔🕓🕒🕑🕐🕛🕚🕙🕘🕗🕖🕕` | 12 | 4.0 | other | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undecided 5/6 | 3 | – | +0.55 (≥1e4) | recognised |
+| 795 | `🕗🕖🕕🕔🕓🕒🕑🕐🕛🕚🕙🕘` | 12 | 4.0 | other | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undecided 5/6 | 3 | – | +0.62 (≥1e4) | recognised |
+| 796 | `🕙🕘🕗🕖🕕🕔🕓🕒🕑🕐🕛🕚` | 12 | 4.0 | other | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undecided 4/6 | 2 | – | +0.85 (≥1e4) | recognised |
+| 797 | `🟅🟆🟇🟈🟉🟊🟋🟌🟍🟎🟏🟐` | 12 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.87 (≥1e4) | recognised |
+| 798 | `🭴🭵🭶🭷🭸🭹🭺🭻🭼🭽🭾🭿` | 12 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.81 (≥1e4) | recognised |
+| 799 | `àáâãäåæçèéêë` | 12 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.62 (≥1e4) | recognised |
+| 800 | `ǔǕǖǗǘǙǚǛǜǝǞǟ` | 12 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.48 (2.33) | recognised |
+| 801 | `ԔԕԖԗԘԙԚԛԜԝԞԟ` | 12 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 802 | `↫↬↭↮↯↰↱↲↳↴↵↶` | 12 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.43 (≥1e4) | recognised |
+| 803 | `∴∵∶∷∸∹∺∻∼∽∾∿` | 12 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 804 | `▔▕▖▗▘▙▚▛▜▝▞▟` | 12 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.13 (30.9) | recognised |
+| 805 | `⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍` | 12 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.59 (≥1e4) | recognised |
+| 806 | `⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟` | 12 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | +0.64 (≥1e4) | recognised |
+| 807 | `⨻⨼⨽⨾⨿⩀⩁⩂⩃⩄⩅⩆` | 12 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 808 | `⩩⩪⩫⩬⩭⩮⩯⩰⩱⩲⩳⩴` | 12 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
+| 809 | `⭕⭖⭗⭘⭙⭚⭛⭜⭝⭞⭟⭠` | 12 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 810 | `ㅥㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯㅰ` | 12 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.82 (≥1e4) | recognised |
+| 811 | `㉪㉫㉬㉭㉮㉯㉰㉱㉲㉳㉴㉵` | 12 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.91 (≥1e4) | recognised |
+| 812 | `㋀㋁㋂㋃㋄㋅㋆㋇㋈㋉㋊㋋` | 12 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 2 | – | +0.93 (≥1e4) | recognised |
+| 813 | `㋁㋀㋋㋊㋉㋈㋇㋆㋅㋄㋃㋂` | 12 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 3 | 1 (0 firm) | +0.11 (≥1e4) | recognised |
+| 814 | `㋂㋁㋀㋋㋊㋉㋈㋇㋆㋅㋄㋃` | 12 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 3 | 1 (0 firm) | +0.03 (0.01) | recognised |
+| 815 | `㋄㋃㋂㋁㋀㋋㋊㋉㋈㋇㋆㋅` | 12 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 3 | 1 (0 firm) | +0.15 (8.12e+03) | recognised |
+| 816 | `㋅㋄㋃㋂㋁㋀㋋㋊㋉㋈㋇㋆` | 12 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 3 | 1 (0 firm) | +0.47 (≥1e4) | recognised |
+| 817 | `𐡜𐡝𐡞𐡟𐡠𐡡𐡢𐡣𐡤𐡥𐡦𐡧` | 12 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 818 | `🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚🕛` | 12 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 2 | – | +0.82 (≥1e4) | recognised |
+| 819 | `🕐🕛🕚🕙🕘🕗🕖🕕🕔🕓🕒🕑` | 12 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 2/3 | 2 | – | +0.51 (≥1e4) | recognised |
+| 820 | `🕒🕑🕐🕛🕚🕙🕘🕗🕖🕕🕔🕓` | 12 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 5/6 | 2 | – | +0.50 (≥1e4) | recognised |
+| 821 | `🕓🕒🕑🕐🕛🕚🕙🕘🕗🕖🕕🕔` | 12 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 5/6 | 3 | – | +0.67 (≥1e4) | recognised |
+| 822 | `🕕🕔🕓🕒🕑🕐🕛🕚🕙🕘🕗🕖` | 12 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 4/6 | 3 | – | +0.50 (≥1e4) | recognised |
+| 823 | `🕖🕕🕔🕓🕒🕑🕐🕛🕚🕙🕘🕗` | 12 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 4/6 | 3 | – | +0.50 (≥1e4) | recognised |
+| 824 | `🕘🕗🕖🕕🕔🕓🕒🕑🕐🕛🕚🕙` | 12 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 4/6 | 2 | – | +0.76 (≥1e4) | recognised |
+| 825 | `🕨🕩🕪🕫🕬🕭🕮🕯🕰🕱🕲🕳` | 12 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
+| 826 | `🞀🞁🞂🞃🞄🞅🞆🞇🞈🞉🞊🞋` | 12 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.93 (≥1e4) | recognised |
+| 827 | `🟆🟇🟈🟉🟊🟋🟌🟍🟎🟏🟐🟑` | 12 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.85 (≥1e4) | recognised |
+| 828 | `🟉🟊🟋🟌🟍🟎🟏🟐🟑🟒🟓🟔` | 12 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
+| 829 | `🡠🡡🡢🡣🡤🡥🡦🡧🡨🡩🡪🡫` | 12 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.58 (≥1e4) | recognised |
+| 830 | `🯢🯣🯤🯥🯦🯧🯨🯩🯪🯫🯬🯭` | 12 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 831 | `𒐦𒐨𒐪𒐬𒐮𒐰𒐲𒐴𒐶𒐸𒐺𒐼` | 12 | 4.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/20 | 5 | – | – | recognised |
+| 832 | `㊚㊜㊞㊠㊢㊤㊦㊨㊪㊬㊮㊰` | 12 | 3.0 | monotone | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/20 | 5 | – | – | recognised |
+| 833 | `ⅪⅺⅫⅻⅬⅼⅭⅽⅮⅾⅯⅿ` | 12 | 3.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/10 | 5 | – | +0.83 (≥1e4) | recognised |
+| 834 | `⒤⒧⒪⒭⒰⒳ⒶⒹⒼⒿⓂⓅ` | 12 | 3.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/20 | 5 | – | +0.78 (≥1e4) | recognised |
+| 835 | `🕗🕖🕕🕔🕓🕒🕑🕐🕧🕦🕥🕤` | 12 | 4.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/6 | 3 | – | +0.95 (≥1e4) | recognised |
+| 836 | `0123456789🔟⑪` | 12 | 1.4 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/3 | 5 | 2 (0 firm) | +0.96 (≥1e4) | recognised |
+| 837 | `ⓒⓔⓖⓘⓚⓜⓞⓡⓣⓥⓧⓩ` | 12 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/20 | 5 | – | +0.86 (≥1e4) | recognised |
+| 838 | `꜀꜂꜄꜆꜈꜊꜌꜎꜐꜒꜔꜖` | 12 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/20 | 3 | – | +0.86 (≥1e4) | recognised |
+| 839 | `_▁▂▃▄▅▆▇█🮆🮅🮄` | 12 | 3.1 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 4 | – | +0.98 (≥1e4) | recognised |
+| 840 | `ԀԂԄԆԈԊԌԎԐԒԔԖ` | 12 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/20 | 5 | – | – | recognised |
+| 841 | `ᑲᑳᒐᒑᒪᒫᓇᓈᓴᓵᔭᔮ` | 12 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/10 | 5 | – | – | recognised |
+| 842 | `ᚅᚇᚉᚋᚍᚏᚑᚓᚕᚗᚙ᚛` | 12 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/20 | 3 | – | +0.82 (≥1e4) | recognised |
+| 843 | `⊕⊗⊘⊙⊚⊛⊜⊝⊞⊟⊠⊡` | 12 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 3 | – | – | recognised |
+| 844 | `♷⚅⚆⚇⚈⚉⚊⚋⚌⚍⚎⚏` | 12 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | 1 (0 firm) | +0.82 (≥1e4) | recognised |
+| 845 | `𝙉𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕` | 12 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.78 (471) | recognised |
+| 846 | `🀁🀃🀅🀇🀉🀋🀍🀏🀑🀓🀕🀗` | 12 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/20 | 3 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
+| 847 | `🕖🕕🕔🕓🕒🕑🕐🕧🕦🕥🕤🕣` | 12 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/6 | 5 | – | +0.94 (≥1e4) | recognised |
+| 848 | `./0123456789` | 12 | 1.0 | contiguous | +0.56 ± 0.21 | 17.5 | cl 2/3 gr 1/1 | undiscriminable | 2 | 2 (0 firm) | +0.96 (≥1e4) | recognised |
+| 849 | `🦤🦥🦦🦧🦨🦩🦪🦫🦬🦭🦮🦯` | 12 | 4.0 | contiguous | +0.29 ± 0.21 | 125 | cl 3/3 gr 0/1 | undiscriminable | 5 | – | – | recognised |
+| 850 | `⓿➊➋➌➍➎➏➐➑➒➓` | 11 | 3.0 | monotone | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 0/1 | 3 | – | +0.95 (≥1e4) | recognised |
+| 851 | `𝍄𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎` | 11 | 4.0 | contiguous | +0.67 ± 0.15 | ≥1e4 | cl 3/3 ge 2/2 gr 1/1 | undiscriminable | 2 | – | +0.84 (≥1e4) | recognised |
+| 852 | `⥵⥶⥷⥸⥹⥺⥻⥼⥽⥾⥿` | 11 | 3.0 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 853 | `ݓݔݕݖݗݘݙݚݛݜݝ` | 11 | 2.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 854 | `⩕⩖⩗⩘⩙⩚⩛⩜⩝⩞⩟` | 11 | 3.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 855 | `⪳⪴⪵⪶⪷⪸⪹⪺⪻⪼⪽` | 11 | 3.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 856 | `㌇㌈㌉㌊㌋㌌㌍㌎㌏㌐㌑` | 11 | 3.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.74 (≥1e4) | recognised |
+| 857 | `⑀⑁⑂⑃⑄⑅⑆⑇⑈⑉⑊` | 11 | 3.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.75 (≥1e4) | recognised |
+| 858 | `⫤⫥⫦⫧⫨⫩⫪⫫⫬⫭⫮` | 11 | 3.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 859 | `𝞸𝞹𝞺𝞻𝞼𝞽𝞾𝞿𝟀𝟁𝟂` | 11 | 4.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.73 (≥1e4) | recognised |
+| 860 | `🕐🕑🕒🕓🕔🕕🕖🕗🕘🕙🕚` | 11 | 4.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 2 | – | +0.95 (≥1e4) | recognised |
+| 861 | `↫↬↭↮↯↰↱↲↳↴↵` | 11 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.41 (≥1e4) | recognised |
+| 862 | `☠☡☢☣☤☥☦☧☨☩☪` | 11 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 863 | `🆡🆢🆣🆤🆥🆦🆧🆨🆩🆪🆫` | 11 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | +0.73 (≥1e4) | recognised |
+| 864 | `🜕🜖🜗🜘🜙🜚🜛🜜🜝🜞🜟` | 11 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.82 (≥1e4) | recognised |
+| 865 | `🜜🜝🜞🜟🜠🜡🜢🜣🜤🜥🜦` | 11 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
+| 866 | `⅒⅛⅙¼⅓½⅔¾⅘⅚⅞` | 11 | 2.7 | other | +0.63 ± 0.18 | 644 | cl 3/3 ge 2/2 gr 1/1 | positive 2/13 | 3 | 6 (0 firm) | +0.91 (≥1e4) | recognised |
+| 867 | `ޛޜޝޞޟޠޡޢޣޤޥ` | 11 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
+| 868 | `⩬⩭⩮⩯⩰⩱⩲⩳⩴⩵⩶` | 11 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.89 (≥1e4) | recognised |
+| 869 | `၉၈၇၆၅၄၃၂၁၀−` | 11 | 3.0 | other | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 0/2 | 4 | – | +0.91 (≥1e4) | recognised |
+| 870 | `˵˶˷˸˹˺˻˼˽˾˿` | 11 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.74 (≥1e4) | recognised |
+| 871 | `⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟` | 11 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.64 (≥1e4) | recognised |
+| 872 | `⭕⭖⭗⭘⭙⭚⭛⭜⭝⭞⭟` | 11 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 873 | `㈐㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚` | 11 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.94 (≥1e4) | recognised |
+| 874 | `🁹🁺🁻🁼🁽🁾🁿🂀🂁🂂🂃` | 11 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
+| 875 | `🭦🭧🭨🭩🭪🭫🭬🭭🭮🭯🭰` | 11 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.81 (≥1e4) | recognised |
+| 876 | `⎐⎑⎒⎓⎔⎕⎖⎗⎘⎙⎚` | 11 | 3.0 | contiguous | +0.57 ± 0.16 | 75.4 | cl 2/2 ge 1/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 877 | `-၀၁၂၃၄၅၆၇၈၉` | 11 | 2.8 | monotone | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/1 | 4 | – | +0.91 (≥1e4) | recognised |
+| 878 | `𝓸𝝅𝝆𝜍𝝈𝝉𝝊𝝋𝝌𝝍𝝎` | 11 | 4.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/8 | 5 | – | – | recognised |
+| 879 | `˫˭˯˱˳˵˷˹˻˽˿` | 11 | 2.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/18 | 5 | – | +0.74 (≥1e4) | recognised |
+| 880 | `0123456789🔟` | 11 | 1.3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/1 | 5 | 1 (0 firm) | +0.96 (≥1e4) | recognised |
+| 881 | `ᇿሀሁሂሃሄህሆሇለላ` | 11 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | – | recognised |
+| 882 | `㈠㈡㈢㈣㈤㈥㈦㈧㈨㈩⑪` | 11 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 4 | 2 (0 firm) | +0.99 (≥1e4) | recognised |
+| 883 | `🄁🄂🄃🄄🄅🄆🄇🄈🄉🄊⒑` | 11 | 3.9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 4 | – | +0.98 (≥1e4) | recognised |
+| 884 | `⓿❷❹❻❽❿⓬⓮⓰⓲⓴` | 11 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/18 | 3 | 2 (0 firm) | +0.95 (≥1e4) | recognised |
+| 885 | `▁▂▃▄▅▆▇█🮆🮅🮄` | 11 | 3.3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | +0.98 (≥1e4) | recognised |
+| 886 | `♈♓♒♑♐♏♎♍♌♋♊` | 11 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | – | recognised |
+| 887 | `😂😆😁😄😊🙂😐🙁☹😢😭` | 11 | 3.9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/21 | 3 | 4 (0 firm) | +0.88 (≥1e4) | recognised |
+| 888 | `🞢🞤🞦🞨🞪🞬🞮🞰🞲🞴🞶` | 11 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/18 | 3 | – | +0.91 (≥1e4) | recognised |
+| 889 | `𐡝𐡞𐡟𐡠𐡡𐡢𐡣𐡤𐡥𐡦𐡧` | 11 | 4.0 | contiguous | +0.56 ± 0.21 | 17.5 | cl 2/3 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 890 | `💵💶💷💸💹💺💻💼💽💾💿` | 11 | 4.0 | contiguous | +0.44 ± 0.17 | 36.4 | cl 2/2 ge 1/1 gr 0/1 | undiscriminable | 5 | – | – | recognised |
+| 891 | `𝞊𝞋𝞌𝞍𝞎𝞏𝞐𝞑𝞒𝞓` | 10 | 4.0 | contiguous | +0.87 ± 0.16 | 40.8 | gr 5/5 | undiscriminable | 3 | 1 (0 firm) | +0.33 (0.5) | recognised |
+| 892 | `ⅦⅷⅨⅩⅪⅫⅬⅭⅮⅯ` | 10 | 3.0 | other | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 1/6 | 5 | – | +0.92 (≥1e4) | recognised |
+| 893 | `♔♕♖♗♘♙♚♛♜♝` | 10 | 3.0 | contiguous | +0.84 ± 0.19 | 17.8 | gr 4/4 | undiscriminable | 3 | – | +0.79 (≥1e4) | recognised |
+| 894 | `🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪` | 10 | 4.0 | contiguous | +0.77 ± 0.16 | 8.83e+03 | cl 4/4 gr 2/2 | undiscriminable | 2 | – | +0.90 (≥1e4) | recognised |
+| 895 | `😟😞😢😭😩😫😤😠😡🤬` | 10 | 4.0 | other | +0.73 ± 0.18 | 2.54e+03 | cl 5/5 gr 2/2 | undecided 0/16 | 5 | 2 (0 firm) | +0.39 (2.41) | recognised |
+| 896 | `⺂⺃⺄⺅⺆⺇⺈⺉⺊⺋` | 10 | 3.0 | contiguous | +0.68 ± 0.17 | ≥1e4 | cl 4/4 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 897 | `🮡🮢🮣🮤🮥🮦🮧🮨🮩🮪` | 10 | 4.0 | contiguous | +0.68 ± 0.17 | ≥1e4 | cl 4/4 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
+| 898 | `⪯⪰⪱⪲⪳⪴⪵⪶⪷⪸` | 10 | 3.0 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 899 | `𝍅𝍆𝍇𝍈𝍉𝍊𝍋𝍌𝍍𝍎` | 10 | 4.0 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 2 | – | +0.83 (≥1e4) | recognised |
+| 900 | `🛳🛴🛵🛶🛷🛸🛹🛺🛻🛼` | 10 | 4.0 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 901 | `⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏` | 10 | 3.0 | contiguous | +0.66 ± 0.16 | 5.2e+03 | cl 3/3 ge 2/2 gr 1/1 | undiscriminable | 3 | – | +0.82 (≥1e4) | recognised |
+| 902 | `○▫▢□⚀⚁⚂⚃⚄⚅` | 10 | 3.0 | other | +0.69 ± 0.18 | 42 | cl 3/3 | undecided 0/6 | 4 | – | +0.97 (≥1e4) | recognised |
+| 903 | `ᛀᛁᛂᛃᛄᛅᛆᛇᛈᛉ` | 10 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 904 | `▖▗▘▝▚▞▙▛▜▟` | 10 | 3.0 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | 5 (0 firm) | +0.12 (0.0402) | recognised |
+| 905 | `⨨⨩⨪⨫⨬⨭⨮⨯⨰⨱` | 10 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 906 | `⩬⩭⩮⩯⩰⩱⩲⩳⩴⩵` | 10 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.88 (≥1e4) | recognised |
+| 907 | `🂅🂆🂇🂈🂉🂊🂋🂌🂍🂎` | 10 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.73 (≥1e4) | recognised |
+| 908 | `ǠǡǢǣǤǥǦǧǨǩ` | 10 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
+| 909 | `⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟` | 10 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.64 (≥1e4) | recognised |
+| 910 | `⺞⺟⺠⺡⺢⺣⺤⺥⺦⺧` | 10 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 2 | – | +0.58 (2) | recognised |
+| 911 | `㏠㏡㏢㏣㏤㏥㏦㏧㏨㏩` | 10 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 2 | 1 (0 firm) | +0.89 (≥1e4) | recognised |
+| 912 | `🄀🄁🄂🄃🄄🄅🄆🄇🄈🄉` | 10 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.98 (≥1e4) | recognised |
+| 913 | `🟊🟋🟌🟍🟎🟏🟐🟑🟒🟓` | 10 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.80 (≥1e4) | recognised |
+| 914 | `؆؇؈؉؊؋،؍؎؏` | 10 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 915 | `ڟڠڡڢڣڤڥڦڧڨ` | 10 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.70 (≥1e4) | recognised |
+| 916 | `ޜޝޞޟޠޡޢޣޤޥ` | 10 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
+| 917 | `ߡߢߣߤߥߦߧߨߩߪ` | 10 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
+| 918 | `៰៱៲៳៴៵៶៷៸៹` | 10 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 919 | `▗▘▙▚▛▜▝▞▟■` | 10 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 2 (0 firm) | +0.13 (3.89) | recognised |
+| 920 | `♉♊♋♌♍♎♏♐♑♒` | 10 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 921 | `♊♋♌♍♎♏♐♑♒♓` | 10 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 922 | `✱✲✳✴✵✶✷✸✹✺` | 10 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.47 (13.5) | recognised |
+| 923 | `⫒⫓⫔⫕⫖⫗⫘⫙⫚⫛` | 10 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.65 (≥1e4) | recognised |
+| 924 | `⮉⮊⮋⮌⮍⮎⮏⮐⮑⮒` | 10 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 925 | `⾁⾂⾃⾄⾅⾆⾇⾈⾉⾊` | 10 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
+| 926 | `ㅦㅧㅨㅩㅪㅫㅬㅭㅮㅯ` | 10 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 927 | `㇚㇛㇜㇝㇞㇟㇠㇡㇢㇣` | 10 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
+| 928 | `㈑㈒㈓㈔㈕㈖㈗㈘㈙㈚` | 10 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.94 (≥1e4) | recognised |
+| 929 | `㉫㉬㉭㉮㉯㉰㉱㉲㉳㉴` | 10 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.91 (≥1e4) | recognised |
+| 930 | `꠰꠱꠲꠳꠴꠵꠶꠷꠸꠹` | 10 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 931 | `𐡞𐡟𐡠𐡡𐡢𐡣𐡤𐡥𐡦𐡧` | 10 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 932 | `𝀀𝀁𝀂𝀃𝀄𝀅𝀆𝀇𝀈𝀉` | 10 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.65 (24.2) | recognised |
+| 933 | `𝜥𝜦𝜧𝜨𝜩𝜪𝜫𝜬𝜭𝜮` | 10 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 4 (0 firm) | +0.82 (≥1e4) | recognised |
+| 934 | `𝟟𝟞𝟝𝟜𝟛𝟚𝟙𝟘𝟗𝟠` | 10 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | +0.70 (≥1e4) | recognised |
+| 935 | `🄕🄖🄗🄘🄙🄚🄛🄜🄝🄞` | 10 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.82 (≥1e4) | recognised |
+| 936 | `🯗🯘🯙🯚🯛🯜🯝🯞🯟🯠` | 10 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.79 (≥1e4) | recognised |
+| 937 | `🯣🯤🯥🯦🯧🯨🯩🯪🯫🯬` | 10 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
+| 938 | `🅆🅇🅈🅉🅊🅋🅌🅍🅎🅏` | 10 | 4.0 | contiguous | +0.57 ± 0.16 | 75.4 | cl 2/2 ge 1/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 939 | `𝚶𝚷Ρ𝚺𝚻𝚼𝚽𝚾𝚿𝛀` | 10 | 3.8 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/6 | 5 | – | – | recognised |
+| 940 | `ҢҤҦҨҪҬҮҰҲҴ` | 10 | 2.0 | monotone | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/16 | 5 | – | – | recognised |
+| 941 | `ᄀᄁᄃᄄᄇᄈᄉᄊᄌᄍ` | 10 | 3.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/6 | 5 | 2 (0 firm) | +0.65 (≥1e4) | recognised |
+| 942 | `┉┈┄─━▬█■⬛⬜` | 10 | 3.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/12 | 5 | 2 (0 firm) | +0.68 (≥1e4) | recognised |
+| 943 | `☠⚰🛌🧍🚶🏃🚴🏍🚗✈` | 10 | 3.7 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | positive 2/20 | 4 | 4 (0 firm) | +0.90 (≥1e4) | recognised |
+| 944 | `㊡㊣㊥㊧㊩㊫㊭㊯㊱㊳` | 10 | 3.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/16 | 3 | – | +0.60 (≥1e4) | recognised |
+| 945 | `⇰⇱⇲⇳⇴⇵⇶⇷⇸⇹` | 10 | 3.0 | contiguous | +0.59 ± 0.20 | 261 | cl 3/4 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 946 | `.·⚬○◔◐◕●⬤🌕` | 10 | 2.8 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | positive 7/15 | 5 | 5 (0 firm) | +0.93 (≥1e4) | recognised |
+| 947 | `012345678𝟵` | 10 | 1.3 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/1 | 5 | 1 (0 firm) | +0.98 (≥1e4) | recognised |
+| 948 | `🌱🐌🧍🚶🏃🚲🚗🚄✈🚀` | 10 | 3.9 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/18 | 5 | 8 (0 firm) | +0.95 (≥1e4) | recognised |
+| 949 | `①③⑤⑦⑨⓫⓭⓯⓱⓳` | 10 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/16 | 3 | 2 (0 firm) | +0.96 (≥1e4) | recognised |
+| 950 | `ÀÂÄÆÈÊÌÎÐÒ` | 10 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/16 | 5 | – | – | recognised |
+| 951 | `ሊሉለሗሖሕሔሓሒሑ` | 10 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 3 | – | +0.67 (≥1e4) | recognised |
+| 952 | `ᚏᚑᚓᚔᚕᚖᚗᚘᚙᚚ` | 10 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | +0.86 (≥1e4) | recognised |
+| 953 | `ᬇᬈᬉᬊᬋᬌᬍᬎᬑᬒ` | 10 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | 1 (0 firm) | +0.98 (≥1e4) | recognised |
+| 954 | `❷❹❻❽❿⓬⓮⓰⓲⓴` | 10 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/16 | 3 | 2 (0 firm) | +0.95 (≥1e4) | recognised |
+| 955 | `⚰💤🛌🧍🚶🏃🚴🏍🚗✈` | 10 | 3.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/20 | 4 | 4 (0 firm) | +0.90 (≥1e4) | recognised |
+| 956 | `✈🚗🏍🚴🏃🚶🧍🛌💤💀` | 10 | 3.9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/20 | 4 | 4 (0 firm) | +0.90 (≥1e4) | recognised |
+| 957 | `㈠㈡㈢㈣㈤㈥㈦㈧㈪㈫` | 10 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.99 (≥1e4) | recognised |
+| 958 | `㉟㉢㉥㉨㉫㉮㉱㉴㉷㉺` | 10 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/16 | 5 | 1 (0 firm) | +0.82 (≥1e4) | recognised |
+| 959 | `㉢㉥㉨㉫㉮㉱㉴㉷㉺㉽` | 10 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/16 | 5 | 1 (0 firm) | +0.82 (≥1e4) | recognised |
+| 960 | `一十百千万億兆京秭𥝱` | 10 | 3.1 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 4/20 | 5 | 5 (0 firm) | +0.96 (≥1e4) | recognised |
+| 961 | `🀅🀇🀉🀋🀍🀏🀑🀓🀕🀗` | 10 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/16 | 3 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
+| 962 | `🀙🀛🀝🀟🀡🀣🀥🀧🀩🀫` | 10 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/16 | 3 | 1 (0 firm) | +0.94 (≥1e4) | recognised |
+| 963 | `🞀🞁🞂🞃🞇🞋🞏🞓🞗🞛` | 10 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/11 | 3 | – | +0.56 (5.97) | recognised |
+| 964 | `𝜩𝜪𝜫𝜬𝜭𝜮𝜯𝜰𝜱𝜲` | 10 | 4.0 | contiguous | +0.56 ± 0.21 | 20.1 | cl 2/3 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.78 (≥1e4) | recognised |
+| 965 | `˥˦˧˨˩˪˫ˬ˭ˮ` | 10 | 2.0 | contiguous | +0.46 ± 0.17 | 95.9 | cl 3/3 ge 0/1 gr 1/1 | undiscriminable | 5 | – | +0.92 (≥1e4) | recognised |
+| 966 | `𒐀𒐂𒐄𒐆𒐈𒐊𒐌𒐎𒐐𒐒` | 10 | 4.0 | monotone | +0.34 ± 0.20 | 18.1 | cl 3/3 ge 0/1 gr 1/1 | undecided 0/16 | 3 | – | +0.64 (6.5) | recognised |
+| 967 | `⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌` | 10 | 3.0 | contiguous | +0.29 ± 0.20 | 720 | cl 4/4 gr 0/1 | undiscriminable | 3 | 1 (0 firm) | +0.67 (≥1e4) | recognised |
+| 968 | `𝜚𝜛𝜜𝜝𝜞𝜟𝜠𝜡𝜢𝜣` | 10 | 4.0 | contiguous | +0.29 ± 0.21 | 46.2 | cl 3/3 gr 0/1 | undiscriminable | 3 | 1 (0 firm) | +0.46 (2.49) | recognised |
+| 969 | `🀐🀑🀒🀓🀔🀕🀖🀗🀘` | 9 | 4.0 | contiguous | +0.72 ± 0.18 | 161 | cl 2/2 gr 2/2 | undiscriminable | 1 | – | +0.94 (≥1e4) | recognised |
+| 970 | `𝄺𝄻𝄼𝄽𝄾𝄿𝅀𝅁𝅂` | 9 | 4.0 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.52 (≥1e4) | recognised |
+| 971 | `㊎㊏㊐㊑㊒㊓㊔㊕㊖` | 9 | 3.0 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 1 | – | – | recognised |
+| 972 | `🮡🮢🮣🮤🮥🮦🮧🮨🮩` | 9 | 4.0 | contiguous | +0.66 ± 0.16 | 5.2e+03 | cl 3/3 ge 2/2 gr 1/1 | undiscriminable | 3 | – | +0.77 (≥1e4) | recognised |
+| 973 | `⿴⿵⿶⿷⿸⿹⿺⿻⿼` | 9 | 3.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | – | +0.56 (≥1e4) | recognised |
+| 974 | `🌀🌁🌂🌃🌄🌅🌆🌇🌈` | 9 | 4.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 975 | `↬↭↮↯↰↱↲↳↴` | 9 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.42 (≥1e4) | recognised |
+| 976 | `㈒㈓㈔㈕㈖㈗㈘㈙㈚` | 9 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.94 (≥1e4) | recognised |
+| 977 | `🀙🀚🀛🀜🀝🀞🀟🀠🀡` | 9 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.96 (≥1e4) | recognised |
+| 978 | `🀰🀱🀲🀳🀴🀵🀶🀷🀸` | 9 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.97 (≥1e4) | recognised |
+| 979 | `🂢🂣🂤🂥🂦🂧🂨🂩🂪` | 9 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.87 (≥1e4) | recognised |
+| 980 | `ǡǢǣǤǥǦǧǨǩ` | 9 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.83 (≥1e4) | recognised |
+| 981 | `␅␆␇␈␉␊␋␌␍` | 9 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.67 (60.7) | recognised |
+| 982 | `🭧🭨🭩🭪🭫🭬🭭🭮🭯` | 9 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.77 (≥1e4) | recognised |
+| 983 | `🚀✈🚄🚗🚲🏃🚶🧍🧎` | 9 | 3.9 | other | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 0/15 | 5 | 9 (0 firm) | +0.96 (≥1e4) | recognised |
+| 984 | `ǠǡǢǣǤǥǦǧǨ` | 9 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
+| 985 | `ɠɡɢɣɤɥɦɧɨ` | 9 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.75 (≥1e4) | recognised |
+| 986 | `ϿЀЁЂЃЄЅІЇ` | 9 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 3 (0 firm) | +0.75 (≥1e4) | recognised |
+| 987 | `ݐݑݒݓݔݕݖݗݘ` | 9 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 988 | `ޝޞޟޠޡޢޣޤޥ` | 9 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
+| 989 | `ᑎᑏᑐᑑᑒᑓᑔᑕᑖ` | 9 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 990 | `☯☰☱☲☳☴☵☶☷` | 9 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.79 (≥1e4) | recognised |
+| 991 | `⩬⩭⩮⩯⩰⩱⩲⩳⩴` | 9 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
+| 992 | `⩸⩹⩺⩻⩼⩽⩾⩿⪀` | 9 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 993 | `⫒⫓⫔⫕⫖⫗⫘⫙⫚` | 9 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.64 (≥1e4) | recognised |
+| 994 | `𐡟𐡠𐡡𐡢𐡣𐡤𐡥𐡦𐡧` | 9 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.83 (≥1e4) | recognised |
+| 995 | `🀇🀈🀉🀊🀋🀌🀍🀎🀏` | 9 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.96 (≥1e4) | recognised |
+| 996 | `🀱🀲🀳🀴🀵🀶🀷🀸🀹` | 9 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.96 (≥1e4) | recognised |
+| 997 | `😀😁😂😃😄😅😆😇😈` | 9 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.45 (≥1e4) | recognised |
+| 998 | `🜝🜞🜟🜠🜡🜢🜣🜤🜥` | 9 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.81 (≥1e4) | recognised |
+| 999 | `✈🚗🏍🚴🏃🚶🧍🛌💀` | 9 | 3.9 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 3/18 | 3 | 4 (0 firm) | +0.90 (≥1e4) | recognised |
+| 1000 | `⡟⡡⡣⡥⡧⡩⡫⡭⡯` | 9 | 3.0 | monotone | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 2/14 | 5 | – | – | recognised |
+| 1001 | `↗→↘↓↙←↖↑➚` | 9 | 3.0 | other | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | positive 2/8 | 5 | 1 (0 firm) | +0.07 (0.0271) | recognised |
+| 1002 | `ⒶⓑⒷⓒⒸⓓⒹⓔⒺ` | 9 | 3.0 | other | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/9 | 5 | – | +0.87 (≥1e4) | recognised |
+| 1003 | `րտվսռջչոց` | 9 | 2.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/5 | 5 | – | +0.25 (0.167) | recognised |
+| 1004 | `⅛⅕⅓⅜⅗⅔⅘⅚⅞` | 9 | 3.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/11 | 5 | 7 (0 firm) | +0.90 (≥1e4) | recognised |
+| 1005 | `┉┈┄─━▬█▌▍` | 9 | 3.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/10 | 5 | 2 (0 firm) | +0.77 (≥1e4) | recognised |
+| 1006 | `㌰㌱㌲㌳㌴㌵㌶㌸㌹` | 9 | 3.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/2 | 5 | – | +0.67 (≥1e4) | recognised |
+| 1007 | `🕑🕞🕒🕟🕓🕠🕔🕡🕕` | 9 | 4.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/9 | 5 | 2 (0 firm) | +0.76 (≥1e4) | recognised |
+| 1008 | `ƷƸƹƺƻƼƽƾƿ` | 9 | 2.0 | contiguous | +0.59 ± 0.20 | 261 | cl 3/4 gr 1/1 | undiscriminable | 1 | – | – | recognised |
+| 1009 | `¬⋁∨⋀∧⋃∪⋂∩` | 9 | 2.9 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/10 | 5 | 2 (0 firm) | +0.25 (0.1) | recognised |
+| 1010 | `✈🚗🏍🚴🏃🚶🧍🛌🪦` | 9 | 3.9 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 3/18 | 3 | 4 (0 firm) | +0.90 (≥1e4) | recognised |
+| 1011 | `∩⋂∪⋃∧⋀∨⋁⊓` | 9 | 3.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/11 | 5 | 2 (0 firm) | +0.25 (0.1) | recognised |
+| 1012 | `⠀⠁⠃⠇⠏⠟⠿⡿⣿` | 9 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 7/13 | 3 | 1 (0 firm) | +0.97 (≥1e4) | recognised |
+| 1013 | `⠀⡀⣀⣄⣤⣦⣶⣷⣿` | 9 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/12 | 1 | 3 (0 firm) | +0.91 (≥1e4) | recognised |
+| 1014 | `⣮⣰⣲⣴⣶⣸⣺⣼⣾` | 9 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/14 | 1 | – | +0.66 (≥1e4) | recognised |
+| 1015 | `⬛■◼◾▪▫□◻⬜` | 9 | 3.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | positive 2/12 | 3 | 2 (0 firm) | +0.51 (≥1e4) | recognised |
+| 1016 | `〇〡〢〣〤〥〦〧〨` | 9 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/1 | 3 | – | +0.96 (≥1e4) | recognised |
+| 1017 | `🀇🀉🀋🀍🀏🀑🀓🀕🀗` | 9 | 4.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 2/14 | 1 | – | +0.92 (≥1e4) | recognised |
+| 1018 | `😭😢😞🙁😐😶🙂😄🤣` | 9 | 4.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 3/16 | 5 | 4 (0 firm) | +0.90 (≥1e4) | recognised |
+| 1019 | `0⅛¼⅜½⅝¾⅞1` | 9 | 2.2 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 3/9 | 3 | 1 (0 firm) | +0.95 (≥1e4) | recognised |
+| 1020 | `⅕¼⅓⅜½⅝¾⅞1` | 9 | 2.4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/10 | 5 | 1 (0 firm) | +0.95 (≥1e4) | recognised |
+| 1021 | `·▪□⚀⚁⚂⚃⚄⚅` | 9 | 2.9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/5 | 3 | – | +0.97 (≥1e4) | recognised |
+| 1022 | `·⚬○◔◐◕●⬤🌕` | 9 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 7/13 | 5 | 5 (0 firm) | +0.93 (≥1e4) | recognised |
+| 1023 | `ȀȂȄȆȈȊȌȎȐ` | 9 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/14 | 3 | – | – | recognised |
+| 1024 | `ѠѡѼѽѾѿҀҁ҂` | 9 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
+| 1025 | `ᬆᬇᬈᬉᬊᬋᬌᬍᬐ` | 9 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | 1 (0 firm) | +0.98 (≥1e4) | recognised |
+| 1026 | `ᲓდⴃᲒგⴂᲑბⴁ` | 9 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | – | – | recognised |
+| 1027 | `↗↑↖←↙↓⬊→⬈` | 9 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/10 | 3 | 4 (0 firm) | +0.06 (0.0236) | recognised |
+| 1028 | `↘↓↙←↖↑⬈→⬊` | 9 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/12 | 3 | 5 (0 firm) | +0.36 (≥1e4) | recognised |
+| 1029 | `┉┈┄─━▬█■⬛` | 9 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/11 | 5 | 2 (0 firm) | +0.68 (≥1e4) | recognised |
+| 1030 | `○∅⚪⚀⚁⚂⚃⚄⚅` | 9 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/7 | 3 | – | +0.97 (≥1e4) | recognised |
+| 1031 | `☷☶☵☴☳☲☱☰⚌` | 9 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | +0.78 (≥1e4) | recognised |
+| 1032 | `⚰🛌🧍🚶🏃🚴🏍🚗✈` | 9 | 3.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/18 | 3 | 4 (0 firm) | +0.90 (≥1e4) | recognised |
+| 1033 | `✈🚗🏍🚴🏃🚶🧍🛌😴` | 9 | 3.9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/18 | 3 | 4 (0 firm) | +0.90 (≥1e4) | recognised |
+| 1034 | `⠀⢀⣀⣄⣤⣦⣶⣷⣿` | 9 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/12 | 3 | 5 (0 firm) | +0.89 (≥1e4) | recognised |
+| 1035 | `𐂦𐂨𐂪𐂬𐂮𐂰𐂲𐂴𐂶` | 9 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/14 | 3 | – | +0.81 (≥1e4) | recognised |
+| 1036 | `🟉🟋🟍🟏🟑🟓🟕🟗🟙` | 9 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/14 | 3 | – | +0.73 (52.3) | recognised |
+| 1037 | `🌐🌑🌒🌓🌔🌕🌖🌗🌘` | 9 | 4.0 | contiguous | +0.56 ± 0.21 | 17.5 | cl 2/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.67 (≥1e4) | recognised |
+| 1038 | `ΟΠΡΤΥΦΧΨΩ` | 9 | 2.0 | monotone | +0.50 ± 0.18 | 11.8 | cl 2/2 ge 1/2 gr 1/1 | undecided 0/1 | 5 | – | +0.89 (≥1e4) | recognised |
+| 1039 | `🕐🕖🕑🕗🕒🕘🕓🕙🕔` | 9 | 4.0 | other | +0.55 ± 0.23 | 25.4 | cl 3/4 gr 1/1 | undecided 0/9 | 5 | – | +0.64 (≥1e4) | recognised |
+| 1040 | `😔😢😭😞😖😣😩😤😠` | 9 | 4.0 | other | +0.53 ± 0.23 | 10.9 | cl 3/4 gr 1/1 | undecided 1/13 | 5 | 2 (0 firm) | +0.17 (0.0714) | recognised |
+| 1041 | `ȏȑȐȓȒȕȔȗȖ` | 9 | 2.0 | other | +0.29 ± 0.21 | 46.2 | cl 3/3 gr 0/1 | undecided 0/9 | 5 | – | – | recognised |
+| 1042 | `𝞹𝞺𝞻𝞼𝞽𝞾𝞿𝟀𝟁` | 9 | 4.0 | contiguous | +0.29 ± 0.21 | 46.2 | cl 3/3 gr 0/1 | undiscriminable | 1 | 3 (0 firm) | +0.72 (≥1e4) | recognised |
+| 1043 | `ᑎᑏᑐᑑᑒᑓᑔᑕ` | 8 | 3.0 | contiguous | +0.87 ± 0.16 | 40.8 | gr 5/5 | undiscriminable | 5 | – | – | recognised |
+| 1044 | `ᑯᑰᑱᑲᑳᑴᑵᑶ` | 8 | 3.0 | contiguous | +0.87 ± 0.16 | 40.8 | gr 5/5 | undiscriminable | 5 | – | – | recognised |
+| 1045 | `2109876၅` | 8 | 1.2 | other | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 1/8 | 5 | 1 (0 firm) | +0.38 (≥1e4) | recognised |
+| 1046 | `ǸǺǼǾȀȂȄȆ` | 8 | 2.0 | monotone | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 0/12 | 1 | – | +0.58 (2) | recognised |
+| 1047 | `ابتثجحخد` | 8 | 2.0 | monotone | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 0/2 | 3 | – | +0.71 (≥1e4) | recognised |
+| 1048 | `🈐🈑🈒🈓🈔🈕🈖🈗` | 8 | 4.0 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 1049 | `🚅🚆🚇🚈🚉🚊🚋🚌` | 8 | 4.0 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 1050 | `ㇸㇹㇺㇻㇼㇽㇾㇿ` | 8 | 3.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 1051 | `ꠙꠚꠛꠜꠝꠞꠟꠠ` | 8 | 3.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 1052 | `🠄🠅🠆🠇🠈🠉🠊🠋` | 8 | 4.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 1053 | `ₕhʜHＨℌℍℎ` | 8 | 2.4 | other | +0.69 ± 0.18 | 42 | cl 3/3 | undecided 0/11 | 5 | 2 (0 firm) | +0.57 (391) | recognised |
+| 1054 | `𝀃𝀄𝀅𝀆𝀊𝀋𝀑𝀒` | 8 | 4.0 | monotone | +0.69 ± 0.20 | 32.8 | cl 2/2 gr 2/2 | undecided 0/4 | 5 | – | +0.63 (403) | recognised |
+| 1055 | `🌗🌖🌕🌔🌓🌒🌑🌘` | 8 | 4.0 | other | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undecided 2/3 | 3 | 1 (0 firm) | +0.41 (≥1e4) | recognised |
+| 1056 | `ޞޟޠޡޢޣޤޥ` | 8 | 2.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.88 (≥1e4) | recognised |
+| 1057 | `⠁⠂⠃⠄⠅⠆⠇⠈` | 8 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
+| 1058 | `⯢⯣⯤⯥⯦⯧⯨⯩` | 8 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.83 (≥1e4) | recognised |
+| 1059 | `⾂⾃⾄⾅⾆⾇⾈⾉` | 8 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.78 (≥1e4) | recognised |
+| 1060 | `⿴⿵⿶⿷⿸⿹⿺⿻` | 8 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.56 (≥1e4) | recognised |
+| 1061 | `㈓㈔㈕㈖㈗㈘㈙㈚` | 8 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.93 (≥1e4) | recognised |
+| 1062 | `🌓🌒🌑🌘🌗🌖🌕🌔` | 8 | 4.0 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 3/6 | 1 | – | +0.16 (≥1e4) | recognised |
+| 1063 | `🬃🬇🬋🬏🬓🬗🬛🬟` | 8 | 4.0 | monotone | +0.62 ± 0.18 | 470 | cl 3/3 ge 2/2 gr 1/1 | undecided 0/12 | 5 | – | – | recognised |
+| 1064 | `ɠɡɢɣɤɥɦɧ` | 8 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.75 (≥1e4) | recognised |
+| 1065 | `├┝┞┟┠┡┢┣` | 8 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.70 (≥1e4) | recognised |
+| 1066 | `▁▂▃▄▅▆▇█` | 8 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.99 (≥1e4) | recognised |
+| 1067 | `☰☱☲☳☴☵☶☷` | 8 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.79 (≥1e4) | recognised |
+| 1068 | `⩬⩭⩮⩯⩰⩱⩲⩳` | 8 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 1069 | `ㅧㅨㅩㅪㅫㅬㅭㅮ` | 8 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.83 (≥1e4) | recognised |
+| 1070 | `𝅝𝅗𝅥𝅘𝅥𝅘𝅥𝅮𝅘𝅥𝅯𝅘𝅥𝅰𝅘𝅥𝅱𝅘𝅥𝅲` | 8 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | +0.68 (≥1e4) | recognised |
+| 1071 | `🭌🭍🭎🭏🭐🭑🭒🭓` | 8 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.74 (≥1e4) | recognised |
+| 1072 | `աբգդեզէծ` | 8 | 2.0 | monotone | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.62 (232) | recognised |
+| 1073 | `→↘↓↙←↖↑↗` | 8 | 3.0 | other | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | positive 2/8 | 1 | 1 (0 firm) | +0.06 (0.0236) | recognised |
+| 1074 | `🛳🛴🛵🛶🛷🛸🛹🛺` | 8 | 4.0 | contiguous | +0.61 ± 0.17 | 31.9 | cl 2/3 ge 1/1 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 1075 | `ǠǡǢǣǤǥǦǧ` | 8 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.84 (2.21e+03) | recognised |
+| 1076 | `ڟڠڡڢڣڤڥڦ` | 8 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.65 (≥1e4) | recognised |
+| 1077 | `᳀᳁᳂᳃᳄᳅᳆᳇` | 8 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.76 (2.95e+03) | recognised |
+| 1078 | `█▉▊▋▌▍▎▏` | 8 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.96 (≥1e4) | recognised |
+| 1079 | `⣗⣘⣙⣚⣛⣜⣝⣞` | 8 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.63 (≥1e4) | recognised |
+| 1080 | `⫒⫓⫔⫕⫖⫗⫘⫙` | 8 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.63 (≥1e4) | recognised |
+| 1081 | `𝄻𝄼𝄽𝄾𝄿𝅀𝅁𝅂` | 8 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | 2 (0 firm) | +0.52 (≥1e4) | recognised |
+| 1082 | `🄖🄗🄘🄙🄚🄛🄜🄝` | 8 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.78 (8.05e+03) | recognised |
+| 1083 | `🌔🌓🌒🌑🌘🌗🌖🌕` | 8 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 3/6 | 1 | – | +0.18 (≥1e4) | recognised |
+| 1084 | `🌖🌕🌔🌓🌒🌑🌘🌗` | 8 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 3/6 | 1 | – | +0.15 (8.15e+03) | recognised |
+| 1085 | `🞌🞍🞎🞏🞐🞑🞒🞓` | 8 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.88 (≥1e4) | recognised |
+| 1086 | `🡤🡥🡦🡧🡨🡩🡪🡫` | 8 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.56 (1.29e+03) | recognised |
+| 1087 | `🮡🮢🮣🮤🮥🮦🮧🮨` | 8 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.77 (≥1e4) | recognised |
+| 1088 | `→⇒⇉⇛⇶⟹⟾⟿` | 8 | 3.0 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 1/13 | 3 | 2 (0 firm) | +0.82 (≥1e4) | recognised |
+| 1089 | `┉┈┄─━▬█⬛` | 8 | 3.0 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 1/9 | 5 | 2 (0 firm) | +0.68 (≥1e4) | recognised |
+| 1090 | `⣈⣌⣐⣔⣘⣜⣠⣤` | 8 | 3.0 | monotone | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/12 | 5 | 2 (0 firm) | +0.58 (2) | recognised |
+| 1091 | `䷜䷡䷦䷫䷰䷵䷺䷿` | 8 | 3.0 | monotone | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 1/12 | 5 | – | – | recognised |
+| 1092 | `ĎďĖėĞǧĘę` | 8 | 2.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/7 | 5 | – | – | recognised |
+| 1093 | `ހށނރބޅކވ` | 8 | 2.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/1 | 3 | – | – | recognised |
+| 1094 | `ₘmᴍMᵐᴹｍＭ` | 8 | 2.5 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 2/14 | 5 | 2 (0 firm) | +0.46 (2.11) | recognised |
+| 1095 | `⊂⊃⊆⊇⊈⊉⊊⊋` | 8 | 3.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/2 | 5 | – | +0.33 (0.25) | recognised |
+| 1096 | `ⒺⓓⒸⓒⒷⓑⒶⓐ` | 8 | 3.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/10 | 5 | – | +0.85 (≥1e4) | recognised |
+| 1097 | `⼝⼞⼟⼠⼡⼢⼣⼯` | 8 | 3.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/1 | 5 | – | – | recognised |
+| 1098 | `㈪㈬㈮㈰㈲㈴㈶㈸` | 8 | 3.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/12 | 5 | – | – | recognised |
+| 1099 | `㉁㉃㉅㉇㉉㉋㉍㉏` | 8 | 3.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/12 | 5 | – | +0.69 (8.05e+03) | recognised |
+| 1100 | `㉂㉅㉈㉋㉎㉑㉔㉗` | 8 | 3.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/12 | 5 | – | +0.71 (≥1e4) | recognised |
+| 1101 | `🚀✈🚄🚗🚲🏃🚶🧍` | 8 | 3.9 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/14 | 5 | 7 (0 firm) | +0.95 (≥1e4) | recognised |
+| 1102 | `⢀⣀⣠⣰⣸⣼⣾⣿` | 8 | 3.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 2/11 | 3 | 7 (0 firm) | +0.83 (≥1e4) | recognised |
+| 1103 | `⣮⣰⣲⣴⣶⣸⣺⣼` | 8 | 3.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/12 | 1 | 1 (0 firm) | +0.63 (≥1e4) | recognised |
+| 1104 | `ðθvfszʒʓ` | 8 | 1.5 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 2/12 | 5 | – | +0.76 (≥1e4) | recognised |
+| 1105 | `ԔԖԘԚԜԞԠԢ` | 8 | 2.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/12 | 3 | – | – | recognised |
+| 1106 | `⁎*∗★✭✮✯✰` | 8 | 2.8 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/7 | 5 | – | +0.24 (0.14) | recognised |
+| 1107 | `⅒⅑⅐⅙⅕¼⅓½` | 8 | 2.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 7/12 | 1 | 1 (0 firm) | +0.88 (≥1e4) | recognised |
+| 1108 | `ȀȂȄȆȈȊȌȎ` | 8 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/12 | 3 | – | – | recognised |
+| 1109 | `ѦѨѪѬѮѰѲѴ` | 8 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/12 | 5 | – | – | recognised |
+| 1110 | `∩⋂∪⋃∧⋀∨⋁` | 8 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/10 | 5 | 1 (0 firm) | +0.25 (0.1) | recognised |
+| 1111 | `▪□⚀⚁⚂⚃⚄⚅` | 8 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | +0.97 (≥1e4) | recognised |
+| 1112 | `▴▲▵△▹▸▻►` | 8 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/14 | 5 | 1 (0 firm) | +0.36 (0.5) | recognised |
+| 1113 | `▵▴▹▸▿▾◃◂` | 8 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/18 | 5 | – | +0.75 (≥1e4) | recognised |
+| 1114 | `⚅⚄⚃⚂⚁⚀🁢🁡` | 8 | 3.2 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 3 | – | +0.97 (≥1e4) | recognised |
+| 1115 | `⚬○◔◐◕●⬤🌕` | 8 | 3.1 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 7/11 | 5 | 4 (0 firm) | +0.92 (≥1e4) | recognised |
+| 1116 | `✈🚗🏍🚴🏃🚶🧍😴` | 8 | 3.9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/15 | 5 | 4 (0 firm) | +0.93 (≥1e4) | recognised |
+| 1117 | `✈🚗🏍🚴🏃🚶🧍🛌` | 8 | 3.9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/16 | 3 | 4 (0 firm) | +0.90 (≥1e4) | recognised |
+| 1118 | `⠀⠁⠃⠇⠏⠟⠿⣿` | 8 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 6/11 | 5 | 1 (0 firm) | +0.97 (≥1e4) | recognised |
+| 1119 | `⠀⢀⣀⣄⣤⣦⣶⣷` | 8 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/11 | 3 | 4 (0 firm) | +0.85 (≥1e4) | recognised |
+| 1120 | `🀉🀋🀍🀏🀑🀓🀕🀗` | 8 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/12 | 3 | – | +0.92 (≥1e4) | recognised |
+| 1121 | `🀩🀱🀹🁁🁉🁑🁙🁡` | 8 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 5/12 | 3 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
+| 1122 | `🕒🕟🕕🕢🕘🕥🕛🕜` | 8 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/18 | 3 | 2 (0 firm) | +0.34 (11.3) | recognised |
+| 1123 | `▜▛▚▙▘▖▗▝` | 8 | 3.0 | other | +0.56 ± 0.21 | 20.1 | cl 2/3 gr 1/1 | undecided 0/3 | 3 | 2 (0 firm) | +0.10 (0.0361) | recognised |
+| 1124 | `ėďǧęĎĖĞĘ` | 8 | 2.0 | other | +0.55 ± 0.20 | 10.1 | cl 2/3 ge 1/1 gr 1/1 | undecided 0/11 | 5 | – | – | recognised |
+| 1125 | `┉┈┄─━▬█▀` | 8 | 3.0 | other | +0.55 ± 0.20 | 10.1 | cl 2/3 ge 1/1 gr 1/1 | undecided 1/9 | 5 | 2 (0 firm) | +0.68 (≥1e4) | recognised |
+| 1126 | `㉑㉎㉋㉈㉅㉂㉟㉜` | 8 | 3.0 | other | +0.55 ± 0.20 | 10.1 | cl 2/3 ge 1/1 gr 1/1 | undecided 1/14 | 5 | – | +0.69 (8.05e+03) | recognised |
+| 1127 | `🐋🐘🐎🐕🐈🐁🐜🦠` | 8 | 4.0 | other | +0.55 ± 0.23 | 25.4 | cl 3/4 gr 1/1 | positive 6/16 | 5 | 1 (0 firm) | +0.90 (≥1e4) | recognised |
+| 1128 | `ₘmᴍMᵐᴹｍ𝑚` | 8 | 2.6 | other | +0.53 ± 0.23 | 10.9 | cl 3/4 gr 1/1 | undecided 3/14 | 5 | 2 (0 firm) | +0.44 (1.31) | recognised |
+| 1129 | `✹⯪🌟✦★☆⭑⭒` | 8 | 3.1 | other | +0.53 ± 0.23 | 10.9 | cl 3/4 gr 1/1 | undecided 0/10 | 5 | – | +0.39 (3.56) | recognised |
+| 1130 | `𝝿𝞄𝞅𝞆𝞇𝞈𝞉𝞊` | 8 | 4.0 | monotone | +0.35 ± 0.20 | 17.2 | cl 3/3 ge 1/1 gr 0/1 | undecided 0/1 | 5 | – | – | recognised |
+| 1131 | `╸╹╺╻╼╽╾` | 7 | 3.0 | contiguous | +0.87 ± 0.16 | 40.8 | gr 5/5 | undiscriminable | 3 | 1 (0 firm) | +0.49 (1.5) | recognised |
+| 1132 | `␅␆␇␈␉␊␋` | 7 | 3.0 | contiguous | +0.76 ± 0.16 | ≥1e4 | cl 5/5 gr 2/2 | undiscriminable | 1 | – | +0.67 (60.7) | recognised |
+| 1133 | `⋑⋒⋓⋔⋕⋖⋗` | 7 | 3.0 | contiguous | +0.74 ± 0.15 | ≥1e4 | cl 5/5 ge 1/1 gr 2/2 | undiscriminable | 5 | – | – | recognised |
+| 1134 | `ㄱㄲㄳㄴㄵㄶㄷ` | 7 | 3.0 | contiguous | +0.70 ± 0.15 | 2.93e+03 | cl 4/5 ge 1/1 gr 2/2 | undiscriminable | 3 | – | +0.67 (≥1e4) | recognised |
+| 1135 | `█🮆🮅🮄▀🮃🮂` | 7 | 3.7 | other | +0.74 ± 0.18 | 495 | cl 4/4 gr 2/2 | undecided 0/3 | 1 | 2 (0 firm) | +0.87 (≥1e4) | recognised |
+| 1136 | `WxXyYzZ` | 7 | 1.0 | other | +0.73 ± 0.18 | 1.85e+03 | cl 5/5 gr 2/2 | undecided 0/7 | 3 | 2 (0 firm) | +0.65 (24.2) | recognised |
+| 1137 | `├┢┡┠┟┞┝` | 7 | 3.0 | other | +0.69 ± 0.15 | 458 | cl 3/4 ge 1/1 gr 2/2 | undecided 1/3 | 5 | – | +0.47 (1.5) | recognised |
+| 1138 | `ߴߵ߶߷߸߹ߺ` | 7 | 2.0 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 1139 | `₷₸₹₺₻₼₽` | 7 | 3.0 | contiguous | +0.68 ± 0.17 | 2.56e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 1 | – | +0.65 (4.33) | recognised |
+| 1140 | `←↙↓↘→↗➡` | 7 | 3.0 | other | +0.65 ± 0.18 | 52.2 | cl 4/5 gr 2/2 | positive 3/9 | 5 | 1 (0 firm) | +0.85 (≥1e4) | recognised |
+| 1141 | `♳♴♵♶♷♸♹` | 7 | 3.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | 4 (0 firm) | +0.88 (≥1e4) | recognised |
+| 1142 | `🜞🜟🜠🜡🜢🜣🜤` | 7 | 4.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | – | +0.82 (≥1e4) | recognised |
+| 1143 | `⩬⩭⩮⩯⩰⩱⩲` | 7 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.78 (≥1e4) | recognised |
+| 1144 | `ⅵⅦⅧⅨⅩⅪⅫ` | 7 | 3.0 | other | +0.63 ± 0.18 | 644 | cl 3/3 ge 2/2 gr 1/1 | undecided 0/3 | 5 | – | +0.91 (≥1e4) | recognised |
+| 1145 | `ݞݟݠݡݢݣݤ` | 7 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.71 (156) | recognised |
+| 1146 | `ⶠⶡⶢⶣⶤⶥⶦ` | 7 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.63 (60.7) | recognised |
+| 1147 | `㈔㈕㈖㈗㈘㈙㈚` | 7 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.93 (≥1e4) | recognised |
+| 1148 | `🀛🀜🀝🀞🀟🀠🀡` | 7 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.95 (≥1e4) | recognised |
+| 1149 | `🞨🞩🞪🞫🞬🞭🞮` | 7 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.74 (≥1e4) | recognised |
+| 1150 | `ɡɢɣɤɥɦɧ` | 7 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.75 (7.14e+03) | recognised |
+| 1151 | `ޟޠޡޢޣޤޥ` | 7 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.87 (≥1e4) | recognised |
+| 1152 | `⠉⠊⠋⠌⠍⠎⠏` | 7 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.55 (3.92e+03) | recognised |
+| 1153 | `㋀㋁㋂㋃㋄㋅㋆` | 7 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.97 (≥1e4) | recognised |
+| 1154 | `𝄕𝄖𝄗𝄘𝄙𝄚𝄛` | 7 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.68 (≥1e4) | recognised |
+| 1155 | `𝞺𝞻𝞼𝞽𝞾𝞿𝟀` | 7 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.72 (≥1e4) | recognised |
+| 1156 | `🀱🀲🀳🀴🀵🀶🀷` | 7 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.96 (≥1e4) | recognised |
+| 1157 | `🞡🞢🞣🞤🞥🞦🞧` | 7 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.91 (≥1e4) | recognised |
+| 1158 | `🞮🞯🞰🞱🞲🞳🞴` | 7 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
+| 1159 | `🠱🠲🠳🠴🠵🠶🠷` | 7 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.67 (60.7) | recognised |
+| 1160 | `🮡🮢🮣🮤🮥🮦🮧` | 7 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.77 (≥1e4) | recognised |
+| 1161 | `🐋🐘🐎🐕🐈🐁🐜` | 7 | 4.0 | other | +0.67 ± 0.23 | 250 | cl 4/4 gr 1/1 | positive 6/14 | 5 | 1 (0 firm) | +0.79 (≥1e4) | recognised |
+| 1162 | `■▩▨▧▦▥▤` | 7 | 3.0 | other | +0.62 ± 0.20 | 753 | cl 4/4 ge 1/1 gr 1/1 | undecided 0/3 | 5 | – | +0.70 (≥1e4) | recognised |
+| 1163 | `.․‥…⁘⁙⁛` | 7 | 2.7 | monotone | +0.65 ± 0.23 | 4.73e+03 | cl 6/6 gr 1/1 | undecided 0/4 | 3 | 1 (0 firm) | +0.90 (≥1e4) | recognised |
+| 1164 | `ⓥⓌⓦⓍⓧⓎⓨ` | 7 | 3.0 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/7 | 5 | – | +0.66 (403) | recognised |
+| 1165 | `ɕʃsʐzʒʓ` | 7 | 1.7 | other | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 3/12 | 5 | – | +0.55 (≥1e4) | recognised |
+| 1166 | `ĀĂĄĆČĈĊ` | 7 | 2.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | positive 2/12 | 5 | – | +0.29 (0.25) | recognised |
+| 1167 | `⁎*∗★✭✶✹` | 7 | 2.7 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/10 | 5 | – | +0.20 (0.0809) | recognised |
+| 1168 | `☆★✮✭✬✫✩` | 7 | 3.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/5 | 5 | – | +0.66 (≥1e4) | recognised |
+| 1169 | `🍣🍥🍵🥠🥟🥢🥡` | 7 | 4.0 | other | +0.55 ± 0.18 | 20.9 | cl 2/3 ge 2/2 gr 1/1 | undecided 1/10 | 5 | – | +0.43 (0.5) | recognised |
+| 1170 | `ₘmᴍMᵐμ𝐦` | 7 | 2.4 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 2/12 | 5 | 2 (0 firm) | +0.44 (1.31) | recognised |
+| 1171 | `○⚀⚁⚂⚃⚄⚅` | 7 | 3.0 | monotone | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 1/1 | 3 | – | +0.97 (≥1e4) | recognised |
+| 1172 | `✩✫✬✭✮★🌟` | 7 | 3.1 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/5 | 5 | – | +0.73 (≥1e4) | recognised |
+| 1173 | `⅒⅛⅙⅕¼⅓½` | 7 | 2.7 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | positive 8/13 | 3 | 4 (0 firm) | +0.87 (≥1e4) | recognised |
+| 1174 | `●🔅░▒▓█🔆` | 7 | 3.3 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | positive 1/7 | 5 | – | +0.94 (≥1e4) | recognised |
+| 1175 | `⣸⣼⣤⣴⣶⣾⣿` | 7 | 3.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/11 | 5 | 2 (0 firm) | +0.86 (≥1e4) | recognised |
+| 1176 | `🀋🀍🀏🀑🀓🀕🀗` | 7 | 4.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/10 | 1 | – | +0.90 (≥1e4) | recognised |
+| 1177 | `⊚∘◦o○⭘◯` | 7 | 2.7 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/12 | 5 | – | +0.69 (≥1e4) | recognised |
+| 1178 | `🀱🀹🁁🁉🁑🁙🁡` | 7 | 4.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | positive 5/10 | 3 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
+| 1179 | `🍥🥠🥟🍵🥢🥮🥡` | 7 | 4.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/8 | 5 | – | +0.43 (0.5) | recognised |
+| 1180 | `0⚀⚁⚂⚃⚄⚅` | 7 | 2.7 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 3 | – | +0.97 (≥1e4) | recognised |
+| 1181 | `<{(\|)}>` | 7 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/9 | 1 | 1 (0 firm) | +0.52 (≥1e4) | recognised |
+| 1182 | `Tᴛtₜᵗ𝑡𝕥` | 7 | 2.7 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/9 | 5 | 2 (0 firm) | +0.25 (0.167) | recognised |
+| 1183 | `·🔅░▒▓█🔆` | 7 | 3.1 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/7 | 5 | – | +0.94 (≥1e4) | recognised |
+| 1184 | `ἂἄἆἈἊἌἎ` | 7 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/10 | 3 | 1 (0 firm) | – | recognised |
+| 1185 | `—–‒‑‐−―` | 7 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | 1 (0 firm) | +0.60 (1.18e+03) | recognised |
+| 1186 | `ₕhʜHＨ𝐇ℍ` | 7 | 2.4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/11 | 5 | 1 (0 firm) | +0.56 (66.3) | recognised |
+| 1187 | `⅛⅕⅓⅜⅔⅝⅞` | 7 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/6 | 5 | 3 (0 firm) | +0.89 (≥1e4) | recognised |
+| 1188 | `ⅠⅤⅩⅬⅭⅮⅯ` | 7 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/5 | 1 | 1 (0 firm) | +0.87 (≥1e4) | recognised |
+| 1189 | `→⇒⇉⇛⇶⟹⇴` | 7 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/13 | 3 | 2 (0 firm) | +0.83 (≥1e4) | recognised |
+| 1190 | `⋂∩⋁∨⋀∧⋃` | 7 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/7 | 5 | – | +0.38 (0.307) | recognised |
+| 1191 | `□⚀⚁⚂⚃⚄⚅` | 7 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 3 | – | +0.97 (≥1e4) | recognised |
+| 1192 | `➞➣➨➭➲➷➼` | 7 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/10 | 5 | – | – | recognised |
+| 1193 | `⟶⟹⇒→›˃〉` | 7 | 2.9 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/10 | 5 | – | +0.17 (0.221) | recognised |
+| 1194 | `⠀⠁⠂⠄⠈⠐⠠` | 7 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/7 | 3 | – | +0.65 (24.2) | recognised |
+| 1195 | `⠀⠁⠃⠇⠏⠟⠿` | 7 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 5/9 | 1 | 1 (0 firm) | +0.97 (≥1e4) | recognised |
+| 1196 | `⠿⠾⠽⠻⢾⢽⢻` | 7 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/8 | 5 | – | +0.58 (2) | recognised |
+| 1197 | `⣄⣆⣇⣍⣎⣏⣟` | 7 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.65 (4.33) | recognised |
+| 1198 | `꜀꜂꜄꜆꜈꜊꜌` | 7 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/10 | 1 | – | +0.86 (≥1e4) | recognised |
+| 1199 | `🄀🄂🄄🄆🄈🄊🄌` | 7 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/10 | 3 | – | +0.97 (≥1e4) | recognised |
+| 1200 | `😁😄🙂😐🙁😢😭` | 7 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 7/12 | 3 | 2 (0 firm) | +0.90 (≥1e4) | recognised |
+| 1201 | `🥡🥢🥟🥠🍵🍥🥮` | 7 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/10 | 5 | – | +0.43 (0.5) | recognised |
+| 1202 | `pɸfszʒʓ` | 7 | 1.4 | other | +0.53 ± 0.23 | 13.6 | cl 3/4 gr 1/1 | undecided 1/10 | 5 | – | +0.76 (≥1e4) | recognised |
+| 1203 | `◌○◔◐◕●` | 6 | 3.0 | other | +0.73 ± 0.18 | 2.54e+03 | cl 5/5 gr 2/2 | positive 3/8 | 3 | 1 (0 firm) | +0.91 (≥1e4) | recognised |
+| 1204 | `Oo°ₒ◦ᵒ` | 6 | 2.2 | other | +0.72 ± 0.18 | 9.65e+03 | cl 6/6 gr 2/2 | undecided 0/8 | 5 | – | +0.65 (≥1e4) | recognised |
+| 1205 | `垓兆億万千百` | 6 | 3.0 | other | +0.72 ± 0.18 | 9.65e+03 | cl 6/6 gr 2/2 | positive 1/9 | 5 | 3 (0 firm) | +0.98 (≥1e4) | recognised |
+| 1206 | `⇺⇻⇼⇽⇾⇿` | 6 | 3.0 | contiguous | +0.68 ± 0.17 | 7.19e+03 | cl 3/3 ge 1/1 gr 1/1 | undiscriminable | 1 | – | +0.24 (0.35) | recognised |
+| 1207 | `⠀⠏⠟⠿⡿⣿` | 6 | 3.0 | monotone | +0.69 ± 0.18 | 42 | cl 3/3 | undecided 0/8 | 5 | 2 (0 firm) | +0.94 (≥1e4) | recognised |
+| 1208 | `μᵐMᴍmₘ` | 6 | 2.2 | other | +0.69 ± 0.20 | 32.8 | cl 2/2 gr 2/2 | undecided 2/10 | 5 | 2 (0 firm) | +0.46 (2.11) | recognised |
+| 1209 | `➜➝➞➟➠➡` | 6 | 3.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.33 (0.5) | recognised |
+| 1210 | `꜇꜈꜉꜊꜋꜌` | 6 | 3.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | – | +0.88 (≥1e4) | recognised |
+| 1211 | `🨀🨁🨂🨃🨄🨅` | 6 | 4.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | – | +0.82 (≥1e4) | recognised |
+| 1212 | `⧅⧆⧇⧈⧉⧊` | 6 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.67 (60.7) | recognised |
+| 1213 | `〰〱〲〳〴〵` | 6 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.62 (10) | recognised |
+| 1214 | `ㅨㅩㅪㅫㅬㅭ` | 6 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.80 (≥1e4) | recognised |
+| 1215 | `𝌀𝌁𝌂𝌃𝌄𝌅` | 6 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
+| 1216 | `𝛳𝛴𝛵𝛶𝛷𝛸` | 6 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.78 (≥1e4) | recognised |
+| 1217 | `🂃🂄🂅🂆🂇🂈` | 6 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.82 (≥1e4) | recognised |
+| 1218 | `🄗🄘🄙🄚🄛🄜` | 6 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.71 (156) | recognised |
+| 1219 | `🞄🞅🞆🞇🞈🞉` | 6 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.93 (≥1e4) | recognised |
+| 1220 | `ޠޡޢޣޤޥ` | 6 | 2.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.86 (≥1e4) | recognised |
+| 1221 | `🞎🞏🞐🞑🞒🞓` | 6 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.89 (≥1e4) | recognised |
+| 1222 | `🞵🞶🞷🞸🞹🞺` | 6 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.93 (≥1e4) | recognised |
+| 1223 | `𝄿𝅂𝄾𝅁𝄽𝅀` | 6 | 4.0 | other | +0.61 ± 0.17 | 75.4 | cl 2/3 ge 1/1 gr 1/1 | undecided 0/8 | 5 | – | +0.53 (61.5) | recognised |
+| 1224 | `⛈☔☁⛅☀🌙` | 6 | 3.2 | other | +0.64 ± 0.19 | 16.9 | cl 3/4 gr 2/2 | undecided 2/6 | 5 | 1 (0 firm) | +0.58 (≥1e4) | recognised |
+| 1225 | `ϒϓϔϕϖϗ` | 6 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.62 (10) | recognised |
+| 1226 | `ݟݠݡݢݣݤ` | 6 | 2.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (156) | recognised |
+| 1227 | `ݣݟݠݡݢݤ` | 6 | 2.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | 1 (0 firm) | +0.21 (0.143) | recognised |
+| 1228 | `☚☛☜☝☞☟` | 6 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | 1 (0 firm) | +0.58 (75.1) | recognised |
+| 1229 | `♔♕♖♗♘♙` | 6 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.80 (≥1e4) | recognised |
+| 1230 | `⚀⚁⚂⚃⚄⚅` | 6 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.97 (≥1e4) | recognised |
+| 1231 | `➜➟➠➝➞➡` | 6 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.33 (0.5) | recognised |
+| 1232 | `⢲⢳⢴⢵⢶⢷` | 6 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.46 (0.833) | recognised |
+| 1233 | `⫓⫔⫕⫖⫗⫘` | 6 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.74 (≥1e4) | recognised |
+| 1234 | `⾃⾄⾅⾆⾇⾈` | 6 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.81 (≥1e4) | recognised |
+| 1235 | `㈕㈖㈗㈘㈙㈚` | 6 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
+| 1236 | `㎹㎺㎻㎼㎽㎾` | 6 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | – | recognised |
+| 1237 | `𝄽𝄾𝄿𝅀𝅁𝅂` | 6 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | 2 (0 firm) | +0.66 (≥1e4) | recognised |
+| 1238 | `🞢🞣🞤🞥🞦🞧` | 6 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.90 (≥1e4) | recognised |
+| 1239 | `🞯🞰🞱🞲🞳🞴` | 6 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.92 (≥1e4) | recognised |
+| 1240 | `🟥🟧🟨🟩🟦🟪` | 6 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/2 | 1 | – | +0.94 (≥1e4) | recognised |
+| 1241 | `🟥🟪🟦🟩🟨🟧` | 6 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/5 | 3 | – | +0.06 (0.0231) | recognised |
+| 1242 | `🭹🭺🭻🭼🭽🭾` | 6 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.81 (≥1e4) | recognised |
+| 1243 | `Mᵐᴍₘm𝐦` | 6 | 2.5 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/8 | 5 | 1 (0 firm) | +0.25 (0.125) | recognised |
+| 1244 | `〇㈠㈢㈤㈦㈨` | 6 | 3.0 | monotone | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 1/7 | 3 | 1 (0 firm) | +0.97 (≥1e4) | recognised |
+| 1245 | `ₕhʜHＨℋ` | 6 | 2.2 | other | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/9 | 5 | 1 (0 firm) | +0.55 (14.3) | recognised |
+| 1246 | `■▩◫▦▤□` | 6 | 3.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/9 | 5 | 1 (0 firm) | +0.79 (≥1e4) | recognised |
+| 1247 | `★✮✭✬✫✩` | 6 | 3.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/3 | 5 | – | +0.73 (≥1e4) | recognised |
+| 1248 | `′\|∫∮∯∰` | 6 | 2.7 | other | +0.57 ± 0.18 | 49.7 | cl 2/3 ge 2/2 gr 1/1 | undecided 1/5 | 3 | 1 (0 firm) | +0.90 (≥1e4) | recognised |
+| 1249 | `HʜₕＨℋh` | 6 | 2.2 | other | +0.55 ± 0.18 | 20.9 | cl 2/3 ge 2/2 gr 1/1 | undecided 0/8 | 5 | – | +0.29 (0.25) | recognised |
+| 1250 | `Ooᵒₒ◦●` | 6 | 2.3 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/8 | 5 | 1 (0 firm) | +0.73 (≥1e4) | recognised |
+| 1251 | `◌○◔◑◕●` | 6 | 3.0 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | positive 5/10 | 5 | 4 (0 firm) | +0.91 (≥1e4) | recognised |
+| 1252 | `⬜◽◻□▫⬞` | 6 | 3.0 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 2/9 | 5 | 2 (0 firm) | +0.39 (≥1e4) | recognised |
+| 1253 | `.o⊙⊚◎◯` | 6 | 2.3 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/6 | 5 | 1 (0 firm) | +0.40 (0.833) | recognised |
+| 1254 | `sʃʐzʒʓ` | 6 | 1.7 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/8 | 5 | – | +0.55 (≥1e4) | recognised |
+| 1255 | `ᚎᚐᚑᚒᚓᚔ` | 6 | 3.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/1 | 3 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
+| 1256 | `ₘmᴍM𝐦𝑚` | 6 | 2.7 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/9 | 5 | 2 (0 firm) | +0.40 (0.567) | recognised |
+| 1257 | `∧⋀∨⋁∩⋂` | 6 | 3.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | +0.44 (1.34) | recognised |
+| 1258 | `│─╰╯╮╭` | 6 | 3.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 3 | – | +0.63 (≥1e4) | recognised |
+| 1259 | `🠢🠦🠪🠮🠲🠶` | 6 | 4.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/8 | 3 | – | +0.71 (≥1e4) | recognised |
+| 1260 | `-‐‑‒–—` | 6 | 2.7 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.70 (≥1e4) | recognised |
+| 1261 | `•⬝▪◾◼■` | 6 | 3.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | positive 1/9 | 3 | 1 (0 firm) | +0.91 (≥1e4) | recognised |
+| 1262 | `┈┄─━▬█` | 6 | 3.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/6 | 5 | 2 (0 firm) | +0.70 (≥1e4) | recognised |
+| 1263 | `𒐯𒑰𒑱𒑲𒑳𒑴` | 6 | 4.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.70 (≥1e4) | recognised |
+| 1264 | `𒑮𒑰𒑱𒑲𒑳𒑴` | 6 | 4.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.70 (≥1e4) | recognised |
+| 1265 | `🀍🀏🀑🀓🀕🀗` | 6 | 4.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/8 | 1 | – | +0.87 (≥1e4) | recognised |
+| 1266 | `˚˙·∣∥⫴` | 6 | 2.5 | other | +0.53 ± 0.18 | 12.3 | cl 1/2 ge 2/2 gr 1/1 | undecided 0/7 | 5 | 1 (0 firm) | +0.83 (≥1e4) | recognised |
+| 1267 | `⁎*∗★✦✧` | 6 | 2.7 | other | +0.53 ± 0.18 | 12.3 | cl 1/2 ge 2/2 gr 1/1 | undecided 0/7 | 5 | – | +0.20 (0.0809) | recognised |
+| 1268 | `+×∗*✶✹` | 6 | 2.2 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/8 | 5 | – | +0.33 (0.5) | recognised |
+| 1269 | `2➋3➌4➍` | 6 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.94 (≥1e4) | recognised |
+| 1270 | `Ooᵒₒ∘⊙` | 6 | 2.3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/8 | 5 | 1 (0 firm) | +0.72 (≥1e4) | recognised |
+| 1271 | `Ooᵒₒ◦°` | 6 | 2.2 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/8 | 5 | 1 (0 firm) | +0.72 (≥1e4) | recognised |
+| 1272 | `Tᴛtₜᵗ𝐭` | 6 | 2.5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/7 | 5 | 2 (0 firm) | +0.23 (0.143) | recognised |
+| 1273 | `αἀἄἆᾳᾷ` | 6 | 2.8 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/7 | 5 | 1 (0 firm) | – | recognised |
+| 1274 | `ᐎᐐᐒᐔᐗᐙ` | 6 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/8 | 5 | – | +0.52 (3.26e+03) | recognised |
+| 1275 | `ᚅᚇᚉᚋᚍᚏ` | 6 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/8 | 5 | – | +0.75 (≥1e4) | recognised |
+| 1276 | `ᚔᚓᚒᚑᚐ᚛` | 6 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | 1 (0 firm) | +0.94 (≥1e4) | recognised |
+| 1277 | `ᴍM𝐦m𝑚ₘ` | 6 | 2.7 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/10 | 5 | – | +0.32 (0.267) | recognised |
+| 1278 | `ᵐ𝐦Mᴍmₘ` | 6 | 2.5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/9 | 5 | 2 (0 firm) | +0.44 (1.31) | recognised |
+| 1279 | `—–‒‑‐−` | 6 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.69 (≥1e4) | recognised |
+| 1280 | `‾⎯⎺⎻⎼⎽` | 6 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | 1 (0 firm) | +0.73 (≥1e4) | recognised |
+| 1281 | `⁎*∗★✭✶` | 6 | 2.7 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/8 | 5 | – | +0.20 (0.0809) | recognised |
+| 1282 | `ₕhʜHℍℌ` | 6 | 2.2 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/9 | 5 | 2 (0 firm) | +0.44 (1.25) | recognised |
+| 1283 | `⊚◦∘○⭘◯` | 6 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/11 | 5 | – | +0.35 (10.9) | recognised |
+| 1284 | `⛈☔☁⛅☀🌞` | 6 | 3.2 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/6 | 5 | 1 (0 firm) | +0.51 (60.3) | recognised |
+| 1285 | `✩✫✬✭✮✯` | 6 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.73 (≥1e4) | recognised |
+| 1286 | `⟵⟸⟽⟾⟹⟶` | 6 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/6 | 5 | – | +0.45 (5.5) | recognised |
+| 1287 | `⪡⟨⫷⋘《〈` | 6 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/9 | 5 | – | +0.62 (10) | recognised |
+| 1288 | `⬜□▫◽◻⬞` | 6 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/9 | 5 | 1 (0 firm) | +0.06 (0.0219) | recognised |
+| 1289 | `㎄㎃㎂㎁㎀㏘` | 6 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | +0.80 (≥1e4) | recognised |
+| 1290 | `兆億万千百十` | 6 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/10 | 1 | 2 (0 firm) | +0.98 (≥1e4) | recognised |
+| 1291 | `🌌☀🌍🐘🐜🦠` | 6 | 3.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/6 | 5 | – | +0.87 (≥1e4) | recognised |
+| 1292 | `🌤🌥🌦🌧🌩🌪` | 6 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | – | +0.58 (44.7) | recognised |
+| 1293 | `🐔🐓🐥🐤🐣🥚` | 6 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/8 | 5 | 1 (0 firm) | +0.78 (≥1e4) | recognised |
+| 1294 | `🕔🕒🕐🕚🕘🕖` | 6 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/10 | 1 | – | +0.25 (0.64) | recognised |
+| 1295 | `😦😧😨😰😢😭` | 6 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/7 | 5 | – | – | recognised |
+| 1296 | `ᚏᚐᚑᚒᚓᚔ` | 6 | 3.0 | contiguous | +0.46 ± 0.17 | 17.5 | cl 2/2 ge 0/1 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.93 (≥1e4) | recognised |
+| 1297 | `⣮⣰⣲⣴⣶⣸` | 6 | 3.0 | monotone | +0.17 ± 0.18 | 10.1 | cl 4/4 gr 0/2 | undecided 0/8 | 3 | 1 (0 firm) | +0.59 (2.94e+03) | recognised |
+| 1298 | `⎹⎯⎺⎻⎼⎽` | 6 | 3.0 | other | +0.19 ± 0.24 | 10.5 | cl 3/3 gr 0/1 | undecided 0/3 | 3 | 1 (0 firm) | +0.73 (≥1e4) | recognised |
+| 1299 | `ᴍmMₘ𝐌` | 5 | 2.4 | other | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 0/6 | 5 | – | +0.31 (0.2) | recognised |
+| 1300 | `🥟🥡🥮🥢🥠` | 5 | 4.0 | other | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 0/4 | 5 | – | +0.43 (0.5) | recognised |
+| 1301 | `lɮɭɫɬ` | 5 | 1.8 | other | +0.77 ± 0.14 | 488 | cl 2/2 gr 6/6 | undecided 0/5 | 5 | – | +0.25 (0.111) | recognised |
+| 1302 | `ᚕᚖᚗᚘᚙ` | 5 | 3.0 | contiguous | +0.76 ± 0.16 | ≥1e4 | cl 5/5 gr 2/2 | undiscriminable | 1 | – | – | recognised |
+| 1303 | `‐‑‒–—` | 5 | 3.0 | contiguous | +0.73 ± 0.16 | 3.13e+03 | cl 3/3 gr 2/2 | undiscriminable | 1 | 1 (0 firm) | +0.69 (≥1e4) | recognised |
+| 1304 | `○◔◐◕●` | 5 | 3.0 | other | +0.73 ± 0.18 | 1.85e+03 | cl 5/5 gr 2/2 | positive 3/5 | 3 | – | +0.92 (≥1e4) | recognised |
+| 1305 | `🙂😄😆😂🤣` | 5 | 4.0 | other | +0.73 ± 0.18 | 1.85e+03 | cl 5/5 gr 2/2 | undecided 3/8 | 5 | 1 (0 firm) | +0.73 (≥1e4) | recognised |
+| 1306 | `ᥰᥱᥲᥳᥴ` | 5 | 3.0 | contiguous | +0.67 ± 0.15 | ≥1e4 | cl 3/3 ge 2/2 gr 1/1 | undiscriminable | 1 | – | +0.76 (≥1e4) | recognised |
+| 1307 | `◌○◍◎●` | 5 | 3.0 | other | +0.67 ± 0.15 | ≥1e4 | cl 3/3 ge 2/2 gr 1/1 | positive 1/3 | 5 | 3 (0 firm) | +0.46 (≥1e4) | recognised |
+| 1308 | `○◌◍◎●` | 5 | 3.0 | contiguous | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undiscriminable | 3 | – | +0.26 (3.89) | recognised |
+| 1309 | `▪◾◼■⬛` | 5 | 3.0 | other | +0.69 ± 0.18 | 6.83e+03 | cl 5/5 ge 1/1 gr 2/2 | positive 1/5 | 3 | – | +0.90 (≥1e4) | recognised |
+| 1310 | `◳◴◵◶◷` | 5 | 3.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.63 (≥1e4) | recognised |
+| 1311 | `꜕꜒꜓꜔꜖` | 5 | 3.0 | other | +0.71 ± 0.21 | 31.1 | cl 2/2 | undecided 0/3 | 5 | – | +0.47 (8.88) | recognised |
+| 1312 | `ﬀﬄﬂﬃﬁ` | 5 | 3.0 | other | +0.71 ± 0.21 | 31.1 | cl 2/2 | undecided 0/5 | 5 | – | +0.29 (0.25) | recognised |
+| 1313 | `ᚐᚑᚒᚓᚔ` | 5 | 3.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.94 (≥1e4) | recognised |
+| 1314 | `⢹⢺⢻⢼⢽` | 5 | 3.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 3 | – | +0.58 (2) | recognised |
+| 1315 | `🌑🌒🌓🌔🌕` | 5 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.92 (≥1e4) | recognised |
+| 1316 | `🏻🏼🏽🏾🏿` | 5 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.95 (≥1e4) | recognised |
+| 1317 | `🟥🟧🟨🟩🟦` | 5 | 4.0 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 1/3 | 1 | 2 (0 firm) | +0.93 (≥1e4) | recognised |
+| 1318 | `V∨⌄⌣‿` | 5 | 2.6 | other | +0.63 ± 0.18 | 644 | cl 3/3 ge 2/2 gr 1/1 | undecided 2/6 | 5 | 1 (0 firm) | +0.51 (97.1) | recognised |
+| 1319 | `‐‒–—―` | 5 | 3.0 | monotone | +0.63 ± 0.18 | 644 | cl 3/3 ge 2/2 gr 1/1 | positive 1/1 | 1 | 1 (0 firm) | +0.73 (≥1e4) | recognised |
+| 1320 | `_-₋⁻¯` | 5 | 2.0 | other | +0.62 ± 0.18 | 470 | cl 3/3 ge 2/2 gr 1/1 | undecided 0/6 | 5 | – | +0.23 (0.1) | recognised |
+| 1321 | `ᚋᚌᚍᚎᚏ` | 5 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.51 (4.79) | recognised |
+| 1322 | `ʰHhʜₕ` | 5 | 1.8 | other | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 0/6 | 5 | – | +0.40 (1.25) | recognised |
+| 1323 | `ᚁᚂᚃᚄᚅ` | 5 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.88 (≥1e4) | recognised |
+| 1324 | `⎺⎻⎹⎼⎽` | 5 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
+| 1325 | `␢␣␤␥␦` | 5 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.53 (2.9) | recognised |
+| 1326 | `♚♛♜♝♞` | 5 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.60 (67.3) | recognised |
+| 1327 | `♛♚♜♞♝` | 5 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 5 | – | +0.22 (0.167) | recognised |
+| 1328 | `⭠⭡⭢⭣⭤` | 5 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | – | recognised |
+| 1329 | `㎀㎁㎂㎃㎄` | 5 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.80 (≥1e4) | recognised |
+| 1330 | `㎐㎑㎒㎓㎔` | 5 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.90 (≥1e4) | recognised |
+| 1331 | `㎚㎛㎜㎝㎞` | 5 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.95 (≥1e4) | recognised |
+| 1332 | `㎴㎵㎶㎷㎸` | 5 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.62 (8.53e+03) | recognised |
+| 1333 | `꜒꜓꜔꜕꜖` | 5 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.71 (≥1e4) | recognised |
+| 1334 | `ﬀﬁﬂﬃﬄ` | 5 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.71 (≥1e4) | recognised |
+| 1335 | `𐆐𐆑𐆒𐆓𐆔` | 5 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.65 (410) | recognised |
+| 1336 | `𝄖𝄗𝄘𝄙𝄚` | 5 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.71 (≥1e4) | recognised |
+| 1337 | `🞻🞼🞽🞾🞿` | 5 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | – | recognised |
+| 1338 | `🮂🮃🮄🮅🮆` | 5 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.93 (≥1e4) | recognised |
+| 1339 | `🮇🮈🮉🮊🮋` | 5 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | +0.89 (≥1e4) | recognised |
+| 1340 | `-⁻₋¯_` | 5 | 2.0 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/6 | 5 | – | +0.23 (0.1) | recognised |
+| 1341 | `ʰHʜhₕ` | 5 | 1.8 | other | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/7 | 5 | 1 (0 firm) | +0.55 (14.3) | recognised |
+| 1342 | `🏙🏘👪👥🧍` | 5 | 4.0 | other | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 3/8 | 5 | – | +0.67 (3.04e+03) | recognised |
+| 1343 | `hHʰₕʜ` | 5 | 1.8 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/5 | 5 | – | +0.29 (0.25) | recognised |
+| 1344 | `ᵤuᴜU𝐔` | 5 | 2.4 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 2/8 | 5 | 1 (0 firm) | +0.51 (4.5) | recognised |
+| 1345 | `ₕhʜHℍ` | 5 | 2.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/7 | 5 | 1 (0 firm) | +0.56 (66.3) | recognised |
+| 1346 | `↠⟹⟶⟾↣` | 5 | 3.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/7 | 5 | – | +0.14 (0.095) | recognised |
+| 1347 | `🡪🢂🡢🡺🡲` | 5 | 4.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/9 | 5 | – | +0.16 (0.0714) | recognised |
+| 1348 | `.ₘmᴍM` | 5 | 1.8 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/8 | 5 | 2 (0 firm) | +0.42 (0.8) | recognised |
+| 1349 | `0⅛⅜⅝⅞` | 5 | 2.6 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/1 | 3 | – | +0.86 (≥1e4) | recognised |
+| 1350 | `→⇒⇉⇛⇶` | 5 | 3.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/8 | 3 | 2 (0 firm) | +0.83 (≥1e4) | recognised |
+| 1351 | `−⎻⎯⎼⎽` | 5 | 3.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/3 | 5 | 1 (0 firm) | +0.68 (≥1e4) | recognised |
+| 1352 | `⣄⣠⣰⣸⣿` | 5 | 3.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/6 | 1 | 1 (0 firm) | +0.64 (6.5) | recognised |
+| 1353 | `🏆🏅🥇🥈🥉` | 5 | 4.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/3 | 3 | – | +0.74 (≥1e4) | recognised |
+| 1354 | `📢🔊🔉🔈🔇` | 5 | 4.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/3 | 3 | 1 (0 firm) | +0.78 (≥1e4) | recognised |
+| 1355 | `🠠🠢🠤🠦🠨` | 5 | 4.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/6 | 5 | – | – | recognised |
+| 1356 | `🠢🠦🠪🠮🠲` | 5 | 4.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/6 | 1 | – | +0.71 (≥1e4) | recognised |
+| 1357 | `꜈꜉꜊꜋꜌` | 5 | 3.0 | contiguous | +0.58 ± 0.21 | 36.1 | cl 2/3 gr 1/1 | undiscriminable | 1 | – | +0.87 (≥1e4) | recognised |
+| 1358 | `0·ⅠⅡⅢ` | 5 | 2.4 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/3 | 3 | – | +0.95 (≥1e4) | recognised |
+| 1359 | `Hℍʜₕh` | 5 | 2.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/6 | 5 | – | +0.29 (0.25) | recognised |
+| 1360 | `·oO○◯` | 5 | 2.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/6 | 5 | – | +0.74 (≥1e4) | recognised |
+| 1361 | `‾⎺⎻⎼⎽` | 5 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/1 | 3 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
+| 1362 | `∬∮∯∰∱` | 5 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/1 | 3 | 1 (0 firm) | +0.76 (≥1e4) | recognised |
+| 1363 | `■▩▨▤□` | 5 | 3.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/6 | 5 | – | +0.73 (≥1e4) | recognised |
+| 1364 | `🚀✈🚗🚲🚶` | 5 | 3.8 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/7 | 5 | 2 (0 firm) | +0.89 (≥1e4) | recognised |
+| 1365 | `({\|})` | 5 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/4 | 2 | – | +0.41 (1.65e+03) | recognised |
+| 1366 | `2Zzʒʓ` | 5 | 1.4 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/5 | 5 | – | +0.66 (≥1e4) | recognised |
+| 1367 | `<≪⋘⪢⫸` | 5 | 2.6 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/6 | 5 | 1 (0 firm) | +0.86 (≥1e4) | recognised |
+| 1368 | `=>→⇒⇛` | 5 | 2.2 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/5 | 3 | 1 (0 firm) | +0.87 (≥1e4) | recognised |
+| 1369 | `Hʜℍhₕ` | 5 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | – | +0.44 (1.25) | recognised |
+| 1370 | `Mᴍmₘᵐ` | 5 | 2.2 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/7 | 5 | 2 (0 firm) | +0.38 (0.429) | recognised |
+| 1371 | `M𝐌ₘᴍm` | 5 | 2.4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | – | +0.31 (0.2) | recognised |
+| 1372 | `Ooᵒₒ°` | 5 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | 1 (0 firm) | +0.72 (≥1e4) | recognised |
+| 1373 | `_₋-⁻¯` | 5 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/8 | 1 | 3 (0 firm) | +0.63 (≥1e4) | recognised |
+| 1374 | `lɫɬɭɮ` | 5 | 1.8 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.73 (≥1e4) | recognised |
+| 1375 | `oôöòõ` | 5 | 1.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/7 | 5 | – | – | recognised |
+| 1376 | `·∶:⁝⁞` | 5 | 2.4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | 3 (0 firm) | +0.81 (≥1e4) | recognised |
+| 1377 | `ᴍ𝐌mMₘ` | 5 | 2.4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | – | +0.31 (0.2) | recognised |
+| 1378 | `ᵒoO⬤🔵` | 5 | 2.4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | 1 (0 firm) | +0.79 (≥1e4) | recognised |
+| 1379 | `›>→⇒⇛` | 5 | 2.6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/6 | 3 | 1 (0 firm) | +0.87 (≥1e4) | recognised |
+| 1380 | `‿⌣⌄∨∪` | 5 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/6 | 5 | 1 (0 firm) | +0.51 (97.1) | recognised |
+| 1381 | `⁎*★🌟🌠` | 5 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | – | +0.26 (0.111) | recognised |
+| 1382 | `⁎*✱❋✲` | 5 | 2.6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | – | +0.35 (0.576) | recognised |
+| 1383 | `ₘmᴍM𝐌` | 5 | 2.4 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/7 | 5 | 2 (0 firm) | +0.42 (0.8) | recognised |
+| 1384 | `⅒⅑⅐⅙⅕` | 5 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/4 | 3 | – | +0.80 (≥1e4) | recognised |
+| 1385 | `↉⅛⅜⅝⅞` | 5 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | +0.86 (≥1e4) | recognised |
+| 1386 | `ⅢⅡⅠ0∅` | 5 | 2.6 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | +0.95 (≥1e4) | recognised |
+| 1387 | `Ⅿↁↂↇↈ` | 5 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 1 | 1 (0 firm) | +0.83 (≥1e4) | recognised |
+| 1388 | `↑↗→↘↓` | 5 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 3/5 | 1 | – | +0.93 (≥1e4) | recognised |
+| 1389 | `∂∫∮∯∰` | 5 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 3 | 1 (0 firm) | +0.90 (≥1e4) | recognised |
+| 1390 | `∅💨🌫🔥🪵` | 5 | 3.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/7 | 5 | – | +0.63 (1.31e+03) | recognised |
+| 1391 | `⎯⎺⎻⎼⎽` | 5 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 3 | 1 (0 firm) | +0.73 (≥1e4) | recognised |
+| 1392 | `①③⓹⓻⓽` | 5 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | 1 (0 firm) | +0.91 (≥1e4) | recognised |
+| 1393 | `█▓▒░▫` | 5 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/5 | 5 | – | +0.94 (≥1e4) | recognised |
+| 1394 | `■▩▦▤□` | 5 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/7 | 5 | 1 (0 firm) | +0.79 (≥1e4) | recognised |
+| 1395 | `▢□◻◽▫` | 5 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/8 | 3 | – | +0.78 (≥1e4) | recognised |
+| 1396 | `○◔◑◕●` | 5 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 5/7 | 1 | 2 (0 firm) | +0.92 (≥1e4) | recognised |
+| 1397 | `◌○◎◉●` | 5 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/7 | 5 | 4 (0 firm) | +0.60 (≥1e4) | recognised |
+| 1398 | `☀⛅☁☔⛈` | 5 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/6 | 5 | 1 (0 firm) | +0.58 (≥1e4) | recognised |
+| 1399 | `☁☂☔⛱🌈` | 5 | 3.2 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/5 | 5 | – | – | recognised |
+| 1400 | `✩✫✬✭✮` | 5 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.73 (≥1e4) | recognised |
+| 1401 | `⟶⟹⟾⟼⟿` | 5 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/6 | 5 | – | +0.35 (0.91) | recognised |
+| 1402 | `⟹⟶⟼⟿⟾` | 5 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | – | +0.11 (0.0519) | recognised |
+| 1403 | `⬛◻◽▪⬝` | 5 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/7 | 5 | 2 (0 firm) | +0.71 (≥1e4) | recognised |
+| 1404 | `巨大中小微` | 5 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/7 | 3 | 1 (0 firm) | +0.62 (10) | recognised |
+| 1405 | `꜀꜂꜄꜆꜈` | 5 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/6 | 1 | – | +0.62 (10) | recognised |
+| 1406 | `🌊💧🌧☁🌫` | 5 | 3.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/8 | 5 | – | +0.50 (409) | recognised |
+| 1407 | `🌑🌘🌗🌖🌕` | 5 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 1 | – | +0.56 (≥1e4) | recognised |
+| 1408 | `📯🔔📢🗣🤫` | 5 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/8 | 5 | – | +0.54 (2.9) | recognised |
+| 1409 | `😄😊🙂😐😞` | 5 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/8 | 5 | 2 (0 firm) | +0.86 (≥1e4) | recognised |
+| 1410 | `😐😟😞😢😭` | 5 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/8 | 5 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
+| 1411 | `😐😮😯😲😱` | 5 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/5 | 5 | 1 (0 firm) | +0.33 (0.567) | recognised |
+| 1412 | `😱😲😯😮😳` | 5 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | 1 (0 firm) | +0.33 (0.567) | recognised |
+| 1413 | `🡢🡪🡲🡺🢂` | 5 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/6 | 5 | – | +0.63 (≥1e4) | recognised |
+| 1414 | `🬀🬂🬄🬆🬈` | 5 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | – | +0.70 (≥1e4) | recognised |
+| 1415 | `.·0ʘo` | 5 | 1.4 | other | +0.55 ± 0.20 | 136 | cl 5/6 gr 2/3 | undecided 0/8 | 5 | – | +0.19 (0.111) | recognised |
+| 1416 | `㎺㎻㎼㎽㎾` | 5 | 3.0 | contiguous | +0.56 ± 0.21 | 17.5 | cl 2/3 gr 1/1 | undiscriminable | 1 | – | – | recognised |
+| 1417 | `ⅠⅬⅭⅮⅯ` | 5 | 3.0 | monotone | +0.50 ± 0.18 | 47.8 | cl 3/3 ge 1/2 gr 1/1 | undecided 0/1 | 5 | – | +0.76 (≥1e4) | recognised |
+| 1418 | `⁎✱∗*★` | 5 | 2.6 | other | +0.49 ± 0.18 | 40.5 | cl 3/3 ge 1/2 gr 1/1 | undecided 0/6 | 5 | – | +0.24 (0.117) | recognised |
+| 1419 | `>→⇒⟹⟶` | 5 | 2.6 | other | +0.49 ± 0.18 | 10.1 | cl 2/2 ge 1/2 gr 1/1 | undecided 1/6 | 5 | – | +0.17 (0.221) | recognised |
+| 1420 | `‒–‐‑—` | 5 | 3.0 | other | +0.46 ± 0.17 | 17.5 | cl 2/2 ge 0/1 gr 1/1 | undecided 1/2 | 5 | – | +0.29 (0.23) | recognised |
+| 1421 | `🏆🎖🥇🥈🥉` | 5 | 4.0 | other | +0.53 ± 0.23 | 10.9 | cl 3/4 gr 1/1 | undecided 0/3 | 3 | – | +0.83 (≥1e4) | recognised |
+| 1422 | `🥟🥡🥢🥠🥮` | 5 | 4.0 | other | +0.53 ± 0.23 | 10.9 | cl 3/4 gr 1/1 | undecided 0/4 | 5 | – | +0.43 (0.5) | recognised |
+| 1423 | `☁💧🌊🌧🌫` | 5 | 3.8 | other | +0.43 ± 0.17 | 27.1 | cl 4/6 ge 2/2 gr 1/2 | undecided 0/7 | 5 | – | +0.21 (0.0909) | recognised |
+| 1424 | `⎹⎺⎻⎼⎽` | 5 | 3.0 | contiguous | +0.29 ± 0.21 | 125 | cl 3/3 gr 0/1 | undiscriminable | 3 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
+| 1425 | `⅒⅑⅐¼⅓` | 5 | 2.8 | other | +0.19 ± 0.24 | 10.5 | cl 3/3 gr 0/1 | undecided 0/3 | 3 | 1 (0 firm) | +0.74 (≥1e4) | recognised |
+| 1426 | `ⅢⅡⅠ○●` | 5 | 3.0 | other | +0.19 ± 0.24 | 10.5 | cl 3/3 gr 0/1 | undecided 0/4 | 3 | – | +0.95 (≥1e4) | recognised |
+| 1427 | `⋮⋯⋰⋱` | 4 | 3.0 | contiguous | +0.79 ± 0.13 | ≥1e4 | cl 5/6 gr 3/3 | undiscriminable | 1 | – | +0.14 (0.0556) | recognised |
+| 1428 | `Ppᴘₚ` | 4 | 2.0 | monotone | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 0/4 | 5 | – | +0.40 (1.25) | recognised |
+| 1429 | `ɲnŋɳ` | 4 | 1.8 | other | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 1/4 | 5 | – | +0.33 (0.333) | recognised |
+| 1430 | `•ʘo◉` | 4 | 2.2 | other | +0.85 ± 0.19 | 16.3 | gr 5/5 | undecided 0/4 | 5 | – | – | recognised |
+| 1431 | `◴◵◶◷` | 4 | 3.0 | contiguous | +0.77 ± 0.16 | 8.83e+03 | cl 4/4 gr 2/2 | undiscriminable | 1 | 1 (0 firm) | +0.63 (≥1e4) | recognised |
+| 1432 | `🍜🥢🥟🥡` | 4 | 4.0 | other | +0.73 ± 0.18 | 2.54e+03 | cl 5/5 gr 2/2 | undecided 0/5 | 5 | – | +0.33 (0.5) | recognised |
+| 1433 | `ᵒoO◯` | 4 | 2.0 | other | +0.73 ± 0.18 | 1.85e+03 | cl 5/5 gr 2/2 | undecided 0/4 | 5 | 2 (0 firm) | +0.79 (≥1e4) | recognised |
+| 1434 | `⎺⎻⎼⎽` | 4 | 3.0 | contiguous | +0.72 ± 0.18 | 161 | cl 2/2 gr 2/2 | undiscriminable | 1 | 1 (0 firm) | +0.84 (≥1e4) | recognised |
+| 1435 | `㎣㎤㎥㎦` | 4 | 3.0 | contiguous | +0.72 ± 0.18 | 161 | cl 2/2 gr 2/2 | undiscriminable | 1 | 1 (0 firm) | +0.69 (471) | recognised |
+| 1436 | `⿳⿲⿱⿴` | 4 | 3.0 | other | +0.67 ± 0.16 | 1.16e+03 | cl 2/2 ge 2/2 gr 1/1 | undecided 0/3 | 5 | 1 (0 firm) | – | recognised |
+| 1437 | `⌈⌉⌋⌊` | 4 | 3.0 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/3 | 5 | – | +0.60 (154) | recognised |
+| 1438 | `◐◑◓◒` | 4 | 3.0 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/3 | 5 | 1 (0 firm) | +0.17 (0.111) | recognised |
+| 1439 | `◑◐◓◒` | 4 | 3.0 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/6 | 5 | 1 (0 firm) | +0.17 (0.111) | recognised |
+| 1440 | `◒◐◑◓` | 4 | 3.0 | other | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/3 | 5 | 1 (0 firm) | +0.17 (0.111) | recognised |
+| 1441 | `𝂅𝂆𝂇𝂈` | 4 | 4.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 1 | – | – | recognised |
+| 1442 | `⁎*✱✳` | 4 | 2.5 | other | +0.69 ± 0.20 | 32.8 | cl 2/2 gr 2/2 | undecided 0/4 | 5 | – | +0.33 (0.654) | recognised |
+| 1443 | `㎕㎖㎗㎘` | 4 | 3.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | 2 (0 firm) | +0.70 (≥1e4) | recognised |
+| 1444 | `↠↟↞↡` | 4 | 3.0 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 0/3 | 1 | – | – | recognised |
+| 1445 | `⋯⋮⋰⋱` | 4 | 3.0 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 1/3 | 5 | – | +0.20 (0.156) | recognised |
+| 1446 | `⏴⏵⏶⏷` | 4 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | – | +0.25 (0.339) | recognised |
+| 1447 | `◐◑◒◓` | 4 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | 2 (0 firm) | +0.29 (1.02) | recognised |
+| 1448 | `◴◷◶◵` | 4 | 3.0 | other | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undecided 0/3 | 1 | 1 (0 firm) | +0.23 (0.152) | recognised |
+| 1449 | `𝂊𝂋𝂌𝂍` | 4 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 1450 | `🌣🌤🌥🌦` | 4 | 4.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 3 | 1 (0 firm) | +0.48 (2.33) | recognised |
+| 1451 | `⏴⏵⏷⏶` | 4 | 3.0 | other | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undecided 1/3 | 5 | 1 (0 firm) | +0.34 (0.543) | recognised |
+| 1452 | `𝃐𝃑𝃒𝃓` | 4 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.69 (471) | recognised |
+| 1453 | `𝃞𝃟𝃠𝃡` | 4 | 4.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.72 (3.16e+03) | recognised |
+| 1454 | `◶◵◴◷` | 4 | 3.0 | other | +0.61 ± 0.17 | 31.9 | cl 2/3 ge 1/1 gr 1/1 | undecided 1/3 | 1 | – | +0.23 (0.152) | recognised |
+| 1455 | `ᖰᖱᖲᖳ` | 4 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.69 (471) | recognised |
+| 1456 | `ᥰᥱᥲᥳ` | 4 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.64 (≥1e4) | recognised |
+| 1457 | `⋮⋰⋯⋱` | 4 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/2 | 1 | – | +0.21 (0.267) | recognised |
+| 1458 | `⋰⋮⋯⋱` | 4 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | +0.17 (0.0788) | recognised |
+| 1459 | `⏴⏶⏵⏷` | 4 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/2 | 1 | 1 (0 firm) | +0.19 (0.125) | recognised |
+| 1460 | `⏵⏷⏴⏶` | 4 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 1 | 1 (0 firm) | +0.22 (0.179) | recognised |
+| 1461 | `╭╮╯╰` | 4 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.82 (≥1e4) | recognised |
+| 1462 | `╭╰╯╮` | 4 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/3 | 1 | 1 (0 firm) | +0.11 (0.0385) | recognised |
+| 1463 | `▲△▴▵` | 4 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.47 (0.833) | recognised |
+| 1464 | `▲▴▵△` | 4 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | +0.47 (0.833) | recognised |
+| 1465 | `△▲▵▴` | 4 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 2/6 | 5 | 1 (0 firm) | +0.45 (0.833) | recognised |
+| 1466 | `△▵▲▴` | 4 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 5 | 1 (0 firm) | +0.45 (0.833) | recognised |
+| 1467 | `◰◱◲◳` | 4 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.54 (14.3) | recognised |
+| 1468 | `♩♪♫♬` | 4 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.73 (≥1e4) | recognised |
+| 1469 | `♪♬♩♫` | 4 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/6 | 5 | – | +0.25 (0.125) | recognised |
+| 1470 | `⚆⚇⚈⚉` | 4 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.63 (≥1e4) | recognised |
+| 1471 | `ⴷⴸⴹⴺ` | 4 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.61 (≥1e4) | recognised |
+| 1472 | `〸〹〺〻` | 4 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.65 (403) | recognised |
+| 1473 | `㆙㆚㆛㆜` | 4 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.83 (≥1e4) | recognised |
+| 1474 | `㎑㎒㎓㎔` | 4 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.88 (≥1e4) | recognised |
+| 1475 | `㎟㎠㎡㎢` | 4 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.85 (≥1e4) | recognised |
+| 1476 | `㎩㎪㎫㎬` | 4 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.88 (≥1e4) | recognised |
+| 1477 | `㎰㎱㎲㎳` | 4 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.82 (≥1e4) | recognised |
+| 1478 | `꠰꠱꠲꠳` | 4 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.77 (≥1e4) | recognised |
+| 1479 | `🔇🔈🔉🔊` | 4 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.78 (≥1e4) | recognised |
+| 1480 | `ᴏOoₒ` | 4 | 2.0 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/4 | 5 | – | +0.30 (0.537) | recognised |
+| 1481 | `‹«»›` | 4 | 2.5 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/4 | 5 | – | +0.33 (0.333) | recognised |
+| 1482 | `‿⌣⌄∨` | 4 | 3.0 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 2/4 | 5 | 1 (0 firm) | +0.51 (97.1) | recognised |
+| 1483 | `∨⌣‿⌄` | 4 | 3.0 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 2/5 | 5 | – | +0.20 (0.1) | recognised |
+| 1484 | `十百千万` | 4 | 3.0 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | positive 1/5 | 1 | – | +0.97 (≥1e4) | recognised |
+| 1485 | `*⁑⁕⁂` | 4 | 2.5 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/5 | 5 | 1 (0 firm) | +0.83 (≥1e4) | recognised |
+| 1486 | `*🌟★⁎` | 4 | 2.8 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/4 | 5 | – | +0.26 (0.111) | recognised |
+| 1487 | `>→⇒⇛` | 4 | 2.5 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/4 | 3 | 1 (0 firm) | +0.87 (≥1e4) | recognised |
+| 1488 | `Aaªᵃ` | 4 | 1.8 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
+| 1489 | `Lʟlₗ` | 4 | 1.8 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | positive 1/5 | 5 | 1 (0 firm) | +0.55 (14.3) | recognised |
+| 1490 | `rɻɹʀ` | 4 | 1.8 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/5 | 5 | – | +0.33 (0.5) | recognised |
+| 1491 | `█▙▌▖` | 4 | 3.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/6 | 5 | 1 (0 firm) | – | recognised |
+| 1492 | `■◼◾▪` | 4 | 3.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | positive 1/5 | 1 | – | +0.91 (≥1e4) | recognised |
+| 1493 | `⚫◐⚪⚬` | 4 | 3.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/4 | 5 | 1 (0 firm) | +0.29 (0.25) | recognised |
+| 1494 | `🥡🥢🥣🥤` | 4 | 4.0 | contiguous | +0.62 ± 0.21 | 45.6 | cl 3/4 gr 1/1 | undiscriminable | 5 | – | +0.33 (0.5) | recognised |
+| 1495 | `⬠⬣⬢⬡` | 4 | 3.0 | other | +0.59 ± 0.21 | 97 | cl 2/3 gr 1/1 | undecided 1/3 | 5 | – | +0.58 (4.33) | recognised |
+| 1496 | `Mᴍmₘ` | 4 | 2.0 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 1/5 | 5 | 2 (0 firm) | +0.42 (0.8) | recognised |
+| 1497 | `Oᴏₒo` | 4 | 2.0 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/4 | 5 | – | +0.15 (0.0588) | recognised |
+| 1498 | `‧⁚⁝⁞` | 4 | 3.0 | monotone | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/3 | 1 | 3 (0 firm) | +0.64 (6.5) | recognised |
+| 1499 | `穰𥝱粟米` | 4 | 3.2 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/5 | 5 | – | +0.25 (0.333) | recognised |
+| 1500 | `😋🍜🥢🥡` | 4 | 4.0 | other | +0.62 ± 0.23 | 288 | cl 4/4 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
+| 1501 | `0oơợ` | 4 | 1.8 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/4 | 5 | – | +0.71 (156) | recognised |
+| 1502 | `Aᴀaₐ` | 4 | 2.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/5 | 5 | 1 (0 firm) | +0.57 (385) | recognised |
+| 1503 | `Ooᵒ°` | 4 | 1.8 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | 1 (0 firm) | +0.73 (≥1e4) | recognised |
+| 1504 | `Ooₒᵒ` | 4 | 2.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | +0.70 (≥1e4) | recognised |
+| 1505 | `nɲɳŋ` | 4 | 1.8 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | 1 (0 firm) | +0.50 (2.33) | recognised |
+| 1506 | `sſʃʆ` | 4 | 1.8 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | – | +0.75 (≥1e4) | recognised |
+| 1507 | `\|❘❙❚` | 4 | 2.5 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/1 | 3 | – | +0.62 (10) | recognised |
+| 1508 | `Λ▲∧‸` | 4 | 2.8 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
+| 1509 | `፩፲፻፼` | 4 | 3.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/3 | 3 | 1 (0 firm) | +0.69 (471) | recognised |
+| 1510 | `ⅸⅩⅪⅫ` | 4 | 3.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | – | +0.71 (156) | recognised |
+| 1511 | `≤≦⊂⊆` | 4 | 3.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
+| 1512 | `⊂⋐⫅⫇` | 4 | 3.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
+| 1513 | `△▷▽◁` | 4 | 3.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 1 | – | – | recognised |
+| 1514 | `◦⚬⚪⚫` | 4 | 3.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | positive 1/5 | 5 | 2 (0 firm) | +0.33 (0.286) | recognised |
+| 1515 | `☑✔✓🗸` | 4 | 3.2 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | 1 (0 firm) | +0.50 (1.5) | recognised |
+| 1516 | `🍡🍥🥢🥡` | 4 | 4.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/4 | 5 | – | – | recognised |
+| 1517 | `💰💵🏦🪙` | 4 | 4.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/5 | 5 | – | +0.33 (0.5) | recognised |
+| 1518 | `💵🏦💰🪙` | 4 | 4.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/5 | 5 | – | +0.33 (0.5) | recognised |
+| 1519 | `🛌🚶🏃🤸` | 4 | 4.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | +0.91 (≥1e4) | recognised |
+| 1520 | `🧢🧣🧦🧥` | 4 | 4.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
+| 1521 | `Aaₐᴀ` | 4 | 2.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/4 | 5 | 1 (0 firm) | +0.19 (0.0833) | recognised |
+| 1522 | `Oo°ᵒ` | 4 | 1.8 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | +0.57 (440) | recognised |
+| 1523 | `Uᴜuᵤ` | 4 | 2.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/6 | 5 | 1 (0 firm) | +0.51 (4.5) | recognised |
+| 1524 | `iIɪᵢ` | 4 | 1.8 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | +0.11 (0.0454) | recognised |
+| 1525 | `oʘ0·` | 4 | 1.5 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/5 | 5 | – | +0.16 (0.1) | recognised |
+| 1526 | `ʘo•●` | 4 | 2.2 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
+| 1527 | `↟↑⇑⇞` | 4 | 3.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/5 | 5 | 1 (0 firm) | – | recognised |
+| 1528 | `│❘❙❚` | 4 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/1 | 3 | – | +0.62 (10) | recognised |
+| 1529 | `□◻◽▫` | 4 | 3.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/5 | 1 | – | +0.78 (≥1e4) | recognised |
+| 1530 | `▲▶▼◀` | 4 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/4 | 1 | – | +0.58 (5.97) | recognised |
+| 1531 | `☱☲☳☵` | 4 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/1 | 5 | – | +0.59 (≥1e4) | recognised |
+| 1532 | `🐓🐤🐣🥚` | 4 | 4.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 2/5 | 5 | 2 (0 firm) | +0.92 (≥1e4) | recognised |
+| 1533 | `😕😔😞😢` | 4 | 4.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/5 | 5 | 1 (0 firm) | – | recognised |
+| 1534 | `aᴀA𝐚` | 4 | 2.2 | other | +0.56 ± 0.20 | 24.1 | cl 3/4 ge 1/1 gr 1/1 | undecided 0/5 | 5 | – | +0.53 (4.12) | recognised |
+| 1535 | `ᐸᑖᑕᐹ` | 4 | 3.0 | other | +0.56 ± 0.20 | 18.8 | cl 2/3 ge 1/1 gr 1/1 | undecided 1/4 | 5 | – | – | recognised |
+| 1536 | `▲■⬟⬢` | 4 | 3.0 | other | +0.56 ± 0.20 | 18.8 | cl 2/3 ge 1/1 gr 1/1 | undecided 0/2 | 5 | 1 (0 firm) | +0.64 (52.3) | recognised |
+| 1537 | `'🕯🔥🎆` | 4 | 3.2 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | 1 (0 firm) | +0.70 (≥1e4) | recognised |
+| 1538 | `*∗⁎★` | 4 | 2.5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | – | +0.48 (2.41) | recognised |
+| 1539 | `-=≡≣` | 4 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/4 | 3 | 1 (0 firm) | +0.72 (4.52e+03) | recognised |
+| 1540 | `.oO@` | 4 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | – | +0.62 (10) | recognised |
+| 1541 | `<⊂⊆⋐` | 4 | 2.5 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/4 | 5 | – | +0.57 (5.97) | recognised |
+| 1542 | `AᴀＡa` | 4 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | +0.49 (4.12) | recognised |
+| 1543 | `Eᴇeₑ` | 4 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 3/5 | 5 | 1 (0 firm) | +0.52 (10.9) | recognised |
+| 1544 | `Iɪᵢi` | 4 | 1.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.13 (0.0604) | recognised |
+| 1545 | `Nɴₙn` | 4 | 1.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
+| 1546 | `Ooᵒₒ` | 4 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | 1 (0 firm) | +0.76 (≥1e4) | recognised |
+| 1547 | `Oᴏoₒ` | 4 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/5 | 5 | 1 (0 firm) | +0.49 (208) | recognised |
+| 1548 | `Pₚᴘp` | 4 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.29 (0.25) | recognised |
+| 1549 | `Tᴛtₜ` | 4 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | 1 (0 firm) | +0.65 (4.33) | recognised |
+| 1550 | `Uuᴜᵤ` | 4 | 2.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.52 (4.5) | recognised |
+| 1551 | `Zzʒʓ` | 4 | 1.5 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | +0.69 (≥1e4) | recognised |
+| 1552 | `_-∼≋` | 4 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | 1 (0 firm) | +0.80 (≥1e4) | recognised |
+| 1553 | `aᴀAＡ` | 4 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | – | +0.57 (54.5) | recognised |
+| 1554 | `oòôö` | 4 | 1.8 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | – | – | recognised |
+| 1555 | `·0oʘ` | 4 | 1.5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.22 (0.133) | recognised |
+| 1556 | `·•●⬤` | 4 | 2.8 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/4 | 3 | 1 (0 firm) | +0.71 (≥1e4) | recognised |
+| 1557 | `·∶⁝⁞` | 4 | 2.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 3 | 2 (0 firm) | +0.91 (≥1e4) | recognised |
+| 1558 | `·⚬⚪⚫` | 4 | 2.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/5 | 5 | 2 (0 firm) | +0.29 (0.25) | recognised |
+| 1559 | `⅒⅑⅐¼` | 4 | 2.8 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undiscriminable | 3 | – | – | recognised |
+| 1560 | `ʘo•◉` | 4 | 2.2 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
+| 1561 | `˅∨⋁▽` | 4 | 2.8 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.73 (4.52e+03) | recognised |
+| 1562 | `Λ∧‸▲` | 4 | 2.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | – | – | recognised |
+| 1563 | `௧௰௱௲` | 4 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 3 | – | +0.84 (≥1e4) | recognised |
+| 1564 | `ልሊሌሎ` | 4 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | – | +0.10 (0.0473) | recognised |
+| 1565 | `ᴛTtₜ` | 4 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | – | +0.65 (4.33) | recognised |
+| 1566 | `ᵒoOＯ` | 4 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | 1 (0 firm) | +0.81 (≥1e4) | recognised |
+| 1567 | `′″‴⁗` | 4 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/1 | 1 | 1 (0 firm) | +0.93 (≥1e4) | recognised |
+| 1568 | `‸∧Λ▲` | 4 | 2.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/4 | 5 | 1 (0 firm) | – | recognised |
+| 1569 | `→⇒⇛⇉` | 4 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/5 | 3 | – | +0.80 (≥1e4) | recognised |
+| 1570 | `→⇒⇛⇾` | 4 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 3 | – | +0.87 (≥1e4) | recognised |
+| 1571 | `→🠂🠆🠊` | 4 | 3.8 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 3 | – | +0.68 (60.7) | recognised |
+| 1572 | `−=⩵⩶` | 4 | 2.5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | 2 (0 firm) | – | recognised |
+| 1573 | `∨˅⋁▽` | 4 | 2.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | – | +0.25 (0.2) | recognised |
+| 1574 | `∫∬∭⨌` | 4 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/1 | 1 | 1 (0 firm) | +0.92 (≥1e4) | recognised |
+| 1575 | `⓪⑴⑵⑶` | 4 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 3 | – | +0.90 (≥1e4) | recognised |
+| 1576 | `█▓▒░` | 4 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/3 | 1 | – | +0.94 (≥1e4) | recognised |
+| 1577 | `█🮅▀🮀` | 4 | 3.5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | – | +0.70 (≥1e4) | recognised |
+| 1578 | `█🮋🮉🮈` | 4 | 3.8 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | 1 (0 firm) | +0.76 (≥1e4) | recognised |
+| 1579 | `▏❘❙❚` | 4 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 3 | – | +0.69 (471) | recognised |
+| 1580 | `▙▟▜▛` | 4 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 1 | – | +0.72 (≥1e4) | recognised |
+| 1581 | `▛▜▙▟` | 4 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/6 | 5 | 2 (0 firm) | +0.11 (0.0794) | recognised |
+| 1582 | `▜▙▛▟` | 4 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | 1 (0 firm) | +0.07 (0.0255) | recognised |
+| 1583 | `▪▫◻⬜` | 4 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | 1 (0 firm) | +0.75 (≥1e4) | recognised |
+| 1584 | `△▷◁▽` | 4 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | 1 (0 firm) | – | recognised |
+| 1585 | `△▽▷◁` | 4 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | – | – | recognised |
+| 1586 | `△◁▷▽` | 4 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/6 | 5 | – | – | recognised |
+| 1587 | `▵▴▽▾` | 4 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
+| 1588 | `▵▹▿◁` | 4 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 3 | – | +0.77 (≥1e4) | recognised |
+| 1589 | `▷△◁▽` | 4 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 1 | 1 (0 firm) | – | recognised |
+| 1590 | `○◎◉●` | 4 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | 2 (0 firm) | +0.78 (≥1e4) | recognised |
+| 1591 | `★☆⭑⭒` | 4 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.37 (2.45) | recognised |
+| 1592 | `⚐⚑🚩🏴` | 4 | 3.5 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | – | recognised |
+| 1593 | `➔➡⟹⟶` | 4 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
+| 1594 | `➡⇛⟹⟶` | 4 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.48 (13.9) | recognised |
+| 1595 | `⟶⟿⟹⟾` | 4 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/4 | 5 | – | +0.47 (25.1) | recognised |
+| 1596 | `⣀⣤⣶⣿` | 4 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 1 | – | +0.74 (≥1e4) | recognised |
+| 1597 | `小中大特` | 4 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/5 | 5 | – | +0.62 (10) | recognised |
+| 1598 | `𝟚𝟛𝟜𝟡` | 4 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.95 (≥1e4) | recognised |
+| 1599 | `🌰🌱🌿🌳` | 4 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 2/4 | 5 | – | – | recognised |
+| 1600 | `🍗🐔🐤🐣` | 4 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/5 | 5 | 1 (0 firm) | +0.72 (8.05e+03) | recognised |
+| 1601 | `🍽🥣🥢🥡` | 4 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.33 (0.5) | recognised |
+| 1602 | `🏙🏢🏠🏡` | 4 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 3/6 | 1 | 2 (0 firm) | +0.70 (≥1e4) | recognised |
+| 1603 | `👴👨👦👶` | 4 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 1 | 2 (0 firm) | – | recognised |
+| 1604 | `💰🏦🪙💵` | 4 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/5 | 5 | – | +0.33 (0.5) | recognised |
+| 1605 | `🕒🕛🕘🕕` | 4 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/5 | 1 | 1 (0 firm) | +0.16 (0.106) | recognised |
+| 1606 | `😯😮😲😱` | 4 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/6 | 5 | 1 (0 firm) | +0.52 (37.4) | recognised |
+| 1607 | `🟉🟍🟑🟕` | 4 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
+| 1608 | `🠀🠂🠆🠊` | 4 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/4 | 3 | – | +0.68 (60.7) | recognised |
+| 1609 | `🥟🥡🍵🥢` | 4 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | +0.58 (2) | recognised |
+| 1610 | `🬀🬂🬄🬈` | 4 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/4 | 5 | – | +0.68 (471) | recognised |
+| 1611 | `▴▲△▵` | 4 | 3.0 | other | +0.56 ± 0.21 | 20.1 | cl 2/3 gr 1/1 | undecided 1/3 | 5 | – | +0.45 (0.833) | recognised |
+| 1612 | `◐◒◑◓` | 4 | 3.0 | other | +0.56 ± 0.21 | 20.1 | cl 2/3 gr 1/1 | undecided 0/2 | 3 | 1 (0 firm) | +0.17 (0.111) | recognised |
+| 1613 | `:¦\|⋮` | 4 | 1.8 | other | +0.49 ± 0.18 | 40.5 | cl 3/3 ge 1/2 gr 1/1 | undecided 0/5 | 5 | 1 (0 firm) | – | recognised |
+| 1614 | `\|:¦⋮` | 4 | 1.8 | other | +0.54 ± 0.23 | 18.1 | cl 3/4 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
+| 1615 | `◒◑◐◓` | 4 | 3.0 | other | +0.46 ± 0.17 | 17.5 | cl 2/2 ge 0/1 gr 1/1 | undecided 1/3 | 1 | 2 (0 firm) | +0.17 (0.111) | recognised |
+| 1616 | `≤≦⊆⊂` | 4 | 3.0 | other | +0.53 ± 0.23 | 13.6 | cl 3/4 gr 1/1 | undecided 0/5 | 5 | – | – | recognised |
+| 1617 | `>→⇉⇶` | 4 | 2.5 | monotone | +0.53 ± 0.23 | 10.9 | cl 3/4 gr 1/1 | undecided 1/4 | 3 | – | +0.68 (≥1e4) | recognised |
+| 1618 | `Nnɴₙ` | 4 | 1.8 | monotone | +0.53 ± 0.23 | 10.9 | cl 3/4 gr 1/1 | undecided 0/4 | 5 | – | – | recognised |
+| 1619 | `·▁▂▅` | 4 | 2.8 | monotone | +0.53 ± 0.23 | 10.9 | cl 3/4 gr 1/1 | undecided 0/2 | 5 | – | +0.87 (≥1e4) | recognised |
+| 1620 | `=-∼≋` | 4 | 2.0 | other | +0.34 ± 0.20 | 18.1 | cl 3/3 ge 0/1 gr 1/1 | undecided 1/4 | 5 | 1 (0 firm) | +0.36 (2.65) | recognised |
+| 1621 | `८४०−` | 4 | 3.0 | other | +0.19 ± 0.24 | 10.5 | cl 3/3 gr 0/1 | undecided 0/4 | 3 | – | +0.85 (≥1e4) | recognised |
+| 1622 | `⅒⅑⅐` | 3 | 3.0 | contiguous | +0.73 ± 0.15 | ≥1e4 | cl 6/7 gr 2/2 | undiscriminable | 1 | – | – | recognised |
+| 1623 | `⋮⋰⋯` | 3 | 3.0 | other | +0.72 ± 0.17 | 490 | cl 3/4 gr 2/2 | undecided 0/3 | 1 | – | +0.35 (0.616) | recognised |
+| 1624 | `㆖㆗㆘` | 3 | 3.0 | contiguous | +0.72 ± 0.17 | 490 | cl 3/4 gr 2/2 | undiscriminable | 1 | – | – | recognised |
+| 1625 | `→⇒⇛` | 3 | 3.0 | monotone | +0.73 ± 0.18 | 1.85e+03 | cl 5/5 gr 2/2 | undecided 1/2 | 1 | – | +0.87 (≥1e4) | recognised |
+| 1626 | `⭐☆⭒` | 3 | 3.0 | other | +0.69 ± 0.18 | 170 | cl 4/5 gr 2/2 | undecided 1/3 | 5 | – | +0.58 (2) | recognised |
+| 1627 | `𝄶𝄷𝄸` | 3 | 4.0 | contiguous | +0.71 ± 0.20 | ≥1e4 | cl 7/7 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 1628 | `⬡⬢⬣` | 3 | 3.0 | contiguous | +0.68 ± 0.17 | 364 | cl 2/2 ge 1/1 gr 1/1 | undiscriminable | 5 | – | +0.58 (4.33) | recognised |
+| 1629 | `Ooᵒ` | 3 | 1.7 | monotone | +0.66 ± 0.18 | 70.2 | cl 4/5 gr 2/2 | undecided 0/2 | 5 | 1 (0 firm) | +0.79 (≥1e4) | recognised |
+| 1630 | `Ǆǅǆ` | 3 | 2.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | – | +0.67 (410) | recognised |
+| 1631 | `‵‶‷` | 3 | 3.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | +0.86 (≥1e4) | recognised |
+| 1632 | `𐅀𐅁𐅂` | 3 | 4.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | – | – | recognised |
+| 1633 | `🥇🥈🥉` | 3 | 4.0 | contiguous | +0.67 ± 0.20 | 9.27e+03 | cl 4/4 gr 1/1 | undiscriminable | 1 | – | +0.85 (≥1e4) | recognised |
+| 1634 | `ᐡᐢᐣ` | 3 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | +0.41 (0.5) | recognised |
+| 1635 | `῍῎῏` | 3 | 3.0 | contiguous | +0.67 ± 0.21 | 1.31e+03 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | +0.58 (4.33) | recognised |
+| 1636 | `♉♈♓` | 3 | 3.0 | other | +0.63 ± 0.18 | 644 | cl 3/3 ge 2/2 gr 1/1 | undecided 0/3 | 1 | – | – | recognised |
+| 1637 | `⚪⚬⚫` | 3 | 3.0 | other | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | 1 (0 firm) | +0.49 (1.5) | recognised |
+| 1638 | `✊✋✌` | 3 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 1639 | `⸪⸫⸬` | 3 | 3.0 | contiguous | +0.66 ± 0.21 | 468 | cl 3/3 gr 1/1 | undiscriminable | 1 | – | – | recognised |
+| 1640 | `Aaᴀ` | 3 | 1.7 | monotone | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 1/2 | 5 | – | +0.24 (0.142) | recognised |
+| 1641 | `dɖɗ` | 3 | 1.7 | monotone | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 0/1 | 5 | – | – | recognised |
+| 1642 | `◯○⭘` | 3 | 3.0 | other | +0.63 ± 0.18 | 129 | cl 2/2 ge 2/2 gr 1/1 | undecided 1/2 | 5 | – | +0.51 (1.5) | recognised |
+| 1643 | `☁☀☂` | 3 | 3.0 | other | +0.61 ± 0.17 | 31.9 | cl 2/3 ge 1/1 gr 1/1 | undecided 0/1 | 5 | – | – | recognised |
+| 1644 | `ᛮᛯᛰ` | 3 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | – | recognised |
+| 1645 | `․‥…` | 3 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.87 (≥1e4) | recognised |
+| 1646 | `ↀↁↂ` | 3 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | – | recognised |
+| 1647 | `√∛∜` | 3 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.77 (≥1e4) | recognised |
+| 1648 | `∮∯∰` | 3 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.87 (≥1e4) | recognised |
+| 1649 | `∰∯∱` | 3 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | +0.36 (0.248) | recognised |
+| 1650 | `⋮⋯⋰` | 3 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.19 (0.0833) | recognised |
+| 1651 | `⏗⏘⏙` | 3 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.53 (2.9) | recognised |
+| 1652 | `▹▸►` | 3 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | +0.58 (2) | recognised |
+| 1653 | `☹☺☻` | 3 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 1654 | `✋✊✌` | 3 | 3.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | – | recognised |
+| 1655 | `❘❙❚` | 3 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.62 (10) | recognised |
+| 1656 | `⭐⭑⭒` | 3 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | – | recognised |
+| 1657 | `㎅㎆㎇` | 3 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 1658 | `㎜㎝㎞` | 3 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.92 (≥1e4) | recognised |
+| 1659 | `㎩㎪㎫` | 3 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.86 (≥1e4) | recognised |
+| 1660 | `㎽㎾㎿` | 3 | 3.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.58 (10) | recognised |
+| 1661 | `𒑲𒑳𒑴` | 3 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.62 (10) | recognised |
+| 1662 | `𝀯𝀰𝀱` | 3 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.94 (≥1e4) | recognised |
+| 1663 | `𝂗𝂘𝂙` | 3 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.89 (≥1e4) | recognised |
+| 1664 | `𝆐𝆏𝆑` | 3 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | – | recognised |
+| 1665 | `🌖🌗🌘` | 3 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.91 (≥1e4) | recognised |
+| 1666 | `😀😁😂` | 3 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.58 (4.33) | recognised |
+| 1667 | `🞊🞋🞌` | 3 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | +0.58 (2) | recognised |
+| 1668 | `🞝🞞🞟` | 3 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 1669 | `🢥🢦🢧` | 3 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 1670 | `🤀🤁🤂` | 3 | 4.0 | contiguous | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 1671 | `🧒🧑🧓` | 3 | 4.0 | other | +0.66 ± 0.22 | 69.8 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | – | recognised |
+| 1672 | `⚊⚋⚌` | 3 | 3.0 | contiguous | +0.59 ± 0.16 | 76.2 | cl 1/2 ge 2/2 gr 1/1 | undiscriminable | 1 | – | +0.68 (≥1e4) | recognised |
+| 1673 | `➙➔➡` | 3 | 3.0 | other | +0.62 ± 0.20 | 753 | cl 4/4 ge 1/1 gr 1/1 | undecided 1/3 | 5 | – | – | recognised |
+| 1674 | `⭑⭐🌟` | 3 | 3.3 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
+| 1675 | `大中小` | 3 | 3.0 | other | +0.62 ± 0.20 | 205 | cl 3/3 ge 1/1 gr 1/1 | undecided 1/3 | 1 | – | +0.62 (10) | recognised |
+| 1676 | `<⟨⟪` | 3 | 2.3 | monotone | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 1/2 | 5 | 1 (0 firm) | – | recognised |
+| 1677 | `xẋẍ` | 3 | 2.3 | monotone | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
+| 1678 | `🏠🏙🏢` | 3 | 4.0 | other | +0.62 ± 0.20 | 150 | cl 3/3 ge 1/1 gr 1/1 | undecided 1/3 | 5 | – | +0.09 (0.0343) | recognised |
+| 1679 | `.．﹒` | 3 | 2.3 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/2 | 5 | – | +0.31 (0.2) | recognised |
+| 1680 | `oóő` | 3 | 1.7 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 1/2 | 5 | 1 (0 firm) | +0.81 (≥1e4) | recognised |
+| 1681 | `\|⋮⋯` | 3 | 2.3 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/1 | 5 | – | – | recognised |
+| 1682 | `ɖdɗ` | 3 | 1.7 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/3 | 5 | – | – | recognised |
+| 1683 | `∶⋮⋯` | 3 | 3.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/1 | 5 | – | – | recognised |
+| 1684 | `⏺⏹▶` | 3 | 3.0 | other | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
+| 1685 | `〈《「` | 3 | 3.0 | monotone | +0.62 ± 0.21 | 42.6 | cl 2/2 ge 1/1 gr 1/1 | undecided 0/2 | 5 | – | +0.58 (2) | recognised |
+| 1686 | `®℠™` | 3 | 2.7 | monotone | +0.58 ± 0.19 | 11.1 | cl 3/5 gr 2/2 | undecided 0/2 | 5 | – | – | recognised |
+| 1687 | `🍜🥢🥡` | 3 | 4.0 | other | +0.58 ± 0.19 | 11.1 | cl 3/5 gr 2/2 | undecided 0/2 | 5 | – | – | recognised |
+| 1688 | `⏘⏗⏙` | 3 | 3.0 | other | +0.57 ± 0.18 | 13.2 | cl 2/4 gr 2/2 | undecided 1/3 | 5 | – | +0.25 (0.2) | recognised |
+| 1689 | `ĎďĐ` | 3 | 2.0 | contiguous | +0.59 ± 0.21 | 97 | cl 2/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 1690 | `𝆏𝆐𝆑` | 3 | 4.0 | contiguous | +0.59 ± 0.21 | 97 | cl 2/3 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 1691 | `🟀🟁🟂` | 3 | 4.0 | contiguous | +0.59 ± 0.21 | 97 | cl 2/3 gr 1/1 | undiscriminable | 1 | – | +0.65 (156) | recognised |
+| 1692 | `-~≋` | 3 | 1.7 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/1 | 5 | – | +0.58 (4.33) | recognised |
+| 1693 | `=∾∿` | 3 | 2.3 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/1 | 5 | – | +0.41 (0.5) | recognised |
+| 1694 | `aȧä` | 3 | 1.7 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/2 | 5 | 1 (0 firm) | – | recognised |
+| 1695 | `oơợ` | 3 | 2.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 1/2 | 5 | – | +0.71 (156) | recognised |
+| 1696 | `rṛṝ` | 3 | 2.3 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/2 | 5 | – | +0.58 (10) | recognised |
+| 1697 | `∣∥⫴` | 3 | 3.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/2 | 5 | 1 (0 firm) | +0.82 (≥1e4) | recognised |
+| 1698 | `⊢□⊣` | 3 | 3.0 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | – | +0.33 (0.5) | recognised |
+| 1699 | `▪◻◼` | 3 | 3.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/1 | 5 | – | – | recognised |
+| 1700 | `⼀⼈⼤` | 3 | 3.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
+| 1701 | `穣𥝱穰` | 3 | 3.3 | other | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | – | – | recognised |
+| 1702 | `🌊💦💧` | 3 | 4.0 | monotone | +0.62 ± 0.24 | 80.5 | cl 3/3 gr 1/1 | undecided 0/1 | 5 | – | +0.58 (4.33) | recognised |
+| 1703 | `⏠⏡⏢` | 3 | 3.0 | contiguous | +0.58 ± 0.21 | 36.1 | cl 2/3 gr 1/1 | undiscriminable | 1 | 1 (0 firm) | – | recognised |
+| 1704 | `-→↔` | 3 | 2.3 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/2 | 5 | – | – | recognised |
+| 1705 | `Aᴀa` | 3 | 1.7 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | – | +0.56 (16.7) | recognised |
+| 1706 | `®™℠` | 3 | 2.7 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/2 | 5 | – | – | recognised |
+| 1707 | `⁂⁑⁎` | 3 | 3.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | positive 1/3 | 1 | 1 (0 firm) | +0.75 (≥1e4) | recognised |
+| 1708 | `⁖⁘⁙` | 3 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/1 | 1 | 1 (0 firm) | +0.66 (410) | recognised |
+| 1709 | `⋰⋮⋱` | 3 | 3.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/3 | 1 | – | +0.55 (34.8) | recognised |
+| 1710 | `⌒◠○` | 3 | 3.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/2 | 5 | – | +0.61 (24.2) | recognised |
+| 1711 | `▫◻⬜` | 3 | 3.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/2 | 5 | 1 (0 firm) | +0.76 (≥1e4) | recognised |
+| 1712 | `⩵=⩶` | 3 | 2.3 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/3 | 5 | – | – | recognised |
+| 1713 | `🏙🏢🏠` | 3 | 4.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | positive 1/3 | 1 | 2 (0 firm) | +0.84 (≥1e4) | recognised |
+| 1714 | `😐😞😭` | 3 | 4.0 | monotone | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 0/2 | 1 | 2 (0 firm) | +0.84 (≥1e4) | recognised |
+| 1715 | `😐🙁😢` | 3 | 4.0 | other | +0.61 ± 0.24 | 59.2 | cl 3/3 gr 1/1 | undecided 1/3 | 1 | 1 (0 firm) | +0.55 (8.31) | recognised |
+| 1716 | `○⭘◯` | 3 | 3.0 | other | +0.53 ± 0.18 | 12.3 | cl 1/2 ge 2/2 gr 1/1 | undecided 1/3 | 5 | – | +0.41 (0.5) | recognised |
+| 1717 | `%‰‱` | 3 | 2.3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undiscriminable | 1 | – | +0.91 (≥1e4) | recognised |
+| 1718 | `(\|)` | 3 | 1.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | +0.65 (24.2) | recognised |
+| 1719 | `*⁑⁂` | 3 | 2.3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 1 | 2 (0 firm) | +0.88 (≥1e4) | recognised |
+| 1720 | `-∼≋` | 3 | 2.3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | – | +0.80 (≥1e4) | recognised |
+| 1721 | `0oʘ` | 3 | 1.3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.19 (0.111) | recognised |
+| 1722 | `0ʘo` | 3 | 1.3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | +0.19 (0.111) | recognised |
+| 1723 | `9⁹₉` | 3 | 2.3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | 1 (0 firm) | – | recognised |
+| 1724 | `9₉⁹` | 3 | 2.3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | 1 (0 firm) | – | recognised |
+| 1725 | `<≪⋘` | 3 | 2.3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 1 | – | +0.86 (≥1e4) | recognised |
+| 1726 | `<⋘≪` | 3 | 2.3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.10 (0.0357) | recognised |
+| 1727 | `<⪡⫷` | 3 | 2.3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
+| 1728 | `=≡≣` | 3 | 2.3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 1 | – | +0.65 (24.2) | recognised |
+| 1729 | `>≫⋙` | 3 | 2.3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 1 | – | +0.55 (5.97) | recognised |
+| 1730 | `Aaª` | 3 | 1.3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
+| 1731 | `Ooº` | 3 | 1.3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
+| 1732 | `Ssₛ` | 3 | 1.7 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
+| 1733 | `aAᴀ` | 3 | 1.7 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.21 (0.106) | recognised |
+| 1734 | `aäȧ` | 3 | 1.7 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
+| 1735 | `oöȯ` | 3 | 1.7 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.33 (0.333) | recognised |
+| 1736 | `tʈƫ` | 3 | 1.7 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
+| 1737 | `v∨⋁` | 3 | 2.3 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
+| 1738 | `·ˑː` | 3 | 2.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.58 (2) | recognised |
+| 1739 | `¹①❶` | 3 | 2.7 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | +0.41 (0.517) | recognised |
+| 1740 | `ïiı` | 3 | 1.7 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | 1 (0 firm) | – | recognised |
+| 1741 | `ˑː⁝` | 3 | 2.3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | – | – | recognised |
+| 1742 | `←→↔` | 3 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
+| 1743 | `←↔→` | 3 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | – | recognised |
+| 1744 | `←↚⇍` | 3 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.62 (10) | recognised |
+| 1745 | `←⇍↚` | 3 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | +0.29 (0.25) | recognised |
+| 1746 | `∅⊂⊆` | 3 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.62 (10) | recognised |
+| 1747 | `∬∭⨌` | 3 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/1 | 1 | 1 (0 firm) | +0.87 (≥1e4) | recognised |
+| 1748 | `∶⁝⋮` | 3 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | – | recognised |
+| 1749 | `≺⊏⊂` | 3 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 2/3 | 5 | – | +0.45 (0.8) | recognised |
+| 1750 | `⊂⊆⊊` | 3 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.33 (0.25) | recognised |
+| 1751 | `⊙⊚◎` | 3 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/1 | 5 | 1 (0 firm) | +0.33 (0.333) | recognised |
+| 1752 | `⊚⊙◎` | 3 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.46 (0.833) | recognised |
+| 1753 | `①⑴⒈` | 3 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | 1 (0 firm) | +0.55 (5.97) | recognised |
+| 1754 | `■▒□` | 3 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | – | recognised |
+| 1755 | `▤▦▩` | 3 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | – | +0.76 (≥1e4) | recognised |
+| 1756 | `▪■⬛` | 3 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undiscriminable | 5 | – | – | recognised |
+| 1757 | `◉◎○` | 3 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | +0.65 (4.33) | recognised |
+| 1758 | `○⭘⭕` | 3 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | – | – | recognised |
+| 1759 | `●○◯` | 3 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | – | recognised |
+| 1760 | `✅✔✓` | 3 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | positive 1/3 | 5 | – | +0.73 (≥1e4) | recognised |
+| 1761 | `✱*﹡` | 3 | 2.3 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.58 (4.33) | recognised |
+| 1762 | `⟪《〈` | 3 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
+| 1763 | `⭕○⭘` | 3 | 3.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | – | recognised |
+| 1764 | `〈《【` | 3 | 3.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | +0.58 (2) | recognised |
+| 1765 | `🀱🀹🁁` | 3 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 5 | – | +0.68 (1.09e+03) | recognised |
+| 1766 | `🂫🂭🂮` | 3 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 1 | – | +0.62 (10) | recognised |
+| 1767 | `🌊💧💦` | 3 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/3 | 5 | – | +0.33 (0.333) | recognised |
+| 1768 | `🌡🎚🎛` | 3 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | – | recognised |
+| 1769 | `🍥🥢🥡` | 3 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 5 | – | – | recognised |
+| 1770 | `💨💧🧊` | 3 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 1/2 | 1 | 2 (0 firm) | – | recognised |
+| 1771 | `😐😔😢` | 3 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/2 | 1 | 1 (0 firm) | – | recognised |
+| 1772 | `🥡🍜🥢` | 3 | 4.0 | other | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/3 | 5 | – | – | recognised |
+| 1773 | `🬀🬂🬃` | 3 | 4.0 | monotone | +0.62 ± 0.25 | 17.4 | cl 2/2 gr 1/1 | undecided 0/1 | 5 | – | – | recognised |
+| 1774 | `=⩵⩶` | 3 | 2.3 | monotone | +0.55 ± 0.23 | 25.4 | cl 3/4 gr 1/1 | undecided 0/1 | 1 | 1 (0 firm) | – | recognised |
+| 1775 | `★⯪☆` | 3 | 3.0 | other | +0.55 ± 0.23 | 25.4 | cl 3/4 gr 1/1 | undecided 0/3 | 5 | – | +0.35 (0.8) | recognised |
+| 1776 | `ƵƶƷ` | 3 | 2.0 | contiguous | +0.38 ± 0.17 | 17.9 | cl 2/4 ge 0/1 gr 1/1 | undiscriminable | 1 | – | – | recognised |
+| 1777 | `؈؉؊` | 3 | 2.0 | contiguous | +0.29 ± 0.21 | 125 | cl 3/3 gr 0/1 | undiscriminable | 1 | 1 (0 firm) | – | recognised |
+| 1778 | `⚐⚑⚒` | 3 | 3.0 | contiguous | +0.23 ± 0.17 | 46.3 | cl 3/3 ge 0/1 gr 0/1 | undiscriminable | 5 | – | – | recognised |
 
