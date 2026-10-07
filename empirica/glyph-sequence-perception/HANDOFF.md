@@ -21,10 +21,10 @@ The study's root is this directory. Until 2026-10-06 it lived in `refactored/`, 
 
 Everything in `data/answers/` and `data/tree/` is regenerable and gitignored. To rebuild it after a fresh clone, run `port/port_triad_era.py`, then `port/port_seeds.py`, then `run.py record <rid>` for each context round. The truth, which is committed, is the verbatim ledgers: `data/rounds/<rid>/raw/<mind>/ledger.jsonl`, plus `questions.jsonl`, `sheets.jsonl` and `plan.json`.
 
-## Running now (2026-10-06 15:55 MDT)
+## Running now (2026-10-06 21:21 MDT)
 
 **Four processes**, all from the study root, all on `/opt/homebrew/bin/python3` (Unicode 16+; `run.py` refuses older), each started with `nohup … < /dev/null &` and appending to its log:
-- `run.py loop --budget 700 >> data/logs/loop.log`: plans a round, asks the Claude minds (core, second, generator `sonnet55g`/`haiku45g`, reasoner `sonnet55r`), re-records every round so drained answers fold in, builds tree, BEST and progress, commits. Rounds take about 15 minutes (`round_gap_min` 0).
+- `run.py loop --budget 350 >> data/logs/loop.log`: plans a round, asks the Claude minds (core, second, generator `sonnet55g`/`haiku45g`, reasoner `sonnet55r`), re-records every round (test rounds `p…` too) so drained answers fold in, builds tree, BEST, progress, the catalog and its two pages, and commits. **Slowed for Joseph's Claude usage** (21:21, Joseph: *"We're going to have to slow down the runs. I need to use my claude usage in other projects soon."*): the budget is halved, and `round_gap_min` is 120 in `pace.json`, which is re-read live, so the gap can change without a restart. Planner **stochastic-5** from c121 (audited, then checked: `audits/planner-stochastic-5-*`).
 - `run.py drain --minds gemini38flash gemini31pro gemini38flashg --newest-first --kinds-first names choose cohere inhibit pick order >> data/logs/drain-gemini.log`: 3 workers, no pause (Joseph: a rate limiter, no quota).
 - `run.py drain --minds grok46 --newest-first --kinds-first names choose cohere inhibit pick order >> data/logs/drain-grok.log`: 10 workers.
 - `run.py drain --minds grok46g --newest-first >> data/logs/drain-grok-gen.log`: the Grok generator mind, 8 workers.
@@ -33,7 +33,7 @@ A drain logs a line per round only when it finishes that round, so a quiet log i
 
 **Pacing** is in `pace.json`, re-read before every call. **To stop everything:** `touch data/rounds/STOP`.
 
-**Restarting safely.** The loop imports the planner, probe and tree once, so their changes need a restart. BEST is reloaded every round and doesn't. Restart while the log's last line is `cmd_ask`, by process ID: `kill <pid>` (from `pgrep -f "run.py loop"`), wait for it to exit, then start it again. It resumes the unfinished round. Two scars from tonight:
+**Restarting safely.** The loop imports the planner, probe and tree once, so their changes need a restart, and so do the **drains**, which import the probe (they rebuild no-lookup prompts from it). The catalog build and the read-offs run as subprocesses and pick up changes at once, so "not live until audited" covers only what the loop and drains import. BEST is reloaded every round and doesn't. Restart while the log's last line is `cmd_ask`, by process ID: `kill <pid>` (from `pgrep -f "run.py loop"`), wait for it to exit, then start it again. It resumes the unfinished round. Two scars from tonight:
 - `pkill -f "run.py loop"` inside a script kills the script too, because its own command line matches.
 - A failed kill followed by a start leaves two loops. Check `pgrep -f "run.py loop"` after every restart.
 
