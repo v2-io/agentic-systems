@@ -1,0 +1,9 @@
+answers scored 77489
+sonnet55       n= 22265 (with far items 0.98) own_all +2013  own_far +1837  oth_all +1826  oth_far +1653  oth_all+own_all +2047  oth_all+own_far +1958  oth_far+own_far +1858
+opus55         n=  4547 (with far items 0.98) own_all +267  own_far +218  oth_all +352  oth_far +321  oth_all+own_all +358  oth_all+own_far +349  oth_far+own_far +315
+haiku45nt      n= 21492 (with far items 0.98) own_all +1387  own_far +1221  oth_all +1034  oth_far +923  oth_all+own_all +1407  oth_all+own_far +1293  oth_far+own_far +1243
+haiku45        n=  4924 (with far items 0.98) own_all +377  own_far +333  oth_all +435  oth_far +380  oth_all+own_all +470  oth_all+own_far +455  oth_far+own_far +413
+grok46         n= 20525 (with far items 0.98) own_all +1875  own_far +1669  oth_all +1530  oth_far +1356  oth_all+own_all +1913  oth_all+own_far +1780  oth_far+own_far +1699
+gemini38flash  n=  3058 (with far items 0.98) own_all +189  own_far +128  oth_all +181  oth_far +156  oth_all+own_all +235  oth_all+own_far +204  oth_far+own_far +185
+TOTAL own_all +6108  own_far +5406  oth_all +5358  oth_far +4789  oth_all+own_all +6428  oth_all+own_far +6039  oth_far+own_far +5713
+mind-specific increments: own_all beyond oth_all 1070 ; own_far beyond oth_all 680 ; own_far beyond oth_far 925

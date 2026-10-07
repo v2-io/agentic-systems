@@ -1,0 +1,9 @@
+opus55: stops 6 of 43; log scores 2mf -16.52  irtu -14.95  lnb -14.25  pool -16.32
+   contexts with the mind's own earlier answers: n=17, stops 1; 2mf -3.62  irtu -2.57  lnb -2.97  pool -3.31
+   contexts without the mind's own earlier answers: n=26, stops 5; 2mf -12.90  irtu -12.39  lnb -11.29  pool -13.01
+haiku45nt: stops 12 of 43; log scores 2mf -29.63  irtu -20.60  lnb -21.20  pool -23.02
+   contexts with the mind's own earlier answers: n=43, stops 12; 2mf -29.63  irtu -20.60  lnb -21.20  pool -23.02
+   contexts without the mind's own earlier answers: n=0, stops 0; 2mf 0.00  irtu 0.00  lnb 0.00  pool 0.00
+haiku45: stops 6 of 43; log scores 2mf -29.03  irtu -27.10  lnb -26.28  pool -16.90
+   contexts with the mind's own earlier answers: n=13, stops 3; 2mf -7.07  irtu -6.13  lnb -6.50  pool -7.14
+   contexts without the mind's own earlier answers: n=30, stops 3; 2mf -21.96  irtu -20.96  lnb -19.79  pool -9.75

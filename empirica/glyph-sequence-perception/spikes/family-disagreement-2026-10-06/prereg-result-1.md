@@ -1,6 +1,6 @@
 # Pre-registered test 1: the flat Sonnet-continues / Grok-stops contexts, asked again
 
-*2026-10-06, the coordinating session (Claude Opus 5.5). The prediction (`prereg-flat-splits.json`, written 17:28 by the spike agent from the 16:36 snapshot) was committed at dc42b1cb before the test round existed. Before committing, I checked that none of the 43 contexts had a real answer outside the snapshot: 183 post-snapshot records, all failed calls. Round `p001` (built by `prereg_round.py`) asked each context once more as a plain continue question, one question to a sheet, to `sonnet55` and `grok46`, from about 17:40. Scored by `prereg_check.py`.*
+*2026-10-06, the coordinating session (Claude Opus 5.5). The prediction (`prereg-flat-splits.json`, written 17:28 by the spike agent from the 16:36 snapshot) was committed at dc42b1cb before the test round existed. Before committing, I checked that none of the 43 contexts had a real answer outside the snapshot: 183 post-snapshot records, all failed calls. Round `p001` (built by `prereg_round.py`) asked each context once more as a plain continue question, one question to a sheet, to `sonnet55` and `grok46`. It was built at 17:34:58 and its first answer came at 17:35:04 (file and ledger times; an earlier version of this file said "about 17:40", an estimate). Scored by `prereg_check.py`.*
 
 ## Result [measured]
 

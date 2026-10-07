@@ -1,0 +1,6 @@
+sonnet55       n= 22265  own-beyond-others per answer, own feature from all its answers: +0.0105;  from a 0.20 sample (Opus's count), 3 draws: +0.0045, +0.0046, +0.0043
+opus55         n=  4547  own-beyond-others per answer, own feature from all its answers: -0.0020
+haiku45nt      n= 21492  own-beyond-others per answer, own feature from all its answers: +0.0193;  from a 0.21 sample (Opus's count), 3 draws: +0.0107, +0.0088, +0.0100
+haiku45        n=  4924  own-beyond-others per answer, own feature from all its answers: +0.0075
+grok46         n= 20525  own-beyond-others per answer, own feature from all its answers: +0.0199;  from a 0.22 sample (Opus's count), 3 draws: +0.0115, +0.0123, +0.0109
+gemini38flash  n=  3058  own-beyond-others per answer, own feature from all its answers: +0.0166

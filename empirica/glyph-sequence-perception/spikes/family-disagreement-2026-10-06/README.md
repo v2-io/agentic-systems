@@ -24,4 +24,16 @@
 
 **Strengthened again** (`strengthening-2.md`, 18:02–19:30 by the clock). No model the agent fitted is calibrated on every check at once; it says exactly where each fails. What the attempt found, held out in every fold: the largest mind-specific structure is at the level of sequences (a mind's lean across a sequence's contexts, about +1,500 nats beyond a shared sequence effect of about +2,300), not single contexts. Three effects of the study's own machinery bear on every reading: same-sequence sheet-mates (−0.70 logit on stopping, about 7% of continue answers), adaptive re-asking, and seed-targeted selection. `FINDINGS.md`, the integration plan and the debrief were rewritten by replacement (landed unchanged by the coordinating session, the harness again refusing the agent's writes). A second pre-registration (`prereg-third-minds.json`, committed before round `p002` existed) asks the 43 flat contexts of Opus and both Haikus. **Not yet independently verified.**
 
-**Pre-registered test 2** (`prereg-result-2.md`, round `p002`): the 43 flat contexts asked of Opus and both Haikus. By the rule fixed in advance, no model wins any mind. The model without a mind × item term loses decisively on Haiku without thinking (12 stops; it predicted 20). Haiku with thinking stopped 6 times against about 20 predicted by every model, matching its own past answers on these contexts (13 of 14 continued). A mind's own record predicts its next answer better than any model fitted so far allows.
+**Pre-registered test 2** (`prereg-result-2.md`, round `p002`): the 43 flat contexts asked of Opus and both Haikus. The fixed rule (a win needs a Bayes factor of 10 over each other model) couldn't report what the test found. Pairwise, the model without a mind × item term loses on Haiku without thinking by about 8,000 to 1. Haiku with thinking stopped 6 times against about 20 predicted by every model, mostly on contexts where it had no earlier answer, and a naive per-mind baseline beat all three models. About half of that miss is chart class, which no model sees (34 of the 43 contexts are chart walks).
+
+**Verified a third time** (`de-novo-feedback-3.md`, `de-novo-3/`). Strengthening 2's numbers that the verifier re-ran reproduce, but several readings narrow:
+
+- most of the "shared sequence effect" is a prior from what a context looks like (contiguous, monotone, blocks, length), which no item model had;
+- the mind-specific lean is about +900 to +1,100 nats rather than +1,500, carried by Grok, Haiku without thinking and Gemini Flash, and none for Sonnet or Opus once chart class is in (Sonnet's is its chart lean);
+- the unit is a Unicode block, not a sequence;
+- half or more of the sheet-mate effect is selection (−0.70 → at most −0.32);
+- FINDINGS §3 contradicts itself on the per-item interaction;
+- three NOTES entries were corrupted by shell expansion;
+- two coordinator times were false, now corrected here and in `prereg-result-2.md`.
+
+Sent to the spike agent for its answer.

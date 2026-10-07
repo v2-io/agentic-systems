@@ -1,0 +1,9 @@
+intercepts per mind only                      held-out gain -126
+shared covariates (+ per-mind intercepts)     held-out gain +8639
+per-mind covariates                           held-out gain +9071
+   sonnet55       icpt +1.40  contig -1.67  mono +0.45  oneblock +0.01  nblocks +0.55  len -8.37  len2 +5.17  unfam +0.47  laststep +1.64
+   opus55         icpt +0.39  contig -1.55  mono +0.58  oneblock -0.06  nblocks +0.48  len -4.94  len2 +2.76  unfam +0.60  laststep +1.77
+   haiku45nt      icpt +4.76  contig -0.48  mono +0.06  oneblock -0.87  nblocks -0.48  len -13.69  len2 +9.02  unfam +0.42  laststep +1.30
+   haiku45        icpt +0.73  contig -1.20  mono +0.25  oneblock +0.45  nblocks +1.02  len -7.90  len2 +4.66  unfam +0.37  laststep +1.15
+   grok46         icpt +0.79  contig -1.11  mono +0.70  oneblock -0.18  nblocks +0.39  len -5.29  len2 +2.71  unfam +0.49  laststep +1.39
+   gemini38flash  icpt -1.06  contig -0.93  mono +0.69  oneblock -0.19  nblocks +0.67  len +1.73  len2 -2.57  unfam +0.23  laststep +0.52

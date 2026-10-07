@@ -1,0 +1,8 @@
+first: n=72427, share with same-sequence mates 0.070; mean other-round strength with mates -0.088, without +0.001
+   mates only                                                     mates -0.70 ± 0.04
+   mates + strength (all minds, other rounds)                     mates -0.32 ± 0.04  f1 +5.15
+   mates + strength (all minds) + strength (this mind), other rounds mates -0.31 ± 0.04  f1 +2.96  f2 +2.35
+repeat: n=4530, share with same-sequence mates 0.076; mean other-round strength with mates -0.105, without -0.081
+   mates only                                                     mates -0.45 ± 0.21
+   mates + strength (all minds, other rounds)                     mates -0.14 ± 0.22  f1 +3.64
+   mates + strength (all minds) + strength (this mind), other rounds mates -0.19 ± 0.22  f1 -0.58  f2 +4.17

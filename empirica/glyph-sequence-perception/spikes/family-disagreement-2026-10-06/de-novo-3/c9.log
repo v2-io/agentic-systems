@@ -1,0 +1,4 @@
+fit ll -36165.4 iters 149 loadings {'sonnet55': np.float64(0.56), 'opus55': np.float64(0.04), 'haiku45nt': np.float64(1.94), 'haiku45': np.float64(0.97), 'grok46': np.float64(0.04), 'gemini38flash': np.float64(0.11), 'gemini31pro': np.float64(-0.11)}
+opus55: stops 6; two-factor expected 11.5; log score -18.51
+haiku45nt: stops 12; two-factor expected 10.9; log score -20.87
+haiku45: stops 6; two-factor expected 18.1; log score -24.03
