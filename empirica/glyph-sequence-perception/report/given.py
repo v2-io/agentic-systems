@@ -40,10 +40,12 @@ def main():
     givens, dress, pos, versions = GW.load()
     man = (q("select doc from catalog.manifest") or [{}])[0]
     rows = q("select row_to_json(r) from (select glyphs, length, recognised, r_strength, r_sd, r_bf, r_families, sources, "
-             "given_kind, given_id, given_label, given_dresses, given_step from catalog.records where given_kind is not null) r")
+             "given_kind, given_id, given_label, given_dresses, given_step, given_walk from catalog.records where given_kind is not null) r")
     n_records = q("select count(*) from catalog.records")[0]
     n_rec = q("select count(*) from catalog.records where recognised")[0]
 
+    related = [r for r in rows if not r["given_walk"]]          # related to a given, but not a given walk (audit G1)
+    rows = [r for r in rows if r["given_walk"]]
     by_kind = collections.Counter(r["given_kind"] for r in rows)
     by_kind_rec = collections.Counter(r["given_kind"] for r in rows if r["recognised"])
     asked = lambda r: "asked whole" in (r["sources"] or [])
@@ -57,11 +59,11 @@ def main():
          "- **Alphabets:** each language's standard letters in CLDR (its exemplar set, through ICU), in that language's collation order, upper and lower case where the script has case. Two readings of membership are kept. *Letters:* every listed letter in full sort order (Russian `е ё ж`). *Base:* the letters that collation treats as distinct, the rest as forms of them (Spanish `á` is a form of `a`; `ñ` is its own letter). A language's letters are split by script (Japanese: hiragana, katakana).",
          "- **Numbers:** every character with a Unicode numeric value, grouped by its dress, ordered by value: digits in every script, circled 0–50 across three blocks, Roman numerals, vulgar fractions, superscripts.",
          "- **Dresses:** every letter in another style (bold, circled, fullwidth, superscript, fraktur…) maps to its base letter through Unicode's compatibility decomposition, or through its name where Unicode leaves it undecomposed (negative circled and squared letters, regional indicators, tags). The holes in the Mathematical Alphanumeric block are filled from NamesList's own cross-references (reserved U+1D455 → `ℎ` PLANCK CONSTANT), so `ℭ` and `ℎ` join their alphabets.", "",
-         "**A run is a walk over a given** (`catalog/given_walk.py`) when its positions in one given are: a **window** (consecutive, one direction); **rotated** (consecutive around the given's end: `8 9 0 1`); a **stride** (a constant step: `B D F`, or a constant step in value: `⅛ ¼ ⅜ ½`); **dress** (one position in several dresses: `1 ¹ ① 𝟏`); a **dress-window** (consecutive, held across dresses: `2 ➋ 3 ➌`); or a **reflection** (consecutive with one turnaround). A run that skips a position (`Ο Π Ρ Τ Υ` without `Σ`) is not given. For letters, the alphabet is the most widely used one that holds every letter of the run (so `ñ` brings in Spanish and `ё` Russian, but a rare alphabet can't make an arbitrary run regular).", "",
+         "**A run is a given walk** (`catalog/given_walk.py`) when, in one dress, its positions in one given are a **window** (consecutive, one direction), **rotated** (consecutive around the given's end: `8 9 0 1`), a **stride** (a constant step: `B D F`, or a constant step in value: `⅛ ¼ ⅜ ½`), or a **reflection** (consecutive with one turnaround). A window or rotation counts in any language's alphabet (Russian's `а б в`); a stride or reflection only in the alphabets used by the most languages, since some rare alphabet's spacing would make almost any run regular. A run that skips a position (`Ο Π Ρ Τ Υ` without `Σ`) is not given.", "",
+         "**Related to a given, but not given walks:** one position in several dresses (`1 ¹ ① 𝟏`, or a letter's accent forms `ó ô õ`), a window held across dresses (`2 ➋ 3 ➌`), and a walk that changes dress partway (`1 𝟐 3 𝟒`). Joseph's definition says *\"same stylistic class\"*, and the minds treat these differently: recognised when asked whole about 38% of the time for dress runs, against 94% for single-dress windows (audit of stochastic-4, G1). The catalog records their relation; they stay on `CATALOG-VIEW.md` and in probing.", "",
          "**Decisions, each with its reason** (open to revision):", "",
          "- **Han is excluded.** Han characters have no ordering intrinsic to the set: their collation order is a convention (pinyin, stroke, radical) that differs by locale. Every other script's letters have a standard enumeration, syllabaries and Hangul syllables included.",
-         "- **A dress run has a given set but not a given order.** `1 ¹ ① 𝟏` shows one number in several dresses, and no order among dresses is known. It's listed here, as a walk over the given set, and marked by its kind.",
-         "- **Known gaps in the sources.** CLDR lists Korean's letters as syllables, so the jamo order (`ㄱ ㄴ ㄷ`, `ㅏ ㅐ ㅑ`) isn't a given here. `🔟` (KEYCAP TEN) has no Unicode numeric value, so a run that reaches for it isn't a given walk.", "",
+         "- **Known gaps in the sources.** CLDR lists Korean's letters as syllables, so the jamo order (`ㄱ ㄴ ㄷ`, `ㅏ ㅐ ㅑ`) isn't a given here, while a walk along the syllables' code chart (`가 각 갂`) is. CLDR's Arabic letters, in Arabic collation, interleave `آ` and `ة`, so the hijāʾī opening `ا ب ت ث` isn't a window of Arabic's alphabet; it counts as given only as a stride in Pashto's. `🔟` (KEYCAP TEN) has no Unicode numeric value, so a run that reaches for it isn't a given walk. The Roman symbol order `Ⅰ Ⅴ Ⅹ Ⅼ Ⅽ Ⅾ Ⅿ` isn't a window of the Roman numerals' value order, so it isn't given.", "",
          "## What the minds did with givens", "",
          f"Of {n_records:,} catalog records, **{len(rows):,} walk a given**. Of the {n_rec:,} records the catalog recognises, **{sum(by_kind_rec.values()):,}** do ({sum(by_kind_rec.values()) / max(n_rec, 1):.0%}).", "",
          "| kind | records | asked whole | recognised |", "|---|---|---|---|"]
@@ -84,6 +86,10 @@ def main():
                      f"{(r['r_strength'] or 0):+.2f} ± {(r['r_sd'] or 0):.2f} | {r['r_bf']:.3g} | {fam or '–'} |")
         L.append("")
     nrec = [r for r in rows if not r["recognised"]]
+    rrel = [r for r in related if r["recognised"]]
+    L += ["### Related to a given, not given walks", "",
+          f"{len(related):,} records are related to a given without being given walks ({len(rrel)} recognised; they appear on `CATALOG-VIEW.md`). By kind: "
+          + ", ".join(f"{k} {n}" for k, n in collections.Counter((r['given_kind'] if len(r['given_dresses'] or []) <= 1 else r['given_kind'] + ', mixed dress') for r in related).most_common()) + ".", ""]
     L += ["### Walks not recognised (yet)", "",
           f"{len(nrec):,} records walk a given without being recognised: {sum(1 for r in nrec if asked(r)):,} asked whole and not recognised, the rest never asked whole (they come from walks, strongest paths, triad chains and seeds). By kind: "
           + ", ".join(f"{k} {n}" for k, n in collections.Counter(r['given_kind'] for r in nrec).most_common()) + ".", ""]

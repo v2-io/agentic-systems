@@ -12,7 +12,8 @@ implements part of CATALOG v5 and says which part:
           (Abbott, Bayes factor); and the state (§8) of every link of every record, summarised on the record.
           Build 5 (catalog/given_walk.py, data/unicode/givens.json): the givens -- orders that exist before any mind
           answers (alphabets in CLDR, numbers by value, each in every dress) -- as a table, and on every record its
-          given relation: whether it walks a given (window, rotation, stride, across dresses, reflection), which, how.
+          given relation (window, rotation, stride, across dresses, reflection; which given, how) and given_walk:
+          whether it IS a given walk, which needs one dress (Joseph's "same stylistic class"; audit G1).
           Nothing is removed; readers decide what to show (CATALOG-VIEW.md shows runs that aren't given walks).
           Build 4: content splits on every record -- links where two families' most named continuations differ at
           the deciding context, each family's mode with its counts and the chart's next glyph (facts, no cut).
@@ -61,6 +62,20 @@ PARAMS = {                                           # every one chosen without 
 }
 
 # ------------------------------------------------------------------ helpers
+def planners():
+    """{planner: [first round, last round]} from each context round's plan.json, in round order"""
+    out, prev = {}, None
+    for rd in sorted((p for p in (ROOT / "data" / "rounds").iterdir() if p.is_dir() and p.name[:1] == "c" and p.name[1:].isdigit()),
+                     key=lambda p: int(p.name[1:])):
+        try:
+            pl = json.load(open(rd / "plan.json")).get("planner", "tiered (before stochastic-1; no planner field)")
+        except Exception:
+            continue
+        key = pl if pl not in out or prev == pl else f"{pl} (again from {rd.name})"
+        out.setdefault(key, [rd.name, rd.name])[1] = rd.name
+        prev = pl
+    return out
+
 def sha(path):
     return hashlib.sha256(pathlib.Path(path).read_bytes()).hexdigest()
 
@@ -387,7 +402,11 @@ def main():
                            **GW.load()[3]},
                 "seed_files": {f.name: sha(f) for f in sorted((ROOT / "data" / "seeds").glob("*.jsonl"))},
                 "growth_files": {f.name: sha(f) for f in sorted((ROOT / "data" / "triad-era" / "growth").glob("*.json"))},
-                "code": {p: sha(ROOT / p) for p in ("catalog/build.py", "priority/plan.py", "tree/tree.py", "run.py")},
+                "code": {p: sha(ROOT / p) for p in ("catalog/build.py", "catalog/links.py", "catalog/order.py",
+                                                    "catalog/given_walk.py", "priority/plan.py", "tree/tree.py", "run.py")},
+                "planners": planners(),                 # which planner planned each round: a change of planner changes
+                                                        # what is asked, so pooled control rates can shift at it (audit of
+                                                        # stochastic-4, G5)
                 "git_head": subprocess.run(["git", "-C", str(ROOT), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()}
 
     # records: runs asked whole, ordered seeds, the triad era's grown rows
@@ -503,6 +522,7 @@ def main():
         r["given_dresses"] = gv["dresses"] if gv else None
         r["given_step"] = gv["step"] if gv else None
         r["given_start"] = gv["start"] if gv else None
+        r["given_walk"] = GW.is_given(gv)           # a given walk: one dress (audit G1); the relation above is kept either way
         r["link_states"] = {str(k): c.get(k, 0) for k in range(1, 6)}
         r["weakest_link"] = max(sts) if sts else None
         r["flips"] = sum(1 for x in rlinks[-len(sts):] if x["flip"]) if sts else 0
@@ -527,8 +547,9 @@ def main():
                               for r in rows if r["content_splits"])),   # the bands are a reading, chosen without evidence
                           "o_certain": sum(1 for r in rows if (r["o_bf"] or 0) >= PARAMS["BF_CERTAIN"] and (r["o_strength"] or 0) > 0),
                           "recognised": sum(r["recognised"] for r in rows),
-                          "given_walks": dict(collections.Counter(r["given_kind"] for r in rows if r["given_kind"])),
-                          "given_walks_recognised": dict(collections.Counter(r["given_kind"] for r in rows if r["given_kind"] and r["recognised"])),
+                          "given_relations": dict(collections.Counter(r["given_kind"] for r in rows if r["given_kind"])),
+                          "given_walks": dict(collections.Counter(r["given_kind"] for r in rows if r["given_walk"])),
+                          "given_walks_recognised": dict(collections.Counter(r["given_kind"] for r in rows if r["given_walk"] and r["recognised"])),
                           "view": dict(collections.Counter(r["view"] for r in rows if r["view"])),
                           "chart_state": dict(collections.Counter(r["chart_state"] for r in rows))}
     json.dump(manifest, open(out / "manifest.json", "w"), indent=1, ensure_ascii=False, sort_keys=True)
@@ -540,7 +561,7 @@ def main():
     RC = ["id", "glyphs", "length", "chart_class", "set_class", "sources", "r_strength", "r_sd", "r_bf", "r_families", "recognised",
           "chart_state", "name_state", "view", "contested", "contested_asked", "lookalike", "link_states", "weakest_link", "flips",
           "o_strength", "o_sd", "o_bf", "o_families", "o_other", "seed_raters", "content_splits", "evidence", "o_evidence",
-          "given_kind", "given_id", "given_label", "given_dresses", "given_step", "given_start"]
+          "given_kind", "given_id", "given_label", "given_dresses", "given_step", "given_start", "given_walk"]
     givens = [{"id": g["id"], "kind": g["kind"], "reading": g.get("reading"), "case": g.get("case"), "script": g.get("script"),
                "languages": g.get("languages"), "dress": g.get("dress"), "n": len(g["positions"]), "label": GW.label(g),
                "positions": g["positions"], "vals": g.get("values")} for g in GW.load()[0].values()]
@@ -565,7 +586,8 @@ CREATE TABLE {schema}.records (id text primary key, glyphs text, length int, cha
   chart_state text, name_state text, "view" text, contested int, contested_asked int, lookalike jsonb, link_states jsonb,
   weakest_link int, flips int, o_strength double precision, o_sd double precision, o_bf double precision, o_families jsonb,
   o_other jsonb, seed_raters jsonb, content_splits jsonb, evidence jsonb, o_evidence jsonb,
-  given_kind text, given_id text, given_label text, given_dresses jsonb, given_step double precision, given_start int);
+  given_kind text, given_id text, given_label text, given_dresses jsonb, given_step double precision, given_start int,
+  given_walk boolean);
 CREATE TABLE {schema}.givens (id text primary key, kind text, reading text, "case" text, script text, languages jsonb,
   dress text, n int, label text, positions jsonb, vals jsonb);
 CREATE TABLE {schema}.links (context text, k int, x text, g_shown jsonb, g_written jsonb, g_picked jsonb, next_ranks jsonb,
