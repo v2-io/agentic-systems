@@ -1,0 +1,214 @@
+{
+ "round": "c114",
+ "protocol": "ctx-0.1",
+ "planner": "stochastic-4",
+ "givens": {
+  "givens_json": "44cddafd7ef3216a7f8a30e93c1e5259678ea07d7bfcfbec088ed18e48278420",
+  "given_walk_py": "11482efe1b89c9acd45a2d3c362b8818f219553561e2f555411201bfd8dd9c83"
+ },
+ "questions": 821,
+ "budget": 700,
+ "size_scale": 0.8172,
+ "wanted": {
+  "continue": 126,
+  "inhibit": 55,
+  "cohere": 187,
+  "lookalike": 28,
+  "choose": 36,
+  "choose-control": 13,
+  "names": 15,
+  "order": 10,
+  "triad": 10,
+  "pick": 188,
+  "reasoned": 19,
+  "reflection": 20,
+  "explore": 61,
+  "pick-null": 50
+ },
+ "drawn": {
+  "explore": 61,
+  "reasoned": 19,
+  "reflection": 20,
+  "continue": 126,
+  "inhibit": 56,
+  "cohere": 187,
+  "lookalike": 28,
+  "choose": 36,
+  "choose-control": 13,
+  "names": 15,
+  "order": 10,
+  "triad": 10,
+  "pick": 190,
+  "pick-null": 50
+ },
+ "candidates": {
+  "reasoned": 4772,
+  "reflection": 26084,
+  "continue": 88533,
+  "inhibit": 8956,
+  "cohere": 21848,
+  "lookalike": 845,
+  "choose": 11522,
+  "choose-control": 1007,
+  "names": 4977,
+  "order": 5823,
+  "triad": 8743,
+  "pick": 8811
+ },
+ "claims": {
+  "reasoned": 4772,
+  "reflection": 804,
+  "continue": 7172,
+  "inhibit": 2638,
+  "cohere": 21848,
+  "lookalike": 845,
+  "choose": 5094,
+  "choose-control": 1007,
+  "names": 3391,
+  "order": 4237,
+  "triad": 2790,
+  "pick": 6857
+ },
+ "active_families": {
+  "reasoned": [
+   "claude"
+  ],
+  "reflection": [
+   "claude",
+   "grok"
+  ],
+  "continue": [
+   "claude",
+   "grok"
+  ],
+  "inhibit": [
+   "claude",
+   "grok"
+  ],
+  "cohere": [
+   "claude",
+   "grok"
+  ],
+  "lookalike": [
+   "claude",
+   "grok"
+  ],
+  "choose": [
+   "claude",
+   "grok"
+  ],
+  "choose-control": [
+   "claude",
+   "grok"
+  ],
+  "names": [
+   "claude",
+   "grok"
+  ],
+  "order": [
+   "claude",
+   "grok"
+  ],
+  "triad": [
+   "claude",
+   "grok"
+  ],
+  "pick": [
+   "claude",
+   "grok"
+  ]
+ },
+ "paused_minds": [
+  "gemini31pro",
+  "gemini38flash",
+  "gemini38flashg"
+ ],
+ "answers_read": {
+  "records": 324219,
+  "seeds": 969,
+  "sha256": "d13c9f3976539469574c2774b9d757eeab305e7e1fbd0cd1f18c031d1f5030dd"
+ },
+ "reasks": 85,
+ "by_why": {
+  "explore": 61,
+  "reasoned": 19,
+  "reflection": 20,
+  "end": 61,
+  "lengthen": 15,
+  "inside": 24,
+  "asked": 10,
+  "replicate": 4,
+  "kstar": 13,
+  "cycle-probe": 1,
+  "falsify-skip": 10,
+  "control": 131,
+  "recognize": 9,
+  "branch": 5,
+  "recognize-written": 2,
+  "cohere": 84,
+  "lookalike": 28,
+  "choose": 36,
+  "choose-control": 13,
+  "names": 15,
+  "order": 10,
+  "triad": 10,
+  "pick": 190,
+  "pick-null": 50
+ },
+ "by_kind": {
+  "continue": 226,
+  "inhibit": 56,
+  "cohere": 215,
+  "choose": 49,
+  "names": 15,
+  "order": 10,
+  "triad": 10,
+  "pick": 240
+ },
+ "by_variant": {
+  "plain": 782,
+  "reasoned": 19,
+  "reflection": 20
+ },
+ "sequences": 1432,
+ "contexts_in_tree": 27290,
+ "params": {
+  "SIZE_SIGMA_ROUND": 0.15,
+  "SIZE_SIGMA_STREAM": 0.25,
+  "REL_FLOOR": 0.05,
+  "REL_MID": 0.5,
+  "REL_WIDTH": 0.12,
+  "END_RELEVANCE": 5.0,
+  "VALIDATION_RELEVANCE": 3.0,
+  "STEWARD_RELEVANCE": 3.0,
+  "UNRANKED_RELEVANCE": 0.5,
+  "OFF_SEQUENCE_RELEVANCE": 0.01,
+  "CHART_CONTROL_SHARE": 0.25,
+  "PICK_NULL_EVERY": 4,
+  "MAX_WINDOW_STEP": 0.5,
+  "PENDING_HORIZON": 12,
+  "GIVEN_RELEVANCE": 0.1,
+  "EXPLORE_SHARE": 0.15
+ },
+ "base": {
+  "continue": 167,
+  "inhibit": 74,
+  "cohere": 176,
+  "lookalike": 40,
+  "choose": 60,
+  "choose-control": 20,
+  "names": 30,
+  "order": 13,
+  "triad": 15,
+  "pick": 150,
+  "reasoned": 20,
+  "reflection": 20
+ },
+ "branch_curve": [
+  0.02,
+  0.1,
+  0.04
+ ],
+ "sheets": 288,
+ "unicode": "16.0.0"
+}
