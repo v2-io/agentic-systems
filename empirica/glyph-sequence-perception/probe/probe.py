@@ -36,6 +36,16 @@ Question kinds (context-tree protocol "ctx-0.1"):
              an intuitive sequence, one "that doesn't need internal arithmetic or thinking about the glyph's name and
              codepoint", is much better). probe {"chart": <the chart neighbour>} says which is which; the minds are not
              told. Behaviour in a separate question from any stated basis, so it can validate one (whys-basis spike).
+  insert     a run (3-24 glyphs): Joseph's question, 2026-10-06, "can you make this sequence longer by inserting one or
+             more missing symbols?" -- the whole sequence with the symbols inserted, or "none". Parsed against the run:
+             every shown glyph kept, in order, is "inserted" (what went where is recorded); anything else is
+             "rewritten" (kept, not read as an insertion). Its control is the same question about the run's own glyphs
+             shuffled ({"control": "shuffled", "of": run}): whether a mind finds a gap in this order, or inserts into
+             anything. Answers are candidates (a run with insertions is a run to ask whole), not evidence.
+  remove     a run (3-24 glyphs), asked less often (Joseph: "and, occasionally -- by removing one or more symbols"):
+             "can you make this a more coherent sequence by removing one or more symbols?" -- the whole sequence with
+             them removed, or "none"; a subsequence of the run is "removed", anything else "rewritten". Control and use
+             as for insert.
 Answer options are words, never glyphs, so no glyph is reserved (METHODOLOGY §4).
 
 Sheets hold 1-5 questions of one kind, in a fated order (no two questions sharing a context adjacent); the sheet
@@ -51,7 +61,7 @@ import fate                                                # noqa: E402
 PROTOCOL = "ctx-0.1"
 MAX_SHEET = 5
 MAX_CONTINUE = 24
-KINDS = ("continue", "inhibit", "triad", "cohere", "pick", "order", "choose", "names")
+KINDS = ("continue", "inhibit", "triad", "cohere", "pick", "order", "choose", "names", "insert", "remove")
 MAX_ORDER = 12                    # the largest set an order question shows (the triad era: 8; chosen without evidence)
 SAMPLES = 5                       # pick: samples per context per generator mind (chosen without evidence)
 MAX_RUN = 24                       # the longest run a cohere question shows (chosen without evidence)
@@ -151,7 +161,7 @@ def question(kind, context, candidate=None, source=None, variant=None, probe=Non
         assert 4 <= len(c) <= MAX_ORDER and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c
         if kind == "names":
             assert all(U.name(x, None) for x in c), c
-    elif kind in ("cohere", "pick"):
+    elif kind in ("cohere", "pick", "insert", "remove"):
         assert (3 if kind == "cohere" else 2) <= len(c) <= MAX_RUN and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c
     else:
         assert 2 <= len(c) <= 8 and len(set(c)) == len(c) and all(is_glyph(x) for x in c), c   # 8: chosen without evidence (the triad era's limit); it bounds every shown context
@@ -182,7 +192,7 @@ def question(kind, context, candidate=None, source=None, variant=None, probe=Non
         key["sample"] = (probe or {}).get("sample", 0)  # each sample is its own question, so it lands on its own sheet
     if probe:
         key["probe"] = probe                           # e.g. {"control": "near"}: how the question was sampled
-    q = dict(key, qid=uid({"continue": "Q", "inhibit": "I", "cohere": "C", "pick": "P"}[kind], key), source=source or {})
+    q = dict(key, qid=uid({"continue": "Q", "inhibit": "I", "cohere": "C", "pick": "P", "insert": "J", "remove": "X"}[kind], key), source=source or {})
     return q
 
 # ------------------------------------------------------------------ prompts
@@ -249,6 +259,23 @@ def _lines(kind, sheet):
         sents = ["Judge each item on its own rather than building a scheme across items.",
                  "Any symbol may come next, whether it is shown or not; it may have no name."]
         reply = '{"id": <id>, "next": "<symbol>", "why": "..."}'
+    elif kind == "insert":     # Joseph, 2026-10-06
+        intro = "Each item below shows a run of symbols. Can you make this sequence longer by inserting one or more missing symbols?"
+        opts = ['"sequence": the whole sequence with the missing symbols inserted where they belong',
+                '"none": true, if nothing seems to be missing']
+        sents = ["Go by first impressions, and judge each item on its own rather than building a scheme across items.",
+                 '"none" is expected often and is fully valuable.',
+                 "Keep every symbol shown, in the order shown; only add.",
+                 "Any symbol may be inserted, whether it is shown or not; it may have no name."]
+        reply = '{"id": <id>, "sequence": [...]} or {"id": <id>, "none": true}'
+    elif kind == "remove":     # Joseph, 2026-10-06: "(and, occasionally -- 'by removing one or more symbols')"
+        intro = "Each item below shows a run of symbols. Can you make this a more coherent sequence by removing one or more symbols?"
+        opts = ['"sequence": the whole sequence with those symbols removed',
+                '"none": true, if no symbol seems out of place']
+        sents = ["Go by first impressions, and judge each item on its own rather than building a scheme across items.",
+                 '"none" is expected often and is fully valuable.',
+                 "Keep the other symbols in the order shown; only remove."]
+        reply = '{"id": <id>, "sequence": [...]} or {"id": <id>, "none": true}'
     elif kind == "cohere":     # Joseph, 2026-10-05: "does this look like a coherent sequence? why?"
         intro = "Each item below shows a run of symbols. Does it look like a coherent sequence? And why?"
         opts = ['"answer": "yes", if it looks like a coherent sequence',
@@ -326,7 +353,7 @@ def sheets(round_id, questions):
                                                        # (or context, or choose pair) twice
         while i < len(qs) or pending:
             n = r.randint(1, MAX_SHEET)
-            if kind in ("cohere", "pick", "choose"):
+            if kind in ("cohere", "pick", "choose", "insert", "remove"):
                 chunk, seen, rest = [], set(), []
                 for q in pending + qs[i:]:
                     # a choose pair and its D control never share a sheet (found 2026-10-06: 3 did in c096, so the mind
@@ -461,6 +488,26 @@ def records(sheet, ledger_rows, mind, family, judge, questions):
         out += _records(sheet, [r for r in ledger_rows if r.get("variant") == variant], mind, family, judge, questions, variant)
     return out
 
+def _is_subsequence(short, long):
+    it = iter(long)
+    return all(x in it for x in short)
+
+def _insertions(short, long):
+    """long is short with glyphs inserted -> [{"after": index in short of the glyph before (-1: before the first),
+    "glyphs": [...]}], greedy left-to-right alignment"""
+    out, i = [], 0
+    pending = []
+    for x in long:
+        if i < len(short) and x == short[i]:
+            if pending:
+                out.append({"after": i - 1, "glyphs": pending}); pending = []
+            i += 1
+        else:
+            pending.append(x)
+    if pending:
+        out.append({"after": i - 1, "glyphs": pending})
+    return out
+
 def _records(sheet, ledger_rows, mind, family, judge, questions, variant):
     good = [r for r in ledger_rows if good_row(r)]
     attempts = [r for r in ledger_rows if tool_attempt(r)]
@@ -576,6 +623,34 @@ def _records(sheet, ledger_rows, mind, family, judge, questions, variant):
                     rec["outcome"] = "continuation"; rec["continuation"] = [t]
                 else:
                     rec["outcome"] = "other"; rec["other_content"] = [{"s": t[:40], "pos": 0, "class": content_class(t)}]
+        elif sheet["kind"] in ("insert", "remove"):
+            v = a.get("sequence")
+            if isinstance(v, str):
+                v = list(v.replace(" ", "")) if " " not in v.strip() else v.split()
+            if (a.get("none") and not v) or v in (None, [], ""):
+                rec["outcome"] = "none" if (a.get("none") or v in ([], "")) else "unparsed"
+                if rec["outcome"] == "unparsed":
+                    rec["reason"] = "sequence"
+            elif not isinstance(v, list):
+                rec["outcome"] = "unparsed"; rec["reason"] = "sequence"
+            else:
+                seq, vs = [], False
+                for x in v[:2 * MAX_RUN]:
+                    t, s_ = clean(x); vs = vs or s_
+                    if t:
+                        seq.append(t)
+                run = list(e["context"])
+                rec["sequence"] = seq
+                if vs:
+                    rec["vs_stripped"] = True
+                if seq == run:
+                    rec["outcome"] = "same"
+                elif sheet["kind"] == "insert" and _is_subsequence(run, seq):
+                    rec["outcome"] = "inserted"; rec["inserted"] = _insertions(run, seq)
+                elif sheet["kind"] == "remove" and _is_subsequence(seq, run) and seq:
+                    rec["outcome"] = "removed"; rec["removed"] = _insertions(seq, run)   # what the run has beyond seq
+                else:
+                    rec["outcome"] = "rewritten"
         elif sheet["kind"] == "triad":
             rec["shown"] = list(e["context"])
             rec["tags"]["factors"] = {"perp": True, "tie": False}      # comparable with the triad era's perp, no-tie

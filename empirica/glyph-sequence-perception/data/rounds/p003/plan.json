@@ -1,0 +1,23 @@
+{
+ "round": "p003",
+ "what": "test round (probe/test_round.py)",
+ "kinds": [
+  "insert",
+  "remove"
+ ],
+ "runs": [
+  "┉┈┄─━▬█▌▍",
+  "_-∼≋",
+  "˚˙·∣∥⫴",
+  "↑↗→↘↓"
+ ],
+ "minds": [
+  "sonnet55",
+  "opus55",
+  "haiku45nt",
+  "grok46"
+ ],
+ "questions": 16,
+ "sheets": 16,
+ "unicode": "16.0.0"
+}
