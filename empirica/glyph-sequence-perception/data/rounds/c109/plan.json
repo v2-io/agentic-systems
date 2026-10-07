@@ -1,0 +1,207 @@
+{
+ "round": "c109",
+ "protocol": "ctx-0.1",
+ "planner": "stochastic-3",
+ "questions": 721,
+ "budget": 700,
+ "size_scale": 0.7723,
+ "wanted": {
+  "continue": 124,
+  "inhibit": 43,
+  "cohere": 111,
+  "lookalike": 36,
+  "choose": 32,
+  "choose-control": 11,
+  "names": 25,
+  "order": 8,
+  "triad": 13,
+  "pick": 87,
+  "reasoned": 21,
+  "reflection": 18,
+  "explore": 167,
+  "pick-null": 20
+ },
+ "drawn": {
+  "explore": 167,
+  "reasoned": 21,
+  "reflection": 18,
+  "continue": 124,
+  "inhibit": 44,
+  "cohere": 112,
+  "lookalike": 36,
+  "choose": 32,
+  "choose-control": 11,
+  "names": 25,
+  "order": 8,
+  "triad": 13,
+  "pick": 90,
+  "pick-null": 20
+ },
+ "candidates": {
+  "reasoned": 4858,
+  "reflection": 25782,
+  "continue": 86887,
+  "inhibit": 8692,
+  "cohere": 20701,
+  "lookalike": 769,
+  "choose": 10745,
+  "choose-control": 760,
+  "names": 4556,
+  "order": 5406,
+  "triad": 8654,
+  "pick": 8127
+ },
+ "claims": {
+  "reasoned": 4858,
+  "reflection": 793,
+  "continue": 6650,
+  "inhibit": 2490,
+  "cohere": 20701,
+  "lookalike": 769,
+  "choose": 4785,
+  "choose-control": 760,
+  "names": 3154,
+  "order": 4004,
+  "triad": 2765,
+  "pick": 6225
+ },
+ "active_families": {
+  "reasoned": [
+   "claude"
+  ],
+  "reflection": [
+   "claude",
+   "grok"
+  ],
+  "continue": [
+   "claude",
+   "grok"
+  ],
+  "inhibit": [
+   "claude",
+   "grok"
+  ],
+  "cohere": [
+   "claude",
+   "grok"
+  ],
+  "lookalike": [
+   "claude",
+   "grok"
+  ],
+  "choose": [
+   "claude",
+   "grok"
+  ],
+  "choose-control": [
+   "claude",
+   "grok"
+  ],
+  "names": [
+   "claude",
+   "grok"
+  ],
+  "order": [
+   "claude",
+   "grok"
+  ],
+  "triad": [
+   "claude",
+   "grok"
+  ],
+  "pick": [
+   "claude",
+   "grok"
+  ]
+ },
+ "paused_minds": [
+  "gemini31pro",
+  "gemini38flash",
+  "gemini38flashg"
+ ],
+ "answers_read": {
+  "records": 311476,
+  "seeds": 969,
+  "sha256": "b7af2a3e313352be235261339e7546037c0d1e768cba39b9386a9e0e924dbb2e"
+ },
+ "reasks": 95,
+ "by_why": {
+  "explore": 167,
+  "reasoned": 21,
+  "reflection": 18,
+  "lengthen": 17,
+  "kstar": 13,
+  "inside": 27,
+  "end": 57,
+  "replicate": 3,
+  "asked": 8,
+  "recognize": 8,
+  "control": 83,
+  "falsify-skip": 9,
+  "branch": 4,
+  "cohere": 51,
+  "lookalike": 36,
+  "choose": 32,
+  "choose-control": 11,
+  "names": 25,
+  "order": 8,
+  "triad": 13,
+  "pick": 90,
+  "pick-null": 20
+ },
+ "by_kind": {
+  "continue": 330,
+  "inhibit": 44,
+  "cohere": 148,
+  "choose": 43,
+  "names": 25,
+  "order": 8,
+  "triad": 13,
+  "pick": 110
+ },
+ "by_variant": {
+  "plain": 682,
+  "reasoned": 21,
+  "reflection": 18
+ },
+ "sequences": 1383,
+ "contexts_in_tree": 26072,
+ "params": {
+  "SIZE_SIGMA_ROUND": 0.15,
+  "SIZE_SIGMA_STREAM": 0.25,
+  "REL_FLOOR": 0.05,
+  "REL_MID": 0.5,
+  "REL_WIDTH": 0.12,
+  "END_RELEVANCE": 5.0,
+  "VALIDATION_RELEVANCE": 3.0,
+  "STEWARD_RELEVANCE": 3.0,
+  "UNRANKED_RELEVANCE": 0.5,
+  "OFF_SEQUENCE_RELEVANCE": 0.01,
+  "CHART_CONTROL_SHARE": 0.25,
+  "PICK_NULL_EVERY": 4,
+  "MAX_WINDOW_STEP": 0.5,
+  "PENDING_HORIZON": 12,
+  "EXPLORE_SHARE": 0.15
+ },
+ "base": {
+  "continue": 167,
+  "inhibit": 74,
+  "cohere": 176,
+  "lookalike": 40,
+  "choose": 60,
+  "choose-control": 20,
+  "names": 30,
+  "order": 13,
+  "triad": 15,
+  "pick": 150,
+  "reasoned": 20,
+  "reflection": 20
+ },
+ "branch_curve": [
+  0.02,
+  0.1,
+  0.04
+ ],
+ "sheets": 246,
+ "unicode": "16.0.0"
+}
