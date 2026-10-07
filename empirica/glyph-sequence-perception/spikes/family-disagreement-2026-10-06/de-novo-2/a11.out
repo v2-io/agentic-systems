@@ -1,0 +1,6 @@
+fold 0: 2mf -7274.8 tau -7268.5 diff +6.4
+fold 1: 2mf -7173.4 tau -7171.4 diff +2.0
+fold 2: 2mf -7396.6 tau -7392.1 diff +4.5
+fold 3: 2mf -7166.8 tau -7154.7 diff +12.1
+fold 4: 2mf -7222.2 tau -7215.4 diff +6.8
+held-out per answer: 2mf -0.4676  tau -0.4672  total diff +31.8 nats over 77489 answers
