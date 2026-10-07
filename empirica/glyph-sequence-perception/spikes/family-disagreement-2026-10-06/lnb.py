@@ -18,7 +18,7 @@ U, W = np.polynomial.hermite_e.hermegauss(9); W = W / W.sum(); LW = np.log(W)
 
 GROUPINGS = {"block": lambda c: F.block(c[-1]), "blockset": lambda c: frozenset(F.block(g) for g in c)}
 
-def block_features(items, S, N, minds=irt.MINDS, pseudo=2.0, exclude_items=None, grouping="block"):
+def block_features(items, S, N, minds=irt.MINDS, pseudo=2.0, exclude_items=None, grouping="block", composition_free=False):
     """F_own, F_oth (I, M), from answers on other items of the same block (vectorised). exclude_items: items whose
     answers may not be used as anyone's features (none by default)."""
     I, M = S.shape; gf = GROUPINGS[grouping]; blk = [gf(q[1]) for q in items]
@@ -30,6 +30,16 @@ def block_features(items, S, N, minds=irt.MINDS, pseudo=2.0, exclude_items=None,
     k = kb[bi] - Su; n = nb[bi] - Nu                                  # other items of the block, per mind
     p = (k + pseudo * rate[None, :]) / (n + pseudo)
     Fo = np.where(n > 0, np.log(p / (1 - p)) - lr[None, :], 0.0)
+    if composition_free:
+        # each other mind's own centred log-odds on the group, averaged with equal weight over the minds present
+        # (de-novo-feedback-3 §2a: a pooled rate reads 'stop' wherever high-threshold minds answered most)
+        L = np.where(n > 0, np.log(p / (1 - p)) - lr[None, :], np.nan)                 # (I, M) per mind
+        Ft = np.zeros((I, M))
+        for j in range(M):
+            others = np.delete(L, j, axis=1)
+            cnt = np.sum(~np.isnan(others), 1)
+            Ft[:, j] = np.where(cnt > 0, np.nansum(others, 1) / np.maximum(cnt, 1), 0.0)
+        return Fo, Ft, blk
     ko = k.sum(1, keepdims=True) - k; no = n.sum(1, keepdims=True) - n  # other minds pooled, other items
     rr = (Su.sum() - Su.sum(0) + 0.5) / (Nu.sum() - Nu.sum(0) + 1.0)
     p2 = (ko + pseudo * rr[None, :]) / (no + pseudo)

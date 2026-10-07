@@ -1,0 +1,12 @@
+cov item 0 -6197.1 299
+cov item 1 -6101.1 299
+cov item 2 -6318.3 299
+cov item 3 -6122.7 299
+cov item 4 -6139.2 299
+cov block 0 -5836.2 299
+cov block 1 -6992.4 299
+cov block 2 -7291.6 299
+cov block 3 -5792.8 299
+cov block 4 -5344.3 299
+RESULT cov item: -0.3985
+RESULT cov block: -0.4034

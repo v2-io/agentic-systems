@@ -4,7 +4,7 @@ otherwise). Parameters are the all-data fit. Same report as preq.py (groups, fli
 import bisect, collections, pickle, sys, numpy as np
 import irt, lnb, preq
 
-def prefix_features(items, seq, rows, grouping="blockset", pseudo=2.0, minds=irt.MINDS):
+def prefix_features(items, seq, rows, grouping="blockset", pseudo=2.0, minds=irt.MINDS, composition_free=False):
     M = len(minds); gf = lnb.GROUPINGS[grouping]; grp = [gf(q[1]) for q in items]
     ev = collections.defaultdict(list)                     # (group, mind) -> [(round, item, y)]
     allev = collections.defaultdict(list)                  # mind -> [(round, y)]
@@ -34,6 +34,13 @@ def prefix_features(items, seq, rows, grouping="blockset", pseudo=2.0, minds=irt
         for j in range(M):
             if ns[j] > 0:
                 p = (ks[j] + pseudo * rate[j]) / (ns[j] + pseudo); Fo[r_, j] = np.log(p / (1 - p)) - np.log(rate[j] / (1 - rate[j]))
+            if composition_free:
+                vals = []
+                for jj in range(M):
+                    if jj != j and ns[jj] > 0:
+                        pp = (ks[jj] + pseudo * rate[jj]) / (ns[jj] + pseudo); vals.append(np.log(pp / (1 - pp)) - np.log(rate[jj] / (1 - rate[jj])))
+                Ft[r_, j] = float(np.mean(vals)) if vals else 0.0
+                continue
             ko, no = ks.sum() - ks[j], ns.sum() - ns[j]
             if no > 0:
                 rr = rate[np.arange(M) != j].mean()

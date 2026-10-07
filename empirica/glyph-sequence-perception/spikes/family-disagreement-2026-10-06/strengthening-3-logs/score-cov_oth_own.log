@@ -1,0 +1,64 @@
+cov_oth_own: all-data ll -29327.4, iters 211
+   sonnet55       a +0.00 s 1.00 g +0.00 lam +0.61 kap +0.55 beta -1.94 +0.48 -0.08 -0.05 -3.17 +2.27 +0.63  pi 0.000
+   opus55         a -2.24 s 2.22 g +1.25 lam +1.05 kap +1.33 beta -2.79 +1.38 +1.69 +0.65 -3.43 +2.22 +1.17  pi 0.012
+   haiku45nt      a -0.01 s 0.44 g +0.18 lam +1.07 kap -0.21 beta -0.61 -0.07 +0.19 -0.01 -3.88 +2.96 +0.38  pi 0.007
+   haiku45        a -0.82 s 0.90 g +0.67 lam +0.85 kap +0.57 beta -1.32 +0.14 +1.87 +0.66 -3.09 +2.23 +0.54  pi 0.002
+   grok46         a -1.06 s 1.55 g +0.98 lam +1.69 kap +0.20 beta -0.57 +1.59 +1.04 +0.28 -3.09 +1.98 +0.80  pi 0.015
+   gemini38flash  a -0.97 s 1.19 g +0.40 lam +0.87 kap +0.60 beta +0.02 +1.21 +0.17 +0.19 -1.06 +0.42 +0.49  pi 0.005
+   gemini31pro    a +8.02 s 17.61 g +16.48 lam -2.28 kap +23.42 beta -12.77 +12.94 +0.93 -1.79 -22.63 +11.75 +3.81  pi 0.077
+   p001 grok46         stops 29 of 42  expected 28.4  log score -26.82
+   p001 sonnet55       stops 1 of 43  expected 6.2  log score -8.84
+   p002 haiku45        stops 6 of 43  expected 16.3  log score -22.08
+   p002 haiku45nt      stops 12 of 43  expected 13.5  log score -20.95
+   p002 opus55         stops 6 of 43  expected 7.6  log score -13.47
+/Users/josephwecker-v2/src/arch/asf/empirica/glyph-sequence-perception/spikes/family-disagreement-2026-10-06/spx.py:132: RuntimeWarning: divide by zero encountered in log1p
+  p = 1 / (1 + np.exp(-z)); lf = k * np.log(p) + (n - k) * np.log1p(-p)
+/Users/josephwecker-v2/src/arch/asf/empirica/glyph-sequence-perception/spikes/family-disagreement-2026-10-06/spx.py:132: RuntimeWarning: invalid value encountered in multiply
+  p = 1 / (1 + np.exp(-z)); lf = k * np.log(p) + (n - k) * np.log1p(-p)
+/Users/josephwecker-v2/src/arch/asf/empirica/glyph-sequence-perception/spikes/family-disagreement-2026-10-06/spx.py:134: RuntimeWarning: invalid value encountered in logaddexp
+  l0 = np.log1p(-m.pi[j]) + lf; l1 = np.log(m.pi[j]) + lh; q1 = np.exp(l1 - np.logaddexp(l0, l1))
+== cov_oth_own, strict prequential: prequential log score nan over 77489 answers (nan per answer)
+  first: count of stops
+    sonnet55                                     n=20984  obs  4981 / pred  5027.5 [4931-5124]
+    opus55                                       n= 4297  obs   994 / pred  1004.3 [959-1050]
+    haiku45nt                                    n=20217  obs  7620 / pred  7609.4 [7497-7726]
+    haiku45                                      n= 4674  obs  1629 / pred  1775.6 [1723-1828]  <-- outside
+    grok46                                       n=18519  obs  6461 / pred  6590.3 [6486-6700]  <-- outside
+    gemini38flash                                n= 3058  obs   913 / pred   938.7 [891-984]
+    gemini31pro                                  n=  678  obs   276 / pred     nan [0-2]  <-- outside
+  cross: count of stops
+    opus55                                       n=  199  obs    11 / pred     9.7 [5-15]
+    haiku45nt                                    n=  125  obs    20 / pred    27.0 [19-35]
+    haiku45                                      n=  181  obs    19 / pred    26.2 [18-35]
+  repeat: count of stops
+    sonnet55                                     n= 1255  obs    34 / pred    55.8 [42-69]  <-- outside
+    haiku45nt                                    n= 1150  obs   193 / pred   219.0 [196-243]  <-- outside
+    grok46                                       n= 2005  obs   322 / pred   352.4 [328-378]  <-- outside
+  repeat: flips (answer differs from the mind's own last answer)
+    sonnet55                                     n= 1255  obs    40 / pred    65.6 [52-79]  <-- outside
+    sonnet55  (flat: own unanimous, another mind opposite) n=  390  obs    33 / pred    47.3 [37-58]  <-- outside
+    haiku45nt                                    n= 1150  obs   222 / pred   278.1 [254-302]  <-- outside
+    haiku45nt  (flat: own unanimous, another mind opposite) n=  380  obs   142 / pred   178.0 [161-194]  <-- outside
+    grok46                                       n= 2005  obs   250 / pred   265.9 [241-293]
+    grok46  (flat: own unanimous, another mind opposite) n=  354  obs   107 / pred   108.3 [94-124]
+  same-round pairs: disagreements (two minds, one sheet, one prefix)
+    sonnet55 / opus55                            n= 4538  obs   425 / pred   534.7 [494-577]  <-- outside
+    sonnet55 / haiku45nt                         n=21408  obs  5247 / pred  5598.3 [5482-5718]  <-- outside
+    sonnet55 / haiku45                           n= 4917  obs   890 / pred  1064.5 [1012-1121]  <-- outside
+    sonnet55 / grok46                            n=18433  obs  3027 / pred  3424.1 [3320-3525]  <-- outside
+    sonnet55 / gemini38flash                     n= 3046  obs   487 / pred   598.8 [557-641]  <-- outside
+    sonnet55 / gemini31pro                       n=  676  obs   130 / pred     nan [0-2]  <-- outside
+    opus55 / haiku45nt                           n= 4391  obs  1119 / pred  1141.2 [1088-1195]
+    opus55 / haiku45                             n=  997  obs   202 / pred   205.8 [182-229]
+    opus55 / grok46                              n= 3768  obs   575 / pred   626.2 [585-669]  <-- outside
+    opus55 / gemini38flash                       n=  588  obs    96 / pred    98.1 [81-115]
+    haiku45nt / haiku45                          n= 4205  obs  1039 / pred  1167.6 [1114-1224]  <-- outside
+    haiku45nt / grok46                           n=17683  obs  4798 / pred  4831.7 [4722-4943]
+    haiku45nt / gemini38flash                    n= 2443  obs   700 / pred   743.8 [702-789]  <-- outside
+    haiku45nt / gemini31pro                      n=  553  obs   168 / pred     nan [0-3]  <-- outside
+    haiku45 / grok46                             n= 4168  obs   780 / pred   849.2 [802-896]  <-- outside
+    haiku45 / gemini38flash                      n= 1077  obs   194 / pred   270.9 [243-299]  <-- outside
+    grok46 / gemini38flash                       n= 3034  obs   465 / pred   604.9 [564-648]  <-- outside
+    grok46 / gemini31pro                         n=  675  obs    97 / pred     nan [0-2]  <-- outside
+    gemini38flash / gemini31pro                  n=  528  obs    87 / pred     nan [0-2]  <-- outside
+  outside band: 25

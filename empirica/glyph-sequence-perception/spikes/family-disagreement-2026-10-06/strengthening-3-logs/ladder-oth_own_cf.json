@@ -1,0 +1,87 @@
+{
+ "variant": "oth_own_cf",
+ "folds": [
+  {
+   "scheme": "item",
+   "fold": 0,
+   "heldout": -6539.5234194039,
+   "n": 15778.0,
+   "iters": 299,
+   "secs": 158
+  },
+  {
+   "scheme": "item",
+   "fold": 1,
+   "heldout": -6466.207208923308,
+   "n": 15321.0,
+   "iters": 179,
+   "secs": 102
+  },
+  {
+   "scheme": "item",
+   "fold": 2,
+   "heldout": -6668.090752231971,
+   "n": 15621.0,
+   "iters": 192,
+   "secs": 99
+  },
+  {
+   "scheme": "item",
+   "fold": 3,
+   "heldout": -6455.425794449438,
+   "n": 15241.0,
+   "iters": 299,
+   "secs": 157
+  },
+  {
+   "scheme": "item",
+   "fold": 4,
+   "heldout": -6415.982985065738,
+   "n": 15528.0,
+   "iters": 299,
+   "secs": 176
+  },
+  {
+   "scheme": "block",
+   "fold": 0,
+   "heldout": -6082.350232627057,
+   "n": 15966.0,
+   "iters": 127,
+   "secs": 77
+  },
+  {
+   "scheme": "block",
+   "fold": 1,
+   "heldout": -7235.72329102185,
+   "n": 15108.0,
+   "iters": 299,
+   "secs": 183
+  },
+  {
+   "scheme": "block",
+   "fold": 2,
+   "heldout": -7453.152905051498,
+   "n": 17696.0,
+   "iters": 299,
+   "secs": 157
+  },
+  {
+   "scheme": "block",
+   "fold": 3,
+   "heldout": -5972.562204081536,
+   "n": 13743.0,
+   "iters": 299,
+   "secs": 160
+  },
+  {
+   "scheme": "block",
+   "fold": 4,
+   "heldout": -5932.788691601714,
+   "n": 14976.0,
+   "iters": 299,
+   "secs": 150
+  }
+ ],
+ "item": -0.419998066307145,
+ "block": -0.4216931090139717
+}

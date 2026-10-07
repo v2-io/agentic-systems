@@ -1,0 +1,12 @@
+cov_shared item 0 -6311.1 299
+cov_shared item 1 -6230.0 299
+cov_shared item 2 -6458.2 299
+cov_shared item 3 -6255.8 299
+cov_shared item 4 -6300.9 299
+cov_shared block 0 -5999.5 299
+cov_shared block 1 -7094.2 299
+cov_shared block 2 -7407.7 299
+cov_shared block 3 -5912.7 299
+cov_shared block 4 -5488.2 299
+RESULT cov_shared item: -0.4072
+RESULT cov_shared block: -0.4117

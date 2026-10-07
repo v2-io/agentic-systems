@@ -1,0 +1,59 @@
+SPXR cov_oth_own: ll -29749.2 iters 299
+   sonnet55       a +0.00 s 1.00 g +0.00 lam +0.51 kap +0.44 beta -1.98 +0.63 -0.37 +0.12 -3.27 +2.31 +0.64  pi 0.000
+   opus55         a -2.24 s 2.38 g +1.42 lam +0.77 kap +1.12 beta -3.04 +1.95 +0.90 +0.95 -3.12 +1.60 +1.36  pi 0.028
+   haiku45nt      a +0.57 s 0.41 g +0.16 lam +0.80 kap -0.06 beta -0.59 -0.04 -0.55 -0.15 -3.91 +2.98 +0.37  pi 0.008
+   haiku45        a -0.16 s 0.90 g +0.56 lam +0.60 kap +0.57 beta -1.46 +0.24 +0.98 +0.61 -3.03 +2.10 +0.51  pi 0.006
+   grok46         a -0.62 s 1.46 g +0.99 lam +1.47 kap -0.03 beta -0.62 +1.74 +0.14 +0.34 -3.00 +1.82 +0.79  pi 0.015
+   gemini38flash  a -0.72 s 1.25 g +0.31 lam +1.00 kap +0.07 beta -0.07 +1.41 -0.50 +0.36 -1.15 +0.32 +0.45  pi 0.020
+   gemini31pro    a +1.60 s 2.36 g +1.78 lam +0.01 kap +1.95 beta -1.96 +1.63 -0.90 +0.09 -2.16 +0.46 +0.60  pi 0.033
+   p001 grok46         stops 29 of 42  expected 28.8  log score -26.13
+   p001 sonnet55       stops 1 of 43  expected 6.1  log score -8.83
+   p002 haiku45        stops 6 of 43  expected 15.6  log score -21.18
+   p002 haiku45nt      stops 12 of 43  expected 13.6  log score -21.08
+   p002 opus55         stops 6 of 43  expected 7.8  log score -14.33
+   totals {'p001': np.float64(-34.97), 'p002': np.float64(-56.6)}
+== SPXR cov_oth_own (fitted on earlier-round features), strict prequential: prequential log score -33568.0 over 77489 answers (-0.4332 per answer)
+  first: count of stops
+    sonnet55                                     n=20984  obs  4981 / pred  5031.4 [4938-5124]
+    opus55                                       n= 4297  obs   994 / pred  1002.1 [958-1048]
+    haiku45nt                                    n=20217  obs  7620 / pred  7642.2 [7532-7759]
+    haiku45                                      n= 4674  obs  1629 / pred  1687.2 [1635-1740]  <-- outside
+    grok46                                       n=18519  obs  6461 / pred  6461.3 [6353-6570]
+    gemini38flash                                n= 3058  obs   913 / pred   879.1 [833-924]
+    gemini31pro                                  n=  678  obs   276 / pred   277.6 [256-298]
+  cross: count of stops
+    opus55                                       n=  199  obs    11 / pred    10.1 [5-16]
+    haiku45nt                                    n=  125  obs    20 / pred    26.5 [19-35]
+    haiku45                                      n=  181  obs    19 / pred    24.7 [17-33]
+  repeat: count of stops
+    sonnet55                                     n= 1255  obs    34 / pred    55.4 [42-68]  <-- outside
+    haiku45nt                                    n= 1150  obs   193 / pred   216.1 [193-240]
+    grok46                                       n= 2005  obs   322 / pred   348.2 [323-373]  <-- outside
+  repeat: flips (answer differs from the mind's own last answer)
+    sonnet55                                     n= 1255  obs    40 / pred    64.9 [52-78]  <-- outside
+    sonnet55  (flat: own unanimous, another mind opposite) n=  390  obs    33 / pred    47.3 [36-58]  <-- outside
+    haiku45nt                                    n= 1150  obs   222 / pred   276.1 [251-300]  <-- outside
+    haiku45nt  (flat: own unanimous, another mind opposite) n=  380  obs   142 / pred   177.6 [161-194]  <-- outside
+    grok46                                       n= 2005  obs   250 / pred   262.1 [238-289]
+    grok46  (flat: own unanimous, another mind opposite) n=  354  obs   107 / pred   107.3 [93-123]
+  same-round pairs: disagreements (two minds, one sheet, one prefix)
+    sonnet55 / opus55                            n= 4538  obs   425 / pred   502.4 [464-544]  <-- outside
+    sonnet55 / haiku45nt                         n=21408  obs  5247 / pred  5446.2 [5330-5565]  <-- outside
+    sonnet55 / haiku45                           n= 4917  obs   890 / pred   959.1 [910-1012]  <-- outside
+    sonnet55 / grok46                            n=18433  obs  3027 / pred  3213.7 [3116-3312]  <-- outside
+    sonnet55 / gemini38flash                     n= 3046  obs   487 / pred   530.7 [490-572]  <-- outside
+    sonnet55 / gemini31pro                       n=  676  obs   130 / pred   138.9 [120-159]
+    opus55 / haiku45nt                           n= 4391  obs  1119 / pred  1121.7 [1070-1175]
+    opus55 / haiku45                             n=  997  obs   202 / pred   187.5 [165-210]
+    opus55 / grok46                              n= 3768  obs   575 / pred   589.1 [546-628]
+    opus55 / gemini38flash                       n=  588  obs    96 / pred    86.1 [70-102]
+    haiku45nt / haiku45                          n= 4205  obs  1039 / pred  1119.8 [1067-1175]  <-- outside
+    haiku45nt / grok46                           n=17683  obs  4798 / pred  4676.8 [4573-4787]  <-- outside
+    haiku45nt / gemini38flash                    n= 2443  obs   700 / pred   711.4 [670-756]
+    haiku45nt / gemini31pro                      n=  553  obs   168 / pred   163.6 [144-184]
+    haiku45 / grok46                             n= 4168  obs   780 / pred   791.5 [746-839]
+    haiku45 / gemini38flash                      n= 1077  obs   194 / pred   239.6 [213-267]  <-- outside
+    grok46 / gemini38flash                       n= 3034  obs   465 / pred   568.0 [528-609]  <-- outside
+    grok46 / gemini31pro                         n=  675  obs    97 / pred   110.9 [93-130]
+    gemini38flash / gemini31pro                  n=  528  obs    87 / pred   103.1 [85-120]
+  outside band: 16

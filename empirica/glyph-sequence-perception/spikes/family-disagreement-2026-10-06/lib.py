@@ -49,9 +49,22 @@ def build_snapshot():
     return keep, man
 
 def load(refresh=False):
-    if refresh or not SNAP.exists():
+    """the spike's snapshot. If the scratchpad pickle exists, it is checked against snapshot/manifest.json (count kept);
+    if it doesn't, the snapshot is rebuilt from the manifest's answer IDs (from_manifest), never silently from the
+    current answer files (de-novo-feedback-3 §5). refresh=True rebuilds from the current files, deliberately."""
+    if refresh:
         return build_snapshot()
-    return pickle.load(open(SNAP, "rb"))
+    mf = pathlib.Path(__file__).resolve().parent / "snapshot" / "manifest.json"
+    if SNAP.exists():
+        recs, man = pickle.load(open(SNAP, "rb"))
+        if mf.exists() and json.load(open(mf))["kept"] != len(recs):
+            raise RuntimeError(f"snapshot pickle holds {len(recs)} records, manifest says {json.load(open(mf))['kept']}")
+        return recs, man
+    if mf.exists():
+        recs, man = from_manifest()
+        SNAP.parent.mkdir(parents=True, exist_ok=True); pickle.dump((recs, man), open(SNAP, "wb"))
+        return recs, man
+    return build_snapshot()
 
 FAMS = ("claude", "grok", "gemini")
 

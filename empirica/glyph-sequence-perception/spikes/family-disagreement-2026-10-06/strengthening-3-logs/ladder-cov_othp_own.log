@@ -1,0 +1,12 @@
+cov_othp_own item 0 -5931.8 299
+cov_othp_own item 1 -5824.6 297
+cov_othp_own item 2 -6019.2 272
+cov_othp_own item 3 -5839.4 299
+cov_othp_own item 4 -5777.3 299
+cov_othp_own block 0 -5488.4 299
+cov_othp_own block 1 -6651.4 299
+cov_othp_own block 2 -6806.0 177
+cov_othp_own block 3 -5500.4 181
+cov_othp_own block 4 -5147.8 299
+RESULT cov_othp_own item: -0.3793
+RESULT cov_othp_own block: -0.3819

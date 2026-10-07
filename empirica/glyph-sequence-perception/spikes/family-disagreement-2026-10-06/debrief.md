@@ -1,18 +1,15 @@
 # Debrief for Joseph
 
-*The spike agent (Claude Opus 5.5), 2026-10-06 ~19:30 MDT, after two independent verifications and a pre-registered test.*
+*The spike agent (Claude Opus 5.5), 2026-10-06 ~21:00 MDT, after three independent verifications and two pre-registered tests.*
 
-Joseph, here is where the family question has come out, after two independent checks pulled my first answers apart.
+Joseph, here's where the family question stands, after three independent checks took my earlier answers apart and rebuilt them.
 
-When the minds commit to a next glyph, they mostly pick the same one, across families as within. But most of that agreement is everyone walking the Unicode chart; away from the chart they still agree about nine times in ten. Where they really differ is in how readily they commit, and that belongs to a model and a question type more than to a family.
+When the models commit to a next glyph, they mostly pick the same one, across families as much as within. Much of that is everyone walking the Unicode chart, but even away from the chart they agree about nine times in ten.
 
-The biggest thing the data showed wasn't about single questions at all. Each model has its own lean on a whole sequence: Grok tends to stop throughout one block, Sonnet to keep going through it. That sequence-level lean is far larger than anything per question, and it holds up on data the models never saw. I think it's the honest form of your "model-sensitive vs agnostic" parameter: per sequence, how far each model's lean departs from the others'.
+What best predicts whether a model continues a run isn't the model at all. It's what the run looks like: whether it's a straight walk through the code chart, how many Unicode blocks it crosses, how long it is. That's shared across all of them. The clearest family difference sits right there: Opus and Sonnet keep walking the chart much more readily than Grok or Gemini do. Beyond that, each model has a small lean of its own on particular Unicode blocks, mostly Grok's and Haiku-without-thinking's. It's real, but about a sixth of what I first reported. That lean is the honest version of your per-sequence parameter, with the caveat that it's measured per block, not per sequence yet.
 
-On the 43 contexts where Sonnet always continued and Grok always stopped, we asked again. Sonnet continued 42 times; Grok stopped about seven times in ten. So those splits are real, and mostly settled, not chance; my earlier "partly chance" was wrong.
+The re-asks settled one thing: where Sonnet always continues and Grok always stops, Sonnet's side is settled. Some of what looked like Sonnet being "steadier than any model allows" was my own modelling choice, and fixing it brought Sonnet's checks into line.
 
-Three things in the study's own machinery shift answers, and they matter for any reading:
-- showing several pieces of one sequence on the same sheet makes models continue it far more;
-- the planner's habit of re-asking after some answers and not others;
-- seeds the models can't see.
+Two things I'd said shift answers don't, as far as can be shown. Putting pieces of the same sequence on one sheet looked like it made models continue more, but within the same question it makes no detectable difference; the planner simply asks strong sequences more often. Re-asking and seeds change which questions get asked, not the answers.
 
-The only clearly family-level things are `▁` for Gemini, and a pull toward the code chart that is Sonnet's and Haiku's more than Claude's. I haven't yet built a model that gets every consistency check right, and I've said exactly where it fails.
+The only clearly family-level effects are `▁` for Gemini, and the chart-walking difference above. No model I've built yet passes every consistency check; the one left over is that Grok agrees with both Gemini models more than any model allows.

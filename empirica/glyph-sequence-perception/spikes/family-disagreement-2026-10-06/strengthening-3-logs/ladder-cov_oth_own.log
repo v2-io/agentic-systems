@@ -1,0 +1,12 @@
+cov_oth_own item 0 -5941.5 162
+cov_oth_own item 1 -5823.7 222
+cov_oth_own item 2 -6022.3 177
+cov_oth_own item 3 -5845.5 299
+cov_oth_own item 4 -5784.7 151
+cov_oth_own block 0 -5503.5 171
+cov_oth_own block 1 -6658.6 172
+cov_oth_own block 2 -6805.7 198
+cov_oth_own block 3 -5506.3 169
+cov_oth_own block 4 -5152.0 299
+RESULT cov_oth_own item: -0.3796
+RESULT cov_oth_own block: -0.3823

@@ -1,0 +1,12 @@
+oth_own_cf item 0 -6539.5 299
+oth_own_cf item 1 -6466.2 179
+oth_own_cf item 2 -6668.1 192
+oth_own_cf item 3 -6455.4 299
+oth_own_cf item 4 -6416.0 299
+oth_own_cf block 0 -6082.4 127
+oth_own_cf block 1 -7235.7 299
+oth_own_cf block 2 -7453.2 299
+oth_own_cf block 3 -5972.6 299
+oth_own_cf block 4 -5932.8 299
+RESULT oth_own_cf item: -0.4200
+RESULT oth_own_cf block: -0.4217

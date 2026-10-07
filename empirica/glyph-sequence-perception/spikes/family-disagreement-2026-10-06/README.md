@@ -13,6 +13,8 @@
 - `de-novo-feedback-1.md`, `strengthening-1.md`: the first verification and the spike agent's answer to it;
 - `prereg-flat-splits.json`, `prereg_round.py`, `prereg_check.py`, `prereg-result-1.md`: the pre-registered test (round `p001`) and its result;
 - `de-novo-feedback-2.md`, `de-novo-2/`: the second verification, its scripts, and its competing model and prediction;
+- `de-novo-feedback-3.md`, `de-novo-3/`: the third verification, its scripts and its timed p002 baseline;
+- `strengthening-3.md`, `strengthening-3-logs/`: the spike agent's answer to the third verification;
 - `snapshot/`: what rebuilds the spike's snapshot (`lib.py --from-manifest`);
 - `strengthening-2.md`, `strengthening-2-logs/`: the spike agent's answer to the second verification (the sequence-level structure, the probing effects, no model calibrated on all checks);
 - `prereg-third-minds.json`, `prereg2_gen.py`, `prereg_gen.py`: the second pre-registration (round `p002`, third minds) and the generators of both;
@@ -37,3 +39,12 @@
 - two coordinator times were false, now corrected here and in `prereg-result-2.md`.
 
 Sent to the spike agent for its answer.
+
+**Strengthened a third time** (`strengthening-3.md`, about 21:00). The verifier's reading holds and is quantified:
+
+- what a context looks like (chart class, blocks, length) predicts continuing far better than anything per mind, mostly with one shared coefficient set;
+- a mind's own lean on a Unicode block is real but small (+884 / +978 nats held out, about 0.01 per answer), mostly Grok's, Haiku-without-thinking's and Gemini Flash's;
+- no sheet-mate format effect is shown within the same context and mind;
+- part of Sonnet's "steadiness" was a modelling artifact (a narrow latent grid with Sonnet as anchor).
+
+The clearest family difference is chart-walking: Opus and Sonnet keep walking the chart far more readily than Grok and Gemini. Best model: 10 of 38 calibration checks outside their bands, chiefly a Grok–Gemini affinity. `lib.load()` now refuses a snapshot that disagrees with its manifest. FINDINGS, plan and debrief were rewritten by replacement (landed unchanged). **Not yet independently verified.**
