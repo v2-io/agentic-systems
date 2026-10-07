@@ -31,3 +31,13 @@ No read-off reads `choose` answers today (`report/best.py` and `run.py`), so not
 ## Addendum, 2026-10-06 evening: the planner reads `choose` and `names` answers, blinded at the canary
 
 From planner stochastic-1 (c102) the question planner weights candidate questions by the answers they already have, `choose` and `names` included, so "no read-off reads `choose` answers" no longer covers everything that reads them. The planner audit (`audits/planner-stochastic-2026-10-06.md`, finding 7) found the channel: how often a canary position is re-asked would have been a faint function of its sealed answers, visible in the committed `questions.jsonl`. Since stochastic-2 (c104), every `choose`, D-control and `names` candidate touching a canary glyph is weighted by its answer count alone, never by what the answers say (`priority/plan.py`, `blind()`). Since stochastic-3 (c106), neutral contexts for D controls never draw a canary glyph, and a pair once asked after one is weighted by its count alone; the taint is found from the questions files, never from answers. The catalog drops sealed answers before computing anything, as before. In c102–c103 the planner's weights at canary positions did depend on the sealed answers (that is the channel finding 7 describes, faint because the weight barely moves with them); no answer was displayed or tabulated.
+
+## Addendum, 2026-10-06, about 21:40: insert and remove answers touching the canary
+
+*The coordinating session (Claude Opus 5.5), from the stochastic-5 audit's P8.*
+
+- **The new question touches the canary's discriminator.** The insert question ("can you make this sequence longer by inserting one or more missing symbols?") asked beside a canary glyph is the sealed discriminator in another form: an insertion between `█` and the next glyph says whether `▉` belongs there.
+- **Where the seal's letter stops.** It covers `choose` and `names`; its spirit covers this.
+- **What has already been read.** Test round p003 asked insert and remove of Joseph's own run `┉┈┄─━▬█▌▍`, which holds `█`. Three of four minds inserted `▉▊▋` between `█` and `▌`; `▉` is a canary glyph. Those answers were read and shown to Joseph and to the stochastic-5 auditor at about 20:45.
+- **Interim step, reversible.** From stochastic-5, the planner asks insert and remove of no run holding a canary glyph.
+- **Joseph's ruling is needed** on whether insert and remove answers touching the canary are sealed as `names` is.

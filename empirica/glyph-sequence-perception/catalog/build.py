@@ -446,7 +446,8 @@ def main():
                 "seed_files": {f.name: sha(f) for f in sorted((ROOT / "data" / "seeds").glob("*.jsonl"))},
                 "growth_files": {f.name: sha(f) for f in sorted((ROOT / "data" / "triad-era" / "growth").glob("*.json"))},
                 "code": {p: sha(ROOT / p) for p in ("catalog/build.py", "catalog/links.py", "catalog/order.py",
-                                                    "catalog/given_walk.py", "priority/plan.py", "tree/tree.py", "run.py")},
+                                                    "catalog/given_walk.py", "catalog/code_order.py", "report/best.py",
+                                                    "priority/plan.py", "tree/tree.py", "probe/probe.py", "run.py")},
                 "planners": planners(),                 # which planner planned each round: a change of planner changes
                                                         # what is asked, so pooled control rates can shift at it (audit of
                                                         # stochastic-4, G5)

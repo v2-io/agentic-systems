@@ -46,7 +46,11 @@ each question beside the same question about its own glyphs shuffled, weighted b
 (seq_rel: how far its order beats its own shuffles), information on whether minds find something, and the given factor;
 the runs their answers propose become cohere candidates. A question about a run whose order the ENCODING supplies (code
 points monotone, rotated or interleaved; catalog/code_order.py) is weighted by ENCODED_RELEVANCE wherever the given
-factor applies (lookalike, whose job is testing those runs, stays exempt). The names/order and lookalike streams weigh runs by recognition
+factor applies; choose, the name-only question and lookalike, the instruments that can tell perception from chart
+reading, are exempt. Revised after its de novo audit (audits/planner-stochastic-5-2026-10-06.md): "encoded" is a snippet
+of a chart pane (a contiguous code-point stretch: P1, Joseph's "snippets of the unicode panes"); insert and remove reach
+runs of 3-24 glyphs (P3) and stay off runs holding canary glyphs until Joseph rules on the seal (P8); seq_rel uses the
+90% lower bound (P5); any given relation, dress included, takes the given factor, as on the view (P9). The names/order and lookalike streams weigh runs by recognition
 as a sequence too, in place of the raw "called coherent" share (Joseph: "Our entire premise was based on recognizing
 sequences-- not sets").
 "stochastic-4" (2026-10-06) adds GIVENS: a question about a walk over a given -- an order that exists before any mind
@@ -218,19 +222,21 @@ def _sha(path):
     import hashlib
     return hashlib.sha256(pathlib.Path(path).read_bytes()).hexdigest()
 
-def given_factor(glyphs, as_set=False, served=None):
-    """GIVEN_RELEVANCE when a question is about a given walk (catalog/given_walk.py is_given: one dress), else 1.
+def given_factor(glyphs, as_set=False, served=None, encoded=True):
+    """GIVEN_RELEVANCE when a question is about a run related to a given (catalog/given_walk.py; any dress, as on the
+    view), ENCODED_RELEVANCE when its order is a snippet of a chart pane (catalog/code_order.py) unless encoded=False
+    (the instruments that can tell perception from chart reading: choose, the name-only question, lookalike), else 1.
     A question that serves a sequence or run (its claim: a string or tuple of 3+ glyphs) takes the factor from what it
     serves, so a sequence's skip tests, 2-glyph contexts and reflections share its factor (audit G2); it follows that a
     given window inside a sequence that isn't given keeps full weight. Otherwise the question's own glyphs decide."""
     if isinstance(served, (str, tuple)) and len(served) >= 3 and all(isinstance(c, str) and len(c) == 1 for c in served):
         g = tuple(served)
-        if GW.is_given(GW.classify_cached(g, 3)):
-            return PARAMS["GIVEN_RELEVANCE"]
-        return PARAMS["ENCODED_RELEVANCE"] if code_order(g) != "none" else 1.0
-    if GW.is_given(GW.classify_cached(tuple(glyphs), 2, as_set)):
+        if GW.classify_cached(g, 3):              # any given relation, dress included (stochastic-5 audit, P9: as the
+            return PARAMS["GIVEN_RELEVANCE"]      # view; Joseph: "all the different encodings ... 'given'")
+        return PARAMS["ENCODED_RELEVANCE"] if encoded and code_order(g) != "none" else 1.0
+    if GW.classify_cached(tuple(glyphs), 2, as_set):
         return PARAMS["GIVEN_RELEVANCE"]
-    if not as_set and len(glyphs) >= 3 and code_order(tuple(glyphs)) != "none":   # stochastic-5: an encoded order
+    if encoded and not as_set and len(glyphs) >= 3 and code_order(tuple(glyphs)) != "none":   # an encoded order
         return PARAMS["ENCODED_RELEVANCE"]
     return 1.0
 
@@ -509,7 +515,7 @@ class Plan:
         ctx = list(ctx)
         distinct = variant == "reflection" or len(set(ctx)) == len(ctx)
         lo, hi = {"cohere": (3, PR.MAX_RUN), "order": (4, PR.MAX_ORDER), "names": (4, PR.MAX_ORDER),
-                  "pick": (2, PR.MAX_RUN)}.get(kind, (2, MAXK))
+                  "pick": (2, PR.MAX_RUN), "insert": (3, PR.MAX_RUN), "remove": (3, PR.MAX_RUN)}.get(kind, (2, MAXK))
         if not (lo <= len(ctx) <= hi) or not distinct or not all(PR.is_glyph(x) for x in ctx):
             return False
         if kind == "triad" and len(ctx) != 3:
@@ -781,9 +787,10 @@ def cohere_cands(T, Tr, pend, seqs, written_seqs, seeds, rid, recs):
 def seq_rel(Tr, g):
     """relevance of a run from its recognition AS A SEQUENCE (stochastic-5): the S-curve on how far its order beats its
     own glyphs shuffled (tree.as_sequence's difference, the study's standard); UNRANKED_RELEVANCE where its shuffles were
-    never asked. It replaces the raw "called coherent" share, which a set coherent in any order scored high on."""
-    d, _, _ = Tr.as_sequence(list(g))
-    return PARAMS["UNRANKED_RELEVANCE"] if d is None else scurve(max(d, 0.0))
+    never asked. It replaces the raw "called coherent" share, which a set coherent in any order scored high on.
+    (Revised after the stochastic-5 audit, P5: the 90% lower bound, and the curve at 0 for unmeasured runs.)"""
+    d, sd, _ = Tr.as_sequence(list(g))           # the lower bound, the study's standard (as rel_of); a run never compared
+    return scurve(0.0) if d is None else scurve(max(d - 1.2816 * sd, 0.0))   # with its shuffles: the curve at 0 (audit P5)
 
 def fill_cands(kind, T, Tr, pend, rid):
     """insert / remove (Joseph, 2026-10-06): every run asked whole, by its recognition as a sequence, each asked beside
@@ -793,6 +800,8 @@ def fill_cands(kind, T, Tr, pend, rid):
         key = tuple(min(list(run), list(run)[::-1]))
         if len(key) < 3 or len(set(key)) != len(key) or len(key) > PR.MAX_RUN or key in C.best:
             continue
+        if CANARY & set(key):                     # stochastic-5 audit, P8: an insertion beside a canary glyph is the
+            continue                              # sealed discriminator in another form; off until Joseph rules
         fc = T.fills.get(kind, {}).get(key, {})
         cnt = {f: (c.get("found", 0), sum(c.values())) for f, c in fc.items()}
         w = seq_rel(Tr, key) * info_fams(cnt, pend.get(kind, key)) * given_factor(key)
@@ -861,7 +870,7 @@ def choose_cands(T, Tr, pend, seqs, seeds, rid):
         fc = Tr.choose.get((ctx, pair), {})
         cnt = blind({f: (c.get(x, 0), sum(c.values())) for f, c in fc.items()}, ctx + (x, ch))
         w = rel * info_fams(cnt, pend.get("choose", (ctx, pair)))
-        C.put((ctx, pair), w * given_factor(tuple(ctx) + (x,), served=claim), [Q("choose", ctx, (x, ch), probe={"chart": ch, "contested": con}, why="choose", **{"from": how})], claim)
+        C.put((ctx, pair), w * given_factor(tuple(ctx) + (x,), served=claim, encoded=False), [Q("choose", ctx, (x, ch), probe={"chart": ch, "contested": con}, why="choose", **{"from": how})], claim)
     def adjacent(x, ctx):
         return abs(ord(x) - ord(ctx[-1])) == 1
     for store in (T.picks, T.nodes):
@@ -933,7 +942,7 @@ def set_cands(kind, T, pend, counts, seqs, seeds, rid, extra=()):
             cnt = counts.get(key, {})
             w = rel * info_fams(blind(cnt, h) if kind == "names" else cnt, pend.get(kind, key))
             if not str(how).startswith("validation"):          # validation sets are given orders by design
-                w *= given_factor(h, as_set=True, served=claim if ordered else None)   # a set's claim is a run only
+                w *= given_factor(h, as_set=True, served=claim if ordered else None, encoded=(kind != "names"))   # a set's claim is a run only
                                                                      # when it came from one (check of stochastic-4, N2)
             C.put(key, w, [Q(kind, h, why=kind, **{"from": how})], claim)
     for g, how, rel in extra:
@@ -1199,7 +1208,7 @@ def plan(rid, recs, seeds, budget):
     for x in sorted(json.dumps(x, sort_keys=True, ensure_ascii=False) for x in seeds):
         h.update(x.encode()); h.update(b"\n")
     stats = {"round": rid, "protocol": PR.PROTOCOL, "planner": "stochastic-5",
-             "givens": {"givens_json": _sha(ROOT / "data" / "unicode" / "givens.json"), "given_walk_py": _sha(ROOT / "catalog" / "given_walk.py")}, "questions": len(P.qs), "budget": budget,
+             "givens": {"givens_json": _sha(ROOT / "data" / "unicode" / "givens.json"), "given_walk_py": _sha(ROOT / "catalog" / "given_walk.py"), "code_order_py": _sha(ROOT / "catalog" / "code_order.py")}, "questions": len(P.qs), "budget": budget,
              "size_scale": round(scale, 4), "wanted": want, "drawn": got, "candidates": pool, "claims": claims,
              "active_families": active_by, "paused_minds": sorted(paused),
              "answers_read": {"records": len(recs), "seeds": len(seeds), "sha256": h.hexdigest()},

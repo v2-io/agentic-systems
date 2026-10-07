@@ -108,6 +108,15 @@ def classify(glyphs, min_len=3):
                 ii = sorted(i for g, i in h if g == gid)
                 idx.append(ii[0])
             cands[gid] = idx
+    if not cands and len(glyphs) >= 3 and all(v is not None for v in vals):
+        # numbers whose dress changes partway (⓿❶…❿⓫…⓴: Unicode names 1-10 and 11-20 differently): the number line in any
+        # mix of dresses (Joseph: "all the different encodings of essentially the same alphabet and digits ... given").
+        # A relation, never a single-dress given walk.
+        d = [b - a for a, b in zip(vals, vals[1:])]
+        if all(abs(x - d[0]) < 1e-12 for x in d) and d[0] != 0:
+            gid = min({g for h, _ in located for g, _ in h if givens[g]["kind"] == "number"}, key=lambda g: (-len(givens[g]["positions"]), g))
+            return dict(kind="window" if abs(d[0]) == 1 else "stride", given=gid, label="numbers, mixed dresses",
+                        start=None, step=d[0], n=len(givens[gid]["positions"]), dresses=sorted(set(dresses)) + (["(mixed)"] if len(set(dresses)) == 1 else []))
     best = None
     if len(glyphs) == 2:
         cands = {g: i for g, i in cands.items() if abs(i[1] - i[0]) == 1}

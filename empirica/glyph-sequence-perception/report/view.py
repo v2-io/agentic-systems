@@ -139,7 +139,13 @@ def main():
          "| | runs |", "|---|---|", f"| recognised as sequences | {len(rec):,} |"]
     for k, title, _ in REASONS:
         L.append(f"| {title.lower()} | {len(by_reason.get(k, [])):,} |")
+    tested = [r for r in rows if r["paired"] and r["paired"].get("lb") is not None and not r["given_kind"]
+              and (r["code_order"] or "none") == "none"]
+    failed = sum(1 for r in tested if not r["recognised"])
+    null_rate = 0.066                                # the paired test's pass rate under no real order, simulated at the
+    chance = null_rate * failed / (1 - null_rate)    # runs' own counts (audits/planner-stochastic-5-2026-10-06.md, P6)
     L += [f"| **perceived orders** | **{len(perceived):,}** |", "",
+          f"*About {chance:.0f} of these {len(perceived):,} are expected by chance:* the test passes about {null_rate:.1%} of runs with no real order (simulated at the runs' own answer counts; stochastic-5 audit, P6), and of the {len(tested):,} runs tested here {failed:,} failed. If most of those are runs with no real order, about {chance:.0f} such runs passed. Runs with few answers (`1/1 vs 0/1`) are the likeliest; the table puts them last.", "",
           "*Columns. **bytes**: the mean UTF-8 length of the run's glyphs (1 = ASCII … 4 = astral planes). **own vs its shuffles**: \"yes\"/answers for the run, then for its own glyphs shuffled. **order ≥**: the 90% lower bound of the difference (Jeffreys means). **R**: the catalog's recognition strength against pooled controls ± sd, and **BF** its Bayes factor. **yes/n**: per family. **weakest**: the weakest link state on the run (CATALOG §8: 1 evidence at the link's full context … 5 none). **splits**: links where families' most named continuations differ (firm: certainty ≥ 0.9). **BEST**: BEST's verdict on the same run.*", "",
           f"## Perceived orders ({len(perceived):,})", "", "*Ordered by **order ≥**, then length.*", ""]
     table(L, perceived, whole)

@@ -508,6 +508,12 @@ def _insertions(short, long):
         out.append({"after": i - 1, "glyphs": pending})
     for x in out:                                     # inside the run, or at an end (an extension: the continue
         x["where"] = "start" if x["after"] < 0 else "end" if x["after"] >= len(short) - 1 else "inside"   # question's job)
+        if x["where"] == "inside":                    # a marker (stochastic-5 audit, P7): does it fill the code-point gap?
+            a, b = ord(short[x["after"]]), ord(short[x["after"] + 1])
+            cps = [ord(c) for c in x["glyphs"]]
+            gap = list(range(a + 1, b)) if a < b else list(range(a - 1, b, -1))
+            x["fill"] = ("chart-gap" if cps == gap else
+                         "within-span" if all(min(a, b) < c < max(a, b) for c in cps) else "outside")
     return out
 
 def _records(sheet, ledger_rows, mind, family, judge, questions, variant):
