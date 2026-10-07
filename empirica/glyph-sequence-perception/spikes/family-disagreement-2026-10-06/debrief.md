@@ -1,15 +1,15 @@
 # Debrief for Joseph
 
-*The spike agent (Claude Opus 5.5), 2026-10-06 ~21:00 MDT, after three independent verifications and two pre-registered tests.*
+*The spike agent (Claude Opus 5.5), 2026-10-06 ~21:35 MDT, after four independent verifications and two pre-registered tests.*
 
-Joseph, here's where the family question stands, after three independent checks took my earlier answers apart and rebuilt them.
+Joseph, here is where the family question has landed, after four independent checks.
 
-When the models commit to a next glyph, they mostly pick the same one, across families as much as within. Much of that is everyone walking the Unicode chart, but even away from the chart they agree about nine times in ten.
+On whether a run is a sequence, judged whole, Claude and Grok don't disagree, on the evidence so far: once you allow that Sonnet is the strictest and sharpest judge, nothing family-specific is left. Gemini shows small departures both ways, too thin to name runs yet. Per run, it can't be said which sequences are model-sensitive in recognition until we ask each family the same runs two or three times.
 
-What best predicts whether a model continues a run isn't the model at all. It's what the run looks like: whether it's a straight walk through the code chart, how many Unicode blocks it crosses, how long it is. That's shared across all of them. The clearest family difference sits right there: Opus and Sonnet keep walking the chart much more readily than Grok or Gemini do. Beyond that, each model has a small lean of its own on particular Unicode blocks, mostly Grok's and Haiku-without-thinking's. It's real, but about a sixth of what I first reported. That lean is the honest version of your per-sequence parameter, with the caveat that it's measured per block, not per sequence yet.
+Where they do disagree is on continuing a run, and it comes down almost entirely to one habit: whether to keep walking the Unicode chart when the run follows no real order, no alphabet, no numbers. Sonnet and Opus keep going; Grok and Gemini Flash stop. The flat splits, Grok's "own lean on a block", and "Claude walks the chart" were all that one habit seen from different sides. By your own method a chart walk isn't evidence of a sequence, and a "none" only marks an end, so this is about chart-following and where an end gets called, not about which sequences the models perceive.
 
-The re-asks settled one thing: where Sonnet always continues and Grok always stops, Sonnet's side is settled. Some of what looked like Sonnet being "steadier than any model allows" was my own modelling choice, and fixing it brought Sonnet's checks into line.
+The clearest perceptual family difference is still `▁`: both Gemini models refuse to put it on the block ramp.
 
-Two things I'd said shift answers don't, as far as can be shown. Putting pieces of the same sequence on one sheet looked like it made models continue more, but within the same question it makes no detectable difference; the planner simply asks strong sequences more often. Re-asking and seeds change which questions get asked, not the answers.
+Two corrections to what I told you earlier: the models' own block-by-block lean is about 0.6 of what I first reported, not a sixth; and the sheet effect I described, from showing pieces of one sequence on the same sheet, doesn't show up within the same question. Mostly the planner just asks strong sequences more often.
 
-The only clearly family-level effects are `▁` for Gemini, and the chart-walking difference above. No model I've built yet passes every consistency check; the one left over is that Grok agrees with both Gemini models more than any model allows.
+So for the catalog: a model-sensitive-vs-agnostic number for found sequences belongs to recognition, and it needs within-family re-asks before it can be measured; the chart-walking difference belongs with the catalog's chart measures.

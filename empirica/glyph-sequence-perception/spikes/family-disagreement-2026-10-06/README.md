@@ -2,7 +2,7 @@
 
 **The question.** Where do the model families agree about which runs are sequences, and where don't they? Which sequences are model-sensitive, and which are (at least among frontier families) model-agnostic? And what does the disagreement rest on? Asked by Joseph before any planner term was built on disagreement: *"look at the data, and then we'll probably need to have a model-sensitive vs agnostic finding / parameter on found sequences, or possibly something else depending on what the data is actually showing, if anything"*.
 
-**What happened.** Disagreement between families turned out to be mostly about whether to commit, at thresholds that belong to a mind and a question kind, not about what the sequence is. Frontier minds that commit agree on content 93–99% of the time. The family-shaped effects are few and nameable. See `FINDINGS.md`.
+**What happened.** Disagreement between families turned out to be mostly about whether to commit, at thresholds that belong to a mind and a question kind, not about what the sequence is. Frontier minds that commit agree on content 94–99% (0.94–0.99) of the time. The family-shaped effects are few and nameable. See `FINDINGS.md`.
 
 **Where everything is:**
 - `FINDINGS.md`: the findings;
@@ -58,3 +58,11 @@ The clearest family difference is chart-walking: Opus and Sonnet keep walking th
 - **The Abbott-to-logit gain.** Its ~640 nats are almost all earned on the shuffled controls (596 of 635). The verifier recommends the run-against-its-own-shuffles contrast, which catalog build 7 now uses.
 
 Sent to the spike agent for a closing pass.
+
+**Closed** (`strengthening-4.md`, about 21:35; the closing pass). In short:
+
+- **Recognition.** Judged whole, Claude and Grok don't disagree about which runs are sequences beyond each mind's strictness and sharpness. Which runs are model-sensitive in recognition can't be read per run until cohere is re-asked within families.
+- **Continuation.** The family difference is chart-walking where no given order exists: Sonnet and Opus keep walking; Grok and Gemini Flash stop.
+- **Perception.** The clearest perceptual family effect is `▁` for Gemini.
+
+FINDINGS, plan and debrief were rewritten by replacement (landed unchanged). Open threads are listed in the plan (item 7).

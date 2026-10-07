@@ -9,9 +9,9 @@
    - others' sequence rate beyond the covariates: +577 / +653;
    - **the mind's own sequence rate beyond both: +884 / +978**, positive in all ten folds.
 
-   That matches the verifier's +894 from a different frame. The mind-specific per-block lean is real, about a sixth of what strengthening 2 implied once the context's own look is accounted for. For scale, it is about 0.01 nats per answer.
+   That matches the verifier's +894 from a different frame. The mind-specific per-block lean is real, about 0.6 of what strengthening 2 reported for it (+1,471 / +1,586) once the context's own look is accounted for; the shared part shrinks far more. For scale, it is about 0.01 nats per answer.
 2. **The sheet-mate effect isn't demonstrated** [measured]. Within the same context and the same mind, answered both with and without same-sequence sheet-mates (554 pairs), the stop share differs by +0.008 (95% −0.012 to +0.027). With the verifier's finding that at least half of the −0.70 logit was selection, no format effect is shown. Most of the paired contexts are near-certain, so the test has little power against a modest logit effect.
-3. **The best model now** (on the wide grid of §4a) fits rows (one per context and round) with each row's sequence features computed from earlier rounds only, so it is fitted with the features it predicts with. It adds glyph covariates per mind, the composition-free others' rate, the own rate, a sparse per-(context, mind) interaction and a weak ridge prior. Its strict prequential log score is **−0.4332 per answer**, against −0.4485 for covariates alone, −0.5211 for strengthening 2's block-set model and −0.5731 for `2mf`. **It is still not calibrated on every check** (10 of 38 outside their bands on the wide grid, 16 on the narrow one); §4 and §4a say which.
+3. **The best model now** (on the wide grid of §4a) fits rows (one per context and round) with each row's sequence features computed from earlier rounds only, so it is fitted with the features it predicts with. It adds glyph covariates per mind, the composition-free others' rate, the own rate, a sparse per-(context, mind) interaction and a weak ridge prior. Its prequential log score (each context's posterior and features from earlier rounds; the global parameters fitted on all answers, so slightly optimistic, as for every model compared) is **−0.4332 per answer**, against −0.4485 for covariates alone, −0.5211 for strengthening 2's block-set model and −0.5731 for `2mf`. **It is still not calibrated on every check** (10 of 38 outside their bands on the wide grid, 16 on the narrow one); §4 and §4a say which.
 4. **p002, late** [measured]:
    - this model scores −53.84 on the wide grid (−56.60 on the narrow one); the covariate-only model −59.57;
    - the verifier's naive baseline scores −56.24, and the pre-registered models −61.73 (block-set), −62.65 (`irtu`) and −75.18 (`2mf`).
@@ -62,7 +62,7 @@ Steps in nats (by item / by block): covariates +5,364 / +5,389, of which per-min
 
 Strengthening 2's feature models were fitted with sequence features from all rounds and scored with features from earlier rounds only. That mismatch made the fits over-rely on the features (seen in strengthening 2's own same-round pair checks, over-predicted almost everywhere). `spxr.py` fits on rows (one per context and round), with each row's features from earlier rounds only (`lnb_prefix.py`, composition-free), the per-context shared position and sparse interaction, and a ridge prior $N(0, 3^2)$ on every per-mind coefficient. The ridge keeps Gemini Pro finite: without it, its slope reached 17.6 and its predictions became NaN under separation.
 
-| | strict prequential log score per answer | checks outside band (of 38) | p001 | p002 |
+| | prequential log score per answer (item posterior and features from earlier rounds; global parameters in-sample) | checks outside band (of 38) | p001 | p002 |
 |---|---|---|---|---|
 | `2mf` (strengthening 2) | −0.5731 | 11 (of fewer checks) | −37.08 | −75.18 |
 | `irtu` | −0.5727 | 6 | **−31.80** | −62.65 |
@@ -76,7 +76,7 @@ Strengthening 2's feature models were fitted with sequence features from all rou
 
 ## 4. What still fails, and the wide-grid test
 
-The best model's remaining misfits (strict prequential, 16 of 38):
+The best model's remaining misfits (prequential checks, 16 of 38):
 
 - **Sonnet is more self-consistent than modelled**: flips 40 against 64.9 predicted; flat-type flips 33 against 47.3; repeat stops 34 against 55.4.
 - **Sonnet agrees with every partner more than modelled** in same-round pairs: Opus 425 against 502, Grok 3,027 against 3,214, Haiku without thinking 5,247 against 5,446.
@@ -88,7 +88,7 @@ Every Sonnet misfit points the same way: Sonnet is more deterministic than the m
 
 ### 4a. The wide grid (`SPX_GRID=wide run_spxr.py cov_oth_own`)
 
-The grid was the obstacle for Sonnet. On $[-10, 10]$ the strict prequential log score is unchanged (−0.4332 per answer), but calibration changes where it should:
+The grid was the obstacle for Sonnet. On $[-10, 10]$ the prequential log score is unchanged (−0.4332 per answer), but calibration changes where it should:
 
 - **Every same-round pair involving Sonnet falls inside its band:** Opus 425 / 436.8, Grok 3,027 / 3,009.6, Haiku without thinking 5,247 / 5,294.9, Gemini Flash 487 / 484.5.
 - **Sonnet's repeats:** stops 34 / 46.0 [34–58] and flat-type flips 33 / 40.7 [31–51] fall inside their bands; overall flips 40 / 52.5 [41–65] are just outside.
