@@ -40,6 +40,12 @@ The numbers are in PARAMS, BASE and BRANCH_*, all recorded in each round's plan.
 they say otherwise; explore()'s own soft numbers (the top 200 sequences, rank 0.9, redraw one in two, thirds) are not.
 Planner "stochastic-2" (2026-10-06) follows a de novo audit of "stochastic-1" (audits/planner-stochastic-2026-10-06.md);
 "stochastic-3" follows the auditor's check of stochastic-2 (audits/planner-stochastic-2-check-2026-10-06.md).
+"stochastic-4" (2026-10-06) adds GIVENS: a question about a walk over a given -- an order that exists before any mind
+answers, an alphabet or a number line in some dress (catalog/given_walk.py, data/unicode/givens.json, CATALOG-GIVEN.md)
+-- has its relevance multiplied by GIVEN_RELEVANCE (Joseph: "we'll focus on probing things that aren't given"). Never
+zero. Applied to the run or context a question is about (a link: its context and candidate; a set: as a set); explore
+keeps a fresh pair that is one step along a given with probability GIVEN_RELEVANCE. Controls are untouched, and so are
+the name-only question's validation sets, which are given orders by design.
 
 STREAMS (each a kind of work; the sources are where candidates come from, never evidence):
   explore         2-glyph contexts never asked: seed bumps, fresh glyphs (printable ASCII 4 : 2-byte 3 : 3-byte 2 :
@@ -85,7 +91,9 @@ ROOT = HERE.parents[1]
 DATA = ROOT / "data"
 sys.path.insert(0, str(ROOT / "probe"))
 sys.path.insert(0, str(ROOT / "tree"))
+sys.path.insert(0, str(ROOT / "catalog"))
 import probe as PR                                          # noqa: E402
+import given_walk as GW                                     # noqa: E402  the givens (stochastic-4)
 import tree as TR                                           # noqa: E402
 
 FAMS = ("claude", "gemini", "grok")                         # the families the core roster answers with
@@ -115,6 +123,9 @@ PARAMS = {                                                   # every one chosen 
     "MAX_WINDOW_STEP": 0.5,        # windows of long runs overlap by half a window
     "PENDING_HORIZON": 12,         # rounds back in which unanswered sheets still count as answers on their way (about
                                    # 3 hours of rounds; the drains go newest first)
+    "GIVEN_RELEVANCE": 0.1,        # a question about a walk over a given (stochastic-4): its relevance times this. Joseph
+                                   # chose the direction ("focus on probing things that aren't given"); the size is
+                                   # chosen without evidence. About 9% of catalog records are given walks
     "EXPLORE_SHARE": 0.15,         # exploration's share of a round, before jitter (Joseph: "15% of our effort was always
                                    # 'hot'"; until 2026-10-06 a base of 105, 11% of the round)
 }
@@ -184,6 +195,10 @@ def scurve(v, mid=None, width=None, floor=None):
 
 def branch_weight(k, n):
     return scurve(k / n, BRANCH_MID, BRANCH_WIDTH, BRANCH_FLOOR)
+
+def given_factor(glyphs, as_set=False):
+    """GIVEN_RELEVANCE when the glyphs walk a given (pairs count as a window, rotation or dress step), else 1"""
+    return PARAMS["GIVEN_RELEVANCE"] if GW.classify_cached(tuple(glyphs), 2, as_set) else 1.0
 
 def weighted_order(items, weight, r):
     """a fated draw of every item without replacement, each next one with probability proportional to its weight
@@ -590,7 +605,7 @@ def continue_cands(T, Tr, pend, seqs):
             return
         if ctx not in memo:
             memo[ctx] = info_fams(counts_top(Tr.nodes.get(ctx, {})), pend.get("continue", ctx))
-        C.put(ctx, rel * memo[ctx], [Q("continue", ctx, why=why, **src)], claim, within)
+        C.put(ctx, rel * memo[ctx] * given_factor(ctx), [Q("continue", ctx, why=why, **src)], claim, within)
     for s in seqs:
         g, rel = s["glyphs"], rel_of(s)
         sq = "".join(g)
@@ -643,7 +658,7 @@ def inhibit_cands(T, Tr, pend, seqs, rid):
             ck = "near" if PR.R("control-kind", {"round": rid, "context": list(ctx), "x": x}).random() < 0.5 else "far"
             dec = PR.control_candidate(list(ctx), x, ck, rid)
             return [Q("inhibit", ctx, x, why=why, **src), Q("inhibit", ctx, dec, probe={"control": ck}, why="control", control=ck)]
-        C.put((ctx, x), w, unit, claim)
+        C.put((ctx, x), w * given_factor(tuple(ctx) + (x,)), unit, claim)
     for ctx, rows in T.reasoned.items():                          # the reasoned pass's candidates
         top = T.top(ctx)
         for x in dict.fromkeys(r["continuation"][0] for r in rows if r["continuation"]):
@@ -705,7 +720,7 @@ def cohere_cands(T, Tr, pend, seqs, written_seqs, seeds, rid, recs):
                     if ch:
                         u.append(Q("cohere", ch, probe={"control": "chart"}, why="control", control="chart", of="".join(shown)))
                 return u
-            C.put(key, rel * memo[key], unit)
+            C.put(key, rel * memo[key] * given_factor(key), unit)
     for s in seqs:
         put(s["glyphs"], rel_of(s), "walk")
     for s in written_seqs:
@@ -761,7 +776,7 @@ def lookalike_cands(T, Tr, recs, rid):
         la, ct = g[:i] + [c] + g[i + 1:], g[:i] + [dd] + g[i + 1:]
         of = "".join(g)
         w = scurve(y / n) * info_fams(counts_yes(la_counts.get(of, {})))
-        C.put(of, w, [Q("cohere", la, probe={"control": "lookalike", "of": of, "pos": i, "orig": g[i]}, why="lookalike", control="lookalike", of=of),
+        C.put(of, w * given_factor(g), [Q("cohere", la, probe={"control": "lookalike", "of": of, "pos": i, "orig": g[i]}, why="lookalike", control="lookalike", of=of),
                       Q("cohere", ct, probe={"control": "lookalike-ctl", "of": of, "pos": i, "orig": g[i]}, why="lookalike", control="lookalike-ctl", of=of)])
     return C
 
@@ -779,7 +794,7 @@ def choose_cands(T, Tr, pend, seqs, seeds, rid):
         fc = Tr.choose.get((ctx, pair), {})
         cnt = blind({f: (c.get(x, 0), sum(c.values())) for f, c in fc.items()}, ctx + (x, ch))
         w = rel * info_fams(cnt, pend.get("choose", (ctx, pair)))
-        C.put((ctx, pair), w, [Q("choose", ctx, (x, ch), probe={"chart": ch, "contested": con}, why="choose", **{"from": how})], claim)
+        C.put((ctx, pair), w * given_factor(tuple(ctx) + (x,)), [Q("choose", ctx, (x, ch), probe={"chart": ch, "contested": con}, why="choose", **{"from": how})], claim)
     def adjacent(x, ctx):
         return abs(ord(x) - ord(ctx[-1])) == 1
     for store in (T.picks, T.nodes):
@@ -850,6 +865,8 @@ def set_cands(kind, T, pend, counts, seqs, seeds, rid, extra=()):
             key = frozenset(h)
             cnt = counts.get(key, {})
             w = rel * info_fams(blind(cnt, h) if kind == "names" else cnt, pend.get(kind, key))
+            if not str(how).startswith("validation"):          # validation sets are given orders by design
+                w *= given_factor(h, as_set=True)
             C.put(key, w, [Q(kind, h, why=kind, **{"from": how})], claim)
     for g, how, rel in extra:
         put(g, rel, how)
@@ -875,7 +892,7 @@ def triad_cands(T, pend, seqs):
         pooled = collections.Counter(a for c in fam.values() for a, n in c.items() for _ in range(n))
         top = pooled.most_common(1)[0][0] if pooled else None
         cnt = {f: (c.get(top, 0), sum(c.values())) for f, c in fam.items()}
-        C.put(key, rel * info_fams(cnt, pend.get("triad", key)), [Q("triad", list(t), why="triad", **{"from": how}, **src)], claim)
+        C.put(key, rel * info_fams(cnt, pend.get("triad", key)) * given_factor(key, as_set=True), [Q("triad", list(t), why="triad", **{"from": how}, **src)], claim)
     for s in seqs:
         g = s["glyphs"]
         for i in range(len(g) - 2):
@@ -905,7 +922,7 @@ def pick_cands(T, pend, seqs, seeds, rid):
         if not runlike(ctx, 2):
             return
         w = rel * info_fams(counts_top(T.picks.get(tuple(ctx), {})), pend.get("pick", tuple(ctx)))
-        C.put(tuple(ctx), w, [Q("pick", ctx, probe={"sample": k}, why="pick", **{"from": how}) for k in range(PR.SAMPLES)], claim)
+        C.put(tuple(ctx), w * given_factor(ctx), [Q("pick", ctx, probe={"sample": k}, why="pick", **{"from": how}) for k in range(PR.SAMPLES)], claim)
     for g, _ in seed_list(seeds, ORDERED_SEEDS, rid, "pick-seed-order"):
         rel = PARAMS["STEWARD_RELEVANCE"] if tuple(g) in stew else PARAMS["UNRANKED_RELEVANCE"]
         cl = tuple(min(g, g[::-1]))                                  # a sequence's two directions are one claim
@@ -947,11 +964,11 @@ def reasoned_cands(T, pend, seqs, rid):
                 ctx = tuple(run[-k:])
                 n = len(T.reasoned.get(ctx, []))
                 w = rel_of(s) * info(0, n + sum(pend.get("reasoned", ctx).values()))
-                C.put(ctx, w, [Q("continue", ctx, variant="reasoned", why="reasoned", seq="".join(g), side=side)])
+                C.put(ctx, w * given_factor(ctx), [Q("continue", ctx, variant="reasoned", why="reasoned", seq="".join(g), side=side)])
     for ctx, rows in T.reasoned.items():                        # every context reasoned before, so none is out of reach
         if ctx not in C.best and 2 <= len(ctx) <= MAXK:
             w = PARAMS["OFF_SEQUENCE_RELEVANCE"] * info(0, len(rows) + sum(pend.get("reasoned", ctx).values()))
-            C.put(ctx, w, [Q("continue", ctx, variant="reasoned", why="reasoned", **{"from": "asked"})])
+            C.put(ctx, w * given_factor(ctx), [Q("continue", ctx, variant="reasoned", why="reasoned", **{"from": "asked"})])
     return C
 
 def reflection_cands(T, pend, seqs, rid):
@@ -970,7 +987,7 @@ def reflection_cands(T, pend, seqs, rid):
                     rows = T.reflections.get(ctx, [])
                     kk = sum(1 for x in rows if x["continuation"][:1] == [g[i - 2]])
                     w = rel_of(s) * info(kk, len(rows) + sum(pend.get("reflection", ctx).values()))
-                    C.put(ctx, w, [Q("continue", ctx, variant="reflection", why="reflection", seq="".join(g), mirror=g[i - 2])], cl)
+                    C.put(ctx, w * given_factor(ctx), [Q("continue", ctx, variant="reflection", why="reflection", seq="".join(g), mirror=g[i - 2])], cl)
     return C
 
 # ------------------------------------------------------------------ exploration (fresh contexts)
@@ -1031,6 +1048,8 @@ def explore(P, T, seqs, seeds, n, rid):
             ctx = [a, b]
         if tuple(ctx) in T.real:
             continue                                     # exploration is of contexts no mind has been shown
+        if GW.classify_cached(tuple(ctx), 2) and r.random() >= PARAMS["GIVEN_RELEVANCE"]:
+            continue                                     # one step along a given: kept at GIVEN_RELEVANCE (stochastic-4)
         if P.add("continue", ctx, **how):
             added += 1
     return added
@@ -1108,7 +1127,7 @@ def plan(rid, recs, seeds, budget):
         h.update(line.encode()); h.update(b"\n")
     for x in sorted(json.dumps(x, sort_keys=True, ensure_ascii=False) for x in seeds):
         h.update(x.encode()); h.update(b"\n")
-    stats = {"round": rid, "protocol": PR.PROTOCOL, "planner": "stochastic-3", "questions": len(P.qs), "budget": budget,
+    stats = {"round": rid, "protocol": PR.PROTOCOL, "planner": "stochastic-4", "questions": len(P.qs), "budget": budget,
              "size_scale": round(scale, 4), "wanted": want, "drawn": got, "candidates": pool, "claims": claims,
              "active_families": active_by, "paused_minds": sorted(paused),
              "answers_read": {"records": len(recs), "seeds": len(seeds), "sha256": h.hexdigest()},

@@ -50,10 +50,11 @@ def _locate(ch, givens, dress, pos):
         return pos.get(base, []), dn
     return [], None
 
-def classify(glyphs):
-    """-> None, or {"kind", "given", "label", "start", "step", "n", "dresses"}"""
+def classify(glyphs, min_len=3):
+    """-> None, or {"kind", "given", "label", "start", "step", "n", "dresses"}. With min_len=2 a pair counts only as a
+    window, rotation or one position in two dresses: two glyphs fix any stride, so a stride needs three."""
     glyphs = list(glyphs)
-    if len(glyphs) < 3:
+    if len(glyphs) < max(2, min_len):
         return None
     givens, dress, pos, _ = load()
     located = [_locate(ch, givens, dress, pos) for ch in glyphs]
@@ -88,7 +89,10 @@ def classify(glyphs):
                 idx.append(ii[0])
             cands[gid] = idx
     best = None
-    if cands and all(v is not None for v in vals):  # numbers: a constant step in value is the given's n-step (⅛ ¼ ⅜ ½)
+    if len(glyphs) == 2:
+        cands = {g: i for g, i in cands.items() if _kind(i, len(givens[g]["positions"]), True) and
+                 _kind(i, len(givens[g]["positions"]), True)[0] in ("window", "rotated", "dress")}
+    if cands and len(glyphs) > 2 and all(v is not None for v in vals):  # numbers: a constant step in value is the given's n-step (⅛ ¼ ⅜ ½)
         d = [b - a for a, b in zip(vals, vals[1:])]
         if all(abs(x - d[0]) < 1e-12 for x in d) and d[0] != 0 and abs(d[0]) != 1:
             gid = min(cands, key=lambda g: (-len(givens[g]["positions"]), g))
@@ -103,6 +107,23 @@ def classify(glyphs):
         if best is None or key < best[0]:
             best = (key, dict(kind=k[0], given=gid, label=label(givens[gid]), start=idx[0], step=k[1], n=n, dresses=dresses))
     return best[1] if best else None
+
+@functools.lru_cache(maxsize=None)
+def classify_cached(glyphs, min_len=3, as_set=False):
+    """classify() for hashable input, cached (the planner asks about the same contexts many times). as_set: the
+    glyphs are an unordered set (a triad, an order or names set): is there an order of them that walks a given?
+    Tried in the order of each glyph's position in its given (numbers by value)."""
+    gl = list(glyphs)
+    if not as_set:
+        return classify(gl, min_len)
+    givens, dress, pos, _ = load()
+    def key(ch):
+        v = U.numeric(ch, None)
+        if v is not None:
+            return (0, v)
+        h, _ = _locate(ch, givens, dress, pos)
+        return (1, min((i for _, i in h), default=10 ** 9))
+    return classify(sorted(gl, key=key), min_len)
 
 def _kind(idx, n, dressed):
     steps = [b - a for a, b in zip(idx, idx[1:])]
