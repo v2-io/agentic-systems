@@ -1,0 +1,12 @@
+L3 fitted; alpha (contig/other), slope: {'sonnet55': (np.float64(-1.9), np.float64(-2.12), np.float64(1.63)), 'opus55': (np.float64(-2.6), np.float64(-1.18), np.float64(2.87)), 'haiku45nt': (np.float64(0.98), np.float64(0.52), np.float64(0.76)), 'haiku45': (np.float64(-0.6), np.float64(-0.45), np.float64(1.36)), 'grok46': (np.float64(0.89), np.float64(0.86), np.float64(0.71)), 'gemini38flash': (np.float64(-0.51), np.float64(0.09), np.float64(0.95)), 'gemini31pro': (np.float64(-0.12), np.float64(-0.49), np.float64(0.47))}
+
+
+claude-grok pops ['real-contig']: runs 1064, sum T obs 161.7, sim 144.8 ± 14.7 (z +1.2; 99.9% 189.7)
+claude-grok pops ['real-other']: runs 1538, sum T obs 458.1, sim 472.1 ± 22.6 (z -0.6; 99.9% 540.4)
+claude-grok pops ['real-contig', 'real-other']: runs 2602, sum T obs 619.8, sim 615.8 ± 27.3 (z +0.1; 99.9% 705.5)
+claude-gemini pops ['real-contig']: runs 237, sum T obs 48.1, sim 38.9 ± 6.8 (z +1.4; 99.9% 63.2)
+claude-gemini pops ['real-other']: runs 426, sum T obs 187.0, sim 152.4 ± 12.8 (z +2.7; 99.9% 191.4)
+claude-gemini pops ['real-contig', 'real-other']: runs 663, sum T obs 235.1, sim 191.8 ± 14.3 (z +3.0; 99.9% 237.1)
+grok-gemini pops ['real-contig']: runs 148, sum T obs 11.4, sim 17.9 ± 4.8 (z -1.4; 99.9% 35.1)
+grok-gemini pops ['real-other']: runs 285, sum T obs 75.1, sim 92.6 ± 9.4 (z -1.9; 99.9% 124.5)
+grok-gemini pops ['real-contig', 'real-other']: runs 433, sum T obs 86.5, sim 111.0 ± 10.8 (z -2.3; 99.9% 145.1)

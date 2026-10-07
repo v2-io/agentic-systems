@@ -1,0 +1,19 @@
+contexts by class: Counter({'cn': 9462, 'mono': 6655, 'cg': 4381, 'oth': 1709})
+sonnet55      vs grok46        cg n= 3456 sonne 0.056 grok4 0.091 | cn n= 7325 sonne 0.088 grok4 0.254 | mono n= 5088 sonne 0.539 grok4 0.627 | oth n= 1468 sonne 0.346 grok4 0.373
+      logit gap (grok4 minus sonne) cn +1.26, cg +0.52, mono +0.36, oth +0.12
+opus55        vs grok46        cg n=  784 opus5 0.078 grok4 0.096 | cn n= 1568 opus5 0.085 grok4 0.260 | mono n= 1083 opus5 0.506 grok4 0.610 | oth n=  307 opus5 0.306 grok4 0.345
+      logit gap (grok4 minus opus5) cn +1.33, cg +0.22, mono +0.42, oth +0.18
+sonnet55      vs gemini38flash cg n=  750 sonne 0.065 gemin 0.083 | cn n=  965 sonne 0.150 gemin 0.226 | mono n=  826 sonne 0.548 gemin 0.512 | oth n=  505 sonne 0.459 gemin 0.398
+      logit gap (gemin minus sonne) cn +0.50, cg +0.25, mono -0.15, oth -0.25
+opus55        vs gemini38flash cg n=  187 opus5 0.059 gemin 0.053 | cn n=  208 opus5 0.154 gemin 0.264 | mono n=  163 opus5 0.546 gemin 0.509 | oth n=   89 opus5 0.461 gemin 0.326
+      logit gap (gemin minus opus5) cn +0.67, cg -0.10, mono -0.15, oth -0.56
+sonnet55      vs haiku45nt     cg n= 3907 sonne 0.055 haiku 0.174 | cn n= 8612 sonne 0.085 haiku 0.317 | mono n= 6097 sonne 0.546 haiku 0.599 | oth n= 1643 sonne 0.324 haiku 0.329
+      logit gap (haiku minus sonne) cn +1.60, cg +1.30, mono +0.21, oth +0.02
+haiku45nt     vs grok46        cg n= 3170 haiku 0.178 grok4 0.091 | cn n= 7037 haiku 0.321 grok4 0.258 | mono n= 5014 haiku 0.588 grok4 0.626 | oth n= 1467 haiku 0.334 grok4 0.374
+      logit gap (grok4 minus haiku) cn -0.30, cg -0.76, mono +0.16, oth +0.17
+grok46        vs gemini38flash cg n=  748 grok4 0.086 gemin 0.083 | cn n=  959 grok4 0.250 gemin 0.224 | mono n=  823 grok4 0.614 gemin 0.510 | oth n=  504 grok4 0.486 gemin 0.397
+      logit gap (gemin minus grok4) cn -0.14, cg -0.03, mono -0.42, oth -0.36
+sonnet55      vs opus55        cg n=  931 sonne 0.060 opus5 0.073 | cn n= 1893 sonne 0.087 opus5 0.079 | mono n= 1318 sonne 0.539 opus5 0.515 | oth n=  345 sonne 0.307 opus5 0.293
+      logit gap (opus5 minus sonne) cn -0.10, cg +0.21, mono -0.09, oth -0.07
+haiku45       vs grok46        cg n=  982 haiku 0.077 grok4 0.056 | cn n= 1710 haiku 0.266 grok4 0.232 | mono n= 1113 haiku 0.644 grok4 0.632 | oth n=  315 haiku 0.489 grok4 0.352
+      logit gap (grok4 minus haiku) cn -0.18, cg -0.34, mono -0.05, oth -0.56

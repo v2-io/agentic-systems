@@ -1,0 +1,25 @@
+sonnet55 vs grok46:
+   cg: blocks 46, ctx 3454, S/E[S|perm]  4.02 (perm 99% 1.65)
+   cn: blocks 88, ctx 7279, S/E[S|perm] 12.62 (perm 99% 1.36)
+   mono: blocks 68, ctx 3287, S/E[S|perm]  2.66 (perm 99% 1.54)
+   oth: blocks 28, ctx 909, S/E[S|perm]  1.22 (perm 99% 1.68)
+sonnet55 vs haiku45nt:
+   cg: blocks 46, ctx 3902, S/E[S|perm]  5.35 (perm 99% 1.55)
+   cn: blocks 90, ctx 8569, S/E[S|perm]  4.36 (perm 99% 1.42)
+   mono: blocks 71, ctx 3843, S/E[S|perm]  2.98 (perm 99% 1.47)
+   oth: blocks 29, ctx 1042, S/E[S|perm]  2.71 (perm 99% 1.67)
+haiku45nt vs grok46:
+   cg: blocks 46, ctx 3168, S/E[S|perm]  3.70 (perm 99% 1.62)
+   cn: blocks 88, ctx 6993, S/E[S|perm]  8.94 (perm 99% 1.38)
+   mono: blocks 67, ctx 3246, S/E[S|perm]  2.48 (perm 99% 1.45)
+   oth: blocks 28, ctx 907, S/E[S|perm]  2.65 (perm 99% 1.75)
+sonnet55 vs gemini38flash:
+   cg: blocks 25, ctx 708, S/E[S|perm]  2.62 (perm 99% 2.60)
+   cn: blocks 46, ctx 894, S/E[S|perm]  2.33 (perm 99% 1.54)
+   mono: blocks 33, ctx 487, S/E[S|perm]  2.00 (perm 99% 1.64)
+   oth: blocks 17, ctx 245, S/E[S|perm]  2.11 (perm 99% 1.91)
+opus55 vs grok46:
+   cg: blocks 31, ctx 752, S/E[S|perm]  1.53 (perm 99% 1.92)
+   cn: blocks 64, ctx 1503, S/E[S|perm]  3.94 (perm 99% 1.38)
+   mono: blocks 39, ctx 676, S/E[S|perm]  2.02 (perm 99% 1.64)
+   oth: blocks 12, ctx 164, S/E[S|perm]  1.31 (perm 99% 2.15)

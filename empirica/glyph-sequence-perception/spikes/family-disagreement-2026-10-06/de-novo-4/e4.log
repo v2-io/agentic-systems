@@ -1,0 +1,28 @@
+
+L2
+  real-contig vs opus55        runs  212: sonnet no 11/212 pred 14.1 | opus55 no 12/212 pred 9.3
+  real-other  vs opus55        runs  182: sonnet no 49/185 pred 50.2 | opus55 no 16/182 pred 18.8
+  real-contig vs haiku45nt     runs  429: sonnet no 18/432 pred 21.1 | haiku45n no 6/431 pred 13.4
+  real-other  vs haiku45nt     runs  439: sonnet no 127/446 pred 111.0 | haiku45n no 40/446 pred 42.4
+  real-contig vs haiku45       runs  201: sonnet no 14/202 pred 13.1 | haiku45 no 9/201 pred 7.6
+  real-other  vs haiku45       runs  184: sonnet no 51/188 pred 52.0 | haiku45 no 19/184 pred 27.4
+  real-contig vs grok46        runs  395: sonnet no 18/397 pred 18.9 | grok46 no 11/398 pred 11.0
+  real-other  vs grok46        runs  389: sonnet no 114/397 pred 97.7 | grok46 no 28/397 pred 32.7
+  real-contig vs gemini38flash runs  163: sonnet no 7/164 pred 9.3 | gemini38 no 9/163 pred 6.6
+  real-other  vs gemini38flash runs  188: sonnet no 66/189 pred 49.9 | gemini38 no 23/188 pred 27.0
+  real-contig vs gemini31pro   runs   44: sonnet no 0/44 pred 2.3 | gemini31 no 6/44 pred 6.9
+  real-other  vs gemini31pro   runs   46: sonnet no 14/46 pred 10.7 | gemini31 no 8/46 pred 12.1
+
+L4
+  real-contig vs opus55        runs  212: sonnet no 11/212 pred 12.2 | opus55 no 12/212 pred 11.1
+  real-other  vs opus55        runs  182: sonnet no 49/185 pred 51.4 | opus55 no 16/182 pred 18.2
+  real-contig vs haiku45nt     runs  429: sonnet no 18/432 pred 16.6 | haiku45n no 6/431 pred 7.6
+  real-other  vs haiku45nt     runs  439: sonnet no 127/446 pred 115.9 | haiku45n no 40/446 pred 47.6
+  real-contig vs haiku45       runs  201: sonnet no 14/202 pred 11.6 | haiku45 no 9/201 pred 10.4
+  real-other  vs haiku45       runs  184: sonnet no 51/188 pred 53.2 | haiku45 no 19/184 pred 24.6
+  real-contig vs grok46        runs  395: sonnet no 18/397 pred 17.3 | grok46 no 11/398 pred 13.1
+  real-other  vs grok46        runs  389: sonnet no 114/397 pred 99.9 | grok46 no 28/397 pred 28.1
+  real-contig vs gemini38flash runs  163: sonnet no 7/164 pred 8.3 | gemini38 no 9/163 pred 7.0
+  real-other  vs gemini38flash runs  188: sonnet no 66/189 pred 51.0 | gemini38 no 23/188 pred 22.7
+  real-contig vs gemini31pro   runs   44: sonnet no 0/44 pred 2.0 | gemini31 no 6/44 pred 5.6
+  real-other  vs gemini31pro   runs   46: sonnet no 14/46 pred 11.1 | gemini31 no 8/46 pred 13.1

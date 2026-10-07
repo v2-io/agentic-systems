@@ -1,0 +1,68 @@
+L3 fitted; alpha (contig/other), slope: {'sonnet55': (np.float64(-1.9), np.float64(-2.12), np.float64(1.63)), 'opus55': (np.float64(-2.6), np.float64(-1.18), np.float64(2.87)), 'haiku45nt': (np.float64(0.98), np.float64(0.52), np.float64(0.76)), 'haiku45': (np.float64(-0.6), np.float64(-0.45), np.float64(1.36)), 'grok46': (np.float64(0.89), np.float64(0.86), np.float64(0.71)), 'gemini38flash': (np.float64(-0.51), np.float64(0.09), np.float64(0.95)), 'gemini31pro': (np.float64(-0.12), np.float64(-0.49), np.float64(0.47))}
+runs tested 133; p<0.01: 0 (expected ~1 if no interaction, fewer since posterior-predictive p is conservative); p<0.05: 1 (~7)
+  real-contig: tested 50, p<0.01 0, p<0.05 0
+  real-other: tested 83, p<0.01 0, p<0.05 1
+
+most family-sensitive runs (p, T, run, pop, yes/n per family):
+  p=0.0410 T= 3.34 🪨💨🌫🔥🪵                    real-other  claude 2/2 gemini 0/2 grok 1/1
+  p=0.0579 T= 2.40 •∣∥⫴                     real-other  claude 1/5 gemini 0/0 grok 0/2
+  p=0.0669 T= 1.82 ƧƽƄƆSƨ                   real-other  claude 2/3 gemini 0/2 grok 0/0
+  p=0.0679 T= 2.65 ⠀⠁⠨⠩⠥⠍⠦⠧⠟                real-other  claude 0/2 gemini 2/2 grok 0/0
+  p=0.0859 T= 2.04 ޙޢޥޠޛޚޣޟޘޝޜޤޞޡ           real-contig claude 0/3 gemini 0/0 grok 2/2
+  p=0.0999 T= 1.36 ΟΠΡΤΥΦΧΨΩ                real-other  claude 2/2 gemini 1/2 grok 0/0
+  p=0.1359 T= 2.85 𝝨𝝩𝝪𝝫𝝬𝝭𝝮𝝯                 real-contig claude 1/2 gemini 2/2 grok 0/1
+  p=0.1479 T= 1.38 ⅠⅬⅭⅮⅯ                    real-other  claude 3/3 gemini 1/2 grok 0/0
+  p=0.1648 T= 2.69 ⅖⅜⅗⅘⅚⅝⅞                  real-other  claude 1/2 gemini 2/2 grok 0/1
+  p=0.2028 T= 1.91 ⊓⊕⊗⊙⊛⊝⊟                  real-other  claude 2/3 gemini 0/2 grok 1/1
+  p=0.2038 T= 1.04 ↨↩↪↫↬↭↮↯↰↱↲↳↴↵↶↷         real-contig claude 2/2 gemini 1/2 grok 0/0
+  p=0.2208 T= 0.30 ↦↧↨↩↪↫↬↭↮↯↰↱↲↳↴↵↶↷       real-contig claude 2/2 gemini 1/2 grok 0/0
+  p=0.2298 T= 0.30 ⺄⺅⺆⺇⺈⺉⺊⺋⺌⺍⺎⺏⺐⺑           real-contig claude 2/2 gemini 1/2 grok 0/0
+  p=0.2308 T= 0.30 🏝🏞🏟🏠🏡🏢🏣🏤🏥🏦🏧🏨🏩🏪🏫🏬🏭🏮🏯      real-contig claude 2/2 gemini 1/2 grok 0/0
+  p=0.2627 T= 0.30 🏟🏠🏡🏢🏣🏤🏥🏦🏧🏨🏩🏪🏫🏬🏭🏮         real-contig claude 2/2 gemini 1/2 grok 0/0
+  p=0.2647 T= 0.36 ⎐⎑⎒⎓⎔⎕⎖⎗⎘⎙⎚              real-contig claude 2/2 gemini 1/2 grok 1/1
+  p=0.2677 T= 0.36 🅆🅇🅈🅉🅊🅋🅌🅍🅎🅏               real-contig claude 2/2 gemini 1/2 grok 1/1
+  p=0.2747 T= 1.84 ΔΖΗΙΛΝΟΡ                 real-other  claude 1/3 gemini 0/2 grok 1/1
+  p=0.2837 T= 1.86 ƧƽƄƆƨ                    real-other  claude 0/3 gemini 1/2 grok 1/1
+  p=0.2897 T= 0.83 𝖎𝖍𝖌𝖋𝖊𝖉𝖈𝖇𝖆𝖅𝖄𝖃𝖂𝖁𝖀𝖕𝖔𝖓𝖒𝖑𝖐𝖏   real-contig claude 1/4 gemini 0/0 grok 0/2
+  p=0.2947 T= 1.57 ⑶⑵⑴⓪⓿                    real-other  claude 0/2 gemini 1/2 grok 1/1
+  p=0.3147 T= 1.57 -0ⅠⅡⅢ                    real-other  claude 0/2 gemini 1/2 grok 1/1
+  p=0.3147 T= 1.10 ✦✶✴✹✺                    real-other  claude 1/2 gemini 2/2 grok 0/0
+  p=0.3157 T= 0.61 ○⭘◯                      real-other  claude 1/2 gemini 2/2 grok 0/0
+  p=0.3217 T= 1.57 ∘Oᵒₒo⊙                   real-other  claude 0/2 gemini 1/2 grok 1/1
+  p=0.3387 T= 1.62 𝘚𝘙𝘘𝘗𝘖𝘕𝘔𝘓𝘒𝘑𝘐𝘏𝘎𝘍𝘌𝘋𝘊𝘉𝘈𝘡     real-other  claude 1/3 gemini 2/2 grok 1/1
+  p=0.3387 T= 0.61 ⁎*∗★✦✧                   real-other  claude 1/2 gemini 2/2 grok 0/0
+  p=0.3427 T= 0.89 🍣🍥🍵🥠🥟🥢🥡                  real-other  claude 2/3 gemini 2/2 grok 0/0
+  p=0.3477 T= 0.69 ′|∫∮∯∰                   real-other  claude 2/3 gemini 2/2 grok 1/1
+  p=0.3556 T= 1.52 ⼀⼈⼭⾦⿓⽕                   real-other  claude 1/2 gemini 0/2 grok 0/1
+  p=0.3696 T= 1.52 ▌█▙▛▜▟                   real-other  claude 1/2 gemini 0/2 grok 0/1
+  p=0.3896 T= 1.52 😬😰😴😸😼🙀🙄🙈                 real-other  claude 1/2 gemini 0/2 grok 0/1
+  p=0.4116 T= 1.48 Ooᵒₒ⊙∘                   real-other  claude 1/2 gemini 0/2 grok 1/1
+  p=0.4186 T= 0.41 >→⇒⟹⟶                    real-other  claude 2/2 gemini 1/2 grok 0/0
+  p=0.4316 T= 0.47 :¦|⋮                     real-other  claude 3/3 gemini 1/2 grok 1/1
+  p=0.4336 T= 1.28 *★∗⁎✱                    real-other  claude 0/2 gemini 0/2 grok 1/1
+  p=0.4406 T= 0.47 ⁎✱∗*★                    real-other  claude 3/3 gemini 1/2 grok 1/1
+  p=0.4436 T= 1.03 HʜₕＨℋh                   real-other  claude 2/3 gemini 2/2 grok 1/1
+  p=0.4675 T= 0.48 ⊢□◇◯⊨                    real-other  claude 0/2 gemini 1/2 grok 0/0
+  p=0.4875 T= 1.28 oO∘ᵒₒ⊙                   real-other  claude 1/2 gemini 2/2 grok 1/1
+  p=0.4885 T= 1.28 █▉▊▋▌▍▎▏▕                real-other  claude 1/2 gemini 2/2 grok 1/1
+  p=0.4905 T= 1.28 ◌◉◎○●                    real-other  claude 1/2 gemini 2/2 grok 1/1
+  p=0.5105 T= 1.28 ⇒⇉⇶⭌                     real-other  claude 1/2 gemini 2/2 grok 1/1
+  p=0.5275 T= 0.50 ƵZzʒʓ                    real-other  claude 1/2 gemini 0/0 grok 2/2
+  p=0.5305 T= 1.28 ɡgɠɢ                     real-other  claude 1/2 gemini 2/2 grok 1/1
+  p=0.5554 T= 0.39 ◌◎◉○●                    real-other  claude 2/2 gemini 1/2 grok 1/1
+  p=0.6613 T= 0.36 Iɪiᵢ                     real-other  claude 2/3 gemini 0/0 grok 2/2
+  p=0.6633 T= 0.35 𝅘𝅗𝅝                      real-other  claude 1/2 gemini 0/0 grok 2/2
+  p=0.6893 T= 0.24 ◐◔◓◕◑                    real-other  claude 1/3 gemini 1/2 grok 0/0
+  p=0.7183 T= 0.23 ←↙↓↘→↗➡                  real-other  claude 4/5 gemini 0/0 grok 2/2
+  p=0.7752 T= 0.01 xẍẋ                      real-other  claude 1/2 gemini 1/2 grok 0/0
+  p=0.8312 T= 0.02 ☳☲☴☱☰☶☵☷                 real-contig claude 1/2 gemini 1/2 grok 0/0
+  p=0.8511 T= 0.18 ℤ𝕐𝕏𝕎𝕍𝕌𝕋𝕊ℝℚ𝜫              real-other  claude 2/3 gemini 1/2 grok 1/1
+  p=0.8781 T= 0.29 ⛈☁☔⛅☀🌙                   real-other  claude 1/2 gemini 1/2 grok 1/1
+  p=1.0000 T= 0.00 8⁸₈⑧⑻⒏❽➇➑⓼８🄉🯸𝟖𝟠𝟪𝟴𝟾       real-other  claude 5/5 gemini 0/0 grok 2/2
+  p=1.0000 T= 0.00 Aaᴀ                      real-other  claude 2/2 gemini 2/2 grok 1/1
+  p=1.0000 T= 0.00 V∨⌄⌣‿                    real-other  claude 3/3 gemini 2/2 grok 0/0
+  p=1.0000 T= 0.00 _-₋⁻¯                    real-other  claude 3/3 gemini 2/2 grok 0/0
+  p=1.0000 T= 0.00 dɖɗ                      real-other  claude 2/2 gemini 2/2 grok 0/0
+  p=1.0000 T= 0.00 ÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×         real-contig claude 2/2 gemini 2/2 grok 1/1
+
+odd family out among p<0.01 runs: {}

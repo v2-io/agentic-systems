@@ -1,0 +1,18 @@
+
+== own/others features from all other contexts in the block set (c7)
+  sonnet55       own beyond cov+oth    +18  by class: cg    -3 (n 4631)  cn    +5 (n 9561)  mono   +11 (n 6335)  oth    +6 (n 1738)
+  opus55         own beyond cov+oth     -3  by class: cg    -1 (n 945)  cn    -1 (n 1922)  mono    -1 (n 1327)  oth    +0 (n 353)
+  haiku45nt      own beyond cov+oth   +371  by class: cg  +110 (n 4270)  cn  +142 (n 9240)  mono  +129 (n 6251)  oth   -10 (n 1731)
+  haiku45        own beyond cov+oth    +28  by class: cg    +5 (n 1144)  cn   +14 (n 2074)  mono    +9 (n 1340)  oth    -1 (n 366)
+  grok46         own beyond cov+oth   +299  by class: cg    -8 (n 4243)  cn  +325 (n 8896)  mono   -17 (n 5768)  oth    -0 (n 1618)
+  gemini38flash  own beyond cov+oth    +57  by class: cg    +8 (n 750)  cn   +33 (n 967)  mono    +4 (n 829)  oth   +12 (n 512)
+  TOTAL cg +111  cn +517  mono +134  oth +7
+
+== own/others features from OTHER classes in the block set only
+  sonnet55       own beyond cov+oth     -8  by class: cg    +0 (n 4631)  cn    -5 (n 9561)  mono    +5 (n 6335)  oth    -8 (n 1738)
+  opus55         own beyond cov+oth     -3  by class: cg    -0 (n 945)  cn    -1 (n 1922)  mono    -0 (n 1327)  oth    -1 (n 353)
+  haiku45nt      own beyond cov+oth    +97  by class: cg   +25 (n 4270)  cn    +0 (n 9240)  mono   +75 (n 6251)  oth    -4 (n 1731)
+  haiku45        own beyond cov+oth    -20  by class: cg    +0 (n 1144)  cn   -13 (n 2074)  mono    -6 (n 1340)  oth    -2 (n 366)
+  grok46         own beyond cov+oth     -2  by class: cg    -0 (n 4243)  cn   -11 (n 8896)  mono    +8 (n 5768)  oth    +1 (n 1618)
+  gemini38flash  own beyond cov+oth     +4  by class: cg    +2 (n 750)  cn    -1 (n 967)  mono    +1 (n 829)  oth    +2 (n 512)
+  TOTAL cg +27  cn -31  mono +84  oth -12

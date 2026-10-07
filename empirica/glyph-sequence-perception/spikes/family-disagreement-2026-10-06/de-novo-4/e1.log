@@ -1,0 +1,25 @@
+
+panel >= 2 answers, all yes; per pair, no-rate of each on the same runs (all their answers)
+opus55        sonnet55      contig: runs  212 opus55 12/212=0.057 sonnet 11/212=0.052 | other: runs  182 opus55 16/182=0.088 sonnet 49/185=0.265
+haiku45nt     sonnet55      contig: runs  429 haiku4 6/431=0.014 sonnet 18/432=0.042 | other: runs  439 haiku4 40/446=0.090 sonnet 127/446=0.285
+haiku45       sonnet55      contig: runs  201 haiku4 9/201=0.045 sonnet 14/202=0.069 | other: runs  184 haiku4 19/184=0.103 sonnet 51/188=0.271
+grok46        sonnet55      contig: runs  395 grok46 11/398=0.028 sonnet 18/397=0.045 | other: runs  389 grok46 28/397=0.071 sonnet 114/397=0.287
+gemini38flash sonnet55      contig: runs  163 gemini 9/163=0.055 sonnet 7/164=0.043 | other: runs  188 gemini 23/188=0.122 sonnet 66/189=0.349
+gemini31pro   sonnet55      contig: runs   44 gemini 6/44=0.136 sonnet 0/44=0.000 | other: runs   46 gemini 8/46=0.174 sonnet 14/46=0.304
+
+panel >= 3 answers, all yes; per pair, no-rate of each on the same runs (all their answers)
+opus55        sonnet55      contig: runs   85 opus55 4/85=0.047 sonnet 3/85=0.035 | other: runs   61 opus55 3/61=0.049 sonnet 15/64=0.234
+haiku45nt     sonnet55      contig: runs  115 haiku4 0/116=0.000 sonnet 2/116=0.017 | other: runs  100 haiku4 7/106=0.066 sonnet 26/106=0.245
+haiku45       sonnet55      contig: runs   69 haiku4 0/69=0.000 sonnet 2/70=0.029 | other: runs   57 haiku4 3/57=0.053 sonnet 14/61=0.230
+grok46        sonnet55      contig: runs  108 grok46 2/109=0.018 sonnet 3/109=0.028 | other: runs   85 grok46 4/90=0.044 sonnet 22/91=0.242
+gemini38flash sonnet55      contig: runs   75 gemini 1/75=0.013 sonnet 2/76=0.026 | other: runs   64 gemini 5/64=0.078 sonnet 19/65=0.292
+gemini31pro   sonnet55      contig: runs   27 gemini 2/27=0.074 sonnet 0/27=0.000 | other: runs   32 gemini 4/32=0.125 sonnet 9/32=0.281
+
+a15 with Sonnet excluded from the panel (for minds other than Sonnet):
+sonnet55       contig: no 15/426 = 0.035 | other: no 107/411 = 0.260
+opus55         contig: no 4/85 = 0.047 | other: no 3/62 = 0.048
+haiku45nt      contig: no 0/116 = 0.000 | other: no 7/108 = 0.065
+haiku45        contig: no 0/69 = 0.000 | other: no 3/59 = 0.051
+grok46         contig: no 2/109 = 0.018 | other: no 4/92 = 0.043
+gemini38flash  contig: no 1/75 = 0.013 | other: no 5/65 = 0.077
+gemini31pro    contig: no 2/27 = 0.074 | other: no 5/33 = 0.152

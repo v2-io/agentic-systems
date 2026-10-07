@@ -1,0 +1,23 @@
+cohere items 6216 (by population [1219, 1859, 1276, 1862]), answers 20037, can't-tell dropped 1332
+  A1: held-out log-lik per answer -0.4782
+  A2: held-out log-lik per answer -0.4773
+  A3: held-out log-lik per answer -0.4541
+  L1: held-out log-lik per answer -0.4500
+  L2: held-out log-lik per answer -0.4463
+  L3: held-out log-lik per answer -0.4459
+  L4: held-out log-lik per answer -0.4456
+
+per population, held-out log-lik per answer:
+  real-contig  answers  4260  A1 -0.2645  A2 -0.2655  A3 -0.2711  L1 -0.2708  L2 -0.2656  L3 -0.2645  L4 -0.2633
+  real-other   answers  6153  A1 -0.5135  A2 -0.5103  A3 -0.5077  L1 -0.5074  L2 -0.5055  L3 -0.5051  L4 -0.5054
+  ctl-contig   answers  3906  A1 -0.4751  A2 -0.4750  A3 -0.4517  L1 -0.4457  L2 -0.4384  L3 -0.4377  L4 -0.4381
+  ctl-other    answers  5718  A1 -0.6016  A2 -0.6012  A3 -0.5343  L1 -0.5245  L2 -0.5225  L3 -0.5227  L4 -0.5222
+
+best model's fit on all data, parameters:
+  A1: sonnet55 c=0.05/0.13; opus55 c=0.05/0.23; haiku45nt c=0.37/0.44; haiku45 c=0.14/0.30; grok46 c=0.39/0.50; gemini38flash c=0.15/0.37; gemini31pro c=0.25/0.23
+  A2: sonnet55 c=0.05/0.14 s=0.94; opus55 c=0.04/0.23 s=1.00; haiku45nt c=0.37/0.44 s=1.00; haiku45 c=0.14/0.29 s=1.00; grok46 c=0.38/0.49 s=1.00; gemini38flash c=0.15/0.37 s=0.97; gemini31pro c=0.27/0.24 s=0.86
+  A3: sonnet55 c=0.00/0.00 s=0.90; opus55 c=0.00/0.03 s=1.00; haiku45nt c=0.30/0.27 s=1.00; haiku45 c=0.08/0.05 s=1.00; grok46 c=0.32/0.35 s=1.00; gemini38flash c=0.08/0.19 s=0.98; gemini31pro c=0.21/0.14 s=0.82
+  L1: sonnet55 a=-1.33; opus55 a=-0.51; haiku45nt a=+0.86; haiku45 a=-0.20; grok46 a=+1.10; gemini38flash a=+0.09; gemini31pro a=-0.50
+  L2: sonnet55 a=-1.95 s=1.56; opus55 a=-2.63 s=5.51; haiku45nt a=+0.68 s=0.72; haiku45 a=-0.45 s=1.37; grok46 a=+0.89 s=0.69; gemini38flash a=-0.04 s=0.92; gemini31pro a=-0.36 s=0.46
+  L3: sonnet55 a=-1.90/-2.12 s=1.63; opus55 a=-2.60/-1.18 s=2.87; haiku45nt a=+0.98/+0.52 s=0.76; haiku45 a=-0.60/-0.45 s=1.36; grok46 a=+0.89/+0.86 s=0.71; gemini38flash a=-0.51/+0.09 s=0.95; gemini31pro a=-0.12/-0.49 s=0.47
+  L4: sonnet55 a=-2.24/+3.16 s=1.43; opus55 a=-2.75/+5.62 s=4.61; haiku45nt a=+0.45/+1.71 s=0.69; haiku45 a=-0.75/+1.91 s=1.52; grok46 a=+0.79/+0.69 s=0.77; gemini38flash a=-0.28/+1.46 s=1.16; gemini31pro a=-0.48/+0.82 s=0.44

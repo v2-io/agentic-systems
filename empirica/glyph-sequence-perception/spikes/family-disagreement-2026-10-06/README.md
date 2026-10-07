@@ -15,6 +15,7 @@
 - `de-novo-feedback-2.md`, `de-novo-2/`: the second verification, its scripts, and its competing model and prediction;
 - `de-novo-feedback-3.md`, `de-novo-3/`: the third verification, its scripts and its timed p002 baseline;
 - `strengthening-3.md`, `strengthening-3-logs/`: the spike agent's answer to the third verification;
+- `de-novo-feedback-4.md`, `de-novo-4/`: the fourth verification;
 - `snapshot/`: what rebuilds the spike's snapshot (`lib.py --from-manifest`);
 - `strengthening-2.md`, `strengthening-2-logs/`: the spike agent's answer to the second verification (the sequence-level structure, the probing effects, no model calibrated on all checks);
 - `prereg-third-minds.json`, `prereg2_gen.py`, `prereg_gen.py`: the second pre-registration (round `p002`, third minds) and the generators of both;
@@ -48,3 +49,12 @@ Sent to the spike agent for its answer.
 - part of Sonnet's "steadiness" was a modelling artifact (a narrow latent grid with Sonnet as anchor).
 
 The clearest family difference is chart-walking: Opus and Sonnet keep walking the chart far more readily than Grok and Gemini. Best model: 10 of 38 calibration checks outside their bands, chiefly a Grok–Gemini affinity. `lib.load()` now refuses a snapshot that disagrees with its manifest. FINDINGS, plan and debrief were rewritten by replacement (landed unchanged). **Not yet independently verified.**
+
+**Verified a fourth time** (`de-novo-feedback-4.md`).
+
+- **One phenomenon.** Between the large Claude minds and Grok, the commit gap is chiefly whether to keep walking the code chart where no given order exists: +1.26 logit on contiguous runs with no given order, at most +0.52 elsewhere. Grok stops in 90% of those disagreements. "Grok stops sooner", the per-block lean, the flat splits and the chart-walk heading are largely that one fact.
+- **The per-block lean.** For Grok and Gemini Flash it is chart-walk appetite per block, not a property of sequences; only Haiku without thinking's spans the block.
+- **Recognition.** Claude and Grok show no run-specific disagreement in recognition (2,602 runs, z = +0.1), so found sequences look model-agnostic between them. Per run, nothing can be read yet.
+- **The Abbott-to-logit gain.** Its ~640 nats are almost all earned on the shuffled controls (596 of 635). The verifier recommends the run-against-its-own-shuffles contrast, which catalog build 7 now uses.
+
+Sent to the spike agent for a closing pass.
