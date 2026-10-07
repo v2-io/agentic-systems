@@ -1,4 +1,44 @@
-# HANDOFF: state of the study (updated 2026-10-06 ~16:00 MDT)
+# HANDOFF: state of the study (updated 2026-10-06 21:35 MDT)
+
+## Halted (2026-10-06, about 21:30 MDT)
+
+Joseph: *"Let's halt for now and do any tracking cleanup etc. and notes etc. and I can come back and work on this again in a few days."* `data/rounds/STOP` is in place; the loop stopped after committing c120, and the drains stop after their in-flight calls. Last loop round: c120 (stochastic-4). c121 will be the first stochastic-5 round.
+
+**To resume:**
+
+1. `rm data/rounds/STOP`.
+2. From the study root, each with `nohup … &`, appending to its log, on `/opt/homebrew/bin/python3`:
+   - `run.py loop --budget 350 >> data/logs/loop.log`
+   - `run.py drain --minds grok46 --newest-first --kinds-first names choose cohere inhibit pick order >> data/logs/drain-grok.log`
+   - `run.py drain --minds grok46g --newest-first >> data/logs/drain-grok-gen.log`
+   - `run.py drain --minds gemini38flash gemini31pro gemini38flashg --newest-first --kinds-first names choose cohere inhibit pick order >> data/logs/drain-gemini.log` (Gemini's quota resets about Saturday 2026-10-10 13:50 MDT; `data/logs/paused.json`).
+3. Check with `pgrep -fl "run.py"` that there is one of each.
+
+`pace.json` has `round_gap_min` 120. The budget was halved and the gap added for Joseph's Claude usage elsewhere; ask him before raising either.
+
+**Where things stand:**
+
+- **Recognition means recognised as a sequence** (catalog build 7, BEST): a run's order must beat its own glyphs shuffled. Until build 7, sets coherent in any order passed (Joseph: *"Our entire premise was based on recognizing sequences-- not sets"*).
+- **`CATALOG-VIEW.md` leads with perceived orders:** recognised as sequences, no relation to a given, no order the encoding supplies (`catalog/code_order.py`: a snippet of a chart pane). About 450 runs, of which about 100 are expected by chance.
+- **`CATALOG-GIVEN.md`** lists every given (alphabets from CLDR via ICU, numbers by value, every dress) and the walks over them.
+- **The planner is stochastic-5,** audited and checked (`audits/planner-stochastic-5-*`). It adds Joseph's insert and remove questions as streams, and down-weights given relations and encoded orders (0.1, never zero).
+- **The family-disagreement spike is closed** (`spikes/family-disagreement-2026-10-06/`: README, FINDINGS, debrief). Recognition: no Claude–Grok run-specific disagreement. Continuation: the family gap is chart-walking where no given order exists. `▁` for Gemini is the clearest perceptual family effect.
+- **The seal stays,** as the coordinating session's ruling (Joseph delegated it; it was an agent's design, not his). It covers insert and remove on canary runs (`audits/SEAL-canary-choose-2026-10-06.md`).
+
+**Open threads, roughly by value:**
+
+1. **The first stochastic-5 rounds.** Read the insert and remove answers against their own shuffles, and their `fill` markers (chart-gap, within-span, outside). Test round p003 (`probe/test_round.py`) is the first example.
+2. **The perceived list's chance share.** Re-asking perceived runs firms them up; runs with one answer per side are the likeliest chance passes.
+3. **Per-run model sensitivity in recognition.** This needs cohere re-asked within families on the same runs (the spike's integration plan, item 3).
+4. **The name route** is unmeasured on every record, so CATALOG §11's groups don't sort yet.
+5. **Sheet hygiene** (keep same-block contexts off one sheet) is cheap and removes a selection confound. It's a probe or planner change, so audit it first.
+6. **Saturday:** Gemini questions that test `▁` outside triads.
+7. **Known misses of the encoded and given rules:**
+   - `-=>` (all ASCII) counts as encoded;
+   - `GfEdCbAz…`, two cases of the alphabet interleaved with strides, is neither encoded nor given;
+   - world-knowledge orders (keyboard rows, clocks) aren't givens, by Joseph's choice (*"given is sufficient as is"*).
+8. **CATALOG §9's combination rule:** a logit link with per-mind slopes is a secondary gain (about 160 nats) now that recognition is paired.
+
 
 *Written by the coordinating instance (Claude Opus 5.5) for the session that continues the work on its own (Joseph, 2026-10-05: "pick up a new one that doesn't have a coordinator attached to it to continue the work here in glyph-land independently"). Read METHODOLOGY.md first; this file is state and open threads, not method. Joseph's earlier sessions also hold context: his messages relayed through the coordinator are quoted here where they matter.*
 
@@ -11,10 +51,11 @@ The study's root is this directory. Until 2026-10-06 it lived in `refactored/`, 
 | `METHODOLOGY.md` | — | the method: the goal (sequences recognised as sequences, §1), the 5 concerns and the one evidence standard (§2a), negative evidence, the questions (§4), the recognition tests and the generator (§4a), priority (§5), porting (§6) |
 | `port/port_triad_era.py`, `port/spotcheck.py` | 4 | ledgers r000–r012 → `data/answers/triad-era.jsonl` (34,196 records; 0 mismatches in 1,588 spot checks); `data/answers/PORT-REPORT.md` |
 | `port/port_seeds.py` | 3→2 | survey sequences → `data/answers/seeds.jsonl`: 4,850 tagged votes from the surveyor's family |
-| `probe/probe.py` | 1 | protocol `ctx-0.1`: question kinds `continue`, `inhibit`, `triad`, `cohere` (a whole run: coherent? why?), `pick` (forced single character, sampled); prompts, fated sheets, raw answers → canonical records |
-| `tree/tree.py` | 2 | context tree → `SEQUENCES.md` (`--pure` leaves seeds out) |
-| `priority/plan.py` | 3 | the planner ("stochastic-1", from c102): every candidate question weighted relevance × expected information and drawn, stream sizes jittered; METHODOLOGY §5 |
-| `catalog/build.py` | 6 | the catalog, build 0 (CATALOG.md v5): R, the chart route, the view; Postgres 18 schema `catalog`; nothing reads it yet |
+| `probe/probe.py` | 1 | protocol `ctx-0.1`: question kinds `continue`, `inhibit`, `triad`, `cohere` (a whole run: coherent? why?), `pick` (forced single character, sampled), `order`, `choose`, `names`, `insert` and `remove` (Joseph's: make it longer by inserting missing symbols / more coherent by removing); prompts, fated sheets, raw answers → canonical records. `probe/test_round.py` builds test rounds (`p…`) of named runs |
+| `tree/tree.py` | 2 | context tree → `SEQUENCES.md` (`--pure` leaves seeds out); `as_sequence()`: a run against its own shuffles |
+| `priority/plan.py` | 3 | the planner ("stochastic-5" from c121; stochastic-1 from c102): every candidate question weighted relevance × expected information × the given and encoded factors, and drawn; stream sizes jittered; METHODOLOGY §5 |
+| `catalog/build.py` | 6 | the catalog, builds 0–8 (CATALOG.md v5, §13 build notes): recognition as a sequence, the chart route, links, order agreement, the givens (`givens.py` → `data/unicode/givens.json`, under `.venv-icu`; `given_walk.py`), encoded orders (`code_order.py`); Postgres 18 schema `catalog`, rebuilt every round |
+| `report/view.py`, `report/given.py` | read-off | `CATALOG-VIEW.md` (perceived orders first) and `CATALOG-GIVEN.md` (every given and the walks over it), every round |
 | `report/best.py` | read-off | `BEST.md`: runs recognised as wholes, rejected wholes, candidates grown from the strongest edges; nothing reads it back; reloaded by the loop every round |
 | `run.py` | — | `plan / ask / record / tree / progress / round / loop` |
 | `core/` | — | judges, fate and the roster, copied from the triad era's `harness/core` |
