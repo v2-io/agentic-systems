@@ -10,6 +10,10 @@ implements part of CATALOG v5 and says which part:
           the default view (§11); lookalike substitution as a run-level quantity. Build 1 (catalog/links.py): every
           link c -> x with G in three channels (shown, written, picked; raw per family) and L against near decoys
           (Abbott, Bayes factor); and the state (§8) of every link of every record, summarised on the record.
+          Build 5 (catalog/given_walk.py, data/unicode/givens.json): the givens -- orders that exist before any mind
+          answers (alphabets in CLDR, numbers by value, each in every dress) -- as a table, and on every record its
+          given relation: whether it walks a given (window, rotation, stride, across dresses, reflection), which, how.
+          Nothing is removed; readers decide what to show (CATALOG-VIEW.md shows runs that aren't given walks).
           Build 4: content splits on every record -- links where two families' most named continuations differ at
           the deciding context, each family's mode with its counts and the chart's next glyph (facts, no cut).
           Build 3: the rest of §3's candidate inputs as records (the tree's walks, written walks, BEST's strongest
@@ -39,12 +43,13 @@ import run as RUN                                   # noqa: E402  answers(), see
 sys.path.insert(0, str(ROOT / "catalog"))
 import links as LK                                  # noqa: E402  the link layer (CATALOG §4-§6, §8)
 import order as OR                                  # noqa: E402  the O part (CATALOG §6, §9)
+import given_walk as GW                             # noqa: E402  the givens (build 5)
 sys.path.insert(0, str(ROOT / "report"))
 import best as BE                                   # noqa: E402  strongest_paths, a candidate source (CATALOG §3)
 import tree as TR                                   # noqa: E402
 import plan as PL                                   # noqa: E402  block()
 
-MODEL = "catalog-v5-build4"
+MODEL = "catalog-v5-build5"
 SEAL_FILE = ROOT / "audits" / "SEAL-canary-choose-2026-10-06.md"
 CANARY = set("▁▂▃▄▅▆▇█🮆🮅🮄▀🮃🮂▔▉")
 PARAMS = {                                           # every one chosen without evidence (CATALOG §13 freezes them)
@@ -378,6 +383,8 @@ def main():
                 "python": platform.python_version(), "unicode": U.unidata_version,
                 "answer_files": {f.name: sha(f) for f in files},
                 "unicode_files": {f.name: sha(f) for f in sorted((ROOT / "data" / "unicode").glob("*.txt"))},
+                "givens": {"file": "data/unicode/givens.json", "sha256": sha(ROOT / "data" / "unicode" / "givens.json"),
+                           **GW.load()[3]},
                 "seed_files": {f.name: sha(f) for f in sorted((ROOT / "data" / "seeds").glob("*.jsonl"))},
                 "growth_files": {f.name: sha(f) for f in sorted((ROOT / "data" / "triad-era" / "growth").glob("*.json"))},
                 "code": {p: sha(ROOT / p) for p in ("catalog/build.py", "priority/plan.py", "tree/tree.py", "run.py")},
@@ -489,6 +496,13 @@ def main():
                            "direction": st["direction"], "context": st["context"], "flip": st["flip"]})
         c = collections.Counter(sts)
         r["content_splits"] = LX.splits(g, lambda ctx: PL.chart_neighbour(ctx[-2], ctx[-1])) or None
+        gv = GW.classify(g)                          # build 5: is this run a walk over a given?
+        r["given_kind"] = gv["kind"] if gv else None
+        r["given_id"] = gv["given"] if gv else None
+        r["given_label"] = gv["label"] if gv else None
+        r["given_dresses"] = gv["dresses"] if gv else None
+        r["given_step"] = gv["step"] if gv else None
+        r["given_start"] = gv["start"] if gv else None
         r["link_states"] = {str(k): c.get(k, 0) for k in range(1, 6)}
         r["weakest_link"] = max(sts) if sts else None
         r["flips"] = sum(1 for x in rlinks[-len(sts):] if x["flip"]) if sts else 0
@@ -513,6 +527,8 @@ def main():
                               for r in rows if r["content_splits"])),   # the bands are a reading, chosen without evidence
                           "o_certain": sum(1 for r in rows if (r["o_bf"] or 0) >= PARAMS["BF_CERTAIN"] and (r["o_strength"] or 0) > 0),
                           "recognised": sum(r["recognised"] for r in rows),
+                          "given_walks": dict(collections.Counter(r["given_kind"] for r in rows if r["given_kind"])),
+                          "given_walks_recognised": dict(collections.Counter(r["given_kind"] for r in rows if r["given_kind"] and r["recognised"])),
                           "view": dict(collections.Counter(r["view"] for r in rows if r["view"])),
                           "chart_state": dict(collections.Counter(r["chart_state"] for r in rows))}
     json.dump(manifest, open(out / "manifest.json", "w"), indent=1, ensure_ascii=False, sort_keys=True)
@@ -523,13 +539,18 @@ def main():
                 w.writerow([json.dumps(r[c], ensure_ascii=False) if isinstance(r[c], (list, dict)) else ("" if r[c] is None else r[c]) for c in cols])
     RC = ["id", "glyphs", "length", "chart_class", "set_class", "sources", "r_strength", "r_sd", "r_bf", "r_families", "recognised",
           "chart_state", "name_state", "view", "contested", "contested_asked", "lookalike", "link_states", "weakest_link", "flips",
-          "o_strength", "o_sd", "o_bf", "o_families", "o_other", "seed_raters", "content_splits", "evidence", "o_evidence"]
+          "o_strength", "o_sd", "o_bf", "o_families", "o_other", "seed_raters", "content_splits", "evidence", "o_evidence",
+          "given_kind", "given_id", "given_label", "given_dresses", "given_step", "given_start"]
+    givens = [{"id": g["id"], "kind": g["kind"], "reading": g.get("reading"), "case": g.get("case"), "script": g.get("script"),
+               "languages": g.get("languages"), "dress": g.get("dress"), "n": len(g["positions"]), "label": GW.label(g),
+               "positions": g["positions"], "vals": g.get("values")} for g in GW.load()[0].values()]
     LC = ["context", "k", "x", "g_shown", "g_written", "g_picked", "next_ranks", "l_families", "l_strength", "l_sd", "l_bf", "evidence"]
     RLC = ["record", "idx", "a", "b", "state", "direction", "context", "flip"]
     PC = ["record", "orientation", "kind", "idx", "context", "run_choice", "alternative", "state", "instrument", "n", "k", "p",
           "baseline", "delta", "bf", "interp", "controlled", "felt", "evidence"]
     write("records", rows, RC); write("positions", prow, PC); write("rates", rates, ["rater", "set_class", "yes", "n"])
     write("links", lrows, LC); write("record_links", rlinks, RLC)
+    write("givens", givens, ["id", "kind", "reading", "case", "script", "languages", "dress", "n", "label", "positions", "vals"])
     print(json.dumps(manifest["counts"], ensure_ascii=False))
     print("sealed answers dropped:", meta["sealed_dropped"], "| frozen:", meta["frozen_commit"])
     if a.no_db:
@@ -543,7 +564,10 @@ CREATE TABLE {schema}.records (id text primary key, glyphs text, length int, cha
   r_strength double precision, r_sd double precision, r_bf double precision, r_families jsonb, recognised boolean,
   chart_state text, name_state text, "view" text, contested int, contested_asked int, lookalike jsonb, link_states jsonb,
   weakest_link int, flips int, o_strength double precision, o_sd double precision, o_bf double precision, o_families jsonb,
-  o_other jsonb, seed_raters jsonb, content_splits jsonb, evidence jsonb, o_evidence jsonb);
+  o_other jsonb, seed_raters jsonb, content_splits jsonb, evidence jsonb, o_evidence jsonb,
+  given_kind text, given_id text, given_label text, given_dresses jsonb, given_step double precision, given_start int);
+CREATE TABLE {schema}.givens (id text primary key, kind text, reading text, "case" text, script text, languages jsonb,
+  dress text, n int, label text, positions jsonb, vals jsonb);
 CREATE TABLE {schema}.links (context text, k int, x text, g_shown jsonb, g_written jsonb, g_picked jsonb, next_ranks jsonb,
   l_families jsonb, l_strength double precision, l_sd double precision, l_bf double precision, evidence jsonb);
 CREATE TABLE {schema}.record_links (record text, idx int, a text, b text, state int, direction text, context text, flip boolean);
@@ -556,6 +580,7 @@ CREATE TABLE {schema}.rates (rater text, set_class text, yes int, n int);
 \\copy {schema}.rates FROM '{out / "rates.csv"}' WITH (FORMAT csv)
 \\copy {schema}.links FROM '{out / "links.csv"}' WITH (FORMAT csv)
 \\copy {schema}.record_links FROM '{out / "record_links.csv"}' WITH (FORMAT csv)
+\\copy {schema}.givens FROM '{out / "givens.csv"}' WITH (FORMAT csv)
 INSERT INTO {schema}.manifest VALUES ('{json.dumps(manifest, ensure_ascii=False).replace("'", "''")}'::jsonb);
 CREATE INDEX ON {schema}.positions (record);
 CREATE INDEX ON {schema}.record_links (record);

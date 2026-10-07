@@ -1,2 +1,3 @@
 data/catalog/*/*.csv
 data/catalog/*/load.sql
+.venv-icu/

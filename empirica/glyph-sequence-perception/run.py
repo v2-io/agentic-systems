@@ -427,7 +427,7 @@ def git(*args):
 
 def commit(rid):
     """the round just planned, plus every earlier round's ledgers (drain minds keep appending to them)"""
-    paths = [f"data/rounds/{r}" for r in ctx_rounds() + test_rounds()] + ["SEQUENCES.md", "PROGRESS.md", "BEST.md", "CATALOG-VIEW.md", "data/catalog"]   # relative to ROOT (git -C); data/catalog: manifests only (.gitignore)
+    paths = [f"data/rounds/{r}" for r in ctx_rounds() + test_rounds()] + ["SEQUENCES.md", "PROGRESS.md", "BEST.md", "CATALOG-VIEW.md", "CATALOG-GIVEN.md", "data/catalog"]   # relative to ROOT (git -C); data/catalog: manifests only (.gitignore)
     git("add", *paths)
     if git("diff", "--cached", "--quiet", "--", *paths).returncode == 0:
         return None                                          # nothing new (e.g. a resumed round already committed)
@@ -447,10 +447,11 @@ def cmd_catalog(a):
     r = subprocess.run([sys.executable, str(ROOT / "catalog" / "build.py")], capture_output=True, text=True)
     tail = (r.stdout + r.stderr).strip().splitlines()[-2:]
     print(("catalog: " if r.returncode == 0 else "!! catalog build failed: ") + " | ".join(tail)[:300], flush=True)
-    if r.returncode == 0:                         # the catalog's default view (CATALOG §11), beside BEST: a read-off
-        v = subprocess.run([sys.executable, str(ROOT / "report" / "view.py")], capture_output=True, text=True)
-        print(((v.stdout + v.stderr).strip().splitlines() or ["view: no output"])[-1][:300] if v.returncode == 0
-              else "!! view failed: " + (v.stderr.strip().splitlines() or ["?"])[-1][:300], flush=True)
+    if r.returncode == 0:                         # read-offs of the catalog: the default view (CATALOG §11, runs that
+        for rep in ("view.py", "given.py"):       # aren't given walks) and the givens page
+            v = subprocess.run([sys.executable, str(ROOT / "report" / rep)], capture_output=True, text=True)
+            print(((v.stdout + v.stderr).strip().splitlines() or [rep + ": no output"])[-1][:300] if v.returncode == 0
+                  else f"!! {rep} failed: " + (v.stderr.strip().splitlines() or ["?"])[-1][:300], flush=True)
     builds = sorted(p for p in (DATA / "catalog").iterdir() if p.is_dir() and p.name.startswith("b"))
     for old in builds[:-CATALOG_KEEP]:            # each build's CSVs are ~45 MB: keep the last few; manifests stay
         for f in old.iterdir():
