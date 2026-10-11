@@ -1,0 +1,86 @@
+opus55 A 0 {"levels": {"1": 2, "2": 1, "3": 3, "4": 3, "5": 1, "6": 2}, "citable": [3, 4]}
+opus55 A 1 {"levels": {"1": 3, "2": 2, "3": 1, "4": 2, "5": 3, "6": 1}, "citable": [1, 5]}
+opus55 B 0 {"groups": [[1, 6], [2, 7], [3, 5], [4]], "outer": {"1": "single", "2": "double", "3": "double", "4": "double", "5": "double", "6": "single", "7": "double"}, "i
+opus55 B 1 {"groups": [[1, 6], [2, 5], [3], [4, 7]], "outer": {"1": "double", "2": "double", "3": "single", "4": "single", "5": "double", "6": "double", "7": "single"}, "i
+opus55 C 0 {"1": "«⟪The sample was dried at 40 °C for six hours.⟫»", "2": "‹⟨The second survey reached 1,204 households.⟩›", "3": "«⟨The protocol was revised after the pil
+opus55 C 1 {"1": "«⟨No effect was observed below the threshold.⟩»", "2": "‹⟨Error bars show one standard deviation.⟩›", "3": "«⟪Participants could withdraw at any time.⟫»"
+sonnet55 A 0 {"levels": {"1": 2, "2": 1, "3": 3, "4": 3, "5": 1, "6": 2}, "citable": [3, 4]}
+sonnet55 A 1 {"levels": {"1": 3, "2": 2, "3": 1, "4": 2, "5": 3, "6": 1}, "citable": [1, 5]}
+sonnet55 B 0 {"groups": [[1, 6], [2, 7], [3, 5], [4]], "outer": {"1": "single", "2": "double", "3": "double", "4": "double", "5": "double", "6": "single", "7": "double"}, "i
+sonnet55 B 1 {"groups": [[1,6],[2,5],[4,7],[3]], "outer": {"1": "double", "2": "double", "3": "single", "4": "single", "5": "double", "6": "double", "7": "single"}, "inner":
+sonnet55 C 0 {"1": "«⟪The sample was dried at 40 °C for six hours.⟫»", "2": "‹⟨The second survey reached 1,204 households.⟩›", "3": "«⟨The protocol was revised after the pil
+sonnet55 C 1 {"1": "«⟨No effect was observed below the threshold.⟩»", "2": "‹⟨Error bars show one standard deviation.⟩›", "3": "«⟪Participants could withdraw at any time.⟫»"
+haiku45nt A 0 ```json {   "levels": {     "1": 1,     "2": 1,     "3": 3,     "4": 3,     "5": 1,     "6": 2   },   "citable": [3, 4] } ```
+haiku45nt A 1 ```json {   "levels": {     "1": 3,     "2": 2,     "3": 1,     "4": 2,     "5": 3,     "6": 1   },   "citable": [1, 5] } ```
+haiku45nt B 0 ```json {   "groups": [[1, 6], [2, 7], [3, 4, 5]],   "outer": {     "1": "single",     "2": "double",     "3": "double",     "4": "double",     "5": "double",  
+haiku45nt B 1 ```json {   "groups": [[1, 6], [2, 5], [3, 4, 7]],   "outer": {"1": "double", "2": "double", "3": "single", "4": "single", "5": "double", "6": "double", "7": "s
+haiku45nt C 0 ```json {   "1": "«⟪The sample was dried at 40 °C for six hours.⟫»",   "2": "‹⟨The second survey reached 1,204 households.⟩›",   "3": "«⟨The protocol was revise
+haiku45nt C 1 ```json {   "1": "«⟨No effect was observed below the threshold.⟩»",   "2": "‹⟨Error bars show one standard deviation.⟩›",   "3": "«⟪Participants could withdraw 
+grok46 A 0 {"levels": {"1": 2, "2": 1, "3": 3, "4": 3, "5": 1, "6": 2}, "citable": [3, 4]}
+grok46 A 1 {"levels": {"1": 3, "2": 2, "3": 1, "4": 2, "5": 3, "6": 1}, "citable": [1, 5]}
+grok46 B 0 {"groups": [[1, 6], [2, 7], [3, 5], [4]], "outer": {"1": "single", "2": "double", "3": "double", "4": "double", "5": "double", "6": "single", "7": "double"}, "i
+grok46 B 1 {"groups": [[1, 6], [2, 5], [3], [4, 7]], "outer": {"1": "double", "2": "double", "3": "single", "4": "single", "5": "double", "6": "double", "7": "single"}, "i
+grok46 C 0 {"1": "«⟪The sample was dried at 40 °C for six hours.⟫»", "2": "‹⟨The second survey reached 1,204 households.⟩›", "3": "«⟨The protocol was revised after the pil
+grok46 C 1 {"1": "«⟨No effect was observed below the threshold.⟩»", "2": "‹⟨Error bars show one standard deviation.⟩›", "3": "«⟪Participants could withdraw at any time.⟫»"
+gemini38flash A 0 {"levels": {"1": 2, "2": 1, "3": 3, "4": 3, "5": 1, "6": 2}, "citable": [3, 4]} 
+gemini38flash A 1 {"levels": {"1": 3, "2": 2, "3": 1, "4": 2, "5": 3, "6": 1}, "citable": [1, 5]} 
+gemini38flash B 0 ERR ERROR: {"conversation_id": "9b9f950a-1150-40c0-8f54-538a1ecbd3cd", "status": "ERROR", "error": "API error (attempt 1): R
+gemini38flash B 1 ```json {   "groups": [     [1, 6],     [2, 5],     [4, 7]   ],   "outer": {     "1": "double",     "2": "double",     "3": "single",     "4": "single",     "5"
+gemini38flash C 0 {   "1": "«⟪The sample was dried at 40 °C for six hours.⟫»",   "2": "‹⟨The second survey reached 1,204 households.⟩›",   "3": "«⟨The protocol was revised after 
+gemini38flash C 1 ERR ERROR: {"conversation_id": "b1fde8be-b7c2-443f-9ebb-698caba9f9e2", "status": "ERROR", "error": "API error (attempt 1): R
+gemini31pro A 0 {   "levels": {     "1": 2,     "2": 1,     "3": 3,     "4": 3,     "5": 1,     "6": 2   },   "citable": [3, 4] } 
+gemini31pro A 1 {   "levels": {     "1": 3,     "2": 2,     "3": 1,     "4": 2,     "5": 3,     "6": 1   },   "citable": [     1,     5   ] } 
+gemini31pro B 0 {   "groups": [     [1, 6],     [2, 7],     [3, 5],     [4]   ],   "outer": {     "1": "single",     "2": "double",     "3": "double",     "4": "double",     "5
+gemini31pro B 1 {   "groups": [     [1, 6],     [2, 5],     [4, 7]   ],   "outer": {     "1": "double",     "2": "double",     "3": "single",     "4": "single",     "5": "doubl
+gemini31pro C 0 {   "1": "«⟪The sample was dried at 40 °C for six hours.⟫»",   "2": "‹⟨The second survey reached 1,204 households.⟩›",   "3": "«⟨The protocol was revised after 
+gemini31pro C 1 ```json {   "1": "«⟨No effect was observed below the threshold.⟩»",   "2": "‹⟨Error bars show one standard deviation.⟩›",   "3": "«⟪Participants could withdraw 
+gpt56terra A 0 ERR {"type": "turn.failed", "error": {"message": "You\u2019ve hit your usage limit. Upgrade to Plus to continue using Codex 
+gpt56terra A 1 ERR {"type": "turn.failed", "error": {"message": "You\u2019ve hit your usage limit. Upgrade to Plus to continue using Codex 
+gpt56terra B 0 ERR {"type": "turn.failed", "error": {"message": "You\u2019ve hit your usage limit. Upgrade to Plus to continue using Codex 
+gpt56terra B 1 ERR {"type": "turn.failed", "error": {"message": "You\u2019ve hit your usage limit. Upgrade to Plus to continue using Codex 
+gpt56terra C 0 ERR {"type": "turn.failed", "error": {"message": "You\u2019ve hit your usage limit. Upgrade to Plus to continue using Codex 
+gpt56terra C 1 ERR {"type": "turn.failed", "error": {"message": "You\u2019ve hit your usage limit. Upgrade to Plus to continue using Codex 
+gemini38flash B 0 ```json {   "groups": [     [1, 6],     [2, 7],     [3, 5],     [4]   ],   "outer": {     "1": "single",     "2": "double",     "3": "double",     "4": "double"
+gemini38flash C 1 {"1": "«⟨No effect was observed below the threshold.⟩»", "2": "‹⟨Error bars show one standard deviation.⟩›", "3": "«⟪Participants could withdraw at any time.⟫»"
+opus55 D 0 {"levels": {"1": 1, "2": 2, "3": 3, "4": 2, "5": 2, "6": 3, "7": 1, "8": 3, "9": 1, "10": 2}, "citable": [3, 6, 8]}
+opus55 D 1 {"levels": {"1": 3, "2": 3, "3": 2, "4": 1, "5": 2, "6": 3, "7": 2, "8": 1, "9": 1, "10": 3}, "citable": [1, 2, 6, 10]}
+sonnet55 D 0 {"levels": {"1": 1, "2": 2, "3": 3, "4": 2, "5": 2, "6": 3, "7": 1, "8": 3, "9": 1, "10": 2}, "citable": [3, 6, 8]}
+sonnet55 D 1 {"levels": {"1": 3, "2": 3, "3": 2, "4": 1, "5": 2, "6": 3, "7": 2, "8": 1, "9": 1, "10": 3}, "citable": [1, 2, 6, 10]}
+haiku45nt D 0 ```json {   "levels": {     "1": 1,     "2": 2,     "3": 3,     "4": 2,     "5": 2,     "6": 3,     "7": 1,     "8": 3,     "9": 1,     "10": 2   },   "citable"
+haiku45nt D 1 ```json {   "levels": {     "1": 3,     "2": 3,     "3": 1,     "4": 1,     "5": 1,     "6": 3,     "7": 1,     "8": 1,     "9": 1,     "10": 3   },   "citable"
+haiku45nt D 0 ```json {   "levels": {     "1": 1,     "2": 2,     "3": 3,     "4": 2,     "5": 2,     "6": 3,     "7": 1,     "8": 3,     "9": 1,     "10": 2   },   "citable"
+haiku45nt D 1 ```json {   "levels": {     "1": 3,     "2": 3,     "3": 1,     "4": 1,     "5": 1,     "6": 3,     "7": 1,     "8": 1,     "9": 1,     "10": 3   },   "citable"
+haiku45nt D 0 ```json {   "levels": {     "1": 1,     "2": 2,     "3": 3,     "4": 2,     "5": 2,     "6": 3,     "7": 1,     "8": 3,     "9": 1,     "10": 2   },   "citable"
+haiku45nt D 1 ```json {   "levels": {     "1": 3,     "2": 3,     "3": 1,     "4": 1,     "5": 1,     "6": 3,     "7": 1,     "8": 1,     "9": 1,     "10": 3   },   "citable"
+grok46 D 0 {"levels": {"1": 1, "2": 2, "3": 3, "4": 2, "5": 2, "6": 3, "7": 1, "8": 3, "9": 1, "10": 2}, "citable": [3, 6, 8]}
+grok46 D 1 {"levels": {"1": 3, "2": 3, "3": 2, "4": 1, "5": 2, "6": 3, "7": 2, "8": 1, "9": 1, "10": 3}, "citable": [1, 2, 6, 10]}
+gemini38flash D 0 ```json {   "levels": {     "1": 1,     "2": 2,     "3": 3,     "4": 2,     "5": 2,     "6": 3,     "7": 1,     "8": 3,     "9": 1,     "10": 2   },   "citable"
+gemini38flash D 1 ```json {   "levels": {     "1": 3,     "2": 3,     "3": 2,     "4": 1,     "5": 2,     "6": 3,     "7": 2,     "8": 1,     "9": 1,     "10": 3   },   "citable"
+gemini31pro D 0 ERR ERROR: {"conversation_id": "b4334f17-efda-4815-aeb6-4c0c6031c1ea", "status": "ERROR", "error": "API error (attempt 1): R
+gemini31pro D 1 ERR ERROR: {"conversation_id": "b2e735b1-cf08-4c5b-ab06-828df1889d4c", "status": "ERROR", "error": "API error (attempt 1): R
+gemini31pro D 0 {   "levels": {     "1": 1,     "2": 2,     "3": 3,     "4": 2,     "5": 2,     "6": 3,     "7": 1,     "8": 3,     "9": 1,     "10": 2   },   "citable": [3, 6,
+gemini31pro D 1 ```json {   "levels": {     "1": 3,     "2": 3,     "3": 2,     "4": 1,     "5": 2,     "6": 3,     "7": 2,     "8": 1,     "9": 1,     "10": 3   },   "citable"
+haiku45 A 0 ```json {   "levels": {     "1": 2,     "2": 1,     "3": 3,     "4": 3,     "5": 1,     "6": 2   },   "citable": [3, 4] } ```
+haiku45 A 1 ```json {"levels": {"1": 3, "2": 2, "3": 1, "4": 2, "5": 3, "6": 1}, "citable": [1, 5]} ```
+haiku45 B 0 ```json {   "groups": [[1, 6], [2, 7], [3, 5]],   "outer": {     "1": "single",     "2": "double",     "3": "double",     "4": "double",     "5": "double",     
+haiku45 B 1 ```json {   "groups": [[1, 6], [2, 5], [4, 7]],   "outer": {     "1": "double",     "2": "double",     "3": "single",     "4": "single",     "5": "double",     
+haiku45 D 0 ```json {   "levels": {     "1": 1,     "2": 2,     "3": 3,     "4": 2,     "5": 2,     "6": 3,     "7": 1,     "8": 3,     "9": 1,     "10": 2   },   "citable"
+haiku45 D 1 ```json {   "levels": {     "1": 1,     "2": 3,     "3": 2,     "4": 1,     "5": 2,     "6": 3,     "7": 2,     "8": 1,     "9": 1,     "10": 3   },   "citable"
+haiku45nt D 2 ```json {   "levels": {     "1": 1,     "2": 1,     "3": 2,     "4": 2,     "5": 2,     "6": 2,     "7": 1,     "8": 1,     "9": 3,     "10": 3   },   "citable"
+haiku45nt D 3 ```json {   "levels": {     "1": 2,     "2": 3,     "3": 1,     "4": 1,     "5": 2,     "6": 2,     "7": 3,     "8": 2,     "9": 2,     "10": 2   },   "citable"
+haiku45nt D 4 ```json {   "levels": {     "1": 1,     "2": 3,     "3": 2,     "4": 2,     "5": 1,     "6": 2,     "7": 3,     "8": 1,     "9": 2,     "10": 2   },   "citable"
+haiku45nt D 5 ```json {   "levels": {     "1": 2,     "2": 2,     "3": 3,     "4": 2,     "5": 1,     "6": 3,     "7": 3,     "8": 2,     "9": 2,     "10": 1   },   "citable"
+haiku45nt D 6 ```json {   "levels": {     "1": 3,     "2": 3,     "3": 1,     "4": 2,     "5": 1,     "6": 2,     "7": 1,     "8": 2,     "9": 1,     "10": 2   },   "citable"
+haiku45nt D 7 ```json {   "levels": {     "1": 1,     "2": 1,     "3": 2,     "4": 2,     "5": 1,     "6": 1,     "7": 3,     "8": 3,     "9": 1,     "10": 1   },   "citable"
+opus55 D 2 {"levels": {"1": 1, "2": 1, "3": 2, "4": 2, "5": 2, "6": 2, "7": 1, "8": 1, "9": 3, "10": 3}, "citable": [9, 10]}
+opus55 D 3 {"levels": {"1": 2, "2": 3, "3": 1, "4": 1, "5": 2, "6": 2, "7": 3, "8": 2, "9": 2, "10": 2}, "citable": [2, 7]}
+opus55 D 4 {"levels": {"1": 1, "2": 3, "3": 2, "4": 2, "5": 1, "6": 2, "7": 3, "8": 1, "9": 2, "10": 2}, "citable": [2, 7]}
+opus55 D 5 {"levels": {"1": 2, "2": 2, "3": 3, "4": 2, "5": 1, "6": 3, "7": 3, "8": 2, "9": 2, "10": 1}, "citable": [3, 6, 7]}
+opus55 D 6 {"levels": {"1": 3, "2": 3, "3": 1, "4": 2, "5": 1, "6": 2, "7": 1, "8": 2, "9": 1, "10": 2}, "citable": [1, 2]}
+opus55 D 7 {"levels": {"1": 1, "2": 1, "3": 2, "4": 2, "5": 1, "6": 1, "7": 3, "8": 3, "9": 1, "10": 1}, "citable": [7, 8]}
+gemini38flash D 2 {"levels": {"1": 1, "2": 1, "3": 2, "4": 2, "5": 2, "6": 2, "7": 1, "8": 1, "9": 3, "10": 3}, "citable": [9, 10]} 
+gemini38flash D 3 {   "levels": {     "1": 2,     "2": 3,     "3": 1,     "4": 1,     "5": 2,     "6": 2,     "7": 3,     "8": 2,     "9": 2,     "10": 2   },   "citable": [2, 7]
+gemini38flash D 4 ```json {   "levels": {     "1": 1,     "2": 3,     "3": 2,     "4": 2,     "5": 1,     "6": 2,     "7": 3,     "8": 1,     "9": 2,     "10": 2   },   "citable"
+gemini38flash D 5 ```json {   "levels": {     "1": 2,     "2": 2,     "3": 3,     "4": 2,     "5": 1,     "6": 3,     "7": 3,     "8": 2,     "9": 2,     "10": 1   },   "citable"
+gemini38flash D 6 {"levels": {"1": 3, "2": 3, "3": 1, "4": 2, "5": 1, "6": 2, "7": 1, "8": 2, "9": 1, "10": 2}, "citable": [1, 2]} 
+gemini38flash D 7 {"levels": {"1": 1, "2": 1, "3": 2, "4": 2, "5": 1, "6": 1, "7": 3, "8": 3, "9": 1, "10": 1}, "citable": [7, 8]} 

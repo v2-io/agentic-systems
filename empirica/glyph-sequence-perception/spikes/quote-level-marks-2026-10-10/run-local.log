@@ -1,0 +1,59 @@
+gemma3-4b A 0 {"levels": {"1": 1, "2": 2, "3": 3}, "citable": [1, 2, 3, 4, 5, 6]}
+gemma3-4b A 1 {"levels": {"1": "1", "2": "2", "3": "3"}, "citable": [1, 2, 3, 4, 5, 6]}
+gemma3-4b B 0 {"groups": [[1, 2, 3, 4, 5, 6, 7]], "outer": {"1": "single|double", "2": "double|double", "3": "double|double", "4": "double|double", "5": "double|double", "6":
+gemma3-4b B 1 {"groups": [[1, 2, 5, 6], [3, 4, 7]], "outer": {"1": "double|single", "2": "double|double", "3": "single|single", "4": "double|double", "5": "double|single", "6
+gemma3-4b C 0 {"1": "«⟨The sample was dried at 40 °C for six hours.⟩»", "2": "‹⟨The second survey reached 1,204 households.⟩›", "3": "«⟪The protocol was revised after the pil
+gemma3-4b C 1 {"1": "«No effect was observed below the threshold.»", "2": "‹⟨Error bars show one standard deviation.⟩›", "3": "«⟨Participants could withdraw at any time.⟩»"}
+gemma3-4b D 0 {"levels": {"1": 1, "2": 2, "3": 3, "4": 2, "5": 2, "6": 3, "7": 1, "8": 2, "9": 2, "10": 2}, "citable": [3, 5, 6, 8, 9]}
+gemma3-4b D 1 {"levels": {"1": "1", "2": "2", "3": "3", "4": "1", "5": "2", "6": "3", "7": "2", "8": "1", "9": "2", "10": "3"}, "citable": [1, 5, 6]}
+phi4mini A 0 {"levels": {"1": "2", "2": "1", "3": "3", "4": "3", "5": "2", "6": "2"}, "citable": [3, 4]}
+phi4mini A 1 {"levels": {"1": 3, "2": 2, "3": 1, "4": 2, "5": 3, "6": 3}, "citable": [1, 3, 5, 6]}
+phi4mini B 0 {"groups": [[1, 6], [2, 7], [3], [4], [5]], "outer": {"1": "single", "2": "double", "3": "single", "4": "single", "5": "single", "6": "single"}, "inner": {"1": 
+phi4mini B 1 {"groups": [[1, 3, 4, 5, 6, 7], [2]], "outer": {"1": "single", "2": "double", "3": "single", "4": "single", "5": "single", "6": "single", "7": "single"}, "inner
+phi4mini C 0 {   "1": "⟨The sample was dried at 40 °C for six hours.⟩",   "2": "⟨The second survey reached 1,204 households.⟩",   "3": "⟪The protocol was revised after the p
+phi4mini C 1 {"1": "«No effect was observed below the threshold.»,", "2": "Error bars show one standard deviation.", "3": "«Participants could withdraw at any time.⟩>"}
+phi4mini D 0 {   "levels": {     "1": 1,     "2": 2,     "3": 3,     "4": 3,     "5": 3,     "6": 3,     "7": 3,     "8": 3,     "9": 3,     "10": 3   },   "citable": [3, 4,
+phi4mini D 1 {   "levels": {     "1": [1, 3, 4, 5, 6, 7, 8, 9, 10]   },   "citable": [3, 7, 10] }
+llama32-3b A 0 {"levels": {"1": 2, "2": 1, "3": 3}, "citable": [3, 4]}
+llama32-3b A 1 {"levels": {"1": 3, "2": 2, "3": 1, "4": 2, "5": 3, "6": 1}, "citable": [1, 3]}
+llama32-3b B 0 {"groups": [[1, 6], [2, 3, 4, 5, 7]], "outer": {"1": "single|double", "2": "double|double", "3": "single|double", "4": "double|double", "5": "double|double", "6
+llama32-3b B 1 {"groups": [[1, 2, 3, 4, 5, 7], [6]], "outer": {"1": "double|double", "2": "single|double", "3": "single|double", "4": "double|double", "5": "double|double", "6
+llama32-3b C 0 {"1": "«The sample was dried at 40 °C for six hours.», "  }
+llama32-3b C 1 {"1": "«⟪No effect was observed below the threshold.⟫»", "2": "‹⟨No effect was observed below the threshold.⟩›", "3": "«⟪Participants could withdraw at any time
+llama32-3b D 0 {"levels": {"1": 1, "2": 1, "3": 1}, "citable": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+llama32-3b D 1 {"levels": {"1": "⟪", "2": "⟪", "3": "⟪", "4": "⟪", "5": "⟪", "6": "⟪", "7": "⟪", "8": "⟪", "9": "⟪", "10": "⟪"}, "citable": [1, 2, 3, 5]}
+qwen25-3b A 0 {"levels": {"1": 1, "2": 1, "3": 1, "4": 3, "5": 1, "6": 1}, "citable": [4]}
+qwen25-3b A 1 {"levels": {"1": 1, "2": 2, "3": 3, "4": 1, "5": 3, "6": 1}, "citable": [5]}
+qwen25-3b B 0 {   "groups": [[1], [2, 4, 6, 7], [3, 5]],   "outer": {"1": "single", "2": "double", "3": "single", "4": "double", "5": "single", "6": "single", "7": "double"},
+qwen25-3b B 1 {   "groups": [[1, 2, 4, 5], [3, 7]],   "outer": {"1": "single", "2": "single", "3": "single", "4": "single", "5": "single", "6": "double", "7": "single"},   "i
+qwen25-3b C 0 {"1": "<⟨The sample was dried at 40 °C for six hours.⟩›", "2": "«⟨The second survey reached 1,204 households.⟩»", "3": "«⟪The protocol was revised after the pil
+qwen25-3b C 1 {"1": "<⟨No effect was observed below the threshold.⟩>", "2": "«⟨Participants could withdraw at any time.⟩»", "3": "«⟪Error bars show one standard deviation.⟫»"
+qwen25-3b D 0 {"levels": {"1": "‹⟨…⟩›", "2": "«⟨…⟩»", "3": "«⟪…⟫»", "4": "‹⟨…⟩›", "5": "‹⟨…⟩›", "6": "«⟪…⟫»", "7": "‹⟨…⟩›", "8": "«⟪…⟫⟫", "9": "‹⟨…⟩›", "10": "«⟨…⟩»"}, "citab
+qwen25-3b D 1 {"levels": {"1": "«⟪samples were dried overnight⟫»", "2": "«⟪at 40 °C⟫»", "3": "⟨no effect below threshold⟩", "4": "‹⟨provisional⟩›", "5": "⟨1,204 households⟩",
+qwen3-4b A 0 {   "levels": {     "1": "level 2",     "2": "level 1",     "3": "level 3",     "4": "level 3",     "5": "level 1",     "6": "level 1"   },   "citable": [     "
+qwen3-4b A 1 {   "levels": {     "1": "level 3",     "2": "level 1",     "3": "level 1",     "4": "level 1",     "5": "level 3",     "6": "level 1"   },   "citable": [     "
+qwen3-4b B 0 {"groups": [[1, 6], [2, 3, 4, 5, 7]], "outer": {"1": "single", "2": "double", "3": "double", "4": "double", "5": "double", "6": "single", "7": "double"}, "inner
+qwen3-4b B 1 {"groups": [[1, 2, 5, 6], [3, 4, 7]], "outer": {"1": "double", "2": "double", "3": "single", "4": "single", "5": "double", "6": "double", "7": "single"}, "inner
+qwen3-4b C 0 {   "1": "«⟪The sample was dried at 40 °C for six hours.⟫»",   "2": "‹⟨The second survey reached 1,204 households.⟩›",   "3": "«⟨The protocol was revised after 
+qwen3-4b C 1 {   "1": "«⟨No effect was observed below the threshold.⟩»",   "2": "‹⟨Error bars show one standard deviation.⟩›",   "3": "«⟪Participants could withdraw at any t
+qwen3-4b D 0 {   "levels": {     "1": "level 1",     "2": "level 2",     "3": "level 3",     "4": "level  2",     "5": "level 2",     "6": "level 3",     "7": "level 1",    
+qwen3-4b D 1 {   "levels": {     "1": "level 2",     "2": "level 2",     "3": "level 1",     "4": "level 1",     "5": "level 1",     "6": "level 2",     "7": "level 1",     
+mistral7b A 0 {"levels": {"1": "1", "2": "2", "3": "3", "4": "3", "5": "1", "6": "1"}, "citable": ["3", "4"]}
+mistral7b A 1 {"levels": {"1": "‹⟨...⟩›", "2": "«⟨...⟩»", "3": "«⟪...⟫»"}, "citable": ["2", "5"]}
+mistral7b B 0 {"groups": [["1", "6"], ["2", "7"], ["3", "4", "5"]], "outer": {"1": "single|single", "6": "single|single", "2": "double|double", "7": "double|double", "3": "si
+mistral7b B 1 {"groups": [["1", "2", "4", "6"], ["3", "5", "7"]], "outer": {"1": "double|single", "2": "double|double", "3": "single|single", "4": "double|single", "5": "sing
+mistral7b C 0 {"1": "«⟪The sample was dried at 40 °C for six hours.⟫»", "2": "‹⟨The second survey reached 1,204 households.⟩›", "3": "‹⟨The protocol was revised after the pil
+mistral7b C 1 {"1": "«⟨No effect was observed below the threshold.⟩»", "2": "‹⟨Error bars show one standard deviation.⟩›", "3": "«⟪Participants could withdraw at any time.⟩»"
+mistral7b D 0 {"levels": {"1": "‹⟨...⟩›", "2": "«⟨...⟩»", "3": "«⟪...⟫»"}, "citable": ["3"]}
+mistral7b D 1 {"levels": {"1": "‹", "2": "«", "3": "«⟪", "3": "«", "3": "«⟨", "4": "‹", "5": "‹", "6": "«⟫", "7": "«⟨", "8": "‹", "9": "‹", "10": "«⟫"}, "citable": ["3", "5"]
+gptoss20b A 0 ERR http: HTTP Error 500: Internal Server Error
+gptoss20b A 1 ERR http: HTTP Error 500: Internal Server Error
+gptoss20b B 0 ERR http: HTTP Error 500: Internal Server Error
+gptoss20b B 1 ERR http: HTTP Error 500: Internal Server Error
+gptoss20b C 0 ERR http: HTTP Error 500: Internal Server Error
+gptoss20b C 1 ERR http: HTTP Error 500: Internal Server Error
+gptoss20b D 0 ERR http: HTTP Error 500: Internal Server Error
+gptoss20b D 1 ERR http: HTTP Error 500: Internal Server Error
+deepseekr1-14b A 0   {"levels": {"1": 1, "2": 2, "3": 3, "4": 3, "5": 1, "6": 2}, "citable": [3, 4]}
+deepseekr1-14b A 1   {"levels": {"1": 1, "2": 2, "3": 1, "4": 2, "5": 3, "6": 1}, "citable": [1, 5]}
+deepseekr1-14b B 0   ```json {   "groups": [[1, 6], [2, 7], [3, 4, 5]],   "outer": {     "1": "single",     "2": "double",     "3": "double",     "4": "double",     "5": "double",
