@@ -1,0 +1,29 @@
+=== (4) continued; sections 1-3, 4a-4c are in checks-output-partial.txt ===
+OU(alpha=2) reference (rerun)                              MC E[tau] =    0.940 +-  0.014  (CV 0.84)   lower bound Phi_alpha(0) =    0.921  ratio  1.020
+(b) diag(2, 10) (rerun)                                    MC E[tau] =    1.959 +-  0.032  (CV 0.89)   lower bound Phi_alpha(0) =    0.921  ratio  2.128   upper bound Phi_abar(0) =  124.467
+(d) dip drift: bulk g=5, floor 2 only on a thin shell at r=0.5 (predict >>, below Phi_5) MC E[tau] =    3.519 +-  0.061  (CV 0.94)   lower bound Phi_alpha(0) =    0.921  ratio  3.821   upper bound Phi_abar(0) =    3.800
+(e) non-normal, sym eig {2,10} + rotation (predict in [Phi_2, Phi_10]) MC E[tau] =    2.611 +-  0.045  (CV 0.94)   lower bound Phi_alpha(0) =    0.921  ratio  2.835   upper bound Phi_abar(0) =  124.467
+
+=== (4') same adversarial set at kappa = 4 (alpha floor 4) ===
+OU(alpha=4)                                                MC E[tau] =    2.244 +-  0.047  (CV 0.93)   lower bound Phi_alpha(0) =    2.208  ratio  1.016
+(a) tangential, tight at 4 (predict ==)                    MC E[tau] =    2.239 +-  0.047  (CV 0.95)   lower bound Phi_alpha(0) =    2.208  ratio  1.014
+(b) diag(4,12) (predict >)                                 MC E[tau] =    5.798 +-  0.129  (CV 1.00)   lower bound Phi_alpha(0) =    2.208  ratio  2.626   upper bound Phi_abar(0) =  623.186
+
+=== (5) lifetime bound P_0(tau <= L) <= L / Phi_alpha(0), n=2, alpha=2, kappa=2 ===
+L= 0.5: bound 0.543   MC OU 0.342   MC diag(2,10) 0.163   Prop A.1S(iv) bound n*sigma^2*L/R^2 = 1.000
+L= 1.0: bound 1.000   MC OU 0.661   MC diag(2,10) 0.361   Prop A.1S(iv) bound n*sigma^2*L/R^2 = 1.000
+L= 2.0: bound 1.000   MC OU 0.908   MC diag(2,10) 0.636   Prop A.1S(iv) bound n*sigma^2*L/R^2 = 1.000
+L= 4.0: bound 1.000   MC OU 0.993   MC diag(2,10) 0.885   Prop A.1S(iv) bound n*sigma^2*L/R^2 = 1.000
+At kappa = 6 (alpha=6, n=2): Phi(0) = 6.97  so P(exit by L=1) <= 0.1435 ; (iv) gives 1
+At kappa = 10 (alpha=10, n=2): Phi(0) = 124.47  so P(exit by L=1) <= 0.00803
+
+=== (6) stochastic domination spot-check: survival P(tau > t), diag(2,10) vs OU(2) ===
+t=0.5: OU 0.658   diag(2,10) 0.837   (domination predicts diag >= OU)
+t=1: OU 0.339   diag(2,10) 0.639   (domination predicts diag >= OU)
+t=2: OU 0.092   diag(2,10) 0.364   (domination predicts diag >= OU)
+t=4: OU 0.007   diag(2,10) 0.115   (domination predicts diag >= OU)
+
+=== (7) Phi is decreasing in r and the start-dependence: n=2, alpha=2 ===
+[0.921, 0.889, 0.778, 0.536, 0.269, 0.0]
+done
+exit 0

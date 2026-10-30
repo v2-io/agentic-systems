@@ -1,0 +1,51 @@
+*KR **C.2** / item C1 (expected exit time under Model S). Top intent, Joseph: "Complete 'in-place' refactor of ASF — meta, all artifacts, and theory itself."*
+
+# Debrief — for Joseph
+
+Written after re-reading `03-derivation.md` and `04-numerics.md` as they now stand, not from my memory of doing the work.
+
+## The question
+
+Part I's stochastic containment result says: when the disturbance is random noise with no upper bound (Model S), an agent whose correction satisfies the sector condition on a ball of radius $R$ will leave that ball eventually, with probability one, no matter how strong its correction is. The front door turned that into "no correction strength buys containment." The owner review's Part I explorer objected that the agent-relevant quantity is not *whether* but *when*, sketched that the expected time to leave should grow like $\exp(\alpha R^2/\sigma_w^2)$, and left three things owed: the Freidlin–Wentzell hypotheses the sketch leaned on (it needs a Lipschitz drift, which the sector condition does not give), the constant in front of the exponential for a general corrector, and a literature check. The brief asked me to push that as far as it goes.
+
+## What I found
+
+**The expected time to leave the certified region is bounded below, at every noise level and in every dimension, by an explicit function — the mean exit time of the simplest possible corrector (the linear, isotropic one, $F = \alpha\delta$) from the same ball.** No asymptotics, no Lipschitz, no gradient structure. The reason is one observation (assumes the sector condition as stated in `#form-sector-condition`): the sector condition $\delta^\top F \geq \alpha\lVert\delta\rVert^2$ is exactly a lower bound on the *radial* component of the correction, and leaving a ball is exactly a statement about the radius. So the distance-from-target process of any sector-satisfying corrector has drift pointwise at least as inward as the linear corrector's, with the same noise. Comparing the two radial processes (an Itô–Dynkin argument on the linear corrector's known mean-exit-time function) gives the bound on the mean; comparing them path by path under the same noise gives more — the *whole distribution* of the exit time for the sector corrector lies to the right of the linear one's (it survives longer at every time, not just on average).
+
+The benchmark itself is classical and I wrote it down in closed form for every dimension (an incomplete-gamma double integral; in one dimension it is the explorer's formula). Its large-$\kappa$ form, $\kappa = \alpha R^2/\sigma_w^2$, is
+
+$$\mathbb{E}[\text{time in region}] \approx \frac{\Gamma(n/2)}{2\alpha}\,\kappa^{-n/2}\,e^{\kappa},$$
+
+which is Arrhenius–Kramers with $\kappa$ as barrier height over temperature — an isomorphism, not an analogy, since the linear corrector *is* a Brownian particle in a quadratic well. The dimension lives only in the prefactor; the exponent is $\alpha R^2/\sigma_w^2$ in every dimension.
+
+**The bound is attained, and the condition for attaining it is the one canon already has.** Lemma A.1N says the Model D threshold is an agent-level if-and-only-if exactly when the corrector's sector bound is "radially tight" (correction strength along the radius is exactly $\alpha$, with any tangential component allowed). The same condition makes the exit-time bound an equality, in mean and in distribution. So radial tightness is not a special case of one result; it is the hypothesis under which both the deterministic threshold and the stochastic exit time are exact. For a corrector with slack above its floor (stronger correction somewhere), the bound is strict and can be arbitrarily loose — Lemma A.1N's dip counterexample is a case where it is loose by design — which is the Model S face of A.1N's "the floor is not the barrier." Where an upper sector constant $\bar\alpha$ exists, the same argument bounds the exit time *above* by the $\bar\alpha$ benchmark.
+
+**What this does to what the persistence condition certifies.** The Model S structural-persistence condition, $\alpha \gt n\sigma_w^2/(2R^2)$, is exactly $\kappa \gt n/2$. At that threshold the benchmark's expected time in the region is about one correction time constant: $\alpha\,\mathbb{E}[\tau]$ is $0.60, 0.66, 0.71, 0.78, 0.89, 1.02, 1.20$ for $n = 1, 2, 3, 5, 10, 20, 50$. An agent meeting the condition with no margin typically leaves its certified region about as fast as it corrects. The condition certifies the typical *scale* of mismatch — canon already says this — and the exit-time result lets canon say precisely what it does not certify, and what would: to stay inside for a lifetime $L$ with exit probability at most $\epsilon$, it suffices that the benchmark's expected exit time exceed $L/\epsilon$, which to leading order is
+
+$$\kappa - \tfrac n2\log\kappa \;\geq\; \log\frac{2\alpha L}{\epsilon\,\Gamma(n/2)}.$$
+
+Doubling the lifetime, or halving the risk, costs $\log 2$ in $\kappa$, i.e. in $(R/R^\ast_S)^2 \cdot n/2$ — the squared ratio of certified radius to RMS radius, the margin the mean-square condition only asks to exceed one. That is the shape of the result in a sentence: Model D containment is free past its threshold (invariance, forever); Model S containment is paid for, at a price logarithmic in lifetime over risk. ("Paid for" and "price" are my words — see the do-not-inherit list in the integration plan.)
+
+**The front-door sentence.** "No correction strength buys containment" is true of the infinite horizon and false in the reading a reader takes from it (that correction strength is irrelevant to staying in the region). The repair is an added clause, not a swap: correction strength cannot buy forever; it buys expected time in the region exponentially in $\alpha R^2/\sigma_w^2$, so the certain eventual event can be pushed past any lifetime at a logarithmic price. The A.2 integrator owns the wording.
+
+## Completion state
+
+**Strengthened past the claim.** The explorer asked for the exponent; what came out is the non-asymptotic bound with explicit benchmark in every dimension, the distributional domination, the equality condition shared with Lemma A.1N, a finite-lifetime containment bound that is exponentially small in $\kappa$ where canon's existing one (Prop A.1S(iv)) is only polynomial, and the tenure-indexed sufficient condition. The explorer's three owed items dissolve rather than get discharged: Freidlin–Wentzell is not needed for the bound (only for identifying its exponent as a quasi-potential barrier where FW applies), Lipschitz is not needed, and the prefactor is the benchmark's. The explorer's comparison argument on the quasi-potential is recovered as a corollary and is sharp *for an instance* where this result is sharp *over the class* — an honest division of labor, not a replacement.
+
+## What it does not say
+
+- Leaving the certified ball is losing the certificate, not dying. `#sketch-structural-adaptation-genericity`'s point stands untouched: $R$ is where the sector bound is certified, not where correction breaks, and the linear benchmark leaves and comes back. This result gives that hand-off its timescale and nothing more.
+- Isotropic noise, continuous time, finite variance. Anisotropic noise (the explorer's guess of an $\alpha$ in the $\Sigma_w^{-1}$ metric is plausible and underived), discrete time, state-dependent noise are open. Heavy tails are the regime where the exponential tenure genuinely does not exist — under jump noise exit is one large jump and the expected exit time is polynomial in the noise scale (literature, cited not derived; the citation is pending the literature scan, which was cut off by a usage limit and resumed).
+- For a general sector corrector the result is a lower bound on survival; the "exit is a memoryless hazard" reading is established only for the benchmark.
+
+## Tangents and corrections, in the record
+
+- My pre-numerics prediction that $\alpha\,\mathbb{E}[\tau]$ at the mean-square threshold *decreases* with dimension was wrong; it slowly increases. The derivation now states the computed numbers and withdraws my mechanism.
+- One adversarial instance (a radially tight corrector with a fast nonlinear rotation) first came out $8\%$ *below* the benchmark, which would contradict the equality clause. It was the integrator: Euler–Maruyama applied to a fast rotation inflates the radius each step. A rotation-exact scheme and a finer step both restore agreement in mean and in the survival curve. Recorded because a verifier should know it was examined.
+- Another adversarial instance was over-designed (bulk correction so strong the expected exit time was $\sim e^{20}$) and had to be killed and rerun milder. Design error, mine.
+- Not pursued but noticed: expected tenure grows exponentially in $\kappa$, and `#deriv-persistence-cost` prices $\alpha$ (hence $\kappa$ at fixed $R, \sigma_w$) at $n\alpha/2$ nats per unit time — tenure is exponentially cheap in information rate. A sentence your "price of contact" thesis would want; discussion-grade; in the integration plan.
+- The corpus now has two "exit times": the NeurIPS back-integration spike carries a Model D *below-threshold* bound (escape guaranteed within a computable time); this one is Model S *above-threshold* (escape delayed exponentially). Both should be visible side by side if both land.
+
+## Where everything is
+
+`README.md` (entrypoint) · `01-neighborhood-map.md` (what canon held, written first) · `02-literature.md` (scan, in progress by a Sonnet agent) · `03-derivation.md` (the mathematics, tiered) · `04-numerics.md` (checks, corrections, limits) · `proposed-integration-plan.md` (for the verifier and integrator; includes the do-not-inherit list) · `checks*.py`, `checks*-output.txt`.

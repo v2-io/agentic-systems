@@ -1,0 +1,36 @@
+=== (1) 1-D: Phi vs explorer's quadrature, sigma = R = 1 (kappa = alpha) ===
+ alpha     Phi(0)  explorer exact  alpha*Phi       asym  Phi/asym
+   0.5     1.1915          1.1915      0.596     4.1327     0.288
+   1.0     1.4452          1.4452      1.445     2.4090     0.600
+   2.0     2.2508          2.2508      4.502     2.3152     0.972
+   3.0     3.7873          3.7873     11.362     3.4257     1.106
+   4.0     6.8582          6.8582     27.433     6.0483     1.134
+   6.0    26.9823         26.9823    161.894    24.3268     1.109
+   8.0   126.0214        126.0214   1008.171   116.7524     1.079
+
+=== (2) n-D OU: Phi(0) vs MC, and vs the Laplace asymptotic; sigma = R = 1 ===
+n=2 alpha=1.0 kappa=1.0: Phi(0)=  0.6590  MC=  0.6959+-0.0120  asym=  1.3591  Phi/asym=0.485
+n=2 alpha=2.0 kappa=2.0: Phi(0)=  0.9210  MC=  0.9511+-0.0174  asym=  0.9236  Phi/asym=0.997
+n=2 alpha=3.0 kappa=3.0: Phi(0)=  1.3763  MC=  1.4148+-0.0288  asym=  1.1159  Phi/asym=1.233
+n=3 alpha=1.5 kappa=1.5: Phi(0)=  0.4710  MC=  0.4745+-0.0077  asym=  0.7207  Phi/asym=0.654
+n=3 alpha=3.0 kappa=3.0: Phi(0)=  0.7440  MC=  0.7578+-0.0139  asym=  0.5709  Phi/asym=1.303
+n=5 alpha=2.5 kappa=2.5: Phi(0)=  0.3107  MC=  0.3140+-0.0046  asym=  0.3278  Phi/asym=0.948
+Phi/asym -> 1 as kappa grows (n=2): [np.float64(1.294), np.float64(1.175), np.float64(1.103), np.float64(1.072)]
+Phi/asym -> 1 as kappa grows (n=5): [np.float64(1.733), np.float64(1.314), np.float64(1.154), np.float64(1.095)]
+
+=== (3) alpha * Phi(0) at the mean-square threshold kappa = n/2 (R = R*_S) ===
+n=  1: kappa=n/2=  0.5  alpha*E[tau] = 0.5957
+n=  2: kappa=n/2=  1.0  alpha*E[tau] = 0.6590
+n=  3: kappa=n/2=  1.5  alpha*E[tau] = 0.7064
+n=  5: kappa=n/2=  2.5  alpha*E[tau] = 0.7767
+n= 10: kappa=n/2=  5.0  alpha*E[tau] = 0.8885
+n= 20: kappa=n/2= 10.0  alpha*E[tau] = 1.0157
+n= 50: kappa=n/2= 25.0  alpha*E[tau] = 1.2018
+and at kappa = n/2 + c for n=3: [(0, 0.706), (1, 1.574), (2, 3.124), (4, 11.978), (6, 51.237)]
+
+=== (4) adversarial sector drifts, n = 2, sigma = R = 1, alpha floor = 2 (kappa = 2) ===
+OU(alpha=2) reference                                      MC E[tau] =    0.970 +-  0.015  (CV 0.83)   lower bound Phi_alpha(0) =    0.921  ratio  1.053
+(a) tangential nonlinear field, radially tight (predict ==) MC E[tau] =    0.895 +-  0.014  (CV 0.84)   lower bound Phi_alpha(0) =    0.921  ratio  0.972
+(b) diag(2, 10): floor 2, ceiling 10 (predict strict >)    MC E[tau] =    1.984 +-  0.033  (CV 0.91)   lower bound Phi_alpha(0) =    0.921  ratio  2.155   upper bound Phi_abar(0) =  124.467
+(c) kinked radial F, floor 2 attained on r<0.5 (predict >) MC E[tau] =    1.769 +-  0.029  (CV 0.88)   lower bound Phi_alpha(0) =    0.921  ratio  1.921
+exit 143

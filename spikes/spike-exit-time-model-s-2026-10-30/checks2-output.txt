@@ -1,0 +1,17 @@
+Phi(0) for n=2, alpha=2, kappa=2: 0.9210
+
+=== (A) discrete-monitoring bias, OU n=2 alpha=2 ===
+dt=0.001: MC 0.9767 +- 0.0153   Phi(0)=0.9210   BGK-corrected Phi(0; R+beta1 sigma sqrt(dt))=0.9818
+dt=0.0001: MC 0.9496 +- 0.0145   Phi(0)=0.9210   BGK-corrected Phi(0; R+beta1 sigma sqrt(dt))=0.9398
+dt=2e-05: MC 0.9408 +- 0.0200   Phi(0)=0.9210   BGK-corrected Phi(0; R+beta1 sigma sqrt(dt))=0.9293
+
+=== (B) radially tight tangential field, rotation-exact splitting ===
+dt=0.0001: OU  E[tau] 0.9310 +- 0.0141   survival [0.884, 0.648, 0.33, 0.097]
+dt=0.0001: TAN E[tau] 0.9109 +- 0.0138   survival [0.882, 0.641, 0.32, 0.092]   (predict equal to OU within MC error)
+dt=2e-05: OU  E[tau] 0.9059 +- 0.0195   survival [0.88, 0.637, 0.337, 0.085]
+dt=2e-05: TAN E[tau] 0.9183 +- 0.0193   survival [0.866, 0.639, 0.34, 0.094]   (predict equal to OU within MC error)
+
+=== (C) same field, plain Euler-Maruyama at dt=2e-5 (artifact should shrink) ===
+plain EM dt=2e-5: E[tau] 0.9421 +- 0.0198   (checks.py had 0.895 at dt=1e-4; OU MC at this dt is above)
+done
+exit 0
