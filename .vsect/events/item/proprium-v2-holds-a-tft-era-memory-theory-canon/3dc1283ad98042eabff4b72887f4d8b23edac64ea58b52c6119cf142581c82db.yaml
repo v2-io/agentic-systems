@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 3dc1283ad98042eabff4b72887f4d8b23edac64ea58b52c6119cf142581c82db
+at: 2026-10-30T23:32:27Z
+store: asf
+act: raise
+about: item:proprium-v2-holds-a-tft-era-memory-theory-canon
+actor:
+  name: drain-influx-2
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:proprium-v2-holds-a-tft-era-memory-theory-canon
+source: 'The same framework, marked ''Undeveloped -- Next Priority'' on 2026-03-01: ~/src/memorata/memory-curation/research-xref/agentic-tft-session-insights.md (''Emergent Regime Framework'': memory types derived from each knowledge dimension''s access and update frequency relative to the loop period, with a migration threshold; PROPRIUM components as names for naturally emerging regimes; and a three-level split for how far to specify an architecture: functional needs / structural constraints / mechanistic hypotheses). Relayed in msc/inside-out-2026-10/influx-scout/periphery.md §6, §8 item 3.'

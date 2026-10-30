@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 455fea1527dfec5d28d7fe3820a1539c8ef9fd2cc3d35467cc4346a4dff5f68e
+at: 2026-10-30T23:32:27Z
+store: asf
+act: raise
+about: item:proposals-d-4-sp-12-commitment-resource-temporal-d-1dea
+actor:
+  name: drain-influx-2
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:proposals-d-4-sp-12-commitment-resource-temporal-d-1dea
+source: 'Literature map for all three legs (influx drain 2, periphery): ~/src/scheduling-tech/ref/formal-theory.md (779 lines, 2026-10-24/27) answers eleven formal questions: commitments as a typed lifecycle (Winograd and Flores'' Conversation for Action, 1986; Sull and Spinosa 2007), sequencing (Smith''s rule, Gittins, cost of delay), preemption costs (expected completion (1/lambda + D)(e^{lambda T} - 1) under preempt-repeat, linear under preempt-resume; Young/Daly checkpointing), present bias and personal rules (O''Donoghue and Rabin; Ainslie). None of these names appears in canon. Its emergency-department case (KC, Staats, Kouchaki and Gino 2020: shortest-job-first optimal for the measured objective; the error is in the objective) is a field instance of the satisfaction-gap vs control-regret split, with a provenance flag the source notes (a co-author''s later misconduct finding). Relayed in msc/inside-out-2026-10/influx-scout/periphery.md §6.'
