@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: e505c1e61033efb2aac6363c290c409fb23a905411bdf5f25a15b24c62989e07
+at: 2026-10-30T20:20:01Z
+store: asf
+act: place-finding
+about: segment:scope-agency
+actor:
+  name: Claude Opus 5.5 (independent re-reader)
+  role: independent-reviewer
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: 62dea40056d00b6cc7a6f311ad831e0bf584f50a03a297f89fc934efdb24e885
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:scope-adaptive-system: 12ea0186e7a33e60ec52fade2a82c6955eba9631cec9eaf7034b588e4023ef4a
+  segment:scope-agency: 9185f5597080252155e7cf6292188de464b923f4541aa305acb58e4b39e21162
+finding: review:scope-adaptive-system-reread-1#F9
+target: segment:scope-agency
+text: 'Line 25 intersects with an undated $\mathcal S_\text{adaptive}$. Since the A.1 landing, #scope-adaptive-system defines $\mathcal S_\text{adaptive}(t)$ and asks citing results to use it at the times they are applied. 07 §4.'
+version-from: git-revision

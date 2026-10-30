@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: dde2dc836fabd89de0a6929abf61124fb142432bf8c807838c43787a5924e9ae
+at: 2026-10-30T20:19:59Z
+store: asf
+act: rederive
+about: segment:scope-adaptive-system
+atom: 38f0c1ba09023e1261f1f4efca8402702e2e5e7abe68337199a192f712192bb6
+actor:
+  name: Claude Opus 5.5 (independent re-reader)
+  role: independent-reviewer
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: 62dea40056d00b6cc7a6f311ad831e0bf584f50a03a297f89fc934efdb24e885
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:scope-adaptive-system: 12ea0186e7a33e60ec52fade2a82c6955eba9631cec9eaf7034b588e4023ef4a
+committed: before
+criterion: 'Item (c) as a membership claim: with $o_t = \Omega_t$ on a finite space and independent Dirichlet rows, is the learner in at every finite $t$?'
+effective-version: bac67edf45cfa9bd0674ca79be3c36ae3b6a19012f165ff744784190be64f721
+from: review:scope-adaptive-system-reread-1#C2
+line: derivation
+outcome: confirmed
+recheck: 07 §1; one-step information equals $H(\text{posterior-mean row}) - \mathbb E H(\text{row}) \gt 0$ by strict concavity
+target-version: 12ea0186e7a33e60ec52fade2a82c6955eba9631cec9eaf7034b588e4023ef4a
+version-from: git-revision

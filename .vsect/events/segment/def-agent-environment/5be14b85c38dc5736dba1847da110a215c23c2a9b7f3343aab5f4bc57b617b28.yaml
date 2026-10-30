@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: 5be14b85c38dc5736dba1847da110a215c23c2a9b7f3343aab5f4bc57b617b28
+at: 2026-10-30T20:20:00Z
+store: asf
+act: place-finding
+about: segment:def-agent-environment
+actor:
+  name: Claude Opus 5.5 (independent re-reader)
+  role: independent-reviewer
+normalizer: vsect-norm/0
+basis:
+  segment:def-agent-environment: 62dea40056d00b6cc7a6f311ad831e0bf584f50a03a297f89fc934efdb24e885
+finding: review:scope-adaptive-system-reread-1#F7
+target: segment:def-agent-environment
+text: 'Line 43 defines an Adaptive System as "the coupling under a perception channel plus residual uncertainty". By #scope-adaptive-system item (a), residual uncertainty is necessary, not sufficient; this is the wording 7b429bcc removed from the '
+version-from: git-revision

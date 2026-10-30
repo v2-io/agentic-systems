@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: def861c4a1a863fc92bd16f22c151539c79c97f4e909606b0be4860c8bf0c466
+at: 2026-10-30T20:19:59Z
+store: asf
+act: run
+about: segment:scope-adaptive-system
+atom: 38f0c1ba09023e1261f1f4efca8402702e2e5e7abe68337199a192f712192bb6
+actor:
+  name: Claude Opus 5.5 (independent re-reader)
+  role: independent-reviewer
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: 62dea40056d00b6cc7a6f311ad831e0bf584f50a03a297f89fc934efdb24e885
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:scope-adaptive-system: 12ea0186e7a33e60ec52fade2a82c6955eba9631cec9eaf7034b588e4023ef4a
+committed: before
+criterion: Is the predicate's quantity $\sup_{\pi'} I(\theta; F_t \mid \mathcal C_t)$ for the Dirichlet learner decaying ("roughly as $1/(2n)$" in (c); "the information tends to zero" in Discussion, "Two kinds of warrant"), in contrast to a standing Kalman warrant?
+effective-version: bac67edf45cfa9bd0674ca79be3c36ae3b6a19012f165ff744784190be64f721
+from: review:scope-adaptive-system-reread-1#C3
+line: simulation
+outcome: broken
+recheck: 07 §2.1 and its appendix script; information about a Beta(6,6) row in the next $m$ draws, against $\tfrac12 \log((n+m)/n)$; Kalman $q = r = 1$ whole-future information at steady state
+target-version: 12ea0186e7a33e60ec52fade2a82c6955eba9631cec9eaf7034b588e4023ef4a
+version-from: git-revision
