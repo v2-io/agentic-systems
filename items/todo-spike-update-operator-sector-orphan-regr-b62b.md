@@ -3,10 +3,11 @@ kind: item
 provenance: imported
 source: TODO.md:472
 section: TODO — Miscellaneous & details › 2026-05-12 (late) — Spike audit triage (99 spike files surveyed via 3 parallel agents)
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:deriv-sector-condition, segment:disc-identifiability-floor]
+rechecked: 2026-10-30T21:15:23Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: G.2
 ---
 
 # `spike-update-operator-sector` — orphan, regression-checked CLEAR 2026-05-17 (genuine deferred orphan, not corrected-away); tractable landing pending: $\alpha$-

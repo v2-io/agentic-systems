@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: e3e50c011814330fae25db96672fc9f26a4fe484a84bb2cb431309891edc6f30
+at: 2026-10-30T21:15:23Z
+store: asf
+act: recheck
+about: item:todo-spike-update-operator-sector-orphan-regr-b62b
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 9796e5df+dirty
+criterion: Written 2026-05-17 (9a51728f). spikes/spike-update-operator-sector.md still live at top level; ROUTING.md:51 and INDEX.md:407 say regression-cleared, landing pending. No (O-A2') or alpha-op/beta-op operator-level partition anywhere in 0*/src (grep), and disc-identifiability-floor has no operator-layer no-go. The spike's §3.3 partition (Bayesian alpha-op derived; variational attenuated by cos theta_var; rule-based fails) is the content to land.
+outcome: holds
+owner: G.2

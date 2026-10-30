@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 805b9f52f4d14304c6d3355a3e500261cbf13f1f933a4f1855b10fad5dcfa4ec
+at: 2026-10-30T21:16:33Z
+store: asf
+act: recheck
+about: item:todo-heredity-axiom-for-disc-composition-cons-3a39
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4f5912b3+dirty
+criterion: Written 2026-05 (6f556aa0). No heredity axiom or composite-admissibility-from-sub-agent-properties result in any segment; disc-composition-consistency's WN still records (CM2-M) as Slotine-imported and the A2' Tier structure as is. A scoping spike that has not been run; no KR covers it.
+outcome: holds
+owner: unassigned

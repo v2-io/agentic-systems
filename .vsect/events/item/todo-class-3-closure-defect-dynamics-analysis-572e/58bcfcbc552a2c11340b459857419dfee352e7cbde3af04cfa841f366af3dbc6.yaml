@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 58bcfcbc552a2c11340b459857419dfee352e7cbde3af04cfa841f366af3dbc6
+at: 2026-10-30T21:16:33Z
+store: asf
+act: recheck
+about: item:todo-class-3-closure-defect-dynamics-analysis-572e
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4f5912b3+dirty
+criterion: Written 2026-05-09 (6aae9789). Move F is still pending in spikes/temporal-nesting-rg/99-verdict.md:97 ('pending Class-3 closure-defect analysis to land as derived rather than suggestive') and in spikes/class-coercion-wrapping/99-verdict.md:160; no segment computes closure defects for a Class-3 system. hyp-directed-separation-under-composition remains conditional. A research spike with no KR owner.
+outcome: holds
+owner: unassigned

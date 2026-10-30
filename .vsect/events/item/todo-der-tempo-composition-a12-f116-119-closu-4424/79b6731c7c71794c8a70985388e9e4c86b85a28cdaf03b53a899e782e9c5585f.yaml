@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 79b6731c7c71794c8a70985388e9e4c86b85a28cdaf03b53a899e782e9c5585f
+at: 2026-10-30T21:15:49Z
+store: asf
+act: recheck
+about: item:todo-der-tempo-composition-a12-f116-119-closu-4424
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 05d458db+dirty
+criterion: 'Written 2026-08-22 (55395d9a). Read der-tempo-composition whole at HEAD. The double count is live and localizable: C_coord := T_joint - T_c (:39) already removes closure correction from T_c (floor eps* nu_c/||delta_crit||, :86), yet :100 states the composite ''persists iff T_c > rho_eff/||delta_crit||'' with rho_eff = rho_ext + eps* nu_c (:80), which charges the closure defect a second time (at the floor it is T_joint > (rho_ext + 2 eps* nu_c)/||delta_crit||). The same segment''s :118 states the single-count form ''T_c > rho_ext/||delta_crit||''. The ''necessary condition in joint-baseline terms'' at :102 is valid under either accounting, since it only uses T_c <= T_joint. The figure-spec WN at :165 still carries the ''do not subtract it twice'' warning without the body choosing a ledger.'
+outcome: holds
+owner: C.1
+restated: der-tempo-composition :100 and :118 state two different composite persistence conditions; :100 charges the closure defect twice (once in T_c via C_coord, once in rho_eff). Choose one ledger (T_c net of reconciliation against rho_ext, or gross tempo against rho_eff), make :100 and :118 agree, and drop the unsupported 'iff' unless derived.

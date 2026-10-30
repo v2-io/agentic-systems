@@ -3,10 +3,11 @@ kind: item
 provenance: imported
 source: TODO.md:192
 section: TODO — Miscellaneous & details › Queued spike work
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:der-tempo-composition, segment:der-class-coercion-via-wrapping]
+rechecked: 2026-10-30T21:15:49Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: unassigned
 ---
 
 # Detailed tempo accounting for canonical wrapper architectures (deferred from class-coercion cycle 2026-05-09) — quantify $C_\text{coord}^\text{wrap}$ for ReAct-

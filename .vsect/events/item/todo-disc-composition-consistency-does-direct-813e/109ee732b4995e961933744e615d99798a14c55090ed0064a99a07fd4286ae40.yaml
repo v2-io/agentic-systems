@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 109ee732b4995e961933744e615d99798a14c55090ed0064a99a07fd4286ae40
+at: 2026-10-30T21:16:32Z
+store: asf
+act: recheck
+about: item:todo-disc-composition-consistency-does-direct-813e
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4f5912b3+dirty
+criterion: 'Written 2026-05-30 (e47afff9). Two pieces. (1) ''Does directed separation compose?'' already has its own segment, hyp-directed-separation-under-composition (status conditional); its Case 1 is tagged [Hypothesis] though, given its premises, it is a one-line composition argument. But it cannot be promoted as written: audit 526815''s F122 (Case 1 also needs a goal-blind macro projection/aggregation Lambda, else coupling re-enters) and F124 (the Discussion''s ''fixed-API LLM composites are Case 1 though each agent is Class 3'' contradicts the premise that each A_i is goal-blind) are unaddressed at HEAD and in no tracker; F123 (some goal-dependent routing is allowed selection, not processing) needs a criterion. The segment''s WN says these were ''routed to the findings track'', which never happened. (2) The boundary-choice rationality principle (471203 Challenge 14) is still only WN gold at disc-composition-consistency:126.'
+outcome: holds
+owner: B.2
+restated: Promote Case 1 of hyp-directed-separation-under-composition to a derivation after adding the missing goal-blind-projection premise (F122), moving the LLM-composite claim under the wrapper case (F124), and stating the selection-vs-processing criterion for routing (F123); separately, the boundary-choice rationality principle for disc-composition-consistency is an open theory edge.

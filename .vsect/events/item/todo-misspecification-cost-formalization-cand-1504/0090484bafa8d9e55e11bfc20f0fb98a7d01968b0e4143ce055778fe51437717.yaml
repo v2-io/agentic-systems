@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0090484bafa8d9e55e11bfc20f0fb98a7d01968b0e4143ce055778fe51437717
+at: 2026-10-30T21:15:23Z
+store: asf
+act: recheck
+about: item:todo-misspecification-cost-formalization-cand-1504
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 9796e5df+dirty
+criterion: The second of the three Adjacent Floors named in TODO.md:159 (and in disc-identifiability-floor:133-135, still open at HEAD); same work, written the same day (f88c3dc7).
+of: item:todo-adjacent-identifiability-floors-disc-ide-90c4
+outcome: duplicate

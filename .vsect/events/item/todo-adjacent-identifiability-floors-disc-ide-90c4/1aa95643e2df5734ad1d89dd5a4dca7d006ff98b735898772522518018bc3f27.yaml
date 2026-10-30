@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 1aa95643e2df5734ad1d89dd5a4dca7d006ff98b735898772522518018bc3f27
+at: 2026-10-30T21:15:23Z
+store: asf
+act: recheck
+about: item:todo-adjacent-identifiability-floors-disc-ide-90c4
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 9796e5df+dirty
+criterion: Written 2026-04-28 (f88c3dc7). disc-identifiability-floor:127-139 at HEAD still states all three as open research directions (causal-IB for interventional relevance, misspecification cost under a finite budget, tier-switching cost); no segment formalizes any of them. deriv-causal-ib-exploration is not the first one despite its slug (it derives the survival exploration drive, not an interventional-relevance floor). No INTENT KR covers new research directions, so the owner is unassigned; the canon section already carries the same three directions, which makes this tracker line a second copy of a canon statement.
+outcome: holds
+owner: unassigned
+restated: Three candidate identifiability floors stated as open in disc-identifiability-floor §Adjacent Floors; research directions, no KR owner yet.

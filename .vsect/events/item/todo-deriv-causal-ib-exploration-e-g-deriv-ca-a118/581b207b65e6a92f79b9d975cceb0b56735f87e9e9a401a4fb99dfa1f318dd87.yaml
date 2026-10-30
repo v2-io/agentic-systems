@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 581b207b65e6a92f79b9d975cceb0b56735f87e9e9a401a4fb99dfa1f318dd87
+at: 2026-10-30T21:15:23Z
+store: asf
+act: recheck
+about: item:todo-deriv-causal-ib-exploration-e-g-deriv-ca-a118
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 9796e5df+dirty
+criterion: Written 2026-05 (33e17eff). Slug unchanged at HEAD; 9 canon files reference it. The segment's subject is the survival-imperative exploration drive (lambda_surv proportional to 1/U_M from the Model-D persistence constraint), not causal IB; both names the tracker suggests keep 'causal-ib', which names a tool the segment does not use (it invokes ordinary IB only in its beta-vs-rho aside). No rename decision in TERMINOLOGY-TODO or terminology/.
+outcome: holds
+owner: F.1
+restated: 'Rename #deriv-causal-ib-exploration to a slug naming its subject, the survival exploration drive (e.g. deriv-survival-exploration-drive); the tracker''s suggested names keep the wrong noun.'

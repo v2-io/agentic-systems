@@ -3,10 +3,11 @@ kind: item
 provenance: imported
 source: TODO.md:194
 section: TODO — Miscellaneous & details › Queued spike work
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:hyp-directed-separation-under-composition, segment:der-class-coercion-via-wrapping]
+rechecked: 2026-10-30T21:16:33Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: unassigned
 ---
 
 # Class-3 closure-defect dynamics analysis (deferred from RG spike 2026-05-09; Move F in `spikes/temporal-nesting-rg/99-verdict.md`) — test the directed-separatio

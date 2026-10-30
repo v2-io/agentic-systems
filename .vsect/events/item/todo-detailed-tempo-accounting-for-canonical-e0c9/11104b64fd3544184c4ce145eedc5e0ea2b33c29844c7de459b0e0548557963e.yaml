@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 11104b64fd3544184c4ce145eedc5e0ea2b33c29844c7de459b0e0548557963e
+at: 2026-10-30T21:15:49Z
+store: asf
+act: recheck
+about: item:todo-detailed-tempo-accounting-for-canonical-e0c9
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 05d458db+dirty
+criterion: Written 2026-05-09 (6aae9789). No segment computes C_coord^wrap for any named wrapper architecture (no ReAct/Reflexion/PROPRIUM-shape accounting in 0*/src; der-class-coercion-in-composition:62 and der-tempo-composition:120 give only the general nu_W = nu_A/K Brooks's-Law form). Real but an engineering-application spike with no KR; it inherits whichever ledger the der-tempo-composition double-count item settles.
+outcome: holds
+owner: unassigned
