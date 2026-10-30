@@ -1,0 +1,28 @@
+schema: vsect-event/0
+id: 8e739e5f11bd9c6724d9855a18043387488b00250d7a52f8754b567807dcdceb
+at: 2026-10-30T22:24:24Z
+store: asf
+act: rederive
+about: segment:scope-agent-identity
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-model-sufficiency: cb0156177d2d2d215898316d7c7e1e6829188ccffc08bb3f458b93e9f5cd207f
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-information-bottleneck: 11e85702fb076cba51bab0990d192e1990325ceccd2ae7a29e76c400e2fb3947
+  segment:scope-agent-identity: 874e216320093de4301b79b5fcf212f0a07aa2d6cf9a6bfc84e0926bbd920431
+committed: after
+criterion: 'Is there one continuation criterion that agrees with #def-chronica (C_t the real event sequence, ordinal), with $\mathrm{Id}^{(i)}$''s prefix condition, with the session-boundary analysis, and with every restore case the Vol-4 check raised (restore after the original ran past the backup; resumption of the set-aside state; record rollback; concurrent sessions sharing a store)?'
+effective-version: 819f4d3a59ffd10a2252b2fd971b5607097bfa6a62a96d236beece923f29026d
+from: review:vol4-c1-integration-2#C1
+line: derivation
+outcome: confirmed
+recheck: 'the time-slicing case (two copies interleaved on one processor must be two agents, so wall-clock concurrency cannot be the test); the restore-then-resume case (interleaved, so a fork); the restore-without-resumption case (no interleaving, one trajectory); #def-chronica lines 16 and 36 as amended'
+target-version: 874e216320093de4301b79b5fcf212f0a07aa2d6cf9a6bfc84e0926bbd920431
+version-from: git-revision
