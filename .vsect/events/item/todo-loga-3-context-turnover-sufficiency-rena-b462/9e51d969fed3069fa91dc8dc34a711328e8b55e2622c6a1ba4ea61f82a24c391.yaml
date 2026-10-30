@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 9e51d969fed3069fa91dc8dc34a711328e8b55e2622c6a1ba4ea61f82a24c391
+at: 2026-10-30T22:14:41Z
+store: asf
+act: close
+about: item:todo-loga-3-context-turnover-sufficiency-rena-b462
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+by-commit: '03955264'
+outcome: done

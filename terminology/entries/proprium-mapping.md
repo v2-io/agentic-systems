@@ -16,11 +16,11 @@ aliases: ["PROPRIUM architecture"]
 do_not_confuse: []
 ---
 
-PROPRIUM is the canonical ELI architecture (source at `~/src/firmatum/`), providing the engineering mapping from AAT's formal objects to implementable components. Two layers:
+PROPRIUM is the canonical ELI architecture (source now at `~/src/arch/proprium/INGEST/old-firmatum/`), providing the engineering mapping from AAT's formal objects to implementable components. Two layers:
 
-**Persistent State (PRINCIPIA $\approx M_t$)**:
-- **AXIOMATA**: core constraints; frozen identity and terminal values
-- **CHRONICA**: raw interaction history $\mathcal C_t$ (append-only, causal anchor)
+**Persistent State (PRINCIPIA: the persisted part of $X_t = (M_t, G_t)$, with the record it is compressed from)**:
+- **AXIOMATA**: committed aspirations, values and standards (the slowest layer of $O_t$) together with self-description and seeds of relationships and techniques ($M_t$ content); quasi-static, writable by the entity as sovereignty is granted; holds no terminal invariant
+- **CHRONICA**: append-only, system-governed record of the entity's events, a selection of $\mathcal C_t$'s events (TRACTUS is the raw record)
 - **MEMORATA**: information-bottleneck compressed history $\phi(\mathcal C_t)$
 - **VERA**: factual memory with explicit uncertainty bounds ($U_M$)
 - **PRAXES**: learned strategies improving $\eta^\ast$ and $\mathcal{T}$
@@ -34,6 +34,6 @@ PROPRIUM is the canonical ELI architecture (source at `~/src/firmatum/`), provid
 - **CADENTIA**: temporal structure defining channel rates $\nu^{(k)}$
 - **LOGOSTRATUM**: the logogenic substrate (LLM backbone) implementing $f_X$
 
-By formalizing AAT quantities into these components, PROPRIUM ensures that theoretical requirements (e.g., separating $\mathcal C_t$ from its compressed form $M_t$) are mechanically preserved in software.
+Laying the agent's state out in these components is how PROPRIUM aims to keep AAT's distinctions separate in software ($\mathcal C_t$ from its compression $M_t$, and $M_t$ from $G_t$); whether a given implementation keeps them separate is a property of that implementation, not of the mapping.
 
-Defined in [`#def-proprium-mapping`](../../04-eli-core/src/def-proprium-mapping.md). Source architecture documents at `~/src/firmatum/PROPRIUM-ONTOLOGY-v2.md` and `~/src/firmatum/PROPRIUM-ARCHITECTURE-v2.md`.
+Defined in [`#def-proprium-mapping`](../../04-eli-core/src/def-proprium-mapping.md). Source architecture documents at `~/src/arch/proprium/INGEST/old-firmatum/PROPRIUM-ONTOLOGY-v2.md` and `~/src/arch/proprium/INGEST/old-firmatum/PROPRIUM-ARCHITECTURE-v2.md`.

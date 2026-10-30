@@ -32,7 +32,7 @@ Following the order of progressively weakening Lyapunov certificate:
 
 | Tier | Fixed-point structure | Lyapunov certificate | Macro-state type | Convergence rate | Scope route entry |
 |---|---|---|---|---|---|
-| **R0 Contraction** | Unique attracting $X^\ast \in \mathcal{X}^c$ | Joint Lyapunov $V$, global or basin-restricted | State-variable $X^\ast$ | Exponential at $\alpha_{\text{joint}}$ | C-i / C-ii / C-iii |
+| **R0 Contraction** | Unique attracting $X^\ast \in \mathcal{X}^c$ | Joint Lyapunov $V$, global or basin-restricted | State-variable $X^\ast$ | Exponential at $\alpha_{\text{joint}}$ | C-i / C-ii / C-iii (membership derived under matched-Tier sub-agents; see R0 below) |
 | **R1 Equilibrium ($\alpha'$)** | Fixed-point set $\mathcal{E} \subset \mathcal{X}^c$, locally attracting | Potential $\Phi$ (Monderer-Shapley) or weighted-norm (Rosen) | Fixed-point object $\mathcal{E}$ | Exponential near $\mathcal{E}$ at $\alpha_{\text{joint}}^{(j)}$ | C-iv + potential/monotone |
 | **R2 Cyclic-distributional ($\beta'$)** | No pure-strategy fixed point, or saddle-only | None on $\mathcal{X}^c$; doubling-trick CCE on $\Delta(\mathcal{X}^c)$ | Distributional object $\mu \in \Delta(\mathcal{X}^c)$ | Polynomial $O(1/\sqrt T)$ | C-iv without potential/monotone |
 | **R3 Mean-field equilibrium** | Distributional fixed point in measure space | MFG-specific (Lasry-Lions monotonicity) | Distribution-on-population $\rho \in \mathcal{P}(\mathcal{A})$ | MFG-specific, often exponential | Population-scope gap |

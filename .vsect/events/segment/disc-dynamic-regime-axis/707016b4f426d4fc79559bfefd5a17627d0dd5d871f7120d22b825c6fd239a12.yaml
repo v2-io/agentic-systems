@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 707016b4f426d4fc79559bfefd5a17627d0dd5d871f7120d22b825c6fd239a12
+at: 2026-10-30T22:18:05Z
+store: asf
+act: revise
+about: segment:disc-dynamic-regime-axis
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 26a6a03ba799ebc42b70d6d4e339fb435defbbf2c432f678d9458d6384668af5
+own-version: 9d6d7c0949cd0a9c3311173f0afd9fcfeefb4fc496ec3ba869e313d550503683
+record: 01-aat-core/src/disc-dynamic-regime-axis.md
