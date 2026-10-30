@@ -99,6 +99,20 @@ Two Hafez sites still say "89% perturbation detection" or "detection accuracy". 
 
 Two bodies narrate their own history: `#deriv-observation-ambiguity-bias-bound` `:130` ("A previous version of this derivation …") and `#scope-observation-ambiguity-modulation` `:66`. Integration-is-replacement puts that in the history layers.
 
+**8. Canon bodies cite spike working paths.** (From the lead's spike drain, re-checked here at HEAD; recorded on `item:canon-bodies-cite-local-working-paths`, F.3.)
+
+The landing cites files under `spikes/spike-allocation-vs-distortion-coupling-2026-10-30/` and `spikes/spike-loop-identification-decision-state-2026-10-30/` (check scripts, feedback files, lit-scans) in segment bodies above Working Notes at twelve sites:
+- `#def-value-object` `:53`, `:55`;
+- `#der-loop-interventional-access` `:45`, `:47`, `:87`;
+- `#der-directed-separation` `:53`, `:98`;
+- `#der-orient-cascade` `:60`;
+- `#deriv-observation-ambiguity-bias-bound` `:75`;
+- `#scope-observation-ambiguity-modulation` `:38`, `:90`, `:125`.
+
+`doc/sop/spikes.sop.md` §0a points 4–5 make each of these an integration failure. What was checked is stated self-contained in the body. A script the segment leans on enters `empirica/` and is cited as `empirica:<slug>`. Anything else goes, with git holding the provenance.
+
+The same applies to this check's own scripts (`check-part-ii-check-1-*`). Several repairs above rest on their instances. Each instance is small enough to state in the body by hand, and the records' `recheck` fields already do that. Where a repair needs a script to reproduce, the script goes to `empirica/`, not to a spike path.
+
 ## The influx items this check bears on
 
 The lead asked that a check say which prior outside critique it judged answered, so the influx drain can mark it. All references are to `msc/inside-out-2026-10/influx-scout/MAP.md`.
