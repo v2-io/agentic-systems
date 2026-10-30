@@ -52,6 +52,14 @@
 #   bin/check-links PATH...    # check only the given files / directories
 #
 # Exit status: 0 = every live relative link resolves; 1 = at least one broken.
+#
+# Run on an exported copy of the index (bin/check-commit does this), a link to
+# a file that is git-ignored by design — the reference PDFs under ref/, which
+# are kept locally and not redistributed — has no target in the copy. Set
+# CHECK_LINKS_LOCAL_ROOT to the real working tree and such a link resolves
+# when its target exists there *and* git ignores it there: a deliberate
+# local-only target, not a broken link. A target that is merely untracked
+# (not ignored) still fails, because it would be missing from the commit.
 
 require 'pathname'
 require 'optparse'
@@ -168,6 +176,17 @@ files = gather_md(roots, include_all: options[:all], ignore_globs: ignore_globs)
 
 broken = Hash.new { |h, k| h[k] = [] }
 checked = 0
+local_only = 0
+
+LOCAL_ROOT = ENV['CHECK_LINKS_LOCAL_ROOT'].to_s.empty? ? nil : Pathname.new(ENV['CHECK_LINKS_LOCAL_ROOT']).expand_path
+
+# True when `resolved` (missing here) exists in LOCAL_ROOT and git ignores it.
+def local_only_target?(resolved)
+  return false unless LOCAL_ROOT
+  rel = resolved.relative_path_from(REPO_ROOT).to_s
+  return false unless LOCAL_ROOT.join(rel).exist?
+  system('git', '-C', LOCAL_ROOT.to_s, 'check-ignore', '-q', '--', rel)
+end
 
 files.each do |file|
   each_link(file.read) do |line_no, target|
@@ -177,14 +196,20 @@ files.each do |file|
     next if segment_target?(resolved) # lint-outline's domain
     next unless in_repo?(resolved)     # out-of-repo: unverifiable
     checked += 1
-    broken[file] << [line_no, target, resolved] unless resolved.exist?
+    next if resolved.exist?
+    if local_only_target?(resolved)
+      local_only += 1
+      next
+    end
+    broken[file] << [line_no, target, resolved]
   end
 end
 
 rel = ->(p) { p.relative_path_from(REPO_ROOT).to_s rescue p.to_s }
 
 if broken.empty?
-  puts "✓ check-links: #{checked} doc-nav links across #{files.size} files all resolve."
+  note = local_only.positive? ? " (#{local_only} to git-ignored local files)" : ''
+  puts "✓ check-links: #{checked} doc-nav links across #{files.size} files all resolve#{note}."
   exit 0
 end
 

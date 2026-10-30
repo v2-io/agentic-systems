@@ -1,0 +1,105 @@
+#!/usr/bin/env bash
+# bin/check-commit — the checks every commit in asf must pass.
+#
+# `.githooks/pre-commit` runs this, so it fires on every `git commit` once
+# `core.hooksPath` is `.githooks` (bin/setup-hooks sets it). Run it by hand to
+# see what the hook will say before you commit.
+#
+# What it checks is the tree being committed, not the working tree. It exports
+# the index with `git checkout-index` (which honors the temporary index that
+# `git commit -- <paths>` uses) and runs every check inside that copy. So
+# another agent's half-saved edit in this shared working tree cannot refuse
+# your commit, and an unstaged fix cannot pass it.
+#
+# The checks are the CHECKS table below, one line each. To add one, add a line.
+# Every check runs; a commit is refused if any check fails, and the output
+# names the check and the file.
+#
+# Usage:
+#   bin/check-commit          check what `git commit` would commit now
+#   bin/check-commit --help
+#
+# Exit: 0 every check passed; 1 at least one check failed or a required tool
+# is missing.
+
+set -u
+
+case "${1:-}" in
+  -h|--help) sed -n '2,/^$/s/^# \{0,1\}//p' "$0"; exit 0 ;;
+esac
+
+ROOT="$(git rev-parse --show-toplevel)" || exit 1
+cd "$ROOT" || exit 1
+
+TREE="$(mktemp -d "${TMPDIR:-/tmp}/asf-check-commit.XXXXXX")" || exit 1
+trap 'rm -rf "$TREE"' EXIT
+git checkout-index --all --force --prefix="$TREE/" || { echo "check-commit: could not export the index" >&2; exit 1; }
+
+# The .md files whose content this commit changes: added, modified or copied,
+# and renamed with edits. A pure rename (R100) carries no new text. Symlinks
+# (CLAUDE.md -> doc/sop/agents.sop.md, …) are checked at their target's path.
+if git rev-parse --verify -q HEAD >/dev/null; then BASE=HEAD; else BASE="$(git hash-object -t tree /dev/null)"; fi
+CHANGED_MD=()
+while IFS=$'\t' read -r status path1 path2; do
+  path="${path2:-$path1}"
+  [[ "$status" == R100 ]] && continue
+  [[ "$path" == *.md ]] || continue
+  [[ -L "$TREE/$path" ]] && continue
+  CHANGED_MD+=("$path")
+done < <(git diff --cached --name-status -M --diff-filter=ACMR "$BASE")
+
+# md-press runs with --no-math. Its math pass (Unicode math -> $LaTeX$) is not
+# gated yet, for two reasons: a declined math proposal is not remembered, so a
+# file whose author rejects one would fail every commit after; and the pass
+# needs a local ollama model, which has been unavailable before. Unwrapping is
+# deterministic and remembers its decisions in the file, so it is gated.
+md_press_changed() {
+  ((${#CHANGED_MD[@]})) || return 0
+  md-press -q --no-math --no-log "${CHANGED_MD[@]}"
+}
+
+# name | tool it needs | if that tool is absent | command (run at the exported tree's root) | how to fix a failure
+CHECKS=(
+  "md-press|md-press|refuse|md_press_changed|in the repo, \`md-press --no-math FILE\` shows each decision with a code; \`md-press --fix --no-math FILE\` takes them, and \`--toggle CODE\` flips one first. Then stage the file."
+  "lint-outline|python3|refuse|bin/lint-outline --quiet|reorder the OUTLINE row, fix the segment's depends:, or (if the placement is right by design) add a row with its reason to that volume's OUTLINE-accepted.md."
+  "check-links|ruby|refuse|CHECK_LINKS_LOCAL_ROOT=\"$ROOT\" bin/check-links|point each link at a file that exists in the commit (or stage the file it names)."
+  "refresh-all|ruby|refuse|bin/refresh-all --check|run \`bin/refresh-all\`, review the regenerated files, and stage them with this commit."
+  "vsect|vsect|notice|vsect check|see \`vsect check\` in the repo."
+)
+
+failed=0
+report=""
+cd "$TREE" || exit 1
+for row in "${CHECKS[@]}"; do
+  IFS='|' read -r name tool absent cmd fix <<<"$row"
+  if ! command -v "$tool" >/dev/null 2>&1; then
+    if [[ "$absent" == notice ]]; then
+      echo "check-commit: $name skipped — \`$tool\` is not on PATH yet." >&2
+      continue
+    fi
+    failed=1
+    report+=$'\n'"✗ $name: cannot run — \`$tool\` is not on PATH (PATH=$PATH)."$'\n'
+    continue
+  fi
+  out="$(eval "$cmd" 2>&1)"; rc=$?
+  if [[ "$name" == vsect && $rc -eq 3 ]]; then
+    echo "check-commit: vsect did not run (exit 3): $(printf '%s' "$out" | head -n1)" >&2
+    continue
+  fi
+  if ((rc != 0)); then
+    failed=1
+    out="$(printf '%s\n' "$out" | grep -v '^  current: ')"
+    report+=$'\n'"✗ $name failed (exit $rc). To fix: $fix"$'\n'"$(printf '%s\n' "$out" | sed 's/^/    /')"$'\n'
+  fi
+done
+
+if ((failed)); then
+  {
+    echo "check-commit: commit refused — the tree being committed fails these checks."
+    printf '%s' "$report"
+    echo
+    echo "(\`bin/check-commit\` re-runs these checks on what is staged.)"
+  } >&2
+  exit 1
+fi
+exit 0

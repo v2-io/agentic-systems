@@ -7,7 +7,11 @@ Checks:
      (accepted-by-design violations are whitelisted per component in
      <component>/OUTLINE-accepted.md — still printed, marked accepted, exit green)
   2. Missing dependencies: segment depends on a slug that doesn't exist as a file
-     (resolved against ALL components' src/ dirs, since deps are cross-component)
+     (resolved against ALL components' src/ dirs, since deps are cross-component).
+     A dependency on a slug that has an OUTLINE row marked `missing` in any
+     component is a *planned* dependency — an honest mark of a segment not yet
+     written — and is listed but does not fail; one that names no file and no
+     `missing` row fails.
   3. Orphan segments: files in src/ not referenced in the outline
   4. Stage consistency: segment frontmatter `stage:` vs the OUTLINE row's stage
      column — disagreements, missing `stage:` fields, off-vocabulary values
@@ -219,14 +223,18 @@ def find_ordering_violations(entries, all_deps):
     return violations
 
 
-def find_missing_deps(all_deps, existing_slugs):
-    """Find dependencies that reference non-existent slugs."""
-    missing = []
+def find_missing_deps(all_deps, existing_slugs, planned_slugs=frozenset()):
+    """Find dependencies that reference non-existent slugs.
+
+    Returns (missing, planned): `planned` are deps with no file but an OUTLINE
+    row marked `missing` (an honest mark, accepted); `missing` are the rest.
+    """
+    missing, planned = [], []
     for slug, deps in all_deps.items():
         for dep in deps:
             if dep not in existing_slugs:
-                missing.append({"slug": slug, "dep": dep})
-    return missing
+                (planned if dep in planned_slugs else missing).append({"slug": slug, "dep": dep})
+    return missing, planned
 
 
 def find_orphan_segments(src_dir, outline_slugs, all_slugs):
@@ -621,6 +629,14 @@ def main():
                 }
         component_src[src_dir] = slugs_here
 
+    # Slugs with an OUTLINE row marked `missing` in any component: planned
+    # segments, so a dependency on one is an honest forward mark, not a defect.
+    planned_slugs = set()
+    for c in COMPONENTS:
+        o = project_root / c / "OUTLINE.md"
+        if o.exists():
+            planned_slugs.update(s for _, s, _, st in parse_outline(o) if st == "missing")
+
     has_issues = False
     entries = []
     all_deps = {}
@@ -633,7 +649,7 @@ def main():
         component_slugs = component_src.get(src_dir, set())
         multi = len(outline_files) > 1
 
-        if multi:
+        def print_header():
             print(f"\n{'#'*60}")
             print(f"# {outline_file.relative_to(project_root) if outline_file.is_relative_to(project_root) else outline_file}")
             print(f"{'#'*60}")
@@ -653,7 +669,7 @@ def main():
         # ── Check for violations ───────────────────────────────────
 
         violations = find_ordering_violations(entries, all_deps)
-        missing = find_missing_deps(all_deps, global_slugs)
+        missing, planned = find_missing_deps(all_deps, global_slugs, planned_slugs)
         orphans = find_orphan_segments(src_dir, outline_slugs, component_slugs)
         stage_issues = find_stage_issues(entries, slug_to_meta, component_slugs)
         accepted_map = load_accepted_orderings(outline_dir)
@@ -669,6 +685,11 @@ def main():
         accepted_violations = [v for v in candidate_violations if (v["slug"], v["dep"]) in accepted_map]
         seen_pairs = {(v["slug"], v["dep"]) for v in candidate_violations}
         stale_accepted = sorted(pair for pair in accepted_map if pair not in seen_pairs)
+
+        # In --quiet mode a component's header is printed only when it has
+        # something to report, so a hook's failure output is just the failures.
+        if multi and (not quiet or true_violations or missing or stale_accepted or stage_issues):
+            print_header()
 
         if true_violations:
             has_issues = True
@@ -712,6 +733,13 @@ def main():
             for m in missing:
                 print(f"  {m['slug']} depends on {m['dep']} — no such file in any component's src/")
 
+        if planned and not quiet:
+            print(f"\n{'='*60}")
+            print(f" PLANNED DEPENDENCIES ({len(planned)}) — no file yet; OUTLINE row marked `missing` (accepted)")
+            print(f"{'='*60}\n")
+            for m in planned:
+                print(f"  {m['slug']} depends on {m['dep']} — planned")
+
         if orphans and not quiet:
             print(f"\n{'='*60}")
             print(f" ORPHAN SEGMENTS ({len(orphans)})")
@@ -744,6 +772,7 @@ def main():
             print(f"  Accepted (by design): {len(accepted_violations)}")
             print(f"  Backmatter refs:      {len(backmatter_refs)}")
             print(f"  Missing dependencies: {len(missing)}")
+            print(f"  Planned (missing row):{len(planned):2d}")
             print(f"  Orphan segments:      {len(orphans)}")
             print(f"  Stage inconsistencies:{len(stage_issues):2d}")
 

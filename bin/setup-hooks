@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# bin/setup-hooks — point this clone's git at the tracked hooks in .githooks/.
+#
+# `core.hooksPath` is local git config, not tracked, so every clone has to set
+# it once. This script does that, and does nothing if it is already right. It
+# also repairs a hooksPath that points at a directory that no longer exists:
+# until 2026-10-30 asf's pointed at a retired path, and no hook ran.
+#
+# Usage: bin/setup-hooks [--quiet]   (--quiet: say nothing when nothing changes)
+# A hooksPath set to some other existing directory is left alone, with a
+# warning: someone chose it.
+
+set -u
+
+here="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd -P)"
+top="$(git -C "$here" rev-parse --show-toplevel 2>/dev/null)" || exit 0
+top="$(cd "$top" && pwd -P)"
+[[ "$top" == "$here" && -d "$here/.githooks" ]] || exit 0
+
+current="$(git -C "$here" config --get core.hooksPath 2>/dev/null || true)"
+[[ "$current" == .githooks ]] && exit 0
+
+if [[ -n "$current" ]]; then
+  resolved="$current"; [[ "$resolved" == /* ]] || resolved="$here/$resolved"
+  if [[ -d "$resolved" ]]; then
+    echo "setup-hooks: core.hooksPath is '$current', not .githooks; leaving it. asf's checks (bin/check-commit) are not running on commit." >&2
+    exit 0
+  fi
+fi
+
+git -C "$here" config core.hooksPath .githooks
+echo "setup-hooks: core.hooksPath set to .githooks${current:+ (was '$current', which does not exist)}; commits in this clone now run bin/check-commit." >&2
+exit 0

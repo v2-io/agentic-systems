@@ -1,0 +1,6 @@
+#!/bin/sh
+# asf pre-commit hook: refuses a commit whose tree fails the checks in
+# bin/check-commit (md-press, lint-outline, check-links, refresh-all --check,
+# vsect). It is active when `git config core.hooksPath` is `.githooks`;
+# bin/setup-hooks sets that. The checks themselves live in bin/check-commit.
+exec "$(git rev-parse --show-toplevel)/bin/check-commit"
