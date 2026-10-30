@@ -49,6 +49,22 @@ Action is the single point where epistemic and purposeful states interact. The p
 
 The uniqueness question is resolved in #deriv-decomposition-uniqueness, in two halves. *Underdetermination:* preservation of directed separation alone does **not** force the decomposition — counterexamples exist inside GUC Class 1 (any purposeful coordinate with a goal-blind self-contained update, e.g. an objective held fixed over the analysis window, can be migrated into the epistemic component without breaking separation), so no purely dynamical criterion distinguishes a stored setpoint from a stored fact. *Canonicity:* relative to the goal-intervention family (the operators re-initializing $G_t$ while leaving $M_t$ untouched), the decomposition **is** unique — under product-completeness, purposeful purity, and epistemic completeness, every separation-preserving decomposition's epistemic component is canonically isomorphic to the quotient of $X_t$ by goal-variation, which is $M_t$, and the purposeful component is unique up to an explicitly characterized fiber-relabeling gauge. Cross-cutting decompositions (e.g., a "relevance-weighted model" mixing $M_t$ and $O_t$) either fail to preserve separation or reduce to the frozen-coordinate counterexample family. The formulation-choice honesty survives in refined form: the intervention family is the modeling commitment; given it, the $(M_t, G_t)$ partition is forced.
 
+## Claim Record
+
+### The agent's state is represented as a belief component and a purposeful component, canonical relative to the goal-intervention family
+
+**Register:** formal — a formulation (tag `complete-agent-state`) with a derived canonicity ( #deriv-decomposition-uniqueness): given the family of operators that re-initialize $G_t$ and leave $M_t$ alone, the partition is forced; the family itself is chosen.
+
+**Population:** representations of agents in agency scope. Whether a real agent stores belief and goal separably, or an analyst ascribes the pair, is not claimed; the question is open at #def-strategy-dimension (Working Notes), and the one place the pair becomes a claim about wiring is the architectural classification of #der-directed-separation.
+
+**True of:** Kalman + LQR, with the state estimate as $M_t$ and the cost as $G_t$; Part I's adaptive trackers, with $G_t = \emptyset$.
+
+**False of:** no agent is excluded by a representation. The frozen-coordinate counterexample ( #deriv-decomposition-uniqueness) shows that separation-preservation alone does not fix the partition: an objective held fixed over the analysis window can be filed as a belief without breaking directed separation.
+
+**Falsifier:** none at the level of agents.
+
+**Instantiated:** not applicable.
+
 ## Discussion
 
 **Backward compatibility with Part I — what survives the lift.** #form-agent-model defines $M_t$ as the agent's complete internal state within Part I scope. Under the lift, $M_t$ is the epistemic substate — complete within the epistemic domain but no longer the whole story. All epistemic machinery (mismatch signal, gain, tempo, persistence condition, sector-condition stability, mismatch decomposition) applies to $M_t$ without modification. The action-selection result ( #der-action-selection) extends naturally: the same completeness argument that gives $a_t = \pi(M_t)$ within Part I scope gives $a_t = \pi(M_t, G_t)$ when applied to the lifted complete state $X_t$. For Part I agents ($G_t = \emptyset$), the two forms coincide. The lift adds structure *alongside* $M_t$, not within it; the one Part I result that depended on $M_t$ being *all there is* (action selection) is explicitly extended to the lifted state.

@@ -45,6 +45,22 @@ All costs are measured in the same units (typically time or tempo-equivalent cos
 
 The inequality is correct *when* the outcomes are approximately equivalent — a condition that must be verified case by case, not assumed. When the precondition fails (model-based and loop-based approaches produce qualitatively different outcomes), the cost inequality is insufficient and the choice requires richer analysis (e.g., expected regret including model error).
 
+## Claim Record
+
+### Maintain an explicit strategy when planning plus maintenance costs less than exploration plus repair
+
+**Register:** normative — a design criterion, as the body says (tag `explicit-strategy-condition`), grounded in persistence margin rather than in a preference postulate.
+
+**Population:** learning-agent-scope agents choosing between model-based planning and loop learning *when the two produce approximately equivalent outcomes*, measured in one unit. The body says this precondition usually fails, so the population is narrow; where it fails the criterion does not apply.
+
+**True of:** no measured instance. Surgery and production deployment on one side, A/B testing and sandbox exploration on the other, are illustrations of where the inequality's terms are large, not tests of the rule.
+
+**False of:** choices whose outcomes differ in value, risk or reversibility are outside the population (Epistemic Status). The contrast "loop-based learning does not inherit model bias" overstates: direct exploration is biased by policy selection, partial observability and the model used to read observations (Working Notes).
+
+**Falsifier:** in a domain where the precondition holds, agents following the inequality do worse than agents arbitrating by the uncertainty of their model-based and model-free estimates (Daw, Niv & Dayan 2005, cited from recall, primary not read in this project), which is the arbitration the human literature reports.
+
+**Instantiated:** no.
+
 ## Discussion
 
 **When the inequality strongly favors planning.** The right side ($C_{\text{explore}} + C_{\text{repair}}$) is large when:

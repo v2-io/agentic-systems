@@ -42,6 +42,36 @@ Pre-compiled agents are within agency scope (they have objectives and act on the
 
 *Exact.* The derivation is a direct application of the causal hierarchy theorem to the value-object definition. If you accept that $Q_O$ is an interventional query and that the causal hierarchy is strict, the conclusion follows. The scope narrowing to learning agents is a definitional restriction, not a derived result — it sharpens the class of agents under study.
 
+## Claim Record
+
+### Evaluating the action-value from experience needs Level-2 knowledge
+
+**Register:** formal — exact; a direct application of the Causal Hierarchy Theorem to the $do(\cdot)$ in $Q_O$ (tag `causal-hierarchy-requirement`). The learning-agent scope (tag `learning-agent scope`) is a definition, not a result.
+
+**Population:** agents that evaluate $Q_O$ from experience: learning purposeful agents, the named sub-scope of #scope-agency.
+
+**True of:** any learner of action effects; a developer learning whether a refactor breaks tests and a commander learning how the enemy responds are the body's instances, as illustrations.
+
+**False of:** pre-compiled agents (PID, LQR, hardcoded reactive policies): within agency scope, excluded by the narrowing because a designer with Level-2 access supplied their interventional structure. They act on Level-2 knowledge they never acquired.
+
+**Falsifier:** none at the level of agents; the content is an external theorem. A Level-2 quantity computed from Level-1 data without further assumptions would refute the theorem, not this application.
+
+**Instantiated:** not applicable.
+
+### Monitoring the information structure of the loop detects perturbations better than monitoring outcomes
+
+**Register:** descriptive — the body's reading of Hafez et al. (2026): the Information Digital Twin on the $(S, A, S')$ stream detects environmental perturbations at 89% against 44% for reward-based monitoring, taken as consistent with the loop supplying richer than outcome data.
+
+**Population:** simulated agents of the kind the cited study ran; the body extends the reading to agency-scope agents in general.
+
+**True of:** the cited study's agents, on its report (the figure and the arXiv identifier were flagged by an auditor for verification before external use; Working Notes).
+
+**False of:** none known.
+
+**Falsifier:** a monitor on the $(S, A, S')$ stream performing no better than reward monitoring in the same setting. The step from "coupling monitoring detects perturbations" to "the loop supplies identified Level-2 effects" is the body's inference, not the study's claim, and no result of this segment rests on it.
+
+**Instantiated:** by an external study on simulated agents, not by this project.
+
 ## Discussion
 
 **The causal hierarchy theorem does the heavy lifting.** The key mathematical fact is external to AAT: Bareinboim et al. (2022) prove that the three levels (association, intervention, counterfactual) form a strict hierarchy — Level 2 quantities cannot in general be computed from Level 1 data. AAT's contribution is applying this to the purposeful-agent setting: if you want to select actions by their consequences ($Q_O$), you need causal structure.
@@ -49,7 +79,7 @@ Pre-compiled agents are within agency scope (they have objectives and act on the
 **What "Level 2 knowledge" means concretely.** For different agents:
 - A developer needs to know "if I refactor this module, will tests still pass?" (not just "modules that were refactored tend to have tests that fail")
 - A commander needs to know "if I move forces north, will the enemy respond by retreating?" (not just "when forces moved north, the enemy often retreated")
-- An RL agent needs $Q(s, a) = \mathbb{E}[R \mid s, do(a)]$, not $\mathbb{E}[R \mid s, A=a]$ (the latter includes selection bias from the agent's own policy)
+- An RL agent in a partially observed environment, or one whose action depends on something unobserved that also affects reward, needs $Q(s, a) = \mathbb{E}[R \mid s, do(a)]$ rather than $\mathbb{E}[R \mid s, A=a]$: the two differ by the selection the policy induces through what $s$ does not record. In a fully observed MDP the policy depends on $s$ alone and the two coincide.
 
 The distinction between $do(a)$ and $A = a$ is the core of causal inference. It matters whenever the agent's action-selection policy correlates with unobserved confounders.
 

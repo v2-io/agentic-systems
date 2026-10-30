@@ -39,6 +39,50 @@ What is frozen is the *update*, not the *input*: observations continue to arrive
 
 *Robust qualitative.* The mechanism (high observation noise → low gain → frozen edges) is a direct consequence of #emp-update-gain's uncertainty ratio. The specific functional form ($\text{conf}_{\text{obs}} = \text{conf} \cdot \text{obs}$) is a first-order approximation — the actual relationship between observability and effective confidence is more complex (it depends on how many observations are accumulated, the prior strength, and the noise structure). The qualitative prediction (low observability → frozen beliefs → ineffective strategy) is robust.
 
+## Claim Record
+
+### Edges touching a node the agent cannot observe are frozen at their prior
+
+**Register:** descriptive — robust-qualitative, via the gain principle: observation uncertainty going to infinity drives the edge gain to zero (tag `observability-dominance`). The multiplicative form $\text{conf} \cdot \text{obs}$ is a first-order approximation; the freezing is the claim.
+
+**Population:** learners whose edge credences update by the gain principle ( #emp-update-gain) from observations of node outcomes, in learning-agent scope.
+
+**True of:** the two-edge chain with unobservable intermediate (Props B.2–B.3, #deriv-edge-credence-dynamics): per-edge identification fails and only plan-level tracking survives, derived.
+
+**False of:** a learner whose blind spot is covered by another agent's observations ( #hyp-solicitable-escape) is outside the population. A learner that infers the hidden node from downstream outcomes with a known mechanism is not frozen but biased, $O(1/n)$ (the unobservable-$B$ case).
+
+**Falsifier:** a learner whose credence on an edge into a never-observed node converges to the true rate from its own observations. The Working-Notes prediction that poorly measured departments hold persistent, untested beliefs about their own effectiveness is the field form of the claim; it has not been tested.
+
+**Instantiated:** no.
+
+### Deeper edges calibrate more slowly, attenuated by the product of upstream success rates
+
+**Register:** descriptive — derived for two edges, conjectured for depth $d$ (Discussion, "Quantitative content from the two-edge case").
+
+**Population:** sequential learners whose step $k$ is tested only when steps $j \lt k$ succeed.
+
+**True of:** the two-edge chain (Prop B.2).
+
+**False of:** a learner that can test steps independently, in a sandbox or by direct intervention on intermediate conditions, is outside the population.
+
+**Falsifier:** learning-curve data under sequential execution in which deep-step estimates converge as fast as shallow ones; or a depth-three derivation in which the attenuation is not the product.
+
+**Instantiated:** no.
+
+### Prefer the visible path to the confident one
+
+**Register:** normative — a design claim for epistemic maintenance (Discussion, "Observability as the gateway to learning"): the visible path yields learning, the blind one does not. It trades current expected value for correction rate; the body argues the trade, not an optimality.
+
+**Population:** agents choosing among paths that differ in nominal confidence and in observability, where the choice recurs.
+
+**True of:** no measured instance.
+
+**False of:** not known; an agent for whom the blind path is in fact reliable and the horizon short loses value by following the rule, which the body's framing admits.
+
+**Falsifier:** over a horizon of repeated choices in a drifting world, agents preferring visible paths earn less than agents preferring confident ones.
+
+**Instantiated:** no.
+
 ## Discussion
 
 **Observability as the gateway to learning.** An agent choosing between a strong-but-blind path (high $\text{conf}(P)$, low $\text{obs}(P)$) and a weak-but-visible path (lower $\text{conf}(P)$, high $\text{obs}(P)$) should prefer the visible one. After one attempt: the visible path yields large $\eta_{\text{edge}}$ — the agent quickly learns whether it works and can redirect. The blind path yields tiny $\eta_{\text{edge}}$ — the agent is still guessing after $n$ attempts. Observability enables learning; opacity prevents it.

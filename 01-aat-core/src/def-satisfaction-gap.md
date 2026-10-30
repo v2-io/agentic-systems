@@ -57,6 +57,22 @@ Objective revision is the **last resort**, not the first response to unmet goals
 
 The monotonicity result ( #def-value-object): $\delta_{\text{sat}}^{\text{B}} \leq \delta_{\text{sat}}^{\text{RH}} \leq \delta_{\text{sat}}^{(1)}$. The $\delta_{\text{sat}}^{\text{B}} \leq \delta_{\text{sat}}^{\text{RH}}$ half is unconditional; the $\delta_{\text{sat}}^{\text{RH}} \leq \delta_{\text{sat}}^{(1)}$ half holds under the order-consistency condition on C2's replanning objective (RH-1/2/3 in #def-value-object), and can fail for unguarded short-horizon replanning. C1 gives the most false "unattainable" diagnoses; C3 gives none (modulo model error in $M_t$). Analyses using different conventions should not be compared directly — the convention is part of the measurement.
 
+## Claim Record
+
+### The satisfaction gap is the distance from the satisfaction threshold to the best value attainable under the agent's own model
+
+**Register:** formal — a definition (tags `objective-attainability`, `satisfaction-gap`), exact; its value is relative to the continuation convention, the horizon and the scalarization, none of which the theory derives.
+
+**Population:** agents with a scalar $V_{O_t}$ (coherent under (A1)–(A4), #form-objective-functional), a satisfaction threshold $V_{O_t}^{\min}$, and a policy class $\Pi$ over which a supremum is taken. The quantity is the agent's self-assessment, computed from $M_t$, not from $\Omega_t$.
+
+**True of:** the 3-arm bandit of #example-strategy with threshold $0.6$ (internal consistency, not instantiation).
+
+**False of:** a pure utility-maximizer with no threshold has no $\delta_{\text{sat}}$ (utility objectives may not define $V_{O_t}^{\min}$, Formal Expression); an agent with Pareto-structured objectives has only the set-theoretic degradation of it ( #form-objective-functional).
+
+**Falsifier:** none for a definition. The one claim about agents in this segment, the aspiration hypothesis (tag `aspiration-dominance`), is hypothesis-grade and names no test; the claim that routing by the two gaps does better than routing by total shortfall is recorded at #def-control-regret.
+
+**Instantiated:** no. $A_O$ has not been computed for any agent the theory did not construct.
+
 ## Discussion
 
 **Why two gap measures, not one.** An earlier formulation used a single $\delta_{\text{objective}}$ for goal-related mismatch. This conflates two distinct situations: "the goal is too hard" and "the strategy is too weak." When the agent is optimally pursuing an infeasible goal, $\delta_{\text{objective}}$ is large but there's no strategy to improve — the problem is the goal, not the plan. The satisfaction gap ($\delta_{\text{sat}}$) and control regret ( #def-control-regret) separate these cases, enabling the right corrective action. This is the **anti-collapse** discipline ( #disc-anti-collapse) again — the same move met at $\beta$ vs $\rho$ ( #form-information-bottleneck), now in its two-quantities form: a single goal-distance signal would merge two situations that route to *opposite* repairs (objective revision vs strategy revision), so the split is what makes the orient cascade's response correct rather than a guess.

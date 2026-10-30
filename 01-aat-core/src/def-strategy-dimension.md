@@ -52,6 +52,36 @@ The split is **definitional** — it reflects a structural difference in the inf
 
 The two dimensions vary independently: a chess player has a simple $O_t$ (win) and a complex $\Sigma_t$ (opening theory, tactical patterns, endgame knowledge). A multi-objective optimizer may have a complex $O_t$ (Pareto frontier) and a simple $\Sigma_t$ (gradient descent). This independence is why the split matters — conflating them in a single hierarchy obscures the fact that objective richness and strategic richness are separate design axes.
 
+## Claim Record
+
+### Purposeful state decomposes into evaluation and guidance
+
+**Register:** formal — a definition (tag `strategy-dimension`): when an agent maintains purposeful state, it is described along this line. Not a claim that all agents maintain both; reactive agents have $\Sigma_t = \emptyset$. Whether the pair is the agent's own representation or the analyst's ascription is open (Working Notes), and the table row "update source: external / internal" is typical provenance, not a rule.
+
+**Population:** representations of agency-scope agents with non-empty purposeful state.
+
+**True of:** chess (a simple objective, a rich strategy); a multi-objective optimizer (a rich objective, a simple strategy); a thermostat (both degenerate).
+
+**False of:** no agent is excluded by a definition.
+
+**Falsifier:** none.
+
+**Instantiated:** not applicable.
+
+### Beliefs update fastest, strategies slower, objectives slowest
+
+**Register:** descriptive — stated as an empirical observation about many agent populations, not derived (Discussion, "different update dynamics"), with its own exception named: an agent that discovers its goal is infeasible may revise the objective before the strategy.
+
+**Population:** "many agent populations"; the body does not name the class by a defining property, so the claim is not yet checkable against a boundary.
+
+**True of:** organizations (mission slower than plans slower than situation reports), as an illustration; no measured instance.
+
+**False of:** the body's own exception.
+
+**Falsifier:** a population of agents in which objective revision outpaces strategy revision over an interval, measured in revisions per unit time.
+
+**Instantiated:** no.
+
 ## Discussion
 
 **When richer $\Sigma_t$ is needed.** A reactive agent ($\Sigma_t = \emptyset$) suffices when greedy optimization on $Q_O$ ( #def-value-object) works — when the action-to-value mapping is approximately convex and single-step. When the environment has non-convex landscapes, prerequisite structure, or multi-step causal chains, greedy optimization fails and the agent needs explicit strategy. The trigger is the purposeful analog of #result-structural-adaptation-necessity: inadequacy of the current $\Sigma_t$ representation for the environment's causal complexity.

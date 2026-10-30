@@ -33,6 +33,36 @@ Always non-negative — given $\pi_{\text{current}} \in \Pi$ and both terms eval
 
 **Convention hierarchy.** $\delta_{\text{regret}}$ inherits the continuation convention from #def-value-object. Under the monotonicity result: $\delta_{\text{regret}}^{(1)} \leq \delta_{\text{regret}}^{\text{RH}} \leq \delta_{\text{regret}}^{\text{B}}$. The $\delta_{\text{regret}}^{\text{RH}} \leq \delta_{\text{regret}}^{\text{B}}$ half is unconditional; the $\delta_{\text{regret}}^{(1)} \leq \delta_{\text{regret}}^{\text{RH}}$ half holds under the order-consistency condition on C2's replanning objective (RH-1/2/3 in #def-value-object), and can fail for unguarded short-horizon replanning. C1 (one-step) reveals only the gap between the current first action and the best one-step deviation — a policy that is "locally near-optimal" under C1 may be globally suboptimal. C3 (Bellman) reveals the full gap to the globally optimal policy. C2 (receding-horizon) interpolates: it captures regret from suboptimal first actions that become visible with $N_r$-step lookahead. For strategy revision, C2 is often the most useful convention: it reveals recoverable suboptimality without requiring the full Bellman solution.
 
+## Claim Record
+
+### Control regret is the distance from the current policy's value to the best attainable, and the two gaps partition the shortfall
+
+**Register:** formal — a definition (tag `control-regret`), exact. Adding the two definitions gives $\delta_{\text{sat}} + \delta_{\text{regret}} = V_{O_t}^{\min} - V_O(M_t, \pi_{\text{current}}; N_h)$: the satisfaction gap and the control regret are the two additive parts of the one shortfall a single goal-distance signal would report.
+
+**Population:** as for #def-satisfaction-gap: agents with a scalar $V_{O_t}$, a threshold $V_{O_t}^{\min}$ and a policy class containing $\pi_{\text{current}}$, evaluated under one convention.
+
+**True of:** the 3-arm bandit of #example-strategy at $t = 40$, where regret is high and the gap is not (internal consistency, not instantiation).
+
+**False of:** no agent is excluded by a definition; where $A_O$ is uncomputable (the supremum is intractable, Epistemic Status), the agent holds an estimate of $\delta_{\text{regret}}$, not the quantity.
+
+**Falsifier:** none for a definition.
+
+**Instantiated:** no.
+
+### Routing repairs by the two gaps does better than routing by total shortfall
+
+**Register:** normative — the claim the 2×2 cell map's value rests on, stated here as a hypothesis because the body asserts its consequence ("enables the right corrective action"; "makes the orient cascade actionable") without stating or testing it: an agent that reads $(\delta_{\text{sat}}, \delta_{\text{regret}})$ and routes to the cell's repair wastes less effort on near-optimal pursuit of infeasible goals, and abandons fewer feasible goals, than an agent that responds to the single shortfall.
+
+**Population:** learning-agent-scope agents able to estimate $A_O$ under some convention; the claim's force scales with the convention (under C1 the capability-limit cell means locally stuck, under C3 infeasible).
+
+**True of:** no measured instance. #example-strategy shows the diagnosis is computable and consistent; it compares the diagnosis with Part I's symptom, not the routing with a baseline agent.
+
+**False of:** not known; no comparison has been run.
+
+**Falsifier:** a task family mixing infeasible goals and fixable plans (Tileworld-style worlds, software-repair benchmarks, the vivarium) on which agents routing by the 2×2 do no better, in value achieved or in effort spent on optimally-failing plans, than agents responding to total shortfall or than standard RL. The lineage that has tested when to drop a goal rather than a plan — intention as choice with commitment (Cohen & Levesque 1990) and the goal-reasoning line in planning, both cited from recall, primary not read in this project — is uncited in the body and is where the claim would be judged.
+
+**Instantiated:** no. The one empirical comparison in Part II (the simulation check in #disc-exploit-explore-deliberate) tests three-way allocation, not the 2×2, and went against the deliberation axis.
+
 ## Discussion
 
 **The diagnostic power of the two-gap system.** The satisfaction gap and control regret together encode a 2×2 diagnostic:

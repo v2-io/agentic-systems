@@ -171,6 +171,50 @@ By the no-go and its boundary characterization, several latent structures remain
 
 These limitations parallel the information-theoretic underdetermination in #disc-credit-assignment-boundary: detection requires data with the right structure, and the no-go specifies precisely what "right structure" means.
 
+## Claim Record
+
+### Under purely on-policy short-circuit execution, no statistic of the agent's history distinguishes a latent common cause from matched independent edges
+
+**Register:** formal — exact for the shallow strict-prerequisite case by explicit construction of $\mathcal W_{L0}^\ast$; robust-qualitative for general topology, soft facilitators and depth, where the construction has not been carried out (tag `no-go-on-policy`, Tier).
+
+**Population:** L0 strategy learners under (S1)–(S5).
+
+**True of:** the 2-sibling OR with strict-prerequisite latent (Formal Expression; numerics at #example-L1).
+
+**False of:** any agent that violates one of (S1)–(S5): $\varepsilon$-exploration, joint sibling observability, intermediate observability, structural priors, intervention on the latent. The agent is then outside the no-go, by the route table.
+
+**Falsifier:** a function of the on-policy history that separates $\mathcal W_{L1}$ from $\mathcal W_{L0}^\ast$ in the shallow case; the construction shows the two distributions equal, so none exists. For the general case the owed item is a mixed-topology, multiple-latent construction (Working Notes); a general topology on which no matched $\mathcal W_{L0}^\ast$ exists would narrow the claim to the cases constructed.
+
+**Instantiated:** not applicable.
+
+### An organization that runs its backup only when its primary fails cannot learn from its own records that the two share a failure cause
+
+**Register:** descriptive — the no-go read as a prediction about real agents with censored sequential execution (Discussion, "Domain instantiations"): they over-trust their redundancy until a joint failure.
+
+**Population:** agents or organizations whose execution of alternatives is sequential and censored (S2–S3) and whose learning comes from their own operational records (S1, S4, S5).
+
+**True of:** no checked instance; the deployment, operations, investment and organizational cases in Discussion are illustrations.
+
+**False of:** an organization that runs drills, simultaneous trials or chaos tests (routes (b) and (c)) is outside the population; the claim does not say such organizations are rare.
+
+**Falsifier:** operational records of a censored, short-circuit organization from which a latent common cause was detected before any joint failure without any of routes (a)–(e); or incident data in which such organizations' redundancy fails no more often than their independence estimates predict.
+
+**Instantiated:** no.
+
+### Pairwise sibling covariance under exploration detects the latent, and is the detector to use
+
+**Register:** formal for the test's validity under its three preconditions (a standard hypothesis test on jointly observed outcomes; a nonzero covariance of either sign rejects L0 independence); normative for its recommendation as "the AAT-canonical detector", which rests on its using only machinery the theory already requires.
+
+**Population:** L0 learners with SA3 exploration and occasional joint observability of sibling outcomes, after per-edge credences have stabilized, under approximate stationarity over the test window.
+
+**True of:** #example-L1 (internal consistency, not instantiation).
+
+**False of:** latents with no joint-observability route, latents on one edge, and latents too rare to produce joint outcomes ("What Cannot Be Detected"); for these the test has no data.
+
+**Falsifier:** for validity, sibling covariance of the predicted sign and magnitude arising under the stated preconditions with no latent present; for the recommendation, a domain in which routes (c)–(e) are available and cheaper, which the body allows.
+
+**Instantiated:** no.
+
 ## Discussion
 
 **Why the no-go is a strengthening, not a softening.** The prior framing ("the residual mechanism collapses on-policy") was a local observation about one statistic. The no-go is the structural reason: any on-policy statistic must collapse, because the on-policy distribution is identical between L0 and L1 worlds matched on regime conditionals. The covariance test is not just *a* working detector — it is the unique broadly-available violation of the no-go's scope. This sharpens the load-bearing of `#der-loop-interventional-access`: without the loop's interventional data, the no-go forbids detection entirely; with it, route (b) is operational.

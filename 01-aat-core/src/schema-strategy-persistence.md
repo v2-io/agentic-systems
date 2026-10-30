@@ -88,6 +88,36 @@ What was missing in the original sketch was instantiation — showing that speci
 
 The schema is no longer purely hypothetical. The sector parameter for strategic dynamics is the edge update gain $\eta_{\text{edge}}$ — the same quantity that governs epistemic persistence. The structural parallel between epistemic and strategic persistence is not an analogy but a mathematical identity at the sector-framework level.
 
+## Claim Record
+
+### A strategy learner that accumulates evidence without forgetting eventually fails every persistence threshold in a drifting world
+
+**Register:** descriptive — true of a named class of update mechanisms: Beta-Bernoulli edge credences without discounting, whose gain $1/(n+1)$ goes to zero (tag `forgetting-prerequisite`), under any $\rho_\Sigma \gt 0$.
+
+**Population:** learners whose edge credences are undiscounted Beta-Bernoulli posteriors, under bounded strategic drift. (The lift to every count-accumulating mechanism is stated in NeurIPS Paper 2, Working Notes, and is not in canon.)
+
+**True of:** the raw Beta-Bernoulli learner, derived. The incumbent-firm and institutional cases in Discussion are illustrations.
+
+**False of:** constant-gain estimators, change-point learners, and learners that adjust their rate to volatility are outside the population because they forget; human learners adjusting learning rate to volatility (Behrens, Woolrich, Walton & Rushworth 2007, cited from recall, primary not read in this project) are the empirical neighbour.
+
+**Falsifier:** a count-accumulating learner whose edge credence tracks a drifting edge within $R_\Sigma$ indefinitely.
+
+**Instantiated:** no.
+
+### With exponential forgetting the stationary gain is exactly one minus the discount, and persistence needs it above the disturbance-to-reserve ratio
+
+**Register:** formal — exact under premises (i)–(iv) (Prop B.1F, #deriv-edge-credence-dynamics); the reachable region for edges sharing one evidence stream is exact in #deriv-evidence-allocation-ceiling.
+
+**Population:** the four verified topologies under Beta-Bernoulli dynamics with discount $\lambda$, for the mismatch states $\boldsymbol\delta_c$ and $\delta_s$.
+
+**True of:** the single edge (Prop B.1F): gain $1 - \lambda$ at the stationary count, trajectory guarantee from any count at or below it.
+
+**False of:** $\delta_{\text{strategic}}$, the credit-assigned mismatch, for which persistence is open; L1′ with an unobservable common cause, where the per-conditional decomposition is identifiability-obstructed (Prop B.7).
+
+**Falsifier:** a simulated discounted Beta-Bernoulli recurrence whose measured per-observation gain at the stationary count differs from $1 - \lambda$. That check has been run and recorded (the F72 verification in `reviews/`), and it is the test that replaced the earlier ceiling at $R_\Sigma/2$.
+
+**Instantiated:** no; the simulations are of the theory's own recurrence.
+
 ## Discussion
 
 **What's needed to promote this from schema to result.**

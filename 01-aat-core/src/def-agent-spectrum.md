@@ -37,6 +37,36 @@ The regions differ in which state objects carry nontrivial structure:
 
 This is *definitional* — it names regions of a continuum for analytical convenience. The regions are not ontological categories; agents migrate between them. A PID controller with auto-tuning is moving from blind seeker toward actuated agent. An RL agent in pure exploration is temporarily an adaptive tracker.
 
+## Claim Record
+
+### Agents are placed by how rich their model is and how rich their objective is
+
+**Register:** formal — a definitional taxonomy of regions on a continuum (tag `agent-spectrum`); no agent is excluded, and migration between regions is expected.
+
+**Population:** anything in adaptive scope ( #scope-adaptive-system).
+
+**True of:** a reflex arc (reactive), a Kalman filter (adaptive tracker), a PID controller (blind seeker), a commander or a tool-using AI agent (actuated), as placed in Discussion; the one-state and two-state Moore machines of Miller (2022) at the reactive region and its boundary.
+
+**False of:** none; a continuum with named regions excludes nothing.
+
+**Falsifier:** none for a taxonomy.
+
+**Instantiated:** not applicable.
+
+### Competence at multi-step goals forces an implicit world model
+
+**Register:** descriptive, imported — Richens, Abel, Bellot & Everitt (2025), Theorem 1: a bounded goal-conditioned agent with a regret bound on goals to depth $n \geq 2$ admits extraction of a predictive world model from its policy. It is what makes the "+model" axis a fact about such agents rather than a posture.
+
+**Population:** goal-conditioned agents in finite MDPs with a regret bound $\delta$ on goals up to depth $n$. The body extends the reading to AAT's larger spaces under its scope-honesty discipline; that extension is a conjecture.
+
+**True of:** every agent in the population, by the theorem.
+
+**False of:** myopic agents ($n = 1$), for which their Theorem 2 shows no extraction procedure does better than chance.
+
+**Falsifier:** for the extension beyond finite MDPs, an agent competent at depth-$n$ goals in a larger space from which no predictive model is extractable.
+
+**Instantiated:** by an external theorem; not measured on any agent by this project.
+
 ## Discussion
 
 **The continuum, not categories.** Both axes are spectra: model richness ranges from no retained state, through error-integral-derivative, through full world models. Objective richness ranges from no preference, through scalar setpoints, through explicit multi-objective strategies. The 2×2 table names idealized regions; real agents populate the space between them.

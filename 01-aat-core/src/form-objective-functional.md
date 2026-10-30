@@ -61,6 +61,22 @@ Agents with hard non-compensatory constraints (safety AND profitability as indep
 
 Organizations or AI agents with true Pareto structure — where no scalarization is accepted and tradeoffs are genuinely unresolved — require a vector-valued extension. The structural results of Part II (orient cascade ordering, strategy DAG, directed separation) survive such an extension; the diagnostic results (satisfaction gap, control regret, 2×2 table) degrade from quantitative scalar magnitudes to qualitative set-theoretic tests.
 
+## Claim Record
+
+### Coherent preference over trajectories is represented by a real-valued functional
+
+**Register:** formal — a representation theorem (Debreu 1954 for the ordinal form; von Neumann–Morgenstern 1944 for the expectation form) under (A1)–(A4), stated above. The theory's scope claim rides on it: that its target class, individual agents and tightly coordinated teams under unified command, meets the axioms.
+
+**Population:** agents whose revealed choices over trajectories are complete, transitive and continuous, and, for the expectation form the value object uses, independent.
+
+**True of:** a point-target controller, $V_{O_t}(\tau) = -\lVert s_T - r \rVert$; a reward-maximizing RL agent, $\sum_t \gamma^t U(s_t)$.
+
+**False of:** (E1) lexicographic preferences, which admit no real-valued representation; (E2) cyclic revealed choice (committees, multi-reward systems with unresolved aggregation), which admits no rationalizing utility.
+
+**Falsifier:** for the theorem, none. For the scope claim, a target-class agent whose revealed choices violate the generalized axiom of revealed preference (Afriat 1967): cyclic choices from an agent the theory treats as coherent.
+
+**Instantiated:** not by this project. Revealed-preference tests on human choice data exist in economics; the body cites that lineage for the representation, not as a test of its target class.
+
 ## Discussion
 
 **The objective-functional gap.** The existing policy objective ( #disc-ciy-unified-objective) contains $\mathbb{E}[\text{value}(a) \mid M_t]$ without specifying what "value" means. $O_t$ provides the formal content: value is $V_{O_t}$ applied to expected trajectories. The #def-value-object segment develops the full evaluation machinery ($V_O$, $Q_O$ with horizon and continuation policy).

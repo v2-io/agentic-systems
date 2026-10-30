@@ -130,6 +130,36 @@ The segment contains three distinct epistemic layers:
 
 3. **The convention hierarchy and monotonicity**: *exact.* The three conventions (C1, C2, C3) are definitions. The monotonicity result splits by rung: the **right rung** $A_O^{\text{RH}} \leq A_O^{\text{B}}$ is exact and unconditional (any continuation in $\Pi$ has value at most that of the $\Pi$-optimal continuation), and the **left rung** $A_O^{(1)} \leq A_O^{\text{RH}}$ is exact *under* the order-consistency condition (RH-1/2/3) and false in general without it — the C2 replanning objective is a truncated surrogate, and an unguarded $N_r \lt N_h$ replanner can underperform the frozen current policy ( #deriv-convention-monotonicity). The corollary $\delta$-orderings inherit the same unconditional/conditional split. The diagnostic implications table states what each convention's quantities mean by construction.
 
+## Claim Record
+
+### The value object depends on the agent's state only through its model, and its value is identified only under positivity, sequential ignorability and a known action-mechanism
+
+**Register:** formal — the $G_t$-independence of $Q_O$ is exact for any causally-disciplined agent (it consumes only $\kappa_{\text{processing}} = 0$); identifiability of $P(o \mid do(a), M_t)$ is conditional on (C1)–(C3) as lettered *in this segment and in #der-loop-interventional-access* (positivity; sequential ignorability given history; known action-mechanism), not the differently-lettered triple of #scope-edge-update-causal-validity.
+
+**Population:** causally-disciplined agents in learning-agent scope ( #der-causal-hierarchy-requirement) with a scalar $V_{O_t}$; at $\kappa_{\text{processing}} \gt 0$ the independence degrades by the factor-$\kappa$ bound of #deriv-observation-ambiguity-bias-bound.
+
+**True of:** Kalman + LQR: the estimator is goal-blind, the action-transition mechanism is supplied by the known model (C3), and the LQR query is a function of the state estimate.
+
+**False of:** a Class 3 component in one goal-conditioned call, where the goal is upstream of the model's update; and, for identification, any agent whose policy is deterministic in its decision state, which fails (C1) for every untaken action, so that $Q_O$ there is extrapolated, not identified.
+
+**Falsifier:** for the independence claim, a disciplined agent whose $Q_O$ varies with $G_t$ at fixed $(M_t, O_t, \pi_{\text{cont}}, N_h)$; none has been looked for.
+
+**Instantiated:** no.
+
+### The three continuation conventions order attainability, and the convention fixes what a diagnosis means
+
+**Register:** formal — exact; C1, C2 and C3 are rollout under the current policy, receding-horizon replanning and the Bellman optimum, the lineage #deriv-convention-monotonicity names (Bertsekas; Rawlings, Mayne & Diehl). AAT's content is the use: the convention sets the inferential force of $\delta_{\text{sat}}$ (locally stuck under C1, infeasible under C3). "C1 is canonical" and "C2 for deployed systems" are recommendations, normative, and untested.
+
+**Population:** any agent or analyst evaluating $A_O$ with $M_t$, $\Pi$ and $N_h$ held fixed across the comparison.
+
+**True of:** the right rung, for every such agent; the left rung under (RH-1)–(RH-3). The two-state counterexample in #deriv-convention-monotonicity is the instance where the left rung fails.
+
+**False of:** unguarded short-horizon replanning fails the left rung.
+
+**Falsifier:** for the right rung, a continuation in $\Pi$ whose value exceeds the $\Pi$-optimum, impossible by definition; for the recommendations, a deployed-system comparison in which the C1 default or the C2 choice produces more false diagnoses than the alternative.
+
+**Instantiated:** no.
+
 ## Discussion
 
 **Extending the policy objective.** The existing policy objective ( #disc-ciy-unified-objective) uses $\mathbb{E}[\text{value}(a) \mid M_t]$ without formal content for "value." With the value object, this becomes:

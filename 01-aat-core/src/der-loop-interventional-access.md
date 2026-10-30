@@ -38,13 +38,43 @@ carries interventional information: it tells the agent how the environment respo
 - **(C2) Sequential ignorability** — in mutilated-graph form, the action $a_t$ is $d$-separated from the outcome $o_{t+1}$ given history $H_t$; equivalently, the policy is unconfounded with the outcome mechanism;
 - **(C3) Known action-mechanism** — the map from the agent's decision to the executed action is known (or itself overridden), so the executed value can be read as the intervened value.
 
-Where (C2) fails — generic for any agent whose action depends on internal state, plans, or memory that also bear on the outcome — on-policy $(a_t, o_{t+1})$ converges to $\mathbb{E}[o \mid A = a]$, the conditional, rather than to $\mathbb{E}[o \mid do(a)]$, the interventional effect. The channel is still present; what is gated is the move from action-generated data to an identified $do$-estimate.
+Where (C2) fails — when the action depended on something that also bears on the outcome and is not in the conditioning set: a cause of the choice the agent did not record or cannot introspect, or a decision input dropped by the learner's compression — on-policy $(a_t, o_{t+1})$ converges to $\mathbb{E}[o \mid A = a]$ given that set, the conditional, rather than to $\mathbb{E}[o \mid do(a)]$, the interventional effect. An agent whose decision state is a function of its recorded history $H_t$ satisfies (C2) given $H_t$ by construction, since conditioning on the direct causes of the action blocks every back-door path; what it then needs is (C1), which a policy deterministic in that state fails for every action it does not take. The channel is still present; what is gated is the move from action-generated data to an identified $do$-estimate.
 
 ## Epistemic Status
 
 *Exact.* The exact content is the **availability of the interventional-character channel**: a logical consequence of temporal ordering ( #post-causal-structure) and the feedback-loop structure ( #scope-agency), an agent in agency scope generates action-coupled data that is interventional in character rather than passively observed. The claim is about **data availability**, not reasoning capacity — the loop *provides* this channel whether or not the agent *exploits* it for Level-2 reasoning, and whether or not the data yields identified estimates.
 
 The precision is load-bearing and now first-class in the Formal Expression: the agent has *access to* interventional-character data, but *identification* of $P(o \mid do(a), \cdot)$ from it is gated on (C1) positivity, (C2) sequential ignorability, and (C3) a known action-mechanism. Confounding within a single time step (a violation of (C2)), insufficient action coverage (a violation of (C1)), delayed outcomes, and partial observability all bear on whether clean causal estimates can be extracted. The gated form is what keeps the *exact* label honest: the availability of the channel is unconditional; the identified-$do$-estimate is the conditional consequence, and the segment claims only the former as exact.
+
+## Claim Record
+
+### The feedback loop makes action-coupled data that is interventional in character
+
+**Register:** formal — exact; a consequence of temporal ordering ( #post-causal-structure) and the loop structure (tag `loop-interventional-access`). It is about the data's character, not about what the agent extracts from it.
+
+**Population:** systems in agency scope ( #scope-agency): at least two actions, at least one pair with distinct interventional outcome distributions routed through $\Omega$.
+
+**True of:** every such system, by the derivation; a tool-using LLM agent is the body's standing instance.
+
+**False of:** passive observers and nominal agents (adaptive scope, outside agency). An active-perception agent whose actions change only what it sees of an unchanged $\Omega$ sits at the boundary ( #scope-agency, "Which contrast counts").
+
+**Falsifier:** none at the level of agents.
+
+**Instantiated:** not applicable.
+
+### An agent's own action–outcome data identifies the effect of its actions when it conditions on everything the action depended on, and its randomization leaves every action possible
+
+**Register:** descriptive — a claim about which learners' estimates converge to interventional effects: those meeting (C1)–(C3) given their conditioning set (the triple as lettered here and in #def-value-object). Standard causal inference applied to the loop; the body states it in gated form.
+
+**Population:** learners in agency scope whose action is a function of a recorded decision state plus randomization independent of the environment, and who condition their estimates on that state.
+
+**True of:** tabular Q-learning with sufficient exploration in a fully observed MDP (Discussion), whose convergence to $\mathbb{E}[R \mid s, do(a)]$ is the standard result.
+
+**False of:** an agent whose action depended on an unrecorded or un-introspectable cause that also affects the outcome (the "already tired" case of #causal-access-intro): its on-policy estimates are confounded. A policy deterministic in its decision state: untaken actions are extrapolated from a model's smoothness, not identified.
+
+**Falsifier:** a learner meeting (C1)–(C3) given its conditioning set whose action-value estimates remain confounded; or an agent that discards its decision context and nonetheless recovers unconfounded effects on-policy.
+
+**Instantiated:** not by this project. Logged-propensity off-policy evaluation is the applied practice that lives on this claim (uncited in the body).
 
 ## Discussion
 
