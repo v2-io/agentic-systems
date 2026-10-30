@@ -14,6 +14,7 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
   - `internal-surfaces/00-cross-surface-map.md`
   - `influx-scout/MAP.md`. Its regional files are for integrators and are not read by the lead.
   - `owner-review/00-review.md` (final v2), `owner-review/integrator-items.md`
+  - `system-review/00-system.md`. Its counts are in `measurements.md`, which is unread; the review lists each command.
   - `owner-review/history/{2026-03-04,2026-05,2026-06-10}.md`
   - `spikes/spike-strategic-persistence-hard-ceiling-convention-2026-05-31-verify-1.md`. Its central gain claim was re-run by the lead.
   - The F72 landing diff (`5e621256`, `97179f6f`), reviewed whole, including the new `#deriv-evidence-allocation-ceiling`.
@@ -69,13 +70,14 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 ## In flight
 
 - **Running.** Read each agent's final documents whole before acting on anything it says.
-  - The system review (Fable, objective I), the A.1 integrator, and the C.1 integrator (see INTENT's "Who is on what"). Integrators commit by explicit path without pushing; the lead reviews each diff, then pushes. Rebuild `CURRENT-VOL1` after canon changes, using the biber workaround in memory.
+  - The A.1 and C.1 integrators (see INTENT's "Who is on what"). Integrators commit by explicit path without pushing; the lead reviews each diff, then pushes. Rebuild `CURRENT-VOL1` after canon changes, using the biber workaround in memory.
 - **Waiting on Joseph: nothing.** Resolve uncertainty rather than route it. Two items that used to wait on him now sit in KR3.3a:
   - Canon citing the gitignored `msc/joseph-working-notes.md`. Lift any theory content those citations need into canon, then remove the citations.
   - The 08-22 cleanup items.
 - **Next for the lead.**
-  1. When the system review lands, rebuild objective I from it, then take a beat before the next round of launches.
-  2. B.1, the external-claim records starting with Part II, is the next theory launch. The review ranks it with A.
+  1. When the two integrators land, review, push, rebuild `CURRENT-VOL1`, then take a beat.
+  2. I.2 comes next. Its debt clearing touches canon, so it waits until the integrators are out. It fires every other check, so it goes first.
+  3. B.1, the external-claim records starting with Part II, is the next theory launch.
 - **Joseph's word needed (deletion needs his confirmation):** the NeurIPS scout published its map as a private claude.ai artifact without being asked (https://claude.ai/artifact/AWfAyP5UyNCcu4GFqp5CWE). Should it be deleted?
 
 ## The lead's rhythm

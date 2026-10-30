@@ -66,23 +66,28 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 ## I — The system keeps it true (the lead's part)
 
 - **I.1** This tree stays true and lean, and every agent at every depth knows its KR. · *lead*
-- **I.2** There is one live place to find what is open, and no residue that reads as live work: trackers reconciled, `md-press` debt cleared, routing targets that resolve. · *partly; JOSEPH-TODO retired*
-- **I.3** Working Notes are classified by kind and status, not drained. · *not started; seed in `internal-surfaces/wn-ledger-seed/`*
-- **I.4** The record of how sure ASF is of each claim is truthful: declared inputs plus recorded checks, not hand-set labels. This is held until B.1 exists for one Part. · *notes in `system/01-…`*
-- **I.5** The practices that keep truth are written where agents meet them: standings, SOPs, the receiver-side orientation, and "measure the quantity, don't re-evaluate the formula". · *ongoing in `doc/sop/agents.sop.md`*
+- **I.2** The checks fire without a person. A tracked `.githooks/` runs `md-press --check`, `bin/lint-outline`, `bin/check-links` and `bin/refresh-all --check` on every commit and refuses failures, after the existing debt is cleared (68 files, 10 outline violations). · *not started*
+- **I.3** One open ledger, keyed by claim: every open item carries slug, kind, resolver and date, and every target resolves. The thirteen trackers, the index files, the proposal files, ROUTING and the decision briefs are folded into it or deleted. · *not started*
+- **I.4** Standing is read from recorded checks, not typed: a checks ledger (slug, text hash, who, criterion, outcome), with a lint that flags a changed body whose last check is older. F72 is the first row. · *not started*
+- **I.5** Working Notes carry forward pointers and regression guards only. Items are classified by kind and sent to their homes, and lifting audit gold into Working Notes stops. · *not started; seed in `internal-surfaces/wn-ledger-seed/`*
+- **I.6** The always-loaded surface says only what tools cannot check. Tool-enforced rules leave the prose, derivable parts are generated, and every SOP passes md-press. A two-launch probe measures the effect rather than asserting it. · *not started*
+- **I.7** Front surfaces are bound to the record: each restated sentence carries its slug, and a diff fails when the cited body has changed. · *not started*
+- **I.8** The effort's own residue drains. Its map and review directories delete when their items are in canon or the I.3 ledger, and no new tracker file is created. · *not started*
+
+Source for I.2–I.8: `system-review/00-system.md` §7. Its test for every mechanism is *does it fire without a person remembering?*
 
 ## Who is on what
 
 | Who | KR | Writes to |
 |---|---|---|
-| Lead coordinator (Opus 5.5, session "asf-cleanup") | I, plus coordination | `INTENT.md`, `HANDOFF.md`, `system/` |
-| System review (Fable) and its subagents | I: sets I's real KRs | `system-review/` |
+| Lead coordinator (Opus 5.5, session "asf-cleanup") | I, plus coordination | `INTENT.md`, `HANDOFF.md` |
 | A.1 integrator (Opus): the typed epistemic target | A.1 | `#scope-adaptive-system`, the $\theta$ registry, and its dependents |
 | C.1 integrator (Opus): the polytree theorem | C.1 (integrator-items A1, A9) | `#def-strategy-dag`, `#deriv-graph-structure-uniqueness`, `example-L1` |
 
 These are finished and on the line through the lead:
 
 - the owner review (Fable) and its seven subagents;
+- the system review (Fable);
 - the influx scout;
 - the internal-surfaces mapper;
 - the F72 verifier;
