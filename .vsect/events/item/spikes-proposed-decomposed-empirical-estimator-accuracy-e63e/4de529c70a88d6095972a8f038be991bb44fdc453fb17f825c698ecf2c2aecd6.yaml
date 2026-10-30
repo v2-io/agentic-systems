@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4de529c70a88d6095972a8f038be991bb44fdc453fb17f825c698ecf2c2aecd6
+at: 2026-10-30T21:28:09Z
+store: asf
+act: recheck
+about: item:spikes-proposed-decomposed-empirical-estimator-accuracy-e63e
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: '#der-class-coercion-via-wrapping Working Notes (:222) carry it; no estimator in canon or empirica. It is a refinement of the kappa_processing estimator that E.1 is to run on LLM families (W1 vs W2), so E.1 is where it either gets used or gets set aside. Adjacent to C.2''s C3 spike (what is encoded vs how it is updated).'
+outcome: holds
+owner: E.1

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: cb5cf67d173e1f5d61608c44717905478ba5ba5f7337eea547b37d8e4f5619ad
+at: 2026-10-30T21:28:06Z
+store: asf
+act: recheck
+about: item:spikes-proposed-cross-agent-value-functional-narrowness-0f3f
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Index row (PROPOSED.md:56) for PROPOSED-ADVANCED #18; same proposal, judged there.'
+of: item:spikes-proposed-advanced-18-cross-agent-value-functional-narrowne-bf71
+outcome: duplicate

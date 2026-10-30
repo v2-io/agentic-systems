@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f52299388c8aa974f1ca29db5b92a151c098630404cb993e603d856285be6773
+at: 2026-10-30T21:28:05Z
+store: asf
+act: recheck
+about: item:spikes-proposed-symbiogenesis-bifurcation-promotion-repa-5d29
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Index row (PROPOSED.md:30) for PROPOSED-ADVANCED #2; same proposal, judged there.'
+of: item:spikes-proposed-advanced-2-the-phase-transition-of-symbiogenesis-59b7
+outcome: duplicate

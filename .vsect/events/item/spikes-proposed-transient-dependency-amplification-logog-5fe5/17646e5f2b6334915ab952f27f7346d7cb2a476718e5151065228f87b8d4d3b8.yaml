@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 17646e5f2b6334915ab952f27f7346d7cb2a476718e5151065228f87b8d4d3b8
+at: 2026-10-30T21:28:05Z
+store: asf
+act: recheck
+about: item:spikes-proposed-transient-dependency-amplification-logog-5fe5
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Index row (PROPOSED.md:47) for PROPOSED-ADVANCED #3; same proposal, judged there.'
+of: item:spikes-proposed-advanced-3-transient-dependency-amplification-and-a826
+outcome: duplicate

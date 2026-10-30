@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 977545d554aca954a69420d5c0a22324dd2bb6a91f6ac3da81c9968efb4baa08
+at: 2026-10-30T21:28:07Z
+store: asf
+act: recheck
+about: item:spikes-proposed-delay-dwell-time-stability-budget-as-a-p-201b
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Eslami & Yu appears nowhere in canon (grep over 0*/src). #result-persistence-condition carries no delay or dwell-time term; dwell time appears only in #deriv-adaptive-gain-dynamics and #form-sector-condition for other purposes. F.2 names the ext rows of PROPOSED.md among its sources.'
+outcome: holds
+owner: F.2

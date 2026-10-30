@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 9e0007e4327c28dc995817743b8f04aa8d5888f6d66e4d0dcfd269ac5817444e
+at: 2026-10-30T21:28:08Z
+store: asf
+act: recheck
+about: item:spikes-proposed-decorrelation-by-construction-class-3-bu-f138
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: '#der-class-coercion-via-wrapping Working Notes (:224) carry it; no spike. Adjacent to live work: B.1''s record on #der-directed-separation says the degradation norm is not established for coupling that changes what an agent encodes (vsect question degradation-norm-encoding-vs-updating, awaiting C.2), and C.2''s C3 spike (allocation vs distortion) is splitting exactly that axis. Whoever takes this up should start from C3''s result; the ''(C3)'' in the row''s title is the wrapping segment''s condition, not that spike.'
+outcome: holds
+owner: unassigned

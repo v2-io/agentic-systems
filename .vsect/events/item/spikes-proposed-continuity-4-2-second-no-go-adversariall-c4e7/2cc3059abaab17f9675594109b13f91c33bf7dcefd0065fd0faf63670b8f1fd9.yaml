@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 2cc3059abaab17f9675594109b13f91c33bf7dcefd0065fd0faf63670b8f1fd9
+at: 2026-10-30T21:28:09Z
+store: asf
+act: recheck
+about: item:spikes-proposed-continuity-4-2-second-no-go-adversariall-c4e7
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Open, but the row''s pointer is wrong. It cites der-identity-continuity-threshold:130; the open edge it names (R4''s generality when reinjection is correlated with the state so as to vanish when I_k is low) is at #der-turnover-information-recursion:126 (03-llm-core), from spikes/.integrated/continuity-persistence/RESULT.md:57. #der-identity-continuity-threshold carries the neighbouring open edges (barrier reachability :133; rho and rho_rg not independent of g :135). ''Reserved (Joseph)'' no longer gates it under this effort.'
+outcome: holds
+owner: unassigned
+restated: 'Settle whether persistence of predictive sufficiency (R4 of #der-turnover-information-recursion) survives reinjection that is state-correlated so as to vanish when little is left to re-ground (:126), or prove the second no-go; the identity-continuity analogue is #der-identity-continuity-threshold :135.'

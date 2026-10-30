@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ff5cb6182745f1b43482af7380994b886db8126d8adb977cb67f2b9d90dbf341
+at: 2026-10-30T21:28:08Z
+store: asf
+act: recheck
+about: item:spikes-proposed-non-emergence-lemma-for-composites-bb06
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Jorgensen, Weichwald & Hammond (CLeaR 2026) appears nowhere in canon; #form-composition-closure and #scope-composite-agent carry no non-emergence result. The survey row (ref/prior-art-analysis/agentic-systems-landscape-2026-08-22.md:44) maps it to these segments and to #hyp-directed-separation-under-composition.'
+outcome: holds
+owner: F.2

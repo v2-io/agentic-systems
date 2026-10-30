@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 8ec1d807e120e9a921f6e959328fbdd428fad4b98ae6c7cb53e5404e1ef6ae13
+at: 2026-10-30T21:28:05Z
+store: asf
+act: recheck
+about: item:spikes-proposed-modularity-strategic-asymmetry-game-theo-1392
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Index row (PROPOSED.md:31) for PROPOSED-ADVANCED #13; same proposal, judged there.'
+of: item:spikes-proposed-advanced-13-game-theoretic-formalization-of-the-m-4436
+outcome: duplicate

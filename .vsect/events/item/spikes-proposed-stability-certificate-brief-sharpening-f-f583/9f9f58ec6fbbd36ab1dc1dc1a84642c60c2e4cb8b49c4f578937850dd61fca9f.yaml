@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 9f9f58ec6fbbd36ab1dc1dc1a84642c60c2e4cb8b49c4f578937850dd61fca9f
+at: 2026-10-30T21:28:07Z
+store: asf
+act: recheck
+about: item:spikes-proposed-stability-certificate-brief-sharpening-f-f583
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'The premise is false at HEAD. The row says the Findings Brief''s ''measuring-stick'' could be read as just the metric, missing that it is chosen so corrections shrink it. The Brief (#disc-stability-certificate:92, unchanged since b599c4a6, 2026-05-14, two weeks before the audit) already defines the stick by that property in its first sentence: ''is there a way of measuring "how far off am I?" such that every correction the agent makes provably shrinks that measure faster than the world pushes it back out? That measuring-stick is the stability certificate.'' The two Working Notes that queue the sharpening (:113, :131) repeat the false premise; recorded as a finding for I.5.'
+outcome: stale

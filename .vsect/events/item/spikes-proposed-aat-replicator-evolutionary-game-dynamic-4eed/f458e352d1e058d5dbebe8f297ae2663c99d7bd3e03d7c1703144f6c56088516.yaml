@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f458e352d1e058d5dbebe8f297ae2663c99d7bd3e03d7c1703144f6c56088516
+at: 2026-10-30T21:28:05Z
+store: asf
+act: recheck
+about: item:spikes-proposed-aat-replicator-evolutionary-game-dynamic-4eed
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Index row (PROPOSED.md:48) for PROPOSED-ADVANCED #14; same proposal, judged there.'
+of: item:spikes-proposed-advanced-14-aat-replicator-evolutionary-game-dyna-689c
+outcome: duplicate

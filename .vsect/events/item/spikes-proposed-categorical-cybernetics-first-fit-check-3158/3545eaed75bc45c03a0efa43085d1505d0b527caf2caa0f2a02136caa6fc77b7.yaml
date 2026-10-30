@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 3545eaed75bc45c03a0efa43085d1505d0b527caf2caa0f2a02136caa6fc77b7
+at: 2026-10-30T21:28:06Z
+store: asf
+act: recheck
+about: item:spikes-proposed-categorical-cybernetics-first-fit-check-3158
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Index row (PROPOSED.md:53) for the first sub-spike (the fit-check) of PROPOSED-ADVANCED #15; the item there carries the whole sequence.'
+of: item:spikes-proposed-advanced-15-categorical-cybernetics-re-grounding-9642
+outcome: duplicate

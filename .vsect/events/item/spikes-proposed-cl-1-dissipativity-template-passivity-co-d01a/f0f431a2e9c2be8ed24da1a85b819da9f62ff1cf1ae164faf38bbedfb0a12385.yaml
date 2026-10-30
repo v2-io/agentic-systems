@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f0f431a2e9c2be8ed24da1a85b819da9f62ff1cf1ae164faf38bbedfb0a12385
+at: 2026-10-30T21:28:09Z
+store: asf
+act: recheck
+about: item:spikes-proposed-cl-1-dissipativity-template-passivity-co-d01a
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Owned-elsewhere row (PROPOSED.md:80) for CL-1, the coupled #dissipativity-template landing; the same work is PROPOSALS D.9 (kept as the survivor; the ROUTING lane is closing its CL-1 item onto D.9 too).'
+of: item:proposals-d-9-sp-22-operator-family-tier-2-backlog-0b44
+outcome: duplicate

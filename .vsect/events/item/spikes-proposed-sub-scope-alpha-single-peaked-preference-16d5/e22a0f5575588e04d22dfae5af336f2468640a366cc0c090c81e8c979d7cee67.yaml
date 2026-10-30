@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: e22a0f5575588e04d22dfae5af336f2468640a366cc0c090c81e8c979d7cee67
+at: 2026-10-30T21:28:09Z
+store: asf
+act: recheck
+about: item:spikes-proposed-sub-scope-alpha-single-peaked-preference-16d5
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: '#deriv-strategy-proofness-impossibility still holds the adjacency at robust qualitative (:77, :87); the derivation that single-peaked preferences induce a potential-game structure under best-response dynamics is not in canon. Whether it is true in general is itself open (inference: it is known for median-type aggregation on a line, not for arbitrary issue spaces).'
+outcome: holds
+owner: unassigned

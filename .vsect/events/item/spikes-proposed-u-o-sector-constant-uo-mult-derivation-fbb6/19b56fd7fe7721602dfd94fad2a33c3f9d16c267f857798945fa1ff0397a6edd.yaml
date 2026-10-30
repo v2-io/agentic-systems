@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 19b56fd7fe7721602dfd94fad2a33c3f9d16c267f857798945fa1ff0397a6edd
+at: 2026-10-30T21:28:08Z
+store: asf
+act: recheck
+about: item:spikes-proposed-u-o-sector-constant-uo-mult-derivation-fbb6
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Open, but aimed at the wrong target. #deriv-critical-mass-composition''s own Working Note (:253) records that gamma(U_O) = -gamma_max U_O fails under resource contention: identical targets on a rivalrous resource can maximize interference, so U_O = 1 can give gamma > 0. A derivation of the linear map would derive something false outside non-rivalrous settings. Separately, the body tags (UO-mult) [Derived (... conditional on LQR-compatible action structure)] (:82) while its own table and Epistemic Status call it discussion-grade (:123, :142), and the body carries no non-rivalrous scope; recorded as a finding (C.1 kind).'
+outcome: holds
+owner: unassigned
+restated: 'Derive the cross-coupling gamma from the environment''s action-coupling operator as a function of target correlation and of rivalry over shared resources, not of U_O alone; the linear map in #deriv-critical-mass-composition should come out as the non-rivalrous special case or be replaced.'

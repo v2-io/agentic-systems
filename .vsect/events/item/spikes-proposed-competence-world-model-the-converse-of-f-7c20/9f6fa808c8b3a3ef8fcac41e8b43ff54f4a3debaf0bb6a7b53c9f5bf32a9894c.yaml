@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 9f6fa808c8b3a3ef8fcac41e8b43ff54f4a3debaf0bb6a7b53c9f5bf32a9894c
+at: 2026-10-30T21:28:07Z
+store: asf
+act: recheck
+about: item:spikes-proposed-competence-world-model-the-converse-of-f-7c20
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'The adoption half landed before this row was written: #def-agent-spectrum:86 cites Richens et al. 2025 with content and scope difference (finite MDPs) since dfb70e83 (2026-05-22), and B.1''s record (8d3d481f) counts it as the segment''s one imported instantiation. The row (added 2026-08-22 from the landscape survey) did not see that. What is still open is where the result belongs and what it does there: it is a converse of #form-agent-model''s posited M_t, and #form-agent-model does not cite it; nor has anyone attempted the AAT-internal converse (competence under AAT''s scope forces M_t).'
+outcome: holds
+owner: F.2
+restated: 'Richens et al. 2025 is cited at #def-agent-spectrum:86 (dfb70e83); carry it to #form-agent-model as the converse of the posited model, and attempt the AAT-internal version: under what part of AAT''s scope does bounded-regret competence force an extractable M_t, so that the postulate becomes a consequence there.'

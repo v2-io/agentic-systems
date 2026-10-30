@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: e54ddd0369299067ea20ee1227abffc8485e0720830590a88aaa96a4e92881b9
+at: 2026-10-30T21:28:10Z
+store: asf
+act: recheck
+about: item:spikes-proposed-reciprocal-link-enforcement-check-9e7a
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: Index row (PROPOSED.md:89) for the PROPOSED-MISC reciprocal-link checker, whose three fragments the pilot closed as overtaken by I.3 itself. With PROPOSED.md and PROPOSED-ADVANCED deleted into the ledger, there is no index for Working Notes to link back to; I.5's rule (Working Notes carry forward pointers only) replaces the discipline the check was to enforce.
+outcome: superseded

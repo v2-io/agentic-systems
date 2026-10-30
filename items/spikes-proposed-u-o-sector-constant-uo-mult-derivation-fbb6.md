@@ -1,0 +1,18 @@
+---
+kind: item
+provenance: imported
+source: spikes/PROPOSED.md:66
+section: PROPOSED — the spike-proposal index › Tier 3 — segment-perspective audit-judgments
+opened: 2026-10-30T20:17:42Z
+opened-by: Claude Fable 5.1
+concerns: [segment:result-unity-closure-mapping, segment:deriv-critical-mass-composition]
+rechecked: 2026-10-30T21:28:08Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
+restated: 'Derive the cross-coupling gamma from the environment''s action-coupling operator as a function of target correlation and of rivalry over shared resources, not of U_O alone; the linear map in #deriv-critical-mass-composition should come out as the non-rivalrous special case or be replaced.'
+---
+
+# $U_O$ → sector-constant (UO-mult) derivation
+
+Imported verbatim (relative links rebased) from `spikes/PROPOSED.md` line 66, section *PROPOSED — the spike-proposal index › Tier 3 — segment-perspective audit-judgments*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-u-o-sector-constant-uo-mult-derivation-fbb6 --outcome holds|stale|landed|not-an-item --why …`.
+
+| 2026-05-19 | $U_O$ → sector-constant (UO-mult) derivation | seg:result-unity-closure-mapping | Action-space inner-product analysis (action-coupling operator; LQR cross-actions ∝ target correlation; pin $\gamma_{\max}$ via the quadratic-objective Hessian + environment coupling gain) upgrading the (UO-mult) channel $\gamma(U_O)=-\gamma_{\max}U_O$ in `#deriv-critical-mass-composition` §5.2 from discussion-grade to derived | proposed | 2026-05-19 | `result-unity-closure-mapping` Working Notes ("$U_O$ → sector-constant pathway") |

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: b2609e39b564592c5cef4c3d75ba83f52c7a500685d3bfab4098c79fdac1fb46
+at: 2026-10-30T21:28:09Z
+store: asf
+act: recheck
+about: item:spikes-proposed-adversarial-adaptive-gain-meta-gain-temp-06a0
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: '#deriv-adaptive-gain-dynamics Working Notes (:187) still say the adversarial meta-gain condition is ''not derived here''; no spike.'
+outcome: holds
+owner: unassigned

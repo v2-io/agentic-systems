@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 8fb6e753c720e8a4a4f1f84260fbd2c19a9cd7c26036b51ffa942a3577e8c617
+at: 2026-10-30T21:28:07Z
+store: asf
+act: recheck
+about: item:spikes-proposed-good-regulator-theorem-for-embodied-agen-a027
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'The row calls Virgo et al. (arXiv 2508.06326) ''unread — survey gap'', but canon has cited it with content at #def-agent-spectrum:86 since dfb70e83 (2026-05-22): an observer-relative refinement of Conant-Ashby, read as dual to Richens. Either that citation was written without reading the primary or the 2026-08-22 survey did not see canon; which one is an F.3 question. The comparison the row asks for has not been made: #der-directed-separation does not cite Virgo, and nothing reads its interpretable-belief result against goal-blind M_t update or the identifiability floor.'
+outcome: holds
+owner: F.2
+restated: 'Read Virgo, Biehl, Baltieri & Capucci 2025 against #der-directed-separation (is the belief structure a regulation task forces goal-blind?) and #disc-identifiability-floor; and settle whether #def-agent-spectrum:86''s existing citation of it was made from the primary.'

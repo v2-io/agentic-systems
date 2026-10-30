@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ee6a037d11232f0ff6ceac3e465c20d53a2c0a10acd264c5a78267f2fa557715
+at: 2026-10-30T21:28:06Z
+store: asf
+act: recheck
+about: item:spikes-proposed-mixture-support-dynamics-under-the-orien-ca66
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: '#def-strategy-dag Working Notes (:277) still carry ''Open (mixture-support dynamics)'': the L1-prime mixture''s support is bounded by the SCC count statically, and whether cascade-driven revision can grow it is unanswered. No KR (nearest B.2).'
+outcome: holds
+owner: unassigned

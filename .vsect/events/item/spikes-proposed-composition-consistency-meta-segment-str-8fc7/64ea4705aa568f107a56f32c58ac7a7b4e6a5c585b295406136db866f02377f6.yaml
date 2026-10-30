@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 64ea4705aa568f107a56f32c58ac7a7b4e6a5c585b295406136db866f02377f6
+at: 2026-10-30T21:28:06Z
+store: asf
+act: recheck
+about: item:spikes-proposed-composition-consistency-meta-segment-str-8fc7
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: '#disc-composition-consistency still has no Findings block (headings at HEAD: Formal Expression, Epistemic Status, Discussion, Working Notes) and its prior-art landscape lives only in a Working Note (:104). The row bundles two things of different kinds: the canon work (Findings block, Related Work, the five constructive-impossibility candidates) and the paper-extraction candidacy, which belongs to ops/logos, not here.'
+outcome: holds
+owner: unassigned
+restated: 'Give #disc-composition-consistency the Findings block and Related Work its peer meta-segments carry (Simon, Koestler, multi-level selection, renormalization, actor systems), and test which of the five candidate constructive-impossibility instances it names actually have that shape; the paper-extraction candidacy is an ops question, not ASF work.'

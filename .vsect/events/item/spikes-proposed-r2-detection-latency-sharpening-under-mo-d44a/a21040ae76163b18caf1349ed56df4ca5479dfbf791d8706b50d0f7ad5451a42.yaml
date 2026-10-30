@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: a21040ae76163b18caf1349ed56df4ca5479dfbf791d8706b50d0f7ad5451a42
+at: 2026-10-30T21:28:08Z
+store: asf
+act: recheck
+about: item:spikes-proposed-r2-detection-latency-sharpening-under-mo-d44a
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: '#deriv-update-detection-latency Working Notes (:117) still carry the R2 sharpening as an argument, not a derivation; the O(1) common-mode bias under directional misspecification is not computed in canon.'
+outcome: holds
+owner: unassigned

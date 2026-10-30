@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 356952dd82e7479d2fdd016f40314528d424f6c6ba5a9728f0cfa04939480260
+at: 2026-10-30T21:28:04Z
+store: asf
+act: recheck
+about: item:spikes-proposed-effects-spiral-eigenvalue-condition-conc-89ba
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Index row (PROPOSED.md:27) whose Details cell points at PROPOSED-ADVANCED Phase-3 #12; same proposal, judged there.'
+of: item:spikes-proposed-advanced-12-effects-spiral-eigenvalue-condition-d-d6f7
+outcome: duplicate

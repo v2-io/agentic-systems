@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: c0d1e0d03f9cf4f86e943d1a60288edd111064e14e6477324279c4a476a6cb11
+at: 2026-10-30T21:28:07Z
+store: asf
+act: recheck
+about: item:spikes-proposed-equation-tag-vs-content-type-drift-for-o-9df0
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Overtaken by A.1 (492a1492, today). The row''s premise was that the atoms tagged [Definition (transition opacity)] and [Definition (epistemic opacity)] say ''the agent does not know T exactly'', a constitutive restriction rather than an introduced object. At HEAD both atoms (#def-action-transition:31-33, #def-observation-function:35-37) say the agent *may* not know the kernel, name its unknown content (theta_T, theta_h, the transition and observation components of the environment''s law) and say opacity is not required of every system in scope. That introduces a named quantity, so Definition is now the right tag. #def-action-transition''s Working Note (:67) still argues the old typing question against text that no longer exists; recorded as a finding for I.5.'
+outcome: superseded

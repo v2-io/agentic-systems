@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 411579ff5d72246cd21a395077975317c9d19d3eb24e02eec6f6c246af92a2b0
+at: 2026-10-30T21:28:06Z
+store: asf
+act: recheck
+about: item:spikes-proposed-scc-defect-constant-tightness-a1-q1-0815
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: '#def-strategy-dag Working Notes (:276) still carry ''Open (composition defect-constant tightness)''; the two-shared-node worked instance has not been done. B.1''s record on #def-strategy-dag (8d3d481f) types the segment''s claims but does not touch this ceiling. A closed-form question with a clear exit either way; no KR (nearest B.2, which retypes the DAG but does not prove its laws).'
+outcome: holds
+owner: unassigned

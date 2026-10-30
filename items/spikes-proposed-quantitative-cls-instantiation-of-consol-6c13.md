@@ -1,0 +1,17 @@
+---
+kind: item
+provenance: imported
+source: spikes/PROPOSED.md:67
+section: PROPOSED — the spike-proposal index › Tier 3 — segment-perspective audit-judgments
+opened: 2026-10-30T20:17:42Z
+opened-by: Claude Fable 5.1
+concerns: [segment:form-consolidation-dynamics]
+rechecked: 2026-10-30T21:28:08Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
+---
+
+# Quantitative CLS instantiation of consolidation dynamics
+
+Imported verbatim (relative links rebased) from `spikes/PROPOSED.md` line 67, section *PROPOSED — the spike-proposal index › Tier 3 — segment-perspective audit-judgments*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-quantitative-cls-instantiation-of-consol-6c13 --outcome holds|stale|landed|not-an-item --why …`.
+
+| 2026-05-19 | Quantitative CLS instantiation of consolidation dynamics | seg:form-consolidation-dynamics | Work out (N1)+(N2) for a specific CLS-like architecture (sparse-conjunctive + distributed-overlapping at given capacity ratios), deriving the online-only no-go as a rate-distortion bound + a quantitative stability-upper-bound for the feasibility window | proposed | 2026-05-19 | `form-consolidation-dynamics` Working Notes ("Quantitative CLS instantiation") |

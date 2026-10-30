@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ebab7b05f556b569e7a208a5408c82448f05fc750b20542423c3177ae7b8638a
+at: 2026-10-30T21:28:08Z
+store: asf
+act: recheck
+about: item:spikes-proposed-der-turnover-novelty-vs-subsumed-c10-ce20
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: '#der-turnover-information-recursion (03-llm-core) still carries the open question at :129 (new A_D object, or the bridge-lemma resolvent applied to the turnover channel). Not answered in canon or spikes.'
+outcome: holds
+owner: unassigned

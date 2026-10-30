@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ed335adbd4ddc16957168b1bdc507f47230d74e99867c891095ca2f72924f160
+at: 2026-10-30T21:28:09Z
+store: asf
+act: recheck
+about: item:spikes-proposed-spike-update-operator-sector-tractable-l-e7a3
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Owned-elsewhere row (PROPOSED.md:81) pointing at ROUTING ''Next actions'' 2; the same landing (alpha-op/beta-op refresh into #deriv-sector-condition, operator-layer no-go into #disc-identifiability-floor) is the TODO item, which carries the detail and is judged in the TODO lane.'
+of: item:todo-spike-update-operator-sector-orphan-regr-b62b
+outcome: duplicate

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 69cc8d43cd82042e64033503dfc61b3cd89e8582afddde718fa5d92e6828c84e
+at: 2026-10-30T21:28:07Z
+store: asf
+act: recheck
+about: item:spikes-proposed-the-do-surgery-challenge-to-scope-agency-3861
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: '#scope-agency still defines agency by interventional contrast on P(o | do(a)) (:13, :30) and nothing in canon answers the do-surgery objection (a do on the agent''s action severs the decision that makes it an agent). Baltieri & Suzuki is not cited anywhere in canon. Adjacent to, not the same as, C.2''s C2 spike (loop identification given the decision state, spikes/spike-loop-identification-decision-state-2026-10-30/), which concerns what the agent''s own data identifies; this concerns what the definition of agency presupposes. Nearest KRs: C.2 (adjacent) and F.2 (the citation).'
+outcome: holds
+owner: unassigned

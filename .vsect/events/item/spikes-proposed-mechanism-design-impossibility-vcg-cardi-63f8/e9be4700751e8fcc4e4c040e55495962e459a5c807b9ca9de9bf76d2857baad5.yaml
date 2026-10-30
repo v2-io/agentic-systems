@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: e9be4700751e8fcc4e4c040e55495962e459a5c807b9ca9de9bf76d2857baad5
+at: 2026-10-30T21:28:04Z
+store: asf
+act: recheck
+about: item:spikes-proposed-mechanism-design-impossibility-vcg-cardi-63f8
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Index row (PROPOSED.md:29) for PROPOSED-ADVANCED #4; same proposal, judged there (superseded by #disc-implementation-impossibility''s scoping of constructive mechanism design).'
+of: item:spikes-proposed-advanced-4-mechanism-design-impossibility-for-mul-e0c5
+outcome: duplicate

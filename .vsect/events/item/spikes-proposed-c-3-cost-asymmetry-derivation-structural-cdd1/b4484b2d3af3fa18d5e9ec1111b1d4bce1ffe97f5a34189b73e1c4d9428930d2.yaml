@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: b4484b2d3af3fa18d5e9ec1111b1d4bce1ffe97f5a34189b73e1c4d9428930d2
+at: 2026-10-30T21:28:08Z
+store: asf
+act: recheck
+about: item:spikes-proposed-c-3-cost-asymmetry-derivation-structural-cdd1
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: '#disc-dynamic-regime-axis Working Notes (:197) still name the section C.3 transition cost-asymmetry derivation as open; the claim stays argumentation-grade. No spike.'
+outcome: holds
+owner: unassigned

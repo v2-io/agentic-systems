@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: e3591c803df358e8a67824552d3bf9e9eace045f1094cc8004178b3559c5a5d3
+at: 2026-10-30T21:28:05Z
+store: asf
+act: recheck
+about: item:spikes-proposed-mean-field-game-limit-for-population-dyn-c257
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Index row (PROPOSED.md:50) for PROPOSED-ADVANCED #7; same proposal, judged there.'
+of: item:spikes-proposed-advanced-7-mean-field-game-limit-for-population-d-61f3
+outcome: duplicate

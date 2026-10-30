@@ -1,0 +1,18 @@
+---
+kind: item
+provenance: imported
+source: spikes/PROPOSED.md:32
+section: PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)
+opened: 2026-10-30T20:17:42Z
+opened-by: Claude Fable 5.1
+concerns: [segment:disc-composition-consistency, segment:der-multi-timescale-stability]
+rechecked: 2026-10-30T21:28:06Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
+restated: 'Give #disc-composition-consistency the Findings block and Related Work its peer meta-segments carry (Simon, Koestler, multi-level selection, renormalization, actor systems), and test which of the five candidate constructive-impossibility instances it names actually have that shape; the paper-extraction candidacy is an ops question, not ASF work.'
+---
+
+# Composition-consistency meta-segment strengthening + paper-extraction candidacy
+
+Imported verbatim (relative links rebased) from `spikes/PROPOSED.md` line 32, section *PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-composition-consistency-meta-segment-str-8fc7 --outcome holds|stale|landed|not-an-item --why …`.
+
+| 2026-05-28 | Composition-consistency meta-segment strengthening + paper-extraction candidacy | seg:disc-composition-consistency | Following the 2026-05-28 retype/relocation (audit 384279 friction-surfacing + meta-segment fronting reframe): land a proper Findings block on `#disc-composition-consistency` matching the discipline of the other Meta-Architecture meta-segments. Prior-art landscape rich enough for standalone paper-extraction candidacy parallel to `msc/separability-standalone-paper-proposal.md` (B-N-Sep): Simon 1962 *Architecture of Complexity* near-decomposability + Koestler 1967 holons (already cited in Working Notes, carries the conceptual lineage) + multi-level selection in evolutionary biology (Sober-Wilson 1998 *Unto Others*; Okasha 2006) + renormalization-group cross-scale-invariance (Friston-Heins-Verbelen-Da Costa 2025 supplies the active-inference instance — engaged by the landed `#der-multi-timescale-stability`) + actor-systems / distributed-computing composition (Hewitt 1973, Agha 1986) + the categorical-cybernetics parametrised-optic framework (Capucci 2022 + Smithe 2024 — shared with the categorical-cybernetics fit-check spike below). Five-element constructive-impossibility-posture instances candidates: (i) closure-defect $\varepsilon^\ast$ as the Mori-Zwanzig memory-kernel projection-residue lifting the four-facet spine's projection-behaviour facet to a cross-level commitment; (ii) Tier 1M closed-form as the unique broadly-available exact composite-rate certificate; (iii) screening test $\tau_{\text{eq}} \ll \tau_{\text{ext}}$ as the operational analog of the persistence threshold; (iv) Brooks's-Law as the canonical operational failure mode; (v) holon-recursion termination at agents below scope-applicability. Effort: substantial (paper-grade prior-art search via Undermind matching the separability-standalone protocol); load-bearing for the meta-architecture cluster's coherence | proposed | 2026-05-28 | [audit-384279 §F bigger-picture observations] → `#disc-composition-consistency` Working Notes (Provenance entry 2026-05-28); adjacent to the landed RGM/multi-timescale work (`#der-multi-timescale-stability`, 2026-06-10) |

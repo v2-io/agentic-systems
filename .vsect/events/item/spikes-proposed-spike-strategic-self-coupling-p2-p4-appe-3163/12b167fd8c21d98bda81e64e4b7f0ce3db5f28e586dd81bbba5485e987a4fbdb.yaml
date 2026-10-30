@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 12b167fd8c21d98bda81e64e4b7f0ce3db5f28e586dd81bbba5485e987a4fbdb
+at: 2026-10-30T21:28:10Z
+store: asf
+act: recheck
+about: item:spikes-proposed-spike-strategic-self-coupling-p2-p4-appe-3163
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'spikes/spike-strategic-self-coupling.md is live and still ''scope-defined; investigation pending'' (:4, :18); #disc-strategic-self-coupling''s Working Notes point at its P2 and P4 candidates (:167). No other ledger item carries it.'
+outcome: holds
+owner: unassigned

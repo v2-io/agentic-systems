@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 291bc4675dcc35179b282669ac3d2a90d0f99ff40b4592e00bd9d30b2698cbdd
+at: 2026-10-30T21:28:05Z
+store: asf
+act: recheck
+about: item:spikes-proposed-quantum-causal-dags-for-logogenic-superp-2aa6
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Index row (PROPOSED.md:52) for PROPOSED-ADVANCED #10; same proposal, judged there (stale on its premise).'
+of: item:spikes-proposed-advanced-10-quantum-causal-dags-for-logogenic-sup-44f8
+outcome: duplicate

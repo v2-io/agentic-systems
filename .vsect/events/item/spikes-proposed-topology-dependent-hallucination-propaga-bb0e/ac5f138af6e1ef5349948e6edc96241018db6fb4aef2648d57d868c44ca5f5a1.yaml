@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ac5f138af6e1ef5349948e6edc96241018db6fb4aef2648d57d868c44ca5f5a1
+at: 2026-10-30T21:28:05Z
+store: asf
+act: recheck
+about: item:spikes-proposed-topology-dependent-hallucination-propaga-bb0e
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Index row (PROPOSED.md:51) for PROPOSED-ADVANCED #9; same proposal, judged there.'
+of: item:spikes-proposed-advanced-9-topology-dependent-propagation-of-hall-b0b6
+outcome: duplicate

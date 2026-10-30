@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: d9254156c9ecf6ccb5d83bc056279432560d0333709ab0599e335772033b3157
+at: 2026-10-30T21:28:06Z
+store: asf
+act: recheck
+about: item:spikes-proposed-skalse-2022-reward-hacking-unhackability-352d
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Index row (PROPOSED.md:55) for PROPOSED-ADVANCED #17; same proposal, judged there.'
+of: item:spikes-proposed-advanced-17-skalse-2022-reward-hacking-unhackabil-8188
+outcome: duplicate

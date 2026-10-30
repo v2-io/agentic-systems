@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 25109dd20ea7d483e62db4cf4a0cef8e7c98ceb8c94e0f679039afc23a96b0db
+at: 2026-10-30T21:28:09Z
+store: asf
+act: recheck
+about: item:spikes-proposed-code-quality-bistability-2d-dynamical-fo-0dc9
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: '#der-code-quality-as-observation-infrastructure (02-tst-core) Working Notes (:135) still say the bifurcation claim needs even a simple dynamical model; none exists. The TST C.1/H.2 lane is editing 02-tst-core today (A13); this item is not among its defects but shares the territory.'
+outcome: holds
+owner: unassigned
