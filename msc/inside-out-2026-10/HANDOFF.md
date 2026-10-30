@@ -80,8 +80,7 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
   1. As each agent lands, read its documents whole, then review and push by SHA.
   2. Spikes: commission a verifier with the template's bare brief, then a separate integrator.
   3. B.1: commission a checker who didn't write the records; its verdicts go into vsect as review records. Then merge the branch.
-  4. When `confirm` lands, the lead is the second mind on the four lapsed checks (EA.1's among them).
-  5. A.2, the front door, after B.1's Part II records exist, so headline sentences trace to retyped registers. The two A.1-stale sentences are already fixed (`7b429bcc`).
+  4. A.2, the front door, after B.1's Part II records exist, so headline sentences trace to retyped registers. The two A.1-stale sentences are already fixed (`7b429bcc`).
   - Rebuild `CURRENT-VOL1` after each canon landing, using the biber workaround in memory.
 
 ## The lead's rhythm

@@ -66,8 +66,8 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 ## I — The system keeps it true (the lead's part)
 
 - **I.1** This tree stays true and lean, and every agent at every depth knows its KR. · *lead*
-- **I.3** One open ledger, keyed by claim: every open item carries slug, kind, resolver and date, and every target resolves. The thirteen trackers, the index files, the proposal files, ROUTING and the decision briefs are folded into it or deleted. · *started: `vsect open` is the ledger for findings and questions; no tracker folded in yet, and work items have no kind*
-- **I.4** Standing is read from recorded checks, not typed: a checks ledger (slug, text hash, who, criterion, outcome), with a lint that flags a changed body whose last check is older. · *started: vsect records checks bound to their basis and reports lapses; F72 recorded; `exact 26 (checked 1)`; `confirm` (re-binding a lapsed check) not built*
+- **I.3** One open ledger, keyed by claim: every open item carries slug, kind, resolver and date, and every target resolves. The thirteen trackers, the index files, the proposal files, ROUTING and the decision briefs are folded into it or deleted. · *started: `vsect open` holds findings and questions; an `item` kind and the tracker import are being built*
+- **I.4** Standing is read from recorded checks, not typed: a checks ledger (slug, text hash, who, criterion, outcome), with a lint that flags a changed body whose last check is older. · *started: vsect records checks bound to their basis, reports lapses, and re-binds them by a second mind's `confirm`; F72 recorded and holding; `exact 26 (checked 1)`*
 - **I.5** Working Notes carry forward pointers and regression guards only. Items are classified by kind and sent to their homes, and lifting audit gold into Working Notes stops. · *not started; seed in `internal-surfaces/wn-ledger-seed/`*
 - **I.6** The always-loaded surface says only what tools cannot check. Tool-enforced rules leave the prose, derivable parts are generated, and every SOP passes md-press. A two-launch probe measures the effect rather than asserting it. · *not started*
 - **I.7** Front surfaces are bound to the record: each restated sentence carries its slug, and a diff fails when the cited body has changed. · *not started*
@@ -85,7 +85,7 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 | C2 spiker (Fable): loop identification given the decision state | C.2 | `spikes/spike-loop-identification-decision-state-2026-10-30/` |
 | C3 spiker (Fable): allocation vs distortion coupling | C.2 | `spikes/spike-allocation-vs-distortion-coupling-2026-10-30/` |
 | A.1 independent re-reader (Opus), bare brief | A.1 | `spikes/epistemic-target-ontology/07-independent-reread.md` |
-| vsect builder (Fable): `confirm` | I.4 | `~/src/arch/firmatum/utils/vsect/` |
+| vsect builder (Fable): `item` kind and tracker import | I.3 | `~/src/arch/firmatum/utils/vsect/` |
 
 These are finished and on the line through the lead:
 
