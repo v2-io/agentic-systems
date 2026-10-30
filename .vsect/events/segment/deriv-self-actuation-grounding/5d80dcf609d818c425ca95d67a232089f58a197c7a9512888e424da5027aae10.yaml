@@ -1,0 +1,28 @@
+schema: vsect-event/0
+id: 5d80dcf609d818c425ca95d67a232089f58a197c7a9512888e424da5027aae10
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-self-actuation-grounding
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - der-orient-cascade
+  - def-value-object
+  - def-satisfaction-gap
+  - def-control-regret
+  - form-objective-functional
+  - der-directed-separation
+  - scope-agent-identity
+  - def-agent-spectrum
+  - result-persistence-condition
+  - disc-continuity-stance
+  stage: draft
+  status: conditional
+  type: derivation
+own-version: 4ae225c6f9c0f0c4dc82af65db1d15787a4aa793a2f98bb21f695465d55893c2
+record: 01-aat-core/src/deriv-self-actuation-grounding.md

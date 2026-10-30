@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 86c57d0379a07f149463dfa2c4a84b8b38635ad540adbca250765202caa1fef7
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-coupled-update-dynamics
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-logogenic-agent
+  - form-complete-agent-state
+  - der-recursive-update
+  - der-directed-separation
+  - form-event-driven-dynamics
+  stage: draft
+  status: robust-qualitative
+  type: definition
+own-version: 4f93c7196b6014f20471c349d270595b7774cbb1f1503d882675184fe8cd946d
+record: 03-llm-core/src/def-coupled-update-dynamics.md

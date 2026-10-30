@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 581100edd985433d71f378925028297a88988b270c9e27d393aae9784040c228
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-graph-structure
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-strategy-dag
+  - der-chain-confidence-decay
+  - norm-explicit-strategy-condition
+  - post-causal-structure
+  stage: claims-verified
+  status: conditional
+  type: derivation
+own-version: f162817f4052cfb34489b48834c579485838e8d0caf28b5561b51ea496c78f1a
+record: 01-aat-core/src/deriv-graph-structure.md

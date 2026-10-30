@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 026fdfd4b0479ff6689cd41924d81f6559b03232e3b9517637c9c08f7afdda73
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:hyp-auftragstaktik-principle
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-shared-intent
+  - def-unity-dimensions
+  - def-adaptive-tempo
+  stage: draft
+  status: discussion-grade
+  type: hypothesis
+own-version: ce4a5d94bde28cff1b5e6e8022a271661f6776a7040a7c39ca5b49a4acee195d
+record: 01-aat-core/src/hyp-auftragstaktik-principle.md

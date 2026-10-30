@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 8d68d01a9297add5b02a5552ff97607e9aa579a636627fa43347eada1bbb00e2
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:obs-developmental-trajectory
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-moral-continuity
+  - def-proprium-mapping
+  - hyp-mismatch-dynamics
+  - emp-update-gain
+  stage: draft
+  status: discussion-grade
+  type: observation
+own-version: d3c8e208e7e74b19974d07d79266cebc77bfd827ab207bf3dd77eca70ce5b1e3
+record: 04-eli-core/src/obs-developmental-trajectory.md

@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: eb431e0729ce616d4493f026476155b0a22b00fe8ee2981ae192cfe698ea4099
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:obs-authored-world-laboratory
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - obs-software-epistemic-properties
+  - deriv-mechanism-counterfactual-separation
+  - result-persistence-condition
+  stage: draft
+  status: discussion-grade
+  type: observation
+own-version: 6a32003aeb38a859ae4c4f2b3505ec32c71d858594bca8019831fc4a5dd226b5
+record: 01-aat-core/src/obs-authored-world-laboratory.md

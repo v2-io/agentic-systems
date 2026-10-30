@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 576087d72a5c4f6a1736d42e286adf12d3033cf29cd6dc204f08748d2a3eb409
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-adversarial-destabilization
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - result-sector-condition-stability
+  - deriv-sector-condition
+  - result-sector-persistence-template
+  - def-adaptive-tempo
+  stage: draft
+  status: conditional
+  type: derived
+own-version: 7a7fd495a2b47f3c346d6639853aba23dee76acaca1e0551417fe23201026734
+record: 01-aat-core/src/der-adversarial-destabilization.md

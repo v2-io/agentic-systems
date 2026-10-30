@@ -1,0 +1,35 @@
+kind: segment
+form: 
+normalizer: vsect-norm/0
+---
+# Definition: Atomic Changeset
+
+The complete diff between the codebase state before and after a feature is fully implemented, excluding generated artifacts.
+
+## Formal Expression
+
+*[Definition (atomic-changeset)]*
+
+For a feature $F$ ( #def-feature) applied to system $S$:
+
+$$\text{changeset}(F) = S_{\text{after}} \ominus S_{\text{before}}$$
+
+where $\ominus$ denotes the human- or agent-authored diff, excluding build artifacts, generated code, and automated reformatting.
+
+"Codebase" crosses architectural boundaries — source code, schemas, configuration, infrastructure-as-code, tests, API contracts, deployment pipelines, monitoring configuration. If it must change to deliver the feature, it is part of the changeset.
+
+**Size measures** (not mutually exclusive):
+
+- Lines changed (added + deleted + modified)
+
+- Files touched
+
+- Modules affected
+
+## Epistemic Status
+
+Definitional. The boundary choice (excluding generated artifacts) is a pragmatic convention, not derived — but it aligns with measuring the decisions the agent actually makes, which is what #post-temporal-optimality optimizes.
+
+## Discussion
+
+The changeset is the observable trace of an implementation decision. It is to software what the action $a_t$ is to the general agent: the intervention in the environment. The size and structure of the changeset are what #emp-changeset-size-principle and #der-change-proximity-principle operate on.

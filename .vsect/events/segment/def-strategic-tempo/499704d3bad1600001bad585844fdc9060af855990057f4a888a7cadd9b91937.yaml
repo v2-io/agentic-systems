@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 499704d3bad1600001bad585844fdc9060af855990057f4a888a7cadd9b91937
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-strategic-tempo
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-adaptive-tempo
+  - hyp-edge-update-via-gain
+  - def-strategy-dag
+  - scope-edge-update-causal-validity
+  - deriv-edge-credence-dynamics
+  stage: draft
+  status: conditional
+  type: definition
+own-version: 689b621ba208abada10f13de5447023b7a8717dca75eceadc9de21d38e283fd7
+record: 01-aat-core/src/def-strategic-tempo.md

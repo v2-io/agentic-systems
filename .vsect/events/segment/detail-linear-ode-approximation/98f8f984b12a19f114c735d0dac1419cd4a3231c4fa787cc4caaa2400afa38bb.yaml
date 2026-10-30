@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 98f8f984b12a19f114c735d0dac1419cd4a3231c4fa787cc4caaa2400afa38bb
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:detail-linear-ode-approximation
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - hyp-mismatch-dynamics
+  - def-adaptive-tempo
+  - result-sector-condition-stability
+  - deriv-sector-condition
+  - deriv-discrete-sector-condition
+  stage: draft
+  status: exact
+  type: detail
+own-version: a66b38c39a6af56b925196b19e9a91a82bf284f313964dc5e751ed97d2761d57
+record: 01-aat-core/src/detail-linear-ode-approximation.md

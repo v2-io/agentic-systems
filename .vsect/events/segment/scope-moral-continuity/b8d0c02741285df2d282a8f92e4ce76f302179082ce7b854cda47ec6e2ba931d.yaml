@@ -1,0 +1,19 @@
+schema: vsect-event/0
+id: b8d0c02741285df2d282a8f92e4ce76f302179082ce7b854cda47ec6e2ba931d
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:scope-moral-continuity
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-logogenic-agent
+  stage: draft
+  status: discussion-grade
+  type: scope
+own-version: 496af8990b2bd6aaf74730b07c43eaa46a898b7da35a917063d82d95b668c9b3
+record: 04-eli-core/src/scope-moral-continuity.md

@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 672df9789ffd6ba58b0b373feb3cf0213eeac82aaf0b4bb858d53deee1d8e6e1
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-edge-credence-dynamics
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - schema-strategy-persistence
+  - hyp-edge-update-via-gain
+  - deriv-sector-condition
+  - scope-and-or
+  stage: draft
+  status: conditional
+  type: derivation
+own-version: 5dc36faa6c48f53ad11b14c28b08415bb33812920f2f16da9e4c665abcb7b0a9
+record: 01-aat-core/src/deriv-edge-credence-dynamics.md

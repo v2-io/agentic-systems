@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: 1ebbf1377215b5c96df6b4ea1ce9dd970233d129494c7eb8e0219171f09884ce
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-adaptive-tempo
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - emp-update-gain
+  - form-event-driven-dynamics
+  stage: claims-verified
+  status: conditional
+  type: definition
+own-version: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+record: 01-aat-core/src/def-adaptive-tempo.md

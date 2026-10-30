@@ -1,0 +1,27 @@
+schema: vsect-event/0
+id: 007703ccce236bdbb10a2953dbf499850ba03363d63b29b9d04b2fcbe3450a27
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-strategic-composition
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - disc-composition-consistency
+  - scope-composite-agent
+  - result-sector-persistence-template
+  - form-objective-functional
+  - der-adversarial-destabilization
+  - der-team-persistence
+  - deriv-critical-mass-composition
+  - der-directed-separation
+  - scope-agent-identity
+  stage: draft
+  status: conditional
+  type: derivation
+own-version: 8d75ebac75b3a4ecc1f91286f3eb34566644a6ca44984da5c50e9b50808b2c0b
+record: 01-aat-core/src/deriv-strategic-composition.md

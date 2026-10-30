@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: 358e933ca1ac4d8306b616ab0c0409926ef1b6ad105fbe2e2c8f8b9f9b2cb9b2
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-satisfaction-gap
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-value-object
+  - form-objective-functional
+  stage: draft
+  status: exact
+  type: definition
+own-version: 094c41697b816f13c949eafc59833c1853761bd6f35ff1aee7501008a40b0364
+record: 01-aat-core/src/def-satisfaction-gap.md

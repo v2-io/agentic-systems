@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 50755db88f65788e746d0ae5254e876389efeaeabc5015f23ee3547544023f1c
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-severed-actuation-dynamics
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-death-as-factor-loss
+  - scope-agency
+  - der-causal-hierarchy-requirement
+  - def-control-regret
+  - deriv-edge-credence-dynamics
+  - deriv-self-actuation-grounding
+  stage: draft
+  status: conditional
+  type: derived
+own-version: 143c89afe4b25ace59f5de0617cb6c0acf4f55227dcf349ac9ca448aa1098ca0
+record: 04-eli-core/src/der-severed-actuation-dynamics.md

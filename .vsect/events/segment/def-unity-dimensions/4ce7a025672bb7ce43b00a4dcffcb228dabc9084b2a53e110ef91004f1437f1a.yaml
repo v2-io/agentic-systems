@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 4ce7a025672bb7ce43b00a4dcffcb228dabc9084b2a53e110ef91004f1437f1a
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-unity-dimensions
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-multi-agent
+  - form-composition-closure
+  - form-agent-model
+  - def-strategy-dimension
+  stage: draft
+  status: discussion-grade
+  type: definition
+own-version: 753278841befbe457c44068c2e2ea55cfb5ac3ee9e0c868f3f285d57310c82f9
+record: 01-aat-core/src/def-unity-dimensions.md

@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: c3313ebe8c62b9f1e112f9feb894683e77e75f0cc4c47f4e68ca9e62a2bf2438
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:disc-credit-assignment-boundary
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-strategy-dag
+  - hyp-edge-update-via-gain
+  - deriv-edge-update-natural-parameter
+  - def-strategic-calibration
+  - der-observability-dominance
+  - der-gain-sector-bridge
+  - deriv-edge-credence-dynamics
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: 0775756c93e97be9bb66d08c396a84625a7667c8da526f74e5faaac4ce09a161
+record: 01-aat-core/src/disc-credit-assignment-boundary.md

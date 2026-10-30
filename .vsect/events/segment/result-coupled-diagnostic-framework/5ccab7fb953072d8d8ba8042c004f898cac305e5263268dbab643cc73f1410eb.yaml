@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: 5ccab7fb953072d8d8ba8042c004f898cac305e5263268dbab643cc73f1410eb
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:result-coupled-diagnostic-framework
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-coupled-update-dynamics
+  - result-section-ii-survival
+  - def-satisfaction-gap
+  - def-control-regret
+  - def-strategic-calibration
+  - der-orient-cascade
+  - scope-observation-ambiguity-modulation
+  stage: draft
+  status: conditional
+  type: result
+own-version: 347132426b4a4e637a11e90b6afe384d60472d4f97278d84f53c89ed4bc580f3
+record: 03-llm-core/src/result-coupled-diagnostic-framework.md

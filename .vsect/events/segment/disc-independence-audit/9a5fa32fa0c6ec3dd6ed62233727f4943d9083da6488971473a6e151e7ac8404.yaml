@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 9a5fa32fa0c6ec3dd6ed62233727f4943d9083da6488971473a6e151e7ac8404
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:disc-independence-audit
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - der-directed-separation
+  - def-strategy-dag
+  - def-adaptive-tempo
+  - def-unity-dimensions
+  - result-per-dimension-persistence
+  - deriv-graph-structure
+  stage: draft
+  status: robust-qualitative
+  type: discussion
+own-version: a29f62306346dc457dd163753cbc8c5308d14f67a4af32c549a8efef59b9f7a1
+record: 01-aat-core/src/disc-independence-audit.md

@@ -1,0 +1,18 @@
+schema: vsect-event/0
+id: 6c5a14bdba24d7a89758592084ef33fcf61f8d2c33db4aa4915e565b61bee575
+at: 2026-10-30T19:27:02Z
+store: asf
+act: take
+about: review:f72-evidence-allocation-ceiling-integration
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: vsect-builder
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+- C4:check
+review: reviews/f72-evidence-allocation-ceiling-integration.md
+review-version: 8ac8b3afef693f8b40181b6b0fe4dfe15e5abb07a9cce89ab2f54e091e684efc

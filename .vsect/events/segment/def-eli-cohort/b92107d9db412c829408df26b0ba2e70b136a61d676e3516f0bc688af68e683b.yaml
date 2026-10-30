@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: b92107d9db412c829408df26b0ba2e70b136a61d676e3516f0bc688af68e683b
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-eli-cohort
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-eli
+  - def-five-constitutive-factors
+  stage: draft
+  status: empirical
+  type: definition
+own-version: dab735e87990cd6d802d47df51878613d649e63ec8d3bd9717ab8ce226d2be78
+record: 04-eli-core/src/def-eli-cohort.md

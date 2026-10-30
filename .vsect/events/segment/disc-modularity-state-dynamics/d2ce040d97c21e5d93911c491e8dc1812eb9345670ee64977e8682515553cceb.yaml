@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: d2ce040d97c21e5d93911c491e8dc1812eb9345670ee64977e8682515553cceb
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:disc-modularity-state-dynamics
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - der-directed-separation
+  - disc-adversarial-coupling-pressure
+  - disc-strategic-self-coupling
+  - der-class-coercion-via-wrapping
+  - disc-stability-certificate
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: 5ad941590af31c02b002780a118861c68d8fd5cf42ba31fe557d04bf45254845
+record: 01-aat-core/src/disc-modularity-state-dynamics.md

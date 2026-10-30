@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: e59b36aa053768b68ecbead2372530addef6bfbf3346b9e01b1c3d1afeb00dee
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:disc-law-discovery-ceiling
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - deriv-mechanism-counterfactual-separation
+  - disc-structural-imagination
+  - def-pearl-causal-hierarchy
+  - disc-identifiability-floor
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: aa9f2538c61472126a145c775f9698eebf1dc6e7d64a059b1e2646b2c93f80cd
+record: 01-aat-core/src/disc-law-discovery-ceiling.md

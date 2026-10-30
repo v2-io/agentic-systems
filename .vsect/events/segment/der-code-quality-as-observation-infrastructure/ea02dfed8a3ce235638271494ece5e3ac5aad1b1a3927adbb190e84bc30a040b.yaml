@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: ea02dfed8a3ce235638271494ece5e3ac5aad1b1a3927adbb190e84bc30a040b
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-code-quality-as-observation-infrastructure
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-developer-agent
+  - obs-software-epistemic-properties
+  - emp-update-gain
+  - def-adaptive-tempo
+  - result-persistence-condition
+  - der-change-investment
+  stage: draft
+  status: conditional
+  type: derived
+own-version: 7f2433b45b090b19c2347751217d9469fefaacf947584c5d332a5fa8b1672aa4
+record: 02-tst-core/src/der-code-quality-as-observation-infrastructure.md

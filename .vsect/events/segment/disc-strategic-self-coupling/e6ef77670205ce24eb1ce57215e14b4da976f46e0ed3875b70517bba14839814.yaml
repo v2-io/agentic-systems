@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: e6ef77670205ce24eb1ce57215e14b4da976f46e0ed3875b70517bba14839814
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:disc-strategic-self-coupling
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - der-directed-separation
+  - def-strategy-dag
+  - norm-explicit-strategy-condition
+  - der-deliberation-cost
+  - disc-adversarial-coupling-pressure
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: c0916564b03eb408a2eb9385b07d1809d4aec3282b305312adf2211d7e8d8344
+record: 01-aat-core/src/disc-strategic-self-coupling.md

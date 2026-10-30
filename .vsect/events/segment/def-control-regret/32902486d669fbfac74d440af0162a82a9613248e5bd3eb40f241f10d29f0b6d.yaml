@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: 32902486d669fbfac74d440af0162a82a9613248e5bd3eb40f241f10d29f0b6d
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-control-regret
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-value-object
+  - def-satisfaction-gap
+  stage: draft
+  status: exact
+  type: definition
+own-version: f301ef9d06cec3b7d63d91b9824b3d62a03aec4ae62184fa410eba3513174b67
+record: 01-aat-core/src/def-control-regret.md

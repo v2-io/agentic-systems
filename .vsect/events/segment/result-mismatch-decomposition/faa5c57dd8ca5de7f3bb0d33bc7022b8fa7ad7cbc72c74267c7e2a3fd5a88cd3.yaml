@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: faa5c57dd8ca5de7f3bb0d33bc7022b8fa7ad7cbc72c74267c7e2a3fd5a88cd3
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:result-mismatch-decomposition
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-mismatch-signal
+  - def-observation-function
+  - def-action-transition
+  - form-agent-model
+  - scope-adaptive-system
+  stage: claims-verified
+  status: exact
+  type: result
+own-version: 90113d52fcb4a08ec79c7c1716458430bc30e519ae89c602af9eddcc489b8710
+record: 01-aat-core/src/result-mismatch-decomposition.md

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 0ce13885e0e804314874bf8312be94d16f83b2d8f2b9d12200a2a2d68dea5002
+at: 2026-10-30T19:27:04Z
+store: asf
+act: supersede
+about: segment:deriv-strategic-persistence-hard-ceiling
+actor:
+  name: f72-integrator
+  role: integrator
+normalizer: vsect-norm/0
+from: segment:deriv-strategic-persistence-hard-ceiling
+into: segment:deriv-evidence-allocation-ceiling
+own-version: 671c95fe284c25de3dea3ef5aef2f158bc217a03f637acb83fb4784f0b269205

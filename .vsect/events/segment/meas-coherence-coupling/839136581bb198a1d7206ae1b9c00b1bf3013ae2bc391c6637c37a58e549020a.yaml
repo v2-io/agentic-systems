@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: 839136581bb198a1d7206ae1b9c00b1bf3013ae2bc391c6637c37a58e549020a
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:meas-coherence-coupling
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-system-coupling
+  - def-system-coherence
+  stage: draft
+  status: empirical
+  type: measurement
+own-version: 34a63d4dc5551f5d60e013c920366ebe675df8d02d22387cf1175e0abbac4989
+record: 02-tst-core/src/meas-coherence-coupling.md

@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 0410d06ab4dcda3e3ef678cc91cd036ed8e9532bdad112973d76ee7e2243825c
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:disc-separability-pattern
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-strategy-dag
+  - def-value-object
+  - der-directed-separation
+  - form-composition-closure
+  - scope-edge-update-causal-validity
+  - def-agent-spectrum
+  - disc-approximation-tiering
+  - disc-identifiability-floor
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: 4d4d742d0f9c660f4913ef9d6292c6815bcb53f54fbd93c3a79b0764982e39c6
+record: 01-aat-core/src/disc-separability-pattern.md

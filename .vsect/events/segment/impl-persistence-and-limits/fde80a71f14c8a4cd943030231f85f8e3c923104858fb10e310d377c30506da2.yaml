@@ -1,0 +1,32 @@
+schema: vsect-event/0
+id: fde80a71f14c8a4cd943030231f85f8e3c923104858fb10e310d377c30506da2
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:impl-persistence-and-limits
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - result-persistence-condition
+  - result-sector-condition-stability
+  - result-sector-persistence-template
+  - result-structural-adaptation-necessity
+  - deriv-persistence-cost
+  - result-per-dimension-persistence
+  - deriv-matrix-persistence-condition
+  - scope-agent-identity
+  - der-temporal-nesting
+  - deriv-sector-condition
+  - der-multi-timescale-stability
+  - def-mood
+  - der-mood-timescale
+  - der-gain-sector-bridge
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: bba80878298c915fc812081d90eb44cde75b8bcf15228e2beecaa16b321f400f
+record: 01-aat-core/src/impl-persistence-and-limits.md

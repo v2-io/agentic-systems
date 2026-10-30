@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: e827fde87e89af1283b8b50e8d4c84485765d29ad071ab56e39ae241aad717a6
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:persistence-and-limits-intro
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-adaptive-tempo
+  - hyp-mismatch-dynamics
+  - def-model-class-fitness
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: f9e835d821cfcf2bd598d985abc2951a7ee915bb30d6d63b3c1b4ca54c570ad0
+record: 01-aat-core/src/persistence-and-limits-intro.md

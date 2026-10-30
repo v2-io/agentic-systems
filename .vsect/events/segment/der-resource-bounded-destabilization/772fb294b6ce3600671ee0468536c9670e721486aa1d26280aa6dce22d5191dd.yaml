@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 772fb294b6ce3600671ee0468536c9670e721486aa1d26280aa6dce22d5191dd
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-resource-bounded-destabilization
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - form-resource-budget
+  - result-sector-persistence-template
+  - der-adversarial-destabilization
+  - schema-strategy-persistence
+  stage: draft
+  status: conditional
+  type: derived
+own-version: 43cb9e78d76052add856d18e4f58de057526a5d66111a44c1b8d60c6b972d09f
+record: 01-aat-core/src/der-resource-bounded-destabilization.md

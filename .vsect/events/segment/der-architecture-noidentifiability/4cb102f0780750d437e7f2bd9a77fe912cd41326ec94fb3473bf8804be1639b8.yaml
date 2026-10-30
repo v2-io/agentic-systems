@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 4cb102f0780750d437e7f2bd9a77fe912cd41326ec94fb3473bf8804be1639b8
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-architecture-noidentifiability
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-mismatch-signal
+  - result-mismatch-decomposition
+  - deriv-sector-condition
+  - scope-agent-identity
+  - der-loop-interventional-access
+  - der-agent-opacity
+  - disc-identifiability-floor
+  - deriv-edge-credence-dynamics
+  stage: draft
+  status: conditional
+  type: derived
+own-version: 27854a9640005db5278263d524cbc035d5c1baa1bd9c50005743dc62593449da
+record: 01-aat-core/src/der-architecture-noidentifiability.md

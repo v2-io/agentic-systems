@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 67c096209cf75c2e9e7d849d70e0187b9f2e8a42db834bd6f70e4c8b30398373
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:disc-framework-self-diagnostic
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-logogenic-agent
+  - scope-channel-collapse
+  - der-orient-cascade
+  - scope-adaptive-system
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: 484d221ab7b150cced9ed0e28985e4db6542df4360c14c5f44ab247454721997
+record: 03-llm-core/src/disc-framework-self-diagnostic.md

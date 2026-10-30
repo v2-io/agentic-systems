@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: ff75c286e5e4be936c2abe7a06e11be9f7cd97e654c7bfa993b2ca0a74c69244
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:disc-constructive-impossibility-posture
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - disc-stability-certificate
+  - disc-identifiability-floor
+  - disc-separability-pattern
+  - deriv-sector-condition
+  - deriv-stochastic-non-exit
+  - deriv-evidence-allocation-ceiling
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: 094ab9e84256653d431e00379cf4edaf4d01a635fd280b9a04bdfb27ce015606
+record: 01-aat-core/src/disc-constructive-impossibility-posture.md

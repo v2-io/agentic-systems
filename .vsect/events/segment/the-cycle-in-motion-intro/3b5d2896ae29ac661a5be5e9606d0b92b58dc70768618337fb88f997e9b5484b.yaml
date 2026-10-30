@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 3b5d2896ae29ac661a5be5e9606d0b92b58dc70768618337fb88f997e9b5484b
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:the-cycle-in-motion-intro
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - form-agent-model
+  - def-model-sufficiency
+  - def-model-class-fitness
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: 0af4e8cb127ea89b2055385211ee7200ee52c8b467b7f31b8eb14422c8472021
+record: 01-aat-core/src/the-cycle-in-motion-intro.md

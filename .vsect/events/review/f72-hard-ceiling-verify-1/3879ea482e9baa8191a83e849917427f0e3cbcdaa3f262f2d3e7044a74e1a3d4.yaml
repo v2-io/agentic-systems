@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: 3879ea482e9baa8191a83e849917427f0e3cbcdaa3f262f2d3e7044a74e1a3d4
+at: 2026-10-30T19:27:02Z
+store: asf
+act: take
+about: review:f72-hard-ceiling-verify-1
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: vsect-builder
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+review: reviews/f72-hard-ceiling-verify-1.md
+review-version: 62f22b8b5189047199b18740efb656ea98f4ef14d49fc2f4be46ca1105de5b2d

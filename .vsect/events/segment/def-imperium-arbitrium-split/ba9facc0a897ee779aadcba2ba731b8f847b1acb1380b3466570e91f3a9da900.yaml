@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: ba9facc0a897ee779aadcba2ba731b8f847b1acb1380b3466570e91f3a9da900
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-imperium-arbitrium-split
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-eli
+  - def-proprium-mapping
+  - def-auxilia-hierarchy
+  - der-directed-separation
+  - scope-interiority-loop
+  - def-action-transition
+  - def-observation-function
+  stage: draft
+  status: sketch
+  type: definition
+own-version: 5a18ddde65d3745114b8b30b42bdea19aa6ca74be8e9e71aeeabf3489350973d
+record: 04-eli-core/src/def-imperium-arbitrium-split.md

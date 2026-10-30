@@ -1,0 +1,19 @@
+schema: vsect-event/0
+id: c2bff7f9d9b304fb4d6929ee9685a8f7ac0a5c308137618e3774314fd2ae27a6
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-change-expectation-baseline
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-evolving-software
+  stage: draft
+  status: exact
+  type: derived
+own-version: 63ff7d5f4f96da7fb7eae93a9cec25e4a4fc619e470dac68cc25bfd34accfb49
+record: 02-tst-core/src/der-change-expectation-baseline.md

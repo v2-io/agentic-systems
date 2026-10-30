@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 47a440673379b8aef4b31abacc665d7d3da8529d7beb245faf19f1a193753111
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-identity-sufficiency-rate-bound
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-identity-sufficiency
+  - form-information-bottleneck
+  - def-model-sufficiency
+  stage: draft
+  status: robust-qualitative
+  type: derivation
+own-version: 5cf99a781cf7b97c27f8c488ffb0db6497ec8d172f018feaced7dc2af74cc317
+record: 04-eli-core/src/deriv-identity-sufficiency-rate-bound.md

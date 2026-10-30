@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: f6ea27ee2133e384edf2fde009c670a82b710d66321817422f63387e9f38854c
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:detail-operationalization
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-mismatch-signal
+  - emp-update-gain
+  - def-adaptive-tempo
+  - result-sector-condition-stability
+  - result-persistence-condition
+  - der-deliberation-cost
+  - result-structural-adaptation-necessity
+  stage: draft
+  status: conditional
+  type: detail
+own-version: 918019c31df010c170165cd4f1a4165dadb46dbb8bc8963b5241cade8fc58b89
+record: 01-aat-core/src/detail-operationalization.md

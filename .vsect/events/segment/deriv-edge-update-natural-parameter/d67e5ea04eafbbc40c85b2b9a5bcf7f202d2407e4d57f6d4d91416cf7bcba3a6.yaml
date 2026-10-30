@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: d67e5ea04eafbbc40c85b2b9a5bcf7f202d2407e4d57f6d4d91416cf7bcba3a6
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-edge-update-natural-parameter
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-strategy-dag
+  - hyp-edge-update-via-gain
+  - der-chain-confidence-decay
+  - deriv-strategy-cost-regret-bound
+  stage: draft
+  status: conditional
+  type: derivation
+own-version: 1347ced6b4f8032b9dcd3b8a927a9020e51c765cb15987ac0a38a9d4570d0c61
+record: 01-aat-core/src/deriv-edge-update-natural-parameter.md

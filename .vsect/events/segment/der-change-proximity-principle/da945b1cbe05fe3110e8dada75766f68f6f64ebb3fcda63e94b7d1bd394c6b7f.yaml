@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: da945b1cbe05fe3110e8dada75766f68f6f64ebb3fcda63e94b7d1bd394c6b7f
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-change-proximity-principle
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-discontinuity-distance
+  - emp-changeset-size-principle
+  - def-comprehension-time
+  stage: draft
+  status: conditional
+  type: derived
+own-version: f9669383030a8fdf6b48584bbdf259368cbe376df91728b2591ef9bc72fbed2f
+record: 02-tst-core/src/der-change-proximity-principle.md

@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: f040df50a0210f118b05acf3cb6df7c585285633f77cb12667697ba5645d94c6
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-model-sufficiency
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - form-agent-model
+  - form-information-bottleneck
+  - def-action-transition
+  stage: deps-verified
+  status: axiomatic
+  type: definition
+own-version: cb0156177d2d2d215898316d7c7e1e6829188ccffc08bb3f458b93e9f5cd207f
+record: 01-aat-core/src/def-model-sufficiency.md

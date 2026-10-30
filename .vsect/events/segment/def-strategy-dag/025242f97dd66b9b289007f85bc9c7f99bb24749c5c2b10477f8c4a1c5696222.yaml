@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 025242f97dd66b9b289007f85bc9c7f99bb24749c5c2b10477f8c4a1c5696222
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-strategy-dag
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-and-or
+  - post-causal-structure
+  - def-pearl-causal-hierarchy
+  - form-objective-functional
+  - def-strategy-dimension
+  stage: draft
+  status: conditional
+  type: definition
+own-version: 17db22eaef31b8bdd2b3d5207ea38edc08ada691e8691d72f50579b57ccb57ba
+record: 01-aat-core/src/def-strategy-dag.md

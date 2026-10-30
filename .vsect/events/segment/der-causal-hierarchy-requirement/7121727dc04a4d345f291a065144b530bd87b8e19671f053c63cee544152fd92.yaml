@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 7121727dc04a4d345f291a065144b530bd87b8e19671f053c63cee544152fd92
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-causal-hierarchy-requirement
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-value-object
+  - def-pearl-causal-hierarchy
+  - scope-agency
+  stage: deps-verified
+  status: exact
+  type: derived
+own-version: 51ca8a59050596034d84cbc1effeb3df1735d7974e3bfd2b98c68f64c10742a9
+record: 01-aat-core/src/der-causal-hierarchy-requirement.md

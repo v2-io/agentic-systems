@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 2a1370970ca2a3d3f45638077e01699019a84bebed216bf79050dd4c9c5d3cbb
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:disc-m-preservation
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - obs-context-turnover
+  - scope-logogenic-agent
+  - result-persistence-condition
+  - def-model-sufficiency
+  - def-adaptive-tempo
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: d73fa47c2eca4251ee751b3f793fe0a96bfa3962618e0c2f225435fdcb58764f
+record: 03-llm-core/src/disc-m-preservation.md

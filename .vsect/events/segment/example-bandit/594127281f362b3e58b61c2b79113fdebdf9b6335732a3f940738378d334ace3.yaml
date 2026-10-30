@@ -1,0 +1,27 @@
+schema: vsect-event/0
+id: 594127281f362b3e58b61c2b79113fdebdf9b6335732a3f940738378d334ace3
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:example-bandit
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-agency
+  - post-causal-structure
+  - form-agent-model
+  - def-model-sufficiency
+  - def-mismatch-signal
+  - emp-update-gain
+  - def-causal-information-yield
+  - def-adaptive-tempo
+  - result-persistence-condition
+  stage: draft
+  status: conditional
+  type: worked-example
+own-version: 398fe01fbd052d2ee2a31a292d7caf02d8fd2ea16a6446c4581dab6a991e4357
+record: 01-aat-core/src/example-bandit.md

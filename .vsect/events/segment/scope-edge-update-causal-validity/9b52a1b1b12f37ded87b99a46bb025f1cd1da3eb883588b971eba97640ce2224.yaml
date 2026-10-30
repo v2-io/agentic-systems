@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 9b52a1b1b12f37ded87b99a46bb025f1cd1da3eb883588b971eba97640ce2224
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:scope-edge-update-causal-validity
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - hyp-edge-update-via-gain
+  - def-causal-information-yield
+  - der-loop-interventional-access
+  - def-strategic-calibration
+  - def-strategy-dag
+  stage: deps-verified
+  status: conditional
+  type: scope
+own-version: 2b2c9ccdae576c9a7b483b7b05bdfd867b1007db020ea24ab52cd087e05c8d58
+record: 01-aat-core/src/scope-edge-update-causal-validity.md

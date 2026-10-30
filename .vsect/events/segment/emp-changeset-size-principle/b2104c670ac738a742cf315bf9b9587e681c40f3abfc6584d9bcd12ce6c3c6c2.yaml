@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: b2104c670ac738a742cf315bf9b9587e681c40f3abfc6584d9bcd12ce6c3c6c2
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:emp-changeset-size-principle
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-atomic-changeset
+  - def-implementation-time
+  - def-comprehension-time
+  stage: draft
+  status: empirical
+  type: empirical
+own-version: 534daeba490c63b75c9aa08a1a47df2c720be22d17ba3aa067998ce71f015940
+record: 02-tst-core/src/emp-changeset-size-principle.md

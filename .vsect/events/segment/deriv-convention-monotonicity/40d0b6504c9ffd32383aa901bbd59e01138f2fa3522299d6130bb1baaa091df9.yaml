@@ -1,0 +1,19 @@
+schema: vsect-event/0
+id: 40d0b6504c9ffd32383aa901bbd59e01138f2fa3522299d6130bb1baaa091df9
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-convention-monotonicity
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-value-object
+  stage: draft
+  status: exact
+  type: derivation
+own-version: 0ca3adb8cba84fa71b324c226872e4398840f132d004f8516f6ceb52774208ce
+record: 01-aat-core/src/deriv-convention-monotonicity.md

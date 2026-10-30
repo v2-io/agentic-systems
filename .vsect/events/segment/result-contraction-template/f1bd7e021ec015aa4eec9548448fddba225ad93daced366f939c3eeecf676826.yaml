@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: f1bd7e021ec015aa4eec9548448fddba225ad93daced366f939c3eeecf676826
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:result-contraction-template
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - result-sector-persistence-template
+  - deriv-sector-condition
+  - der-gain-sector-bridge
+  - form-composition-closure
+  - deriv-critical-mass-composition
+  - disc-separability-pattern
+  stage: draft
+  status: conditional
+  type: result
+own-version: 85ba2bec4e49157e3216657f8702054ee2b595a7b69cfe6bc71fd3fbf9862498
+record: 01-aat-core/src/result-contraction-template.md

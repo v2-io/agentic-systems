@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 1a7ea53ee56e7c2e0717bc35a64b79207aa525259567a80d0cffa682829d5c4e
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-gain-sector-bridge
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - emp-update-gain
+  - def-mismatch-signal
+  - form-sector-condition
+  - deriv-gain-sector
+  stage: claims-verified
+  status: conditional
+  type: derived
+own-version: 25b47255cfaa737b6474f121b2dc1c9678e689ada74995d81b09e108ba849211
+record: 01-aat-core/src/der-gain-sector-bridge.md

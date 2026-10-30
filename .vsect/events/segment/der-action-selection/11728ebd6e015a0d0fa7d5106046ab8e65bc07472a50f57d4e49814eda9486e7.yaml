@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: 11728ebd6e015a0d0fa7d5106046ab8e65bc07472a50f57d4e49814eda9486e7
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-action-selection
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - form-agent-model
+  - der-recursive-update
+  stage: deps-verified
+  status: exact
+  type: derived
+own-version: ff726f8527dab6ee837cc11b7164313850f125e944c76ea86dca14183c613408
+record: 01-aat-core/src/der-action-selection.md

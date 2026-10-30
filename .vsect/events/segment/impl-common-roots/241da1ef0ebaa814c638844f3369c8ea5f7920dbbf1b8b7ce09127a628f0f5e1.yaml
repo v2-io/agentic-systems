@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 241da1ef0ebaa814c638844f3369c8ea5f7920dbbf1b8b7ce09127a628f0f5e1
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:impl-common-roots
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-logogenic-agent
+  - scope-channel-collapse
+  - def-coupled-update-dynamics
+  - scope-observation-ambiguity-modulation
+  - result-section-ii-survival
+  - disc-framework-self-diagnostic
+  - der-directed-separation
+  - deriv-observation-ambiguity-bias-bound
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: 82a796a7509983fb4aa3f4b0684ebc053ba0170297232986b27a23ff3a9a1f5d
+record: 03-llm-core/src/impl-common-roots.md

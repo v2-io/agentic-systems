@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 1d80e616964ecbb01298b5e76aa4d403c7a2ea24ff55488c31c513850ef816c8
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-turnover-information-recursion
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - result-sector-persistence-template
+  - obs-context-turnover
+  - form-information-bottleneck
+  stage: draft
+  status: conditional
+  type: derived
+own-version: cd6a8430f0629b752ef3b0639be7f1ae810b896478e57b61037fffb1a47a09db
+record: 03-llm-core/src/der-turnover-information-recursion.md

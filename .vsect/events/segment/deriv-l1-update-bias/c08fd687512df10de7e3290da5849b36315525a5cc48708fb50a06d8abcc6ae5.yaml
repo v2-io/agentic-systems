@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: c08fd687512df10de7e3290da5849b36315525a5cc48708fb50a06d8abcc6ae5
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-l1-update-bias
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - disc-credit-assignment-boundary
+  - deriv-edge-update-natural-parameter
+  - deriv-edge-credence-dynamics
+  - disc-identifiability-floor
+  - schema-strategy-persistence
+  stage: draft
+  status: conditional
+  type: derivation
+own-version: b7c5d91c95fa420052910623b15988a818a0a82dd7340afe51c9eedf8abad7db
+record: 01-aat-core/src/deriv-l1-update-bias.md

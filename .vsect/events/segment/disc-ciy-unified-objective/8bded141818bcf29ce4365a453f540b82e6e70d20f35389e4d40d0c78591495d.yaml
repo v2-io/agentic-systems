@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 8bded141818bcf29ce4365a453f540b82e6e70d20f35389e4d40d0c78591495d
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:disc-ciy-unified-objective
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-causal-information-yield
+  - scope-ciy-observational-proxy
+  - def-value-object
+  - der-action-selection
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: 567cd924cb58b98a735e2d6c8afd7cceb59c421b12226fa64f66f35951e6c13c
+record: 01-aat-core/src/disc-ciy-unified-objective.md

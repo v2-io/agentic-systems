@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: b85b94bbeb4ba6f49a0da8e228abe39c1717705a66751a7e4268ee0fbd3f50be
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:result-sector-condition-stability
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-adaptive-tempo
+  - def-mismatch-signal
+  - deriv-sector-condition
+  - result-sector-persistence-template
+  stage: claims-verified
+  status: exact
+  type: result
+own-version: 0a7968b433eb41d7a0fd29481d1949c3aaa2edd786b77b42eb9e816c97ebf636
+record: 01-aat-core/src/result-sector-condition-stability.md

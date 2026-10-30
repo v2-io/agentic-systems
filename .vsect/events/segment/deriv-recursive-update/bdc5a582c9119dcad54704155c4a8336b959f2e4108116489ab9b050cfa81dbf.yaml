@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: bdc5a582c9119dcad54704155c4a8336b959f2e4108116489ab9b050cfa81dbf
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-recursive-update
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - form-agent-model
+  - form-event-driven-dynamics
+  - post-causal-structure
+  - scope-adaptive-system
+  - def-agent-environment
+  - def-observation-function
+  stage: claims-verified
+  status: exact
+  type: derivation
+own-version: d0f1a351e6604c21d76a76098c0aa890e5df028464e01b50a633d4e41243533f
+record: 01-aat-core/src/deriv-recursive-update.md

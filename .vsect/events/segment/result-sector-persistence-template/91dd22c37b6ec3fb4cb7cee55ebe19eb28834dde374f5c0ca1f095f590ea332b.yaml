@@ -1,0 +1,19 @@
+schema: vsect-event/0
+id: 91dd22c37b6ec3fb4cb7cee55ebe19eb28834dde374f5c0ca1f095f590ea332b
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:result-sector-persistence-template
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - deriv-sector-condition
+  stage: draft
+  status: exact
+  type: result
+own-version: f668640b9a850c617e61762d8e4538454059c2a71897a19ba534f30ca151124c
+record: 01-aat-core/src/result-sector-persistence-template.md

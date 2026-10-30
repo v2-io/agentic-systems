@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 18cbaad9ed00e0010b96f000bdef90fa5e3a2f21f921b9b3814bf6b1ef165d47
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-causal-ib-lmi
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - deriv-causal-ib-exploration
+  - form-information-bottleneck
+  - def-pearl-causal-hierarchy
+  - result-persistence-condition
+  - deriv-fisher-whitened-update-rule
+  - def-adaptive-tempo
+  stage: draft
+  status: conditional
+  type: derivation
+own-version: 555f0c9e620998b5d1bba0817bb2445dd5b8c85a88f3a5680306a64c32cb5086
+record: 01-aat-core/src/deriv-causal-ib-lmi.md

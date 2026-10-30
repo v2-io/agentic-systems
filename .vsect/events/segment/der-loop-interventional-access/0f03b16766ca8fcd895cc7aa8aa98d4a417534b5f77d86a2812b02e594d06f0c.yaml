@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 0f03b16766ca8fcd895cc7aa8aa98d4a417534b5f77d86a2812b02e594d06f0c
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-loop-interventional-access
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - der-causal-hierarchy-requirement
+  - der-recursive-update
+  - post-causal-structure
+  - scope-agent-identity
+  stage: draft
+  status: exact
+  type: derived
+own-version: 6312906b577aa7341d62651f5879ad25ff822ab06ad921ba95263b01ca160d2c
+record: 01-aat-core/src/der-loop-interventional-access.md

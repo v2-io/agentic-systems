@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 40336873adc20592b55f812791ed009ba0ef517b6c45cb485d638b062b3791c4
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:disc-continuity-stance
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-agent-spectrum
+  - form-objective-functional
+  - scope-agency
+  - deriv-self-actuation-grounding
+  - result-persistence-condition
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: f2299bea10a4a6348bcb898aaab6a45d74f91fee580055b489ab61acd8dd9c3d
+record: 01-aat-core/src/disc-continuity-stance.md

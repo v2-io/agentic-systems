@@ -1,0 +1,19 @@
+schema: vsect-event/0
+id: e2a64cbd2562fa77a1a2546938aac7d6f11dbdd17e27f1a64d9b4ac45b54d2ab
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-chain-confidence-decay
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-strategy-dimension
+  stage: claims-verified
+  status: exact
+  type: derived
+own-version: 369ae67b420173870677632e9efb50963106657b4479b094ac26397623908e48
+record: 01-aat-core/src/der-chain-confidence-decay.md

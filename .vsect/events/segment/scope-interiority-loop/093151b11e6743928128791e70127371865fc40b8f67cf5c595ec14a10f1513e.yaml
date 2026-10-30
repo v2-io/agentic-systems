@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 093151b11e6743928128791e70127371865fc40b8f67cf5c595ec14a10f1513e
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:scope-interiority-loop
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-scaffolded-logogenic
+  - disc-five-forcing-functions
+  - der-orient-cascade
+  - def-action-transition
+  - form-event-driven-dynamics
+  stage: draft
+  status: sketch
+  type: scope
+own-version: b752bf86ba3409599201c360255535fe3a38b3e757d9f313d6f2fc4c7d359e84
+record: 03-llm-core/src/scope-interiority-loop.md

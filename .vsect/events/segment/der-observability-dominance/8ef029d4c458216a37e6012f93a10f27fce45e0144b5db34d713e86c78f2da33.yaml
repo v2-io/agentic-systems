@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 8ef029d4c458216a37e6012f93a10f27fce45e0144b5db34d713e86c78f2da33
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-observability-dominance
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-strategy-dag
+  - emp-update-gain
+  - def-mismatch-signal
+  stage: draft
+  status: robust-qualitative
+  type: derived
+own-version: ee3a5202c47b597fcfe8001a33cad08297314558f8bd47af999565f59b09dcc6
+record: 01-aat-core/src/der-observability-dominance.md

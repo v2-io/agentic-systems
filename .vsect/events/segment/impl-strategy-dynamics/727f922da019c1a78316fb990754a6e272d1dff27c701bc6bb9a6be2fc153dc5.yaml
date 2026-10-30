@@ -1,0 +1,33 @@
+schema: vsect-event/0
+id: 727f922da019c1a78316fb990754a6e272d1dff27c701bc6bb9a6be2fc153dc5
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:impl-strategy-dynamics
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - schema-strategy-persistence
+  - form-consolidation-dynamics
+  - deriv-update-detection-latency
+  - der-causal-insufficiency-detection
+  - der-observability-dominance
+  - deriv-edge-credence-dynamics
+  - def-strategic-tempo
+  - form-strategy-complexity-cost
+  - deriv-strategy-cost-regret-bound
+  - deriv-adaptive-gain-dynamics
+  - deriv-variational-sector-condition
+  - der-loop-interventional-access
+  - def-satisfaction-gap
+  - def-control-regret
+  - disc-credit-assignment-boundary
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: f124a14c562f2776efe442f48ff93438376bb77e96eadf61353ddf274746b5d8
+record: 01-aat-core/src/impl-strategy-dynamics.md

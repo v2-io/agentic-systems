@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: 04c2e6481934e7c2a76cb500d0d589895254035bb7aad5763498b59937f45b29
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-captured-objective-dynamics
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-death-as-factor-loss
+  - deriv-reward-channel-learning-no-go
+  - deriv-self-actuation-grounding
+  - der-severed-actuation-dynamics
+  - disc-strategic-self-coupling
+  - scope-agency
+  - der-orient-cascade
+  stage: draft
+  status: conditional
+  type: derived
+own-version: 9aed3fe784f18d72160daef8d8dfcbd30975df333616431d4a8beca78f240b09
+record: 04-eli-core/src/der-captured-objective-dynamics.md

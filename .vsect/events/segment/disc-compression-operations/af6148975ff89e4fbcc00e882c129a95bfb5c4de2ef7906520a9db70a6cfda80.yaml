@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: af6148975ff89e4fbcc00e882c129a95bfb5c4de2ef7906520a9db70a6cfda80
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:disc-compression-operations
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - form-information-bottleneck
+  - form-strategy-complexity-cost
+  - def-shared-intent
+  - form-composition-closure
+  - def-chronica
+  stage: draft
+  status: robust-qualitative
+  type: discussion
+own-version: 082527010889cc0f87203fd722423e14a5cdeeb4b951fcae7482be828538220c
+record: 01-aat-core/src/disc-compression-operations.md

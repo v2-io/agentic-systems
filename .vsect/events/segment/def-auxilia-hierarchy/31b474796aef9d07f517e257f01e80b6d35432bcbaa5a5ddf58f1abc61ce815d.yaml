@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 31b474796aef9d07f517e257f01e80b6d35432bcbaa5a5ddf58f1abc61ce815d
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-auxilia-hierarchy
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-eli
+  - scope-multi-agent
+  - scope-composite-agent
+  - form-composition-closure
+  - der-temporal-nesting
+  - def-five-constitutive-factors
+  stage: draft
+  status: sketch
+  type: definition
+own-version: ec996e123861504b9e2583fc4a883c92a3016a151e91d561e21cb3a3e6ee7981
+record: 04-eli-core/src/def-auxilia-hierarchy.md

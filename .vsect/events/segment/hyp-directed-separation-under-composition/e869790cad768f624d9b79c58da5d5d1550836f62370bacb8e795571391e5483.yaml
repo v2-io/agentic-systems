@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: e869790cad768f624d9b79c58da5d5d1550836f62370bacb8e795571391e5483
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:hyp-directed-separation-under-composition
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - der-directed-separation
+  - scope-multi-agent
+  - form-composition-closure
+  stage: draft
+  status: conditional
+  type: hypothesis
+own-version: 5d10f5b88450b268fce996a4f8f04d04bf4c6f618a37c3f04e7fe06a256617e0
+record: 01-aat-core/src/hyp-directed-separation-under-composition.md

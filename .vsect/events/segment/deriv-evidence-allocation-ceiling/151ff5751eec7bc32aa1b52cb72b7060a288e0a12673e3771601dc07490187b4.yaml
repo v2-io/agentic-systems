@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 151ff5751eec7bc32aa1b52cb72b7060a288e0a12673e3771601dc07490187b4
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-evidence-allocation-ceiling
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - deriv-edge-credence-dynamics
+  - result-sector-persistence-template
+  - deriv-discrete-sector-condition
+  - schema-strategy-persistence
+  stage: draft
+  status: exact
+  type: derivation
+own-version: a66fb79624b00164ce286f45e0c2f4edbeee6b81d6c5479cd5e39616d491e07c
+record: 01-aat-core/src/deriv-evidence-allocation-ceiling.md

@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 1a3ac530ad1dcb86d312c6b29dca3f07d332c6be22bcdc2267d5bd96d1bd1348
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-mismatch-budget-attribution
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - result-mismatch-decomposition
+  - internal-external-decomposition
+  - form-agent-model
+  - def-model-class-fitness
+  - result-persistence-condition
+  stage: draft
+  status: conditional
+  type: derivation
+own-version: 63bf7269841b4bf6d03e98805179fd55c91ac7bc6d9c5c412f34b07bd80e590c
+record: 01-aat-core/src/deriv-mismatch-budget-attribution.md

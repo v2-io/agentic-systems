@@ -1,0 +1,19 @@
+schema: vsect-event/0
+id: 9bd5be5b9faf47c6b409d1c94bddb53010d1b77a80cd5922a39628712179a74f
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-action-transition
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-agent-environment
+  stage: deps-verified
+  status: axiomatic
+  type: definition
+own-version: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+record: 01-aat-core/src/def-action-transition.md

@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 580f648f07aedf8bf07bd46c927f67e506ca183e84a685a1503c3b7b01eec9a1
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-persistence-cost
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - result-persistence-condition
+  - result-sector-condition-stability
+  - deriv-sector-condition
+  - result-sector-persistence-template
+  - def-adaptive-tempo
+  - emp-update-gain
+  - der-gain-sector-bridge
+  - def-model-class-fitness
+  stage: draft
+  status: conditional
+  type: derivation
+own-version: 7eed3a2eec9fd5f9a48a1ad976fb6e8f2d5a4496adbf62d743f2e9da66f3a389
+record: 01-aat-core/src/deriv-persistence-cost.md

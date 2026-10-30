@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 6cc7a2cfc7b38ae3f3aa36584f7f65e086c83b8cdc2e268d1b1b85cdc0741c9c
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-social-welfare-aggregation-impossibility
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-composite-agent
+  - deriv-strategic-composition
+  - form-objective-functional
+  - disc-implementation-impossibility
+  stage: draft
+  status: conditional
+  type: derivation
+own-version: 40f373efe4a5a232f37b09cfa26b1777f2f5a69c7c2ffc9346797408d5fd489d
+record: 01-aat-core/src/deriv-social-welfare-aggregation-impossibility.md

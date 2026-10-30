@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 09bebffd78415a516e4721776427c897ace61bdd10a55baf3c8447dc0528ca9c
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-tempo-additivity
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-adaptive-tempo
+  - emp-update-gain
+  - deriv-fisher-local-update-gain
+  stage: draft
+  status: conditional
+  type: derivation
+own-version: c3622f84efe0fd516cca4c3e04b603ab2092bb945986a4419dac5b5b0427d64b
+record: 01-aat-core/src/deriv-tempo-additivity.md

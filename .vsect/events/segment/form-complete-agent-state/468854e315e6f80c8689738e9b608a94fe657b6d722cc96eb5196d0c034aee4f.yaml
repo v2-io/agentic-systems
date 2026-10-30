@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 468854e315e6f80c8689738e9b608a94fe657b6d722cc96eb5196d0c034aee4f
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:form-complete-agent-state
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - form-agent-model
+  - scope-agency
+  - der-recursive-update
+  stage: claims-verified
+  status: robust-qualitative
+  type: formulation
+own-version: f3fbbecf05be5eef32b33bea6a9f137648fb709a96f8c4aa045a01e99f05ad13
+record: 01-aat-core/src/form-complete-agent-state.md

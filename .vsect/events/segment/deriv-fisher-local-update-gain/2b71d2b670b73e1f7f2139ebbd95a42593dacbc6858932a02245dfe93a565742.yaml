@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: 2b71d2b670b73e1f7f2139ebbd95a42593dacbc6858932a02245dfe93a565742
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-fisher-local-update-gain
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - emp-update-gain
+  - def-mismatch-signal
+  - def-observation-function
+  - scope-agent-identity
+  - disc-additive-coordinate-forcing
+  - deriv-fisher-whitened-update-rule
+  - deriv-adaptive-gain-dynamics
+  stage: draft
+  status: conditional
+  type: derivation
+own-version: 6b2097fdd6f696393d5aa04c19fe1af3a27943409d33eb97b53e3e3bc5810be1
+record: 01-aat-core/src/deriv-fisher-local-update-gain.md

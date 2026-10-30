@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: fe6f0c120c89a4947952a7d5e9d038224a2b751508f7cf58510a4a7c9b2a3d50
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:cooperative-adversarial-intro
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - hyp-communication-gain
+  - def-unity-dimensions
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: e975633c0c8a3adc786d38600698d0ae3ac2115ac099a589153eeac79b86048a
+record: 01-aat-core/src/cooperative-adversarial-intro.md

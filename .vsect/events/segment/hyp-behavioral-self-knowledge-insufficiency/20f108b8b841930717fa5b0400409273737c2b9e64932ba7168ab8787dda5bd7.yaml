@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 20f108b8b841930717fa5b0400409273737c2b9e64932ba7168ab8787dda5bd7
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:hyp-behavioral-self-knowledge-insufficiency
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - deriv-mechanism-counterfactual-separation
+  - scope-channel-collapse
+  - der-class-coercion-via-wrapping
+  stage: exploratory
+  status: conditional
+  type: hypothesis
+own-version: a85f32cc1c946fafbc1ebed4360447d90fac4a0e228593f25c0edc0490733f24
+record: 03-llm-core/src/hyp-behavioral-self-knowledge-insufficiency.md

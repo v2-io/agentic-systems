@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: c839b6d51302515cd5e26d7690e9542d064fab4a2003399c2c7a62eafe9356c4
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-gain-sector
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - emp-update-gain
+  - deriv-sector-condition
+  stage: deps-verified
+  status: conditional
+  type: derivation
+own-version: d7888baea04d4df394b410783c72cdc36ceea74aa9a94aa56ea584a3a51901ac
+record: 01-aat-core/src/deriv-gain-sector.md

@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 572aa3c5102add3a8859f427b193749d09f4f5b8cd2269f464d015eac3b812c4
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-critical-mass-composition
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - form-composition-closure
+  - scope-composite-agent
+  - result-sector-persistence-template
+  - deriv-sector-condition
+  - der-team-persistence
+  - der-adversarial-destabilization
+  - hyp-symbiogenic-composition
+  - result-unity-closure-mapping
+  stage: draft
+  status: conditional
+  type: derivation
+own-version: 88d1b86515d094be8021d3f37a0bc1cc7bbc36fe35d95a824884b984ca6ad995
+record: 01-aat-core/src/deriv-critical-mass-composition.md

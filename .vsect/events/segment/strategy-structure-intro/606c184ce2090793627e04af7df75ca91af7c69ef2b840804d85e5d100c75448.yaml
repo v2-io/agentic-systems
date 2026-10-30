@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 606c184ce2090793627e04af7df75ca91af7c69ef2b840804d85e5d100c75448
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:strategy-structure-intro
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-strategy-dimension
+  - norm-explicit-strategy-condition
+  - der-causal-hierarchy-requirement
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: 5e46e0f2004946e15081534526146a9b28653ed5a959bc3f84974d25743a28a0
+record: 01-aat-core/src/strategy-structure-intro.md

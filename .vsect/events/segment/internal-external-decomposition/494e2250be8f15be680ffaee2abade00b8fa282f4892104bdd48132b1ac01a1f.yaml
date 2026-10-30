@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 494e2250be8f15be680ffaee2abade00b8fa282f4892104bdd48132b1ac01a1f
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:internal-external-decomposition
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - result-mismatch-decomposition
+  - result-persistence-condition
+  - hyp-mismatch-dynamics
+  - def-adaptive-tempo
+  stage: draft
+  status: conditional
+  type: derivation
+own-version: 6a7f48e98da5b826271ff9735406e4f4375c2397f6f0d51b3693ff03a1603db2
+record: 01-aat-core/src/internal-external-decomposition.md

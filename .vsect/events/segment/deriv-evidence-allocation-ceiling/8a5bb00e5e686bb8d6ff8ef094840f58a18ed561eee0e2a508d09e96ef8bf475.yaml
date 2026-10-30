@@ -1,0 +1,58 @@
+schema: vsect-event/0
+id: 8a5bb00e5e686bb8d6ff8ef094840f58a18ed561eee0e2a508d09e96ef8bf475
+at: 2026-10-30T19:22:05Z
+store: asf
+act: rederive
+about: segment:deriv-evidence-allocation-ceiling
+atom: 151ff5751eec7bc32aa1b52cb72b7060a288e0a12673e3771601dc07490187b4
+actor:
+  name: f72-integrator
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: 62dea40056d00b6cc7a6f311ad831e0bf584f50a03a297f89fc934efdb24e885
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-mismatch-signal: 250e844f383dff060ba7879b6c86f9c5fd546df30d0c24cbdfa0ae771d932b78
+  segment:def-model-sufficiency: cb0156177d2d2d215898316d7c7e1e6829188ccffc08bb3f458b93e9f5cd207f
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:def-pearl-causal-hierarchy: ff8c8d1fc2179029d43c7a3f25b9e102b6fba2f2c3313c486306adb86f5daf36
+  segment:def-strategic-calibration: 6f7e397ba2318cad37a98db35b7f50686e13f5fed5cce3699f0a39ae76c799d4
+  segment:def-strategy-dag: 17db22eaef31b8bdd2b3d5207ea38edc08ada691e8691d72f50579b57ccb57ba
+  segment:def-strategy-dimension: c714e71045624f758bf2a577ddc4f27cb9adf8495ae5a664a5f36e98c6cd9203
+  segment:def-value-object: c5883ca8980beb9a7d05b9c742e107fe6c51f97b1289d9c0b74e6a9f707b7fd2
+  segment:der-chain-confidence-decay: 369ae67b420173870677632e9efb50963106657b4479b094ac26397623908e48
+  segment:der-directed-separation: f9fff0493c627508c893923b08734cb327f7e4db59fd9e68d55bf51a9c6c6713
+  segment:der-gain-sector-bridge: 25b47255cfaa737b6474f121b2dc1c9678e689ada74995d81b09e108ba849211
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:deriv-discrete-sector-condition: e2aee9f6cc68416d7ebc562bea0894db3a5d660bb4546dee1eb1f4a86aaef711
+  segment:deriv-edge-credence-dynamics: 5dc36faa6c48f53ad11b14c28b08415bb33812920f2f16da9e4c665abcb7b0a9
+  segment:deriv-evidence-allocation-ceiling: a66fb79624b00164ce286f45e0c2f4edbeee6b81d6c5479cd5e39616d491e07c
+  segment:deriv-gain-sector: d7888baea04d4df394b410783c72cdc36ceea74aa9a94aa56ea584a3a51901ac
+  segment:deriv-recursive-update: d0f1a351e6604c21d76a76098c0aa890e5df028464e01b50a633d4e41243533f
+  segment:deriv-sector-condition: 4f99e7843079db1c53cf2b671dbe71c41d809dedaf316fb7427903eb3eb396a6
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: f3fbbecf05be5eef32b33bea6a9f137648fb709a96f8c4aa045a01e99f05ad13
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 11e85702fb076cba51bab0990d192e1990325ceccd2ae7a29e76c400e2fb3947
+  segment:form-objective-functional: dc06340dca4254703fec77439cba25d3ab6eb1799f391fa877bbab1843cb626a
+  segment:form-sector-condition: 004adea7a4354f0947d87f64cb668435a1514857c544faae422fff3ed9cb223e
+  segment:hyp-edge-update-via-gain: f994de59c6cf6284dab008e0dfea34b8c1bd54df17b87faf3f802a2f4156be31
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-sector-condition-stability: 0a7968b433eb41d7a0fd29481d1949c3aaa2edd786b77b42eb9e816c97ebf636
+  segment:result-sector-persistence-template: f668640b9a850c617e61762d8e4538454059c2a71897a19ba534f30ca151124c
+  segment:schema-strategy-persistence: 260e7c8427ec226b6a0a4fd363117b1a686b1b1555a2a6c29af815c82b85dd14
+  segment:scope-adaptive-system: 12ea0186e7a33e60ec52fade2a82c6955eba9631cec9eaf7034b588e4023ef4a
+  segment:scope-agency: 9185f5597080252155e7cf6292188de464b923f4541aa305acb58e4b39e21162
+  segment:scope-and-or: 7b529e04b43cb9069c611d88dc65216efe6aaa99d269df0c61a88bba6d7e9cac
+committed: before
+criterion: 'Prop EA.1 (allocation lag): under fixed allocation with observation probability $\pi_i$ and Model D drift $\rho_\Sigma$, does every estimator in class $\mathcal C$ (convex combinations of observed outcomes with history-fixed weights) have mean mismatch at least $\rho_\Sigma \times$ (age of the youngest observation), with expectation tending to $\rho_\Sigma/\pi_i$?'
+effective-version: 954799976a9bc852670e46cc8c85d5db5dc596e7833c2e5d4760aebbf4bc5930
+from: review:f72-evidence-allocation-ceiling-integration#C1
+line: derivation
+outcome: confirmed
+recheck: integration notes §Who checked what, §5.1; re-derive by the age route (mismatch is minus a weighted average of $\theta_t - \theta_s$ over observed $s$) and compare with the verifier's deterministic-gain route
+target-version: a66fb79624b00164ce286f45e0c2f4edbeee6b81d6c5479cd5e39616d491e07c
+version-from: current

@@ -1,0 +1,58 @@
+# vsect store declarations for ASF (founded 2026-10-30, objective I.3/I.4 of msc/inside-out-2026-10/INTENT.md).
+#
+# `vsect init` wrote no kinds. One is declared here by hand, because it already exists in 246 files:
+# the ASF segment. It is declared at record grain -- one statement per file, id `segment:<slug>` --
+# not carved into statements, because its equation tags do not yet parse as statement ids
+# (2026-10-30 census: of 642 tags, 251 carry a kebab-case id, 310 a note or condition, 81 nothing;
+# 38 segments carry none). Carving is the design's five-segment test, which objective B.1 will be
+# the first to need. vsect's own kinds (question, decision, purpose, review) are built in.
+#
+# The frontmatter fields `type`, `status`, `stage` are what their authors typed. vsect shows them
+# as declared and computes nothing from them; `status:` stays the declared form until B.1's
+# records exist for one Part (INTENT I.4).
+name: asf
+steward: joseph
+decider: joseph
+stores: {}
+kinds:
+  segment:
+    grain: record
+    find:
+      - "01-aat-core/src/*.md"
+      - "02-tst-core/src/*.md"
+      - "03-llm-core/src/*.md"
+      - "04-eli-core/src/*.md"
+    exclude:
+      - "0*/src/old-*.md"
+    aliases: [seg]
+    edges:
+      depends: depends
+    note: One ASF claim segment, taken as one statement until it is carved.
+  review:
+    grain: record
+    find:
+      - "reviews/*.md"
+    note: What a verifier, auditor or integrator sent back; its body is not edited after `vsect take`.
+  question:
+    grain: record
+    find:
+      - "questions/*.md"
+    note: An open item about the work, with a closer.
+edges:
+  depends:
+    in_basis: true
+    meaning: true
+    on_refute: broken
+    note: >-
+      ASF's `depends:` field. FORMAT says the kind of each dependency (definition import, logical
+      antecedent, scope assumption) is derivable from the target's `type`, so all of them bear
+      meaning here: an edit upstream lapses checks downstream, transitively, and a refuted target
+      breaks what rests on it.
+declared_fields: [type, status, stage]
+lines:
+  derivation: [drafted, premises-checked, independently-rederived]
+  simulation: [prediction-committed, run-once, swept, reproduced-by-another]
+  instance: [mapping-proposed, mapping-checked, prediction-checked]
+  imported: [named, recalled, found-by-search, checked-at-secondary, checked-at-primary]
+  measured: [anecdotal, measured-once, robust, calibrated]
+  testimony: [captured, corroborated, corroborated-by-another-kind]

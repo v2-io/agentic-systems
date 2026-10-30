@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 432e53b4419fce41b86aa33826a198b6b98e507d8f92bcebe323e5b3da672f0b
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-team-persistence
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - result-persistence-condition
+  - result-sector-condition-stability
+  - result-sector-persistence-template
+  - hyp-communication-gain
+  - def-adaptive-tempo
+  - deriv-tempo-additivity
+  stage: draft
+  status: conditional
+  type: derived
+own-version: 66993399adf90541d3c6c3bc3703a5fabec8ee5bc55088b58283d72f24b852a8
+record: 01-aat-core/src/der-team-persistence.md

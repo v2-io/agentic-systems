@@ -1,0 +1,19 @@
+schema: vsect-event/0
+id: 5ea535f260261f3b42d0ac2c1009fbf61251ea713fc9a6f1d47ede37c71c4ae1
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-system-coherence
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-discontinuity-distance
+  stage: draft
+  status: axiomatic
+  type: definition
+own-version: 72e7ced220027a16fe93a7da3fe21c9ef00b38bbce3f819c622df7e594dc6901
+record: 02-tst-core/src/def-system-coherence.md

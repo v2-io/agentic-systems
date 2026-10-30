@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: b482e216ac16960136df945244ce9d18211f7a51a3722e3a91a3adc1c9acbb11
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:impl-primitive-logogenic
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-primitive-logogenic
+  - obs-context-turnover
+  - obs-backward-inference-empathy
+  - scope-observation-ambiguity-modulation
+  - scope-agent-identity
+  - deriv-update-detection-latency
+  - der-directed-separation
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: f9fb6bff2e978aa5ebbda8aaf20b8859ec34001bdbe8a1ab2e9a28e574279ca6
+record: 03-llm-core/src/impl-primitive-logogenic.md

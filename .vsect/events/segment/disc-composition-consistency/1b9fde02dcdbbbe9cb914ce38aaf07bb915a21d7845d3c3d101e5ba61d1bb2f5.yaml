@@ -1,0 +1,19 @@
+schema: vsect-event/0
+id: 1b9fde02dcdbbbe9cb914ce38aaf07bb915a21d7845d3c3d101e5ba61d1bb2f5
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:disc-composition-consistency
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-agency
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: 38ecdbe2544533cf09ca51fc1f1c55da33ff83820a49ebd77b83629e2d8b3246
+record: 01-aat-core/src/disc-composition-consistency.md

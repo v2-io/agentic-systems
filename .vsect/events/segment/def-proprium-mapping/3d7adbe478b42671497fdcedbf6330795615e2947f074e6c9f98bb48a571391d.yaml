@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 3d7adbe478b42671497fdcedbf6330795615e2947f074e6c9f98bb48a571391d
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-proprium-mapping
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-moral-continuity
+  - form-complete-agent-state
+  - def-chronica
+  - form-information-bottleneck
+  stage: draft
+  status: robust-qualitative
+  type: definition
+own-version: 3969b33d139da4ca5ae8117abce84e1494790feed2f451694e5584001267d220
+record: 04-eli-core/src/def-proprium-mapping.md

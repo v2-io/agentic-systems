@@ -1,0 +1,29 @@
+schema: vsect-event/0
+id: 6342d34609b2b15e2203d4166da5444a0ce6ce6e1091417ea7ec8509302ad56e
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:impl-scaffolded-logogenic
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-scaffolded-logogenic
+  - der-logogenic-as-wrapping
+  - result-coupled-diagnostic-framework
+  - disc-m-preservation
+  - form-structured-rich-context
+  - der-active-salience-management
+  - obs-evaluation-metrics
+  - der-class-coercion-via-wrapping
+  - der-orient-cascade
+  - deriv-persistence-cost
+  - form-consolidation-dynamics
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: 2608a9420d99eafc9d665e9e4b0063fcdbd964ccf67142c6e1b14718af333848
+record: 03-llm-core/src/impl-scaffolded-logogenic.md

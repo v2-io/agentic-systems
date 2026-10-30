@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 0037d3cadc1bc01b477ae3d497ef5a9a97038d4ac10f72de6ffb4e2ef519f68d
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:disc-structural-imagination
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-pearl-causal-hierarchy
+  - deriv-mechanism-counterfactual-separation
+  - der-directed-separation
+  - result-structural-adaptation-necessity
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: 77029dd58d39a95851683b016bcbed2d5bae3c69e4e230ec5fb2f6212c84f5d3
+record: 01-aat-core/src/disc-structural-imagination.md

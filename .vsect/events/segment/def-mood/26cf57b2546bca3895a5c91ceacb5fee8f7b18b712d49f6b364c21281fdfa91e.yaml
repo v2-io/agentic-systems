@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 26cf57b2546bca3895a5c91ceacb5fee8f7b18b712d49f6b364c21281fdfa91e
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-mood
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-mismatch-signal
+  - emp-update-gain
+  - def-adaptive-tempo
+  - hyp-mismatch-dynamics
+  - form-sector-condition
+  stage: draft
+  status: discussion-grade
+  type: definition
+own-version: 6bc9a67b1e3586a19cc9ed342133657dc5b56b347976cdb69d6696e50d3dd5d3
+record: 01-aat-core/src/def-mood.md

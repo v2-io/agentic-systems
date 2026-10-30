@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 38f0c1ba09023e1261f1f4efca8402702e2e5e7abe68337199a192f712192bb6
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-agent-environment
+  - def-action-transition
+  - def-observation-function
+  - def-chronica
+  stage: draft
+  status: axiomatic
+  type: scope
+own-version: 12ea0186e7a33e60ec52fade2a82c6955eba9631cec9eaf7034b588e4023ef4a
+record: 01-aat-core/src/scope-adaptive-system.md

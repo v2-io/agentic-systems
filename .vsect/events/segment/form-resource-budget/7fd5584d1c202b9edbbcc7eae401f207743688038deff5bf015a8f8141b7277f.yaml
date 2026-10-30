@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: 7fd5584d1c202b9edbbcc7eae401f207743688038deff5bf015a8f8141b7277f
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:form-resource-budget
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-adaptive-tempo
+  - def-strategy-dimension
+  stage: draft
+  status: conditional
+  type: formulation
+own-version: 87403729ebdac96924e80ff727c4de1d5492e8b721a16f29df66247809d91689
+record: 01-aat-core/src/form-resource-budget.md

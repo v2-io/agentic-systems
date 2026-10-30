@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: caed97f9a47e6e726844be8e4da8e6292efce25bfedbc3cdc2b78895a6b2898a
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-multi-timescale-stability
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - result-sector-persistence-template
+  - der-temporal-nesting
+  stage: draft
+  status: exact
+  type: derived
+own-version: c985f3a5506609974780cb7b432ab139484a39be0670af89e8aeb0352d2d4d10
+record: 01-aat-core/src/der-multi-timescale-stability.md

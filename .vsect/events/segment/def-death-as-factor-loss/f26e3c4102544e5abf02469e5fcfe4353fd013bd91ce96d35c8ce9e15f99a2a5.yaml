@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: f26e3c4102544e5abf02469e5fcfe4353fd013bd91ce96d35c8ce9e15f99a2a5
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-death-as-factor-loss
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-eli
+  - def-five-constitutive-factors
+  - disc-continuity-stance
+  - def-chronica
+  - result-persistence-condition
+  - der-identity-continuity-threshold
+  stage: draft
+  status: robust-qualitative
+  type: definition
+own-version: b74a1c28bd2b0d2c06a544877484f3aae57239ada2a6de924f80fee2152767c6
+record: 04-eli-core/src/def-death-as-factor-loss.md

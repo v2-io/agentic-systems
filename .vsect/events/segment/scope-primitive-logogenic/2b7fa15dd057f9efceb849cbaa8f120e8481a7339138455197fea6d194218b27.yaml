@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 2b7fa15dd057f9efceb849cbaa8f120e8481a7339138455197fea6d194218b27
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:scope-primitive-logogenic
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-channel-collapse
+  - scope-logogenic-agent
+  - obs-context-turnover
+  - scope-agent-identity
+  stage: draft
+  status: sketch
+  type: scope
+own-version: 22baf31a0ebe4155cca27d0e461724761a23e3f051efe1bed13132c8d5b4d2a8
+record: 03-llm-core/src/scope-primitive-logogenic.md

@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 0f17317bed3150974dd9be915a604b8da487bf65427b057529ac22b0f89ff5e2
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:obs-gated-tempo-advantage
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - der-adversarial-destabilization
+  - emp-update-gain
+  - def-adaptive-tempo
+  stage: draft
+  status: empirical
+  type: observation
+own-version: 01d2575c8d70d3741bff864b41e0e40881416b3a616c757ecdd2b533d03c4e1c
+record: 01-aat-core/src/obs-gated-tempo-advantage.md

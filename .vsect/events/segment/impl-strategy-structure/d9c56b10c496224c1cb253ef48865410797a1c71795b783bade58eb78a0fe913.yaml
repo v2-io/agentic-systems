@@ -1,0 +1,28 @@
+schema: vsect-event/0
+id: d9c56b10c496224c1cb253ef48865410797a1c71795b783bade58eb78a0fe913
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:impl-strategy-structure
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-strategy-dag
+  - def-satisfaction-gap
+  - def-control-regret
+  - der-chain-confidence-decay
+  - deriv-graph-structure
+  - scope-and-or
+  - def-value-object
+  - der-loop-interventional-access
+  - disc-identifiability-floor
+  - disc-additive-coordinate-forcing
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: a423f0b37a13559a8e336c1c56445029851c26f73ad17bfe7bba2b2306a8e037
+record: 01-aat-core/src/impl-strategy-structure.md

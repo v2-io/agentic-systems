@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 70d36b058578d32a9ee3c950d2aa53b632d17e9657966504d8f8fa3c4a55cfa2
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:disc-implementation-impossibility
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - deriv-strategic-composition
+  - deriv-strategy-proofness-impossibility
+  - deriv-bilateral-trade-impossibility
+  - deriv-social-welfare-aggregation-impossibility
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: 5d83ee68110e2a77184b1c7bb9d0379b01e2854a530fa371985efdbbcf74ff16
+record: 01-aat-core/src/disc-implementation-impossibility.md

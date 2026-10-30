@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: 5145fd2a48fb9b1de670156974b68a15644ebf92f0c76afe9c3ed8b749691983
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:scope-ciy-observational-proxy
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-causal-information-yield
+  - der-loop-interventional-access
+  stage: draft
+  status: conditional
+  type: scope
+own-version: deb370a502ab88d141a1c477466950bb023b006bdac51c83da9f5f4a611b33b5
+record: 01-aat-core/src/scope-ciy-observational-proxy.md

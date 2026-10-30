@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 471afc46fbed08fd8e25dee62d20c11144eb44deb261b28698f6b24360f0e71f
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:disc-adversarial-coupling-pressure
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - der-directed-separation
+  - der-orient-cascade
+  - deriv-observation-ambiguity-bias-bound
+  - def-satisfaction-gap
+  - def-control-regret
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: 66c33bac2ba23c86c20f1b0ef44bc7591c49735b7d1815a3e8d674e68d2e8a70
+record: 01-aat-core/src/disc-adversarial-coupling-pressure.md

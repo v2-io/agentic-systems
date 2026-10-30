@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 7422de819210bfccfd760ec4946995496e45d588777c4c80cb8ff0cb77f2eea4
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-mismatch-signal
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - form-agent-model
+  - def-observation-function
+  - def-action-transition
+  stage: deps-verified
+  status: axiomatic
+  type: definition
+own-version: 250e844f383dff060ba7879b6c86f9c5fd546df30d0c24cbdfa0ae771d932b78
+record: 01-aat-core/src/def-mismatch-signal.md

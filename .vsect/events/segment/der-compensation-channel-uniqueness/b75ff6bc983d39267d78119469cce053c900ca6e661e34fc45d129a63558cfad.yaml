@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: b75ff6bc983d39267d78119469cce053c900ca6e661e34fc45d129a63558cfad
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-compensation-channel-uniqueness
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-identity-sufficiency
+  - scope-agent-identity
+  - obs-context-turnover
+  - der-identity-continuity-threshold
+  stage: draft
+  status: conditional
+  type: derived
+own-version: 59256cdef0adb59c244d7f7285883fd1f3afb83fb56ade9dcd9edb2046365fde
+record: 04-eli-core/src/der-compensation-channel-uniqueness.md

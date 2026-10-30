@@ -1,0 +1,19 @@
+schema: vsect-event/0
+id: 52bc5e137013d81ee12ac74f3d0fc72322edb81a94e44ce76fdc80d3244abcb8
+at: 2026-10-30T19:27:14Z
+store: asf
+act: mint
+about: question:ea1-beyond-averaging-estimators
+actor:
+  name: f72-integrator
+  role: integrator
+normalizer: vsect-norm/0
+declarations:
+  asked: 2026-10-30T19:27:14Z
+  asked-by: f72-integrator
+  closer: anyone
+  concerns:
+  - segment:deriv-evidence-allocation-ceiling
+  kind: question
+own-version: 710c1e9ac879fd3eb7aa532d5efa776ef775d5e77567f605f588c18d70ec0ced
+record: questions/ea1-beyond-averaging-estimators.md

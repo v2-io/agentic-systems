@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: e9cc8b485c9f33f4a506db00621fd29137c4fcb6ec78297332f6d9f451f697f7
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-logogenic-as-wrapping
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - der-class-coercion-via-wrapping
+  - der-class-coercion-in-composition
+  - def-coupled-update-dynamics
+  - scope-logogenic-agent
+  - scope-scaffolded-logogenic
+  - der-directed-separation
+  stage: draft
+  status: conditional
+  type: derived
+own-version: 468451b8e3219a73b048f980a2318e0b65196f832909944094b6ddd40cfbd586
+record: 03-llm-core/src/der-logogenic-as-wrapping.md

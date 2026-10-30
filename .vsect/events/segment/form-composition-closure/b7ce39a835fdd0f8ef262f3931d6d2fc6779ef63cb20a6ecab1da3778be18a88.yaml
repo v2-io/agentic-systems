@@ -1,0 +1,27 @@
+schema: vsect-event/0
+id: b7ce39a835fdd0f8ef262f3931d6d2fc6779ef63cb20a6ecab1da3778be18a88
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:form-composition-closure
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - disc-composition-consistency
+  - scope-composite-agent
+  - scope-multi-agent
+  - def-agent-environment
+  - form-event-driven-dynamics
+  - result-sector-condition-stability
+  - deriv-sector-condition
+  - result-sector-persistence-template
+  - result-persistence-condition
+  stage: draft
+  status: conditional
+  type: formulation
+own-version: f7355b6b4927c49bf6edacbdd316e9bae0bac21de5a24acd8c214fa678ba3238
+record: 01-aat-core/src/form-composition-closure.md

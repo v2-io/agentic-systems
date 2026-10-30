@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: c1fcdcf3ee49c2e68c832f0162abbc0a6e7d82238593bb2a62af455ae012daba
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-causal-ib-exploration
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - disc-ciy-unified-objective
+  - form-information-bottleneck
+  - def-pearl-causal-hierarchy
+  - result-persistence-condition
+  - def-mismatch-signal
+  stage: draft
+  status: conditional
+  type: derivation
+own-version: da0fe226cfa8e188178ce487f99d146a3b220f20daf431a675a6eb6eec04f061
+record: 01-aat-core/src/deriv-causal-ib-exploration.md

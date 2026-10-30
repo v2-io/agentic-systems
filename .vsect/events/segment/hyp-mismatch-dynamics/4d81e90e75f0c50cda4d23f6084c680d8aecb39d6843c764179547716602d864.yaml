@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 4d81e90e75f0c50cda4d23f6084c680d8aecb39d6843c764179547716602d864
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:hyp-mismatch-dynamics
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-adaptive-tempo
+  - def-mismatch-signal
+  - deriv-sector-condition
+  stage: deps-verified
+  status: heuristic
+  type: hypothesis
+own-version: 06fe8a6e1f82997fe61e3831037fdc1cb7eebaae9ed37b7776cf76e0021b8359
+record: 01-aat-core/src/hyp-mismatch-dynamics.md

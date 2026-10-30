@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: ffbd437095268bbfe2f760c537d4d55e98038baf6b5e8138aeba31422620c036
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:scope-evolving-software
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-agency
+  - post-temporal-optimality
+  stage: draft
+  status: axiomatic
+  type: scope
+own-version: 89b0688335a062a45de07f4ad99849e1e5cfd550b56ae092f93815241548e40a
+record: 02-tst-core/src/scope-evolving-software.md

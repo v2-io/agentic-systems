@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 7a34fa506e6a653e044ea01fb1f7f6dd793ce16c3911d7338488dd740e1de56b
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-regime-marginal-indistinguishability
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - deriv-strategic-composition
+  - deriv-critical-mass-composition
+  - disc-identifiability-floor
+  - result-sector-persistence-template
+  - disc-dynamic-regime-axis
+  stage: draft
+  status: conditional
+  type: derivation
+own-version: c97b4ee066f174e3dd6cebeea45a879fa697bcdd9b748dde894e9e449bf625c3
+record: 01-aat-core/src/deriv-regime-marginal-indistinguishability.md

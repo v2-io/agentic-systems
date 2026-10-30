@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: a7a6436957882abe30a7a803af0f947b443ea9256168485c8dddd9c6a2580f0f
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:der-causal-insufficiency-detection
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - result-structural-adaptation-necessity
+  - def-strategy-dag
+  - der-loop-interventional-access
+  - der-causal-hierarchy-requirement
+  - def-pearl-causal-hierarchy
+  - def-causal-information-yield
+  stage: draft
+  status: conditional
+  type: derived
+own-version: a2840fefda88d10a27f295351ab4852785f716801b358ffab7e1b238a437cbc4
+record: 01-aat-core/src/der-causal-insufficiency-detection.md

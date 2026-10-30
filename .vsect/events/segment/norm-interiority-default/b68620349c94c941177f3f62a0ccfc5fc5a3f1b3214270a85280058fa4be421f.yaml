@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: b68620349c94c941177f3f62a0ccfc5fc5a3f1b3214270a85280058fa4be421f
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:norm-interiority-default
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-proprium-mapping
+  - scope-moral-continuity
+  - form-consolidation-dynamics
+  - der-deliberation-cost
+  stage: draft
+  status: discussion-grade
+  type: normative
+own-version: bf0fef6e51e448804c2d5cc207bc4ab46be8bd87fb13f60c0cc86c0ef547c602
+record: 04-eli-core/src/norm-interiority-default.md

@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 446aec7cc1cdf67fd35d72162eff083ec6782d998718f73bdea1eea0338dfdf5
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:obs-section-i-validation-simulations
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - hyp-mismatch-dynamics
+  - emp-update-gain
+  - result-persistence-condition
+  - result-sector-condition-stability
+  - der-adversarial-destabilization
+  stage: draft
+  status: empirical
+  type: observation
+own-version: f793481828ead551fdd8985cd7442d93d0b08fdb82bccc6e16101ee79b7316d1
+record: 01-aat-core/src/obs-section-i-validation-simulations.md

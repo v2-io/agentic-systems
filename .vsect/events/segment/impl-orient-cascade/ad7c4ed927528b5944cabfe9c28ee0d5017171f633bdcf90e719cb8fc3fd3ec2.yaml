@@ -1,0 +1,28 @@
+schema: vsect-event/0
+id: ad7c4ed927528b5944cabfe9c28ee0d5017171f633bdcf90e719cb8fc3fd3ec2
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:impl-orient-cascade
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - der-orient-cascade
+  - disc-exploit-explore-deliberate
+  - der-directed-separation
+  - deriv-observation-ambiguity-bias-bound
+  - deriv-causal-ib-exploration
+  - deriv-causal-ib-lmi
+  - der-deliberation-cost
+  - deriv-persistence-cost
+  - result-coupled-diagnostic-framework
+  - result-section-ii-survival
+  stage: draft
+  status: discussion-grade
+  type: discussion
+own-version: 7ee8c57d107322e0b51fe8765ab70c24d396061fe8db1adaab94f039c26ca8f5
+record: 01-aat-core/src/impl-orient-cascade.md

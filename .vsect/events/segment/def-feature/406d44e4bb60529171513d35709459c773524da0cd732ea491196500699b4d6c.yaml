@@ -1,0 +1,19 @@
+schema: vsect-event/0
+id: 406d44e4bb60529171513d35709459c773524da0cd732ea491196500699b4d6c
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-feature
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - scope-evolving-software
+  stage: draft
+  status: axiomatic
+  type: definition
+own-version: eefffd509dd084cb6773f2591ba53127c3063f51de688f5a5ccd0a081273e7c6
+record: 02-tst-core/src/def-feature.md

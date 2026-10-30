@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: 42c92f1318061e86c526ab52f1ee71eef3d4248bf383b45bc4b4151d842f546d
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:deriv-adaptive-gain-dynamics
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - emp-update-gain
+  - der-gain-sector-bridge
+  - deriv-gain-sector
+  - deriv-sector-condition
+  - result-sector-condition-stability
+  - result-sector-persistence-template
+  - der-recursive-update
+  stage: draft
+  status: conditional
+  type: derivation
+own-version: 4645e546481f1dcef35a011632f5127f872b7a616e96f063fa352eff02157070
+record: 01-aat-core/src/deriv-adaptive-gain-dynamics.md

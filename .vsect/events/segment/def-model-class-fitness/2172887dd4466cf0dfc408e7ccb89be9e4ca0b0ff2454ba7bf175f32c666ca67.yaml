@@ -1,0 +1,19 @@
+schema: vsect-event/0
+id: 2172887dd4466cf0dfc408e7ccb89be9e4ca0b0ff2454ba7bf175f32c666ca67
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:def-model-class-fitness
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-model-sufficiency
+  stage: deps-verified
+  status: axiomatic
+  type: definition
+own-version: 80a2eb3fbf06b7ebb3ebdc642c79dc6883eb350ebafb68555ee3ea9c2505a25f
+record: 01-aat-core/src/def-model-class-fitness.md

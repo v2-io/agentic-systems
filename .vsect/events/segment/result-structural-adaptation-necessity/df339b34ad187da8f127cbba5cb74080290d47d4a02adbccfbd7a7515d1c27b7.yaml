@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: df339b34ad187da8f127cbba5cb74080290d47d4a02adbccfbd7a7515d1c27b7
+at: 2026-10-30T19:18:41Z
+store: asf
+act: mint
+about: segment:result-structural-adaptation-necessity
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: adopter
+normalizer: vsect-norm/0
+declarations:
+  depends:
+  - def-model-sufficiency
+  - def-model-class-fitness
+  - result-mismatch-decomposition
+  - emp-update-gain
+  stage: claims-verified
+  status: conditional
+  type: result
+own-version: 7c7c9be73dd830411b5791b025db2e211b07520daab48dd58cca0ab30cf18c2a
+record: 01-aat-core/src/result-structural-adaptation-necessity.md
