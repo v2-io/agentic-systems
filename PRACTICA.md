@@ -3,11 +3,11 @@
 
 > **Resuming momentum:** the active effort's objectives tree is [`msc/inside-out-2026-10/INTENT.md`](msc/inside-out-2026-10/INTENT.md), and it supersedes this file's priority markers while the effort runs. [`CHANGELOG.md`](CHANGELOG.md)'s top entries name what just landed. Priming-heavy pointers; skip during de-novo audits.
 
-*This file names the **areas** of active work. The systematic project workflow each area implies — audit cycles, segment refinement and promotion, citation checks, prior-art searches, the named workflow steps below — is mostly not enumerated piece-by-piece. For specific items that don't fit a more systematic home: [`TODO.md`](TODO.md) is the misc-and-details layer (open audit-finding routing decisions, queued spike follow-ups, deferred items, lower-priority specifics). For architectural moves under review: [`PROPOSALS.md`](PROPOSALS.md). Sister-files: [`README.md`](README.md) external-facing snapshot, [`CLAUDE.md`](CLAUDE.md) agent-onboarding, [`CHANGELOG.md`](CHANGELOG.md) historical record. PRACTICA itself is **auditor-safe** — readable during de-novo audits — but linked entries into TODO / PROPOSALS / CHANGELOG are priming-heavy and should be skipped until the initial stages of audits are complete.*
+*This file names the **areas** of active work. The systematic project workflow each area implies — audit cycles, segment refinement and promotion, citation checks, prior-art searches, the named workflow steps below — is mostly not enumerated piece-by-piece. For specific items that don't fit a more systematic home: [`TODO.md`](TODO.md) is the misc-and-details layer (open audit-finding routing decisions, queued spike follow-ups, deferred items, lower-priority specifics). For architectural moves under review: `PROPOSALS.md` (folded into the ledger; `vsect open`). Sister-files: [`README.md`](README.md) external-facing snapshot, [`CLAUDE.md`](CLAUDE.md) agent-onboarding, [`CHANGELOG.md`](CHANGELOG.md) historical record. PRACTICA itself is **auditor-safe** — readable during de-novo audits — but linked entries into TODO / PROPOSALS / CHANGELOG are priming-heavy and should be skipped until the initial stages of audits are complete.*
 
 ## ⭐Theory
 - [ ] ⭐ [TODO](TODO.md)
-- [ ] [PROPOSALS](PROPOSALS.md)
+- [ ] PROPOSALS (folded into the ledger; `vsect open`)
 - [ ] Principle Theory, Structure, & Dependency Graphs (via feedback & audits)
   1. [AAT OUTLINE](01-aat-core/OUTLINE.md),  Segment Refinement & Promotion
   2. [TST OUTLINE](02-tst-core/OUTLINE.md), Segment Refinement & Promotion

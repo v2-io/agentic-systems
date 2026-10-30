@@ -6,7 +6,7 @@ This file holds the *miscellaneous* layer of project work — open routing decis
 
 - [`PRACTICA.md`](PRACTICA.md) — strategic-portfolio navigator (top of the strategy DAG; areas of active work; auditor-safe).
 - Component `OUTLINE.md` files — per-component canonical outline + GAPs. Run `bin/lint-outline` for current segment-stage distribution, ordering violations, missing dependencies, and orphans.
-- [`PROPOSALS.md`](PROPOSALS.md) — architectural moves under review (banded by readiness; cross-cutting bundles named).
+- `PROPOSALS.md` (folded into the ledger; `vsect open`) — architectural moves under review (banded by readiness; cross-cutting bundles named).
 - [`spikes/INDEX.md`](spikes/INDEX.md) — spike index with per-spike status (per cycle).
 - [`CHANGELOG.md`](CHANGELOG.md) (post-2026-04-24) and [`LOG.md`](LOG.md) (frozen pre-2026-04-24) — cycle narratives, what landed, and the *why* behind structural moves.
 - `audits/pending-findings-YYYY-MM-DD.md` — original audit-finding characterizations and resolution trails.
@@ -142,7 +142,7 @@ This is a single-cycle pass, not a multi-session arc. Suggested order:
 (C-iii) admits composites without explicit $O_c$, but `scope-composite-agent.md:79` says without $O_c$ the composite is "a fiction." Same audit-finding surfaced in the 2026-04-22 batch (F8) and the 2026-04-25 batch (F-V3). Two paths under Joseph's call:
 
 - **Path A (recommended interim):** editorial fix in `scope-composite-agent.md` C-iii to make induced-$O_c$ structure explicit ($O_c$ derived from relevance variable $Y$ when C-iii holds). ~45–60 min. Compatible with later SP-21 if pursued.
-- **Path B:** SP-21 architectural restructure (split the four C-routes into distinct composite ontologies). 4–6 sessions; reverses the deliberate 2026-04-22/23 unification choice. Currently *deferred* pending Bundle 2 (Section III completion) maturation. See [`PROPOSALS.md`](PROPOSALS.md) §G SP-21.
+- **Path B:** SP-21 architectural restructure (split the four C-routes into distinct composite ontologies). 4–6 sessions; reverses the deliberate 2026-04-22/23 unification choice. Currently *deferred* pending Bundle 2 (Section III completion) maturation. See `PROPOSALS.md` (folded into the ledger; `vsect open`) §G SP-21.
 
 
 ## Open theory items (MEDIUM)
@@ -209,7 +209,7 @@ Per-spike status detail in [`spikes/INDEX.md`](spikes/INDEX.md); reasoning trail
 - Single axiomatic obstruction behind Cauchy-FE failure + Cramér-Rao rank-deficiency convergence (from A1 §9.4 O2).
 - Adaptive-metric-coupling interaction with `#deriv-adaptive-gain-dynamics`'s (MG-4) (from B1 §6.4).
 
-**Tier-3 architectural proposals** from these spike cycles are tracked in [`PROPOSALS.md`](PROPOSALS.md) §E — SP-9 (Fenchel-Bregman reframe of `#disc-additive-coordinate-forcing`), SP-10 (`#posterior-displacement-template` extraction).
+**Tier-3 architectural proposals** from these spike cycles are tracked in `PROPOSALS.md` (folded into the ledger; `vsect open`) §E — SP-9 (Fenchel-Bregman reframe of `#disc-additive-coordinate-forcing`), SP-10 (`#posterior-displacement-template` extraction).
 
 
 ## Naming pipeline — specific deferred items
@@ -238,7 +238,7 @@ Detail in `msc/naming/naming-rename-plan.md` (renamed from `naming-pilot-rename-
 
 ## Documentation queued
 
-- **Three-way presentation split** — multi-agent reviewers recommend (a) core results / (b) conditional architecture / (c) empirical programs. Cheap as parallel outline-views per [`PROPOSALS.md`](PROPOSALS.md) §H affordance ("outlines are cheap; segments are expensive").
+- **Three-way presentation split** — multi-agent reviewers recommend (a) core results / (b) conditional architecture / (c) empirical programs. Cheap as parallel outline-views per `PROPOSALS.md` (folded into the ledger; `vsect open`) §H affordance ("outlines are cheap; segments are expensive").
 - **AAT-vs-AI introductory positioning** — paper-writing-time follow-through per `spikes/spike-active-inference-vs-aad.md` §I action 2; surface §C distinctive-claims and §D refusals at introductory level when a paper draft is being prepared. Three underclaim moves named: persistence template's broader validity (Aguilera 2022 contrast); directed-separation as Pearl-blanket conservative form (Bruineberg 2022); satisfaction-gap as decision-theory content (Sun & Firestone 2020 dark-room).
 - **Prior-art positioning synthesis** — active inference / FEP / POMDP / BDI relationships now in individual segments; a synthesis pass surfacing the cross-segment pattern may still be valuable.
 - **`bin/lint-readme`** (J-15 from `msc/judgment-calls-readme-cycle-2026-04-26.md`) — slug-existence + cross-reference link validation. Quick to write; should land before heavy reliance on the README pipeline.
@@ -464,7 +464,7 @@ ELI preface evidentiary-status discipline + ELI-8 identity-sufficiency formaliza
 
 ## 2026-05-12 (late) — Spike audit triage (99 spike files surveyed via 3 parallel agents)
 
-Triage narrative and completed dispositions live in CHANGELOG (2026-05-12 (late) → 2026-05-21) and `spikes/.integrated/MANIFEST-*`; **authoritative per-spike disposition: [`PROPOSALS.md` §D.9 SP-22 STATUS (2026-05-17/18)](PROPOSALS.md) + `spikes/ROUTING.md`.** Open items only:
+Triage narrative and completed dispositions live in CHANGELOG (2026-05-12 (late) → 2026-05-21) and `spikes/.integrated/MANIFEST-*`; **authoritative per-spike disposition: `PROPOSALS.md` §D.9 SP-22 STATUS (2026-05-17/18) (folded into the ledger; `vsect open`) + `spikes/ROUTING.md`.** Open items only:
 
 - [ ] **`spike-bridge-lemma-nonlinear-strengthening-2026-04-24` §7.2 passivity / dissipativity** — Tier 2 math, ready to land. Target: `#dissipativity-template` appendix + Class 1/2/3 port-structure addition to `#der-directed-separation`. **`CL-1` (spike-routing 2026-05-17):** §7.1 is integrated (spike filed), but §7.2 is a *coupled* landing with `spike-passivity-composition` + `spike-pid-a2prime` — one `#dissipativity-template` integration-plan, **not** three independent half-segments. Heavy; tracked in `spikes/ROUTING.md` + PROPOSALS SP-22 STATUS.
 - [ ] **`spike-passivity-composition`** (B2; Willems passivity for heterogeneous Kalman+PID composition) — Tier 2; part of CL-1.
