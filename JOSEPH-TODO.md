@@ -11,7 +11,7 @@
 
 *Time-bound:* FAST @ NeurIPS 2026 (Foundations of Agentic Systems Theory workshop) deadline **2026-08-29** — the survey found it is the one venue named around "agentic systems theory"; submit-or-not is yours (`ref/prior-art-analysis/agentic-systems-landscape-2026-08-22.md`).
 
-*Quick nods:* F72 external-eye release · (PI) used-before-introduced — `#der-gain-sector-bridge` consumes `#scope-agent-identity` without listing it in `depends:`; hoist / add dep / reorder is a placement call (731548/35) · `.claude/` selective un-gitignore · `.archive/` untracking (the fonts half landed 2026-07-15). *(Decided by action since the briefs were written: CURRENT-VOL1 — made a generated reader snapshot 2026-08-22; Zenodo — v0.4.0 version DOI minted 2026-08-15.)*
+*Quick nods:* (PI) used-before-introduced — `#der-gain-sector-bridge` consumes `#scope-agent-identity` without listing it in `depends:`; hoist / add dep / reorder is a placement call (731548/35) · `.claude/` selective un-gitignore · `.archive/` untracking (the fonts half landed 2026-07-15). *(Decided by action since the briefs were written: CURRENT-VOL1 — made a generated reader snapshot 2026-08-22; Zenodo — v0.4.0 version DOI minted 2026-08-15.)*
 *Policy:* gold-dir standing gate (largest unblock: 0/22 graduated) · promotion-terminus / WN drain (sharpened by your 2026-07-14 stage position) · CLAUDE.md generate+cadence · naming-vs-Findings de-block.
 *Theory & naming:* SP-30 typed epistemic target (package ready) · C5 intelligence-empathy landing · the 01 ordering structural call + 9 whitelist-or-reorder rows · separability-triad rung names · agent-spectrum tetrad · Greek-vocabulary per-term · LEXICON §F reorg.
 *Strategic:* 04-eli-core own/private repo (new fact: repo already public).
@@ -29,7 +29,6 @@
 
 ## Lead will default-and-proceed (flag only if you'd rather weigh in)
 
-- **`#schema-strategy-persistence` hard-ceiling** → take adjudication verdict B as settled (name the convention, keep `status: exact`).
 - **SP-27 / SP-29** (Part-I↔Part-IV bridge placement; the infrastructure-as-active-monitor meta-segment candidate) → lead/architectural judgment, tracked in [`PROPOSALS.md`](PROPOSALS.md).
 - **Greek-vocabulary prose discipline** (tighten segment prose vs soften the README claim, per term) → lead per-term pass, in [`TODO.md`](TODO.md).
 

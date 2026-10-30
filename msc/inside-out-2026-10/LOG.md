@@ -70,4 +70,15 @@
     - from the owner review: the falsifier question in KR1.3, KR5.6, front-door-first in KR2.1, and the standing-cycle residue in KR5.2;
     - from the internal-surfaces map: KR3.2's wording, KR3.3a–c, KR3.4, KR5.5, the resolvability check in KR5.2, and the hand-written front surfaces in KR4.3.
   - **HANDOFF** is reduced to what only the lead knows: its read-ledger, what is in flight, system facts, and its hazards. Findings it had summarized now live only in their source documents.
+- **~13:35 MDT: F72 resolved. The hard ceiling is false.** An independent Opus verifier (KR2.3) found that `#deriv-strategic-persistence-hard-ceiling` Prop C.1 substitutes the stationary count into Prop B.1's $1/(n+1)$. Under the stated recurrence, though, the observation is added to the *discounted* count, so the steady gain is exactly $1-\lambda$, not $(1-\lambda)/(2-\lambda)$. The $\rho_\Sigma \lt R_\Sigma/2$ ceiling falls with it. The 05-31 spike's "SEG vs ALT1 convention" is one estimator under two bookkeepings, so verdict B is rejected.
+  - **Lead's own check:** I simulated the recurrence and measured gain $= 1-\lambda$ to six decimals at λ = 0, 0.1, 0.5, 0.9. The segment's own λ=0 sentence ("fully replaces the prior … giving $\alpha_\Sigma = 1/2$") contradicts itself.
+  - **Removed from `JOSEPH-TODO.md`:** the lead-default "take verdict B as settled … keep `status: exact`", and the "F72 external-eye release" quick nod. Both are now resolved.
+  - **The verifier's own new results, not yet independently checked:**
+    - an evidence-allocation no-go (§5.1), under which a genuine 1/2 cap appears in a two-arm ε-greedy OR node, generalizing to $R_\Sigma/K$ and $\theta_1 R_\Sigma$;
+    - a gain-modulated noise cap (§5.2);
+    - a real open per-observation vs per-step discounting convention for intermittently observed edges (§6).
+
+    The carriers of the false form are listed in its §7.
+  - **Process lesson, for KR5.3:** three passes checked the substitution's *arithmetic* and never the substitution itself. For any claimed gain or rate formula, measure the quantity rather than evaluating the formula.
+  - **Outside the repo, flag only:** NeurIPS Paper 2's $1-\lambda$ is *correct*. Its `adjudicated/residue.md` §4 queues a "convention decision" that would make it wrong.
 - **First system note**: `system/01-epistemic-machinery-in-place.md`, on the meta layer, hypotheses H-a..H-d.
