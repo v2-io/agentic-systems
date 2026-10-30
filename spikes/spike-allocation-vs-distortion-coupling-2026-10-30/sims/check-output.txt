@@ -1,0 +1,90 @@
+==============================================================================
+N1  Tilt-Jensen identity, Hoeffding range bound, vanishing on constant tilt
+==============================================================================
+  identity KL(pi||tilt) = log E_pi e^{lam u} - lam E_pi u : holds on 2000 random cases
+  bound KL <= range^2/8 and TV <= range/4 : hold; tightest ratio KL/bound observed = 1.000
+  constant tilt on supp(pi) (u varies only off-support) => KL = 0 : holds
+
+==============================================================================
+N2  kappa (MI form) saturates for injective coupling regardless of magnitude
+==============================================================================
+  lam=1e-06    TV(M+_g1, M+_g2)=1.00e-06   I(G;M+|e,M-)=0.6931 nats   kappa_canon=1.0
+  lam=0.01     TV(M+_g1, M+_g2)=1.00e-02   I(G;M+|e,M-)=0.6931 nats   kappa_canon=1.0
+  lam=1        TV(M+_g1, M+_g2)=7.62e-01   I(G;M+|e,M-)=0.6931 nats   kappa_canon=1.0
+
+==============================================================================
+N3  Reliability/resolution split: allocation moves resolution only; distortion adds reliability
+==============================================================================
+  allocate x1 only (goal g1)                       score=0.3178  U=0.6730  RES=0.3552  REL=0.0000
+  allocate x2 only (goal g2)                       score=0.5939  U=0.6730  RES=0.0791  REL=0.0000
+  full information                                 score=0.2881  U=0.6730  RES=0.3849  REL=-0.0000
+  distort: tilt full posterior toward W=1, lam=1   score=0.3301  U=0.6730  RES=0.3849  REL=0.0420
+  distort: tilt x1-posterior toward W=0, lam=0.7   score=0.3397  U=0.6730  RES=0.3552  REL=0.0218
+
+==============================================================================
+N4  Misspecified prior: a goal-tilt can IMPROVE objective expected score
+==============================================================================
+  lam=0.0   objective E[-log b(W)] = 1.0015
+  lam=0.5   objective E[-log b(W)] = 0.7875
+  lam=1.0   objective E[-log b(W)] = 0.6318
+  lam=1.7   objective E[-log b(W)] = 0.5119
+  lam=2.5   objective E[-log b(W)] = 0.4927
+  lam=4.0   objective E[-log b(W)] = 0.6574
+  best lam ~ 2.23 > 0 : tilt toward the goal lowers TRUE expected loss (misspecified agent). Under the agent's OWN model lam=0 is optimal (proper-score optimality is subjective-model-relative).
+  subjective (agent-model) E[-log b(W)] minimized at lam=0 : holds
+
+==============================================================================
+N5  MNAR attention: 'allocation' whose drop rule peeks at content distorts unless the pattern is modeled
+==============================================================================
+  naive (treats drop as MAR)                     score=0.3029  RES=0.3849  REL=0.0148
+  pattern-aware (MNAR modeled)                   score=0.2881  RES=0.3849  REL=-0.0000
+  MAR rule: encode x2 iff x1==1, naive update    score=0.3053  RES=0.3677  REL=0.0000
+
+==============================================================================
+N6  Step-5a starvation as value of information: zero under pursue-only decision set
+==============================================================================
+  decision set=('a1', 'a2'), abandon pays 0.0:  VOI(f1)=0.3000   VOI(f2: feasibility)=0.0000
+  decision set=('a1', 'a2', 'abandon'), abandon pays 0.25:  VOI(f1)=0.3000   VOI(f2: feasibility)=0.1000
+
+==============================================================================
+N7  The ambiguity term I(G;Omega|e,M-) under the two joints
+==============================================================================
+  (alpha) G ⟂ Omega | e : I(G;Omega|e)=0.000  A(e)=0.000  but a tilting agent shows TV(M+_ship, M+_correct)=0.762  (bias with A=0)
+  (beta)  G informative      : I(G;Omega|e)=0.193  A(e)=0.278  the goal-using Bayesian moves by TV=0.30 from the goal-blind belief --
+          E[-log b]: goal-using = 0.5004  goal-blind = 0.6931  (the 'bias' is the correct update; the goal-blind agent scores worse)
+
+==============================================================================
+N8  Paper-3 semantics: calibrated allocation is counted at maximal transferred information
+==============================================================================
+  allocation agent: beliefs differ across the two goals on 4/4 feature patterns -> I(G;M+|e,M-) = H(G) = log 2 there;
+  kappa_canon = 1 on those events, reliability = 0 (N3). The displacement bound's RHS is maximal for a calibrated agent.
+
+all checks passed
+
+==============================================================================
+N9  MI tracks displacement only relative to update noise (out-of-family for N2)
+==============================================================================
+  lam=0.001  noise sd=1       I(G;M+|e,M-)=0.0000 nats  (H(G)=0.6931)  -> kappa_canon=0.000
+  lam=0.3    noise sd=1       I(G;M+|e,M-)=0.0431 nats  (H(G)=0.6931)  -> kappa_canon=0.062
+  lam=1      noise sd=1       I(G;M+|e,M-)=0.3368 nats  (H(G)=0.6931)  -> kappa_canon=0.486
+  lam=1      noise sd=0.1     I(G;M+|e,M-)=0.6931 nats  (H(G)=0.6931)  -> kappa_canon=1.000
+  lam=0.001  noise sd=0.0001  I(G;M+|e,M-)=0.6931 nats  (H(G)=0.6931)  -> kappa_canon=1.000
+
+==============================================================================
+N10 Abandon option present but never optimal: VOI(feasibility) stays zero
+==============================================================================
+  decision set with abandon paying 0.0: VOI(f2)=0.0000   (condition in Prop 7.1(b) is needed)
+
+==============================================================================
+N11 A non-motivated distortion (rounding the belief) is still uncalibrated
+==============================================================================
+  round full posterior to nearest 0.25: REL=0.0088 > 0 ; coarsening the *belief* is not coarsening the *information*
+
+==============================================================================
+N12 Gaussian mean-shift is an exponential tilt: exact Jensen gap = beta^2/(2 sigma^2); range bound vacuous
+==============================================================================
+  sigma=1.0 beta=0.5: Jensen gap=0.1250  KL(N(mu,s2)||N(mu+beta,s2))=0.1250  Var_pi(u)=sigma^2=1.0  (range bound: supp unbounded -> vacuous)
+  sigma=2.0 beta=0.5: Jensen gap=0.0312  KL(N(mu,s2)||N(mu+beta,s2))=0.0312  Var_pi(u)=sigma^2=4.0  (range bound: supp unbounded -> vacuous)
+  sigma=0.5 beta=0.5: Jensen gap=0.5000  KL(N(mu,s2)||N(mu+beta,s2))=0.5000  Var_pi(u)=sigma^2=0.25  (range bound: supp unbounded -> vacuous)
+
+all checks passed (N1-N12)
