@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: aa182819e069e73c93a2cfa6e6b769ee05a997be28c6fa9474659fbbf2aabf65
+at: 2026-10-30T21:51:48Z
+store: asf
+act: place-finding
+about: segment:def-action-transition
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+finding: review:items-recheck-q#F2
+target: segment:def-action-transition
+text: 'Working-Note status signal: the Working Note at :67 argues that `*[Definition (transition opacity)]*` may be mistyped because the atom "restricts epistemic access" ("the agent does not know $T$ exactly"). Since 492a1492 the atom says the ag'
+version-from: git-revision
