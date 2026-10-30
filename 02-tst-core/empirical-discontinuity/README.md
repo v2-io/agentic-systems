@@ -40,7 +40,7 @@ At file and directory granularity, with elapsed time between commits as the time
 
 ## Files and usage
 
-- `analyze_git_history.py`: the original miner (`python analyze_git_history.py --repo <repo> --max-commits N --output data`). It writes `data/commits.json` and `data/analysis.pkl`, including the formula-based `commit_time_estimate` analysed in §1.
+- `analyze_git_history.py`: the original miner (`python analyze_git_history.py --repo <repo> --max-commits N --output data`). It writes `data/commits.json` and `data/analysis.pkl`, including the formula-based `commit_time_estimate` analyzed in §1.
 - `analyze_outliers.py`: the original multi-form fit over filtering windows, which produced $\alpha = 0.118$; it reads `data/analysis.pkl`.
 - `reproduce_estimate_fit.py`: §1. `python3 reproduce_estimate_fit.py data/commits.json`.
 - `elapsed_time.py`: §2, on `git log` dumps made with the command in its header. `python3 elapsed_time.py <name>.log ...`.

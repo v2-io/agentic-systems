@@ -134,6 +134,18 @@ The 2025 synthesis documents carry footnoted figures whose citations do not supp
 4. **The availability formulation** in `#scope-continuous-operation`: its assumptions and algebra.
 5. **The Part III falsifiers.** Are they faithful to Appendix F §F.7, and stated in each segment's own notation?
 
+### What waits for a second mind in vsect
+
+- **Edits classified by me, waiting on `vsect confirm`.** Because recorded checks rest on these records, a different mind has to judge each:
+  - `redefined`: `der-change-proximity-principle`, `emp-changeset-size-principle`, `hyp-exponential-cognitive-load`, `post-temporal-optimality` and `scope-evolving-software`. Each gained a claim; none had its existing statement altered.
+  - `reworded`: `def-implementation-time`, which gained an evidence paragraph while its definition is unchanged.
+- **Open findings from broken checks.** A13 review C1 (the circular fit), and H.2 review C1 (Putnam) and C2 (the CIY body sentence). The landed replacements answer all three, but vsect cannot yet dispose of review findings.
+- **Lapsed checks.** A13 review C2 and C3 lapsed when their text changed. They are superseded by H.2 review C4 and C6, taken at the new versions.
+
+### Dependencies added and not added
+
+`#scope-continuous-operation` now lists `hyp-mismatch-dynamics` in `depends:`, because its availability formulation is conditional on the linear mismatch dynamics. The new Discussion pointers in `#scope-developer-agent` (to `#hyp-communication-gain` and `#der-team-persistence`), `#der-team-persistence` (to `#deriv-tempo-additivity`) and the TST segments citing each other's measurements were left out of `depends:`. They direct a reader to related treatment and derive nothing from it.
+
 ### Left as found, deliberately
 
 - `TST-IDEAS.md:301` says the $\alpha \approx 0.2$ constant is underived while the structural claim survives. That is still true.
