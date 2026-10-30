@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: c3bdfe7ff98ace172d675ae14660d1a4e692a7baf310796a273ff6b7e69ecff7
+at: 2026-10-30T23:25:18Z
+store: asf
+act: revise
+about: segment:deriv-identity-sufficiency-rate-bound
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-3 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: reworded
+from-version: 5692546f043c4dbf8e78ef0afdb171a37e9e859c2e92856c7e5fd593e119178f
+own-version: 01022e2a870b16b127c577cdf5068ff7917d9793243bffa70182b2f0098bf94e
+record: 04-eli-core/src/deriv-identity-sufficiency-rate-bound.md

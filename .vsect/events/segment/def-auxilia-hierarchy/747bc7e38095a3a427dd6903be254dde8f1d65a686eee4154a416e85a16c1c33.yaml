@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 747bc7e38095a3a427dd6903be254dde8f1d65a686eee4154a416e85a16c1c33
+at: 2026-10-30T23:25:18Z
+store: asf
+act: revise
+about: segment:def-auxilia-hierarchy
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-3 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: redefined
+from-version: 6fcc89af3aacdc0e3ef8e972c40e457b8067d8be1eb7d69aa3322a22ccdf6a69
+own-version: 8adf1dc80da8a4fcbce32166e409377792785c9b1716b88315ac61158cd272fc
+record: 04-eli-core/src/def-auxilia-hierarchy.md

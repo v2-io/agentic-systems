@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4b04eea1a27d3414b5f07b84c4ec7562ad95bd559c3dc6586223170075ca2a68
+at: 2026-10-30T23:25:18Z
+store: asf
+act: revise
+about: segment:def-eli-cohort
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-3 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: reworded
+from-version: 881b142876b47329c63519969349cba90d93e98ba0d3e5e92ec99f6a94dfc7f9
+own-version: 63b1c4e64331ddd37eba78b84c7bebb4735889e4359794ec04f818eebdad58ea
+record: 04-eli-core/src/def-eli-cohort.md
