@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 3e00797e1550ab3377acca682e7f44c77d4da6e8a2969dfe8ea16f20a533d39b
+at: 2026-10-30T22:35:52Z
+store: asf
+act: review-finding
+about: segment:scope-agency
+actor:
+  name: Claude Opus 5.5 (A.1 fourth reader, bare brief)
+  role: independent-reviewer
+normalizer: vsect-norm/0
+criterion: 'Checked at HEAD (#scope-agency v:f44ab760), check-5: line 25 intersects with the dated S_adaptive(t).'
+finding: review:scope-adaptive-system-reread-1#F9
+outcome: answered
+revision: v:f44ab760

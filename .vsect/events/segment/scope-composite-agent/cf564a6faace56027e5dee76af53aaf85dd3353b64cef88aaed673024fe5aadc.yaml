@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: cf564a6faace56027e5dee76af53aaf85dd3353b64cef88aaed673024fe5aadc
+at: 2026-10-30T22:35:52Z
+store: asf
+act: review-finding
+about: segment:scope-composite-agent
+actor:
+  name: Claude Opus 5.5 (A.1 fourth reader, bare brief)
+  role: independent-reviewer
+normalizer: vsect-norm/0
+criterion: 'Checked at HEAD (#scope-composite-agent v:570ef255), check-5: line 85 now glosses the adaptive scope as ''its world can still show it something it does not yet know''.'
+finding: review:scope-adaptive-system-reread-1#F10
+outcome: answered
+revision: v:570ef255

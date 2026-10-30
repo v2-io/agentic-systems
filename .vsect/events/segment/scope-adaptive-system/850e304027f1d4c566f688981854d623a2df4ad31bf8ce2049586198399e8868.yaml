@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 850e304027f1d4c566f688981854d623a2df4ad31bf8ce2049586198399e8868
+at: 2026-10-30T22:35:51Z
+store: asf
+act: review-finding
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 fourth reader, bare brief)
+  role: independent-reviewer
+normalizer: vsect-norm/0
+criterion: 'Checked against the text at 3f3b4ca5 (v:85e9aebf) by the A.1 fourth reader (check-5, write-up 11): the scope is named as the averaged predicate, the pointwise predicate is defined beside it as a different predicate with the discrete-history equivalence, and item (c)''s deterministic-successor exit is marked pointwise.'
+finding: review:scope-adaptive-system-reread-1#F2
+outcome: answered
+revision: v:85e9aebf

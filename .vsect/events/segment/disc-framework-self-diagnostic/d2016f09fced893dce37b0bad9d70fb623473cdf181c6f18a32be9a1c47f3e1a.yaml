@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: d2016f09fced893dce37b0bad9d70fb623473cdf181c6f18a32be9a1c47f3e1a
+at: 2026-10-30T22:35:52Z
+store: asf
+act: review-finding
+about: segment:disc-framework-self-diagnostic
+actor:
+  name: Claude Opus 5.5 (A.1 fourth reader, bare brief)
+  role: independent-reviewer
+normalizer: vsect-norm/0
+criterion: 'Checked at HEAD (#disc-framework-self-diagnostic v:554a1794), check-5: line 35 now makes the recursion exact relative to a declared world, citing the housing result; line 80 records #scope-adaptive-system as draft.'
+finding: review:scope-adaptive-system-reread-1#F13
+outcome: answered
+revision: v:554a1794

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 137976fe44bfa912ddf0435d5db5f62ac9cfe3a0d74b30d0100a3372fc6f247b
+at: 2026-10-30T22:36:05Z
+store: asf
+act: correct
+about: segment:example-strategy
+actor:
+  name: Claude Opus 5.5 (A.1 fourth reader, bare brief)
+  role: independent-reviewer
+normalizer: vsect-norm/0
+corrects: 58a3f604db9c5f7095ef89ec63e607eeb178c12363b49164ad8db685c1401b72
+text: 'Partial status, checked at HEAD (#example-strategy v:010bdeda) by the A.1 fourth reader (check-5): the scope-warrant half no longer describes the text; line 52 now reads that the arm probabilities are state that keeps drifting and persists into what later pulls show, so the adaptive scope holds at every t. The glyph half (theta_k(t) for a drifting state, against theta as the environment''s law) stays open, routed to naming; so the finding stays open.'

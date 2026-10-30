@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 7845e49ba1a590262517dc7dc2b3184aea9478d2156b22646e049647ffb35592
+at: 2026-10-30T22:35:51Z
+store: asf
+act: review-finding
+about: segment:example-bandit
+actor:
+  name: Claude Opus 5.5 (A.1 fourth reader, bare brief)
+  role: independent-reviewer
+normalizer: vsect-norm/0
+criterion: 'Checked at HEAD 04bb2885 (#example-bandit v:0472a97a), check-5: ''transient'' is gone; the stationary variant reads ''they are then law, and the agent stays in at every finite t'', with one-pull information decaying like 1/(2n), consistent with #scope-adaptive-system item (c).'
+finding: review:scope-adaptive-system-reread-1#F6
+outcome: answered
+revision: v:0472a97a

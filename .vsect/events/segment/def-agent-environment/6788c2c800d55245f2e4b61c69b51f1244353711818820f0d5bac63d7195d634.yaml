@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 6788c2c800d55245f2e4b61c69b51f1244353711818820f0d5bac63d7195d634
+at: 2026-10-30T22:35:52Z
+store: asf
+act: review-finding
+about: segment:def-agent-environment
+actor:
+  name: Claude Opus 5.5 (A.1 fourth reader, bare brief)
+  role: independent-reviewer
+normalizer: vsect-norm/0
+criterion: 'Checked at HEAD (#def-agent-environment v:da0b3e97), check-5: line 43 now defines an Adaptive System as the coupling under a perception channel through which the world can still show the agent something it does not yet know, not ''plus residual uncertainty''.'
+finding: review:scope-adaptive-system-reread-1#F7
+outcome: answered
+revision: v:da0b3e97
