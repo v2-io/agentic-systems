@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: c7130072531657f79e5bc49f388bad821a3d9ed080036d9b336ffeb6069d42d7
+at: 2026-10-30T22:44:56Z
+store: asf
+act: revise
+about: segment:der-architecture-noidentifiability
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 27854a9640005db5278263d524cbc035d5c1baa1bd9c50005743dc62593449da
+own-version: f295eb0d40e8e914c0e75eb52cc91335561c25a2928652feb6c322c894e75608
+record: 01-aat-core/src/der-architecture-noidentifiability.md

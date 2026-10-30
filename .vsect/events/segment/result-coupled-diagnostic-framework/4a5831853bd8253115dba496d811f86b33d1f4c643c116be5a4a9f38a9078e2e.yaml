@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4a5831853bd8253115dba496d811f86b33d1f4c643c116be5a4a9f38a9078e2e
+at: 2026-10-30T22:44:56Z
+store: asf
+act: revise
+about: segment:result-coupled-diagnostic-framework
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 347132426b4a4e637a11e90b6afe384d60472d4f97278d84f53c89ed4bc580f3
+own-version: 8c650cd3f8b461b9d91c36597e211d5454eba189ed30b763af493b9e07694be1
+record: 03-llm-core/src/result-coupled-diagnostic-framework.md

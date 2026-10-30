@@ -103,7 +103,7 @@ Checked by hand. Declined: the spike's clause that the echo agent's $M_t$-condit
 - outcome: confirmed
 - recheck: arXiv 2603.01283 abstract (the B.1 checker read it; I did not re-fetch): 89.3% of coupling degradations vs 44.0%, 21 continuous-control agents
 
-Both sentences corrected per C1's result (conditioning on the decision state blocks the selection; a learning agent's policy reads its value table, and stationarity is what makes that harmless). Hafez wording changed from "detects perturbations at 89% accuracy" to the abstract's "detects 89.3% of coupling degradations" in this segment, #der-directed-separation (three sites), and #impl-causal-access; the Working-Note verification item removed as resolved at abstract granularity. Not re-fetched by me; the checker's reading is what the body now reports.
+Both sentences corrected per C1's result (conditioning on the decision state blocks the selection; a learning agent's policy reads its value table, and stationarity is what makes that harmless). Hafez wording changed from "detects perturbations at 89% accuracy" to the abstract's "detects 89.3% of coupling degradations" in this segment and #impl-causal-access in `af518dd5`, and — after the completion check found the first pass had not reached them — in #der-directed-separation (two sites; the third is a quoted auditor line), #deriv-update-detection-latency, #der-agent-opacity and #der-architecture-noidentifiability (which had attributed the IDT paper to the "Mathematical Theory" authors) in the follow-up commit; the Working-Note verification item removed as resolved at abstract granularity. Not re-fetched by me; the checker's reading is what the body now reports.
 
 ## F1 (finding)
 - target: segment:hyp-substrate-transfer-asymmetry
@@ -114,3 +114,8 @@ Both sentences corrected per C1's result (conditioning on the decision state blo
 - target: segment:der-class-coercion-via-wrapping
 
 The W₁ selection-channel term $\kappa_{W_1}^{\text{sel}}$ mixes calibration-preserving query selection with cue-triggered distortion by the component, and (C3) as formalized is satisfied by a fixed function of $q_M$ that decodes goal cues and tilts; the condition the wrapping theorems lack is calibration of the component's answer given the query. Landed as a Discussion paragraph (this segment); the structural bound is now described as a bound on goal information reaching $M_W$, not on $M_W$'s reliability. Whether Theorem 2's KL-leakage weakening can be restated as a calibration condition is open.
+
+## F3 (finding)
+- target: segment:obs-growth-vs-drift
+
+`04-eli-core/src/obs-growth-vs-drift.md` :50 carries the old Hafez wording ("89%" perturbation-detection framing). The abstract of Hafez, Reid & Nazeri 2026 (arXiv 2603.01283) reports 89.3% of coupling degradations detected against 44.0% for reward-based monitoring, across 21 trained continuous-control agents; the body's "accuracy" and "perturbations" are not the paper's words. Left to the Volume 4 lane.

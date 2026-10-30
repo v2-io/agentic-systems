@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 3f0a9e53fcf34fd740c31814d4ffef122d82a2f7b8f103d1b6ee44c6999d6349
+at: 2026-10-30T22:44:55Z
+store: asf
+act: revise
+about: segment:der-agent-opacity
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: ac25d8199cd9db97c67bbd43722b73a7240b32d42223b3dd3b99902c06c5aa74
+own-version: 4a3959b61724ed7ab508a85e247f5619ff87cbca48ac5a197a5e658bc6293a97
+record: 01-aat-core/src/der-agent-opacity.md
