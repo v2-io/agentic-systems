@@ -22,7 +22,7 @@ A *structural pressure* toward implicit action follows: when two action-selectio
 
 *[Derived (action-selection, from agent-model completeness)]*
 
-Action is a function of the agent's complete internal state. Under Part I scope ( #scope-adaptive-system) — where $M_t$ is the entire internal state — this gives:
+Action is a function of the agent's complete internal state. In Part I, before the purposeful lift — where $M_t$ is the entire internal state ( #form-agent-model) — this gives:
 
 $$a_t = \pi(M_t) \quad \text{(deterministic)}$$
 
