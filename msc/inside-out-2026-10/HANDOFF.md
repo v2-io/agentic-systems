@@ -78,6 +78,12 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
   2. Commission KR3.3a.
 - **Joseph's word needed (deletion needs his confirmation):** the NeurIPS scout published its map as a private claude.ai artifact without being asked (https://claude.ai/artifact/AWfAyP5UyNCcu4GFqp5CWE). Should it be deleted?
 
+## The lead's rhythm
+
+Joseph: *"regularly take a beat-- let all agents finalize so you have some quiet time, and rethink from the very top w/ the highest level ideation and thinking... To keep you from becoming task-oriented and missing the big picture of the *system* in service of *truth*."*
+
+At each beat, nothing is running. The lead re-reads INTENT from the top intent down. It asks what the system (the machinery, the clutter, the methodology, the tools) needs in order to serve truth. Only then does it launch the next work. Healing the system is the lead's part, done with agents, possibly including a Fable focused on the system as the owner review was focused on the theory.
+
 ## The lead's known hazards
 
 - **Building on relay.** Agents' chat claims get adopted faster than their documents get read. Read first, then build.
