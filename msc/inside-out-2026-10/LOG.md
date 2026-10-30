@@ -63,4 +63,11 @@
   - keep HANDOFF's read-ledger honest at every checkpoint, especially about my own relays.
 
   Joseph's word for the whole of it: *"be wise."*
+- **~13:20 MDT: INTENT and HANDOFF made lean.** Joseph: *"Keeping that intent pristine is critical. It *will* get bloated and if it is not corrected immediately, it will be just *yet another thing to integrate* … The successor agent shouldn't need *another file* to help it manage an existing file that is too bloated."*
+  - **INTENT** is now the tree alone: the top intent, O1–O5, one line per KR with its status and where it lives, the "Who is on what" table, and four usage lines.
+  - **What left INTENT:** its evidence, per-item credits and change notes. Evidence lives in the maps and reviews.
+  - **Bottom-up provenance**, which INTENT used to carry inline:
+    - from the owner review: the falsifier question in KR1.3, KR5.6, front-door-first in KR2.1, and the standing-cycle residue in KR5.2;
+    - from the internal-surfaces map: KR3.2's wording, KR3.3a–c, KR3.4, KR5.5, the resolvability check in KR5.2, and the hand-written front surfaces in KR4.3.
+  - **HANDOFF** is reduced to what only the lead knows: its read-ledger, what is in flight, system facts, and its hazards. Findings it had summarized now live only in their source documents.
 - **First system note**: `system/01-epistemic-machinery-in-place.md`, on the meta layer, hypotheses H-a..H-d.

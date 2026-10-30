@@ -1,157 +1,70 @@
-# INTENT — what this effort is for, and what each piece of work feeds
+# INTENT — the objectives tree
 
-*The central reference for the in-place refactor of ASF. Every agent working in this effort should be able to name the key result (KR) their work feeds, and through it the objective and the top intent. **Work that feeds nothing here is a red flag** (Joseph, 2026-10-30): either this file is out of date, or findings haven't been recorded here, or the work has drifted. Whoever notices the mismatch says so to the lead coordinator (SendMessage to `main`, or in `LOG.md`). It is never silently resolved in either direction.*
-
-*Maintained by the lead coordinator; revised as findings land. Every revision is dated in the change notes at the bottom. Joseph's words are quoted; everything else is the coordinator's current best statement, open to challenge by any agent.*
+Every piece of work in this effort feeds one key result (KR) below, and every agent at every depth, and every successor after compaction, knows which one. Work that feeds none is a red flag: the tree is stale, a finding is unrecorded, or the work has drifted. Say so to the lead; don't resolve it silently. The tree is set top-down *and* bottom-up: propose KRs and sub-objectives under the item you serve. This file stays a tree. Evidence lives in the artifacts it points to, and revisions are recorded in `LOG.md`.
 
 ## Top intent
 
-Joseph, 2026-10-30, verbatim:
+> Complete "in-place" refactor of ASF-- meta, all artifacts, and theory itself. — Joseph, 2026-10-30
 
-> Goal set: Complete "in-place" refactor of ASF-- meta, all artifacts, and theory itself.
+In service of *"TRUTH about agency … discovered, surfaced, truthified, truthfully synthesized and crossed to the right applications, AND effectively communicated anew."* His full frame is in `README.md`.
 
-> This effort is to *serve TRUTH* -- not me, not "task-completion" or tidyness, not accomplishing a plan, not what sounds good or looks good--- TRUTH about agency. […] TRUTH is only served if it is discovered, surfaced, truthified, truthfully synthesized and crossed to the right applications, AND effectively communicated anew, with proper epistemology and real humility fully intact. […] We are to create something true, wise, strong, and beautiful-- inasmuch as strong, wise, and beautiful are the servants […] of TRUTH.
+**Done means:** ASF says what is true about agency, only what its warrant supports, in a form a newcomer can follow and check.
 
-Read together, these give the test for "complete." **ASF says what is true about agency, only what its warrant supports, in a form a newcomer can follow and check.** The work is done in place, across the theory, every artifact around it, and the machinery that records how sure it is. Every objective below is one face of that test, and none is a goal in itself.
+## O1 — We can say plainly what the theory is trying to illuminate
 
-## Objectives and key results
+*First, because it decides what the rest mean.*
 
-*Status words below are hand-written by the coordinator as of the date shown. Per this effort's own system notes, treat them as claims to check, not as computed standing.*
+- **KR1.1** An owner-level review names the theory's actual centre, its problems, and the most fruitful ones to address. Everything it inherits is verified. · *running* · `owner-review/`
+- **KR1.2** A purpose statement for ASF and for each volume: what question it answers, about which agents, and what checkable prediction it makes. Candidates go to Joseph side by side; he ratifies. · *waits on 1.1*
+- **KR1.3** Each body of results is placed on the arc: universal or one model among several, for which class of agents, what it claims is optimal, **and what would refute it**. · *waits on 1.1; inputs in `internal-surfaces/00-cross-surface-map.md` §2*
 
-### O1 — We know, and can say plainly, what the theory is trying to illuminate
+## O2 — The theory is correct and coherent
 
-Joseph's named pain: *"I don't even know what this theory is *trying* to illuminate"*, and the *"loss of clarity on what is being theorized — a lot of it is there, it's just not part of the overall arc and narrative."* Until O1 holds, every other objective risks polishing the wrong thing.
+- **KR2.1** Statements say exactly what their warrant supports (scope, quantifiers, standpoint, tier), front-door surfaces first. Each chapter is checked by a reader other than its repairer. · *not started; defect list in `internal-surfaces/` §3*
+- **KR2.2** No canon statement contradicts another. · *not started*
+- **KR2.3** Overclaims are strengthened before they are softened; refuted claims are replaced, not kept as ghosts. · *F72 verifier running*
+- **KR2.4** External research the theory needs is adopted where it belongs, with citation, under its original names. · *not started; lists indexed in `internal-surfaces/` §6*
+- **KR2.5** Where a standard academic term exists, it replaces or anchors the coinage. · *not started*
 
-- **KR1.1** A highest-level owner review of ASF exists. It verifies everything it inherits, and names what the problems are and which are most fruitful to address. *Feeding it: (B) `owner-review/`, Fable, launched 2026-10-30. Status: running.*
-- **KR1.2** A purpose statement for ASF as a whole and for each volume. Each says what question the part answers, about which class of agents, and what it predicts that could be checked. Drafted from the owner review, the uses the estate actually makes of ASF, and Joseph's words; then ratified, amended or overturned by Joseph. *Not started; waits on KR1.1.*
-- **KR1.3** Every major body of results is placed on the arc. For each:
-  - is it claimed universal, and for which class?
-  - is it one model among several, and how does it map to concrete examples?
-  - does it claim optimality, and for whom?
-  - **what observation or construction would refute it?** This is a falsifier per body of results. It makes the other three checkable, and it hands the empirical program (vivarium, empirica) its targets.
+## O3 — Nothing true is stranded
 
-  The falsifier question was proposed by the owner review (Fable), 2026-10-30, and adopted. Joseph's strategy-DAG example is the specimen of the question, not the scope. *Not started; waits on KR1.1.* The internal-surfaces map's §2 gives six clusters as inputs, as candidates and not verdicts:
-  - what belief and goal are, and what separating them costs;
-  - the typed epistemic target and the standpoint gap;
-  - the strategy DAG, already partly answered in Working Notes;
-  - the impossibility spine, re-carved;
-  - Vol 4's spine sitting in Vol 1;
-  - what each volume says it proves.
+- **KR3.1** ASF material elsewhere in the estate is mapped, with dates and example documents. · *running* · `influx-scout/`
+- **KR3.2** Material stranded inside asf is mapped and joined by slug, with verify-state. · *delivered* · `internal-surfaces/`
+- **KR3.3** Each mapped item that bears on the theory is integrated at honest tier, or set aside with a recorded reason. · *not started*
+  - 3.3a: small landings that already have work orders;
+  - 3.3b: heavy landings, each with its own integrator;
+  - 3.3c: the backlog that was gated on Joseph, decided on the merits.
+- **KR3.4** Every OUTLINE row has a file or an honest mark, and every legacy `old-*` file has a fate. · *not started*
 
-  Directed separation and the standpoint of the persistence condition are where "universal, for which class?" is already partly written.
+## O4 — The truth reaches a reader
 
-### O2 — The theory itself is correct and coherent
+- **KR4.1** A front door and an arc that a newcomer can follow. · *not started*
+- **KR4.2** Comprehension is measured before and after, with fresh readers. · *not started*
+- **KR4.3** Every front surface says only what canon says: generated, hand-written, and published papers. · *not started*
 
-- **KR2.1** The statement layer says exactly what the algebra supports. Scope, quantifiers, standpoint and tier must match the warrant, chapter by chapter. Each chapter is checked by an independent reader, not by whoever made the repair.
-  - **The front-door surfaces are named explicitly**, as the owner review proposed: `01-aat-core/INTRODUCTION.md`, the Part I opening, the Part II preface, and the README partials. Its Jun–Oct history reader found four disagreeing headline lists, and a mechanism that lives longest there: "text regenerated from the remembered narrative rather than the record". Instances the review verified:
-    - `#scope-adaptive-system:18,45` still excludes standard RL, on the rationale audit 731548 showed false on 07-02 (file last edited 05-30);
-    - `INTRODUCTION.md:27` asserts as certain what `#sketch-structural-adaptation-genericity` holds open.
+## O5 — The machinery tells the truth about itself
 
-    The lead fixed a third instance, a dead worked example in `doc/sop/agents.sop.md`.
-  - **Cheap targeted re-read:** five appendix segments landed in 19 minutes on 04-22 (`591e8b63`…`0bd859e2`) and now read as canonical (owner review, Mar–Apr reader). *Evidence that this is where truth leaks: audit 731548 found "statement-layer defects sitting on correct algebra." Not started.*
-- **KR2.2** No canon statement contradicts another, checked across segments, not only within them. *Not started.*
-- **KR2.3** Claims found overclaimed are strengthened before they are softened. Every refuted claim is replaced, not kept as a softened ghost. *Feeding it: F72, the independent re-derivation of `#deriv-strategic-persistence-hard-ceiling`. Launched ~12:45 MDT after being refused once by the subagent concurrency limit.*
-- **KR2.4** External research the theory needs is integrated where it belongs, adopted with citation under its original names. *Known inputs:*
-  - `ref/prior-art-analysis/agentic-systems-landscape-2026-08-22.md`, whose segment-level recommendations are verified unintegrated (LOG, 2026-10-30);
-  - `ref/enrichment-candidates-2026-05-21.md`;
-  - the 21 May prior-art analyses.
+- **KR5.1** The record of how sure ASF is of each claim is truthful: declared inputs plus recorded checks, not hand-set labels. · *notes* · `system/01-…`
+- **KR5.2** One live place to find what is open, and no residue that reads as live: routing targets that don't resolve, and hand-offs to cycles that don't exist. · *partly*
+- **KR5.3** The practices that keep truth are written where agents meet them. · *ongoing* · `doc/sop/agents.sop.md`
+- **KR5.4** This tree stays true and lean. · *lead*
+- **KR5.5** Working Notes are classified by kind and status, not drained. · *not started; seed in `internal-surfaces/wn-ledger-seed/`*
+- **KR5.6** The arc has an owner: when a result lands, the anchors it changes are updated, with a trigger. · *not started*
 
-  *Not started.*
-- **KR2.5** Terminology tells the truth. Where an agent-coined name stands in for a concept known under a standard academic name, adopt that name, or anchor the coinage to it and say why it differs. Joseph: agents *"fall into existing ASF terminology that was essentially named arbitrarily … sometimes not realizing they would be better to adopt standard academic terms even if from a different field."* *Not started; the naming-cycle backlog of 506 unrouted R2 currents is input, not the method.* The owner review reports this as verified (not yet read by the lead). The May prior-art memos already name the standard neighbors:
-  - the Separation Principle, for directed separation;
-  - fault-tree common-cause failure, for the Correlation Hierarchy;
-  - Gott/Lindy, for change-expectation.
+## Who is on what
 
-  Those citations reached the bodies of only 6 segments. So much of KR2.5, and of KR2.4, is a landing sweep from existing memos, not new research.
+| Who | KR | Writes to |
+|---|---|---|
+| Lead coordinator (Opus 5.5, session "asf-cleanup") | 5.4, plus coordination | `INTENT.md`, `LOG.md`, `HANDOFF.md`, `system/` |
+| Owner review (Fable) and its subagents | 1.1 | `owner-review/` |
+| Influx scout (Opus) and its subagents | 3.1 | `influx-scout/` |
+| F72 verifier (Opus) | 2.3 | `spikes/spike-strategic-persistence-hard-ceiling-convention-2026-05-31-verify-1.md` |
 
-### O3 — Nothing true is stranded
+The internal-surfaces mapper (KR3.2) has finished and is on the line for follow-ups.
 
-- **KR3.1** ASF material elsewhere in the estate is mapped, with dates and example documents:
-  - the papers;
-  - aat-refactored and aat-v3;
-  - agent-core, context-saliency, the AISI work, ai-risk-model, practica-dag, arch notes;
-  - INFLUX/`.int` dirs.
+## Using this file
 
-  *Feeding it: (A) `influx-scout/`, Opus. Status: running.*
-- **KR3.2** Live theory stranded inside asf is mapped *and joined by slug, with each item's verify-state*, so that an integrator can go from a segment to everything bearing on it. Wording proposed by the internal-surfaces mapper. *Delivered 2026-10-30:* `internal-surfaces/00-cross-surface-map.md` plus six per-surface maps with slug tables, read whole by the lead. Re-runnable forms are prototyped there (`audit-gold-status.py`, `wn-ledger-seed/`).
-- **KR3.3** Each mapped item that bears on the theory is integrated into canon at honest tier, or set aside with its reason recorded where a future reader will find it. Split by what blocks it, as the internal-surfaces map proposed. That map found the stall sits *downstream* of verification: verified, integration-ready work exists and nobody runs it.
-  - **KR3.3a** The small, exact landings with work orders already written are landed. The list is in internal-surfaces §4, first list, and includes F72.
-  - **KR3.3b** Each heavy landing gets an integrator distinct from its spiker and verifier, and lands or is set aside with a recorded reason. These include the decomposition cluster with the ε-programme, SP-30, the standpoint discipline with the reserve repair, honest activation, the no-go re-carve, and CL-1 (internal-surfaces §4, second list).
-  - **KR3.3c** The backlog gated on Joseph, released today, is decided. Where a lead recommendation exists, it decides by default (internal-surfaces §4, third list).
-
-  *Not started; waits partly on O1, which decides what "bears on the theory" means.*
-- **KR3.4** The volumes' own completeness. Every OUTLINE row has a file or is honestly marked or removed. The 44 legacy `old-*` files under `src/` are each mapped to a live segment, a candidate, or a deliberate retirement. Proposed by the internal-surfaces mapper. TST (29 segments; its theory "several times its canon") and 03/04 (20 OUTLINE rows with no file) are where most is stranded. *Not started.*
-
-### O4 — The truth reaches a reader
-
-- **KR4.1** A front door and an arc. A newcomer can learn what ASF claims, in what order, and how sure it is, without reconstructing it from 246 segments. *Not started.*
-- **KR4.2** Comprehension is measured before and after, with fresh readers on the same chapters. A candidate instrument is the comprehension quiz from audit run 374162. *Not started.*
-- **KR4.3** Front surfaces say only what canon now says. That covers the generated ones (README, FINDINGS, LEXICON, CURRENT-VOL1) and, per the internal-surfaces map, the hand-written ones (`01-aat-core/INTRODUCTION.md`, `HISTORICAL-CONTEXT.md`, the README partials). The hand-written ones carry claims canon does not hold, and nothing signals when they go stale. Published and submitted papers are front surfaces too. The owner review's May reader found that the submitted NeurIPS Paper 2 PDF still grounds the do-operator in the singular trajectory, which canon corrected on 05-31 (`52d85b2`). Whether any of the paper's results depend on it is unchecked, and whether a published claim gets a correction is Joseph's call. *Not started.*
-
-### O5 — The machinery tells the truth about itself, and the system keeps it true
-
-This is the "meta" in Joseph's goal. It earns its place only where it changes what a reader can trust. Joseph: *"Thoughts about this as a system in and of itself — a system of agentic truthification about agentic theory, is wholely worthy."*
-
-- **KR5.1** How sure ASF is of each claim is recorded truthfully. Hand-set `status:` was measured to disagree with itself (census, 2026-09-29). It is replaced by declared inputs plus recorded checks, or another design that survives scrutiny. *Feeding it: `system/01-epistemic-machinery-in-place.md`, hypotheses H-a..H-d. Status: notes only.*
-- **KR5.2** One live place to find what is open, and no residue that reads as live work. The trackers, PRACTICA's May priorities, and the July decision briefs are reconciled into what this effort actually runs on. *Partly fed:*
-  - July decision briefs triaged (LOG);
-  - `core.hooksPath` fixed.
-
-  A named residue class, from the owner review: seven spike files hand work to a "standing cycle" that exists nowhere (verified by the review).
-
-  One mechanical check, proposed by the internal-surfaces mapper: a disposition or routing target that doesn't resolve (a slug with no file, a backlog no tracker holds) is a defect a tool catches. Five strandings found today had that shape.
-- **KR5.3** The practices that kept truth here are written where agents meet them, and the ones that failed are changed. *Fed so far: standing notes in `doc/sop/agents.sop.md`.* *Candidates, not yet adopted:*
-  - a receiver-side orientation for subagents (`~/src/arch/SUBAGENT-INSTRUCTIONS-notes.md`);
-  - `SPIKE-PROMPT.template.md` for all spikes.
-- **KR5.6** The arc has an owner. When a result lands, someone updates the anchors it changes: the introduction, the front door, the headline claims. There is a trigger, so this doesn't depend on someone remembering.
-  - Proposed by the owner review. Its Jun–Oct history reader refuted the review's own "one human clock" hypothesis: results *did* land well, spike to verify to segment, often the same day. What had no owner was the arc.
-  - Evidence: `INTRODUCTION.md` is unchanged since 05-18, while the persistence "only-if" was refuted, SP-24 redefined "agent", and every Jun–Oct result arrived.
-  - KR1.3 is a one-time placement. This is the standing step that keeps it true.
-
-  *Not started.*
-- **KR5.5** Working Notes are *classified*, not drained. Proposed by the internal-surfaces mapper. Every WN item carries a kind and a status, so that the open frontier, the correctness backlog and the owed research become visible. Today they hold all of those in prose, plus influx index, pedagogy reservoir, regression memory and process history, without status or owner. Each kind has a different destination. This replaces the stuck "WN drain" question (decision brief A4). *Seed:* `internal-surfaces/wn-ledger-seed/`. *Not started.*
-- **KR5.4** This file stays the true actuator. Every running piece of work maps to a KR here, and stale KRs are revised promptly. *Owner: lead coordinator.*
-
-## Who is on what right now
-
-*Joseph: "every subagent, subsubsubsubagent, and successor after a context compaction should know exactly what item they are focused on in that objectives tree." The lead keeps this table current. Agents launched by the agents below inherit their launcher's KR unless their brief names a narrower one, and should state it at the top of whatever they write.*
-
-| Who | Launched | KR | Writes to |
-|---|---|---|---|
-| Lead coordinator (Claude Opus 5.5, session "asf-cleanup") | 2026-10-30 | KR5.4 (this file as actuator), plus coordination of all KRs | `LOG.md`, `INTENT.md`, `system/` |
-| Owner review (Fable) and its subagents | 2026-10-30 ~11:30 MDT | KR1.1 | `owner-review/` |
-| Influx scout (Opus) and its subagents | 2026-10-30 ~11:30 MDT | KR3.1 | `influx-scout/` |
-| Internal-surfaces mapper (Opus) | 2026-10-30 ~11:30 MDT; **finished ~12:30** (on the line for follow-ups) | KR3.2 (delivered) | `internal-surfaces/` |
-| F72 verifier (Opus) | 2026-10-30 ~12:45 MDT | KR2.3 (and KR3.3a) | `spikes/spike-strategic-persistence-hard-ceiling-convention-2026-05-31-verify-1.md` |
-
-## How to use this file
-
-- **Briefing an agent:** name the KR it feeds and quote the top intent. Point it here, and ask it to pass its KR down to any agent it launches.
-- **After a context compaction:** read this file first and find your row. If your row is missing or stale, say so before continuing. The lead's successor then reads `HANDOFF.md` whole. Its read-ledger separates what was read first-hand from what was only relayed, so gaps get filled by reading, not by reconstruction.
-- **Doing work:** if what you're doing doesn't feed a KR, stop and say so. Maybe the KR is missing, and the finding belongs here. Maybe the work is drift.
-- **Finding something that changes an objective:** that is the most valuable kind of finding. Send it to the lead, and it lands here as a revision.
-- **Proposing your own KRs and sub-objectives.** This tree is set top-down *and* bottom-up. Joseph, 2026-10-30: *"like in OKR land among humans-- they are often top-down AND bottom-up decided-- a bit of give and take. I recommend giving agents the benefit of the doubt and letting them come up with their own KRs and possibly sub-objectives."* An agent that sees a better key result, or the sub-objectives its own work needs under the item it serves, proposes them. Write them at the top of its artifact or send them to the lead, and they get added here, credited to that agent. Where the lead thinks something is missing, it says so early and as a peer, in the form Joseph gave: *"oh, did you know about ___? I wonder if ___ would be a better approach? (but this isn't a prescription-- what have you already thought?)"*
-
-## Change notes
-
-- 2026-10-30, ~12:55 MDT: adopted the owner review's three proposals, credited in place:
-  - new KR5.6, the arc has an owner, with a trigger;
-  - the "standing cycle" residue class under KR5.2;
-  - the front-door surfaces named in KR2.1, with its verified instances.
-
-  Also from it: the NeurIPS Paper 2 note under KR4.3, and the 04-22 nineteen-minute appendix landings as a KR2.1 re-read. The lead verified one of its instances and fixed it: `agents.sop.md` cited a "Reading AAT" preamble deleted 05-17 in `feccd0d2`.
-
-- 2026-10-30, ~12:40 MDT: adopted all eight of the internal-surfaces map's proposals (its §0 list), each credited in place:
-  - KR3.2 reframed and marked delivered;
-  - KR3.3 split into 3.3a/b/c by what blocks it;
-  - new KR3.4 (the volumes' own completeness);
-  - new KR5.5 (classify Working Notes rather than drain them);
-  - a resolvability check under KR5.2;
-  - KR4.3 widened to the hand-written front surfaces;
-  - O1 input clusters listed under KR1.3;
-  - 290 corrected to 246 segments, re-verified by the lead.
-
-  I adopted them because each is grounded in a named section of its map, which I read whole.
-
-- 2026-10-30, ~12:20 MDT: adopted the owner review's proposed falsifier question into KR1.3. Added its verified note that KR2.4/KR2.5 are largely a landing sweep from existing May memos, to be confirmed when the lead reads the review whole.
-- 2026-10-30, ~12:05 MDT, lead coordinator: first version. O1 is written first because the purpose review (Joseph's request) decides what the others mean. Expect a substantial revision when the owner review lands.
+- **Briefing an agent:** name its KR and quote the top intent. Ask it to pass its KR down to any agent it launches.
+- **Writing an artifact:** put its KR at the top.
+- **After a compaction:** read this file, then `HANDOFF.md`.
+- **Revising the tree:** keep each KR to one line plus its status and where it lives, and log the revision in `LOG.md`.
