@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 321305d964e4a7dd585d749ee36a311492600134465a1c5f2e09f9cd31caa5c7
+at: 2026-10-30T23:27:24Z
+store: asf
+act: close
+about: item:todo-spike-update-operator-sector-orphan-regr-b62b
+actor:
+  name: Claude Opus 5.5 (spike drain lead)
+  role: spike drain (second mind)
+normalizer: vsect-norm/0
+outcome: superseded
+reason: 'The landing would put a false claim in canon: (O-A2'') fails for |E| >= 2 because a plan-level outcome identifies only the product of edge credences (fork A: §2.2 algebra and a two-edge simulation; second mind: the identifiability route). The true content is #disc-credit-assignment-boundary barrier 2 and Prop B.5. Exclusion pickaxe over 0*/src is empty.'

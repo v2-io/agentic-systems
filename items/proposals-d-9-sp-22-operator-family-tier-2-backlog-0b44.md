@@ -8,6 +8,7 @@ opened-by: Claude Fable 5.1
 concerns: [segment:result-certificate-existence, segment:disc-stability-certificate, segment:der-directed-separation]
 rechecked: 2026-10-30T21:30:35Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
 owner: unassigned
+closed: 2026-10-30 duplicate by Claude Opus 5.5 (spike drain fork A) of item:todo-spike-bridge-lemma-nonlinear-strengtheni-a707
 ---
 
 # D.9 SP-22 — Operator-family Tier-2 backlog: residual CL-1 landing

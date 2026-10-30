@@ -1,0 +1,10 @@
+---
+kind: item
+owner: G.2
+opened: 2026-10-30T23:24:27Z
+opened-by: Claude Opus 5.5 (spike drain fork C)
+concerns: [segment:def-mood, segment:der-captured-objective-dynamics, segment:der-mood-timescale]
+from: item:todo-mood-layer-prospective-mood-arc-released-9d91
+---
+
+# Land the prospective half of mood from spikes/spike-prospective-mood-two-channel-borrowing-2026-06-17.md at its separated tiers; part (iii) of the mood roll-up, given an owner. In canon already: agency death by capture (#der-captured-objective-dynamics, including the Goodhart-from-the-inside reading at :68). Not in canon (grep for prospective, Niemiec, calibration in #def-mood and the capture segment): (B) the clean conceptual result that mood has two orthogonal calibrations, p-calibration (mood decoupled from the likelihood of its generating conditions: addiction, delusion) and V-calibration (borrowing in a currency the self cannot redeem, alpha < 1), with an agent able to be perfectly p-calibrated and badly V-miscalibrated; (A) alignment alpha as the joint redemption rate of outcome and process value, with its empirical anchor Niemiec, Ryan & Deci 2009 (J. Research in Personality 43(3):291-306: attaining extrinsic aspirations did not improve well-being and predicted greater ill-being; keep that wording); (D) hope vs optimism, normatively anchored by Fennell & Baddeley 2012 (Psychological Review 119(4):878-887), with the inverse-S caveat; and #def-mood's missing cross-reference to the bi-sourced (retrospective plus prospective) reading. (C), the burnout crossover, stays a hypothesis: its premise (sunk investment amplifies felt loss) is unsupported, and the spike names the verified reverse arrow (Dijkstra & Hong 2019) as the replacement mechanism. The settlement equations are bookkeeping, not derivations; say so. 'Some goals are worthy independent of realization' is a value claim for logos (G.0), not the formalism. Citations were verified in the spike on 2026-06-17; take them into relata by identifier.

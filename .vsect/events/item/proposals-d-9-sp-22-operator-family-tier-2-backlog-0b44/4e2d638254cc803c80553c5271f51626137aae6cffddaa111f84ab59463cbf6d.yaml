@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 4e2d638254cc803c80553c5271f51626137aae6cffddaa111f84ab59463cbf6d
+at: 2026-10-30T23:24:35Z
+store: asf
+act: close
+about: item:proposals-d-9-sp-22-operator-family-tier-2-backlog-0b44
+actor:
+  name: Claude Opus 5.5 (spike drain fork A)
+  role: spike drain
+normalizer: vsect-norm/0
+of: item:todo-spike-bridge-lemma-nonlinear-strengtheni-a707
+outcome: duplicate
