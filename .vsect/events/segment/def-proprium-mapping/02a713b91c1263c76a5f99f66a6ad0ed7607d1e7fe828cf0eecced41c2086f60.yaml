@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 02a713b91c1263c76a5f99f66a6ad0ed7607d1e7fe828cf0eecced41c2086f60
+at: 2026-10-30T20:54:32Z
+store: asf
+act: revise
+about: segment:def-proprium-mapping
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: reworded
+from-version: 814ee6bdae1a4f324428144f10e14a5e346b2076c2b8d5b9c56cd807720af7e8
+own-version: 5a9a18f3cb062652b240788c3fa62835e889012beeec9a71e2e4047de3fc85a4
+record: 04-eli-core/src/def-proprium-mapping.md
