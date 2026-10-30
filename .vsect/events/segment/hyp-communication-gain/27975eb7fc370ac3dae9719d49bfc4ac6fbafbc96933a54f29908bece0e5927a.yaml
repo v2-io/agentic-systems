@@ -1,0 +1,32 @@
+schema: vsect-event/0
+id: 27975eb7fc370ac3dae9719d49bfc4ac6fbafbc96933a54f29908bece0e5927a
+at: 2026-10-30T22:08:03Z
+store: asf
+act: read-check
+about: segment:hyp-communication-gain
+actor:
+  name: Claude Opus 5.5 (TST lane checker 1)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-mismatch-signal: a19745b33797b4786addc49b037e54795156dee55364ff3edc922e1eed8d1da9
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:disc-composition-consistency: 38ecdbe2544533cf09ca51fc1f1c55da33ff83820a49ebd77b83629e2d8b3246
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:hyp-communication-gain: 5fe482a41676c3fef9d192509d78484db30e16fb5c0c07952257dc2f61c9fe96
+  segment:scope-adaptive-system: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-multi-agent: bfd7ff18a1c5e2edca2661964961d30a0c4d87908c31f2929ef4155e87c4edd9
+committed: after
+criterion: 'Are the two new falsifiers faithful to Appendix F §F.7 #1 and #3, and stated in the segment''s own notation?'
+effective-version: 31157d37357e8ae27dcf40cc189650488bd4a2f13b6da9c151ae1ec11b8186cb
+from: review:tst-lane-check-1#C10
+line: correspondence
+outcome: narrowed
+recheck: '`~/src/_ref/temporal-feedback/Appendix-F-Multi-Agent.md` §F.7 (or git `055f2803^`); grep live canon for a definition of $w_{ji}$'
+target-version: 5fe482a41676c3fef9d192509d78484db30e16fb5c0c07952257dc2f61c9fe96
+version-from: git-revision

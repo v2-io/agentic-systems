@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: 2f519d4013fea672efd8b71eeac07ff10280615c2ab39b2d0f40a259970cefe1
+at: 2026-10-30T22:08:02Z
+store: asf
+act: place-finding
+about: segment:result-specification-bound
+actor:
+  name: Claude Opus 5.5 (TST lane checker 1)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-feature: eefffd509dd084cb6773f2591ba53127c3063f51de688f5a5ccd0a081273e7c6
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:result-specification-bound: c69dd06811808a02e1703f1c3a596d3e4486ada869a9dd655f5c312b2154750e
+  segment:scope-adaptive-system: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-evolving-software: e63de68d439145af139a511f37dceecdca96d5b1baa820b72fece5b6514261a1
+finding: review:tst-lane-check-1#C8/finding
+target: segment:result-specification-bound
+text: 'check C8 came back broken: $t = (\text{LOC}/C)^{3/4}E^{-1/4} \to 0$ as $E \to \infty$; the equation sets no floor. The error is T-02''s, carried into the replacement, and the Hypothesis sentence reads the nonexistent floor as the specification bound. Replacement in wr'
+version-from: git-revision

@@ -1,0 +1,33 @@
+schema: vsect-event/0
+id: ba5b3bd61ebecdd391879bf03008761990188c68e67c369e1c7c1ea5269eb646
+at: 2026-10-30T22:08:01Z
+store: asf
+act: run
+about: segment:emp-changeset-size-principle
+actor:
+  name: Claude Opus 5.5 (TST lane checker 1)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-atomic-changeset: 42e9bb3fb6ebff2299c1204253d1665f549db70d3bd0d3181b8a8b0ce760e0a0
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-comprehension-time: b0db6cfd95109646952ebfd76d90b551d3d512240a2ad5f91015b6cbbe1e0aec
+  segment:def-feature: eefffd509dd084cb6773f2591ba53127c3063f51de688f5a5ccd0a081273e7c6
+  segment:def-implementation-time: 978d42091a677b509a07934ff3a8cbf1717dd62d9d7d4f17cce6f2740baae427
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:emp-changeset-size-principle: 4aba74c1708459366da1e63b34d37c54223858df331efd981c8f2e5c6f4ed316
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:scope-adaptive-system: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-evolving-software: e63de68d439145af139a511f37dceecdca96d5b1baa820b72fece5b6514261a1
+committed: after
+criterion: Does the log-log slope of elapsed time on lines changed stay below 1 when the window changes, as the paragraph's conclusion (proportionality cannot hold for implementation and comprehension together) needs?
+effective-version: 4791bbd13577b4b0e598d67595ffedbed7e2d7b277eb8265f6f03bad033ca9c8
+from: review:tst-lane-check-1#C5
+line: measurement
+outcome: confirmed
+recheck: slope of $\log T$ on $\log(1+L)$ over all $d$ at caps 60, 480, 1440, 10080 and none, three direct-commit histories
+target-version: 4aba74c1708459366da1e63b34d37c54223858df331efd981c8f2e5c6f4ed316
+version-from: git-revision

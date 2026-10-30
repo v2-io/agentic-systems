@@ -1,0 +1,82 @@
+schema: vsect-event/0
+id: 3b61ff52ccf0dd2ef1c2d0012e99e99242b832a78a97d6d42a92a28c33656525
+at: 2026-10-30T22:08:04Z
+store: asf
+act: read-check
+about: segment:der-team-persistence
+actor:
+  name: Claude Opus 5.5 (TST lane checker 1)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-causal-information-yield: aafeacbbb79b6c8fa83a38fc5b85f2b38b0aad97f0ccfe80798d0a554c5e5c35
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-mismatch-signal: a19745b33797b4786addc49b037e54795156dee55364ff3edc922e1eed8d1da9
+  segment:def-model-class-fitness: 80a2eb3fbf06b7ebb3ebdc642c79dc6883eb350ebafb68555ee3ea9c2505a25f
+  segment:def-model-sufficiency: cb0156177d2d2d215898316d7c7e1e6829188ccffc08bb3f458b93e9f5cd207f
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:def-pearl-causal-hierarchy: ff8c8d1fc2179029d43c7a3f25b9e102b6fba2f2c3313c486306adb86f5daf36
+  segment:def-strategic-calibration: 6f7e397ba2318cad37a98db35b7f50686e13f5fed5cce3699f0a39ae76c799d4
+  segment:def-strategic-tempo: 689b621ba208abada10f13de5447023b7a8717dca75eceadc9de21d38e283fd7
+  segment:def-strategy-dag: faa4591fc0981a633a2507adf7da222ea144c18a439da895b155bcadf79c9170
+  segment:def-strategy-dimension: 531f25a2cae087ff7056e9e76bac57c8ee5771d71409a643614151339171e38f
+  segment:def-value-object: 7e879b9ccd116d76b7410a1d77744da2b20ce1d031531273ee294f423541904c
+  segment:der-action-selection: ff726f8527dab6ee837cc11b7164313850f125e944c76ea86dca14183c613408
+  segment:der-causal-hierarchy-requirement: 65f0a739e197295a8a3f6621bcdbc22a2e07c4f96c9a87c7a3efdfb2af60ad86
+  segment:der-chain-confidence-decay: 369ae67b420173870677632e9efb50963106657b4479b094ac26397623908e48
+  segment:der-directed-separation: 0d9c47858e17c9e43efdc9638604dd5db9dabc73f9c4811c30b75026e27e4f5e
+  segment:der-gain-sector-bridge: ed274e6dec3ff688579f45f7b355827f1e845cd20ccced1e6188b97199adf635
+  segment:der-loop-interventional-access: 70e914317fa2ac7007df404f6ab4840443f90dc651815371a1b42dba53ba1bcd
+  segment:der-observability-dominance: 4a6864390dee86241a64b5e047140ca1fc6393ff2b2e81ad2582cfdf15da8893
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:der-team-persistence: 02f122bd44f9b358c2e371b51fa152ebd120a3e1cf2f01c4b670b8fbfcff1f41
+  segment:deriv-adaptive-gain-dynamics: 4645e546481f1dcef35a011632f5127f872b7a616e96f063fa352eff02157070
+  segment:deriv-edge-credence-dynamics: 5dc36faa6c48f53ad11b14c28b08415bb33812920f2f16da9e4c665abcb7b0a9
+  segment:deriv-edge-update-natural-parameter: 1347ced6b4f8032b9dcd3b8a927a9020e51c765cb15987ac0a38a9d4570d0c61
+  segment:deriv-fisher-local-update-gain: 6b2097fdd6f696393d5aa04c19fe1af3a27943409d33eb97b53e3e3bc5810be1
+  segment:deriv-fisher-whitened-update-rule: c22c45ee56eeb5950b3e8791cb8b77daba845cd7bb423831863fcc5237909b1c
+  segment:deriv-gain-sector: e9afd4473502797c53d06ddb8a340a3adc8ddcae7dcd0ef3e5c86a7a64118d39
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:deriv-sector-condition: be5b8f4d0cf6f932e9fd5a455e6a4a2413bf581b38680908606b2934ae50ea3b
+  segment:deriv-strategy-cost-regret-bound: e4a8235550228cd9cd5930bc053f501c6ef2b89db1a50f5f20146b3124c3bc2d
+  segment:deriv-tempo-additivity: c3622f84efe0fd516cca4c3e04b603ab2092bb945986a4419dac5b5b0427d64b
+  segment:disc-additive-coordinate-forcing: d53d07c5d38eb12cc9dcda36140778c2e4566dc1a1a9ad4ab777e4eacae3ea1d
+  segment:disc-composition-consistency: 38ecdbe2544533cf09ca51fc1f1c55da33ff83820a49ebd77b83629e2d8b3246
+  segment:disc-credit-assignment-boundary: 0775756c93e97be9bb66d08c396a84625a7667c8da526f74e5faaac4ce09a161
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: d3898fba83b370fda5d32ace003b55ee464beed58852444a5b96d7a056054111
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 11e85702fb076cba51bab0990d192e1990325ceccd2ae7a29e76c400e2fb3947
+  segment:form-objective-functional: ffca37cd0d47df20e2745eb4e321b982a0e347ecced55f0211bdac901a21b473
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:form-strategy-complexity-cost: 6a614bc55ed494ed08e12776ac83d97f9e7b2718d167a3c8e703cbb4bcc250f5
+  segment:form-structural-change-as-parametric-limit: 36cd3cbd177605e0a239047be8f990995e6becf5315a0e2056eb66ee7d8eaf66
+  segment:hyp-communication-gain: 5fe482a41676c3fef9d192509d78484db30e16fb5c0c07952257dc2f61c9fe96
+  segment:hyp-edge-update-via-gain: f994de59c6cf6284dab008e0dfea34b8c1bd54df17b87faf3f802a2f4156be31
+  segment:norm-explicit-strategy-condition: 4e180af92c839658651ff13758200adc18f286b5948a92160ca488839f61d930
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-mismatch-decomposition: 93539ca670037197795f1ae7a5b2d4ef0d8003f0ac51a5c79c3f3886c569380a
+  segment:result-persistence-condition: 9a9b8dd449b6bf1a9d19a7ce9a032f7dc9d8d2437261302592a41fe45bea63c6
+  segment:result-sector-condition-stability: 0cd95f849c0ee6f953ac1fbb5c590a47fe5581f9ad73ee7c5d1917f2df310b7e
+  segment:result-sector-persistence-template: d923df79756f5967915bd49a180d1907e7b8b93ac88d9bab5831ad8a46539ab9
+  segment:result-structural-adaptation-necessity: 7c7c9be73dd830411b5791b025db2e211b07520daab48dd58cca0ab30cf18c2a
+  segment:schema-strategy-persistence: d7bd5a9638ef3dceef35fd108ded0321e58cc01881cbe3fc58718f0ed1acadf9
+  segment:scope-adaptive-system: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-agent-identity: 4c97c39f93a367ecb14cd1e9925ccce80e59fcab7a5fd3a24f589f546b2d4227
+  segment:scope-and-or: 7b529e04b43cb9069c611d88dc65216efe6aaa99d269df0c61a88bba6d7e9cac
+  segment:scope-edge-update-causal-validity: 2b2c9ccdae576c9a7b483b7b05bdfd867b1007db020ea24ab52cd087e05c8d58
+  segment:scope-multi-agent: bfd7ff18a1c5e2edca2661964961d30a0c4d87908c31f2929ef4155e87c4edd9
+committed: after
+criterion: 'Is the cooperative-decomposition falsifier faithful to §F.7 #2 and a sharp test of this segment''s decomposition, and is the disagreement diagnostic faithful to §F.4?'
+effective-version: 9b6da8e4186e1501cb9e7e5d9ce2899ee7bd5f1d48fce69ff42d31c843434681
+from: review:tst-lane-check-1#C11
+line: discussion
+outcome: narrowed
+recheck: the segment's "Separation from communication tempo" paragraph and team persistence condition; Appendix F §F.4, §F.7
+target-version: 02f122bd44f9b358c2e371b51fa152ebd120a3e1cf2f01c4b670b8fbfcff1f41
+version-from: git-revision

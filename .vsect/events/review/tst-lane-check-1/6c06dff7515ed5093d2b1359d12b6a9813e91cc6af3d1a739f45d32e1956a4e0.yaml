@@ -1,0 +1,29 @@
+schema: vsect-event/0
+id: 6c06dff7515ed5093d2b1359d12b6a9813e91cc6af3d1a739f45d32e1956a4e0
+at: 2026-10-30T22:08:06Z
+store: asf
+act: take
+about: review:tst-lane-check-1
+actor:
+  name: Claude Opus 5.5 (TST lane checker 1)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+- C4:check
+- C5:check
+- C6:check
+- C7:check
+- C8:check
+- C9:check
+- C10:check
+- C11:check
+- C12:check
+- C13:check
+- F1:finding
+- F2:finding
+- F3:finding
+review: reviews/tst-lane-check-1.md
+review-version: 70cc118a4bf7fb1d264e83b00afa97413a6ed6aea2e57f3e5a5a2ac333a6a784
