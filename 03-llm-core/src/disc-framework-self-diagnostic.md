@@ -32,7 +32,7 @@ For logogenic agents specifically: the framework is itself a logogenic artifact 
 
 **Discussion-grade.** The recursive structural claim is intuited from the scope condition's universality — any system satisfying #scope-adaptive-system is in AAT's domain — but the *load-bearing usefulness* of the recursion is empirically argued through the three documented cases. Higher-tier promotion would require either (a) a formal theorem stating that any framework satisfying certain self-applicability conditions necessarily acts as its own diagnostic, or (b) a substantial empirical study of the recursion's predictive accuracy across more cases.
 
-**Max attainable status:** robust qualitative or formal observation. The recursion claim itself can be made exact (under #scope-adaptive-system, the framework applies to its users by construction); the *practical claim* that this self-application is *useful* is empirical.
+**Max attainable status:** robust qualitative or formal observation. The recursion claim itself can be made exact relative to a declared world: a user of the framework whose declared world can still show it something it does not yet know is in #scope-adaptive-system, as any such system is, and that membership is a property of the declaration, not of the user's construction; the *practical claim* that this self-application is *useful* is empirical.
 
 **What this discussion is for.** Naming explicitly that the framework's recursive feature is a structural fact rather than a clever construction, so that future agents working on framework-using cycles know to expect the framework to apply to themselves. The recursion is a diagnostic affordance that should be reached for, not a trick of phrasing.
 
@@ -77,6 +77,6 @@ This reflection itself is one more instance — an Opus instance reflecting on O
 - Does the recursion eventually produce a *fixed point* (a stable self-description), or does it perpetually refine? If the latter, what's the pattern of refinement?
 - The recursion has implications for how we should write framework documentation — vocabulary that is meant to be available to users as recognition-tools should be marked accordingly. Is there a documentation convention worth proposing?
 
-**Promotion-blocking:** dependency on #scope-adaptive-system (claims-verified in 01-aat-core); #scope-channel-collapse (just landed); #der-orient-cascade (draft). Available.
+**Promotion-blocking:** dependency on #scope-adaptive-system (`draft` in 01-aat-core); #scope-channel-collapse (just landed); #der-orient-cascade (draft). Available.
 
 **Gate 1 fix (2026-06-30):** `#scope-adaptive-system` was used load-bearingly in Formal Expression (and already named in this Working Note) but missing from frontmatter `depends:`. Added.

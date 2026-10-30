@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: d9c9b11149ca97824a3d14ae32ba4f90e150566bf7033bf40e17c4f19ff4ac53
+at: 2026-10-30T20:49:21Z
+store: asf
+act: revise
+about: segment:deriv-recursive-update
+actor:
+  name: Claude Opus 5.5 (A.1 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: d0f1a351e6604c21d76a76098c0aa890e5df028464e01b50a633d4e41243533f
+own-version: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+record: 01-aat-core/src/deriv-recursive-update.md

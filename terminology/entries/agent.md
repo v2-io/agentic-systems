@@ -19,7 +19,7 @@ The broad technical term for the thing on the agent side of the [agent-environme
 
 The framework's **scope cascade** names specific inhabitants of this umbrella, each a narrowing of the coupling that adds one structural condition:
 
-- [Adaptive System](adaptive-system.md) — perception channel + residual uncertainty ([`#scope-adaptive-system`](../../01-aat-core/src/scope-adaptive-system.md))
+- [Adaptive System](adaptive-system.md) — a perception channel through which the world can still show something not yet known ([`#scope-adaptive-system`](../../01-aat-core/src/scope-adaptive-system.md))
 - [Agentic System](agentic-system.md) — adds causal-contrast action ([`#scope-agency`](../../01-aat-core/src/scope-agency.md))
 - [Actuated Agent](actuated-agent.md) — adds an explicit purposeful substate at the lift to $X_t = (M_t, G_t)$ ([`#form-complete-agent-state`](../../01-aat-core/src/form-complete-agent-state.md))
 - [Self-Actuated Agent](self-actuated-agent.md) — revises its own objective

@@ -24,7 +24,7 @@ The honest epistemic accounting at the end is load-bearing. **C1** (physical pos
 
 ## Setup
 
-We work within AAT's scope ( #scope-adaptive-system): an agent coupled to an environment $\Omega$ through observation and action channels, with residual uncertainty.
+We work within AAT's scope ( #scope-adaptive-system): an agent coupled to an environment $\Omega$ through observation and action channels, whose world can still show it something it does not yet know.
 
 **Universe of information at event time $\tau$.** The following information exists (in the broadest ontological sense) at the moment event $e_\tau$ occurs:
 

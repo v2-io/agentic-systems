@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: db7b033c905725c1bfa3c89dab181eb307d81ffdeaee726848b3accce04beab9
+at: 2026-10-30T20:49:20Z
+store: asf
+act: revise
+about: segment:def-agent-environment
+actor:
+  name: Claude Opus 5.5 (A.1 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 62dea40056d00b6cc7a6f311ad831e0bf584f50a03a297f89fc934efdb24e885
+own-version: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+record: 01-aat-core/src/def-agent-environment.md

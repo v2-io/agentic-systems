@@ -16,7 +16,7 @@ aliases: []
 do_not_confuse: [adaptive-system]
 ---
 
-AAT narrows from the adaptive scope ($\mathcal S_\text{adaptive}$: any system that observes under residual uncertainty) to the **agency scope** by adding two conditions:
+AAT narrows from the adaptive scope ($\mathcal S_\text{adaptive}$: any system whose world can still show it something it does not yet know) to the **agency scope** by adding two conditions:
 
 $$\mathcal{S}_\text{agency} = \mathcal{S}_\text{adaptive} \cap \left\{ \vert\mathcal{A}\vert \geq 2, \;\; \exists\, a \neq a' \text{ s.t. } P(o \mid do(a)) \neq P(o \mid do(a')) \right\}$$
 
