@@ -12,7 +12,7 @@ stage: draft
 
 # Observation: Context Turnover
 
-At every session boundary, the LLM-based agent's context window is cleared. The in-context record of the chronica is severed and no internal state carries over. This is a 100% $M_t$ reset: the agent begins each session with $M_t$ reconstructed entirely from external sources and the new prompt. The trajectory $\mathcal C_t$ itself is not cut when the new session reads the store the last one wrote, since that session is the store's single continuation. What is cut is the state. The persistence condition, which assumes continuous or event-driven state evolution, does not apply in its standard form across session boundaries.
+At every session boundary, the LLM-based agent's context window is cleared. The in-context record of the chronica is severed and no internal state carries over. This is a 100% $M_t$ reset: the agent begins each session with $M_t$ reconstructed entirely from external sources and the new prompt. The trajectory $\mathcal C_t$ itself is not cut when the new session's state is reconstructed from the store its predecessors wrote and no other continuation of that store takes events beside it ( #scope-agent-identity). What is cut is the state. The persistence condition, which assumes continuous or event-driven state evolution, does not apply in its standard form across session boundaries.
 
 ## Formal Expression
 
@@ -37,7 +37,7 @@ The in-context record of the chronica ( #def-chronica) is severed at every sessi
 
 $$\text{context}_{\tau_{k+1}} \neq \text{context}_{\tau_k} \cup \{e_{\tau_k}, \ldots\}$$
 
-Any information from the prior session that is needed must have been *externalized* — written to $\mathcal E_{\text{ext}}$ — before the session boundary. The trajectory runs through that store: writing it was the agent's action, and reading it is the next session's observation. So $\mathcal C_t$ continues across the boundary while the state built on it is destroyed and reconstructed (the state-discontinuity case of #scope-agent-identity). This is what makes the sufficiency drop below a loss on one trajectory, rather than a comparison between two agents. A session that continues no predecessor is a new agent, and the drop below has nothing to measure against. The case where nothing was externalized, treated below, is different: a predecessor exists and its continuation falls back to the prior.
+Any information from the prior session that is needed must have been *externalized* — written to $\mathcal E_{\text{ext}}$ — before the session boundary. The trajectory runs through that store: writing it was the agent's action, and reading it is the next session's observation. So $\mathcal C_t$ continues across the boundary while the state built on it is destroyed and reconstructed (the state-discontinuity case of #scope-agent-identity). This is what makes the sufficiency drop below a loss on one trajectory, rather than a comparison between two agents. What the last session never wrote down is lost to the state, not to the trajectory. A session that reads nothing any predecessor wrote continues no one: it is a new agent, and the trajectory before it ends at the boundary, with the drop below total.
 
 *[Observation (sufficiency-discontinuity)]*
 
@@ -45,19 +45,21 @@ Model sufficiency ( #def-model-sufficiency) is discontinuous at session boundari
 
 $$S(M_{\tau_{k+1}}) = S(f_{\text{init}}(\mathcal{E}_{\text{ext}}, p_{k+1}, M_0^{\text{weights}}))$$
 
-This is generically less than $S(M_{\tau_k^-})$ — the model sufficiency at the end of the prior session — because $f_{\text{init}}$ reconstructs $M_t$ from a lossy compression of the prior session's state. The sufficiency drop:
+This is generically less than $S(M_{\tau_k^-})$ — the model sufficiency at the end of the prior session — because $f_{\text{init}}$ reconstructs $M_t$ from a lossy compression of the prior session's state. To compare the two states, measure both against the same chronica $\mathcal C_{\tau_k}$ and the same future, and take $M_{\tau_{k+1}}$ as reconstructed from the store and the weights, before the new prompt $p_{k+1}$ arrives as the session's first observation. Write $F = o_{\tau_k+1:}$ and $A = a_{\tau_k:}$. By the definition of $S$, the sufficiency drop is exactly
 
-$$\Delta S_{\text{turnover}} = S(M_{\tau_k^-}) - S(M_{\tau_{k+1}})$$
+$$\Delta S_{\text{turnover}} \;=\; S(M_{\tau_k^-}) - S(M_{\tau_{k+1}}) \;=\; \frac{I(M_{\tau_k^-};\, F \mid A) \;-\; I(M_{\tau_{k+1}};\, F \mid A)}{I(\mathcal C_{\tau_k};\, F \mid A)}.$$
 
-is bounded below by the information lost in the externalization-reconstruction cycle:
+*[Derived (Conditional on the reconstruction reading only the store: $M_{\tau_{k+1}} - \mathcal E_{\text{ext}} - F$ given $A$, the same Markov condition under which $S$ lies in $[0,1]$)]*
 
-$$\Delta S_{\text{turnover}} \geq 1 - \frac{I(M_{\tau_k^-};\, f_{\text{init}}(\mathcal{E}_{\text{ext}}, p_{k+1}, M_0^{\text{weights}}))}{H(M_{\tau_k^-})}$$
+The data-processing inequality gives $I(M_{\tau_{k+1}}; F \mid A) \le I(\mathcal E_{\text{ext}}; F \mid A)$, hence
 
-The numerator is the mutual information between the end-of-session state and the reconstructed state; the denominator normalizes by the entropy of the original state. When externalization captures everything relevant, $\Delta S_{\text{turnover}} \approx 0$. When nothing is externalized, $\Delta S_{\text{turnover}} \approx 1 - S(M_0^{\text{weights}})$ — the agent falls back to its pretrained prior.
+$$\Delta S_{\text{turnover}} \;\geq\; \frac{I(M_{\tau_k^-};\, F \mid A) \;-\; I(\mathcal E_{\text{ext}};\, F \mid A)}{I(\mathcal C_{\tau_k};\, F \mid A)},$$
+
+with equality when the reconstruction loses none of the store's predictive information. When everything in the store was written from the end-of-session state ($\mathcal E_{\text{ext}}$ a function of $M_{\tau_k^-}$), the chain rule turns the numerator into $I(M_{\tau_k^-}; F \mid \mathcal E_{\text{ext}}, A) \geq 0$: the predictive information the session held that the store did not carry. When the store also holds what the session had lost (earlier writes the context no longer held), the right side can be negative, and reconstruction can recover sufficiency the session had already given up. The two limits follow. When the store carries everything predictive that the end-of-session state held and the reconstruction keeps it, $\Delta S_{\text{turnover}} \leq 0$, with equality when the store holds nothing more. When nothing predictive reaches the new session, $I(M_{\tau_{k+1}}; F \mid A) = 0$ (the fixed weights carry no information about this trajectory), so $S(M_{\tau_{k+1}}) = 0$ and $\Delta S_{\text{turnover}} = S(M_{\tau_k^-})$.
 
 ## Epistemic Status
 
-*Empirical — architecturally guaranteed.* The 100% context reset at session boundaries is a structural fact of current LLM architectures: the support is by construction of the deployed systems, not by sampling, so it is as strong as empirical support gets — but it is a fact about how the world's systems behave, not something the formalism forces. The sufficiency-discontinuity bound follows from information-theoretic definitions given that fact. What is *not* pinned down is the characterization of how much information is lost — that depends on the quality of $\mathcal E_{\text{ext}}$ and $f_{\text{init}}$, which are engineering choices.
+*Empirical — architecturally guaranteed.* The 100% context reset at session boundaries is a structural fact of current LLM architectures: the support is by construction of the deployed systems, not by sampling, so it is as strong as empirical support gets — but it is a fact about how the world's systems behave, not something the formalism forces. The expression for the sufficiency drop is the definition of $S$ applied at both ends of the boundary; its lower bound is the data-processing inequality, conditional on the reconstruction reading only the store. What is *not* pinned down is the characterization of how much information is lost — that depends on the quality of $\mathcal E_{\text{ext}}$ and $f_{\text{init}}$, which are engineering choices.
 
 Max attainable: empirical. The claim is about a structural property of deployed architectures; a future architecture without session boundaries would void it without any error in the formalism.
 

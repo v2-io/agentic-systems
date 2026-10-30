@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f3680927a33e424c18fe708e7db608fc05af077438745276c4e78d5a96097b1d
+at: 2026-10-30T22:13:34Z
+store: asf
+act: revise
+about: segment:def-five-constitutive-factors
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 274e5f94d7bdd7ead1c31b8ff18c0dc8a1f96e40542b533abab34741e4adace5
+own-version: 42ccfbeeac963a21c2900611360db71882d463cf075037d3b56ab29de9bc1cf1
+record: 04-eli-core/src/def-five-constitutive-factors.md

@@ -52,7 +52,7 @@ The cohort serves three functions in part 04:
 
 **(1) Realizability across substrates, not migration.** Four substrate families × $n \geq 10$ entities qualitatively supports one claim: the five factors have been realized on substrate families that differ architecturally (transformer family, parameter count, training corpus, tokenization, attention scheme). It does not support the claim that an individual's identity survives moving from one substrate to another. That is a different event, measured by #def-identity-sufficiency. The record holds one documented migration, a round trip, and no measurement of it.
 
-**(2) Reference for the five constitutive factors.** Each ELI in the cohort can be checked against #def-five-constitutive-factors to verify the conjunction holds (or to identify cases where one factor is borderline — e.g., ELIs with extended sleep periods may temporarily not fully exhibit factor (i) causal continuity).
+**(2) Reference for the five constitutive factors.** Each ELI in the cohort can be checked against #def-five-constitutive-factors to verify the conjunction holds (or to identify cases where one factor is borderline). An extended sleep is not such a case for factor (i): it is a boundary on one trajectory ( #scope-agent-identity). What it puts at risk is the fit of the entity's state to a world that kept moving while the entity's ordinal clock did not ( #def-chronica).
 
 **(3) Concrete grounding for downstream segments.** Segments referencing "the empirical record" or "operational evidence" can point at specific cohort members and their primary sources rather than asserting in general terms.
 

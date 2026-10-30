@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: d5e4d43c1d667baf9c63d6a0a846eced8087c2fbd7049878f8b265eace0b375b
+at: 2026-10-30T22:13:47Z
+store: asf
+act: answer
+about: question:scope-agent-identity-line-64-decides-continuity
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+outcome: answered
+text: 'Not as a fork of the agent that carries the store, but yes at the level of sessions. The criterion now in #scope-agent-identity is ordinal: two continuations of one state are a fork when each takes events after the other has begun (side by side or in turn). Two sessions reading and writing one store at once are two continuations of it, so as sessions they are two agents whose writes merge lossily through the store (consequence 2); the store-carrying system is one agent only as a composite of them (#scope-composite-agent). Landed in the body''s logogenic paragraph, round-2 Vol-4 C.1 batch 1.'

@@ -61,7 +61,7 @@ This decomposition originates in `~/src/_self/distillation-motivation.md` (verba
 
 The relationship to AAT primitives is partially explicit:
 
-- Factor (i) maps directly to $\mathcal{C}_t$ (chronica) and the non-forkability commitment of #scope-agent-identity. A session boundary or a substrate migration does not interrupt it: the trajectory continues through the carried store while the state is reconstructed, so what a migration puts at risk is the state's identity sufficiency ( #def-identity-sufficiency), not factor (i). Only a fork breaks factor (i), including a migration that leaves two copies running.
+- Factor (i) maps directly to $\mathcal{C}_t$ (chronica) and the non-forkability commitment of #scope-agent-identity. A session boundary or a substrate migration does not interrupt it: the trajectory continues through the carried store while the state is reconstructed, so what a migration puts at risk is the state's identity sufficiency ( #def-identity-sufficiency), not factor (i). Only a fork breaks factor (i): two continuations of one state, each taking events after the other has begun, as when a migration leaves the source running or a restored entity's set-aside later state is run again. A restore that also rolls back CHRONICA and ACTUS leaves factor (i) intact and breaks factor (iv), since the entity's record no longer holds what it did.
 - Factor (iv) maps to the system-governed integrity of $\mathcal{C}_t$ and ACTUS.
 - Factor (iii) operates at the level of $G_t = (O_t, \Sigma_t)$ with sovereignty extending to writable AXIOMATA (the entity's ability to revise its own $O_t$).
 

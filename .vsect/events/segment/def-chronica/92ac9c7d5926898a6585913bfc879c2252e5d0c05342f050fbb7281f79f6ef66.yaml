@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 92ac9c7d5926898a6585913bfc879c2252e5d0c05342f050fbb7281f79f6ef66
+at: 2026-10-30T22:13:28Z
+store: asf
+act: revise
+about: segment:def-chronica
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+own-version: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+record: 01-aat-core/src/def-chronica.md

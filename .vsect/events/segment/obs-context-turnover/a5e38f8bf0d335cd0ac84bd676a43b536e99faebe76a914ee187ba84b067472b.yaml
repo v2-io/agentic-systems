@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: a5e38f8bf0d335cd0ac84bd676a43b536e99faebe76a914ee187ba84b067472b
+at: 2026-10-30T22:13:28Z
+store: asf
+act: revise
+about: segment:obs-context-turnover
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: d0bc203008ef9a717ef88989f3fa6f6f2272aa3ae579afdb2db45d1e9fce4ab6
+own-version: 0e46c26215c45ed9cd26441e8c700528161c93e7c86ff99b739e4e50022b8548
+record: 03-llm-core/src/obs-context-turnover.md
