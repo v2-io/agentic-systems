@@ -44,7 +44,7 @@ Joseph's named pain: *"I don't even know what this theory is *trying* to illumin
 
 - **KR2.1** The statement layer says exactly what the algebra supports. Scope, quantifiers, standpoint and tier must match the warrant, chapter by chapter. Each chapter is checked by an independent reader, not by whoever made the repair. *Evidence that this is where truth leaks: audit 731548 found "statement-layer defects sitting on correct algebra." Not started.*
 - **KR2.2** No canon statement contradicts another, checked across segments, not only within them. *Not started.*
-- **KR2.3** Claims found overclaimed are strengthened before they are softened. Every refuted claim is replaced, not kept as a softened ghost. *Feeding it: F72, the independent re-derivation of `#deriv-strategic-persistence-hard-ceiling`. Queued; refused once by the subagent concurrency limit.*
+- **KR2.3** Claims found overclaimed are strengthened before they are softened. Every refuted claim is replaced, not kept as a softened ghost. *Feeding it: F72, the independent re-derivation of `#deriv-strategic-persistence-hard-ceiling`. Launched ~12:45 MDT after being refused once by the subagent concurrency limit.*
 - **KR2.4** External research the theory needs is integrated where it belongs, adopted with citation under its original names. *Known inputs:*
   - `ref/prior-art-analysis/agentic-systems-landscape-2026-08-22.md`, whose segment-level recommendations are verified unintegrated (LOG, 2026-10-30);
   - `ref/enrichment-candidates-2026-05-21.md`;
@@ -108,7 +108,7 @@ This is the "meta" in Joseph's goal. It earns its place only where it changes wh
 | Owner review (Fable) and its subagents | 2026-10-30 ~11:30 MDT | KR1.1 | `owner-review/` |
 | Influx scout (Opus) and its subagents | 2026-10-30 ~11:30 MDT | KR3.1 | `influx-scout/` |
 | Internal-surfaces mapper (Opus) | 2026-10-30 ~11:30 MDT; **finished ~12:30** (on the line for follow-ups) | KR3.2 (delivered) | `internal-surfaces/` |
-| F72 verifier | queued | KR2.3 | `spikes/spike-strategic-persistence-hard-ceiling-convention-2026-05-31-verify-1.md` |
+| F72 verifier (Opus) | 2026-10-30 ~12:45 MDT | KR2.3 (and KR3.3a) | `spikes/spike-strategic-persistence-hard-ceiling-convention-2026-05-31-verify-1.md` |
 
 ## How to use this file
 
