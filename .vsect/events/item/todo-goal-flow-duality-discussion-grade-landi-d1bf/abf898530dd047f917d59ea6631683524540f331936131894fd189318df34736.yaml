@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: abf898530dd047f917d59ea6631683524540f331936131894fd189318df34736
+at: 2026-10-30T21:24:55Z
+store: asf
+act: recheck
+about: item:todo-goal-flow-duality-discussion-grade-landi-d1bf
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c7aeed1d+dirty
+criterion: 'TODO.md:40 (352a8bb9, 2026-05-31). Not landed: no (BS) scope condition anywhere in 0*/src, and disc-w1-structural-bound-boundary:65 still ends ''Whether they are the same phenomenon viewed from two sides is left open'', which is exactly the open item Move B would close. spikes/spike-goal-flow-duality-2026-05-31.md is still live at top level; der-logogenic-as-wrapping:124 points to it as ''discussion-grade landing available, deferred''. The spike''s refutation of the conservation-law form is the guard any landing carries.'
+outcome: holds
+owner: G.2

@@ -3,10 +3,11 @@ kind: item
 provenance: imported
 source: TODO.md:40
 section: TODO — Miscellaneous & details › Strengthen-first candidates from the 2026-05-30/31 gold-lift sweep
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:disc-w1-structural-bound-boundary]
+rechecked: 2026-10-30T21:24:55Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: G.2
 ---
 
 # Goal-flow duality — discussion-grade landing available (from the W₁-vacuity §7 conjecture) — SPIKED (`spikes/spike-goal-flow-duality-2026-05-31.md`), verdict: a

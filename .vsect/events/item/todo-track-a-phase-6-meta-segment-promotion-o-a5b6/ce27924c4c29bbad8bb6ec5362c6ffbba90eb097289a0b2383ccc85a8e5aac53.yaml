@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ce27924c4c29bbad8bb6ec5362c6ffbba90eb097289a0b2383ccc85a8e5aac53
+at: 2026-10-30T21:24:56Z
+store: asf
+act: recheck
+about: item:todo-track-a-phase-6-meta-segment-promotion-o-a5b6
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c7aeed1d+dirty
+criterion: 'TODO.md:58 (24f06a6b, 2026-05-25). Not dispatched: disc-dynamic-regime-axis is still a discussion-grade segment in Appendix A (01-aat-core/OUTLINE.md:370), not placed among the Meta-Architecture chapters with M1-M4. Whether the regime axis is a fifth meta-pattern or a facet of M2 is a theory-structure call no KR currently owns; B.3''s anchors test is the nearest.'
+outcome: holds
+owner: unassigned

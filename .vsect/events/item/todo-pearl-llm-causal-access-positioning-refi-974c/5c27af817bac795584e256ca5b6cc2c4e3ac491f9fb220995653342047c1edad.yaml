@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 5c27af817bac795584e256ca5b6cc2c4e3ac491f9fb220995653342047c1edad
+at: 2026-10-30T21:24:56Z
+store: asf
+act: recheck
+about: item:todo-pearl-llm-causal-access-positioning-refi-974c
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c7aeed1d+dirty
+criterion: 'TODO.md:179 (df0101c6, 2026-05-15). Not promoted; msc/llm-causal-access-note.md is unchanged in substance. Its central claim is now contradicted by canon: Response 1 says an agent in a loop has Level-2 access ''by construction'' and calls this ''solid'', ''not a workaround or approximation'' (note :7, :21, :31-33), while der-loop-interventional-access:41 (as revised by B.1 today) says on-policy loop data converges to the conditional whenever (C2) fails and that a policy deterministic in its decision state fails (C1). The C2 spike (spikes/spike-loop-identification-decision-state-2026-10-30/) is deciding exactly this. Response 2 rests on the language-as-causal-substrate Theorem-1 the pilot held as G.2; Response 3 is argued, G.0 territory.'
+outcome: holds
+owner: G.2
+restated: Before the Pearl/LLM note goes anywhere, Response 1 must be restated to what der-loop-interventional-access and the C2 spike establish (Level-2 access from the loop holds under (C1)-(C2), not by construction); Responses 2 and 3 have different homes (G.2 Theorem-1; G.0 for the argued symmetry point).

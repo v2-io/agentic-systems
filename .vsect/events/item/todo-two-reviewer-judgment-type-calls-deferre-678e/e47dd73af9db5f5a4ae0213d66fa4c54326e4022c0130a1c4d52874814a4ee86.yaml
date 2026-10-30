@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: e47dd73af9db5f5a4ae0213d66fa4c54326e4022c0130a1c4d52874814a4ee86
+at: 2026-10-30T21:24:56Z
+store: asf
+act: recheck
+about: item:todo-two-reviewer-judgment-type-calls-deferre-678e
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c7aeed1d+dirty
+criterion: 'TODO.md:233 (first written 2026-04-24, 0fc5fae6). Source: CHANGELOG:1402,1407, the 2026-04-24 type-vocabulary audit flagged der-agent-opacity and scope-observation-ambiguity-modulation as type-vs-content borderlines and left them for reviewer judgment. Neither was ever retyped: they still carry the types given by that day''s prefix sweep (derived; scope). B.1''s records are where a segment''s register gets decided, so they own the call; scope-observation-ambiguity-modulation carries the kappa*A bias-bound results, which read as derivations, not a scope statement.'
+outcome: holds
+owner: B.1
+restated: Decide the type of der-agent-opacity (type derived, but its core is the H_b definition plus an empirical taxonomy) and of scope-observation-ambiguity-modulation (type scope, but carries the kappa*A bias bound); flagged 2026-04-24, never decided.

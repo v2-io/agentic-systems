@@ -3,10 +3,11 @@ kind: item
 provenance: imported
 source: TODO.md:58
 section: TODO — Miscellaneous & details › Strategic-composition cluster residuals (post-NEXT-UP archival, 2026-05-25)
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:disc-dynamic-regime-axis]
+rechecked: 2026-10-30T21:24:56Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: unassigned
 ---
 
 # Track A Phase 6 — meta-segment promotion of `#disc-dynamic-regime-axis`. UNBLOCKED 2026-05-24 when Track D (M4) landed (the dependency on Track D's landing was

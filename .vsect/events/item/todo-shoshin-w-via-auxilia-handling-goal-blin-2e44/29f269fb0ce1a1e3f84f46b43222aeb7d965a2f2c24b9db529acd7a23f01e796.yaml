@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 29f269fb0ce1a1e3f84f46b43222aeb7d965a2f2c24b9db529acd7a23f01e796
+at: 2026-10-30T21:24:56Z
+store: asf
+act: recheck
+about: item:todo-shoshin-w-via-auxilia-handling-goal-blin-2e44
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c7aeed1d+dirty
+criterion: TODO.md:197 (6aae9789, 2026-05-09). The item itself says the theory is complete and the remaining work is shoshin implementation, which lives in ~/src/shoshin, not in ASF. ASF's side, whether separate substrates are needed for the structural (C2') bound, is the t1 lane's def-auxilia-hierarchy item (todo-def-auxilia-hierarchy-c2-realization-ove-564e), whose spike found substrate separation sufficient, not necessary. The ASF-facing claim that remains checkable is der-logogenic-as-wrapping:125 ('shoshin currently implements W2'), which should be re-checked against shoshin's code whenever shoshin changes.
+outcome: not-an-item

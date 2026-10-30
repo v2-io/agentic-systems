@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: TODO.md:179
 section: TODO — Miscellaneous & details › Open theory items (MEDIUM)
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:der-loop-interventional-access]
+rechecked: 2026-10-30T21:24:56Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: G.2
+restated: Before the Pearl/LLM note goes anywhere, Response 1 must be restated to what der-loop-interventional-access and the C2 spike establish (Level-2 access from the loop holds under (C1)-(C2), not by construction); Responses 2 and 3 have different homes (G.2 Theorem-1; G.0 for the argued symmetry point).
 ---
 
 # Pearl/LLM causal-access positioning — refine, flesh out, promote. `msc/llm-causal-access-note.md` (123 lines, 2026-03-09) makes three independent rebuttals to P
