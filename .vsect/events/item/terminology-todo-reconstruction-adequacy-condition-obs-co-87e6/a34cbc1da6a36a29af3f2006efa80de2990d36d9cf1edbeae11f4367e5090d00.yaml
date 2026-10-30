@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: a34cbc1da6a36a29af3f2006efa80de2990d36d9cf1edbeae11f4367e5090d00
+at: 2026-10-30T21:21:07Z
+store: asf
+act: recheck
+about: item:terminology-todo-reconstruction-adequacy-condition-obs-co-87e6
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Verified at HEAD: no entry, and obs-context-turnover.md:70 in 03-llm-core still defines the reconstruction adequacy condition (''the minimum model sufficiency required for the agent to function effectively in the new session''); four segments use the phrase.'
+outcome: holds
+owner: F.1
+restated: Add a terminology entry for the reconstruction adequacy condition (03-llm-core/src/obs-context-turnover.md:70).

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 5187dc5e8ebc6544d16bfefd42698d08f51000b98f26d8ac980ccbf620266765
+at: 2026-10-30T21:19:34Z
+store: asf
+act: recheck
+about: item:bibliography-todo-2026-05-20-relata-side-discovery-sweep-l-489d
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'A log entry whose own status line says the sweep completed. Verified at its new home: relata''s TODO-ingest.md section 16.16 (line 3757, ~/src/arch/firmatum/relata) records the full 20-catalog batch sweep; relata list prints about 2800 entries now (2038 at the log''s 2026-06-04 check). The log also cites ~/src/relata, which no longer exists.'
+outcome: landed

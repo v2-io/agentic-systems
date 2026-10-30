@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: b8eef9ada207db2c32e432c2c749271e404e1a378b70389c410bd2f239366f01
+at: 2026-10-30T21:28:49Z
+store: asf
+act: take
+about: review:items-recheck-s1
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+items:
+- F1:finding
+- F2:finding
+review: reviews/items-recheck-s1.md
+review-version: 2dac11080082e8cf67f3a1218faf09ac0c65af8e669599a90f476c2083048d83

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: f690b8c4c0352dca26d7499b9967ea8d84337c5a88bf3d3cc0e2b12d710636dc
+at: 2026-10-30T21:19:34Z
+store: asf
+act: recheck
+about: item:bibliography-todo-w-6-optional-cleanup-051b
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'The sweep is still owed, on a sample. Of five works drawn from the References of ref/Novelty_defense_and_integration.md (28 entries), three are in relata (Friston-Samothrakis-Montague 2012, Lee-Bareinboim 2018, Taylor-Precup-Panangaden 2008) and two are not found by author, year or title words: Liu et al. 2024 (tool-using language agents) and Golubev et al. 2025 (long-context SWE agents, cited in 02-tst-core der-dual-optimization.md:84 and scope-developer-agent.md:197). The relata-side discovery sweep was meant to cover these notes, so this is a completeness gap in it, small in the sample and unmeasured overall.'
+outcome: holds
+owner: F.2
+restated: 'Check the reference lists of the four ref/ prose notes (and the Undermind reports) against relata and add what is missing. Sample finding: two of five checked works absent, one of them already cited in two TST segments with no relata entry. Fold into W-3''s lookup step.'

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: e4a909b34fdcc7b92776921503f229367662dfb951bdad66cf3645aa2c8dbed9
+at: 2026-10-30T21:21:07Z
+store: asf
+act: recheck
+about: item:terminology-todo-identity-sufficiency-s-text-id-def-ident-7776
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Verified at HEAD: no identity-sufficiency entry in terminology/entries, while 04-eli-core/src/def-identity-sufficiency.md and deriv-identity-sufficiency-rate-bound.md exist and four segments use the term.'
+outcome: holds
+owner: F.1
+restated: Add a terminology entry for identity sufficiency ({\text{id}}$) pointing at def-identity-sufficiency.

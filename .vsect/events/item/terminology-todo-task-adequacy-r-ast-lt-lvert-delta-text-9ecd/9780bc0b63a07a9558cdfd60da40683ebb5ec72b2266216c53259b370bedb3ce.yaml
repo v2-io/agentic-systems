@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 9780bc0b63a07a9558cdfd60da40683ebb5ec72b2266216c53259b370bedb3ce
+at: 2026-10-30T21:21:07Z
+store: asf
+act: recheck
+about: item:terminology-todo-task-adequacy-r-ast-lt-lvert-delta-text-9ecd
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Verified at HEAD: no task-adequacy entry exists in terminology/entries, and six segments use the term (defined at 01-aat-core/src/result-persistence-condition.md:19, ''Task adequacy is the separate condition that the steady-state mismatch is small enough for the agent''s actions to remain useful'').'
+outcome: holds
+owner: F.1
+restated: Add a task-adequacy entry; the owner review's verdict on the persistence condition (keep the ASF name, anchor the threshold, replace the decomposition's novelty claim; owner-review/explorers/terminology.md 2.3) says what the entry's standard neighbour and brief should be.

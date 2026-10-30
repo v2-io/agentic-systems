@@ -3,9 +3,11 @@ kind: item
 provenance: imported
 source: BIBLIOGRAPHY-TODO.md:125
 section: 'containing exactly the assembled current volume markdown, then runs: › Workstreams ASF needs to own'
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:19:34Z by Claude Sonnet 5.5 (item rechecker, lane s1)
+owner: F.2
+restated: Decide the fate of the 27 ref/*.pdf that have no byte-identical copy in relata's PDF store (register under their bibkey, retain as reading material, or remove); the 53 that have one need no action. The list is in msc/inside-out-2026-10/items-recheck/s1-navigation.md. FORMAT-TODO A3 carries this together with W-3's migration.
 ---
 
 # W-2. Reconcile `ref/` PDFs against the discovered bibliography

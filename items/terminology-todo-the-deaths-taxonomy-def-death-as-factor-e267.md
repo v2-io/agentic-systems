@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: TERMINOLOGY-TODO.md:67
 section: TERMINOLOGY-TODO › F. LEXICON Continuity section — pending reorganization (blocked on review) › Findings (Opus 4.7, 2026-05-10)
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:der-captured-objective-dynamics, segment:def-mood]
+rechecked: 2026-10-30T21:21:07Z by Claude Sonnet 5.5 (item rechecker, lane s1)
+owner: F.1
+restated: Add terminology entries for the deaths taxonomy (continuity, relational, agency, truth; phenomenological predicted and unadjudicated), agency death's two legs (severed actuation; captured objective) and the mood layer (def-mood), each via bin/term. Do not canonicalize 'Three Deaths'.
 ---
 
 # The deaths taxonomy (`def-death-as-factor-loss`, restructured 2026-06-10) — `continuity death` / `relational death` / `agency death` / `truth death` / `phenomen

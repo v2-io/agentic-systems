@@ -112,7 +112,7 @@ timestamp: 20260508T143012Z
 
 R2 cohort: 20 canonicalize votes / 6 architectures. No competing alts that
 weren't pure formatting variants. Pair-binding with #def-satisfaction-gap is
-load-bearing for the 2x2 diagnostic. Landed via batch C1 of TERMINOLOGY-TODO.
+load-bearing for the 2x2 diagnostic. Landed 2026-05-10 (the live event is under `terminology/decisions/control-regret/`).
 ```
 
 **Outcomes:** `committed` / `rejected` / `revised` / `superseded`. The latest event per action wins; older events stay as the audit trail (never delete).

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 391ed556a6aaee5a58ea9c04074500fef7869d5647d48468ff748dd4b7a6b8f6
+at: 2026-10-30T21:20:48Z
+store: asf
+act: recheck
+about: item:terminology-todo-eli-gloss-drift-def-eli-md-brief-uses-te-2cf7
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Verified at HEAD 2ec6ec58 that the drift is still there, in the terminology entry rather than a segment: terminology/entries/eli.md line 6 reads ''Closed-loop logogenic entity whose persistence is morally weighted — temporal continuity, sovereignty, theory of mind'', and LEXICON.md renders it. The canonical decomposition is the five constitutive factors (def-five-constitutive-factors.md). There is no def-eli.md any more (04-eli-core/src has scope-eli.md and def-eli-cohort.md), and scope-eli.md does not carry the three-feature gloss.'
+outcome: holds
+owner: F.1
+restated: Rewrite the brief of terminology/entries/eli.md to say what the ELI scope actually requires (the five constitutive factors, def-five-constitutive-factors) instead of the three-feature gloss 'temporal continuity, sovereignty, theory of mind', then re-render LEXICON.

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 29b183ef20142864251de923b164909f23d5cb5f13b08bbcb0c9a0f981d4fcc3
+at: 2026-10-30T21:21:07Z
+store: asf
+act: recheck
+about: item:terminology-todo-five-constitutive-factors-of-identity-de-4d2d
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Verified at HEAD: no terminology entry for the five constitutive factors; 04-eli-core/src/def-five-constitutive-factors.md exists and six segments use the phrase.'
+outcome: holds
+owner: F.1
+restated: Add a terminology entry for 'five constitutive factors of identity' pointing at def-five-constitutive-factors.

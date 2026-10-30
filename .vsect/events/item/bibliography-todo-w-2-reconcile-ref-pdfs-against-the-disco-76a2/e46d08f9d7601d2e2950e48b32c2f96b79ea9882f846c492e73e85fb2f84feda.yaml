@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: e46d08f9d7601d2e2950e48b32c2f96b79ea9882f846c492e73e85fb2f84feda
+at: 2026-10-30T21:19:34Z
+store: asf
+act: recheck
+about: item:bibliography-todo-w-2-reconcile-ref-pdfs-against-the-disco-76a2
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'Measured at HEAD 2ec6ec58: ref/ holds 80 PDFs (git-ignored). Hashing each against relata''s registered-PDF store (761 files, 758 distinct hashes), 53 have a byte-identical copy there and 27 do not. So the reconciliation has half-happened by relata''s own ingest, but nobody recorded which is which, and nothing says what became of the 27 (register, retain as reading material, or remove). The reverse direction (entries without a local copy) was not examined. Byte-identity is a floor, not proof: a PDF may be registered under different bytes of the same work.'
+outcome: holds
+owner: F.2
+restated: Decide the fate of the 27 ref/*.pdf that have no byte-identical copy in relata's PDF store (register under their bibkey, retain as reading material, or remove); the 53 that have one need no action. The list is in msc/inside-out-2026-10/items-recheck/s1-navigation.md. FORMAT-TODO A3 carries this together with W-3's migration.

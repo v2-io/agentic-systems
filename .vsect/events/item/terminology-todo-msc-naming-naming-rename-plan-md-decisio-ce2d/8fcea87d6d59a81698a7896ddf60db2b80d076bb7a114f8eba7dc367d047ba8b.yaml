@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 8fcea87d6d59a81698a7896ddf60db2b80d076bb7a114f8eba7dc367d047ba8b
+at: 2026-10-30T21:21:38Z
+store: asf
+act: recheck
+about: item:terminology-todo-msc-naming-naming-rename-plan-md-decisio-ce2d
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: A pointer (TERMINOLOGY-TODO line 99) to the naming decision record, now inside .archive/msc-naming-2026-08-22.tar.gz. Nothing owed; the executed decisions are decision events under terminology/decisions.
+outcome: not-an-item

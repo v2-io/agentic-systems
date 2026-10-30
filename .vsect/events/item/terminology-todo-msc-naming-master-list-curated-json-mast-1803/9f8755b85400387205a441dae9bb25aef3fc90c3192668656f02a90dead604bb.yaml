@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 9f8755b85400387205a441dae9bb25aef3fc90c3192668656f02a90dead604bb
+at: 2026-10-30T21:21:38Z
+store: asf
+act: recheck
+about: item:terminology-todo-msc-naming-master-list-curated-json-mast-1803
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: A pointer (line 101) to the vote-aggregation JSON in the packed naming-cycle tree. Nothing owed. The unrouted-currents backlog it records is a PRACTICA line (item 13) that the import did not carry; see the lane document.
+outcome: not-an-item

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 896b26a016fd815ff7653b978e99417d4dca5378fdd877bddb88a045c54e5ed2
+at: 2026-10-30T21:20:48Z
+store: asf
+act: recheck
+about: item:terminology-todo-moral-continuity-04-eli-core-src-scope-m-19df
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: The relocation of Moral Continuity out of Persistence into the ELI section is step 4 of the same reorganization as Breakage A. Verified the double rendering is still there (LEXICON.md:67-75 and :150-155) and that 04-eli-core/src/scope-moral-continuity.md exists as the scope condition.
+of: item:terminology-todo-breakage-a-the-persistence-subgroup-mixe-2fb5
+outcome: duplicate

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 4c5486c4621574cdf795204d55c13f776048f5d748d61a49147b72a3149ae3fe
+at: 2026-10-30T21:20:33Z
+store: asf
+act: recheck
+about: item:terminology-todo-c12-first-encounter-cite-sweep-execution-9274
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: Checked the segments for the five entries' named cites at HEAD 2ec6ec58. Shoham and Leyton-Brown (multi-agent) and Stone and Veloso (multi-agent) occur in no segment under 01..04-*/src; Sutton and Barto occurs once, in def-chronica.md, which is not where action selection is first met; Pearl 2009 is cited in 14 segments but I did not check that causal-structure's first encounter carries it; equilibrium-convergence and feature were not checked for their named cites. So the sweep is not done, and at least the multi-agent and action-selection cites are absent.
+outcome: holds
+owner: F.1
+restated: 'Add each adopted-standard entry''s first-encounter cite (action-selection, causal-structure, multi-agent, equilibrium-convergence, feature) in the segment where the term is first used, with a locator. Confirmed absent so far: Shoham and Leyton-Brown 2008 and Stone and Veloso 2000 for multi-agent; Sutton and Barto 2018 at action selection''s first use. The other three were not checked. This is INTENT F.1''s ''standard name plus citation at first introduction'' for the five terms already decided.'

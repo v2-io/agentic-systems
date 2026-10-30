@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: d7d263ce28ccbcb494d0088f51b2c503f800dd4db66635d823746bcc6ab27467
+at: 2026-10-30T21:20:48Z
+store: asf
+act: recheck
+about: item:terminology-todo-morally-continuous-one-of-five-continuit-aa6c
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'A distinction note, not work: morally-continuous is a value on the stance axis, not the scope condition. At HEAD it already sits where the note says it belongs (LEXICON.md ''### Continuity Stance'', line 61), so there is nothing to move; the wrong placement was Moral Continuity''s, which the Breakage A item carries.'
+outcome: not-an-item

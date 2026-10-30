@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 5cb51804554f2fad141d38ece0a6776b36e7f7b518f67b45cc63a729b7a9d8a9
+at: 2026-10-30T21:21:07Z
+store: asf
+act: recheck
+about: item:terminology-todo-two-timescale-persistence-distinction-in-9fb2
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Verified the distinction is live in canon: 03-llm-core/src/der-turnover-information-recursion.md:18 and :32 separate the intra-session regime (rate-condition machinery of Part I) from the inter-session regime (an affine information recursion), also in obs-context-turnover, disc-m-preservation and 04-eli-core der-compensation-channel-uniqueness. No terminology entry names it. Note 01-aat-core der-multi-timescale-stability is a different ''two-timescale'' (stacked systems), so the entry must not borrow that phrase unqualified.'
+outcome: holds
+owner: F.1
+restated: Add a terminology entry for the intra-session versus inter-session persistence distinction of logogenic agents (der-turnover-information-recursion.md), under a name that does not collide with der-multi-timescale-stability's 'two-timescale'.

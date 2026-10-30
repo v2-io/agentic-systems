@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 038be39497f37f858b45176494dc2d08df22b0d0e2bc0c9ded3746c6f2cbe4a2
+at: 2026-10-30T21:21:07Z
+store: asf
+act: recheck
+about: item:terminology-todo-continuity-persistence-as-its-own-named-2827
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Verified at HEAD 2ec6ec58: terminology/entries has ''continuity'' and no ''continuity-persistence'', while seven segments under 0[1-4]-*/src use the phrase ''continuity persistence'' and README.md:104 names it as the third persistence sense.'
+outcome: holds
+owner: F.1
+restated: Add the entry 'continuity persistence' (the third persistence sense) and settle whether the existing 'continuity' entry is renamed or aliased to it; this is the same change as Breakage A's second step. The pilot found the notation field ($\mathcal C_t$) on the continuity entry wrongly assigned (continuity is a property of the chronica), so fix both in one pass.

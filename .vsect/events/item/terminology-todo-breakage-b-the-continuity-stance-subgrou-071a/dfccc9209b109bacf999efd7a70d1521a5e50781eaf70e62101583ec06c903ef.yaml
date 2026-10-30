@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: dfccc9209b109bacf999efd7a70d1521a5e50781eaf70e62101583ec06c903ef
+at: 2026-10-30T21:20:48Z
+store: asf
+act: recheck
+about: item:terminology-todo-breakage-b-the-continuity-stance-subgrou-071a
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Same reorganization as Breakage A (step 3 of the file''s own recommended reorganization: promote Continuity Stance to a sibling or deployment-level section). Verified the stance subgroup is still under ''## Continuity'' beside ''### Persistence'' (LEXICON.md:54-67) and that canon agrees it is orthogonal (disc-continuity-stance.md:16). The demotion proposal the file mentions is at msc/domain-unification-2026-05-04/recommended-agent-ontology.md:111 (item 7), not at the lines cited (97-108).'
+of: item:terminology-todo-breakage-a-the-persistence-subgroup-mixe-2fb5
+outcome: duplicate

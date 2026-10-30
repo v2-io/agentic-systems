@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 4183a8cad081887c70812ccf67b84b38a764a9b9021718d93aa8219dafdfe538
+at: 2026-10-30T21:28:49Z
+store: asf
+act: place-finding
+about: segment:deriv-recursive-update
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+finding: review:items-recheck-s1#F1
+target: segment:deriv-recursive-update
+text: 'Working-Note status signal: the Working Note at line 230 says ''The "(Descended from TFT Appendix ...)" annotation is diff-voice in the body. Editorial: move to Working Notes or remove'', reporting an open defect in the body. The body has no '
+version-from: current

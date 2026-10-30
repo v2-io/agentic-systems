@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: c89f8635539606af5872d3c2e24382cd82ea3658b84b514e655e1a8ff1fed117
+at: 2026-10-30T21:20:33Z
+store: asf
+act: recheck
+about: item:terminology-todo-stability-plasticity-window-c8-residue-n-f580
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Checked at HEAD 2ec6ec58. The entry terminology/entries/stability-plasticity-feasibility-window.md (aliases: feasibility window) was executed, and the bare three-word form is not among its aliases, yet 01-aat-core/src/form-consolidation-dynamics.md uses it (line 108: ''The stability-plasticity window''s existence follows from #schema-strategy-persistence''s lower bound plus any monotone upper bound on (1-lambda)''), which describes the same object as the entry (the interval of lambda between the plasticity lower bound and the consolidation-cadence upper bound). So the ''subsumed or distinct'' question is answerable from the segment: subsumed.'
+outcome: holds
+owner: F.1
+restated: 'Add ''stability-plasticity window'' as an alias of the stability-plasticity-feasibility-window entry (bin/term decide add-alias): form-consolidation-dynamics.md:108 uses the three-word form for the same interval. No decision from Joseph needed; the segment answers it.'

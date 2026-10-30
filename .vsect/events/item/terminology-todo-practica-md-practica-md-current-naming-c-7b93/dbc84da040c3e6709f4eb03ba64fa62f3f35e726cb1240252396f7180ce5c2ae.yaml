@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: dbc84da040c3e6709f4eb03ba64fa62f3f35e726cb1240252396f7180ce5c2ae
+at: 2026-10-30T21:21:38Z
+store: asf
+act: recheck
+about: item:terminology-todo-practica-md-practica-md-current-naming-c-7b93
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: A pointer (line 102) to PRACTICA's naming section. Its items 9, 11, 12, 13 are numbered lines the importer did not pick up; the lane document gives their dispositions. Nothing owed by the pointer.
+outcome: not-an-item

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: e73201310272071333a5739539f54cc1390316cde0b69e8f16d20bc4b84d7dfd
+at: 2026-10-30T21:21:38Z
+store: asf
+act: recheck
+about: item:terminology-todo-changelog-md-changelog-md-where-landed-b-01cf
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: A pointer (line 103) saying landed batches go to CHANGELOG. The convention is current (CHANGELOG is the history layer) and items now close by commit in the ledger; nothing owed.
+outcome: not-an-item

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 2c727f3e3e7e27d24dd4bd28c7084f9441f99286f7ab4cac27824ab95f7c7825
+at: 2026-10-30T21:20:48Z
+store: asf
+act: recheck
+about: item:terminology-todo-breakage-a-the-persistence-subgroup-mixe-2fb5
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Verified at HEAD 2ec6ec58 that the breakage stands. LEXICON.md still has ''## Continuity'' with a ''### Persistence'' subgroup (lines 67-75) listing Continuity, Moral Continuity, Operational and Structural; Moral Continuity also renders under ''## ELI'' then ''### Persistence'' (lines 150-155). The third sense is labelled just ''Continuity'', while README.md:98-104 has ''Persistence (three senses)'' with ''Continuity persistence'' as the third, and seven segments use ''continuity persistence''. The corpus also confirms the stance axis is orthogonal (01-aat-core/src/disc-continuity-stance.md:16: ''a five-value stance axis orthogonal to the formal persistence machinery''). The 2026-05-10 single-model finding was held for a second opinion; this check is a primary-source read of the same objects and agrees with it.'
+outcome: holds
+owner: F.1
+restated: 'Reorganize LEXICON''s Continuity material: rename the section Persistence; list structural, operational and continuity persistence as siblings (the third entry named ''continuity persistence'', not ''continuity''); move Moral Continuity out of Persistence into the ELI section only; give Continuity Stance its own section. Whether stance is a structural axis or a deployment-level property (msc/domain-unification-2026-05-04/recommended-agent-ontology.md:111) is a design question to settle on its merits, and the placement can proceed without it. Done through bin/term (tags), then render. The pilot''s note on the notation field of the continuity entry (item terminology-todo-notation-collision) is the same entry''s other defect.'

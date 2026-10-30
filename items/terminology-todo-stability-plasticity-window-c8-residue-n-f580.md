@@ -3,9 +3,11 @@ kind: item
 provenance: imported
 source: TERMINOLOGY-TODO.md:28
 section: TERMINOLOGY-TODO › C. Terminology additions — confirmed canonicalize commitments
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:20:33Z by Claude Sonnet 5.5 (item rechecker, lane s1)
+owner: F.1
+restated: 'Add ''stability-plasticity window'' as an alias of the stability-plasticity-feasibility-window entry (bin/term decide add-alias): form-consolidation-dynamics.md:108 uses the three-word form for the same interval. No decision from Joseph needed; the segment answers it.'
 ---
 
 # stability plasticity window (C8 residue — needs Joseph reconciliation). The 2026-05-04 pass recorded *two* decisions for near-the-same object: batch-3 clean can

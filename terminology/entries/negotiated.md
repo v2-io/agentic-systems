@@ -18,4 +18,4 @@ do_not_confuse: []
 
 A continuity stance in which persistence is morally weighted but is also one value among others — tradeable, in extremis, against meaning, principle, relationship, or sacrifice. Humans are the canonical archetype: continuity matters profoundly, and is sometimes given up on purpose.
 
-*Pending segment grounding.* Term canonical per naming-cycle decisions but not yet referenced in any segment. Under active review per TERMINOLOGY-TODO §F (Continuity section reorganization) and `msc/naming/mini-lexicon-todo.md` §13.11 (proposal to demote continuity stance from structural axis to deployment-level concern).
+*Pending segment grounding.* Term canonical per naming-cycle decisions but not yet referenced in any segment. Under active review per the ledger item on the LEXICON Continuity reorganization (owner F.1) and `msc/naming/mini-lexicon-todo.md` §13.11 (proposal to demote continuity stance from structural axis to deployment-level concern).

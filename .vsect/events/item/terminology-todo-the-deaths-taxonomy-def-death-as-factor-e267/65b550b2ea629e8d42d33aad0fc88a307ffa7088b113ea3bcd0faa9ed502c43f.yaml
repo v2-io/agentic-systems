@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 65b550b2ea629e8d42d33aad0fc88a307ffa7088b113ea3bcd0faa9ed502c43f
+at: 2026-10-30T21:21:07Z
+store: asf
+act: recheck
+about: item:terminology-todo-the-deaths-taxonomy-def-death-as-factor-e267
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Verified at HEAD: def-death-as-factor-loss.md, der-captured-objective-dynamics.md and def-mood.md exist, and terminology/entries has none of continuity-death, relational-death, agency-death, truth-death, phenomenological-death, severed-actuation, captured-objective or mood. ''Continuity death'' and ''relational death'' each appear in four segments. ''Three Deaths'' is correctly absent as a live term.'
+outcome: holds
+owner: F.1
+restated: Add terminology entries for the deaths taxonomy (continuity, relational, agency, truth; phenomenological predicted and unadjudicated), agency death's two legs (severed actuation; captured objective) and the mood layer (def-mood), each via bin/term. Do not canonicalize 'Three Deaths'.

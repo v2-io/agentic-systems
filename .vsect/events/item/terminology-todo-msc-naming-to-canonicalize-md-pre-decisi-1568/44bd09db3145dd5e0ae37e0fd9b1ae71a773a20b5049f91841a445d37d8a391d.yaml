@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 44bd09db3145dd5e0ae37e0fd9b1ae71a773a20b5049f91841a445d37d8a391d
+at: 2026-10-30T21:21:38Z
+store: asf
+act: recheck
+about: item:terminology-todo-msc-naming-to-canonicalize-md-pre-decisi-1568
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'The thirteen deferred rows are still undecided at HEAD 2ec6ec58. I read the table (unpacked from the 2026-08-22 tarball): specification bound, adaptive cycle, operationalization, epistemic/purposeful substate, action fluency, and or scope, reactive system, separable core/structured repair/general open, coherence coupling measurement, purpose/purposeful, boundary condition, log odds edge coordinate, escape route. The current names are all still in use (for example result-specification-bound, detail-operationalization and scope-and-or exist as slugs; ''adaptive cycle'' is in seven segments, ''escape route'' in 15). The gate the file puts on them (''pending Joseph''s routing call'') is lifted by this effort''s standing orders; they are decisions to make on the merits.'
+outcome: holds
+owner: F.1
+restated: 'Decide the thirteen rows of the to-canonicalize table (specification bound; adaptive cycle, including the Holling collision; operationalization; epistemic substate and purposeful substate; action fluency; and or scope; reactive system; the separability rung names; coherence coupling measurement; purpose versus purposeful; boundary condition; log odds edge coordinate; escape route), applying INTENT F.4''s question first: does the concept already have a name elsewhere? The separability rung names are also held as item msc-decision-briefs-2026-07-15-name-the-three-separability-ladder-rungs-c2c2.'

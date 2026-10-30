@@ -3,9 +3,11 @@ kind: item
 provenance: imported
 source: BIBLIOGRAPHY-TODO.md:147
 section: 'containing exactly the assembled current volume markdown, then runs: › Workstreams ASF needs to own'
-owner: ""
 opened: 2026-10-30T20:17:42Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:19:34Z by Claude Sonnet 5.5 (item rechecker, lane s1)
+owner: F.2
+restated: 'Check the reference lists of the four ref/ prose notes (and the Undermind reports) against relata and add what is missing. Sample finding: two of five checked works absent, one of them already cited in two TST segments with no relata entry. Fold into W-3''s lookup step.'
 ---
 
 # W-6. Optional cleanup

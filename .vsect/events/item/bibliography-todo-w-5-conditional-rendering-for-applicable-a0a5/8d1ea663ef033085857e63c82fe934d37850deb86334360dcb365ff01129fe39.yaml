@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 8d1ea663ef033085857e63c82fe934d37850deb86334360dcb365ff01129fe39
+at: 2026-10-30T21:19:34Z
+store: asf
+act: recheck
+about: item:bibliography-todo-w-5-conditional-rendering-for-applicable-a0a5
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'Same work as FORMAT-TODO A5, which restates it in the same words (''the anonymized-build consumption layer''). Checked that nothing consumes the flag on the ASF side: no mention of applicable_anonymity in bin/, mono/ or doc/sop/, and bin/build-monograph has no anonymized target at all. relata carries the field in its schema (its README lines 558-605).'
+of: item:format-todo-a5-conditional-rendering-machinery-for-a-9f41
+outcome: duplicate

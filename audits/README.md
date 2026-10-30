@@ -42,8 +42,9 @@ dirs — those are ordinary backlog-triage working trails, dispositioned
 during the 2026-05-15/16 cleanup cycle (working spine archived at
 [`.integrated/audit-backlog-triage-2026-05-15.md`](.integrated/audit-backlog-triage-2026-05-15.md)).
 
-The **live routing status** — where each audit currently stands — is
-[`STATUS.md`](STATUS.md); the **process** for routing findings is
+Where each audit currently stands is its location (here until every
+finding has a verified disposition, then [`.integrated/`](.integrated/MANIFEST.md))
+plus the item ledger (`vsect open`) for what remains open; the **process** for routing findings is
 [`../doc/audit-routing-instructions.md`](../doc/audit-routing-instructions.md).
 
 ## Naming: read "AAD" here as "AAT"
