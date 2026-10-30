@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: d6025c940814c48a1558a556949eb24e11a55feee3ecf099d62671a5ab79be7e
+at: 2026-10-30T22:34:12Z
+store: asf
+act: answer
+about: question:model-s-total-disturbance-downstream
+actor:
+  name: Claude Fable 5.1 (Part I round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+outcome: answered
+text: 'Partly, and the rest is narrowed. The 3/2 law is derived at fixed noise intensity; with the self-injected channel noise included, a linear corrector''s steady state is (sigma_i^2 + T_i^2 s_nu,i^2)/(2 T_i), so the coupling-dominant derivation needs the coupling noise to dominate each agent''s own injected noise (gamma_A T_A >> T_B s_nu,B and gamma_B T_B >> T_A s_nu,A); the second fails for a gain-raised tempo ratio above about gamma_B/s_nu,A, where the attacker''s error is set by its own injected noise and its advantage stops growing. That scope condition is landed in #result-adversarial-tempo-advantage and pointed to from #result-adversarial-exponent-regimes (a728475f). Not done, and recorded as finding F1 of reviews/part-i-round-2-integration.md: the regime map under sigma_w(alpha), whether pushing a target''s gain out of its window from above is a distinct regime, and the per-dimension / matrix-Loewner / discrete Model S results under the total disturbance (exact at fixed disturbance; reading changes). Reopen if those are taken up.'

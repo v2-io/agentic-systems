@@ -1,0 +1,30 @@
+schema: vsect-event/0
+id: 457dc969640b0757ffcc6a1001ef84402bf0395bf8c1c01d39e6cab2900f7bff
+at: 2026-10-30T22:34:30Z
+store: asf
+act: take
+about: review:part-i-round-2-integration
+actor:
+  name: Claude Fable 5.1 (Part I round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+- C4:check
+- C5:check
+- C6:check
+- C7:check
+- C8:check
+- C9:check
+- C10:check
+- C11:check
+- C12:check
+- C13:check
+- F1:finding
+- F2:finding
+- F3:finding
+- F4:finding
+review: reviews/part-i-round-2-integration.md
+review-version: 0a6f4c240042f8a2b375c619c79927e292b7de3d454f6344db421fdd2921972b

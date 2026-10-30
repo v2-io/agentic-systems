@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 59e0dbe41f29e7084fbe885e78b77f23be6e3b4edf3e7ad63f053d8fb42492e1
+at: 2026-10-30T22:34:07Z
+store: asf
+act: answer
+about: question:example-kalman-structural-adaptation-model-d
+actor:
+  name: Claude Fable 5.1 (Part I round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+outcome: answered
+text: 'The disturbance is stochastic, so the trigger is the Model S feasibility condition: the persistence condition is satisfiable at some gain iff the optimal filter''s own error fits inside the region (the gain window of #result-persistence-condition; R^2 > n s_env s_nu in continuous time). In the example the Kalman prior error is P^- = 0.640, so a valid radius R = 0.08 gives R^2 = 0.0064 < P^-: no gain persists in mean square and model-class change is required. Landed in #example-kalman''s Structural Adaptation section (a728475f).'
