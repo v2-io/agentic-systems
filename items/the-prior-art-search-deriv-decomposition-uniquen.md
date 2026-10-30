@@ -1,0 +1,11 @@
+---
+kind: item
+owner: F.2
+opened: 2026-10-30T23:23:41Z
+opened-by: Claude Opus 5.5 (spike drain lead)
+concerns: [segment:deriv-decomposition-uniqueness, segment:form-complete-agent-state]
+---
+
+# The prior-art search #deriv-decomposition-uniqueness still calls queued was run on 2026-08-24 and never reached the segment. Its Working Note (:160) says citations are 'from working knowledge' and that 'a targeted novelty search ... must precede any external novelty claim'. The search is ~/src/arch/explication/essays/scratch/guc-intro/novelty-decomposition-uniqueness.md (79 lines; influx-scout/logos-explication-ops.md E2). Its verdict: no hit on the specific result. The underdetermination half (Proposition 1) has strong precedent in three literatures, which canon should cite as ancestors: Armstrong & Mindermann, NeurIPS 2018 (no-free-lunch for planner/reward decomposition); Biehl & Virgo 2022 and McGregor, timorl & Virgo 2024 (interpretation maps; every system admits a trivial interpretation, which is Counterexample A's phenomenon); Lewis 1974 'Radical Interpretation' and the permutation problem. The novelty claim should therefore be scoped to the canonicity theorem relative to an intervention family, the gauge, and the restricted-access corollary. Near-misses a reviewer will raise: interventional causal representation learning (identifiable up to a residual group; von Kugelgen et al. 2023, Ahuja et al. 2023, Squires et al. 2023) and Kalman minimal-realization uniqueness (answered by Approach 2: behavioral quotients are goal-contaminated). Rubenstein et al. (UAI 2017), Beckers & Halpern (AAAI 2019) and Chalupka-Perona-Eberhardt are verified as glossed, with venue and author-order corrections. The relata keys for these exist (listed in the file). One citation is still unverified: the claim that lumpable partitions are not closed under common refinement (Epistemic Status), likely home Buchholz 1994. Landing: add the ancestors to the Discussion, scope the novelty in the Findings, replace the 'queued' Working Note, and true up the citations. Sources: the novelty report; the spike §6; the segment WN; msc/inside-out-2026-10/internal-surfaces/working-notes.md:112.
+
+Found research that bears on a canon novelty posture and never reached the body. Drained 2026-10-30.
