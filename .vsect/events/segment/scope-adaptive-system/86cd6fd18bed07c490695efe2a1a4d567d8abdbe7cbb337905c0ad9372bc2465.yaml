@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: 86cd6fd18bed07c490695efe2a1a4d567d8abdbe7cbb337905c0ad9372bc2465
+at: 2026-10-30T20:50:52Z
+store: asf
+act: rederive
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:scope-adaptive-system: 5e61363066e1d692b0042e1235596bd207efdb8996c5c924a6521af21e104b57
+committed: after
+criterion: 'Item (h′): with $\Omega$, $\mathcal O$, $\mathcal A$ finite and $\theta$ the kernel entries in the Euclidean topology, does membership (averaged, and pointwise at positive-probability histories) depend on $\pi_0$ only through its support?'
+effective-version: 666c8f58e67107b6883bac0666a41e2d4fc5a62bcdd3baa24fd401ef0b474491
+from: review:scope-adaptive-system-integration-2#C3
+line: derivation
+outcome: confirmed
+recheck: 08 §1.2, steps 1–6; likelihoods and block laws are polynomial in kernel entries; the support lemma for $L \cdot \mu$; a.e.-constancy of a continuous map equals constancy on the support (second-countable); $P(c) \gt 0$ iff $\{L \gt 0\}$ meets the support
+target-version: 5e61363066e1d692b0042e1235596bd207efdb8996c5c924a6521af21e104b57
+version-from: git-revision
