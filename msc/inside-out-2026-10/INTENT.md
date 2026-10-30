@@ -23,14 +23,14 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 
 ## B — Every load-bearing claim says what kind of claim it is, about which agents, and what would refute it
 
-- **B.1** Every load-bearing apparatus has a record giving register, population, an instance where it is true, an instance where it is false, a falsifier, and whether it has been instantiated. Part II comes first, `form-objective-functional` is the template, and someone other than the author checks each record. · *Part II landed and independently checked (`b1-claim-records/01-check-1.md`: 3 confirmed, 11 narrowed, 3 broken); its corrections go to the Part II integration with C.2's C2/C3 and A4/A5; Parts I and III not started*
+- **B.1** Every load-bearing apparatus has a record giving register, population, an instance where it is true, an instance where it is false, a falsifier, and whether it has been instantiated. Part II comes first, `form-objective-functional` is the template, and someone other than the author checks each record. · *Part II landed and independently checked (`b1-claim-records/01-check-1.md`: 3 confirmed, 11 narrowed, 3 broken); its corrections landed in the Part II integration (253d2bca–279b2699), under independent check; Parts I and III not started*
 - **B.2** Part II's apparatus is retyped to what it is: directed separation as definition + classification + estimator; the strategy DAG as formulation with its real agent-claims collected; the cascade as a lemma plus a norm. · *not started*
 - **B.3** The purpose statement is the working thesis or a tested replacement. Two tests apply: the anchors test (every B.1 record states its claim in the thesis's terms without strain) and the cold-reader test (H.3). The uncertainty is resolved, not routed to Joseph. · *not started*
 
 ## C — The theory is correct where it is known wrong, and stronger where strengthening was found
 
 - **C.1** Every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. The defect lists are `owner-review/integrator-items.md` A1–A15, `internal-surfaces/00-cross-surface-map.md` §3 and `influx-scout/MAP.md` §3. · *started: F72 and A1 landed and checked; A6, A7, A10, A12, A13, A14 in parallel lanes; A8, A11 landed with B.1; A4, A5 wait for the C2/C3 spikes' integration, whose segments they share; A9's headline waits for A.2; A3 for the exit-time spike*
-- **C.2** Strengthenings C1–C3 (exit time, loop identification, allocation vs distortion coupling) are independently checked, then landed or refuted. · *C1 landed in canon as Prop A.1S-τ with the Model S window (33cfb14c), under independent check; C2 and C3 verified, in the Part II integration*
+- **C.2** Strengthenings C1–C3 (exit time, loop identification, allocation vs distortion coupling) are independently checked, then landed or refuted. · *C1 landed in canon as Prop A.1S-τ with the Model S window (33cfb14c); C2 and C3 landed in the Part II integration (253d2bca–279b2699; the ambiguity factor $\mathcal A$ and its product law deleted, a model-free range bound and a fixed-gain tilt hypothesis in their place); all three under independent check*
 - **C.3** A cross-segment contradiction scan reports no open contradictions among load-bearing segments. · *not started; one found: `#scope-composite-agent` admits composites with no composite objective (routes C-iii, C-iv) while requiring one (:83), and eight segments rest on that gate (`items-recheck/q-proposals.md` §2.1)*
 - **C.4** Part III and the open strengthenings outside C1–C3 have an owner: each held item under C is landed, refuted, or set aside with its reason recorded. · *not started; the items are in the ledger, most `unassigned` today; inputs `items-recheck/q-proposals.md` §2, `t2-todo.md` §2*
 
@@ -42,7 +42,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 
 ## E — One quantity is measured on an agent the theory did not construct
 
-- **E.1** $\hat\kappa_{\text{processing}}$ and $\hat{\mathcal A}$ are run on two or three LLM families, comparing $W_1$ with $W_2$, under `empirica/`'s RUNS contract. Volume 3's $\kappa\approx1$ becomes a measured value or a range. · *not started*
+- **E.1** The fixed-gain tilt hypothesis of `#scope-observation-ambiguity-modulation` is tested on two or three LLM families, comparing $W_1$ with $W_2$, under `empirica/`'s RUNS contract: the processor gain $\lambda$ is estimated against outcome ground truth or a reference posterior at several levels of evidence sharpness, and whether it stays fixed is answered. $\hat\kappa_{\text{processing}}$ is reported beside it as a different quantity, so Volume 3's $\kappa\approx1$ becomes a measured value or a range. · *not started*
 - **E.2** One Part I quantity is estimated on a real adaptive system, or INTRODUCTION stops claiming simulation validation. · *not started*
 
 ## F — The lineage and evidence that exist reach the bodies, faithfully
@@ -82,7 +82,7 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 | Who | KR | Writes to |
 |---|---|---|
 | Lead coordinator (Opus 5.5, session "asf-cleanup") | I, plus coordination | `INTENT.md`, `HANDOFF.md` |
-| Part II integrator (Fable), own worktree: C2 and C3 spikes with their verifiers, B.1's Part II check, A4, A5 | C.2, B.1, C.1 | Part II and the Volume 3 bias law, on its branch; `part-ii-integration.md` |
+| Part II checker (Opus), bare brief | C.2, B.1, C.1 | `part-ii-check-1.md`, `reviews/` |
 | A.1 fifth reader (Opus), bare brief | A.1 | `spikes/epistemic-target-ontology/13-check-6.md`, `reviews/` |
 | Part I round-2 checker (Opus), bare brief | C.1, C.2 | `reviews/part-i-round-2-check-1.md` |
 | Volume 4 second checker (Opus), bare brief | C.1 | `reviews/vol4-c1-check-2.md` |
@@ -109,7 +109,8 @@ These are finished and on the line through the lead:
 - the TST lane (A13, the 44 `old-*` fates);
 - the second-mind confirmer;
 - the tracker re-check sweep (pilot and five lanes: 371 of 371 imported items judged, twelve of fourteen trackers deleted);
-- the TST lane checker and round-2 integrator.
+- the TST lane checker and round-2 integrator;
+- the Part II integrator (C2, C3, B.1's Part II corrections, A4, A5; merged at 279b2699).
 - the hooks builder (I.2).
 
 ## Using this file
