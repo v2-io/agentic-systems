@@ -131,6 +131,41 @@ def censoring(name, commits):
                   f"P(>60)={np.mean(x > 60):.2f}  P(>480)={np.mean(x > 480):.2f}")
 
 
+def changeset_size(name, commits):
+    """Proportionality to changeset size predicts a log-log slope of 1 and medians that scale with size."""
+    by = defaultdict(list)
+    for c in commits:
+        if 'bot' in c['ae'] or not c['files']:
+            continue
+        by[c['ae']].append(c)
+    G, L, N = [], [], []
+    for cs in by.values():
+        cs.sort(key=lambda c: c['ad'])
+        for i in range(1, len(cs)):
+            gg = (cs[i]['ad'] - cs[i - 1]['ad']) / 60
+            if 0 < gg <= 1440:
+                G.append(gg); L.append(cs[i]['lines']); N.append(len(cs[i]['files']))
+    G, L, N = map(np.array, (G, L, N))
+    if len(G) < 30:
+        return
+    for lo, hi in [(0, 10), (11, 50), (51, 200), (201, 1000), (1001, 10 ** 9)]:
+        m = (L >= lo) & (L <= hi)
+        if m.sum():
+            print(f"  lines {lo:>5}-{hi if hi < 10 ** 9 else 'inf':<5} n={m.sum():<4} median={np.median(G[m]):7.1f} min")
+    for lo, hi in [(1, 1), (2, 3), (4, 10), (11, 30), (31, 10 ** 9)]:
+        m = (N >= lo) & (N <= hi)
+        if m.sum():
+            print(f"  files {lo:>3}-{hi if hi < 10 ** 9 else 'inf':<4} n={m.sum():<4} median={np.median(G[m]):7.1f} min")
+    for cap in (240, 1440):
+        m = G <= cap
+        y = np.log(G[m]); n = m.sum()
+        for lab, x in (('log(1+lines)', np.log1p(L[m])), ('log(files)', np.log(N[m]))):
+            s = np.polyfit(x, y, 1)[0]
+            bs = [np.polyfit(x[i], y[i], 1)[0] for i in (RNG.integers(0, n, n) for _ in range(1000))]
+            lo_, hi_ = np.percentile(bs, [2.5, 97.5])
+            print(f"  cap={cap:<5} slope of log T on {lab:<13} = {s:.3f} [{lo_:.3f},{hi_:.3f}]")
+
+
 if __name__ == '__main__':
     for path in sys.argv[1:]:
         cs = parse(path)
@@ -141,3 +176,4 @@ if __name__ == '__main__':
         print(" single-form fits, d <= 25:"); single_form(name, cs)
         print(" nested form test, d <= 25:"); nested_form(name, cs)
         print(" medians on gaps <= 24 h:"); censoring(name, cs)
+        print(" changeset size (gaps <= 24 h):"); changeset_size(name, cs)

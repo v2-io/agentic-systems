@@ -32,6 +32,8 @@ The $\alpha \approx 0.12$ is a property of how lines changed grow with files cha
 
 The squash-merged histories show the method's floor: $\rho$ = 0.07–0.12 for gemini-cli and codex, with the nested coefficients pointing the same way as above but weakly. anthropic-sdk-python leaves too few same-author pairs ($N$ = 34–53) for any conclusion.
 
+**Changeset size.** The same instrument tests `#emp-changeset-size-principle`'s $t \propto \lvert\text{changeset}\rvert$, which predicts a log-log slope of 1. On gaps up to 24 hours the slope of $\log T$ on $\log(1+L)$ is 0.14–0.18 (corpus), 0.35–0.41 (obsidian-linter) and 0.29–0.31 (ink), every interval below 1. On files touched it is 0.29–0.35, 0.76–0.89 (interval reaching 1 at the 24-hour cap) and 0.58–0.60. Medians by lines changed, obsidian-linter: 7.8, 26.7, 60.5, 74.8, 77.0 minutes for 0–10, 11–50, 51–200, 201–1000, over 1000 lines.
+
 ## 3. What this does and does not bear on
 
 At file and directory granularity, with elapsed time between commits as the time measure, the cost of a changeset rises with the number of boundary crossings, and it rises sublinearly, not by compounding. What this measures is the count model: $d$ counts crossings without regard to whether understanding one change requires understanding another. The hypothesis's central open question, whether nested dependency among the scattered changes produces compounding that independent changes do not, is untested here. Testing it needs a measure of dependency among the changed locations, and a time measure closer to working time than inter-commit gaps. A test of either kind would supersede this one.

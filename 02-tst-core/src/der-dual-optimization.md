@@ -55,7 +55,7 @@ The quantitative form inherits the assumptions of #der-change-expectation-baseli
 
 These activities are hard to measure because they don't produce artifacts. A developer "reading code for 45 minutes" looks idle but is constructing $M_t$. This invisibility creates a systematic bias: organizations measure and optimize implementation time (visible output) while neglecting comprehension time (invisible input). The dual-optimization claim says comprehension time deserves at least equal weight — and under high turnover, more.
 
-*[Discussion — empirical approach: comprehension time could be estimated from the gap between task assignment and first commit (as defined in #def-comprehension-time). Comparing this gap across codebases with different comprehensibility characteristics would quantify the hidden cost. One component — discontinuity-driven comprehension overhead — has a worked git-history operationalization (see #hyp-exponential-cognitive-load, which reports a fitted per-discontinuity penalty).]*
+*[Discussion — empirical approach: comprehension time could be estimated from the gap between task assignment and first commit (as defined in #def-comprehension-time). Comparing this gap across codebases with different comprehensibility characteristics would quantify the hidden cost. The nearest existing measurement, in #hyp-exponential-cognitive-load, relates elapsed time between commits to the files and directories a commit touches; it measures total time per commit, not the comprehension share of it.]*
 
 **When comprehension and implementation conflict.** Sometimes they pull in opposite directions:
 - Abstraction can speed implementation but slow comprehension (indirection cost)
