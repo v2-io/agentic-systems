@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 2fbc3bbd6962d1d7aab424c1fd7f5b45eb6d70b33f3f4b03ad29221deafdf0e8
+at: 2026-10-30T21:56:06Z
+store: asf
+act: take
+about: review:c1-exit-time-verify-1
+actor:
+  name: c1-spike-verifier
+  role: independent-verifier
+normalizer: vsect-norm/0
+items:
+- C1:check
+review: reviews/c1-exit-time-verify-1.md
+review-version: 9c94a410060bde5eeb330ff018d6124b082506dd474961281f38ea4aa4dfca13
