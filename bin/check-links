@@ -65,6 +65,11 @@ require 'pathname'
 require 'optparse'
 
 REPO_ROOT = Pathname.new(__dir__).parent.expand_path
+
+# Self-heal: point this clone's git at the tracked hooks (.githooks/) if it
+# is not already, so the commit checks fire without anyone remembering to
+# set them up. Silent when nothing changes. See bin/setup-hooks.
+system(File.join(__dir__, 'setup-hooks'), '--quiet') if File.executable?(File.join(__dir__, 'setup-hooks'))
 IGNORE_FILE = REPO_ROOT.join('.check-links-ignore')
 
 # Target prefixes that are not local file references.

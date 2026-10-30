@@ -36,13 +36,8 @@
 # staleness ever bites, add a fifth step that renders in the temp copy
 # and diffs with that one line filtered — the scaffolding here supports it.
 #
-# Pre-commit hook: this repo does not currently ship hooks (and its git
-# `core.hooksPath` points at a legacy location), so the check is offered
-# as a command rather than an installed hook. To wire it manually:
-#
-#   printf '#!/bin/sh\nexec "$(git rev-parse --show-toplevel)/bin/refresh-all" --check\n' \
-#     > "$(git rev-parse --git-path hooks)/pre-commit" \
-#     && chmod +x "$(git rev-parse --git-path hooks)/pre-commit"
+# Pre-commit hook: `--check` runs on every commit, through
+# .githooks/pre-commit and bin/check-commit, on the tree being committed.
 
 require 'pathname'
 require 'fileutils'
@@ -52,6 +47,11 @@ require 'optparse'
 
 REPO_ROOT = Pathname.new(__dir__).parent.expand_path
 BIN = REPO_ROOT.join('bin')
+
+# Self-heal: point this clone's git at the tracked hooks (.githooks/) if it
+# is not already, so the commit checks fire without anyone remembering to
+# set them up. Silent when nothing changes. See bin/setup-hooks.
+system(File.join(__dir__, 'setup-hooks'), '--quiet') if File.executable?(File.join(__dir__, 'setup-hooks'))
 
 # Everything the four pipeline steps read. If a step grows a new input
 # outside these paths, add it here (the check regenerates from this set).

@@ -58,13 +58,21 @@ md_press_changed() {
   md-press -q --no-math --no-log "${CHANGED_MD[@]}"
 }
 
+# vsect's store (.vsect/) must be tracked to be in the exported tree; until it
+# is, there is nothing for the check to read, and that is a notice, not a
+# failure (exit 3, vsect's own "not run").
+vsect_check() {
+  if [[ ! -d .vsect ]]; then echo "no tracked .vsect/ store in this commit"; return 3; fi
+  vsect check
+}
+
 # name | tool it needs | if that tool is absent | command (run at the exported tree's root) | how to fix a failure
 CHECKS=(
   "md-press|md-press|refuse|md_press_changed|in the repo, \`md-press --no-math FILE\` shows each decision with a code; \`md-press --fix --no-math FILE\` takes them, and \`--toggle CODE\` flips one first. Then stage the file."
   "lint-outline|python3|refuse|bin/lint-outline --quiet|reorder the OUTLINE row, fix the segment's depends:, or (if the placement is right by design) add a row with its reason to that volume's OUTLINE-accepted.md."
   "check-links|ruby|refuse|CHECK_LINKS_LOCAL_ROOT=\"$ROOT\" bin/check-links|point each link at a file that exists in the commit (or stage the file it names)."
   "refresh-all|ruby|refuse|bin/refresh-all --check|run \`bin/refresh-all\`, review the regenerated files, and stage them with this commit."
-  "vsect|vsect|notice|vsect check|see \`vsect check\` in the repo."
+  "vsect|vsect|notice|vsect_check|see \`vsect check\` in the repo."
 )
 
 failed=0

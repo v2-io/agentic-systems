@@ -6,6 +6,10 @@
 # also repairs a hooksPath that points at a directory that no longer exists:
 # until 2026-10-30 asf's pointed at a retired path, and no hook ran.
 #
+# bin/lint-outline, bin/check-links and bin/refresh-all call this with
+# --quiet, so a clone heals itself the first time anyone runs a check, rather
+# than relying on someone remembering to run setup.
+#
 # Usage: bin/setup-hooks [--quiet]   (--quiet: say nothing when nothing changes)
 # A hooksPath set to some other existing directory is left alone, with a
 # warning: someone chose it.

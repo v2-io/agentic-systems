@@ -585,6 +585,12 @@ def main():
     script_dir = Path(__file__).resolve().parent
     project_root = script_dir.parent
 
+    # Self-heal: point this clone's git at the tracked hooks (.githooks/) if
+    # it is not already, so the commit checks fire without anyone remembering
+    # to set them up. Silent when nothing changes. See bin/setup-hooks.
+    if os.access(script_dir / "setup-hooks", os.X_OK):
+        subprocess.run([str(script_dir / "setup-hooks"), "--quiet"])
+
     COMPONENTS = ["01-aat-core", "02-tst-core", "03-llm-core", "04-eli-core"]
     graph_mode = bool(graph_file or svg_file or diagrams)
 
