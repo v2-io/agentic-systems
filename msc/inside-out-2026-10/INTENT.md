@@ -85,7 +85,7 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 | Part II integrator (Fable), own worktree: C2 and C3 spikes with their verifiers, B.1's Part II check, A4, A5 | C.2, B.1, C.1 | Part II and the Volume 3 bias law, on its branch; `part-ii-integration.md` |
 | A.1 fourth reader (Opus), bare brief | A.1 | `reviews/scope-adaptive-system-check-5.md` |
 | Part I round-2 integrator (Fable), own worktree: the persistence window, the C1 exit-time spike and its verification, Prop A.1S(i)'s break | C.1, C.2 | Part I, on its branch; `part-i-round-2.md` |
-| Volume 4 round-2 integrator (Opus), own worktree: the Volume 4 check | C.1 | `04-eli-core/`, on its branch; `c1-lanes/vol4-round-2.md` |
+| Volume 4 second checker (Opus), bare brief | C.1 | `reviews/vol4-c1-check-2.md` |
 | TST round-2 integrator (Opus), own worktree: the TST check | C.1, H.2 | `02-tst-core/`, on its branch; `c1-lanes/tst-round-2.md` |
 | vsect builder (Fable), on the line for the store migration (after the four integration branches merge) | I.4 | `~/src/arch/firmatum/utils/vsect/`, `.vsect/` |
 
@@ -100,7 +100,7 @@ These are finished and on the line through the lead:
 - the C.1 integrator (A1, A9, example-strategy, the detection test);
 - the A.1 integrator, its cold reader, and the independent re-reader;
 - the B.1 record writer (Part II) and its checker;
-- the Volume 4 lane (A6, A11, A12, A14, the substrate record);
+- the Volume 4 lane (A6, A11, A12, A14, the substrate record) and its round-2 integrator;
 - the A.1 round-2 integrator;
 - the C1, C2 and C3 spikers, and the C2 and C3 verifiers;
 - the Part I lane (A7, A10, the persistence-cost algebra);
