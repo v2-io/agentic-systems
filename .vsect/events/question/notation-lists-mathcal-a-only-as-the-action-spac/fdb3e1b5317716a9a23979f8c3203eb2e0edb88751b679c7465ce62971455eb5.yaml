@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: fdb3e1b5317716a9a23979f8c3203eb2e0edb88751b679c7465ce62971455eb5
+at: 2026-10-30T19:43:32Z
+store: asf
+act: mint
+about: question:notation-lists-mathcal-a-only-as-the-action-spac
+actor:
+  name: hooks-builder
+  session: https://claude.ai/code/session_013g85SGMtMDsCYM9fXWwTEp
+  role: integrator
+normalizer: vsect-norm/0
+declarations:
+  asked: 2026-10-30T19:43:32Z
+  asked-by: hooks-builder
+  closer: anyone
+  concerns:
+  - segment:scope-observation-ambiguity-modulation
+  kind: question
+own-version: a71961a93f33fc1c3d2515e42bc8791ecd4ee6a3720220c8fddb60d5a9a73102
+record: questions/notation-lists-mathcal-a-only-as-the-action-spac.md
