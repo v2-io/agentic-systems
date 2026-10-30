@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 30a70fb1fb85688953baa88721322453a77bd1a793b9de74c3def130ff28befc
+at: 2026-10-30T21:50:33Z
+store: asf
+act: place-finding
+about: segment:scope-agent-identity
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 1, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-model-sufficiency: cb0156177d2d2d215898316d7c7e1e6829188ccffc08bb3f458b93e9f5cd207f
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-information-bottleneck: 11e85702fb076cba51bab0990d192e1990325ceccd2ae7a29e76c400e2fb3947
+  segment:scope-agent-identity: 4c97c39f93a367ecb14cd1e9925ccce80e59fcab7a5fd3a24f589f546b2d4227
+finding: review:vol4-c1-check-1#C4/finding
+target: segment:scope-agent-identity
+text: 'check C4 came back narrowed: The session boundary re-derives: $S$ is defined against $\mathcal C_t$ (#def-model-sufficiency line 22), so a sufficiency drop is meaningful only on one chronica. The restore does not: lines 19/42 use a concurrency test ("no second copy run'
+version-from: git-revision

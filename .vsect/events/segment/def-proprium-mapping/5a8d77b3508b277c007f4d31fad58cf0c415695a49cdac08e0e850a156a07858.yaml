@@ -1,0 +1,43 @@
+schema: vsect-event/0
+id: 5a8d77b3508b277c007f4d31fad58cf0c415695a49cdac08e0e850a156a07858
+at: 2026-10-30T21:50:33Z
+store: asf
+act: place-finding
+about: segment:def-proprium-mapping
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 1, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-agent-spectrum: 82af9539a2f4c9bb11324137f9834061eb00d6bb3be6ccd6318f77095d583290
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-five-constitutive-factors: 274e5f94d7bdd7ead1c31b8ff18c0dc8a1f96e40542b533abab34741e4adace5
+  segment:def-mismatch-signal: 250e844f383dff060ba7879b6c86f9c5fd546df30d0c24cbdfa0ae771d932b78
+  segment:def-model-class-fitness: 80a2eb3fbf06b7ebb3ebdc642c79dc6883eb350ebafb68555ee3ea9c2505a25f
+  segment:def-model-sufficiency: cb0156177d2d2d215898316d7c7e1e6829188ccffc08bb3f458b93e9f5cd207f
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:def-proprium-mapping: 5a9a18f3cb062652b240788c3fa62835e889012beeec9a71e2e4047de3fc85a4
+  segment:der-directed-separation: 0d9c47858e17c9e43efdc9638604dd5db9dabc73f9c4811c30b75026e27e4f5e
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:der-temporal-nesting: d9659184b2722d9f11ea662238d58f77876e241ce9b794572f498f3541a2d488
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: d3898fba83b370fda5d32ace003b55ee464beed58852444a5b96d7a056054111
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 11e85702fb076cba51bab0990d192e1990325ceccd2ae7a29e76c400e2fb3947
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-mismatch-decomposition: 90113d52fcb4a08ec79c7c1716458430bc30e519ae89c602af9eddcc489b8710
+  segment:result-structural-adaptation-necessity: 7c7c9be73dd830411b5791b025db2e211b07520daab48dd58cca0ab30cf18c2a
+  segment:scope-adaptive-system: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-agent-identity: 4c97c39f93a367ecb14cd1e9925ccce80e59fcab7a5fd3a24f589f546b2d4227
+  segment:scope-logogenic-agent: 3ffbe5aaeb2190bdc918c6f0d23d608b5444e52ea26b5743fd6f762b989ec492
+  segment:scope-moral-continuity: 496af8990b2bd6aaf74730b07c43eaa46a898b7da35a917063d82d95b668c9b3
+finding: review:vol4-c1-check-1#C3/finding
+target: segment:def-proprium-mapping
+text: 'check C3 came back narrowed: Writable-but-quasi-static is right, and the primary quotes check out. Unreconciled: the row puts "terminal values" in a writable $O_t$ layer, while the self-actuation no-go (conditional) says a self-actuator''s terminal grounding is not an o'
+version-from: git-revision

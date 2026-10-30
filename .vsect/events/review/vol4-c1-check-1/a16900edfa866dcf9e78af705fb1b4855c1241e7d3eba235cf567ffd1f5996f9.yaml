@@ -1,0 +1,27 @@
+schema: vsect-event/0
+id: a16900edfa866dcf9e78af705fb1b4855c1241e7d3eba235cf567ffd1f5996f9
+at: 2026-10-30T21:50:47Z
+store: asf
+act: take
+about: review:vol4-c1-check-1
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 1, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+- C4:check
+- C5:check
+- C6:check
+- C7:check
+- C8:check
+- C9:check
+- C10:check
+- C11:check
+- F1:finding
+- F2:finding
+- F3:finding
+review: reviews/vol4-c1-check-1.md
+review-version: 7d7c6c4b6b4d2e6cda63ecc2ac551bdece14f7e48c8841eefde7f94c88e7c406

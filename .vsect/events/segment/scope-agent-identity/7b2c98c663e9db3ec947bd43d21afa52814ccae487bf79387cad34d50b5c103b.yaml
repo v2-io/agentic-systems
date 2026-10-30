@@ -1,0 +1,28 @@
+schema: vsect-event/0
+id: 7b2c98c663e9db3ec947bd43d21afa52814ccae487bf79387cad34d50b5c103b
+at: 2026-10-30T21:50:33Z
+store: asf
+act: rederive
+about: segment:scope-agent-identity
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 1, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-model-sufficiency: cb0156177d2d2d215898316d7c7e1e6829188ccffc08bb3f458b93e9f5cd207f
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-information-bottleneck: 11e85702fb076cba51bab0990d192e1990325ceccd2ae7a29e76c400e2fb3947
+  segment:scope-agent-identity: 4c97c39f93a367ecb14cd1e9925ccce80e59fcab7a5fd3a24f589f546b2d4227
+committed: after
+criterion: '(A14) Is a session boundary, and a restoration from backup with no second copy running, a state discontinuity on one trajectory rather than a new trajectory, under one consistent criterion that agrees with #def-chronica''s clone criterion and $\mathrm{Id}^{(i)}$''s prefix condition?'
+effective-version: 4ebf5ef42c010d31bf08e47405423c087fa494df85977d24ed2283604246c0d8
+from: review:vol4-c1-check-1#C4
+line: derivation
+outcome: narrowed
+recheck: 'lines 19, 42, 64; #obs-context-turnover lines 15 and 40; #def-chronica lines 16 and 36; #def-identity-sufficiency line 60; #def-proprium-mapping Epistemic Status'
+target-version: 4c97c39f93a367ecb14cd1e9925ccce80e59fcab7a5fd3a24f589f546b2d4227
+version-from: git-revision
