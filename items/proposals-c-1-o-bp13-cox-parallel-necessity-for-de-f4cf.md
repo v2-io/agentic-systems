@@ -21,3 +21,5 @@ Sharp theorem-spike question: can Lauritzen-Sadeghi 2018 unify enough to force D
 Primary aspect: correctness. Secondary: fundamentality, transparency. **Value: +5 framework / +7 paper.**
 
 **Independence: high.** Self-contained spike on `#deriv-graph-structure`; either produces a necessity-direction derivation (segment extension) or a new floor/no-go (Instance 4 is taken). Either outcome touches one primary segment plus possibly the meta-segment; minimal cross-segment surface area. Safe to parallelize with any other active proposal.
+
+Also (msc drain; source `msc/nogo-structure-read-2026-07-29.md` §6, §8(f)): the slug half of that source's finding is landed (471aa7ce renamed `deriv-graph-structure-uniqueness` to `#deriv-graph-structure`, and the OUTLINE headline no longer says uniqueness); the necessity half is this item. The source frames the missing step as enumerate-and-eliminate, the same shape as item:escape-set-exhaustion-claim-type.
