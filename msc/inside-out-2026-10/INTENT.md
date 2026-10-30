@@ -30,7 +30,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 ## C — The theory is correct where it is known wrong, and stronger where strengthening was found
 
 - **C.1** Every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. The defect lists are `owner-review/integrator-items.md` A1–A15, `internal-surfaces/00-cross-surface-map.md` §3 and `influx-scout/MAP.md` §3. · *started: F72 and A1 landed and checked; A6, A7, A10, A12, A13, A14 in parallel lanes; A8, A11 landed with B.1; A4, A5 wait for the C2/C3 spikes' integration, whose segments they share; A9's headline waits for A.2; A3 for the exit-time spike*
-- **C.2** Strengthenings C1–C3 (exit time, loop identification, allocation vs distortion coupling) are independently checked, then landed or refuted. · *C1 landed in canon as Prop A.1S-τ with the Model S window (33cfb14c); C2 and C3 landed in the Part II integration (253d2bca–279b2699; the ambiguity factor $\mathcal A$ and its product law deleted, a model-free range bound and a fixed-gain tilt hypothesis in their place); all three under independent check*
+- **C.2** Strengthenings C1–C3 (exit time, loop identification, allocation vs distortion coupling) are independently checked, then landed or refuted. · *C1 landed (Prop A.1S-τ, the Model S window) and integrated through round 3, with the threshold drift now a derived two-term expansion (merged after bc1cdeeb); its round-3 check waits for a slot. C2 and C3 landed (253d2bca–279b2699) and independently checked (`part-ii-check-1.md`): the three-way split holds, about a dozen exact sentences are scoped past their proofs, and drains are incomplete at twenty-odd sites; the Part II round-2 integration waits until the Working Notes drain has reached Part II*
 - **C.3** A cross-segment contradiction scan reports no open contradictions among load-bearing segments. · *not started; one found: `#scope-composite-agent` admits composites with no composite objective (routes C-iii, C-iv) while requiring one (:83), and eight segments rest on that gate (`items-recheck/q-proposals.md` §2.1)*
 - **C.4** Part III and the open strengthenings outside C1–C3 have an owner: each held item under C is landed, refuted, or set aside with its reason recorded. · *not started; the items are in the ledger, most `unassigned` today; inputs `items-recheck/q-proposals.md` §2, `t2-todo.md` §2*
 
@@ -85,9 +85,7 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 | Who | KR | Writes to |
 |---|---|---|
 | Lead coordinator (Opus 5.5, session "asf-cleanup") | I, plus coordination | `INTENT.md`, `HANDOFF.md` |
-| Part II checker (Opus), bare brief | C.2, B.1, C.1 | `part-ii-check-1.md`, `reviews/` |
 | `aisi-eoi` + `notability-extracts` drain, second attempt (Fable) | I.9 | `drain/aisi-eoi-notability.md`, the ledger |
-| Part I round-3 integrator (Opus), own worktree: the round-2 check's summary-sentence defects (gain buys time only below the Kalman gain), the pre-existing CT-S and Model S convention defects, and the derived threshold drift | C.1, C.2 | Part I on its branch; `c1-lanes/part-i-round-3.md` |
 | Volume 4 round-3 integrator (Fable), own worktree: the second check's three broken claims (the continuation rule, the factor-(iv) indicator, epoch-conditional W₁) and six narrowings | C.1 | Volume 4 on its branch; `c1-lanes/vol4-round-3.md` |
 | TST round-3 integrator (Opus), own worktree: the second check's seven narrowings (one a strengthening: the capped test rejects the exponential in obsidian-linter) and three Appendix F parts without a fate | C.1, H.2 | TST on its branch; `c1-lanes/tst-round-3.md` |
 | Drain (nine Opus agents): influx halves 1 and 2, audits, spikes, `aisi-eoi` + `notability-extracts`, Working Notes (01 gold lift, 01 other, 02–04), `msc/` | I.9 | `drain/*.md`, the ledger |
@@ -114,7 +112,9 @@ These are finished and on the line through the lead:
 - the second-mind confirmer;
 - the tracker re-check sweep (pilot and five lanes: 371 of 371 imported items judged, twelve of fourteen trackers deleted);
 - the TST lane checker and round-2 integrator;
-- the Part II integrator (C2, C3, B.1's Part II corrections, A4, A5; merged at 279b2699).
+- the Part II integrator (C2, C3, B.1's Part II corrections, A4, A5; merged at 279b2699) and its independent checker with three peers;
+- the Part I round-3 integrator;
+- the A.1 round-5 integrator (fresh noise and fresh transitions).
 - the hooks builder (I.2).
 
 ## Using this file
