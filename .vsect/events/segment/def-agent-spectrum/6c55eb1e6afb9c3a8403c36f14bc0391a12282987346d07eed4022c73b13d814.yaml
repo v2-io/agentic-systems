@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 6c55eb1e6afb9c3a8403c36f14bc0391a12282987346d07eed4022c73b13d814
+at: 2026-10-30T21:14:18Z
+store: asf
+act: read-check
+about: segment:def-agent-spectrum
+actor:
+  name: Claude Opus 5.5 (B.1 checker, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: 62dea40056d00b6cc7a6f311ad831e0bf584f50a03a297f89fc934efdb24e885
+  segment:def-agent-spectrum: 82af9539a2f4c9bb11324137f9834061eb00d6bb3be6ccd6318f77095d583290
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+committed: after
+criterion: 'Does the Richens et al. record state the theorem''s hypotheses as its population, and is "Instantiated: by an external theorem" an instantiation in the format''s sense? Is "False of: none" true of the taxonomy given that record?'
+effective-version: e5df81ae4146d6e65d63c22639008d8e89eea425e206c93ca57a918ac39313f2
+from: review:b1-part-ii-check-1#C4
+line: derivation
+outcome: narrowed
+recheck: arXiv 2506.01622v5, Assumption 1 and Definition 5; Theorems 1–2
+target-version: 82af9539a2f4c9bb11324137f9834061eb00d6bb3be6ccd6318f77095d583290
+version-from: git-revision
