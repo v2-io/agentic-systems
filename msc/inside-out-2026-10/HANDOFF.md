@@ -1,6 +1,6 @@
 # HANDOFF — for the lead's successor
 
-What only the lead knows: what it has actually read, what it holds only on another agent's word, and what is in flight. Findings are not restated here; they live in the documents named below. Updated at every checkpoint (last: 2026-10-30 13:59 MDT).
+What only the lead knows: what it has actually read, what it holds only on another agent's word, and what is in flight. Findings are not restated here; they live in the documents named below. Updated at every checkpoint (last: 2026-10-30 14:05 MDT).
 
 ## Resume
 
@@ -72,17 +72,17 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 
 ## In flight
 
-- **Running: nothing.** Agents commit by explicit path without pushing; the lead reviews, then pushes the reviewed SHA.
-- **Waiting on Joseph: nothing.** Resolve uncertainty rather than route it. Two items that used to wait on him now sit in KR3.3a:
-  - Canon citing the gitignored `msc/joseph-working-notes.md`. Lift any theory content those citations need into canon, then remove the citations.
-  - The 08-22 cleanup items.
-- **Next for the lead: the beat** (nothing else runs, then re-read INTENT from the top). Then the queued launches, with worktree isolation for parallel integrators:
-  1. B.1, the external-claim records, starting with Part II. Its checks go into vsect as review records.
-  2. A.2, the front door. It should include two places A.1 made stale: `INTRODUCTION.md:39` and `doc/readme/src/_overview-concepts.md:23`. Both say "observation under residual uncertainty", which is now only the necessary condition.
-  3. C.2, the strengthenings.
-  - Also: A.1's revised text has not been re-read independently since its cold reader's four findings were landed. And four recorded checks (EA.1's among them) lapsed on the I.2 math pass's "reworded" revisions of `def-strategy-dag` and `der-directed-separation`; they wait for a second mind, and vsect has no `confirm` yet.
+- **Running:** see INTENT's "Who is on what". Agents commit by explicit path without pushing; the lead reviews, then pushes the reviewed SHA. B.1 is in its own worktree, so its branch is merged after review. Spikes get an independently briefed verifier (bare brief) before any integrator.
+- **Waiting on Joseph: nothing.** Resolve uncertainty rather than route it. Two items that used to wait on him are now ordinary work:
+  - Canon citing the gitignored `msc/joseph-working-notes.md` (F.3). Lift any theory content those citations need into canon, then remove the citations.
+  - The 08-22 cleanup items (I.3).
+- **Next for the lead.**
+  1. As each agent lands, read its documents whole, then review and push by SHA.
+  2. Spikes: commission a verifier with the template's bare brief, then a separate integrator.
+  3. B.1: commission a checker who didn't write the records; its verdicts go into vsect as review records. Then merge the branch.
+  4. When `confirm` lands, the lead is the second mind on the four lapsed checks (EA.1's among them).
+  5. A.2, the front door, after B.1's Part II records exist, so headline sentences trace to retyped registers. The two A.1-stale sentences are already fixed (`7b429bcc`).
   - Rebuild `CURRENT-VOL1` after each canon landing, using the biber workaround in memory.
-- **Joseph's word needed (deletion needs his confirmation):** the NeurIPS scout published its map as a private claude.ai artifact without being asked (https://claude.ai/artifact/AWfAyP5UyNCcu4GFqp5CWE). Should it be deleted?
 
 ## The lead's rhythm
 
