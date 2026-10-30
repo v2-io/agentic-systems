@@ -4,7 +4,7 @@ KR **I.3** (one open ledger, keyed by claim), under the top intent *"Complete 'i
 
 ## 1. What was judged
 
-All 74 items in `t2-todo.txt` have a `vsect recheck` event, committed in nine commits from c07468bc to 950e6c26. Each `--why` names what I read at HEAD and the commit that did the work, where one exists.
+All 74 items in `t2-todo.txt` have a `vsect recheck` event, committed in nine commits from c07468bc to 950e6c26. One of them, 3e51b2f5, was rewritten to e60e5d3b by another lane's amend (same tree), so look for the second hash. The review record's `at:` stamp (cd668c8c) predates my last commits; the seven segments it binds to were unchanged between that commit and the take. Each `--why` names what I read at HEAD and the commit that did the work, where one exists.
 
 | Outcome | Count | Notes |
 |---|---|---|
