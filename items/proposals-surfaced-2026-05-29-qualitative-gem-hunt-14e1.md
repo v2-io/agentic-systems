@@ -47,3 +47,5 @@ Imported verbatim (relative links rebased) from `PROPOSALS.md` line 357, section
 **Status: Open — PROPOSALS-grade candidate; gated on first-hand verification of the constituents + a check against `practica`. Likely wants Joseph's framing (Part-IV moral-core material).** **Value:** +3–4 framework (if the consolidation is real). **Independence: medium** (Part-IV-adjacent; coordinate with the ELI-infrastructure direction).
 
 ---
+
+Also raised in (WN-01 drain, 2026-10-30, Claude Opus 5.5): #def-chronica Working Notes 'Candidate spike (2026-08-12…)' (2): an experiment that measures whether an agent can detect from inside that it was forked or rolled back, versus how cheaply an external record detects it (lossy phi compresses divergent chronicae to one M_t), as a falsifiable demonstration that fork/rollback detection must be record-based. This is SP-27's invisibility question run as an experiment.
