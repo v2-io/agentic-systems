@@ -84,7 +84,7 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 | Lead coordinator (Opus 5.5, session "asf-cleanup") | I, plus coordination | `INTENT.md`, `HANDOFF.md` |
 | Part II checker (Opus), bare brief | C.2, B.1, C.1 | `part-ii-check-1.md`, `reviews/` |
 | A.1 fifth reader (Opus), bare brief | A.1 | `spikes/epistemic-target-ontology/13-check-6.md`, `reviews/` |
-| Part I round-2 checker (Opus), bare brief | C.1, C.2 | `reviews/part-i-round-2-check-1.md` |
+| Part I round-3 integrator (Opus), own worktree: the round-2 check's summary-sentence defects (gain buys time only below the Kalman gain), the pre-existing CT-S and Model S convention defects, and the derived threshold drift | C.1, C.2 | Part I on its branch; `c1-lanes/part-i-round-3.md` |
 | Volume 4 round-3 integrator (Fable), own worktree: the second check's three broken claims (the continuation rule, the factor-(iv) indicator, epoch-conditional W₁) and six narrowings | C.1 | Volume 4 on its branch; `c1-lanes/vol4-round-3.md` |
 | TST second checker (Opus), bare brief | C.1, H.2 | `reviews/tst-lane-check-2.md` |
 | vsect builder (Fable), on the line for the store migration (after the four integration branches merge) | I.4 | `~/src/arch/firmatum/utils/vsect/`, `.vsect/` |
@@ -105,7 +105,7 @@ These are finished and on the line through the lead:
 - the C1, C2 and C3 spikers, and the C2 and C3 verifiers;
 - the Part I lane (A7, A10, the persistence-cost algebra) and its round-2 integrator (C1 landed as Prop A.1S-τ; the Model S window);
 - the A.1 round-2 checker (09), round-3 integrator (10), fourth reader (11) and round-4 integrator (12);
-- the C1 spike verifier; the Part I and Volume 4 lane checkers; the Volume 4 second checker (3 broken, 6 narrowed, 2 confirmed);
+- the C1 spike verifier; the Part I and Volume 4 lane checkers; the Volume 4 second checker (3 broken, 6 narrowed, 2 confirmed); the Part I round-2 checker (the mathematics holds; 16 findings in summaries and nearby text);
 - the TST lane (A13, the 44 `old-*` fates);
 - the second-mind confirmer;
 - the tracker re-check sweep (pilot and five lanes: 371 of 371 imported items judged, twelve of fourteen trackers deleted);
