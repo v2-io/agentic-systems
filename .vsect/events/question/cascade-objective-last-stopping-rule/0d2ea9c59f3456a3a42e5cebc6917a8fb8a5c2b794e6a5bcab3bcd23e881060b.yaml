@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0d2ea9c59f3456a3a42e5cebc6917a8fb8a5c2b794e6a5bcab3bcd23e881060b
+at: 2026-10-30T20:24:31Z
+store: asf
+act: ask
+about: question:cascade-objective-last-stopping-rule
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+blocks: []
+closer: anyone
+concerns:
+- segment:der-orient-cascade

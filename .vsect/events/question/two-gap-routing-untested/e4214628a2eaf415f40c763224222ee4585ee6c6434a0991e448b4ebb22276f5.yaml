@@ -1,0 +1,19 @@
+schema: vsect-event/0
+id: e4214628a2eaf415f40c763224222ee4585ee6c6434a0991e448b4ebb22276f5
+at: 2026-10-30T20:24:31Z
+store: asf
+act: mint
+about: question:two-gap-routing-untested
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+declarations:
+  asked: 2026-10-30T20:24:31Z
+  asked-by: b1-recorder
+  closer: anyone
+  concerns:
+  - segment:def-control-regret
+  kind: question
+own-version: e191b3184296e8bbc42ebad23acc1014ac78d4ce2e95c8542bbb87bf14a5d89c
+record: questions/two-gap-routing-untested.md

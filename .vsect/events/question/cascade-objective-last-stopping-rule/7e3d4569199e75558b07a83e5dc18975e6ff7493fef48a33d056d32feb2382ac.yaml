@@ -1,0 +1,19 @@
+schema: vsect-event/0
+id: 7e3d4569199e75558b07a83e5dc18975e6ff7493fef48a33d056d32feb2382ac
+at: 2026-10-30T20:24:31Z
+store: asf
+act: mint
+about: question:cascade-objective-last-stopping-rule
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+declarations:
+  asked: 2026-10-30T20:24:31Z
+  asked-by: b1-recorder
+  closer: anyone
+  concerns:
+  - segment:der-orient-cascade
+  kind: question
+own-version: ef95347f1f0391fdcbcd7469bd4ef63c729b1edc69334f6e27e243b1bda601f3
+record: questions/cascade-objective-last-stopping-rule.md

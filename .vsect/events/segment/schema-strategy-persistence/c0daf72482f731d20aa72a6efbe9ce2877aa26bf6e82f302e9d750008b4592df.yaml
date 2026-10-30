@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: c0daf72482f731d20aa72a6efbe9ce2877aa26bf6e82f302e9d750008b4592df
+at: 2026-10-30T20:24:21Z
+store: asf
+act: revise
+about: segment:schema-strategy-persistence
+atom: 48de095077fa3b0537a06e14643b07b757414737cdbce2bcd09498ce29858fb2
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+change: redefined
+declarations:
+  depends:
+  - result-sector-condition-stability
+  - result-sector-persistence-template
+  - def-strategic-calibration
+  - def-strategy-dag
+  stage: draft
+  status: conditional
+  type: proposed-schema
+from-version: 260e7c8427ec226b6a0a4fd363117b1a686b1b1555a2a6c29af815c82b85dd14
+own-version: ccd64fe16d62974d5d08ce046c48de9a4f41ebe13774a98e9e478313c5545f43
+record: 01-aat-core/src/schema-strategy-persistence.md

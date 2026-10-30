@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 67a9683e6d31b9540cf96769d47e34ad1fd8d767cb85b7b181eba4ff43b68340
+at: 2026-10-30T20:24:21Z
+store: asf
+act: revise
+about: segment:form-complete-agent-state
+atom: 468854e315e6f80c8689738e9b608a94fe657b6d722cc96eb5196d0c034aee4f
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+change: redefined
+declarations:
+  depends:
+  - form-agent-model
+  - scope-agency
+  - der-recursive-update
+  stage: claims-verified
+  status: robust-qualitative
+  type: formulation
+from-version: f3fbbecf05be5eef32b33bea6a9f137648fb709a96f8c4aa045a01e99f05ad13
+own-version: d3898fba83b370fda5d32ace003b55ee464beed58852444a5b96d7a056054111
+record: 01-aat-core/src/form-complete-agent-state.md

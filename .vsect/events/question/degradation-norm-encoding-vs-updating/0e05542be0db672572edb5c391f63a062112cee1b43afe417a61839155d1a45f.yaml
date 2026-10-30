@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0e05542be0db672572edb5c391f63a062112cee1b43afe417a61839155d1a45f
+at: 2026-10-30T20:24:31Z
+store: asf
+act: ask
+about: question:degradation-norm-encoding-vs-updating
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+blocks: []
+closer: awaiting:C.2
+concerns:
+- segment:der-directed-separation

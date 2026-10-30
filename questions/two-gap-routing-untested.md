@@ -1,0 +1,9 @@
+---
+kind: question
+closer: anyone
+asked: 2026-10-30T20:24:31Z
+asked-by: b1-recorder
+concerns: [segment:def-control-regret]
+---
+
+# The 2x2 routing's value rests on a normative claim the body never stated and no comparison has tested: that routing repairs by (delta_sat, delta_regret) does better than routing by total shortfall. Recorded as a hypothesis in def-control-regret's Claim Record. Which task family and baselines would test it, and is the Cohen-Levesque / goal-reasoning literature the place it has already been judged?
