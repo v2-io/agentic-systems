@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: TODO.md:35
 section: TODO — Miscellaneous & details › Strengthen-first candidates from the 2026-05-30/31 gold-lift sweep
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:der-directed-separation, segment:disc-partial-coupling-pathways, segment:der-logogenic-as-wrapping, segment:def-auxilia-hierarchy, segment:der-class-coercion-in-composition]
+rechecked: 2026-10-30T21:13:04Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: B.2
+restated: 'Two open pieces of the directed-separation foundation tail: (a) vocabulary — a causal-discipline terminology entry, and fix separated.md:35, which contradicts the segment''s own scoping rule; (b) the ''earned normativity'' Discussion subsection, now to be written against B.1''s record: derive the strictly-proper-scoring argument for processing-coupling and state the encoding-coupling boundary (where encoding ends and processing begins) rather than a blanket ''less coupling is better''. (C2'') propagation landed in c0f59365 except der-class-coercion-in-composition.'
 ---
 
 # Directed-separation foundation pass — remaining tail (the W₁-seed foundation pass itself landed 2026-05-31 — narrative in CHANGELOG 2026-05-31; tail durable in

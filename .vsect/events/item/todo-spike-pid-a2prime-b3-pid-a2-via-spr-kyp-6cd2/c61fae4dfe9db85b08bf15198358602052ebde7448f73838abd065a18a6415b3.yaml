@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: c61fae4dfe9db85b08bf15198358602052ebde7448f73838abd065a18a6415b3
+at: 2026-10-30T21:14:07Z
+store: asf
+act: recheck
+about: item:todo-spike-pid-a2prime-b3-pid-a2-via-spr-kyp-6cd2
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 96acba79+dirty
+criterion: 'One of the three members of CL-1, which ROUTING.md:37 and PROPOSALS D.9 define as one coupled #dissipativity-template landing, not separate half-segments; tracked whole under the bridge-lemma §7.2 item (TODO.md:469). Nothing of it in canon at HEAD beyond the der-gain-sector-bridge:76 PID row noted there.'
+of: item:todo-spike-bridge-lemma-nonlinear-strengtheni-a707
+outcome: duplicate

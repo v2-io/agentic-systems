@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: TODO.md:469
 section: TODO — Miscellaneous & details › 2026-05-12 (late) — Spike audit triage (99 spike files surveyed via 3 parallel agents)
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:der-directed-separation]
+rechecked: 2026-10-30T21:14:07Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: G.2
+restated: 'CL-1: land the dissipativity template (passivity-composition + pid-a2prime + bridge §7.2) as one coupled landing, after a regression check. Before it lands: der-gain-sector-bridge:76 already states alpha_PID as Derived with no derivation in canon and contradicts :108; the honest content is that any linear PID loop with an exponentially stable closed loop is in sub-scope alpha in a P-norm (converse Lyapunov + Cauchy-Schwarz), while the phase-margin formula for the constant is a heuristic until derived.'
 ---
 
 # `spike-bridge-lemma-nonlinear-strengthening-2026-04-24` §7.2 passivity / dissipativity — Tier 2 math, ready to land. Target: `#dissipativity-template` appendix

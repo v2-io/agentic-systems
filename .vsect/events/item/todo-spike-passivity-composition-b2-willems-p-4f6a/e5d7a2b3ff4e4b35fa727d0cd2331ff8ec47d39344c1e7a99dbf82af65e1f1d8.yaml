@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: e5d7a2b3ff4e4b35fa727d0cd2331ff8ec47d39344c1e7a99dbf82af65e1f1d8
+at: 2026-10-30T21:14:07Z
+store: asf
+act: recheck
+about: item:todo-spike-passivity-composition-b2-willems-p-4f6a
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 96acba79+dirty
+criterion: 'One of the three members of CL-1, which ROUTING.md:37 and PROPOSALS D.9 define as one coupled #dissipativity-template landing, not separate half-segments; tracked whole under the bridge-lemma §7.2 item (TODO.md:469). Nothing of it in canon at HEAD beyond the der-gain-sector-bridge:76 PID row noted there.'
+of: item:todo-spike-bridge-lemma-nonlinear-strengtheni-a707
+outcome: duplicate

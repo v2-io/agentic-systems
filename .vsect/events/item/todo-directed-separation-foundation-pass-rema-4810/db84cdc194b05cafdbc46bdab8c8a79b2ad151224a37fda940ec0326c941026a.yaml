@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: db84cdc194b05cafdbc46bdab8c8a79b2ad151224a37fda940ec0326c941026a
+at: 2026-10-30T21:13:04Z
+store: asf
+act: recheck
+about: item:todo-directed-separation-foundation-pass-rema-4810
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 1a98d12b+dirty
+criterion: 'Written 2026-05-31 (67733350). (iii) landed the same day in c0f59365: der-logogenic-as-wrapping:39,65 and def-auxilia-hierarchy:80 carry the corrected selection-channel bound and the per-site (C2'') judgment; only der-class-coercion-in-composition still never mentions (C2'') (0 hits). (i) is open: no causal-discipline entry in terminology/entries or LEXICON, and terminology/entries/separated.md:35 still says goal-blind-by-construction makes Part II ''applicable without further qualification'', which contradicts der-directed-separation''s own Claim Record (:182, a result consuming only the zero holds for every causally-disciplined agent). (ii) is open and its premise has moved: B.1''s record (:196) finds ''less coupling tracks reality strictly better'' established only for coupling in how an encoded event is processed, not established for goal-allocated encoding under a capacity limit (value-equivalent models, rational inattention), and says the strictly-proper-scoring argument for the first half is in no segment. The two-channel figure is still only a WN spec (:305). The WN at :261 still lists (iii) as remaining tail, a stale status signal.'
+outcome: holds
+owner: B.2
+restated: 'Two open pieces of the directed-separation foundation tail: (a) vocabulary — a causal-discipline terminology entry, and fix separated.md:35, which contradicts the segment''s own scoping rule; (b) the ''earned normativity'' Discussion subsection, now to be written against B.1''s record: derive the strictly-proper-scoring argument for processing-coupling and state the encoding-coupling boundary (where encoding ends and processing begins) rather than a blanket ''less coupling is better''. (C2'') propagation landed in c0f59365 except der-class-coercion-in-composition.'
