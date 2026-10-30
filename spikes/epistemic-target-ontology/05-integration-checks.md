@@ -99,3 +99,12 @@ for t in (2,5,11):
     s2=tau**2*v/(v+(t-1)*tau**2); lhs=s2+qq**2+rr**2
     print(t, (qq**2+tau**2+rr**2)-lhs, tau**2-s2, (qq**2+s2+rr**2)-lhs)
 ```
+
+## After the cold read (`06-cold-read.md`)
+
+Two statements above were narrower or looser than the truth, and the segment now carries the corrected forms:
+
+- **The housing result holds for every loop, not only known-law loops.** Re-housing as the Bayes posterior over all of $S_t$ gives, for tabular RL, the Bayes-adaptive MDP: a case-(d) twin with the same observations. "A behavioural scope would put every known-law tracker out" above should read "would put every loop out". The fork's resolution to a declared world is unchanged, and it now covers law learning as well as tracking. Whether a stronger invariance rule, one that requires every invariant function of the path to be in $\theta$, makes law learning behaviour-determined is the strengthening the segment's Working Notes record.
+- **$\pi_0$ needed a rule.** Item (h) shows that only its support matters, but the support decides RL's verdict, and "the modeler's viewpoint" did not fix it. The segment now fixes $\pi_0$ as the law of the world given what the agent knows by design.
+
+The integrator re-derived both points before landing them, and the cold reader's script reproduces. The cold reader's smaller findings were all landed: the transient/decaying correction, the prior switch in (c), the known-noise condition in (e), the (ii′) relation, the compute sentence, and condition 1 as a restatement.

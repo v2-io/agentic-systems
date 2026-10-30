@@ -43,7 +43,7 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 | $\varepsilon_t$ | Random variable | Observation noise |
 | $p_h(\cdot \mid \Omega_t, a_{t-1})$ | Kernel | Observation kernel: the conditional law of $o_t$ that $h$ and $\varepsilon_t$ induce; the learnable content of the channel ( #def-observation-function) |
 | $\theta = (\theta_T, \theta_h)$ | Random kernel pair | The environment's **law**: transition kernel and observation kernel, random under $\pi_0$ where the analysis leaves them open. Invariant along the run by definition; anything that varies is state ( #scope-adaptive-system). Unsubscripted $\theta$ in a segment's own model family or strategy edges is local to that segment; `#der-mood-timescale`'s $\theta_t$ is a drifting regime, which is slow state under this cut |
-| $\pi_0$ | Measure | The modeler's reference measure on $(\Omega_1, \theta)$: the class of worlds an analysis ranges over; adaptive-scope membership depends on it only through its null sets |
+| $\pi_0$ | Measure | Reference measure on $(\Omega_1, \theta)$: the law of the world given what the agent knows by design (knowledge, not belief); adaptive-scope membership depends on it only through its null sets ( #scope-adaptive-system) |
 | $S_t = (\Omega_t, \theta)$ | Random pair | Typed epistemic target: where things are and how things work ( #scope-adaptive-system) |
 | $F_t$ | Sequence | Future stream after $t$: $(a_t, o_{t+1}, a_{t+1}, o_{t+2}, \ldots)$ |
 | $H(\cdot)$ | Functional | Shannon entropy |
