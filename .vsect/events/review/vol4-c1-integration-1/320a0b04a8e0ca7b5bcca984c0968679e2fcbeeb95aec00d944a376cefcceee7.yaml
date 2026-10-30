@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: 320a0b04a8e0ca7b5bcca984c0968679e2fcbeeb95aec00d944a376cefcceee7
+at: 2026-10-30T20:51:13Z
+store: asf
+act: take
+about: review:vol4-c1-integration-1
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 integrator)
+  role: verifier
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+- F1:finding
+review: reviews/vol4-c1-integration-1.md
+review-version: 8c124c5ab3035e6e39e8f4b084970eeb1f1436339cf1d181f044aa85c8c3a653

@@ -1,0 +1,28 @@
+schema: vsect-event/0
+id: 9c56f34053b8c677cee4cc522d1b131a1aa542ae70ba6f06e7b8966ee14ae704
+at: 2026-10-30T20:51:12Z
+store: asf
+act: rederive
+about: segment:scope-agent-identity
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: 62dea40056d00b6cc7a6f311ad831e0bf584f50a03a297f89fc934efdb24e885
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-model-sufficiency: cb0156177d2d2d215898316d7c7e1e6829188ccffc08bb3f458b93e9f5cd207f
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-information-bottleneck: 11e85702fb076cba51bab0990d192e1990325ceccd2ae7a29e76c400e2fb3947
+  segment:scope-agent-identity: 4c97c39f93a367ecb14cd1e9925ccce80e59fcab7a5fd3a24f589f546b2d4227
+committed: before
+criterion: 'Is a session boundary (and a single-copy restoration) a state discontinuity on one trajectory rather than a new trajectory? Two tests: (a) is #obs-context-turnover''s sufficiency-discontinuity $\Delta S_{\text{turnover}}$ meaningful only if both states are measured against one continuing trajectory, and (b) is the post-boundary state a (stochastic) function of that trajectory''s history plus the new prompt?'
+effective-version: 87469ebe0f4eb69858d6283b0c3a2f5543b24acb3c79bcb139b5818950c5e5e4
+from: review:vol4-c1-integration-1#C3
+line: derivation
+outcome: confirmed
+recheck: '#obs-context-turnover formal statements (the $f_{\text{init}}$ inputs: store, prompt, pre-trajectory weights); #def-identity-sufficiency (IS-A2); W2–W3 of #scope-witness-bidirectional'
+target-version: 4c97c39f93a367ecb14cd1e9925ccce80e59fcab7a5fd3a24f589f546b2d4227
+version-from: git-revision

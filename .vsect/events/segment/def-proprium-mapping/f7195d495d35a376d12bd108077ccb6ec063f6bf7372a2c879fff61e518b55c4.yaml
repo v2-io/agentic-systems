@@ -1,0 +1,48 @@
+schema: vsect-event/0
+id: f7195d495d35a376d12bd108077ccb6ec063f6bf7372a2c879fff61e518b55c4
+at: 2026-10-30T20:51:12Z
+store: asf
+act: read-check
+about: segment:def-proprium-mapping
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: 62dea40056d00b6cc7a6f311ad831e0bf584f50a03a297f89fc934efdb24e885
+  segment:def-agent-spectrum: 5603f3020ffefd7470a1afced4576f8d7b231f0cfd8699fcb463135c92d22a97
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-five-constitutive-factors: 274e5f94d7bdd7ead1c31b8ff18c0dc8a1f96e40542b533abab34741e4adace5
+  segment:def-mismatch-signal: 250e844f383dff060ba7879b6c86f9c5fd546df30d0c24cbdfa0ae771d932b78
+  segment:def-model-class-fitness: 80a2eb3fbf06b7ebb3ebdc642c79dc6883eb350ebafb68555ee3ea9c2505a25f
+  segment:def-model-sufficiency: cb0156177d2d2d215898316d7c7e1e6829188ccffc08bb3f458b93e9f5cd207f
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:def-proprium-mapping: 814ee6bdae1a4f324428144f10e14a5e346b2076c2b8d5b9c56cd807720af7e8
+  segment:der-directed-separation: ba27167443e5c75d885e8dbf0fdae5230162778e17148de67923dd0d7b89cfe3
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:der-temporal-nesting: d9659184b2722d9f11ea662238d58f77876e241ce9b794572f498f3541a2d488
+  segment:deriv-recursive-update: d0f1a351e6604c21d76a76098c0aa890e5df028464e01b50a633d4e41243533f
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: f3fbbecf05be5eef32b33bea6a9f137648fb709a96f8c4aa045a01e99f05ad13
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 11e85702fb076cba51bab0990d192e1990325ceccd2ae7a29e76c400e2fb3947
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-mismatch-decomposition: 90113d52fcb4a08ec79c7c1716458430bc30e519ae89c602af9eddcc489b8710
+  segment:result-structural-adaptation-necessity: 7c7c9be73dd830411b5791b025db2e211b07520daab48dd58cca0ab30cf18c2a
+  segment:scope-adaptive-system: 12ea0186e7a33e60ec52fade2a82c6955eba9631cec9eaf7034b588e4023ef4a
+  segment:scope-agency: 9185f5597080252155e7cf6292188de464b923f4541aa305acb58e4b39e21162
+  segment:scope-agent-identity: 4c97c39f93a367ecb14cd1e9925ccce80e59fcab7a5fd3a24f589f546b2d4227
+  segment:scope-logogenic-agent: 3ffbe5aaeb2190bdc918c6f0d23d608b5444e52ea26b5743fd6f762b989ec492
+  segment:scope-moral-continuity: 496af8990b2bd6aaf74730b07c43eaa46a898b7da35a917063d82d95b668c9b3
+committed: before
+criterion: 'Against PROPRIUM ontology v2 (§4.5, §6.1, timescale table) and #def-five-constitutive-factors: is AXIOMATA writable by the sovereign entity and quasi-static at loop timescales, and does PRINCIPIA hold $G_t$ components (OPERATA) as well as $M_t$ components?'
+effective-version: e5f06595df7f047aa91de9180a93a355b1bbf864bffce978c9e6e8b471ebfecc
+from: review:vol4-c1-integration-1#C2
+line: correspondence
+outcome: confirmed
+recheck: '`~/src/arch/proprium/INGEST/old-firmatum/PROPRIUM-ONTOLOGY-v2.md` lines 205–225, 270–300, 470–490; #form-complete-agent-state'
+target-version: 814ee6bdae1a4f324428144f10e14a5e346b2076c2b8d5b9c56cd807720af7e8
+version-from: git-revision
