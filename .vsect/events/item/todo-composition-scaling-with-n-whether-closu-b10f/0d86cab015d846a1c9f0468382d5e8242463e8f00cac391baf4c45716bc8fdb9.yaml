@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 0d86cab015d846a1c9f0468382d5e8242463e8f00cac391baf4c45716bc8fdb9
+at: 2026-10-30T21:15:21Z
+store: asf
+act: recheck
+about: item:todo-composition-scaling-with-n-whether-closu-b10f
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 9796e5df+dirty
+criterion: 'git log -S''No exponential regime exists'' finds 2f46f209 (integration-is-replacement of the Open row). Read #form-composition-closure:185,358, spikes/.integrated/spike-accumulation-type-confound.md §(a), and grep''d 01-aat-core/src for Laplacian/consensus: only #deriv-critical-mass-composition:182,204, both adjacent-literature. Recorded as finding F1 in reviews/items-recheck-t1.md (a Working-Note status signal).'
+outcome: holds
+owner: C.1
+restated: 'The poly-vs-exp question was re-typed and its answer is in the #form-composition-closure body (2f46f209, 2026-05-19): eps* is a per-step residue, so ''scales in N'' was an accumulation predicate. What is still open is a derivation of the answer''s case (II): ''graph-Laplacian-bounded with no exponential regime under compression''. Neither canon nor the spike derives it (#deriv-critical-mass-composition cites the Laplacian only as adjacent literature), yet the table row and a Working Note label it Resolved. Derive (II) in a segment or state it at its real tier.'

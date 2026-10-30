@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: eb1b604bd561f397d1ebf21040a629c47d047be98df417d72026bafdfb16b28d
+at: 2026-10-30T21:16:11Z
+store: asf
+act: recheck
+about: item:todo-composition-admissibility-mathcal-m-text-10c4
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4f5912b3+dirty
+criterion: 'Read #form-composition-closure whole at HEAD; grep finds no 0*/src reference to msc/working-composition-admissibility.md (only TODO, audits, spikes/.integrated, ref/prior-art-analysis). Its WN line 365 still asks for the richer toy. internal-surfaces/msc.md:100 reached the same ''mostly landed'' verdict and left the ''for free'' question unverified; it is answered above. Found on the way: two defects in this segment''s body, recorded as C1 and F2 in reviews/items-recheck-t1.md.'
+outcome: holds
+owner: B.1
+restated: 'Most of this landed and the tracker never caught up. (A1)-(A4), (P1)-(P3), the macro-step bridge lemma (discrete time, contraction factor lambda_eff) and the two-Kalman toy are in #form-composition-closure. No canon segment cites the workshop any more; the G2 relink (9099e588) cleared those citations. The workshop''s ''bridge lemma falls out of the sector condition for free'' (its §7) was overtaken on 2026-04-06: canon proves the bridge needs the strictly stronger incremental sector bound (DA2''a-inc), with a witness. What is genuinely open: a toy composite of purposeful agents with strategy DAGs and a shared objective that exercises (A1)''s G_c (the Beta-Bernoulli single-edge case does not, and its ''grows without bound'' line is wrong: reviews/items-recheck-t1.md C1); a norm choice for non-estimation domains; principled eps_I. Owner B.1 because the toy is the true-instance a Part III record for (A1) needs.'

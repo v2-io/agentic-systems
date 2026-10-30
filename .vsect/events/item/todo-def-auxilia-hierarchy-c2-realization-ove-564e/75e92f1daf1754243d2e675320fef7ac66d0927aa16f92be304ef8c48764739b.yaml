@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 75e92f1daf1754243d2e675320fef7ac66d0927aa16f92be304ef8c48764739b
+at: 2026-10-30T21:12:59Z
+store: asf
+act: recheck
+about: item:todo-def-auxilia-hierarchy-c2-realization-ove-564e
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 1a98d12b+dirty
+criterion: 'Read #def-auxilia-hierarchy:80 at HEAD: the over-claim sentence is verbatim as the spike quotes it (last touched c0f59365, 2026-05-31, the same day the spike was written). grep for state-strip/stateless/''sufficient but not necessary'' across 01/03/04 src: only #der-logogenic-as-wrapping:39 names stateless calls; its WN line 124 points here accurately. Spike sections 6-7 read whole. Same file''s line 82 is the separate C.1 defect A6 (withdrawn Class-1-to-Class-2 composite claim), held by the vol4 C.1 lane, which is editing this file now; whoever lands (a) should coordinate with that lane.'
+outcome: holds
+owner: C.1
+restated: 'Two of the spike''s three repairs are unlanded. (a) #def-auxilia-hierarchy line 80 still says substrate separation is ''the very thing that earns the structural guarantee''; the spike''s verdict is sufficient-and-most-auditable, not necessary (the condition is goal-uncorrelated cross-call state, S independent of G^op). (b) The three-point (C2'')-realization spectrum (stateless reset / state-stripping / separate substrate, ranked by auditability) is in no segment; #disc-w1-structural-bound-boundary is its natural home. Repair (c) is half landed: #der-logogenic-as-wrapping line 39 names ''stateless separate calls'' beside separate substrates (c0f59365) but not state-stripping. Open residue (latent-G^op estimator, amplifying state, multi-call (C2'')) stays in the spike''s section 7.'

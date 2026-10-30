@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f12a65eec6195f5f00077f27e3695cccaffa158b9022aad532cb5488bbd34586
+at: 2026-10-30T21:16:37Z
+store: asf
+act: recheck
+about: item:todo-matrix-composition-lift-the-natural-next-8ff9
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4f5912b3+dirty
+criterion: 'Not landed: #form-composition-closure, #der-team-persistence and #deriv-critical-mass-composition still read scalar (grep for matrix/Loewner/Lyapunov equation finds nothing in them); the sketch lives only in spikes/.integrated/spike-matrix-persistence-condition.md §5.5. The work is part of the AAT-1 item (TODO.md:431, lane t2), which lists these three composition segments among its open promotions. This line adds one testable conjecture that the AAT-1 holder should carry: sub-agent specialization as a formal property, i.e. a sub-agent strong on direction v1 paired with one strong on v2 gives a composite strong on their span, even where each alone fails on the other''s direction. Neither canon nor the spike derives it. Also twin of this lane''s TODO.md:172 sub-bullet (Causal-IB LMI follow-ons, ''same remainder as AAT-1'').'
+of: item:todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe
+outcome: duplicate

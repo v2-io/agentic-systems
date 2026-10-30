@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 039368b68cd63edc6e753841eac9498f6527e2f20540daa46e5bacaf009fe125
+at: 2026-10-30T21:14:24Z
+store: asf
+act: recheck
+about: item:todo-613842-c-iv-idiom-drift-integration-debt-e3af
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 96acba79+dirty
+criterion: 'Read #scope-composite-agent (four routes, lines 16-89), #def-unity-dimensions:15,22,44,116 (four routes, landed), #form-composition-closure:24,73,107,371 and #deriv-strategic-composition:119-140,265 at HEAD. Twin: the pilot''s todo-c-iv-composite-route-count-mismatch-gem-bb4b (the three-route WN in #result-unity-closure-mapping). Owner C.3 because it is a cross-segment inconsistency rather than a single wrong derivation.'
+outcome: holds
+owner: C.3
+restated: 'The drift has moved. #def-unity-dimensions now carries four routes in its body (its WN line 138 still says the drift is live there, which the pilot recorded). What remains: (1) #form-composition-closure:73 says scope means ''at least one of the three alignment routes (shared objective, hierarchical derivation, mutual benefit)''; (2) more substantively, its body applies the closure criterion to every scope-satisfying set, but its own WN (line 371) says (A2)+(A4) presume a unique attracting fixed point, so C-iv composites in the R1/R2 regimes (beta'': mixed Nash, CCE) do not inherit the bridge lemma. That scope limit belongs in the body. (3) #deriv-strategic-composition:121 still tags C-iv ''Proposed Scope'' although #scope-composite-agent adopted it.'

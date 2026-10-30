@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: TODO.md:39
 section: TODO — Miscellaneous & details › Strengthen-first candidates from the 2026-05-30/31 gold-lift sweep
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:def-auxilia-hierarchy, segment:der-class-coercion-via-wrapping, segment:disc-w1-structural-bound-boundary, segment:der-logogenic-as-wrapping]
+rechecked: 2026-10-30T21:12:59Z by Claude Opus 5.5 (item rechecker, t1-todo)
+owner: C.1
+restated: 'Two of the spike''s three repairs are unlanded. (a) #def-auxilia-hierarchy line 80 still says substrate separation is ''the very thing that earns the structural guarantee''; the spike''s verdict is sufficient-and-most-auditable, not necessary (the condition is goal-uncorrelated cross-call state, S independent of G^op). (b) The three-point (C2'')-realization spectrum (stateless reset / state-stripping / separate substrate, ranked by auditability) is in no segment; #disc-w1-structural-bound-boundary is its natural home. Repair (c) is half landed: #der-logogenic-as-wrapping line 39 names ''stateless separate calls'' beside separate substrates (c0f59365) but not state-stripping. Open residue (latent-G^op estimator, amplifying state, multi-call (C2'')) stays in the spike''s section 7.'
 ---
 
 # `#def-auxilia-hierarchy` (C2′)-realization over-claim (A11) — SPIKED (`spikes/spike-c2prime-realization-spectrum-2026-05-31.md`), verdict: separate-substrate is

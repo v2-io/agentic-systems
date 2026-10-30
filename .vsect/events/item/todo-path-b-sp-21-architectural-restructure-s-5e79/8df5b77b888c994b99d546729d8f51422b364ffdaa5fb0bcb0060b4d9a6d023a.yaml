@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 8df5b77b888c994b99d546729d8f51422b364ffdaa5fb0bcb0060b4d9a6d023a
+at: 2026-10-30T21:17:00Z
+store: asf
+act: recheck
+about: item:todo-path-b-sp-21-architectural-restructure-s-5e79
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 1cb2165e+dirty
+criterion: 'Path B is SP-21 itself (PROPOSALS §G), imported separately from PROPOSALS.md. This TODO line only offers it as the alternative to Path A. Not landed: #scope-composite-agent still carries the four routes as one disjunctive scope.'
+of: item:proposals-sp-21-composite-agent-scope-route-ontolo-4969
+outcome: duplicate
