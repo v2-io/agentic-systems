@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: c80995a9384e7fb7b4f6cf9b21d62dba75aa0cec95ac77597d04f49dc4d0477f
+at: 2026-10-30T22:06:24Z
+store: asf
+act: correct
+about: item:todo-chapter-opening-discussion-segments-curr-4a86
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: 21d5988c6096716f6bc52fcc4880e0256f93d8d6b765a9c89cfb93a54d1b0936
+text: 'When recorded, the claim that align-slug would also rename the 17 impl- segments was an inference; the dry run I had seen showed only the -intro renames. Verified afterwards: ''bin/align-slug impl-strategy-dynamics --dry-run'' proposes impl-strategy-dynamics -> disc-impl-strategy-dynamics. The restatement stands.'

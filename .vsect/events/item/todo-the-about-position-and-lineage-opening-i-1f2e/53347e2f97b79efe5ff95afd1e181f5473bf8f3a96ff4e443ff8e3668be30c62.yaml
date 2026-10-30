@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 53347e2f97b79efe5ff95afd1e181f5473bf8f3a96ff4e443ff8e3668be30c62
+at: 2026-10-30T22:06:24Z
+store: asf
+act: correct
+about: item:todo-the-about-position-and-lineage-opening-i-1f2e
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: 34bcf4810a23999ea0d1c1082eedc47057ba249193f6b5ed747cdbc2836354f0
+text: 'My restatement is wrong that the bathtub gloss survives only in Working Notes. It is in canon as figure #fig-bathtub-scaffold in #persistence-and-limits-intro (lines 36-37; 91f1f634, 2026-05-18) and reaches CURRENT-VOL1.md. What remains open is (1) its absence from #result-persistence-condition''s Findings Brief and from the README, the two places the item named, and (2) the About register. The Torricelli isomorphism in the restatement stands.'

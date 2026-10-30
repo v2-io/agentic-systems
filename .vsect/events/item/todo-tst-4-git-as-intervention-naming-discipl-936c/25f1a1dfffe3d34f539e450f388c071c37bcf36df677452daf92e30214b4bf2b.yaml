@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 25f1a1dfffe3d34f539e450f388c071c37bcf36df677452daf92e30214b4bf2b
+at: 2026-10-30T22:06:24Z
+store: asf
+act: correct
+about: item:todo-tst-4-git-as-intervention-naming-discipl-936c
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: 72cf8b826e53523693e92985fbf6bf509ffb242881250e30928e31eb44847233
+text: 'The --why names ae118ab5 as the commit that scoped #def-system-coupling to a co-change statistic outside named regimes. git log -S''descriptive statistic of co-change'' gives dd815b7f (2026-04-21). The judgment is unchanged.'

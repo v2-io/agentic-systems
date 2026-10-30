@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: bd32cc82fb512a3496062f5016a38fc5d805374caf8d261c68e9b82310cbd1df
+at: 2026-10-30T22:06:24Z
+store: asf
+act: correct
+about: item:todo-scope-architecture-within-aat-s-scope-am-6e89
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: fe6815de742888ee6f4c4f73de9512f8b2c960b23ebe9573ecaa4df4af22bab3
+text: 'When I recorded this I had read a sample of the 29 ''AAT''s scope'' uses, not all of them as the --why implies. I read all 29 afterwards. The stale judgment holds: none is ambiguous between adaptive and agency scope. One use, #def-agent-environment:78, restates the scope criterion A.1 superseded, with ''exactly''; it is recorded as finding review:items-recheck-t1#F8.'

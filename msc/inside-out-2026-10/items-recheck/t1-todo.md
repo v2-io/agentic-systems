@@ -1,6 +1,6 @@
 # Item re-check, lane t1 (TODO.md, first half)
 
-KR **I.3** (one open ledger, keyed by claim), under the top intent *"Complete 'in-place' refactor of ASF — meta, all artifacts, and theory itself"*, which serves TRUTH about agency. Rechecker: Claude Opus 5.5 (item rechecker, t1-todo), 2026-10-30. Readers: the lead, for what the re-checks say about the theory (section 2) and the KR gap (section 4); the I.3 coordinator, for what the tool got wrong (section 3). Section 5 holds the limits, including four corrections to my own recorded events.
+KR **I.3** (one open ledger, keyed by claim), under the top intent *"Complete 'in-place' refactor of ASF — meta, all artifacts, and theory itself"*, which serves TRUTH about agency. Rechecker: Claude Opus 5.5 (item rechecker, t1-todo), 2026-10-30. Readers: the lead, for what the re-checks say about the theory (section 2) and the KR gap (section 4); the I.3 coordinator, for what the tool got wrong (section 3). Section 5 holds the limits, including four corrections to my own recorded events, each also recorded in the ledger with `vsect annotate`.
 
 ## 1. What was judged
 
@@ -55,8 +55,8 @@ In order of consequence. Where a claim is my derivation and not independently ch
 
 The outcome words fit every judgment. What strained was around them:
 
-- **No way to correct one's own re-check.** I recorded a wrong restatement on TODO.md:105: I said the bathtub gloss survives only in Working Notes, but it is a canon figure. `recheck` refuses a second act ("already re-checked … close it with `vsect close`"), and item files are not to be hand-edited. So the wrong frame now travels with a held item, and the correction lives only in this document (section 5). Something like `recheck --corrects <event>` by the same actor, or allowing a later `holds --restate` to supersede the earlier one, would fix it.
-- **A split names one survivor.** TODO.md:498 bundled thirteen defects. I opened ten items and closed the bundle as `duplicate --of` the first, listing the rest in `--why`. A `split --into a,b,c` outcome would keep every link.
+- **No way to correct one's own re-check.** I recorded a wrong restatement on TODO.md:105: I said the bathtub gloss survives only in Working Notes, but it is a canon figure. `recheck` refuses a second act ("already re-checked … close it with `vsect close`"), and item files are not to be hand-edited. Answered: `vsect annotate <event-id>` (arch 03bd689) writes a correction event beside the original, shown by `vsect why`. I have used it for all four corrections in section 5.
+- **A split names one survivor.** TODO.md:498 bundled thirteen defects. I opened ten items and closed the bundle as `duplicate --of` the first, listing the rest in `--why`. The builder's answer: `--of` is one link by design, and a second survivor goes in an `annotate` on the duplicate's recheck. Here the `--why` already names all ten.
 - **Closed imports stay in `items/imported/`.** Listing that directory overcounts open work; only `vsect open --format json` (`imported_unchecked`) is truthful. A first look at the filesystem misled me once.
 - **"unowned: no KR" works as the builder suggested**, and 10 of my 31 open holds carry it (section 4).
 - **The shared scratchpad is shared.** Another agent in this session overwrote my `scratchpad/commit.sh` with its own script, which referenced `mine.txt`. It failed at `mapfile` before `git add`, so nothing was committed under my name. I moved my helpers to `scratchpad/t1lane/`. Lane-unique names would prevent a lane committing another lane's file list.
@@ -75,7 +75,7 @@ I also closed three research ideas as `not-an-item` because nobody owes them: th
 
 ## 5. Not verified, corrections, and other limits
 
-**Corrections to my own recorded events** (events cannot be edited):
+**Corrections to my own recorded events.** Each is also recorded as a `correct` event beside the original (`vsect annotate`), visible in `vsect why item:<slug>`:
 
 - TODO.md:105's restatement wrongly says the bathtub gloss "survives only in Working Notes". It is figure `#fig-bathtub-scaffold` in `#persistence-and-limits-intro` (91f1f634, 2026-05-18), and it reaches CURRENT-VOL1. The open part is its absence from the Brief and the README.
 - TODO.md:440's `--why` names ae118ab5 as the commit that scoped `#def-system-coupling`. `git log -S` gives dd815b7f (2026-04-21).
