@@ -1,0 +1,29 @@
+schema: vsect-event/0
+id: 6e8dfeefd896cafa40490dccd4654f7403cc21939494d99d3ef3243e3898b900
+at: 2026-10-30T23:28:15Z
+store: asf
+act: rederive
+about: segment:der-change-expectation-baseline
+actor:
+  name: Claude Opus 5.5 (TST lane round-3 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:der-change-expectation-baseline: f3dc8ff40f781dd0f35b91846a29652e06797705500d95831b35e4b0a8d110ab
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:scope-adaptive-system: 48dd5554d1f66ba02af228fcb9593f6b9191852444272b4cb48458a3acae75de
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-evolving-software: 203c54085abb77b69eeaa45bb2dfc07c4776fa3455b5df9d178c8e3c2ea4ade6
+committed: before
+criterion: Given $Q(t) \sim c/t$, does $Q(t_0+u)/Q(t_0) \to t_0/(t_0+u)$ with median remaining life $\sim t_0$; does a hazard prior with $0 \lt f(0) \lt \infty$ give $S(t) \sim f(0)/t$; and does Jeffreys' prior conditioned on survival alone fail to normalize, while with $p(t_0 \mid T) = 1/T$ it gives $t_0/T^2$?
+effective-version: f32258c2aaf9b655f2b95366037075aa69798dedcd5a0e18e01e67fe109cdead
+from: review:tst-lane-round-3-integration#C9
+line: derivation
+outcome: confirmed
+recheck: ratio of the asymptotic forms; Watson's lemma with $a = 1$ (as checked in `reviews/tst-old-files-h2-integration.md` C3 for general $a$); $\int_{t_0}^\infty T^{-1}dT = \infty$; $\int_{t_0}^\infty T^{-2}dT = 1/t_0$
+target-version: f3dc8ff40f781dd0f35b91846a29652e06797705500d95831b35e4b0a8d110ab
+version-from: git-revision

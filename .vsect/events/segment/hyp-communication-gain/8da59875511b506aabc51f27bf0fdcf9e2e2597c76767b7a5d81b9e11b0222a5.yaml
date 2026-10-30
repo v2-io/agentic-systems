@@ -1,0 +1,34 @@
+schema: vsect-event/0
+id: 8da59875511b506aabc51f27bf0fdcf9e2e2597c76767b7a5d81b9e11b0222a5
+at: 2026-10-30T23:28:15Z
+store: asf
+act: read-check
+about: segment:hyp-communication-gain
+actor:
+  name: Claude Opus 5.5 (TST lane round-3 integrator)
+  role: integrator
+  read:
+  - segment:hyp-communication-gain
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-mismatch-signal: 8865e87714b5b10e0430d0e7f860cb1949a2307149171ba204c6f5b3c2b3ee7b
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:disc-composition-consistency: 38ecdbe2544533cf09ca51fc1f1c55da33ff83820a49ebd77b83629e2d8b3246
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:hyp-communication-gain: a75e331dfbf79a2a91d728e340fa960ca573fb44b8dac59b3f16eeebf7669846
+  segment:scope-adaptive-system: 48dd5554d1f66ba02af228fcb9593f6b9191852444272b4cb48458a3acae75de
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-multi-agent: bfd7ff18a1c5e2edca2661964961d30a0c4d87908c31f2929ef4155e87c4edd9
+committed: after
+criterion: Do the three Appendix F parts the second check found without a fate (section F.4 hierarchical "Information asymmetry"; F.5 "Decision-Theoretic Integration" items 2 and 3 with "What TFT contributes to game theory"; F.6 $A_{ji}$) now each have one?
+effective-version: 265009c248a8dea39c9794a51cea8e1ddb557f98502bc65a725963769fefd09e
+from: review:tst-lane-round-3-integration#C11
+line: correspondence
+outcome: confirmed
+recheck: Appendix F (`~/src/_ref/temporal-feedback/Appendix-F-Multi-Agent.md`) lines 193, 212–225, 235 against the four segments read and `questions/when-a-team-must-change-model-class-together-wha.md`
+target-version: a75e331dfbf79a2a91d728e340fa960ca573fb44b8dac59b3f16eeebf7669846
+version-from: git-revision

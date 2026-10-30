@@ -1,0 +1,29 @@
+schema: vsect-event/0
+id: 6e19dd6385ef60f868b9fb4cbd7b6e0af33e551b572f2f2076b302a2ef4e328e
+at: 2026-10-30T23:28:15Z
+store: asf
+act: read-check
+about: segment:der-change-expectation-baseline
+actor:
+  name: Claude Opus 5.5 (TST lane round-3 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:der-change-expectation-baseline: f3dc8ff40f781dd0f35b91846a29652e06797705500d95831b35e4b0a8d110ab
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:scope-adaptive-system: 48dd5554d1f66ba02af228fcb9593f6b9191852444272b4cb48458a3acae75de
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-evolving-software: 203c54085abb77b69eeaa45bb2dfc07c4776fa3455b5df9d178c8e3c2ea4ade6
+committed: after
+criterion: 'Does Caves (2000, arXiv:astro-ph/0001414) say what the Lineage paragraph attributes to it, and to Buch and Gott: the Bayesian form with Jeffreys'' prior and the uniform-age likelihood put forward by Buch, endorsed by Gott; the uniform-age likelihood presupposing that the phenomenon is in progress; the posterior given present age being the prior conditioned on survival; Gott''s rule then needing a prior density $1/T^2$?'
+effective-version: f32258c2aaf9b655f2b95366037075aa69798dedcd5a0e18e01e67fe109cdead
+from: review:tst-lane-round-3-integration#C10
+line: correspondence
+outcome: confirmed
+recheck: 'the arXiv PDF, text extracted: pages 3–4 ("Gott has endorsed [3, 4] a Bayesian analysis suggested by Buch [5]"), Eqs. (7), (12), (13), (19), (30) and $w_g(T) = 1/T^2$; references [3] Gott, Nature 368, 108 (1994) and [5] Buch, Nature 368, 107–108 (1994)'
+target-version: f3dc8ff40f781dd0f35b91846a29652e06797705500d95831b35e4b0a8d110ab
+version-from: git-revision
