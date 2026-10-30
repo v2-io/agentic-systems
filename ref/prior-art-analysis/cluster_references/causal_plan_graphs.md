@@ -283,7 +283,9 @@ Four regimes, in order of increasing realism:
 **Scope of the AND-prerequisite construction: strict prerequisites only.** The factoring-above principle requires that the common cause be a *strict* prerequisite — one for which $\theta_{\text{child} \mid \neg C} \approx 0$. Shared infrastructure going down, a required resource being absent, a gating permission being denied: in all of these, the correlated children fail when the common cause fails, so the AND-prerequisite correctly encodes the correlation. When the common cause is instead a *soft facilitator* — favorable market conditions, a supportive team culture, an enabling technology — children have $\theta_{\text{child} \mid \neg C} \gt 0$ and can succeed when the common cause is absent, just less reliably. The AND-prerequisite construction mathematically forces $P(\text{sub-plan} \mid \neg C) = 0$, which strictly understates success probability when $C$ is absent. Soft facilitators therefore fall outside L1's single-pass construction and require one of:
 
 - **Mixture form (L1'):** split the sub-plan into two conditional structures and weight by $P(C)$:
+
 $$\hat P_\Sigma = \theta_C \cdot P_{\Sigma}(G \mid C) + (1 - \theta_C) \cdot P_{\Sigma}(G \mid \neg C)$$
+
 This keeps propagation polynomial but requires maintaining two parallel sub-DAGs per soft-facilitator node. Per-edge credences split into two regimes ($p_{ij \mid C}$ and $p_{ij \mid \neg C}$), doubling the parametric footprint for affected edges.
 - **Explicit conditioning (L2 subcase):** $P_\Sigma(G) = \sum_c P(C = c) \cdot P_\Sigma(G \mid C = c)$, summing over common-cause states. For $k$ soft facilitators with binary states, this costs $O(2^k)$ in the number of common-cause states — the exponential blowup L2 was defined to name.
 

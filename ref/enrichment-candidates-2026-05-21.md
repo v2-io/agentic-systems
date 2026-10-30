@@ -34,7 +34,7 @@ Replaces Nash equilibrium with a **dynamical solution concept** based on Conley'
 
 ### 1.d Symplectic Gradient Adjustment (SGA) and Hamiltonian-respecting learning dynamics
 
-Subsumed under 1.b but worth its own pointer. The algorithm provably converges locally to stable fixed points in games where vanilla gradient descent cycles. If AAT lands the actuated-agent learning rule for strategic composition (currently under-specified at the sub-scope-α' layer), SGA is the natural candidate. **Direct practical hook for `#deriv-strategic-composition` machinery.**
+Subsumed under 1.b but worth its own pointer. The algorithm provably converges locally to stable fixed points in games where vanilla gradient descent cycles. If AAT lands the actuated-agent learning rule for strategic composition (currently under-specified at the sub-scope-$\alpha'$ layer), SGA is the natural candidate. **Direct practical hook for `#deriv-strategic-composition` machinery.**
 
 ### 1.e Cheung-Piliouras-Tao 2021: passivity ↔ regret ↔ Poincaré recurrence
 

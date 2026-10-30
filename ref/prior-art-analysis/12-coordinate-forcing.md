@@ -50,7 +50,7 @@ The four forced coordinates resolve to one underlying object:
 - **Rockafellar (1970)** *Convex Analysis* — Legendre-Fenchel duality.
 - **Amari & Nagaoka (2000)** *Methods of Information Geometry* §3.5 — the canonical reference for the exponential-family Legendre-Fenchel geometry on which all four coordinates live.
 - **Zhang (2004)** *Divergence Function, Duality, and Convex Analysis* — Neural Comput. 16:159. Divergence-vs-Bregman correspondence on exponential families.
-- **Amari (2009)** *α-Divergence Is Unique, Belonging to Both f-Divergence and Bregman Divergence Classes*. (This is the result the previous version cited as "f-vs-Bregman intersection forces KL"; it is *adjacent* to the Cauchy-FE pathway AAT uses for the divergence layer — both real, different proof routes to the same coordinate.)
+- **Amari (2009)** *$\alpha$-Divergence Is Unique, Belonging to Both f-Divergence and Bregman Divergence Classes*. (This is the result the previous version cited as "f-vs-Bregman intersection forces KL"; it is *adjacent* to the Cauchy-FE pathway AAT uses for the divergence layer — both real, different proof routes to the same coordinate.)
 - **Bauschke & Combettes (2017)** *Convex Analysis and Monotone Operator Theory in Hilbert Spaces*.
 
 ### Pillar 4: Adjacent Cases that Share Shape but Not the Forcing Structure

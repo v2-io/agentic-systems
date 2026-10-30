@@ -94,7 +94,7 @@ The three dynamics (S-1), (S-2), (S-3) are proposed schemas, not results. A foll
 
 Before symbiogenesis, the sub-agents were a multi-agent system ( #scope-multi-agent) but not a composite. After, the resulting composite is subject to all of AAT's composition machinery. The symbiogenic transition is the specific dynamical process of composite-agent identity creation.
 
-**Why this cannot be modeled as peer coupling.** Peer coupling assumes pre-existing sub-agents being projected into a macro-description. The closure-defect framework presupposes the composite exists; it measures how faithfully the macro tracks the micro. Symbiogenesis is about a composite *coming into being* from two previously-independent agents. No projection Λ of the pre-symbiogenic system yields the post-symbiogenic composite, because the endosymbiont's objective *changes* during the process — its objective is different before and after. The transformation is intrinsic to the sub-agents' state, not an external projection choice.
+**Why this cannot be modeled as peer coupling.** Peer coupling assumes pre-existing sub-agents being projected into a macro-description. The closure-defect framework presupposes the composite exists; it measures how faithfully the macro tracks the micro. Symbiogenesis is about a composite *coming into being* from two previously-independent agents. No projection $\Lambda$ of the pre-symbiogenic system yields the post-symbiogenic composite, because the endosymbiont's objective *changes* during the process — its objective is different before and after. The transformation is intrinsic to the sub-agents' state, not an external projection choice.
 
 **Why this cannot be modeled as extreme transition.** The extreme transition motif operates at the population level with many agents, neutral drift of types, and niche-construction dynamics. Symbiogenesis is typically between two specific agents (or a small number) and proceeds through a specific asymmetric integration rather than through statistical population dynamics. The mechanisms overlap — symbiogenesis often occurs as part of a larger transition — but the core mechanism of symbiogenesis (bilateral asymmetric integration) is distinct from the population-level dynamics of extreme transitions.
 
@@ -467,9 +467,11 @@ This segment instantiates the sector-persistence template ( #result-sector-persi
 Let $\mathcal T_i$ be the adaptive tempo of sub-agent $i$ within a composite group of $N$ agents. Let $\mathcal T_c$ be the adaptive tempo of the composite macro-agent $A_c$ defined by an admissible coarse-graining $\Lambda$.
 
 *[Derived (Sub-additive Tempo, sketch)]* For any composite agent $A_c$ with minimal closure defect $\varepsilon^\ast \geq 0$, the composite tempo is bounded by the sum of individual tempos:
+
 $$ \mathcal{T}_c \leq \sum_{i=1}^N \mathcal{T}_i $$
 
 *[Definition (Coordination Overhead)]* We define the **coordination overhead penalty** $C_{\text{coord}}$ as the difference between aggregate potential and realized macro-tempo:
+
 $$ C_{\text{coord}} := \Big( \sum_{i=1}^N \mathcal{T}_i \Big) - \mathcal{T}_c $$
 
 ## Epistemic Status
@@ -512,12 +514,18 @@ The closure error rate is converted to a tempo penalty by normalizing against th
 **Consequences (dimensionally correct):**
 
 - The realized external tempo:
+
 $$\mathcal T_c^{\text{ext}} = \mathcal T_c - C_{\text{coord}} \;\leq\; \sum \mathcal T_i - \frac{\varepsilon^\ast \nu_c}{\lVert\delta_{\text{critical}}\rVert}$$
+
 - **Brooks's Law.** Adding an agent increases $\sum \mathcal T_i$ but may also increase $\varepsilon^\ast$. The turning point — where adding a member lowers realized external tempo — occurs when:
+
 $$\frac{\Delta\varepsilon^\ast \nu_c}{\lVert\delta_{\text{critical}}\rVert} \gt \Delta\mathcal T_i$$
+
 The closure-defect increase (expressed as tempo penalty) exceeds the new member's tempo contribution.
 - **Composite persistence condition.** The composite persists iff $\mathcal T_c \gt \rho_{\text{eff}} / \lVert\delta_{\text{critical}}\rVert$, equivalently:
+
 $$\sum \mathcal T_i \;\gt\; \frac{\rho_{\text{ext}} + \varepsilon^\ast \nu_c}{\lVert\delta_{\text{critical}}\rVert}$$
+
 which explicitly separates internal-coordination overhead from external challenge while keeping all quantities in tempo units on the LHS and disturbance-rate units on the RHS.
 
 ## Discussion

@@ -53,7 +53,7 @@ However, AAT provides **pure mathematical novelty** in how it derives the *Delib
 **AAT-native methodological inventions on this row:**
 - The **Deliberation Threshold** derivation from internal structural dynamics (mismatch drift + epistemic gain) rather than economic opportunity cost.
 - The **fluency-vs-sufficiency** distinction: model sufficiency (can the model in principle produce the right action?) is *separate* from action fluency (does the action flow without expensive deliberation?). A chess engine with a perfect rule model still requires expensive search (high sufficiency, low fluency); a trained reflex has moderate sufficiency but high fluency in narrow domains. What expertise and reflexes share is that the *action-generating capacity has been absorbed into the model's structure*.
-- The **structural pressure toward implicit action** in high-tempo environments: as drift → ∞ or optimal deliberation duration → 0, the optimal strategy converges to pure fluent action.
+- The **structural pressure toward implicit action** in high-tempo environments: as drift → $\infty$ or optimal deliberation duration → 0, the optimal strategy converges to pure fluent action.
 - The **Three-Way Resource Allocation** (Exploit / Explore / Deliberate) explicitly framing deliberation as *internal exploration* in model-space with diminishing returns from finite model fidelity.
 - The **Boyd IG&C → Kahneman System 1/2 → model-free vs model-based RL arbitration** bridging via the threshold derivation.
 

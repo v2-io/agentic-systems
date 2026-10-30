@@ -37,9 +37,17 @@ old-*.md
 ref/agentic-tft/
 02-tst-core/lit-review/
 
-# Verbatim model outputs: survey answers, prompts as sent, quiz responses.
+# Verbatim model and tool outputs: survey answers, prompts as sent, quiz
+# responses, and the Undermind research reports under ref/ (each opens with
+# the Undermind banner; they are a tool's output, kept as delivered).
 empirica/glyph-sequence-perception/data/
 msc/quiz-responses/
+ref/Prior_art_for_*.md
+ref/Novelty_defense_and_integration.md
+ref/Unidentifiability_and_rate_class_prior_art.md
+ref/layer-3-mechanism-counterfactual-sep.md
+ref/separability-ladder-prior-art-report.md
+ref/prior-art-analysis/*_novelty_memo.md
 
 # Generated. Fix the source and regenerate (bin/refresh-all, bin/term render,
 # bin/build-monograph); refresh-all --check gates the first two.

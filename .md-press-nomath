@@ -1,0 +1,9 @@
+# .md-press-nomath — files md-press unwraps as usual but whose math pass it
+# skips (gitignore syntax; md-press 0.3.0+). For prose whose glyphs are the
+# subject rather than mathematics, where `σ` is a character being studied,
+# not a variable: wrapping it in $…$ would change what the text says, and
+# declining every glyph one by one would bury the file in markers.
+
+# The glyph-sequence perception study: its prose, tables and notes discuss
+# glyphs as glyphs.
+empirica/glyph-sequence-perception/
