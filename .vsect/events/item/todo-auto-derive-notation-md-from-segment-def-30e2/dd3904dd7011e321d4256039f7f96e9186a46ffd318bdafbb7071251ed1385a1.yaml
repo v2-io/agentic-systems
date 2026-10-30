@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: dd3904dd7011e321d4256039f7f96e9186a46ffd318bdafbb7071251ed1385a1
+at: 2026-10-30T21:20:58Z
+store: asf
+act: recheck
+about: item:todo-auto-derive-notation-md-from-segment-def-30e2
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'TODO.md:245 (2026-07-14, 0d20b877). Same work as the PRACTICA item the pilot held under F.4: NOTATION.md is still hand-maintained (its head carries the drift caveat) and no bin/ generator exists. The two lines differ in design, which whoever owns it should settle: PRACTICA generates from terminology entries'' notation: field; this one (Joseph 2026-05-18) declares symbols in the defining segment and extracts them there, so the index cannot drift from the definition. The pilot''s finding that a notation: field was misassigned (C_t on the continuity entry) is evidence for the segment-declared design.'
+of: item:practica-migrate-notation-md-to-the-same-auto-gen-3924
+outcome: duplicate

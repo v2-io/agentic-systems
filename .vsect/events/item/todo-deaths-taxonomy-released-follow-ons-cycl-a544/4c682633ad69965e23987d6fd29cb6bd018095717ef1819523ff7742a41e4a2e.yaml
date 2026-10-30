@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4c682633ad69965e23987d6fd29cb6bd018095717ef1819523ff7742a41e4a2e
+at: 2026-10-30T21:22:06Z
+store: asf
+act: recheck
+about: item:todo-deaths-taxonomy-released-follow-ons-cycl-a544
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'TODO.md:155 (line last touched 9a51728f, 2026-07-15). Each sub-item checked at HEAD: (a) all open, recorded as ''Open'' Working Notes in der-severed-actuation-dynamics:103-105 (witnessing-vs-wirehead, partial severing, learned-helplessness prior art uncited) and der-captured-objective-dynamics:74-75 (drift rate is a no-restoring-force argument, not a rate; active/passive unification); (b) no continuity-death composition segment exists (04-eli-core/src has only def-death-as-factor-loss, der-identity-continuity-threshold, scope-moral-continuity); (c) (D1)/(D4) terminal forms still absent from def-death-as-factor-loss; (d) no deaths-as-harms norm segment; (f) the death-name terminology batch is still queued (TERMINOLOGY-TODO:67). Research follow-ons with no KR; (a)''s learned-helplessness citation is F.2 work.'
+outcome: holds
+owner: unassigned

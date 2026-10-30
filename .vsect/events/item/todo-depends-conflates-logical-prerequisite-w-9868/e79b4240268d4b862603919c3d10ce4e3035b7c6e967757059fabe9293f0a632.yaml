@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: e79b4240268d4b862603919c3d10ce4e3035b7c6e967757059fabe9293f0a632
+at: 2026-10-30T21:22:07Z
+store: asf
+act: recheck
+about: item:todo-depends-conflates-logical-prerequisite-w-9868
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'TODO.md:264 (2026-05-29, ea42f507). The direct 2-cycle is live at HEAD: form-strategy-complexity-cost lists deriv-strategy-cost-regret-bound in depends: and vice versa. The ''second instance'' is not a cycle (form-information-bottleneck does not depend on def-model-sufficiency), so the item overstates by one. No strengthens:/forward-ref: field exists in format.sop.md; vsect now reads depends: as the basis a check binds to, which makes a motivational edge a false basis edge: a check on the formulation would lapse when its own strengthening appendix changes.'
+outcome: holds
+owner: H.2
+restated: 'One live depends: 2-cycle (form-strategy-complexity-cost <-> deriv-strategy-cost-regret-bound), where the formulation->appendix edge is a forward pointer. Since vsect binds checks to the depends: chain, such edges are now wrong basis edges, not just lint noise; give forward pointers their own field or drop them.'

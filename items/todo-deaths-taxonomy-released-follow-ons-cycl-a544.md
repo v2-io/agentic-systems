@@ -3,10 +3,11 @@ kind: item
 provenance: imported
 source: TODO.md:155
 section: TODO — Miscellaneous & details › Open theory items (MEDIUM)
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:def-death-as-factor-loss, segment:der-severed-actuation-dynamics, segment:der-captured-objective-dynamics, segment:def-mood, segment:der-mood-timescale, segment:result-persistence-condition, segment:deriv-persistence-cost, segment:der-turnover-information-recursion]
+rechecked: 2026-10-30T21:22:06Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: unassigned
 ---
 
 # Deaths taxonomy — released follow-ons (cycle 2026-06-10; plan `msc/deaths-grounding-plan-2026-06-10.md`). `#def-death-as-factor-loss` landed 2026-06-10; agency
