@@ -1,8 +1,6 @@
 # Spike Track: Temporal Nesting and the Renormalization-Group Reframe
 
-**Status**: open — initial brief
-**Date opened**: 2026-05-09
-**Conversation provenance**: Joseph asked whether ASF explores nested adaptive cycles operating at different levels of abstraction simultaneously (inner fast loop advances slower outer loop). Survey found three load-bearing segments (`#der-temporal-nesting`, `#form-composition-closure`, `#der-tempo-composition`) plus the unifying machinery (`#result-sector-persistence-template`, `#der-multi-timescale-stability`). Discussion then surfaced a candidate elegance: AAT as a renormalization-group structure with itself as fixed point — making temporal nesting and composite formation two projections of one operation. This brief sets up that test.
+**Status**: open — initial brief **Date opened**: 2026-05-09 **Conversation provenance**: Joseph asked whether ASF explores nested adaptive cycles operating at different levels of abstraction simultaneously (inner fast loop advances slower outer loop). Survey found three load-bearing segments (`#der-temporal-nesting`, `#form-composition-closure`, `#der-tempo-composition`) plus the unifying machinery (`#result-sector-persistence-template`, `#der-multi-timescale-stability`). Discussion then surfaced a candidate elegance: AAT as a renormalization-group structure with itself as fixed point — making temporal nesting and composite formation two projections of one operation. This brief sets up that test.
 
 **Depends on / cites**: `#der-temporal-nesting`, `#form-composition-closure`, `#der-tempo-composition`, `#result-sector-persistence-template`, `#der-multi-timescale-stability`, `#def-strategy-dag`, `#def-adaptive-tempo`, `#disc-composition-consistency`, `#hyp-directed-separation-under-composition`, `spikes/spike-composition-correlated-kalman.md`, `spikes/spike-bridge-lemma-contraction.md`, `spikes/spike-projection-admissibility.md`.
 

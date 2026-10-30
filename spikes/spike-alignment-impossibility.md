@@ -1,8 +1,6 @@
 # Spike: Mechanism Design Impossibility for Multi-Agent Alignment
 
-**Status.** Exploratory research spike.
-**Date.** 2026-04-25.
-**Pressure Point.** The framework provides robust mechanisms for individual agent persistence and defines composite agents (`#scope-composite-agent`). However, for multi-agent systems where objectives are not perfectly aligned ($U_O < 1$), `#deriv-strategic-composition` relies on equilibrium convergence (e.g., potential games). In the context of AI safety and decentralized multi-agent alignment, we often seek an "alignment protocol" (e.g., shared constitutional rules, prompt structures, or interaction protocols) that guarantees safe, cooperative outcomes. 
+**Status.** Exploratory research spike. **Date.** 2026-04-25. **Pressure Point.** The framework provides robust mechanisms for individual agent persistence and defines composite agents (`#scope-composite-agent`). However, for multi-agent systems where objectives are not perfectly aligned ($U_O < 1$), `#deriv-strategic-composition` relies on equilibrium convergence (e.g., potential games). In the context of AI safety and decentralized multi-agent alignment, we often seek an "alignment protocol" (e.g., shared constitutional rules, prompt structures, or interaction protocols) that guarantees safe, cooperative outcomes.
 
 This spike investigates whether hard social-choice impossibility theorems (specifically Gibbard-Satterthwaite) structurally prohibit the existence of such robust alignment protocols for heterogeneous AAT agents.
 
@@ -66,7 +64,7 @@ This spike successfully bridges social choice theory and AAT's agent interaction
 
 **Adversarial Critique:** The Gibbard-Satterthwaite theorem only applies to *ordinal* preferences (rankings). AAT agents do not use ordinal rankings; they use *cardinal* utility (the objective functional $V_O \to \mathbb{R}$). In mechanism design, if agents have cardinal utility and can make side-payments (transferable utility), you can use VCG (Vickrey-Clarke-Groves) mechanisms to achieve perfect, strategy-proof alignment. The impossibility theorem vanishes under these conditions!
 
-**Forward-Pass Repair:** A brilliant mechanism-design critique. The "No-Go" theorem only holds if agents cannot make side-payments to compensate each other for adopting suboptimal joint plans.
+**Forward-Pass Repair:** A brilliant mechanism-design critique. The "No-Go" theorem only holds if agents cannot make side-payments to compensate each other for adopting suboptimal joint plans.  
 *Fix:* This critique reveals a massive, hidden insight. To align heterogeneous AI agents, they *must* have a transferable currency (e.g., trading compute tokens, API budget, or context window space). Without a computable currency for VCG side-payments, Gibbard-Satterthwaite holds and deception is mathematically guaranteed. This transforms the spike from a depressing impossibility result into a prescriptive engineering requirement for multi-agent operating systems: they must have a native token economy to be safe.
 
 **Promotion Plan:**

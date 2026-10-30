@@ -375,9 +375,7 @@ This is how the startle reflex works: it responds to statistical anomalies (sudd
 
 Version 4 reveals: if the epistrophic intent and strategic intent are architecturally separate (different processing paths), directed separation is natural. If they're merged, it fails. This is a causal-structural argument, not a scope condition — it's about the topology of the processing graph, not a parameter of the agent.
 
-For LLMs: the processing paths are merged (same attention mechanism). κ_processing is high by architectural necessity.
-For modular agents: the processing paths can be separate. κ_processing can be low by design.
-For biological agents: partially separate (thalamic monitoring is separate from cortical processing) but with extensive cross-talk.
+For LLMs: the processing paths are merged (same attention mechanism). κ_processing is high by architectural necessity. For modular agents: the processing paths can be separate. κ_processing can be low by design. For biological agents: partially separate (thalamic monitoring is separate from cortical processing) but with extensive cross-talk.
 
 ### 3. The severity signal is a product, not a sum
 
@@ -419,9 +417,7 @@ Drawing these causal graphs reframes the κ problem:
 
 This suggests that the "right" approach to directed separation isn't to parameterize the coupling and bound the error. It's to **characterize which processing topologies admit separation and which don't**, and then develop the appropriate analytical tools for each topology class.
 
-For the laminar regime (separated topology): use the sequential cascade. Done.
-For the turbulent regime (merged topology): develop the coupled analysis. This is the hard work.
-For the mixed regime (partially separated): identify which boundaries are separated and which aren't, and apply the appropriate tool to each.
+For the laminar regime (separated topology): use the sequential cascade. Done. For the turbulent regime (merged topology): develop the coupled analysis. This is the hard work. For the mixed regime (partially separated): identify which boundaries are separated and which aren't, and apply the appropriate tool to each.
 
 The κ_processing measure from the operationalization spike would then be a DIAGNOSTIC — you measure it to determine which regime you're in, not to parameterize a perturbation expansion.
 

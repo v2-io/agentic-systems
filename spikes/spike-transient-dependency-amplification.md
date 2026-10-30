@@ -1,7 +1,6 @@
 # Spike: Transient Dependency Amplification and the Logogenic Lipschitz Constant
 
-**Status.** Exploratory mathematical bridge attempt. Exact only under the linearized / affine sub-scope stated below.
-**Date.** 2026-04-25.
+**Status.** Exploratory mathematical bridge attempt. Exact only under the linearized / affine sub-scope stated below. **Date.** 2026-04-25.
 
 **Pressure Point.** In `#result-coupled-diagnostic-framework`, Class 2 diagnostic error is bounded by $2L_A\lVert\Delta M_{\text{bias}}\rVert$, where $L_A$ is the Lipschitz constant of the attainability function
 

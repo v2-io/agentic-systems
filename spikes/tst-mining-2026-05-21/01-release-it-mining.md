@@ -14,9 +14,8 @@ The yield is concentrated and very high. The Release It! pattern catalog is — 
 
 ### A1. The running service as a Tier-2 adaptive agent with literal $(M_t, O_t, \Sigma_t)$
 
-**Source analyses:** 016 (circuit-breaker), 017 (let-it-crash), 021 (steady-state), 029 (cascading), 044 (transparency), 046 (defining stability), 047 (failure modes), 050 (chain-of-failure), 195 (airline case study).
-**Class:** A
-**AAT-relevance:** $M_t$ / $O_t$ / $\Sigma_t$ at the runtime layer; the entire TST "developer agent" framework lifted to the runtime; potential new chapter "The Running System as Adaptive Agent" in `02-tst-core/`.
+**Source analyses:** 016 (circuit-breaker), 017 (let-it-crash), 021 (steady-state), 029 (cascading), 044 (transparency), 046 (defining stability), 047 (failure modes), 050 (chain-of-failure), 195 (airline case study).  
+**Class:** A **AAT-relevance:** $M_t$ / $O_t$ / $\Sigma_t$ at the runtime layer; the entire TST "developer agent" framework lifted to the runtime; potential new chapter "The Running System as Adaptive Agent" in `02-tst-core/`.
 
 **The content.** Across these analyses, a coherent picture emerges that the analyses themselves do not name as such: a *running service* — circuit breaker, supervision tree, autoscaler, retry-and-fallback layer included — is itself an adaptive-actuated agent. Its $M_t$ is the live data + configuration + circuit states + connection-pool counts + traffic-rate estimate; its $O_t$ is the SLO bundle (uptime, latency tail, correctness invariants) plus secondary goals (cost, fairness, backpressure-respect); its $\Sigma_t$ is the operational playbook encoded in code (retry, fail-over, shed, throttle, restart-from-clean, swap-blue-green, route-around); its observation function is the telemetry + health-check + request-arrival stream; its action space is the union of internal recovery moves (open breaker, restart actor, scale pool) and external moves (return 503, blue/green swap, drain). Nygard's "cynical software" (046) and "defining stability" content makes the *agent* picture explicit in everything but the vocabulary: the system "expects bad things to happen" and "puts up internal barriers" — i.e., it carries a model of an adversarial environment and an actuation repertoire keyed to that model.
 
@@ -33,9 +32,8 @@ The chapter is independently load-bearing because TST currently treats the runti
 
 ### A2. Circuit breaker as $\eta^\ast$ saturation against magnitude-shock coupling
 
-**Source analyses:** 016 (circuit-breaker), 015 (integration points), 050 (chain-of-failure), 195 (airline).
-**Class:** A
-**AAT-relevance:** Signed-coupling four-regime classification (recipient-side: Informative / magnitude-shock / structural-shock / ambient-noise); $\eta^\ast = U_M/(U_M+U_o)$ saturation; instantiation of `#disc-modularity-state-dynamics` operation 3 (adversarial coupling pressure → modularity-driven-decreasing).
+**Source analyses:** 016 (circuit-breaker), 015 (integration points), 050 (chain-of-failure), 195 (airline).  
+**Class:** A **AAT-relevance:** Signed-coupling four-regime classification (recipient-side: Informative / magnitude-shock / structural-shock / ambient-noise); $\eta^\ast = U_M/(U_M+U_o)$ saturation; instantiation of `#disc-modularity-state-dynamics` operation 3 (adversarial coupling pressure → modularity-driven-decreasing).
 
 **The content.** The closed/open/half-open circuit breaker is exactly an $\eta^\ast$-modulation against a recipient-side magnitude-shock from a coupled component. When the downstream service is healthy, every call carries usable signal ($U_o$ low relative to $U_M$, breaker closed, $\eta^\ast$ high — agent updates from each call). When the downstream service starts failing, the failure stream is high-magnitude ambient-noise from the recipient's point of view ($U_o \uparrow$, signal-to-magnitude ratio collapses, $\eta^\ast \to 0$). The breaker *names* and *enforces* the regime change: opening the circuit is the agent declaring "this channel has moved from informative-coupling to magnitude-shock-coupling, suspend updates from it." Half-open is a probing intervention to test whether the regime has returned to informative.
 
@@ -48,9 +46,8 @@ The chapter is independently load-bearing because TST currently treats the runti
 
 ### A3. Supervision trees as class-coercion-via-wrapping at the runtime layer
 
-**Source analyses:** 017 (let-it-crash), 030 (actor model), 018 (bulkheads), 029 (cascading), 042 (force multiplier).
-**Class:** A
-**AAT-relevance:** Class-coercion via wrapping (`#der-class-coercion-via-wrapping`, `#der-logogenic-as-wrapping`); W₀/W₁/W₂ regime hierarchy with leakage bounds; the canonical engineering instantiation of constructive Class 3 → Class 1 coercion.
+**Source analyses:** 017 (let-it-crash), 030 (actor model), 018 (bulkheads), 029 (cascading), 042 (force multiplier).  
+**Class:** A **AAT-relevance:** Class-coercion via wrapping (`#der-class-coercion-via-wrapping`, `#der-logogenic-as-wrapping`); W₀/W₁/W₂ regime hierarchy with leakage bounds; the canonical engineering instantiation of constructive Class 3 → Class 1 coercion.
 
 **The content.** Erlang/OTP supervision trees are the textbook constructive example of class-coercion-via-wrapping. A worker process is a Class 3-ish (potentially-coupled, mutable-state, can-die-arbitrarily) component; a supervisor wraps it with a discipline that promises "this child returns to S₀ on crash; affected siblings are scoped to the restart strategy ({one_for_one, rest_for_one, one_for_all}); restart-intensity limits cap the propagation of repeated failure into the parent." The whole tree is a Class 1 (Separated) composite: external observers (load balancers, callers, other services) see a system that obeys directed separation across the tree boundary, even though every individual worker has none.
 
@@ -64,9 +61,8 @@ The wider claim — supervision trees are the *most-deployed* W₁ instantiation
 
 ### A4. Bulkheads as identifiability-floor enforcement on failure-domain $M_t$
 
-**Source analyses:** 018 (bulkheads), 029 (cascading), 050 (chain-of-failure), 041 (scaling effects), 037 (unbalanced capacities).
-**Class:** A
-**AAT-relevance:** `#disc-identifiability-floor` (M1); failure-domain partitioning as $M_t$ identifiability commitment; tempo composition (Brooks's Law) at the runtime layer.
+**Source analyses:** 018 (bulkheads), 029 (cascading), 050 (chain-of-failure), 041 (scaling effects), 037 (unbalanced capacities).  
+**Class:** A **AAT-relevance:** `#disc-identifiability-floor` (M1); failure-domain partitioning as $M_t$ identifiability commitment; tempo composition (Brooks's Law) at the runtime layer.
 
 **The content.** A bulkhead is a *commitment* about what is jointly identifiable from a failure event. Before the bulkhead, "the system failed" is a single event whose root cause is anywhere across $n$ components — the identifiability floor on the runtime $M_t$ is set by the coupling graph, and a single observation (system down) maps to a large equivalence class of failure-states. After bulkheading, the failure event becomes "bulkhead $B_i$ failed" — the equivalence class is restricted to the components inside $B_i$. The bulkhead is doing exactly what `#disc-identifiability-floor` says identifiability machinery does: pre-committing to a coordinate system in which observations have informative content. The "non-uniform partitioning" the analysis flags as a real-world necessity (different bulkhead sizes for different criticality) is the M1-pattern's intensity-aware grading restated.
 
@@ -81,9 +77,8 @@ The connection to Brooks's Law / tempo composition is also explicit in 037 (unba
 
 ### A5. Let-it-crash + supervised restart as a directed-separation enforcement mechanism
 
-**Source analyses:** 017 (let-it-crash), 028 (immutability), 052 (immutable infrastructure), 053 (processes on machines).
-**Class:** A
-**AAT-relevance:** Directed separation at the runtime layer; $M_t$-update dynamics independent of in-flight $\Sigma_t$ via state-discard; the architectural-vs-parametric framing.
+**Source analyses:** 017 (let-it-crash), 028 (immutability), 052 (immutable infrastructure), 053 (processes on machines).  
+**Class:** A **AAT-relevance:** Directed separation at the runtime layer; $M_t$-update dynamics independent of in-flight $\Sigma_t$ via state-discard; the architectural-vs-parametric framing.
 
 **The content.** "Let it crash" is, structurally, an *enforcement mechanism* for directed separation at the runtime layer. Continuous state-mutation under failure conditions risks coupling the post-failure $M_t$ to the agent's in-flight $\Sigma_t$ in uncontrolled ways (a half-completed action contaminates the model). Discarding state on crash and restarting from $S_0$ is a structural commitment that the post-restart $M_t$ is independent of whatever $\Sigma_t$ was active at crash-time. This is GUC Class 1 (Separated) re-established by erasure rather than by careful design — a brute-force structural commitment with the same end-effect as more sophisticated wrapping.
 
@@ -95,9 +90,8 @@ Immutable infrastructure (052) is the same move generalized to the deployment / 
 
 ### A6. Backpressure / load-shedding as actuated $\rho$-regulation
 
-**Source analyses:** 024 (backpressure), 043 (load shedding), 026 (handshaking), 139 (demand control patterns), 033 (self-denial).
-**Class:** A
-**AAT-relevance:** Persistence condition $\mathcal T > \rho / \lVert \delta_{\text{critical}} \rVert$ with *actuated* $\rho$-reduction (not just $\mathcal T$-increase); demand control as agent action; bidirectional adaptive-actuation at the runtime layer.
+**Source analyses:** 024 (backpressure), 043 (load shedding), 026 (handshaking), 139 (demand control patterns), 033 (self-denial).  
+**Class:** A **AAT-relevance:** Persistence condition $\mathcal T > \rho / \lVert \delta_{\text{critical}} \rVert$ with *actuated* $\rho$-reduction (not just $\mathcal T$-increase); demand control as agent action; bidirectional adaptive-actuation at the runtime layer.
 
 **The content.** Most AAT discussion of the persistence condition treats $\rho$ as exogenous: the environment imposes a disturbance rate, and the agent must maintain tempo above the threshold. The Release It! demand-control patterns flip the picture: a runtime agent has actions in its repertoire that *modulate* its own incoming $\rho$. Backpressure is the agent slowing its upstream producer (reducing the rate at which environmental change arrives in the agent's frame); load shedding is the agent refusing observations entirely (rejecting requests at the boundary, returning 503); handshaking is the agent declaring its current capacity so cooperative producers self-throttle. Token-bucket and leaky-bucket are specific implementations of the same structural move.
 
@@ -114,9 +108,8 @@ This is the highest-yield C-class finding in the slice (theory-side new structur
 
 ### A7. Steady-state pattern as the runtime's persistence-via-bounded-state requirement
 
-**Source analyses:** 021 (steady-state), 034 (unbounded result sets), 048 (longevity).
-**Class:** A
-**AAT-relevance:** Software persistence / unmaintainability threshold gap (named in `02-tst-core/OUTLINE.md` Ch.4); explicitly about *runtime* persistence rather than *codebase* persistence.
+**Source analyses:** 021 (steady-state), 034 (unbounded result sets), 048 (longevity).  
+**Class:** A **AAT-relevance:** Software persistence / unmaintainability threshold gap (named in `02-tst-core/OUTLINE.md` Ch.4); explicitly about *runtime* persistence rather than *codebase* persistence.
 
 **The content.** Nygard's "every mechanism that accumulates resources must have a corresponding mechanism to recycle them" is a *runtime persistence condition*. If the runtime accumulates state without bound (logs, cache entries, database rows, in-memory sessions), then either the runtime's $M_t$ grows unboundedly (and observation/update tempo collapses because more state has to be searched per observation), or the runtime's $\Omega_t$ (its substrate) saturates and the agent dies altogether. The pattern formalizes the condition that the runtime maintain bounded state-cardinality over time — a stationary-state requirement on $M_t$, parallel to the persistence-condition on dynamics.
 
@@ -128,9 +121,8 @@ This is the natural home for the *runtime-side* of the "Software persistence / u
 
 ### A8. Slow responses worse than fast failures — opacity $H_b$ at the runtime boundary
 
-**Source analyses:** 036 (slow responses), 020 (fail fast), 019 (timeouts).
-**Class:** A
-**AAT-relevance:** Agent opacity $H_b$ as backward predictive uncertainty; the asymmetric value of distinguishable failure vs. ambiguous degradation; opacity-as-cost.
+**Source analyses:** 036 (slow responses), 020 (fail fast), 019 (timeouts).  
+**Class:** A **AAT-relevance:** Agent opacity $H_b$ as backward predictive uncertainty; the asymmetric value of distinguishable failure vs. ambiguous degradation; opacity-as-cost.
 
 **The content.** Nygard's argument that slow responses are worse than failures has a clean AAT reading: an outright failure is an informative observation (the caller's $\eta^\ast$ on the response is high — the response is unambiguously "not available"); a slow response is a low-information observation that mostly increases the caller's backward predictive uncertainty $H_b$ about the callee. The 1000×-resource-amplification in analysis 036 is symptomatic; the *structural* claim is that slow responses raise opacity. A high-opacity callee forces every caller to either (i) reduce its own $\eta^\ast$ to compensate (over-conservative behavior, which then itself propagates as opacity), or (ii) gather many additional observations (retries, probes), which costs $\nu$ across the channel. Either way, opacity at one component imposes a tempo penalty on every caller.
 
@@ -145,9 +137,8 @@ Fail-fast is the constructive opposite: by reducing the failure latency to near 
 
 ### A9. Chain-of-failure / coupled-failure-probability instantiates `#disc-additive-coordinate-forcing` at the runtime
 
-**Source analyses:** 050 (chain-of-failure), 029 (cascading), 195 (airline), 047 (failure modes).
-**Class:** A → B
-**AAT-relevance:** `#disc-additive-coordinate-forcing` (M3); coupling-coefficient products as multiplicative no-go pattern; sector-condition-style architectural class structure.
+**Source analyses:** 050 (chain-of-failure), 029 (cascading), 195 (airline), 047 (failure modes).  
+**Class:** A → B **AAT-relevance:** `#disc-additive-coordinate-forcing` (M3); coupling-coefficient products as multiplicative no-go pattern; sector-condition-style architectural class structure.
 
 **The content.** The Nygard airline-failure case (195) and the coupling-coefficient framing in 050 trace through 4 layers of architectural coupling — SQLException → connection-pool exhaustion → RMI synchronous blocking → client app freeze — with each coupling coefficient $C_{ij} \approx 1.0$ in the failure-pathway direction. The product $\prod C_{ij} = 1$ encodes that the chain transmits failure with no attenuation. This is a *coordinate-forcing* phenomenon: the coupling structure forces failure to additively propagate across architectural layers because each layer is forced to commit before it can dissociate from upstream.
 
@@ -157,9 +148,8 @@ Fail-fast is the constructive opposite: by reducing the failure latency to near 
 
 ### A10. Chaos engineering as Pearl-Level-2 do-operator probing under deliberate disturbance
 
-**Source analyses:** 059 (chaos engineering), 218 (chaos philosophy), 219 (antecedents), 557 (safety non-composability), 214 (production traffic chaos).
-**Class:** A
-**AAT-relevance:** Pearl Level 2 ($do(\cdot)$ interventional) in `#obs-software-epistemic-properties`; the runtime as a Pearl-Level-2-probable system; the chaos-monkey as agent-on-agent intervention.
+**Source analyses:** 059 (chaos engineering), 218 (chaos philosophy), 219 (antecedents), 557 (safety non-composability), 214 (production traffic chaos).  
+**Class:** A **AAT-relevance:** Pearl Level 2 ($do(\cdot)$ interventional) in `#obs-software-epistemic-properties`; the runtime as a Pearl-Level-2-probable system; the chaos-monkey as agent-on-agent intervention.
 
 **The content.** Chaos engineering (Netflix's Simian Army, Dekker's drift-into-failure, Nygard's "fundamental regulator paradox" framing in 059) is *Pearl Level 2 access to the runtime system* — the chaos-monkey is the experimenter performing $do(\text{kill-instance})$ interventions and observing system response. This is the runtime-layer equivalent of `git bisect` / `test` interventions at the developer-codebase layer (already in TST as P4/P6 of `#obs-software-epistemic-properties`). The "fundamental regulator paradox" is exactly the M1-pattern statement that a well-functioning system loses identifiability of its own failure modes — observation alone never disambiguates the failure manifold; only intervention does. Safety-non-composability (557) is the explicit statement that component-level safety properties don't determine system-level safety; only system-level intervention does.
 
@@ -176,9 +166,8 @@ Fail-fast is the constructive opposite: by reducing the failure latency to near 
 
 ### B1. Transparency / observability as $\nu$-channel addition
 
-**Source analyses:** 044 (transparency).
-**Class:** B
-**AAT-relevance:** Adaptive tempo $\mathcal T = \sum_k \nu^{(k)} \eta^{(k)\ast}$ at the runtime layer; observation-channel design.
+**Source analyses:** 044 (transparency).  
+**Class:** B **AAT-relevance:** Adaptive tempo $\mathcal T = \sum_k \nu^{(k)} \eta^{(k)\ast}$ at the runtime layer; observation-channel design.
 
 **The content.** Production transparency — metrics, logs, health endpoints — is the runtime-agent's *observation-channel design* problem. Each metric is a $(\nu^{(k)}, U_o^{(k)})$-characterized channel; the choice of what to expose is the choice of which channels to add to the runtime-tempo sum. The analysis's exponential debugging-time-reduction-with-transparency claim is unsubstantiated as numerics but structurally correct: low-opacity systems (high transparency) give downstream operators (humans, autoscalers, control planes) higher-$\nu$ access to system state.
 
@@ -186,9 +175,8 @@ Fail-fast is the constructive opposite: by reducing the failure latency to near 
 
 ### B2. Immutability (data) reduces $U_o$ by removing temporal-state ambiguity
 
-**Source analyses:** 028 (immutability), 030 (actor model).
-**Class:** B
-**AAT-relevance:** Code-quality-as-observation-infrastructure (`#der-code-quality-as-observation-infrastructure`); the $Q \to U_o \to \eta^\ast \to \mathcal T$ chain.
+**Source analyses:** 028 (immutability), 030 (actor model).  
+**Class:** B **AAT-relevance:** Code-quality-as-observation-infrastructure (`#der-code-quality-as-observation-infrastructure`); the $Q \to U_o \to \eta^\ast \to \mathcal T$ chain.
 
 **The content.** Immutable data structures eliminate the "what is the current value of $x$" ambiguity, which is one component of $U_o$ at the code-comprehension layer. Pure functional code has $U_o$ approaching zero on data-flow questions because reference identity equals value identity. This is a clean instantiation of an existing TST segment.
 
@@ -196,9 +184,8 @@ Fail-fast is the constructive opposite: by reducing the failure latency to near 
 
 ### B3. Self-denial attacks as $\rho$ shocks beyond actuation capacity
 
-**Source analyses:** 033 (self-denial), 038 (dogpile).
-**Class:** B
-**AAT-relevance:** Persistence condition under stochastic / impulsive $\rho$; admission-control feasibility regime.
+**Source analyses:** 033 (self-denial), 038 (dogpile).  
+**Class:** B **AAT-relevance:** Persistence condition under stochastic / impulsive $\rho$; admission-control feasibility regime.
 
 **The content.** Self-denial attacks (marketing-email viral spikes, dogpile resync) are *high-impulse-$\rho$ regime* events. The structural insight is that admission-control / backpressure has feasibility limits: when $\rho_{\text{offered}}$ rises faster than the agent can sense+actuate, the admission-control loop itself fails. Dogpile-mitigation (clock-slew, exponential backoff) is *temporal smoothing* of $\rho_{\text{offered}}$ to bring it back into the actuation-feasible regime.
 
@@ -206,9 +193,8 @@ Fail-fast is the constructive opposite: by reducing the failure latency to near 
 
 ### B4. Force multiplier — automation as actuation-tempo amplifier
 
-**Source analyses:** 042 (force multiplier), 143 (system failure vs human error), 042 also.
-**Class:** B
-**AAT-relevance:** Brooks's Law / tempo composition at the human-automation boundary; opacity-of-automation as a coupling failure mode.
+**Source analyses:** 042 (force multiplier), 143 (system failure vs human error), 042 also.  
+**Class:** B **AAT-relevance:** Brooks's Law / tempo composition at the human-automation boundary; opacity-of-automation as a coupling failure mode.
 
 **The content.** Automated control-plane software (autoscalers, discovery, schedulers) increases the runtime's actuation tempo dramatically — actions that took human minutes now take subsecond — but does *not* automatically increase the runtime's observation or judgment tempo to match. When the model-update or strategy-judgment channels can't keep up with the actuation channel, the agent acts on stale model with high authority. Reddit's 2016 outage (042's example) is exactly this: autoscaler $\Sigma_t$ updates fired on stale ZooKeeper data, with no judgment-rate-limit on the actuator. Governor pattern (039) is the explicit fix — rate-limit actuation tempo to match observation/judgment tempo.
 
@@ -216,9 +202,8 @@ Fail-fast is the constructive opposite: by reducing the failure latency to near 
 
 ### B5. API versioning as wrapper-bandwidth budget for $\Sigma_t$ contracts between systems
 
-**Source analyses:** 045 (api versioning), 058 (information architecture).
-**Class:** B
-**AAT-relevance:** Communication gain / trust-weighted update; Auftragstaktik bandwidth allocation; shared intent.
+**Source analyses:** 045 (api versioning), 058 (information architecture).  
+**Class:** B **AAT-relevance:** Communication gain / trust-weighted update; Auftragstaktik bandwidth allocation; shared intent.
 
 **The content.** Versioned APIs are *contracts* between agents that specify the bandwidth and update-rate for shared structural state. Postel's law ("liberal in what you accept, conservative in what you emit") is the asymmetric-trust-update statement: an agent should make its outgoing signals high-confidence-stable (low rate of structural change) while accepting incoming signals across a wider envelope (high tolerance, low penalty on novel-but-conformant inputs). This is the cross-agent version of the within-agent stability vs. exploration trade-off.
 
@@ -230,9 +215,8 @@ Fail-fast is the constructive opposite: by reducing the failure latency to near 
 
 ### C1. Architectural coupling as the cross-section of runtime $\Sigma_t$ structure
 
-**Source analyses:** 050 (chain-of-failure), 015 (integration points), 037 (unbalanced capacities), 057 (deployment).
-**Class:** C
-**AAT-relevance:** No clean current home; potential new TST segment under `02-tst-core/` Ch.4 (System Measures).
+**Source analyses:** 050 (chain-of-failure), 015 (integration points), 037 (unbalanced capacities), 057 (deployment).  
+**Class:** C **AAT-relevance:** No clean current home; potential new TST segment under `02-tst-core/` Ch.4 (System Measures).
 
 **The content.** TST has segment-level coupling ($P(\text{change } j \mid \text{change } i)$) as a *codebase* measure. The Release It! analyses use coupling in a different sense — *architectural* coupling between running services / components — and the two are related but distinct. Codebase coupling is observed in git; architectural coupling is observed in failure-propagation, latency-amplification, and resource-contention. The two are correlated but separable: high codebase coupling does not entail high architectural coupling (modular code can deploy as a monolith), and high architectural coupling does not entail high codebase coupling (microservices with bad APIs).
 
@@ -242,9 +226,8 @@ A new TST segment formalizing the *bi-modal coupling* structure — and the stru
 
 ### C2. Operational $\rho$ as a multi-component decomposition
 
-**Source analyses:** 047 (failure modes — impulses vs. stresses), 038 (dogpile), 214 (production traffic chaos), 033 (self-denial).
-**Class:** C
-**AAT-relevance:** No current home; candidate decomposition refinement.
+**Source analyses:** 047 (failure modes — impulses vs. stresses), 038 (dogpile), 214 (production traffic chaos), 033 (self-denial).  
+**Class:** C **AAT-relevance:** No current home; candidate decomposition refinement.
 
 **The content.** $\rho$ at the runtime is not monolithic. Nygard distinguishes impulses (rapid shocks: flash mobs, deploys, retry storms) from stresses (persistent forces: slow degradation of dependencies). These have different characteristic time-scales and require different actuation patterns. A finer decomposition: $\rho_{\text{traffic}}$ (request-rate variation), $\rho_{\text{dependency}}$ (upstream-service failure rate), $\rho_{\text{infrastructure}}$ (host/network failure rate), $\rho_{\text{adversarial}}$ (attack / scraping rate). Each has its own profile and its own actuation pattern in the demand-control catalog.
 
@@ -252,9 +235,8 @@ A new TST segment formalizing the *bi-modal coupling* structure — and the stru
 
 ### C3. Safety non-composability and the composition closure-defect $\varepsilon^\ast$
 
-**Source analyses:** 557 (safety non-composability), 047 (failure modes), 059 (chaos engineering).
-**Class:** C
-**AAT-relevance:** Composition machinery / closure defect $\varepsilon^\ast$; potential strengthening of `#disc-composition-machinery` material.
+**Source analyses:** 557 (safety non-composability), 047 (failure modes), 059 (chaos engineering).  
+**Class:** C **AAT-relevance:** Composition machinery / closure defect $\varepsilon^\ast$; potential strengthening of `#disc-composition-machinery` material.
 
 **The content.** Nygard's example — two services individually meeting 99.9th-percentile-30ms SLAs, sequentially composed, frequently violating a 50ms client budget — is a concrete instance of *non-composability of property*, which AAT has machinery for as $\varepsilon^\ast > 0$ closure defects. The latency example is particularly clean: tail-of-composition is dominated by tail-of-component, not by mean-of-component, so component-level SLAs don't compose linearly to system-level SLAs. This is the *measurable, runtime-side* analog of the $\varepsilon^\ast$ closure defect for property composition.
 
@@ -266,8 +248,8 @@ A new TST segment formalizing the *bi-modal coupling* structure — and the stru
 
 ### D1. The airline-case-study (195) as M3 + class-coercion-failure worked example
 
-**Source analyses:** 195 (resource leak cascade), 050 (chain-of-failure).
-**Class:** D (and B — both).
+**Source analyses:** 195 (resource leak cascade), 050 (chain-of-failure).  
+**Class:** D (and B — both).  
 **AAT-relevance:** Worked example for `#disc-additive-coordinate-forcing` (A9) and a *negative* example for `#der-class-coercion-via-wrapping` (the wrapping wasn't there).
 
 **The content.** The 2004 airline outage (a single uncaught `SQLException` in a try-finally block, cascading via a 40-connection pool exhaustion through RMI blocking calls to take down kiosks and IVR system-wide) is a usable real-world worked example with public-domain reference value. It is concrete, it has the structural shape of M3 forcing, and it is well-known in the engineering community (Nygard's case study has been cited thousands of times).
@@ -276,9 +258,8 @@ A new TST segment formalizing the *bi-modal coupling* structure — and the stru
 
 ### D2. Production-traffic-chaos (214) as empirical evidence for runtime-vs-test $\rho$ gap
 
-**Source analyses:** 214 (production traffic chaos), 048 (extending life span).
-**Class:** D
-**AAT-relevance:** Calibration-lab framing — quantifying the transfer assumption that test-environment $\rho$-distribution approximates production-environment $\rho$-distribution.
+**Source analyses:** 214 (production traffic chaos), 048 (extending life span).  
+**Class:** D **AAT-relevance:** Calibration-lab framing — quantifying the transfer assumption that test-environment $\rho$-distribution approximates production-environment $\rho$-distribution.
 
 **The content.** The case study (retail site, 250,000 sessions vs. 12,000 tested, crashed in 30 minutes) is empirical evidence that load testing systematically underestimates production $\rho$ by orders of magnitude. This is operationally important context for any TST claim about "tests as Level 2 interventions" — the transfer from test-$\rho$ to production-$\rho$ is non-trivial and is itself a source of error. Worth a brief mention in `#obs-software-epistemic-properties` P4-P6 discussion as a *limit* on how well test-derived interventional access generalizes to production.
 

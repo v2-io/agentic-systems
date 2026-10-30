@@ -1,10 +1,9 @@
 # Spike: Is the strategic-persistence hard ceiling $\rho_\Sigma \ge R_\Sigma/2$ a convention artifact?
 
-**Date:** 2026-05-31
-**Origin:** AUDIT-WORKING-526815, finding F72 (surfaced in the gold-lift sweep, recorded in `#schema-strategy-persistence` Working Notes §3 "Off-ramp flag (load-bearing)").
-**Target segments:** `#schema-strategy-persistence` (the ceiling claim) and `#deriv-strategic-persistence-hard-ceiling` (its appendix, `status: exact`).
-**Upstream re-derived:** `#deriv-edge-credence-dynamics` (Prop B.1, Common Setup), `#hyp-edge-update-via-gain`, `#deriv-edge-update-natural-parameter`.
-**Verdict:** **(B), strengthened** — the ceiling is *convention-dependent*; the strengthening is to name the forgetting-ordering convention as an explicit premise, supply AAT's own argument for why that convention is canonical, and state precisely the weaker bound that survives under the alternative.
+**Date:** 2026-05-31 **Origin:** AUDIT-WORKING-526815, finding F72 (surfaced in the gold-lift sweep, recorded in `#schema-strategy-persistence` Working Notes §3 "Off-ramp flag (load-bearing)").  
+**Target segments:** `#schema-strategy-persistence` (the ceiling claim) and `#deriv-strategic-persistence-hard-ceiling` (its appendix, `status: exact`).  
+**Upstream re-derived:** `#deriv-edge-credence-dynamics` (Prop B.1, Common Setup), `#hyp-edge-update-via-gain`, `#deriv-edge-update-natural-parameter`.  
+**Verdict:** **(B), strengthened** — the ceiling is *convention-dependent*; the strengthening is to name the forgetting-ordering convention as an explicit premise, supply AAT's own argument for why that convention is canonical, and state precisely the weaker bound that survives under the alternative.  
 **Status:** SUPERSEDED, never integrated. Verdict (B) refuted 2026-10-30 by `spike-strategic-persistence-hard-ceiling-convention-2026-05-31-verify-1.md`: the ceiling was an algebra error, not a convention dependence. SEG and ALT1 below are one estimator (ALT1's counts are $\lambda$ times SEG's), the stationary gain is exactly $1-\lambda$, and the simulation here evaluates $1/(n+1)$ on the count recursion without measuring how $\hat p$ moves. Kept as reasoning-trail archaeology; the landing is in `#deriv-edge-credence-dynamics` Prop B.1F and `#deriv-evidence-allocation-ceiling`.
 
 > Settled by re-derived mathematics per `doc/sop/spikes.sop.md` §0, not by what the segment or NOTATION asserts.

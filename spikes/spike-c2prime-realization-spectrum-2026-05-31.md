@@ -1,9 +1,8 @@
 # Spike: The (C2′)-realization spectrum — is separate-substrate necessary for a structural W₁?
 
-**Status**: exploratory / analysis complete. **Read-only on canon; no edits, no git.** No status/tier transitions proposed for landing without Joseph's gate.
-**Date**: 2026-05-31
-**Trigger**: spun off in `#der-logogenic-as-wrapping` Working Notes (2026-05-31, Stage-1 propagation from `fbcb36a`): *"the (C2′)-realization spectrum (is separate-substrate necessary, or do stateless-reset / state-stripping single-substrate constructions also earn it)."* Practically live because it bears on the shoshin / PROPRIUM W₂→W₁ path.
-**Reads**: `#der-logogenic-as-wrapping`, `#def-auxilia-hierarchy`, `#der-class-coercion-via-wrapping` (esp. the (C2′) condition + the corrected selection-channel bound), `#disc-w1-structural-bound-boundary` (the certifiability-discontinuity no-go). Implementation reality: `~/src/shoshin/src/shoshin/{interpres,conspectus,backend}.py`; `~/src/firmatum/PROPRIUM-ARCHITECTURE-v2.md` §6 (Auxilia Infrastructure), `~/src/firmatum/PROPRIUM-ONTOLOGY-v2.md` §6.2 (ANIMA / IMPERIUM).
+**Status**: exploratory / analysis complete. **Read-only on canon; no edits, no git.** No status/tier transitions proposed for landing without Joseph's gate.  
+**Date**: 2026-05-31 **Trigger**: spun off in `#der-logogenic-as-wrapping` Working Notes (2026-05-31, Stage-1 propagation from `fbcb36a`): *"the (C2′)-realization spectrum (is separate-substrate necessary, or do stateless-reset / state-stripping single-substrate constructions also earn it)."* Practically live because it bears on the shoshin / PROPRIUM W₂→W₁ path.  
+**Reads**: `#der-logogenic-as-wrapping`, `#def-auxilia-hierarchy`, `#der-class-coercion-via-wrapping` (esp. the (C2′) condition + the corrected selection-channel bound), `#disc-w1-structural-bound-boundary` (the certifiability-discontinuity no-go). Implementation reality: `~/src/shoshin/src/shoshin/{interpres,conspectus,backend}.py`; `~/src/firmatum/PROPRIUM-ARCHITECTURE-v2.md` §6 (Auxilia Infrastructure), `~/src/firmatum/PROPRIUM-ONTOLOGY-v2.md` §6.2 (ANIMA / IMPERIUM).  
 **Sibling spikes**: `spike-w1-leakage-vacuity-2026-05-31.md` (introduced (C2′) + the no-go), `spike-w1-w2-boundary-intuition-2026-05-31.md` (the $\Theta(\varepsilon^2)$-flat / certificate-step toy).
 
 ---

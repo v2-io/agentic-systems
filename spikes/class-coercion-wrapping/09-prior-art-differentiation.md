@@ -1,8 +1,7 @@
 # Sub-spike I — Prior-Art Differentiation for the Wrapping Construction
 
-**Status**: complete (first pass)
-**Date**: 2026-05-09
-**Brief**: `00-brief.md` §5.I (sub-spike I)
+**Status**: complete (first pass)  
+**Date**: 2026-05-09 **Brief**: `00-brief.md` §5.I (sub-spike I)  
 **Author**: delegated prior-art sub-agent
 
 ## 0. Posture, scope, method
@@ -347,18 +346,18 @@ Tegmark's *Consciousness as a State of Matter* is speculative and not formal. It
 1. **POMDP / Bayesian decision theory** (Astrom 1965 onward): the Bayesian belief-update is goal-blind by construction. This is a 60-year-old formal result. The wrapping construction's directed-separation guarantee at the wrapper level is the POMDP architectural pattern recovered in a setting where the underlying primitive isn't natively a POMDP.
 2. **Cognitive architectures** (SOAR, ACT-R, CLARION, GWT — Newell 1990 onward): modular agent design with separated belief / goal / action state. This is a 40-year-old architectural pattern. The wrapping construction's $(M_W, G_W)$ split is the standard cognitive-architecture commitment, formalized in dynamical-systems / control-theoretic vocabulary.
 
-**The five adjacent literatures**:
-3. **MDP-homomorphism / approximate state abstraction** (Ravindran-Barto 2004 onward): provides the bridge-lemma vocabulary AAT needs but operates on already-modular systems; wrapping adds the constructive-modularity-around-non-modular-core aspect.
-4. **Hierarchical control / approximate simulation** (Tabuada-Pappas 2009): provides constructive hierarchical-controller machinery; wrapping uses similar machinery but for a *property-enforcement* target rather than a *trajectory-fidelity* target.
-5. **HTN / Options / MAXQ** (Erol-Hendler-Nau 1994; Sutton-Precup-Singh 1999; Dietterich 2000): different (vertical, within-goal) decomposition direction; wrapping is horizontal (across $M$/$G$). Compositionally compatible but distinct moves.
-6. **Categorical structured systems theory** (Smithe 2024; Capucci et al. 2022; Spivak-Tan 2017): provides the lens / parametric-morphism abstraction that the wrapping construction is a specific instance of. The wrapping construction is a categorical lens factoring through the $M$-projection. **This is a particularly clean abstract reading and worth adopting.**
+**The five adjacent literatures**:  
+3. **MDP-homomorphism / approximate state abstraction** (Ravindran-Barto 2004 onward): provides the bridge-lemma vocabulary AAT needs but operates on already-modular systems; wrapping adds the constructive-modularity-around-non-modular-core aspect.  
+4. **Hierarchical control / approximate simulation** (Tabuada-Pappas 2009): provides constructive hierarchical-controller machinery; wrapping uses similar machinery but for a *property-enforcement* target rather than a *trajectory-fidelity* target.  
+5. **HTN / Options / MAXQ** (Erol-Hendler-Nau 1994; Sutton-Precup-Singh 1999; Dietterich 2000): different (vertical, within-goal) decomposition direction; wrapping is horizontal (across $M$/$G$). Compositionally compatible but distinct moves.  
+6. **Categorical structured systems theory** (Smithe 2024; Capucci et al. 2022; Spivak-Tan 2017): provides the lens / parametric-morphism abstraction that the wrapping construction is a specific instance of. The wrapping construction is a categorical lens factoring through the $M$-projection. **This is a particularly clean abstract reading and worth adopting.**  
 7. **Tool-using LLM frameworks** (ReAct, Toolformer, Voyager, MemGPT, Reflexion): canonical engineering instances of the wrapping construction. Lack theoretical framing; the wrapping construction provides what they're missing.
 
-**One cleanly differentiated counterpart**:
+**One cleanly differentiated counterpart**:  
 8. **Constitutional AI / RLHF** (Bai 2022; Christiano 2017; Ouyang 2022): shape the model via training; wrapping uses the model as a black-box. Orthogonal interventions. Worth differentiating because of the leakage-interaction prediction (RLHF may worsen C3 leakage).
 
-**Already covered, no new content**:
-9. **RGM scale-free active inference** (Friston 2025): parametric-route counterpart to the wrapping construction's architectural-route. Already covered in `02-prior-art-rg-ib-fep.md` §2.
+**Already covered, no new content**:  
+9. **RGM scale-free active inference** (Friston 2025): parametric-route counterpart to the wrapping construction's architectural-route. Already covered in `02-prior-art-rg-ib-fep.md` §2.  
 10. **Hierarchical Bayesian generative models / Tegmark**: subsumed by the FEP-RG thread.
 
 **Bottom-line verdict**:

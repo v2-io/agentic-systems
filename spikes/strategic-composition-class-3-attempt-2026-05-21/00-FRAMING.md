@@ -19,8 +19,7 @@ related_segments:
 
 `#deriv-strategic-composition` currently lands:
 
-> Class 1 (Separated) sub-agents under goal divergence → **Class 2 (Partial)** composite.
-> Within-agent processing stays Separated; the composite acquires *bounded across-agent coupling* through cross-agent policy modeling.
+> Class 1 (Separated) sub-agents under goal divergence → **Class 2 (Partial)** composite. Within-agent processing stays Separated; the composite acquires *bounded across-agent coupling* through cross-agent policy modeling.
 
 A *bounded*-coupling result.
 

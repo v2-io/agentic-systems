@@ -82,7 +82,7 @@ This is where (H.b) is established. We need to show that $\mathcal{E}_2$ carries
 
 Bareinboim, Correa, Ibeling & Icard's **Causal Hierarchy Theorem** (CHT, 2022, *On Pearl's Hierarchy and the Foundations of Causal Inference*) establishes this in full generality at the level of structural causal models: there exist pairs of SCMs that induce identical Level-1 (observational) distributions but differ at Level 2. The level above is not measure-theoretically reducible to the level below.
 
-**Lemma 1 (Two texts, same observations, different interventions).**
+**Lemma 1 (Two texts, same observations, different interventions).**  
 Consider:
 
 - $T_A$: "The water in the kettle boiled, and the kettle whistled."
@@ -102,7 +102,7 @@ By CHT, no inference from Level 1 distributions over $\{\text{boil}, \text{whist
 
 **Conclusion of Lemma 1**: There exist texts $T_B, T_D$ with identical token-co-occurrence Level-1 content whose Level-2 content (the asserted causal direction) is non-reducible by any Level-1 analysis. The marker structure carries the distinguishing information.
 
-**Theorem 1 (Structural recoverability of Pearl Level 2 content from text).**
+**Theorem 1 (Structural recoverability of Pearl Level 2 content from text).**  
 Under (SLC) + (SC) + (CS), the function $\mathcal{C}: T \mapsto (\mathcal{V}(T), \mathcal{E}_1, \mathcal{E}_2, \mathcal{E}_3)$ defined in §3:
 
 (i) Is **computable** from $T$ by a deterministic procedure (syntactic parsing + DRT-referent extraction + coreference + discourse-relation extraction).
@@ -113,7 +113,7 @@ Under (SLC) + (SC) + (CS), the function $\mathcal{C}: T \mapsto (\mathcal{V}(T),
 
 (iv) The procedure requires **no agentic interiority**: no model-of-world maintenance across the text; no recursive reasoning; no loop. The procedure is sequential pattern recognition (parse + label) and dependency tracking (anaphora + discourse-relation chaining).
 
-**Proof.**
+**Proof.**  
 (i) is established by Stages 1–5 of §3 — each stage is implemented by deployed NLP machinery. The procedure terminates in time polynomial in $|T|$.
 
 (ii) follows from (SLC): the Level 2 markers have conventional Level 2 semantic content. (SC) ensures the speaker is committed to that content. (CS) ensures the text-level content composes from the marker-level commitments.

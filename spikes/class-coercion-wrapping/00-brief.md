@@ -1,8 +1,6 @@
 # Spike Track: Class Coercion via Wrapping
 
-**Status**: open — initial brief
-**Date opened**: 2026-05-09
-**Conversation provenance**: Discussion in the temporal-nesting-RG spike track surfaced that Parts III/IV (logogenic agents and ELIs) construct AAT-shaped systems around Class-3 components (LLMs). Joseph asked whether this is a *general* construction — whether Class-2 / Class-3 components can be *constructively* wrapped into Class-1 composites. The hypothesis: this construction is general, gives a constructive form-preservation result, and clarifies the structural relationship between Parts I/II and Parts III/IV.
+**Status**: open — initial brief **Date opened**: 2026-05-09 **Conversation provenance**: Discussion in the temporal-nesting-RG spike track surfaced that Parts III/IV (logogenic agents and ELIs) construct AAT-shaped systems around Class-3 components (LLMs). Joseph asked whether this is a *general* construction — whether Class-2 / Class-3 components can be *constructively* wrapped into Class-1 composites. The hypothesis: this construction is general, gives a constructive form-preservation result, and clarifies the structural relationship between Parts I/II and Parts III/IV.
 
 **Purpose of the spike**. Discover whether the construction actually works as a load-bearing AAT result, and if so, what conditions it requires, what costs it pays, and what existing AAT machinery it strengthens. The aim is theory-strengthening and truth-discovery — *does this hold and what does it actually say?* — not output-shape optimization. Paper-sized findings may naturally fall out (testable bounds on LLM systems, in particular) but they are downstream consequences of theory holding up, not the goal of the work.
 

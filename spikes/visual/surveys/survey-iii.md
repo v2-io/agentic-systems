@@ -74,10 +74,7 @@ David Hyerle's system of eight *Thinking Maps* represents perhaps the most rigor
 
 The power of this system lies in its *metalinguistic consistency*: students learn a single visual language applicable across disciplines. The Bridge Map, which externalizes the relating factor of an analogy, is particularly potent for mathematics and CS where analogical transfer is the primary mechanism for extending understanding to new domains.[^30][^31]
 ### 2.4 Argument Maps for Philosophy and Logic
-![](https://upload.wikimedia.org/wikipedia/commons/b/b4/Argument_Map.png)
-Argument map template
-Argument maps externalize the inferential structure of an argument as a node-link diagram where nodes are claims and edges encode support (green) or objection (red) relations. They are the diagrammatic counterpart to proof trees in formal logic.[^26]
-![Standard argument map showing claim-reason-evidence-objection structure](https://upload.wikimedia.org/wikipedia/commons/b/b4/Argument_Map.png)
+![](https://upload.wikimedia.org/wikipedia/commons/b/b4/Argument_Map.png) Argument map template Argument maps externalize the inferential structure of an argument as a node-link diagram where nodes are claims and edges encode support (green) or objection (red) relations. They are the diagrammatic counterpart to proof trees in formal logic.[^26] ![Standard argument map showing claim-reason-evidence-objection structure](https://upload.wikimedia.org/wikipedia/commons/b/b4/Argument_Map.png)
 
 Research by van Gelder (2002) found that argument mapping training produced the equivalent of a full academic year of critical thinking gains in a single semester course. Software tools include Rationale (commercial), Argdown (open-source, markdown-based), and Kialo (collaborative). For philosophical pedagogy, argument maps serve an analogous role to commutative diagrams in mathematics: they make the inferential architecture *visible*, so readers can check path-independence (i.e., whether the conclusion follows regardless of which path through the premises one takes).[^32]
 
@@ -122,14 +119,11 @@ The six primary Gestalt principles provide the perceptual foundation for diagram
 | **Figure/Ground** | High-contrast focal elements vs. low-contrast background; directs initial attention |
 | **Common Fate** | Elements that move/animate together are perceived as a unit (for interactive diagrams) |
 ### 4.2 Tufte's Visual Design Principles
-![](images/image_2.jpg)
-State life expectancy chart
-Edward Tufte's principles, originally for quantitative visualization, translate powerfully to conceptual diagrams:[^48][^49]
+![](images/image_2.jpg) State life expectancy chart Edward Tufte's principles, originally for quantitative visualization, translate powerfully to conceptual diagrams:[^48][^49]
 
 - **Maximize data-ink ratio**: every graphical mark should encode information. Decorative elements are seductive details — they increase extraneous cognitive load[^50]
 - **Show structure, not design variation**: use visual distinctions only to encode semantic distinctions. If two things look different, they must *mean* different things
-- **Small multiples**: showing the same diagram type applied across related cases leverages the "compare-across-constant-frame" effect — one of the most powerful comprehension accelerators for pattern recognition
-![Tufte's small multiples: life expectancy by US state, illustrating pattern comparison across consistent frames](images/image_2.jpg)
+- **Small multiples**: showing the same diagram type applied across related cases leverages the "compare-across-constant-frame" effect — one of the most powerful comprehension accelerators for pattern recognition ![Tufte's small multiples: life expectancy by US state, illustrating pattern comparison across consistent frames](images/image_2.jpg)
 ### 4.3 Norman's Affordances and Diagram Conventions
 Norman's (1988) *perceived affordances* — the signals that tell a viewer what actions are possible or what structure is meant — apply directly to diagram reading. Arrows afford "follow this direction"; containment affords "membership or subordination"; dashed lines conventionally indicate "hypothetical, non-actual, or future."[^51][^52][^53]
 

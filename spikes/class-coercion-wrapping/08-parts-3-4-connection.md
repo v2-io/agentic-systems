@@ -1,8 +1,7 @@
 # Sub-Spike H: Connection to Parts III/IV (Logogenic Agents and ELIs)
 
-**Status**: derivation. PROPRIUM class assignment; what's wrapping-content vs. ELI-specific load; segment-level integration recommendations.
-**Date**: 2026-05-09
-**Depends on**: `01-theorem-statement.md`, `02-admissibility.md`, `03-leakage.md`, `06-empirical-instances.md` (especially §1 PROPRIUM characterization).
+**Status**: derivation. PROPRIUM class assignment; what's wrapping-content vs. ELI-specific load; segment-level integration recommendations.  
+**Date**: 2026-05-09 **Depends on**: `01-theorem-statement.md`, `02-admissibility.md`, `03-leakage.md`, `06-empirical-instances.md` (especially §1 PROPRIUM characterization).
 
 ---
 

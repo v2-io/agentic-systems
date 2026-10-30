@@ -1,8 +1,7 @@
 # Sub-Spike C: Leakage Characterization
 
-**Status**: derivation. Hierarchy of three wrapping regimes; structural-vs-behavioral leakage bound; honest scope on what cannot currently be bounded.
-**Date**: 2026-05-09
-**Depends on**: `01-theorem-statement.md` (especially condition C3 and the approximate Theorem 2). Informed by `06-empirical-instances.md` finding that PROPRIUM/shoshin is *partial-wrapping*, not strict wrapping.
+**Status**: derivation. Hierarchy of three wrapping regimes; structural-vs-behavioral leakage bound; honest scope on what cannot currently be bounded.  
+**Date**: 2026-05-09 **Depends on**: `01-theorem-statement.md` (especially condition C3 and the approximate Theorem 2). Informed by `06-empirical-instances.md` finding that PROPRIUM/shoshin is *partial-wrapping*, not strict wrapping.
 
 ---
 

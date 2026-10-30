@@ -1,8 +1,7 @@
 # Sub-Spike B: Component Admissibility
 
-**Status**: derivation. Three-class partition; characterization of failure modes for Class C; quality-vs-separation tradeoff inside Class B.
-**Date**: 2026-05-09
-**Depends on**: `01-theorem-statement.md` (especially condition C1).
+**Status**: derivation. Three-class partition; characterization of failure modes for Class C; quality-vs-separation tradeoff inside Class B.  
+**Date**: 2026-05-09 **Depends on**: `01-theorem-statement.md` (especially condition C1).
 
 ---
 

@@ -1,8 +1,7 @@
 # Sub-Spike A: Class-Coercion Theorem — Statement and Proof Attempt
 
-**Status**: derivation in progress. Conditions stated; (A1)–(A4) verification works modulo specific wrapper-design constraints; directed-separation theorem is the load-bearing structural claim.
-**Date**: 2026-05-09
-**Depends on**: `00-brief.md`, `#form-composition-closure` (admissibility (A1)–(A4)), `#der-directed-separation`, `#hyp-directed-separation-under-composition`, `#def-agent-environment`, `#result-sector-persistence-template`, `#deriv-sector-condition`.
+**Status**: derivation in progress. Conditions stated; (A1)–(A4) verification works modulo specific wrapper-design constraints; directed-separation theorem is the load-bearing structural claim.  
+**Date**: 2026-05-09 **Depends on**: `00-brief.md`, `#form-composition-closure` (admissibility (A1)–(A4)), `#der-directed-separation`, `#hyp-directed-separation-under-composition`, `#def-agent-environment`, `#result-sector-persistence-template`, `#deriv-sector-condition`.
 
 ---
 
@@ -171,10 +170,7 @@ $$M_{W,m+1} = f_M\big(\, M_{W,m},\ o_{W,m+1},\ q_M(M_{W,m}, o_{W,m+1}),\ A\big(q
 
 For $G_W$ to influence $M_{W,m+1}$, it must enter through one of the four arguments of $f_M$:
 
-(P-1) $M_{W,m}$ — already conditioned on.
-(P-2) $o_{W,m+1}$ — already conditioned on.
-(P-3) $q_M(M_{W,m}, o_{W,m+1})$ — by type signature, $q_M$ does not take $G_W$. ✗ closed.
-(P-4) $A(q_M)$ — the component's response to a goal-blind query.
+(P-1) $M_{W,m}$ — already conditioned on. (P-2) $o_{W,m+1}$ — already conditioned on. (P-3) $q_M(M_{W,m}, o_{W,m+1})$ — by type signature, $q_M$ does not take $G_W$. ✗ closed. (P-4) $A(q_M)$ — the component's response to a goal-blind query.
 
 Paths P-1 and P-2 are conditioned on. Path P-3 is closed by the type signature of $q_M$ (this is the structural commitment of the wrapper).
 

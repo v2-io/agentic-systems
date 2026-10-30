@@ -1,8 +1,7 @@
 # Class-Coercion Spike: Verdict and Synthesis
 
-**Status**: complete (sub-spikes E, G deferred as future work; their absence does not block the verdict).
-**Date**: 2026-05-09
-**Inputs**: `00-brief.md`, `01-theorem-statement.md`, `02-admissibility.md`, `03-leakage.md`, `04-epsilon-semantics.md`, `06-empirical-instances.md` (delegated), `08-parts-3-4-connection.md`, `09-prior-art-differentiation.md` (delegated).
+**Status**: complete (sub-spikes E, G deferred as future work; their absence does not block the verdict).  
+**Date**: 2026-05-09 **Inputs**: `00-brief.md`, `01-theorem-statement.md`, `02-admissibility.md`, `03-leakage.md`, `04-epsilon-semantics.md`, `06-empirical-instances.md` (delegated), `08-parts-3-4-connection.md`, `09-prior-art-differentiation.md` (delegated).
 
 **Posture** (per Joseph's framing correction during the spike): truth-discovery and theory-strengthening, not novelty-claim or paper-extraction. The verdict reads accordingly — the wrapping construction is integration content within ASF's prior-art-integration discipline.
 

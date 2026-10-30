@@ -514,7 +514,7 @@ The strengthen-first posture succeeds for three of six residuals (R1 Euclidean v
 - Monderer, D. & Shapley, L. S. (1996). "Potential games." *Games and Economic Behavior* 14(1):124–143.
 - Rosen, J. B. (1965). "Existence and uniqueness of equilibrium points for concave n-person games." *Econometrica* 33(3):520–534.
 
-**AAT segments referenced:**
+**AAT segments referenced:**  
 `#result-sector-persistence-template`, `#result-contraction-template`, `#form-composition-closure`, `#deriv-critical-mass-composition`, `#scope-composite-agent`, `#der-gain-sector-bridge`, `#deriv-sector-condition`, `#deriv-adaptive-gain-dynamics`, `#disc-identifiability-floor`, `#disc-separability-pattern`, `#additive-coordinate-forcing`, `#scope-agent-identity`, `#der-directed-separation`, `#deriv-strategic-composition`, `#der-adversarial-destabilization`, `#emp-update-gain`.
 
 **AAT spike trail:**

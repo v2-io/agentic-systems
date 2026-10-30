@@ -1,8 +1,7 @@
 # RG-0a (continued): Iterated Coarse-Graining and Parameter Flow
 
-**Status**: derived — but result demands a sharper distinction (structural-RG vs. critical-RG) than the brief originally framed.
-**Date**: 2026-05-09
-**Depends on**: `01-rg-0a-two-kalman-Kc-extension.md` §5.
+**Status**: derived — but result demands a sharper distinction (structural-RG vs. critical-RG) than the brief originally framed.  
+**Date**: 2026-05-09 **Depends on**: `01-rg-0a-two-kalman-Kc-extension.md` §5.
 
 The single-step calculation in §2 of the parent file showed $\varepsilon^* \to 0$ under one application of $\Lambda$. The substantive RG question is whether AAT-shape *and* a non-trivial parameter set survive under *iterated* coarse-graining. This file works that out.
 

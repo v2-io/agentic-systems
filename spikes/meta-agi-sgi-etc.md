@@ -57,8 +57,7 @@ For clear discussion now, it helps to avoid treating the labels as binary milest
 5. **ASI:** Widely and substantially exceeds the best human cognitive performance across domains.
 6. **Singularity:** A hypothesized period of very rapid, self-amplifying technological change—possibly enabled by AI, but neither synonymous with AGI nor guaranteed by it.
 
-So the modest consensus is **ordinal, not threshold-based**: current AI is clearly beyond traditional narrow AI, likely moving toward more capable general-purpose agents, but the field has not agreed that it is AGI—and “superintelligence” and “singularity” remain prospective frameworks rather than established technical classifications.[^9][^10][^1]
-<span style="display:none">[^11][^12][^13][^14][^15][^16][^17][^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31]</span>
+So the modest consensus is **ordinal, not threshold-based**: current AI is clearly beyond traditional narrow AI, likely moving toward more capable general-purpose agents, but the field has not agreed that it is AGI—and “superintelligence” and “singularity” remain prospective frameworks rather than established technical classifications.[^9][^10][^1] <span style="display:none">[^11][^12][^13][^14][^15][^16][^17][^18][^19][^20][^21][^22][^23][^24][^25][^26][^27][^28][^29][^30][^31]</span>
 
 <div align="center">⁂</div>
 

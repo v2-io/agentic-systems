@@ -1,8 +1,6 @@
 # Spike: The Leakage Locus — Goal Contamination Confined to the Identifiability Null Space
 
-**Status.** Exploratory research spike. Math worked to the point where the core result is exact and closed-form; two propagations are sketch-grade and marked as such.
-**Date.** 2026-05-18.
-**Pressure Point.** The `#def-agent-spectrum` Working Note (2026-05-18) flagged a thread that the theory touches but does not state: the dangerous $G_t \to f_M$ coupling does not live "at the future boundary" — it concentrates in the inference about the *unobserved present* (the gap-filling about the unseen parts of the current world), because that is the only step in $f_M$ with a *free prior*. It also conjectured that directed separation as currently stated — the conditional independence $M_{\tau^+} \perp G_t \mid (M_{\tau^-}, e_\tau)$ ( `#der-directed-separation`) — addresses the *processing of the event* but does **not** prevent a goal-shaped prior that the next observation cannot wash out.
+**Status.** Exploratory research spike. Math worked to the point where the core result is exact and closed-form; two propagations are sketch-grade and marked as such. **Date.** 2026-05-18. **Pressure Point.** The `#def-agent-spectrum` Working Note (2026-05-18) flagged a thread that the theory touches but does not state: the dangerous $G_t \to f_M$ coupling does not live "at the future boundary" — it concentrates in the inference about the *unobserved present* (the gap-filling about the unseen parts of the current world), because that is the only step in $f_M$ with a *free prior*. It also conjectured that directed separation as currently stated — the conditional independence $M_{\tau^+} \perp G_t \mid (M_{\tau^-}, e_\tau)$ ( `#der-directed-separation`) — addresses the *processing of the event* but does **not** prevent a goal-shaped prior that the next observation cannot wash out.
 
 This spike works the math. The question: does the intuition survive contact with the filtering formalism, and if so is there a derivation, a strengthening, a diagnostic, or a normative structure on the other side of it?
 
@@ -31,9 +29,7 @@ This is the first connection: the leakage locus *is* an identifiability null spa
 
 Linear-Gaussian instantiation (the Laplace approximation of the general case; exact when the model is linear-Gaussian, which is the canonical Section-I tracker — Kalman, Beta-Bernoulli linearization).
 
-Post-predict prior: $b_{\tau^-} = \mathcal N(\mu^-, P^-)$.
-Observation: $o = Hz + v$, $v \sim \mathcal N(0, R)$, so $L(z) \propto \exp\!\big(-\tfrac12 (o-Hz)^\top R^{-1}(o-Hz)\big)$.
-**Observation Fisher information** (the information the event carries about the current latent state):
+Post-predict prior: $b_{\tau^-} = \mathcal N(\mu^-, P^-)$. Observation: $o = Hz + v$, $v \sim \mathcal N(0, R)$, so $L(z) \propto \exp\!\big(-\tfrac12 (o-Hz)^\top R^{-1}(o-Hz)\big)$. **Observation Fisher information** (the information the event carries about the current latent state):
 $$\mathcal I_\tau \;=\; H^\top R^{-1} H \;\succeq\; 0, \qquad \ker\mathcal I_\tau = \ker H \;=\;\text{unobserved subspace of } z_\tau.$$
 
 Honest (goal-blind) correct step — the information-form Kalman update:

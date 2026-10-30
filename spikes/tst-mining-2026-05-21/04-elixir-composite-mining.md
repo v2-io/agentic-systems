@@ -1,7 +1,6 @@
 # Elixir-cluster mining — composite agent theory, running-software-as-agent, wrapping leakage hierarchy
 
-**Date:** 2026-05-21
-**Scope:** ~480 analyses from the Elixir cluster — *Designing Elixir Systems with OTP* (Gray & Tate, 94), *Programming Elixir* (Thomas, 164), *Metaprogramming Elixir* (McCord, 60), *Elixir Best Practices* (87), *The Design Principles of the Elixir Type System* (Castagna/Duboc/Valim, 14), *Elixir Ecosystem Analysis* (75).
+**Date:** 2026-05-21 **Scope:** ~480 analyses from the Elixir cluster — *Designing Elixir Systems with OTP* (Gray & Tate, 94), *Programming Elixir* (Thomas, 164), *Metaprogramming Elixir* (McCord, 60), *Elixir Best Practices* (87), *The Design Principles of the Elixir Type System* (Castagna/Duboc/Valim, 14), *Elixir Ecosystem Analysis* (75).  
 **Mining target:** Composite-agent material — supervision trees and the actor model as industrial implementation of AAT's class-coercion-via-wrapping; the running BEAM service as Joseph's "lower-form software agent"; concrete grounding for `#der-class-coercion-via-wrapping`, `#der-tempo-composition`, `#der-communication-gain`, `#scope-composite-agent`.
 
 **Posture note.** The Elixir corpus is heavily redundant — most analyses recapitulate the same OTP supervision pattern from slightly different chapter angles, and a large fraction is Elixir-syntax tutorial material (pipe operator, pattern matching, list comprehension, etc.) that has no TST yield once you strip the Sapientia-application boilerplate. The signal-to-noise mismatch Joseph named is real. I have been ruthless: ~30 findings out of ~480 analyses, with the highest-yield ones (the OTP-as-class-coercion mapping) consolidated rather than enumerated per-analysis to avoid restating the same structural content from $n$ near-duplicate angles.
@@ -12,9 +11,8 @@
 
 ### A1. Supervision trees as the industrial implementation of `#der-class-coercion-via-wrapping`
 
-**Source analyses:** [060-supervisor-trees](../../../_core/tst/planning/analysis/060-supervisor-trees.md), [112-supervision-strategies](../../../_core/tst/planning/analysis/112-supervision-strategies.md), [089-supervision-lifecycle](../../../_core/tst/planning/analysis/089-supervision-lifecycle.md), [598-supervision-tree-design-patterns](../../../_core/tst/planning/analysis/598-supervision-tree-design-patterns---optimal-hierarchical-organization-of-supervisors-and-workers.md), [794-fault-tolerance-patterns](../../../_core/tst/planning/analysis/794-fault-tolerance-patterns---building-resilient-systems-through-supervision.md), [795-supervisor-tree-design](../../../_core/tst/planning/analysis/795-supervisor-tree-design---hierarchical-supervision-for-complex-systems.md), [798-supervision-based-reliability](../../../_core/tst/planning/analysis/798-supervision-based-reliability---using-supervision-for-system-reliability.md), [437-supervision-tree-design](../../../_core/tst/planning/analysis/437-supervision-tree-design---fault-tolerant-process-hierarchies-in-actor-model-systems.md), [823-fault-isolation-through-supervision-strategy](../../../_core/tst/planning/analysis/823-fault-isolation-through-supervision-strategy.md), [592-lifecycle-vs-supervision-distinction](../../../_core/tst/planning/analysis/592-lifecycle-vs-supervision-distinction.md), [594-application-vs-supervisor-startup-orchestration](../../../_core/tst/planning/analysis/594-application-vs-supervisor-startup-orchestration.md), [223-otp-applications](../../../_core/tst/planning/analysis/223-otp-applications.md).
-**Class:** A
-**AAT-relevance:** `#der-class-coercion-via-wrapping`, `#impl-composition-machinery`, `#scope-composite-agent`.
+**Source analyses:** [060-supervisor-trees](../../../_core/tst/planning/analysis/060-supervisor-trees.md), [112-supervision-strategies](../../../_core/tst/planning/analysis/112-supervision-strategies.md), [089-supervision-lifecycle](../../../_core/tst/planning/analysis/089-supervision-lifecycle.md), [598-supervision-tree-design-patterns](../../../_core/tst/planning/analysis/598-supervision-tree-design-patterns---optimal-hierarchical-organization-of-supervisors-and-workers.md), [794-fault-tolerance-patterns](../../../_core/tst/planning/analysis/794-fault-tolerance-patterns---building-resilient-systems-through-supervision.md), [795-supervisor-tree-design](../../../_core/tst/planning/analysis/795-supervisor-tree-design---hierarchical-supervision-for-complex-systems.md), [798-supervision-based-reliability](../../../_core/tst/planning/analysis/798-supervision-based-reliability---using-supervision-for-system-reliability.md), [437-supervision-tree-design](../../../_core/tst/planning/analysis/437-supervision-tree-design---fault-tolerant-process-hierarchies-in-actor-model-systems.md), [823-fault-isolation-through-supervision-strategy](../../../_core/tst/planning/analysis/823-fault-isolation-through-supervision-strategy.md), [592-lifecycle-vs-supervision-distinction](../../../_core/tst/planning/analysis/592-lifecycle-vs-supervision-distinction.md), [594-application-vs-supervisor-startup-orchestration](../../../_core/tst/planning/analysis/594-application-vs-supervisor-startup-orchestration.md), [223-otp-applications](../../../_core/tst/planning/analysis/223-otp-applications.md).  
+**Class:** A **AAT-relevance:** `#der-class-coercion-via-wrapping`, `#impl-composition-machinery`, `#scope-composite-agent`.
 
 **The content (briefly).** Across ~12 analyses, OTP supervision trees are formalized as a hierarchical structure where each supervisor's role is *exactly* the externally-imposed scaffold that gives the composite the properties its component processes do not individually have. A worker GenServer crashes when it encounters an unexpected state — by itself it has no fault-tolerance property. The supervisor wrapping it commits structurally to: (i) detecting the crash through process linking ($t_f \approx 0$ via the BEAM's monitor primitive), (ii) restoring the worker to its clean initial state $S_0$ in roughly microseconds, (iii) preserving state outside the worker (the *stash* pattern — analysis 060 names this and observes that $O(n_{\text{state elements}})$ recovery collapses to $O(1)$ when state is held in a stash process). The supervisor itself is also a process under a higher supervisor, so the property holds at each level by induction. Analysis 060: $P(\text{system-survives}) \approx 1 - (\text{failure-rate})^d$ for depth-$d$ tree — system reliability grows *exponentially* with supervision depth while comprehension complexity grows only *logarithmically* (analysis 598).
 
@@ -24,9 +22,8 @@
 
 ### A2. Three restart strategies (`:one_for_one` / `:one_for_all` / `:rest_for_one`) as a W₁ regime *taxonomy*
 
-**Source analyses:** [112-supervision-strategies](../../../_core/tst/planning/analysis/112-supervision-strategies.md), [823-fault-isolation-through-supervision-strategy](../../../_core/tst/planning/analysis/823-fault-isolation-through-supervision-strategy.md), [437-supervision-tree-design](../../../_core/tst/planning/analysis/437-supervision-tree-design---fault-tolerant-process-hierarchies-in-actor-model-systems.md), [598-supervision-tree-design-patterns](../../../_core/tst/planning/analysis/598-supervision-tree-design-patterns---optimal-hierarchical-organization-of-supervisors-and-workers.md), [594-application-vs-supervisor-startup-orchestration](../../../_core/tst/planning/analysis/594-application-vs-supervisor-startup-orchestration.md).
-**Class:** A
-**AAT-relevance:** `#der-class-coercion-via-wrapping` (refinement — the wrapper choice has a structure-of-coupling parameter not currently surfaced).
+**Source analyses:** [112-supervision-strategies](../../../_core/tst/planning/analysis/112-supervision-strategies.md), [823-fault-isolation-through-supervision-strategy](../../../_core/tst/planning/analysis/823-fault-isolation-through-supervision-strategy.md), [437-supervision-tree-design](../../../_core/tst/planning/analysis/437-supervision-tree-design---fault-tolerant-process-hierarchies-in-actor-model-systems.md), [598-supervision-tree-design-patterns](../../../_core/tst/planning/analysis/598-supervision-tree-design-patterns---optimal-hierarchical-organization-of-supervisors-and-workers.md), [594-application-vs-supervisor-startup-orchestration](../../../_core/tst/planning/analysis/594-application-vs-supervisor-startup-orchestration.md).  
+**Class:** A **AAT-relevance:** `#der-class-coercion-via-wrapping` (refinement — the wrapper choice has a structure-of-coupling parameter not currently surfaced).
 
 **The content (briefly).** A supervisor has to choose, at wire-up time, what to do when a child crashes. The three canonical choices encode different *failure-coupling* commitments: `:one_for_one` restarts only the failed child (children treated as independent), `:one_for_all` restarts everyone (children treated as a single unit — used for processes that share a consensus invariant or a startup ordering that requires all-or-nothing), `:rest_for_one` restarts the failed child plus everyone started after it (children form a directed pipeline where downstream consumers depend on upstream producers' state). Analysis 112 gives the SCC-based selection algorithm: compute strongly-connected components of the dependency graph; singleton-SCCs → `:one_for_one`; one big SCC → `:one_for_all`; chain-of-SCCs → `:rest_for_one`. Analysis 823 formalizes the resulting alignment score as $\text{alignment} = 1 - n_p^{-2}\sum_{i,j}\lvert\rho_{ij}^{(\text{semantic})} - \rho_{ij}^{(\text{strategy})}\rvert$, where $\rho^{(\text{strategy})}$ is the failure coupling the strategy *imposes* and $\rho^{(\text{semantic})}$ is what the domain *requires*.
 
@@ -36,8 +33,8 @@
 
 ### A3. Restart-intensity / max-restarts as the wrapper's *strategic persistence* bound
 
-**Source analyses:** [060-supervisor-trees](../../../_core/tst/planning/analysis/060-supervisor-trees.md), [112-supervision-strategies](../../../_core/tst/planning/analysis/112-supervision-strategies.md), [598-supervision-tree-design-patterns](../../../_core/tst/planning/analysis/598-supervision-tree-design-patterns---optimal-hierarchical-organization-of-supervisors-and-workers.md), [597-child-specification-optimization](../../../_core/tst/planning/analysis/597-child-specification-optimization---optimal-patterns-for-defining-child-process-specifications.md), [828-process-health-monitoring-systems](../../../_core/tst/planning/analysis/828-process-health-monitoring-systems---handling-down-messages-and-process-lifecycle-tracking.md).
-**Class:** A — directly answers Joseph's "what is $\mathcal T$ for a running service?" question.
+**Source analyses:** [060-supervisor-trees](../../../_core/tst/planning/analysis/060-supervisor-trees.md), [112-supervision-strategies](../../../_core/tst/planning/analysis/112-supervision-strategies.md), [598-supervision-tree-design-patterns](../../../_core/tst/planning/analysis/598-supervision-tree-design-patterns---optimal-hierarchical-organization-of-supervisors-and-workers.md), [597-child-specification-optimization](../../../_core/tst/planning/analysis/597-child-specification-optimization---optimal-patterns-for-defining-child-process-specifications.md), [828-process-health-monitoring-systems](../../../_core/tst/planning/analysis/828-process-health-monitoring-systems---handling-down-messages-and-process-lifecycle-tracking.md).  
+**Class:** A — directly answers Joseph's "what is $\mathcal T$ for a running service?" question.  
 **AAT-relevance:** `#result-persistence-condition` applied at the wrapper level; the bridge from AAT persistence to running-service availability.
 
 **The content (briefly).** OTP supervisors have two parameters that govern when the wrapper *itself* gives up: `max_restarts` and `max_seconds`. The semantics: if more than `max_restarts` child crashes occur within `max_seconds`, the supervisor itself crashes and escalates the failure to its own parent supervisor. Defaults are 3 restarts in 5 seconds — battle-tested across two decades of production BEAM. Analysis 112 gives the design rule $\text{max-restarts} = \lceil \lambda \cdot \text{window} \cdot \text{safety-factor} \rceil$ where $\lambda$ is the observed historical failure rate and the safety factor is $\approx 1.5$. The point: a wrapper that restarts too aggressively masks a real fault (the child has a deterministic bug and will keep crashing the same way — restarting it is just chain-of-failure amplification); a wrapper that gives up too quickly fails to actually coerce the class.
@@ -48,9 +45,8 @@
 
 ### A4. The "stash" pattern as W₀↔W₁ regime separation through state externalization
 
-**Source analyses:** [060-supervisor-trees](../../../_core/tst/planning/analysis/060-supervisor-trees.md), [089-supervision-lifecycle](../../../_core/tst/planning/analysis/089-supervision-lifecycle.md), [112-supervision-strategies](../../../_core/tst/planning/analysis/112-supervision-strategies.md), [124-genserver-state-management](../../../_core/tst/planning/analysis/124-genserver-state-management.md), [586-genserver-state-management-patterns](../../../_core/tst/planning/analysis/586-genserver-state-management-patterns.md).
-**Class:** A
-**AAT-relevance:** `#der-class-coercion-via-wrapping` (refinement — *how the wrapper preserves what it cannot afford to lose*); intersects with $S_{\text{essential}}$ / $S_{\text{ephemeral}}$ decomposition.
+**Source analyses:** [060-supervisor-trees](../../../_core/tst/planning/analysis/060-supervisor-trees.md), [089-supervision-lifecycle](../../../_core/tst/planning/analysis/089-supervision-lifecycle.md), [112-supervision-strategies](../../../_core/tst/planning/analysis/112-supervision-strategies.md), [124-genserver-state-management](../../../_core/tst/planning/analysis/124-genserver-state-management.md), [586-genserver-state-management-patterns](../../../_core/tst/planning/analysis/586-genserver-state-management-patterns.md).  
+**Class:** A **AAT-relevance:** `#der-class-coercion-via-wrapping` (refinement — *how the wrapper preserves what it cannot afford to lose*); intersects with $S_{\text{essential}}$ / $S_{\text{ephemeral}}$ decomposition.
 
 **The content (briefly).** The bare let-it-crash pattern loses all worker state on restart. The *stash process pattern* (analysis 060) separates a worker into two co-located processes: a `Worker` that holds ephemeral processing state and crashes freely, and a `Stash` that holds essential state and is supervised with a much *lower* restart intensity (the rationale: the stash should almost never need to restart; if it does, the supervisor should escalate quickly because the essential state's home being unstable means the whole composite has crossed an unsoundness boundary). The supervisor wires them together with `:rest_for_one` so a Stash crash also restarts the Worker (which depends on the Stash), but a Worker crash does not touch the Stash. Analyses 089 and 112 generalize: state is decomposed into $S_{\text{essential}}$ (must persist across restarts — user data, counters, configuration) and $S_{\text{ephemeral}}$ (can be lost — caches, in-flight buffers, performance metrics); the essential set is moved to a separate, more-stable process; the worker becomes recoverable in $O(1)$ time.
 
@@ -60,9 +56,8 @@
 
 ### A5. Lightweight processes (roughly 1–5 microsecond spawn cost) as the structural enabler of the wrapping construction
 
-**Source analyses:** [030-actor-model-processes](../../../_core/tst/planning/analysis/030-actor-model-processes.md), [777-process-overhead-and-actor-model-scalability](../../../_core/tst/planning/analysis/777-process-overhead-and-actor-model-scalability.md), [773-process-creation-patterns](../../../_core/tst/planning/analysis/773-process-creation-patterns---spawning-lightweight-processes-efficiently.md), [774-process-overhead-management](../../../_core/tst/planning/analysis/774-process-overhead-management---understanding-performance-characteristics-of-processes.md), [780-process-isolation-principles](../../../_core/tst/planning/analysis/780-process-isolation-principles---ensuring-process-independence-and-safety.md).
-**Class:** A
-**AAT-relevance:** `#der-class-coercion-via-wrapping` (the cost side); `#der-tempo-composition`.
+**Source analyses:** [030-actor-model-processes](../../../_core/tst/planning/analysis/030-actor-model-processes.md), [777-process-overhead-and-actor-model-scalability](../../../_core/tst/planning/analysis/777-process-overhead-and-actor-model-scalability.md), [773-process-creation-patterns](../../../_core/tst/planning/analysis/773-process-creation-patterns---spawning-lightweight-processes-efficiently.md), [774-process-overhead-management](../../../_core/tst/planning/analysis/774-process-overhead-management---understanding-performance-characteristics-of-processes.md), [780-process-isolation-principles](../../../_core/tst/planning/analysis/780-process-isolation-principles---ensuring-process-independence-and-safety.md).  
+**Class:** A **AAT-relevance:** `#der-class-coercion-via-wrapping` (the cost side); `#der-tempo-composition`.
 
 **The content (briefly).** Across multiple analyses: BEAM processes have roughly 5-microsecond spawn cost on 2011 hardware (Thomas's million-process benchmark in roughly 5s) — orders of magnitude below OS processes (ms) or OS threads (hundreds of microseconds). The behavioral consequence is what Thomas calls a *design-level* change, not just a performance one: developers create processes "as casually as they would create objects in Java" (analyses 030, 777). The analyses observe but do not formalize the deeper structural point: process spawn cost being lower than the *human comprehension cost of state-sharing* changes which abstraction is the path of least resistance.
 
@@ -72,8 +67,8 @@
 
 ### A6. The running BEAM service as `#scope-running-software-agent` — concrete instantiation
 
-**Source analyses:** [223-otp-applications](../../../_core/tst/planning/analysis/223-otp-applications.md), [124-genserver-state-management](../../../_core/tst/planning/analysis/124-genserver-state-management.md), [088-genserver-boundaries](../../../_core/tst/planning/analysis/088-genserver-boundaries.md), [149-genserver-callbacks](../../../_core/tst/planning/analysis/149-genserver-callbacks.md), [589-api-layer-design-patterns](../../../_core/tst/planning/analysis/589-api-layer-design-patterns---creating-clean-functional-apis-that-hide-genserver-complexity.md), [787-otp-callback-patterns](../../../_core/tst/planning/analysis/787-otp-callback-patterns---implementing-required-behavior-callbacks.md), [789-server-interface-design](../../../_core/tst/planning/analysis/789-server-interface-design---clean-api-design-for-server-processes.md), [796-process-lifecycle-management](../../../_core/tst/planning/analysis/796-process-lifecycle-management---understanding-process-birth-life-and-death.md).
-**Class:** A — direct answer to Joseph's named gap on running-software-as-agent.
+**Source analyses:** [223-otp-applications](../../../_core/tst/planning/analysis/223-otp-applications.md), [124-genserver-state-management](../../../_core/tst/planning/analysis/124-genserver-state-management.md), [088-genserver-boundaries](../../../_core/tst/planning/analysis/088-genserver-boundaries.md), [149-genserver-callbacks](../../../_core/tst/planning/analysis/149-genserver-callbacks.md), [589-api-layer-design-patterns](../../../_core/tst/planning/analysis/589-api-layer-design-patterns---creating-clean-functional-apis-that-hide-genserver-complexity.md), [787-otp-callback-patterns](../../../_core/tst/planning/analysis/787-otp-callback-patterns---implementing-required-behavior-callbacks.md), [789-server-interface-design](../../../_core/tst/planning/analysis/789-server-interface-design---clean-api-design-for-server-processes.md), [796-process-lifecycle-management](../../../_core/tst/planning/analysis/796-process-lifecycle-management---understanding-process-birth-life-and-death.md).  
+**Class:** A — direct answer to Joseph's named gap on running-software-as-agent.  
 **AAT-relevance:** new TST segment (`#scope-running-software-agent` or similar — the running-service analog of `#scope-developer-agent`).
 
 **The content (briefly).** GenServer's callback structure (analysis 124) is, structurally, an adaptive-agent state machine: `init/1` constructs the initial $M_t = S_0$; `handle_call/3` and `handle_cast/2` process synchronous and asynchronous messages (observations) and return new state (a Bayesian update); `handle_info/2` processes unsolicited events (environment observations); `terminate/2` is the agent's shutdown procedure. The full callback specification $\delta: S \times M \to S \times R$ in analysis 124 is the same structural shape as a TST-style $(M_t, O_t, \Sigma_t)$ agent at one timescale. Analyses 088, 589, 789 add the *API layer* discipline: a clean external API hides the GenServer's internal state, presenting only the action class the running agent exposes to its environment.
@@ -84,9 +79,8 @@
 
 ### A7. Let-it-crash as the *temporal optimality* (`#post-temporal-optimality`) restated for the running service
 
-**Source analyses:** [017-let-it-crash](../../../_core/tst/planning/analysis/017-let-it-crash.md), [102-let-it-crash-philosophy](../../../_core/tst/planning/analysis/102-let-it-crash-philosophy.md), [433-error-recovery-vs-failure](../../../_core/tst/planning/analysis/433-error-recovery-vs-failure---when-to-recover-vs-when-to-fail-and-crash-early-philosophy.md), [020-fail-fast](../../../_core/tst/planning/analysis/020-fail-fast.md).
-**Class:** A
-**AAT-relevance:** `#scope-continuous-operation`, `#post-temporal-optimality`, the candidate `#scope-running-software-agent` from A6.
+**Source analyses:** [017-let-it-crash](../../../_core/tst/planning/analysis/017-let-it-crash.md), [102-let-it-crash-philosophy](../../../_core/tst/planning/analysis/102-let-it-crash-philosophy.md), [433-error-recovery-vs-failure](../../../_core/tst/planning/analysis/433-error-recovery-vs-failure---when-to-recover-vs-when-to-fail-and-crash-early-philosophy.md), [020-fail-fast](../../../_core/tst/planning/analysis/020-fail-fast.md).  
+**Class:** A **AAT-relevance:** `#scope-continuous-operation`, `#post-temporal-optimality`, the candidate `#scope-running-software-agent` from A6.
 
 **The content (briefly).** The let-it-crash philosophy (analyses 017, 102) is the explicit operational choice to *minimize* $T_{\text{recovery}}$ rather than *minimize* $P(\text{failure})$. Defensive programming tries to make $P(\text{failure}) \to 0$ by checking every precondition and handling every exception path. Let-it-crash accepts $P(\text{failure}) \gt 0$ and engineers $T_{\text{recovery}}$ down toward the microsecond range. Analysis 017: $A_{\text{system}} = \mu / (\lambda + \mu) \to 1$ as restart rate $\mu \gg$ failure rate $\lambda$. Analysis 102 makes the comprehension argument too — defensive programming creates discontinuities at every error boundary ($\sim n_e \cdot t_d$ where $n_e$ is the number of error paths), while let-it-crash creates discontinuities only at supervisor boundaries (a small constant $k$).
 
@@ -96,9 +90,8 @@
 
 ### A8. The actor model as the substrate for $\Sigma_t$ as a directed message-flow DAG
 
-**Source analyses:** [030-actor-model-processes](../../../_core/tst/planning/analysis/030-actor-model-processes.md), [069-actors-processes](../../../_core/tst/planning/analysis/069-actors-processes.md), [780-process-isolation-principles](../../../_core/tst/planning/analysis/780-process-isolation-principles---ensuring-process-independence-and-safety.md), [779-message-passing-patterns](../../../_core/tst/planning/analysis/779-message-passing-patterns---communication-between-independent-processes.md), [830-process-communication-protocol-design](../../../_core/tst/planning/analysis/830-process-communication-protocol-design---structured-message-patterns-for-reliable-communication.md), [778-process-oriented-thinking](../../../_core/tst/planning/analysis/778-process-oriented-thinking---designing-systems-with-concurrent-processes.md).
-**Class:** A
-**AAT-relevance:** `#def-strategy-dag` instantiated at the running-service level; `#scope-composite-agent`.
+**Source analyses:** [030-actor-model-processes](../../../_core/tst/planning/analysis/030-actor-model-processes.md), [069-actors-processes](../../../_core/tst/planning/analysis/069-actors-processes.md), [780-process-isolation-principles](../../../_core/tst/planning/analysis/780-process-isolation-principles---ensuring-process-independence-and-safety.md), [779-message-passing-patterns](../../../_core/tst/planning/analysis/779-message-passing-patterns---communication-between-independent-processes.md), [830-process-communication-protocol-design](../../../_core/tst/planning/analysis/830-process-communication-protocol-design---structured-message-patterns-for-reliable-communication.md), [778-process-oriented-thinking](../../../_core/tst/planning/analysis/778-process-oriented-thinking---designing-systems-with-concurrent-processes.md).  
+**Class:** A **AAT-relevance:** `#def-strategy-dag` instantiated at the running-service level; `#scope-composite-agent`.
 
 **The content (briefly).** The actor-model invariant in analysis 030: $\forall p_i, p_j \in P, i \neq j: S_i \cap S_j = \emptyset$ — no shared mutable state. Communication is via asynchronous message passing: $\text{send}: P \times P \times M \to \text{void}$. Each actor handles its own incoming message queue. Analysis 779 / 830 add the *structured-message-protocol* discipline: well-defined message types (`{:ok, result}`, `{:error, reason}`) and explicit registration via `Registry` or via-tuples enable *traceable* message flow across the system.
 
@@ -108,8 +101,8 @@
 
 ### A9. Process-pool patterns (Poolboy, `Task.async_stream`) as bounded-tempo concurrent execution
 
-**Source analyses:** [600-process-pool-management-strategies](../../../_core/tst/planning/analysis/600-process-pool-management-strategies.md), [824-process-pool-management-patterns](../../../_core/tst/planning/analysis/824-process-pool-management-patterns.md), [792-worker-process-management](../../../_core/tst/planning/analysis/792-worker-process-management---supervising-child-processes-effectively.md), [776-parallel-processing-patterns](../../../_core/tst/planning/analysis/776-parallel-processing-patterns---distributing-work-across-multiple-processes.md), [821-dynamic-process-creation-strategies](../../../_core/tst/planning/analysis/821-dynamic-process-creation-strategies---dynamicsupervisor-patterns-for-runtime-process-spawning.md), [109-tasks-agents-abstractions](../../../_core/tst/planning/analysis/109-tasks-agents-abstractions.md).
-**Class:** A / B (substrate for Brooks's-Law calibration)
+**Source analyses:** [600-process-pool-management-strategies](../../../_core/tst/planning/analysis/600-process-pool-management-strategies.md), [824-process-pool-management-patterns](../../../_core/tst/planning/analysis/824-process-pool-management-patterns.md), [792-worker-process-management](../../../_core/tst/planning/analysis/792-worker-process-management---supervising-child-processes-effectively.md), [776-parallel-processing-patterns](../../../_core/tst/planning/analysis/776-parallel-processing-patterns---distributing-work-across-multiple-processes.md), [821-dynamic-process-creation-strategies](../../../_core/tst/planning/analysis/821-dynamic-process-creation-strategies---dynamicsupervisor-patterns-for-runtime-process-spawning.md), [109-tasks-agents-abstractions](../../../_core/tst/planning/analysis/109-tasks-agents-abstractions.md).  
+**Class:** A / B (substrate for Brooks's-Law calibration)  
 **AAT-relevance:** `#der-tempo-composition` — running-service Brooks's-Law calibration.
 
 **The content (briefly).** A pool (Poolboy, `Task.async_stream`) bounds the number of concurrent workers at $p$, where $p$ is chosen against the resource bottleneck (DB connections, CPU cores, memory). Analysis 600: $p_{\text{optimal}} = \min(n, \text{cores})$ for CPU-bound work; explicit `:permanent` plus `:overflow` count for shared-resource pools. The point is that more parallelism is not always faster — there is a tempo-composition inflection where the coordination overhead exceeds the parallelism gain (analysis 600 formalizes wait time as a queue-theoretic function of $\lambda$, $\mu$, $p$).
@@ -120,8 +113,8 @@
 
 ### A10. ETS as the shared-memory side-channel — Class-1 separation *partially violated by design*
 
-**Source analyses:** [127-ets-concurrent-state](../../../_core/tst/planning/analysis/127-ets-concurrent-state.md), [124-genserver-state-management](../../../_core/tst/planning/analysis/124-genserver-state-management.md).
-**Class:** C — points to a refinement of the GUC class taxonomy.
+**Source analyses:** [127-ets-concurrent-state](../../../_core/tst/planning/analysis/127-ets-concurrent-state.md), [124-genserver-state-management](../../../_core/tst/planning/analysis/124-genserver-state-management.md).  
+**Class:** C — points to a refinement of the GUC class taxonomy.  
 **AAT-relevance:** `#der-class-coercion-via-wrapping`, GUC class taxonomy — candidate for "Class 1 with controlled shared-state escape hatch."
 
 **The content (briefly).** ETS (Erlang Term Storage) provides lock-free in-memory tables outside any single process's heap; multiple processes can read and write concurrently with microsecond access times. The actor model's strict $S_i \cap S_j = \emptyset$ invariant is *deliberately broken* for ETS-table-contents: tables are owned by one process but accessed directly by others (analysis 127). The access-control matrix (`private` / `protected` / `public`) lets the system designer control how widely the shared-memory escape hatch is exposed.
@@ -132,8 +125,8 @@
 
 ### A11. Process linking / monitoring as the bidirectional vs unidirectional failure-coupling primitive
 
-**Source analyses:** [128-process-monitoring-links](../../../_core/tst/planning/analysis/128-process-monitoring-links.md), [775-process-death-handling](../../../_core/tst/planning/analysis/775-process-death-handling---managing-process-failures-and-cleanup.md), [828-process-health-monitoring-systems](../../../_core/tst/planning/analysis/828-process-health-monitoring-systems---handling-down-messages-and-process-lifecycle-tracking.md).
-**Class:** A (substrate for `:link` vs `:monitor` failure-coupling)
+**Source analyses:** [128-process-monitoring-links](../../../_core/tst/planning/analysis/128-process-monitoring-links.md), [775-process-death-handling](../../../_core/tst/planning/analysis/775-process-death-handling---managing-process-failures-and-cleanup.md), [828-process-health-monitoring-systems](../../../_core/tst/planning/analysis/828-process-health-monitoring-systems---handling-down-messages-and-process-lifecycle-tracking.md).  
+**Class:** A (substrate for `:link` vs `:monitor` failure-coupling)  
 **AAT-relevance:** `#der-class-coercion-via-wrapping` (refinement — directed vs symmetric coupling at the failure layer).
 
 **The content (briefly).** `:link` creates a *bidirectional* fate-sharing relationship between two processes — if either crashes, the other is notified by an exit signal and either crashes too (default) or traps the signal to handle it explicitly. `:monitor` is *unidirectional* — process $A$ monitors $B$ and receives `:DOWN` if $B$ crashes; $B$ knows nothing of $A$ and is not affected by $A$'s state. Supervisors use a one-way link relationship to children (more precisely: a link with `process_flag(:trap_exit, true)`, which converts an incoming exit signal into a `:EXIT` message that the supervisor handles in its callback).
@@ -144,8 +137,8 @@
 
 ### A12. Distributed Erlang as cross-node wrapping with tempo penalty
 
-**Source analyses:** [125-distributed-beam-nodes](../../../_core/tst/planning/analysis/125-distributed-beam-nodes.md), [620-distributed-system-considerations](../../../_core/tst/planning/analysis/620-distributed-system-considerations---adapting-otp-patterns-for-distributed-multi-node-deployments.md), [783-distributed-process-communication](../../../_core/tst/planning/analysis/783-distributed-process-communication---cross-node-message-passing-and-coordination.md), [150-distributed-nodes](../../../_core/tst/planning/analysis/150-distributed-nodes.md), [676-virtual-root-analysis-for-distributed-systems](../../../_core/tst/planning/analysis/676-virtual-root-analysis-for-distributed-systems.md), [228-distributed-process-registry](../../../_core/tst/planning/analysis/228-distributed-process-registry---process-discovery-across-nodes.md).
-**Class:** B (running-service composite at distributed scale)
+**Source analyses:** [125-distributed-beam-nodes](../../../_core/tst/planning/analysis/125-distributed-beam-nodes.md), [620-distributed-system-considerations](../../../_core/tst/planning/analysis/620-distributed-system-considerations---adapting-otp-patterns-for-distributed-multi-node-deployments.md), [783-distributed-process-communication](../../../_core/tst/planning/analysis/783-distributed-process-communication---cross-node-message-passing-and-coordination.md), [150-distributed-nodes](../../../_core/tst/planning/analysis/150-distributed-nodes.md), [676-virtual-root-analysis-for-distributed-systems](../../../_core/tst/planning/analysis/676-virtual-root-analysis-for-distributed-systems.md), [228-distributed-process-registry](../../../_core/tst/planning/analysis/228-distributed-process-registry---process-discovery-across-nodes.md).  
+**Class:** B (running-service composite at distributed scale)  
 **AAT-relevance:** `#der-tempo-composition` at network scale; `#scope-composite-agent`.
 
 **The content (briefly).** BEAM provides *location transparency*: a process can send a message to another process on a remote node using the same `send/2` primitive as for local messages. The group-leader mechanism (analysis 783) preserves I/O routing across distribution: a process spawned on node B by a parent on node A inherits its group leader from the parent, so its I/O routes back to node A. Analysis 620: the OTP supervision pattern extends across nodes — a supervisor on node A can supervise children on node B via global-registry naming. The cost is network round-trip latency (~ms) added to every cross-node message.
@@ -160,9 +153,8 @@
 
 ### B1. The actor model's $O(n^2) \to O(n)$ debugging-complexity reduction as the empirical anchor for $\mathcal T_{\text{dev}}$ structure-coupling
 
-**Source analyses:** [030-actor-model-processes](../../../_core/tst/planning/analysis/030-actor-model-processes.md), [069-actors-processes](../../../_core/tst/planning/analysis/069-actors-processes.md), [780-process-isolation-principles](../../../_core/tst/planning/analysis/780-process-isolation-principles---ensuring-process-independence-and-safety.md).
-**Class:** B / D
-**AAT-relevance:** `#der-code-quality-as-observation-infrastructure` (empirical anchor); developer-tempo decomposition gap.
+**Source analyses:** [030-actor-model-processes](../../../_core/tst/planning/analysis/030-actor-model-processes.md), [069-actors-processes](../../../_core/tst/planning/analysis/069-actors-processes.md), [780-process-isolation-principles](../../../_core/tst/planning/analysis/780-process-isolation-principles---ensuring-process-independence-and-safety.md).  
+**Class:** B / D **AAT-relevance:** `#der-code-quality-as-observation-infrastructure` (empirical anchor); developer-tempo decomposition gap.
 
 **The content (briefly).** Analysis 030 claims $t_{\text{debug}}^{\text{shared}} = \beta \cdot 2^n$ (exponential in number of concurrent components) for shared-state systems versus $t_{\text{debug}}^{\text{actor}} = \delta \cdot \log(n)$ (logarithmic for actor systems). Analysis 069 makes the $s^2$ race-condition count argument: $\binom{s}{2}$ potential race-condition pairs across $s$ shared-state variables. The qualitative claim — actor isolation reduces debugging from combinatorial to tractable — is widely-corroborated in BEAM practitioner literature.
 
@@ -172,9 +164,8 @@
 
 ### B2. Composable error handling via `with` and error-as-data as $H_b$ minimization at the comprehension layer
 
-**Source analyses:** [082-boundary-uncertainty](../../../_core/tst/planning/analysis/082-boundary-uncertainty.md), [136-exception-design-philosophy](../../../_core/tst/planning/analysis/136-exception-design-philosophy.md), [135-raising-exceptions](../../../_core/tst/planning/analysis/135-raising-exceptions.md), [062-exceptional-exceptions](../../../_core/tst/planning/analysis/062-exceptional-exceptions.md).
-**Class:** B
-**AAT-relevance:** `#der-code-quality-as-observation-infrastructure`; agent opacity $H_b$ in the developer-as-reader frame.
+**Source analyses:** [082-boundary-uncertainty](../../../_core/tst/planning/analysis/082-boundary-uncertainty.md), [136-exception-design-philosophy](../../../_core/tst/planning/analysis/136-exception-design-philosophy.md), [135-raising-exceptions](../../../_core/tst/planning/analysis/135-raising-exceptions.md), [062-exceptional-exceptions](../../../_core/tst/planning/analysis/062-exceptional-exceptions.md).  
+**Class:** B **AAT-relevance:** `#der-code-quality-as-observation-infrastructure`; agent opacity $H_b$ in the developer-as-reader frame.
 
 **The content (briefly).** Error-as-data (returning `{:ok, value}` or `{:error, reason}` tuples rather than throwing exceptions) plus the `with` construct (`with {:ok, a} <- f(x), {:ok, b} <- g(a), do: {:ok, b}`) lets pipelines handle errors in-line without breaking the data-flow continuity. Analysis 082: exception-based code creates discontinuities ($n_d$ try-catch boundaries) that scale exponentially in comprehension cost; error-as-data scales linearly in the number of error conditions. Exceptions are reserved for *truly exceptional* failures that the caller cannot reasonably handle.
 
@@ -184,9 +175,8 @@
 
 ### B3. Protocols (Elixir's `defprotocol` / `defimpl`) as a polymorphic action-space extension
 
-**Source analyses:** [103-elixir-protocols-polymorphism](../../../_core/tst/planning/analysis/103-elixir-protocols-polymorphism.md), [148-protocol-usage](../../../_core/tst/planning/analysis/148-protocol-usage.md), [736-enumerable-protocol-design](../../../_core/tst/planning/analysis/736-enumerable-protocol-design---making-types-iterable-and-processable.md).
-**Class:** B
-**AAT-relevance:** `#scope-developer-agent` action class 4 (environment modification — type-system extension); related to the AI-coding-agent action-space topic.
+**Source analyses:** [103-elixir-protocols-polymorphism](../../../_core/tst/planning/analysis/103-elixir-protocols-polymorphism.md), [148-protocol-usage](../../../_core/tst/planning/analysis/148-protocol-usage.md), [736-enumerable-protocol-design](../../../_core/tst/planning/analysis/736-enumerable-protocol-design---making-types-iterable-and-processable.md).  
+**Class:** B **AAT-relevance:** `#scope-developer-agent` action class 4 (environment modification — type-system extension); related to the AI-coding-agent action-space topic.
 
 **The content (briefly).** Elixir protocols let new data types participate in existing polymorphic operations without modifying the original module (the open/closed principle). For $n$ types and $m$ operations, modification-cost scales as $n \cdot m$ in the traditional approach and as $n + m$ in the protocol-based approach (analysis 103). The point is *change locality*: adding a new type touches one new `defimpl` block; adding a new operation touches one new `defprotocol` block.
 
@@ -196,9 +186,8 @@
 
 ### B4. Layered architecture (data → functional core → tests → boundaries → lifecycle → workers) as conceptual-alignment instantiation
 
-**Source analyses:** [081-elixir-layered-architecture](../../../_core/tst/planning/analysis/081-elixir-layered-architecture.md), [084-data-layer-design](../../../_core/tst/planning/analysis/084-data-layer-design.md), [085-functional-core](../../../_core/tst/planning/analysis/085-functional-core.md), [086-testing-functional-core](../../../_core/tst/planning/analysis/086-testing-functional-core.md), [088-genserver-boundaries](../../../_core/tst/planning/analysis/088-genserver-boundaries.md), [589-api-layer-design-patterns](../../../_core/tst/planning/analysis/589-api-layer-design-patterns---creating-clean-functional-apis-that-hide-genserver-complexity.md).
-**Class:** B
-**AAT-relevance:** `#hyp-conceptual-alignment`, `#def-system-coherence`, `#def-system-coupling`.
+**Source analyses:** [081-elixir-layered-architecture](../../../_core/tst/planning/analysis/081-elixir-layered-architecture.md), [084-data-layer-design](../../../_core/tst/planning/analysis/084-data-layer-design.md), [085-functional-core](../../../_core/tst/planning/analysis/085-functional-core.md), [086-testing-functional-core](../../../_core/tst/planning/analysis/086-testing-functional-core.md), [088-genserver-boundaries](../../../_core/tst/planning/analysis/088-genserver-boundaries.md), [589-api-layer-design-patterns](../../../_core/tst/planning/analysis/589-api-layer-design-patterns---creating-clean-functional-apis-that-hide-genserver-complexity.md).  
+**Class:** B **AAT-relevance:** `#hyp-conceptual-alignment`, `#def-system-coherence`, `#def-system-coupling`.
 
 **The content (briefly).** Gray & Tate's six-layer architecture (data structures → functional core → tests → boundaries → lifecycle → workers) is presented as the prescribed organization for Elixir/OTP systems. The functional core is pure; the boundaries layer (GenServers) handles impure side effects and process machinery; the lifecycle and workers layers handle process orchestration. Analysis 081 formalizes this as a coherence/coupling optimization: layer-coherence is high (changes within a layer cluster), cross-layer coupling is low (changes rarely span layers).
 
@@ -208,9 +197,8 @@
 
 ### B5. Hot code swapping as zero-downtime $T_{\text{recovery}}$
 
-**Source analyses:** [618-hot-code-swapping-strategies](../../../_core/tst/planning/analysis/618-hot-code-swapping-strategies---updating-running-systems-without-stopping-them.md), [227-hot-code-swapping](../../../_core/tst/planning/analysis/227-hot-code-swapping---zero-downtime-deployment-through-live-updates.md), [725-code-compilation-processes](../../../_core/tst/planning/analysis/725-code-compilation-processes---from-source-to-executable-bytecode.md).
-**Class:** B
-**AAT-relevance:** `#scope-continuous-operation`, the candidate `#scope-running-software-agent`.
+**Source analyses:** [618-hot-code-swapping-strategies](../../../_core/tst/planning/analysis/618-hot-code-swapping-strategies---updating-running-systems-without-stopping-them.md), [227-hot-code-swapping](../../../_core/tst/planning/analysis/227-hot-code-swapping---zero-downtime-deployment-through-live-updates.md), [725-code-compilation-processes](../../../_core/tst/planning/analysis/725-code-compilation-processes---from-source-to-executable-bytecode.md).  
+**Class:** B **AAT-relevance:** `#scope-continuous-operation`, the candidate `#scope-running-software-agent`.
 
 **The content (briefly).** BEAM supports atomic per-module code swap on a running system. Old-version processes can continue running with the old code while new-version code is loaded; the next call dispatches to the new version. Analysis 618 notes the *cost*: the developer agent now has to reason about multiple concurrent code versions during the transition window, which raises $t_c$ proportionally to the number of versions in-flight ($\alpha \approx 1.5$-$2.0$).
 
@@ -220,9 +208,8 @@
 
 ### B6. Telemetry / observability as the running-service's observation infrastructure $h$
 
-**Source analyses:** [232-telemetry-and-observability](../../../_core/tst/planning/analysis/232-telemetry-and-observability---application-monitoring-metrics-collection-and-production-insights.md), [044-transparency](../../../_core/tst/planning/analysis/044-transparency.md).
-**Class:** B
-**AAT-relevance:** `#scope-running-software-agent` (observation function $h$); `#der-code-quality-as-observation-infrastructure` analog.
+**Source analyses:** [232-telemetry-and-observability](../../../_core/tst/planning/analysis/232-telemetry-and-observability---application-monitoring-metrics-collection-and-production-insights.md), [044-transparency](../../../_core/tst/planning/analysis/044-transparency.md).  
+**Class:** B **AAT-relevance:** `#scope-running-software-agent` (observation function $h$); `#der-code-quality-as-observation-infrastructure` analog.
 
 **The content (briefly).** Telemetry libraries (Elixir's `:telemetry` library, Phoenix's instrumentation) inject named measurement points into the running system, broadcasting events that observability backends (Grafana, Honeycomb, Datadog) ingest. Each metric is a sample from the running system's internal state — load, latency, error rate, queue depth.
 
@@ -236,9 +223,8 @@
 
 ### C1. Macros and metaprogramming as a *substrate-modification* action class — the substrate of AI-coding-agent action spaces
 
-**Source analyses:** [091-macro-hygiene-context](../../../_core/tst/planning/analysis/091-macro-hygiene-context.md), [092-dsl-creation-patterns](../../../_core/tst/planning/analysis/092-dsl-creation-patterns.md), [093-compile-time-code-generation](../../../_core/tst/planning/analysis/093-compile-time-code-generation.md), [094-ast-walking-patterns](../../../_core/tst/planning/analysis/094-ast-walking-patterns.md), [096-macro-restraint-principle](../../../_core/tst/planning/analysis/096-macro-restraint-principle.md), [061-macro-restraint](../../../_core/tst/planning/analysis/061-macro-restraint.md), [400-dsl-error-reporting-and-debugging](../../../_core/tst/planning/analysis/400-dsl-error-reporting-and-debugging---providing-good-error-messages-in-dsl-implementations.md), [369-supercharged-assertions-via-macros](../../../_core/tst/planning/analysis/369-supercharged-assertions-via-macros---building-intelligent-assertions-that-provide-contextual-error-messages.md).
-**Class:** C
-**AAT-relevance:** New segment candidate — the developer agent's *language-substrate-modifying* action class (currently absent from `#scope-developer-agent`'s four action classes).
+**Source analyses:** [091-macro-hygiene-context](../../../_core/tst/planning/analysis/091-macro-hygiene-context.md), [092-dsl-creation-patterns](../../../_core/tst/planning/analysis/092-dsl-creation-patterns.md), [093-compile-time-code-generation](../../../_core/tst/planning/analysis/093-compile-time-code-generation.md), [094-ast-walking-patterns](../../../_core/tst/planning/analysis/094-ast-walking-patterns.md), [096-macro-restraint-principle](../../../_core/tst/planning/analysis/096-macro-restraint-principle.md), [061-macro-restraint](../../../_core/tst/planning/analysis/061-macro-restraint.md), [400-dsl-error-reporting-and-debugging](../../../_core/tst/planning/analysis/400-dsl-error-reporting-and-debugging---providing-good-error-messages-in-dsl-implementations.md), [369-supercharged-assertions-via-macros](../../../_core/tst/planning/analysis/369-supercharged-assertions-via-macros---building-intelligent-assertions-that-provide-contextual-error-messages.md).  
+**Class:** C **AAT-relevance:** New segment candidate — the developer agent's *language-substrate-modifying* action class (currently absent from `#scope-developer-agent`'s four action classes).
 
 **The content (briefly).** Macros let the developer extend the language's surface syntax to express domain operations more concisely. McCord's DSL framework (analyses 092, 093): start with a minimum-viable macro set ($M_{\min}$, $\lvert M_{\min}\rvert$ small) that gives full domain coverage, then add compile-time code generation for repetitive surface forms. The constraint Joseph would care about: macros should only be used when functions cannot achieve the same outcome (analysis 096 — McCord's "macro restraint principle"). The hygiene system (analysis 091) is itself a wrapping construction at the language layer: each macro expansion is isolated from the caller's variable scope unless the macro explicitly opts in via `var!`, preventing implicit context pollution.
 
@@ -248,9 +234,8 @@
 
 ### C2. Compile-time data-to-code generation as a $\Sigma_t$-vs-$M_t$ partition decision
 
-**Source analyses:** [093-compile-time-code-generation](../../../_core/tst/planning/analysis/093-compile-time-code-generation.md), [094-ast-walking-patterns](../../../_core/tst/planning/analysis/094-ast-walking-patterns.md).
-**Class:** C
-**AAT-relevance:** New segment candidate; intersects `#def-strategy-dag` and the question of static-vs-dynamic strategy structure.
+**Source analyses:** [093-compile-time-code-generation](../../../_core/tst/planning/analysis/093-compile-time-code-generation.md), [094-ast-walking-patterns](../../../_core/tst/planning/analysis/094-ast-walking-patterns.md).  
+**Class:** C **AAT-relevance:** New segment candidate; intersects `#def-strategy-dag` and the question of static-vs-dynamic strategy structure.
 
 **The content (briefly).** Elixir's Unicode handling (analysis 093) reads `UnicodeData.txt` at compile time and generates ~27,000 pattern-matching function clauses — each Unicode codepoint becomes its own function clause for fast pattern-match dispatch. The alternative — runtime table lookup — would be slower. The decision is whether to commit to a *fixed* strategy structure at compile time (cheap dispatch, expensive to change) or keep the strategy mutable at runtime (flexible, slower).
 
@@ -260,9 +245,8 @@
 
 ### C3. Property-based testing as Level-2 interventional access on the running system
 
-**Source analyses:** [107-property-based-testing](../../../_core/tst/planning/analysis/107-property-based-testing.md), [126-property-based-testing](../../../_core/tst/planning/analysis/126-property-based-testing.md), [078-property-based-testing](../../../_core/tst/planning/analysis/078-property-based-testing.md).
-**Class:** C / B
-**AAT-relevance:** `#obs-software-epistemic-properties` (P2 — interventional access via tests).
+**Source analyses:** [107-property-based-testing](../../../_core/tst/planning/analysis/107-property-based-testing.md), [126-property-based-testing](../../../_core/tst/planning/analysis/126-property-based-testing.md), [078-property-based-testing](../../../_core/tst/planning/analysis/078-property-based-testing.md).  
+**Class:** C / B **AAT-relevance:** `#obs-software-epistemic-properties` (P2 — interventional access via tests).
 
 **The content (briefly).** Property-based testing (PropEr, StreamData) generates random inputs satisfying a generator specification and checks an invariant. On failure, it shrinks the counter-example to the minimal-input form. The point: it explores the input-space *interventionally* in a way that example-based tests do not — it samples from a generator distribution rather than picking individual cases.
 
@@ -276,9 +260,8 @@
 
 ### D1. BEAM's "nine nines" telecom uptime as empirical anchor for the persistence-condition regime
 
-**Source analyses:** [060-supervisor-trees](../../../_core/tst/planning/analysis/060-supervisor-trees.md), [017-let-it-crash](../../../_core/tst/planning/analysis/017-let-it-crash.md), [102-let-it-crash-philosophy](../../../_core/tst/planning/analysis/102-let-it-crash-philosophy.md), [223-otp-applications](../../../_core/tst/planning/analysis/223-otp-applications.md).
-**Class:** D
-**AAT-relevance:** `#scope-continuous-operation`; the candidate `#scope-running-software-agent`.
+**Source analyses:** [060-supervisor-trees](../../../_core/tst/planning/analysis/060-supervisor-trees.md), [017-let-it-crash](../../../_core/tst/planning/analysis/017-let-it-crash.md), [102-let-it-crash-philosophy](../../../_core/tst/planning/analysis/102-let-it-crash-philosophy.md), [223-otp-applications](../../../_core/tst/planning/analysis/223-otp-applications.md).  
+**Class:** D **AAT-relevance:** `#scope-continuous-operation`; the candidate `#scope-running-software-agent`.
 
 **The content (briefly).** The Ericsson AXD-301 telecom switch, written in Erlang/OTP, is reported to have achieved 99.9999999% (nine-nines) uptime over its operational lifetime. The number is widely quoted, including in Joe Armstrong's PhD thesis. Analyses 060 and 017 cite the figure as empirical evidence for the supervised-actor architecture.
 
@@ -288,9 +271,8 @@
 
 ### D2. Million-process spawn benchmark (~5s on 2011 hardware) as runtime tempo anchor
 
-**Source analyses:** [030-actor-model-processes](../../../_core/tst/planning/analysis/030-actor-model-processes.md), [777-process-overhead-and-actor-model-scalability](../../../_core/tst/planning/analysis/777-process-overhead-and-actor-model-scalability.md), [773-process-creation-patterns](../../../_core/tst/planning/analysis/773-process-creation-patterns---spawning-lightweight-processes-efficiently.md).
-**Class:** D
-**AAT-relevance:** A5 above — calibration for the BEAM-as-limiting-case framing.
+**Source analyses:** [030-actor-model-processes](../../../_core/tst/planning/analysis/030-actor-model-processes.md), [777-process-overhead-and-actor-model-scalability](../../../_core/tst/planning/analysis/777-process-overhead-and-actor-model-scalability.md), [773-process-creation-patterns](../../../_core/tst/planning/analysis/773-process-creation-patterns---spawning-lightweight-processes-efficiently.md).  
+**Class:** D **AAT-relevance:** A5 above — calibration for the BEAM-as-limiting-case framing.
 
 **The content (briefly).** Dave Thomas's *Programming Elixir* benchmark: spawn one million sequential processes in roughly 5 seconds on 2011-era hardware. Per-process spawn cost: roughly 5 microseconds cold, less under warm-cache conditions. The number is reproducible (the benchmark is in the book) and dates from 2014.
 

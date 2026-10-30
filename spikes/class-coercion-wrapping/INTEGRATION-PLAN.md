@@ -1,7 +1,7 @@
 # Class-Coercion Spike: Integration Plan
 
-**Status**: **complete** (execution finished 2026-05-09). All Phase A–F items closed; lint clean on new segments; outline-lint shows 0 missing dependencies. Reasoning trail in spike directory preserved per project convention; segments under `01-aat-core/`, `03-llm-core/`, `04-eli-core/` carry the substantive theory.
-**Purpose**: durable, executable plan for interning class-coercion spike results into the theory so that the spike directory is no longer load-bearing. Designed for handoff: any agent (or future-me) reading this should be able to pick up at the next unchecked step.
+**Status**: **complete** (execution finished 2026-05-09). All Phase A–F items closed; lint clean on new segments; outline-lint shows 0 missing dependencies. Reasoning trail in spike directory preserved per project convention; segments under `01-aat-core/`, `03-llm-core/`, `04-eli-core/` carry the substantive theory.  
+**Purpose**: durable, executable plan for interning class-coercion spike results into the theory so that the spike directory is no longer load-bearing. Designed for handoff: any agent (or future-me) reading this should be able to pick up at the next unchecked step.  
 **Authoritative inputs**: `99-verdict.md` (especially §4 segment-landing recommendations) and the empirical/theoretical content in `01`–`08` and `09`.
 
 **Posture** (per Joseph's framing during the spike): integration content within ASF's prior-art-integration discipline. AAT's contribution is the *synthesis* with sector-Lyapunov / Brooks's-Law / class-taxonomy machinery, plus the W₀/W₂/W₁ leakage-regime hierarchy. The wrapping move itself is rediscovery of POMDP / cognitive-architecture moves, cited generously.

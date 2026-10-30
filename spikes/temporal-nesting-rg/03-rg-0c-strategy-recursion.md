@@ -1,8 +1,7 @@
 # RG-0c: (O, Σ) Recursion Check Against Formal Definitions
 
-**Status**: derived — verdict V2/V3 boundary, leaning V3 with a constructive V2-rescue path documented.
-**Date**: 2026-05-09
-**Brief**: `00-brief.md` §5 RG-0c.
+**Status**: derived — verdict V2/V3 boundary, leaning V3 with a constructive V2-rescue path documented.  
+**Date**: 2026-05-09 **Brief**: `00-brief.md` §5 RG-0c.  
 **Depends on**: `01-aat-core/src/def-strategy-dag.md`, `01-aat-core/src/def-strategy-dimension.md`, `01-aat-core/src/form-objective-functional.md`, `01-aat-core/src/def-value-object.md`, `01-aat-core/src/def-satisfaction-gap.md`, `01-aat-core/src/form-complete-agent-state.md`, `01-aat-core/src/form-structural-change-as-parametric-limit.md`, `01-aat-core/src/example-strategy.md`, `02-prior-art-rg-ib-fep.md`.
 
 ---

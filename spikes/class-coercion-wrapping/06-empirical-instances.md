@@ -1,8 +1,7 @@
 # Sub-Spike F: Empirical Instances of the Wrapping Construction
 
-**Status**: complete (initial pass)
-**Date**: 2026-05-09
-**Purpose**: Catalog known instances of "wrapping a Class-3 component into a Class-1 composite" (per `00-brief.md` §1) and characterize each by what wrapping move it makes. Truth-finding, not paper extraction.
+**Status**: complete (initial pass)  
+**Date**: 2026-05-09 **Purpose**: Catalog known instances of "wrapping a Class-3 component into a Class-1 composite" (per `00-brief.md` §1) and characterize each by what wrapping move it makes. Truth-finding, not paper extraction.
 
 **Scope and method**. Each system is characterized against the schema in §F of the brief: (i) explicit external $M_W$? (ii) explicit external $G_W = (O_W, \Sigma_W)$? (iii) does belief-update structurally avoid $G_W$ as input ($f_M(M_W, o_W; A(q_M))$ with $q_M$ goal-blind), or is the goal carried through? (iv) order of magnitude of $K$ (component calls per macro-step). (v) Class-1 (genuine separation), almost-Class-1 (separation attempted, leakage), or something else. The honest reading throughout: the brief's wrapping move is a *specific design choice*; some systems make it, some make a related move, and some make a different move that is not reducible to it. I flag the difference where it shows up.
 
@@ -107,10 +106,10 @@ For each, the (i)–(v) schema. Most are *inferred from typical usage* from publ
 
 *Inferred from typical usage.* ReAct interleaves thought-action-observation traces in a single LLM call's continuation: the model writes "Thought:", "Action:", "Observation:", and the wrapper executes the action and inserts the observation back into the prompt.
 
-(i) **$M_W$**: implicit — the **scratchpad** (the thought-action-observation log appended to the prompt). External in that the wrapper maintains it; structurally a single text buffer, not a typed store.
-(ii) **$G_W$**: implicit — the goal lives in the initial prompt and persists in the scratchpad as initial framing. No separate $\Sigma_W$ store.
-(iii) **Goal-blind belief update?** **No.** Each thought-step has access to the full scratchpad, including the goal, prior thoughts, and prior observations. There is no structural goal-blind step. The model decides what the next "thought" is goal-conditionally.
-(iv) **$K$**: typically 5–20 thought-action-observation rounds per task; each round is one LLM call (or one continuation step within a single long context).
+(i) **$M_W$**: implicit — the **scratchpad** (the thought-action-observation log appended to the prompt). External in that the wrapper maintains it; structurally a single text buffer, not a typed store.  
+(ii) **$G_W$**: implicit — the goal lives in the initial prompt and persists in the scratchpad as initial framing. No separate $\Sigma_W$ store.  
+(iii) **Goal-blind belief update?** **No.** Each thought-step has access to the full scratchpad, including the goal, prior thoughts, and prior observations. There is no structural goal-blind step. The model decides what the next "thought" is goal-conditionally.  
+(iv) **$K$**: typically 5–20 thought-action-observation rounds per task; each round is one LLM call (or one continuation step within a single long context).  
 (v) **Class**: **Class-3 with output structuring**. ReAct doesn't do the wrapping move described in the brief. It does a different move: it *structures the LLM's output* (Thought/Action/Observation tags) so the wrapper can extract actions and inject observations. This is structurally closer to constraining the format than to imposing $f_M$/$f_G$ separation. The scratchpad is a flat $M_W$ at best; nothing prevents goal-information from flowing through every step.
 
 **Strengthening reading**: could you reframe ReAct as a wrapping move? *Partially* — the "Observation:" injection does play the role of an $A$-response that updates implicit-$M_W$, and the "Thought:" generation could be read as a goal-conditioned $G_W$ update. But the brief's structural commitment (no $G_W$ in $f_M$'s type signature) is *violated by construction* in ReAct: the same LLM call produces both the thought (reasoning, $G_W$-update-ish) and the action selection (policy, $\pi_W$-output) on top of the *full* goal-aware prompt.
@@ -121,10 +120,10 @@ ReAct is therefore *not* an instance of the wrapping move. It is an instance of 
 
 *Inferred from typical usage.* Reflexion adds verbal self-feedback: after a task attempt fails, the agent generates a reflection (free-text critique) that gets appended to the prompt for the next attempt.
 
-(i) **$M_W$**: implicit — reflections accumulate in a "memory" buffer (often free-text reflections concatenated). No typed $M_W$.
-(ii) **$G_W$**: implicit — same as ReAct, the goal lives in the prompt.
-(iii) **Goal-blind belief update?** **No.** The reflection step is goal-aware — it explicitly evaluates the trajectory against the goal and produces a critique. The reflection-LLM-call gets the goal as input.
-(iv) **$K$**: typically 1–2 LLM calls per inner episode + 1 reflection call per outer iteration; outer iterations = 1–10.
+(i) **$M_W$**: implicit — reflections accumulate in a "memory" buffer (often free-text reflections concatenated). No typed $M_W$.  
+(ii) **$G_W$**: implicit — same as ReAct, the goal lives in the prompt.  
+(iii) **Goal-blind belief update?** **No.** The reflection step is goal-aware — it explicitly evaluates the trajectory against the goal and produces a critique. The reflection-LLM-call gets the goal as input.  
+(iv) **$K$**: typically 1–2 LLM calls per inner episode + 1 reflection call per outer iteration; outer iterations = 1–10.  
 (v) **Class**: **Class-3 with episodic memory**. Like ReAct, Reflexion is *not* the wrapping move — it's a different move (episodic-memory accumulation across attempts). The reflection text it accumulates is structurally *goal-conditioned $M_W$-flavored content* (lessons-learned about the goal), which the brief would type as $\Sigma_W$ (strategy / techniques) rather than $M_W$.
 
 **Strengthening reading**: Reflexion's reflection memory is *closer to PRAXES* (learned techniques) than to VERA (factual beliefs). If you renamed it as $\Sigma_W$ accumulation rather than $M_W$ accumulation, Reflexion looks like a wrapper that maintains goal-conditioned $\Sigma_W$ (consistent with the brief, which permits $f_G$ to be goal-conditioned) without any $M_W$-side update at all. Under that reading, Reflexion is a *partial* wrapper that updates only $G_W$ across episodes and does no explicit $M_W$ update — Class-3-with-G-update structure. Honest characterization.
@@ -133,10 +132,10 @@ ReAct is therefore *not* an instance of the wrapping move. It is an instance of 
 
 *Inferred from typical usage.* Voyager is a Minecraft agent that accumulates a *skill library* — Python functions written by the LLM — over many episodes. New skills are tested in the environment and added to the library if they work; existing skills are retrieved when relevant to a new task.
 
-(i) **$M_W$**: partial — the skill library is structurally **$\Sigma_W$-side** (techniques / strategies), not $M_W$ (world-model). Voyager doesn't separately maintain a structured world-model of Minecraft; the LLM's pretraining + the live observation stream from the game serve that role.
-(ii) **$G_W$**: explicit — the **automatic curriculum** generates progressively harder goals; this is a structured $O_W$ store. The skill library is the $\Sigma_W$ store.
-(iii) **Goal-blind belief update?** **N/A** — Voyager doesn't have an explicit $M_W$ update step. The "belief" (current game state) lives in the LLM's per-call context window, refreshed from the game environment on each step.
-(iv) **$K$**: 5–50 LLM calls per episode (skill generation + verification + retrieval + execution), with episodes spanning thousands of game steps.
+(i) **$M_W$**: partial — the skill library is structurally **$\Sigma_W$-side** (techniques / strategies), not $M_W$ (world-model). Voyager doesn't separately maintain a structured world-model of Minecraft; the LLM's pretraining + the live observation stream from the game serve that role.  
+(ii) **$G_W$**: explicit — the **automatic curriculum** generates progressively harder goals; this is a structured $O_W$ store. The skill library is the $\Sigma_W$ store.  
+(iii) **Goal-blind belief update?** **N/A** — Voyager doesn't have an explicit $M_W$ update step. The "belief" (current game state) lives in the LLM's per-call context window, refreshed from the game environment on each step.  
+(iv) **$K$**: 5–50 LLM calls per episode (skill generation + verification + retrieval + execution), with episodes spanning thousands of game steps.  
 (v) **Class**: **Class-3 with $\Sigma_W$-side scaffolding only**. Voyager is structurally interesting because it instantiates the *strategy-side* of the wrapping move (explicit $\Sigma_W$ as skill library, $O_W$ as auto-curriculum) without instantiating the *belief-side* of the wrapping move ($M_W$ remains implicit in the LLM context). This is an honest data point: the (M, G) wrapping is *separable* — you can build the $G_W$ scaffold without the $M_W$ scaffold. Voyager is a one-sided wrapper.
 
 **Implication for the theorem**: the brief states the wrapping move as $X_W = (M_W, G_W)$, both explicit. Voyager's existence shows that practitioners build $G_W$-only wrappers and find them useful. The theorem's universality claim should acknowledge that *partial wrappers* (one side scaffolded, the other implicit) are a coherent design point and possibly a more common one than full wrappers in practice.
@@ -145,10 +144,10 @@ ReAct is therefore *not* an instance of the wrapping move. It is an instance of 
 
 *Inferred from typical usage.* BabyAGI maintains a task list that grows: the LLM generates new sub-tasks, prioritizes them, and works through them one at a time. State: the task queue + (in some forks) a vector store of past task results.
 
-(i) **$M_W$**: minimal — typically a vector DB of past task results (e.g., Pinecone). Flat memory, no typing.
-(ii) **$G_W$**: explicit (task list) — the task list is a structured $\Sigma_W$ instance. The original objective is the root of the task list.
-(iii) **Goal-blind belief update?** **No.** Task generation, prioritization, and execution are all goal-aware single LLM calls.
-(iv) **$K$**: ~3 LLM calls per task (execute / generate-new / prioritize), and tasks-per-macro-step varies.
+(i) **$M_W$**: minimal — typically a vector DB of past task results (e.g., Pinecone). Flat memory, no typing.  
+(ii) **$G_W$**: explicit (task list) — the task list is a structured $\Sigma_W$ instance. The original objective is the root of the task list.  
+(iii) **Goal-blind belief update?** **No.** Task generation, prioritization, and execution are all goal-aware single LLM calls.  
+(iv) **$K$**: ~3 LLM calls per task (execute / generate-new / prioritize), and tasks-per-macro-step varies.  
 (v) **Class**: **Class-3 with minimal $G_W$ scaffold**. Like Voyager, BabyAGI is a *strategy-side wrapper* — explicit task list (as $\Sigma_W$), no real $M_W$ scaffold. Vector DB of task results is more like a primitive memory than a structured $M_W$.
 
 **Strengthening reading**: BabyAGI's vector DB *could* be typed as $M_W$ if it stored extracted facts rather than full task results. But as actually built, it's a content-addressable retrieval substrate, not a belief store. So BabyAGI is partially-wrapper (strategy-side only) and the $M_W$ hint is undeveloped.
@@ -157,20 +156,20 @@ ReAct is therefore *not* an instance of the wrapping move. It is an instance of 
 
 *Inferred from typical usage.* AutoGPT is the most "ambitious autonomous agent" of the 2023 wave: tries to pursue a high-level objective via repeated LLM calls that generate sub-tasks, execute them via tools, and update memory.
 
-(i) **$M_W$**: file-system + vector store; flat, untyped.
-(ii) **$G_W$**: explicit — the user-supplied "ai_role" + "ai_goals" act as $O_W$; sub-tasks accumulate as $\Sigma_W$.
-(iii) **Goal-blind belief update?** **No.** Same as BabyAGI — every LLM call carries the full goal context.
-(iv) **$K$**: highly variable; typically 5–100+ LLM calls per "autonomous run" depending on objective complexity.
+(i) **$M_W$**: file-system + vector store; flat, untyped.  
+(ii) **$G_W$**: explicit — the user-supplied "ai_role" + "ai_goals" act as $O_W$; sub-tasks accumulate as $\Sigma_W$.  
+(iii) **Goal-blind belief update?** **No.** Same as BabyAGI — every LLM call carries the full goal context.  
+(iv) **$K$**: highly variable; typically 5–100+ LLM calls per "autonomous run" depending on objective complexity.  
 (v) **Class**: **Class-3 with weak scaffolding**. AutoGPT's claim-to-fame is autonomy, not class compliance. The structural separation between $M_W$ and $G_W$ is essentially absent — both live as text in the running prompt.
 
 ### 2.6 MemGPT (Packer et al. 2023)
 
 *Inferred from typical usage.* MemGPT manages a virtual memory hierarchy for LLMs: a "main context" (in-window) and "external memory" (paged in/out via tool calls). The LLM itself manages the paging via OS-style commands.
 
-(i) **$M_W$**: explicit and structured — **archival memory** + **recall memory** + **core memory blocks**. Flat-ish typing (persona / human / archival / recall) but more structure than ReAct's scratchpad.
-(ii) **$G_W$**: implicit — typically the conversational goal lives in the system prompt + current user message. No separate $\Sigma_W$ store.
-(iii) **Goal-blind belief update?** **No, but interestingly close.** The LLM decides when to write to archival memory and what to write — and the write call is goal-conditioned (the LLM has the full conversational context). However, the *structural commitment* to a separate memory store (with read/write through specific tool calls) is the closest thing in the public literature to the brief's $M_W$ explicitation.
-(iv) **$K$**: 1–5 LLM calls per turn (main reasoning + memory paging operations).
+(i) **$M_W$**: explicit and structured — **archival memory** + **recall memory** + **core memory blocks**. Flat-ish typing (persona / human / archival / recall) but more structure than ReAct's scratchpad.  
+(ii) **$G_W$**: implicit — typically the conversational goal lives in the system prompt + current user message. No separate $\Sigma_W$ store.  
+(iii) **Goal-blind belief update?** **No, but interestingly close.** The LLM decides when to write to archival memory and what to write — and the write call is goal-conditioned (the LLM has the full conversational context). However, the *structural commitment* to a separate memory store (with read/write through specific tool calls) is the closest thing in the public literature to the brief's $M_W$ explicitation.  
+(iv) **$K$**: 1–5 LLM calls per turn (main reasoning + memory paging operations).  
 (v) **Class**: **Class-3 with $M_W$-side scaffolding only**. The mirror image of Voyager/BabyAGI: MemGPT scaffolds belief-side (memory) without scaffolding strategy-side. Together with Voyager, MemGPT shows the $M_W$/$G_W$ scaffolds are independent design moves; PROPRIUM is distinctive in scaffolding both.
 
 **Strengthening reading**: MemGPT's archival writes *could* be made goal-blind by routing them through a separate auxilia-style classifier rather than the main LLM (e.g., "extract facts from the last turn" with no goal context). I am not aware of MemGPT making this move; it's the strengthening direction.
@@ -179,49 +178,48 @@ ReAct is therefore *not* an instance of the wrapping move. It is an instance of 
 
 *Inferred from typical usage.* Tree-of-Thoughts branches the reasoning trace, evaluates partial solutions, and uses search (BFS/DFS/heuristic) to navigate the tree.
 
-(i) **$M_W$**: implicit — the tree of thoughts itself, but this is a search structure, not a belief store.
-(ii) **$G_W$**: implicit — the goal is in the prompt; the search heuristic plays a $\Sigma_W$-flavored role (which branches to expand).
-(iii) **Goal-blind belief update?** **No, and the framing doesn't apply cleanly.** ToT is a search-over-reasoning-traces, not an agentic loop in the OODA / OBSERVE-ORIENT sense. The brief's wrapping move is about per-step belief/strategy updates against a continuing world; ToT is about exploring a hypothesis space within a single decision.
-(iv) **$K$**: many — proportional to tree size (often 10–100+ LLM calls per high-level decision).
+(i) **$M_W$**: implicit — the tree of thoughts itself, but this is a search structure, not a belief store.  
+(ii) **$G_W$**: implicit — the goal is in the prompt; the search heuristic plays a $\Sigma_W$-flavored role (which branches to expand).  
+(iii) **Goal-blind belief update?** **No, and the framing doesn't apply cleanly.** ToT is a search-over-reasoning-traces, not an agentic loop in the OODA / OBSERVE-ORIENT sense. The brief's wrapping move is about per-step belief/strategy updates against a continuing world; ToT is about exploring a hypothesis space within a single decision.  
+(iv) **$K$**: many — proportional to tree size (often 10–100+ LLM calls per high-level decision).  
 (v) **Class**: **not a wrapping instance**. ToT is a *search procedure on top of a Class-3 component* rather than a wrapper imposing class structure. This is honest: the brief's wrapping move is one specific construction; ToT is a different construction.
 
 ### 2.8 ReST / ReST-MCTS (DeepMind 2024+)
 
 *Inferred from typical usage.* ReST does iterated self-distillation: generate trajectories, filter for high-reward ones, fine-tune on the filtered set, repeat. ReST-MCTS adds tree search.
 
-(i) **$M_W$**: not part of the runtime — ReST modifies the *underlying component* (training-loop-level move).
-(ii) **$G_W$**: not part of the runtime.
-(iii) **Goal-blind?** **N/A** — ReST is shaping the component, not wrapping it.
-(iv) **$K$**: not the right unit; this is an offline training procedure.
+(i) **$M_W$**: not part of the runtime — ReST modifies the *underlying component* (training-loop-level move).  
+(ii) **$G_W$**: not part of the runtime.  
+(iii) **Goal-blind?** **N/A** — ReST is shaping the component, not wrapping it.  
+(iv) **$K$**: not the right unit; this is an offline training procedure.  
 (v) **Class**: **not a wrapping instance**. ReST and similar self-training methods (STaR, RLAIF) are in the same category as Constitutional AI / RLHF: they shape the underlying LLM via training rather than wrap it via runtime scaffolding. Different move.
 
 ### 2.9 Generative Agents (Park et al. 2023, "Smallville")
 
 *Inferred from typical usage.* Each NPC has memory streams (observations, reflections, plans), with retrieval based on recency × importance × relevance, and reflections generated periodically.
 
-(i) **$M_W$**: explicit, semi-typed — **memory stream** (timestamped observations) + **reflections** (higher-level summaries) + **plans** (daily/hourly schedules).
-(ii) **$G_W$**: explicit — the NPC's character description (persona) + active plan; daily plan is regenerated each in-game day.
-(iii) **Goal-blind belief update?** **Partial.** The memory-stream observation insertion is essentially goal-blind (it's just appending observed events); the *reflection generation* step is goal-conditioned (it queries the memory stream with prompts like "What 3 high-level questions should I ask given my recent observations?"). The plan generation is goal-conditioned. So Generative Agents have a **structurally goal-blind perception step** (observation → memory stream) followed by goal-conditioned reflection + planning.
-(iv) **$K$**: highly variable; the reflection cadence + planning + dialogue produce 5–20 LLM calls per NPC per simulated hour.
+(i) **$M_W$**: explicit, semi-typed — **memory stream** (timestamped observations) + **reflections** (higher-level summaries) + **plans** (daily/hourly schedules).  
+(ii) **$G_W$**: explicit — the NPC's character description (persona) + active plan; daily plan is regenerated each in-game day.  
+(iii) **Goal-blind belief update?** **Partial.** The memory-stream observation insertion is essentially goal-blind (it's just appending observed events); the *reflection generation* step is goal-conditioned (it queries the memory stream with prompts like "What 3 high-level questions should I ask given my recent observations?"). The plan generation is goal-conditioned. So Generative Agents have a **structurally goal-blind perception step** (observation → memory stream) followed by goal-conditioned reflection + planning.  
+(iv) **$K$**: highly variable; the reflection cadence + planning + dialogue produce 5–20 LLM calls per NPC per simulated hour.  
 (v) **Class**: **almost-Class-1 by structure, with leakage in the reflection step**. Of the systems surveyed, Generative Agents is among the *closest* to the brief's wrapping move — it has a structural separation between observation-recording (goal-blind) and reflection/planning (goal-conditioned). Not as deeply typed as PROPRIUM, but the per-tick separation is real. **This is the system in the survey that comes closest to instantiating the wrapping move structurally.**
 
 ### 2.10 LangChain / LangGraph
 
 *Inferred from typical usage.* Software framework providing primitives (chains, agents, memories, tools, graph-based control flow) for building LLM applications.
 
-(i) **$M_W$**: framework-supplied primitives (ConversationBufferMemory, VectorStoreMemory, etc.). Does not enforce typing — typing is up to the application.
-(ii) **$G_W$**: not framework-level; goal lives in prompts / state graphs.
-(iii) **Goal-blind belief update?** **Not enforced by the framework.** Whether a particular LangGraph application instantiates the wrapping move depends entirely on how the developer wires the graph.
-(iv) **$K$**: framework-level question; varies per application.
+(i) **$M_W$**: framework-supplied primitives (ConversationBufferMemory, VectorStoreMemory, etc.). Does not enforce typing — typing is up to the application.  
+(ii) **$G_W$**: not framework-level; goal lives in prompts / state graphs.  
+(iii) **Goal-blind belief update?** **Not enforced by the framework.** Whether a particular LangGraph application instantiates the wrapping move depends entirely on how the developer wires the graph.  
+(iv) **$K$**: framework-level question; varies per application.  
 (v) **Class**: **framework, not an instance**. LangChain/LangGraph is the engineering substrate on which wrapping-move-instantiating applications can be built (or not built). The framework's `StateGraph` abstraction in LangGraph is structurally well-suited to typed-state agents; whether a given app uses it that way is up to the author. Cite as an engineering platform, not as evidence either for or against universality of the wrapping move.
 
 ### 2.11 Inspect (UK AISI)
 
 *Inferred from typical usage; epistemic warning — I have less direct training-data exposure to Inspect than to LangChain.* Inspect is an evaluation framework for LLM agents — provides scaffolding for running agents on benchmark tasks, recording transcripts, and scoring outputs.
 
-(i) **$M_W$**: evaluation-side — Inspect maintains task state, transcripts, scores; not an agent's belief store.
-(ii) **$G_W$**: same — task definitions are the goals, but in an evaluation sense, not the agent's $G_W$.
-(iii)–(v) **Inspect is not an agent, it is an evaluation harness for agents.** Like LangChain it's a substrate; the agents *under* Inspect may or may not instantiate the wrapping move.
+(i) **$M_W$**: evaluation-side — Inspect maintains task state, transcripts, scores; not an agent's belief store.  
+(ii) **$G_W$**: same — task definitions are the goals, but in an evaluation sense, not the agent's $G_W$. (iii)–(v) **Inspect is not an agent, it is an evaluation harness for agents.** Like LangChain it's a substrate; the agents *under* Inspect may or may not instantiate the wrapping move.
 
 Honest scope: cite as evaluation infrastructure for testing wrapping-move predictions empirically (relevant to sub-spike G — quantitative bounds), not as an instance of the wrapping construction.
 
@@ -231,7 +229,7 @@ Honest scope: cite as evaluation infrastructure for testing wrapping-move predic
 
 CAI: train a model to follow a constitution by RLAIF — model critiques its own outputs against constitutional principles, retrains. RLHF: train a reward model on human comparisons, optimize the policy against the reward model.
 
-(i)–(iv) **N/A** — these are training-time moves, not runtime wrappers.
+(i)–(iv) **N/A** — these are training-time moves, not runtime wrappers.  
 (v) **Not wrapping**. **Critical differentiation**: CAI/RLHF *shape* the underlying component (modify weights so it behaves differently). Wrapping *uses* the component as a black-box and imposes structure around it. The two are complementary moves with different costs:
 - Shaping changes the model. Once trained, no per-call overhead. Costs paid up front in training.
 - Wrapping leaves the model unchanged. Per-call overhead. Adapts to new structural requirements without retraining.

@@ -1,9 +1,7 @@
 # RG-0b — Prior-Art Search: AAT-as-RG, IB-as-RG, FEP-as-RG
 
-**Status**: complete (first pass)
-**Date**: 2026-05-09
-**Brief**: `00-brief.md` §5 RG-0b
-**Author**: delegated prior-art sub-agent
+**Status**: complete (first pass)  
+**Date**: 2026-05-09 **Brief**: `00-brief.md` §5 RG-0b **Author**: delegated prior-art sub-agent
 
 ## 0. Scope and method
 

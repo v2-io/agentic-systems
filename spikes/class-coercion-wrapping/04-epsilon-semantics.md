@@ -1,8 +1,7 @@
 # Sub-Spike D: Coercion-ε* vs. Fidelity-ε* Disambiguation
 
-**Status**: clarification. Brief.
-**Date**: 2026-05-09
-**Depends on**: `01-theorem-statement.md`, `#form-composition-closure` (the bridge lemma).
+**Status**: clarification. Brief.  
+**Date**: 2026-05-09 **Depends on**: `01-theorem-statement.md`, `#form-composition-closure` (the bridge lemma).
 
 ---
 

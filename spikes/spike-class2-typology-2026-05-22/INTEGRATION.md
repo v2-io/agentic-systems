@@ -29,38 +29,38 @@ Both gaps are *closeable*. The segments are in canon at `draft` with honest tier
 
 These are minimal, low-risk touches that surface the typology's existence so future agents can find it. No claims promoted to body content; pointers only.
 
-**`#der-directed-separation` — Working Notes addition.**
+**`#der-directed-separation` — Working Notes addition.**  
 Add a bullet near the existing "scope condition" Working Notes:
 
 > - **Sub-typology of Class 2 (Partial Coupling).** The scalar $\kappa_{\text{processing}}$ aggregates over a structurally rich sub-space. A (stage × source × form) parameterization within Class 2 distinguishes content-form (additively biased, post-hoc-debiaseable, W₂-compatible) from process-form (non-separable, requires stage replacement or W₁) coupling; objective-source from strategy-source coupling (strategy-source admits self-stabilizing belief-strategy attractors per `spikes/spike-class2-typology-2026-05-22/03-derivations.md` Result 4, objective-source does not under orient-cascade exogeneity); and four cascade-propagating stages (featurization, likelihood, aggregation, consolidation). The structure-vs-behavior refinement at the Class 1 cell is the agent-level shadow of the form distinction at Class 2. Spike: `spikes/spike-class2-typology-2026-05-22/`. Not yet promoted; sub-spikes on $K(\Sigma)$ derivation and prior-art search are required before segment-promotion.
 
-**`#disc-adversarial-coupling-pressure` — Working Notes addition.**
+**`#disc-adversarial-coupling-pressure` — Working Notes addition.**  
 Add a bullet near "Three operations on modularity state":
 
 > - **Stage × source × form structure within the adversarial mechanisms.** The mechanism table (identity-binding / affect-urgency / sunk-cost-engineering) is a projection of the broader Class 2 sub-typology onto specific (stage, source) cells: identity-binding → P1+P2 / $O$ / content-to-process (form varies with strength); sunk-cost → P3 / $\Sigma$ / process (the cell that admits belief-strategy attractors per the typology's Result 4); affect/urgency → cascade-bypass (outside the (stage × source × form) parameterization; a separate failure mode). Spike: `spikes/spike-class2-typology-2026-05-22/`. The typology gives the structural reason these three mechanisms have distinct repair characters.
 
-**`#der-class-coercion-via-wrapping` — Working Notes addition.**
+**`#der-class-coercion-via-wrapping` — Working Notes addition.**  
 Add a bullet on sub-type-aware wrapping regime selection:
 
 > - **Sub-type-aware wrapping regime selection.** Knowing only that a component is Class 2 (Partial) is insufficient to choose W₁ vs W₂. The right wrapping regime depends on the un-wrapped component's *form* of coupling: content-form sub-types admit W₂ (post-hoc response structuring); process-form sub-types require W₁ (structural goal-blind query path) or are not coercible to Class 1 at all if pipeline access is unavailable. Additionally, $\Sigma$-source coupling can undermine W₁'s structural commitment via strategy-context leakage in stateful components — a $\Sigma$-channel-suppressed W₁ may be required. Spike: `spikes/spike-class2-typology-2026-05-22/`.
 
-**`spikes/spike-leakage-locus-2026-05-18.md` — cross-reference addition.**
+**`spikes/spike-leakage-locus-2026-05-18.md` — cross-reference addition.**  
 The leakage-locus spike's INTEGRATION note recommends an appendix segment. When that segment is written, it should include a §"Composition with Class 2 sub-types" subsection citing this typology spike. The composition: locus is universal ($\ker\mathcal I_\tau$); typology determines functional form within the locus. See `spikes/spike-class2-typology-2026-05-22/03-derivations.md` Result 5.
 
-**`#def-agent-spectrum` Working Notes — minor.**
+**`#def-agent-spectrum` Working Notes — minor.**  
 The current Working Note ("The one genuinely-new thread: where the dangerous coupling concentrates") points at the leakage-locus result. A small additional clarification: the leakage-locus result tells you *where* the coupling acts (in $\ker\mathcal I_\tau$); the Class 2 sub-typology tells you *through which stage* the coupling enters and *what functional form* it takes within the locus. The two are complementary, not competing. (One-line addition; optional.)
 
 ### 1.2 TODO.md additions
 
 Three follow-on items, each scoped as a sub-spike:
 
-**TODO item — Sub-spike: $K(\Sigma)$ derivation from utility-cost analysis.**
+**TODO item — Sub-spike: $K(\Sigma)$ derivation from utility-cost analysis.**  
 Derive the multiplicative-gain shape of sunk-cost-style $\Sigma$-source coupling from a utility-cost analysis of belief-revision-under-strategic-commitment. Specifically: model the agent's cost of revising $M_t$ as bundled with the cost of abandoning $\Sigma_t$, and show the effective belief-update dynamics reduce to a multiplicative-gain modulation in the linearized regime. If successful, Result 4 in the typology spike upgrades to *exact* tier under the conditional. If unsuccessful (the effective form is not multiplicative), Result 4 stays *robust qualitative* and needs a refined statement.
 
-**TODO item — Sub-spike: Pillar prior-art search on cognitive-psychology side of the typology.**
+**TODO item — Sub-spike: Pillar prior-art search on cognitive-psychology side of the typology.**  
 Pillar-style targeted search across motivated-reasoning (Kunda, Kahan), identity economics (Bénabou-Tirole, Akerlof-Kranton), dual-process theory (Evans, Kahneman, Stanovich), and self-deception philosophy (Mele, von Hippel) literatures. Scope: §7.2 of the typology spike. Verdict-likely *Wholly Novel* on integrated typology + Result 4; *Substantial Overlap* on individual axes. Required before any promotion past `draft` stage.
 
-**TODO item — Sub-spike: Composite-level sub-type inheritance under composition.**
+**TODO item — Sub-spike: Composite-level sub-type inheritance under composition.**  
 Extend the typology to composites: given Class 2 sub-agents with sub-types $(S_i, R_i, F_i)$, derive the composite's sub-type as a function of routing structure and substrate-sharing. This extends `#hyp-directed-separation-under-composition` to track sub-type, not just class. Most substantial follow-on; not on the critical path for promoting the static (single-agent) typology.
 
 ### 1.3 `msc/modularity-cycle-plan-2026-05-09.md` annotation
@@ -143,16 +143,16 @@ For honesty:
 
 ## 4. Risks and how to mitigate
 
-**Risk: typology too dependent on the posited pipeline decomposition.**
+**Risk: typology too dependent on the posited pipeline decomposition.**  
 Mitigation: explicit scope statement in any promoted segment that the decomposition is canonical for Bayesian-style updaters and serves as an interpretive lens for monolithic architectures. Honest about precision-loss in monolithic cases.
 
-**Risk: form distinction (content vs process) feels operational rather than fundamental.**
+**Risk: form distinction (content vs process) feels operational rather than fundamental.**  
 Mitigation: state explicitly that form is *probing-protocol-dependent*, analogous to the existing $\hat\kappa_{\text{processing}}$ estimator's dependence on probes. The typology inherits the same epistemic stance — not a worse one.
 
-**Risk: source asymmetry result depends on $K(\Sigma)$ being multiplicative.**
+**Risk: source asymmetry result depends on $K(\Sigma)$ being multiplicative.**  
 Mitigation: this is the sub-spike to launch first. If $K(\Sigma)$ derives cleanly from utility-cost analysis, the result strengthens to exact. If it derives to a different form, Result 4's claim updates.
 
-**Risk: prior-art search reveals substantial overlap with cognitive-psychology / economics literatures.**
+**Risk: prior-art search reveals substantial overlap with cognitive-psychology / economics literatures.**  
 Mitigation: per `feedback_prior_art_integration.md`, AAT adopts established concepts with citation. If overlap is substantial, the typology's contribution narrows to the *AAT-internal integration* (mapping to wrapping construction, composition with leakage locus, source-asymmetry theorem), with adopted naming from prior art for the axes.
 
 ## 5. Decision points for Joseph

@@ -137,16 +137,16 @@ Given the text structure identified in Phase 1 and the bottleneck type from Phas
 - Branching alternatives → tree or decision flowchart
 - Mutual constraint → constraint web / bidirectional arrows
 
-**Heuristic 2 — Show don't tell for inferences**:
+**Heuristic 2 — Show don't tell for inferences**:  
 If an inference in the text requires a multi-step derivation, ask: *could a reader "see" this conclusion directly in a well-chosen diagram?* This is the Larkin–Simon perceptual inference test. If yes, the diagram replaces the derivation prose for initial comprehension.[^18]
 
-**Heuristic 3 — Minimalism over completeness**:
+**Heuristic 3 — Minimalism over completeness**:  
 From Tufte: *above all else, show the data*. From Mayer's coherence principle: remove everything that does not carry load-bearing information. A diagram that faithfully depicts every detail of a formal definition will often overwhelm rather than illuminate. Begin with a diagram showing the *essential structural skeleton*, then layer in detail progressively.[^9][^39]
 
-**Heuristic 4 — Exploit spatial metaphor**:
+**Heuristic 4 — Exploit spatial metaphor**:  
 Embodied cognition research shows that spatial relationships carry conceptual weight. "Higher" concepts, "larger" sets, "deeper" hierarchies, "closer" relationships are all processed faster when the diagram's spatial layout *literally* reflects those conceptual relationships.[^40][^41]
 
-**Heuristic 5 — Use visual metaphor for pure abstractions**:
+**Heuristic 5 — Use visual metaphor for pure abstractions**:  
 For content where no direct structural diagram is possible (e.g., abstract philosophical distinctions, type theory), a well-chosen visual metaphor bridges from the unfamiliar to the familiar. Visual metaphors reduce comprehension time by leveraging existing schemas. They work best when the structural analogy is deep, not superficial—the metaphor should carry the *inferential structure*, not just the surface appearance.[^42][^43]
 ### 3.5 Phase 5: Apply the Signaling Principle
 Once a diagram is designed, it must be *integrated* with the surrounding text following the spatial contiguity principle (place diagram adjacent to the text it explains) and the signaling principle (add cues—colors, arrows, numbering—that direct attention to the critical structural elements).[^44][^45][^13]
@@ -373,7 +373,5 @@ The principled design of pedagogical illustrations is an evidence-rich domain wi
 
 57. [New AI Tool Turns Text into Ready-to-Publish Science Diagrams ...](https://www.instagram.com/p/DUqslGgFM3Z/) - ✓ Converts messy research notes into publication-ready papers ✓ Automates the entire academic writin...
 
-58. [SciDoc2Diagrammer-MAF: Towards Generation of Scientific Diagrams from
-  Documents guided by Multi-Aspect Feedback Refinement](https://arxiv.org/html/2409.19242) - Automating the creation of scientific diagrams from academic papers can
-significantly streamline the...
+58. [SciDoc2Diagrammer-MAF: Towards Generation of Scientific Diagrams from Documents guided by Multi-Aspect Feedback Refinement](https://arxiv.org/html/2409.19242) - Automating the creation of scientific diagrams from academic papers can significantly streamline the...
 

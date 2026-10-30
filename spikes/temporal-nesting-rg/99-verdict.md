@@ -1,7 +1,7 @@
 # RG-0 Verdict: Synthesis and Decision
 
-**Status**: complete — RG-0a, RG-0b, RG-0c all in.
-**Date**: 2026-05-09 (revised same day, twice — once for framing correction, once for RG-0c integration)
+**Status**: complete — RG-0a, RG-0b, RG-0c all in.  
+**Date**: 2026-05-09 (revised same day, twice — once for framing correction, once for RG-0c integration)  
 **Inputs**: `00-brief.md`, `01-rg-0a-two-kalman-Kc-extension.md`, `01b-rg-0a-iterated-coarse-graining.md`, `02-prior-art-rg-ib-fep.md`.
 
 **Framing note (added on revision).** The first draft of this verdict drifted into "is this novel? then drop" reasoning. That's the wrong frame for ASF. The project's prior-art-integration discipline (CLAUDE.md §Prior art integration) is explicit: *"AAT's contribution is integration, not invention. The individual pieces are mostly known; the synthesis is the contribution."* What we're testing is whether the RG framing is *clean theory and useful unification* — independent of whether AAT got there first. The corrected verdict adopts the framing on those terms.
@@ -14,8 +14,8 @@ The brief (`00-brief.md` §6) sets two adoption criteria. Use the RG framing as 
 
 Read in the *clean theory and unification* frame, the relevant questions are:
 
-(a) Does the framing's core claim — AAT-shape preserved under coarse-graining — actually hold? (Not: is this novel.)
-(b) Does the framing unify previously-separate pieces of AAT (temporal nesting + composite formation + directed-separation classification + (O, Σ) decomposition) into one structural picture?
+(a) Does the framing's core claim — AAT-shape preserved under coarse-graining — actually hold? (Not: is this novel.)  
+(b) Does the framing unify previously-separate pieces of AAT (temporal nesting + composite formation + directed-separation classification + (O, Σ) decomposition) into one structural picture?  
 (c) Are the prior frameworks AAT adopts from named clearly enough that someone reading the AAT treatment can pick up where Friston / Mehta-Schwab / Kline-Palmer / Chen-Goldenfeld-Oono left off?
 
 ## 2. Where each thread stands

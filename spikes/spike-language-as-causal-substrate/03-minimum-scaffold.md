@@ -57,11 +57,9 @@ Joseph's prompt asks for "a certain level of provable causal level in mathematic
 
 There are two readings:
 
-**Reading 1 — minimum scaffold to *recover* the language-encoded Level 2 content.**
-By the analysis above, this is $\mathcal{M}_{\min}$: a parser with entity tracking. Pre-loop LLMs vastly exceed this. **Recovery of training-encoded Level 2 content does not require any agentic scaffolding.** This is a strong, derivable claim under Theorem 1 in `01-derivation.md`.
+**Reading 1 — minimum scaffold to *recover* the language-encoded Level 2 content.** By the analysis above, this is $\mathcal{M}_{\min}$: a parser with entity tracking. Pre-loop LLMs vastly exceed this. **Recovery of training-encoded Level 2 content does not require any agentic scaffolding.** This is a strong, derivable claim under Theorem 1 in `01-derivation.md`.
 
-**Reading 2 — minimum scaffold to *generate fresh* Level 2 content.**
-This is qualitatively different. To produce new interventional content (not just recovering what was asserted in training), the substrate must perform interventions in some sense. This is what AAT's [`#der-loop-interventional-access`](../../01-aat-core/src/der-loop-interventional-access.md) covers: the loop is the structural mechanism by which fresh Level 2 content becomes available. The minimum scaffold for fresh Level 2 is **the loop**, in any of three modes:
+**Reading 2 — minimum scaffold to *generate fresh* Level 2 content.** This is qualitatively different. To produce new interventional content (not just recovering what was asserted in training), the substrate must perform interventions in some sense. This is what AAT's [`#der-loop-interventional-access`](../../01-aat-core/src/der-loop-interventional-access.md) covers: the loop is the structural mechanism by which fresh Level 2 content becomes available. The minimum scaffold for fresh Level 2 is **the loop**, in any of three modes:
 
 (i) **Agent-self intervention** — agent's own actions cause environmental responses, the environmental response is observed, the action-conditional response is interventional data (the standard AAT-loop case).
 

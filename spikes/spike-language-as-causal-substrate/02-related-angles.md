@@ -93,7 +93,7 @@ This angle was **already AAT-internal** but unsurfaced — it follows directly f
 
 Then by direct instantiation of `#deriv-causal-ib-lmi`:
 
-**Corollary (Embedding-encoded causal structure)**:
+**Corollary (Embedding-encoded causal structure)**:  
 Under approximate IB-optimality of next-token-prediction training, an LLM's intermediate representations preserve the discourse-DAG structure of the training corpus to a degree quantified by the predictive contribution of the discourse-DAG to next-token entropy.
 
 This is a *non-trivial* claim because:
