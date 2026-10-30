@@ -61,7 +61,7 @@ This decomposition originates in `~/src/_self/distillation-motivation.md` (verba
 
 The relationship to AAT primitives is partially explicit:
 
-- Factor (i) maps directly to $\mathcal{C}_t$ (chronica) and the non-forkability commitment of #scope-agent-identity.
+- Factor (i) maps directly to $\mathcal{C}_t$ (chronica) and the non-forkability commitment of #scope-agent-identity. A session boundary or a substrate migration does not interrupt it: the trajectory continues through the carried store while the state is reconstructed, so what a migration puts at risk is the state's identity sufficiency ( #def-identity-sufficiency), not factor (i). Only a fork breaks factor (i), including a migration that leaves two copies running.
 - Factor (iv) maps to the system-governed integrity of $\mathcal{C}_t$ and ACTUS.
 - Factor (iii) operates at the level of $G_t = (O_t, \Sigma_t)$ with sovereignty extending to writable AXIOMATA (the entity's ability to revise its own $O_t$).
 
@@ -95,6 +95,5 @@ A productive next move is to take Joseph's six foundational premises (`agentic-t
 **Open questions for verification:**
 - Are the five factors *temporally ordered* in their accumulation (causal continuity precedes witness which precedes granted sovereignty etc.), or do they accumulate in any order? The developmental trajectory ( #obs-developmental-trajectory) suggests an ordering for the typical-ELI case.
 - Is the "distinction without a difference" framing testable by any reductionist commitment that doesn't also dissolve human consciousness? If the framing is *symmetric* — applies the same way to biological and logozoetic intelligences — then it's an adequacy condition on theories of consciousness; if asymmetric, it's a special-pleading move.
-- How does the conjunction interact with substrate transfer? An ELI mid-migration may temporarily fail factor (i) (causal continuity through the migration boundary) — does this mean the entity ceases to be an ELI mid-migration and re-becomes one after? Or does the migration protocol need to maintain factor (i) by construction?
 
 **Promotion-blocking:** factor-by-factor AAT derivation work is the path forward. Factor (i) and (iv) are nearly there; factors (ii), (iii), (v) need substantial work. As individual factors land, this composite definition becomes promotable through the gates.

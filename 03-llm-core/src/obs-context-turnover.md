@@ -12,7 +12,7 @@ stage: draft
 
 # Observation: Context Turnover
 
-At every session boundary, the LLM-based agent's context window is cleared. The chronica $\mathcal C_t$ is severed — no internal state carries over. This is a 100% $M_t$ reset: the agent begins each session with $M_t$ reconstructed entirely from external sources and the new prompt. The persistence condition, which assumes continuous or event-driven state evolution, does not apply in its standard form across session boundaries.
+At every session boundary, the LLM-based agent's context window is cleared. The in-context record of the chronica is severed and no internal state carries over. This is a 100% $M_t$ reset: the agent begins each session with $M_t$ reconstructed entirely from external sources and the new prompt. The trajectory $\mathcal C_t$ itself is not cut when the new session reads the store the last one wrote, since that session is the store's single continuation. What is cut is the state. The persistence condition, which assumes continuous or event-driven state evolution, does not apply in its standard form across session boundaries.
 
 ## Formal Expression
 
@@ -31,13 +31,13 @@ where:
 - $p_{k+1}$ is the session-initiating prompt (user instruction, system prompt, retrieved context)
 - $M_0^{\text{weights}}$ is the frozen pretrained prior (the LLM's weights)
 
-*[Observation (chronica-severance)]*
+*[Observation (record-severance)]*
 
-The chronica ( #def-chronica) is severed at every session boundary. Within a session, $\mathcal C_t$ accumulates as the conversation history. Across sessions:
+The in-context record of the chronica ( #def-chronica) is severed at every session boundary. Within a session, the context holds the conversation history. Across sessions, the new context does not contain the previous session's events:
 
-$$\mathcal{C}_{\tau_{k+1}} \neq \mathcal{C}_{\tau_k} \cup \{e_{\tau_k}, \ldots\}$$
+$$\text{context}_{\tau_{k+1}} \neq \text{context}_{\tau_k} \cup \{e_{\tau_k}, \ldots\}$$
 
-The new session's chronica starts fresh. Any information from the prior session's chronica that is needed must have been *externalized* — written to $\mathcal E_{\text{ext}}$ — before the session boundary.
+Any information from the prior session that is needed must have been *externalized* — written to $\mathcal E_{\text{ext}}$ — before the session boundary. The trajectory runs through that store: writing it was the agent's action, and reading it is the next session's observation. So $\mathcal C_t$ continues across the boundary while the state built on it is destroyed and reconstructed (the state-discontinuity case of #scope-agent-identity). This is what makes the sufficiency drop below a loss on one trajectory, rather than a comparison between two agents. A session that continues no predecessor is a new agent, and the drop below has nothing to measure against. The case where nothing was externalized, treated below, is different: a predecessor exists and its continuation falls back to the prior.
 
 *[Observation (sufficiency-discontinuity)]*
 
@@ -73,7 +73,7 @@ where $S_{\text{min}}$ is the minimum model sufficiency required for the agent t
 1. **Intra-session** (event-driven, continuous): standard AAT dynamics apply. The coupled update $X_{\tau^+} = f_{\text{LLM}}(\text{prompt}(X_{\tau^-}, e_\tau))$ ( #def-coupled-update-dynamics) processes events and evolves $X_t$. The persistence condition applies within a session.
 2. **Inter-session** (episodic, discontinuous): the state is reconstructed from external memory. The persistence challenge is information preservation through the externalization-reconstruction cycle. See #disc-m-preservation.
 
-**Context window as finite $\mathcal C_t$ capacity.** Even within a session, the chronica is bounded by the context window length $L$. When $\lvert\mathcal C_t\rvert \gt L$, older events are dropped — a forced compression that degrades sufficiency. This creates an intra-session analog of the turnover problem: the agent must continuously prioritize which information to retain in its finite context. The rate of information loss from context-window overflow is an additional disturbance term in the intra-session mismatch dynamics.
+**Context window as finite in-context record.** Even within a session, the in-context record of the chronica is bounded by the context window length $L$. When the session's events exceed $L$, older events are dropped from the context — a forced compression that degrades sufficiency. This creates an intra-session analog of the turnover problem: the agent must continuously prioritize which information to retain in its finite context. The rate of information loss from context-window overflow is an additional disturbance term in the intra-session mismatch dynamics.
 
 **Context window as joint capacity for $M_t$, $\Sigma_t$, and task.** The context-window capacity $C_{\text{context}}$ (measured in tokens or bits) is shared across the agent's reality model, strategy, and task description. Per `#form-strategy-complexity-cost`'s description-length apparatus, the strategy carries its own DL cost $\text{DL}(\Sigma_t)$ that competes for context-window space with $\text{DL}(M_t)$ (the agent's current beliefs) and $\text{DL}(\text{task})$ (the prompt, goal description, tool definitions). The capacity constraint at any moment is
 

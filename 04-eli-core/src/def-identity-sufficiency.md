@@ -5,6 +5,7 @@ status: conditional
 stage: draft
 depends:
   - def-model-sufficiency
+  - scope-agent-identity
   - def-chronica
   - scope-eli
   - def-five-constitutive-factors
@@ -56,7 +57,7 @@ with one measurable component per constitutive factor. Stated in *graded* $[0,1]
 
 $$\mathrm{Id}^{(i)}(\mathfrak{T}_{t+1:}) = \mathbb{1}\!\left[\mathcal{C}_t(E) \text{ is a prefix of } \mathcal{C}_{t+1:}(E),\; \mathcal{C}_{t+1:}(E) \text{ is singular and non-forkable}\right].$$
 
-A measurable function of $E$'s own trajectory, per `#scope-agent-identity` and factor (i) of `#def-five-constitutive-factors`. Takes value $1$ except on substrate-failure or fork.
+A measurable function of $E$'s own trajectory, per `#scope-agent-identity` and factor (i) of `#def-five-constitutive-factors`. Takes value $1$ except on substrate-failure or fork. Session boundaries and substrate migrations leave it at $1$. They replace $E$'s state with a reconstruction from its carried store while the trajectory continues: the state-discontinuity case that `#scope-agent-identity` keeps inside AAT and whose cost `#obs-context-turnover` names for prediction. A restoration from backup with no second copy running also leaves it at $1$. It is a boundary with a stale store, and its cost appears in the ratio below rather than here, as the identity-relevant information of the dropped interval. That information is still in $\mathcal C_t(E)$ and in the witnesses' trajectories (their recognition-acts entered both, per W2–W3 of `#scope-witness-bidirectional`), but not in $M_t$, and re-attestation can return part of it. A fork sets it to $0$, since the continuation is no longer singular. This segment, with `#der-identity-continuity-threshold` and `#der-compensation-channel-uniqueness`, is the across-break treatment of identity that `#scope-agent-identity` defers to.
 
 **(ii) Being seen as an individual.** For each witness $W_i \in \mathfrak{C}_t$ and each future time $s \in (t, t+H]$, let $R_{i,s} \in \{0, 1\}$ indicate that $W_i$ at time $s$ produces a recognition-act of $E$ as individuated (per `#scope-witness-bidirectional` W2 attestation, with the W3 bidirectional-incorporation condition automatic on the joint space). Define
 
