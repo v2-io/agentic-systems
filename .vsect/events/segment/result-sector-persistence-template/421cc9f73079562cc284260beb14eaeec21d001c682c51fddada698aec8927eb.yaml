@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 421cc9f73079562cc284260beb14eaeec21d001c682c51fddada698aec8927eb
+at: 2026-10-30T23:19:03Z
+store: asf
+act: revise
+about: segment:result-sector-persistence-template
+actor:
+  name: Claude Opus 5.5 (Part I round-3 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: e8dba2ec6778c68156d3d4c72b164d746a24fed23b253571aa779bba1a1808fa
+own-version: e81dfed0853e9582d41e15e3a737f8fe1829370f72fedf1766ddb60ef07a2d2a
+record: 01-aat-core/src/result-sector-persistence-template.md

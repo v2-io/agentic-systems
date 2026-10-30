@@ -1,0 +1,71 @@
+kind: segment
+form: 
+normalizer: vsect-norm/0
+---
+# Hypothesis: Mismatch Dynamics
+
+Mismatch is given dynamics. The linear first-order ODE proposes that mismatch magnitude decays at rate proportional to tempo times mismatch (the correction term) and grows at the rate new mismatch is injected (the disturbance term $\rho$: environmental change plus the channel noise the correction itself feeds back). The framework is explicit that this is heuristic — a first-order linear approximation — and the general nonlinear case is what the sector-condition framework handles in the next chapter ( #result-sector-condition-stability).
+
+Two steady-state forms appear and are individually load-bearing. Under **Model D** (deterministic bounded disturbance), the steady-state mismatch is $\rho/\mathcal{T}$ — the ratio of the total disturbance rate to how fast the agent adapts, which splits into a lag term (how fast the environment changes, over how fast the agent adapts) and a floor set by the channel noise. Under **Model S** (stochastic zero-mean disturbance, Itô SDE), the steady-state root-mean-square mismatch scales as $\sigma_w/\sqrt{2\mathcal{T}}$ — the *square root* of the disturbance-to-correction ratio. The $1/\sqrt{\mathcal{T}}$ scaling (vs. $1/\mathcal{T}$ for Model D) is one of the volume's more interesting consequences: correction is less effective against stochastic noise than against deterministic drift. The ODE is honestly a fluid-limit approximation of the underlying discrete event-driven dynamics; the Epistemic Status treats the bridging assumption and where transient error is largest. The Discussion below treats the persistence threshold, the nonlinear shapes the linear ODE smooths over (saturation, threshold dead zones, structural breakdown), and the adversarial-coupling consequences that scale as the square (Model D) and 3/2 power (Model S) of the inter-agent tempo ratio — the formal core of "getting inside the opponent's loop" as a categorical rather than marginal advantage.
+
+## Formal Expression
+
+*[Hypothesis (mismatch-dynamics)]*
+
+$$\frac{d\Vert\delta\Vert}{dt} = -\mathcal{T} \cdot \Vert\delta\Vert + \rho(t)$$
+
+where:
+
+- $\mathcal{T} \cdot \Vert\delta\Vert$ is the rate at which the agent corrects mismatch (proportional to both tempo and current mismatch)
+
+- $\rho(t)$ is the **disturbance rate** — the rate at which new mismatch is introduced, by changes in $\Omega$ and by the channel noise the correction feeds back
+
+The mismatch whose magnitude these dynamics track is the estimation error $\bar\delta = \bar o - \hat o$ of #def-mismatch-signal, not the observed innovation. The innovation adds channel noise that no correction removes and that has no dynamics of this form. Here $\rho$ and, below, $\sigma_w$ denote the *total* disturbance, and the steady states are exact in them. Because each correction is driven by the noisy innovation, part of that disturbance grows with the correction rate ( #deriv-sector-condition, Setup): for linear correction with channel noise bounded by $\bar\nu$, $\rho = \rho_{\text{env}} + \mathcal T\bar\nu$ and the steady state $\rho/\mathcal T = \rho_{\text{env}}/\mathcal T + \bar\nu$ is a lag term plus a floor; under Model S with white channel noise, $\sigma_w^2 = \sigma_{\text{env}}^2 + \mathcal T^2\sigma_\nu^2$ and the RMS steady state is smallest at the Kalman gain and grows above it. Read with the environmental part alone, $\rho_{\text{env}}/\mathcal T$ and $\sigma_{\text{env}}/\sqrt{2\mathcal T}$ are the lag terms.
+
+**Steady state, Model D (deterministic bounded disturbance, $\lVert w(t)\rVert \leq \rho$):**
+
+Setting $d\lVert\delta\rVert/dt = 0$:
+
+*[Derived (from linear hypothesis, deterministic)]*
+
+$$\lVert\delta\rVert_{ss} = \frac{\rho}{\mathcal{T}}$$
+
+Steady-state mismatch is the ratio of the total disturbance rate to how fast the agent adapts. With channel noise bounded by $\bar\nu$ it is $\rho_{\text{env}}/\mathcal T + \bar\nu$: the environment's rate of change over the adaptation rate, plus a floor that faster adaptation does not lower.
+
+**Steady state, Model S (stochastic zero-mean disturbance, $d\delta = -\mathcal{T}\delta\,dt + \sigma_w\,dW_t$):**
+
+*[Derived (from Itô-Lyapunov analysis — see Prop A.1S in #deriv-sector-condition)]*
+
+$$\lVert\delta\rVert_{\text{rms}} = \frac{\sigma_w}{\sqrt{2\mathcal{T}}}$$
+
+(scalar case, $n = 1$; general: $\sigma_w\sqrt{n/(2\mathcal{T})}$; $\sigma_w$ per coordinate). Steady-state mismatch scales as the square root of the disturbance-to-correction ratio, not the ratio itself. The $1/\sqrt{\mathcal{T}}$ scaling (vs. $1/\mathcal{T}$ for Model D), at fixed $\sigma_w$, means correction is less effective against noise than against drift. Under Model S this steady state is a scale, not a wall: the error leaves any fixed region with certainty, after an expected time exponential in $\mathcal T R^2/\sigma_w^2$ ( #deriv-sector-condition Cor A.1S.1 and Prop A.1S-τ).
+
+**Transient solution (Model D):**
+
+$$\lVert\delta(t)\rVert = \lVert\delta_0\rVert e^{-\mathcal{T} t} + \frac{\rho}{\mathcal{T}}(1 - e^{-\mathcal{T} t})$$
+
+Mismatch decays exponentially from initial conditions toward the steady state.
+
+## Epistemic Status
+
+*Heuristic.* This is explicitly a first-order linear approximation. The qualitative behavior (bounded mismatch, steady-state ratio, exponential convergence) is robust across correction function forms. The quantitative predictions (exact steady-state value, convergence rate, the squared adversarial scaling law) are specific to the linear case. The general nonlinear treatment ( #result-sector-condition-stability) replaces the linear correction term with a sector-bounded correction function and proves persistence without committing to a specific functional form.
+
+**Bridging assumption (discrete to continuous).** This ODE is a fluid-limit approximation of the discrete event-driven dynamics ( #form-event-driven-dynamics). The fluid limit is formally justified by [#deriv-discrete-sector-condition](deriv-discrete-sector-condition.md): for Model D (deterministic), the discrete and continuous steady states are identical (zero gap); for Model S (stochastic), the variance gap is $O(\eta^\ast c_{\max})$, quantitatively small whenever $\eta^\ast c_{\max} \ll 1$. The approximation is least accurate during initial transients when $\eta^\ast$ is large, but this phase is short-lived and the transient error is bounded by $O(\eta^\ast c_{\max} / \nu^{1/2})$ under Lipschitz regularity.
+
+## Discussion
+
+**Speed-quality substitutability.** From $\mathcal{T} = \nu \cdot \eta^\ast$ (single-channel case): at fixed $\rho$, doubling event rate $\nu$ has the same effect on the lag term $\rho/\mathcal{T}$ as doubling update quality $\eta^\ast$. They differ in the noise term. More events bring more information, and averaging over them lowers the injected channel noise. A gain pushed past the optimal $\eta^\ast$ of #emp-update-gain injects more noise than it removes lag ( #result-persistence-condition, "Gain and information are different levers"). They are multiplicative when both improve: 50% improvement in each yields $1.5 \times 1.5 = 2.25\times$, not $3\times$. This is the formal analog of Boyd's insight that Orient quality often matters more than raw OODA speed — the same structural observation (quality and speed are substitutable, quality often dominates) appears in the model.
+
+**The persistence threshold.** From the steady-state: $\Vert\delta\Vert_{ss} \lt \Vert\delta_{\text{critical}}\Vert$ iff $\mathcal{T} \gt \rho/\Vert\delta_{\text{critical}}\Vert$ ( #result-persistence-condition). Below this threshold, the model cannot support effective action. The same structural pattern — correction capacity falling below disturbance rate — appears across domains: extinction (environment changes faster than organism adapts), organizational failure (market moves faster than company learns), control instability (disturbances exceed correction capacity), cognitive overload (information arrives faster than processing). The persistence condition captures the common structure; whether it captures the dominant mechanism in each domain is an empirical question.
+
+**Nonlinear reality.** The true correction dynamics are almost certainly nonlinear:
+
+- *Saturation at large $\Vert\delta\Vert$*: correction mechanism overwhelmed, so correction is slower than linear for large errors. Makes the persistence threshold harder to satisfy.
+
+- *Threshold effects*: small mismatches go uncorrected ($F \approx 0$ for $\Vert\delta\Vert \lt \varepsilon$), creating a dead zone.
+
+- *Structural breakdown*: beyond some critical $\Vert\delta\Vert$, correction drops to zero because the model class is no longer appropriate ( #result-structural-adaptation-necessity).
+
+These nonlinearities are exactly what the sector-condition framework ( #result-sector-condition-stability) handles.
+
+**Adversarial coupling.** When two agents are coupled ($A$'s actions increase $B$'s disturbance): $\rho_B = \rho_{B,\text{base}} + \gamma_A \cdot \mathcal T_A$. The steady-state mismatch ratio scales superlinearly with the tempo ratio, but the exponent depends on the disturbance model. Under Model D (deterministic drift, coupling-dominant): $(\mathcal T_A/\mathcal T_B)^2$ — the squared law, derived from the $1/\mathcal{T}$ steady-state scaling. Under Model S (stochastic noise, coupling-dominant): $(\mathcal T_A/\mathcal T_B)^{3/2}$ — derived from the $1/\sqrt{\mathcal{T}}$ steady-state scaling. See #result-adversarial-tempo-advantage.

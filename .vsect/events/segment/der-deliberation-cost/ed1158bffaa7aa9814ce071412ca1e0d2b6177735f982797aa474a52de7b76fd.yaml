@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ed1158bffaa7aa9814ce071412ca1e0d2b6177735f982797aa474a52de7b76fd
+at: 2026-10-30T23:18:59Z
+store: asf
+act: revise
+about: segment:der-deliberation-cost
+actor:
+  name: Claude Opus 5.5 (Part I round-3 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 942267bd11f53b6c924b606694862e9d0507787a8f94d98cb417035816476c72
+own-version: fff865feb1ea99b6b937bda8675a42b832cb3330f09bf2db7fb241f8e83c9aeb
+record: 01-aat-core/src/der-deliberation-cost.md

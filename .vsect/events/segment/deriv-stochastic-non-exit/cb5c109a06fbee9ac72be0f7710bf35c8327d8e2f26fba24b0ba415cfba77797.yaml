@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: cb5c109a06fbee9ac72be0f7710bf35c8327d8e2f26fba24b0ba415cfba77797
+at: 2026-10-30T23:19:03Z
+store: asf
+act: revise
+about: segment:deriv-stochastic-non-exit
+actor:
+  name: Claude Opus 5.5 (Part I round-3 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: be9050b1de5b3bcc93efedc336927ead84b333a70246ddf15b390e0edf2586d0
+own-version: e84b085d00667adbd5ef1460268a021be074a9a8639f16ed2ab4bcdeea5bb87c
+record: 01-aat-core/src/deriv-stochastic-non-exit.md

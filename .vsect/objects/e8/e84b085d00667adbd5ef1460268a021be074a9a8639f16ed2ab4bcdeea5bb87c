@@ -1,0 +1,87 @@
+kind: segment
+form: 
+normalizer: vsect-norm/0
+---
+# Derivation: No Horizon-Independent Non-Exit Bound Under Additive Stochastic Forcing (the Model-S No-Go)
+
+A *no-go* derivation establishing that **under additive stochastic forcing there is no finite bound on the infinite-horizon first-exit probability** from the sector-condition region — $P(\tau_R \lt \infty) = 1$ for every correction strength — *and the natural mathematical route to one provably cannot exist*. This is the load-bearing proof step behind the Model-S half of Corollary A.1S.1 in `#deriv-sector-condition`, and the reason Prop A.1S there bounds the *killed* moment and the finite-horizon path rather than a stopped moment with decay; its positive companion, how long the region is kept, is Prop A.1S-τ there.
+
+The construction: under stochastic disturbance the Itô-Lyapunov machinery succeeds at producing a *finite-horizon mean-square bound* but fails to extend to a *horizon-independent* exit-probability bound. The natural candidate — a Ville / Doob maximal inequality on a compensated Itô-Lyapunov supermartingale — is shown to be unattainable because the only candidate $S(t) = e^{2\alpha t}V - \tfrac{n\sigma_w^2}{4\alpha}(e^{2\alpha t} - 1)$ is *sign-indefinite inside the persistence basin* (the compensated drift is not non-positive across the entire region: the subtracted term dominates $e^{2\alpha t}V$ whenever the system sits in the typical scatter, which under the mean-square persistence condition is most of the time). The deeper obstruction is that for additive non-degenerate forcing the diffusion's scale function is *unbounded* — the OU benchmark $s'(u) \propto e^{\alpha u^2/\sigma_w^2}$ is the explicit instance — so the only bounded harmonic functions of the generator are constants and the gambler's-ruin / Lyapunov-exit machinery cannot certify "stays inside forever with positive probability." Both failures are structural, not artifacts of a clever trick being missed.
+
+The framework treats this as a *constructive use of impossibility*. The downstream consequence is a certain-eventual-event reading: under Model S, pathwise containment in any fixed region is unattainable at any correction strength, so for any sufficiently long-lived stochastic-environment agent the *loss of its parametric certificate* is a *certain eventual event* rather than an edge case (whether that loss forces structural adaptation, a different model class rather than a transient excursion, is the open question of `#sketch-structural-adaptation-genericity`; Prop A.1S-τ in `#deriv-sector-condition` says how soon it comes). This sharpens — rather than caveats — the hand-off into `#result-structural-adaptation-necessity`. Beyond the segment's own result the derivation packages a **reusable no-go signature**: *unbounded scale function ⇒ no non-constant bounded harmonic function ⇒ no horizon-independent non-exit certificate*. Future stochastic-containment proposals in the corpus can be settled against this signature rather than re-attempting the maximal-inequality route.
+
+## Formal Expression
+
+**Setup.** Mismatch dynamics under additive stochastic disturbance, started inside the sector-condition region $\mathcal{B}_R$:
+
+$$d\delta = -F(\mathcal{T}, \delta)\,dt + \sigma_w\,dW_t, \qquad \delta(0) \in \mathcal{B}_R,\quad \sigma_w \gt 0,$$
+
+with $W_t$ a standard $n$-dimensional Wiener process, (A2') $\delta^\top F \geq \alpha\lVert\delta\rVert^2$ on $\mathcal{B}_R$, and $\tau_R = \inf\{t : \lVert\delta(t)\rVert \gt R\}$ the first-exit time. Let $V = \tfrac12\lVert\delta\rVert^2$.
+
+**Theorem (Model-S no-go).** *[Derived]* For every $\alpha \gt 0$, every $\sigma_w \gt 0$, and every correction function $F$ satisfying (A2'),
+
+$$P(\tau_R \lt \infty) = 1,$$
+
+and there exists no nonnegative supermartingale dominating $V$ that certifies a horizon-independent bound $P(\tau_R \lt \infty) \leq c \lt 1$. Pathwise containment of $\mathcal{B}_R$ is unattainable under additive stochastic forcing at any correction strength.
+
+**Why the natural route cannot work.** The route a careful reader reaches for first is a time-uniform maximal inequality (Ville / Doob) on an Itô–Lyapunov supermartingale — the same instinct that makes the killed second-moment bound (Prop A.1S(i)) succeed. It fails, and the failure is structural, not a matter of a missing trick.
+
+Define $G(t) = e^{2\alpha t} V(\delta(t))$. On $[0, \tau_R]$, by Itô and (A2'),
+
+$$dG = e^{2\alpha t}\big[\underbrace{(2\alpha V - \delta^\top F)}_{\leq\, 0 \text{ on } \mathcal{B}_R}\,dt + \tfrac n2\sigma_w^2\,dt + \delta^\top\sigma_w\,dW_t\big] \;\leq\; e^{2\alpha t}\tfrac n2\sigma_w^2\,dt + e^{2\alpha t}\delta^\top\sigma_w\,dW_t.$$
+
+$G$ is **not** a supermartingale: the $+\,e^{2\alpha t}\tfrac n2\sigma_w^2\,dt$ term has strictly positive drift growing exponentially. Removing it by compensation gives
+
+$$S(t) = e^{2\alpha(t\wedge\tau_R)}V(\delta_{t\wedge\tau_R}) - \frac{n\sigma_w^2}{4\alpha}\big(e^{2\alpha(t\wedge\tau_R)} - 1\big),$$
+
+and $dS \leq e^{2\alpha t}\delta^\top\sigma_w\,dW_t$ on $[0,\tau_R]$ — so $S$ *is* a supermartingale. **But $S$ is not nonnegative.** The subtracted $\tfrac{n\sigma_w^2}{4\alpha}(e^{2\alpha t}-1)$ dominates $e^{2\alpha t}V$ whenever $V(\delta(t)) \lt \tfrac{n\sigma_w^2}{4\alpha}$ — i.e. exactly inside the persistence basin, where the process spends a positive fraction of its time: $\tfrac{n\sigma_w^2}{4\alpha}$ is the stationary mean of $V$ for the OU benchmark, and $P(V \lt \tfrac{n\sigma_w^2}{4\alpha}) = P(\chi^2_n \lt n)$ lies between $0.5$ and $0.69$, so $V$ is typically comparable to that level, below it about half the time. The no-go needs only that this event has positive probability. Ville's inequality requires a nonnegative supermartingale; Doob's maximal inequality a nonnegative sub/supermartingale. Both are inapplicable to a sign-indefinite $S$, and the obstruction is not removable: for additive non-degenerate Brownian forcing the diffusion's scale function is unbounded (the OU scale density $\propto e^{\alpha u^2/\sigma_w^2}$), so the only bounded harmonic functions of the generator are constants — the gambler's-ruin / Lyapunov-exit machinery cannot certify "stays inside forever with positive probability." There is no nonnegative supermartingale dominating $V$ with finite expected initial value that yields a horizon-independent exit bound.
+
+**Why $P(\tau_R \lt \infty)=1$, generally.** The conclusion does not depend on the linear structure. A non-degenerate diffusion (additive forcing $\sigma_w\,dW_t$, $\sigma_w \gt 0$) exits any bounded region in finite time almost surely, for *any* locally bounded drift: near $\partial\mathcal{B}_R$ the Brownian increment has positive probability of crossing in any time interval, and no finite inward correction satisfying (A2') can suppress this (A2' bounds $\delta^\top F$ from below by $\alpha\lVert\delta\rVert^2$, a finite inward push, not an impassable wall). Hence $\tau_R \lt \infty$ a.s. for every $F$ under (A2'), every $\alpha$, every $\sigma_w$. The Ornstein–Uhlenbeck case is the explicit instance (positively recurrent on $\mathbb{R}^n$, unbounded stationary support, exits any finite ball a.s.), not the basis.
+
+## Epistemic Status
+
+*Exact.* Both the impossibility of the maximal-inequality certificate (sign-indefiniteness of the only candidate compensated supermartingale; unbounded scale function ⇒ no non-constant bounded harmonic function) and the positive fact $P(\tau_R \lt \infty)=1$ (almost-sure finite exit of a non-degenerate diffusion from a bounded region under any locally bounded drift) are classical (Khasminskii 2012[^khas] ch. 3–4). The contribution here is not the SDE mathematics but the demonstration that the route which *succeeds* for the killed second moment (Prop A.1S(i)) structurally *cannot* deliver an infinite-horizon containment statement — the answer to "are you sure you can't just bound $\sup_t$ with Doob/Ville?" is *yes, sure, and here is precisely the step that breaks.* "Exact" is claimed in the framework's defeasible sense (valid under stated assumptions, subject to a found error), not as a claim beyond a found-mistake.
+
+This derivation is load-bearing for the critical path: it is the proof step that grounds the Model-S half of Corollary A.1S.1 and confines Prop A.1S (in `#deriv-sector-condition`) to the killed moment, the finite-horizon sup-bound (iv), the stationary tail under a global sector condition, and the exit-time comparison of Prop A.1S-τ. It is a **reusable no-go signature**: wherever a "stays-in-region-forever with positive probability" claim is proposed under additive non-degenerate forcing, the unbounded-scale-function / no-non-constant-bounded-harmonic-function obstruction settles it negatively without a fresh attempt.
+
+## Discussion
+
+The structural reading: additive stochastic forcing does not weaken the *rate* of containment, it removes a *kind* of guarantee. Bounded disturbance (Model D) gives deterministic positive invariance of $\mathcal{B}_R$ ($P(\tau_R \lt \infty)=0$); additive stochastic disturbance gives almost-sure eventual exit ($P(\tau_R \lt \infty)=1$); the achievable value is the two-point set $\{0,1\}$, selected by the disturbance's support structure, not by correction strength — Corollary A.1S.1 in `#deriv-sector-condition`. What survives under Model S is distributional and finite-time: the killed-moment scale (Prop A.1S(i)), the stationary Markov tail where the sector condition is global (Prop A.1S(iii)), the finite-horizon sample-path bound (Prop A.1S(iv), which grows linearly in the horizon and is vacuous for $T \gtrsim R^2/(n\sigma_w^2)$), and the exit-time comparison (Prop A.1S-τ: the expected stay is at least the OU benchmark's, exponential in $\alpha R^2/\sigma_w^2$, so the certain event can be made as late as a lifetime requires, at a margin cost logarithmic in that lifetime, though not by raising the gain past the Kalman gain on a fixed channel).
+
+Exact computation shows the obstruction is real rather than an artifact of the proof technique. For the 1-D OU benchmark $dX = -\alpha X\,dt + \sigma\,dW$ (the segment's own linear case; (A2') global and sharp), started *at the origin* (the most favorable initial condition), with the mean-square persistence condition (ii) holding, the probability of having left $[-R, R]$ by time $T$ is computed by a spectral solve of the Dirichlet generator on $[-R, R]$. It agrees to within $0.005$ with $1 - e^{-T/\Phi(0)}$, where $\Phi(0)$ is the mean exit time of Lemma A.1S-τ.0 in `#deriv-sector-condition`:
+
+| $\alpha$ | $\sigma$ | $R$ | $R^\ast_S$ | $\kappa_R$ | $\Phi(0)$ | $P(\sup_{[0,50]} \gt R)$ | $T{=}200$ | $T{=}800$ | $T{=}3200$ | stationary tail $\tfrac{n\sigma^2}{2\alpha R^2}$ (global A2', valid for OU) |
+
+|---|---|---|---|---|---|---|---|---|---|---|
+
+| 1.0 | 0.3 | 1.0 | 0.21 | 11.1 | 18735 | 0.003 | 0.011 | 0.042 | **0.157** | 0.045 |
+
+| 0.5 | 0.2 | 0.8 | 0.20 | 8 | 2016 | 0.023 | 0.093 | 0.327 | **0.796** | 0.063 |
+
+| 1.0 | 0.5 | 1.0 | 0.35 | 4 | 27.4 | 0.842 | 0.999 | 1.000 | **1.000** | 0.125 |
+
+The ever-exit probability climbs monotonically toward 1 with the horizon even started at the origin and even with (ii) comfortably satisfied — the fixed-time constant $n\sigma^2/(2\alpha R^2)$ is *not* an upper bound on the sup-over-horizon probability, exactly as the no-go predicts. This sharpens the hand-off into `#result-structural-adaptation-necessity`: under any genuinely stochastic environment region-exit is a certain eventual event, so loss of the parametric certificate is generic, not exceptional, for a sufficiently long-lived agent (what follows the loss is `#sketch-structural-adaptation-genericity`'s question).
+
+## Findings
+
+### The natural maximal-inequality route to infinite-horizon containment provably cannot exist under additive stochastic forcing
+
+**Brief:** If a system is held near a target by inward correction but also kicked by persistent random noise, you can bound how far off it is at any *given* moment, and you can bound the worst excursion over any *fixed window* — but you can never bound "it stays inside the safe region *forever*," because given unlimited time the noise will, with certainty, eventually push it out, no matter how strong the correction. The tempting fix — find a single "energy" quantity that only ever drifts downward, so a classic gambler's-ruin argument caps the lifetime escape probability — fails for a precise reason: the only candidate energy that has the right drift is negative exactly where the system spends most of its time, and the gambler's-ruin machinery requires a non-negative quantity. This is not a missing trick; it is structural, and it is the same obstruction every time, so it can be invoked rather than re-derived.
+
+**Impact:** Supplies the load-bearing proof step for Corollary A.1S.1 in `#deriv-sector-condition` (the Model-S half of the containment dichotomy) and confines Prop A.1S there to what is available under a local sector condition: the killed moment, the finite-horizon path bound (iv), and the exit-time comparison of Prop A.1S-τ. Provides a reusable no-go signature — *unbounded scale function ⇒ no non-constant bounded harmonic function ⇒ no horizon-independent non-exit certificate* — that future stochastic-containment proposals in the corpus can be settled against without re-attempting the maximal-inequality route.
+
+**Novelty Claim:** *Recognition*. The component facts (non-degenerate-diffusion exit from a bounded region; unbounded scale function of additive-noise generators; Ville/Doob preconditions) are classical (Khasminskii 2012 ch. 3–4). The contribution is the recognition, made explicit and citable, that the maximal-inequality route which succeeds for the fixed-time second moment structurally cannot deliver the infinite-horizon statement — i.e. *where exactly* the natural attempt breaks. No novelty is claimed on the SDE mathematics.
+
+**Related Work:**
+
+| ASF concern | Prior-art language | Relationship / Positioning |
+
+|---|---|---|
+
+| No horizon-independent non-exit certificate for additive-noise diffusions | Khasminskii 2012, *Stochastic Stability of Differential Equations* (2nd ed.) ch. 3–4 (scale function; recurrence; bounded harmonic functions) | *formal antecedent* — supplies the recurrence / unbounded-scale-function fact; this derivation recognizes it as the structural reason the Ville/Doob route fails |
+
+| Maximal-inequality preconditions | Ville's inequality; Doob's maximal inequality (nonnegative sub/supermartingale required) | *standard machinery* — the demonstration is that the only compensated candidate is sign-indefinite exactly inside the persistence basin |
+
+**Search Log:**
+
+- 2026-05-16 (*targeted, derivation-driven*): internal question — can Prop A.1S's infinite-horizon non-exit claim be certified by Ville/Doob on an Itô–Lyapunov supermartingale? Worked in full; the candidate compensated supermartingale is sign-indefinite, and the classical unbounded-scale-function fact (Khasminskii ch. 3–4) closes it. No prior-art search beyond standard SDE references — no novelty claimed on the mathematics. Reasoning trail recorded in the spike-routing cycle (CHANGELOG 2026-05-17).
