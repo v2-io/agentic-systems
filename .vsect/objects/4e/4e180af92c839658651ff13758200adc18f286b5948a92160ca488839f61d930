@@ -1,0 +1,91 @@
+kind: segment
+form: 
+normalizer: vsect-norm/0
+---
+# Normative: Explicit Strategy Condition
+
+The framework's design criterion for *when explicit strategy is worth maintaining at all*. An agent benefits from carrying an explicit strategy $\Sigma_t$ ( #def-strategy-dimension) when *the cost of planning is less than the cost of learning through exploration alone*. The inequality compares the cost of constructing and evaluating the strategy plus ongoing maintenance cost (as $M_t$ evolves and edges need revision) against the cost of learning action-outcome mappings through direct interaction plus the cost of correcting errors discovered only through execution. All costs are measured in the same units, typically time or tempo-equivalent cost.
+
+The result is honestly *normative*, not derived. It is labeled as a design criterion rather than a theorem because loop-based and model-based approaches may differ along axes the cost inequality does not capture: final value (the model introduces bias; exploration may discover things planning cannot), risk profile (exploration risks real damage; planning risks wrong models), reversibility (some exploratory actions are irreversible), and model bias (explicit $\Sigma_t$ inherits the biases of $M_t$; loop-based learning does not). The inequality is correct *when* the outcomes are approximately equivalent — a condition that must be verified case by case, not assumed.
+
+The intuitive cases are stated cleanly. The right side (explore + repair) is large — strongly favoring planning — when actions are expensive or irreversible (production deployments, military operations, surgical procedures); when exploration damage is severe (a wrong move loses the game; a wrong deployment takes down the service); when the environment is slow to respond (waiting for market or test feedback); when the action space is enormous (combinatorial planning). The left side (plan + maintain) is large — favoring pure exploration — when the environment is too complex or novel for useful models, when $M_t$ is severely inadequate, when the environment changes faster than $\Sigma_t$ can be maintained, or when actions are cheap and reversible (A/B testing, sandbox exploration).
+
+The *normative grounding* is anchored in the persistence condition ( #result-persistence-condition), not in an external preference postulate. The persistence condition demonstrates that agents whose correction tempo is insufficient *degrade* — descriptive, not value-laden. The cost inequality operationalizes the consequence: approaches consuming less tempo budget leave more margin above the persistence threshold. The normative element is the preference for *maintaining persistence margin*, which is hard to argue against since the alternative is degradation. The Discussion below treats the strongly-favors-planning and strongly-favors-exploration cases in detail, the persistence-margin grounding, and the connection to the three-way exploit/explore/deliberate refinement in #disc-exploit-explore-deliberate; Working Notes flag the most useful practical reading — not as a binary decision rule but as a way to *calibrate strategy complexity* so the planning-and-maintenance cost stays just below the exploration-and-repair cost for the current environment.
+
+## Formal Expression
+
+*[Normative (explicit-strategy-condition)]*
+
+An agent benefits from explicit $\Sigma_t$ when:
+
+$$C_{\text{plan}} + C_{\text{maintain}} \lt C_{\text{explore}} + C_{\text{repair}}$$
+
+where:
+
+- $C_{\text{plan}}$: cost of constructing and evaluating the strategy (deliberation, simulation, model queries)
+
+- $C_{\text{maintain}}$: ongoing cost of keeping $\Sigma_t$ current as $M_t$ evolves (edge revision, structural updates)
+
+- $C_{\text{explore}}$: cost of learning action-outcome mappings through direct interaction (real actions, real time, real consequences)
+
+- $C_{\text{repair}}$: cost of correcting errors discovered only through execution (rollbacks, rework, damage)
+
+All costs are measured in the same units (typically time or tempo-equivalent cost). The inequality requires that the two approaches produce approximately equivalent non-temporal outcomes — otherwise the comparison is between different strategies, not different approaches to the same goal.
+
+## Epistemic Status
+
+*Normative, not derived.* This is labeled *normative* because it is a design criterion (a preference for the less costly approach given equivalent outcomes), not a theorem. In practice, loop-based and model-based approaches may differ in:
+
+- **Final value**: the model introduces bias; exploration may discover things planning cannot
+
+- **Risk profile**: exploration risks real damage; planning risks wrong models
+
+- **Reversibility**: some exploratory actions are irreversible
+
+- **Model bias**: explicit $\Sigma_t$ inherits the biases of $M_t$; loop-based learning does not
+
+The inequality is correct *when* the outcomes are approximately equivalent — a condition that must be verified case by case, not assumed. When the precondition fails (model-based and loop-based approaches produce qualitatively different outcomes), the cost inequality is insufficient and the choice requires richer analysis (e.g., expected regret including model error).
+
+## Claim Record
+
+### Maintain an explicit strategy when planning plus maintenance costs less than exploration plus repair
+
+**Register:** normative — a design criterion, as the body says (tag `explicit-strategy-condition`), grounded in persistence margin rather than in a preference postulate.
+
+**Population:** learning-agent-scope agents choosing between model-based planning and loop learning *when the two produce approximately equivalent outcomes*, measured in one unit. The body says this precondition usually fails, so the population is narrow; where it fails the criterion does not apply.
+
+**True of:** no measured instance. Surgery and production deployment on one side, A/B testing and sandbox exploration on the other, are illustrations of where the inequality's terms are large, not tests of the rule.
+
+**False of:** choices whose outcomes differ in value, risk or reversibility are outside the population (Epistemic Status). The contrast "loop-based learning does not inherit model bias" overstates: direct exploration is biased by policy selection, partial observability and the model used to read observations (Working Notes).
+
+**Falsifier:** in a domain where the precondition holds, agents following the inequality do worse than agents arbitrating by the uncertainty of their model-based and model-free estimates (Daw, Niv & Dayan 2005[^recall-2026-10-30]), which is the arbitration the human literature reports.
+
+**Instantiated:** no.
+
+## Discussion
+
+**When the inequality strongly favors planning.** The right side ($C_{\text{explore}} + C_{\text{repair}}$) is large when:
+
+- Actions are expensive or irreversible (production deployments, military operations, surgical procedures)
+
+- Exploration damage is severe (a wrong move in chess loses the game; a wrong deployment takes down the service)
+
+- The environment is slow to respond (waiting for market feedback, waiting for test results)
+
+- The action space is enormous (combinatorial planning problems)
+
+In these domains, explicit $\Sigma_t$ is strongly motivated even if the planning model is imperfect.
+
+**When the inequality favors pure exploration.** The left side ($C_{\text{plan}} + C_{\text{maintain}}$) is large when:
+
+- The environment is too complex or novel for useful models (genuinely unknown territory)
+
+- $M_t$ is severely inadequate (model predictions are worse than random)
+
+- The environment changes faster than $\Sigma_t$ can be maintained ($\rho_\Sigma$ exceeds planning capacity)
+
+- Actions are cheap and reversible (A/B testing, sandbox exploration)
+
+**Normative grounding.** The cost inequality is grounded in the persistence condition ( #result-persistence-condition), not in an external preference postulate. The persistence condition demonstrates that agents whose correction tempo is insufficient *degrade* — this is a descriptive result, not a value judgment. The cost inequality operationalizes the consequence: approaches that consume less tempo budget leave more margin above the persistence threshold. The normative element is the preference for maintaining persistence margin — which is hard to argue against, since the alternative is degradation. (In TST, the temporal optimality postulate provides an additional normative grounding specific to software development.)
+
+**Connection to the three-way tradeoff.** For actuated agents, the binary explore/exploit tradeoff extends to three modes: exploit (pursue $O_t$ via $\Sigma_t$), explore (improve $M_t$), and deliberate (revise $\Sigma_t$). The cost inequality addresses the coarsest question (is explicit $\Sigma_t$ worth having?). The finer allocation between the three modes is addressed in #disc-exploit-explore-deliberate — the extended deliberation threshold is derived, but the broader three-way framing is discussion-grade. The deepest insight: deliberation is internal exploration (simulation, counterfactual reasoning, cross-domain synthesis), making it a fundamentally different resource type from external action.

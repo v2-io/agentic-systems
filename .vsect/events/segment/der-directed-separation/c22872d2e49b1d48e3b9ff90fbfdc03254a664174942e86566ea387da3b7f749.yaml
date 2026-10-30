@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: c22872d2e49b1d48e3b9ff90fbfdc03254a664174942e86566ea387da3b7f749
+at: 2026-10-30T20:43:54Z
+store: asf
+act: revise
+about: segment:der-directed-separation
+atom: 15782d0668d59f10f80eae9cfb98c58ce084e66f1ce73a934370eb6855082f1b
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+change: reworded
+declarations:
+  depends:
+  - form-complete-agent-state
+  - der-recursive-update
+  - scope-agency
+  stage: draft
+  status: conditional
+  type: derived
+from-version: b11e5e49fc8c312a18cc29808b5cee67ccd7b8a092d1493c9106c33a7f5dfcbe
+own-version: 0d9c47858e17c9e43efdc9638604dd5db9dabc73f9c4811c30b75026e27e4f5e
+record: 01-aat-core/src/der-directed-separation.md

@@ -62,7 +62,7 @@ Pre-compiled agents are within agency scope (they have objectives and act on the
 
 **Register:** descriptive — the body's reading of Hafez et al. (2026): the Information Digital Twin on the $(S, A, S')$ stream detects environmental perturbations at 89% against 44% for reward-based monitoring, taken as consistent with the loop supplying richer than outcome data.
 
-**Population:** simulated agents of the kind the cited study ran; the body extends the reading to agency-scope agents in general.
+**Population:** the agents the cited study ran, as the body reports them; the study's setup has not been read in this project, so the population is not named here by property. The body extends the reading to agency-scope agents in general.
 
 **True of:** the cited study's agents, on its report (the figure and the arXiv identifier were flagged by an auditor for verification before external use; Working Notes).
 
@@ -70,7 +70,7 @@ Pre-compiled agents are within agency scope (they have objectives and act on the
 
 **Falsifier:** a monitor on the $(S, A, S')$ stream performing no better than reward monitoring in the same setting. The step from "coupling monitoring detects perturbations" to "the loop supplies identified Level-2 effects" is the body's inference, not the study's claim, and no result of this segment rests on it.
 
-**Instantiated:** by an external study on simulated agents, not by this project.
+**Instantiated:** by an external study as reported, not by this project; the figures and their source await the verification the Working Notes flag.
 
 ## Discussion
 

@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 18aa084945798f5ab81b84e4e661940bfd79f8efb63bdfe835bd048ba8478c3c
+at: 2026-10-30T20:43:54Z
+store: asf
+act: revise
+about: segment:norm-explicit-strategy-condition
+atom: cc5b6346d6a10e4efe1da76d68eb43219f8b3fdea22ba31cfd0290cd71892c64
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+change: unclassified
+declarations:
+  depends:
+  - def-strategy-dimension
+  - der-causal-hierarchy-requirement
+  stage: draft
+  status: conditional
+  type: normative
+from-version: bbaaa24a26e7c225853038b024f2f83d133d1b867279e1b5f02429818c11c9d1
+own-version: 4e180af92c839658651ff13758200adc18f286b5948a92160ca488839f61d930
+record: 01-aat-core/src/norm-explicit-strategy-condition.md

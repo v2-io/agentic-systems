@@ -1,0 +1,32 @@
+schema: vsect-event/0
+id: 901cb5d7af927643df5abcc134bea6f8730c5e2f81a197169fe00c12f27ec681
+at: 2026-10-30T20:43:51Z
+store: asf
+act: revise
+about: segment:der-orient-cascade
+atom: 20648a14a80bf30123909f087e1b6466dcf682639d8a32f3ccf0343c61a4ce64
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+change: unclassified
+declarations:
+  depends:
+  - der-directed-separation
+  - def-mismatch-signal
+  - emp-update-gain
+  - def-satisfaction-gap
+  - def-control-regret
+  - def-strategic-calibration
+  - def-strategy-dag
+  - schema-strategy-persistence
+  - deriv-edge-credence-dynamics
+  - disc-credit-assignment-boundary
+  - der-causal-insufficiency-detection
+  - def-value-object
+  stage: claims-verified
+  status: conditional
+  type: derived
+from-version: e0219452432ee7916b22f7222b6e4005679c4479268eaa60310abaad961102a4
+own-version: 1d26ebfba7716d4bb58d21f1b22c9cce23ffc067850996eb89a065a83768774c
+record: 01-aat-core/src/der-orient-cascade.md

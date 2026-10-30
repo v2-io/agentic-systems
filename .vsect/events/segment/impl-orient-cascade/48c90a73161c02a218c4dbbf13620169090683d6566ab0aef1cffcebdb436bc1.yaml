@@ -1,0 +1,30 @@
+schema: vsect-event/0
+id: 48c90a73161c02a218c4dbbf13620169090683d6566ab0aef1cffcebdb436bc1
+at: 2026-10-30T20:43:54Z
+store: asf
+act: revise
+about: segment:impl-orient-cascade
+atom: ad7c4ed927528b5944cabfe9c28ee0d5017171f633bdcf90e719cb8fc3fd3ec2
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+change: unclassified
+declarations:
+  depends:
+  - der-orient-cascade
+  - disc-exploit-explore-deliberate
+  - der-directed-separation
+  - deriv-observation-ambiguity-bias-bound
+  - deriv-causal-ib-exploration
+  - deriv-causal-ib-lmi
+  - der-deliberation-cost
+  - deriv-persistence-cost
+  - result-coupled-diagnostic-framework
+  - result-section-ii-survival
+  stage: draft
+  status: discussion-grade
+  type: discussion
+from-version: 7f45c59fe97b30fd1c6bf875f8c5d818b046e6769eac7f6d109c514473381186
+own-version: f4f983fe79b378b71f7f851eda46aede89a26bc6334eb0553422659c3d144453
+record: 01-aat-core/src/impl-orient-cascade.md

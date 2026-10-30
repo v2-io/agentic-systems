@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: fbe509e43f6520bff1f8b4ccb57931dd072d1992d636e1da757f82f8945a5616
+at: 2026-10-30T20:43:54Z
+store: asf
+act: revise
+about: segment:scope-scaffolded-logogenic
+atom: 1dd259ac2da5668d799f4e52230d10160fcca82e7c9ac5a39b9fe1020d57dd9e
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+change: unclassified
+declarations:
+  depends:
+  - scope-primitive-logogenic
+  - result-coupled-diagnostic-framework
+  - der-orient-cascade
+  - der-loop-interventional-access
+  stage: draft
+  status: sketch
+  type: scope
+from-version: 44a547695defdeb649afcf0eb314208a5e5e79e1c2b1370be200e5b1b8fae601
+own-version: 8be25897d2b8a0c1fe06c5dec158a4b9301e4bea640841db31f53a24d6f21d8f
+record: 03-llm-core/src/scope-scaffolded-logogenic.md
