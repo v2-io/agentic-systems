@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 36053ecfbdfa3ef74639dab53e346f1a01facc4fd92931c94e1470adf33abfa8
+at: 2026-10-30T21:30:48Z
+store: asf
+act: recheck
+about: item:todo-floor-routing-diagnostic-segment-final-f-a963
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: TODO.md:500 (2026-07-03, 528e6e57). No segment composes the routing; impl-persistence-and-limits:100 still records it as a forward pointer ('Every branch has an observable in walked machinery; no segment composes them'). The pieces it would assemble are in canon post-B-2, so this is assembly of derived material.
+outcome: holds
+owner: G.2

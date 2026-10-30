@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 05d425b9b2156f4eb145a947558eb51c55e1d3a9164df6297e9505a82f5653ff
+at: 2026-10-30T21:30:48Z
+store: asf
+act: recheck
+about: item:todo-next-de-novo-cycle-target-aat-part-ii-or-42d0
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'TODO.md:504 (2026-07-03, 528e6e57). A planning note for the next audit, overtaken by this effort: the owner review''s explorers read Parts II and III (owner-review/explorers/part-ii.md, part-iii-and-vols-2-4.md), B.1 wrote and is independently checking claim records for all of Part II, and the worked examples it names were reworked today: example-kalman''s Lyapunov section rewritten with exact Riccati numbers (481943e4, C.1) and example-strategy''s propagation claim replaced (ff80eb4f, C.1).'
+outcome: superseded

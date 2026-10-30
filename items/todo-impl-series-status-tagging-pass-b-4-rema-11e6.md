@@ -3,9 +3,10 @@ kind: item
 provenance: imported
 source: TODO.md:496
 section: 'TODO — Miscellaneous & details › 2026-07-03 — Audit 731548 (Fable de-novo, Part I + impl-*) routing: remaining routed items'
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:30:48Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: A.3
 ---
 
 # impl-series status-tagging pass (B-4 remainder) — 3 of 9 AAT segments remain (`impl-cooperative-adversarial`, `impl-orient-cascade`, `impl-unity-communication`

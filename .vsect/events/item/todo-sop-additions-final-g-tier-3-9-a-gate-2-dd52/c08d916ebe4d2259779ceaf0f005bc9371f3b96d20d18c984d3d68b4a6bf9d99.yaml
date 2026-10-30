@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: c08d916ebe4d2259779ceaf0f005bc9371f3b96d20d18c984d3d68b4a6bf9d99
+at: 2026-10-30T21:30:48Z
+store: asf
+act: recheck
+about: item:todo-sop-additions-final-g-tier-3-9-a-gate-2-dd52
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'TODO.md:502 (2026-07-03, 528e6e57). (a) is absent from format.sop.md''s Gate 2 (no ''instantiate''/''membership'' rule), but the practice now lives in B.1''s record template, which requires an instance where the claim is true and one where it is false; a Gate-2 line pointing to that would close it. (b) is absent from audit.sop/de-novo.sop.md: auditors are told to treat Working Notes as data (:285) but nothing defers the ''### Incidental audit gold'' blocks to a second, adversarial pass. (b) interacts with I.5 (gold lifting into Working Notes stops), and this sweep found three Working Notes that misreport status, which strengthens (b)''s case.'
+outcome: holds
+owner: I.5
+restated: (a) Gate 2 should require the true/false instance pair B.1's records already require; (b) the de-novo SOP should have auditors defer Working-Note gold blocks to a second, adversarial pass, until I.5 drains them.

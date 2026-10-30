@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 789c7908c2f53f50a371fbebb3ff5f669db4005305d2e526daeb93cb327e95fc
+at: 2026-10-30T21:30:48Z
+store: asf
+act: recheck
+about: item:todo-targeted-legacy-quantifier-gloss-status-e6a9
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'TODO.md:499 (2026-07-03, 528e6e57). Never executed: CHANGELOG:279 lists it ''routed, not yet executed'', and nothing later records a sweep. Its premise keeps being confirmed: this re-check found more of the species in older prose, e.g. obs-context-turnover:52''s sufficiency ''bounded below'' (false as stated), der-tempo-composition:100''s ''persists iff'', and norm-explicit-strategy-condition:44''s ''loop-based learning does not [inherit bias]''.'
+outcome: holds
+owner: C.1

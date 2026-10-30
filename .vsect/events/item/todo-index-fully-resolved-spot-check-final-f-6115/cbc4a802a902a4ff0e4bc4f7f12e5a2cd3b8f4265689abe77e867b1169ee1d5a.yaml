@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: cbc4a802a902a4ff0e4bc4f7f12e5a2cd3b8f4265689abe77e867b1169ee1d5a
+at: 2026-10-30T21:30:48Z
+store: asf
+act: recheck
+about: item:todo-index-fully-resolved-spot-check-final-f-6115
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'TODO.md:503 (2026-07-03, 528e6e57). Not done. Only one spikes/INDEX.md row still says ''FULLY RESOLVED'' (:392, the Instance-4 triage, 2026-05-21), but the failure it guards against has a wider home: Working Notes carrying typed ''RESOLVED'' or ''remaining'' glosses that nothing re-checks. The pilot found one false ''RESOLVED'' (deriv-persistence-cost); this sweep found a stale ''remaining tail'' (der-directed-separation:261) and a false ''routed to the findings track'' (hyp-directed-separation-under-composition). Recorded as findings in reviews/items-recheck-t2.md.'
+outcome: holds
+owner: I.5
+restated: Typed resolved/routed/remaining glosses (INDEX rows, Working Notes) are re-checked against the body and git, and stop being read as standing; one INDEX row and three Working Notes are known instances.

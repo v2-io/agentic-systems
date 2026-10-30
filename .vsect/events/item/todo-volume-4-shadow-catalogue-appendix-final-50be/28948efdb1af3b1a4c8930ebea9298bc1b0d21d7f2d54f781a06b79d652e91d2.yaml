@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 28948efdb1af3b1a4c8930ebea9298bc1b0d21d7f2d54f781a06b79d652e91d2
+at: 2026-10-30T21:30:48Z
+store: asf
+act: recheck
+about: item:todo-volume-4-shadow-catalogue-appendix-final-50be
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'TODO.md:501 (2026-07-03, 528e6e57). No such appendix in either OUTLINE or any src/. One correction to carry into it: a Volume-4 reading does not ''inherit Part-I''s epistemic tier'' or arrive ''pre-armored with Part-I rigor'' merely by pairing; it inherits the tier only where the Volume-4 instance is shown to meet the theorem''s hypotheses (e.g. exit certainty needs Model S''s non-degenerate additive noise). Otherwise each pair is an analogy. G.0 decides where such argued readings live.'
+outcome: holds
+owner: G.0
+restated: A catalogue pairing ten Part-I theorems with Volume-4 readings, where each pair states whether the Volume-4 instance meets the theorem's hypotheses (then it inherits the tier) or is an analogy (then it is marked as one).
