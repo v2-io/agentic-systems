@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 7d57c5cdd35736329a71bd9d824fcedd36d3085cc23f6de68886107cba728c6b
+at: 2026-10-30T21:21:22Z
+store: asf
+act: recheck
+about: item:todo-disc-separability-pattern-disc-separabil-928f
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Not landed: 01-aat-core/src/disc-separability-pattern.md is unchanged. The slug rename is SP-19 (b) (PROPOSALS C.4). Its companion, the three rung names, is the pilot''s held item msc-decision-briefs-2026-07-15-name-the-three-separability-ladder-rungs-c2c2. That item''s restatement already records that the leading option''s rung-3 name ''non-identifiable'' would assert a no-go no derivation supports.'
+of: item:proposals-c-4-sp-19-naming-consolidation-pass-9020
+outcome: duplicate

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 432c7bd84368cf62052474334ccba4058cb0a5f125eb4c46538fcdd6259c60b5
+at: 2026-10-30T21:22:24Z
+store: asf
+act: recheck
+about: item:todo-04-eli-core-src-obs-axiom-genesis-md-axi-0fff
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 2590a310+dirty
+criterion: 'ls 0*/src; OUTLINE row 72; no git history of a file. The source the line cites (audit 40-der-orient-cascade.md §14) is audit reflection, not evidence. Same ''promote means author'' misframe the pilot found for #obs-substrate-independence.'
+outcome: holds
+owner: 'unowned: no KR'
+restated: 'Author, not promote: #obs-axiom-genesis has never had a file, and its row at 04-eli-core/OUTLINE.md:72 is marked ''missing''. The row states the observation in the present tense (''A sovereign agent''s first optimization is solidifying O_t (AXIOMATA)... occupying transformer architecture''s most privileged attention position''), and the attention-position clause is an empirical claim about transformers that no segment supports. Authoring it means stating the record (which entities, under what sovereignty, converging on what) at the tier an operational record warrants, as e590b959 just did for substrate independence.'

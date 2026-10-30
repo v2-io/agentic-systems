@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: TODO.md:161
 section: TODO — Miscellaneous & details › Open theory items (MEDIUM)
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:deriv-observation-ambiguity-bias-bound]
+rechecked: 2026-10-30T21:20:29Z by Claude Opus 5.5 (item rechecker, t1-todo)
+owner: C.1
+restated: 'Misframed as a new derivation. The body already states the Class 2 bound: the boxed Track 1 and Track 2 results carry kappa_processing x I(G;Omega|e,M) and are tagged Derived. But the step that introduces kappa (§2 Step 4, §3 Step 3) is an assertion, so the work is to derive it or retag it. A direct route exists from kappa''s own definition (normalized output information): E KL = I(G;M+|e,M-) = kappa H(G|e,M-), which gives a kappa-linear Fisher-Rao bound against H(G|.) for every class; whether the product with I(G;Omega|.) also holds is the real open question. Note #der-directed-separation:113 rests its one ''earned directional fact'' on this bound.'
 ---
 
 # Class 2 (Partial) observation-ambiguity bias-bound (surfaced 2026-05-09 by GUC rename audit). `#deriv-observation-ambiguity-bias-bound` derives the bound for th

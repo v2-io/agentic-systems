@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: d7a19ed9fc43b244506d0a639ec176597ab9458d9ce21109df0cb6524d4e21a4
+at: 2026-10-30T21:21:33Z
+store: asf
+act: recheck
+about: item:todo-prior-art-pointer-to-investigate-deutsch-3a4a
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: grep for 'Deutsch' across 0*/src, ref/prior-art-analysis, HISTORICAL-CONTEXT.md and doc/ finds nothing at HEAD, so the pointer was never investigated. Owner F.2 as the nearest KR (external research reaching the bodies); this is a pointer not yet read, so it sits at the edge of F.2's 'already found'.
+outcome: holds
+owner: F.2
+restated: 'Read Deutsch (The Beginning of Infinity, 2011, ch. 1-2; The Fabric of Reality, 1997) for the ''good explanations are hard to vary'' criterion. Then judge, at search-log grade, whether it is an antecedent of #disc-additive-coordinate-forcing (coordinates forced by invariance, so not freely variable) or of #disc-identifiability-floor, and cite it where it bears or record that it does not. A sympathetic outside reader (Alan Walton) supplied the pointer and nobody has followed it.'

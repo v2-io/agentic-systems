@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 28402225eedf179b4a563b900a1d5276493b590dcdfa8a8c5b03fb465a8e6a5d
+at: 2026-10-30T21:21:22Z
+store: asf
+act: recheck
+about: item:todo-disc-additive-coordinate-forcing-disc-fo-c1fd
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Not landed: 01-aat-core/src/disc-additive-coordinate-forcing.md is still the file, and no terminology entry exists for a new name. Same work as PROPOSALS C.4 SP-19 (a), but the two trackers propose different targets. SP-19 says #cauchy-coordinates; this line says #disc-forced-coordinates, because the segment''s fourth instance (Cencov) is not a Cauchy functional equation. This line''s reason argues against SP-19''s own target, so whoever holds SP-19 should carry it.'
+of: item:proposals-c-4-sp-19-naming-consolidation-pass-9020
+outcome: duplicate

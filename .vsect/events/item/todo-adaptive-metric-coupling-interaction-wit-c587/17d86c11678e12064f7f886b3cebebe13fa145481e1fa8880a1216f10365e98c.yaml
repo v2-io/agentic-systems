@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 17d86c11678e12064f7f886b3cebebe13fa145481e1fa8880a1216f10365e98c
+at: 2026-10-30T21:21:01Z
+store: asf
+act: recheck
+about: item:todo-adaptive-metric-coupling-interaction-wit-c587
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'An idea fragment: ''adaptive-metric-coupling interaction with (MG-4) (from B1 §6.4)''. spikes/.integrated/spike-jacobian-b1-strengthening.md §6.4 is the verdict on the (SOC) state-dependent-metric axiom for contraction; it says nothing about (MG-4). #deriv-adaptive-gain-dynamics never mentions a metric, and #result-contraction-template:154 already names state-dependent-metric stochastic coupling as an open edge. No claim is at stake and nobody owes it; it is an idea-repository entry, not work.'
+outcome: not-an-item

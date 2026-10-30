@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: b2ea5b41722612dd7562339c4858d4d42a6b451031c8ee7d9c2ed50e52475100
+at: 2026-10-30T21:22:24Z
+store: asf
+act: recheck
+about: item:todo-04-eli-core-src-form-constitutive-uttera-10c9
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 2590a310+dirty
+criterion: ls 0*/src; OUTLINE row 79. The source concept doc ref/agentic-tft/agentic-tft-creche-concept.md exists; canon has nothing.
+outcome: holds
+owner: 'unowned: no KR'
+restated: 'Author, not promote: #form-constitutive-utterance has no file; its row at 04-eli-core/OUTLINE.md:79 is marked ''missing''. The framing to settle while authoring is whether emitting a token is an intervention do(a) on the environment or on the agent''s own future context. The row says both (''environmental intervention that alters the agent''s future state-space''). Those are different causal objects, and only the second is specific to language-constituted agents.'

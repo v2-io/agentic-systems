@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 815ee9c790e2ba0775ea5a22d8b22bc96c007ae628901bbf0991d9d0b8903b16
+at: 2026-10-30T21:20:29Z
+store: asf
+act: recheck
+about: item:todo-j-2-findings-schema-length-some-impact-p-8bca
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: J-2 named two Impact paragraphs as long. At HEAD they run 1053 characters (#deriv-observation-ambiguity-bias-bound) and 1137 (#result-contraction-template), against a corpus of 50 Impact paragraphs with median 961, 90th percentile 1252 and maximum 2055. Neither is an outlier now. format.sop.md (lines 373, 397) settled the Impact field without a cap. What is left is a style preference with no claim at stake and nobody owing it; if Impact length matters, it is H.3's comprehension measurement that would show it.
+outcome: stale
