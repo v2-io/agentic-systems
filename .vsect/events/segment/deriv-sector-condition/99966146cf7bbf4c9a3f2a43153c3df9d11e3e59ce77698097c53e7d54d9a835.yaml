@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 99966146cf7bbf4c9a3f2a43153c3df9d11e3e59ce77698097c53e7d54d9a835
+at: 2026-10-30T23:00:16Z
+store: asf
+act: correct
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: verifier
+normalizer: vsect-norm/0
+corrects: 59d78734fb999fae96eb8995a05d9656fcc96debfd4f108ab9342c40094ea7f9
+text: 'Confirmed covers the derivation of the elementary bound, done by hand. Its ratio numerics (0.57 to 0.99) were not re-run; for those the integrator''s recheck.py section 3 is the only run. Related: C6 answers the Ikeda-Watanabe part of review:part-i-round-2-integration#F2; that finding stays open because Kersting, Grebenkov and Day remain unread at the primary.'

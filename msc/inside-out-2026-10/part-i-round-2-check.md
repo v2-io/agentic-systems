@@ -142,7 +142,7 @@ Tier for the integrator to decide: leading term derived (exact under the two-reg
 
 ## Dispositions in vsect
 
-Confirmed answered by the current text (each re-read against the finding): `review:c1-exit-time-verify-1#C1/finding`; `review:part-i-mismatch-lineage-check-1` F1, F2, F4–F14, C2/finding, C5/finding. Left open: C11/finding and F3 (P3 above). The lapsed checks of the integration and lineage records are not re-bound. My own checks bind to the current versions instead. Answered: `question:the-front-door-sentences-say-gain-buys-time-only` (D1).
+Confirmed answered by the current text (each re-read against the finding): `review:c1-exit-time-verify-1#C1/finding`; `review:part-i-mismatch-lineage-check-1` F1, F2, F4–F14, C2/finding, C5/finding. Left open: C11/finding and F3 (P3 above). Also left open: `review:part-i-round-2-integration#F2` (unread primaries). C6 answers its Ikeda–Watanabe part, but Kersting, Grebenkov and Day are still unread at the primary, and a finding cannot be closed in part. The lapsed checks of the integration and lineage records are not re-bound. My own checks bind to the current versions instead. Answered: `question:the-front-door-sentences-say-gain-buys-time-only` (D1).
 
 ## What I did not check
 
