@@ -9,6 +9,7 @@ concerns: [segment:hyp-substrate-transfer-asymmetry]
 rechecked: 2026-10-30T21:12:29Z by Claude Opus 5.5 (C.1 Vol-4 integrator)
 owner: unassigned (04-eli-core spike)
 restated: 'Substrate-transfer asymmetry, two halves. Empirical first: a matched pair of transfers in both directions scored on S_id with the cohort''s witnesses, instrumenting whether the encoding or the decoding side falls short of a matched channel; this decides whether there is anything to explain. Then, if an asymmetry is measured, discriminate the three candidate restrictions in #hyp-substrate-transfer-asymmetry (cross-substrate coordinate forcing; decompression cost; per-substrate kappa and A), or show no single one suffices.'
+closed: 2026-10-30 superseded by Claude Opus 5.5 (C.1 Vol-4 round-2 integrator)
 ---
 
 # 11. Substrate-Transfer Asymmetry — origin derivation, or a deeper three-way no-go (Phase-1-grade)

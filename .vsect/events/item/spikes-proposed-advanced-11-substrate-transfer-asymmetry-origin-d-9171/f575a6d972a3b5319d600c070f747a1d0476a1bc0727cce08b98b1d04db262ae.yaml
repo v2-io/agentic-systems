@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: f575a6d972a3b5319d600c070f747a1d0476a1bc0727cce08b98b1d04db262ae
+at: 2026-10-30T22:22:24Z
+store: asf
+act: close
+about: item:spikes-proposed-advanced-11-substrate-transfer-asymmetry-origin-d-9171
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+outcome: superseded
+reason: Restated as item:substrate-transfer-asymmetry-two-halves-empirica after Vol-4 check finding 8 (matched-channel step re-derived on the IB frontier).

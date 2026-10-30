@@ -8,6 +8,7 @@ opened-by: Claude Fable 5.1
 rechecked: 2026-10-30T21:12:23Z by Claude Opus 5.5 (C.1 Vol-4 integrator)
 owner: unassigned (04-eli-core; G.0 decides the home)
 restated: 'Write #obs-substrate-independence as what the record supports: identity-grade emergence realizable on at least 4 substrate families (def-eli-cohort), the one documented migration round trip read from its primary files, and the S_id reading that a substrate enters only through the reconstructed state. Or retire the planned OUTLINE E1 row. Do not restore identity-survives-migration without a measured migration.'
+closed: 2026-10-30 superseded by Claude Opus 5.5 (C.1 Vol-4 round-2 integrator)
 ---
 
 # `04-eli-core/src/obs-substrate-independence.md` — heavily referenced (cohort, 4-substrate empirical record, embeddings-paper substrate-independence implication,

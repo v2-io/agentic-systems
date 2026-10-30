@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 9947670302c398e4a9ba032008fed26f32a1bf5a0151b5a3134ed5a93be360c6
+at: 2026-10-30T22:22:20Z
+store: asf
+act: close
+about: item:todo-04-eli-core-src-obs-substrate-independen-f8a8
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+outcome: superseded
+reason: Restated as item:write-obs-substrate-independence-as-what-the-rec after Vol-4 check finding 7 (the one-migration count was false).
