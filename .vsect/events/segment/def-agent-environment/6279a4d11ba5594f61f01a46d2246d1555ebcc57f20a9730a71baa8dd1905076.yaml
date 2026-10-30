@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: 6279a4d11ba5594f61f01a46d2246d1555ebcc57f20a9730a71baa8dd1905076
+at: 2026-10-30T22:00:26Z
+store: asf
+act: place-finding
+about: segment:def-agent-environment
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+basis:
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+finding: review:items-recheck-t1#F8
+target: segment:def-agent-environment
+text: 'The Working-Note figure candidate "Lossy-aperture two-panel" (line 78) says "AAT''s scope is exactly the region where the aperture is not fully open" and specifies the figure to draw from it (in-scope: aperture partly closed; out-of-scope: f'
+version-from: current

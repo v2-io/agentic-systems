@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 1343597ac448cc5046ab8acd4b3afe29900d9c473a423c89059672ba3592ed8f
+at: 2026-10-30T22:00:26Z
+store: asf
+act: take
+about: review:items-recheck-t1
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+items:
+- F1:finding
+- C1:check
+- F2:finding
+- F3:finding
+- F4:finding
+- F5:finding
+- C2:check
+- F6:finding
+- F7:finding
+- F8:finding
+review: reviews/items-recheck-t1.md
+review-version: 2dedb0b0e4f09956331ded783521db03bc68ccfc45e9f51af4a0eb813199a7dc
