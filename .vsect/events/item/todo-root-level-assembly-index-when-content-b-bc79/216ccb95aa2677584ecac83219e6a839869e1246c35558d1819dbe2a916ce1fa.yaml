@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 216ccb95aa2677584ecac83219e6a839869e1246c35558d1819dbe2a916ce1fa
+at: 2026-10-30T21:12:05Z
+store: asf
+act: recheck
+about: item:todo-root-level-assembly-index-when-content-b-bc79
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 2ec6ec58+dirty
+criterion: Written 2026-03-16 09:06 (afc0f355) as 'a root OUTLINE.md or INDEX.md that assembles the full Agentic Systems book'. Root OUTLINE.md was created 61 minutes later (291ce70f, 2026-03-16 10:07) and at HEAD opens 'This is the top-level assembly index', linking all four volume outlines. Never struck; carried through the 04-28 reformat (f88c3dc7).
+outcome: landed
