@@ -3,7 +3,7 @@
 ## *Appendices* Details
 
 *Layer 0 — the framework's most distinctive intellectual move, in one paragraph.*
-**AAT consistently uses negative results constructively.** When the framework encounters a structural impossibility — a quantity that cannot be identified from limited data, a guarantee that cannot be made to hold under stochastic noise, a design space half of which is unreachable under a given update mechanism — it states the impossibility precisely with the external theorem that enforces it, names the unique broadly-available capability that would be required to escape it, and then *uses* the impossibility to elevate that capability from "useful additional tool" to "structurally required by the theory." The negative result and the positive consequence are the same proof. Five cleanly-fitting instances span the framework: detecting an unobserved common cause from on-policy data is impossible without loop-interventional access (Pearl–Bareinboim Causal Hierarchy Theorem); identifying a mixture model from single-channel observations is impossible without observing the latent (Cramér–Rao); certifying composite contraction from component data alone is impossible without matched-tier shared metrics (Liberzon common-Lyapunov nonexistence); pathwise containment of a bounded region under additive stochastic forcing is impossible *at any correction strength* — the no-go *is* the result (Khasminskii recurrence; Corollary A.1S.1 in `#deriv-sector-condition`); under Beta-Bernoulli edge dynamics with exponential forgetting, half the strategic design space is structurally unreachable regardless of forgetting rate (Proposition C.2 in `#deriv-strategic-persistence-hard-ceiling`). A reader who carries this style away can predict where the framework will use a no-go as load-bearing apparatus next, rather than meeting each as a scattered impossibility. The cross-instance discipline lives at `#disc-constructive-impossibility-posture`; the per-instance derivations live in the segments named above.
+**AAT consistently uses negative results constructively.** When the framework encounters a structural impossibility — a quantity that cannot be identified from limited data, a guarantee that cannot be made to hold under stochastic noise, a set of alternatives that one stream of evidence cannot keep calibrated, whatever the update rule — it states the impossibility precisely with the external theorem that enforces it, names the unique broadly-available capability that would be required to escape it, and then *uses* the impossibility to elevate that capability from "useful additional tool" to "structurally required by the theory." The negative result and the positive consequence are the same proof. Five cleanly-fitting instances span the framework: detecting an unobserved common cause from on-policy data is impossible without loop-interventional access (Pearl–Bareinboim Causal Hierarchy Theorem); identifying a mixture model from single-channel observations is impossible without observing the latent (Cramér–Rao); certifying composite contraction from component data alone is impossible without matched-tier shared metrics (Liberzon common-Lyapunov nonexistence); pathwise containment of a bounded region under additive stochastic forcing is impossible *at any correction strength* — the no-go *is* the result (Khasminskii recurrence; Corollary A.1S.1 in `#deriv-sector-condition`); when $K$ alternatives that must all stay calibrated share one observation per step, no update rule or forgetting rate keeps them calibrated once $\rho_\Sigma \ge R_\Sigma/K$ (Corollary EA.2 in `#deriv-evidence-allocation-ceiling`). A reader who carries this style away can predict where the framework will use a no-go as load-bearing apparatus next, rather than meeting each as a scattered impossibility. The cross-instance discipline lives at `#disc-constructive-impossibility-posture`; the per-instance derivations live in the segments named above.
 
 *Supporting material: derivations, sketches, simulation results, and operationalization procedures backing the main theory claims.*
 
@@ -902,7 +902,7 @@ The template is invoked across seven segments. Each specifies its own $(\xi, F, 
 | Segment | $\xi$ | Effective $\rho_\xi$ | $R$ | Locally-verified precondition |
 |---|---|---|---|---|
 | [Result 4.6](#result-persistence-condition) | $\delta_t$ (epistemic mismatch) | $\rho$ (environmental disturbance rate) | model-class capacity, or task-adequacy threshold $\lVert\delta_{\text{critical}}\rVert$ if stricter | (T2) via [Derived 4.4](#der-gain-sector-bridge) |
-| [Proposed Schema 9.10](#schema-strategy-persistence) | $\delta_\Sigma$ (strategic mismatch) | $\rho_\Sigma$ (rate of edge invalidation) | $R_\Sigma$ (strategic reserve) | (T2) via Beta-Bernoulli edge updates ( [Derivation R](#deriv-edge-credence-dynamics) Props B.1–B.6); constant-$\alpha$ requires experience discounting |
+| [Proposed Schema 9.10](#schema-strategy-persistence) | $\delta_\Sigma$ (strategic mismatch) | $\rho_\Sigma$ (rate of edge invalidation) | $R_\Sigma$ (strategic reserve) | (T2) via Beta-Bernoulli edge updates ( [Derivation S](#deriv-edge-credence-dynamics) Props B.1–B.6); constant-$\alpha$ requires experience discounting |
 | [Derived 15.2](#der-team-persistence) | $\delta_i$ (sub-agent mismatch) | $\rho_i^{\text{eff}} = \rho_{i,\text{env}} + \sum_j \gamma_{j\to i}^{\text{adv}}\mathcal T_j - \sum_j \gamma_{j\to i}^{\text{coop}}\mathcal T_j$ | $R_i$ | Cooperative coupling can drive $\rho_i^{\text{eff}}$ below the single-agent $\rho$ |
 | [Formulation 13.1](#form-composition-closure) (bridge lemma) | $e_m$ (trajectory error at macro-boundaries $m$) | $\varepsilon^\ast \nu_c$ (closure-defect per macro-step $\times$ macro-update rate) | the composite's $R_c$ | Tier-specific contraction stronger than (T2): incremental sector bound (DA2'-inc). Tier 1 proved; Tier 2 local; Tier 3 domain-specific |
 | [Derived (conditional) 13.2](#der-tempo-composition) | $\delta_c$ (composite mismatch) | $\rho_{\text{ext}} + \varepsilon^\ast \nu_c$ (external + internal) | $R_c$ | (T3) requires the bridge-lemma contraction; $C_{\text{coord}} \geq \varepsilon^\ast\nu_c$ is the tempo-equivalent of the internal disturbance |
@@ -950,13 +950,13 @@ Max attainable: *exact*. The result is as strong as Lyapunov stability theory. A
 
 Each instantiation's distinctive content is now sharply visible: *what is the state variable, and what counts as its effective disturbance?* The Lyapunov machinery is shared; the characterization of $\rho_\xi$ is where the domain-specific insight lives. Adversarial destabilization's content is the coupling term $\gamma_A \mathcal T_A$; team persistence's content is the cooperative-minus-adversarial decomposition; composition closure's content is the closure-defect rate $\varepsilon^\ast \nu_c$. In each case, the template absorbs the Lyapunov boilerplate and lets the distinctive claim stand without it.
 
-This template is the *interior facet* of the stability certificate ( [Discussion 5.1](#disc-stability-certificate)): the "correction rate exceeds effective disturbance rate" condition is the certificate being positive-definite on the scope ball, and the existence of such a certificate is equivalent to exponential stability ( [Result H](#result-certificate-existence)). The shared Lyapunov function $V(\xi)=\tfrac12\lVert\xi\rVert^2$ is the certificate in the Euclidean metric; [Result AJ](#result-contraction-template) carries the non-Euclidean-metric interior.
+This template is the *interior facet* of the stability certificate ( [Discussion 5.1](#disc-stability-certificate)): the "correction rate exceeds effective disturbance rate" condition is the certificate being positive-definite on the scope ball, and the existence of such a certificate is equivalent to exponential stability ( [Result H](#result-certificate-existence)). The shared Lyapunov function $V(\xi)=\tfrac12\lVert\xi\rVert^2$ is the certificate in the Euclidean metric; [Result AK](#result-contraction-template) carries the non-Euclidean-metric interior.
 
 **The template is the typed-bridge shared upstream — two-model, not one operator.** This template is the canonical anchor of the *accumulation typing* convention ( `NOTATION.md` §"Accumulation typing"): the bridge from a per-step residue to its accumulated consequence *is* this conditional. The bridge is **two-model, not a single bounded operator** — (T3)'s Model D and Model S are co-equal, and the $1/\alpha$ vs $1/\sqrt\alpha$ scaling (line above) plus the Cor-A.1S.1 categorical containment dichotomy ( [Derivation A](#deriv-sector-condition)) are the structural fingerprint that they are *different functionals*, not one functional read in two norms (a change of $\alpha$-homogeneity *degree* cannot come from a norm choice on a fixed operator). The across-turnover axis is the worked demonstration that the split is structural, with two operator families at *opposite ends of the same singular contraction parameter*, **neither superseding the other**: the $\mathcal A_{\mathrm{refl}}$ family — a reflected (Lindley/Loynes) walk whose load-bearing content is its driftless $\mu=0$ boundary — *instantiates* the template on the turnover index ( #der-identity-continuity-threshold, the new row above); the $\mathcal A_D$ family — the linear destroy-and-reconstruct contraction whose affine norm *diverges* exactly as the contraction gap closes — is the **honest scope boundary where the template provably does *not* transfer** ( #der-turnover-information-recursion: an unforced multiplicative information decay has no correction function pointing a perturbed state inward, so (T1)–(T3) have no counterpart; the non-transfer is a definite result, not a caveat). The $\mu=0$ boundary of the $\mathcal A_{\mathrm{refl}}$ instantiation *is* the singularity of the $\mathcal A_D$ regime — you cannot linearize across that pole, which is why the two are distinct operators and the accumulation-type confound (treating one as a normalization or linearization of the other) is a category error. The typing convention exists precisely so this — *which model, which operator family* — is carried in the notation rather than silently reconstructed.
 
 **What each instantiation must still verify.** Invoking the template is not trivial. Each instantiation must establish (T1)–(T3) for its specific $(\xi, F, \rho_\xi, R)$, and the non-trivial verifications differ substantively:
 
-- *Strategic persistence* ( [Proposed Schema 9.10](#schema-strategy-persistence)): (T2) is verified for Beta-Bernoulli edge updates across five DAG topologies ( [Derivation R](#deriv-edge-credence-dynamics) Props B.1–B.6). But $\alpha_\Sigma = 1/(n+1)$ is time-varying: it decays monotonically with experience. Constant-$\alpha$ — and therefore the template's trajectory guarantee — requires experience discounting as a prerequisite, not a heuristic.
+- *Strategic persistence* ( [Proposed Schema 9.10](#schema-strategy-persistence)): (T2) is verified for Beta-Bernoulli edge updates across five DAG topologies ( [Derivation S](#deriv-edge-credence-dynamics) Props B.1–B.6). But $\alpha_\Sigma = 1/(n+1)$ is time-varying: it decays monotonically with experience. Constant-$\alpha$ — and therefore the template's trajectory guarantee — requires experience discounting as a prerequisite, not a heuristic.
 - *Composition closure* ( [Formulation 13.1](#form-composition-closure)): (T2) as stated is insufficient. The bridge lemma requires the *incremental sector bound* (DA2'-inc) — strongly monotone $F$ across the whole state space, strictly stronger than the one-point sector bound (T2). Three agent tiers result: Tier 1 where contraction is proved for the full class (Bayesian on exponential families, gradient descent on strongly convex losses, linear correctors with positive-definite gain), Tier 2 where it holds locally, Tier 3 where it must be verified per-domain.
 - *Team persistence* ( [Derived 15.2](#der-team-persistence)): (T3) is the decomposition $\rho_i^{\text{eff}} = \rho_{i,\text{env}} + \sum_j \gamma_{j\to i}^{\text{adv}}\mathcal T_j - \sum_j \gamma_{j\to i}^{\text{coop}}\mathcal T_j$. Cooperative coupling enters through a negative term, which can drive $\rho_i^{\text{eff}}$ below the single-agent $\rho$ — this is formally how teams persist where individuals cannot.
 
@@ -972,7 +972,7 @@ This template is the *interior facet* of the stability certificate ( [Discussion
 
 **Relationship to [Discussion 11.1](#disc-composition-consistency).** The composition-consistency postulate requires that AAT's predictions be compatible across levels of description. The template is how this compatibility cashes out operationally: the same persistence argument applies at every level where a state variable with a sector-bounded correction function is present. Part III segments that invoke the template (team persistence, composition closure, tempo composition) are applying AAT's single persistence argument at the composite level, with effective disturbance decompositions that capture what is distinctive about the composite scope.
 
-**Relationship to [Result AJ](#result-contraction-template) (metric-formulation generalization).** The Euclidean sector inequality (T2) is the $M = I$ specialization of a broader contraction-metric condition (CT2) under a Riemannian metric $M$ (Lohmiller & Slotine 1998). For several AAT-relevant agent classes, the natural Lyapunov lives in a non-Euclidean metric — Fisher for statistical-manifold learning (matrix Kalman in information metric; exponential family in natural parameters), Hessian-induced for ill-conditioned strongly-convex optimization, Lyapunov-equation-determined for asymmetric-stable linear systems, or Lyapunov-metric for PID-with-bounded-plant-nonlinearity. [Result AJ](#result-contraction-template) states the generalization once with (CT1)–(CT3) preconditions matching (T1)–(T3), adds compositional theorems (parallel / cascade / negative-feedback with small-gain) that extend `#deriv-critical-mass-composition` (CM2) to heterogeneous sub-agents via (CM2-M), and fills `#disc-separability-pattern`'s seventh ladder (A2'-scope into metric-$\alpha_1$ / metric-$\alpha_2$ / metric-$\beta$). The Euclidean formulation stated in this segment remains the default for Euclidean-natural instances; [Result AJ](#result-contraction-template) is invoked when the natural coordinate is non-Euclidean. Structural consequence worth noting: the (CT2) condition at $M = I$ is equivalent to `#form-composition-closure`'s DA2'-inc (incremental sector bound), so AAT has been carrying the Jacobian-level Euclidean contraction condition at the composite level all along; [Result AJ](#result-contraction-template) makes this explicit at the single-agent level.
+**Relationship to [Result AK](#result-contraction-template) (metric-formulation generalization).** The Euclidean sector inequality (T2) is the $M = I$ specialization of a broader contraction-metric condition (CT2) under a Riemannian metric $M$ (Lohmiller & Slotine 1998). For several AAT-relevant agent classes, the natural Lyapunov lives in a non-Euclidean metric — Fisher for statistical-manifold learning (matrix Kalman in information metric; exponential family in natural parameters), Hessian-induced for ill-conditioned strongly-convex optimization, Lyapunov-equation-determined for asymmetric-stable linear systems, or Lyapunov-metric for PID-with-bounded-plant-nonlinearity. [Result AK](#result-contraction-template) states the generalization once with (CT1)–(CT3) preconditions matching (T1)–(T3), adds compositional theorems (parallel / cascade / negative-feedback with small-gain) that extend `#deriv-critical-mass-composition` (CM2) to heterogeneous sub-agents via (CM2-M), and fills `#disc-separability-pattern`'s seventh ladder (A2'-scope into metric-$\alpha_1$ / metric-$\alpha_2$ / metric-$\beta$). The Euclidean formulation stated in this segment remains the default for Euclidean-natural instances; [Result AK](#result-contraction-template) is invoked when the natural coordinate is non-Euclidean. Structural consequence worth noting: the (CT2) condition at $M = I$ is equivalent to `#form-composition-closure`'s DA2'-inc (incremental sector bound), so AAT has been carrying the Jacobian-level Euclidean contraction condition at the composite level all along; [Result AK](#result-contraction-template) makes this explicit at the single-agent level.
 
 <a id="result-certificate-existence"></a>
 
@@ -1029,7 +1029,7 @@ The certificate admits four strictly-ordered strengths, all on the one object:
 | R1 | incremental (two-point) $\mathcal{M}$-strong-monotonicity on $\mathcal{B}_R$ | global $\mathcal{M}$-strong-monotone (cocoercive class) | curvature-like $\mathcal{M}$ (potential sub-case) |
 | R2 | R1 with $\mathcal{M}$ *forced* by a uniqueness theorem on an AAT-internal axiom | natural-gradient in the Čencov-unique Fisher metric | Fisher metric (Čencov-forced) |
 
-R0-loss ⟸ R0-strict ⟸ R1 ⟸ R2 strictly. R0-loss is the *widest* rung — a certificate exists but $\sup\kappa = 0$: the dynamics is Lyapunov-stable, not asymptotically stable, with $V(e)=e^\top\mathcal{M} e$ conserved on an imaginary-axis-eigenvector subspace and strict contraction on its strongly-gradient-like complement (Conley's universal decomposition; pure-case Helmholtz $S/A$ characterization derived below). R0-strict is the contraction rung with $\kappa\gt 0$ strict, reaching the plant-Lyapunov cases (linear-Hurwitz-non-symmetric, PID) where no potential exists. R1 is the cocoercive/proximal class where a variational structure is available; R2 is the uniqueness-theorem-forced statistical case. The widest rung is not a weakness: it is exactly the reach the narrower rungs cannot give. (R0-loss's pure-case characterization and Conley anchoring are in the Derivation below; R2's forcing is established in [Discussion 5.6](#disc-additive-coordinate-forcing); R1's cocoercive class in [Result AJ](#result-contraction-template).)
+R0-loss ⟸ R0-strict ⟸ R1 ⟸ R2 strictly. R0-loss is the *widest* rung — a certificate exists but $\sup\kappa = 0$: the dynamics is Lyapunov-stable, not asymptotically stable, with $V(e)=e^\top\mathcal{M} e$ conserved on an imaginary-axis-eigenvector subspace and strict contraction on its strongly-gradient-like complement (Conley's universal decomposition; pure-case Helmholtz $S/A$ characterization derived below). R0-strict is the contraction rung with $\kappa\gt 0$ strict, reaching the plant-Lyapunov cases (linear-Hurwitz-non-symmetric, PID) where no potential exists. R1 is the cocoercive/proximal class where a variational structure is available; R2 is the uniqueness-theorem-forced statistical case. The widest rung is not a weakness: it is exactly the reach the narrower rungs cannot give. (R0-loss's pure-case characterization and Conley anchoring are in the Derivation below; R2's forcing is established in [Discussion 5.6](#disc-additive-coordinate-forcing); R1's cocoercive class in [Result AK](#result-contraction-template).)
 
 #### Derivation
 
@@ -1039,7 +1039,7 @@ R0-loss ⟸ R0-strict ⟸ R1 ⟸ R2 strictly. R0-loss is the *widest* rung — a
 
 **(3 ⟺ 2)** is the rate-extraction argument (3 gives 2 with the displayed $\kappa$; 2 is the special case $Q=\mathcal{M} J+J^\top\mathcal{M}$).
 
-**Local nonlinear extension.** With $F(e)=Je+r(e)$, $\lVert r(e)\rVert=o(\lVert e\rVert)$, (C) holds on $\mathcal{B}_R(e^\ast)$ iff the linearization is exponentially stable *and* the second-order remainder is dominated on the ball ($\lVert r(e)\rVert_{\mathcal{M}}\le c\lVert e\rVert_{\mathcal{M}}^2$ with $cR\lt\kappa$). This is the standard Lyapunov indirect method (Khalil Thm 4.7); the remainder-domination radius is exactly the contraction-template Tier-2 degradation radius ( [Result AJ](#result-contraction-template)), not new machinery.
+**Local nonlinear extension.** With $F(e)=Je+r(e)$, $\lVert r(e)\rVert=o(\lVert e\rVert)$, (C) holds on $\mathcal{B}_R(e^\ast)$ iff the linearization is exponentially stable *and* the second-order remainder is dominated on the ball ($\lVert r(e)\rVert_{\mathcal{M}}\le c\lVert e\rVert_{\mathcal{M}}^2$ with $cR\lt\kappa$). This is the standard Lyapunov indirect method (Khalil Thm 4.7); the remainder-domination radius is exactly the contraction-template Tier-2 degradation radius ( [Result AK](#result-contraction-template)), not new machinery.
 
 ##### R0-loss: certificate without contraction
 
@@ -1374,7 +1374,7 @@ This provides a Lyapunov-weighted formalization of [Hypothesis 12.3](#hyp-symbio
 | Asymmetric limit → [Hypothesis 12.3](#hyp-symbiogenic-composition) (S-3) via weighted Lyapunov | Matrosov-style weighting; $\mu \to 0$ limit | Sketch (the weighting is standard; the identification with (S-3) is structurally motivated but not a theorem) |
 | (S-1) objective absorption and (S-2) function transfer formalizations | Not addressed by this derivation | Open (in [Hypothesis 12.3](#hyp-symbiogenic-composition) Working Notes) |
 | Heterogeneous-architecture case ($A_1$ Tier 1, $A_2$ Tier 2/3) | Requires per-sub-agent tiering per [Formulation 13.1](#form-composition-closure) | Open |
-| Heterogeneous-metric Tier-1M dyad ($\lambda_1 \neq \lambda_2$, $C_1 \neq C_2$, $k_{12} \neq k_{21}$) | [Result AJ](#result-contraction-template) (CM2-M) via Slotine 2003 negative-feedback small-gain: $(\lambda_1 - C_1)(\lambda_2 - C_2) \gt k_{12} k_{21}/4$ | Derived (conditional on [Result AJ](#result-contraction-template) (CT2) preconditions + Slotine 2003) |
+| Heterogeneous-metric Tier-1M dyad ($\lambda_1 \neq \lambda_2$, $C_1 \neq C_2$, $k_{12} \neq k_{21}$) | [Result AK](#result-contraction-template) (CM2-M) via Slotine 2003 negative-feedback small-gain: $(\lambda_1 - C_1)(\lambda_2 - C_2) \gt k_{12} k_{21}/4$ | Derived (conditional on [Result AK](#result-contraction-template) (CT2) preconditions + Slotine 2003) |
 | Nonlinear coupling $\gamma = \gamma(\delta_j)$ | Requires full joint-Lyapunov machinery from [Derived 15.3](#der-adversarial-destabilization) (effects-spiral corollary) | Open |
 | Dynamic coordination cost $C = C_0 + C_1\lVert\delta_j\rVert$ | Quadratic inequality; admits closed form, loses interpretive cleanliness | Open |
 | Fully-coupled tempo dynamics ($\mathcal T_i$ responsive to $\delta_j$) | Requires joint tempo analysis from [Derived 15.3](#der-adversarial-destabilization) Working Notes | Open |
@@ -1597,7 +1597,7 @@ $$\delta^T F(\delta) \geq \alpha \lVert\delta\rVert^2 \quad \text{for } \lVert\d
 
 evaluated at fixed equilibrium $M^\ast$. Local $(\alpha/\eta)$-strong convexity of $L$ on $\mathcal B_R(M^\ast)$ implies this one-point sector condition with $\alpha = \eta \mu$, but the converse fails: there exist losses satisfying the one-point sector condition that are *not* strongly convex on any neighborhood of $M^\ast$ (counterexample below).
 
-**(B.4-ii) Two-point sector ⇔ strong convexity (full equivalence).** The two-point / incremental sector condition — DA2'-inc in [Derivation O](#deriv-discrete-sector-condition) and the bridge-lemma precondition in [Formulation 13.1](#form-composition-closure) — is
+**(B.4-ii) Two-point sector ⇔ strong convexity (full equivalence).** The two-point / incremental sector condition — DA2'-inc in [Derivation P](#deriv-discrete-sector-condition) and the bridge-lemma precondition in [Formulation 13.1](#form-composition-closure) — is
 
 *[Derived (sector-convexity-equivalence, two-point form)]*
 
@@ -1943,6 +1943,155 @@ C3 is a definitional commitment that produces the Markov structure. It cannot be
 
 **What this opens.** The proof yields the *form*. It immediately invites the follow-up questions that the rest of the theory addresses: What should $f$ preserve? → [Formulation 2.3](#form-information-bottleneck) and [Definition 2.4](#def-model-sufficiency). How should $f$ weight new information? → [Empirical 3.7](#emp-update-gain). When is $\mathcal{M}$ itself inadequate? → [Result 4.9](#result-structural-adaptation-necessity).
 
+<a id="deriv-decomposition-uniqueness"></a>
+
+### Derivation: Decomposition Uniqueness — Underdetermination and Canonicity of the Epistemic/Purposeful Split
+
+**Slug**: `deriv-decomposition-uniqueness`
+**Type**: Derivation
+**Status**: exact
+**Stage**: draft
+**Label**: M
+**Container**: appendix-chapter
+
+
+Appendix derivation resolving the uniqueness question left open in [Formulation 6.2](#form-complete-agent-state): is the decomposition $X_t = (M_t, G_t)$ forced, among decompositions preserving directed separation? The answer has two halves, and both are load-bearing. **Underdetermination:** preservation of directed separation alone does *not* force the decomposition — a two-line counterexample family exists inside GUC Class 1, because a frozen purposeful coordinate has the exact information-flow signature of a belief, and no property of the update algebra of a single agent can distinguish a stored setpoint from a stored fact. **Canonicity:** relative to a *goal-intervention family* — operators that rewrite the purposeful substate while leaving the epistemic substate alone — the decomposition is unique: under three named hypotheses, every separation-preserving decomposition's epistemic component is canonically isomorphic to the quotient of $X_t$ by goal-variation, which is $M_t$; the purposeful component is unique up to an explicitly characterized fiber-relabeling gauge. Together the halves say something sharper than the original conjecture aspired to: the belief/purpose partition is not discovered in the update dynamics, it is *carved by the intervention structure* — and once carved, it is carved uniquely. Defining the epistemic substate counterfactually (what is invariant under goal-variation) is therefore not one formulation choice among equals; it is the unique completion of the directed-separation condition.
+
+The epistemic character parallels [Derivation L](#deriv-recursive-update)'s C1/C2/C3 accounting: one hypothesis is structural, and two constitute a definitional commitment — to a particular intervention family — that cannot be "violated," only refused at the cost of leaving the partition underdetermined. The derivation is elementary throughout (congruence and quotient arguments); the machinery is standard, and the contribution is the identification, the counterexamples, and the gauge classification.
+
+#### Setup
+
+We work with the lifted update system of [Formulation 6.2](#form-complete-agent-state) in the structural representation of [Derivation L](#deriv-recursive-update) (Attack 5): state space $\mathcal X$, event set $\mathcal E$ (exogenous randomness absorbed into the event index), and update family $F_e : \mathcal X \to \mathcal X$, $F_e(X) = f_X(X, e)$. All statements are pathwise; the distributional version is discussed under Epistemic Status.
+
+*[Definition (separated-decomposition)]*
+
+A **separated decomposition** of $\mathcal X$ is a pair of maps $\mu : \mathcal X \to \mathcal M'$, $\gamma : \mathcal X \to \mathcal G'$ such that:
+
+- **(D1) Product-completeness.** $(\mu, \gamma) : \mathcal X \to \mathcal M' \times \mathcal G'$ is a bijection onto the product.
+- **(D2) Epistemic closure.** There exist maps $\phi_e : \mathcal M' \to \mathcal M'$ with $\mu(F_e X) = \phi_e(\mu(X))$ for all $X \in \mathcal X$, $e \in \mathcal E$.
+- **(D3) Cascade form.** There exist maps $\gamma_e$ with $\gamma(F_e X) = \gamma_e\big(\gamma(X),\, \mu(F_e X)\big)$ — the purposeful update reads the *updated* epistemic component, matching [Derived 6.3](#der-directed-separation)'s $f_G(G_{\tau^-}, M_{\tau^+}, e_\tau)$ form.
+
+(D2) says the equivalence kernel of $\mu$ is a **congruence** of the update system — $\mathcal M'$ is a factor (quotient) dynamical system whose update references nothing outside $(\mu(X), e)$. This is the entire formal content of "preserves directed separation": in the lifted state, "does not reference purpose" can only mean "does not reference the complementary coordinate."
+
+The base decomposition $\mu_0(m, g) = m$, $\gamma_0(m, g) = g$ of an agent satisfying directed separation is a separated decomposition, directly from [Derived 6.3](#der-directed-separation)'s update forms.
+
+*[Definition (decomposition-isomorphism)]*
+
+Two separated decompositions $(\mu, \gamma)$, $(\mu', \gamma')$ are **isomorphic** when there are bijections $\alpha : \mathcal M' \to \mathcal M''$ and $\beta : \mathcal G' \to \mathcal G''$ (the latter possibly fibered over $\mathcal M'$) with $\mu' = \alpha \circ \mu$, $\gamma' = \beta \circ (\mu,\gamma)$, such that $\alpha$ intertwines the epistemic updates ($\alpha \circ \phi_e = \phi'_e \circ \alpha$) and the transported purposeful update satisfies (D3). Isomorphism of factored dynamical systems, not of bare sets: equality of the epistemic congruence up to relabeling, plus a fiber bijection compatible with the dynamics.
+
+**Lemma 0 (the cascade form is a genuine extra condition exactly when epistemic updates lose information).** Given (D1)+(D2), $\gamma(F_e X)$ is automatically *some* function of $(\mu(X), \gamma(X), e)$. (D3) additionally requires the $\mu(X)$-dependence to factor through $\phi_e(\mu(X))$. If each $\phi_e$ is injective, this is no restriction ($\mu(X) = \phi_e^{-1}(\mu(F_e X))$); if some $\phi_e$ is non-injective, (D3) can fail for decompositions satisfying (D1)+(D2) (explicit witness in the gauge proposition below). $\square$
+
+#### Underdetermination
+
+*[Derived (separation-underdetermination)]*
+
+**Proposition 1.** Preservation of directed separation — (D1)–(D3) — does not determine the decomposition up to isomorphism. Two counterexample families:
+
+**(a) Trivial factor.** $\mu = \mathrm{id}_{\mathcal X}$, $\mathcal G' = \{\ast\}$. (D1) holds; (D2) holds with $\phi_e = F_e$ — the update references no complementary coordinate because there is none; (D3) holds vacuously. The "epistemic" component is the entire state, purpose included.
+
+**(b) Frozen-coordinate migration.** Let the base agent satisfy directed separation, with $G = (c, G_{\mathrm{rest}})$, $\mathcal G = \mathcal C \times \mathcal G_{\mathrm{rest}}$, where $c$ is any purposeful coordinate whose update is self-contained, goal-blind, and event-wise injective — $c_{\tau^+} = h_c(c_{\tau^-}, e)$ with each $h_c(\cdot, e)$ injective, so that $c_{\tau^-}$ is recoverable from $(c_{\tau^+}, e)$ as (D3) requires. The canonical case is frozen: an objective held fixed over the analysis window, $c_{\tau^+} = c_{\tau^-}$ (per [Definition 6.7](#def-strategy-dimension)'s typical timescale ordering $\nu_M \gg \nu_\Sigma \gg \nu_O$, the generic condition between objective revisions); the injectivity clause admits the more general drifting case (a decaying commitment timer, a deterministic goal schedule). Then $\big((M, c),\, G_{\mathrm{rest}}\big)$ is a separated decomposition: (D1) by construction; (D2) since, writing $Y := (M, c)$, the update $Y_{\tau^+} = (f_M(M_{\tau^-}, e),\, h_c(c_{\tau^-}, e))$ depends only on $(Y_{\tau^-}, e)$; (D3) since $c_{\tau^-} = h_c^{-1}(c_{\tau^+}, e)$ is recoverable from the updated epistemic component and the event (in the frozen case, $c_{\tau^-} = c_{\tau^+}$ directly), so $G_{\mathrm{rest}, \tau^+} = f_{G_{\mathrm{rest}}}((c_{\tau^-}, G_{\mathrm{rest}, \tau^-}), M_{\tau^+}, e)$ is of the required form. Its epistemic component $\mathcal M \times \mathcal C$ is not isomorphic to $\mathcal M$: an isomorphism of decompositions requires $\mu' = \alpha \circ \mu$, and $\alpha(m, c) = m$ cannot be injective for $\lvert\mathcal C\rvert \gt 1$. $\square$
+
+**What the counterexample shows.** Family (b) lives inside GUC Class 1 — a Kalman-filter-plus-LQR agent with a fixed reference admits both readings. A frozen goal has the information-flow signature of a belief: it updates on nothing, references nothing, and is read by the purposeful update exactly as beliefs are. The distinction between a stored setpoint and a stored fact is invisible to the update algebra of a single agent, because that algebra never exercises *variation of the goal*. The distinction must be supplied by additional structure — and the structure that supplies it is interventional.
+
+**Cross-cutting decompositions, classified.** A "relevance-weighted model" $W = w(M, O)$ mixing belief and objective is either not a separated decomposition at all — generically $W_{\tau^+}$ requires $M$ and $O$ separately, violating (D2) — or, when $w$ is injective and the mixed-in purposeful content has a self-contained goal-blind injective update (family (b)'s condition; update-frozen is the canonical case), a re-coordinatization of family (b). The claim that these two cases are exhaustive is *robust-qualitative*, not a derived proposition: it rests on the observation that (D2)-closure of a mixed coordinate forces its purposeful ingredients to update without reference to the rest of the goal state, which is family (b)'s defining condition — argued generically, not exhaustively case-analyzed. (Such representations may of course still be *useful* — as derived quantities. What is settled is that no examined cross-cutting form is a competing separation-preserving carving of the state outside family (b).)
+
+#### Canonicity
+
+*[Definition (goal-intervention-family)]*
+
+A **goal-intervention family** is a set $H$ of maps $h : \mathcal G \to \mathcal G$ acting on the state through operators $\iota_h : \mathcal X \to \mathcal X$, $\iota_h(m, \gamma) = (m, h(\gamma))$: rewrite the purposeful substate, leave the epistemic substate untouched. The family induces the **reachability equivalence** $R$ on $\mathcal G$ — the equivalence generated by $\{\gamma \sim h(\gamma) : h \in H\}$. **Full intervention access** is the case where $H$ contains all constant maps $h_g : \gamma \mapsto g$ (value-targeted resets), so that $R$ identifies all of $\mathcal G$; a restricted family is one whose maps preserve some sub-coordinate (e.g. $h(c, g_{\mathrm{rest}}) = (c, \eta(g_{\mathrm{rest}}))$ — interventions that can rewrite the strategy but not the standing objective), so that $R$-classes are proper. The map form is essential, not a generality flourish: a family of value-targeted resets indexed by a mere *subset* $\mathcal G^\dagger \subseteq \mathcal G$ of target values cannot express restricted access at all — any nonempty $\mathcal G^\dagger$ connects every pair of goal values through a common target in two steps, collapsing the generated equivalence to full access (see the regression guard in Working Notes). Let $\sim_{\mathrm{cf}}$ be the equivalence relation on $\mathcal X$ generated by $\{X \sim \iota_h X : h \in H\}$, and $q : \mathcal X \to \mathcal X/\!\sim_{\mathrm{cf}}$ the quotient map — the **goal-variation quotient**. Since every $\iota_h$ fixes the epistemic coordinate, the classes of $\sim_{\mathrm{cf}}$ are exactly $\{m\} \times R(\gamma)$.
+
+*[Definition (admissibility-hypotheses)]*
+
+For a separated decomposition $(\mu, \gamma)$:
+
+- **(R1) Product-completeness** — (D1) above (repeated as a named hypothesis because it does independent work: it excludes injective-but-not-surjective "copy" embeddings that smuggle epistemic content into the purposeful component as a constrained duplicate coordinate).
+- **(R2) Purposeful purity** — $\mu \circ \iota_h = \mu$ for all $h \in H$: the epistemic component contains nothing goal-intervention can move.
+- **(R3) Epistemic completeness** — $\ker\mu \subseteq\; \sim_{\mathrm{cf}}$ as relations: whenever $\mu(X) = \mu(X')$, the states are goal-variation equivalent. The epistemic component retains everything goal-intervention cannot move. (Stated as a standalone condition on $\mu$ so that it is well-posed independently of (R2); under (R2) it is equivalent to injectivity of the induced map $\mathcal X/\!\sim_{\mathrm{cf}} \to \mathcal M'$, which is the form the derivation uses.)
+
+**Lemma 1 (congruence lattice).** The congruences of the update system $(\mathcal X, \{F_e\})$ are closed under arbitrary intersection, hence form a complete lattice; in particular, for any relation $R$ on $\mathcal X$ there is a finest congruence containing $R$ (the congruence closure). *Derivation:* if $\{C_i\}$ are congruences and $X \,(\bigcap_i C_i)\, Y$, then for each $i$, $F_e X \; C_i \; F_e Y$, so $F_e X \,(\bigcap_i C_i)\, F_e Y$; the closure is the intersection of all congruences containing $R$, non-empty since the total relation is one. $\square$
+
+*[Derived (decomposition-canonicity, from directed separation + full intervention access)]*
+
+**Theorem 2.** Let the base agent satisfy directed separation and assume full intervention access. Then:
+
+**(i)** $\sim_{\mathrm{cf}}$ is a congruence, its classes are $\{m\} \times \mathcal G$, and the goal-variation quotient is a separation factor canonically isomorphic to $\mathcal M$: $\mathcal X/\!\sim_{\mathrm{cf}} \cong \mathcal M$ via $[(m, \gamma)] \mapsto m$, intertwining the updates.
+
+**(ii)** Every map $\mu$ satisfying (R2) factors through $q$: $\mu = \theta \circ q$ for a unique $\theta$.
+
+**(iii)** Every separated decomposition satisfying (R1)–(R3) has $\mu = \alpha \circ q$ with $\alpha$ a bijection intertwining the updates. The epistemic component of any admissible decomposition *is* the goal-variation quotient — is $M_t$ — up to canonical isomorphism of factor dynamical systems.
+
+*Derivation.* (i) The load-bearing computation is the commutation identity, which uses directed separation of the base agent essentially:
+
+$$F_e(\iota_{h_g}(m, \gamma)) = \big(f_M(m, e),\; f_G(g,\, f_M(m, e),\, e)\big) = \iota_{h_{g'}}\big(F_e(m, \gamma)\big), \qquad g' := f_G(g,\, f_M(m, e),\, e),$$
+
+where $h_g$ is the constant map at $g$ (full access supplies all of these). The first coordinate is goal-independent precisely because $f_M$ has no $G$ argument. So $F_e$ maps generators of $\sim_{\mathrm{cf}}$ to generators, hence classes to classes: $\sim_{\mathrm{cf}}$ is a congruence. Under full access the classes are exactly $\{m\} \times \mathcal G$ (any two goal values are connected by one constant-map intervention), so $[(m, \gamma)] \mapsto m$ is a bijection, and the quotient update is $[\,\cdot\,] \mapsto [F_e(\cdot)]$, which in the $m$-coordinate is $f_M(\cdot, e)$: the intertwining is immediate. The complementary coordinate $\gamma_0 = g$ gives (D3) directly from [Derived 6.3](#der-directed-separation)'s $f_G$ form, so the quotient participates in a separated decomposition.
+
+(ii) $\mu \circ \iota_h = \mu$ makes $\mu$ constant on generators, hence on the generated classes; the factorization and its uniqueness are the universal property of the quotient.
+
+(iii) By (ii), $\mu = \theta \circ q$; $\theta$ is injective by (R3) and surjective because $\mu$ is (a coordinate of the bijection (R1)). Intertwining: $\theta(q(F_e X)) = \mu(F_e X) = \phi_e(\mu(X)) = \phi_e(\theta(q(X)))$, and $q(F_e X) = \bar\phi_e(q(X))$ by (i), so $\theta \circ \bar\phi_e = \phi_e \circ \theta$. Compose with (i)'s isomorphism to land on $\mathcal M$. $\square$
+
+*[Derived (goal-fiber-gauge)]*
+
+**Proposition 3 (the purposeful component is a gauge).** Fix the epistemic component as in Theorem 2(iii). The remaining freedom is exactly the choice of fiber coordinate: any $\gamma' = \beta \circ (\mu_0, \gamma_0)$ with every $\beta_m := \beta(m, \cdot) : \mathcal G \to \mathcal G'$ bijective satisfies (D1)+(D2) with the *same epistemic congruence* — the same carve of the state, differently labeled on the goal fiber. (Decomposition-isomorphism as defined above requires (D3), so the isomorphism-class statement applies to the (D3)-respecting sub-family below; a $\beta$ outside it yields valid (D1)+(D2) data that is not a separated decomposition.) The sub-family additionally satisfying the cascade form (D3):
+
+- contains every $m$-independent relabeling $\beta(m, g) = \beta_0(g)$ (the transported update $\gamma'_e(g', m^+) = \beta_0(f_G(\beta_0^{-1}(g'), m^+, e))$ is of the required form);
+- equals the *full* family when every $\phi_e = f_M(\cdot, e)$ is injective (epistemically invertible updates: $m^-$ is recoverable from $(m^+, e)$, Lemma 0);
+- is in general strictly between. *Witness for strictness:* $\mathcal M = \mathcal G = \{0, 1\}$, a single event with $f_M \equiv 0$ (total epistemic collapse) and $f_G(g, m^+, e) = g$; the gauge $\beta(m, g) = g \oplus m$ satisfies (D1)+(D2), but the transported purposeful update would need to produce $g$ from $(g \oplus m,\, m^+ = 0,\, e)$, and $m$ has been destroyed — (D3) fails. $\square$
+
+The exact characterization of the (D3)-respecting gauge subgroup for partially-invertible epistemics is open (see Working Notes).
+
+*[Derived (restricted-intervention-access)]*
+
+**Corollary 4 (restricted families — the two halves are one phenomenon).** Let the base agent satisfy directed separation, let $H$ be any goal-intervention family with reachability equivalence $R$, and assume the **dynamics–intervention compatibility condition**:
+
+**(C)** for every $m^+, e$, the map $f_G(\cdot, m^+, e)$ descends to $\mathcal G / R$ — equivalently, $\gamma \mathrel{R} \gamma'$ implies $f_G(\gamma, m^+, e) \mathrel{R} f_G(\gamma', m^+, e)$ (by induction along the generating chain, it suffices to check this on generator pairs $(\gamma, h(\gamma))$).
+
+Given directed separation, **(C) is not merely sufficient for, but equivalent to, "$\sim_{\mathrm{cf}}$ is a congruence"** — it is the carve's compatibility itself, restated as a finitely checkable per-architecture condition on the goal dynamics rather than an independent side-hypothesis; the corollary's content beyond that equivalence is the generator-pair reduction, the class identification, and the conclusions below. Under (C), $\sim_{\mathrm{cf}}$ is a congruence with classes $\{m\} \times R(\gamma)$: for a generator pair, $F_e(m, \gamma)$ and $F_e(m, h(\gamma))$ share their epistemic coordinate by directed separation, and their goal coordinates $f_G(\gamma, m^+, e)$ and $f_G(h(\gamma), m^+, e)$ are $R$-equivalent by (C). The conclusions of Theorem 2 then split by kind, and their scopes differ:
+
+- **Quotient and uniqueness (general).** The quotient system $\mathcal X/\!\sim_{\mathrm{cf}} \cong \mathcal M \times (\mathcal G / R)$ is canonical, and Theorem 2's parts (ii)–(iii) hold verbatim with (R2)/(R3) read relative to $H$: *every* separated decomposition satisfying (R1)–(R3) has its epistemic component canonically isomorphic to the quotient. **Purposeful distinctions the intervention family cannot move classify as epistemic** — exactly when the goal dynamics respect the reachability structure.
+- **Existence (characterized, not automatic).** Whether the quotient *participates* in a separated decomposition at all is a separate question, and for general $H$ the answer can be no: (D1) requires a product trivialization of $\mathcal G$ over $\mathcal G/R$, which (C) does not supply (e.g. $\mathcal G = \{a, b, c\}$, a single idempotent intervention merging $\{a, b\}$, identity goal dynamics: $R$-classes of sizes $2$ and $1$ make (D1) unsatisfiable — uniqueness then holds vacuously). The characterization is exact, at arbitrary cardinality: a decomposition satisfying (D1)+(D2) with the quotient as epistemic component exists **iff all $R$-classes are equinumerous** (necessity: (D1) forces all $\mu$-fibers — the classes — to biject with the goal-fiber factor; sufficiency: per-class bijections to a common fiber assemble a trivialization — a choice-dependent step at infinite cardinality, constructive in the finite case). The cascade form (D3) additionally obtains when the induced class update $[\gamma] \mapsto [f_G(\gamma, m^+, e)]$ is injective on $\mathcal G/R$ for each fixed $(m^+, e)$ **and the trivialization is chosen $m$-independently** — one bijection $\beta_{[\gamma]} : R(\gamma) \to F$ per class, the same across $\mathcal M$. The second clause is load-bearing, not bookkeeping: with an $m$-independent trivialization, the updated class label is recoverable at known $(m^+, e)$ by class-update injectivity, and the transported goal update assembles explicitly as $\gamma'^+ = \beta_{[\gamma^+]}\big(f_G(\beta_{[\gamma^-]}^{-1}(\gamma'^-), m^+, e)\big)$ with $[\gamma^-]$ recovered from $[\gamma^+]$ and $(m^+, e)$ — no injectivity of $f_M$ is needed (this is *not* an instance of Lemma 0, whose recoverability route runs through the full epistemic update); with an $m$-dependent trivialization the recovery genuinely fails. Frozen or injectively-drifting class dynamics qualify, which is exactly why Proposition 1(b) carries its injectivity clause.
+
+Full access recovers Theorem 2 ((C) is vacuous and the trivialization trivial when $R$ is total). Without (C), $\sim_{\mathrm{cf}}$ is not a congruence — by the equivalence above, definitionally — and the canonical object degrades to the quotient by its congruence closure (Lemma 1), the same shape as Corollary 5: a restricted family incompatible with the goal dynamics behaves, for carving purposes, like partial coupling.
+
+Proposition 1(b) is exactly this corollary's boundary case, and the fit is precise: for the sub-coordinate-preserving family $H_c = \{h : h(c, g_{\mathrm{rest}}) = (c, \eta(g_{\mathrm{rest}}))\}$ (full access on $\mathcal G_{\mathrm{rest}}$), the $R$-classes are $\{c\} \times \mathcal G_{\mathrm{rest}}$, the quotient $\mathcal G / R \cong \mathcal C$, condition (C) specializes to "the updated $c$ does not depend on $g_{\mathrm{rest}}$" — self-containedness of $c$ within the goal, which Proposition 1(b)'s frozen $c$ satisfies trivially — and the canonical epistemic component is $\mathcal M \times \mathcal C$: the *same* component the counterexample migrated. A goal-blind self-contained coordinate *with* intervention access is excluded from $\mathcal M'$ by (R2); *without* it, it genuinely belongs to the canonical epistemic component. The counterexample to the naive conjecture and the boundary behavior of the theorem are the same fact. $\square$
+
+*[Discussion]*
+
+**Corollary 5 (separation failure — GUC Class 3).** When the base agent violates directed separation, the commutation identity fails ($f_M$ has a $G$ argument, so the first coordinates differ), $\sim_{\mathrm{cf}}$ is not a congruence, and no separation factor realizes the goal-variation quotient. The canonical epistemic object is then the quotient by the congruence *closure* $\overline{\sim_{\mathrm{cf}}}$ (Lemma 1), which is strictly coarser: goal-coupled belief-update does not merely blur the belief/goal boundary, it shrinks the largest belief-like factor that can exist at all. The information gap between $\mathcal X/\!\sim_{\mathrm{cf}}$ and $\mathcal X/\overline{\sim_{\mathrm{cf}}}$ is a structural (architecture-level) companion to the distributional $\kappa_{\text{processing}}$ of [Derived 6.3](#der-directed-separation) — discussion-grade here; not developed further in this segment.
+
+#### What Is Derived vs. What Is Chosen
+
+| Property | Source | Strength |
+|---|---|---|
+| (D2) is the whole formal content of "preserves directed separation" | Analysis of what "does not reference purpose" can mean in the lifted state | Discussion-grade (clarifying observation) |
+| Separation underdetermines the decomposition (Proposition 1) | Counterexample families (a), (b) | Proved (constructive) |
+| Cross-cutting decompositions are non-separated or family-(b) instances | Closure analysis on $w(M, O)$ | Robust-qualitative (survivor family named; exhaustiveness argued generically, not case-analyzed) |
+| Goal-intervention family $H$ (maps on the goal fiber; constants = value-targeted resets) | Modeling input — the counterfactual apparatus | Definition (the analog of [Derivation L](#deriv-recursive-update)'s C3: a commitment, not a discovery) |
+| (R1) product-completeness | Structural hypothesis (blocks redundancy-smuggling) | Assumption (structural) |
+| (R2) purity + (R3) completeness | The two directions of the counterfactual anchor (block the two degenerate ends) | Definition (jointly: $\mathcal M'$ *is* the goal-variation quotient) |
+| Canonicity under (R1)–(R3) (Theorem 2) | Commutation identity + quotient universal property | Proved |
+| Goal-fiber gauge classification (Proposition 3) | Direct construction + collapse witness | Proved (endpoints); open (middle) |
+| Restricted-access behavior (Corollary 4) — quotient + uniqueness | Reachability-class quotient under (C) ((C) $\Leftrightarrow$ congruence, given separation) | Proved |
+| Restricted-access behavior (Corollary 4) — existence of an admissible decomposition | $R$-trivializability ($\Leftrightarrow$ equinumerous classes; choice-dependent at infinite cardinality) + per-$(m^+, e)$ class-update injectivity with an $m$-independent trivialization for (D3) | Proved (characterization; not automatic for general $H$) |
+| Class 3 behavior (Corollary 5) | Congruence closure | Discussion-grade |
+
+Each hypothesis is individually necessary: dropping (R1) readmits the copy embedding, dropping (R2) readmits Proposition 1's families, dropping (R3) readmits the everything-is-goal decomposition ($\mu$ constant). The hypothesis set is minimal in this checkable sense.
+
+#### Epistemic Status
+
+*Exact, pathwise, with a partly definitional character.* Proposition 1, Theorem 2, Proposition 3, and Corollary 4 are elementary derivations, exact under the stated hypotheses in the structural (randomized-function) representation of [Derivation L](#deriv-recursive-update) Attack 5 — all statements are pathwise in the exogenous randomness. Two honest boundaries. **(1) Distributional version open.** A kernel-level analog would route through strong lumpability of the update kernels; lumpable partitions are not in general closed under common refinement, so Lemma 1's meet-closure argument does not transfer as-is, and the distributional statement is neither asserted nor refuted here. **(2) The intervention family is a commitment.** (R2)/(R3) are relative to the family $H$, and Corollary 4's restricted-access conclusion additionally requires the dynamics–intervention compatibility condition (C) — which, given directed separation, is *equivalent to* the congruence property itself: not an independent side-condition but the carve's compatibility restated as a finitely checkable condition on the goal dynamics, and genuinely false for some (family, dynamics) pairs; its existence half is further characterized, not automatic ($R$-trivializability + class-update injectivity, with uniqueness holding vacuously where no admissible decomposition exists); the theorem does not derive which interventions are physically available on a given architecture — that is an empirical and architectural question (for language-model agents, the prompt-vs-weights question). The accounting parallels [Derivation L](#deriv-recursive-update): the partition is not discovered in the update algebra; it is carved by the intervention structure, and the theorem's content is that the carving, once committed to, is unique. Refusing the commitment is coherent, at the cost of the underdetermination Proposition 1 exhibits.
+
+#### Discussion
+
+**What this settles for [Formulation 6.2](#form-complete-agent-state).** The lift $X_t = (M_t, G_t)$ was introduced as a formulation choice with an unproved uniqueness conjecture. The resolution is asymmetric: as a claim about the update factorization alone, uniqueness is *false* (Proposition 1); as a claim relative to the goal-intervention family, it is *true* (Theorem 2), and the residual freedom is exactly a relabeling gauge on the goal fiber (Proposition 3). The formulation-choice honesty survives in refined form: what remains chosen is the intervention family; what is forced given it is everything else.
+
+**The counterfactual definition of belief is the unique completion of directed separation.** Proposition 1(b)'s moral is that beliefs and frozen purposes are congruent under every purely dynamical criterion — the single-agent factual trajectory never exercises the difference. The structure that *does* exercise it is goal-variation, and Theorem 2(iii) says the quotient by goal-variation is the only admissible epistemic component. Read as methodology: defining $M_t$ counterfactually — the invariant of the state under interventions on what the agent wants — is not a stylistic alternative to defining it structurally; the structural definition underdetermines and the counterfactual one is forced. This is the formal backbone for treating the coupling question as what carves the partition, rather than the partition as prior to the coupling question.
+
+**Pearl-rung reading.** The goal-intervention operators are internal to the agent formalism (no dependency on the causal-hierarchy machinery is needed for the derivations), but the correspondence is worth naming: distinguishing belief from frozen purpose is a rung-2 question about the agent — no statistic of one observed (rung-1) trajectory settles it, since Proposition 1(b)'s two readings agree on every factual trajectory; the goal-variation quotient is exactly what interventional access to the goal makes well-defined. The same shape as the framework's other identifiability results: the boundary is crossed by promoting the quantity in question (here the goal) to a settable parameter.
+
+**Restricted access is the operative case for real architectures.** For a Kalman + LQR agent, the reference input is a design parameter — full access, clean partition. For a language-model agent, prompt-level goal-setting is a rich-but-partial intervention family — maps that rewrite the prompt-goal while preserving goal-content baked into weights — and Corollary 4 predicts the honest consequence: weight-level purposeful content classifies as *belief* under prompt-level counterfactuals, provided compatibility (C) holds, which it does whenever the weight-level content is static over the analysis window (frozen weights: the within-session case). Where the preserved content evolves in a way that mixes with the intervenable goal — e.g. across fine-tuning on goal-conditioned interaction — (C) fails and the canonical carve degrades per the corollary's closing remark. The partition delivered by the counterfactual definition is only as fine as the intervention family that defines it, and only as clean as that family's compatibility with the goal dynamics — a scope statement, not a defect, and the reason the definition must always name its family.
+
 <a id="der-multi-timescale-stability"></a>
 
 ### Derived: Multi-Timescale Stability
@@ -1951,7 +2100,7 @@ C3 is a definitional commitment that produces the Markov structure. It cannot be
 **Type**: Derived
 **Status**: exact
 **Stage**: draft
-**Label**: M
+**Label**: N
 **Container**: appendix-chapter
 
 
@@ -2052,7 +2201,7 @@ With Wiener-process disturbance the manifold subtraction acquires an Itô correc
 
 **The load-bearing premise is (S2-fast)'s *uniformity*, not the sector inequality itself.** Because $(\alpha_1, R_1)$ are uniform over the slow scope region and $h$ absorbs all equilibrium motion, the entire interconnection burden lands on the single drift term $\epsilon L_h v_2^{\max}$; a per-frozen-$x_2$ sector with non-uniform constants would not suffice. This is the standard strength assumption of the singular-perturbation literature (it is essentially Saberi-Khalil's interconnection-condition pattern), and it is precisely where realistic fast levels — non-convex, multi-equilibrium — exit scope.
 
-Max attainable within current premises: exact (attained for Model D). Extensions that would widen scope rather than strengthen the claim: Model S (named above), jump-process slow dynamics, non-Euclidean metrics via [Result AJ](#result-contraction-template)'s (CT2).
+Max attainable within current premises: exact (attained for Model D). Extensions that would widen scope rather than strengthen the claim: Model S (named above), jump-process slow dynamics, non-Euclidean metrics via [Result AK](#result-contraction-template)'s (CT2).
 
 #### Discussion
 
@@ -2076,7 +2225,7 @@ Max attainable within current premises: exact (attained for Model D). Extensions
 **Type**: Sketch
 **Status**: sketch
 **Stage**: draft
-**Label**: N
+**Label**: O
 **Container**: appendix-chapter
 
 
@@ -2123,7 +2272,7 @@ Why this matters enough to surface rather than leave as a soft ledger row: the g
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: O
+**Label**: P
 **Container**: appendix-chapter
 
 
@@ -2321,7 +2470,7 @@ holds in both continuous time (via [Derivation A](#deriv-sector-condition)) and 
 **Type**: Detail
 **Status**: exact
 **Stage**: draft
-**Label**: P
+**Label**: Q
 **Container**: appendix-chapter
 
 
@@ -2461,13 +2610,13 @@ $$\delta_{k+1} = (1 - \eta^\ast)\delta_k + w_k$$
 
 which is an AR(1) process with coefficient $\lambda = 1 - \eta^\ast$.
 
-[Derivation O](#deriv-discrete-sector-condition) proves the formal connection:
+[Derivation P](#deriv-discrete-sector-condition) proves the formal connection:
 
 **Model D.** The discrete and continuous steady states are *identical* — the fluid-limit gap is exactly zero. Both give $R^\ast = \rho/\alpha$. The discrete form has $\alpha = (1 - \lvert\lambda\rvert)/\eta^\ast = (1 - \lvert 1 - \eta^\ast\rvert)/\eta^\ast$, which equals $1$ (hence $\alpha_{\text{continuous}} = \nu \cdot 1 = \mathcal{T}$) when $0 \lt \eta^\ast \lt 1$.
 
-**Model S.** The discrete steady-state variance is $\sigma_{\text{step}}^2 / (1 - \lambda_{\text{eff}}^2)$, which recovers the continuous result $n\sigma_w^2/(2\mathcal{T})$ in the fluid limit ($\eta^\ast \to 0$, $\nu \to \infty$, $\nu\eta^\ast = \mathcal{T}$ fixed). The variance gap is $O(\eta^\ast c_{\max}^2/c_{\min}^2) = O(c_{\max}^2/(c_{\min}^2\,\nu))$ — quantitatively small whenever $c_{\max}^2/(c_{\min}^2\,\nu) \ll 1$. See [Derivation O](#deriv-discrete-sector-condition) for the leading-order Taylor expansion that gives this scaling.
+**Model S.** The discrete steady-state variance is $\sigma_{\text{step}}^2 / (1 - \lambda_{\text{eff}}^2)$, which recovers the continuous result $n\sigma_w^2/(2\mathcal{T})$ in the fluid limit ($\eta^\ast \to 0$, $\nu \to \infty$, $\nu\eta^\ast = \mathcal{T}$ fixed). The variance gap is $O(\eta^\ast c_{\max}^2/c_{\min}^2) = O(c_{\max}^2/(c_{\min}^2\,\nu))$ — quantitatively small whenever $c_{\max}^2/(c_{\min}^2\,\nu) \ll 1$. See [Derivation P](#deriv-discrete-sector-condition) for the leading-order Taylor expansion that gives this scaling.
 
-**Fluid-limit validity.** The ODE approximation is formally justified by the fluid limit theorem in [Derivation O](#deriv-discrete-sector-condition) (conditional on Lipschitz regularity of $F_d$). The approximation is most accurate when $\eta^\ast \ll 1$ (the small-gain regime). It is least accurate during initial transients when $\eta^\ast$ is large, but this phase is short-lived and the transient error is bounded by $O(\eta^\ast c_{\max} / \nu^{1/2})$.
+**Fluid-limit validity.** The ODE approximation is formally justified by the fluid limit theorem in [Derivation P](#deriv-discrete-sector-condition) (conditional on Lipschitz regularity of $F_d$). The approximation is most accurate when $\eta^\ast \ll 1$ (the small-gain regime). It is least accurate during initial transients when $\eta^\ast$ is large, but this phase is short-lived and the transient error is bounded by $O(\eta^\ast c_{\max} / \nu^{1/2})$.
 
 ##### 7. Adversarial coupling in the linear case
 
@@ -2493,11 +2642,11 @@ Under symmetric coupling ($\gamma_A \approx \gamma_B$), tempo advantage squares:
 
 **Why the squared law.** The exponent 2 arises because the $1/\mathcal{T}$ steady-state scaling appears in both numerator (faster agent generates more disturbance) and denominator (faster agent corrects better): one power from the coupling, one from the steady-state. Under Model S (stochastic coupling, $1/\sqrt{\mathcal{T}}$ scaling), the exponent reduces to $3/2$. See [Observation 16.3](#result-adversarial-exponent-regimes) for the full regime analysis.
 
-**Simulation validation.** Variant A confirmed $b = 1.999$ (Model D, coupling-dominant). Variants C-D confirmed $b = 1.481$ (Model S, coupling-dominant). Both within numerical precision of the derived values. See [Detail AY](#obs-section-i-validation-simulations).
+**Simulation validation.** Variant A confirmed $b = 1.999$ (Model D, coupling-dominant). Variants C-D confirmed $b = 1.481$ (Model S, coupling-dominant). Both within numerical precision of the derived values. See [Detail AZ](#obs-section-i-validation-simulations).
 
 #### Epistemic Status
 
-*Exact for the linear case.* The linear ODE is a standard first-order linear system; the solutions (transient and steady-state, both Model D and Model S) are textbook results for the Ornstein-Uhlenbeck process and its deterministic analog. The sector-condition parameters ($\alpha = \mathcal{T}$, $R \to \infty$) are exact when the correction function is linear. The discrete-time connection is exact (zero gap for Model D, $O(\eta^\ast)$ gap for Model S — see [Derivation O](#deriv-discrete-sector-condition) for the leading-order Taylor expansion). The adversarial scaling law ($b = 2$ for Model D, $b = 3/2$ for Model S) is derived and simulation-validated.
+*Exact for the linear case.* The linear ODE is a standard first-order linear system; the solutions (transient and steady-state, both Model D and Model S) are textbook results for the Ornstein-Uhlenbeck process and its deterministic analog. The sector-condition parameters ($\alpha = \mathcal{T}$, $R \to \infty$) are exact when the correction function is linear. The discrete-time connection is exact (zero gap for Model D, $O(\eta^\ast)$ gap for Model S — see [Derivation P](#deriv-discrete-sector-condition) for the leading-order Taylor expansion). The adversarial scaling law ($b = 2$ for Model D, $b = 3/2$ for Model S) is derived and simulation-validated.
 
 **What is exact vs. what is an approximation.** The linear ODE is exact for systems with linear correction dynamics (Kalman, Beta-Bernoulli, quadratic loss). For nonlinear systems, the linear ODE is a local Taylor approximation valid near the steady state. The sector-condition framework ( [Result 4.5](#result-sector-condition-stability), [Derivation A](#deriv-sector-condition)) is the general treatment; this appendix derives what falls out when the sector bounds coincide.
 
@@ -2509,7 +2658,7 @@ Under symmetric coupling ($\gamma_A \approx \gamma_B$), tempo advantage squares:
 
 **Why this appendix exists.** The linear ODE in [Hypothesis 3.10](#hyp-mismatch-dynamics) is labeled as a hypothesis and described as a "first-order approximation." That is correct for the general case. But for agents with linear correction dynamics, the ODE is not an approximation at all -- it is exact. This appendix serves two roles: (1) providing the complete derivation that [Hypothesis 3.10](#hyp-mismatch-dynamics) points to rather than carrying inline, and (2) making precise when the "approximation" is exact and when it genuinely introduces error.
 
-**Pedagogical value.** The linear case is the entry point for understanding AAT's mismatch dynamics. The closed-form solutions (exponential convergence, ratio steady state, squared scaling law) build intuition that the general sector-condition results ( [Result 4.5](#result-sector-condition-stability)) cannot provide -- Lyapunov gives bounds and existence, not quantitative trajectories. The linear treatment also connects directly to the AR(1) simulation framework ( [Detail AY](#obs-section-i-validation-simulations)) and classical control theory (PI controllers, Kalman filters).
+**Pedagogical value.** The linear case is the entry point for understanding AAT's mismatch dynamics. The closed-form solutions (exponential convergence, ratio steady state, squared scaling law) build intuition that the general sector-condition results ( [Result 4.5](#result-sector-condition-stability)) cannot provide -- Lyapunov gives bounds and existence, not quantitative trajectories. The linear treatment also connects directly to the AR(1) simulation framework ( [Detail AZ](#obs-section-i-validation-simulations)) and classical control theory (PI controllers, Kalman filters).
 
 **Speed-quality substitutability.** From $\mathcal{T} = \nu \cdot \eta^\ast$ (single channel): doubling event rate $\nu$ has the same effect on $\lVert\delta\rVert_{ss}$ as doubling update quality $\eta^\ast$. They are multiplicative when both improve: 50% improvement in each yields $1.5 \times 1.5 = 2.25\times$, not $3\times$. This is the formal analog of Boyd's insight that Orient quality often matters more than raw OODA speed.
 
@@ -2523,7 +2672,7 @@ Under symmetric coupling ($\gamma_A \approx \gamma_B$), tempo advantage squares:
 **Type**: Derivation
 **Status**: conditional
 **Stage**: claims-verified
-**Label**: Q
+**Label**: R
 **Container**: appendix-chapter
 
 
@@ -2725,11 +2874,11 @@ The parallel to Cox's theorem is now tighter than previously stated: Cox's theor
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: R
+**Label**: S
 **Container**: appendix-chapter
 
 
-Complete verification that specific strategy update dynamics satisfy the sector condition from [Derivation A](#deriv-sector-condition), backing the schema proposed in [Proposed Schema 9.10](#schema-strategy-persistence). Seven propositions are proved across distinct topologies. **B.1 (single edge):** sector condition holds globally with $\alpha_\Sigma = 1/(n+1)$, tight. **B.2 (two-edge AND chain, observable intermediate):** weakest-link result with $\alpha_\Sigma = \min(1/(n_1+1), \theta_1/(n_2+1))$ — the evidence-starvation effect on the downstream edge attenuates by the upstream success probability. **B.3 (two-edge AND chain, unobservable intermediate):** per-edge sector condition *fails* (the marginal point estimate is biased), but plan-level tracking recovers persistence with $\alpha_{\Sigma,\text{plan}} = 1/(n_\Phi+1)$ at the cost of per-edge diagnostic resolution. **B.4 (two-arm OR, $\varepsilon$-greedy):** *exploration-gated* weakest-link — pure greedy *fails* the sector condition; minimum exploration is required (the sufficient-exploration condition from [Proposed Schema 9.10](#schema-strategy-persistence)).
+Complete verification that specific strategy update dynamics satisfy the sector condition from [Derivation A](#deriv-sector-condition), backing the schema proposed in [Proposed Schema 9.10](#schema-strategy-persistence). Seven propositions are proved across distinct topologies. **B.1 (single edge):** sector condition holds globally with $\alpha_\Sigma = 1/(n+1)$, tight. **B.2 (two-edge AND chain, observable intermediate):** weakest-link result with $\alpha_\Sigma = \min(1/(n_1+1), \theta_1/(n_2+1))$ — the evidence-starvation effect on the downstream edge attenuates by the upstream success probability. **B.3 (two-edge AND chain, unobservable intermediate):** per-edge sector condition *fails* (the marginal point estimate is biased), but plan-level tracking recovers persistence with $\alpha_{\Sigma,\text{plan}} = 1/(n_\Phi+1)$ at the cost of per-edge diagnostic resolution. **B.4 (two-arm OR, $\varepsilon$-greedy):** *exploration-gated* weakest-link — pure greedy *fails* the sector condition; persistence requires exploration inside a two-sided interval, enough for the explored arm and little enough for the greedy one (the sufficient-exploration condition (SA3) from [Proposed Schema 9.10](#schema-strategy-persistence)).
 
 **B.5 (sector transfer to plan-confidence error):** the sector condition transfers from per-edge credence space to *strategy-plan-confidence error* via the Jacobian — and the transfer is *credit-assignment-free*, requiring only status propagation. **B.6 (L1 augmented DAG, strict-prerequisite common cause):** persistence transfers with three-way gating (condition-testing rate, evidence-starvation factor, exploration-gating factor) — the formal extension to causally-insufficient DAGs handled by augmentation. **B.7 (L1' mixture form, soft-facilitator common cause):** persistence holds under *observable* common cause via five-way gating, and is *refuted* under unobservable common cause by the Cramér-Rao floor (the second formal instance of `#disc-identifiability-floor`).
 
@@ -2750,7 +2899,7 @@ $$\Delta \hat p_k = \frac{y_k - \hat p_k}{n_k + 1}, \qquad \eta_k = \frac{1}{n_k
 
 The single-step update matches the gain-based form from [Hypothesis 9.4](#hyp-edge-update-via-gain) with $\eta_{\text{edge}} = 1/(n_k + 1)$.
 
-**Parameterization note.** Propositions B.1–B.7 below are stated in the *moment-parameter* (probability-space) coordinate $\hat p_k \in [0, 1]$, consistent with the Beta-Bernoulli conjugate presentation. The log-odds coordinate $\lambda_k = \log(\hat p_k / (1 - \hat p_k)) \in \mathbb{R}$ is the unique additive-evidence presentation forced by the evidential-additivity axiom ( [Derivation U](#deriv-edge-update-natural-parameter)); the sector-parameter content of each proposition is Fisher-equivalent in either coordinate, so the derivations are retained in moment-parameter form for algebraic tightness ($\eta_k = 1/(n_k + 1)$ is exact in probability space). The log-odds coordinate becomes load-bearing in [Discussion 9.6](#disc-credit-assignment-boundary) for the continuous-gradient signal function, where the probability-space presentation would exhibit a mechanical domain break.
+**Parameterization note.** Propositions B.1–B.7 below are stated in the *moment-parameter* (probability-space) coordinate $\hat p_k \in [0, 1]$, consistent with the Beta-Bernoulli conjugate presentation. The log-odds coordinate $\lambda_k = \log(\hat p_k / (1 - \hat p_k)) \in \mathbb{R}$ is the unique additive-evidence presentation forced by the evidential-additivity axiom ( [Derivation V](#deriv-edge-update-natural-parameter)); the sector-parameter content of each proposition is Fisher-equivalent in either coordinate, so the derivations are retained in moment-parameter form for algebraic tightness ($\eta_k = 1/(n_k + 1)$ is exact in probability space). The log-odds coordinate becomes load-bearing in [Discussion 9.6](#disc-credit-assignment-boundary) for the continuous-gradient signal function, where the probability-space presentation would exhibit a mechanical domain break.
 
 Strategic mismatch per edge is $\delta_k = \hat p_k - \theta_k$. The sector-condition framework ( [Formulation 4.3](#form-sector-condition)) requires: (SA1) $F(\mathbf{0}) = \mathbf{0}$, (SA2') $\boldsymbol{\delta}^T \mathbf{F}(\boldsymbol{\delta}) \geq \alpha_\Sigma \lVert\boldsymbol{\delta}\rVert^2$ within a region $\mathcal B_R$.
 
@@ -2806,6 +2955,36 @@ The expected Lyapunov derivative $\mathbb{E}[\Delta V] \lt 0$ whenever:
 $$\lvert\delta_\Sigma\rvert \gt \sqrt{\frac{\theta(1-\theta)}{2n+1}}$$
 
 The stochastic noise floor decreases as $O(1/\sqrt{n})$ --- the standard Bayesian posterior concentration rate. $\square$
+
+
+#### Proposition B.1F: Single Edge under Exponential Forgetting
+
+**Setup.** As B.1, with the pseudo-counts discounted by $\lambda \in [0,1)$ before each observation is added (the standard exponential-forgetting recurrence; Ljung 1987):
+
+*[Definition (Discounted Beta-Bernoulli update)]*
+
+$$\alpha \mapsto \lambda\,\alpha + y, \qquad \beta \mapsto \lambda\,\beta + (1-y)$$
+
+**Statement.** Let $n_t$ be the count after the $t$-th update and $n_{\text{eff}} = 1/(1-\lambda)$. Then:
+
+*[Derived (Conditional on Beta-Bernoulli model + exponential forgetting)]*
+
+1. The per-observation gain is $g_t = 1/n_t$, and the count dynamics $n_t = \lambda n_{t-1} + 1$ are deterministic (independent of the data).
+2. At the stationary count the gain is exactly $1-\lambda$, so the sector parameter is $\alpha_\Sigma^{\text{ss}} = 1-\lambda$, tight. Initialized at $n_{\text{eff}}$, the estimator is the exponentially weighted moving average $\hat p_{t+1} = \lambda\hat p_t + (1-\lambda)\,y_t$.
+3. **Trajectory guarantee.** Under Model D drift $\lvert\theta_{t+1} - \theta_t\rvert \le \rho_\Sigma$, if the initial count satisfies $n_0 \le n_{\text{eff}}$, the mean mismatch $m_t = \mathbb{E}[\hat p_t] - \theta_t$ obeys $\sup_t \lvert m_t\rvert \le \max(\lvert m_0\rvert,\ \rho_\Sigma/(1-\lambda))$ for all $t$, not only asymptotically. If $n_0 \gt n_{\text{eff}}$ the gains rise toward $1-\lambda$ from below and the bound holds asymptotically.
+4. **Reachable region.** Some $\lambda \in [0,1)$ satisfies $1-\lambda \gt \rho_\Sigma/R_\Sigma$ if and only if $\rho_\Sigma \lt R_\Sigma$, approached as $\lambda \to 0$ (where $\hat p = y$, gain $1$).
+
+**Proof.** With $n = \alpha + \beta$ and $\hat p = \alpha/n$ before observing $y$:
+
+*[Derived (Proof Step)]*
+
+$$\hat p' - \hat p = \frac{\lambda\alpha + y}{\lambda n + 1} - \frac{\alpha}{n} = \frac{y - \hat p}{\lambda n + 1}$$
+
+so the gain is the reciprocal of the post-update count $n' = \lambda n + 1$. B.1's $\eta = 1/(n+1)$ is the same statement without discounting: in both, the denominator is the count the new observation is added to *plus one*, and under discounting that count is $\lambda n$, not $n$. The count recursion has fixed point $n_{\text{eff}} = 1/(1-\lambda)$, where $\lambda n_{\text{eff}} + 1 = n_{\text{eff}}$ and hence $g = 1-\lambda$. The expected correction is $\mathbb{E}[\Delta\hat p] = (1-\lambda)(\theta - \hat p)$, exactly linear, so the B.1 sector product gives $\alpha_\Sigma^{\text{ss}} = 1-\lambda$ with equality. Item 3: since $g_t$ is deterministic, $m_{t+1} = (1-g_t)\,m_t - d_t$ exactly, with $d_t = \theta_{t+1} - \theta_t$. If $n_0 \le n_{\text{eff}}$ then $n_t$ increases monotonically to $n_{\text{eff}}$, so $g_t \ge 1-\lambda$; if $\lvert m_t\rvert \le M$ with $M \ge \rho_\Sigma/(1-\lambda)$, then $\lvert m_{t+1}\rvert \le \lambda M + \rho_\Sigma \le M$. Item 4 is item 2 solved for $\lambda$. $\square$
+
+**What the reachable region is.** $\rho_\Sigma \lt R_\Sigma$ is not specific to forgetting. Under Model D a scalar linear corrector of gain $g$ has ultimate bound $\rho/g$ for $g \le 1$ and $\rho/(2-g)$ for $g \in (1,2)$ ( [Derivation P](#deriv-discrete-sector-condition) DA.1), both at least $\rho$, with equality only at $g = 1$; and an innovation-form update $\hat p + g(y - \hat p)$ keeps $\hat p \in [0,1]$ for both outcomes only if $g \le 1$. So $\rho_\Sigma \lt R_\Sigma$ is the floor every admissible single-edge corrector faces, and exponential forgetting reaches it. Forgetting's structural role is the opposite boundary: at $\lambda = 1$ the gain $1/n_t \to 0$, and every positive $\rho_\Sigma$ is eventually fatal. Where a nontrivial cap on strategic persistence does appear is evidence allocation across edges that share one observation stream ( [Derivation T](#deriv-evidence-allocation-ceiling)).
+
+With a uniform prior ($n_0 = 2$) the all-time guarantee of item 3 needs $\lambda \ge 1/2$; for $\lambda \lt 1/2$ the gains start below $1-\lambda$ and approach it geometrically, so the guarantee is asymptotic. Initializing the count at $n_{\text{eff}}$ (or below it) makes it all-time for every $\lambda$.
 
 
 #### Proposition B.2: Two-Edge AND-Chain, Observable Intermediate ($A \to B \to G$, $B$ observed)
@@ -2950,11 +3129,13 @@ $$\alpha_\Sigma = \min\!\left(\frac{1-\varepsilon}{n_{\text{greedy}}+1},\;\min_{
 
 With optimal equal-rate exploration and equal experience: $\alpha_\Sigma = 1/(k(n+1))$. The sector parameter scales as $1/k$ --- each additional alternative dilutes correction capacity.
 
-**Condition (SA3).** For the sector condition to be satisfiable at all, the exploration rate must satisfy:
+**Condition (SA3).** Substituting B.4's $\alpha_\Sigma$ into the persistence threshold $\alpha_\Sigma \gt \rho_\Sigma/R_\Sigma$, the exploration rate must lie in a two-sided interval: high enough that the explored arm is corrected, low enough that the greedy arm still is:
 
-*[Derived (minimum exploration rate for persistence)]*
+*[Derived (admissible exploration interval for persistence)]*
 
-$$\varepsilon \gt \frac{\rho_\Sigma(n_{\max}+1)}{R_\Sigma}$$
+$$\frac{\rho_\Sigma(n_2+1)}{R_\Sigma} \;\lt\; \varepsilon \;\lt\; 1 - \frac{\rho_\Sigma(n_1+1)}{R_\Sigma}$$
+
+The interval is non-empty iff $\rho_\Sigma(n_1 + n_2 + 2) \lt R_\Sigma$. Under exponential forgetting with per-observation discounting at the stationary count (Prop B.1F), each pull lands with gain $1-\lambda$ and the interval becomes $\rho_\Sigma/((1-\lambda)R_\Sigma) \lt \varepsilon \lt 1 - \rho_\Sigma/((1-\lambda)R_\Sigma)$, non-empty iff $\rho_\Sigma \lt (1-\lambda)R_\Sigma/2$. No exploration rate and no update rule lifts the two-arm node past $\rho_\Sigma \lt R_\Sigma/2$ ( [Derivation T](#deriv-evidence-allocation-ceiling)).
 
 A purely greedy agent ($\varepsilon = 0$) violates the sector condition because the unchosen alternative's mismatch grows without correction. This is the structural justification for (SA3) in [Proposed Schema 9.10](#schema-strategy-persistence): OR-nodes require deliberate exploration to maintain strategic persistence.
 
@@ -3057,6 +3238,7 @@ The bottleneck is typically the explore action behind the condition: $\theta_C \
 | Case | Topology | $\alpha_\Sigma$ | SA1 | SA3 | Weakest link |
 |------|----------|-----------------|-----|-----|-------------|
 | **B.1** Single edge | $A \to G$ | $1/(n+1)$ | Yes | N/A | --- |
+| **B.1F** Single edge, exponential forgetting | $A \to G$ | $1-\lambda$ at the stationary count (exact) | Yes | N/A | --- |
 | **B.2** Two-edge, $B$ observable | $A \to B \to G$ (AND) | $\min(1/(n_1\!+\!1),\;\theta_1/(n_2\!+\!1))$ | Yes | N/A | Depth-gated (evidence starvation) |
 | **B.3** Two-edge, $B$ unobservable | $A \to B \to G$ (AND) | $1/(n_\Phi\!+\!1)$ (plan-level) | Per-edge: No ($O(1/n)$ bias); Plan: Yes | N/A | Credit-assignment collapse |
 | **B.4** Two-arm OR, $\varepsilon$-greedy | $A_1, A_2 \to G$ (OR) | $\min((1\!-\!\varepsilon)/(n_1\!+\!1),\;\varepsilon/(n_2\!+\!1))$ | Yes | Required | Exploration-gated |
@@ -3070,7 +3252,7 @@ The bottleneck is typically the explore action behind the condition: $\theta_C \
 
 - **Gain as sector parameter.** In every case, $\alpha_\Sigma$ is determined by the edge update gain $\eta_k = 1/(n_k+1)$, modulated by observability ($\theta_1$ attenuation in B.2), credit-assignment (plan-level collapse in B.3), action-selection policy ($\varepsilon$ in B.4), or a combination of these (B.6). The structural parallel between epistemic and strategic persistence is not an analogy --- it is a mathematical identity at the sector-framework level.
 - **Evidence starvation (AND-chains).** Downstream edges in AND-chains have correction rates attenuated by the product of upstream success probabilities. Depth increases fragility: $\alpha_\Sigma$ decays exponentially with chain depth.
-- **Exploration gating (OR-nodes).** Unchosen OR-alternatives receive zero correction. The sector condition requires deliberate exploration (SA3) at a rate exceeding $\rho_\Sigma(n_{\max}+1)/R_\Sigma$. Pure greedy policies fail.
+- **Exploration gating (OR-nodes).** Unchosen OR-alternatives receive zero correction. Persistence requires deliberate exploration (SA3) inside a two-sided interval: enough to correct the explored arm, little enough that the greedy arm is still corrected. Pure greedy policies fail.
 - **Three-way gating (L1 augmented).** When a common cause gates OR-alternatives, calibration faces condition testing, evidence starvation, and exploration gating simultaneously (B.6). The bottleneck is the least-explored action behind the rarest condition.
 - **Five-way gating (L1' mixture, observable $C$).** When the common cause is a *soft facilitator* ($\theta_{j\mid \neg C} \gt 0$) and is observable per trial, calibration faces five gating mechanisms simultaneously (B.7): condition testing, evidence starvation on each conditional branch ($C=1$ and $C=0$), and exploration gating on each branch. The bottleneck is whichever branch is rarer, modulated by exploration on that branch. **Identifiability obstruction under unobservable $C$:** without direct $C$-observation, the mixture parameters are non-identifiable from a single observation channel — the per-trial Fisher information matrix is rank 1 rather than rank $2K+1$, so by the Cramér-Rao bound (Cramér 1946, *Mathematical Methods of Statistics*, Princeton University Press) no unbiased online estimator on the joint conditional vector admits $\alpha \gt 0$. The agent must augment $C$-observability, run multi-child joint observations, or fall back to plan-level (L0-on-marginals) tracking.
 - **Gain-collapse threshold.** In all cases, increasing experience eventually violates persistence when the environment drifts. The critical experience level $n^\ast$ is inversely proportional to the drift rate $\rho_\Sigma$.
@@ -3336,6 +3518,7 @@ The segment carries derivations at three distinct strengths: (i) exact sector-pa
 | Beta-Bernoulli edge dynamics ($\Delta\hat p_k = (y_k - \hat p_k)/(n_k+1)$) | Conjugate-prior model; matches [Hypothesis 9.4](#hyp-edge-update-via-gain) | Formulation choice |
 | Regime-A adjustment: $\alpha_\Sigma^{\text{eff}} = \iota_{ij} \cdot \alpha_\Sigma^{\text{stated}}$ | Diagonal commutation across Props B.1–B.4, B.6; [Scope 9.5](#scope-edge-update-causal-validity) | Derived |
 | **B.1** Single-edge sector parameter $\alpha_\Sigma = 1/(n+1)$ | Expected Beta-Bernoulli update + sector product algebra | Proved (tight, conditional on Beta-Bernoulli) |
+| **B.1F** Single edge under exponential forgetting: gain $1/n_t$ (post-update count), stationary $\alpha_\Sigma^{\text{ss}} = 1-\lambda$, all-time mean-mismatch bound for $n_0 \le n_{\text{eff}}$ | Discounted-update algebra + Model-D induction | Proved (tight, conditional on Beta-Bernoulli + forgetting) |
 | **B.1** Stochastic ultimate bound $\lvert\delta\rvert \gt \sqrt{\theta(1-\theta)/(2n+1)}$ | Second-moment recursion + expected-Lyapunov decrement | Derived |
 | **B.2** Observable AND-chain sector parameter $\min(1/(n_1+1),\; \theta_1/(n_2+1))$ | Diagonal correction function; sector product algebra | Proved (conditional on Beta-Bernoulli + observable intermediate) |
 | **B.2** Depth-$d$ generalization $\alpha_\Sigma = \min_k \prod_{j \lt k}\theta_j/(n_k+1)$ | Iteration of B.2 pattern under observable intermediates | Derived |
@@ -3345,7 +3528,7 @@ The segment carries derivations at three distinct strengths: (i) exact sector-pa
 | **B.4(a)** Pure-greedy OR ($\varepsilon=0$) violates sector condition | Counterexample at $\delta_1 = 0,\,\delta_2 \neq 0$ | Derived as refutation |
 | **B.4(b)** $\varepsilon$-greedy sector parameter $\min((1-\varepsilon)/(n_1+1),\; \varepsilon/(n_2+1))$ | Policy-weighted correction; sector product algebra | Proved (conditional on Beta-Bernoulli + $\varepsilon$-greedy) |
 | **B.4** Optimal exploration $\varepsilon^\ast = (n_2+1)/(n_1+n_2+2)$ | Term-equalization in $\min$ | Derived |
-| **B.4** Minimum exploration rate (SA3 requirement) $\varepsilon \gt \rho_\Sigma(n_{\max}+1)/R_\Sigma$ | Substitution into persistence threshold $\alpha_\Sigma \gt \rho_\Sigma/R_\Sigma$ | Derived |
+| **B.4** Admissible exploration interval (SA3 requirement) $\rho_\Sigma(n_2+1)/R_\Sigma \lt \varepsilon \lt 1 - \rho_\Sigma(n_1+1)/R_\Sigma$ | Substitution into persistence threshold $\alpha_\Sigma \gt \rho_\Sigma/R_\Sigma$ | Derived |
 | **B.5a** Linear credence-to-value transfer $\alpha_s = \alpha_c$ (Jacobian cancels) | Algebraic cancellation of $\mathbf{J}\mathbf{J}^T$ | Proved (exact, DAG-structure independent) |
 | **B.5b** Componentwise nonlinear transfer $\alpha_s = \alpha_c$ | Per-component sector bound + monotone AND/OR ($\mathbf{J}\geq 0$) | Proved (conditional on componentwise update + non-negative Jacobian) |
 | **B.5b** Coupled-edge Cauchy-Schwarz bound $\alpha_s \geq \alpha_c/\kappa(\mathbf{J})^2$ | Cauchy-Schwarz on $\mathbf{J}^T\mathbf F_c$ and $\mathbf{J}^T\boldsymbol\delta_c$ | Derived (conditional on Jacobian regularity *and* an SA1-preserving attribution scheme) |
@@ -3372,11 +3555,11 @@ The segment carries derivations at three distinct strengths: (i) exact sector-pa
 
 #### Epistemic Status
 
-*Conditional on the Beta-Bernoulli model.* Propositions B.1, B.2, B.4, and B.6 are *derived*: the sector-condition verification is exact algebra under the stated generative model. The persistence conditions follow by direct application of Proposition A.1 ( [Derivation A](#deriv-sector-condition)), which is independently established. Proposition B.3(a) (the SA1 violation) is also derived; B.3(b) reduces to B.1 by construction. Proposition B.5a (the credence-to-value bridge for linear correction) is *exact* — the Jacobian cancellation is algebraic, independent of DAG structure. Proposition B.5b (the componentwise nonlinear transfer) is *exact under non-negative Jacobian* — algebraic, no condition-number penalty. The coupled-edge case of B.5b is *conditional on (i) Jacobian regularity* — the condition-number bound requires $\sigma_{\min}(\mathbf{J}) \gt 0$, which holds for non-degenerate DAGs — *and (ii) an SA1-preserving attribution scheme* (gradient-based, Prop B.5d); marginal Bayesian attribution on coupled edges does not admit the Cauchy-Schwarz bound because SA1 fails upstream. Proposition B.5d (gradient-based attribution) is *derived* — SA1 verification is algebraic and the sector-parameter bound follows from standard singular-value analysis of the Jacobian.
+*Conditional on the Beta-Bernoulli model.* Propositions B.1, B.1F, B.2, B.4, and B.6 are *derived*: the sector-condition verification is exact algebra under the stated generative model. The persistence conditions follow by direct application of Proposition A.1 ( [Derivation A](#deriv-sector-condition)), which is independently established. Proposition B.3(a) (the SA1 violation) is also derived; B.3(b) reduces to B.1 by construction. Proposition B.5a (the credence-to-value bridge for linear correction) is *exact* — the Jacobian cancellation is algebraic, independent of DAG structure. Proposition B.5b (the componentwise nonlinear transfer) is *exact under non-negative Jacobian* — algebraic, no condition-number penalty. The coupled-edge case of B.5b is *conditional on (i) Jacobian regularity* — the condition-number bound requires $\sigma_{\min}(\mathbf{J}) \gt 0$, which holds for non-degenerate DAGs — *and (ii) an SA1-preserving attribution scheme* (gradient-based, Prop B.5d); marginal Bayesian attribution on coupled edges does not admit the Cauchy-Schwarz bound because SA1 fails upstream. Proposition B.5d (gradient-based attribution) is *derived* — SA1 verification is algebraic and the sector-parameter bound follows from standard singular-value analysis of the Jacobian.
 
 All results use the *expected-value* sector condition. A full stochastic treatment (Foster-Lyapunov or supermartingale convergence) would give probability bounds rather than expected-value bounds. The expected-value analysis gives the correct asymptotic behavior (posterior concentration at $O(1/\sqrt{n})$) but does not prove almost-sure convergence. For the stationary Beta-Bernoulli case, almost-sure convergence is guaranteed by the standard Bayesian consistency theorem independently of this derivation.
 
-The time-varying $\alpha_\Sigma$ issue remains: since $n_k$ increases with each observation, $\alpha_\Sigma$ decreases over time. The sector-condition framework assumes constant $\alpha$. The results here give an *instantaneous* persistence check at the current experience level, not a trajectory guarantee. Experience discounting (exponential forgetting with factor $\lambda$) stabilizes $\alpha_\Sigma$ at the exact value $(1-\lambda)/(2-\lambda)$ from $1/(n_{\text{eff}}+1)$ with $n_{\text{eff}} = 1/(1-\lambda)$ — with the simpler $\approx 1-\lambda$ as the slow-forgetting asymptote $(\lambda \to 1)$ — yielding the persistence requirement $(1-\lambda)/(2-\lambda) \gt \rho_\Sigma/R_\Sigma$ (full treatment in [Proposed Schema 9.10](#schema-strategy-persistence)).
+Without forgetting, $\alpha_\Sigma$ is time-varying: since $n_k$ increases with each observation, $\alpha_\Sigma$ decreases over time, while the sector-condition framework assumes constant $\alpha$. Props B.1–B.4 and B.6–B.7 therefore give an *instantaneous* persistence check at the current experience level. Prop B.1F supplies the trajectory version for the single edge: under exponential forgetting the gain is deterministic and equals $1-\lambda$ exactly at the stationary count, giving the persistence requirement $1-\lambda \gt \rho_\Sigma/R_\Sigma$ with an all-time guarantee when the count is initialized at or below $n_{\text{eff}}$ (*exact* under the Beta-Bernoulli model). For intermittently observed edges (B.2, B.4, B.6, B.7) the corresponding statement depends on whether the discount is applied per observation of the edge or per time step; the per-observation case is exact (at the stationary count, $\pi(1-\lambda)$ per step for an edge observed with probability $\pi$), and the cap on what any convention can reach is [Derivation T](#deriv-evidence-allocation-ceiling).
 
 **What remains open:**
 
@@ -3399,112 +3582,114 @@ The time-varying $\alpha_\Sigma$ issue remains: since $n_k$ increases with each 
 
 **Inter-edge coupling is the true fragility, not nonlinearity or DAG depth.** Proposition B.5b shows that nonlinear componentwise corrections transfer losslessly through any non-negative Jacobian — the $\kappa(\mathbf{J})^2$ penalty arises only when corrections are *coupled* across edges. This refines the earlier qualitative argument from [Derived 8.2](#der-chain-confidence-decay): the structural pressure toward shallow, balanced strategies is not about depth per se but about the coupling that deep or complex structures tend to introduce. A deep AND-chain with fully observable intermediates (B.2) has componentwise corrections and transfers losslessly despite high depth. The same chain with unobservable intermediates (B.3) has coupled corrections and incurs the penalty. The distinction is observability-mediated coupling, not topological complexity.
 
-<a id="deriv-strategic-persistence-hard-ceiling"></a>
+<a id="deriv-evidence-allocation-ceiling"></a>
 
-### Derivation: Hard Ceiling on Strategic-Persistence Reachability under Exponential Forgetting
+### Derivation: Evidence-Allocation Ceiling on Strategic Persistence
 
-**Slug**: `deriv-strategic-persistence-hard-ceiling`
+**Slug**: `deriv-evidence-allocation-ceiling`
 **Type**: Derivation
 **Status**: exact
 **Stage**: draft
-**Label**: S
+**Label**: T
 **Container**: appendix-chapter
 
 
-The strategic-persistence schema's instantaneous persistence form $\alpha_\Sigma \gt \rho_\Sigma/R_\Sigma$ ( [Proposed Schema 9.10](#schema-strategy-persistence)), instantiated under Beta-Bernoulli edge dynamics with exponential forgetting at rate $\lambda \in (0,1)$, has a sharp structural cap at $\rho_\Sigma/R_\Sigma = 1/2$: no $\lambda$ satisfies the prerequisite when strategic disturbance reaches half the strategic reserve. The schema's reachable persistence region is exactly the open half-plane $\rho_\Sigma \lt R_\Sigma/2$.
+When strategy edges that must all stay calibrated share one observation stream, each edge's credence lags a drifting truth by at least the drift accumulated since that edge was last observed, on average $\rho_\Sigma/\pi_i$ for an edge observed with probability $\pi_i$ per step. No update rule that averages observed outcomes, and no forgetting rate, does better than trusting the most recent observation, which attains the bound. A $K$-alternative OR node can therefore keep every alternative calibrated only if $\rho_\Sigma \lt R_\Sigma/K$, and a two-arm node only if $\rho_\Sigma \lt R_\Sigma/2$. The cap comes from how evidence is allocated, so the update mechanism cannot remove it.
 
 #### Formal Expression
 
 ##### Setup
 
-Per [Derivation R](#deriv-edge-credence-dynamics) Prop B.1, the Beta-Bernoulli edge update with $n$ accumulated pseudo-counts gives sector parameter $\alpha_\Sigma = 1/(n+1)$. Without forgetting, $n \to \infty$ and $\alpha_\Sigma \to 0$ for every edge asymptotically — so the schema's instantaneous persistence form eventually fails under any positive disturbance rate. *Exponential forgetting* with discount $\lambda \in (0,1)$ replaces the raw update with the discounted recurrence:
+*[Formulation (allocation setting)]*
 
-*[Definition (Discounted Beta-Bernoulli Update)]*
+- **Edges and drift.** Edges $i = 1, \dots, K$ have true success probabilities $\theta_{i,t}$ that drift under Model D, $\lvert\theta_{i,t+1} - \theta_{i,t}\rvert \le \rho_\Sigma$ per time step, whether or not the edge is observed that step.
+- **Fixed allocation.** At step $s$ edge $i$ is observed with probability $\pi_i$, independently of all outcomes and of the past. An observation reports $y_{i,s} \sim \text{Bernoulli}(\theta_{i,s})$ and is incorporated into $\hat p_{i,s+1}$. For one observation per step routed to one alternative of an OR node, $\sum_i \pi_i \le 1$. This is the allocation of [Derivation S](#deriv-edge-credence-dynamics) Prop B.4 ($\pi = (1-\varepsilon, \varepsilon)$); for a downstream AND-chain edge with observable intermediates (Prop B.2) the edge is observed when every upstream link fires, so $\pi_k = \prod_{j \lt k}\theta_j$.
+- **Estimator class $\mathcal C$.** $\hat p_{i,t} = w_0\,\hat p_{i,0} + \sum_{s \in O_{i,t}} w_s\,y_{i,s}$, with $w \ge 0$, $\sum w = 1$, and the weights determined by the observation history $O_{i,t}$ (the steps before $t$ at which edge $i$ was observed), not by the outcomes. $\mathcal C$ contains Beta-Bernoulli updating with or without exponential forgetting, with the discount applied per observation or per time step (the counts depend only on $O_{i,t}$), every innovation-form update $\hat p + g(y - \hat p)$ with $g \in [0,1]$ set by the observation history, and the last-observation rule $\hat p_{i,t} = y_{i,\max O_{i,t}}$.
+- **Mismatch and target.** $m_{i,t} = \mathbb{E}[\hat p_{i,t}] - \theta_{i,t}$, the mean-dynamics reading of Props B.1–B.4. Persistence of the node requires every edge's mean mismatch to stay within the reserve $R_\Sigma$: (SA3) of [Proposed Schema 9.10](#schema-strategy-persistence), which asks that every OR alternative be kept calibrated.
+- **Age.** $A_{i,t} = t - \max O_{i,t}$ if edge $i$ has been observed before $t$, and $A_{i,t} = t$ otherwise.
 
-$$\alpha_k \mapsto \lambda\,\alpha_k + y_k, \qquad \beta_k \mapsto \lambda\,\beta_k + (1 - y_k)$$
+##### Proposition EA.1 (Allocation lag)
 
-following the standard adaptive-control / online-learning treatment (Ljung 1987).
+*[Derived (Conditional on fixed allocation + estimator class $\mathcal C$ + Model D)]*
 
-##### Proposition C.1 (Steady-State Sector Parameter)
+Start calibrated, $\hat p_{i,0} = \theta_{i,0}$. Under constant-sign drift $\theta_{i,s+1} - \theta_{i,s} = \rho_\Sigma$, every estimator in $\mathcal C$ satisfies
 
-*[Derived (Conditional on Beta-Bernoulli edges + exponential forgetting)]*
+$$m_{i,t} \;\le\; -\rho_\Sigma\,\mathbb{E}[A_{i,t}], \qquad \mathbb{E}[A_{i,t}] = \frac{1 - (1-\pi_i)^t}{\pi_i} \;\uparrow\; \frac{1}{\pi_i}.$$
 
-Under the discounted Beta-Bernoulli recurrence, the steady-state sector parameter at the fixed point $\hat p = \theta$ is:
+The last-observation rule attains it: under constant drift its mean mismatch is exactly $-\rho_\Sigma\,\mathbb{E}[A_{i,t}]$, and under any drift with $\lvert\theta_{i,s+1} - \theta_{i,s}\rvert \le \rho_\Sigma$ it satisfies $\lvert m_{i,t}\rvert \le \rho_\Sigma/\pi_i$ for all $t$.
 
-$$\alpha_\Sigma^{\text{ss}} = \frac{1-\lambda}{2-\lambda}$$
+**Proof.** The allocation is independent of the outcomes, so conditional on $O_{i,t}$ each observed $y_{i,s}$ still has mean $\theta_{i,s}$, and since the weights are fixed by $O_{i,t}$,
 
-*Proof.* At a fixed point in expectation, the discounted recurrence stabilizes when each pseudo-count equals its own contribution rate divided by the dissipation:
+$$\mathbb{E}[\hat p_{i,t} \mid O_{i,t}] - \theta_{i,t} = -\Big(w_0\,(\theta_{i,t} - \theta_{i,0}) + \sum_{s \in O_{i,t}} w_s\,(\theta_{i,t} - \theta_{i,s})\Big).$$
 
-$$\alpha^\ast = \lambda\,\alpha^\ast + \theta \implies \alpha^\ast = \frac{\theta}{1-\lambda}, \qquad \beta^\ast = \lambda\,\beta^\ast + (1-\theta) \implies \beta^\ast = \frac{1-\theta}{1-\lambda}$$
+Under constant drift $\theta_{i,t} - \theta_{i,s} = \rho_\Sigma(t-s)$. Every observed $s$ satisfies $t - s \ge A_{i,t}$, and the prior term has $t - 0 \ge A_{i,t}$. The weights sum to one, so the bracket is at least $\rho_\Sigma A_{i,t}$. Taking expectations over $O_{i,t}$ gives the bound. For $k \le t$, $A_{i,t} \ge k$ iff edge $i$ was unobserved at steps $t-1, \dots, t-k+1$, which has probability $(1-\pi_i)^{k-1}$; summing $\mathbb{E}[A_{i,t}] = \sum_{k=1}^{t}(1-\pi_i)^{k-1}$ gives the closed form. For the last-observation rule the bracket is exactly $\theta_{i,t} - \theta_{i,\max O}$, which is $\rho_\Sigma A_{i,t}$ under constant drift and at most $\rho_\Sigma A_{i,t}$ in magnitude under any bounded drift. $\square$
 
-The effective sample size is the sum:
+##### Corollary EA.2 (Reachable region)
 
-$$n_{\text{eff}} = \alpha^\ast + \beta^\ast = \frac{1}{1-\lambda}$$
+*[Derived (Conditional on Proposition EA.1)]*
 
-Substituting into Prop B.1's $\alpha_\Sigma = 1/(n+1)$ at $n = n_{\text{eff}}$:
+For a single edge, the Model-D ultimate mean mismatch of the best estimator in $\mathcal C$ is $\rho_\Sigma/\pi_i$, so edge $i$ can persist iff $\rho_\Sigma \lt \pi_i R_\Sigma$. For a node whose edges must all persist, the reachable region is $\rho_\Sigma \lt R_\Sigma \min_i \pi_i$. When one observation per step is shared among $K$ alternatives, $\min_i \pi_i \le 1/K$, so
 
-$$\alpha_\Sigma^{\text{ss}} = \frac{1}{n_{\text{eff}}+1} = \frac{1}{1/(1-\lambda) + 1} = \frac{1-\lambda}{1 + (1-\lambda)} = \frac{1-\lambda}{2-\lambda} \qquad \square$$
+$$\sup_{\text{allocations},\ \mathcal C}\ \frac{\rho_\Sigma}{R_\Sigma} \;=\; \frac{1}{K},$$
 
-The slow-forgetting linear form $\alpha_\Sigma^{\text{ss}} \approx 1-\lambda$ is the asymptotic expansion as $\lambda \to 1$ (the regime where the $1/(2-\lambda)$ damping factor approaches unity). Outside the slow-forgetting limit the linear form overstates the steady-state $\alpha_\Sigma^{\text{ss}}$ — at $\lambda = 0.5$ by $50\%$ ($1/3$ exact vs $1/2$ linear); at $\lambda = 0.9$ by $10\%$ ($1/11$ exact vs $1/10$ linear). The exact form is operationally the threshold to check against; the linear form is unsafe outside its asymptotic regime.
+attained by uniform allocation with the last-observation rule.
 
-##### Proposition C.2 (Hard-Ceiling No-Go)
+**Instances.**
 
-*[Derived (Conditional on Prop C.1 + the schema's persistence form)]*
+- **Single edge** ($K = 1$, $\pi = 1$): $\rho_\Sigma \lt R_\Sigma$, the floor of [Derivation S](#deriv-edge-credence-dynamics) Prop B.1F, reached by exponential forgetting as $\lambda \to 0$.
+- **Two-arm $\varepsilon$-greedy OR** (Prop B.4): $\rho_\Sigma \lt R_\Sigma \min(\varepsilon, 1-\varepsilon) \le R_\Sigma/2$, with equality only at $\varepsilon = 1/2$. With forgetting at the stationary per-observation gain $1-\lambda$, the admissible exploration interval is $\rho_\Sigma/((1-\lambda)R_\Sigma) \lt \varepsilon \lt 1 - \rho_\Sigma/((1-\lambda)R_\Sigma)$, non-empty iff $\rho_\Sigma \lt (1-\lambda)R_\Sigma/2$.
+- **$K$-alternative OR:** $\rho_\Sigma \lt R_\Sigma/K$, matching the $1/k$ dilution of B.4's $k$-arm sector parameter.
+- **AND chain with observable intermediates** (Prop B.2, upstream $\theta_j$ held fixed as there): the downstream edge $k$ persists only if $\rho_\Sigma \lt R_\Sigma \prod_{j \lt k}\theta_j$. The gates of Props B.6 and B.7 multiply into $\pi$ the same way.
 
-The forgetting prerequisite for the schema's trajectory guarantee under exponential forgetting is:
+##### Discount convention
 
-$$\frac{1-\lambda}{2-\lambda} \;\gt\; \frac{\rho_\Sigma}{R_\Sigma}$$
+*[Formulation (where the discount is applied)]*
 
-This inequality is unsatisfiable for any $\lambda \in [0,1]$ when $\rho_\Sigma \geq R_\Sigma/2$. The supremum is sharp:
-
-$$\sup_{\lambda \in [0,1]} \alpha_\Sigma^{\text{ss}}(\lambda) = \frac{1}{2}$$
-
-achieved as $\lambda \to 0^+$ (maximally aggressive forgetting — no memory). The schema's reachable persistence region in $(\rho_\Sigma, R_\Sigma)$-space is exactly the open half-plane $\rho_\Sigma \lt R_\Sigma/2$.
-
-*Proof.* Let $x = \rho_\Sigma/R_\Sigma$ with $x \in [0,1)$. Solving for the threshold $\lambda$ at which the inequality becomes equality:
-
-$$(1-\lambda) = x(2-\lambda) \implies \lambda(x-1) = 2x-1 \implies \lambda = \frac{2x-1}{x-1} = \frac{1-2x}{1-x}$$
-
-For $\lambda \in (0,1)$ to admit a strict solution to the inequality, we need $\lambda \gt 0$ at the threshold. With $x \lt 1$ (denominator positive), this requires $1 - 2x \gt 0$, i.e., $x \lt 1/2$.
-
-At $x = 1/2$ exactly: the threshold $\lambda = 0$, giving $\alpha_\Sigma^{\text{ss}}(0) = (1-0)/(2-0) = 1/2 = x$ — equality, not strict satisfaction. For $x \gt 1/2$: no $\lambda \in [0,1]$ satisfies the strict inequality, since even maximally aggressive forgetting ($\lambda \to 0^+$) only achieves $\alpha_\Sigma^{\text{ss}} \to 1/2$. The supremum is exactly $1/2$ at $\lambda = 0$. $\square$
-
-Equivalently: the schema's reachable set under any exponential-forgetting design is exactly $\{(\rho_\Sigma, R_\Sigma) : \rho_\Sigma \lt R_\Sigma/2\}$. The boundary $\rho_\Sigma = R_\Sigma/2$ is not in the reachable region (strict satisfaction required), and the half-plane above the boundary is entirely outside.
+For an intermittently observed edge, exponential forgetting can discount the counts **per observation of that edge** or **per time step**. Both conventions lie in $\mathcal C$, so Corollary EA.2's cap holds under both and is approached under both as $\lambda \to 0^{+}$, where the most recent observation's weight tends to $1$. They differ below the cap. Per-observation discounting initialized at the stationary count gives each observation gain exactly $1-\lambda$ (Prop B.1F), so the expected per-step correction rate is exactly $\pi_i(1-\lambda)$. Per-time-step discounting lets the count decay between observations, so each observation lands with a larger gain. Its rate is at most $\pi_i$ by Proposition EA.1, but no closed form is derived here. At $\lambda = 0$ exactly, per-time-step discounting leaves an edge with $\pi_i \lt 1$ with a zero count between observations, so that convention needs $\lambda \gt 0$. The threshold $\lambda$ at which a given intermittent edge persists depends on the convention. The exploration interval above, and Prop B.4's (SA3), use per-observation discounting.
 
 #### Epistemic Status
 
-*Exact* under the named conditions: (i) Beta-Bernoulli edge dynamics ( [Derivation R](#deriv-edge-credence-dynamics) Prop B.1), (ii) exponential forgetting with $\lambda \in (0,1)$, (iii) the schema's persistence form per [Proposed Schema 9.10](#schema-strategy-persistence) and the underlying template-instantiation conditions (T1)–(T3) of [Result G](#result-sector-persistence-template). Both Propositions C.1 and C.2 are algebraically exact within these conditions — no slack, no approximation. The "exact" tier reflects that uncertainty resides in whether the conditions hold (which mismatch state, which topology, whether the forgetting mechanism is in fact exponential vs another discounting scheme), not in the derivation.
+*Exact* under the named conditions: (i) fixed allocation, independent of outcomes; (ii) estimator class $\mathcal C$, convex combinations of observed outcomes with outcome-independent weights; (iii) Model D drift per time step on every edge, observed or not; (iv) the persistence target that every alternative stay calibrated, (SA3); (v) the mean-mismatch reading that Props B.1–B.4 use. Proposition EA.1's inequality is pathwise in the observation history, and the corollary is its expectation. The supremum $1/K$ is attained, so the cap is sharp within (i)–(v).
 
-The hard ceiling is *structural*: it is independent of $\lambda$ choice and independent of which topology among the schema's verified instances (single-edge, two-edge AND observable/unobservable, two-arm OR with $\varepsilon$-greedy, mixed AND/OR with common cause). It is a *class-level cap on reachability* — not a refutation of the schema's persistence form, but a refinement of which $(\rho_\Sigma, R_\Sigma)$ regimes the schema can be satisfied in.
+Two routes give the result. The expected-correction route uses a deterministic per-observation gain $g_i \le 1$: edge $i$'s per-step sector parameter is $\pi_i g_i \le \pi_i$, and [Derivation P](#deriv-discrete-sector-condition) DA.1 gives the ultimate bound $\rho_\Sigma/(\pi_i g_i)$. The age route of Proposition EA.1 also covers gains that depend on the observation history, as in Beta-Bernoulli updating away from its stationary count and in per-time-step discounting. The two routes agree where both apply.
+
+Outside the conditions, the result is not claimed. Under state-dependent allocation (greedy switching, UCB, Thompson sampling) the observation history depends on outcomes, so the weights are no longer outcome-independent and the proof does not apply as written. Estimators that extrapolate a learned drift fall outside $\mathcal C$ (their weights are not a convex combination of past outcomes). Under constant drift they can lag less; whether a worst case over drift sequences restores a comparable bound is open. If only the currently chosen alternative must stay calibrated, the target changes and so does the cap.
 
 #### Discussion
 
-**Why this no-go matters.** The hard ceiling *refines*, not refutes, the schema. The schema's persistence form $\alpha_\Sigma \gt \rho_\Sigma/R_\Sigma$ remains the right form; what the ceiling establishes is that under exponential forgetting, the form is *unreachable* across half the $(\rho_\Sigma, R_\Sigma)$-space. Above the ceiling, structural persistence of $\Sigma_t$ is not available to this architecture — no tuning of $\lambda$ can recover it. This is the canonical analog at the strategic layer of [Result 4.9](#result-structural-adaptation-necessity)'s epistemic-layer trigger: when parametric adaptation cannot keep up, structural change is required.
+**Where the cap comes from.** One observation per step can refresh only one alternative. While an alternative goes unobserved, its truth keeps moving and nothing the agent does to its credence can follow. The best any averaging rule can do is put all weight on the newest evidence. Its lag is then the drift since the last refresh, on average $1/\pi_i$ steps of drift. Forgetting governs how much old evidence is kept, and the ceiling sits above every forgetting rate. Forgetting's own structural role is the other boundary: without it (B.1, $\lambda = 1$) the gain decays to zero and every positive drift rate is eventually fatal.
 
-**Boundary behavior.** At $\rho_\Sigma/R_\Sigma = 1/2$ exactly, the supremum is achieved at $\lambda = 0$ — the *no-memory* regime where every observation fully replaces the prior. This corresponds to effective sample size $n_{\text{eff}} = 1$ (only the most recent observation counts), giving $\alpha_\Sigma = 1/2$ in Prop B.1's $1/(n+1)$. The reachable region's open-versus-closed character at the boundary is itself informative: persistence requires *strict* satisfaction, so the boundary $\rho_\Sigma = R_\Sigma/2$ is not in the reachable region even with $\lambda = 0$.
+**Parametric tuning cannot cross the ceiling; structural change can.** Above $\rho_\Sigma = R_\Sigma \min_i \pi_i$, no forgetting rate, exploration rate, or update rule in $\mathcal C$ keeps every alternative calibrated. What moves the ceiling changes the strategy's structure or its evidence channels:
 
-**Connection to the broader gain-decay class.** The hard ceiling sharpens to a class-level no-go on a wider class of update mechanisms — see NeurIPS 2026 Paper 2 ($\mathcal{A}_{\text{decay}}$ structural-class theorem) for the lift from Beta-Bernoulli with forgetting to all gain-decay updates: every mechanism whose effective gain decays to zero with accumulated experience universally violates the persistence threshold for any positive disturbance rate, and finite-gain mechanisms face *bidirectional* thresholds (this lower bound from the schema's persistence form, plus an upper bound from noise blow-up). The hard ceiling at $1/2$ is the Beta-Bernoulli + exponential-forgetting instance of this broader structural pattern.
+- More evidence per step, which breaks $\sum_i \pi_i \le 1$: parallel trials, or counterfactual or off-policy observation of alternatives not taken.
+- Fewer alternatives held in calibration: prune the OR node, or relax the requirement for alternatives the agent has stopped considering.
+- For AND chains, direct observation of deeper links, which raises $\pi_k$ above $\prod_{j \lt k}\theta_j$.
 
-**Strict-form independent-verify note.** Per [Discussion 5.1](#disc-stability-certificate) and the project's verification discipline, the canonical strict-form check on this derivation is a fresh-mathematician re-derivation of Propositions C.1 and C.2 (algebra above) plus independent reading of [Derivation R](#deriv-edge-credence-dynamics) Prop B.1 (the source the C.1 derivation reduces to). This is owed before any further status elevation; the present "exact" tier rests on the algebra's elementariness plus the conditional structure being clean.
+This has the same shape as [Result 4.9](#result-structural-adaptation-necessity) at the epistemic layer, where parametric adaptation cannot close a gap that a class change can. The correspondence is structural, at discussion grade. It is not a derivation of one result from the other.
+
+**Breadth costs drift tolerance.** Each alternative an agent keeps calibrated divides the drift rate it can survive. The design question for an OR node is therefore how many alternatives the evidence stream can keep calibrated at the environment's $\rho_\Sigma/R_\Sigma$, not only which alternative is best: at most $R_\Sigma/\rho_\Sigma$ of them. The answer follows from the allocation alone, and the update rule does not change it.
 
 #### Findings
 
-##### The Hard Ceiling at $\rho_\Sigma = R_\Sigma/2$ (Class-Level Reachability Cap)
+##### Evidence allocation caps strategic persistence at $\rho_\Sigma \lt R_\Sigma/K$
 
-**Brief:** Under the schema's Beta-Bernoulli + exponential-forgetting instantiation, $\sup_{\lambda \in [0,1]} \alpha_\Sigma^{\text{ss}} = 1/2$, achieved as $\lambda \to 0^+$. The schema's reachable persistence region in $(\rho_\Sigma, R_\Sigma)$-space is exactly the open half-plane $\rho_\Sigma \lt R_\Sigma/2$. When the strategic disturbance rate reaches half the strategic reserve, no choice of forgetting rate satisfies the persistence prerequisite — structural persistence of $\Sigma_t$ is unavailable to this architecture above the ceiling.
+**Brief:** An agent keeping several alternative plans in view can try only one per turn. The real odds of every plan keep shifting, so a plan's estimate is out of date by however much the world moved since that plan was last tried, on average $1/\pi$ turns of drift for a plan tried with probability $\pi$. No way of updating beliefs or forgetting old evidence beats simply trusting the most recent trial, and that rule's lag is exactly this. So if $K$ alternatives must all stay accurate, the world can drift at most $1/K$ of the agent's error tolerance per turn; with two alternatives, half.
 
-**Impact:** Identifies a sharp, $\lambda$-independent cap on what exponential forgetting can achieve. The cap is not an artifact of tuning; it is structural — a class-level no-go on the gain-decay-plus-forgetting class of strategic update mechanisms. For an agent whose strategic-disturbance-to-reserve ratio approaches $1/2$, no engineering of the forgetting mechanism can restore the schema's trajectory guarantee. The hard ceiling closes the design space: above it, the agent must change *something else* — the update mechanism class (away from gain-decay-plus-forgetting toward constant-step finite-gain, per the NeurIPS Paper 2 $\mathcal{A}_{\text{decay}}$ structural-class theorem), the mismatch state, or the topology. This is the canonical strategic-layer analog of [Result 4.9](#result-structural-adaptation-necessity)'s epistemic-layer trigger.
+**Impact:** Locates where the strategic-persistence design space is genuinely capped. The cap comes from how evidence is allocated across alternatives that must stay calibrated, not from the forgetting mechanism, which reaches the universal single-edge floor $\rho_\Sigma \lt R_\Sigma$. It gives (SA3) of [Proposed Schema 9.10](#schema-strategy-persistence) a satisfiability condition: SA3 can be met iff $\rho_\Sigma \lt R_\Sigma \min_i \pi_i$, at most $R_\Sigma/K$. Past the ceiling, the remedies are structural: more evidence channels per step, fewer alternatives held in calibration, or direct observation of deep links. A strategy's breadth is purchased with drift tolerance.
 
-**Novelty Claim:** *Synthesis* of standard discounted-Beta-Bernoulli mechanics with the schema's environment-side parameters into a class-level structural cap. The constituent algebra is elementary — the discounted-update steady state $n_{\text{eff}} = 1/(1-\lambda)$ is in Ljung 1987; the $\alpha = 1/(n+1)$ form is in [Derivation R](#deriv-edge-credence-dynamics) Prop B.1. The AAT-distinctive contribution is the *combination* with $\rho_\Sigma/R_\Sigma$ into a sharp reachability cap, surfaced via the §D.3 strengthen-first work that replaced the prior linear approximation (which had hidden the ceiling) with the exact form.
+**Novelty Claim:** *Claim differentiation.* That an arm's estimate cannot track drift faster than it is sampled is elementary, and the non-stationary bandit literature treats the explore-versus-track trade-off in regret terms. The AAT contribution is stating it as a sharp reachability ceiling on the sector-persistence form across a whole estimator class: Bayesian counts with or without forgetting under either discount convention, and every history-gained innovation update. It covers OR alternatives, starved AND edges and the gated L1 cases in one statement, and it attaches to (SA3) a satisfiability condition the schema did not have.
 
 **Related Work:**
 
 | ASF Concern | Prior-art Language | Relationship / Positioning |
 |---|---|---|
-| Exponential forgetting / discounted least squares | Ljung 1987 *System Identification: Theory for the User*, MIT Press | *formal antecedent* — supplies the discounted-update mechanism that the C.1 steady state is built on |
-| Class-level structural cap on gain-decay updates | NeurIPS 2026 Paper 2 §App-D ($\mathcal{A}_{\text{decay}}$ structural-class theorem) | *downstream sharpening* — lifts this Beta-Bernoulli instance to the gain-decay class; finite-gain mechanisms face bidirectional thresholds |
-| Bias-variance trade-off in finite-gain adaptive filtering | Kushner & Yin 2003 *Stochastic Approximation and Recursive Algorithms and Applications*, 2nd ed. Springer | *contextual* — characterizes the upper bound complementing this lower bound for finite-gain (constant-step) mechanisms |
-| Structural adaptation necessity (epistemic-layer analog) | [Result 4.9](#result-structural-adaptation-necessity) | *parallel structural pattern* — when parametric adaptation cannot keep up, structural change is required; this no-go is the strategic-layer instance |
+| Tracking drifting arms under limited sampling | Garivier & Moulines 2011, *On Upper-Confidence Bound Policies for Switching Bandit Problems*, ALT 2011 (discounted and sliding-window UCB) | *conceptual precursor*: explore-versus-track trade-off under non-stationarity, stated as regret rather than as a persistence ceiling |
+| Variation-budget non-stationary bandits | Besbes, Gur & Zeevi 2014, *Stochastic Multi-Armed-Bandit Problem with Non-stationary Rewards*, NeurIPS 2014 | *conceptual precursor*: drift budget versus achievable regret; AAT's $\rho_\Sigma$ plays the variation-budget role per step |
+| Exponential forgetting | Ljung 1987, *System Identification: Theory for the User*, MIT Press | *formal antecedent*: the discounted update whose two conventions both fall in $\mathcal C$ |
+| Parametric cannot, structural can | [Result 4.9](#result-structural-adaptation-necessity) | *parallel structural pattern* at the epistemic layer |
+
+**Search Log:**
+- 2026-10-30 (*intuition-only*): the sampling-lag bound is elementary; the bandit-tracking literature above was recalled, not searched for this framing. Targeted future search: persistence or stability formulations of non-stationary bandits (not regret), and "observation scheduling for tracking" in sensor-management literature.
 
 <a id="deriv-strategy-cost-regret-bound"></a>
 
@@ -3514,7 +3699,7 @@ The hard ceiling is *structural*: it is independent of $\lambda$ choice and inde
 **Type**: Derivation
 **Status**: robust-qualitative
 **Stage**: draft
-**Label**: T
+**Label**: U
 **Container**: appendix-chapter
 
 
@@ -3732,13 +3917,13 @@ The Pinsker bound gives $R(Q_{\Sigma_t}) \leq V_{\max}\sqrt{\tfrac{1}{2}D_{\math
 
 $$\mathcal{L}(\Sigma_t) \;=\; \mathcal{R}(\Sigma_t) \;+\; \beta_\Sigma \cdot \sqrt{D_{\mathrm{KL}}(\pi^\ast \Vert Q_{\Sigma_t})}, \qquad \beta_\Sigma = V_{\max}/\sqrt{2}$$
 
-$\beta_\Sigma$ is *globally naturalized* as a constant scale proportional to the value range at fixed $M_t$. Cost: the form departs from the linear-Lagrangian IB shape that [Discussion AB](#disc-compression-operations) uses across the four compression operations.
+$\beta_\Sigma$ is *globally naturalized* as a constant scale proportional to the value range at fixed $M_t$. Cost: the form departs from the linear-Lagrangian IB shape that [Discussion AC](#disc-compression-operations) uses across the four compression operations.
 
 **(b) Linear-KL form** (IB-shape instance, preserved in the segment):
 
 $$\mathcal{L}(\Sigma_t) \;=\; \mathcal{R}(\Sigma_t) \;+\; \beta_\Sigma \cdot D_{\mathrm{KL}}(\pi^\ast \Vert Q_{\Sigma_t})$$
 
-Under this form, $\beta_\Sigma$'s regret-bound interpretation is *local*: differentiating the Pinsker bound, $\partial R/\partial D_{\mathrm{KL}} = V_{\max}/(2\sqrt{2 D_{\mathrm{KL}}})$, so $\beta_\Sigma$ represents the local cost-per-bit at the operating point but varies with $D_{\mathrm{KL}}$. Upside: consistency with the IB linear-Lagrangian shape ( [Discussion AB](#disc-compression-operations)). Downside: no uniform global $\beta_\Sigma$ scale.
+Under this form, $\beta_\Sigma$'s regret-bound interpretation is *local*: differentiating the Pinsker bound, $\partial R/\partial D_{\mathrm{KL}} = V_{\max}/(2\sqrt{2 D_{\mathrm{KL}}})$, so $\beta_\Sigma$ represents the local cost-per-bit at the operating point but varies with $D_{\mathrm{KL}}$. Upside: consistency with the IB linear-Lagrangian shape ( [Discussion AC](#disc-compression-operations)). Downside: no uniform global $\beta_\Sigma$ scale.
 
 **Choice made in [Formulation 9.9](#form-strategy-complexity-cost).** Keep the linear form (IB-shape alignment); note the square-root form in the Epistemic Status as the "source" derivation. The direction-forcing claim is the load-bearing strengthening; the linear-vs-square-root choice is a second-order trade-off that preserves architectural consistency at the cost of a fully naturalized $\beta_\Sigma$.
 
@@ -3784,7 +3969,7 @@ with softmax-weighted $\pi^\ast$ also admits the Pinsker-KL step, with reverse-K
 | PAC-Bayesian generalization bound: $\tilde D_{\mathrm{KL}}(\hat V_\pi \Vert V_\pi) \leq (I_\pi + \log(2m/\delta))/(m-1)$ | Rubin-Shamir-Tishby 2012 Theorem 3 | Derived (external theorem applied; independent operational motivation alongside regret-bound + chain-rule + Fenchel-dual) |
 | $\beta_\Sigma \propto V_{\max}$ naturalization (square-root-KL form) | Direct identification from Pinsker bound | Derived (under square-root form) |
 | $\beta_\Sigma$ local interpretation (linear-KL form, segment-retained) | Differentiation of Pinsker bound at operating point | Derived (local only) |
-| Linear-KL form retained over square-root form | IB-shape alignment with [Discussion AB](#disc-compression-operations) | Formulation choice |
+| Linear-KL form retained over square-root form | IB-shape alignment with [Discussion AC](#disc-compression-operations) | Formulation choice |
 | Vacuity regimes ($V_{\max}=\infty$, $Q_{\Sigma_t}(a^\ast)=0$, stochastic $\pi^\ast$) | Direct analysis of the bound | Proved (boundary) |
 | Tied-optimum extension | $\pi^\ast$ uniform on $\mathcal{A}^\ast$; bound adapts directly | Derived |
 | Softmax-smoothed $\pi^\ast$ extension | Sketched in §9 | Hypothesis (deferred) |
@@ -3810,7 +3995,7 @@ gives reverse-KL bounds for exponential-moment functionals, but requires $V$ to 
 
 **Relationship to standard policy-gradient regret bounds.** The argument here is structurally identical to standard policy-gradient / online MDP regret bounds (Agarwal, Kakade, Lee, Mahajan 2021 "On the theory of policy gradient methods" Lemma 3.2; Even-Dar, Kakade, Mansour 2009 "Online Markov decision processes"). AAT's contribution is *re-using the standard bound as the derivation of the KL direction in the strategy-cost objective*, not inventing the bound. This is consistent with AAT's integration-over-invention character.
 
-**Position in the additive-coordinate-forcing pattern.** The chain-rule uniqueness theorem of §6.1 is the *divergence-level* instance of an AAT-wide pattern in which logarithmic coordinates are uniquely forced via Cauchy's functional equation on an AAT-internally-motivated additivity axiom. The pattern has two other primary instances: the chain-layer identity ( [Derived 8.2](#der-chain-confidence-decay), the motivating anchor) and the update-layer log-odds uniqueness ( [Derivation U](#deriv-edge-update-natural-parameter)). [Discussion 5.6](#disc-additive-coordinate-forcing) catalogs the pattern, states the 1-anchor-plus-2-theorem structure precisely, and documents Lyapunov and IB Lagrangian as adjacent family members that share the additive-decomposition shape without the AAT-internal forcing structure.
+**Position in the additive-coordinate-forcing pattern.** The chain-rule uniqueness theorem of §6.1 is the *divergence-level* instance of an AAT-wide pattern in which logarithmic coordinates are uniquely forced via Cauchy's functional equation on an AAT-internally-motivated additivity axiom. The pattern has two other primary instances: the chain-layer identity ( [Derived 8.2](#der-chain-confidence-decay), the motivating anchor) and the update-layer log-odds uniqueness ( [Derivation V](#deriv-edge-update-natural-parameter)). [Discussion 5.6](#disc-additive-coordinate-forcing) catalogs the pattern, states the 1-anchor-plus-2-theorem structure precisely, and documents Lyapunov and IB Lagrangian as adjacent family members that share the additive-decomposition shape without the AAT-internal forcing structure.
 
 <a id="deriv-edge-update-natural-parameter"></a>
 
@@ -3820,7 +4005,7 @@ gives reverse-KL bounds for exponential-moment functionals, but requires $V$ to 
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: U
+**Label**: V
 **Container**: appendix-chapter
 
 
@@ -3897,7 +4082,7 @@ The evidential-additivity axiom is the update-level instance of an additive-deco
 | Layer | Quantity decomposed | Decomposition form | Source |
 |---|---|---|---|
 | **Chain level** | Confidence along a causal chain | $\log P(\text{chain}) = \sum_i \log P(E_i \mid E_{\lt i})$ | [Derived 8.2](#der-chain-confidence-decay) |
-| **Divergence level** | Mismatch between optimal and strategy policies | $D_{\mathrm{KL}}(\pi^\ast \Vert Q_{\Sigma_t})$ decomposes additively across DAG layers along the optimal trajectory | [Derivation T](#deriv-strategy-cost-regret-bound) §6.1 |
+| **Divergence level** | Mismatch between optimal and strategy policies | $D_{\mathrm{KL}}(\pi^\ast \Vert Q_{\Sigma_t})$ decomposes additively across DAG layers along the optimal trajectory | [Derivation U](#deriv-strategy-cost-regret-bound) §6.1 |
 | **Update level** | Credence evolution under independent evidence | $\psi(p_{\text{post}}) - \psi(p_{\text{prior}}) = g(y_1) + \cdots + g(y_n)$ for $n$ observations, with $\psi =$ log-odds | This segment |
 
 Each layer forces a logarithmic coordinate through essentially the same structural move: products of independent factors become sums on a log scale. At the chain level, $p^n \to n \log p$; at the divergence level, $\prod Q \to \sum \log Q$; at the update level, $\prod \text{LR} \to \sum \log \text{LR}$. The three are the same transform applied to different quantities.
@@ -3930,9 +4115,9 @@ For multinomial / categorical edge credences with $K \gt 2$ outcomes, the analog
 
 #### Epistemic Status
 
-*Derived (conditional on the evidential-additivity axiom).* The uniqueness theorem is a standard functional-equation result (Cauchy functional equation with smoothness; Aczél 1966 §2.1). The AAT-internal motivation of the axiom is structural: it is the update-level analog of [Derived 8.2](#der-chain-confidence-decay)'s chain-level additive log-confidence decomposition and [Derivation T](#deriv-strategy-cost-regret-bound) §6.1's divergence-level chain-rule additivity. Without the axiom, the selection of log-odds weakens to canonical-not-unique on convergent grounds (exponential-family naturalness, Fisher-information / natural-gradient canonicity, domain-well-posedness of the continuous gradient).
+*Derived (conditional on the evidential-additivity axiom).* The uniqueness theorem is a standard functional-equation result (Cauchy functional equation with smoothness; Aczél 1966 §2.1). The AAT-internal motivation of the axiom is structural: it is the update-level analog of [Derived 8.2](#der-chain-confidence-decay)'s chain-level additive log-confidence decomposition and [Derivation U](#deriv-strategy-cost-regret-bound) §6.1's divergence-level chain-rule additivity. Without the axiom, the selection of log-odds weakens to canonical-not-unique on convergent grounds (exponential-family naturalness, Fisher-information / natural-gradient canonicity, domain-well-posedness of the continuous gradient).
 
-**Max attainable:** *exact* for the Cauchy functional equation step (standard); *derived-conditional* for the overall uniqueness claim because the axiom, though AAT-internally motivated, is itself a commitment rather than a consequence of prior AAT commitments. The axiom's status is parallel to the chain-rule additivity axiom in [Derivation T](#deriv-strategy-cost-regret-bound) §6.1 — both are AAT-internally motivated as the "right level" instances of a single additive-decomposition principle.
+**Max attainable:** *exact* for the Cauchy functional equation step (standard); *derived-conditional* for the overall uniqueness claim because the axiom, though AAT-internally motivated, is itself a commitment rather than a consequence of prior AAT commitments. The axiom's status is parallel to the chain-rule additivity axiom in [Derivation U](#deriv-strategy-cost-regret-bound) §6.1 — both are AAT-internally motivated as the "right level" instances of a single additive-decomposition principle.
 
 **Not uniqueness in the unconditional sense.** The theorem states that *if* credence updates live on a single additive coordinate whose increment depends only on the observation, *then* that coordinate is log-odds up to positive affine. It does not rule out non-additive update schemes, nor schemes that live on multiple coordinates (e.g., Beta-Bernoulli with sufficient statistics $(\alpha, \beta)$ rather than a single credence coordinate). The Beta-Bernoulli presentation is *equivalent* in content to the log-odds presentation under a change of coordinates; the uniqueness is about what single-coordinate additive form is possible.
 
@@ -3979,7 +4164,7 @@ For multinomial / categorical edge credences with $K \gt 2$ outcomes, the analog
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: V
+**Label**: W
 **Container**: appendix-chapter
 
 
@@ -4135,9 +4320,9 @@ The core claim — that (MG-1)–(MG-4) together give an augmented-state sector-
 
 **Resolving Epistemic Opacity.** In `#def-observation-function`, the agent is structurally forbidden from knowing the true noise distribution $\varepsilon_t$. Yet the optimal gain `#emp-update-gain` requires knowing $U_o$. The adaptive Kalman filter with an innovation-based estimator (e.g., Mehra 1970) resolves this. The agent computes the autocorrelation of its observable mismatch sequence (innovations): $\iota_t = o_t - \hat o_t$. Because the innovation statistics are observable, the agent can estimate $U_o$ (and $U_M$) purely from its own history $\mathcal{C}_t$, satisfying both the opacity axiom and the optimality requirement. The error in this estimation ($\tilde K$) is exactly what the meta-gain sector condition (MG-2) bounds.
 
-**Why this is not a singular-perturbation reduction.** Singular perturbation theory (Tikhonov 1952; Khalil 2002 Ch. 11) replaces fast dynamics with their quasi-steady-state manifold — the fast variable is *eliminated* in the slow reduction. The augmented-state analysis here does something different: it *keeps both states* and bounds their joint persistence via a weighted Lyapunov. Tikhonov gives "the fast variable tracks its slow manifold up to $O(\epsilon)$"; template-composition gives "each level's state is ultimately bounded with coupling-amplified disturbance" — the persistence-flavored statement aligned with AAT's other persistence results. They answer different questions; both are useful; neither replaces the other. [Derived M](#der-multi-timescale-stability)'s stacking theorem (promoted 2026-06-10) is in fact stated in the template-composition register this paragraph describes — each level a template instance with coupling-amplified effective disturbance, both states kept, joint forward-invariance — with the quasi-steady-state manifold used only as the anchoring coordinate, not as an elimination step. The two segments now share the framing; what differs is the axis (gain-parameter timescale here, adaptive-level stacking there).
+**Why this is not a singular-perturbation reduction.** Singular perturbation theory (Tikhonov 1952; Khalil 2002 Ch. 11) replaces fast dynamics with their quasi-steady-state manifold — the fast variable is *eliminated* in the slow reduction. The augmented-state analysis here does something different: it *keeps both states* and bounds their joint persistence via a weighted Lyapunov. Tikhonov gives "the fast variable tracks its slow manifold up to $O(\epsilon)$"; template-composition gives "each level's state is ultimately bounded with coupling-amplified disturbance" — the persistence-flavored statement aligned with AAT's other persistence results. They answer different questions; both are useful; neither replaces the other. [Derived N](#der-multi-timescale-stability)'s stacking theorem (promoted 2026-06-10) is in fact stated in the template-composition register this paragraph describes — each level a template instance with coupling-amplified effective disturbance, both states kept, joint forward-invariance — with the quasi-steady-state manifold used only as the anchoring coordinate, not as an elimination step. The two segments now share the framing; what differs is the axis (gain-parameter timescale here, adaptive-level stacking there).
 
-**Three timescale patterns in AAT.** [Derived M](#der-multi-timescale-stability) distinguishes model-class (slow) and parametric (fast) timescales. This segment introduces a *third* pattern: gain-parameter timescale, sitting between parametric-correction (fastest) and model-class (slowest). Adaptive gain is a different two-timescale pattern from structural adaptation — the gain is a parameter of the update rule, not of the model class. The convergence constraint $\nu_{n+1} \ll \nu_n$ from [Derived 4.10](#der-temporal-nesting) translates in this segment to $\alpha_K \ll \underline\alpha$ on Lyapunov decay rates, which is the (MG-3) condition.
+**Three timescale patterns in AAT.** [Derived N](#der-multi-timescale-stability) distinguishes model-class (slow) and parametric (fast) timescales. This segment introduces a *third* pattern: gain-parameter timescale, sitting between parametric-correction (fastest) and model-class (slowest). Adaptive gain is a different two-timescale pattern from structural adaptation — the gain is a parameter of the update rule, not of the model class. The convergence constraint $\nu_{n+1} \ll \nu_n$ from [Derived 4.10](#der-temporal-nesting) translates in this segment to $\alpha_K \ll \underline\alpha$ on Lyapunov decay rates, which is the (MG-3) condition.
 
 **Meta-gain scope-honesty failure modes.**
 - *Identifiability failures* on the meta-gain channel (Mehra non-identifiability) are instances of the [Discussion 5.2](#disc-identifiability-floor) pattern: a structural no-go (non-identifiability) on the meta-gain channel blocks the sub-scope $\alpha_2$ derivation. AMSGrad as a meta-gain repair is the constructive complement — an added structural condition (monotonicity on $v_t$) that restores (MG-1) and keeps the adaptive scheme in $\alpha_2$.
@@ -4156,13 +4341,13 @@ The core claim — that (MG-1)–(MG-4) together give an augmented-state sector-
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: W
+**Label**: X
 **Container**: appendix-chapter
 
 
-Agent viability decomposes **additively** into agent-movable terms and an irreducible environmental floor — inherited from the exact mismatch decomposition — and provably does **not** factor multiplicatively into an agent-independent environmental rate times agent factors. The construction takes log-viability as the log-margin between steady-state mismatch and the critical task boundary, and inherits the additive split (estimation error + state-uncertainty floor + channel noise) from [Result 3.6](#result-mismatch-decomposition); the agent can move the estimation term by modeling and the state-uncertainty term by acting; the channel term it cannot move by modeling — it is a kernel of the channel, policy-movable only in expectation through which states and instruments the policy visits ( [Derivation X](#deriv-mismatch-budget-attribution)).
+Agent viability decomposes **additively** into agent-movable terms and an irreducible environmental floor — inherited from the exact mismatch decomposition — and provably does **not** factor multiplicatively into an agent-independent environmental rate times agent factors. The construction takes log-viability as the log-margin between steady-state mismatch and the critical task boundary, and inherits the additive split (estimation error + state-uncertainty floor + channel noise) from [Result 3.6](#result-mismatch-decomposition); the agent can move the estimation term by modeling and the state-uncertainty term by acting; the channel term it cannot move by modeling — it is a kernel of the channel, policy-movable only in expectation through which states and instruments the policy visits ( [Derivation Y](#deriv-mismatch-budget-attribution)).
 
-The constitutive no-go is that multiplicative $\rho$-factorization of the form "$\rho = \rho_{\text{external}} \cdot f(\text{model-class}) \cdot g(\text{policy})$" is type-incorrect: mismatch is constitutively agent-relative, so $\rho^2$ carries an estimation term that *vanishes* as the agent's model improves — a contribution that subtracts to zero cannot be represented by attenuating a fixed agent-independent scalar by agent factors. Established exactly is the additive env/agent split with the environmental floor. The finer structure of the agent-side component is characterized in [Derivation X](#deriv-mismatch-budget-attribution): there is no separate policy term — the policy enters every term, the floor included, only as the on-policy measure under which three policy-independent kernels are averaged — so the honest fine split is estimation / state-uncertainty / channel with policy-dependence in each, log-additive to first order when the agent-movable excess is small relative to the floor. Separately *identifying* those terms from on-policy data remains obstructed and requires Level-2 interventional access ( [Discussion 5.2](#disc-identifiability-floor) Instance 4).
+The constitutive no-go is that multiplicative $\rho$-factorization of the form "$\rho = \rho_{\text{external}} \cdot f(\text{model-class}) \cdot g(\text{policy})$" is type-incorrect: mismatch is constitutively agent-relative, so $\rho^2$ carries an estimation term that *vanishes* as the agent's model improves — a contribution that subtracts to zero cannot be represented by attenuating a fixed agent-independent scalar by agent factors. Established exactly is the additive env/agent split with the environmental floor. The finer structure of the agent-side component is characterized in [Derivation Y](#deriv-mismatch-budget-attribution): there is no separate policy term — the policy enters every term, the floor included, only as the on-policy measure under which three policy-independent kernels are averaged — so the honest fine split is estimation / state-uncertainty / channel with policy-dependence in each, log-additive to first order when the agent-movable excess is small relative to the floor. Separately *identifying* those terms from on-policy data remains obstructed and requires Level-2 interventional access ( [Discussion 5.2](#disc-identifiability-floor) Instance 4).
 
 #### Log-Viability
 
@@ -4212,7 +4397,7 @@ The mismatch decomposition is **exact** ( [Result 3.6](#result-mismatch-decompos
 
 #### Discussion
 
-**The finer split: structure exact, identification obstructed.** Decomposing $\mathcal{V}_{\text{agent}}$ further is not a model-vs-policy question. By [Derivation X](#deriv-mismatch-budget-attribution), the estimation, state-uncertainty, and channel terms are expectations of policy-independent kernels under the on-policy law; the policy is the *measure*, not a term, so "policy benignity" is the policy concentrating the trajectory where the model class is adequate — one kernel modulated by one measure, entangled at the source rather than two independent factors — and the multiplicative intuition is recovered only as a first-order expansion in the excess-to-floor ratio, with the "factors" being floor-relative exponentials of the additive estimation and state-uncertainty terms. What *is* obstructed is identification: an on-policy observer sees only the sum, and separating the terms from observational data alone is the identifiability-floor phenomenon ( [Discussion 5.2](#disc-identifiability-floor) Instance 4, via [Derived AM](#der-architecture-noidentifiability)) — in a feedback system high internal capacity itself lowers future environmental difficulty, and Level-2 interventional access (rotating agents across environments, or changing instrument / actions / model) is required to resolve it. This segment asserts the exact two-term env/agent split and the no-go; the attribution structure lives in [Derivation X](#deriv-mismatch-budget-attribution) and the identification floor in [Derived AM](#der-architecture-noidentifiability).
+**The finer split: structure exact, identification obstructed.** Decomposing $\mathcal{V}_{\text{agent}}$ further is not a model-vs-policy question. By [Derivation Y](#deriv-mismatch-budget-attribution), the estimation, state-uncertainty, and channel terms are expectations of policy-independent kernels under the on-policy law; the policy is the *measure*, not a term, so "policy benignity" is the policy concentrating the trajectory where the model class is adequate — one kernel modulated by one measure, entangled at the source rather than two independent factors — and the multiplicative intuition is recovered only as a first-order expansion in the excess-to-floor ratio, with the "factors" being floor-relative exponentials of the additive estimation and state-uncertainty terms. What *is* obstructed is identification: an on-policy observer sees only the sum, and separating the terms from observational data alone is the identifiability-floor phenomenon ( [Discussion 5.2](#disc-identifiability-floor) Instance 4, via [Derived AN](#der-architecture-noidentifiability)) — in a feedback system high internal capacity itself lowers future environmental difficulty, and Level-2 interventional access (rotating agents across environments, or changing instrument / actions / model) is required to resolve it. This segment asserts the exact two-term env/agent split and the no-go; the attribution structure lives in [Derivation Y](#deriv-mismatch-budget-attribution) and the identification floor in [Derived AN](#der-architecture-noidentifiability).
 
 **Why this matters.** The two-term split is the honest form of the internal/external diagnostic the persistence condition invites: it identifies exactly what an agent can improve by modeling (estimation error) and by acting (state uncertainty, and the on-policy channel term) versus the kernel-level floor no model touches (channel noise), without the false promise that the environmental rate is an agent-independent quantity one can read off and attribute blame to.
 
@@ -4224,7 +4409,7 @@ The mismatch decomposition is **exact** ( [Result 3.6](#result-mismatch-decompos
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: X
+**Label**: Y
 **Container**: appendix-chapter
 
 
@@ -4262,11 +4447,11 @@ The policy enters the budget only through $\mathbb P_\pi$.
 
 **Corollary 1b (invariance).** If the three kernels are $\mathbb P_\pi$-a.s. constant across the policies under comparison, the budget is policy-invariant. In the linear-Gaussian sub-scope with a well-specified filter this holds exactly: $e \equiv 0$, $u \equiv H P^{-} H^{\top}$ (the steady-state prior covariance, which solves a Riccati recursion independent of the control input), and $c \equiv R$ — the innovation law is invariant to the control gain (standard LQG: the prediction covariance recursion $A P A^{\top} + Q$ carries no control term; the LQR worked case is in the reasoning trail, `spikes/.integrated/spike-rho-factorization.md` §5). In the multiplicative vocabulary this is "$g(\pi) \equiv 1$"; in the present one it is simply that there is nothing state-dependent for the measure to reweight.
 
-**Corollary 1c (entanglement and the movable floor).** A policy lowers $E_\pi$ exactly when $e(\mathcal C, a)$ is state-dependent and the policy concentrates $\mathbb P_\pi$ where $e$ is small — i.e., where the model class is adequate. A policy lowers $U_\pi$ exactly when it makes the interaction history more state-informative (the active-sensing door of [Definition 3.8](#def-causal-information-yield)). And a policy moves $C_\pi$ exactly when the channel variance depends on the action or state — as when the action selects the sensor ( [Worked Example BA](#example-kalman), modes $L$ / $H$). "Irreducible" for the channel term therefore means *kernel-level*: no model touches $c(\Omega, a)$; its on-policy expectation $C_\pi$ is nonetheless policy-movable whenever the instrument or the visited states are. None of these is an independent factor: each is one kernel under one measure.
+**Corollary 1c (entanglement and the movable floor).** A policy lowers $E_\pi$ exactly when $e(\mathcal C, a)$ is state-dependent and the policy concentrates $\mathbb P_\pi$ where $e$ is small — i.e., where the model class is adequate. A policy lowers $U_\pi$ exactly when it makes the interaction history more state-informative (the active-sensing door of [Definition 3.8](#def-causal-information-yield)). And a policy moves $C_\pi$ exactly when the channel variance depends on the action or state — as when the action selects the sensor ( [Worked Example BB](#example-kalman), modes $L$ / $H$). "Irreducible" for the channel term therefore means *kernel-level*: no model touches $c(\Omega, a)$; its on-policy expectation $C_\pi$ is nonetheless policy-movable whenever the instrument or the visited states are. None of these is an independent factor: each is one kernel under one measure.
 
 ##### Proposition 2 — exact log form and first-order log-additivity
 
-*[Derived (first-order-log-additivity), exact given the rate-lift convention of [Derivation W](#internal-external-decomposition)]*
+*[Derived (first-order-log-additivity), exact given the rate-lift convention of [Derivation X](#internal-external-decomposition)]*
 
 With $\rho^2 = \nu \, \mathbb E_\pi\lVert\delta_t\rVert^2$ and linear Model D ($R^\ast = \rho/\alpha$, [Result 4.6](#result-persistence-condition)), log-viability is exactly
 
@@ -4312,7 +4497,7 @@ Averaging under $\mathbb P_\pi$ gives $(\text{i}′) = \mathbb E_\pi D(p_t^{\mat
 |---|---|---|
 | Three terms are expectations of policy-independent kernels under $\mathbb P_\pi$ (Prop. 1) | [Result 3.6](#result-mismatch-decomposition) + GA-1 + (P) | Proved |
 | Policy change = measure change; invariance when kernels are state-independent; entanglement (Cor. 1a–1c) | Prop. 1 | Proved |
-| Linear-Gaussian invariance of the innovation law under the control gain | Riccati covariance independent of input ( [Worked Example BA](#example-kalman)) | Proved (sub-scope) |
+| Linear-Gaussian invariance of the innovation law under the control gain | Riccati covariance independent of input ( [Worked Example BB](#example-kalman)) | Proved (sub-scope) |
 | Exact log form; first-order log-additivity with remainder $\le x^2/4$ (Prop. 2) | Prop. 1 + elementary bounds | Proved, conditional on the rate-lift convention and linear Model D |
 | Information-form three-term identity (Prop. 3) | Chain rule of log-loss + GA-1 | Proved |
 | Class-ceiling / within-class split (Prop. 4) | Csiszár–Amari–Nagaoka Pythagorean identity | Proved, conditional on e-flat predictive class with attainable moment match |
@@ -4321,13 +4506,13 @@ Averaging under $\mathbb P_\pi$ gives $(\text{i}′) = \mathbb E_\pi D(p_t^{\mat
 
 #### Epistemic Status
 
-*Conditional.* Propositions 1 and 3 and the corollaries are *exact* under GA-1 and the chronica-measurable-policy condition (P) — both standing AAT interface assumptions, named so that the adversary-reads-the-policy case is visibly excluded. Proposition 2 is exact algebra plus an elementary inequality, conditional on the fluid-limit rate-lift convention and linear Model D that [Derivation W](#internal-external-decomposition) already states. Proposition 4 is exact within sub-scope $\alpha$ (exponential-family predictive class, m-projection attainable) and acquires a signed residual outside it. Max attainable: *exact* for Propositions 1–3 as stated; Proposition 4 cannot exceed *conditional* because the e-flat hypothesis is a genuine restriction on the model class, and the link to [Definition 2.5](#def-model-class-fitness) is interpretive. What is *not* claimed: that the three terms are separately identifiable from on-policy innovation data — they are not, and the obstruction is [Derived AM](#der-architecture-noidentifiability) projected onto the disturbance-statistic coordinate ( [Discussion 5.2](#disc-identifiability-floor) Instance 4); this segment lands the *structure* of the attribution, the floor governs its *estimation*.
+*Conditional.* Propositions 1 and 3 and the corollaries are *exact* under GA-1 and the chronica-measurable-policy condition (P) — both standing AAT interface assumptions, named so that the adversary-reads-the-policy case is visibly excluded. Proposition 2 is exact algebra plus an elementary inequality, conditional on the fluid-limit rate-lift convention and linear Model D that [Derivation X](#internal-external-decomposition) already states. Proposition 4 is exact within sub-scope $\alpha$ (exponential-family predictive class, m-projection attainable) and acquires a signed residual outside it. Max attainable: *exact* for Propositions 1–3 as stated; Proposition 4 cannot exceed *conditional* because the e-flat hypothesis is a genuine restriction on the model class, and the link to [Definition 2.5](#def-model-class-fitness) is interpretive. What is *not* claimed: that the three terms are separately identifiable from on-policy innovation data — they are not, and the obstruction is [Derived AN](#der-architecture-noidentifiability) projected onto the disturbance-statistic coordinate ( [Discussion 5.2](#disc-identifiability-floor) Instance 4); this segment lands the *structure* of the attribution, the floor governs its *estimation*.
 
 #### Discussion
 
-**Why the multiplicative picture felt right, and exactly where it was wrong.** A product $\rho_{\text{external}} \cdot f(\mathcal M) \cdot g(\pi)$ is an independent-attenuation chain. Proposition 2 shows the one regime in which such a chain is approximately visible — small excess relative to the floor — and shows that even there the "factors" are $\exp(-E_\pi/2C_\pi)$ and $\exp(-U_\pi/2C_\pi)$, exponentials of additive variance terms, each policy-dependent through the measure. The constitutive no-go of [Derivation W](#internal-external-decomposition) says the product cannot be exact; this segment says what the first-order approximation actually approximates, and that it approximates a split by *what moves the term* (modeling vs acting), not a split by *who owns the factor* (model vs policy). The reference-agent ambiguity that haunted "$\rho_{\text{external}}$" dissolves as well: the environmental floor is a kernel, $c(\Omega, a)$, agent-independent pointwise and policy-dependent only in expectation — a number once a policy is fixed, never a number on its own.
+**Why the multiplicative picture felt right, and exactly where it was wrong.** A product $\rho_{\text{external}} \cdot f(\mathcal M) \cdot g(\pi)$ is an independent-attenuation chain. Proposition 2 shows the one regime in which such a chain is approximately visible — small excess relative to the floor — and shows that even there the "factors" are $\exp(-E_\pi/2C_\pi)$ and $\exp(-U_\pi/2C_\pi)$, exponentials of additive variance terms, each policy-dependent through the measure. The constitutive no-go of [Derivation X](#internal-external-decomposition) says the product cannot be exact; this segment says what the first-order approximation actually approximates, and that it approximates a split by *what moves the term* (modeling vs acting), not a split by *who owns the factor* (model vs policy). The reference-agent ambiguity that haunted "$\rho_{\text{external}}$" dissolves as well: the environmental floor is a kernel, $c(\Omega, a)$, agent-independent pointwise and policy-dependent only in expectation — a number once a policy is fixed, never a number on its own.
 
-**Worked anchors.** *Well-specified Kalman, passive or LQR-controlled:* $e \equiv 0$, $u \equiv H P^{-} H^{\top}$, $c \equiv R$; the innovation variance $H P^- H^\top + R$ is control-invariant, so no policy choice moves the budget (Corollary 1b). *Misspecified drift with a regulating policy:* if the filter carries $\hat\lambda \ne \lambda$, its one-step prediction differs from the Bayes prediction by a quantity that scales with the state estimate, so to leading order $e(\mathcal C, a) \propto \hat x^2$ and $E_\pi \propto \mathbb E_\pi[x^2]$ — a stiffer LQR gain that holds the state near the origin lowers $E_\pi$ while leaving $u$ and $c$ untouched. That is Corollary 1c in the flesh: the policy does not attenuate the environment; it keeps the trajectory where the model's inadequacy bites least. *[Discussion-grade as an anchor — the leading-order scaling is stated, the constants are not derived here.]* *Strategy layer, Bernoulli edges:* the disturbance driving an edge credence is a per-visit innovation with variance fixed by the true success probability, summed over edges at the policy's visit rates; the policy's role is the visit measure over edges, and no model-class kernel appears at the per-observation level — the same shape as Proposition 1 one layer up ( [Derivation R](#deriv-edge-credence-dynamics)).
+**Worked anchors.** *Well-specified Kalman, passive or LQR-controlled:* $e \equiv 0$, $u \equiv H P^{-} H^{\top}$, $c \equiv R$; the innovation variance $H P^- H^\top + R$ is control-invariant, so no policy choice moves the budget (Corollary 1b). *Misspecified drift with a regulating policy:* if the filter carries $\hat\lambda \ne \lambda$, its one-step prediction differs from the Bayes prediction by a quantity that scales with the state estimate, so to leading order $e(\mathcal C, a) \propto \hat x^2$ and $E_\pi \propto \mathbb E_\pi[x^2]$ — a stiffer LQR gain that holds the state near the origin lowers $E_\pi$ while leaving $u$ and $c$ untouched. That is Corollary 1c in the flesh: the policy does not attenuate the environment; it keeps the trajectory where the model's inadequacy bites least. *[Discussion-grade as an anchor — the leading-order scaling is stated, the constants are not derived here.]* *Strategy layer, Bernoulli edges:* the disturbance driving an edge credence is a per-visit innovation with variance fixed by the true success probability, summed over edges at the policy's visit rates; the policy's role is the visit measure over edges, and no model-class kernel appears at the per-observation level — the same shape as Proposition 1 one layer up ( [Derivation S](#deriv-edge-credence-dynamics)).
 
 **Two coordinates, one structure.** The squared form (Propositions 1–2) is the Bregman decomposition on a squared-norm potential — the variance-additive adjacent case of [Discussion 5.6](#disc-additive-coordinate-forcing), *matched* to the sector-Lyapunov machinery rather than forced. The information form (Propositions 3–4) lives on the negative-entropy geometry — the same Legendre–Fenchel object the forced coordinates of that meta-segment inhabit — but it is *adopted* (log-loss is a proper scoring rule; the Pythagorean identity is Csiszár's), not forced by an AAT-internal additivity axiom: no axiom of the disturbance layer demands log-additivity, which is precisely why the multiplicative form was a choice and not a theorem. The two forms agree where they overlap (the Gaussian specialization), and the information form carries strictly more: it has no alignment qualifier — residual state uncertainty registers whenever it changes the predictive distribution, not only its mean — and it sees predictive-variance miscalibration.
 
@@ -4341,17 +4526,17 @@ Averaging under $\mathbb P_\pi$ gives $(\text{i}′) = \mathbb E_\pi D(p_t^{\mat
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: Y
+**Label**: Z
 **Container**: appendix-chapter
 
 
-For a Beta-Bernoulli strategy-edge agent without forgetting, the expected number of cycles required to detect a within-class regime change of observable footprint $\varepsilon$ scales as $\Omega((n_{\min}+1)/\varepsilon)$ with $n_{\min}$ the minimum accumulated pseudo-count on load-bearing edges. The $1/(n+1)$ rate is **structurally forced** — it is the log-odds update magnitude per cycle under [Derivation U](#deriv-edge-update-natural-parameter)'s Aczél-Cauchy-FE uniqueness theorem, and no choice of coordinate escapes it. The result sharpens [Proposed Schema 9.10](#schema-strategy-persistence)'s forgetting prerequisite from "required for asymptotic persistence" to "required for detection-latency bounded independently of operating point." The broader myopia observation — that successful, high-capability organizations systematically underinvest in detecting regime changes that would require structural adaptation — admits a complementary decision-theoretic account via [Discussion 10.2](#disc-exploit-explore-deliberate)'s oracle analysis; this segment's contribution is the signal-side lower bound, not the decision-side account.
+For a Beta-Bernoulli strategy-edge agent without forgetting, the expected number of cycles required to detect a within-class regime change of observable footprint $\varepsilon$ scales as $\Omega((n_{\min}+1)/\varepsilon)$ with $n_{\min}$ the minimum accumulated pseudo-count on load-bearing edges. The $1/(n+1)$ rate is **structurally forced** — it is the log-odds update magnitude per cycle under [Derivation V](#deriv-edge-update-natural-parameter)'s Aczél-Cauchy-FE uniqueness theorem, and no choice of coordinate escapes it. The result sharpens [Proposed Schema 9.10](#schema-strategy-persistence)'s forgetting prerequisite from "required for asymptotic persistence" to "required for detection-latency bounded independently of operating point." The broader myopia observation — that successful, high-capability organizations systematically underinvest in detecting regime changes that would require structural adaptation — admits a complementary decision-theoretic account via [Discussion 10.2](#disc-exploit-explore-deliberate)'s oracle analysis; this segment's contribution is the signal-side lower bound, not the decision-side account.
 
 #### Formal Expression
 
 ##### Setup
 
-An agent with a Beta-Bernoulli strategy DAG per [Proposed Schema 9.10](#schema-strategy-persistence) / [Derivation R](#deriv-edge-credence-dynamics), credit assignment via the log-odds signal of [Discussion 9.6](#disc-credit-assignment-boundary) (forced by [Derivation U](#deriv-edge-update-natural-parameter)), and no forgetting ( $\lambda = 1$, pseudo-counts $n_k$ accumulate monotonically). Let $E_{\text{load}}$ denote the load-bearing edges on the current active plan; $n_{\min} = \min_{k \in E_{\text{load}}} n_k$. The agent has been operating with model-class fitness $\mathcal{F}(\mathcal{M})$ near $1$, adaptive reserve $\Delta\rho^\ast \gt 0$, control regret $\delta_{\text{regret}}$ small — a high-operating-point configuration.
+An agent with a Beta-Bernoulli strategy DAG per [Proposed Schema 9.10](#schema-strategy-persistence) / [Derivation S](#deriv-edge-credence-dynamics), credit assignment via the log-odds signal of [Discussion 9.6](#disc-credit-assignment-boundary) (forced by [Derivation V](#deriv-edge-update-natural-parameter)), and no forgetting ( $\lambda = 1$, pseudo-counts $n_k$ accumulate monotonically). Let $E_{\text{load}}$ denote the load-bearing edges on the current active plan; $n_{\min} = \min_{k \in E_{\text{load}}} n_k$. The agent has been operating with model-class fitness $\mathcal{F}(\mathcal{M})$ near $1$, adaptive reserve $\Delta\rho^\ast \gt 0$, control regret $\delta_{\text{regret}}$ small — a high-operating-point configuration.
 
 At cycle $t_0$, a regime change occurs within the current model class (a true edge probability shifts by $\varepsilon$; the L0 graph remains correct; the agent's model class still suffices). This is case R1 in the spike taxonomy — a within-class drift change. Other regime-change cases (R2 model-class inadequacy; R3 L0→L1 structural transition) are deferred to Working Notes and [Discussion 5.2](#disc-identifiability-floor) respectively.
 
@@ -4363,11 +4548,11 @@ At cycle $t_0$, a regime change occurs within the current model class (a true ed
 
 $$\boxed{\;\mathbb{E}[T_{\text{detect}}] \;=\; \Omega\!\left(\Delta\lambda_{\text{detect}} \cdot (n_{\min} + 1) / \varepsilon\right)\;}$$
 
-**Derivation.** The default signal function of [Discussion 9.6](#disc-credit-assignment-boundary) (under the log-odds coordinate forced by [Derivation U](#deriv-edge-update-natural-parameter)) updates an edge's log-odds credence by
+**Derivation.** The default signal function of [Discussion 9.6](#disc-credit-assignment-boundary) (under the log-odds coordinate forced by [Derivation V](#deriv-edge-update-natural-parameter)) updates an edge's log-odds credence by
 
 $$\lambda_k^{\text{new}} = \lambda_k + \eta_{\text{edge}} \cdot \iota_k \cdot J_k \cdot (y_G - \hat P_\Sigma) / \lVert\mathbf{J}\rVert^2$$
 
-with $\eta_{\text{edge}} = 1/(n_k + 1)$ for Beta-Bernoulli (Prop B.4 of [Derivation R](#deriv-edge-credence-dynamics)). Per-cycle the expected log-odds update magnitude is bounded:
+with $\eta_{\text{edge}} = 1/(n_k + 1)$ for Beta-Bernoulli (Prop B.4 of [Derivation S](#deriv-edge-credence-dynamics)). Per-cycle the expected log-odds update magnitude is bounded:
 
 $$\mathbb{E}\lvert\Delta\lambda_k\rvert \;\leq\; \frac{\lvert J_k\rvert \cdot \mathbb{E}\lvert y_G - \hat P_\Sigma\rvert}{\lVert\mathbf{J}\rVert^2 \cdot (n_k + 1)}$$
 
@@ -4379,15 +4564,15 @@ For the agent to cross $\Delta\lambda_{\text{detect}}$, expected cycles required
 
 *[Observation (rate-forced-by-aczel)]*
 
-The $1/(n+1)$ scaling is not a property of the specific update rule choice. Per [Derivation U](#deriv-edge-update-natural-parameter), the log-odds coordinate is the *unique* additive-evidence coordinate satisfying the evidential-additivity axiom — the Aczél 1966 Cauchy-functional-equation uniqueness theorem forces it up to positive affine transformation. In this forced coordinate, the per-cycle increment for Beta-Bernoulli edges is forced to be $O(1/(n+1))$: the Fisher-equivalent statement holds in any sensible coordinate. Rearranging the update to a different scale does not change the rate — it just changes the units in which the rate is measured.
+The $1/(n+1)$ scaling is not a property of the specific update rule choice. Per [Derivation V](#deriv-edge-update-natural-parameter), the log-odds coordinate is the *unique* additive-evidence coordinate satisfying the evidential-additivity axiom — the Aczél 1966 Cauchy-functional-equation uniqueness theorem forces it up to positive affine transformation. In this forced coordinate, the per-cycle increment for Beta-Bernoulli edges is forced to be $O(1/(n+1))$: the Fisher-equivalent statement holds in any sensible coordinate. Rearranging the update to a different scale does not change the rate — it just changes the units in which the rate is measured.
 
 The forcing composition:
 
-1. [Derivation U](#deriv-edge-update-natural-parameter) forces the log-odds coordinate via evidential additivity.
+1. [Derivation V](#deriv-edge-update-natural-parameter) forces the log-odds coordinate via evidential additivity.
 2. In that coordinate, Beta-Bernoulli accumulation gives $\eta_{\text{edge}} = 1/(n+1)$.
 3. Therefore the per-cycle update magnitude is structurally forced at $O(1/(n+1))$.
 
-This is the specific link between AAT's constructive meta-pattern ( [Discussion 5.6](#disc-additive-coordinate-forcing), via [Derivation U](#deriv-edge-update-natural-parameter)'s theorem) and a downstream detection-latency consequence. The rate cannot be escaped without abandoning evidential additivity — which would invalidate the update rule on AAT-internal grounds, not merely operational ones.
+This is the specific link between AAT's constructive meta-pattern ( [Discussion 5.6](#disc-additive-coordinate-forcing), via [Derivation V](#deriv-edge-update-natural-parameter)'s theorem) and a downstream detection-latency consequence. The rate cannot be escaped without abandoning evidential additivity — which would invalidate the update rule on AAT-internal grounds, not merely operational ones.
 
 ##### Sharpening the forgetting prerequisite
 
@@ -4403,8 +4588,8 @@ This dualizes [Proposed Schema 9.10](#schema-strategy-persistence)'s asymptotic 
 
 | Property | Source | Strength |
 |---|---|---|
-| R1 detection-latency theorem $\mathbb{E}[T_{\text{detect}}] = \Omega((n_{\min}+1)/\varepsilon)$ | [Derivation U](#deriv-edge-update-natural-parameter) log-odds coordinate + [Derivation R](#deriv-edge-credence-dynamics) Prop B.4 $\eta_{\text{edge}} = 1/(n+1)$ + Pinsker-type linearization | Derived (conditional on Beta-Bernoulli + log-odds + no forgetting) |
-| $1/(n+1)$ rate structurally forced | Composition of [Derivation U](#deriv-edge-update-natural-parameter)'s Aczél-Cauchy-FE theorem with Beta-Bernoulli accumulation | Proved (conditional on evidential-additivity axiom) |
+| R1 detection-latency theorem $\mathbb{E}[T_{\text{detect}}] = \Omega((n_{\min}+1)/\varepsilon)$ | [Derivation V](#deriv-edge-update-natural-parameter) log-odds coordinate + [Derivation S](#deriv-edge-credence-dynamics) Prop B.4 $\eta_{\text{edge}} = 1/(n+1)$ + Pinsker-type linearization | Derived (conditional on Beta-Bernoulli + log-odds + no forgetting) |
+| $1/(n+1)$ rate structurally forced | Composition of [Derivation V](#deriv-edge-update-natural-parameter)'s Aczél-Cauchy-FE theorem with Beta-Bernoulli accumulation | Proved (conditional on evidential-additivity axiom) |
 | Sharpening of forgetting prerequisite from asymptotic persistence to bounded detection latency | [Proposed Schema 9.10](#schema-strategy-persistence) + this theorem | Derived |
 | R2 model-class inadequacy sub-case (C1-diagnostic blindness under misspecification) | Common-mode-bias argument on $A_O^{(1)}$ vs $V_O(\pi_{\text{current}})$ | Discussion (sketch; see Working Notes) |
 | R3 L0→L1 structural transition sub-case | Direct application of [Discussion 5.2](#disc-identifiability-floor) Instance 1 — already derived there | Reference (not new content) |
@@ -4416,7 +4601,7 @@ This dualizes [Proposed Schema 9.10](#schema-strategy-persistence)'s asymptotic 
 
 *Conditional.* Max attainable: *exact* for R1 under stated scope (Beta-Bernoulli + log-odds forced + no forgetting + linearized residual near pre-change parameter); *robust qualitative* for general exponential-family edge with similar sufficient-statistic accumulation; *discussion-grade* for extensions beyond the Beta-Bernoulli / log-odds specialization.
 
-The R1 theorem is a direct consequence of two derived AAT results ( [Derivation U](#deriv-edge-update-natural-parameter)'s forced log-odds coordinate + [Derivation R](#deriv-edge-credence-dynamics)'s Beta-Bernoulli $\eta_{\text{edge}}$) composed with a standard residual-magnitude argument (Pinsker-type inequality applied to the linearized Bernoulli likelihood). The mathematical core is not novel — what is novel is the AAT-framing: reading the $1/(n+1)$ scaling as *structurally forced* through composition of existing AAT theorems, not contingent on update-rule choice. The rate is unescapable without abandoning evidential additivity.
+The R1 theorem is a direct consequence of two derived AAT results ( [Derivation V](#deriv-edge-update-natural-parameter)'s forced log-odds coordinate + [Derivation S](#deriv-edge-credence-dynamics)'s Beta-Bernoulli $\eta_{\text{edge}}$) composed with a standard residual-magnitude argument (Pinsker-type inequality applied to the linearized Bernoulli likelihood). The mathematical core is not novel — what is novel is the AAT-framing: reading the $1/(n+1)$ scaling as *structurally forced* through composition of existing AAT theorems, not contingent on update-rule choice. The rate is unescapable without abandoning evidential additivity.
 
 The forgetting-prerequisite sharpening follows by direct substitution — replace unbounded $n_{\min}$ with bounded $n_{\text{eff}} = 1/(1-\lambda)$ and the latency bound inherits the cap. This is where the segment's most concrete contribution lies: the existing forgetting prerequisite's justification expands from "asymptotic persistence fails without it" to "detection latency is unbounded in operating point without it." Two load-bearing consequences instead of one, from the same $\lambda \lt 1$ condition.
 
@@ -4452,7 +4637,7 @@ The forgetting-prerequisite sharpening follows by direct substitution — replac
 **Type**: Discussion
 **Status**: robust-qualitative
 **Stage**: draft
-**Label**: Z
+**Label**: AA
 **Container**: appendix-chapter
 
 
@@ -4480,13 +4665,13 @@ Six load-bearing independence assumptions in AAT, each paired with its failure r
 
 **Statement:** Every common cause of two or more nodes in $\Sigma_t$ is itself a node in $\Sigma_t$.
 
-**Where it appears:** [Derivation Q](#deriv-graph-structure-uniqueness) (precondition for the CMC-based Markov proof); [Definition 8.4](#def-strategy-dag) edge-independence in status propagation; all of Part II's strategy-layer formal results (Props B.1–B.6, the sector condition transfer of B.5, persistence of $\delta_s$).
+**Where it appears:** [Derivation R](#deriv-graph-structure-uniqueness) (precondition for the CMC-based Markov proof); [Definition 8.4](#def-strategy-dag) edge-independence in status propagation; all of Part II's strategy-layer formal results (Props B.1–B.6, the sector condition transfer of B.5, persistence of $\delta_s$).
 
 **Failure regime:** The dominant real-world case in complex, multi-stakeholder, or adversarial environments — shared infrastructure, market conditions, correlated adversary actions, common-mode risks, supply-chain dependencies.
 
 **Diagnostic signal:** Pairwise covariance among sibling edges after edge credences have converged. Positive covariance rejects the independence hypothesis and localizes where a common cause is missing. See [Derived 9.2](#der-causal-insufficiency-detection).
 
-**Repair operation:** L1 augmentation — add common-cause nodes and restructure the DAG so each common cause is factored *above* the correlation it creates ( [Definition 8.4](#def-strategy-dag) Correlation Hierarchy; [Derivation R](#deriv-edge-credence-dynamics) Prop B.6). L0 formal results transfer exactly to correctly constructed L1 DAGs because L1 restores causal sufficiency by construction. The orient cascade's step 4c triggers this escalation.
+**Repair operation:** L1 augmentation — add common-cause nodes and restructure the DAG so each common cause is factored *above* the correlation it creates ( [Definition 8.4](#def-strategy-dag) Correlation Hierarchy; [Derivation S](#deriv-edge-credence-dynamics) Prop B.6). L0 formal results transfer exactly to correctly constructed L1 DAGs because L1 restores causal sufficiency by construction. The orient cascade's step 4c triggers this escalation.
 
 ##### 3. Channel independence: observation channels contribute non-redundant correction
 
@@ -4540,7 +4725,7 @@ Six load-bearing independence assumptions in AAT, each paired with its failure r
 
 Several results that might appear to depend on independence actually do not:
 
-- **Acyclicity of $\Sigma_t$** is proved from temporal ordering over a finite horizon ( [Derivation Q](#deriv-graph-structure-uniqueness)). Independent of any independence assumption.
+- **Acyclicity of $\Sigma_t$** is proved from temporal ordering over a finite horizon ( [Derivation R](#deriv-graph-structure-uniqueness)). Independent of any independence assumption.
 - **Cox-derived probability structure** at edges is independent of edge-independence — Cox forces the *measure* to be probability, not the joint structure.
 - **Sector-persistence template machinery** ( [Result G](#result-sector-persistence-template)) depends only on the sector condition (T2) and bounded disturbance (T3); it does not require any independence assumption on the state variable or correction function.
 - **The DAG structure derivation** (directed edges, acyclicity, representability as a Bayesian network) does not require causal sufficiency — only the *Markov factorization* within the derived structure does.
@@ -4559,7 +4744,7 @@ The enumeration is not exhaustive. Other independence-flavored assumptions exist
 
 When these bridges fail, the integration does not fail catastrophically — each failure has a characterized repair. But the theory's "exact" claims depend on the bridges holding, and recognizing this is the honest way to present the framework's scope. A reader who understands the six assumptions and their repairs understands where AAT's results apply exactly, where they apply approximately, and where they require structural revision.
 
-**Connection to [Discussion AA](#disc-approximation-tiering).** The L0/L1 distinction for causal sufficiency (items 2 and 5) is one instance of a meta-pattern: AAT's results are parameterized by approximation level, with proved monotonicity between levels. See [Discussion AA](#disc-approximation-tiering) for the full treatment — the pattern also applies to the C1/C2/C3 value-convention hierarchy and the Tier 1/2/3 bridge-lemma contraction structure.
+**Connection to [Discussion AB](#disc-approximation-tiering).** The L0/L1 distinction for causal sufficiency (items 2 and 5) is one instance of a meta-pattern: AAT's results are parameterized by approximation level, with proved monotonicity between levels. See [Discussion AB](#disc-approximation-tiering) for the full treatment — the pattern also applies to the C1/C2/C3 value-convention hierarchy and the Tier 1/2/3 bridge-lemma contraction structure.
 
 **What this does NOT say.** The enumeration does not claim the theory's results are fragile or routinely fail. Most independence assumptions hold approximately in most well-behaved domains, and the theory's quantitative predictions are typically within the regime where assumptions apply. The audit is a scope clarification, not a criticism.
 
@@ -4571,7 +4756,7 @@ When these bridges fail, the integration does not fail catastrophically — each
 **Type**: Discussion
 **Status**: robust-qualitative
 **Stage**: draft
-**Label**: AA
+**Label**: AB
 **Container**: appendix-chapter
 
 
@@ -4623,7 +4808,7 @@ The three existing tierings are individually grounded: the L0→L1 monotonicity 
 
 Reading AAT through the tiering lens: the theory's "exact" core is what it guarantees at the highest tier of each hierarchy. Its "conditional" periphery is where specific tiers are in force. The claim is not that agents should always operate at the highest tier — that would often be intractable — but that the theory tells the agent which tier it is in and how to get to a higher one when the binding constraint changes.
 
-**Connection to [Discussion Z](#disc-independence-audit).** The two meta-segments are complementary. [Discussion Z](#disc-independence-audit) enumerates the independence assumptions whose failure drops a result from exact to conditional. This segment enumerates the tierings that provide the structured *recovery* from those drops. Together they characterize AAT's scope parameterization: the independence audit says where the boundaries are; the tiering pattern says how to navigate within them.
+**Connection to [Discussion AA](#disc-independence-audit).** The two meta-segments are complementary. [Discussion AA](#disc-independence-audit) enumerates the independence assumptions whose failure drops a result from exact to conditional. This segment enumerates the tierings that provide the structured *recovery* from those drops. Together they characterize AAT's scope parameterization: the independence audit says where the boundaries are; the tiering pattern says how to navigate within them.
 
 **What a full tiering promotion would look like.** If the scattered simplifications listed above were promoted to named tierings, the theory's scope-parameterization would be dramatically more uniform: every conditional result would come with its own tiering and ascension diagnostic. This is aspirational. The three existing tierings took substantial segment-work to formalize (a full Appendix derivation for the CMC, a monotonicity proof for the convention hierarchy, a spike for the incremental sector bound). Extending the pattern to five or six hierarchies would be correspondingly substantial.
 
@@ -4637,7 +4822,7 @@ Reading AAT through the tiering lens: the theory's "exact" core is what it guara
 **Type**: Discussion
 **Status**: robust-qualitative
 **Stage**: draft
-**Label**: AB
+**Label**: AC
 **Container**: appendix-chapter
 
 
@@ -4689,7 +4874,7 @@ Under this reformulation:
 
 **Relationship between the two cost measures.** Under MDL with a specific encoding scheme for DAGs (the one in [Formulation 9.9](#form-strategy-complexity-cost)), $\operatorname{DL}(\Sigma_t)$ is an upper bound on $I(\mathcal C_t; \Sigma_t)$ for DAGs produced by the given encoder — coding cost dominates distinguishability cost. In practice, DL is computable and $I$ is not, so the operational minimization uses DL as a proxy; the theoretical minimization uses $I$. The IB objective above is the theoretical statement; the DL-based minimization in [Formulation 9.9](#form-strategy-complexity-cost) remains the practical one.
 
-**Variational form.** The Shannon mutual information $I(\Sigma_t; \pi^\ast \mid M_t)$ in the relevance term collapses to zero when $\pi^\ast$ is deterministic-from-$M_t$. The variational form (cf. [Formulation 9.9](#form-strategy-complexity-cost)) replaces the relevance term with the KL-divergence $D_{\mathrm{KL}}(\pi^\ast(\cdot \mid M_t) \,\Vert\, Q_{\Sigma_t}(\pi \mid M_t))$ — note the $\pi^\ast$-first direction, which is *forced* by a regret-bound derivation (full derivation and admissible-divergence family analysis in [Derivation T](#deriv-strategy-cost-regret-bound)). Under bounded value range and deterministic $\pi^\ast$, Pinsker's inequality gives $R(Q_{\Sigma_t}) \leq V_{\max}\sqrt{\tfrac{1}{2}D_{\mathrm{KL}}(\pi^\ast\Vert Q_{\Sigma_t})}$ where $R$ is the strategy-induced regret against $\pi^\ast$; the opposite KL direction is vacuous ($+\infty$ under deterministic $\pi^\ast$ whenever $Q_{\Sigma_t}$ has off-optimum mass). The $\pi^\ast$-first KL is well-defined and graded under deterministic $\pi^\ast$. Under the variational reading, the AAT $\Sigma_t$ is a tractable approximation of the policy-relevant posterior, and the KL term measures approximation quality — aligning the strategy compression with the variational free energy decomposition $-F = \text{accuracy} - \text{complexity}$ in active inference (Friston, FitzGerald, Rigoli, Schwartenbeck & Pezzulo 2017; Da Costa, Parr, Sajid, Veselic, Neacsu & Friston 2020). The direction alignment is convergent: both AAT's regret-bound and active inference's variational-free-energy derivations pick $\pi^\ast$-first KL (reverse-KL in the variational-inference vocabulary), with AAT's additional interpretation being an upper-regret-bound rather than free-energy-gradient. The shared-IB-shape framing of the four AAT compression operations is the rate-distortion specialization of this variational picture; AAT's commitment is to the rate-distortion form (which gives the (P1) Lagrangian-dual derivation and the four-instance unification at U-medium), not to the full variational free-energy interpretation.
+**Variational form.** The Shannon mutual information $I(\Sigma_t; \pi^\ast \mid M_t)$ in the relevance term collapses to zero when $\pi^\ast$ is deterministic-from-$M_t$. The variational form (cf. [Formulation 9.9](#form-strategy-complexity-cost)) replaces the relevance term with the KL-divergence $D_{\mathrm{KL}}(\pi^\ast(\cdot \mid M_t) \,\Vert\, Q_{\Sigma_t}(\pi \mid M_t))$ — note the $\pi^\ast$-first direction, which is *forced* by a regret-bound derivation (full derivation and admissible-divergence family analysis in [Derivation U](#deriv-strategy-cost-regret-bound)). Under bounded value range and deterministic $\pi^\ast$, Pinsker's inequality gives $R(Q_{\Sigma_t}) \leq V_{\max}\sqrt{\tfrac{1}{2}D_{\mathrm{KL}}(\pi^\ast\Vert Q_{\Sigma_t})}$ where $R$ is the strategy-induced regret against $\pi^\ast$; the opposite KL direction is vacuous ($+\infty$ under deterministic $\pi^\ast$ whenever $Q_{\Sigma_t}$ has off-optimum mass). The $\pi^\ast$-first KL is well-defined and graded under deterministic $\pi^\ast$. Under the variational reading, the AAT $\Sigma_t$ is a tractable approximation of the policy-relevant posterior, and the KL term measures approximation quality — aligning the strategy compression with the variational free energy decomposition $-F = \text{accuracy} - \text{complexity}$ in active inference (Friston, FitzGerald, Rigoli, Schwartenbeck & Pezzulo 2017; Da Costa, Parr, Sajid, Veselic, Neacsu & Friston 2020). The direction alignment is convergent: both AAT's regret-bound and active inference's variational-free-energy derivations pick $\pi^\ast$-first KL (reverse-KL in the variational-inference vocabulary), with AAT's additional interpretation being an upper-regret-bound rather than free-energy-gradient. The shared-IB-shape framing of the four AAT compression operations is the rate-distortion specialization of this variational picture; AAT's commitment is to the rate-distortion form (which gives the (P1) Lagrangian-dual derivation and the four-instance unification at U-medium), not to the full variational free-energy interpretation.
 
 ##### Composition admissibility (P1) as IB Lagrangian-dual
 
@@ -4760,9 +4945,9 @@ These are four calibration problems, not one. A theory of *resource allocation a
 
 **Relationship to [Discussion 14.1](#def-unity-dimensions) and [Result 14.2](#result-unity-closure-mapping).** The unity dimensions parametrize rate-distortion curves for closure defects ( [Result 14.2](#result-unity-closure-mapping)). Under the present segment's framing, unity dimensions are *curve parameters for the $\Lambda$ instance of the IB schema*. This tightens the existing [Result 14.2](#result-unity-closure-mapping) Discussion, which already presented the rate-distortion reading as the correct interpretation; it is now stated uniformly across the four compression operations.
 
-**Relationship to [Derivation Q](#deriv-graph-structure-uniqueness).** The DAG-uniqueness result derives the *shape* of $\Sigma_t$ from operational postulates ( [Derivation Q](#deriv-graph-structure-uniqueness), Cox-analog). The present segment characterizes the *compression level* of $\Sigma_t$. These operate at different levels: uniqueness supplies the representational type (the compressed $T$ is a DAG), IB supplies the rate-distortion trade-off within that type (how richly the DAG is populated). The two arguments are independent and compatible — IB-compressed $\Sigma_t$ is a DAG-with-fewer-nodes, not a non-DAG.
+**Relationship to [Derivation R](#deriv-graph-structure-uniqueness).** The DAG-uniqueness result derives the *shape* of $\Sigma_t$ from operational postulates ( [Derivation R](#deriv-graph-structure-uniqueness), Cox-analog). The present segment characterizes the *compression level* of $\Sigma_t$. These operate at different levels: uniqueness supplies the representational type (the compressed $T$ is a DAG), IB supplies the rate-distortion trade-off within that type (how richly the DAG is populated). The two arguments are independent and compatible — IB-compressed $\Sigma_t$ is a DAG-with-fewer-nodes, not a non-DAG.
 
-**Position relative to the additive-coordinate-forcing pattern.** The IB Lagrangian's $I(X;T) - \beta \cdot I(T;Y)$ is an additive decomposition on a log-scale coordinate (mutual information is logarithmic by construction) — the same shape that [Discussion 5.6](#disc-additive-coordinate-forcing) catalogs at the chain / divergence / update layers. The IB case is classified as an *adjacent family member* rather than a fourth primary instance because [Formulation 2.3](#form-information-bottleneck) adopts the Lagrangian form from Tishby, Pereira & Bialek 1999 as an applied external theorem rather than re-deriving it under an AAT-internally-motivated additivity axiom. The Shore-Johnson 1980 system-independence axioms that axiomatize IB's additivity are cited in [Derivation T](#deriv-strategy-cost-regret-bound) §6.1; if a future framing pass promotes Shore-Johnson to an explicit AAT axiom, IB would move from adjacent member to fourth primary instance.
+**Position relative to the additive-coordinate-forcing pattern.** The IB Lagrangian's $I(X;T) - \beta \cdot I(T;Y)$ is an additive decomposition on a log-scale coordinate (mutual information is logarithmic by construction) — the same shape that [Discussion 5.6](#disc-additive-coordinate-forcing) catalogs at the chain / divergence / update layers. The IB case is classified as an *adjacent family member* rather than a fourth primary instance because [Formulation 2.3](#form-information-bottleneck) adopts the Lagrangian form from Tishby, Pereira & Bialek 1999 as an applied external theorem rather than re-deriving it under an AAT-internally-motivated additivity axiom. The Shore-Johnson 1980 system-independence axioms that axiomatize IB's additivity are cited in [Derivation U](#deriv-strategy-cost-regret-bound) §6.1; if a future framing pass promotes Shore-Johnson to an explicit AAT axiom, IB would move from adjacent member to fourth primary instance.
 
 <a id="deriv-observation-ambiguity-bias-bound"></a>
 
@@ -4772,7 +4957,7 @@ These are four calibration problems, not one. A theory of *resource allocation a
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: AC
+**Label**: AD
 **Container**: appendix-chapter
 
 
@@ -4853,7 +5038,7 @@ $$\boxed{\;\mathbb{E}\bigl[W_2^2(M_{\tau^+}^{\text{coupled}}, M_{\tau^+}^{\text{
 
 $$\mathrm{KL}(P \Vert Q) \;=\; \tfrac{1}{2} \cdot d_{FR}^2(P, Q) + O(d_{FR}^3)$$
 
-where $d_{FR}$ is the Fisher-Rao geodesic distance (Cover & Thomas 2006 §12.5; Amari & Nagaoka 2000 §3.7 Theorem 3.1). This is the infinitesimal form of the Bregman divergence on the exponential family's dual geometry (cf. [Derivation T](#deriv-strategy-cost-regret-bound) §6.3 for the related Fenchel-Bregman identification).
+where $d_{FR}$ is the Fisher-Rao geodesic distance (Cover & Thomas 2006 §12.5; Amari & Nagaoka 2000 §3.7 Theorem 3.1). This is the infinitesimal form of the Bregman divergence on the exponential family's dual geometry (cf. [Derivation U](#deriv-strategy-cost-regret-bound) §6.3 for the related Fenchel-Bregman identification).
 
 **Step 2 — Posterior-displacement in Fisher-Rao.** Under (H1)+(H4) + Bayesian-posterior-class $f_X^M$, the goal-conditional posterior and goal-marginalized posterior are nearby points on the statistical manifold; their Fisher-Rao distance satisfies
 
@@ -4967,7 +5152,7 @@ The appendix does **not** cover:
 
 **Position in the [Discussion 5.6](#disc-additive-coordinate-forcing) meta-pattern.** Track 2's $C_{FR} = \sqrt 2$ result is a **downstream theorem of the fourth primary instance** (Čencov-invariance at the metric layer, under (PI)). Once (PI) adoption forces Fisher-Rao as the canonical metric on statistical-manifold sub-cases of $\mathcal{M}$, the KL-to-Fisher-squared-distance identity supplies the universal constant "for free" in the small-$I$ regime. The no-go §4 tightens the connection: the (PI) commitment is not just "useful axiom" but load-bearing for the bound's theorem-level status — without (PI), $C$ does not exist as a universal constant.
 
-**Connection to [Derivation AK](#deriv-variational-sector-condition).** Both segments use Pinsker's inequality as a first step in propagating a KL bound. After Pinsker, the two segments diverge: this segment's cascade (Pinsker → Otto-Villani → Lipschitz-posterior → $W_2$ on pushforward) is a KL-to-state-distance machinery; `#deriv-variational-sector-condition`'s use (Pinsker + Cauchy-Schwarz → scalar sector-constant degradation) is a KL-to-scalar-constant machinery. The shared first step is Pinsker; the post-Pinsker cascade is not shared, so `#deriv-variational-sector-condition` is an adjacent family member rather than a candidate for a shared `#posterior-displacement-template` (a possible future extraction recorded in Working Notes).
+**Connection to [Derivation AL](#deriv-variational-sector-condition).** Both segments use Pinsker's inequality as a first step in propagating a KL bound. After Pinsker, the two segments diverge: this segment's cascade (Pinsker → Otto-Villani → Lipschitz-posterior → $W_2$ on pushforward) is a KL-to-state-distance machinery; `#deriv-variational-sector-condition`'s use (Pinsker + Cauchy-Schwarz → scalar sector-constant degradation) is a KL-to-scalar-constant machinery. The shared first step is Pinsker; the post-Pinsker cascade is not shared, so `#deriv-variational-sector-condition` is an adjacent family member rather than a candidate for a shared `#posterior-displacement-template` (a possible future extraction recorded in Working Notes).
 
 **The $\varepsilon(\kappa)$ degradation for causally-disciplined results.** This appendix *is* the degradation bound that the causal-discipline scoping rule of [Derived 6.3](#der-directed-separation) calls for: a Part II result that holds exactly at $\kappa_{\text{processing}} = 0$ (for any causally-disciplined agent) degrades off that zero at a rate this bound controls — $\lVert\Delta M_{\text{bias}}\rVert$ enters multiplied by $\kappa_{\text{processing}}$, exact (zero bias) at the causally-disciplined value and decaying controllably as coupling grows. The first realized client is the value object's $Q_O$ $G_t$-independence ([Definition 6.6](#def-value-object)): the $Q_O$ degradation at $\kappa_{\text{processing}} \gt 0$ is the $\Delta M_{\text{bias}}$ this appendix bounds, propagated through the value functional. That a successful $\varepsilon(\kappa)$ bound exists is itself the evidence that the result-at-the-noun (causal discipline, the shared zero) is the right object — the result degrades continuously off the zero rather than requiring the architecture certificate.
 
@@ -5012,7 +5197,7 @@ The appendix does **not** cover:
 **Type**: Discussion
 **Status**: discussion-grade
 **Stage**: draft
-**Label**: AD
+**Label**: AE
 **Container**: appendix-chapter
 
 
@@ -5201,7 +5386,7 @@ The refinement targets *which sub-type* the agent inhabits, not just the aggrega
 **Type**: Discussion
 **Status**: robust-qualitative
 **Stage**: draft
-**Label**: AE
+**Label**: AF
 **Container**: appendix-chapter
 
 
@@ -5284,7 +5469,7 @@ Max attainable: robust qualitative for the continuity-shape claim absent a gener
 **Type**: Derived
 **Status**: conditional
 **Stage**: draft
-**Label**: AF
+**Label**: AG
 **Container**: appendix-chapter
 
 
@@ -5446,7 +5631,7 @@ The asymmetry is *structural* — it follows from the topology of the orient cas
 **Type**: Discussion
 **Status**: discussion-grade
 **Stage**: draft
-**Label**: AG
+**Label**: AH
 **Container**: appendix-chapter
 
 
@@ -5635,7 +5820,7 @@ Max attainable: *discussion-grade* for the meta-pattern (it is an organizing pri
 **Type**: Formulation
 **Status**: conditional
 **Stage**: draft
-**Label**: AH
+**Label**: AI
 **Container**: appendix-chapter
 
 
@@ -5643,7 +5828,7 @@ A depletable scalar reservoir whose drain rate rises with mismatch and whose lev
 
 The construction is minimal: a scalar resource budget $\mathcal B_t$ evolving under drain-versus-replenishment, with two introduced structural posits — **(A-cost)** the drain rate $c(\lVert\delta\rVert)$ is non-decreasing in mismatch (degrading models cost more to run), and **(A-gate)** the sector parameter is resource-gated via $\alpha(\mathcal{B}) = \alpha^{\max}\psi(\mathcal{B})$ with $\psi(0)=0$ (the depleted agent loses corrective capacity entirely). Hard-budget regime has zero replenishment ($r_{\mathcal{B}}=0$, a finite pool that only depletes); regenerative regime has $r_{\mathcal{B}}\gt 0$.
 
-This segment is *exploratory off-spine*: no Part I/II/III result depends on it; it opens a resource-structure axis [Definition 6.7](#def-strategy-dimension) explicitly records as an open scope item. The formulation is *conditional by nature* — (A-cost) and (A-gate) are modeling assertions about an agent's physical realization, not derivations from core machinery, so the formulation's epistemic ceiling stays at `conditional` regardless of downstream development. The companion derivation [Derived AI](#der-resource-bounded-destabilization) uses this formulation to close [Derived 15.3](#der-adversarial-destabilization)'s Effects-Spiral by an alternative mechanism (agent's own correction-rate decay rather than adversary coupling growth).
+This segment is *exploratory off-spine*: no Part I/II/III result depends on it; it opens a resource-structure axis [Definition 6.7](#def-strategy-dimension) explicitly records as an open scope item. The formulation is *conditional by nature* — (A-cost) and (A-gate) are modeling assertions about an agent's physical realization, not derivations from core machinery, so the formulation's epistemic ceiling stays at `conditional` regardless of downstream development. The companion derivation [Derived AJ](#der-resource-bounded-destabilization) uses this formulation to close [Derived 15.3](#der-adversarial-destabilization)'s Effects-Spiral by an alternative mechanism (agent's own correction-rate decay rather than adversary coupling growth).
 
 #### Formal Expression
 
@@ -5675,7 +5860,7 @@ $$\alpha(\mathcal{B}) \;=\; \alpha^{\max}\,\psi(\mathcal{B}), \qquad \psi:\mathb
 
 *Motivation, not derivation:* with the pool exhausted the agent cannot run its observe–update–actuate loop at full rate (fewer sensor sweeps, slower control cycle, fewer remaining episode steps). $\psi\equiv 1$ recovers the resource-blind special case (constant $\alpha$, exactly today's template).
 
-Together: $\mathcal B_t$ is the new state; (A-cost) couples model quality *into* its drain; (A-gate) couples its level *into* correction capacity. These two couplings are exactly what close the otherwise-open feedback in [Derived 15.3](#der-adversarial-destabilization)'s Effects-Spiral corollary — the consequence is derived in [Derived AI](#der-resource-bounded-destabilization).
+Together: $\mathcal B_t$ is the new state; (A-cost) couples model quality *into* its drain; (A-gate) couples its level *into* correction capacity. These two couplings are exactly what close the otherwise-open feedback in [Derived 15.3](#der-adversarial-destabilization)'s Effects-Spiral corollary — the consequence is derived in [Derived AJ](#der-resource-bounded-destabilization).
 
 #### Epistemic Status
 
@@ -5687,11 +5872,11 @@ This segment is an exploratory branch: it opens a resource-structure axis AAT ha
 
 #### Discussion
 
-**What the two posits buy, minimally.** Everything load-bearing downstream uses only *monotonicity*: (A-cost) that drain is non-decreasing in mismatch, (A-gate) that capacity is non-decreasing in budget with $\psi(0)=0$. The explicit linear $c$ and the shape of $\psi$ are illustrative; the qualitative consequences in [Derived AI](#der-resource-bounded-destabilization) survive any $(c,\psi)$ obeying the monotonicity and the endpoint $\psi(0)=0$. The endpoint matters: $\psi(0)=0$ encodes "an empty pool cannot correct at all," which is what makes exhaustion *terminal* rather than merely *slowing*.
+**What the two posits buy, minimally.** Everything load-bearing downstream uses only *monotonicity*: (A-cost) that drain is non-decreasing in mismatch, (A-gate) that capacity is non-decreasing in budget with $\psi(0)=0$. The explicit linear $c$ and the shape of $\psi$ are illustrative; the qualitative consequences in [Derived AJ](#der-resource-bounded-destabilization) survive any $(c,\psi)$ obeying the monotonicity and the endpoint $\psi(0)=0$. The endpoint matters: $\psi(0)=0$ encodes "an empty pool cannot correct at all," which is what makes exhaustion *terminal* rather than merely *slowing*.
 
 **Why a new scalar rather than folding into $\rho$ or $\mathcal{T}$.** Resource is not disturbance: $\rho$ is mismatch injected by the world, independent of how well the agent is doing; $\mathcal B_t$ drains *because* the agent is doing badly (A-cost). Nor is it tempo: $\mathcal{T}$ is a rate the agent has; $\mathcal B_t$ is a stock it spends to exercise that rate. Collapsing resource into either erases the very coupling that makes the Effects-Spiral close — a degrading model raising its own future cost is a stock-flow statement, not a rate statement. The new scalar is the minimum that keeps stock and flow distinct.
 
-**Relationship to the adaptive reserve $\Delta\rho^\ast$.** [Result G](#result-sector-persistence-template)'s adaptive reserve $\Delta\rho^\ast=\alpha R-\rho$ is a *margin* (how much extra disturbance the agent can absorb at its current rate); $\mathcal B_t$ is a *fuel* (how much correction it can still afford to perform). They are independent: an agent can have comfortable margin and an almost-empty pool, or ample fuel and zero margin. The resource-bounded result is precisely about a system that is margin-safe at full fuel and still dies as the fuel drains the margin away — see [Derived AI](#der-resource-bounded-destabilization).
+**Relationship to the adaptive reserve $\Delta\rho^\ast$.** [Result G](#result-sector-persistence-template)'s adaptive reserve $\Delta\rho^\ast=\alpha R-\rho$ is a *margin* (how much extra disturbance the agent can absorb at its current rate); $\mathcal B_t$ is a *fuel* (how much correction it can still afford to perform). They are independent: an agent can have comfortable margin and an almost-empty pool, or ample fuel and zero margin. The resource-bounded result is precisely about a system that is margin-safe at full fuel and still dies as the fuel drains the margin away — see [Derived AJ](#der-resource-bounded-destabilization).
 
 **Domain instances.** Embodied combat/contested control under a battery or torque-integral budget (the case that motivated this branch); a development team under a fixed person-hour pool where a worsening codebase model raises rework cost; an incident-response org whose escalating confusion burns the on-call budget faster. In each, the resource-blind special case ($\beta_{\mathcal{B}}=0$, $\psi\equiv 1$) is the agent for whom the pool is effectively infinite relative to the engagement — and there the existing constant-$\alpha$ machinery is exactly right, which is the honest boundary of this branch's relevance.
 
@@ -5703,7 +5888,7 @@ This segment is an exploratory branch: it opens a resource-structure axis AAT ha
 **Type**: Derived
 **Status**: conditional
 **Stage**: draft
-**Label**: AI
+**Label**: AJ
 **Container**: appendix-chapter
 
 
@@ -5711,16 +5896,16 @@ A hard-budget agent self-depletes to certain finite-time destabilization against
 
 #### Formal Expression
 
-[Derived 15.3](#der-adversarial-destabilization)'s Effects-Spiral corollary ($\lVert\delta_B\rVert\uparrow \Rightarrow$ erratic action $\Rightarrow \gamma_A\uparrow \Rightarrow \rho_B\uparrow \Rightarrow \lVert\delta_B\rVert\uparrow$) is *discussion-grade* there because the link "degrading model $\Rightarrow$ stronger adversary coupling" requires specifying how model degradation feeds back into the dynamics, which that segment's machinery does not carry. The resource-budget formulation ( [Formulation AH](#form-resource-budget)) supplies that feedback through a different and cleaner channel — the agent's *own* correction rate, not the adversary's coupling.
+[Derived 15.3](#der-adversarial-destabilization)'s Effects-Spiral corollary ($\lVert\delta_B\rVert\uparrow \Rightarrow$ erratic action $\Rightarrow \gamma_A\uparrow \Rightarrow \rho_B\uparrow \Rightarrow \lVert\delta_B\rVert\uparrow$) is *discussion-grade* there because the link "degrading model $\Rightarrow$ stronger adversary coupling" requires specifying how model degradation feeds back into the dynamics, which that segment's machinery does not carry. The resource-budget formulation ( [Formulation AI](#form-resource-budget)) supplies that feedback through a different and cleaner channel — the agent's *own* correction rate, not the adversary's coupling.
 
 ##### Setup: the resource-coupled adversarial instantiation
 
-Instantiate [Result G](#result-sector-persistence-template) with the target agent $B$'s mismatch as state variable, $\xi=\delta_B$, exactly as [Derived 15.3](#der-adversarial-destabilization) does, but with the sector parameter made resource-gated per [Formulation AH](#form-resource-budget) (A-gate):
+Instantiate [Result G](#result-sector-persistence-template) with the target agent $B$'s mismatch as state variable, $\xi=\delta_B$, exactly as [Derived 15.3](#der-adversarial-destabilization) does, but with the sector parameter made resource-gated per [Formulation AI](#form-resource-budget) (A-gate):
 
 $$\frac{d\delta_B}{dt}=-\,\alpha_B(\mathcal{B})\,\delta_B+w_B(t),\qquad \lVert w_B(t)\rVert\leq\rho_B^{\text{eff}}=\rho_{B,\text{base}}+\gamma_A\mathcal{T}_A,$$
 $$\frac{d\mathcal{B}}{dt}=-\,c\big(\lVert\delta_B\rVert\big)+r_{\mathcal{B}},\qquad \alpha_B(\mathcal{B})=\alpha_B^{\max}\,\psi(\mathcal{B}),$$
 
-with $\rho_B^{\text{eff}}$ the coupling-amplified disturbance of [Derived 15.3](#der-adversarial-destabilization) (treated there, and here, with $\gamma_A,\mathcal T_A$ exogenous) and $c,\psi$ as posited in [Formulation AH](#form-resource-budget) (A-cost),(A-gate). The novelty is the *coupled pair*: $\delta_B$ and $\mathcal{B}$ co-evolve, with model quality draining the budget and the budget gating correction.
+with $\rho_B^{\text{eff}}$ the coupling-amplified disturbance of [Derived 15.3](#der-adversarial-destabilization) (treated there, and here, with $\gamma_A,\mathcal T_A$ exogenous) and $c,\psi$ as posited in [Formulation AI](#form-resource-budget) (A-cost),(A-gate). The novelty is the *coupled pair*: $\delta_B$ and $\mathcal{B}$ co-evolve, with model quality draining the budget and the budget gating correction.
 
 ##### Regime split
 
@@ -5758,12 +5943,12 @@ which brings $\tau$ forward: a transient noise burst in $w_B$ permanently advanc
 | Effects-Spiral as derived feedback; $\tau$ advanced by excursions | (A-cost) substituted into the depletion law | Derived (conditional) |
 | Adversary coupling need not grow ($\gamma_A$ constant suffices) | Corollary of the above | Derived (conditional) |
 | Orthogonal to — not a resolution of — the deferred symmetric joint-Jacobian problem | Comparison of which term carries the feedback ($\alpha_B$ vs $\gamma_A$) | Verified relationship |
-| (A-cost), (A-gate) | [Formulation AH](#form-resource-budget) | Introduced posits, not derived |
+| (A-cost), (A-gate) | [Formulation AI](#form-resource-budget) | Introduced posits, not derived |
 | Regenerative regime $r_{\mathcal{B}}\gt 0$ | — | Open (not attempted) |
 
 #### Epistemic Status
 
-*Conditional* on [Formulation AH](#form-resource-budget)'s two introduced posits (A-cost),(A-gate) and the hard regime $r_{\mathcal{B}}=0$. Given those, the chain is tight: the reduction to the decaying-$\alpha$ slot of [Result G](#result-sector-persistence-template) is exact-flavored (it is that template's own machinery, the same instantiation [Proposed Schema 9.10](#schema-strategy-persistence) makes for experience-decay), and certain finite-time destabilization follows by a monotone-budget + Lyapunov-boundary argument with no further assumption. The status is `conditional` rather than `exact` because the load-bearing premises are modeling posits about an agent's physical realization, not consequences of prior segments — inherited honestly from [Formulation AH](#form-resource-budget)'s own ceiling.
+*Conditional* on [Formulation AI](#form-resource-budget)'s two introduced posits (A-cost),(A-gate) and the hard regime $r_{\mathcal{B}}=0$. Given those, the chain is tight: the reduction to the decaying-$\alpha$ slot of [Result G](#result-sector-persistence-template) is exact-flavored (it is that template's own machinery, the same instantiation [Proposed Schema 9.10](#schema-strategy-persistence) makes for experience-decay), and certain finite-time destabilization follows by a monotone-budget + Lyapunov-boundary argument with no further assumption. The status is `conditional` rather than `exact` because the load-bearing premises are modeling posits about an agent's physical realization, not consequences of prior segments — inherited honestly from [Formulation AI](#form-resource-budget)'s own ceiling.
 
 **Max attainable: `conditional`** for the formulation-dependent result; a specific agent class that satisfies (A-cost)/(A-gate) by construction (measured actuation energy, power-throttled control loop) lifts *its* instance to that class's tighter status, but the general statement stays conditional by the nature of its premises.
 
@@ -5808,7 +5993,7 @@ The regenerative regime ($r_{\mathcal{B}}\gt 0$) is genuinely open and not attem
 **Type**: Result
 **Status**: conditional
 **Stage**: draft
-**Label**: AJ
+**Label**: AK
 **Container**: appendix-chapter
 
 
@@ -6013,7 +6198,7 @@ This is the *interior facet* of the stability certificate ( [Discussion 5.1](#di
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: AK
+**Label**: AL
 **Container**: appendix-chapter
 
 
@@ -6126,11 +6311,11 @@ This gives the full current picture: $\{\alpha, \alpha_1, \alpha_2, \alpha_3, \a
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: AL
+**Label**: AM
 **Container**: appendix-chapter
 
 
-Under L1' correlated-evidence regimes with unobservable common cause, the default log-odds edge-update ( [Derivation U](#deriv-edge-update-natural-parameter)) converges to a **biased fixed point** — edges settle at log-odds values that match the L1' root-probability rather than the marginal-edge truth. This segment derives a closed-form bias formula for the two-edge OR-root case, verifies it via Monte Carlo, and composes it with `#disc-identifiability-floor` Instance 2 and `#schema-strategy-persistence`'s forgetting prerequisite to produce a **dual forgetting-rate requirement** on strategic persistence.
+Under L1' correlated-evidence regimes with unobservable common cause, the default log-odds edge-update ( [Derivation V](#deriv-edge-update-natural-parameter)) converges to a **biased fixed point** — edges settle at log-odds values that match the L1' root-probability rather than the marginal-edge truth. This segment derives a closed-form bias formula for the two-edge OR-root case, verifies it via Monte Carlo, and composes it with `#disc-identifiability-floor` Instance 2 and `#schema-strategy-persistence`'s forgetting prerequisite to produce a **dual forgetting-rate requirement** on strategic persistence.
 
 The bias is the quantitative companion to F13's structural-identifiability-floor result: F13 shows identification is *structurally impossible* from single-channel observation; this segment shows the resulting *magnitude drift* is bounded, Lipschitz in correlation strength $\rho$, and Cramér-Rao-floored under forgetting. The dual forgetting-rate requirement reads operationally: forget *fast enough* to track non-stationarity (the plasticity lower bound from [Proposed Schema 9.10](#schema-strategy-persistence)) *and* fast enough to keep the L1' bias bounded (this segment's upper-bound-driving lower bound on $1-\lambda$). When the two compose with `#form-consolidation-dynamics`'s stability cadence into an empty admissibility window, the agent must augment its observability or accept biased-fixed-point operation — the operational signature of a forgetting-window infeasibility is which constraint is binding.
 
@@ -6229,7 +6414,7 @@ Two independent Monte Carlo implementations confirm the closed-form predictions 
 
 **Relationship to `#schema-strategy-persistence`'s forgetting.** The segment's existing forgetting prerequisite (for asymptotic sector-persistence) becomes dual under L1': forgetting must *both* outpace sector disturbance *and* prevent bias accumulation. When the two constraints are compatible (admissibility window non-empty), the existing forgetting-rate requirement suffices with appropriate $\rho$-dependent tuning. When incompatible, augmentation is required — a structural scope narrowing that elevates observable-$C$ instrumentation from convenience to prerequisite.
 
-**Connection to [Derivation Y](#deriv-update-detection-latency).** The detection-latency theorem ($\mathbb{E}[T_{\text{detect}}] = \Omega((n_{\min}+1)/\varepsilon)$) assumes unbiased marginal tracking; under L1' bias, the pre-accumulated drift degrades effective $\varepsilon$ for subsequent regime-change detection. High-operating-point agents with pre-accumulated L1' bias face a compounded myopia floor. Follow-on refinement possible in [Derivation Y](#deriv-update-detection-latency).
+**Connection to [Derivation Z](#deriv-update-detection-latency).** The detection-latency theorem ($\mathbb{E}[T_{\text{detect}}] = \Omega((n_{\min}+1)/\varepsilon)$) assumes unbiased marginal tracking; under L1' bias, the pre-accumulated drift degrades effective $\varepsilon$ for subsequent regime-change detection. High-operating-point agents with pre-accumulated L1' bias face a compounded myopia floor. Follow-on refinement possible in [Derivation Z](#deriv-update-detection-latency).
 
 <a id="der-architecture-noidentifiability"></a>
 
@@ -6239,13 +6424,13 @@ Two independent Monte Carlo implementations confirm the closed-form predictions 
 **Type**: Derived
 **Status**: conditional
 **Stage**: draft
-**Label**: AM
+**Label**: AN
 **Container**: appendix-chapter
 
 
 The framework's identifiability-floor at the *agent-internal architecture* layer. Two AAT agents whose linearized closed-loop residual dynamics are minimal state-space realizations related by an invertible similarity transformation produce *identical* on-policy summary statistics: identical innovation spectrum, identical sector-condition summary $(\alpha, R)$, identical similarity-invariant deviation summaries — and therefore identical observation law under on-policy, in-regime, summary-only access. An observer with that access cannot distinguish the two agents, even though they implement the correction in structurally distinct internal coordinates. The architectural degree of freedom AAT cares about — `#der-agent-opacity`'s "which internal mechanism" — lives entirely in the $GL(n)$ similarity fiber and is annihilated by the on-policy observation map.
 
-The no-go is *exact* in the linear-Gaussian / Kalman sub-scope, anchored by Kalman 1963 and Ho-Kalman 1966 canonical-form non-uniqueness; *robust-qualitative* in the general sub-scope via the Causal Hierarchy Theorem applied at the agent-as-SCM layer (Bareinboim, Correa, Ibeling & Icard 2022). The mechanism is **not** Sylvester's law of inertia inherited for free — the *generating* group action that produces the indistinguishable pair is state-space similarity $T(\cdot)T^{-1}$, not the metric congruence $S^\top(\cdot)S$ that Sylvester governs. It *reduces*, however, to the same shape as the Instance-2 rank-collapse floor ( [Derivation R](#deriv-edge-credence-dynamics) Prop B.7): the on-policy Fisher information of the realization manifold is identically zero along the similarity-fiber tangent distribution, so the observed-Fisher is rank-deficient on a structurally-forced indeterminacy manifold — Instance-2's mechanism with the manifold being a Lie-group fiber rather than a single indeterminacy submanifold. Escape-irreducibility under the agent's *metric/coordinate* freedom (distinct from the similarity freedom that *generates* the pair) is then Sylvester at one remove, identically to Instance 2.
+The no-go is *exact* in the linear-Gaussian / Kalman sub-scope, anchored by Kalman 1963 and Ho-Kalman 1966 canonical-form non-uniqueness; *robust-qualitative* in the general sub-scope via the Causal Hierarchy Theorem applied at the agent-as-SCM layer (Bareinboim, Correa, Ibeling & Icard 2022). The mechanism is **not** Sylvester's law of inertia inherited for free — the *generating* group action that produces the indistinguishable pair is state-space similarity $T(\cdot)T^{-1}$, not the metric congruence $S^\top(\cdot)S$ that Sylvester governs. It *reduces*, however, to the same shape as the Instance-2 rank-collapse floor ( [Derivation S](#deriv-edge-credence-dynamics) Prop B.7): the on-policy Fisher information of the realization manifold is identically zero along the similarity-fiber tangent distribution, so the observed-Fisher is rank-deficient on a structurally-forced indeterminacy manifold — Instance-2's mechanism with the manifold being a Lie-group fiber rather than a single indeterminacy submanifold. Escape-irreducibility under the agent's *metric/coordinate* freedom (distinct from the similarity freedom that *generates* the pair) is then Sylvester at one remove, identically to Instance 2.
 
 Three structurally distinct escapes: (a) loop-interventional access ( [Derived 7.4](#der-loop-interventional-access)) perturbs along similarity-fiber directions that on-policy data never excites — the intervention generates Level-2 data, the no-go is Level-1-only; (b) higher-moment / out-of-regime observation distinguishes the pair in the nonlinear sub-scope (AAT's $\beta$) — *provably void* in the linear-Gaussian sub-scope, since a Gaussian innovation carries no information beyond second order; (c) architecture instrumentation (direct read of the update rule or internal state) breaks the black-box scope, structurally the same kind as Instance 2's "instrument the latent" escape. A fourth proposed escape — horizon extension under the same policy — collapses into (a): more samples of an annihilated observation law cannot escape the annihilation.
 
@@ -6316,7 +6501,7 @@ The reduction to Instance-2 mechanism proceeds via Fisher geometry. Parameterize
 
 $$\theta = (\text{similarity-invariants}, \text{orbit-coordinates})$$
 
-— formally, the realization manifold fibered over the transfer-function manifold by the $GL(n)$ similarity group. By the §"No-Go Theorem" derivation, the on-policy observation law depends on $\theta$ only through the similarity-invariant base. The Fisher information of the on-policy observation channel, as a quadratic form on the full realization manifold, is therefore *identically zero* on the entire tangent distribution of the similarity fiber. That is the Instance-2 structure (Fisher rank-deficiency along a structurally-forced indeterminacy manifold; [Derivation R](#deriv-edge-credence-dynamics) Prop B.7), with the manifold being a $GL(n)$ Lie-group fiber rather than the mixture-indeterminacy manifold of Instance 2.
+— formally, the realization manifold fibered over the transfer-function manifold by the $GL(n)$ similarity group. By the §"No-Go Theorem" derivation, the on-policy observation law depends on $\theta$ only through the similarity-invariant base. The Fisher information of the on-policy observation channel, as a quadratic form on the full realization manifold, is therefore *identically zero* on the entire tangent distribution of the similarity fiber. That is the Instance-2 structure (Fisher rank-deficiency along a structurally-forced indeterminacy manifold; [Derivation S](#deriv-edge-credence-dynamics) Prop B.7), with the manifold being a $GL(n)$ Lie-group fiber rather than the mixture-indeterminacy manifold of Instance 2.
 
 The agent's *escape-irreducibility under its metric/coordinate freedom* is then Sylvester at one remove — identically to Instance 2. Once the rank-deficient observed-Fisher is recognized, no reparameterization of the observation model refills the rank-deficient direction; congruence preserves inertia.
 
@@ -6343,7 +6528,7 @@ The no-go's scope is (i) on-policy, (ii) in-regime, (iii) summary-only. Each sco
 
 **Route (b) — higher-moment / out-of-regime (sub-scope-bounded).** In the nonlinear sub-scope $\beta$, two agents matched at $(\alpha, R)$ and second-order generally differ at moments of order $\geq 3$. In the linear-Gaussian sub-scope this route is *provably void*: a Gaussian innovation carries no information beyond second order, so higher-moment observation adds nothing — the similarity orbit remains invisible. The "escape exists here, provably not there" boundary is exactly the kind of sharp scope-statement that makes a floor instance informative.
 
-**Route (c) — architecture instrumentation.** Direct read of the update rule or internal state breaks the black-box scope: the observer now has access to the basis $T$ itself, not just its annihilated projection onto the on-policy observation law. Structurally the same kind as Instance 2's escape (i) ("instrument the latent" — [Derivation R](#deriv-edge-credence-dynamics) Prop B.7); genuinely distinct from (a) and (b) in *what the observer must have* (white-box access versus interventional access versus moment-level access).
+**Route (c) — architecture instrumentation.** Direct read of the update rule or internal state breaks the black-box scope: the observer now has access to the basis $T$ itself, not just its annihilated projection onto the on-policy observation law. Structurally the same kind as Instance 2's escape (i) ("instrument the latent" — [Derivation S](#deriv-edge-credence-dynamics) Prop B.7); genuinely distinct from (a) and (b) in *what the observer must have* (white-box access versus interventional access versus moment-level access).
 
 **Route (d), horizon extension under the same policy — does not escape.** Passive observation at longer horizons under the *same* on-policy execution generates more *samples* of the same observation law; the §"No-Go Theorem" derivation is a statement about the *law* (the architectural content is annihilated by the spectrum map), not about the sample size. Horizon extension that takes the agent *out of the current regime* is no longer the same policy in the same regime — that is a regime change, which is structurally an exogenous intervention-like event, collapsing into route (a)/(b). Route (d) is therefore either void (same regime) or a special case of (a)/(b); the count of structurally distinct escapes is **three**, not four.
 
@@ -6411,7 +6596,7 @@ The escape-count statement ("three structurally distinct escapes, with the propo
 
 **Brief:** Imagine two agents that both keep a desk tidy by the same rules: same overall reaction speed, same tolerance for clutter, same long-run mess level. One agent reasons by tracking pile heights; the other tracks distances between piles. Watching them work — under their normal habits, summary statistics only — you literally *cannot tell which one is running*. The visible behavior is the same, the variability is the same, the rate of clean-up is the same, the cluttered ceiling is the same. Different inner mechanisms, identical outer signature. There are only three honest ways to tell the agents apart: poke one in a way it wouldn't normally do (intervention), look at fine-grained details its rules would not normally generate (out-of-regime / higher-moment observation), or open the hood and read the wiring (white-box access). And a fourth pretender — "just watch longer" — does *not* work, because watching longer accumulates more samples of the same signature, never the missing distinction. This is the floor: it is structurally impossible to recover the inner-mechanism information from the outer summary alone, and the only paths forward are exactly the three named escapes, each of them violating a clearly-stated scope condition.
 
-**Impact:** Closes the long-contested fourth instance of `#disc-identifiability-floor` with a sharp, dual-anchored no-go (Kalman-Ho linear-Gaussian sub-scope, exact; CHT-at-agent-as-SCM general, robust qualitative). Extends the Sylvester-mechanism rank-collapse subclass to three members $\{$Instance 1, Instance 2, Instance 4$\}$ via the at-one-remove escape-irreducibility, while preserving the projection/closure distinctness of Instance 3 — the plurality-of-mechanism that makes the floor pattern a presentational family rather than a single theorem stays intact, sharpened. Elevates `#der-loop-interventional-access` to a third semantically-distinct deployment mode (agent-internal architecture, alongside agent-self-intervention and observer-on-sub-agent), unifying the strengthened-consequence content of three identifiability-floor instances under one piece of machinery. The result mathematically settles the Regime-C confound of the rho-decomposition ( [Result 3.6](#result-mismatch-decomposition) + [Derivation W](#internal-external-decomposition)) as the same object projected onto the disturbance-statistic coordinate — one decision, not two.
+**Impact:** Closes the long-contested fourth instance of `#disc-identifiability-floor` with a sharp, dual-anchored no-go (Kalman-Ho linear-Gaussian sub-scope, exact; CHT-at-agent-as-SCM general, robust qualitative). Extends the Sylvester-mechanism rank-collapse subclass to three members $\{$Instance 1, Instance 2, Instance 4$\}$ via the at-one-remove escape-irreducibility, while preserving the projection/closure distinctness of Instance 3 — the plurality-of-mechanism that makes the floor pattern a presentational family rather than a single theorem stays intact, sharpened. Elevates `#der-loop-interventional-access` to a third semantically-distinct deployment mode (agent-internal architecture, alongside agent-self-intervention and observer-on-sub-agent), unifying the strengthened-consequence content of three identifiability-floor instances under one piece of machinery. The result mathematically settles the Regime-C confound of the rho-decomposition ( [Result 3.6](#result-mismatch-decomposition) + [Derivation X](#internal-external-decomposition)) as the same object projected onto the disturbance-statistic coordinate — one decision, not two.
 
 **Novelty Claim:** *Claim derivation* of the architecture-noidentifiability floor with named scope (linear-Gaussian sub-scope, on-policy summary access) and named dual anchor (Kalman 1963 / Ho-Kalman 1966 / Anderson-Moore 1979 §10.4 for the sharp sub-scope; Bareinboim, Correa, Ibeling & Icard 2022 for the general case). The Kalman-Ho canonical-form non-uniqueness theorem is classical (1963/1966); the AAT-distinctive content is *recognizing* that the architectural degree of freedom the framework cares about — `#der-agent-opacity`'s "which internal mechanism" — *is* the similarity orbit, and that the orbit is annihilated by the on-policy observation map. *Claim differentiation* on mechanism: the obstruction is Instance-2's Fisher-null along a structurally-forced indeterminacy manifold (the manifold being a $GL(n)$ Lie-group fiber) rather than a new mechanism, with Sylvester preserving inertia on the escape side identically to Instance 2 — a *member* of the rank-collapse subclass, not a new mechanism family. *Claim recognition* that the previously-proposed Fano anchor degenerates at $I(A;\text{obs}) = 0$ (vacuous lower bound on prediction error under a zero-information channel), so Kalman-Ho is the exact-population anchor and Fano is the finite-sample refinement — a demonstrated no-go on the proposed Fano anchoring, not an assertion.
 
@@ -6438,13 +6623,13 @@ The escape-count statement ("three structurally distinct escapes, with the propo
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: AN
+**Label**: AO
 **Container**: appendix-chapter
 
 
 Under L1'/L2 correlated-evidence regimes, the default log-odds edge-update (from `#deriv-edge-update-natural-parameter`) retains correct *direction* — the angle between log-odds gradient and natural gradient never exceeds $45°$ at finite correlation $\rho$, so B1 directional fidelity ( [Derived 4.4](#der-gain-sector-bridge)) is never actively violated — but its *magnitude alignment* degrades by a factor $\sqrt{1-r^2}$ in the sector constant. The Fisher-whitened correction restores sharp B1 on the Fisher-weighted inner product. Under the (PI) parameterization-invariance axiom named in `#scope-agent-identity` and promoted to a primary instance of `#disc-additive-coordinate-forcing` via Čencov 1982, Fisher whitening is **AAT-internally derivable** rather than externally imported. The result adds sub-scope $\alpha_3$ (correlated evidence + Fisher-whitened update + Bayesian coherence → A2' derived) to the A2' partition and composes cleanly with the meta-gain machinery of `#deriv-adaptive-gain-dynamics` (Fisher whitening is a special case of meta-gain with $K_t = \mathbf{I}^{-1}(\lambda_t)$).
 
-The framework's posture splits cleanly. *Without* the (PI) commitment, the Fisher-whitened correction is an externally imported choice from information geometry. *With* (PI), Čencov 1982's uniqueness theorem *forces* the Fisher metric as the unique Markov-invariant metric on the statistical manifold, and the whitened-update form is then the AAT-internally canonical correction for directional-fidelity preservation across reparameterizations. Operational prescription: where correlated evidence is the dominant regime, Fisher whitening recovers sharp persistence guarantees at the cost of meta-gain machinery; where it is mild or rare, the default log-odds update with $\sqrt{1-r^2}$ magnitude-alignment degradation suffices. Sibling at the model-parameter-update layer is [Derivation AS](#deriv-fisher-local-update-gain) (update *magnitude* under Fisher-local regime); together they make the Fisher-local invariance regime AAT-internally complete.
+The framework's posture splits cleanly. *Without* the (PI) commitment, the Fisher-whitened correction is an externally imported choice from information geometry. *With* (PI), Čencov 1982's uniqueness theorem *forces* the Fisher metric as the unique Markov-invariant metric on the statistical manifold, and the whitened-update form is then the AAT-internally canonical correction for directional-fidelity preservation across reparameterizations. Operational prescription: where correlated evidence is the dominant regime, Fisher whitening recovers sharp persistence guarantees at the cost of meta-gain machinery; where it is mild or rare, the default log-odds update with $\sqrt{1-r^2}$ magnitude-alignment degradation suffices. Sibling at the model-parameter-update layer is [Derivation AT](#deriv-fisher-local-update-gain) (update *magnitude* under Fisher-local regime); together they make the Fisher-local invariance regime AAT-internally complete.
 
 #### Formal Expression
 
@@ -6543,7 +6728,7 @@ L2-degenerate (perfect correlation, $r \to 1$) is a *structural* collapse — it
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: AO
+**Label**: AP
 **Container**: appendix-chapter
 
 
@@ -6684,7 +6869,7 @@ The double-duty Instance 3 serves both `#disc-separability-pattern` Contraction 
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: AP
+**Label**: AQ
 **Container**: appendix-chapter
 
 
@@ -6808,7 +6993,7 @@ Max attainable: *Exact* for the imported theorem; *derived conditional* for the 
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: AQ
+**Label**: AR
 **Container**: appendix-chapter
 
 
@@ -6930,7 +7115,7 @@ Max attainable: *Exact* for the imported theorem. *Derived conditional* for the 
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: AR
+**Label**: AS
 **Container**: appendix-chapter
 
 
@@ -7048,7 +7233,7 @@ Max attainable: *Exact* for the imported theorem. *Derived conditional* for the 
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: AS
+**Label**: AT
 **Container**: appendix-chapter
 
 
@@ -7178,7 +7363,7 @@ The agreement is not coincidence: the Fisher-local regime *is* the regime where 
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: AT
+**Label**: AU
 **Container**: appendix-chapter
 
 
@@ -7190,11 +7375,11 @@ The additive tempo formula $\mathcal{T} = \sum_k \nu^{(k)} \eta^{(k)\ast}$ ( [De
 
 *[Definition (effective tempo, Fisher-local regime)]*
 
-Work in the Fisher-local / Gaussian location regime of [Derivation AS](#deriv-fisher-local-update-gain): environment parameter $\theta$, model uncertainty $U_M$ (posterior variance), channels $k = 1, \dots, n$ with independent Poisson event rates $\nu^{(k)}$ and per-event observations $o^{(k)} = \theta + n^{(k)}$, noise variance $U_o^{(k)} = \mathrm{Var}(n^{(k)})$. Let $\mathfrak{J}$ denote the posterior-precision inflow rate delivered by the *optimal joint filter* (Fisher information about $\theta$ acquired per unit time). The **effective tempo** is the fractional uncertainty-contraction rate
+Work in the Fisher-local / Gaussian location regime of [Derivation AT](#deriv-fisher-local-update-gain): environment parameter $\theta$, model uncertainty $U_M$ (posterior variance), channels $k = 1, \dots, n$ with independent Poisson event rates $\nu^{(k)}$ and per-event observations $o^{(k)} = \theta + n^{(k)}$, noise variance $U_o^{(k)} = \mathrm{Var}(n^{(k)})$. Let $\mathfrak{J}$ denote the posterior-precision inflow rate delivered by the *optimal joint filter* (Fisher information about $\theta$ acquired per unit time). The **effective tempo** is the fractional uncertainty-contraction rate
 
 $$\mathcal T_{\text{eff}} := -\frac{d}{dt}\log U_M(t) = U_M \cdot \mathfrak{J},$$
 
-the second equality since $\tfrac{d}{dt}(1/U_M) = \mathfrak{J}$. Single-channel consistency: $\mathfrak{J} = \nu/U_o$ gives $\mathcal T_{\text{eff}} = \nu\,U_M/U_o$, which agrees with $\nu \eta^\ast = \nu\,U_M/(U_M + U_o)$ to first order in the per-event information ratio $U_M/U_o$ — the same first-order-in-step-size regime (R2) under which [Derivation AS](#deriv-fisher-local-update-gain) operates and under which tempo is a rate at all. All statements below are exact at the Fisher-information level and transfer to gain-form tempo at that order.
+the second equality since $\tfrac{d}{dt}(1/U_M) = \mathfrak{J}$. Single-channel consistency: $\mathfrak{J} = \nu/U_o$ gives $\mathcal T_{\text{eff}} = \nu\,U_M/U_o$, which agrees with $\nu \eta^\ast = \nu\,U_M/(U_M + U_o)$ to first order in the per-event information ratio $U_M/U_o$ — the same first-order-in-step-size regime (R2) under which [Derivation AT](#deriv-fisher-local-update-gain) operates and under which tempo is a rate at all. All statements below are exact at the Fisher-information level and transfer to gain-form tempo at that order.
 
 ##### Additivity under noise independence
 
@@ -7256,7 +7441,7 @@ A channel-local, convention-free additive decomposition of the joint information
 
 #### Epistemic Status
 
-*Conditional.* The derivations are exact within the Fisher-local / Gaussian location regime of [Derivation AS](#deriv-fisher-local-update-gain) (conditions (R1)–(R3)) plus the stated noise models (jointly Gaussian batch noise for the deviation formula; the common-source structure for the penalty and saturation theorems); the transfer from Fisher-information statements to gain-form tempo is first-order in the per-event information ratio, the same regime in which tempo is a rate. Additivity-under-independence is general (standard Fisher additivity, not merely Gaussian); the counterexamples are exact and finite, computed in-segment. The two-source PID landscape and the $n \geq 3$ impossibility are imported results, cited by their real names; the mapping of the PID obstruction onto channel-local tempo attribution is AAT's reading and is stated at that grade. Citation details for the imported PID results are flagged for primary-source verification before promotion past `draft` (see Working Notes). This segment supplies the derivation behind the channel-independence condition named in [Definition 3.9](#def-adaptive-tempo)'s Epistemic Status; it *refutes* the previously asserted general upper bound (the deviation is signed) and *establishes* the bound on its true scope (common-source regime), so downstream uses of "additive tempo is conservative" are unsafe unless the common-source (or general nonpositive-$\Delta$) structure is verified for the application.
+*Conditional.* The derivations are exact within the Fisher-local / Gaussian location regime of [Derivation AT](#deriv-fisher-local-update-gain) (conditions (R1)–(R3)) plus the stated noise models (jointly Gaussian batch noise for the deviation formula; the common-source structure for the penalty and saturation theorems); the transfer from Fisher-information statements to gain-form tempo is first-order in the per-event information ratio, the same regime in which tempo is a rate. Additivity-under-independence is general (standard Fisher additivity, not merely Gaussian); the counterexamples are exact and finite, computed in-segment. The two-source PID landscape and the $n \geq 3$ impossibility are imported results, cited by their real names; the mapping of the PID obstruction onto channel-local tempo attribution is AAT's reading and is stated at that grade. Citation details for the imported PID results are flagged for primary-source verification before promotion past `draft` (see Working Notes). This segment supplies the derivation behind the channel-independence condition named in [Definition 3.9](#def-adaptive-tempo)'s Epistemic Status; it *refutes* the previously asserted general upper bound (the deviation is signed) and *establishes* the bound on its true scope (common-source regime), so downstream uses of "additive tempo is conservative" are unsafe unless the common-source (or general nonpositive-$\Delta$) structure is verified for the application.
 
 #### Discussion
 
@@ -7278,7 +7463,7 @@ A channel-local, convention-free additive decomposition of the joint information
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: AU
+**Label**: AV
 **Container**: appendix-chapter
 
 
@@ -7426,7 +7611,7 @@ with eigenvalues $5.00$ along $(1, 1)/\sqrt{2}$ and $0.26$ along $(1, -1)/\sqrt{
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: AV
+**Label**: AW
 **Container**: appendix-chapter
 
 
@@ -7434,7 +7619,7 @@ The unified policy objective in `#disc-ciy-unified-objective` combines pragmatic
 
 However, AAT's underlying Lyapunov dynamics ( `#result-persistence-condition`) force a *second, structurally distinct* exploration drive: the **Survival Imperative**. This segment derives that an agent must actively seek low-noise (high CIY) observations not just to learn, but to physically survive environmental drift when its model is *confident*.
 
-AAT therefore carries **two parallel exploration drives at opposite ends of the uncertainty spectrum**: the standard epistemic drive scaling as $\lambda_{\text{info}} \propto U_M$ (explore when uncertain — dominant when model uncertainty is high), and the survival drive scaling as $\lambda_{\text{surv}} \propto 1/U_M$ (explore when confident in a drifting world — dominant when model uncertainty is low). The result *bypasses the dark-room critique of active inference* structurally rather than parametrically: an AAT agent in a drifting world physically cannot stop exploring because exploration is forced by the same Lyapunov machinery that grounds the rest of Part II, not by a tunable preference parameter. The operational prescription — *confident agents are not safe agents in drifting environments* — is the formal grounding for the "productive paranoia" heuristic about not resting on past success. The scalar form here admits a "blank-wall" attack resolved in [Derivation AW](#deriv-causal-ib-lmi) by lifting to a Linear Matrix Inequality on the Fisher Information Matrix with a positive-semidefinite matrix Lagrange multiplier; the dual-drive picture survives the lift in matrix form.
+AAT therefore carries **two parallel exploration drives at opposite ends of the uncertainty spectrum**: the standard epistemic drive scaling as $\lambda_{\text{info}} \propto U_M$ (explore when uncertain — dominant when model uncertainty is high), and the survival drive scaling as $\lambda_{\text{surv}} \propto 1/U_M$ (explore when confident in a drifting world — dominant when model uncertainty is low). The result *bypasses the dark-room critique of active inference* structurally rather than parametrically: an AAT agent in a drifting world physically cannot stop exploring because exploration is forced by the same Lyapunov machinery that grounds the rest of Part II, not by a tunable preference parameter. The operational prescription — *confident agents are not safe agents in drifting environments* — is the formal grounding for the "productive paranoia" heuristic about not resting on past success. The scalar form here admits a "blank-wall" attack resolved in [Derivation AX](#deriv-causal-ib-lmi) by lifting to a Linear Matrix Inequality on the Fisher Information Matrix with a positive-semidefinite matrix Lagrange multiplier; the dual-drive picture survives the lift in matrix form.
 
 #### The Persistence-Bounded Objective
 
@@ -7526,13 +7711,13 @@ The scalar derivation here remains correct in its scope (1D environments and iso
 **Type**: Derivation
 **Status**: conditional
 **Stage**: draft
-**Label**: AW
+**Label**: AX
 **Container**: appendix-chapter
 
 
 In `#deriv-causal-ib-exploration`, the survival-imperative exploration drive was derived in scalar form: bound $\mathbb E_\pi[U_o(a)] \le U_o^{\max}$ to keep the agent's mismatch within survivable bounds. The scalar bound admits a "blank wall" attack — actions that minimize $U_o$ in a subspace orthogonal to the drift (e.g., observing a constant signal uncorrelated with the environmental drift) satisfy the survival math without probing the drifting coordinates, and the agent's prediction in those subspaces diverges unboundedly. This segment lifts the survival constraint to a Linear Matrix Inequality on the Fisher Information Matrix, replacing the scalar shadow price with a positive-semidefinite matrix Lagrange multiplier $\Lambda$ that distinguishes by direction, not just by magnitude.
 
-Under the matrix form, the action's exploration bonus is the trace $\mathrm{Tr}(\Lambda \cdot \mathcal I_o(a))$, and complementary slackness on the directional constraint *mathematically zeros out the bonus for blank-wall actions*: the bonus structurally requires the agent to probe the drifting directions. The result converts the unified policy objective from heuristic to conditional-theorem-grade under the matrix-LMI form; the structural form is grounded in AAT's physical survival bounds and standard semidefinite programming rather than treated as an ad-hoc heuristic. The same Fisher Information Matrix appears here in *three* structurally distinct framework loads — credit assignment ( [Derivation AN](#deriv-fisher-whitened-update-rule)), coordinate forcing ( [Discussion 5.6](#disc-additive-coordinate-forcing) 4th instance), and now survival — because the framework's coordinates are forced rather than chosen; this segment is the first explicit cross-instance composition where coordinate-forcing and survival interact within the same machinery. Composition with the persistence-information-rate floor sharpens: the floor names *what bandwidth must be met*; the LMI names *in what directions to spend it*. Without the LMI the bandwidth could be supplied in irrelevant directions; with it, complementary slackness routes the bandwidth toward the drifting modes — a directional version of the central inequality.
+Under the matrix form, the action's exploration bonus is the trace $\mathrm{Tr}(\Lambda \cdot \mathcal I_o(a))$, and complementary slackness on the directional constraint *mathematically zeros out the bonus for blank-wall actions*: the bonus structurally requires the agent to probe the drifting directions. The result converts the unified policy objective from heuristic to conditional-theorem-grade under the matrix-LMI form; the structural form is grounded in AAT's physical survival bounds and standard semidefinite programming rather than treated as an ad-hoc heuristic. The same Fisher Information Matrix appears here in *three* structurally distinct framework loads — credit assignment ( [Derivation AO](#deriv-fisher-whitened-update-rule)), coordinate forcing ( [Discussion 5.6](#disc-additive-coordinate-forcing) 4th instance), and now survival — because the framework's coordinates are forced rather than chosen; this segment is the first explicit cross-instance composition where coordinate-forcing and survival interact within the same machinery. Composition with the persistence-information-rate floor sharpens: the floor names *what bandwidth must be met*; the LMI names *in what directions to spend it*. Without the LMI the bandwidth could be supplied in irrelevant directions; with it, complementary slackness routes the bandwidth toward the drifting modes — a directional version of the central inequality.
 
 #### Formal Expression
 
@@ -7682,7 +7867,7 @@ The agent's total exploration shadow price is $\Lambda_{\text{info}} + \Lambda_{
 **Type**: Observation
 **Status**: discussion-grade
 **Stage**: draft
-**Label**: AX
+**Label**: AY
 **Container**: appendix-chapter
 
 
@@ -7710,7 +7895,7 @@ The authored world provides four structural properties, each the *built* counter
 
 **Found versus built, and why the framework wants both.** Software is the domain where the epistemic privileges happen to hold and a large practice already generates data inside them; the authored world is the domain where they hold because someone chose them, which buys three things software cannot: (a) *dialable* environment parameters — $\rho$ can be scheduled, not merely measured; (b) *author-side access to the exogenous coordinatization* — software's version control gives literal Level-3 access (P2 there), while fated noise gives literal Level-**4** access, one full rung more; (c) freedom from the confound that software environments are themselves made of agent behavior. Conversely the authored world lacks software's ecological validity — nothing in it ships to production — so results transfer with stated construction assumptions, exactly the transfer-assumption discipline TST names for cross-domain claims. The two laboratories are complements, not competitors: found breadth against built depth.
 
-**The standing simulation intent.** The framework's Part I validation simulations ( [Detail AY](#obs-section-i-validation-simulations)) were built as standalone numerical models; the standing intent is to re-run them in-vivo in the authored world as its phases reach the relevant dynamics, converting each from a bespoke script into a cited, replayable world artifact per V3. This segment exists partly so that migration has a canonical anchor: simulation reports should cite the laboratory, not re-describe it.
+**The standing simulation intent.** The framework's Part I validation simulations ( [Detail AZ](#obs-section-i-validation-simulations)) were built as standalone numerical models; the standing intent is to re-run them in-vivo in the authored world as its phases reach the relevant dynamics, converting each from a bespoke script into a cited, replayable world artifact per V3. This segment exists partly so that migration has a canonical anchor: simulation reports should cite the laboratory, not re-describe it.
 
 **Near-term experiments the laboratory makes cheap.** Beyond the Level-4 demonstration (V2), two are flagged in adjacent segments: the GA-1 housing experiment (transition-law versus observation-law ignorance — the experimenter chooses whether to perturb $T$ or $h$, directly testing the verified asymmetry from the epistemic-target work), and the behavioral $\hat\kappa_{\text{processing}}$ estimator at scale (same event under different goal states across thousands of agent-events with controlled priors) once the agent seam lands.
 
@@ -7724,7 +7909,7 @@ The authored world provides four structural properties, each the *built* counter
 **Type**: Detail
 **Status**: empirical
 **Stage**: draft
-**Label**: AY
+**Label**: AZ
 **Container**: appendix-chapter
 
 
@@ -7818,7 +8003,7 @@ Bi-predictability $P$ (Hafez et al.) measures the informational architecture of 
 **Type**: Detail
 **Status**: conditional
 **Stage**: draft
-**Label**: AZ
+**Label**: BA
 **Container**: appendix-chapter
 
 
@@ -8003,7 +8188,7 @@ This is a *procedures document* — estimation recipes, not theoretical claims. 
 **Type**: Worked Example
 **Status**: exact
 **Stage**: draft
-**Label**: BA
+**Label**: BB
 **Container**: appendix-chapter
 
 
@@ -8141,7 +8326,7 @@ This is a *worked instantiation*, not a theoretical claim. Every mapping is exac
 **Type**: Worked Example
 **Status**: conditional
 **Stage**: draft
-**Label**: BB
+**Label**: BC
 **Container**: appendix-chapter
 
 
@@ -8280,7 +8465,7 @@ The mapping status is *conditional* because the quantitative relationships depen
 **Type**: Worked Example
 **Status**: conditional
 **Stage**: draft
-**Label**: BC
+**Label**: BD
 **Container**: appendix-chapter
 
 
@@ -8304,7 +8489,7 @@ At each step, pulling arm $k$ yields reward $r_t \in \{0, 1\}$ with $P(r_t = 1 \
 
 #### Part I Chain Instantiation (Summary)
 
-Part I quantities map as in [Worked Example BB](#example-bandit). The brief summary here establishes the epistemic baseline; the novel content is Part II.
+Part I quantities map as in [Worked Example BC](#example-bandit). The brief summary here establishes the epistemic baseline; the novel content is Part II.
 
 **Scope** ( [Scope 1.6](#scope-agency)). $\Omega_t = (\theta_1(t), \theta_2(t), \theta_3(t))$; $\mathcal{A} = \{1, 2, 3\}$; residual uncertainty persists. *Exact.*
 
@@ -8621,7 +8806,7 @@ Part II tells the agent: *switch to arm 2, but first explore to confirm — the 
 
 | AAT Concept | Bandit-Strategy Mapping | Status | Notes |
 |---|---|---|---|
-| Scope ( [Scope 1.6](#scope-agency)) | Exact | Definitional | Same as [Worked Example BB](#example-bandit) |
+| Scope ( [Scope 1.6](#scope-agency)) | Exact | Definitional | Same as [Worked Example BC](#example-bandit) |
 | Model $M_t$ ( [Formulation 2.2](#form-agent-model)) | Exact | Structural | Beta posteriors per arm |
 | Mismatch $\delta_t$ ( [Definition 3.5](#def-mismatch-signal)) | Exact | Standard | Prediction error |
 | Update gain $\eta^\ast$ ( [Empirical 3.7](#emp-update-gain)) | Exact | Conjugate | Beta-Bernoulli gain |
@@ -8662,11 +8847,11 @@ The status is *conditional* rather than *exact* because the attainability $A_O$ 
 **Type**: Worked Example
 **Status**: conditional
 **Stage**: draft
-**Label**: BD
+**Label**: BE
 **Container**: appendix-chapter
 
 
-A concrete instantiation of the Correlation Hierarchy ( [Definition 8.4](#def-strategy-dag)) and Proposition B.6 ( [Derivation R](#deriv-edge-credence-dynamics)). Two OR-alternatives sharing an infrastructure dependency are modeled at L0 (independence) and L1 (augmented DAG), with the sector condition verified for L1.
+A concrete instantiation of the Correlation Hierarchy ( [Definition 8.4](#def-strategy-dag)) and Proposition B.6 ( [Derivation S](#deriv-edge-credence-dynamics)). Two OR-alternatives sharing an infrastructure dependency are modeled at L0 (independence) and L1 (augmented DAG), with the sector condition verified for L1.
 
 The example **exhibits AAT's central observation about causally-insufficient DAGs**. At L0 (independence), AND/OR propagation systematically *overestimates* plan success: the strategy-plan-confidence comes out higher than the actual rate because the model treats the two paths as independently failing rather than as both depending on shared infrastructure. The overestimate is *exactly* the covariance between the paths' outcomes — the direction-of-bias formula for OR-structures. At L1 (augmented DAG with the infrastructure node factored *above* the correlated OR-alternatives as a strict-prerequisite AND-node), propagation is correct: conditional on infrastructure up, the paths are independent and standard propagation gives the exact answer. The L1 construction principle (factor the common cause above the correlation it creates) recovers the correct probability. The sector parameter under L1 augmentation has a three-way gating form — condition-testing rate, evidence-starvation on each path under $\theta_C$, exploration-gating on the OR-node — with each factor reflecting a different mechanism. When the common cause is *unobservable*, the L1 augmentation breaks and [Discussion 5.2](#disc-identifiability-floor) Instance 2 kicks in: the per-conditional decomposition is Cramér-Rao-floored. The agent's three escape routes (augment observability; multi-child joint observation; fall back to L0-on-marginals) are exercised below with their respective trade-offs.
 
@@ -8741,7 +8926,7 @@ Three leaf nodes with Beta-Bernoulli dynamics and $\varepsilon$-greedy path sele
 | $A_1$ (greedy) | $\theta_{1\mid C} = 0.9$ | $C=1$ AND path 1 selected | $-\theta_C(1-\varepsilon)\,\delta_{A_1}/(n_{A_1}+1)$ |
 | $A_2$ (explore) | $\theta_{2\mid C} = 0.7$ | $C=1$ AND path 2 selected | $-\theta_C\varepsilon\,\delta_{A_2}/(n_{A_2}+1)$ |
 
-The sector parameter (full proof in Prop B.6 of [Derivation R](#deriv-edge-credence-dynamics)):
+The sector parameter (full proof in Prop B.6 of [Derivation S](#deriv-edge-credence-dynamics)):
 
 $$\alpha_\Sigma = \min\!\left(\frac{1}{n_C+1},\; \frac{\theta_C(1-\varepsilon)}{n_{A_1}+1},\; \frac{\theta_C \varepsilon}{n_{A_2}+1}\right)$$
 
@@ -8788,7 +8973,7 @@ where $P_\Sigma(G \mid C = c)$ is computed by standard AND/OR propagation with $
 
 $$\hat P_\Sigma^{L1'} = \theta_C \cdot P_\Sigma(G \mid C) + (1 - \theta_C) \cdot P_\Sigma(G \mid \neg C)$$
 
-where the two conditional sub-plans may share structure but carry separate edge credences $p_{ij \mid C}$ and $p_{ij \mid \neg C}$. The parametric cost per soft-facilitator-affected edge doubles; the propagation remains polynomial. This is the gap between L1 (strict prerequisites) and L2 (arbitrary joint): L1' handles soft facilitators without the $O(2^k)$ exponential blowup of L2's explicit conditioning. Sector-condition verification for L1' is derived as **Proposition B.7** in [Derivation R](#deriv-edge-credence-dynamics) *when $C$ is observable per trial*: under Beta-Bernoulli updating, componentwise updates per conditional branch, and facilitator monotonicity ($P_\Sigma(G_{\mid C}) \geq P_\Sigma(G_{\mid \neg C})$), the sector condition holds globally with five-way gating
+where the two conditional sub-plans may share structure but carry separate edge credences $p_{ij \mid C}$ and $p_{ij \mid \neg C}$. The parametric cost per soft-facilitator-affected edge doubles; the propagation remains polynomial. This is the gap between L1 (strict prerequisites) and L2 (arbitrary joint): L1' handles soft facilitators without the $O(2^k)$ exponential blowup of L2's explicit conditioning. Sector-condition verification for L1' is derived as **Proposition B.7** in [Derivation S](#deriv-edge-credence-dynamics) *when $C$ is observable per trial*: under Beta-Bernoulli updating, componentwise updates per conditional branch, and facilitator monotonicity ($P_\Sigma(G_{\mid C}) \geq P_\Sigma(G_{\mid \neg C})$), the sector condition holds globally with five-way gating
 
 $$\alpha_{L1'} = \min\!\left(\tfrac{1}{n_C+1},\; \min_{j \in \mathcal{J}_C}\tfrac{\theta_C \pi_{j\mid C}}{n_{j\mid C}+1},\; \min_{j \in \mathcal{J}_{\neg C}}\tfrac{(1-\theta_C)\pi_{j\mid \neg C}}{n_{j\mid \neg C}+1}\right)$$
 
@@ -8828,7 +9013,7 @@ The agent's on-policy history is drawn from the same distribution in both worlds
 
 **Slug**: `worked-example-cam`
 **Type**: Worked Example
-**Label**: BE
+**Label**: BF
 **Container**: appendix-chapter
 **Status**: missing
 
