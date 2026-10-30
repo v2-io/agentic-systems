@@ -20,7 +20,7 @@ The cycle's value is not that it occurred but how much mismatch it reduced. A cy
 
 Agents are defined by progressive scope narrowings — each class is a restriction of the one above with explicit qualifying properties.
 
-- **Adaptive system** — receives observations under residual uncertainty and runs the cycle. Thermostats, Kalman filters, bacteria, PID controllers.
+- **Adaptive system** — its world can still show it something it does not yet know, about its state or about its law, and it runs the cycle against what it is shown. Thermostats, Kalman filters, bacteria, PID controllers.
 - **Agentic system** — adaptive plus an outcome model and goal-directed action that runs the cycle on the model itself. Autonomous vehicles, RL agents.
 - **Actuated agent** — agentic with an explicit goal state $G_t = (O_t, \Sigma_t)$ separable from the epistemic state $M_t$. Military units with mission orders.
 - **Self-actuated agent** — actuated and chooses its own objectives, not just its solutions. Humans; future AI.
