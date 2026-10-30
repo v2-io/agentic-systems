@@ -28,8 +28,9 @@ Joseph's named pain: *"I don't even know what this theory is *trying* to illumin
   - is it claimed universal, and for which class?
   - is it one model among several, and how does it map to concrete examples?
   - does it claim optimality, and for whom?
+  - **what observation or construction would refute it?** This is a falsifier per body of results. It makes the other three checkable, and it hands the empirical program (vivarium, empirica) its targets.
 
-  Joseph's strategy-DAG example is the specimen of the question, not the scope. *Not started; waits on KR1.1.*
+  The falsifier question was proposed by the owner review (Fable), 2026-10-30, and adopted. Joseph's strategy-DAG example is the specimen of the question, not the scope. *Not started; waits on KR1.1.*
 
 ### O2 — The theory itself is correct and coherent
 
@@ -42,7 +43,12 @@ Joseph's named pain: *"I don't even know what this theory is *trying* to illumin
   - the 21 May prior-art analyses.
 
   *Not started.*
-- **KR2.5** Terminology tells the truth. Where an agent-coined name stands in for a concept known under a standard academic name, adopt that name, or anchor the coinage to it and say why it differs. Joseph: agents *"fall into existing ASF terminology that was essentially named arbitrarily … sometimes not realizing they would be better to adopt standard academic terms even if from a different field."* *Not started; the naming-cycle backlog of 506 unrouted R2 currents is input, not the method.*
+- **KR2.5** Terminology tells the truth. Where an agent-coined name stands in for a concept known under a standard academic name, adopt that name, or anchor the coinage to it and say why it differs. Joseph: agents *"fall into existing ASF terminology that was essentially named arbitrarily … sometimes not realizing they would be better to adopt standard academic terms even if from a different field."* *Not started; the naming-cycle backlog of 506 unrouted R2 currents is input, not the method.* The owner review reports this as verified (not yet read by the lead). The May prior-art memos already name the standard neighbors:
+  - the Separation Principle, for directed separation;
+  - fault-tree common-cause failure, for the Correlation Hierarchy;
+  - Gott/Lindy, for change-expectation.
+
+  Those citations reached segment bodies in only 6 of 290 segments. So much of KR2.5, and of KR2.4, is a landing sweep from existing memos, not new research.
 
 ### O3 — Nothing true is stranded
 
@@ -97,4 +103,5 @@ This is the "meta" in Joseph's goal. It earns its place only where it changes wh
 
 ## Change notes
 
+- 2026-10-30, ~12:20 MDT: adopted the owner review's proposed falsifier question into KR1.3. Added its verified note that KR2.4/KR2.5 are largely a landing sweep from existing May memos, to be confirmed when the lead reads the review whole.
 - 2026-10-30, ~12:05 MDT, lead coordinator: first version. O1 is written first because the purpose review (Joseph's request) decides what the others mean. Expect a substantial revision when the owner review lands.
