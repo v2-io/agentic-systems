@@ -22,7 +22,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 
 ## B — Every load-bearing claim says what kind of claim it is, about which agents, and what would refute it
 
-- **B.1** Every load-bearing apparatus has a record giving register, population, an instance where it is true, an instance where it is false, a falsifier, and whether it has been instantiated. Part II comes first, `form-objective-functional` is the template, and someone other than the author checks each record. · *Part II landed (16 segments, 35 records; `b1-claim-records/00-records.md`); independent check running; Parts I and III not started*
+- **B.1** Every load-bearing apparatus has a record giving register, population, an instance where it is true, an instance where it is false, a falsifier, and whether it has been instantiated. Part II comes first, `form-objective-functional` is the template, and someone other than the author checks each record. · *Part II landed and independently checked (`b1-claim-records/01-check-1.md`: 3 confirmed, 11 narrowed, 3 broken); its corrections go to the Part II integration with C.2's C2/C3 and A4/A5; Parts I and III not started*
 - **B.2** Part II's apparatus is retyped to what it is: directed separation as definition + classification + estimator; the strategy DAG as formulation with its real agent-claims collected; the cascade as a lemma plus a norm. · *not started*
 - **B.3** The purpose statement is the working thesis or a tested replacement. Two tests apply: the anchors test (every B.1 record states its claim in the thesis's terms without strain) and the cold-reader test (H.3). The uncertainty is resolved, not routed to Joseph. · *not started*
 
@@ -80,11 +80,10 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 | Who | KR | Writes to |
 |---|---|---|
 | Lead coordinator (Opus 5.5, session "asf-cleanup") | I, plus coordination | `INTENT.md`, `HANDOFF.md` |
-| B.1 checker (Opus), bare brief | B.1 | `reviews/b1-part-ii-check-1.md` |
+| Volume 4 lane checker (Opus), bare brief | C.1 | `reviews/vol4-c1-check-1.md` |
 | A.1 round-2 checker (Opus), bare brief | A.1 | `reviews/scope-adaptive-system-check-4.md` |
 | C1, C2, C3 spike verifiers (Opus), bare brief | C.2 | `de-novo-feedback-1.md` in each spike dir |
 | C.1 lane (Opus), own worktree: A7, A10, and the persistence-cost algebra | C.1 | Part I, on its branch; `c1-lanes/part-i-mismatch-lineage.md` |
-| C.1 lane (Opus), own worktree: A6, A12, A14 done; the Auxilia W₁ overclaim | C.1 | `04-eli-core/`, on its branch; `c1-lanes/vol4.md` |
 | C.1/H.2 lane (Opus), own worktree: A13 done; the `old-*` fates | C.1, H.2 | `02-tst-core/`, on its branch; `c1-lanes/tst.md` |
 | vsect builder (Fable), with the tracker re-check sweep (five lanes) | I.3 | `items/`, `.vsect/`, `items-recheck/` |
 
@@ -98,7 +97,8 @@ These are finished and on the line through the lead:
 - the F72 integrator;
 - the C.1 integrator (A1, A9, example-strategy, the detection test);
 - the A.1 integrator, its cold reader, and the independent re-reader;
-- the B.1 record writer (Part II);
+- the B.1 record writer (Part II) and its checker;
+- the Volume 4 lane (A6, A11, A12, A14, the substrate record);
 - the A.1 round-2 integrator;
 - the C1, C2 and C3 spikers;
 - the hooks builder (I.2).
