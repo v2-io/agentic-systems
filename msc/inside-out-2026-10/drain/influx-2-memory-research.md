@@ -6,7 +6,7 @@
 
 ## Questions for the coordinator
 
-(none yet)
+None open. I took the coordinator's split as sent (event segmentation as one item carrying scout A2, C5, P6; standard names and citations carrying C2, C3, C4, B8 with OC-4; go-CLS into be13 rather than a separate item). I did not make an item for scout A4 separately: it is inside the mood item.
 
 ## Reading log
 
@@ -89,6 +89,37 @@ Set aside: stage phenomenology, dream emotion and "overnight therapy" (contested
 
 Set aside: the system catalogue (Mem0, Titans, HippoRAG, A-MEM and others; canon cites none), benchmarks (LoCoMo, LongMemEval), 2026 event-segmentation and sleep systems. Accurate as far as I can tell and useful for the course; canon neither claims nor needs them.
 
+## Ledger entries made
+
+All by `drain-influx-2-memory`, role `drainer`, at asf HEAD `ac566fcc`.
+
+New items:
+- `item:aat-has-no-event-segmentation-model-retirement-o` (G.2): EC-1, EC-2, EC-3; scout A2, C5, P6.
+- `item:the-mood-layer-and-the-adaptive-gain-carry-stand` (F.2): OC-4; scout C2, C3, A4. Adds one thing beyond the scout: `der-mood-timescale`'s *exact* optimum $(\sqrt{q(q+4r)}-q)/2r$ equals the local-level model's steady-state Kalman gain exactly (Riccati fixed point checked numerically for three $(q,r)$ pairs), so the antecedent covers the whole result, not only its leading order.
+- `item:standard-names-canon-s-memory-machinery-lacks-fo` (F.1): scout C4, B8; CS-4, CR-2 citations.
+- `item:disc-structural-imagination-s-level-confusion-di` (G.2): RM-1, OC-2.
+- `item:form-consolidation-dynamics-s-derivation-table-l` (C.1): CS-3.
+
+Raised on existing items (`vsect raise`, no twin opened):
+- `item:todo-stability-upper-bound-for-form-consolida-be13`: CS-1 (MMO closed-form $\phi$), CS-2 and OC-1 (go-CLS, Eldar, Antonov: a second, distinct bound on consolidation amount).
+- `item:spikes-proposed-quantitative-cls-instantiation-of-consol-6c13`: CS-1.
+- `item:the-scaffolding-overclaim-in-volume-3-its-origin`: DR-1 (source-path correction; the same MMO inequality read as a cadence floor).
+- `item:aat-s-core-has-no-operation-for-an-agent-reading`: CR-1, AI-1, AI-2.
+- `item:def-strategy-dag-and-form-strategy-complexity-co`: EC-3(b), Solway 2014, Correa 2023, the options interruption rule.
+
+Question:
+- `question:does-schema-strategy-persistence-s-persistence-i`: CR-2 (does the persistence inequality survive a spectrum of forgetting rates).
+
+Not recorded, by choice: EC-4 (Mattar & Daw equations; nothing in canon uses Gain × Need yet, and the citation is in the F.1 item's list), OC-3 (hindsight credit assignment; no canon claim to attach it to beyond `disc-credit-assignment-boundary`, which I did not read), AI-3 (below).
+
+## What was read, and how
+
+Read whole: `reality_monitoring.md`, `event_cognition.md`, `retrieved_context_and_classical.md`, `consolidation_schemas_maps.md`. Read Q1–Q6 whole and Q7–Q8 by extraction: `offline_counterfactual_segmentation.md`. Read by Takeaway and Inferences sections plus targeted greps, not line by line: `dreams_nrem_rem.md`, `ai_agent_memory.md` (in particular, the per-system catalogue in `ai_agent_memory.md` Q1 and most Cited Findings in both were not read). I tried to hand those two to parallel readers so they could be read whole; the session was at its subagent limit, so I sampled them myself. If either matters more than its takeaways suggest, it is the place a second reader would add most. Not touched: `sources/`, `ref/` PDFs, `code/`; I re-ran nothing from agent-core. Citations are taken from the notes' own verification tags; I re-verified none against Crossref. Two derivations are mine and were checked numerically in a scratch script (not committed): the MMO closed form (CS-1) and the mood-optimum equality.
+
 ## Adjacent findings
 
-(being written)
+- **For E (one quantity measured on an agent the theory did not construct):** Cloos, Norelli, Durbin, Andreas, Rus & Isola, "Is this machine playing?" (arXiv 2610.07130), per `ai_agent_memory.md` Q4: a causal erasure study on agents' own episodic and semantic text memory, with selective skill loss after erasure. The sample is thin (3 hand-picked agents, 5 runs from one history, no sham erasure), but it is an existing intervention on an agent's persistent store that nobody built for AAT. Whoever owns E may want to look; I did not open an item.
+- **For F.3:** the two notes cite arXiv 2405.14992 with different first-author surnames (Li in `retrieved_context_and_classical.md`; Ji-An in `ai_agent_memory.md`). Canon should take it from the arXiv record or relata. Generally, the notes are one author's in a day, and two notes disagree in places (this one; the Mattar & Daw equations are [K] in one note and full-text in another); where an item depends on a single note's [K] claim, I said so in the item.
+- **On the scout's (d) "replay regulation as the missing stability upper bound":** it merged two different bounds. MMO bounds fast-store forgetting given cadence; go-CLS bounds consolidation amount given signal-to-noise. Both are real; be13's raise states them separately.
+- **The most consequential single result in this drain, in my judgment:** CS-1. The window's missing upper bound (be13, owner C.1) and the "Shannon floor" in `impl-scaffolded-logogenic` (the lead's scaffolding item) are one inequality from a 1995 model that canon already cites for something else. Whoever integrates either item should integrate both together.
+- **About the brief:** it worked well for me. The one thing that would have saved time: the scout file's ids (A1–C5, (d)) were the coordinator's map, and knowing up front which ones the coordinator was draining would have let me shape items to the split from the start; the mid-run message handled it.

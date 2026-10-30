@@ -1,0 +1,9 @@
+---
+kind: item
+owner: C.1
+opened: 2026-10-30T23:28:01Z
+opened-by: drain-influx-2-memory
+concerns: [segment:form-consolidation-dynamics]
+---
+
+# #form-consolidation-dynamics's derivation table (line 97) labels 'CLS factorization (hippocampal fast / neocortical slow) as canonical (N1) instance' an 'External theorem (CLS literature)', and its Discussion (line 133) states 'CLS's core claim is that hippocampal replay during sleep supports interleaved neocortical learning' as settled (checked at HEAD ac566fcc). CLS is a model, not a theorem, and its parts stand differently: catastrophic interference under focused learning and its cure by interleaving is established for distributed artificial networks (McCloskey & Cohen 1989, Psych Learn Motiv 24:109-165; MMO 1995 simulations); offline reactivation aiding human memory is well supported (Hu, Cheng, Chiu & Paller 2020, Psych Bull 146:218-244: TMR g = 0.29 [0.21, 0.38], NREM2 and SWS only, no reliable REM or wake effect); that the reactivation is interleaved replay protecting neocortex is contested (~45-55%); long graded systems consolidation is contested (Sutherland, Sparks & Lehmann 2010, Neuropsychologia 48:2357-2369; Ketonis et al. 2025, PBR 32:281-293). Strengthen first: the segment needs only that (N1)-architected agents exist and that online-only slow updating interferes in them, which is established for artificial networks, inside AAT's population. So restate the row as '(N1) instance, established for distributed artificial networks (McCloskey & Cohen 1989; MMO 1995); proposed for hippocampus-neocortex by CLS, with offline reactivation supported (Hu et al. 2020) and its interleaving role contested', drop 'theorem', and qualify line 133 the same way. Source: ~/src/agent-core/memory/research/consolidation_schemas_maps.md §1 and §6; worked in msc/inside-out-2026-10/drain/influx-2-memory-research.md CS-3.

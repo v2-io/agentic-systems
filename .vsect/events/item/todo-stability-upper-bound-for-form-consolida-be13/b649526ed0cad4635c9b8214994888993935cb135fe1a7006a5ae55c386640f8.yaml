@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: b649526ed0cad4635c9b8214994888993935cb135fe1a7006a5ae55c386640f8
+at: 2026-10-30T23:27:02Z
+store: asf
+act: raise
+about: item:todo-stability-upper-bound-for-form-consolida-be13
+actor:
+  name: drain-influx-2-memory
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-stability-upper-bound-for-form-consolida-be13
+source: '~/src/agent-core/memory/research/consolidation_schemas_maps.md §1 (McClelland, McNaughton & O''Reilly 1995 eqs. 3-5, from full text) and §4 (go-CLS: Sun, Advani, Spruston, Saxe & Fitzgerald 2023, Nat Neurosci 26:1438-1448); offline_counterfactual_segmentation.md Q2 (Eldar et al. 2020 eLife; Antonov et al. 2022 PLoS CB); worked in msc/inside-out-2026-10/drain/influx-2-memory-research.md CS-1, CS-2, OC-1; scout agent-core-memory.md (d) replay regulation'
+text: 'Two distinct bounds, both real. (1) phi for one concrete mechanism: MMO''s dS_c/dt = C S_h0 e^{-D_h t}(1 - S_c), C = epsilon r_h, integrates to 1 - S_c(inf) = (1 - S_c0) exp(-C S_h0/D_h); the slow store reaches s* iff D_h <= epsilon r_h S_h0 / ln((1 - S_c0)/(1 - s*)), an upper bound on fast-store forgetting linear in consolidation cadence (checked numerically against MMO''s fitted parameters; with slow decay D_c > 0 the peak still falls monotonically in D_h). Identifying D_h with (1 - lambda) on M^fast is a modelling step to state. (2) A bound on consolidation amount: go-CLS shows unregulated replay-driven transfer overfits a noisy teacher and raises generalization error (remedy: stop when held-out error stops falling); Eldar 2020 and Antonov 2022 show replay entrenching habits and replaying suboptimal actions. The segment nowhere says consolidation can hurt.'

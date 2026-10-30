@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 3b583c67852d1ac9b1551b5fd5a074900c1000c955a0917782ea867372419af3
+at: 2026-10-30T23:27:03Z
+store: asf
+act: raise
+about: item:the-scaffolding-overclaim-in-volume-3-its-origin
+actor:
+  name: drain-influx-2-memory
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:the-scaffolding-overclaim-in-volume-3-its-origin
+source: msc/inside-out-2026-10/drain/influx-2-memory-research.md DR-1, CS-1; Hu, Cheng, Chiu & Paller 2020 (Psych Bull 146:218-244) is in ~/src/agent-core/memory/research/consolidation_schemas_maps.md §1, not dreams_nrem_rem.md (which points to it at line 471)
+text: 'Strengthen route for part (3): MMO''s inequality read for cadence, r_h >= D_h ln((1 - S_c0)/(1 - s*)) / (epsilon S_h0), is a transfer (drain) floor on consolidation cadence given fast-store forgetting; it names no sleep stage and is the same inequality as the window''s upper bound in item todo-stability-upper-bound-for-form-consolida-be13. The stage driving insight is itself inconsistent across studies (REM, Cai 2009; N1, Lacaux 2021; N2, Loewe 2024; offline_counterfactual_segmentation.md Q4).'

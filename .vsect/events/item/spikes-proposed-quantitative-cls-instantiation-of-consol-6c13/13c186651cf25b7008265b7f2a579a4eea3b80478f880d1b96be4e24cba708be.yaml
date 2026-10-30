@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 13c186651cf25b7008265b7f2a579a4eea3b80478f880d1b96be4e24cba708be
+at: 2026-10-30T23:27:03Z
+store: asf
+act: raise
+about: item:spikes-proposed-quantitative-cls-instantiation-of-consol-6c13
+actor:
+  name: drain-influx-2-memory
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-quantitative-cls-instantiation-of-consol-6c13
+source: ~/src/agent-core/memory/research/consolidation_schemas_maps.md §1 (MMO 1995 eqs. 3-9 and Table 1 fits); msc/inside-out-2026-10/drain/influx-2-memory-research.md CS-1
+text: MMO 1995 is already a fitted quantitative CLS-like instantiation and gives the stability-upper-bound half in closed form (see the raise on item todo-stability-upper-bound-for-form-consolida-be13); the rate-distortion online-only no-go half is not addressed by it.

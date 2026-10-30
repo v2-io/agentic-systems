@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 795a1d9d0d52fa44e3f74aa58708694c4eefa2fd713322e2e5aa3161aebd5c98
+at: 2026-10-30T23:27:03Z
+store: asf
+act: raise
+about: item:def-strategy-dag-and-form-strategy-complexity-co
+actor:
+  name: drain-influx-2-memory
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:def-strategy-dag-and-form-strategy-complexity-co
+source: ~/src/agent-core/memory/research/event_cognition.md Q8d; offline_counterfactual_segmentation.md Q6
+text: 'Further antecedents for the options question: Solway et al. 2014 (PLoS CB 10:e1003779; the evidence-maximizing behavioural hierarchy minimizes codelength, and on Schapiro''s community graph is the community partition), Correa, Ho, Callaway, Daw & Griffiths 2023 (PLoS CB 19:e1011087; task decomposition trading utility against planning cost), and the options interruption rule (terminate when Q(s,o) < V(s)).'

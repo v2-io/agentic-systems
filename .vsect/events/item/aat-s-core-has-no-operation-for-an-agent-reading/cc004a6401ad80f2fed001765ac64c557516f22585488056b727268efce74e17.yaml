@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: cc004a6401ad80f2fed001765ac64c557516f22585488056b727268efce74e17
+at: 2026-10-30T23:27:03Z
+store: asf
+act: raise
+about: item:aat-s-core-has-no-operation-for-an-agent-reading
+actor:
+  name: drain-influx-2-memory
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:aat-s-core-has-no-operation-for-an-agent-reading
+source: ~/src/agent-core/memory/research/retrieved_context_and_classical.md §5 and ai_agent_memory.md Q1-Q2; msc/inside-out-2026-10/drain/influx-2-memory-research.md CR-1, AI-1, AI-2
+text: 'A cue-driven read of the in-context record exists in logogenic agents and has a published retrieved-context characterization: induction heads are CMR-like (arXiv 2405.14992, NeurIPS 2024; the two notes give the first author as Li and as Ji-An, take it from the arXiv record) and seq2seq attention corresponds to CMR reinstatement (Salvatore & Zhang 2025, Communications Psychology, doi 10.1038/s44271-025-00322-6). Scope: within the window, short lags (2-4 tokens in GPT-2 small), not an archive outside it; #the-reality-model-intro WN line 61 already calls the window ~C_t. LLM ''consolidation'' names four operations (text-store merging, token merging, distillation into weights, offline precomputation); under #form-consolidation-dynamics''s definition only distillation updates M^slow, text-store merging rewrites the untyped external store, and precomputation is not consolidation.'
