@@ -42,7 +42,13 @@ Joseph's named pain: *"I don't even know what this theory is *trying* to illumin
 
 ### O2 — The theory itself is correct and coherent
 
-- **KR2.1** The statement layer says exactly what the algebra supports. Scope, quantifiers, standpoint and tier must match the warrant, chapter by chapter. Each chapter is checked by an independent reader, not by whoever made the repair. *Evidence that this is where truth leaks: audit 731548 found "statement-layer defects sitting on correct algebra." Not started.*
+- **KR2.1** The statement layer says exactly what the algebra supports. Scope, quantifiers, standpoint and tier must match the warrant, chapter by chapter. Each chapter is checked by an independent reader, not by whoever made the repair.
+  - **The front-door surfaces are named explicitly**, as the owner review proposed: `01-aat-core/INTRODUCTION.md`, the Part I opening, the Part II preface, and the README partials. Its Jun–Oct history reader found four disagreeing headline lists, and a mechanism that lives longest there: "text regenerated from the remembered narrative rather than the record". Instances the review verified:
+    - `#scope-adaptive-system:18,45` still excludes standard RL, on the rationale audit 731548 showed false on 07-02 (file last edited 05-30);
+    - `INTRODUCTION.md:27` asserts as certain what `#sketch-structural-adaptation-genericity` holds open.
+
+    The lead fixed a third instance, a dead worked example in `doc/sop/agents.sop.md`.
+  - **Cheap targeted re-read:** five appendix segments landed in 19 minutes on 04-22 (`591e8b63`…`0bd859e2`) and now read as canonical (owner review, Mar–Apr reader). *Evidence that this is where truth leaks: audit 731548 found "statement-layer defects sitting on correct algebra." Not started.*
 - **KR2.2** No canon statement contradicts another, checked across segments, not only within them. *Not started.*
 - **KR2.3** Claims found overclaimed are strengthened before they are softened. Every refuted claim is replaced, not kept as a softened ghost. *Feeding it: F72, the independent re-derivation of `#deriv-strategic-persistence-hard-ceiling`. Launched ~12:45 MDT after being refused once by the subagent concurrency limit.*
 - **KR2.4** External research the theory needs is integrated where it belongs, adopted with citation under its original names. *Known inputs:*
@@ -80,7 +86,7 @@ Joseph's named pain: *"I don't even know what this theory is *trying* to illumin
 
 - **KR4.1** A front door and an arc. A newcomer can learn what ASF claims, in what order, and how sure it is, without reconstructing it from 246 segments. *Not started.*
 - **KR4.2** Comprehension is measured before and after, with fresh readers on the same chapters. A candidate instrument is the comprehension quiz from audit run 374162. *Not started.*
-- **KR4.3** Front surfaces say only what canon now says. That covers the generated ones (README, FINDINGS, LEXICON, CURRENT-VOL1) and, per the internal-surfaces map, the hand-written ones (`01-aat-core/INTRODUCTION.md`, `HISTORICAL-CONTEXT.md`, the README partials). The hand-written ones carry claims canon does not hold, and nothing signals when they go stale. *Not started.*
+- **KR4.3** Front surfaces say only what canon now says. That covers the generated ones (README, FINDINGS, LEXICON, CURRENT-VOL1) and, per the internal-surfaces map, the hand-written ones (`01-aat-core/INTRODUCTION.md`, `HISTORICAL-CONTEXT.md`, the README partials). The hand-written ones carry claims canon does not hold, and nothing signals when they go stale. Published and submitted papers are front surfaces too. The owner review's May reader found that the submitted NeurIPS Paper 2 PDF still grounds the do-operator in the singular trajectory, which canon corrected on 05-31 (`52d85b2`). Whether any of the paper's results depend on it is unchecked, and whether a published claim gets a correction is Joseph's call. *Not started.*
 
 ### O5 — The machinery tells the truth about itself, and the system keeps it true
 
@@ -91,10 +97,18 @@ This is the "meta" in Joseph's goal. It earns its place only where it changes wh
   - July decision briefs triaged (LOG);
   - `core.hooksPath` fixed.
 
+  A named residue class, from the owner review: seven spike files hand work to a "standing cycle" that exists nowhere (verified by the review).
+
   One mechanical check, proposed by the internal-surfaces mapper: a disposition or routing target that doesn't resolve (a slug with no file, a backlog no tracker holds) is a defect a tool catches. Five strandings found today had that shape.
 - **KR5.3** The practices that kept truth here are written where agents meet them, and the ones that failed are changed. *Fed so far: standing notes in `doc/sop/agents.sop.md`.* *Candidates, not yet adopted:*
   - a receiver-side orientation for subagents (`~/src/arch/SUBAGENT-INSTRUCTIONS-notes.md`);
   - `SPIKE-PROMPT.template.md` for all spikes.
+- **KR5.6** The arc has an owner. When a result lands, someone updates the anchors it changes: the introduction, the front door, the headline claims. There is a trigger, so this doesn't depend on someone remembering.
+  - Proposed by the owner review. Its Jun–Oct history reader refuted the review's own "one human clock" hypothesis: results *did* land well, spike to verify to segment, often the same day. What had no owner was the arc.
+  - Evidence: `INTRODUCTION.md` is unchanged since 05-18, while the persistence "only-if" was refuted, SP-24 redefined "agent", and every Jun–Oct result arrived.
+  - KR1.3 is a one-time placement. This is the standing step that keeps it true.
+
+  *Not started.*
 - **KR5.5** Working Notes are *classified*, not drained. Proposed by the internal-surfaces mapper. Every WN item carries a kind and a status, so that the open frontier, the correctness backlog and the owed research become visible. Today they hold all of those in prose, plus influx index, pedagogy reservoir, regression memory and process history, without status or owner. Each kind has a different destination. This replaces the stuck "WN drain" question (decision brief A4). *Seed:* `internal-surfaces/wn-ledger-seed/`. *Not started.*
 - **KR5.4** This file stays the true actuator. Every running piece of work maps to a KR here, and stale KRs are revised promptly. *Owner: lead coordinator.*
 
@@ -119,6 +133,13 @@ This is the "meta" in Joseph's goal. It earns its place only where it changes wh
 - **Proposing your own KRs and sub-objectives.** This tree is set top-down *and* bottom-up. Joseph, 2026-10-30: *"like in OKR land among humans-- they are often top-down AND bottom-up decided-- a bit of give and take. I recommend giving agents the benefit of the doubt and letting them come up with their own KRs and possibly sub-objectives."* An agent that sees a better key result, or the sub-objectives its own work needs under the item it serves, proposes them. Write them at the top of its artifact or send them to the lead, and they get added here, credited to that agent. Where the lead thinks something is missing, it says so early and as a peer, in the form Joseph gave: *"oh, did you know about ___? I wonder if ___ would be a better approach? (but this isn't a prescription-- what have you already thought?)"*
 
 ## Change notes
+
+- 2026-10-30, ~12:55 MDT: adopted the owner review's three proposals, credited in place:
+  - new KR5.6, the arc has an owner, with a trigger;
+  - the "standing cycle" residue class under KR5.2;
+  - the front-door surfaces named in KR2.1, with its verified instances.
+
+  Also from it: the NeurIPS Paper 2 note under KR4.3, and the 04-22 nineteen-minute appendix landings as a KR2.1 re-read. The lead verified one of its instances and fixed it: `agents.sop.md` cited a "Reading AAT" preamble deleted 05-17 in `feccd0d2`.
 
 - 2026-10-30, ~12:40 MDT: adopted all eight of the internal-surfaces map's proposals (its §0 list), each credited in place:
   - KR3.2 reframed and marked delivered;
