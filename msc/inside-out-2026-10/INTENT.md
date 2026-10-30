@@ -86,7 +86,7 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 | A.1 fourth reader (Opus), bare brief | A.1 | `reviews/scope-adaptive-system-check-5.md` |
 | Part I round-2 integrator (Fable), own worktree: the persistence window, the C1 exit-time spike and its verification, Prop A.1S(i)'s break | C.1, C.2 | Part I, on its branch; `part-i-round-2.md` |
 | Volume 4 second checker (Opus), bare brief | C.1 | `reviews/vol4-c1-check-2.md` |
-| TST round-2 integrator (Opus), own worktree: the TST check | C.1, H.2 | `02-tst-core/`, on its branch; `c1-lanes/tst-round-2.md` |
+| TST second checker (Opus), bare brief | C.1, H.2 | `reviews/tst-lane-check-2.md` |
 | vsect builder (Fable), on the line for the store migration (after the four integration branches merge) | I.4 | `~/src/arch/firmatum/utils/vsect/`, `.vsect/` |
 
 These are finished and on the line through the lead:
@@ -109,7 +109,7 @@ These are finished and on the line through the lead:
 - the TST lane (A13, the 44 `old-*` fates);
 - the second-mind confirmer;
 - the tracker re-check sweep (pilot and five lanes: 371 of 371 imported items judged, twelve of fourteen trackers deleted);
-- the TST lane checker.
+- the TST lane checker and round-2 integrator.
 - the hooks builder (I.2).
 
 ## Using this file
