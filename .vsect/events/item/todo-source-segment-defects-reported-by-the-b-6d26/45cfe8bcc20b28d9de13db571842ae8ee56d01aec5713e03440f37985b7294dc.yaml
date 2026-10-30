@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 45cfe8bcc20b28d9de13db571842ae8ee56d01aec5713e03440f37985b7294dc
+at: 2026-10-30T21:24:06Z
+store: asf
+act: recheck
+about: item:todo-source-segment-defects-reported-by-the-b-6d26
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: dcd5f551+dirty
+criterion: 'TODO.md:497 (2026-08-22, 0d8e410b) is a roll-up of about fourteen defects across thirteen segments with different owners. Each was checked at HEAD and split: one landed (def-strategy-dag''s ''edge independence is a consequence of causal sufficiency'' is now :159''s sufficiency-plus-tree statement, with A1); scope-and-or''s ES no longer cites spike paths; the rest are open and recorded as their own items keyed by segment: disc-sandbox-evaluation-ceiling-four-defects-fro, norm-explicit-strategy-condition-44-says-explici, causal-access-chapter-register-defects-reported, scope-and-or-audit-finding-f41-still-open-in-its, disc-additive-coordinate-forcing-43-lists-the-ch, form-sector-condition-50-still-states-the-radius, der-temporal-nesting-has-no-mood-rung-in-its-tim, ib-vs-structural-reserve-reconciliation-193847-f, norm-adaptive-reserve-as-ethical-floor-for-04-el, hafez-citations-der-agent-opacity-109-169-say-h, and the question where-does-the-l1-mixing-weight-theta-c-for-a-so.'
+outcome: not-an-item
