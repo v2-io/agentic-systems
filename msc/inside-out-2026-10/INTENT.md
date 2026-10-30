@@ -19,6 +19,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 - **A.1** `#scope-adaptive-system` carries the typed predicate $H(S_t\mid\mathcal C_t)\gt0$ with $S_t=(\Omega_t,\theta)$, or a defended alternative, and the GA registry names $\theta$. A cold reader checks the membership clauses on standard RL and on a Kalman filter. This also resolves the SP-30 brief. · *landed; a second independent read (`07-independent-reread.md`) found two broken sentences and open findings, now being integrated. Open: the invariant-$\sigma$-field strengthening (Working Notes)*
 - **A.2** INTRODUCTION, the Part I and Part II fronts and the README partials agree on one headline list. Each headline sentence traces to a body sentence of the same register. · *not started*
 - **A.3** No live segment lacks an Epistemic Status (29 do today, all in the `impl-*`/intro layer). · *not started*
+- **A.4** The Volume 2–4 prefaces and OUTLINE claim cells say only what their bodies support (A.2 covers Volume 1). · *not started; the overclaims the item re-checks found are in `items-recheck/t2-todo.md` §2*
 
 ## B — Every load-bearing claim says what kind of claim it is, about which agents, and what would refute it
 
@@ -30,7 +31,8 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 
 - **C.1** Every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. The defect lists are `owner-review/integrator-items.md` A1–A15, `internal-surfaces/00-cross-surface-map.md` §3 and `influx-scout/MAP.md` §3. · *started: F72 and A1 landed and checked; A6, A7, A10, A12, A13, A14 in parallel lanes; A8, A11 landed with B.1; A4, A5 wait for the C2/C3 spikes' integration, whose segments they share; A9's headline waits for A.2; A3 for the exit-time spike*
 - **C.2** Strengthenings C1–C3 (exit time, loop identification, allocation vs distortion coupling) are independently checked, then landed or refuted. · *started: three spikes landed in their dirs; independent verifiers running*
-- **C.3** A cross-segment contradiction scan reports no open contradictions among load-bearing segments. · *not started*
+- **C.3** A cross-segment contradiction scan reports no open contradictions among load-bearing segments. · *not started; one found: `#scope-composite-agent` admits composites with no composite objective (routes C-iii, C-iv) while requiring one (:83), and eight segments rest on that gate (`items-recheck/q-proposals.md` §2.1)*
+- **C.4** Part III and the open strengthenings outside C1–C3 have an owner: each held item under C is landed, refuted, or set aside with its reason recorded. · *not started; the items are in the ledger, most `unassigned` today; inputs `items-recheck/q-proposals.md` §2, `t2-todo.md` §2*
 
 ## D — The arc has an owner and a trigger
 
@@ -46,7 +48,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 ## F — The lineage and evidence that exist reach the bodies, faithfully
 
 - **F.1** Every verdict in `owner-review/explorers/terminology.md` §2 is landed: standard name plus citation at first introduction, renames through `bin/term`. · *not started*
-- **F.2** The external research already found is cited where it belongs, as instances and tests and not only as precedence. Sources: `ref/prior-art-analysis/`, the Aug-22 landscape survey, the `ext:` rows of `spikes/PROPOSED.md`, and `internal-surfaces/` §6. · *not started*
+- **F.2** The external research already found is cited where it belongs, as instances and tests and not only as precedence. Sources: `ref/prior-art-analysis/`, the Aug-22 landscape survey, the F.2 items in the vsect ledger, and `internal-surfaces/` §6. · *not started*
 - **F.3** Whatever crosses the canon boundary, in either direction, is faithful to its source. That means canon's citations of papers and data, and papers' and notes' claims about canon (`influx-scout/MAP.md` D12, D13, D17). · *not started*
 - **F.4** The naming SOP asks "does this already have a name elsewhere?" before Criterion 9, and every index family is declared once in `NOTATION.md`. · *not started*
 
