@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 037dbfa390a6ee950173f616a0b86519fbe173f4d2a7d7f97e3deb91a0214349
+at: 2026-10-30T23:19:03Z
+store: asf
+act: revise
+about: segment:hyp-mismatch-dynamics
+actor:
+  name: Claude Opus 5.5 (Part I round-3 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 7303099d03122821715f9438454a02bfb4f628e25fe510acab89adfe7b5e8d0f
+own-version: 81832f876549b712e8493fd4728ffb2ada16bbd5521447c142e69a80adc36062
+record: 01-aat-core/src/hyp-mismatch-dynamics.md

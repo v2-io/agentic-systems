@@ -55,13 +55,13 @@ This derivation is load-bearing for the critical path: it is the proof step that
 
 The structural reading: additive stochastic forcing does not weaken the *rate* of containment, it removes a *kind* of guarantee. Bounded disturbance (Model D) gives deterministic positive invariance of $\mathcal{B}_R$ ($P(\tau_R \lt \infty)=0$); additive stochastic disturbance gives almost-sure eventual exit ($P(\tau_R \lt \infty)=1$); the achievable value is the two-point set $\{0,1\}$, selected by the disturbance's support structure, not by correction strength — Corollary A.1S.1 in `#deriv-sector-condition`. What survives under Model S is distributional and finite-time: the killed-moment scale (Prop A.1S(i)), the stationary Markov tail where the sector condition is global (Prop A.1S(iii)), the finite-horizon sample-path bound (Prop A.1S(iv), which grows linearly in the horizon and is vacuous for $T \gtrsim R^2/(n\sigma_w^2)$), and the exit-time comparison (Prop A.1S-τ: the expected stay is at least the OU benchmark's, exponential in $\alpha R^2/\sigma_w^2$, so the certain event can be made as late as a lifetime requires, at a margin cost logarithmic in that lifetime, though not by raising the gain past the Kalman gain on a fixed channel).
 
-Direct simulation confirms the obstruction is real rather than an artifact of the proof technique. Exact 1-D OU benchmark $dX = -\alpha X\,dt + \sigma\,dW$ (the segment's own linear case; (A2') global and sharp), Monte-Carlo started *at the origin* (the most favorable initial condition), under the mean-square persistence condition (ii) holding:
+Exact computation shows the obstruction is real rather than an artifact of the proof technique. For the 1-D OU benchmark $dX = -\alpha X\,dt + \sigma\,dW$ (the segment's own linear case; (A2') global and sharp), started *at the origin* (the most favorable initial condition), with the mean-square persistence condition (ii) holding, the probability of having left $[-R, R]$ by time $T$ is computed by a spectral solve of the Dirichlet generator on $[-R, R]$. It agrees to within $0.005$ with $1 - e^{-T/\Phi(0)}$, where $\Phi(0)$ is the mean exit time of Lemma A.1S-τ.0 in `#deriv-sector-condition`:
 
-| $\alpha$ | $\sigma$ | $R$ | $R^\ast_S$ | $P(\sup_{[0,50]} \gt R)$ | $T{=}200$ | $T{=}800$ | $T{=}3200$ | stationary tail $\tfrac{n\sigma^2}{2\alpha R^2}$ (global A2', valid for OU) |
-|---|---|---|---|---|---|---|---|---|
-| 1.0 | 0.3 | 1.0 | 0.21 | 0.002 | 0.010 | 0.030 | **0.114** | 0.045 |
-| 0.5 | 0.2 | 0.8 | 0.20 | 0.020 | 0.074 | 0.276 | **0.720** | 0.063 |
-| 1.0 | 0.5 | 1.0 | 0.35 | 0.781 | 0.998 | 1.000 | **1.000** | 0.125 |
+| $\alpha$ | $\sigma$ | $R$ | $R^\ast_S$ | $\kappa_R$ | $\Phi(0)$ | $P(\sup_{[0,50]} \gt R)$ | $T{=}200$ | $T{=}800$ | $T{=}3200$ | stationary tail $\tfrac{n\sigma^2}{2\alpha R^2}$ (global A2', valid for OU) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1.0 | 0.3 | 1.0 | 0.21 | 11.1 | 18735 | 0.003 | 0.011 | 0.042 | **0.157** | 0.045 |
+| 0.5 | 0.2 | 0.8 | 0.20 | 8 | 2016 | 0.023 | 0.093 | 0.327 | **0.796** | 0.063 |
+| 1.0 | 0.5 | 1.0 | 0.35 | 4 | 27.4 | 0.842 | 0.999 | 1.000 | **1.000** | 0.125 |
 
 The ever-exit probability climbs monotonically toward 1 with the horizon even started at the origin and even with (ii) comfortably satisfied — the fixed-time constant $n\sigma^2/(2\alpha R^2)$ is *not* an upper bound on the sup-over-horizon probability, exactly as the no-go predicts. This sharpens the hand-off into `#result-structural-adaptation-necessity`: under any genuinely stochastic environment region-exit is a certain eventual event, so loss of the parametric certificate is generic, not exceptional, for a sufficiently long-lived agent (what follows the loss is `#sketch-structural-adaptation-genericity`'s question).
 

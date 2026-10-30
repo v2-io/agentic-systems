@@ -1,0 +1,27 @@
+schema: vsect-event/0
+id: 774b86a796e996e387cf58b2fb3dc26d97c59218a579b523b620457b0d1501c9
+at: 2026-10-30T23:21:28Z
+store: asf
+act: rederive
+about: segment:def-mismatch-signal
+actor:
+  name: Claude Opus 5.5 (Part I round-3 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:scope-adaptive-system: 48dd5554d1f66ba02af228fcb9593f6b9191852444272b4cb48458a3acae75de
+committed: before
+criterion: For a linear-Gaussian model the state-and-law floor (term (ii)) is $\operatorname{tr}(HP^-H^T)$, the predictive error, attained by the Kalman filter; not the posterior $P$.
+effective-version: 9abd8c6a161cbbf479ae100d14670f4d06affba17f4003f011418301dd8c0a58
+from: review:part-i-round-3-integration#C12
+line: derivation
+outcome: confirmed
+recheck: The Bayes predictor of $o_t$ is $H\hat x_{t\mid t-1}$; its error is $H(x_t - \hat x_{t\mid t-1})$ with covariance $HP^-H^T$.
+target-version: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+version-from: git-revision

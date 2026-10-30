@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 269f5ca5b2540e217792353ae0b0b6118ae4ce078c6bf38d6470fc447000afba
+at: 2026-10-30T23:18:54Z
+store: asf
+act: revise
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-3 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: b3c30507cd90d0d11b419358a324887c0dc4d41f132f8e0135ee2928756472d7
+own-version: bb8a7c18abfb6ac12203ec8fbd970b93c6429c6d51a3c60ef654875b4433f648
+record: 01-aat-core/src/deriv-sector-condition.md

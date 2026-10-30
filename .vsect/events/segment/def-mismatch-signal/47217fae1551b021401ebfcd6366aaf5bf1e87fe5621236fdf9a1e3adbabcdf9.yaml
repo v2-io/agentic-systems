@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 47217fae1551b021401ebfcd6366aaf5bf1e87fe5621236fdf9a1e3adbabcdf9
+at: 2026-10-30T23:18:59Z
+store: asf
+act: revise
+about: segment:def-mismatch-signal
+actor:
+  name: Claude Opus 5.5 (Part I round-3 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 8865e87714b5b10e0430d0e7f860cb1949a2307149171ba204c6f5b3c2b3ee7b
+own-version: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+record: 01-aat-core/src/def-mismatch-signal.md
