@@ -49,6 +49,11 @@ edges:
       meaning here: an edit upstream lapses checks downstream, transitively, and a refuted target
       breaks what rests on it.
 declared_fields: [type, status, stage]
+# An edge naming a record that does not exist yet is planned, not dangling, when the OUTLINE
+# carries a row for it with `missing` in its stage cell (the rule bin/lint-outline applies).
+planned:
+  find: ["0*/OUTLINE.md"]
+  cell: missing
 lines:
   derivation: [drafted, premises-checked, independently-rederived]
   simulation: [prediction-committed, run-once, swept, reproduced-by-another]
