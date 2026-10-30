@@ -14,7 +14,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Class 2: Partial](terminology/entries/partial.md)** *(GUC)* |  | GUC Class-2 value; agent with bounded goal-update coupling — directed separation is approximated with a computable residual leakage rate $\kappa_{\text{processing}} \in (0, \kappa_{\max})$. |
 | **[Class 3: Coupled](terminology/entries/coupled.md)** *(GUC)* |  | GUC Class-3 value; agent whose epistemic update is irreducibly entangled with its goal state — directed separation fails by construction. |
 | **[Actuated agent](terminology/entries/actuated-agent.md)** |  | Agentic system + explicit $G_t = (O_t, \Sigma_t)$ distinct from $M_t$. |
-| **[Adaptive system](terminology/entries/adaptive-system.md)** |  | Feedback loop + mismatch correction under uncertainty. |
+| **[Adaptive system](terminology/entries/adaptive-system.md)** |  | A system whose world can still reveal something it does not yet know about the environment's state or law. |
 | **[Agency](terminology/entries/agency.md)** |  | The scope narrowing from adaptive system to causal actor — requires at least binary choice and at least one action with a causal effect on observable outcomes. |
 | **[Agent](terminology/entries/agent.md)** |  | Umbrella technical term for the thing on the agent side of the agent-environment coupling; the scope-cascade tiers (Adaptive System, Agentic System, Actuated Agent, Self-Actuated Agent) are its specific inhabitants. |
 | **[Agentic system](terminology/entries/agentic-system.md)** |  | Adaptive system + outcome model + goal-directed action + model adaptation. |
@@ -342,7 +342,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Directed separation](terminology/entries/directed-separation.md)** |  | $M_t$ dynamics independent of $G_t$ (conditional on processing topology). |
 | **[Discrete Sector Condition](terminology/entries/discrete-sector-condition.md)** | DA2' | The discrete-time analog of the sector condition — adds a Lipschitz magnitude bound (DA2'b) to the directional fidelity lower bound (DA2'a), closing the fluid-limit gap between event-driven and continuous-time Lyapunov results. |
 | **[Edge Credence](terminology/entries/edge-credence.md)** | $p_{ij}$ | The per-edge confidence weight $p_{ij}$ on a strategy-DAG edge — the agent's working causal belief in the link. |
-| **[Epistemic Opacity](terminology/entries/epistemic-opacity.md)** |  | The agent's informational access to the world is partial — an informational condition, not a phenomenological claim. |
+| **[Epistemic Opacity](terminology/entries/epistemic-opacity.md)** |  | The agent may not know the observation law (the conditional law of each observation given state and action); an informational condition, not a phenomenological claim. |
 | **[Epistemic Shadow](terminology/entries/epistemic-shadow.md)** |  | The sector-restricted observational starvation that agency death casts on the agent's model without constituting continuity death. |
 | **[Equilibrium Convergence](terminology/entries/equilibrium-convergence.md)** |  | Adopted game-theoretic term — convergence of strategic interaction to equilibrium, distinguishing the strategic attractor mechanism from generic Lyapunov contraction. |
 | **[Event-Driven Dynamics](terminology/entries/event-driven-dynamics.md)** |  | The formulation of agent-environment coupling as discrete typed events (observation arrivals, action completions) at variable, heterogeneous rates — the generalization of uniform-clock discrete time. |
@@ -372,7 +372,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Teleological-unity uncertainty](terminology/entries/teleological-unity-uncertainty.md)** | $U_{\text{align},ji}$ | Agent $i$'s uncertainty about whether $j$'s communications serve $i$'s interests or $j$'s potentially conflicting objectives — uncertainty about $U_O$. |
 | **[Temporal Optimality](terminology/entries/temporal-optimality.md)** |  | Among agents achieving identical outcomes on all non-temporal dimensions, the fastest is optimal — time is the uniquely fungible residual. |
 | **[Temporal Software Theory](terminology/entries/temporal-software-theory.md)** *(TST)* |  | Software development as an agentic domain — AAT-grounded theory of time-optimal development practice. |
-| **[Transition Opacity](terminology/entries/transition-opacity.md)** |  | The agent does not know the transition dynamics $T$ exactly — opacity of action, paired with the perceptual info-loss boundary. |
+| **[Transition Opacity](terminology/entries/transition-opacity.md)** |  | The agent may not know the transition law $T$ exactly; the transition component $\theta_T$ of the environment's law. |
 | **[Trust Meta-Model](terminology/entries/trust-meta-model.md)** |  | The receiver's model of source quality and alignment — a model of models, itself subject to AAT's full apparatus. |
 | **[Unity dimensions](terminology/entries/unity-dimensions.md)** | $U_M, U_O, U_\Sigma$ | Epistemic, teleological, and strategic coherence between agents. |
 | **[Variational Sector Condition](terminology/entries/variational-sector-condition.md)** |  | The $\varepsilon$-fidelity extension of the sector condition to variational/approximate-posterior agents — sector constant degrades by $O(\sqrt\varepsilon)$ under a KL bound on the approximation, promoting controlled-KL VI to sub-scope $\alpha'$. |
@@ -381,4 +381,4 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 
 
-_Last rendered 2026-07-16 from 176 entries._
+_Last rendered 2026-10-30 from 176 entries._
