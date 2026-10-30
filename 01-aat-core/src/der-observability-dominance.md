@@ -11,11 +11,11 @@ stage: draft
 
 # Derived: Observability Dominance
 
-A direct consequence of the gain principle ( #emp-update-gain) applied to strategy edges. Unobservable strategy edges cannot be updated — when any node along a path has near-zero observability, the gain principle drives the update rate on the edges touching it to zero, and those edges are *frozen at their prior*. The agent's effective strategy is therefore limited to the parts it can observe, regardless of the nominal confidence assigned to unobservable paths. Observability dominates nominal confidence in determining which strategies are epistemically alive. Path observability is the *weakest-link* quantity: $\operatorname{obs}(P) = \min_{v \in P} \sigma_v$.
+A direct consequence of the gain principle ( #emp-update-gain) applied to strategy edges. An edge into a node on which no observation bears cannot be updated — the gain principle drives its update rate to zero, and it is *frozen at its prior*. An intermediate the agent cannot observe directly, but whose outcome a downstream observation depends on, is the weaker case: the edges touching it still move on every terminal observation, but only their product is identified and the per-edge estimates are biased ( #deriv-edge-credence-dynamics Prop B.3), so the agent keeps plan-level learning and loses per-edge diagnostic resolution. In both cases the agent's effective strategy is limited to the parts it can observe, regardless of the nominal confidence assigned to unobservable paths. Observability dominates nominal confidence in determining which strategies are epistemically alive. Path observability is the *weakest-link* quantity: $\operatorname{obs}(P) = \min_{v \in P} \sigma_v$.
 
-A striking structural prediction follows: **unobservable regions of strategy are absorbing**. Once significant strategy investment operates through unobservable nodes, the dynamics become self-locking — the mismatch signal still arrives but carries no weight ($\eta_{\text{edge}} \to 0$), no weight means no revision, and because near-zero effective mismatch from a too-noisy channel is case (c) of the zero-aporia trichotomy ( #def-mismatch-signal) — not distinguishable from within from case (a), a model that genuinely fits — the agent *cannot learn, and cannot recognize that it cannot learn*. Escape requires external shock, proactive observability investment (instrumenting previously unmonitored nodes), or another agent whose observations cover the blind spot ( #hyp-communication-gain). An agent choosing between a strong-but-blind path (high confidence, low observability) and a weak-but-visible path (lower confidence, high observability) should prefer the *visible* one — the visible path yields large update gain (the agent quickly learns whether it works and can redirect) while the blind path yields tiny gain.
+A striking structural prediction follows: **unobservable regions of strategy are absorbing**. Once significant strategy investment operates through nodes on which no observation bears, the dynamics become self-locking — the mismatch signal still arrives but carries no weight ($\eta_{\text{edge}} \to 0$), no weight means no revision, and because near-zero effective mismatch from a too-noisy channel is case (c) of the zero-aporia trichotomy ( #def-mismatch-signal) — not distinguishable from within from case (a), a model that genuinely fits — the agent *cannot learn, and cannot recognize that it cannot learn*. Escape requires external shock, proactive observability investment (instrumenting previously unmonitored nodes), or another agent whose observations cover the blind spot ( #hyp-communication-gain). An agent choosing between a strong-but-blind path (high confidence, low observability) and a weak-but-visible path (lower confidence, high observability) should prefer the *visible* one — the visible path yields large update gain (the agent quickly learns whether it works and can redirect) while the blind path yields tiny gain.
 
-A subtler structural consequence: an unobservable intermediate doesn't just freeze its touching edges — it makes *per-edge identification impossible*, forcing the agent into plan-level aggregation. The agent can still track plan success as a single quantity, but loses diagnostic resolution: it knows the plan is failing but cannot localize which step needs revision. The framework quantifies the **observability investment tradeoff**: making an intermediate observable yields a measurable improvement in the strategy-layer sector parameter — from the plan-level rate $1/(n_\Phi+1)$ to the per-edge weakest-link rate $\min(1/(n_1+1),\;\theta_1/(n_2+1))$ — positive whenever per-edge success rates are reasonable and experience is distributed across edges. The value of instrumenting an intermediate node is the *difference in sector parameters*, translating directly to persistence margin. A complementary trade-off: finer decomposition provides earlier failure detection but adds uncertain edges via chain confidence decay; the optimal decomposition depth balances incremental confirmation against compound decay.
+A subtler structural consequence: an unobservable intermediate with an observed terminal does not freeze its touching edges — it makes *per-edge identification impossible*, forcing the agent into plan-level aggregation. The agent can still track plan success as a single quantity, but loses diagnostic resolution: it knows the plan is failing but cannot localize which step needs revision. The framework quantifies the **observability investment tradeoff**: making an intermediate observable yields a measurable improvement in the strategy-layer sector parameter — from the plan-level rate $1/(n_\Phi+1)$ to the per-edge weakest-link rate $\min(1/(n_1+1),\;\theta_1/(n_2+1))$ — positive whenever per-edge success rates are reasonable and experience is distributed across edges. The value of instrumenting an intermediate node is the *difference in sector parameters*, translating directly to persistence margin. A complementary trade-off: finer decomposition provides earlier failure detection but adds uncertain edges via chain confidence decay; the optimal decomposition depth balances incremental confirmation against compound decay.
 
 ## Formal Expression
 
@@ -31,41 +31,69 @@ where $\sigma_v$ is the observability of node $v$ — how well the agent can det
 
 $$\text{conf}_{\text{obs}}(P) = \text{conf}(P) \cdot \text{obs}(P)$$
 
-When $\sigma_v \approx 0$ for any node $v$ on the path: by #emp-update-gain, $\eta_{\text{edge}} = U_{\text{edge}} / (U_{\text{edge}} + U_{\text{obs}}) \to 0$ as $U_{\text{obs}} \to \infty$. The edges connecting to $v$ are **frozen at their prior** — the agent cannot update them regardless of what happens. The path is epistemically dead.
+When $\sigma_v \approx 0$ for a node $v$ on the path and no observed variable depends on $v$: by #emp-update-gain, $\eta_{\text{edge}} = U_{\text{edge}} / (U_{\text{edge}} + U_{\text{obs}}) \to 0$ as $U_{\text{obs}} \to \infty$, and the edges into $v$ are **frozen at their prior** — the agent cannot update them regardless of what happens. The path is epistemically dead at every resolution. When $v$ is unobserved but a downstream observable depends on it, the gain argument does not apply as written, because the terminal observation is evidence about the edges through $v$: in the chain $A \to B \to G$ with $B$ unobserved, both edges update on every $y_G$ ( #deriv-edge-credence-dynamics Prop B.3). What dies there is per-edge identification — only the product $\theta_1\theta_2$ is identified, the per-edge point estimates carry an $O(1/n)$ bias, and the per-edge sector condition fails — while plan-level tracking of $\hat\Phi = \hat p_1 \hat p_2$ keeps the sector condition at $\alpha = 1/(n_\Phi + 1)$. If one edge's rate is known, the other is identified from $y_G$ alone ($\hat\theta_1 = \bar y_G / \theta_2$ is consistent), so an edge into a node the agent never observes directly can converge to its true rate. The freezing claim is about nodes no observation bears on, not about nodes the agent does not observe directly.
 
 What is frozen is the *update*, not the *input*: observations continue to arrive and continue to be uninformative, which is case (c) of the zero-aporia trichotomy ( #def-mismatch-signal) — near-zero mismatch because the channel cannot detect model error, not because there is nothing to detect. That trichotomy is also what makes the region self-locking rather than merely unproductive: case (c) is not distinguishable from within from case (a), a model that genuinely fits, so the region presents as settled knowledge rather than as a gap.
 
 ## Epistemic Status
 
-*Robust qualitative.* The mechanism (high observation noise → low gain → frozen edges) is a direct consequence of #emp-update-gain's uncertainty ratio. The specific functional form ($\text{conf}_{\text{obs}} = \text{conf} \cdot \text{obs}$) is a first-order approximation — the actual relationship between observability and effective confidence is more complex (it depends on how many observations are accumulated, the prior strength, and the noise structure). The qualitative prediction (low observability → frozen beliefs → ineffective strategy) is robust.
+*Robust qualitative.* The mechanism (high observation noise → low gain → frozen edges) is a direct consequence of #emp-update-gain's uncertainty ratio for nodes on which no observation bears; for an unobserved node with an observed descendant the exact two-edge analysis of #deriv-edge-credence-dynamics Prop B.3 replaces it (edges move, non-identified per edge), and the depth-$d$ attenuation of Prop B.2 is derived at that proposition's tier. The specific functional form ($\text{conf}_{\text{obs}} = \text{conf} \cdot \text{obs}$) is a first-order approximation — the actual relationship between observability and effective confidence is more complex (it depends on how many observations are accumulated, the prior strength, and the noise structure). The qualitative prediction (low observability → frozen beliefs → ineffective strategy) is robust.
 
 ## Claim Record
 
-### Edges touching a node the agent cannot observe are frozen at their prior
+### Edges into a node on which no observation bears are frozen at their prior
 
-**Register:** descriptive — robust-qualitative, via the gain principle: observation uncertainty going to infinity drives the edge gain to zero (tag `observability-dominance`). The multiplicative form $\text{conf} \cdot \text{obs}$ is a first-order approximation; the freezing is the claim.
+**Register:** formal — robust-qualitative, via the gain principle: observation uncertainty going to infinity drives the edge gain to zero (tag `observability-dominance`, Formal Expression). The multiplicative form $\text{conf} \cdot \text{obs}$ is a first-order approximation; the freezing is the claim, and it is a claim about gain-principle update rules, not yet about any real learner.
 
-**Population:** learners whose edge credences update by the gain principle ( #emp-update-gain) from observations of node outcomes, in learning-agent scope.
+**Population:** representations in which edge credences update by the gain principle ( #emp-update-gain) from observations of node outcomes, at a node on which no observed variable depends.
 
-**True of:** the two-edge chain with unobservable intermediate (Props B.2–B.3, #deriv-edge-credence-dynamics): per-edge identification fails and only plan-level tracking survives, derived.
+**True of:** the never-chosen arm of a greedy OR node, which receives zero correction (Prop B.4(a), #deriv-edge-credence-dynamics), and arm 3 of #example-strategy, frozen at its exploration-phase value once nothing observed depends on it (internal consistency, not instantiation).
 
-**False of:** a learner whose blind spot is covered by another agent's observations ( #hyp-solicitable-escape) is outside the population. A learner that infers the hidden node from downstream outcomes with a known mechanism is not frozen but biased, $O(1/n)$ (the unobservable-$B$ case).
+**False of:** the two-edge chain with unobservable intermediate and observed terminal (Prop B.3): the edges are not frozen but non-identified per edge, with $O(1/n)$ bias, and with one rate known the other converges from $y_G$ alone. A learner whose blind spot is covered by another agent's observations ( #hyp-solicitable-escape) is outside the population.
 
-**Falsifier:** a learner whose credence on an edge into a never-observed node converges to the true rate from its own observations. The Working-Notes prediction that poorly measured departments hold persistent, untested beliefs about their own effectiveness is the field form of the claim; it has not been tested.
+**Falsifier:** a gain-principle learner whose credence on an edge into a node no observation bears on moves from its prior; the Formal Expression's "frozen at their prior" is the sentence it would refute.
+
+**Instantiated:** not applicable.
+
+### Real learners whose plans run through unmonitored steps hold untested beliefs about those steps
+
+**Register:** descriptive — the freezing claim adopted for real agents (Working Notes: poorly measured departments hold persistent, untested beliefs about their own effectiveness; Discussion, "Unobservable regions are absorbing").
+
+**Population:** real agents or organizations that update step-level beliefs from outcome records, with steps on which no recorded outcome bears.
+
+**True of:** no checked instance; the R&D and strategy-group cases are illustrations.
+
+**False of:** an organization whose unmonitored steps feed a monitored terminal is in the Prop B.3 regime, not the frozen one: its step-level beliefs move, and the prediction is non-identification, not persistence of the prior.
+
+**Falsifier:** records from such an organization in which step-level beliefs about unmonitored steps track measured outcomes once measurement is introduced no better than chance would predict against the frozen prior; or, the other way, beliefs about steps no record bears on that nonetheless track the truth, which would require a channel the model does not include.
 
 **Instantiated:** no.
 
 ### Deeper edges calibrate more slowly, attenuated by the product of upstream success rates
 
-**Register:** descriptive — derived for two edges, conjectured for depth $d$ (Discussion, "Quantitative content from the two-edge case").
+**Register:** formal — derived for a chain of any depth $d$ under L0 with observable intermediates and Beta-Bernoulli edges (Prop B.2, "Generalization to depth $d$", #deriv-edge-credence-dynamics): edge $k$ is observed only on trials where edges $1, \dots, k-1$ succeed, an event of probability $\prod_{j \lt k}\theta_j$ independent of edge $k$'s outcome, so its expected correction is scaled by that product.
 
-**Population:** sequential learners whose step $k$ is tested only when steps $j \lt k$ succeed.
+**Population:** Beta-Bernoulli chains under L0 with every intermediate observable and sequential short-circuit execution; the sector parameter is $\min_k \prod_{j \lt k}\theta_j / (n_k + 1)$.
 
-**True of:** the two-edge chain (Prop B.2).
+**True of:** the two-edge chain (Prop B.2) and, by the same argument, any depth.
 
-**False of:** a learner that can test steps independently, in a sandbox or by direct intervention on intermediate conditions, is outside the population.
+**False of:** a learner that can test steps independently, in a sandbox or by direct intervention on intermediate conditions, is outside the population: its edge $k$ is observed on every trial and the product factor is $1$.
 
-**Falsifier:** learning-curve data under sequential execution in which deep-step estimates converge as fast as shallow ones; or a depth-three derivation in which the attenuation is not the product.
+**Falsifier:** a depth-$d$ Beta-Bernoulli chain under L0 and short-circuit execution on which the measured per-trial correction of edge $k$ differs from $\prod_{j \lt k}\theta_j \cdot (\theta_k - \hat p_k)/(n_k+1)$; the Discussion sentence "the deepest edge faces exponential attenuation" is what it would refute.
+
+**Instantiated:** not applicable.
+
+### Real sequential learners calibrate deep steps more slowly than shallow ones
+
+**Register:** descriptive — the attenuation adopted for real agents whose step $k$ is attempted only after steps $1, \dots, k-1$ succeed.
+
+**Population:** real sequential learners under short-circuit execution with step-level outcome records.
+
+**True of:** no checked instance.
+
+**False of:** learners that rehearse steps out of order or in simulation are outside the population.
+
+**Falsifier:** learning-curve data under sequential execution in which deep-step estimates converge as fast as shallow ones.
 
 **Instantiated:** no.
 
@@ -87,7 +115,7 @@ What is frozen is the *update*, not the *input*: observations continue to arrive
 
 **Observability as the gateway to learning.** An agent choosing between a strong-but-blind path (high $\text{conf}(P)$, low $\text{obs}(P)$) and a weak-but-visible path (lower $\text{conf}(P)$, high $\text{obs}(P)$) should prefer the visible one. After one attempt: the visible path yields large $\eta_{\text{edge}}$ — the agent quickly learns whether it works and can redirect. The blind path yields tiny $\eta_{\text{edge}}$ — the agent is still guessing after $n$ attempts. Observability enables learning; opacity prevents it.
 
-**Unobservable regions are absorbing.** Once significant strategy investment operates through unobservable nodes: mismatch still arrives but carries no weight ($\eta_{\text{edge}} \to 0$) → no revision → and, since this is case (c) of #def-mismatch-signal's trichotomy and inseparable from within from case (a), the agent cannot learn and cannot recognize that it cannot learn. Escape requires external shock, proactive observability investment (instrumenting previously unmonitored nodes), or another agent whose observations cover the blind spot ( #hyp-communication-gain).
+**Unobservable regions are absorbing.** Once significant strategy investment operates through nodes on which no observation bears: mismatch still arrives but carries no weight ($\eta_{\text{edge}} \to 0$) → no revision → and, since this is case (c) of #def-mismatch-signal's trichotomy and inseparable from within from case (a), the agent cannot learn and cannot recognize that it cannot learn. Escape requires external shock, proactive observability investment (instrumenting previously unmonitored nodes), or another agent whose observations cover the blind spot ( #hyp-communication-gain).
 
 **Connection to #der-code-quality-as-observation-infrastructure (cross-component reference — see `02-tst-core/`).** In the software domain, code quality directly determines $\sigma_v$ — well-structured code with good tests makes strategy steps (features, refactors, deployments) observable. Poor code quality reduces observability, freezing the developer's causal beliefs about what changes will accomplish. This makes code quality a strategic concern, not just an aesthetic one.
 
@@ -95,11 +123,11 @@ What is frozen is the *update*, not the *input*: observations continue to arrive
 
 **Quantitative content from the two-edge case.** The analysis in #deriv-edge-credence-dynamics (Props B.2-B.3) instantiates this result for the minimal multi-edge chain $A \to B \to G$, giving the qualitative claims above precise mathematical form.
 
-*Observable intermediate $B$.* When the agent can observe whether $B$ was achieved, each edge gets independent Bayesian updates. The per-edge sector parameters are $\alpha_1 = 1/(n_1+1)$ and $\alpha_2 = \theta_1/(n_2+1)$, where $\theta_1$ is the true success probability of the first edge. The overall sector parameter is $\alpha_\Sigma = \min(\alpha_1, \alpha_2)$ — a weakest-link result. The $\theta_1$ factor in $\alpha_2$ is the **evidence-starvation effect**: downstream edge 2 can only be tested when upstream edge 1 succeeds (with probability $\theta_1$), so its effective correction rate is attenuated by $\theta_1$. For a depth-$d$ chain, this generalizes to $\alpha_k = \prod_{j\ltk}\theta_j / (n_k+1)$ — the deepest edge faces exponential attenuation. This is derived for the two-edge case and conjectured (with clear inductive mechanism) for depth-$d$.
+*Observable intermediate $B$.* When the agent can observe whether $B$ was achieved, each edge gets independent Bayesian updates. The per-edge sector parameters are $\alpha_1 = 1/(n_1+1)$ and $\alpha_2 = \theta_1/(n_2+1)$, where $\theta_1$ is the true success probability of the first edge. The overall sector parameter is $\alpha_\Sigma = \min(\alpha_1, \alpha_2)$ — a weakest-link result. The $\theta_1$ factor in $\alpha_2$ is the **evidence-starvation effect**: downstream edge 2 can only be tested when upstream edge 1 succeeds (with probability $\theta_1$), so its effective correction rate is attenuated by $\theta_1$. For a depth-$d$ chain, this generalizes to $\alpha_k = \prod_{j \lt k}\theta_j / (n_k+1)$ — the deepest edge faces exponential attenuation. This is derived at any depth by the same per-trial argument as the two-edge case (Prop B.2, "Generalization to depth $d$").
 
 *Unobservable intermediate $B$.* When the agent observes only the terminal outcome $y_G$, per-edge identification fails entirely. The marginal Bayesian update has a systematic bias: the zero-correction-at-truth property (A1) is violated with bias $O(1/n)$. The agent's point-estimate updates for each edge are downward-biased because success always credits both edges fully ($\alpha_k \to \alpha_k + 1$), but failure distributes blame fractionally via proportional attribution. The proportional-blame update turns out to be exactly the marginal Bayesian point estimate — not a heuristic — but it discards the posterior correlation that failure introduces between the edge beliefs.
 
-The consequence is stronger than "frozen edges": unobservable intermediates don't just prevent updating — they make per-edge identification impossible, forcing the agent to plan-level aggregation. If the agent tracks $\hat{\Phi} = p_1 p_2$ as a single Beta on the plan's overall success probability, the single-edge sector condition applies with $\alpha_{\Sigma,\text{plan}} = 1/(n_\Phi + 1)$. But diagnostic resolution is lost: the agent knows the plan is failing but cannot localize which step needs revision.
+The consequence differs from "frozen edges": an unobservable intermediate with an observed terminal does not prevent updating — it makes per-edge identification impossible, forcing the agent to plan-level aggregation. If the agent tracks $\hat{\Phi} = p_1 p_2$ as a single Beta on the plan's overall success probability, the single-edge sector condition applies with $\alpha_{\Sigma,\text{plan}} = 1/(n_\Phi + 1)$. But diagnostic resolution is lost: the agent knows the plan is failing but cannot localize which step needs revision.
 
 *The observability investment tradeoff.* Making $B$ observable yields a quantifiable improvement in $\alpha_\Sigma$: from the plan-level rate $1/(n_\Phi+1)$ to the per-edge weakest-link rate $\min(1/(n_1+1), \theta_1/(n_2+1))$. The improvement is positive whenever $\theta_1 \gt 1/2$ and experience is distributed similarly across edges. This gives the observability-dominance principle concrete economic content: the value of instrumenting an intermediate node is the difference in sector parameters, which translates directly to persistence margin.
 

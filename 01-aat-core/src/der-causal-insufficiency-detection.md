@@ -86,11 +86,11 @@ $$\hat\rho_{ij} = \frac{1}{N}\sum_t (Y_{A_i,t} - \bar{Y}_{A_i})(Y_{A_j,t} - \bar
 
 A $\hat\rho_{ij}$ significantly different from zero, of either sign, rejects the L0 independence hypothesis. Joint observability ( #der-loop-interventional-access supplies the interventional character; SA3 supplies the joint sampling) is precisely the violation of scope condition (S3) that admits the test under the no-go.
 
-**Detection criterion.** A statistically significant nonzero $\hat\rho_{ij}$ at sample size $N$ sufficient for the desired test power, after per-edge credences have stabilized (two-sided):
+**Detection criterion.** A statistically significant nonzero $\hat\rho_{ij}$ at sample size $N$ sufficient for the desired test power, after per-edge credences have stabilized (two-sided), between siblings whose *modelled* ancestor sets are disjoint:
 
-$$\lvert\hat\rho_{ij}\rvert \gt z_{1-\alpha/2}\,\hat\sigma_{\rho_{ij}} / \sqrt{N} \quad\implies\quad \text{DAG is causally insufficient between siblings } i, j$$
+$$\lvert\hat\rho_{ij}\rvert \gt z_{1-\alpha/2}\,\hat\sigma_{\rho_{ij}} / \sqrt{N} \quad\implies\quad \text{a cause outside the graph acts on siblings } i, j$$
 
-(Standard hypothesis-testing form; threshold and test power depend on application.)
+(Standard hypothesis-testing form; threshold and test power depend on application.) The disjointness condition is what $H_0$ assumes. Under L0 the agent's model is a tree, so every sibling pair meets it, and the criterion reads as written. Once the model is not a tree it is not automatic: siblings that share a modelled ancestor are correlated with every cause modelled. The naive-L1 graph of #example-L1, with $C$ a parent of both $B_1$ and $B_2$, has $\operatorname{Cov}(Y_{B_1}, Y_{B_2}) = 0.504 - 0.72 \cdot 0.56 = 0.1008$ and no latent at all. For such pairs the statistic to test is the covariance conditional on the shared modelled ancestors, and an unconditional nonzero covariance says only what the graph already says.
 
 **Preconditions for the covariance test.**
 
@@ -155,7 +155,7 @@ Diagnosis is a form of internal exploration — the agent probes its own model's
 
 The **boundary characterization** (routes (a)–(e)) is *robust qualitative*: each route maps to a specific scope-condition violation and to existing AAT machinery, but the precise detection power of each route depends on domain particulars. Routes (a) and (b) have explicit AAT scaffolding ( #deriv-edge-credence-dynamics, #der-loop-interventional-access); routes (c)–(e) depend on domain capability.
 
-The **primary detection mechanism** (pairwise sibling covariance) is *robust qualitative*: standard hypothesis testing applied to interventional data from the feedback loop, with explicit preconditions. Its sensitivity depends on how cleanly the agent can separate sibling-covariance signal from edge-credence noise at convergence; in adversarial or fast-drifting environments the test's effective sample size shrinks.
+The **primary detection mechanism** (pairwise sibling covariance) is *robust qualitative*: standard hypothesis testing applied to interventional data from the feedback loop, with explicit preconditions, between siblings whose modelled ancestor sets are disjoint (automatic under L0; conditional covariance otherwise), and blind by construction to latents that show only in the joint of three or more siblings. Its sensitivity depends on how cleanly the agent can separate sibling-covariance signal from edge-credence noise at convergence; in adversarial or fast-drifting environments the test's effective sample size shrinks.
 
 The **aggregate residual** as a confirmatory signal is *exact* for the on-policy collapse (no-go's prediction is direct); the off-policy mixed-regime scaling is *heuristic* (linear-in-$\varepsilon$ with structure-dependent coefficient).
 
@@ -168,6 +168,7 @@ By the no-go and its boundary characterization, several latent structures remain
 - **Latents with no joint-observability route.** If the latent affects siblings that cannot be jointly observed (mutually exclusive with long horizons, no cause-indicator availability, no intervention capability, no informative prior), the no-go applies in full strength and detection is impossible.
 - **Latents affecting only one edge.** By definition not common causes; appear as noise in individual edge credences.
 - **Latents too rare to produce observable joint outcomes.** Even with route (b) operational, a latent with $\theta_C \approx 1$ rarely reveals itself — the agent needs enough $C = 0$ events to estimate the covariance.
+- **Latents that act only on triples.** For two binary siblings, zero covariance is independence, so a latent that leaves a pair's covariance at zero also leaves the AND/OR propagation at that pair exact; the test misses it and nothing is biased. For three or more siblings, pairwise independence is not mutual independence. Take binary $X, Y$ fair and independent and $Z = X \oplus Y$: every pair is independent, yet $P(X \wedge Y \wedge Z) = 0$ against the product $1/8$, and a four-state latent $C = (X, Y)$ realizes it. The pairwise covariance test is blind to such a latent while the three-way AND or OR at that node is biased. The test is a test of pairwise structure; a latent that shows only in the joint of three or more siblings needs the joint statistic.
 
 These limitations parallel the information-theoretic underdetermination in #disc-credit-assignment-boundary: detection requires data with the right structure, and the no-go specifies precisely what "right structure" means.
 
@@ -205,13 +206,13 @@ These limitations parallel the information-theoretic underdetermination in #disc
 
 **Register:** formal for the test's validity under its three preconditions (a standard hypothesis test on jointly observed outcomes; a nonzero covariance of either sign rejects L0 independence); normative for its recommendation as "the AAT-canonical detector", which rests on its using only machinery the theory already requires.
 
-**Population:** L0 learners with SA3 exploration and occasional joint observability of sibling outcomes, after per-edge credences have stabilized, under approximate stationarity over the test window.
+**Population:** L0 learners with SA3 exploration and occasional joint observability of sibling outcomes, after per-edge credences have stabilized, under approximate stationarity over the test window, testing sibling pairs with disjoint modelled ancestor sets (every pair, under L0's tree).
 
-**True of:** #example-L1 (internal consistency, not instantiation).
+**True of:** #example-L1 (internal consistency, not instantiation): the on-policy table shows the no-go, and the marginal-sampling covariance $0.1008$ between $A_1$ and $A_2$ at L0 is what the test detects.
 
-**False of:** latents with no joint-observability route, latents on one edge, and latents too rare to produce joint outcomes ("What Cannot Be Detected"); for these the test has no data.
+**False of:** latents with no joint-observability route, latents on one edge, and latents too rare to produce joint outcomes ("What Cannot Be Detected"); for these the test has no data. Latents that correlate three or more siblings only jointly (pairwise independent, mutually dependent), which the pairwise statistic cannot see although the node's propagation is biased. Sibling pairs sharing a modelled ancestor, for which the unconditional covariance is nonzero with every cause modelled (the naive-L1 graph of #example-L1); the criterion excludes them.
 
-**Falsifier:** for validity, sibling covariance of the predicted sign and magnitude arising under the stated preconditions with no latent present; for the recommendation, a domain in which routes (c)–(e) are available and cheaper, which the body allows.
+**Falsifier:** for validity, a nonzero sibling covariance of the predicted sign arising under the stated preconditions, between siblings with disjoint modelled ancestors, with no cause outside the graph; the Detection criterion is the sentence it would refute. For the recommendation, a domain in which routes (c)–(e) are available and cheaper, which the body allows.
 
 **Instantiated:** no.
 

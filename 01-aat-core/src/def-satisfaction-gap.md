@@ -10,7 +10,7 @@ stage: draft
 
 # Definition: Satisfaction Gap
 
-The first of two orthogonal diagnostic quantities that together separate "the goal is too hard" from "the strategy is too weak" ( #def-control-regret is the second). The framework first defines **objective attainability** $A_O$ as the best achievable value given the agent's current beliefs $M_t$, available policy class $\Pi$, and planning horizon $N_h$ — the supremum of the value object over policies. The **satisfaction gap** $\delta_{\text{sat}}$ is then the distance between the objective's satisfaction threshold $V_{O_t}^{\min}$ and this attainability: positive when the objective is *unmet* under the best available policy given the current model and horizon; non-positive when the objective is attainable in principle.
+The first of two orthogonal diagnostic quantities that together separate "the goal is too hard" from "the strategy is too weak" ( #def-control-regret is the second). The framework first defines **objective attainability** $A_O$ as the best value a first action can reach given the agent's current beliefs $M_t$, a continuation convention drawn from the available policy class $\Pi$, and planning horizon $N_h$ — under the Bellman convention, the supremum of the value object over the policy class. The **satisfaction gap** $\delta_{\text{sat}}$ is then the distance between the objective's satisfaction threshold $V_{O_t}^{\min}$ and this attainability: positive when the objective is *unmet* under the best available policy given the current model and horizon; non-positive when the objective is attainable in principle.
 
 A positive $\delta_{\text{sat}}$ does not automatically mean the goal is wrong. The signal has multiple possible causes — genuinely infeasible objective, too-narrow policy class, too-short horizon, model wrong about feasibility, or jointly-infeasible compound terminals — each with a different remedy. **Objective revision is the last resort, not the first response to unmet goals.** The orient cascade ( #der-orient-cascade) formalizes this ordering, and the disambiguation table below encodes the diagnostic procedure.
 
@@ -20,15 +20,19 @@ Under the canonical continuation convention ( #def-value-object), $\delta_{\text
 
 *[Definition (objective-attainability)]*
 
-$$A_O(M_t;\, \Pi, N_h) = \sup_{\pi \in \Pi} V_O(M_t, \pi;\, N_h)$$
+$$A_O(M_t;\, \Pi, N_h, \pi_{\text{cont}}) = \sup_{a} Q_O(M_t, a;\, \pi_{\text{cont}}, N_h)$$
 
-The **objective attainability** — the best achievable value given current beliefs $M_t$, available policy class $\Pi$, and horizon $N_h$.
+The **objective attainability** — the best value a first action can reach given current beliefs $M_t$, a continuation convention $\pi_{\text{cont}}$ drawn from the available policy class $\Pi$, and horizon $N_h$. The convention is a parameter ( #def-value-object), and the value depends on it: $\pi_{\text{cont}} = \pi_{\text{current}}$ gives $A_O^{(1)}$ (C1, the canonical default, and what a bare $A_O$ means in this segment); $\pi_{\text{cont}} = \pi_{\text{RH}}$ gives $A_O^{\text{RH}}$ (C2); $\pi_{\text{cont}} = \pi^\ast = \arg\sup_{\pi \in \Pi} V_O(M_t, \pi;\, N_h)$ gives $A_O^{\text{B}}$ (C3). Under C3, and only there, the attainability is the best value any policy in the class achieves,
+
+$$A_O^{\text{B}}(M_t;\, \Pi, N_h) = \sup_{\pi \in \Pi} V_O(M_t, \pi;\, N_h),$$
+
+provided $\Pi$ is closed under prefixing a first action to any member, or $\pi^\ast$ is optimal over $\Pi$ from every state a first action can reach; without either, the first-action supremum can exceed the class supremum ( #deriv-convention-monotonicity). The supremum over $\Pi$ is the form the "genuinely infeasible" reading of C3 relies on.
 
 *[Definition (satisfaction-gap)]*
 
 $$\delta_{\text{sat}} = V_{O_t}^{\min} - A_O(M_t;\, \Pi, N_h)$$
 
-where $V_{O_t}^{\min}$ is the minimum trajectory value that counts as "objective met" — a threshold set by the objective itself (for constraints: all satisfied; for utility: a minimum acceptable level).
+where $V_{O_t}^{\min}$ is the minimum trajectory value that counts as "objective met" — a threshold set by the objective itself (for constraints: all satisfied; for utility: a minimum acceptable level), and $A_O$ carries whatever convention it was computed under.
 
 - $\delta_{\text{sat}} \gt 0$: The objective is **unmet** under the best available policy, current model, and horizon.
 - $\delta_{\text{sat}} \leq 0$: The objective is **attainable** in principle.
@@ -38,7 +42,7 @@ where $V_{O_t}^{\min}$ is the minimum trajectory value that counts as "objective
 | Cause | Fix | How to distinguish |
 |---|---|---|
 | Goal is genuinely infeasible | Revise $O_t$ | Persists across $M_t$, $\Pi$, $N_h$ improvements |
-| Policy class too narrow | Expand $\Pi$ (structural adaptation of $\Sigma_t$) | $\delta_{\text{sat}}$ decreases when richer policies are tried |
+| Policy class too narrow | Expand $\Pi$ (structural adaptation of $\Sigma_t$); under C1 this acts through the continuation $\pi_{\text{current}}$, the policy actually tried, and under C3 through $\Pi$ directly | $\delta_{\text{sat}}$ decreases when richer policies are tried |
 | Horizon too short | Extend $N_h$ | $\delta_{\text{sat}}$ decreases with longer planning horizon |
 | Model is wrong about feasibility | Improve $M_t$ (reduce $\delta_{\text{epistemic}}$) | $\delta_{\text{sat}}$ changes when $M_t$ is corrected |
 | Objectives jointly infeasible | Revise $O_t$ or relax constraints | Individual terminal satisfaction gaps are zero but AND-node fails; cross-terminal tradeoff is required |
@@ -47,7 +51,7 @@ Objective revision is the **last resort**, not the first response to unmet goals
 
 ## Epistemic Status
 
-*Exact as a definition — convention-relative as a diagnostic.* The satisfaction gap is a mathematical definition — the difference between a threshold and a supremum over a function class. The definition is precise; the *computation* of $A_O$ is generally intractable (it requires optimization over a policy class), but the quantity is well-defined. However, the *value* of $\delta_{\text{sat}}$ depends on three external parameters: the continuation convention ($\pi_{\text{cont}}$), the horizon ($N_h$), and the scalarization of the objective ($V_{O_t}$). These are not derived by AAT — they are choices the analyst makes. The satisfaction gap is therefore an intrinsic architectural diagnostic *given* a measurement convention, not an absolute property of the agent.
+*Exact as a definition — convention-relative as a diagnostic.* The satisfaction gap is a mathematical definition — the difference between a threshold and a supremum over first actions under a continuation convention (over the policy class itself, under C3). The definition is precise; the *computation* of $A_O$ is generally intractable (it requires optimization over a policy class), but the quantity is well-defined. However, the *value* of $\delta_{\text{sat}}$ depends on three external parameters: the continuation convention ($\pi_{\text{cont}}$), the horizon ($N_h$), and the scalarization of the objective ($V_{O_t}$). These are not derived by AAT — they are choices the analyst makes. The satisfaction gap is therefore an intrinsic architectural diagnostic *given* a measurement convention, not an absolute property of the agent.
 
 **Convention dependence and the hierarchy.** $A_O$ inherits the continuation convention from the value object ( #def-value-object), which defines three named conventions forming a monotonicity hierarchy:
 
@@ -55,13 +59,13 @@ Objective revision is the **last resort**, not the first response to unmet goals
 - **C2** (receding-horizon): $\delta_{\text{sat}}^{\text{RH}} = V_{O_t}^{\min} - A_O^{\text{RH}}$. Tests whether the agent can reach the goal with $N_r$-step replanning. Captures recovery paths invisible to C1.
 - **C3** (Bellman): $\delta_{\text{sat}}^{\text{B}} = V_{O_t}^{\min} - A_O^{\text{B}}$. Tests whether the goal is genuinely infeasible given $(M_t, \Pi, N_h)$. Strongest diagnostic — $\delta_{\text{sat}}^{\text{B}} \gt 0$ means no policy in $\Pi$ can achieve the objective.
 
-The monotonicity result ( #def-value-object): $\delta_{\text{sat}}^{\text{B}} \leq \delta_{\text{sat}}^{\text{RH}} \leq \delta_{\text{sat}}^{(1)}$. The $\delta_{\text{sat}}^{\text{B}} \leq \delta_{\text{sat}}^{\text{RH}}$ half is unconditional; the $\delta_{\text{sat}}^{\text{RH}} \leq \delta_{\text{sat}}^{(1)}$ half holds under the order-consistency condition on C2's replanning objective (RH-1/2/3 in #def-value-object), and can fail for unguarded short-horizon replanning. C1 gives the most false "unattainable" diagnoses; C3 gives none (modulo model error in $M_t$). Analyses using different conventions should not be compared directly — the convention is part of the measurement.
+The monotonicity result ( #def-value-object): $\delta_{\text{sat}}^{\text{B}} \leq \delta_{\text{sat}}^{\text{RH}} \leq \delta_{\text{sat}}^{(1)}$. The $\delta_{\text{sat}}^{\text{B}} \leq \delta_{\text{sat}}^{\text{RH}}$ half holds when $\Pi$ is closed under prefixing a first action or $\pi^\ast$ is optimal from every state a first action reaches, and fails for a two-policy class without either ( #deriv-convention-monotonicity); the $\delta_{\text{sat}}^{\text{RH}} \leq \delta_{\text{sat}}^{(1)}$ half holds under the order-consistency condition on C2's replanning objective (RH-1/2/3 in #def-value-object), and can fail for unguarded short-horizon replanning. C1 gives the most false "unattainable" diagnoses; C3 gives none (modulo model error in $M_t$). Analyses using different conventions should not be compared directly — the convention is part of the measurement.
 
 ## Claim Record
 
 ### The satisfaction gap is the distance from the satisfaction threshold to the best value attainable under the agent's own model
 
-**Register:** formal — a definition (tags `objective-attainability`, `satisfaction-gap`), exact; its value is relative to the continuation convention, the horizon and the scalarization, none of which the theory derives.
+**Register:** formal — a definition (tags `objective-attainability`, `satisfaction-gap`), exact; its value is relative to the continuation convention $\pi_{\text{cont}}$ (an argument of the definition), the horizon and the scalarization, none of which the theory derives.
 
 **Population:** agents with a scalar $V_{O_t}$ (coherent under (A1)–(A4), #form-objective-functional), a satisfaction threshold $V_{O_t}^{\min}$, and a policy class $\Pi$ over which a supremum is taken. The quantity is the agent's self-assessment, computed from $M_t$, not from $\Omega_t$.
 
@@ -69,9 +73,23 @@ The monotonicity result ( #def-value-object): $\delta_{\text{sat}}^{\text{B}} \l
 
 **False of:** a pure utility-maximizer with no threshold has no $\delta_{\text{sat}}$ (utility objectives may not define $V_{O_t}^{\min}$, Formal Expression); an agent with Pareto-structured objectives has only the set-theoretic degradation of it ( #form-objective-functional).
 
-**Falsifier:** none for a definition. The one claim about agents in this segment, the aspiration hypothesis (tag `aspiration-dominance`), is hypothesis-grade and names no test; the claim that routing by the two gaps does better than routing by total shortfall is recorded at #def-control-regret.
+**Falsifier:** none for a definition. The claim that routing by the two gaps does better than routing by total shortfall is recorded at #def-control-regret; the aspiration hypothesis is recorded next.
 
 **Instantiated:** no. $A_O$ has not been computed for any agent the theory did not construct.
+
+### Pursuing an unreachable objective can outperform pursuing the reachable one by the reachable one's own measure
+
+**Register:** normative — an optimality claim about which objective to hold, hypothesis-grade (tag `aspiration-dominance`, Discussion): under conditions the body names only informally, $V_{O_f}(M_t, \pi_a) \gt V_{O_f}(M_t, \pi_f)$. It is tested by comparison, not derived.
+
+**Population:** agents with two candidate objectives, one aspirational ($\delta_{\text{sat}} \gt 0$ under the convention in use) and one feasible ($\delta_{\text{sat}} = 0$), whose policy under each is the optimum for that objective in $\Pi$. The body does not say which agents satisfy its "nameable conditions", so the population is not yet bounded.
+
+**True of:** no instance in canon; the three mechanisms the body lists (escaping local optima, implicit regularization, better conditioning) are named from optimization practice, not derived or exhibited here.
+
+**False of:** an agent whose policy class contains the $O_f$-optimum and whose planner finds it, so that nothing in $\Pi$ beats $\pi_f$ on $V_{O_f}$; the inequality is then false by definition of $\pi_f$. The hypothesis has content only where the planner's reach is limited.
+
+**Falsifier:** for the hypothesis as stated, a comparison of $V_{O_f}(M_t, \pi_a)$ with $V_{O_f}(M_t, \pi_f)$ on agents meeting its conditions in which the aspirational policy does no better; for its use elsewhere ( #der-orient-cascade's objective-last rule names it as the case where that rule is wrong), the same comparison.
+
+**Instantiated:** no.
 
 ## Discussion
 

@@ -90,17 +90,31 @@ The schema is no longer purely hypothetical. The sector parameter for strategic 
 
 ## Claim Record
 
-### A strategy learner that accumulates evidence without forgetting eventually fails every persistence threshold in a drifting world
+### A Beta-Bernoulli strategy learner without forgetting eventually fails every persistence threshold under any positive drift
 
-**Register:** descriptive — true of a named class of update mechanisms: Beta-Bernoulli edge credences without discounting, whose gain $1/(n+1)$ goes to zero (tag `forgetting-prerequisite`), under any $\rho_\Sigma \gt 0$.
+**Register:** formal — exact for the named update mechanism: undiscounted Beta-Bernoulli edge credences, whose gain $1/(n+1)$ goes to zero (tag `forgetting-prerequisite`), under Model D drift at any $\rho_\Sigma \gt 0$. A theorem about the update rule; the next entry carries its adoption for real learners.
 
-**Population:** learners whose edge credences are undiscounted Beta-Bernoulli posteriors, under bounded strategic drift. (The lift to every count-accumulating mechanism is stated in NeurIPS Paper 2, Working Notes, and is not in canon.)
+**Population:** representations in which edge credences are undiscounted Beta-Bernoulli posteriors, under bounded strategic drift. (The lift to every gain-decay mechanism is stated in NeurIPS Paper 2, Working Notes, and is not in canon.)
 
-**True of:** the raw Beta-Bernoulli learner, derived. The incumbent-firm and institutional cases in Discussion are illustrations.
+**True of:** the raw Beta-Bernoulli learner (Prop B.1 and the Persistence Conditions, #deriv-edge-credence-dynamics): the critical count $n^\ast = R_\Sigma/\rho_\Sigma - 1$ is crossed in finite time.
 
-**False of:** constant-gain estimators, change-point learners, and learners that adjust their rate to volatility are outside the population because they forget; human learners adjusting learning rate to volatility (Behrens, Woolrich, Walton & Rushworth 2007[^recall-2026-10-30]) are the empirical neighbour.
+**False of:** constant-gain estimators, change-point learners, and discounted Beta-Bernoulli (Prop B.1F) are outside the population because their gain does not decay to zero.
 
-**Falsifier:** a count-accumulating learner whose edge credence tracks a drifting edge within $R_\Sigma$ indefinitely.
+**Falsifier:** an undiscounted Beta-Bernoulli learner whose edge credence stays within $R_\Sigma$ of a worst-case drifting edge indefinitely, with $\rho_\Sigma \gt 0$ and $R_\Sigma$ below the range of $\theta$. Benign drift is not one: an oscillation inside a band narrower than $R_\Sigma$ leaves a frozen estimate at the band's centre within tolerance forever, and the claim is about failing a worst-case threshold. The sentence refuted is "every agent eventually violates the threshold" (Forgetting as Prerequisite).
+
+**Instantiated:** not applicable.
+
+### Long-lived real learners whose update gain decays with accumulated experience lose the ability to track a changing world
+
+**Register:** descriptive — the theorem adopted for real systems (Findings: institutional rigidity, RL value-function staleness, scientific-paradigm lock-in and incumbent firms "all instantiate the same dynamic"; Working Notes).
+
+**Population:** real learners whose effective gain decays with accumulated evidence, under drift.
+
+**True of:** no checked instance; the incumbent-firm and institutional cases are illustrations.
+
+**False of:** human learners adjusting learning rate to volatility (Behrens, Woolrich, Walton & Rushworth 2007[^recall-2026-10-30]) are the empirical neighbour outside the population: their gain does not decay monotonically.
+
+**Falsifier:** a long-lived count-accumulating system, measured, whose step-level beliefs track a drifting environment within tolerance indefinitely; or evidence that a named real case (an incumbent firm, a paradigm) does not accumulate evidence in a gain-decaying way, which removes it from the population rather than refuting the theorem.
 
 **Instantiated:** no.
 
@@ -108,13 +122,13 @@ The schema is no longer purely hypothetical. The sector parameter for strategic 
 
 **Register:** formal — exact under premises (i)–(iv) (Prop B.1F, #deriv-edge-credence-dynamics); the reachable region for edges sharing one evidence stream is exact in #deriv-evidence-allocation-ceiling.
 
-**Population:** the four verified topologies under Beta-Bernoulli dynamics with discount $\lambda$, for the mismatch states $\boldsymbol\delta_c$ and $\delta_s$.
+**Population:** a single edge observed every step under Beta-Bernoulli dynamics with per-observation discount $\lambda$ (Prop B.1F), for the mismatch states $\boldsymbol\delta_c$ and $\delta_s$. For an edge observed with probability $\pi_i$ per step under per-observation discounting at the stationary count, each observation lands with gain $1 - \lambda$, the per-step rate is $\pi_i(1-\lambda)$, and the reachable region is $\rho_\Sigma \lt \pi_i R_\Sigma$ ( #deriv-evidence-allocation-ceiling, EA.2 and "Discount convention"); under per-time-step discounting the per-observation gain at stationarity is not $1 - \lambda$ and no closed form is derived. The other verified topologies (B.2–B.4, B.6, B.7) are stated without forgetting and enter only through that scaling.
 
 **True of:** the single edge (Prop B.1F): gain $1 - \lambda$ at the stationary count, trajectory guarantee from any count at or below it.
 
-**False of:** $\delta_{\text{strategic}}$, the credit-assigned mismatch, for which persistence is open; L1′ with an unobservable common cause, where the per-conditional decomposition is identifiability-obstructed (Prop B.7).
+**False of:** $\delta_{\text{strategic}}$, the credit-assigned mismatch, for which persistence is open; L1′ with an unobservable common cause, where the per-conditional decomposition is identifiability-obstructed (Prop B.7); an intermittently observed edge under per-time-step discounting, for which the stationary gain is not $1 - \lambda$.
 
-**Falsifier:** a simulated discounted Beta-Bernoulli recurrence whose measured per-observation gain at the stationary count differs from $1 - \lambda$. That check has been run and recorded (the F72 verification in `reviews/`), and it is the test that replaced the earlier ceiling at $R_\Sigma/2$.
+**Falsifier:** a simulated discounted Beta-Bernoulli recurrence, observed every step, whose measured per-observation gain at the stationary count differs from $1 - \lambda$; the sentence refuted is "$\alpha_\Sigma^{\text{ss}} = 1 - \lambda$" (Exponential forgetting). The check is recorded in `reviews/` (the F72 verification).
 
 **Instantiated:** no; the simulations are of the theory's own recurrence.
 

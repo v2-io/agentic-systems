@@ -582,7 +582,10 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 [`01-aat-core/src/deriv-convention-monotonicity.md`](01-aat-core/src/deriv-convention-monotonicity.md)
 
-#### Convention monotonicity is a one-sided guarantee
+#### Convention monotonicity holds rung by rung under named hypotheses
+
+**Search Log:** - 2026-10-30 (*intuition-only*): the three antecedents above were recalled from the receding-horizon and rollout literatures at the 2026-05-30 landing, not searched for; the derivations do not depend on them.
+- 2026-10-30 (*not searched*): the right-rung closure hypothesis (prefix-closure of the policy class, or state-wise optimality of the class optimum) was derived here and not searched for in the restricted-policy-class literature; a search for "optimal policy within a restricted policy class" and "non-Markov improvement over a policy library" would locate the nearest statements.
 
 ---
 
@@ -1243,9 +1246,8 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 ## Extraction warnings
 
-- [deriv-convention-monotonicity — Convention monotonicity is a one-sided guarantee] Missing field: **Brief:**
-- [deriv-convention-monotonicity — Convention monotonicity is a one-sided guarantee] Missing field: **Impact:**
-- [deriv-convention-monotonicity — Convention monotonicity is a one-sided guarantee] Missing field: **Novelty Claim:**
-- [deriv-convention-monotonicity — Convention monotonicity is a one-sided guarantee] Missing field: **Related Work:**
-- [deriv-convention-monotonicity — Convention monotonicity is a one-sided guarantee] Missing field: **Search Log:**
+- [deriv-convention-monotonicity — Convention monotonicity holds rung by rung under named hypotheses] Missing field: **Brief:**
+- [deriv-convention-monotonicity — Convention monotonicity holds rung by rung under named hypotheses] Missing field: **Impact:**
+- [deriv-convention-monotonicity — Convention monotonicity holds rung by rung under named hypotheses] Missing field: **Novelty Claim:**
+- [deriv-convention-monotonicity — Convention monotonicity holds rung by rung under named hypotheses] Missing field: **Related Work:**
 
