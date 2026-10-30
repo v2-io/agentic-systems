@@ -1,6 +1,6 @@
 # INTENT — the objectives tree
 
-Every piece of work in this effort feeds one key result (KR) below, and every agent at every depth, and every successor after compaction, knows which one. Work that feeds none is a red flag: the tree is stale, a finding is unrecorded, or the work has drifted. Say so to the lead; don't resolve it silently. The tree is set top-down *and* bottom-up: propose KRs and sub-objectives under the item you serve. This file stays a tree. Evidence lives in the artifacts it points to, and revisions are recorded in `LOG.md`.
+Every piece of work in this effort feeds one key result (KR) below, and every agent at every depth, and every successor after compaction, knows which one. Work that feeds none is a red flag: the tree is stale, a finding is unrecorded, or the work has drifted. Say so to the lead; don't resolve it silently. The tree is set top-down *and* bottom-up: propose KRs and sub-objectives under the item you serve. This file stays a tree. Evidence lives in the artifacts it points to. History lives in commit bodies and `CHANGELOG.md`. Nothing in this directory records finished work.
 
 ## Top intent
 
@@ -17,6 +17,7 @@ In service of *"TRUTH about agency … discovered, surfaced, truthified, truthfu
 - **KR1.1** An owner-level review names the theory's actual centre, its problems, and the most fruitful ones to address. Everything it inherits is verified. · *running* · `owner-review/`
 - **KR1.2** A purpose statement for ASF and for each volume: what question it answers, about which agents, and what checkable prediction it makes. Candidates go to Joseph side by side; he ratifies. · *waits on 1.1*
 - **KR1.3** Each body of results is placed on the arc: universal or one model among several, for which class of agents, what it claims is optimal, **and what would refute it**. · *waits on 1.1; inputs in `internal-surfaces/00-cross-surface-map.md` §2*
+  - **KR1.3a** Every segment declares its register: a fact about the formalism, a description of real agents, or a design or optimality claim. Any claim of the second or third kind names the real systems that meet its hypotheses, an instance, and a refuting observation. *Context:* "exact" means only that the proof is valid, and readers hear it as "true of agents". · *proposed by the owner review's explorers*
 
 ## O2 — The theory is correct and coherent
 
@@ -55,7 +56,7 @@ In service of *"TRUTH about agency … discovered, surfaced, truthified, truthfu
 
 | Who | KR | Writes to |
 |---|---|---|
-| Lead coordinator (Opus 5.5, session "asf-cleanup") | 5.4, plus coordination | `INTENT.md`, `LOG.md`, `HANDOFF.md`, `system/` |
+| Lead coordinator (Opus 5.5, session "asf-cleanup") | 5.4, plus coordination | `INTENT.md`, `HANDOFF.md`, `system/` |
 | Owner review (Fable) and its subagents | 1.1 | `owner-review/` |
 | Influx scout (Opus) and its subagents | 3.1 | `influx-scout/` |
 | F72 integrator (Opus) | 2.3, 3.3a | canon: the hard-ceiling carriers listed in verify-1 §7 |
@@ -67,4 +68,4 @@ Finished and on the line for follow-ups: the internal-surfaces mapper (KR3.2) an
 - **Briefing an agent:** name its KR and quote the top intent. Ask it to pass its KR down to any agent it launches.
 - **Writing an artifact:** put its KR at the top.
 - **After a compaction:** read this file, then `HANDOFF.md`.
-- **Revising the tree:** keep each KR to one line plus its status and where it lives, and log the revision in `LOG.md`.
+- **Revising the tree:** keep each KR to one line plus its status and where it lives. When a KR is met, its line goes, and the history goes into the commit body.

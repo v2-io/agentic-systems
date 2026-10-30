@@ -4,7 +4,7 @@ What only the lead knows: what it has actually read, what it holds only on anoth
 
 ## Resume
 
-Read `INTENT.md`, then this file, then the last entries of `LOG.md`. Joseph's own words are in `README.md`. The SendMessage handles for running agents live in the session, not here. If they're lost, the agents' directories are the record.
+Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. For history, read the commit bodies (`git log` on `msc/inside-out-2026-10/` and canon). The SendMessage handles for running agents live in the session, not here. If they're lost, the agents' directories are the record.
 
 ## Read-ledger
 
@@ -13,6 +13,7 @@ Read `INTENT.md`, then this file, then the last entries of `LOG.md`. Joseph's ow
 - *This effort*
   - `internal-surfaces/00-cross-surface-map.md`
   - `owner-review/history/{2026-03-04,2026-05,2026-06-10}.md`
+  - `spikes/spike-strategic-persistence-hard-ceiling-convention-2026-05-31-verify-1.md`. Its central gain claim was re-run by the lead.
 - *asf*
   - `PRACTICA.md`
   - `JOSEPH-TODO.md`
@@ -68,7 +69,7 @@ Read `INTENT.md`, then this file, then the last entries of `LOG.md`. Joseph's ow
 - **Running.** Read each agent's final documents whole before acting on anything it says.
   - owner review (KR1.1)
   - influx scout (KR3.1)
-  - F72 verifier (KR2.3)
+  - F72 integrator (KR2.3/3.3a): it commits but doesn't push; the lead reviews the diff, then pushes.
 - **Waiting on Joseph.** Two calls are his, because the first is private material and the second touches publication strategy.
   - `msc/joseph-working-notes.md` is gitignored but cited by `#def-eli-cohort` and the 03/04 OUTLINEs: commit, move, or drop the citations?
   - A7: whether to split 04-eli-core into a private repo.
@@ -77,16 +78,9 @@ Read `INTENT.md`, then this file, then the last entries of `LOG.md`. Joseph's ow
   2. Commission KR3.3a.
   3. Vivarium is the canary for KR3.1's coverage: did the scout find vivarium's theory without being told? Never put this in a brief.
 
-## System facts learned the hard way
-
-- The harness allows **20 concurrent subagents**, shared session-wide. Allocate slots by KR.
-- Forks can't spawn subagents.
-- Opus scouts reading the AISI cluster died on the "reasoning_extraction" safeguard, and their transcripts can't be resumed. A Sonnet replacement worked around it.
-- "report" anywhere in an artifact's filename turns the artifact into a chat report.
-- zsh doesn't word-split an unquoted variable. Build file lists with `find … -print0 | xargs -0`.
-
 ## The lead's known hazards
 
 - **Building on relay.** Agents' chat claims get adopted faster than their documents get read. Read first, then build.
 - **Intent bloat.** INTENT accretes evidence, credits and history. Joseph: *"It will get bloated and if it is not corrected immediately, it will be just yet another thing to integrate."* Correct it at the moment it bloats.
 - **Narrative regeneration.** Summaries written from memory drift from the record. That is why this file only points.
+- **Breadcrumbs.** History and finished items accumulate in working files because writing them feels safe. Joseph: *"It does [do harm]. That's what changelog is for."* Nothing in this directory records what is finished.

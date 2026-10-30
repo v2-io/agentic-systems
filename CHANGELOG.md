@@ -26,6 +26,21 @@ CHANGELOG carries the *narrative shape* of each cycle (what conventions changed,
 ---
 
 
+## 2026-10-30 — The in-place refactor opens
+
+Joseph set the goal: *"Complete "in-place" refactor of ASF-- meta, all artifacts, and theory itself"*, in service of truth about agency, beside `~/src/aat-v3/`'s from-scratch rebuild. The pre-effort snapshot is tag `pre-integration-2026-10-30` (asf `4ee2b895`, arch `9b4be9d`).
+
+- **Conventions adopted.** These are in `doc/sop/agents.sop.md` §"Active effort":
+  - **Objectives tree.** Every piece of work feeds a key result in `msc/inside-out-2026-10/INTENT.md`, set top-down and bottom-up. Work that feeds none is a drift signal.
+  - **Gates lifted.** Every gate that waits on Joseph is lifted, the audit-gold gate included.
+  - **Subagent documents.** Subagents write external documents, which their launchers read whole; nobody acts on a chat summary.
+  - **No breadcrumbs.** The effort's own files carry no breadcrumbs and no finished items.
+- **Mapped.**
+  - Material stranded inside asf, joined by slug: `msc/inside-out-2026-10/internal-surfaces/`.
+  - Three history readings of the theory's development, March–October: `owner-review/history/`.
+- **Refuted.** `#deriv-strategic-persistence-hard-ceiling`'s $\rho_\Sigma \lt R_\Sigma/2$ ceiling, held at `exact`, is an algebra error: the stationary gain under the stated recurrence is exactly $1-\lambda$. The May "convention" verdict (B) is rejected (`spikes/…-verify-1.md`). The canon landing follows separately.
+- **Fixed.** `core.hooksPath` pointed at a retired path, which left every hook inert.
+
 ## 2026-08-22 — impl-series status-tagging pass (audit 731548 §B-4), batch two: `impl-persistence-and-limits`, `impl-causal-access`, `impl-strategy-structure` — with the first audit-gold lift
 
 Three more chapter-ends aligned (`5f46328`, `ec30af5`, `1ddd5d9`), and the method changed on Joseph's direction: *before* any writing, one inventory agent per chapter drained the audit reports, the `AUDIT-WORKING` reflections (gold), spikes, and trackers against the chapter, and a fourth agent mined the AISI-responses corpus for distillations and his own lines; then a fork that had read the chapter whole wrote; then a different-substrate verifier (grok-4.6, refute posture, sources whole) — each returned approve-with-required-fixes, each having found a hole the writer had not, all applied and re-verified. What the inventories changed about the work: persistence's defect was less overclaim than **stale coverage** (the 05-13 impl ignored Corollary A.1S.1, the certificate voice, mood + the MG discharge, and the exact $\epsilon_{\max}$); causal-access's was three stale facts surviving the 05-31 rewrite plus a **coverage hole** (the chapter's exact new theorem absent from its own chapter-end); strategy-structure's was eight genuine overshoots and two under-claims, with the "unique broadly-available escape" item resolved by *carrying the definition* from `#der-causal-insufficiency-detection`, not softening. New content, each at the tier earned: the sum identity $\delta_{\text{sat}}+\delta_{\text{regret}} = V^{\min}-V_O(\pi_{\text{current}})$ (exact, with preconditions and the RHS's convention-invariance); the two-rung monotonicity with the regret reversal; policy-class relativity of the diagnostic at discussion grade with Result 5a's truth-relative and agent-relative halves kept apart; the separation-theorem bookend (ceiling vs floor); Lemma A.1N / A.1S.1 / adaptive reserve at the front of the persistence chapter-end. The verifiers' catches worth naming as patterns: a canon-cites-only-canon fix that replaced a paper name with a *false canon attribution* (wrapping's (C1)–(C3) are a different triple from the loop's); a Model-D "$P=0$" clause added to an exact segment without its $\alpha R \gt \rho$ gate; a Vol-4 result quoted via a miner's excerpt rather than read whole. One guard from the AISI miner applied: the "control budget = exploration budget" line is sealed pre-reset phrasing and was not re-imported — live ASF (Prop B.4) makes exploration a gating factor on $\alpha_\Sigma$.
