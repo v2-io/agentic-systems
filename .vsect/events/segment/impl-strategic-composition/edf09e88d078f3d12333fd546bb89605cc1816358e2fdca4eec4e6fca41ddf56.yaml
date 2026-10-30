@@ -1,0 +1,31 @@
+schema: vsect-event/0
+id: edf09e88d078f3d12333fd546bb89605cc1816358e2fdca4eec4e6fca41ddf56
+at: 2026-10-30T19:33:28Z
+store: asf
+act: revise
+about: segment:impl-strategic-composition
+atom: bb6fe00d50f96cf459a738382941bcd4b4b131cf7a7caeba40213eae7fe4d4b3
+actor:
+  name: lead-coordinator
+  role: adopter
+normalizer: vsect-norm/0
+change: unclassified
+declarations:
+  depends:
+  - deriv-strategic-composition
+  - der-agent-opacity
+  - result-adversarial-exponent-regimes
+  - obs-gated-tempo-advantage
+  - result-per-dimension-persistence
+  - hyp-symbiogenic-composition
+  - der-interaction-channel-classification
+  - der-team-persistence
+  - deriv-update-detection-latency
+  - deriv-critical-mass-composition
+  - result-contraction-template
+  stage: draft
+  status: discussion-grade
+  type: discussion
+from-version: 8f2b54da7142ab08f55498baea7375519a10926c4d3931a57ef132629287b683
+own-version: 68bf268f40bf56f0b767a9fe9dfccd6754d3194c1f566916d88132bb3594390d
+record: 01-aat-core/src/impl-strategic-composition.md

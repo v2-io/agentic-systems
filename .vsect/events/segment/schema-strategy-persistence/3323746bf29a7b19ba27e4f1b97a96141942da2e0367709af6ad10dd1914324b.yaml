@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 3323746bf29a7b19ba27e4f1b97a96141942da2e0367709af6ad10dd1914324b
+at: 2026-10-30T19:33:28Z
+store: asf
+act: review-finding
+about: segment:schema-strategy-persistence
+actor:
+  name: lead-coordinator
+  role: lead-coordinator
+normalizer: vsect-norm/0
+criterion: 'Lead reviewed the F72 landing diff whole (5e621256, 97179f6f) and re-ran the gain: stationary gain is exactly 1-lambda per Prop B.1F; the half-plane ceiling is gone and the true cap is Prop EA.1. Schema carriers checked: every (1-lambda)/(2-lambda) site now states 1-lambda.'
+finding: review:f72-hard-ceiling-verify-1#C2/finding
+outcome: answered
+revision: v:260e7c84

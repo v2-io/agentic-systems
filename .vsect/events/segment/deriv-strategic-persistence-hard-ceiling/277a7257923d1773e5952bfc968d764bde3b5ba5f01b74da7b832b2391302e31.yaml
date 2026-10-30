@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 277a7257923d1773e5952bfc968d764bde3b5ba5f01b74da7b832b2391302e31
+at: 2026-10-30T19:33:28Z
+store: asf
+act: review-finding
+about: segment:deriv-strategic-persistence-hard-ceiling
+actor:
+  name: lead-coordinator
+  role: lead-coordinator
+normalizer: vsect-norm/0
+criterion: 'Lead reviewed the F72 landing diff whole (5e621256, 97179f6f) and re-ran the gain: stationary gain is exactly 1-lambda per Prop B.1F; the half-plane ceiling is gone and the true cap is Prop EA.1. The superseding segment replaces the refuted Props C.1/C.2 (and the SEG/ALT1 convention claim) rather than softening them.'
+finding: review:f72-hard-ceiling-verify-1#C3/finding
+outcome: answered
+revision: segment:deriv-evidence-allocation-ceiling
