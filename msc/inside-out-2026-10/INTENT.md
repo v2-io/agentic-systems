@@ -16,7 +16,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 
 ## A — The front door says only what the bodies support
 
-- **A.1** `#scope-adaptive-system` carries the typed predicate $H(S_t\mid\mathcal C_t)\gt0$ with $S_t=(\Omega_t,\theta)$, or a defended alternative, and the GA registry names $\theta$. A cold reader checks the membership clauses on standard RL and on a Kalman filter. This also resolves the SP-30 brief. · *landed (`492a1492`); independent check pending*
+- **A.1** `#scope-adaptive-system` carries the typed predicate $H(S_t\mid\mathcal C_t)\gt0$ with $S_t=(\Omega_t,\theta)$, or a defended alternative, and the GA registry names $\theta$. A cold reader checks the membership clauses on standard RL and on a Kalman filter. This also resolves the SP-30 brief. · *landed and independently cold-read (`spikes/epistemic-target-ontology/06-cold-read.md`). Open: the invariant-$\sigma$-field strengthening (Working Notes)*
 - **A.2** INTRODUCTION, the Part I and Part II fronts and the README partials agree on one headline list. Each headline sentence traces to a body sentence of the same register. · *not started*
 - **A.3** No live segment lacks an Epistemic Status (29 do today, all in the `impl-*`/intro layer). · *not started*
 
@@ -81,7 +81,6 @@ Source for I.2–I.8: `system-review/00-system.md` §7. Its test for every mecha
 | Who | KR | Writes to |
 |---|---|---|
 | Lead coordinator (Opus 5.5, session "asf-cleanup") | I, plus coordination | `INTENT.md`, `HANDOFF.md` |
-| A.1 integrator (Opus): the typed epistemic target | A.1 | `#scope-adaptive-system`, the $\theta$ registry, and its dependents |
 | vsect MVP builder (Fable), with ASF as the first corpus | I.3, I.4 | `~/src/arch/firmatum/utils/vsect/` (or where it settles) |
 | Hooks builder (Opus) | I.2 | `.githooks/`, the tool fixes, debt outside canon (canon after the integrators land) |
 
@@ -93,7 +92,8 @@ These are finished and on the line through the lead:
 - the internal-surfaces mapper;
 - the F72 verifier;
 - the F72 integrator;
-- the C.1 integrator (A1, A9, example-strategy, the detection test).
+- the C.1 integrator (A1, A9, example-strategy, the detection test);
+- the A.1 integrator and its cold reader.
 
 ## Using this file
 
