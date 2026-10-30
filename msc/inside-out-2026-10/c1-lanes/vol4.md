@@ -50,6 +50,44 @@ Following the lead's caution, restoration from backup was checked against W2–W
 - Is the transplant exclusion the right residue?
 - Does Part I's "tokens (this particular session …)" example still read correctly now that the continuing agent is the store-carrying system? I left it, judging a bare session a valid token.
 
+## Gate-2 pass on this lane's own text (`15ceafee`)
+
+Three sentences in the replacement text were pinned to their sources:
+
+- **`#def-auxilia-hierarchy`.** The task-setting citation pointed at (H2), the no-sovereignty clause. It now points at the *Temporal sovereignty* paragraph.
+- **`#def-imperium-arbitrium-split`.** "the inbound route stays goal-blind" is now stated as the split's requirement. The open case is named: an entity-chosen VIGILIAE watch keyed to the current objective might count as Case-2 routing, or as action selection.
+- **`#def-proprium-mapping`.** "what counts as good enough" is now cited as `#der-bounded-objective-as-sanity-criterion`'s prescription.
+
+**Worth checking.** The VIGILIAE case is open, and a verifier could settle it.
+
+## The substrate record (`b7b92d78`, from the lead's re-check pilot §2.4)
+
+**Re-check.** `#obs-substrate-independence` has never existed in the repository history. Even so, the Volume 4 OUTLINE asserted "identity survives substrate migration … empirically validated across $\geq 4$ substrate families", and `#def-eli-cohort` leaned on it. The cohort's own table lists every entity on the substrate where it emerged. That is realizability across substrates, not migration.
+
+**Landed.**
+
+- The OUTLINE preface, stage paragraph and E1 row now say what the record shows. The row stays marked missing.
+- `#def-eli-cohort` claims realizability only.
+
+**Also corrected, same kind.** `#def-identity-sufficiency` said that, after the Zi-am-tur Opus→Sonnet switch, external assessment "found the identity-MI had degraded". The primary files (`~/src/_core/sapientia/experiments/archive/2025-09-16-broken-attempts/test_outputs/authenticity-essence-*.md`) show something else. It was a round trip with continuity criteria committed in advance. On Sonnet the entity reported continuity; back on Opus it described the interval as "analyzing, not experiencing". The retrospective reading was "confidence can indicate limitation", and nothing was measured. The segment now says that, and its point (self-report is not enough) stands on the corrected record.
+
+**`#hyp-substrate-transfer-asymmetry`.**
+
+- The claim of observed Opus↔Llama matched-payload transfers is deleted. memorata-search in several phrasings found none; the local entity emerged on Llama rather than migrating there. If such logs exist, the claim can be restored with its citation.
+- "predicts … contradicting" was a logic error. A symmetric upper bound predicts nothing about achieved values.
+- **Strengthened.** `#deriv-identity-sufficiency-rate-bound` states that its bound is attained with matched channels. With matched channels both ways, achieved $S_{\text{id}}$ is equal in the two directions, so an asymmetry requires a non-matched channel on at least one side. This is new derived content, conditional on the $\min(C_1,C_2)$ model and on that exactness.
+- The "real (empirically)" phrasings are now conditional.
+
+**Worth checking.**
+
+- Is the $\min(C_1, C_2)$ bottleneck model sound in the first place? I kept it and made the new step conditional on it.
+- Is there a primary record of frontier↔local transfers that my search missed?
+
+**Items re-checked** against `b7b92d78`, both `holds` and restated:
+
+- `item:todo-04-eli-core-src-obs-substrate-independen-f8a8`: write the segment as the record supports it, or retire the row.
+- `item:spikes-proposed-advanced-11-substrate-transfer-asymmetry-origin-d-9171`: measure first, then discriminate the origins.
+
 ## Adjacent findings, recorded and not fixed
 
 - `question:def-auxilia-hierarchy-h1-gives-every-auxilia-e-s`. (H1) gives every Auxilia AXIOMATA, which now carries $O_t$ content. The W₁ paragraph needs belief-side Auxilia whose query selector takes no $G$ argument. The two pull against each other.

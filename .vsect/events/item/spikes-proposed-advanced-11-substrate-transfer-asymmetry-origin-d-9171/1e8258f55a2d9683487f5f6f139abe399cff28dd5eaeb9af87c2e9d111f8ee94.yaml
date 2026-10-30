@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 1e8258f55a2d9683487f5f6f139abe399cff28dd5eaeb9af87c2e9d111f8ee94
+at: 2026-10-30T21:12:29Z
+store: asf
+act: recheck
+about: item:spikes-proposed-advanced-11-substrate-transfer-asymmetry-origin-d-9171
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 integrator)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: b7b92d78+dirty
+criterion: 'Checked at b7b92d78. The premise is stale: no recorded transfer shows the asymmetry, and the symmetric ceiling never contradicted it (an upper bound predicts nothing about achieved values). The segment now derives a localization: with matched channels both ways the achieved values are equal, so an asymmetry needs a non-matched channel on at least one side. The spike still has work, restated.'
+outcome: holds
+owner: unassigned
+restated: 'Substrate-transfer asymmetry, two halves. Empirical first: a matched pair of transfers in both directions scored on S_id with the cohort''s witnesses, instrumenting whether the encoding or the decoding side falls short of a matched channel; this decides whether there is anything to explain. Then, if an asymmetry is measured, discriminate the three candidate restrictions in #hyp-substrate-transfer-asymmetry (cross-substrate coordinate forcing; decompression cost; per-substrate kappa and A), or show no single one suffices.'

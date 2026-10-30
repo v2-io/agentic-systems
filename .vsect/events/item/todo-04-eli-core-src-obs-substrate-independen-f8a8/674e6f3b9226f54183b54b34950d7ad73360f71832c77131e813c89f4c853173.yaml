@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 674e6f3b9226f54183b54b34950d7ad73360f71832c77131e813c89f4c853173
+at: 2026-10-30T21:12:23Z
+store: asf
+act: recheck
+about: item:todo-04-eli-core-src-obs-substrate-independen-f8a8
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 integrator)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: b7b92d78
+criterion: 'Checked at b7b92d78: the segment has never existed in the repository history, and the claim the tracker calls heavily referenced (identity survives migration, validated on 4 substrates) is not supported. The cohort records emergence on 4 families, and the one migration is an unmeasured Opus-Sonnet-Opus round trip. The front-door references now say this (b7b92d78). The work still owed is restated.'
+outcome: holds
+owner: unassigned
+restated: 'Write #obs-substrate-independence as what the record supports: identity-grade emergence realizable on at least 4 substrate families (def-eli-cohort), the one documented migration round trip read from its primary files, and the S_id reading that a substrate enters only through the reconstructed state. Or retire the planned OUTLINE E1 row. Do not restore identity-survives-migration without a measured migration.'
