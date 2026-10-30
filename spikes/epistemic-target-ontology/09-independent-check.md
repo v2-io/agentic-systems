@@ -9,20 +9,26 @@
 Re-derived by hand, numbers reproduced by script:
 
 - **(b).** Given $\mathcal C_t$, $x_t$ and each $o_{t+j}$ are jointly Gaussian with cross-covariance $P_t (A^j)^\top C^\top$, and later noise is independent of $(x_t, \mathcal C_t)$. Zero cross-covariance for every $j \geq 1$ is independence from every finite block, hence from the stream. The one-step closed form is $\tfrac12 \log \det N_{\text{tot}} - \tfrac12 \log \det N$, with $N_{\text{tot}} = C A P_t A^\top C^\top + N$. For the scalar random walk, $P_\infty = (\sqrt5 - 1)/2$, the one-step part is $0.1346$ and the whole-future value is $\tfrac12 \log(P_\infty / P_s) = 0.1618$, where $1/P_s = 1/P_\infty + 1/(P_\infty + 1)$ (forward filter combined with the backward predictor).
-- **(c).** Membership by strict concavity; the $+\infty$ value by the singularity of joint and product on the graph of the frequency limit; the $(K-1)/(2n)$ rate. On the rate, Clarke–Barron gives the cumulative $I(\text{row}; X^n) = \tfrac{K-1}{2} \log n + O(1)$, which alone does not fix the increments. They are fixed because the increments $I(\text{row}; X_{n+1} \mid X^n)$ are non-increasing: by exchangeability, $H(X_{n+1} \mid X^n)$ is non-increasing. A monotone sequence whose partial sums are $\tfrac{K-1}{2} \log n + O(1)$ is asymptotic to $\tfrac{K-1}{2n}$, by comparing the block sums over $(n, \lambda n]$ and letting $\lambda \to 1$. The script shows the ratio to $(K-1)/(2n)$ at $0.98$ and $0.97$ by $n = 200$ for $K = 2, 3$.
+- **(c).** Membership by strict concavity; the $+\infty$ value by the singularity of joint and product on the graph of the frequency limit; the $(K-1)/(2n)$ rate. On the rate, Clarke–Barron gives the cumulative $I(\text{row}; X^n) = \tfrac{K-1}{2} \log n + c + o(1)$ with a constant $c$, which alone does not fix the increments. They are fixed because the increments $I(\text{row}; X_{n+1} \mid X^n)$ are non-increasing: by exchangeability, $H(X_{n+1} \mid X^n)$ is non-increasing. A monotone sequence whose partial sums are $\tfrac{K-1}{2} \log n + c + o(1)$ is asymptotic to $\tfrac{K-1}{2n}$, by comparing the block sums over $(n, \lambda n]$ and letting $\lambda \to 1$. The script shows the ratio to $(K-1)/(2n)$ at $0.98$ and $0.97$ by $n = 200$ for $K = 2, 3$.
 - **(h).** A reweighting by a density in $(\Omega_1, \theta)$ that is positive $\pi_0$-a.e. changes the law of $(S_t, \mathcal C_t)$ to an equivalent one and leaves the kernel of $F_t$ given $(S_t, \mathcal C_t)$ alone, so conditional independence transfers both ways.
 - **(h′).** All three support facts, the finite-block reduction, and the clock counterexample.
 - **The housing result.** Also the claim that moving an invariant coordinate between $\Omega_t$ and $\theta$ changes no mutual information: the reduced target is a sufficient statistic of the other.
 - **(a), (d), (e), (f).** Also (g) as stated for $\theta$.
 - **The (ii′) sentence.** Given $(\mathcal C_t, a_t)$, $S_t \to S_{t+1} \to o_{t+1}$ is Markov, so the one-step part is at most (ii′) at $t+1$. With $A = 0$ the converse fails.
 
-**Downstream use of membership in $t$ (07 §5).** I read every line of the 21 files that cite the slug. None of them takes membership uniformly in $t$ as a premise:
+**Downstream use of membership in $t$ (07 §5), bounded rather than closed.** What I did:
+
+- grepped every segment and NOTATION for the slug, $\mathcal S_\text{adaptive}$, "adaptive scope" and the old $H(\Omega_t \mid \mathcal C_t)$ form, and read each hit in context;
+- read the four `depends:` segments whole;
+- read the Formal Expression of `#result-mismatch-decomposition` and of `#scope-agency`, the scope block of `#example-kalman`, the setup of `#deriv-recursive-update`, and lines 17–36 of `#disc-framework-self-diagnostic`.
+
+Among the 21 files that cite the slug, none takes membership uniformly in $t$ as a premise:
 
 - `#result-mismatch-decomposition` step 1 says its identity does not use the scope.
 - The examples (`#example-kalman`, `#example-bandit`, `#example-strategy`) assert membership at every $t$ for their own worlds.
 - The rest cite the scope descriptively.
 
-I did not walk second-hop dependents.
+The search would miss a result that assumes uncertainty is nonzero throughout without naming any of those strings. `#def-agent-environment`'s Working Note at line 61 ("every downstream theorem may assume genuine uncertainty") suggests such phrasings may exist. I did not walk second-hop dependents.
 
 ## 2. The finding that changes the most: the two kinds of warrant are not state and law
 
@@ -61,7 +67,7 @@ $\theta$ is closed by construction, which is why the Discussion's chain-rule sen
 
 ## Appendix — check script
 
-`python3 -I` on this file's code reproduces every number above.
+`python3 -I` on this file's code reproduces every number above. On this machine numpy's `slogdet` prints spurious divide-by-zero warnings on stderr; the determinants it returns are finite and are the ones used.
 
 ```python
 import numpy as np
@@ -70,6 +76,9 @@ from scipy.special import digamma, gammaln
 P = 1.0
 for _ in range(200): P = (P + 1) / (P + 2)
 print("RW  P_inf=%.4f one-step=%.4f whole-future=%.4f" % (P, 0.5*np.log(1 + P/2), 0.5*np.log(P*(1/P + 1/(P+1)))))
+#     the same value from a 200-step block: I = 0.5 log det(Cov(o)) - 0.5 log det(Cov(o | x_t)), o_{t+j} = x_t + w-sum + v
+m = 200; J = np.arange(1, m + 1); Sx = np.minimum.outer(J, J) + np.eye(m)
+print("RW  200-step block determinant = %.4f" % (0.5*(np.linalg.slogdet(Sx + P)[1] - np.linalg.slogdet(Sx)[1])))
 # (2) Noise-free sign-flipping hidden state: x_{k+1} = -x_k, o_k = x_k + v_k, R = 1, known law, x_1 ~ N(0,1)
 for t in (1, 10, 100, 1000):
     Pt = 1/(1 + t)
@@ -99,6 +108,7 @@ Output:
 
 ```text
 RW  P_inf=0.6180 one-step=0.1346 whole-future=0.1618
+RW  200-step block determinant = 0.1618
 A=-1,Q=0  t=    1 one-step=0.202733 1/(2t)=0.500000  next-n info n=1e2,1e4,1e6: 1.966 4.259 6.561
 A=-1,Q=0  t=   10 one-step=0.043506 1/(2t)=0.050000  next-n info n=1e2,1e4,1e6: 1.156 3.407 5.709
 A=-1,Q=0  t=  100 one-step=0.004926 1/(2t)=0.005000  next-n info n=1e2,1e4,1e6: 0.344 2.303 4.600
