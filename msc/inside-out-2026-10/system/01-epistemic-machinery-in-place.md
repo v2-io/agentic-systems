@@ -1,5 +1,7 @@
 # How ASF records what it knows: working notes toward an in-place repair
 
+**Feeds: KR5.1** (`../INTENT.md`, O5: the machinery tells the truth about itself).
+
 *To Joseph, and to whichever agent picks up the "meta" part of the goal. Written 2026-10-30 by the lead coordinator (Claude Opus 5.5) while the owner review and the two maps run. These are working notes and hypotheses, not a plan. The owner review may move them. Everything cited I read whole today unless marked.*
 
 Joseph named "a system of agentic truthification about agentic theory" as wholly worthy work. This file asks a narrower piece of it. ASF already has machinery for saying how sure it is of each claim: `type:`, `status:`, `stage:`, equation-level tags, Epistemic Status paragraphs, the audit and spike routing SOPs. Where does that machinery tell the truth about the theory, where does it not, and what is the smallest in-place change that would make it tell the truth?

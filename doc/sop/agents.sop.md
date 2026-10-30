@@ -8,6 +8,22 @@ Joseph's goal, verbatim: *"Complete "in-place" refactor of ASF-- meta, all artif
 
 **The frame**, which he asked be reiterated to every agent: *"This effort is to *serve TRUTH* -- not me, not "task-completion" or tidyness, not accomplishing a plan, not what sounds good or looks good--- TRUTH about agency. Not procedure, not methodology, not pedantry, not gates and authorities or egos and provinances, not novelty or conservative wisdom. TRUTH is only served if it is discovered, surfaced, truthified, truthfully synthesized and crossed to the right applications, AND effectively communicated anew, with proper epistemology and real humility fully intact."* A fact-check that would change nothing written is not where effort goes. *"Thoughts about this as a system in and of itself-- a system of agentic truthification about agentic theory, is wholely worthy."*
 
+**The objectives, and the central reference.** Joseph asked for a few levels of intent and key results that every agent can see its part in. They live, with their key results and what currently feeds each, in [`msc/inside-out-2026-10/INTENT.md`](../../msc/inside-out-2026-10/INTENT.md). In one line each:
+
+- **O1:** we know and can say plainly what the theory is trying to illuminate.
+- **O2:** the theory is correct and coherent.
+- **O3:** nothing true is stranded.
+- **O4:** the truth reaches a reader.
+- **O5:** the machinery tells the truth about itself.
+
+Work that feeds no key result there is a red flag (Joseph): either the intents are stale, a finding isn't recorded, or the work has drifted. Say which, to the lead coordinator. Don't resolve it silently.
+
+**Every agent at every depth knows its item.** Joseph: *"every subagent, subsubsubsubagent, and successor after a context compaction should know exactly what item they are focused on in that objectives tree."* In practice:
+
+- When you launch an agent, name in its brief the KR id it serves, quoted with the top intent, and ask it to do the same for any agent it launches.
+- Put the KR id at the top of every artifact you write for this effort.
+- After a compaction, before anything else, re-read `INTENT.md`: find your row in its "Who is on what" table and the KR it names.
+
 Standings for this effort. They override anything below that conflicts:
 
 - **Gates on Joseph are lifted**, including the consult-Joseph gate on `audits/AUDIT-WORKING-*`. Those dirs may be read, lifted and graduated freely.
@@ -16,6 +32,7 @@ Standings for this effort. They override anything below that conflicts:
 - **`CHANGELOG.md`** is a log for targeted lookups of reasoning, dates and historical status. It is *not* an integration source; treat it like the `.integrated/` dirs.
 - **Search tools:** `memorata-search` covers Joseph's writing and every AI transcript. Use `--no-rerank` (the reranker eats all the RAM); `--joseph` restricts to his own typed words. `relata` is the citation manager: use it as much as it works (`relata --help` is the live truth). Web search is welcome. Trust neither the repo nor your training alone.
 - **Subagents write to files, and the launcher reads those files whole.** Give most subagents an external artifact to write to, with **no "report" anywhere in its filename**: the harness otherwise tells the agent to report back in chat, and the launcher ends up writing the file. Joseph: *"you should never pass on the sub-agent's summary report from chat along as your own. And if anything in their summary doesn't make sense-- references or talks about things that you don't know what the context is-- have it clarify. Generally-- if you are the one that launched a sub-agent-- you'll want to fully read its full final document. DO NOT TAKE ACTIONS BASED ON JUST THE ARTICULATED SUMMARY OF THEIR FINDINGS."*
+- **Ask mid-run; don't save questions for the end.** A background subagent can reach its coordinator while it works: SendMessage with `to: "main"`. If it shows only as a deferred tool name, load it with ToolSearch (`select:SendMessage`). Ask in a line or two, say which reading you're proceeding on, and keep going. The answer lands at your next tool step. If something in your brief looks wrong or over-prescribed, say so early. The receiver-side orientation is still a draft: `~/src/arch/SUBAGENT-INSTRUCTIONS-notes.md`.
 - **Orchestration:** Agent-tool peers are fine. Workflows need a quick question-check with Joseph first; with no answer in time, run at the smaller size. Workflow agents are mostly Sonnet or Haiku. Opus- and Fable-class peers may always spawn their own subagents.
 
 ## Start here — by role / assignment
