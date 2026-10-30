@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: c4d356e50a63274be8325021fc2449ff3d30600474693769f47dff9cf583f34d
+at: 2026-10-30T22:26:24Z
+store: asf
+act: revise
+about: segment:form-information-bottleneck
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 11e85702fb076cba51bab0990d192e1990325ceccd2ae7a29e76c400e2fb3947
+own-version: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+record: 01-aat-core/src/form-information-bottleneck.md

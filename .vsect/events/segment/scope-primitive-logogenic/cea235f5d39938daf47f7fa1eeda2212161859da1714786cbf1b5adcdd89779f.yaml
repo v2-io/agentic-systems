@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: cea235f5d39938daf47f7fa1eeda2212161859da1714786cbf1b5adcdd89779f
+at: 2026-10-30T22:26:23Z
+store: asf
+act: revise
+about: segment:scope-primitive-logogenic
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 22baf31a0ebe4155cca27d0e461724761a23e3f051efe1bed13132c8d5b4d2a8
+own-version: f8bbfb5a63caa1a0d08fcc4dadbb2bdee6293eb2c061eb2c1ffd2c7c877f1a9a
+record: 03-llm-core/src/scope-primitive-logogenic.md

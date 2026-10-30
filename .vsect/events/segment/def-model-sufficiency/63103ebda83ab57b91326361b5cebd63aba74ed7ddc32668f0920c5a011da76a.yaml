@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 63103ebda83ab57b91326361b5cebd63aba74ed7ddc32668f0920c5a011da76a
+at: 2026-10-30T22:26:22Z
+store: asf
+act: revise
+about: segment:def-model-sufficiency
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: cb0156177d2d2d215898316d7c7e1e6829188ccffc08bb3f458b93e9f5cd207f
+own-version: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a
+record: 01-aat-core/src/def-model-sufficiency.md

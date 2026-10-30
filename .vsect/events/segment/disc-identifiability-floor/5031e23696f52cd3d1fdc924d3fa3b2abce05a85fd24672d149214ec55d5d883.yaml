@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 5031e23696f52cd3d1fdc924d3fa3b2abce05a85fd24672d149214ec55d5d883
+at: 2026-10-30T22:26:23Z
+store: asf
+act: revise
+about: segment:disc-identifiability-floor
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 1f6e699697223844fa7ddeeee57e0cf93c7a4a9888d9abf4c0224116f5280bec
+own-version: 076ac631839110206c533b74e9704f1337e1b6050911685e5acf9b7c787c1440
+record: 01-aat-core/src/disc-identifiability-floor.md

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 6c582e51a59924f6cb2ad89cc6bbc5ea822bc3eb32c4e505aaccc15174e08f41
+at: 2026-10-30T22:26:22Z
+store: asf
+act: revise
+about: segment:def-pearl-causal-hierarchy
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: ff8c8d1fc2179029d43c7a3f25b9e102b6fba2f2c3313c486306adb86f5daf36
+own-version: 0b817be6e14dcb78d1de417b1b13a6a63cc41959e8b240931d3184c81e711668
+record: 01-aat-core/src/def-pearl-causal-hierarchy.md

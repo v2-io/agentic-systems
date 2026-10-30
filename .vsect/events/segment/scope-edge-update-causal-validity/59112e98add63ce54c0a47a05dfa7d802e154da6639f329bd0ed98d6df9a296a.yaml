@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 59112e98add63ce54c0a47a05dfa7d802e154da6639f329bd0ed98d6df9a296a
+at: 2026-10-30T22:26:23Z
+store: asf
+act: revise
+about: segment:scope-edge-update-causal-validity
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 2b2c9ccdae576c9a7b483b7b05bdfd867b1007db020ea24ab52cd087e05c8d58
+own-version: ba1d70b6fe950dd386c0be52c5cb22ccf2996d91c9fc8d3e1cbf23d5d7758b6f
+record: 01-aat-core/src/scope-edge-update-causal-validity.md

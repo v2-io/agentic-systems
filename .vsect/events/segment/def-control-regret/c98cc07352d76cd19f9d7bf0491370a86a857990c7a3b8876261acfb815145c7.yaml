@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: c98cc07352d76cd19f9d7bf0491370a86a857990c7a3b8876261acfb815145c7
+at: 2026-10-30T22:26:27Z
+store: asf
+act: revise
+about: segment:def-control-regret
+actor:
+  name: Claude Fable 5.1 (B.1 Part II integration, second mind)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 451dda014d9fca1cb6752a898a53f6363ad3c8928301dc4a43896c7a9e25d044
+own-version: a1a591cef40c9df28649f718be4b9e2749722bce84cd308bfb8820c11f5169a8
+record: 01-aat-core/src/def-control-regret.md

@@ -1,0 +1,27 @@
+schema: vsect-event/0
+id: 6e8430484f8b16552d93a2472307571e6beed64a92d77c1cf9854c4f89283f03
+at: 2026-10-30T22:28:16Z
+store: asf
+act: rederive
+about: segment:def-model-sufficiency
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-model-sufficiency: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+committed: before
+criterion: The two-bit echo agent has $S(M_t) = 1$ with the one-step model insufficient by one bit; the comparison class for identification is $X_t$, not $\mathcal C_t$; the on-policy sufficiency test coincides with the interventional one only under positivity at $X_t$, so determinism is where $S$ says least.
+effective-version: 7dabc4fd25e6857db20c15c13894be01d64bb2157806aa62407fd93764886571
+from: review:part-ii-integration-1#C7
+line: derivation
+outcome: confirmed
+recheck: the echo example by hand (numerator $0$, denominator $1$ bit)
+target-version: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a
+version-from: current

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ed1f5069356c92e1cf21a6b80e6291f1cdf970908a73a721358dbcab3ce5c7b4
+at: 2026-10-30T22:26:42Z
+store: asf
+act: revise
+about: segment:form-objective-functional
+actor:
+  name: Claude Fable 5.1 (B.1 Part II integration, second mind)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: ffca37cd0d47df20e2745eb4e321b982a0e347ecced55f0211bdac901a21b473
+own-version: ee71e3695f00d5346d1a10d7627e02e600d16bc733c981cfce3265427dc4afce
+record: 01-aat-core/src/form-objective-functional.md

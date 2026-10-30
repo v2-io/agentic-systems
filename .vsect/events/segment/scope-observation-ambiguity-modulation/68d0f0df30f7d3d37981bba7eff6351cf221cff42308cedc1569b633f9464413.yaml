@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 68d0f0df30f7d3d37981bba7eff6351cf221cff42308cedc1569b633f9464413
+at: 2026-10-30T22:26:23Z
+store: asf
+act: revise
+about: segment:scope-observation-ambiguity-modulation
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 73a53b9fe64a6a54d681b6dd2774598241f857b387eac34838d50a788ceb7569
+own-version: a0df31c23e0fc55966574736ed2f7b6a8cf13c03b87aedabba870230676c5952
+record: 03-llm-core/src/scope-observation-ambiguity-modulation.md
