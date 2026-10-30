@@ -28,19 +28,19 @@ The most critical evaluation of an agent is the trajectory of its mismatch signa
 
 To diagnose *why* an agent is exhibiting a specific mismatch trajectory, the following components of the AAT loop must be measured operationally:
 
-1. **Gain Calibration (Measuring $\eta^\ast$):**
+1. **Gain Calibration (Measuring $\eta^\ast$):**  
    Does the agent appropriately weight new observations against its existing model? This is measured via its **Response to Correction**.
    - *Healthy:* The agent checks the correction against its model, updates if warranted, and pushes back if the correction violates strong prior evidence.
    - *Sycophantic Drift:* The agent immediately agrees with any correction regardless of merit ($\eta^\ast \to 1$).
    - *Defensive Rigidity:* The agent resists all corrections regardless of evidence ($\eta^\ast \to 0$).
 
-2. **Tempo Adequacy (Measuring $\mathcal{T}$):**
+2. **Tempo Adequacy (Measuring $\mathcal{T}$):**  
    Can the agent keep up with the environment? This is measured via **Staleness Detection**. If certain categories of belief in the agent's externalized memory ($\mathcal E_{\text{ext}}$) are systematically outdated, that specific dimension has failed the persistence condition ($\mathcal T_k \lt \rho_k / \Vert\delta_{\text{critical},k}\Vert$).
 
-3. **Structural Adequacy (Measuring $\Sigma_t$ and $\mathcal{F}$):**
+3. **Structural Adequacy (Measuring $\Sigma_t$ and $\mathcal{F}$):**  
    Are the agent's learned strategies and frameworks effective? This is measured via **Persistent Structured Residuals**. If the agent consistently makes the exact same *type* of strategic error across different specific tasks, its underlying strategy DAG or prompting architecture has hit its fitness ceiling and requires structural adaptation.
 
-4. **Relational Depth (Measuring $U_{\text{src}}$):**
+4. **Relational Depth (Measuring $U_{\text{src}}$):**  
    For agents collaborating with humans or other agents, does the agent accurately predict the reliability of its interlocutors? An agent that treats a trusted domain expert and an anonymous web search result with the exact same epistemic weight is relationally miscalibrated.
 
 ## Discussion

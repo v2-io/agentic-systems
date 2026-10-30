@@ -79,9 +79,7 @@ $$\hat{\sigma}_w^2 = \text{Var}\left[\frac{s_{t+\Delta t} - (1 - \hat{\eta}^\ast
 
 i.e., the variance of the mismatch innovations (residuals after subtracting the expected correction). For AR(1) processes, this is the innovation variance $\hat{\rho}^2$ directly.
 
-**Note on estimation sequencing.** Both estimators require $\hat{\mathcal{T}}_t$ (or $\hat{\eta}^\ast$), estimated from $\hat{\nu}$ and $\hat{\eta}^\ast$.
-Estimate the gain and event rate first (from the agent's internal statistics and observation timing), then use these to extract the disturbance parameters from the mismatch trajectory.
-This sequential structure avoids circularity but introduces sensitivity: errors in $\hat{\mathcal{T}}$ propagate into $\hat\rho_{\det}$ and $\hat\sigma_w$.
+**Note on estimation sequencing.** Both estimators require $\hat{\mathcal{T}}_t$ (or $\hat{\eta}^\ast$), estimated from $\hat{\nu}$ and $\hat{\eta}^\ast$. Estimate the gain and event rate first (from the agent's internal statistics and observation timing), then use these to extract the disturbance parameters from the mismatch trajectory. This sequential structure avoids circularity but introduces sensitivity: errors in $\hat{\mathcal{T}}$ propagate into $\hat\rho_{\det}$ and $\hat\sigma_w$.
 
 **Local pause-window drift for #der-deliberation-cost ($\hat{\rho}_{\text{delib}}$):**
 

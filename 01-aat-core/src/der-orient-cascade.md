@@ -30,13 +30,13 @@ The *inferential force* at each step scales with the value-object continuation c
 
 *[Derived (orient-cascade, from information dependency between mismatch types)]*
 
-1. **Reduce $\delta_{\text{epistemic}}$** — understand reality.
+1. **Reduce $\delta_{\text{epistemic}}$** — understand reality.  
    Update $M_t$ via #def-mismatch-signal and #emp-update-gain. Prerequisite for all purposeful evaluation, because $M_t$ appears in every subsequent formula.
 
-2. **Evaluate $\delta_{\text{sat}}$** — is the goal achievable?
+2. **Evaluate $\delta_{\text{sat}}$** — is the goal achievable?  
    Compute $A_O(M_t; \Pi, N_h)$ using the updated $M_t$. Requires adequate $M_t$ to assess attainability ( #def-satisfaction-gap).
 
-3. **Evaluate $\delta_{\text{regret}}$** — is the policy suboptimal?
+3. **Evaluate $\delta_{\text{regret}}$** — is the policy suboptimal?  
    Compare $A_O$ to $V_O(M_t, \pi_{\text{current}}; N_h)$ ( #def-control-regret). This step applies regardless of $\delta_{\text{sat}}$'s sign — the 2×2 diagnostic ( #def-control-regret) requires both quantities to distinguish four cases:
    - $\delta_{\text{sat}} \leq 0$, $\delta_{\text{regret}} \approx 0$: **success** — goal attainable, policy near-optimal.
    - $\delta_{\text{sat}} \leq 0$, $\delta_{\text{regret}} \gg 0$: **strategy problem** — goal attainable, policy poor → revise $\Sigma_t$.

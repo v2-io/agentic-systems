@@ -71,7 +71,7 @@ Other AAT segments exhibit additive decompositions, but belong to different geom
 
 ### Lyapunov quadratic (`#deriv-sector-condition`)
 
-The sector-Lyapunov argument uses $V(\delta) = \tfrac{1}{2}\lVert\delta\rVert^2$, under which $\dot V$ decomposes additively.
+The sector-Lyapunov argument uses $V(\delta) = \tfrac{1}{2}\lVert\delta\rVert^2$, under which $\dot V$ decomposes additively.  
 **Reclassification:** The Lyapunov quadratic is the **Bregman divergence on a Euclidean potential** (squared-norm potential). It belongs to a *distinct* convex potential sub-family, not the negative-entropy exponential family. Furthermore, the coordinate is *chosen* (via a converse-Lyapunov existence argument) to match the sector form; it is not uniquely *forced* by an AAT-internally-motivated additivity axiom. It sits outside this meta-pattern.
 
 ### Variance-additive cases (AV)
@@ -80,7 +80,7 @@ Variance-additive statistics (like the Ornstein-Uhlenbeck steady state in `#hyp-
 
 ### IB Lagrangian (`#form-information-bottleneck`, `#disc-compression-operations`)
 
-The Information Bottleneck objective $T^\ast = \arg\min [I(X;T) - \beta \cdot I(T;Y)]$ uses an additive Lagrangian form.
+The Information Bottleneck objective $T^\ast = \arg\min [I(X;T) - \beta \cdot I(T;Y)]$ uses an additive Lagrangian form.  
 **Reclassification:** IB is a direct **application of the negative-entropy / reverse-KL Bregman geometry**. However, AAT *adopts* the IB formulation from external foundations (Tishby, Pereira & Bialek 1999) rather than re-deriving it from an AAT-internally-motivated uniqueness theorem. It is an adjacent family member: it shares the exact geometric object, but its axiomatic provenance is imported.
 
 ### Using the pattern as a diagnostic filter

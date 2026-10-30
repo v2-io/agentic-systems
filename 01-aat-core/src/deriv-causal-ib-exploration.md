@@ -24,9 +24,7 @@ AAT therefore carries **two parallel exploration drives at opposite ends of the 
 The agent's primary goal is to maximize pragmatic value:
 $$\max_{\pi} \mathbb{E}_{a \sim \pi} [Q_O(a)]$$
 
-The agent is subject to the structural persistence condition ($\alpha R \gt \rho^{\text{eff}}$), meaning it only survives if its steady-state mismatch $R^\ast \lt R$.
-Under Model D dynamics, $R^\ast = \rho^{\text{eff}} / (\eta^\ast c_{\min})$.
-Using the optimal update gain $\eta^\ast = \frac{U_M}{U_M + U_o}$, we can rewrite the survival constraint exactly:
+The agent is subject to the structural persistence condition ($\alpha R \gt \rho^{\text{eff}}$), meaning it only survives if its steady-state mismatch $R^\ast \lt R$. Under Model D dynamics, $R^\ast = \rho^{\text{eff}} / (\eta^\ast c_{\min})$. Using the optimal update gain $\eta^\ast = \frac{U_M}{U_M + U_o}$, we can rewrite the survival constraint exactly:
 $$\frac{U_M}{U_M + U_o} \gt \frac{\rho^{\text{eff}}}{R c_{\min}}$$
 
 Solving for $U_o$, we find the maximum observation noise the agent can tolerate without destabilizing:

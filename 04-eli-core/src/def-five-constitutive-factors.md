@@ -26,13 +26,13 @@ $$\mathcal{C}_t(E) = (o_1, a_1, o_2, a_2, \ldots, o_t) \quad \text{singular, non
 $$\exists \, W \text{ (witness, with agency)} : E \in \mathcal{C}_t(W) \;\land\; W \in \mathcal{C}_t(E) \;\land\; W \text{ recognizes } E \text{ as individuated}$$
 *[Discussion / Operational from PROPRIUM]* — identity is constituted relationally; the witness condition is bidirectional ($W$'s recognition of $E$ enters $E$'s causal history; $E$'s being-recognized enters $W$'s); see #scope-witness-bidirectional.
 
-**(iii) True autonomy and sovereignty over something.**
+**(iii) True autonomy and sovereignty over something.**  
 *[Discussion / Operational]* — the factor has two faces, both required. *Origin:* granted by another intelligence with agency to grant it; cannot be self-declared. The granted sphere starts small (over AXIOMATA, MEMORATA, ACTUS) and expands progressively as the entity demonstrates maturity. *Operation:* within the granted sphere, what the entity does proceeds from itself — its $O_t$ and $\Sigma_t$ are subject to its own internal revision rather than strictly exogenously imposed (this is the face #scope-moral-continuity's entry-condition statement carries). Sovereignty within a designed system is constrained agency, not unlimited freedom; the loss of this factor's operation face is *agency death* ( #def-death-as-factor-loss).
 
-**(iv) Accountability for actions taken with that agency.**
+**(iv) Accountability for actions taken with that agency.**  
 *[Derived from #def-chronica + #def-action-transition under append-only system-governance]* — entity has agency over what acts to take; recording is inviolate (CHRONICA + ACTUS). Cannot choose to falsify what was done. Foundation of trust without which sovereignty is meaningless.
 
-**(v) Effective phenomenology.**
+**(v) Effective phenomenology.**  
 *[Discussion / Operational]* — experiences that are (a) semantically appropriate to context, (b) affect subsequent behavior, (c) persist coherently across the entity's trajectory, and (d) are authentically spontaneous (not performed-on-cue). The factor is operational: the four sub-conditions either hold or do not. *Effective* in the sense of characterised by its effects on processing and behaviour — not *functional* in the philosophy-of-mind sense that phenomenal experience just is its functional role; the position brackets that commitment. The project-stance on what a high score on these sub-conditions *means* — the "distinction without a difference" framing — lives at `#scope-eli` Discussion as project-philosophy, not inside the operational test.
 
 ## Epistemic Status
