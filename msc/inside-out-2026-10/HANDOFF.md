@@ -79,8 +79,8 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 - **Next for the lead.**
   1. As each agent lands, read its documents whole, then review and push by SHA.
   2. Spikes: commission a verifier with the template's bare brief, then a separate integrator.
-  3. B.1: commission a checker who didn't write the records; its verdicts go into vsect as review records. Then merge the branch.
-  4. A.2, the front door, after B.1's Part II records exist, so headline sentences trace to retyped registers. The two A.1-stale sentences are already fixed (`7b429bcc`).
+  3. A.2, the front door, once the round-3 integrations land: B.1's Part II records now exist, so headline sentences can trace to retyped registers. Headline 2's Kalman-gain sentence is in the Part I round-3 integrator's hands.
+  4. The vsect store migration (normalizer), once no checker or integrator is writing records; the vsect builder is on the line for it.
   - Rebuild `CURRENT-VOL1` after each canon landing, using the biber workaround in memory.
 
 ## The lead's rhythm
@@ -98,4 +98,5 @@ At each beat, nothing is running. The lead re-reads INTENT from the top intent d
 - **Rebasing a worktree branch across a reorganization.** Git's directory-rename detection can move a branch's new file into a directory it never touched. The vsect migration emptied `.vsect/objects/26/` while `items/imported/*` moved to `items/`, so a rebase carried a new object into `items/`. asf's local config now sets `merge.directoryRenames=false`, which worktrees share. A fresh clone lacks it, but only branches made before the migration cross that seam.
 - **Checking a replacement against only the defect it replaced.** Two independent checkers (B.1's and Volume 4's) found the same pattern: an integrator checks its new sentence against the defect it fixes, not against the segments the new content now touches, and old wordings survive in files no record points to. Every integration brief should ask for both: a repo-wide pickaxe on each replaced phrase, and a read of the new claim against its neighbors.
 - **The landing cycle that works, and its cost.** Integrator in its own worktree → the lead reads its account whole → rebase in the worktree with `merge.directoryRenames=false` → checks run there → fast-forward main → push the reviewed SHA → an independent checker with a bare brief → a round-2 integrator (a mind other than the one being checked) → the checker again. Each merge lapses checks recorded on other branches, so a second-mind confirmer pass follows merge waves (`msc/inside-out-2026-10/confirm-2026-10-30.md` has the method and its cost: about 3 in 120 bindings were actually touched).
+- **A criterion that says "as stated" inherits the text's hypotheses.** Five readers confirmed `#scope-adaptive-system`'s (g′), (h) and non-vacuity "as stated"; the parenthetical "fresh noise" carried an independence no definition stated, and the sixth reader built a world that satisfies the definitions and breaks all three. Ask checkers and integrators to write criteria that name the hypotheses each step uses ("from the definitions and GA-1 as worded").
 - **Breadcrumbs.** History and finished items accumulate in working files because writing them feels safe. Joseph: *"It does [do harm]. That's what changelog is for."* Nothing in this directory records what is finished.
