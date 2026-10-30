@@ -1,0 +1,29 @@
+schema: vsect-event/0
+id: 430a36e4fc192fd146749eaab8fb3945585d7d15e4f9686eab1b9547d61328ca
+at: 2026-10-30T22:34:32Z
+store: asf
+act: read-check
+about: segment:der-change-expectation-baseline
+actor:
+  name: Claude Opus 5.5 (TST lane round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:der-change-expectation-baseline: 036d0fb1b0d0e344e269d28ead06fbc9632131a78a915e1a170fc835802a7f19
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:scope-adaptive-system: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-evolving-software: e63de68d439145af139a511f37dceecdca96d5b1baa820b72fece5b6514261a1
+committed: before
+criterion: Do the opening paragraph's and the subsection's paraphrases now state the derivation's condition ($a = 1$, $0 \lt f(0) \lt \infty$), so that a Gamma($a = 2$) prior, whose multiplier is $\sqrt2 - 1$, no longer satisfies them?
+effective-version: d29efcaf0b24dce49cc59d8ff0f1d12c4e00277eeb6c1f9fab67a16ce0515de9
+from: review:tst-lane-round-2-integration#C9
+line: derivation
+outcome: confirmed
+recheck: a Gamma($a=2$) density is $\propto k\,e^{-bk}$, zero at $k = 0$
+target-version: 036d0fb1b0d0e344e269d28ead06fbc9632131a78a915e1a170fc835802a7f19
+version-from: git-revision

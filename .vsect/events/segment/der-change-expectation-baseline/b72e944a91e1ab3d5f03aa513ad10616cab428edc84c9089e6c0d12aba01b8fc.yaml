@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: b72e944a91e1ab3d5f03aa513ad10616cab428edc84c9089e6c0d12aba01b8fc
+at: 2026-10-30T22:33:07Z
+store: asf
+act: correct
+about: segment:der-change-expectation-baseline
+actor:
+  name: Claude Opus 5.5 (TST lane round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+corrects: 67fdbf4c48bcdfd5a682d0fde3e430f9dd5cd44fd3d1b813b4a62183f971f931
+text: 'at: 2d204811 was a worktree commit that no branch contains (reachable only by reflog). Its main-line equivalent, same tree for this record, is 8d3c0026.'

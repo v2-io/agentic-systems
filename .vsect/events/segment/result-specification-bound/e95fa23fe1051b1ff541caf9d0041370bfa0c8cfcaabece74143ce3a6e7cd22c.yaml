@@ -1,0 +1,30 @@
+schema: vsect-event/0
+id: e95fa23fe1051b1ff541caf9d0041370bfa0c8cfcaabece74143ce3a6e7cd22c
+at: 2026-10-30T22:34:31Z
+store: asf
+act: rederive
+about: segment:result-specification-bound
+actor:
+  name: Claude Opus 5.5 (TST lane round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-feature: eefffd509dd084cb6773f2591ba53127c3063f51de688f5a5ccd0a081273e7c6
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:result-specification-bound: 6ed4faaaed08cdcaf7309f72633c8578eff49c066a837596ffa2d1491088f2fb
+  segment:scope-adaptive-system: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-evolving-software: e63de68d439145af139a511f37dceecdca96d5b1baa820b72fece5b6514261a1
+committed: before
+criterion: From $\text{LOC} = C E^{1/3} t^{4/3}$ and Putnam's gradient constraint $E = \lvert\nabla D\rvert t^3$, is $t_{\min} = (\text{LOC}/(C\lvert\nabla D\rvert^{1/3}))^{3/7}$, does it reproduce his example (1.81 years), and does $t \ge \tau$ for all $E$ force $E \le (\text{LOC}/C)^3\tau^{-4}$?
+effective-version: dd074fa50a239d0edfad37ede6994608e2cec71f235d564fb13e9b3dd7128f80
+from: review:tst-lane-round-2-integration#C6
+line: derivation
+outcome: confirmed
+recheck: substitute; $(98475/(10040 \cdot 15^{1/3}))^{3/7}$; solve $(\text{LOC}/C)^{3/4}E^{-1/4} \ge \tau$ for $E$
+target-version: 6ed4faaaed08cdcaf7309f72633c8578eff49c066a837596ffa2d1491088f2fb
+version-from: git-revision

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 013ba8dbde74c878257c2c097ea0df264932a54f2698b8ad7d01710b29d6c05b
+at: 2026-10-30T22:33:07Z
+store: asf
+act: correct
+about: segment:def-causal-information-yield
+actor:
+  name: Claude Opus 5.5 (TST lane round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+corrects: 5e1f88db778b865b32f6477e9c17ffc567d405acb47378ff007289ff9ba6cfdc
+text: 'at: 60162347 was a worktree commit that no branch contains (reachable only by reflog). Its main-line equivalent, same tree for this record, is c374794a; the recheck''s git show de218fb0^ is 055f2803^.'

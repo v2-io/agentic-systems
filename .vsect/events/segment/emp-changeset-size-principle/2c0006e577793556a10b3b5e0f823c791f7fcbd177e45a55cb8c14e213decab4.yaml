@@ -1,0 +1,33 @@
+schema: vsect-event/0
+id: 2c0006e577793556a10b3b5e0f823c791f7fcbd177e45a55cb8c14e213decab4
+at: 2026-10-30T22:34:30Z
+store: asf
+act: run
+about: segment:emp-changeset-size-principle
+actor:
+  name: Claude Opus 5.5 (TST lane round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-atomic-changeset: 42e9bb3fb6ebff2299c1204253d1665f549db70d3bd0d3181b8a8b0ce760e0a0
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-comprehension-time: b0db6cfd95109646952ebfd76d90b551d3d512240a2ad5f91015b6cbbe1e0aec
+  segment:def-feature: eefffd509dd084cb6773f2591ba53127c3063f51de688f5a5ccd0a081273e7c6
+  segment:def-implementation-time: 978d42091a677b509a07934ff3a8cbf1717dd62d9d7d4f17cce6f2740baae427
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:emp-changeset-size-principle: ce8b8ab95f0b6269ccc6524bd5a1ecb1a7e3f760fe3a4d5398151d6c24366fa8
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:scope-adaptive-system: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-evolving-software: e63de68d439145af139a511f37dceecdca96d5b1baa820b72fece5b6514261a1
+committed: before
+criterion: Does the slope of $\log T$ on $\log(1+L)$ stay below 1 window-free (inside the working component, every bootstrap interval below 1), and after subtracting the smallest bin's working time as overhead, does about thirteen times the lines bring 2.8 times the time in obsidian-linter and 1.6 times in ink?
+effective-version: fb86d9cae8c1fc277c6c0178ffce2a928337fddec8090e065600f51e0cc8309f
+from: review:tst-lane-round-2-integration#C4
+line: measurement
+outcome: confirmed
+recheck: '`elapsed_time.py` sections (5) and (8)'
+target-version: ce8b8ab95f0b6269ccc6524bd5a1ecb1a7e3f760fe3a4d5398151d6c24366fa8
+version-from: git-revision

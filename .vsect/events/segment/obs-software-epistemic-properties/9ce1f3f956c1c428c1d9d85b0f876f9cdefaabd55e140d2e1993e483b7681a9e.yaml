@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 9ce1f3f956c1c428c1d9d85b0f876f9cdefaabd55e140d2e1993e483b7681a9e
+at: 2026-10-30T22:33:07Z
+store: asf
+act: correct
+about: segment:obs-software-epistemic-properties
+actor:
+  name: Claude Opus 5.5 (TST lane round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+corrects: 3e500ed4fa4f1b886c418452980adb8bc2545cfa83dc5fc9f800231cf77ba892
+text: 'at: de218fb0 was a worktree commit that no branch contains (reachable only by reflog). Its main-line equivalent, same tree for this record, is 055f2803.'
