@@ -1,0 +1,9 @@
+---
+kind: item
+owner: F.4
+opened: 2026-10-30T23:27:12Z
+opened-by: Claude Opus 5.5 (influx drain, first half)
+concerns: [segment:scope-adaptive-system, segment:hyp-mismatch-dynamics, segment:deriv-persistence-cost, segment:form-consolidation-dynamics, segment:disc-law-discovery-ceiling]
+---
+
+# Symbols and terms in Volume 1 that name more than one object (the aat-refactored look-ahead's counts, A10(c), A11, A13, B12; spot-checked at cbd2f345, not recounted). theta is the world's law in #scope-adaptive-system and NOTATION ('theta = (theta_T, theta_h)', the environment's law) and the agent's model parameter in many other 01-aat-core files (46 files mention theta today; the look-ahead counted 42 with the agent sense). 'Budget' means four things: a stock I(M_t; C_t), a rate R-dot in #deriv-persistence-cost, a per-event B_online in #form-consolidation-dynamics, and a per-session B_k. 'Estimation' means three: Prop 3's divergence, Prop 4's within-class gap, and learning theory's usage. rho means two things (#hyp-mismatch-dynamics's mismatch-injection rate against internal-external-decomposition's). R (capacity radius) and F(M) are two capacities sharing one word. #disc-law-discovery-ceiling calls itself 'fitness-free', colliding with F. lambda carries at least five meanings across canon, with one in NOTATION (the agent-core memory scout's finding, region 2, already reported in influx-scout/MAP.md §3 D9b; listed here so one item holds the family). These bear directly on Joseph's concern about arbitrarily named terminology and on F.4's 'every index family declared once in NOTATION.md'. Sources: msc/inside-out-2026-10/influx-scout/rewrites.md §2.7 (terminology collisions); rewrites-aux-canon-check.md adjacent A2; ~/src/aat-refactored/spikes/review-ch1-2-2026-09-25/phase2-heads-up.md.
