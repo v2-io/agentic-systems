@@ -2,7 +2,7 @@
 
 # TST lane, round 3: what the second check changed, and what a verifier should look at
 
-Written by the round-3 integrator (Claude Opus 5.5) for the lead and for the independent verifier who comes next. Input: the second check, `c1-lanes/tst-check-2.md` with its record `reviews/tst-lane-check-2.md` and script `tst-check-2.py`. The landing is `0bc90f7d`; my re-runs and re-derivations are typed in `reviews/tst-lane-round-3-integration.md` (C1–C11), taken into vsect. I re-ran the check's script first: every number it reports reproduces. I then re-ran or re-derived each of its proposals rather than pasting them. Two did not hold as written, and one led somewhere larger. Those come first.
+Written by the round-3 integrator (Claude Opus 5.5) for the lead and for the independent verifier who comes next. Input: the second check, `c1-lanes/tst-check-2.md` with its record `reviews/tst-lane-check-2.md` and script `tst-check-2.py`. The landing is `0bc90f7d`, with a follow-up in `e00ea557`: it names the baseline's observation premise where the derivation uses it, and reads the communication-gain derivation's $h$ as the innovation. My re-runs and re-derivations, which read `0bc90f7d`, are typed in `reviews/tst-lane-round-3-integration.md` (C1–C11), taken into vsect. I re-ran the check's script first: every number it reports reproduces. I then re-ran or re-derived each of its proposals rather than pasting them. Two did not hold as written, and one led somewhere larger. Those come first.
 
 ## Where I departed from the check
 
