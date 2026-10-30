@@ -63,6 +63,9 @@ declared_fields: [type, status, stage]
 planned:
   find: ["0*/OUTLINE.md"]
   cell: missing
+# Items name their owner by KR id (the objectives tree maps KRs to agents; agent names go stale).
+# An owner that looks like a KR id must be one INTENT currently carries.
+owners_from: msc/inside-out-2026-10/INTENT.md
 lines:
   derivation: [drafted, premises-checked, independently-rederived]
   simulation: [prediction-committed, run-once, swept, reproduced-by-another]
