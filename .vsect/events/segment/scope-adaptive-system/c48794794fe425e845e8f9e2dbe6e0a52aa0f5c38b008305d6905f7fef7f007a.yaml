@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: c48794794fe425e845e8f9e2dbe6e0a52aa0f5c38b008305d6905f7fef7f007a
+at: 2026-10-30T22:08:56Z
+store: asf
+act: rederive
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 check-4 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:scope-adaptive-system: a8958128332dad2fc382f7b12fec972b1bbfd011be39babc2c09708d5b0ed205
+committed: after
+criterion: 'Epistemic Status: the component counterexample ($w$ invariant standard normal seen through unit noise, $z_1 = w$, $z_k = 0$ after): $I(z_1; F_1 \mid \mathcal C_1) = \infty$ while $z$''s one-step parts sum to $\tfrac12 \log \tfrac32$'
+effective-version: 67d4bb4c1bbe5e37c70e6c286674fd4ebb5c1d8349c0439ab37643e86b313baa
+from: review:scope-adaptive-system-integration-4#C4
+line: derivation
+outcome: confirmed
+recheck: 10 §2; closed form
+target-version: a8958128332dad2fc382f7b12fec972b1bbfd011be39babc2c09708d5b0ed205
+version-from: git-revision

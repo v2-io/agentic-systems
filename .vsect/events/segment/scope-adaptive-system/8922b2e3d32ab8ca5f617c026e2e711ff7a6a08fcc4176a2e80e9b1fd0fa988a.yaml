@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: 8922b2e3d32ab8ca5f617c026e2e711ff7a6a08fcc4176a2e80e9b1fd0fa988a
+at: 2026-10-30T22:08:56Z
+store: asf
+act: rederive
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 check-4 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:scope-adaptive-system: a8958128332dad2fc382f7b12fec972b1bbfd011be39babc2c09708d5b0ed205
+committed: after
+criterion: 'Item (g): the law-part statement; the whole-target bound $I(S_s; F_s \mid \mathcal C_s) \leq I(S_t; F_s \mid \mathcal C_s) + \sum_{k \geq s} r_k$ and its consequence (out at $t$ with no renewal implies out later); the clocked fresh-state example showing leaving need not be final otherwise'
+effective-version: 67d4bb4c1bbe5e37c70e6c286674fd4ebb5c1d8349c0439ab37643e86b313baa
+from: review:scope-adaptive-system-integration-4#C3
+line: derivation
+outcome: confirmed
+recheck: 10 §1 and §4 item 1; the clocked example worked by hand, not in the script
+target-version: a8958128332dad2fc382f7b12fec972b1bbfd011be39babc2c09708d5b0ed205
+version-from: git-revision

@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: 88e2f443427cb70ec8a17c9a6dcad484a5707a8dc610727d701123f3519f432a
+at: 2026-10-30T22:08:55Z
+store: asf
+act: rederive
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 check-4 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:scope-adaptive-system: a8958128332dad2fc382f7b12fec972b1bbfd011be39babc2c09708d5b0ed205
+committed: after
+criterion: Item (g′), linear-Gaussian renewal $r_k = \tfrac12 \log\det(I + C A \tilde P_k A^\top C^\top N^{-1})$ with $\tilde P$ the filter restarted at $t$ from zero; scalar random walk renewal rising to $0.135$ and $\sum_k (u_k - r_k) = 0.162$
+effective-version: 67d4bb4c1bbe5e37c70e6c286674fd4ebb5c1d8349c0439ab37643e86b313baa
+from: review:scope-adaptive-system-integration-4#C2
+line: derivation
+outcome: confirmed
+recheck: 10 §1; formula against the direct conditional MI from the joint covariance, $1.4 \times 10^{-15}$ (2-D) and $8.4 \times 10^{-8}$ (3-D)
+target-version: a8958128332dad2fc382f7b12fec972b1bbfd011be39babc2c09708d5b0ed205
+version-from: git-revision
