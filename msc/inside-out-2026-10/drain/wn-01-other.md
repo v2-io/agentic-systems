@@ -213,7 +213,11 @@ The live correctness findings on this segment sit in its gold Off-ramp (gold-lif
 #### `scope-adaptive-system` (A.1 lane live; these notes were written by it today)
 
 - [735] "Reasoning trail: `spikes/epistemic-target-ontology/` …" — **guard** (pointer list).
-- [736] "**What pins the physical housing.**", [737] "**Making law learning declaration-robust (the strengthening to spike).**", [738] "**Compute-relative extension.**", [739] "**Four-term refinement of the mismatch decomposition**" — **in flight**: open items the A.1 lane wrote today. None has a ledger item yet (searched `housing`, `tail`, `four-term`, `bounded-inference`), though INTENT A.1 says the tail-$\sigma$-field strengthening is in vsect. Raised with the lead rather than filed, so the lane that owns the reasoning files them. [737]'s regression guard on which $\sigma$-field is a **guard**.
+- [736] "**What pins the physical housing.**" — **owed → item:adaptive-scope-what-pins-the-physical-housing** (A.1).
+- [737] "**Making law learning declaration-robust (the strengthening to spike).**" — **owed → item:adaptive-scope-declaration-robust-law-learning-tail-rule** (A.1), which carries the note's tail-vs-invariant $\sigma$-field guard; the continuous-space case is question:does-adaptive-scope-membership-depend-on-pi-0-on. INTENT's A.1 row had said this one was already in vsect; it was not (the lead has corrected INTENT).
+- [738] "**Compute-relative extension.**" — **owed → item:adaptive-scope-compute-relative-extension** (A.1), citing the 193847 gem adjudication B2 it succeeds.
+- [739] "**Four-term refinement of the mismatch decomposition**" — **owed → item:four-term-mismatch-decomposition-refinement** (C.4), carrying the block's note that its checker should not have read spike §6.
+- These four were first marked in flight; the A.1 round-5 integrator has finished, so the lead asked for them to be filed. The block's opening pointer [735] and [737]'s $\sigma$-field guard stay as **guards**.
 - [740] "**The glyph $\theta$.**" — **joined item:influx-part-i-symbol-and-term-collisions** (F.4; it already names $\theta$).
 
 #### `scope-agency`, `scope-agent-identity` (Volume 4 lane live on the second)
