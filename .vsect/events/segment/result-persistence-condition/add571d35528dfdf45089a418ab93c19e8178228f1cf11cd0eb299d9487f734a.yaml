@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: add571d35528dfdf45089a418ab93c19e8178228f1cf11cd0eb299d9487f734a
+at: 2026-10-30T23:26:03Z
+store: asf
+act: revise
+about: segment:result-persistence-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-3 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 402e4da3779a41fa97e43cf5c24dfd4230ed54674f2914d0d4e5e6a3bdb5e18b
+own-version: 382bfbdfce370119cb7f41c8161baf42fa9415a28646b553fbed7f3a9641fce4
+record: 01-aat-core/src/result-persistence-condition.md
