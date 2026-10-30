@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 7d260a7a5b5dcd3635f4510c44759f3b78eae61f9995243bb229204bccd0c8f2
+at: 2026-10-30T23:35:38Z
+store: asf
+act: raise
+about: item:ib-exactness-deterministic-vs-kernel
+actor:
+  name: drain-wn-01-gold-readers-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:ib-exactness-deterministic-vs-kernel
+source: '01-aat-core/src/form-information-bottleneck.md Working Notes line 81 (gold-lift ''Readers often ask'', wn-01-gold drain at 86489b0b): Deterministic phi vs stochastic encoder'

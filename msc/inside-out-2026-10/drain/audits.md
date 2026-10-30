@@ -63,6 +63,42 @@ Read whole: the FINAL, `00-running-outline.md`, reflections 01–11. Read by sec
 | Active inference "recoverable under three restrictions" (aux 00) | **LEDGER** item:influx-active-inference-four-strengths (C.4). README partial and `.zenodo.json` fixed in 7b8ae8c6; INTRODUCTION with the Part I integrator. |
 | NOTATION GA-5 still live; `#example-kalman` off-by-one | influx drain (aux). |
 
+The genericity residue became **ADD** item:structural-adaptation-genericity-bridge (C.4): attempt the sketch's three bridge conditions now that Prop A.1S-τ times the hand-off, restate the sketch's stale quote, and state the grow / move / fail trilemma whichever way it lands.
+
+### `AUDIT-WORKING-374162/` (Claude Fable 5, 2026-07-20; quiz walk, Part I and Part II Ch.1–2)
+
+Read whole: `00-running-outline.md`, reflections 09 and 10, verifications 03, 04, 08, 10 (substantive sections). Read by search: reflections 01–04 and 08, verifications 01, 02, 09, and `00-initial-predictions.md`. Not read: the quiz question and answer files themselves (inventoried, not graded).
+
+| Source item | Disposition |
+|---|---|
+| The quiz corpus as a whole | **ADD** item:comprehension-quiz-corpus-374162 (H.3): the only comprehension instrument the project has; re-key against today's canon; four open answer-key defects; Part II Ch.3 onward unquizzed; not to be lifted into Working Notes. |
+| Batch 08 genericity contradiction | **IN** for bodies; residue item:structural-adaptation-genericity-bridge. |
+| Batch 08 verification: $\sqrt{1-r^2}$ | **DEFECT** item:variational-sector-sqrt-1-r2-undischarged. The running outline's guess that a citation to `#deriv-fisher-whitened-update-rule` closes it is wrong at HEAD: no such factor appears there either (grep). |
+| Batch 04 reflection: `emp-update-gain` depends and `\Vert` | **DEFECT** item:emp-update-gain-depends-render-type. |
+| Batch 03 reflection: the cycle intro's gain status ("robust qualitative … any rational adaptive process must approximate") | Added to item:emp-update-gain-depends-render-type. |
+| Verifications 03 and 04: the three-way discriminator and the gain-reset signature are not in canon | Added to item:todo-floor-routing-diagnostic-segment-final-f-a963 (G.2), with the verifier's agent-versus-modeler caution. |
+| Batch 07 (filed): `#impl-persistence-and-limits` pre-correction loop-interventionality claim | **IN** (`:85` now gates identification on (C1)–(C3)). |
+| Batch 09: whether the three certificate obstructions exhaust | **ADD** question:stability-certificate-obstructions-exhaustive. |
+| Batch 09 verification: the `[^bg2-2026-05-21]` unverified Undermind citations | not re-checked by me; the working-dirs map §7 reports them still present in `#disc-identifiability-floor`, `#disc-dynamic-regime-axis` and `#deriv-regime-marginal-indistinguishability`. Owner F.3; see the external-research row under the top-level files below. |
+| Batch 02: the relocation ledger (every free-looking definitional move names where its cost re-materializes) | **PED**, and a candidate audit check (a definitional discharge with no named relocation target is a finding); noted under adjacent findings. |
+| Reflections 01–04, 09, 10 otherwise | **PED.** Strong in-order teaching material: the zero-aporia → gain collapse → CIY arc as Ch.3's real spine; "scope conditions are the theorems"; two-tier status inside single segments as the discriminator between corpus-readers and summary-readers. |
+
+### `AUDIT-WORKING-628417/` (Grok 4.5, 2026-07-20; experiential walk of all AAT)
+
+Read whole: `99-final-thoughts.md`. Read by search: the 13 batch files and the running outline. Not read: the 15 `.prediction.md` twins and `00-compaction-summary.md` (inventoried).
+
+| Source item | Disposition |
+|---|---|
+| Open thread 1, is "general open" infectious across ladders | **ADD** question:separability-general-open-infectious. |
+| Open thread 2, composition of floors | **ADD** question:identifiability-floors-compose-or-interfere (also polish S5, 471203 Challenge 10, the segment's own WN `:253`). |
+| Open thread 5, exponential-family geometry forced or path-dependent | **ADD** question:coordinate-forcing-geometry-forced-or-path-dependent (also polish S4, WN `:155`). |
+| Open thread 3, low $\mathcal F$ versus high $\rho$ | **LEDGER** item:todo-floor-routing-diagnostic-segment-final-f-a963. |
+| Open thread 4, Class-2 intermediate-$\kappa$ bias bounds | **not dispositioned.** Today's Part II integration rewrote this territory (C2/C3: the ambiguity factor deleted, a model-free range bound and the fixed-gain tilt hypothesis in its place; E.1 tests the tilt), and I did not check whether an intermediate-$\kappa$ bias bound is now stated or still owed. Left for whoever owns `#der-directed-separation`'s record under B.1. |
+| "Thin" list: unity-metric normalization, shared-intent IB assumes the sender knows the jointly optimal action, additive communication-gain denominator, regime and class transition dynamics | Unity normalization is **IN** (F146, `f8d9151a`); the 526815 F151–F156 residue is in the existing unity item. The other three are Part III, where C.4's owner takes the held items; I did not open items for impressions without a line-level claim. |
+| The one-sentence statements of what the theory is | **PED**; already quoted in the working-dirs map §4 for the owner review. |
+| The compaction-fidelity experiment (`.prediction.md` twins) | **ASIDE** for ASF canon: evidence about agent memory across compaction, not about the theory. It bears on the global memory note on compaction fidelity and on I.10's question of what a cold agent must read; nobody has scored it. |
+| Batches otherwise | **PED.** |
+
 ## Pedagogy gold: where it is
 
 ## Adjacent findings

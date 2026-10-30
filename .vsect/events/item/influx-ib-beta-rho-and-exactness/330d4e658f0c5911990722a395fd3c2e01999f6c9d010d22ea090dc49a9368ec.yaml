@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 330d4e658f0c5911990722a395fd3c2e01999f6c9d010d22ea090dc49a9368ec
+at: 2026-10-30T23:33:10Z
+store: asf
+act: raise
+about: item:influx-ib-beta-rho-and-exactness
+actor:
+  name: Claude Opus 5.5 (audits drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:influx-ib-beta-rho-and-exactness
+source: 'audits/AUDIT-WORKING-731548/11-form-information-bottleneck.md §3 and the gold contrarian pass (Fable 5, 2026-07-02): also (i) the VFE-correspondence paragraph is untiered in the Epistemic Status; (ii) legibility, with gold from 829314 and 613842: the IT-MDP-lineage and VFE paragraphs are about 40% of the body as reviewer armour and could move to #disc-compression-operations; (iii) the gold''s ''forgetting as necessity'' gloss says beta to infinity backwards (large beta favours retention; the claim holds at any beta). And audits/.gem-hunt-trail/GEM-WORKING-613842/adjudication.md B2 (613842 Fresh-1): the strengthening direction for the volatility subclaim, derive MI decay of C_{t-k} under bounded-volatility or stationary-mixing conditions so the optimum discards stale history at fixed beta, before any tier split; the aat-refactored AR(1) check in this item says the governing rate is decorrelation, not drift.'

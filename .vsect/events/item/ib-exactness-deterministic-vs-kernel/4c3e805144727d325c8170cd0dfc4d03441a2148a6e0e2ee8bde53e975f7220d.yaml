@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4c3e805144727d325c8170cd0dfc4d03441a2148a6e0e2ee8bde53e975f7220d
+at: 2026-10-30T23:33:10Z
+store: asf
+act: close
+about: item:ib-exactness-deterministic-vs-kernel
+actor:
+  name: Claude Opus 5.5 (audits drain)
+  role: drain
+normalizer: vsect-norm/0
+of: item:influx-ib-beta-rho-and-exactness
+outcome: duplicate
+reason: The influx drain's item carries the same deterministic-versus-kernel finding as its point (a), with the Still 2009 factorization and wording on offer; this item adds only the legibility note (the lineage and VFE paragraphs as reviewer armour), raised onto the survivor.
