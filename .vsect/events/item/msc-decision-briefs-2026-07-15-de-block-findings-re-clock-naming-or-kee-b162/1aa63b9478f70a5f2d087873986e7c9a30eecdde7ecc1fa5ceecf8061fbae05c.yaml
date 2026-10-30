@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 1aa63b9478f70a5f2d087873986e7c9a30eecdde7ecc1fa5ceecf8061fbae05c
+at: 2026-10-30T21:21:45Z
+store: asf
+act: recheck
+about: item:msc-decision-briefs-2026-07-15-de-block-findings-re-clock-naming-or-kee-b162
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'The coupling is dissolved by INTENT, which runs the two as independent KRs: the Findings workstream''s goal (FINDINGS, segments and README agree) is A.2 and D.1/I.7, and naming is F.1 (verdicts landed through bin/term) and F.4. Neither KR waits on the other, and nothing in INTENT is gated on the stalled R2 naming queue. PRACTICA.md:44 still prints the soft-block; PRACTICA belongs to another lane''s re-check.'
+outcome: superseded

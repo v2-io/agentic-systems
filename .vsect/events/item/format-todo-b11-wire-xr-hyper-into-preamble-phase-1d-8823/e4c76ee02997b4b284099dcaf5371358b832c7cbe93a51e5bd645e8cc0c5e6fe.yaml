@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: e4c76ee02997b4b284099dcaf5371358b832c7cbe93a51e5bd645e8cc0c5e6fe
+at: 2026-10-30T21:22:36Z
+store: asf
+act: recheck
+about: item:format-todo-b11-wire-xr-hyper-into-preamble-phase-1d-8823
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 2590a310+dirty
+criterion: 'Not wired: neither target loads xr-hyper. A fallback exists instead: typeset_scrbook.rb rewrites a reference to a slug not in the volume as \externalref{slug}, which mono/scrbook/preamble/segment.tex renders as the monospace slug. That answers FORMAT-TODO''s open question 4 de facto. Only 01-aat-core/aat.aux is persisted; the other three volumes have none, so xr-hyper would have nothing to read for them.'
+outcome: holds
+owner: 'no KR: monograph build'
+restated: 'Cross-volume references render today as the monospace #slug (\externalref fallback). Wire xr-hyper so they render as numbered references, which first needs a persisted .aux for 02, 03 and 04 (only aat.aux exists) and a staleness check on sibling semver.'

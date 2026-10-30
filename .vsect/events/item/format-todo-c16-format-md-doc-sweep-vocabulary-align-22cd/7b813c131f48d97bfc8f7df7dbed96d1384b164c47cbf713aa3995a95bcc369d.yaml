@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 7b813c131f48d97bfc8f7df7dbed96d1384b164c47cbf713aa3995a95bcc369d
+at: 2026-10-30T21:23:04Z
+store: asf
+act: recheck
+about: item:format-todo-c16-format-md-doc-sweep-vocabulary-align-22cd
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 094a41d2+dirty
+criterion: Its parts now have owners or are gone. The narrow-area/wide-area vocabulary is kaobook's, no longer the authoritative target. The chunk format and pipeline belong in the build-pipeline SOP (doc/sop/build-pipeline.sop.md, with msc/markdown-first-pipeline.md as the design record). The citation conventions are already in format.sop.md (lines 86-97). The schema half is C14 (held, A.3). The 'CLAUDE.md gets the parallel sweep' half is I.6. All 13 SOPs pass md-press (70e069ee).
+outcome: superseded

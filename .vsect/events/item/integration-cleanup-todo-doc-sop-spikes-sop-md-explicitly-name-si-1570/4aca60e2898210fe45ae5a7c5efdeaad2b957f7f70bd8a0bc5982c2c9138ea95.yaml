@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4aca60e2898210fe45ae5a7c5efdeaad2b957f7f70bd8a0bc5982c2c9138ea95
+at: 2026-10-30T21:19:28Z
+store: asf
+act: recheck
+about: item:integration-cleanup-todo-doc-sop-spikes-sop-md-explicitly-name-si-1570
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: cfc7b529 adds doc/sop/spikes.sop.md §0a, which states the ratified D-1 principle in full; its point 5 names simulation, empirical-data processing, experiment and benchmark work as spike-class with the same integration duty and the empirica/ registry as the home for experiments a segment leans on.
+outcome: landed

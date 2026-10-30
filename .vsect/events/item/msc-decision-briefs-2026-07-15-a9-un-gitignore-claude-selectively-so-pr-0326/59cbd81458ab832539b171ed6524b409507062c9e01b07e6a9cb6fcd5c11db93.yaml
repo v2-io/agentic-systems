@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 59cbd81458ab832539b171ed6524b409507062c9e01b07e6a9cb6fcd5c11db93
+at: 2026-10-30T21:21:45Z
+store: asf
+act: recheck
+about: item:msc-decision-briefs-2026-07-15-a9-un-gitignore-claude-selectively-so-pr-0326
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'The brief''s motivating case was a version-controlled hook so lint gates the commit. That landed without touching .claude/: .githooks/pre-commit running bin/check-commit (f4a4a334, 2026-10-30, INTENT I.2), with bin/setup-hooks pointing core.hooksPath at it. No KR asks for tracked project subagent definitions or a shared settings.json, and .claude/ now holds per-agent worktrees (.claude/worktrees/agent-*), which the blanket ignore correctly keeps out. Decided on the merits: keep the ignore; a one-line negation is the route if a tracked .claude/agents/ is ever wanted.'
+outcome: superseded

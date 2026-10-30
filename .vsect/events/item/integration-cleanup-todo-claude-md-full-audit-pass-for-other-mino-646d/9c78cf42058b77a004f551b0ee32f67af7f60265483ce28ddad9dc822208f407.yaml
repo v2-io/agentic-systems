@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 9c78cf42058b77a004f551b0ee32f67af7f60265483ce28ddad9dc822208f407
+at: 2026-10-30T21:19:28Z
+store: asf
+act: recheck
+about: item:integration-cleanup-todo-claude-md-full-audit-pass-for-other-mino-646d
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'INTENT''s I.6 is this pass made structural: the always-loaded surface (agents.sop.md, symlinked as CLAUDE.md) keeps only what tools cannot check, its derivable parts are generated, and a two-launch probe measures the effect. A one-off audit for ''minor decisions'' is part of that KR''s work, not a separate item.'
+outcome: superseded

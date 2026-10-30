@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 7aea6582b64d714a7385eab3a31075981ddfd7a3f3cf4c837d2c0fbb1db3149f
+at: 2026-10-30T21:21:17Z
+store: asf
+act: close
+about: item:rho-additive-variance-payload-stranded
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+outcome: superseded
+reason: 'Superseded by item:rho-additive-variance-remainder-stranded, recorded minutes later: this item said #deriv-mismatch-budget-attribution does not carry the spike''s variance-additive decomposition, which is wrong (its Propositions 1-2 are an additive variance decomposition); the corrected item names what is actually missing.'

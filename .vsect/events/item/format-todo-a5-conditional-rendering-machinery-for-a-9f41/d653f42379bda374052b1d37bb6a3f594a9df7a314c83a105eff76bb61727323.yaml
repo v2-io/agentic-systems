@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: d653f42379bda374052b1d37bb6a3f594a9df7a314c83a105eff76bb61727323
+at: 2026-10-30T21:22:35Z
+store: asf
+act: recheck
+about: item:format-todo-a5-conditional-rendering-machinery-for-a-9f41
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 2590a310+dirty
+criterion: 'The premise was an anonymized build of the ASF monograph. None exists or is planned: bin/build-monograph and bin/lib carry no anonymization path, the volumes are published under Wecker''s name, and anonymized builds belong to the paper repos, where relata lint and relata emit handle anonymization per paper-dir. Nothing in ASF would consume the machinery.'
+outcome: stale

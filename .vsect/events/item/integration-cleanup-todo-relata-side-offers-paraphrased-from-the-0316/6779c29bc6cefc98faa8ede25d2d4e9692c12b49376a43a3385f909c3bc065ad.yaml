@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 6779c29bc6cefc98faa8ede25d2d4e9692c12b49376a43a3385f909c3bc065ad
+at: 2026-10-30T21:19:45Z
+store: asf
+act: recheck
+about: item:integration-cleanup-todo-relata-side-offers-paraphrased-from-the-0316
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'Of the four 2026-05-19 offers: (1) a one-off script/asf-ref-import.rb is overtaken by relata''s own ingest and candidates verbs (relata --help, 2026-10), which identify and file a PDF by evidence; (3) the foundational entries are carried by item bibliography-todo-w-3 (Da Costa and Hafez are in relata; relata search finds no Sutton & Barto, Koller & Friedman or Bishop); (4) is a recommendation, not work. What remains is offer (2), an observational extractor of prose author-year references from segments with relata match attempts: unbuilt, and the instrument the pilot''s ~1300 prose-citation estimate lacked.'
+outcome: holds
+owner: F.3
+restated: Build the observational prose-reference extractor (segment dir in, candidate list of 'Author (Year)' references with relata match attempts out), so the citation migration (bibliography-todo-w-3) can be sized and worked per segment. The other three 2026-05-19 relata offers are overtaken or carried elsewhere.

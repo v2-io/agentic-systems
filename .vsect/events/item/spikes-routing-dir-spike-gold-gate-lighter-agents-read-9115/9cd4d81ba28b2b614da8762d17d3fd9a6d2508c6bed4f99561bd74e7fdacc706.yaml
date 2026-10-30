@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 9cd4d81ba28b2b614da8762d17d3fd9a6d2508c6bed4f99561bd74e7fdacc706
+at: 2026-10-30T21:20:37Z
+store: asf
+act: recheck
+about: item:spikes-routing-dir-spike-gold-gate-lighter-agents-read-9115
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: The gate reserved dir-spike dispositions for a Joseph batch. The 2026-10-30 standing in doc/sop/agents.sop.md (7ad5cd34) lifts gates on Joseph and makes a wish to ask him uncertainty to resolve on the merits. spikes.sop.md §6 still states the old gate; that contradiction is recorded as its own item for I.6.
+outcome: superseded

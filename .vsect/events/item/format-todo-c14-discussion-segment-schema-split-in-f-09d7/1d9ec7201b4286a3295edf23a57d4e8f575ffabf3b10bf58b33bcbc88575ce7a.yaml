@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 1d9ec7201b4286a3295edf23a57d4e8f575ffabf3b10bf58b33bcbc88575ce7a
+at: 2026-10-30T21:23:03Z
+store: asf
+act: recheck
+about: item:format-todo-c14-discussion-segment-schema-split-in-f-09d7
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 094a41d2+dirty
+criterion: 'Not done, and its frame changed. format.sop.md line 314 (Joseph, 2026-07-14) exempts chapter-intro and most disc-* segments from the full cadence ''until dedicated norms for those file kinds are worked out'', which stands in for the schema split. INTENT''s A.3 now asks the opposite of part of that exemption: no live segment lacks an Epistemic Status, and the 29 that do are all in the impl-*/intro layer. The split has to say what intro, impl and disc segments carry, and A.3 has to agree with it.'
+outcome: holds
+owner: A.3
+restated: Write the schema for intro, impl-* and disc-* segments into format.sop.md, replacing the 2026-07-14 cadence exemption (line 314), and reconcile it with A.3, which requires every live segment, the impl-*/intro layer included, to carry an Epistemic Status.

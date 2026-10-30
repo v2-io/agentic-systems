@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 990e86fd4ead318ed9a3da28660f40afff7df54e7abf673aabd26b44b86c39a1
+at: 2026-10-30T21:19:28Z
+store: asf
+act: recheck
+about: item:integration-cleanup-todo-no-process-for-draining-wn-follow-ups-ga-c20a
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'The gap is the mechanism I.3 and I.5 are building: open items found in Working Notes go to the vsect ledger (I.5: ''open items go to I.3''), and the WN seed classifier in msc/inside-out-2026-10/internal-surfaces/wn-ledger-seed/ is the drain. The 2026-05-31 proposal it cites (route WN obligations to TODO/PROPOSALS/PRACTICA) routes to the trackers I.3 is retiring.'
+outcome: superseded

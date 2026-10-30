@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 30bbc3a4b5a3b58f04b227e8968d4efee6b8a093c85c0910875d1d3f6fb1d48b
+at: 2026-10-30T21:23:03Z
+store: asf
+act: recheck
+about: item:format-todo-c15-auto-cross-ref-formula-sweep-in-appe-396f
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 094a41d2+dirty
+criterion: 'Still owed and still blocked on B7: no atom labels are emitted, so manual references cannot yet be replaced. A rough count at cfc7b529 finds 288 ''Prop/Lemma/Corollary/Step/Eq N'' references in 01-aat-core deriv-* segments alone (many are internal to their own segment and may stay).'
+outcome: holds
+owner: 'no KR: monograph build'

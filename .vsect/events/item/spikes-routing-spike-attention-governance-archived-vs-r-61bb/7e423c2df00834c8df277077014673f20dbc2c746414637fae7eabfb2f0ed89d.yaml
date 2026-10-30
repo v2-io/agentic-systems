@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 7e423c2df00834c8df277077014673f20dbc2c746414637fae7eabfb2f0ed89d
+at: 2026-10-30T21:20:52Z
+store: asf
+act: recheck
+about: item:spikes-routing-spike-attention-governance-archived-vs-r-61bb
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'The question is open and the spike (2026-03-13, pre-AAT) still sits at spikes/ root with its pair spike-attention-causal-graphs.md. Since it was framed, canon gained #deriv-evidence-allocation-ceiling (finite evidence allocation across edges, lag 1/pi_i), and the running C3 spike asks how allocation couples to distortion. The spike''s four gaps (assumed stationarity of unattended model regions, reorientation cost, interrupt triggers, attention allocation as part of Sigma) can now be judged against those rather than in the abstract. Also tracked as TODO''s ''Group IV attention-pair'' item.'
+outcome: holds
+owner: C.2
+restated: 'Judge the 2026-03-13 attention-governance spike''s four gaps (assumed stationarity of unattended regions; reorientation cost; interrupt triggers; attention allocation as part of the strategy) against #deriv-evidence-allocation-ceiling and the C3 allocation-vs-distortion spike: covered, derivable consequence, or a missing postulate. Then file both attention spikes.'

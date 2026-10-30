@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: b6ca866f0a0687fc787f8c63d9962ec8571f9e83470ed4c52575888909a48306
+at: 2026-10-30T21:20:52Z
+store: asf
+act: recheck
+about: item:spikes-routing-cl-1-dissipativity-template-sp-22-gamma-86c0
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Not landed at cfc7b529: no #dissipativity-template segment exists in any src/, and the three members (spike-passivity-composition.md, spike-pid-a2prime.md, and spike-bridge-lemma-nonlinear-strengthening-2026-04-24.md §7.2) all still sit at spikes/ root. The §8 adversarial no-go is canon at result-contraction-template as the bullet says. The same landing is also tracked in PROPOSALS §D.9, TODO.md lines 190 and 469-471, and a spikes/PROPOSED.md CL-1 row; those are other lanes'' imports and should collapse to this one item.'
+outcome: holds
+owner: G.2

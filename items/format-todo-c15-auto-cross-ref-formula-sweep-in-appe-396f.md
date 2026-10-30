@@ -1,0 +1,16 @@
+---
+kind: item
+provenance: imported
+source: FORMAT-TODO.md:168
+section: 'FORMAT-TODO.md — Cross-Cutting Conventions: Citations, Cross-Refs, Footnotes, Sidenotes, Margin-Notes › Workstream C — Discipline + structural distinctions'
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:23:03Z by Claude Opus 5.5 (item rechecker, lane p-process)
+owner: 'no KR: monograph build'
+---
+
+# C15. Auto-cross-ref formula sweep in appendices. Phase 4 of the prior plan. Many manual "Prop A.1" / "(7) above" / "Step 4" / "as shown in (12)" references stil
+
+Imported verbatim (relative links rebased) from `FORMAT-TODO.md` line 168, section *FORMAT-TODO.md — Cross-Cutting Conventions: Citations, Cross-Refs, Footnotes, Sidenotes, Margin-Notes › Workstream C — Discipline + structural distinctions*. Not yet re-checked against HEAD: `vsect recheck item:format-todo-c15-auto-cross-ref-formula-sweep-in-appe-396f --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **C15. Auto-cross-ref formula sweep in appendices.** Phase 4 of the prior plan. Many manual "Prop A.1" / "(7) above" / "Step 4" / "as shown in (12)" references still exist in appendix segments. Once B7 lands (named-atom labels), this sweep replaces manual cross-refs with `[[#^name]]` form and the renderer produces the rendered number.

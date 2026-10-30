@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 5d55d12ca3e761f3c2177b8bcac2906cb479178cd742c958305b9f4bf31d3783
+at: 2026-10-30T21:21:45Z
+store: asf
+act: recheck
+about: item:msc-decision-briefs-2026-07-15-a4-what-replaces-stage-gating-and-what-d-bf58
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Both halves are now KRs. What replaces stage as the readiness signal: I.4, standing read from recorded checks (vsect; the frontmatter status word shown beside the evidence, never computed from), with H.2 taking the stage ladder out of the outline display. What drains Working Notes: I.5, a classifier that sends open items to the I.3 ledger, pedagogy to a pedagogy surface, and deletes history. The brief''s Option 1 (retire stage) is what was chosen; its release-time Gate-3/4 sweep was not.'
+outcome: superseded

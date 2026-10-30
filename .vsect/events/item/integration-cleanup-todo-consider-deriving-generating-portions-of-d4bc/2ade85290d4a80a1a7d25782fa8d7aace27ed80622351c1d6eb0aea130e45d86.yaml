@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 2ade85290d4a80a1a7d25782fa8d7aace27ed80622351c1d6eb0aea130e45d86
+at: 2026-10-30T21:19:46Z
+store: asf
+act: recheck
+about: item:integration-cleanup-todo-consider-deriving-generating-portions-of-d4bc
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'Decided by INTENT''s I.6: ''the derivable parts of agents.sop.md (file map, SOP index, tool list) are generated under refresh-all.'' The architectural question is answered yes; the work is that KR''s.'
+outcome: superseded

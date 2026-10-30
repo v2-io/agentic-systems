@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: e9a68bc4f1894e3cc8f9b9db3e97a6dbbd89c3063f4a05154739404ae35399a0
+at: 2026-10-30T21:23:04Z
+store: asf
+act: recheck
+about: item:format-todo-c17-chapter-grouping-quality-joseph-not-2b6a
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 094a41d2+dirty
+criterion: 'Its premise (missing chapterization) was already gone when it was rewritten 2026-08-22, and what remained names no defect: ''whether Joseph wants regrouping'' is an open-ended taste question. Chapter-grouping defects, if any, will surface through H.1 (outline cells, chapter intros) and H.3 (measured comprehension), which judge grouping by evidence. The scrbook second-Appendices collapse it mentions is a separate TODO.md item.'
+outcome: stale

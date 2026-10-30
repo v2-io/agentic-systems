@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 999b2a62ef6017a4feb03a2a9c21e699bc05d7c5b4836f9e16e7f4e9ba250792
+at: 2026-10-30T21:20:53Z
+store: asf
+act: recheck
+about: item:spikes-routing-dir-spike-batch-6-lighter-gold-gate-read-d206
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: No reserved decision remains (the gate is lifted). track-b-nonlinear-sims already moved to empirica/track-b-nonlinear (1d65587a, 2026-07-16). class-coercion-wrapping/ and track-a-intent-dag/ are still at spikes/ root; filing them to .integrated/ is mechanical after the first-hand check spikes.sop.md §0a point 6 asks for. class-coercion-wrapping is still cited by 2 canon segments (reduce, not repoint, per §2-bis(2)) and by 7 live non-canon files; track-a by 3 non-canon files.
+outcome: holds
+owner: I.3
+restated: File spikes/class-coercion-wrapping/ and spikes/track-a-intent-dag/ to spikes/.integrated/ with a MANIFEST entry, after a first-hand check that their content is in canon and after the 2 canon references to class-coercion-wrapping are reduced. track-b already moved to empirica/.

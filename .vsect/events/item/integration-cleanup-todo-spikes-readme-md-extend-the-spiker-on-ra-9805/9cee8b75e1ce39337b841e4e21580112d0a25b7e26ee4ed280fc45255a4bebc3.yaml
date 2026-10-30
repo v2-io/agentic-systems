@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 9cee8b75e1ce39337b841e4e21580112d0a25b7e26ee4ed280fc45255a4bebc3
+at: 2026-10-30T21:19:28Z
+store: asf
+act: recheck
+about: item:integration-cleanup-todo-spikes-readme-md-extend-the-spiker-on-ra-9805
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'cfc7b529: the on-ramp section of spikes/README.md gains a bullet before ''Keep your stuff together'' saying a spike need not be a derivation, and that an experiment a segment leans on moves to empirica/ and is cited as empirica:<slug>.'
+outcome: landed

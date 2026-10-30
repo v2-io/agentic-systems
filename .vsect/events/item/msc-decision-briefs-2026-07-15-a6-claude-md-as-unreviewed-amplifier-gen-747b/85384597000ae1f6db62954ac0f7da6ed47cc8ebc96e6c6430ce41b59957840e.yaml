@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 85384597000ae1f6db62954ac0f7da6ed47cc8ebc96e6c6430ce41b59957840e
+at: 2026-10-30T21:21:45Z
+store: asf
+act: recheck
+about: item:msc-decision-briefs-2026-07-15-a6-claude-md-as-unreviewed-amplifier-gen-747b
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Decided as the brief''s Option 1, minus the ritual: INTENT I.6 generates the derivable parts of agents.sop.md under refresh-all and keeps only what tools cannot check, measured by a two-launch probe; I.2 (.githooks, f4a4a334) runs the checks without a person. The ''Joseph skims once per cycle'' cadence is not adopted; under the 2026-10-30 standing (agents.sop.md, 7ad5cd34) review is by tools and independent agents.'
+outcome: superseded

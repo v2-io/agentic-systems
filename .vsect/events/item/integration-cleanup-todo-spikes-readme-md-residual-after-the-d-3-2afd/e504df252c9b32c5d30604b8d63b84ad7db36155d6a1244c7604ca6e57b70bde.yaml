@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: e504df252c9b32c5d30604b8d63b84ad7db36155d6a1244c7604ca6e57b70bde
+at: 2026-10-30T21:19:28Z
+store: asf
+act: recheck
+about: item:integration-cleanup-todo-spikes-readme-md-residual-after-the-d-3-2afd
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'cfc7b529: (a) the cardinal rule (spikes/README.md lines 22-30) reads as the clean binary at HEAD, a no-op as the item predicted; (b) the Working-Notes clause now says Working Notes are intermediate and stripped by bin/build-monograph --public; (c) the spiker on-ramp names simulations, data processing, experiments and benchmarks as spikes.'
+outcome: landed

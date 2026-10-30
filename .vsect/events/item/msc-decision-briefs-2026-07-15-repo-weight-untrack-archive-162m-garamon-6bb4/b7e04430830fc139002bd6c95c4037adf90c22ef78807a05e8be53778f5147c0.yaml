@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: b7e04430830fc139002bd6c95c4037adf90c22ef78807a05e8be53778f5147c0
+at: 2026-10-30T21:22:18Z
+store: asf
+act: recheck
+about: item:msc-decision-briefs-2026-07-15-repo-weight-untrack-archive-162m-garamon-6bb4
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 2590a310+dirty
+criterion: 'Re-measured at cfc7b529: the pack is 372 MiB (it was 225.7 when briefed); .archive/ is 150 tracked files, 118M on disk; the fonts half was untracked and gitignored in 2addfd82 (2026-07-15). Option 2 (untrack .archive/) does not reduce clone size, since the blobs stay in history, and .archive/ is cited as archaeology from agents.sop.md; I judge it not worth doing on its own. The live question is Option 3, a history rewrite, and it has become urgent rather than deferrable: the commercial fonts are in the public history (question garamond-fonts-in-public-history). No KR owns repository hygiene; I name the lead as owner so the gap is visible.'
+outcome: holds
+owner: I.1
+restated: 'Decide whether to rewrite history (git filter-repo) to remove the commercial Garamond font blobs, and with them the old .archive/ and ref/ PDF blobs, from the public repository; the license question is garamond-fonts-in-public-history. Untracking .archive/ alone is not worth doing: clones keep its blobs, and .archive/ is cited archaeology.'

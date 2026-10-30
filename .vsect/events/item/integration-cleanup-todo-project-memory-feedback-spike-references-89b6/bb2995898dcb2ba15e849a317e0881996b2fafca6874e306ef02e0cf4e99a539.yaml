@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: bb2995898dcb2ba15e849a317e0881996b2fafca6874e306ef02e0cf4e99a539
+at: 2026-10-30T21:19:28Z
+store: asf
+act: recheck
+about: item:integration-cleanup-todo-project-memory-feedback-spike-references-89b6
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'The project memory file (out of repo) was re-synced 2026-07-15 to the D-1 wording: line 11 states the binary boundary and reframes need-vs-mention as the spike-archivability test, explicitly not the canon boundary; line 13 records ratification and R1/R2. No latent need-vs-mention framing of the canon boundary remains in it.'
+outcome: landed

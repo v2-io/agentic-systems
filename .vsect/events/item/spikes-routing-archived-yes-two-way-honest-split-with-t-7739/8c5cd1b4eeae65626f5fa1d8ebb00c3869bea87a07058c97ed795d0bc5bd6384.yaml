@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 8c5cd1b4eeae65626f5fa1d8ebb00c3869bea87a07058c97ed795d0bc5bd6384
+at: 2026-10-30T21:20:37Z
+store: asf
+act: recheck
+about: item:spikes-routing-archived-yes-two-way-honest-split-with-t-7739
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: A policy decision, not work owed. The two-way split is stated in doc/sop/spikes.sop.md §5 and spikes/README.md; its 'do not re-audit .integrated/' guarantee was rewritten under D-3 and discharged 2026-07-16 (bulk-64 verified, spikes/.integrated/VERIFICATION-2026-07-16.md), so the guarantee the bullet quotes is no longer the rule.
+outcome: not-an-item

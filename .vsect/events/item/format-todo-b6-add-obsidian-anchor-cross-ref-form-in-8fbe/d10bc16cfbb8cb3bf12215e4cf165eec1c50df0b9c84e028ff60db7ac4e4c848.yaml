@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: d10bc16cfbb8cb3bf12215e4cf165eec1c50df0b9c84e028ff60db7ac4e4c848
+at: 2026-10-30T21:22:35Z
+store: asf
+act: recheck
+about: item:format-todo-b6-add-obsidian-anchor-cross-ref-form-in-8fbe
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 2590a310+dirty
+criterion: 'Not started: no segment uses [[#^anchor]] and the pipeline has no parser for it. It is the source-side half of atom-level cross-references, which need B7''s labels to resolve; together with B7 and C15 it is one chain. Nothing in INTENT owns it. Atom-level anchors would also give vsect the ''anchor where one exists'' that I.4 and I.7 mention for binding checks below the segment.'
+outcome: holds
+owner: 'no KR: monograph build'

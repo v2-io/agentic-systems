@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4d38739937234ef72f735e2a4eca559db24fb5788d924a1058208f7e246feca5
+at: 2026-10-30T21:22:36Z
+store: asf
+act: recheck
+about: item:format-todo-b9-sidenote-convention-tufte-style-numbe-cd15
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 2590a310+dirty
+criterion: Its premise was kaobook's sidenote machinery. Since 2026-06-05 scrbook is the authoritative target and kaobook 'not the target to optimize' (FORMAT-TODO's own status line); scrbook renders claim tags as margin notes already (typeset_scrbook.rb, 'render as marginpar sidenotes'), and no segment has asked for an author-driven numbered sidenote. Open question 3 (sidenote source syntax) goes with it. Footnotes, which are used (137 definitions in 22 segments), cover numbered asides.
+outcome: superseded

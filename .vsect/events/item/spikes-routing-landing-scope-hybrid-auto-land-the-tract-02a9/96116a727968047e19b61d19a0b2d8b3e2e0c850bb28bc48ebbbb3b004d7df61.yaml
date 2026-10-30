@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 96116a727968047e19b61d19a0b2d8b3e2e0c850bb28bc48ebbbb3b004d7df61
+at: 2026-10-30T21:20:37Z
+store: asf
+act: recheck
+about: item:spikes-routing-landing-scope-hybrid-auto-land-the-tract-02a9
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: A policy decision (Joseph 2026-05-17), not work owed. Its home is doc/sop/spikes.sop.md §4 'Landing-scope policy (hybrid)', which states it in full at HEAD.
+outcome: not-an-item

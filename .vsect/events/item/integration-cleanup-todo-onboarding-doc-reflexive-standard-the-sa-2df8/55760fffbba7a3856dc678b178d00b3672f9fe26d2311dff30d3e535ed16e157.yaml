@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 55760fffbba7a3856dc678b178d00b3672f9fe26d2311dff30d3e535ed16e157
+at: 2026-10-30T21:19:46Z
+store: asf
+act: recheck
+about: item:integration-cleanup-todo-onboarding-doc-reflexive-standard-the-sa-2df8
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'The standard is stated in the always-loaded file itself: doc/sop/agents.sop.md''s [!important] callout says to ''apply the canon-cites-only-canon / honest-about-uncertainty discipline reflexively to this file, exactly because every agent loads it and treats it as authoritative'' (since 5314975c, 2026-05-20, carried into agents.sop.md by 4d5b1bed). Making contradictions in it caught by tools rather than by reading is I.6''s work.'
+outcome: landed

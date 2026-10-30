@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 9e51dd6939606cf975be17bbce729a356ff40d42025e22338d27acd9c7578d57
+at: 2026-10-30T21:19:28Z
+store: asf
+act: recheck
+about: item:integration-cleanup-todo-provisional-thought-joseph-hedged-now-un-e191
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'The hedged principle (segments need no per-segment histories because traces live in .integrated/) was overtaken by a stronger standing: agents.sop.md (7ad5cd34, 2026-10-30) puts history in commit bodies and CHANGELOG.md and nowhere else, and INTENT''s I.5 has Working Notes carry forward pointers and regression guards only, with history deleted. Its consequence is adopted; its proposed home for the trace (.integrated/) is not the one chosen.'
+outcome: superseded

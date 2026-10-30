@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 74e7ca0a5ddbe1612e29516115a948cb260f9b9acc8240032087a1f72eb69423
+at: 2026-10-30T21:19:28Z
+store: asf
+act: recheck
+about: item:integration-cleanup-todo-memory-layer-narrowing-deferred-to-the-g-23bb
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'The project half is done: ~/.claude/projects/-Users-josephwecker-v2-src-arch-asf/memory/feedback_spike_references_only_in_working_notes.md was synced 2026-07-15 (file mtime; out of repo, no commit) and states the binary canon boundary (line 11), the need-vs-mention test reframed as spike-archivability, and refinements R1 and R2 (line 13); feedback_integration_is_replacement.md carries the replacement discipline. The global half (~/.claude/memory/methodology/spike-references-only-in-working-notes.md) is one of the global index''s not-yet-written detail files, which is global-memory curation outside this store, not ASF work.'
+outcome: landed

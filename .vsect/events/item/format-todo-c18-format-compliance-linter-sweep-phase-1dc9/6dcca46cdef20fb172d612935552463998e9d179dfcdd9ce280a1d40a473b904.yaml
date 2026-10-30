@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 6dcca46cdef20fb172d612935552463998e9d179dfcdd9ce280a1d40a473b904
+at: 2026-10-30T21:23:14Z
+store: asf
+act: recheck
+about: item:format-todo-c18-format-compliance-linter-sweep-phase-1dc9
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 094a41d2+dirty
+criterion: 'The mechanical sweep is done: at cfc7b529 md-press -q --no-math reports no changes over every 0*/src/*.md, and 1cae0288 ran md-press 0.3.0''s converter over 01-04. One lint-md-only category remains and md-press does not check it: raw < or > inside inline math, a FORMAT rule that today lives only in prose (agents.sop.md''s self-reminder). A regex finds 23 instances in 9 02-tst-core segments (8 old-tst-* files whose fates the TST lane is deciding, plus obs-software-epistemic-properties). The md-press gap is filed (firmatum/utils/md-press/FEEDBACK-2026-08-22.md). Owner I.6 because a tool check is what lets the prose rule leave the always-loaded surface; the commit gate itself (former I.2) is met.'
+outcome: holds
+owner: I.6
+restated: Make md-press (and so the commit gate) catch raw < or > inside inline math; the gap is filed. Then clear the 23 instances in 9 02-tst-core segments, most of them old-tst-* files the TST lane is deciding, and drop the prose self-reminder from agents.sop.md.

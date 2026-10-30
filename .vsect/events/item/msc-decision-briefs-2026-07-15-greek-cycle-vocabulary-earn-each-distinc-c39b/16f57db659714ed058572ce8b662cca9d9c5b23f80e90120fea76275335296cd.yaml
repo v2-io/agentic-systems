@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 16f57db659714ed058572ce8b662cca9d9c5b23f80e90120fea76275335296cd
+at: 2026-10-30T21:22:06Z
+store: asf
+act: recheck
+about: item:msc-decision-briefs-2026-07-15-greek-cycle-vocabulary-earn-each-distinc-c39b
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Still open. The owner review''s terminology explorer (owner-review/explorers/terminology.md line 90) now gives a view the brief lacked: keep the Greek phases as section-level signposts and a glossary, out of operative sentences (der-deliberation-cost.md:14 ''pausing praxis to improve upcoming epistrophe'' is its example), and it separately verdicts ''history'' for chronica in AAT (§2.5). Together with the recorded keep-plus-English-anchor decision, the per-term tighten-vs-soften call becomes: in operative sentences use the English term unless the Greek one carries a distinction the formalism uses. TODO.md carries three items on the same work (Greek prose discipline, README softening, tighten segment prose) that should collapse here.'
+outcome: holds
+owner: F.1
+restated: 'Greek cycle vocabulary: keep the Greek terms as signposts paired with English anchors, and use the English term in operative sentences unless the formalism depends on the distinction (owner-review terminology explorer, line 90); soften README''s ''names a distinction English flattens'' for each term that does not earn it.'

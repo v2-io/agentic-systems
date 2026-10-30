@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: b1b8c20b2315c8fe1a625efe55eb660ac08c070d7bdb699e3c65595c76333342
+at: 2026-10-30T21:22:35Z
+store: asf
+act: recheck
+about: item:format-todo-b7-land-label-atom-name-emission-phase-1-e8e6
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 2590a310+dirty
+criterion: 'Not landed: no ''atom:'' label is emitted anywhere in bin/lib. The parsing half exists (segment_renderer.rb EQ_TAG_LINE / parse_eq_tag), and canon carries 551 named tags of the form *[Type (name)]*, so the identities are already authored. Unblocks B6 and C15.'
+outcome: holds
+owner: 'no KR: monograph build'

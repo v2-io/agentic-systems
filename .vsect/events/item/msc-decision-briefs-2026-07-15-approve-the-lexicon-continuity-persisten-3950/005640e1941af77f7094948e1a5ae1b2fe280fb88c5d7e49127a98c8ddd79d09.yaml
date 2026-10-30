@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 005640e1941af77f7094948e1a5ae1b2fe280fb88c5d7e49127a98c8ddd79d09
+at: 2026-10-30T21:22:06Z
+store: asf
+act: recheck
+about: item:msc-decision-briefs-2026-07-15-approve-the-lexicon-continuity-persisten-3950
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'The breakage is still rendered at cfc7b529: LEXICON.md has a ''## Continuity'' section (line 54) with Continuity Stance nested under it, a duplicate ''### Persistence'' (lines 67 and 150), and Moral Continuity listed twice (lines 72 and 154). The chronica/C_t collision half is now decided elsewhere (terminology.md §2.5: ''history'' in AAT, chronica reserved for PROPRIUM). Steps 1-2 and 4-5 are mechanical and twice verified; under the lifted gates they need no further second opinion. Step 3, whether Continuity Stance is a structural axis or a deployment property, is a theory question for whoever lands it. TERMINOLOGY-TODO''s breakage items are the same work.'
+outcome: holds
+owner: F.1

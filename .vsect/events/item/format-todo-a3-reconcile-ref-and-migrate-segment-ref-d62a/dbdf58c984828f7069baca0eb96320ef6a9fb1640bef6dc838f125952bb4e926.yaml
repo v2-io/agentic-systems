@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: dbdf58c984828f7069baca0eb96320ef6a9fb1640bef6dc838f125952bb4e926
+at: 2026-10-30T21:22:35Z
+store: asf
+act: recheck
+about: item:format-todo-a3-reconcile-ref-and-migrate-segment-ref-d62a
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 2590a310+dirty
+criterion: 'A3 is two pieces of work each carried elsewhere: author-judgment segment citation migration is bibliography-todo-w-3 (held by the pilot, owner F.2/F.3), and matching ref/ PDFs to bibliography entries is integration-cleanup-todo-asf-side-identification-of-the-23-publis-6849 (held, owner F.3). Neither had started at cfc7b529: one Part I segment carries a formal citation command.'
+of: item:bibliography-todo-w-3-segment-citation-migration-270-vol1-44ce
+outcome: duplicate

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 2cf66b370b095fab9d5883470f42aad3e788931efdb76e48ee74e904cd42941a
+at: 2026-10-30T21:22:36Z
+store: asf
+act: recheck
+about: item:format-todo-b10-generalize-marginnote-discipline-cur-9bb1
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 2590a310+dirty
+criterion: Its premise was kaobook's \marginnote, used for equation tags via \eqtag. The scrbook target, authoritative since 2026-06-05, places claim tags as margin notes by its own path and has no author-facing margin-note convention to generalize; no segment has asked for one.
+outcome: superseded

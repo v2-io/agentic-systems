@@ -1,0 +1,22 @@
+---
+kind: item
+provenance: imported
+source: msc/decision-briefs-2026-07-15.md:21
+section: Decision briefs — 2026-07-15 (the valve) › Quick calls — strong lead-recs
+opened: 2026-10-30T20:17:42Z
+opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:22:18Z by Claude Opus 5.5 (item rechecker, lane p-process)
+owner: I.1
+restated: 'Decide whether to rewrite history (git filter-repo) to remove the commercial Garamond font blobs, and with them the old .archive/ and ref/ PDF blobs, from the public repository; the license question is garamond-fonts-in-public-history. Untracking .archive/ alone is not worth doing: clones keep its blobs, and .archive/ is cited archaeology.'
+---
+
+# Repo weight: untrack .archive/ (162M) + Garamond fonts (35M)?
+
+Imported verbatim (relative links rebased) from `msc/decision-briefs-2026-07-15.md` line 21, section *Decision briefs — 2026-07-15 (the valve) › Quick calls — strong lead-recs*. Not yet re-checked against HEAD: `vsect recheck item:msc-decision-briefs-2026-07-15-repo-weight-untrack-archive-162m-garamon-6bb4 --outcome holds|stale|landed|not-an-item --why …`.
+
+
+*Since 2026-07-15:* the fonts half is done (untracked + gitignored 2026-07-15, CHANGELOG); `_obs/` was renamed `.archive/` and its 91M SVG gzipped to 44M on 2026-08-22, but `.archive/` is still tracked — the remaining call is that directory and whether to rewrite history.
+
+*Since the 2026-07-07 census:* Census overstates the problem: ref/ PDFs were untracked ~2026-05-22 (ref/.gitignore, commits 6b0e984/a6397a6 — only 5.7M tracked now) and mono/ build outputs are already gitignored (mono/.gitignore). Remaining live weight decision is _obs + fonts + history.
+
+**What.** Approve slimming the repo's tracked weight. **Context.** Theory content is ~8.6M, but the pack is 225.7 MiB. Verified today: ref/ PDFs are *already* untracked (5.7M tracked; census's "135M tracked PDFs" is stale) and mono build outputs are *already* gitignored. What's still tracked: `.archive/` **162M** (obsolete archive, live tree) and **35M** of mono/ = almost entirely the commercial Garamond Premier Pro fonts — which are also the CC-BY licensing exposure (census Part C). Plus CURRENT-VOL1 ~8.5M (separate brief). **Options.** (1) Nothing. (2) Untrack `.archive/` (move to an `archive/obs` branch or out-of-tree) + remove Garamond from tracking; working tree lightens, but **already-committed blobs stay in every clone until history is rewritten**. (3) History rewrite (`git filter-repo` on .archive/old-ref-PDF/font blobs) → clone drops toward ~15M, but all hashes change: breaks CHANGELOG/tag commit refs and the archema-io submodule pointer — its own decision. **Lead rec.** Do (2) now — cheap, reversible, and the font removal is due on licensing grounds regardless. Defer (3) to a deliberate public-release point; the licensing question alone may force it sooner (fonts are in history either way). **Pointer.** `msc/meta-process-review-2026-07-07/10-...-findings.md` §0, §Option-B; census Part C.

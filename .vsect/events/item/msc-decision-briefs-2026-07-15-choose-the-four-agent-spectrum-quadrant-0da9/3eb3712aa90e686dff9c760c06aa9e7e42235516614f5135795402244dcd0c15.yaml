@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 3eb3712aa90e686dff9c760c06aa9e7e42235516614f5135795402244dcd0c15
+at: 2026-10-30T21:22:05Z
+store: asf
+act: recheck
+about: item:msc-decision-briefs-2026-07-15-choose-the-four-agent-spectrum-quadrant-0da9
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Still open at cfc7b529: #def-agent-spectrum carries the mixed set (Reactive system / Blind seeker / Adaptive tracker / Actuated agent), and no option-set brainstorm exists. The owner review''s terminology verdicts (owner-review/explorers/terminology.md §2.17) keep ''actuated'' and anchor it to Rosenblueth, Wiener & Bigelow 1943, which bears on the fourth name, but give no verdict on the set. Under F.4 the first question for each quadrant is whether control theory or cybernetics already names it.'
+outcome: holds
+owner: F.1
+restated: 'Choose the four #def-agent-spectrum quadrant names as one parallel set, first asking for each quadrant whether an established name exists (F.4''s question; terminology.md §2.17 already keeps ''actuated'' with the 1943 cybernetics anchor), and land the decision through bin/term.'

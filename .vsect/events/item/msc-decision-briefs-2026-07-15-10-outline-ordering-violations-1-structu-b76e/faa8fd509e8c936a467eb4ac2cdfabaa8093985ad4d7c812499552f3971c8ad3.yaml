@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: faa8fd509e8c936a467eb4ac2cdfabaa8093985ad4d7c812499552f3971c8ad3
+at: 2026-10-30T21:21:45Z
+store: asf
+act: recheck
+about: item:msc-decision-briefs-2026-07-15-10-outline-ordering-violations-1-structu-b76e
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: Both calls made on the merits on 2026-10-30 by the I.2 hooks builder. (1) ed150051 moved result-per-dimension-persistence from Part III into Part I after result-persistence-condition (its depends are all Part I; impl-strategic-composition now cites it as a Part I result). (2) f4a4a334 added 03-llm-core/OUTLINE-accepted.md and 04-eli-core/OUTLINE-accepted.md for the scope-first rows, each citing its reason; ed150051 moved scope-witness-bidirectional into Common Roots instead of whitelisting it. bin/lint-outline reports 0 ordering violations on all four volumes at HEAD.
+outcome: landed

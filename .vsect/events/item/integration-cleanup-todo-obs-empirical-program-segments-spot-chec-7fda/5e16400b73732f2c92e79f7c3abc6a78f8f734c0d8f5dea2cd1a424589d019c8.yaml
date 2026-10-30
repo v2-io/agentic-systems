@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 5e16400b73732f2c92e79f7c3abc6a78f8f734c0d8f5dea2cd1a424589d019c8
+at: 2026-10-30T21:19:45Z
+store: asf
+act: recheck
+about: item:integration-cleanup-todo-obs-empirical-program-segments-spot-chec-7fda
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'Spot-checked all 8 obs-* segments at cfc7b529 (01: authored-world-laboratory, gated-tempo-advantage, section-i-validation-simulations; 02: software-epistemic-properties; 03: context-turnover, evaluation-metrics; 04: developmental-trajectory, growth-vs-drift): no body text above Working Notes names spikes/, simulations/, a script, ~/src/ or another local working path. The track-b consumers were re-pointed to empirica: in 1d65587a (2026-07-16). The same scan over all of canon finds local paths elsewhere, recorded as a separate item.'
+outcome: landed

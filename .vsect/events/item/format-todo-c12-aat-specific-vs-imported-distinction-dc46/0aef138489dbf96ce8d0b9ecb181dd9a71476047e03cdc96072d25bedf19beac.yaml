@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 0aef138489dbf96ce8d0b9ecb181dd9a71476047e03cdc96072d25bedf19beac
+at: 2026-10-30T21:23:03Z
+store: asf
+act: recheck
+about: item:format-todo-c12-aat-specific-vs-imported-distinction-dc46
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 094a41d2+dirty
+criterion: 'Resolved as FORMAT-TODO open question 2''s option gamma, convention without machinery. doc/sop/format.sop.md carries ''Imported external machinery with internal recapitulation — convention'' (085e538c, 2026-05-28; carried into format.sop.md by 038e2ed0): primitive-import use of an external operator needs no depends: on the AAT recapitulation, AAT-deployment use does. That settles the do(a)-before-#def-pearl-causal-hierarchy instance (#scope-agency line 30 names do as an external import per Pearl 2009 and Bareinboim et al. 2022 and points to the recapitulation). Load-bearing imports need formal cites with locators (format.sop.md line 86). No segment uses an origin: field, and none is needed under the convention.'
+outcome: landed

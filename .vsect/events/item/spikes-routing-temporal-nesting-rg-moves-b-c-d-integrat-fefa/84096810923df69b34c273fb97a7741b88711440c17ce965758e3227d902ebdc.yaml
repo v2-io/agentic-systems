@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 84096810923df69b34c273fb97a7741b88711440c17ce965758e3227d902ebdc
+at: 2026-10-30T21:20:53Z
+store: asf
+act: recheck
+about: item:spikes-routing-temporal-nesting-rg-moves-b-c-d-integrat-fefa
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 22ee7d23+dirty
+criterion: 'Partly landed. Move B landed in de56b9a6 (2026-06-10): #der-multi-timescale-stability is derived (exact, Model D) via template stacking with Tikhonov and Chen-Goldenfeld-Oono, and its Discussion carries the RG reading that was Move D''s centerpiece (line 118: integrating out a level is a renormalization step; the template is the fixed-point form). No separate #disc-structural-rg segment exists, and the Discussion paragraph may make one unnecessary. Move C, the two-loop worked example (Kalman inner, Beta-Bernoulli outer), is not in canon. spikes/temporal-nesting-rg/ is unfiled and 2 segments still cite it.'
+outcome: holds
+owner: G.2
+restated: 'Move B of spikes/temporal-nesting-rg/99-verdict.md landed (de56b9a6) with Move D''s RG reading inside it. Open: Move C (two-loop worked example), a decision whether Move D needs its own segment, then reduce the 2 canon references and file the directory.'
