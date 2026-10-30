@@ -1,0 +1,51 @@
+schema: vsect-event/0
+id: 928d69dc7a362cf8f8445a687add7c55d9eadec5f3d39d7961d072092676f072
+at: 2026-10-30T23:22:16Z
+store: asf
+act: run
+about: segment:example-kalman
+actor:
+  name: Claude Opus 5.5 (A.1 round-6 integrator)
+  role: integrator
+  read:
+  - segment:example-kalman
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-causal-information-yield: aafeacbbb79b6c8fa83a38fc5b85f2b38b0aad97f0ccfe80798d0a554c5e5c35
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-mismatch-signal: 8865e87714b5b10e0430d0e7f860cb1949a2307149171ba204c6f5b3c2b3ee7b
+  segment:def-model-class-fitness: 80a2eb3fbf06b7ebb3ebdc642c79dc6883eb350ebafb68555ee3ea9c2505a25f
+  segment:def-model-sufficiency: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:der-action-selection: ff726f8527dab6ee837cc11b7164313850f125e944c76ea86dca14183c613408
+  segment:der-deliberation-cost: 942267bd11f53b6c924b606694862e9d0507787a8f94d98cb417035816476c72
+  segment:der-gain-sector-bridge: f5c8fdd9d718eff5c9192d3d1b399b0f97106f1f28a5619dae2f8010565b1539
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:deriv-gain-sector: f78514b9da4ac15f168eda5d3d520d6191462d6a86841afcb7c80487fe70ba94
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:deriv-sector-condition: b3c30507cd90d0d11b419358a324887c0dc4d41f132f8e0135ee2928756472d7
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:example-kalman: 72239fda207589025c2d73c4e144e02461b9a41c0a9d63ce5c9e9814de52b41d
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-mismatch-decomposition: d215ad7db1db571c2e719b31cc39f38f7863ce4b5302e74037a3b6098b2c7a5d
+  segment:result-persistence-condition: 4f4d1304ebe779fea984495037b556dccc78e41a0e50445c689b3d11ff0ff3a6
+  segment:result-sector-condition-stability: aa4f9e56f2df48826fccf234cdbcb3f09c3df640583ed1892ee21f7abc286447
+  segment:result-sector-persistence-template: e8dba2ec6778c68156d3d4c72b164d746a24fed23b253571aa779bba1a1808fa
+  segment:result-structural-adaptation-necessity: 7c7c9be73dd830411b5791b025db2e211b07520daab48dd58cca0ab30cf18c2a
+  segment:scope-adaptive-system: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+committed: after
+criterion: $V(K) = (q + K^2 r)/(1 - (1 - K)^2)$ at $q = 0.25$, $r = 1$ is minimized at $K = 0.390$ with value $P^- = 0.640$; $R^2 = 0.0064$ is a hundredth of it; at $R = 1.4$ the exponent $R^2/(2V)$ is $1.53$ at the Kalman gain; expected stay from zero $17.5$ steps at $K = 0.39$, about $19.2$ near $K = 0.27$; log stay $8.69$ and $14.38$ at $R = 3, 4$ for $K = 0.39$, against $8.06$ and $13.09$ for $K = 0.25$
+effective-version: a7f655140f4ecef07063e9dccb14ffd3e6c3373d5162039b66b9a6a7106000a4
+from: review:scope-adaptive-system-integration-6#C7
+line: simulation
+outcome: confirmed
+recheck: grid minimization of $V$; exit-time integral equation $\tau = 1 + M\tau$ on $[-R, R]$ with Gaussian kernel, trapezoid rule, 401/801/1601 nodes agreeing to three decimals
+target-version: 72239fda207589025c2d73c4e144e02461b9a41c0a9d63ce5c9e9814de52b41d
+version-from: git-revision

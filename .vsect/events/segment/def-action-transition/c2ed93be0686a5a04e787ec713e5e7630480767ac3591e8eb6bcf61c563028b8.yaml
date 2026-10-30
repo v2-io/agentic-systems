@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: c2ed93be0686a5a04e787ec713e5e7630480767ac3591e8eb6bcf61c563028b8
+at: 2026-10-30T23:22:14Z
+store: asf
+act: rederive
+about: segment:def-action-transition
+actor:
+  name: Claude Opus 5.5 (A.1 round-6 integrator)
+  role: integrator
+  read:
+  - segment:def-action-transition
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+committed: after
+criterion: The fresh-transition clause is needed independently of fresh noise. The Discussion's world (known law; hidden bit $x$; $o_1 = x \oplus \varepsilon_1$; a later state whose bit is $\varepsilon_1$, reported without noise at $K$) is Markov in its own past, has fresh observation noise and satisfies GA-1 as worded, yet at $t = 1$ the value is $\log 2$ while every one-step part is zero, and (h)'s step fails at $t = 2$
+effective-version: 9a9bcb1399364f0e6030a6dc8e6f8a45f6cfa0cdad449ef0d3a20ab3e176ac77
+from: review:scope-adaptive-system-integration-6#C2
+line: derivation
+outcome: confirmed
+recheck: $o_K \oplus o_1 = x$; $S_{K-1} = (K-1, 0)$ known; $\Omega_K$'s bit is a fair coin independent of $\Omega_{1:K-1}$
+target-version: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+version-from: git-revision
