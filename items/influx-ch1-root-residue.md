@@ -1,0 +1,9 @@
+---
+kind: item
+owner: C.1
+opened: 2026-10-30T23:22:26Z
+opened-by: Claude Opus 5.5 (influx drain, first half)
+concerns: [segment:def-agent-environment, segment:def-action-transition, segment:def-chronica]
+---
+
+# Small residue in the Chapter 1 roots after the A.1 rebuild (checked at cbd2f345; none is on the A.1 lane's open finding list as far as vsect open shows). (a) #def-action-transition:41 'the agent observes via h and acts via T', and the loop drawn there, while #example-kalman's action enters only through h (:31-33, x_{t+1} = x_t + v_t); say 'a enters T and/or h'. (b) #def-agent-environment:21-25 lists internal state as one of 'three structural channels'; it is a state, not a channel (731548/02:9). Loss is named only on the perception side: the action as intended versus as executed has no root in canon; one sentence that a stochastic T absorbs actuator noise would do (731548/02:33). (c) Boundary integrity, from 193847 Theme F1's scope-completeness sweep (audits/audit-findings-193847.md:111-119, dispositioned 'PROPOSALS candidate' and never filed), survives only in #def-agent-environment's WN :88-101. (d) Stale gold for I.5: #def-action-transition WN :60 'bounded-vs-unbounded Markov asymmetry (strongest item here)' was dissolved by the auditor who raised it (audits/AUDIT-WORKING-472913/00-running-outline.md:42) and still reads as live; its sibling WN :56 still quotes 'if the agent knew T exactly, action selection would reduce to optimization', the overstatement the A.1 rebuild removed from the body. (e) #def-chronica WN :44 cites ~/src/firmatum/PROPRIUM-{ONTOLOGY,ARCHITECTURE}-v2.md; both now live at ~/src/arch/proprium/INGEST/old-firmatum/. Source: msc/inside-out-2026-10/influx-scout/rewrites-aux-canon-check.md units 01, 02, 04; audits/aat-reboot-aux-supplemental/0{1,2,4}-*.md.
