@@ -22,7 +22,7 @@ Two failure modes are explicitly outside agency but inside the adaptive scope: *
 
 *[Scope (scope-agency)]*
 
-$$\mathcal{S}_\text{agency} = \mathcal{S}_\text{adaptive} \;\cap\; \left\{(\text{Agent}, \Omega) \;:\; \lvert\mathcal{A}\rvert \geq 2, \;\; \exists\, a \neq a' \text{ s.t. } P(o \mid do(a)) \neq P(o \mid do(a')) \right\}$$
+$$\mathcal{S}_\text{agency}(t) = \mathcal{S}_\text{adaptive}(t) \;\cap\; \left\{(\text{Agent}, \Omega) \;:\; \lvert\mathcal{A}\rvert \geq 2, \;\; \exists\, a \neq a' \text{ s.t. } P(o \mid do(a)) \neq P(o \mid do(a')) \right\}$$
 
 Two conditions added to those of #scope-adaptive-system:
 

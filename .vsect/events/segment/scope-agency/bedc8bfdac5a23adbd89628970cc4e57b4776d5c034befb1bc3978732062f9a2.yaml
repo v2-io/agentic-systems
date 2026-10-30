@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: bedc8bfdac5a23adbd89628970cc4e57b4776d5c034befb1bc3978732062f9a2
+at: 2026-10-30T20:49:23Z
+store: asf
+act: revise
+about: segment:scope-agency
+actor:
+  name: Claude Opus 5.5 (A.1 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 9185f5597080252155e7cf6292188de464b923f4541aa305acb58e4b39e21162
+own-version: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+record: 01-aat-core/src/scope-agency.md

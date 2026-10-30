@@ -49,7 +49,7 @@ At each step, pulling arm $k$ yields reward $r_t \in \{0, 1\}$ with $P(r_t = 1 \
 
 Part I quantities map as in #example-bandit. The brief summary here establishes the epistemic baseline; the novel content is Part II.
 
-**Scope** ( #scope-agency). $\Omega_t = (\theta_1(t), \theta_2(t), \theta_3(t))$; $\mathcal{A} = \{1, 2, 3\}$; residual uncertainty persists. *Exact.*
+**Scope** ( #scope-agency). $\Omega_t = (\theta_1(t), \theta_2(t), \theta_3(t))$; $\mathcal{A} = \{1, 2, 3\}$. The arm probabilities are state that keeps drifting and persists into what later pulls show, so the adaptive scope holds at every $t$ ( #scope-adaptive-system). *Exact.*
 
 **Model** ( #form-agent-model). $M_t = (\alpha_k, \beta_k)_{k=1}^{3}$ — Beta posteriors per arm, with exponential discounting (effective window $W = 20$):
 
