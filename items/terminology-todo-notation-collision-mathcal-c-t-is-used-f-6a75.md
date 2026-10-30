@@ -7,6 +7,7 @@ opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 rechecked: 2026-10-30T20:27:45Z by Claude Opus 5.5 (item rechecker, pilot)
 owner: F.4 (index families declared once)
+restated: "Not a notation collision in the mathematics: continuity is a property of the chronica, so the continuity entry's notation field (C_t) is misassigned; fix the entry, not the symbol."
 ---
 
 # Notation collision: $\mathcal{C}_t$ is used for both `Chronica` and `Continuity` in the LEXICON, pointing at the same source segment (`def-chronica.md`). Two en

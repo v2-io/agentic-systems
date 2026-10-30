@@ -7,6 +7,7 @@ opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 rechecked: 2026-10-30T20:25:46Z by Claude Opus 5.5 (item rechecker, pilot)
 owner: unassigned (C.2 candidate strengthening)
+restated: "Give rho_Sigma an estimator (none exists; #schema-strategy-persistence and the exact #deriv-evidence-allocation-ceiling both depend on it). Likely a strengthening, not the circularity F28 named: drift can be estimated from the raw outcome stream, with the cost on rarely observed edges tied to EA.1's 1/pi_i lag."
 ---
 
 # F28 — $\rho_\Sigma$ operationalization. $\rho_\Sigma$ is an unmeasurable threshold parameter on which trajectory guarantee depends (genuinely substantive open a

@@ -7,6 +7,7 @@ opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 rechecked: 2026-10-30T20:25:16Z by Claude Opus 5.5 (item rechecker, pilot)
 owner: unassigned (C.2-adjacent; see C1 spike)
+restated: "The scope statement (Models D and S exclude heavy tails) is in canon; what is open is the strengthening: what persistence looks like under alpha-stable forcing (one-large-jump exit, polynomial expected exit time), and the #deriv-discrete-sector-condition Working Note that reads a failed mean-square proof as 'cannot be survived' overstates."
 ---
 
 # Heavy-tailed disturbances — Model S assumes finite second moment.

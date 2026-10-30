@@ -8,6 +8,7 @@ opened-by: Claude Fable 5.1
 concerns: [segment:hyp-substrate-transfer-asymmetry]
 rechecked: 2026-10-30T20:29:08Z by Claude Opus 5.5 (item rechecker, pilot)
 owner: unassigned (04-eli-core spike)
+restated: "Measure the transfer asymmetry first: the no-go bounds only the symmetric rate-distortion ceiling min(C1, C2) on S_id, so an observed asymmetry in achieved S_id does not contradict it, and the segment's 'the asymmetry is real (empirically)' rests on an operational record, not a measurement."
 ---
 
 # 11. Substrate-Transfer Asymmetry — origin derivation, or a deeper three-way no-go (Phase-1-grade)

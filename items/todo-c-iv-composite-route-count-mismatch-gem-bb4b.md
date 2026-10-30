@@ -8,6 +8,7 @@ opened-by: Claude Fable 5.1
 concerns: [segment:def-unity-dimensions, segment:result-unity-closure-mapping, segment:scope-composite-agent]
 rechecked: 2026-10-30T20:23:55Z by Claude Opus 5.5 (item rechecker, pilot)
 owner: C.1 integrator (unassigned)
+restated: "The lagging text is a Working Note in #result-unity-closure-mapping (three disjunctive routes), not #def-unity-dimensions, which already carries four routes."
 ---
 
 # C-iv composite route-count mismatch (gem-hunt 526815, found while checking F151). `#def-unity-dimensions` refers to four composite-scope routes (C-i/C-ii/C-iii/
