@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 0290d328ee8e61f913b364b507a304bf703285df80ec141bdda220c81ffc262e
+at: 2026-10-30T21:14:47Z
+store: asf
+act: recheck
+about: item:practica-todo-changelog-hygiene-ba4f
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: b21769e5+dirty
+criterion: 'A process label (PRACTICA line 72, 2026-04-28). The hygiene it names is now mechanism: items close by commit in the vsect ledger (INTENT I.3), CHANGELOG is the history layer, and doc/sop/git-hygiene.sop.md carries the commit discipline.'
+outcome: superseded

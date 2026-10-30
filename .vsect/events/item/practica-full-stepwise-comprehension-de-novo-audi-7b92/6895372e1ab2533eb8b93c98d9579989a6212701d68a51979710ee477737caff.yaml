@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 6895372e1ab2533eb8b93c98d9579989a6212701d68a51979710ee477737caff
+at: 2026-10-30T21:14:28Z
+store: asf
+act: recheck
+about: item:practica-full-stepwise-comprehension-de-novo-audi-7b92
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 96acba79+dirty
+criterion: A step name in the 2026-04-28 process list (PRACTICA line 58). No work stated. Comprehension measurement is now INTENT H.3.
+outcome: not-an-item

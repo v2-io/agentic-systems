@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4b1d2298e32ca1eccb079e42def7eda723a6909339c765a19ad553db0db124f4
+at: 2026-10-30T21:14:28Z
+store: asf
+act: recheck
+about: item:practica-empirical-experiments-analysis-623d
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 96acba79+dirty
+criterion: Area label (PRACTICA line 36), no work stated under it. Empirical work has its own home in empirica/ (the RUNS contract) and INTENT objective E; nothing here to carry.
+outcome: not-an-item

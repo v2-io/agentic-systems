@@ -3,9 +3,11 @@ kind: item
 provenance: imported
 source: TODO-big-picture.md:51
 section: TODO-big-picture.md — Surface the Forcing-Bound Spine; Stop Deflating Proven Exclusion Results › Work items
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:16:08Z by Claude Sonnet 5.5 (item rechecker, lane s1)
+owner: A.2
+restated: 'Read, result by result (not a grep tally), which load-bearing Findings state their contribution in the calibrated register (Cor A.1S.1''s Novelty Claim is the internal exemplar) and which flatten it to ''recognition; constituent theorems classical''; start with #result-certificate-existence:123 and #disc-stability-certificate:96. The denominator is the load-bearing results'' own Findings, since only one of nine impl-* segments has a Novelty Claim line. Verify per result before changing a posture, and keep the program-versus-bounded magnitude question with B.3''s thesis test (question does-asf-introduce-new-mathematical-machinery-or).'
 ---
 
 # W3 — per-result census; gates remaining canon register edits. A *read*, not a grep tally. Denominator = the `impl-*` chapter-conclusion layer + the eventual ful

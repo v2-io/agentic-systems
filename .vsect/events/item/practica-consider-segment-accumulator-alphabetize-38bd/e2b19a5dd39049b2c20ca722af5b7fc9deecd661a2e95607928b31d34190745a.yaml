@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: e2b19a5dd39049b2c20ca722af5b7fc9deecd661a2e95607928b31d34190745a
+at: 2026-10-30T21:14:47Z
+store: asf
+act: recheck
+about: item:practica-consider-segment-accumulator-alphabetize-38bd
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: b21769e5+dirty
+criterion: 'The mechanism went the other way: terminology/entries/<slug>.md is the source of truth (one YAML file per term, 176 entries) and bin/term render writes the alphabetized, thematically grouped LEXICON.md, instead of accumulating terms out of segments. Overtaken by bin/term, 4e070971 (2026-05-08).'
+outcome: superseded

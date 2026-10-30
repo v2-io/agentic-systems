@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 0a255bbbac3346aaa95c80178674787a39505d5a8f8b39a73e35f07470de66ee
+at: 2026-10-30T21:16:00Z
+store: asf
+act: recheck
+about: item:todo-big-picture-strengthen-before-soften-verify-per-case-d70e
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 05d458db+dirty
+criterion: A guard (line 45). Strengthen-before-soften is written in the always-loaded SOP (agents.sop.md 'Strengthen before softening') and global memory; the 'verify per case' rider is how W3 is to be run, carried in that item.
+outcome: not-an-item

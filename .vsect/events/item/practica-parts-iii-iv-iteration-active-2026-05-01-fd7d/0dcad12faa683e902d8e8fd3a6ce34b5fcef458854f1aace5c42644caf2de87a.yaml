@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 0dcad12faa683e902d8e8fd3a6ce34b5fcef458854f1aace5c42644caf2de87a
+at: 2026-10-30T21:15:01Z
+store: asf
+act: recheck
+about: item:practica-parts-iii-iv-iteration-active-2026-05-01-fd7d
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 21c2b117+dirty
+criterion: A status header ('active 2026-05-01') with a pointer to TODO.md section 'Parts III + IV active work' (line 341) and to msc/logogenic-encounter-2026-05-01/. The work it names (the 24 of 75 Gemini-auditor notes integrated, promotion candidates, new segment candidates) is carried line by line by that TODO section's own bullets, which are imported and judged separately. The header carries no work of its own and its 'active' label is 2026-05-01 vintage.
+outcome: not-an-item

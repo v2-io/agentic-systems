@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: e66fd23dcbfa1ddf7cd03edda6b5ba9a94732d613e04ed2e8d92083c84ae1b38
+at: 2026-10-30T21:16:00Z
+store: asf
+act: recheck
+about: item:todo-big-picture-reasoning-trail-the-2026-05-16-session-t-12cc
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 05d458db+dirty
+criterion: A provenance line (line 57), a pointer to a session that is not a document. History, not work.
+outcome: not-an-item

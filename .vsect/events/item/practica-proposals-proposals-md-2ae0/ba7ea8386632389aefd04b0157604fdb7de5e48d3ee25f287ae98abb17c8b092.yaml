@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: ba7ea8386632389aefd04b0157604fdb7de5e48d3ee25f287ae98abb17c8b092
+at: 2026-10-30T21:14:28Z
+store: asf
+act: recheck
+about: item:practica-proposals-proposals-md-2ae0
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 96acba79+dirty
+criterion: A bare link to PROPOSALS.md under PRACTICA's Theory area (line 10 at HEAD 2ec6ec58). Navigation, no work owed; PROPOSALS' own rows are imported and judged as their own items.
+outcome: not-an-item

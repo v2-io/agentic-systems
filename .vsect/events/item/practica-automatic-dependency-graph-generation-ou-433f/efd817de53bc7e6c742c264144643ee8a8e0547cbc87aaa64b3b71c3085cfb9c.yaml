@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: efd817de53bc7e6c742c264144643ee8a8e0547cbc87aaa64b3b71c3085cfb9c
+at: 2026-10-30T21:14:47Z
+store: asf
+act: recheck
+about: item:practica-automatic-dependency-graph-generation-ou-433f
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: b21769e5+dirty
+criterion: bin/lint-outline lints dependencies and writes a Graphviz graph (--graph; digraph at line 435). The commits are e3543952 'Add some outline dependency linting/checking & output dependency graph svg' and 70b3e1a1 'Add dependency diagrams to OUTLINE.md', both 2026-04-06, three weeks before this line was written (2026-04-28, never struck). Whether the graphs are regenerated on every build is a separate question that INTENT H.2 owns.
+outcome: landed

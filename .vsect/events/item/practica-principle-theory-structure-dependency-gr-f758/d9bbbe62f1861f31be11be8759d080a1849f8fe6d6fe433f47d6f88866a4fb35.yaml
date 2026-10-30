@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: d9bbbe62f1861f31be11be8759d080a1849f8fe6d6fe433f47d6f88866a4fb35
+at: 2026-10-30T21:14:28Z
+store: asf
+act: recheck
+about: item:practica-principle-theory-structure-dependency-gr-f758
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 96acba79+dirty
+criterion: 'Read PRACTICA.md lines 11-15 at HEAD 2ec6ec58: an area label over four links to the component OUTLINEs, each followed by the words ''Segment Refinement & Promotion''. No specific work is stated; the refinement and promotion work itself is carried by the objectives tree (INTENT A-C) and the per-segment records.'
+outcome: not-an-item

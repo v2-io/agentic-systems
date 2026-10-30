@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4fa733b2b84e78109b495bb74580333ef1d8043bcd8d22172200c7c5151d4be3
+at: 2026-10-30T21:14:28Z
+store: asf
+act: recheck
+about: item:practica-prior-adjacent-art-novelty-analysis-cita-fc2f
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 96acba79+dirty
+criterion: Area label (PRACTICA line 37), no work stated under it. The prior-art and citation work is carried by INTENT F.2/F.3 and the BIBLIOGRAPHY-TODO W-n items.
+outcome: not-an-item

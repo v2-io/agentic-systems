@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: f534599361605875e8819f7243725dc8d1c4c9383793680d78b8811c36e5a239
+at: 2026-10-30T21:14:29Z
+store: asf
+act: recheck
+about: item:practica-todo-proposals-work-8bf4
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 96acba79+dirty
+criterion: 'A step name in the 2026-04-28 process list (PRACTICA line 60): ''work the trackers''. The trackers are being replaced by the item ledger (INTENT I.3), so the step has no referent apart from the items themselves.'
+outcome: not-an-item

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 36bdd8e53e2511817fdd04725f4c431ea8cae0a00ea0a17d56e943000526a335
+at: 2026-10-30T21:14:47Z
+store: asf
+act: recheck
+about: item:practica-lexicon-regeneration-potentially-see-bel-65dd
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: b21769e5+dirty
+criterion: LEXICON.md opens 'Auto-generated from terminology/entries/ by bin/term render. Do not hand-edit.' bin/term landed 4e070971 (2026-05-08) and LEXICON was last re-rendered 67dcb238 (2026-10-30). Landed 2026-05-08, before the 'potentially' hedge was struck.
+outcome: landed

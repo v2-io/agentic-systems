@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 72c5b94b9a549555eacbee1a5e14d04754b6fd422cb838d5801aad80a6a8bde4
+at: 2026-10-30T21:14:47Z
+store: asf
+act: recheck
+about: item:practica-readme-regeneration-20f8
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: b21769e5+dirty
+criterion: bin/build-readme composes README.md and README-auditor.md from doc/readme/*.liquid and doc/readme/src partials (bin/build-readme lines 48-49), with 'bin/refresh-all --check' as the staleness gate. First commit b1c61a07, 2026-04-26. Landed before the line (2026-04-28).
+outcome: landed

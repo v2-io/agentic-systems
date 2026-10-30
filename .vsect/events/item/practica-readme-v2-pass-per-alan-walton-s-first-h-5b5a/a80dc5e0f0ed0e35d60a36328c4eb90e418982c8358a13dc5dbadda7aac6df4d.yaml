@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: a80dc5e0f0ed0e35d60a36328c4eb90e418982c8358a13dc5dbadda7aac6df4d
+at: 2026-10-30T21:15:12Z
+store: asf
+act: recheck
+about: item:practica-readme-v2-pass-per-alan-walton-s-first-h-5b5a
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 9796e5df+dirty
+criterion: A pointer line ('queued; detail in TODO.md'). TODO.md's section 'Surfaced from Alan's review' (lines 96-107) carries the actual findings as bullets (the unglossed variables, the gap-closing assumption not surfaced, the cycle-term on-ramp, the clinical About opening, the units of alpha, Deutsch), each imported and judged on its own. TODO.md line 119 records that the README rewrite itself landed.
+outcome: not-an-item

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4f55dda1de608a1a2260f1d6d6ac70c0b46fec639a733468360e4b413917ac97
+at: 2026-10-30T21:14:46Z
+store: asf
+act: recheck
+about: item:practica-revisit-automatic-segment-outline-normal-bce7
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: b21769e5+dirty
+criterion: 'Line 67, written 2026-04-28 (614c2bf4), says ''revisit'' an automatic segment-to-outline normalizer for types, tags and status. At HEAD 2ec6ec58 no normalizer exists: bin/lint-outline''s check 4 (stage consistency, lines 255-300) only reports frontmatter-vs-OUTLINE stage drift, warning-only. The idea is overtaken by INTENT H.2, which takes the stage ladder out of the outline display and asks that every OUTLINE row have a file or an honest mark; what the outline carries is now a spine decision (H.1/H.2), not a sync-tool question.'
+outcome: superseded

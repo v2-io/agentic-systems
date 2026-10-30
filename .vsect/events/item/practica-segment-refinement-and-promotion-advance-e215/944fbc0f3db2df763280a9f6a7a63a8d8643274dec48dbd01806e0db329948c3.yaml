@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 944fbc0f3db2df763280a9f6a7a63a8d8643274dec48dbd01806e0db329948c3
+at: 2026-10-30T21:14:29Z
+store: asf
+act: recheck
+about: item:practica-segment-refinement-and-promotion-advance-e215
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 96acba79+dirty
+criterion: 'A step name in the 2026-04-28 process list (PRACTICA line 63). Promotion is governed by format.sop.md; the stage ladder itself is under reconsideration (INTENT H.2: it leaves the outline display). Nothing owed here.'
+outcome: not-an-item

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: e839e5abf6faeafd0a5ba9a0912b0639a1ab5bc94ff0196b7d1dda96ac9db25a
+at: 2026-10-30T21:16:00Z
+store: asf
+act: recheck
+about: item:todo-big-picture-verify-the-load-bearing-fact-primary-sou-6b58
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 05d458db+dirty
+criterion: A guard (line 44) with the same content as the global primary-source-verification discipline and the SOP's own 'Trust neither the repo nor your training alone'. Nothing to track.
+outcome: not-an-item

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: e6ee81760f129307643776627cbee91f03c42a37ff68997acdd336b35ad6a424
+at: 2026-10-30T21:15:23Z
+store: asf
+act: recheck
+about: item:practica-historical-provenance-and-relic-cleanup-8286
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 9796e5df+dirty
+criterion: 'Checked the corpus at HEAD 2ec6ec58. Part I is already clean of TFT: 01-aat-core/src has one mention, a Working-Note line in deriv-recursive-update.md:230. The residue is Volume 4 and 3: 04-eli-core cites ''TFT TF-02'' as grounding in def-five-constitutive-factors.md:25 and :46 (body and Epistemic Status), in scope-eli.md and hyp-checkpoint-forking-failure-modes.md, and OUTLINE E2 is labeled ''TFT-grounded''. TF-02 is a theorem number in the superseded predecessor theory, whose only copy is ref/agentic-tft/, an internal scaffold the SOP says canon does not cite (canon cites canon and the published world). The right replacement is the AAT segment that now carries the claim (def-five-constitutive-factors already derives from #scope-agent-identity), not a footnote.'
+outcome: holds
+owner: F.3
+restated: Replace the predecessor-theory citations 'TFT TF-02' in Volume 4 (def-five-constitutive-factors.md:25 and :46, scope-eli.md, hyp-checkpoint-forking-failure-modes.md, OUTLINE E2) with the AAT segment that carries the claim, or delete them; also the 'TFT-grounded' title of obs-growth-vs-drift. Part I's one remaining TFT mention is a Working Note. The C.1 Volume 4 lane edits these segments now, so it may fold this in.

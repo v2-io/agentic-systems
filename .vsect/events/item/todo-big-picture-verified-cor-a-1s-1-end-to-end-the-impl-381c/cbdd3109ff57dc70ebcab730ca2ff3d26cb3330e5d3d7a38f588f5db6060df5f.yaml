@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: cbdd3109ff57dc70ebcab730ca2ff3d26cb3330e5d3d7a38f588f5db6060df5f
+at: 2026-10-30T21:16:00Z
+store: asf
+act: recheck
+about: item:todo-big-picture-verified-cor-a-1s-1-end-to-end-the-impl-381c
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 05d458db+dirty
+criterion: 'A list of May-2026 verification claims (line 59): Cor A.1S.1 end to end, the impl-layer canonical-home fact, the 16/24 counter-instance, the honest locus in #disc-stability-certificate. It is testimony from one session, not a recorded check. The standing of those segments is read from vsect''s recorded checks (I.4), not from this line; nothing is owed by it.'
+outcome: not-an-item

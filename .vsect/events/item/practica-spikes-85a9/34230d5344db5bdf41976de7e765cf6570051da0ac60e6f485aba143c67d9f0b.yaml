@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 34230d5344db5bdf41976de7e765cf6570051da0ac60e6f485aba143c67d9f0b
+at: 2026-10-30T21:14:29Z
+store: asf
+act: recheck
+about: item:practica-spikes-85a9
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 96acba79+dirty
+criterion: A step name in the 2026-04-28 process list (PRACTICA line 61). Spike process is doc/sop/spikes.sop.md; the live spikes are INTENT C.2.
+outcome: not-an-item

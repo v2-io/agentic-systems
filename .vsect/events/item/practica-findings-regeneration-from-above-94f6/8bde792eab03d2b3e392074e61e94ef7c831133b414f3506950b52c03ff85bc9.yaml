@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 8bde792eab03d2b3e392074e61e94ef7c831133b414f3506950b52c03ff85bc9
+at: 2026-10-30T21:14:47Z
+store: asf
+act: recheck
+about: item:practica-findings-regeneration-from-above-94f6
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: b21769e5+dirty
+criterion: bin/extract-findings generates FINDINGS.md from segment Findings sections (CLAUDE.md names it, and refresh-all runs it). First commit b1c61a07, 2026-04-26, two days before this line was written (2026-04-28). Landed and never struck.
+outcome: landed

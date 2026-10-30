@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 859430acb4c0b75118d57c55126e529ee35e3dc6251ae59104670cc83b516fdf
+at: 2026-10-30T21:15:01Z
+store: asf
+act: recheck
+about: item:practica-phase-2-semantic-index-queued-2026-05-01-2966
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 21c2b117+dirty
+criterion: 'The item proposes an ASF-local psql-18 + pgvector + ollama index, lifting memorata''s data layer, to drive a four-signal naming-target context map for the renaming agent. Two premises have gone. memorata-search now is the estate-wide hybrid (semantic and lexical) index and already returns ASF segments (checked: a query scoped to 01-aat-core returns def-adaptive-tempo.md); building a second index would parallel it. And the renaming cycle that wanted the context map was archived (2026-08-22). No pgvector code exists in the repo outside archived material. The same item also stands in TODO.md at line 322 under a heading, which the import did not carry.'
+outcome: superseded

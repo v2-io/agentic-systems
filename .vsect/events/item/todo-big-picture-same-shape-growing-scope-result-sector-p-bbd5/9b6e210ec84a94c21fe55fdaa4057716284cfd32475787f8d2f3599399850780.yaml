@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 9b6e210ec84a94c21fe55fdaa4057716284cfd32475787f8d2f3599399850780
+at: 2026-10-30T21:16:00Z
+store: asf
+act: recheck
+about: item:todo-big-picture-same-shape-growing-scope-result-sector-p-bbd5
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 05d458db+dirty
+criterion: A provenance line (line 58) listing three earlier landings (4172866, doc/audit-routing-instructions.md section 6, this file) as the lineage of the discipline. History, not work.
+outcome: not-an-item

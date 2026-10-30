@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 139ab5b41b1a15a2935dc9f7141182876f917c12c73d94112f38e9816ac1d12d
+at: 2026-10-30T21:15:12Z
+store: asf
+act: recheck
+about: item:practica-consider-modifying-updating-link-formatt-5884
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 9796e5df+dirty
+criterion: 'The link policy this asks to ''consider'' is now written: doc/sop/format.sop.md''s references table (lines 59-82) fixes the source form, scope and rendering of each reference kind, and bin/check-links gates doc-to-doc links. What stays open is the Obsidian-anchor form, which is FORMAT-TODO B6 ([[#^anchor]] alongside bare #slug), so this item restates B6 plus an unspecified ''tagging'' that the line never defines.'
+of: item:format-todo-b6-add-obsidian-anchor-cross-ref-form-in-8fbe
+outcome: duplicate

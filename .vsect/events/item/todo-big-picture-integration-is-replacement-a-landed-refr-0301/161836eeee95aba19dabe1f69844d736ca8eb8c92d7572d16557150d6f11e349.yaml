@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 161836eeee95aba19dabe1f69844d736ca8eb8c92d7572d16557150d6f11e349
+at: 2026-10-30T21:15:59Z
+store: asf
+act: recheck
+about: item:todo-big-picture-integration-is-replacement-a-landed-refr-0301
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 05d458db+dirty
+criterion: A guard (line 46). The discipline is written in the always-loaded SOP (doc/sop/agents.sop.md, 'Landing a strengthened result (integration is replacement)'), with its register-level application in the 2026-05-16 correction header; nothing separate to track.
+outcome: not-an-item

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 99d400c2dc51aec70b335b30441d89a715f3012e45959092316b3490c537f47e
+at: 2026-10-30T21:15:12Z
+store: asf
+act: recheck
+about: item:practica-footnote-and-citation-procedure-153b
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 9796e5df+dirty
+criterion: 'The citation half is decided and written: doc/sop/format.sop.md lines 84-88 (''Citation discipline (decided 2026-06-05)'', the strengthened hybrid rule), and what remains is migrating prose citations to formal cites, which is BIBLIOGRAPHY-TODO W-3 (held under F.2/F.3). The footnote half (sidenote versus footnote convention) is FORMAT-TODO B9, imported separately. Nothing here is a third piece of work.'
+of: item:bibliography-todo-w-3-segment-citation-migration-270-vol1-44ce
+outcome: duplicate

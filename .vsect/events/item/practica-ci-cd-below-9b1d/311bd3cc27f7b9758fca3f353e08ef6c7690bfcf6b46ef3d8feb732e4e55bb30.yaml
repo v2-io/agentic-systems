@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 311bd3cc27f7b9758fca3f353e08ef6c7690bfcf6b46ef3d8feb732e4e55bb30
+at: 2026-10-30T21:14:29Z
+store: asf
+act: recheck
+about: item:practica-ci-cd-below-9b1d
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 96acba79+dirty
+criterion: A cross-reference ('CI/CD (below)') to the CI/CD section at PRACTICA lines 66-76, whose seven checkboxes are judged as their own items.
+outcome: not-an-item

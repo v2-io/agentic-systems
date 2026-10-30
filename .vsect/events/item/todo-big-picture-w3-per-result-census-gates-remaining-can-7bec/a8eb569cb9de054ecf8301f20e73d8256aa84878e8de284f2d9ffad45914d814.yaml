@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: a8eb569cb9de054ecf8301f20e73d8256aa84878e8de284f2d9ffad45914d814
+at: 2026-10-30T21:16:08Z
+store: asf
+act: recheck
+about: item:todo-big-picture-w3-per-result-census-gates-remaining-can-7bec
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4f5912b3+dirty
+criterion: 'No census has been done, and the deflated register the item targets is still in canon at HEAD 2ec6ec58. #result-certificate-existence''s Findings Brief (line 119) says ''a theorem and not a vibe'' while its Novelty Claim (line 123) retreats to ''Claim recognition ... The theorem is classical (Lyapunov 1892); the contribution is the identification''. #disc-stability-certificate:96 still reads ''Claim recognition ... together with claim synthesis ... The constituent theorems are classical''. These are the two exemplars the plan named, and neither changed. The plan''s denominator is also thinner than it assumed: of the nine 01-aat-core impl-* segments only impl-causal-access carries a Novelty Claim line, so a census against ''the impl-* layer'' would find almost no register to calibrate and the read has to follow the Findings of the load-bearing results themselves. W4, the other half, landed 6653de6 (2026-05-16).'
+outcome: holds
+owner: A.2
+restated: 'Read, result by result (not a grep tally), which load-bearing Findings state their contribution in the calibrated register (Cor A.1S.1''s Novelty Claim is the internal exemplar) and which flatten it to ''recognition; constituent theorems classical''; start with #result-certificate-existence:123 and #disc-stability-certificate:96. The denominator is the load-bearing results'' own Findings, since only one of nine impl-* segments has a Novelty Claim line. Verify per result before changing a posture, and keep the program-versus-bounded magnitude question with B.3''s thesis test (question does-asf-introduce-new-mathematical-machinery-or).'

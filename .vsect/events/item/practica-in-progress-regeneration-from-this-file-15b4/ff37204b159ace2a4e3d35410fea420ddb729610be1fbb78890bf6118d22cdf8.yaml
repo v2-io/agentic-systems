@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: ff37204b159ace2a4e3d35410fea420ddb729610be1fbb78890bf6118d22cdf8
+at: 2026-10-30T21:14:47Z
+store: asf
+act: recheck
+about: item:practica-in-progress-regeneration-from-this-file-15b4
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: b21769e5+dirty
+criterion: 'The README''s progress section is generated: bin/extract-recent-progress reads CHANGELOG.md and writes doc/readme/src/_recent-progress.md (b1c61a07, 2026-04-26). Regenerating an in-progress view from PRACTICA, TODO and PROPOSALS has no referent once those trackers are replaced by the item ledger (INTENT I.3), where the in-progress view is ''vsect open''.'
+outcome: superseded

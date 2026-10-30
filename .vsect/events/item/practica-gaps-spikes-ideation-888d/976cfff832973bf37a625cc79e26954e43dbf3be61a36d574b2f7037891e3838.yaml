@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 976cfff832973bf37a625cc79e26954e43dbf3be61a36d574b2f7037891e3838
+at: 2026-10-30T21:14:28Z
+store: asf
+act: recheck
+about: item:practica-gaps-spikes-ideation-888d
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 96acba79+dirty
+criterion: Area label (PRACTICA line 39). Spikes are tracked in spikes/INDEX.md and the INTENT C.2 lanes; no specific work stated.
+outcome: not-an-item

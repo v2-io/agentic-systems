@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 336fbfea732b09a6a3fb52c43a04378d5f8c0365479f858736e2d54a1633f334
+at: 2026-10-30T21:14:28Z
+store: asf
+act: recheck
+about: item:practica-pedagogy-initially-needs-vision-plan-1588
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 96acba79+dirty
+criterion: Area label (PRACTICA line 38; written 2026-04-28). It says a vision and plan are needed but states neither. The pedagogy work now has a home in INTENT objective H (reading surface, comprehension measured on fresh readers) and the respectful-pedagogy discipline; nothing specific here to hold.
+outcome: not-an-item

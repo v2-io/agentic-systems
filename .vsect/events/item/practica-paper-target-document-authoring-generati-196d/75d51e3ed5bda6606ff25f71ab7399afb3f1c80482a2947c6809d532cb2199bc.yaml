@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 75d51e3ed5bda6606ff25f71ab7399afb3f1c80482a2947c6809d532cb2199bc
+at: 2026-10-30T21:15:01Z
+store: asf
+act: recheck
+about: item:practica-paper-target-document-authoring-generati-196d
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 21c2b117+dirty
+criterion: An area header (PRACTICA line 40) whose content is a pointer to FORMAT-TODO.md ('Active plan'); the mono/ pipeline it calls alive does exist (bin/build-monograph, mono/). FORMAT-TODO's thirteen items are imported and judged on their own, and INTENT H.2 owns whether the build artifacts stay.
+outcome: not-an-item

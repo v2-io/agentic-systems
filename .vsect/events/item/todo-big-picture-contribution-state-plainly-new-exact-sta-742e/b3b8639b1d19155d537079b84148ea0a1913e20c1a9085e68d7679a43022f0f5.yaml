@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: b3b8639b1d19155d537079b84148ea0a1913e20c1a9085e68d7679a43022f0f5
+at: 2026-10-30T21:15:59Z
+store: asf
+act: recheck
+about: item:todo-big-picture-contribution-state-plainly-new-exact-sta-742e
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 05d458db+dirty
+criterion: 'The register half of the plan''s ''two registers'' (TODO-big-picture line 33): how the contribution is to be stated. It is a principle for voice, and its companion ''Armor'' bullet was already closed by the pilot with the real claim carried by the question ''does-asf-introduce-new-mathematical-machinery-or'' (B.3). The work that applies the principle is W3, judged as its own item. The statement of contribution that W4 landed is in doc/readme/src/_position-and-lineage.md (6653de6, 2026-05-16).'
+outcome: not-an-item

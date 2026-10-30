@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 97b4095eabcfa1fb20859fd76c8c6a8bc57520146bb5a9fe619bad966ee959a8
+at: 2026-10-30T21:14:29Z
+store: asf
+act: recheck
+about: item:practica-drafting-outline-modification-repair-4997
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 96acba79+dirty
+criterion: A step name in the 2026-04-28 process list (PRACTICA line 62). No work stated. Outline work is INTENT H.1/H.2.
+outcome: not-an-item

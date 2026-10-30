@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4dc78ef43d8498daf6b1f7e9e900cee77cf912d1afe4497a30e9195ff1fbf2db
+at: 2026-10-30T21:15:01Z
+store: asf
+act: recheck
+about: item:practica-joseph-review-new-readme-outline-partial-9722
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 21c2b117+dirty
+criterion: 'Line 116, a gate on Joseph''s review of the new README outline and partials. The premise is gone: the README was rewritten and is generated from doc/readme/src partials (last commits 15d15f78 and 7b429bcc, 2026-10-30), and the effort''s standing orders lift gates on Joseph (INTENT preamble: ''resolve it with evidence''). INTENT A.2 now owns agreement between the README partials and the other headline surfaces.'
+outcome: stale

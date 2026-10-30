@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 7b2f6fc209b1ffd1eb4674e05ebb804fc148183f800a7b3c4449eccc44892cde
+at: 2026-10-30T21:15:01Z
+store: asf
+act: recheck
+about: item:practica-per-role-readme-rework-queued-2026-05-01-1c58
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 21c2b117+dirty
+criterion: 'Checked doc/readme and bin/build-readme at HEAD 2ec6ec58. The two-role pipeline this item would extend (README.md and README-auditor.md from shared partials, including a project-tree partial _structure.md and _auditor-instructions.md) landed 2026-04-26 (6389e4d5 scaffolding, b1c61a07 build). What the item adds is a README-voter role and migration of the naming SOPs'' instructions into partials, and the voting cycle that wanted it is closed: the naming-cycle tree was packed 2026-08-22. The remaining role has no consumer.'
+outcome: stale
