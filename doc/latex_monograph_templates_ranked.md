@@ -1,6 +1,6 @@
 # LaTeX Templates for Large, Complex Monographs
 
-**A Ranked Survey of Aesthetics, Usability, and Community Sentiment**
+**A Ranked Survey of Aesthetics, Usability, and Community Sentiment**  
 *Focus: math, philosophy, AI, and CS · Compiled May 2026*
 
 ---

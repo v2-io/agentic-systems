@@ -1,0 +1,50 @@
+# .md-pressignore — files md-press leaves alone (gitignore syntax).
+#
+# md-press honors this even when a file is named explicitly, so the commit
+# hook (bin/check-commit) does not ask for these to be reformatted, and a
+# whole-tree `md-press --fix` cannot touch them. Each group says why. A file
+# belongs here only if reformatting it would be wrong even though it renders
+# the same: a point-in-time record, a verbatim copy, or a generated file whose
+# source is where the fix goes. Live documents do not belong here; fix them.
+
+# Frozen archaeology: superseded material and the records of finished cycles.
+# The orientation (CLAUDE.md, "deliberately-frozen archaeology") names these.
+.archive/
+.integrated/
+.archived/
+.routing-trail/
+.gem-hunt-trail/
+LOG.md
+msc/reflections/
+msc/reflections-rowan-2025-12/
+releases/
+
+# Audit records: de-novo first-encounter reports and the per-cycle findings
+# written from them. They are what a reader said at the time, kept as said.
+audits/AUDIT-WORKING-*/
+audits/ADJUDICATION-WORKING-*/
+audits/aat-reboot-aux-supplemental/
+audits/audit-*-FINAL-*.md
+audits/audit-findings-*.md
+audits/pending-findings-*.md
+
+# Superseded segments (FORMAT: old-* segments are archaeology, exempt from
+# the segment gates).
+old-*.md
+
+# Pre-AAT and third-party-derived material.
+ref/agentic-tft/
+02-tst-core/lit-review/
+
+# Verbatim model outputs: survey answers, prompts as sent, quiz responses.
+empirica/glyph-sequence-perception/data/
+msc/quiz-responses/
+
+# Generated. Fix the source and regenerate (bin/refresh-all, bin/term render,
+# bin/build-monograph); refresh-all --check gates the first two.
+FINDINGS.md
+README.md
+README-auditor.md
+LEXICON.md
+CURRENT-VOL1.md
+CURRENT-VOL1-APPENDICES.md

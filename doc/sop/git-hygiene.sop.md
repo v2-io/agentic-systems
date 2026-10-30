@@ -1,8 +1,8 @@
 # Git / commit hygiene
 
 > [!note]
-> **Status:** authoritative (consolidates the project's commit-hygiene disciplines, previously sole-carried in project memory + scattered notes).
-> **Owns:** commit granularity + stating the batching plan first; the pre-spike commit seam; lint-gates-the-commit; pathspec discipline; and the two session-environment footguns (Bash in-place editors silently no-op; commit-message shell-quoting). The parallel-sweep *cadence* (agents edit, parent commits) is described in [`multi-agent.sop.md`](multi-agent.sop.md); its *granularity* rule lives here.
+> **Status:** authoritative (consolidates the project's commit-hygiene disciplines, previously sole-carried in project memory + scattered notes).  
+> **Owns:** commit granularity + stating the batching plan first; the pre-spike commit seam; lint-gates-the-commit; pathspec discipline; and the two session-environment footguns (Bash in-place editors silently no-op; commit-message shell-quoting). The parallel-sweep *cadence* (agents edit, parent commits) is described in [`multi-agent.sop.md`](multi-agent.sop.md); its *granularity* rule lives here.  
 > **See also:** [`multi-agent.sop.md`](multi-agent.sop.md) · [`spikes.sop.md`](spikes.sop.md) (the canon-modifying spikes the pre-spike commit isolates) · project memory `feedback_prune_completed_from_trackers` (what to fold into the commit you're already making).
 
 ## The through-line: a commit is a unit of attributable history

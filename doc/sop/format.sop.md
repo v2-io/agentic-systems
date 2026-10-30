@@ -582,15 +582,14 @@ AAT uses standard LaTeX math that renders in both GitHub and Obsidian.
 
 GitHub's math renderer is stricter than Obsidian's. To keep both working:
 
-- No space immediately after `$` or before closing `$`:
+- No space immediately after `$` or before closing `$`:  
   `$x^2$` not `$ x^2 $`
 - Display math delimiters `$$` must be on their own lines
 - Use `\begin{aligned}` inside `$$...$$` instead of `\begin{align}` (the latter is a top-level environment that conflicts with `$$` wrapping)
 - `\text{}` works in both for words inside math
 - `\operatorname{}` for multi-letter operators (e.g., `$\operatorname{argmin}$`)
 - **Vertical bars**: use `\vert` (not `|`) for single bars and `\Vert` (not `\|`) for double bars, everywhere in math — not just in tables. Raw `|` is ambiguous (conditional? delimiter? absolute value?) and breaks inside markdown table cells; `\|` has inconsistent rendering. For matched delimiters (absolute value, norms, set-builder notation), prefer `\lvert`/`\rvert` and `\lVert`/`\rVert` respectively
-- Subscripts/superscripts with multiple characters need braces:
-  `$x_{t+1}$` not `$x_t+1$`
+- Subscripts/superscripts with multiple characters need braces: `$x_{t+1}$` not `$x_t+1$`
 - Avoid raw `<` and `>` in math — use `\lt` and `\gt` (GitHub can interpret these as HTML tags, breaking the math span and corrupting everything after the `>`)
 - **Asterisks in inline math**: use `\ast` instead of bare `*` inside `$...$`. Markdown's italic/bold parser runs before the math renderer, so `$\eta^*$` can be parsed as `$\eta^` + italic start, destroying the expression. Write `$\eta^\ast$` or `$\eta^{\ast}$`. Display math (`$$...$$` on own lines) is unaffected
 - **Underscores and emphasis interference**: when multiple inline `$...$` spans on the same line contain `_` after a non-alphanumeric character (like `}`), GitHub's emphasis parser can match the `_` characters as italic delimiters *across* math spans, breaking all affected expressions. Fix: remove optional braces from single-character command arguments before `_` — write `$\hat P_\Sigma$` not `$\hat{P}_\Sigma$`, and `$\mathcal T_c$` not `$\mathcal{T}_c$`. The braces are optional for single-char arguments and removing them places an alpha character before `_`, which disables GFM emphasis. For nested commands like `$\hat{\mathcal{T}}_t$` where braces can't be removed, restructure the line so only one subscript-bearing expression appears per line. The linter's `--fix` mode handles the brace-removal cases automatically

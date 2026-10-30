@@ -1,8 +1,8 @@
 # Creating and extending SOPs — the `doc/sop/` convention
 
 > [!note]
-> **Status:** authoritative (the convention itself; the home is young and still filling in).
-> **Owns:** what an SOP is in this repo, how SOP files are named and how they branch, and how to create or extend one. The first SOP written — every other SOP inherits this convention.
+> **Status:** authoritative (the convention itself; the home is young and still filling in).  
+> **Owns:** what an SOP is in this repo, how SOP files are named and how they branch, and how to create or extend one. The first SOP written — every other SOP inherits this convention.  
 > **See also:** [`../../msc/sop-consolidation-design-2026-06-01.md`](../../msc/sop-consolidation-design-2026-06-01.md) (the inventory + migration plan this home executes) · `CLAUDE.md` (the auto-loaded disposition + index layer this home is the on-demand complement to).
 
 ## What an SOP is here — and what is not

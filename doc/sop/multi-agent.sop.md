@@ -1,8 +1,8 @@
 # Multi-agent work — orchestration patterns
 
 > [!note]
-> **Status:** authoritative (consolidates the project's multi-agent methods, previously sole-carried in project memory).
-> **Owns:** *how* to run multi-agent cycles in this repo — the cycle shapes (pilot-then-sweep, verification cadence, parallel sweep, consolidation-audit, voting, cluster reconciliation), the workflow-restatement gate, the two recurring subagent failure modes, and the operational footguns. The *register* you brief in is disposition and lives elsewhere (next section).
+> **Status:** authoritative (consolidates the project's multi-agent methods, previously sole-carried in project memory).  
+> **Owns:** *how* to run multi-agent cycles in this repo — the cycle shapes (pilot-then-sweep, verification cadence, parallel sweep, consolidation-audit, voting, cluster reconciliation), the workflow-restatement gate, the two recurring subagent failure modes, and the operational footguns. The *register* you brief in is disposition and lives elsewhere (next section).  
 > **See also:** `~/.claude/memory/collaboration/peer-voice.md` + project memory `feedback_peer_to_peer_voice_when_instructing_agents` (the delegation stance — auto-loaded, read before briefing) · [`git-hygiene.sop.md`](git-hygiene.sop.md) (commit granularity, which the sweep patterns lean on) · [`spikes.sop.md`](spikes.sop.md) · [`naming.sop.md`](naming.sop.md) (its cycle *is* the voting pattern).
 
 ## Before anything: the brief is a delegation, not a script
