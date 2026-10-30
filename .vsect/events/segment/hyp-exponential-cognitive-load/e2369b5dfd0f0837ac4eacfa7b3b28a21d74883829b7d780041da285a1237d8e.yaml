@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: e2369b5dfd0f0837ac4eacfa7b3b28a21d74883829b7d780041da285a1237d8e
+at: 2026-10-30T23:04:59Z
+store: asf
+act: correct
+about: segment:hyp-exponential-cognitive-load
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+corrects: ba1554f143871a94cf9ebc5bd62c20e114c24bcbd84ad00bff9f4471ae9abdc8
+text: 'Addition by the checker: run_analysis.sh''s output also reproduces README section 1''s other four estimate-fit variants (0.131, 0.121, 0.073 with exponential R2 0.842 below linear 0.877, 0.125) and the fix-message rates 6.8% vs 11.4%.'

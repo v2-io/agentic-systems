@@ -25,7 +25,7 @@ KRs **C.1** and **H.2** (`msc/inside-out-2026-10/INTENT.md`). These checks re-ru
 - outcome: confirmed
 - recheck: `python3 elapsed_time.py tst.log obsidian-linter.log ink.log`; the same with `git show 0fe3432c:02-tst-core/empirical-discontinuity/elapsed_time.py`; `./run_analysis.sh` on a copy of the toolkit
 
-Every cited number reproduces, sections (1)–(8). Sections (1)–(4) print identical numbers; twelve section-label lines differ, so "byte-identical output" holds for the numbers, not the bytes. `run_analysis.sh` exits 0, reproduces $\alpha = 0.118$ and writes its figure into a recreated `results/`. Write-up, "What holds".
+Every cited number reproduces, sections (1)–(8). Sections (1)–(4) print identical numbers; twelve section-label lines differ, so "byte-identical output" holds for the numbers, not the bytes. `run_analysis.sh` exits 0, reproduces $\alpha = 0.118$ and README §1's other four variants and fix-message rates, and writes its figure into a recreated `results/`. Write-up, "What holds".
 
 ## C2 (check)
 - target: segment:hyp-exponential-cognitive-load
@@ -85,7 +85,7 @@ In obsidian-linter the null reaches the observed $a$ in 0.3–2% of draws, and t
 - outcome: narrowed
 - recheck: section header line (`261 with squash-merge subjects` for ink); `tst-check-2.py` block (D) "no squash-merge-subject commits" and block (F)
 
-In ink, 261 of 664 non-merge commits, and 100 of 493 pairs, are squash merges. Without them ink's working medians are 5.8, 7.0, 12.5, 11.1, 6.2 (no rise across the top bins). Its exponent is 0.29 $[0.04, 0.60]$ and its capped Spearman 0.16–0.19. The changeset-size lines slope is 0.19 $[0.05, 0.34]$, so that conclusion stands. obsidian-linter is unaffected. Write-up M4.
+In ink, 261 of 664 non-merge commits, and 100 of 493 pairs, are squash merges. Without them ink's working medians are 5.8, 7.0, 12.5, 11.1, 6.2: they rise to $d$ = 3–5, and the top two bins' block-bootstrap intervals ($[3.9, 28.1]$, $[1.7, 26.7]$) are too wide to say whether the rise continues. Its exponent is 0.29 $[0.04, 0.60]$ and its capped Spearman 0.16–0.19. The changeset-size lines slope is 0.19 $[0.05, 0.34]$, so that conclusion stands. obsidian-linter is unaffected. Write-up M4.
 
 ## C7 (check)
 - target: segment:hyp-exponential-cognitive-load

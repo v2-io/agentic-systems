@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: ff5dcfcc19ac679459ba804e18e3fabcb920a08880749966695f2ec685a46a85
+at: 2026-10-30T23:04:59Z
+store: asf
+act: correct
+about: segment:hyp-exponential-cognitive-load
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+corrects: 8accb648577d37f7f036034c820e296bab608ab56257260e78c42faf63b91fcd
+text: 'Correction by the checker: ''no rise across the top bins'' read point medians without intervals. Under the author-day block bootstrap, ink without squash merges rises from 5.8 [4.2, 7.7] to 12.5 [7.3, 18.4] by d = 3-5, and the top two bins ([3.9, 28.1], [1.7, 26.7]) are too wide to say whether it continues. The outcome stays narrowed (squash contamination, exponent 0.29 [0.04, 0.60]); item 1''s ''rise in all three'' holds for ink only to d = 5.'
