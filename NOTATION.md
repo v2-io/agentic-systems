@@ -8,21 +8,7 @@ type: reference
 Symbols used in Adaptation and Actuation Theory, collected as a convenience index.
 
 > [!warning]
-> **This file is a lagging index, not the arbiter (drift caveat).** It is
-> hand-maintained, and the live theory drifts away from it: spike
-> findings and new/rewritten segments routinely change a quantity's
-> structure without updating this file. **It is not authoritative.** When
-> this index and a segment's own definition/derivation disagree, the
-> segment is ground truth and this file is the thing that is stale. Use
-> it to *locate* a symbol, never to *settle* what it means or how it
-> decomposes — settle that from the segment, re-derived. (Worked
-> instance: this file glosses ρ as a single "mismatch injection rate"; an
-> independent recheck established ρ² decomposes additively via the exact
-> `#result-mismatch-decomposition`, and that a multiplicative
-> `ρ = ρ_external·f(𝓜)·g(π)` is type-incorrect — the segment, not this
-> gloss, is the truth. See `doc/sop/spikes.sop.md` §0 and CHANGELOG
-> 2026-05-18.) A structural fix — auto-deriving this file from segment
-> definitions so it cannot drift — is queued in `TODO.md`.
+> **This file is a lagging index, not the arbiter (drift caveat).** It is hand-maintained, and the live theory drifts away from it: spike findings and new/rewritten segments routinely change a quantity's structure without updating this file. **It is not authoritative.** When this index and a segment's own definition/derivation disagree, the segment is ground truth and this file is the thing that is stale. Use it to *locate* a symbol, never to *settle* what it means or how it decomposes — settle that from the segment, re-derived. (Worked instance: this file glosses ρ as a single "mismatch injection rate"; an independent recheck established ρ² decomposes additively via the exact `#result-mismatch-decomposition`, and that a multiplicative `ρ = ρ_external·f(𝓜)·g(π)` is type-incorrect — the segment, not this gloss, is the truth. See `doc/sop/spikes.sop.md` §0 and CHANGELOG 2026-05-18.) A structural fix — auto-deriving this file from segment definitions so it cannot drift — is queued in `TODO.md`.
 
 Notation conventions are adopted from TFT (`.archive/old-tf-00-notation-conventions.md`) with extensions for AAT's purposeful-agent machinery.
 
@@ -46,7 +32,7 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 
 | Symbol | Type | Meaning |
 |--------|------|---------|
-| $\Omega$ | State space | Environment state (unobservable totality) |
+| $\Omega$ | State space | Environment state space; as a world, the modeler's declared state process ( #def-agent-environment) |
 | $\Omega_t$ | State | Environment state at time $t$ |
 | $\mathcal{O}$ | Set | Observation space |
 | $\mathcal{A}$ | Set | Action space |
@@ -55,6 +41,11 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 | $h$ | Function | Observation function: $o_t = h(\Omega_t, a_{t-1}, \varepsilon_t)$ |
 | $T$ | Distribution | Transition: $\Omega_{t+1} \sim T(\cdot \mid \Omega_t, a_t)$ |
 | $\varepsilon_t$ | Random variable | Observation noise |
+| $p_h(\cdot \mid \Omega_t, a_{t-1})$ | Kernel | Observation kernel: the conditional law of $o_t$ that $h$ and $\varepsilon_t$ induce; the learnable content of the channel ( #def-observation-function) |
+| $\theta = (\theta_T, \theta_h)$ | Random kernel pair | The environment's **law**: transition kernel and observation kernel, random under $\pi_0$ where the analysis leaves them open. Invariant along the run by definition; anything that varies is state ( #scope-adaptive-system). Unsubscripted $\theta$ in a segment's own model family or strategy edges is local to that segment; `#der-mood-timescale`'s $\theta_t$ is a drifting regime, which is slow state under this cut |
+| $\pi_0$ | Measure | The modeler's reference measure on $(\Omega_1, \theta)$: the class of worlds an analysis ranges over; adaptive-scope membership depends on it only through its null sets |
+| $S_t = (\Omega_t, \theta)$ | Random pair | Typed epistemic target: where things are and how things work ( #scope-adaptive-system) |
+| $F_t$ | Sequence | Future stream after $t$: $(a_t, o_{t+1}, a_{t+1}, o_{t+2}, \ldots)$ |
 | $H(\cdot)$ | Functional | Shannon entropy |
 | $I(\cdot; \cdot)$ | Functional | Mutual information |
 
@@ -255,7 +246,7 @@ Load-bearing assumptions that appear locally but are referenced by multiple resu
 
 | ID | Assumption | Used by |
 |----|-----------|---------|
-| GA-1 | **Fresh noise.** $\varepsilon_t$ is conditionally independent of $\mathcal C_{t-1}$ given $(\Omega_t, a_{t-1})$. | #result-mismatch-decomposition |
+| GA-1 | **Fresh noise.** $\varepsilon_t$ is conditionally independent of $\mathcal C_{t-1}$ given $(S_t, a_{t-1})$, with $S_t = (\Omega_t, \theta)$. When the observation law is known this is the state-only form, conditioning on $(\Omega_t, a_{t-1})$. When it is not, the state-only form has no determinate truth value: two descriptions of the same observation process can satisfy and violate it ( #result-mismatch-decomposition). Unknown *transition* law alone, with a known channel and noise independent of everything else, never violates the state-only form. | #result-mismatch-decomposition, #deriv-mismatch-budget-attribution |
 | GA-2 | **Bounded disturbance (Model D).** $\lVert w(t)\rVert \leq \rho$ for finite $\rho$. Deterministic worst-case bound; no distributional assumption. | #result-sector-condition-stability, #result-persistence-condition |
 | GA-2S | **Stochastic disturbance (Model S).** $w(t)$ is zero-mean with $\mathbb{E}[\lVert w(t)\rVert^2] = \sigma_w^2$. Alternative to GA-2 for environments with noise rather than drift. | #result-sector-condition-stability (Prop A.1S), #result-persistence-condition, #result-adversarial-exponent-regimes |
 | GA-3 | **Sector condition (continuous).** $\delta^T F(\mathcal{T}, \delta) \geq \alpha\lVert\delta\rVert^2$ for $\lVert\delta\rVert \leq R$. Derived from the gain principle when the update rule has directional fidelity (B1); for gradient-based agents, equivalent to local strong convexity of the loss. Remains an independent assumption for non-gradient agents. The discrete-time analog (DA2') adds a Lipschitz upper bound $\lVert F_d(\delta)\rVert \leq c_{\max}\lVert\delta\rVert$ — strictly stronger than an inner-product upper bound, required because the discrete contraction involves $\lVert F_d\rVert^2$. See #der-gain-sector-bridge, #deriv-discrete-sector-condition. | #result-sector-condition-stability, #deriv-discrete-sector-condition |

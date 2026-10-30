@@ -69,7 +69,7 @@ Opened from audit-731548 B-3's routing (PROPOSALS SP-30) after Joseph's missing-
 
 | Spike | Location | Status |
 |-------|----------|--------|
-| **`epistemic-target-ontology/`** | [`epistemic-target-ontology/00-spike.md`](epistemic-target-ontology/00-spike.md) | **ACTIVE WORKSHOP — no canon edits.** Push-agents deposit `01-ga1-verification.md` / `02-typed-predicate.md` / `03-comprehension-lift-scout.md`. Reshapes (does not replace) PROPOSALS SP-30; canon landing gated on the GA-1 verification + Joseph's root-ontology call. |
+| **`epistemic-target-ontology/`** | [`epistemic-target-ontology/00-spike.md`](epistemic-target-ontology/00-spike.md) | **Root ontology landed 2026-10-30** in `#scope-adaptive-system` (typed target, future-stream predicate, housing result), `#def-agent-environment`, `#def-action-transition`, `#def-observation-function`, `#result-mismatch-decomposition` (GA-1 on $S_t$, the twin) and NOTATION's GA-1 row; integrator's checks in `05-integration-checks.md`. Still live here and unlanded: the four-term decomposition (02 §6, unverified), the comprehension-lift scout (03), ascent gating (04, unverified), the §8 isomorphism checks. |
 
 ### 2026-06-17 Agency death by capture — the input leg of factor (iii)
 

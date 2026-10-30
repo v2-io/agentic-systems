@@ -39,7 +39,7 @@ $$\mu_i(t+1) = \mu_i(t) + w_i(t), \quad w_i(t) \sim \mathcal{N}(0, q), \quad q =
 
 *Mapping: exact.*
 
-$\Omega_t = (\mu_1(t), \ldots, \mu_4(t))$ — not directly observable. $\mathcal{A} = \{1, 2, 3, 4\}$. Residual uncertainty persists: means drift continuously, rewards are noisy, and only one arm is observed per step.
+$\Omega_t = (\mu_1(t), \ldots, \mu_4(t))$ — not directly observable. Because the means drift, they are state, not law, under the invariance cut of #scope-adaptive-system; the law is the drift structure ($q$, $\sigma^2$, the Gaussian random-walk form), which the example fixes. $\mathcal{A} = \{1, 2, 3, 4\}$. The adaptive scope holds at every $t$, with a standing warrant: each mean keeps moving, and pulling its arm reveals something about where it is now. (In the stationary variant the means do not drift; they are then law, and the warrant is transient.)
 
 ### Causal Structure ( #post-causal-structure) + CIY ( #def-causal-information-yield)
 

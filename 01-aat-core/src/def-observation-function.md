@@ -12,7 +12,7 @@ stage: deps-verified
 
 The perception channel is formalized as an **observation function** $h$ that produces each observation as a (possibly noisy) function of the current environment state, the agent's prior action, and a perceptual-noise term $\varepsilon_t$. Observations live in an observation space $\mathcal{O}$ — the raw contact with reality, the *aisthesis* the agent has to work with. The action-dependence in the conditioning is optional — when absent, observations reduce to pure functions of environment state plus noise — but allowing it captures *active perception*: what the agent sees can depend on where it looked or what it just did.
 
-Two epistemic commitments are constitutive. First, $h$ is *lossy* — it maps from the high-dimensional, inaccessible environment state $\Omega_t$ to a strictly lower-information observation. This information loss is what later forces the agent to maintain an internal model ( #form-agent-model) rather than simply reading off the world. Second, the agent knows neither $h$ nor the noise distribution exactly. These are not empirical assertions about real-world observation channels but scope-defining choices that delineate the partial-observability setting AAT operates within ( #def-agent-environment).
+Two epistemic conditions are typical, and neither is required on its own. First, $h$ is usually *lossy*: the observation carries less than the current state, and when the state persists the agent does better carrying a model of what it cannot see ( #form-agent-model) than reading each observation in isolation. A lossless channel ($o_t = \Omega_t$, as in a fully observed decision process) is allowed. Second, the agent may not know the observation law. What observations can teach it about that law is the conditional law of $o_t$ given state and action, the *observation kernel*, and not the pair ($h$, distribution of $\varepsilon_t$), because many such pairs induce the same kernel. Whatever of the kernel the analysis leaves open is the observation component $\theta_h$ of the environment's law. What the framework requires is that the state or the law, or both, leave something for the world to reveal ( #scope-adaptive-system); lossiness and observation-law opacity are two of the ways that happens.
 
 ## Formal Expression
 
@@ -23,22 +23,26 @@ The **observation space** $\mathcal{O}$ is the set of possible observations. Eac
 $$o_t = h(\Omega_t, a_{t-1}, \varepsilon_t)$$
 
 where:
-- $h$ is the observation function (unknown to the agent)
+- $h$ is the observation function (possibly unknown to the agent)
 - $\Omega_t$ is the environment state at time $t$
 - $a_{t-1}$ is the agent's prior action (observations may depend on what the agent did)
 - $\varepsilon_t$ represents noise or limits of perception
 
+*[Definition (observation-kernel)]*
+
+The **observation kernel** $p_h(\cdot \mid \omega, a)$ is the conditional law of $o_t$ given $\Omega_t = \omega$ and $a_{t-1} = a$. It is the learnable content of the channel: two pairs ($h$, distribution of $\varepsilon_t$) that induce the same kernel produce the same observations under every policy, so no history can tell them apart.
+
 *[Definition (epistemic opacity)]*
 
-The agent knows neither $h$ nor the distribution of $\varepsilon_t$ exactly.
+The agent may not know the observation kernel exactly. Its unknown content is the observation component $\theta_h$ of the environment's law, random under the modeler's reference measure ( #scope-adaptive-system). Epistemic opacity is not required of every system in scope: a Kalman filter handed its observation model is inside on the strength of its hidden state.
 
 ## Epistemic Status
 
-This is *definitional*. The observation function $h$ is a modeling device that captures the information-loss boundary established in #def-agent-environment. The dependence on $a_{t-1}$ is optional — when absent, the function reduces to $h(\Omega_t, \varepsilon_t)$. The claim that the agent does not know $h$ or the noise distribution is constitutive of the partial-observability setting, not an empirical assertion.
+This is *definitional*. The observation function $h$ is a modeling device that captures the information-loss boundary established in #def-agent-environment. The dependence on $a_{t-1}$ is optional — when absent, the function reduces to $h(\Omega_t, \varepsilon_t)$. Observation-law opacity is one typed component of the uncertainty the adaptive scope requires (state, transition law, observation law), not a requirement on its own. That the kernel, rather than the pair ($h$, distribution of $\varepsilon_t$), is what observations determine is immediate from the definition of the kernel.
 
 ## Discussion
 
-**Lossiness is the key property.** The observation function $h$ maps from $\Omega_t$ (high-dimensional, inaccessible) to $\mathcal{O}$ (what the agent actually receives). Information is destroyed in this mapping. This is what forces the agent to maintain a model ( #form-agent-model) rather than simply reading off the environment state.
+**Lossiness is the common case, not a requirement.** Usually $h$ destroys information about the current state, and when that state persists the agent does better carrying a model ( #form-agent-model) than reading off each observation. A lossless channel removes the need to filter but not the need to learn the law, so a fully observed learner with an unknown transition law is still in scope ( #scope-adaptive-system).
 
 **Action-dependence.** The inclusion of $a_{t-1}$ allows the observation function to capture active perception: what the agent sees may depend on where it looked. This is relevant in software ( #obs-software-epistemic-properties — cross-component reference, see `02-tst-core/`), where observation quality is partly under agent control.
 
@@ -60,14 +64,14 @@ Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo audi
 
 #### 3. Follow-up items
 
-- **Is the epistemic-opacity clause too strong for known-noise instantiations?** Multiple substrates flagged that "the agent knows neither $h$ nor the distribution of $\varepsilon_t$ exactly" is *stronger* than mere partial observability: a Kalman filter typically assumes a *known* observation matrix and noise covariance $R$ while still maintaining a model because $\Omega_t$ is not directly observed. If AAT strictly demands unknown $h$/noise, classical Kalman "is actually a special case where the agent has cheated by being handed external knowledge by a human designer." Resolution paths offered: distinguish the *analyst's* known model from the *agent's* residual uncertainty, or treat known-model cases as validating limiting cases. Several converge on a single watch-target: see how `#emp-update-gain` / `#example-kalman` handle the noise distribution (Claude, AUDIT-WORKING-526815; Claude, AUDIT-WORKING-742613; Gemini, AUDIT-WORKING-829314; Gemini, AUDIT-WORKING-849201). A candidate scope-clarification (constitutive *inaccessibility of $\Omega$* vs the stronger *unknown observation law*).
+- *Resolved 2026-10-30: the clause now says the agent* may *not know the kernel; the scope requires only that state or law leave something to reveal, so a known-noise Kalman filter is inside without violating anything.* **Is the epistemic-opacity clause too strong for known-noise instantiations?** Multiple substrates flagged that "the agent knows neither $h$ nor the distribution of $\varepsilon_t$ exactly" is *stronger* than mere partial observability: a Kalman filter typically assumes a *known* observation matrix and noise covariance $R$ while still maintaining a model because $\Omega_t$ is not directly observed. If AAT strictly demands unknown $h$/noise, classical Kalman "is actually a special case where the agent has cheated by being handed external knowledge by a human designer." Resolution paths offered: distinguish the *analyst's* known model from the *agent's* residual uncertainty, or treat known-model cases as validating limiting cases. Several converge on a single watch-target: see how `#emp-update-gain` / `#example-kalman` handle the noise distribution (Claude, AUDIT-WORKING-526815; Claude, AUDIT-WORKING-742613; Gemini, AUDIT-WORKING-829314; Gemini, AUDIT-WORKING-849201). A candidate scope-clarification (constitutive *inaccessibility of $\Omega$* vs the stronger *unknown observation law*).
 - **Does the $a_{t-1}$ argument get cashed in, or is it vestigial?** The active-perception dependence is set up here; watch whether downstream CIY / exploration / orient-cascade segments *use* the $a_{t-1}$ argument of $h$ structurally or merely gesture at it (Claude, AUDIT-WORKING-471203; Claude, AUDIT-WORKING-472913). If it is never used, the argument is decorative.
-- **A constitutive-opacity *triad* could be named as such.** Info-loss boundary (seg 01) + transition opacity (seg 02) + epistemic opacity (here) form a three-claim chain, each named in its own segment "without the integration paragraph that names the *triad as a structural commitment*." A future pass could lift a one-paragraph statement of the triad (Claude, AUDIT-WORKING-471203).
+- *Superseded 2026-10-30: the three are now the typed anatomy of one condition, the adaptive scope (state, transition law, observation law), rather than three separate constitutive demands.* **A constitutive-opacity *triad* could be named as such.** Info-loss boundary (seg 01) + transition opacity (seg 02) + epistemic opacity (here) form a three-claim chain, each named in its own segment "without the integration paragraph that names the *triad as a structural commitment*." A future pass could lift a one-paragraph statement of the triad (Claude, AUDIT-WORKING-471203).
 
 #### 4. Readers often ask / wonder
 
 - **How does the agent separate noise $\varepsilon_t$ from real environmental drift, without knowing $h$?** "Differentiating environmental drift from perceptual noise seems like an ill-posed problem" (Gemini, AUDIT-WORKING-193847); relatedly, "if $h$ is unknown, how does the agent ever bootstrap its initial model? Does it rely on evolutionary priors, or a blank slate?" (Gemini, AUDIT-WORKING-829314).
-- **Why is lossiness "key"?** The Discussion asserts lossiness is the key property but states *why* only via the forward-ref to `#form-agent-model`; "a reader who doesn't follow the cross-reference might wonder 'so what?'" — a one-sentence preview ("this loss is why the agent must maintain a model — it cannot simply read off the environment state") was suggested (Claude, AUDIT-WORKING-963715).
+- *Resolved 2026-10-30: lossiness is no longer called key; Discussion now says it is the common case and gives the reason (a persisting state).* **Why is lossiness "key"?** The Discussion asserts lossiness is the key property but states *why* only via the forward-ref to `#form-agent-model`; "a reader who doesn't follow the cross-reference might wonder 'so what?'" — a one-sentence preview ("this loss is why the agent must maintain a model — it cannot simply read off the environment state") was suggested (Claude, AUDIT-WORKING-963715).
 - **Does active perception entangle $T$ and $h$?** "If I turn my head, did I change the environment ($T$) or just my observation function ($h$)?" — the framework pushes head-turning into $T$ (the neck state changes in $\Omega$), yet the explicit $a_{t-1}$ argument lets $h$ be modulated by action *without* passing through $\Omega$. A natural reader puzzle about where the $T$/$h$ boundary sits (Gemini, AUDIT-WORKING-193847).
 
 #### 5. Candidate figures

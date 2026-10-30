@@ -40,7 +40,7 @@ The agent tracks scalar state $x_t$ and chooses sensor mode $a_t \in \{L, H\}$:
 
 *Mapping: exact.*
 
-$\Omega_t = x_t$ is partially observed via noisy channel. $\mathcal{A} = \{L, H\}$ is non-empty and causally affects observation quality. Residual uncertainty persists due to process and sensor noise.
+$\Omega_t = x_t$ is partially observed via a noisy channel, and the law ($q$, $r_L$, $r_H$, the random-walk form) is known, so the typed target is $S_t = x_t$: uncertainty of the state type. Because the state is a random walk, what is seen later still bears on it, so the future stream carries positive information about $x_t$ at every $t$ under either sensor mode (item (b) of #scope-adaptive-system with $A = C = 1$). The posterior variance converges to a positive steady state, so the warrant is standing. $\mathcal{A} = \{L, H\}$ is non-empty and causally affects observation quality.
 
 ### Causal Structure ( #post-causal-structure) + CIY ( #def-causal-information-yield)
 

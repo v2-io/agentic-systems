@@ -3,7 +3,7 @@ slug: adaptive-system
 schema_version: 1
 term: adaptive system
 name: Adaptive system
-brief: Feedback loop + mismatch correction under uncertainty.
+brief: A system whose world can still reveal something it does not yet know about the environment's state or law.
 layer: framing-vocabulary
 status: canon
 tags: [agent_classes]
@@ -15,9 +15,6 @@ aliases: []
 do_not_confuse: []
 ---
 
-The minimal class in the AAT agent spectrum: a system with a persistent feedback loop that corrects mismatch under uncertainty. No explicit goal structure is required at this level — the adaptive cycle (prolepsis → aisthesis → aporia →
-epistrophe → praxis) is enough to characterize membership.
+The broadest class AAT analyzes: a system whose world can still show it something it does not yet know, about where things are (the environment's state) or about how things work (the environment's law). No goal structure is required at this level, and no action either: passive observers are adaptive systems, and for them the cycle's praxis phase is trivial. A Kalman filter and a tabular reinforcement learner are adaptive systems for opposite reasons. The filter knows the law and tracks a hidden state; the learner reads its state exactly and learns the law. A fully observed world with a known law, deterministic or stochastic, is not an adaptive system's world: nothing in it remains to be learned.
 
-Scope-defined in
-[`#scope-adaptive-system`](../../01-aat-core/src/scope-adaptive-system.md);
-this is the Part I boundary.
+Scope-defined in [`#scope-adaptive-system`](../../01-aat-core/src/scope-adaptive-system.md); this is the Part I boundary.

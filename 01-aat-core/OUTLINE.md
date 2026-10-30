@@ -22,9 +22,9 @@
 | --- | ---------- | --- | -------------------------------------------------------------------- | --------------------------------------------------------- | --------------- |
 | I   | Definition |     | [#def-agent-environment](src/def-agent-environment.md)               | Agent-environment boundary                                | deps-verified   |
 | I   | Definition |     | [#def-action-transition](src/def-action-transition.md)               | Actions affect environment                                | deps-verified   |
-| I   | Definition |     | [#def-observation-function](src/def-observation-function.md)         | Lossy, noisy observations                                 | deps-verified   |
+| I   | Definition |     | [#def-observation-function](src/def-observation-function.md)         | Observations and the observation kernel                   | deps-verified   |
 | I   | Definition |     | [#def-chronica](src/def-chronica.md)                                 | Complete interaction history                              | deps-verified   |
-| I   | Scope      |     | [#scope-adaptive-system](src/scope-adaptive-system.md)               | Broadest AAT scope: observe under uncertainty             | claims-verified |
+| I   | Scope      |     | [#scope-adaptive-system](src/scope-adaptive-system.md)               | Broadest scope: the world can still reveal state or law   | draft           |
 | I   | Scope      |     | [#scope-agency](src/scope-agency.md)                                 | Narrows to action with Pearl-level-2 contrast             | claims-verified |
 | I   | Postulate  |     | [#post-causal-structure](src/post-causal-structure.md)               | Irreducible causal structure                              | deps-verified   |
 
@@ -80,7 +80,7 @@
 
 ***Scope lattice.** Part II's results sit at different points in a stacked lattice of scope conditions, not a single uniform scope. Reading inward from the broadest:*
 
-*1. **Adaptive scope** ( #scope-adaptive-system): observation under uncertainty. Part I machinery applies here without further restriction.*
+*1. **Adaptive scope** ( #scope-adaptive-system): the world can still reveal something about its state or its law. Part I machinery applies here without further restriction.*
 
 *2. **Agency scope** ( #scope-agency): adaptive + at least binary action choice + at least one action with Pearl-level-2 causal contrast. Part II's definitional architecture — $X_t = (M_t, G_t)$, $G_t = (O_t, \Sigma_t)$, the agent spectrum — is already non-vacuous here.*
 

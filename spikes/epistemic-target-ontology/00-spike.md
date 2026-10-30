@@ -1,6 +1,6 @@
 # Spike: The Typed Epistemic-Target Ontology — state / law / chance / compute — and the Comprehension Lift
 
-*Opened 2026-07-04, from the Joseph + Fable-lead session that routed audit 731548. Status: **active workshop** — no canon edits from this folder yet; the one load-bearing new mathematical claim (§4) is gated on independent verification. This file is the durable record of where the thinking stands; numbered sibling files are deposited by delegated push-agents (see §10). Not FORMAT-governed, but file-wide conventions apply (LaTeX math, one-logical-line paragraphs).*
+*Opened 2026-07-04, from the Joseph + Fable-lead session that routed audit 731548. Status: **root ontology landed 2026-10-30** in `#scope-adaptive-system`, `#def-agent-environment`, `#def-action-transition`, `#def-observation-function`, `#result-mismatch-decomposition` and NOTATION (GA-1), with the scope predicate in a future-stream form rather than §3's $H(S_t \mid \mathcal C_t) \gt 0$ (reasons in `05-integration-checks.md`); this folder is now the reasoning trail for those, and live only for the items §10 still lists as unlanded. This file is the durable record of where the thinking stands; numbered sibling files are deposited by delegated push-agents (see §10). Not FORMAT-governed, but file-wide conventions apply (LaTeX math, one-logical-line paragraphs).*
 
 ## 1. Origin and intent
 

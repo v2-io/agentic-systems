@@ -78,20 +78,6 @@
 
 ## Theory and naming — need real thought
 
-### SP-30 — adopt the typed epistemic target $S_t=(\Omega_t,\theta)$, or keep state-only $\Omega$?
-
-*Since the 2026-07-07 census:* Unchanged since census: spike untouched since 2026-07-04; the 2026-07-14/15 cycle did not move it; SP-30 still "Open — needs Joseph." Census's claim that the gating claim is verified confirmed firsthand (commit 82c9bcc, 01-ga1-verification.md).
-
-**What.** Root-ontology call: give law-content $\theta$ (transition/observation-map parameters — "how things work") its own named slot alongside state $\Omega_t$ ("where things are"), i.e. $S_t=(\Omega_t,\theta)$ — or keep state-only $\Omega$ with SP-30's original totality reading.
-
-**Context.** Audit 731548 B-3 found `#scope-adaptive-system` falsely excludes standard RL. Chasing your "we're leaving out a noun" instinct produced the typed ontology; the gating claim is **verified** (2026-07-04, `82c9bcc`): under state-only $\Omega$, unknown observation-law makes GA-1 *indeterminate* (observationally-equivalent twin), and no housing of $\theta_h$ preserves both the identity and the labels (two-horn no-go). The typed repair restores both; the totality reading survives as its corollary. Every segment that meets $\theta$ currently houses it ad hoc, and they disagree.
-
-**Options.** (1) Adopt $S_t=(\Omega_t,\theta)$ — one scope predicate $H(S_t\mid\mathcal C_t)\gt 0$, typed ignorance (state/law/chance/compute), ratifies the bandit's silent move. (2) Totality reading only (SP-30 as drafted) — smaller edit, leaves GA-1's housing dependence unnamed. (3) Status quo — accept the indeterminacy.
-
-**Lead rec.** None offered — genuinely yours; the package was built for you to decide from, and the math now favors (1).
-
-**Pointer.** `spikes/epistemic-target-ontology/00-spike.md` (+4 push files); PROPOSALS.md §SP-30.
-
 ### C5 — land the intelligence-empathy convergence legs in canon, at what tier, and both?
 
 *Since the 2026-07-07 census:* Unchanged since census: addendum untouched since 2026-07-04 (a75c2ef); no intelligence-empathy segment in 03/04; TODO C5 item still open. This brief adds the lead-rec the census lacked.

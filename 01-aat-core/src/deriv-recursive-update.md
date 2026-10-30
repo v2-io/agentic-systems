@@ -7,15 +7,16 @@ depends:
   - form-event-driven-dynamics
   - post-causal-structure
   - scope-adaptive-system
+  - def-agent-environment
   - def-observation-function
 stage: claims-verified
 ---
 
 # Derivation: Recursive Update — Uniqueness Derivation
 
-Appendix derivation backing #der-recursive-update. The claim being established is *uniqueness*: under three constraints — arrow of time, partial observability, and state completeness — the recursive form $M_{\tau^+} = f(M_{\tau^-}, e_\tau)$ is the only update form realizable, not merely one consistent option. The structure is an elimination argument over the universe of information potentially accessible at event time $\tau$: the environment state, the full chronica, all prior model states, the current event $e_\tau$, and future events.
+Appendix derivation backing #der-recursive-update. The claim being established is *uniqueness*: under three constraints — arrow of time, mediated access, and state completeness — the recursive form $M_{\tau^+} = f(M_{\tau^-}, e_\tau)$ is the only update form realizable, not merely one consistent option. The structure is an elimination argument over the universe of information potentially accessible at event time $\tau$: the environment state, the full chronica, all prior model states, the current event $e_\tau$, and future events.
 
-The three constraints do different kinds of work. **C1 (arrow of time, from #post-causal-structure)** rules out dependence on future events: in a classical universe such information is simply not accessible, and predictions about the future, however accurate, are internal computations belonging to $M_{\tau^-}$, not future information. **C2 (partial observability, from #scope-adaptive-system and #def-observation-function)** rules out direct access to $\Omega_\tau$ except through the lossy observation channel $e_\tau$. **C3 (state completeness, from #form-agent-model)** compresses all prior-past information — the full chronica and every earlier model state — into $M_{\tau^-}$, because by construction $M$ is the agent's complete internal state and any information available to the update but not in $M$ would mean $M$ was misspecified. After all three eliminations only $(M_{\tau^-}, e_\tau)$ remains in the dependency set. A measure-theoretic version via the Doob–Dynkin lemma — restricting the agent's sigma-algebra to $\sigma(M_{\tau^-}, e_\tau)$ — gives a cleaner technical proof.
+The three constraints do different kinds of work. **C1 (arrow of time, from #post-causal-structure)** rules out dependence on future events: in a classical universe such information is simply not accessible, and predictions about the future, however accurate, are internal computations belonging to $M_{\tau^-}$, not future information. **C2 (mediated access, from #def-agent-environment and #def-observation-function)** rules out access to $\Omega_\tau$ except through the observation channel $e_\tau$. **C3 (state completeness, from #form-agent-model)** compresses all prior-past information — the full chronica and every earlier model state — into $M_{\tau^-}$, because by construction $M$ is the agent's complete internal state and any information available to the update but not in $M$ would mean $M$ was misspecified. After all three eliminations only $(M_{\tau^-}, e_\tau)$ remains in the dependency set. A measure-theoretic version via the Doob–Dynkin lemma — restricting the agent's sigma-algebra to $\sigma(M_{\tau^-}, e_\tau)$ — gives a cleaner technical proof.
 
 The derivation then mounts seven adversarial attacks to test whether the result really holds. Simultaneous events are absorbed by treating the bundle as a single $e_\tau$ (form preserves). Continuous environmental coupling is genuinely outside the event-driven formulation — but the analogous result reached by the same three-constraint argument in continuous time is the state-space representation $\dot{M} = g(M, u)$ from classical control theory, so the underlying structure survives. The objection that C3 is circular — anything not in $M$ gets absorbed into $M$ by definition — is acknowledged as the deepest objection, and the derivation is explicit about it: the real content is an *analytical commitment* that by defining $M$ as complete one commits to Markovian analysis, which then makes #def-model-sufficiency the right quality metric. Shared state, external randomness, time-dependence, and agents that store full history each reduce to the recursive form by appropriate enlargement of the model space or interpretation of $f$.
 
@@ -45,11 +46,11 @@ $$M_{\tau^+} \text{ cannot depend on } \{e_{\tau'}\}_{\tau' \gt \tau}$$
 
 This is a physical constraint — the most primitive one. In a classical universe, information from the future is simply not available. Even if the agent can *predict* future events, those predictions are part of $M_{\tau^-}$ (they are internal computations, not future information).
 
-**Constraint 2 — Partial observability ( #scope-adaptive-system).** The agent cannot access $\Omega_\tau$ directly. Its only interface with the environment is through the event $e_\tau$, which is a lossy function of $\Omega_\tau$ (via #def-observation-function):
+**Constraint 2 — Mediated access ( #def-agent-environment).** The agent cannot access $\Omega_\tau$ except through the event $e_\tau$, which is a function of $\Omega_\tau$ through the observation channel (via #def-observation-function), usually a lossy one:
 
 $$M_{\tau^+} \text{ cannot depend on } \Omega_\tau \text{ except through } e_\tau$$
 
-This is a scope constraint. If the agent could access $\Omega$ directly, the residual uncertainty condition in #scope-adaptive-system would be trivially violable.
+This is the information-loss boundary of #def-agent-environment: the observation channel is the agent's only interface with the environment. It does not require the channel to be lossy. If $e_\tau$ reveals $\Omega_\tau$ exactly, the update still depends on the environment only through $e_\tau$, and the agent can remain in the adaptive scope through what it does not know about the law ( #scope-adaptive-system).
 
 **Constraint 3 — State completeness ( #form-agent-model).** $M_{\tau^-}$ is the agent's *complete* internal state just before event $e_\tau$. There is no information about the agent's past that is available to the update mechanism but not encoded in $M_{\tau^-}$:
 
@@ -74,11 +75,13 @@ We characterize the accessible information by eliminating what is not accessible
 **(i) Eliminate future events.** By C1 (arrow of time), $\{e_{\tau'}\}_{\tau' \gt \tau}$ is not accessible.
 
 After this elimination, the candidate dependency set is:
+
 $$\{\Omega_\tau,\; \mathcal{C}_{\tau^-},\; \{M_{\tau'}\}_{\tau' \leq \tau^-},\; e_\tau\}$$
 
-**(ii) Eliminate direct environment access.** By C2 (partial observability), the agent cannot access $\Omega_\tau$ except through the event $e_\tau$. Any information from $\Omega_\tau$ that reaches the agent does so through $e_\tau$ — already in the dependency set.
+**(ii) Eliminate direct environment access.** By C2 (mediated access), the agent cannot access $\Omega_\tau$ except through the event $e_\tau$. Any information from $\Omega_\tau$ that reaches the agent does so through $e_\tau$ — already in the dependency set.
 
 After this elimination:
+
 $$\{\mathcal{C}_{\tau^-},\; \{M_{\tau'}\}_{\tau' \leq \tau^-},\; e_\tau\}$$
 
 **(iii) Reduce past information to $M_{\tau^-}$.** By C3 (state completeness), $M_{\tau^-}$ is the agent's complete internal state. Every element of $\mathcal C_{\tau^-}$ and every prior model state $M_{\tau'}$ ($\tau' \lt \tau^-$) that could influence the update can do so *only through* its effect on $M_{\tau^-}$. The agent's internal state evolves through a sequence of updates; the cumulative effect of all prior events is exactly $M_{\tau^-}$. The raw events that produced this state are no longer separately available — they were "consumed" by the update mechanism and their information (to the extent it was retained) is now encoded in $M_{\tau^-}$.
@@ -86,9 +89,11 @@ $$\{\mathcal{C}_{\tau^-},\; \{M_{\tau'}\}_{\tau' \leq \tau^-},\; e_\tau\}$$
 Could the agent maintain a separate log of raw events outside of $M$? It could — but that log *is part of $M$*. Whatever information the agent retains in any form — model parameters, cached data, raw event buffers, metadata — is by definition part of its complete internal state $M_{\tau^-}$. If something is available to the update mechanism and not in $M_{\tau^-}$, then $M_{\tau^-}$ was not the complete state — contradicting C3.
 
 After this elimination:
+
 $$\{M_{\tau^-},\; e_\tau\}$$
 
 Therefore:
+
 $$M_{\tau^+} = F(M_{\tau^-}, e_\tau) \equiv f(M_{\tau^-}, e_\tau)$$
 
 This is the unique form: no information beyond $(M_{\tau^-}, e_\tau)$ is accessible under the three constraints, so no update form depending on anything else is realizable. $\square$
@@ -162,7 +167,7 @@ An agent with $M_{\tau^-} \supseteq \mathcal C_{\tau^-}$ is entirely consistent.
 | Property | Source | Strength |
 |---|---|---|
 | Constraint C1 (arrow of time: update depends on $\tau^-$, not future events) | Physical law — not a formulation choice | Postulate (physical) |
-| Constraint C2 (partial observability: update depends on $e_\tau$, not raw $\Omega_\tau$) | Scope definition of AAT | Postulate (scope-defining) |
+| Constraint C2 (mediated access: update depends on $e_\tau$, not raw $\Omega_\tau$) | Scope definition of AAT | Postulate (scope-defining) |
 | Constraint C3 (state completeness: $M_{\tau^-}$ summarizes the agent's relevant past) | Analytical commitment — the definition of $M$ as complete | Definition |
 | Recursive form $M_\tau = f(M_{\tau^-}, e_\tau)$ | C1 + C2 + C3 | Proved (unique form compatible with the three constraints) |
 | Future-dependent updates eliminated | C1 alone | Derived (direct consequence) |
@@ -181,7 +186,7 @@ The result is correct but partly definitional. The three constraints have differ
 | Constraint | Character | Can it be violated? |
 |------------|-----------|---------------------|
 | C1 (arrow of time) | Physical law | Not in a classical universe |
-| C2 (partial observability) | Scope definition | Only by leaving AAT's scope |
+| C2 (mediated access) | Scope definition | Only by leaving AAT's scope |
 | C3 (state completeness) | Analytical commitment | Not without redefining $M$ |
 
 C1 and C2 do genuine eliminative work — they rule out update forms that depend on future events or on raw $\Omega$. These are non-trivial constraints.
