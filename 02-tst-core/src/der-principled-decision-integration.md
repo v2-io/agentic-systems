@@ -44,7 +44,7 @@ Substituting the proportional relationships from #hyp-conceptual-alignment, #emp
 
 $$E[T \mid C] = t_0(C) + \sum_{i} \lambda(F_i) \cdot \left[ \frac{\alpha \cdot h(\text{disc}(F_i \mid C))}{\text{alignment}(C)} + \beta \cdot \lvert\text{cs}(F_i \mid C)\rvert \cdot g(\text{prox}(F_i \mid C)) \right]$$
 
-where $\alpha, \beta$ are empirical proportionality constants, $h$ and $g$ encode the cost relationships, and $\text{disc}$, $\text{cs}$, $\text{prox}$ are the discontinuity count, changeset size, and proximity for feature $F_i$ under choice $C$. The one measurement of these forms, elapsed time between commits, finds cost rising sublinearly in counted crossings ( #hyp-exponential-cognitive-load) and sublinearly in lines changed ( #emp-changeset-size-principle). Neither the exponential $h$ nor the linear $\lvert\text{cs}\rvert$ term is supported at that granularity.
+where $\alpha, \beta$ are empirical proportionality constants, $h$ and $g$ encode the cost relationships, and $\text{disc}$, $\text{cs}$, $\text{prox}$ are the discontinuity count, changeset size, and proximity for feature $F_i$ under choice $C$. The one measurement of these forms, elapsed time between commits, finds no compounding in counted crossings ( #hyp-exponential-cognitive-load) and cost rising sublinearly in lines changed ( #emp-changeset-size-principle). Neither the exponential $h$ nor the linear $\lvert\text{cs}\rvert$ term is supported at that granularity.
 
 ## Epistemic Status
 

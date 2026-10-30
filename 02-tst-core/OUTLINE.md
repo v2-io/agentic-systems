@@ -78,7 +78,7 @@ channel machinery.
 Structural mechanics of code that govern implementation cost. Internal arc:
 conceptual-alignment is the upstream determinant (code structure matching the domain model reduces comprehension time); atomic-changeset is the observable trace of an implementation decision; size-principle gives the first-order proportionality between changeset size and implementation time;
 discontinuity-distance hierarchy and proximity-principle add the structural-
-correction term (scattered changes are harder than concentrated ones at constant size); exponential-cognitive-load is the candidate multiplicative form, not derived; measured on counted file/directory crossings the cost rises sublinearly, so compounding, if it exists, depends on the dependency structure among the changes, which is untested.
+correction term (scattered changes are harder than concentrated ones at constant size); exponential-cognitive-load is the candidate multiplicative form, not derived; measured on counted file/directory crossings the cost shows no compounding (a pure exponential is rejected in the largest of three histories and not distinguished from a sublinear power law in the other two), so compounding, if it exists, depends on the dependency structure among the changes, which is untested.
 The chapter pairs with Ch.2: that chapter develops the time *decomposition*;
 this chapter develops the structural *mechanics* that determine the times.
 -->

@@ -212,6 +212,6 @@ where each component sums the $\nu^{(k)} \cdot \eta^{(k)\ast}$ products across c
 - The strategy DAG instantiation is thin — real developer plans are often implicit, partially formed, and revised continuously. Whether AAT's explicit DAG formalism applies without modification to implicit human planning is an open question. For AI agents with explicit planning steps, the mapping is more direct.
 - The distinction between "exploration" and "interventional probe" actions can be blurry. Reading code does not modify $\Omega_t$ and is purely exploratory. Running tests does modify $\Omega_t$ temporarily (process state) and is interventional. But making a speculative code change to see if it compiles is both environment-modifying and exploratory. The classification is useful but not a partition.
 
-*(Source: TST-via-TFT `via-tft/mapping.md` in the `temporal-software-theory` repository, "The Agent-Environment Coupling," "The Mismatch Signal," "The Update Gain.")*
+*(Source: TST-via-TFT `via-tft/mapping.md` in the `v2-io/tst` repository, "The Agent-Environment Coupling," "The Mismatch Signal," "The Update Gain.")*
 
 - **Migration note (2026-05-09 GUC rename):** Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. AI developer-agents (logogenic/LLM-based) were Class 2 (fully merged); they are now Class 3 (Coupled). Human developer-agents as Class 1 are unchanged in number (Class 1 = Separated). Removed at `candidate` stage per FORMAT.md Gate 4.

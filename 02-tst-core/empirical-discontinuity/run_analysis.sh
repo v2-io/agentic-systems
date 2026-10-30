@@ -1,43 +1,29 @@
 #!/bin/bash
+# Reproduces README §1 from the saved dataset in data/ (229 commits of ~/src/_core/tst, 2025-08-25..29).
+# data/ is never overwritten: re-mining today's history yields different commits and cannot reproduce it.
+#
+# Usage: ./run_analysis.sh [<repo>]
+#   With <repo>, also mines that repository's history into rerun/ (the original miner, formula-based time).
+#   The elapsed-time test (README §2) runs on git log dumps: see elapsed_time.py's header.
 
-# Simple script to run complete discontinuity analysis
-
-echo "==================================="
-echo "Empirical Discontinuity Analysis"
-echo "==================================="
-
-# Check if running from correct directory
+set -e
 if [ ! -f "analyze_git_history.py" ]; then
-    echo "Error: Please run this script from the empirical-discontinuity directory"
+    echo "Error: run this script from the empirical-discontinuity directory"
     exit 1
 fi
 
-# Create output directories if they don't exist
-mkdir -p data results
+mkdir -p results   # analyze_outliers.py writes its figure here; results/ and rerun/ are not tracked
 
-# Step 1: Analyze git history
-echo ""
-echo "Step 1: Analyzing git history..."
-echo "---------------------------------"
-python analyze_git_history.py --repo .. --max-commits 500 --output data
+echo "Step 1: the original multi-form fit against commit_time_estimate (reads data/analysis.pkl)"
+python3 analyze_outliers.py
 
-# Check if analysis succeeded
-if [ $? -ne 0 ]; then
-    echo "Error: Git history analysis failed"
-    exit 1
+echo
+echo "Step 2: the same fit under other time formulas (README §1)"
+python3 reproduce_estimate_fit.py data/commits.json
+
+if [ -n "$1" ]; then
+    echo
+    echo "Step 3: mining $1 into rerun/"
+    python3 analyze_git_history.py --repo "$1" --max-commits 500 --output rerun
+    python3 reproduce_estimate_fit.py rerun/commits.json
 fi
-
-# Step 2: The original multi-form fit (time here is a formula; see README.md section 1)
-echo ""
-echo "Step 2: Fitting forms against commit_time_estimate..."
-echo "-----------------------------------------------------"
-python analyze_outliers.py
-
-# Step 3: What that fit measures
-echo ""
-echo "Step 3: Reproducing the fit under other time formulas..."
-echo "--------------------------------------------------------"
-python reproduce_estimate_fit.py data/commits.json
-
-echo ""
-echo "For the elapsed-time test, dump git histories as in elapsed_time.py's header and run it on them."

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: bc9c0f50ad197c6a7ad0dae724323a0e4897158ba20f900c787fdaac423bfc02
+at: 2026-10-30T22:31:22Z
+store: asf
+act: revise
+about: segment:hyp-exponential-cognitive-load
+actor:
+  name: Claude Opus 5.5 (TST lane round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 1206de55160b3deb7bd702f6a4f5028e797d3d386ea05e172d206705b929e2e5
+own-version: f232242c3bf884f33e3ed3a5d3fcc8366f6202cb72b592a68fa64eb8fcaa65a0
+record: 02-tst-core/src/hyp-exponential-cognitive-load.md

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: e2fbc9b08c98c5eab47a28b3c4c53a442888d2cb0393ce4a07b7f06f29884d0b
+at: 2026-10-30T22:31:22Z
+store: asf
+act: revise
+about: segment:obs-software-epistemic-properties
+actor:
+  name: Claude Opus 5.5 (TST lane round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 2e032b8f5fab142cef36ea913fe7c8dc22f6242dc74c90e4ab380bbc3a46e613
+own-version: 397eca9f14c75b70d3baed91b86e56973273cb782280ba62beb8080e223f6c87
+record: 02-tst-core/src/obs-software-epistemic-properties.md

@@ -133,4 +133,4 @@ This is an empirical research program. Its outcome would strengthen or weaken th
 - The frequency-asymmetry observation (point 3 under "What remains") is the most promising causal identification strategy, because it survives common-cause confounding. It is related to Granger causality (temporal precedence + predictive power), which has known limitations but at least provides a falsifiable test.
 - The connection between this segment and #scope-edge-update-causal-validity in AAT is worth noting: AAT's strategy-edge updates face the same observational-vs-interventional tension. The resolution there (regime-indexed interpretation with A/B/C classification) may be informative for the git case — different commits may fall into different causal-identification regimes.
 
-*(Source: TST-via-TFT `via-tft/causal-extensions.md` in the `temporal-software-theory` repository, "Causal Discovery from Git History," "Interventional Reasoning," "Causal Inference for Change Prediction.")*
+*(Source: TST-via-TFT `via-tft/causal-extensions.md` in the `v2-io/tst` repository, "Causal Discovery from Git History," "Interventional Reasoning," "Causal Inference for Change Prediction.")*

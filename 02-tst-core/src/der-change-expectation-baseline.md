@@ -9,7 +9,7 @@ stage: draft
 
 # Derived: Change Expectation Baseline
 
-Absent specific information about a software system's future, the uninformed median baseline for remaining feature count equals the observed past feature count. This is not a heuristic — it is the mathematical consequence of maximum ignorance under Jeffreys' prior, and equally, at large age, of any unknown constant termination hazard whose prior neither rules out arbitrarily low hazards nor gives them infinite weight. Under proper informative priors with finite first moment the *expected* count is the prediction; the uninformed baseline gives a *median* prediction (the Pareto(1) distribution that falls out of Jeffreys has undefined mean). The baseline preserves accountability: any deviation from $\hat{n}_{\text{future}} = n_{\text{past}}$ requires information that justifies it.
+Absent specific information about a software system's future, the uninformed median baseline for remaining feature count equals the observed past feature count. This is not a heuristic — it is the mathematical consequence of maximum ignorance under Jeffreys' prior, and equally, at large age, of any unknown constant termination hazard whose prior density at zero hazard is finite and positive. Under proper informative priors with finite first moment the *expected* count is the prediction; the uninformed baseline gives a *median* prediction (the Pareto(1) distribution that falls out of Jeffreys has undefined mean). The baseline preserves accountability: any deviation from $\hat{n}_{\text{future}} = n_{\text{past}}$ requires information that justifies it.
 
 ## Formal Expression
 
@@ -19,13 +19,15 @@ Absent specific information about a software system's future, the uninformed med
 
 $$\pi(T) \propto \frac{1}{T}$$
 
-**Derivation.** After observing survival to age $t_0$ (or equivalently, $n_{\text{past}}$ features), Bayesian update gives:
+**Derivation.** The system is observed at age $t_0$ (or equivalently, after $n_{\text{past}}$ features), at a moment carrying no information about where in its lifetime it falls: the Copernican likelihood $p(t_0 \mid T) = 1/T$ for $T \gt t_0$. Bayesian update gives:
 
-$$\pi(T \mid T \gt t_0) = \frac{t_0}{T^2}, \quad T \gt t_0$$
+$$\pi(T \mid t_0) = \frac{t_0}{T^2}, \quad T \gt t_0$$
+
+The likelihood is needed. Conditioning the improper prior on survival alone, $T \gt t_0$, leaves a density proportional to $1/T$ on $(t_0, \infty)$, which does not normalize and has no median.
 
 This is a Pareto distribution with shape parameter $\alpha = 1$. The **median** remaining lifetime equals the current age:
 
-$$\text{median}[T - t_0 \mid T \gt t_0] = t_0$$
+$$\text{median}[T - t_0 \mid t_0] = t_0$$
 
 Mapping to feature counts under approximately uniform feature arrival rate:
 
@@ -49,7 +51,7 @@ $$\text{median}[T - t_0 \mid T \gt t_0] \sim (2^{1/a} - 1)\, t_0 .$$
 
 The case $a = 1$ is a prior density that is finite and positive at zero hazard, $0 \lt f(0) \lt \infty$. Every such prior gives median remaining age equal to current age asymptotically, the same Pareto(1) tail as the Jeffreys derivation. The exponential prior $f(k) = b\,e^{-bk}$ gives it at every age: $S(t) = b/(b+t)$ and the median remaining age is exactly $t_0 + b$. A prior that vanishes at zero hazard ($a \gt 1$) predicts a shorter future, $(2^{1/a} - 1)\,t_0$, and one that diverges there ($a \lt 1$) predicts a longer one. For a prior that vanishes at zero hazard faster than any power, such as a lognormal, median remaining age grows more slowly than age.
 
-So $\hat n_{\text{future}} = n_{\text{past}}$, under the same uniform-feature-rate mapping, follows from a weaker ignorance assumption than Jeffreys': only that arbitrarily low hazards are neither ruled out nor given infinite weight. The exponent $a$ is the single thing an informed analyst would need to know to move the baseline's multiplier. The qualitative mechanism, a Lindy effect from uncertainty over a constant hazard, is Ord's (2023, "The Lindy Effect," arXiv:2308.09045); the asymptotic form and the dependence on $a$ are stated here.
+So $\hat n_{\text{future}} = n_{\text{past}}$, under the same uniform-feature-rate mapping, follows from a different ignorance assumption than Jeffreys', and one that can be checked: only that the prior density over the hazard is finite and positive at zero hazard. It also needs no Copernican likelihood; survival to $t_0$ is the whole observation. The exponent $a$ is the single thing an informed analyst would need to know to move the baseline's multiplier. The qualitative mechanism, a Lindy effect from uncertainty over a constant hazard, is Ord's (2023, "The Lindy Effect," arXiv:2308.09045); the asymptotic form and the dependence on $a$ are stated here.
 
 **With additional information $I$, the baseline serves as the prior for Bayesian updating:**
 

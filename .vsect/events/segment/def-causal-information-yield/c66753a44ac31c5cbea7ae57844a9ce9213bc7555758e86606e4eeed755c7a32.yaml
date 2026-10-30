@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: c66753a44ac31c5cbea7ae57844a9ce9213bc7555758e86606e4eeed755c7a32
+at: 2026-10-30T22:31:23Z
+store: asf
+act: revise
+about: segment:def-causal-information-yield
+actor:
+  name: Claude Opus 5.5 (TST lane round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 02c8b7fecb7f6ccbccc7507e07156ddb9b8e7ce4b3b3142dca77142a6fee81a0
+own-version: aafeacbbb79b6c8fa83a38fc5b85f2b38b0aad97f0ccfe80798d0a554c5e5c35
+record: 01-aat-core/src/def-causal-information-yield.md

@@ -10,6 +10,8 @@ depends:
   - result-persistence-condition
   - der-deliberation-cost
   - result-structural-adaptation-necessity
+  - hyp-communication-gain
+  - der-team-persistence
 stage: draft
 ---
 
@@ -165,6 +167,23 @@ From #result-structural-adaptation-necessity, structural adaptation is indicated
 2. Estimate post-switch expected mismatch as $\Vert\delta\Vert_{\text{new}} \approx \rho / \alpha'$ where $\alpha'$ is the sector bound under the candidate new model class.
 3. Estimate transition cost $C_{\text{switch}}$: knowledge loss, retraining time ($\Delta\tau_{\text{switch}}$), and accumulated mismatch during transition ($\rho \cdot \Delta\tau_{\text{switch}}$).
 4. Switch when: $(\Vert\delta\Vert_{\text{floor}} - \Vert\delta\Vert_{\text{new}}) \cdot T_{\text{horizon}} \gt C_{\text{switch}}$.
+
+In a team or an ensemble, read a mismatch floor as structural only after the cheaper multi-agent remedies have been tried and the residual pattern has survived them: recalibrating trust in sources, routing queries away from failing members, improving channels. Residuals correlated across members point to a limitation they share; residuals confined to some members point to those members ( #der-team-persistence).
+
+## Multi-Agent Quantities
+
+Agent $i$ tracks, for each source $j$, the inputs to the communication gain of #hyp-communication-gain and the team quantities of #der-team-persistence:
+
+| Quantity | Role in AAT | Estimator |
+|----------|-------------|-----------|
+| $U_{o,ji}$ | Channel noise in the communication gain | Message latency and the variance the channel adds to $j$'s report, from channel calibration |
+| $U_{\text{src},j} + U_{\text{align},ji}$ | Source-quality and teleological-unity uncertainty | Variance of $j$'s past reports against later ground truth, minus $\hat U_{o,ji}$, floored at zero; for probabilistic reports, a running Brier or log-loss score |
+| $V_{\text{disagree}}$ | Disagreement energy | Members' predictions on a common set of queries |
+| $\Delta\mathcal T_i^{\text{cost}}(j)$ | Coordination cost | $i$'s direct-adaptation tempo with and without the channel to $j$ |
+
+Residuals alone do not separate $U_{\text{src}}$ from $U_{\text{align}}$: miscalibration and strategic distortion can leave the same residual variance. Separating them needs evidence about the direction of $j$'s errors relative to $j$'s own interests. Where that is unavailable, the sum is what enters the gain.
+
+Two procedures follow from the same segments. An update that would be costly if wrong, from a source whose reliability is low or poorly known, waits for agreement from other sources: the risk-asymmetric trust of #hyp-communication-gain applied as a quorum. Agreement counts only between sources that do not share an upstream source; otherwise the quorum counts one source several times ( #deriv-tempo-additivity). And query actions are logged apart from actions on the world, since their information yield and cost differ ( #def-causal-information-yield).
 
 ## Estimator Uncertainty Guidance
 

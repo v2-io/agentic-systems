@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 8ce6e16a2606472971e52a383f25e2b65e02c8d656ff798574359e8dcd8c8739
+at: 2026-10-30T22:31:22Z
+store: asf
+act: revise
+about: segment:der-change-expectation-baseline
+actor:
+  name: Claude Opus 5.5 (TST lane round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: dbad31b2f6c64b32456bbed3f568c30c49eb4f02ff94c979176501cbf9312b77
+own-version: 036d0fb1b0d0e344e269d28ead06fbc9632131a78a915e1a170fc835802a7f19
+record: 02-tst-core/src/der-change-expectation-baseline.md

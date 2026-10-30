@@ -136,4 +136,4 @@ This narrow definition is load-bearing. The claim is NOT "all code quality is go
 - The claim that "rushed changes degrade $Q$" is doing important work in the vicious cycle but is itself unformalized. Is it always true? A skilled developer under time pressure may produce lower-quality code, but an AI agent under time pressure might not — it has no fatigue, no shortcuts-from-stress. The vicious cycle may be more human-specific than the formalism suggests.
 - The multi-agent dimension is important: one developer's quality investments benefit all future developers' $U_o$. This is a positive externality in the multi-agent sense ( #der-team-persistence). The investment calculus should weight the $k$ readers, not just the original author.
 
-*(Source: TST-via-TFT `via-tft/mapping.md` in the `temporal-software-theory` repository, "The code-quality feedback loop," "Observation-infrastructure investment," "Persistence Condition for Codebases.")*
+*(Source: TST-via-TFT `via-tft/mapping.md` in the `v2-io/tst` repository, "The code-quality feedback loop," "Observation-infrastructure investment," "Persistence Condition for Codebases.")*

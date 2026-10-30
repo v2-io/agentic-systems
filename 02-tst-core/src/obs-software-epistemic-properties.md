@@ -94,7 +94,7 @@ The six properties collectively warrant positioning software as the **privileged
 
 **The calibration-lab framing prevents three systematic overclaim patterns.**
 
-1. **Domain generalization by default.** Quantitative claims calibrated in software (e.g., the sublinear growth of elapsed time with the number of file and directory crossings in a commit, measured from git timestamps in #hyp-exponential-cognitive-load) are not automatically claims about human cognition or agent dynamics generally — they are claims about software-calibrated dynamics, which can be exported to other domains only with additional assumptions explicitly stated.
+1. **Domain generalization by default.** Quantitative claims calibrated in software (e.g., how elapsed time grows with the number of file and directory crossings in a commit, measured from git timestamps in #hyp-exponential-cognitive-load) are not automatically claims about human cognition or agent dynamics generally — they are claims about software-calibrated dynamics, which can be exported to other domains only with additional assumptions explicitly stated.
 
 2. **Identification assumptions treated as universal.** The intervention-as-$do(\cdot)$ identification that holds strongly in software (P3, Regime A) weakens significantly in organizational settings (Regime B) and operates as observation-only (Regime C) in most social domains. A TST result that invokes interventional identification is software-calibrated; exports require the domain to provide the same identification or to accept the biased-estimator form.
 

@@ -22,8 +22,26 @@ Per repository it prints: (1) single-form fits (linear; exponential by least squ
 rank correlations at session caps of 60/120/240 min, d <= 25; (2) the nested form test
 log T = c + a*d + b*log(1+d) [+ g*log(1+lines)] with 2000-draw bootstrap 95% intervals at caps
 60/240/480 (the exponential form predicts a > 0 with b ~ 0; a power form predicts b > 0 with
-a ~ 0); (3) binned medians on gaps up to 24 h with the share of each bin above 60 and 480 min,
-which a session cap cannot distort while under half of a bin is censored.
+a ~ 0); (3) binned medians on gaps up to 24 h with the share of each bin above 60 and 480 min;
+(4) changeset-size slopes and medians on gaps up to 24 h.
+
+Every window drops the gaps above it, and the dropped share grows with d, so (2)-(4) are
+truncated samples: their medians and slopes depend on the window, and counting the dropped gaps
+as censored instead puts days away into the median. (5)-(8) measure that dependence and remove it.
+(5) the window sweep: per bin, the share above 24 h and the median with those gaps dropped vs
+counted as censored; and at caps 60 min to none, the nested fit, the pure power slope of log T on
+log(1+d), the least-squares exponential rate of log T on d, and the slope on log(1+lines);
+(6) a window-free form test: a two-component log-normal mixture on uncapped log gaps, a working
+component whose mean is a form in d and an idle component, with a mixing weight per d bin; it
+prints per-bin working-time medians, the nested form inside the working component, the
+working-time power exponent, and the log-likelihoods of the exponential, power and nested forms;
+(7) a parametric null for the windowed test of (2): simulate the fitted mixture with a PURE
+EXPONENTIAL working component on the history's own d values, apply each cap, refit (2)'s nested
+OLS, and report how often the null's b reaches the observed b; (8) changeset size, window-free:
+the same mixture with the working mean linear in log(1+lines) or log(files), and per-bin working
+medians by lines. The mixture is a modelling choice (log-normal components, one idle component);
+its numbers are heuristic tier like the rest. Sections (5)-(8) use their own seeded generators,
+so (1)-(4) print exactly what they printed before.
 """
 import sys
 from collections import defaultdict
@@ -32,6 +50,7 @@ from pathlib import PurePosixPath
 import numpy as np
 from scipy import stats
 from scipy.optimize import curve_fit
+from scipy.stats import norm
 
 RNG = np.random.default_rng(0)
 
@@ -166,6 +185,144 @@ def changeset_size(name, commits):
             print(f"  cap={cap:<5} slope of log T on {lab:<13} = {s:.3f} [{lo_:.3f},{hi_:.3f}]")
 
 
+D_BINS = [(0, 0), (1, 2), (3, 5), (6, 10), (11, 25)]
+L_BINS = [(0, 10), (11, 50), (51, 200), (201, 1000), (1001, 10 ** 12)]
+F_BINS = [(1, 1), (2, 3), (4, 10), (11, 30), (31, 10 ** 12)]
+NONE = float('inf')
+
+
+def bin_index(v, edges):
+    b = np.full(len(v), -1)
+    for k, (lo, hi) in enumerate(edges):
+        b[(v >= lo) & (v <= hi)] = k
+    return b
+
+
+def window_sweep(name, commits):
+    rng = np.random.default_rng(10)
+    d, g, _ = gaps(commits, NONE, 10 ** 9)
+    for lo, hi in [(0, 0), (1, 2), (3, 5), (6, 10), (11, 25), (26, 60)]:
+        x = g[(d >= lo) & (d <= hi)]
+        if len(x):
+            print(f"  d {lo:>2}-{hi:<2} n={len(x):<4} P(>24h)={np.mean(x > 1440):.2f}  median, >24h dropped={np.median(x[x <= 1440]):7.1f}"
+                  f"  median, >24h censored={np.median(np.where(x <= 1440, x, np.inf)):7.1f} min")
+    for cap in (60, 240, 480, 1440, 10080, NONE):
+        d, g, lc = gaps(commits, cap, 25)
+        n = len(d)
+        if n < 30:
+            continue
+        y = np.log(g)
+        X = np.column_stack([np.ones(n), d, np.log1p(d)])
+        full = np.linalg.lstsq(X, y, rcond=None)[0]
+        bs = np.array([np.linalg.lstsq(X[i], y[i], rcond=None)[0] for i in (rng.integers(0, n, n) for _ in range(1000))])
+        lo, hi = np.percentile(bs, [2.5, 97.5], axis=0)
+        pw = np.polyfit(np.log1p(d), y, 1)[0]
+        er = np.expm1(np.polyfit(d, y, 1)[0])
+        _, g2, l2 = gaps(commits, cap, 10 ** 9)
+        ls = np.polyfit(np.log1p(l2), np.log(g2), 1)[0]
+        print(f"  cap={'none' if cap == NONE else int(cap):<5} N={n:<5} a(d)={full[1]:+.3f} [{lo[1]:+.3f},{hi[1]:+.3f}]  "
+              f"b(log1+d)={full[2]:+.3f} [{lo[2]:+.3f},{hi[2]:+.3f}]  power slope={pw:.2f}  exp rate(log-OLS)={er:.3f}  "
+              f"slope on log(1+lines), all d={ls:.2f}")
+
+
+def mixture_em(y, X, b, K, iters=600):
+    """Working component N(X beta, s_w), idle component N(mu_i, s_i), working share pi[k] per bin k."""
+    beta = np.linalg.lstsq(X, y - 1, rcond=None)[0]
+    mu_i, s_i, s_w, pi = np.percentile(y, 85), 1.0, 1.0, np.full(K, 0.7)
+    ll_old = -np.inf
+    for _ in range(iters):
+        m = X @ beta
+        pw = pi[b] * norm.pdf(y, m, s_w); pid = (1 - pi[b]) * norm.pdf(y, mu_i, s_i)
+        tot = pw + pid + 1e-300; r = pw / tot; ll = np.sum(np.log(tot))
+        w = np.sqrt(r); beta = np.linalg.lstsq(X * w[:, None], y * w, rcond=None)[0]
+        for k in range(K):
+            if (b == k).any():
+                pi[k] = r[b == k].mean()
+        m = X @ beta; s_w = np.sqrt(np.sum(r * (y - m) ** 2) / r.sum())
+        mu_i = np.sum((1 - r) * y) / np.sum(1 - r); s_i = np.sqrt(np.sum((1 - r) * (y - mu_i) ** 2) / np.sum(1 - r))
+        if abs(ll - ll_old) < 1e-10:
+            break
+        ll_old = ll
+    return dict(beta=beta, s_w=s_w, mu_i=mu_i, s_i=s_i, pi=pi, ll=ll)
+
+
+def design(d, form):
+    cols = {'exp': [d], 'pow': [np.log1p(d)], 'nest': [d, np.log1p(d)],
+            'bins': [(bin_index(d, D_BINS) == k).astype(float) for k in range(1, len(D_BINS))]}[form]
+    return np.column_stack([np.ones(len(d))] + cols)
+
+
+def mixture_form(name, commits):
+    rng = np.random.default_rng(11)
+    d, g, _ = gaps(commits, NONE, 25)
+    y, b, n, K = np.log(g), bin_index(d, D_BINS), len(d), len(D_BINS)
+    fits = {f: mixture_em(y, design(d, f), b, K) for f in ('bins', 'exp', 'pow', 'nest')}
+    med = lambda fit: np.exp(fit['beta'][0] + np.r_[0, fit['beta'][1:]])  # intercept + per-bin offset
+    bs = np.array([med(mixture_em(y[i], design(d[i], 'bins'), b[i], K)) for i in (rng.integers(0, n, n) for _ in range(100))])
+    lo, hi = np.percentile(bs, [2.5, 97.5], axis=0)
+    print(f"  N={n} uncapped gaps, d <= 25; idle median {np.exp(fits['bins']['mu_i']):.0f} min; working share by bin "
+          + ', '.join(f'{p:.2f}' for p in fits['bins']['pi']))
+    print("  working-time medians, d = 0, 1-2, 3-5, 6-10, 11-25: "
+          + ', '.join(f'{m:.1f} [{a:.1f},{c:.1f}]' for m, a, c in zip(med(fits['bins']), lo, hi)) + ' min')
+    nb = np.array([mixture_em(y[i], design(d[i], 'nest'), b[i], K)['beta'] for i in (rng.integers(0, n, n) for _ in range(200))])
+    lo, hi = np.percentile(nb, [2.5, 97.5], axis=0); be = fits['nest']['beta']
+    print(f"  nested form in the working component: a(d)={be[1]:+.3f} [{lo[1]:+.3f},{hi[1]:+.3f}]  b(log1+d)={be[2]:+.3f} [{lo[2]:+.3f},{hi[2]:+.3f}]")
+    pb = [mixture_em(y[i], design(d[i], 'pow'), b[i], K)['beta'][1] for i in (rng.integers(0, n, n) for _ in range(200))]
+    print(f"  working-time power exponent={fits['pow']['beta'][1]:.2f} [{np.percentile(pb, 2.5):.2f},{np.percentile(pb, 97.5):.2f}]; "
+          f"working-time exponential rate={np.expm1(fits['exp']['beta'][1]):.3f}")
+    print(f"  log-likelihood: exponential {fits['exp']['ll']:.1f}, power {fits['pow']['ll']:.1f}, nested {fits['nest']['ll']:.1f}")
+    return d, g, fits['exp']
+
+
+def windowed_null(name, d, g, fexp, reps=300):
+    rng = np.random.default_rng(12)
+    n, b = len(d), bin_index(d, D_BINS)
+    X = np.column_stack([np.ones(n), d, np.log1p(d)])
+    caps = (60, 240, 480, 1440)
+    obs = {c: np.linalg.lstsq(X[g <= c], np.log(g[g <= c]), rcond=None)[0] for c in caps}
+    null = {c: [] for c in caps}
+    for _ in range(reps):
+        work = rng.random(n) < fexp['pi'][b]
+        ys = np.where(work, fexp['beta'][0] + fexp['beta'][1] * d + rng.normal(0, fexp['s_w'], n),
+                      rng.normal(fexp['mu_i'], fexp['s_i'], n))
+        for c in caps:
+            m = ys <= np.log(c)
+            null[c].append(np.linalg.lstsq(X[m], ys[m], rcond=None)[0])
+    for c in caps:
+        nb = np.array(null[c])
+        print(f"  cap={c:<5} observed a={obs[c][1]:+.3f} b={obs[c][2]:+.3f}; pure-exponential null: a median {np.median(nb[:, 1]):+.3f}, "
+              f"b 95% [{np.percentile(nb[:, 2], 2.5):+.3f},{np.percentile(nb[:, 2], 97.5):+.3f}], P(null b >= observed b)={np.mean(nb[:, 2] >= obs[c][2]):.3f}")
+
+
+def changeset_mixture(name, commits):
+    rng = np.random.default_rng(13)
+    by = defaultdict(list)
+    for c in commits:
+        if 'bot' in c['ae'] or not c['files']:
+            continue
+        by[c['ae']].append(c)
+    G, L, N = [], [], []
+    for cs in by.values():
+        cs.sort(key=lambda c: c['ad'])
+        for i in range(1, len(cs)):
+            gg = (cs[i]['ad'] - cs[i - 1]['ad']) / 60
+            if gg > 0:
+                G.append(gg); L.append(cs[i]['lines']); N.append(len(cs[i]['files']))
+    y, L, N = np.log(np.array(G)), np.array(L, float), np.array(N, float)
+    n = len(y)
+    for lab, x, v, edges in (('log(1+lines)', np.log1p(L), L, L_BINS), ('log(files)', np.log(N), N, F_BINS)):
+        b = bin_index(v, edges); X = np.column_stack([np.ones(n), x])
+        s = mixture_em(y, X, b, len(edges))['beta'][1]
+        bs = [mixture_em(y[i], X[i], b[i], len(edges))['beta'][1] for i in (rng.integers(0, n, n) for _ in range(200))]
+        print(f"  N={n} uncapped; working-time slope on {lab:<13}= {s:.2f} [{np.percentile(bs, 2.5):.2f},{np.percentile(bs, 97.5):.2f}]")
+    b = bin_index(L, L_BINS)
+    X = np.column_stack([np.ones(n)] + [(b == k).astype(float) for k in range(1, len(L_BINS))])
+    be = mixture_em(y, X, b, len(L_BINS))['beta']
+    med = np.exp(be[0] + np.r_[0, be[1:]])
+    print("  working-time medians by lines 0-10, 11-50, 51-200, 201-1000, >1000: " + ', '.join(f'{m:.1f}' for m in med)
+          + " min; median lines per bin: " + ', '.join(f'{np.median(L[b == k]):.0f}' for k in range(len(L_BINS))))
+
+
 if __name__ == '__main__':
     for path in sys.argv[1:]:
         cs = parse(path)
@@ -173,7 +330,11 @@ if __name__ == '__main__':
         sq = sum(1 for c in cs if '(#' in c['subj'] and c['subj'].rstrip().endswith(')'))
         print(f"\n### {name}: {len(cs)} non-merge commits; {sq} with squash-merge subjects '(#N)'; "
               f"{len(set(c['ae'] for c in cs))} author emails")
-        print(" single-form fits, d <= 25:"); single_form(name, cs)
-        print(" nested form test, d <= 25:"); nested_form(name, cs)
-        print(" medians on gaps <= 24 h:"); censoring(name, cs)
-        print(" changeset size (gaps <= 24 h):"); changeset_size(name, cs)
+        print(" (1) single-form fits, d <= 25:"); single_form(name, cs)
+        print(" (2) nested form test, d <= 25:"); nested_form(name, cs)
+        print(" (3) medians on gaps <= 24 h (gaps above dropped):"); censoring(name, cs)
+        print(" (4) changeset size (gaps <= 24 h):"); changeset_size(name, cs)
+        print(" (5) window sweep:"); window_sweep(name, cs)
+        print(" (6) window-free form test (work/idle mixture):"); d, g, fexp = mixture_form(name, cs)
+        print(" (7) windowed nested fit against a pure-exponential null:"); windowed_null(name, d, g, fexp)
+        print(" (8) changeset size, window-free:"); changeset_mixture(name, cs)
