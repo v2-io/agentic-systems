@@ -44,7 +44,7 @@ Substituting the proportional relationships from #hyp-conceptual-alignment, #emp
 
 $$E[T \mid C] = t_0(C) + \sum_{i} \lambda(F_i) \cdot \left[ \frac{\alpha \cdot h(\text{disc}(F_i \mid C))}{\text{alignment}(C)} + \beta \cdot \lvert\text{cs}(F_i \mid C)\rvert \cdot g(\text{prox}(F_i \mid C)) \right]$$
 
-where $\alpha, \beta$ are empirical proportionality constants, $h$ and $g$ encode the (possibly exponential, per #hyp-exponential-cognitive-load) cost relationships, and $\text{disc}$, $\text{cs}$, $\text{prox}$ are the discontinuity count, changeset size, and proximity for feature $F_i$ under choice $C$.
+where $\alpha, \beta$ are empirical proportionality constants, $h$ and $g$ encode the cost relationships, and $\text{disc}$, $\text{cs}$, $\text{prox}$ are the discontinuity count, changeset size, and proximity for feature $F_i$ under choice $C$. The one measurement of these forms, elapsed time between commits, finds cost rising sublinearly in counted crossings ( #hyp-exponential-cognitive-load) and sublinearly in lines changed ( #emp-changeset-size-principle). Neither the exponential $h$ nor the linear $\lvert\text{cs}\rvert$ term is supported at that granularity.
 
 ## Epistemic Status
 
@@ -87,6 +87,6 @@ The convergence is not an aesthetic claim. It follows from the dual-optimization
 
 ## Working Notes
 
-- TST T-11 includes a rich expanded form with empirical constants $\alpha$ and $\beta$ that convert proportionalities to equalities. These constants are codebase-specific and not derived. In practice, relative comparisons (architecture A vs B) may not need absolute constants — the proportionalities suffice for ordering.
+- TST T-14 includes a rich expanded form with empirical constants $\alpha$ and $\beta$ that convert proportionalities to equalities. These constants are codebase-specific and not derived. In practice, relative comparisons (architecture A vs B) may not need absolute constants — the proportionalities suffice for ordering.
 - The summation over $\lambda(F_i)$ assumes the feature intensity profile is known or estimable. In practice, this is where the agent's $M_t$ does the real work — predicting not just *how many* future features ($\hat n_{\text{future}}$ from #der-change-expectation-baseline) but *what kind*, decomposing the total count into per-type intensities. The quality of this prediction is bounded by the agent's model quality, connecting back to #def-model-sufficiency. The #der-change-expectation-baseline heavy-tailed prediction applies component-wise: each $\lambda(F_i)$ is itself a median prediction with Pareto-style tail behavior on the per-type count.
 - This segment might be better positioned as a discussion/synthesis rather than a standalone derived claim, since it mostly assembles previously stated results into a composite objective. Its independent contribution is the explicit per-feature probability weighting, which dual-optimization elides.

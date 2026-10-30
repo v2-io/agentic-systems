@@ -9,7 +9,7 @@ stage: draft
 
 # Derived: Change Expectation Baseline
 
-Absent specific information about a software system's future, the uninformed median baseline for remaining feature count equals the observed past feature count. This is not a heuristic — it is the mathematical consequence of maximum ignorance under Jeffreys' prior. Under proper informative priors with finite first moment the *expected* count is the prediction; the uninformed baseline gives a *median* prediction (the Pareto(1) distribution that falls out of Jeffreys has undefined mean). The baseline preserves accountability: any deviation from $\hat{n}_{\text{future}} = n_{\text{past}}$ requires information that justifies it.
+Absent specific information about a software system's future, the uninformed median baseline for remaining feature count equals the observed past feature count. This is not a heuristic — it is the mathematical consequence of maximum ignorance under Jeffreys' prior, and equally, at large age, of any unknown constant termination hazard whose prior neither rules out arbitrarily low hazards nor gives them infinite weight. Under proper informative priors with finite first moment the *expected* count is the prediction; the uninformed baseline gives a *median* prediction (the Pareto(1) distribution that falls out of Jeffreys has undefined mean). The baseline preserves accountability: any deviation from $\hat{n}_{\text{future}} = n_{\text{past}}$ requires information that justifies it.
 
 ## Formal Expression
 
@@ -35,6 +35,22 @@ $$\hat{n}_{\text{future}} = n_{\text{past}}$$
 
 where $\hat{n}_{\text{future}}$ denotes the median prediction.
 
+### The same baseline from an unknown constant hazard
+
+*[Derived (change-expectation-baseline, hazard-mixture form)]*
+
+The baseline does not depend on choosing Jeffreys' prior. Suppose instead that the system has a constant termination hazard $k$ per unit age, so that given $k$ its lifetime is exponential, and that $k$ is unknown with prior density $f$ on $[0, \infty)$. The survival function is the Laplace transform of the prior:
+
+$$S(t) = \int_0^\infty f(k)\, e^{-kt}\, dk.$$
+
+If $f(k) \sim c\, k^{a-1}$ as $k \to 0^{+}$ for some $c \gt 0$ and $a \gt 0$, Watson's lemma gives $S(t) \sim c\, \Gamma(a)\, t^{-a}$ as $t \to \infty$. Hence, at large age $t_0$, $P(T \gt t_0 + u \mid T \gt t_0) \to (t_0/(t_0+u))^{a}$, and
+
+$$\text{median}[T - t_0 \mid T \gt t_0] \sim (2^{1/a} - 1)\, t_0 .$$
+
+The case $a = 1$ is a prior density that is finite and positive at zero hazard, $0 \lt f(0) \lt \infty$. Every such prior gives median remaining age equal to current age asymptotically, the same Pareto(1) tail as the Jeffreys derivation. The exponential prior $f(k) = b\,e^{-bk}$ gives it at every age: $S(t) = b/(b+t)$ and the median remaining age is exactly $t_0 + b$. A prior that vanishes at zero hazard ($a \gt 1$) predicts a shorter future, $(2^{1/a} - 1)\,t_0$, and one that diverges there ($a \lt 1$) predicts a longer one. For a prior that vanishes at zero hazard faster than any power, such as a lognormal, median remaining age grows more slowly than age.
+
+So $\hat n_{\text{future}} = n_{\text{past}}$, under the same uniform-feature-rate mapping, follows from a weaker ignorance assumption than Jeffreys': only that arbitrarily low hazards are neither ruled out nor given infinite weight. The exponent $a$ is the single thing an informed analyst would need to know to move the baseline's multiplier. The qualitative mechanism, a Lindy effect from uncertainty over a constant hazard, is Ord's (2023, "The Lindy Effect," arXiv:2308.09045); the asymptotic form and the dependence on $a$ are stated here.
+
 **With additional information $I$, the baseline serves as the prior for Bayesian updating:**
 
 *[Derived (change-expectation-baseline)]*
@@ -45,7 +61,7 @@ The uninformed baseline is rarely used directly — almost all real code comes w
 
 ## Epistemic Status
 
-The Bayesian derivation from Jeffrey's prior is *exact* — standard probability theory, not approximation. The baseline itself is a *predictive* statement; it carries no normative content about investment. The investment-scaling consequence (justified structural investment scales linearly with $n_{\text{past}}$) requires a decision model on top of the baseline and is derived in #der-change-investment, where the amortized-cost rule makes the acceptance threshold linear in $\hat{n}_{\text{future}} = n_{\text{past}}$. Two important qualifications:
+The Bayesian derivation from Jeffrey's prior is *exact* — standard probability theory, not approximation. The hazard-mixture form is *exact* as an asymptotic statement in age (Watson's lemma), and exact at every age for the exponential prior. Numerical integration agrees with the stated limits to three decimals for exponential, Gamma ($a = 2$ and $a = \tfrac12$), uniform and half-normal priors by age $10^3$–$10^4$. The baseline itself is a *predictive* statement; it carries no normative content about investment. The investment-scaling consequence (justified structural investment scales linearly with $n_{\text{past}}$) requires a decision model on top of the baseline and is derived in #der-change-investment, where the amortized-cost rule makes the acceptance threshold linear in $\hat{n}_{\text{future}} = n_{\text{past}}$. Two important qualifications:
 
 **Median, not expectation.** For Pareto($\alpha = 1$), the mean is undefined (the integral diverges). The result $\hat{n}_{\text{future}} = n_{\text{past}}$ is a *median* prediction. TST's original statement as $E[n_{\text{future}} \mid n_{\text{past}}] = n_{\text{past}}$ uses "expected" loosely. This distinction matters when propagating the estimate through nonlinear functions — the median of a function is not generally the function of the median. Downstream claims ( #der-change-investment, #der-dual-optimization) that use $n_{\text{future}}$ should be understood as using the median prediction, not the mathematical expectation.
 
@@ -62,10 +78,13 @@ The Laplace succession formula ($E[n_{\text{future}} \mid n_{\text{past}}] = n_{
 - "We're sunsetting next quarter" → $\hat{n}_{\text{future}} \to 0$
 - "This connects to a volatile API" → $\hat{n}_{\text{future}}$ likely $\gt n_{\text{past}}$
 - "This is a sorting algorithm" → $\hat{n}_{\text{future}} \to 0$ (approaching the stable-subsystem regime of #scope-evolving-software)
+- "We are rewriting this onto a new architecture" → the past count no longer describes the system whose future is being predicted. When $P(F_{\text{future}} \mid S_{\text{old}}) \neq P(F_{\text{future}} \mid S_{\text{new}})$, the rewrite is itself information $I$, and it usually dominates the uninformed prior. The baseline says nothing about which way.
 
 Each of these is an observation that updates the agent's model $M_t$ about the system's future. The gain applied to these updates ( #emp-update-gain) depends on how reliable the information source is — a product roadmap from an engaged PM carries more weight ($\eta^\ast$ closer to 1) than a vague feeling about market direction.
 
 **Investment scaling.** *[Discussion]* Combining the baseline with the amortized-cost decision rule of #der-change-investment yields the qualitative reading commonly attached to it: justified investment in abstraction and flexibility scales with $n_{\text{past}}$, because the acceptance threshold $X \lt \hat n_{\text{future}} \times Y$ is linear in $\hat n_{\text{future}} = n_{\text{past}}$. The derivation lives in that segment, not here — the baseline alone is predictive, not normative. The rule of thumb that very young systems ($n_{\text{past}} \lesssim 3$) warrant minimal structural investment is heuristic-grade: it marks the small-sample regime where the Laplace correction and initial instability dominate, not a derived threshold.
+
+**Lineage.** The Jeffreys derivation is Gott's Copernican argument for predicting remaining lifetime from current age (Gott 1993, "Implications of the Copernican principle for our future prospects," *Nature* 363, 315–319). Ord (2023) surveys the mechanisms that produce a Lindy effect, including the uncertain-hazard mechanism derived above. The Lindy effect itself names the empirical regularity; what this segment adds is its use as the default predictor for feature count, and the requirement that departures from it be justified by information.
 
 **Connection to AAT.** The baseline is a statement about the agent's $M_t$ regarding the system's future change rate $\rho$. When the agent has observed $n_{\text{past}}$ changes over time $t_0$, and has no other information, the maximum-ignorance prediction is that $\rho$ will continue at approximately its observed rate. This is the null hypothesis — the starting point before any observations update it.
 

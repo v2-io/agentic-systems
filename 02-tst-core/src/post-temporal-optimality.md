@@ -52,6 +52,12 @@ The postulate does not say faster is always better. It says faster is better *gi
 
 Time can break ties only when all six are demonstrably equivalent. If any one differs, the choice is between *different outcomes*, not between two routes to the same outcome — and the postulate does not apply. The checklist is what turns the postulate from a tautology into a practical decision discipline.
 
+**The probabilistic form.** *[Formulation.]* Exact equivalence is never verified in practice, so the postulate is applied in a probabilistic form. Prefer the faster of $A_i, A_j$ when
+
+$$P\big(\forall m \in \mathbf M \setminus \{\text{time}\}:\ \lvert m(A_i) - m(A_j)\rvert \lt \epsilon_m\big) \gt \theta,$$
+
+with a tolerance $\epsilon_m$ per dimension and a confidence threshold $\theta$. The exact postulate is the limit $\epsilon_m \to 0$, $\theta \to 1$. The choice of $\epsilon_m$ and $\theta$ is where stakes enter: a safety dimension warrants a tighter tolerance and a higher threshold than a stylistic one. Used this way, the postulate also allocates the burden of argument. Whoever argues against the faster option has to name the dimension on which the outcomes differ by more than its tolerance.
+
 **Why start here.** TST's claims about development time, change investment, and dual optimization can be understood as consequences of optimizing for this criterion under constraints of partial observability, bounded resources, and environmental change. The connections are developed in their respective claims; they are not implied by this postulate alone.
 
 **Relationship to AAT.** AAT's persistence machinery demonstrates the *descriptive* consequence of temporal pressure: agents whose correction tempo falls below the disturbance rate degrade. This postulate provides the *normative* grounding: among equivalent outcomes, faster is preferred. AAT proves what happens when tempo is insufficient; this postulate states that tempo is the right thing to optimize once other dimensions are held equal. The postulate is most directly load-bearing in TST, where development time is the primary fungible resource.

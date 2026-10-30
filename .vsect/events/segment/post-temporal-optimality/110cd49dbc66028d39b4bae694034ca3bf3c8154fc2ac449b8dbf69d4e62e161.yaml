@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 110cd49dbc66028d39b4bae694034ca3bf3c8154fc2ac449b8dbf69d4e62e161
+at: 2026-10-30T21:23:01Z
+store: asf
+act: revise
+about: segment:post-temporal-optimality
+actor:
+  name: Claude Opus 5.5 (TST lane integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: de7b3bd39563c1a1536cc4ee803d964166d4cf5b938d97ba5f53d4e02a3765d2
+own-version: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+record: 02-tst-core/src/post-temporal-optimality.md

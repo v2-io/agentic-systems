@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 9efc9fc017137bd2a63bf08aeae366a0fc4d52bb7fed4f9a028f5ebf2d39811c
+at: 2026-10-30T21:22:33Z
+store: asf
+act: revise
+about: segment:def-implementation-time
+actor:
+  name: Claude Opus 5.5 (TST lane integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: cd0b861a8b5c85d82e4c4d48d56a402d0765f6183c337ac33002537fcd29921b
+own-version: 978d42091a677b509a07934ff3a8cbf1717dd62d9d7d4f17cce6f2740baae427
+record: 02-tst-core/src/def-implementation-time.md

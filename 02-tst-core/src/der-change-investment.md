@@ -26,7 +26,7 @@ Equivalently: accept $X$ extra minutes now to save $Y$ minutes per future change
 
 ## Epistemic Status
 
-*Derived* from #der-dual-optimization. The threshold form is the pairwise comparison obtained by requiring $C_1$ to have lower total median-predicted time than $C_2$ in the dual-optimization objective. It inherits the assumptions of #der-change-expectation-baseline (median prediction — not expectation, since the mean is undefined — and uniform feature rate) and #der-dual-optimization (single typical future feature approximation).
+*Derived* from #der-dual-optimization. The threshold form is the pairwise comparison obtained by requiring $C_1$ to have lower total median-predicted time than $C_2$ in the dual-optimization objective. It inherits the assumptions of #der-change-expectation-baseline (median prediction — not expectation, since the mean is undefined — and uniform feature rate) and #der-dual-optimization (single typical future feature approximation). Future time is undiscounted. The chance that the code is replaced or abandoned is carried by $\hat n_{\text{future}}$, but a preference for time now over time later, and the chance that the team that would collect the savings no longer exists, are not modeled. Either would lower the right-hand side.
 
 The **compound effects** discussed below are structurally motivated but not formally derived within AAT. They connect to the persistence condition ( #result-persistence-condition) but the formal link has not been established.
 
@@ -50,7 +50,7 @@ If the upfront cost difference $t_0(C_1) - t_0(C_2)$ is routinely near zero, the
 - *Strategic context*: What is on the roadmap or likely to be requested?
 - *Optionality preservation*: When uncertainty is high, prefer choices that keep future options open over choices that optimize for a single predicted future
 
-*[Discussion — the optionality principle is structurally related to AAT's strategy representation ( #def-strategy-dag): preserving optionality corresponds to maintaining multiple viable paths in the strategy DAG rather than committing to a single chain. This connection has not been formalized.]*
+*[Discussion — the optionality principle is structurally related to AAT's strategy representation ( #def-strategy-dag): preserving optionality corresponds to maintaining multiple viable paths in the strategy DAG rather than committing to a single chain. This connection has not been formalized.]* The established formal treatment of the value of keeping options open in design is real-options valuation of modularity (Baldwin & Clark 2000, *Design Rules, Vol. 1: The Power of Modularity*, MIT Press). It has been applied to software with design structure matrices (Sullivan, Griswold, Cai & Hallen 2001, "The structure and value of modularity in software design," *ESEC/FSE-9*, 99–108). That literature prices an option by the variance of the future it hedges. The threshold here prices only the median count of future changes, so it undervalues flexibility exactly where the future is most uncertain.
 
 **Aggregation across scopes.** When a change affects multiple modules with different expected change frequencies:
 

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4585e889fa565cf13167824d3eee1bd6c8f0909821814400a014cab48b2511ef
+at: 2026-10-30T21:22:44Z
+store: asf
+act: revise
+about: segment:der-change-proximity-principle
+actor:
+  name: Claude Opus 5.5 (TST lane integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: f9669383030a8fdf6b48584bbdf259368cbe376df91728b2591ef9bc72fbed2f
+own-version: 4230914331b92ca534d7ad44713cab4a12f4e89804039bfc25565a01d8b20f3a
+record: 02-tst-core/src/der-change-proximity-principle.md

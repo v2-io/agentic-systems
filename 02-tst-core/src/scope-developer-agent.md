@@ -172,6 +172,8 @@ Persistent external memory (documentation, CLAUDE.md files, well-structured code
 
 **Channel-specific gain calibration.** When a developer encounters conflicting signals (requirements vs. existing architecture vs. code conventions), the uncertainty ratio principle says: weight each by the channel-specific uncertainty ratio. Clear, well-tested code (low $U_o$) should override vague verbal requirements (high $U_o$). Requirements from a well-understood domain (low $U_o$) should override ambiguous code (high $U_o$). The optimal update is channel-specific, not uniform.
 
+**Teams: code as a trusted source.** A developer's judgment about a colleague's code is a trust estimate in the sense of #hyp-communication-gain. "Alice's modules are reliable" is a low $U_{\text{src}}$ for code from that source. "This legacy module is untested" is a high one. "The API docs are always out of date" is a high $U_o$ on that channel. "This external contributor's motives are unknown" raises $U_{\text{align}}$. The gain a developer applies to what they read should therefore depend on who wrote it as well as how it reads. Like any model, these trust estimates are updated by experience, from bugs found, reviews passed and predictions that held. Through #der-team-persistence, cooperative communication can let a team keep pace with a codebase that changes faster than any one member could follow.
+
 **Developer tempo decomposition.** The developer's adaptive tempo ( #def-adaptive-tempo) decomposes into contributions from the channel classes defined above:
 
 $$\mathcal{T}_{\text{dev}} = \mathcal{T}_{\text{obs}} + \mathcal{T}_{\text{explore}} + \mathcal{T}_{\text{probe}}$$
@@ -210,6 +212,6 @@ where each component sums the $\nu^{(k)} \cdot \eta^{(k)\ast}$ products across c
 - The strategy DAG instantiation is thin — real developer plans are often implicit, partially formed, and revised continuously. Whether AAT's explicit DAG formalism applies without modification to implicit human planning is an open question. For AI agents with explicit planning steps, the mapping is more direct.
 - The distinction between "exploration" and "interventional probe" actions can be blurry. Reading code does not modify $\Omega_t$ and is purely exploratory. Running tests does modify $\Omega_t$ temporarily (process state) and is interventional. But making a speculative code change to see if it compiles is both environment-modifying and exploratory. The classification is useful but not a partition.
 
-*(Source: old-tst-via-tft-mapping.md, "The Agent-Environment Coupling," "The Mismatch Signal," "The Update Gain.")*
+*(Source: TST-via-TFT `via-tft/mapping.md` in the `temporal-software-theory` repository, "The Agent-Environment Coupling," "The Mismatch Signal," "The Update Gain.")*
 
 - **Migration note (2026-05-09 GUC rename):** Class 2 ↔ Class 3 swap. Pre-2026-05-09: Class 2 = fully merged, Class 3 = partially modular. Post: Class 2 = Partial, Class 3 = Coupled. AI developer-agents (logogenic/LLM-based) were Class 2 (fully merged); they are now Class 3 (Coupled). Human developer-agents as Class 1 are unchanged in number (Class 1 = Separated). Removed at `candidate` stage per FORMAT.md Gate 4.

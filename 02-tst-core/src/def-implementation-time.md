@@ -37,7 +37,7 @@ Definitional. The decomposition of feature time into comprehension + implementat
 
 **Implementation time is what most metrics measure.** Cycle time, velocity, lines-per-hour — these track implementation. But #der-dual-optimization shows that optimizing implementation time alone is insufficient; comprehension time often dominates, especially under turnover.
 
-**Under AI-assisted development, implementation time approaches zero for well-specified features.** This is the regime where #result-specification-bound becomes binding — the implementation is fast, but the specification (which is part of comprehension) is the bottleneck.
+**Under AI-assisted development, implementation time approaches zero for well-specified features.** This is the regime where #result-specification-bound becomes binding — the implementation is fast, but the specification (which is part of comprehension) is the bottleneck. *[Empirical Claim.]* The qualifier "well-specified" carries the claim. In a randomized controlled trial on real issues in mature open-source repositories they knew well, 16 experienced developers took 19% *longer* with early-2025 AI tools than without, while estimating that the tools had sped them up by about 20% (METR 2025, "Measuring the impact of early-2025 AI on experienced open-source developer productivity"). The trial measured total task time and does not say which component absorbed the difference: specification, verification of generated code, or comprehension.
 
 ## Working Notes
 

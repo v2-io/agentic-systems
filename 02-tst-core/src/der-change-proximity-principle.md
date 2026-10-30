@@ -44,6 +44,8 @@ The quantitative form (inverse proportionality) is a *hypothesis*. The actual re
 
 These patterns minimize the distance term for typical future features. Whether proximity minimization is the actual mechanism driving their adoption (versus convention, tooling constraints, or other forces) is an empirical question — but the structural alignment is suggestive.
 
+**Reading locality, not only editing locality.** *[Hypothesis.]* The principle as stated concerns the changes a feature *makes*. A companion claim concerns the code a reader must *read* to understand a feature: its implementation, dependencies, configuration, tests and documentation. Comprehension time would then fall with the proximity of that relevant set, $t_{\text{comp}}(F) \propto 1/\text{proximity}(\text{relevant}(F))$, even when the changeset itself is compact. Documentation and design records act on this term without touching the code, by gathering distant context into one place. Familiarity acts on it too: code the reader already knows contributes little navigation cost, wherever it is. The functional form is as unestablished as the main principle's. The distinction matters because the two can come apart. A one-line fix whose meaning depends on five distant files is local to edit and non-local to read.
+
 **The size-proximity decomposition.** Together with #emp-changeset-size-principle, this gives a two-factor model of implementation cost: *how much* changes (size) and *how spread out* the changes are (proximity). Size is the first-order term; proximity is the structure-dependent correction. A good architecture minimizes both: small changesets with concentrated changes.
 
 ## Working Notes

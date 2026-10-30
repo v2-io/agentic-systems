@@ -71,8 +71,9 @@ The bound's *existence* is *derived*, conditional on the two named premises S1�
 
 *[Discussion]* This suggests that $M_t$ quality ( #form-agent-model) and observation infrastructure ( #der-code-quality-as-observation-infrastructure) are load-bearing for the specification bound: shared context built through good code (documentation, naming, structure) reduces specification time for future features. *This connection is structurally motivated but the quantitative relationship between code quality and specification time has not been empirically measured.*
 
-**Empirical indication.** Putnam (1978) empirically discovered implementation time bounds that may approximate $t_{\min} \approx (\text{time}_{\text{specify}})^{3/4}$.
-*[Empirical Claim — historical observation, not derived within AAT. The exponent 3/4 is Putnam's empirical finding, not a theoretical prediction.]*
+**Putnam's software equation.** *[Empirical Claim — Putnam's fit.]* Putnam (1978, "A general empirical solution to the macro software sizing and estimating problem," *IEEE Trans. Software Eng.* SE-4(4), 345–361) fitted project data to $\text{LOC} = C \cdot E^{1/3} \cdot t^{4/3}$, with $E$ the effort, $t$ the development time and $C$ a "technology constant" that lumps tooling, process, team skill and domain familiarity. Rearranged, time cannot fall below $(\text{LOC}/C)^{3/4}$ however much effort is added. *[Hypothesis.]* Reading that floor as the specification bound seen through a power law, $t_{\min} \approx (\text{time}_{\text{specify}})^{3/4}$, is a conjecture of this theory, not Putnam's finding. It needs specification complexity to scale with system size and $C$ to measure shared context, and neither has been shown. The exponent $3/4$ is a fitted constant from 1970s projects, not a prediction.
+
+**Lineage of the existence argument.** Premise S1 is the software instance of the basic lower-bound argument of communication complexity: to distinguish one of $N$ admissible alternatives, a receiver must be sent at least $\log_2 N$ bits by some protocol (Kushilevitz & Nisan 1997, *Communication Complexity*, Cambridge University Press). The specification bound adds the claim that this transmission takes time, and the observation that shared context shrinks the admissible set.
 
 ## Working Notes
 

@@ -44,8 +44,14 @@ When $T_{\text{recovery}} \ll T_{\text{defensive}}$, accepting and quickly recov
 
 **Connection to AAT.** Perturbations are environmental disturbances ($\rho$) in the operational domain. The persistence condition ( #result-persistence-condition) applies: the team's operational tempo must exceed the disturbance rate relative to acceptable mismatch. A team that cannot recover faster than failures accumulate is in the unmaintainability regime.
 
+**Availability as a tempo-to-disturbance ratio.** *[Formulation (Conditional on Poisson incidents and #hyp-mismatch-dynamics).]* Let incidents arrive at rate $\lambda_f$, so $\text{MTTF} = 1/\lambda_f$. Let each incident open a mismatch $\delta_0$ that operational correction at tempo $\mathcal T_{\text{ops}}$ drives down exponentially until it is below an acceptable level $\delta_{\text{ok}}$, so $\text{MTTR} = c/\mathcal T_{\text{ops}}$ with $c = \mathbb E[\ln(\delta_0/\delta_{\text{ok}})]$. Then
+
+$$A = \frac{\text{MTTF}}{\text{MTTF} + \text{MTTR}} = \frac{\mathcal T_{\text{ops}}}{\mathcal T_{\text{ops}} + c\,\lambda_f},$$
+
+and an availability target $A^\ast$ is met exactly when $\mathcal T_{\text{ops}} \geq c\,\lambda_f\, A^\ast/(1 - A^\ast)$. Availability depends on the same ratio of correction tempo to disturbance rate as the persistence condition, with the target fixing the threshold. The two design strategies above act on different factors: defensive programming lowers $\lambda_f$, and fault-tolerant design raises $\mathcal T_{\text{ops}}$ and lowers $c$ by keeping incidents small.
+
 ## Working Notes
 
 - The $P(\text{failure}) \times T_{\text{recovery}}$ term is an expected-value approximation. In practice, failure distributions are heavy-tailed — rare catastrophic failures may dominate the expectation. A risk-sensitive formulation (e.g., CVaR) might be more appropriate for critical systems, but AAT's temporal-optimality postulate as stated uses expected time.
 - The scope extension is mild — it just says "count operational time too." But it has strong implications: development decisions that seem suboptimal under pure implementation time (T-08) become optimal when operational time is included. This is why the scope narrowing matters.
-- TST T-12's perturbation taxonomy (impulse, stress, cascade) maps to AAT's disturbance characterization in the persistence condition. Impulse = spike in $\rho$; stress = sustained elevated $\rho$; cascade = $\rho$ amplified by coupling. The persistence condition handles all three through the $\rho$ term, but the qualitative distinction is useful for practitioners.
+- TST T-15's perturbation taxonomy (impulse, stress, cascade) maps to AAT's disturbance characterization in the persistence condition. Impulse = spike in $\rho$; stress = sustained elevated $\rho$; cascade = $\rho$ amplified by coupling. The persistence condition handles all three through the $\rho$ term, but the qualitative distinction is useful for practitioners.

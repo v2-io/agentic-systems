@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: fe091dd06a44104e04212416f1ecc21e3d2df037c9c8104cb5647c41f45f7939
+at: 2026-10-30T21:23:02Z
+store: asf
+act: revise
+about: segment:scope-evolving-software
+actor:
+  name: Claude Opus 5.5 (TST lane integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 89b0688335a062a45de07f4ad99849e1e5cfd550b56ae092f93815241548e40a
+own-version: e63de68d439145af139a511f37dceecdca96d5b1baa820b72fece5b6514261a1
+record: 02-tst-core/src/scope-evolving-software.md

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 5ff8edf1a2ce4fa4e73826a1185e0722e7070b9f4c8d0de393095eda1b739388
+at: 2026-10-30T21:22:49Z
+store: asf
+act: revise
+about: segment:emp-changeset-size-principle
+actor:
+  name: Claude Opus 5.5 (TST lane integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 534daeba490c63b75c9aa08a1a47df2c720be22d17ba3aa067998ce71f015940
+own-version: 4aba74c1708459366da1e63b34d37c54223858df331efd981c8f2e5c6f4ed316
+record: 02-tst-core/src/emp-changeset-size-principle.md
