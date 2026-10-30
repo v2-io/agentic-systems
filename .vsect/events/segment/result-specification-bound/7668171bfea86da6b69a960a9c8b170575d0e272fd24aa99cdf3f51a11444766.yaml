@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 7668171bfea86da6b69a960a9c8b170575d0e272fd24aa99cdf3f51a11444766
+at: 2026-10-30T23:26:05Z
+store: asf
+act: revise
+about: segment:result-specification-bound
+actor:
+  name: Claude Opus 5.5 (TST lane round-3 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: redefined
+from-version: 6ed4faaaed08cdcaf7309f72633c8578eff49c066a837596ffa2d1491088f2fb
+own-version: 7d543081560550bf70c9dfd1790e1a2e889110c6ad9ef7f971446d9ba6da7525
+record: 02-tst-core/src/result-specification-bound.md

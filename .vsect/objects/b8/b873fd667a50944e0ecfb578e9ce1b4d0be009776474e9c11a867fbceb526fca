@@ -1,0 +1,89 @@
+kind: segment
+form: 
+normalizer: vsect-norm/0
+---
+# Hypothesis: Exponential Cognitive Load
+
+If context-switching compounds multiplicatively, implementation time grows exponentially with the number of boundary crossings (discontinuities) in a changeset.
+
+## Formal Expression
+
+*[Hypothesis (exponential-cognitive-load)]*
+
+$$t_{\text{actual}} = t_{\text{baseline}} \times k^{\text{discontinuities}}$$
+
+where $k \gt 1$ is the compounding factor per context switch.
+
+Even modest values of $k$ (1.1 to 1.2) create substantial differences when compounded across many discontinuities.
+
+## Epistemic Status
+
+*Hypothesis.* TST states this carefully as a hypothesis requiring validation, and that caution is warranted. The actual relationship may be:
+
+- Linear ($k = 1$ with additive cost per switch)
+
+- Sub-exponential (diminishing marginal cost of additional switches)
+
+- Exponential (as hypothesized)
+
+- Dependent on the *structure* of dependencies between scattered changes
+
+AAT's #der-deliberation-cost framework suggests a refinement: the functional form likely depends on the dependency structure of the scattered changes, not on the count of discontinuities alone. Independent changes across many files may cost linearly (each context switch is independent). Interacting changes across many files — where understanding the change in file A requires understanding the change in file B which requires understanding file C — may cost exponentially because the agent must hold multiple contexts simultaneously to reason about their interactions. The distinction is between parallel context-loading (linear) and nested context-dependency (potentially exponential).
+
+The one non-circular measurement available bears on the count form only, and disfavors it: at file and directory granularity, the elapsed time between a developer's consecutive commits rises with the number of crossings in the commit and shows no compounding. In the largest of three histories a pure exponential in the count is rejected for a power of $(1+d)$ with exponent 0.72–0.86, depending on how time away is modelled; in the other two the forms cannot be told apart (Discussion). That measurement is *heuristic* tier: inter-commit elapsed time is a proxy for implementation time, separating working time from time away is a modelling choice, and the evidence comes from three histories, each mostly one developer's. The structure-dependent form is untested.
+
+## Discussion
+
+**Why the hypothesis persists.** Despite lacking formal derivation, exponential cognitive load explains a robust observation: developers strongly prefer consolidated changes, and scattered changes feel *disproportionately* difficult. The hypothesis provides a quantitative framework for this observation. If the cost is superlinear in the crossings, whether exponential or not, reducing discontinuities has increasing marginal returns. Counted crossings alone do not show that superlinearity in the measurement below, so the disproportion developers report, if it is real, has to come from something the count leaves out; the dependency structure among the changes is the candidate this segment's Epistemic Status names.
+
+**Connection to AAT's deliberation cost.** The #der-deliberation-cost framework formalizes the cost of reasoning before acting. Context switches during implementation are a form of deliberation cost — the agent must reason about how changes in one location affect another. When the changes are independent, this deliberation is parallelizable (each change can be understood locally). When they interact, deliberation becomes sequential and potentially recursive: understanding change A requires understanding change B, which may require understanding change C. This recursive dependency structure is what could produce genuine exponential scaling.
+
+**Discontinuity hierarchy.** *[Discussion — taxonomy, not derived.]* Not all discontinuities are equal. The cost per boundary crossing increases with the type of boundary:
+
+1. *Lexical*: Symbol must be found elsewhere in the same file
+
+2. *File*: Must open another file and load its context
+
+3. *Module*: Must understand another module's conventions, invariants, and vocabulary
+
+4. *Service*: Must understand another service's API, data model, and failure modes
+
+5. *Network*: Must trace through network calls, serialization, and distributed state
+
+Each level roughly doubles the context-loading cost (the $k$ factor increases with boundary type). This is a heuristic observation, not a measured result — the actual cost ratios are an empirical question. The measurement below treats file and directory crossings only, with directory crossings weighted twice; whether the doubling-*per-boundary-type* heuristic holds is untested.
+
+**A git-history measurement of the count form.** *[Empirical Claim — heuristic tier; elapsed time between commits as the time measure.]* For each commit, the discontinuity score is $d = (\text{file transitions}) + 2 \cdot (\text{directory transitions})$ over its changed paths, and the time is the elapsed time since the same author's previous commit. Three histories were measured. The first is Joseph's TST research repository: mostly prose, about half of its 316 commits co-authored by an AI agent, its pairs falling on twelve working days. The other two are the open-source projects obsidian-linter and ink. In each, the measured pairs come mostly from one person: 71% of obsidian-linter's from one author, and 80% of ink's from one of the three authors left once squash merges are out. A pair with a squash-merged pull request at either end (the "(#N)" subject a squash merge carries) is left out, because a squash merge's timestamp is the merge, not the work. That keeps 358 of ink's 493 pairs at $d \le 25$ and 1,183 of obsidian-linter's 1,264. Between 216 and 1,183 pairs enter each fit, depending on repository and on how long gaps are treated. The intervals below resample whole author-days, since gaps within one working session are not independent. Long gaps are the difficulty. A gap of hours or days holds time away from the work, and dropping the gaps above a session cap drops more of them at high $d$: in obsidian-linter a 24-hour cap drops 13% of gaps at $d = 0$ and 27–35% at $d \ge 11$. Two treatments are reported. One keeps gaps under session caps from 60 minutes to 24 hours. The other keeps every gap and fits a two-component mixture to $\log T$: a working component whose mean carries the form in $d$, and an idle component, with the working share free in each $d$ bin.
+
+1. Elapsed time rises with $d$. Under session caps of 60 to 240 minutes, Spearman $\rho$ = 0.39–0.45 in the corpus and obsidian-linter and 0.15–0.18 in ink; after partialling out lines changed, 0.17–0.37 and 0.06–0.09. The mixture's working-time medians rise with $d$ in obsidian-linter (6.1, 12.1, 16.3, 34 and 28 minutes for $d$ = 0, 1–2, 3–5, 6–10 and 11–25; the last bin's interval is 16–50 minutes) and in the corpus (3.1 to 16.4 minutes). In ink they rise to 13 minutes at $d$ = 3–5 and not beyond.
+
+2. In obsidian-linter, the largest history, a pure exponential in the count is rejected. Fitted inside the working component, $\log T = c + a\,d + b\log(1+d)$ gives $b = 1.01$ (95% interval $[0.61, 1.33]$) and $a = -0.08$ $[-0.18, +0.06]$, where the exponential form predicts $a \gt 0$ with $b \approx 0$. As a pure power law, $T \propto (1+d)^{\beta}$ with $\beta = 0.72$ $[0.56, 0.88]$. With time away modelled as two components instead of one, $\beta = 0.86$ $[0.69, 1.05]$; that likelihood has several optima, and this is the best of thirty starts. In ink and the corpus the forms are not distinguished. Their working-time exponents are 0.30 $[-0.04, 0.76]$ and 0.50 $[0.17, 0.84]$, $b$'s interval reaches zero, and the power law's log-likelihood exceeds the exponential's by 0.8 and 1.6.
+
+3. The capped fits point the same way and do not decide by themselves. At every cap from 60 minutes to 24 hours, $a$ is near zero or negative and $b$ is 0.38–1.04. But a pure exponential in working time, mixed with idle gaps as fitted to each history and then capped, also gives $b$ up to about 1, because the cap attenuates an exponential rate toward zero, and it sometimes gives a negative $a$. Over 1,000 simulated histories it reaches the observed $b$ in 1.5–9.5% of draws and the observed $a$ in 1.3–8.9%, depending on history and cap. The capped fits lean against a pure exponential in every history and reject it in none.
+
+Where these data discriminate, then, the count form's cost grows as a power of $(1+d)$ that is at most about proportional: 0.72 with time away as one component, 0.86 with two. Where they do not, they cannot tell a power law from an exponential. Nothing in them shows compounding. A single exponential forced onto the same data returns a per-discontinuity rate of 0.02 to 0.17 depending on the fitting method and the cap, and 0.07 to 0.30 inside the working component. That number is not evidence for the form. In squash-merged histories (gemini-cli, codex), with the merges kept, the timestamps record merge cadence rather than work, and there $d$ barely predicts the gap ($\rho \approx 0.1$).
+
+Limits: elapsed time between commits includes everything else the developer did and depends on how they chose to cut commits. It is a proxy for implementation time, not a measure of comprehension. The mixture that separates working from idle time is a modelling choice, with log-normal components, and the exponent moves with it. With two idle components the fit degenerates in ink and the corpus (in ink, a narrow working spike beside an 8-minute "idle" component), so that variant is informative in obsidian-linter only. The score counts crossings without regard to whether the changes depend on one another, so the measurement tests the count form only. The structure-dependent form in the Epistemic Status, under which interacting changes compound and independent ones do not, needs a measure of dependency among the changed locations, and it is untested. The result is consistent with that form's prediction that most commits, whose changes are largely independent, cost about additively or less. It is equally consistent with a world where nothing compounds.
+
+A second operationalization exists and is unmeasured. The theory's original statement of this hypothesis counted not boundaries crossed by a changeset but *comprehension searches* while reading code. These are symbol-resolution and usage searches, type and behavior inference gaps, and switches between files, scored as $\sum_{\text{element}} P(\text{search}) \cdot \text{cost}(\text{search})$. That count lives on the reading side, where #der-change-proximity-principle's reading-locality companion also lives. It needs instrumented reading (IDE navigation logs, agent tool-call traces), which git does not record.
+
+**The comprehension-changeability tension.** *[Discussion — architecturally consequential.]* Conventional advice emphasizes small, focused units (functions, classes, modules) for changeability — changes are isolated, tests are targeted, coupling is reduced. But small units create comprehension discontinuities: understanding the flow requires jumping between many fragments. This creates a genuine tension:
+
+- Fewer, larger units → fewer discontinuities → faster comprehension → but higher coupling, larger changesets
+
+- Many small units → more discontinuities → slower comprehension → but lower coupling, smaller changesets
+
+A resolution follows from #der-change-investment: the right balance depends on $\hat n_{\text{future}}$. For young code ($\hat n_{\text{future}}$ small), the comprehension cost of fragmentation is paid on every interaction but the changeability benefit is realized rarely — favor continuity. For mature, heavily-modified code ($\hat n_{\text{future}}$ large), the changeability benefit dominates — favor modularity. The crossover point is where the cumulative comprehension cost of fragmentation equals the cumulative changeset-size savings from isolation. This crossover is not derived but is testable: compare total development time for features implemented in consolidated vs. fragmented code at different change-history depths.
+
+**Anti-patterns that create unnecessary discontinuities.** *[Discussion — pattern catalog, empirically grounded.]* Several common practices create discontinuities without corresponding changeability benefits:
+
+- *Premature abstraction*: Extracting interfaces or abstract classes before the variation they're meant to accommodate has actually appeared. Creates discontinuities now for benefits that may never materialize.
+
+- *Over-interfacing*: Placing interfaces between components that always change together. The interface adds a discontinuity but provides no isolation benefit since both sides change simultaneously.
+
+- *Excessive indirection*: Chains of delegation (A calls B which calls C which calls D) where each hop requires the reader to find and understand the next link. The call depth is a direct measure of discontinuity count.
+
+- *Naming minimalism*: Abbreviated or generic names (e.g., `mgr`, `svc`, `impl`) that force the reader to look at the implementation to understand what the component does, adding a discontinuity that a descriptive name would have eliminated.
+
+These anti-patterns share a common structure: they optimize for a dimension (abstraction purity, interface coverage, code size) that is not part of the temporal optimization objective. Each can be diagnosed by asking: "Does this boundary crossing save future changeset size proportional to its comprehension cost?" When the answer is no, the discontinuity is pure overhead.
+
+*[Discussion — the anti-pattern diagnosis question is a direct application of #der-change-investment to discontinuity creation. But "proportional to its comprehension cost" is informal — formalizing it requires a way to estimate per-discontinuity comprehension cost, which connects to the open empirical question about the $k$ value per boundary type.]*
