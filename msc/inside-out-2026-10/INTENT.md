@@ -29,7 +29,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 ## C — The theory is correct where it is known wrong, and stronger where strengthening was found
 
 - **C.1** Every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. The defect lists are `owner-review/integrator-items.md` A1–A15, `internal-surfaces/00-cross-surface-map.md` §3 and `influx-scout/MAP.md` §3. · *started: F72 and A1 landed and checked; A6, A7, A10, A12, A13, A14 in parallel lanes; A8, A11 landed with B.1; A4, A5 wait for the C2/C3 spikes' integration, whose segments they share; A9's headline waits for A.2; A3 for the exit-time spike*
-- **C.2** Strengthenings C1–C3 (exit time, loop identification, allocation vs distortion coupling) are independently checked, then landed or refuted. · *started: three spikes running*
+- **C.2** Strengthenings C1–C3 (exit time, loop identification, allocation vs distortion coupling) are independently checked, then landed or refuted. · *started: three spikes landed in their dirs; independent verifiers running*
 - **C.3** A cross-segment contradiction scan reports no open contradictions among load-bearing segments. · *not started*
 
 ## D — The arc has an owner and a trigger
@@ -81,14 +81,12 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 |---|---|---|
 | Lead coordinator (Opus 5.5, session "asf-cleanup") | I, plus coordination | `INTENT.md`, `HANDOFF.md` |
 | B.1 checker (Opus), bare brief | B.1 | `reviews/b1-part-ii-check-1.md` |
-| C1 spiker (Fable): exit time under Model S | C.2 | `spikes/spike-exit-time-model-s-2026-10-30/` |
-| C2 spiker (Fable): loop identification given the decision state | C.2 | `spikes/spike-loop-identification-decision-state-2026-10-30/` |
-| C3 spiker (Fable): allocation vs distortion coupling | C.2 | `spikes/spike-allocation-vs-distortion-coupling-2026-10-30/` |
-| A.1 round-2 integrator (Opus), in its own worktree | A.1 | `#scope-adaptive-system` and dependents, on its branch; record in `spikes/epistemic-target-ontology/` |
-| vsect builder (Fable): tracker-item re-check sweep | I.3 | `~/src/arch/firmatum/utils/vsect/` |
-| C.1 lane (Opus), own worktree: A7 (mismatch names two objects), A10 (persistence lineage) | C.1 | Part I, on its branch; `c1-lanes/part-i-mismatch-lineage.md` |
-| C.1 lane (Opus), own worktree: A6, A12, A14 (Volume 4) | C.1 | `04-eli-core/`, on its branch; `c1-lanes/vol4.md` |
-| C.1/H.2 lane (Opus), own worktree: A13 (circular TST fit), the `old-tst-*` fates | C.1, H.2 | `02-tst-core/`, on its branch; `c1-lanes/tst.md` |
+| A.1 round-2 checker (Opus), bare brief | A.1 | `reviews/scope-adaptive-system-check-4.md` |
+| C1, C2, C3 spike verifiers (Opus), bare brief | C.2 | `de-novo-feedback-1.md` in each spike dir |
+| C.1 lane (Opus), own worktree: A7, A10, and the persistence-cost algebra | C.1 | Part I, on its branch; `c1-lanes/part-i-mismatch-lineage.md` |
+| C.1 lane (Opus), own worktree: A6, A12, A14 done; the Auxilia W₁ overclaim | C.1 | `04-eli-core/`, on its branch; `c1-lanes/vol4.md` |
+| C.1/H.2 lane (Opus), own worktree: A13 done; the `old-*` fates | C.1, H.2 | `02-tst-core/`, on its branch; `c1-lanes/tst.md` |
+| vsect builder (Fable), with the tracker re-check sweep (five lanes) | I.3 | `items/`, `.vsect/`, `items-recheck/` |
 
 These are finished and on the line through the lead:
 
@@ -101,6 +99,8 @@ These are finished and on the line through the lead:
 - the C.1 integrator (A1, A9, example-strategy, the detection test);
 - the A.1 integrator, its cold reader, and the independent re-reader;
 - the B.1 record writer (Part II);
+- the A.1 round-2 integrator;
+- the C1, C2 and C3 spikers;
 - the hooks builder (I.2).
 
 ## Using this file
