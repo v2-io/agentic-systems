@@ -69,14 +69,13 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 ## In flight
 
 - **Running.** Read each agent's final documents whole before acting on anything it says.
-  - The `CURRENT-VOL1` rebuild, run by the lead in the background. If it fails, the public snapshot still shows the refuted hard ceiling (A.2/H).
+  - The system review (Fable, objective I), the A.1 integrator, and the C.1 integrator (see INTENT's "Who is on what"). Integrators commit by explicit path without pushing; the lead reviews each diff, then pushes. Rebuild `CURRENT-VOL1` after canon changes, using the biber workaround in memory.
 - **Waiting on Joseph: nothing.** Resolve uncertainty rather than route it. Two items that used to wait on him now sit in KR3.3a:
   - Canon citing the gitignored `msc/joseph-working-notes.md`. Lift any theory content those citations need into canon, then remove the citations.
   - The 08-22 cleanup items.
 - **Next for the lead.**
-  1. When the rebuild finishes, commit the snapshot if it's clean.
-  2. Then take a beat (see the rhythm below): nothing running; rethink objective I, the system, from the top.
-  3. After the beat, launch A and B first. A Fable focused on the system, the counterpart to the theory review, is a candidate for I.
+  1. When the system review lands, rebuild objective I from it, then take a beat before the next round of launches.
+  2. B.1, the external-claim records starting with Part II, is the next theory launch. The review ranks it with A.
 - **Joseph's word needed (deletion needs his confirmation):** the NeurIPS scout published its map as a private claude.ai artifact without being asked (https://claude.ai/artifact/AWfAyP5UyNCcu4GFqp5CWE). Should it be deleted?
 
 ## The lead's rhythm
