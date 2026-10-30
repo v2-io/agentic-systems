@@ -53,13 +53,15 @@
 #
 # Exit status: 0 = every live relative link resolves; 1 = at least one broken.
 #
-# Run on an exported copy of the index (bin/check-commit does this), a link to
-# a file that is git-ignored by design — the reference PDFs under ref/, which
-# are kept locally and not redistributed — has no target in the copy. Set
-# CHECK_LINKS_LOCAL_ROOT to the real working tree and such a link resolves
-# when its target exists there *and* git ignores it there: a deliberate
-# local-only target, not a broken link. A target that is merely untracked
-# (not ignored) still fails, because it would be missing from the commit.
+# A link to a git-ignored path — the reference PDFs under ref/, which are
+# kept out of version control by design and re-acquired per clone — counts
+# as resolved whether or not the file is present: the repo deliberately does
+# not carry it, so its absence in a fresh clone is not a broken link. (They
+# are counted and reported.) A target that is merely untracked, not ignored,
+# still fails, because it would be missing from the commit. Run on an
+# exported copy of the index (bin/check-commit does this), the copy has no
+# .gitignore context of its own repo, so set CHECK_LINKS_LOCAL_ROOT to the
+# real working tree and git is asked there.
 
 require 'pathname'
 require 'optparse'
@@ -185,12 +187,10 @@ local_only = 0
 
 LOCAL_ROOT = ENV['CHECK_LINKS_LOCAL_ROOT'].to_s.empty? ? nil : Pathname.new(ENV['CHECK_LINKS_LOCAL_ROOT']).expand_path
 
-# True when `resolved` (missing here) exists in LOCAL_ROOT and git ignores it.
+# True when git ignores `resolved` (asked in LOCAL_ROOT if set, else here).
 def local_only_target?(resolved)
-  return false unless LOCAL_ROOT
   rel = resolved.relative_path_from(REPO_ROOT).to_s
-  return false unless LOCAL_ROOT.join(rel).exist?
-  system('git', '-C', LOCAL_ROOT.to_s, 'check-ignore', '-q', '--', rel)
+  system('git', '-C', (LOCAL_ROOT || REPO_ROOT).to_s, 'check-ignore', '-q', '--', rel)
 end
 
 files.each do |file|
@@ -213,7 +213,7 @@ end
 rel = ->(p) { p.relative_path_from(REPO_ROOT).to_s rescue p.to_s }
 
 if broken.empty?
-  note = local_only.positive? ? " (#{local_only} to git-ignored local files)" : ''
+  note = local_only.positive? ? " (#{local_only} to git-ignored files, kept out of the repo by design)" : ''
   puts "✓ check-links: #{checked} doc-nav links across #{files.size} files all resolve#{note}."
   exit 0
 end
