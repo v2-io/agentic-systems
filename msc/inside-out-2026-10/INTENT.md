@@ -28,7 +28,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 
 ## C — The theory is correct where it is known wrong, and stronger where strengthening was found
 
-- **C.1** Every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. The defect lists are `owner-review/integrator-items.md` A1–A15, `internal-surfaces/00-cross-surface-map.md` §3 and `influx-scout/MAP.md` §3. · *started: F72 and A1 (the tree theorem) landed and checked; example-strategy in progress; the rest not started*
+- **C.1** Every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. The defect lists are `owner-review/integrator-items.md` A1–A15, `internal-surfaces/00-cross-surface-map.md` §3 and `influx-scout/MAP.md` §3. · *started: F72 and A1 landed and checked (tree theorem, example-strategy, two-sided detection test); the rest not started*
 - **C.2** Strengthenings C1–C3 (exit time, loop identification, allocation vs distortion coupling) are independently checked, then landed or refuted. · *not started*
 - **C.3** A cross-segment contradiction scan reports no open contradictions among load-bearing segments. · *not started*
 
@@ -82,7 +82,6 @@ Source for I.2–I.8: `system-review/00-system.md` §7. Its test for every mecha
 |---|---|---|
 | Lead coordinator (Opus 5.5, session "asf-cleanup") | I, plus coordination | `INTENT.md`, `HANDOFF.md` |
 | A.1 integrator (Opus): the typed epistemic target | A.1 | `#scope-adaptive-system`, the $\theta$ registry, and its dependents |
-| C.1 integrator (Opus): the polytree theorem | C.1 (integrator-items A1, A9) | `#def-strategy-dag`, `#deriv-graph-structure-uniqueness`, `example-L1` |
 | vsect MVP builder (Fable), with ASF as the first corpus | I.3, I.4 | `~/src/arch/firmatum/utils/vsect/` (or where it settles) |
 | Hooks builder (Opus) | I.2 | `.githooks/`, the tool fixes, debt outside canon (canon after the integrators land) |
 
@@ -93,7 +92,8 @@ These are finished and on the line through the lead:
 - the influx scout;
 - the internal-surfaces mapper;
 - the F72 verifier;
-- the F72 integrator.
+- the F72 integrator;
+- the C.1 integrator (A1, A9, example-strategy, the detection test).
 
 ## Using this file
 
