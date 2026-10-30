@@ -16,7 +16,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 
 ## A — The front door says only what the bodies support
 
-- **A.1** `#scope-adaptive-system` carries the typed predicate $H(S_t\mid\mathcal C_t)\gt0$ with $S_t=(\Omega_t,\theta)$, or a defended alternative, and the GA registry names $\theta$. A cold reader checks the membership clauses on standard RL and on a Kalman filter. This also resolves the SP-30 brief. · *landed; a second independent read (`07-independent-reread.md`) found two broken sentences and open findings, now being integrated. Open: the invariant-$\sigma$-field strengthening (Working Notes)*
+- **A.1** `#scope-adaptive-system` carries the typed predicate $H(S_t\mid\mathcal C_t)\gt0$ with $S_t=(\Omega_t,\theta)$, or a defended alternative, and the GA registry names $\theta$. A cold reader checks the membership clauses on standard RL and on a Kalman filter. This also resolves the SP-30 brief. · *landed and through three independent reads; warrants now sorted by renewal (item (g′), with a no-go), merged at 3f3b4ca5; a fourth read runs. Open: the tail-$\sigma$-field strengthening and a continuous-space (h′) (vsect)*
 - **A.2** INTRODUCTION, the Part I and Part II fronts and the README partials agree on one headline list. Each headline sentence traces to a body sentence of the same register. · *not started*
 - **A.3** No live segment lacks an Epistemic Status (29 do today, all in the `impl-*`/intro layer). · *not started*
 - **A.4** The Volume 2–4 prefaces and OUTLINE claim cells say only what their bodies support (A.2 covers Volume 1). · *not started; the overclaims the item re-checks found are in `items-recheck/t2-todo.md` §2*
@@ -83,7 +83,7 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 |---|---|---|
 | Lead coordinator (Opus 5.5, session "asf-cleanup") | I, plus coordination | `INTENT.md`, `HANDOFF.md` |
 | Part II integrator (Fable), own worktree: C2 and C3 spikes with their verifiers, B.1's Part II check, A4, A5 | C.2, B.1, C.1 | Part II and the Volume 3 bias law, on its branch; `part-ii-integration.md` |
-| A.1 round-3 integrator (Opus), own worktree: the third check (09) | A.1 | `#scope-adaptive-system`, on its branch; `10-check-4-integration.md` |
+| A.1 fourth reader (Opus), bare brief | A.1 | `reviews/scope-adaptive-system-check-5.md` |
 | Part I round-2 integrator (Fable), own worktree: the persistence window, the C1 exit-time spike and its verification, Prop A.1S(i)'s break | C.1, C.2 | Part I, on its branch; `part-i-round-2.md` |
 | Volume 4 round-2 integrator (Opus), own worktree: the Volume 4 check | C.1 | `04-eli-core/`, on its branch; `c1-lanes/vol4-round-2.md` |
 | TST round-2 integrator (Opus), own worktree: the TST check | C.1, H.2 | `02-tst-core/`, on its branch; `c1-lanes/tst-round-2.md` |
@@ -104,7 +104,7 @@ These are finished and on the line through the lead:
 - the A.1 round-2 integrator;
 - the C1, C2 and C3 spikers, and the C2 and C3 verifiers;
 - the Part I lane (A7, A10, the persistence-cost algebra);
-- the A.1 round-2 checker (09);
+- the A.1 round-2 checker (09) and round-3 integrator (10);
 - the C1 spike verifier; the Part I and Volume 4 lane checkers;
 - the TST lane (A13, the 44 `old-*` fates);
 - the second-mind confirmer;
