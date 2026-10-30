@@ -48,14 +48,24 @@ while IFS=$'\t' read -r status path1 path2; do
   CHANGED_MD+=("$path")
 done < <(git diff --cached --name-status -M --diff-filter=ACMR "$BASE")
 
-# md-press runs with --no-math. Its math pass (Unicode math -> $LaTeX$) is not
-# gated yet, for two reasons: a declined math proposal is not remembered, so a
-# file whose author rejects one would fail every commit after; and the pass
-# needs a local ollama model, which has been unavailable before. Unwrapping is
-# deterministic and remembers its decisions in the file, so it is gated.
+# md-press runs with its math pass on: Unicode math -> $LaTeX$, raw < > inside
+# inline math -> \lt \gt, blank lines around $$. That needs md-press 0.3.0 or
+# later: its converter is deterministic, and a declined math decision is
+# remembered in the file (<!--md-press:not-math:...--> at the end of the
+# line), so a decided file never fails again. Before 0.3.0 the math pass was
+# an ollama model whose declines came back every run, which no gate can hold;
+# an older md-press is refused rather than run. Files whose glyphs are their
+# subject are declared in .md-press-nomath and skip the math pass.
 md_press_changed() {
   ((${#CHANGED_MD[@]})) || return 0
-  md-press -q --no-math --no-log "${CHANGED_MD[@]}"
+  local v
+  v="$(md-press --version 2>/dev/null | awk '{print $2}')"
+  if [[ "$(printf '%s\n0.3.0\n' "$v" | sort -V | head -n1)" != 0.3.0 ]]; then
+    echo "md-press ${v:-?} is older than 0.3.0, whose math pass this gate needs."
+    echo "Install it: cargo install --path ~/src/arch/firmatum/utils/md-press"
+    return 2
+  fi
+  md-press -q --no-log "${CHANGED_MD[@]}"
 }
 
 # vsect's store (.vsect/) must be tracked to be in the exported tree; until it
@@ -68,7 +78,7 @@ vsect_check() {
 
 # name | tool it needs | if that tool is absent | command (run at the exported tree's root) | how to fix a failure
 CHECKS=(
-  "md-press|md-press|refuse|md_press_changed|in the repo, \`md-press --no-math FILE\` shows each decision with a code; \`md-press --fix --no-math FILE\` takes them, and \`--toggle CODE\` flips one first. Then stage the file."
+  "md-press|md-press|refuse|md_press_changed|in the repo, \`md-press FILE\` shows each decision with a code; \`md-press --fix FILE\` takes them all, and \`--fix --toggle CODE FILE\` flips one first (a flipped math change is remembered by a comment at the end of its line). Then stage the file."
   "lint-outline|python3|refuse|bin/lint-outline --quiet|reorder the OUTLINE row, fix the segment's depends:, or (if the placement is right by design) add a row with its reason to that volume's OUTLINE-accepted.md."
   "check-links|ruby|refuse|CHECK_LINKS_LOCAL_ROOT=\"$ROOT\" bin/check-links|point each link at a file that exists in the commit (or stage the file it names)."
   "refresh-all|ruby|refuse|bin/refresh-all --check|run \`bin/refresh-all\`, review the regenerated files, and stage them with this commit."
