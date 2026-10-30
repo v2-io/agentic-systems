@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: 23bb436ff1587730b04e1f07ae7a386fc5424bdf063febc0a82df2ce0353423f
+at: 2026-10-30T21:11:13Z
+store: asf
+act: rederive
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:scope-adaptive-system: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+committed: after
+criterion: '(h'')''s corrected counterexample: known law, state (t, x_t) with x_2 = x_1 and x_t fresh-uniform for t >= 3, o_2 = 1{x_2 in Q}, otherwise constant. Is nothing invariant (so theta is a point mass and Omega is infinite), and is the loop out at t = 1 under Lebesgue on x_1 and in under half Lebesgue plus half a dense atomic measure on the rationals, which has the same support?'
+effective-version: 0e6f88e8c462d3de9bf4d3264cc7549de72612bb8d6fd922a79098b59c716226
+from: review:scope-adaptive-system-integration-3#C1
+line: derivation
+outcome: confirmed
+recheck: 08 section 1.2; the fresh draws make x_t and every function of it non-invariant; Lebesgue gives o_2 = 0 a.s., the mixture a fair coin determined by x_1
+target-version: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+version-from: git-revision

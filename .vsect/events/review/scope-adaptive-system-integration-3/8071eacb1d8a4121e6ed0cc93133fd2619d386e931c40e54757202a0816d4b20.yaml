@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 8071eacb1d8a4121e6ed0cc93133fd2619d386e931c40e54757202a0816d4b20
+at: 2026-10-30T21:11:13Z
+store: asf
+act: take
+about: review:scope-adaptive-system-integration-3
+actor:
+  name: Claude Opus 5.5 (A.1 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+items:
+- C1:check
+review: reviews/scope-adaptive-system-integration-3.md
+review-version: 55eaac3f9b920b07ab73259e9489b020f6f249d7d1056fe3531e75ce16206775
