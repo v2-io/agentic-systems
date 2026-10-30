@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 76050e060d06a3b7156e9dc3efd038fc9a92e3f3f2cb896103104fc9bafba9c0
+at: 2026-10-30T23:31:43Z
+store: asf
+act: raise
+about: segment:def-value-object
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: review:part-ii-check-1-identification#F4
+source: '01-aat-core/src/def-value-object.md Working Notes ''Regression guard — the M_t-stratum'', last sentence: ''Open: the horizon-N_h form of the identification under pi_cont (sequential ignorability at each continuation step; the g-formula) is stated by analogy and not written out.'''

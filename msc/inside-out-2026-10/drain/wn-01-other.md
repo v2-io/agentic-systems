@@ -133,3 +133,95 @@ Item references are `[n]` (this drain's extraction id) plus the head of the item
 
 - [253] "**Regression guard.** Do not restore the information term…" — **guard**.
 - [254] "**$\rho_{\text{LSI}}$ for AAT-native cases.**" and [255] "**Large-information regime.**" — open computations. **owed → item:bias-bound-lsi-constant-and-large-information-regime** (C.4), citing `influx-scout/neurips.md` §4.3 ("$C=\sqrt2$ is universal" without the small-information qualifier) as the body-side defect of the same regime question, and Paper 3's spherical-arc constant as unread influx.
+- [256] "**Class 2 (Partial) bias-bound analog.**" — whether a tighter bound exists for Class 2 with a known per-stage decomposition. Added as part (c) of item:bias-bound-lsi-constant-and-large-information-regime.
+- [257] Migration note — **set aside** (history).
+- [258] "**Cross-reference to NeurIPS Paper 3.**" — **guard** (forward pointer). It also records that the paper's architectural corollary uses the $\kappa$ ratio canon retired and excludes the goal-as-evidence Bayesian; that is a note for the paper, owned by the influx drain (`influx-scout/neurips.md` §2.D, "two incompatible definitions of $\kappa_{\text{processing}}$").
+
+#### `deriv-strategic-composition`
+
+The live correctness findings on this segment sit in its gold Off-ramp (gold-lift drain) and are already **item:strategic-composition-alpha-prime-transfer-overclaim** (C.1). The non-gold notes:
+
+- [304] Migration note — **set aside** (history; the withdrawn class claim it narrates is guarded at [308]).
+- [305] "**No $\gamma'$ sub-scope.**" — **guard** (a considered-and-collapsed alternative, with the reason).
+- [306] "**Effects-spiral eigenvalue condition formalization.**" — **joined item:spikes-proposed-advanced-12-effects-spiral-eigenvalue-condition-d-d6f7** and **question:effects-spiral-spectral-iff-vs-state-dependent**.
+- [307] "**Mechanism-design impossibility landed as `#disc-implementation-impossibility`…**" — **set aside** (history of a closed routing; the sister meta-segment exists).
+- [308] "**Composite-class-inheritance refinement (resolved 2026-05-21 — withdrawn).**" — **guard** (the withdrawn claim and its Cournot witness), read with item:the-composite-class-inheritance-row-class-1-sub.
+- [309] "**Bridge from strategic composition to `#form-composition-closure` $\varepsilon^\ast$.**" — **owed → item:closure-defect-for-equilibrium-statistic-macro** (C.4).
+- [310] "**Replicator / evolutionary dynamics.**" — **joined item:spikes-proposed-advanced-14-aat-replicator-evolutionary-game-dyna-689c**.
+- [311] "**Mean-field extension.**" — **joined item:spikes-proposed-advanced-7-mean-field-game-limit-for-population-d-61f3**.
+- [312] "**Worked-example structure — Cournot substitution for sector-template instantiation.**" — **guard** (records the discarded regularization and its algebra error, the reason the Cournot duopoly carries the instantiation).
+- [313]–[315] "**Track E surface-back of catalog citations (2026-05-22) — uncoupled-dynamics + passivity…**", the "Primary-source verification queued in the BG2 cluster" line and the `[^cat-2026-05-22]` footnote — **joined item:primary-source-verify-or-replace-with-read-sourc**.
+
+#### `disc-continuity-stance`
+
+- [386] "*Provenance.* The five-stance taxonomy and the orthogonality claim were authored as a coherent contribution by Joseph…" — **set aside** (provenance; commit `92a9620` and `doc/readme/src/_lexicon-full-archive.md` hold it).
+- [387] "*Reconsideration resolved.*" — **set aside** (history; the closing pointer is into an archived tarball).
+- [388] "*LEXICON section under review.*" — **joined item:terminology-todo-breakage-a-the-persistence-subgroup-mixe-2fb5**; already flagged as a stale status signal by review:items-recheck-s1#F2.
+- [389] "*Open: rigorous boundary cases.*" — **owed → item:continuity-stance-boundary-cases** (C.4).
+- [390] "*Orthogonality grain resolved (2026-05-30).*" — **set aside** (history; the L1/L2/L3 distinction is in the body). Its last sentence (the dashed-feedback figure is now *required*) is a figure owed to the body: folded into item:continuity-stance-boundary-cases as its figure clause.
+- [391] "*Open follow-on (not attempted here).* The L3 coupling is established qualitatively … but not quantified." — **owed → item:continuity-stance-l3-margin-coupling-bound** (C.4); related to item:adaptive-reserve-standpoint-underived (the same $\Delta\rho^\ast$ read).
+
+#### `disc-dynamic-regime-axis`
+
+- [396] "**Sub-tier unification candidate.**", [398] "**`#disc-modularity-state-dynamics` parallel-pattern.**" and [402] "**Mechanism reduction question.**" — one open question about whether the regime axis and the M4 axis unify. **owed → item:regime-axis-and-m4-unification** (C.4).
+- [397] "**§C.3 cost-asymmetry derivation (was J9) + standalone-paper trajectory (was J7)…**" — **joined item:spikes-proposed-c-3-cost-asymmetry-derivation-structural-cdd1**. The paper trajectory lives in `~/src/ops/papers/deferred/dynamic-regime-axis.md`: set aside here.
+- [399] "**A4 second-pass Undermind on broadened Instance 3 (resolved 2026-05-21).**" — **set aside** (history: the two caveats it records are in the bodies it names); its citations are in item:primary-source-verify-or-replace-with-read-sourc.
+- [400] "**Primary-source verification spike queued (2026-05-21).**" and [401] the `[^bg2-2026-05-21]` footnote — **joined item:primary-source-verify-or-replace-with-read-sourc**.
+- [403] "**R3 machinery.**" — **joined item:spikes-proposed-advanced-7-mean-field-game-limit-for-population-d-61f3**.
+
+#### `form-complete-agent-state`
+
+- [502] "The between-event dynamics $\dot{G} = g_G(G, M)$ allow autonomous purposeful evolution…" — **set aside**: a remark (between-event $G$ dynamics may be negligible for session-bound LLMs) with no claim; the between-event seam is item:influx-event-time-seam.
+- [503] "The formulation doesn't constrain the dimensionality or structure of $\mathcal{G}$." — **canon** (the type-stable interface is `#form-objective-functional`'s; the body's True-of line spans thermostat-scale to Kalman+LQR).
+- [504] "$G_t = \emptyset$ is not just a degenerate case." — **canon** (:70, "Backward compatibility with Part I — what survives the lift").
+
+#### `form-sector-condition`
+
+- [539] "Landing-context provenance: this segment was carved out of #deriv-sector-condition…" — **set aside** (provenance).
+- [540] "The companion-property partition (A1, A2', A3 together) is held here as the canonical setup…" — **guard** (says where the sub-scope ladder lives and that it inherits by reference).
+
+#### `hyp-directed-separation-under-composition`
+
+- [554] Migration note — **set aside**.
+- [555] "**Goal-information leakage is a separate phenomenon.**" — the body's gold "Readers ask" (line 108) answers a reader question by pointing at this Working Note, so the answer a reader needs is not in the body. **owed → item:goal-information-leakage-is-not-a-separation-failure** (C.4): put the distinction in the body, and decide whether $I(o_c; G^c_t \mid \Omega_t)$ gets its own home (`#der-agent-opacity` is the nearest existing one).
+- [556] "**Partial goal-dependence.**" and [557] "**Testable prediction.**" — **owed → item:composite-routing-independence-fraction** (C.4; the prediction is the test).
+- [558] "**Composite-class-inheritance table (canonical home: `#der-directed-separation`…)**" — **guard** (says where the table lives), read with **item:the-composite-class-inheritance-row-class-1-sub** (C.3).
+
+#### `impl-persistence-and-limits` (Part I lane live; its branch has not touched these lines)
+
+- [622] "**Scope of this segment.**" — the segment's statement of its own epistemic standing, which A.3 wants as an Epistemic Status: **joined item:format-todo-c14-discussion-segment-schema-split-in-f-09d7** (A.3).
+- [623] "**Regression guard — do not restore the refuted forms.**" — **guard** (four refuted forms and the one-hop-downstream lesson).
+- [624] "**Open — the matrix information-rate floor.**" — **joined item:todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe** (it lists the matrix information-rate floor extension); the Mitter–Newton/Riccati route is the added content.
+- [625] "**Open — failure-boundary geometry for the weakest-link claim.**" — **joined item:weakest-link-needs-conjunctive-failure-boundary** (C.1).
+- [626] "**Open — the two-layer mood corollary.**" — **joined item:todo-mood-layer-prospective-mood-arc-released-9d91** (its (ii)).
+- [627] "**Forward — the three-condition picture.**" — **owed → item:transient-adequacy-third-persistence-condition** (C.4); sources include `#result-persistence-condition`'s gold note at its line 199 (gold-lift drain).
+- [628] "**Forward — two capacities under one word.**" — **joined item:form-sector-condition-50-still-states-the-radius**.
+- [629] "**Forward — the operator decision tree.**" — **joined item:todo-floor-routing-diagnostic-segment-final-f-a963**.
+- [630] "**Forward — IB vs structural reserve.**" — **owed → item:ib-target-horizon-vs-structural-reserve** (C.4); the same tension is the gold note at `#result-structural-adaptation-necessity`:107 (gold-lift drain), and the 193847 disposition that routed it to PROPOSALS never arrived.
+- [631] "**Candidate experiment (2026-08-12, agent-proposed).**" — **owed → item:context-budget-tempo-ceiling-experiment** (E.2).
+
+#### `persistence-and-limits-intro` (Volume 4 lane live on this segment)
+
+- [691]–[694] "This is a chapter-introduction segment…", "Three moves the intro tries to surface…", "The scope-coda paragraph…", "The closing … line is meant to register the chapter's role…" — **set aside**: authorial intent notes for an intro; the first is the segment's epistemic standing and is covered by item:format-todo-c14-discussion-segment-schema-split-in-f-09d7 (A.3).
+
+#### `result-per-dimension-persistence`
+
+- [714] "The diagonal-correction assumption: closed." — **canon** (the counterexample is `#deriv-matrix-persistence-condition` §4, :99–107). Set aside.
+- [715] "The tensor formulation of tempo … Open: tightening this result's Formal Expression to invoke the tensor form directly" — **joined item:todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe**.
+- [716] "Simulation code: `../../empirica/track-b-nonlinear/variants/variant_ef_extensions.py`." — **guard** (the path exists; reproducibility pointer).
+
+#### `scope-adaptive-system` (A.1 lane live; these notes were written by it today)
+
+- [735] "Reasoning trail: `spikes/epistemic-target-ontology/` …" — **guard** (pointer list).
+- [736] "**What pins the physical housing.**", [737] "**Making law learning declaration-robust (the strengthening to spike).**", [738] "**Compute-relative extension.**", [739] "**Four-term refinement of the mismatch decomposition**" — **in flight**: open items the A.1 lane wrote today. None has a ledger item yet (searched `housing`, `tail`, `four-term`, `bounded-inference`), though INTENT A.1 says the tail-$\sigma$-field strengthening is in vsect. Raised with the lead rather than filed, so the lane that owns the reasoning files them. [737]'s regression guard on which $\sigma$-field is a **guard**.
+- [740] "**The glyph $\theta$.**" — **joined item:influx-part-i-symbol-and-term-collisions** (F.4; it already names $\theta$).
+
+#### `scope-agency`, `scope-agent-identity` (Volume 4 lane live on the second)
+
+- [741] "**The nominal-agent class now has dynamics (2026-06-11).**" — **guard** (forward pointer to `#der-severed-actuation-dynamics`, which the body does not cite).
+- [742] "**Consequence-3 re-grounding 2026-05-30…**" — **set aside** (history; the refuted form is guarded at [623], form (a)).
+- [743] "**Cross-references to NeurIPS 2026 submissions.**" — **guard** (forward pointer; influx drain owns Papers 1–3).
+
+#### Chapter intros (`the-cycle-in-motion-intro`, `the-reality-model-intro`)
+
+- [765]–[770] — six authorial notes ("This is a chapter-introduction segment…", "The "two derivations from completeness" framing…", "The CIY-placement paragraph used to be apologetic…", "The "ceiling that's low…" framing is the centerpiece…", "The depends list is light by design…") — **set aside**: design intent for the intros, and one history note; the intros' standing is covered by item:format-todo-c14-discussion-segment-schema-split-in-f-09d7 (A.3).

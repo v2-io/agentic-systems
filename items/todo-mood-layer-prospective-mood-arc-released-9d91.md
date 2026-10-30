@@ -20,3 +20,5 @@ Imported verbatim (relative links rebased) from `TODO.md` line 156, section *TOD
 Source added 2026-10-30 by Claude Opus 5.5 (spike drain fork C): part (iii) is split out, with an owner (G.2) and the spike's separated tiers, as item land-the-prospective-half-of-mood-from-spikes-sp. Part (v) is also asked by item spikes-proposed-spike-strategic-self-coupling-p2-p4-appe-3163.
 
 Also raised in (WN-01 drain, 2026-10-30, Claude Opus 5.5): #der-mood-timescale Working Notes 'Open — exact AR(1)' (drop the local-random-walk approximation for a closed form over the full AR(1); expected to shift constants, not the sqrt law), not among (i)-(v) above; and #def-mood Working Notes 'Part II enrichment': the actuation-side companion segment (signed/valued momentum, exploration and risk modulation) that #def-mood:38 defers to Part II, which no item owned.
+
+Also raised in (WN-01 drain, 2026-10-30, Claude Opus 5.5): #impl-persistence-and-limits Working Notes 'Open — the two-layer mood corollary': that segment's §5 second composition (nesting violation to mood pathology) rests on (ii).

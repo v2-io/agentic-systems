@@ -18,3 +18,5 @@ Imported verbatim (relative links rebased) from `spikes/PROPOSED-ADVANCED.md` li
 *   **The Gap:** The joint-Jacobian spectral-abscissa instability condition $\max_{\pi^\ast}\mathrm{Re}\,\lambda_{\max}(\nabla F(\pi^\ast))\gt0$ is only *sketched* in `#deriv-strategic-composition` Discussion, keeping `#der-adversarial-destabilization`'s effects-spiral at discussion-grade.
 *   **The Spike:** Derive it in closed form for two named instances — two Beta-Bernoulli agents on a shared DAG, and two Kalman agents with coupled observations — upgrading the spiral to `derived`. Distinct from the Φ(fight) C1 energy-bound route, which made the $\gamma_A(\lVert\delta_B\rVert)$ leg *unnecessary* via budget-depletion and is explicitly **not** a resolution of the joint-Jacobian problem (INDEX 2026-05-19).<!--md-press:not-math:Φ(fight)-->
 *   **Status:** Open; unhomed. Repair-shaped; medium-high tractability.
+
+Also raised in (WN-01 drain, 2026-10-30, Claude Opus 5.5): #deriv-strategic-composition Working Notes 'Effects-spiral eigenvalue condition formalization' (derive for two Beta-Bernoulli agents on a shared DAG, or two Kalman agents with coupled observations).
