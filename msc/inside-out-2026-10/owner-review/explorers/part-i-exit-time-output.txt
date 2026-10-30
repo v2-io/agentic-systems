@@ -1,0 +1,37 @@
+=== (1) 1-D linear OU, sigma=1, R=1 (kappa = alpha R^2/sigma^2 = alpha) ===
+ alpha  exact E[tau]   alpha*E    Kramers   ratio   MC mean   MC se
+   0.5        1.1915     0.596     4.1327   0.288     1.181   0.022
+   1.0        1.4452     1.445     2.4090   0.600     1.460   0.029
+   2.0        2.2508     4.502     2.3152   0.972     2.400   0.048
+   3.0        3.7873    11.362     3.4257   1.106     3.859   0.082
+   4.0        6.8582    27.433     6.0483   1.134     7.011   0.152
+   6.0       26.9823   161.894    24.3268   1.109 
+
+--- dt sensitivity at alpha=2 (discrete monitoring overestimates tau) ---
+dt=0.001: MC mean 2.424 +- 0.050   exact 2.251
+dt=0.0001: MC mean 2.239 +- 0.045   exact 2.251
+dt=2e-05: MC mean 2.252 +- 0.047   exact 2.251
+
+--- 1-D nonlinear sector F(x) = alpha x + beta x^3 (gradient; barrier 2U(R) = alpha R^2 + beta R^4/2) ---
+alpha=1 beta=2: exact E[tau] 2.112; linear-alpha E[tau] 1.445  (sector floor only bounds from below)
+alpha=2 beta=2: exact E[tau] 3.559; linear-alpha E[tau] 2.251  (sector floor only bounds from below)
+
+=== (2) barrier vs sector bound, linear A, random 2-D/3-D draws ===
+min over 20000 draws of (barrier / (alpha_sector R^2)) = 1.0000   (claim: >= 1)
+non-normal A=[[1,1.2],[0,1]]: alpha_sector=0.400, barrier V_min=0.4855, ratio 1.214
+rotation alpha=1, omega=3: alpha_sector=1.000, barrier V_min=1.0000 (tight)
+
+=== (3) MC slope of log E[tau] vs 1/sigma^2, non-normal A, R=1 ===
+sigma=1.0: E[tau]=0.640
+sigma=0.8: E[tau]=1.203
+sigma=0.65: E[tau]=2.275
+sigma=0.55: E[tau]=4.131
+fitted slope 0.796  vs barrier V_min 0.486  vs sector bound alpha_s R^2 0.400
+sigma=0.5: kappa=V/sigma^2=1.94  E[tau]=6.00 (se 0.18)
+sigma=0.44: kappa=V/sigma^2=2.51  E[tau]=10.44 (se 0.32)
+sigma=0.39: kappa=V/sigma^2=3.19  E[tau]=20.51 (se 0.71)
+sigma=0.35: kappa=V/sigma^2=3.96  E[tau]=41.93 (se 1.46)
+local slope 0->1: 0.476
+local slope 1->2: 0.479
+local slope 2->3: 0.450
+overall slope 0.468; V_min 0.486; sector bound 0.400

@@ -13,7 +13,7 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 - *This effort*
   - `internal-surfaces/00-cross-surface-map.md`
   - `influx-scout/MAP.md`. Its regional files are for integrators and are not read by the lead.
-  - `owner-review/00-review.md` v1 (12:05 MDT draft; v2 pending)
+  - `owner-review/00-review.md` (final v2), `owner-review/integrator-items.md`
   - `owner-review/history/{2026-03-04,2026-05,2026-06-10}.md`
   - `spikes/spike-strategic-persistence-hard-ceiling-convention-2026-05-31-verify-1.md`. Its central gain claim was re-run by the lead.
 - *asf*
@@ -50,7 +50,7 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 
 **Not read**
 
-- `owner-review/explorers/*`, `owner-review/verified-at-HEAD.md`
+- `owner-review/explorers/*`, `owner-review/verified-at-HEAD.md`. The review carries their claims with its own verification rows; read the explorer files themselves before landing anything from them.
 - `influx-scout/` regional files
 - the six per-surface maps in `internal-surfaces/`
 - aat-refactored's `scratch/PROPOSAL-2026-09-29-foundation-and-sops.md`
@@ -68,14 +68,14 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 ## In flight
 
 - **Running.** Read each agent's final documents whole before acting on anything it says.
-  - owner review (KR1.1). When its v2 lands, its §7 ranking becomes the top level of INTENT, as Joseph hoped.
   - F72 integrator (KR2.3/3.3a): it commits but doesn't push; the lead reviews the diff, then pushes.
 - **Waiting on Joseph: nothing.** Resolve uncertainty rather than route it. Two items that used to wait on him now sit in KR3.3a:
   - Canon citing the gitignored `msc/joseph-working-notes.md`. Lift any theory content those citations need into canon, then remove the citations.
   - The 08-22 cleanup items.
 - **Next for the lead.**
-  1. When the owner review lands, rebuild INTENT's top level from its ranking. Resolve KR1.2 from the evidence instead of routing it to Joseph.
-  2. Commission KR3.3a.
+  1. When the F72 integrator lands, review its diff, push, and update CHANGELOG.
+  2. Then take a beat (see the rhythm below): nothing running; rethink objective I, the system, from the top.
+  3. After the beat, launch A and B first. A Fable focused on the system, the counterpart to the theory review, is a candidate for I.
 - **Joseph's word needed (deletion needs his confirmation):** the NeurIPS scout published its map as a private claude.ai artifact without being asked (https://claude.ai/artifact/AWfAyP5UyNCcu4GFqp5CWE). Should it be deleted?
 
 ## The lead's rhythm

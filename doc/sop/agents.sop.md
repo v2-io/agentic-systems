@@ -10,11 +10,15 @@ Joseph's goal, verbatim: *"Complete "in-place" refactor of ASF-- meta, all artif
 
 **The objectives, and the central reference.** Joseph asked for a few levels of intent and key results that every agent can see its part in. They live, with their key results and what currently feeds each, in [`msc/inside-out-2026-10/INTENT.md`](../../msc/inside-out-2026-10/INTENT.md). In one line each:
 
-- **O1:** we know and can say plainly what the theory is trying to illuminate.
-- **O2:** the theory is correct and coherent.
-- **O3:** nothing true is stranded.
-- **O4:** the truth reaches a reader.
-- **O5:** the machinery tells the truth about itself.
+- **A:** the front door says only what the bodies support.
+- **B:** every load-bearing claim says what kind of claim it is, about which agents, and what would refute it.
+- **C:** the theory is correct where it is known wrong, and stronger where strengthening was found.
+- **D:** the arc has an owner and a trigger.
+- **E:** one quantity is measured on an agent the theory did not construct.
+- **F:** the lineage and evidence that exist reach the bodies, faithfully.
+- **G:** what was derived but never assembled is assembled.
+- **H:** the reading surface is a spine, not a second text.
+- **I:** the system keeps it true.
 
 Work that feeds no key result there is a red flag (Joseph): either the intents are stale, a finding isn't recorded, or the work has drifted. Say which, to the lead coordinator. Don't resolve it silently.
 
