@@ -19,8 +19,8 @@ status: spike landed; awaiting independent verification (spiker ≠ verifier ≠
 | `00-neighborhood-map.md` | what canon holds around the question, the live tensions, the regression check |
 | `01-derivation.md` | the mathematics, claim by claim, with registers and completion states (§12) |
 | `02-adversarial-instances.md` | one out-of-family instance per universal claim; what scoped and what survived |
-| `sims/check.py`, `sims/check-output.txt` | exact-enumeration checks N1–N12 cited throughout |
-| `lit-scan.md` | the literature scan (written by a Sonnet-class agent; verification status marked inside) |
+| `sims/check.py`, `sims/check-output.txt` | exact-enumeration checks N1–N13 cited throughout |
+| `lit-scan.md` | the literature scan (written by a Sonnet-class agent from the web only; its §7 is the verification status; it supplied the access condition on Prop A and the four standard names for the split) |
 | `proposed-integration-plan.md` | suggestions for the verifier and integrator, in verification order, with a do-not-inherit list |
 | `debrief.md` | for readers who will not read the above; written last from the corrected files |
 

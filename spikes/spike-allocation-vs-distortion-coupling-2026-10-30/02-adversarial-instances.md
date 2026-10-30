@@ -17,6 +17,8 @@ head: 620ac98c
 
 **Out-of-family 3: goal-dependent randomization in the encoder.** A stochastic encoder whose randomization is independent of $\Omega$ is a garbling of the information; the Bayes posterior given the garbled output is still a conditional expectation (Lemma 2.2). **Survives** without computation; noted because "deterministic coarsening" was the flagship.
 
+**Out-of-family 16: the agent does not know what it encoded (Dorst 2023's two-world example; N13).** Equiprobable worlds $b, g$; the update becomes certain of $g$ at $g$ and stays at $0.5$ at $b$ because the agent cannot tell $b$ from "unresolved." No goal anywhere. Brier: prior $0.25$, updated $0.125 = 0.25 - 0.25 + 0.125$ — resolution $0.25$, **reliability $0.125$**, Reflection fails ($\mathbb E[\text{updated } P(g)] = 0.75 \ne 0.5$), yet the update is strictly better than not updating; the recalibrated forecast ($0$ at $b$) would score $0$ but the agent cannot issue it. **Scopes Prop A a third time:** "allocation preserves calibration" also needs the agent to know what it encoded (access / No Ambiguity). Without it, calibration failure is not evidence of goal-driven distortion, and goal-driven allocation that produces goal-dependent ambiguity (Dorst's cognitive search) does cost reliability. The invariant that survives is Value.
+
 ## Proposition B (distortion strictly costs under every strictly proper rule) — motivating family: a well-specified Bayesian with a goal-tilt
 
 **Out-of-family 4: misspecified prior (N4).** True $P(\Omega = 1) = 0.8$, agent prior $0.3$, one feature with accuracy $0.6$, exponential tilt toward $\Omega = 1$ with gain $\lambda$. Objective expected log score: $1.0015$ at $\lambda = 0$, $0.6318$ at $\lambda = 1$, $0.4927$ at $\lambda = 2.5$, minimum near $\lambda \approx 2.23$; subjective (agent-model) score minimized at $\lambda = 0$. **Scopes the claim:** strictly worse under the agent's own model always; under the world's law only when well-specified. "Accuracy about the world, for every goal" is false as a universal; the honest norm is about the reliability term under the stated law.
@@ -59,7 +61,7 @@ head: 620ac98c
 
 | Claim | Instances | Outcome |
 |---|---|---|
-| Prop A | 1, 2, 3 | scoped to ignorability (A′); survives otherwise |
+| Prop A | 1, 2, 3, 16 | scoped to ignorability (A′) and to access (the agent knows what it encoded); survives otherwise |
 | Prop B | 4, 5, 6 | scoped to subjective / well-specified; sharpened to non-goal distortions |
 | Thm 3.1 / Prop 3.2 | 7 | survives, strong form |
 | Prop 3.3 | 8 | scoped: detectability (SNR), saturating in the noiseless limit |
@@ -68,4 +70,4 @@ head: 620ac98c
 | Prop 7.1 | 13 | scoped: revise option must be optimal under infeasibility |
 | §5.1 | 14, 15 | survives; needs realized action in the conditioning set |
 
-No claim broke outright; five were scoped by their instance, and the scopes are now in the statements.
+No claim broke outright; five were scoped by their instance (Prop A twice — ignorability from my own instance, access from the literature scan's), and the scopes are now in the statements.

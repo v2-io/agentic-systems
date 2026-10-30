@@ -289,4 +289,20 @@ for sigma, beta in [(1.0, 0.5), (2.0, 0.5), (0.5, 0.5)]:
     print(f"  sigma={sigma} beta={beta}: Jensen gap={jensen:.4f}  KL(N(mu,s2)||N(mu+beta,s2))={kl_exact:.4f}  Var_pi(u)=sigma^2={sigma**2}  (range bound: supp unbounded -> vacuous)")
 
 print()
-print("all checks passed (N1-N12)")
+print("=" * 78)
+print("N13 Dorst's two-world example: honest update under ambiguous evidence is predictable, uncalibrated, and still better")
+print("=" * 78)
+# Worlds b, g equiprobable. Update: at b the agent cannot tell (stays 0.5); at g it becomes certain of g. Y = 1{g}. Brier score.
+prior_score = 0.5 * (0.5 - 0) ** 2 + 0.5 * (0.5 - 1) ** 2
+upd_score = 0.5 * (0.5 - 0) ** 2 + 0.5 * (1.0 - 1) ** 2
+# Murphy/Broecker (Brier): U = p(1-p); REL = sum mass*(forecast - P(Y|forecast))^2 ; RES = sum mass*(P(Y|forecast) - pbar)^2
+U = 0.5 * 0.5
+REL = 0.5 * (0.5 - 0.0) ** 2 + 0.5 * (1.0 - 1.0) ** 2
+RES = 0.5 * (0.0 - 0.5) ** 2 + 0.5 * (1.0 - 0.5) ** 2
+assert abs(upd_score - (U - RES + REL)) < 1e-12
+exp_posterior = 0.5 * 0.5 + 0.5 * 1.0
+print(f"  prior Brier={prior_score:.4f}  updated Brier={upd_score:.4f}  = U({U:.3f}) - RES({RES:.3f}) + REL({REL:.3f})")
+print(f"  Reflection fails: prior P(g)=0.5 but E[updated P(g)]={exp_posterior:.3f}; reliability > 0 with no goal involved; recalibrated forecast (0 at b) would score 0.")
+
+print()
+print("all checks passed (N1-N13)")

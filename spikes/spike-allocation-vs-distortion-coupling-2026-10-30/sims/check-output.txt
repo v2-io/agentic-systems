@@ -87,4 +87,10 @@ N12 Gaussian mean-shift is an exponential tilt: exact Jensen gap = beta^2/(2 sig
   sigma=2.0 beta=0.5: Jensen gap=0.0312  KL(N(mu,s2)||N(mu+beta,s2))=0.0312  Var_pi(u)=sigma^2=4.0  (range bound: supp unbounded -> vacuous)
   sigma=0.5 beta=0.5: Jensen gap=0.5000  KL(N(mu,s2)||N(mu+beta,s2))=0.5000  Var_pi(u)=sigma^2=0.25  (range bound: supp unbounded -> vacuous)
 
-all checks passed (N1-N12)
+==============================================================================
+N13 Dorst's two-world example: honest update under ambiguous evidence is predictable, uncalibrated, and still better
+==============================================================================
+  prior Brier=0.2500  updated Brier=0.1250  = U(0.250) - RES(0.250) + REL(0.125)
+  Reflection fails: prior P(g)=0.5 but E[updated P(g)]=0.750; reliability > 0 with no goal involved; recalibrated forecast (0 at b) would score 0.
+
+all checks passed (N1-N13)
