@@ -78,6 +78,7 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
   1. When the two integrators land, review, push, rebuild `CURRENT-VOL1`, then take a beat.
   2. I.2 comes next. Its debt clearing touches canon, so it waits until the integrators are out. It fires every other check, so it goes first.
   3. B.1, the external-claim records starting with Part II, is the next theory launch.
+  4. The A.2 launch should include two places A.1 made stale: `INTRODUCTION.md:39` and `doc/readme/src/_overview-concepts.md:23`. Both say "observation under residual uncertainty", which is now only the necessary condition. Rebuild `CURRENT-VOL1` once, after A.1's cold read and C.1's example-strategy fix both land.
 - **Joseph's word needed (deletion needs his confirmation):** the NeurIPS scout published its map as a private claude.ai artifact without being asked (https://claude.ai/artifact/AWfAyP5UyNCcu4GFqp5CWE). Should it be deleted?
 
 ## The lead's rhythm
