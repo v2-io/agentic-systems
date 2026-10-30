@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4a8f43b24b138f6bbc9b1e7cac99df9b42e276d4020913a8b5d8d976b4ce90c4
+at: 2026-10-30T21:17:15Z
+store: asf
+act: revise
+about: segment:result-sector-persistence-template
+actor:
+  name: c1-mismatch-lineage-integrator
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: f668640b9a850c617e61762d8e4538454059c2a71897a19ba534f30ca151124c
+own-version: d923df79756f5967915bd49a180d1907e7b8b93ac88d9bab5831ad8a46539ab9
+record: 01-aat-core/src/result-sector-persistence-template.md
