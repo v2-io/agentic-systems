@@ -8,7 +8,7 @@ depends:
   - def-adaptive-tempo
   - def-unity-dimensions
   - result-per-dimension-persistence
-  - deriv-graph-structure-uniqueness
+  - deriv-graph-structure
 stage: draft
 ---
 
@@ -38,13 +38,13 @@ Six load-bearing independence assumptions in AAT, each paired with its failure r
 
 **Statement:** Every common cause of two or more nodes in $\Sigma_t$ is itself a node in $\Sigma_t$.
 
-**Where it appears:** #deriv-graph-structure-uniqueness (precondition for the CMC-based Markov proof); #def-strategy-dag edge-independence in status propagation; all of Part II's strategy-layer formal results (Props B.1–B.6, the sector condition transfer of B.5, persistence of $\delta_s$).
+**Where it appears:** #deriv-graph-structure (precondition for the CMC-based Markov proof); #def-strategy-dag edge-independence in status propagation; all of Part II's strategy-layer formal results (Props B.1–B.6, the sector condition transfer of B.5, persistence of $\delta_s$).
 
 **Failure regime:** The dominant real-world case in complex, multi-stakeholder, or adversarial environments — shared infrastructure, market conditions, correlated adversary actions, common-mode risks, supply-chain dependencies.
 
 **Diagnostic signal:** Pairwise covariance among sibling edges after edge credences have converged. Positive covariance rejects the independence hypothesis and localizes where a common cause is missing. See #der-causal-insufficiency-detection.
 
-**Repair operation:** L1 augmentation — add common-cause nodes and restructure the DAG so each common cause is factored *above* the correlation it creates ( #def-strategy-dag Correlation Hierarchy; #deriv-edge-credence-dynamics Prop B.6). L0 formal results transfer exactly to correctly constructed L1 DAGs because a correctly constructed L1 graph is causally sufficient *and* an AND/OR tree, the two conditions under which status propagation is exact ( #deriv-graph-structure-uniqueness, §"Exactness of Status Propagation"). The orient cascade's step 4c triggers this escalation.
+**Repair operation:** L1 augmentation — add common-cause nodes and restructure the DAG so each common cause is factored *above* the correlation it creates ( #def-strategy-dag Correlation Hierarchy; #deriv-edge-credence-dynamics Prop B.6). L0 formal results transfer exactly to correctly constructed L1 DAGs because a correctly constructed L1 graph is causally sufficient *and* an AND/OR tree, the two conditions under which status propagation is exact ( #deriv-graph-structure, §"Exactness of Status Propagation"). The orient cascade's step 4c triggers this escalation.
 
 ### 3. Channel independence: observation channels contribute non-redundant correction
 
@@ -76,7 +76,7 @@ Six load-bearing independence assumptions in AAT, each paired with its failure r
 
 **Where it appears:** #def-strategy-dag status propagation formula; #scope-and-or; every downstream quantity computed from $\hat P_\Sigma$ (satisfaction gap, control regret via $A_O$, strategy-plan-confidence error $\delta_s$).
 
-**Failure regime:** Wider than causal sufficiency (item 2). Causal sufficiency gives independent exogenous noise, but a node's parents are independent only if, in addition, they share no ancestor. An explicit common-cause node that feeds two branches which reconverge breaks this with causal sufficiency intact. The exact condition is that the DAG be a causally sufficient AND/OR tree ( #deriv-graph-structure-uniqueness, §"Exactness of Status Propagation").
+**Failure regime:** Wider than causal sufficiency (item 2). Causal sufficiency gives independent exogenous noise, but a node's parents are independent only if, in addition, they share no ancestor. An explicit common-cause node that feeds two branches which reconverge breaks this with causal sufficiency intact. The exact condition is that the DAG be a causally sufficient AND/OR tree ( #deriv-graph-structure, §"Exactness of Status Propagation").
 
 **Diagnostic signal:** For a latent cause, as item 2. For explicit reconvergence no data are needed: the condition is read from the graph (some node has two directed paths to the root).
 
@@ -98,7 +98,7 @@ Six load-bearing independence assumptions in AAT, each paired with its failure r
 
 Several results that might appear to depend on independence actually do not:
 
-- **Acyclicity of $\Sigma_t$** is proved from temporal ordering over a finite horizon ( #deriv-graph-structure-uniqueness). Independent of any independence assumption.
+- **Acyclicity of $\Sigma_t$** is proved from temporal ordering over a finite horizon ( #deriv-graph-structure). Independent of any independence assumption.
 - **Cox-derived probability structure** at edges is independent of edge-independence — Cox forces the *measure* to be probability, not the joint structure.
 - **Sector-persistence template machinery** ( #result-sector-persistence-template) depends only on the sector condition (T2) and bounded disturbance (T3); it does not require any independence assumption on the state variable or correction function.
 - **The DAG structure derivation** (directed edges, acyclicity, representability as a Bayesian network) does not require causal sufficiency — only the *Markov factorization* within the derived structure does.

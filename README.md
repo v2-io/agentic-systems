@@ -324,7 +324,7 @@ This section surfaces what the framework currently acknowledges as open at the o
 - B.3 C-BP1 + C-BP4 bundle — epistemic separation framework + claim-level statuses
 
 **§C — Soon.**
-- C.1 O-BP13 — Cox-parallel necessity for `#deriv-graph-structure-uniqueness`
+- C.1 O-BP13 — Cox-parallel necessity for `#deriv-graph-structure`
 - C.2 O-BP15 — Comprehensive "minimal proof of viability" worked example
 - C.3 SP-14 — Observation-channel capacity $C^{(k)}$ as first-class notation
 - C.4 SP-19 — Naming consolidation pass

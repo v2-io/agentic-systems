@@ -5,7 +5,7 @@ status: conditional
 depends:
   - def-strategy-dag
   - deriv-edge-credence-dynamics
-  - deriv-graph-structure-uniqueness
+  - deriv-graph-structure
 stage: draft
 ---
 
@@ -53,7 +53,7 @@ The obvious L1 construction adds $C$ as a parent of both paths:
 
 Status propagation: $s_{B_1} = 0.8 \cdot 0.9 = 0.72$, $s_{B_2} = 0.8 \cdot 0.7 = 0.56$, $s_G = 1 - (0.28)(0.44) = 0.877$.
 
-**Same answer as L0.** The OR-propagation treats $B_1$ and $B_2$ as marginally independent, but they are correlated through their shared parent $C$. Adding the common-cause node does not fix the overestimation because the node is *inside* the correlated structure (below the OR-node), not factored above it. The augmented graph is causally sufficient, since $C$ is now a node, but $C$ has two children that reconverge at $G$. So the graph is not a tree, and the forward pass is exact only on trees ( #deriv-graph-structure-uniqueness, §"Exactness of Status Propagation").
+**Same answer as L0.** The OR-propagation treats $B_1$ and $B_2$ as marginally independent, but they are correlated through their shared parent $C$. Adding the common-cause node does not fix the overestimation because the node is *inside* the correlated structure (below the OR-node), not factored above it. The augmented graph is causally sufficient, since $C$ is now a node, but $C$ has two children that reconverge at $G$. So the graph is not a tree, and the forward pass is exact only on trees ( #deriv-graph-structure, §"Exactness of Status Propagation").
 
 
 ## Correct L1: Factor the Common Cause Above the Correlation
@@ -165,4 +165,4 @@ The agent's on-policy history is drawn from the same distribution in both worlds
 
 ## Epistemic Status
 
-*Conditional on Beta-Bernoulli model.* The L0 overestimation, L1 correction, and sector condition verification are exact algebra. The direction-of-bias formula ($\pm\rho$) is exact for two binary siblings **under marginal sampling** (credences at the marginals $\theta_j$; under on-policy short-circuit execution the credences converge to regime conditionals instead and the residual vanishes — see #der-causal-insufficiency-detection); for deeper DAGs with multiple common causes, the bias involves higher-order covariance terms. The on-policy observational-equivalence table is exact arithmetic on the matched-world construction of #der-causal-insufficiency-detection. The L1 construction principle (factor common cause above the correlation) is general for single common causes gating OR-siblings; the conditioning-based extension for more complex topologies is standard (cutset conditioning or variable elimination in Bayesian networks). That naive L1 fails is exact as well: it is an instance of the tree condition in #deriv-graph-structure-uniqueness.
+*Conditional on Beta-Bernoulli model.* The L0 overestimation, L1 correction, and sector condition verification are exact algebra. The direction-of-bias formula ($\pm\rho$) is exact for two binary siblings **under marginal sampling** (credences at the marginals $\theta_j$; under on-policy short-circuit execution the credences converge to regime conditionals instead and the residual vanishes — see #der-causal-insufficiency-detection); for deeper DAGs with multiple common causes, the bias involves higher-order covariance terms. The on-policy observational-equivalence table is exact arithmetic on the matched-world construction of #der-causal-insufficiency-detection. The L1 construction principle (factor common cause above the correlation) is general for single common causes gating OR-siblings; the conditioning-based extension for more complex topologies is standard (cutset conditioning or variable elimination in Bayesian networks). That naive L1 fails is exact as well: it is an instance of the tree condition in #deriv-graph-structure.

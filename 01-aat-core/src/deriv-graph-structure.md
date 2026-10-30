@@ -1,5 +1,5 @@
 ---
-slug: deriv-graph-structure-uniqueness
+slug: deriv-graph-structure
 type: derivation
 status: conditional
 depends:
@@ -10,7 +10,7 @@ depends:
 stage: claims-verified
 ---
 
-# Derivation: Graph Structure Uniqueness
+# Derivation: Strategy Graph Structure
 
 Operational requirements on the agent's representation — directed temporal ordering, probabilistic uncertainty, and the ability to test strategy components — are *sufficient* for the strategy to be a directed acyclic graph with the Markov factorization property. The argument parallels Cox's theorem for probability in *form* but not yet in *strength*: Cox's theorem is necessary-and-sufficient (the only measure satisfying the desiderata is probability); this result is sufficient only (the desiderata guarantee DAG+Markov, but no one has shown a non-DAG structure cannot satisfy them). Acyclicity and directed edges are *proved* from temporal ordering over a finite horizon; the Markov factorization is *proved under causal sufficiency* via the Causal Markov Condition theorem (Spirtes–Glymour–Scheines, Pearl). A fourth postulate (observable intermediates) is required for localized strategic diagnosis but not for the representation or persistence results themselves. The Markov factorization does not by itself make the AND/OR status propagation exact: under causal sufficiency, propagation computes the plan's true success probability for all credences if and only if the strategy DAG is an AND/OR tree.
 

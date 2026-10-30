@@ -448,7 +448,7 @@ Cross-references between segments (`#other-segment`) are unrestricted in any sec
 
 ### Derivation-audit table *(optional; recommended for derivation-type segments)*
 
-Derivation segments, and any segment that carries multiple claims at distinct epistemic strengths, benefit from an executive-summary table that makes each claim's source and tier visible at a glance. The convention is modelled on `#deriv-graph-structure-uniqueness`'s "What Is Derived vs. What Is Chosen" table. It pre-empts the "is X derived or chosen?" ambiguity that fresh readers repeatedly stumble on, and serves as the segment-level counterpart to the claim-level equation tags (`*[Derived]*`, `*[Formulation]*`, etc.).
+Derivation segments, and any segment that carries multiple claims at distinct epistemic strengths, benefit from an executive-summary table that makes each claim's source and tier visible at a glance. The convention is modelled on `#deriv-graph-structure`'s "What Is Derived vs. What Is Chosen" table. It pre-empts the "is X derived or chosen?" ambiguity that fresh readers repeatedly stumble on, and serves as the segment-level counterpart to the claim-level equation tags (`*[Derived]*`, `*[Formulation]*`, etc.).
 
 **Location.** Near the end of `## Formal Expression`, before `## Epistemic Status`, under a `### What Is Derived vs. What Is Chosen` heading (exact title may vary — e.g., `### Derivation Audit`, `### Derived vs. Chosen vs. Assumed` — as long as the three columns are the same).
 
@@ -527,7 +527,7 @@ The current inevitability-core members, with why inevitability is plausible:
 | #der-directed-separation | $f_M$ independence from $G_t$ follows from the update structure, given scope condition. |
 | #der-deliberation-cost | Think-vs-act threshold from information-theoretic argument. |
 | #disc-composition-consistency | If scope condition doesn't restrict level, predictions at different levels must be compatible. |
-| #deriv-graph-structure-uniqueness | Four operational postulates + causal sufficiency suffice for a Markov-factorized DAG (the sufficiency half of a Cox analog); status propagation is exact iff the DAG is an AND/OR tree. |
+| #deriv-graph-structure | Four operational postulates + causal sufficiency suffice for a Markov-factorized DAG (the sufficiency half of a Cox analog); status propagation is exact iff the DAG is an AND/OR tree. |
 
 **Canonical formulations (second ring).** Good representational choices that are motivated but not forced. Triage question 2 ("what competing formulation would also fit?") answers "at least one alternative exists." Review focus: explaining the choice, noting alternatives, and guarding against drift toward inevitability claims that aren't there.
 
