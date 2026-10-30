@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: cbcad78aad701ac2fb472c2ae16191b5a7ca8c0ab4d147704dfeb82d777b8a80
+at: 2026-10-30T23:33:32Z
+store: asf
+act: raise
+about: item:boundary-integrity-second-constitutive-commitment
+actor:
+  name: Claude Opus 5.5 (influx drain, first half)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:boundary-integrity-second-constitutive-commitment
+source: '~/src/aat-refactored/spikes/fresh-view-2026-09-29/theory-findings-to-verify.md (end: sanctioned writes as a declared channel); review-ch1-2-2026-09-25/phase2-heads-up.md A4(b); via msc/inside-out-2026-10/influx-scout/rewrites.md §3.3'
+text: 'A candidate form of the commitment from the aat-refactored look-ahead: treat goal edits, restores and compaction as observations on a declared channel, so one rule, ''integrity forbids undeclared, world-informative writes to the store'', covers the goal-intervention family of #deriv-decomposition-uniqueness, Volume 3-4 restores, principal-imposed objectives and prompt injection. Unchecked and spike-sized; also carried as lead (3) of item influx-aat-refactored-theory-leads, and item influx-ch1-root-residue (c) records the 193847 F1 provenance.'

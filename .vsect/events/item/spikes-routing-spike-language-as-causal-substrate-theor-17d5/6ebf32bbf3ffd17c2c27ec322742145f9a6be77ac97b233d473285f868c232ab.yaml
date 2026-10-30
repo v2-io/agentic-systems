@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 6ebf32bbf3ffd17c2c27ec322742145f9a6be77ac97b233d473285f868c232ab
+at: 2026-10-30T23:32:40Z
+store: asf
+act: raise
+about: item:spikes-routing-spike-language-as-causal-substrate-theor-17d5
+actor:
+  name: Claude Opus 5.5 (influx drain, first half)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:spikes-routing-spike-language-as-causal-substrate-theor-17d5
+source: msc/inside-out-2026-10/influx-scout/papers-may.md A5, B1-B4 (primaries ~/src/behavioral-floor/src/full/03-two-distinctions.md; ~/src/causal-language/paper/src/03-theoretical-anchor.md, 05-empirical-findings.md; ~/src/causal-language/spikes/spike-constructive-dual-of-behavioral-floor/04-the-correct-relationship.md)
+text: 'Three pieces the Theorem 1 landing needs beside what the item already carries. (1) Vocabulary that keeps it honest, in no segment today (grep at cbd2f345: ''fresh Level'' 0; encoded/deployed only in unrelated senses): inherited Level-2-form content (asserted commitments, with recognized exclusions: negation, quotation, fiction, modal embedding, hedging) versus fresh access under the identification gate, ''additive, not substitutable''; and encoded (what representation audits can establish) versus deployed (what behavioral evaluation can establish). The asf spike''s own 01-derivation.md:161-163 proposed the inherited/fresh split as Discussion for #der-loop-interventional-access; canon has only the compressed form in #der-causal-hierarchy-requirement WN :93 (''a prior, not verified''). (2) The C1/C2/C3/C4 route framework and the H_D3 control: only C1-dominant results (syntactic position, vocabulary held fixed) test Theorem 1; C2 (''Reichenbachian inheritance'' via co-occurrence) is what a rich Level-1 summary would also give. Without it the measured 3/12 cannot be read. (3) Proposition D1 of the constructive-dual spike: behavioral evaluation cannot even lower-bound the encoded-presence precondition (from the parrot witness), so the substrate diagnostic and the behavioral floor compose by a hand-off at the encoded/deployed seam, not a duality; the spike reads Claim 2 and Theorem 1 as adjacent #disc-identifiability-floor instances (deployment-certification layer; linguistic-encoding layer) sharing the escape of structural inspection, which argues for landing them together if either lands as an instance. Numbering trap: ''Instance 6'' in causal-language is unrelated to asf''s spikes/.integrated/spike-identifiability-floor-instance-6-2026-05-21.md. Also tested and not supported: the capacity-asymmetry-as-asymmetric-comprehension hypothesis (every panel Spearman rho non-significant at n = 12; a no-trend result, not a refutation); its canon trace is one cross-reference in #def-identity-sufficiency.'

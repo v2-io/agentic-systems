@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: ab59f52aedeb4d8a5ab915de4d5543c29cf5c15ce8fec30e9b719f6ba46e3d79
+at: 2026-10-30T23:33:17Z
+store: asf
+act: raise
+about: item:ib-exactness-deterministic-vs-kernel
+actor:
+  name: Claude Opus 5.5 (influx drain, first half)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:ib-exactness-deterministic-vs-kernel
+source: ~/src/aat-refactored/spikes/verify-ch2-retention-2026-09-25/report.md §6 (Still 2009 checked at the primary); audits/AUDIT-WORKING-731548/11-form-information-bottleneck.md:11-12 (ledger xxiv); via msc/inside-out-2026-10/influx-scout/rewrites-aux-canon-check.md unit 10
+text: 'Same defect, found independently from the aat-refactored side: Still 2009''s with-actions IB assumes P(s, a | h) = P(s | h) P(a | h) (eq. 1), exactly the missing condition, and 731548''s offered wording is ''AAT restricts to deterministic encoders, for which the chain is automatic; the kernel-level theorem applies under the open-loop pi_cont convention''. The same source adds that what is exact is only the objective, since Tishby''s convergence proof ''does not imply uniqueness'' (:278), so phi* = argmin presumes uniqueness. Also carried, with the beta-versus-volatility contradiction in the same segment, by item influx-ib-beta-rho-and-exactness; take both together.'

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4d1608767d9803ca898981b8a4a287dffea3917e557ce53efd8a0ccc9e6e621f
+at: 2026-10-30T23:33:03Z
+store: asf
+act: raise
+about: item:todo-tacl-embeddings-paper-integration-when-o-b769
+actor:
+  name: Claude Opus 5.5 (influx drain, first half)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:todo-tacl-embeddings-paper-integration-when-o-b769
+source: msc/inside-out-2026-10/influx-scout/papers-may.md §C (primary ~/src/embeddings/paper.md, as submitted to TACL 2026-05-02, paper ID 11139)
+text: 'Checked at cbd2f345, two more sites and a sharper statement of the limit. (1) Stale pre-submission numbers in 03-llm-core/OUTLINE.md:192: LOO ''0.67-0.95'' (paper: 0.59-0.94, commit 3eea61d), ''5 architecturally diverse model families'' (paper: six models in five families), ''12x dimensional compression'' (paper: an order of magnitude); and rho = 0.991 is the best case (Mosteller-to-Vogel, one model, n_test = 11), which asf''s own agent orientation (doc/sop/agents.sop.md:327, Sibling projects) gives as the headline; the paper''s range is ''exceed 0.89 across all five models''. (2) #impl-scaffolded-logogenic:72 says language-geometric AAT instrumentation is ''grounded by this validation -- not asserted by analogy''. The paper validates reading the probability a sentence expresses, in frozen pooled sentence encoders; reaching an agent''s U_M or U_o needs two bridges it does not supply: expressed to actual confidence (the unrun ~/src/embeddings/EXPERIMENT-PROPOSAL-self-report-truth-axis.md, which is the truth-death question), and external encoder to the agent''s own substrate (the paper''s own model-class distinction). Its informative negatives bear on instrumentation too: no IQR encoding (uncertainty-of-uncertainty is not recovered), and negation is near-orthogonal to the axis. (3) The supplement''s ''Original §5 ¶4'' says it lifts almost as-is into an ASF bridge; its first sentence (''pooled sentence embedding models are the substrate of contemporary language-constituted agents -- chatbots ...'') is false by the paper''s own central distinction, so it should not be lifted.'

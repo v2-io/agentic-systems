@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: c13b97ac063c820aab8e4f9d4b7a743fd87cb34a16318cfa076e5a8969a329d4
+at: 2026-10-30T23:33:25Z
+store: asf
+act: raise
+about: item:the-scaffolding-overclaim-in-volume-3-its-origin
+actor:
+  name: Claude Opus 5.5 (influx drain, first half)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:the-scaffolding-overclaim-in-volume-3-its-origin
+source: ~/src/ops/aad-consequential-findings-2026-05-11.md B2 (via msc/inside-out-2026-10/influx-scout/logos-explication-ops--ops.md §2.A, sleep-floor row)
+text: 'The uncited ''4 hours'' sleep claim of #impl-scaffolded-logogenic:44 was also stated outward in the May ''consequential findings'' digest written for outside readers (''you cannot sleep less than ~4 hours and remain adaptive''); whatever lands, that outward copy follows it.'

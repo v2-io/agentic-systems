@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 68f7391d7e7100d6308d32553923358598fcbebf119945cf4b4ea1135f9759a1
+at: 2026-10-30T23:32:19Z
+store: asf
+act: raise
+about: item:decide-what-of-c2-star-lands-now-that-its-motiva
+actor:
+  name: Claude Opus 5.5 (influx drain, first half)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:decide-what-of-c2-star-lands-now-that-its-motiva
+source: ~/src/behavioral-floor/src/full/04-architectural-floor.md:128-206 (via msc/inside-out-2026-10/influx-scout/papers-may.md A2-A4)
+text: 'The item''s open question (a Class 3 no-go for behavioral extraction of a goal-clean belief-update channel that does not rest on goal provenance) has a candidate answer in the same paper, read whole by me at those lines: the Theorem ''Behavioral non-certifiability of belief-channel parse-honoring on D_G for Class 3 below strict wrapping'', in an R4-free core under (R1) effective tests, (R2'') policy-class closure under goal-conditioned computable functions and (R3'') fixed effective specification semantics, with a sharp form under (R4) parrot realizability. Lemma 1 is the property-testing no-free-lunch trichotomy (Ben-David et al. 2010 is the parent), Lemma 2 a Rice obstruction to any computable, semantics-invariant, non-degenerate metric on goal distributions, Lemma 3 the parrot witness beta: H := G realizable in Class 3. It rests on goal semantics and black-box access, not on goal provenance. Its escapes are (N1) inspection, (N2) wrapping (#der-class-coercion-via-wrapping), (N3) a training-process prior. Same section, also unlanded: the declared-versus-honored deployment table (:128-150), which maps W0/W2/W1 onto raw chat, role-typed APIs, monolithic tool-calling, scratchpad, wrapped multi-call and strict wrapping, and answers the objection that role-typed APIs and tool schemas already impose a parse (homes: #scope-channel-collapse, #der-logogenic-as-wrapping); and the W2 recursion (commit ab5d342; src/07-limitations.md): a W2 leakage rate bounded only behaviorally inherits this certification no-go, while W1 escapes it, one sentence for #der-class-coercion-via-wrapping, whose W2 row says ''bounded behaviorally'' and stops. Canon has three siblings built since without either paper in view (#disc-sandbox-evaluation-ceiling, #deriv-mechanism-counterfactual-separation, #hyp-behavioral-self-knowledge-insufficiency); this would be a third member beside ''sandbox evidence does not transport'' and ''behavior does not fix mechanism''. The paper does not cite Bellot, Richens and Everitt 2025 (item disc-sandbox-evaluation-ceiling-four-defects-fro carries canon''s side of that gap). (R3'') is the premise a reviewer will push; the paper defends it as what makes benchmark scoring well-defined.'
