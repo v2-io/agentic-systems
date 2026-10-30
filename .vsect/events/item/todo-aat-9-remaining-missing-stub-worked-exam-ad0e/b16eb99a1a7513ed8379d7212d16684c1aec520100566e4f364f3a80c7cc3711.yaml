@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: b16eb99a1a7513ed8379d7212d16684c1aec520100566e4f364f3a80c7cc3711
+at: 2026-10-30T21:26:49Z
+store: asf
+act: recheck
+about: item:todo-aat-9-remaining-missing-stub-worked-exam-ad0e
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 6bf1f891+dirty
+criterion: TODO.md:433 (2026-08-22, 55395d9a). worked-example-cam still absent and never in git; 01-aat-core/OUTLINE.md:402 row marked missing; CURRENT-VOL1-APPENDICES.md:9033-9041 renders it as '(missing) ... not yet written' in the public reader snapshot. The decision the item asks for (blocking or explicitly non-blocking) has not been made. The Miller (2022) Moore-machine content it would assemble exists in def-agent-spectrum:15,74.
+outcome: holds
+owner: H.2
+restated: Either write worked-example-cam from def-agent-spectrum's Miller material or remove its OUTLINE row; a '(missing)' entry should not ship in the public appendix snapshot.

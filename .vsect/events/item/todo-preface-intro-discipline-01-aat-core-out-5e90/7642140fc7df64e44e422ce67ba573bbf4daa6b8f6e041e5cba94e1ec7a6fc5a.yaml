@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 7642140fc7df64e44e422ce67ba573bbf4daa6b8f6e041e5cba94e1ec7a6fc5a
+at: 2026-10-30T21:26:48Z
+store: asf
+act: recheck
+about: item:todo-preface-intro-discipline-01-aat-core-out-5e90
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 6bf1f891+dirty
+criterion: 'TODO.md:423 (2026-08-22, 55395d9a). Not done for any OUTLINE. A.2 covers Volume 1''s fronts; the other prefaces still assert results no segment carries, found during this re-check: 03-llm-core/OUTLINE.md:79 calls #obs-backward-inference-empathy a ''result'' (never written), :37 lists the 0%-activation result (no segment), :116 says obs-evaluation-metrics is ''validated by'' the embeddings paper it never cites; 04-eli-core/OUTLINE.md:125 row says deceptive prompts ''mathematically guarantee gain collapse'' for a missing segment; 03''s impl-* chapter ends narrate five missing segments as findings.'
+outcome: holds
+owner: A.2
+restated: Every preface and OUTLINE claim cell in all four volumes traces to a segment whose tier supports it; A.2 does Volume 1's fronts, and Volumes 2-4 need the same pass (instances in Vols 3-4 named in the why).

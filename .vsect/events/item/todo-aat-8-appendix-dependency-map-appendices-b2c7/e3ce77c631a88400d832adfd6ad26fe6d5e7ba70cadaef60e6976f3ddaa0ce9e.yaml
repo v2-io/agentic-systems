@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: e3ce77c631a88400d832adfd6ad26fe6d5e7ba70cadaef60e6976f3ddaa0ce9e
+at: 2026-10-30T21:26:49Z
+store: asf
+act: recheck
+about: item:todo-aat-8-appendix-dependency-map-appendices-b2c7
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 6bf1f891+dirty
+criterion: 'TODO.md:432 (2026-05-15, df0101c6). A hand-written map would be a second copy of the depends: graph and would drift. The mechanism now exists: every segment''s depends: chain is its basis in vsect, and ''vsect impact <segment>'' lists what rests on any appendix result; a check on a main-text result lapses, naming the appendix, when that appendix changes. What remains is depends: hygiene (see the depends-cycle item todo-depends-conflates-logical-prerequisite-w-9868).'
+outcome: superseded

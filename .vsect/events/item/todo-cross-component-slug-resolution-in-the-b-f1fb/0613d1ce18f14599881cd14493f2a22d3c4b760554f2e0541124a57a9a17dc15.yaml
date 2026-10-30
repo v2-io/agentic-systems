@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 0613d1ce18f14599881cd14493f2a22d3c4b760554f2e0541124a57a9a17dc15
+at: 2026-10-30T21:26:48Z
+store: asf
+act: recheck
+about: item:todo-cross-component-slug-resolution-in-the-b-f1fb
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 6bf1f891+dirty
+criterion: 'TODO.md:424 (2026-08-22, db96b1b7). Settled by reading bin/lib, as the item asked: resolution is volume-local. ingest.rb:226 builds @known_slugs from the one volume''s outline (collect_known_slugs(spec[:outline])), and assemble.rb:103 builds label_map only from that volume''s manifest entries (segment_chunk and missing); resolve_line (:383) rewrites a #slug only if it is in label_map, else emits it literally. So in a Volume 2-4 build every #slug naming an AAT segment stays a bare ''#slug'' in the text. Inference from the code; no build was run.'
+outcome: holds
+owner: H.2
+restated: 'bin/lib resolves #slug only against the building volume''s own outline (ingest.rb:226, assemble.rb:103,383); cross-volume references render as literal ''#slug''. Decide the rendering for cross-volume refs (resolve to ''Vol. 1, Result 4.2''-style labels from all four outlines) and implement.'

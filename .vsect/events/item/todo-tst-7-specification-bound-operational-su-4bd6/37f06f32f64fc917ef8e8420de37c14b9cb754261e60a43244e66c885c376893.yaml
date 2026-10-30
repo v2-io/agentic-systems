@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 37f06f32f64fc917ef8e8420de37c14b9cb754261e60a43244e66c885c376893
+at: 2026-10-30T21:26:49Z
+store: asf
+act: recheck
+about: item:todo-tst-7-specification-bound-operational-su-4bd6
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 6bf1f891+dirty
+criterion: 'TODO.md:441 (2026-05-12, ae118ab5). Half done: result-specification-bound gained premises S1-S2 on 2026-07-14 (9df63ee6), which define sufficiency as distinguishing the intended feature from admissible alternatives. But its own Epistemic Status (:62) still gates the conditional tier on ''(i) S1''s notion of channel sufficiency is stated intuitively rather than operationalized''; the posterior-mass operationalization is in its Working Notes only. No TST KR owns it.'
+outcome: holds
+owner: unassigned
+restated: Operationalize S1's channel sufficiency in result-specification-bound (e.g. posterior mass on implementations distinguishable-as-intended above a threshold); its ES names this as the gate on its conditional tier.

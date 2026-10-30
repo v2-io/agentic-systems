@@ -3,9 +3,11 @@ kind: item
 provenance: imported
 source: TODO.md:433
 section: 'TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (b) — AAT content cycle — open items'
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:26:49Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: H.2
+restated: Either write worked-example-cam from def-agent-spectrum's Miller material or remove its OUTLINE row; a '(missing)' entry should not ship in the public appendix snapshot.
 ---
 
 # AAT-9 remaining missing stub — `worked-example-cam` is genuinely absent from `01-aat-core/src/` (the other two originally listed here, `disc-strategic-self-coup

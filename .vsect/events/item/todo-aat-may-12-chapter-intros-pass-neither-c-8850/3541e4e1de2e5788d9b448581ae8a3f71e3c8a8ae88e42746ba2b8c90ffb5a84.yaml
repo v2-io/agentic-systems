@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 3541e4e1de2e5788d9b448581ae8a3f71e3c8a8ae88e42746ba2b8c90ffb5a84
+at: 2026-10-30T21:26:49Z
+store: asf
+act: recheck
+about: item:todo-aat-may-12-chapter-intros-pass-neither-c-8850
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 6bf1f891+dirty
+criterion: 'TODO.md:434 (2026-05-15, df0101c6). The fresh-eyes read it asks for has since happened more than once: audit 731548 (Fable de-novo, Part I + impl-*, 2026-07-02) read the Part I intros (AUDIT-WORKING-731548/09-the-reality-model-intro.md and siblings); the 2026-08-22 impl passes read the Part II intros and reported defects (e.g. causal-access-intro:29, now its own item); the owner review''s explorers read Parts II-III (owner-review/explorers/part-ii.md, part-iii-and-vols-2-4.md). What remains for the intro layer is A.3 (intros lack Epistemic Status).'
+outcome: superseded

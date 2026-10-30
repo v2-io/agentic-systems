@@ -3,9 +3,10 @@ kind: item
 provenance: imported
 source: TODO.md:442
 section: 'TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (c) — TST surgical sweep — open items'
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:26:49Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: unassigned
 ---
 
 # TST §1887 unmaintainability-threshold gap — visible `[Gap]` marker in OUTLINE; the most load-bearing of the TST gap markers.

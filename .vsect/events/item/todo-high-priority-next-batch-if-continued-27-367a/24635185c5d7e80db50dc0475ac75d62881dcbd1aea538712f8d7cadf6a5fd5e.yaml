@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 24635185c5d7e80db50dc0475ac75d62881dcbd1aea538712f8d7cadf6a5fd5e
+at: 2026-10-30T21:25:27Z
+store: asf
+act: recheck
+about: item:todo-high-priority-next-batch-if-continued-27-367a
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 73ac4e7b+dirty
+criterion: TODO.md:384 (8f76fdac, 2026-05-01), scaffolding under 'Audit-integration deferrals' for the logogenic-encounter tracker. Overtaken by the 2026-05-30 gold lift, which carried audit 193847 note 27's anti-sycophancy framing into der-directed-separation's WN (:286, a051c24b) and form-complete-agent-state's WN (:94), and by B.1's record on der-directed-separation (:196), which states the confirmation-bias case as where 'less coupling tracks reality better' is true and the encoding case as where it is not established. A separate segment for the framing would now duplicate that record.
+outcome: superseded

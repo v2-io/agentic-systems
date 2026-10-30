@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 038a9791d6e2c276e9a2af7344e716b267ec1677cdfc81197fafc162fe370885
+at: 2026-10-30T21:26:49Z
+store: asf
+act: recheck
+about: item:todo-local-path-sibling-project-leakage-into-78df
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 6bf1f891+dirty
+criterion: 'TODO.md:425 (2026-08-22, 55395d9a). Still true at HEAD: CURRENT-VOL1.md (regenerated today, 612bcb65) embeds five absolute /Users/josephwecker-v2/... figure paths (:26, :53, :1304, ...) and cites ''~/src/neurips/02-unified-convergence-rl/'' as a source (:6709); 26 Part I segment files contain ~/src or /Users paths. --public strips Working Notes, not paths.'
+outcome: holds
+owner: F.3

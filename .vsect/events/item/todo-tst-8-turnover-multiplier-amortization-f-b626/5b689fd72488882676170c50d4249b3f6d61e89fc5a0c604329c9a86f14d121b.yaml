@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 5b689fd72488882676170c50d4249b3f6d61e89fc5a0c604329c9a86f14d121b
+at: 2026-10-30T21:26:49Z
+store: asf
+act: recheck
+about: item:todo-tst-8-turnover-multiplier-amortization-f-b626
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 6bf1f891+dirty
+criterion: 'TODO.md:443 (2026-05-12, ae118ab5). Half landed: der-code-quality-as-observation-infrastructure treats tests, names and docs as observation-infrastructure investments (:55, :105) and notes the benefit to future developers (:137). Not landed: no amortization factor; the ''turnover multiplier'' it would amortize appears in canon only informally (der-principled-decision-integration:84,86, which itself marks the chain ''structurally argued, not empirically demonstrated'').'
+outcome: holds
+owner: unassigned
+restated: Add an amortization factor for externalized understanding to the turnover-multiplier argument in der-principled-decision-integration; the code-quality-as-observation link is already in der-code-quality-as-observation-infrastructure.

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 427fb6bbe71746633d4901777f8453f3691dca791d41cfea188be03c06aa8ef0
+at: 2026-10-30T21:25:27Z
+store: asf
+act: recheck
+about: item:todo-lower-priority-sweep-target-50-deferred-f3e6
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 73ac4e7b+dirty
+criterion: 'TODO.md:385 (8f76fdac, 2026-05-01). Overtaken by the 2026-05-29 gem-hunt pass over the whole de-novo backlog (audits/STATUS.md:30 at HEAD: ''everything surfaced was routed'') and the 2026-05-30 gold lift into Working Notes. One caution for whoever trusts that coverage claim: this re-check found audit 526815''s F122-F126 on hyp-directed-separation-under-composition routed nowhere (not TODO, pending-findings or vsect), though that segment''s WN says they went to ''the findings track''; so the backlog has unrouted findings the gem-hunt did not catch.'
+outcome: superseded

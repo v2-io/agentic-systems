@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 58876f216e7de4b1d17e778e1618501546c1ec355b97252370af0c665bb11dfd
+at: 2026-10-30T21:26:49Z
+store: asf
+act: recheck
+about: item:todo-tst-1887-unmaintainability-threshold-gap-8f2a
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 6bf1f891+dirty
+criterion: 'TODO.md:442 (2026-05-12, ae118ab5). The GAP is still in 02-tst-core/OUTLINE.md:98 (''--GAP-- (candidate: #hyp-software-unmaintainability-bifurcation)'') and the preface (:59, :107) still advertises the Q -> U_o -> eta* -> T chain ''giving this codebase is unmaintainable a formal inequality'' with that slot empty. No segment. The TST lane (A13, old-tst fates) does not cover it.'
+outcome: holds
+owner: unassigned

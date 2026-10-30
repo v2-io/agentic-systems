@@ -3,9 +3,10 @@ kind: item
 provenance: imported
 source: TODO.md:425
 section: 'TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (a) — Build-pipeline / cross-cutting hygiene'
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:26:49Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: F.3
 ---
 
 # Local-path / sibling-project leakage into publishable mono — codex Cross-File #3. Per `~/src/...`, audit-folder, search-log, and absolute-path references in seg

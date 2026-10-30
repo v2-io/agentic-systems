@@ -3,9 +3,11 @@ kind: item
 provenance: imported
 source: TODO.md:423
 section: 'TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (a) — Build-pipeline / cross-cutting hygiene'
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:26:48Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: A.2
+restated: Every preface and OUTLINE claim cell in all four volumes traces to a segment whose tier supports it; A.2 does Volume 1's fronts, and Volumes 2-4 need the same pass (instances in Vols 3-4 named in the why).
 ---
 
 # Preface / intro discipline — `01-aat-core/OUTLINE.md` and the OUTLINE prefaces of `02-tst-core/`, `03-llm-core/`, `04-eli-core/` make claims that should be subs
