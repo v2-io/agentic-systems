@@ -142,8 +142,7 @@ Foundational AAT works still worth checking during migration: quick `relata sear
 
 ### W-5. Conditional rendering for `applicable_anonymity` (FORMAT-TODO A6)
 
-When build-target is anonymized AND an entry has `applicable_anonymity: true`, the cite should render as soft form (third-person rephrasing / alternative citation / "Wecker, in preparation"). Lives in the biblatex/relata-emit pipeline; W-4 (the emit wiring) is done, so this is the anonymized-build consumption layer.
-**Defer until W-3 is in motion.**
+When build-target is anonymized AND an entry has `applicable_anonymity: true`, the cite should render as soft form (third-person rephrasing / alternative citation / "Wecker, in preparation"). Lives in the biblatex/relata-emit pipeline; W-4 (the emit wiring) is done, so this is the anonymized-build consumption layer. **Defer until W-3 is in motion.**
 
 ### W-6. Optional cleanup
 
@@ -171,8 +170,7 @@ The four ref/ prose notes (`Novelty_defense_and_integration.md`, `Prior_art_for_
 
 ### 2026-05-20 — relata-side discovery sweep launched; later completed
 
-Joseph corrected an earlier draft of this file (which assumed `ref/INDEX.md` was the existing bibliography). Per his framing:
-*"There is **no** de-facto bibliography. There's an old index that got created. You'll actually have to explore the project at depth, probably using an agent, to surface more."*
+Joseph corrected an earlier draft of this file (which assumed `ref/INDEX.md` was the existing bibliography). Per his framing: *"There is **no** de-facto bibliography. There's an old index that got created. You'll actually have to explore the project at depth, probably using an agent, to surface more."*
 
 So instead of importing from a single curated source, a relata-side Explore agent was dispatched 2026-05-20 to sweep the entire ASF tree (all four volumes' segments, the four `ref/` prose notes + INDEX.md + the three Undermind reports' References sections, `doc/`, `terminology/`, `audits/`, `spikes/`, `msc/`, `mono/`, the top-level tracking docs, commit messages, and the `ref/` PDF filenames) and produce a structured inventory of every external scholarly work referenced anywhere — deduplicated across the multiple naming forms (bracketed cite-codes, inline prose, formal LaTeX, bibliography listings, PDF filenames), with provenance per work.
 

@@ -125,7 +125,7 @@ Resolutions feed into the workstream items below. Listed in the order they unblo
 
    **Unblocks:** Workstream B item B9.
 
-4. **Cross-volume xr-refs fallback form.**
+4. **Cross-volume xr-refs fallback form.**  
    When sibling `.aux` is missing or version-mismatched, render as:
    - "see Wecker (2026), AAT §1.2.3" (bibliography-form)
    - `[AAT #def-foo]` (placeholder, marked for human review)

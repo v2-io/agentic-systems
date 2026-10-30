@@ -15,8 +15,7 @@ Live execution queue for naming-cycle decisions that have been **made** (interac
 1. Edit (or scaffold via `bin/term add <slug>`) `terminology/entries/<slug>.md` — YAML frontmatter (term, brief, status, source, see_also, etc.) + markdown body for the longer prose definition.
 2. Record the naming decision via `bin/term decide <slug> <action> --by <decider> --note "<rationale pointer>"` (actions: `canonicalize` / `rename` / `add-alias` / `add-cite` / `update-gloss` / `nuance-flag`).
 3. `bin/term render --output LEXICON.md` (or whatever target the workflow specifies) to regenerate.
-4. `bin/term lint` to surface schema or cross-ref issues.
-The LEXICON.md output is the same artifact rows below describe; what changed is *how it's produced*. See `terminology/README.md` for full schema.
+4. `bin/term lint` to surface schema or cross-ref issues. The LEXICON.md output is the same artifact rows below describe; what changed is *how it's produced*. See `terminology/README.md` for full schema.
 
 ---
 

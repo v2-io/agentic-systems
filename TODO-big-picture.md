@@ -20,8 +20,7 @@ The framework's load-bearing spine and its sharpest *proven* results are forcing
 Three loci under-read that spine:
 
 1. The `## Findings` posture vocabulary (FORMAT.md:348–352: synthesis / differentiation / novelty / transfer / recognition) has **no word for the forcing-bound kind**, so spine results get stamped *Claim synthesis / recognition* — the deflation is institutionalized by a missing word, not by anyone's intent.
-2. CLAUDE.md:171 doctrine ("the synthesis is the contribution") is heard as
-   *synthesis = lesser-than-invention*.
+2. CLAUDE.md:171 doctrine ("the synthesis is the contribution") is heard as *synthesis = lesser-than-invention*.
 3. The one rendered Volume-1 front-matter contribution sentence is the deflated one ("an epistemic architecture for bounded correction under decomposed disturbance") — on the page, days from preprint.
 
 ## The contribution, stated positively and bounded (the claim is strong *because* it is bounded)

@@ -480,35 +480,14 @@ Triage narrative and completed dispositions live in CHANGELOG (2026-05-12 (late)
 
 ## 2026-05-17 — scrbook appendix numbering (PARKED mid-fix to focus on self-actuation; pickup-ready)
 
-Surfaced by Joseph (recurring, has been forgotten several times). scrbook's native `\appendix` numbers appendix chapters `\Alph` (A..Z) and hard-errors
-*"Counter too large"* at the 27th — vol-1 has ~45 appendix chapter-level segments across **two** `## *Appendices*` H2 groups (Part IV "Details",
-Part V "Operational Domains"). kaobook already solved this
-(`bin/lib/typeset.rb:344-348`: `\AlphAlph` + a kaobook-only
-`\asfAppendixToCremap` ToC down-shift); scrbook had simply never applied the project's chosen scheme.
+Surfaced by Joseph (recurring, has been forgotten several times). scrbook's native `\appendix` numbers appendix chapters `\Alph` (A..Z) and hard-errors *"Counter too large"* at the 27th — vol-1 has ~45 appendix chapter-level segments across **two** `## *Appendices*` H2 groups (Part IV "Details", Part V "Operational Domains"). kaobook already solved this (`bin/lib/typeset.rb:344-348`: `\AlphAlph` + a kaobook-only `\asfAppendixToCremap` ToC down-shift); scrbook had simply never applied the project's chosen scheme.
 
 *(Partial fix already landed: `\AlphAlph` defined in `mono/scrbook/preamble/setup.tex` and emitted once after `\appendix` in `bin/lib/typeset_scrbook.rb` `when 'Appendices'` (guarded by `@appendix_emitted`); group 1 "Details" renders correctly A…AM. Context for the open bug below.)*
 
-- [ ] **Open bug — second `*Appendices*` group collapses.** Part V
-  ("Operational Domains") entries all render the overflowed native `\Alph`
-  form. `.toc` evidence (decisive): `\numberline {B\GenericError{ }{LaTeX Error: Counter too large}…}` with hyperref anchors `appendix.Alph40…45`
-  — i.e. the real chapter counter *does* advance (40–45) but `\thechapter`
-  is back to native `\Alph` there, **not** `\AlphAlph`. Root-cause hypothesis: the `\renewcommand{\thechapter}` is emitted only on the first
-  `*Appendices*` group (`@appendix_emitted` guard); KOMA's appendix machinery and/or the second `\part` re-establishes
-  `\thechapter=\Alph{chapter}`, clobbering the override for group 2. Fix candidates: (i) re-emit the `\renewcommand` on **every** `*Appendices*`
-  group, not just the first; or (ii) hoist a permanent rebind into the preamble (after `\appendix` semantics are known) so nothing can clobber it. Verify KOMA `\appendix`+`\part` interaction before choosing.
-- [ ] **Also requested (Joseph 2026-05-17), parked with this:** appendices in the ToC should read *as if they were segments* (section-register indent/weight) while staying `\chapter` in the body. Mechanism already exists in kaobook: `\asfAppendixToCremap`
-  (`mono/kaobook/preamble/environments.tex:318-328`) — a one-time
-  `\addcontentsline` chapter→section redirect fired at `\appendix` time.
-  Port the identical macro to scrbook (define in
-  `mono/scrbook/preamble/environments.tex`, emit right after the
-  `\thechapter` rebind in `typeset_scrbook.rb`). Non-intrusive, proven.
-- [ ] **Design decision Joseph flagged — pick before finishing.** Either
-  **(1)** continue the single established `\AlphAlph` counter across both groups (group 2 → AN, AO, …); or **(2)** restructure appendices into per-group numbering — e.g. `A.1`–`A.10`, `B.1`–`B.10` (group letter +
-  within-group number, counter resets per `*Appendices*` group). Option (2)
-  also addresses the legibility smell of ~45 flat appendices and would make the second-group collapse moot (per-group reset sidesteps the >26 overflow entirely). Monograph-convention call, not mechanical — Joseph's decision gates the final implementation.
-- Cross-refs for whoever picks this up: kaobook reference impl
-  `bin/lib/typeset.rb:344-348`; the `when 'Appendices'` branch in
-  `bin/lib/typeset_scrbook.rb` (~lines 266-280) carries an inline comment explaining why `\asfAppendixToCremap` was *initially* excluded (separate concern) — that comment needs updating once the ToC-as-segments port lands, since Joseph has now requested it.
+- [ ] **Open bug — second `*Appendices*` group collapses.** Part V ("Operational Domains") entries all render the overflowed native `\Alph` form. `.toc` evidence (decisive): `\numberline {B\GenericError{ }{LaTeX Error: Counter too large}…}` with hyperref anchors `appendix.Alph40…45` — i.e. the real chapter counter *does* advance (40–45) but `\thechapter` is back to native `\Alph` there, **not** `\AlphAlph`. Root-cause hypothesis: the `\renewcommand{\thechapter}` is emitted only on the first `*Appendices*` group (`@appendix_emitted` guard); KOMA's appendix machinery and/or the second `\part` re-establishes `\thechapter=\Alph{chapter}`, clobbering the override for group 2. Fix candidates: (i) re-emit the `\renewcommand` on **every** `*Appendices*` group, not just the first; or (ii) hoist a permanent rebind into the preamble (after `\appendix` semantics are known) so nothing can clobber it. Verify KOMA `\appendix`+`\part` interaction before choosing.
+- [ ] **Also requested (Joseph 2026-05-17), parked with this:** appendices in the ToC should read *as if they were segments* (section-register indent/weight) while staying `\chapter` in the body. Mechanism already exists in kaobook: `\asfAppendixToCremap` (`mono/kaobook/preamble/environments.tex:318-328`) — a one-time `\addcontentsline` chapter→section redirect fired at `\appendix` time. Port the identical macro to scrbook (define in `mono/scrbook/preamble/environments.tex`, emit right after the `\thechapter` rebind in `typeset_scrbook.rb`). Non-intrusive, proven.
+- [ ] **Design decision Joseph flagged — pick before finishing.** Either **(1)** continue the single established `\AlphAlph` counter across both groups (group 2 → AN, AO, …); or **(2)** restructure appendices into per-group numbering — e.g. `A.1`–`A.10`, `B.1`–`B.10` (group letter + within-group number, counter resets per `*Appendices*` group). Option (2) also addresses the legibility smell of ~45 flat appendices and would make the second-group collapse moot (per-group reset sidesteps the >26 overflow entirely). Monograph-convention call, not mechanical — Joseph's decision gates the final implementation.
+- Cross-refs for whoever picks this up: kaobook reference impl `bin/lib/typeset.rb:344-348`; the `when 'Appendices'` branch in `bin/lib/typeset_scrbook.rb` (~lines 266-280) carries an inline comment explaining why `\asfAppendixToCremap` was *initially* excluded (separate concern) — that comment needs updating once the ToC-as-segments port lands, since Joseph has now requested it.
 
 ## 2026-07-03 — Audit 731548 (Fable de-novo, Part I + impl-*) routing: remaining routed items
 
