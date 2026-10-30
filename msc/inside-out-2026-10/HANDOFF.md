@@ -21,7 +21,7 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 - *asf*
   - `PRACTICA.md`
   - `audits/STATUS.md`
-  - `msc/decision-briefs-2026-07-15.md`
+  - `msc/decision-briefs-2026-07-15.md` (since folded into the ledger and deleted, 924e70f9)
   - `ref/prior-art-analysis/agentic-systems-landscape-2026-08-22.md`
   - `doc/sop/agents.sop.md`
 - *aat-v3*
