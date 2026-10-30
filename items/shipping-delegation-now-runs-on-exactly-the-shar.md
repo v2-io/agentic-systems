@@ -1,0 +1,9 @@
+---
+kind: item
+owner: G.2
+opened: 2026-10-30T23:26:34Z
+opened-by: drain-influx-2
+concerns: [segment:disc-w1-structural-bound-boundary, segment:hyp-checkpoint-forking-failure-modes]
+---
+
+# Shipping delegation now runs on exactly the shared state canon's W1 bound excludes, and the first task-fork incidents exist. (1) #disc-w1-structural-bound-boundary: the W1 bound exists iff the wrapped component carries no goal-correlated cross-call state (C2'), naming 'a conversation KV-cache, a retrieval buffer' (line 25). Forks that start from a byte-identical copy of the delegator's conversation became the default delegation construct (Claude Code terminal 2026-08-13, everywhere 2026-10-16; eight vendor groups), and providers hold conversation state server-side; these are dated examples of what (C2') excludes, with no change of claim. (2) #hyp-checkpoint-forking-failure-modes asks (line 41) for 'specific incident analyses of forking-related failures': harness-velocity's fork-subagents.forks-mistake-the-parent-role record (status corroborated) gives four vendor-group instances of forks treating the inherited conversation as their own ongoing task (letta-code PR #1875; codebuddy-code recursive forking; qwen-code reading sibling forks' directives; Claude Code's prompt line telling a fork to execute directly rather than re-delegate). Scope gap, stated plainly: these are task forks of coding agents, so they bear on the coordination and accountability layer, not the identity layer, and they sit in the bounded-horizon regime the segment's soften clause names. Sources: ~/src/agent-core/anatomy-of-an-agent/README.md §8.3; ~/src/agent-core/harness-velocity/claims/fork-subagents.forks-mistake-the-parent-role.md and wh.subagents-fork-the-delegator-to-share-context.md (status inferred); the sidecar asf-parallels/02-debrief.md head-fork reading. Relayed in influx-scout/agent-core-rest.md §2.A point 3, §2.B point 3.
