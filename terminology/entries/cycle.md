@@ -8,8 +8,8 @@ layer: framing-vocabulary
 status: canon
 tags: [cycle_phases]
 source_type: asf
-primary_source: 01-aat-core/src/scope-adaptive-system.md
-first_asf_mention: 01-aat-core/src/scope-adaptive-system.md
+primary_source: NOTATION.md
+first_asf_mention: 01-aat-core/src/the-cycle-in-motion-intro.md
 see_also: [loop, prolepsis, aisthesis, aporia, epistrophe, praxis]
 aliases: []
 do_not_confuse: []
@@ -17,4 +17,4 @@ do_not_confuse: []
 
 One complete traversal of the [loop](loop.md): prolepsis → aisthesis → aporia → epistrophe → praxis. The cycle is the unit of adaptive work — the smallest event in which the model can be updated and an action chosen on its basis.
 
-See [`#scope-adaptive-system`](../../01-aat-core/src/scope-adaptive-system.md) for the cycle as the operational unit of an adaptive system.
+See [`NOTATION.md`](../../NOTATION.md), "The Adaptive Cycle", for the five phases and their formalism, and [`#the-cycle-in-motion-intro`](../../01-aat-core/src/the-cycle-in-motion-intro.md) for the cycle's dynamics.

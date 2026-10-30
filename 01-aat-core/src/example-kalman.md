@@ -29,7 +29,7 @@ This is AAT's **calibration on a problem with known exact answers**. AAT's contr
 The agent tracks scalar state $x_t$ and chooses sensor mode $a_t \in \{L, H\}$:
 
 - Dynamics: $x_{t+1} = x_t + v_t$, $v_t \sim \mathcal{N}(0, q)$, $q = 0.25$
-- Observation: $y_t = x_t + n_t^{(a_t)}$
+- Observation: $y_t = x_t + n_t^{(a_{t-1})}$ (the mode chosen at $t-1$ sets the noise of the next reading, as the chronica's order requires)
 - Low mode noise: $r_L = 9$; High mode noise: $r_H = 1$
 - Event rate: $\nu = 5 \text{ Hz}$
 - High mode has higher energy cost
@@ -46,7 +46,7 @@ $\Omega_t = x_t$ is partially observed via a noisy channel, and the law ($q$, $r
 
 *Mapping: exact.*
 
-Action precedes observation and changes $P(y_t \mid do(a_t))$ through $r_{a_t}$. Using low mode as comparator action, the CIY is the interventional KL divergence:
+Action precedes observation and changes $P(y_{t+1} \mid do(a_t))$ through $r_{a_t}$. Using low mode as comparator action, the CIY is the interventional KL divergence:
 
 *[Worked Quantity]*
 
@@ -70,7 +70,7 @@ The mismatch signal is the Kalman innovation:
 
 $$\delta_t = y_t - \hat{x}_{t\vert t-1}$$
 
-The estimation error is $e_t = x_t - \hat x_{t\vert t-1}$, and the innovation is the estimation error plus the channel noise, $\delta_t = e_t + n_t^{(a_t)}$, so $\mathbb{E}[\delta_t^2] = P^-_t + r_{a_t}$. The agent sees $\delta_t$ and never sees $e_t$. The persistence bounds below are about $e_t$.
+The estimation error is $e_t = x_t - \hat x_{t\vert t-1}$, and the innovation is the estimation error plus the channel noise, $\delta_t = e_t + n_t^{(a_{t-1})}$, so $\mathbb{E}[\delta_t^2] = P^-_t + r_{a_{t-1}}$. The agent sees $\delta_t$ and never sees $e_t$. The persistence bounds below are about $e_t$.
 
 ### Update Gain ( #emp-update-gain)
 
