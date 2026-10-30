@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: a54aebf4913fa870008eed05e1cdffefd12955674a1afd95a62aa0bae15072c4
+at: 2026-10-30T22:26:48Z
+store: asf
+act: revise
+about: segment:hyp-mismatch-dynamics
+actor:
+  name: Claude Fable 5.1 (Part I round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 06fe8a6e1f82997fe61e3831037fdc1cb7eebaae9ed37b7776cf76e0021b8359
+own-version: 7303099d03122821715f9438454a02bfb4f628e25fe510acab89adfe7b5e8d0f
+record: 01-aat-core/src/hyp-mismatch-dynamics.md

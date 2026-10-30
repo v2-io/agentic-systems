@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 9b92c6ab387472ead9a5cad9a402bf8f2aeec0b335aed19c1c4adaba603af5b3
+at: 2026-10-30T22:26:49Z
+store: asf
+act: revise
+about: segment:result-adversarial-tempo-advantage
+actor:
+  name: Claude Fable 5.1 (Part I round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 749dfaf5a176f9bbf3a3cebee7e5a4d36c34fde4a8cc2435baeb5515f5e1adb8
+own-version: c282ed6745eb4129c6aa63103fc1ee9a9bd4e1c5b5b469f9568947aa94a5c78d
+record: 01-aat-core/src/result-adversarial-tempo-advantage.md

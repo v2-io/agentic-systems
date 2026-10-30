@@ -31,7 +31,7 @@ Derived from the Model D steady state $\lVert\delta\rVert_{ss} = \rho/\mathcal{T
 
 $$b = \frac{3}{2} \qquad \text{(simulation: 1.481)}$$
 
-Derived from the Model S steady state $\lVert\delta\rVert_{\text{rms}} = \sigma_w/\sqrt{2\mathcal{T}}$ (Prop A.1S). The $1/\sqrt{\mathcal{T}}$ scaling (vs. $1/\mathcal{T}$ for Model D) removes one half-power from the denominator, reducing the exponent from 2 to 3/2. See #result-adversarial-tempo-advantage.
+Derived from the Model S steady state $\lVert\delta\rVert_{\text{rms}} = \sigma_w/\sqrt{2\mathcal{T}}$ (Prop A.1S) at fixed noise intensity. The $1/\sqrt{\mathcal{T}}$ scaling (vs. $1/\mathcal{T}$ for Model D) removes one half-power from the denominator, reducing the exponent from 2 to 3/2. With the channel noise each agent's own correction injects, the law also needs the coupling noise to dominate each agent's self-injected noise, which bounds the tempo ratio over which it holds when tempo is raised by gain on a fixed channel ( #result-adversarial-tempo-advantage, scope paragraph). See #result-adversarial-tempo-advantage.
 
 **Regime 3: Non-coupling-dominant.** When base disturbance is comparable to or exceeds the adversarial coupling ($\rho_{\text{base}} \gtrsim \gamma \cdot \mathcal T_B$):
 

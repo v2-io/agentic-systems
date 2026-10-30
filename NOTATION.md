@@ -122,7 +122,8 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 |--------|------|---------|
 | $\mathcal{T}$ | Rate ($t^{-1}$) | Adaptive tempo (epistemic): $\sum_k \nu^{(k)} \cdot \eta^{(k)\ast}$ |
 | $\mathcal{T}_\Sigma$ | Rate ($t^{-1}$) | Strategic tempo: $\sum_{(i,j) \in E} \nu_{ij} \cdot \eta_{\text{edge},ij}$ ( #def-strategic-tempo) |
-| $\rho(t)$ | Rate (surprise/time) | Environment change rate (mismatch injection rate) |
+| $\rho(t)$ | Rate (surprise/time) | Disturbance rate on the estimation error: environmental change plus the channel noise the correction feeds back ($\rho = \rho_{\text{env}} + \alpha\bar\nu$ for linear correction with channel noise bounded by $\bar\nu$; #deriv-sector-condition Setup). $\rho_{\text{env}}$ alone is the environment change rate. |
+| $\kappa_R$ | Dimensionless | Model S exit exponent $\kappa_R = \alpha R^2/\sigma_w^2 = \tfrac n2(R/R^\ast_S)^2$ for the region of radius $R$ ($\sigma_w$ per coordinate): barrier height over per-degree-of-freedom temperature for the OU benchmark; the mean-square persistence condition is $\kappa_R \gt n/2$ and expected time in the region grows like $e^{\kappa_R}$ (#deriv-sector-condition Prop A.1S-τ). Distinct from $\kappa_{\text{processing}}$ (#der-directed-separation) and the condition number $\kappa(P^-)$ (#form-sector-condition). |
 | $\rho_\Sigma$ | Rate | Strategic disturbance rate (rate of causal-link invalidation) |
 | $\lVert\delta\rVert_{ss}$ | Scalar $\geq 0$ | Steady-state mismatch: $\rho / \mathcal{T}$ (linear approximation) |
 
@@ -132,7 +133,7 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 | Symbol | Type | Meaning |
 |--------|------|---------|
 | $F(\mathcal{T}, \delta)$ | Function | Correction function (general nonlinear) |
-| $w(t)$ | Vector | Disturbance (new mismatch), $\lVert w(t)\rVert \leq \rho$ |
+| $w(t)$ | Vector | Disturbance on the estimation error: everything that moves it other than the expected correction, i.e. environmental change plus gain-injected channel noise; $\lVert w(t)\rVert \leq \rho$ (GA-2) or white with per-coordinate intensity $\sigma_w^2$ (GA-2S) |
 | $\alpha$ | Scalar $\gt 0$ | Lower sector bound of correction function |
 | $R$ | Scalar $\gt 0$ | Radius of sector-condition region (model class capacity) |
 | $R^\ast$ | Scalar $\gt 0$ | Ultimately bounded mismatch radius: $\rho/\alpha$ |
@@ -248,7 +249,7 @@ Load-bearing assumptions that appear locally but are referenced by multiple resu
 |----|-----------|---------|
 | GA-1 | **Fresh noise.** $\varepsilon_t$ is conditionally independent of $\mathcal C_{t-1}$ given $(S_t, a_{t-1})$, with $S_t = (\Omega_t, \theta)$. When the observation law is known this is the state-only form, conditioning on $(\Omega_t, a_{t-1})$. When it is not, the state-only form has no determinate truth value: two descriptions of the same observation process can satisfy and violate it ( #result-mismatch-decomposition). Unknown *transition* law alone, with a known channel and noise independent of everything else, never violates the state-only form. | #result-mismatch-decomposition, #deriv-mismatch-budget-attribution |
 | GA-2 | **Bounded disturbance (Model D).** $\lVert w(t)\rVert \leq \rho$ for finite $\rho$. Deterministic worst-case bound; no distributional assumption. | #result-sector-condition-stability, #result-persistence-condition |
-| GA-2S | **Stochastic disturbance (Model S).** $w(t)$ is zero-mean with $\mathbb{E}[\lVert w(t)\rVert^2] = \sigma_w^2$. Alternative to GA-2 for environments with noise rather than drift. | #result-sector-condition-stability (Prop A.1S), #result-persistence-condition, #result-adversarial-exponent-regimes |
+| GA-2S | **Stochastic disturbance (Model S).** $w(t)$ is zero-mean white noise with per-coordinate intensity $\sigma_w^2$: $d\delta = -F\,dt + \sigma_w\,dW_t$ with $W$ a standard $n$-dimensional Wiener process, so $\mathbb{E}\lVert w\rVert^2 = n\sigma_w^2$ per unit time and the Itô correction on $\tfrac12\lVert\delta\rVert^2$ is $\tfrac n2\sigma_w^2$. $\sigma_w$ is the *total* disturbance intensity, environmental diffusion plus the channel noise the correction injects ($\sigma_w^2 = \sigma_{\text{env}}^2 + \alpha^2\sigma_\nu^2$ for linear correction at rate $\alpha$ on a channel of per-coordinate noise intensity $\sigma_\nu^2$; #deriv-sector-condition Setup). Alternative to GA-2 for environments with noise rather than drift. | #result-sector-condition-stability (Prop A.1S), #result-persistence-condition, #result-adversarial-exponent-regimes |
 | GA-3 | **Sector condition (continuous).** $\delta^T F(\mathcal{T}, \delta) \geq \alpha\lVert\delta\rVert^2$ for $\lVert\delta\rVert \leq R$. Derived from the gain principle when the update rule has directional fidelity (B1); for gradient-based agents, equivalent to local strong convexity of the loss. Remains an independent assumption for non-gradient agents. The discrete-time analog (DA2') adds a Lipschitz upper bound $\lVert F_d(\delta)\rVert \leq c_{\max}\lVert\delta\rVert$ — strictly stronger than an inner-product upper bound, required because the discrete contraction involves $\lVert F_d\rVert^2$. See #der-gain-sector-bridge, #deriv-discrete-sector-condition. | #result-sector-condition-stability, #deriv-discrete-sector-condition |
 | GA-4 | **Local deliberation drift.** Mismatch accumulates at rate $\rho_{\text{delib}}$ during inaction. | #der-deliberation-cost |
 | GA-5 | **Fluid limit.** Event rate high relative to dynamics timescale ($\eta^\ast \ll 1$). | #hyp-mismatch-dynamics |

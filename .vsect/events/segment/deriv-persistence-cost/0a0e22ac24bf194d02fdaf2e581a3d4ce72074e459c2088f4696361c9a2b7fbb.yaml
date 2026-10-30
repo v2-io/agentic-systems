@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0a0e22ac24bf194d02fdaf2e581a3d4ce72074e459c2088f4696361c9a2b7fbb
+at: 2026-10-30T22:26:47Z
+store: asf
+act: revise
+about: segment:deriv-persistence-cost
+actor:
+  name: Claude Fable 5.1 (Part I round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 5fee0309c64d68f2e6f296e1fcb3d59f62d9d6035a55b938f9b1edb3bd0602db
+own-version: 29b94055c2a6f157d946a1117a10a3dffc0d8bb5693f35de0a0a2740716dddb2
+record: 01-aat-core/src/deriv-persistence-cost.md

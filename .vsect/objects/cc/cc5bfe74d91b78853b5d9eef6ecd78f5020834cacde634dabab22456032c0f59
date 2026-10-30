@@ -1,0 +1,433 @@
+kind: segment
+form: 
+normalizer: vsect-norm/0
+---
+# Derivation: Sector Condition Stability — Lyapunov Derivation
+
+The Lyapunov machinery underlying the sector-condition stability result and the central persistence inequality. The mismatch dynamics are taken in general nonlinear vector form, $\dot\delta = -F(\mathcal{T},\delta) + w(t)$, with the correction function $F$ required to satisfy only the *qualitative* properties (A1)–(A3) and the local sector condition (A2') stated in `#form-sector-condition`. The Lyapunov function is the canonical quadratic $V = \tfrac{1}{2}\lVert\delta\rVert^2$; the steady-state results follow from standard Lyapunov / Itô-Lyapunov machinery applied to AAT's correction-function object.
+
+The derivation produces the framework's central persistence results in their precise form. **Proposition A.1 (Model D — bounded disturbance):** under $\lVert w(t)\rVert \leq \rho$ and the sector condition, mismatch is ultimately bounded by $R^\ast = \rho/\alpha$ — exactly the persistence threshold the chapter cites, and $\mathcal B_R$ is positively invariant when $\alpha R \gt \rho$. **Lemma A.1N (threshold tightness):** the condition is unimprovable given A2' — necessary and sufficient for the *uniform class-level* guarantee (witness $F = \alpha\delta$ under outward disturbance), and agent-level necessary exactly when the sector bound is radially tight (the linear case); for a general fixed $F$ the only-if direction is *false* (demonstrated by the dip counterexample in the Remark following A.1N — the sector floor can sit at radii the dynamics render unreachable). **Proposition A.1S (Model S — additive stochastic disturbance):** the Itô-Lyapunov analysis gives the second-moment bound of the mismatch while it is still inside the region (the killed moment), the RMS scale $R^\ast_S = \sigma_w\sqrt{n/(2\alpha)}$ (the $1/\sqrt\alpha$ scaling that distinguishes Model S from Model D's $1/\alpha$ scaling), the finite-horizon sample-path bound, and, where the sector condition holds globally, the stationary tail $P(\lVert\delta(t)\rVert \gt R) \leq n\sigma_w^2/(2\alpha R^2)$. **Proposition A.1S-τ (exit time):** the time the mismatch spends inside the region before first leaving it is bounded below, in mean and in distribution, by that of the isotropic linear corrector $F = \alpha\delta$ started at the same radius, with equality when the sector bound is radially tight; for small noise the mean is Arrhenius–Kramers, $\mathbb E\,\tau_R \approx \tfrac{\Gamma(n/2)}{2\alpha}\kappa_R^{-n/2}e^{\kappa_R}$ with $\kappa_R = \alpha R^2/\sigma_w^2$. The mean-square persistence condition is $\kappa_R \gt n/2$, at which the benchmark leaves within about one correction time; the condition certifies the scale of the mismatch, and only a margin in $\kappa_R$ buys time in the region. **Proposition A.2 (adaptive reserve):** $\Delta\rho^\ast = \alpha R - \rho$ — the additional disturbance an agent can absorb before mismatch leaves the sector-condition region.
+
+The segment's load-bearing new exact result is **Corollary A.1S.1 — the disturbance-model containment dichotomy.** The persistence-region first-exit probability is *categorical*: $P(\tau_R \lt \infty) = 0$ under Model D (deterministic positive invariance), $P(\tau_R \lt \infty) = 1$ under Model S (a.s. exit of a non-degenerate diffusion from a bounded region, for *any* $F$ satisfying A2'). The achievable value is exactly the two-point set $\{0,1\}$, and which point obtains is fixed by the disturbance model's support structure (bounded vs. unbounded), **not** by correction strength $\alpha$. Increasing $\alpha$ tightens the typical scale and lengthens the expected stay in the region, exponentially in $\kappa_R$; it cannot interpolate between the two regimes. Pathwise containment is categorically Model-D-only — additive stochastic forcing removes the *kind* of guarantee available, not merely its rate. The companion no-go demonstration (that the natural Ville/Doob maximal-inequality route to a $P(\tau_R \lt \infty) \lt 1$ bound *cannot* exist) is in `#deriv-stochastic-non-exit`. The dichotomy sharpens the hand-off into `#result-structural-adaptation-necessity`: in any genuinely stochastic environment, leaving the certified region is a certain eventual event, so loss of the parametric certificate is *generic, not exceptional*, for any sufficiently long-lived agent; whether that loss forces model-class change rather than a transient excursion is the open question of `#sketch-structural-adaptation-genericity`. The sub-scope $\alpha$ / $\beta$ partition (where A2' is structurally derived versus where it is per-system assumed) is held at `#form-sector-condition`; the Lyapunov proofs below apply uniformly across both.
+
+## Motivation
+
+#hyp-mismatch-dynamics hypothesizes the linear ODE $d\Vert\delta\Vert/dt = -\mathcal{T}\Vert\delta\Vert + \rho$ as a first-order approximation. The linear form yields clean closed-form results but commits to a specific functional relationship between mismatch magnitude and correction rate. True correction dynamics are almost certainly nonlinear — exhibiting saturation at large mismatch, threshold effects near zero, and structural breakdown when the model class is exhausted.
+
+A Lyapunov approach proves persistence and stability under much weaker assumptions: any correction dynamics satisfying qualitative monotonicity properties (the sector condition). The results below are strictly more general — the linear case is recovered where the sector bounds coincide.
+
+## Setup
+
+Let $\delta(t) \in \mathbb{R}^n$ be the estimation error $\bar\delta = \bar o - \hat o$ of #def-mismatch-signal — the difference between the model's predictions and the mean the world delivers given its state and law, across $n$ observable dimensions. Every result in this segment is about this object, not about the observed innovation $o - \hat o$. The innovation exceeds it by channel noise that no correction can remove ( #result-mismatch-decomposition). The vector treatment connects to per-dimension tempo analysis ( #result-per-dimension-persistence).
+
+The mismatch dynamics are:
+
+*[Definition (Dynamics Setup)]*
+
+$$\frac{d\delta}{dt} = -F(\mathcal{T}, \delta) + w(t)$$
+
+where:
+
+- $F(\mathcal{T}, \delta): \mathbb R_+ \times \mathbb{R}^n \to \mathbb{R}^n$ is the **correction function** — how the agent's adaptive process reduces mismatch. It maps to the same space as $\delta$ (so that the inner product $\delta^T F$ in the sector condition is well-defined). This subsumes the update gain $\eta^\ast$ ( #emp-update-gain), event rate $\nu$, and the structure of the update rule.
+
+- $w(t)$ is the **disturbance** — everything that moves the estimation error other than the expected correction, with $\Vertw(t)\Vert \leq \rho$ (bounded disturbance rate). It has two sources. One is environmental change, which moves $\bar o$. The other is the channel noise the correction itself feeds back, because the update is driven by the innovation $\bar\delta + \nu$ (with $\nu$ the channel noise), not by $\bar\delta$ ( #deriv-gain-sector, Props B.1 and B.3).
+
+The linear case from #hyp-mismatch-dynamics has $F(\mathcal{T}, \delta) = \mathcal{T} \cdot \delta$.
+
+**The disturbance depends on the gain.** For linear correction at rate $\alpha$ the gain-injected part is $-\alpha\nu(t)$. Under Model D, with environmental change bounded by $\rho_{\text{env}}$ and channel noise bounded by $\bar\nu$, the disturbance bound is $\rho = \rho_{\text{env}} + \alpha\bar\nu$. Prop A.1's ultimate bound is then
+
+*[Derived (Model D with bounded channel noise, linear correction)]*
+
+$$R^\ast = \frac{\rho_{\text{env}}}{\alpha} + \bar\nu$$
+
+The lag term falls with $\alpha$ and the noise term does not. Under Model S, with environmental diffusion $\sigma_{\text{env}}$ and channel noise of intensity $\sigma_\nu$ per coordinate (observation $dy = \bar o\,dt + \sigma_\nu\,dV$), the disturbance intensity is $\sigma_w^2 = \sigma_{\text{env}}^2 + \alpha^2\sigma_\nu^2$. Prop A.1S's steady state is then
+
+*[Derived (Model S with channel noise, linear correction)]*
+
+$$\mathbb{E}\lVert\delta\rVert^2_{ss} = \frac{n(\sigma_{\text{env}}^2 + \alpha^2\sigma_\nu^2)}{2\alpha}$$
+
+This is minimized at $\alpha = \sigma_{\text{env}}/\sigma_\nu$, which is the steady-state Kalman–Bucy gain for a random-walk signal, at the value $n\sigma_{\text{env}}\sigma_\nu$, the Kalman–Bucy error variance. Above that gain the bound grows: correcting faster on the same observations injects more noise than it removes lag. This is the lag/noise trade-off of adaptive filtering (Widrow, McCool, Larimore & Johnson 1976[^widrow1976]: gradient noise "proportional to the speed of adaptation", lag "inversely proportional", the sum minimized where the two contributions are equal — here $\alpha^2\sigma_\nu^2 = \sigma_{\text{env}}^2$). Throughout the persistence family, $\rho$ and $\sigma_w$ denote this *total* disturbance (environmental change plus injected noise; $\sigma_w$ per coordinate, so that $\mathbb E\lVert w\rVert^2 = n\sigma_w^2$ per unit time), and the propositions below are exact in them for any disturbance meeting their hypotheses. Read with the environmental part alone, $R^\ast = \rho_{\text{env}}/\alpha$ and $\sigma_{\text{env}}\sqrt{n/(2\alpha)}$ are the lag terms, and $1/\alpha$ and $1/\sqrt\alpha$ describe how the lag term falls; the channel-noise part sets a floor that a stronger correction cannot lower. Under Model D the floor $\bar\nu$ is fixed and the bound falls monotonically toward it. Under Model S with white channel noise the injected part grows with the gain, which is why the bound turns up past the Kalman gain. The two models behave differently here, and the Model S picture is not to be read into Model D.
+
+[^widrow1976]: Widrow, B., McCool, J. M., Larimore, M. G., & Johnson, C. R. Jr. (1976). "Stationary and nonstationary learning characteristics of the LMS adaptive filter." *Proceedings of the IEEE* 64(8):1151–1162. doi:10.1109/PROC.1976.10286.
+
+## Assumptions on $F$
+
+The Lyapunov derivations below operate on the structural-property triple (A1) zero-correction-at-zero-mismatch, (A2') local sector condition, (A3) tempo-monotonicity, stated in full at #form-sector-condition. The sub-scope $\alpha$ / $\beta$ partition — the agent classes where A2' is structurally derived (Bayesian / exponential family / strongly-convex gradient / L2-regularized / linear-PD) versus those where it stands as a well-scoped per-system empirical claim (PID, rule-based, human judgment, severely misspecified, variational, non-convex beyond basin, per-step SGD) — is also held there, together with the operator-family classification (Rockafellar / Bauschke-Combettes / Baillon-Haddad) that names how the AAT-internal sub-scope partition lines up with monotone-operator theory.
+
+The Lyapunov proofs below apply uniformly across both sub-scopes — they operate downstream of A2' regardless of whether it is structurally derived or per-system assumed.
+
+## Candidate Lyapunov Function
+
+*[Definition (Lyapunov Candidate)]*
+
+$$V(\delta) = \frac{1}{2}\Vert\delta\Vert^2$$
+
+Positive definite, radially unbounded, continuously differentiable. Its level sets $V = c$ are spheres of radius $\sqrt{2c}$ in mismatch space.
+
+## Proposition A.1: Bounded Mismatch (Single Agent)
+
+**Statement.** Under (A1), (A2'), (A3), with bounded disturbance $\Vertw(t)\Vert \leq \rho$, the mismatch $\delta(t)$ is **ultimately bounded**: there exists $R^\ast \gt 0$ such that $\Vert\delta(t)\Vert \leq R^\ast$ for all sufficiently large $t$, provided $R^\ast \lt R$ (the ultimately bounded region fits within the sector-condition region).
+
+**Proof.**
+
+Compute $\dot{V}$ along trajectories:
+
+*[Derived (Proof Step)]*
+
+$$\dot{V} = \delta^T \dot{\delta} = \delta^T[-F(\mathcal{T}, \delta) + w(t)]$$
+
+*[Derived (Proof Step)]*
+
+$$= -\delta^T F(\mathcal{T}, \delta) + \delta^T w(t)$$
+
+By (A2'): $\delta^T F(\mathcal{T}, \delta) \geq \alpha\Vert\delta\Vert^2$
+
+By Cauchy-Schwarz: $\delta^T w(t) \leq \Vert\delta\Vert \cdot \Vertw(t)\Vert \leq \rho\Vert\delta\Vert$
+
+Therefore:
+
+*[Derived (Proof Step)]*
+
+$$\dot{V} \leq -\alpha\Vert\delta\Vert^2 + \rho\Vert\delta\Vert = -\Vert\delta\Vert(\alpha\Vert\delta\Vert - \rho)$$
+
+$\dot{V} \lt 0$ whenever $\Vert\delta\Vert \gt \rho/\alpha$ **and** $\Vert\delta\Vert \leq R$ (where A2' holds).
+
+Define $R^\ast = \rho/\alpha$.
+
+**Invariance of $\mathcal B_R$.** When $R^\ast \lt R$ (the persistence condition), the ball $\mathcal B_R$ is *positively invariant*: any trajectory starting in $\mathcal B_R$ remains in $\mathcal B_R$ for all future time. At the boundary $\Vert\delta\Vert = R$, the sector condition holds and $\dot{V} = -\Vert\delta\Vert(\alpha\Vert\delta\Vert - \rho) = -R(\alpha R - \rho) \lt 0$ (since $\alpha R \gt \rho$ by the persistence condition). Trajectories at the boundary point inward. Therefore $\mathcal B_R$ is invariant, and the sector condition applies to the entire future trajectory of any trajectory starting inside $\mathcal B_R$.
+
+**Ultimate boundedness.** Within $\mathcal B_R$, the Lyapunov function is strictly decreasing for $\Vert\delta\Vert \gt R^\ast$ and may increase for $\Vert\delta\Vert \lt R^\ast$. All trajectories starting in $\mathcal B_R$ are ultimately bounded by $R^\ast$ — they are driven into $\mathcal B_{R^\ast}$ and remain in a neighborhood of it (with possible oscillation at the boundary due to the disturbance).
+
+**Initial condition requirement.** The result requires the trajectory to start inside $\mathcal B_R$ (or to be brought inside by some external mechanism). A trajectory starting outside $\mathcal B_R$ is not covered — the sector condition does not hold there, and the correction function may fail to reduce mismatch. This is precisely the structural adaptation regime of #result-structural-adaptation-necessity: an agent whose mismatch exceeds $R$ has exhausted its model class capacity and needs structural change to re-enter the region where parametric correction works.
+
+The persistence condition $\alpha \gt \rho/R$ (equivalently $R^\ast \lt R$) is therefore *sufficient* for persistence from within $\mathcal B_R$. $\square$
+
+**Lemma A.1N (threshold tightness — necessity is class-level, not agent-level).** Over the hypothesis class $\mathcal F_\alpha = \{F : \text{(A1), (A2'), (A3) hold on } \mathcal B_R \text{ with sector floor } \alpha\}$, the condition $\alpha \gt \rho/R$ is necessary *and* sufficient for the uniform containment guarantee (every $F \in \mathcal F_\alpha$ keeps every trajectory from $\mathcal B_R$ inside $\mathcal B_R$ under every $\lVert w(t)\rVert \leq \rho$).
+
+*Proof.* Sufficiency is Prop A.1, uniform over the class. Necessity: the extremal member $F = \alpha\delta$ lies in $\mathcal F_\alpha$; under the outward radial disturbance $w = \rho\,\delta/\lVert\delta\rVert$ its radial dynamics obey $\tfrac{d}{dt}\lVert\delta\rVert = \rho - \alpha\lVert\delta\rVert \geq \rho - \alpha R \gt 0$ whenever $\alpha \lt \rho/R$, so from any nonzero start the trajectory exits $\mathcal B_R$ in finite time. (At $\alpha = \rho/R$ exactly, the trajectory asymptotes to $R$ without crossing — containment holds, with ultimate bound $R$ rather than $\lt R$.) $\square$
+
+The lemma answers the question the old "iff" was reaching for — *when is the persistence condition also necessary?* — and the answer is **tightness, not linearity**. For a fixed agent whose sector bound is radially tight (additionally $\delta^T F \leq \bar\alpha\lVert\delta\rVert^2$ with $\bar\alpha = \alpha$; the linear case $F = \mathcal T\delta$ is the canonical instance), the same outward-disturbance construction forces finite-time exit, and the threshold is a genuine agent-level if-and-only-if. In general, the object necessity tracks is the *upper* sector constant $\bar\alpha$, not the floor $\alpha$: the Lyapunov argument bounds $\dot V$ from above via the floor, and forcing escape needs a bound from below, which only an upper sector bound supplies.
+
+**Remark (the floor is not the barrier — why agent-level necessity fails in general).** For a fixed $F$, failure of $\alpha \gt \rho/R$ does *not* imply escape, because $\alpha$ is a worst-case infimum over $\mathcal B_R$ that the dynamics may render unreachable. Demonstration (1D; extends to $\mathbb R^n$ radially via $F(\delta) = g(\lVert\delta\rVert)\,\delta$): take $R = 1$, $\rho = 1$, and $g \geq 10$ everywhere on $(0, 1]$ except a narrow dip to $g = 0.1$ near $r = 0.5$. The tight sector floor on $\mathcal B_R$ is $\alpha = g(0.5) = 0.1 \lt \rho/R$ — the persistence condition fails tenfold — yet $F(r) \gt \rho$ on an annulus below the dip, so every admissible trajectory started at small mismatch is stopped there: an impenetrable barrier *below* the weak spot, which no admissible disturbance can reach. The supremum of $\lVert\delta(t)\rVert$ over all $\lVert w\rVert \leq \rho$ from $\delta(0) = 0$ is $\approx 0.1$ (numerically confirmed, including against randomized and outward-feedback adversaries). The sharp agent-level escape threshold in 1D is a *mountain-pass* quantity — escape requires $\rho \gt \max_r F(r)$ over the radii the trajectory must traverse — not the global floor $\alpha R$. Condition failure therefore means the containment *certificate* is lost (and escape is forced for the extremal class member and every radially tight agent), never that escape is certified for the agent at hand.
+
+**Interpretation.** The ultimately bounded region has radius $R^\ast = \rho/\alpha$. In the linear case, $\alpha = \mathcal{T}$, recovering #result-persistence-condition's steady-state result $R^\ast = \rho/\mathcal{T}$ exactly. But Proposition A.1 holds for *any* correction function satisfying the sector condition, not just the linear one.
+
+**The persistence threshold, generalized.** The persistence condition $\rho/\alpha \lt R$ guarantees persistence for any correction function satisfying the sector condition, and Lemma A.1N shows it is *unimprovable given only A2'*: necessary and sufficient for the guarantee at class level, and agent-level necessary exactly in the radially tight case. If the correction function breaks down (A2' fails) before $R^\ast$ is reached, the agent may diverge. Condition failure IS #result-structural-adaptation-necessity's trigger in certificate form: when $\rho/\alpha \gt R$ (the environment demands more correction than the model class can *certifiably* provide), parametric adaptation loses its containment guarantee and structural change is required to restore one.
+
+## Proposition A.2: Stability Margin (Adaptive Reserve)
+
+**Statement.** Under the conditions of A.1, the agent can tolerate a sudden increase in disturbance rate of:
+
+*[Derived (adaptive-reserve)]*
+
+$$\Delta\rho^* = \alpha R - \rho$$
+
+without mismatch diverging (where $R$ is the radius of the sector-condition region from A2'). Beyond this, $R^\ast$ exceeds $R$ and the correction function may fail.
+
+**Proof.** After a shock, the new disturbance rate is $\rho + \Delta\rho$. The new ultimately bounded radius is $(\rho + \Delta\rho)/\alpha$. This remains within the valid region iff $(\rho + \Delta\rho)/\alpha \leq R$, i.e., $\Delta\rho \leq \alpha R - \rho$. $\square$
+
+**Interpretation.** $\Delta\rho^\ast$ is the agent's **adaptive reserve** — how much additional environmental volatility it can absorb before its model breaks down. This is a single number characterizing an agent's robustness to shock:
+
+- An agent operating well below capacity ($\rho \ll \alpha R$) has a large reserve — it is **robust**.
+
+- An agent near its limit ($\rho \approx \alpha R$) has a small reserve — it is **fragile**.
+
+| Domain | Large $\Delta\rho^\ast$ (robust) | Small $\Delta\rho^\ast$ (fragile) |
+
+|--------|-------------------------------|-------------------------------|
+
+| Control | Kalman filter on slow target | Same filter on erratic target |
+
+| Biology | Organism in stable niche | Same organism under climate change |
+
+| Organization | Well-capitalized firm, stable market | Startup in volatile market |
+
+| Military | Force with operational depth | Force at culmination point |
+
+## Proposition A.1S: Bounded Mismatch Under Stochastic Disturbance
+
+**Statement (region-aware form).** Under (A1), (A2') on $\mathcal B_R$, (A3), with stochastic disturbance (GA-2S: $d\delta = -F(\mathcal T,\delta)\,dt + \sigma_w\,dW_t$ with $W$ a standard $n$-dimensional Wiener process, so $\sigma_w^2$ is the per-coordinate disturbance intensity and $\mathbb E\lVert w\rVert^2 = n\sigma_w^2$ per unit time), and with the regularity (S) that $F$ is measurable and locally bounded on $\bar{\mathcal B}_R$ and the SDE has a weak solution with continuous paths up to $\tau_R$ (every locally Lipschitz $F$ qualifies, and by Girsanov every bounded measurable $F$ on the ball), let $\tau_R = \inf\{t : \lVert\delta(t)\rVert \gt R\}$ be the first-exit time from the sector-condition region and write $\kappa_R := \alpha R^2/\sigma_w^2$. Then:
+
+*[Derived (stochastic-bounded-mismatch, Itô–Lyapunov on the region, Khasminskii 2012 ch. 5)]*
+
+(i) *Killed second-moment bound* — the mismatch, counted only while it is still inside the region, satisfies for all $t \geq 0$
+
+$$\mathbb{E}\big[\lVert\delta(t)\rVert^2;\ \tau_R \gt t\big] \;\leq\; \lVert\delta(0)\rVert^2 e^{-2\alpha t} + \frac{n\sigma_w^2}{2\alpha}\big(1 - e^{-2\alpha t}\big).$$
+
+This is the scale of the mismatch *while still certified*. It says nothing about the mismatch after exit, and it is not a bound on the stopped moment $\mathbb E\lVert\delta(t\wedge\tau_R)\rVert^2$: the mass frozen on the sphere at exit does not decay, and under (ii) that stopped moment tends to $R^2$, not to $n\sigma_w^2/(2\alpha)$ (Corollary A.1S.1 gives $P(\tau_R \leq t) \to 1$).
+
+(ii) *Mean-square persistence condition* — when $R^\ast_S := \sigma_w\sqrt{n/(2\alpha)} \lt R$, equivalently
+
+$$\alpha \gt \frac{n\sigma_w^2}{2R^2} \quad\Longleftrightarrow\quad \kappa_R \gt \frac n2,$$
+
+the RMS scale of the certified mismatch fits inside the sector-condition region. What this certifies is the scale in (i) for as long as the process remains certified, and, by Prop A.1S-τ below, an expected stay in the region of about one correction time at the threshold and exponentially longer with margin. Where (A2') holds on all of $\mathbb R^n$ (the global case; the linear corrector and the sub-scope-$\alpha$ families with a global floor), it certifies the stationary scale $\mathbb E\lVert\delta\rVert^2_{ss} \leq n\sigma_w^2/(2\alpha)$ outright.
+
+(iii) *Fixed-time tail* — in the global case, Markov's inequality on the unstopped second moment gives, for each $t$,
+
+$$P\big(\lVert\delta(t)\rVert \gt R\big) \;\leq\; \frac{\lVert\delta(0)\rVert^2 e^{-2\alpha t} + n\sigma_w^2/(2\alpha)}{R^2} \;\xrightarrow[t\to\infty]{}\; \frac{n\sigma_w^2}{2\alpha R^2} = \frac{n}{2\kappa_R}.$$
+
+Under (A2') on the ball only, no fixed-time tail for the unstopped process follows, because $F$ is unconstrained outside the ball; the region-aware statement is the composition of (i) with the exit-time bound of Prop A.1S-τ: for $r \leq R$ and $\lVert\delta(0)\rVert = \lVert x\rVert$,
+
+$$P\big(\lVert\delta(t)\rVert \gt r\big) \;\leq\; P(\tau_R \leq t) + \frac{\mathbb E[\lVert\delta(t)\rVert^2;\ \tau_R \gt t]}{r^2} \;\leq\; \Big[1 - \frac{\Phi(\lVert x\rVert) - t}{\Phi(0)}\Big] + \frac{\lVert x\rVert^2 e^{-2\alpha t} + (R^\ast_S)^2(1 - e^{-2\alpha t})}{r^2},$$
+
+with $\Phi$ the benchmark exit-time function of Lemma A.1S-τ.0. Neither form is an infinite-horizon containment statement: under additive Brownian forcing $P(\tau_R \lt \infty) = 1$ (Corollary A.1S.1; the no-go in `#deriv-stochastic-non-exit`). Pathwise containment of $\mathcal B_R$ is a Model-D guarantee only (Prop A.1's positive invariance); Model S controls the *scale* (i)–(ii), the *fixed-time tail* (iii), the *finite-horizon path* (iv), and the *time to exit* (Prop A.1S-τ), not the sample path over an unbounded horizon.
+
+(iv) *Finite-horizon sample-path bound* — for any horizon $T$,
+
+$$P\Big(\sup_{0 \leq s \leq T}\lVert\delta(s)\rVert \gt R\Big) \;\leq\; \frac{\lVert\delta(0)\rVert^2 + n\sigma_w^2\,T}{R^2},$$
+
+rigorous under (A2') on the ball alone. It controls the whole path on $[0,T]$, grows linearly in $T$, and is vacuous for $T \gtrsim R^2/(n\sigma_w^2)$, consistent with $P(\tau_R \lt \infty) = 1$. From the origin it is never tighter than Prop A.1S-τ(iii), which is exponential rather than linear in $\kappa_R$; it stays in canon because it is a closed form without special functions.
+
+**Proof.**
+
+Apply Itô's formula to $V(\delta) = \tfrac12\lVert\delta\rVert^2$ along the solution:
+
+*[Derived (Proof Step)]*
+
+$$dV = -\delta^T F\,dt + \frac n2\sigma_w^2\,dt + \sigma_w\,\delta^T dW_t,$$
+
+the last drift term being the Itô correction $\tfrac12\operatorname{tr}(\sigma_w^2 I_n)$. Everything below is run on $[0, t\wedge\tau_R]$, where $\delta \in \bar{\mathcal B}_R$ almost surely and (A2') applies; the stopped Itô integral has zero expectation because $\delta$ is bounded there.
+
+*The exact stopped identity.* Integrating $d\lVert\delta\rVert^2 = 2\,dV$ and taking expectations,
+
+$$\mathbb E\lVert\delta(t\wedge\tau_R)\rVert^2 \;=\; \lVert\delta(0)\rVert^2 + n\sigma_w^2\,\mathbb E[t\wedge\tau_R] - 2\,\mathbb E\!\int_0^{t\wedge\tau_R}\!\delta^T F\,ds.$$
+
+*(iv).* The last term is non-positive by (A2'), so $\mathbb E\lVert\delta(T\wedge\tau_R)\rVert^2 \leq \lVert\delta(0)\rVert^2 + n\sigma_w^2 T$. On $\{\tau_R \leq T\}$ the stopped path sits on the sphere, so $R^2\,P(\tau_R \leq T) \leq \mathbb E\lVert\delta(T\wedge\tau_R)\rVert^2$, which is (iv). The decay term plays no part in (iv), which is why (iv) survives the correction to (i).
+
+*(i).* Apply Itô to $e^{2\alpha s}V(\delta_s)$:
+
+$$d\big(e^{2\alpha s}V\big) = e^{2\alpha s}\Big[\big(2\alpha V - \delta^T F\big)\,ds + \frac n2\sigma_w^2\,ds + \sigma_w\,\delta^T dW_s\Big],$$
+
+and on the ball $2\alpha V - \delta^T F \leq 0$ by (A2'). Integrating to $t\wedge\tau_R$ and taking expectations,
+
+$$\mathbb E\big[e^{2\alpha(t\wedge\tau_R)}V(\delta_{t\wedge\tau_R})\big] \;\leq\; V(\delta_0) + \frac n2\sigma_w^2\,\mathbb E\!\int_0^{t\wedge\tau_R}\!e^{2\alpha s}\,ds \;\leq\; V(\delta_0) + \frac{n\sigma_w^2}{4\alpha}\big(e^{2\alpha t} - 1\big).$$
+
+The left side is at least its part on $\{\tau_R \gt t\}$, which is $e^{2\alpha t}\,\mathbb E[V(\delta_t);\ \tau_R \gt t]$; the part on $\{\tau_R \leq t\}$ is non-negative and is dropped. Multiplying through by $2e^{-2\alpha t}$ gives (i). The step that is *not* available is replacing $\mathbb E[V(\delta_t);\ \tau_R \gt t]$ by $\mathbb E[V(\delta_{t\wedge\tau_R})]$: the decay in the drift carries the indicator $\mathbf 1_{\{s \lt \tau_R\}}$, so the mass frozen on the sphere does not contract, and a Grönwall bound on the stopped moment does not close. (Monte Carlo, $n = 2$, $\alpha = 2$, $\sigma_w = R = 1$, so $\kappa_R = 2 \gt n/2$, from the origin: the stopped moment is $0.74$ at $t = 1$ and $0.995$ at $t = 4$ against a would-be bound of $0.5$; the killed moment is $0.09$ and $0.002$, under the (i) bound $0.49$ and $0.50$.)
+
+*(ii) and (iii), global case.* When (A2') holds on all of $\mathbb R^n$ no stopping is needed: the same Itô step on $V$ gives $\tfrac{d}{dt}\mathbb E[V] \leq -2\alpha\,\mathbb E[V] + \tfrac n2\sigma_w^2$, Grönwall gives $\mathbb E\lVert\delta(t)\rVert^2 \leq \lVert\delta(0)\rVert^2 e^{-2\alpha t} + \tfrac{n\sigma_w^2}{2\alpha}(1 - e^{-2\alpha t})$, and Markov's inequality gives (iii). The steady state is $\mathbb E\lVert\delta\rVert^2_{ss} \leq n\sigma_w^2/(2\alpha)$, with equality for the linear corrector (the Ornstein–Uhlenbeck stationary variance), and
+
+*[Derived (stochastic-steady-state)]*
+
+$$R^\ast_S \;=\; \sigma_w\sqrt{\frac{n}{2\alpha}}.$$
+
+*(iii), local case.* $P(\lVert\delta(t)\rVert \gt r) \leq P(\tau_R \leq t) + P(\lVert\delta(t)\rVert \gt r,\ \tau_R \gt t)$; the first term is bounded by Prop A.1S-τ(iii) and the second by Markov on (i). $\square$
+
+**Interpretation.** Model D (Prop A.1) gives $R^\ast = \rho/\alpha$, scaling as $1/\alpha$. Model S gives $R^\ast_S = \sigma_w\sqrt{n/(2\alpha)}$, scaling as $1/\sqrt{\alpha}$, both at fixed disturbance. Doubling the correction rate halves the deterministic bound but reduces the stochastic one only by $\sqrt 2 \approx 1.41$: correction is less effective against noise than against drift. This difference in scaling, at fixed $\rho$ and $\sigma_w$, is what propagates into the adversarial exponent regimes ( #result-adversarial-exponent-regimes): $b = 2$ under Model D, $b = 3/2$ under Model S. With the gain-injected channel noise of the Setup included, $\sigma_w$ itself depends on $\alpha$ for a fixed channel, and the scalings describe the lag term alone.
+
+**Tail bound.** In the global case the stationary Markov bound is $P(\lVert\delta\rVert \gt R) \leq n\sigma_w^2/(2\alpha R^2)$, so the agent is outside $R$ at any given time with probability at most $\epsilon$ provided $\alpha \geq n\sigma_w^2/(2\epsilon R^2)$. For the linear corrector the stationary law is Gaussian and exact tail probabilities are available; the Markov bound is the general result under global (A2'). For a corrector certified only on the ball, the fixed-time tail is the composed form in (iii).
+
+## Corollary A.1S.1: Disturbance-Model Containment Dichotomy
+
+*[Derived]*
+
+For a trajectory started in $\mathcal B_R$ under (A1), (A2') on $\mathcal B_R$, (A3), the persistence-region first-exit probability is **categorical**:
+
+$$P(\tau_R \lt \infty) \;=\; \begin{cases} 0 & \text{Model D (bounded } w,\ \lVert w\rVert \leq \rho\text{) under } \alpha R \gt \rho,\\ 1 & \text{Model S (additive stochastic, } d\delta = -F\,dt + \sigma_w\,dW_t\text{).} \end{cases}$$
+
+The Model-D value is the deterministic positive invariance of Prop A.1 (boundary-inward: at $\lVert\delta\rVert = R$, $\dot V \lt 0$ when $\alpha R \gt \rho$). The Model-S value holds for **every** $\alpha \gt 0$, **every** $\sigma_w \gt 0$, and **every** correction function $F$ satisfying (A2'): a non-degenerate diffusion (additive forcing $\sigma_w\,dW_t$, $\sigma_w \gt 0$) exits any bounded region in finite time almost surely, for any locally bounded drift — no finite inward correction can defeat the Brownian crossing near $\partial\mathcal B_R$. The Ornstein–Uhlenbeck benchmark makes the mechanism explicit (scale function $s'(u) \propto e^{\alpha u^2/\sigma_w^2}$ unbounded, hence recurrent; Khasminskii 2012[^khasminskii2012] ch. 3–4), but the conclusion needs only non-degeneracy of the additive noise on a bounded region, not the linear structure. That the natural maximal-inequality route to a $P(\tau_R \lt \infty) \lt 1$ bound *cannot* exist — the question "are you sure you can't just Doob/Ville this?" — is demonstrated in `#deriv-stochastic-non-exit`.
+
+The achievable first-exit probability is therefore exactly the two-point set $\{0, 1\}$, and **which point obtains is fixed by the disturbance model's support structure (bounded vs. unbounded), not by the correction strength $\alpha$**. Increasing $\alpha$ tightens the typical scale ($R^\ast_S \propto 1/\sqrt\alpha$) and lengthens the expected time in the region (Prop A.1S-τ, exponentially in $\kappa_R$ at fixed $\sigma_w$); it cannot move $P(\tau_R \lt \infty)$ off $1$ under Model S, and is unnecessary for the $0$ under Model D. Pathwise containment of $\mathcal B_R$ is categorically a bounded-disturbance property: additive stochastic forcing removes the *kind* of guarantee available, not merely its rate. This sharpens the hand-off into #result-structural-adaptation-necessity — in any genuinely stochastic environment region-exit is a certain eventual event, so loss of the parametric certificate is *generic, not exceptional*, for a sufficiently long-lived agent; whether it forces model-class change is #sketch-structural-adaptation-genericity's open question, and Prop A.1S-τ says when it comes.
+
+## Proposition A.1S-τ: Time in the Certified Region Under Stochastic Disturbance
+
+Corollary A.1S.1 says *whether* the region is left (with certainty). This proposition says *when*, and it is the region-aware content of Model S: the time to first exit from $\mathcal B_R$ is bounded below by that of the simplest sector-satisfying corrector, the isotropic linear one $F = \alpha\delta$, whose exit time is explicit in every dimension. The reason is one observation: (A2') is a lower bound on the *radial* component of the correction, $\hat\delta^T F \geq \alpha\lVert\delta\rVert$ with $\hat\delta = \delta/\lVert\delta\rVert$, and leaving a ball is a statement about the radius alone, so the radial process of any sector-satisfying corrector has drift pointwise at least as inward as the linear corrector's, with the same noise. Throughout, $\kappa_R = \alpha R^2/\sigma_w^2 = \tfrac n2 (R/R^\ast_S)^2$, so the mean-square persistence condition (ii) is $\kappa_R \gt n/2$.
+
+**Lemma A.1S-τ.0 (the Ornstein–Uhlenbeck benchmark).** *[Derived; classical.]* Let $Y$ solve $dY = -\alpha Y\,dt + \sigma_w\,dW$ in $\mathbb R^n$ and let $\Phi(r) = \Phi_{\alpha,n,\sigma_w,R}(r) := \mathbb E_y[\tau_R]$ for $\lVert y\rVert = r \leq R$. Then
+
+$$\Phi(r) = \frac{2}{\sigma_w^2}\int_r^R \frac{G(u)}{m(u)}\,du, \qquad m(u) = u^{n-1}e^{-\alpha u^2/\sigma_w^2}, \qquad G(u) = \int_0^u m(s)\,ds = \tfrac12\Big(\frac{\sigma_w^2}{\alpha}\Big)^{n/2}\gamma\!\Big(\tfrac n2, \tfrac{\alpha u^2}{\sigma_w^2}\Big),$$
+
+with $\gamma$ the lower incomplete gamma function. $\Phi$ is the radial $C^2$ solution of $\mathcal L_{\mathrm{OU}}\Phi = -1$ on $\mathcal B_R$ with $\Phi(R) = 0$, where for radial $\phi$ the generator is $\mathcal L_{\mathrm{OU}}\phi = \tfrac{\sigma_w^2}{2}\big(\phi'' + \tfrac{n-1}{r}\phi'\big) - \alpha r\phi'$. Moreover $\Phi'(r) = -\tfrac{2}{\sigma_w^2}G(r)/m(r) \leq 0$, $\Phi'(0) = 0$, $\Phi(0) = \max\Phi$, $\Phi$ is concave as a function of $r^2$, and $v(y) := \Phi(\lVert y\rVert)$ is real-analytic near $\bar{\mathcal B}_R$. Two readings of the same function:
+
+- *Small noise.* As $\kappa_R \to \infty$ at fixed $n$, by Laplace's method at the endpoint $u = R$,
+
+$$\Phi(0) = \frac{\Gamma(n/2)}{2\alpha}\,\kappa_R^{-n/2}\,e^{\kappa_R}\,\big(1 + O(\kappa_R^{-1})\big), \qquad \sigma_w^2\log\Phi(r) \to \alpha R^2 \ \text{ for every fixed } r \lt R.$$ This is Arrhenius–Kramers: the benchmark is a Brownian particle in the well $U(y) = \tfrac12\alpha\lVert y\rVert^2$ at temperature $T = \sigma_w^2/2$, and $\kappa_R = U(R)/T$ is the barrier height in units of temperature (an isomorphism for the benchmark, the two systems being the same SDE). The expansion is not uniform in $n$ and is not a bound in either direction: the ratio exact/asymptotic is $1.29$ at $(n, \kappa_R) = (2, 4)$ and falls to $1.07$ at $(2, 16)$, while below the mean-square threshold ($\kappa_R \lt n/2$) the asymptotic over-estimates by orders of magnitude at large $n$. Rigorous statements use the integral.
+
+- *At the threshold.* $\alpha\,\Phi(0)$ at $\kappa_R = n/2$ (so $R = R^\ast_S$) is $0.60, 0.66, 0.71, 0.78, 0.89, 1.02, 1.20, 1.35, 1.89$ for $n = 1, 2, 3, 5, 10, 20, 50, 100, 1000$: about one correction time, drifting upward like $\tfrac14\ln n + 0.15$ for large $n$. Margin buys time quickly: at $n = 3$, $\alpha\Phi(0) = 0.71, 1.57, 3.12, 12.0, 51.2$ as $\kappa_R$ goes from $n/2$ to $n/2 + 1, 2, 4, 6$.
+
+*Derivation.* Put $\psi = \phi'$ in $\mathcal L_{\mathrm{OU}}\phi = -1$: $\tfrac{\sigma_w^2}{2}\psi' + \big(\tfrac{(n-1)\sigma_w^2}{2r} - \alpha r\big)\psi = -1$. Since $m'/m = (n-1)/r - 2\alpha r/\sigma_w^2$, the integrating factor is $m$: $\tfrac{\sigma_w^2}{2}(m\psi)' = -m$, so $m\psi = -\tfrac{2}{\sigma_w^2}G$ (the constant vanishes because $m\psi \to 0$ at $0$: $m(0) = 0$ for $n \geq 2$, $\psi(0) = 0$ by evenness for $n = 1$). Integrate from $r$ to $R$ with $\phi(R) = 0$. The incomplete-gamma form is the substitution $v = \alpha s^2/\sigma_w^2$ in $G$. Concavity in $s = r^2$: $d\Phi/ds = -\tfrac{1}{\sigma_w^2}\int_0^1 t^{n-1}e^{(\alpha r^2/\sigma_w^2)(1-t^2)}\,dt$ (substitute $u = rt$ in $G$), which decreases in $r$. That $\Phi = \mathbb E\tau_R$ is Dynkin's formula plus uniqueness for the Dirichlet problem of a non-degenerate generator on a bounded domain (the Andronov–Vitt–Pontryagin problem; Khasminskii 2012[^khasminskii2012] ch. 3; the formula for every $n$ is Kersting, Orvieto, Proske & Lucchi 2023[^kersting2023], Theorem 4, and Grebenkov 2015[^grebenkov2015], eq. (75)). For the asymptotic, $G(u) \to \tfrac12\Gamma(\tfrac n2)(\sigma_w^2/\alpha)^{n/2}$ up to exponentially small error once $u \gg \sigma_w/\sqrt\alpha$, and $\int^R u^{1-n}e^{\alpha u^2/\sigma_w^2}\,du$ is dominated by its endpoint, $\tfrac{\sigma_w^2}{2\alpha}R^{-n}e^{\kappa_R}(1 + O(\kappa_R^{-1}))$; the region $u \lesssim \sigma_w/\sqrt\alpha$ contributes $O(1/\alpha)$. The threshold values are the integral evaluated numerically (arbitrary precision; two independent implementations agree to four digits). $\square$
+
+**Statement.** Under (A1), (A2') on $\bar{\mathcal B}_R$, (S) and GA-2S, for every start $x \in \bar{\mathcal B}_R$:
+
+*[Derived (exit-time comparison; Itô–Dynkin and a same-noise radial comparison)]*
+
+(i) *Mean.* $\mathbb E_x[\tau_R] \geq \Phi_{\alpha,n,\sigma_w,R}(\lVert x\rVert)$. If also $\delta^T F \leq \bar\alpha\lVert\delta\rVert^2$ on the ball, then $\mathbb E_x[\tau_R] \leq \Phi_{\bar\alpha,n,\sigma_w,R}(\lVert x\rVert) \lt \infty$. Both are equalities when the sector bound is radially tight, $\delta^T F = \alpha\lVert\delta\rVert^2$ on the ball, which includes $F = \alpha\delta$ and every $F = \alpha\delta + T(\delta)$ with $T(\delta) \perp \delta$, linear or not. Over the class $\mathcal F_\alpha$ of Lemma A.1N the lower bound is therefore attained and unimprovable from the floor alone, and for a fixed non-tight $F$ it can be arbitrarily loose (the dip corrector of the Remark after A.1N has a mean exit time governed by its whole radial profile). Radial tightness is the one hypothesis that makes the Model D threshold an agent-level iff (A.1N) and the Model S exit time exact.
+
+(ii) *Law.* $P_x(\tau_R \gt t) \geq P^{\mathrm{OU}(\alpha)}_{\lVert x\rVert}(\tau_R \gt t)$ for every $t$: the exit time stochastically dominates the benchmark's, so every moment and every survival probability of the benchmark is a lower bound. With a ceiling $\bar\alpha$ the reverse domination holds, and in the radially tight case the laws coincide.
+
+(iii) *Finite-lifetime containment.* For every lifetime $L \geq 0$,
+
+$$P_x(\tau_R \leq L) \;\leq\; 1 - \frac{\Phi(\lVert x\rVert) - L}{\Phi(0)}, \qquad\text{in particular}\qquad P_0(\tau_R \leq L) \;\leq\; \frac{L}{\Phi(0)} \;\approx\; \frac{2\alpha L}{\Gamma(n/2)}\,\kappa_R^{n/2}e^{-\kappa_R}.$$
+
+The bound is linear in $L$, so it is vacuous as $L \to \infty$, as the no-go requires. From every start it is at least as tight as (iv) of Prop A.1S, with equality only in the Brownian limit $\alpha \to 0$: it is (iv) with the decay term kept rather than dropped. Under (ii) the sharper $P_x(\tau_R \leq L) \leq P^{\mathrm{OU}}_{\lVert x\rVert}(\tau_R \leq L)$ holds.
+
+(iv) *A tenure-indexed condition.* Fix a required time in the region $L$ and a tolerated exit probability $\epsilon \in (0,1)$. Then
+
+$$\Phi_{\alpha,n,\sigma_w,R}(0) \;\geq\; \frac{L}{\epsilon} \quad\Longrightarrow\quad P_0(\tau_R \leq L) \leq \epsilon,$$
+
+and an elementary sufficient form, valid whenever $2\kappa_R \gt n - 1$ and for any $s \in (0, \kappa_R)$, with $P(a, s) = \gamma(a,s)/\Gamma(a)$ the regularized lower incomplete gamma function, is
+
+$$\frac{\Gamma(n/2)}{2\alpha}\,\kappa_R^{-n/2}e^{\kappa_R}\cdot P\big(\tfrac n2, s\big)\cdot\frac{2\kappa_R}{2\kappa_R - n + 1}\cdot\Big(1 - \big(\tfrac{\kappa_R}{s}\big)^{(n-1)/2}e^{-(\kappa_R - s)}\Big) \;\geq\; \frac{L}{\epsilon}.$$
+
+The leading-order form $\kappa_R - \tfrac n2\log\kappa_R \geq \log\tfrac{2\alpha L}{\epsilon\,\Gamma(n/2)}$ is the asymptotic of the exact condition, not a sufficient condition: its left side is not monotone in $\kappa_R$ (it tends to $+\infty$ as $\kappa_R \to 0$), so it is satisfied by arbitrarily weak correction. At $n = 2$, $\alpha = R = 1$, $\sigma_w = 10$, $L = 1$, $\epsilon = 0.02$ it holds ($4.615 \geq 4.605$) while $\Phi(0) = 0.0050$ against the needed $50$: the process leaves in about $1/200$ of a correction time. The asymptotic is anti-conservative exactly near the mean-square threshold, where a reader is most likely to apply it. The shape of the exact condition is the content: Model D containment is free past its threshold (positive invariance, forever); Model S containment over a lifetime is bought by margin in $\kappa_R$, at a cost that grows only logarithmically in $L/\epsilon$. Doubling the required time, or halving the tolerated risk, costs about $\log 2$ in $\kappa_R$, that is, in $\tfrac n2(R/R^\ast_S)^2$, the squared ratio of certified radius to RMS scale that the mean-square condition only asks to exceed one.
+
+(v) *What the mean-square condition certifies.* At $\kappa_R = n/2$ the benchmark's expected stay is about one correction time (the table in the Lemma), so the condition $\alpha \gt n\sigma_w^2/(2R^2)$ with no margin certifies no more than that: it certifies the scale of the mismatch while certified, not the time for which the certificate holds. A non-tight corrector may stay far longer (the dip corrector stays $3.8\times$ the benchmark); what is licensed is the statement about the guarantee, not about the agent.
+
+**Proof.** *(i).* Let $v = \Phi\circ\lVert\cdot\rVert$, $C^2$ near the closed ball by the Lemma. The generator of the sector dynamics is $\mathcal Lv = -F\cdot\nabla v + \tfrac{\sigma_w^2}{2}\Delta v$; for radial $v$, $\nabla v = \Phi'(r)\hat\delta$ and $\Delta v = \Phi'' + \tfrac{n-1}{r}\Phi'$, so $\mathcal Lv = -\Phi'(r)\,\hat\delta^T F + \tfrac{\sigma_w^2}{2}\big(\Phi'' + \tfrac{n-1}{r}\Phi'\big)$. Since $-\Phi' \geq 0$ and $\hat\delta^T F \geq \alpha r$ by (A2'), $\mathcal Lv \geq -\alpha r\Phi' + \tfrac{\sigma_w^2}{2}(\Phi'' + \tfrac{n-1}{r}\Phi') = \mathcal L_{\mathrm{OU}}\Phi = -1$ off the origin, and at the origin both sides are $-1$ ($F(0) = 0$, $\Phi'(0) = 0$). Dynkin on the stopped process, valid because $v \in C^2$ and $F$ is bounded on the ball: $\mathbb E_x[v(\delta_{t\wedge\tau_R})] = v(x) + \mathbb E_x\int_0^{t\wedge\tau_R}\mathcal Lv\,ds \geq v(x) - \mathbb E_x[t\wedge\tau_R]$. If $P_x(\tau_R = \infty) \gt 0$ the claim is trivial; otherwise $v(\delta_{t\wedge\tau_R}) \to v(\delta_{\tau_R}) = \Phi(R) = 0$ a.s., $v$ is bounded, and dominated and monotone convergence give $\mathbb E_x\tau_R \geq v(x)$. The upper bound uses $\bar\Phi = \Phi_{\bar\alpha,n,\sigma_w,R}$ with the inequalities reversed, $\mathbb E_x[t\wedge\tau_R] \leq \bar v(x) - \mathbb E_x[\bar v(\delta_{t\wedge\tau_R})] \leq \bar v(x)$; finiteness gives $\tau_R \lt \infty$ a.s. as a by-product. Under radial tightness $\mathcal Lv = -1$ exactly and Dynkin gives equality. The proof uses (A2') pointwise on the closed ball and Itô for a $C^2$ function along a continuous solution, and nothing else: no Lipschitz continuity, no gradient structure, no sector condition outside the ball, no small-noise limit.
+
+*(ii), $n \geq 2$.* By Itô on $r = \lVert\delta\rVert$ off the origin, $dr = \beta_t\,dt + \sigma_w\,dB_t$ with $\beta_t = -\hat\delta^T F(\delta) + \tfrac{(n-1)\sigma_w^2}{2r}$ and $B_t = \int_0^t\hat\delta_s^T dW_s$, a standard one-dimensional Brownian motion by Lévy's characterization; (A2') gives $\beta_t \leq b_\alpha(r_t) := -\alpha r_t + \tfrac{(n-1)\sigma_w^2}{2r_t}$, which is exactly the radial drift of the benchmark $Y$. A non-degenerate diffusion with locally bounded drift does not hit a point in dimension $n \geq 2$ (Girsanov on $[0, t\wedge\tau_R]$ reduces it to Brownian motion, for which points are polar), so this holds on $(0, \tau_R]$ a.s. Let $\varrho$ solve $d\varrho = b_\alpha(\varrho)\,dt + \sigma_w\,dB_t$, $\varrho(0) = \lVert x\rVert$, driven by the *same* $B$; it has the law of $\lVert Y\rVert$ and stays positive for $n \geq 2$. Then $D = r - \varrho$ has no martingale part, $dD = (\beta_t - b_\alpha(\varrho_t))\,dt$. On any interval where $D \gt 0$, $\dot D \leq b_\alpha(r_t) - b_\alpha(\varrho_t) \lt 0$ because $b_\alpha$ is strictly decreasing and $r_t \gt \varrho_t$ there; so if $D(t_1) \gt 0$, with $t_0 = \sup\{t \lt t_1 : D(t) \leq 0\}$, $D$ is non-increasing on $(t_0, t_1]$ from $D(t_0) = 0$, a contradiction. Hence $r_t \leq \varrho_t$ for all $t \leq \tau_R(\delta)$, so $\varrho$ reaches $R$ no later than $\delta$ does; and because the benchmark's boundary is regular (it exceeds $R$ immediately after touching it, a.s.), $\tau_R(\delta) \geq \tau_R(\varrho)$ pathwise, and $\tau_R(\varrho) \overset{d}{=} \tau_R(Y)$. *(ii), $n = 1$.* By Tanaka, $r = \lvert\delta\rvert$ satisfies $dr = -\operatorname{sgn}(\delta)F(\delta)\,dt + \sigma_w\,dB_t + dL_t$ with $L$ the local time at $0$ and $\operatorname{sgn}(\delta)F(\delta) = \delta F(\delta)/\lvert\delta\rvert \geq \alpha r$ by (A2'); take $\varrho$ the OU process reflected at $0$ on the same $B$ (the law of $\lvert Y\rvert$). Where $D = r - \varrho \gt 0$ we have $r \gt 0$ so $dL = 0$, the reflection term of $\varrho$ only lowers $D$, and the drift is at most $-\alpha D \lt 0$; the same first-exceedance argument closes. The ceiling and equality clauses follow with $\bar\alpha$ and with $\beta_t = b_\alpha(r_t)$. A published comparison theorem reaches the same conclusion for all $n \geq 1$ at once on the squared radius $\xi = \lVert\delta\rVert^2$, whose equation $d\xi = (n\sigma_w^2 - 2\delta^T F)\,dt + 2\sigma_w\sqrt\xi\,dB_t$ has no local-time and no $1/r$ term: Ikeda & Watanabe 1977[^ikedawatanabe1977], Theorem 1.1 with Remark 1.1, applied with the common diffusion coefficient $2\sigma_w\sqrt{\xi^+}$ (Yamada's modulus) and the affine comparison drift $n\sigma_w^2 - 2\alpha\xi$, as the spike's literature scan transcribed the theorem; neither the author of this derivation nor its verifier has read that paper at the primary, so the self-contained argument above is the basis and the citation locates the step in print.
+
+*(iii).* Dynkin from (i) at $t = L$: $\mathbb E_x[v(\delta_{L\wedge\tau_R})] \geq v(x) - L$. On $\{\tau_R \leq L\}$ the integrand is $\Phi(R) = 0$; on $\{\tau_R \gt L\}$ it is at most $\Phi(0)$. So $\Phi(0)\,P_x(\tau_R \gt L) \geq \Phi(\lVert x\rVert) - L$. Comparison with Prop A.1S(iv): Theorem (i) with floor $0$ gives $\Phi(0) \geq R^2/(n\sigma_w^2)$ (the Brownian exit time from the ball, $\mathbb E\tau = (R^2 - \lVert x\rVert^2)/(n\sigma_w^2)$, by Dynkin on $\lVert\delta\rVert^2$), and concavity of $\Phi$ in $r^2$ with $\Phi(R) = 0$ gives $\Phi(r) \geq \Phi(0)(1 - r^2/R^2)$; together, $1 - (\Phi(\lVert x\rVert) - L)/\Phi(0) \leq \lVert x\rVert^2/R^2 + L/\Phi(0) \leq (\lVert x\rVert^2 + n\sigma_w^2L)/R^2$.
+
+*(iv).* The exact condition is (iii) from the origin. For the elementary form, with $s = \alpha a^2/\sigma_w^2$ for some $a \in (0, R)$ and $\varphi(u) = \alpha u^2/\sigma_w^2 - (n-1)\log u$ (so $1/m = e^\varphi$): $G$ is increasing, so $\Phi(0) \geq \tfrac{2}{\sigma_w^2}G(a)\int_a^R e^{\varphi(u)}\,du$; $\varphi'(u) = 2\alpha u/\sigma_w^2 - (n-1)/u$ is increasing, so $\varphi' \leq \varphi'(R) = (2\kappa_R - n + 1)/R$ on $[a, R]$, and when $\varphi'(R) \gt 0$, $\int_a^R e^\varphi\,du \geq \int_a^R e^\varphi\varphi'\,du/\varphi'(R) = (e^{\varphi(R)} - e^{\varphi(a)})/\varphi'(R)$. Substituting $e^{\varphi(R)} = e^{\kappa_R}R^{1-n}$, $e^{\varphi(a)} = e^{s}a^{1-n}$, $(R/a)^{n-1} = (\kappa_R/s)^{(n-1)/2}$ and $G(a) = \tfrac12(\sigma_w^2/\alpha)^{n/2}\Gamma(\tfrac n2)P(\tfrac n2, s)$, and using $(\sigma_w^2/\alpha)^{n/2}R^{2-n}/\sigma_w^2 = \kappa_R^{1-n/2}/\alpha$, gives the display. Numerically the bound's ratio to the exact $\Phi(0)$, maximized over $s$, is $0.57, 0.74, 0.91, 0.97$ at $n = 1$, $\kappa_R = 2, 4, 8, 16$ and $0.69, 0.97, 0.99$ at $n = 20$, $\kappa_R = 20, 40, 80$: below one everywhere, as a lower bound must be, and approaching one.
+
+*(v).* Computed from the Lemma's integral. $\square$
+
+**The exit exponent is capped at the Kalman gain.** With the Setup's disturbance for linear correction on a fixed channel, $\sigma_w^2 = \sigma_{\text{env}}^2 + \alpha^2\sigma_\nu^2$, the exponent is
+
+*[Derived (linear correction, Model S, white channel noise)]*
+
+$$\kappa_R(\alpha) = \frac{\alpha R^2}{\sigma_{\text{env}}^2 + \alpha^2\sigma_\nu^2}, \qquad \max_\alpha \kappa_R = \kappa_R(K) = \frac{R^2}{2\sigma_{\text{env}}\sigma_\nu} \ \text{ at } K = \frac{\sigma_{\text{env}}}{\sigma_\nu},$$
+
+the Kalman–Bucy gain. So correction strength buys expected time in the region only up to the Kalman gain, and the mean-square condition is satisfiable for some gain iff $\kappa_R(K) \gt n/2$, that is $R^2 \gt n\sigma_{\text{env}}\sigma_\nu$: the Kalman error must fit inside the region (the window of #result-persistence-condition). For the linear corrector (radially tight, so (i) is an equality) the expected stay is $\Phi(0) = g(\kappa_R(\alpha), n)/\alpha$ with $g$ increasing in its first argument (scale $u = Rv$ in the Lemma). Past $K$ both factors fall, so over-correcting shortens the expected stay monotonically. Below $K$ the $1/\alpha$ factor can outweigh the smaller exponent, so the gain that maximizes expected stay lies strictly below $K$ (the derivative at $K$ is $-\Phi(0)/K$) and approaches $K$ as $\kappa_R(K)$ grows; at $n = 1$, $\sigma_{\text{env}} = 1$, $\sigma_\nu = 0.5$, $R = 1$ (so $\kappa_R(K) = 1$), $\Phi(0) = 1.07, 0.87, 0.72, 0.56, 0.27$ at $\alpha = 0.5K, 0.8K, K, 1.25K, 2K$. The headline "correction strength buys time exponentially in $\alpha R^2/\sigma_w^2$" is therefore true at fixed $\sigma_w$ and false for a gain raised on a fixed channel past the Kalman gain; what buys time without limit is information (more or better observations, which lower $\sigma_\nu$), not gain.
+
+**Scope.** Isotropic additive noise, continuous time, (A2') on the closed ball. Not covered, each named so it is not assumed: anisotropic noise (the radial comparison uses $\sigma_w I$; a time-change argument gives the exponent $\alpha R^2/\lambda_{\max}(\Sigma_w)$ with a crude prefactor, sketched by the verifier and not landed); discrete time (DA2'); state-dependent noise ( #deriv-gain-sector B.3's nonlinear-$g$ case, where the stopped bounds hold with $n\sigma_w^2$ replaced by the supremum of the diffusion's trace over the ball); heavy tails, where exit is driven by a single large jump and the expected exit time is polynomial rather than exponential in the noise scale (Imkeller & Pavlyukevich 2006; Högele & Pavlyukevich 2014, as read by the spike's literature scan), so the exponential reserve of this proposition genuinely does not exist there and canon's scope line, heavy tails are structural-adaptation triggers, is sharper for it. Exit from $\mathcal B_R$ is loss of the *certificate*, not of the agent: $R$ is the certified radius, the benchmark is positively recurrent (it leaves and returns), and whether what happens at the boundary is a transient excursion or a structural failure is the open question of #sketch-structural-adaptation-genericity, which this proposition times and does not close. For a general sector corrector, (ii) is a one-sided statement about survival, not a hazard rate; the asymptotically exponential exit law is established for the benchmark only.
+
+## Summary of Results
+
+| Result | What it proves | Assumptions | Linear case recovery |
+
+|--------|---------------|-------------|---------------------|
+
+| **A.1** (Bounded Mismatch) | $R^\ast = \rho/\alpha$ | (A1), (A2'), bounded $\rho$ (GA-2) | $\alpha = \mathcal{T}$ gives $R^\ast = \rho/\mathcal{T}$ |
+
+| **A.1S** (Stochastic Bounded Mismatch, region-aware) | killed second-moment bound (i); RMS scale $R^\ast_S = \sigma_w\sqrt{n/(2\alpha)}$ and the mean-square condition $\kappa_R \gt n/2$ (ii); fixed-time tail $P(\lVert\delta(t)\rVert \gt R) \leq n\sigma_w^2/(2\alpha R^2)$ under global (A2'), composed region-aware tail under local (A2') (iii); finite-horizon path bound (iv); no infinite-horizon non-exit bound — pathwise containment is Model-D-only | (A1), (A2') on $\mathcal B_R$, (S), stochastic $w$ (GA-2S) | $\alpha = \mathcal{T}$ gives $R^\ast_S = \sigma_w\sqrt{n/(2\mathcal{T})}$ |
+
+| **A.1S-τ** (Time in the Certified Region) | $\mathbb E_x\tau_R \geq \Phi_{\alpha,n,\sigma_w,R}(\lVert x\rVert)$ and stochastic domination by the OU benchmark; equality under radial tightness; $P_0(\tau_R \leq L) \leq L/\Phi(0) \sim \tfrac{2\alpha L}{\Gamma(n/2)}\kappa_R^{n/2}e^{-\kappa_R}$; the mean-square condition certifies about one correction time at threshold; exponent capped at the Kalman gain for a fixed channel | (A1), (A2') on $\mathcal B_R$, (S), GA-2S (isotropic) | $F = \alpha\delta$ is the benchmark: exit time exactly $\Phi$ |
+
+| **Cor A.1S.1** (Disturbance-Model Containment Dichotomy) | $P(\tau_R\lt\infty)$ is exactly $\{0,1\}$ — $0$ under Model D (positive invariance), $1$ under Model S (a.s. exit of a non-degenerate diffusion); $\alpha$-invariant, correction strength cannot interpolate | (A1), (A2') on $\mathcal B_R$; Model D needs $\alpha R \gt \rho$ | Model D → Prop A.1 invariance at $\alpha=\mathcal{T}$; Model S → OU recurrence is the explicit instance — exact generally (any $F$ under A2'), not linear-scoped |
+
+| **A.2** (Stability Margin) | $\Delta\rho^\ast = \alpha R - \rho$ | Same as A.1 | $R \to \infty$ for linear (always stable if $\mathcal{T} \gt 0$) |
+
+### What Is Derived vs. What Is Chosen
+
+| Property | Source | Strength |
+
+|---|---|---|
+
+| Dynamics setup $\dot\delta = -F(\mathcal{T},\delta) + w(t)$ with $F$ as correction function and $w$ as disturbance | Definitional scope of the appendix; generalizes the linear hypothesis of #hyp-mismatch-dynamics | Definition |
+
+| (A1) $F(\mathcal{T},0) = 0$ | Qualitative property of any correction process by construction | Assumption (uncontroversial) |
+
+| (A2') Local sector condition $\delta^T F \geq \alpha\lVert\delta\rVert^2$ on $\mathcal B_R$ | Sector-condition framework (Lur'e 1957); sub-scope $\alpha$ (Kalman/conjugate Bayesian, exponential family in natural params, gradient descent on strongly convex losses, L2-regularized convex, linear with PD $KH$) derived via #der-gain-sector-bridge Prop B.3 under B1 directional fidelity (then $\alpha = \eta^\ast \cdot c_{\min}$); sub-scope $\beta$ (PID, rule-based, human judgment, severely misspecified, variational approximations, non-convex beyond basin, per-step SGD) requires independent verification | **Derived in sub-scope $\alpha$**; **Assumption in sub-scope $\beta$** (sub-scopes named explicitly in the Grounding paragraphs) |
+
+| (A3) Tempo-monotonicity of $\delta^T F$ | Qualitative requirement tying $\mathcal{T}$ to correction power | Assumption |
+
+| Quadratic Lyapunov candidate $V = \tfrac{1}{2}\lVert\delta\rVert^2$ | Canonical choice for norm-bounded stability in Euclidean state spaces (Khalil 2002 ch. 4) | Formulation choice |
+
+| **Prop A.1: ultimate bound $R^\ast = \rho/\alpha$** | $\dot V \leq -\lVert\delta\rVert(\alpha\lVert\delta\rVert - \rho)$ via A2' + Cauchy-Schwarz; standard Lyapunov ultimate-boundedness theorem (Khalil 2002 Thm 4.18) | **Proved (conditional on $R^\ast \lt R$)** |
+
+| Positive invariance of $\mathcal B_R$ under the persistence condition | Boundary-inward argument: at $\lVert\delta\rVert = R$, $\dot V \lt 0$ when $\alpha R \gt \rho$ | Proved |
+
+| **Lemma A.1N: threshold tightness** — $\alpha \gt \rho/R$ is necessary-and-sufficient for the *uniform class-level* containment guarantee; agent-level necessity holds exactly under a radially tight sector ($\bar\alpha = \alpha$, e.g. linear); false as an agent-level only-if for general $F$ | Extremal-member escape ($F = \alpha\delta$, $w = \rho\,\delta/\lVert\delta\rVert$) + the dip counterexample (floor attained at unreachable radii; mountain-pass barrier analysis) | **Proved** — necessity is class-level; no fixed-agent only-if is claimed anywhere |
+
+| Initial-condition scope (trajectory must start inside $\mathcal B_R$) | Direct consequence of A2' being local; trajectories outside are not covered | Derived (scope statement) |
+
+| Identification of structural-adaptation trigger ($\rho/\alpha \gt R$ forces exit from parametric regime) | Connects A.1's persistence threshold to #result-structural-adaptation-necessity's regime boundary | Derived |
+
+| **Prop A.2: adaptive reserve $\Delta\rho^\ast = \alpha R - \rho$** | Algebraic corollary of Prop A.1 under shock $\rho \to \rho + \Delta\rho$; requires $R$ fixed under shock | Proved (corollary of A.1) |
+
+| **Prop A.1S (region-aware): killed bound $\mathbb{E}[\lVert\delta(t)\rVert^2;\ \tau_R \gt t] \leq \lVert\delta(0)\rVert^2 e^{-2\alpha t} + \tfrac{n\sigma_w^2}{2\alpha}(1 - e^{-2\alpha t})$ + fixed-time tail (global A2', or composed with the exit time under local A2') + finite-horizon sup-bound (iv)** | Itô's formula on $e^{2\alpha t}V$ on $[0, t\wedge\tau_R]$ + A2' on $\mathcal B_R$; the exact stopped identity for (iv) (Khasminskii 2012 ch. 5; Khalil 2002 ch. 9) | **Proved**; a stopped-moment bound *with* the decay term is false under (ii) (the frozen mass does not decay); the infinite-horizon non-exit probability is structurally $1$ for additive Model S (no-go, Khasminskii ch. 3–4) — pathwise containment is Model-D-only |
+
+| **Prop A.1S-τ: $\mathbb E_x\tau_R \geq \Phi(\lVert x\rVert)$, stochastic domination, lifetime bound, tenure condition** | Radial drift of any sector corrector is pointwise at least the OU benchmark's; Itô–Dynkin on $\Phi\circ\lVert\cdot\rVert$ (mean) and a same-noise comparison of the radial processes (law); the benchmark's exit function is the classical Andronov–Vitt–Pontryagin solution (Kersting et al. 2023 Thm 4; Grebenkov 2015 eq. (75)) | **Proved** under (S), A1, A2'; equality under radial tightness; method in print (Ikeda–Watanabe 1977 comparison), statement new to the framework |
+
+| **Cor A.1S.1: containment dichotomy $P(\tau_R\lt\infty)\in\{0,1\}$, $\alpha$-invariant** | Prop A.1 positive invariance (Model D $= 0$) + a.s. finite exit of a non-degenerate diffusion from a bounded region for any $F$ under A2' (Model S $= 1$); Khasminskii 2012 ch. 3–4 | **Proved** — new exact result |
+
+| Stochastic steady-state RMS $R^\ast_S = \sigma_w\sqrt{n/(2\alpha)}$ | Steady state of the Grönwall bound (global A2') and the killed-moment scale (local A2'); scales as $1/\sqrt{\alpha}$ versus $1/\alpha$ deterministic, at fixed $\sigma_w$ | Derived |
+
+| Tail bound $P(\lVert\delta\rVert \gt R) \leq n\sigma_w^2/(2\alpha R^2)$ | Markov's inequality on the steady-state second moment, under global A2' | Proved (global A2'); composed form under local A2' |
+
+| Exit exponent capped at the Kalman gain, $\max_\alpha\kappa_R = R^2/(2\sigma_{\text{env}}\sigma_\nu)$ | Algebra on the Setup's $\sigma_w^2(\alpha)$; monotone decrease of $\Phi(0)$ past $K$ from $\Phi(0) = g(\kappa_R)/\alpha$ | Derived (linear correction, white channel noise) |
+
+| Linear-case recovery ($\alpha = \mathcal{T}$ reproduces #result-persistence-condition) | Substitution $F = \mathcal{T}\delta$ into A2' | Derived |
+
+| Adversarial-exponent scaling $b=2$ (Model D) vs $b=3/2$ (Model S) into #result-adversarial-exponent-regimes | Direct transfer of the $1/\alpha$ vs $1/\sqrt{\alpha}$ scalings at fixed $\rho$, $\sigma_w$ | Derived (transfer claim; scope condition on gain-injected noise stated at the receiving segment) |
+
+| Bounded-disturbance model (GA-2) vs stochastic-disturbance model (GA-2S) as distinct environmental regimes, not approximations to each other | Discussion-section positioning; neither regime handles heavy tails | Discussion-grade |
+
+| Global sector condition would give $\Delta\rho^\ast = \infty$ | Limit analysis of A.2 as $R \to \infty$; rejected as unrealistic for finite model classes | Derived (scope-limit observation) |
+
+The dividing line: the two persistence results (ultimate bound, adaptive reserve) and the stochastic mean-square bound are **proved** within standard Lyapunov / Itô-Lyapunov theory — the appendix's contribution is the application to AAT's correction-function object, not the mathematics. What is **chosen** is the quadratic Lyapunov candidate $V = \tfrac{1}{2}\lVert\delta\rVert^2$ (canonical for norm-bounded stability but not uniquely forced; see Path 3 note below) and the bounded-vs-stochastic disturbance partition (two structurally distinct empirical regimes rather than a hierarchy). The **sector condition itself (A2')** now carries its sub-scope explicitly: **derived in sub-scope $\alpha$** (optimal Bayesian / exponential-family / strongly-convex-gradient / L2-regularized / linear-PD corrections, via #der-gain-sector-bridge Prop B.3 under B1), **assumed in sub-scope $\beta$** (PID / rule-based / human-judgment / severely-misspecified / variational / non-convex-beyond-basin / per-step SGD). Prop A.1S is region-aware: under (A2') on the ball alone it bounds the killed moment, the finite-horizon path, and, through Prop A.1S-τ, the time to exit; the stationary fixed-time tail needs global (A2'). The *absence* of any infinite-horizon non-exit bound (a structural no-go for additive Model S) is itself a result — pathwise containment is a Model-D guarantee only — and Prop A.1S-τ is the positive statement that sits beside it: how long the certificate holds, and what margin buys.
+
+## Epistemic Status
+
+The setup and assumptions are *definitions* — they specify what we mean by "correction function" and "disturbance." Propositions A.1 and A.2 are *exact* — they follow from the assumptions via standard Lyapunov theory (Khalil 2002[^khalil2002], Chapters 4 and 9). The persistence threshold's necessity is *class-level* (Lemma A.1N, exact): $\alpha \gt \rho/R$ is necessary and sufficient for the uniform guarantee over the sector class, and agent-level necessary only under a radially tight sector; for a fixed general $F$ the only-if direction is false (the demonstrated dip counterexample), so every statement of the threshold in this corpus is sufficiency-plus-class-tightness, never a fixed-agent iff. Proposition A.1S is *exact* in its region-aware form: the killed second-moment bound (i), the mean-square persistence condition (ii), the fixed-time tail (iii) in its global and composed forms, and the finite-horizon sup-bound (iv) are each exact under their stated hypotheses (Itô–Lyapunov on $[0, t\wedge\tau_R]$, Khasminskii 2012[^khasminskii2012], ch. 5). A stopped-moment bound carrying the decay term, $\mathbb E\lVert\delta(t\wedge\tau_R)\rVert^2 \leq \lVert\delta(0)\rVert^2e^{-2\alpha t} + n\sigma_w^2/(2\alpha)$, is *false* under (ii), by three lines from Corollary A.1S.1 (the stopped moment tends to $R^2$); it is not carried. Proposition A.1S-τ is *exact* under (S), (A1), (A2') on the ball and isotropic GA-2S: parts (i)–(iv) are Itô, Dynkin, a same-noise radial comparison and elementary calculus on the benchmark's exit function; part (v) and the threshold values are the benchmark's integral evaluated numerically (two independent arbitrary-precision implementations agree to four digits), and the $\tfrac14\ln n$ drift is a computed trend, not a derived asymptotic. The published comparison theorem cited for (ii) (Ikeda–Watanabe 1977) was transcribed by the spike's literature scan and has not been read at the primary by the author or the verifier; the self-contained proof is the basis. The benchmark's closed form is classical and was checked term by term against the explorer's one-dimensional scale-function formula and against Monte Carlo in $n = 2, 3, 5$. **Corollary A.1S.1 is itself an exact result** — and a new one: the first-exit probability is *exactly* the two-point set $\{0,1\}$ (0 under bounded Model D, 1 under additive stochastic Model S), categorical and $\alpha$-invariant, the value selected by the disturbance model's support structure rather than by correction strength. Both halves are exact (Model-D: deterministic positive invariance, Prop A.1; Model-S: almost-sure finite exit of a non-degenerate diffusion from a bounded region, for any $F$ satisfying A2'). No implicit strengthening of A2' is required.
+
+The sector condition A2' carries its sub-scope $\alpha$ / $\beta$ status, the operator-family classification, and the "Why Euclidean A2' specifically" Lyapunov-matching argument at #form-sector-condition. The Lyapunov proofs above apply uniformly across both sub-scopes and across the weighted-norm variants — they operate downstream of A2' regardless of how it is established or which metric matches it.
+
+The assumptions themselves (sector condition on a region, bounded disturbance) are *empirical claims* about the qualitative behavior of real correction dynamics. The sector-condition framework originates with Lur'e (1957); the Lyapunov stability results are standard. The application to adaptive agents under the AAT framework is new but the mathematics is not.
+
+## Discussion
+
+**Key value.** The persistence threshold and adaptive reserve are no longer contingent on the linear hypothesis in #hyp-mismatch-dynamics. They hold for any correction dynamics satisfying the sector condition — a mild qualitative assumption that says "correction points inward with at least baseline efficiency $\alpha$." This is a significant epistemic upgrade: from *hypothesis-dependent* to *robust under qualitative assumptions*.
+
+**What the proofs do NOT illuminate.** (1) Quantitative steady-state values — Lyapunov gives *bounds*, not exact values; the linear analysis remains necessary for quantitative predictions. (2) Convergence rates — standard Lyapunov tells you stable/unstable, not how fast. (3) Optimal gain structure — #emp-update-gain comes from estimation theory, not stability theory. (4) Model sufficiency — the #form-information-bottleneck framework is information-theoretic, complementary to but independent of stability analysis.
+
+**Two disturbance models.** Proposition A.1 assumes bounded disturbance (GA-2: $\lVert w(t)\rVert \leq \rho$); Proposition A.1S assumes stochastic disturbance (GA-2S: $\mathbb{E}[\lVert w(t)\rVert^2] = \sigma_w^2$). These are not approximations to each other — they capture structurally different environments. Model D (bounded) covers persistent directional change: an adversary who maneuvers, an API that drifts, a climate that shifts. Model S (stochastic) covers unpredictable fluctuations around a stable mean: market noise, sensor noise, random perturbations. The choice of model is an empirical question for each domain; the theory provides both tools. Neither model handles heavy-tailed environmental shocks (financial crises, ecological catastrophes, strategic surprise) where $\lVert w(t)\rVert$ can exceed any finite bound with non-negligible probability. Extreme tail events are better understood as triggers for structural adaptation ( #result-structural-adaptation-necessity) rather than disturbances to be absorbed parametrically.
+
+**Kind of guarantee, not just rate.** The two models differ not only in how *tightly* the mismatch is held but in *what kind* of guarantee is available at all. Corollary A.1S.1 makes this exact and categorical: $P(\tau_R \lt \infty) = 0$ under Model D (positive invariance) versus $1$ under Model S (recurrent additive-noise diffusion), with no intermediate value reachable by any correction strength. What Model S controls instead is the *typical scale* (the $1/\sqrt\alpha$ RMS radius, ii), the *fixed-time tail* (iii), and the *time to exit* (Prop A.1S-τ: expected stay at least the benchmark's, exponential in $\kappa_R = \alpha R^2/\sigma_w^2$) — distributional and finite-time guarantees, not a sample-path-forever one. Increasing $\alpha$ at fixed $\sigma_w$ shrinks the typical scatter and lengthens the expected stay; it does not convert a distributional guarantee into a pathwise one, and on a fixed noisy channel it lengthens the stay only up to the Kalman gain. This is the deeper content of "these are not approximations to each other": additive stochastic forcing removes the *kind* of containment available, not merely its rate. It sharpens — rather than caveats — the hand-off into #result-structural-adaptation-necessity: in a genuinely stochastic environment, region-exit is not a measure-zero pathology to be assumed away but a *certain eventual event*, so loss of the parametric certificate is **generic, not exceptional**, for any sufficiently long-lived agent (whether it forces structural, model-class adaptation is the open question of #sketch-structural-adaptation-genericity).
+
+## Findings
+
+### The disturbance-model containment dichotomy: $P(\tau_R \lt \infty)$ is exactly $\{0,1\}$, $\alpha$-invariant
+
+**Result (exact, new).** Corollary A.1S.1: under the sector-condition correction dynamics, the persistence-region first-exit probability is *categorical* — exactly $0$ under bounded disturbance (Model D, positive invariance) and exactly $1$ under additive stochastic disturbance (Model S, almost-sure exit of a non-degenerate diffusion from a bounded region). The achievable value is the two-point set $\{0,1\}$; which point obtains is fixed by the disturbance model's support structure, **not** by correction strength $\alpha$.
+
+**Brief:** Against a *bounded* disturbance — a steady wind you can lean into — a sector-stable corrector holds the mismatch inside a fixed region *forever and with certainty*: once in, never out. Against *stochastic* disturbance — random gusts — no correction strength buys that. The agent stays near target on average and almost all of the time, but over an unbounded horizon some fluctuation eventually pushes it past any fixed boundary, with probability one. Stronger correction tightens the *typical* scatter (the RMS radius shrinks as $1/\sqrt\alpha$); it does not erect a wall. So moving from bounded to stochastic environments is not "the same guarantee with a weaker constant" — it is a change in the *kind* of guarantee available: pathwise-and-forever (Model D) versus distributional-and-fixed-time (Model S). Practical consequence: in any genuinely stochastic environment, leaving the parametric-correction region is not a rare pathology to assume away — it is a certain eventual event, so losing the parametric certificate is generic, not exceptional; whether that forces a change of model class, rather than a transient excursion, is an open question the framework names.
+
+**Impact:** Sharpens the Model-D/Model-S architecture and the hand-off into #result-structural-adaptation-necessity (loss of the parametric certificate is a generic eventual event for long-lived agents in stochastic environments, not an edge case; whether it forces model-class change is open at #sketch-structural-adaptation-genericity). The companion controls under Model S are the killed-moment scale (i), the fixed-time tail (iii: the Markov bound $P(\lVert\delta(t)\rVert \gt R) \leq n\sigma_w^2/(2\alpha R^2)$ under a global sector condition, the composed form under a local one), the finite-horizon sample-path bound (iv), and the exit-time comparison of Prop A.1S-τ; pathwise containment is categorically Model-D-only. The Model-S half is the load-bearing proof step demonstrated at length in `#deriv-stochastic-non-exit`, which also packages the reusable no-go signature (*unbounded scale function ⇒ no non-constant bounded harmonic function ⇒ no horizon-independent non-exit certificate*) that future stochastic-containment proposals can be settled against rather than re-attempted.
+
+**Novelty Claim:** *Synthesis* — an exact result built from classical components. The component facts are textbook: deterministic positive invariance under bounded disturbance (Khalil 2002 ch. 4) and almost-sure finite exit of a non-degenerate diffusion from a bounded region (Khasminskii 2012 ch. 3–4; the OU scale-function computation is the explicit instance). The new exact result is their synthesis into a *categorical, $\alpha$-invariant containment dichotomy* stated as a structural property of AAT's own Model-D/Model-S architecture: correction strength cannot interpolate $P(\tau_R \lt \infty)$ between the two disturbance regimes — the value is exactly $\{0,1\}$, selected by disturbance-support structure. This exact dichotomy is new to the framework; it sharpens the structural-adaptation hand-off ( #result-structural-adaptation-necessity). No novelty is claimed on the SDE mathematics — the novelty is the exact dichotomy as a framework theorem and its $\alpha$-invariance.
+
+**Related Work:**
+
+| ASF concern | Prior-art language | Relationship / Positioning |
+
+|---|---|---|
+
+| No infinite-horizon non-exit bound for additive-noise diffusions | Khasminskii 2012, *Stochastic Stability of Differential Equations* (2nd ed.) ch. 3–4 (recurrence; scale function; no bounded non-constant harmonic function) | *formal antecedent* — supplies the classical recurrence fact; AAT recognizes it as the structural reason Model S admits no pathwise-forever containment in contrast to Model D |
+
+| Fixed-time second-moment tail | Markov's inequality on the Itô-Lyapunov second moment, unstopped under a global sector condition, killed under a local one (Khasminskii 2012 ch. 5) | *standard machinery* — (iii) is Markov on the unstopped or killed moment; the AAT-specific content is the Model-D/S kind-of-guarantee contrast it forces, and the recognition that a stopped moment with decay is not available |
+
+| Pathwise positive invariance under bounded disturbance | Khalil 2002 ch. 4 (ultimate boundedness; boundary-inward invariance) | *formal antecedent* — Model D's pathwise-forever guarantee (Prop A.1) is the contrast term that makes the Model-S no-go a *kind* distinction, not a rate one |
+
+**Search Log:**
+
+- 2026-05-16 (*targeted, derivation-driven*): the question was internal — does Prop A.1S(iii)'s infinite-horizon non-exit bound hold? The strengthening attempt (Doob/Ville maximal inequality on the Itô-Lyapunov supermartingale) was worked in full and shown to fail structurally; the classical recurrence fact (Khasminskii ch. 3–4) is the obstruction and is well-known. No prior-art search beyond the standard SDE references was needed — no novelty is claimed on the mathematics, only on the framework-level kind-of-guarantee recognition. Reasoning trail recorded in the spike-routing cycle (CHANGELOG 2026-05-17).
+
+### Time in the certified region: the exit time of any sector corrector is bounded below by the Ornstein–Uhlenbeck benchmark, exponentially in $\kappa_R = \alpha R^2/\sigma_w^2$
+
+**Result (exact).** Proposition A.1S-τ: under (A1), (A2') on the ball, (S) and isotropic Model S, the first-exit time from $\mathcal B_R$ of any sector-satisfying corrector stochastically dominates that of the linear corrector $F = \alpha\delta$ from the same radius, whose mean is the explicit $\Phi_{\alpha,n,\sigma_w,R}$; equality holds exactly when the sector bound is radially tight. For small noise $\mathbb E\tau_R \approx \tfrac{\Gamma(n/2)}{2\alpha}\kappa_R^{-n/2}e^{\kappa_R}$. The finite-lifetime exit probability from the origin is at most $L/\Phi(0)$, exponentially small in $\kappa_R$ where canon's path bound (iv) is only linear. At the mean-square threshold $\kappa_R = n/2$ the benchmark leaves in about one correction time, so the condition $\alpha \gt n\sigma_w^2/(2R^2)$ certifies the scale of the mismatch and not the time for which the certificate holds. On a fixed noisy channel the exponent is capped at the Kalman gain.
+
+**Brief:** Random gusts will eventually push the agent out of its safe region no matter how hard it corrects (the dichotomy above), but *how soon* is a different question, and it has a clean answer. Any corrector that pulls inward at least as strongly as a simple spring of stiffness $\alpha$ stays inside at least as long as that spring would, and the spring's stay is known exactly: it grows like $e^{\kappa_R}$, where $\kappa_R$ is the height of the spring's energy well at the boundary measured in units of the noise's temperature. The familiar persistence condition says only that the agent's typical scatter fits inside the region; at exactly that condition the spring leaves after about one correction time. Staying for a lifetime $L$ with a small chance $\epsilon$ of early exit costs margin in $\kappa_R$ that grows only like $\log(L/\epsilon)$. And the margin cannot be bought by cranking the gain on the same observations: past the Kalman gain the correction injects more sensor noise than it removes lag, and the stay gets shorter. More or better observations buy time; more gain does not.
+
+**Impact:** Supplies the *when* beside Corollary A.1S.1's *whether*, and corrects what the Model S persistence condition certifies (scale, and about one correction time of guaranteed stay at threshold). Replaces the stopped-moment bound that the earlier Prop A.1S(i) carried, which is false under the condition it was meant for. Gives the front door its honest agent-level sentence: correction strength buys expected time in the region exponentially in $\kappa_R$ at fixed disturbance, up to the Kalman gain on a fixed channel, and never buys forever. The tenure-indexed condition (iv) is the Model S counterpart of the Model D threshold, with a lifetime in it. Downstream: #result-persistence-condition (the Model S window and the tenure reading), #result-sector-condition-stability, #sketch-structural-adaptation-genericity (the hand-off's timescale), #der-multi-timescale-stability (the single-level base for Model S stacking), and the adversarial results, where pushing an opponent's gain up can shorten its own stay.
+
+**Novelty Claim:** *Recognition / synthesis*, at the search depth of the spike's literature scan (web, arXiv, open-access PDFs; no books opened). The comparison *method* is in print: Ikeda & Watanabe 1977 is the comparison theorem, and the same radial-OU comparison step appears as a lemma for strongly convex Langevin diffusions (Altmeyer, arXiv:2208.13296), as a PDE theorem on manifolds for $C^1$ drift (Ouyang, arXiv:1310.3996), and in the mirror direction for bounded Borel drift (Li & Zhang, arXiv:1202.4131), all as located by the scan. The benchmark's closed form is classical (Kersting et al. 2023; Grebenkov 2015). What was not found is the *statement*: the exit-time domination as a theorem under a one-point sector condition alone, paired with the closed-form benchmark and drawing the threshold, lifetime and gain-cap consequences; those are new to the framework. The recognition that (A2') is exactly the radial-comparison hypothesis is the framework's.
+
+**Related Work:**
+
+| ASF concern | Prior-art language | Relationship / Positioning |
+
+|---|---|---|
+
+| Exit time of the isotropic OU process from a ball, every $n$ | Andronov–Vitt–Pontryagin boundary-value problem; Kersting, Orvieto, Proske & Lucchi 2023 Thm 4, eq. (17); Grebenkov 2015 eq. (75) (both read by the spike's literature scan, not by the author of this segment) | *formal antecedent* — the benchmark $\Phi$ of Lemma A.1S-τ.0 is this classical object; the derivation here is self-contained |
+
+| Comparison of scalar Itô processes with ordered drifts and a common diffusion coefficient | Ikeda & Watanabe 1977, *Osaka J. Math.* 14, Thm 1.1 and Remark 1.1 (transcribed by the scan; not read at the primary by author or verifier) | *standard machinery* — the published form of the radial comparison in (ii); the self-contained first-exceedance proof is the basis |
+
+| Small-noise exit asymptotics; quasi-potential | Arrhenius–Kramers; Freidlin–Wentzell large deviations (Berglund 2013 survey; Day 1983 for the asymptotically exponential exit law of the benchmark, bibliography verified by the scan, primary not read) | *located* — the small-noise form of Lemma A.1S-τ.0 is Kramers for the benchmark; FW identifies the exponent of a specific non-tight $F$ as its quasi-potential barrier, which lies above $\alpha R^2$; this proposition bounds without FW's Lipschitz hypothesis and does not locate the instance's exponent |
+
+| Heavy-tailed forcing | Imkeller & Pavlyukevich 2006 Thm 1.1; Högele & Pavlyukevich 2014 Thm 2.1 (read by the scan) | *scope boundary* — exit driven by one large jump, expected exit time polynomial in the noise scale with no trace of the restoring force; the exponential reserve does not exist there |
+
+**Search Log:**
+
+- 2026-10-30 (*targeted*, by a literature-scan agent for the exit-time spike; web, arXiv, open-access only): comparison theorems (Ikeda–Watanabe 1977; Geng & Markowsky 2025 on why signed-drift ordering does not order exit times, which the radial ordering avoids), the OU benchmark in print, FW and Day hypotheses, heavy-tail sources. Method found; statement not found. Not searched: MathSciNet, zbMATH, textbooks beyond those named.

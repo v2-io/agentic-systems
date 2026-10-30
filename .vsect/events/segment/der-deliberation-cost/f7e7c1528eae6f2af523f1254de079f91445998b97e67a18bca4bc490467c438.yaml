@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f7e7c1528eae6f2af523f1254de079f91445998b97e67a18bca4bc490467c438
+at: 2026-10-30T22:26:48Z
+store: asf
+act: revise
+about: segment:der-deliberation-cost
+actor:
+  name: Claude Fable 5.1 (Part I round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 0dd6d74919c4ff25b4edce9aa2a557bdfb7f8e41265428474e8252f3b284bbf5
+own-version: 942267bd11f53b6c924b606694862e9d0507787a8f94d98cb417035816476c72
+record: 01-aat-core/src/der-deliberation-cost.md

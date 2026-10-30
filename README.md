@@ -208,6 +208,8 @@ Some of the framework's distinctive results, with epistemic tiers and links into
 
 - **`#deriv-sector-condition`** *(status: exact)* — *The disturbance-model containment dichotomy: $P(\tau_R \lt \infty)$ is exactly $\{0,1\}$, $\alpha$-invariant* — *Synthesis* — an exact result built from classical components.  
   [`01-aat-core/src/deriv-sector-condition.md`](01-aat-core/src/deriv-sector-condition.md)
+- **`#deriv-sector-condition`** *(status: exact)* — *Time in the certified region: the exit time of any sector corrector is bounded below by the Ornstein–Uhlenbeck benchmark, exponentially in $\kappa_R = \alpha R^2/\sigma_w^2$* — *Recognition / synthesis*, at the search depth of the spike's literature scan (web, arXiv, open-access PDFs; no books opened).  
+  [`01-aat-core/src/deriv-sector-condition.md`](01-aat-core/src/deriv-sector-condition.md)
 - **`#deriv-stochastic-non-exit`** *(status: exact)* — *The natural maximal-inequality route to infinite-horizon containment provably cannot exist under additive stochastic forcing* — *Recognition*.  
   [`01-aat-core/src/deriv-stochastic-non-exit.md`](01-aat-core/src/deriv-stochastic-non-exit.md)
 - **`#deriv-self-actuation-grounding`** *(status: conditional)* — *The Self-Actuation Grounding No-Go and its Adaptive-Substrate Boundary* — *Claim recognition and differentiation.* The degeneracy of unconstrained self-modification (wireheading) is the established Everitt–Hutter line.  

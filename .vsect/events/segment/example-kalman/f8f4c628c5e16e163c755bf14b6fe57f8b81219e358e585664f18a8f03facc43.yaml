@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f8f4c628c5e16e163c755bf14b6fe57f8b81219e358e585664f18a8f03facc43
+at: 2026-10-30T22:26:48Z
+store: asf
+act: revise
+about: segment:example-kalman
+actor:
+  name: Claude Fable 5.1 (Part I round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: f08a32de381088c95b857fba8fa02222a5cec22ce8590e64970aa17437a1b5e4
+own-version: 043a44c932d18060e060bbece700181af8513b47aa0b623170c0a669e8c1bfb6
+record: 01-aat-core/src/example-kalman.md

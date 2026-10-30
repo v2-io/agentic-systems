@@ -96,13 +96,13 @@ When uncertainty is high ($P^-$ large), CIY term favors high mode. As uncertaint
 
 Suppose a planning pause of $\Delta\tau = 0.5 \text{ s}$, with measured $\rho_{\text{delib}} = 0.40 \;\text{surprise/s}$.
 
-Cost during pause: $0.20$ surprise units. If $\Vert\delta_{\text{post}}\Vert = 0.70$, deliberation is worthwhile when:
+Cost during pause: $0.20$ surprise units. If the estimation error the agent expects to face on resuming is $\Vert\bar\delta_{\text{post}}\Vert = 0.70$ (an estimate; the agent observes only the innovation, whose RMS exceeds it by the channel noise, and the gain improvement must move toward the Kalman gain for the benefit term to read as a reduction, #der-deliberation-cost), deliberation is worthwhile when:
 
 $$\Delta\eta^*(0.5)\cdot 0.70 \gt 0.20 \;\Longrightarrow\; \Delta\eta^*(0.5) \gt 0.286$$
 
 ### Structural Adaptation ( #result-structural-adaptation-necessity)
 
-Assume maneuvering regime change introduces sustained residual autocorrelation and mismatch floor. If estimated valid radius drops to $R = 0.08$ while $R^\ast = \rho/\alpha = 0.12$, parametric adaptation is no longer adequate ($R^\ast \gt R$), triggering model-class change (e.g., constant-velocity → constant-acceleration process model).
+Assume a maneuvering regime change introduces sustained residual autocorrelation and a mismatch floor. The disturbance here is stochastic, so the trigger is the Model S one: the persistence condition is satisfiable at some gain iff the optimal filter's own error fits inside the region ( #result-persistence-condition, the gain window's feasibility condition). If the estimated valid radius drops to $R = 0.08$ while the Kalman prior error is $P^- = 0.640$ (RMS $0.80$, from the Lyapunov Bounds section), $R^2 = 0.0064 \lt P^-$: no gain persists in mean square, parametric adaptation cannot be certified at any tuning, and model-class change is required (e.g., constant-velocity → constant-acceleration process model).
 
 ### Tempo + Persistence ( #def-adaptive-tempo, #result-persistence-condition)
 
@@ -112,13 +112,15 @@ $$\bar{\eta}^* = 0.7(0.810) + 0.3(0.321) = 0.663$$
 
 $$\mathcal{T} = \nu \bar{\eta}^* = 5 \cdot 0.663 = 3.315 \;\text{s}^{-1}$$
 
+These gains are the early-transient values at $P^- = 4.25$. In steady state the gains are smaller: under high mode throughout, $K_{ss} = 0.390$ (Lyapunov Bounds below) and $\mathcal T_{ss} = \nu K_{ss} = 1.95\ \text{s}^{-1}$ (the exact per-step contraction rate is $-\nu\ln(1 - K_{ss}) = 2.47\ \text{s}^{-1}$); under low mode throughout, $P^- = 1.630$ and $K_{ss} = 0.153$. Tempo is a state-dependent quantity here, highest while the filter is still uncertain.
+
 This system's disturbance is stochastic (a random walk observed through Gaussian noise), so the persistence question is the Model S one, worked in closed form below rather than through the Model D ratio $\rho/\mathcal{T}$.
 
 ### Lyapunov Bounds ( #result-sector-condition-stability, #der-gain-sector-bridge)
 
 *Mapping: exact (derived, not estimated).*
 
-By #der-gain-sector-bridge, the correction of the estimation error is exactly linear, $F(e) = Ke$, so the sector parameter is $\alpha = K$ per observation and $\alpha = \nu \bar K = \mathcal{T}$ in continuous time ($3.315\ \text{s}^{-1}$ for the mix above). The disturbance on $e$ has two parts: the random walk adds variance $q$ per step, and the update feeds in the share $K^2 r$ of the channel noise ( #deriv-sector-condition, Setup). Per step $e_{t+1} = (1 - K_t)e_t - K_t n_t + v_t$.
+By #der-gain-sector-bridge, the correction of the estimation error is exactly linear, $F(e) = Ke$, so the sector parameter is $\alpha = K$ per observation and $\alpha = \nu K = \mathcal{T}$ in continuous time at the same gain ($1.95\ \text{s}^{-1}$ at the high-mode steady state; the Tempo section's $3.315\ \text{s}^{-1}$ is the early-transient value). The disturbance on $e$ has two parts: the random walk adds variance $q$ per step, and the update feeds in the share $K^2 r$ of the channel noise ( #deriv-sector-condition, Setup). Per step $e_{t+1} = (1 - K_t)e_t - K_t n_t + v_t$.
 
 *Steady state, high mode throughout ($r = r_H = 1$).* The Riccati equation gives $P^- = 0.640$, $K_{ss} = 0.390$, $P = 0.390$:
 
@@ -136,7 +138,7 @@ At $K = 0.39$ (the Kalman gain) it is $0.640$. At $K = 0.81$, a gain held at its
 
 *Task adequacy.* With $\Vert\delta_{\text{critical}}\Vert = 1$ read on the estimation error, the agent is adequate ($0.62 \lt 1$ after update, $0.80$ before). Read on the innovation, the condition could never hold, since the innovation's RMS is at least $\sqrt{r_H} = 1$ whatever the gain. That is the distinction #def-mismatch-signal draws.
 
-*The region of validity.* With model-class capacity $R = 1.4$ (a domain parameter), the prior error is Gaussian with standard deviation $0.80$, so at any given time it lies outside $\mathcal B_R$ with probability $0.08$. Under Model S the region is a typical scale, not a wall ( #deriv-sector-condition, Prop A.1S and Corollary A.1S.1).
+*The region of validity.* With model-class capacity $R = 1.4$ (a domain parameter), the prior error is Gaussian with standard deviation $0.80$, so at any given time it lies outside $\mathcal B_R$ with probability $0.08$. Under Model S the region is a typical scale, not a wall ( #deriv-sector-condition, Prop A.1S and Corollary A.1S.1); the error will leave it, after an expected stay that grows exponentially in $\alpha R^2/\sigma_w^2$ (Prop A.1S-τ), and because this filter runs at the Kalman gain, that exponent is at its maximum for the channel.
 
 ## Mapping Quality Summary
 
@@ -149,7 +151,7 @@ At $K = 0.39$ (the Kalman gain) it is $0.640$. At $K = 0.81$, a gain held at its
 | Gain ($\eta^\ast = K_t$) | Exact | Kalman gain IS uncertainty ratio |
 | Tempo ($\mathcal{T} = \nu \bar{\eta}^\ast$) | Exact | Closed-form |
 | Persistence condition | Exact | Model S, closed form on the estimation error |
-| Sector parameter ($\alpha = \mathcal{T}$) | Exact | Derived from Kalman gain via #der-gain-sector-bridge |
+| Sector parameter ($\alpha = \nu K = \mathcal{T}$ at the same gain) | Exact | Derived from Kalman gain via #der-gain-sector-bridge; $1.95\ \text{s}^{-1}$ at the high-mode steady state |
 | Lyapunov bounds | Exact | Steady-state error variance from the Riccati equation; minimized at the Kalman gain |
 
 ## Epistemic Status

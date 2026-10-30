@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 963b6a45af75bd024674b43c62da5a73cb5a3dd7dae373b0209c2706f89db5b6
+at: 2026-10-30T22:26:48Z
+store: asf
+act: revise
+about: segment:def-mismatch-signal
+actor:
+  name: Claude Fable 5.1 (Part I round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: a19745b33797b4786addc49b037e54795156dee55364ff3edc922e1eed8d1da9
+own-version: 8865e87714b5b10e0430d0e7f860cb1949a2307149171ba204c6f5b3c2b3ee7b
+record: 01-aat-core/src/def-mismatch-signal.md

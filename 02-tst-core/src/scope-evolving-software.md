@@ -34,7 +34,7 @@ For any subsystem $s$ where $P(\text{change}(s)) \lt \varepsilon$:
 
 $$\text{time}_{\text{future}}(s) \to 0$$
 
-A subsystem with negligible change probability consumes zero future development time. In AAT terms: its environment change rate $\rho \to 0$, so from #result-persistence-condition, any nonzero tempo suffices — the subsystem is permanently adapted. No adaptive capacity needs to be allocated to it.
+A subsystem with negligible change probability consumes zero future development time. In AAT terms: its environment change rate $\rho_{\text{env}} \to 0$, so from #result-persistence-condition the lag term of the mismatch vanishes at any nonzero tempo — the subsystem is permanently adapted, up to the floor set by the noise in the developer's own observation of it (misreadings, which no tempo removes; the floor must lie inside tolerance). No adaptive capacity needs to be allocated to it.
 
 This justifies using stable, battle-tested libraries and frameworks: reimplementing `sort()` takes a subsystem at $\rho \approx 0$ and reintroduces it at finite $\rho$, consuming adaptive capacity that could be directed elsewhere.
 

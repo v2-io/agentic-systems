@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0cf60d2e7e19cbcec7b9c06558989733340098def314d915a8b8a2e7273f541c
+at: 2026-10-30T22:26:54Z
+store: asf
+act: revise
+about: segment:scope-evolving-software
+actor:
+  name: Claude Fable 5.1 (Part I round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: e63de68d439145af139a511f37dceecdca96d5b1baa820b72fece5b6514261a1
+own-version: 203c54085abb77b69eeaa45bb2dfc07c4776fa3455b5df9d178c8e3c2ea4ade6
+record: 02-tst-core/src/scope-evolving-software.md

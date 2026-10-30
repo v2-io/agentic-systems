@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: e022cb0dde0e1ff3f891ce2b7e46357fe77f903aa70b6f4f3493571a9100b1c5
+at: 2026-10-30T22:26:48Z
+store: asf
+act: revise
+about: segment:result-mismatch-decomposition
+actor:
+  name: Claude Fable 5.1 (Part I round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 90113d52fcb4a08ec79c7c1716458430bc30e519ae89c602af9eddcc489b8710
+own-version: d215ad7db1db571c2e719b31cc39f38f7863ce4b5302e74037a3b6098b2c7a5d
+record: 01-aat-core/src/result-mismatch-decomposition.md

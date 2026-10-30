@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: c90c6637c6ec8e8bda1f1a010f199da8bd18dcfac818e99ae65c7e4b3250b6b9
+at: 2026-10-30T22:26:47Z
+store: asf
+act: revise
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Fable 5.1 (Part I round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: be5b8f4d0cf6f932e9fd5a455e6a4a2413bf581b38680908606b2934ae50ea3b
+own-version: cc5bfe74d91b78853b5d9eef6ecd78f5020834cacde634dabab22456032c0f59
+record: 01-aat-core/src/deriv-sector-condition.md

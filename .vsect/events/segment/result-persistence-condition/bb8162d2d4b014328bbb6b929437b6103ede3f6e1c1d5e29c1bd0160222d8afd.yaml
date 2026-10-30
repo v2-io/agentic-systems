@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: bb8162d2d4b014328bbb6b929437b6103ede3f6e1c1d5e29c1bd0160222d8afd
+at: 2026-10-30T22:26:47Z
+store: asf
+act: revise
+about: segment:result-persistence-condition
+actor:
+  name: Claude Fable 5.1 (Part I round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 9a9b8dd449b6bf1a9d19a7ce9a032f7dc9d8d2437261302592a41fe45bea63c6
+own-version: 4f4d1304ebe779fea984495037b556dccc78e41a0e50445c689b3d11ff0ff3a6
+record: 01-aat-core/src/result-persistence-condition.md

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 68db0f48052ed4a48aa083ef3ae1599b06b28054c574e645ebbae7a28058cbea
+at: 2026-10-30T22:26:54Z
+store: asf
+act: revise
+about: segment:der-gain-sector-bridge
+actor:
+  name: Claude Fable 5.1 (Part I round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: ed274e6dec3ff688579f45f7b355827f1e845cd20ccced1e6188b97199adf635
+own-version: f5c8fdd9d718eff5c9192d3d1b399b0f97106f1f28a5619dae2f8010565b1539
+record: 01-aat-core/src/der-gain-sector-bridge.md

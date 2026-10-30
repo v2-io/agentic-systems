@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 5022b1735ea4d734a405fe6172ea0463c17a5a19c4b95fdf901fcc9400775ed6
+at: 2026-10-30T22:26:49Z
+store: asf
+act: revise
+about: segment:result-sector-condition-stability
+actor:
+  name: Claude Fable 5.1 (Part I round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 0cd95f849c0ee6f953ac1fbb5c590a47fe5581f9ad73ee7c5d1917f2df310b7e
+own-version: aa4f9e56f2df48826fccf234cdbcb3f09c3df640583ed1892ee21f7abc286447
+record: 01-aat-core/src/result-sector-condition-stability.md

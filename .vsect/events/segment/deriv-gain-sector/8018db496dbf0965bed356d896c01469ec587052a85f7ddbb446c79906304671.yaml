@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 8018db496dbf0965bed356d896c01469ec587052a85f7ddbb446c79906304671
+at: 2026-10-30T22:26:53Z
+store: asf
+act: revise
+about: segment:deriv-gain-sector
+actor:
+  name: Claude Fable 5.1 (Part I round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: e9afd4473502797c53d06ddb8a340a3adc8ddcae7dcd0ef3e5c86a7a64118d39
+own-version: f78514b9da4ac15f168eda5d3d520d6191462d6a86841afcb7c80487fe70ba94
+record: 01-aat-core/src/deriv-gain-sector.md

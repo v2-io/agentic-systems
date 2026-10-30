@@ -35,7 +35,7 @@ At $\sigma_{\text{obs}} = 1.0$ (10x the process noise), the fixed-gain adversari
 
 ## Epistemic Status
 
-*Empirical.* Max attainable: derived (the mechanism is analytically tractable via Riccati analysis of noisy AR(1) processes). The observation that noise degrades advantage is confirmed by simulation. The optimal gain's partial restoration is consistent with the uncertainty ratio principle ( #emp-update-gain: $\eta^\ast = U_M / (U_M + U_o)$). The quantitative degradation curve ($b$ vs. $\sigma_{\text{obs}}$) is empirical at these parameters; a general analytical expression would require solving the coupled noisy-AR(1) system.
+*Empirical.* Max attainable: derived (the mechanism is analytically tractable via Riccati analysis of noisy AR(1) processes). The single-agent half of that mechanism is now derived: for linear correction at rate $\alpha$ the steady-state estimation error is $n(\sigma_{\text{env}}^2 + \alpha^2\sigma_\nu^2)/(2\alpha)$, smallest at the Kalman gain, because each correction injects a share of the channel noise ( #deriv-sector-condition Setup; #result-persistence-condition "Two levers"). The adversarial exponent table here remains empirical. The observation that noise degrades advantage is confirmed by simulation. The optimal gain's partial restoration is consistent with the uncertainty ratio principle ( #emp-update-gain: $\eta^\ast = U_M / (U_M + U_o)$). The quantitative degradation curve ($b$ vs. $\sigma_{\text{obs}}$) is empirical at these parameters; a general analytical expression would require solving the coupled noisy-AR(1) system.
 
 ## Discussion
 

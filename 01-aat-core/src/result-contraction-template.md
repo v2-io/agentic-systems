@@ -56,15 +56,15 @@ $$\lambda R \sqrt{m_1/m_2} \gt \rho_\xi. \tag{CT-D-persist}$$
 
 *[Result (contraction-template-S), conditional on (M0), (CT1)–(CT3-S), Itô-compatible metric]*
 
-Under stochastic disturbance $d\xi = -F(\xi, t)\,dt + \sigma_\xi\,dW_t$ and a metric $M$ satisfying the Itô-correction bound $\tfrac{1}{2}\sigma_\xi^2\,\mathrm{tr}(M + \text{Hessian correction in drift direction}) \leq c_{\text{Itô}}\,m_2$ locally (automatic for state-independent $M$; bounded by $M$'s Hessian otherwise), the stopped process satisfies
+Under stochastic disturbance $d\xi = -F(\xi, t)\,dt + \sigma_\xi\,dW_t$ and a metric $M$ satisfying the Itô-correction bound $\tfrac{1}{2}\sigma_\xi^2\,\mathrm{tr}(M + \text{Hessian correction in drift direction}) \leq c_{\text{Itô}}\,m_2$ locally (automatic for state-independent $M$; bounded by $M$'s Hessian otherwise), the process, counted only while it is still inside the contraction region, satisfies
 
-$$\mathbb{E}[V(\xi(t \wedge \tau_R), t \wedge \tau_R)] \leq V(\xi(0), 0)\,e^{-2\lambda t} + \frac{n\sigma_\xi^2 c_{\text{Itô}} m_2}{2\lambda},$$
+$$\mathbb{E}\big[V(\xi(t), t);\ \tau_R \gt t\big] \leq V(\xi(0), 0)\,e^{-2\lambda t} + \frac{n\sigma_\xi^2 c_{\text{Itô}} m_2}{2\lambda}\big(1 - e^{-2\lambda t}\big),$$
 
-where $\tau_R = \inf\{t: \lVert\xi(t)\rVert \gt R\}$. Mean-square structural persistence requires
+where $\tau_R = \inf\{t: \lVert\xi(t)\rVert \gt R\}$. This is the killed moment, not the stopped one: the mass frozen on $\partial\mathcal B_R$ at exit does not contract, so a bound of this shape on $\mathbb E[V(\xi(t\wedge\tau_R))]$ is false whenever the stationary scale fits inside the region (#deriv-sector-condition Prop A.1S(i) and Corollary A.1S.1). When (CT2) holds globally the unstopped moment obeys the same bound and the stationary scale is $n\sigma_\xi^2 c_{\text{Itô}} m_2/(2\lambda)$. Mean-square structural persistence requires
 
 $$\lambda R^2 \gt \frac{n \sigma_\xi^2 c_{\text{Itô}}\, m_2^2}{2 m_1}. \tag{CT-S-persist}$$
 
-This is the natural extension of `#deriv-sector-condition`'s Prop A.1S region condition (Khasminskii 2012 ch. 5) to weighted metrics. When $M = I$ (Euclidean), $c_{\text{Itô}} = 1$, and the result reduces to Prop A.1S.
+This is the natural extension of `#deriv-sector-condition`'s Prop A.1S region condition (Khasminskii 2012 ch. 5) to weighted metrics. When $M = I$ (Euclidean), $c_{\text{Itô}} = 1$, and the result reduces to Prop A.1S. What (CT-S-persist) certifies is the killed scale while certified; the exit-time comparison of Prop A.1S-τ is Euclidean (a radial comparison) and is not transferred to weighted metrics here.
 
 ### Recovery of `#result-sector-persistence-template`
 
