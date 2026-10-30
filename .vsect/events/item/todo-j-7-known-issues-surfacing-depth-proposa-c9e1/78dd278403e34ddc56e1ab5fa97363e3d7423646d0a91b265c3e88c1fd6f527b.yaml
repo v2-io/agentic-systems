@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 78dd278403e34ddc56e1ab5fa97363e3d7423646d0a91b265c3e88c1fd6f527b
+at: 2026-10-30T21:30:29Z
+store: asf
+act: recheck
+about: item:todo-j-7-known-issues-surfacing-depth-proposa-c9e1
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'Overtaken by I.3 itself. bin/extract-known-issues still rolls PROPOSALS §B/§C/§D titles into the README''s Known Issues (doc/readme/src/_known-issues.md header), so the trimming question goes away when PROPOSALS folds into the ledger. One consequence I.3 should carry: when PROPOSALS is retired, extract-known-issues loses its source and must read the ledger (vsect open) instead, or the README section empties or goes stale silently.'
+outcome: superseded

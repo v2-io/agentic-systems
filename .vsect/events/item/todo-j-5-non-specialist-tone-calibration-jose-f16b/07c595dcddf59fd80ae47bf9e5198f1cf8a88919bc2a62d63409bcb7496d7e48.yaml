@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 07c595dcddf59fd80ae47bf9e5198f1cf8a88919bc2a62d63409bcb7496d7e48
+at: 2026-10-30T21:30:29Z
+store: asf
+act: recheck
+about: item:todo-j-5-non-specialist-tone-calibration-jose-f16b
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'The ''Joseph''s preference among audience tiers'' decision is no longer routed to Joseph under this effort, and which tier the prose reaches is now measured rather than chosen: H.3 measures comprehension before and after on the same chapters, with fresh readers. Alan''s read (naive-curious as the floor) is evidence for that measurement''s design, not a pending decision.'
+outcome: superseded

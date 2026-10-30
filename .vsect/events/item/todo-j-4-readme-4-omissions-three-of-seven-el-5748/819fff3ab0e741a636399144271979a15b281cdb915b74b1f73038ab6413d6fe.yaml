@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 819fff3ab0e741a636399144271979a15b281cdb915b74b1f73038ab6413d6fe
+at: 2026-10-30T21:30:29Z
+store: asf
+act: recheck
+about: item:todo-j-4-readme-4-omissions-three-of-seven-el-5748
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'A README-design re-decision from the 2026-04-26 cycle: which three epistemic-architecture elements (token-level identity commitment, derivation-audit tables, the A2'' sub-scope partition) belong at framing level. Under this effort, what appears on the front surfaces is decided by A.2 (INTRODUCTION, the Part fronts and the README partials agree on one headline list, each headline tracing to a body sentence of the same register). The three are candidates for that list, not owed edits.'
+outcome: superseded

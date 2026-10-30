@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 858bc142b546341778a9ac7dbc87c9d3d476579d3c896132d04b205ebeaeb16c
+at: 2026-10-30T21:30:30Z
+store: asf
+act: recheck
+about: item:todo-bin-lint-readme-deferred-j-15-slug-exist-832e
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'Half done by another mechanism, half by this effort. Link validation: bin/check-links (f6ffaa53, 2026-06-02) validates relative markdown links in live documents, README.md included (34 links, all resolve at HEAD). Slug existence: README.md names 57 #slug-style references; I checked each against 0*/src and all resolve (the one non-file is a heading anchor). The standing check that front surfaces cite live records is I.7 (front surfaces bound to the record), with I.3''s ''every target resolves''. A separate bin/lint-readme would duplicate both.'
+outcome: superseded

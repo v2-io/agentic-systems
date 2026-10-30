@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4c778e694ae202a28e96b126a093798e76e86ab625420d44e2a05e840cc3d98d
+at: 2026-10-30T21:30:30Z
+store: asf
+act: recheck
+about: item:todo-bin-lint-readme-j-15-from-msc-judgment-c-dd4b
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: The same J-15 bin/lint-readme item, listed twice in TODO.md (lines 120 and 244).
+of: item:todo-bin-lint-readme-deferred-j-15-slug-exist-832e
+outcome: duplicate

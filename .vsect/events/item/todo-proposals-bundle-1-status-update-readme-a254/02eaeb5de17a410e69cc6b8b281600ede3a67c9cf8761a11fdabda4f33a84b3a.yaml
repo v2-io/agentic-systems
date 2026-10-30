@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 02eaeb5de17a410e69cc6b8b281600ede3a67c9cf8761a11fdabda4f33a84b3a
+at: 2026-10-30T21:30:30Z
+store: asf
+act: recheck
+about: item:todo-proposals-bundle-1-status-update-readme-a254
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: A housekeeping line asking for a status update on PROPOSALS Bundle 1 (the framework-face reframe). Bundle 1 is imported as its own item from PROPOSALS.md; its status is that item's re-check, not a separate piece of work.
+of: item:proposals-bundle-1-framework-face-reframe-paper-wr-96c4
+outcome: duplicate
