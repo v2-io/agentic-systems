@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 25ad2a96f78ccf9405a5384b5c4ec493dd5e049d1c2c2638842f193f6cdf45f9
+at: 2026-10-30T21:56:57Z
+store: asf
+act: recheck
+about: item:todo-aggregator-s-cross-architecture-3-keep-v-2b9a
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 3171a169+dirty
+criterion: A source pointer illustrating the naming voters' keep-the-Greek posture (msc/naming/_archive/naming-aggregate-r2-review.md), now inside .archive/msc-naming-2026-08-22.tar.gz. No work owed.
+outcome: not-an-item

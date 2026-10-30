@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: d914bb99e0221122b3cb9e06d8bbf8ff8ad9601f3c8300c822b307da11cf98f2
+at: 2026-10-30T21:56:14Z
+store: asf
+act: recheck
+about: item:todo-chapter-closing-discussion-segments-new-5b2a
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 2f982425+dirty
+criterion: The impl- half of the same section. The 'remaining 7+ chapter-ends will follow this form' part landed (17 impl-* segments at HEAD across the volumes); the open part, align-slug's blindness to the impl sub-class, is the held item TODO.md:306.
+of: item:todo-chapter-opening-discussion-segments-curr-4a86
+outcome: duplicate

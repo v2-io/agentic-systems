@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 72cf8b826e53523693e92985fbf6bf509ffb242881250e30928e31eb44847233
+at: 2026-10-30T21:54:28Z
+store: asf
+act: recheck
+about: item:todo-tst-4-git-as-intervention-naming-discipl-936c
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 1ddc8c10+dirty
+criterion: 'Read #def-system-coupling:16-47 and #hyp-causal-discovery-from-git:17-45 at HEAD; grep 0*/src for cochange/causal_coupling. git log of the definition shows the scoping commit ae118ab5.'
+outcome: holds
+owner: F.1
+restated: 'The scoping landed; the naming did not. #def-system-coupling (since ae118ab5, 2026-05-12) states when the git estimate is a causal parameter and otherwise calls it ''a descriptive statistic of co-change'', and #hyp-causal-discovery-from-git separates P(change(B) | change(A)) from the interventional quantity. But the defined symbol is still coupling(m_i, m_j) = P(change(m_j) | change(m_i)), an associational quantity under a name readers take as causal; the rename to cochange(m_i, m_j), with ''causal coupling'' reserved for adjusted estimates, has not happened (grep: no ''cochange'' anywhere in canon). That is a terminology decision through bin/term, which is F.1''s lane.'

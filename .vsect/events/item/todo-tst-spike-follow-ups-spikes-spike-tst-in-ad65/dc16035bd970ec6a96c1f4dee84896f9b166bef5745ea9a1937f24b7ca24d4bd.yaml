@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: dc16035bd970ec6a96c1f4dee84896f9b166bef5745ea9a1937f24b7ca24d4bd
+at: 2026-10-30T21:54:11Z
+store: asf
+act: recheck
+about: item:todo-tst-spike-follow-ups-spikes-spike-tst-in-ad65
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 1ddc8c10+dirty
+criterion: ls 02-tst-core/src and grep of 02-tst-core for Naur, unmaintainability, per-session at HEAD (after the C.1/H.2 TST lane's merges 8d3c0026, c374794a, bd889c03, which did not touch these). Owner G.2 (stranded additions landed at honest tier or set aside with a reason).
+outcome: holds
+owner: G.2
+restated: 'None of the spike''s five released recommendations has landed (spikes/spike-tst-independent-derivations-2026-07-04.md §9): no turnover/persistence segments in 02-tst-core; no prior-alignment hypothesis segment; #hyp-software-unmaintainability-bifurcation remains a GAP row with no file (the most-attested unlanded TST claim, 20 of 21); no Naur 1985 citation anywhere in 02-tst-core; the per-session-sum and n-hat-infinity sentences are absent. One correction to the tracker''s wording: the spike''s own §9 says 21 correlated witnesses sharing a training distribution are ''a mild proxy for truth, useful for locating and prioritizing, never for settling''. So ''20/21 independently derived'' and ''T-05 corroborated 21/21'' overstate what the spike claims; each candidate needs its own derivation to enter canon above hypothesis tier.'

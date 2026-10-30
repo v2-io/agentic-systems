@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 98d0acbe76a06a51e8b931a99d570b79274be325625b152de831c6f5b68d5fc2
+at: 2026-10-30T21:54:28Z
+store: asf
+act: recheck
+about: item:todo-consider-promoting-alan-s-split-goal-sta-39ec
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 1ddc8c10+dirty
+criterion: 'A ''consider'' line: one practitioner (Alan, AI Dungeon) independently split goal state from model state in agent context notes. That is one anecdote of convergence with the (M_t, G_t) decomposition, not an instantiation the theory owes. Calling it ''field-grade convergent-independent confirmation'' overstates a single report; if cited, it belongs as anecdotal support in #def-strategy-dimension or a 03 example at that tier. Not in canon (grep ''context notes'', ''AI Dungeon'').'
+outcome: not-an-item

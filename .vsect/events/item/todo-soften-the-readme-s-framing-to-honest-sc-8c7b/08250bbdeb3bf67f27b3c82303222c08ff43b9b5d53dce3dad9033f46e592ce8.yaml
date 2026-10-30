@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 08250bbdeb3bf67f27b3c82303222c08ff43b9b5d53dce3dad9033f46e592ce8
+at: 2026-10-30T21:56:57Z
+store: asf
+act: recheck
+about: item:todo-soften-the-readme-s-framing-to-honest-sc-8c7b
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 3171a169+dirty
+criterion: Read _overview-concepts.md:7-17 and the explorer's §2 entry at HEAD; grep of 0*/src finds the Greek terms used as labels (aporia in 16 segments, prolepsis in 3), and none defines a quantity the English term would not.
+outcome: holds
+owner: A.2
+restated: 'README''s Overview (doc/readme/src/_overview-concepts.md:7) says the five cycle phases are ''named from Greek philosophical vocabulary because each names a distinction the formalism makes that English alternatives flatten''. The terminology explorer (owner-review/explorers/terminology.md:90) found they shadow prediction / observation / prediction error / update / action and hide no concept, and the README''s own table pairs each with its English sense. Unless a segment exhibits a formal distinction the English loses, the sentence claims more than the bodies support. Narrow it to what is true: the names are signposts, chosen for their connotation.'

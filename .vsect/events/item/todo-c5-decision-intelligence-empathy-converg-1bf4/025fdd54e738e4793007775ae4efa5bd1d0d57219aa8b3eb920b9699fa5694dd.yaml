@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 025fdd54e738e4793007775ae4efa5bd1d0d57219aa8b3eb920b9699fa5694dd
+at: 2026-10-30T21:54:11Z
+store: asf
+act: recheck
+about: item:todo-c5-decision-intelligence-empathy-converg-1bf4
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 1ddc8c10+dirty
+criterion: 'grep of 0*/src and OUTLINEs for intelligence-empathy / empathy convergence finds only the routing doc; #impl-primitive-logogenic:30 has forced empathy (statelessness as ToM trainer) but not the convergence claim.'
+outcome: holds
+owner: G.0
+restated: 'Not a decision for Joseph under this effort; it is G.0''s question about where argued, non-derived claims live, with this as a test case. The routing record (msc/era-artifact-asf-contributions-2026-07-04.md, Addendum 2) carves two legs: (a) a structural leg (comprehension of another mind at depth includes modeling its valenced states, capability-monotone along the asymmetry axis), discussion-grade, attachable near #def-cognitive-fusion and #obs-backward-inference-empathy; (b) a normative-dynamic leg contesting Bostrom''s orthogonality thesis. Leg (a) can land in 03 at discussion grade once G.0 rules; leg (b) is the kind of argued claim G.0 may route to logos. Nothing has landed: no segment mentions intelligence-empathy convergence.'

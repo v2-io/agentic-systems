@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: e20f6f6ee91e52703863f5c4bbeeb04c74f65052e79b475af8dcafc80c4730ad
+at: 2026-10-30T21:56:57Z
+store: asf
+act: recheck
+about: item:todo-tighten-segment-prose-so-the-greek-disti-c2de
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 3171a169+dirty
+criterion: 'Overtaken by a later judgment that runs the other way. The owner review''s terminology explorer (msc/inside-out-2026-10/owner-review/explorers/terminology.md:90, under F.1) found the five Greek phases shadow prediction / observation / prediction error / update / action without hiding a concept. Its recommendation: keep them as section-level signposts and a glossary, out of operative sentences (#der-deliberation-cost:14 ''pausing praxis to improve upcoming epistrophe'' as the example). This line asked to make the Greek canonical in operative prose. F.1 lands that verdict, and the explorer''s ''taste call I would put to Joseph'' is, under this effort''s standing, F.1''s to resolve on the merits.'
+outcome: superseded

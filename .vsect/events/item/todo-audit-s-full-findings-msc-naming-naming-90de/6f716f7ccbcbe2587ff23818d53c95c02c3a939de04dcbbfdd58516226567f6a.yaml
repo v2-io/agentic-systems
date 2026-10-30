@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 6f716f7ccbcbe2587ff23818d53c95c02c3a939de04dcbbfdd58516226567f6a
+at: 2026-10-30T21:56:57Z
+store: asf
+act: recheck
+about: item:todo-audit-s-full-findings-msc-naming-naming-90de
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 3171a169+dirty
+criterion: 'A source pointer under the Greek-vocabulary section, not work: it names where audit 471203''s naming findings were. msc/naming/ no longer exists; it was packed into .archive/msc-naming-2026-08-22.tar.gz (67733350).'
+outcome: not-an-item

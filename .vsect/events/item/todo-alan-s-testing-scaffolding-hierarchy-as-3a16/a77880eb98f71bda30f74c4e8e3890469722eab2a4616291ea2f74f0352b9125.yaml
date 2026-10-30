@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: a77880eb98f71bda30f74c4e8e3890469722eab2a4616291ea2f74f0352b9125
+at: 2026-10-30T21:54:28Z
+store: asf
+act: recheck
+about: item:todo-alan-s-testing-scaffolding-hierarchy-as-3a16
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 1ddc8c10+dirty
+criterion: 'An outside reader''s practitioner ordering (Types > Checks > Automated Tests > Manual Tests > Agent Tests > Context Docs) offered as a possible anchor for #obs-software-epistemic-properties P3 and the README''s cross-domain table. It carries no claim the theory owes. If used, it would enter as an instance at whatever tier a sourced practitioner ordering supports. Not in canon (grep), and nobody owes it.'
+outcome: not-an-item

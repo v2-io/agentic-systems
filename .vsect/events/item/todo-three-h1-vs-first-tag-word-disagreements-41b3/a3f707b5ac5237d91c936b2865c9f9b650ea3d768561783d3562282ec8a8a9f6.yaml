@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: a3f707b5ac5237d91c936b2865c9f9b650ea3d768561783d3562282ec8a8a9f6
+at: 2026-10-30T21:55:13Z
+store: asf
+act: recheck
+about: item:todo-three-h1-vs-first-tag-word-disagreements-41b3
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e1ce334+dirty
+criterion: 'The three still read as listed (#form-objective-functional and #form-composition-closure: H1 ''Formulation:'', first eq-tag *[Definition ...]*; #scope-observation-ambiguity-modulation: H1 ''Scope:'', first tag *[Definition ...]*). But the H1 word follows the segment''s type:, and the eq-tag labels one equation''s epistemic strength (format.sop.md:45). A formulation that defines its central quantity before stating its admissibility conditions is not a disagreement. Whether a segment''s type is right is B.1''s register question (B.1''s Part II record for form-objective-functional is the template) and B.2''s retyping, not a word-match.'
+outcome: stale

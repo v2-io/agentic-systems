@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 38bb50ec93e2029108c76ed0e569a1d69b59fd380ae85ecd2b85a3201b773b62
+at: 2026-10-30T21:55:13Z
+store: asf
+act: recheck
+about: item:todo-135-segments-still-embed-pre-rename-slug-323d
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e1ce334+dirty
+criterion: 'The premise conflates an equation''s name with a segment slug. Eq-tags are *[Type (name, from ...)]* (format.sop.md:52); the parenthesized part names the equation, not the segment, so a tag reading *[Derived (bias-bound)]* after the segment became deriv-observation-ambiguity-bias-bound is not a stale reference. Measured at HEAD: only 2 tags carry a role-prefixed label that looks like a slug and names no existing segment: #deriv-critical-mass-composition''s ''scope-gate-from-composition-scope-condition'' and #result-unity-closure-mapping''s ''obs-closure-linear-...''. Both read as equation names. The ~135 count dates from 0fc5fae6 (2026-04-24) and does not describe HEAD.'
+outcome: stale

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 42a58655cbef25b41f524b880f7c073cadb1b183e9b82a78b4c6b43612e51c65
+at: 2026-10-30T21:56:58Z
+store: asf
+act: recheck
+about: item:todo-asf-umbrella-naming-round-1-misread-asf-9321
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 3171a169+dirty
+criterion: 'The reframe is the project''s present naming: README.md''s title is ''Agentic Systems Framework (ASF)'' (from eec4af64, 2026-04-25, two days after this line, 09ace171), and the always-loaded orientation describes ASF as the framework with four parts, AAT the mathematical core. Nothing in canon treats ASF as naming debt. The line''s ''AAT = Part I, TST = Part II'' is out of date (the parts are now volumes 01 to 04), which only confirms the umbrella reading took hold.'
+outcome: landed
