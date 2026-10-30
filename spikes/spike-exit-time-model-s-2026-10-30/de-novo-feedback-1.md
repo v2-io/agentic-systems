@@ -28,7 +28,7 @@ $$\frac{d}{dt}\mathbb{E}[V(\delta_{t\wedge\tau_R})] = \mathbb{E}\big[\mathbf 1_{
 
 and the decay term carries the indicator: the mass frozen on the sphere does not decay. Replacing $\mathbb{E}[V\mathbf 1_{\{t\lt\tau\}}]$ by $\mathbb{E}[V(\delta_{t\wedge\tau})]$ is the step that is not available, and without it Grönwall does not close. Localization makes A2′ applicable; it does not make the frozen mass contract.
 
-**Corroboration.** OU with $n = 2$, $\alpha = 2$, $\sigma_w = R = 1$ ($\kappa = 2 \gt n/2$, so (ii) holds), $\delta_0 = 0$, 20000 Euler–Maruyama paths at $dt = 2\cdot10^{-4}$, paths frozen at the sphere on exit:
+**Corroboration.** OU with $n = 2$, $\alpha = 2$, $\sigma_w = R = 1$ ($\kappa = 2 \gt n/2$, so (ii) holds), $\delta_0 = 0$, 20000 Euler–Maruyama paths at $dt = 2\cdot10^{-4}$, paths frozen at the sphere on exit. The "canon (i) bound" column is the derivation's Grönwall form $\tfrac{n\sigma_w^2}{2\alpha}(1 - e^{-2\alpha t})$ (`:191`, scaled to $\lVert\delta\rVert^2$). The displayed statement at `:155` is the looser constant $n\sigma_w^2/(2\alpha) = 0.5$ here, and the MC column exceeds it from $t \approx 0.5$ on as well.
 
 | $t$ | $\mathbb{E}\lVert\delta_{t\wedge\tau}\rVert^2$ (MC) | canon (i) bound | $P(\tau_R \leq t)$ | $\mathbb{E}[\lVert\delta_t\rVert^2;\,\tau_R \gt t]$ |
 |---|---|---|---|---|
@@ -185,6 +185,12 @@ Every value is below 1, as required, and it approaches 1 as $\kappa$ grows. The 
    - `debrief.md` lists `02-literature.md` as "scan, in progress".
    - `checks-output.txt` and `checks-output-partial.txt` are byte-identical (`diff` empty); the README and derivation header name different ones.
 8. **Adjacent canon sentence.** `#deriv-stochastic-non-exit` :44: "that condition places the RMS radius … well inside $\mathcal B_R$, so $V \ll \tfrac{n\sigma_w^2}{4\alpha}$ typically." The condition is only $R^\ast_S \lt R$, not "well inside". And $\tfrac{n\sigma_w^2}{4\alpha}$ is exactly the OU stationary mean of $V$, so $V$ is typically comparable to it, not much smaller: $P(V \lt \tfrac{n\sigma_w^2}{4\alpha}) = P(\chi^2_n \lt n) \in (0.5, 0.69)$. The no-go needs only positive probability of that event, so the demonstration stands and the sentence overstates.
+
+9. **Canon moved under the spike during this pass, and the move bounds the tenure reading.** Commit `481943e4` (C.1 A7/A10, 15:18 today, after the spike's last commit) landed in `#deriv-sector-condition` that, for linear correction, $\sigma_w^2 = \sigma_{\text{env}}^2 + \alpha^2\sigma_\nu^2$: part of the disturbance is the channel noise the correction itself injects. The spike's theorems are untouched, since they hold at any fixed $\sigma_w$. The AAT reading changes.
+   - Under that canon, $\kappa = \alpha R^2/(\sigma_{\text{env}}^2 + \alpha^2\sigma_\nu^2)$ is not increasing in $\alpha$. It peaks at the Kalman–Bucy gain $\alpha = \sigma_{\text{env}}/\sigma_\nu$ at $\kappa_{\max} = R^2/(2\sigma_{\text{env}}\sigma_\nu)$ and falls beyond it.
+   - So "correction strength buys expected tenure exponentially in $\alpha R^2/\sigma_w^2$" (debrief, the plan's `INTRODUCTION.md:27` clause, Corollary 5's "price" reading) is false for the agents C.1 now describes. Correction buys tenure up to the Kalman gain, the reserve is capped at roughly $e^{\kappa_{\max}}$, and over-correcting spends it.
+   - That is a sharper and more interesting front-door sentence than the one proposed, and it is exactly the lag/noise trade-off C.1 landed, now at the level of exit times.
+   - Recommendation: the integrator settles the $\sigma_w$ convention (§6 item 3) *and* its $\alpha$-dependence before any $\kappa$-in-$\alpha$ sentence reaches canon, and states Corollaries 4–5 with $\sigma_w$ as the total disturbance intensity at the operating gain. I have not derived anything further here. The cap is algebra on canon's new formula plus Lemma 1′; the rigorous version would use §2's bound.
 
 ## 7. Scope of this pass — the finding list, not its silence, is the content
 
