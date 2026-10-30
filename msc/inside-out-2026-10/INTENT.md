@@ -77,7 +77,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 |---|---|---|
 | Lead coordinator (Opus 5.5, session "asf-cleanup") | I, plus coordination | `INTENT.md`, `HANDOFF.md`, `system/` |
 | System review (Fable) and its subagents | I: sets I's real KRs | `system-review/` |
-| A.1 integrator (Opus): the typed epistemic target | A.1 | `#scope-adaptive-system`, the θ registry, and its dependents |
+| A.1 integrator (Opus): the typed epistemic target | A.1 | `#scope-adaptive-system`, the $\theta$ registry, and its dependents |
 | C.1 integrator (Opus): the polytree theorem | C.1 (integrator-items A1, A9) | `#def-strategy-dag`, `#deriv-graph-structure-uniqueness`, `example-L1` |
 
 These are finished and on the line through the lead:
