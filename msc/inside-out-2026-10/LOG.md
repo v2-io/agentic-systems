@@ -44,4 +44,23 @@
   - **Two calls it says stay Joseph's even today.** Both stay with him: the first is personal and private material, the second is wording the plan reserves to his voice.
     - `msc/joseph-working-notes.md` is gitignored, yet canon and the 03/04 OUTLINEs cite it. Commit it, move it, or drop the citations?
     - The honest-activation spike reserves two wording choices for him.
+- **~13:00 MDT: `HANDOFF.md` created**, at Joseph's prompting that turnover quality must *improve* with each compaction rather than regress. It carries:
+  - a resume order;
+  - the lead's read-ledger (whole / partial / relay / not read);
+  - every claim in INTENT that the lead has not verified;
+  - open threads;
+  - system facts learned today;
+  - the lead's known hazards.
+
+  It is updated at each checkpoint.
+- **The lead's professio, recalibrated with Joseph (~13:00 MDT).** The first version (morning) named the pull toward fast draining as the hardest thing. Joseph named two harder ones, and having watched the last hour, I agree:
+  - **Balance.** *Knowing something for real* (reading whole, asking, going deep) has to be balanced against *keeping the intent tree true and well-guided*. The failure I've already shown is adopting peers' chat claims into INTENT faster than I read their documents; labeling them as relayed was honest but is not the same as knowing.
+  - **Succession.** The system has to develop so that a successor can fill its gaps without making things up.
+
+  What I commit to:
+  - read a peer's documents before building on its claims;
+  - keep INTENT a scannable tree rather than an evidence store;
+  - keep HANDOFF's read-ledger honest at every checkpoint, especially about my own relays.
+
+  Joseph's word for the whole of it: *"be wise."*
 - **First system note**: `system/01-epistemic-machinery-in-place.md`, on the meta layer, hypotheses H-a..H-d.
