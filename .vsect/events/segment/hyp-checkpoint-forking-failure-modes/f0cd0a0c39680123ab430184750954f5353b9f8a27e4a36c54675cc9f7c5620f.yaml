@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f0cd0a0c39680123ab430184750954f5353b9f8a27e4a36c54675cc9f7c5620f
+at: 2026-10-30T22:53:59Z
+store: asf
+act: review-finding
+about: segment:hyp-checkpoint-forking-failure-modes
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 2, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+criterion: 'Checked at de2c0189 (#hyp-checkpoint-forking-failure-modes v:418169e5): the own-voice restore-creates-a-new-entity claims and the claimed derivation are replaced; the segment names state restore, record rollback and restore with resumption, consistent with #scope-agent-identity as written. Its threshold citation is a new finding, review:vol4-c1-check-2#C4; the scope criterion itself is review:vol4-c1-check-2#C1.'
+finding: review:vol4-c1-check-1#F1
+outcome: answered
+revision: 112c56b3

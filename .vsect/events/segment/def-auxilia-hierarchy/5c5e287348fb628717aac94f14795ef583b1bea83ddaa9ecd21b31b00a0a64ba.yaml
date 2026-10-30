@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 5c5e287348fb628717aac94f14795ef583b1bea83ddaa9ecd21b31b00a0a64ba
+at: 2026-10-30T22:53:59Z
+store: asf
+act: review-finding
+about: segment:def-auxilia-hierarchy
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 2, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+criterion: 'Checked at de2c0189 (#def-auxilia-hierarchy v:6fcc89af): R0 is no longer claimed from alignment alone; it is derived conditionally from #der-multi-timescale-stability with alignment entering through condition (a), and the matched-Tier qualifier is respected. The instantiation (epsilon taken against the fastest, not the slowest, Auxilia) is a new finding, review:vol4-c1-check-2#C7.'
+finding: review:vol4-c1-check-1#C1/finding
+outcome: answered
+revision: 337970ab

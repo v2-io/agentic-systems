@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ea93408ebcdc0b0a17a649b64560e120eee5b4befff11bbbbf134d1bad76b9c0
+at: 2026-10-30T22:53:59Z
+store: asf
+act: review-finding
+about: segment:def-imperium-arbitrium-split
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 2, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+criterion: 'Checked at de2c0189 (#def-imperium-arbitrium-split): the closing sentence no longer gets R0 from alignment or Class 1 from shared identity; it defers to #def-auxilia-hierarchy conditions and requires Class 1 (wrapped) auxilia. Those conditions carry review:vol4-c1-check-2#C6 and #C7.'
+finding: review:vol4-c1-check-1#C9/finding
+outcome: answered
+revision: 337970ab

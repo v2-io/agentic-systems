@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 89c657d3f24a81f8536e3d887f3f533ea73541eeba85b7bd4a9fbf390cc3fd9e
+at: 2026-10-30T22:53:59Z
+store: asf
+act: review-finding
+about: segment:hyp-substrate-transfer-asymmetry
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 2, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+criterion: 'Checked at de2c0189 (#hyp-substrate-transfer-asymmetry v:7f43d356): the attainment misreading is gone, the step is restated on the identity-IB frontier with the direction-indexed law and role-dependent budgets, and the headline is now located-but-not-signed. The replacement carries new gaps (symmetric S_id ceiling needs condition 2; relevance law depends on phi), opened as review:vol4-c1-check-2#C8 and #F1.'
+finding: review:vol4-c1-check-1#C7/finding
+outcome: answered
+revision: c95c621c

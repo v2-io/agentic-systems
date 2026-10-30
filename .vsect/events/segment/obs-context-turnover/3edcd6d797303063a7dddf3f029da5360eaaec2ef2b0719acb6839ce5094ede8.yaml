@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 3edcd6d797303063a7dddf3f029da5360eaaec2ef2b0719acb6839ce5094ede8
+at: 2026-10-30T22:53:58Z
+store: asf
+act: review-finding
+about: segment:obs-context-turnover
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 2, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+criterion: 'Checked at de2c0189 (#obs-context-turnover v:7c0ff7a9): the H(M^-)-normalized bound is replaced by the exact drop from the definition of S and a data-processing lower bound; re-derived in review:vol4-c1-check-2#C2; the (Y,N) counterexample now gives bound 0 and drop 0.'
+finding: review:vol4-c1-check-1#C5/finding
+outcome: answered
+revision: 112c56b3

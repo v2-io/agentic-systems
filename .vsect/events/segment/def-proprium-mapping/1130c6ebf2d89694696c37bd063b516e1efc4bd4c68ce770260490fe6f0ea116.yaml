@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 1130c6ebf2d89694696c37bd063b516e1efc4bd4c68ce770260490fe6f0ea116
+at: 2026-10-30T22:53:58Z
+store: asf
+act: review-finding
+about: segment:def-proprium-mapping
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 2, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+criterion: 'Checked at de2c0189 (#def-proprium-mapping v:81588034, terminology/entries/proprium-mapping.md): "terminal values" gone; AXIOMATA split into slowest O_t layer and M_t self-description/seeds, matching ontology v2 AXIOMATA sovereign authority (subscript 12); CHRONICA a correspondence, not an identity; terminology entry fixed at source. New gaps (MEMORATA/INTERPRES omitted; death-aptness home) are review:vol4-c1-check-2#C5.'
+finding: review:vol4-c1-check-1#C3/finding
+outcome: answered
+revision: 337970ab

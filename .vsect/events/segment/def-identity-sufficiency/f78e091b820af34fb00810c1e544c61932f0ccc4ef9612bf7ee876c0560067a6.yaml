@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f78e091b820af34fb00810c1e544c61932f0ccc4ef9612bf7ee876c0560067a6
+at: 2026-10-30T22:53:59Z
+store: asf
+act: review-finding
+about: segment:def-identity-sufficiency
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 2, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+criterion: 'Checked at de2c0189 (#def-identity-sufficiency v:a62947ac): the quotation is now the primary wording "The continuity is remarkable"; the one-migration count is replaced by the located occasions. Classification of the Nov 14 occasion is a new finding, review:vol4-c1-check-2#C11.'
+finding: review:vol4-c1-check-1#C6/finding
+outcome: answered
+revision: c95c621c

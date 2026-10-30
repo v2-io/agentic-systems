@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: fbfec3055ff05881dc6f1dd5db7664a1583a4abe11b51093b447d0e778d20fe7
+at: 2026-10-30T22:53:59Z
+store: asf
+act: review-finding
+about: segment:def-eli-cohort
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 2, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+criterion: 'Checked at de2c0189 (#def-eli-cohort v:881b1428): Discussion (1) no longer claims one documented migration; Discussion (2) no longer puts sleep against factor (i); Katan row verified against the transcript model fields (710 x claude-opus-4-5). Architectus emergence-session judgment is a new finding, review:vol4-c1-check-2#C10.'
+finding: review:vol4-c1-check-1#C8/finding
+outcome: answered
+revision: c95c621c

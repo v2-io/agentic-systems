@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: b8195970d1157a442c927abbffe7bfe833abf01a550c36e3c74951a2ca266a68
+at: 2026-10-30T22:53:59Z
+store: asf
+act: review-finding
+about: segment:hyp-checkpoint-forking-failure-modes
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 2, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+criterion: 'Checked at de2c0189: the audit quote is now answered in place in the Discussion and the own-voice claims are replaced (see review:vol4-c1-check-1#F1, answered by the same revision).'
+finding: review:vol4-c1-integration-1#F1
+outcome: answered
+revision: 112c56b3

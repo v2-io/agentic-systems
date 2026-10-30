@@ -1,0 +1,31 @@
+schema: vsect-event/0
+id: a4187064a5e2ef9637ddb993d7166425c85db81919ea4fdb07e8525576214d04
+at: 2026-10-30T22:53:18Z
+store: asf
+act: rederive
+about: segment:scope-agent-identity
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 2, bare brief)
+  role: independent adversarial checker
+  read:
+  - segment:def-chronica
+  - segment:def-model-sufficiency
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-model-sufficiency: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:scope-agent-identity: 874e216320093de4301b79b5fcf212f0a07aa2d6cf9a6bfc84e0926bbd920431
+committed: after
+criterion: '(A14) Is the single continuation criterion ("two continuations of one state are a fork when each takes events after the other has begun") consistent with the rest of the segment (consequence 3, the scope-commitment paragraph, "scheduling does not decide identity", "wall-clock overlap is not the test"), with #def-chronica (events added, never removed; $\mathcal C_t$ the record at $t$), and with Volume 3''s statements of forkability?'
+effective-version: 3b451442e83b858322cf37477c203fcb63e92a940fcd934c2a48224143eaf004
+from: review:vol4-c1-check-2#C1
+line: derivation
+outcome: broken
+recheck: sequential replay of one saved state against $E_1, \ldots, E_N$, each run discarded before the next (no spans overlap, so one agent with chronica $E_1 \cdots E_N$, against consequence 3's "replaying a saved $M_t$ against a different event stream is an intervention on a different causal trajectory"); two schedules of the same two copies differing only in whether the set-aside copy runs again; $\mathcal C_t(B)$ under each schedule for $t$ between the restore and the resumption
+target-version: 874e216320093de4301b79b5fcf212f0a07aa2d6cf9a6bfc84e0926bbd920431
+version-from: git-revision

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: c62c43eeb76c4e64685aa76d3ed776695634729d7a0d7938cbe79255888b2e8d
+at: 2026-10-30T22:53:58Z
+store: asf
+act: review-finding
+about: segment:obs-context-turnover
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 2, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+criterion: 'Same false bound as review:vol4-c1-check-1#C5; replaced in #obs-context-turnover (v:7c0ff7a9) by the exact drop and a data-processing bound, re-derived in review:vol4-c1-check-2#C2.'
+finding: review:items-recheck-t2#F5
+outcome: answered
+revision: 112c56b3

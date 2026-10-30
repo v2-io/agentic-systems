@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 59a3df96c2fed9f06bc7dce8c864d11e2ce49bc7326997447fd8a35e0ee6c475
+at: 2026-10-30T22:54:00Z
+store: asf
+act: review-finding
+about: segment:deriv-strategic-composition
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 2, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+criterion: 'Checked at de2c0189: the false OUTLINE-lines Working-Note sentence is deleted from #deriv-strategic-composition, and both migration notes (#deriv-strategic-composition, #impl-strategic-composition) now say the withdrawn pattern "would read" in new vocabulary and that the claim is withdrawn.'
+finding: review:vol4-c1-check-1#F3
+outcome: answered
+revision: 337970ab

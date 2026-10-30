@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 3635d9dd70f82e2e028cd0405e2a28ed55cc35869dd3dd982d14cd5e7c4812f9
+at: 2026-10-30T22:54:00Z
+store: asf
+act: review-finding
+about: segment:disc-dynamic-regime-axis
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 2, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+criterion: 'Checked at de2c0189: the R0 row of #disc-dynamic-regime-axis now carries "membership derived under matched-Tier sub-agents; see R0 below", matching the R0 body.'
+finding: review:vol4-c1-check-1#F2
+outcome: answered
+revision: 337970ab
