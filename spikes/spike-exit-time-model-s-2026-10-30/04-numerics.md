@@ -47,6 +47,8 @@ Same set at floor $\alpha = 4$ ($\kappa = 4$, $\Phi_4(0) = 2.208$): OU $2.244 \p
 
 `checks-cont-output.txt` §5, $n = 2$, $\kappa = 2$: $P_0(\tau_R \leq L) \leq L/\Phi_2(0)$ is $0.543$ at $L = 0.5$ and vacuous beyond; MC gives $0.342$ (OU) and $0.163$ ($\operatorname{diag}(2,10)$) at $L = 0.5$ — the bound holds and is loose, as a mean-based bound at small $\kappa$ must be. Canon's (iv) bound $n\sigma_w^2L/R^2 = 2L$ is already vacuous at $L = 0.5$. The comparison bound's content is at larger $\kappa$, where (iv) stays vacuous: at $\kappa = 6$ ($n=2$), $P_0(\tau \leq 1) \leq 1/\Phi_6(0) = 1/6.97 = 0.14$; at $\kappa = 10$, $\leq 1/124.5 = 0.008$. The exponential-vs-linear gap is the whole point.
 
+**Correction (advisor-caught).** I had written that (iv) is the better bound at small $\kappa$. It is not, from the origin, at any $\kappa$: as $\kappa \to 0$ the benchmark is Brownian motion with mean exit time $R^2/(n\sigma_w^2) = 1/n$ here, and $\Phi(0)$ approaches it from above — $n=1$: $1.0033, 1.034, 1.19$ at $\kappa = 0.01, 0.1, 0.5$; $n=2$: $0.5013, 0.513, 0.570$; $n=3$: $0.334, 0.340, 0.370$. So $L/\Phi(0) \leq n\sigma_w^2L/R^2$ always, with equality only in the limit. (iv) earns its place by being closed-form and simple in the start point, not by ever being tighter at the origin.
+
 ## 5. Theorem 2 — survival ordering
 
 `checks-cont-output.txt` §6, empirical $P(\tau \gt t)$, $\operatorname{diag}(2,10)$ vs OU($2$): $0.837$ vs $0.658$ ($t=0.5$); $0.639$ vs $0.339$ ($t=1$); $0.364$ vs $0.092$ ($t=2$); $0.115$ vs $0.007$ ($t=4$). Pointwise domination as predicted, by a widening margin. The tangential case in §3 (survival curves agreeing to $0.01$ at four times under the rotation-exact scheme) is the equality instance of the same theorem.
