@@ -68,6 +68,7 @@ md_press_changed() {
   md-press -q --no-log "${CHANGED_MD[@]}"
 }
 
+# Claims on touched records (vsect claimed) are reported as a warning after the checks; see below.
 # vsect's store (.vsect/) must be tracked to be in the exported tree; until it
 # is, there is nothing for the check to read, and that is a notice, not a
 # failure (exit 3, vsect's own "not run").
@@ -110,6 +111,22 @@ for row in "${CHECKS[@]}"; do
     report+=$'\n'"✗ $name failed (exit $rc). To fix: $fix"$'\n'"$(printf '%s\n' "$out" | sed 's/^/    /')"$'\n'
   fi
 done
+
+# Claims: a warning, never a refusal. `vsect claim` is how an agent says what it is about to do to
+# a record, visibly to every worktree (the claims live under git's common dir, which the exported
+# tree cannot see, so this runs from the real tree). A commit touching a record another agent
+# holds prints the holder's note; a claim may be stale, and the commit by path is this agent's,
+# so the decision stays with the committer.
+if command -v vsect >/dev/null 2>&1 && ((${#CHANGED_MD[@]})); then
+  claims="$(cd "$ROOT" && vsect claimed "${CHANGED_MD[@]}" --by "${VSECT_BY:-}" 2>/dev/null)"; crc=$?
+  if ((crc == 1)) && [[ -n "$claims" ]]; then
+    {
+      echo "check-commit: this commit touches records another agent has claimed (a warning, not a refusal):"
+      printf '%s\n' "$claims" | sed 's/^/    /'
+      echo "    If that is a collision, talk through the coordinator before pushing; if the claim is stale, \`vsect release <record> --force --why …\` clears it."
+    } >&2
+  fi
+fi
 
 if ((failed)); then
   {
