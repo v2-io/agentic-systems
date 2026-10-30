@@ -16,7 +16,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 
 ## A — The front door says only what the bodies support
 
-- **A.1** `#scope-adaptive-system` carries the typed predicate $H(S_t\mid\mathcal C_t)\gt0$ with $S_t=(\Omega_t,\theta)$, or a defended alternative, and the GA registry names $\theta$. A cold reader checks the membership clauses on standard RL and on a Kalman filter. This also resolves the SP-30 brief. · *landed and independently cold-read (`spikes/epistemic-target-ontology/06-cold-read.md`). Open: the invariant-$\sigma$-field strengthening (Working Notes)*
+- **A.1** `#scope-adaptive-system` carries the typed predicate $H(S_t\mid\mathcal C_t)\gt0$ with $S_t=(\Omega_t,\theta)$, or a defended alternative, and the GA registry names $\theta$. A cold reader checks the membership clauses on standard RL and on a Kalman filter. This also resolves the SP-30 brief. · *landed; a second independent read (`07-independent-reread.md`) found two broken sentences and open findings, now being integrated. Open: the invariant-$\sigma$-field strengthening (Working Notes)*
 - **A.2** INTRODUCTION, the Part I and Part II fronts and the README partials agree on one headline list. Each headline sentence traces to a body sentence of the same register. · *not started*
 - **A.3** No live segment lacks an Epistemic Status (29 do today, all in the `impl-*`/intro layer). · *not started*
 
@@ -84,7 +84,7 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 | C1 spiker (Fable): exit time under Model S | C.2 | `spikes/spike-exit-time-model-s-2026-10-30/` |
 | C2 spiker (Fable): loop identification given the decision state | C.2 | `spikes/spike-loop-identification-decision-state-2026-10-30/` |
 | C3 spiker (Fable): allocation vs distortion coupling | C.2 | `spikes/spike-allocation-vs-distortion-coupling-2026-10-30/` |
-| A.1 independent re-reader (Opus), bare brief | A.1 | `spikes/epistemic-target-ontology/07-independent-reread.md` |
+| A.1 round-2 integrator (Opus), in its own worktree | A.1 | `#scope-adaptive-system` and dependents, on its branch; record in `spikes/epistemic-target-ontology/` |
 | vsect builder (Fable): `item` kind and tracker import | I.3 | `~/src/arch/firmatum/utils/vsect/` |
 
 These are finished and on the line through the lead:
@@ -96,7 +96,7 @@ These are finished and on the line through the lead:
 - the F72 verifier;
 - the F72 integrator;
 - the C.1 integrator (A1, A9, example-strategy, the detection test);
-- the A.1 integrator and its cold reader;
+- the A.1 integrator, its cold reader, and the independent re-reader;
 - the hooks builder (I.2).
 
 ## Using this file
