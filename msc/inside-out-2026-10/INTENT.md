@@ -80,12 +80,13 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 | Who | KR | Writes to |
 |---|---|---|
 | Lead coordinator (Opus 5.5, session "asf-cleanup") | I, plus coordination | `INTENT.md`, `HANDOFF.md` |
-| Volume 4 lane checker (Opus), bare brief | C.1 | `reviews/vol4-c1-check-1.md` |
-| A.1 round-2 checker (Opus), bare brief | A.1 | `reviews/scope-adaptive-system-check-4.md` |
-| C1, C2, C3 spike verifiers (Opus), bare brief | C.2 | `de-novo-feedback-1.md` in each spike dir |
-| C.1 lane (Opus), own worktree: A7, A10, and the persistence-cost algebra | C.1 | Part I, on its branch; `c1-lanes/part-i-mismatch-lineage.md` |
-| C.1/H.2 lane (Opus), own worktree: A13 done; the `old-*` fates | C.1, H.2 | `02-tst-core/`, on its branch; `c1-lanes/tst.md` |
-| vsect builder (Fable), with the tracker re-check sweep (five lanes) | I.3 | `items/`, `.vsect/`, `items-recheck/` |
+| Part II integrator (Fable), own worktree: C2 and C3 spikes with their verifiers, B.1's Part II check, A4, A5 | C.2, B.1, C.1 | Part II and the Volume 3 bias law, on its branch; `part-ii-integration.md` |
+| A.1 round-3 integrator (Opus), own worktree: the third check (09) | A.1 | `#scope-adaptive-system`, on its branch; `10-check-4-integration.md` |
+| C1 spike verifier (Opus), bare brief | C.2 | `spikes/spike-exit-time-model-s-2026-10-30/de-novo-feedback-1.md` |
+| Part I lane checker and Volume 4 lane checker (Opus), bare brief | C.1 | `reviews/part-i-mismatch-lineage-check-1.md`, `reviews/vol4-c1-check-1.md` |
+| C.1/H.2 TST lane (Opus), own worktree: the `old-*` fates and two Part III falsifiers | C.1, H.2 | on its branch; `c1-lanes/tst.md` |
+| Second-mind confirmer (Opus) | I.4 | `.vsect/`, `confirm-2026-10-30.md` |
+| vsect builder (Fable), with the tracker re-check sweep | I.3, I.4 | `~/src/arch/firmatum/utils/vsect/`, `items/`, `.vsect/` |
 
 These are finished and on the line through the lead:
 
@@ -100,7 +101,9 @@ These are finished and on the line through the lead:
 - the B.1 record writer (Part II) and its checker;
 - the Volume 4 lane (A6, A11, A12, A14, the substrate record);
 - the A.1 round-2 integrator;
-- the C1, C2 and C3 spikers;
+- the C1, C2 and C3 spikers, and the C2 and C3 verifiers;
+- the Part I lane (A7, A10, the persistence-cost algebra);
+- the A.1 round-2 checker (09);
 - the hooks builder (I.2).
 
 ## Using this file
