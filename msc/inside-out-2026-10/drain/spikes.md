@@ -6,11 +6,11 @@
 
 ## What matters most
 
-1. **Three spike results the routing record carried as landable are false; one canon body already leans on a fourth.** None of the false ones reached canon. Each was caught because a fork re-derived the result instead of checking whether it had landed, which is what every earlier routing pass did.
-   - **Update-operator (O-A2′).** It claims per-edge credences converge to the truth from one plan-level outcome. That outcome identifies only the product of the credences, so the claim fails for two or more edges (fork A's algebra and simulation; my independent identifiability argument). Its item is closed as superseded.
-   - **Temporal-nesting RG-0a.** It claims heterogeneous Kalman gains flow to $\varepsilon^\ast = 0$ as the timescale ratio grows. The spike's own formula keeps a term that does not depend on that ratio, and a simulation of the spike's setup shows a floor near 0.21 (fork B1). Warning blocks now head the spike files, and the corrected statement is a G.2 addition.
-   - **The $\rho$ additive-variance theorem.** Its cross term double-counts (fork A). Canon's later correction stands; the theorem must not be re-landed.
-   - **The leakage-locus lemma** (fork C) is the fourth. It is cited and typed "derived" in `#disc-partial-coupling-pathways`'s body, but exists only in its spike.
+1. **Three spike results the routing record carried as landable were found false; they differ in how far that is checked.** None reached canon. Each was caught because a fork re-derived the result instead of checking whether it had landed, which is what every earlier routing pass did. Forks share my model and launch context, so a fork's check counts as a second mind only through a different route, and I say which route each one had.
+   - **Update-operator (O-A2′): false, second-minded.** It claims per-edge credences converge to the truth from one plan-level outcome. Fork A found it false by the §2.2 algebra and a two-edge simulation. I confirmed it by a different route: the outcome identifies only the product of the credences, so every point on the level set is observationally equivalent. Its item is closed as superseded.
+   - **Temporal-nesting RG-0a: found false by one fork; a derivation-level second mind is owed.** It claims heterogeneous Kalman gains flow to $\varepsilon^\ast = 0$ as the timescale ratio grows. Fork B1 read the spike's own formula as keeping a term that does not depend on that ratio. I re-ran B1's check script (`check-2026-10-30-kc-defect-floor.py`), and its output is byte-identical to the committed file: $\varepsilon^{\ast2} \approx 0.14, 0.19, 0.21, 0.21, 0.21, 0.21, 0.20$ at $K_c = 1 \ldots 64$, while the term the spike kept falls to $10^{-26}$. So the simulation is reproduced first-hand. I did not re-derive the formula reading, and I did not check that the script's windowed least-squares macro-update is the spike's "optimal symmetric macro-update". Warning blocks head the two spike files. `item:the-heterogeneous-gain-closure-defect-does-not-v` should be read as "verify, then land".
+   - **The $\rho$ additive-variance theorem: found superseded by one fork, with no second mind.** Fork A finds that its cross term double-counts. I did not read the spike, which is why its `.archived/` move below waits.
+   - **The leakage-locus lemma** (fork C) is a different case: true, and canon already leans on it. `#disc-partial-coupling-pathways`'s body cites it and types it "derived", but it exists only in its spike.
 2. **The verified work no integrator was launched for now has owners.** That covers the 2026-08-24 decomposition cluster (D.2's three waiting spikes, plus the $\varepsilon$-programme) and honest activation (twice verified; it fills a `missing` Volume 4 row). The same goes for the "released to the standing cycle" and "Joseph's call" hand-offs in honest activation, tst-independent, partition-isolation and the TST cycle.
 3. **New present-tense canon defects (C.1), each with an item:**
    - `#def-death-as-factor-loss:57`: the (D4) severing-source axis.
@@ -24,6 +24,22 @@
    - `#der-gain-sector-bridge:76`: a PID row tagged Derived, carried on the CL-1 item.
 4. **For the lead, already sent:** today's Part II landing cites spike paths in twelve canon bodies (fork C; re-checked by me; recorded on `item:canon-bodies-cite-local-working-paths`). The Part II check write-up (fb4a205a) has since added the same finding as its item 8.
 5. **A drain lesson.** Two of the false results (RG-0a, update-operator) had passed a 2026-05-17 routing pass that checked presence and regression only. A third pattern, from fork D, is a TST synthesis whose "three-spike convergence" was one shared misreading of one segment. A routing step that does not re-derive, or that counts arrivals without checking whether they share a premise, reports what was written as if it were true.
+
+**Coverage of Joseph's cross-surface instruction.** For each claim, the forks and I searched audits and their gold, Working Notes (including adjacent segments'), the other spikes, `msc/`, and the influx-scout files with the primaries they name. Transcripts were not searched: no one in the drain ran `memorata-search`. Two private repositories (behavioral-floor, causal-language) were taken through the influx scout's account rather than opened. Reading depth differs by fork; each fork file lists what it read whole, what it sampled, and what it did not reach.
+
+**Item titles that now point the wrong way.** Owners pick work by title, and these titles say something their bodies now contradict:
+- `item:todo-spike-bridge-lemma-nonlinear-strengtheni-a707` says "Tier 2 math, ready to land". Its body (fork A) lists five defects to fix first, among them the old class numbering and a misstated PID passivity.
+- `item:rho-additive-variance-remainder-stranded` is a G.2 "stranded" item. Its body (fork A) says superseded: do not land.
+- `item:spikes-routing-spike-attention-governance-archived-vs-r-61bb` (C.2) and `item:todo-group-iv-attention-pair-spike-attention-126c` (G.2) are flagged as duplicates of each other. Neither is closed, because their owners differ.
+
+**`INDEX.md` rows that now actively mislead** (not edited, since I.3 decides the file's fate):
+- the update-operator row (:415) still says "tractable landing PENDING", and :8 still names `proposals-d-9`, now closed as a duplicate of `a707`;
+- the 2026-08-24 parent row says "awaiting final re-check", though the spike's §9 records the B-round close-out;
+- there are no rows for the $\varepsilon$-programme or honest activation;
+- B2's four (:243, :244, :261, :264–265);
+- the rows that still hand work to "Joseph's call" (TST cycle, partition-isolation; fork D).
+
+Source additions made after the lead's 2026-10-30 note use `vsect raise`; the dated "Source added" paragraphs from before it stand.
 
 ## Ledger totals
 
