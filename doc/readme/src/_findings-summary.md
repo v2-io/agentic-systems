@@ -9,6 +9,8 @@ Some of the framework's distinctive results, with epistemic tiers and links into
 
 - **`#result-persistence-condition`** *(status: exact)* — *The Persistence Condition with Structural / Task-Adequacy Decomposition* — *Claim novelty* (at intuition-only search depth — see Search Log) on the two-condition decomposition (structural / task-adequacy): an AAT-internal structural carve that cleanly separates "the machinery works" from "the machinery works well enough," with no direct anticipation known; a targeted search of the bounded-rationality and adaptive-control literature is still owed.  
   [`01-aat-core/src/result-persistence-condition.md`](01-aat-core/src/result-persistence-condition.md)
+- **`#result-per-dimension-persistence`** *(status: conditional)* — *The Weakest-Link Dimensional Persistence Law* — *Claim differentiation* on per-dimension Lyapunov stability.  
+  [`01-aat-core/src/result-per-dimension-persistence.md`](01-aat-core/src/result-per-dimension-persistence.md)
 
 ### *Part* Agentic Systems: Actuated Adaptation
 
@@ -49,8 +51,6 @@ Some of the framework's distinctive results, with epistemic tiers and links into
   [`01-aat-core/src/der-class-coercion-in-composition.md`](01-aat-core/src/der-class-coercion-in-composition.md)
 - **`#der-agent-opacity`** *(status: conditional)* — *Agent Opacity ($H_b$) as Dual to Observation Quality ($U_o$)* — *Claim differentiation* on Hafez's $H_b$.  
   [`01-aat-core/src/der-agent-opacity.md`](01-aat-core/src/der-agent-opacity.md)
-- **`#result-per-dimension-persistence`** *(status: conditional)* — *The Weakest-Link Dimensional Persistence Law* — *Claim differentiation* on per-dimension Lyapunov stability.  
-  [`01-aat-core/src/result-per-dimension-persistence.md`](01-aat-core/src/result-per-dimension-persistence.md)
 
 ### *Appendices* Details
 
