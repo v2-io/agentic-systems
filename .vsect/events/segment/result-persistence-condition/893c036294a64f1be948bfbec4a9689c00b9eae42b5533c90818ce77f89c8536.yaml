@@ -1,0 +1,36 @@
+schema: vsect-event/0
+id: 893c036294a64f1be948bfbec4a9689c00b9eae42b5533c90818ce77f89c8536
+at: 2026-10-30T21:54:31Z
+store: asf
+act: rederive
+about: segment:result-persistence-condition
+actor:
+  name: Claude Opus 5.5 (C.1 verifier, A7/A10 lane)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-mismatch-signal: a19745b33797b4786addc49b037e54795156dee55364ff3edc922e1eed8d1da9
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:deriv-sector-condition: be5b8f4d0cf6f932e9fd5a455e6a4a2413bf581b38680908606b2934ae50ea3b
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-persistence-condition: 9a9b8dd449b6bf1a9d19a7ce9a032f7dc9d8d2437261302592a41fe45bea63c6
+  segment:result-sector-condition-stability: 0cd95f849c0ee6f953ac1fbb5c590a47fe5581f9ad73ee7c5d1917f2df310b7e
+  segment:result-sector-persistence-template: d923df79756f5967915bd49a180d1907e7b8b93ac88d9bab5831ad8a46539ab9
+  segment:scope-adaptive-system: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+committed: before
+criterion: 'Two levers in $\mathcal T$": past the optimal gain, faster correction on the same observations enlarges the error, and the same split appears under Model D.'
+effective-version: c4508a05f38424900e6bcf610a06870696d5a0569f68986f49668b6e4a2a8edb
+from: review:part-i-mismatch-lineage-check-1#C2
+line: derivation
+outcome: narrowed
+recheck: Model S closed form (C1); Model D bound $\rho_{\text{env}}/\alpha + \bar\nu$ is decreasing in $\alpha$.
+target-version: 9a9b8dd449b6bf1a9d19a7ce9a032f7dc9d8d2437261302592a41fe45bea63c6
+version-from: git-revision

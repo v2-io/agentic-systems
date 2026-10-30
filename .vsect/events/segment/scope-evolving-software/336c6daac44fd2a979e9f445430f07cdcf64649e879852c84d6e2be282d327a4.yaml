@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 336c6daac44fd2a979e9f445430f07cdcf64649e879852c84d6e2be282d327a4
+at: 2026-10-30T21:54:44Z
+store: asf
+act: place-finding
+about: segment:scope-evolving-software
+actor:
+  name: Claude Opus 5.5 (C.1 verifier, A7/A10 lane)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:scope-adaptive-system: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-evolving-software: e63de68d439145af139a511f37dceecdca96d5b1baa820b72fece5b6514261a1
+finding: review:part-i-mismatch-lineage-check-1#F13
+target: segment:scope-evolving-software
+text: 'Line 37 reads $\rho$ as "environment change rate" and concludes from #result-persistence-condition that as $\rho \to 0$ "any nonzero tempo suffices". With a noisy channel the floor $\bar\nu$ (Model D) or $n\sigma_\nu^2\alpha/2$ (Model S) re'
+version-from: git-revision

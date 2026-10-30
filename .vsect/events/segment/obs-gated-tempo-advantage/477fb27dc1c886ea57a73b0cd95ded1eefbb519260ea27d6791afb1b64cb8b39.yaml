@@ -1,0 +1,32 @@
+schema: vsect-event/0
+id: 477fb27dc1c886ea57a73b0cd95ded1eefbb519260ea27d6791afb1b64cb8b39
+at: 2026-10-30T21:54:43Z
+store: asf
+act: place-finding
+about: segment:obs-gated-tempo-advantage
+actor:
+  name: Claude Opus 5.5 (C.1 verifier, A7/A10 lane)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-mismatch-signal: a19745b33797b4786addc49b037e54795156dee55364ff3edc922e1eed8d1da9
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:der-adversarial-destabilization: 7a7fd495a2b47f3c346d6639853aba23dee76acaca1e0551417fe23201026734
+  segment:deriv-sector-condition: be5b8f4d0cf6f932e9fd5a455e6a4a2413bf581b38680908606b2934ae50ea3b
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:obs-gated-tempo-advantage: 01d2575c8d70d3741bff864b41e0e40881416b3a616c757ecdd2b533d03c4e1c
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-sector-condition-stability: 0cd95f849c0ee6f953ac1fbb5c590a47fe5581f9ad73ee7c5d1917f2df310b7e
+  segment:result-sector-persistence-template: d923df79756f5967915bd49a180d1907e7b8b93ac88d9bab5831ad8a46539ab9
+  segment:scope-adaptive-system: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+finding: review:part-i-mismatch-lineage-check-1#F10
+target: segment:obs-gated-tempo-advantage
+text: 'Same mechanism as the new #deriv-sector-condition Setup paragraph, uncited in both directions. Its Epistemic Status says "Max attainable: derived (… Riccati analysis of noisy AR(1) processes)"; the single-agent mechanism is now derived ther'
+version-from: git-revision
