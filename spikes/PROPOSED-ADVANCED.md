@@ -1,5 +1,8 @@
 # Advanced Mathematical Spike Proposals (detail home)
 
+> [!warning]
+> **Folded into the vsect ledger on 2026-10-30 (KR I.3); this file is waiting to be deleted.** Every entry here was re-checked against HEAD and now lives as an item under `items/` (`vsect open`), with its judgment and reasoning. Do not add to this file or work from it. It stays only until the links that name it (`TODO.md`, `PRACTICA.md`, one canon Working Note) are re-pointed; see `msc/inside-out-2026-10/items-recheck/q-proposals.md` §1.
+
 *Generated from de novo audit synthesis, 2026-04-25. Relocated from `PROPOSED.md` 2026-05-19 when `PROPOSED.md` became the unified spike-proposal index across all three perspectives (moonshot/theory-edge here; segment-perspective in segment Working Notes; residual in `PROPOSED-MISC.md`).*
 
 This is the **moonshot / cross-cutting / theory-edge detail home**: high-risk, high-reward mathematical research directions that could fundamentally elevate the Agentic Systems Framework (AAT) by closing its deepest open questions or providing definitive impossibility results. It is *detail*, not the navigator — the navigator is [`PROPOSED.md`](PROPOSED.md) (the index; every entry here has a row there, and every row there links back here).

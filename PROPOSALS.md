@@ -1,5 +1,8 @@
 # PROPOSALS — Architectural Portfolio
 
+> [!warning]
+> **Folded into the vsect ledger on 2026-10-30 (KR I.3); this file is waiting to be deleted.** Every entry here was re-checked against HEAD and now lives as an item under `items/` (`vsect open`), with its judgment and reasoning. Do not add to this file or work from it. It stays only until the links that name it (`TODO.md`, `PRACTICA.md`, one canon Working Note) are re-pointed; see `msc/inside-out-2026-10/items-recheck/q-proposals.md` §1.
+
 **Last reconciled:** 2026-08-22 (done/decided-item prune per Joseph's tracking-list directive; executed SPs deleted — narrative in CHANGELOG).
 
 This file replaces `msc/architectural-proposals-2026-04-22.md`. That document accumulated 33 proposals across four audit cycles; many had substantively landed but were still catalogued as open; several were superseded; a few unpromoted architectural moves were hiding in segment Working Notes and `msc/` brainstorm documents. This is the slim, verified, banded portfolio produced by the 2026-04-24 consolidation audit.

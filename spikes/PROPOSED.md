@@ -1,5 +1,8 @@
 # PROPOSED — the spike-proposal index
 
+> [!warning]
+> **Folded into the vsect ledger on 2026-10-30 (KR I.3); this file is waiting to be deleted.** Every entry here was re-checked against HEAD and now lives as an item under `items/` (`vsect open`), with its judgment and reasoning. Do not add to this file or work from it. It stays only until the links that name it (`TODO.md`, `PRACTICA.md`, one canon Working Note) are re-pointed; see `msc/inside-out-2026-10/items-recheck/q-proposals.md` §1.
+
 A low-friction, optional repository for **spike-able ideas set down for later** (and their later disposition), across all three perspectives — *not* an exhaustive registry of every possible spike (see "Not a mandatory registry" below):
 
 - **moonshot / cross-cutting / theory-edge** — detail in [`PROPOSED-ADVANCED.md`](PROPOSED-ADVANCED.md);

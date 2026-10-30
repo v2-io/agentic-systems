@@ -1,5 +1,8 @@
 # PROPOSED — misc detail home
 
+> [!warning]
+> **Folded into the vsect ledger on 2026-10-30 (KR I.3); this file is waiting to be deleted.** Every entry here was re-checked against HEAD and now lives as an item under `items/` (`vsect open`), with its judgment and reasoning. Do not add to this file or work from it. It stays only until the links that name it (`TODO.md`, `PRACTICA.md`, one canon Working Note) are re-pointed; see `msc/inside-out-2026-10/items-recheck/q-proposals.md` §1.
+
 Residual detail home for indexed spike efforts that are **real and un-started but neither moonshot/theory-edge** (those → [`PROPOSED-ADVANCED.md`](PROPOSED-ADVANCED.md)) **nor tied to a specific segment's Working Notes** (those keep their detail in the segment, the [`PROPOSED.md`](PROPOSED.md) index links to it). Often near-empty by design — that is expected, not a defect. Every entry here has a row in [`PROPOSED.md`](PROPOSED.md) and is reconciled with it bidirectionally (`../doc/sop/spikes.sop.md` §2-bis(3) + Refinement 10).
 
 ---
