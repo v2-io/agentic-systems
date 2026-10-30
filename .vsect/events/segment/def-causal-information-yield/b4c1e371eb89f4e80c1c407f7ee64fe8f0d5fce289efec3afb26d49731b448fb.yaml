@@ -1,0 +1,33 @@
+schema: vsect-event/0
+id: b4c1e371eb89f4e80c1c407f7ee64fe8f0d5fce289efec3afb26d49731b448fb
+at: 2026-10-30T23:01:57Z
+store: asf
+act: read-check
+about: segment:def-causal-information-yield
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-causal-information-yield: aafeacbbb79b6c8fa83a38fc5b85f2b38b0aad97f0ccfe80798d0a554c5e5c35
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-mismatch-signal: 8865e87714b5b10e0430d0e7f860cb1949a2307149171ba204c6f5b3c2b3ee7b
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:der-action-selection: ff726f8527dab6ee837cc11b7164313850f125e944c76ea86dca14183c613408
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 48dd5554d1f66ba02af228fcb9593f6b9191852444272b4cb48458a3acae75de
+committed: before
+criterion: Does the rebuilt `CURRENT-VOL1.md` still carry the replaced "not yet fully extracted (source material in `src/old-tf-appendix-f-multi-agent.md`)" sentence (first check's F3)?
+effective-version: aec5a79102cecf5368b9101a27f80d78c12570cef35955692e14489d8bf0d028
+from: review:tst-lane-check-2#C17
+line: correspondence
+outcome: confirmed
+recheck: '`grep -c old-tf-appendix-f CURRENT-VOL1.md` (0); line 1164 carries "The multi-agent consequences are in Part III …'
+target-version: aafeacbbb79b6c8fa83a38fc5b85f2b38b0aad97f0ccfe80798d0a554c5e5c35
+version-from: git-revision

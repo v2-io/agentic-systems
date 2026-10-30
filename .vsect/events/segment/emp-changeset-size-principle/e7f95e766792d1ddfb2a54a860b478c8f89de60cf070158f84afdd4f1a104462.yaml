@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: e7f95e766792d1ddfb2a54a860b478c8f89de60cf070158f84afdd4f1a104462
+at: 2026-10-30T22:57:48Z
+store: asf
+act: correct
+about: segment:emp-changeset-size-principle
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+corrects: 2c0006e577793556a10b3b5e0f823c791f7fcbd177e45a55cb8c14e213decab4
+text: 'Correction to the checker-2 annotation just above: 8002d40a is 2cd1ad0c rebased onto main, not an identical tree. Every file under 02-tst-core/ and the three Part III segments this review targets (hyp-communication-gain, der-team-persistence, detail-operationalization) are identical; 12 other 01-aat-core files differ by other lanes'' merges (scope-adaptive-system and others), some in depends chains.'

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 30930f07af488584f535730ae1e408a3299b795272a696058f6d0921d1a5c9f0
+at: 2026-10-30T23:02:00Z
+store: asf
+act: review-finding
+about: segment:scope-developer-agent
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: The three Source lines name v2-io/tst, which holds via-tft/. Verified with git remote by checker 2 (C16).
+finding: review:tst-lane-check-1#C13/finding
+outcome: answered
+revision: 8002d40a

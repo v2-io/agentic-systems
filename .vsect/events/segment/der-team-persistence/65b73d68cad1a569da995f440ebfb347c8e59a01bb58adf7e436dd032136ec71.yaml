@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 65b73d68cad1a569da995f440ebfb347c8e59a01bb58adf7e436dd032136ec71
+at: 2026-10-30T23:02:00Z
+store: asf
+act: review-finding
+about: segment:der-team-persistence
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: The falsifier now predicts a bound shift gamma*T_j/alpha_i with every channel from j held fixed, including observing j's actions. Re-derived by checker 2 (C13).
+finding: review:tst-lane-check-1#C11/finding
+outcome: answered
+revision: 8002d40a

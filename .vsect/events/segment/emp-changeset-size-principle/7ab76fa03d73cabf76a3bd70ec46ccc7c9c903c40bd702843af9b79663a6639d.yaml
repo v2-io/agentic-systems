@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: 7ab76fa03d73cabf76a3bd70ec46ccc7c9c903c40bd702843af9b79663a6639d
+at: 2026-10-30T23:02:08Z
+store: asf
+act: confirm-rewording
+about: segment:emp-changeset-size-principle
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: The rewording changes only the capped-slope clause ('rises to a week, and in ink falls again without a cap'); C4's window-free slopes and overhead ratios 2.8 and 1.6 are unchanged and re-run by checker 2.
+from-version: ce8b8ab95f0b6269ccc6524bd5a1ecb1a7e3f760fe3a4d5398151d6c24366fa8
+outcome: equivalent
+scope:
+  for:
+  - 2c0006e577793556a10b3b5e0f823c791f7fcbd177e45a55cb8c14e213decab4
+to-version: b49a767b2bd317051f12cb29967ca351793e1f8ba2838786b5b9006352a0a825

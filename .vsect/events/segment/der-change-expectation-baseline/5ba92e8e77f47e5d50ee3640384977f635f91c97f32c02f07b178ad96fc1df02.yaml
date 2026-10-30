@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 5ba92e8e77f47e5d50ee3640384977f635f91c97f32c02f07b178ad96fc1df02
+at: 2026-10-30T22:57:48Z
+store: asf
+act: correct
+about: segment:der-change-expectation-baseline
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+corrects: 0cde925d948cf8af0079dfd3ce7183d2fd0ea3f323f02c2af0d1b9ad97ca13d4
+text: 'Correction to the checker-2 annotation just above: 8002d40a is 2cd1ad0c rebased onto main, not an identical tree. Every file under 02-tst-core/ and the three Part III segments this review targets (hyp-communication-gain, der-team-persistence, detail-operationalization) are identical; 12 other 01-aat-core files differ by other lanes'' merges (scope-adaptive-system and others), some in depends chains.'

@@ -1,0 +1,18 @@
+schema: vsect-event/0
+id: ee0d29f9b11655f1e419cb2709d548f47d7b6dcc5253c0dfc012801a0f92ce2c
+at: 2026-10-30T23:02:07Z
+store: asf
+act: confirm-rewording
+about: segment:der-change-expectation-baseline
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: The rewording fixes Jeffrey's -> Jeffreys' and adds the Copernican premise to Epistemic Status; the derivation C8 re-derived and the paraphrases C9 read are unchanged in the body (re-derived again by checker 2, review:tst-lane-check-2#C11).
+from-version: 036d0fb1b0d0e344e269d28ead06fbc9632131a78a915e1a170fc835802a7f19
+outcome: equivalent
+scope:
+  for:
+  - 0cde925d948cf8af0079dfd3ce7183d2fd0ea3f323f02c2af0d1b9ad97ca13d4
+  - 430a36e4fc192fd146749eaab8fb3945585d7d15e4f9686eab1b9547d61328ca
+to-version: f014485d419ed5ec82c875418c366e683cd90d95a9e08ee260759b0ac23de1c4

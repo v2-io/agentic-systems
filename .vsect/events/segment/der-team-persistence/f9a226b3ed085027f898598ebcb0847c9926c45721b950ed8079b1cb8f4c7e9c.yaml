@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: f9a226b3ed085027f898598ebcb0847c9926c45721b950ed8079b1cb8f4c7e9c
+at: 2026-10-30T22:57:48Z
+store: asf
+act: correct
+about: segment:der-team-persistence
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+corrects: 0f75a5ba333dfd0e73f761db68804ad7de86e794a3fc5415648487f4b2ba4ef6
+text: 'Correction to the checker-2 annotation just above: 8002d40a is 2cd1ad0c rebased onto main, not an identical tree. Every file under 02-tst-core/ and the three Part III segments this review targets (hyp-communication-gain, der-team-persistence, detail-operationalization) are identical; 12 other 01-aat-core files differ by other lanes'' merges (scope-adaptive-system and others), some in depends chains.'

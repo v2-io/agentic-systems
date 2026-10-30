@@ -1,0 +1,27 @@
+schema: vsect-event/0
+id: b46d994f80dc0a17b205c517dbeff217f9db8c9e4eb710c263184af8483f978d
+at: 2026-10-30T23:01:54Z
+store: asf
+act: place-finding
+about: segment:hyp-communication-gain
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-mismatch-signal: 8865e87714b5b10e0430d0e7f860cb1949a2307149171ba204c6f5b3c2b3ee7b
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:disc-composition-consistency: 38ecdbe2544533cf09ca51fc1f1c55da33ff83820a49ebd77b83629e2d8b3246
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:hyp-communication-gain: f6cc2986b0b1b8f358db5081cc36f9dd08ff801fdd9effb1291517eec3208e29
+  segment:scope-adaptive-system: 48dd5554d1f66ba02af228fcb9593f6b9191852444272b4cb48458a3acae75de
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-multi-agent: bfd7ff18a1c5e2edca2661964961d30a0c4d87908c31f2929ef4155e87c4edd9
+finding: review:tst-lane-check-2#C14/finding
+target: segment:hyp-communication-gain
+text: 'check C14 came back narrowed: Summed gains overshoot when terms coincide. Event by event, with $U_{M_i}$ updated between events, the update is consistent with #deriv-tempo-additivity, where independent streams almost never coincide. The segment does not say which readin'
+version-from: git-revision

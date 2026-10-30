@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4e861697da1917121de06d9bee2c8654a06abf8dcd2615525493f30524a61c53
+at: 2026-10-30T23:02:01Z
+store: asf
+act: review-finding
+about: segment:der-team-persistence
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Sim 5 has a vsect question (in-a-simulated-codebase-worked-by-several-agents) that varies action and communication separately.
+finding: review:tst-lane-check-1#F2
+outcome: answered
+revision: 8002d40a

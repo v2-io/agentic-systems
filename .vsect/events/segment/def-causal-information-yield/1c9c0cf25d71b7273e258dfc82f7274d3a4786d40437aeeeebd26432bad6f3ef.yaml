@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 1c9c0cf25d71b7273e258dfc82f7274d3a4786d40437aeeeebd26432bad6f3ef
+at: 2026-10-30T23:02:01Z
+store: asf
+act: review-finding
+about: segment:def-causal-information-yield
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: The CIY sentence no longer points to the deleted old-tf-appendix-f file; it names der-team-persistence and hyp-communication-gain, which carry what it says. Confirmed by checker 1 (C12) and checker 2 (C17).
+finding: review:tst-old-files-h2-integration#C2/finding
+outcome: answered
+revision: 055f2803

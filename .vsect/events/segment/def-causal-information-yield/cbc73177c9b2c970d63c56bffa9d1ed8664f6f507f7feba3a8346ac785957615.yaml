@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: cbc73177c9b2c970d63c56bffa9d1ed8664f6f507f7feba3a8346ac785957615
+at: 2026-10-30T23:02:01Z
+store: asf
+act: review-finding
+about: segment:def-causal-information-yield
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: CURRENT-VOL1.md, rebuilt at c93f8445 (and 242ebc33), no longer carries the replaced sentence; line 1164 carries its replacement. Checker 2 (C17).
+finding: review:tst-lane-check-1#F3
+outcome: answered
+revision: c93f8445

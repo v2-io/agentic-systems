@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 44513cd56f606307d7aa6254b984ce5dd31d0337163a2b336433af0f2eabc77f
+at: 2026-10-30T23:02:00Z
+store: asf
+act: review-finding
+about: segment:hyp-communication-gain
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: 'w_ji is now defined: hyp-communication-gain carries F.1''s update as a Formulation, with a fixed trust weight as constant eta_ji; der-team-persistence defines w_ij. Checked by checker 2.'
+finding: review:tst-lane-check-1#C10/finding
+outcome: answered
+revision: 8002d40a

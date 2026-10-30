@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f3cc404defee1f605668b17b41ae762040d7db80ee146860062363608f5b6d5e
+at: 2026-10-30T23:02:00Z
+store: asf
+act: review-finding
+about: segment:scope-continuous-operation
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: The three conditions are named, the rho > 0 repair time is given with its finiteness condition, and 'same ratio' is replaced by the linear-vs-logarithmic comparison. Re-derived by checker 2 (C12).
+finding: review:tst-lane-check-1#C9/finding
+outcome: answered
+revision: 8002d40a

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: a950942fa3e8a16d7b0a3b59fa21f06a1aeae293b740a683e359df0e9cccf281
+at: 2026-10-30T23:01:59Z
+store: asf
+act: review-finding
+about: segment:der-change-expectation-baseline
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Both paraphrases now read 'prior density at zero hazard is finite and positive', which excludes Gamma(a=2); 'weaker' became 'different'. Checked by checker 2 (C11).
+finding: review:tst-lane-check-1#C7/finding
+outcome: answered
+revision: 8002d40a

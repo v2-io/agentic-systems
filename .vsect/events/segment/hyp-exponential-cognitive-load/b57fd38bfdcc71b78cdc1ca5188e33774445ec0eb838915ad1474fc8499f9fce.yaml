@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: b57fd38bfdcc71b78cdc1ca5188e33774445ec0eb838915ad1474fc8499f9fce
+at: 2026-10-30T23:01:59Z
+store: asf
+act: review-finding
+about: segment:hyp-exponential-cognitive-load
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Segment no longer says the cap cannot distort the medians; the dropped share by d and the work/idle mixture are reported, and section (5)/(6) print them. Re-run by checker 2 (review:tst-lane-check-2#C1).
+finding: review:tst-lane-check-1#C3/finding
+outcome: answered
+revision: 8002d40a

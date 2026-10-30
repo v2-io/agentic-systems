@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0949f6c620c2abfbc4e5f37ff67338d1aa1ff5cb04d8a7719afbb1fb3051d9ef
+at: 2026-10-30T23:02:00Z
+store: asf
+act: review-finding
+about: segment:der-team-persistence
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: 'Every part F1 lists now has a fate (F.1 update, F.4 ensemble, F.6 quantities and rules, F.8 questions), and the Working Note no longer points at the deleted file. Three further parts without a fate are a new finding: review:tst-lane-check-2#C15.'
+finding: review:tst-lane-check-1#F1
+outcome: answered
+revision: 8002d40a

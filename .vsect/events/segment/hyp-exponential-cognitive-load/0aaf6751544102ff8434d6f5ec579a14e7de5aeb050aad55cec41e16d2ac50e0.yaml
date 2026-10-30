@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0aaf6751544102ff8434d6f5ec579a14e7de5aeb050aad55cec41e16d2ac50e0
+at: 2026-10-30T23:01:59Z
+store: asf
+act: review-finding
+about: segment:hyp-exponential-cognitive-load
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: The capped form test is now scoped per history and judged against a mixture null; 'at every cap' and 'sublinear, beta 0.4-0.7' are gone. Residual issues are new findings in review:tst-lane-check-2 (C3, C5).
+finding: review:tst-lane-check-1#C4/finding
+outcome: answered
+revision: 8002d40a

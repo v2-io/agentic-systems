@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 21a6463939023657b13b2350cbf1ff5edcbadfc002e52637af599f76c28857a7
+at: 2026-10-30T23:02:00Z
+store: asf
+act: review-finding
+about: segment:result-specification-bound
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: The nonexistent floor is gone; Putnam's minimum time is attributed to his gradient constraint, checked against NTRS 19820068869 by checker 2 (C9); the 3/4 conjecture is deleted and a conditional derived bound replaces it (C10).
+finding: review:tst-lane-check-1#C8/finding
+outcome: answered
+revision: 8002d40a

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 172241d40bc2d29aa822110f83d3b1dfe66f349dec5efbc2f43e8fd2f91f18fa
+at: 2026-10-30T22:57:48Z
+store: asf
+act: correct
+about: segment:hyp-exponential-cognitive-load
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+corrects: 52fcb45bcdf43f2e564cb53ad5fdf2ad90289ae905d59ad1747ff32a858c2266
+text: 'Correction to the checker-2 annotation just above: 8002d40a is 2cd1ad0c rebased onto main, not an identical tree. Every file under 02-tst-core/ and the three Part III segments this review targets (hyp-communication-gain, der-team-persistence, detail-operationalization) are identical; 12 other 01-aat-core files differ by other lanes'' merges (scope-adaptive-system and others), some in depends chains.'

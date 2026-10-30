@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: 2602c63f99581586dfea8f6076965d37144f3ca2649f3d2b94bb3f6cd19ddc98
+at: 2026-10-30T23:02:08Z
+store: asf
+act: confirm-rewording
+about: segment:hyp-communication-gain
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: The rewording names the Formulation in Epistemic Status; C12's correspondence (the update is F.1's with w_ji*eta_ji folded into one gain) concerns the Formal Expression, which is unchanged.
+from-version: 438d06cca95bb19798e853be6b83a496f86e8fc8a3e92fdc75ba2fe0578280ce
+outcome: equivalent
+scope:
+  for:
+  - 2980e8cff6d27ca7eb41489784fe9c7b91fc8346add78b3eb46fa2d4fd9dfa36
+to-version: f6cc2986b0b1b8f358db5081cc36f9dd08ff801fdd9effb1291517eec3208e29

@@ -1,0 +1,30 @@
+schema: vsect-event/0
+id: e763ad6411ae289e3379e3b2f76c6d469add4007a300d0166b66c5163b68c0ed
+at: 2026-10-30T23:01:51Z
+store: asf
+act: read-check
+about: segment:result-specification-bound
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-feature: eefffd509dd084cb6773f2591ba53127c3063f51de688f5a5ccd0a081273e7c6
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:result-specification-bound: 6ed4faaaed08cdcaf7309f72633c8578eff49c066a837596ffa2d1491088f2fb
+  segment:scope-adaptive-system: 48dd5554d1f66ba02af228fcb9593f6b9191852444272b4cb48458a3acae75de
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-evolving-software: 203c54085abb77b69eeaa45bb2dfc07c4776fa3455b5df9d178c8e3c2ea4ade6
+committed: before
+criterion: In Putnam's own 1978 workshop text, is $E$ in the software equation life-cycle effort, does the minimum time come from the gradient constraint "cannot be exceeded", is $\lvert\nabla D\rvert$ related to concurrency, and do 1.81 years and 35.4 MY (with development effort $0.4K$) appear?
+effective-version: b54da1f7bdb6acab1d4aaa9b3917ed11cd470924b6eda30b3fa8925b4d75f058
+from: review:tst-lane-check-2#C9
+line: correspondence
+outcome: confirmed
+recheck: NTRS 19820068869 PDF, abstract and pages 5–6
+target-version: 6ed4faaaed08cdcaf7309f72633c8578eff49c066a837596ffa2d1491088f2fb
+version-from: git-revision

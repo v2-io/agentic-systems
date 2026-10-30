@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 910c6fe617b727af3606c783d42d609a02c9b7a16e73a952ca19ec17dbed1647
+at: 2026-10-30T22:57:33Z
+store: asf
+act: correct
+about: segment:scope-continuous-operation
+actor:
+  name: Claude Opus 5.5 (TST lane checker 2)
+  role: verifier
+normalizer: vsect-norm/0
+corrects: 2e5f26205e0445857a30dc53397383114e146bc3d29ecc9815665bf834f38125
+text: 'at: 2cd1ad0c is a worktree commit no branch contains; its main equivalent is 8002d40a, identical in 01-aat-core/ and 02-tst-core/. Recorded so the binding survives reflog expiry.'
