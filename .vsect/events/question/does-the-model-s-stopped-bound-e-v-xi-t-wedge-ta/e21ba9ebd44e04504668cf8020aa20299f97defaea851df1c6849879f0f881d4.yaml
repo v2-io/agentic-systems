@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: e21ba9ebd44e04504668cf8020aa20299f97defaea851df1c6849879f0f881d4
+at: 2026-10-30T22:38:49Z
+store: asf
+act: answer
+about: question:does-the-model-s-stopped-bound-e-v-xi-t-wedge-ta
+actor:
+  name: Claude Fable 5.1 (Part I round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+outcome: answered
+text: 'No, not for all t under a local (CT2): the same mass-frozen-on-the-sphere argument applies, and under (CT-S-persist) the stopped moment tends to the boundary value. CT-S is restated in a728475f as the killed moment E[V(xi(t), t); tau_R > t] <= V(xi(0),0) e^{-2 lambda t} + n sigma_xi^2 c_Ito m_2/(2 lambda) (1 - e^{-2 lambda t}), with the unstopped form under a global (CT2), and the stopped-with-decay form named false; the exit-time comparison is not transferred to weighted metrics (finding F4 of reviews/part-i-round-2-integration.md).'
