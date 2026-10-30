@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Mixture-support dynamics under the Orient cascade (A1 Q2)
-
-Imported verbatim from `spikes/PROPOSED.md` line 49, section *PROPOSED — the spike-proposal index › Tier 2 — exploratory / next-generation*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-mixture-support-dynamics-under-the-orien-ca66 --outcome holds|stale|landed|not-an-item --why …`.
-
-| 2026-05-19 | Mixture-support dynamics under the Orient cascade (A1 Q2) | seg:def-strategy-dag | Whether the L1′-mixture fallback's support can grow under cascade-driven shared-sub-order revision, or stays SCC-count-bounded | proposed | 2026-05-19 | `def-strategy-dag` Working Notes ("Open (mixture-support dynamics)") |

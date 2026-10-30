@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# $f(H_b^B)$ emitter-side-effect function for `#der-interaction-channel-classification` §5.2 — tightens qualitative opacity-gates-targeting claim into derived for
-
-Imported verbatim from `TODO.md` line 207, section *TODO — Miscellaneous & details › Queued spike work*. Not yet re-checked against HEAD: `vsect recheck item:todo-f-h-b-b-emitter-side-effect-function-for-3a79 --outcome holds|stale|landed|not-an-item --why …`.
-
-- $f(H_b^B)$ emitter-side-effect function for `#der-interaction-channel-classification` §5.2 — tightens qualitative opacity-gates-targeting claim into derived form.

@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Empirical Experiments & Analysis
-
-Imported verbatim from `PRACTICA.md` line 36, section *PRACTICA › ⭐Theory › 🌟 Cycle priority order (added 2026-05-09)*. Not yet re-checked against HEAD: `vsect recheck item:practica-empirical-experiments-analysis-623d --outcome holds|stale|landed|not-an-item --why …`.
-
-- [ ] Empirical Experiments & Analysis

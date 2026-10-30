@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4dccaaf8835230883c17b72fc91413649c2ba31728e8e10da5ac066493f58513
+at: 2026-10-30T20:29:28Z
+store: asf
+act: recheck
+about: item:spikes-proposed-misc-scans-proposed-md-rows-for-a-present-res-198a
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 19175c01+dirty
+criterion: 'PROPOSED-MISC.md:13-15 are the three sub-bullets of ONE proposal, ''sw-reciprocal-link-check'' (a bin/ check that segment Working-Note spike language links back to PROPOSED.md and every PROPOSED row''s Details link resolves); the bullets unit split it into three fragments and dropped its heading. Not built (no such script in bin/). Superseded rather than open: the index it would police is being folded into the vsect ledger under I.3, whose KR already demands ''every target resolves'' and whose items carry their concerns: slugs mechanically. If a reciprocal check is still wanted after the fold, it is a vsect check (does an open item exist for each WN spike-proposal?), not a PROPOSED.md linter.'
+outcome: stale

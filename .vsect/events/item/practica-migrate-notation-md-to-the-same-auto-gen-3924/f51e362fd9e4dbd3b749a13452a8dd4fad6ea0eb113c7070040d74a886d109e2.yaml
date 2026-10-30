@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f51e362fd9e4dbd3b749a13452a8dd4fad6ea0eb113c7070040d74a886d109e2
+at: 2026-10-30T20:26:45Z
+store: asf
+act: recheck
+about: item:practica-migrate-notation-md-to-the-same-auto-gen-3924
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 19175c01+dirty
+criterion: 'At HEAD NOTATION.md is still hand-written (254 lines, last touched by 2d0b0a6b md-press pass); bin/term has no notation render (verbs: add/show/list/search/decide/render/lint/validate; render emits LEXICON only); terminology/README.md:209 still lists ''NOTATION.md emission'' as planned; 56 of the term entries already carry a notation: field. The same item is carried three times (PRACTICA:113, TODO.md:286 section, terminology/README:209). It now overlaps INTENT F.4 and the open vsect question on the A-symbol collision (question:notation-lists-mathcal-a-only-as-the-action-spac): a generated NOTATION is the mechanism that would make F.4''s ''declared once'' checkable rather than remembered. The premise ''lower priority than completing the LEXICON migration'' is stale; LEXICON is generated.'
+outcome: holds
+owner: F.4 (NOTATION declares each index family once)

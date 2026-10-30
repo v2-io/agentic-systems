@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 5bfb8b0595cae11a838aa043b0c02f3ddbd74bb8daeef6e37aeb38f240f06d19
+at: 2026-10-30T20:23:19Z
+store: asf
+act: recheck
+about: item:todo-nominal-denotes-opposite-scope-membershi-c7a1
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: a1c82543+dirty
+criterion: 'Read both segments at HEAD. scope-agency:19,45 still define ''nominal agents'' as P(o|do(a))=P(o|do(a'')) for all a,a'' = OUTSIDE agency; post-causal-structure:37 still labels ''Nominal coupling'' an INSIDE-agency case (query actions give distinguishable observation distributions), while its :38 ''zero coupling'' is what equals scope-agency''s nominal agents. No rename landed (git log -S''query-only coupling'' shows the term only in prose at :40). No LEXICON ''nominal'' entry (grep LEXICON.md, terminology/entries: only ''nominally-comprehensive''). The same finding is now duplicated as Working Notes in both segments (scope-agency WN ''Naming-cycle seed'', post-causal-structure WN at :69 and :88), so three homes carry one item; when it closes, those WNs go too.'
+outcome: holds
+owner: F.1 terminology (naming process)

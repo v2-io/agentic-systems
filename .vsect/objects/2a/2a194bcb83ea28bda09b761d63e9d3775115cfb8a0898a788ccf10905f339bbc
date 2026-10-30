@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# `spikes/README.md` — extend the spiker on-ramp to make clear "spike" includes sims/experiments, not just markdown derivations. ("Keep your stuff together" alrea
-
-Imported verbatim from `INTEGRATION-CLEANUP-TODO.md` line 70, section *INTEGRATION-CLEANUP-TODO.md › The work (open items) › G4. Sim/empirical extension to the spike discipline*. Not yet re-checked against HEAD: `vsect recheck item:integration-cleanup-todo-spikes-readme-md-extend-the-spiker-on-ra-9805 --outcome holds|stale|landed|not-an-item --why …`.
-
-- [ ] **`spikes/README.md`** — extend the spiker on-ramp to make clear "spike" includes sims/experiments, not just markdown derivations. ("Keep your stuff together" already permits a directory; the explicit naming is what's missing.)

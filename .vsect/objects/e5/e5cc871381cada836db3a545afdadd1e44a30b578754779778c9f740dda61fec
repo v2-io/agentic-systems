@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Root-level assembly index (when content beyond AAT warrants it).
-
-Imported verbatim from `TODO.md` line 281, section *TODO — Miscellaneous & details › Deferred — project structure / tooling*. Not yet re-checked against HEAD: `vsect recheck item:todo-root-level-assembly-index-when-content-b-bc79 --outcome holds|stale|landed|not-an-item --why …`.
-
-- Root-level assembly index (when content beyond AAT warrants it).

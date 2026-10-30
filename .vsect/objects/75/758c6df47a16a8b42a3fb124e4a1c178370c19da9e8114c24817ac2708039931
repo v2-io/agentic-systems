@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Misspecification-cost formalization (candidate Adjacent Floor under `#disc-identifiability-floor` §"Adjacent Floors").
-
-Imported verbatim (relative links rebased) from `TODO.md` line 187, section *TODO — Miscellaneous & details › Queued spike work*. Not yet re-checked against HEAD: `vsect recheck item:todo-misspecification-cost-formalization-cand-1504 --outcome holds|stale|landed|not-an-item --why …`.
-
-- Misspecification-cost formalization (candidate Adjacent Floor under `#disc-identifiability-floor` §"Adjacent Floors").

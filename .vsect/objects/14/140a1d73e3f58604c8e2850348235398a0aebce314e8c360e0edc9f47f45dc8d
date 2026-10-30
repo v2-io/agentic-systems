@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Lower-priority sweep target: ~50 deferred audit notes (Section II details, Section III appendices, TST samples). May surface insights the current segments miss;
-
-Imported verbatim from `TODO.md` line 385, section *TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › Audit-integration deferrals*. Not yet re-checked against HEAD: `vsect recheck item:todo-lower-priority-sweep-target-50-deferred-f3e6 --outcome holds|stale|landed|not-an-item --why …`.
-
-- **Lower-priority sweep target**: ~50 deferred audit notes (Section II details, Section III appendices, TST samples). May surface insights the current segments miss; sampled approach by topic affinity is the recommended pattern.

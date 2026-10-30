@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 8b2e882ba73f07648caad5b7f84434b51d1af9bc732be423bebe335ce558f4fc
+at: 2026-10-30T20:27:08Z
+store: asf
+act: recheck
+about: item:bibliography-todo-w-3-segment-citation-migration-270-vol1-44ce
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 19175c01+dirty
+criterion: Essentially not started at HEAD. Of 173 segments in 01-aat-core/src, 1 contains a natbib \cite/\citep/\citet (3 cite commands total; none use [@key]); a rough author-year regex finds ~1300 prose citations in the same tree. No commit in git log --grep=cite on 01-aat-core/src is a migration pass. The tracker's '~270 Vol1 prose references' undercounts by this rough measure (it may have counted distinct works). This is the mechanism INTENT F.2/F.3 needs (faithful, checkable citations), so it should be owned there rather than as a bibliography-tooling chore.
+outcome: holds
+owner: F.2 / F.3 (citations reach the bodies faithfully)

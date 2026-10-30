@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 47bfcc1b1b232f05fb1b7c8f040dc2dbf63e26555d85c603ededc797d18e94b1
+at: 2026-10-30T20:26:11Z
+store: asf
+act: recheck
+about: item:todo-lint-md-directory-arguments-cbfb
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 19175c01+dirty
+criterion: bin/lint-md is deprecated as the lint gate (Joseph, 2026-08-22, per doc/sop/agents.sop.md 'bin/lint-md is deprecated ... the lint gate is md-press'); I.2's 2fe774d2 made canon pass md-press. A feature request against a retired tool is moot. The underlying need (lint a tree, not a file list) moved to md-press, whose STATUS.md already records 'no recursive mode - scoping a tree ... is the caller's job' as a deliberate choice; if that is wanted it is an md-press item in its own repo, not an ASF item.
+outcome: stale

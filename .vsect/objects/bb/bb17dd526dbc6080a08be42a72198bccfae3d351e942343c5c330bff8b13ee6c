@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# `bin/lint-readme` (J-15 from `msc/judgment-calls-readme-cycle-2026-04-26.md`) — slug-existence + cross-reference link validation. Quick to write; should land be
-
-Imported verbatim (relative links rebased) from `TODO.md` line 244, section *TODO — Miscellaneous & details › Documentation queued*. Not yet re-checked against HEAD: `vsect recheck item:todo-bin-lint-readme-j-15-from-msc-judgment-c-dd4b --outcome holds|stale|landed|not-an-item --why …`.
-
-- **`bin/lint-readme`** (J-15 from `msc/judgment-calls-readme-cycle-2026-04-26.md`) — slug-existence + cross-reference link validation. Quick to write; should land before heavy reliance on the README pipeline.

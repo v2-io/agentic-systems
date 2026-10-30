@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 8e274e63678d3fc9ac1b004a6bcbf0e7f31ff81d3596b8a613bfe4c363766a1d
+at: 2026-10-30T20:29:12Z
+store: asf
+act: recheck
+about: item:spikes-proposed-substrate-transfer-asymmetry-origin-or-3-0be3
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 19175c01+dirty
+criterion: 'spikes/PROPOSED.md:26 is the Tier-1 index row whose Details cell points at PROPOSED-ADVANCED §Phase-3 #11, the same proposal; that entry is kept open as item:spikes-proposed-advanced-11-substrate-transfer-asymmetry-origin-d-9171. Closing the row avoids two ledger items for one piece of work. Vocabulary note: the honest word is ''duplicate-of'', which recheck does not have.'
+outcome: not-an-item

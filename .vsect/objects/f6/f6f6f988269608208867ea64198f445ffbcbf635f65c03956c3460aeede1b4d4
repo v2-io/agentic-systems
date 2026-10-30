@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Build-pipeline emit (current `bin/build-monograph` behavior)
-
-Imported verbatim from `BIBLIOGRAPHY-TODO.md` line 97, section *Per-paper claim verification (works for AAT segment cites too)*. Not yet re-checked against HEAD: `vsect recheck item:bibliography-todo-build-pipeline-emit-current-bin-build-mo-975f --outcome holds|stale|landed|not-an-item --why …`.
-
-```bash

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 00bad8c408c0ce569a0206711f992d0614b46e38cfc2690fb020ad3a101fc0c5
+at: 2026-10-30T20:23:54Z
+store: asf
+act: recheck
+about: item:todo-def-unity-dimensions-a13-f146-u-m-i-h-no-6bb8
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: a1c82543+dirty
+criterion: 'Two-part item; the four outcome words force one label. Part (a) U_M normalization LANDED in f8d9151a (2026-05-29): def-unity-dimensions:34-36 at HEAD divides total correlation by (n-1)H_joint; I re-derived the bound (each marginal H_i <= H_joint, so I <= (n-1)H_joint, equality iff each model determines the others; 0 for independent). Part (b) F154 HOLDS narrowed: result-unity-closure-mapping:60-62 still states eps_x = 0 for ''linear-Gaussian dynamics with consistent linear projections'' with no invariance hypothesis, then :64 adds ''exact when the range of Lambda_x is invariant''; the summary at :16 says ''eps_x identically 0 regardless'' and then lists non-invariance as an exception. The condition exists in prose since 9745397b; what is open is moving it into the statement''s hypotheses (one-line repair). The segment''s own off-ramp WN (:161) still lists F151-F156 as un-adjudicated; F153/F155/F156 never reached TODO.'
+outcome: holds
+owner: C.1 integrator (unassigned)

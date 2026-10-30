@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: d6a4bf140eec8e86acf6775420bfc6baa76e79de0154228fdd96b272c3990073
+at: 2026-10-30T20:28:40Z
+store: asf
+act: recheck
+about: item:todo-big-picture-armor-keep-exactly-as-is-no-new-mathemat-fec1
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 19175c01+dirty
+criterion: 'TODO-big-picture.md:32 is one of two register principles (''Armor'' / ''Contribution'') stated under the file''s thesis; the bullets unit swept it in. Not work owed. But it is a standing claim about the theory, and it conflicts with the always-loaded SOP: Armor says ''no new mathematical machinery, no new foundations'', while doc/sop/agents.sop.md:267-272 (Math-novelty recognition, Joseph 2026-05-21) says AAT invents tools, methodologies and ''even some novel mathematical notation'' (tempo as tensor capacity, GUC classes, closure defect, ...). One of the two is wrong about what ASF is, and it is a B.3/A question, not a tracker chore. Also stale: its pointer ''CLAUDE.md:171 NIH-syndrome guard'' now sits at agents.sop.md:255. Lines 32-33 and 43-47 of the same file (Contribution, In kind, Verify, Strengthen, Integration, Peer-voice) are the same kind of unit and were imported as 6 more items.'
+outcome: not-an-item

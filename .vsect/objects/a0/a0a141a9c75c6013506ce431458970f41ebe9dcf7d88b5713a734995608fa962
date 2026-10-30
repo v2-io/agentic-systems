@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Consider promoting Alan's "split goal state and model state explicitly in agent context notes" as a TST or logogenic-agents instantiation. Alan's instinct from
-
-Imported verbatim (relative links rebased) from `TODO.md` line 108, section *TODO — Miscellaneous & details › README v2 pass (queued from 2026-04-27 first-human-feedback cycle) › Surfaced from Alan's review*. Not yet re-checked against HEAD: `vsect recheck item:todo-consider-promoting-alan-s-split-goal-sta-39ec --outcome holds|stale|landed|not-an-item --why …`.
-
-- **Consider promoting Alan's "split goal state and model state explicitly in agent context notes" as a TST or logogenic-agents instantiation.** Alan's instinct from running production AI Dungeon agents was the same decomposition the framework names as $G_t = (O_t, \Sigma_t)$ vs $M_t$. This is field-grade convergent-independent confirmation of the central decomposition; worth surfacing as a `02-tst-core/` or `03-llm-core/` instantiation.

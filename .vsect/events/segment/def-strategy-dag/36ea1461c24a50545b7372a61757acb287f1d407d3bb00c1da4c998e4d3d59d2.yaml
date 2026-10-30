@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: 36ea1461c24a50545b7372a61757acb287f1d407d3bb00c1da4c998e4d3d59d2
+at: 2026-10-30T19:42:24Z
+store: asf
+act: revise
+about: segment:def-strategy-dag
+actor:
+  name: hooks-builder
+  session: https://claude.ai/code/session_013g85SGMtMDsCYM9fXWwTEp
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+declarations:
+  depends:
+  - scope-and-or
+  - post-causal-structure
+  - def-pearl-causal-hierarchy
+  - form-objective-functional
+  - def-strategy-dimension
+  stage: draft
+  status: conditional
+  type: definition
+from-version: 17db22eaef31b8bdd2b3d5207ea38edc08ada691e8691d72f50579b57ccb57ba
+own-version: 6953cb9190bd8dab4057fefccebd9cd4e527017050c165ab4f203986115377f1
+record: 01-aat-core/src/def-strategy-dag.md

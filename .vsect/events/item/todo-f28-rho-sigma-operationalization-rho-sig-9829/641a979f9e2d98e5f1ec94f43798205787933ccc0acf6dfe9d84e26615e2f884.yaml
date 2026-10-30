@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 641a979f9e2d98e5f1ec94f43798205787933ccc0acf6dfe9d84e26615e2f884
+at: 2026-10-30T20:25:46Z
+store: asf
+act: recheck
+about: item:todo-f28-rho-sigma-operationalization-rho-sig-9829
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: a1c82543+dirty
+criterion: 'schema-strategy-persistence at HEAD still says (:99) strategic disturbance is ''Still open as a formalized quantity - currently a domain parameter'', while its forgetting prerequisite lambda < 1 - rho_Sigma/R_Sigma (:58-62) and the newer deriv-evidence-allocation-ceiling (status exact; lag rho_Sigma/pi_i) both depend on it. No segment gives an estimator; no live C-spike touches rho_Sigma (C3''s map is about allocation vs distortion of the belief update, not rho_Sigma). Source finding is pending-findings-2026-04-23 F28 (note: ''F28'' is reused for an unrelated finding in audit-findings-526815; tracker IDs are per-audit). My read on the finding''s framing, inference not verified: its ''closer to a circularity'' diagnosis looks overstated. Drift can be estimated from the raw outcome stream y (innovation-covariance matching, Mehra 1970 style), not from the lambda-calibrated credences, so the obstacle is sample cost on rarely-observed edges, which couples it to EA.1''s 1/pi_i lag. That makes it a strengthening candidate with a likely positive answer for observed edges and a floor for starved ones.'
+outcome: holds
+owner: unassigned (C.2 candidate strengthening)

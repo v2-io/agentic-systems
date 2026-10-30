@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 712337b3424bdfc6b15fcbd891f24bf1da6887885b2303d60ec07b59cf837e16
+at: 2026-10-30T20:24:21Z
+store: asf
+act: revise
+about: segment:der-observability-dominance
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+change: unclassified
+declarations:
+  depends:
+  - def-strategy-dag
+  - emp-update-gain
+  - def-mismatch-signal
+  stage: draft
+  status: robust-qualitative
+  type: derived
+from-version: ee3a5202c47b597fcfe8001a33cad08297314558f8bd47af999565f59b09dcc6
+own-version: 4a6864390dee86241a64b5e047140ca1fc6393ff2b2e81ad2582cfdf15da8893
+record: 01-aat-core/src/der-observability-dominance.md

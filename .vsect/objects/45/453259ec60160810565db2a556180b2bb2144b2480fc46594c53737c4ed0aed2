@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# `#disc-separability-pattern` → `#disc-separability-ladder` (Round-1 consensus; lifted from R1/R2-deferred to pending-post-R2 by 2026-05-04 prior-art investigati
-
-Imported verbatim from `TODO.md` line 223, section *TODO — Miscellaneous & details › Naming pipeline — specific deferred items*. Not yet re-checked against HEAD: `vsect recheck item:todo-disc-separability-pattern-disc-separabil-928f --outcome holds|stale|landed|not-an-item --why …`.
-
-- `#disc-separability-pattern` → `#disc-separability-ladder` (Round-1 consensus; lifted from R1/R2-deferred to pending-post-R2 by 2026-05-04 prior-art investigation; aligns with B-N-Sep paper's Hintikka cite-and-extend posture). Companion: three rung-name decision pending Joseph (`separable core / structured repair / general open` vs Hintikka echo `definable core / identifiable region / non-identifiable frontier` vs alternates).

@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Pedagogy (initially needs vision & plan)
-
-Imported verbatim from `PRACTICA.md` line 38, section *PRACTICA › ⭐Theory › 🌟 Cycle priority order (added 2026-05-09)*. Not yet re-checked against HEAD: `vsect recheck item:practica-pedagogy-initially-needs-vision-plan-1588 --outcome holds|stale|landed|not-an-item --why …`.
-
-- [ ] Pedagogy (initially needs vision & plan)

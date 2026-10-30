@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# `msc/naming/master-list-curated.json` — Master vote-aggregation source. `rename_status` field tracks per-current canonicalize / rename / excluded status (88+ ma
-
-Imported verbatim from `TERMINOLOGY-TODO.md` line 101, section *TERMINOLOGY-TODO › How this file relates to other naming-cycle files*. Not yet re-checked against HEAD: `vsect recheck item:terminology-todo-msc-naming-master-list-curated-json-mast-1803 --outcome holds|stale|landed|not-an-item --why …`.
-
-- `msc/naming/master-list-curated.json` — **Master vote-aggregation source.** `rename_status` field tracks per-current canonicalize / rename / excluded status (88+ marked).

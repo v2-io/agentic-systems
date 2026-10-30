@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f3727e496a27be50116816b390da5c58b1a7f1f81d5378d0ac89ba6bb1acf4ac
+at: 2026-10-30T20:29:46Z
+store: asf
+act: recheck
+about: item:spikes-routing-spike-language-as-causal-substrate-theor-17d5
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 82eac7d3+dirty
+criterion: 'Two items in one bullet. (1) Theorem-1 (discourse-act -> Pearl L2) still lives only in spikes/spike-language-as-causal-substrate/01-derivation.md; no segment in 0*/src mentions ''discourse act'' or cites the spike. Stranded derived material: a G.2 item. The ''reserved promotion call for Joseph'' framing is stale under this effort (gates on Joseph lifted, agents.sop.md standings). (2) The C2-star gap (der-loop-interventional-access asserting the (C2) sequential-ignorability violation that ~/src/behavioral-floor derives) is now inside a live spike: spikes/spike-loop-identification-decision-state-2026-10-30/ (C.2, C2 spiker), whose neighborhood map reads der-loop-interventional-access:38-47 and NeurIPS Paper 2 Key Lemma 3 but does not mention behavioral-floor or the language spike (grep: 0 hits). That spike may want both as inputs. At HEAD der-loop-interventional-access:41 says (C2) fails ''generic for any agent whose action depends on internal state'', still asserted, not derived.'
+outcome: holds
+owner: G.2 (stranded additions) + C.2 for the C2-star half

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 1df1b00173369d2b80d26b5f9a39c1a2ef255bfb5b8ae0e614549ed4b395178a
+at: 2026-10-30T20:22:59Z
+store: asf
+act: recheck
+about: item:todo-algebra-typo-in-01-aat-core-src-deriv-pe-2e58
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: a1c82543
+criterion: 'Read deriv-persistence-cost at HEAD. Body lines 39-43 are unchanged since 9745397b: RDF written as n*sigma_w^2/(4 D^2) with TOTAL D^2 = n*sigma_w^2/(2 alpha), which evaluates to alpha/2, and the line then asserts ''= n alpha/2''. The per-dimension repair the tracker names was never applied. Worse: a Working Note added by 134b5a4e (gold-lift A16) says ''RESOLVED - do not re-open ... the current canonical derivation is the per-dimension form'', which is false at HEAD, so the canon now hides the defect from auditors. The final result n alpha/2 is right (sum of n per-dimension alpha/2); the body''s RDF for total distortion should be n^2 sigma_w^2/(4 D^2). Fix = replace the derivation with the per-dimension form and delete the false RESOLVED note. C.1 defect, not a typo.'
+outcome: holds
+owner: C.1 integrator (unassigned)

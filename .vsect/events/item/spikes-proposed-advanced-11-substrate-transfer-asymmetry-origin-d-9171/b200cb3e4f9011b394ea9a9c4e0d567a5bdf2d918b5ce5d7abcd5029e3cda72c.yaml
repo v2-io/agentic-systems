@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: b200cb3e4f9011b394ea9a9c4e0d567a5bdf2d918b5ce5d7abcd5029e3cda72c
+at: 2026-10-30T20:29:08Z
+store: asf
+act: recheck
+about: item:spikes-proposed-advanced-11-substrate-transfer-asymmetry-origin-d-9171
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 19175c01+dirty
+criterion: 'No spike exists (ls spikes: nothing on substrate transfer); hyp-substrate-transfer-asymmetry at HEAD still lists candidates A/B/C (:62) unexplored. Real, but the framing in both this entry and the segment needs correcting before anyone spikes it. (1) The ''no-go'' (:30-34, :48) shows only that the rate-distortion CEILING on S_id, min(C1,C2), is symmetric in direction. An asymmetry in ACHIEVED S_id does not contradict a symmetric upper bound, so this entry''s ''an empirically observed asymmetry ... that contradicts it'' is false; the derived content is weaker than ''precludes any direction-of-transfer effect'' suggests (it precludes one only at the floor). (2) The segment says ''The asymmetry is real (empirically)'' (:62) while its own ES (:52) says the support is an operational record, not a controlled measurement. So the spike''s first question is whether the asymmetry is measured at all, which makes this partly an E-objective item. spikes/PROPOSED.md:26 is an index row for this same entry, closed as not-an-item.'
+outcome: holds
+owner: unassigned (04-eli-core spike)

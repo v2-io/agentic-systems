@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 246f975c39cf47d31d2dfb50a3f11406219cc689fae4e93ca4571039f9032520
+at: 2026-10-30T20:24:52Z
+store: asf
+act: recheck
+about: item:todo-observability-dominance-product-formula-b54f
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: a1c82543+dirty
+criterion: 'der-observability-dominance at HEAD: the formula conf_obs(P) = conf(P)*obs(P) still sits under the eq-tag ''*[Derived (observability-dominance, from update-gain + strategy-dag)]*'' while the segment''s own Epistemic Status calls it ''a first-order approximation''. Nothing in emp-update-gain yields a product; and no other segment uses conf_obs (grep 0*/src). So tag and status disagree and the formula is load-free: honest repair is to delete it or retag it [Formulation]. Part II apparatus, so B.1''s branch may overtake this judgment. Adjacent finding, not in the tracker, raised as a question: the same segment''s ''observability investment tradeoff'' (improvement ''positive whenever theta_1 > 1/2'') is not in its cited source deriv-edge-credence-dynamics B.2/B.3, and under per-attempt counts (n_1 = n_Phi = N, n_2 ~ theta_1 N) the per-edge weakest rate theta_1/(n_2+1) = 1/(N+1/theta_1) is BELOW the plan rate 1/(N+1) for every theta_1 < 1.'
+outcome: holds
+owner: B.1 record writer (Part II apparatus)

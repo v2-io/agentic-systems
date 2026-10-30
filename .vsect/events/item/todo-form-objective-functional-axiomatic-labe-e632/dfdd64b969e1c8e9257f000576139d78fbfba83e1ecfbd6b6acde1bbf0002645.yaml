@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: dfdd64b969e1c8e9257f000576139d78fbfba83e1ecfbd6b6acde1bbf0002645
+at: 2026-10-30T20:26:01Z
+store: asf
+act: recheck
+about: item:todo-form-objective-functional-axiomatic-labe-e632
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: a1c82543+dirty
+criterion: 'Landed by 9fb7c128 (''Integrate form-objective-functional spike: revealed-preference -> named axioms''). At HEAD form-objective-functional ES:48-62 grounds the real-valued codomain as a Debreu (1954) representation under named axioms (A1 complete, A2 transitive, A3 continuous, plus a fourth), states they can fail, names the excluded agents (E1 lexicographic, E2 ...) and cites Afriat/GARP for what revealed choices do and do not fix. That is the ''formulation choice'' labeling the tracker asked for, done as a characterized scope rather than a bare label. B.1''s branch (bc80f80d, unmerged) adds a 16-line Claim Record to this segment and does not reopen the codomain question.'
+outcome: landed

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 9d32683fcf1fb5d156f2fc73a415fb7088dfb41dc93deecb230268dca3538d65
+at: 2026-10-30T20:28:16Z
+store: asf
+act: recheck
+about: item:format-todo-b8-specify-footnote-convention-in-format-9573
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 19175c01+dirty
+criterion: 'The convention it asks for landed eight hours after the item was written: d8b5d349 (2026-05-13 17:04, ''FORMAT: add Reference Kinds section'') put a Footnote row in doc/sop/format.sop.md''s Reference Kinds table (source form ''[^anchor]'' markdown or ''\footnote{...}'' raw TeX, final form \footnote numbered at page bottom, scope intra-segment), exactly the two forms B8 names; B8 itself is from 741158fe the same morning. Its premise ''zero footnote usage anywhere in ASF segments'' is also gone: at HEAD 22 segments in 0*/src carry 137 footnote definitions (e.g. deriv-regime-marginal-indistinguishability uses date-stamped anchors like [^bg2-2026-05-21] as search-log provenance). Left open, and not what B8 says: whether anchor naming should be specified, given that the de-facto use is provenance stamps.'
+outcome: landed

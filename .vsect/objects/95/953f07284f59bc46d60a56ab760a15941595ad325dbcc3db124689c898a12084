@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# LEXICON regeneration (potentially, see below)
-
-Imported verbatim (relative links rebased) from `PRACTICA.md` line 71, section *PRACTICA › Ops › CI/CD*. Not yet re-checked against HEAD: `vsect recheck item:practica-lexicon-regeneration-potentially-see-bel-65dd --outcome holds|stale|landed|not-an-item --why …`.
-
-- [ ] LEXICON regeneration (potentially, see below)

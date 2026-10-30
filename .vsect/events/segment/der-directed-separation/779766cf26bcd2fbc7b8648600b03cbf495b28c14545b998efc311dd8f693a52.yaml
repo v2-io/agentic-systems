@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 779766cf26bcd2fbc7b8648600b03cbf495b28c14545b998efc311dd8f693a52
+at: 2026-10-30T19:43:32Z
+store: asf
+act: revise
+about: segment:der-directed-separation
+actor:
+  name: hooks-builder
+  session: https://claude.ai/code/session_013g85SGMtMDsCYM9fXWwTEp
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+declarations:
+  depends:
+  - form-complete-agent-state
+  - der-recursive-update
+  - scope-agency
+  stage: draft
+  status: conditional
+  type: derived
+from-version: f9fff0493c627508c893923b08734cb327f7e4db59fd9e68d55bf51a9c6c6713
+own-version: ba27167443e5c75d885e8dbf0fdae5230162778e17148de67923dd0d7b89cfe3
+record: 01-aat-core/src/der-directed-separation.md

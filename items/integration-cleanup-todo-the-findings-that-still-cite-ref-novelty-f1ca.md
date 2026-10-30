@@ -1,0 +1,16 @@
+---
+kind: item
+provenance: imported
+source: INTEGRATION-CLEANUP-TODO.md:63
+section: INTEGRATION-CLEANUP-TODO.md › The work (open items) › G3. Citation/bibliography discipline — remaining ASF-side tails
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T20:28:29Z by Claude Opus 5.5 (item rechecker, pilot)
+owner: F.3 (canon-boundary citations faithful)
+---
+
+# The Findings that still cite `ref/Novelty_defense_and_integration.md`. Convert to either real external prior-art citations or self-contained statements. Still p
+
+Imported verbatim (relative links rebased) from `INTEGRATION-CLEANUP-TODO.md` line 63, section *INTEGRATION-CLEANUP-TODO.md › The work (open items) › G3. Citation/bibliography discipline — remaining ASF-side tails*. Not yet re-checked against HEAD: `vsect recheck item:integration-cleanup-todo-the-findings-that-still-cite-ref-novelty-f1ca --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **The Findings that still cite `ref/Novelty_defense_and_integration.md`.** Convert to either real external prior-art citations or self-contained statements. Still present 2026-08-22: 8 Search-Log hits in `FINDINGS.md` plus segment bodies (`der-directed-separation`, `der-causal-insufficiency-detection`, `deriv-causal-ib-exploration`, `deriv-causal-ib-lmi`, and four TST segments). Part of G2 *and* G3 — the discipline build is what makes the cleanup possible without leaving the Findings hanging.

@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Gaps, spikes, & ideation
-
-Imported verbatim from `PRACTICA.md` line 39, section *PRACTICA › ⭐Theory › 🌟 Cycle priority order (added 2026-05-09)*. Not yet re-checked against HEAD: `vsect recheck item:practica-gaps-spikes-ideation-888d --outcome holds|stale|landed|not-an-item --why …`.
-
-- [ ] Gaps, spikes, & ideation

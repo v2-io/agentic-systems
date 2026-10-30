@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: f3fc7c721035d5d5a41f6913aa41a0588352364117627ae0c11fb5a6dc5297b9
+at: 2026-10-30T20:17:56Z
+store: asf
+act: revise
+about: segment:def-strategy-dag
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+change: redefined
+declarations:
+  depends:
+  - scope-and-or
+  - post-causal-structure
+  - def-pearl-causal-hierarchy
+  - form-objective-functional
+  - def-strategy-dimension
+  stage: draft
+  status: conditional
+  type: definition
+from-version: 6953cb9190bd8dab4057fefccebd9cd4e527017050c165ab4f203986115377f1
+own-version: 2b2fc6f1f569a82a8b61befb7f593d7f2867f78d9a6ef766d676de5a69412396
+record: 01-aat-core/src/def-strategy-dag.md

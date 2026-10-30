@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Chapter-closing discussion segments (new pattern, pilot landed 2026-05-13) use an `impl-` *prefix*: `impl-persistence-and-limits`. The remaining 7+ AAT chapter-
-
-Imported verbatim (relative links rebased) from `TODO.md` line 307, section *TODO — Miscellaneous & details › Deferred — project structure / tooling › Chapter-discussion slug-prefix discipline + bin/align-slug recognition (queued 2026-05-13)*. Not yet re-checked against HEAD: `vsect recheck item:todo-chapter-closing-discussion-segments-new-5b2a --outcome holds|stale|landed|not-an-item --why …`.
-
-- **Chapter-closing discussion segments** (new pattern, pilot landed 2026-05-13) use an `impl-` *prefix*: `impl-persistence-and-limits`. The remaining 7+ AAT chapter-ends and the eventual TST / logogenic chapter-ends will follow this form.

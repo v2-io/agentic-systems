@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: fd51304bae7f6a63f953364e46291376cf6075761f83db6f263866a2e9e326c9
+at: 2026-10-30T20:24:21Z
+store: asf
+act: revise
+about: segment:der-causal-insufficiency-detection
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+change: unclassified
+declarations:
+  depends:
+  - result-structural-adaptation-necessity
+  - def-strategy-dag
+  - der-loop-interventional-access
+  - der-causal-hierarchy-requirement
+  - def-pearl-causal-hierarchy
+  - def-causal-information-yield
+  stage: draft
+  status: conditional
+  type: derived
+from-version: a2840fefda88d10a27f295351ab4852785f716801b358ffab7e1b238a437cbc4
+own-version: 63ddfbedf3372912a64e10c12593f05882ab040f52edfa8b1640efc5a58b54bd
+record: 01-aat-core/src/der-causal-insufficiency-detection.md

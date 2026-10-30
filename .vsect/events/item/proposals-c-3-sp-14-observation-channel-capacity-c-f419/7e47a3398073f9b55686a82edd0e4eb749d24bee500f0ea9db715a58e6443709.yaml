@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 7e47a3398073f9b55686a82edd0e4eb749d24bee500f0ea9db715a58e6443709
+at: 2026-10-30T20:30:42Z
+store: asf
+act: recheck
+about: item:proposals-c-3-sp-14-observation-channel-capacity-c-f419
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 82eac7d3+dirty
+criterion: 'Partly overtaken, partly open. The ''elevate to first-class'' half has effectively happened in the impl layer: impl-persistence-and-limits:41 at HEAD states the capacity floor as ''the first-class diagnostic'' (>= T/2 nats per unit time per dimension, nT/2 total), and deriv-persistence-cost:94,126,171 carry it as a third failure mode. The notation half has not: NOTATION.md has no C^(k) / channel-capacity row (grep ''capacity'' finds only R as ''model class capacity'', a second, different use of the word), and the ~6 cross-references to der-observability-dominance / hyp-communication-gain / der-interaction-channel-classification were not made. Before anyone elevates further: the floor rests on deriv-persistence-cost''s derivation, whose displayed algebra drops a factor n (see item:todo-algebra-typo-in-01-aat-core-src-deriv-pe-2e58; result right, derivation wrong), and on the identification alpha = T, which der-gain-sector-bridge gives for the scalar Kalman case only. The proposal''s ''+4 framework'' value score and effort minutes are 2026-04 estimates, not current facts.'
+outcome: holds
+owner: F.4 (NOTATION) with the C.1 owner of deriv-persistence-cost

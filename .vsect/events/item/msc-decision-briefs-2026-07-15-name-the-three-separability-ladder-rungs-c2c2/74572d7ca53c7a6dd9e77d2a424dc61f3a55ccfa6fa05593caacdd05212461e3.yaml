@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 74572d7ca53c7a6dd9e77d2a424dc61f3a55ccfa6fa05593caacdd05212461e3
+at: 2026-10-30T20:30:24Z
+store: asf
+act: recheck
+about: item:msc-decision-briefs-2026-07-15-name-the-three-separability-ladder-rungs-c2c2
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 82eac7d3+dirty
+criterion: 'Undecided at HEAD: disc-separability-pattern:19,33 still uses the working names ''separable core / structured repair / general open''; no bin/term decision exists for them; the brief''s prerequisite check (Hintikka''s senses against the ladder''s) was never run. A substantive caution for whoever decides, my inference from reading both: the brief''s lead option maps rung 3 to ''non-identifiable'', but the segment''s rung 3 is ''general open'' (not yet solved), while impossibility results belong to the companion #disc-identifiability-floor (the ''negative half'', :50-58). Naming rung 3 ''non-identifiable'' would assert a no-go for every ladder where only the absence of a result is established. Also the brief paraphrases the rungs as ''fully separable / separable after repair / not separable in general'', which already drifts the same way. Decision-brief framing (''Joseph picks'') is stale; the gate is lifted, and the item is resolvable on the merits.'
+outcome: holds
+owner: F.1 terminology (naming process); not routed to Joseph under this effort

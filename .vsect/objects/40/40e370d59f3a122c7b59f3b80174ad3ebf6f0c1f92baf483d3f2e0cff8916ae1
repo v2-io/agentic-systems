@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# `bin/lint-readme` deferred (J-15) — slug-existence + cross-reference link validation. Quick-to-write tool; should land before heavy reliance on the pipeline. In
-
-Imported verbatim from `TODO.md` line 120, section *TODO — Miscellaneous & details › README v2 pass (queued from 2026-04-27 first-human-feedback cycle) › Deferrals from 2026-04-26 doc-pipeline cycle (`msc/judgment-calls-readme-cycle-2026-04-26.md`)*. Not yet re-checked against HEAD: `vsect recheck item:todo-bin-lint-readme-deferred-j-15-slug-exist-832e --outcome holds|stale|landed|not-an-item --why …`.
-
-- **`bin/lint-readme` deferred** (J-15) — slug-existence + cross-reference link validation. Quick-to-write tool; should land before heavy reliance on the pipeline. Independent of the README content pass; can land in parallel.

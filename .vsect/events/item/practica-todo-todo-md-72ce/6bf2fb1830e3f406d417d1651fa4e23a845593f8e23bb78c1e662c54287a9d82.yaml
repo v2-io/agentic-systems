@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 6bf2fb1830e3f406d417d1651fa4e23a845593f8e23bb78c1e662c54287a9d82
+at: 2026-10-30T20:26:45Z
+store: asf
+act: recheck
+about: item:practica-todo-todo-md-72ce
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 19175c01+dirty
+criterion: PRACTICA.md:9 is '- [ ] [TODO](TODO.md)', a checkbox whose content is a link to another tracker. It is navigation; the checkbox unit swept it in. The TODO.md lines it points at are imported separately (158 items).
+outcome: not-an-item

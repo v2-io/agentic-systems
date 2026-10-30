@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 8e2216499b9701654c084d2d07081ed96b6b5f9b6aacd96e1abe4118ad4f0a79
+at: 2026-10-30T20:25:16Z
+store: asf
+act: recheck
+about: item:todo-heavy-tailed-disturbances-model-s-assume-f3de
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: a1c82543+dirty
+criterion: 'The tracker line reads as a scope fact, and as a scope fact it is already in canon at HEAD: result-sector-persistence-template ES (:102), result-sector-condition-stability WN (:85), deriv-discrete-sector-condition WN (:204) all say neither Model D nor S covers heavy tails and route them to structural adaptation. What remains open is the strengthening: no canon segment states what persistence looks like under heavy tails. The live C1 spike (spikes/spike-exit-time-model-s-2026-10-30/03-derivation.md item 5) leaves heavy tails out of scope but cites the known result that under alpha-stable forcing exit is driven by one large jump with expected exit time polynomial, not exponential, in noise amplitude (Imkeller-Pavlyukevich 2006, citation unverified there). That is the honest replacement for canon''s current routing claim. Also: deriv-discrete-sector-condition WN :222 says infinite variance means the environment ''cannot be survived by parametric adaptation'' because the mean-square Lyapunov proof fails; a failed proof is not an impossibility (clipped/robust updates and polynomial exit times both contradict ''cannot survive''), so that WN overstates.'
+outcome: holds
+owner: unassigned (C.2-adjacent; see C1 spike)

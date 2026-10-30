@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: edbe0fae4631273da3751e8a14b86f89c76e1291ada75210803c63fda7e50eac
+at: 2026-10-30T20:27:45Z
+store: asf
+act: recheck
+about: item:terminology-todo-stale-cross-reference-def-agent-spectrum-d614
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 19175c01+dirty
+criterion: 'Landed by 4161611c (2026-05-11, ''Add: disc-continuity-stance segment + re-ground 5 stance entries''): the five-stance taxonomy became canon segment 01-aat-core/src/disc-continuity-stance.md and def-agent-spectrum''s paragraph (now :58) cites #disc-continuity-stance instead of ''Agent Continuity Stance in LEXICON.md''. At HEAD no segment in 0*/src points at a LEXICON stance section (grep for LEXICON.md near ''stance'' returns nothing). The tracker''s ''multiple segments still point to the old structure'' is also no longer true. The line survived in TERMINOLOGY-TODO for 5+ months after the fix.'
+outcome: landed

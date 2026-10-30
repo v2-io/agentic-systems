@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 58aaed47b78e058dc8d33e5f870b6b0059c7d5751b62b486449556ba3308fb7a
+at: 2026-10-30T20:27:45Z
+store: asf
+act: recheck
+about: item:terminology-todo-notation-collision-mathcal-c-t-is-used-f-6a75
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 19175c01+dirty
+criterion: 'Holds at HEAD, but the framing is off. terminology/entries/continuity.md and chronica.md both carry notation $\mathcal C_t$ and primary_source def-chronica, so LEXICON.md:71 and :88 print the same symbol for two terms. It is not a collision in the mathematics: continuity''s own brief defines it as a property OF the chronica (''C_t extends without forking''), so continuity has no symbol of its own and its notation field is mis-assigned. The repair is deleting continuity''s notation (or making it read as a predicate on C_t), via bin/term decide, not choosing a new symbol. Connects to TERMINOLOGY-TODO Breakage A (the ''Persistence'' subgroup mixing three things) and decision-brief ''Approve the LEXICON Continuity->Persistence reorg'', still open.'
+outcome: holds
+owner: F.4 (index families declared once)

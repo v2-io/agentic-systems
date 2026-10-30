@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: a1ae9c9a450ea52db58e114e711fc60fcb516754d643d19e9f0b6a8163daa912
+at: 2026-10-30T20:24:21Z
+store: asf
+act: revise
+about: segment:der-loop-interventional-access
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+change: unclassified
+declarations:
+  depends:
+  - der-causal-hierarchy-requirement
+  - der-recursive-update
+  - post-causal-structure
+  - scope-agent-identity
+  stage: draft
+  status: exact
+  type: derived
+from-version: 6312906b577aa7341d62651f5879ad25ff822ab06ad921ba95263b01ca160d2c
+own-version: 70e914317fa2ac7007df404f6ab4840443f90dc651815371a1b42dba53ba1bcd
+record: 01-aat-core/src/der-loop-interventional-access.md

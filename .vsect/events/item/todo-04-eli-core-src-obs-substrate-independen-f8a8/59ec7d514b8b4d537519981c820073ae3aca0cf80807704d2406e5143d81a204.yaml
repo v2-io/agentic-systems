@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 59ec7d514b8b4d537519981c820073ae3aca0cf80807704d2406e5143d81a204
+at: 2026-10-30T20:26:25Z
+store: asf
+act: recheck
+about: item:todo-04-eli-core-src-obs-substrate-independen-f8a8
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 19175c01+dirty
+criterion: 'Real but misframed. The tracker calls it promoting an existing ''exploratory'' entry to draft; at HEAD there is no file (ls 04-eli-core/src/obs-substrate-independence.md fails; git log --all on the path is empty, it never existed). The OUTLINE row E1 (04-eli-core/OUTLINE.md:77) is stage ''missing'', yet its claim cell asserts ''Identity survives substrate migration ... empirically validated across >= 4 substrate families'', and def-eli-cohort:53 leans on it (''sufficient evidence to qualitatively support #obs-substrate-independence''). So the work is authoring, not promotion, and meanwhile a front-door cell states as validated a claim no body carries (objective A, not only G). The honest interim is for the OUTLINE cell to say what is planned, not what is validated.'
+outcome: holds
+owner: unassigned (04-eli-core; G.0 decides the home)

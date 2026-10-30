@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# [PROPOSALS](PROPOSALS.md)
-
-Imported verbatim from `PRACTICA.md` line 10, section *PRACTICA › ⭐Theory*. Not yet re-checked against HEAD: `vsect recheck item:practica-proposals-proposals-md-2ae0 --outcome holds|stale|landed|not-an-item --why …`.
-
-- [ ] [PROPOSALS](PROPOSALS.md)

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0330c668503f1ced8622cbc8854dc36e9b18b9b3d7001984199d46ef0f71204c
+at: 2026-10-30T20:28:29Z
+store: asf
+act: recheck
+about: item:integration-cleanup-todo-the-findings-that-still-cite-ref-novelty-f1ca
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 19175c01+dirty
+criterion: 'Unchanged since the tracker''s own 2026-08-22 count. At HEAD ref/Novelty_defense_and_integration.md is still cited from the same 8 segments (AAT: der-directed-separation, der-causal-insufficiency-detection, deriv-causal-ib-exploration, deriv-causal-ib-lmi; TST: der-code-quality-as-observation-infrastructure, der-dual-optimization, scope-developer-agent, hyp-causal-discovery-from-git), FINDINGS.md has 8 hits, and the reader snapshot carries it too (CURRENT-VOL1.md 2, CURRENT-VOL1-APPENDICES.md 2), so an internal working memo reaches the public reading surface. The hits are Search-Log fields (e.g. der-directed-separation:198 ''nominally comprehensive, via ref/Novelty_defense... Pillar 3''); the faithful repair names the external search and what it found, so the search log stays true without pointing at an internal file.'
+outcome: holds
+owner: F.3 (canon-boundary citations faithful)

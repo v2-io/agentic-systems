@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Transient dependency amplification / logogenic Lipschitz
-
-Imported verbatim from `spikes/PROPOSED.md` line 47, section *PROPOSED — the spike-proposal index › Tier 2 — exploratory / next-generation*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-transient-dependency-amplification-logog-5fe5 --outcome holds|stale|landed|not-an-item --why …`.
-
-| 2026-04-25 | Transient dependency amplification / logogenic Lipschitz | ADV | Feature-local effective dependency operator $J_F$ bounding a contribution to $L_A$; spike exists but author is self-blocked on the formal $J_F$ construction | interrupted | 2026-05-19 | [ADV #3](PROPOSED-ADVANCED.md) ; live `spike-transient-dependency-amplification.md` |

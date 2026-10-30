@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Two reviewer-judgment type calls deferred (`#der-agent-opacity`, `#scope-observation-ambiguity-modulation`).
-
-Imported verbatim from `TODO.md` line 233, section *TODO — Miscellaneous & details › Naming pipeline — specific deferred items*. Not yet re-checked against HEAD: `vsect recheck item:todo-two-reviewer-judgment-type-calls-deferre-678e --outcome holds|stale|landed|not-an-item --why …`.
-
-- Two reviewer-judgment type calls deferred (`#der-agent-opacity`, `#scope-observation-ambiguity-modulation`).

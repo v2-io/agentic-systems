@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 6f3ea79de49543a7d4a17473b06f77dba8d9158eb7f65bbd05dcaf93b4790337
+at: 2026-10-30T20:24:21Z
+store: asf
+act: revise
+about: segment:def-control-regret
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+change: unclassified
+declarations:
+  depends:
+  - def-value-object
+  - def-satisfaction-gap
+  stage: draft
+  status: exact
+  type: definition
+from-version: f301ef9d06cec3b7d63d91b9824b3d62a03aec4ae62184fa410eba3513174b67
+own-version: f97996d6f12521ca8af4d321819c2462d90ae07b15ed0b365e8e7d615b232bd9
+record: 01-aat-core/src/def-control-regret.md

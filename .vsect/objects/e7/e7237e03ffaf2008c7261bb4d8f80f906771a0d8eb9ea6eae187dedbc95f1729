@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Competence ⇒ world model — the converse of `#form-agent-model`
-
-Imported verbatim from `spikes/PROPOSED.md` line 36, section *PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-competence-world-model-the-converse-of-f-7c20 --outcome holds|stale|landed|not-an-item --why …`.
-
-| 2026-08-22 | Competence ⇒ world model — the converse of `#form-agent-model` | ext: Richens et al. 2025 (via `ref/prior-art-analysis/agentic-systems-landscape-2026-08-22.md`) | Richens et al. derive that bounded-regret competence across goals forces a world model; AAT posits the model and derives the persistence bound. Read the primary; attempt the converse direction as an AAT-internal result (or adopt with citation and scope the difference). | proposed | 2026-08-22 | survey §3 |

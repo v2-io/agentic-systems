@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Open bug — second `*Appendices*` group collapses. Part V ("Operational Domains") entries all render the overflowed native `\Alph` form. `.toc` evidence (decisiv
-
-Imported verbatim from `TODO.md` line 487, section *TODO — Miscellaneous & details › 2026-05-17 — scrbook appendix numbering (PARKED mid-fix to focus on self-actuation; pickup-ready)*. Not yet re-checked against HEAD: `vsect recheck item:todo-open-bug-second-appendices-group-collaps-40c4 --outcome holds|stale|landed|not-an-item --why …`.
-
-- [ ] **Open bug — second `*Appendices*` group collapses.** Part V ("Operational Domains") entries all render the overflowed native `\Alph` form. `.toc` evidence (decisive): `\numberline {B\GenericError{ }{LaTeX Error: Counter too large}…}` with hyperref anchors `appendix.Alph40…45` — i.e. the real chapter counter *does* advance (40–45) but `\thechapter` is back to native `\Alph` there, **not** `\AlphAlph`. Root-cause hypothesis: the `\renewcommand{\thechapter}` is emitted only on the first `*Appendices*` group (`@appendix_emitted` guard); KOMA's appendix machinery and/or the second `\part` re-establishes `\thechapter=\Alph{chapter}`, clobbering the override for group 2. Fix candidates: (i) re-emit the `\renewcommand` on **every** `*Appendices*` group, not just the first; or (ii) hoist a permanent rebind into the preamble (after `\appendix` semantics are known) so nothing can clobber it. Verify KOMA `\appendix`+`\part` interaction before choosing.

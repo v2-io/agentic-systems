@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Matrix-composition lift (the natural-next AAT-1 follow-on) — sketched in `spikes/.integrated/spike-matrix-persistence-condition.md` §5.5 and §7. Composition mac
-
-Imported verbatim (relative links rebased) from `TODO.md` line 475, section *TODO — Miscellaneous & details › 2026-05-12 (late) — Spike audit triage (99 spike files surveyed via 3 parallel agents)*. Not yet re-checked against HEAD: `vsect recheck item:todo-matrix-composition-lift-the-natural-next-8ff9 --outcome holds|stale|landed|not-an-item --why …`.
-
-- [ ] **Matrix-composition lift** (the natural-next AAT-1 follow-on) — sketched in `spikes/.integrated/spike-matrix-persistence-condition.md` §5.5 and §7. Composition machinery (`#form-composition-closure`, `#der-team-persistence`, `#deriv-critical-mass-composition`) lifted to matrix form via composite stationary covariance solving composite Lyapunov equation; expected structural finding is sub-agent-specialization-as-formal-property (a sub-agent strong on $\hat v_1$ paired with a sub-agent strong on $\hat v_2$ gives a composite strong on the spanned plane, even when each alone fails on the other's strong direction).

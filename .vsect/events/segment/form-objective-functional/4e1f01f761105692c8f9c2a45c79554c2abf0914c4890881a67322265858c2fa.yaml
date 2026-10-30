@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: 4e1f01f761105692c8f9c2a45c79554c2abf0914c4890881a67322265858c2fa
+at: 2026-10-30T20:24:21Z
+store: asf
+act: revise
+about: segment:form-objective-functional
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+change: redefined
+declarations:
+  depends:
+  - form-complete-agent-state
+  stage: deps-verified
+  status: axiomatic
+  type: formulation
+from-version: dc06340dca4254703fec77439cba25d3ab6eb1799f391fa877bbab1843cb626a
+own-version: ffca37cd0d47df20e2745eb4e321b982a0e347ecced55f0211bdac901a21b473
+record: 01-aat-core/src/form-objective-functional.md

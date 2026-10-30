@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# `spike-strategic-self-coupling` P2/P4 appendices + five open questions (P1 landed as `#disc-strategic-self-coupling` 2026-05-24)
-
-Imported verbatim from `spikes/PROPOSED.md` line 83, section *PROPOSED — the spike-proposal index › Reserved / owned elsewhere (cross-ref — discoverable here, owned there)*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-spike-strategic-self-coupling-p2-p4-appe-3163 --outcome holds|stale|landed|not-an-item --why …`.
-
-| `spike-strategic-self-coupling` P2/P4 appendices + five open questions (P1 landed as `#disc-strategic-self-coupling` 2026-05-24) | live `spikes/spike-strategic-self-coupling.md` ; INDEX row | open-direction |

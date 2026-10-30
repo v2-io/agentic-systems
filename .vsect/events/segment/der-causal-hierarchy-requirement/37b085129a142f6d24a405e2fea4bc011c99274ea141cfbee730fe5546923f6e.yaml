@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 37b085129a142f6d24a405e2fea4bc011c99274ea141cfbee730fe5546923f6e
+at: 2026-10-30T20:24:21Z
+store: asf
+act: revise
+about: segment:der-causal-hierarchy-requirement
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+change: unclassified
+declarations:
+  depends:
+  - def-value-object
+  - def-pearl-causal-hierarchy
+  - scope-agency
+  stage: deps-verified
+  status: exact
+  type: derived
+from-version: 51ca8a59050596034d84cbc1effeb3df1735d7974e3bfd2b98c68f64c10742a9
+own-version: e0f220f56498e966f7631466fbcc273bb42d15996269dbb202b311270d433fad
+record: 01-aat-core/src/der-causal-hierarchy-requirement.md

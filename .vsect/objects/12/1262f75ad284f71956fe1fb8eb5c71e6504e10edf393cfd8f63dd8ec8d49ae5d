@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Segment refinement and promotion advancement
-
-Imported verbatim from `PRACTICA.md` line 63, section *PRACTICA › Ops › Processes*. Not yet re-checked against HEAD: `vsect recheck item:practica-segment-refinement-and-promotion-advance-e215 --outcome holds|stale|landed|not-an-item --why …`.
-
-- [ ] Segment refinement and promotion advancement

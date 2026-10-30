@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# C12 first-encounter cite sweep (execution remainder). The five adopted-standard entries (`action-selection`, `causal-structure`, `multi-agent`, `equilibrium-con
-
-Imported verbatim (relative links rebased) from `TERMINOLOGY-TODO.md` line 29, section *TERMINOLOGY-TODO › C. Terminology additions — confirmed canonicalize commitments*. Not yet re-checked against HEAD: `vsect recheck item:terminology-todo-c12-first-encounter-cite-sweep-execution-9274 --outcome holds|stale|landed|not-an-item --why …`.
-
-- [ ] **C12 first-encounter cite sweep (execution remainder).** The five adopted-standard entries (`action-selection`, `causal-structure`, `multi-agent`, `equilibrium-convergence`, `feature`) are landed with `add-cite` decision events, but the first-encounter prior-art cites still need to be added to the source segments' Discussion/opening prose (anchors in the rename-plan F2 table, mirrored in each entry body). Segment-editing work, agent-executable.

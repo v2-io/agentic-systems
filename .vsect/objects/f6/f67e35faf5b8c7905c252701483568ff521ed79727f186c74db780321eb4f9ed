@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# `#def-unity-dimensions` (A13 F146) — $U_M = I/H$ not normalized to $[0,1]$ as the label implies; `#result-unity-closure-mapping` (A13 F154) — the $\varepsilon_x
-
-Imported verbatim from `TODO.md` line 45, section *TODO — Miscellaneous & details › Strengthen-first candidates from the 2026-05-30/31 gold-lift sweep*. Not yet re-checked against HEAD: `vsect recheck item:todo-def-unity-dimensions-a13-f146-u-m-i-h-no-6bb8 --outcome holds|stale|landed|not-an-item --why …`.
-
-- `#def-unity-dimensions` (A13 F146) — $U_M = I/H$ not normalized to $[0,1]$ as the label implies; `#result-unity-closure-mapping` (A13 F154) — the $\varepsilon_x = 0$ claim needs projection-range invariance, not just consistent projections.

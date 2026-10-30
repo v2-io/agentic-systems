@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Quantum causal DAGs for logogenic superposition
-
-Imported verbatim from `spikes/PROPOSED.md` line 52, section *PROPOSED — the spike-proposal index › Tier 2 — exploratory / next-generation*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-quantum-causal-dags-for-logogenic-superp-2aa6 --outcome holds|stale|landed|not-an-item --why …`.
-
-| 2026-04-25 | Quantum causal DAGs for logogenic superposition | ADV | Density-matrix context state; self-attention as quantum-like interference across strategy branches; CIY via von Neumann entropy | proposed | 2026-05-19 | [ADV #10](PROPOSED-ADVANCED.md) |

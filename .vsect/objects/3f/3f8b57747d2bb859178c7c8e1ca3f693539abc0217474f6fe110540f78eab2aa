@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# `audit-384279-FINAL-2026-05-27`
-
-Imported verbatim from `audits/STATUS.md` line 25, section *Audit routing status — live tracker › Open / in-flight*. Not yet re-checked against HEAD: `vsect recheck item:audits-status-audit-384279-final-2026-05-27-f9a9 --outcome holds|stale|landed|not-an-item --why …`.
-
-| `audit-384279-FINAL-2026-05-27` | 2026-05-27 | Claude Opus 4.7 | **resolved, not graduated** | Structural findings landed (CHANGELOG 2026-05-28); three residual spike proposals live in `spikes/PROPOSED.md`. Remaining: graduate to `.integrated/` once the residual proposals are dispositioned, and settle the gold dir `AUDIT-WORKING-384279/`. |

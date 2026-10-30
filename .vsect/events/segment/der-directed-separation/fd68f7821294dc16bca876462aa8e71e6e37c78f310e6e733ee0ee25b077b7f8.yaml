@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: fd68f7821294dc16bca876462aa8e71e6e37c78f310e6e733ee0ee25b077b7f8
+at: 2026-10-30T20:08:17Z
+store: asf
+act: confirm-rewording
+about: segment:der-directed-separation
+actor:
+  name: lead-coordinator
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: 'The only change in statement text is a Search Log symbol correction (kappa x A -> kappa x mathcal{A}, the observation ambiguity of #scope-observation-ambiguity-modulation; git diff 801feaec..HEAD read whole). None of the four checks (Prop B.1F gain; EA.1 allocation lag and its simulation; the schema''s carriers of 1-lambda) reads directed separation''s Search Log or the ambiguity law; they rest on this segment only through the depends basis.'
+from-version: f9fff0493c627508c893923b08734cb327f7e4db59fd9e68d55bf51a9c6c6713
+outcome: equivalent
+scope:
+  for:
+  - eb63d4516d665ec84357b2379213af44f850377eca0621d25d0b8eb04386ff6a
+  - 0efb52e7c40aabf5ce716fed0cada68051566e832186b90006cfd5f05ffe5e2f
+  - 8559ec07afe30aeb26a826cb651164bbff8d06e6644439c000c987543f9c7553
+  - 4e5b62071c96cafb8bd42fd2952172de7d9d834351012dc25a87f86bc5c1396c
+to-version: ba27167443e5c75d885e8dbf0fdae5230162778e17148de67923dd0d7b89cfe3

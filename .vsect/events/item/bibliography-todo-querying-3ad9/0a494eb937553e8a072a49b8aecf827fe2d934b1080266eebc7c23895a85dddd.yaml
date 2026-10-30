@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 0a494eb937553e8a072a49b8aecf827fe2d934b1080266eebc7c23895a85dddd
+at: 2026-10-30T20:27:00Z
+store: asf
+act: recheck
+about: item:bibliography-todo-querying-3ad9
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 19175c01+dirty
+criterion: 'BIBLIOGRAPHY-TODO.md:36 is the ''### Querying'' subsection of ''How to use relata, today'': a code block of relata search/show/list commands. Reference documentation, not work owed. The sections unit imported the file''s whole how-to manual (Querying, Adding entries, Registering a PDF, Verifying, Linting, Build-pipeline emit, Run-from-ASF note: 7 of its 13 items) as items; those belong in relata''s own help or an SOP, and this file''s real items are the W-n workstreams.'
+outcome: not-an-item

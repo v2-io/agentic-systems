@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Consider modifying & updating link formatting + policy, and tagging (better optimized for both obsidian, plain text, and github)
-
-Imported verbatim from `PRACTICA.md` line 119, section *PRACTICA › Misc*. Not yet re-checked against HEAD: `vsect recheck item:practica-consider-modifying-updating-link-formatt-5884 --outcome holds|stale|landed|not-an-item --why …`.
-
-- [ ] Consider modifying & updating link formatting + policy, and tagging (better optimized for both obsidian, plain text, and github)

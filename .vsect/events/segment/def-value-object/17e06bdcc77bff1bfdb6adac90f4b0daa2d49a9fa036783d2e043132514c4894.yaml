@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 17e06bdcc77bff1bfdb6adac90f4b0daa2d49a9fa036783d2e043132514c4894
+at: 2026-10-30T20:24:21Z
+store: asf
+act: revise
+about: segment:def-value-object
+actor:
+  name: b1-recorder
+  role: B.1 record author
+normalizer: vsect-norm/0
+change: redefined
+declarations:
+  depends:
+  - form-objective-functional
+  - form-agent-model
+  - der-directed-separation
+  - def-model-sufficiency
+  stage: deps-verified
+  status: exact
+  type: definition
+from-version: c5883ca8980beb9a7d05b9c742e107fe6c51f97b1289d9c0b74e6a9f707b7fd2
+own-version: 7e879b9ccd116d76b7410a1d77744da2b20ce1d031531273ee294f423541904c
+record: 01-aat-core/src/def-value-object.md

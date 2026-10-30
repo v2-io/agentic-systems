@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: cfff90fdc61629a5d6393346272f909114d31e582c9e9b2ab3500df14c882929
+at: 2026-10-30T20:08:17Z
+store: asf
+act: confirm-rewording
+about: segment:def-strategy-dag
+actor:
+  name: lead-coordinator
+  role: second-mind
+normalizer: vsect-norm/0
+from-version: 17db22eaef31b8bdd2b3d5207ea38edc08ada691e8691d72f50579b57ccb57ba
+outcome: equivalent
+scope: unconditional
+to-version: 6953cb9190bd8dab4057fefccebd9cd4e527017050c165ab4f203986115377f1

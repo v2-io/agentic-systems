@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 7b0cbb62c612460ca5a05ec29c11bf5c5a674a8caed453cbc214a7792dd8f730
+at: 2026-10-30T20:23:54Z
+store: asf
+act: recheck
+about: item:todo-c-iv-composite-route-count-mismatch-gem-bb4b
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: a1c82543+dirty
+criterion: 'At HEAD def-unity-dimensions:15,22,44,116 and scope-composite-agent (19 ''C-iv'' mentions) use four routes; result-unity-closure-mapping:124 (Working Notes) still says ''satisfied via at least one of its three disjunctive routes (shared objective, hierarchical derivation, mutual benefit)'', unchanged since 9745397b. So the lagging segment is result-unity-closure-mapping, in a Working Note, not def-unity-dimensions as the tracker''s wording left open. Also stale the other way: def-unity-dimensions WN :138 says ''this segment still describes the scope as a three-route disjunction'', which is false at HEAD (its body has four). Real but small; the substantive half (does closure/unity machinery work for C-iv composites with no shared O_c, per 613842 C-iv idiom-drift, TODO.md:49) is the bigger open question and is a separate item.'
+outcome: holds
+owner: C.1 integrator (unassigned)

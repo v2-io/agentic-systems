@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4f22e0ea20263cec54c93cada5252d1551da07f7cf1fb2d0ce44d8f9e58c8384
+at: 2026-10-30T20:30:12Z
+store: asf
+act: recheck
+about: item:audits-status-audit-731548-final-2026-07-02-2560
+actor:
+  name: Claude Opus 5.5 (item rechecker, pilot)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 82eac7d3+dirty
+criterion: 'audits/STATUS.md:23 is a roll-up row, not a unit of work: ''what remains open'' for audit 731548 is a list of items that are separately imported from TODO.md (impl status-tagging remainder TODO:496, legacy quantifier sweep :499, floor-routing segment :500, shadow-catalogue :501, SOP additions :502, INDEX spot-check :503, the nominal->query-only rename :258, which I re-checked as holds). The row''s own deltas at HEAD: B-3 landed (9ca09dbc/492a1492, typed target in #scope-adaptive-system); the ''flag for Joseph'' on the rho_star INDEX row and ''gold dir under the standing gate'' are stale framings, since gates on Joseph are lifted for this effort; and ''gold lift for the 36 reflections not started'' conflicts with INTENT I.5 (lifting audit gold into Working Notes stops), so that remainder needs a new destination, not execution. Graduating the audit is bookkeeping that follows its children; the ledger should derive it, not hold it as an item. Vocabulary note: the honest word is ''roll-up''.'
+outcome: not-an-item

@@ -1,9 +1,0 @@
-kind: item
-form: 
-normalizer: vsect-norm/0
----
-# Dir-spike gold gate: lighter — agents read+recommend, Joseph adjudicates the dir-spikes in one batch (`spikes.sop.md` §6).
-
-Imported verbatim from `spikes/ROUTING.md` line 17, section *Spike-routing — live tracker (started 2026-05-17) › The job (Joseph's framing, 2026-05-17)*. Not yet re-checked against HEAD: `vsect recheck item:spikes-routing-dir-spike-gold-gate-lighter-agents-read-9115 --outcome holds|stale|landed|not-an-item --why …`.
-
-- **Dir-spike gold gate: lighter** — agents read+recommend, Joseph adjudicates the dir-spikes in one batch (`spikes.sop.md` §6).
