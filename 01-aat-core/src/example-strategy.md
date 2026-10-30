@@ -146,7 +146,7 @@ Our agent is in the **Strategy problem** cell: the goal is achievable, but the c
 
 ### Strategy DAG ( #def-strategy-dag, #scope-and-or)
 
-*Mapping: exact for structure and propagation; the DAG is simple enough for closed-form status.*
+*Mapping: exact for structure. The forward pass is not the plan's probability here, because the three Phase 1 leaves are mutually exclusive (see "What the forward pass gets wrong here" below).*
 
 The agent's strategy for achieving $V_{O_t}^{\min} = 0.6$:
 
@@ -163,7 +163,7 @@ The agent's strategy for achieving $V_{O_t}^{\min} = 0.6$:
 - $v_\text{root}$: AND-node. Both phases must succeed: identify the best arm AND exploit it. Terminal satisfaction condition: average reward $\geq 0.6$.
 - $v_\text{id}$: OR-node (Phase 1). Identifying the best arm succeeds if ANY one arm is correctly identified as best.
 - $v_1, v_2, v_3$: leaf condition nodes. "Arm $k$ is the best arm." Base credence: $p_k(M_t) = P(\theta_k \gt \theta_j \;\forall j \neq k \mid M_t)$.
-- $v_\text{exploit}$: leaf action node (Phase 2). "Pulling the identified arm yields reward $\geq 0.6$." Base credence: $p_\text{exploit}(M_t) = P(\theta_{k^\ast} \geq 0.6 \mid M_t)$.
+- $v_\text{exploit}$: leaf action node (Phase 2). "Pulling the identified arm yields reward $\geq 0.6$." Base credence: $p_\text{exploit}(M_t) = P(\theta_{k^\ast} \geq 0.6 \mid M_t)$, where $k^\ast$ is the arm the agent currently identifies as best: arm 1 at $t = 0$, arm 2 after the revision at $t = 40$.
 
 **Edge credences.** The edges from leaf nodes to their parents carry causal credences:
 - $p_{v_k, v_\text{id}}$: "correctly identifying arm $k$ as best enables Phase 1 success." These are structural (close to $1.0$) — if the agent correctly knows which arm is best, Phase 1 succeeds by definition. Set $p_{v_k, v_\text{id}} = 1.0$ for all $k$.
@@ -196,6 +196,10 @@ $$= (0.95 \times 0.81) \times (0.90 \times 0.70) = 0.770 \times 0.630 = 0.485$$
 
 **Plan-confidence score:** $\hat P_\Sigma(M_0) = 0.485$. The strategy assigns about 49% confidence to achieving the objective. This is distinct from $A_O$ (which optimizes over all policies) — $\hat P_\Sigma$ is the DAG's self-assessment of *this specific plan*.
 
+**What the forward pass gets wrong here.** The score $0.485$ is what the agent's forward pass computes. It is not the probability of this DAG, because the three Phase 1 leaves are not independent. Exactly one arm is the best arm, so the events "arm $k$ is best" are disjoint and exhaustive, and their credences sum to $1$. Which arm is best is a function of $\boldsymbol\theta$, a common cause that is not a node. So the DAG is causally insufficient although it is a tree and nothing in it looks shared ( #deriv-graph-structure, §"Exactness of Status Propagation"). For disjoint children, the OR-node's exact status is the sum of their transmitted credences: $s_{v_\text{id}} = \sum_k p_{v_k, v_\text{id}}\, p_k = 1.00$, not $0.81$. Phase 1 is then certain, so the root's two inputs are independent, and the exact root value is $(0.95 \times 1.00) \times (0.90 \times 0.70) = 0.599$. The forward pass understates this plan by $0.11$. Exclusive alternatives correlate negatively, which reverses the sign that shared infrastructure gives: the OR-node is underestimated, not overestimated ( #def-strategy-dag, Correlation Hierarchy).
+
+The exact value also exposes a modeling error. As written, Phase 1 cannot fail, because some arm is certainly the best. The uncertainty the plan means, whether the agent settles on the best arm, belongs in the edges $p_{v_k, v_\text{id}}$ ("the agent identifies arm $k$, given that $k$ is best"), which the example set to $1$ "by definition". With those edges below $1$, Phase 1's exact status is $\sum_k p_{v_k, v_\text{id}}\, p_k$. The rest of this example keeps the DAG as written and reports the forward-pass scores the agent would compute, so that the cascade steps can be followed. Read those scores as the agent's computations, not as the plan's probabilities.
+
 ### Chain Confidence Decay ( #der-chain-confidence-decay)
 
 *Mapping: exact (mathematical identity).*
@@ -208,7 +212,7 @@ $$= \log(0.770) + \log(0.630) = -0.261 + (-0.462) = -0.724$$
 
 Each term is negative; the AND combination accumulates them additively in log-space. If the agent added a third AND-child (e.g., "maintain budget"), even with $s_\text{budget} = 0.95$, the strategy-plan confidence would drop to $0.485 \times 0.95 = 0.461$. The pressure toward shallow, narrow DAGs is structural.
 
-**Contrast with the OR-node.** Phase 1 (OR-node) benefits from redundancy: three alternative arms provide resilience. The OR combination yields $s_{v_\text{id}} = 0.81$ even though no single arm has credence above $0.75$. The asymmetry between AND (multiplicative decay) and OR (complementary resilience) is the core structural result of #der-chain-confidence-decay combined with #scope-and-or.
+**Contrast with the OR-node.** The forward pass gives Phase 1 $s_{v_\text{id}} = 0.81$ even though no single arm has credence above $0.75$, which looks like redundancy. It is not redundancy here. The three alternatives exclude one another, so the OR adds them up, to $1.00$. The forward pass's $0.81$ is the right answer for a different plan: three *independent* routes that succeed with probabilities $0.75$, $0.20$ and $0.05$. There the OR does provide resilience, and the asymmetry between AND (multiplicative decay) and OR (complementary resilience) of #der-chain-confidence-decay and #scope-and-or applies. The same three numbers describe redundancy in one plan and a partition in the other, and only the plan's structure tells them apart.
 
 ### Orient Cascade ( #der-orient-cascade)
 
@@ -246,11 +250,11 @@ $$r_\text{exploit} = \mathbb{E}[\Delta V_O \mid \text{exploit arm 1}] - \Delta V
 
 The agent predicted reward $\approx 0.70$ per pull from arm 1; it observed $\approx 0.20$. The residual is large and positive, localizing the problem to the exploitation edge: the agent's causal belief that "pulling arm 1 yields high reward" is wrong.
 
-Simultaneously, the leaf credences update: $p_1(M_{40}) \approx 0.15$ (arm 1 is probably not the best), $p_2(M_{40}) \approx 0.60$ (arm 2 is probably best, by default from the prior). The Phase 1 OR-node status shifts: the identification sub-goal may need to be revisited.
+Simultaneously, the leaf credences update: $p_1(M_{40}) \approx 0.15$ (arm 1 is probably not the best), $p_2(M_{40}) \approx 0.60$ (arm 2 is probably best, by default from the prior). The forward-pass status of the Phase 1 OR-node shifts. Its exact status does not, since some arm is still the best; what changes is which arm, and the exploitation leaf below carries that.
 
 **Step 5: Revise $\Sigma_t$.** The agent restructures its strategy: switch exploitation target to arm 2 (the currently estimated-best arm). In DAG terms: $p_1(M_{40})$ has dropped to $0.15$ while $p_2(M_{40})$ has risen to $0.60$. The OR-node now routes through arm 2. The exploitation leaf updates: $p_\text{exploit}(M_{40}) = P(\theta_2 \geq 0.6 \mid M_{40}) \approx 0.40$.
 
-After strategy revision: $\hat P_\Sigma(M_{40}) \approx (0.95 \times 0.73) \times (0.90 \times 0.40) = 0.693 \times 0.360 = 0.249$. Plan confidence has dropped from $0.485$ to $0.249$ — the agent correctly recognizes that its situation has deteriorated.
+After strategy revision: $\hat P_\Sigma(M_{40}) \approx (0.95 \times 0.73) \times (0.90 \times 0.40) = 0.693 \times 0.360 = 0.249$. Plan confidence has dropped from $0.485$ to $0.249$ — the agent correctly recognizes that its situation has deteriorated. Respecting the partition, the exact value drops from $0.599$ to $0.95 \times 0.90 \times 0.40 = 0.342$. The deterioration is real, and all of it is in the exploitation leaf.
 
 **What Part I alone cannot provide.** At $t = 40$, Part I reports: $\hat\theta_1 = 0.38$, $\hat\theta_2 = 0.52$, $\hat\theta_3 = 0.28$, and the per-arm mismatch signals. This tells the agent what it believes about each arm. It does NOT tell the agent:
 - Whether its *goal* is still achievable ($\delta_\text{sat}$)
@@ -304,7 +308,7 @@ This is the standard conjugate update — the gain principle reduces to Bayesian
 
 $$s_{v_\text{id}}^{\text{new}} = 1 - (1 - p_1^{\text{new}})(1 - p_2)(1 - p_3)$$
 
-The OR-node's status is *resilient* to single-arm credence drops: even if $p_1$ drops substantially, $p_2$ can compensate. This is the OR-node's structural advantage — redundancy absorbs single-edge failures.
+Under the forward pass, the OR-node's status falls when $p_1$ drops and recovers as $p_2$ rises, which looks like redundancy absorbing a single-edge failure. Its exact status does not move at all, because the $p_k$ always sum to $1$. What looks like redundancy here is the bookkeeping of a partition. Redundancy proper needs independent alternatives ("Contrast with the OR-node", above).
 
 **The exploitation edge.** The edge $p_{v_\text{exploit}, v_\text{root}} = 0.90$ is a causal credence: "pulling the identified-best arm reliably yields reward $\geq 0.6$." After observing repeated failures from arm 1:
 
@@ -374,28 +378,28 @@ Part II tells the agent: *switch to arm 2, but first explore to confirm — the 
 | Value object $V_O$ ( #def-value-object) | Exact | Closed-form (greedy) | $V_O = \hat\theta_{k^\ast}$ |
 | Satisfaction gap $\delta_\text{sat}$ ( #def-satisfaction-gap) | Exact | Definition applied | $V_{O_t}^{\min} - A_O$ |
 | Control regret $\delta_\text{regret}$ ( #def-control-regret) | Exact | Definition applied | $A_O - V_O(\pi_\text{current})$ |
-| Strategy DAG $\Sigma_t$ ( #def-strategy-dag) | Exact | AND/OR with 7 nodes | Small enough for manual propagation |
-| AND/OR scope ( #scope-and-or) | Exact | Natural fit | Phase 1 is genuinely OR; root is genuinely AND |
-| Status propagation | Exact | Closed-form | Forward pass computable by hand |
-| Plan confidence $\hat P_\Sigma$ ( #def-strategy-dag) | Exact (computation) | From propagation; systematically optimistic under correlated failure | $0.485$ at $t = 0$ |
-| Chain confidence decay ( #der-chain-confidence-decay) | Exact | Mathematical identity | AND-node multiplicative; OR-node resilient |
+| Strategy DAG $\Sigma_t$ ( #def-strategy-dag) | Exact | AND/OR with 6 nodes | Small enough for manual propagation |
+| AND/OR scope ( #scope-and-or) | Partial | Root fits AND | Phase 1 is a disjunction of exclusive alternatives, which sums; the noisy-OR form does not fit it |
+| Status propagation | Not exact here | Exclusive leaves make the tree causally insufficient | Forward pass $0.485$; exact $0.599$ |
+| Plan confidence $\hat P_\Sigma$ ( #def-strategy-dag) | Exact as the forward pass's output | Underestimates this DAG's probability: the exclusive leaves correlate negatively | $0.485$ forward, $0.599$ exact, at $t = 0$ |
+| Chain confidence decay ( #der-chain-confidence-decay) | Exact | Mathematical identity | AND-node multiplicative; the OR-node here is a partition, not redundancy |
 | Orient cascade ( #der-orient-cascade) | Exact (ordering) | All 5 steps exercised | Content is tractable in this domain |
 | Observability dominance ( #der-observability-dominance) | Exact (mechanism) | Unpulled arms frozen | $\sigma_3 = 0 \Rightarrow \eta_3^\ast = 0$ |
 | Edge update via gain ( #hyp-edge-update-via-gain) | Exact (binary case) | Beta-Bernoulli conjugate | Gain principle = Bayesian update |
 | Strategic calibration ( #def-strategic-calibration) | Approximate | Credit assignment tractable here | Single-arm attribution is clean |
 | Satisfaction gap dynamics | Exact | Time series of $\delta_\text{sat}$ | Model improvement resolves positive gap |
 
-**Quantities that map cleanly.** All Part II definitions (objective, value object, satisfaction gap, control regret, strategy DAG) have exact instantiations. Plan confidence $\hat P_\Sigma$ is exact as a computation (the AND/OR propagation is correct), but systematically overestimates actual success probability under correlated edge failures ( #def-strategy-dag). In this toy bandit, edge independence is a reasonable approximation; in complex domains the overestimate may be severe. The orient cascade ordering is exact and all five steps are exercised.
+**Quantities that map cleanly.** All Part II definitions (objective, value object, satisfaction gap, control regret, strategy DAG) have exact instantiations. Plan confidence $\hat P_\Sigma$ is exact as the output of the forward pass, but here it is not the plan's probability. The Phase 1 leaves are exclusive, so the forward pass understates the plan ($0.485$ against $0.599$). Even this toy shows the point of #deriv-graph-structure that a tree is not enough: the leaves must be independent too. With shared infrastructure the error would run the other way, as an overestimate ( #def-strategy-dag). The orient cascade ordering is exact and all five steps are exercised.
 
 **Quantities that map approximately.** Strategic calibration is approximate because even in this simple domain, attributing value changes to specific DAG edges requires assumptions about the agent's execution fidelity. Observability dominance is exact in mechanism but the multiplicative form $\text{conf}_\text{obs} = \text{conf} \cdot \text{obs}$ is a first-order approximation.
 
-**Quantities that don't map.** No Part II quantity fails to map in this domain. The system is simple enough that every quantity is computable (at least approximately). This is the advantage of the bandit setting: it is the simplest system that exercises all Part II machinery.
+**Quantities that don't map.** No Part II quantity fails to map in this domain, though plan confidence maps only as the agent's computation, not as the plan's probability (above). The system is simple enough that every quantity is computable (at least approximately). This is the advantage of the bandit setting: it is the simplest system that exercises all Part II machinery.
 
 ## Epistemic Status
 
 This is a *worked instantiation* — it demonstrates that the Part II formal chain is internally consistent and instantiable. The mapping quality is *conditional*: the quantitative relationships depend on the Beta-Bernoulli reward model, the specific DAG structure, and the parameterization. The qualitative conclusions — especially the diagnostic value of the 2x2 table and the orient cascade's ordering — should be robust across reward models and DAG topologies.
 
-The status is *conditional* rather than *exact* because the attainability $A_O$ is approximated (the exact Bayes-optimal policy for a nonstationary bandit is intractable), and the strategic calibration mapping inherits the discussion-grade status of #def-strategic-calibration. The core Part II definitions (satisfaction gap, control regret, strategy-plan confidence) are exact instantiations.
+The status is *conditional* rather than *exact* because the attainability $A_O$ is approximated (the exact Bayes-optimal policy for a nonstationary bandit is intractable), and the strategic calibration mapping inherits the discussion-grade status of #def-strategic-calibration. The core Part II definitions (satisfaction gap, control regret, strategy-plan confidence) are exact instantiations, strategy-plan confidence as the forward pass's output. The plan's exact probability differs from it, because the Phase 1 leaves are exclusive.
 
 ## Working Notes
 
