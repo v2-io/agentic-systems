@@ -23,6 +23,7 @@ Work that feeds no key result there is a red flag (Joseph): either the intents a
 - When you launch an agent, name in its brief the KR id it serves, quoted with the top intent, and ask it to do the same for any agent it launches.
 - Put the KR id at the top of every artifact you write for this effort.
 - After a compaction, before anything else, re-read `INTENT.md`: find your row in its "Who is on what" table and the KR it names.
+- The tree is set top-down **and** bottom-up. Propose your own KRs and sub-objectives under the item you serve. Coordinators give the benefit of the doubt, and say early and as peers if they think something is missing: *"oh, did you know about ___? I wonder if ___ would be a better approach? (but this isn't a prescription-- what have you already thought?)"* (Joseph).
 
 Standings for this effort. They override anything below that conflicts:
 
