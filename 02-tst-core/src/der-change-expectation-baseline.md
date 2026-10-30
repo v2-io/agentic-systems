@@ -13,9 +13,9 @@ Absent specific information about a software system's future, the uninformed med
 
 ## Formal Expression
 
-*[Derived (change-expectation-baseline, from Jeffrey's prior)]*
+*[Derived (change-expectation-baseline, from Jeffreys' prior)]*
 
-**Assumption.** The total lifetime $T$ of the system (measured in features or time) is unknown. We adopt Jeffrey's prior — the unique scale-invariant prior expressing maximum ignorance about a positive scale parameter:
+**Assumption.** The total lifetime $T$ of the system (measured in features or time) is unknown. We adopt Jeffreys' prior — the unique scale-invariant prior expressing maximum ignorance about a positive scale parameter:
 
 $$\pi(T) \propto \frac{1}{T}$$
 
@@ -63,7 +63,7 @@ The uninformed baseline is rarely used directly — almost all real code comes w
 
 ## Epistemic Status
 
-The Bayesian derivation from Jeffrey's prior is *exact* — standard probability theory, not approximation. The hazard-mixture form is *exact* as an asymptotic statement in age (Watson's lemma), and exact at every age for the exponential prior. Numerical integration agrees with the stated limits to three decimals for exponential, Gamma ($a = 2$ and $a = \tfrac12$), uniform and half-normal priors by age $10^3$–$10^4$. The baseline itself is a *predictive* statement; it carries no normative content about investment. The investment-scaling consequence (justified structural investment scales linearly with $n_{\text{past}}$) requires a decision model on top of the baseline and is derived in #der-change-investment, where the amortized-cost rule makes the acceptance threshold linear in $\hat{n}_{\text{future}} = n_{\text{past}}$. Two important qualifications:
+The Bayesian derivation from Jeffreys' prior is *exact* — standard probability theory, not approximation — given its two premises: the scale-invariant prior, and an observation moment carrying no information about the system's position in its lifetime (the Copernican likelihood). The hazard-mixture form is *exact* as an asymptotic statement in age (Watson's lemma), and exact at every age for the exponential prior. Numerical integration agrees with the stated limits to three decimals for exponential, Gamma ($a = 2$ and $a = \tfrac12$), uniform and half-normal priors by age $10^3$–$10^4$. The baseline itself is a *predictive* statement; it carries no normative content about investment. The investment-scaling consequence (justified structural investment scales linearly with $n_{\text{past}}$) requires a decision model on top of the baseline and is derived in #der-change-investment, where the amortized-cost rule makes the acceptance threshold linear in $\hat{n}_{\text{future}} = n_{\text{past}}$. Two important qualifications:
 
 **Median, not expectation.** For Pareto($\alpha = 1$), the mean is undefined (the integral diverges). The result $\hat{n}_{\text{future}} = n_{\text{past}}$ is a *median* prediction. TST's original statement as $E[n_{\text{future}} \mid n_{\text{past}}] = n_{\text{past}}$ uses "expected" loosely. This distinction matters when propagating the estimate through nonlinear functions — the median of a function is not generally the function of the median. Downstream claims ( #der-change-investment, #der-dual-optimization) that use $n_{\text{future}}$ should be understood as using the median prediction, not the mathematical expectation.
 

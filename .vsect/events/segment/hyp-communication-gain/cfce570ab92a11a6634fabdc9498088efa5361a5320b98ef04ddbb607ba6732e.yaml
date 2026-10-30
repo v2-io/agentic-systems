@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: cfce570ab92a11a6634fabdc9498088efa5361a5320b98ef04ddbb607ba6732e
+at: 2026-10-30T22:38:45Z
+store: asf
+act: revise
+about: segment:hyp-communication-gain
+actor:
+  name: Claude Opus 5.5 (TST lane round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 438d06cca95bb19798e853be6b83a496f86e8fc8a3e92fdc75ba2fe0578280ce
+own-version: f6cc2986b0b1b8f358db5081cc36f9dd08ff801fdd9effb1291517eec3208e29
+record: 01-aat-core/src/hyp-communication-gain.md

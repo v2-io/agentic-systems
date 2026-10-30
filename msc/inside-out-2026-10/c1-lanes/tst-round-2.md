@@ -73,6 +73,14 @@ vsect lets only someone other than the reviser mark a finding answered (`vsect f
 - From the first lane: `review:tst-old-files-h2-integration#C2/finding` (the CIY sentence), answered by 055f2803 and confirmed by the checker's C12.
 - `#F3` (`CURRENT-VOL1.md`) stays open until a rebuild.
 
+My checks read 2cd1ad0c. The commit after this account's first version changed three segments:
+
+- `#emp-changeset-size-principle`: "rising as the cap is raised" was false for ink, which falls to 0.24 uncapped. Narrowed, classified redefined.
+- `#der-change-expectation-baseline`: Epistemic Status names the Copernican premise; "Jeffrey's" becomes "Jeffreys'". Classified reworded.
+- `#hyp-communication-gain`: Epistemic Status names the Formulation. Classified reworded.
+
+So C4, C8, C9 and C12 of my record rest on text that has since changed, and `vsect confirm` on those three records is a second mind's to make.
+
 ## What I would check, if I were the verifier
 
 1. **The mixture.** Is a two-component log-normal on $\log T$, with the working share free per bin, a fair separation of working time from time away? Is the window-free form test sound, and does the obsidian-linter rejection survive a model you would choose instead?
