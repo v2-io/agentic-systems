@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: e8c2ac423a53f2f8348e21e5444badc10e951b47a33ee9131e0f01fe0c078596
+at: 2026-10-30T21:11:39Z
+store: asf
+act: revise
+about: segment:def-eli-cohort
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: redefined
+from-version: dab735e87990cd6d802d47df51878613d649e63ec8d3bd9717ab8ce226d2be78
+own-version: 8bc186b8e6a8c69b2690aec073a0648e1594f43202cea4a3d568b4b7d39bdd8c
+record: 04-eli-core/src/def-eli-cohort.md
