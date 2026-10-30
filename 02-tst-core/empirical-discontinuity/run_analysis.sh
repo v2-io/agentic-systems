@@ -27,27 +27,17 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# Step 2: Generate visualizations
+# Step 2: The original multi-form fit (time here is a formula; see README.md section 1)
 echo ""
-echo "Step 2: Generating visualizations..."
-echo "------------------------------------"
-python visualize_results.py --data data --output results
+echo "Step 2: Fitting forms against commit_time_estimate..."
+echo "-----------------------------------------------------"
+python analyze_outliers.py
 
-# Step 3: Generate report
+# Step 3: What that fit measures
 echo ""
-echo "Step 3: Generating HTML report..."
-echo "---------------------------------"
-python visualize_results.py --data data --output results --report
+echo "Step 3: Reproducing the fit under other time formulas..."
+echo "--------------------------------------------------------"
+python reproduce_estimate_fit.py data/commits.json
 
 echo ""
-echo "==================================="
-echo "Analysis Complete!"
-echo "==================================="
-echo ""
-echo "Results available in:"
-echo "  - Data: data/"
-echo "  - Plots: results/"
-echo "  - Report: results/report.html"
-echo ""
-echo "To view the report:"
-echo "  open results/report.html"
+echo "For the elapsed-time test, dump git histories as in elapsed_time.py's header and run it on them."

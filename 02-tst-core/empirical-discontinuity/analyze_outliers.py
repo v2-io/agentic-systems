@@ -276,14 +276,13 @@ for threshold in ['≤25', '≤10']:
 print(f"\n1. Filter outliers with discontinuity {best_threshold} for best exponential fit")
 print(f"   - This gives R² = {best_r2:.3f} for exponential model")
 if best_threshold in results and results[best_threshold].get('alpha'):
-    print(f"   - α = {results[best_threshold]['alpha']:.3f} aligns with theoretical predictions")
+    print(f"   - fitted α = {results[best_threshold]['alpha']:.3f}")
+print("   NOTE: 'time' here is commit_time_estimate, a formula in files and lines changed;")
+print("   d is built from the same files, so this fit cannot test the form (README.md §1).")
 
 print(f"\n2. The extreme outliers (d > 100) likely represent:")
 print(f"   - Initial repository imports")
 print(f"   - Major refactorings or reorganizations")
 print(f"   - Automated bulk changes")
 
-print(f"\n3. For normal development work (d ≤ 25):")
-print(f"   - Exponential model shows better fit")
-print(f"   - Supports FP-012 hypothesis for human comprehension")
 print(f"   - Logarithmic dominance in full dataset may be due to outliers")

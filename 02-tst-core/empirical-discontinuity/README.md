@@ -1,214 +1,49 @@
-# Empirical Discontinuity Analysis
+# Empirical discontinuity analysis
 
-A toolkit for empirically validating the exponential relationship between code discontinuities and comprehension time, as described in FP-012 (Comprehension Continuity Principle).
+This toolkit tests the functional form in `#hyp-exponential-cognitive-load`: whether the time to make a change grows as $T = T_{\text{base}}(1+\alpha)^d$ in the number $d$ of boundary crossings in the changeset. The discontinuity score throughout is the toolkit's own, $d = (\text{file transitions}) + 2\cdot(\text{directory transitions})$, counted over a commit's changed paths in git's order.
 
-## Overview
+## 1. The original fit measured the time estimator, not time
 
-This project tests the hypothesis that:
-```
-T_comprehend = T_base × (1 + α)^d
-```
+`analyze_git_history.py` assigns each commit a time `commit_time_estimate` $= 10 + 5n + 0.15L$ minutes, where $n$ is files changed and $L$ is lines changed. The saved dataset (`data/commits.json`, 229 commits of `~/src/_core/tst` from 2025-08-25 to 2025-08-29, one author) matches that formula to $10^{-12}$ minutes. The score $d$ is built from the same paths: over these commits $\operatorname{corr}(d, n) = 0.998$. Regressing the estimate on $d$ therefore fits the analyst's formula against a near-copy of one of its inputs.
 
-Where:
-- `T_comprehend` = time to understand code
-- `T_base` = baseline comprehension time
-- `α` ≈ 0.2-0.3 (discontinuity penalty factor)
-- `d` = number of discontinuities
+`reproduce_estimate_fit.py` reproduces the original result exactly ($\alpha = 0.118$, $R^2 = 0.524$ at $d \le 25$, $N = 205$) and then changes the formula. Every variant returns an "exponential penalty" of about the same size, including formulas with no per-file term at all:
 
-## Quick Start
+| Time formula (minutes) | $\alpha$ at $d \le 25$ | exponential $R^2$ | linear $R^2$ |
+|---|---|---|---|
+| $10 + 5n + 0.15L$ (what the code ran) | 0.118 | 0.524 | 0.453 |
+| $(30 + 15n + 0.5L)(1 + 0.2U)$, $U$ = directories | 0.131 | 0.617 | 0.532 |
+| $10 + 0.15L$ (lines only) | 0.121 | 0.488 | 0.410 |
+| $10 + 5n + 1.5L$ | 0.125 | 0.491 | 0.414 |
+| $10 + 5n$ (files only) | 0.073 | 0.842 | 0.877 |
 
-### 1. Analyze Your Git Repository
+The $\alpha \approx 0.12$ is a property of how lines changed grow with files changed in that repository. No time and no comprehension enters it. When the estimate is exactly linear in $n$ (last row), an exponential fit still returns $\alpha = 0.07$ while fitting worse than a line: a single-form fit cannot test the form. The same dataset also does not support the claim that high-$d$ commits are fix-prone: commits with $d \gt 10$ carry a fix-like message 6.8% of the time against 11.4% for $d \le 10$.
 
-```bash
-# Analyze the Sapientia repository
-python analyze_git_history.py --repo .. --max-commits 1000
+## 2. Elapsed time between commits
 
-# Analyze any repository
-python analyze_git_history.py --repo /path/to/repo --max-commits 500
-```
+`elapsed_time.py` replaces the estimate with a measured quantity: for each author, the time since that author's previous commit, kept when it is positive and under a session cap of 60, 120, 240 or 480 minutes. This is elapsed wall-clock time, not instrumented working or comprehension time: it includes whatever else the author did, and how much work goes into one commit is the author's choice. It is, however, not computed from the counts that build $d$. The run used six histories (paths and HEADs in the script header): the original corpus, two repositories with direct commits by many authors (obsidian-linter, ink), and three where nearly every commit is a squash-merged pull request (anthropic-sdk-python, gemini-cli, codex). In squash-merged histories the timestamps record merge cadence rather than work, so those three are a check on the method, not a measurement.
 
-### 2. Visualize Results
+**Results, $d \le 25$, direct-commit histories.**
 
-```bash
-# Generate visualizations
-python visualize_results.py --data data --output results
+- $d$ predicts elapsed time: Spearman $\rho$ = 0.45 (corpus), 0.38–0.41 (obsidian-linter), 0.27–0.28 (ink), and the association survives partialling out lines changed (0.36, 0.17–0.20, 0.10–0.12).
+- The exponential form is not supported. In the nested regression $\log T = c + a\,d + b\log(1+d)$, the exponential form predicts $a \gt 0$ with $b \approx 0$, and a power form the reverse. At every cap, $a$'s bootstrap 95% interval contains zero or lies below it (obsidian-linter, cap 240: $a = -0.075$, interval $[-0.141, -0.003]$), and $b$ is positive: $0.38$–$0.39$, intervals within $[0.11, 0.67]$, in the corpus and $0.72$–$0.92$, intervals within $[0.44, 1.20]$, in obsidian-linter. In ink it is $0.42$–$0.55$, with an interval that reaches zero at two of three caps. The same holds with $\log(1+L)$ added as a covariate.
+- Read as a power law, elapsed time grows roughly as $(1+d)^{0.4}$ to $(1+d)^{0.7}$, so more slowly than in proportion to $d$.
+- Medians on gaps up to 24 hours, which the session cap cannot distort, rise and then flatten. In minutes, for $d$ = 0, 1–2, 3–5, 6–10, 11–25: obsidian-linter 8.5, 22.8, 28.2, 71.0, 70.0; ink 5.6, 10.4, 21.6, 30.0, 33.4. In the single-author corpus the median keeps rising through $d \le 25$ (3.5, 5.5, 5.9, 9.8, 20.5) and falls above it (11.4 at $d$ = 26–60).
+- A single exponential forced onto these data returns a per-discontinuity rate between 0.04 and 0.13, depending on the fitting method and the cap. That number describes the fit, not the data: it is a straight line laid through a curve that is concave on a log scale.
 
-# Generate full HTML report
-python visualize_results.py --data data --output results --report
-```
+The squash-merged histories show the method's floor: $\rho$ = 0.07–0.12 for gemini-cli and codex, with the nested coefficients pointing the same way as above but weakly. anthropic-sdk-python leaves too few same-author pairs ($N$ = 34–53) for any conclusion.
 
-### 3. Analyze Code Discontinuities
+## 3. What this does and does not bear on
 
-```python
-from src.discontinuity_metrics import CodeAnalyzer, DiscontinuityMeasure
+At file and directory granularity, with elapsed time between commits as the time measure, the cost of a changeset rises with the number of boundary crossings, and it rises sublinearly, not by compounding. What this measures is the count model: $d$ counts crossings without regard to whether understanding one change requires understanding another. The hypothesis's central open question, whether nested dependency among the scattered changes produces compounding that independent changes do not, is untested here. Testing it needs a measure of dependency among the changed locations, and a time measure closer to working time than inter-commit gaps. A test of either kind would supersede this one.
 
-analyzer = CodeAnalyzer()
-measure = analyzer.analyze_file("path/to/file.py")
-print(f"Discontinuity score: {measure.weighted_score:.2f}")
-print(f"Predicted comprehension time: {measure.predicted_comprehension_time:.1f} minutes")
-```
+## Files and usage
 
-## Components
+- `analyze_git_history.py`: the original miner (`python analyze_git_history.py --repo <repo> --max-commits N --output data`). It writes `data/commits.json` and `data/analysis.pkl`, including the formula-based `commit_time_estimate` analysed in §1.
+- `analyze_outliers.py`: the original multi-form fit over filtering windows, which produced $\alpha = 0.118$; it reads `data/analysis.pkl`.
+- `reproduce_estimate_fit.py`: §1. `python3 reproduce_estimate_fit.py data/commits.json`.
+- `elapsed_time.py`: §2, on `git log` dumps made with the command in its header. `python3 elapsed_time.py <name>.log ...`.
+- `analyze_bug_detection.py`: a commit-message classifier for fix-like commits.
+- `src/discontinuity_metrics.py`: a static per-file discontinuity counter. Its "predicted comprehension time" applies the hypothesis with an assumed $\alpha = 0.2$; that number is the hypothesis evaluated, not a measurement.
+- `run_analysis.sh`: runs the miner on the parent repository and the original fit.
 
-### `analyze_git_history.py`
-Analyzes git commit history to measure:
-- Files changed per commit (context switches)
-- Directory transitions
-- Bug fix correlation with discontinuity
-- Time estimates based on change complexity
-- Tests exponential vs linear models
-
-### `src/discontinuity_metrics.py`
-Measures discontinuities in code:
-- Import complexity
-- Function call depth
-- Class transitions
-- Namespace switches
-- Context switches
-- Abstraction jumps
-
-Supports: Python, JavaScript/TypeScript, Java, Elixir
-
-### `visualize_results.py`
-Creates visualizations:
-- Exponential model fit plots
-- Discontinuity distributions
-- Bug correlation analysis
-- Model comparison (R² values)
-- Temporal patterns
-
-## Key Findings (Preliminary)
-
-From initial analysis of software repositories:
-
-1. **Exponential Growth Confirmed**: Comprehension time does grow exponentially with discontinuities (R² ≈ 0.65-0.75)
-
-2. **α Value**: Empirical penalty factor is ~0.18-0.25, matching theoretical predictions
-
-3. **Bug Correlation**: Commits with high discontinuity scores (>10) have 2.3× higher bug fix rates
-
-4. **Threshold Effect**: Beyond ~12 discontinuities, comprehension becomes effectively impossible
-
-## Installation
-
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Or manually install
-pip install numpy scipy matplotlib seaborn pandas networkx
-```
-
-## Usage Examples
-
-### Analyze Specific File Types
-
-```python
-from src.discontinuity_metrics import CodeAnalyzer
-
-analyzer = CodeAnalyzer()
-results = analyzer.analyze_directory(
-    Path("../planning/analysis"),
-    extensions=['.md', '.py']
-)
-
-for filepath, measure in results.items():
-    if measure.weighted_score > 10:
-        print(f"High discontinuity: {filepath}")
-        print(f"  Score: {measure.weighted_score:.1f}")
-        print(f"  Predicted time: {measure.predicted_comprehension_time:.0f} min")
-```
-
-### Compare Models
-
-```python
-from src.discontinuity_metrics import compare_models
-
-discontinuities = [1, 3, 5, 8, 12, 15, 20]
-times = [5, 8, 12, 20, 35, 65, 130]  # minutes
-
-results = compare_models(discontinuities, times)
-
-for model, metrics in results.items():
-    if 'mse' in metrics:
-        print(f"{model}: MSE={metrics['mse']:.2f}")
-        print(f"  Parameters: {metrics['params']}")
-```
-
-### Temporal Coupling Analysis
-
-```python
-from src.discontinuity_metrics import TemporalAnalyzer
-
-temporal = TemporalAnalyzer()
-
-# Add commit data
-temporal.add_change_sequence(['file1.py', 'file2.py'], timestamp=1234567890)
-temporal.add_change_sequence(['file1.py', 'file3.py'], timestamp=1234567900)
-
-# Calculate coupling
-coupling = temporal.calculate_temporal_coupling()
-for (file1, file2), strength in coupling.items():
-    if strength > 0.7:
-        print(f"Strong coupling: {file1} <-> {file2} ({strength:.2f})")
-```
-
-## Metrics Explained
-
-### Discontinuity Types
-
-1. **File Imports** (weight: 1.0)
-   - Each import requires mental context loading
-
-2. **External Calls** (weight: 0.5)
-   - API calls require understanding external behavior
-
-3. **Class Transitions** (weight: 2.0)
-   - Switching between classes requires paradigm shifts
-
-4. **Function Calls** (weight: 0.3)
-   - Each call is a mini context switch
-
-5. **Namespace Switches** (weight: 3.0)
-   - Module.function patterns require broader context
-
-6. **Context Switches** (weight: 2.5)
-   - this., super., self. require object context
-
-7. **Abstraction Jumps** (weight: 4.0)
-   - Decorators, metaclasses require meta-level thinking
-
-### Weighted Score Calculation
-
-```python
-weighted_score = Σ(discontinuity_count × weight)
-predicted_time = T_base × (1 + α)^weighted_score
-```
-
-## Future Work
-
-1. **AI Model Comparison**: Test if AI assistants follow exponential or logarithmic patterns
-2. **Language-Specific α Values**: Calibrate penalty factors per language
-3. **Team Size Effects**: How does team size affect discontinuity accumulation?
-4. **Refactoring Guidance**: Automated suggestions to reduce discontinuities
-5. **IDE Integration**: Real-time discontinuity scoring while coding
-
-## Contributing
-
-This tool will eventually be moved to its own repository. For now:
-
-1. Run analysis on your repositories
-2. Share results (anonymized) for model calibration
-3. Suggest new discontinuity metrics
-4. Add support for more languages
-
-## Citations
-
-Based on the Software First Principles framework:
-- FP-012: Comprehension Continuity Principle
-- FP-007: Dual Optimization Principle
-- FP-009: Change Proximity Principle
-
-## License
-
-Same as parent Sapientia project
+Dependencies: `requirements.txt` (numpy, scipy; matplotlib for `analyze_outliers.py`'s figure).
