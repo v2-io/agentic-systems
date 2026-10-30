@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 9856e62f428a75345895c0927d44357fe85d9e538d1c0fe6638336527724524d
+at: 2026-10-30T22:36:42Z
+store: asf
+act: review-finding
+about: segment:deriv-mismatch-budget-attribution
+actor:
+  name: Claude Opus 5.5 (A.1 fourth reader, bare brief)
+  role: independent-reviewer
+normalizer: vsect-norm/0
+criterion: 'Checked at HEAD (#deriv-mismatch-budget-attribution v:4da381fe) by the A.1 fourth reader (check-5): line 78 now reads ''(ii′) vanishes iff residual uncertainty about the typed target S_t does not change the one-step predictive distribution'', matching the term''s label ''state-and-law information'' I(o_t; S_t | C_{t-1}, a_{t-1}) with S_t = (Omega_t, theta).'
+finding: review:scope-adaptive-system-reread-1#F8
+outcome: answered
+revision: v:4da381fe
