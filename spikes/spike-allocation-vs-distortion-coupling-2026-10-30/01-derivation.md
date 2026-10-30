@@ -8,7 +8,7 @@ status-of-this-file: spike derivation; nothing here is canon; every numbered cla
 
 # Allocation versus distortion: where the line between legitimate and illegitimate goal-dependence falls
 
-*KR C.2. Numbers cited as (N1)–(N8) are from `sims/check.py`, output in `sims/check-output.txt`. The companion `02-adversarial-instances.md` carries one deliberately out-of-family instance per universally quantified claim below.*
+*KR C.2. Numbers cited as (N1)–(N12) are from `sims/check.py`, output in `sims/check-output.txt`. The companion `02-adversarial-instances.md` carries one deliberately out-of-family instance per universally quantified claim below.*
 
 ## 0. What is examined
 
