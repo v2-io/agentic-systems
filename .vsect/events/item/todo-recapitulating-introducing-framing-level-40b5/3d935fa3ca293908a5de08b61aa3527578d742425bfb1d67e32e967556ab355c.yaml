@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 3d935fa3ca293908a5de08b61aa3527578d742425bfb1d67e32e967556ab355c
+at: 2026-10-30T21:59:44Z
+store: asf
+act: recheck
+about: item:todo-recapitulating-introducing-framing-level-40b5
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 537f1c6e+dirty
+criterion: 'An allowance, not work: framing-level segments with more expressive freedom are permitted, and the line itself says ''no specific candidates committed yet''. It names four kinds worth holding (a structural-arc reading guide, an ELI life-stakes framing, concept histories, meditations bridging to msc/reflections/). Those are pedagogy candidates H.3 would measure, and G.0 decides where any argued (non-derived) framing lives.'
+outcome: not-an-item

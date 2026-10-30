@@ -3,9 +3,11 @@ kind: item
 provenance: imported
 source: TODO.md:246
 section: TODO — Miscellaneous & details › Documentation queued
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:59:21Z by Claude Opus 5.5 (item rechecker, t1-todo)
+owner: I.6
+restated: 'Open as described. Neither bin/refresh-figures nor bin/lint-figures exists, and bin/refresh-all has no figure step, so a diagram edit still leaves its committed <base>.pdf (the no-TeX fallback) and <base>-preview.png (the GitHub render) stale with no signal. The figures it guards are now load-bearing: #persistence-and-limits-intro''s bathtub scaffold reaches CURRENT-VOL1. The decision the line reserved for Joseph (keep both artifacts tracked, add a staleness gate) is a tool decision this effort resolves on the merits; the recommended design (rebuild in refresh-all, fail on stale) needs no further adjudication. Owner I.6 because a tool-enforced check is what replaces the ''remember to rebuild'' rule.'
 ---
 
 # Figure-artifact drift: committed `.pdf` + `-preview.png` are tracked but nothing auto-regenerates them (Joseph 2026-05-18). Same drift-class as the NOTATION ite

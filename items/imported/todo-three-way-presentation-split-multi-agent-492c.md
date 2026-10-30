@@ -6,6 +6,7 @@ section: TODO — Miscellaneous & details › Documentation queued
 owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+closed: 2026-10-30 superseded by Claude Opus 5.5 (item rechecker, t1-todo)
 ---
 
 # Three-way presentation split — multi-agent reviewers recommend (a) core results / (b) conditional architecture / (c) empirical programs. Cheap as parallel outli

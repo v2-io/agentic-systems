@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: b038a3b9df0ff331199338314d24a53cd373b42672b451353b5f4fc2a4c7126c
+at: 2026-10-30T21:59:21Z
+store: asf
+act: recheck
+about: item:todo-figure-artifact-drift-committed-pdf-prev-a1b6
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 537f1c6e+dirty
+criterion: ls bin (no fig tool); grep -i figure bin/refresh-all (none); 01-aat-core/src/img/ holds .tex, .pdf, -preview.png triples, e.g. bathtub-scaffold, sector-cone, driver-snow-foundation.
+outcome: holds
+owner: I.6
+restated: 'Open as described. Neither bin/refresh-figures nor bin/lint-figures exists, and bin/refresh-all has no figure step, so a diagram edit still leaves its committed <base>.pdf (the no-TeX fallback) and <base>-preview.png (the GitHub render) stale with no signal. The figures it guards are now load-bearing: #persistence-and-limits-intro''s bathtub scaffold reaches CURRENT-VOL1. The decision the line reserved for Joseph (keep both artifacts tracked, add a staleness gate) is a tool decision this effort resolves on the merits; the recommended design (rebuild in refresh-all, fail on stale) needs no further adjudication. Owner I.6 because a tool-enforced check is what replaces the ''remember to rebuild'' rule.'

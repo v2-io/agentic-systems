@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: d5588933391ccce8bc6414e67787182c296b4104eaf9e99be53b2f95aeff66a6
+at: 2026-10-30T21:59:43Z
+store: asf
+act: recheck
+about: item:todo-aat-vs-ai-introductory-positioning-paper-e6d2
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 537f1c6e+dirty
+criterion: 'The three underclaims the spike named (spikes/.integrated/spike-active-inference-vs-aad.md §I action 2) are in canon bodies: the persistence template''s broader validity against Aguilera 2022 (#result-sector-persistence-template, #deriv-critical-mass-composition); directed separation as the Pearl-blanket conservative form of the Markov blanket, Bruineberg 2022 (#der-directed-separation:20,103-105, and four other segments); and the satisfaction gap as decision-theoretic content against the dark-room critique, Sun and Firestone 2020 (#def-satisfaction-gap, #def-control-regret, #disc-ciy-unified-objective). At introductory level, README.md:51 carries the active-inference divergence paragraph. The remainder, surfacing these in a paper''s introduction, is paper-time work for logos.'
+outcome: landed

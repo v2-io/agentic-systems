@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: b4ccd875968f3c6bfd454e5e06fac2eaa6d4b299617c5a700921944a88185c1d
+at: 2026-10-30T21:59:54Z
+store: asf
+act: recheck
+about: item:todo-domain-cross-transfer-candidates-2026-05-fd25
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 537f1c6e+dirty
+criterion: 'A pointer to an idea repository: msc/domain-xfer-candidates.md (122 lines) holds six cross-domain transfer questions, each ''sized as a focused literature-scan plus spike, not a research program'', and none is owed. Two are already claimed by INTENT: Q2 (AI coding agent vs human developer, a bidirectional empirical test) and Q6 (an empirical-test program for catalog-flagged predictions) are E.2 inputs, E being the objective that measures a quantity on an agent the theory did not construct. internal-surfaces/msc.md:33,191 has already mapped the file and its Q1 landing target (#result-structural-adaptation-necessity), so the questions are not lost when TODO.md is retired.'
+outcome: not-an-item

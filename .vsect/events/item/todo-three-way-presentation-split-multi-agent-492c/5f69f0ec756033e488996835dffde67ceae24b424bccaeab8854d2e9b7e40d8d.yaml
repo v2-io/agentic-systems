@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 5f69f0ec756033e488996835dffde67ceae24b424bccaeab8854d2e9b7e40d8d
+at: 2026-10-30T21:59:21Z
+store: asf
+act: recheck
+about: item:todo-three-way-presentation-split-multi-agent-492c
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 537f1c6e+dirty
+criterion: 'A presentation split by kind of claim (core results / conditional architecture / empirical programs) is what B''s records make generable: B.1 gives every load-bearing apparatus a register and population, B.2 retypes Part II to what it is. A view by register is then derived from the record rather than hand-curated. The ''outlines are cheap'' affordance it relied on (PROPOSALS §H, read at HEAD) named bin/build, which is retired; bin/build-monograph takes one outline per volume from the volume''s meta (outline: key), not several views.'
+outcome: superseded

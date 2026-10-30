@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4b3f7403b1f4c583d3c36975e7dd0488a00129600efc7b6602b1f43c1f8dca1f
+at: 2026-10-30T21:59:30Z
+store: asf
+act: recheck
+about: item:todo-external-validation-design-testable-pred-ff18
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 537f1c6e+dirty
+criterion: 'Overtaken by INTENT objective E: E.1 (kappa_processing-hat and A-hat on two or three LLM families, W1 vs W2, under empirica/''s RUNS contract) and E.2 (one Part I quantity estimated on a real adaptive system, or INTRODUCTION stops claiming simulation validation). The line''s candidates (git data, RL bandits, adaptive controllers) are inputs to E.2''s choice of system.'
+outcome: superseded

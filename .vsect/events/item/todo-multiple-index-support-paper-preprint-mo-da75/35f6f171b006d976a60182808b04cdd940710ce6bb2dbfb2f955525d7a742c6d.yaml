@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 35f6f171b006d976a60182808b04cdd940710ce6bb2dbfb2f955525d7a742c6d
+at: 2026-10-30T21:59:21Z
+store: asf
+act: recheck
+about: item:todo-multiple-index-support-paper-preprint-mo-da75
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 537f1c6e+dirty
+criterion: 'A capability wish from 2026-03-16 (afc0f355) with no claim at stake. Part of it exists: bin/build-monograph reads a per-volume ''outline:'' meta key (line 151), so a volume can be built from a different index. Building several views of one volume at once is not supported, and nothing currently needs it; a paper build is logos''s concern.'
+outcome: not-an-item

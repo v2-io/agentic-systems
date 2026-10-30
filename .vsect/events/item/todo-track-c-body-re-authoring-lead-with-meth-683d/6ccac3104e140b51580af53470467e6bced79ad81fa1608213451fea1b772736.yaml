@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 6ccac3104e140b51580af53470467e6bced79ad81fa1608213451fea1b772736
+at: 2026-10-30T21:58:14Z
+store: asf
+act: recheck
+about: item:todo-track-c-body-re-authoring-lead-with-meth-683d
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: de4fe796+dirty
+criterion: Read each meta-segment's first body paragraph at HEAD and spikes/meta-segment-narrative-ordering-sweep-plan.md §2.b; git log -S on the three methodology-first openings.
+outcome: holds
+owner: 'unowned: no KR'
+restated: 'Partly landed. Plan §2.b move 1 (open with the methodology) holds for two of the five meta-segments at HEAD: #disc-identifiability-floor opens ''AAT recurrently applies a constructive-impossibility methodology with the following five-element shape'' (2f14712e, 2026-05-25), and #disc-separability-pattern opens with its three-part posture. Three still open with the synthesis: #disc-additive-coordinate-forcing (''AAT carries a family of ... uniqueness results''), #disc-stability-certificate (''the geometry of a single object''), and #disc-modularity-state-dynamics (from #der-directed-separation''s static partition). Moves 2 to 5 (instances after the pattern, discovery narrative out of the lead, a Feynman-grade Brief that does not presume the instances) were not checked segment by segment. No KR owns register re-authoring; H.3''s before-and-after comprehension measurement is what would show whether it helps.'

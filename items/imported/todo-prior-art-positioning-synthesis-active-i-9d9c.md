@@ -6,6 +6,7 @@ section: TODO — Miscellaneous & details › Documentation queued
 owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+closed: 2026-10-30 stale by Claude Opus 5.5 (item rechecker, t1-todo)
 ---
 
 # Prior-art positioning synthesis — active inference / FEP / POMDP / BDI relationships now in individual segments; a synthesis pass surfacing the cross-segment pa

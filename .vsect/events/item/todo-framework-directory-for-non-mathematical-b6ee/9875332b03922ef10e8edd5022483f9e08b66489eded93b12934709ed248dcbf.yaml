@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 9875332b03922ef10e8edd5022483f9e08b66489eded93b12934709ed248dcbf
+at: 2026-10-30T21:59:21Z
+store: asf
+act: recheck
+about: item:todo-framework-directory-for-non-mathematical-b6ee
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 537f1c6e+dirty
+criterion: 'Written 2026-03-16 (afc0f355) for ''architectural guidance, engineering patterns, philosophical foundations'' then living in scratch/ and reflections/. Overtaken twice: the four-volume structure (03-llm-core, 04-eli-core carry the non-AAT architecture), and the Archema program''s division of registers (asf derived, logos argued, vivarium tried). Where argued non-derived claims live is now INTENT''s G.0. No framework/ directory exists and none is owed.'
+outcome: superseded

@@ -6,6 +6,7 @@ section: TODO — Miscellaneous & details › Open theory items (MEDIUM)
 owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+closed: 2026-10-30 not-an-item by Claude Opus 5.5 (item rechecker, t1-todo)
 ---
 
 # Domain cross-transfer candidates (2026-05-04 cycle). [`msc/domain-xfer-candidates.md`](../../msc/domain-xfer-candidates.md) carries six cross-domain transfer question

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 3f336dd56e9c5f02f3f5366b258c2781ba35eb172839e871feeed46fc7eaeccb
+at: 2026-10-30T21:59:44Z
+store: asf
+act: recheck
+about: item:todo-prior-art-positioning-synthesis-active-i-9d9c
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 537f1c6e+dirty
+criterion: 'The line proposes a cross-segment synthesis pass on the active inference / FEP / POMDP / BDI relationships. The project''s standing rule (asf CLAUDE.md, Prior art integration) is that adopted concepts land in the segments where they bear and that separate prior-art positioning documents are not created, because they orphan; the #prior-art-positioning segment idea was explicitly superseded by that rule. The relationships are in the individual segments, as the line itself says. What survives is the front-door positioning paragraph, which exists (README.md:51); whether it agrees with the bodies is A.2''s check.'
+outcome: stale
