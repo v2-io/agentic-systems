@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 3a4d5398bdee2fdec84b0378f433347b40232dd9b06f78cefed8ce74184c78e2
+at: 2026-10-30T21:30:36Z
+store: asf
+act: recheck
+about: item:proposals-e-3-sp-9-fenchel-bregman-reframe-of-addi-d684
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'The reframe itself landed the day after the entry was written: #disc-additive-coordinate-forcing:14 has said since 8f9a3ca1 (2026-04-25) that the four layers are manifestations of one exponential-family Legendre-Fenchel object, and its table (:41-46) catalogs the four. The PROPOSALS entry was never updated. What is not done is the entry''s own prerequisite (a): Amari-Nagaoka 2000 §3.5 is not in ref/ (only Amari 2009 and Amari-Cichocki 2010 are), and the segment''s Working Note (:131) still calls the unified-framework claim intuition-only. The chain-row defect the entry folded in is still in the body: the table row (:43) lists Cauchy-FE as the uniqueness mechanism for the chain layer while its own axiom cell says the chain rule is ''not an AAT axiom'', so by the segment''s definition of forced (:20) that row is not forced; recorded as a finding.'
+outcome: holds
+owner: F.3
+restated: The Legendre-Fenchel reframe landed (8f9a3ca1); verify its identification against Amari-Nagaoka 2000 from the primary, and fix the chain row of the table, which by the segment's own definition of 'forced' (:20) is an anchor, not a forced layer.

@@ -3,10 +3,11 @@ kind: item
 provenance: imported
 source: PROPOSALS.md:103
 section: PROPOSALS — Architectural Portfolio › §C. Soon — prereqs nearly met
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:def-mismatch-signal, segment:emp-update-gain, segment:def-adaptive-tempo, segment:def-satisfaction-gap, segment:def-control-regret, segment:der-orient-cascade, segment:def-strategy-dag]
+rechecked: 2026-10-30T21:30:34Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
 ---
 
 # C.2 O-BP15 — Comprehensive "minimal proof of viability" worked example

@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: PROPOSALS.md:244
 section: PROPOSALS — Architectural Portfolio › §E. Wait — explicitly gated
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:deriv-strategy-cost-regret-bound, segment:disc-additive-coordinate-forcing, segment:der-chain-confidence-decay, segment:deriv-edge-update-natural-parameter, segment:der-gain-sector-bridge]
+rechecked: 2026-10-30T21:30:36Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: F.3
+restated: The Legendre-Fenchel reframe landed (8f9a3ca1); verify its identification against Amari-Nagaoka 2000 from the primary, and fix the chain row of the table, which by the segment's own definition of 'forced' (:20) is an anchor, not a forced layer.
 ---
 
 # E.3 SP-9 — Fenchel-Bregman reframe of `#additive-coordinate-forcing`

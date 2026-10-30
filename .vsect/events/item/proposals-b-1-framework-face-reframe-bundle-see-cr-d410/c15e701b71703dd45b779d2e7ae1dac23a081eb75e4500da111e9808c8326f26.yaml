@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: c15e701b71703dd45b779d2e7ae1dac23a081eb75e4500da111e9808c8326f26
+at: 2026-10-30T21:30:33Z
+store: asf
+act: recheck
+about: item:proposals-b-1-framework-face-reframe-bundle-see-cr-d410
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: PROPOSALS §B.1 is a two-line pointer to Bundle 1 ('see §Cross-cutting view'); same proposal, judged there (superseded by A.2 and B.3).
+of: item:proposals-bundle-1-framework-face-reframe-paper-wr-96c4
+outcome: duplicate

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: f558607c245ba67f8fba22bd5b2dd36d5c18a6401de1712131b52d70f2f83e1b
+at: 2026-10-30T21:30:34Z
+store: asf
+act: recheck
+about: item:proposals-c-1-o-bp13-cox-parallel-necessity-for-de-f4cf
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: '#deriv-graph-structure (renamed from -uniqueness today by A9, 471aa7ce) says at :17 that it proves sufficiency only and that ''a stronger Cox-style result is open''. No spike. My inference, unverified: the necessity direction probably fails without causal sufficiency, which the segment itself calls a modeling ideal, not a typical condition (:99); with latent common causes the right object is an ADMG or chain graph (Evans-Richardson), so the likely result is ''DAG iff causal sufficiency plus temporal order'', with the complement characterized.'
+outcome: holds
+owner: unassigned
+restated: Find out whether P1-P4 plus causal sufficiency force DAG semantics (#deriv-graph-structure:17 proves sufficiency only); expect the answer to split on causal sufficiency, with ADMG/chain-graph structure the honest form when it fails (Lauritzen-Sadeghi 2018; Evans-Richardson 2014).

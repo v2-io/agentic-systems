@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: PROPOSALS.md:45
 section: PROPOSALS — Architectural Portfolio › Cross-cutting view
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:form-composition-closure, segment:scope-composite-agent]
+rechecked: 2026-10-30T21:30:33Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
+restated: 'Close the four Part III GAPs at 01-aat-core/OUTLINE.md:304-307 (population-level dynamics, endogenous coupling, transition dynamics, computational thresholds), with typed admissibility for #form-composition-closure and a first-class goal-information-leakage quantity as the named entry points; any further meta-segment must say what #disc-composition-consistency does not already carry.'
 ---
 
 # Bundle 2 — Section III completion cluster

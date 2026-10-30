@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: PROPOSALS.md:357
 section: PROPOSALS — Architectural Portfolio › §G. Newly surfaced in 2026-04-24 consolidation audit
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:scope-agent-identity, segment:form-agent-model, segment:def-death-as-factor-loss, segment:def-chronica, segment:def-identity-sufficiency]
+rechecked: 2026-10-30T21:30:36Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
+restated: 'SP-27: characterize which continuity breaks are invisible from the agent''s own accessible information, i.e. when a broken and an unbroken chronica share an image under phi (M_t = phi(C_t), #form-agent-model); lossiness of phi is necessary, not sufficient. Place the result relative to #scope-agent-identity and the four deaths of #def-death-as-factor-loss.'
 ---
 
 # Surfaced 2026-05-29 (qualitative gem-hunt over the under-mined audit backlog)

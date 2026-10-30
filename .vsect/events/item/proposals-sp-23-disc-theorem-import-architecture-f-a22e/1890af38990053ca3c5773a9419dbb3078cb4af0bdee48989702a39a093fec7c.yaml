@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 1890af38990053ca3c5773a9419dbb3078cb4af0bdee48989702a39a093fec7c
+at: 2026-10-30T21:30:36Z
+store: asf
+act: recheck
+about: item:proposals-sp-23-disc-theorem-import-architecture-f-a22e
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'No such segment; #disc-additive-coordinate-forcing Working Notes (:154) carry the same proposal. Reframed: a hand-maintained meta-segment cataloguing imports would be a second text that drifts (H.1''s principle), and the entry''s own risk note says to generate it from segment-level prior-art blocks. That generation needs the structured citations F.2 and F.3 are to build (the pilot found one of 173 Part I segments with a formal citation command). The entry''s thesis that ASF''s contribution is ''integration, not invention'' is also contested in canon (the agents.sop math-novelty section; the pilot''s question does-asf-introduce-new-mathematical-machinery-or).'
+outcome: holds
+owner: F.2
+restated: Once citations are structured (F.2/F.3), generate a view of which external theorems each load-bearing result imports and for what; not a hand-written fourth meta-segment.

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 3b1d5631cd6732c6826909e05b6cadc9a9af5b7139bb9219d50326b7e01a4095
+at: 2026-10-30T21:30:35Z
+store: asf
+act: recheck
+about: item:proposals-d-7-sp-15-template-family-naming-sector-8da7
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'Overtaken by the stability-certificate spine (b599c4a6, 2026-05-14): #disc-stability-certificate:44 places #result-sector-persistence-template and #result-contraction-template together as the Interior facet of one certificate, which is the ''named family with explicit positioning'' the entry asked for, and PROPOSALS D.9 records that no separate operator-family meta-pattern exists. The third member (#dissipativity-template) is unlanded; when CL-1 lands (D.9) it joins the Interior facet.'
+outcome: superseded

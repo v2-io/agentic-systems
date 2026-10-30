@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 692306e2848d162fcbb116e55c035fc72a61fc6628197b14b6aa420c43170e81
+at: 2026-10-30T21:30:34Z
+store: asf
+act: recheck
+about: item:proposals-c-2-o-bp15-comprehensive-minimal-proof-o-8a18
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'Still true at HEAD: the worked examples are example-bandit, example-kalman, example-L1 and example-strategy, each local; none threads mismatch to gain to tempo to sector condition to the two gaps to the cascade to the DAG. Its prerequisite (Bundle 1) is superseded, so nothing gates it. Nearest KRs: E.2 (one Part I quantity estimated on a real system) if the domain is real rather than constructed, and H.3 (comprehension measured). PROPOSALS §H''s suggestion that this is an outline view rather than a segment still applies.'
+outcome: holds
+owner: unassigned

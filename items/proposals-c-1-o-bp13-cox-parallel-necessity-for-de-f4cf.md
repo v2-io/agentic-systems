@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: PROPOSALS.md:95
 section: PROPOSALS — Architectural Portfolio › §C. Soon — prereqs nearly met
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:deriv-graph-structure, segment:der-architecture-noidentifiability, segment:disc-identifiability-floor]
+rechecked: 2026-10-30T21:30:34Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
+restated: Find out whether P1-P4 plus causal sufficiency force DAG semantics (#deriv-graph-structure:17 proves sufficiency only); expect the answer to split on causal sufficiency, with ADMG/chain-graph structure the honest form when it fails (Lauritzen-Sadeghi 2018; Evans-Richardson 2014).
 ---
 
 # C.1 O-BP13 — Cox-parallel necessity for `#deriv-graph-structure`

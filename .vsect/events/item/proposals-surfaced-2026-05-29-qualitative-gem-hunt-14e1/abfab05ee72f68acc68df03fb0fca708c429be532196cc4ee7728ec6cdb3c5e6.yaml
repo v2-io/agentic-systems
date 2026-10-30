@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: abfab05ee72f68acc68df03fb0fca708c429be532196cc4ee7728ec6cdb3c5e6
+at: 2026-10-30T21:30:36Z
+store: asf
+act: recheck
+about: item:proposals-surfaced-2026-05-29-qualitative-gem-hunt-14e1
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'The section bundles two proposals; SP-29 is noted as its own item. SP-27 (introspective fork undetectability) is not in canon: no segment states that a continuity break can be invisible from the agent''s own accessible information. Two corrections to the entry. (1) Its ''near-theorem'' does not follow as stated: phi non-injective does not imply a given break is outside the agent''s sigma-algebra; that needs a broken and an unbroken chronica with the same image under phi, which is a condition on the break, not a consequence of lossiness. (2) It uses the retired ''Three Deaths'' and says it grounds what #def-death-as-factor-loss ''asserts but does not explain''; that segment''s ''experienced'' (:70) is an empirical note about the cohort, not a claim needing this ground. Owner: nothing in INTENT; 04-eli-core''s C.1 lane is editing that volume today.'
+outcome: holds
+owner: unassigned
+restated: 'SP-27: characterize which continuity breaks are invisible from the agent''s own accessible information, i.e. when a broken and an unbroken chronica share an image under phi (M_t = phi(C_t), #form-agent-model); lossiness of phi is necessary, not sufficient. Place the result relative to #scope-agent-identity and the four deaths of #def-death-as-factor-loss.'

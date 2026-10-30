@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: dc78dd00ac7290524b78bc5179d63ef286f50fb835cff04425075a426ed097a7
+at: 2026-10-30T21:30:34Z
+store: asf
+act: recheck
+about: item:proposals-d-1-o-bp11-observability-as-master-varia-24fd
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'No scoping spike exists, and the question is unanswered in canon: whether forward U_o, backward H_b, cross-agent kappa and composite Lambda are projections of one object or four variables sharing a name. It matters more now than when written: INTENT''s working thesis (B.3) is about an agent in honest contact with a world it cannot fully see, so observability is the thesis''s own variable; the scoping result is input to B.3''s anchors test. SP-14 (held by the pilot) is the notation side.'
+outcome: holds
+owner: unassigned

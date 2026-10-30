@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 726b5f6b438c8597f2dfb003152f7d2d737634614c87f3fc64932b5249f1e1cb
+at: 2026-10-30T21:30:36Z
+store: asf
+act: recheck
+about: item:proposals-sp-21-composite-agent-scope-route-ontolo-4969
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'The decision is still open and the inconsistency that motivates it is still in the body, six months after the entry recommended its ''Path A'' editorial fix as an interim move. #scope-composite-agent justifies being a scope condition by requiring a well-defined composite objective: ''If the sub-agents'' objectives do not align under any common O_c, then G_c is ill-defined and the composite is a fiction... composition applies where G_c is well-defined'' (:83). Route (C-iii) admits composites with ''No explicit common objective'' (:44-48), and (C-iv) admits equilibrium-convergent groups with none either. F-V2 (the adversarial-pair contradiction) does look resolved (:73-81). The ''decision needed from Joseph'' gate is lifted under this effort. Recorded the contradiction as a finding.'
+outcome: holds
+owner: unassigned
+restated: 'Resolve #scope-composite-agent''s internal contradiction (its justification at :83 requires a well-defined O_c; routes C-iii and C-iv admit composites without one) either by deriving an induced O_c for each route or by splitting the routes into distinct composite ontologies with their own theorem families; eight dependent segments rest on the choice.'

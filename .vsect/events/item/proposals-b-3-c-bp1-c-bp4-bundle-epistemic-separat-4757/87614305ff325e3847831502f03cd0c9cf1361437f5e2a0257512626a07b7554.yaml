@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 87614305ff325e3847831502f03cd0c9cf1361437f5e2a0257512626a07b7554
+at: 2026-10-30T21:30:34Z
+store: asf
+act: recheck
+about: item:proposals-b-3-c-bp1-c-bp4-bundle-epistemic-separat-4757
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'Overtaken by INTENT''s B.1 and B.2, which are running. C-BP4''s claim-level statuses are B.1''s Claim Records (register, population, true-of, false-of, falsifier, instantiated; sixteen Part II segments carry them since 8d3d481f/cd07df2e, with a format.sop schema). C-BP1''s layers (''object exists / exact theorem transfers / operationally extractable'') are what B.2 retypes Part II apparatus into (definition + classification + estimator). The two pilot segments the bundle named (#deriv-observation-ambiguity-bias-bound, #result-section-ii-survival) are Part I and Volume 3, which B.1 reaches after Part II.'
+outcome: superseded

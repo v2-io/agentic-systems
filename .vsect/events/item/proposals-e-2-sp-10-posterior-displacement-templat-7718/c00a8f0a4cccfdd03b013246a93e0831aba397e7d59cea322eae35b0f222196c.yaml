@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: c00a8f0a4cccfdd03b013246a93e0831aba397e7d59cea322eae35b0f222196c
+at: 2026-10-30T21:30:35Z
+store: asf
+act: recheck
+about: item:proposals-e-2-sp-10-posterior-displacement-templat-7718
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'Closed by its own rule: ''If none materializes in the next 2-3 cycles, move to §F.'' Six months on, the Otto-Villani posterior-displacement cascade appears in two segments only (#deriv-observation-ambiguity-bias-bound and a mention in #disc-additive-coordinate-forcing; grep over 0*/src), and none of the three anticipated clients (causal-IB, misspecification cost, composition-scope robustness) uses it.'
+outcome: stale

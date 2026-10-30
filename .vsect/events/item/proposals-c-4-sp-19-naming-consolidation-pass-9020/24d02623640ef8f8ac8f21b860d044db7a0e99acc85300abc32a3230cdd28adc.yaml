@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 24d02623640ef8f8ac8f21b860d044db7a0e99acc85300abc32a3230cdd28adc
+at: 2026-10-30T21:30:34Z
+store: asf
+act: recheck
+about: item:proposals-c-4-sp-19-naming-consolidation-pass-9020
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'None of the renames happened: the slugs are still #disc-additive-coordinate-forcing and #disc-separability-pattern, and terminology/entries has no entry for the proposed names. Narrower than the entry: (c) the ''floor / ladder / Cauchy-coordinates'' trio is out of date (the meta-architecture is now the certificate spine with M1-M4); (d) template-family naming is D.7, superseded by that spine; (b) touches the separability-ladder rung-naming item from the decision briefs. The ''Joseph-level naming decision'' gate is lifted under this effort.'
+outcome: holds
+owner: F.1
+restated: 'Decide whether #disc-additive-coordinate-forcing and #disc-separability-pattern get shorter speakable names (#cauchy-coordinates, #separability-ladder), through the naming process with F.4''s ''does this already have a name elsewhere?'' check first.'

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 9c061537768b9f70b85d1a08d112fbe5eccb43046ae216a401da75ef412996b4
+at: 2026-10-30T21:30:35Z
+store: asf
+act: recheck
+about: item:proposals-d-6-o-bp12-resource-budget-b-t-as-master-2773
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'No scoping spike; #disc-compression-operations still says the four betas are ''four calibration problems, not one''. One change since the entry: the symbol B_t is now taken by #form-resource-budget for an actuation-energy pool, a different object, so this proposal needs another name if it lands. C.2''s C3 spike (allocation vs distortion) is adjacent: it treats allocation of encoding capacity, one of the allocations a master budget would govern.'
+outcome: holds
+owner: unassigned

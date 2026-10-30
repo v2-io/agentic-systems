@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: PROPOSALS.md:123
 section: PROPOSALS — Architectural Portfolio › §C. Soon — prereqs nearly met
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:disc-separability-pattern]
+rechecked: 2026-10-30T21:30:34Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: F.1
+restated: 'Decide whether #disc-additive-coordinate-forcing and #disc-separability-pattern get shorter speakable names (#cauchy-coordinates, #separability-ladder), through the naming process with F.4''s ''does this already have a name elsewhere?'' check first.'
 ---
 
 # C.4 SP-19 — Naming consolidation pass

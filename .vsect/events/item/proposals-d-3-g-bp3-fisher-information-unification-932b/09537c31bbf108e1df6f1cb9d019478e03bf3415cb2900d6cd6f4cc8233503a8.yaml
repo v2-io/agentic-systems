@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 09537c31bbf108e1df6f1cb9d019478e03bf3415cb2900d6cd6f4cc8233503a8
+at: 2026-10-30T21:30:34Z
+store: asf
+act: recheck
+about: item:proposals-d-3-g-bp3-fisher-information-unification-932b
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'The scoping question the entry calls essential is answered in canon: #def-adaptive-tempo:30-46 (6c24bed9, 2026-05-12, ''partial landing — primitive in place'') defines the tensor tempo under the Fisher-local regime and states when the scalar form collapses from it (commuting precisions; always in 1-D). The entry itself records that the strong ''rewrite Section I around Fisher'' thesis was hollowed out by piecemeal landings. What is left is the follow-on #def-adaptive-tempo:46 names, promoting downstream results that invoke scalar tempo to the tensor form, which is the TODO item judged in the TODO lane.'
+of: item:todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe
+outcome: duplicate

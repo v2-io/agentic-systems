@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: b867a91f505de87a7851a65b9c9d4fbec8f472ca953ef7bfedd44ad850191248
+at: 2026-10-30T21:30:34Z
+store: asf
+act: recheck
+about: item:proposals-d-4-sp-12-commitment-resource-temporal-d-1dea
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'Still a Known Fragility in agents.sop.md (''Missing commitment / resource / temporal structure in the DAG''). Commitment state is named as open in #def-strategy-dimension''s Working Notes (:97); temporal structure is absent. The resource leg moved: #form-resource-budget (d098997f) introduced a scalar budget B_t, but it is an actuation-energy pool for adversarial destabilization, not per-path resource budgets in the DAG.'
+outcome: holds
+owner: unassigned
+restated: 'Extend the strategy DAG with a commitment state (considering vs committed, per Bratman / Rao-Georgeff; #def-strategy-dimension:97) and temporal structure (deadlines, durations); per-path resources are a third, separate leg, distinct from #form-resource-budget''s actuation-energy budget.'

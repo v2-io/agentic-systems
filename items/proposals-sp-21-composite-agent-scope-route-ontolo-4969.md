@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: PROPOSALS.md:278
 section: PROPOSALS — Architectural Portfolio › §G. Newly surfaced in 2026-04-24 consolidation audit
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:form-composition-closure, segment:deriv-strategic-composition, segment:result-unity-closure-mapping, segment:der-team-persistence, segment:deriv-critical-mass-composition, segment:disc-composition-consistency, segment:hyp-symbiogenic-composition, segment:scope-composite-agent, segment:def-unity-dimensions]
+rechecked: 2026-10-30T21:30:36Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
+restated: 'Resolve #scope-composite-agent''s internal contradiction (its justification at :83 requires a well-defined O_c; routes C-iii and C-iv admit composites without one) either by deriving an induced O_c for each route or by splitting the routes into distinct composite ontologies with their own theorem families; eight dependent segments rest on the choice.'
 ---
 
 # SP-21 — Composite-agent scope-route ontology split

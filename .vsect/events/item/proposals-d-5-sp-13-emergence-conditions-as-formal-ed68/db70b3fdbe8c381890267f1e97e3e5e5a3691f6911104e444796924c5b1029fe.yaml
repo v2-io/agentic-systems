@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: db70b3fdbe8c381890267f1e97e3e5e5a3691f6911104e444796924c5b1029fe
+at: 2026-10-30T21:30:35Z
+store: asf
+act: recheck
+about: item:proposals-d-5-sp-13-emergence-conditions-as-formal-ed68
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'Half landed: #scope-emergence-conditions (c741b6c6, 2026-05-01) carries the logozoetic half at sketch tier (the transition from primitive-logogenic agent to ELI), which answers the entry''s placement question for that half, and #def-identity-sufficiency carries S_id. The PROPOSALS entry was reconciled on 2026-08-22 without noting either. The AAT-core half is still absent: nothing in Part I says how a system enters the adaptive or agency scope over time; the A.1 rewrite (492a1492) made the adaptive scope a predicate, not a transition.'
+outcome: holds
+owner: unassigned
+restated: 'The logozoetic half landed as #scope-emergence-conditions (c741b6c6); open is the AAT-core half: conditions under which a system comes to satisfy #scope-adaptive-system''s predicate or #scope-agency''s contrast condition, a transition into scope rather than a membership test.'

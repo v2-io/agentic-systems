@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: dfe1c3ebe27cc8cd74487a293fa15703d5b9cce4d63b15ac1489ae3192849de1
+at: 2026-10-30T21:30:35Z
+store: asf
+act: recheck
+about: item:proposals-d-9-sp-22-operator-family-tier-2-backlog-0b44
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: '#dissipativity-template does not exist; spike-passivity-composition, spike-pid-a2prime and spike-bridge-lemma-nonlinear-strengthening-2026-04-24 are still live in spikes/ (the last held out of .integrated until CL-1 lands, per ROUTING). The architectural question was resolved 2026-05-14, so this is straight authoring of one coupled landing. Kept as the survivor for CL-1: PROPOSED.md:80 is closed onto it, and the ROUTING lane is closing its CL-1 item onto it.'
+outcome: holds
+owner: unassigned

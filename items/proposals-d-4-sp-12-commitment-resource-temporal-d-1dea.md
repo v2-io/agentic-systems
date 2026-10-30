@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: PROPOSALS.md:172
 section: PROPOSALS — Architectural Portfolio › §D. Later — needs investigation-first scoping or upstream maturation
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:def-strategy-dimension, segment:def-strategy-dag, segment:def-satisfaction-gap, segment:deriv-strategic-composition]
+rechecked: 2026-10-30T21:30:34Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
+restated: 'Extend the strategy DAG with a commitment state (considering vs committed, per Bratman / Rao-Georgeff; #def-strategy-dimension:97) and temporal structure (deadlines, durations); per-path resources are a third, separate leg, distinct from #form-resource-budget''s actuation-energy budget.'
 ---
 
 # D.4 SP-12 — Commitment / resource / temporal DAG extensions

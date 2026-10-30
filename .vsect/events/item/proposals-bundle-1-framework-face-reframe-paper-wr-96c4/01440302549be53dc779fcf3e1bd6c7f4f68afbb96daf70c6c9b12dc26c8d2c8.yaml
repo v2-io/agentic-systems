@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 01440302549be53dc779fcf3e1bd6c7f4f68afbb96daf70c6c9b12dc26c8d2c8
+at: 2026-10-30T21:30:33Z
+store: asf
+act: recheck
+about: item:proposals-bundle-1-framework-face-reframe-paper-wr-96c4
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'The bundle''s question, how ASF presents what it is, now belongs to INTENT''s A.2 (one headline list across INTRODUCTION, Part fronts and README partials, each sentence traced to a body) and B.3 (the purpose statement is the working thesis or a tested replacement). Its own frame is out of date: it proposes ''epistemic architecture with three-part meta-structure'', while canon now has the stability-certificate spine with M1-M4 and #disc-composition-consistency as a second Meta-Architecture member. The concrete residue, checked at HEAD: doc/readme/src/_position-and-lineage.md still opens ''ASF integrates four mature disciplines'' (A.2''s surface); the Part I intro stub and the dropped Part III preface are A.2/H.1 surfaces; #scope-agent-identity is still type: scope (what kind of claim it makes is B.1''s question when Part I records are written). The scope lattice, the domain-instantiation template and the ''dual-edged'' editorial touches have no owner and no live case; they go with the bundle.'
+outcome: superseded

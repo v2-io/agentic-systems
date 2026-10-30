@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 7611be7dd242b8cd599f2463ea37f3dd3e0184aef36f5f71f47a56055e4a897c
+at: 2026-10-30T21:30:33Z
+store: asf
+act: recheck
+about: item:proposals-d-2-section-iii-completion-upstream-piec-e28d
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: PROPOSALS §D.2 lists Bundle 2's upstream pieces (O-BP16, SP-17); same program, judged there.
+of: item:proposals-bundle-2-section-iii-completion-cluster-50fe
+outcome: duplicate

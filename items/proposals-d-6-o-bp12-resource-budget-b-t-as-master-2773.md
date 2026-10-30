@@ -3,10 +3,11 @@ kind: item
 provenance: imported
 source: PROPOSALS.md:194
 section: PROPOSALS — Architectural Portfolio › §D. Later — needs investigation-first scoping or upstream maturation
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:disc-compression-operations, segment:der-deliberation-cost, segment:form-strategy-complexity-cost, segment:emp-update-gain, segment:def-adaptive-tempo]
+rechecked: 2026-10-30T21:30:35Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
 ---
 
 # D.6 O-BP12 — Resource budget $B_t$ as master variable

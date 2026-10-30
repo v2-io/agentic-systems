@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: PROPOSALS.md:182
 section: PROPOSALS — Architectural Portfolio › §D. Later — needs investigation-first scoping or upstream maturation
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:scope-agency, segment:scope-agent-identity]
+rechecked: 2026-10-30T21:30:35Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
+restated: 'The logozoetic half landed as #scope-emergence-conditions (c741b6c6); open is the AAT-core half: conditions under which a system comes to satisfy #scope-adaptive-system''s predicate or #scope-agency''s contrast condition, a transition into scope rather than a membership test.'
 ---
 
 # D.5 SP-13 — Emergence conditions as formal primitive

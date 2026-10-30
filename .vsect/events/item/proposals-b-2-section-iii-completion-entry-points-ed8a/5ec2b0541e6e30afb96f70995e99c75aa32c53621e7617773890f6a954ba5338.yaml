@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 5ec2b0541e6e30afb96f70995e99c75aa32c53621e7617773890f6a954ba5338
+at: 2026-10-30T21:30:33Z
+store: asf
+act: recheck
+about: item:proposals-b-2-section-iii-completion-entry-points-ed8a
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: PROPOSALS §B.2 lists Bundle 2's ready entry points (SP-11, SP-6 residue, O-BP9); same program, judged there.
+of: item:proposals-bundle-2-section-iii-completion-cluster-50fe
+outcome: duplicate

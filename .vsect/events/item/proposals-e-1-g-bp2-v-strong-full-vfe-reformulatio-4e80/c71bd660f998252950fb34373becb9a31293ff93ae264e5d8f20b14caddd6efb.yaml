@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: c71bd660f998252950fb34373becb9a31293ff93ae264e5d8f20b14caddd6efb
+at: 2026-10-30T21:30:35Z
+store: asf
+act: recheck
+about: item:proposals-e-1-g-bp2-v-strong-full-vfe-reformulatio-4e80
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 4e442b38+dirty
+criterion: 'The spike the entry cites already decided against it: spikes/.integrated/spike-active-inference-vs-aad.md §E.2 (:247-253) concludes ''do not pursue V-strong'', because the gain is rhetorical and the cost is the satisfaction-gap diagnostic and the architectural-classification scope honesty. Canon agrees: #deriv-variational-sector-condition:66 states the variational result does not force V-strong, and V-medium (KL-based cognitive cost) landed in #form-strategy-complexity-cost. How ASF presents its relation to active inference is a presentation question that follows the bodies (A.2).'
+outcome: stale

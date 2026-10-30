@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: PROPOSALS.md:335
 section: PROPOSALS — Architectural Portfolio › §G. Newly surfaced in 2026-04-24 consolidation audit
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:disc-separability-pattern, segment:disc-identifiability-floor, segment:disc-additive-coordinate-forcing, segment:deriv-persistence-cost]
+rechecked: 2026-10-30T21:30:36Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: F.2
+restated: Once citations are structured (F.2/F.3), generate a view of which external theorems each load-bearing result imports and for what; not a hand-written fourth meta-segment.
 ---
 
 # SP-23 — `#disc-theorem-import-architecture` fourth meta-segment
