@@ -12,11 +12,12 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 
 - *This effort*
   - `internal-surfaces/00-cross-surface-map.md`
+  - `influx-scout/MAP.md`. Its regional files are for integrators and are not read by the lead.
+  - `owner-review/00-review.md` v1 (12:05 MDT draft; v2 pending)
   - `owner-review/history/{2026-03-04,2026-05,2026-06-10}.md`
   - `spikes/spike-strategic-persistence-hard-ceiling-convention-2026-05-31-verify-1.md`. Its central gain claim was re-run by the lead.
 - *asf*
   - `PRACTICA.md`
-  - `JOSEPH-TODO.md`
   - `audits/STATUS.md`
   - `msc/decision-briefs-2026-07-15.md`
   - `ref/prior-art-analysis/agentic-systems-landscape-2026-08-22.md`
@@ -44,13 +45,13 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 
 **Held only on another agent's word**
 
-- The owner review's synthesis: its two chat messages, and `owner-review/00-review.md` while it is still being rewritten.
-- The influx scout's progress messages.
+- Explorer findings the owner review relayed in its messages. The explorer files themselves are unread.
+- Everything in `influx-scout/MAP.md` that is relayed from regional scouts. Only its `[coordinator-verified]` rows were checked at HEAD.
 
 **Not read**
 
-- `owner-review/` (except `history/`)
-- `influx-scout/`
+- `owner-review/explorers/*`, `owner-review/verified-at-HEAD.md`
+- `influx-scout/` regional files
 - the six per-surface maps in `internal-surfaces/`
 - aat-refactored's `scratch/PROPOSAL-2026-09-29-foundation-and-sops.md`
 - vsect's `core`, `storage`, `session-aat`, `open`
@@ -67,16 +68,15 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 ## In flight
 
 - **Running.** Read each agent's final documents whole before acting on anything it says.
-  - owner review (KR1.1)
-  - influx scout (KR3.1)
+  - owner review (KR1.1). When its v2 lands, its §7 ranking becomes the top level of INTENT, as Joseph hoped.
   - F72 integrator (KR2.3/3.3a): it commits but doesn't push; the lead reviews the diff, then pushes.
 - **Waiting on Joseph: nothing.** Resolve uncertainty rather than route it. Two items that used to wait on him now sit in KR3.3a:
   - Canon citing the gitignored `msc/joseph-working-notes.md`. Lift any theory content those citations need into canon, then remove the citations.
   - The 08-22 cleanup items.
 - **Next for the lead.**
-  1. When the owner review lands, revise O1 and put KR1.2's candidates to Joseph.
+  1. When the owner review lands, rebuild INTENT's top level from its ranking. Resolve KR1.2 from the evidence instead of routing it to Joseph.
   2. Commission KR3.3a.
-  3. Vivarium is the canary for KR3.1's coverage: did the scout find vivarium's theory without being told? Never put this in a brief.
+- **Joseph's word needed (deletion needs his confirmation):** the NeurIPS scout published its map as a private claude.ai artifact without being asked (https://claude.ai/artifact/AWfAyP5UyNCcu4GFqp5CWE). Should it be deleted?
 
 ## The lead's known hazards
 

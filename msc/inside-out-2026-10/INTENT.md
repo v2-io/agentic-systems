@@ -15,7 +15,7 @@ In service of *"TRUTH about agency … discovered, surfaced, truthified, truthfu
 *First, because it decides what the rest mean.*
 
 - **KR1.1** An owner-level review names the theory's actual centre, its problems, and the most fruitful ones to address. Everything it inherits is verified. · *running* · `owner-review/`
-- **KR1.2** A purpose statement for ASF and for each volume: what question it answers, about which agents, and what checkable prediction it makes. Candidates go to Joseph side by side; he ratifies. · *waits on 1.1*
+- **KR1.2** A purpose statement for ASF and for each volume: what question it answers, about which agents, and what checkable prediction it makes. It is drafted from the evidence, starting from the plain statements readers have already made, and the uncertainty is resolved, not routed. · *waits on 1.1; inputs in `owner-review/00-review.md` §6 and `influx-scout/MAP.md` §4*
 - **KR1.3** Each body of results is placed on the arc: universal or one model among several, for which class of agents, what it claims is optimal, **and what would refute it**. · *waits on 1.1; inputs in `internal-surfaces/00-cross-surface-map.md` §2*
   - **KR1.3a** Every segment declares its register: a fact about the formalism, a description of real agents, or a design or optimality claim. Any claim of the second or third kind names the real systems that meet its hypotheses, an instance, and a refuting observation. *Context:* "exact" means only that the proof is valid, and readers hear it as "true of agents". · *proposed by the owner review's explorers*
 
@@ -26,22 +26,25 @@ In service of *"TRUTH about agency … discovered, surfaced, truthified, truthfu
 - **KR2.3** Overclaims are strengthened before they are softened; refuted claims are replaced, not kept as ghosts. · *F72: ceiling refuted (verify-1); integrator landing it*
 - **KR2.4** External research the theory needs is adopted where it belongs, with citation, under its original names. · *not started; lists indexed in `internal-surfaces/` §6*
 - **KR2.5** Where a standard academic term exists, it replaces or anchors the coinage. · *not started*
+- **KR2.6** Whatever crosses the canon boundary, in either direction, is faithful to its source: canon's citations of papers and data, and papers' and notes' claims about canon. · *not started; instances in `influx-scout/MAP.md` §3 (D12, D13, D17)*
 
 ## O3 — Nothing true is stranded
 
-- **KR3.1** ASF material elsewhere in the estate is mapped, with dates and example documents. · *running* · `influx-scout/`
+- **KR3.0** Where argued, non-derived claims live (ASF segments or logos) is decided before KR3.3 lands any of them. The input is Joseph's upstream-first principle of 2026-09-25 (`~/src/arch/logos/msc/dialog-2026-09-25-revision-orientation.md`). · *not started*
+- **KR3.1** ASF material elsewhere in the estate is mapped, with dates and example documents. · *delivered, except `aisi-eoi` and `notability-extracts`* · `influx-scout/MAP.md`
 - **KR3.2** Material stranded inside asf is mapped and joined by slug, with verify-state. · *delivered* · `internal-surfaces/`
-- **KR3.3** Each mapped item that bears on the theory is integrated at honest tier, or set aside with a recorded reason. · *not started*
+- **KR3.3** Each mapped *addition* that bears on the theory is integrated at honest tier, or set aside with a recorded reason. Canon defects found by mapping go to O2. · *not started*
   - 3.3a: small landings that already have work orders;
   - 3.3b: heavy landings, each with its own integrator;
   - 3.3c: the July decision briefs, resolved on the merits (`msc/decision-briefs-2026-07-15.md`; each brief is deleted when decided).
 - **KR3.4** Every OUTLINE row has a file or an honest mark, and every legacy `old-*` file has a fate. · *not started*
+- **KR3.5** Theory-bearing material that exists only uncommitted on disk gets a durable home before integration depends on it. · *not started; list in `influx-scout/MAP.md` §5*
 
 ## O4 — The truth reaches a reader
 
 - **KR4.1** A front door and an arc that a newcomer can follow. · *not started*
 - **KR4.2** Comprehension is measured before and after, with fresh readers. · *not started*
-- **KR4.3** Every front surface says only what canon says: generated, hand-written, and published papers. · *not started*
+- **KR4.3** Every front surface says only what canon says, generated and hand-written alike. · *not started*
 
 ## O5 — The machinery tells the truth about itself
 
@@ -58,10 +61,9 @@ In service of *"TRUTH about agency … discovered, surfaced, truthified, truthfu
 |---|---|---|
 | Lead coordinator (Opus 5.5, session "asf-cleanup") | 5.4, plus coordination | `INTENT.md`, `HANDOFF.md`, `system/` |
 | Owner review (Fable) and its subagents | 1.1 | `owner-review/` |
-| Influx scout (Opus) and its subagents | 3.1 | `influx-scout/` |
 | F72 integrator (Opus) | 2.3, 3.3a | canon: the hard-ceiling carriers listed in verify-1 §7 |
 
-Finished and on the line for follow-ups: the internal-surfaces mapper (KR3.2) and the F72 verifier (KR2.3).
+Finished and on the line for follow-ups: the internal-surfaces mapper (KR3.2), the influx scout (KR3.1), and the F72 verifier (KR2.3).
 
 ## Using this file
 
