@@ -3,9 +3,11 @@ kind: item
 provenance: imported
 source: spikes/PROPOSED-ADVANCED.md:23
 section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 1: Candidate Spikes & Proposed Repairs'
-owner: ""
 opened: 2026-10-30T20:17:42Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:26:06Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
+restated: 'Construct the feature-local dependency operator J_F from TST quantities so the spike''s checkpoint-contraction bound becomes a bound on L_A in #result-coupled-diagnostic-framework; meanwhile the spike''s exact linearized lemmas are stranded outside canon (a G.2 decision: land at honest tier or set aside).'
 ---
 
 # 3. Transient Dependency Amplification and the Logogenic Lipschitz Constant

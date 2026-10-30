@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: f6b464bbf92af288b2d8d473c3d070251ca3ef0738132aeebac7b59c43c50ec3
+at: 2026-10-30T21:26:07Z
+store: asf
+act: recheck
+about: item:spikes-proposed-advanced-10-quantum-causal-dags-for-logogenic-sup-44f8
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 73ac4e7b+dirty
+criterion: 'The premise is a category error, not an open gap (my theory reading; no spike was run to test it, and none is needed). An autoregressive model''s next-token output is a classical probability vector: a softmax over the vocabulary. Written as a density matrix it is diagonal, so its von Neumann entropy equals its Shannon entropy and ''rewriting CIY with von Neumann entropy'' changes nothing. There are no complex amplitudes and no off-diagonal terms for ''interference between strategy branches'' to act on, and sampling a token is drawing from a classical distribution, not a measurement collapsing a superposition. Quantum-like (non-commutative) probability models of cognition exist (e.g. Busemeyer-Bruza), but they are a modeling choice that would need its own evidence, not something attention forces. Nothing in canon depends on the entry; grep finds no density-matrix or von Neumann content in 0*/src.'
+outcome: stale

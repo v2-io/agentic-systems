@@ -3,10 +3,11 @@ kind: item
 provenance: imported
 source: spikes/PROPOSED-ADVANCED.md:83
 section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 3: Surfaced 2026-05-19 (corpus reconciliation scan)'
-owner: ""
 opened: 2026-10-30T20:17:42Z
 opened-by: Claude Fable 5.1
 concerns: [segment:deriv-strategic-composition]
+rechecked: 2026-10-30T21:26:07Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
 ---
 
 # 14. AAT ↔ Replicator / evolutionary-game-dynamics correspondence (Phase-2-grade)

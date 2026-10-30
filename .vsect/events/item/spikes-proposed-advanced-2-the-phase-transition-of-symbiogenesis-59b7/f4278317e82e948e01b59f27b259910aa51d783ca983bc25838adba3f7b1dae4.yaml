@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: f4278317e82e948e01b59f27b259910aa51d783ca983bc25838adba3f7b1dae4
+at: 2026-10-30T21:26:06Z
+store: asf
+act: recheck
+about: item:spikes-proposed-advanced-2-the-phase-transition-of-symbiogenesis-59b7
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 73ac4e7b+dirty
+criterion: 'Read #hyp-symbiogenic-composition at HEAD: still hypothesis / robust-qualitative; its Working Note (:117) carries the saddle-node analysis with the k*delta^2 coordination penalty stipulated, and says itself that rho_c = alpha_auto^2/(4k) is a formulation until the penalty is derived from #def-shared-intent. No spike, no derivation attempt (git log on the segment: last content change cbc5183c, a gold-lift). The entry''s objective (''a pure physics proof... hierarchy is a mathematical necessity'') overstates what the derivation would give: a threshold under a named dynamics, not a necessity. No KR in INTENT owns theory-frontier strengthenings outside C1-C3.'
+outcome: holds
+owner: unassigned
+restated: 'Derive the aggregate-mismatch dynamics of two coupled autonomous sub-agents from #def-shared-intent and find out whether a quadratic (or any superlinear) coordination penalty appears; if it does, the saddle-node threshold in #hyp-symbiogenic-composition''s Working Notes becomes a conditional result; if it does not, record which nonlinearity the shared-intent quantity does give.'

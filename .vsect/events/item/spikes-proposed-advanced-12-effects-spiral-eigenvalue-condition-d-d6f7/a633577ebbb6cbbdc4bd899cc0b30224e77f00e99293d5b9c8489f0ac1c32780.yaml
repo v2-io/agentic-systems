@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: a633577ebbb6cbbdc4bd899cc0b30224e77f00e99293d5b9c8489f0ac1c32780
+at: 2026-10-30T21:26:07Z
+store: asf
+act: recheck
+about: item:spikes-proposed-advanced-12-effects-spiral-eigenvalue-condition-d-d6f7
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 73ac4e7b+dirty
+criterion: 'Read #deriv-strategic-composition (:160, :179) and #der-adversarial-destabilization (:57-73) at HEAD. The closed-form instances are not derived; the spiral is still discussion-grade (:73). But the target the entry names may be the wrong object: :179 states the spiral exists ''iff'' Re(lambda_max(grad F(pi*))) > 0 at a candidate equilibrium, a local linear condition, while :67 says the spiral needs state-dependent coupling gamma_A(||delta_B||) that fixed-matrix coupling cannot express (and CPT 2021 rules the spiral out under fixed coupling in a named sub-scope). Linear instability at an equilibrium is neither necessary nor sufficient for a state-dependent escape far from it. Inference, unverified: the entry''s second instance, two Kalman agents with linearly coupled observations, has fixed coupling and is a likely no-spiral case. Question opened on the iff.'
+outcome: holds
+owner: unassigned
+restated: 'First settle what the effects spiral''s formal condition is (#deriv-strategic-composition:179 gives a local spectral ''iff'' at an equilibrium; #der-adversarial-destabilization:67 requires state-dependent coupling away from it), then derive it for an instance whose coupling is state-dependent; a linearly coupled Kalman pair has fixed coupling and should come out as a no-spiral case.'

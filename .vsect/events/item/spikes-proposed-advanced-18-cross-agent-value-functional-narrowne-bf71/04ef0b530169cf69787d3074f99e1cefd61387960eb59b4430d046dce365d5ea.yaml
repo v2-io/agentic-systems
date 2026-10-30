@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 04ef0b530169cf69787d3074f99e1cefd61387960eb59b4430d046dce365d5ea
+at: 2026-10-30T21:26:08Z
+store: asf
+act: recheck
+about: item:spikes-proposed-advanced-18-cross-agent-value-functional-narrowne-bf71
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 73ac4e7b+dirty
+criterion: 'Still open: #deriv-social-welfare-aggregation-impossibility marks the cardinal-preference adjacency intuition-only (:118) and names the cross-agent lift as open; #disc-value-functional-grounding-floor''s open-before-candidate (a) (:162) carries the same question. Harsanyi appears only in that Working Note. It bears on the body''s flat exhaustion claim in #disc-value-functional-grounding-floor (:101, :129), which names cross-agent aggregation as one way a third route could appear.'
+outcome: holds
+owner: unassigned

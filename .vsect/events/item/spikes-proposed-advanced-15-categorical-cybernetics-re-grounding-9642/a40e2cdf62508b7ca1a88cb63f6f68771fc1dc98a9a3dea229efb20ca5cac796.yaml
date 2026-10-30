@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: a40e2cdf62508b7ca1a88cb63f6f68771fc1dc98a9a3dea229efb20ca5cac796
+at: 2026-10-30T21:26:07Z
+store: asf
+act: recheck
+about: item:spikes-proposed-advanced-15-categorical-cybernetics-re-grounding-9642
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 73ac4e7b+dirty
+criterion: 'No fit-check spike exists. Canon cites Capucci et al. 2022 and Smithe 2024 only at recognition tier (#der-class-coercion-in-composition:100 Related Work) and carries the fit-check and the ''epsilon* as optic obstruction'' idea in #form-composition-closure Working Notes (:367, :408). The entry''s own honest scope (first spike is a fit-check only; long horizon) is accurate. PROPOSED.md:53 is this entry''s first sub-spike and is closed as its duplicate.'
+outcome: holds
+owner: unassigned

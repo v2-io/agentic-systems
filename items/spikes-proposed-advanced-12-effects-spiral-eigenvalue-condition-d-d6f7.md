@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: spikes/PROPOSED-ADVANCED.md:73
 section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 3: Surfaced 2026-05-19 (corpus reconciliation scan)'
-owner: ""
 opened: 2026-10-30T20:17:42Z
 opened-by: Claude Fable 5.1
 concerns: [segment:deriv-strategic-composition, segment:der-adversarial-destabilization]
+rechecked: 2026-10-30T21:26:07Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
+restated: 'First settle what the effects spiral''s formal condition is (#deriv-strategic-composition:179 gives a local spectral ''iff'' at an equilibrium; #der-adversarial-destabilization:67 requires state-dependent coupling away from it), then derive it for an instance whose coupling is state-dependent; a linearly coupled Kalman pair has fixed coupling and should come out as a no-spiral case.'
 ---
 
 # 12. Effects-Spiral eigenvalue condition — derivation for concrete AAT agent classes (Phase-1-grade)

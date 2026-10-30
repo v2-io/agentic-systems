@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 0f18eb8689911558845364bf8b9121da31ac73b04f87137862fb53013321a113
+at: 2026-10-30T21:26:07Z
+store: asf
+act: recheck
+about: item:spikes-proposed-advanced-9-topology-dependent-propagation-of-hall-b0b6
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 73ac4e7b+dirty
+criterion: 'No spike, nothing in canon (grep ''ercolation'' over 0*/src finds only old-tst-comprehensive-synthesis). The entry gates itself on #3 (transient dependency), which is still unresolved, so this is a gated direction, not ready work. Kept as an item because it names a falsifiable threshold question (a checkpoint-coverage p_c), but its value depends entirely on #3.'
+outcome: holds
+owner: unassigned
+restated: 'Gated on PROPOSED-ADVANCED #3: once a feature-local dependency operator exists, ask whether a checkpoint-coverage or edge-reliability threshold separates locally contained from component-spanning error propagation.'

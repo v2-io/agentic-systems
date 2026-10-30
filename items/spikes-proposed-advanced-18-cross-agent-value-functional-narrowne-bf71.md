@@ -3,10 +3,11 @@ kind: item
 provenance: imported
 source: spikes/PROPOSED-ADVANCED.md:110
 section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 3: Surfaced 2026-05-19 (corpus reconciliation scan)'
-owner: ""
 opened: 2026-10-30T20:17:42Z
 opened-by: Claude Fable 5.1
 concerns: [segment:deriv-social-welfare-aggregation-impossibility, segment:form-objective-functional, segment:disc-value-functional-grounding-floor, segment:disc-implementation-impossibility]
+rechecked: 2026-10-30T21:26:08Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
 ---
 
 # 18. Cross-agent value-functional narrowness — the Arrow-unique open avenue

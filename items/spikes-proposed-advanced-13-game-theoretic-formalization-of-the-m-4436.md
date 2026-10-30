@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: spikes/PROPOSED-ADVANCED.md:78
 section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 3: Surfaced 2026-05-19 (corpus reconciliation scan)'
-owner: ""
 opened: 2026-10-30T20:17:42Z
 opened-by: Claude Fable 5.1
 concerns: [segment:disc-adversarial-coupling-pressure]
+rechecked: 2026-10-30T21:26:07Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
+restated: 'Formalize #disc-adversarial-coupling-pressure''s claim (:101) that modularity asymmetry compounds into strategic asymmetry: a two-agent repeated game with payoffs in own and opponent kappa_processing, asking whether arms races, advantage cascades and defensive-scaffolding incentives appear at equilibrium. This is the adversarial-coupling operation of M4, not strategic self-coupling.'
 ---
 
 # 13. Game-theoretic formalization of the modularity → strategic-asymmetry claim (Phase-1/2 boundary)

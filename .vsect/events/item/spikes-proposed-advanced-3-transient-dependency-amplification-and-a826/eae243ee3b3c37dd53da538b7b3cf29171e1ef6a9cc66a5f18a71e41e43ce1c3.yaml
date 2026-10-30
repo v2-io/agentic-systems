@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: eae243ee3b3c37dd53da538b7b3cf29171e1ef6a9cc66a5f18a71e41e43ce1c3
+at: 2026-10-30T21:26:06Z
+store: asf
+act: recheck
+about: item:spikes-proposed-advanced-3-transient-dependency-amplification-and-a826
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 73ac4e7b+dirty
+criterion: 'spikes/spike-transient-dependency-amplification.md is live and unchanged in content since 2026-04-25 (later commits are renames and LaTeX passes). The formal construction of J_F from TST quantities is still absent. Separately, the spike''s elementary exact pieces (Lemma 1, the supremum of uniformly Lipschitz values is Lipschitz; Proposition 1, the branching transient-growth construction; Lemma 2, checkpoint product bound; Corollary 2) exist only in the spike; #result-coupled-diagnostic-framework:111 and #hyp-exponential-cognitive-load:80 point at the spike. That stranded part is G.2''s kind of item; the J_F construction is research with no KR.'
+outcome: holds
+owner: unassigned
+restated: 'Construct the feature-local dependency operator J_F from TST quantities so the spike''s checkpoint-contraction bound becomes a bound on L_A in #result-coupled-diagnostic-framework; meanwhile the spike''s exact linearized lemmas are stranded outside canon (a G.2 decision: land at honest tier or set aside).'

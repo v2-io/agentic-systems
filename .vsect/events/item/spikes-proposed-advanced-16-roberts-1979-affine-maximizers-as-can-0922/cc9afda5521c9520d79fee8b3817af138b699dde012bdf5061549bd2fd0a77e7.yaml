@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: cc9afda5521c9520d79fee8b3817af138b699dde012bdf5061549bd2fd0a77e7
+at: 2026-10-30T21:26:07Z
+store: asf
+act: recheck
+about: item:spikes-proposed-advanced-16-roberts-1979-affine-maximizers-as-can-0922
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 73ac4e7b+dirty
+criterion: '#disc-implementation-impossibility carries Roberts 1979 under ''Adjacent Frontiers'' (:103-105), says the pattern fit with the discipline filter is genuine, and holds it back only to keep the charter at three. So the filter question the entry poses is already answered in canon''s favour; what remains is the landing (a supporting derivation) and the AAT-side cardinal-value adjacency to #form-objective-functional. The segment''s own open-before-candidate list (:182) also notes the three landed theorems'' statements are not yet primary-verified, which would apply to Roberts too.'
+outcome: holds
+owner: unassigned
+restated: 'Land Roberts 1979 as the fourth charter instance of #disc-implementation-impossibility (canon already judges the fit genuine at :105), from the primary source, and work out whether affine-maximizer structure meets #form-objective-functional''s cardinal value content.'

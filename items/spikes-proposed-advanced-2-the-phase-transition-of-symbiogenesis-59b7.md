@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: spikes/PROPOSED-ADVANCED.md:16
 section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 1: Candidate Spikes & Proposed Repairs'
-owner: ""
 opened: 2026-10-30T20:17:42Z
 opened-by: Claude Fable 5.1
 concerns: [segment:def-shared-intent, segment:hyp-symbiogenic-composition]
+rechecked: 2026-10-30T21:26:06Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
+restated: 'Derive the aggregate-mismatch dynamics of two coupled autonomous sub-agents from #def-shared-intent and find out whether a quadratic (or any superlinear) coordination penalty appears; if it does, the saddle-node threshold in #hyp-symbiogenic-composition''s Working Notes becomes a conditional result; if it does not, record which nonlinearity the shared-intent quantity does give.'
 ---
 
 # 2. The Phase Transition of Symbiogenesis (Bifurcation Theory of Mergers)

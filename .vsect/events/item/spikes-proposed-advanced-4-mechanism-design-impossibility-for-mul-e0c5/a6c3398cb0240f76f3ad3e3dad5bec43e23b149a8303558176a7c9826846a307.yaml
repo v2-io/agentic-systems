@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: a6c3398cb0240f76f3ad3e3dad5bec43e23b149a8303558176a7c9826846a307
+at: 2026-10-30T21:26:06Z
+store: asf
+act: recheck
+about: item:spikes-proposed-advanced-4-mechanism-design-impossibility-for-mul-e0c5
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 73ac4e7b+dirty
+criterion: 'The core landed as the three charter instances of #disc-implementation-impossibility (Track B, 2026-05-22). The remaining ''VCG / transferable-utility constructive strengthening'' is answered by canon''s own scoping decision, not open: the segment states constructive mechanism design is a positive-results literature deliberately outside the cluster (:113, :145) and lists subsidies/VCG-with-deficit as ''Outside AAT machinery'' (:74). Nothing in canon or INTENT reopens it. What is left is spikes/spike-alignment-impossibility.md §7 sitting live and unrouted; that is a set-aside with this reason (G.2), not a theory question. The entry''s ''inevitable active deception'' and the PROPOSED-ADVANCED Brief''s ''proving that decentralized AI alignment requires transferable utility'' are overclaims the entry itself flags; neither is in canon.'
+outcome: superseded

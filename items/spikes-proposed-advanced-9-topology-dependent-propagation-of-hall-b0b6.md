@@ -3,9 +3,11 @@ kind: item
 provenance: imported
 source: spikes/PROPOSED-ADVANCED.md:49
 section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 2: Next-Generation Spike Proposals'
-owner: ""
 opened: 2026-10-30T20:17:42Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:26:07Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
+restated: 'Gated on PROPOSED-ADVANCED #3: once a feature-local dependency operator exists, ask whether a checkpoint-coverage or edge-reliability threshold separates locally contained from component-spanning error propagation.'
 ---
 
 # 9. Topology-Dependent Propagation of Hallucinations (Percolation Theory)

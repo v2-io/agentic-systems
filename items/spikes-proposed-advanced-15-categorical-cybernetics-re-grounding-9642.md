@@ -3,10 +3,11 @@ kind: item
 provenance: imported
 source: spikes/PROPOSED-ADVANCED.md:88
 section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 3: Surfaced 2026-05-19 (corpus reconciliation scan)'
-owner: ""
 opened: 2026-10-30T20:17:42Z
 opened-by: Claude Fable 5.1
 concerns: [segment:form-composition-closure, segment:deriv-strategic-composition, segment:hyp-directed-separation-under-composition, segment:der-class-coercion-via-wrapping, segment:disc-continuity-stance]
+rechecked: 2026-10-30T21:26:07Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
 ---
 
 # 15. Categorical cybernetics re-grounding of composition machinery (Capucci 2022 + Smithe 2024) — Phase-3-grade, long-horizon

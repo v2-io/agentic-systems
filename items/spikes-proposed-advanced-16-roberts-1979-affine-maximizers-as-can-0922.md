@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: spikes/PROPOSED-ADVANCED.md:100
 section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 3: Surfaced 2026-05-19 (corpus reconciliation scan)'
-owner: ""
 opened: 2026-10-30T20:17:42Z
 opened-by: Claude Fable 5.1
 concerns: [segment:disc-implementation-impossibility, segment:form-objective-functional]
+rechecked: 2026-10-30T21:26:07Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
+restated: 'Land Roberts 1979 as the fourth charter instance of #disc-implementation-impossibility (canon already judges the fit genuine at :105), from the primary source, and work out whether affine-maximizer structure meets #form-objective-functional''s cardinal value content.'
 ---
 
 # 16. Roberts 1979 affine-maximizers as candidate fourth charter instance of `#disc-implementation-impossibility`

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 75abc96d7336e1dcb857cb033c9f88c8119e7ae0d9583e9aac6fc1f7a1b17f01
+at: 2026-10-30T21:26:07Z
+store: asf
+act: recheck
+about: item:spikes-proposed-advanced-17-skalse-2022-reward-hacking-unhackabil-8188
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 73ac4e7b+dirty
+criterion: 'Half of the two-pass evaluation is already done in canon: #disc-value-functional-grounding-floor:163 rules Skalse 2022 out as a charter instance of the value-functional cluster (the actor under the no-go is the designer), and places the agent-side exploitation in #deriv-reward-channel-learning-no-go. What remains is pass 1: whether the designer-side reward-proxy task passes #disc-implementation-impossibility''s filter (:107-109 leaves it to ''a future cycle'').'
+outcome: holds
+owner: unassigned
+restated: 'Decide whether Skalse et al. 2022''s designer-side unhackability no-go is a charter instance of #disc-implementation-impossibility (pass 2, the value-functional cluster, is already answered no at #disc-value-functional-grounding-floor:163).'
