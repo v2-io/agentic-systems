@@ -28,7 +28,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 
 ## C — The theory is correct where it is known wrong, and stronger where strengthening was found
 
-- **C.1** Every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. The defect lists are `owner-review/integrator-items.md` A1–A15, `internal-surfaces/00-cross-surface-map.md` §3 and `influx-scout/MAP.md` §3. · *F72 integrator landing the hard-ceiling refutation*
+- **C.1** Every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. The defect lists are `owner-review/integrator-items.md` A1–A15, `internal-surfaces/00-cross-surface-map.md` §3 and `influx-scout/MAP.md` §3. · *started: the hard ceiling (F72) is replaced; the rest are not started*
 - **C.2** Strengthenings C1–C3 (exit time, loop identification, allocation vs distortion coupling) are independently checked, then landed or refuted. · *not started*
 - **C.3** A cross-segment contradiction scan reports no open contradictions among load-bearing segments. · *not started*
 
@@ -76,14 +76,14 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 | Who | KR | Writes to |
 |---|---|---|
 | Lead coordinator (Opus 5.5, session "asf-cleanup") | I, plus coordination | `INTENT.md`, `HANDOFF.md`, `system/` |
-| F72 integrator (Opus) | C.1 | the hard-ceiling carriers listed in verify-1 §7 |
 
 These are finished and on the line through the lead:
 
 - the owner review (Fable) and its seven subagents;
 - the influx scout;
 - the internal-surfaces mapper;
-- the F72 verifier.
+- the F72 verifier;
+- the F72 integrator.
 
 ## Using this file
 

@@ -16,6 +16,7 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
   - `owner-review/00-review.md` (final v2), `owner-review/integrator-items.md`
   - `owner-review/history/{2026-03-04,2026-05,2026-06-10}.md`
   - `spikes/spike-strategic-persistence-hard-ceiling-convention-2026-05-31-verify-1.md`. Its central gain claim was re-run by the lead.
+  - The F72 landing diff (`5e621256`, `97179f6f`), reviewed whole, including the new `#deriv-evidence-allocation-ceiling`.
 - *asf*
   - `PRACTICA.md`
   - `audits/STATUS.md`
@@ -68,12 +69,12 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 ## In flight
 
 - **Running.** Read each agent's final documents whole before acting on anything it says.
-  - F72 integrator (KR2.3/3.3a): it commits but doesn't push; the lead reviews the diff, then pushes.
+  - The `CURRENT-VOL1` rebuild, run by the lead in the background. If it fails, the public snapshot still shows the refuted hard ceiling (A.2/H).
 - **Waiting on Joseph: nothing.** Resolve uncertainty rather than route it. Two items that used to wait on him now sit in KR3.3a:
   - Canon citing the gitignored `msc/joseph-working-notes.md`. Lift any theory content those citations need into canon, then remove the citations.
   - The 08-22 cleanup items.
 - **Next for the lead.**
-  1. When the F72 integrator lands, review its diff, push, and update CHANGELOG.
+  1. When the rebuild finishes, commit the snapshot if it's clean.
   2. Then take a beat (see the rhythm below): nothing running; rethink objective I, the system, from the top.
   3. After the beat, launch A and B first. A Fable focused on the system, the counterpart to the theory review, is a candidate for I.
 - **Joseph's word needed (deletion needs his confirmation):** the NeurIPS scout published its map as a private claude.ai artifact without being asked (https://claude.ai/artifact/AWfAyP5UyNCcu4GFqp5CWE). Should it be deleted?
