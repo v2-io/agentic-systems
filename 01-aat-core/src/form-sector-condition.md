@@ -17,7 +17,7 @@ The sector condition (A2') is the structural shape AAT chooses for the correctio
 
 ### Setup objects (carried into the form)
 
-Let $\delta(t) \in \mathbb{R}^n$ be the mismatch vector ( #def-mismatch-signal — the difference between the model's predictions and reality across $n$ observable dimensions). Let $F(\mathcal{T}, \delta) \colon \mathbb{R}_+ \times \mathbb{R}^n \to \mathbb{R}^n$ be the **correction function** — how the agent's adaptive process reduces mismatch — mapping into the same space as $\delta$ so that the inner product $\delta^T F$ is well-defined. This subsumes the update gain $\eta^\ast$ ( #emp-update-gain), event rate $\nu$, and the structure of the update rule. The adaptive tempo $\mathcal{T}$ ( #def-adaptive-tempo) is the rate parameter.
+Let $\delta(t) \in \mathbb{R}^n$ be the estimation error $\bar\delta = \bar o - \hat o$ of #def-mismatch-signal: the difference between the model's predictions and the mean the world delivers given its state and law, across $n$ observable dimensions. It is not the observed innovation $o - \hat o$, which also carries channel noise that no correction can remove. Let $F(\mathcal{T}, \delta) \colon \mathbb{R}_+ \times \mathbb{R}^n \to \mathbb{R}^n$ be the **correction function** — how the agent's adaptive process reduces mismatch — mapping into the same space as $\delta$ so that the inner product $\delta^T F$ is well-defined. This subsumes the update gain $\eta^\ast$ ( #emp-update-gain), event rate $\nu$, and the structure of the update rule. The adaptive tempo $\mathcal{T}$ ( #def-adaptive-tempo) is the rate parameter.
 
 ### (A1) Zero Correction at Zero Mismatch
 

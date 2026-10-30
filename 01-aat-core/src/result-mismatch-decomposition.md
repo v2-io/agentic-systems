@@ -46,6 +46,8 @@ with positivity whenever any term is positive. Grouping (i)+(ii) recovers the co
 
 **Reducible vs. irreducible (overfitting).** An agent that tries to eliminate *all* mismatch — including the two floors — will overfit: adjusting its model to explain noise, degrading future predictions. The update gain ( #emp-update-gain) implicitly separates signal from noise by weighting observations in proportion to their informativeness.
 
+**What the persistence bounds contain.** Terms (i) and (ii) together are the expected square of the estimation error $\bar\delta_t = \bar o_t - \hat o_t$ ( #def-mismatch-signal): $\mathbb{E}\lVert\bar\delta_t\rVert^2 = \text{(i)} + \text{(ii)}$, the grouped "model error" above. That is the object whose dynamics the persistence results bound ( #deriv-sector-condition). Term (iii) is the part of the innovation that no correction can remove. A persistence ultimate bound therefore sits on (i)+(ii), and the innovation's mean square sits above it by exactly the channel floor.
+
 **Connection to model sufficiency.** When $S(M_t) \lt 1$ ( #def-model-sufficiency), the model has lost predictive information relative to the full history. Under an alignment assumption (the lost information affects the one-step conditional mean), this implies positive estimation error (term i). Without that alignment assumption, insufficiency still implies positive regret under proper scoring rules but not necessarily positive one-step mean error.
 
 **Mismatch is structurally persistent.** In realistic AAT regimes, mismatch signals persist — they can be reduced but not eliminated when observation noise is non-degenerate. Deterministic, noiseless, perfectly specified systems are limiting edge cases, not the typical adaptive regime.

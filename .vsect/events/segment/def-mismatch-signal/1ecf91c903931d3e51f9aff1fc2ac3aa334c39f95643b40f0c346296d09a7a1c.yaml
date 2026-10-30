@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 1ecf91c903931d3e51f9aff1fc2ac3aa334c39f95643b40f0c346296d09a7a1c
+at: 2026-10-30T20:56:02Z
+store: asf
+act: revise
+about: segment:def-mismatch-signal
+actor:
+  name: c1-mismatch-lineage-integrator
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 250e844f383dff060ba7879b6c86f9c5fd546df30d0c24cbdfa0ae771d932b78
+own-version: a19745b33797b4786addc49b037e54795156dee55364ff3edc922e1eed8d1da9
+record: 01-aat-core/src/def-mismatch-signal.md

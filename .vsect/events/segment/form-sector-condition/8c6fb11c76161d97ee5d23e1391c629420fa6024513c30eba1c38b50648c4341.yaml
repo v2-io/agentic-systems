@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 8c6fb11c76161d97ee5d23e1391c629420fa6024513c30eba1c38b50648c4341
+at: 2026-10-30T20:56:02Z
+store: asf
+act: revise
+about: segment:form-sector-condition
+actor:
+  name: c1-mismatch-lineage-integrator
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 004adea7a4354f0947d87f64cb668435a1514857c544faae422fff3ed9cb223e
+own-version: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+record: 01-aat-core/src/form-sector-condition.md

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 194f89831baa94012756e410e23a2afa2d43e4a76c2e13c7b5ceb2fb6c5b83de
+at: 2026-10-30T20:56:02Z
+store: asf
+act: revise
+about: segment:result-sector-condition-stability
+actor:
+  name: c1-mismatch-lineage-integrator
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 0a7968b433eb41d7a0fd29481d1949c3aaa2edd786b77b42eb9e816c97ebf636
+own-version: 0cd95f849c0ee6f953ac1fbb5c590a47fe5581f9ad73ee7c5d1917f2df310b7e
+record: 01-aat-core/src/result-sector-condition-stability.md

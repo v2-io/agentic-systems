@@ -66,7 +66,11 @@ Model state $M_t = (\hat x_{t\vert t}, P_{t\vert t})$ — a compression of inter
 
 *Mapping: exact.*
 
+The mismatch signal is the Kalman innovation:
+
 $$\delta_t = y_t - \hat{x}_{t\vert t-1}$$
+
+The estimation error is $e_t = x_t - \hat x_{t\vert t-1}$, and the innovation is the estimation error plus the channel noise, $\delta_t = e_t + n_t^{(a_t)}$, so $\mathbb{E}[\delta_t^2] = P^-_t + r_{a_t}$. The agent sees $\delta_t$ and never sees $e_t$. The persistence bounds below are about $e_t$.
 
 ### Update Gain ( #emp-update-gain)
 
@@ -108,25 +112,31 @@ $$\bar{\eta}^* = 0.7(0.810) + 0.3(0.321) = 0.663$$
 
 $$\mathcal{T} = \nu \bar{\eta}^* = 5 \cdot 0.663 = 3.315 \;\text{s}^{-1}$$
 
-With $\rho = 0.18 \text{ surprise/s}$ and $\Vert\delta_{\text{critical}}\Vert = 1$:
-
-$$\mathcal{T} \gt \frac{\rho}{\Vert\delta_{\text{critical}}\Vert} \;\;\Rightarrow\;\; 3.315 \gt 0.18 \;\checkmark$$
+This system's disturbance is stochastic (a random walk observed through Gaussian noise), so the persistence question is the Model S one, worked in closed form below rather than through the Model D ratio $\rho/\mathcal{T}$.
 
 ### Lyapunov Bounds ( #result-sector-condition-stability, #der-gain-sector-bridge)
 
 *Mapping: exact (derived, not estimated).*
 
-By #der-gain-sector-bridge, the sector parameter for a scalar Kalman filter is $\alpha = \mathcal{T} = \nu \bar\eta^\ast$:
+By #der-gain-sector-bridge, the correction of the estimation error is exactly linear, $F(e) = Ke$, so the sector parameter is $\alpha = K$ per observation and $\alpha = \nu \bar K = \mathcal{T}$ in continuous time ($3.315\ \text{s}^{-1}$ for the mix above). The disturbance on $e$ has two parts: the random walk adds variance $q$ per step, and the update feeds in the share $K^2 r$ of the channel noise ( #deriv-sector-condition, Setup). Per step $e_{t+1} = (1 - K_t)e_t - K_t n_t + v_t$.
 
-$$\alpha = \mathcal{T} = 3.315 \text{ s}^{-1}$$
+*Steady state, high mode throughout ($r = r_H = 1$).* The Riccati equation gives $P^- = 0.640$, $K_{ss} = 0.390$, $P = 0.390$:
 
-This is derived from the Kalman gain, not estimated from data — the correction function $F(e) = Ke$ is exactly linear, so $\alpha = K$ per observation and $\alpha = \nu \bar K = \mathcal{T}$ in continuous time. With $R = 1.4$ (model class capacity, a domain parameter) and $\rho = 0.18$:
+| Object | RMS |
+|---|---|
+| Estimation error after update, $\sqrt{P}$ | $0.62$ |
+| Estimation error before update, $\sqrt{P^-}$ | $0.80$ |
+| Innovation, $\sqrt{P^- + r_H}$ | $1.28$ |
 
-$$R^\ast = \frac{\rho}{\alpha} = \frac{0.18}{3.315} \approx 0.054 \lt R$$
+*The lag/noise trade-off, in one line.* For a gain $K$ held fixed, the prior error variance is
 
-$$\Delta\rho^\ast = \alpha R - \rho = 3.315(1.4) - 0.18 = 4.46$$
+$$V(K) = \frac{q + K^2 r}{1 - (1 - K)^2}$$
 
-The agent is comfortably within its invariant region with substantial adaptive reserve.
+At $K = 0.39$ (the Kalman gain) it is $0.640$. At $K = 0.81$, a gain held at its early transient value, it is $0.940$. At $K = 0.15$ it is $0.982$. The error is smallest at the Kalman gain: a larger gain removes lag faster and injects more channel noise.
+
+*Task adequacy.* With $\Vert\delta_{\text{critical}}\Vert = 1$ read on the estimation error, the agent is adequate ($0.62 \lt 1$ after update, $0.80$ before). Read on the innovation, the condition could never hold, since the innovation's RMS is at least $\sqrt{r_H} = 1$ whatever the gain. That is the distinction #def-mismatch-signal draws.
+
+*The region of validity.* With model-class capacity $R = 1.4$ (a domain parameter), the prior error is Gaussian with standard deviation $0.80$, so at any given time it lies outside $\mathcal B_R$ with probability $0.08$. Under Model S the region is a typical scale, not a wall ( #deriv-sector-condition, Prop A.1S and Corollary A.1S.1).
 
 ## Mapping Quality Summary
 
@@ -135,12 +145,12 @@ The agent is comfortably within its invariant region with substantial adaptive r
 | Scope | Exact | Definitional |
 | Causal structure + CIY | Exact | Closed-form KL |
 | Model ($M_t$ as sufficient statistic) | Exact | Kalman state + covariance |
-| Mismatch ($\delta_t$ = innovation) | Exact | Standard Kalman innovation |
+| Mismatch ($\delta_t$ = innovation; estimation error $e_t$) | Exact | Standard Kalman innovation; $\delta_t = e_t + n_t$ |
 | Gain ($\eta^\ast = K_t$) | Exact | Kalman gain IS uncertainty ratio |
 | Tempo ($\mathcal{T} = \nu \bar{\eta}^\ast$) | Exact | Closed-form |
-| Persistence condition | Exact | Linear ODE solution |
+| Persistence condition | Exact | Model S, closed form on the estimation error |
 | Sector parameter ($\alpha = \mathcal{T}$) | Exact | Derived from Kalman gain via #der-gain-sector-bridge |
-| Lyapunov bounds ($R^\ast$, $\Delta\rho^\ast$) | Exact | From derived sector parameter + domain $R$ |
+| Lyapunov bounds | Exact | Steady-state error variance from the Riccati equation; minimized at the Kalman gain |
 
 ## Epistemic Status
 

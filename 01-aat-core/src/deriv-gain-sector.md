@@ -31,13 +31,13 @@ $$\alpha = K = \frac{P^-}{P^- + R_{\text{obs}}} = \eta^\ast$$
 
 The sector parameter equals the Kalman gain, which equals the uncertainty-ratio gain from #emp-update-gain. The bound is tight (the correction is linear).
 
-**Proof.** The scalar Kalman update for state estimate $\hat x$ given innovation $\delta = o - \hat x$ is $\hat x_\text{post} = \hat x_\text{prior} + K \delta$, where the gain is $K = P^- / (P^- + R_\text{obs})$ with $P^-$ the prior variance and $R_\text{obs}$ the observation noise variance.
+**Proof.** The scalar Kalman update for state estimate $\hat x$ is driven by the innovation $\delta = o - \hat x_{\text{prior}}$ ( #def-mismatch-signal): $\hat x_\text{post} = \hat x_\text{prior} + K \delta$, where the gain is $K = P^- / (P^- + R_\text{obs})$ with $P^-$ the prior variance and $R_\text{obs}$ the observation noise variance. The object the correction acts on, and the one the sector condition is stated for, is not the innovation but the state-space estimation error $e = x - \hat{x}$; the innovation is $\delta = He + \varepsilon$, the estimation error plus channel noise $\varepsilon$.
 
-The state-space estimation error $e = x - \hat{x}$ evolves under the correction step as:
+The estimation error evolves under the correction step as:
 
 $$e_{\text{post}} = e_{\text{prior}} - K(He_{\text{prior}} + \varepsilon) = (1 - K) e_{\text{prior}} - K\varepsilon$$
 
-With $H = 1$, the expected correction function is $F(e) = K \cdot e$. The sector product is:
+With $H = 1$, the expected correction function is $F(e) = K \cdot e$. The second term, $-K\varepsilon$, is channel noise that the correction feeds back into the estimation error. It enters the persistence dynamics as part of the disturbance ( #deriv-sector-condition, Setup), with variance $K^2 R_{\text{obs}}$ that grows with the gain. The sector product is:
 
 $$e \cdot F(e) = K \cdot e^2$$
 
@@ -111,7 +111,9 @@ for some $c \gt 0$. The sector parameter is:
 
 $$\alpha = \eta^\ast \cdot c_{\min}, \qquad c_{\min} = \inf_{\lVert\delta\rVert \leq R} \frac{\delta^T H \, g(\delta)}{\lVert\delta\rVert^2}$$
 
-**Proof.** The gain-based update changes the model state by $\Delta M = \eta^\ast \cdot g(\delta)$. The induced change in predicted observation is $H \cdot \Delta M = \eta^\ast \cdot H \, g(\delta)$, so the expected correction function (the mismatch reduction per step) is:
+**Which object.** In this proposition $\delta$ denotes the estimation error $\bar\delta = \bar o - \hat o$ of #def-mismatch-signal, the state the sector condition is about. The update itself is driven by the innovation $\bar\delta + \varepsilon$, with $\varepsilon$ the channel noise. The correction function is the *expected* correction given the estimation error, $F(\bar\delta) = \eta^\ast H\,\mathbb{E}_\varepsilon[g(\bar\delta + \varepsilon)]$; its zero-mean fluctuation $\eta^\ast H\,(g(\bar\delta + \varepsilon) - \mathbb{E}_\varepsilon[g(\bar\delta + \varepsilon)])$ is gain-injected noise and belongs to the disturbance. For linear $g$ the expectation is $g(\bar\delta)$ itself and B1 reads exactly as stated. For nonlinear $g$, B1 is a condition on the noise-averaged transform, and $g$ in the statement and the proof stands for $\mathbb{E}_\varepsilon[g(\cdot + \varepsilon)]$.
+
+**Proof.** The gain-based update changes the model state by $\Delta M = \eta^\ast \cdot g(\delta)$. The induced change in predicted observation is $H \cdot \Delta M = \eta^\ast \cdot H \, g(\delta)$, so the expected correction function (the reduction of the estimation error per step) is:
 
 $$F(\delta) = \eta^\ast \cdot H \, g(\delta)$$
 

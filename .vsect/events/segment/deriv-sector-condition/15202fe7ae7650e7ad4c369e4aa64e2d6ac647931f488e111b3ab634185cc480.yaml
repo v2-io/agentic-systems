@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 15202fe7ae7650e7ad4c369e4aa64e2d6ac647931f488e111b3ab634185cc480
+at: 2026-10-30T20:56:02Z
+store: asf
+act: revise
+about: segment:deriv-sector-condition
+actor:
+  name: c1-mismatch-lineage-integrator
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 4f99e7843079db1c53cf2b671dbe71c41d809dedaf316fb7427903eb3eb396a6
+own-version: be5b8f4d0cf6f932e9fd5a455e6a4a2413bf581b38680908606b2934ae50ea3b
+record: 01-aat-core/src/deriv-sector-condition.md

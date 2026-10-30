@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: fc1f2d6b57e565cc2af163653f1ae5abeedde99180b4a2f0254e71d7cef8bd50
+at: 2026-10-30T20:56:02Z
+store: asf
+act: revise
+about: segment:der-gain-sector-bridge
+actor:
+  name: c1-mismatch-lineage-integrator
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 25b47255cfaa737b6474f121b2dc1c9678e689ada74995d81b09e108ba849211
+own-version: ed274e6dec3ff688579f45f7b355827f1e845cd20ccced1e6188b97199adf635
+record: 01-aat-core/src/der-gain-sector-bridge.md

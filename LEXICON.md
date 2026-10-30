@@ -92,14 +92,15 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Deliberation Threshold](terminology/entries/deliberation-threshold.md)** |  | Deliberate iff the benefit of pausing to think exceeds the cost of letting the world move while thinking. |
 | **[Discrete Sector Condition](terminology/entries/discrete-sector-condition.md)** | DA2' | The discrete-time analog of the sector condition — adds a Lipschitz magnitude bound (DA2'b) to the directional fidelity lower bound (DA2'a), closing the fluid-limit gap between event-driven and continuous-time Lyapunov results. |
 | **[Edge Credence](terminology/entries/edge-credence.md)** | $p_{ij}$ | The per-edge confidence weight $p_{ij}$ on a strategy-DAG edge — the agent's working causal belief in the link. |
+| **[Estimation Error](terminology/entries/estimation-error.md)** | $\bar\delta$ | The gap between the model's prediction and the mean the world would deliver given its state and law — the object the persistence results bound; unobserved by the agent. |
 | **[Event-Driven Dynamics](terminology/entries/event-driven-dynamics.md)** |  | The formulation of agent-environment coupling as discrete typed events (observation arrivals, action completions) at variable, heterogeneous rates — the generalization of uniform-clock discrete time. |
 | **[Implementation time](terminology/entries/implementation-time.md)** | $t_{\text{impl}}$ | Time from first surviving modification to feature completion. |
 | **[Macro-Step Ratio](terminology/entries/macro-step-ratio.md)** | $K_c$ | Stable prose handle for $K_c \geq 1$ — the number of micro-timesteps per macro-step in the composition construction. |
 | **[Matrix Exploration Bonus](terminology/entries/matrix-exploration-bonus.md)** | $\text{Tr}(\Lambda \cdot \mathcal I_o(a))$ | The trace inner-product $\text{Tr}(\Lambda \cdot \mathcal I_o(a))$ — the multidimensional analog of the scalar exploration bonus $\lambda_{\text{surv}} \cdot \text{CIY}(a)$. |
-| **[Mismatch](terminology/entries/mismatch.md)** | $\delta$ | The aporia signal — gap between model prediction and observation. |
+| **[Mismatch](terminology/entries/mismatch.md)** | $\delta$ | The aporia signal — gap between model prediction and observation; the innovation of estimation theory. |
 | **[Model class fitness](terminology/entries/model-class-fitness.md)** | $\mathcal{F}$ | Best achievable sufficiency within the model class ($\mathcal{F} \in [0,1]$). |
 | **[Model sufficiency](terminology/entries/model-sufficiency.md)** | $S$ | How well the current model captures predictive information ($S \in [0,1]$). |
-| **[Persistence Cost](terminology/entries/persistence-cost.md)** | $\dot R_{\min}$ | The minimum Shannon information rate an agent must acquire from observations to maintain bounded mismatch — a Landauer-analog lower bound derived from the rate-distortion theorem. |
+| **[Persistence Cost](terminology/entries/persistence-cost.md)** | $\dot R_{\min}$ | The minimum Shannon information rate an agent must acquire from observations to hold its estimation error at a given level — the sequential rate-distortion function, met exactly by the Kalman–Bucy filter. |
 | **[Purposeful Substate](terminology/entries/purposeful-substate.md)** | $G_t$ | The goal-bearing part of the agent's state, $G_t = (O_t, \Sigma_t)$ — objective plus strategy. |
 | **[Regime-typed effective disturbance](terminology/entries/regime-typed-effective-disturbance.md)** | $\rho_B^{\text{eff}}$ | AAT-distinctive decomposition of recipient-side effective disturbance rate by regime — Informative (negative), magnitude-shock, structural-shock, ambient-noise — with three independent boundaries in AAT-native quantities. |
 | **[Satisfaction gap](terminology/entries/satisfaction-gap.md)** | $\delta_{\text{sat}}$ | Ideal outcome minus best achievable — "the world doesn't permit it." |
@@ -355,7 +356,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Multi-Timescale Stability](terminology/entries/multi-timescale-stability.md)** |  | When adaptive processes operate at N nested timescales, the composite is stable when each level satisfies the sector-persistence template with interconnection terms added to its effective disturbance; the required timescale separation is a closed-form threshold (derived, Model D, premise-conditional). |
 | **[Multi-agent routing structure](terminology/entries/multi-agent-routing-structure.md)** | $R_t$ | Multi-agent communication infrastructure — topology $\mathcal N_t$ + protocol $c_t^{(j \to i)}$; the *routing*, not the *content*. |
 | **[Orient cascade](terminology/entries/orient-cascade.md)** |  | Within-cycle resolution order: $M_t$ update → $\Sigma_t$ revision → $O_t$ revision. |
-| **[Persistence Cost](terminology/entries/persistence-cost.md)** | $\dot R_{\min}$ | The minimum Shannon information rate an agent must acquire from observations to maintain bounded mismatch — a Landauer-analog lower bound derived from the rate-distortion theorem. |
+| **[Persistence Cost](terminology/entries/persistence-cost.md)** | $\dot R_{\min}$ | The minimum Shannon information rate an agent must acquire from observations to hold its estimation error at a given level — the sequential rate-distortion function, met exactly by the Kalman–Bucy filter. |
 | **[PROPRIUM Mapping](terminology/entries/proprium-mapping.md)** |  | The architectural correspondence between AAT's mathematical quantities and PROPRIUM's functional components for implementing Emergent Logozoetic Intelligences. |
 | **[Purposeful Substate](terminology/entries/purposeful-substate.md)** | $G_t$ | The goal-bearing part of the agent's state, $G_t = (O_t, \Sigma_t)$ — objective plus strategy. |
 | **[Recursive Update](terminology/entries/recursive-update.md)** |  | The event-driven recursion by which the agent's state is rebuilt from its prior state plus the new event. |
@@ -381,4 +382,4 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 
 
-_Last rendered 2026-10-30 from 176 entries._
+_Last rendered 2026-10-30 from 177 entries._

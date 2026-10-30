@@ -25,7 +25,7 @@ A Lyapunov approach proves persistence and stability under much weaker assumptio
 
 ## Setup
 
-Let $\delta(t) \in \mathbb{R}^n$ be the mismatch vector — the difference between the model's predictions and reality across $n$ observable dimensions. The vector treatment connects to per-dimension tempo analysis ( #result-per-dimension-persistence).
+Let $\delta(t) \in \mathbb{R}^n$ be the estimation error $\bar\delta = \bar o - \hat o$ of #def-mismatch-signal — the difference between the model's predictions and the mean the world delivers given its state and law, across $n$ observable dimensions. Every result in this segment is about this object, not about the observed innovation $o - \hat o$. The innovation exceeds it by channel noise that no correction can remove ( #result-mismatch-decomposition). The vector treatment connects to per-dimension tempo analysis ( #result-per-dimension-persistence).
 
 The mismatch dynamics are:
 
@@ -36,9 +36,25 @@ $$\frac{d\delta}{dt} = -F(\mathcal{T}, \delta) + w(t)$$
 where:
 
 - $F(\mathcal{T}, \delta): \mathbb R_+ \times \mathbb{R}^n \to \mathbb{R}^n$ is the **correction function** — how the agent's adaptive process reduces mismatch. It maps to the same space as $\delta$ (so that the inner product $\delta^T F$ in the sector condition is well-defined). This subsumes the update gain $\eta^\ast$ ( #emp-update-gain), event rate $\nu$, and the structure of the update rule.
-- $w(t)$ is the **disturbance** — new mismatch introduced by environmental change, with $\Vertw(t)\Vert \leq \rho$ (bounded disturbance rate).
+- $w(t)$ is the **disturbance** — everything that moves the estimation error other than the expected correction, with $\Vertw(t)\Vert \leq \rho$ (bounded disturbance rate). It has two sources. One is environmental change, which moves $\bar o$. The other is the channel noise the correction itself feeds back, because the update is driven by the innovation $\bar\delta + \nu$ (with $\nu$ the channel noise), not by $\bar\delta$ ( #deriv-gain-sector, Props B.1 and B.3).
 
 The linear case from #hyp-mismatch-dynamics has $F(\mathcal{T}, \delta) = \mathcal{T} \cdot \delta$.
+
+**The disturbance depends on the gain.** For linear correction at rate $\alpha$ the gain-injected part is $-\alpha\nu(t)$. Under Model D, with environmental change bounded by $\rho_{\text{env}}$ and channel noise bounded by $\bar\nu$, the disturbance bound is $\rho = \rho_{\text{env}} + \alpha\bar\nu$. Prop A.1's ultimate bound is then
+
+*[Derived (Model D with bounded channel noise, linear correction)]*
+
+$$R^\ast = \frac{\rho_{\text{env}}}{\alpha} + \bar\nu$$
+
+The lag term falls with $\alpha$ and the noise term does not. Under Model S, with environmental diffusion $\sigma_{\text{env}}$ and channel noise of intensity $\sigma_\nu$ per coordinate (observation $dy = \bar o\,dt + \sigma_\nu\,dV$), the disturbance intensity is $\sigma_w^2 = \sigma_{\text{env}}^2 + \alpha^2\sigma_\nu^2$. Prop A.1S's steady state is then
+
+*[Derived (Model S with channel noise, linear correction)]*
+
+$$\mathbb{E}\lVert\delta\rVert^2_{ss} = \frac{n(\sigma_{\text{env}}^2 + \alpha^2\sigma_\nu^2)}{2\alpha}$$
+
+This is minimized at $\alpha = \sigma_{\text{env}}/\sigma_\nu$, which is the steady-state Kalman–Bucy gain for a random-walk signal, at the value $n\sigma_{\text{env}}\sigma_\nu$, the Kalman–Bucy error variance. Above that gain the bound grows: correcting faster on the same observations injects more noise than it removes lag. This is the lag/noise trade-off of adaptive filtering (Widrow, McCool, Larimore & Johnson 1976[^widrow1976]: gradient noise "proportional to the speed of adaptation", lag "inversely proportional", the sum minimized where the two contributions are equal — here $\alpha^2\sigma_\nu^2 = \sigma_{\text{env}}^2$). The propositions below hold exactly for any disturbance meeting their hypotheses. What this paragraph fixes is the reading of $\rho$ and $\sigma_w$: they are not environment-only parameters, and $1/\alpha$ and $1/\sqrt\alpha$ describe the lag term alone. The channel-noise part sets a floor that a stronger correction cannot lower.
+
+[^widrow1976]: Widrow, B., McCool, J. M., Larimore, M. G., & Johnson, C. R. Jr. (1976). "Stationary and nonstationary learning characteristics of the LMS adaptive filter." *Proceedings of the IEEE* 64(8):1151–1162. doi:10.1109/PROC.1976.10286.
 
 ## Assumptions on $F$
 

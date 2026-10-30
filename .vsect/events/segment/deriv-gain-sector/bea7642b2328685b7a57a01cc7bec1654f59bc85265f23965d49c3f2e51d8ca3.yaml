@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: bea7642b2328685b7a57a01cc7bec1654f59bc85265f23965d49c3f2e51d8ca3
+at: 2026-10-30T20:56:02Z
+store: asf
+act: revise
+about: segment:deriv-gain-sector
+actor:
+  name: c1-mismatch-lineage-integrator
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: d7888baea04d4df394b410783c72cdc36ceea74aa9a94aa56ea584a3a51901ac
+own-version: e9afd4473502797c53d06ddb8a340a3adc8ddcae7dcd0ef3e5c86a7a64118d39
+record: 01-aat-core/src/deriv-gain-sector.md

@@ -23,7 +23,9 @@ $$\frac{d\Vert\delta\Vert}{dt} = -\mathcal{T} \cdot \Vert\delta\Vert + \rho(t)$$
 
 where:
 - $\mathcal{T} \cdot \Vert\delta\Vert$ is the rate at which the agent corrects mismatch (proportional to both tempo and current mismatch)
-- $\rho(t)$ is the **environment change rate** — the rate at which new mismatch is introduced by changes in $\Omega$
+- $\rho(t)$ is the **disturbance rate** — the rate at which new mismatch is introduced, by changes in $\Omega$ and by the channel noise the correction feeds back
+
+The mismatch whose magnitude these dynamics track is the estimation error $\bar\delta = \bar o - \hat o$ of #def-mismatch-signal, not the observed innovation. The innovation adds channel noise that no correction removes and that has no dynamics of this form. Because each correction is driven by the noisy innovation, part of $\rho$ grows with the correction rate. The steady states below therefore describe the lag term at fixed $\rho$ and $\sigma_w$. With the gain-injected part included, the stochastic steady state is smallest at the optimal gain and grows above it ( #deriv-sector-condition, Setup).
 
 **Steady state, Model D (deterministic bounded disturbance, $\lVert w(t)\rVert \leq \rho$):**
 
@@ -57,7 +59,7 @@ Mismatch decays exponentially from initial conditions toward the steady state.
 
 ## Discussion
 
-**Speed-quality substitutability.** From $\mathcal{T} = \nu \cdot \eta^\ast$ (single-channel case): doubling event rate $\nu$ has the same effect on $\Vert\delta\Vert_{ss}$ as doubling update quality $\eta^\ast$. They are multiplicative when both improve: 50% improvement in each yields $1.5 \times 1.5 = 2.25\times$, not $3\times$. This is the formal analog of Boyd's insight that Orient quality often matters more than raw OODA speed — the same structural observation (quality and speed are substitutable, quality often dominates) appears in the model.
+**Speed-quality substitutability.** From $\mathcal{T} = \nu \cdot \eta^\ast$ (single-channel case): at fixed $\rho$, doubling event rate $\nu$ has the same effect on the lag term $\rho/\mathcal{T}$ as doubling update quality $\eta^\ast$. They differ in the noise term. More events bring more information, and averaging over them lowers the injected channel noise. A gain pushed past the optimal $\eta^\ast$ of #emp-update-gain injects more noise than it removes lag ( #result-persistence-condition, "Two levers in $\mathcal{T}$"). They are multiplicative when both improve: 50% improvement in each yields $1.5 \times 1.5 = 2.25\times$, not $3\times$. This is the formal analog of Boyd's insight that Orient quality often matters more than raw OODA speed — the same structural observation (quality and speed are substitutable, quality often dominates) appears in the model.
 
 **The persistence threshold.** From the steady-state: $\Vert\delta\Vert_{ss} \lt \Vert\delta_{\text{critical}}\Vert$ iff $\mathcal{T} \gt \rho/\Vert\delta_{\text{critical}}\Vert$ ( #result-persistence-condition). Below this threshold, the model cannot support effective action. The same structural pattern — correction capacity falling below disturbance rate — appears across domains: extinction (environment changes faster than organism adapts), organizational failure (market moves faster than company learns), control instability (disturbances exceed correction capacity), cognitive overload (information arrives faster than processing). The persistence condition captures the common structure; whether it captures the dominant mechanism in each domain is an empirical question.
 
