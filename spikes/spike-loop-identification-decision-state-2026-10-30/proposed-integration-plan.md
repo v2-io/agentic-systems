@@ -1,0 +1,74 @@
+*KR: C.2 — "Strengthenings C1–C3 (exit time, loop identification, allocation vs distortion coupling) are independently checked, then landed or refuted." Top intent (Joseph, 2026-10-30): "Complete 'in-place' refactor of ASF — meta, all artifacts, and theory itself."*
+
+# Proposed integration — suggestions for the verifier and the integrator, not a work order
+
+*C2 spiker (Fable), 2026-10-30. These are what I would do if I were integrating, with the reason beside each; the verifier may find the derivation wrong in places and the integrator will see the B.1 record-writer's parallel work, which I have not. Nothing here is a landing. The order is by load, not by effort.*
+
+## 0. What the verifier should re-derive first, and in what order
+
+1. **Lemma 1** (`01-derivation.md` §1) from AAT's commitments alone, without reading my proof: write $a_t = \pi(X_t, U_t)$, decide whether $U_t \perp (\mathcal C_t, \Omega_t, N_t)$ is what `#form-complete-agent-state` and `#der-recursive-update` actually commit to, and check whether the conclusion survives when $X_0$ (pretrained weights, priors) is correlated with the environment across the population of agent–environment pairs being pooled — the scan's "expert who knew $\theta$" case. I believe $X_0$ fixed-within-trajectory makes it a constant, not a confounder, on a singular trajectory; across a population of deployments it can be one. That is a `#scope-agent-identity` seam I did not close.
+2. **Lemma 3** and the two-bit counterexample against `#def-model-sufficiency`'s formula. The counterexample is small enough to check by hand; what needs judgment is whether the segment's "given future actions" was meant open-loop (in which case the formula should say $do$) or closed-loop (in which case the formula is the wrong object for the causal use the segment's Discussion makes of it).
+3. **The simulation** (`sim-strategy-counts-confound.py`): re-run, change the seed, change the regime structure (e.g. a drifting $\theta$), and confirm the $M_t$-rung gap is confounding and not an artifact of the step-index model.
+4. **Proposition 4** is one line; check that "two SCMs agreeing on every on-policy distribution" is honest when the model class is restricted (it is a no-go for unrestricted classes; under smoothness, regression-discontinuity-style local identification exists, as §3 now says).
+
+## 1. `#der-loop-interventional-access` — the sentence the brief targeted
+
+**Delete** the sentence at `:41` ("Where (C2) fails — generic for any agent whose action depends on internal state, plans, or memory that also bear on the outcome — on-policy $(a_t, o_{t+1})$ converges to $\mathbb E[o \mid A = a]$ …"). It is false about (C2) as the segment states it (given $H_t$) and true about a learner that conditions on nothing. Integration is replacement; do not keep it softened.
+
+**Replace** with the ladder, in the Formal Expression, roughly:
+
+> Identification is a statement about a conditioning set. At the policy's own inputs — the agent's complete state $X_t = (M_t, G_t)$, or any history of which it is a function — sequential ignorability holds by construction for every agent whose action is a function of that state plus randomization the environment cannot see (Lemma: parent adjustment; Dawid & Constantinou 2014 "control strategy"; Bareinboim, Zhang & Lee 2026 "Experimental NUC"). What is not free at that set is positivity: a decision state rich enough to determine the action identifies the effect of the action taken there and of nothing else, so a deterministic policy identifies no contrast at its own decision state. Coarsening the set to recover support re-opens ignorability unless the coarse set is outcome-sufficient — the dropped part of the decision state carries no information about what the actions would produce — or the policy used only the coarse set. The marginal $\mathbb E[o \mid A = a]$ is the limiting case: every decision input is a confounder of it.
+
+Then restate the gate so the conditioning set is explicit (see §5 below for the labels): positivity *at the set*; ignorability *at the set*, decomposed into the premise (the action's causes are the recorded state plus environment-independent randomization) and the sufficiency of whatever compression the learner actually conditions on; and the execution condition, now visibly separate (intention-to-treat, `01-derivation.md` §5).
+
+**Epistemic Status**: the availability-of-channel claim stays `exact` and unchanged. The identification claim becomes: exact at $X_t$ under (M), (P), (E) with positivity; conditional at any compression on that compression's outcome-sufficiency. This is *stronger* than the current gated form, not weaker — it says where the gate is and why.
+
+**Discussion**: the "Precision about what interventional means here" list (low confounding / short delay / varied action) should be re-cut as two levers the agent controls — retain an outcome-sufficient decision state; inject outcome-irrelevant variation at it — with the CI-pipeline / round-robin / goal-variation examples as irrelevance-driven variation (Prop. 5). The "Even agents without explicit causal models benefit" paragraph's tabular Q-learning illustration is right and can now say why: a tabular learner conditions on $s$, which is its whole decision state, and $\varepsilon$-greedy supplies positivity there.
+
+**Working Notes**: delete the line "Goal-conditioned LLM policies violate (C2) by construction … bridge to Paper 3's Coupled-class formulation." It is a category slip ($G_t$ is a parent of the action, not a confounder) and the attribution to Paper 3 is not supported by Paper 3's text (grep in `01-derivation.md` §1). `#impl-causal-access:118` already has the correct statement; the Working Note contradicts it. Add Ortega & Braun 2008/2010 and the 2026 survey to the honest-credit passage (the segment currently credits active inference and cybernetics for the loop framing but not the two lines that say *actions are interventions* and *NUC holds for any deployed policy*). The 2026 survey postdates most of canon's prior-art work and is the citation of record for the "by construction" statement.
+
+## 2. `#def-value-object` — the found defect
+
+**`:50`** ("Directed separation delivers (C2) on the epistemic-processing leg … but does not by itself rule out latent environment confounders that bypass $M_t$"): the residual risk is mislocated. Directed separation constrains $f_M$; it does not stop $f_G$ absorbing outcome statistics from $e_\tau$, which `#der-directed-separation:38` permits. The confounder of the $M_t$-conditioned $Q_O$ is $G_t$ itself whenever the goal carries outcome-relevant information beyond the model — and `#hyp-edge-update-via-gain` describes an agent whose $\Sigma_t$ does exactly that (simulated: a tenth of inflation at $\kappa_{\text{processing}} = 0$).
+
+Two honest resolutions; the integrator should choose, and I lean to the first because it matches the policy signature canon already has:
+
+- (a) **$Q_O$ conditions on $X_t$.** The value object is the agent's expected trajectory value given *everything it will act from*. Lemma 1 then makes the identification of the query automatic; the price is positivity at $X_t$, which is the honest price. The "$G_t$-independence of the query" paragraph survives unchanged (the $do$ severs the selection mechanism; conditioning on $G_t$ as a state variable is not the same as letting $G_t$ enter through selection). What changes is the scope sentence "depends on $M_t$ alone as a state variable".
+- (b) **Commit that purposeful state carries no outcome information beyond the model** — name it (I used "goal-purity given the model"; a naming pass should decide) and make it a stated premise of the $M_t$-form, with `#hyp-edge-update-via-gain` re-homed so its counts live in $M_t$ (as `#def-strategy-dag:48`'s "conditional on $M_t$" already implies). This is also the premise the C3 sibling spike needs ("the goal carries no world information beyond the prior state"); one name, two consumers.
+
+Either way, the Epistemic Status layer 2 should say that the $M_t$-conditioned identification is conditional on that premise, and that canon's own strategy learner is a witness that it is not automatic. The Working-Notes "Causal-discipline re-scope (2026-05-31)" line is unaffected: it is about the query's $G_t$-independence, which is a different thing from the estimate's identification, and the spike agrees with it.
+
+## 3. `#def-model-sufficiency` — the owed question
+
+- The Discussion sentence "$S(M_t) = 1$ is nearly sufficient for causal validity … the remaining requirement is that no unmodeled external factor influences both action selection and outcomes" can now name its warrant (the Working-Notes follow-up asks for exactly this): under positivity at $M_t$, one-step interventional sufficiency of $M_t$ relative to the policy's inputs is the back-door condition for $Q_O$, and it coincides with the on-policy predictive statement the agent can estimate (Lemma 3). The "unmodeled external factor" is, inside the formalism, internal — $G_t$ — and the phrase "for agents whose actions are deterministic functions of $M_t$" picks the case where the claim is weakest, since determinism kills positivity. Suggest rewriting to "for agents with positivity at $M_t$".
+- **The formula.** Conditioning on realized $a_{t:\infty}$ makes $S$ an open-loop quantity read in closed loop; a two-bit counterexample (echo agent) gives $S = 1$ with one-step insufficiency. Suggest the interventional form $I(\mathcal C_t; o_{t+1:\infty} \mid M_t, do(a_{t:\infty}))$, or an explicit statement that the actions are held as exogenous inputs, so the quantity the Discussion uses for causal validity is the quantity the formula defines. This is a definitional proposal; the segment's author may have meant open-loop, in which case only the prose needs to say so. `#def-model-class-fitness` and `#result-structural-adaptation-necessity` inherit whatever is chosen; I have not checked whether they lean on the realized-action reading anywhere.
+- The segment's comparison class ($\mathcal C_t$ versus $M_t$) is stronger than identification needs ($X_t$ versus $M_t$); that is fine for a sufficiency measure and should just be noted so the two uses are not confused.
+
+## 4. Other segments touched
+
+- **`#der-causal-hierarchy-requirement:52`** (A11): scope the RL example to partial observability or to a parent of the action absent from the learner's state, as the owner review says; Lemma 1's corollary is the reason. The commander and developer examples are fine as written (the refactoring team's choice of module *is* a decision input the learner typically does not condition on).
+- **`#scope-edge-update-causal-validity`** (C3) "execution conditions vary": split into an ignorability clause (the conditions are in the recorded state, or are outcome-irrelevant) and a positivity clause (the action is taken under varied recorded conditions), as the explorer proposed and the derivation confirms. Its (C2) "attributable" is untouched — it is the per-edge parameterization question, not identification.
+- **`#scope-ciy-observational-proxy`** Regime A wording ("randomized, or known-and-adjusted so that sequential ignorability and positivity hold") is already right; it could add that "known-and-adjusted" means adjusted *at the decision state*, and that goal-variation is an admissible source of variation under the goal-purity premise.
+- **`#def-pearl-causal-hierarchy`** Kalman+LQR row: "identification not guaranteed (the LQR action is endogenous to the estimation loop)" — the reason is positivity (deterministic $-K\hat x$), not endogeneity, which parent adjustment handles. One clause.
+- **`#causal-access-intro:19`** "the agent was already tired": fine as pedagogy; the integrator may want a half-sentence that this is an execution-gap or record-faithfulness failure, so the chapter's own example does not read as a counterexample to the loop segment's corrected gate.
+- **`#impl-causal-access`**: its §1 already keeps the loop's (C2) distinct from directed separation and says canon does not claim Coupled components fail (C2); the spike agrees and the Working-Note regression guard there ("do not write 'Class 3 violates (C2)' as canon") is vindicated. The two-levers reading and the self-confounding-through-forgetting consequence for Volume 3 belong in its "Level-2 engine" section at discussion grade.
+- **Volume 3** (`03-llm-core/`): `#obs-context-turnover` / `#disc-m-preservation` acquire a consequence — after turnover, the agent's own earlier context is an unmeasured confounder of the action–outcome pairs it learns from unless the retained summary is outcome-sufficient; logging tool-call contexts or propensities (or the pre-sampling action distribution, the intent readout) restores identification. This is a claim about agents with a test (`01-derivation.md` §4, last instance). I would land it as a hypothesis segment or a Working Note at the turnover segment, not as a result.
+
+## 5. The (C1)–(C3) label collision (integrator item A5)
+
+The loop's triple should get its own index family rather than a sixth meaning of "(C2)". A suggestion, not a prescription: **(I-pos)** positivity at the conditioning set, **(I-ign)** ignorability at the set (premise + sufficiency), **(I-exec)** known execution mechanism — or whatever `NOTATION.md`'s index-family declaration (F.4) settles on. The point is that each condition names the set it is relative to.
+
+## 6. Do-not-inherit list (language I suspect is mine, not the mathematics')
+
+- "decision state" — canon's object is $X_t$, the complete state; the explorer's and my phrase should not become a term.
+- "goal-purity given the model" — my name for $Y^{(a)} \perp G_t \mid M_t$; needs a naming pass (the C3 sibling has its own phrasing for the same premise).
+- "self-confounding through forgetting", "irrelevance-driven variation", "two levers" — readings, not results; keep them at discussion grade if kept at all.
+- "rung" / "ladder" — expository scaffolding for the three conditioning sets; the segments should name the sets, not the metaphor.
+- The claim that LLM hidden activations are "mediators, not confounders" — exact given (M)/(P) for a tool-use loop in one session; a claim about agents the moment the session boundary or a retrieval channel enters.
+
+## 7. What I would not do
+
+- Do not re-tier `#der-loop-interventional-access` down. The availability claim is exact and untouched; the identification claim gets *sharper*, not weaker.
+- Do not write "this is not a weakening" anywhere in a body.
+- Do not land the interventional $S$ redefinition without checking its two downstream consumers.
+- Do not treat the three "named failures" of the brief as a parallel list; the derivation shows one is a premise violation (and says which premise), one is a sufficiency failure, one is a positivity failure.
