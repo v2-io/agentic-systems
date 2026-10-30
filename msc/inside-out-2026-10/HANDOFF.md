@@ -81,6 +81,7 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
   2. Spikes: commission a verifier with the template's bare brief, then a separate integrator.
   3. A.2, the front door, once the round-3 integrations land: B.1's Part II records now exist, so headline sentences can trace to retyped registers. Headline 2's Kalman-gain sentence is in the Part I round-3 integrator's hands.
   4. The vsect store migration (normalizer), once no checker or integrator is writing records; the vsect builder is on the line for it.
+  5. When a subagent slot frees (the session caps at 20): relaunch the `aisi-eoi` + `notability-extracts` drain, continuing `drain/aisi-eoi-notability.md` below its closing note. The first drainer was stopped by the API safeguard (the region's fourth stop) before recording any of its items, the honest-activation spike's unlanded plan and `04-eli-core/OUTLINE.md` row E3 among them. Try a different model, `notability-extracts` first.
   - Rebuild `CURRENT-VOL1` after each canon landing, using the biber workaround in memory.
 
 ## The lead's rhythm
