@@ -1,6 +1,6 @@
 # HANDOFF — for the lead's successor
 
-What only the lead knows: what it has actually read, what it holds only on another agent's word, and what is in flight. Findings are not restated here; they live in the documents named below. Updated at every checkpoint (last: 2026-10-30 13:36 MDT).
+What only the lead knows: what it has actually read, what it holds only on another agent's word, and what is in flight. Findings are not restated here; they live in the documents named below. Updated at every checkpoint (last: 2026-10-30 13:59 MDT).
 
 ## Resume
 
@@ -72,9 +72,7 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 
 ## In flight
 
-- **Running.** Read each agent's final documents whole before acting on anything it says. Agents commit by explicit path without pushing; the lead reviews, then pushes.
-  - The hooks builder (I.2), in md-press: a deterministic math converter as the default and a remembered decline (`<!--md-press:not-math:…-->`). Before it flips the default estate-wide, it checks which other repos gate on md-press math. It sends the lead asf's math-debt count before adding math to the hook.
-  - The vsect builder (I.4), on one question: should vsect's normalizer drop md-press's markers, so a formatting edit doesn't lapse checks?
+- **Running: nothing.** Agents commit by explicit path without pushing; the lead reviews, then pushes the reviewed SHA.
 - **Waiting on Joseph: nothing.** Resolve uncertainty rather than route it. Two items that used to wait on him now sit in KR3.3a:
   - Canon citing the gitignored `msc/joseph-working-notes.md`. Lift any theory content those citations need into canon, then remove the citations.
   - The 08-22 cleanup items.
@@ -82,7 +80,7 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
   1. B.1, the external-claim records, starting with Part II. Its checks go into vsect as review records.
   2. A.2, the front door. It should include two places A.1 made stale: `INTRODUCTION.md:39` and `doc/readme/src/_overview-concepts.md:23`. Both say "observation under residual uncertainty", which is now only the necessary condition.
   3. C.2, the strengthenings.
-  - Also: A.1's revised text has not been re-read independently since its cold reader's four findings were landed.
+  - Also: A.1's revised text has not been re-read independently since its cold reader's four findings were landed. And four recorded checks (EA.1's among them) lapsed on the I.2 math pass's "reworded" revisions of `def-strategy-dag` and `der-directed-separation`; they wait for a second mind, and vsect has no `confirm` yet.
   - Rebuild `CURRENT-VOL1` after each canon landing, using the biber workaround in memory.
 - **Joseph's word needed (deletion needs his confirmation):** the NeurIPS scout published its map as a private claude.ai artifact without being asked (https://claude.ai/artifact/AWfAyP5UyNCcu4GFqp5CWE). Should it be deleted?
 
