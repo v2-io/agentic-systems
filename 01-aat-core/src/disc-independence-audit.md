@@ -44,7 +44,7 @@ Six load-bearing independence assumptions in AAT, each paired with its failure r
 
 **Diagnostic signal:** Pairwise covariance among sibling edges after edge credences have converged. Positive covariance rejects the independence hypothesis and localizes where a common cause is missing. See #der-causal-insufficiency-detection.
 
-**Repair operation:** L1 augmentation — add common-cause nodes and restructure the DAG so each common cause is factored *above* the correlation it creates ( #def-strategy-dag Correlation Hierarchy; #deriv-edge-credence-dynamics Prop B.6). L0 formal results transfer exactly to correctly constructed L1 DAGs because L1 restores causal sufficiency by construction. The orient cascade's step 4c triggers this escalation.
+**Repair operation:** L1 augmentation — add common-cause nodes and restructure the DAG so each common cause is factored *above* the correlation it creates ( #def-strategy-dag Correlation Hierarchy; #deriv-edge-credence-dynamics Prop B.6). L0 formal results transfer exactly to correctly constructed L1 DAGs because a correctly constructed L1 graph is causally sufficient *and* an AND/OR tree, the two conditions under which status propagation is exact ( #deriv-graph-structure-uniqueness, §"Exactness of Status Propagation"). The orient cascade's step 4c triggers this escalation.
 
 ### 3. Channel independence: observation channels contribute non-redundant correction
 
@@ -76,11 +76,11 @@ Six load-bearing independence assumptions in AAT, each paired with its failure r
 
 **Where it appears:** #def-strategy-dag status propagation formula; #scope-and-or; every downstream quantity computed from $\hat P_\Sigma$ (satisfaction gap, control regret via $A_O$, strategy-plan-confidence error $\delta_s$).
 
-**Failure regime:** Same as causal sufficiency (item 2) — the CMC theorem makes them the same condition: causal sufficiency ⟺ exogenous noise independence ⟺ edge-outcome independence. When one fails, they all fail.
+**Failure regime:** Wider than causal sufficiency (item 2). Causal sufficiency gives independent exogenous noise, but a node's parents are independent only if, in addition, they share no ancestor. An explicit common-cause node that feeds two branches which reconverge breaks this with causal sufficiency intact. The exact condition is that the DAG be a causally sufficient AND/OR tree ( #deriv-graph-structure-uniqueness, §"Exactness of Status Propagation").
 
-**Diagnostic signal:** Same as item 2.
+**Diagnostic signal:** For a latent cause, as item 2. For explicit reconvergence no data are needed: the condition is read from the graph (some node has two directed paths to the root).
 
-**Repair operation:** Same as item 2 (L1 augmentation). The assumption is not a separate modeling choice from causal sufficiency; the theory treats it as the *consequence* of causal sufficiency (via CMC), not an independent axiom.
+**Repair operation:** For a latent cause, as item 2. For explicit reconvergence: factor a strict-prerequisite shared node above the branches it gates (L1), condition on it (L1' / cutset conditioning), or replace the forward pass by exact inference. The assumption is not a separate modeling choice: it is the consequence of causal sufficiency together with tree structure, not an independent axiom.
 
 ### 6. Scalar tempo / isotropic correction
 

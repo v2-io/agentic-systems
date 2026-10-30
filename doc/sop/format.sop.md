@@ -527,7 +527,7 @@ The current inevitability-core members, with why inevitability is plausible:
 | #der-directed-separation | $f_M$ independence from $G_t$ follows from the update structure, given scope condition. |
 | #der-deliberation-cost | Think-vs-act threshold from information-theoretic argument. |
 | #disc-composition-consistency | If scope condition doesn't restrict level, predictions at different levels must be compatible. |
-| #deriv-graph-structure-uniqueness | Four operational postulates + causal sufficiency force a Markov-factorized DAG (Cox-analog). |
+| #deriv-graph-structure-uniqueness | Four operational postulates + causal sufficiency suffice for a Markov-factorized DAG (the sufficiency half of a Cox analog); status propagation is exact iff the DAG is an AND/OR tree. |
 
 **Canonical formulations (second ring).** Good representational choices that are motivated but not forced. Triage question 2 ("what competing formulation would also fit?") answers "at least one alternative exists." Review focus: explaining the choice, noting alternatives, and guarding against drift toward inevitability claims that aren't there.
 

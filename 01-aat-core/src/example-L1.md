@@ -53,7 +53,7 @@ The obvious L1 construction adds $C$ as a parent of both paths:
 
 Status propagation: $s_{B_1} = 0.8 \cdot 0.9 = 0.72$, $s_{B_2} = 0.8 \cdot 0.7 = 0.56$, $s_G = 1 - (0.28)(0.44) = 0.877$.
 
-**Same answer as L0.** The OR-propagation treats $B_1$ and $B_2$ as marginally independent, but they are correlated through their shared parent $C$. Adding the common-cause node does not fix the overestimation because the node is *inside* the correlated structure (below the OR-node), not factored above it.
+**Same answer as L0.** The OR-propagation treats $B_1$ and $B_2$ as marginally independent, but they are correlated through their shared parent $C$. Adding the common-cause node does not fix the overestimation because the node is *inside* the correlated structure (below the OR-node), not factored above it. The augmented graph is causally sufficient, since $C$ is now a node, but $C$ has two children that reconverge at $G$. So the graph is not a tree, and the forward pass is exact only on trees ( #deriv-graph-structure-uniqueness, §"Exactness of Status Propagation").
 
 
 ## Correct L1: Factor the Common Cause Above the Correlation
@@ -71,9 +71,9 @@ $$s_G = \theta_C \cdot s_{G_{\text{sub}}} = 0.8 \cdot 0.97 = 0.776$$
 
 **Correct.** Matches the actual plan success probability exactly.
 
-**Why this works**: $C$ is above the OR-node, so its value is factored out before the OR-propagation occurs. Conditional on $C=1$, the two paths $A_1$ and $A_2$ are genuinely independent (their exogenous noise terms are independent — the common cause has been conditioned away). The OR-propagation's independence assumption holds within $G_{\text{sub}}$ because the correlation source is above, not among the siblings.
+**Why this works**: $C$ is above the OR-node, so its value is factored out before the OR-propagation occurs. Conditional on $C=1$, the two paths $A_1$ and $A_2$ are genuinely independent (their exogenous noise terms are independent — the common cause has been conditioned away). The OR-propagation's independence assumption holds within $G_{\text{sub}}$ because the correlation source is above, not among the siblings. In graph terms, the restructured graph is a tree: every node has one child, and that is the condition under which propagation is exact for all credences.
 
-**The L1 construction principle**: *factor the common cause above the correlation it creates.* When a common cause correlates siblings under an OR-node, restructure so the common cause gates the entire OR-structure via an AND-relationship. This ensures conditional independence of the OR-children and makes standard propagation correct.
+**The L1 construction principle**: *factor the common cause above the correlation it creates.* When a common cause correlates siblings under an OR-node, restructure so the common cause gates the entire OR-structure via an AND-relationship. This ensures conditional independence of the OR-children and makes standard propagation correct. The principle is a rewrite into a tree, $\mathrm{OR}(C \wedge A_1, C \wedge A_2) = C \wedge \mathrm{OR}(A_1, A_2)$, valid because $C$ enters both paths as an AND-parent (a strict prerequisite).
 
 
 ## Sector Condition Verification (Proposition B.6)
@@ -165,4 +165,4 @@ The agent's on-policy history is drawn from the same distribution in both worlds
 
 ## Epistemic Status
 
-*Conditional on Beta-Bernoulli model.* The L0 overestimation, L1 correction, and sector condition verification are exact algebra. The direction-of-bias formula ($\pm\rho$) is exact for two binary siblings **under marginal sampling** (credences at the marginals $\theta_j$; under on-policy short-circuit execution the credences converge to regime conditionals instead and the residual vanishes — see #der-causal-insufficiency-detection); for deeper DAGs with multiple common causes, the bias involves higher-order covariance terms. The on-policy observational-equivalence table is exact arithmetic on the matched-world construction of #der-causal-insufficiency-detection. The L1 construction principle (factor common cause above the correlation) is general for single common causes gating OR-siblings; the conditioning-based extension for more complex topologies is standard (variable elimination in Bayesian networks).
+*Conditional on Beta-Bernoulli model.* The L0 overestimation, L1 correction, and sector condition verification are exact algebra. The direction-of-bias formula ($\pm\rho$) is exact for two binary siblings **under marginal sampling** (credences at the marginals $\theta_j$; under on-policy short-circuit execution the credences converge to regime conditionals instead and the residual vanishes — see #der-causal-insufficiency-detection); for deeper DAGs with multiple common causes, the bias involves higher-order covariance terms. The on-policy observational-equivalence table is exact arithmetic on the matched-world construction of #der-causal-insufficiency-detection. The L1 construction principle (factor common cause above the correlation) is general for single common causes gating OR-siblings; the conditioning-based extension for more complex topologies is standard (cutset conditioning or variable elimination in Bayesian networks). That naive L1 fails is exact as well: it is an instance of the tree condition in #deriv-graph-structure-uniqueness.
