@@ -46,7 +46,9 @@ $\lambda$ carries units of [value per unit information]. In specific domains it 
 *Discussion-grade summary of a conditional derivation.* Originally treated as a discussion-grade heuristic, the unified objective has now been formally derived as the Lagrangian relaxation of the Linear Matrix Inequality (LMI) governing Lyapunov persistence — exact under the four named conditions of `#deriv-causal-ib-lmi`, whose status is `conditional`.
 
 The scalar heuristic $Q_O(a) + \lambda \cdot \text{CIY}(a)$ is formally superseded by the exact tensor trace-product:
+
 $$ a_t^\ast = \arg\max_a \left[ Q_O(a) + \text{Tr}\left( \Lambda \cdot \mathcal{I}_o(a) \right) \right] $$
+
 where $\mathcal{I}_o(a)$ is the Fisher Information Matrix (Matrix CIY) and $\Lambda$ is the positive-semidefinite shadow price matrix of the survival constraint.
 
 Max attainable for this segment: *discussion-grade* (it is a discussion of the underlying result, per `type: discussion`). The underlying derivation's tier is the one `#deriv-causal-ib-lmi` carries (*conditional*; exact under its named conditions). The structural form is fully grounded in AAT's physical survival bounds and standard semidefinite programming, eliminating the need to treat exploration as an ad-hoc heuristic.

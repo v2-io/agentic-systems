@@ -29,18 +29,25 @@ Let $\mathcal T_i$ be the adaptive tempo of sub-agent $i$ within a composite gro
 Let $\mathcal T_{\text{joint}}$ denote the joint tempo of the sub-agents' pooled observation channels — the exact object of #deriv-tempo-additivity ($U_c \cdot \mathbf{1}^{\top}\Sigma_n^{-1}\mathbf{1}$ in the Fisher-local regime, with $\Sigma_n$ the pooled cross-agent noise covariance).
 
 *[Derived (Joint-Bounded Tempo, Conditional on the Fisher-local regime)]* For any admissible composite agent $A_c$, the composite tempo is bounded by the joint tempo of its parts' pooled streams:
+
 $$ \mathcal{T}_c \leq \mathcal{T}_{\text{joint}} $$
+
 No admissible macro-dynamics extracts more corrective information per unit time than the pooled micro-observations carry (data processing at the Fisher level).
 
 *[Definition (Coordination Overhead)]* The **coordination overhead penalty** $C_{\text{coord}}$ is the difference between joint potential and realized macro-tempo:
+
 $$ C_{\text{coord}} := \mathcal{T}_{\text{joint}} - \mathcal{T}_c $$
 
 *[Derived (Signed additive-baseline deviation, from #deriv-tempo-additivity applied across agents)]* The additive accounting relates to the joint baseline with indefinite sign:
+
 $$ \mathcal{T}_{\text{joint}} \;\lessgtr\; \sum_{i=1}^N \mathcal{T}_i, $$
+
 with equality iff the cross-agent noises are independent (plus the measure-zero cancellation set of #deriv-tempo-additivity), $\lt$ under common-source cross-agent noise, and $\gt$ under noise-cancelling (anti-correlated) structure. The historical form of this segment's claim, $\mathcal T_c \leq \sum_i \mathcal T_i$, is therefore **conditional on cross-agent noise independence** and false in general — with a closure-exact witness:
 
 *[Derived (Super-additive witness, exact)]* Two sub-agents observing $o_i = \theta + n_i$ with $\operatorname{Var}(n_i) = r$ and $\operatorname{Corr}(n_1, n_2) = \rho \lt 0$, each running its own optimal filter; composite defined by the averaging projection $\Lambda_x = \tfrac12(m_1 + m_2)$, macro-observation $\bar o = \tfrac12(o_1 + o_2)$, and the recursive running-mean macro-update. The macro-update commutes with the micro-dynamics *identically* ($\varepsilon^\ast = 0$ exactly; (A1)–(A4) and (P1)–(P3) verified), and
+
 $$ \frac{\mathcal T_c}{\sum_i \mathcal T_i} = \frac{1}{1+\rho} \gt 1, $$
+
 unboundedly as $\rho \to -1$ — tempos evaluated in the matched-uncertainty (Fisher-inflow) convention of #deriv-tempo-additivity; the convention is load-bearing (Epistemic Status). A faithful composite of a triangulating team outruns the sum of its parts; symmetrically, at $\rho \gt 0$ the same witness has $\mathcal T_c \lt \sum_i \mathcal T_i$ at zero closure defect and zero coordination activity — the additive baseline, not the composite, is what fails.
 
 ## Epistemic Status
@@ -83,12 +90,18 @@ The closure error rate is converted to a tempo penalty by normalizing against th
 **Consequences (dimensionally correct):**
 
 - The realized external tempo $\mathcal{T}_c^{\text{ext}}$ (the share of composite tempo directed at *external* mismatch) chains under the joint baseline — the coordination-overhead definition plus the bridge-lemma lower bound give the middle inequality, and externally-directed tempo cannot exceed total tempo:
+
 $$\mathcal{T}_c^{\text{ext}} \;\leq\; \mathcal{T}_c \;\leq\; \mathcal{T}_{\text{joint}} - \frac{\varepsilon^\ast \nu_c}{\lVert\delta_{\text{critical}}\rVert} \qquad \Big(= \textstyle\sum_i \mathcal{T}_i - \varepsilon^\ast \nu_c / \lVert\delta_{\text{critical}}\rVert \;\text{ under cross-agent noise independence}\Big)$$
+
 - **Brooks's Law.** Adding an agent increases $\mathcal T_{\text{joint}}$ (by its marginal joint contribution — which cross-agent correlation can make much smaller, or larger, than its solo tempo) but may also increase $\varepsilon^\ast$. The turning point — where adding a member lowers realized external tempo — occurs when:
+
 $$\frac{\Delta\varepsilon^\ast \nu_c}{\lVert\delta_{\text{critical}}\rVert} \gt \Delta\mathcal{T}_i$$
+
 The closure-defect increase (expressed as tempo penalty) exceeds the new member's tempo contribution.
 - **Composite persistence condition.** The composite persists iff $\mathcal T_c \gt \rho_{\text{eff}} / \lVert\delta_{\text{critical}}\rVert$; a *necessary* condition in joint-baseline terms is therefore
+
 $$\mathcal{T}_{\text{joint}} \;\gt\; \frac{\rho_{\text{ext}} + \varepsilon^\ast \nu_c}{\lVert\delta_{\text{critical}}\rVert}$$
+
 which separates internal-coordination overhead from external challenge while keeping tempo units on the LHS and disturbance-rate units on the RHS (it reduces to the historical $\sum_i \mathcal T_i$ form exactly under cross-agent noise independence).
 
 ## Discussion

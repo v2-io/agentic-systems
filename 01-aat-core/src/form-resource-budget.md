@@ -69,6 +69,6 @@ This segment is an exploratory branch: it opens a resource-structure axis AAT ha
 ## Working Notes
 
 - The regenerative regime $r_{\mathcal{B}}\gt 0$ with $\mathcal B_t$ bounded above (a finite-capacity rechargeable pool) is the genuinely open dynamical case — it is a time-varying-$\alpha$ template instantiation in full and may be quasi-stationary-distribution / absorbing-barrier-flavored (cf. the open second no-go in the continuity-persistence reasoning trail). #der-resource-bounded-destabilization treats only $r_{\mathcal{B}}=0$ rigorously; the regenerative case is flagged there and not attempted.
-- Reasoning trail: `spikes/fight/03-energy-bound-effects-spiral.md` (the Φ-prompted derivation attempt that produced this branch) and `spikes/fight/99-verdict.md` §3.
+- Reasoning trail: `spikes/fight/03-energy-bound-effects-spiral.md` (the Φ-prompted derivation attempt that produced this branch) and `spikes/fight/99-verdict.md` §3.<!--md-press:not-math:Φ-->
 - Open: whether $\mathcal B_t$ should be vector-valued (distinct pools — energy vs compute vs attention — with distinct $c,\psi$). Scalar is the minimal first cut; the persistence machinery it feeds is itself scalar-default with a tensor extension ( #def-adaptive-tempo), so a vector $\mathcal{B}$ would compose with that tensor form. Not pursued here.
 - A NOTATION.md entry for $\mathcal B_t$ is added under a resource section; per the NOTATION drift caveat the segment, not the index, is ground truth.

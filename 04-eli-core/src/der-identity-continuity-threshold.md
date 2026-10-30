@@ -78,7 +78,9 @@ Let $\mu := \mathbb{E}[\xi_k] = \mathbb{E}[\rho_k] - \mathbb{E}[\varrho_{\text{r
 *[Derived (identity-ultimate-bound, from Foster–Lyapunov drift; exact under (C-D)+(M-ADD))]*
 
 > **Theorem (ultimate bound — the $R^\ast$ analog).** Under (C-D) + (M-ADD), if there exists $\alpha_{\text{id}} \gt 0$ with $\mathbb{E}[\varrho_{\text{rg},k} - \rho_k \mid g_k] \geq \alpha_{\text{id}}$ whenever $g_k \gt R^\ast_{\text{id}}$, then $g_k$ is ultimately bounded by
+>
 > $$R^\ast_{\text{id}} \;=\; \frac{\bar\rho}{\alpha_{\text{id}}},$$
+>
 > the exact structural analog of #result-persistence-condition's $R^\ast = \rho/\alpha$, and $\liminf_k S_{\text{id}}^{(k)} \geq 1 - R^\ast_{\text{id}}/D_\Delta$.
 
 *Derivation.* Foster–Lyapunov drift with $V(g) = g$: outside $\{g \leq R^\ast_{\text{id}}\}$ the conditional drift is $\leq \bar\rho - \alpha_{\text{id}} g/R^\ast_{\text{id}} \lt 0$, giving ultimate boundedness at $R^\ast_{\text{id}} = \bar\rho/\alpha_{\text{id}}$ by the standard supermartingale-outside-a-compact argument. $\square$

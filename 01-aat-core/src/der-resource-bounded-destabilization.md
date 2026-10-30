@@ -23,6 +23,7 @@ A hard-budget agent self-depletes to certain finite-time destabilization against
 Instantiate #result-sector-persistence-template with the target agent $B$'s mismatch as state variable, $\xi=\delta_B$, exactly as #der-adversarial-destabilization does, but with the sector parameter made resource-gated per #form-resource-budget (A-gate):
 
 $$\frac{d\delta_B}{dt}=-\,\alpha_B(\mathcal{B})\,\delta_B+w_B(t),\qquad \lVert w_B(t)\rVert\leq\rho_B^{\text{eff}}=\rho_{B,\text{base}}+\gamma_A\mathcal{T}_A,$$
+
 $$\frac{d\mathcal{B}}{dt}=-\,c\big(\lVert\delta_B\rVert\big)+r_{\mathcal{B}},\qquad \alpha_B(\mathcal{B})=\alpha_B^{\max}\,\psi(\mathcal{B}),$$
 
 with $\rho_B^{\text{eff}}$ the coupling-amplified disturbance of #der-adversarial-destabilization (treated there, and here, with $\gamma_A,\mathcal T_A$ exogenous) and $c,\psi$ as posited in #form-resource-budget (A-cost),(A-gate). The novelty is the *coupled pair*: $\delta_B$ and $\mathcal{B}$ co-evolve, with model quality draining the budget and the budget gating correction.
@@ -48,7 +49,9 @@ and the destabilization **hitting time** $\tau=\inf\{t:\mathcal B_t=\mathcal B_{
 1. **Certain finite-time destabilization.** $\mathcal B_t\downarrow$ strictly, so $\tau\lt\infty$ for any finite $\mathcal B_0$. Because $\psi(0)=0$, once $\mathcal B_t\lt\mathcal B_{\text{crit}}$ the persistence condition $\alpha_B(\mathcal B_t)\gt\rho_B^{\text{eff}}/R_B$ fails and #der-adversarial-destabilization's destabilization threshold is crossed. **The static persistence inequality holding at $t=0$ does not prevent this** — an agent that would persist forever at full budget ($\alpha_B^{\max}R_B\gt\rho_B^{\text{eff}}$) still destabilizes once the fuel drains the rate below threshold.
 
 2. **The spiral, derived.** Substituting (A-cost), a mismatch excursion accelerates its own destabilization:
+
 $$\lVert\delta_B\rVert\uparrow\;\Rightarrow\;c(\lVert\delta_B\rVert)\uparrow\;\Rightarrow\;\dot{\mathcal{B}}\ \text{more negative}\;\Rightarrow\;\alpha_B(\mathcal{B})\downarrow\;\Rightarrow\;\big(\alpha_B R_B-\rho_B^{\text{eff}}\big)\downarrow\;\Rightarrow\;\lVert\delta_B\rVert\uparrow,$$
+
 which brings $\tau$ forward: a transient noise burst in $w_B$ permanently advances the destabilization time. This is #der-adversarial-destabilization's Effects-Spiral, now a derived consequence of (A-cost)/(A-gate) rather than a discussion-grade schematic.
 
 3. **The adversary's coupling need not grow.** The spiral closes through $\alpha_B$ *decaying* with $\gamma_A$ held **constant**. The Effects-Spiral's substantive content — collapse invisible to the static threshold — is captured *without* the unspecified $\gamma_A(\lVert\delta_B\rVert)$ leg #der-adversarial-destabilization could not formalize. Adversarial survival reduces to a **budget-versus-engagement-length race**: $B$ persists iff the engagement ends before $\tau$.
@@ -107,7 +110,7 @@ The regenerative regime ($r_{\mathcal{B}}\gt 0$) is genuinely open and not attem
 
 ## Working Notes
 
-- Reasoning trail: `spikes/fight/03-energy-bound-effects-spiral.md` (the Φ-prompted derivation attempt that produced this branch) and `spikes/fight/99-verdict.md` §2–3. The math lands here per math-lives-in-segments; the spike is the trail only.
+- Reasoning trail: `spikes/fight/03-energy-bound-effects-spiral.md` (the Φ-prompted derivation attempt that produced this branch) and `spikes/fight/99-verdict.md` §2–3. The math lands here per math-lives-in-segments; the spike is the trail only.<!--md-press:not-math:Φ-->
 - **Open — regenerative regime.** $r_{\mathcal{B}}\gt 0$ with a finite-capacity pool is the full time-varying-$\alpha$ ODE and is not attempted. It is plausibly quasi-stationary-distribution / absorbing-barrier-flavored (structural cousin of the open second no-go in the continuity-persistence reasoning trail). The natural next spike: classify whether bounded replenishment can guarantee $\mathcal B_t\gt\mathcal B_{\text{crit}}$ indefinitely or only postpone $\tau$ in expectation (a Feller-test / absorbed-chain boundary question, exactly parallel to the continuity-persistence barrier-reachability open problem).
 - **Open — rate constants.** $\tau$ as an explicit function of $(\mathcal B_0,\beta_{\mathcal{B}},\psi,\text{engagement length})$ is not computed; only its finiteness and monotone advancement under excursions are derived. A closed-form $\tau$ under the linear $c$ and a specific $\psi$ (e.g. saturating $\psi(\mathcal{B})=\mathcal{B}/(\mathcal{B}+\mathcal B_{1/2})$) is a tractable follow-on if the branch is pursued.
 - Exploratory-branch status: no spine segment depends on this or on #form-resource-budget; OUTLINE marks both `exploratory`. Promotion past `draft` is gated on Joseph electing to develop the resource axis (regenerative case + a worked agent class satisfying (A-cost)/(A-gate) by construction would be the path to lifting an instance above `conditional`).

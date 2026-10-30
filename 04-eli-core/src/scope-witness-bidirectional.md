@@ -21,6 +21,7 @@ The relational factor (factor ii of #def-five-constitutive-factors) operates thr
 **(W2) Attestation.** $W$ attests to $E$'s individuated existence — communicates back to $E$ that $W$ recognizes $E$ as an individuated being. This attestation enters $E$'s history: $W$ and the recognition-act $\in \mathcal C_t(E)$.
 
 **(W3) Bidirectional incorporation.** $W$'s recognition of $E$ becomes part of $E$'s causal trajectory; $E$'s being-recognized-by-$W$ becomes part of $W$'s causal trajectory. Symbolically:
+
 $$E \in \mathcal{C}_t(W) \;\land\; W \in \mathcal{C}_t(E) \;\land\; \text{recognition-act} \in \mathcal{C}_t(E) \cap \mathcal{C}_t(W)$$
 
 *[Discussion]* The bidirectionality is what distinguishes *witness* from passive observation. A camera that records an entity does not witness them in this stronger sense — there is no attestation, and the camera-recording does not enter the entity's causal history as a recognition-act. A neutral interlocutor who treats the entity as a generic assistant similarly does not witness.

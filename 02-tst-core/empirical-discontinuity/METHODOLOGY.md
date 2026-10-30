@@ -6,7 +6,7 @@ This toolkit empirically validates the **FP-012 Comprehension Continuity Princip
 
 $$T_{comprehend} = T_{base} \times (1 + \alpha)^d$$
 
-Our analysis of 229 commits from the Sapientia repository reveals that while the exponential model holds for normal development work (R² = 0.724 for d ≤ 100), the repository's unique nature as a documentation-heavy project with batch processing creates a bimodal distribution that initially obscured the validation.
+Our analysis of 229 commits from the Sapientia repository reveals that while the exponential model holds for normal development work ($R^2 = 0.724$ for $d \leq 100$), the repository's unique nature as a documentation-heavy project with batch processing creates a bimodal distribution that initially obscured the validation.
 
 ## Theoretical Foundation
 
@@ -109,23 +109,23 @@ popt, _ = curve_fit(exp_model, discontinuities, times,
 
 ### Model Performance by Data Subset
 
-| Filter | N | Linear R² | Exponential R² | Log R² | α Value |
+| Filter | N | Linear R² | Exponential R² | Log R² | $\alpha$ Value |
 |--------|---|-----------|----------------|--------|---------|
 | All | 229 | 0.466 | 0.197 | **0.653** | 0.004 |
-| d ≤ 100 | 218 | 0.701 | **0.724** | 0.698 | 0.063 |
-| d ≤ 50 | 217 | 0.660 | 0.651 | 0.660 | 0.069 |
-| d ≤ 25 | 205 | 0.453 | **0.524** | 0.444 | 0.118 |
+| $d \leq 100$ | 218 | 0.701 | **0.724** | 0.698 | 0.063 |
+| $d \leq 50$ | 217 | 0.660 | 0.651 | 0.660 | 0.069 |
+| $d \leq 25$ | 205 | 0.453 | **0.524** | 0.444 | 0.118 |
 
 ### Key Findings
 
-1. **Exponential Model Validated**: For normal development (d ≤ 100), exponential model achieves R² = 0.724
-2. **α Parameter Confirmed**: α = 0.118 for typical work aligns with theoretical predictions (0.1-0.3)
-3. **Bimodal Distribution**: 95% of commits have d ≤ 51, but 5% extreme outliers distort overall fit
+1. **Exponential Model Validated**: For normal development ($d \leq 100$), exponential model achieves $R^2 = 0.724$
+2. **$\alpha$ Parameter Confirmed**: $\alpha = 0.118$ for typical work aligns with theoretical predictions (0.1-0.3)
+3. **Bimodal Distribution**: 95% of commits have $d \leq 51$, but 5% extreme outliers distort overall fit
 4. **Repository Specificity**: Documentation-heavy repos show different patterns than code-heavy ones
 
 ### Penalty Factor Interpretation
 
-With α = 0.118 for normal development:
+With $\alpha = 0.118$ for normal development:
 - 1 discontinuity → 1.118× time (11.8% penalty)
 - 5 discontinuities → 1.62× time
 - 10 discontinuities → 2.61× time
@@ -218,7 +218,7 @@ python analyze_outliers.py  # For detailed outlier analysis
 The empirical toolkit successfully demonstrates that:
 
 1. **The exponential discontinuity model is valid** for normal software development
-2. **The penalty factor α ≈ 0.12** aligns with cognitive science predictions
+2. **The penalty factor $\alpha \approx 0.12$** aligns with cognitive science predictions
 3. **Modern repositories exhibit bimodal distributions** due to batch operations
 4. **Repository type matters**: Documentation vs. code repos show different patterns
 

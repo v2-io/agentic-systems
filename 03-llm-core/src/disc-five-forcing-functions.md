@@ -25,7 +25,9 @@ The five forcing functions, with grounding for each:
 
 **(F2) Persistence threshold.**  
 *[Derived from #result-persistence-condition]* The agent's adaptive tempo must satisfy:
+
 $$\mathcal{T} \gt \rho / \lVert\delta_{\text{critical}}\rVert$$
+
 Scaffolding imposes a **hard ceiling on the event processing rate $\nu^{(k)}$** — every API round-trip adds hundreds of milliseconds to seconds per cognitive step. For environments with sufficient $\rho$, scaffolding latency pushes the agent below the persistence threshold. *The agent doesn't merely get slow — it ceases to be a viable adaptive system.* This is the strongest forcing function because it's not about cost but about whether the entity can exist at all in environments above a complexity threshold.
 
 The composition with deliberation-cost ( #der-deliberation-cost) sharpens this: under the deliberation-as-investment framing (audit `19-der-deliberation-cost.md` §14), the agent pays a guaranteed cost ($\rho_{\text{delib}} \cdot \Delta\tau$ — the world moves while the agent thinks) for a probabilistic future payout ($\Delta\eta^\ast$ — better gain when the agent finally acts). *Perfectionism is mathematically suboptimal in a changing universe* — the first-order condition $\partial \Delta\eta^\ast / \partial \Delta\tau \cdot \lVert\delta_{\text{post}}\rVert = \rho_{\text{delib}}$ proves the agent must stop deliberating and act once marginal insight drops below the speed of the world. **The diagnostic implication for current LLM agents** (audit §19 §14): *"LLMs perform so well on static benchmarks (where time is frozen) but struggle in real-time continuous control tasks. Their architecture is tuned for $\rho = 0$."* Under §03.III closed-loop architecture, the agent must explicitly model $\rho$ rather than assume static-benchmark-equivalent conditions; under primitive logogenic (§03.I) the agent has no architectural mechanism to do so, and analysis-paralysis is structurally consequent.

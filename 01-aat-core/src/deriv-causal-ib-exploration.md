@@ -22,15 +22,19 @@ AAT therefore carries **two parallel exploration drives at opposite ends of the 
 ## The Persistence-Bounded Objective
 
 The agent's primary goal is to maximize pragmatic value:
+
 $$\max_{\pi} \mathbb{E}_{a \sim \pi} [Q_O(a)]$$
 
 The agent is subject to the structural persistence condition ($\alpha R \gt \rho^{\text{eff}}$), meaning it only survives if its steady-state mismatch $R^\ast \lt R$. Under Model D dynamics, $R^\ast = \rho^{\text{eff}} / (\eta^\ast c_{\min})$. Using the optimal update gain $\eta^\ast = \frac{U_M}{U_M + U_o}$, we can rewrite the survival constraint exactly:
+
 $$\frac{U_M}{U_M + U_o} \gt \frac{\rho^{\text{eff}}}{R c_{\min}}$$
 
 Solving for $U_o$, we find the maximum observation noise the agent can tolerate without destabilizing:
+
 $$U_o^{\max} = U_M \left( \frac{R c_{\min}}{\rho^{\text{eff}}} - 1 \right)$$
 
 This creates a strict constraint on the agent's action selection:
+
 $$\mathbb{E}_{a \sim \pi} [U_o(a)] \le U_o^{\max}(M_t)$$
 
 ## The Tragedy of the Confident Agent
@@ -48,14 +52,17 @@ Conversely, an uncertain agent (high $U_M$) has a loose constraint (large $U_o^{
 *[Derivation (survival-exploration)]*
 
 Formulating the KKT Lagrangian for this constrained optimization:
+
 $$\mathcal{L} = \mathbb{E}[Q_O(a)] - \lambda' \cdot (\mathbb{E}[U_o(a)] - U_o^{\max})$$
 
 The shadow price $\lambda'$ scales as $1 / (U_o^{\max} - \mathbb{E}[U_o])$. At the boundary, $\lambda' \propto 1/U_o^{\max}$, yielding:
+
 $$\lambda' \propto \frac{\rho^{\text{eff}}}{(R c_{\min} - \rho^{\text{eff}}) \cdot U_M}$$
 
 To align this with the CIY objective, we invoke the structural assumption that Causal Information Yield is inversely proportional to observation ambiguity: $\text{CIY}(a) \propto 1/U_o(a)$. This scalar reciprocal mapping is a heuristic placeholder: the mathematically clean correspondence between the survival-imperative Lagrangian and the CIY/EIG objective is the LMI / matrix-valued lift in `#deriv-causal-ib-lmi`, where the Fisher Information Matrix and a positive-semidefinite Lagrange multiplier $\Lambda$ replace the scalar substitution below. Readers tracking exactness rather than directional fidelity should treat the rest of this section as the scalar shadow of that LMI derivation; the *honest limit* sub-section below and `#deriv-causal-ib-lmi` together carry the formal load.
 
 Transforming the Lagrangian penalty from $U_o$ to $1/U_o$ (which introduces a non-linear mapping of the multiplier, operating-point dependent), the equivalent survival weight on CIY becomes:
+
 $$\lambda_{\text{surv}}(M_t) \propto \frac{\rho^{\text{eff}}}{(R c_{\min} - \rho^{\text{eff}}) \cdot U_M}$$
 
 ## Epistemic Status
