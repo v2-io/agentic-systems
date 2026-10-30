@@ -3,9 +3,11 @@ kind: item
 provenance: imported
 source: spikes/PROPOSED-ADVANCED.md:43
 section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 2: Next-Generation Spike Proposals'
-owner: ""
 opened: 2026-10-30T20:17:42Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:24:29Z by Claude Opus 5.5 (item rechecker, q-proposals lane)
+owner: unassigned
+restated: 'Give the R3 (mean-field) tier of #disc-dynamic-regime-axis its machinery: the N to infinity limit of AAT agents coupled through a population distribution (Lasry-Lions; Huang-Malhame-Caines), gated on the Part III population-dynamics GAP (01-aat-core/OUTLINE.md:304-307).'
 ---
 
 # 7. Mean-Field Game Limit for Population Dynamics

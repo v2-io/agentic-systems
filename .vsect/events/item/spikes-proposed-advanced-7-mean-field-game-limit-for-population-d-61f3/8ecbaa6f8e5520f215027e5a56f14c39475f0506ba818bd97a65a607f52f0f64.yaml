@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 8ecbaa6f8e5520f215027e5a56f14c39475f0506ba818bd97a65a607f52f0f64
+at: 2026-10-30T21:24:29Z
+store: asf
+act: recheck
+about: item:spikes-proposed-advanced-7-mean-field-game-limit-for-population-d-61f3
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: cdd06900+dirty
+criterion: 'No spike and no machinery at HEAD (c772a6cf). Canon names the gap three times without closing it: #disc-dynamic-regime-axis names R3 (mean-field equilibrium) as the population-scope frontier and says AAT carries no R3 machinery (:38, :186, :204), and #deriv-strategic-composition lists the mean-field limit as open, gated on Part III''s population-scope GAP (:147, :210). The entry''s ''derive macro-economic trends directly from AAT micro-agent physics'' is aspiration, not something the proposal''s construction would deliver; the restated item is the R3 tier''s machinery. No KR in INTENT owns theory-frontier extensions; nearest is the Part III population GAP (Bundle 2).'
+outcome: holds
+owner: unassigned
+restated: 'Give the R3 (mean-field) tier of #disc-dynamic-regime-axis its machinery: the N to infinity limit of AAT agents coupled through a population distribution (Lasry-Lions; Huang-Malhame-Caines), gated on the Part III population-dynamics GAP (01-aat-core/OUTLINE.md:304-307).'
