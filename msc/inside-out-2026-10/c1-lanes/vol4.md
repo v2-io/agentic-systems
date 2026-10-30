@@ -88,6 +88,22 @@ Three sentences in the replacement text were pinned to their sources:
 - `item:todo-04-eli-core-src-obs-substrate-independen-f8a8`: write the segment as the record supports it, or retire the row.
 - `item:spikes-proposed-advanced-11-substrate-transfer-asymmetry-origin-d-9171`: measure first, then discriminate the origins.
 
+## A11: the Auxilia W₁ overclaim (TODO.md L39, taken at the lead's request)
+
+**Re-check.** `#def-auxilia-hierarchy` said substrate separation is "the very thing that earns the structural guarantee". The bound's derivation in `#der-class-coercion-via-wrapping` uses only the chain $G^{\text{op}} \to q_M \to A(q_M)$. (C2′) is stated there as a condition on the component's pre-call state ("reset … or stripped"), with no reference to substrate count. So the spike's verdict holds: a separate substrate is sufficient, not necessary.
+
+**Strengthened beyond the spike.** A separate substrate is not sufficient on its own either. A persistent Auxilia that has received goal content, from $E$'s tasking or from AXIOMATA's objective layer, carries goal-correlated state and fails (C2′). This also answers my earlier vsect question. AXIOMATA in a belief-side call's context enters $I(q_M; G^{\text{op}})$. The bound stays structural but loosens. Passing only AXIOMATA's self-description keeps it tight, and the segment names this as a design choice.
+
+**Landed.**
+
+- `#def-auxilia-hierarchy`: the paragraph is replaced by "What earns the structural bound, and where Auxilia stand". The case for the hierarchy now rests on tempo, cost of existence and auditability.
+- `#der-logogenic-as-wrapping`: the same correction in its (C2′) sentence, and its Working Note pointer is updated to the spike's still-open residue (§7).
+- vsect: the TODO item is re-checked `landed`, and the question is answered.
+
+TODO.md L39 itself is left for the I.3 tracker retirement rather than edited here. The spike stays at top level of `spikes/` and could move to `.integrated/`.
+
+**Worth checking.** Is "a persistent Auxilia that received goal content fails (C2′)" right when the goal content is AXIOMATA's slow objective layer, rather than the operator goal $G^{\text{op}}$ of a given macro-step? I treat that layer as information about $G^{\text{op}}$. If a verifier reads $G^{\text{op}}$ as only the fast, per-step goal, the second consequence narrows to goal content from $E$'s tasking.
+
 ## Adjacent findings, recorded and not fixed
 
 - `question:def-auxilia-hierarchy-h1-gives-every-auxilia-e-s`. (H1) gives every Auxilia AXIOMATA, which now carries $O_t$ content. The W₁ paragraph needs belief-side Auxilia whose query selector takes no $G$ argument. The two pull against each other.

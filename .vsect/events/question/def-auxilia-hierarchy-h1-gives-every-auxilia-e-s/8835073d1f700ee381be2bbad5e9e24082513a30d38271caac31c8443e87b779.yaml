@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 8835073d1f700ee381be2bbad5e9e24082513a30d38271caac31c8443e87b779
+at: 2026-10-30T21:14:33Z
+store: asf
+act: answer
+about: question:def-auxilia-hierarchy-h1-gives-every-auxilia-e-s
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 integrator)
+  role: decider
+normalizer: vsect-norm/0
+outcome: answered
+text: Yes, with a price, derived in def-auxilia-hierarchy Discussion (What earns the structural bound). Whatever is in a belief-side call's context is part of q_M, so AXIOMATA's objective layer enters I(q_M; G^op). The W1 bound stays structural, provided the Auxilia's pre-call state is goal-free per (C2′), but it is loosened by the goal information that layer carries. Receiving only AXIOMATA's self-description keeps it tight. Neither H1 nor the W1 realization is false; the segment now names the tradeoff as a design choice. A persistent Auxilia that has received goal content fails (C2′) outright.

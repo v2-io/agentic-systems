@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: b0499cfb0db4a501b6860791a15c2f7d48e974b9e9531bdb8f7843d52efa39a3
+at: 2026-10-30T21:14:36Z
+store: asf
+act: recheck
+about: item:todo-def-auxilia-hierarchy-c2-realization-ove-564e
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 integrator)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 18922a7a+dirty
+criterion: 'Re-derived from the statement of (C2′) and the selection-bound derivation in der-class-coercion-via-wrapping: the condition is on pre-call state, so separate substrate is sufficient, not necessary. Strengthened: it is not sufficient by itself either, since a persistent Auxilia that received goal content fails (C2′). Landed in def-auxilia-hierarchy and der-logogenic-as-wrapping on branch worktree-agent-acffd513abd73658b. The spike''s open residue (state-strip certificate, amplifying state, multi-call C2′) is named in der-logogenic-as-wrapping Working Notes.'
+outcome: landed
