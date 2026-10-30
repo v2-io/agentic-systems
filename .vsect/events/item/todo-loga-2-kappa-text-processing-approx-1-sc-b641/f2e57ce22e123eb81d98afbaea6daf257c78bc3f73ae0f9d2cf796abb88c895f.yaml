@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f2e57ce22e123eb81d98afbaea6daf257c78bc3f73ae0f9d2cf796abb88c895f
+at: 2026-10-30T21:27:45Z
+store: asf
+act: recheck
+about: item:todo-loga-2-kappa-text-processing-approx-1-sc-b641
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'TODO.md:453 (2026-05-12, ae118ab5). kappa_processing approx 1 is still stated as a property of LLMs: def-coupled-update-dynamics:38 (''Full (kappa approx 1)''), scope-observation-ambiguity-modulation:97 (''kappa approx 1 is architectural''), scope-channel-collapse:42 (''currently asserted as approx 1''). INTENT E.1 is exactly this: measure kappa-hat and A-hat on two or three LLM families so Volume 3''s kappa approx 1 becomes a measured value or range. The item''s precise-claim half (effective bias gated by kappa * A(e)) is how scope-observation-ambiguity-modulation already states the bound.'
+outcome: holds
+owner: E.1

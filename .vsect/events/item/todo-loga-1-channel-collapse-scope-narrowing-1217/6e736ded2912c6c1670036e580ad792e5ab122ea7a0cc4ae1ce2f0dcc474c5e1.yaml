@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 6e736ded2912c6c1670036e580ad792e5ab122ea7a0cc4ae1ce2f0dcc474c5e1
+at: 2026-10-30T21:27:45Z
+store: asf
+act: recheck
+about: item:todo-loga-1-channel-collapse-scope-narrowing-1217
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'TODO.md:452 (2026-05-12, ae118ab5). Not narrowed: scope-channel-collapse:20-34 still defines the scope by O = A sharing one substrate and concludes ''structural, not parametric — no choice of eta* or model size restores directed separation while channel collapse holds'', with no distinction between the component''s language substrate and a harness''s typed observation/action spaces (tool calls, structured outputs, other modalities). The only trace is an open WN question on multimodal models (:80). der-logogenic-as-wrapping''s W1/W2 analysis is already the harness-level story the scope statement should defer to.'
+outcome: holds
+owner: C.1
+restated: Scope channel collapse to the component (one forward pass over shared tokens) and let harness-level observation/action spaces carry an effective collapse degree; the wrapper analysis in der-logogenic-as-wrapping already supplies the harness-level half.

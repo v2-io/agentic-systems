@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 9269dcbab4cc3481bf13e4e23db0089a43c96d1baac43a4ffb08a7984ef132c7
+at: 2026-10-30T21:29:32Z
+store: asf
+act: recheck
+about: item:todo-also-requested-joseph-2026-05-17-parked-5dd2
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 0474943d+dirty
+criterion: 'TODO.md:488 (2026-05-17 request). Not ported: mono/scrbook/preamble/segment.tex:198 defines \asfAppendixToCremap as a no-op, and typeset_scrbook.rb:277 still comments that it is kaobook-only; the built ToC (612bcb65) shows appendices at chapter register (''AZ Detail: ...''). No KR covers monograph typesetting.'
+outcome: holds
+owner: unassigned

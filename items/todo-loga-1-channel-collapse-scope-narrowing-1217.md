@@ -3,9 +3,11 @@ kind: item
 provenance: imported
 source: TODO.md:452
 section: 'TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (d) — LOGA / ELI stub filling and content cycle — open items'
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:27:45Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: C.1
+restated: Scope channel collapse to the component (one forward pass over shared tokens) and let harness-level observation/action spaces carry an effective collapse degree; the wrapper analysis in der-logogenic-as-wrapping already supplies the harness-level half.
 ---
 
 # LOGA-1 channel collapse scope-narrowing — "channel collapse" as $O = A = \Sigma^\ast$ is directionally right for pure text chat but too exact for tool-using / m

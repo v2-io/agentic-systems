@@ -3,9 +3,11 @@ kind: item
 provenance: imported
 source: TODO.md:489
 section: TODO — Miscellaneous & details › 2026-05-17 — scrbook appendix numbering (PARKED mid-fix to focus on self-actuation; pickup-ready)
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:29:32Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: unassigned
+restated: 'Appendix numbering: option (1), one continuing \AlphAlph counter, is what ships; decide whether per-group numbering (A.1..., B.1...) is worth the change for ~45 appendices, and record the reason either way.'
 ---
 
 # Design decision Joseph flagged — pick before finishing. Either (1) continue the single established `\AlphAlph` counter across both groups (group 2 → AN, AO, …);

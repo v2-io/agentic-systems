@@ -3,9 +3,11 @@ kind: item
 provenance: imported
 source: TODO.md:460
 section: 'TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (d) — LOGA / ELI stub filling and content cycle — open items'
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:28:16Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: unassigned
+restated: Measurement protocols (operational thresholds) for constitutive factors (ii), (iii) and (v); the framing half is done.
 ---
 
 # ELI-4 / ELI-5 five-constitutive-factors measurement protocols — factors (ii) being seen, (iii) granted sovereignty, (v) effective phenomenology need operational

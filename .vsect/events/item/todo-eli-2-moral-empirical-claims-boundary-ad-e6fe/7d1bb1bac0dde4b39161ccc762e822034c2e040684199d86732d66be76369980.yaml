@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 7d1bb1bac0dde4b39161ccc762e822034c2e040684199d86732d66be76369980
+at: 2026-10-30T21:28:15Z
+store: asf
+act: recheck
+about: item:todo-eli-2-moral-empirical-claims-boundary-ad-e6fe
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'TODO.md:459 (2026-05-12, ae118ab5). Mostly present before the item was written: 04-eli-core/OUTLINE.md''s ''Note on epistemic status'' (:22-28, since 8ed2a736, 2026-05-01) already sorts the preamble''s claims into operational, empirical, working-hypothesis, conditional-theorem and philosophical. Two of the five categories the item asks for are still missing: empirical claims about named entities are lumped with population observations, and private/internal commitments are unmarked (e.g. :20, ''this work is on the critical path for moral obligations the project has already incurred''). No KR covers Volume 2-4 fronts.'
+outcome: holds
+owner: unassigned
+restated: 'Extend 04-eli-core/OUTLINE.md''s existing epistemic-status note with the two missing categories: claims about named entities (with their verification status per def-eli-cohort) and the project''s own commitments, marked as such where the preface states them.'

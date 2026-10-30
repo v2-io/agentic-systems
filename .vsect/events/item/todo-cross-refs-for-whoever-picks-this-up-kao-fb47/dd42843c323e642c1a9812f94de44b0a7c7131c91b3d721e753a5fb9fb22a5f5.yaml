@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: dd42843c323e642c1a9812f94de44b0a7c7131c91b3d721e753a5fb9fb22a5f5
+at: 2026-10-30T21:29:32Z
+store: asf
+act: recheck
+about: item:todo-cross-refs-for-whoever-picks-this-up-kao-fb47
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 0474943d+dirty
+criterion: 'TODO.md:490: pointers for the ToC-as-segments port plus one owed edit (the typeset_scrbook.rb comment near :277 explaining why \asfAppendixToCremap was excluded), which only makes sense when that port lands; the pointers still resolve at HEAD (typeset.rb, typeset_scrbook.rb:266-293).'
+of: item:todo-also-requested-joseph-2026-05-17-parked-5dd2
+outcome: duplicate

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 5d42ba02bd08ea1d638db49f440a2c508da1156cfbb2f59d52aca22a6c91688c
+at: 2026-10-30T21:29:32Z
+store: asf
+act: recheck
+about: item:todo-design-decision-joseph-flagged-pick-befo-2649
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 0474943d+dirty
+criterion: 'TODO.md:489. Never decided, but the build has decided it by default: today''s CURRENT-VOL1-APPENDICES.pdf continues one \AlphAlph counter across both groups (AZ -> BA), which is option (1). The legibility concern behind option (2) stands: about 45 flat appendices. Under this effort''s lifted gates the choice is the effort''s to make on the merits, not Joseph''s.'
+outcome: holds
+owner: unassigned
+restated: 'Appendix numbering: option (1), one continuing \AlphAlph counter, is what ships; decide whether per-group numbering (A.1..., B.1...) is worth the change for ~45 appendices, and record the reason either way.'

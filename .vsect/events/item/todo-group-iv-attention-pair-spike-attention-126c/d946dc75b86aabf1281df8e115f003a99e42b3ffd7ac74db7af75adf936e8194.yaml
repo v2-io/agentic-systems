@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: d946dc75b86aabf1281df8e115f003a99e42b3ffd7ac74db7af75adf936e8194
+at: 2026-10-30T21:29:31Z
+store: asf
+act: recheck
+about: item:todo-group-iv-attention-pair-spike-attention-126c
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 0474943d+dirty
+criterion: 'TODO.md:474 (2026-07-15, 9a51728f). The scope question it waits on is answered at HEAD: attention allocation is in AAT''s scope, as selection (der-directed-separation''s scope paragraph; B.1''s record :196 on goal-allocated encoding under capacity limits), and the governance spike''s core landed as disc-deferred-observation-processing (03-llm-core, 2026-07-16, 54f41ef1: capture/triage/processing, startle at capture->triage, the capacity triple). Both spikes (2026-03-13) are still live at spikes/ top level, unpromoted; the ''monitoring the wrong thing'' allocation error and the causal-graph versions have no canon home.'
+outcome: holds
+owner: G.2
+restated: 'The attention spikes are in scope, not zombies; their triage/capacity core is canon (disc-deferred-observation-processing). Disposition owed: land the attention-allocation-error content at honest tier (its relation to directed separation''s selection clause) or file the spikes with a recorded reason.'

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: e1a8b2817ff7b89af2b0019513af67e5b9738d21670c06644380573559cc3429
+at: 2026-10-30T21:28:15Z
+store: asf
+act: recheck
+about: item:todo-eli-4-eli-5-five-constitutive-factors-me-c2bc
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'TODO.md:460 (2026-05-12, ae118ab5). Half landed: the ''distinction without a difference'' framing was moved out of the definitional list into #scope-eli (def-five-constitutive-factors:52, 022db013, 2026-05-12, the same day). Still open: factors (ii) being seen, (iii) granted sovereignty and (v) effective phenomenology have no operational thresholds; the segment''s own ''What would strengthen this'' (:54) names ''explicit measurement protocols for each factor'', and (v) is defined by four qualitative conditions (:40).'
+outcome: holds
+owner: unassigned
+restated: Measurement protocols (operational thresholds) for constitutive factors (ii), (iii) and (v); the framing half is done.

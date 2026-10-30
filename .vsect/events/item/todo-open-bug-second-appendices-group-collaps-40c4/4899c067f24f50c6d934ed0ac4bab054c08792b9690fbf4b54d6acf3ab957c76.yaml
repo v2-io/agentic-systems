@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4899c067f24f50c6d934ed0ac4bab054c08792b9690fbf4b54d6acf3ab957c76
+at: 2026-10-30T21:29:31Z
+store: asf
+act: recheck
+about: item:todo-open-bug-second-appendices-group-collaps-40c4
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 0474943d+dirty
+criterion: 'TODO.md:487 (re-touched 2026-10-30, b95e11cd; the bug dates from 2026-05-17). Does not reproduce at HEAD: CURRENT-VOL1-APPENDICES.pdf, built today (612bcb65), labels the second *Appendices* group (''Operational Domains'') BA, BB, ... BF, continuing \AlphAlph from the first group''s AZ, with no ''Counter too large''. bin/lib/typeset_scrbook.rb:269-293 still emits the rebind once (the @appendix_emitted guard), so the cure came from elsewhere, probably the 2026-08-22 split-appendices build path (490bf42b); not traced. The build now ships design option (1) of the companion decision item de facto.'
+outcome: stale

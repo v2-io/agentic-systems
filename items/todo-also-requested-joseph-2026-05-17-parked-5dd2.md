@@ -3,9 +3,10 @@ kind: item
 provenance: imported
 source: TODO.md:488
 section: TODO — Miscellaneous & details › 2026-05-17 — scrbook appendix numbering (PARKED mid-fix to focus on self-actuation; pickup-ready)
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:29:32Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: unassigned
 ---
 
 # Also requested (Joseph 2026-05-17), parked with this: appendices in the ToC should read *as if they were segments* (section-register indent/weight) while stayin

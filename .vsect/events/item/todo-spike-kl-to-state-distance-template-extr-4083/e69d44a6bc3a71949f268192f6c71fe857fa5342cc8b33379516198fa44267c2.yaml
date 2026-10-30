@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: e69d44a6bc3a71949f268192f6c71fe857fa5342cc8b33379516198fa44267c2
+at: 2026-10-30T21:29:31Z
+store: asf
+act: recheck
+about: item:todo-spike-kl-to-state-distance-template-extr-4083
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 0474943d+dirty
+criterion: 'TODO.md:473 (2026-05-18, 8f2d237a). Same work as PROPOSALS E.2 SP-10 (#posterior-displacement-template extraction), which carries the live gating rule: client-gated until a third client (causal-IB, misspecification-cost or composition-scope-robustness) materializes. None has: no posterior-displacement segment, Otto-Villani appears only in deriv-observation-ambiguity-bias-bound and disc-additive-coordinate-forcing, and the causal-IB and misspecification-cost floors are still open (held as todo-adjacent-identifiability-floors-disc-ide-90c4). The PROPOSALS entry should be the survivor.'
+of: item:proposals-e-2-sp-10-posterior-displacement-templat-7718
+outcome: duplicate

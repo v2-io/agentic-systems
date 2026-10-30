@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 7c2b8f40fd77721717fbe018ae59a30adebfce71cca575495b4531bbb020633b
+at: 2026-10-30T21:27:45Z
+store: asf
+act: recheck
+about: item:todo-loga-3-context-turnover-sufficiency-rena-b462
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'TODO.md:454 (2026-05-12, ae118ab5). One of three parts landed: obs-context-turnover now treats the next session''s state as reconstructed from external memory (:25-56). Not landed: the ''100% context reset'' wording (:15, :60). And the bound is still wrong as a formal statement: :52-54 says Delta S_turnover >= 1 - I(M_k; M_rec)/H(M_k), mixing state entropy with def-model-sufficiency''s predictive-information normalization. Counterexample: M_k = (X, Z) with the future depending only on X and Z independent noise; externalize X only. Then Delta S = 0 but the right side is H(Z)/(H(X)+H(Z)) > 0. Also :56''s ''nothing externalized gives 1 - S(M_0)'' needs S(M_k) = 1. Rechecker''s construction, not independently checked. Today''s A14 edit (138e0404) did not touch the bound.'
+outcome: holds
+owner: C.1
+restated: obs-context-turnover's sufficiency-drop bound (:52-54) is false as stated (it normalizes by H(M) where sufficiency normalizes by predictive information; an irrelevant-noise component gives a counterexample). Restate it on predictive information (by data processing, the drop is at least the predictive information the externalize-reconstruct channel loses, when the reconstruction adds nothing new), and rename '100% context reset' to the context-window reset it is.

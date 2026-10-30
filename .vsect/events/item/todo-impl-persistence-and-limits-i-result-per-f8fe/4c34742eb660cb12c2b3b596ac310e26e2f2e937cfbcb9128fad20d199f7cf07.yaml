@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4c34742eb660cb12c2b3b596ac310e26e2f2e937cfbcb9128fad20d199f7cf07
+at: 2026-10-30T21:29:31Z
+store: asf
+act: recheck
+about: item:todo-impl-persistence-and-limits-i-result-per-f8fe
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 0474943d+dirty
+criterion: 'TODO.md:479 (2026-08-22, 55395d9a). Resolved today in ed150051 (''I.2: the three remaining OUTLINE ordering defects resolved on the merits; lint-outline exits 0''): #result-per-dimension-persistence now sits in §I (01-aat-core/OUTLINE.md:66), bin/lint-outline reports 0 ordering violations for all four volumes and exits 0 at HEAD.'
+outcome: landed
