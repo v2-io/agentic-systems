@@ -68,7 +68,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 ## I — The system keeps it true (the lead's part)
 
 - **I.1** This tree stays true and lean, and every agent at every depth knows its KR. · *lead*
-- **I.3** One open ledger, keyed by claim: every open item carries slug, kind, resolver and date, and every target resolves. The thirteen trackers, the index files, the proposal files, ROUTING and the decision briefs are folded into it or deleted. · *started: `vsect open` holds findings and questions; an `item` kind and the tracker import are being built*
+- **I.3** One open ledger, keyed by claim: every open item carries slug, kind, resolver and date, and every target resolves. The thirteen trackers, the index files, the proposal files, ROUTING and the decision briefs are folded into it or deleted. · *started: every imported tracker item is judged and twelve trackers are gone; TODO.md waits for I.5, PRACTICA.md for I.8*
 - **I.4** Standing is read from recorded checks, not typed: a checks ledger (slug, text hash, who, criterion, outcome), with a lint that flags a changed body whose last check is older. · *started: vsect records checks bound to their basis, reports lapses, and re-binds them by a second mind's `confirm`; F72 recorded and holding; `exact 26 (checked 1)`*
 - **I.5** Working Notes carry forward pointers and regression guards only. Items are classified by kind and sent to their homes, and lifting audit gold into Working Notes stops. · *not started; seed in `internal-surfaces/wn-ledger-seed/`*
 - **I.6** The always-loaded surface says only what tools cannot check. Tool-enforced rules leave the prose, derivable parts are generated, and every SOP passes md-press. A two-launch probe measures the effect rather than asserting it. · *not started*
@@ -86,8 +86,8 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 | A.1 round-3 integrator (Opus), own worktree: the third check (09) | A.1 | `#scope-adaptive-system`, on its branch; `10-check-4-integration.md` |
 | Part I round-2 integrator (Fable), own worktree: the persistence window, the C1 exit-time spike and its verification, Prop A.1S(i)'s break | C.1, C.2 | Part I, on its branch; `part-i-round-2.md` |
 | Volume 4 round-2 integrator (Opus), own worktree: the Volume 4 check | C.1 | `04-eli-core/`, on its branch; `c1-lanes/vol4-round-2.md` |
-| TST lane checker (Opus), bare brief | C.1, H.2 | `reviews/tst-lane-check-1.md` |
-| vsect builder (Fable), with the tracker re-check sweep | I.3, I.4 | `~/src/arch/firmatum/utils/vsect/`, `items/`, `.vsect/` |
+| TST round-2 integrator (Opus), own worktree: the TST check | C.1, H.2 | `02-tst-core/`, on its branch; `c1-lanes/tst-round-2.md` |
+| vsect builder (Fable), on the line for the store migration (after the four integration branches merge) | I.4 | `~/src/arch/firmatum/utils/vsect/`, `.vsect/` |
 
 These are finished and on the line through the lead:
 
@@ -107,7 +107,9 @@ These are finished and on the line through the lead:
 - the A.1 round-2 checker (09);
 - the C1 spike verifier; the Part I and Volume 4 lane checkers;
 - the TST lane (A13, the 44 `old-*` fates);
-- the second-mind confirmer.
+- the second-mind confirmer;
+- the tracker re-check sweep (pilot and five lanes: 371 of 371 imported items judged, twelve of fourteen trackers deleted);
+- the TST lane checker.
 - the hooks builder (I.2).
 
 ## Using this file
