@@ -27,7 +27,6 @@ The gate checklist:
 - Document cadence matches the template (frontmatter → title → summary → formal expression → epistemic status → discussion → findings → working notes)
 - Equation-level tags are present and correct for each equation
 
-The sequencing is intentional: content correctness (Gate 2) before mechanical polish (Gate 3),
-because it wastes effort to clean a segment that will be returned to draft when a content issue is found. A `format-clean` segment is ready for Gate 4 (Working Notes disposition).
+The sequencing is intentional: content correctness (Gate 2) before mechanical polish (Gate 3), because it wastes effort to clean a segment that will be returned to draft when a content issue is found. A `format-clean` segment is ready for Gate 4 (Working Notes disposition).
 
 See [`FORMAT.md`](../../FORMAT.md) §Gate 3.

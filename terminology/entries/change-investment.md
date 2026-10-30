@@ -16,8 +16,7 @@ aliases: []
 do_not_confuse: []
 ---
 
-The pairwise decision rule derived from dual-optimization: choose the costlier implementation now when the upfront delta is less than the expected number of future features times the per-feature savings. Formally: accept extra cost $X$
-now over $Y$ per future change when $X \lt \hat n_{\text{future}} \times Y$.
+The pairwise decision rule derived from dual-optimization: choose the costlier implementation now when the upfront delta is less than the expected number of future features times the per-feature savings. Formally: accept extra cost $X$ now over $Y$ per future change when $X \lt \hat n_{\text{future}} \times Y$.
 
 Citability is borderline — the term is specific to TST's amortization framing but is not yet standalone-citable. Status `weak` reflects this.
 

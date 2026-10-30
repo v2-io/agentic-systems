@@ -16,9 +16,6 @@ aliases: ["mismatch signal"]
 do_not_confuse: []
 ---
 
-The signed difference between what the model predicted and what the world delivered: $\delta_t = o_t - \hat o_t$. Substrate of the [aporia](aporia.md)
-phase and input to the gain-weighted update of [epistrophe](epistrophe.md).
-Everything subsequent in the cycle is processing this signal.
+The signed difference between what the model predicted and what the world delivered: $\delta_t = o_t - \hat o_t$. Substrate of the [aporia](aporia.md) phase and input to the gain-weighted update of [epistrophe](epistrophe.md). Everything subsequent in the cycle is processing this signal.
 
-Defined in
-[`#def-mismatch-signal`](../../01-aat-core/src/def-mismatch-signal.md).
+Defined in [`#def-mismatch-signal`](../../01-aat-core/src/def-mismatch-signal.md).

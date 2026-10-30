@@ -24,7 +24,6 @@ The agent's overall adaptive capacity is:
 
 $$\nu_{\text{eff}} = \sum_k \nu^{(k)} \cdot \eta^{(k)*}$$
 
-— identical to adaptive tempo $\mathcal{T}$, emerging naturally from the multi-channel structure.
-Discrete-time notation is the special case where a single observation and action alternate at a fixed rate. The event-driven formulation is needed when multi-rate or asynchronous channels matter — e.g., a developer with compiler output at per-save rates, CI at per-push rates, and production telemetry continuously.
+— identical to adaptive tempo $\mathcal{T}$, emerging naturally from the multi-channel structure. Discrete-time notation is the special case where a single observation and action alternate at a fixed rate. The event-driven formulation is needed when multi-rate or asynchronous channels matter — e.g., a developer with compiler output at per-save rates, CI at per-push rates, and production telemetry continuously.
 
 Defined in [`#form-event-driven-dynamics`](../../01-aat-core/src/form-event-driven-dynamics.md).

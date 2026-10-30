@@ -22,9 +22,7 @@ $$\alpha_\Sigma \gt \frac{\rho_\Sigma}{R_\Sigma}$$
 
 where $\alpha_\Sigma$ is the strategic correction rate, $\rho_\Sigma$ is the rate at which the environment invalidates causal links, and $R_\Sigma$ is the strategic reserve.
 
-**The critical difference from epistemic persistence**: For Beta-Bernoulli edge updates, the sector parameter $\alpha_\Sigma = 1/(n+1)$ decays monotonically with accumulated experience $n$.
-Without a forgetting mechanism, $\alpha_\Sigma \to 0$ and every agent eventually violates the threshold. Exponential forgetting with discount factor $\lambda$ stabilizes the effective sample size at $1/(1-\lambda)$, giving steady-state $\alpha_\Sigma^{ss} \approx 1-\lambda$. The
-**forgetting prerequisite**:
+**The critical difference from epistemic persistence**: For Beta-Bernoulli edge updates, the sector parameter $\alpha_\Sigma = 1/(n+1)$ decays monotonically with accumulated experience $n$. Without a forgetting mechanism, $\alpha_\Sigma \to 0$ and every agent eventually violates the threshold. Exponential forgetting with discount factor $\lambda$ stabilizes the effective sample size at $1/(1-\lambda)$, giving steady-state $\alpha_\Sigma^{ss} \approx 1-\lambda$. The **forgetting prerequisite**:
 
 $$(1-\lambda) \gt \frac{\rho_\Sigma}{R_\Sigma}$$
 

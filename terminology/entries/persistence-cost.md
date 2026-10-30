@@ -20,16 +20,10 @@ Under Model S (stochastic disturbance) with $n$-dimensional Ornstein-Uhlenbeck s
 
 $$\dot R_{\min} = \frac{n\alpha}{2} \text{ nats per unit time}$$
 
-where $\alpha$ is the sector constant. The Kalman-Bucy filter achieves this bound exactly
-(Mitter-Newton 2005). The bound is **filter-agnostic** — it constrains any implementation via Shannon's rate-distortion theorem, regardless of the correction function's specific form.
+where $\alpha$ is the sector constant. The Kalman-Bucy filter achieves this bound exactly (Mitter-Newton 2005). The bound is **filter-agnostic** — it constrains any implementation via Shannon's rate-distortion theorem, regardless of the correction function's specific form.
 
-A first-class persistence diagnostic follows: the observation channel must have Shannon capacity
-$C_{\text{channel}} \geq \mathcal{T}/2$ nats/time per dimension. This **channel-capacity floor**
-is the persistence prerequisite the current tempo framework ($\alpha \gt \rho/R$) does not name.
-It is most binding where observation bandwidth is non-abundant: biological neurons, bandwidth-
-constrained distributed systems, and context-window-limited LLMs.
+A first-class persistence diagnostic follows: the observation channel must have Shannon capacity $C_{\text{channel}} \geq \mathcal{T}/2$ nats/time per dimension. This **channel-capacity floor** is the persistence prerequisite the current tempo framework ($\alpha \gt \rho/R$) does not name. It is most binding where observation bandwidth is non-abundant: biological neurons, bandwidth- constrained distributed systems, and context-window-limited LLMs.
 
-The result has a thermodynamic reading (Still et al. 2012): each nat of information about the signal costs at least $k_BT$ of dissipation, so persistence at sector constant $\alpha$ in $n$
-dimensions costs at least $n\alpha k_BT/(2\ln 2)$ of thermodynamic dissipation per unit time.
+The result has a thermodynamic reading (Still et al. 2012): each nat of information about the signal costs at least $k_BT$ of dissipation, so persistence at sector constant $\alpha$ in $n$ dimensions costs at least $n\alpha k_BT/(2\ln 2)$ of thermodynamic dissipation per unit time.
 
 Derived in [`#deriv-persistence-cost`](../../01-aat-core/src/deriv-persistence-cost.md).

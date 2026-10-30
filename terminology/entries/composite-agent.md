@@ -16,8 +16,7 @@ aliases: []
 do_not_confuse: [multi-agent-routing-structure]
 ---
 
-A set of sub-agents each satisfying [agency](agency.md) constitutes a composite agent when their objectives exhibit sufficient teleological alignment to define a coherent composite purpose $O_c$. Without this condition, they form a multi-agent system that may still be analyzed — but the composition machinery (closure defect, team persistence, composite tempo)
-does not apply because $G_c = (O_c, \Sigma_c)$ is ill-defined.
+A set of sub-agents each satisfying [agency](agency.md) constitutes a composite agent when their objectives exhibit sufficient teleological alignment to define a coherent composite purpose $O_c$. Without this condition, they form a multi-agent system that may still be analyzed — but the composition machinery (closure defect, team persistence, composite tempo) does not apply because $G_c = (O_c, \Sigma_c)$ is ill-defined.
 
 Four routes qualify a group for composite-agent status (any one is sufficient):
 

@@ -16,11 +16,6 @@ aliases: ["CIY"]
 do_not_confuse: []
 ---
 
-Per-action information about the action–outcome relationship — the *causal*
-counterpart to predictive information yield. CIY operationalizes "did taking this action teach me something I couldn't have learned by passive observation?"
-and is the unifying objective for the explore / exploit / deliberate trichotomy.
+Per-action information about the action–outcome relationship — the *causal* counterpart to predictive information yield. CIY operationalizes "did taking this action teach me something I couldn't have learned by passive observation?" and is the unifying objective for the explore / exploit / deliberate trichotomy.
 
-Defined in
-[`#def-causal-information-yield`](../../01-aat-core/src/def-causal-information-yield.md);
-unified-objective discussion at
-[`#disc-ciy-unified-objective`](../../01-aat-core/src/disc-ciy-unified-objective.md).
+Defined in [`#def-causal-information-yield`](../../01-aat-core/src/def-causal-information-yield.md); unified-objective discussion at [`#disc-ciy-unified-objective`](../../01-aat-core/src/disc-ciy-unified-objective.md).

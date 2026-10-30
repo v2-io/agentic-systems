@@ -17,8 +17,6 @@ aliases: []
 do_not_confuse: []
 ---
 
-The structural sense of persistence: whether the correction machinery has sufficient gain $\alpha$ relative to disturbance rate $\rho$ and recovery budget $R$ — $\alpha \gt \rho/R$ — to keep the mismatch bounded *in principle*.
-A property of the architecture, not of the agent's current trajectory.
+The structural sense of persistence: whether the correction machinery has sufficient gain $\alpha$ relative to disturbance rate $\rho$ and recovery budget $R$ — $\alpha \gt \rho/R$ — to keep the mismatch bounded *in principle*. A property of the architecture, not of the agent's current trajectory.
 
-Stated in the persistence-condition result
-[`#result-persistence-condition`](../../01-aat-core/src/result-persistence-condition.md).
+Stated in the persistence-condition result [`#result-persistence-condition`](../../01-aat-core/src/result-persistence-condition.md).

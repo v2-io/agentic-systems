@@ -21,8 +21,6 @@ A `type: worked-example` segment walks through a complete instantiation of the t
 
 Worked examples typically do not carry a `## Findings` section — their contribution is pedagogical and validating rather than novel. They are the content that exhausts itself in demonstrating their parent result's instantiation. (FORMAT.md notes: "worked examples whose content is exhausted by the parent result they instantiate all typically lack a Findings section.")
 
-Named examples use paired vocabulary: a worked example's slug takes the form `#example-{domain}`
-(e.g., `#example-bandit`, `#example-kalman`), and the prose form is "worked example {domain}"
-(e.g., "worked example bandit").
+Named examples use paired vocabulary: a worked example's slug takes the form `#example-{domain}` (e.g., `#example-bandit`, `#example-kalman`), and the prose form is "worked example {domain}" (e.g., "worked example bandit").
 
 Defined in [`FORMAT.md`](../../FORMAT.md) §`type` — what kind of claim.

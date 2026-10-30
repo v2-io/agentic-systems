@@ -24,10 +24,7 @@ Two presentation forms are permitted:
 
 **Table form** — for richer landscapes where multiple aspects of the finding bear differently on different priors. Columns: ASF concern, prior-art language (with citation), relationship/positioning.
 
-Established relationship labels include: *formal antecedent*, *conceptual precursor*,
-*convergent independent*, *direct anticipation*, *partial anticipation*, *formalized by this finding*,
-*verified by this finding*, *contradicted by this finding*, *empirical instantiation supporting / against*,
-*adjacent literature*. The set is open-ended.
+Established relationship labels include: *formal antecedent*, *conceptual precursor*, *convergent independent*, *direct anticipation*, *partial anticipation*, *formalized by this finding*, *verified by this finding*, *contradicted by this finding*, *empirical instantiation supporting / against*, *adjacent literature*. The set is open-ended.
 
 The Related Work field is the "receipts" that back the Novelty Claim field. A claim of novelty without Related Work is ungrounded — it may be true, but it isn't shown. Publication dates matter: something published after the project's derivation date cannot be a precursor.
 

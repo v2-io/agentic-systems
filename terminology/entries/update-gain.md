@@ -16,10 +16,6 @@ aliases: []
 do_not_confuse: []
 ---
 
-The optimal weight applied to the mismatch signal during [epistrophe](epistrophe.md)
-— derived as the ratio of model uncertainty to observation uncertainty. High
-$\eta^\ast$ when the model is unsure relative to the evidence (trust reality);
-low when the model is confident relative to noisy evidence (trust the model).
+The optimal weight applied to the mismatch signal during [epistrophe](epistrophe.md) — derived as the ratio of model uncertainty to observation uncertainty. High $\eta^\ast$ when the model is unsure relative to the evidence (trust reality); low when the model is confident relative to noisy evidence (trust the model).
 
-Source-of-truth at
-[`#emp-update-gain`](../../01-aat-core/src/emp-update-gain.md); recursive form at [`#deriv-recursive-update`](../../01-aat-core/src/deriv-recursive-update.md).
+Source-of-truth at [`#emp-update-gain`](../../01-aat-core/src/emp-update-gain.md); recursive form at [`#deriv-recursive-update`](../../01-aat-core/src/deriv-recursive-update.md).

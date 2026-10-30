@@ -20,11 +20,8 @@ The purposeful-side analog of adaptive tempo $\mathcal{T}$: the rate at which an
 
 $$\mathcal{T}_\Sigma = \sum_{(i,j) \in E} \nu_{ij} \cdot \eta_{\text{edge},ij} \cdot \iota_{ij}$$
 
-The $\iota_{ij}$ factor (from edge causal identifiability) is the key distinction from epistemic tempo: Regime A edges (genuine interventions, $\iota \approx 1$) contribute fully; Regime C edges (observation-only, $\iota \approx 0$) contribute essentially nothing.
-An agent *cannot improve the parts of its strategy that it cannot test interventionally*.
+The $\iota_{ij}$ factor (from edge causal identifiability) is the key distinction from epistemic tempo: Regime A edges (genuine interventions, $\iota \approx 1$) contribute fully; Regime C edges (observation-only, $\iota \approx 0$) contribute essentially nothing. An agent *cannot improve the parts of its strategy that it cannot test interventionally*.
 
-AND-chains cause **depth-gated attenuation**: downstream edge rates decay geometrically with depth as each edge is tested only when all upstream edges succeed. OR-nodes cause
-**exploration-gated allocation**: non-greedy arms are tested at a rate proportional to the exploration fraction. Both patterns produce the same lesson — aggregate $\mathcal T_\Sigma$
-overstates effective strategic adaptation when correction capacity is heterogeneous across edges. The persistence condition is bottleneck-limited by the weakest edge.
+AND-chains cause **depth-gated attenuation**: downstream edge rates decay geometrically with depth as each edge is tested only when all upstream edges succeed. OR-nodes cause **exploration-gated allocation**: non-greedy arms are tested at a rate proportional to the exploration fraction. Both patterns produce the same lesson — aggregate $\mathcal T_\Sigma$ overstates effective strategic adaptation when correction capacity is heterogeneous across edges. The persistence condition is bottleneck-limited by the weakest edge.
 
 Defined in [`#def-strategic-tempo`](../../01-aat-core/src/def-strategic-tempo.md).

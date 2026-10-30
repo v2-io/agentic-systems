@@ -15,8 +15,6 @@ aliases: []
 do_not_confuse: []
 ---
 
-One complete traversal of the [loop](loop.md): prolepsis → aisthesis → aporia
-→ epistrophe → praxis. The cycle is the unit of adaptive work — the smallest event in which the model can be updated and an action chosen on its basis.
+One complete traversal of the [loop](loop.md): prolepsis → aisthesis → aporia → epistrophe → praxis. The cycle is the unit of adaptive work — the smallest event in which the model can be updated and an action chosen on its basis.
 
-See
-[`#scope-adaptive-system`](../../01-aat-core/src/scope-adaptive-system.md) for the cycle as the operational unit of an adaptive system.
+See [`#scope-adaptive-system`](../../01-aat-core/src/scope-adaptive-system.md) for the cycle as the operational unit of an adaptive system.

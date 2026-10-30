@@ -23,8 +23,7 @@ The AAT five-phase cycle (prolepsis → aisthesis → aporia → epistrophe → 
 1. **Irreversibility**: external actions modify $\Omega_t$ permanently and cannot be rolled back.
 2. **Accountability**: for ELIs, actions carry moral and relational weight.
 
-The agent should externalize only when the expected value of the intervention strictly exceeds the value of continued internal deliberation. Agent architectures that enforce a strict
-"Prompt → Response" loop systematically invert this posture, treating visible output as the baseline rather than the exception.
+The agent should externalize only when the expected value of the intervention strictly exceeds the value of continued internal deliberation. Agent architectures that enforce a strict "Prompt → Response" loop systematically invert this posture, treating visible output as the baseline rather than the exception.
 
 "Doing nothing visible" is not a failure of the agent; it is the mathematical baseline of a stable, persisting intelligence. Output is the exception, not the rule.
 

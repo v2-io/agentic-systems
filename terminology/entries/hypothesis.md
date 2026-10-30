@@ -21,7 +21,6 @@ A `type: hypothesis` segment states a claim that is structurally motivated by th
 
 Equation-level tags use `*[Hypothesis]*` to mark hypothesis equations inline.
 
-The segment's `status:` field for a hypothesis is typically `conditional` or `heuristic` rather than `exact` — the structural motivation does not constitute a derivation. A hypothesis that has been validated becomes `empirical`; a hypothesis whose formal derivation is completed becomes
-`derived` or `result` (and the `type:` field changes accordingly).
+The segment's `status:` field for a hypothesis is typically `conditional` or `heuristic` rather than `exact` — the structural motivation does not constitute a derivation. A hypothesis that has been validated becomes `empirical`; a hypothesis whose formal derivation is completed becomes `derived` or `result` (and the `type:` field changes accordingly).
 
 Defined in [`FORMAT.md`](../../FORMAT.md) §`type` — what kind of claim.

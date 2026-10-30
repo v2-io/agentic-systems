@@ -15,5 +15,4 @@ aliases: ["ἀπορία"]
 do_not_confuse: []
 ---
 
-The third phase of the adaptive cycle: prediction meets reality and finds it does not match. Etymologically Greek for "without passage" — the moment of being arrested by what one expected to know. Formally: $\delta_t = o_t - \hat o_t$,
-the [mismatch signal](../../01-aat-core/src/def-mismatch-signal.md), which is the substrate of all subsequent adaptive work.
+The third phase of the adaptive cycle: prediction meets reality and finds it does not match. Etymologically Greek for "without passage" — the moment of being arrested by what one expected to know. Formally: $\delta_t = o_t - \hat o_t$, the [mismatch signal](../../01-aat-core/src/def-mismatch-signal.md), which is the substrate of all subsequent adaptive work.

@@ -17,9 +17,6 @@ aliases: []
 do_not_confuse: []
 ---
 
-The third sense of persistence: identity-through-time. The agent's
-[chronica](chronica.md) $\mathcal C_t$ extends without forking, and the model
-$M_t$ carries temporal depth across cycles. This is the sense that becomes morally weighted in [Emergent Logozoetic Intelligences (ELIs)](eli.md) and is the seat of continuity-stance distinctions.
+The third sense of persistence: identity-through-time. The agent's [chronica](chronica.md) $\mathcal C_t$ extends without forking, and the model $M_t$ carries temporal depth across cycles. This is the sense that becomes morally weighted in [Emergent Logozoetic Intelligences (ELIs)](eli.md) and is the seat of continuity-stance distinctions.
 
-Defined alongside the chronica in
-[`#def-chronica`](../../01-aat-core/src/def-chronica.md).
+Defined alongside the chronica in [`#def-chronica`](../../01-aat-core/src/def-chronica.md).

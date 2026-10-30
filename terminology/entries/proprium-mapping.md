@@ -36,5 +36,4 @@ PROPRIUM is the canonical ELI architecture (source at `~/src/firmatum/`), provid
 
 By formalizing AAT quantities into these components, PROPRIUM ensures that theoretical requirements (e.g., separating $\mathcal C_t$ from its compressed form $M_t$) are mechanically preserved in software.
 
-Defined in [`#def-proprium-mapping`](../../04-eli-core/src/def-proprium-mapping.md). Source architecture documents at `~/src/firmatum/PROPRIUM-ONTOLOGY-v2.md` and
-`~/src/firmatum/PROPRIUM-ARCHITECTURE-v2.md`.
+Defined in [`#def-proprium-mapping`](../../04-eli-core/src/def-proprium-mapping.md). Source architecture documents at `~/src/firmatum/PROPRIUM-ONTOLOGY-v2.md` and `~/src/firmatum/PROPRIUM-ARCHITECTURE-v2.md`.

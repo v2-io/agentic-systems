@@ -21,7 +21,6 @@ The novelty posture is used in the Novelty Claim field when no direct anticipati
 
 Prose form: *"Claim novelty on..."* followed by what is being claimed as fresh. The "on" phrase names the domain or question.
 
-The novelty posture requires the most support from the Search Log and Related Work fields. A novelty claim under comprehensive search is a strong epistemic statement; under cursory search or intuition-only, it is an honest preliminary position that signals further search is warranted.
-The Search Log is the discipline that prevents the novelty posture from becoming hubris.
+The novelty posture requires the most support from the Search Log and Related Work fields. A novelty claim under comprehensive search is a strong epistemic statement; under cursory search or intuition-only, it is an honest preliminary position that signals further search is warranted. The Search Log is the discipline that prevents the novelty posture from becoming hubris.
 
 Defined in [`FORMAT.md`](../../FORMAT.md) §Findings — Novelty Claim.

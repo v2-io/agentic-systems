@@ -17,14 +17,10 @@ aliases: []
 do_not_confuse: [claims-verified, candidate]
 ---
 
-`stage: format-clean` indicates that the segment has passed Gate 3 (mechanical review): `md-press --math --check`
-passes (the gate since 2026-08-22; `bin/lint-md` is deprecated — see `doc/sop/git-hygiene.sop.md`), all `#slug-name` cross-references resolve to existing files, notation matches NOTATION.md,
-math renders correctly in GitHub and Obsidian, the document cadence matches the template, and equation-level tags are present and correct.
+`stage: format-clean` indicates that the segment has passed Gate 3 (mechanical review): `md-press --math --check` passes (the gate since 2026-08-22; `bin/lint-md` is deprecated — see `doc/sop/git-hygiene.sop.md`), all `#slug-name` cross-references resolve to existing files, notation matches NOTATION.md, math renders correctly in GitHub and Obsidian, the document cadence matches the template, and equation-level tags are present and correct.
 
-Mechanical review is intentionally separate from content review (Gate 2) — they require different cognitive modes. Gate 3 operates on a segment that is already known to be content-correct;
-it ensures that the format is also clean before the segment is considered a candidate.
+Mechanical review is intentionally separate from content review (Gate 2) — they require different cognitive modes. Gate 3 operates on a segment that is already known to be content-correct; it ensures that the format is also clean before the segment is considered a candidate.
 
-`format-clean` is the penultimate stage. The final gate (Gate 4, Working Notes disposition)
-advances the segment to `candidate`.
+`format-clean` is the penultimate stage. The final gate (Gate 4, Working Notes disposition) advances the segment to `candidate`.
 
 Defined in [`FORMAT.md`](../../FORMAT.md) §`stage` — development process state, and §Gate 3.

@@ -21,7 +21,6 @@ A `type: derived` segment states a logical consequence of prior claims. The clai
 
 The distinction between `derived` and `result` is one of documentation depth: a `derived` segment states that the claim follows from prior claims, while a `result` segment additionally contains a complete formal derivation (typically in a companion `derivation` segment) and is formally stated with full conditions. Short logical consequences that don't warrant their own derivation document are typed `derived`; major claims that anchor the theory are typed `result`.
 
-Equation-level tags on derived claims use `*[Derived (slug, from ...)]*` or
-`*[Derived (Conditional on ...)]*`.
+Equation-level tags on derived claims use `*[Derived (slug, from ...)]*` or `*[Derived (Conditional on ...)]*`.
 
 Defined in [`FORMAT.md`](../../FORMAT.md) §`type` — what kind of claim.

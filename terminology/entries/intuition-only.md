@@ -25,7 +25,6 @@ The `intuition-only` tag is not a demotion — it is valuable and explicitly per
 - Prevents the schema from forcing silence in cases where genuine search has not yet been done
 - An honest intuition entry beats no entry
 
-The key discipline: tagging as `intuition-only` makes the source explicit. An `intuition-only`
-entry paired with a `novelty` claim posture is honest about being a preliminary position that requires validation. If the intuition says "this is probably in Bellman 1957," that is exactly what the Search Log should say — with `intuition-only` as the tier, and the expectation that targeted or comprehensive search will follow to confirm or refute.
+The key discipline: tagging as `intuition-only` makes the source explicit. An `intuition-only` entry paired with a `novelty` claim posture is honest about being a preliminary position that requires validation. If the intuition says "this is probably in Bellman 1957," that is exactly what the Search Log should say — with `intuition-only` as the tier, and the expectation that targeted or comprehensive search will follow to confirm or refute.
 
 Defined in [`FORMAT.md`](../../FORMAT.md) §Findings — Field-by-field guidance — Search Log.
