@@ -1,0 +1,42 @@
+schema: vsect-event/0
+id: 4408f4588af43e5063a5bafd2566f22d1f2855d21ea353789b0dad53d706675f
+at: 2026-10-30T21:12:10Z
+store: asf
+act: rederive
+about: segment:deriv-persistence-cost
+actor:
+  name: Claude Opus 5.5 (C.1 integrator, A7/A10 lane)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: 62dea40056d00b6cc7a6f311ad831e0bf584f50a03a297f89fc934efdb24e885
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-mismatch-signal: a19745b33797b4786addc49b037e54795156dee55364ff3edc922e1eed8d1da9
+  segment:def-model-class-fitness: 80a2eb3fbf06b7ebb3ebdc642c79dc6883eb350ebafb68555ee3ea9c2505a25f
+  segment:def-model-sufficiency: cb0156177d2d2d215898316d7c7e1e6829188ccffc08bb3f458b93e9f5cd207f
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:der-gain-sector-bridge: ed274e6dec3ff688579f45f7b355827f1e845cd20ccced1e6188b97199adf635
+  segment:deriv-gain-sector: e9afd4473502797c53d06ddb8a340a3adc8ddcae7dcd0ef3e5c86a7a64118d39
+  segment:deriv-persistence-cost: 5fee0309c64d68f2e6f296e1fcb3d59f62d9d6035a55b938f9b1edb3bd0602db
+  segment:deriv-sector-condition: be5b8f4d0cf6f932e9fd5a455e6a4a2413bf581b38680908606b2934ae50ea3b
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 11e85702fb076cba51bab0990d192e1990325ceccd2ae7a29e76c400e2fb3947
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-persistence-condition: 9a9b8dd449b6bf1a9d19a7ce9a032f7dc9d8d2437261302592a41fe45bea63c6
+  segment:result-sector-condition-stability: 0cd95f849c0ee6f953ac1fbb5c590a47fe5581f9ad73ee7c5d1917f2df310b7e
+  segment:result-sector-persistence-template: f668640b9a850c617e61762d8e4538454059c2a71897a19ba534f30ca151124c
+  segment:scope-adaptive-system: 12ea0186e7a33e60ec52fade2a82c6955eba9631cec9eaf7034b588e4023ef4a
+committed: before
+criterion: The continuous-time limit of the scalar Gauss–Markov sequential RDF $\tfrac12\log(a^2 + W/D)$ is $\sigma^2/(2D) - \lambda$, and Kalman–Bucy's Duncan rate $P/(2\sigma_o^2)$ equals it at $D = P$ for every $\lambda$.
+effective-version: 5e2e5b8d8b1303b3d963753e1236b498a17d6534fb5c6e8f06241a60506d6d1e
+from: review:part-i-mismatch-lineage-integration#C5
+line: derivation
+outcome: confirmed
+recheck: Expansion $a^2 + W/D = 1 - 2\lambda\Delta + \sigma^2\Delta/D + O(\Delta^2)$; Riccati $\sigma^2 - 2\lambda P - P^2/\sigma_o^2 = 0$; numerically at $(\lambda, \sigma, \sigma_o) = (0, 1, 0.5), (0.3, 1, 0.5), (1, 2, 0.3)$ the discrete bound over $\Delta$ converges to the Duncan rate as $\Delta \to 0$; script `srdf_kb_check.py` in the account
+target-version: 5fee0309c64d68f2e6f296e1fcb3d59f62d9d6035a55b938f9b1edb3bd0602db
+version-from: git-revision

@@ -1,0 +1,33 @@
+schema: vsect-event/0
+id: 93bf14336e689e5876a8df1840f758bedd983c1d064dbfe3d7c818c82e37a0c6
+at: 2026-10-30T21:12:09Z
+store: asf
+act: run
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (C.1 integrator, A7/A10 lane)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: 62dea40056d00b6cc7a6f311ad831e0bf584f50a03a297f89fc934efdb24e885
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-mismatch-signal: a19745b33797b4786addc49b037e54795156dee55364ff3edc922e1eed8d1da9
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:deriv-sector-condition: be5b8f4d0cf6f932e9fd5a455e6a4a2413bf581b38680908606b2934ae50ea3b
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 12ea0186e7a33e60ec52fade2a82c6955eba9631cec9eaf7034b588e4023ef4a
+committed: before
+criterion: Model S steady state of a linear corrector at rate $\alpha$ with channel noise is $(\sigma_{\text{env}}^2 + \alpha^2\sigma_\nu^2)/(2\alpha)$, minimized at $\alpha = \sigma_{\text{env}}/\sigma_\nu$ with value $\sigma_{\text{env}}\sigma_\nu$ (the Kalman–Bucy error), not $\sigma_{\text{env}}^2/(2\alpha)$.
+effective-version: 75c8d15407f7f1e210d4aeb92b21229cb6533c95c18579633818f0c91c85b87e
+from: review:part-i-mismatch-lineage-integration#C2
+line: simulation
+outcome: confirmed
+recheck: Euler–Maruyama, $s = 1$, $o = 0.5$, $dt = 10^{-3}$, 200 paths of $4\times 10^5$ steps; script `kb_check.py` in the account
+target-version: be5b8f4d0cf6f932e9fd5a455e6a4a2413bf581b38680908606b2934ae50ea3b
+version-from: git-revision

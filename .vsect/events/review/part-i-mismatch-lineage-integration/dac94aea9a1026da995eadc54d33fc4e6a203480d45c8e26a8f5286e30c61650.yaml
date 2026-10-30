@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: dac94aea9a1026da995eadc54d33fc4e6a203480d45c8e26a8f5286e30c61650
+at: 2026-10-30T21:12:11Z
+store: asf
+act: take
+about: review:part-i-mismatch-lineage-integration
+actor:
+  name: c1-mismatch-lineage-integrator
+  role: integrator
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+- C4:check
+- C5:check
+- C6:check
+- C7:check
+- C8:check
+review: reviews/part-i-mismatch-lineage-integration.md
+review-version: 3d9e04cf3835dd4137f685621a603569e704a0f15218c224375233379df6d8cb
