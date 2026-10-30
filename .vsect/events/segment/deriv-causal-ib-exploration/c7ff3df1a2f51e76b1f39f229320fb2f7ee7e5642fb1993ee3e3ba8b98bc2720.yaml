@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: c7ff3df1a2f51e76b1f39f229320fb2f7ee7e5642fb1993ee3e3ba8b98bc2720
+at: 2026-10-30T19:42:25Z
+store: asf
+act: revise
+about: segment:deriv-causal-ib-exploration
+atom: c1fcdcf3ee49c2e68c832f0162abbc0a6e7d82238593bb2a62af455ae012daba
+actor:
+  name: hooks-builder
+  session: https://claude.ai/code/session_013g85SGMtMDsCYM9fXWwTEp
+  role: integrator
+normalizer: vsect-norm/0
+change: unclassified
+declarations:
+  depends:
+  - disc-ciy-unified-objective
+  - form-information-bottleneck
+  - def-pearl-causal-hierarchy
+  - result-persistence-condition
+  - def-mismatch-signal
+  stage: draft
+  status: conditional
+  type: derivation
+from-version: da0fe226cfa8e188178ce487f99d146a3b220f20daf431a675a6eb6eec04f061
+own-version: 72419937bceab095bba2a870fde15859ec24e4e82fa1ac96419d62aee16fc940
+record: 01-aat-core/src/deriv-causal-ib-exploration.md

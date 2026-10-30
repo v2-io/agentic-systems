@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 63d62f11331ac2fcd7e75e504d0f80f7a84111e4e4b9d421644c6480c81af16e
+at: 2026-10-30T19:42:25Z
+store: asf
+act: revise
+about: segment:deriv-observation-ambiguity-bias-bound
+atom: 64fd3dcb30e27a5907933ad8f3d133cf9a43b1859788b5b49ce3e44032540b83
+actor:
+  name: hooks-builder
+  session: https://claude.ai/code/session_013g85SGMtMDsCYM9fXWwTEp
+  role: integrator
+normalizer: vsect-norm/0
+change: unclassified
+declarations:
+  depends:
+  - scope-agent-identity
+  - disc-additive-coordinate-forcing
+  - der-directed-separation
+  - form-information-bottleneck
+  - disc-compression-operations
+  stage: draft
+  status: conditional
+  type: derivation
+from-version: 325b61c485dab7685fe82c9826557289da328fbc842fba8908cda8008417a736
+own-version: 242e7bcf27a2ee5d997e3ec48df6b311d4075dcb01553f0af660eb97be0aaea8
+record: 01-aat-core/src/deriv-observation-ambiguity-bias-bound.md

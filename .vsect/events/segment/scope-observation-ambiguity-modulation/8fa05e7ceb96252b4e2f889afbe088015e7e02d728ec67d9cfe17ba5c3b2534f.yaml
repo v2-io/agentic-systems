@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 8fa05e7ceb96252b4e2f889afbe088015e7e02d728ec67d9cfe17ba5c3b2534f
+at: 2026-10-30T19:42:25Z
+store: asf
+act: revise
+about: segment:scope-observation-ambiguity-modulation
+atom: c8e74a4e84205fe5e8b2114f66024843a5bc542b6f1c10534a0405ceed6324d7
+actor:
+  name: hooks-builder
+  session: https://claude.ai/code/session_013g85SGMtMDsCYM9fXWwTEp
+  role: integrator
+normalizer: vsect-norm/0
+change: unclassified
+declarations:
+  depends:
+  - scope-logogenic-agent
+  - def-coupled-update-dynamics
+  - der-directed-separation
+  - result-section-ii-survival
+  - def-mismatch-signal
+  stage: draft
+  status: conditional
+  type: scope
+from-version: 784e179d9f4a2e3297f393fc6d6b711b6588d12d018f4414ed77bce28ad35951
+own-version: 04da935a9fb4618e861ffc54a42a9354fec85419c4b428b8c71ebf70d27716c1
+record: 03-llm-core/src/scope-observation-ambiguity-modulation.md

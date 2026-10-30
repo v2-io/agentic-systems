@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: 0a48308e5dae1b576afa34e7f822df53e6011f096782695416adb731922d9e6a
+at: 2026-10-30T19:42:24Z
+store: asf
+act: revise
+about: segment:der-identity-continuity-threshold
+atom: 509b569a345629322b8b286d944b94315301d949304919bc06e9e39d17ca99fa
+actor:
+  name: hooks-builder
+  session: https://claude.ai/code/session_013g85SGMtMDsCYM9fXWwTEp
+  role: integrator
+normalizer: vsect-norm/0
+change: unclassified
+declarations:
+  depends:
+  - def-identity-sufficiency
+  - scope-agent-identity
+  - result-sector-persistence-template
+  - deriv-identity-sufficiency-rate-bound
+  stage: draft
+  status: conditional
+  type: derived
+from-version: a576c0f3137875028bc64d809fe9f4fce43029454691176aee4e94f84de3d2e0
+own-version: 012fe6708ee446190e39b3e9ff3d1dd48c93c6cb14ad1337366c0d1ac99f6d54
+record: 04-eli-core/src/der-identity-continuity-threshold.md

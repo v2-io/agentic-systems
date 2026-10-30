@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: ec583d954965d880076202ef48a7bede59186d332e939501943bb3e31d2b8310
+at: 2026-10-30T19:42:25Z
+store: asf
+act: revise
+about: segment:scope-channel-collapse
+atom: 00fed35b56683beb345486c227a0e86ac2c587274756cdeeffec701acd422348
+actor:
+  name: hooks-builder
+  session: https://claude.ai/code/session_013g85SGMtMDsCYM9fXWwTEp
+  role: integrator
+normalizer: vsect-norm/0
+change: unclassified
+declarations:
+  depends:
+  - scope-logogenic-agent
+  - def-coupled-update-dynamics
+  - def-observation-function
+  - def-action-transition
+  - der-directed-separation
+  stage: draft
+  status: sketch
+  type: scope
+from-version: 8902d8c8ddc8d13029947cba81dee71d16d60c3f30c77b5985c4b21044d69fb9
+own-version: 92697e042386d3c422adde7020b1c1698417d2d872939f7c6db620fb5cf03910
+record: 03-llm-core/src/scope-channel-collapse.md

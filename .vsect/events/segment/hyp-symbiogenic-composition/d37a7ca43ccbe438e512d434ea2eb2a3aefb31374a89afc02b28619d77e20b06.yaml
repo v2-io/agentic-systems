@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: d37a7ca43ccbe438e512d434ea2eb2a3aefb31374a89afc02b28619d77e20b06
+at: 2026-10-30T19:42:25Z
+store: asf
+act: revise
+about: segment:hyp-symbiogenic-composition
+atom: 76a1de99d0d235c2532d329eb4331e3df1c9b81a2e9877eb58cc37da3c22f75a
+actor:
+  name: hooks-builder
+  session: https://claude.ai/code/session_013g85SGMtMDsCYM9fXWwTEp
+  role: integrator
+normalizer: vsect-norm/0
+change: unclassified
+declarations:
+  depends:
+  - scope-composite-agent
+  - form-objective-functional
+  - def-strategy-dimension
+  - form-structural-change-as-parametric-limit
+  stage: draft
+  status: robust-qualitative
+  type: hypothesis
+from-version: 1f1a9541b8da7ebec32ba1eeb3ff4c40799662a533645785f86e9e6a63a896d3
+own-version: ccec976d9c2da9ba126c20ed91d98dae0e2b3e895df51c7f191cc35650511a44
+record: 01-aat-core/src/hyp-symbiogenic-composition.md
