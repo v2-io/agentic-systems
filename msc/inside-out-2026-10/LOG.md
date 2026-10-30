@@ -30,4 +30,18 @@
 - **Decision briefs of 2026-07-15** (`msc/decision-briefs-2026-07-15.md`, read whole). With Joseph's gates lifted, these are this effort's to decide on the merits. One exception: A7, splitting 04-eli-core into a private repo, is a strategic-exposure call that stays his. Decided now: **`core.hooksPath` unset.** It pointed at `~/src/agentic-systems/.git/hooks`, which no longer exists, so every git hook was silently inert. No real hooks existed anywhere, so nothing was lost. The entry is removed from `JOSEPH-TODO.md`. Whether to add a pre-push `bin/refresh-all --check` hook is left for the tooling phase. The rest wait for the owner review, so they're decided in light of what the theory is for: F72, A1, A4, A6, the Findings/naming coupling, SP-30, C5, the orderings, and the names.
 - **Queued: F72 independent re-derivation** of `#deriv-strategic-persistence-hard-ceiling` against `spikes/spike-strategic-persistence-hard-ceiling-convention-2026-05-31.md`. The segment itself says it is "owed before any further status elevation." It gets a bare verifier brief, written to `spikes/…-verify-1.md`. The launch was refused at 11:5x MDT because the harness's 20-concurrent-subagent limit was full: the three peers are running their own subagents. It launches when slots free up.
 - **~12:05 MDT: `INTENT.md` created as the central actuator** at Joseph's direction. He gave his reason as "the more clear you are on the high-level intent and sub-items … the more things will naturally flow in the right directions and the right things will bubble up." It holds the top intent, five objectives (O1–O5) with key results, what currently feeds each, and a "Who is on what" table. Joseph's rules, now standings in `agents.sop.md`: work that feeds no KR is a red flag, and every agent at any depth, and any successor after compaction, knows its exact KR. The three peers were told their KRs (1.1, 3.1, 3.2), invited to ask mid-run via SendMessage to `main` (the pattern from `~/src/arch/SUBAGENT-INSTRUCTIONS-notes.md`, read whole), and asked to pass their KR to their own subagents.
+- **~12:30 MDT: the internal-surfaces map (KR3.2) landed.** The lead read `internal-surfaces/00-cross-surface-map.md` whole; the six per-surface maps are for integrators, to be read per slug when landing.
+  - **Re-verified by the lead:** 246 real segments, not 290 (44 legacy `old-*` files under `src/`). About 377 of the commits since 08-24 touch only the glyph study. The Working Notes counts stand (167 + 28 + 21 + 19 = 235 segments; the legacy files carry none).
+  - **Adopted:** all eight of its INTENT proposals (see INTENT change notes).
+  - **Its O1 material, held as candidates until the owner review lands:**
+    - belief and goal, with the cost of separating them;
+    - SP-30 and the standpoint gap;
+    - the strategy DAG, proven sufficient, not necessary, despite its "uniqueness" slug;
+    - the no-go re-carve;
+    - Vol 4's spine sitting in Vol 1;
+    - no single answer to "what does this volume prove".
+  - **Its system finding:** spikes and audits produce verified, ready-to-land work, and the integration stage never runs. "Routed" meant a destination was written down, not that it exists.
+  - **Two calls it says stay Joseph's even today.** Both stay with him: the first is personal and private material, the second is wording the plan reserves to his voice.
+    - `msc/joseph-working-notes.md` is gitignored, yet canon and the 03/04 OUTLINEs cite it. Commit it, move it, or drop the citations?
+    - The honest-activation spike reserves two wording choices for him.
 - **First system note**: `system/01-epistemic-machinery-in-place.md`, on the meta layer, hypotheses H-a..H-d.

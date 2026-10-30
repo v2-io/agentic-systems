@@ -85,7 +85,7 @@ These are counts, not judgments. Size says nothing about value.
 
 | Surface | Measured | How counted |
 |---|---|---|
-| Segments | 290: 01-aat 173 · 02-tst 72 · 03-llm 23 · 04-eli 22 | `ls */src/*.md` |
+| Segments | **246**: 01-aat 172 · 02-tst 29 · 03-llm 23 · 04-eli 22. A further 44 legacy `old-*` files sit under `src/` in no OUTLINE (43 of them `02-tst-core/src/old-tst-*`). The first count, 290, included them; corrected by the internal-surfaces map, and re-verified by the lead. | `ls */src/*.md` excluding `old-*` |
 | Working Notes | 235 segments carry a `## Working Notes` section, about 5,500 lines in all; 01-aat has 4,737 lines across 167 segments | lines between `## Working Notes` and the next `## ` heading |
 | `stage:` | 203 draft · 23 deps-verified · 18 claims-verified · 2 exploratory | frontmatter grep, all components |
 | `status:` | 81 conditional · 69 discussion-grade · 27 axiomatic · 26 exact · 23 robust-qualitative · 12 sketch · 7 empirical · 1 heuristic | frontmatter grep, all components |
@@ -94,4 +94,4 @@ These are counts, not judgments. Size says nothing about value.
 | Live spike dirs | 16 dirs plus loose spike files, about 20k lines in the dirs | `find spikes/<dir> -name '*.md'` |
 | Trackers | about 2.4k lines across TODO, PROPOSALS, TST-IDEAS, FORMAT-TODO, BIBLIOGRAPHY-TODO, TERMINOLOGY-TODO, INTEGRATION-CLEANUP-TODO, TODO-big-picture, JOSEPH-TODO and `spikes/PROPOSED*` | `wc -l` |
 | `msc/` | 326 markdown files, about 22k lines | `find msc -name '*.md'` |
-| Theory-body motion | 4 commits touch the four `*-core/` trees after 2026-08-24, out of 436 repo commits in that span | `git log --since=2026-08-24 -- <trees>` |
+| Theory-body motion | 4 commits touch the four `*-core/` trees after 2026-08-24, out of 436 repo commits in that span. About 377 of those 436 touch only the halted glyph-perception study in `empirica/`; no Working Notes line has changed since 2026-08-24 (internal-surfaces map; split re-verified by the lead) | `git log --since=2026-08-24 -- <trees>` |
