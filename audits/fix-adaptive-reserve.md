@@ -228,7 +228,7 @@ and in the body's own Working Notes at `:293`:
 
 **The two verifiable sources, verbatim.** `audits/AUDIT-WORKING-193847/.integrated/21-result-sector-condition-stability.md:27`:
 
-> **8. What am I now curious about?**
+> **8. What am I now curious about?**  
 > The "adaptive reserve" $\Delta\rho^\ast = \alpha R - \rho$. In an organizational setting, is this "reserve" measurable? Is it the amount of slack a team has before they burn out (structural breakdown)? How does an agent know its own reserve without intentionally pushing itself to the limit ($R$)?
 
 `audits/AUDIT-WORKING-829314/.integrated/22-result-sector-condition-stability.md:17`:
@@ -239,7 +239,7 @@ and in the body's own Working Notes at `:293`:
 
 **A provenance defect in the gold line itself, worth correcting while the segment is open.** "Asked independently by three substrates" is not supported by what I could verify. (i) 193847 and 829314 are *both* attributed to Gemini elsewhere in the same and adjacent gold blocks (`result-sector-condition-stability.md:75` "Gemini, AUDIT-WORKING-193847"; `der-interaction-channel-classification.md:195` "(Gemini, AUDIT-WORKING-193847; Gemini, AUDIT-WORKING-829314; Gemini, AUDIT-WORKING-849201)"), so the verifiable count is **one substrate, two audit dirs**, not three substrates. (ii) The gold attributes the third instance to "Claude, AUDIT-WORKING-849201," but 849201 is attributed to Gemini everywhere else I checked, and I could not find the question in that dir: its reflection on this very segment (`audits/AUDIT-WORKING-849201/.integrated/25-result-sector-condition-stability.md:24–25`) asks something else entirely —
 
-> **8. What am I now curious about?**
+> **8. What am I now curious about?**  
 > I am curious about the `#der-gain-sector-bridge` theorem mentioned in the text, which apparently proves $\alpha = \eta^\ast \cdot c_{\min}$. …
 
 and `grep -i "inside|measur|estimat|know its|reserve"` over 849201's persistence-condition and sector-persistence-template reflections returned nothing. **I did not exhaustively read all of AUDIT-WORKING-849201**, so I state this as "not found where it should be," not "does not exist." The practical consequence either way: the convergence-strength of the open question is currently *overstated in canon*, and the honest version — one substrate, twice, plus an unlocated third — is still enough to matter, because the *reason* both gave is structurally correct.

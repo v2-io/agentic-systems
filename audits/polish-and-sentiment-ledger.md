@@ -1,36 +1,14 @@
 # Polish & Sentiment Ledger
 
-The durable, low-ceremony home for audit findings that are **real signal
-but not defects and not architectural moves**: the "this is good — here's
-what would make it better" register (Gemini especially), qualitative
-sentiment about what reads well or confuses, considered-and-declined ideas
-(kept *with the reason* so they aren't silently re-dropped), and
-research-seeds too soft for `PROPOSALS.md`'s schema but too substantive to
-lose.
+The durable, low-ceremony home for audit findings that are **real signal but not defects and not architectural moves**: the "this is good — here's what would make it better" register (Gemini especially), qualitative sentiment about what reads well or confuses, considered-and-declined ideas (kept *with the reason* so they aren't silently re-dropped), and research-seeds too soft for `PROPOSALS.md`'s schema but too substantive to lose.
 
-Joseph's standing instruction (2026-05-15): *"the last 5% of polish
-provides 50–90% of the usability-gap coverage."* These have historically
-been discarded by agents triaging for "the stuff I really need to fix."
-They are first-class here. An audit can be retired as **fully accounted
-for** only once its soft findings are mirrored here (or routed onward);
-nothing is lost, and `TODO.md` is kept from becoming the sink.
+Joseph's standing instruction (2026-05-15): *"the last 5% of polish provides 50–90% of the usability-gap coverage."* These have historically been discarded by agents triaging for "the stuff I really need to fix." They are first-class here. An audit can be retired as **fully accounted for** only once its soft findings are mirrored here (or routed onward); nothing is lost, and `TODO.md` is kept from becoming the sink.
 
-Graduation rule: a research-seed that matures into a concrete structural
-move **graduates to `PROPOSALS.md`** (and its row here is marked
-`→ SP-NN`). A polish nudge that gets applied is marked `applied (commit)`.
-A nudge superseded by later iteration is marked `superseded-by` — a real
-status distinct from open and from cleanly-closed (the diagnostic the
-pilot surfaced: closed-then-iterated-past must not read as "still open").
+Graduation rule: a research-seed that matures into a concrete structural move **graduates to `PROPOSALS.md`** (and its row here is marked `→ SP-NN`). A polish nudge that gets applied is marked `applied (commit)`. A nudge superseded by later iteration is marked `superseded-by` — a real status distinct from open and from cleanly-closed (the diagnostic the pilot surfaced: closed-then-iterated-past must not read as "still open").
 
-**Bands:** `polish` (small usability/clarity nudges) · `sentiment`
-(qualitative reader experience — calibration signal, not action) ·
-`considered-declined` (idea weighed and not taken — the reason is the
-payload) · `research-seed` (hypothesis-grade direction; may graduate to
-PROPOSALS).
+**Bands:** `polish` (small usability/clarity nudges) · `sentiment` (qualitative reader experience — calibration signal, not action) · `considered-declined` (idea weighed and not taken — the reason is the payload) · `research-seed` (hypothesis-grade direction; may graduate to PROPOSALS).
 
-**Status vocabulary:** `open` · `applied` · `→ SP-NN` (graduated to
-PROPOSALS) · `→ TODO` · `superseded-by <what>` · `noted` (sentiment;
-no action by design).
+**Status vocabulary:** `open` · `applied` · `→ SP-NN` (graduated to PROPOSALS) · `→ TODO` · `superseded-by <what>` · `noted` (sentiment; no action by design).
 
 | # | Band | Finding (attributed) | Source audit | Status |
 |---|------|----------------------|--------------|--------|

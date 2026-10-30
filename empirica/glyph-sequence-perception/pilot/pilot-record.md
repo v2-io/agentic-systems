@@ -1,6 +1,6 @@
 # Monotonic-magnitude unicode sequences — perception survey (Fable, 2026-08-25)
 
-Append-only. Format per entry:
+Append-only. Format per entry:  
 `SEQUENCE` — slope arrow (→ = left-to-right increasing as written), strength (very strong / strong / moderate), what "more" is, and whether the feel is glyph-visual, semantic, or both.
 
 Strength = my confidence that a fresh agent doing pairwise "which is more?" comparisons would recover this exact order.
@@ -436,8 +436,7 @@ General law the family teaches: **monotonicity dies where an orthogonal style ax
 
 ## EMPIRICAL PROBE (2026-08-25, with Joseph mid-session)
 
-Testing recoverability + immediacy on local models (`probe.py`, `analyze.py`, results-*.jsonl here).
-Design decisions worth remembering:
+Testing recoverability + immediacy on local models (`probe.py`, `analyze.py`, results-*.jsonl here). Design decisions worth remembering:
 - Wall-clock latency is NOT a valid immediacy measure for transformers (constant compute per token); immediacy is proxied by (a) forced-single-symbol "instinct" accuracy, (b) the think-minus-instinct accuracy gap (= decode dependence), (c) resample consistency at temperature.
 - Left/right randomized so a side-biased model scores 50%; side bias reported.
 - Scoring at PAIR level (majority over 3 samples; resamples aren't independent), Wilson 95% CIs; per-sequence n=6 pairs is pilot-grade — family-level pooling carries inference; per-sequence defensibility needs ~30-40 pairs.
@@ -454,8 +453,7 @@ Overall 172/189 = 91%. Family: denoted 100%, size 100%, count 98%, fill 97%, ang
 - valence 33%: judges consistently read 😭 > 😄 etc. — they took "more" as INTENSITY of emotion, I recorded it as positive-affect. My axis choice was the arbitrary one; the sequence is monotone under either reading but the readings point opposite ways at the sad end. Real finding: valence ladders are strong but AXIS-AMBIGUOUS.
 - heat: 🟧 > 🟥 once — plausibly "orange flame hotter than red" folk-physics vs my heatmap convention.
 - ䷁ > ䷀: all-yin vs all-yang — at the extremes "fullness" is symmetric (six broken lines are ALSO a complete pattern); the fill reading needs the middle rungs to disambiguate the ends.
-- ⚝ > ☆, ↓ > ↗ (down as "more slope magnitude"?), ג > ו (gematria noise).
-Ceiling caveat: Sonnet saturates at gap-level n=6; discriminating rung-spacing at this tier needs adjacent-gap-only batteries.
+- ⚝ > ☆, ↓ > ↗ (down as "more slope magnitude"?), ג > ו (gematria noise). Ceiling caveat: Sonnet saturates at gap-level n=6; discriminating rung-spacing at this tier needs adjacent-gap-only batteries.
 
 ## RESULTS — full empirical picture (all batteries in)
 
@@ -574,8 +572,7 @@ Candidates coined on naming the family:
 - `_₋-⁻¯` — a bare stroke rising through the line box (5 rungs of pure vertical position); abstract cousin of tone bars; **strong**.
 - `─╱│` — rotation dial 0°→45°→90°; clock-hand mechanics without the clock.
 - `<(|` — curvature relaxation: point→arc→straight; `|(<` sharpening twin.
-- `‿⌣⌄∨`-family — opening-angle morphs.
-Distinct percept class: trajectory (mentally animating the deformation) vs quantity (fill/count/size) vs decode (semantic). Open empirical questions flagged: do morphs survive the ⟂ gate for fresh judges (is the trajectory felt or constructed?), and do they exist at all at the 3B floor (does a small model animate?). Natural next battery.
+- `‿⌣⌄∨`-family — opening-angle morphs. Distinct percept class: trajectory (mentally animating the deformation) vs quantity (fill/count/size) vs decode (semantic). Open empirical questions flagged: do morphs survive the ⟂ gate for fresh judges (is the trajectory felt or constructed?), and do they exist at all at the 3B floor (does a small model animate?). Natural next battery.
 
 ## RESULTS — morph-ladder probe (8 fresh judges, both orders, ⟂ available)
 

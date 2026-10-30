@@ -1,6 +1,5 @@
 # Simulation Variant: Causal-IB Exploration vs Survival
-**Date:** 2026-04-25
-**Related Segment:** `#deriv-causal-ib-exploration`
+**Date:** 2026-04-25 **Related Segment:** `#deriv-causal-ib-exploration`  
 **Code:** `variant_causal_ib.py`
 
 ## Setup
