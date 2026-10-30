@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0e21cc9dd4f472456439efe2c11251cf09e592152995a6c95a15cd3aa7c348bb
+at: 2026-10-30T22:06:07Z
+store: asf
+act: revise
+about: segment:def-observation-function
+actor:
+  name: Claude Opus 5.5 (A.1 check-4 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+own-version: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+record: 01-aat-core/src/def-observation-function.md

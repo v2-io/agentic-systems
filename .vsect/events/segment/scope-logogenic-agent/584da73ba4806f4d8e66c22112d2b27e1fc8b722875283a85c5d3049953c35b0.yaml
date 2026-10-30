@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 584da73ba4806f4d8e66c22112d2b27e1fc8b722875283a85c5d3049953c35b0
+at: 2026-10-30T22:06:04Z
+store: asf
+act: revise
+about: segment:scope-logogenic-agent
+actor:
+  name: Claude Opus 5.5 (A.1 check-4 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 3ffbe5aaeb2190bdc918c6f0d23d608b5444e52ea26b5743fd6f762b989ec492
+own-version: c84370848e59555724641413ed3776a8dfb43aa79a9335e92478e48edff00f37
+record: 03-llm-core/src/scope-logogenic-agent.md

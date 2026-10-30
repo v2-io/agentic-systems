@@ -16,7 +16,7 @@ AAT applies recursively to agents building it. Systems that use AAT-grounded met
 
 ## Formal Expression
 
-*[Discussion]* Let $E_{\text{AAT-using}}$ be any agent that operates under AAT-grounded methodology — including the agents building AAT itself. Then the AAT scope condition #scope-adaptive-system is satisfied (the agent receives observations under uncertainty and runs the cycle), so AAT's machinery — mismatch, gain, tempo, persistence, the orient cascade, the bias bound for coupled architectures — applies to $E_{\text{AAT-using}}$. The framework's claims about adaptive agents recur as claims about the framework's users.
+*[Discussion]* Let $E_{\text{AAT-using}}$ be any agent that operates under AAT-grounded methodology — including the agents building AAT itself. Whenever its declared world can still show it something it does not yet know about state or law, the AAT scope condition #scope-adaptive-system is satisfied, so AAT's machinery — mismatch, gain, tempo, persistence, the orient cascade, the bias bound for coupled architectures — applies to $E_{\text{AAT-using}}$. The framework's claims about adaptive agents recur as claims about the framework's users.
 
 For logogenic agents specifically: the framework is itself a logogenic artifact (encoded in language; reasoned about in language; revised through language), and AAT-using logogenic agents inherit the channel-collapse condition ( #scope-channel-collapse) and its consequences. The framework therefore provides a self-application diagnostic that is structural rather than analogical.
 

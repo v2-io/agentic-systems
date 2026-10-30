@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: d057cc619a03d0edc70ccc69eb84a98d4adb01d7a784071cd4be7d6ff3060cab
+at: 2026-10-30T22:06:10Z
+store: asf
+act: revise
+about: segment:example-bandit
+actor:
+  name: Claude Opus 5.5 (A.1 check-4 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 90a5eaddd4bde5dd3d97dc3dc3c0319bc1823bf4ff55a84fe42413b89bd721b6
+own-version: 0472a97a8354635c5be2c0c8b6d208c95106a22b7d65fe6bb535d6e7f8cc4b25
+record: 01-aat-core/src/example-bandit.md

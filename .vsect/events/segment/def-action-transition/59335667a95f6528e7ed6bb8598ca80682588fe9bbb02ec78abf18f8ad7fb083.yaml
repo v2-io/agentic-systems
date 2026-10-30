@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 59335667a95f6528e7ed6bb8598ca80682588fe9bbb02ec78abf18f8ad7fb083
+at: 2026-10-30T22:06:06Z
+store: asf
+act: revise
+about: segment:def-action-transition
+actor:
+  name: Claude Opus 5.5 (A.1 check-4 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+own-version: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+record: 01-aat-core/src/def-action-transition.md

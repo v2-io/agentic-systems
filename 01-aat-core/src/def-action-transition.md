@@ -9,7 +9,7 @@ stage: deps-verified
 
 # Definition: Action and Transition
 
-The action channel is now formalized. The agent has an **action space** $\mathcal{A}$, and actions affect the environment through a possibly-stochastic **transition function** $T$: the next environment state is drawn from $T(\cdot \mid \Omega_t, a_t)$. Deterministic transitions are the special case where $T$ concentrates all mass on a single successor; stochasticity is permitted but not required. The agent may not know $T$: whatever of it the analysis leaves open is the transition part $\theta_T$ of the environment's law ( #scope-adaptive-system). Together with the observation channel ( #def-observation-function), this completes the agent-environment loop: environment $\to$ observation $\to$ agent $\to$ action $\to$ next environment.
+The action channel is now formalized. The agent has an **action space** $\mathcal{A}$, and actions affect the environment through a possibly-stochastic **transition function** $T$: the next environment state is drawn from $T(\cdot \mid \Omega_t, a_t)$. Deterministic transitions are the special case where $T$ concentrates all mass on a single successor; stochasticity is permitted but not required. The agent may not know $T$. $T$ is the transition part $\theta_T$ of the environment's law, and whatever of it the agent was not built knowing is random under the reference measure of #scope-adaptive-system, whoever else may know it. Together with the observation channel ( #def-observation-function), this completes the agent-environment loop: environment $\to$ observation $\to$ agent $\to$ action $\to$ next environment.
 
 Not knowing $T$ is one of two ways the loop can leave the agent something to learn; not knowing the state is the other. A Kalman filter knows its transition law exactly and still has a hidden state to track, and a reinforcement learner that reads its state exactly still has a transition law to learn. Each kind of knowledge removes one kind of work: a known state leaves nothing to filter, a known law leaves nothing to learn, and only the two together leave nothing to adapt to ( #scope-adaptive-system).
 
@@ -30,7 +30,7 @@ where:
 
 *[Definition (transition opacity)]*
 
-The agent may not know $T$ exactly. The unknown content is the transition component $\theta_T$ of the environment's law, random under the modeler's reference measure ( #scope-adaptive-system). Transition opacity is not required of every system in scope; the scope requires that the state or the law, or both, leave something for the world to reveal.
+The agent may not know $T$ exactly. $T$ is the transition component $\theta_T$ of the environment's law, and whatever of it the agent was not built knowing is random under the reference measure $\pi_0$ of #scope-adaptive-system, whose support only the agent's design-time knowledge cuts down. Transition opacity is not required of every system in scope; the scope requires that the state or the law, or both, leave something for the world to reveal.
 
 ## Epistemic Status
 
