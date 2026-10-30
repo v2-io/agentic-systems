@@ -1,0 +1,30 @@
+schema: vsect-event/0
+id: 5bcf7bfd6953ebeb59bde3bcc0a630af2a4d74b1184c1490546b051ae120c5c0
+at: 2026-10-30T23:02:13Z
+store: asf
+act: rederive
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 fifth reader, bare brief)
+  role: independent adversarial checker
+  read:
+  - segment:scope-adaptive-system
+  - segment:def-chronica
+  - segment:def-observation-function
+  - segment:def-action-transition
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:scope-adaptive-system: 48dd5554d1f66ba02af228fcb9593f6b9191852444272b4cb48458a3acae75de
+committed: after
+criterion: 'Cold-reader standard-RL check, item (c): in at every finite $t$ by strict concavity; $+\infty$ under recurrence; every pair qualifies under full-support rows; the deterministic-successor exit is pointwise; one-step decay like $(K-1)/(2n)$. And as an RL reader brings it: with reward drawn into the observed state, and with no prior (any full-support $\pi_0$, by (h′)), the learner is still in, and a bandit is in on its reward law alone'
+effective-version: 6ab3dafcd40fb10459dd84544c2775ef9e53677dffeafc42ef72e8bb7a8b9af1
+from: review:scope-adaptive-system-check-6#C3
+line: derivation
+outcome: confirmed
+recheck: Dirichlet one-step information $H(\bar p) - \sum_i \bar p_i(\psi(\alpha_0+1) - \psi(\alpha_i+1))$ against $(K-1)/(2n)$ at $K = 3$, $n = 30, 300, 3000$; graph-of-the-limit argument for $+\infty$
+target-version: 48dd5554d1f66ba02af228fcb9593f6b9191852444272b4cb48458a3acae75de
+version-from: git-revision

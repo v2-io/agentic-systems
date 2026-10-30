@@ -1,0 +1,18 @@
+schema: vsect-event/0
+id: f6d7570a841eff8d34ce2bb7c0cf142fd9c018e1a0ddc85acfc4fb6b563850d7
+at: 2026-10-30T23:02:30Z
+store: asf
+act: confirm-rewording
+about: segment:example-kalman
+actor:
+  name: Claude Opus 5.5 (A.1 fifth reader, bare brief)
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: The diff (observation index, deliberation and structural-adaptation wording, tempo steady-state paragraph, sector-parameter wording) leaves the high-mode steady state, V(K) values and exit probability as they were; recomputed in check-6 C9.
+from-version: f08a32de381088c95b857fba8fa02222a5cec22ce8590e64970aa17437a1b5e4
+outcome: equivalent
+scope:
+  for:
+  - adde60514eead495e7de86bb6665e01dfbb865c0cf9d9758f46a83401a13cd2f
+  - a425252100509647eb1b8cdbd52b1fc76431cafa325d130e769168819f0b0fe6
+to-version: 7199636d3643ae19ec3ddabfdc80708e6495b1080e8221c211354008517a5a46

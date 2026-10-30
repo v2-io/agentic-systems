@@ -1,0 +1,30 @@
+schema: vsect-event/0
+id: 9a672e89c0b014b61c6c857ad67282345d6f939642b76e88eb314149a1cda2a0
+at: 2026-10-30T23:02:14Z
+store: asf
+act: rederive
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 fifth reader, bare brief)
+  role: independent adversarial checker
+  read:
+  - segment:scope-adaptive-system
+  - segment:def-chronica
+  - segment:def-observation-function
+  - segment:def-action-transition
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:scope-adaptive-system: 48dd5554d1f66ba02af228fcb9593f6b9191852444272b4cb48458a3acae75de
+committed: after
+criterion: 'Under F1''s repair sentence: (g′)''s identity and its three consequences; (h); (h′) (spot-check of the three support facts, the finite-block reduction, the clock-and-rationals counterexample); the housing result (Markov twin, policy-free kernel, noiseless channel, $\pi_0$-mixture agreement, case (d), mutual singularity under a fixed law)'
+effective-version: 6ab3dafcd40fb10459dd84544c2775ef9e53677dffeafc42ef72e8bb7a8b9af1
+from: review:scope-adaptive-system-check-6#C6
+line: derivation
+outcome: confirmed
+recheck: two-order chain rule with $(\Omega_{k+1}, o_{k+1})$ independent of $(S_t, \mathcal C_k)$ given $(S_k, a_k)$; equivalent reweighting of $(S_t, \mathcal C_t)$; policy factors cancel from the posterior
+target-version: 48dd5554d1f66ba02af228fcb9593f6b9191852444272b4cb48458a3acae75de
+version-from: git-revision

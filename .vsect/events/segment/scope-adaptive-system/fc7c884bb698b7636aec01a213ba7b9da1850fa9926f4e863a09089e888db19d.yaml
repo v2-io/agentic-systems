@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: fc7c884bb698b7636aec01a213ba7b9da1850fa9926f4e863a09089e888db19d
+at: 2026-10-30T23:02:29Z
+store: asf
+act: confirm-rewording
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 fifth reader, bare brief)
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: Edits 21c3771e and 06c4e514 leave the linear-Gaussian renewal formula and its numbers, the Gaussian part-of-target counterexample, and the Discussion examples' values unchanged (the doubling map reworded, 'one target can have both' added); the Working Notes regression guard is outside the record's text. Re-derived independently in check-6 C2, C8.
+from-version: a8958128332dad2fc382f7b12fec972b1bbfd011be39babc2c09708d5b0ed205
+outcome: equivalent
+scope:
+  for:
+  - 88e2f443427cb70ec8a17c9a6dcad484a5707a8dc610727d701123f3519f432a
+  - 9f958633b86ed3750923e1e6591ee535aaa9cd258d24be50d775fdf3a3e5e54b
+  - c48794794fe425e845e8f9e2dbe6e0a52aa0f5c38b008305d6905f7fef7f007a
+  - f960563e2e67c0dd8c51b5ae82e501292bafed8aae2442fc8fa77d82a229ee92
+to-version: 48dd5554d1f66ba02af228fcb9593f6b9191852444272b4cb48458a3acae75de

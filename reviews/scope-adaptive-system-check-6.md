@@ -1,0 +1,152 @@
+---
+kind: review
+author:
+  name: Claude Opus 5.5 (A.1 fifth reader, bare brief)
+  role: independent adversarial checker
+sources:
+  - spikes/epistemic-target-ontology/13-check-6.md
+written: 2026-10-30
+---
+
+# #scope-adaptive-system at 06c4e514: a fifth independent check
+
+KR **A.1** (`msc/inside-out-2026-10/INTENT.md`). I re-derived from the text at `06c4e514` (byte-identical at HEAD) before reading any earlier review of it. I did not read the write-ups `06`–`12`. Derivations, numbers and replacement text are in the write-up named above, under the label given at the end of each item, along with what I did not read. The items listed here are this record's content. Silence about a part means only that I found nothing there.
+
+## C1 (check)
+- target: segment:scope-adaptive-system
+- at: 06c4e514
+- act: rederive
+- line: derivation
+- criterion: Items (a), (d), (e), (f); condition 1 implies condition 2; the intro's three ways out cover every failure of condition 1; averaged-in iff pointwise-in at some positive-probability history (discrete histories)
+- committed: after
+- outcome: confirmed
+- recheck: chain rule and the definition of conditional independence; for the pointwise equivalence, choose the continuation per history
+- read: segment:scope-adaptive-system, segment:def-chronica, segment:def-observation-function, segment:def-action-transition
+
+Write-up "What holds".
+
+## C2 (check)
+- target: segment:scope-adaptive-system
+- at: 06c4e514
+- act: run
+- line: simulation
+- criterion: Cold-reader Kalman check, item (b): the criterion $C A^j P_t \neq 0$ for some $j \geq 1$; the one-step formula $\tfrac12 \log\det(I + C A P_t A^\top C^\top N^{-1})$; the scalar random walk's $0.135$ (one-step) and $0.162$ (whole future); $A = 0$ out; the renewal of (g′) rising to $0.135$ with $\sum_k (u_k - r_k) = 0.162$
+- committed: after
+- outcome: confirmed
+- recheck: closed forms $P_\infty = (\sqrt5 - 1)/2$, smoothed variance $1/\sqrt5$; Gaussian conditioning on 400 future observations gives $0.13464$ and $0.16175$; restarted filter from $\tilde P_t = 0$
+- read: segment:scope-adaptive-system, segment:def-chronica, segment:def-observation-function, segment:def-action-transition
+
+Write-up "A Kalman filter".
+
+## C3 (check)
+- target: segment:scope-adaptive-system
+- at: 06c4e514
+- act: rederive
+- line: derivation
+- criterion: Cold-reader standard-RL check, item (c): in at every finite $t$ by strict concavity; $+\infty$ under recurrence; every pair qualifies under full-support rows; the deterministic-successor exit is pointwise; one-step decay like $(K-1)/(2n)$. And as an RL reader brings it: with reward drawn into the observed state, and with no prior (any full-support $\pi_0$, by (h′)), the learner is still in, and a bandit is in on its reward law alone
+- committed: after
+- outcome: confirmed
+- recheck: Dirichlet one-step information $H(\bar p) - \sum_i \bar p_i(\psi(\alpha_0+1) - \psi(\alpha_i+1))$ against $(K-1)/(2n)$ at $K = 3$, $n = 30, 300, 3000$; graph-of-the-limit argument for $+\infty$
+- read: segment:scope-adaptive-system, segment:def-chronica, segment:def-observation-function, segment:def-action-transition
+
+Write-up "Standard RL". The segment does not spell out the reward and no-prior readings (F3 below).
+
+## C4 (check)
+- target: segment:scope-adaptive-system
+- at: 06c4e514
+- act: rederive
+- line: derivation
+- criterion: Item (g): finality of the law part; the whole-target bound $I(S_s; F_s \mid \mathcal C_s) \leq I(S_t; F_s \mid \mathcal C_s) + \sum_{k \geq s} r_k$ and its consequence, with fresh noise read as in F1's repair sentence
+- committed: after
+- outcome: confirmed
+- recheck: $I(S_s; o_{k+1} \mid S_t, \mathcal C_k, a_k) \leq r_k$ by data processing through $S_k$; the first term is at most the value at $t$ of the composite continuation
+- read: segment:scope-adaptive-system, segment:def-chronica, segment:def-observation-function, segment:def-action-transition
+
+The clocked example's timing is F2.
+
+## C5 (check)
+- target: segment:scope-adaptive-system
+- at: 06c4e514
+- act: rederive
+- line: derivation
+- criterion: Are (g′)'s identity, the first step of (h), and the Epistemic Status's non-vacuity statement exact from the definitions given (the Markov commitment of #def-action-transition, the observation function of #def-observation-function) with "fresh noise" read as GA-1 as `NOTATION.md` words it ($\varepsilon_t$ independent of $\mathcal C_{t-1}$ given $(S_t, a_{t-1})$)?
+- committed: after
+- outcome: narrowed
+- recheck: known law, $\Omega_t = (t, z_t)$, $z_1$ a uniform bit, $z_t = 0$ for $t \geq 2$; observations constant except $o_K = \varepsilon_K := z_1$. GA-1 as worded holds and the transition is Markov; value at $t = 1$ is $\log 2$ while every $u_k$, $r_k$ and (ii′) is zero; (h)'s step fails at $t = 2$
+- read: segment:scope-adaptive-system, segment:def-chronica, segment:def-observation-function, segment:def-action-transition
+
+They are exact when the declared world is generated by its kernels: given $(S_t, a_t)$, the next state and observation are independent of everything before. Neither the definitions nor GA-1 as worded say this. Repair sentence for the Definition: write-up F1.
+
+## C6 (check)
+- target: segment:scope-adaptive-system
+- at: 06c4e514
+- act: rederive
+- line: derivation
+- criterion: Under F1's repair sentence: (g′)'s identity and its three consequences; (h); (h′) (spot-check of the three support facts, the finite-block reduction, the clock-and-rationals counterexample); the housing result (Markov twin, policy-free kernel, noiseless channel, $\pi_0$-mixture agreement, case (d), mutual singularity under a fixed law)
+- committed: after
+- outcome: confirmed
+- recheck: two-order chain rule with $(\Omega_{k+1}, o_{k+1})$ independent of $(S_t, \mathcal C_k)$ given $(S_k, a_k)$; equivalent reweighting of $(S_t, \mathcal C_t)$; policy factors cancel from the posterior
+- read: segment:scope-adaptive-system, segment:def-chronica, segment:def-observation-function, segment:def-action-transition
+
+Write-up "What holds".
+
+## C7 (check)
+- target: segment:scope-adaptive-system
+- at: 06c4e514
+- act: rederive
+- line: derivation
+- criterion: Epistemic Status: does membership guarantee a positive state-and-law term (ii′) in the mismatch budget the agent runs, computed under its own policy as in #deriv-mismatch-budget-attribution?
+- committed: after
+- outcome: narrowed
+- recheck: invariant hidden bit $b$ shown only after an action the agent never takes; in at every $t$, every (ii′) under the agent's policy is zero
+- read: segment:scope-adaptive-system, segment:def-chronica, segment:def-observation-function, segment:def-action-transition
+
+The derivation holds for the budget computed under some continuation. The closing clause drops that qualifier. Exact own-policy statement: under the agent's policy the (ii′) terms after $t$ sum to at least $I_\pi(S_t; F_t \mid \mathcal C_t) + \sum_k r_k$, so the running budget has a positive term exactly when the agent's own conduct can still reveal, or something renews. Replacement text: write-up F2.
+
+## C8 (check)
+- target: segment:scope-adaptive-system
+- at: 06c4e514
+- act: run
+- line: simulation
+- criterion: Numbers in Discussion and Epistemic Status: fresh uniform row $\log 2 - \tfrac12$; sign flip one-step part like $1/(2t)$ with infinite value; doubling map $\log 2$ per step with no renewal; the part-of-target counterexample, $\infty$ against $\tfrac12 \log \tfrac32$
+- committed: after
+- outcome: confirmed
+- recheck: Beta(1,1) entropy integral by quadrature ($0.19315$); $\tfrac12 \log(1 + 1/(t+1))$ at $t = 10, 100, 1000$; posterior variance $1/2$ after one unit-noise reading
+- read: segment:scope-adaptive-system
+
+## C9 (check)
+- target: segment:example-kalman
+- at: 06c4e514
+- act: run
+- line: simulation
+- criterion: Scope section agrees with #scope-adaptive-system item (b) ($S_t = x_t$, in at every $t$ under either sensor, standing warrant); steady states $P^- = 0.640$, $K_{ss} = 0.390$ ($r_H = 1$) and $P^- = 1.630$, $K_{ss} = 0.153$ ($r_L = 9$); $V(K) = 0.982, 0.640, 0.940$ at $K = 0.15, 0.39, 0.81$; $P(\lvert e^-\rvert \gt 1.4) = 0.080$; CIY$(H) = 0.161$ nats at $P^- = 4.25$
+- committed: after
+- outcome: confirmed
+- recheck: scalar Riccati closed form $P^- = (q + \sqrt{q^2 + 4qr})/2$; Gaussian KL between variances $P^- + r_H$ and $P^- + r_L$
+- read: segment:example-kalman, segment:scope-adaptive-system
+
+The gain paragraph's index is F1 below.
+
+## F1 (finding)
+- target: segment:example-kalman
+- at: 06c4e514
+
+The Update Gain paragraph reads $K_t = P^-_t / (P^-_t + r_{a_t})$ and "$U_o = r_{a_t}$", while the observation equation is now $y_t = x_t + n_t^{(a_{t-1})}$ and the Mismatch paragraph has $\mathbb E[\delta_t^2] = P^-_t + r_{a_{t-1}}$. $K_t$ is the gain applied to $\delta_t$, so both should carry $r_{a_{t-1}}$. No number changes. Check-5's F5, which is still open, was applied only in part. Write-up F3.
+
+## F2 (finding)
+- target: segment:scope-adaptive-system
+- at: 06c4e514
+
+Item (g)'s clocked example: "…whose previous draw the channel reports from some time on, is out before that time and in from it." With the first report at $K$ ($o_K = x_{K-1}$), the loop is already in at $t = K - 1$ and out at $t \leq K - 2$. Suggested wording: "…reports from time $K$ on, is out before $K - 1$ and in from $K - 1$, the step whose draw the first report shows." Write-up F4.
+
+## F3 (finding)
+- target: segment:scope-adaptive-system
+- at: 06c4e514
+
+Standard RL, for the reader KR A.1 names. Item (c) has no reward and a Dirichlet prior. An RL reader will ask where reward goes and whether a prior-free learner is in. Both answers are in the segment's ingredients but not at (c). Proposed sentences: reward drawn by the transition into the observed state puts its law in $\theta_T$, so (c)'s argument applies to the joint row and a bandit is in on its reward law alone. The Dirichlet is the modeler's reference measure, not the learner's prior, and by (h′), with finitely many states, actions and reward values, every full-support $\pi_0$ gives the same membership. Write-up F5.
+
+## F4 (finding)
+- target: segment:scope-adaptive-system
+- at: 06c4e514
+
+Smaller points (write-up F6). The collapse map's "law" row has no reachability qualifier, though by (f) law no conduct can show is out. `NOTATION.md`'s $\pi_0$ row says the support "is the set of worlds possible", where the segment says "the closure of". "$\pi_0$-almost surely" in the cut means almost surely under the path measure of $\pi_0$ and each policy. The Definition's "closure" needs a topology on kernel pairs, which only (h′)'s setting supplies.

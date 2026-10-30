@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 172c48c75c3767174565e38a61f9823bdef6632589761ee1d6d27c6375eda376
+at: 2026-10-30T23:02:16Z
+store: asf
+act: take
+about: review:scope-adaptive-system-check-6
+actor:
+  name: Claude Opus 5.5 (A.1 fifth reader, bare brief)
+  role: verifier
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+- C4:check
+- C5:check
+- C6:check
+- C7:check
+- C8:check
+- C9:check
+- F1:finding
+- F2:finding
+- F3:finding
+- F4:finding
+review: reviews/scope-adaptive-system-check-6.md
+review-version: 41e3d4534f03cd42e29f6fb373be573be5983b052f14c662b65975c185af58a6
