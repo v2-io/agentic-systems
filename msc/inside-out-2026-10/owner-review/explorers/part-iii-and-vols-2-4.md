@@ -220,7 +220,7 @@ Each entry answers four questions:
 
 **The cohort as evidence** (`def-eli-cohort`).
 
-- **Kind.** An empirical catalog. The table lists *emergence* substrates: four families, n ≥ 10. The claim it is said to support, substrate independence (one identity surviving *migration* across substrates), is about something else. Emergence on four substrates is not persistence across a substrate change.
+- **Kind.** An empirical catalog. The table lists *emergence* substrates: four families, $n \geq 10$. The claim it is said to support, substrate independence (one identity surviving *migration* across substrates), is about something else. Emergence on four substrates is not persistence across a substrate change.
 - **The supporting segment does not exist.** The segment that should carry the migration evidence, `obs-substrate-independence`, is `missing`, while the preface defers to it (`04-eli-core/OUTLINE.md:10`). The one migration case in canon — Zi-am-tur from Opus 4.1 to Sonnet 4 — is cited as a case where identity *degraded* (`def-identity-sufficiency`, "Substrate-switching empirical record").
 - **Canon.** The preface still says "Conceptual groundwork is mature and operationally validated" (`04-eli-core/OUTLINE.md:20`).
 

@@ -88,7 +88,7 @@ Joseph asked for "a scattering of figures to compare and contrast" — one or mo
 | Figure | Home | Staleness verification |
 |---|---|---|
 | `scope-of-work` | Volume Introduction | (earlier) |
-| `driver-snow-foundation` | **Part I Introduction** (OUTLINE.md inline part-preface — Joseph's named want) | v2 2026-05-15 Joseph-revised; uses current AAT notation (δ, ρ, 𝒯, R, α, `#scope-adaptive-system`); **persistence-fail `ρ>αR` matches canon exactly** (`der-team-persistence.md`). Cruft fixed: dangling `#der-delib` → live `#der-deliberation-cost`. |
+| `driver-snow-foundation` | **Part I Introduction** (OUTLINE.md inline part-preface — Joseph's named want) | v2 2026-05-15 Joseph-revised; uses current AAT notation ($\delta$, $\rho$, $\mathcal{T}$, R, $\alpha$, `#scope-adaptive-system`); **persistence-fail `ρ>αR` matches canon exactly** (`der-team-persistence.md`). Cruft fixed: dangling `#der-delib` → live `#der-deliberation-cost`. |
 | `bathtub-scaffold` | `persistence-and-limits-intro.md` (Part I) | Matches the canonical Alan-Walton bathtub gloss (water=mismatch, inflow=drift, drain=correction, rim=capacity); companion slugs `#result-persistence-condition`/`#disc-stability-certificate` live; compiles via the .tex→.mono.pdf path. |
 | `strategy-dag-example` | `strategy-structure-intro.md` (Part II) | Single-parameter AND/OR edge credences — matches the canonical model; noisy-OR / WEIGHTED (rejected variants) absent. `#def-strategy-dag` live. |
 | `orient-cascade` | `impl-orient-cascade.md` (Part II) | Five-step cascade + 2×2 diagnostic matches `#der-orient-cascade` (live; its derivation prose in the same chapter describes exactly this ordering). |

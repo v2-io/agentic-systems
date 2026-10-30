@@ -41,16 +41,19 @@ I read the five governing segments and the spike file `spikes/spike-form-strateg
 ## §2.1 — Re-derivation (independent, no recourse to the spike or appendix derivation)
 
 Setup. $\mathcal{A}$ is a finite or countable action set. $\pi^\ast = \delta_{a^\ast}$ is the point mass on $a^\ast \in \mathcal{A}$:
+
 $$\pi^\ast(a) = \begin{cases} 1 & \text{if } a = a^\ast \\ 0 & \text{otherwise} \end{cases}$$
 
 $Q$ is any probability distribution on $\mathcal{A}$ with $Q(a^\ast) \gt 0$.
 
 KL divergence (discrete, base-$e$):
+
 $$D_{\mathrm{KL}}(P \Vert Q) := \sum_{a \in \mathcal{A}} P(a) \log\frac{P(a)}{Q(a)}$$
 
 with the standard convention $0 \log 0 = 0$ (limit of $x \log x$ as $x \to 0^+$; this is the convention used in Cover & Thomas, Tsybakov, and effectively every information-theory textbook).
 
 Specialize to $P = \pi^\ast = \delta_{a^\ast}$:
+
 $$D_{\mathrm{KL}}(\delta_{a^\ast} \Vert Q) = \sum_{a \in \mathcal{A}} \delta_{a^\ast}(a) \log\frac{\delta_{a^\ast}(a)}{Q(a)}$$
 
 Split the sum into the $a = a^\ast$ term and the $a \neq a^\ast$ terms.
@@ -60,6 +63,7 @@ Split the sum into the $a = a^\ast$ term and the $a \neq a^\ast$ terms.
   - If $Q(a) = 0$: the summand is $0 \cdot \log(0/0)$. This is the "$P$-null-with-$Q$-null" case, conventionally also $0$ (it does not arise in the deterministic-$\pi^\ast$ scope under the assumption $Q(a^\ast) \gt 0$, but the convention handles it uniformly). Either way, every $a \neq a^\ast$ term contributes $0$.
 
 - **For $a = a^\ast$:** $\delta_{a^\ast}(a^\ast) = 1$, so the summand is
+
   $$1 \cdot \log\frac{1}{Q(a^\ast)} = \log\frac{1}{Q(a^\ast)} = -\log Q(a^\ast)$$
 
 Sum: $D_{\mathrm{KL}}(\delta_{a^\ast} \Vert Q) = 0 + \cdots + 0 + (-\log Q(a^\ast)) = -\log Q(a^\ast)$.
@@ -100,9 +104,13 @@ Additional references named as "structurally-equivalent re-formulations": Shore 
 ## §3.2 — Independent verification
 
 **On the chain-rule statement.** The chain rule
+
 $$D_f(P_{XY} \Vert Q_{XY}) = D_f(P_X \Vert Q_X) + \mathbb{E}_{P_X}\bigl[D_f(P_{Y\mid X} \Vert Q_{Y\mid X})\bigr]$$
+
 for reverse-KL is the **classical KL chain rule** (Cover & Thomas 2006 §2.5, Theorem 2.5.3: $D(p(x,y) \Vert q(x,y)) = D(p(x) \Vert q(x)) + D(p(y\mid x) \Vert q(y\mid x))$). Direct check on reverse-KL:
+
 $$\sum_{x,y} P(x,y) \log\frac{P(x,y)}{Q(x,y)} = \sum_{x,y} P(x,y)\log\frac{P(x)P(y\mid x)}{Q(x)Q(y\mid x)} = \sum_x P(x)\log\frac{P(x)}{Q(x)} + \sum_x P(x)\sum_y P(y\mid x)\log\frac{P(y\mid x)}{Q(y\mid x)}$$
+
 which is exactly the additive decomposition the theorem requires. So KL *satisfies* the chain rule (the easy direction).
 
 **On the "only if" — uniqueness.** This is the load-bearing direction. The classical functional-equation argument: among smooth f-divergences (with $f$ convex, $f(1) = 0$, and the standard regularity), requiring chain-rule additivity over arbitrary joint factorizations forces $f(t) = c \cdot t \log t$. The Csiszár 1991 paper I verified PDF-side states this as **Theorem 3 corollary** (p. 2045): *"The only transitive statistical projection rule (with $S = R^n_+$ or $\Delta_n$) is the I-divergence projection rule"* — where "transitive" (Csiszár's Definition 6, subspace-transitive: $\Pi(L'\mid \mathbf{u}) = \Pi(L'\mid \Pi(L\mid \mathbf{u}))$ for $L' \subset L$) and "subspace-transitive" / "parallel-transitive" capture exactly the chain-decomposition property under composition of inference steps. I-divergence is Csiszár's name for reverse-KL.
@@ -185,11 +193,11 @@ The PDF citations are correct as stated. CONFIRMED.
 
 ## §4.3 — Amari 2009 — **CONFIRMED (citation-correction record validates against the actual paper)**
 
-File: `ref/amari-2009-alpha-divergence-unique-f-bregman.pdf` — PDF document, 7 pages, *IEEE Transactions on Information Theory* 55(11):4925–4931 (2009), "α-Divergence Is Unique, Belonging to Both f-Divergence and Bregman Divergence Classes" by Shun-Ichi Amari. Title, author, journal, volume, issue, year, and page range all match.
+File: `ref/amari-2009-alpha-divergence-unique-f-bregman.pdf` — PDF document, 7 pages, *IEEE Transactions on Information Theory* 55(11):4925–4931 (2009), "$\alpha$-Divergence Is Unique, Belonging to Both f-Divergence and Bregman Divergence Classes" by Shun-Ichi Amari. Title, author, journal, volume, issue, year, and page range all match.
 
 The relevant AAT working-note (in `deriv-strategy-cost-regret-bound.md` Working Notes) flagged that **earlier drafts mis-cited Amari 2009 Theorem 1 for the chain-rule uniqueness theorem**, and the correction removed that attribution. I verified the correction is right:
 
-- Amari 2009's main theorem (Section IV, p. 4929): *"The α-divergence is the unique class of divergences sitting at the intersection of the f-divergence and Bregman divergence classes."* Specifically about α-divergences being the f-Bregman intersection in the space of positive measures.
+- Amari 2009's main theorem (Section IV, p. 4929): *"The $\alpha$-divergence is the unique class of divergences sitting at the intersection of the f-divergence and Bregman divergence classes."* Specifically about $\alpha$-divergences being the f-Bregman intersection in the space of positive measures.
 - Amari 2009's Corollary (p. 4929): *"The KL-divergence and its dual are unique divergences belonging to the f-divergence and Bregman divergence classes."*
 - **Amari 2009 does NOT contain a chain-rule uniqueness theorem for reverse-KL within f-divergences.** It contains the f∩Bregman intersection uniqueness, which is a different result.
 
@@ -292,7 +300,7 @@ The Gate verification (`msc/451729-d1-gate-verification-2026-05-20.md` §5) land
 | **Claim 1: $D_{\mathrm{KL}}(\delta_{a^\ast} \Vert Q) = -\log Q(a^\ast)$ under deterministic $\pi^\ast$** | **CONFIRMED** | One-line algebra re-derived independently from KL definition + $0 \log 0 = 0$ convention. Holds exactly under stated scope ($Q(a^\ast) \gt 0$). One minor presentational slip noted in §2.2 ("becomes an equality" phrasing is loose; not a tier defect). |
 | **Claim 2: Chain-rule-axiom uniqueness of reverse-KL within direction-forced f-divergences** | **CONFIRMED** (with one deferred citation component) | Csiszár 1991 Theorem 3 corollary (p. 2045) and Theorem 5(ii) (p. 2047) PDF-verified, both state and prove exactly what AAT cites. The chain-rule statement itself was verified directly via Cover & Thomas-style KL chain-rule check. AAT-internal motivation (divergence-level analog of chain-layer log-additive identity) is legitimate. **Hobson 1969 PDF cannot be verified — file in `ref/` is unrelated HTML scrape; see §4.1** — but the load-bearing uniqueness claim is sustained by Csiszár 1991 alone, independent of Hobson. |
 | **Citation PDFs — Csiszár 1991** | **CONFIRMED** | Valid 16-page JSTOR PDF; bibliographic record and theorem statements verified line-by-line. |
-| **Citation PDFs — Amari 2009** | **CONFIRMED (correction-validity)** | Valid 7-page IEEE PDF. The earlier-draft mis-citation of Amari 2009 Theorem 1 for chain-rule-uniqueness has been correctly removed; Amari 2009 contains the α-divergence f∩Bregman intersection uniqueness, *not* a chain-rule uniqueness theorem. The Working Notes correction is right. |
+| **Citation PDFs — Amari 2009** | **CONFIRMED (correction-validity)** | Valid 7-page IEEE PDF. The earlier-draft mis-citation of Amari 2009 Theorem 1 for chain-rule-uniqueness has been correctly removed; Amari 2009 contains the $\alpha$-divergence f∩Bregman intersection uniqueness, *not* a chain-rule uniqueness theorem. The Working Notes correction is right. |
 | **Citation PDFs — Shore & Johnson 1980** | **PRESENT (partial)** | Valid PDF; cross-reference via Csiszár 1991's own treatment supports the "structurally-equivalent re-formulation" framing without independent end-to-end read. |
 | **Citation PDFs — Eguchi 1983** | **PRESENT** | Valid 11-page PDF; bibliographic record matches. Used in §6.2 only as the "Fisher-metric-not-distinguishing" no-go; not re-read end-to-end in this scope. |
 | **Citation PDFs — Hobson 1969** | **DISCREPANCY (file-state)** | The file `ref/hobson-1969-theorem-information.pdf` is not Hobson 1969 — it is an HTML page for an unrelated 1991 finance paper saved with the wrong filename, almost certainly due to a Springer paywall serving HTML when the PDF was requested. **The citation itself is not mis-attributed** — bibliographic details (J. Stat. Phys. 1(3):383–391) match standard external record — but the local PDF for strict-form verification is missing. Recommended remediation: replace the placeholder, or delete it and note the absence (out of scope for this verification). |

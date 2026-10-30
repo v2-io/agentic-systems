@@ -6,12 +6,12 @@
 
 The paper documents that **frozen pretrained pooled sentence embeddings encode a continuously calibrated verbal probability axis aligned with human psychometric data**. Specifically:
 
-- ρ > 0.90 supervised / 0.67–0.95 LOO on Mosteller (1990) 53-expression dataset
-- Cross-validates against Vogel 2022 (ρ = 0.991, MAE = 5.1%) and Wintle 2019 (ρ = 0.967, MAE = 3.6%, n ≈ 924) — three independent psychometric datasets spanning 50+ years
+- $\rho \gt 0.90$ supervised / 0.67–0.95 LOO on Mosteller (1990) 53-expression dataset
+- Cross-validates against Vogel 2022 ($\rho = 0.991$, MAE = 5.1%) and Wintle 2019 ($\rho = 0.967$, MAE = 3.6%, $n \approx 924$) — three independent psychometric datasets spanning 50+ years
 - Replicates across 5 architecturally diverse pretrained models (BERT, BERT-large, MoE, decoder-derived embedding heads, multilingual XLM-R)
-- Zero-shot ranking transfer to 8 typologically diverse languages (mean |ρ| = 0.928)
+- Zero-shot ranking transfer to 8 typologically diverse languages (mean $\lvert \rho\rvert = 0.928$)
 - Survives 12× dimensional compression on Matryoshka models
-- Passes permutation null-hypothesis tests (p ≤ 0.005)
+- Passes permutation null-hypothesis tests ($p \leq 0.005$)
 - Functional validation via rank-1 concept-erasure with cosine-matched random-direction control (the embedding-class analogue of decoder-LLM activation steering)
 
 For ASF: this is the empirical foundation for #obs-evaluation-metrics in §03.II and adjacent claims throughout Part III about logogenic agents being able to *measure* their own $U_M$ via language-geometric proxies rather than relying on numerical instrumentation. The "language as the independent medium of thought" framing (Joseph's morning) has empirical traction at the geometric level.

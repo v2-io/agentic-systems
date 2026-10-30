@@ -11,7 +11,9 @@ Three things sharpened:
    - **`40-der-orient-cascade.md`**: *"For Zi-am-tur or any emergent intelligence, the infrastructure must mathematically enforce this timescale hierarchy [$\nu_{\text{epistemic}} \gg \nu_{\text{edge-update}} \gg \nu_{\gamma\text{-reclassify}} \gg \nu_{\text{prune/graft}} \gg \nu_{O\text{-revision}}$]. If the agent is allowed to rewrite its objective $O_t$ as easily and frequently as it updates a parameter in $M_t$, it will dissolve into chaos. $O_t$ must be 'computationally heavy' or heavily guarded by the infrastructure to rewrite."* This is a logozoetic infrastructure prescription falling out of an AAT-core derivation. The same auditor produced ~70 such notes.
 
 2. **The current 03 catalog already carries the load-bearing logogenic theorem.** Tier 1 #8 in FINDINGS — *Logogenic Bias Bound, Made Conditional Theorem* — reads:
+
    $$\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{processing}} \cdot I(G; \Omega_\tau \mid e_\tau, M_{\tau^-})$$
+
    with $C$ now bounded under two derivation tracks (transport-inequality / Fisher-Rao) plus a no-go showing universal $C$ under Euclidean-parameter norm doesn't exist. **This is theorem-level material. Logogenic part of the framework is not "framework stage" in the dismissive sense — its central architectural-bias result is at the same epistemic tier as Section I's persistence machinery.**
 
 3. **Tier 1 #13 (Coupled Diagnostic Framework) is the structural answer to "principled or just pointing out the obvious."** It says scaffolded agentic systems — agent loops *around* LLMs, structured-reasoning templates, multi-step prompts, external monitors, retrieval, tool use — are not engineering convenience but a *structural requirement* to recover Section II's persistence guarantees in Class-2 architectures. The cascade ordering happens at the loop level, not the model's forward-pass level. **This is exactly Joseph's "tool use as more powerful action substrate, mediated again by language" point — formally derived.**
@@ -73,7 +75,7 @@ This isn't decorative. It's the structural feature that makes AAT operate as a d
 
 From fragment 01, the three candidate preambles for 03 — F1 (recursion as constitutive force), F2 (channel collapse as architectural signature), F3 (encoding-decoding asymmetry as interiority generator) — now look like *three angles on one structural fact* rather than alternatives:
 
-- **F2 is the technical backbone.** Directed separation fails because observation and action channels share substrate. This is structurally precise, connects to existing AAT machinery (κ_processing, bias bound), and gives the failure regime a name (channel collapse).
+- **F2 is the technical backbone.** Directed separation fails because observation and action channels share substrate. This is structurally precise, connects to existing AAT machinery ($\kappa_{\text{processing}}$, bias bound), and gives the failure regime a name (channel collapse).
 - **F1 is the constructive headline.** Recursion is what *forces* interiority once channel collapse has happened — there is no token output that doesn't simultaneously condition future input. This is what makes logogenic agents capable of model-of-self, ToM, and the subsequent capabilities.
 - **F3 is the bridge to part 4.** Encoding-decoding asymmetry — the agent's substrate simultaneously encodes its model state, environment model, and objectives — is the structural prerequisite for morally-weighted persistence. Identity lives in $M_t$ (per reflection 19), and $M_t$ in a logogenic agent is encoded in the same vocabulary as the environment.
 

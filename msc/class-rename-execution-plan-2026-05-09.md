@@ -39,7 +39,7 @@ Read each occurrence in context before substituting. This is the single biggest 
 
 **Why the rename.** The numbered classes named *positions in a taxonomy*, not *the property the taxonomy measures*. Cross-architecture R2 voters split across competing English-modifier slates (Modular/Merged/Scaffolded vs. Modular/Integrated/Partially-coupled vs. Modular/Coupled/Partially-modular); the contested-decision cluster surfaced in `r2-patterns.md` §3c. Resolution: name the *property* (the directed-separation property of `#der-directed-separation`) not an architectural realization. `Separated` directly echoes the segment-derived property; a tightly-integrated architecture that happens to be goal-blind is also Separated.
 
-**Why the swap.** The Architecture ladder is currently the visual outlier in `#disc-separability-pattern`'s six-ladder meta-pattern table. Six ladders (Correlation L0/L1/L2; Convention C1/C2/C3; Contraction Tier 1/2/3; Identification Regime A/B/C; Scope Adaptive/Agency/Composite; A2'-scope α₁/α₂/β) all run cleanest → middle → worst as 1 → 2 → 3. Architecture currently runs 1 → 3 → 2 — partially-modular middle case sits at numeric position 3 instead of 2. The swap aligns Architecture's numbering with the meta-pattern.
+**Why the swap.** The Architecture ladder is currently the visual outlier in `#disc-separability-pattern`'s six-ladder meta-pattern table. Six ladders (Correlation L0/L1/L2; Convention C1/C2/C3; Contraction Tier 1/2/3; Identification Regime A/B/C; Scope Adaptive/Agency/Composite; A2'-scope $\alpha_1/\alpha_2/\beta$) all run cleanest → middle → worst as 1 → 2 → 3. Architecture currently runs 1 → 3 → 2 — partially-modular middle case sits at numeric position 3 instead of 2. The swap aligns Architecture's numbering with the meta-pattern.
 
 **Why now.** The class-coercion segments that landed earlier today (2026-05-09) — `#der-class-coercion-via-wrapping`, `#disc-adversarial-coupling-pressure` — use the old vocabulary throughout. Doing the rename next prevents accumulating retrofit debt. Every cycle of new content under old vocabulary makes the eventual rename heavier.
 
@@ -206,7 +206,7 @@ Per-file workflow:
    - `Class 3 (partially modular)` / `partially modular` → `Class 2 (Partial)` on first use, `Partial` thereafter.
 4. For `der-directed-separation.md`:
    - Update the architectural-classification table (rows reorder by number).
-   - Update the κ-operationalization paragraph and "Distribution dependence" paragraph (κ values keyed to classes).
+   - Update the $\kappa$-operationalization paragraph and "Distribution dependence" paragraph ($\kappa$ values keyed to classes).
    - Update the "Class-1 by structure vs. Class-1 by behavior" subsection (Class 1 unchanged; check Class-2/3 references in W₂ and the composite-level inheritance subsection — the Class 2 fully-coupled inheritance becomes Class 3 Coupled inheritance).
    - Update the "Implications for theory scope" bullets — same swap.
    - Findings section: brief + impact + novelty-claim + related-work table all reference Class N.

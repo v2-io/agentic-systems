@@ -34,7 +34,7 @@
 
 ### NOT a micro-fix (recorded so it is not re-introduced)
 
-- `hyp-mismatch-dynamics.md:54` — **no-op.** Already correct in η\*-order (`O(η* c_max)`, linear — the F-V1 fix was the η\*-power); differs from canonical `deriv-discrete-sector-condition` only in the prefactor, at explicit `*Heuristic.*` tier, with a live pointer to the sharper segment. The inherited "F-V1 micro-residual" framing is the mischaracterization; do not churn a correct segment.
+- `hyp-mismatch-dynamics.md:54` — **no-op.** Already correct in $\eta^\ast$-order (`O(η* c_max)`, linear — the F-V1 fix was the $\eta^\ast$-power); differs from canonical `deriv-discrete-sector-condition` only in the prefactor, at explicit `*Heuristic.*` tier, with a live pointer to the sharper segment. The inherited "F-V1 micro-residual" framing is the mischaracterization; do not churn a correct segment.
 - 738192-F2 line-53 recap nudge — **resolved by SN-3** (`3072667`/`2666eca`); not open.
 
 ---

@@ -4,10 +4,10 @@ The framework's first major *Lyapunov result*, stated as a specific instantiatio
 
 Under this sector condition plus bounded disturbance, the chapter's headline persistence inequality is *derived*:
 
-> the agent persists if and only if $\alpha > \rho/R$.
+> the agent persists if and only if $\alpha \gt \rho/R$.
 
 When the inequality holds, the mismatch is ultimately bounded by $R^\ast = \rho/\alpha$, and the "adaptive reserve" — the additional disturbance the agent can absorb before mismatch reaches the edge of the valid region — is $\alpha R - \rho$.
 
 Under **Model S** (stochastic disturbance), the analog is sharper and qualitatively different: the steady-state root-mean-square mismatch scales as $\sigma_w \sqrt{n / (2\alpha)}$ — the square root of the disturbance-to-correction ratio. Model D scales as $1/\alpha$, Model S as $1/\sqrt{\alpha}$: **correction is less effective against noise than against drift**. This is one of the volume's striking results, separating two genuinely different physics of adaptation under deterministic vs stochastic environments.
 
-The linear ODE from Chapter 3 is recovered as the special case where the sector condition holds globally with $\alpha = \mathcal{T}$. The general sector-condition framework proves the persistence threshold is a *structural necessity of any bounded-correction system* — not an artifact of the linear approximation. The result is also where the structural-adaptation-necessity result will be anchored: when disturbance exceeds the model class's capacity (i.e., $\rho/\alpha > R$), the sector condition fails. This *is* the dynamical trigger for needing a new model class with larger valid radius or better efficiency — which the structural-adaptation result will treat formally a few segments later.
+The linear ODE from Chapter 3 is recovered as the special case where the sector condition holds globally with $\alpha = \mathcal{T}$. The general sector-condition framework proves the persistence threshold is a *structural necessity of any bounded-correction system* — not an artifact of the linear approximation. The result is also where the structural-adaptation-necessity result will be anchored: when disturbance exceeds the model class's capacity (i.e., $\rho/\alpha \gt R$), the sector condition fails. This *is* the dynamical trigger for needing a new model class with larger valid radius or better efficiency — which the structural-adaptation result will treat formally a few segments later.

@@ -112,7 +112,7 @@ $$\lVert f_c(X_c, o_c) - f_c(X_c', o_c) \rVert \leq L \cdot \lVert X_c - X_c' \r
 
 With Lipschitz constant $L$, a per-step error of $\varepsilon$ produces at most $\varepsilon \cdot (L^H - 1)/(L - 1)$ trajectory divergence over horizon $H$.
 
-Connection to AAT: the sector condition from the persistence framework (δᵀF ≥ α‖δ‖² for ‖δ‖ ≤ R) IS a Lipschitz-like condition on the correction function. If the macro-dynamics satisfy the sector condition, they satisfy the Lipschitz requirement. So: **macro-dynamics in the persistence regime automatically satisfy the bridge lemma requirement.**
+Connection to AAT: the sector condition from the persistence framework ($\delta^\top F \geq \alpha\lVert \delta\rVert^2$ for $\lVert \delta\rVert \leq R$) IS a Lipschitz-like condition on the correction function. If the macro-dynamics satisfy the sector condition, they satisfy the Lipschitz requirement. So: **macro-dynamics in the persistence regime automatically satisfy the bridge lemma requirement.**
 
 This is promising. It means: if we require $\mathcal{M}_{adm}$ to satisfy the sector condition, we get both AAT-structure (persistence condition applies) and trajectory-error boundedness (bridge lemma holds) in one requirement.
 
@@ -134,7 +134,7 @@ Combine the minimal structural requirements with the stability requirement:
 
 $$\delta_c^T f_c(\delta_c) \geq \alpha_c \lVert \delta_c \rVert^2 \quad \text{for } \lVert \delta_c \rVert \leq R_c$$
 
-with finite $\alpha_c > 0$ and $R_c > 0$.
+with finite $\alpha_c \gt 0$ and $R_c \gt 0$.
 
 **What this buys:**
 - (1) ensures AAT structure at the macro level
@@ -206,7 +206,7 @@ where $k$ indexes the macro-agent's observation channels (which are the projecte
 
 $$\delta_c^T f_c^{(M)}(\delta_c) \geq \alpha_c \lVert \delta_c \rVert^2 \quad \text{for } \lVert \delta_c \rVert \leq R_c$$
 
-with $\alpha_c > 0$ (positive correction rate) and $R_c > 0$ (finite reserve).
+with $\alpha_c \gt 0$ (positive correction rate) and $R_c \gt 0$ (finite reserve).
 
 ### 4.2 What each requirement prevents
 
@@ -287,17 +287,17 @@ The per-step closure defect provides: starting from $X_{c,t} = \tilde{X}_{c,t}$ 
 
 $$\dot{V} \leq -\alpha_c \lVert e \rVert^2 + \varepsilon^\ast \lVert e \rVert = -\lVert e \rVert (\alpha_c \lVert e \rVert - \varepsilon^\ast)$$
 
-This is negative whenever $\lVert e \rVert > \varepsilon^\ast / \alpha_c$. Therefore:
+This is negative whenever $\lVert e \rVert \gt \varepsilon^\ast / \alpha_c$. Therefore:
 
 $$\limsup_{t \to \infty} \lVert e_t \rVert \leq \frac{\varepsilon^\ast}{\alpha_c}$$
 
-provided $\varepsilon^\ast / \alpha_c < R_c$ (the error stays within the sector-condition region).
+provided $\varepsilon^\ast / \alpha_c \lt R_c$ (the error stays within the sector-condition region).
 
 **Result (Bridge Lemma).** Under (A4), bounded closure defect $\varepsilon^\ast$ implies bounded trajectory error with the same structure as the persistence condition:
 
 $$\lVert e_t \rVert \leq \frac{\varepsilon^\ast}{\alpha_c} \quad \text{(ultimately)}$$
 
-The condition for the bridge to hold: $\varepsilon^\ast < \alpha_c R_c$. That is: the closure defect must be within the macro-agent's adaptive reserve. If the closure defect exceeds the reserve, the macro-description diverges from the micro-reality — the composite "isn't really a single agent" in a precise dynamical sense.
+The condition for the bridge to hold: $\varepsilon^\ast \lt \alpha_c R_c$. That is: the closure defect must be within the macro-agent's adaptive reserve. If the closure defect exceeds the reserve, the macro-description diverges from the micro-reality — the composite "isn't really a single agent" in a precise dynamical sense.
 
 **Epistemic status update:** The continuous-time sketch above has been superseded by a discrete-time derivation in `01-aat-core/src/form-composition-closure.md`. The discrete version uses a standard linear recurrence ($\lVert e_{t+1} \rVert \leq \lambda \lVert e_t \rVert + \varepsilon_x$) with contraction factor $\lambda = 1 - \alpha_c / \nu_c$, giving the bound $\varepsilon_x \nu_c / \alpha_c$. The remaining assumption: the sector condition on the correction function implies contraction of the full update map in its state argument. This holds when correction dominates the state update — the normal regime for adaptive agents, excluding structural adaptation events.
 
@@ -369,13 +369,14 @@ $$\alpha_c > \frac{\max_i \rho_i^{\text{eff}}}{R_c}$$
 **Synthesis.** The composite sector condition holds with:
 
 $$\alpha_c = \min_i \left(\alpha_i - \Delta\mathcal{T}_i^{\text{cost}}\right)$$
+
 $$R_c = \min_i R_i$$
 
-provided all sub-agents are in the persistence regime ($\alpha_i > \rho_i^{\text{eff}} / R_i + \Delta\mathcal{T}_i^{\text{cost}}$ for all $i$).
+provided all sub-agents are in the persistence regime ($\alpha_i \gt \rho_i^{\text{eff}} / R_i + \Delta\mathcal{T}_i^{\text{cost}}$ for all $i$).
 
 **Epistemic status: sketch.** Case 1 (orthogonal) is clean — the proof is straightforward. Case 2 (cooperative) works through the disturbance decomposition from team-persistence. Case 3 (coordination overhead) is a heuristic: treating coordination cost as a reduction in $\alpha$ is first-order correct but may miss nonlinear interactions between coordination and correction. The weakest-link structure ($\min_i$) is conservative — it's possible that strong sub-agents compensate for weak ones — but it's the right structure for worst-case bounds.
 
-**What this buys.** Admissibility (A4) is VERIFIABLE from micro-level properties: compute each sub-agent's $(\alpha_i, R_i)$, estimate coordination costs $\Delta\mathcal{T}_i^{\text{cost}}$, and check whether the composite $\alpha_c > 0$. No need to compute the macro-correction function directly.
+**What this buys.** Admissibility (A4) is VERIFIABLE from micro-level properties: compute each sub-agent's $(\alpha_i, R_i)$, estimate coordination costs $\Delta\mathcal{T}_i^{\text{cost}}$, and check whether the composite $\alpha_c \gt 0$. No need to compute the macro-correction function directly.
 
 ### 6.3 Team-Persistence Cross-Check (Step 3)
 
@@ -409,7 +410,7 @@ $$\dot{\delta}_c = -\frac{\alpha_1 \delta_1 + \alpha_2 \delta_2}{2} + \frac{w_1 
 
 **Sub-case: $\alpha_1 = \alpha_2 = \alpha$.** Then $\dot{\delta}_c = -\alpha \delta_c + w_c$, where $\lVert w_c \rVert \leq (\rho_1 + \rho_2)/2$. The macro-dynamics are exactly AAT-shaped. $\varepsilon^\ast = 0$ (no closure defect). $\alpha_c = \alpha$, $\rho_c = (\rho_1 + \rho_2)/2$.
 
-The composite persistence condition: $\alpha > (\rho_1 + \rho_2)/(2R)$. Compare to individual: $\alpha > \rho_i / R_i$. If agents face similar disturbance ($\rho_1 \approx \rho_2 \approx \rho$), the composite threshold is $\alpha > \rho / R$ — same as individual. No advantage from composition when channels are independent and rates are equal. This is expected: without communication, the agents don't help each other.
+The composite persistence condition: $\alpha \gt (\rho_1 + \rho_2)/(2R)$. Compare to individual: $\alpha \gt \rho_i / R_i$. If agents face similar disturbance ($\rho_1 \approx \rho_2 \approx \rho$), the composite threshold is $\alpha \gt \rho / R$ — same as individual. No advantage from composition when channels are independent and rates are equal. This is expected: without communication, the agents don't help each other.
 
 **Sub-case: $\alpha_1 \neq \alpha_2$.** The best linear macro-dynamics: $\dot{\delta}_c = -\alpha_c \delta_c + w_c$. The optimal $\alpha_c$ minimizes the closure defect:
 

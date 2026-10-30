@@ -9,7 +9,7 @@
 - 8 main slugs at `draft` (or `exploratory`) stage: `scope-logogenic-agent`, `obs-context-turnover`, `def-coupled-update-dynamics`, `result-section-ii-survival`, `result-coupled-diagnostic-framework`, `disc-m-preservation`, `scope-observation-ambiguity-modulation`, `obs-evaluation-metrics`, `hyp-experiential-training`.
 - 5 proposed additions (all `exploratory`):
   - `form-structured-rich-context` — SRC/GCM as IB-optimal across session boundaries
-  - `der-active-salience-management` — Singular Perturbation Theory for token generation; necessity of high-ν triage models vs low-ν structural models
+  - `der-active-salience-management` — Singular Perturbation Theory for token generation; necessity of high-$\nu$ triage models vs low-$\nu$ structural models
   - `obs-backward-inference-empathy` — LLM statelessness forces continuous Bayesian inference on own text; identical structure to ToM
   - `def-cognitive-fusion` — Resonance as MI approaching channel capacity → Class-1 macro-agent
   - `der-self-referential-closure` — thermodynamic stability of agent maintaining own codebase
@@ -44,7 +44,9 @@ Important context for the discussion:
    - No-go for universal $C$ under Euclidean-parameter norm justifies (PI) as load-bearing This is the load-bearing math that makes "what does Class-2 cost you, quantitatively" answerable.
 
 3. **`#scope-observation-ambiguity-modulation`** (the only Logogenic Findings entry in the catalog) carries the ambiguity-bounded architectural bias law:
+
    $$\lVert \Delta M_{\text{bias}} \rVert \leq C \cdot \kappa_{\text{processing}} \cdot I(G;\Omega_\tau \mid e_\tau, M_{\tau^-})$$
+
    *Claim novelty* — already a substantive result. The factors decompose as: $C$ (universal constant), $\kappa$ (architectural property of the processor — modular vs coupled), $I$ (goal-resolvable residual uncertainty in the observation given context).
 
 4. **Class hierarchy in LEXICON.md is precise.** adaptive → agentic → actuated → self-actuated → **logogenic** → **logozoetic**.

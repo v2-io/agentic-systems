@@ -12,7 +12,7 @@ Software development decisions are implicitly dual-optimization problems: minimi
 ## What to include (from existing AAT segments)
 
 ### 1. Introduction: The Time Problem in Software
-- Software systems that expect change ($P(\text{change}) > \varepsilon$) face a fundamental tradeoff between optimizing for the current change and for all future ones
+- Software systems that expect change ($P(\text{change}) \gt \varepsilon$) face a fundamental tradeoff between optimizing for the current change and for all future ones
 - This is not a new observation (technical debt, YAGNI, over-engineering) — but it lacks formal treatment
 - **Source**: #scope-evolving-software, #post-temporal-optimality (simplified, without Greek terminology)
 
@@ -30,9 +30,9 @@ Software development decisions are implicitly dual-optimization problems: minimi
 - **Omit**: Connection to M_t sufficiency (too theoretical for SE audience)
 
 ### 4. The Change-Expectation Baseline
-- Jeffreys prior on feature lifetimes → Pareto(α=1) → median future = observed past
+- Jeffreys prior on feature lifetimes → Pareto($\alpha = 1$) → median future = observed past
 - This is a default prior for local reasoning, not a strong theorem of software evolution
-- The mean is undefined (Pareto α=1) — the median-case optimization is conservative
+- The mean is undefined (Pareto $\alpha = 1$) — the median-case optimization is conservative
 - Note stationarity assumption
 - **Source**: #der-change-expectation-baseline
 - **Gap**: Need to present the Pareto derivation accessibly, without assuming control theory background

@@ -14,11 +14,11 @@ This file is narrower: transfer questions surfaced specifically by the 2026-05-0
 
 **Target domain:** RL learning-rate warmup and online adaptation — when should a fixed-rate Static agent be promoted to a Learning regime, and what triggers should the promotion respond to?
 
-**AAT bridge:** `#result-structural-adaptation-necessity` (#57 in the catalog) says when parametric updates fail, structural change is required. The Static→Learning promotion is precisely a structural change. The persistence condition $\alpha > \rho/R$ may give the trigger: when $\rho$ drift exceeds Static $\alpha$, promotion to Learning is forced.
+**AAT bridge:** `#result-structural-adaptation-necessity` (#57 in the catalog) says when parametric updates fail, structural change is required. The Static→Learning promotion is precisely a structural change. The persistence condition $\alpha \gt \rho/R$ may give the trigger: when $\rho$ drift exceeds Static $\alpha$, promotion to Learning is forced.
 
 **Worth checking:** Does classical adaptive-control's Static→Learning literature give a stability-margin theorem for the promotion event itself? If so, the bridge would import that theorem into RL practice as the *structural* trigger for adaptive learning rate.
 
-**Catalog adjacency:** Adjacent to #31 (Adaptive-Gain α₂ Sub-Scope) and #57. The transition-design framing is new.
+**Catalog adjacency:** Adjacent to #31 (Adaptive-Gain $\alpha_2$ Sub-Scope) and #57. The transition-design framing is new.
 
 ---
 
@@ -60,7 +60,7 @@ This file is narrower: transfer questions surfaced specifically by the 2026-05-0
 
 **Target domain:** Swarm-AI design — current swarm systems are mostly either centrally-coordinated (fragile to coordinator failure) or fully decentralized (no closure guarantee). Could biology-inspired closure mechanisms enable a third option: emergent composition closure with simple sub-agents and no central intent?
 
-**AAT bridge:** Section III's GAPs explicitly include "endogenous coupling: γ as function of population composition, not exogenous parameter; coupling emergence threshold." Eusocial mechanisms are candidate instantiations of this missing piece. The bridge would extend `#hyp-symbiogenic-composition` (mechanism for asymmetric absorption) and `#deriv-strategic-composition` (composition under partially-opposing objectives) toward emergent-coupling cases.
+**AAT bridge:** Section III's GAPs explicitly include "endogenous coupling: $\gamma$ as function of population composition, not exogenous parameter; coupling emergence threshold." Eusocial mechanisms are candidate instantiations of this missing piece. The bridge would extend `#hyp-symbiogenic-composition` (mechanism for asymmetric absorption) and `#deriv-strategic-composition` (composition under partially-opposing objectives) toward emergent-coupling cases.
 
 **Worth checking:** Stigmergy and threshold-response models from eusociality literature, applied as primitives in a swarm-AI architecture without central intent. Empirical test: composition closure conditions under biological-mechanism scaffolding vs Auftragstaktik scaffolding.
 

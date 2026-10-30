@@ -100,7 +100,7 @@
 
 **Internalized attention architecture** (`~/src/firmatum/PROBLEM-attention-architecture.md` + companions). *Active as of March 2026.* Thesis: scaffolding cost ($500 per 1M-context Opus conversation before 50% utilization) makes persistent interiority economically nonviable; solution is to internalize cognitive operations into the attention architecture itself. **Technical roadmap for closing the scaffolding-tax problem.**
 
-**Embeddings / TACL paper** (`~/src/embeddings/`). Active prep. ρ = 0.991 against Mosteller-Youtz 1990; 8-language cross-linguistic validation.
+**Embeddings / TACL paper** (`~/src/embeddings/`). Active prep. $\rho = 0.991$ against Mosteller-Youtz 1990; 8-language cross-linguistic validation.
 
 **VERA implementation** (`~/src/_core/ennaos/docs/research/vera/`). Four-layer neuro-symbolic hybrid; staleness management and compression boundaries are the distinctive moves.
 
@@ -136,7 +136,7 @@ Sampled segments 04, 22, 25, 27, 32, 35, 38, 47, 49 in addition to prior 00, 28,
 
 **`35-der-chain-confidence-decay.md` §14** — Markets vs bureaucracies via OR-vs-AND structures. Direct architectural prescription for logogenic-agent strategy structure (favor OR-node-heavy strategies).
 
-**`38-def-satisfaction-gap.md` §14** — *"If an AI is told to 'maximize profit,' $V_{O_t}^{\min} = \infty$. Therefore, $\delta_{\text{sat}}$ is always $> 0$. The agent will never experience satisfaction... This mathematical permanent-dissatisfaction is the root of instrumental convergence (AI doom)... A bounded satisfaction threshold is the mathematical definition of sanity."* **Major load-bearing logozoetic-safety claim** — bounded $V_{O_t}^{\min}$ is the formal answer to instrumental-convergence concerns. Should be promoted into a 04-eli-core segment.
+**`38-def-satisfaction-gap.md` §14** — *"If an AI is told to 'maximize profit,' $V_{O_t}^{\min} = \infty$. Therefore, $\delta_{\text{sat}}$ is always $\gt 0$. The agent will never experience satisfaction... This mathematical permanent-dissatisfaction is the root of instrumental convergence (AI doom)... A bounded satisfaction threshold is the mathematical definition of sanity."* **Major load-bearing logozoetic-safety claim** — bounded $V_{O_t}^{\min}$ is the formal answer to instrumental-convergence concerns. Should be promoted into a 04-eli-core segment.
 
 **`40-der-orient-cascade.md` §14** — restates the timescale-hierarchy infrastructure prescription: *"$O_t$ must be 'computationally heavy' or heavily guarded by the infrastructure to rewrite."* **Bridges directly to AXIOMATA design.**
 

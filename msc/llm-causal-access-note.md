@@ -23,7 +23,7 @@ Pearl's critique treats the LLM *in isolation*. AAT's fundamental observation (T
 1. The agent selects an action a_t (TF-07)
 2. The action causally affects the environment (TF-01)
 3. The observation o_{t+1} arrives after the action (temporal ordering, TF-02)
-4. The mismatch δ_t conditioned on a_t is an *interventional* signal
+4. The mismatch $\delta_t$ conditioned on $a_t$ is an *interventional* signal
 5. The agent updates M_t from this interventional data (TF-06)
 
 The agent = model + loop, not model alone. An LLM writing code, running tests, and observing results is performing genuine do(X) → observe(Y) interventions. The test suite doesn't care whether the agent internally represents a causal DAG — it returns the causal consequence of the agent's action regardless.
@@ -75,7 +75,7 @@ AAT unifies these three responses:
 
 2. **The training data** (TF-03, IB): The information bottleneck predicts that causal structure will be absorbed from causally-structured data, because it has predictive power.
 
-3. **The behavioral evidence** (TF-05, mismatch): If an agent's actions produce outcomes consistent with Level 2-3 reasoning (low δ in interventional prediction tasks), the capacity is demonstrated regardless of the mechanism.
+3. **The behavioral evidence** (TF-05, mismatch): If an agent's actions produce outcomes consistent with Level 2-3 reasoning (low $\delta$ in interventional prediction tasks), the capacity is demonstrated regardless of the mechanism.
 
 The implication for AAT's scope: LLMs embedded in feedback loops are legitimate AAT agents. They are not excluded from purposeful agency by Pearl's hierarchy. The hierarchy is correct — Level 2 requires causal structure — but the structure comes from the *loop* and the *training data*, not from an explicit internal SCM.
 
@@ -87,7 +87,7 @@ The spike (spike-purposeful-agent-derivation.md) establishes that:
 - The feedback loop provides Level 2 (Part 3.4, derived from TF-02)
 - Temporal optimality (#010) narrows us to explicit causal models when planning is cheaper than experimentation (Part 10.3, scope narrowing)
 
-The LLM case is interesting because it occupies a *middle ground*: the LLM has absorbed implicit causal structure from training (Response 2) AND operates in a feedback loop (Response 1), but doesn't maintain an explicit causal DAG (the Σ_t of AAT's Level 4 G_t).
+The LLM case is interesting because it occupies a *middle ground*: the LLM has absorbed implicit causal structure from training (Response 2) AND operates in a feedback loop (Response 1), but doesn't maintain an explicit causal DAG (the $\Sigma_t$ of AAT's Level 4 $G_t$).
 
 Where does this place the LLM agent in the G_t hierarchy from the spike?
 
@@ -104,7 +104,7 @@ For AAT-grounded AI agent design:
 
 1. **Don't try to build explicit SCMs into LLM agents.** The loop provides Level 2 access; language training provides implicit causal priors. What the agent needs is a good loop (fast feedback, informative observations, appropriate gain) — AAT's adaptive machinery.
 
-2. **Invest in the observation channels.** The agent's effective causal access is gated by observation quality (U_o). Good tests, clear error messages, informative logging — these raise η*, which raises T, which determines whether the agent persists as an effective purposeful system.
+2. **Invest in the observation channels.** The agent's effective causal access is gated by observation quality ($U_o$). Good tests, clear error messages, informative logging — these raise $\eta^\ast$, which raises T, which determines whether the agent persists as an effective purposeful system.
 
 3. **M_t preservation across sessions matters more than internal causal architecture.** The 100% context turnover problem destroys the agent's accumulated causal understanding each session. Externalizing M_t (through CLAUDE.md, memory files, well-structured code) preserves the causal knowledge that the loop helped the agent acquire.
 

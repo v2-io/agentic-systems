@@ -6,7 +6,7 @@
 
 75 numbered audit notes (00-74; entry 66 appears for two distinct segments — `66-deriv-discrete-sector-condition.md` and `66-disc-separability-pattern.md` — likely a numbering collision when both were added).
 
-3 meta files (`tracker-feedback.md`, `tracker-update-message.md`, `tracker-update-response.md`) — about the naming-cycle voting tracker, not audit content. Tangentially relevant: they exhibit the recursive-framework reading (chronica / η* / deliberation-cost applied to the agent's own naming-cycle work) that validates `disc-framework-self-diagnostic` empirically. Marked **meta-context** below.
+3 meta files (`tracker-feedback.md`, `tracker-update-message.md`, `tracker-update-response.md`) — about the naming-cycle voting tracker, not audit content. Tangentially relevant: they exhibit the recursive-framework reading (chronica / $\eta^\ast$ / deliberation-cost applied to the agent's own naming-cycle work) that validates `disc-framework-self-diagnostic` empirically. Marked **meta-context** below.
 
 ## Status legend
 
@@ -125,7 +125,7 @@
 |------|--------|-------|
 | tracker-feedback.md | ➖ meta-context | About the naming-cycle voting tracker; not audit content per se |
 | tracker-update-message.md | ➖ meta-context | Joseph's update to Gemini about tracker schema |
-| tracker-update-response.md | ➖ meta-context | Joseph's response to Gemini's framework-recursive readings (chronica / η* / deliberation-cost applied to Gemini's own naming-cycle work) — *empirical instance of the recursive-feature claim in `disc-framework-self-diagnostic`* |
+| tracker-update-response.md | ➖ meta-context | Joseph's response to Gemini's framework-recursive readings (chronica / $\eta^\ast$ / deliberation-cost applied to Gemini's own naming-cycle work) — *empirical instance of the recursive-feature claim in `disc-framework-self-diagnostic`* |
 
 ## Status summary (after Phase B composition cluster complete — 2026-05-01)
 
