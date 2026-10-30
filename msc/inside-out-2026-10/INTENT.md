@@ -30,7 +30,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 ## C — The theory is correct where it is known wrong, and stronger where strengthening was found
 
 - **C.1** Every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. The defect lists are `owner-review/integrator-items.md` A1–A15, `internal-surfaces/00-cross-surface-map.md` §3 and `influx-scout/MAP.md` §3. · *started: F72 and A1 landed and checked; A6, A7, A10, A12, A13, A14 in parallel lanes; A8, A11 landed with B.1; A4, A5 wait for the C2/C3 spikes' integration, whose segments they share; A9's headline waits for A.2; A3 for the exit-time spike*
-- **C.2** Strengthenings C1–C3 (exit time, loop identification, allocation vs distortion coupling) are independently checked, then landed or refuted. · *started: three spikes landed in their dirs; independent verifiers running*
+- **C.2** Strengthenings C1–C3 (exit time, loop identification, allocation vs distortion coupling) are independently checked, then landed or refuted. · *C1 landed in canon as Prop A.1S-τ with the Model S window (33cfb14c), under independent check; C2 and C3 verified, in the Part II integration*
 - **C.3** A cross-segment contradiction scan reports no open contradictions among load-bearing segments. · *not started; one found: `#scope-composite-agent` admits composites with no composite objective (routes C-iii, C-iv) while requiring one (:83), and eight segments rest on that gate (`items-recheck/q-proposals.md` §2.1)*
 - **C.4** Part III and the open strengthenings outside C1–C3 have an owner: each held item under C is landed, refuted, or set aside with its reason recorded. · *not started; the items are in the ledger, most `unassigned` today; inputs `items-recheck/q-proposals.md` §2, `t2-todo.md` §2*
 
@@ -84,7 +84,7 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 | Lead coordinator (Opus 5.5, session "asf-cleanup") | I, plus coordination | `INTENT.md`, `HANDOFF.md` |
 | Part II integrator (Fable), own worktree: C2 and C3 spikes with their verifiers, B.1's Part II check, A4, A5 | C.2, B.1, C.1 | Part II and the Volume 3 bias law, on its branch; `part-ii-integration.md` |
 | A.1 fourth reader (Opus), bare brief | A.1 | `reviews/scope-adaptive-system-check-5.md` |
-| Part I round-2 integrator (Fable), own worktree: the persistence window, the C1 exit-time spike and its verification, Prop A.1S(i)'s break | C.1, C.2 | Part I, on its branch; `part-i-round-2.md` |
+| Part I round-2 checker (Opus), bare brief | C.1, C.2 | `reviews/part-i-round-2-check-1.md` |
 | Volume 4 second checker (Opus), bare brief | C.1 | `reviews/vol4-c1-check-2.md` |
 | TST second checker (Opus), bare brief | C.1, H.2 | `reviews/tst-lane-check-2.md` |
 | vsect builder (Fable), on the line for the store migration (after the four integration branches merge) | I.4 | `~/src/arch/firmatum/utils/vsect/`, `.vsect/` |
@@ -103,7 +103,7 @@ These are finished and on the line through the lead:
 - the Volume 4 lane (A6, A11, A12, A14, the substrate record) and its round-2 integrator;
 - the A.1 round-2 integrator;
 - the C1, C2 and C3 spikers, and the C2 and C3 verifiers;
-- the Part I lane (A7, A10, the persistence-cost algebra);
+- the Part I lane (A7, A10, the persistence-cost algebra) and its round-2 integrator (C1 landed as Prop A.1S-τ; the Model S window);
 - the A.1 round-2 checker (09) and round-3 integrator (10);
 - the C1 spike verifier; the Part I and Volume 4 lane checkers;
 - the TST lane (A13, the 44 `old-*` fates);
