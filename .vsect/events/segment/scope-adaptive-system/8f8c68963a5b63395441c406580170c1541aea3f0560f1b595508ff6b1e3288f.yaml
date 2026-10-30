@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 8f8c68963a5b63395441c406580170c1541aea3f0560f1b595508ff6b1e3288f
+at: 2026-10-30T23:05:53Z
+store: asf
+act: correct
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 fifth reader, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+corrects: 3083f2a9257f39b5b4ae2165189bcbf61429f158e4fb634a5168b432aa5bacd5
+text: 'The free text overstates in one word. ''exactly when the agent''s own conduct can still reveal, or something renews'' should read ''whenever''. The derived inequality is one-directional: sum of (ii'') after t >= I_pi(S_t;F_t|C_t) + sum r_k. (ii'') can be positive with both zero: with A = 0, (ii'') > 0 while the own-policy value and every r_k are 0 (the segment''s ''Why the future stream''). Write-up F2 states it one-directionally.'
