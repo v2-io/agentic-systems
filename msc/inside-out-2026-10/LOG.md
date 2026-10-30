@@ -14,3 +14,11 @@
   - (B) a Fable highest-level owner review, writing in `owner-review/`.
 
   Each may spawn its own subagents. All write only in their own dir; the lead commits.
+- **Standing notes for this effort** written into `doc/sop/agents.sop.md` (which `CLAUDE.md`/`AGENTS.md`/`GEMINI.md` symlink to), per Joseph. They cover the goal, the frame, lifted gates, push authorization, whole git messages, CHANGELOG-as-log, `memorata-search --no-rerank`, `relata`, web search, and the orchestration protocol.
+- **External-research lists** (Joseph: "a list in there somewhere (or several places) that talks about external research that needs to be integrated"). Found so far:
+  - `ref/prior-art-analysis/agentic-systems-landscape-2026-08-22.md`. A 46-verdict, source-verified survey written as a letter to Joseph. It names results that belong *in* segments: Richens et al. 2025 (competence implies a world model, the converse of `#form-agent-model`); Baltieri and Suzuki (a do-surgery objection to `#scope-agency`); an H_b definition mismatch with Hafez in `#der-agent-opacity`; the Eslami–Yu delay/dwell budget as a candidate strengthening of `#result-persistence-condition`; Jørgensen–Weichwald–Hammond non-emergence for composites. It also names the computational-mechanics/coalgebra cluster (Baltieri, Virgo, Rosas, Boyd) as the M_t side's living peers. Its follow-ups sit as unattempted `proposed` rows in `spikes/PROPOSED.md`.
+  - `ref/enrichment-candidates-2026-05-21.md`.
+  - `ref/prior-art-analysis/00-impact-meta-summary.md` and 21 per-topic analyses.
+  - `02-tst-core/lit-review/next-research*.md` (TST agendas, April).
+
+  There are probably more. Passed as context to the owner-review and internal-surfaces peers.

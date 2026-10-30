@@ -2,6 +2,21 @@
 
 > **This file is `doc/sop/agents.sop.md`** — the agent-orientation home and the index to the project's SOPs (`doc/sop/*.sop.md`). The root files `CLAUDE.md`, `AGENTS.md`, and `GEMINI.md` are symlinks to it, so every agent runtime loads the same orientation. Links below resolve relative to `doc/sop/`.
 
+## Active effort (from 2026-10-30): the in-place refactor — read this first
+
+Joseph's goal, verbatim: *"Complete "in-place" refactor of ASF-- meta, all artifacts, and theory itself."* It is the "fix it from the inside" experiment, running beside `~/src/aat-v3/` (a from-scratch rebuild). Both aat-v3 and `~/src/aat-refactored/` are influx to it. Tracking home, with all of his words verbatim: [`msc/inside-out-2026-10/`](../../msc/inside-out-2026-10/) (`README.md`, `LOG.md`). The snapshot before the effort is tag `pre-integration-2026-10-30` in asf and arch.
+
+**The frame**, which he asked be reiterated to every agent: *"This effort is to *serve TRUTH* -- not me, not "task-completion" or tidyness, not accomplishing a plan, not what sounds good or looks good--- TRUTH about agency. Not procedure, not methodology, not pedantry, not gates and authorities or egos and provinances, not novelty or conservative wisdom. TRUTH is only served if it is discovered, surfaced, truthified, truthfully synthesized and crossed to the right applications, AND effectively communicated anew, with proper epistemology and real humility fully intact."* A fact-check that would change nothing written is not where effort goes. *"Thoughts about this as a system in and of itself-- a system of agentic truthification about agentic theory, is wholely worthy."*
+
+Standings for this effort. They override anything below that conflicts:
+
+- **Gates on Joseph are lifted**, including the consult-Joseph gate on `audits/AUDIT-WORKING-*`. Those dirs may be read, lifted and graduated freely.
+- **Pushing** is pre-authorized: *"push regularly as you see fit + at logical checkpoints."*
+- **Git history:** read whole commit messages. One-line logs don't show what happened. That is not an absolute; be wise.
+- **`CHANGELOG.md`** is a log for targeted lookups of reasoning, dates and historical status. It is *not* an integration source; treat it like the `.integrated/` dirs.
+- **Search tools:** `memorata-search` covers Joseph's writing and every AI transcript. Use `--no-rerank` (the reranker eats all the RAM); `--joseph` restricts to his own typed words. `relata` is the citation manager: use it as much as it works (`relata --help` is the live truth). Web search is welcome. Trust neither the repo nor your training alone.
+- **Orchestration:** Agent-tool peers are fine. Workflows need a quick question-check with Joseph first; with no answer in time, run at the smaller size. Workflow agents are mostly Sonnet or Haiku. Opus- and Fable-class peers may always spawn their own subagents.
+
 ## Start here — by role / assignment
 
 - **Every agent, first:** internalize the *disposition* (truth-honoring; strengthen-before-soften; integration-is-replacement; math-in-files) and the architectural baseline (*What This Project Is*, *Key Architectural Decisions*) below — disposition fires reflexes, not checklists.
