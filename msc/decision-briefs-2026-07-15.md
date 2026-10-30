@@ -1,20 +1,8 @@
 # Decision briefs — 2026-07-15 (the valve)
 
-*Every currently-open genuinely-Joseph decision, one brief each (decided items are deleted from this file — the decision record lives in CHANGELOG), ordered for a single sitting: quick nods first, strategic last. Each brief was verified against current repo state on 2026-07-15 (the 2026-07-07 census was the substrate; several items moved since). Standard per brief: decidable from this text alone — context, options, lead-rec with honest uncertainty, pointer to full detail. Record decisions inline (a word next to the title is enough — agents will route them) or however is easiest. Assembled by the decision-valve cycle; see CHANGELOG 2026-07-15.*
+*The open decisions that were once routed to Joseph, one brief each. These are now the in-place refactor's to resolve on the merits (KR3.3c in `msc/inside-out-2026-10/INTENT.md`). Joseph, 2026-10-30: if there is a desire to ask him, "take it as honest uncertainty, but then figure out how to resolve the uncertainty." A brief is deleted from this file when it is resolved, and the file is deleted when empty. Each brief was verified against repo state on 2026-07-15. Re-check its facts before acting on it.*
 
-## Quick nods — strong lead-recs, a yes/no suffices
-
-### F72 — Release or keep the external-eye hold on the hard-ceiling convention fix (aging since 2026-05-31)
-
-*Since the 2026-07-07 census:* Still open and aging — the 2026-07-14 adjudication cycle (7 rulings, commit 9df63ee) did NOT include it and CHANGELOG explicitly lists it under "Left for Joseph"; segment still `status: exact` with no convention clause; schema off-ramp WN flag still live.
-
-**What**: Whether to run the held adjudication now. **Context**: The spike `spike-strategic-persistence-hard-ceiling-convention-2026-05-31` confirmed (verdict B, high confidence, hand + simulation) that the $\rho_\Sigma \ge R_\Sigma/2$ hard ceiling in `#deriv-strategic-persistence-hard-ceiling` depends on the full-weight-current forgetting convention — under the textbook add-then-discount ordering it dissolves to the trivial bound. The prescribed fix is small and non-weakening: name the convention as a fourth condition in both segments, keep `status: exact` (exact-under-stated-conditions). It was RESERVED for an external-eye adjudication and has sat 6.5 weeks; the 2026-07-14 cycle explicitly left it for you, and JOSEPH-TODO already lists "take verdict B as settled" as the lead default. Meanwhile the segment's exact label is missing a premise the spike itself proved load-bearing — the hold is now costing truth, not buying safety. **Options**: (a) Release: run a fresh-mathematician re-derivation of Props C.1/C.2 + the SEG/ALT1 fork (the segment's own "owed" independent-verify), then land verdict B. (b) Take B as settled and land without the fresh eye. (c) Keep holding. **Lead recommendation**: (a) — it discharges both the external-eye reservation and the segment's standing verify debt in one cheap pass; (b) acceptable, (c) has no remaining upside. **Pointer**: `TODO.md` ~line 39; the spike §6–7; segment Epistemic Status "Strict-form independent-verify note".
-
-### core.hooksPath is dead — unset it (near-free); optionally add the drift-guard hook
-
-*Since the 2026-07-07 census:* Worse than the census: after the submodule migration, ~/src/agentic-systems/.git is now a gitdir *file*, so the configured hooksPath resolves to "Not a directory" — hooks are silently inert, not merely symlink-fragile. No real (non-sample) hooks exist anywhere in the module or repo, so nothing is currently lost.
-
-**What.** Fix `core.hooksPath`. **Context.** Verified: the submodule's config (`archema-io/.git/modules/asf/config`) sets `core.hooksPath = ~/src/agentic-systems/.git/hooks`. Post-migration that path is a gitdir pointer *file*, not a directory — every hook is silently disabled. The module's own hooks dir contains only `.sample` files, and no hook scripts live in the repo, so as far as I can verify no real hook has ever been lost or is running; if the pre-rename repo carried real hooks, they went with its old `.git` dir (unverifiable now). **Options.** (1) `git config --unset core.hooksPath` — one command, zero loss, agent-executable; only flagged to you because it's program-migration territory. (2) Same, plus seize the moment for cluster-09's named-but-never-built automation: `bin/refresh-all --check` as a hook, so generated files (README/FINDINGS/LEXICON — 6 weeks stale until yesterday) can't silently drift. **Lead rec.** (2), as **pre-push** not pre-commit (drift-check on push keeps commit flow frictionless). If you'd rather not decide the hook now, say "just unset" — item closed either way in one line. **Pointer.** cluster-09 findings §29/§58; CHANGELOG 2026-07-14 "Left for Joseph."
+## Quick calls — strong lead-recs
 
 ### A9 — Un-gitignore .claude/ (selectively) so project automation can exist?
 
@@ -38,13 +26,7 @@
 
 **What.** Approve slimming the repo's tracked weight. **Context.** Theory content is ~8.6M, but the pack is 225.7 MiB. Verified today: ref/ PDFs are *already* untracked (5.7M tracked; census's "135M tracked PDFs" is stale) and mono build outputs are *already* gitignored. What's still tracked: `.archive/` **162M** (obsolete archive, live tree) and **35M** of mono/ = almost entirely the commercial Garamond Premier Pro fonts — which are also the CC-BY licensing exposure (census Part C). Plus CURRENT-VOL1 ~8.5M (separate brief). **Options.** (1) Nothing. (2) Untrack `.archive/` (move to an `archive/obs` branch or out-of-tree) + remove Garamond from tracking; working tree lightens, but **already-committed blobs stay in every clone until history is rewritten**. (3) History rewrite (`git filter-repo` on .archive/old-ref-PDF/font blobs) → clone drops toward ~15M, but all hashes change: breaks CHANGELOG/tag commit refs and the archema-io submodule pointer — its own decision. **Lead rec.** Do (2) now — cheap, reversible, and the font removal is due on licensing grounds regardless. Defer (3) to a deliberate public-release point; the licensing question alone may force it sooner (fonts are in history either way). **Pointer.** `msc/meta-process-review-2026-07-07/10-...-findings.md` §0, §Option-B; census Part C.
 
-## Policy calls — one decision retires a recurring gate
-
-### A1 — Set a standing policy for the 22 AUDIT-WORKING gold dirs (one decision, largest unblock)
-
-*Since the 2026-07-07 census:* Unchanged since the 2026-07-07 census. Verified 2026-07-15: 22 dirs present, 0 graduated, no audits/ commits since 07-07, gold-lift still stalled at wave 5.
-
-**What**: One-time policy call replacing a per-dir gate. **Context**: `audits/README.md` makes each de-novo audit's `AUDIT-WORKING-*` dir ("the gold" — first-encounter cognition, §14 Wandering Thoughts) a non-optional consult-Joseph gate. You've convened it once (2026-05-30, lift only). Result: 0 of 22 audits have ever graduated to `.integrated/`, the backlog looks 5x more open than it is, and the gold pools faster than it drains. **Options**: (a) Standing policy: "lift gold to per-segment Working Notes / the pedagogy pipeline, then `git mv` the dir to `.integrated/` — default applies to all current and future dirs, no re-convening"; agents finish the stalled wave-5 lift (TST/03/04) under it. (b) Same policy but you spot-check 2–3 dirs first. (c) Keep per-dir convening (status quo — predictably means continued 0-graduation). **Lead recommendation**: (a), with one carve-out: pedagogical *reflection*-gold routes to the pedagogy pipeline per `project_pedagogy_reflection_gold_mechanism`, not WN — that reconciliation is the one genuinely open design point, and (b) is the honest hedge if you want to see it worked once first. **Pointer**: `audits/README.md`, `audits/STATUS.md`, cluster-02 findings §D1/§(e), `msc/gold-lift-sweep-2026-05-30.md`.
+## Policy calls
 
 ### A4 — What replaces stage-gating, and what drains Working Notes
 
@@ -94,7 +76,7 @@
 
 **Pointer.** `PRACTICA.md` lines 45–47 + §"Current naming conventions refactor" (item 13); cluster brief `msc/meta-process-review-2026-07-07/03-naming-terminology-lexicon-findings.md`.
 
-## Theory and naming — genuinely yours, need real thought
+## Theory and naming — need real thought
 
 ### SP-30 — adopt the typed epistemic target $S_t=(\Omega_t,\theta)$, or keep state-only $\Omega$?
 
@@ -196,19 +178,3 @@
 **Lead.** Option 2 — the breakage fixes are twice-confirmed and low-risk; the stance axis-vs-deployment question (mini-lexicon-todo §13.11) is the one genuinely open judgment and can ride a quick voting-search.
 
 **Pointer.** `TERMINOLOGY-TODO.md` §F (line 136); `msc/naming/mini-lexicon-todo.md` §13.11.
-
-## Strategic — no lead-rec possible from here
-
-### A7 — Split 04-eli-core into its own (possibly private) repo?
-
-*Since the 2026-07-07 census:* Unchanged since census — 04-eli-core still in-repo, no decomposition commits. One new sharpening fact verified 2026-07-15: the repo is PUBLIC, so the exposure the split would prevent is partially already realized in git history.
-
-**What.** Whether `04-eli-core` (the ELI/consciousness volume) should move out of the ASF repo into its own repo, possibly private, so Volumes 1–3 can publish without the ELI association.
-
-**Context.** The cluster-10 review measured coupling: 189 references would need rewiring (152 into `01-aat-core`, 37 into `03-llm-core`), plus terminology/tooling-sharing decisions and loss of atomic refactor across all four volumes. Coupling evidence argues *against* splitting; the only real driver is strategic exposure-decoupling — which only you can weigh. One fact that sharpens it: **the repo is already public** (`v2-io/agentic-systems`, confirmed 2026-07-15), so all existing 04 content is in public git history now. A split-to-private protects *future* 04 development and removes the visible association going forward, but does not un-expose the past without a history rewrite.
-
-**Options.** (1) Keep whole — accept the association, rely on honest tier-marking. (2) Split 04 to a private Archema member repo — pay the 189-ref rewiring; decide separately whether to scrub public history. (3) Defer until Vol 1 publication is actually imminent (the trade is only live then).
-
-**Lead recommendation.** None — genuinely open per the census's gather-and-frame scope; it is a strategic-exposure judgment only you hold. What would resolve it: your read on whether the 2026–27 hostile-discourse posture requires *visible* decoupling, or whether deferred-empirical-work framing already covers it.
-
-**Pointer.** `msc/meta-process-review-2026-07-07/10-repo-decomposition-strategic-question-findings.md` §5 Option D, §6.

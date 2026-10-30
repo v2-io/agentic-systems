@@ -70,9 +70,9 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
   - owner review (KR1.1)
   - influx scout (KR3.1)
   - F72 integrator (KR2.3/3.3a): it commits but doesn't push; the lead reviews the diff, then pushes.
-- **Waiting on Joseph.** Two calls are his, because the first is private material and the second touches publication strategy.
-  - `msc/joseph-working-notes.md` is gitignored but cited by `#def-eli-cohort` and the 03/04 OUTLINEs: commit, move, or drop the citations?
-  - A7: whether to split 04-eli-core into a private repo.
+- **Waiting on Joseph: nothing.** Resolve uncertainty rather than route it. Two items that used to wait on him now sit in KR3.3a:
+  - Canon citing the gitignored `msc/joseph-working-notes.md`. Lift any theory content those citations need into canon, then remove the citations.
+  - The 08-22 cleanup items.
 - **Next for the lead.**
   1. When the owner review lands, revise O1 and put KR1.2's candidates to Joseph.
   2. Commission KR3.3a.

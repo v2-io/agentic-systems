@@ -34,7 +34,7 @@ In service of *"TRUTH about agency … discovered, surfaced, truthified, truthfu
 - **KR3.3** Each mapped item that bears on the theory is integrated at honest tier, or set aside with a recorded reason. · *not started*
   - 3.3a: small landings that already have work orders;
   - 3.3b: heavy landings, each with its own integrator;
-  - 3.3c: the backlog that was gated on Joseph, decided on the merits.
+  - 3.3c: the July decision briefs, resolved on the merits (`msc/decision-briefs-2026-07-15.md`; each brief is deleted when decided).
 - **KR3.4** Every OUTLINE row has a file or an honest mark, and every legacy `old-*` file has a fate. · *not started*
 
 ## O4 — The truth reaches a reader
