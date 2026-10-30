@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: bf205cda482f1434acd9bf7b585713bad2a989a0bfb43385562b4b375d234f10
+at: 2026-10-30T23:22:14Z
+store: asf
+act: rederive
+about: segment:def-observation-function
+actor:
+  name: Claude Opus 5.5 (A.1 round-6 integrator)
+  role: integrator
+  read:
+  - segment:def-observation-function
+  - segment:def-action-transition
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+committed: after
+criterion: 'Two pairs that induce the same kernel give the run the same law under every policy" holds under fresh noise and fresh transitions (the run''s law is a product of the initial law, the two kernels and the policy), and fails without either: noise that repeats ($\varepsilon_t = \varepsilon_{t-1}$, additive channel), or a transition $\Omega_{t+1} = \varepsilon_t$ under $o_t = \Omega_t \pm \varepsilon_t$ with symmetric $\varepsilon_t$'
+effective-version: 92693bd3b42becf084a3ebc500c0096fb9950a3fd064b5a103dafba7474f3499
+from: review:scope-adaptive-system-integration-6#C3
+line: derivation
+outcome: confirmed
+recheck: joint law of $(o_{t-1}, o_t)$ in the first case, of $(o_t, \Omega_{t+1})$ in the second
+target-version: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+version-from: git-revision

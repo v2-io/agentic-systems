@@ -78,11 +78,11 @@ The estimation error is $e_t = x_t - \hat x_{t\vert t-1}$, and the innovation is
 
 Scalar Kalman gain:
 
-$$K_t = \frac{P^-_t}{P^-_t + r_{a_t}}$$
+$$K_t = \frac{P^-_t}{P^-_t + r_{a_{t-1}}}$$
 
-With $P^- = 4.25$: $K(H) \approx 0.810$, $K(L) \approx 0.321$.
+The gain applied to $\delta_t$ carries the noise of the reading it corrects, set by the mode chosen at $t-1$. With $P^- = 4.25$: $K(H) \approx 0.810$, $K(L) \approx 0.321$.
 
-The exact uncertainty ratio mapping: $U_M = P^-_t$, $U_o = r_{a_t}$, $\eta^\ast = K_t$.
+The exact uncertainty ratio mapping: $U_M = P^-_t$, $U_o = r_{a_{t-1}}$, $\eta^\ast = K_t$.
 
 ### Exploration ( #def-causal-information-yield)
 
@@ -102,7 +102,7 @@ $$\Delta\eta^*(0.5)\cdot 0.70 \gt 0.20 \;\Longrightarrow\; \Delta\eta^*(0.5) \gt
 
 ### Structural Adaptation ( #result-structural-adaptation-necessity)
 
-Assume a maneuvering regime change introduces sustained residual autocorrelation and a mismatch floor. The disturbance here is stochastic, so the trigger is the Model S one: the persistence condition is satisfiable at some gain iff the optimal filter's own error fits inside the region ( #result-persistence-condition, the gain window's feasibility condition). If the estimated valid radius drops to $R = 0.08$ while the Kalman prior error is $P^- = 0.640$ (RMS $0.80$, from the Lyapunov Bounds section), $R^2 = 0.0064 \lt P^-$: no gain persists in mean square, parametric adaptation cannot be certified at any tuning, and model-class change is required (e.g., constant-velocity → constant-acceleration process model).
+Assume a maneuvering regime change introduces sustained residual autocorrelation and a mismatch floor. The disturbance here is stochastic, so the trigger is the Model S one, taken in discrete time. #result-persistence-condition states the gain window's feasibility condition for continuous time, $R^2 \gt n\sigma_{\text{env}}\sigma_\nu$: some gain persists in mean square iff the Kalman–Bucy error fits inside the region. This filter runs in discrete time, so we use the discrete analog, stated here and not carried from that segment. Some fixed gain keeps the stationary prior error $V(K)$ of the Lyapunov Bounds section inside the region, $V(K) \lt R^2$, iff the smallest such error does, and that is the Kalman prior error $P^- = 0.640$ (RMS $0.80$). If the estimated valid radius drops to $R = 0.08$, then $R^2 = 0.0064$ is a hundredth of $P^-$. No gain persists in mean square, parametric adaptation cannot be certified at any tuning, and model-class change is required (e.g., constant-velocity → constant-acceleration process model).
 
 ### Tempo + Persistence ( #def-adaptive-tempo, #result-persistence-condition)
 
@@ -138,7 +138,9 @@ At $K = 0.39$ (the Kalman gain) it is $0.640$. At $K = 0.81$, a gain held at its
 
 *Task adequacy.* With $\Vert\delta_{\text{critical}}\Vert = 1$ read on the estimation error, the agent is adequate ($0.62 \lt 1$ after update, $0.80$ before). Read on the innovation, the condition could never hold, since the innovation's RMS is at least $\sqrt{r_H} = 1$ whatever the gain. That is the distinction #def-mismatch-signal draws.
 
-*The region of validity.* With model-class capacity $R = 1.4$ (a domain parameter), the prior error is Gaussian with standard deviation $0.80$, so at any given time it lies outside $\mathcal B_R$ with probability $0.08$. Under Model S the region is a typical scale, not a wall ( #deriv-sector-condition, Prop A.1S and Corollary A.1S.1); the error will leave it, after an expected stay that grows exponentially in $\alpha R^2/\sigma_w^2$ (Prop A.1S-τ), and because this filter runs at the Kalman gain, that exponent is at its maximum for the channel.
+*The region of validity.* With model-class capacity $R = 1.4$ (a domain parameter), the prior error is Gaussian with standard deviation $0.80$, so at any given time it lies outside $\mathcal B_R$ with probability $0.08$. The region is a typical scale, not a wall, and the error will leave it. Inside the region $\lvert (1 - K)e_t \rvert \leq R$, so any step whose disturbance $v_t - K n_t$ exceeds $2R$ in size takes the error out. That has the same positive probability at every step, so the error leaves with probability one. This is the discrete counterpart of #deriv-sector-condition's Corollary A.1S.1, which is stated in continuous time.
+
+*[Discussion]* How long the error stays is not covered by Prop A.1S-τ, which is also continuous-time. What can be said for this filter is a remark, not a carried result. The prior error under a fixed gain is a stationary Gaussian AR(1) with variance $V(K)$, and for such a process the expected stay grows, as the region widens, like $\exp\big(R^2/(2V(K))\big)$. That is the discrete counterpart of the exponent $\kappa_R = \alpha R^2/\sigma_w^2$, which for the linear corrector equals $R^2/(2\,\mathrm{Var}_{ss})$. $V(K)$ is smallest at the Kalman gain, so this filter has the largest exponent its channel allows. The claim is about the exponent, not about the stay at this $R$, where the exponent is only $1.96/1.28 = 1.53$. Solving the exit-time equation on a grid gives an expected stay from zero error of about $17.5$ steps ($3.5$ s at $5$ Hz) at the Kalman gain, and slightly longer, about $19.2$ steps, near $K = 0.27$, where the error's spread is barely larger and it moves more slowly from step to step. The exponent's ordering takes over as the region widens. At $R = 3$ and $R = 4$ the logarithm of the stay is $8.69$ and $14.38$ at the Kalman gain, against $8.06$ and $13.09$ at $K = 0.25$.
 
 ## Mapping Quality Summary
 
