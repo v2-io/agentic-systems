@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 13fff8f454647f2f17634e01b0cc6c418d4aef74c5f07701ff5e913217c9ccd4
+at: 2026-10-30T22:02:55Z
+store: asf
+act: correct
+about: item:todo-dissipativity-template-appendix-class-1-24c8
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: 0e93630c2f01939144d1b0f3f256dd0f60f3e29410127c9de9fee94b4715ef33
+text: 'Wording correction: this item (TODO.md:190) is CL-1 itself (the #dissipativity-template landing), not ''one of the three members of CL-1''. The duplicate link to the bridge-lemma §7.2 item, which tracks CL-1 whole, is still right.'

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: fb03d5391cb93215dafac12aaa9d2123d76f4cc5ecd78d19fc9def9192143310
+at: 2026-10-30T22:02:55Z
+store: asf
+act: correct
+about: item:todo-04-eli-core-src-der-the-scaffolding-tax-5568
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: b168ced6c5378a961babd725228fe36a0ae8292ac68adfaf186cb97cfa317ef6
+text: 'Date correction: ce99ce68 is dated 2026-05-15 (a directory-rename commit, the line''s last touch); the TODO lines originate in 8f76fdac (2026-05-01) or ae118ab5 (2026-05-12). ''Written 2026-05-12 (ce99ce68)'' / ''same commit ce99ce68, 2026-05-12'' is wrong. The verdict is unaffected.'

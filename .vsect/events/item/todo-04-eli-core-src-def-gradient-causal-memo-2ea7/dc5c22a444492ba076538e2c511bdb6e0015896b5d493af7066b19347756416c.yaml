@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: dc5c22a444492ba076538e2c511bdb6e0015896b5d493af7066b19347756416c
+at: 2026-10-30T22:02:55Z
+store: asf
+act: correct
+about: item:todo-04-eli-core-src-def-gradient-causal-memo-2ea7
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: 0fc3dcfb1f752a8d2e02b09ceba4ca6d81c5345bb9eb3fa0c1e3ef1f5e4e81f7
+text: 'Date correction: ce99ce68 is dated 2026-05-15 (a directory-rename commit, the line''s last touch); the TODO lines originate in 8f76fdac (2026-05-01) or ae118ab5 (2026-05-12). ''Written 2026-05-12 (ce99ce68)'' / ''same commit ce99ce68, 2026-05-12'' is wrong. The verdict is unaffected.'

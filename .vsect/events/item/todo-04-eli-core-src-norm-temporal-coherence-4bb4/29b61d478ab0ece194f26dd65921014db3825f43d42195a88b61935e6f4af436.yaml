@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 29b61d478ab0ece194f26dd65921014db3825f43d42195a88b61935e6f4af436
+at: 2026-10-30T22:02:56Z
+store: asf
+act: correct
+about: item:todo-04-eli-core-src-norm-temporal-coherence-4bb4
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: ec12ff0922b50a3eabbc27acb262001c7c319f277d0db6297ac58bae1f8f5a0b
+text: 'Date correction: ce99ce68 is dated 2026-05-15 (a directory-rename commit, the line''s last touch); the TODO lines originate in 8f76fdac (2026-05-01) or ae118ab5 (2026-05-12). ''Written 2026-05-12 (ce99ce68)'' / ''same commit ce99ce68, 2026-05-12'' is wrong. The verdict is unaffected.'

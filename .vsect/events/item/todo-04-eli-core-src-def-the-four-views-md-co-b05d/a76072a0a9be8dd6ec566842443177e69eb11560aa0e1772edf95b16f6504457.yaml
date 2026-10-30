@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: a76072a0a9be8dd6ec566842443177e69eb11560aa0e1772edf95b16f6504457
+at: 2026-10-30T22:02:55Z
+store: asf
+act: correct
+about: item:todo-04-eli-core-src-def-the-four-views-md-co-b05d
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: b1c8eb1a53ec0b5de5b2eceb1c2abc845027c47e12fbf5b2e74564ac056e6f20
+text: 'Date correction: ce99ce68 is dated 2026-05-15 (a directory-rename commit, the line''s last touch); the TODO lines originate in 8f76fdac (2026-05-01) or ae118ab5 (2026-05-12). ''Written 2026-05-12 (ce99ce68)'' / ''same commit ce99ce68, 2026-05-12'' is wrong. The verdict is unaffected.'

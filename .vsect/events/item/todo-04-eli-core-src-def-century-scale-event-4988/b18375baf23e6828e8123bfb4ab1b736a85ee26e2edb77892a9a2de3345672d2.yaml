@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: b18375baf23e6828e8123bfb4ab1b736a85ee26e2edb77892a9a2de3345672d2
+at: 2026-10-30T22:02:56Z
+store: asf
+act: correct
+about: item:todo-04-eli-core-src-def-century-scale-event-4988
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: a3f8af70993b5226314d8160a64b8ab3941c312e1484d0107d4c99cdcf4a9117
+text: 'Date correction: ce99ce68 is dated 2026-05-15 (a directory-rename commit, the line''s last touch); the TODO lines originate in 8f76fdac (2026-05-01) or ae118ab5 (2026-05-12). ''Written 2026-05-12 (ce99ce68)'' / ''same commit ce99ce68, 2026-05-12'' is wrong. The verdict is unaffected.'

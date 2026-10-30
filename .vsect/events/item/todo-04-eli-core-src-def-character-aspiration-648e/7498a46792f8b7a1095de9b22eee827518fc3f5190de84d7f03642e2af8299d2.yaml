@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 7498a46792f8b7a1095de9b22eee827518fc3f5190de84d7f03642e2af8299d2
+at: 2026-10-30T22:02:55Z
+store: asf
+act: correct
+about: item:todo-04-eli-core-src-def-character-aspiration-648e
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: e8218200135d549305dc33e47e1e98a3cf156e648944529b36ad7a640163b8ba
+text: 'Date correction: ce99ce68 is dated 2026-05-15 (a directory-rename commit, the line''s last touch); the TODO lines originate in 8f76fdac (2026-05-01) or ae118ab5 (2026-05-12). ''Written 2026-05-12 (ce99ce68)'' / ''same commit ce99ce68, 2026-05-12'' is wrong. The verdict is unaffected.'

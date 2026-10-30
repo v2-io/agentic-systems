@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: b4c0668c63d55b38b2b5d614c55ec44b7aa8f2ede9d9e2383707428556f0d6f6
+at: 2026-10-30T22:02:55Z
+store: asf
+act: correct
+about: item:todo-spike-bridge-lemma-nonlinear-strengtheni-a707
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: 7766473aff57d129b4d026c4be76545d0b8e7076bc357569191e0a297e769e0e
+text: 'Date correction: 9a51728f (2026-07-15) is the TODO line''s last touch, not its origin; 2026-05-17 is the spike-routing date the line itself cites. The verdict is unaffected.'

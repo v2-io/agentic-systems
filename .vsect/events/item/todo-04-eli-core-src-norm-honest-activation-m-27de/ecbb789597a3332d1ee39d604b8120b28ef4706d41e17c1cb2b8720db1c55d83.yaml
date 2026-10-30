@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: ecbb789597a3332d1ee39d604b8120b28ef4706d41e17c1cb2b8720db1c55d83
+at: 2026-10-30T22:02:56Z
+store: asf
+act: correct
+about: item:todo-04-eli-core-src-norm-honest-activation-m-27de
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: ff1d462a00a11a38104ea4af7f646c815c1de3c86e5b109ec73c53ac6e57bca6
+text: 'Date correction: ce99ce68 is dated 2026-05-15 (a directory-rename commit, the line''s last touch); the TODO lines originate in 8f76fdac (2026-05-01) or ae118ab5 (2026-05-12). ''Written 2026-05-12 (ce99ce68)'' / ''same commit ce99ce68, 2026-05-12'' is wrong. The verdict is unaffected.'

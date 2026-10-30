@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 07594f816b0afc6896923d9f913fd953b5507f15742c60b26b02d646ea853ba4
+at: 2026-10-30T22:02:55Z
+store: asf
+act: correct
+about: item:todo-directed-separation-foundation-pass-rema-4810
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: db84cdc194b05cafdbc46bdab8c8a79b2ad151224a37fda940ec0326c941026a
+text: 'Date correction: 67733350 is the TODO line''s last touch, dated 2026-08-22, not its origin; ''Written 2026-05-31'' is wrong. The work it tracks was planned 2026-05-31 (CHANGELOG 2026-05-31). The verdict is unaffected.'

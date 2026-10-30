@@ -1,0 +1,97 @@
+schema: vsect-event/0
+id: 72bc779ed065dbde532ad0f263136183377d9e89077acd048c6f85b534cc131f
+at: 2026-10-30T21:52:09Z
+store: asf
+act: place-finding
+about: segment:impl-closed-loop-interiority
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-agent-spectrum: 82af9539a2f4c9bb11324137f9834061eb00d6bb3be6ccd6318f77095d583290
+  segment:def-causal-information-yield: 02c8b7fecb7f6ccbccc7507e07156ddb9b8e7ce4b3b3142dca77142a6fee81a0
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-cognitive-fusion: unwritten
+  segment:def-control-regret: 451dda014d9fca1cb6752a898a53f6363ad3c8928301dc4a43896c7a9e25d044
+  segment:def-coupled-update-dynamics: 4f93c7196b6014f20471c349d270595b7774cbb1f1503d882675184fe8cd946d
+  segment:def-eli-cohort: 8bc186b8e6a8c69b2690aec073a0648e1594f43202cea4a3d568b4b7d39bdd8c
+  segment:def-five-constitutive-factors: 274e5f94d7bdd7ead1c31b8ff18c0dc8a1f96e40542b533abab34741e4adace5
+  segment:def-mismatch-signal: a19745b33797b4786addc49b037e54795156dee55364ff3edc922e1eed8d1da9
+  segment:def-model-class-fitness: 80a2eb3fbf06b7ebb3ebdc642c79dc6883eb350ebafb68555ee3ea9c2505a25f
+  segment:def-model-sufficiency: cb0156177d2d2d215898316d7c7e1e6829188ccffc08bb3f458b93e9f5cd207f
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:def-pearl-causal-hierarchy: ff8c8d1fc2179029d43c7a3f25b9e102b6fba2f2c3313c486306adb86f5daf36
+  segment:def-satisfaction-gap: 65d41833dad42f4b90c486086b99ebec25412132890d9f4bd587293541735ed0
+  segment:def-strategic-calibration: 6f7e397ba2318cad37a98db35b7f50686e13f5fed5cce3699f0a39ae76c799d4
+  segment:def-strategic-tempo: 689b621ba208abada10f13de5447023b7a8717dca75eceadc9de21d38e283fd7
+  segment:def-strategy-dag: faa4591fc0981a633a2507adf7da222ea144c18a439da895b155bcadf79c9170
+  segment:def-strategy-dimension: 531f25a2cae087ff7056e9e76bac57c8ee5771d71409a643614151339171e38f
+  segment:def-value-object: 7e879b9ccd116d76b7410a1d77744da2b20ce1d031531273ee294f423541904c
+  segment:der-action-selection: ff726f8527dab6ee837cc11b7164313850f125e944c76ea86dca14183c613408
+  segment:der-causal-hierarchy-requirement: 65f0a739e197295a8a3f6621bcdbc22a2e07c4f96c9a87c7a3efdfb2af60ad86
+  segment:der-causal-insufficiency-detection: 63ddfbedf3372912a64e10c12593f05882ab040f52edfa8b1640efc5a58b54bd
+  segment:der-chain-confidence-decay: 369ae67b420173870677632e9efb50963106657b4479b094ac26397623908e48
+  segment:der-deliberation-cost: 0dd6d74919c4ff25b4edce9aa2a557bdfb7f8e41265428474e8252f3b284bbf5
+  segment:der-directed-separation: 0d9c47858e17c9e43efdc9638604dd5db9dabc73f9c4811c30b75026e27e4f5e
+  segment:der-gain-sector-bridge: ed274e6dec3ff688579f45f7b355827f1e845cd20ccced1e6188b97199adf635
+  segment:der-loop-interventional-access: 70e914317fa2ac7007df404f6ab4840443f90dc651815371a1b42dba53ba1bcd
+  segment:der-observability-dominance: 4a6864390dee86241a64b5e047140ca1fc6393ff2b2e81ad2582cfdf15da8893
+  segment:der-orient-cascade: 1d26ebfba7716d4bb58d21f1b22c9cce23ffc067850996eb89a065a83768774c
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:der-self-referential-closure: unwritten
+  segment:der-temporal-nesting: d9659184b2722d9f11ea662238d58f77876e241ce9b794572f498f3541a2d488
+  segment:deriv-edge-credence-dynamics: 5dc36faa6c48f53ad11b14c28b08415bb33812920f2f16da9e4c665abcb7b0a9
+  segment:deriv-edge-update-natural-parameter: 1347ced6b4f8032b9dcd3b8a927a9020e51c765cb15987ac0a38a9d4570d0c61
+  segment:deriv-gain-sector: e9afd4473502797c53d06ddb8a340a3adc8ddcae7dcd0ef3e5c86a7a64118d39
+  segment:deriv-persistence-cost: 5fee0309c64d68f2e6f296e1fcb3d59f62d9d6035a55b938f9b1edb3bd0602db
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:deriv-sector-condition: be5b8f4d0cf6f932e9fd5a455e6a4a2413bf581b38680908606b2934ae50ea3b
+  segment:deriv-strategy-cost-regret-bound: e4a8235550228cd9cd5930bc053f501c6ef2b89db1a50f5f20146b3124c3bc2d
+  segment:disc-ciy-unified-objective: 2283084091cbf7e37ba61cf62f6796fb2ee788032c67152cb62b8ef6301b8a5a
+  segment:disc-credit-assignment-boundary: 0775756c93e97be9bb66d08c396a84625a7667c8da526f74e5faaac4ce09a161
+  segment:disc-five-forcing-functions: 3b8321e1ca559342f28297895eb186abeb891acba8889351a42ad117465888b3
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: d3898fba83b370fda5d32ace003b55ee464beed58852444a5b96d7a056054111
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 11e85702fb076cba51bab0990d192e1990325ceccd2ae7a29e76c400e2fb3947
+  segment:form-objective-functional: ffca37cd0d47df20e2745eb4e321b982a0e347ecced55f0211bdac901a21b473
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:form-strategy-complexity-cost: 6a614bc55ed494ed08e12776ac83d97f9e7b2718d167a3c8e703cbb4bcc250f5
+  segment:form-structural-change-as-parametric-limit: 36cd3cbd177605e0a239047be8f990995e6becf5315a0e2056eb66ee7d8eaf66
+  segment:hyp-checkpoint-forking-failure-modes: c59eab71db3eb63f2f9953174dfcc45e33df232c42f10c3d30ad804838c2b81b
+  segment:hyp-edge-update-via-gain: f994de59c6cf6284dab008e0dfea34b8c1bd54df17b87faf3f802a2f4156be31
+  segment:impl-closed-loop-interiority: a7c8c76a84514948802c4eefa443556381be99cdb7e4e8b2cbd8e1ab9ce323aa
+  segment:norm-explicit-strategy-condition: 4e180af92c839658651ff13758200adc18f286b5948a92160ca488839f61d930
+  segment:obs-context-turnover: d0bc203008ef9a717ef88989f3fa6f6f2272aa3ae579afdb2db45d1e9fce4ab6
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-coupled-diagnostic-framework: 347132426b4a4e637a11e90b6afe384d60472d4f97278d84f53c89ed4bc580f3
+  segment:result-mismatch-decomposition: 93539ca670037197795f1ae7a5b2d4ef0d8003f0ac51a5c79c3f3886c569380a
+  segment:result-persistence-condition: 9a9b8dd449b6bf1a9d19a7ce9a032f7dc9d8d2437261302592a41fe45bea63c6
+  segment:result-section-ii-survival: 5f2e1a5faed3d105c8ad76633ce22740e2102ed001585dacc897f143aab9af99
+  segment:result-sector-condition-stability: 0cd95f849c0ee6f953ac1fbb5c590a47fe5581f9ad73ee7c5d1917f2df310b7e
+  segment:result-sector-persistence-template: d923df79756f5967915bd49a180d1907e7b8b93ac88d9bab5831ad8a46539ab9
+  segment:result-structural-adaptation-necessity: 7c7c9be73dd830411b5791b025db2e211b07520daab48dd58cca0ab30cf18c2a
+  segment:schema-strategy-persistence: d7bd5a9638ef3dceef35fd108ded0321e58cc01881cbe3fc58718f0ed1acadf9
+  segment:scope-adaptive-system: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-agent-identity: 4c97c39f93a367ecb14cd1e9925ccce80e59fcab7a5fd3a24f589f546b2d4227
+  segment:scope-and-or: 7b529e04b43cb9069c611d88dc65216efe6aaa99d269df0c61a88bba6d7e9cac
+  segment:scope-channel-collapse: 92697e042386d3c422adde7020b1c1698417d2d872939f7c6db620fb5cf03910
+  segment:scope-ciy-observational-proxy: deb370a502ab88d141a1c477466950bb023b006bdac51c83da9f5f4a611b33b5
+  segment:scope-edge-update-causal-validity: 2b2c9ccdae576c9a7b483b7b05bdfd867b1007db020ea24ab52cd087e05c8d58
+  segment:scope-eli: c6abd2ff45016d1c86a10043851abdafd453fac23dbf2cc51f30dabd79d1f0a2
+  segment:scope-interiority-loop: b752bf86ba3409599201c360255535fe3a38b3e757d9f313d6f2fc4c7d359e84
+  segment:scope-logogenic-agent: 3ffbe5aaeb2190bdc918c6f0d23d608b5444e52ea26b5743fd6f762b989ec492
+  segment:scope-moral-continuity: 496af8990b2bd6aaf74730b07c43eaa46a898b7da35a917063d82d95b668c9b3
+  segment:scope-observation-ambiguity-modulation: 73a53b9fe64a6a54d681b6dd2774598241f857b387eac34838d50a788ceb7569
+  segment:scope-primitive-logogenic: 22baf31a0ebe4155cca27d0e461724761a23e3f051efe1bed13132c8d5b4d2a8
+  segment:scope-scaffolded-logogenic: 8be25897d2b8a0c1fe06c5dec158a4b9301e4bea640841db31f53a24d6f21d8f
+finding: review:items-recheck-t2#F8
+target: segment:impl-closed-loop-interiority
+text: 'Same species as F6. It lists `der-self-referential-closure` and `def-cognitive-fusion` in `depends:` and narrates both (lines 32 and 38), though neither was ever written. Line 38 also states the cognitive-fusion claim as the framework''s: "r'
+version-from: git-revision

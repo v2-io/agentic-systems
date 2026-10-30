@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 32d6388a0d15058b3fd6f760b264c958a917fd5625f1ed6034b724d15aa9b616
+at: 2026-10-30T22:02:55Z
+store: asf
+act: correct
+about: item:todo-spike-update-operator-sector-orphan-regr-b62b
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: e3e50c011814330fae25db96672fc9f26a4fe484a84bb2cb431309891edc6f30
+text: 'Date correction: 9a51728f (2026-07-15) is the TODO line''s last touch, not its origin; 2026-05-17 is the regression-check date the line itself cites. The verdict is unaffected.'

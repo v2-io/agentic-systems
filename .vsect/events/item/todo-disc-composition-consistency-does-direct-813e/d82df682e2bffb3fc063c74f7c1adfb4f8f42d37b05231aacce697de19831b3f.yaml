@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: d82df682e2bffb3fc063c74f7c1adfb4f8f42d37b05231aacce697de19831b3f
+at: 2026-10-30T22:02:55Z
+store: asf
+act: correct
+about: item:todo-disc-composition-consistency-does-direct-813e
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: 109ee732b4995e961933744e615d99798a14c55090ed0064a99a07fd4286ae40
+text: 'Date correction: e47afff9 is dated 2026-05-31, not 2026-05-30. The verdict is unaffected.'

@@ -1,0 +1,42 @@
+schema: vsect-event/0
+id: 1b4b1dff808eb927f110686738492f4dec3008f9d565b2a8552763cd37dc3bed
+at: 2026-10-30T21:52:00Z
+store: asf
+act: place-finding
+about: segment:hyp-directed-separation-under-composition
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-mismatch-signal: a19745b33797b4786addc49b037e54795156dee55364ff3edc922e1eed8d1da9
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:der-directed-separation: 0d9c47858e17c9e43efdc9638604dd5db9dabc73f9c4811c30b75026e27e4f5e
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:deriv-sector-condition: be5b8f4d0cf6f932e9fd5a455e6a4a2413bf581b38680908606b2934ae50ea3b
+  segment:disc-composition-consistency: 38ecdbe2544533cf09ca51fc1f1c55da33ff83820a49ebd77b83629e2d8b3246
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: d3898fba83b370fda5d32ace003b55ee464beed58852444a5b96d7a056054111
+  segment:form-composition-closure: f7355b6b4927c49bf6edacbdd316e9bae0bac21de5a24acd8c214fa678ba3238
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-objective-functional: ffca37cd0d47df20e2745eb4e321b982a0e347ecced55f0211bdac901a21b473
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:hyp-directed-separation-under-composition: 5d10f5b88450b268fce996a4f8f04d04bf4c6f618a37c3f04e7fe06a256617e0
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-persistence-condition: 9a9b8dd449b6bf1a9d19a7ce9a032f7dc9d8d2437261302592a41fe45bea63c6
+  segment:result-sector-condition-stability: 0cd95f849c0ee6f953ac1fbb5c590a47fe5581f9ad73ee7c5d1917f2df310b7e
+  segment:result-sector-persistence-template: d923df79756f5967915bd49a180d1907e7b8b93ac88d9bab5831ad8a46539ab9
+  segment:scope-adaptive-system: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-composite-agent: 570ef2552b53c0bbd54c10d3bfb8a34d7b80b02170b563ffe1540d1318762396
+  segment:scope-multi-agent: bfd7ff18a1c5e2edca2661964961d30a0c4d87908c31f2929ef4155e87c4edd9
+finding: review:items-recheck-t2#F3
+target: segment:hyp-directed-separation-under-composition
+text: 'Two body defects from audit 526815 that were never routed (see F2). (a) F122: Case 1 concludes that goal-blind sub-agent processing plus goal-blind routing makes $f_M^c$ independent of $G_t^c$. That also needs the macro projection $\Lambda$'
+version-from: git-revision
