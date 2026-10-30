@@ -22,7 +22,7 @@ In service of *"TRUTH about agency … discovered, surfaced, truthified, truthfu
 
 - **KR2.1** Statements say exactly what their warrant supports (scope, quantifiers, standpoint, tier), front-door surfaces first. Each chapter is checked by a reader other than its repairer. · *not started; defect list in `internal-surfaces/` §3*
 - **KR2.2** No canon statement contradicts another. · *not started*
-- **KR2.3** Overclaims are strengthened before they are softened; refuted claims are replaced, not kept as ghosts. · *F72 verifier running*
+- **KR2.3** Overclaims are strengthened before they are softened; refuted claims are replaced, not kept as ghosts. · *F72: ceiling refuted (verify-1); integrator landing it*
 - **KR2.4** External research the theory needs is adopted where it belongs, with citation, under its original names. · *not started; lists indexed in `internal-surfaces/` §6*
 - **KR2.5** Where a standard academic term exists, it replaces or anchors the coinage. · *not started*
 
@@ -58,9 +58,9 @@ In service of *"TRUTH about agency … discovered, surfaced, truthified, truthfu
 | Lead coordinator (Opus 5.5, session "asf-cleanup") | 5.4, plus coordination | `INTENT.md`, `LOG.md`, `HANDOFF.md`, `system/` |
 | Owner review (Fable) and its subagents | 1.1 | `owner-review/` |
 | Influx scout (Opus) and its subagents | 3.1 | `influx-scout/` |
-| F72 verifier (Opus) | 2.3 | `spikes/spike-strategic-persistence-hard-ceiling-convention-2026-05-31-verify-1.md` |
+| F72 integrator (Opus) | 2.3, 3.3a | canon: the hard-ceiling carriers listed in verify-1 §7 |
 
-The internal-surfaces mapper (KR3.2) has finished and is on the line for follow-ups.
+Finished and on the line for follow-ups: the internal-surfaces mapper (KR3.2) and the F72 verifier (KR2.3).
 
 ## Using this file
 
