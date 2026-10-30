@@ -304,13 +304,48 @@ Downgrade to `draft`, not to an intermediate stage — the segment needs full re
 3. **One-sentence summary** — plain text, no heading, immediately after title
 4. **Formal Expression** — `## Formal Expression`, with equation-level tags
 5. **Epistemic Status** — `## Epistemic Status`, what's derived vs hypothesized
-6. **Discussion** — `## Discussion`, interpretation, connections — brief
-7. **Findings** — `## Findings` *(optional)*, curated catalog entries for distinctive contributions worth surfacing externally
-8. **Working Notes** — `## Working Notes` *(optional)*, internal development notes
+6. **Claim Record** — `## Claim Record` *(required for load-bearing apparatus)*, what kind of claim each is, about which agents, and what would refute it
+7. **Discussion** — `## Discussion`, interpretation, connections — brief
+8. **Findings** — `## Findings` *(optional)*, curated catalog entries for distinctive contributions worth surfacing externally
+9. **Working Notes** — `## Working Notes` *(optional)*, internal development notes
 
 Definition, notation, and scope-narrowing files may use a simpler format than full claims. Corollaries and alternate formulations can live with their parent claim (they reinforce its independence), but anything that could be referenced independently should be its own file.
 
 **Cadence exemption for intro and discussion segments (Joseph, 2026-07-14).** Chapter-intro segments and most `disc-*` discussion segments are exempt from the full cadence above (in particular `## Formal Expression` and `## Epistemic Status` are not required of them) until dedicated norms for those file kinds are worked out. These files do expository, framing, or meta-architectural work rather than making one formal claim, so the claim-segment cadence is the wrong mold for them; the exemption records that their free-form structure is deliberate, not drift. The math-in-files rules, frontmatter requirements, and OUTLINE membership still apply. When norms for these kinds are authored, they should replace this paragraph.
+
+### Claim Record
+
+Epistemic Status grades one axis: how strong the derivation is (exact, conditional, robust-qualitative, …). That axis says nothing about *what kind of thing* is being claimed, *of which agents*, or *what would show it wrong*; a reader hears "exact" as "true of agents" when it means only that the derivation is valid. The `## Claim Record` section carries that second axis, one entry per distinct claim the segment makes, in a fixed form a reader who did not write it can check field by field against the body. It is required for every load-bearing apparatus and welcome elsewhere.
+
+```markdown
+## Claim Record
+
+### {Claim name — the claim in one plain clause}
+
+**Register:** {formal | descriptive | normative} — {one clause saying what kind of statement this is}
+
+**Population:** {the agents whose hypotheses the claim is verifiably met by, named by the properties that define the class and the scope tier, with the tag or section that scopes it}
+
+**True of:** {a named instance where the claim holds, and how that is known: derivation, construction, citation}
+
+**False of:** {a named instance outside the population, or a case inside it where the claim fails; for a formal claim, the construction that would refute the derivation}
+
+**Falsifier:** {the observation, measurement, comparison or construction that would show the claim wrong}
+
+**Instantiated:** {whether any quantity in the claim has been measured or run on an agent the theory did not construct; name what exists, or say "no"}
+```
+
+**Register.** Three values. *Formal*: a fact about the formalism or a representation (a definition, a factorization, a theorem about the model); it says nothing about which real agents are described until a descriptive claim adopts it. *Descriptive*: a statement that a named class of real agents has a property or exhibits a behaviour; it can be wrong about the world. *Normative*: a recommendation, a design claim, or an optimality claim; it is tested by comparison. One segment commonly carries claims of more than one register, and the point of the section is to keep them apart: the strongest tier label attaches to the formal claim, and the descriptive and normative claims that carry the theory's meaning must not inherit it.
+
+**Population.** Name the class by what defines it, not by example, and say where the body scopes it (a scope condition's tag, a named sub-scope such as learning-agent scope, an architectural class). The population of a formal claim is the set of representations it is true of; say so rather than naming agents.
+
+**True of / False of.** One instance each, concrete enough that a checker can confirm the mapping. `form-objective-functional`'s Epistemic Status is the model: the class is named by its representation axioms (A1)–(A4) and the excluded agents are named by counterexample, (E1) lexicographic and (E2) cyclic preferences. A false-of for a descriptive claim is a real system the hypotheses exclude, or a real system inside them where the claim fails if one is known. An internal worked example (`example-*`) shows consistency, not instantiation, and should be labelled as such.
+
+**Falsifier.** For a formal claim, the counterexample construction that would break the derivation. For a descriptive claim, the measurement whose outcome would refute it, on an agent the theory did not build. For a normative claim, the comparison that would show the recommended design does no better. A falsifier names which sentence of the body it refutes.
+
+**Instantiated.** Nearly every record in Part II says "no" at the time of writing; saying so plainly is what gives the empirical program its targets. A simulation of the theory's own equations is not an instantiation. Where a quantity has been run on a real agent, cite the `empirica:` registration or the external study.
+
+The section sits between Epistemic Status and Discussion, is written in the segment voice, and is present truth: when a claim's register or population changes, the record changes with it and the history goes to `CHANGELOG.md`. Checks on records are recorded in `reviews/` as vsect review records, one `## Cn (check)` per record field or per claim, bound to the segment version the checker read.
 
 ### Findings
 

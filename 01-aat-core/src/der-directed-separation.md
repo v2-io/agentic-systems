@@ -149,6 +149,64 @@ The architectural classification: **robust qualitative**. The three classes are 
 
 The object-and-boundary reframing is **robust qualitative**: that a Class 1 agent and an idealized Class 2 agent at $\kappa_{\text{processing}} = 0$ are equally causally-disciplined is exact (same zero, same behavior at that point); that the Class 1 $\leftrightarrow$ Class 2 boundary is one of *certifiability* (behavior identical at the limit) while the Class 2 $\leftrightarrow$ Class 3 boundary is one of *behavior* (the bound on adversarial drag goes trivial) is structurally established and simulation-corroborated, with the general continuity of leak past a boundary toy-suggested rather than proven (see `#disc-w1-structural-bound-boundary`). The causal-discipline *noun* is definitional; the scoping rule and the $\varepsilon(\kappa)$ degradation norm are *robust-qualitative* disciplines — a stated scoping-and-degradation practice with the per-result bound attempted — not themselves derived results.
 
+## Claim Record
+
+### If the belief update takes no goal argument, belief and goal are conditionally independent given the prior belief and the event
+
+**Register:** formal — a factorization that holds by definition of the update signature (tag `directed-separation`): $M_{\tau^+} \perp G_t \mid (M_{\tau^-}, e_\tau)$ whenever $f_M$ has no $G_t$ argument.
+
+**Population:** every representation of an agent in agency scope as $X_t = (M_t, G_t)$ ( #form-complete-agent-state) whose belief update is written without a goal argument. The claim names no real agent; which agents admit such a representation is the next claim.
+
+**True of:** any exact Bayes filter. The recursion $b_{t+1}(s') \propto p_h(o_{t+1} \mid s', a_t) \sum_s T(s' \mid s, a_t)\, b_t(s)$ contains the observation kernel, the transition kernel and the realized action, and no reward, objective or plan; the action is the selection channel the scope condition permits. So an exact Bayesian agent in any POMDP satisfies the condition, and Kalman + LQR is its linear-Gaussian case.
+
+**False of:** no agent; the claim is about the representation. It would fail only on a representation whose update has no goal argument and whose output nonetheless depends on the goal, which the signature excludes.
+
+**Falsifier:** none at the level of agents. The claim's reach is fixed by the next record.
+
+**Instantiated:** not applicable.
+
+### Real systems partition into three classes by whether the goal is causally upstream of the belief update
+
+**Register:** descriptive — an architectural classification of real systems (tag `directed-separation-architecture`): Class 1 holds the condition by construction (separate estimator and planner joined by a state-estimate interface), Class 3 fails it by construction (one mechanism, goal upstream of every computation), Class 2 is the remainder, with $\kappa_{\text{processing}}$ (tag `processing-coupling`) as the within-Class-2 measure of realized flow.
+
+**Population:** systems in agency scope whose internal processing graph can be inspected (the class) or probed under varied goals with the prior belief held fixed (the measure). The class is a property of the wiring and holds under every task distribution; $\kappa_{\text{processing}}$ is a property of the wiring under a distribution of goals and events.
+
+**True of:** Class 1: any exact Bayes filter feeding any controller, by the computation in the previous record; Kalman + LQR and a POMDP belief-state agent are instances. Class 3: a decoder-only transformer whose prompt carries the goal, where every position at the output is reachable from the goal tokens by a directed path through attention, so the goal is upstream of the computation that produces the belief report (the connectivity argument stated at lemma grade in NeurIPS 2026 Paper 3; Working Notes).
+
+**False of:** humans are not placed. The table gives "biological cortex" as Class 2 and "potentially human cognition (motivated reasoning)" as Class 3, so the classification of humans is a conjecture carried in two cells. A Class 3 component used through one goal-conditioned call with a parsed belief field is Class 3 at the component and "Class 1 by behavior" at the wrapper; that is a statement about the wrapper's type signatures, not about the model.
+
+**Falsifier:** $\hat\kappa_{\text{processing}}$ (the behavioral estimator above) run with $M_{\tau^-}$ held fixed across goal conditions: on a modular perception-and-planning stack, which the classification says gives $\hat\kappa \approx 0$ under every task distribution, and on a raw LLM given one ambiguous event under two task framings, which it says gives high $\hat\kappa$. Goal-dependent belief content from the first, or goal-independent belief content from the second on evidence the goals disambiguate differently, refutes the classification as applied to that system.
+
+**Instantiated:** no. $\hat\kappa_{\text{processing}}$ has not been run on any system. The Class 3 placement of transformers rests on the connectivity argument, not on a measurement, and the magnitude $\kappa \approx 1$ that `03-llm-core/` assumes for LLMs is unmeasured.
+
+### A result that consumes only the zero holds for every causally-disciplined agent; only a result that certifies the zero needs Class 1
+
+**Register:** formal — the scoping rule (§"Causal discipline"): a Part II derivation that uses only $\kappa_{\text{processing}} = 0$ holds for Class 1 and for an idealized Class 2 at zero alike; the architecture-inspection certificate is consumed only by claims about perturbation-stability or about separation without behavioral measurement.
+
+**Population:** Part II results, by what their derivations use.
+
+**True of:** the $G_t$-independence of $Q_O$ ( #def-value-object), whose derivation uses only the zero. The structural leakage bound of strict wrapping ( #der-class-coercion-via-wrapping, `#disc-w1-structural-bound-boundary`) uses the certificate.
+
+**False of:** no agent; the rule is about derivations.
+
+**Falsifier:** a Part II result whose derivation is written with $\kappa_{\text{processing}} = 0$ alone and that fails for an in-effect disciplined agent; that would show the derivation used the certificate without saying so.
+
+**Instantiated:** not applicable.
+
+### Less coupling tracks reality strictly better, all else equal
+
+**Register:** normative — the one directional claim the classification carries (§"Causal discipline", the degradation norm): the recommendation that belief updates be kept goal-blind, and the reason Class 1 is the target for anything built around a Class 3 component. The body carries it inside a norm about how results are stated and says it is earned by the $\varepsilon(\kappa)$ bounds where those are derived.
+
+**Population:** Class 2 agents at $\kappa_{\text{processing}} \gt 0$, compared with the same agent at zero; "tracks reality" read as the goal-neutral predictive accuracy of $M_t$. The population must include what the agent is accurate *about*, because the claim's truth depends on it.
+
+**True of:** coupling that changes how the agent updates on an event it has already encoded: confirmation bias, goal-consistent reading of ambiguous evidence (the "when the approximation is poor" cases in Discussion). Under any strictly proper scoring rule the conditional distribution of the world given the encoded evidence is the unique minimizer of expected score among functions of that evidence and the goal, provided the goal carries no information about the world beyond $M_{\tau^-}$; any goal-dependent departure from it therefore worsens expected accuracy (standard; Gneiting & Raftery 2007, cited from recall, primary not read in this project). This argument is not yet carried in any segment.
+
+**False of (not established):** coupling that changes *what* the agent encodes from an event under a capacity limit. A goal-chosen encoder whose update conditions on which encoder was used stays calibrated and is more accurate on goal-relevant features at the cost of others (value-equivalent models, Grimm, Barreto, Singh & Silver 2020; rational inattention, Sims 2003; both cited from recall). The norm as stated covers both kinds of coupling, and $\kappa_{\text{processing}}$ counts both, since it is positive whenever different goals yield different $M_{\tau^+}$ from one event. The scope condition's second clause forbids goal-dependent attention thresholds inside $f_M$ and the paragraph after it permits attention allocation as selection, so the body draws this boundary in two places without saying where encoding ends and processing begins.
+
+**Falsifier:** at equal encoding capacity, a goal-allocated encoder whose $M_t$ scores better than the goal-blind encoder's on a goal-neutral predictive score. The same comparison on a goal-relevant score is expected to go the other way, which is why the norm cannot be stated without naming the score.
+
+**Instantiated:** no. No comparison of this kind has been run, in this project or cited.
+
 ## Discussion
 
 **This is a genuine scope restriction, not a footnote.** An LLM agent's prompt includes the task objective, which shapes how it interprets code, documentation, and error messages. Its $f_M$ is goal-conditioned in practice: the agent reading code with the goal "fix the auth bug" processes the same code differently than one with "add logging." The epistemic update and purposeful evaluation are entangled in the attention mechanism.

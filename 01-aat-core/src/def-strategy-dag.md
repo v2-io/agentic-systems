@@ -160,6 +160,64 @@ Formally: a finite set with a strict partial order (future events ordered by tim
 
 The AND/OR parameterization is a parsimony-motivated formulation choice within the strongly motivated graphical structure, not a derived necessity ( #scope-and-or). The single-parameter edge convention is similarly a formulation choice motivated by convergence across three independent attempts.
 
+## Claim Record
+
+### A plan over time-indexed propositions with probabilistic edges and independent noise is a causal Bayesian network
+
+**Register:** formal — a representation result. Under P1–P2 and causal sufficiency, $\Sigma_t$ is a DAG with the Markov factorization, and acyclicity follows from time-indexing over a finite horizon ( #deriv-graph-structure). "Why a DAG" states this at the level of sufficiency: an agent whose plan meets the postulates *can* be represented this way. Whether a real planner stores such a graph, or an analyst ascribes it, is not claimed ( #def-strategy-dimension, Working Notes). Within the structure, the AND/OR single-parameter parameterization is a choice ( #scope-and-or).
+
+**Population:** representations of plans as time-indexed propositions with causal edges and probabilistic uncertainty. As a statement about agents it reaches any planner whose plan can be so written, which is every explicit causal plan over a finite horizon; it says nothing about agents that keep no explicit plan (reactive and cached-policy agents, #def-strategy-dimension).
+
+**True of:** the 3-arm bandit plan of #example-strategy; the AND/OR plan graphs and fault trees of the planning and reliability literatures, whose noisy-OR local models are this parameterization (Heckerman & Breese 1996, cited at #deriv-graph-structure).
+
+**False of:** no plan over a finite horizon can have a genuine cycle (the acyclicity derivation), so there is no excluded instance on that side. The necessity direction is open: a non-DAG structure meeting P1–P4 would not refute the representation but would show it is not the only one.
+
+**Falsifier:** for the sufficiency claim, none at the level of agents. A factor-graph or chain-graph plan satisfying P1–P4 would settle the open necessity question in the negative.
+
+**Instantiated:** not applicable; a representation.
+
+### The forward pass computes the plan's true success probability, for all credences, exactly when the DAG is an AND/OR tree
+
+**Register:** formal — exact under the noisy-AND/OR structural equations and causal sufficiency ( #deriv-graph-structure, §"Exactness of Status Propagation").
+
+**Population:** all strategy DAGs under the parameterization of #scope-and-or.
+
+**True of:** the three-node reconvergence case above (propagation $0.25$, truth $0.5$); the naive-L1 graph of #example-L1, which is causally sufficient and not a tree and is miscounted at its OR root.
+
+**False of:** no instance; the degree argument shows the forward pass and the true probability are different polynomials on every non-tree.
+
+**Falsifier:** a causally sufficient DAG that is not a tree on which the forward pass is exact for all credences. The derivation excludes it.
+
+**Instantiated:** not applicable.
+
+### An agent that scores a plan by combining calibrated step estimates as if the steps were independent misjudges it with a sign set by node type
+
+**Register:** descriptive — about any agent, human or artificial, whose plan evaluation is the L0 forward pass or its equivalent product-of-marginals arithmetic (the Correlation Hierarchy's sign rule, and its extension to reconvergent graphs). For explicit reconvergence the error is visible from the plan's structure alone and no amount of evidence removes it; for a latent common cause it equals the covariance and is undetectable on-policy ( #der-causal-insufficiency-detection).
+
+**Population:** agents that estimate plan success by multiplying step-success estimates, with OR as noisy-OR. The claim is about their estimates, so it is checkable wherever an agent's plan-success estimate and the realized outcome are both recorded.
+
+**True of:** gate-by-gate fault-tree arithmetic with repeated basic events (Vesely et al. 1981, cited at #deriv-graph-structure), which miscounts exactly as the theorem says and is the reason cut-set methods exist. The two-sibling table above is exact algebra.
+
+**False of:** an agent that evaluates its plan by exact inference (junction tree, cutset conditioning) is outside the population. Whether humans are inside it is open: judged probabilities of compound events depart from the product rule in both directions (Bar-Hillel 1973, cited from recall), so "humans misjudge reconvergent plans as L0 propagators do" is not established and may be false of them.
+
+**Falsifier:** plan-success estimates from a population of agents, paired with outcomes, in which reconvergent-OR plans are not overrated relative to tree-shaped plans with the same step marginals; or incident records in which shared-dependency redundancy fails no more often than its independence estimate predicts.
+
+**Instantiated:** no. #example-L1 and #example-strategy are the theory's own constructions.
+
+### Add the common cause as a node and factor it above the branches it gates
+
+**Register:** normative — the L1 construction, recommended as the practical default for strict-prerequisite common causes (Correlation Hierarchy, "L1 is the practical sweet spot"). It is a design claim: an agent that does this evaluates plans better than one that stays at L0.
+
+**Population:** agents at L0 in environments with strict-prerequisite common causes ($\theta_{\text{child} \mid \neg C} \approx 0$), where the agent or its designer can identify the cause and classify it as strict; the body says all four of those judgments are modelling judgments, not procedures.
+
+**True of:** #example-L1, where the correct L1 graph gives the exact answer (internal consistency, not instantiation).
+
+**False of:** soft facilitators, where the construction forces $P(\text{sub-plan} \mid \neg C) = 0$ and understates success; the body routes these to L1′, which is itself identifiability-obstructed when $C$ is unobservable (Prop B.7, #deriv-edge-credence-dynamics).
+
+**Falsifier:** an agent maintaining L1 graphs in a domain of strict-prerequisite common causes whose plan-success calibration, after the covariance detector of #der-causal-insufficiency-detection has fired, is no better than a matched L0 agent's.
+
+**Instantiated:** no.
+
 ## Discussion
 
 **The graph structure is sufficient under causal sufficiency; the parameterization is chosen.** The DAG structure follows from temporal ordering (acyclicity — proved) and the Causal Markov Condition theorem under causal sufficiency (Markov factorization — proved conditional; see #deriv-graph-structure). This is a theorem-backed result, not a sketch: the CMC (Spirtes et al. 2000, Pearl 2009) proves that any causally sufficient causal DAG with independent exogenous noise satisfies the Markov factorization. The status is therefore: DAG-with-Markov-property is *sufficient* given operational postulates plus causal sufficiency — the desiderata are satisfied by this representation, but the necessity direction (whether some non-DAG structure could also satisfy them) is an open stronger result ( #deriv-graph-structure). AAT uses AND/OR parameterization within this strongly motivated structure because (a) AND/OR is the most parsimonious complete basis for binary combination, (b) the representation converged across three independent formalism attempts. Alternative parameterizations within the strongly motivated graphical structure are legitimate research directions.
