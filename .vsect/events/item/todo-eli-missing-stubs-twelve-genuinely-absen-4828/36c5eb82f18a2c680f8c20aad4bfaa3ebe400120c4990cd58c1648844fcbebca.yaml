@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 36c5eb82f18a2c680f8c20aad4bfaa3ebe400120c4990cd58c1648844fcbebca
+at: 2026-10-30T21:18:32Z
+store: asf
+act: recheck
+about: item:todo-eli-missing-stubs-twelve-genuinely-absen-4828
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: f37bcab8+dirty
+criterion: Written 2026-05-12 (ce99ce68). All twelve still absent at HEAD and never in git history; each is an 04-eli-core/OUTLINE.md row marked 'missing' (rows :71-148), so the rows are honestly marked. But several row claim cells assert what no body supports, e.g. :125 norm-honest-activation 'Deceptive prompts mathematically guarantee gain collapse; absolute honesty is a physical requirement', and the preface (:18, :20) leans on def-character-aspiration-dialectic and the four-views/honest-activation/temporal-coherence trio. The preface's softening for obs-substrate-independence landed (:10, :20 now say it is not written). Upstream sources still exist, at moved paths for PROPRIUM (now arch/proprium/INGEST/old-firmatum/PROPRIUM-{ONTOLOGY,ARCHITECTURE}-v2.md); zoetica asm-specification.md and tracking-snapshot-spec.md are present.
+outcome: holds
+owner: G.2
+restated: 'Twelve Vol-4 OUTLINE rows marked missing: for each, author at honest tier from its upstream source or set aside with a recorded reason (G.0 decides where argued non-derived claims live); meanwhile the rows'' claim cells should not assert results (e.g. ''mathematically guarantee'') that no body carries.'

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: e8218200135d549305dc33e47e1e98a3cf156e648944529b36ad7a640163b8ba
+at: 2026-10-30T21:18:33Z
+store: asf
+act: recheck
+about: item:todo-04-eli-core-src-def-character-aspiration-648e
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: f37bcab8+dirty
+criterion: One of the twelve absent Vol-4 segments listed at TODO.md:458 (same commit ce99ce68, 2026-05-12); still absent and never in git, row marked missing in 04-eli-core/OUTLINE.md. Its upstream-source pointer stays readable in this item's verbatim text; PROPRIUM-*-v2 now lives at arch/proprium/INGEST/old-firmatum/, zoetica and ennaos sources are present.
+of: item:todo-eli-missing-stubs-twelve-genuinely-absen-4828
+outcome: duplicate

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 6cf7b01fbbf4a567d12a1b7f8f67bea4701d27e9737c7e6aee52f912c4699c71
+at: 2026-10-30T21:18:39Z
+store: asf
+act: recheck
+about: item:todo-form-consolidation-dynamics-topological-7d39
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: f37bcab8+dirty
+criterion: 'The premise (''Part-I-positioned'') is gone. #form-consolidation-dynamics sits in Part II, chapter Strategy Dynamics, after the Part II segments it uses (#schema-strategy-persistence, #form-structural-change-as-parametric-limit). git log -G on 01-aat-core/OUTLINE.md shows the row in that chapter at 9745397b (2026-05-15), already before this item was written (e47afff9, 2026-05-31), so the source audit (742613''s ''candidate finding L'') read an older layout. What lint-outline still reports is that the segment references proofs in two appendix segments (deriv-recursive-update, disc-compression-operations). That is the corpus''s standard body-to-appendix-proof pattern, with 71 instances across Part I and II, not a mis-positioning.'
+outcome: stale

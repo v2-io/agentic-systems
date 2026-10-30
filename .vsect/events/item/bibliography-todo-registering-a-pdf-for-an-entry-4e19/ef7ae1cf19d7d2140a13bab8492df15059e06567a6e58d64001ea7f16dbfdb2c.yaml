@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: ef7ae1cf19d7d2140a13bab8492df15059e06567a6e58d64001ea7f16dbfdb2c
+at: 2026-10-30T21:19:17Z
+store: asf
+act: recheck
+about: item:bibliography-todo-registering-a-pdf-for-an-entry-4e19
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: cfc7b529+dirty
+criterion: A how-to block in the file's manual (lines 61-68, relata pdf). The importer took a bash comment inside a code fence as this item's section chain. The command is documented by relata itself.
+outcome: not-an-item

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0fc3dcfb1f752a8d2e02b09ceba4ca6d81c5345bb9eb3fa0c1e3ef1f5e4e81f7
+at: 2026-10-30T21:18:33Z
+store: asf
+act: recheck
+about: item:todo-04-eli-core-src-def-gradient-causal-memo-2ea7
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: f37bcab8+dirty
+criterion: One of the twelve absent Vol-4 segments listed at TODO.md:458 (same commit ce99ce68, 2026-05-12); still absent and never in git, row marked missing in 04-eli-core/OUTLINE.md. Its upstream-source pointer stays readable in this item's verbatim text; PROPRIUM-*-v2 now lives at arch/proprium/INGEST/old-firmatum/, zoetica and ennaos sources are present.
+of: item:todo-eli-missing-stubs-twelve-genuinely-absen-4828
+outcome: duplicate

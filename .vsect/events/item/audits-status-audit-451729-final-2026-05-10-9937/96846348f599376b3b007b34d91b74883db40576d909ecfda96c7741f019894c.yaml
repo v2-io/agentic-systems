@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 96846348f599376b3b007b34d91b74883db40576d909ecfda96c7741f019894c
+at: 2026-10-30T21:17:28Z
+store: asf
+act: recheck
+about: item:audits-status-audit-451729-final-2026-05-10-9937
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 1cb2165e+dirty
+criterion: 'The row says the audit stays open on a single residual, D.1, ''first-class in TODO.md section 2026-05-10''. At HEAD 2ec6ec58 TODO.md has no such section (the 2026-08-22 tracker drain removed it), so the pointer dangles. D.1 itself (audit-451729-FINAL-2026-05-10.md:111) is a hypothesis that eight appendix derivations sit at ''stage: draft'' despite looking ready; today six of those eight are no longer at draft (deriv-recursive-update, deriv-sector-condition and der-gain-sector-bridge are claims-verified) and the stage word is not standing here: INTENT I.4 reads standing from recorded checks and H.2 removes the stage ladder from the outline. The soft items went to the polish ledger (S25, S28). What remains is the file''s graduation to audits/.integrated, which is a location, not an item.'
+outcome: stale

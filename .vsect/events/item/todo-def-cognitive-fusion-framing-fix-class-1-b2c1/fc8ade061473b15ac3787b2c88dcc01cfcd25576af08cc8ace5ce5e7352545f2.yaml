@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: fc8ade061473b15ac3787b2c88dcc01cfcd25576af08cc8ace5ce5e7352545f2
+at: 2026-10-30T21:19:01Z
+store: asf
+act: recheck
+about: item:todo-def-cognitive-fusion-framing-fix-class-1-b2c1
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: f37bcab8+dirty
+criterion: 'TODO.md:378, line last touched 2026-05-01 (8f76fdac). def-cognitive-fusion was never written, but its claim is live in canon: 03-llm-core/OUTLINE.md:143 and impl-closed-loop-interiority:38 both state that ''resonance'' as mutual information near channel capacity forms a Class 1 (Separated) macro-agent, with no composition mechanism. The only composition result, hyp-directed-separation-under-composition, needs every sub-agent goal-blind (Case 1), so Class-1 macro from non-Class-1 parts would need the wrapper construction, which is not invoked; the sibling claim ''Class 1 sub-agents -> Class 2 composite'' was withdrawn (integrator item A6). The name ''Resonance'' still collides with the ELI Resonance (OUTLINE:143, impl:38).'
+outcome: holds
+owner: C.1
+restated: The cognitive-fusion claim (MI near capacity yields a Class-1 macro-agent) is stated in OUTLINE:143 and impl-closed-loop-interiority:38 with no mechanism and against the only composition result's premises; derive it via the wrapper construction, or remove it; rename away from the ELI's name.

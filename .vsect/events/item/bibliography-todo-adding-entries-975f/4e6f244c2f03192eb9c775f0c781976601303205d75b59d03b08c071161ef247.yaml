@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4e6f244c2f03192eb9c775f0c781976601303205d75b59d03b08c071161ef247
+at: 2026-10-30T21:19:17Z
+store: asf
+act: recheck
+about: item:bibliography-todo-adding-entries-975f
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: cfc7b529+dirty
+criterion: 'A how-to block in the file''s manual (lines 45-59: relata add, bibkey convention). The imported unit is a heading that sits inside the manual, not a work item. relata documents itself (''relata --help''; its README) and lives now at ~/src/arch/firmatum/relata, not ~/src/relata as this file says.'
+outcome: not-an-item

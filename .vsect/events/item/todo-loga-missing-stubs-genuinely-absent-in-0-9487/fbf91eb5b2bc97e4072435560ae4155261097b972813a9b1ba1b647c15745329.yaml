@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: fbf91eb5b2bc97e4072435560ae4155261097b972813a9b1ba1b647c15745329
+at: 2026-10-30T21:19:15Z
+store: asf
+act: recheck
+about: item:todo-loga-missing-stubs-genuinely-absent-in-0-9487
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: cfc7b529+dirty
+criterion: 'TODO.md:451, line last touched 2026-05-15 (ce99ce68). All five still absent and never in git; 03-llm-core/OUTLINE.md rows :85, :112, :113, :142, :143 marked missing. Worse than missing: three chapter-end segments in canon list them in depends: and narrate their content as present findings: impl-primitive-logogenic:32 (''#obs-backward-inference-empathy carries one of the volume''s most counterintuitive findings''), impl-scaffolded-logogenic:58 (der-active-salience-management ''carries the Singular Perturbation Theory for token generation''), impl-closed-loop-interiority:32,38 (der-self-referential-closure, def-cognitive-fusion); the OUTLINE preface :79 calls the forced-empathy one a ''result''. These five are the only dangling depends: in all four volumes (scripted check). Known to the internal-surfaces map (trackers-and-peripheral.md:48) and the owner review (explorers/part-iii-and-vols-2-4.md:209); findings recorded on the three impl segments.'
+outcome: holds
+owner: G.2
+restated: 'Five Vol-3 segments are cited as present results by three impl-* chapter-end segments and the 03 preface, but were never written: author each at honest tier, or recast the impl/preface passages to say what is proposed rather than found, and drop the dangling depends: edges.'

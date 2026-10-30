@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: d9e7f6e62af506080737efe07ed8ee36e632437181f4d8001b810390326a4407
+at: 2026-10-30T21:17:28Z
+store: asf
+act: recheck
+about: item:audits-status-audit-384279-final-2026-05-27-f9a9
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 1cb2165e+dirty
+criterion: A roll-up row. Its three residual spike proposals are rows 32-35 of spikes/PROPOSED.md (2026-05-28; composition-consistency, grounding-floor two-routes spike, stability-certificate Brief, tag drift), imported and judged as their own items. The gold directory audits/AUDIT-WORKING-384279 holds two files (00-initial-predictions.md, 00-running-outline.md); its fate belongs to I.5/I.8, and graduation of the audit file is a git mv, not a work item.
+outcome: not-an-item

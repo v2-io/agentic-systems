@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: cf61cf2e7a981a257b8f78a3166a435c2242029c797947369c9fe9d00d5f52f1
+at: 2026-10-30T21:19:17Z
+store: asf
+act: recheck
+about: item:bibliography-todo-build-pipeline-emit-current-bin-build-mo-975f
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: cfc7b529+dirty
+criterion: A description of bin/build-monograph's current relata-emit step (lines 97-105). The same description is carried in doc/sop/format.sop.md line 88 ('Build-managed snapshots') and in the script's own header; no work owed.
+outcome: not-an-item

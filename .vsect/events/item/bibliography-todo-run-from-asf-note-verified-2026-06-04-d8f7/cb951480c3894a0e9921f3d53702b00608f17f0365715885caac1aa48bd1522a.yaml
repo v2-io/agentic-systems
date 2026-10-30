@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: cb951480c3894a0e9921f3d53702b00608f17f0365715885caac1aa48bd1522a
+at: 2026-10-30T21:19:17Z
+store: asf
+act: recheck
+about: item:bibliography-todo-run-from-asf-note-verified-2026-06-04-d8f7
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: cfc7b529+dirty
+criterion: 'A resolved caveat (lines 107-109): the packaged relata CLI runs from the ASF checkout with explicit paths. Verified true at HEAD (relata list, relata search and relata show all run from the asf root). Status note, no work owed.'
+outcome: not-an-item

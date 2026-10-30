@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ff1d462a00a11a38104ea4af7f646c815c1de3c86e5b109ec73c53ac6e57bca6
+at: 2026-10-30T21:18:33Z
+store: asf
+act: recheck
+about: item:todo-04-eli-core-src-norm-honest-activation-m-27de
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: f37bcab8+dirty
+criterion: One of the twelve absent Vol-4 segments listed at TODO.md:458 (same commit ce99ce68, 2026-05-12); still absent and never in git, row marked missing in 04-eli-core/OUTLINE.md. Its upstream-source pointer stays readable in this item's verbatim text; PROPRIUM-*-v2 now lives at arch/proprium/INGEST/old-firmatum/, zoetica and ennaos sources are present.
+of: item:todo-eli-missing-stubs-twelve-genuinely-absen-4828
+outcome: duplicate

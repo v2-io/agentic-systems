@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: ca3ff30b043d0ad930dc7148bc964050c551abc3ee31bd4c4e6fd0511d728e3a
+at: 2026-10-30T21:19:17Z
+store: asf
+act: recheck
+about: item:bibliography-todo-linting-before-any-submission-publicatio-b0fc
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: cfc7b529+dirty
+criterion: 'A how-to block in the file''s manual (lines 87-95: relata lint and what it checks). Usage text, no work owed.'
+outcome: not-an-item

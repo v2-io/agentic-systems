@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 9d545ab190b8eff773a34280ba94d37196223eb61dc6f39c316b43583dd12287
+at: 2026-10-30T21:19:17Z
+store: asf
+act: recheck
+about: item:bibliography-todo-verifying-975f
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: cfc7b529+dirty
+criterion: 'A how-to block in the file''s manual (lines 70-85: relata verify, including the claim-supported example). Usage text, not work owed; ''relata verify'' is in relata''s own help.'
+outcome: not-an-item

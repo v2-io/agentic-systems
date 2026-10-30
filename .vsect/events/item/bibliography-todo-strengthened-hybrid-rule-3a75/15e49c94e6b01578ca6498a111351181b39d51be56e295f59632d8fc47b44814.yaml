@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 15e49c94e6b01578ca6498a111351181b39d51be56e295f59632d8fc47b44814
+at: 2026-10-30T21:19:16Z
+store: asf
+act: recheck
+about: item:bibliography-todo-strengthened-hybrid-rule-3a75
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: cfc7b529+dirty
+criterion: 'The decided policy (W-1, 2026-06-05) is already written in the SOP: doc/sop/format.sop.md lines 84-88, ''Citation discipline (decided 2026-06-05)'', carrying all six points (rich prose allowed; a formal natbib cite for every bibliography-worthy source; locator-backed cites for load-bearing dependencies; no \textcite; canon cites external works directly). It landed in 88153455 ''Wire monograph citation snapshots'', 2026-06-05. Deleting BIBLIOGRAPHY-TODO loses nothing of the rule.'
+outcome: landed

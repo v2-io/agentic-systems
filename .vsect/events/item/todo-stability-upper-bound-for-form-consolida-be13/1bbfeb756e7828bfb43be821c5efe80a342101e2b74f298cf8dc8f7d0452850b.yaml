@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 1bbfeb756e7828bfb43be821c5efe80a342101e2b74f298cf8dc8f7d0452850b
+at: 2026-10-30T21:18:39Z
+store: asf
+act: recheck
+about: item:todo-stability-upper-bound-for-form-consolida-be13
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: f37bcab8+dirty
+criterion: 'Read #form-consolidation-dynamics:24,64-80,94,102-112,160-166 at HEAD, and #schema-strategy-persistence:52-60 (its lower bound 1-lambda > rho_Sigma/R_Sigma is the post-F72 form, so the two segments agree). No commit since the item derives phi; the Working Note says ''open''. Owner C.1 for the label defect. The derivation itself is a strengthening outside C.2''s C1 to C3, and INTENT has no KR for such strengthenings; noted in t1-todo.md.'
+outcome: holds
+owner: C.1
+restated: 'Open, and the label overclaims meanwhile. The stability upper bound (1-lambda) < phi(nu_consol, budget) is stated with phi undefined, yet the derivation table (line 94) and the body (line 76) call the stability-plasticity window''s ''existence'' Derived. A window exists only if rho_Sigma/R_Sigma < phi, which is what nobody has derived. What follows today is only: if a consolidation-limited upper bound exists, the admissible set of lambda is an interval, possibly empty. Strengthen first: derive phi for one concrete consolidation mechanism (a replay buffer of size B with offline budget B_offline, for instance); only if that fails, relabel the window as conditional on the unnamed phi. Also, the Working Note at line 162 calls phi ''the minimum forgetting rate'' that leaves enough signal; as an upper bound on (1-lambda) it is the maximum.'

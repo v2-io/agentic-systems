@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: d6dc3464a56cd545cc47e96b6d6bf115263f1996b1a887eed9c3e03d929fa6bb
+at: 2026-10-30T21:17:28Z
+store: asf
+act: recheck
+about: item:audits-status-audit-773921-final-2026-05-28-c837
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 1cb2165e+dirty
+criterion: 'A roll-up row. Its findings are all closed or routed (the row says so, and the residual spike proposals F1/F4 live as rows in spikes/PROPOSED.md, imported and judged separately). The one thing left is the gold directory: audits/AUDIT-WORKING-773921 still holds 32 files, with one already moved to audits/.integrated (34-deriv-matrix-persistence-condition, 7b647445, 2026-08-22). Whether and how those graduate is the lead''s I.5/I.8 decision on audit gold, and the audit''s graduation is its location, not a work item.'
+outcome: not-an-item
