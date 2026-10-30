@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: e73bfd11e8764ccfe1027460b9a69e3f28b40fa104352545bb13bf2e84e72ec6
+at: 2026-10-30T22:31:31Z
+store: asf
+act: rederive
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 fourth reader, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:scope-adaptive-system: 85e9aebf3f379092101e656014d69e7be357542e939a5edf1929d98227c8065f
+committed: after
+criterion: 'Item (g): finality for the law part; the whole-target inequality $I(S_s;F_s \mid \mathcal C_s) \leq I(S_t;F_s \mid \mathcal C_s) + \sum_{k\geq s} r_k$; and the clocked counterexample (out before the report time, in from it)'
+effective-version: 2cf22cfd369a9c030c93a20a5abf8f46781ee5c7b86b192eb949b87b4804cdd8
+from: review:scope-adaptive-system-check-5#C4
+line: derivation
+outcome: confirmed
+recheck: bound $I(S_s; o_{k+1} \mid S_t, \mathcal C_k, a_k) \leq r_k$ via $S_k$ and the Markov property
+target-version: 85e9aebf3f379092101e656014d69e7be357542e939a5edf1929d98227c8065f
+version-from: git-revision

@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: f0afa68bf9f16d92a6802bd03d351e880da27d7750c4b0da326a71ff84f63c19
+at: 2026-10-30T22:31:32Z
+store: asf
+act: rederive
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 fourth reader, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:scope-adaptive-system: 85e9aebf3f379092101e656014d69e7be357542e939a5edf1929d98227c8065f
+committed: after
+criterion: Is the invariance cut ("stays the same along the whole run, almost surely") fixed under every continuation the predicate ranges over, as the Markov commitment, (g)'s "because $\theta$ is invariant", and (g′)'s "the law never renews" require?
+effective-version: 2cf22cfd369a9c030c93a20a5abf8f46781ee5c7b86b192eb949b87b4804cdd8
+from: review:scope-adaptive-system-check-5#C11
+line: derivation
+outcome: narrowed
+recheck: 'the lever example: $c$ constant under the agent''s own (waiting) policy, redrawn by a continuation that presses, seen through a 0.1 flip channel'
+target-version: 85e9aebf3f379092101e656014d69e7be357542e939a5edf1929d98227c8065f
+version-from: git-revision
