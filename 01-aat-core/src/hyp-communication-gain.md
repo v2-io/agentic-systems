@@ -30,7 +30,7 @@ where the first two terms are #emp-update-gain's update from $i$'s own observati
 
 *[Derived (simultaneous terms; conditional on the Gaussian location regime of #deriv-fisher-local-update-gain, with errors independent across terms)]*
 
-The terms apply as their events arrive, each with the gain set by the uncertainty $U_{M_i}$ current at that moment, and $U_{M_i}$ updated after it. Applied that way, one at a time, they reproduce the joint Bayesian update. Terms that arrive together need one joint update. If term $k$ carries total noise variance $V_k$ (that is $U_{o,i}$ for $i$'s own observation, and $U_{o,ji} + U_{\text{src},j} + U_{\text{align},ji}$ for source $j$), the joint update gives it the gain
+Read each term as an observation $o_k$ of the quantity $i$ is updating, with $h$ the innovation $o_k - M_i^-$ (for source $j$, $o_k$ is what $j$ conveys). The terms apply as their events arrive, each with the gain set by the uncertainty $U_{M_i}$ current at that moment, and $U_{M_i}$ updated after it. Applied that way, one at a time, they reproduce the joint Bayesian update. Terms that arrive together need one joint update. If term $k$ carries total noise variance $V_k$ (that is $U_{o,i}$ for $i$'s own observation, and $U_{o,ji} + U_{\text{src},j} + U_{\text{align},ji}$ for source $j$), the joint update gives it the gain
 
 $$\eta_k = \frac{U_{M_i}^{+}}{V_k}, \qquad U_{M_i}^{+} = \Big(\frac{1}{U_{M_i}} + \sum_l \frac{1}{V_l}\Big)^{-1},$$
 

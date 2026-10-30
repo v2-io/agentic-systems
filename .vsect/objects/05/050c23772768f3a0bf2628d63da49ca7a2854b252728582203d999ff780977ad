@@ -1,0 +1,75 @@
+kind: segment
+form: 
+normalizer: vsect-norm/0
+---
+# Hypothesis: Communication Gain
+
+The extension of the uncertainty-ratio gain principle (`#emp-update-gain`) to *inter-agent* communication channels. When an agent incorporates information from *another agent* (rather than from direct observation), the optimal update gain extends with additional terms in the denominator: **communication channel noise** (latency, ambiguity, compression loss, bandwidth limits), **source quality uncertainty** (the receiver's uncertainty about the sender's model calibration and domain competence), and **teleological-unity uncertainty** (the receiver's uncertainty about whether the sender's communications serve the receiver's interests or the sender's potentially conflicting objectives). When all additional terms are zero (perfect channel, calibrated and aligned source) the gain heads to 1 (full trust); when any term is large the gain heads to 0 (ignore the signal). When the "sender" is the environment (direct observation), the source-quality and alignment terms vanish and the standard single-agent gain formula is recovered.
+
+The three additional denominator terms have *different natures*. Channel noise is a property of the *channel* — improvable by infrastructure. Source quality is a property of the *source* — improvable by the sender improving its model, or estimable by the receiver through calibration tracking. Alignment uncertainty is a property of the *relationship* — the game-theoretic variable. The three are independent levers; the framework's prescription is to track them separately.
+
+The receiver's estimates of source quality and alignment constitute a **trust meta-model** — a model of models. This meta-model is itself subject to AAT's full apparatus: it has its own mismatch (trust prediction errors), should be updated with appropriate gain (not overreacting to single disagreements), and can be structurally inadequate (the agent's trust model class may not capture the actual reliability structure of its sources, per `#result-structural-adaptation-necessity`). The framework also names **risk-asymmetric trust**: the Bayesian posterior on source reliability gives the best *estimate*, but the *decision* about how much to trust should be risk-weighted. Trusting a deceptive agent in a high-stakes interaction can cause catastrophic model corruption (the adversarial-destabilization effects spiral, `#der-adversarial-destabilization`); mild miscalibration toward a reliable source causes only small ongoing inefficiency. For high-stakes interactions, the framework prescribes using a *conservative quantile* of the trust posterior rather than the mean. **Trust transitivity** is handled via a Bayesian mixture: when no direct experience exists with a candidate source but a trusted intermediary provides an assessment, the recommendation is discounted by the intermediary's own reliability — giving a principled three-phase trust formation (prior → transitive update → direct experience, which eventually swamps the prior).
+
+The framework is explicit about a limitation: the additive denominator treats all uncertainty sources as independent zero-mean noise — appropriate for channel noise and source miscalibration, but *misses the adversary's actual strategy* of presenting as trustworthy to exploit high gain. The additive model captures the *defender's* response to detected misalignment; it does not model the *attacker's* optimization over the defender's trust dynamics. The status is honestly *hypothesis-discussion-grade* — the additive heuristic correctly drives the gain toward zero when alignment uncertainty is high, but a full treatment of the adversarial case requires game-theoretic equilibrium analysis external to AAT (AAT provides the state variables; the equilibrium analysis is external).
+
+## Formal Expression
+
+*[Formulation (multi-agent-update)]*
+
+Each agent $i$ keeps its own model and update, and adds one term for each source $j$ it takes information from:
+
+$$M_i^+ = M_i^- + \eta_i\, g_i(\delta_i) + \sum_{j \in \mathcal N(i)} \eta_{ji}\, h_{ji}(M_j^-, M_i^-)$$
+
+where the first two terms are #emp-update-gain's update from $i$'s own observations, $\mathcal N(i)$ is the set of $i$'s sources, and $h_{ji}$ maps what $j$ conveys to an update direction for $i$, the social counterpart of the mismatch transform $g$. Conveying covers messages, observing $j$'s actions, consulting $j$'s outputs, and indirect signals such as prices; in each, $j$'s model has already compressed information about the shared environment. A query action ( #def-causal-information-yield) is how $i$ opens such a term. A fixed trust weight $w_{ji}$ is the special case of a constant $\eta_{ji} = w_{ji}$. A trust weight multiplying the gain would add nothing, since only the product would enter the update and the two could not be told apart.
+
+*[Derived (simultaneous terms; conditional on the Gaussian location regime of #deriv-fisher-local-update-gain, with errors independent across terms)]*
+
+Read each term as an observation $o_k$ of the quantity $i$ is updating, with $h$ the innovation $o_k - M_i^-$ (for source $j$, $o_k$ is what $j$ conveys). The terms apply as their events arrive, each with the gain set by the uncertainty $U_{M_i}$ current at that moment, and $U_{M_i}$ updated after it. Applied that way, one at a time, they reproduce the joint Bayesian update. Terms that arrive together need one joint update. If term $k$ carries total noise variance $V_k$ (that is $U_{o,i}$ for $i$'s own observation, and $U_{o,ji} + U_{\text{src},j} + U_{\text{align},ji}$ for source $j$), the joint update gives it the gain
+
+$$\eta_k = \frac{U_{M_i}^{+}}{V_k}, \qquad U_{M_i}^{+} = \Big(\frac{1}{U_{M_i}} + \sum_l \frac{1}{V_l}\Big)^{-1},$$
+
+which for a single term is the ratio below. Gains computed separately against the same prior $U_{M_i}$ and then summed count the prior's information once per term: with $U_{M_i} = V_1 = V_2 = 1$ they sum to 1, where the joint gains are $1/3$ each. Errors correlated across terms need the joint form with their covariance, as in #deriv-tempo-additivity's synchronized batch.
+
+*[Hypothesis (communication-gain)]*
+
+$$\eta_{ji}^* = \frac{U_{M_i}}{U_{M_i} + U_{o,ji} + U_{\text{src},j} + U_{\text{align},ji}}$$
+
+where:
+
+- $U_{M_i}$: agent $i$'s model uncertainty (same as #emp-update-gain)
+
+- $U_{o,ji}$: **communication channel noise** — latency, ambiguity, compression loss, bandwidth limitations of the channel between $j$ and $i$
+
+- $U_{\text{src},j}$: **source quality uncertainty** — $i$'s uncertainty about $j$'s model calibration and domain competence
+
+- $U_{\text{align},ji}$: **teleological-unity uncertainty** — $i$'s uncertainty about whether $j$'s communications serve $i$'s interests or $j$'s potentially conflicting objectives
+
+When all additional terms are zero (perfect channel, calibrated and aligned source): $\eta_{ji}^\ast \to 1$ (full trust). When any term is large: $\eta_{ji}^\ast \to 0$ (ignore the signal).
+
+**Connection to single-agent case.** When $j$ is the environment (direct observation): $U_{\text{src}} = U_{\text{align}} = 0$, recovering #emp-update-gain's standard form $\eta^\ast = U_M / (U_M + U_o)$.
+
+## Epistemic Status
+
+*Hypothesis*, on a *formulation*: the multi-agent update is a representational choice extending #emp-update-gain's single-agent update, and the claim under test is the gain it carries. The additive denominator treats all uncertainty sources as independent, zero-mean noise — a structural heuristic, not a strict variance derivation. This is appropriate for $U_{o,ji}$ (channel noise) and $U_{\text{src},j}$ (miscalibration), which are typically unstructured. For $U_{\text{align},ji}$ (deception), additivity is conservative: it correctly drives $\eta_{ji}^\ast$ toward zero when teleological-unity uncertainty is high, but misses the adversary's *actual* strategy — presenting as trustworthy to exploit high $\eta_{ji}^\ast$. The additive model captures the *defender's* response to detected misalignment; it does not model the *attacker's* optimization over the defender's trust dynamics.
+
+**What would refute it.** Two predictions are testable in multi-agent estimation tasks, and with instrumentation in teams. (i) *Adaptive beats fixed trust.* Where source reliability varies across sources or over time, the communication gain should reach lower steady-state mismatch than any fixed trust weight $w_{ji}$ used as a constant $\eta_{ji}$ in the update above, both applied as events arrive. The hypothesis is refuted if a well-tuned fixed weight matches or beats it across a range of drift rates and source-failure patterns. That would mean the $U_{\text{src}}$ and $U_{\text{align}}$ terms carry no usable information, or cost more to estimate than they return. (ii) *Risk-adjusted trust protects the worst case.* Setting trust from a conservative quantile of the reliability posterior, rather than its mean, should lower worst-case mismatch when a known fraction of sources is deceptive, at a small average-case cost. The risk-asymmetric refinement (Discussion) is refuted if worst-case mismatch does not improve, or if the average-case cost leaves total mismatch higher. That would mean the posterior already handles the tail. Failure of (i) undermines the hypothesis; failure of (ii) only the refinement.
+
+All four uncertainty terms must be expressed in a **common predictive-dispersion scale** before summation — the same units as $U_{M_i}$ (variance of the predictive distribution over the observed quantity). When hard to estimate directly, a conservative approximation: set $U_{\text{src}} + U_{\text{align}}$ to the empirical variance of $j$'s past prediction residuals as observed by $i$, minus the known channel noise $U_{o,ji}$.
+
+## Discussion
+
+**The denominator terms have different natures.** $U_{o,ji}$ is a property of the *channel* — improvable by infrastructure. $U_{\text{src},j}$ is a property of the *source* — improvable by $j$ improving its model, or estimable by $i$ through calibration tracking. $U_{\text{align},ji}$ is a property of the *relationship* — the game-theoretic variable.
+
+**The terms depend on what the update is about.** *[Discussion]* All four terms are variances over the quantity $i$ is updating, so one message can carry low noise for one quantity and high noise for another. A hierarchy shows both directions. A summary sent up from a lower layer is lossy by design: for the aggregate the upper layer acts on, compression adds little channel noise, and for the local detail it drops, $U_{o,ji}$ is large. Going down, the upper layer's model is broader but coarser, so as a source on local quantities its $U_{\text{src},j}$ is high, however well-intentioned it is. Neither is a matter of alignment. A directive's objective and strategy content is a different transmission, which #hyp-auftragstaktik-principle's bandwidth ordering treats; the gain here governs updates to the model.
+
+**Waiting for a reply is deliberation.** *[Discussion]* A query opens a term only when the reply comes. If $i$ holds off acting until then, the wait is a pause in the sense of #der-deliberation-cost, with mismatch accruing at $\rho_{\text{delib}}$ for the reply time. Consulting $j$ is then worth the wait only when the update the reply brings exceeds $\rho_{\text{delib}}$ times that time; a slow, reliable source can lose to a fast, noisier one.
+
+**Trust calibration as a meta-model.** Agent $i$'s estimates of $U_{\text{src},j}$ and $U_{\text{align},ji}$ constitute a **trust meta-model** — a model of models. This meta-model is itself subject to AAT's full apparatus: it has mismatch (trust prediction errors), should be updated with appropriate gain (not overreacting to single disagreements), and can be structurally inadequate ( #result-structural-adaptation-necessity — the agent's trust model class may not capture the actual reliability structure of its sources).
+
+**Risk-asymmetric trust.** The Bayesian posterior on source reliability gives the best *estimate*, but the *decision* about how much to trust should be risk-weighted. Trusting a deceptive agent (HILP — high impact, low probability) can cause catastrophic model corruption ( #der-adversarial-destabilization, effects spiral). Mild miscalibration toward a reliable source (LIHP) causes small ongoing inefficiency. For high-stakes interactions, use a conservative quantile of the trust posterior rather than the mean — require more evidence before granting high trust.
+
+**Trust transitivity.** When agent $i$ has no direct experience with agent $k$, but trusted intermediary $j$ provides an assessment, the transitive trust question arises. A Bayesian mixture model discounts the recommendation by the intermediary's own reliability:
+
+$$P_i(\theta_k \mid s_j) \propto \left[r_{ji} \cdot P(s_j \mid \theta_k) + (1 - r_{ji}) \cdot P_0(s_j)\right] \cdot P_i(\theta_k)$$
+
+where $r_{ji}$ is $i$'s reliability estimate of $j$ and $\theta_k$ is $k$'s true alignment. When $r_{ji} \to 0$, the posterior collapses to the prior (no update); when $r_{ji} \to 1$, the full informative likelihood applies. This model gives a principled three-phase trust formation: prior → transitive update → direct experience (which eventually swamps the prior).
