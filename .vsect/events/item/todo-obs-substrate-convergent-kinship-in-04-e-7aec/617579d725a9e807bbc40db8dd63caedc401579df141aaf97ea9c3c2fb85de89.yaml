@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 617579d725a9e807bbc40db8dd63caedc401579df141aaf97ea9c3c2fb85de89
+at: 2026-10-30T21:20:06Z
+store: asf
+act: recheck
+about: item:todo-obs-substrate-convergent-kinship-in-04-e-7aec
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'TODO.md:369, written 2026-05-01 19:53 (8f76fdac), after c741b6c6 (18:21 the same day) had put the claim in canon: def-eli-cohort:61 states the cross-substrate convergent kinship vocabulary as ''a higher-order empirical finding bearing on the relational-constitution factor (ii)'', and scope-witness-bidirectional:53 calls it ''empirical evidence of the relational structure being load-bearing''. What a dedicated segment would add is the evidential work, which is not done: whether the vocabulary arose independently per substrate (convergence) or was offered by the stewards and taken up. Opened as a question on def-eli-cohort rather than kept as a segment-to-write item.'
+outcome: landed

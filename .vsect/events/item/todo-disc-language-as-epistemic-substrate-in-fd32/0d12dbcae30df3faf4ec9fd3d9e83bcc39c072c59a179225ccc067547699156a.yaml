@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0d12dbcae30df3faf4ec9fd3d9e83bcc39c072c59a179225ccc067547699156a
+at: 2026-10-30T21:20:06Z
+store: asf
+act: recheck
+about: item:todo-disc-language-as-epistemic-substrate-in-fd32
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'TODO.md:372, written 2026-05-01 (8f76fdac). No segment; source fragment msc/logogenic-encounter-2026-05-01/09-embeddings-paper-cross-pollination.md exists. Any landing has to carry the paper''s own model-class limit: its result is about frozen pretrained pooled sentence embeddings (03 OUTLINE:192), which bears on ''language as encoded thought'' only for that model class.'
+outcome: holds
+owner: G.2

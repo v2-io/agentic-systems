@@ -3,9 +3,11 @@ kind: item
 provenance: imported
 source: TODO.md:458
 section: 'TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (d) — LOGA / ELI stub filling and content cycle — open items'
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:18:32Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: G.2
+restated: 'Twelve Vol-4 OUTLINE rows marked missing: for each, author at honest tier from its upstream source or set aside with a recorded reason (G.0 decides where argued non-derived claims live); meanwhile the rows'' claim cells should not assert results (e.g. ''mathematically guarantee'') that no body carries.'
 ---
 
 # ELI missing stubs (twelve genuinely absent in `04-eli-core/src/`) — `def-character-aspiration-dialectic`, `obs-axiom-genesis`, `obs-substrate-independence`, `fo

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 57217a3ea29911cfd6eb024815522b5e4b938a680058996d4b0a1d5d8cbc00f2
+at: 2026-10-30T21:20:05Z
+store: asf
+act: recheck
+about: item:todo-obs-self-model-from-recursion-in-03-llm-ed6b
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'TODO.md:368, written 2026-05-01 (8f76fdac). No segment. Its premise is false at HEAD: it says framing point 5 is ''partially covered by obs-backward-inference-empathy'', but that segment was never written (03 OUTLINE:85 marked missing); msc/logogenic-encounter-2026-05-01/08-review-pass-findings.md:30 itself says ''proposed''. So nothing in canon covers self-model-from-recursion; scope-channel-collapse covers recursion-forces-interiority (point 4), not point 5.'
+outcome: holds
+owner: G.2
+restated: Framing point 5 ('model of self emerges from recursive substrate') has no home in canon; the segment it was said to be partly covered by does not exist. Author at honest tier or set aside with a reason.

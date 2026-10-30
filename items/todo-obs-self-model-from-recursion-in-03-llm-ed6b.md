@@ -3,9 +3,11 @@ kind: item
 provenance: imported
 source: TODO.md:368
 section: TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › New segment candidates (not yet in OUTLINE)
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:20:05Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: G.2
+restated: Framing point 5 ('model of self emerges from recursive substrate') has no home in canon; the segment it was said to be partly covered by does not exist. Author at honest tier or set aside with a reason.
 ---
 
 # `obs-self-model-from-recursion` in `03-llm-core/src/` — Joseph's morning framing point 5 ("model of self emerges from recursive substrate") is partially covered

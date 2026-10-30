@@ -3,9 +3,11 @@ kind: item
 provenance: imported
 source: TODO.md:393
 section: TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › Cross-pollination opportunities
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:20:06Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: F.3
+restated: Either obs-evaluation-metrics cites the TACL paper for what it actually shows (a hedging axis in frozen pooled sentence embeddings) with the model-class limit, or 03 OUTLINE:116 stops calling the segment 'validated by' it.
 ---
 
 # TACL embeddings paper integration — when `obs-evaluation-metrics` is lifted from exploratory to draft, the paper at `~/src/embeddings/paper.md` is the load-bear

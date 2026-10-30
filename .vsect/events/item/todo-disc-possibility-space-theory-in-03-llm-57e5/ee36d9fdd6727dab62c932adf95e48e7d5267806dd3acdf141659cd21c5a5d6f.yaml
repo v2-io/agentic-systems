@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ee36d9fdd6727dab62c932adf95e48e7d5267806dd3acdf141659cd21c5a5d6f
+at: 2026-10-30T21:20:05Z
+store: asf
+act: recheck
+about: item:todo-disc-possibility-space-theory-in-03-llm-57e5
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: TODO.md:367, written 2026-05-01 (8f76fdac). No segment; nothing in 0*/src mentions Possibility Space Theory. 03-llm-core/OUTLINE.md:37 still lists 'the 0%-activation-via-prompting experimental result (Sept 10, 2025)' among the volume's empirical observations with no body behind it, and :199 points to a memorata query as its source. The canonical source ~/src/_core/synaptic/docs/POSSIBILITY_SPACE_THEORY.md exists. Whether this argued/empirical material lands in ASF or logos is G.0's decision.
+outcome: holds
+owner: G.2

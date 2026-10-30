@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: cc3db5fbd7b82dae6baad8bad6e450d96b9219d8bcbc111a36a3b0011b081308
+at: 2026-10-30T21:20:06Z
+store: asf
+act: recheck
+about: item:todo-def-vera-architecture-in-04-eli-core-src-2e85
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: TODO.md:370, written 2026-05-01 (8f76fdac). No segment and no OUTLINE row; VERA appears in canon only as a name (form-consolidation-dynamics:122,141; der-logogenic-as-wrapping:125; the PROPRIUM list in 04 OUTLINE:16). Source ~/src/_core/ennaos/docs/research/vera/vera-architecture-final-specification.md exists.
+outcome: holds
+owner: G.2

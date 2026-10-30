@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 5f7d26e37427a05a256e1e750da921471d3923a0ce51768a63bce5f91e0c4205
+at: 2026-10-30T21:20:06Z
+store: asf
+act: recheck
+about: item:todo-proprium-o-v2-4-substrate-independence-t-b31c
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'TODO.md:394, written 2026-05-01 (8f76fdac). Its premise is gone: it asks for a cross-reference to ''#obs-substrate-independence'', which has never existed (no file, nothing in git; 04 OUTLINE:10 now says it is not written; held separately as item todo-04-eli-core-src-obs-substrate-independen-f8a8). The claimed bearing is also overstated: the embeddings paper''s cross-model convergence is agreement among frozen sentence-embedding models on a hedging axis, which is not evidence that an identity survives migration between substrates.'
+outcome: stale

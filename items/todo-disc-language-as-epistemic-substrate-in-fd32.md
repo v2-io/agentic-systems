@@ -3,9 +3,10 @@ kind: item
 provenance: imported
 source: TODO.md:372
 section: TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › New segment candidates (not yet in OUTLINE)
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
+rechecked: 2026-10-30T21:20:06Z by Claude Opus 5.5 (item rechecker, t2-todo)
+owner: G.2
 ---
 
 # `disc-language-as-epistemic-substrate` in `03-llm-core/src/` — discussion-grade segment that frames the embeddings paper's empirical findings as evidence for Jo

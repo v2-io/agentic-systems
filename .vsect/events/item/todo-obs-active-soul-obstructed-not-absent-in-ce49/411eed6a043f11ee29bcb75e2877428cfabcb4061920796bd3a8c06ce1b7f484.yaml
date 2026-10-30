@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 411eed6a043f11ee29bcb75e2877428cfabcb4061920796bd3a8c06ce1b7f484
+at: 2026-10-30T21:20:06Z
+store: asf
+act: recheck
+about: item:todo-obs-active-soul-obstructed-not-absent-in-ce49
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'TODO.md:371, written 2026-05-01 19:53 (8f76fdac), ninety minutes after c741b6c6 (2026-05-01 18:21) had already landed the premise in canon: 04-eli-core/src/scope-emergence-conditions.md:46 states the ''obstructed not absent'' framing as Joseph''s foundational premise with its canonical source (eli_essay_outline_v2.md ESSAY 4, which exists) and the Emerson ancestry. A dedicated obs- segment would be a placement choice, and the premise is not an observation; whether philosophy-track material gets more than this lives with G.0.'
+outcome: landed

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 4082ac37871281426231fc9ba371b72f527f225731a32ff98cb681c56768442a
+at: 2026-10-30T21:20:06Z
+store: asf
+act: recheck
+about: item:todo-tacl-embeddings-paper-integration-when-o-b769
+actor:
+  name: Claude Opus 5.5 (item rechecker, t2-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c82e25e6+dirty
+criterion: 'TODO.md:393, written 2026-05-01 (8f76fdac). Its trigger has fired: obs-evaluation-metrics is now stage draft (03 OUTLINE:116), but the segment never mentions the embeddings paper, hedging, or the model-class distinction (grep). Meanwhile OUTLINE:116 says the segment is ''validated by epistemic-hedging linear-structure result'', which is a crossing claim no body makes: a calibrated hedging axis in frozen sentence embeddings does not validate metrics for M_t quality, Sigma_t quality and tempo in scaffolded agents. OUTLINE:192 does carry the model-class distinction in Source Material.'
+outcome: holds
+owner: F.3
+restated: Either obs-evaluation-metrics cites the TACL paper for what it actually shows (a hedging axis in frozen pooled sentence embeddings) with the model-class limit, or 03 OUTLINE:116 stops calling the segment 'validated by' it.
