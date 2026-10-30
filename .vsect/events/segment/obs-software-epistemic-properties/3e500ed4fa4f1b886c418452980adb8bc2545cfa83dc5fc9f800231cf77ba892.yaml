@@ -1,0 +1,35 @@
+schema: vsect-event/0
+id: 3e500ed4fa4f1b886c418452980adb8bc2545cfa83dc5fc9f800231cf77ba892
+at: 2026-10-30T21:25:53Z
+store: asf
+act: read-check
+about: segment:obs-software-epistemic-properties
+actor:
+  name: Claude Opus 5.5 (TST lane integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: 62dea40056d00b6cc7a6f311ad831e0bf584f50a03a297f89fc934efdb24e885
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-mismatch-signal: 250e844f383dff060ba7879b6c86f9c5fd546df30d0c24cbdfa0ae771d932b78
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:obs-software-epistemic-properties: 2e032b8f5fab142cef36ea913fe7c8dc22f6242dc74c90e4ab380bbc3a46e613
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:scope-adaptive-system: 12ea0186e7a33e60ec52fade2a82c6955eba9631cec9eaf7034b588e4023ef4a
+  segment:scope-agency: 9185f5597080252155e7cf6292188de464b923f4541aa305acb58e4b39e21162
+  segment:scope-evolving-software: e63de68d439145af139a511f37dceecdca96d5b1baa820b72fece5b6514261a1
+committed: after
+criterion: After both H.2 commits, does any live segment, OUTLINE or toolkit document still cite $\alpha \approx 0.118$, the estimated-time fit, or an `old-*` file as a source?
+effective-version: cdf86ce5ddf02748fbd93302274b3b00e97af91156be87118ccec238b1747865
+from: review:tst-old-files-h2-integration#C6
+line: discussion
+outcome: confirmed
+recheck: '`grep -rn "0\.118\|old-tst-\|old-tf-appendix" 01-aat-core 02-tst-core 03-llm-core 04-eli-core --include=*.md`'
+target-version: 2e032b8f5fab142cef36ea913fe7c8dc22f6242dc74c90e4ab380bbc3a46e613
+version-from: git-revision

@@ -1,0 +1,29 @@
+schema: vsect-event/0
+id: 67fdbf4c48bcdfd5a682d0fde3e430f9dd5cd44fd3d1b813b4a62183f971f931
+at: 2026-10-30T21:25:52Z
+store: asf
+act: rederive
+about: segment:der-change-expectation-baseline
+actor:
+  name: Claude Opus 5.5 (TST lane integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: 62dea40056d00b6cc7a6f311ad831e0bf584f50a03a297f89fc934efdb24e885
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:der-change-expectation-baseline: dbad31b2f6c64b32456bbed3f568c30c49eb4f02ff94c979176501cbf9312b77
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:scope-adaptive-system: 12ea0186e7a33e60ec52fade2a82c6955eba9631cec9eaf7034b588e4023ef4a
+  segment:scope-agency: 9185f5597080252155e7cf6292188de464b923f4541aa305acb58e4b39e21162
+  segment:scope-evolving-software: e63de68d439145af139a511f37dceecdca96d5b1baa820b72fece5b6514261a1
+committed: after
+criterion: For $S(t) = \int_0^\infty f(k)e^{-kt}dk$ with $f(k) \sim c k^{a-1}$ at $0^{+}$, is $S(t) \sim c\Gamma(a)t^{-a}$, so that the median remaining age is $\sim (2^{1/a}-1)t_0$; and is the exponential prior exact at every age with median $t_0 + b$?
+effective-version: e785acd5098748d7a849242239dc018de84391ce543e96ef7bf1640f76291b34
+from: review:tst-old-files-h2-integration#C3
+line: derivation
+outcome: confirmed
+recheck: Watson's lemma; then the numerical check below
+target-version: dbad31b2f6c64b32456bbed3f568c30c49eb4f02ff94c979176501cbf9312b77
+version-from: git-revision

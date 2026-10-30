@@ -1,0 +1,30 @@
+schema: vsect-event/0
+id: 130fcee35e228c347bd6649e355c892d26c15b7a92733a4a92d5520989c79932
+at: 2026-10-30T21:25:52Z
+store: asf
+act: read-check
+about: segment:result-specification-bound
+actor:
+  name: Claude Opus 5.5 (TST lane integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: 62dea40056d00b6cc7a6f311ad831e0bf584f50a03a297f89fc934efdb24e885
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-feature: eefffd509dd084cb6773f2591ba53127c3063f51de688f5a5ccd0a081273e7c6
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:post-temporal-optimality: de7b3bd39563c1a1536cc4ee803d964166d4cf5b938d97ba5f53d4e02a3765d2
+  segment:result-specification-bound: 93af182c0327b5331227453c897f4eb0cc062fc09c704a2ccfe8c97c4f66ad22
+  segment:scope-adaptive-system: 12ea0186e7a33e60ec52fade2a82c6955eba9631cec9eaf7034b588e4023ef4a
+  segment:scope-agency: 9185f5597080252155e7cf6292188de464b923f4541aa305acb58e4b39e21162
+  segment:scope-evolving-software: 89b0688335a062a45de07f4ad99849e1e5cfd550b56ae092f93815241548e40a
+committed: before
+criterion: Is $t_{\min} \approx (\text{time}_{\text{specify}})^{3/4}$ "Putnam's empirical finding", as the paragraph tagged *[Empirical Claim — historical observation]* states?
+effective-version: 04d597863906ab50bfd26f059637930f0dc1847bdd36dc101c07688e5ec102fd
+from: review:tst-old-files-h2-integration#C1
+line: discussion
+outcome: broken
+recheck: compare the sentence with Putnam's software equation $\text{LOC} = C E^{1/3} t^{4/3}$ (Putnam 1978, IEEE TSE SE-4(4)) and with the derivation in TST's original T-02 (temporal-software-theory, `vault/02-theory/theorems/`)
+target-version: 93af182c0327b5331227453c897f4eb0cc062fc09c704a2ccfe8c97c4f66ad22
+version-from: git-revision

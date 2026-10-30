@@ -1,0 +1,33 @@
+schema: vsect-event/0
+id: 5e1f88db778b865b32f6477e9c17ffc567d405acb47378ff007289ff9ba6cfdc
+at: 2026-10-30T21:25:52Z
+store: asf
+act: read-check
+about: segment:def-causal-information-yield
+actor:
+  name: Claude Opus 5.5 (TST lane integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: 62dea40056d00b6cc7a6f311ad831e0bf584f50a03a297f89fc934efdb24e885
+  segment:def-causal-information-yield: 02c8b7fecb7f6ccbccc7507e07156ddb9b8e7ce4b3b3142dca77142a6fee81a0
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-mismatch-signal: 250e844f383dff060ba7879b6c86f9c5fd546df30d0c24cbdfa0ae771d932b78
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:der-action-selection: ff726f8527dab6ee837cc11b7164313850f125e944c76ea86dca14183c613408
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:deriv-recursive-update: d0f1a351e6604c21d76a76098c0aa890e5df028464e01b50a633d4e41243533f
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 12ea0186e7a33e60ec52fade2a82c6955eba9631cec9eaf7034b588e4023ef4a
+committed: before
+criterion: Are "distributed tempo, topology analysis, and game-theoretic integration" Part III content "not yet fully extracted" from `src/old-tf-appendix-f-multi-agent.md`, as the Discussion body says?
+effective-version: 29da3b0e972f93c5e4121190402fdcc82a2a39d92ac8871ca0af1474fdee6922
+from: review:tst-old-files-h2-integration#C2
+line: discussion
+outcome: broken
+recheck: 'read #der-team-persistence (distributed tempo, team persistence, coordination overhead) and #hyp-communication-gain (trust meta-model, transitive and risk-adjusted trust, game-theory boundary) against Appendix F §F.2–F.5'
+target-version: 02c8b7fecb7f6ccbccc7507e07156ddb9b8e7ce4b3b3142dca77142a6fee81a0
+version-from: git-revision

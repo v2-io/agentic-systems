@@ -1,0 +1,33 @@
+schema: vsect-event/0
+id: 6f8fe6bf673521ef8c88ab967aac5f408f347c1b38f68ea701932ecaf8015149
+at: 2026-10-30T21:25:53Z
+store: asf
+act: run
+about: segment:emp-changeset-size-principle
+actor:
+  name: Claude Opus 5.5 (TST lane integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: 62dea40056d00b6cc7a6f311ad831e0bf584f50a03a297f89fc934efdb24e885
+  segment:def-atomic-changeset: 42e9bb3fb6ebff2299c1204253d1665f549db70d3bd0d3181b8a8b0ce760e0a0
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-comprehension-time: b0db6cfd95109646952ebfd76d90b551d3d512240a2ad5f91015b6cbbe1e0aec
+  segment:def-feature: eefffd509dd084cb6773f2591ba53127c3063f51de688f5a5ccd0a081273e7c6
+  segment:def-implementation-time: 978d42091a677b509a07934ff3a8cbf1717dd62d9d7d4f17cce6f2740baae427
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:emp-changeset-size-principle: 4aba74c1708459366da1e63b34d37c54223858df331efd981c8f2e5c6f4ed316
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:scope-adaptive-system: 12ea0186e7a33e60ec52fade2a82c6955eba9631cec9eaf7034b588e4023ef4a
+  segment:scope-agency: 9185f5597080252155e7cf6292188de464b923f4541aa305acb58e4b39e21162
+  segment:scope-evolving-software: e63de68d439145af139a511f37dceecdca96d5b1baa820b72fece5b6514261a1
+committed: after
+criterion: 'Does the changeset-size paragraph reproduce: slope of $\log T$ on $\log(1+L)$ 0.14–0.41 with every interval below 1; on $\log(\text{files})$ 0.29–0.89 with obsidian-linter''s interval reaching 1 at the 24-hour cap; obsidian-linter medians 7.8, 26.7, 60.5, 74.8, 77 by lines bin?'
+effective-version: 3840102f42f8869cd8f68a599e194344db2acfcb65b9443fa0b4f4e59a2f742f
+from: review:tst-old-files-h2-integration#C5
+line: measurement
+outcome: confirmed
+recheck: '`elapsed_time.py`''s "changeset size" section on the three direct-commit histories'
+target-version: 4aba74c1708459366da1e63b34d37c54223858df331efd981c8f2e5c6f4ed316
+version-from: git-revision

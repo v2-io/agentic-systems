@@ -1,0 +1,19 @@
+schema: vsect-event/0
+id: 16471c86cbd63f57d65b988d9c61b90abef3ecde51516e546ec72335ec74c1c2
+at: 2026-10-30T21:25:53Z
+store: asf
+act: take
+about: review:tst-old-files-h2-integration
+actor:
+  name: Claude Opus 5.5 (TST lane integrator)
+  role: integrator
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+- C4:check
+- C5:check
+- C6:check
+review: reviews/tst-old-files-h2-integration.md
+review-version: e847d3d500791ea2e361623d62dd40e1b5cd9832a39a2eb9bea62f1295a8befe
