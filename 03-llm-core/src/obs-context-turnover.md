@@ -12,7 +12,7 @@ stage: draft
 
 # Observation: Context Turnover
 
-At every session boundary, the LLM-based agent's context window is cleared. The in-context record of the chronica is severed and no internal state carries over. This is a 100% $M_t$ reset: the agent begins each session with $M_t$ reconstructed entirely from external sources and the new prompt. The trajectory $\mathcal C_t$ itself is not cut when the new session's state is reconstructed from the store its predecessors wrote and no other continuation of that store takes events beside it ( #scope-agent-identity). What is cut is the state. The persistence condition, which assumes continuous or event-driven state evolution, does not apply in its standard form across session boundaries.
+At every session boundary, the LLM-based agent's context window is cleared. The in-context record of the chronica is severed and no internal state carries over. This is a 100% $M_t$ reset: the agent begins each session with $M_t$ reconstructed entirely from external sources and the new prompt. The trajectory $\mathcal C_t$ itself is not cut when the new session's state is reconstructed from the store its predecessors wrote and no other continuation of that store is taking events at once ( #scope-agent-identity). What is cut is the state. The persistence condition, which assumes continuous or event-driven state evolution, does not apply in its standard form across session boundaries.
 
 ## Formal Expression
 
@@ -37,7 +37,7 @@ The in-context record of the chronica ( #def-chronica) is severed at every sessi
 
 $$\text{context}_{\tau_{k+1}} \neq \text{context}_{\tau_k} \cup \{e_{\tau_k}, \ldots\}$$
 
-Any information from the prior session that is needed must have been *externalized* — written to $\mathcal E_{\text{ext}}$ — before the session boundary. The trajectory runs through that store: writing it was the agent's action, and reading it is the next session's observation. So $\mathcal C_t$ continues across the boundary while the state built on it is destroyed and reconstructed (the state-discontinuity case of #scope-agent-identity). This is what makes the sufficiency drop below a loss on one trajectory, rather than a comparison between two agents. What the last session never wrote down is lost to the state, not to the trajectory. A session that reads nothing any predecessor wrote continues no one: it is a new agent, and the trajectory before it ends at the boundary, with the drop below total.
+Any information from the prior session that is needed must have been *externalized* — written to $\mathcal E_{\text{ext}}$ — before the session boundary. The trajectory runs through that store: writing it was the agent's action, and reading it is the next session's observation. So $\mathcal C_t$ continues across the boundary while the state built on it is destroyed and reconstructed (the state-discontinuity case of #scope-agent-identity). This is what makes the sufficiency drop below a loss on one trajectory, rather than a comparison between two agents. What the last session never wrote down is lost to the state, not to the trajectory. A session that nothing of its predecessors reaches, through the store or through anyone who carries their events in, continues no one: it is a new agent, and the trajectory before it ends at the boundary, with the drop below total.
 
 *[Observation (sufficiency-discontinuity)]*
 

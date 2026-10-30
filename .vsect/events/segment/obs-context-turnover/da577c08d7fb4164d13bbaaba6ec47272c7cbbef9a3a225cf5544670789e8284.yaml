@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: da577c08d7fb4164d13bbaaba6ec47272c7cbbef9a3a225cf5544670789e8284
+at: 2026-10-30T23:20:58Z
+store: asf
+act: revise
+about: segment:obs-context-turnover
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-3 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: reworded
+from-version: 7c0ff7a9c09394ce6339e30f12c59cde4e1e99f3ac01f775eec9ea0536ed3531
+own-version: 60c90959d6a06647e83329e6a3e054187e80c980eb218053e249a211af33eb4b
+record: 03-llm-core/src/obs-context-turnover.md
