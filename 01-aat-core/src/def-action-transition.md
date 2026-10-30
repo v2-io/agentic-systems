@@ -28,13 +28,17 @@ where:
 - $\Omega_t$ is the current environment state
 - $a_t \in \mathcal{A}$ is the agent's chosen action
 
+*[Definition (fresh-transition)]*
+
+The draw is **fresh**: given $\Omega_t$, $a_t$ and $T$, the next state $\Omega_{t+1}$ is drawn from $T(\cdot \mid \Omega_t, a_t)$ independently of everything earlier in the run (earlier states, observations and actions, the noise behind those observations, and the agent's own randomness). This is the Markov commitment, stated for the whole run rather than for the state's own past: anything that carries forward, including the noise of an earlier observation, is part of $\Omega_t$.
+
 *[Definition (transition opacity)]*
 
-The agent may not know $T$ exactly. $T$ is the transition component $\theta_T$ of the environment's law, and whatever of it the agent was not built knowing is random under the reference measure $\pi_0$ of #scope-adaptive-system, whose support only the agent's design-time knowledge cuts down. Transition opacity is not required of every system in scope; the scope requires that the state or the law, or both, leave something for the world to reveal.
+The agent may not know $T$ exactly. $T$ is the transition component $\theta_T$ of the environment's law, and whatever of it the agent was not built knowing is random under the reference measure $\pi_0$ of #scope-adaptive-system, whose set of possible worlds only the agent's design-time knowledge cuts down. Transition opacity is not required of every system in scope; the scope requires that the state or the law, or both, leave something for the world to reveal.
 
 ## Epistemic Status
 
-This is *definitional*. The transition function $T$ is a modeling device that captures how agent actions couple back into the environment. The stochasticity of $T$ is allowed but not required — deterministic transitions are the special case where $T$ places all mass on a single successor state. Transition opacity is one of the typed components of the uncertainty the adaptive scope requires (state, transition law, observation law); it is not required on its own, in parallel with the observation-law opacity of #def-observation-function.
+This is *definitional*. The transition function $T$ is a modeling device that captures how agent actions couple back into the environment. The stochasticity of $T$ is allowed but not required — deterministic transitions are the special case where $T$ places all mass on a single successor state. The fresh-transition clause commits to the breadth of $\Omega$, and holds without loss of generality for the same reason the Markov commitment it extends does: whatever the world remembers is declared as state. Transition opacity is one of the typed components of the uncertainty the adaptive scope requires (state, transition law, observation law); it is not required on its own, in parallel with the observation-law opacity of #def-observation-function.
 
 ## Discussion
 
@@ -43,6 +47,8 @@ This is *definitional*. The transition function $T$ is a modeling device that ca
 **What known and unknown $T$ each leave.** If the agent knows $T$ and can read the state, action selection is planning under chance over a known decision process, which is outside the adaptive scope. If it knows $T$ but cannot read the state, it still has to filter, and it plans over its beliefs about the state. If it does not know $T$, it has to learn, whatever it can see. Adaptive behavior is needed whenever the state or the law is open.
 
 **Markov-of-$\Omega$ as a modeling commitment, not an empirical assumption.** The form $\Omega_{t+1} \sim T(\cdot \mid \Omega_t, a_t)$ is implicitly Markov in $\Omega$ — only the current $\Omega_t$ and $a_t$ appear in the conditioning. Without loss of generality, $\Omega$ is taken to be the *sufficient state* for its own evolution under $T$: any non-Markov environment is absorbed by extending $\Omega$ to include enough history to make future-state distribution depend only on current state and action. This is the world-side analog of the Markov-by-completeness move that #der-recursive-update makes for the agent-side state $M_t$ ( #deriv-recursive-update Constraint C3). The two are independent — Markov-of-$M_t$ is forced by *defining $M_t$ as complete*; Markov-of-$\Omega$ is forced by *defining $\Omega$ as the sufficient state*. Both are modeling commitments about the *breadth* of the named object, not structural assumptions about underlying world dynamics.
+
+**Sufficient for the run, not only for its own past.** Markov in its own past is not enough. Take a known law, a hidden bit $x$ in $\Omega_1$, a first reading $o_1 = x \oplus \varepsilon_1$ with $\varepsilon_1$ a fair coin, so that $o_1$ alone says nothing about $x$, and a later state whose bit is $\varepsilon_1$, reported at step $K$. Given its own past, that state's bit is a fair coin, so the state is Markov in its own evolution and the channel's noise is fresh at every step. Yet $o_K \oplus o_1 = x$: the world remembers $\varepsilon_1$ between steps $1$ and $K$ outside anything named as state, and what the next observation shows about the world is no longer settled by the current state. The fresh-transition clause rules this out by declaration: the remembered noise is state from step $1$ on. With fresh noise ( #def-observation-function), it gives the factorization the rest of the framework uses. Given the current state, the action and the law, the next state and observation are independent of everything earlier, and the law of a run is a product of kernels and policy.
 
 ## Working Notes
 

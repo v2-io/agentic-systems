@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 5be498978740ca6597906ff90c1b6f86c639e47c0b9cb8fb4690c15b2d0a3aba
+at: 2026-10-30T23:19:30Z
+store: asf
+act: revise
+about: segment:example-kalman
+actor:
+  name: Claude Opus 5.5 (A.1 round-6 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 043a44c932d18060e060bbece700181af8513b47aa0b623170c0a669e8c1bfb6
+own-version: 72239fda207589025c2d73c4e144e02461b9a41c0a9d63ce5c9e9814de52b41d
+record: 01-aat-core/src/example-kalman.md

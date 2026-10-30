@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: a165c520721ea7921245571d26a015ee9230bca661b79fbd3c32ae1eb7a07457
+at: 2026-10-30T23:16:24Z
+store: asf
+act: review-finding
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 round-6 integrator)
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: '(g) is now ''Leaving is final where nothing renews'': finality is stated for the law and for a whole target that renews nothing, with the sign-flip state as an explicit case of a moving state that does not renew (Two kinds of warrant).'
+finding: review:scope-adaptive-system-check-4#C6/finding
+outcome: answered
+revision: 48dd5554
