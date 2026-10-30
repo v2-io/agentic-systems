@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 99709f72b9f36cb22fd5a88f74c8c6db7be262f5d2367b2597dd53372c9379af
+at: 2026-10-30T21:26:23Z
+store: asf
+act: recheck
+about: item:todo-source-segment-defects-surfaced-by-the-2-4f4e
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 73ac4e7b+dirty
+criterion: 'One bullet bundling thirteen segment defects; the ledger is keyed by claim, so it is split. Each defect was checked at HEAD, and all thirteen are still open. They are now held one per segment: t1-auftragstaktik-allocation-and-conway, t1-gated-tempo-one-sided-noise-prescription, t1-contraction-template-cc-feedback-iff, t1-causal-ib-exploration-physically-cannot, t1-causal-ib-lmi-intro-caveat-trace-identity, t1-coupled-diagnostic-class1-rescope, t1-tempo-composition-c-coord-baseline, t1-persistence-cost-per-dimension-reading, t1-bounded-objective-cite-capture, t1-impl-closed-loop-interiority-vol4-dependency (all C.1 except the last, H.2). Three already had items: #hyp-communication-gain''s known-adversary gap and unscoped tempo note (todo-communication-gain-adversarial-scope-hyp-e79c, this lane; reviews/items-recheck-t1.md F6, F7); the #result-unity-closure-mapping three-route WN (F151; the pilot''s todo-c-iv-composite-route-count-mismatch-gem-bb4b); #deriv-persistence-cost''s algebra (the pilot''s item; the per-dimension reading is the new note). The survivor named in --of is only the first of the split.'
+of: item:t1-auftragstaktik-allocation-and-conway
+outcome: duplicate

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: e5d8df6e686055885d7eb3dfb70500bb745f9f0d44164dba856eed82837ae784
+at: 2026-10-30T21:24:53Z
+store: asf
+act: recheck
+about: item:todo-communication-gain-adversarial-scope-hyp-e79c
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: c7aeed1d+dirty
+criterion: 'Read #hyp-communication-gain:15-62 at HEAD. git log -S ''presenting as trustworthy'' dates the scope text to 2457b8c7 (2026-03-11), before this TODO line (45ff9509, 2026-04-21). The known-adversary gap is stated in CHANGELOG 2026-08-22 (impl-unity-communication) and routed to TODO.md:498, this lane''s umbrella item. Recorded as F7 (the gap) and F6 (its unscoped distributed-tempo Working Note) in reviews/items-recheck-t1.md.'
+outcome: holds
+owner: C.1
+restated: 'The scope sentence exists (Epistemic Status line 39 and intro line 19, present since the March migration, before this item was written). It does not settle the item, because it asserts a safety property the formula lacks. U_align is uncertainty about alignment, so certainty that a source is misaligned drives U_align to 0 and raises the gain: the model fully trusts a known liar. The work is representational: carry known misalignment as a bias (mean shift) or define U_align as expected squared misalignment, then restate ''conservative'' to what the formula actually does. The game-theoretic extension stays external, as the segment says.'

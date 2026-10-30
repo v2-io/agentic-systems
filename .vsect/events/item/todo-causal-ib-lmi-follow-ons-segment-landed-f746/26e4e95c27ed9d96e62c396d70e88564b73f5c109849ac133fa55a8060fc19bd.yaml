@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 26e4e95c27ed9d96e62c396d70e88564b73f5c109849ac133fa55a8060fc19bd
+at: 2026-10-30T21:23:46Z
+store: asf
+act: recheck
+about: item:todo-causal-ib-lmi-follow-ons-segment-landed-f746
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 094a41d2+dirty
+criterion: 'Read #deriv-causal-ib-lmi:17-132 at HEAD, and empirica/track-b-nonlinear/variants/variant_causal_ib_results.md (scalar, 2026-04-25). Ran a 2x2 information-form Riccati iteration (rotation A versus identity, rank-one J); results in C2. The 08-22 impl batch item (TODO.md:498, this lane) separately names this segment''s intro caveat and trace-identity strengthening.'
+outcome: holds
+owner: C.1
+restated: 'Before the four follow-ons, a defect in the LMI itself: the ''if and only if'' between survival (lambda_max(Sigma) < R^2) and E[I_o] >= I_min with I_min SPD is false whenever A mixes directions. A rank-one information matrix stabilizes under a rotation A (reviews/items-recheck-t1.md C2). State the separable or aligned hypothesis under which the minimal information set is a single matrix, or recast the constraint as membership in an upward-closed set, and recheck the KKT blank-wall argument under it. Of the follow-ons: tensor tempo downstream is the AAT-1 item (lane t2); the worked 2D example and the 2D simulation are not done (variant_causal_ib.py is the scalar explore/exploit simulation of #deriv-causal-ib-exploration), and the 2D test should include a mixing A, the case that breaks the iff; ''closed-form I_min via DARE'' presumes a unique I_min, which exists only in the aligned case.'
