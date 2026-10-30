@@ -22,3 +22,10 @@
   - `02-tst-core/lit-review/next-research*.md` (TST agendas, April).
 
   There are probably more. Passed as context to the owner-review and internal-surfaces peers.
+- **relata state for the survey's key works** (measured 11:50 MDT). relata works from the asf checkout; the library has 2,787 entries, and `relata cited 01-aat-core` resolves segment citations.
+  - In relata: `richens-2025-general`, `virgo-2025-good`, `hafez-2026-mathematical`.
+  - Absent from relata: Baltieri & Suzuki; Eslami & Yu; Jørgensen, Weichwald & Hammond; Meulemans et al. (embedded AIXI); Miehling et al. 2025 (searched by name, title and arXiv id; only `README.md` mentions it).
+  - Segment uptake. Richens is mentioned in `def-agent-spectrum`, `impl-causal-access` and `scope-eli`, but **not** in `form-agent-model`, where the survey says its converse result belongs. Virgo is mentioned only in `def-agent-spectrum` and `scope-eli`, **not** in `der-directed-separation`. So the survey's segment-level recommendations are confirmed unintegrated.
+- **Joseph, mid-morning, on subagents** (now in `agents.sop.md`): no "report" anywhere in a subagent's artifact filename; the launcher reads the full document and never acts on the chat summary. Sent the filename correction to all three peers.
+- **Decision briefs of 2026-07-15** (`msc/decision-briefs-2026-07-15.md`, read whole). With Joseph's gates lifted, these are this effort's to decide on the merits. One exception: A7, splitting 04-eli-core into a private repo, is a strategic-exposure call that stays his. Decided now: **`core.hooksPath` unset.** It pointed at `~/src/agentic-systems/.git/hooks`, which no longer exists, so every git hook was silently inert. No real hooks existed anywhere, so nothing was lost. The entry is removed from `JOSEPH-TODO.md`. Whether to add a pre-push `bin/refresh-all --check` hook is left for the tooling phase. The rest wait for the owner review, so they're decided in light of what the theory is for: F72, A1, A4, A6, the Findings/naming coupling, SP-30, C5, the orderings, and the names.
+- **First system note**: `system/01-epistemic-machinery-in-place.md`, on the meta layer, hypotheses H-a..H-d.
