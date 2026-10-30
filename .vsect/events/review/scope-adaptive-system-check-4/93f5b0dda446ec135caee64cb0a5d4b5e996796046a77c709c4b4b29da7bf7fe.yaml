@@ -1,0 +1,28 @@
+schema: vsect-event/0
+id: 93f5b0dda446ec135caee64cb0a5d4b5e996796046a77c709c4b4b29da7bf7fe
+at: 2026-10-30T21:26:12Z
+store: asf
+act: take
+about: review:scope-adaptive-system-check-4
+actor:
+  name: Claude Opus 5.5 (independent adversarial checker)
+  role: independent-reviewer
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+- C4:check
+- C5:check
+- C6:check
+- C7:check
+- F1:finding
+- F2:finding
+- F3:finding
+- F4:finding
+- F5:finding
+- F6:finding
+- F7:finding
+- F8:finding
+review: reviews/scope-adaptive-system-check-4.md
+review-version: e7db2ff08b23a2d051d2f886be49de7bba585a1ea01eb62744e4c872d04b8f0a

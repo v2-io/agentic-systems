@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: b7d4712f03bb73fc28f8b330f57f9086cf6ea8cf9a711b0db7f23db606d42133
+at: 2026-10-30T21:26:11Z
+store: asf
+act: place-finding
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (independent adversarial checker)
+  role: independent-reviewer
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:scope-adaptive-system: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+finding: review:scope-adaptive-system-check-4#F2
+target: segment:scope-adaptive-system
+text: 'Line 31: "Whatever about the world stays the same" reads as any function of the path, while the Working Notes say the landed rule names declared variables. Line 49, item (b): "$A, C$ and the noise covariances $Q, R$ known, so $\theta$ is fi'
+version-from: git-revision

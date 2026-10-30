@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: cc893290facea5ec224054482440c49b77428389f6d8a015e58f4573a0018617
+at: 2026-10-30T21:26:11Z
+store: asf
+act: rederive
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (independent adversarial checker)
+  role: independent-reviewer
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:scope-adaptive-system: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+committed: before
+criterion: Items (a), (d), (e), (f), and (g) as a statement about $\theta$; the three ways out in the intro are exhaustive; the (ii′) sentence in "Why the future stream" (one-step part at most (ii′) at $t+1$ by data processing, converse failing at $A = 0$)
+effective-version: 0e6f88e8c462d3de9bf4d3264cc7549de72612bb8d6fd922a79098b59c716226
+from: review:scope-adaptive-system-check-4#C5
+line: derivation
+outcome: confirmed
+recheck: 09 §1
+target-version: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+version-from: git-revision

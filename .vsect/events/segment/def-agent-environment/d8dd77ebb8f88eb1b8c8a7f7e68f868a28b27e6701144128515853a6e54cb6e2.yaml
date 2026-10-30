@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: d8dd77ebb8f88eb1b8c8a7f7e68f868a28b27e6701144128515853a6e54cb6e2
+at: 2026-10-30T21:26:11Z
+store: asf
+act: place-finding
+about: segment:def-agent-environment
+actor:
+  name: Claude Opus 5.5 (independent adversarial checker)
+  role: independent-reviewer
+normalizer: vsect-norm/0
+basis:
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+finding: review:scope-adaptive-system-check-4#F7
+target: segment:def-agent-environment
+text: 'Line 13 ("systems facing genuine uncertainty about their environment''s state or law"), line 31 ("#scope-adaptive-system states it exactly") and line 35 (Epistemic Status, "systems where the agent faces genuine uncertainty") gloss the scope '
+version-from: git-revision
