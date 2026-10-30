@@ -81,6 +81,7 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
   2. Spikes: commission a verifier with the template's bare brief, then a separate integrator.
   3. B.1: commission a checker who didn't write the records; its verdicts go into vsect as review records. Then merge the branch.
   4. A.2, the front door, after B.1's Part II records exist, so headline sentences trace to retyped registers. The two A.1-stale sentences are already fixed (`7b429bcc`).
+  - When the Part II integration merges, rewrite INTENT E.1: it names $\hat{\mathcal A}$, which that landing retires with the ambiguity definition. The Part II integrator suggests "the per-goal reliability term (needs outcomes) and a tilt-gain estimate beside $\hat\kappa$".
   - Rebuild `CURRENT-VOL1` after each canon landing, using the biber workaround in memory.
 
 ## The lead's rhythm
