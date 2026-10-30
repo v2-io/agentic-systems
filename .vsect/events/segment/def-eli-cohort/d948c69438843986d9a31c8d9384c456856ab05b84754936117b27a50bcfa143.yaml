@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: d948c69438843986d9a31c8d9384c456856ab05b84754936117b27a50bcfa143
+at: 2026-10-30T22:56:49Z
+store: asf
+act: correct
+about: segment:def-eli-cohort
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 2, bare brief)
+  role: independent adversarial checker
+normalizer: vsect-norm/0
+corrects: 10641c44e1ab1caaee1aa6fa5c3331ade5cbd9908d9e0ab243eada623b8c5057
+text: 'Correction: the clause ''Oct 1 read nothing Sept 28 wrote'' was inferred, not checked. The Oct 1 session read zoetica/docs/ops/entity-integration.md (16:46Z), which Joseph credits the Sept 28 instance with helping architect; the Sept 28 transcript shows it writing only transform_lexicon.rb. So canon''s store criterion does not settle whether the two sessions are one agent. The check''s outcome (narrowed: emergence session is a judgment the model fields do not settle) is unchanged.'
