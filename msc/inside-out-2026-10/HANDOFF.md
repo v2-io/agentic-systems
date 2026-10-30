@@ -32,7 +32,7 @@ Updated 2026-10-30 ~13:00 MDT.
 - *external research:* `ref/prior-art-analysis/agentic-systems-landscape-2026-08-22.md`.
 - *aat-refactored:* `~/src/aat-refactored/spikes/fresh-view-2026-09-29/census-findings.md`, and the opening of `~/src/aat-refactored/HANDOFF.md` (to "Do next").
 - *arch:* `~/src/arch/SUBAGENT-INSTRUCTIONS-notes.md`.
-- *this effort:* `internal-surfaces/00-cross-surface-map.md`.
+- *this effort:* `internal-surfaces/00-cross-surface-map.md`; and the owner review's three history readers, `owner-review/history/2026-03-04.md`, `2026-05.md` and `2026-06-10.md`, read ~13:10 MDT. Those readers verified their load-bearing claims at their commits; the lead has not re-checked those commits.
 - *orientation outputs:* `aspectus` of asf; `projects -cvvv`; `projects heatmap -c --triple`.
 - *loaded as context:* `doc/sop/agents.sop.md` and `~/src/arch/AGENTIC-DELEGATION.md`.
 
@@ -47,7 +47,7 @@ Updated 2026-10-30 ~13:00 MDT.
 
 **Relay only (do not treat as known)**
 
-- The owner review's findings, as given in its two chat messages. Its documents in `owner-review/` are **not yet read by the lead**.
+- The owner review's own synthesis, as given in its two chat messages. `owner-review/00-review.md`, the explorers and `verified-at-HEAD.md` are **not yet read by the lead**. The review is being rewritten (v1, then v2); read the final version.
 - The influx scout's progress messages. Its documents are **not read**.
 - Everything in the six per-surface maps under `internal-surfaces/`, beyond what the synthesis says.
 
@@ -79,6 +79,23 @@ These came in through peers. They are labelled as relayed in INTENT, and should 
 - relata holdings for the survey's works.
 - Richens is absent from `form-agent-model`; Virgo is absent from `der-directed-separation`.
 - `deriv-strategic-persistence-hard-ceiling` still owes its re-derivation.
+
+## What the lead now holds first-hand that bears on O1 (from the history readers, read whole)
+
+These are the history readers' judgments, sourced to commits, and *candidates* for KR1.2/1.3. They are not decisions.
+
+- **Two candidate centres for what ASF is trying to illuminate:**
+  - Mar–Apr's founding thesis, "purpose subsumes persistence": goals first-class, with shared intent.
+  - Jun–Oct's emergent centre: what an agent can know, and be, from inside its own history; what only another standpoint can supply; and what becomes of the agent when that contact is cut or corrupted. aat-refactored's coordinator reached the latter independently, as "a theory of being wrong well."
+- **The never-assembled claim about agents from April:** success makes agents blind, and staying sighted has a computable price (Mar–Apr §3.5).
+- **The identity exclusion.** `#scope-agent-identity` (landed 04-22 as a "cheap" grounding move) excludes restoration from backup, and treats each AI session as a new trajectory receiving a summary. That contradicts the March purpose, and nothing in the segment acknowledges it (Mar–Apr §4.5; the reader's top flag).
+- **Where clarity was lost:**
+  - an *arc* with no owner (results landed; the introduction didn't move);
+  - "released to the standing cycle", where no cycle exists;
+  - integrator-less role separation;
+  - **deference presented as routing**: calls the evidence had made were held as "genuinely Joseph's", which today's lifted gates release (Jun–Oct §5).
+- **The mechanism behind several false surfaces:** "text regenerated from a remembered narrative rather than from the record." It lives longest in front matter, debriefs and summaries. This HANDOFF is meant to resist it.
+- **Naming.** May's Criterion 9 (the uniqueness-of-pointer test) structurally favored coinage. The costliest coinage is *chronica*, which covers three objects. Candidate standard terms are listed in Mar–Apr §5; they are leads, not verified.
 
 ## Open threads
 
