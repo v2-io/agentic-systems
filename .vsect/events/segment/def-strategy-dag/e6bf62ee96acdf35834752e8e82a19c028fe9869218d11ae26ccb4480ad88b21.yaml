@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: e6bf62ee96acdf35834752e8e82a19c028fe9869218d11ae26ccb4480ad88b21
+at: 2026-10-30T20:48:48Z
+store: asf
+act: confirm-rewording
+about: segment:def-strategy-dag
+actor:
+  name: lead-coordinator
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: 'B.1''s change (a1d54548^..f9d11a4a, read as a diff) is additions only: a Claim Record section and footnotes; no existing line edited or removed. The added text was scanned for (1-lambda)/(2-lambda), the R_Sigma/2 half-plane, and any ceiling (pattern proven to match: 18 hits in the current schema). The one new carrier, in the schema''s record, states the exact gain 1-lambda and defers the reachable region to EA.1, so the four checks'' criteria (Prop B.1F; EA.1 allocation lag and its simulation; every schema carrier exact) are untouched. Not ''equivalent'': the records add claims the old text did not make.'
+from-version: 17db22eaef31b8bdd2b3d5207ea38edc08ada691e8691d72f50579b57ccb57ba
+outcome: equivalent
+scope:
+  for:
+  - eb63d4516d665ec84357b2379213af44f850377eca0621d25d0b8eb04386ff6a
+  - 0efb52e7c40aabf5ce716fed0cada68051566e832186b90006cfd5f05ffe5e2f
+  - 8559ec07afe30aeb26a826cb651164bbff8d06e6644439c000c987543f9c7553
+  - 4e5b62071c96cafb8bd42fd2952172de7d9d834351012dc25a87f86bc5c1396c
+to-version: faa4591fc0981a633a2507adf7da222ea144c18a439da895b155bcadf79c9170
