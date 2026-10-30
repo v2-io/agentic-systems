@@ -5,7 +5,7 @@
 - *Conducting a de-novo audit of the framework?* Please read [`doc/de-novo-audit-instructions.md`](doc/de-novo-audit-instructions.md) first; it documents the recommended posture and the failure modes prior audit cycles surfaced. Use [`README-auditor.md`](README-auditor.md) instead of this file.
 - *Academic reader evaluating the framework's claims?* Recommended sequence: this README → [`FINDINGS.md`](FINDINGS.md) (curated novel results with epistemic tiers) → [`01-aat-core/OUTLINE.md`](01-aat-core/OUTLINE.md) (canonical theory outline) → individual segments under `01-aat-core/src/`.
 - *Engineer or practitioner?* The [Cross-Domain Joining](#cross-domain-joining) table maps AAT concepts to the domain you likely care about; from there, follow the relevant component OUTLINE.
-- *Picking up active work on the framework?* [`PRACTICA.md`](PRACTICA.md) is the strategic-portfolio navigator — the active areas of work with priority markers, sitting above [`TODO.md`](TODO.md) (tactical work items within each area) and [`PROPOSALS.md`](PROPOSALS.md) (architectural-proposal portfolio cutting across areas). Start at PRACTICA; descend into TODO/PROPOSALS as the work directs.
+- *Picking up active work on the framework?* [`PRACTICA.md`](PRACTICA.md) is the strategic-portfolio navigator — the active areas of work with priority markers, sitting above [`TODO.md`](TODO.md) (tactical work items within each area). Open items, including proposals for theory work, are in the vsect ledger under [`items/`](items/) (`vsect open` lists them). Start at PRACTICA; descend into TODO and the ledger as the work directs.
 
 ### Project layout
 
@@ -24,7 +24,7 @@ FORMAT.md             Segment file conventions
 FINDINGS.md           Curated novel-results catalog (auto-generated)
 PRACTICA.md           Strategic-portfolio navigator (active areas of work)
 TODO.md               Tactical work items (sits below PRACTICA)
-PROPOSALS.md          Architectural-proposal portfolio
+items/                Open work items, one file each (the vsect ledger; `vsect open`)
 CHANGELOG.md          Forward-going cycle record (2026-04-24 onward)
 LOG.md                Pre-2026-04-24 cycle archaeology (frozen)
 
@@ -38,9 +38,6 @@ terminology/          Source-of-truth for prose vocabulary (LEXICON.md is render
   README.md           Schema and tooling guide for the terminology system
 spikes/               Research spikes (reasoning trails)
   INDEX.md            Spike index with per-spike status
-  PROPOSED.md         Spike-proposal index (3-perspective; optional, low-friction — not exhaustive)
-  PROPOSED-ADVANCED.md  Moonshot / theory-edge proposal detail
-  PROPOSED-MISC.md    Residual proposal detail (often near-empty)
 audits/               Audit-cycle FINAL outputs + pending-findings + per-cycle working dirs
   AUDIT-WORKING-*/    Per-cycle audit intermediate workspaces
 msc/                  Other working artifacts (brainstorms, working notes)

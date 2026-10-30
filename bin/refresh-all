@@ -13,14 +13,14 @@
 # What runs, in order:
 #   1. bin/extract-findings         — segments → FINDINGS.md and _findings-summary
 #   2. bin/extract-recent-progress  — CHANGELOG → _recent-progress
-#   3. bin/extract-known-issues     — Known Fragilities + PROPOSALS + GAPs → _known-issues
+#   3. bin/extract-known-issues     — Known Fragilities + GAPs → _known-issues
 #   4. bin/build-readme             — partials + Liquid → README.md, README-auditor.md
 #
 # Each step is independent and can be run alone. This script is just a
 # convenience for the common case where you want everything refreshed.
 #
 # --check mode: copies the pipeline's INPUTS (segments, outlines,
-# CHANGELOG, PROPOSALS, CLAUDE.md, doc/readme, bin) to a temp dir, runs
+# CHANGELOG, CLAUDE.md, doc/readme, bin) to a temp dir, runs
 # the full pipeline there, and diffs every generated OUTPUT (FINDINGS.md,
 # the three doc/readme/src/_* partials, README.md, README-auditor.md)
 # against the working tree. The working tree is never touched. Exit 0 =
@@ -61,7 +61,6 @@ CHECK_INPUTS = %w[
   doc/sop
   CLAUDE.md
   CHANGELOG.md
-  PROPOSALS.md
   01-aat-core
   02-tst-core
   03-llm-core

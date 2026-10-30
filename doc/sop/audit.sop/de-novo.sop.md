@@ -173,7 +173,7 @@ The working directory `audits/AUDIT-WORKING-NNNNNN/` (created per the "Before yo
 - **`LOG.md`** — pre-2026-04-24 cycle archaeology.
 - **`CHANGELOG.md`** — forward-going cycle record.
 - **`TODO.md`** — active work navigator.
-- **`PROPOSALS.md`** — strategic architectural proposals portfolio.
+- **The item ledger** (`items/`, `questions/`; `vsect open`) — open work, including proposals for theory work.
 - **`doc/readme/src/_findings-summary.md`, `_recent-progress.md`, `_known-issues.md`** — the auto-generated live includes underlying the public README. Same priming content as the README's live sections.
 
 These materials are fair game *later*. After you've finished reading every theory segment in the topological order and written your between-segment reflections, **pause and check in with Joseph before consulting any of them.** Joseph may have additional questions about the audit's coverage and posture before you transition into §7's Phase-2 (integration-debt triangulation), where the AVOID-list materials become the right tools. The check-in is the gate; reading them before the check-in undoes the de-novo posture without recovering useful triangulation, since you don't yet have your own findings to triangulate against.
@@ -234,7 +234,7 @@ Within-corpus reading is structured by the dependency graph (§4.2). *Across* so
 - `spikes/` documents that informed the segment's content (predecessor reasoning trails)
 - `msc/` working artifacts associated with the segment (brainstorms, judgment-call notes, working-composition drafts)
 - Prior `audits/` material that touches the segment (prior FINALs, `pending-findings-*.md`)
-- The live tracking files (`TODO.md`, `PRACTICA.md`, `PROPOSALS.md`) where they reference the segment
+- The live tracking files (`TODO.md`, `PRACTICA.md`, the item ledger (`items/`, `vsect open`)) where they reference the segment
 - The narrative records (`CHANGELOG.md`, `LOG.md`, and `git log` / `git blame` for the segment file) that show how the segment evolved
 - `ref/` external references the segment cites
 - Web searches about external theorems the segment invokes
@@ -256,13 +256,13 @@ Within-corpus reading is structured by the dependency graph (§4.2). *Across* so
 **What this discipline does *not* preclude:**
 
 - Reading the OUTLINE files at the start (§4.1).
-- Reading CLAUDE.md, FORMAT.md, NOTATION.md, PRACTICA.md at the start. (PRACTICA is the strategic-portfolio navigator and is auditor-safe — it does not carry the priming-heavy content that TODO / PROPOSALS / CHANGELOG do.)
+- Reading CLAUDE.md, FORMAT.md, NOTATION.md, PRACTICA.md at the start. (PRACTICA is the strategic-portfolio navigator and is auditor-safe — it does not carry the priming-heavy content that TODO / the item ledger / CHANGELOG do.)
 - Cross-references to *other src segments you've already read*.
 - Following a `#cross-segment-slug` reference in the segment you're currently reading.
 - Web-searching definitions of standard mathematical terms you're rusty on.
 - **Following the appendix-back-pointer exception in §4.2 — read an appendix segment *immediately when first referenced*, not at the end of the audit.** When a main-section segment lists an Appendix A derivation in its `depends:`, jump to the appendix segment, read it with its own reflection document, then return to your OUTLINE walk position. Verifying the proof while the calling result is still fresh in your context produces materially better math-checks than reading the appendix later when you've forgotten what it's the proof of. Deferring appendices until "the end of the audit" is a common failure mode that wastes the appendix.
 
-The discipline is specifically about not pre-loading the *historical reasoning trail* (spikes, git history, prior audits), the *live tracking state* (TODO, PROPOSALS), or the *external machinery* (papers, theorems) before you've seen what the segment claims on its own.
+The discipline is specifically about not pre-loading the *historical reasoning trail* (spikes, git history, prior audits), the *live tracking state* (TODO, the item ledger), or the *external machinery* (papers, theorems) before you've seen what the segment claims on its own.
 
 **A note about prior audits and working artifacts.** Reading prior audit reports, pending-findings docs, architectural-proposal entries, or other agents' analyses is not prohibited (nothing here is). But it tends to bias thinking toward ideas that have already been heavily visited by previous auditors, and that's not in the spirit of a *de novo* audit — which is to say, an audit that comes to the framework fresh and discovers what it discovers, rather than re-confirming or re-extending the discoveries of agents who came before. The most useful contributions from a fresh pass tend to come from genuinely-fresh perspectives; if you've read the prior audits first, your perspective is no longer fresh. If you eventually want to compare your findings to a prior audit's findings (after producing your own), that's a useful triangulation step. Doing it the other way around defeats the purpose.
 
@@ -444,7 +444,7 @@ Treat the recommendations as affordances, not rules. Where your judgment differs
 
 ### 7.1. Why this format exists
 
-Your audit will be consumed by an *integrating agent* (or Joseph) whose job is to route each finding to the right tracking file: `TODO.md` if it's an open question, `PROPOSALS.md` if it's an architectural move, a direct fix-and-commit if it's mechanical, segment Discussion or Working Notes if it's a clarification, `spikes/` if it produces a new investigation, `CHANGELOG.md` if the cycle warrants a narrative entry. That integrator needs three things from your output to do this fast:
+Your audit will be consumed by an *integrating agent* (or Joseph) whose job is to route each finding to the right tracking file: `TODO.md` if it's an open question, a ledger item (`vsect note`) if it's an architectural move, a direct fix-and-commit if it's mechanical, segment Discussion or Working Notes if it's a clarification, `spikes/` if it produces a new investigation, `CHANGELOG.md` if the cycle warrants a narrative entry. That integrator needs three things from your output to do this fast:
 
 1. **Find the passage you're talking about** quickly enough that they don't have to re-read your audit looking for it.
 2. **Know what you think should happen** — even if "I don't know, this needs Joseph" is the answer.
@@ -460,7 +460,7 @@ Past audits have organized around three phases. The body sections below (§A–�
 2. **Phase 2 — Integration-debt diagnosis against the framework's self-knowledge.** For each surviving Phase-1 finding, look across the materials that hold what the framework already knows about itself outside `src/`:
 
    - **Historical reasoning trail** — `spikes/` (investigations that informed segments, `spikes/INDEX.md` as entry point), `audits/` (prior FINAL reports and `pending-findings-YYYY-MM-DD.md` resolution-trail records), `msc/` (other working artifacts: brainstorms, reflections, naming-cycle notes, in-flight architectural drafts).
-   - **Live tracking files** — `TODO.md` (tactical open work), `PRACTICA.md` (strategic-portfolio navigator; the top of the strategy DAG), `PROPOSALS.md` (architectural-moves portfolio with prior-reasoning trails).
+   - **Live tracking files** — `TODO.md` (tactical open work), `PRACTICA.md` (strategic-portfolio navigator; the top of the strategy DAG), the item ledger (`items/`, `vsect open`) (open items, including proposals with their re-check reasoning).
    - **Narrative records** — `CHANGELOG.md` (cycle narrative from 2026-04-24 onward), `LOG.md` (pre-2026-04-24 cycle archaeology, frozen), `git log` (commit-level history; useful for tracing when a passage entered the corpus, what was demoted from earlier confident framings, what was strengthened recently — `git log -p path/to/file.md` and `git blame` are the workhorses).
 
    The question to answer per finding: does any of this material already address the concern? If yes, where, and *has the resolution propagated to src*? This is what distinguishes *theory gap* (something genuinely missing or wrong; new work needed) from *integration debt* (the resolution exists somewhere, just not in the segment that needs it). Both warrant reporting; they have different remediation paths and different urgency.
@@ -496,7 +496,7 @@ audit_type: hygiene | de-novo-theory | multi-pass-batch | relayed-feedback | por
 coverage_summary: >
   One sentence on what you read first-hand vs. what you didn't.
 priming_bleed: >
-  If CLAUDE.md / TODO.md / PROPOSALS.md or other audit-priming material was already in
+  If CLAUDE.md / TODO.md / the item ledger or other audit-priming material was already in
   context when you started, note it here. This is calibration data for the reader, not
   a confession.
 ---
@@ -523,7 +523,7 @@ The FINAL has a small set of expected section headings. Where a section's headin
 
 **§E — What holds.** Calibration data. Where did you push hard and conclude the framework's discipline holds? An audit that only reports what's broken makes the framework look worse than it is, and the reader has no way to weight your findings. Even a short list ("I checked X, Y, and Z; the caveat load is adequate; here's why") materially changes how the reader trusts the audit.
 
-**§F — Bigger-picture observations.** This is where Phase 3 lands. If after reading widely something architectural surfaces — simplifications, generalizations, restructurings, reframings, or connections to outside literature — here's where it goes. Tag each as `Hypothesis` unless you can defend it under burden of proof. These often become PROPOSALS.md entries; sometimes they reframe the whole audit. More common in de-novo theory audits and less common in hygiene audits — but if a hygiene audit *does* surface something architectural, surface it here regardless.
+**§F — Bigger-picture observations.** This is where Phase 3 lands. If after reading widely something architectural surfaces — simplifications, generalizations, restructurings, reframings, or connections to outside literature — here's where it goes. Tag each as `Hypothesis` unless you can defend it under burden of proof. These often become ledger items; sometimes they reframe the whole audit. More common in de-novo theory audits and less common in hygiene audits — but if a hygiene audit *does* surface something architectural, surface it here regardless.
 
 **§G — Process feedback on the instructions.** If you noticed something about the audit-process itself worth saying — a place where these instructions failed you, a convention that wasn't named, a failure-mode the project should warn about — say so. Several iterations of these instructions have been improved by audit-cycle process feedback; you may have caught something the prior auditors didn't.
 
@@ -536,7 +536,7 @@ For each finding in §B, communicate the elements below. This is a checklist of 
 **The five core elements.** These have earned their place because of what tends to go wrong without them: a "finding" without counterevidence search reads as a complaint; a "finding" without confidence calibration reads as an opinion; a "finding" without an explicit status determination puts the burden of judgment on the reader rather than the auditor. Try to include all five for every finding under burden of proof:
 
 1. **Problematic passage (verbatim)** — quote what you're concerned about. The integrator needs to see what you saw. Keep it short — 1-3 sentences if possible.
-2. **Counterevidence search** — did you check whether the segment, sibling segments, or the framework's self-knowledge materials (`spikes/`, `audits/`, `msc/`, `TODO.md`, `PRACTICA.md`, `PROPOSALS.md`, `CHANGELOG.md`, `LOG.md`, `git log` / `git blame`) already address the issue? Cite what you found. If you didn't search, say so (it's a partial finding; just disclose). This is where the Phase-2 triangulation lives at the per-finding level — see §7.2's Phase 2 list for what each location holds.
+2. **Counterevidence search** — did you check whether the segment, sibling segments, or the framework's self-knowledge materials (`spikes/`, `audits/`, `msc/`, `TODO.md`, `PRACTICA.md`, the item ledger (`vsect open`), `CHANGELOG.md`, `LOG.md`, `git log` / `git blame`) already address the issue? Cite what you found. If you didn't search, say so (it's a partial finding; just disclose). This is where the Phase-2 triangulation lives at the per-finding level — see §7.2's Phase 2 list for what each location holds.
 3. **Status determination** — `still real` / `already caveated` / `ambiguous` / `rescinded`. Use this vocabulary; cross-audit aggregators rely on it. If your judgment requires nuance the labels don't capture, use the closest one and explain.
 4. **Confidence** — `high` / `medium` / `low` with a one-clause reason. If your confidence depends on priming content (CLAUDE.md, prior audit, etc.) rather than first-hand verification, say so. Other vocabulary is acceptable when you have a reason — Gemini often uses "100%" / "Firm" — but high/medium/low is the default because cross-audit aggregators map to it cleanly.
 5. **Why it still stands** — *only when status came back "still real."* One sentence on why the counterevidence didn't dissolve the issue. Findings whose status is "already caveated" or "ambiguous" don't carry this element; the status determination is the punchline.
@@ -572,12 +572,12 @@ If you find something that doesn't fit the "finding" form but seems worth surfac
 When you suggest where a finding should go, use one of these tags. They've emerged from convergent organic practice across the audit corpus:
 
 - **New** — no durable tracking found anywhere; goes into the next `audits/pending-findings-YYYY-MM-DD.md` file for routing
-- **Known-unintegrated** — the correct idea exists elsewhere (a `spikes/` reasoning trail, a `msc/` working note, segment Working Notes, a prior FINAL or `pending-findings-*.md` in `audits/`, an entry in `TODO.md` / `PRACTICA.md` / `PROPOSALS.md`, or a narrative record in `CHANGELOG.md` / `LOG.md`) but the source segment is still wrong; the actual issue is *integration debt* (see §7.9)
+- **Known-unintegrated** — the correct idea exists elsewhere (a `spikes/` reasoning trail, a `msc/` working note, segment Working Notes, a prior FINAL or `pending-findings-*.md` in `audits/`, an entry in `TODO.md` / `PRACTICA.md` / the item ledger, or a narrative record in `CHANGELOG.md` / `LOG.md`) but the source segment is still wrong; the actual issue is *integration debt* (see §7.9)
 - **Known-resolved** — source already fixed; the finding is stale (often happens when audit input was a snapshot earlier than current state)
 - **Tooling gap** — source is structurally OK under current tools, but the finding exposes a class the tools don't check; suggests a `bin/` script or lint rule addition
 - **Scope/status mismatch** — caveat exists in prose but not in Formal Expression / status frontmatter / theorem statement (segment claims more than its own caveats license)
 
-These map cleanly to project tracking. *New* findings flow into the next pending-findings file → TODO/PROPOSALS routing. *Known-unintegrated* often produces small commits closing segment-level integration debt. *Tooling gap* often produces a CHANGELOG entry or a new lint check. *Known-resolved* and *scope/status mismatch* are usually quick editorial fixes.
+These map cleanly to project tracking. *New* findings flow into the next pending-findings file → TODO/ledger routing. *Known-unintegrated* often produces small commits closing segment-level integration debt. *Tooling gap* often produces a CHANGELOG entry or a new lint check. *Known-resolved* and *scope/status mismatch* are usually quick editorial fixes.
 
 The vocabulary is convergent, not exhaustive. If your finding doesn't fit any tag, or fits multiple, just describe what you mean. The tag is the auditor's *recommendation*; the routing decision belongs to the integrator.
 
@@ -602,7 +602,7 @@ Knowing this pipeline shapes how you write findings:
 2. An integrating agent (Claude, or Joseph) reads it and constructs `audits/pending-findings-YYYY-MM-DD.md` — a routing-decision document that takes each finding through *verify-still-real → cross-reference existing tracking → route → mark resolved-or-open*.
 3. From pending-findings, individual findings flow to:
    - `TODO.md` (open questions, MEDIUM theory items, deferred decisions)
-   - `PROPOSALS.md` (architectural moves; with prior-reasoning-trail discipline if reversing prior decisions, per the SP-21 precedent)
+   - a ledger item via `vsect note` (architectural moves; with prior-reasoning-trail discipline if reversing prior decisions, per the SP-21 precedent)
    - Direct commits (mechanical fixes, hygiene findings)
    - Segment Discussion or Working Notes (per-segment clarifications)
    - `CHANGELOG.md` (cycle narrative when the audit was substantive)

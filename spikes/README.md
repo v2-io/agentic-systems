@@ -28,7 +28,7 @@ This tree is the **research-spike corpus**: reasoning trails. A spike attacks on
 
 In short: *we don't throw valid math away (a no-go included); canon cites only canon; spike breadcrumbs live in Working Notes, which by definition aren't canon.*
 
-**Optional, never required — the recovery team.** There is an agent (with help) that works the backlog of spikes sitting here but not yet integrated. You can make their job easier if you like: add your spike to [`INDEX.md`](INDEX.md), keep its row updated there (and in the [`PROPOSED*`](PROPOSED.md) files if it's listed there) while in progress, and list it in `.integrated/MANIFEST-<date>.md` once it's cleaned up. **None of this is required to spike** — it's a courtesy to the cleanup crew, not a tax on you. How that team thinks (no-go integration, the ghost discipline, strengthen-before-soften, the disposition states) lives in [`../doc/sop/spikes.sop.md`](../doc/sop/spikes.sop.md) + [`../doc/audit-routing-instructions.md`](../doc/audit-routing-instructions.md) — read it only for a heavy self-integration or out of curiosity.
+**Optional, never required — the recovery team.** There is an agent (with help) that works the backlog of spikes sitting here but not yet integrated. You can make their job easier if you like: add your spike to [`INDEX.md`](INDEX.md), keep its row updated there (and close its ledger item, if it has one, with the commit that does the work) while in progress, and list it in `.integrated/MANIFEST-<date>.md` once it's cleaned up. **None of this is required to spike** — it's a courtesy to the cleanup crew, not a tax on you. How that team thinks (no-go integration, the ghost discipline, strengthen-before-soften, the disposition states) lives in [`../doc/sop/spikes.sop.md`](../doc/sop/spikes.sop.md) + [`../doc/audit-routing-instructions.md`](../doc/audit-routing-instructions.md) — read it only for a heavy self-integration or out of curiosity.
 
 ---
 
@@ -36,7 +36,7 @@ In short: *we don't throw valid math away (a no-go included); canon cites only c
 
 Everything below serves the cleanup crew and heavy self-integrations. It is preserved here deliberately — restructured below the line, not discarded (the cardinal rule, applied to this file itself).
 
-**What lives here.** `spike-*.md` files and spike directories (reasoning trails; some directories are multi-file clusters); [`INDEX.md`](INDEX.md) — the spike index, every spike / location / current status (the status labels are a *convenience record, not ground truth* — see the routing docs' evidence hierarchy; durable, it stays); [`PROPOSED.md`](PROPOSED.md) — the 3-perspective spike-proposal index, a low-friction *optional* repository for spike-able ideas set down for later (detail in [`PROPOSED-ADVANCED.md`](PROPOSED-ADVANCED.md) / a segment's Working Notes / [`PROPOSED-MISC.md`](PROPOSED-MISC.md); two binding disciplines — *freshness* and the *mutual link* — explicitly **not** completeness; `../doc/sop/spikes.sop.md` §2-bis(3) + Refinement 10); `.integrated/` and `.archived/` (the two terminal homes, below); working subdirs, `sim-*.py`, figures.
+**What lives here.** `spike-*.md` files and spike directories (reasoning trails; some directories are multi-file clusters); [`INDEX.md`](INDEX.md) — the spike index, every spike / location / current status (the status labels are a *convenience record, not ground truth* — see the routing docs' evidence hierarchy; durable, it stays); spike-able ideas set down for later are not kept here: they are items in the vsect ledger (`vsect note`, listed by `vsect open`; `../doc/sop/spikes.sop.md` §2-bis(3)); `.integrated/` and `.archived/` (the two terminal homes, below); working subdirs, `sim-*.py`, figures.
 
 ### The two terminal homes are a truth-claim, not a filing convenience
 
@@ -56,7 +56,7 @@ A spike whose authors are still in it is **not touched** by a routing cycle — 
 
 ### The governing process
 
-- [`../doc/sop/spikes.sop.md`](../doc/sop/spikes.sop.md) — the spike-specific delta (five-state disposition, directory-label honesty, the live-work exclusion, the lighter dir-spike gold gate, the PROPOSED freshness/mutual-link discipline).
+- [`../doc/sop/spikes.sop.md`](../doc/sop/spikes.sop.md) — the spike-specific delta (five-state disposition, directory-label honesty, the live-work exclusion, the lighter dir-spike gold gate, spike proposals as ledger items).
 - [`../doc/audit-routing-instructions.md`](../doc/audit-routing-instructions.md) — the **shared integration-routing core** (strengthen-first, the no-go protocol, the ghost discipline, the meta-stance). The spike doc defers into it; it is corpus-agnostic and already written about spikes.
 - Open routing work (spikes waiting to land or be filed) is in the `vsect` ledger: `vsect open`. See `../doc/sop/spikes.sop.md` §5a for the full directory layout.
 - [`.routing-trail/`](.routing-trail/) — frozen archaeology of the process: per-cycle adjudication / independent-verify / regression trails (`SPIKE-{WORKING,VERIFY,REGRESSION}-<id>/`). Preserved as written (its `README.md` carries the rosetta for pre-relocation paths); load-bearing conclusions are extracted to `.integrated/MANIFEST-*` + `CHANGELOG.md` + canon, and open items to the `vsect` ledger.
