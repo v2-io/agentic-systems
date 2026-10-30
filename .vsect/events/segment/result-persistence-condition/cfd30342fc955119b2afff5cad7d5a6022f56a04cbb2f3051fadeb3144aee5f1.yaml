@@ -1,0 +1,18 @@
+schema: vsect-event/0
+id: cfd30342fc955119b2afff5cad7d5a6022f56a04cbb2f3051fadeb3144aee5f1
+at: 2026-10-30T21:26:11Z
+store: asf
+act: confirm-rewording
+about: segment:result-persistence-condition
+actor:
+  name: second-mind-confirmer
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: 'Real change (A7/A10): adds ''Two levers in T'' (lag/noise; raising gain past the Kalman-Bucy optimum enlarges the error) and restates the cost floor as n(s_w^2/(2D) - lambda_s), met at n*alpha/2 by Kalman-Bucy. The threshold alpha > rho/R and the Lyapunov derivation are unchanged. Re-bound: vol4#C1, which concerns auxilia alignment; and example-bandit#C7, which computes Gaussian-prior one-step and many-pull information for scope membership. Neither reads the persistence condition''s levers or its cost floor.'
+from-version: 282f17ca55c277425bda47c8665b5fb4dd8dbdf2ae598a3041b55aaea2c524cf
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+  - e04cf21b8b4cd4d206b30be151375ffd61447e04eff284ecabd546951291902f
+to-version: 9a9b8dd449b6bf1a9d19a7ce9a032f7dc9d8d2437261302592a41fe45bea63c6

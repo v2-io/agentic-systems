@@ -1,0 +1,31 @@
+schema: vsect-event/0
+id: 0e4838aee266ffc3ac1443e71ca35e2054879eea8c57cdeae0b2d60e6d9ca8bb
+at: 2026-10-30T21:28:07Z
+store: asf
+act: confirm-rewording
+about: segment:scope-adaptive-system
+actor:
+  name: second-mind-confirmer
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: 'Changed in scope-adaptive-system: the pi_0 rule (support = closure of the worlds possible for the agent), the third way of sitting outside, the state/law cut''s independence of membership, the pointwise predicate, items (b), (c), (h) and (h''), the housing result''s mixture sense, and the warrant table. None of these 15 checks reads any of that. They are closed-form and simulation checks on named models (Kalman-Bucy, RDF limit, F72 estimator algebra and mean lag, example-kalman numbers), Claim-Record-versus-body comparisons (B.1), auxilia/PROPRIUM/session-boundary derivations (vol4), and a grep (schema#C4).'
+from-version: 12ea0186e7a33e60ec52fade2a82c6955eba9631cec9eaf7034b588e4023ef4a
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+  - cff718bdbe87752ba82dd1f45219741a1b84a0a5fa759b9442fc222fcef3937a
+  - f7195d495d35a376d12bd108077ccb6ec063f6bf7372a2c879fff61e518b55c4
+  - e332eb600cbde7680eb5dcb3577b1f7538de2a26b6cab477bff459ca54bc49c8
+  - eb63d4516d665ec84357b2379213af44f850377eca0621d25d0b8eb04386ff6a
+  - 0efb52e7c40aabf5ce716fed0cada68051566e832186b90006cfd5f05ffe5e2f
+  - 8559ec07afe30aeb26a826cb651164bbff8d06e6644439c000c987543f9c7553
+  - 4408f4588af43e5063a5bafd2566f22d1f2855d21ea353789b0dad53d706675f
+  - a4549ed4292eaf1127eb93f5fbd5e777fdff374d8255823f39f0bb50257e04d2
+  - 93bf14336e689e5876a8df1840f758bedd983c1d064dbfe3d7c818c82e37a0c6
+  - c5ab070e0ee316293b3a87180247e278c88f136693cdfa35336c6370564568b3
+  - adde60514eead495e7de86bb6665e01dfbb865c0cf9d9758f46a83401a13cd2f
+  - e562265d25796ce2c5f52a85d65ea9225f95f43337656d2e28c337f97a3d3996
+  - b06f18db1342539de9112a9095a19bf2d179a7ce5cc2209ce65b56a399d80645
+  - 4e5b62071c96cafb8bd42fd2952172de7d9d834351012dc25a87f86bc5c1396c
+to-version: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119

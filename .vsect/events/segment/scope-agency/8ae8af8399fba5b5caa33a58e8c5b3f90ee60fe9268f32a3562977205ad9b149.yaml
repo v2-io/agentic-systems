@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 8ae8af8399fba5b5caa33a58e8c5b3f90ee60fe9268f32a3562977205ad9b149
+at: 2026-10-30T21:26:12Z
+store: asf
+act: confirm-rewording
+about: segment:scope-agency
+actor:
+  name: second-mind-confirmer
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: 'The Formal Expression now dates the sets: S_agency(t) = S_adaptive(t) intersected with the causal-contrast set, matching scope-adaptive-system''s dated predicate; the causal-contrast condition is unchanged. None of the re-bound checks reads agency''s set notation: vol4 C1/C2 (auxilia, PROPRIUM), B.1 C2/C3/C12 (record-vs-body, control-regret identity), F72 C1-C3 (mean lag, gain algebra), example-bandit#C7 (adaptive-scope information) and schema#C4 (a grep).'
+from-version: 9185f5597080252155e7cf6292188de464b923f4541aa305acb58e4b39e21162
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+  - cff718bdbe87752ba82dd1f45219741a1b84a0a5fa759b9442fc222fcef3937a
+  - f7195d495d35a376d12bd108077ccb6ec063f6bf7372a2c879fff61e518b55c4
+  - e332eb600cbde7680eb5dcb3577b1f7538de2a26b6cab477bff459ca54bc49c8
+  - eb63d4516d665ec84357b2379213af44f850377eca0621d25d0b8eb04386ff6a
+  - 0efb52e7c40aabf5ce716fed0cada68051566e832186b90006cfd5f05ffe5e2f
+  - 8559ec07afe30aeb26a826cb651164bbff8d06e6644439c000c987543f9c7553
+  - e04cf21b8b4cd4d206b30be151375ffd61447e04eff284ecabd546951291902f
+  - e562265d25796ce2c5f52a85d65ea9225f95f43337656d2e28c337f97a3d3996
+  - 4e5b62071c96cafb8bd42fd2952172de7d9d834351012dc25a87f86bc5c1396c
+to-version: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1

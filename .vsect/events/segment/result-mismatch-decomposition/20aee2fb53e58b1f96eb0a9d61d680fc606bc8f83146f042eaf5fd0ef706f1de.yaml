@@ -1,0 +1,18 @@
+schema: vsect-event/0
+id: 20aee2fb53e58b1f96eb0a9d61d680fc606bc8f83146f042eaf5fd0ef706f1de
+at: 2026-10-30T21:26:10Z
+store: asf
+act: confirm-rewording
+about: segment:result-mismatch-decomposition
+actor:
+  name: second-mind-confirmer
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: 'Pure addition of the paragraph ''What the persistence bounds contain'': (i)+(ii) is E|estimation error|^2, and the innovation sits above it by the channel floor. The decomposition''s terms and their derivation are unchanged. vol4#C1 (auxilia alignment) and vol4#C2 (AXIOMATA/PRINCIPIA against PROPRIUM v2) read neither.'
+from-version: 90113d52fcb4a08ec79c7c1716458430bc30e519ae89c602af9eddcc489b8710
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+  - f7195d495d35a376d12bd108077ccb6ec063f6bf7372a2c879fff61e518b55c4
+to-version: 93539ca670037197795f1ae7a5b2d4ef0d8003f0ac51a5c79c3f3886c569380a

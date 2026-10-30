@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: a693ddf5cc1f20dcd61b6f39eb55439c3e2ba755d062f09dd3821ea80eb6a12f
+at: 2026-10-30T21:25:54Z
+store: asf
+act: confirm-rewording
+about: segment:hyp-mismatch-dynamics
+actor:
+  name: second-mind-confirmer
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: rho is renamed the disturbance rate and now includes gain-injected channel noise; the tracked quantity is the estimation error; and speed-quality substitutability is limited to the lag term at fixed rho. The one check it re-binds, vol4#C1, concerns auxilia alignment routes, (H1)+(H2) -> (C-ii) and class preservation via (H4), and reads none of the mismatch dynamics.
+from-version: 06fe8a6e1f82997fe61e3831037fdc1cb7eebaae9ed37b7776cf76e0021b8359
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+to-version: b8aa99cf548fee2b579dbaf3e691ffb991be08bd93507134eb71f25910d4de5a

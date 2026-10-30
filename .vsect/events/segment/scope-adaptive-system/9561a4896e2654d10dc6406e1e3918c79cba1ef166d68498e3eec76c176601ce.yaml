@@ -1,0 +1,18 @@
+schema: vsect-event/0
+id: 9561a4896e2654d10dc6406e1e3918c79cba1ef166d68498e3eec76c176601ce
+at: 2026-10-30T21:28:07Z
+store: asf
+act: confirm-rewording
+about: segment:scope-adaptive-system
+actor:
+  name: second-mind-confirmer
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: 'C1: item (b)''s iff (C A^j P_t != 0 for some j), ''random walk in at every t'' and ''A = 0 out'' are verbatim unchanged; the one-step log-det part and the numbers are added sentences (checked by integration-2#C5/#C2). C2: item (c)''s membership sentence (''the learner is in at every finite t, and never leaves'') is unchanged; only the decay sentence changed, which was reread#C3 (broken, not listed).'
+from-version: 12ea0186e7a33e60ec52fade2a82c6955eba9631cec9eaf7034b588e4023ef4a
+outcome: equivalent
+scope:
+  for:
+  - 2d45ddd2099a09b237924549cdb10c17b85da0e622e339df654cccb7ced431bf
+  - 812a9fc7e5e64542a0387dd57b956e8d1578568fb5183d625202c36c8228fe7b
+to-version: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119

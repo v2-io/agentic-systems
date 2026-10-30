@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: a915707b108ced19a4af10c50c4e09373d187fec432d2703289c496b1dff3c26
+at: 2026-10-30T21:28:06Z
+store: asf
+act: confirm-rewording
+about: segment:scope-adaptive-system
+actor:
+  name: second-mind-confirmer
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: 'Items (a) and (d)-(g) are unchanged, but the housing result''s statement changed. Sameness is now stated as agreement with the original as a pi_0 mixture, and a new claim is added: for a law left open under a continuous pi_0 with unbounded visits, the twin and the original under any one fixed law are mutually singular. C5 confirmed ''each as stated'' at the old text; the singularity claim was checked only by its author (integration-2#C6(v)).'
+from-version: 12ea0186e7a33e60ec52fade2a82c6955eba9631cec9eaf7034b588e4023ef4a
+outcome: not-equivalent
+scope:
+  for:
+  - 91f944f3db2ebf204b9f33c156985f450c780adacbfbbe73b69f08d71e3f43f6
+to-version: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119

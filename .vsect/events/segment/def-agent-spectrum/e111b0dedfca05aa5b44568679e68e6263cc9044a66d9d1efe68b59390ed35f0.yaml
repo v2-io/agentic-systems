@@ -1,0 +1,18 @@
+schema: vsect-event/0
+id: e111b0dedfca05aa5b44568679e68e6263cc9044a66d9d1efe68b59390ed35f0
+at: 2026-10-30T21:25:03Z
+store: asf
+act: confirm-rewording
+about: segment:def-agent-spectrum
+actor:
+  name: second-mind-confirmer
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: 'Diff is a pure insertion of a "## Claim Record" section: the text outside it is identical once that section is removed (whitespace collapsed). The checks it re-binds (vol4#C1: alignment-route necessity, (H1)+(H2) securing (C-ii), class preservation via (H4), read from def-auxilia-hierarchy, scope-composite-agent, disc-dynamic-regime-axis, form-composition-closure; vol4#C2 where listed: AXIOMATA/PRINCIPIA against PROPRIUM v2 and the M_t/G_t split) read the body, which is unchanged, and none reads the new record.'
+from-version: 5603f3020ffefd7470a1afced4576f8d7b231f0cfd8699fcb463135c92d22a97
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+  - f7195d495d35a376d12bd108077ccb6ec063f6bf7372a2c879fff61e518b55c4
+to-version: 82af9539a2f4c9bb11324137f9834061eb00d6bb3be6ccd6318f77095d583290

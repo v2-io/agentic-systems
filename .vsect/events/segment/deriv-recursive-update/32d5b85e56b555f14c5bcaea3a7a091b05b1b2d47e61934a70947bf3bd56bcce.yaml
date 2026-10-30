@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 32d5b85e56b555f14c5bcaea3a7a091b05b1b2d47e61934a70947bf3bd56bcce
+at: 2026-10-30T21:25:33Z
+store: asf
+act: confirm-rewording
+about: segment:deriv-recursive-update
+actor:
+  name: second-mind-confirmer
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: 'One sentence changed: the scope sentence ''with residual uncertainty'' -> ''whose world can still show it something it does not yet know''. The recursion, its derivation and every formula are unchanged. None of the re-bound checks reads that gloss: they re-derive scope-adaptive-system items, Kalman/Kalman-Bucy and sector closed forms, F72 estimator algebra and mean lag, B.1 record-vs-body comparisons, and vol4 C1-C3 (auxilia alignment routes, PROPRIUM mapping, session boundaries).'
+from-version: d0f1a351e6604c21d76a76098c0aa890e5df028464e01b50a633d4e41243533f
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+  - cff718bdbe87752ba82dd1f45219741a1b84a0a5fa759b9442fc222fcef3937a
+  - f7195d495d35a376d12bd108077ccb6ec063f6bf7372a2c879fff61e518b55c4
+  - e332eb600cbde7680eb5dcb3577b1f7538de2a26b6cab477bff459ca54bc49c8
+  - eb63d4516d665ec84357b2379213af44f850377eca0621d25d0b8eb04386ff6a
+  - 0efb52e7c40aabf5ce716fed0cada68051566e832186b90006cfd5f05ffe5e2f
+  - 8559ec07afe30aeb26a826cb651164bbff8d06e6644439c000c987543f9c7553
+  - adde60514eead495e7de86bb6665e01dfbb865c0cf9d9758f46a83401a13cd2f
+  - e562265d25796ce2c5f52a85d65ea9225f95f43337656d2e28c337f97a3d3996
+  - 4e5b62071c96cafb8bd42fd2952172de7d9d834351012dc25a87f86bc5c1396c
+to-version: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415

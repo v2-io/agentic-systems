@@ -1,0 +1,19 @@
+schema: vsect-event/0
+id: a6c543adeae3c6972cc83be95cbd862a9edecac113afd583fee2c58f41118ddd
+at: 2026-10-30T21:25:54Z
+store: asf
+act: confirm-rewording
+about: segment:deriv-gain-sector
+actor:
+  name: second-mind-confirmer
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: 'Real redefinition (A7): the proofs now distinguish the innovation that drives the update from the estimation error that the correction acts on, add the -K*eps injected-noise term, and state B1 for the noise-averaged transform when g is nonlinear. The F72 checks it re-binds do not read that distinction. F72#C1 (EA.1) bounds the mean lag m = E[p_hat] - theta, which the proof computes directly from the estimator class; that is already the mean estimation error, and it equals the mean innovation because the channel noise has mean zero given state and law. F72#C2 measures the same mean lag by the y -> theta substitution. F72#C3 is gain and count algebra on the update rule, which is driven by the innovation before and after. Where they are listed: example-bandit#C7 computes Gaussian-prior information quantities, schema#C4 greps for (1-lambda)/(2-lambda) carriers, and vol4#C1/C2 concern auxilia alignment and the PROPRIUM mapping. None of these reads what the persistence dynamics state is, or the gain-injected disturbance term.'
+from-version: d7888baea04d4df394b410783c72cdc36ceea74aa9a94aa56ea584a3a51901ac
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+  - 0efb52e7c40aabf5ce716fed0cada68051566e832186b90006cfd5f05ffe5e2f
+  - 8559ec07afe30aeb26a826cb651164bbff8d06e6644439c000c987543f9c7553
+to-version: e9afd4473502797c53d06ddb8a340a3adc8ddcae7dcd0ef3e5c86a7a64118d39

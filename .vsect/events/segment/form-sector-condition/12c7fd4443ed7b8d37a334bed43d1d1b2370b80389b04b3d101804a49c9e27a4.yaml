@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 12c7fd4443ed7b8d37a334bed43d1d1b2370b80389b04b3d101804a49c9e27a4
+at: 2026-10-30T21:25:53Z
+store: asf
+act: confirm-rewording
+about: segment:form-sector-condition
+actor:
+  name: second-mind-confirmer
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: 'Real redefinition (A7): the state delta of the sector condition is now the estimation error, not the innovation. The F72 checks it re-binds do not read that distinction. F72#C1 (EA.1) bounds the mean lag m = E[p_hat] - theta, which the proof computes directly from the estimator class; that is already the mean estimation error, and it equals the mean innovation because the channel noise has mean zero given state and law. F72#C2 measures the same mean lag by the y -> theta substitution. F72#C3 is gain and count algebra on the update rule, which is driven by the innovation before and after. Where they are listed: example-bandit#C7 computes Gaussian-prior information quantities, schema#C4 greps for (1-lambda)/(2-lambda) carriers, and vol4#C1/C2 concern auxilia alignment and the PROPRIUM mapping. None of these reads what the persistence dynamics state is, or the gain-injected disturbance term.'
+from-version: 004adea7a4354f0947d87f64cb668435a1514857c544faae422fff3ed9cb223e
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+  - eb63d4516d665ec84357b2379213af44f850377eca0621d25d0b8eb04386ff6a
+  - 0efb52e7c40aabf5ce716fed0cada68051566e832186b90006cfd5f05ffe5e2f
+  - 8559ec07afe30aeb26a826cb651164bbff8d06e6644439c000c987543f9c7553
+  - e04cf21b8b4cd4d206b30be151375ffd61447e04eff284ecabd546951291902f
+  - 4e5b62071c96cafb8bd42fd2952172de7d9d834351012dc25a87f86bc5c1396c
+to-version: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452

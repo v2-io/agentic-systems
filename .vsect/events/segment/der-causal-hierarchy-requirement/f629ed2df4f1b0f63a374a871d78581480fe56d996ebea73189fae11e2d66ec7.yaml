@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: f629ed2df4f1b0f63a374a871d78581480fe56d996ebea73189fae11e2d66ec7
+at: 2026-10-30T21:26:11Z
+store: asf
+act: confirm-rewording
+about: segment:der-causal-hierarchy-requirement
+actor:
+  name: second-mind-confirmer
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: 'Claim Record added, and the RL bullet is corrected: do(a) and A=a coincide in a fully observed MDP and differ only when something unrecorded drives both the action and the reward. The only check it re-binds, vol4#C1, concerns auxilia alignment-route necessity, (H1)+(H2) -> (C-ii) and class preservation via (H4), and reads nothing in this segment.'
+from-version: 51ca8a59050596034d84cbc1effeb3df1735d7974e3bfd2b98c68f64c10742a9
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+to-version: 65f0a739e197295a8a3f6621bcdbc22a2e07c4f96c9a87c7a3efdfb2af60ad86

@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: d1ab74a2b4e27047c13a4de88a11af1630e6ac476527e8f4d3378a9f4ecd76d3
+at: 2026-10-30T21:26:12Z
+store: asf
+act: confirm-rewording
+about: segment:scope-composite-agent
+actor:
+  name: second-mind-confirmer
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: 'One gloss changed, in ''Relationship to the single-agent scopes'': ''it observes under residual uncertainty'' -> ''its world can still show it something it does not yet know'' (answers reread F10). The composite definition and routes (C-i)-(C-iv), which vol4#C1 reads, are unchanged.'
+from-version: 94fc010587fddf2218349e590869d37eaf282b547682d6a6f6e4c12bcd5386b2
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+to-version: 570ef2552b53c0bbd54c10d3bfb8a34d7b80b02170b563ffe1540d1318762396

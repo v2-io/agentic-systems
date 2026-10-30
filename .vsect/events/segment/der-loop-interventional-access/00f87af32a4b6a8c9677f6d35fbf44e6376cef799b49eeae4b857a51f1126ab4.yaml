@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: 00f87af32a4b6a8c9677f6d35fbf44e6376cef799b49eeae4b857a51f1126ab4
+at: 2026-10-30T21:26:12Z
+store: asf
+act: confirm-rewording
+about: segment:der-loop-interventional-access
+actor:
+  name: second-mind-confirmer
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: Claim Record added, and the (C2)-failure sentence is reworded from 'generic for any agent whose action depends on internal state' to 'when the action depended on something that bears on the outcome and is not in the conditioning set'. The only check it re-binds, vol4#C1, concerns auxilia alignment-route necessity, (H1)+(H2) -> (C-ii) and class preservation via (H4), and reads nothing in this segment.
+from-version: 6312906b577aa7341d62651f5879ad25ff822ab06ad921ba95263b01ca160d2c
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+to-version: 70e914317fa2ac7007df404f6ab4840443f90dc651815371a1b42dba53ba1bcd

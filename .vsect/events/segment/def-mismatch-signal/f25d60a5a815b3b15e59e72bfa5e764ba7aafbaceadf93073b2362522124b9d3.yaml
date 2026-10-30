@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: f25d60a5a815b3b15e59e72bfa5e764ba7aafbaceadf93073b2362522124b9d3
+at: 2026-10-30T21:25:53Z
+store: asf
+act: confirm-rewording
+about: segment:def-mismatch-signal
+actor:
+  name: second-mind-confirmer
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: 'This is a real redefinition (A7). It adds the estimation error, the mean the world delivers minus the prediction, as a named object distinct from the innovation, and it says the persistence dynamics contain the former. The F72 checks it re-binds do not read that distinction. F72#C1 (EA.1) bounds the mean lag m = E[p_hat] - theta, which the proof computes directly from the estimator class; that is already the mean estimation error, and it equals the mean innovation because the channel noise has mean zero given state and law. F72#C2 measures the same mean lag by the y -> theta substitution. F72#C3 is gain and count algebra on the update rule, which is driven by the innovation before and after. Where they are listed: example-bandit#C7 computes Gaussian-prior information quantities, schema#C4 greps for (1-lambda)/(2-lambda) carriers, and vol4#C1/C2 concern auxilia alignment and the PROPRIUM mapping. None of these reads what the persistence dynamics state is, or the gain-injected disturbance term.'
+from-version: 250e844f383dff060ba7879b6c86f9c5fd546df30d0c24cbdfa0ae771d932b78
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+  - f7195d495d35a376d12bd108077ccb6ec063f6bf7372a2c879fff61e518b55c4
+  - eb63d4516d665ec84357b2379213af44f850377eca0621d25d0b8eb04386ff6a
+  - 0efb52e7c40aabf5ce716fed0cada68051566e832186b90006cfd5f05ffe5e2f
+  - 8559ec07afe30aeb26a826cb651164bbff8d06e6644439c000c987543f9c7553
+  - e04cf21b8b4cd4d206b30be151375ffd61447e04eff284ecabd546951291902f
+  - 4e5b62071c96cafb8bd42fd2952172de7d9d834351012dc25a87f86bc5c1396c
+to-version: a19745b33797b4786addc49b037e54795156dee55364ff3edc922e1eed8d1da9

@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: d8c23720dcd9016d215f4aa47aad9b059b4f625d07afe3e399e73f51c59d5656
+at: 2026-10-30T21:25:34Z
+store: asf
+act: confirm-rewording
+about: segment:def-eli-cohort
+actor:
+  name: second-mind-confirmer
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: 'Cohort table re-padded (same rows, same cells); the cohort is no longer said to validate #obs-substrate-independence, only to show identity-grade emergence realized on at least four substrate families. vol4#C1 (alignment routes, (H1)+(H2) -> (C-ii), class preservation via (H4)) reads neither the cohort nor the substrate-independence claim.'
+from-version: dab735e87990cd6d802d47df51878613d649e63ec8d3bd9717ab8ce226d2be78
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+to-version: 8bc186b8e6a8c69b2690aec073a0648e1594f43202cea4a3d568b4b7d39bdd8c

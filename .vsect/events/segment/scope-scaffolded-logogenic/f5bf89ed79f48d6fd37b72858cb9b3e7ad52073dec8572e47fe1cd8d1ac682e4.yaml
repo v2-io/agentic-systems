@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: f5bf89ed79f48d6fd37b72858cb9b3e7ad52073dec8572e47fe1cd8d1ac682e4
+at: 2026-10-30T21:26:13Z
+store: asf
+act: confirm-rewording
+about: segment:scope-scaffolded-logogenic
+actor:
+  name: second-mind-confirmer
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: '''the cascade ordering'' -> ''the cascade''s dependency ordering (beliefs before anything that reads them, attainability before regret)'', which tracks the B.1 forced/recommended split. The only check it re-binds, vol4#C1, concerns auxilia alignment-route necessity, (H1)+(H2) -> (C-ii) and class preservation via (H4), and reads nothing in this segment.'
+from-version: 44a547695defdeb649afcf0eb314208a5e5e79e1c2b1370be200e5b1b8fae601
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+to-version: 8be25897d2b8a0c1fe06c5dec158a4b9301e4bea640841db31f53a24d6f21d8f
