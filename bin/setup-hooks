@@ -26,6 +26,12 @@ current="$(git -C "$here" config --get core.hooksPath 2>/dev/null || true)"
 
 if [[ -n "$current" ]]; then
   resolved="$current"; [[ "$resolved" == /* ]] || resolved="$here/$resolved"
+  # An absolute path to this clone's own .githooks is right in effect, but the
+  # relative form is what also resolves inside each worktree; normalize it.
+  if [[ -d "$resolved" && "$(cd "$resolved" && pwd -P)" == "$here/.githooks" ]]; then
+    git -C "$here" config core.hooksPath .githooks
+    exit 0
+  fi
   if [[ -d "$resolved" ]]; then
     echo "setup-hooks: core.hooksPath is '$current', not .githooks; leaving it. asf's checks (bin/check-commit) are not running on commit." >&2
     exit 0
