@@ -1,0 +1,9 @@
+---
+kind: item
+owner: C.1
+opened: 2026-10-30T23:26:33Z
+opened-by: drain-wn-01-gold-opus-5.5
+concerns: [segment:der-agent-opacity]
+---
+
+# #der-agent-opacity still carries the overclaims AUDIT-WORKING-526815 raised (F246-F255; 193847 seconded F248 and F252), re-read at HEAD 86489b0b. (F248) The Brief (line 165) calls U_o and H_b 'formal duals', while line 114 itself says 'structural dual' and no adjoint or channel-capacity relation is derived. Strengthen first by supplying the duality; failing that, it is a structural dual. (F250/F251) T_eff = T * H_b/H_b^max (lines 101, 115) drives every low-opacity adversarial tempo to zero, although predictable attacks still impose disturbance. Opacity should modulate coupling effectiveness rather than multiply tempo, and the bilateral ratio needs a floor near a zero denominator. (F247) The 'Direct substitution' reduction to Hafez's H(S,A|S') (line 110, labeled exact under IDT plus ergodicity) equates a forward observer-filtration conditioning with a backward next-state conditioning without the time-reversal bridge. (F252-F254) The '16-cell closes #adversarial-edge-targeting' claim (lines 113, 130, 148) rests on a multiplicative arg-max whose edge utilities, constraints and adversary reward are not specified; 193847 asks to show the product is the first-order expansion of V_O^adv. (F255) 'Class 3 agents have high structural opacity' (line 157) is not guaranteed. (F246) Parameterization invariance of H_b (lines 116, 155) is asserted from (PI)'s coordinate-free action space, but differential entropy on continuous actions needs a reference measure, which (PI) does not supply. Watch items F256/F258 (what the Hafez IDT numbers support) join item:hafez-citations-der-agent-opacity-109-169-say-h; F257 (keep H_b^{A|B} and H_b^{B|A} distinct) is a regression guard. Sources: #der-agent-opacity Working Notes Off-ramp block (lines 232-241); audits/audit-findings-526815.md:193; audits/audit-findings-193847.md.
