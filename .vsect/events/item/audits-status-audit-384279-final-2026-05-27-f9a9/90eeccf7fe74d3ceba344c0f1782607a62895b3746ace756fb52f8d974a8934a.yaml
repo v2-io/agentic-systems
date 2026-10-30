@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 90eeccf7fe74d3ceba344c0f1782607a62895b3746ace756fb52f8d974a8934a
+at: 2026-10-30T22:02:04Z
+store: asf
+act: correct
+about: item:audits-status-audit-384279-final-2026-05-27-f9a9
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: d9e7f6e62af506080737efe07ed8ee36e632437181f4d8001b810390326a4407
+text: 'Correction: the ''why'' says three residual spike proposals and then names four rows. The STATUS row says three; spikes/PROPOSED.md lines 32-35 are four rows dated 2026-05-28 that all mention 384279 (composition-consistency strengthening, grounding-floor two-routes spike, stability-certificate Brief sharpening, equation-tag drift). I did not reconcile three against four; the rows are imported and judged as their own items, so nothing depends on the count. The outcome (not-an-item) stands.'

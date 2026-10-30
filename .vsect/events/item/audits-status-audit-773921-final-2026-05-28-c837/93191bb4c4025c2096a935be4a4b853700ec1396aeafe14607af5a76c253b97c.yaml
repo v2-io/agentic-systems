@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 93191bb4c4025c2096a935be4a4b853700ec1396aeafe14607af5a76c253b97c
+at: 2026-10-30T22:02:04Z
+store: asf
+act: correct
+about: item:audits-status-audit-773921-final-2026-05-28-c837
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: d6dc3464a56cd545cc47e96b6d6bf115263f1996b1a887eed9c3e03d929fa6bb
+text: 'Correction: the ''why'' says the residual spike proposals F1/F4 live as rows in spikes/PROPOSED.md. Wrong. The STATUS row says F1 and F4 were closed via SP-24 and SP-25 (CHANGELOG 2026-05-28); the PROPOSED.md rows I had in mind (2026-05-28, lines 32-35) are audit 384279''s. The outcome (not-an-item: a roll-up row whose only remainder is the gold directory) stands.'

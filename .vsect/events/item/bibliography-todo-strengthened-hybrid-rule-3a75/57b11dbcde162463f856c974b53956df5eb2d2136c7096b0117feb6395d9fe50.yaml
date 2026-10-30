@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 57b11dbcde162463f856c974b53956df5eb2d2136c7096b0117feb6395d9fe50
+at: 2026-10-30T22:02:04Z
+store: asf
+act: correct
+about: item:bibliography-todo-strengthened-hybrid-rule-3a75
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: 15e49c94e6b01578ca6498a111351181b39d51be56e295f59632d8fc47b44814
+text: 'Correction: the ''why'' says the SOP carries ''all six points''. Five of six. The sixth, ''No prose-cited side list for v1'' (do not build a parallel curated list of prose-cited works; the bibliography is driven by formal cite commands), is a v1 scoping note that doc/sop/format.sop.md does not state, though line 84''s ''prose alone does not put a source in the bibliography'' implies it. The outcome (landed) stands: the rule itself, which is what deleting BIBLIOGRAPHY-TODO had to preserve, is in the SOP.'

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: c274502190e5157d692f29bcaf749c69af9885156b7017f752d58db8562e4aa6
+at: 2026-10-30T22:02:05Z
+store: asf
+act: correct
+about: item:practica-historical-provenance-and-relic-cleanup-8286
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: e6ee81760f129307643776627cbee91f03c42a37ff68997acdd336b35ad6a424
+text: 'Correction: the ''why'' says the residue is ''Volume 4 and 3''. The predecessor-theory citation ''TFT TF-02'' as grounding is Volume 4 only (def-five-constitutive-factors.md:25 and :46, scope-eli.md, hyp-checkpoint-forking-failure-modes.md, OUTLINE row E2). Volume 3''s mentions are references to ~/src/firmatum/PROPRIUM-* local paths in segment bodies (disc-five-forcing-functions.md:81, disc-framework-self-diagnostic.md:69) and 03-llm-core/OUTLINE.md links to the ref/agentic-tft/ scaffolds; those are a different violation (canon cites canon and the published world) that the C.1 Volume 4 lane''s edits do not reach, and they are not covered by this item''s restate. The outcome (holds, F.3) stands.'

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 055e5d917a35483fdf1514c51db06c10ec385ce6c14d2df57173094f6ea04e30
+at: 2026-10-30T22:02:13Z
+store: asf
+act: correct
+about: item:todo-big-picture-w3-per-result-census-gates-remaining-can-7bec
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: a8eb569cb9de054ecf8301f20e73d8256aa84878e8de284f2d9ffad45914d814
+text: 'Regression guard carried from the deleted TODO-big-picture.md (its header, ''read this first'', Joseph and the 2026-05-16 session; git show 6f98aa45^:TODO-big-picture.md), added so it travels with the item whose pickers need it. (1) W1 and W2 were retracted as wrong as framed, and are not to be executed. The diagnosis that the forcing-bound kind lacks a posture word in the Findings vocabulary, and the provenance-axis-versus-result-shape-axis argument built on it, rested on reading FORMAT.md as a canonical taxonomy when it was stale working instructions, and on having read essentially no theory segments. The deflation is register drift: the anti-inflation discipline, accurate when this was a meta-spike, went stale against results that are now exact and load-bearing. The fix is per-result voice recalibration, not a vocabulary addition; do not propose a new posture word. (2) Converged cleanup principle (Joseph, 2026-05-16): remove redundant, unnecessarily defensive hedges; state classical machinery plainly, without apology; the contribution is the bounds, never ''the methodology'' or ''honest labels''; do not rank your own magnitude and then deflate it (''same kind as Goedel or Shannon but not the same magnitude'': drop the disclaimer, state the kind, full stop); genuine epistemic qualifications (tier, scope, maturity) stand where they actually apply. This is integration-is-replacement applied to register. (3) How the census is to be run: a read, result by result, not a grep tally; verify the load-bearing fact against the primary source for each result before changing its posture; collaborative strengthen-first, not solo; and the prose, posture word and front matter are not prescribed, because the target register is destroyed by prescription. W4, the other half, landed in 6653de6.'

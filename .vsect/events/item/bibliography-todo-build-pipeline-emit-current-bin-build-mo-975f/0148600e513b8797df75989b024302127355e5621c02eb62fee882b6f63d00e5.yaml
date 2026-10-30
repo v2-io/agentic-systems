@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 0148600e513b8797df75989b024302127355e5621c02eb62fee882b6f63d00e5
+at: 2026-10-30T22:02:04Z
+store: asf
+act: correct
+about: item:bibliography-todo-build-pipeline-emit-current-bin-build-mo-975f
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: cf61cf2e7a981a257b8f78a3166a435c2242029c797947369c9fe9d00d5f52f1
+text: 'Correction: the ''why'' says the emit step is described ''in the script''s own header''. The relata emit step is in the body of bin/build-monograph (it builds a citation-scan directory and runs relata emit, about lines 370-386), not its header. doc/sop/format.sop.md line 88 does describe it. The outcome (not-an-item) stands.'

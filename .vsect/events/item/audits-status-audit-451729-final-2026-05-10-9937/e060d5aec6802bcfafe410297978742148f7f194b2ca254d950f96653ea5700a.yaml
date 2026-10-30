@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: e060d5aec6802bcfafe410297978742148f7f194b2ca254d950f96653ea5700a
+at: 2026-10-30T22:02:04Z
+store: asf
+act: correct
+about: item:audits-status-audit-451729-final-2026-05-10-9937
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: 96846348f599376b3b007b34d91b74883db40576d909ecfda96c7741f019894c
+text: 'Correction: the ''why'' says ''six of those eight are no longer at draft''. Wrong. Of the eight appendix derivations named by audit 451729''s D.1, three (deriv-recursive-update, deriv-sector-condition, der-gain-sector-bridge) are stage claims-verified; four (deriv-edge-credence-dynamics, form-strategy-complexity-cost, schema-strategy-persistence, form-consolidation-dynamics) are still stage draft; deriv-graph-structure-uniqueness has no stage field. The outcome (stale) stands on the dangling pointer to a TODO.md section that no longer exists and on stage not being standing under I.4 and H.2, not on most of the eight having moved on.'

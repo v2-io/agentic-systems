@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: beac4ed8f84012a206b4b68b5fb15a00d6eb138f992753d1563208160d37034d
+at: 2026-10-30T22:02:05Z
+store: asf
+act: correct
+about: item:terminology-todo-morally-continuous-one-of-five-continuit-aa6c
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: d7d263ce28ccbcb494d0088f51b2c503f800dd4db66635d823746bcc6ab27467
+text: 'Correction: the ''why'' gives LEXICON.md line 61 for the Morally continuous row under ''### Continuity Stance''. At HEAD the row is at line 62 (the subgroup heading is at line 56). The outcome (not-an-item: it already sits under the stance subgroup, where the note says it belongs) stands.'

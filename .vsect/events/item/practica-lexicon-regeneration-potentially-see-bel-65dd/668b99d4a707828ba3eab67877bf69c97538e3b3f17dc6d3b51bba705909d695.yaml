@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 668b99d4a707828ba3eab67877bf69c97538e3b3f17dc6d3b51bba705909d695
+at: 2026-10-30T22:02:05Z
+store: asf
+act: correct
+about: item:practica-lexicon-regeneration-potentially-see-bel-65dd
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: 36bdd8e53e2511817fdd04725f4c431ea8cae0a00ea0a17d56e943000526a335
+text: 'Correction: the ''why'' says ''Landed 2026-05-08, before the potentially hedge was struck''. The line was written 2026-04-28 (commit 614c2bf4) and bin/term landed 2026-05-08 (4e070971), so it landed after the line was written, and the hedge was never struck. The outcome (landed) stands.'

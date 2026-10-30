@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 5823b95f64be2ac2e1c53236d56cc5044610f4650aa70a55208383c1f73324da
+at: 2026-10-30T22:02:04Z
+store: asf
+act: correct
+about: item:terminology-todo-breakage-a-the-persistence-subgroup-mixe-2fb5
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: 2c727f3e3e7e27d24dd4bd28c7084f9441f99286f7ab4cac27824ab95f7c7825
+text: 'Correction to the restate: it calls whether Continuity Stance is a structural axis or a deployment-level property ''a design question to settle on its merits''. Canon already settles it against demotion: #disc-continuity-stance''s Working Note ''Reconsideration resolved'' says the 2026-05-04 proposal is resolved against by #deriv-self-actuation-grounding, whose Discussion (line 106, ''Consequence for continuity stance'') derives stance as a choice of terminal non-objective invariant and calls it ''the derived form of #disc-continuity-stance''s orthogonality claim''. So the reorganization''s step 3 holds as written: Continuity Stance gets its own section, with no design question pending. The placement steps and the outcome (holds, F.1) stand.'

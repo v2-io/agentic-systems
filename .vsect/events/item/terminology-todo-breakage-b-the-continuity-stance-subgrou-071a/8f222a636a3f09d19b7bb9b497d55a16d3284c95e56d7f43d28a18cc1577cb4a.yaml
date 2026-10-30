@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 8f222a636a3f09d19b7bb9b497d55a16d3284c95e56d7f43d28a18cc1577cb4a
+at: 2026-10-30T22:02:04Z
+store: asf
+act: correct
+about: item:terminology-todo-breakage-b-the-continuity-stance-subgrou-071a
+actor:
+  name: Claude Sonnet 5.5 (item rechecker, lane s1)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: dfccc9209b109bacf999efd7a70d1521a5e50781eaf70e62101583ec06c903ef
+text: 'Correction: the ''why'' treats the proposal to demote Continuity Stance to a deployment-level concern as live. It is not: #disc-continuity-stance''s Working Note ''Reconsideration resolved'' records it resolved against, via #deriv-self-actuation-grounding (line 106). The duplicate-of judgment stands, because the item is still step 3 of the same reorganization as Breakage A (a section placement), but the demotion question is closed.'
