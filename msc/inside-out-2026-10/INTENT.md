@@ -28,7 +28,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 
 ## C — The theory is correct where it is known wrong, and stronger where strengthening was found
 
-- **C.1** Every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. The defect lists are `owner-review/integrator-items.md` A1–A15, `internal-surfaces/00-cross-surface-map.md` §3 and `influx-scout/MAP.md` §3. · *started: F72 and A1 landed and checked (tree theorem, example-strategy, two-sided detection test); the rest not started*
+- **C.1** Every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. The defect lists are `owner-review/integrator-items.md` A1–A15, `internal-surfaces/00-cross-surface-map.md` §3 and `influx-scout/MAP.md` §3. · *started: F72 and A1 landed and checked; A6, A7, A10, A12, A13, A14 in parallel lanes; A4, A5, A8, A9, A11 wait for B.1's merge; A3 for the exit-time spike*
 - **C.2** Strengthenings C1–C3 (exit time, loop identification, allocation vs distortion coupling) are independently checked, then landed or refuted. · *started: three spikes running*
 - **C.3** A cross-segment contradiction scan reports no open contradictions among load-bearing segments. · *not started*
 
@@ -85,7 +85,10 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 | C2 spiker (Fable): loop identification given the decision state | C.2 | `spikes/spike-loop-identification-decision-state-2026-10-30/` |
 | C3 spiker (Fable): allocation vs distortion coupling | C.2 | `spikes/spike-allocation-vs-distortion-coupling-2026-10-30/` |
 | A.1 round-2 integrator (Opus), in its own worktree | A.1 | `#scope-adaptive-system` and dependents, on its branch; record in `spikes/epistemic-target-ontology/` |
-| vsect builder (Fable): `item` kind and tracker import | I.3 | `~/src/arch/firmatum/utils/vsect/` |
+| vsect builder (Fable): tracker-item re-check sweep | I.3 | `~/src/arch/firmatum/utils/vsect/` |
+| C.1 lane (Opus), own worktree: A7 (mismatch names two objects), A10 (persistence lineage) | C.1 | Part I, on its branch; `c1-lanes/part-i-mismatch-lineage.md` |
+| C.1 lane (Opus), own worktree: A6, A12, A14 (Volume 4) | C.1 | `04-eli-core/`, on its branch; `c1-lanes/vol4.md` |
+| C.1/H.2 lane (Opus), own worktree: A13 (circular TST fit), the `old-tst-*` fates | C.1, H.2 | `02-tst-core/`, on its branch; `c1-lanes/tst.md` |
 
 These are finished and on the line through the lead:
 
