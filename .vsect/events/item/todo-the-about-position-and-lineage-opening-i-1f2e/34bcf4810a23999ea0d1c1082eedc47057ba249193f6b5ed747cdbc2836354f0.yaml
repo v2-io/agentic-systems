@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 34bcf4810a23999ea0d1c1082eedc47057ba249193f6b5ed747cdbc2836354f0
+at: 2026-10-30T21:29:29Z
+store: asf
+act: recheck
+about: item:todo-the-about-position-and-lineage-opening-i-1f2e
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 0474943d+dirty
+criterion: 'Read #result-persistence-condition:150,177,219 and doc/readme/src/_about.md, _position-and-lineage.md at HEAD; git log -S''bathtub'' touches only that segment''s Working Notes (75943918, e470a68d). The Torricelli check is my derivation (sqrt(h) >= h/sqrt(R) for 0 <= h <= R). INTENT has no KR for pedagogy authoring; flagged in t1-todo.md.'
+outcome: holds
+owner: 'unowned: no KR'
+restated: 'Two parts, both open. (1) The bathtub gloss is not in #result-persistence-condition''s Findings Brief (line 150 uses ''a balance held just barely beneath a tipping point'') nor in the README, although the always-loaded SOP (asf CLAUDE.md, Feynman-criterion section) calls it ''the canonical example'' as if it were in use; it survives only in Working Notes (lines 177, 219). It is isomorphic, not merely evocative: even a Torricelli drain, outflow c sqrt(h), satisfies the one-point sector bound with alpha = c/sqrt(R) on [0,R], and its overflow threshold c sqrt(R) > rho is exactly alpha R > rho. So it can be placed with an honest note about drain law. (2) The About opening''s register for the casual-curious tier is a pedagogy judgment no KR owns; H.3 would measure whether a rewrite helps.'

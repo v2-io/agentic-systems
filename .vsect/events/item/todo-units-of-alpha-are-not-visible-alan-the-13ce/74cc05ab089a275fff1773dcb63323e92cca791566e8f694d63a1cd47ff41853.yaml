@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 74cc05ab089a275fff1773dcb63323e92cca791566e8f694d63a1cd47ff41853
+at: 2026-10-30T21:29:29Z
+store: asf
+act: recheck
+about: item:todo-units-of-alpha-are-not-visible-alan-the-13ce
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 0474943d+dirty
+criterion: 'grep of NOTATION.md and README.md at HEAD: no units for alpha anywhere. Owner F.4 as the KR that owns NOTATION.md''s declarations.'
+outcome: holds
+owner: F.4
+restated: 'NOTATION.md:136 types alpha as ''Scalar > 0, lower sector bound of correction function'' and gives no units. The units depend on the time model: [time^-1] under the continuous Model (rate), dimensionless per step under the discrete sector condition. A reader cannot tell which applies where; the README carries neither. Add the units, with both readings, to NOTATION''s alpha row (the canonical home), and once in the README''s persistence gloss.'

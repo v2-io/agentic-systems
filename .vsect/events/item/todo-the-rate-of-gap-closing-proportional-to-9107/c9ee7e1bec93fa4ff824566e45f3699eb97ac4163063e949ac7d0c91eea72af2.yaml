@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: c9ee7e1bec93fa4ff824566e45f3699eb97ac4163063e949ac7d0c91eea72af2
+at: 2026-10-30T21:29:19Z
+store: asf
+act: recheck
+about: item:todo-the-rate-of-gap-closing-proportional-to-9107
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 0474943d+dirty
+criterion: 'grep of README.md and doc/readme/src for ''sector condition'', ''proportional to'', ''linear'' at HEAD: only an unrelated findings-list entry (line 221). Owner A.2 because a headline sentence missing its premise is a front-door register mismatch.'
+outcome: holds
+owner: A.2
+restated: 'README.md states the persistence condition alpha > rho/R as a structural threshold (lines 49, 102, 135) and never states its premise: correction at least proportional to mismatch within the reserve, i.e. the sector condition (no README source partial says ''sector condition'' outside the findings list). A headline should carry the premise it needs. One sentence: the condition assumes corrections grow at least linearly with mismatch up to R (the sector condition), a generalization of the linear ODE, not the ODE itself.'

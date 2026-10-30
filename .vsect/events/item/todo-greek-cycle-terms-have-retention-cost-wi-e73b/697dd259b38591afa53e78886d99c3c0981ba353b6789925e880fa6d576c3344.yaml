@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 697dd259b38591afa53e78886d99c3c0981ba353b6789925e880fa6d576c3344
+at: 2026-10-30T21:29:19Z
+store: asf
+act: recheck
+about: item:todo-greek-cycle-terms-have-retention-cost-wi-e73b
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 0474943d+dirty
+criterion: The decision (keep the Greek, pair each with an English anchor at first introduction) is in the README's cycle table (doc/readme/src/_overview-concepts.md:9-15; README.md Overview), whose 'Sense' column reads Anticipation / Perception / Productive perplexity / Turning toward / Informed action. git log -S'Productive perplexity' dates it to 6389e4d5 (2026-04-26). The remaining clause, whether Alan's own five words (Prediction / Perception / Comparison / Learning / Action) preserve the distinctions better, is a wording preference with no claim at stake.
+outcome: landed

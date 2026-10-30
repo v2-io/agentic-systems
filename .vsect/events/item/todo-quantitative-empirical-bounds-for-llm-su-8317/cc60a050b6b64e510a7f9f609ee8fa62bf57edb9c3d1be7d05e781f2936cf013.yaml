@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: cc60a050b6b64e510a7f9f609ee8fa62bf57edb9c3d1be7d05e781f2936cf013
+at: 2026-10-30T21:27:27Z
+store: asf
+act: recheck
+about: item:todo-quantitative-empirical-bounds-for-llm-su-8317
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Overtaken twice. First, the bound it proposes to compute, kappa_W1 <= I(A(q_M); G_W | q_M), was found circular and vacuous (identically zero for the stateless oracle the theorem models) and replaced on 2026-05-31 by the selection-channel bound kappa_W1^sel = I(A(q_M); G^op) <= I(q_M; G^op). #der-class-coercion-via-wrapping:217 carries a regression guard against restoring the old form. Second, the empirical work is now INTENT''s E.1: run kappa_processing-hat and A-hat on two or three LLM families comparing W1 with W2, under empirica/''s RUNS contract. Whoever runs E.1 should estimate the selection-channel quantity, not the one this line names.'
+outcome: superseded

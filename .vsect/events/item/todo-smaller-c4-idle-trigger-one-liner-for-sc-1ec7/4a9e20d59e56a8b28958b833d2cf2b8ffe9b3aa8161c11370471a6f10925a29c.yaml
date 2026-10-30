@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4a9e20d59e56a8b28958b833d2cf2b8ffe9b3aa8161c11370471a6f10925a29c
+at: 2026-10-30T21:27:55Z
+store: asf
+act: recheck
+about: item:todo-smaller-c4-idle-trigger-one-liner-for-sc-1ec7
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 527b156f+dirty
+criterion: 'Two halves, both overtaken. (1) The ''C4 idle-trigger one-liner for #scope-interiority-loop Working Notes'': msc/era-artifact-asf-contributions-2026-07-04.md §C4 itself calls it ''no new theory'', a mechanism (zoetica''s idle-timeout) under a scope that already licenses multiple internal cycles between emissions. Adding it as a Working-Note pointer is the move I.5 retires (Working Notes carry forward pointers and regression guards only). It is not added (grep: no idle/C4 in the segment), and it should not be. (2) ''law'' as a naming-cycle candidate term: the law stratum is the content of #disc-tool-interface-design (03 OUTLINE:114, held under this lane''s TODO.md:21 item) and of G.1''s ''four treatments of law'', which is where its name gets decided.'
+outcome: superseded

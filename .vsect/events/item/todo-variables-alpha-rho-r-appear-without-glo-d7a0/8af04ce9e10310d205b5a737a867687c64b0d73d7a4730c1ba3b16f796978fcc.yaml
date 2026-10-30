@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 8af04ce9e10310d205b5a737a867687c64b0d73d7a4730c1ba3b16f796978fcc
+at: 2026-10-30T21:29:19Z
+store: asf
+act: recheck
+about: item:todo-variables-alpha-rho-r-appear-without-glo-d7a0
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 0474943d+dirty
+criterion: 'README.md''s first mention of the condition (line 49, from doc/readme/src/_position-and-lineage.md, cbb1b32b) glosses all three variables in the same sentence: ''correction efficiency vs disturbance rate relative to model class capacity''. The Cross-Domain Joining section (line 135) restates it in practitioner words (iterate fast enough, relative to how fast requirements change and how complex the codebase is). The Overview''s Structural-persistence bullet (line 102) repeats the inequality without a gloss; that is a nit, not open work.'
+outcome: landed

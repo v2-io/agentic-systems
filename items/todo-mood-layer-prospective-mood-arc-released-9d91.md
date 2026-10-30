@@ -3,10 +3,12 @@ kind: item
 provenance: imported
 source: TODO.md:156
 section: TODO — Miscellaneous & details › Open theory items (MEDIUM)
-owner: ""
 opened: 2026-10-30T20:17:41Z
 opened-by: Claude Fable 5.1
 concerns: [segment:def-mood, segment:der-mood-timescale, segment:der-captured-objective-dynamics, segment:disc-strategic-self-coupling]
+rechecked: 2026-10-30T21:27:19Z by Claude Opus 5.5 (item rechecker, t1-todo)
+owner: 'unowned: no KR'
+restated: 'All five follow-ons are still open at HEAD. (i) The alpha-dot drift rate: #der-captured-objective-dynamics Result 1 is still a no-restoring-force argument, and its WN line 74 says so. A point to settle while deriving: Result 1 says drift toward mu_prox-consistent objectives is self-reinforcing because ''it raises observed reward'', yet its premise is that mu_dist and mu_prox are L1-equivalent on-policy. Reward can rise only through the policy change the drift induces, which is off the policy where the equivalence holds, so the rate law has to carry that policy dependence explicitly. (ii) The mood-as-modulator composition: #def-mood:40 and #der-mood-timescale:55 call the transfer to the modulator role conjectured. The leading-order sketch in audits/AUDIT-WORKING-731548/verify/06-mood-integration-verdict.md still lacks the independent re-derivation the item asked for. (iii) Prospective-mood dynamics and (v) the active/passive unification have no canon home beyond the spike and disc-strategic-self-coupling. (iv) The asymmetric-loss version is open (#der-mood-timescale:56). No KR covers mood-layer strengthenings; G.2 would own (iii) if the spike''s claims are to land.'
 ---
 
 # Mood layer + prospective-mood arc — released follow-ons (cycle 2026-06-17). `#def-mood` (Part I second-order adaptation parameter, `discussion-grade`) + `#der-m
