@@ -11,7 +11,7 @@ written: 2026-10-30
 
 # Part I mismatch objects and persistence lineage (A7, A10): the independent check
 
-KR C.1 ("Every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier"); top intent: "Complete 'in-place' refactor of ASF-- meta, all artifacts, and theory itself." This checks the landing in 481943e4, 67141a67 and fe120d60, re-derived from the text as written. Every segment named is byte-identical between fe120d60 and 924e70f9. The derivations, the window script and the reasoning are in the first source above.
+KR C.1 ("Every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier"); top intent: "Complete 'in-place' refactor of ASF-- meta, all artifacts, and theory itself." This checks the landing in 481943e4, 67141a67 and fe120d60, re-derived from the text as written. The Part I segments and def-death-as-factor-loss are byte-identical between fe120d60 and 924e70f9; scope-evolving-software changed under the TST lane in between and was read at 924e70f9. The derivations, the window script and the reasoning are in the first source above.
 
 ## C1 (check)
 - target: segment:deriv-sector-condition

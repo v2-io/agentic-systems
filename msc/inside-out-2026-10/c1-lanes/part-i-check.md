@@ -2,7 +2,7 @@
 
 # Part I mismatch lineage: the independent check
 
-This is the verifier's write-up for the landing in 481943e4, 67141a67 and fe120d60 (account: `part-i-mismatch-lineage.md` beside this file). The typed checks and findings are in `reviews/part-i-mismatch-lineage-check-1.md`, taken into vsect. Every segment cited below is byte-identical between fe120d60 and 924e70f9, the commit the record binds to.
+This is the verifier's write-up for the landing in 481943e4, 67141a67 and fe120d60 (account: `part-i-mismatch-lineage.md` beside this file). The typed checks and findings are in `reviews/part-i-mismatch-lineage-check-1.md`, taken into vsect. The Part I segments and `#def-death-as-factor-loss` cited below are byte-identical between fe120d60 and 924e70f9, the commit the record binds to; `#scope-evolving-software` changed under the TST lane in between and was read at 924e70f9.
 
 ## What holds
 
@@ -32,7 +32,7 @@ This is a strengthening of `#result-persistence-condition` (and of `#deriv-secto
 
 ## Model D has no optimum
 
-Under Model D the bound $R^\ast = \rho_{\text{env}}/\alpha + \bar\nu$ is tight (constant $w_{\text{env}} = \rho_{\text{env}}$ and constant $\nu = -\bar\nu$ attain it) and decreasing in $\alpha$. A worst-case bounded noise is tracked to amplitude $\bar\nu$, never amplified, and more events do not lower a worst-case $\bar\nu$. So under Model D the gain lever helps monotonically (toward $\bar\nu$) and the information lever does nothing. The U-shape is a property of broadband (white) channel noise, which a stronger correction passes to the error at variance growing with $\alpha$. `#result-persistence-condition` says "Raising the gain on the same observations is not a remedy past the optimal gain" without a model qualifier (opening, task-adequacy paragraph), and "Under Model D the same split appears" in "Two levers". Both should be Model S statements, with Model D's different picture stated.
+Under Model D the bound $R^\ast = \rho_{\text{env}}/\alpha + \bar\nu$ is tight (constant $w_{\text{env}} = \rho_{\text{env}}$ and constant $\nu = -\bar\nu$ attain it) and decreasing in $\alpha$. A worst-case bounded noise is tracked to amplitude $\bar\nu$, never amplified, and more events do not lower a worst-case $\bar\nu$. So under Model D the gain lever helps monotonically (toward $\bar\nu$) and the information lever does nothing. The U-shape is a property of broadband (white) channel noise, which a stronger correction passes to the error at variance growing with $\alpha$. `#result-persistence-condition` says "Raising the gain on the same observations is not a remedy past the optimal gain" without a model qualifier (opening, task-adequacy paragraph), and "Under Model D the same split appears" in "Two levers". The second is true of the lag term and the floor, but read after the sentence before it, it implies the same reversal; the first should be a Model S statement, and the paragraph should say that under Model D the gain lever does not reverse.
 
 ## Other findings, in brief
 
