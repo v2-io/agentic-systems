@@ -1,7 +1,7 @@
 # Prior-Art Analysis: Adaptive Tempo and Fisher-Local Gain
 
-**Target Claim:**
-AAT introduces "Adaptive Tempo" ($\mathcal{T}$) as the central scalar (and tensor) capacity metric of an agent. It is mathematically defined as the product of the agent's *event rate* (loop speed, $\nu$) and its *epistemic update quality* (gain, $\eta^*$). 
+**Target Claim:**  
+AAT introduces "Adaptive Tempo" ($\mathcal{T}$) as the central scalar (and tensor) capacity metric of an agent. It is mathematically defined as the product of the agent's *event rate* (loop speed, $\nu$) and its *epistemic update quality* (gain, $\eta^*$).
 
 Under the "Fisher-local invariance regime," AAT formally derives the tensor extension of Adaptive Tempo, where the update gain is a matrix operator $K^{(k)} = (H_M + H_L^{(k)})^{-1} H_L^{(k)}$ governed by the Fisher information of the prior ($H_M$) and the likelihood ($H_L$). AAT claims that scalar tempo is only exact in the isotropic/shared-eigenbasis case, and that anisotropic correction (cross-dimensional coupling) strictly requires the matrix-Loewner persistence condition because scalar tempo dangerously overestimates adaptive capacity along weak dimensions.
 
@@ -33,13 +33,13 @@ While the filtering literature provides the *gain* term, the control literature 
 
 ## 2. Key Anchor Papers (Available in `/ref`)
 
-1. **Amari, S. (1998). Natural Gradient Works Efficiently in Learning.**
+1. **Amari, S. (1998). Natural Gradient Works Efficiently in Learning.**  
    *Significance:* The foundational paper establishing that optimal learning trajectories must be pre-conditioned by Fisher Information, the geometric basis for AAT's tensor gain.
-2. **Ollivier, Y. (2017). Online natural gradient as a Kalman filter.**
+2. **Ollivier, Y. (2017). Online natural gradient as a Kalman filter.**  
    *Significance:* Provides the rigorous algebraic proof that recursive Bayesian updates (Kalman filtering) and Natural Gradient descent are identical, explicitly validating AAT's "Fisher-local" derivations.
-3. **Li, Y., et al. (2017). Bayesian Nonlinear Filtering via Information Geometric Optimization.**
+3. **Li, Y., et al. (2017). Bayesian Nonlinear Filtering via Information Geometric Optimization.**  
    *Significance:* Derives nonlinear filtering explicitly through information geometric optimization on a statistical manifold, serving as a direct precursor to AAT's tensor update equations.
-4. **Tishby, N., & Polani, D. (2011). Information Theory of Decisions and Actions.**
+4. **Tishby, N., & Polani, D. (2011). Information Theory of Decisions and Actions.**  
    *Significance:* Grounds the interaction between an agent's processing bandwidth (tempo) and action selection in rate-distortion theory.
 
 ---

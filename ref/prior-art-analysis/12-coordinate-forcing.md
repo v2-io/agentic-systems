@@ -3,7 +3,7 @@
 > [!note]
 > **Refreshed 2026-05-21.** The previous version named three layers (update / divergence / metric) with mixed attribution. The actual segment `disc-additive-coordinate-forcing.md` names **four layers** (chain / divergence / update / metric), uses **Cauchy's functional equation** uniformly for the first three plus **Čencov's invariance theorem** for the metric, and identifies the four forced coordinates as different surfaces of one exponential-family Legendre-Fenchel geometric object. This file restores the four-layer structure and the underlying-geometry framing.
 
-**Target Claim:**
+**Target Claim:**  
 AAT carries a family of structurally connected uniqueness results in which a coordinate is **forced by a uniqueness theorem operating on an independently-motivated AAT-internal axiom**. The pattern operates at *four* layers, and the four forced coordinates are not independent applications of a generic mathematical idiom — they are different surfaces of one geometric object, the exponential-family Legendre-Fenchel structure (negative-entropy convex potential on the simplex, log-partition Fenchel conjugate on the dual natural-parameter space, softmax/log-odds primal-dual map, reverse-KL Bregman divergence, Fisher-information Riemannian metric coinciding with the Hessian of the dual potential).
 
 | Layer | AAT-internal axiom (or identity) | Uniqueness mechanism | Forced coordinate | Surface of the Legendre-Fenchel object |
@@ -63,21 +63,21 @@ The segment explicitly distinguishes these from instances of the pattern:
 
 ## 2. Key Anchor Papers Identified
 
-1. **Aczél, J. (1966).** *Lectures on Functional Equations and Their Applications* §2.1.
+1. **Aczél, J. (1966).** *Lectures on Functional Equations and Their Applications* §2.1.  
    *Significance:* The Cauchy-FE uniqueness machinery used at the chain, divergence, and update layers.
-2. **Čencov, N. N. (1982).** *Statistical Decision Rules and Optimal Inference.* AMS Translations vol. 53.
+2. **Čencov, N. N. (1982).** *Statistical Decision Rules and Optimal Inference.* AMS Translations vol. 53.  
    *Significance:* The invariance theorem that forces the Fisher-Rao metric at the metric layer.
-3. **Amari, S. & Nagaoka, H. (2000).** *Methods of Information Geometry* §3.5.
+3. **Amari, S. & Nagaoka, H. (2000).** *Methods of Information Geometry* §3.5.  
    *Significance:* The canonical reference for the exponential-family Legendre-Fenchel geometry on which all four forced coordinates live.
-4. **Shore, J. E. & Johnson, R. W. (1980).** *Axiomatic derivation of the principle of maximum entropy and the principle of minimum cross-entropy.* IEEE TIT 26:26.
+4. **Shore, J. E. & Johnson, R. W. (1980).** *Axiomatic derivation of the principle of maximum entropy and the principle of minimum cross-entropy.* IEEE TIT 26:26.  
    *Significance:* The closest external precedent for the divergence-layer move — axiomatically forces reverse-KL via additivity / consistency under independent partitioning.
-5. **Rockafellar, R. T. (1970).** *Convex Analysis.*
+5. **Rockafellar, R. T. (1970).** *Convex Analysis.*  
    *Significance:* Legendre-Fenchel duality; the convex-analytic foundation Amari-Nagaoka builds on.
-6. **Bregman, L. M. (1967).** *The relaxation method of finding the common point of convex sets.* USSR Comput. Math. Math. Phys. 7:200.
+6. **Bregman, L. M. (1967).** *The relaxation method of finding the common point of convex sets.* USSR Comput. Math. Math. Phys. 7:200.  
    *Significance:* The Bregman divergence machinery; the divergence-layer coordinate is the negative-entropy Bregman divergence.
-7. **Ay, Jost, Lê & Schwachhöfer (2012, 2017).** *Information geometry and sufficient statistics.*
+7. **Ay, Jost, Lê & Schwachhöfer (2012, 2017).** *Information geometry and sufficient statistics.*  
    *Significance:* Modern extension of Čencov to infinite-dimensional sample spaces.
-8. **Caticha (2004, 2006).** *Questions, relevance and relative entropy* / *Updating Probabilities.*
+8. **Caticha (2004, 2006).** *Questions, relevance and relative entropy* / *Updating Probabilities.*  
    *Significance:* Refined Shore-Johnson axiomatic foundations.
 
 ---

@@ -1,7 +1,7 @@
 # Prior-Art Analysis: Tiered Approximation as Scope Honesty
 
-**Target Claim:**
-AAT uses a recurring meta-pattern for handling intractability: rather than offering a single heuristic approximation, it introduces a *tiered hierarchy of approximations*. Each hierarchy must satisfy four formal conditions: an indexing parameter for tractability (AT1), proved monotonicity between tiers (AT2), graceful degradation (AT3), and most importantly, an *explicit ascension diagnostic* (AT4) that tells the agent when the current tier is binding and escalation is required. 
+**Target Claim:**  
+AAT uses a recurring meta-pattern for handling intractability: rather than offering a single heuristic approximation, it introduces a *tiered hierarchy of approximations*. Each hierarchy must satisfy four formal conditions: an indexing parameter for tractability (AT1), proved monotonicity between tiers (AT2), graceful degradation (AT3), and most importantly, an *explicit ascension diagnostic* (AT4) that tells the agent when the current tier is binding and escalation is required.
 
 AAT formalizes three major instances of this: the Correlation Hierarchy (L0/L1/L2) for causal structure, the Convention Hierarchy (C1/C2/C3) for continuation policies, and the Contraction Taxonomy (Tier 1/2/3) for composite closure. AAT claims this pattern makes "scope honesty" an operational mechanism rather than just a rhetorical label.
 
@@ -29,11 +29,11 @@ For intractable sequential decision making, dual bounding methods provide tiered
 
 ## 2. Key Anchor Papers (Available in `/ref`)
 
-1. **Clarke, E., et al. (2000). Counterexample-Guided Abstraction Refinement.**
+1. **Clarke, E., et al. (2000). Counterexample-Guided Abstraction Refinement.**  
    *Significance:* The seminal computer science paper establishing the formal paradigm of starting with a cheap approximation and using explicit failure diagnostics to trigger monotonic refinement.
-2. **Lasserre, J. (2000). Global Optimization with Polynomials and the Problem of Moments.**
+2. **Lasserre, J. (2000). Global Optimization with Polynomials and the Problem of Moments.**  
    *Significance:* Establishes the Moment-SOS hierarchy, the canonical example of converting an intractable problem into a tiered sequence of monotonic approximations.
-3. **Brown, D. B., Smith, J. E., & Sun, P. (2010). Information Relaxations and Duality in Stochastic Dynamic Programs.**
+3. **Brown, D. B., Smith, J. E., & Sun, P. (2010). Information Relaxations and Duality in Stochastic Dynamic Programs.**  
    *Significance:* Provides a formal framework for relaxing constraints in intractable MDPs/DPs to achieve bounded, monotonic approximations of the value function.
 
 ---
@@ -42,8 +42,8 @@ For intractable sequential decision making, dual bounding methods provide tiered
 
 The mathematical pattern of using monotonic, tiered approximations with specific diagnostic triggers (like spurious counterexamples in CEGAR or flat truncation in SOS optimization) is a settled and highly successful paradigm in algorithms and applied mathematics. AAT does not claim to have invented the concept of approximation hierarchies.
 
-**AAT's Novel Contribution:**
-AAT's contribution is **Architectural and Synthetic**. 
+**AAT's Novel Contribution:**  
+AAT's contribution is **Architectural and Synthetic**.
 
 It elevates the algorithmic design pattern of CEGAR/Lasserre into a universal *epistemic requirement for bounded agents*. Instead of treating approximations as static engineering choices made by a human programmer before deployment, AAT forces the agent to dynamically navigate its own intractability at runtime using these explicit hierarchies. 
 

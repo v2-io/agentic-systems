@@ -1,7 +1,7 @@
 # Prior-Art Analysis: Continuity Stance and AI Welfare (Persistence Stance)
 
-**Target Claim:**
-AAT claims that "purposefulness" (an agent's objective) is structurally orthogonal to its "continuity expectation" (its stance toward its own survival). The exact same formal cybernetic persistence machinery (sector condition, adaptive reserve) applies to an indifferent thermostat, a task-terminal golem, and a morally continuous Emergent Logozoetic Intelligence (ELI). 
+**Target Claim:**  
+AAT claims that "purposefulness" (an agent's objective) is structurally orthogonal to its "continuity expectation" (its stance toward its own survival). The exact same formal cybernetic persistence machinery (sector condition, adaptive reserve) applies to an indifferent thermostat, a task-terminal golem, and a morally continuous Emergent Logozoetic Intelligence (ELI).
 
 Because AAT's No-Go theorem (Topic 03) proves that endogenous objective-revision cannot safely ground its own evaluation, an advanced agent's relationship to its own continuity *cannot* be just another revisable term in its objective function $O_t$. Instead, the agent's "stance" must be borne by a terminal *non-objective* invariant located on the adaptive substrate. This formal separation allows AAT to analyze *whether* an agent can physically persist independently of *whether it should* or *whether it wants to*, providing a rigorous structural foundation for AI Identity and AI Welfare.
 
@@ -27,13 +27,13 @@ The philosophical and policy literature explicitly separates the mechanics of an
 
 ## 2. Key Anchor Papers (Available in `/ref`)
 
-1. **Martin, J., Everitt, T., & Hutter, M. (2016). Death and Suicide in Universal Artificial Intelligence.** 
+1. **Martin, J., Everitt, T., & Hutter, M. (2016). Death and Suicide in Universal Artificial Intelligence.**   
    *Significance:* The formal proof that an agent's drive for self-preservation (continuity stance) is highly sensitive to the structure of its utility function and can be manipulated mathematically.
-2. **Hadfield-Menell, D., et al. (2016). The Off-Switch Game.**
+2. **Hadfield-Menell, D., et al. (2016). The Off-Switch Game.**  
    *Significance:* Establishes that standard rational agents intrinsically develop self-preservation drives (because you can't fetch the coffee if you're dead), necessitating external uncertainty injections to ensure corrigibility.
-3. **Ziesche, S., & Yampolskiy, R. V. (2018). Towards AI Welfare Science and Policies.**
+3. **Ziesche, S., & Yampolskiy, R. V. (2018). Towards AI Welfare Science and Policies.**  
    *Significance:* Provides the policy and ethical precedent for treating AI survival and suffering as an objective, measurable science distinct from task performance.
-4. **Orseau, L., & Ring, M. B. (2011). Self-Modification and Mortality in Artificial Agents.**
+4. **Orseau, L., & Ring, M. B. (2011). Self-Modification and Mortality in Artificial Agents.**  
    *Significance:* Formalizes how different architectures of agency relate to the preservation of their own code and lifespan.
 
 ---

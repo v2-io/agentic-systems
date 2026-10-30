@@ -3,7 +3,7 @@
 > [!note]
 > **Refreshed 2026-05-21.** The previous version named only three compression operations (model, strategy, communication) and omitted the fourth — *composition projection* $\Lambda$. The actual segment `disc-compression-operations.md` makes the (P1) admissibility condition the **Lagrangian-dual of a standard IB objective** — a derived result, not a stylistic observation. The previous version also imported the reverse-KL-via-regret-bound derivation from `#deriv-strategy-cost-regret-bound` §6.1 (which is a real and important result, just cross-referenced from this segment rather than living in it). This file now reflects the segment's actual four-instance structure plus the honest U-medium / U-strong distinction the segment defends.
 
-**Target Claim:**
+**Target Claim:**  
 AAT contains **four** compression operations, each formulated in its own segment with its own objective, and three of the four are written in Information Bottleneck (IB) form already; the fourth is stated as an IB constraint:
 
 | Instance | $X$ (source) | $T$ (compressed) | $Y$ (relevance variable) | $\beta$ (trade-off) |
@@ -67,21 +67,21 @@ The control-side instances use a sibling form where the relevance variable is co
 
 ## 2. Key Anchor Papers Identified
 
-1. **Tishby, N., Pereira, F. C. & Bialek, W. (1999).** *The Information Bottleneck Method.* (`physics/0004057`)
+1. **Tishby, N., Pereira, F. C. & Bialek, W. (1999).** *The Information Bottleneck Method.* (`physics/0004057`)  
    *Significance:* The master IB objective; AAT adopts directly. Cited in all four instance segments.
-2. **Tishby, N. & Polani, D. (2011).** *Information Theory of Decisions and Actions.*
+2. **Tishby, N. & Polani, D. (2011).** *Information Theory of Decisions and Actions.*  
    *Significance:* Applies IB to action selection; precedent for the agency-as-information-channel view AAT generalizes.
-3. **Genewein, T., Leibfried, F., Grau-Moya, J. & Braun, D. A. (2015).** *Bounded Rationality, Abstraction, and Hierarchical Decision-Making.* Frontiers Robotics AI 2:27.
+3. **Genewein, T., Leibfried, F., Grau-Moya, J. & Braun, D. A. (2015).** *Bounded Rationality, Abstraction, and Hierarchical Decision-Making.* Frontiers Robotics AI 2:27.  
    *Significance:* The strongest single nearby precedent for multi-node IB-shaped architectures; explicitly maintains that convergence/convexity guarantees do not automatically carry over across the cases, prefiguring AAT's U-medium honesty.
-4. **Wolpert, D. H., Grochow, J. A., Libby, E. & DeDeo, S. (2014).** *Optimal high-level descriptions of dynamical systems.*
+4. **Wolpert, D. H., Grochow, J. A., Libby, E. & DeDeo, S. (2014).** *Optimal high-level descriptions of dynamical systems.*  
    *Significance:* State-space compression as predictive macro-projection; the closest precedent for AAT's composition-projection instance.
-5. **Friston, K. J., FitzGerald, T., Rigoli, F., Schwartenbeck, P. & Pezzulo, G. (2017).** *Active Inference: A Process Theory.*
+5. **Friston, K. J., FitzGerald, T., Rigoli, F., Schwartenbeck, P. & Pezzulo, G. (2017).** *Active Inference: A Process Theory.*  
    *Significance:* The variational free energy framework AAT explicitly contrasts with on direction-alignment grounds — same direction, different derivation route.
-6. **Fox, R. & Tishby, N. (2016).** *Minimum-information LQG control Parts I/II.* CDC 2016.
+6. **Fox, R. & Tishby, N. (2016).** *Minimum-information LQG control Parts I/II.* CDC 2016.  
    *Significance:* Direct sequential rate-distortion formulation of bounded control; the sibling-form lineage for control-side compressions.
-7. **Shore, J. E. & Johnson, R. W. (1980).** *Axiomatic derivation of the principle of maximum entropy.*
+7. **Shore, J. E. & Johnson, R. W. (1980).** *Axiomatic derivation of the principle of maximum entropy.*  
    *Significance:* The axiomatization that would promote IB from adjacent family member to fourth primary instance in `#disc-additive-coordinate-forcing` if formally adopted.
-8. **Chechik, G., Globerson, A., Tishby, N. & Weiss, Y. (2005).** *Information Bottleneck for Gaussian Variables.* JMLR 6:165.
+8. **Chechik, G., Globerson, A., Tishby, N. & Weiss, Y. (2005).** *Information Bottleneck for Gaussian Variables.* JMLR 6:165.  
    *Significance:* Closed-form Gaussian IB; natural specialization for the symmetric two-Kalman case in composition.
 
 ---

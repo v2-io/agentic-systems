@@ -1,7 +1,7 @@
 # Prior-Art Analysis: Lyapunov Persistence and Sector Conditions
 
-**Target Claim:**
-AAT models agent survival (persistence) fundamentally as a dynamical-systems tracking problem rather than an optimization problem. The agent's correction mechanism is bounded by a "sector condition" (efficiency $\alpha$, measuring how well the correction points toward reality). Persistence is achieved only when the correction rate exceeds the effective disturbance rate divided by the agent's reserve. 
+**Target Claim:**  
+AAT models agent survival (persistence) fundamentally as a dynamical-systems tracking problem rather than an optimization problem. The agent's correction mechanism is bounded by a "sector condition" (efficiency $\alpha$, measuring how well the correction points toward reality). Persistence is achieved only when the correction rate exceeds the effective disturbance rate divided by the agent's reserve.
 
 AAT derives a strict **scaling dichotomy**: against deterministic drift (Model D), mismatch scales linearly as $1/\alpha$; against stochastic noise (Model S), the root-mean-square mismatch scales as $1/\sqrt{\alpha}$. Finally, AAT links this tracking bound to information theory, proving that maintaining persistence against noise requires a strict minimum Shannon information acquisition rate (an information-rate floor).
 
@@ -31,13 +31,13 @@ The claim that maintaining tracking bounds requires a strict minimum Shannon inf
 
 ## 2. Key Anchor Papers (Available in `/ref`)
 
-1. **Sahai, A., & Mitter, S. (2006). The Necessity and Sufficiency of Anytime Capacity for Stabilization of a Linear System Over a Noisy Communication Link.**
+1. **Sahai, A., & Mitter, S. (2006). The Necessity and Sufficiency of Anytime Capacity for Stabilization of a Linear System Over a Noisy Communication Link.**  
    *Significance:* The definitive proof that persistence/stabilization over noise requires a strict, continuous minimum information rate, directly validating AAT's information-rate floor.
-2. **Lestas, I., Vinnicombe, G., & Paulsson, J. (2010). Fundamental limits on the suppression of molecular fluctuations.** (`ref/lestas_fluctuations_2010.pdf`)
+2. **Lestas, I., Vinnicombe, G., & Paulsson, J. (2010). Fundamental limits on the suppression of molecular fluctuations.** (`ref/lestas_fluctuations_2010.pdf`)  
    *Significance:* Demonstrates how information-theoretic limits govern the physical survival and regulation of biological agents, bridging control theory and living cybernetics.
-3. **Widrow, B., et al. (1976). Stationary and nonstationary learning characteristics of the LMS adaptive filter.**
+3. **Widrow, B., et al. (1976). Stationary and nonstationary learning characteristics of the LMS adaptive filter.**  
    *Significance:* The seminal paper establishing the $1/\alpha$ vs $1/\sqrt{\alpha}$ scaling dichotomy for tracking error against drift versus stochastic noise.
-4. **Zames, G. (1966). On the input-output stability of time-varying nonlinear feedback systems.**
+4. **Zames, G. (1966). On the input-output stability of time-varying nonlinear feedback systems.**  
    *Significance:* The foundational text for sector conditions and absolute stability in control.
 
 ---

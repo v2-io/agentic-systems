@@ -3,7 +3,7 @@
 > [!note]
 > **Refreshed 2026-05-21** with memo-integration light-touch. The substantive content of this analysis was already aligned with the AAT segments (`#der-directed-separation`, `#der-class-coercion-via-wrapping`, `#der-class-coercion-in-composition`, and the logogenic specialization in `03-llm-core/src/der-logogenic-as-wrapping.md`); changes here clarify the **three-class** (not two-class) taxonomy and add memo-cited prior art.
 
-**Target Claim:**
+**Target Claim:**  
 Agent architectures can be formally categorized by **Directed Separation** — the degree to which epistemic updating (beliefs, state estimation) is causally independent of teleological processing (goals, action selection). The framework distinguishes **three classes** (post-2026-05-09 GUC vocabulary):
 - **Class 1 (Separated)** — epistemic update is goal-blind by construction (Kalman + LQR; POMDP belief-state filters).
 - **Class 2 (Partial)** — bounded coupling: within-agent processing is Separated, but composite-level structures acquire intrinsic across-agent coupling through environment + cross-agent observation (the canonical strategic-composition outcome under goal divergence, per `#deriv-strategic-composition`).
@@ -41,13 +41,13 @@ The prior art for "Class Coercion" — wrapping an entangled system in a separat
 
 ## 2. Key Anchor Papers Identified
 
-1. **Baltieri, M., & Buckley, C. (2018). The modularity of action and perception revisited using control theory and active inference.**
+1. **Baltieri, M., & Buckley, C. (2018). The modularity of action and perception revisited using control theory and active inference.**  
    *Significance:* Explicitly draws the connection between cognitive modularity and the control-theoretic Separation Principle, contrasting it with the nonmodular structure of active inference.
-2. **Bar-Shalom, Y., & Tse, E. (1974). Dual effect, certainty equivalence, and separation in stochastic control.**
+2. **Bar-Shalom, Y., & Tse, E. (1974). Dual effect, certainty equivalence, and separation in stochastic control.**  
    *Significance:* Formalizes when separation breaks down due to control actions affecting state uncertainty (the "dual effect"), forcing estimation and control to couple.
-3. **Bruineberg, J., et al. (2021). The Emperor’s New Markov Blankets.**
+3. **Bruineberg, J., et al. (2021). The Emperor’s New Markov Blankets.**  
    *Significance:* Provides the exact philosophical framing for distinguishing epistemic boundaries (Pearl) from architectural/metaphysical boundaries (Friston) in perception-action loops.
-4. **Witsenhausen, H. (1971). Separation of estimation and control for discrete time systems.**
+4. **Witsenhausen, H. (1971). Separation of estimation and control for discrete time systems.**  
    *Significance:* A foundational text establishing the mathematical conditions under which belief-updating and action-selection can be structurally decoupled.
 
 ---

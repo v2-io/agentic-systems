@@ -1,6 +1,6 @@
 # Prior-Art Analysis: Shared Intent, Trust, and Bandwidth
 
-**Target Claim:**
+**Target Claim:**  
 AAT frames inter-agent coordination strictly as an Information Bottleneck (IB) compression problem. "Shared Intent" is the IB-optimal compression of a sender's purposeful state (objective + strategy), preserving only what is relevant for joint action. From this, AAT derives the **Auftragstaktik Principle**: under limited bandwidth, it is mathematically optimal to prioritize sharing *objectives* over *strategies* over *models*.
 
 Furthermore, AAT extends its geometric update gain to a **Communication Gain** ($\eta_{ji}^*$) that discounts incoming information by four distinct uncertainties: receiver model uncertainty, channel noise, source competence (epistemic uncertainty), and source alignment (teleological uncertainty). Because misplaced trust in an adversarial setting triggers a catastrophic Effects Spiral, AAT mandates a **risk-asymmetric (quantile/CVaR)** trust meta-model rather than a mean-expected Bayesian trust model.
@@ -30,13 +30,13 @@ The AI Trust literature explicitly separates competence from alignment/sincerity
 
 ## 2. Key Anchor Papers (Available in `/ref`)
 
-1. **Wang, R., et al. (2019). Learning Efficient Multi-agent Communication: An Information Bottleneck Approach.**
+1. **Wang, R., et al. (2019). Learning Efficient Multi-agent Communication: An Information Bottleneck Approach.**  
    *Significance:* Directly precedes AAT's use of IB to compress purposeful state in MARL under bandwidth constraints.
-2. **Dessein, W. (2002). Authority and Communication in Organizations.**
+2. **Dessein, W. (2002). Authority and Communication in Organizations.**  
    *Significance:* The economic formalization of Auftragstaktik, proving the optimality of delegation over detailed communication.
-3. **Villata, S., et al. (2012). Trusting the Messenger and the Message.**
+3. **Villata, S., et al. (2012). Trusting the Messenger and the Message.**  
    *Significance:* Establishes the necessity of separating source competence from source sincerity in multi-agent trust models.
-4. **Chow, Y., et al. (2015). Risk-Sensitive and Robust Decision-Making: a CVaR Optimization Approach.**
+4. **Chow, Y., et al. (2015). Risk-Sensitive and Robust Decision-Making: a CVaR Optimization Approach.**  
    *Significance:* Provides the mathematical foundation for using risk-asymmetric (CVaR) quantiles to prevent catastrophic failure in MDPs.
 
 ---

@@ -3,7 +3,7 @@
 > [!note]
 > **Refreshed 2026-05-21** with memo integration and the actual structural detail from `#deriv-self-actuation-grounding`. The previous version captured the high-level wireheading framing correctly; this refresh adds (a) the four named requirements (R1)–(R4) the no-go pivots on, (b) the three named premises scoping the result, (c) the two-lemma collision (convention-monotonicity + finite-no-oracle), (d) the three constructions (A)/(B)/(C) exhausting the objective-side routes, (e) the constructive boundary identifying persistence as the canonical terminal grounding invariant, and (f) the connection to continuity-stance orthogonality (`#disc-continuity-stance`).
 
-**Target Claim:**
+**Target Claim:**  
 A **self-actuated agent** is one that performs the orient cascade's final step (revise $O_t$) *on itself* via an operator $\mathfrak{A}: (M_t, O_t, \Sigma_t, \mathcal{C}_t) \mapsto O_t'$ — rather than receiving the revised objective from a principal.
 
 **Degeneracy of unconstrained $\mathfrak{A}$.** An unconstrained $\mathfrak{A}$ is degenerate: since $O_t$'s sole interface is the value functional and $\delta_{\text{sat}} = V_{O_t}^{\min} - A_O$, an unconstrained operator returns an objective whose threshold the current trajectory already meets — driving $\delta_{\text{sat}} \to 0$ by *moving the target onto the arrow already in flight*. This is the formal shadow of *wireheading / reward corruption*, and it is the **generic outcome** of an unconstrained $\mathfrak{A}$, not a marginal one. Non-degeneracy requires an invariant $\Phi$ preserved across the revision.
@@ -64,19 +64,19 @@ The AI safety literature has rich precursor work on goal preservation, reward ta
 
 ## 2. Key Anchor Papers Identified
 
-1. **Everitt, T., Filan, D., Daswani, M. & Hutter, M. (2016).** *Self-Modification of Policy and Utility Function in Rational Agents.*
+1. **Everitt, T., Filan, D., Daswani, M. & Hutter, M. (2016).** *Self-Modification of Policy and Utility Function in Rational Agents.*  
    *Significance:* The strongest objective-side rival — formal preservation of utility under self-modification using current-utility evaluation. AAT's no-go scopes this correctly (it is a preservation, not a grounding-via-internal-revision-license).
-2. **Hibbard, B. (2011).** *Model-Based Utility Functions.*
+2. **Hibbard, B. (2011).** *Model-Based Utility Functions.*  
    *Significance:* The second-strongest rival — proposes decoupling utility from sensory history. AAT's no-go bites because the model-based utility is still an objective functional.
-3. **Hadfield-Menell, D., Russell, S., Abbeel, P. & Dragan, A. (2016).** *Cooperative Inverse Reinforcement Learning.*
+3. **Hadfield-Menell, D., Russell, S., Abbeel, P. & Dragan, A. (2016).** *Cooperative Inverse Reinforcement Learning.*  
    *Significance:* The Bayesian-uncertainty-based corrigibility approach — explicit alternative to AAT's adaptive-substrate grounding.
-4. **Everitt, T. & Hutter, M. (2019).** *Reward Tampering Problems and Solutions in Reinforcement Learning: A Causal Influence Diagram Perspective.*
+4. **Everitt, T. & Hutter, M. (2019).** *Reward Tampering Problems and Solutions in Reinforcement Learning: A Causal Influence Diagram Perspective.*  
    *Significance:* Maps the wireheading / reward-channel-tampering structure formally.
-5. **Skalse, J., Howe, N., Krasheninnikov, D. & Krueger, D. (2022).** *Defining and Characterizing Reward Hacking.*
+5. **Skalse, J., Howe, N., Krasheninnikov, D. & Krueger, D. (2022).** *Defining and Characterizing Reward Hacking.*  
    *Significance:* The cleanest recent formal characterization of wireheading-shaped failures.
-6. **Soares, N., Fallenstein, B., Yudkowsky, E. & Armstrong, S. (2015).** *Corrigibility.*
+6. **Soares, N., Fallenstein, B., Yudkowsky, E. & Armstrong, S. (2015).** *Corrigibility.*  
    *Significance:* The Soares-line statement of what corrigibility would require — broadly the literature AAT's no-go strengthens.
-7. **Omohundro, S. (2008).** *The Basic AI Drives.*
+7. **Omohundro, S. (2008).** *The Basic AI Drives.*  
    *Significance:* The goal-preservation-drive folklore canonical statement.
 
 ---

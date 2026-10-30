@@ -3,7 +3,7 @@
 > [!note]
 > **Refreshed 2026-05-21.** The previous version of this file featured *Unity Dimensions* (4 content + 1 structural axis for composite agency) — content that properly belongs to row 08 / `def-unity-dimensions.md`. The actual row-20 topic, per the prompt file `20-agent-spectrum-and-moore-machine-threshold.md` and the load-bearing AAT segment `def-agent-spectrum.md`, is the two-axis individual-agent spectrum and the minimal-complexity social threshold. This file now matches that scope.
 
-**Target Claim:**
+**Target Claim:**  
 Agents partition along **two independent continuous dimensions** — *model richness* (how rich the internal predictive model is, from absent/degenerate through error/integral/derivative through full world-model) and *objective richness* (how rich the purposive structure is, from absent through scalar setpoint through trajectory functional). The cross of degenerate/structured on each axis names four region-archetypes (reactive system, adaptive tracker, blind seeker, actuated agent), but the axes are **continuum regions, not discrete categories** — agents migrate as auto-tuning, exploration, or training changes their effective structure.
 
 A separate, sharp threshold story for **social** agency: a one-state Moore machine occupies the reactive region (fixed output regardless of input) and is provably incapable of contingent social behavior in any game-theoretic setting; the two-state machine is the minimal architecture for branching, one-bit-of-history strategies (Tit-for-Tat-class). The **2-state machine is the minimal AAT agent**.
@@ -60,17 +60,17 @@ Effect on AAT's novelty: the *possibility* of measuring agency structurally rath
 
 ## 2. Key Anchor Papers Identified
 
-1. **Richens, J., Abel, D., Bellot, A., & Everitt, T. (2025).** *General agents contain world models.*
+1. **Richens, J., Abel, D., Bellot, A., & Everitt, T. (2025).** *General agents contain world models.*  
    *Significance:* The current strongest theorem-shape statement that sufficiently general goal-directed behavior forces an implicit world model. Anchors the model-richness axis.
-2. **Miller, J. H. (2022).** *Ex Machina: Coevolving Machines and the Origins of the Social Universe.* (Santa Fe Institute Press; DOI 10.37911/9781947864429)
+2. **Miller, J. H. (2022).** *Ex Machina: Coevolving Machines and the Origins of the Social Universe.* (Santa Fe Institute Press; DOI 10.37911/9781947864429)  
    *Significance:* The direct empirical anchor for the 1-state→2-state social threshold. AAT's `def-agent-spectrum.md` cites this explicitly; #worked-example-cam is planned to formalize the AAT-↔-Moore-machine mapping.
-3. **Hafez, W., Wei, C., Felipe, R., Nazeri, A., & Reid, C. (2026).** *A Mathematical Theory of Agency and Intelligence.* (arXiv:2602.22519)
+3. **Hafez, W., Wei, C., Felipe, R., Nazeri, A., & Reid, C. (2026).** *A Mathematical Theory of Agency and Intelligence.* (arXiv:2602.22519)  
    *Significance:* Provides the bi-predictability measure $P = \text{MI}(S, A; S')/C$ that complements tempo. The AAT/Hafez bridge (architecture vs performance measurement) is documented in `def-agent-spectrum.md` §Discussion and the variant_hafez bridge simulation.
-4. **Albantakis, L. (2021).** *Quantifying the Autonomy of Structurally Diverse Automata.* (Entropy 23:1415)
+4. **Albantakis, L. (2021).** *Quantifying the Autonomy of Structurally Diverse Automata.* (Entropy 23:1415)  
    *Significance:* Demonstrates that structural autonomy measures genuinely separate from task-performance measures across architectural variants — supports the broader stance that architecture-level agency measurement is well-founded.
-5. **Linster, B. G. (1992).** *Evolutionary Stability in the Infinitely Repeated Prisoners' Dilemma Played by Two-State Moore Machines.*
+5. **Linster, B. G. (1992).** *Evolutionary Stability in the Infinitely Repeated Prisoners' Dilemma Played by Two-State Moore Machines.*  
    *Significance:* The clearest formal result on two-state Moore machines as the minimal architecture for forgiving / reciprocal strategies.
-6. **Rubinstein, A. (1986).** *Finite automata play the repeated prisoner's dilemma.*
+6. **Rubinstein, A. (1986).** *Finite automata play the repeated prisoner's dilemma.*  
    *Significance:* Foundational bounded-rationality-as-finite-automata paper; precedent for treating state-count as a structural complexity variable.
 
 ---

@@ -1,8 +1,7 @@
 # Prior-Art Analysis: Failure Diagnosis and Persistence (Diagnostic Splits)
 
-**Target Claim:**
-AAT actively splits agent failure diagnosis orthogonally into the "Satisfaction Gap" (is the goal achievable at all?) and "Control Regret" (is the current policy optimal?). This 2x2 matrix separates "the goal is too hard" from "the strategy is weak." To resolve this, AAT enforces the **Orient Cascade**, a strict, information-dependency-forced sequence of cognitive updates: Update Model $\to$ Check Satisfaction $\to$ Check Regret $\to$ Revise Strategy $\to$ Revise Objective (last resort). 
-Furthermore, tracking drifting environments to support these diagnostics explicitly requires "exponential forgetting" (bounding effective sample size); without it, confidence calcifies and the agent loses the ability to diagnose failure.
+**Target Claim:**  
+AAT actively splits agent failure diagnosis orthogonally into the "Satisfaction Gap" (is the goal achievable at all?) and "Control Regret" (is the current policy optimal?). This 2x2 matrix separates "the goal is too hard" from "the strategy is weak." To resolve this, AAT enforces the **Orient Cascade**, a strict, information-dependency-forced sequence of cognitive updates: Update Model $\to$ Check Satisfaction $\to$ Check Regret $\to$ Revise Strategy $\to$ Revise Objective (last resort).  Furthermore, tracking drifting environments to support these diagnostics explicitly requires "exponential forgetting" (bounding effective sample size); without it, confidence calcifies and the agent loses the ability to diagnose failure.
 
 ---
 
@@ -28,13 +27,13 @@ The requirement that agents must "forget" old data to track drifting environment
 
 ## 2. Key Anchor Papers (Available in `/ref`)
 
-1. **Kolobov, A., Mausam, & Weld, D. S. (2012). A Theory of Goal-Oriented MDPs with Dead Ends.** (`ref/kolobov_ssp_dead_ends_2012.pdf`)
+1. **Kolobov, A., Mausam, & Weld, D. S. (2012). A Theory of Goal-Oriented MDPs with Dead Ends.** (`ref/kolobov_ssp_dead_ends_2012.pdf`)  
    *Significance:* Provides the formal AI planning framework for environments where goals can become impossible, separating the existence of a path from the cost of the path.
-2. **Teichteil-Königsbuch, F. (2012). Stochastic Safest and Shortest Path Problems.**
+2. **Teichteil-Königsbuch, F. (2012). Stochastic Safest and Shortest Path Problems.**  
    *Significance:* Introduces the dual-criterion optimization (MaxProb vs MinCost) that serves as the closest formal precursor to AAT's Satisfaction Gap / Control Regret orthogonal split.
-3. **Garivier, A., & Moulines, É. (2008). On Upper-Confidence Bound Policies for Non-Stationary Bandit Problems.** (`ref/garivier_ucb_nonstationary_2008.pdf`)
+3. **Garivier, A., & Moulines, É. (2008). On Upper-Confidence Bound Policies for Non-Stationary Bandit Problems.** (`ref/garivier_ucb_nonstationary_2008.pdf`)  
    *Significance:* Provides the definitive proof that optimal tracking in non-stationary environments strictly requires discounted/sliding-window upper confidence bounds (forgetting).
-4. **Guo, L., Ljung, L., & Priouret, P. (1993). Performance analysis of the forgetting factor RLS algorithm.**
+4. **Guo, L., Ljung, L., & Priouret, P. (1993). Performance analysis of the forgetting factor RLS algorithm.**  
    *Significance:* The classic control-theoretic proof that tracking time-varying parameters requires a bounded effective sample size.
 
 ---
@@ -43,7 +42,7 @@ The requirement that agents must "forget" old data to track drifting environment
 
 The core components—dual criteria for goal reachability vs path cost, and the necessity of exponential forgetting in non-stationary tracking—are well established in AI planning and adaptive control, respectively. AAT does not claim to have invented forgetting factors or the concept of dead-ends.
 
-**AAT's Novel Contribution:**
+**AAT's Novel Contribution:**  
 AAT's primary contribution here is **Architectural Synthesis and Dependency-Forcing**.
 
 1. **The Orient Cascade as a Dependency Proof:** In standard AI, diagnostic steps (like evaluating goal feasibility or updating a model) are usually scheduled by human-designed loops. AAT provides a formal *information-dependency proof* (the Orient Cascade) that dictates exactly why the update order MUST be: Epistemic $\to$ Satisfaction $\to$ Regret $\to$ Strategy $\to$ Objective. AAT proves that because the evaluation of the Satisfaction Gap requires the updated model ($M_t$), and the evaluation of Control Regret requires the output of the Satisfaction Gap to disambiguate the cause of failure, the cognitive sequence is logically forced, not heuristically chosen.

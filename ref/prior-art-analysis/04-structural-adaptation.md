@@ -1,6 +1,6 @@
 # Prior-Art Analysis: Structural Adaptation and Temporal Nesting
 
-**Target Claim:**
+**Target Claim:**  
 AAT formally distinguishes between *parametric adaptation* (tuning weights within a fixed model class $\mathcal{M}$) and *structural adaptation* (changing the model class itself). AAT proves that when the "Model Class Fitness" ($\mathcal{F}(\mathcal{M})$) falls below a threshold, the agent hits an irreducible mismatch floor; no amount of parametric tuning can close the gap, mathematically forcing structural adaptation. Furthermore, AAT formalizes the timing of this adaptation using "Temporal Nesting": adaptive processes naturally stratify by timescale. Fast processes (parametric updates) must reach quasi-steady-state before slower processes (structural adaptation) can act, a constraint derived directly from singular perturbation theory. During the intermediate timescales, agents perform "consolidation" (offline replay) to optimize an Information Bottleneck objective.
 
 ---
@@ -28,13 +28,13 @@ In neuroscience and computational models, intermediate timescales are used for "
 
 ## 2. Key Anchor Papers (Available in `/ref`)
 
-1. **Kokotovic, P., Khalil, H., & O'Reilly, J. (1986). Singular perturbation methods in control: analysis and design.**
+1. **Kokotovic, P., Khalil, H., & O'Reilly, J. (1986). Singular perturbation methods in control: analysis and design.**  
    *Significance:* The mathematical bedrock for AAT's "Temporal Nesting" claim, proving that multi-timescale systems require fast variables to converge before slow variables update to avoid oscillation.
-2. **Peng, B., & Risteski, A. (2022). Continual learning: a feature extraction formalization, an efficient algorithm, and fundamental obstructions.** (`ref/peng_continual_learning_2022.pdf`)
+2. **Peng, B., & Risteski, A. (2022). Continual learning: a feature extraction formalization, an efficient algorithm, and fundamental obstructions.** (`ref/peng_continual_learning_2022.pdf`)  
    *Significance:* A rigorous impossibility proof showing that fixed non-linear feature representations mathematically cannot overcome catastrophic forgetting, mirroring AAT's "structural adaptation necessity."
-3. **Benna, M., & Fusi, S. (2016). Computational principles of synaptic memory consolidation.** (`ref/benna_synaptic_memory_2016.pdf`)
+3. **Benna, M., & Fusi, S. (2016). Computational principles of synaptic memory consolidation.** (`ref/benna_synaptic_memory_2016.pdf`)  
    *Significance:* Demonstrates the biological and computational necessity of bidirectional fast-to-slow variable transfer for memory stability.
-4. **Nagy, D. G., et al. (2020). Optimal forgetting: Semantic compression of episodic memories.**
+4. **Nagy, D. G., et al. (2020). Optimal forgetting: Semantic compression of episodic memories.**  
    *Significance:* Validates AAT's claim that offline consolidation operates by optimizing an Information Bottleneck objective (semantic compression).
 
 ---
@@ -43,8 +43,8 @@ In neuroscience and computational models, intermediate timescales are used for "
 
 The mathematical components are highly established: singular perturbation theory has governed multi-timescale control for 50 years, and the limits of fixed-capacity networks are well-studied in continual learning.
 
-**AAT's Novel Contribution:**
-AAT exhibits strong **architectural synthesis** and **formal integration** of these disparate math towers. 
+**AAT's Novel Contribution:**  
+AAT exhibits strong **architectural synthesis** and **formal integration** of these disparate math towers.
 
 While control theorists apply singular perturbations to physical plants (like electric motors) and RL theorists apply it to actor-critic learning rates, AAT elevates singular perturbation into a universal cognitive axiom: **Temporal Nesting**. By formally linking the mismatch floor ($\mathcal{F}(\mathcal{M})$) to the timescale hierarchy, AAT proves that *structural adaptation* (paradigm shifts, architecture expansion) must operate at a fundamentally slower timescale than *parametric adaptation*. If structural adaptation triggers before parametric convergence, the agent oscillates destructively. 
 

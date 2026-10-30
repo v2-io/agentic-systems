@@ -1,6 +1,6 @@
 # Prior-Art Analysis: Unified Agency Theories
 
-**Target Claim:**
+**Target Claim:**  
 AAT serves as an overarching, mathematically unified theory of agency that bridges adaptive cybernetics, control theory, and information geometry into a single framework applicable across the "Agent Spectrum" (from thermostats to AGI). It models agency not as a biological exclusive or an algorithmic optimization, but as a formal physical and structural phenomenon defined by causal intervention, information bottleneck compression, and Lyapunov persistence. AAT positions itself as a rigorous alternative to existing grand unified theories (like Active Inference or AIXI), specifically replacing their reliance on thermodynamic non-equilibrium steady states (NESS) and "priors-as-preferences" with classical control-theoretic sector bounds and decision-theoretic regret.
 
 ---
@@ -31,13 +31,13 @@ In philosophy of mind and complex systems, theories of agency focus on boundary 
 
 ## 2. Key Anchor Papers (Available in `/ref`)
 
-1. **Friston, K. J. (2019). A free energy principle for a particular physics.** 
+1. **Friston, K. J. (2019). A free energy principle for a particular physics.**   
    *Significance:* The apex of FEP, establishing Markov blankets and free energy as the universal physics of self-organizing systems.
-2. **Hutter, M. (2000). A Theory of Universal Artificial Intelligence based on Algorithmic Complexity.** 
+2. **Hutter, M. (2000). A Theory of Universal Artificial Intelligence based on Algorithmic Complexity.**   
    *Significance:* The foundational text for AIXI, establishing the theoretical limit of uncomputable optimal agency.
-3. **Ortega, P. A., & Braun, D. A. (2012). Thermodynamics as a theory of decision-making with information-processing costs.** 
+3. **Ortega, P. A., & Braun, D. A. (2012). Thermodynamics as a theory of decision-making with information-processing costs.**   
    *Significance:* Unifies expected utility maximization with the physical costs of information processing using variational free energy.
-4. **Levine, S. (2018). Reinforcement Learning and Control as Probabilistic Inference.** 
+4. **Levine, S. (2018). Reinforcement Learning and Control as Probabilistic Inference.**   
    *Significance:* The definitive review bridging modern RL/control with the exact variational inference math used by FEP and AAT.
 
 ---
@@ -46,7 +46,7 @@ In philosophy of mind and complex systems, theories of agency focus on boundary 
 
 The *ambition* of creating a mathematically unified theory of agency that bridges physics, control, and information theory is not novel; it is the explicit, highly contested territory of Karl Friston, Marcus Hutter, and Pedro Ortega. Furthermore, the mathematical *shape* of the resulting unifications—variational inference bounds, KL-divergence regularizers, and information bottlenecks—is shared across all these frameworks.
 
-**AAT's Novel Contribution:**
+**AAT's Novel Contribution:**  
 AAT's overarching novelty lies in its **Epistemological Foundation** and its **Correction of Active Inference's Flaws**. AAT explicitly positions itself as a more structurally rigorous, control-theoretic alternative to the Free Energy Principle.
 
 1. **Rejecting "Preferences as Priors":** Active Inference achieves unification by assuming that an agent encodes its goals as prior beliefs about the world, and that action is just "fulfilling expectations." AAT explicitly rejects this (Topic 13/14), proving that collapsing "wanting" and "expecting" destroys the agent's ability to orthogonally diagnose failure (the Satisfaction vs. Regret split). AAT achieves the same elegant variational unification without committing this epistemological category error.

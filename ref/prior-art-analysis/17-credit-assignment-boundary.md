@@ -3,17 +3,17 @@
 > [!note]
 > **Refreshed 2026-05-21.** The previous version named only two intractability barriers (#P-hard + info-underdetermination) and omitted (a) the posterior-correlation barrier and (b) the **persistence-is-credit-assignment-free** result that is one of the most distinctive AAT contributions on this row. The actual segment `disc-credit-assignment-boundary.md` is far richer than the previous analysis credited. Restored.
 
-**Target Claim:**
+**Target Claim:**  
 AAT characterizes the boundary between tractable and intractable per-edge credit assignment over a strategy DAG, and — distinctively — establishes what the theory can guarantee *without* solving credit assignment at all. The full structure:
 
-1. **Three things the theory guarantees credit-assignment-free.**
-   (i) *Persistence is credit-assignment-free*: the sector condition transfers from per-edge credence space to strategy-plan-confidence error $\delta_s = \hat P_\Sigma - \Phi$ via the Jacobian $\mathbf{J} = \nabla_\mathbf{p} P_\Sigma$, computable in $O(|V| + |E|)$ from status propagation — no outcome decomposition required (`#deriv-edge-credence-dynamics` Prop B.5).
-   (ii) *Diagnostic framework is plan-level*: satisfaction gap, control regret, and orient cascade ordering operate on aggregate value.
+1. **Three things the theory guarantees credit-assignment-free.**  
+   (i) *Persistence is credit-assignment-free*: the sector condition transfers from per-edge credence space to strategy-plan-confidence error $\delta_s = \hat P_\Sigma - \Phi$ via the Jacobian $\mathbf{J} = \nabla_\mathbf{p} P_\Sigma$, computable in $O(|V| + |E|)$ from status propagation — no outcome decomposition required (`#deriv-edge-credence-dynamics` Prop B.5).  
+   (ii) *Diagnostic framework is plan-level*: satisfaction gap, control regret, and orient cascade ordering operate on aggregate value.  
    (iii) *Observability-dominance identifies the tractable edges*: only the observable subgraph can receive informative signals at all.
 
-2. **Three independent intractability barriers** to exact per-edge attribution in general AND/OR DAGs with partial observability:
-   (a) *Computational #P-hardness* via reduction to Shapley-value computation for weighted voting games (Deng & Papadimitriou 1994), since AND/OR DAGs represent monotone Boolean functions.
-   (b) *Information-theoretic underdetermination*: $\dim(\mathcal I(\mathcal V_{\text{obs}})) \le |\mathcal V_{\text{obs}}|$; when fewer observable nodes than edges exist, some directions in credence-space are fundamentally unresolvable from data.
+2. **Three independent intractability barriers** to exact per-edge attribution in general AND/OR DAGs with partial observability:  
+   (a) *Computational #P-hardness* via reduction to Shapley-value computation for weighted voting games (Deng & Papadimitriou 1994), since AND/OR DAGs represent monotone Boolean functions.  
+   (b) *Information-theoretic underdetermination*: $\dim(\mathcal I(\mathcal V_{\text{obs}})) \le |\mathcal V_{\text{obs}}|$; when fewer observable nodes than edges exist, some directions in credence-space are fundamentally unresolvable from data.  
    (c) *Posterior correlation barrier*: any factored (per-edge-independent) representation discards correlation introduced by failure at multi-parent nodes; the exact posterior complexity grows exponentially with observed failures.
 
 3. **Minimal design requirement: directional fidelity.** Any credit-assignment scheme need only satisfy $\mathbb E[(\text{signal} - p_{ij})(p_{ij} - \theta_{ij})] \le 0$ — the expected update points toward truth. Persistence is robust to approximation; a sloppy but directionally correct signal still produces bounded strategic mismatch.
@@ -64,19 +64,19 @@ The intractability side is settled across computer science and the observability
 
 ## 2. Key Anchor Papers Identified
 
-1. **Deng, X. & Papadimitriou, C. (1994).** *On the complexity of cooperative solution concepts.*
+1. **Deng, X. & Papadimitriou, C. (1994).** *On the complexity of cooperative solution concepts.*  
    *Significance:* The original #P-completeness proof for Shapley-value computation over weighted voting games; the external theorem AAT imports for barrier (a).
-2. **Arenas, M., Barceló, P., Bertossi, L. & Monet, M. (2020).** *The Tractability of SHAP-Score-Based Explanations for Classification over Deterministic and Decomposable Boolean Circuits.* AAAI.
+2. **Arenas, M., Barceló, P., Bertossi, L. & Monet, M. (2020).** *The Tractability of SHAP-Score-Based Explanations for Classification over Deterministic and Decomposable Boolean Circuits.* AAAI.  
    *Significance:* Clean tractability boundary: polynomial on deterministic-decomposable circuits, #P-hard otherwise. AAT's correlation-hierarchy escalation is the AAT-side mirror of this tractability boundary.
-3. **Eiter, T. & Lukasiewicz, T. (2001).** *Complexity results for structure-based causality.*
+3. **Eiter, T. & Lukasiewicz, T. (2001).** *Complexity results for structure-based causality.*  
    *Significance:* Foundational complexity bounds for structural-model attribution.
-4. **Balke, A. & Pearl, J. (1994).** *Counterfactual Probabilities: Computational Methods, Bounds and Applications.*
+4. **Balke, A. & Pearl, J. (1994).** *Counterfactual Probabilities: Computational Methods, Bounds and Applications.*  
    *Significance:* The cleanest precedent for the information-theoretic barrier — counterfactual queries bounded but not point-identified under hidden confounding.
-5. **Holmstrom, B. R. (1979).** *Moral Hazard and Observability.*
+5. **Holmstrom, B. R. (1979).** *Moral Hazard and Observability.*  
    *Significance:* The economic foundation for observability-by-design; AAT's OKR-as-strategy-DAG-instrumentation translation generalizes this principal-agent insight to internal cybernetic structure.
-6. **Yassine, A. A., Ploix, S. & Flaus, J. (2008).** *A Method for Sensor Placement Taking into Account Diagnosability Criteria.*
+6. **Yassine, A. A., Ploix, S. & Flaus, J. (2008).** *A Method for Sensor Placement Taking into Account Diagnosability Criteria.*  
    *Significance:* The closest formal match for the engineering-diagnosability side of observability-by-design.
-7. **Chan, H. & Darwiche, A. (2004).** *Sensitivity Analysis in Bayesian Networks: From Single to Multiple Parameters.*
+7. **Chan, H. & Darwiche, A. (2004).** *Sensitivity Analysis in Bayesian Networks: From Single to Multiple Parameters.*  
    *Significance:* The closest match for "plan-level guarantees can transfer without exact local attribution" — sensitivity-of-global-query under local-parameter changes.
 
 ---

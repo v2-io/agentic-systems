@@ -5,7 +5,7 @@
 >
 > **Integration update.** The previously-contested Instance 4 was resolved by the 2026-05-18 spike `spikes/.integrated/spike-identifiability-floor-instance4-resolution-2026-05-18.md` (math-gate cleared by `spikes/.routing-trail/SPIKE-VERIFY-471802/`, confirmer ≠ author) and integrated into canon. The slot conflated two distinct objects: **Object A** (universal-$C$ under non-(PI) norms) is *not* a floor — its external theorem (Čencov 1982) *forces* uniqueness of an escape rather than forbidding the task, and it is correctly classified as a downstream theorem of `#disc-additive-coordinate-forcing`'s (PI) commitment; **Object B** (architecturally-distinct, behaviorally-identical agents unidentifiable from on-policy summary data) is the genuine fourth floor, derived in `#der-architecture-noidentifiability` with dual anchor (Kalman 1963 / Ho-Kalman 1966 for the linear-Gaussian sub-scope, exact; Bareinboim et al. 2022 CHT-at-agent-as-SCM for the general case, robust qualitative). The Sylvester-mechanism rank-collapse subclass extends from $\{$Instance 1, Instance 2$\}$ to $\{$Instance 1, Instance 2, Instance 4$\}$ (Instance 4 applying Sylvester at one remove from the generating action). Instance 3 remains the projection/closure member.
 
-**Target Claim:**
+**Target Claim:**  
 AAT exhibits a recurring meta-pattern across four independently-derived results. The pattern has a five-step shape:
 
 1. **Setting** — name an inferential task (detect a structural property, identify a parameter, distinguish two model classes) under a specific information regime;
@@ -62,21 +62,20 @@ All three are textbook material. AAT's contribution is the *recognition* that th
 
 ## 2. Key Anchor Papers Identified
 
-1. **Pearl, J. (1995).** *Causal diagrams for empirical research.* (Biometrika 82:669) — DOI 10.1093/BIOMET/82.4.669
-   *Significance:* States the constructive-impossibility methodological posture for causal identification in almost the form AAT uses cross-family. The closest exact methodological precedent.
-2. **Bareinboim, Correa, Ibeling & Icard (2022).** *On Pearl's Hierarchy and the Foundations of Causal Inference.*
+1. **Pearl, J. (1995).** *Causal diagrams for empirical research.* (Biometrika 82:669) — DOI 10.1093/BIOMET/82.4.669 *Significance:* States the constructive-impossibility methodological posture for causal identification in almost the form AAT uses cross-family. The closest exact methodological precedent.
+2. **Bareinboim, Correa, Ibeling & Icard (2022).** *On Pearl's Hierarchy and the Foundations of Causal Inference.*  
    *Significance:* The Causal Hierarchy Theorem AAT imports for Instance 1. Provides the formal statement that L2 distinctions are not in general identifiable from L1 data.
-3. **Cramér, H. (1946).** *Mathematical Methods of Statistics.* Princeton University Press.
+3. **Cramér, H. (1946).** *Mathematical Methods of Statistics.* Princeton University Press.  
    *Significance:* The Fisher-information / Cramér-Rao bound used in Instance 2's refutation calculation.
-4. **Liberzon, D. (2003).** *Switching in Systems and Control*, Theorem 2.1; **Dayawansa & Martin (1999)** *IEEE Trans. Automat. Control* 44:751.
+4. **Liberzon, D. (2003).** *Switching in Systems and Control*, Theorem 2.1; **Dayawansa & Martin (1999)** *IEEE Trans. Automat. Control* 44:751.  
    *Significance:* Common-Lyapunov nonexistence for switched linear systems. The external theorem AAT imports for Instance 3's composite-contraction-from-marginals no-go.
-5. **Sylvester, J. J. (1852).** *Phil. Mag.* 4(23):138–142.
+5. **Sylvester, J. J. (1852).** *Phil. Mag.* 4(23):138–142.  
    *Significance:* The inertia-invariance theorem that supplies the rank-collapse floor's irreducibility mechanism. Recognized 2026-05-14 as the unifying mechanism behind Instances 1 and 2; extended 2026-05-21 (Instance 4 integration) to apply at one remove for the third rank-collapse member, where the generating action is state-space similarity rather than metric congruence but the escape-side reparameterization is identically congruence-preserves-inertia.
-6. **Kalman, R. E. (1963).** *J. SIAM Control* 1(2):152–192. **Ho, B. L. & Kalman, R. E. (1966).** *Regelungstechnik* 14:545–548. **Anderson, B. D. O. & Moore, J. B. (1979).** *Optimal Filtering*, Prentice-Hall, §10.4.
+6. **Kalman, R. E. (1963).** *J. SIAM Control* 1(2):152–192. **Ho, B. L. & Kalman, R. E. (1966).** *Regelungstechnik* 14:545–548. **Anderson, B. D. O. & Moore, J. B. (1979).** *Optimal Filtering*, Prentice-Hall, §10.4.  
    *Significance:* Canonical-form non-uniqueness for minimal state-space realizations sharing an innovation spectrum. The exact-in-sub-scope anchor for Instance 4's architecture-noidentifiability no-go.
-7. **Shpitser & Pearl (2008).** *Complete Identification Methods for the Causal Hierarchy.* JMLR 9:1941.
+7. **Shpitser & Pearl (2008).** *Complete Identification Methods for the Causal Hierarchy.* JMLR 9:1941.  
    *Significance:* The completeness side of the Pearl-Bareinboim methodological tradition.
-8. **Sahai & Mitter (2006).** *Anytime Capacity for Stabilization.*
+8. **Sahai & Mitter (2006).** *Anytime Capacity for Stabilization.*  
    *Significance:* Information-constrained-control analogue of the constructive-impossibility pattern (stabilization impossible below capacity threshold; richer feedback structure is the named escape).
 
 ---

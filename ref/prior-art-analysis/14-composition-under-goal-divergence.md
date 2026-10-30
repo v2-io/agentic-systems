@@ -3,7 +3,7 @@
 > [!note]
 > **Refreshed 2026-05-22 (Track E catalog refresh per `spikes/NEXT-UP.md` §2 Track E).** Supersedes the 2026-05-21 refresh's "prompt-segment tension on Class 2 vs Class 3" framing. The 2026-05-21 strategic-composition spike (`spikes/strategic-composition-class-3-attempt-2026-05-21/`) resolved the tension: *neither* Class 2 (Partial) *nor* Class 3 (Coupled) is the right composite-level architectural claim under goal-blind routing. The Cournot witness refutes the unconditional Class 3 claim (per the formal $\kappa^c$ criterion, the Cournot composite is Class 1 (Separated) at the composite level); the earlier Class 2 (Partial) framing conflated belief-content (sub-agent $M_t^{(i)}$ encoding goal-info about other agents — a normal POMDP feature) with processing-pathway coupling (the actual Class 1/3 boundary). What strategic composition *does* shift is the **dynamic regime** — from R0 contraction-regime under aligned objectives to R1 equilibrium-regime under sub-scope $\alpha'$ or R2 cyclic-distributional-regime under sub-scope $\beta'$ — per `#disc-dynamic-regime-axis`. The architectural-class change happens only under routing-structure goal-dependence or shared-substrate $G^c$-allocation per the axis-decomposed inheritance table in `#der-directed-separation`. The 2026-05-22 refresh: (a) replaces the Class 2 architectural-consequence paragraph + warning box with the dynamic-regime-axis treatment, (b) preserves the (SC-1)/(SC-2)/(SC-3) and $\alpha'/\beta'$ structural content (these were always correct and load-bearing), (c) updates the contribution list to reference `#disc-dynamic-regime-axis` (the eighth ladder in `#disc-separability-pattern`) and the broadened `#disc-identifiability-floor` Instance 3 (coupling-topology bit + escape (e) convergence-rate-class observation), (d) updates the methodology-inventions list to include `#disc-dynamic-regime-axis` as an AAT-native cross-cutting classifier, and (e) acknowledges the second-pass Undermind verdict on convergence-rate-class as passive classifier (`ref/Unidentifiability_and_rate_class_prior_art.md`).
 
-**Target Claim:**
+**Target Claim:**  
 When two or more AAT agents interact through a shared environment with **partially-opposing objectives** $\{O_t^{(i)}\}$, the composition-level question is *not* "does the trajectory contract to zero closure-defect?" but "does the coupled best-response dynamics admit an equilibrium and converge to it?" Contraction to shared truth is a $U_O = 1$ special case; strategic composition is the $U_O \lt 1$ companion regime in which the correct primitive is **fixed-point existence and stability**, not Lyapunov contraction on a shared state. AAT names three composition-level questions distinctively:
 - **(SC-1) Existence of equilibrium** — fixed-point question;
 - **(SC-2) Stability of equilibrium** — local-stability question;
@@ -26,8 +26,7 @@ The Undermind search reveals that analyzing the convergence of independent, self
 ### Pillar 1: Potential Games and Monotone Games
 AAT explicitly anchors its convergence sub-scopes on two foundational game theory results:
 - **Monderer and Shapley (1996)** formalized *Potential Games*, where the incentives of all players perfectly align with a single global scalar potential function. If a game has a potential function, gradient-based play naturally converges to a Nash equilibrium.
-- **Rosen (1965)** defined *Diagonally Strictly Concave* (monotone) games, proving that a unique Nash equilibrium exists and gradient play converges to it if the symmetric part of the joint Jacobian is negative-definite.
-AAT explicitly imports these as its "Sub-scope $\alpha'$" conditions.
+- **Rosen (1965)** defined *Diagonally Strictly Concave* (monotone) games, proving that a unique Nash equilibrium exists and gradient play converges to it if the symmetric part of the joint Jacobian is negative-definite. AAT explicitly imports these as its "Sub-scope $\alpha'$" conditions.
 
 ### Pillar 2: Uncoupled Dynamics and Impossibility
 AAT's claim that goal-divergent composition inherently breaks down (without specific structural guarantees like potential functions) is deeply precedented by impossibility theorems in game dynamics.
@@ -43,13 +42,13 @@ The control theory community has actively worked to solve these non-convergence 
 
 ## 2. Key Anchor Papers (Available in `/ref`)
 
-1. **Monderer, D., & Shapley, L. (1996). Potential Games.**
+1. **Monderer, D., & Shapley, L. (1996). Potential Games.**  
    *Significance:* The foundational paper proving that when player incentives align with a global potential, best-response dynamics converge; explicitly used by AAT to define its $\alpha'$ sub-scope.
-2. **Hart, S., & Mas-Colell, A. (2003). Uncoupled Dynamics Do Not Lead to Nash Equilibrium.**
+2. **Hart, S., & Mas-Colell, A. (2003). Uncoupled Dynamics Do Not Lead to Nash Equilibrium.**  
    *Significance:* Proves the fundamental impossibility of guaranteed convergence when agents act independently without knowing others' payoffs, validating AAT's focus on the breakdown of Class 1 composition under divergence.
-3. **Fox, M. J., & Shamma, J. (2012). Population games, stable games, and passivity.**
+3. **Fox, M. J., & Shamma, J. (2012). Population games, stable games, and passivity.**  
    *Significance:* Pioneers the use of control-theoretic passivity to analyze game theoretic convergence, strongly mirroring AAT's transfer of the sector-persistence condition to the equilibrium layer.
-4. **Arcak, M., & Martins, N. C. (2020). Dissipativity Tools for Convergence to Nash Equilibria in Population Games.**
+4. **Arcak, M., & Martins, N. C. (2020). Dissipativity Tools for Convergence to Nash Equilibria in Population Games.**  
    *Significance:* Uses dissipativity and contractivity to guarantee global asymptotic stability of Nash equilibria, directly paralleling AAT's use of Lyapunov persistence in strategic composition.
 
 ---

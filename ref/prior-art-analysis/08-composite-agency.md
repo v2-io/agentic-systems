@@ -3,7 +3,7 @@
 > [!note]
 > **Refreshed 2026-05-21.** The previous version captured the core moves well; the refresh integrates the Composite_agency_and_Brooks's_Law novelty memo, sharpens the four-route scope condition for composites (C-i)–(C-iv), pins the (P1)–(P3) admissibility conditions and the bridge lemma's role, makes the resolved $\varepsilon^\ast(N)$-scaling status explicit (Brooks's-Law collapse is now derivation-grade driven by $C_{\text{coord}}$, not by $\varepsilon^\ast$ growth), and adds memo-cited prior art (Buchholz, Tian-Kannan, Pappas-Simic, Reissig-Weber-Rungger, Rungger-Zamani, Li-Walsh-Littman, Wong-Brockett, Nair-Evans, Tatikonda-Mitter, Tanaka-Esfahani-Mitter, Gurvich-Van Mieghem, Bamieh-Jovanović-Mitra-Patterson, Szathmáry).
 
-**Target Claim:**
+**Target Claim:**  
 A group of agents forms a valid composite (macro) agent when the **scope condition** (`#scope-composite-agent`) is satisfied via at least one of four disjunctive routes: (C-i) shared-objective alignment, (C-ii) hierarchical derivation, (C-iii) mutual benefit, or (C-iv) strategic-equilibrium route (the new route added by `#deriv-strategic-composition` for partially-opposing-objective composites). Under scope-satisfaction, composition is parametrized by the **closure defect** $\varepsilon^\ast$ — the residual norm of failure-to-commute between micro-dynamics-then-coarse-grain and coarse-grain-then-macro-dynamics ((P1)–(P3) of `#form-composition-closure`). The (P1) condition is the *Lagrangian-dual* of a standard Information Bottleneck objective at $\beta(\epsilon_I)$ (per row 19).
 
 The bridge lemma in `#form-composition-closure` translates closure defect into a *macro-level disturbance term*. AAT then derives the **Composite Tempo Inequality**:
@@ -50,19 +50,19 @@ The literature has strong ancestry on each flank — abstraction validity, coord
 
 ## 2. Key Anchor Papers Identified
 
-1. **Pappas, G. J., & Simic, S. (2002).** *Consistent abstractions of affine control systems.* IEEE TAC 47:745.
+1. **Pappas, G. J., & Simic, S. (2002).** *Consistent abstractions of affine control systems.* IEEE TAC 47:745.  
    *Significance:* Control-theoretic foundation for defining macro-systems via surjective coarse-graining.
-2. **Rungger, M. & Zamani, M. (2015).** *Compositional Construction of Approximate Abstractions of Interconnected Control Systems.* IEEE TCNS 5:116.
+2. **Rungger, M. & Zamani, M. (2015).** *Compositional Construction of Approximate Abstractions of Interconnected Control Systems.* IEEE TCNS 5:116.  
    *Significance:* The closest formal ancestor of AAT's closure-defect quantitative-error machinery — compositional abstraction with explicit output-error bounds.
-3. **Janow, R. (2009).** *A Fundamental Limit on Productivity in Organizations: Collaborative Entropy Costs.*
+3. **Janow, R. (2009).** *A Fundamental Limit on Productivity in Organizations: Collaborative Entropy Costs.*  
    *Significance:* The closest single-paper precedent for coordination-overhead-as-productivity-cap, using Shannon entropy rather than persistence-bound cybernetic accounting.
-4. **Gurvich, I. & Van Mieghem, J. (2015).** *Collaboration and Multitasking in Networks: Architectures, Bottlenecks, and Capacity.*
+4. **Gurvich, I. & Van Mieghem, J. (2015).** *Collaboration and Multitasking in Networks: Architectures, Bottlenecks, and Capacity.*  
    *Significance:* Strongest nearby formal result on synchronization-induced bottleneck idleness as unavoidable coordination overhead.
-5. **Bamieh, B., Jovanović, M., Mitra, P. & Patterson, S. (2011).** *Coherence in Large-Scale Networks: Dimension-Dependent Limitations of Local Feedback.*
+5. **Bamieh, B., Jovanović, M., Mitra, P. & Patterson, S. (2011).** *Coherence in Large-Scale Networks: Dimension-Dependent Limitations of Local Feedback.*  
    *Significance:* Large networks can lose macro-coherence as they scale even with local regulation good — structural cousin to AAT's Brooks's-Law derivation.
-6. **Szathmáry, E. (2015).** *Toward major evolutionary transitions theory 2.0.* PNAS.
+6. **Szathmáry, E. (2015).** *Toward major evolutionary transitions theory 2.0.* PNAS.  
    *Significance:* The major-transitions framework providing substantial conceptual ancestry for the symbiogenesis branch.
-7. **Buchholz, P. (1994).** *Exact and ordinary lumpability in finite Markov chains.*
+7. **Buchholz, P. (1994).** *Exact and ordinary lumpability in finite Markov chains.*  
    *Significance:* The Markov-aggregation ancestor of the commute-with-coarse-graining criterion.
 
 ---

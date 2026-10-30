@@ -335,14 +335,11 @@ For actuated agents, epistrophe (the corrective phase of the cycle) expands into
 
 *[Derived (orient-cascade, from information dependency between mismatch types)]*
 
-1. **Reduce $\delta_{\text{epistemic}}$** — understand reality.
-   Update $M_t$ via #def-mismatch-signal and #emp-update-gain. Prerequisite for all purposeful evaluation, because $M_t$ appears in every subsequent formula.
+1. **Reduce $\delta_{\text{epistemic}}$** — understand reality. Update $M_t$ via #def-mismatch-signal and #emp-update-gain. Prerequisite for all purposeful evaluation, because $M_t$ appears in every subsequent formula.
 
-2. **Evaluate $\delta_{\text{sat}}$** — is the goal achievable?
-   Compute $A_O(M_t; \Pi, N_h)$ using the updated $M_t$. Requires adequate $M_t$ to assess attainability ( #def-satisfaction-gap).
+2. **Evaluate $\delta_{\text{sat}}$** — is the goal achievable? Compute $A_O(M_t; \Pi, N_h)$ using the updated $M_t$. Requires adequate $M_t$ to assess attainability ( #def-satisfaction-gap).
 
-3. **Evaluate $\delta_{\text{regret}}$** — is the policy suboptimal?
-   Compare $A_O$ to $V_O(M_t, \pi_{\text{current}}; N_h)$ ( #def-control-regret). This step applies regardless of $\delta_{\text{sat}}$'s sign — the 2×2 diagnostic ( #def-control-regret) requires both quantities to distinguish four cases:
+3. **Evaluate $\delta_{\text{regret}}$** — is the policy suboptimal? Compare $A_O$ to $V_O(M_t, \pi_{\text{current}}; N_h)$ ( #def-control-regret). This step applies regardless of $\delta_{\text{sat}}$'s sign — the 2×2 diagnostic ( #def-control-regret) requires both quantities to distinguish four cases:
    - $\delta_{\text{sat}} \leq 0$, $\delta_{\text{regret}} \approx 0$: **success** — goal attainable, policy near-optimal.
    - $\delta_{\text{sat}} \leq 0$, $\delta_{\text{regret}} \gg 0$: **strategy problem** — goal attainable, policy poor → revise $\Sigma_t$.
    - $\delta_{\text{sat}} \gt 0$, $\delta_{\text{regret}} \gg 0$: **both** — goal hard AND strategy weak → revise $\Sigma_t$ first (cheaper than revising $O_t$), then reassess $\delta_{\text{sat}}$.

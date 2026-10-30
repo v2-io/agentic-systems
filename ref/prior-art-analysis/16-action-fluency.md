@@ -1,7 +1,7 @@
 # Prior-Art Analysis: Action Fluency and Deliberation Cost
 
-**Target Claim:**
-AAT defines the threshold for "deliberation" vs "action fluency" as a strict mathematical tradeoff between the epistemic benefit of internal simulation (improving future action quality) and the "aporia" or mismatch drift accumulated during the deliberation pause. Deliberation is only justified when the marginal improvement in update gain outweighs the local mismatch drift rate. Consequently, in high-tempo or highly unstable environments (where the drift rate is high), the optimal duration of deliberation collapses to zero. The agent is forced into pure "implicit action" (System 1/fluency). 
+**Target Claim:**  
+AAT defines the threshold for "deliberation" vs "action fluency" as a strict mathematical tradeoff between the epistemic benefit of internal simulation (improving future action quality) and the "aporia" or mismatch drift accumulated during the deliberation pause. Deliberation is only justified when the marginal improvement in update gain outweighs the local mismatch drift rate. Consequently, in high-tempo or highly unstable environments (where the drift rate is high), the optimal duration of deliberation collapses to zero. The agent is forced into pure "implicit action" (System 1/fluency).
 
 AAT also extends this to a "Three-Way Resource Allocation" (Exploit, Explore, Deliberate), explicitly framing deliberation as *internal exploration* in model-space subject to diminishing returns due to finite model fidelity.
 
@@ -30,13 +30,13 @@ In computational neuroscience and reinforcement learning, the trade-off is frame
 
 ## 2. Key Anchor Papers (Available in `/ref`)
 
-1. **Boddy, M., & Dean, T. (1994). Deliberation Scheduling for Problem Solving in Time-Constrained Environments.**
+1. **Boddy, M., & Dean, T. (1994). Deliberation Scheduling for Problem Solving in Time-Constrained Environments.**  
    *Significance:* The seminal AI paper defining anytime algorithms and the formal trade-off between the expected value of continued planning and the cost of environmental deadlines.
-2. **Horvitz, E. (1989). Reflection and Action Under Scarce Resources: Theoretical Principles and Empirical Study.**
+2. **Horvitz, E. (1989). Reflection and Action Under Scarce Resources: Theoretical Principles and Empirical Study.**  
    *Significance:* Provides the decision-theoretic foundation for the "Expected Value of Computation," modeling the exact cost-benefit threshold for when to stop thinking and act.
-3. **Keramati, M., Dezfouli, A., & Piray, P. (2011). Speed/Accuracy Trade-Off between the Habitual and the Goal-Directed Processes.** (`ref/keramati_speed_accuracy_2011.pdf`)
+3. **Keramati, M., Dezfouli, A., & Piray, P. (2011). Speed/Accuracy Trade-Off between the Habitual and the Goal-Directed Processes.** (`ref/keramati_speed_accuracy_2011.pdf`)  
    *Significance:* Proves mathematically that the transition to habitual (fluent) action is driven by the temporal cost of model-based deliberation.
-4. **Pezzulo, G., et al. (2013). The Mixed Instrumental Controller: Using Value of Information to Combine Habitual Choice and Mental Simulation.**
+4. **Pezzulo, G., et al. (2013). The Mixed Instrumental Controller: Using Value of Information to Combine Habitual Choice and Mental Simulation.**  
    *Significance:* Frames deliberation explicitly as "mental simulation" evaluated by a Value of Information threshold, directly mapping to AAT's "internal exploration" claim.
 
 ---
@@ -45,7 +45,7 @@ In computational neuroscience and reinforcement learning, the trade-off is frame
 
 The core intuition that deliberation takes time, that the environment changes while thinking, and that fast/unstable environments favor habits over planning is completely established science. EVC (Horvitz), anytime algorithms (Boddy/Dean), and model-based vs. model-free arbitration (Daw, Keramati) cover the exact behavioral dynamics AAT describes.
 
-**AAT's Novel Contribution:**
+**AAT's Novel Contribution:**  
 AAT explicitly marks its overarching 3-way allocation (Exploit/Explore/Deliberate) as *discussion-grade* (synthetic/formulation-choice) and acknowledges its parallels to Active Inference and EVC.
 
 However, AAT provides **pure mathematical novelty** in how it derives the *Deliberation Threshold*. Unlike neuroeconomic models that define the cost of time as "forgone average reward," AAT derives the threshold entirely from internal structural dynamics: **mismatch drift ($\rho_{\text{delib}}$) and epistemic gain ($\Delta\eta^\ast$)**. AAT proves that deliberation must stop when the marginal improvement in *update gain* drops below the *mismatch drift rate*. By formulating the cost of time not as an economic opportunity cost, but as an entropic accumulation of "aporia" (model-reality divergence) during inaction, AAT anchors the System 1 / System 2 transition directly to the physics of its core tracking loop.

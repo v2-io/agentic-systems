@@ -3,7 +3,7 @@
 > [!note]
 > **Refreshed 2026-05-21.** The previous version captured the Pearl-and-AND/OR-planning ancestry but missed (a) the four-obstacle precision in the loop-as-Level-2-engine claim, (b) the Regime A/B/C identification-strength partition, (c) the three specific AAT-distinctive moves vs the active-inference / cybernetics shared-ancestry, (d) the correlation-hierarchy L0/L1/L1'/L2 escalation as the AAT response to causal insufficiency, and (e) the triple-depth-penalty breakdown into three specific axes. Restored.
 
-**Target Claim:**
+**Target Claim:**  
 AAT's strategy is an **explicit Causal Plan Graph** (DAG with probabilistic AND/OR semantics, regime-indexed identification strength for edges, and compact single-parameter edge credences) whose execution by an in-scope agent provides **interventional data** in the sense of Pearl's Level 2. The framework's contribution decomposes into four results:
 
 1. **Loop-interventional access (`#der-loop-interventional-access`, `status: exact`).** By the temporal-ordering postulate, an agent's action $a_t$ causally precedes the next observation $o_{t+1}$; the agent *chose* the action, the environment responded. The feedback loop therefore generates **intervention-produced data**. The result is *exact* as a logical consequence of temporal ordering and the feedback-loop structure; it is about *data availability*, not reasoning capacity.
@@ -63,17 +63,17 @@ The literature has strong ancestry on each flank. AAT's contribution is the bund
 
 ## 2. Key Anchor Papers Identified
 
-1. **Pearl, J. (1994).** *A Probabilistic Calculus of Actions.*
+1. **Pearl, J. (1994).** *A Probabilistic Calculus of Actions.*  
    *Significance:* The $do$-operator and the formal action-vs-observation distinction that AAT inherits.
-2. **Ortega, P. A. & Braun, D. A. (2008).** *A Minimum Relative Entropy Principle for Learning and Acting.*
+2. **Ortega, P. A. & Braun, D. A. (2008).** *A Minimum Relative Entropy Principle for Learning and Acting.*  
    *Significance:* The closest existing ancestor — agent's own past actions in an I/O stream must be treated as interventions. AAT's specific contribution beyond is the internal-strategy-DAG synthesis and the regime-indexed identification strength.
-3. **Bareinboim, E., Correa, J. D., Ibeling, D. & Icard, T. (2022).** *On Pearl's Hierarchy and the Foundations of Causal Inference.*
+3. **Bareinboim, E., Correa, J. D., Ibeling, D. & Icard, T. (2022).** *On Pearl's Hierarchy and the Foundations of Causal Inference.*  
    *Significance:* The Causal Hierarchy Theorem; AAT's distinctive move is to use the loop-interventional-access result as the escape from the L2-not-identifiable-from-L1 floor (Instance 1 of `#disc-identifiability-floor`).
-4. **Ghosh, P., Chakrabarti, P. & Dasgupta, P. (2021).** *Execution Ordering in AND/OR Graphs with Failure Probabilities.*
+4. **Ghosh, P., Chakrabarti, P. & Dasgupta, P. (2021).** *Execution Ordering in AND/OR Graphs with Failure Probabilities.*  
    *Significance:* AND/OR graph fragility cost analysis; structural ancestor for AAT's depth-cost bundling and for execution-order-dependent expected penalty.
-5. **Bryce, D. & Smith, D. E. (2006).** *Using Correlation to Compute Better Probability Estimates in Plan Graphs.*
+5. **Bryce, D. & Smith, D. E. (2006).** *Using Correlation to Compute Better Probability Estimates in Plan Graphs.*  
    *Significance:* Direct precursor to AAT's L0→L1 escalation — assuming independence between action preconditions overestimates success probability.
-6. **Vaurio, J. (2002).** *Treatment of general dependencies in system fault-tree and risk analysis.*
+6. **Vaurio, J. (2002).** *Treatment of general dependencies in system fault-tree and risk analysis.*  
    *Significance:* The reliability-engineering ancestor of common-cause augmentation; structurally analogous to AAT's L1 step.
 
 ---

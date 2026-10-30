@@ -3,7 +3,7 @@
 > [!note]
 > **Refreshed 2026-05-21.** The previous version captured the OODA-style tempo and effects-spiral arguments well; the refresh integrates the Adversarial_tempo_and_panic novelty memo, adds the **four-regime recipient-side classification** from `#der-interaction-channel-classification` that the prompt's "Regimes: informative, magnitude shock, structural shock, ambient erosion" referred to, adds the **resource-bounded destabilization** extension that closes the effects spiral via a different channel, and surfaces the signed-coupling unification (cooperation and adversariality as the same coupling law with opposite signs).
 
-**Target Claim:**
+**Target Claim:**  
 Adversarial interaction is the same coupling law as cooperation **with opposite signs on the coupling term**: cooperators reduce the recipient's effective disturbance, adversaries increase it. Building on this signed-coupling unification, AAT derives several theorem-grade results:
 
 1. **Destabilization thresholds (Models D and S).** Under deterministic drift coupling (Model D), agent $A$ destabilizes $B$ when $\mathcal T_A > (\alpha_B R_B - \rho_{B,\text{base}}) / \gamma_A$ — *exact* from `#result-sector-persistence-template` (Prop A.1). Under stochastic noise coupling (Model S), the threshold becomes $\mathcal T_A > (R_B \sqrt{2 \alpha_B} - \sigma_{B,\text{base}}) / \gamma_A$ — the same template applied with Model S's $R^\ast_S = \sigma \sqrt{n/(2 \alpha)}$ steady state. Both are *exact* under their respective coupling assumptions.
@@ -67,21 +67,21 @@ The literature has strong antecedents on each flank but lacks the unified signed
 
 ## 2. Key Anchor Papers Identified
 
-1. **Sahai, A. & Mitter, S. (2006).** *The Necessity and Sufficiency of Anytime Capacity for Stabilization.* IEEE TIT 52:3369.
+1. **Sahai, A. & Mitter, S. (2006).** *The Necessity and Sufficiency of Anytime Capacity for Stabilization.* IEEE TIT 52:3369.  
    *Significance:* The cleanest necessity-and-sufficiency theorem: stabilization requires channel support that outruns the plant's exponential divergence. Strong precedent for "adversarial/environmental tempo can outrun correction."
-2. **Hubbard, P., Kott, A. & Martin, M. (2016).** *Inducing and Mitigating a Self-Reinforcing Degradation in Decision-making Teams.*
+2. **Hubbard, P., Kott, A. & Martin, M. (2016).** *Inducing and Mitigating a Self-Reinforcing Degradation in Decision-making Teams.*  
    *Significance:* The strongest direct ancestor for thresholded self-reinforcing degradation (workload-accuracy cascade with soft threshold).
-3. **Wallace, R. (2020).** *How AI founders on adversarial landscapes of fog and friction.*
+3. **Wallace, R. (2020).** *How AI founders on adversarial landscapes of fog and friction.*  
    *Significance:* Asymptotic limit theorems formalizing punctuated failure under adversarial conditions; cousin to AAT's phase-transition-at-reserve-boundary.
-4. **Kalloniatis, A. et al. (2012, 2020).** *On the Boyd-Kuramoto Model.*
+4. **Kalloniatis, A. et al. (2012, 2020).** *On the Boyd-Kuramoto Model.*  
    *Significance:* Rigorous mathematical formalization of Boyd's OODA via coupled oscillators; modeling phase disruption from an agile adversary.
-5. **Shinar, J. & Glizer, V. Y. (1999, 2000).** Pursuit-evasion games with delayed information.
+5. **Shinar, J. & Glizer, V. Y. (1999, 2000).** Pursuit-evasion games with delayed information.  
    *Significance:* Information delay strictly bounds game value; foundational for "tempo deficit" mathematics.
-6. **Kuh, A., Petsche, T. & Rivest, R. (1997).** Upper bounds on generalization error under random drift.
+6. **Kuh, A., Petsche, T. & Rivest, R. (1997).** Upper bounds on generalization error under random drift.  
    *Significance:* The closest existing nontrivial-exponent result ($\gamma^{2/3}$ for conservative trackers); structurally adjacent to AAT's $b=2$ / $b=3/2$.
-7. **Khazraei et al. (2022).** *Stealthy attacks on perception-based control systems.*
+7. **Khazraei et al. (2022).** *Stealthy attacks on perception-based control systems.*  
    *Significance:* The cleanest formal statement linking estimation quality and attack vulnerability — adjacent to AAT's opacity-as-dual-of-observation-quality framing.
-8. **Bai et al. (2017).** *Data-Injection Attacks in Stochastic Control Systems: Detectability and Performance Tradeoffs.*
+8. **Bai et al. (2017).** *Data-Injection Attacks in Stochastic Control Systems: Detectability and Performance Tradeoffs.*  
    *Significance:* KL-based stealth definitions; detectability-performance tradeoff; nearest existing formal opacity-style result.
 
 ---
