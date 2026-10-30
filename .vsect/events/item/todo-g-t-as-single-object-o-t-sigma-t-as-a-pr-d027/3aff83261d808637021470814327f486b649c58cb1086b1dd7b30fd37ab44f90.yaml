@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 3aff83261d808637021470814327f486b649c58cb1086b1dd7b30fd37ab44f90
+at: 2026-10-30T21:53:23Z
+store: asf
+act: recheck
+about: item:todo-g-t-as-single-object-o-t-sigma-t-as-a-pr-d027
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 6f98aa45+dirty
+criterion: 'Read #def-strategy-dimension:13,106 and #deriv-decomposition-uniqueness:14-22 at HEAD; no segment treats G_t as a single object. The O-BP2 cross-reference is to PROPOSALS'' compression-hierarchy line (PROPOSALS.md:262), partly landed in #disc-compression-operations; not this item''s twin.'
+outcome: holds
+owner: B.2
+restated: 'Whether G_t is one object of which (O_t, Sigma_t) is a property, or a pair, is a question about the purposeful state''s typing, and B.2 is retyping Part II''s apparatus to what it is. At HEAD the split is stated as definitional (#def-strategy-dimension:13; CLAUDE.md''s Core Insight: ''a definitional split, not a timescale claim''), and #deriv-decomposition-uniqueness shows the coarser (M_t, G_t) split is underdetermined by directed separation alone. The deferral condition (''until more Class 2 logogenic work lands'') is not a trigger anyone owns; B.2 is.'

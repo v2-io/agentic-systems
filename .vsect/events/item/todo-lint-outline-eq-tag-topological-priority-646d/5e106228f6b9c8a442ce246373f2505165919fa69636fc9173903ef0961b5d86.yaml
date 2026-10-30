@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 5e106228f6b9c8a442ce246373f2505165919fa69636fc9173903ef0961b5d86
+at: 2026-10-30T21:53:23Z
+store: asf
+act: recheck
+about: item:todo-lint-outline-eq-tag-topological-priority-646d
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 6f98aa45+dirty
+criterion: 'Measured with a short script over 0*/src (frontmatter depends: vs eq-tag #slugs in bodies above Working Notes). lint-outline''s ordering check covers depends: only. The motivating F2 instance is resolved, as the line says; the general gap is not.'
+outcome: holds
+owner: I.4
+restated: 'The premise is false: no tool checks that a #slug cited in a body is declared in depends: (grep of bin/ for an undeclared-dependency check finds none; lint-outline checks that declared deps exist and are ordered). Measured at HEAD: of 43 eq-tag citations of existing segments (*[Derived (... #X ...)]* and kin, Working Notes excluded), 3 are not in depends: #result-persistence-condition cites #deriv-sector-condition and #result-per-dimension-persistence; #disc-composition-consistency cites #result-contraction-template. This matters for I.4: vsect binds a check to the depends: chain, so a check on #result-persistence-condition would not lapse when #deriv-sector-condition changes. The fix is a check (an eq-tag source must be in depends:) run where vsect check runs, plus the three declarations.'

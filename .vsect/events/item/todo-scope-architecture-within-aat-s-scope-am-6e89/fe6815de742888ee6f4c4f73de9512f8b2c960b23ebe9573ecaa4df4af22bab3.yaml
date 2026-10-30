@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: fe6815de742888ee6f4c4f73de9512f8b2c960b23ebe9573ecaa4df4af22bab3
+at: 2026-10-30T21:52:14Z
+store: asf
+act: recheck
+about: item:todo-scope-architecture-within-aat-s-scope-am-6e89
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 0dce6b67+dirty
+criterion: 'The ambiguity is gone at HEAD: every ''within AAT''s scope'' that bears a claim now names its scope segment (#deriv-recursive-update:27 and #result-mismatch-decomposition:26 cite #scope-adaptive-system by slug; 29 ''AAT''s scope'' uses checked by grep, the rest are prose about the framework, not scope membership). Scope itself is being re-founded under A.1 (#scope-adaptive-system with the typed predicate), whose findings (vsect open) track the precision questions that remain.'
+outcome: stale

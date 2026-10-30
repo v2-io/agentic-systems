@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 56a000ce4a770fc98955a2647a1c027dbb6d4fac14e7875405330960e6a3a867
+at: 2026-10-30T21:52:15Z
+store: asf
+act: recheck
+about: item:todo-fully-coupled-adversarial-dynamics-both-a68d
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 0dce6b67+dirty
+criterion: Read the two Working-Note and scope passages at HEAD; no segment carries a joint Lyapunov treatment (grep co-evolv / joint Lyapunov across 01-aat-core/src). No KR owns adversarial-dynamics strengthenings.
+outcome: holds
+owner: 'unowned: no KR'
+restated: 'Still open and stated as such in canon: #result-adversarial-tempo-advantage:94 treats each agent''s tempo as exogenous and names the joint Lyapunov over (delta_A, delta_B) as the open extension; #der-resource-bounded-destabilization:78 says the symmetric joint-best-response problem stays deferred to #deriv-strategic-composition. The decoupled result is a worst case for the slower agent only under exogenous tempo; once the faster agent spends capacity on generating disturbance, its own reserve falls, and whether the squared advantage survives is the open question.'

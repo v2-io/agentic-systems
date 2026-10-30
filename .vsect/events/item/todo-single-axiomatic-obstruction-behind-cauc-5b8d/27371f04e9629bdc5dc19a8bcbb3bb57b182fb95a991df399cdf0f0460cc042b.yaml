@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 27371f04e9629bdc5dc19a8bcbb3bb57b182fb95a991df399cdf0f0460cc042b
+at: 2026-10-30T21:51:52Z
+store: asf
+act: recheck
+about: item:todo-single-axiomatic-obstruction-behind-cauc-5b8d
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 2fb2f5af+dirty
+criterion: 'Source: spikes/.integrated/spike-l1-evidence-axiom.md O2 (line 548) and its §2.3-§3.3; canon at #deriv-edge-update-natural-parameter:139 and #disc-identifiability-floor:65,163 (Sylvester mechanism, which explains invariance of the rank deficiency, not the additivity failure). No commit has addressed O2. No KR owns meta-pattern strengthenings outside C.2.'
+outcome: holds
+owner: 'unowned: no KR'
+restated: 'The question is whether the two failures at the unobservable-common-cause boundary are one obstruction: the Cauchy-FE additivity failure at the update layer (#deriv-edge-update-natural-parameter:139) and the Cramér-Rao Fisher-rank deficiency at the observation layer (#disc-identifiability-floor Instance 2). Canon currently says the two routes ''converge on the same scope boundary''. That is true of this DAG, but my guess is they come apart in general, so there is no single axiom. Additivity of the update in some fixed coordinate needs a fixed-dimension sufficient statistic, which by Pitman-Koopman-Darmois means an exponential family. The rank deficiency is non-identifiability. A two-component mixture with known components and unknown weight is identifiable (Fisher information positive) yet has no fixed-dimension sufficient statistic, so additivity fails without a Cramér-Rao floor. If that witness holds, the honest canon sentence is that they coincide when the latent is a non-identifiable common cause, and the item becomes a characterization of when they coincide. My inference; the witness needs checking.'

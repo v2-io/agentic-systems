@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: f4ece6053586bd4166aeec313d2c3284c21fc1278f419a3a111562df78d1e48d
+at: 2026-10-30T21:52:14Z
+store: asf
+act: recheck
+about: item:todo-strategic-calibration-aggregation-l-2-no-0917
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 0dce6b67+dirty
+criterion: 'The labeling the item asked for is in the segment. #def-strategic-calibration''s Epistemic Status (line 42) is ''Discussion-grade'' and says the L^2 aggregation with importance weights is ''a reasonable first pass, not a derived result'' and the weighting ''sensible but ungrounded''. It is honestly marked; deriving the norm is not owed.'
+outcome: landed

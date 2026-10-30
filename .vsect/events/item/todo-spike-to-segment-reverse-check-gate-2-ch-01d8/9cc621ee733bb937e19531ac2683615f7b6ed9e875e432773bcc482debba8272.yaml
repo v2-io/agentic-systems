@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 9cc621ee733bb937e19531ac2683615f7b6ed9e875e432773bcc482debba8272
+at: 2026-10-30T21:53:23Z
+store: asf
+act: recheck
+about: item:todo-spike-to-segment-reverse-check-gate-2-ch-01d8
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 6f98aa45+dirty
+criterion: 'A standing convention, not work owed: format.sop.md:259 (FORMAT.md is its symlink) already carries the Gate 2 question ''what did the spike establish that the segment does not say?''. The line asks to ''verify presence on each spike-promotion landing'', which is a principle for whoever lands a spike.'
+outcome: not-an-item

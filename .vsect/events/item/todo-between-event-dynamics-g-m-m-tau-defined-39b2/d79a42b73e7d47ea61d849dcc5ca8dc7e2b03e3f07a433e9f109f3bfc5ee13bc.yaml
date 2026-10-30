@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: d79a42b73e7d47ea61d849dcc5ca8dc7e2b03e3f07a433e9f109f3bfc5ee13bc
+at: 2026-10-30T21:52:15Z
+store: asf
+act: recheck
+about: item:todo-between-event-dynamics-g-m-m-tau-defined-39b2
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 0dce6b67+dirty
+criterion: 'No longer unreferenced: #form-consolidation-dynamics (lines 20, 32) is built as a regime of the between-event dynamics g_M of #deriv-recursive-update, and 04-eli-core''s #norm-interiority-default:23 uses g_M as the agent''s continuous internal mode. Both landed after this line was written (2026-03 / 04-28 reformat).'
+outcome: landed

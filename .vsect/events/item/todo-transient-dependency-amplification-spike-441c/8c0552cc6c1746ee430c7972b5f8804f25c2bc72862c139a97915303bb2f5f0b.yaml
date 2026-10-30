@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 8c0552cc6c1746ee430c7972b5f8804f25c2bc72862c139a97915303bb2f5f0b
+at: 2026-10-30T21:53:39Z
+store: asf
+act: recheck
+about: item:todo-transient-dependency-amplification-spike-441c
+actor:
+  name: Claude Opus 5.5 (item rechecker, t1-todo)
+  role: rechecker
+normalizer: vsect-norm/0
+at-commit: 7cbfbcc6+dirty
+criterion: 'Read the spike''s §§1-2 headings and §§8-9 at HEAD. No 02-tst-core or 03-llm-core segment carries it (grep finds only the WN pointer in #hyp-exponential-cognitive-load:91). Nothing has changed since 2026-04-25.'
+outcome: holds
+owner: G.2
+restated: 'Misframed as ''promotion blocked on seven obligations''. The spike (spikes/spike-transient-dependency-amplification.md, 2026-04-25, still at top level) states exact results within its affine feature-local sub-scope: Lemma 1 (supremum of uniformly Lipschitz policy values is Lipschitz), Corollary 1 (the linearized Jacobian-product bound), Proposition 1 (the branching transient-growth construction), Lemma 2 (checkpoint product and recurrence bounds), and the singular-subspace coverage formula. Under the project''s own rule (working theory at honest tier belongs in canon; strengthening is promotion, not admission), these are stranded derivations. The seven ''obligations'' are the open edges a conditional-tier segment would name in its Epistemic Status, not preconditions for its existence. Land the sub-scope results as a conditional segment (02-tst-core or 03-llm-core); keep the obligations as its named gaps. #hyp-exponential-cognitive-load:91 already points readers at the spike, so the canon-to-spike reference is live.'
