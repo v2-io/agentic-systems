@@ -49,7 +49,7 @@ One concrete-or-representational figure per chapter preamble, sized to scaffold 
 | Part I Ch.1 (Coupled Loop) | A thermostat or commander as a feedback loop, with sensory and action channels labeled. |
 | Part I Ch.2 (Reality Model) | History → state compression: a long journal compressed into a one-line summary, with sufficiency annotated. |
 | Part I Ch.3 (Cycle in Motion) | Observe-update-act timeline with one event drawn, mismatch arrow shown. |
-| Part I Ch.4 (Persistence) | The bathtub variant: faucet (drift) vs. drain (correction), overflow at $\rho > \alpha R$. Tier-1 anchor instantiated for this chapter; can re-use. |
+| Part I Ch.4 (Persistence) | The bathtub variant: faucet (drift) vs. drain (correction), overflow at $\rho \gt \alpha R$. Tier-1 anchor instantiated for this chapter; can re-use. |
 | Part II Ch.1 (Lift to Purpose) | Agent-spectrum 2×2 with concrete agents in each cell (thermostat / PID / Kalman+LQR / LLM tool-user). |
 | Part II Ch.2 (Causal Access) | Pearl's three-rung ladder with one shared example interpreted at each rung. |
 | Part II Ch.3 (Strategy Structure) | Tier-1 strategy DAG instantiated for this chapter. |
@@ -140,7 +140,7 @@ These are different from the existing `dep-graph-*.svg` files. The dep-graphs sh
 5. **Structural sketch.** Bathtub silhouette; faucet labeled "drift $\rho$"; drain labeled "correction $\alpha\|\delta\|$"; water-level marked $\|\delta\|$; rim line at $R$.
 6. **Signaling.** Color: drift and correction in contrasting hues, persisting through all three panels. Arrows on faucet (in) and drain (out) sized roughly to their rates. The rim-line in Stage 2 and 3 carries a separate signal color.
 7. **Minimalism audit.** Strip any tile/grout/decoration on the bathtub. Strip shadows. Strip background. Keep only: silhouette, faucet, drain, water level, rim line, labels.
-8. **Progressive disclosure.** Three panels left-to-right; reader meets concrete first, abstract last; the abstract panel's inequality $\alpha > \rho/R$ is the conclusion the first two panels were preparing the reader to *see*.
+8. **Progressive disclosure.** Three panels left-to-right; reader meets concrete first, abstract last; the abstract panel's inequality $\alpha \gt \rho/R$ is the conclusion the first two panels were preparing the reader to *see*.
 
 Pass: yes, by design. Investment: ~half-day of iteration to camera-ready, plus prose alignment with surrounding preamble.
 

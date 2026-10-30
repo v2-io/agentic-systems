@@ -47,7 +47,7 @@ Fixed points: $\lambda^* = \lambda^{*K_c}$. Solutions:
 - $\lambda^* = 0$ (memoryless agent: every step overwrites with the latest observation)
 - $\lambda^* = 1$ (frozen agent: never updates)
 
-For $K_c > 1$ and any $\lambda \in (0, 1)$, $\lambda^{K_c} < \lambda$ — the flow is monotonically decreasing. Iterating drives $\lambda$ toward $0$.
+For $K_c \gt 1$ and any $\lambda \in (0, 1)$, $\lambda^{K_c} \lt \lambda$ — the flow is monotonically decreasing. Iterating drives $\lambda$ toward $0$.
 
 *[Derived (homogeneous-flow-attractor)]* The unique attracting fixed point of the iterated $K_c$-flow on $\lambda \in (0, 1)$ is $\lambda^* = 0$ — the memoryless / saturated-gain limit.
 
@@ -57,7 +57,7 @@ This is a genuinely important refinement of the brief's framing. Two things are 
 
 (a) **The AAT form is preserved at every level.** Level-1 is Kalman-shaped, level-2 is Kalman-shaped, every level is Kalman-shaped. (A1)–(A4) hold by construction at every scale. This is structural-RG fixed-point: the *shape* survives.
 
-(b) **The parameter flow has only a degenerate attractor.** The "running" $\lambda$ flows to $0$ under iterated coarse-graining. There is no non-trivial scale-invariant fixed point — no AAT-Kalman that *reproduces itself* under $K_c > 1$ coarse-graining with a finite, non-degenerate $\lambda$.
+(b) **The parameter flow has only a degenerate attractor.** The "running" $\lambda$ flows to $0$ under iterated coarse-graining. There is no non-trivial scale-invariant fixed point — no AAT-Kalman that *reproduces itself* under $K_c \gt 1$ coarse-graining with a finite, non-degenerate $\lambda$.
 
 In physics RG, (a) is the form-preservation that makes RG well-defined, and (b) is the parameter flow whose fixed points are critical points (scale-invariant systems at phase transitions). What the linear-Kalman case shows is: AAT has the structural fixed point of (a), but there are no critical-point fixed points in the (b) sense — at least within this linear-Gaussian sub-class.
 
@@ -95,7 +95,7 @@ I lean toward the first — the structural framing is strong and useful even wit
 If we accept Reading 2 as the conservative-but-real result:
 
 - **RG-1 (revised)**: State (A1)–(A4) explicitly as form-preservation conditions. New segment / appendix in `#form-composition-closure` titled something like "Composition-closure as scale-invariance of the AAT form." Cite Schwab et al. 2017 for the structural-RG-correspondence concept. **Drop language about "fixed points" and "RG flow"; replace with "form preservation under coarse-graining" and "parameter flow."**
-- **RG-2 (preserved)**: (O, Σ) recursion as another instance of the same form-preservation principle, applied to the strategy layer rather than the composition layer. The strategy DAG decomposes into sub-strategies, each of which is itself a strategy DAG — same form, smaller scale. This is genuinely a self-similarity claim and is independent of whether the parameter flow has critical points.
+- **RG-2 (preserved)**: $(O,\Sigma)$ recursion as another instance of the same form-preservation principle, applied to the strategy layer rather than the composition layer. The strategy DAG decomposes into sub-strategies, each of which is itself a strategy DAG — same form, smaller scale. This is genuinely a self-similarity claim and is independent of whether the parameter flow has critical points.
 - **RG-3 (weakened)**: Directed-separation classes as form-preservation classes — Class 1 preserves $M \perp O$ at macro, Class 3 doesn't. This is honest and useful. The "fixed-point types" language was overreach; the right language is "agent classes for which AAT-shape preservation under $\Lambda$ does or does not hold."
 - **RG-4 (drop)**: The strong-form RG flow of the persistence condition does not get the critical-point interpretation. The N-level template-stability result (original Spike B) remains valid as nested template instantiation; it does not require RG framing. Promote `#der-multi-timescale-stability` via the template-stacking argument, not via RG.
 
@@ -106,7 +106,7 @@ If we accept Reading 2 as the conservative-but-real result:
 **Honest disclosure**: I have *not* tested richer agent classes. The linear-Kalman case is the simplest possible test, and its negative result for critical-RG fixed points doesn't preclude their existence elsewhere. But making strong claims about "AAT as RG" based only on form-preservation is honest scope; making strong claims about non-trivial scale-invariance would be overclaim.
 
 **What I would still want before fully closing this thread**:
-1. The (O, Σ) recursion check (RG-0c) — is the fractal structure on the strategy side genuine?
+1. The $(O,\Sigma)$ recursion check (RG-0c) — is the fractal structure on the strategy side genuine?
 2. Schwab et al. 2017 + IB-as-RG prior art — to know whether the structural framing is novel or already done. (Pending from sub-agent.)
 3. A check that the heterogeneous iterated case doesn't hide a non-trivial fixed point. Quick sketch: if $\mu_A \neq \mu_B$, then $\mu^{(2)} = (\mu_A^{K_c'} + \mu_B^{K_c'})/2$, which is bounded below by $\min(\mu_A, \mu_B)^{K_c'}$ and above by $\max(\mu_A, \mu_B)^{K_c'}$. Iterating still drives toward $\lambda \to 0$. Heterogeneity at one level dies out at the next. So no, no hidden fixed points.
 

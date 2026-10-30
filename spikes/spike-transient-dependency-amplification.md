@@ -42,7 +42,7 @@ The operator $J_{\pi,k}$ is not identical to TST's empirical co-change matrix or
 
 $$A_O(M)=\sup_{\pi\in\Pi_F}V_\pi(M).$$
 
-If $L_\ast=\sup_{\pi\in\Pi_F}L_\pi<\infty$, then $A_O$ is locally Lipschitz on $U$ with constant at most $L_\ast$.
+If $L_\ast=\sup_{\pi\in\Pi_F}L_\pi\lt \infty$, then $A_O$ is locally Lipschitz on $U$ with constant at most $L_\ast$.
 
 **Proof sketch.** For any $M,M'\in U$,
 
@@ -89,7 +89,7 @@ $$\left\lVert J_{\pi,d-1}\cdots J_{\pi,0}\right\rVert.$$
 
 $$\lVert G_d\rVert = |g|^d\sqrt{B^d}=(|g|\sqrt B)^d.$$
 
-The corresponding block-DAG operator is nilpotent, but its finite-horizon root-to-depth-$d$ gain grows exponentially whenever $|g|\sqrt B>1$.
+The corresponding block-DAG operator is nilpotent, but its finite-horizon root-to-depth-$d$ gain grows exponentially whenever $|g|\sqrt B\gt 1$.
 
 **Proof.** $G_dx$ is a vector of length $B^d$ whose every coordinate equals $g^dx$. Therefore
 
@@ -125,7 +125,7 @@ then the homogeneous error after $m$ blocks satisfies
 
 $$\lVert\Delta z_{t_m}\rVert\leq\left(\prod_{b=1}^m q_b\right)\lVert\Delta z_0\rVert.$$
 
-With fresh checkpoint interpretation errors bounded by $\lVert\epsilon_b\rVert\leq \bar\epsilon$, and uniform $q_b\leq q<1$,
+With fresh checkpoint interpretation errors bounded by $\lVert\epsilon_b\rVert\leq \bar\epsilon$, and uniform $q_b\leq q\lt 1$,
 
 $$\lVert\Delta z_{t_m}\rVert\leq q^m\lVert\Delta z_0\rVert+\frac{1-q^m}{1-q}\bar\epsilon.$$
 
@@ -141,7 +141,7 @@ Let an unchecked block have singular value decomposition
 
 $$G=U\Sigma V^\top.$$
 
-The dangerous output directions are the left singular vectors associated with large singular values. An idealized checkpoint that contracts the top-$r$ amplified output subspace by factor $\eta<1$ has the form
+The dangerous output directions are the left singular vectors associated with large singular values. An idealized checkpoint that contracts the top-$r$ amplified output subspace by factor $\eta\lt 1$ has the form
 
 $$P_{\eta,r}=\eta U_rU_r^\top + (I-U_rU_r^\top).$$
 
@@ -151,7 +151,7 @@ $$\lVert P_{\eta,r}G\rVert=\max(\eta\sigma_1,\sigma_{r+1}).$$
 
 This gives a precise coverage condition: a checkpoint bounds the block only if it observes and corrects the singular directions that dominate the unchecked gain. A test suite that misses the high-gain failure mode may have little effect on the relevant $L_A$ bound even if it is useful elsewhere.
 
-**Corollary 2 (Checkpoint-frequency threshold for the branching model).** In Proposition 1, let $\Gamma=|g|\sqrt B>1$. Suppose a checkpoint is inserted every $h$ layers and contracts the amplified subspace by factor $\eta$. Each block has gain at most
+**Corollary 2 (Checkpoint-frequency threshold for the branching model).** In Proposition 1, let $\Gamma=|g|\sqrt B\gt 1$. Suppose a checkpoint is inserted every $h$ layers and contracts the amplified subspace by factor $\eta$. Each block has gain at most
 
 $$q=\eta\Gamma^h.$$
 

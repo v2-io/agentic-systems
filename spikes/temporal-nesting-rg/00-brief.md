@@ -15,7 +15,7 @@ Initial corpus survey (Explore agent, 2026-05-09) found:
 - **Implicit treatment exists.** `#der-temporal-nesting` (`robust-qualitative`) gives the 5-level table (Reactive → Parametric → Consolidation → Structural → Architectural) and the convergence constraint $\nu_{n+1} \ll \nu_n$, citing Tikhonov 1952.
 - **The formal mechanism is `K_c`.** `#form-composition-closure` carries a timescale ratio $K_c$ (micro-steps per macro-step). The `$K_c \gg 1$` regime is exactly nested-loop structure: the composite "lives at a strictly slower timescale than its sub-agents."
 - **Cost-side machinery exists.** `#der-tempo-composition` (`sketch`) gives Brooks's Law in tempo units: $C_\text{coord} \geq \varepsilon^* \nu_c / \|\delta_\text{critical}\|$.
-- **The strategy DAG implicitly nests.** Evidence-starvation (`#def-strategy-dag`, `#deriv-edge-credence-dynamics` Props B.2–B.3) gives deeper edges effective rate $\nu_k^\text{eff} = \nu_\text{base} \prod_{j<k}\theta_j$ — a natural per-level rate hierarchy that has never been formally connected to `#der-temporal-nesting`'s table.
+- **The strategy DAG implicitly nests.** Evidence-starvation (`#def-strategy-dag`, `#deriv-edge-credence-dynamics` Props B.2–B.3) gives deeper edges effective rate $\nu_k^\text{eff} = \nu_\text{base} \prod_{j\lt k}\theta_j$ — a natural per-level rate hierarchy that has never been formally connected to `#der-temporal-nesting`'s table.
 
 **What's missing.** Three things are *asserted, not derived*:
 
@@ -35,8 +35,8 @@ Mapping:
 | Form-preservation requirement | (A1)–(A4) admissibility |
 | Distance from fixed point | $\varepsilon^*$ (closure defect) |
 | Trajectory error bound near fixed point | Bridge-lemma $\lim\|e_m\| \leq \varepsilon^* \nu_c / \alpha_c$ |
-| Scale-invariant quantity | Persistence condition $\alpha R > \rho$ (template form) |
-| Recursive structure on itself | (O, Σ) decomposition: each Σ-node is a sub-objective with sub-strategy, recursing to action leaves |
+| Scale-invariant quantity | Persistence condition $\alpha R \gt \rho$ (template form) |
+| Recursive structure on itself | $(O,\Sigma)$ decomposition: each $\Sigma$-node is a sub-objective with sub-strategy, recursing to action leaves |
 | RG flow direction | $\varepsilon^*(K_c)$ as $K_c$ varies |
 | Order parameter | Directed-separation classes (modular / partial / merged) |
 | Discrete-RG fixed point | Hafez meta-machine ($\varepsilon^* = 0$ exactly) |
@@ -46,7 +46,7 @@ Mapping:
 - Temporal nesting (along time axis) and composite formation (across agents) become *the same operation viewed from different axes*. The 5-level table is RG depth; N-agent composition is RG width.
 - The persistence template's "applies at every level" claim becomes scale-invariance of the AAT form.
 - The closure-defect bridge lemma becomes "trajectories track macro-reality near the fixed point."
-- (O, Σ) becomes genuinely fractal: each strategy node carries a sub-objective, and the sub-DAG is a strategy for that sub-objective, all the way down to action leaves.
+- $(O,\Sigma)$ becomes genuinely fractal: each strategy node carries a sub-objective, and the sub-DAG is a strategy for that sub-objective, all the way down to action leaves.
 - Directed separation's three classes become RG fixed-point types (stable / marginal / unstable under coarse-graining).
 - Brooks's Law becomes flow-away-from-fixed-point along an unstable direction in parameter space.
 
@@ -58,7 +58,7 @@ Specific concerns:
 
 - **Stationarity.** Classical RG presumes stationary or critical systems. AAT's purposeful agents are non-stationary by design. The fixed point would need to be *structural* (form preserved) rather than *dynamical* (states equilibrate). This is closer to Wilson-Fisher's structural fixed point than to thermodynamic RG, but I haven't worked out whether the distinction matters here.
 - **Prior art unverified.** (P1) is already IB Lagrangian-dual, and IB has known (contested) connections to RG (Tishby et al.; Schwab et al. 2017 *PNAS* "deep learning and renormalization"). FEP has been compared to RG (Friston). Some of this content may already be in the literature. **Need verification before novelty claims.**
-- **(O, Σ) recursion not yet checked against `#def-strategy-dimension`.** I think internal Σ-nodes legitimately carry sub-objectives in the formal sense, but FORMAT.md's strict definitions might or might not bear this out. Worth checking before formalizing.
+- **$(O,\Sigma)$ recursion not yet checked against `#def-strategy-dimension`.** I think internal $\Sigma$-nodes legitimately carry sub-objectives in the formal sense, but FORMAT.md's strict definitions might or might not bear this out. Worth checking before formalizing.
 - **The parameter map needs to be a flow.** "RG flow" requires a well-defined transformation $(\alpha, R, \rho, \nu, \varepsilon^*)_\text{micro} \to$ macro version. We have inequalities (weakest-link bounds, persistence conditions) but no explicit derivation that the parameters form a flow.
 
 ## 4. The load-bearing test: RG-0
@@ -75,13 +75,13 @@ If both hold, the RG framing makes a non-trivial empirical prediction about clos
 - Homogeneous gains, steady state: $\varepsilon^* = 0$ at all $\rho_\text{corr}$.
 - Heterogeneous gains, steady state: $\varepsilon_x^2 = (\Delta K/2)^2 [S_- - C_{+-}^2/S_+]$ — non-zero, depends only on structural parameters.
 
-These two endpoints are *exactly* the predicted RG fixed-point structure: homogeneous = at the fixed point ($\varepsilon^* = 0$); heterogeneous = relevant operator deformation ($\varepsilon^* > 0$). RG-0a extends to $K_c > 1$ to test whether the flow has the predicted structure between these.
+These two endpoints are *exactly* the predicted RG fixed-point structure: homogeneous = at the fixed point ($\varepsilon^* = 0$); heterogeneous = relevant operator deformation ($\varepsilon^* \gt 0$). RG-0a extends to $K_c \gt 1$ to test whether the flow has the predicted structure between these.
 
 ## 5. Spike ladder
 
 ### RG-0 (this spike track)
 
-**RG-0a — Two-Kalman closure defect under timescale ratio $K_c > 1$.** Derive $\varepsilon^*(K_c)$ in closed form for:
+**RG-0a — Two-Kalman closure defect under timescale ratio $K_c \gt 1$.** Derive $\varepsilon^*(K_c)$ in closed form for:
 - Case A (homogeneous, transient initial $P_0$): predicted exponential decay.
 - Case B (heterogeneous gains $\Delta K \neq 0$, steady state): predicted $K_c$-invariance.
 
@@ -91,7 +91,7 @@ Document at `01-rg-0a-two-kalman-Kc-extension.md`. **This is the load-bearing ma
 
 Document at `02-prior-art-rg-ib-fep.md`.
 
-**RG-0c — (O, Σ) recursion check (only if RG-0a positive).** Verify against `#def-strategy-dimension` and `#form-objective-functional` that internal Σ-nodes legitimately carry sub-objectives in the formal sense. If yes, `#def-strategy-dag` becomes recursive AAT by construction.
+**RG-0c — $(O,\Sigma)$ recursion check (only if RG-0a positive).** Verify against `#def-strategy-dimension` and `#form-objective-functional` that internal $\Sigma$-nodes legitimately carry sub-objectives in the formal sense. If yes, `#def-strategy-dag` becomes recursive AAT by construction.
 
 Document at `03-rg-0c-strategy-recursion.md`.
 
@@ -100,7 +100,7 @@ Document at `03-rg-0c-strategy-recursion.md`.
 ### RG-1..4 (downstream, gated on RG-0 verdict)
 
 - **RG-1**: State (A1)–(A4) explicitly as RG fixed-point conditions. Promote `#disc-composition-consistency` from postulate-level to derived under the fixed-point framing.
-- **RG-2**: (O, Σ) recursion as the formal expression of self-similarity. New segment `#deriv-strategy-recursion` or appendix in `#def-strategy-dag`. Connects to `#der-temporal-nesting` via the depth-rate hierarchy.
+- **RG-2**: $(O,\Sigma)$ recursion as the formal expression of self-similarity. New segment `#deriv-strategy-recursion` or appendix in `#def-strategy-dag`. Connects to `#der-temporal-nesting` via the depth-rate hierarchy.
 - **RG-3**: Directed-separation classes as RG fixed-point types. Strengthens `#hyp-directed-separation-under-composition` by giving it the RG framing.
 - **RG-4**: RG flow of the persistence condition. Subsumes original Spike B (N-level stability) by deriving `#der-multi-timescale-stability` as RG-flow stability.
 
@@ -109,7 +109,7 @@ Document at `03-rg-0c-strategy-recursion.md`.
 Promote the framing if:
 - (a) RG-0a confirms the irrelevant/relevant operator classification on two-Kalman.
 - (b) Prior-art search shows AAT-specific content beyond known IB-as-RG / FEP-as-RG analogies (we may *cite* prior work generously per AAT's prior-art-integration discipline; what matters is whether the agent-architecture specialization adds anything).
-- (c) The (O, Σ) recursion holds against the formal definitions.
+- (c) The $(O,\Sigma)$ recursion holds against the formal definitions.
 
 Drop the framing (and write only the simpler "nested cycles via template instantiation" result) if:
 - $\varepsilon^*(K_c)$ does not show the predicted irrelevant/relevant separation.
@@ -141,5 +141,5 @@ These were the candidates *before* the RG reframe surfaced. They remain valid as
 - `00-brief.md` — this file
 - `01-rg-0a-two-kalman-Kc-extension.md` — load-bearing math (in progress)
 - `02-prior-art-rg-ib-fep.md` — delegated prior-art search (pending)
-- `03-rg-0c-strategy-recursion.md` — (O, Σ) recursion check (gated on RG-0a)
+- `03-rg-0c-strategy-recursion.md` — $(O,\Sigma)$ recursion check (gated on RG-0a)
 - `99-verdict.md` — synthesis and decision (final)

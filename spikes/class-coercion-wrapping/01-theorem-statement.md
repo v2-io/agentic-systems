@@ -22,26 +22,31 @@ $$X_{W, m+1} = (\, M_{W, m+1},\ G_{W, m+1}\, )$$
 with components defined as follows.
 
 **Belief-side query selector** $q_M$:
+
 $$q_M : \mathcal{X}_M \times \mathcal{O}_W \to \mathcal{Q}_A$$
 
 The wrapper chooses what to ask the component based on its current belief and the current observation. **No $G_W$ argument** — this is the structural commitment.
 
 **Strategy-side query selector** $q_G$:
+
 $$q_G : \mathcal{X}_M \times \mathcal{X}_G \to \mathcal{Q}_A$$
 
 For strategy updates, queries may depend on $G_W$ (this is allowed by (A1)).
 
 **Belief-update map** $f_M$:
+
 $$f_M : \mathcal{X}_M \times \mathcal{O}_W \times \mathcal{Q}_A \times \mathcal{O}_A \to \mathcal{X}_M$$
 
 Updates $M_W$ given the previous belief, the observation, the query made, and the component's response. **No $G_W$ argument.**
 
 **Strategy-update map** $f_G$:
+
 $$f_G : \mathcal{X}_G \times \mathcal{X}_M \times \mathcal{Q}_A \times \mathcal{O}_A \to \mathcal{X}_G$$
 
 Updates $G_W$ given the previous strategy/objective, the current belief, the goal-conditioned query, and its response. May depend on $G_W$.
 
 **External policy** $\pi_W$:
+
 $$\pi_W : \mathcal{X}_W \to \mathcal{A}_W$$
 
 Selects the wrapper's external action.
@@ -152,7 +157,7 @@ Required: the macro-correction function $F_W(\mathcal{T}_W, \delta_W) = $ change
 
 $$\delta_W^T F_W(\mathcal{T}_W, \delta_W) \geq \alpha_W \|\delta_W\|^2 \quad \text{for } \|\delta_W\| \leq R_W$$
 
-with $\alpha_W > 0$ and $R_W > 0$.
+with $\alpha_W \gt 0$ and $R_W \gt 0$.
 
 This is **wrapper-design constraint D-A4**: $f_M$ must satisfy the sector condition with positive correction rate. Per `#deriv-sector-condition` Prop A.1, this is automatic for Bayesian updates on exponential families; per `#der-gain-sector-bridge`, it follows for linear corrections with positive-definite gain. For more exotic $f_M$ (e.g., non-monotonic correction, gradient descent on non-convex losses), (A4) may hold only locally or fail altogether — Tier-2 / Tier-3 in the bridge-lemma classification of `#form-composition-closure`.
 
@@ -248,13 +253,13 @@ This promotes the hypothesis to a derived result for the wrapper-around-componen
 
 ### 6.2 Inheritance of persistence template
 
-Under D-A4, the wrapper inherits `#result-sector-persistence-template` at the wrapper level: persistence holds when $\alpha_W R_W > \rho_W$ where $\rho_W$ is the wrapper-level effective disturbance.
+Under D-A4, the wrapper inherits `#result-sector-persistence-template` at the wrapper level: persistence holds when $\alpha_W R_W \gt \rho_W$ where $\rho_W$ is the wrapper-level effective disturbance.
 
 The wrapper-level disturbance has two contributions:
 - External environmental disturbance $\rho_\text{ext}$ acting through $o_W$.
 - Internal disturbance from the wrapping construction itself — the variance of $A(q_M)$ around its expected value, which the wrapper cannot control.
 
-The total effective disturbance is $\rho_W = \rho_\text{ext} + \rho_\text{int}$, where $\rho_\text{int}$ is bounded by the variance of $A$'s responses to goal-blind queries. The persistence condition $\alpha_W R_W > \rho_\text{ext} + \rho_\text{int}$ thus has an explicit dependence on the component's noise structure.
+The total effective disturbance is $\rho_W = \rho_\text{ext} + \rho_\text{int}$, where $\rho_\text{int}$ is bounded by the variance of $A$'s responses to goal-blind queries. The persistence condition $\alpha_W R_W \gt \rho_\text{ext} + \rho_\text{int}$ thus has an explicit dependence on the component's noise structure.
 
 This connects the wrapping construction directly to the existing template machinery without requiring new Lyapunov work.
 
@@ -325,7 +330,7 @@ The theorem itself is in good shape. The next-up dependencies are sub-spikes B a
 - Brief: `00-brief.md`
 - Admissibility: `02-admissibility.md` (sub-spike B, pending — depends on this file)
 - Leakage: `03-leakage.md` (sub-spike C, pending — depends on this file)
-- Coercion-vs-fidelity ε*: `04-epsilon-semantics.md` (sub-spike D, pending)
+- Coercion-vs-fidelity $\varepsilon^\ast$: `04-epsilon-semantics.md` (sub-spike D, pending)
 - Tempo cost: `05-tempo-cost.md` (sub-spike E, pending)
 - Empirical instances: `06-empirical-instances.md` (delegated)
 - Quantitative bounds: `07-quantitative-bounds.md` (sub-spike G, pending — depends on §6.2 persistence-template inheritance and sub-spike E)

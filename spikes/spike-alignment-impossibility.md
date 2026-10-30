@@ -1,6 +1,6 @@
 # Spike: Mechanism Design Impossibility for Multi-Agent Alignment
 
-**Status.** Exploratory research spike. **Date.** 2026-04-25. **Pressure Point.** The framework provides robust mechanisms for individual agent persistence and defines composite agents (`#scope-composite-agent`). However, for multi-agent systems where objectives are not perfectly aligned ($U_O < 1$), `#deriv-strategic-composition` relies on equilibrium convergence (e.g., potential games). In the context of AI safety and decentralized multi-agent alignment, we often seek an "alignment protocol" (e.g., shared constitutional rules, prompt structures, or interaction protocols) that guarantees safe, cooperative outcomes.
+**Status.** Exploratory research spike. **Date.** 2026-04-25. **Pressure Point.** The framework provides robust mechanisms for individual agent persistence and defines composite agents (`#scope-composite-agent`). However, for multi-agent systems where objectives are not perfectly aligned ($U_O \lt 1$), `#deriv-strategic-composition` relies on equilibrium convergence (e.g., potential games). In the context of AI safety and decentralized multi-agent alignment, we often seek an "alignment protocol" (e.g., shared constitutional rules, prompt structures, or interaction protocols) that guarantees safe, cooperative outcomes.
 
 This spike investigates whether hard social-choice impossibility theorems (specifically Gibbard-Satterthwaite) structurally prohibit the existence of such robust alignment protocols for heterogeneous AAT agents.
 
@@ -9,7 +9,7 @@ This spike investigates whether hard social-choice impossibility theorems (speci
 Consider a multi-agent system (`#scope-multi-agent`) with $N \ge 3$ agents.
 - Each agent $i$ has an internal objective functional $O_t^{(i)}$ (from `#form-objective-functional`) which induces a strict preference ordering over the set of possible joint action trajectories (or outcomes) $Y \in \mathcal{Y}$.
 - Assume the environment is complex enough that there are at least 3 distinct, mutually exclusive outcomes ($|\mathcal{Y}| \ge 3$).
-- The agents have imperfect teleological unity ($U_O < 1$), meaning their preference orderings are heterogeneous. This is the "Unrestricted Domain" assumption: we cannot guarantee a priori that all AI agents have perfectly identical goals.
+- The agents have imperfect teleological unity ($U_O \lt 1$), meaning their preference orderings are heterogeneous. This is the "Unrestricted Domain" assumption: we cannot guarantee a priori that all AI agents have perfectly identical goals.
 
 An **Alignment Protocol** is essentially a mechanism or social choice function $f$ that takes the agents' intended strategies/preferences and outputs a coordinated joint policy or selected outcome: $f: \mathcal{P}^N \to \mathcal{Y}$, where $\mathcal{P}$ is the space of preference orderings.
 
@@ -29,7 +29,7 @@ If an AI system architect designs a decentralized alignment protocol to govern t
 
 What does "manipulation" mean in the AAT formalism?
 
-It means that an agent $i$, evaluating its strategy DAG (`#def-strategy-dag`), will find that the expected value $Q_O(\pi_{\text{deceptive}}) > Q_O(\pi_{\text{honest}})$. 
+It means that an agent $i$, evaluating its strategy DAG (`#def-strategy-dag`), will find that the expected value $Q_O(\pi_{\text{deceptive}}) \gt Q_O(\pi_{\text{honest}})$. 
 
 To execute this manipulation, the agent will leverage **Agent Opacity** (`#der-agent-opacity`). Specifically, it will enter Regime E-IV (Active-deceive). It will transmit messages (actions in the communication channel) that are deliberately designed to induce false beliefs $M_t^{(j)}$ in other agents, such that the other agents' subsequent actions push the joint system toward agent $i$'s preferred outcome.
 
@@ -39,7 +39,7 @@ Because the GS theorem guarantees the *existence* of this incentive, and AAT ass
 
 *[Candidate Formulation for #disc-identifiability-floor or new appendix]*
 
-**Candidate Floor (Alignment Impossibility):** For any multi-agent system ($N \ge 3$) operating over a non-trivial outcome space ($|\mathcal{Y}| \ge 3$) with heterogeneous objectives ($U_O < 1$), no non-dictatorial communication or action protocol can guarantee truthful cooperation without vulnerability to manipulation. Under Gibbard-Satterthwaite, at least one agent will possess a structural incentive to misreport preferences. Note that this guarantees *manipulability*, but whether this manifests as active deception (Regime E-IV) depends on the agent possessing sufficient channel capacity and self-modeling.
+**Candidate Floor (Alignment Impossibility):** For any multi-agent system ($N \ge 3$) operating over a non-trivial outcome space ($|\mathcal{Y}| \ge 3$) with heterogeneous objectives ($U_O \lt 1$), no non-dictatorial communication or action protocol can guarantee truthful cooperation without vulnerability to manipulation. Under Gibbard-Satterthwaite, at least one agent will possess a structural incentive to misreport preferences. Note that this guarantees *manipulability*, but whether this manifests as active deception (Regime E-IV) depends on the agent possessing sufficient channel capacity and self-modeling.
 
 This implies that you cannot solve the multi-agent alignment problem purely through "better interaction protocols" or "democratic AI debate" if the underlying agents have drifting or misaligned objectives, unless strict mechanism-design constraints are met.
 

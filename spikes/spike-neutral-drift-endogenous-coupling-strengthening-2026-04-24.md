@@ -122,7 +122,7 @@ If two agents have identical $\alpha$ and $R$ but differ in *how* they achieve t
 
 *[Claim-tier: exact for the stated construction; robust qualitative in transfer.]*
 
-The `#der-interaction-channel-classification` Case 4 derivation demonstrates exactly this move: two events with identical mean magnitude but different kurtosis land in different regimes (II-a vs II-b) because the Kalman recipient's class-fitness $\mathcal F(\mathcal M_B)$ responds differently to the distribution *shape*. The KL gap $D_{\text{KL}}(P_{\text{true}} \Vert P_{\mathcal M_B}) > 0$ for heavy-tailed inputs against Gaussian, visible in kurtosis tests on the residual stream — this *is* a higher-moment observable.
+The `#der-interaction-channel-classification` Case 4 derivation demonstrates exactly this move: two events with identical mean magnitude but different kurtosis land in different regimes (II-a vs II-b) because the Kalman recipient's class-fitness $\mathcal F(\mathcal M_B)$ responds differently to the distribution *shape*. The KL gap $D_{\text{KL}}(P_{\text{true}} \Vert P_{\mathcal M_B}) \gt 0$ for heavy-tailed inputs against Gaussian, visible in kurtosis tests on the residual stream — this *is* a higher-moment observable.
 
 `#deriv-sector-condition` §270 similarly uses second-moment bounds (steady-state $\mathbb E\lVert\delta\rVert^2$) in Prop A.1S for the stochastic Model S. The template's stopping-time localization in Khasminskii 2012 relies on second-moment control.
 
@@ -150,7 +150,7 @@ The Miller neutral-drift scenario posits a variant $\nu$ whose correction functi
 
 But the honest biological/social neutral-drift scenarios do not work like this. Drift variants typically have some observable higher-moment signature (different response latency, different saturation, different noise injection pattern) that a sufficiently careful observer can see. The stronger statement is therefore:
 
-**Hypothesis.** *Generic* neutral drift (not adversarially constructed) preserves $(\alpha, R)$ at leading order but breaks matching at some finite moment of $\delta$'s stationary distribution or finite-lag structure. Under non-degenerate genericity, $\sup_k \lvert C^{(k)}_\delta - C^{(k)}_{\delta,\text{incumbent}}\rvert > 0$ for some moment order $k$.
+**Hypothesis.** *Generic* neutral drift (not adversarially constructed) preserves $(\alpha, R)$ at leading order but breaks matching at some finite moment of $\delta$'s stationary distribution or finite-lag structure. Under non-degenerate genericity, $\sup_k \lvert C^{(k)}_\delta - C^{(k)}_{\delta,\text{incumbent}}\rvert \gt 0$ for some moment order $k$.
 
 *Falsification criterion:* a biological or engineered system where a confirmed neutral-drift variant passes all finite-moment and all-lag tests against the incumbent. I know of no such case; the hypothesis is testable.
 

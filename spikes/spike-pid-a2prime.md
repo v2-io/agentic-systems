@@ -5,9 +5,9 @@ status: draft
 date: 2026-04-22
 ---
 
-# Spike: A2' for PID Controllers — Promoting PID from Sub-Scope β to Sub-Scope α
+# Spike: A2' for PID Controllers — Promoting PID from Sub-Scope $\beta$ to Sub-Scope $\alpha$
 
-**Trigger:** `#deriv-sector-condition`'s A2' sub-scope partition lists PID controllers in sub-scope $\beta$ ("A2' assumed per-system; no structural B1 guarantee"). PID is the dominant industrial controller class by orders of magnitude — by some estimates $> 90\%$ of industrial feedback loops. If A2' can be *derived* for PID under explicitly scoped plant-and-tuning conditions, a vast industrial deployment class inherits AAT's derived persistence guarantees through `#result-sector-persistence-template`, rather than relying on an empirical posit. This is the strengthen-first move on PID.
+**Trigger:** `#deriv-sector-condition`'s A2' sub-scope partition lists PID controllers in sub-scope $\beta$ ("A2' assumed per-system; no structural B1 guarantee"). PID is the dominant industrial controller class by orders of magnitude — by some estimates $\gt 90\%$ of industrial feedback loops. If A2' can be *derived* for PID under explicitly scoped plant-and-tuning conditions, a vast industrial deployment class inherits AAT's derived persistence guarantees through `#result-sector-persistence-template`, rather than relying on an empirical posit. This is the strengthen-first move on PID.
 
 **Posture:** Real derivation using classical positive-real / passivity machinery. The mathematics is known (Lur'e 1957, Popov 1961, Khalil 2002 ch. 6, Åström & Murray 2008 ch. 10–11); the value is in *(a)* casting the classical result in AAT's directional-fidelity B1 language, *(b)* making the scope conditions visible at segment granularity per AAT's scope-honesty-as-architecture posture, and *(c)* extracting the explicit sector constant $\alpha$ in AAT parameters so downstream template instantiations can use it.
 
@@ -122,6 +122,7 @@ $$x_{k+1} = A x_k + B u_k + w_k, \quad y_k = C x_k$$
 The tracking error is $\delta_k = r - y_k = r - C x_k$. The PID control law with filtered derivative becomes
 
 $$u_k = K_p \delta_k + K_i I_k + K_d (\delta_k - \delta_{k-1})/T_s$$
+
 $$I_{k+1} = I_k + T_s \delta_k$$
 
 where $T_s$ is the sample period. Concatenate the augmented "error + integrator + lag" state $\tilde\delta_k = (\delta_k, I_k, \delta_k - \delta_{k-1})^T$.
@@ -336,7 +337,7 @@ Each of these is a named scope-exit and belongs in the "Honest scope" section of
 
 Two honest options; recommend option A (minimal surgical edit) with option B (new appendix) as stretch.
 
-### 11.1 Option A — Update to `#deriv-sector-condition` A2' α list
+### 11.1 Option A — Update to `#deriv-sector-condition` A2' $\alpha$ list
 
 **Segment edit.** In `#deriv-sector-condition`'s "Grounding of GA-3 — sub-scope $\alpha$" paragraph, add a sixth bullet point:
 

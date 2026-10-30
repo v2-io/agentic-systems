@@ -17,7 +17,7 @@ depends-on:
 
 # Spike: Sector Condition on the Update Operator (Log-Odds Credit-Assignment Iteration)
 
-**Status:** Spike (investigatory). Recasts the log-odds credit-assignment update as a discrete dynamical system on the evidence-accumulation sequence and asks whether an A2'-like sector condition can be placed on the *update operator itself* (not on the underlying plant). If yes, the A2' α/β partition transfers to the update layer, Gaps A and B land under one template, and the discrete contraction work in `#deriv-discrete-sector-condition` extends from mismatch dynamics to credit-assignment dynamics.
+**Status:** Spike (investigatory). Recasts the log-odds credit-assignment update as a discrete dynamical system on the evidence-accumulation sequence and asks whether an A2'-like sector condition can be placed on the *update operator itself* (not on the underlying plant). If yes, the A2' $\alpha/\beta$ partition transfers to the update layer, Gaps A and B land under one template, and the discrete contraction work in `#deriv-discrete-sector-condition` extends from mismatch dynamics to credit-assignment dynamics.
 
 **Date:** 2026-04-22.
 
@@ -27,7 +27,7 @@ $$(T\lambda - \lambda^\ast)^\top (\cdot)(\lambda - \lambda^\ast) \leq \gamma \lV
 
 can be derived from structural properties of the gradient Jacobian $J$, the identifiability coefficient $\iota$, and the gain schedule $\eta_k$.
 
-**Headline outcome (summary, then derivations).** Under log-odds presentation with linear-in-log-odds dynamics and a step-size floor, the credit-assignment iteration admits an A2'-analog `(O-A2')` contraction condition whose sector constant is the Fisher-weighted product $\iota \cdot \eta_k \cdot \lambda_{\min}(J^\top J / \lVert J\rVert^2)$ on the log-odds coordinate. The stochastic-approximation analog (Robbins-Monro under unbiased gradient estimator) inherits the same contraction in mean-square under a standard step-size schedule. Sub-scope α of `#der-gain-sector-bridge` transfers structurally: Bayesian and exponential-family updates satisfy `(O-A2')` by construction. Sub-scope β fails structurally: non-Bayesian, non-exponential-family updates generally fail `(O-A2')` — and AAT's `#disc-identifiability-floor` machinery already accounts for the failure mode via `#scope-edge-update-causal-validity` (regime-C edges have $\iota \approx 0$, hence $\alpha_{\text{op}} \approx 0$, hence frozen credence per `#der-observability-dominance`). The discrete step-size condition of `#deriv-discrete-sector-condition` lifts: under `O-DA2'` (additive Lipschitz bound on $J$) the operator iterates as a Banach contraction with contraction factor derived from `(O-A2')` via Cauchy-Schwarz.
+**Headline outcome (summary, then derivations).** Under log-odds presentation with linear-in-log-odds dynamics and a step-size floor, the credit-assignment iteration admits an A2'-analog `(O-A2')` contraction condition whose sector constant is the Fisher-weighted product $\iota \cdot \eta_k \cdot \lambda_{\min}(J^\top J / \lVert J\rVert^2)$ on the log-odds coordinate. The stochastic-approximation analog (Robbins-Monro under unbiased gradient estimator) inherits the same contraction in mean-square under a standard step-size schedule. Sub-scope $\alpha$ of `#der-gain-sector-bridge` transfers structurally: Bayesian and exponential-family updates satisfy `(O-A2')` by construction. Sub-scope $\beta$ fails structurally: non-Bayesian, non-exponential-family updates generally fail `(O-A2')` — and AAT's `#disc-identifiability-floor` machinery already accounts for the failure mode via `#scope-edge-update-causal-validity` (regime-C edges have $\iota \approx 0$, hence $\alpha_{\text{op}} \approx 0$, hence frozen credence per `#der-observability-dominance`). The discrete step-size condition of `#deriv-discrete-sector-condition` lifts: under `O-DA2'` (additive Lipschitz bound on $J$) the operator iterates as a Banach contraction with contraction factor derived from `(O-A2')` via Cauchy-Schwarz.
 
 The honest break-test is where Gaps A and B differ: the Fisher metric is in general *non-diagonal under L1' correlation*, so the sector condition transforms rather than breaks — whitening inverts the off-diagonal via `(O-A2'-whit)`. But L1' with unobservable common cause hits `#disc-identifiability-floor`'s Cramér-Rao refutation (rank-1 Fisher per `#deriv-edge-credence-dynamics` Prop B.7 refutation): no sector-positive operator exists, so `(O-A2')` fails structurally rather than gracefully. This gives the composition argument a first non-trivial obstruction to absorb.
 
@@ -142,21 +142,21 @@ Reading off the ingredients:
 | $J_k^2 / \lVert \mathbf{J}\rVert^2 \in [0,1]$ | Jacobian attribution fraction | Path-dominated DAG: one $J_k$ large, others near zero |
 | $\sigma'(\lambda_k^\ast) \in (0, 1/4]$ | Log-odds-to-probability sensitivity | Saturated edges ($\lambda_k^\ast \to \pm\infty$) |
 
-Each factor is bounded, positive, and structurally tied to AAT quantities. The sector constant degrades gracefully when any one factor shrinks; it vanishes only when a structural identifiability obstruction applies (ι=0 or $J_k=0$).
+Each factor is bounded, positive, and structurally tied to AAT quantities. The sector constant degrades gracefully when any one factor shrinks; it vanishes only when a structural identifiability obstruction applies ($\iota = 0$ or $J_k=0$).
 
 ---
 
-## 3. Sub-scope α Inheritance
+## 3. Sub-scope $\alpha$ Inheritance
 
 ### 3.1 Exponential-family / Bayesian sub-scope
 
-`#der-gain-sector-bridge` sub-scope α (Kalman, conjugate Bayesian, exponential family in natural parameters) is the sub-scope in which A2' is *derived* from B1 directional fidelity. The question is whether `(O-A2')` inherits the same sub-scoping.
+`#der-gain-sector-bridge` sub-scope $\alpha$ (Kalman, conjugate Bayesian, exponential family in natural parameters) is the sub-scope in which A2' is *derived* from B1 directional fidelity. The question is whether `(O-A2')` inherits the same sub-scoping.
 
-*[Derived (α-sub-scope inheritance, from Bayesian coherence + evidential-additivity uniqueness)]*
+*[Derived ($\alpha$-sub-scope inheritance, from Bayesian coherence + evidential-additivity uniqueness)]*
 
-**Claim.** For agent classes in sub-scope α of `#der-gain-sector-bridge`, `(O-A2')` holds with $\alpha_{\text{op}}^{\text{comp}}$ as derived above.
+**Claim.** For agent classes in sub-scope $\alpha$ of `#der-gain-sector-bridge`, `(O-A2')` holds with $\alpha_{\text{op}}^{\text{comp}}$ as derived above.
 
-**Argument.** Within sub-scope α, the update is Bayesian in the log-odds coordinate by `#deriv-edge-update-natural-parameter`'s evidential-additivity uniqueness theorem:
+**Argument.** Within sub-scope $\alpha$, the update is Bayesian in the log-odds coordinate by `#deriv-edge-update-natural-parameter`'s evidential-additivity uniqueness theorem:
 
 $$\lambda_k^{\text{post}} - \lambda_k^{\text{prior}} = \ell(y)$$
 
@@ -170,13 +170,13 @@ $$\alpha_{\text{op}}^{\text{Bayes}} \;\propto\; \mathbb{E}[\ell(y)^2] = \mathcal
 
 This is the operator-level analog of the `#der-gain-sector-bridge` factoring $\alpha = \eta \cdot c_{\min}$: the sector constant factors into a gain term ($\eta_k / \lVert \mathbf J \rVert^2$) and a Fisher/attribution term ($\iota_k J_k^2 \sigma'(\lambda^\ast) \cdot \mathcal{I}$).
 
-### 3.2 Variational / β sub-scope — structural failure mode
+### 3.2 Variational / $\beta$ sub-scope — structural failure mode
 
-Sub-scope β of `#der-gain-sector-bridge` includes variational approximate posteriors (B1 not guaranteed by optimality because approximation-direction error can rotate the correction), non-Bayesian rule-based updates, and severely misspecified agents (FM-5). For these:
+Sub-scope $\beta$ of `#der-gain-sector-bridge` includes variational approximate posteriors (B1 not guaranteed by optimality because approximation-direction error can rotate the correction), non-Bayesian rule-based updates, and severely misspecified agents (FM-5). For these:
 
-*[Derived (β-sub-scope failure, from non-Bayesian evidential-additivity + Jacobian misalignment)]*
+*[Derived ($\beta$-sub-scope failure, from non-Bayesian evidential-additivity + Jacobian misalignment)]*
 
-**Claim.** For agents in sub-scope β, `(O-A2')` fails structurally unless the correction-direction rotation is bounded.
+**Claim.** For agents in sub-scope $\beta$, `(O-A2')` fails structurally unless the correction-direction rotation is bounded.
 
 **Argument.** Without evidential additivity in log-odds (`#deriv-edge-update-natural-parameter` scope), the update $\lambda_k^{\text{post}} - \lambda_k^{\text{prior}}$ is not the log-likelihood ratio. The expected update $\mathbb{E}[\boldsymbol\lambda^{\text{post}} - \boldsymbol\lambda^{\text{prior}}]$ can rotate by up to the approximation angle $\theta_{\text{var}}$ of the variational posterior — specifically, for reverse-KL variational approximations, the rotation is bounded by the chain-rule additivity defect per `#deriv-strategy-cost-regret-bound` §6.1. If $\theta_{\text{var}} \lt \pi/2$, `(O-A2')` holds with an attenuated sector constant $\alpha_{\text{op}} \cdot \cos \theta_{\text{var}}$. If $\theta_{\text{var}} \geq \pi/2$, the expected update projects *away* from truth and the operator diverges.
 
@@ -186,11 +186,11 @@ This is the operator-level analog of `#der-gain-sector-bridge` FM-1 (directional
 
 | Sub-scope | Member classes | `(O-A2')` status | Sector constant |
 |---|---|---|---|
-| **α-op** | Kalman edge-tracker, Beta-Bernoulli, conjugate Bayesian, exp-family in natural params | Derived | $\alpha_{\text{op}}^{\text{Bayes}}$ (§2.3) |
-| **β-op conservative** | Variational posteriors with bounded rotation $\theta_{\text{var}} \lt \pi/2$ | Derived (attenuated) | $\alpha_{\text{op}} \cos \theta_{\text{var}}$ |
-| **β-op breaking** | Rule-based, severely misspecified, $\theta_{\text{var}} \geq \pi/2$ | Fails | No positive sector constant |
+| **$\alpha$-op** | Kalman edge-tracker, Beta-Bernoulli, conjugate Bayesian, exp-family in natural params | Derived | $\alpha_{\text{op}}^{\text{Bayes}}$ (§2.3) |
+| **$\beta$-op conservative** | Variational posteriors with bounded rotation $\theta_{\text{var}} \lt \pi/2$ | Derived (attenuated) | $\alpha_{\text{op}} \cos \theta_{\text{var}}$ |
+| **$\beta$-op breaking** | Rule-based, severely misspecified, $\theta_{\text{var}} \geq \pi/2$ | Fails | No positive sector constant |
 
-The α-op / β-op partition is structurally parallel to `#der-gain-sector-bridge` α / β — and transfers the same member classes.
+The $\alpha$-op / $\beta$-op partition is structurally parallel to `#der-gain-sector-bridge` $\alpha/\beta$ — and transfers the same member classes.
 
 ---
 
@@ -282,7 +282,7 @@ with the steady-state ball radius $R_{\text{op}}^\ast = \sigma_{\text{op}} / \sq
 
 Setting $\eta_k = \eta_0 / (n_k + 1)$ (Beta-Bernoulli) recovers the classical Robbins-Monro step-size schedule $\sum \eta_k = \infty$, $\sum \eta_k^2 \lt \infty$. Under `(O-A2')` (a stochastic-approximation stability condition) and standard Lipschitz regularity of the gradient estimator, Borkar 2008 (*Stochastic Approximation: A Dynamical Systems Viewpoint*) Ch. 2 gives almost-sure convergence $\boldsymbol\lambda_t \to \boldsymbol\lambda^\ast$ through the ODE method. `(O-DA.1)` is the finite-sample mean-square rate; Borkar's theorem is the asymptotic a.s. statement. Both follow from the same structural properties.
 
-**The step-size condition lifts.** `#deriv-discrete-sector-condition`'s step-size constraint on continuous-time discretization is replaced, at the operator level, by the ODE-method stability condition — automatically satisfied when `(O-A2')` holds in sub-scope α. No separate step-size tuning is required when the gain schedule matches Robbins-Monro.
+**The step-size condition lifts.** `#deriv-discrete-sector-condition`'s step-size constraint on continuous-time discretization is replaced, at the operator level, by the ODE-method stability condition — automatically satisfied when `(O-A2')` holds in sub-scope $\alpha$. No separate step-size tuning is required when the gain schedule matches Robbins-Monro.
 
 ---
 
@@ -362,7 +362,7 @@ This transfers `#disc-approximation-tiering`'s structural classification directl
 
 1. Operator formulation of the default signal function (§1 here).
 2. `(O-A2')` — operator-level sector condition, derived from `#der-gain-sector-bridge` B1 + `#deriv-edge-update-natural-parameter` evidential-additivity (§2 here).
-3. `α-op / β-op` sub-scope partition inheriting from `#der-gain-sector-bridge` α/β (§3 here).
+3. `α-op / β-op` sub-scope partition inheriting from `#der-gain-sector-bridge` $\alpha/\beta$ (§3 here).
 4. Correlated-failure generalization with graceful L1'-observable / structural L1'-unobservable break (§4 here).
 5. `(O-DA.1)` contraction theorem with step-size condition derived from structural constants (§5 here).
 6. Composition preview — parallel + sequential composition sector constants (§6 here).
@@ -385,7 +385,7 @@ If Gap B / C1 becomes concrete, a unification segment would state the shared Ban
 
 `#update-operator-sector` composes cleanly with AAT's three meta-patterns:
 
-- **`#disc-separability-pattern`.** Adds a seventh ladder (update-operator sector scope): sub-scope α-op (separable-core, Bayesian/exp-family), β-op conservative (structured-repair, bounded-rotation variational), β-op breaking (general-open, unbounded-rotation or severely misspecified).
+- **`#disc-separability-pattern`.** Adds a seventh ladder (update-operator sector scope): sub-scope $\alpha$-op (separable-core, Bayesian/exp-family), $\beta$-op conservative (structured-repair, bounded-rotation variational), $\beta$-op breaking (general-open, unbounded-rotation or severely misspecified).
 - **`#disc-identifiability-floor`.** Adds an instance: rank-deficient Fisher under unobservable L1' is a Cramér-Rao-floor no-go at the operator level (§4.3 here). This is the fourth `#disc-identifiability-floor` instance, complementing on-policy CHT no-go, L1' mixture-identifiability obstruction, and misspecification-cost extension.
 - **`#additive-coordinate-forcing`.** Adds an *application* of the log-odds coordinate forcing from `#deriv-edge-update-natural-parameter`: the sequential-composition sector constant (§6.2 here) is log-additive specifically because the log-odds coordinate is the uniquely-forced additive evidence coordinate. The operator-layer composition inherits the log-additive structure — the three-layer additive-decomposition pattern extends to the operator-composition layer as an *adjacent instance* (classified parallel to Lyapunov quadratic and IB Lagrangian in `#additive-coordinate-forcing`).
 
@@ -403,8 +403,8 @@ Strength per section, honestly:
 | §2.1 | `(O-A2')` candidate condition | Formulation |
 | §2.2 | `(O-A2')` derivation from structural properties | **Derived (conditional on monotone-AND + regime-A + small-$R$ linearization)** |
 | §2.3 | Closed-form sector constant $\alpha_{\text{op}}^{\text{comp}}$ | Derived |
-| §3.1 | α-sub-scope inheritance, `(O-A2')` derived for Bayesian agents | **Derived (conditional on `#deriv-edge-update-natural-parameter` evidential-additivity axiom)** |
-| §3.2 | β-sub-scope failure mode (rotation-bounded variational attenuation) | Robust qualitative |
+| §3.1 | $\alpha$-sub-scope inheritance, `(O-A2')` derived for Bayesian agents | **Derived (conditional on `#deriv-edge-update-natural-parameter` evidential-additivity axiom)** |
+| §3.2 | $\beta$-sub-scope failure mode (rotation-bounded variational attenuation) | Robust qualitative |
 | §4.2 | `(O-A2')` graceful degradation under observable L1' | Derived (conditional on Prop B.7 five-way gating) |
 | §4.3 | `(O-A2')` structural break under unobservable L1' | **Proved (external theorem: Cramér-Rao)** |
 | §5.3 | `(O-DA.1)` discrete contraction theorem | Derived (conditional on `(O-A2')` + `(O-DA2')`) |
@@ -424,13 +424,13 @@ Strength per section, honestly:
 
 ### 9.3 Max attainable
 
-*Conditional* — `(O-A2')` is conditional on structural properties (monotone-AND, regime-A, evidential-additivity axiom) that are genuinely agent-class-dependent. Within sub-scope α, these conditions are derivable; within sub-scope β, they are not. The α-op / β-op sub-scoping is honest scope narrowing, not scope retreat — parallel to `#deriv-sector-condition`'s A2' sub-scoping.
+*Conditional* — `(O-A2')` is conditional on structural properties (monotone-AND, regime-A, evidential-additivity axiom) that are genuinely agent-class-dependent. Within sub-scope $\alpha$, these conditions are derivable; within sub-scope $\beta$, they are not. The $\alpha$-op / $\beta$-op sub-scoping is honest scope narrowing, not scope retreat — parallel to `#deriv-sector-condition`'s A2' sub-scoping.
 
 The break-test (§7) is sharp: the three structural failure modes (non-monotone gains, non-conservative outcome noise, structurally misspecified $J$) plus the Cramér-Rao refutation (§4.3) together characterize where `(O-A2')` fails. This is the honest scope boundary.
 
 ### 9.4 The "strengthen before soften" posture
 
-The spike attempts the strong form — a universal sector condition on the update operator — and finds it holds structurally in sub-scope α, degrades gracefully in one family of sub-scope β cases (variational with bounded rotation), breaks structurally in two others (unobservable L1' Cramér-Rao, severely misspecified $J$). The α / β partition inherited from `#der-gain-sector-bridge` is the right landing: `(O-A2')` is derived where A2' is derived, assumed where A2' is assumed, and breaks where Cramér-Rao floors the identifiability of the update direction itself.
+The spike attempts the strong form — a universal sector condition on the update operator — and finds it holds structurally in sub-scope $\alpha$, degrades gracefully in one family of sub-scope $\beta$ cases (variational with bounded rotation), breaks structurally in two others (unobservable L1' Cramér-Rao, severely misspecified $J$). The $\alpha/\beta$ partition inherited from `#der-gain-sector-bridge` is the right landing: `(O-A2')` is derived where A2' is derived, assumed where A2' is assumed, and breaks where Cramér-Rao floors the identifiability of the update direction itself.
 
 This is genuine strengthening — before the spike, the log-odds update's contraction toward truth was implicit; now it has an operator-level sector condition with closed-form sector constant factoring into $\eta$, $\iota$, $J^2/\lVert\mathbf J\rVert^2$, $\sigma'(\lambda^\ast)$ (§2.3), each term structurally tied to AAT quantities that already carry their own scope and epistemic status.
 

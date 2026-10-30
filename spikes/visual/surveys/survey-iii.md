@@ -48,7 +48,7 @@ The following table maps diagram types to their cognitive and semiotic affordanc
 | Multi-flow map | Multi-causal / multi-effect | FORCE (multiple) | Cause-effect analysis, system feedback | Feedback loops hard to show |
 | Force diagram / Causal loop | Circular causation with polarity | FORCE + CYCLE | System dynamics, equilibria | Confuses with directed graphs without conventions |
 ### 2.2 Venn vs. Euler: A Critical Distinction
-Venn diagrams show *all* \( 2^n \) logically possible zones for \( n \) sets; Euler diagrams show only *actually instantiated* zones. This is a consequential design choice:[^14]
+Venn diagrams show *all* $2^n$ logically possible zones for $n$ sets; Euler diagrams show only *actually instantiated* zones. This is a consequential design choice:[^14]
 
 - **Use Venn** when you want to emphasize that certain intersections are *empty* — the empty zone is itself informative
 - **Use Euler** when set relations have absent intersections and depicting them would imply spurious structure
@@ -128,10 +128,10 @@ The six primary Gestalt principles provide the perceptual foundation for diagram
 Norman's (1988) *perceived affordances* — the signals that tell a viewer what actions are possible or what structure is meant — apply directly to diagram reading. Arrows afford "follow this direction"; containment affords "membership or subordination"; dashed lines conventionally indicate "hypothetical, non-actual, or future."[^51][^52][^53]
 
 Violating conventions incurs high comprehension cost. In formal mathematical diagrams:[^54]
-- A solid arrow (\(\rightarrow\)) = a definite morphism or implication
-- A dashed arrow (\(\dashrightarrow\)) = an induced or hypothetical map
-- A double arrow (\(\Rightarrow\)) = a natural transformation or strong implication
-- A hooked arrow (\(\hookrightarrow\)) = an injection/inclusion
+- A solid arrow ($\rightarrow$) = a definite morphism or implication
+- A dashed arrow ($\dashrightarrow$) = an induced or hypothetical map
+- A double arrow ($\Rightarrow$) = a natural transformation or strong implication
+- A hooked arrow ($\hookrightarrow$) = an injection/inclusion
 
 Breaking any of these without explicit legend forces readers to rebuild their parsing schema — a major extraneous load source.
 ### 4.4 Signaling and Cueing Principles
@@ -140,7 +140,7 @@ Mayer's signaling (cueing) principle states that multimedia materials are learne
 - **Color highlights**: pre-attentively salient; reduce error and response time on comprehension tasks when applied to task-relevant regions[^57][^58]
 - **Arrows and pointers**: indexical signs with strong affordances for direction of reading
 - **Bolding, boxing, or enclosing** key definitions or relations
-- **Labels placed contiguously** with the elements they label (spatial contiguity principle, effect size d ≈ 1.09 in meta-analyses)[^5]
+- **Labels placed contiguously** with the elements they label (spatial contiguity principle, effect size $d \approx 1.09$ in meta-analyses)[^5]
 
 Crucially, signaling must be **selective**: cuing everything cues nothing. The principle of *meaningful salience* holds that visual distinctiveness should be reserved for genuinely high-priority information.[^55]
 ### 4.5 The Coherence Principle and Seductive Details
@@ -204,7 +204,7 @@ TikZ (PGF/TikZ, Hans Tantau) is the standard for high-quality diagram generation
 
 The principal cost is *learning investment*: TikZ has a steep initial learning curve. For commutative diagrams specifically, `tikz-cd` (available at [tikzcd.yichuanshen.de](https://tikzcd.yichuanshen.de/) as an interactive editor) reduces the friction substantially.[^71]
 ### 6.2 Commutative Diagrams in TikZ
-The first isomorphism theorem \( G / \ker\varphi \cong \text{im}\,\varphi \) is canonically illustrated as a commutative triangle:[^54]
+The first isomorphism theorem $G / \ker\varphi \cong \text{im}\,\varphi$ is canonically illustrated as a commutative triangle:[^54]
 
 ```latex
 \usepackage{tikz}
@@ -224,7 +224,7 @@ The first isomorphism theorem \( G / \ker\varphi \cong \text{im}\,\varphi \) is 
 \end{tikzpicture}
 ```
 
-The semantic reading: any path from \( G \) to \( \text{im}\,\varphi \) yields the same result — commutativity is *visible*, not derived.[^72][^73]
+The semantic reading: any path from $G$ to $\text{im}\,\varphi$ yields the same result — commutativity is *visible*, not derived.[^72][^73]
 
 **Best practices for commutative diagrams**:[^74][^54]
 - Use `matrix of math nodes` for alignment; `node distance` for consistent spacing
@@ -404,7 +404,7 @@ To explain how abstract concepts are grounded in sensory‐motor experiences, se
 
 26. [[A10] Argument mapping - Philosophy@HKU](https://philosophy.hku.hk/think/arg/complex.php) - Drawing a diagram can be very helpful. §1. Argument maps. An argument map is a diagram that captures...
 
-27. [Spider Diagrams](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S1461157000000942) - ...and communication. With rare exceptions such as Peirce’s α and β systems, purely diagrammatic for...
+27. [Spider Diagrams](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S1461157000000942) - ...and communication. With rare exceptions such as Peirce’s $\alpha$ and $\beta$ systems, purely diagrammatic for...
 
 28. [Thinking Maps - Dr. Yvette Jackson • The Pedagogy of Confidence®](https://pedagogyofconfidence.net/thinking-maps/) - Thinking Maps® (Visual Tools). Thinking Maps®, created by David Hyerle, are consistent visual patter...
 

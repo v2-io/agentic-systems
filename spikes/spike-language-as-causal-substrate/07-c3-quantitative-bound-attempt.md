@@ -6,7 +6,7 @@
 
 ## What we already have (the partial yield)
 
-The directional asymmetry $K(L_{\text{forward}}) < K(L_{\text{reverse}})$ derives qualitatively under Janzing-Schölkopf 2010 ICM applied to discourse-structural mechanisms:
+The directional asymmetry $K(L_{\text{forward}}) \lt K(L_{\text{reverse}})$ derives qualitatively under Janzing-Schölkopf 2010 ICM applied to discourse-structural mechanisms:
 
 - Forward anaphora-licensing: pronouns resolve to already-introduced antecedents (constant-cost resolution).
 - Forward definite-article-licensing: definites refer to already-introduced entities (constant-cost resolution).
@@ -51,7 +51,7 @@ If $\mathcal{I}_c$ can be defined to recover this connection cleanly, the C3 qua
 
 The gap is the *definition of $\mathcal{I}_c(\mathcal D(T))$*. To close the bound, $\mathcal{I}_c$ must satisfy:
 
-**(P1) Operationally meaningful**: $\mathcal{I}_c(\mathcal D(T)) = 0$ when $\mathcal D(T)$ has no Level-2 edges (a text with no causal markers); $\mathcal I_c(\mathcal D(T)) > 0$ when Level-2 edges are present; $\mathcal I_c$ scales with the number and informational weight of Level-2 edges.
+**(P1) Operationally meaningful**: $\mathcal{I}_c(\mathcal D(T)) = 0$ when $\mathcal D(T)$ has no Level-2 edges (a text with no causal markers); $\mathcal I_c(\mathcal D(T)) \gt 0$ when Level-2 edges are present; $\mathcal I_c$ scales with the number and informational weight of Level-2 edges.
 
 **(P2) Pearl-hierarchy-corresponding**: $\mathcal I_c$ should reflect the Pearl-Level-2 content of $\mathcal D(T)$, not just its graph-topology. Two DAGs with the same topology but different Level-2 assertions (e.g., causal $A \to B$ vs purely-temporal $A$ before $B$) should have different $\mathcal I_c$ values.
 
@@ -60,8 +60,10 @@ The gap is the *definition of $\mathcal{I}_c(\mathcal D(T))$*. To close the boun
 **Closest existing candidate — directed information of the discourse-DAG**:
 
 Define
+
 $$\mathcal{I}_c(\mathcal D(T)) := \sum_{(u,v) \in E_2} I(v_t ; \text{do}(u_s) \,\big|\, \text{context}_s)$$
-where $(u_s, v_t)$ is the source-target pair of a Level-2 edge with $s < t$ in the text, $\text{do}(u_s)$ is the interventional conditional under the speaker's asserted SCM, and $\text{context}_s$ is everything established before position $s$.
+
+where $(u_s, v_t)$ is the source-target pair of a Level-2 edge with $s \lt t$ in the text, $\text{do}(u_s)$ is the interventional conditional under the speaker's asserted SCM, and $\text{context}_s$ is everything established before position $s$.
 
 This candidate satisfies (P1) and (P2) by construction. (P3) is the hard one: does this $\mathcal I_c$ actually bound the cross-entropy difference under any reasonable model class?
 

@@ -20,13 +20,13 @@ Read `02-tst-core/OUTLINE.md` before mining. Roughly:
 
 ## AAT machinery TST inherits (use these names, don't reinvent)
 
-- **Adaptive substrate.** $M_t$ (model), $\Omega_t$ (environment), $h$ (observation function), $U_o$ (observation noise), $U_M$ (model uncertainty), $\eta^\ast = U_M/(U_M + U_o)$ (Bayesian gain), $\mathcal T = \sum_k \nu^{(k)} \eta^{(k)\ast}$ (adaptive tempo), $\rho$ (disturbance rate), persistence inequality $\mathcal T > \rho/\lVert\delta_{\text{critical}}\rVert$.
+- **Adaptive substrate.** $M_t$ (model), $\Omega_t$ (environment), $h$ (observation function), $U_o$ (observation noise), $U_M$ (model uncertainty), $\eta^\ast = U_M/(U_M + U_o)$ (Bayesian gain), $\mathcal T = \sum_k \nu^{(k)} \eta^{(k)\ast}$ (adaptive tempo), $\rho$ (disturbance rate), persistence inequality $\mathcal T \gt \rho/\lVert\delta_{\text{critical}}\rVert$.
 - **Purposeful substate.** $G_t = (O_t, \Sigma_t)$. $\Sigma_t$ is a probabilistic causal DAG with AND/OR nodes and edge confidences.
 - **Pearl causal hierarchy.** Level 1 (observational), Level 2 ($do(\cdot)$ interventional), Level 3 (counterfactual). Software gives literal Level 3 access on code-internal questions; tests are reusable Level 2 probes with characterized $(\nu, U_o)$.
 - **Architecture classes (GUC).** Class 1: Separated (directed separation by construction); Class 2: Partial (bounded $\kappa_{\text{processing}}$); Class 3: Coupled (LLM-substrate; goal-blind belief update fails).
 - **Class-coercion via wrapping.** Constructive route from Class 3 component to Class 1 composite via external scaffold. W₀/W₁/W₂ regime hierarchy with structural-vs-behavioral leakage bounds.
 - **Composition machinery.** Closure defect $\varepsilon^\ast$, tempo composition (Brooks's Law), unity dimensions ($U_M, U_O, U_\Sigma, U_{\text{obs}}, U_f$), shared intent as IB-compressed purpose, Auftragstaktik bandwidth allocation, communication gain (trust-weighted update).
-- **Signed coupling.** Cooperative ($\gamma > 0$) and adversarial ($\gamma > 0$ with opposite sign) are the same machinery with opposite signs. Four-regime recipient-side classification:  
+- **Signed coupling.** Cooperative ($\gamma \gt 0$) and adversarial ($\gamma \gt 0$ with opposite sign) are the same machinery with opposite signs. Four-regime recipient-side classification:  
   Informative / magnitude-shock / structural-shock / ambient-noise.
 - **Agent opacity $H_b$.** Backward predictive uncertainty as dual of observation quality. Adversarial uses opacity; cooperative requires predictability.
 - **Meta-architecture patterns.** `#disc-identifiability-floor` (M1 — what cannot be recovered from observation alone, Sylvester's law), `#disc-separability-pattern` (M2), `#disc-additive-coordinate-forcing` (M3), and the unlanded M4 modularity-state-dynamics (truthification / strategic self-coupling / adversarial coupling pressure).
@@ -52,7 +52,7 @@ If an analysis identifies real structure that has no current TST or AAT home, th
 
 ### Class D — *evidence* or *empirical anchors* for existing TST claims
 
-The analyses sometimes carry empirical numbers (e.g., "α ≈ 0.118 from git analysis"; "circuit breaker ROI 23×"; "actor model reduces debugging complexity from $O(n^2)$ to $O(n)$"). These can serve as empirical anchors for hypothesis-tier segments awaiting validation. Useful but should be marked as analysis-claims-not-AAT-derived.
+The analyses sometimes carry empirical numbers (e.g., "$\alpha \approx 0.118$ from git analysis"; "circuit breaker ROI 23×"; "actor model reduces debugging complexity from $O(n^2)$ to $O(n)$"). These can serve as empirical anchors for hypothesis-tier segments awaiting validation. Useful but should be marked as analysis-claims-not-AAT-derived.
 
 ### What is NOT worth mining
 

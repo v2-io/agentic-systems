@@ -50,7 +50,7 @@ Following the structure of Lewis-Skyrms signalling games, instantiated for causa
 - $d_2(M_A, M_B')$: divergence between Level-2 (interventional) distributions, e.g. $\sup_X \text{KL}(P_{M_A}(Y | \text{do}(X)) \| P_{M_B'}(Y | \text{do}(X)))$
 - $d_3(M_A, M_B')$: divergence between Level-3 (counterfactual) distributions, e.g. $\sup_{X,Y} \text{KL}(P_{M_A}(Y_x | X', Y') \| P_{M_B'}(Y_x | X', Y'))$
 
-The weights $\lambda_1, \lambda_2, \lambda_3 > 0$ encode that agents care about all three levels (this is the substantive consequence of (SE2)).
+The weights $\lambda_1, \lambda_2, \lambda_3 \gt 0$ encode that agents care about all three levels (this is the substantive consequence of (SE2)).
 
 ---
 

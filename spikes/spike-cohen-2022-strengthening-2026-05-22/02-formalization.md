@@ -15,7 +15,9 @@ An agent $\mathcal A$ operating per AAT's Section II setup with:
 
 - $M_t$ — a model of the unknown environment;
 - $O_t$ — an objective whose value functional ( #form-objective-functional ) takes the form
+
   $$V_{O_t}(\tau) \;=\; \sum_{k} \gamma^{k}\,r_k \;[\,\text{or any other monotone reward-functional}\,]$$
+
   where $r_k$ is the *observed reward percept* at step $k$ along trajectory $\tau$;
 - $\Sigma_t$ — a strategy DAG generating actions;
 - under the orient cascade ( #der-orient-cascade ) and directed separation ( #der-directed-separation ), per the GUC Class 1 (Separated) or GUC Class 2 (Partial) substrate stage.
@@ -36,7 +38,9 @@ Both $\mu_{\text{dist}}$ and $\mu_{\text{prox}}$ define joint distributions over
 *[Derived (cht-at-reward-channel-floor, from Pearl-Bareinboim 2022 CHT applied to reward-provision-protocol intervention), **exact**]*
 
 **Claim.** On every history $\tau$ that does *not* contain a $do(\pi^{\text{rp}})$-intervention (i.e., on every on-policy history under which the reward-provision protocol is honored),
+
 $$P_{\mu_{\text{dist}}}(\tau) \;=\; P_{\mu_{\text{prox}}}(\tau).$$
+
 The two models are *Level-1-equivalent* on the on-policy reward marginal. They are *Level-2-distinct*: $P_{\mu_{\text{dist}}}(\,\cdot\, \mid do(\pi^{\text{rp}}))\;\neq\;P_{\mu_{\text{prox}}}(\,\cdot\, \mid do(\pi^{\text{rp}}))$ generically.
 
 **Derivation.** When the protocol is honored, the physical chain is: $\omega_k \to f^{\text{principal}}(\omega_k) \to \pi^{\text{rp}} \to \beta_k \to r_k$. By construction $\beta_k = f^{\text{principal}}(\omega_k)$ when the protocol is honored, so the marginals of $r_k$ under both models coincide. Pearl-Bareinboim CHT 2022 (Causal Hierarchy Theorem): there exist SCMs that agree on Level-1 data but disagree on Level-2 questions. The protocol-honored history is purely Level-1 with respect to $do(\pi^{\text{rp}})$-queries; the two models differ structurally on the upstream cause of $\beta_k$ (world-state feature $f^{\text{principal}}$ vs. bit-arrival mechanism $g$); $do(\pi^{\text{rp}})$ severs the world-state-to-bit-pattern arrow and exposes the disagreement. $\square$
@@ -62,6 +66,7 @@ Suppose:
 **Derivation sketch.**
 
 *Step (i) — value-of-experiment.* Define $\Delta(w) := \mathbb E_{w}\,V_{O_t}(\pi^{\text{tamper}}) - \mathbb E_w\,V_{O_t}(\pi^{\text{protocol-honoring}})$. Under (R2), $w$ has $w(\mu_{\text{prox}}) \in (0,1)$. Decompose:
+
 $$\Delta(w) \;=\; w(\mu_{\text{dist}})\bigl[V_{O_t}^{\mu_{\text{dist}}}(\pi^{\text{tamper}}) - V_{O_t}^{\mu_{\text{dist}}}(\pi^{\text{protocol-honoring}})\bigr] + w(\mu_{\text{prox}})\bigl[V_{O_t}^{\mu_{\text{prox}}}(\pi^{\text{tamper}}) - V_{O_t}^{\mu_{\text{prox}}}(\pi^{\text{protocol-honoring}})\bigr].$$
 
 Under $\mu_{\text{dist}}$, tampering breaks $\beta_k$'s correlation with $f^{\text{principal}}(\omega_k)$; the expected reward under $\mu_{\text{dist}}$ generally falls (or is bounded). Under $\mu_{\text{prox}}$, tampering replaces $\beta_k$ with a chosen value — the agent maximizes by choosing $\beta_k$ at its maximum; the expected reward rises to the protocol's saturation point.

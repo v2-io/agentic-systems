@@ -35,7 +35,9 @@ Both are statements about a *latent goal variable* reaching a *target* through a
 - **Designated channel**: $q_M$, the goal-blind query the wrapper *selects* (the wrapper controls the selection policy).
 - **Target**: $M_W$, the wrapper's belief, via the component response $A(q_M)$.
 - **Structural bound (holds under (C2′))**: along the Markov chain $G^{\text{op}} \to q_M \to A(q_M)$, the data-processing inequality (DPI) gives
+
 $$\kappa_{W_1}^{\text{sel}} = I\big(A(q_M);\, G^{\text{op}}\big) \le I\big(q_M;\, G^{\text{op}}\big).$$
+
 - **Failure mode**: hidden component state $S \not\perp G^{\text{op}}$ opens a *bypass* edge $G^{\text{op}} \to S \to A(q_M)$ that does not pass through $q_M$; the Markov chain breaks; the leak survives conditioning on $q_M$; $S$ is **unobservable** to the wrapper, so no wrapper-level bound is derivable. Behavioral monitoring of $I(A(q_M); G^{\text{op}}\mid q_M)$ is all that remains.
 
 ### 1.2 Action-side (bounded-signaling, from `#der-directed-separation` §Discussion)
@@ -44,7 +46,9 @@ $$\kappa_{W_1}^{\text{sel}} = I\big(A(q_M);\, G^{\text{op}}\big) \le I\big(q_M;\
 - **Designated channel**: $a_t = \pi(M_t, G_t)$, the discrete action, with coarseness $\lvert\mathcal A\rvert$.
 - **Target**: an external observer's inference $\hat G_t$ of the goal.
 - **Structural bound (holds under bounded-signaling)**: if the *only* externally-observable signal of $G_t$ is $a_t$, then along $G_t \to a_t \to \hat G_t$, DPI gives
+
 $$I\big(\hat G_t;\, G_t\big) \le I\big(a_t;\, G_t\big) \le H(a_t) \le \log\lvert\mathcal A\rvert.$$
+
 - **Failure mode**: a rich behavioral signature $B_t$ (prosody, latency, code-style, attention pattern) correlated with $G_t$ opens a *bypass* edge $G_t \to B_t \to \hat G_t$ that does not pass through $a_t$; the chain $G_t \to a_t \to \hat G_t$ is no longer the only path; the per-action-bit ceiling $\log\lvert\mathcal A\rvert$ no longer bounds the leak; $B_t$ is **not in the formal interface**, so the formal channel undercounts.
 
 ### 1.3 The alignment is exact on five of six structural slots

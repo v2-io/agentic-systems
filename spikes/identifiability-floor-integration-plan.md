@@ -67,7 +67,7 @@ The source segment `#deriv-observation-ambiguity-bias-bound:127` *already states
 
 **Tier:** *exact* in the linear-Gaussian / Kalman sub-scope ($\alpha_1$); *robust-qualitative* in the general sub-scope via CHT-at-agent-as-SCM. **NOT flat exact** — carry the sub-scope/general boundary consistently.
 
-**Fano vs Kalman-Ho.** The neutral-drift spike proposed Fano as the anchor; the resolution spike demonstrated Fano *degenerates at $I = 0$* (the similarity-orbit construction has $I(A; \text{obs}) = 0$ exactly, so Fano gives the vacuous bound). **Kalman-Ho is the exact-population anchor; Fano is the finite-sample refinement** (architectures close-but- not-equal, $I > 0$ small) and remains honest open work.
+**Fano vs Kalman-Ho.** The neutral-drift spike proposed Fano as the anchor; the resolution spike demonstrated Fano *degenerates at $I = 0$* (the similarity-orbit construction has $I(A; \text{obs}) = 0$ exactly, so Fano gives the vacuous bound). **Kalman-Ho is the exact-population anchor; Fano is the finite-sample refinement** (architectures close-but- not-equal, $I \gt 0$ small) and remains honest open work.
 
 ### 1.c Identity: Regime-C confound ≡ Object B (proved, not asserted)
 
@@ -368,7 +368,7 @@ The integration is *done* when all of the following hold:
 
 These are *real* follow-on directions surfaced by the resolution; they are honestly open and should not be pulled into this integration.
 
-- **Fano finite-sample refinement.** Architectures close-but-not-equal in innovation spectrum (where $I(A; \text{obs}) > 0$ small) admit a Fano-style bound — this is the *finite-sample* version of Object B's no-go, distinct from the *exact-population* Kalman-Ho anchor. Open research, not blocked by anything in this plan; left as a candidate spike for a future cycle.
+- **Fano finite-sample refinement.** Architectures close-but-not-equal in innovation spectrum (where $I(A; \text{obs}) \gt 0$ small) admit a Fano-style bound — this is the *finite-sample* version of Object B's no-go, distinct from the *exact-population* Kalman-Ho anchor. Open research, not blocked by anything in this plan; left as a candidate spike for a future cycle.
 
 - **Mechanism-design impossibility (Gibbard-Satterthwaite + Myerson-Satterthwaite + Arrow) as a separate Implementation- Impossibility meta-segment** (per row 14's flagged Joseph-reserved item, separate from this integration). The GS arm was tested in `spike-4th-identifiability-floor-instance-2026-05-20` and routed to `#disc-separability-pattern` general-open tier; M-S + Arrow remain Joseph-reserved for the broader Implementation-Impossibility question. Out of scope here.
 

@@ -63,7 +63,7 @@ Starting from the observation-channel-centric view Joseph sketched:
 
 **Observation**: This is a SINGLE loop, but it has a branch point at Epistrophe — the model correction both redirects attention (the meta-level) AND drives action (the object-level). The two outputs compete for resources.
 
-**Key causal claim**: Orientation → Observations is a causal link (changing where you look CAUSES different observations). This means the observation channel is not exogenous — it's endogenous to the agent's attentional state. AAT's scope condition treats 𝒪 ≠ ∅ as given, but the actual information content of 𝒪 depends on orientation.
+**Key causal claim**: Orientation → Observations is a causal link (changing where you look CAUSES different observations). This means the observation channel is not exogenous — it's endogenous to the agent's attentional state. AAT's scope condition treats $\mathcal{O}$ ≠ ∅ as given, but the actual information content of $\mathcal{O}$ depends on orientation.
 
 ---
 
@@ -142,7 +142,7 @@ This competition is itself a causal graph node — an action-selection point tha
 
 ## Version 3: The DAG With Strategy Sensitivity
 
-Adding the ∂Σ/∂M sensitivity that emerged in the evening conversation:
+Adding the $\partial\Sigma/\partial M$ sensitivity that emerged in the evening conversation:
 
 ```
                      ┌───────────┐
@@ -192,13 +192,13 @@ Adding the ∂Σ/∂M sensitivity that emerged in the evening conversation:
         └──────────┘ └──────────┘    └───────────────────────┘
 ```
 
-**The key causal chain for crisis**: Low attention in Region C → Low-fidelity observation → Large δ detected anyway → High ∂Σ/∂M (the strategy was sensitive to this region) → δ × ∂Σ/∂M exceeds threshold → Preempt task loop.
+**The key causal chain for crisis**: Low attention in Region C → Low-fidelity observation → Large $\delta$ detected anyway → High $\partial\Sigma/\partial M$ (the strategy was sensitive to this region) → $\delta \times \partial\Sigma/\partial M$ exceeds threshold → Preempt task loop.
 
-**DAG implication**: The product δ × ∂Σ/∂M is the *effective severity signal*. This is NOT just δ magnitude. A large δ in a low-sensitivity region is ignorable. A small δ in a high-sensitivity region is important. The severity depends on both the mismatch AND the strategy's dependence on that model region.
+**DAG implication**: The product $\delta \times \partial\Sigma/\partial M$ is the *effective severity signal*. This is NOT just $\delta$ magnitude. A large $\delta$ in a low-sensitivity region is ignorable. A small $\delta$ in a high-sensitivity region is important. The severity depends on both the mismatch AND the strategy's dependence on that model region.
 
-**But ∂Σ/∂M for Region C was UNKNOWN.** The agent assumed Region C was benign, so it never computed ∂Σ/∂M there. The sensitivity itself is a model quantity that requires attention to estimate. This creates a bootstrap problem: you need attention to know sensitivity, but you allocate attention based on sensitivity.
+**But $\partial\Sigma/\partial M$ for Region C was UNKNOWN.** The agent assumed Region C was benign, so it never computed $\partial\Sigma/\partial M$ there. The sensitivity itself is a model quantity that requires attention to estimate. This creates a bootstrap problem: you need attention to know sensitivity, but you allocate attention based on sensitivity.
 
-This is the formal version of "you don't know what you don't know." The stationarity assumption in unmonitored regions is an implicit claim that ∂Σ/∂M ≈ 0 there. When that claim is wrong, you get surprise.
+This is the formal version of "you don't know what you don't know." The stationarity assumption in unmonitored regions is an implicit claim that $\partial\Sigma/\partial M \approx 0$ there. When that claim is wrong, you get surprise.
 
 ---
 
@@ -285,13 +285,13 @@ Taking Joseph's hint about "epistrophic intent as a continual loop with its own 
 - **Strategic intent**: "What actions advance my plan?" (exploitation)
 - **Epistrophic intent**: "What actions improve my model?" (exploration/sentinel)
 
-This is AAT's CIY tradeoff, but drawn as a causal DAG rather than a single optimization. The λ parameter in the policy objective:
+This is AAT's CIY tradeoff, but drawn as a causal DAG rather than a single optimization. The $\lambda$ parameter in the policy objective:
 
     π*(M_t, G_t) = argmax [Q_O(...) + λ · CIY(a; M_t)]
 
 is essentially the resource allocation between these two intent systems. But drawn as a DAG, something becomes visible: **the two systems have different causal paths to action and different feedback paths from observation.** They're not just two terms in a sum — they're parallel causal structures that merge at the action node and split at the observation node.
 
-**Implication for directed separation**: The epistrophic intent loop is inherently goal-blind (it's driven by model quality, not by O_t). The strategic intent loop is inherently goal-driven (it's driven by Σ_t). If these are architecturally separate (different modules, different processing paths), directed separation is natural — the epistrophic loop processes observations without consulting goals. If they're architecturally merged (same attention mechanism, same processing path — as in a transformer), directed separation fails because the two intent systems share processing resources and contaminate each other.
+**Implication for directed separation**: The epistrophic intent loop is inherently goal-blind (it's driven by model quality, not by $O_t$). The strategic intent loop is inherently goal-driven (it's driven by $\Sigma_t$). If these are architecturally separate (different modules, different processing paths), directed separation is natural — the epistrophic loop processes observations without consulting goals. If they're architecturally merged (same attention mechanism, same processing path — as in a transformer), directed separation fails because the two intent systems share processing resources and contaminate each other.
 
 This is a causal-graph argument for WHY directed separation is architecture-dependent, not a universal property.
 
@@ -365,9 +365,9 @@ This is exactly the "adversarial aporia" spike from Gemini's review suggestion: 
 
 ## What Falls Out of These Graphs
 
-### 1. The bootstrap problem of ∂Σ/∂M in unmonitored regions
+### 1. The bootstrap problem of $\partial\Sigma/\partial M$ in unmonitored regions
 
-Version 3 reveals: you need attention to estimate sensitivity, but you allocate attention based on sensitivity. For unmonitored regions, ∂Σ/∂M is unknown, which means severity can't be computed until the signal is already detected. This suggests that sentinel monitoring should be **unconditional** (not gated by estimated sensitivity) but **low-bandwidth** (cheap enough to run everywhere). The severity computation happens AFTER the signal breaks through, not before.
+Version 3 reveals: you need attention to estimate sensitivity, but you allocate attention based on sensitivity. For unmonitored regions, $\partial\Sigma/\partial M$ is unknown, which means severity can't be computed until the signal is already detected. This suggests that sentinel monitoring should be **unconditional** (not gated by estimated sensitivity) but **low-bandwidth** (cheap enough to run everywhere). The severity computation happens AFTER the signal breaks through, not before.
 
 This is how the startle reflex works: it responds to statistical anomalies (sudden loud noise, unexpected movement) regardless of relevance. The relevance assessment happens AFTER the reflexive response (the cortex evaluates whether the startling stimulus was actually dangerous). The biology has separated *detection* (fast, unconditional, crude) from *evaluation* (slow, conditional, precise).
 
@@ -375,13 +375,13 @@ This is how the startle reflex works: it responds to statistical anomalies (sudd
 
 Version 4 reveals: if the epistrophic intent and strategic intent are architecturally separate (different processing paths), directed separation is natural. If they're merged, it fails. This is a causal-structural argument, not a scope condition — it's about the topology of the processing graph, not a parameter of the agent.
 
-For LLMs: the processing paths are merged (same attention mechanism). κ_processing is high by architectural necessity. For modular agents: the processing paths can be separate. κ_processing can be low by design. For biological agents: partially separate (thalamic monitoring is separate from cortical processing) but with extensive cross-talk.
+For LLMs: the processing paths are merged (same attention mechanism). $\kappa_{\text{processing}}$ is high by architectural necessity. For modular agents: the processing paths can be separate. $\kappa_{\text{processing}}$ can be low by design. For biological agents: partially separate (thalamic monitoring is separate from cortical processing) but with extensive cross-talk.
 
 ### 3. The severity signal is a product, not a sum
 
-Versions 3 and 5: severity = δ × ∂Σ/∂M. This is multiplicative. A large δ in an insensitive region = low severity. A small δ in a sensitive region = moderate severity. A large δ in a sensitive region = crisis.
+Versions 3 and 5: severity = $\delta \times \partial\Sigma/\partial M$. This is multiplicative. A large $\delta$ in an insensitive region = low severity. A small $\delta$ in a sensitive region = moderate severity. A large $\delta$ in a sensitive region = crisis.
 
-This product structure means the severity signal is zero whenever EITHER factor is zero. An agent with no strategy (∂Σ/∂M = 0 everywhere) never experiences urgency from model updates — it's a pure adaptive tracker. An agent with no mismatch (δ = 0 everywhere) never needs to reallocate attention — its prolepsis is perfect. Urgency requires both surprise AND strategic relevance.
+This product structure means the severity signal is zero whenever EITHER factor is zero. An agent with no strategy ($\partial\Sigma/\partial M = 0$ everywhere) never experiences urgency from model updates — it's a pure adaptive tracker. An agent with no mismatch ($\delta = 0$ everywhere) never needs to reallocate attention — its prolepsis is perfect. Urgency requires both surprise AND strategic relevance.
 
 ### 4. The competition for action space is causal, not just economic
 
@@ -409,17 +409,17 @@ This means the attention governance layer might not need NEW theory — it might
 
 ---
 
-## Implications for the κ Problem
+## Implications for the $\kappa$ Problem
 
-Drawing these causal graphs reframes the κ problem:
+Drawing these causal graphs reframes the $\kappa$ problem:
 
-**κ is not about a parameter of f_M.** It's about the **topology of the processing graph.** When the epistrophic path and the strategic path share causal infrastructure (same attention mechanism, same processing pipeline), κ_processing is high because the goal state is causally upstream of the observation processing. When they're separated (different modules, different data paths), κ_processing is low because the goal state is not causally connected to the observation processing.
+**$\kappa$ is not about a parameter of $f_M$.** It's about the **topology of the processing graph.** When the epistrophic path and the strategic path share causal infrastructure (same attention mechanism, same processing pipeline), $\kappa_{\text{processing}}$ is high because the goal state is causally upstream of the observation processing. When they're separated (different modules, different data paths), $\kappa_{\text{processing}}$ is low because the goal state is not causally connected to the observation processing.
 
 This suggests that the "right" approach to directed separation isn't to parameterize the coupling and bound the error. It's to **characterize which processing topologies admit separation and which don't**, and then develop the appropriate analytical tools for each topology class.
 
 For the laminar regime (separated topology): use the sequential cascade. Done. For the turbulent regime (merged topology): develop the coupled analysis. This is the hard work. For the mixed regime (partially separated): identify which boundaries are separated and which aren't, and apply the appropriate tool to each.
 
-The κ_processing measure from the operationalization spike would then be a DIAGNOSTIC — you measure it to determine which regime you're in, not to parameterize a perturbation expansion.
+The $\kappa_{\text{processing}}$ measure from the operationalization spike would then be a DIAGNOSTIC — you measure it to determine which regime you're in, not to parameterize a perturbation expansion.
 
 ---
 

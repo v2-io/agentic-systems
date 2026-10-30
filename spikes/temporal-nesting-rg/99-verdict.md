@@ -15,7 +15,7 @@ The brief (`00-brief.md` §6) sets two adoption criteria. Use the RG framing as 
 Read in the *clean theory and unification* frame, the relevant questions are:
 
 (a) Does the framing's core claim — AAT-shape preserved under coarse-graining — actually hold? (Not: is this novel.)  
-(b) Does the framing unify previously-separate pieces of AAT (temporal nesting + composite formation + directed-separation classification + (O, Σ) decomposition) into one structural picture?  
+(b) Does the framing unify previously-separate pieces of AAT (temporal nesting + composite formation + directed-separation classification + $(O,\Sigma)$ decomposition) into one structural picture?  
 (c) Are the prior frameworks AAT adopts from named clearly enough that someone reading the AAT treatment can pick up where Friston / Mehta-Schwab / Kline-Palmer / Chen-Goldenfeld-Oono left off?
 
 ## 2. Where each thread stands
@@ -25,7 +25,7 @@ Read in the *clean theory and unification* frame, the relevant questions are:
 Closed-form derivation in `01-rg-0a-two-kalman-Kc-extension.md` §2 + `01b` iterated analysis:
 
 - **Form preservation under $\Lambda$**: ✓ holds. The AAT-Kalman shape is preserved at every level of iterated coarse-graining. (A1)–(A4) are honored at the macro level by construction in the linear-Kalman case. **This is the core claim and it survives.**
-- **Heterogeneous Kalman flows to ε* = 0** at rate $(1 - K_\text{min}^*)^{K_c}$. Sufficient timescale separation absorbs structural sub-agent heterogeneity. The mechanism is clean: residual error lives in the projection's null space, which the macro-update structurally cannot access; that null-space contribution shrinks with $K_c$ as the slower filter's memory of the previous macro-boundary state decays.
+- **Heterogeneous Kalman flows to $\varepsilon^\ast = 0$** at rate $(1 - K_\text{min}^*)^{K_c}$. Sufficient timescale separation absorbs structural sub-agent heterogeneity. The mechanism is clean: residual error lives in the projection's null space, which the macro-update structurally cannot access; that null-space contribution shrinks with $K_c$ as the slower filter's memory of the previous macro-boundary state decays.
 - **Iterated parameter flow**: $\lambda \to \lambda^{K_c}$, monotone toward $\lambda = 0$ (memoryless / saturated-gain limit). No non-trivial scale-invariant fixed point in the linear-Kalman case.
 
 What this *clarifies*: AAT's RG analog is **structural-RG** (the form is preserved across scales) rather than **critical-RG** (the parameters sit at critical points). This matches the IB-RG literature (Mehta-Schwab 2014 / Kline-Palmer 2022 — both structural), the FEP-RG literature (Friston 2019 *JTB* / Friston 2025 RGM — both structural), and the Schwab-deep-learning correspondence (structural). It is honest scope.
@@ -50,15 +50,15 @@ Within this established frame, AAT's contributions take a synthesis form (per pr
 
 2. **Directed-separation classification as graded fixed-point types.** Friston's RG framing treats sparse-coupling as binary (system is renormalizable iff sparsely coupled). AAT's modular / partially modular / fully merged classification (Class 1 / 2 / 3) is the graded refinement. The Class 1 case sits at the form-preserved fixed point; Class 3 (LLMs / goal-conditioned agents) does not. *Conditional on Class-3 closure-defect analysis*, this becomes the order-parameter view.
 
-3. ~~**(O, Σ) recursion against a typed strategy DAG.**~~ **Demoted by RG-0c V2** to "structural observation that is constructible as typed options/MAXQ." The split survives recursion (differentiating from FEP-RG) but degenerately. Not load-bearing AAT-distinctive content; if mentioned, mention as integration with options/MAXQ literature, not as invention.
+3. ~~**$(O,\Sigma)$ recursion against a typed strategy DAG.**~~ **Demoted by RG-0c V2** to "structural observation that is constructible as typed options/MAXQ." The split survives recursion (differentiating from FEP-RG) but degenerately. Not load-bearing AAT-distinctive content; if mentioned, mention as integration with options/MAXQ literature, not as invention.
 
 4. **The persistence template as the per-scale form-preservation invariant.** `#result-sector-persistence-template` already says "applies at every level the template applies to." Reading this as the structural-RG-form-preservation statement — that the same Lyapunov inequality is the invariant under $\Lambda$ — clarifies *why* the template applies at every level rather than treating it as a coincidence across six instantiations.
 
-**Verdict on (b)**: ✓ The framing unifies cleanly. Temporal nesting (`#der-temporal-nesting`) becomes the time-axis projection of structural-RG depth. Composite formation (`#form-composition-closure`) becomes spatial coarse-graining. The persistence template's "applies at every level" becomes the form-preservation statement. Directed-separation classes become the graded form-preservation classification. The (O, Σ) recursion is *not* the strategy-side form-preservation — RG-0c determined that lifting it to a formal structure produces typed-options/MAXQ, which is integration content (worth citing if developed) rather than load-bearing.
+**Verdict on (b)**: ✓ The framing unifies cleanly. Temporal nesting (`#der-temporal-nesting`) becomes the time-axis projection of structural-RG depth. Composite formation (`#form-composition-closure`) becomes spatial coarse-graining. The persistence template's "applies at every level" becomes the form-preservation statement. Directed-separation classes become the graded form-preservation classification. The $(O,\Sigma)$ recursion is *not* the strategy-side form-preservation — RG-0c determined that lifting it to a formal structure produces typed-options/MAXQ, which is integration content (worth citing if developed) rather than load-bearing.
 
-### 2.3 RG-0c — (O, Σ) recursion check
+### 2.3 RG-0c — $(O,\Sigma)$ recursion check
 
-(c) **Returned: V2.** Per `03-rg-0c-strategy-recursion.md`, the naive (O, Σ) recursion is *explicitly forbidden* by the segments as written. `#def-strategy-dag` says verbatim: *"$O_t$ itself lives outside $\Sigma_t$; the terminal conditions are $\Sigma_t$'s internal encoding of what $O_t$ requires."* `#def-strategy-dimension` flags conflation of O and Σ as *"a type error"* AAT was built to fix. Recursing the (O, Σ) split at sub-levels reintroduces that type error.
+(c) **Returned: V2.** Per `03-rg-0c-strategy-recursion.md`, the naive $(O,\Sigma)$ recursion is *explicitly forbidden* by the segments as written. `#def-strategy-dag` says verbatim: *"$O_t$ itself lives outside $\Sigma_t$; the terminal conditions are $\Sigma_t$'s internal encoding of what $O_t$ requires."* `#def-strategy-dimension` flags conflation of $O$ and $\Sigma$ as *"a type error"* AAT was built to fix. Recursing the $(O,\Sigma)$ split at sub-levels reintroduces that type error.
 
 The strengthening attempt (per project discipline): lift each internal node to a tuple $(O'_v, \Sigma'_v, M'_v)$ with indicator-functional $V_{O'_v}(\tau) = \mathbb{1}[C_v(\tau)]$. This *makes the recursion formal* — (R1)–(R3) all satisfiable — but degenerate:
 - The diagnostic apparatus collapses to Boolean at sub-levels.
@@ -66,21 +66,21 @@ The strengthening attempt (per project discipline): lift each internal node to a
 - The temporal-nesting connection the brief wanted does not transfer through this extension.
 - The resulting structure is a **typed version of options / MAXQ** — integration content, not invention content (Sutton-Precup-Singh 1999, Dietterich 2000, Ravindran-Barto 2004, Abel et al. 2020).
 
-The split between O and Σ does survive recursion (differentiating from FEP-RG where free energy plays both roles), but in a degenerate indicator-functional form whose operational content lives only at the agent root.
+The split between O and $\Sigma$ does survive recursion (differentiating from FEP-RG where free energy plays both roles), but in a degenerate indicator-functional form whose operational content lives only at the agent root.
 
-**Verdict on (c)**: V2. The (O, Σ) recursion is the *weakest* of the three remaining AAT-distinctive synthesis candidates. Not load-bearing.
+**Verdict on (c)**: V2. The $(O,\Sigma)$ recursion is the *weakest* of the three remaining AAT-distinctive synthesis candidates. Not load-bearing.
 
 ## 3. The honest synthesis
 
 ### 3.1 What survives
 
-**The structural-RG framing as a unifying lens for AAT.** Form-preservation under coarse-graining (a) explains why (A1)–(A4) demand what they demand, (b) gives the persistence template's "applies at every level" claim a structural ground, (c) collapses temporal nesting and composite formation into one operation viewed from different axes, (d) clarifies that directed-separation classes are *form-preservation classes*, and (e) — pending RG-0c — gives the (O, Σ) decomposition a recursive reading.
+**The structural-RG framing as a unifying lens for AAT.** Form-preservation under coarse-graining (a) explains why (A1)–(A4) demand what they demand, (b) gives the persistence template's "applies at every level" claim a structural ground, (c) collapses temporal nesting and composite formation into one operation viewed from different axes, (d) clarifies that directed-separation classes are *form-preservation classes*, and (e) — pending RG-0c — gives the $(O,\Sigma)$ decomposition a recursive reading.
 
-The framing does *all five* of these without claiming first-mover novelty. It adopts the FEP-RG / IB-RG / singular-perturbation-RG infrastructure cleanly, with citations. AAT-specific synthesis content is the bridge lemma in flow-distance language, the graded directed-separation classification, and (O, Σ) recursion (pending).
+The framing does *all five* of these without claiming first-mover novelty. It adopts the FEP-RG / IB-RG / singular-perturbation-RG infrastructure cleanly, with citations. AAT-specific synthesis content is the bridge lemma in flow-distance language, the graded directed-separation classification, and $(O,\Sigma)$ recursion (pending).
 
 ### 3.2 What was overclaim
 
-The first-cut framing's *strong-form* version (RG with non-trivial scale-invariant fixed points, critical exponents, β-functions) is not warranted by the linear-Kalman test. The brief's "irrelevant/relevant operator separation" prediction was overconfident; heterogeneity is irrelevant under $K_c$-flow on this case. The corrected framing is structural-RG, in line with FEP-RG and IB-RG, and that's enough.
+The first-cut framing's *strong-form* version (RG with non-trivial scale-invariant fixed points, critical exponents, $\beta$-functions) is not warranted by the linear-Kalman test. The brief's "irrelevant/relevant operator separation" prediction was overconfident; heterogeneity is irrelevant under $K_c$-flow on this case. The corrected framing is structural-RG, in line with FEP-RG and IB-RG, and that's enough.
 
 ### 3.3 What clarification this gives existing AAT content
 
@@ -92,11 +92,11 @@ Several existing pieces become legibly *one structure* under the framing:
 | (A1)–(A4) of `#form-composition-closure` | Form-preservation conditions: macro must itself be AAT. |
 | `#result-sector-persistence-template` | The per-scale form-preservation invariant — same Lyapunov inequality at every level. |
 | `#der-temporal-nesting` | Time-axis projection of structural-RG depth; the 5-level table is the depth hierarchy. |
-| Closure-defect ε* | Distance from the form-preserved ideal at the chosen scale. |
+| Closure-defect $\varepsilon^\ast$ | Distance from the form-preserved ideal at the chosen scale. |
 | Bridge lemma | Control-theoretic flow-distance bound on this distance. |
 | Directed-separation classes | Form-preservation classes: Class 1 preserves AAT-shape under $\Lambda$, Class 3 does not. (Pending Class-3 closure-defect analysis to land as derived rather than suggestive — Move F.) |
 | Hafez meta-machine ($\varepsilon^* = 0$ exactly) | Exact discrete instance: form-preservation is exact for finite-state product automata. |
-| Brooks's Law (`#der-tempo-composition`) | Coordination overhead = tempo cost of finite ε* (departure from form-preservation). |
+| Brooks's Law (`#der-tempo-composition`) | Coordination overhead = tempo cost of finite $\varepsilon^\ast$ (departure from form-preservation). |
 
 This table itself is the clean-theory-and-unification payoff of the framing. None of these readings overclaim. All adopt established FEP-RG / IB-RG terminology cleanly.
 
@@ -104,7 +104,7 @@ This table itself is the clean-theory-and-unification payoff of the framing. Non
 
 ### 4.1 Adopt the framing with proper citation
 
-Use structural-RG / form-preservation as the unifying organizational lens for AAT's composition + nesting material. Cite Friston 2019/2025 + IB-RG (Mehta-Schwab, Kline-Palmer) + singular-perturbation-RG (Chen-Goldenfeld-Oono) + recursive-blankets (Kirchhoff 2018) as the substrate; position AAT's content as integration (closure-defect bridge bound, graded directed-separation, (O, Σ) recursion) within that frame.
+Use structural-RG / form-preservation as the unifying organizational lens for AAT's composition + nesting material. Cite Friston 2019/2025 + IB-RG (Mehta-Schwab, Kline-Palmer) + singular-perturbation-RG (Chen-Goldenfeld-Oono) + recursive-blankets (Kirchhoff 2018) as the substrate; position AAT's content as integration (closure-defect bridge bound, graded directed-separation, $(O,\Sigma)$ recursion) within that frame.
 
 The framing should appear in:
 - Discussion sections of `#disc-composition-consistency` and `#form-composition-closure` — name the form-preservation reading explicitly, cite the substrate work.
@@ -133,18 +133,18 @@ The framing should appear in:
 Only the *overclaim* aspects:
 
 - "AAT as the RG of agency" or similar first-mover-novelty framing.
-- "Critical-RG" language (β-functions, critical exponents, fixed-point flow) — not warranted by the linear-Kalman analysis.
+- "Critical-RG" language ($\beta$-functions, critical exponents, fixed-point flow) — not warranted by the linear-Kalman analysis.
 - "Relevant/irrelevant operator" classification *as a load-bearing claim* — the linear-Kalman case showed everything is irrelevant, contra the brief's first-cut prediction. Could revisit if a richer case shows different behavior.
 
 The structural-RG / form-preservation reading itself is *not* dropped; it's adopted as a clarifying lens with proper citation.
 
 ## 5. Cross-checks against project disciplines
 
-- **Strengthen-before-softening**. Did I attempt to strengthen the framing before softening? Yes — `01b` was the strengthening attempt for the strong-form RG claim, and it failed cleanly (no non-trivial parameter fixed point in linear-Kalman). The order-parameter framing was attempted in `01` and is now flagged as "suggestive, requires Class-3 test." The (O, Σ) recursion is in flight. The form-preservation reading itself didn't need strengthening — the test confirmed it.
+- **Strengthen-before-softening**. Did I attempt to strengthen the framing before softening? Yes — `01b` was the strengthening attempt for the strong-form RG claim, and it failed cleanly (no non-trivial parameter fixed point in linear-Kalman). The order-parameter framing was attempted in `01` and is now flagged as "suggestive, requires Class-3 test." The $(O,\Sigma)$ recursion is in flight. The form-preservation reading itself didn't need strengthening — the test confirmed it.
 
-- **Prior-art integration discipline**. *"AAT's contribution is integration, not invention."* The revised verdict follows this cleanly — adopt FEP-RG / IB-RG / singular-perturbation-RG as substrate, position AAT's content as the synthesis (control-theoretic bridge bound, graded directed-separation, (O, Σ) recursion). The first draft of this file lost track of this discipline; the revision restores it.
+- **Prior-art integration discipline**. *"AAT's contribution is integration, not invention."* The revised verdict follows this cleanly — adopt FEP-RG / IB-RG / singular-perturbation-RG as substrate, position AAT's content as the synthesis (control-theoretic bridge bound, graded directed-separation, $(O,\Sigma)$ recursion). The first draft of this file lost track of this discipline; the revision restores it.
 
-- **Honest epistemic labels**. The structural-RG framing is at "Pattern-leaning-Tested" on the epistemic ladder — form-preservation is verified in the simple case; the unification across existing segments is a structural reading, not a derivation. The AAT-distinctive synthesis content (bridge lemma in flow-distance language, graded directed-separation, (O, Σ) recursion) carries its own per-piece tier labels.
+- **Honest epistemic labels**. The structural-RG framing is at "Pattern-leaning-Tested" on the epistemic ladder — form-preservation is verified in the simple case; the unification across existing segments is a structural reading, not a derivation. The AAT-distinctive synthesis content (bridge lemma in flow-distance language, graded directed-separation, $(O,\Sigma)$ recursion) carries its own per-piece tier labels.
 
 - **Worthiness lens** (CLAUDE.md §How You Review Your Own Work). Is this worthy of future readers? Yes — the framing makes (A1)–(A4) legible as form-preservation rather than as an ad-hoc admissibility checklist; the persistence template's "applies at every level" gets a structural ground; the directed-separation classification gets a clean reading. Clean theory and unification benefits accrue to every future agent reading the segments.
 
@@ -156,7 +156,7 @@ The "AAT as RG" framing tested out as **structural-RG / form-preservation, not c
 
 Recommended path: **Moves A, B, C, D in §4.2** as the immediate work. Move E gated on RG-0c. Move F as a separate spike if the directed-separation order-parameter view is something you want to develop independently of the RG framing. The unification value (§3.3 table) is the centerpiece — a meta-segment or appendix laying out the structural reading of existing AAT content under form-preservation cites the substrate work cleanly and shows what AAT adds.
 
-If RG-0c lands V1 or V2, Move E becomes a clean strategy-DAG-side instance of the form-preservation principle. If it lands V3, drop the (O, Σ) recursion as a load-bearing claim but keep everything else.
+If RG-0c lands V1 or V2, Move E becomes a clean strategy-DAG-side instance of the form-preservation principle. If it lands V3, drop the $(O,\Sigma)$ recursion as a load-bearing claim but keep everything else.
 
 **My judgment, revised**: this is a clean unification move with the substrate work properly named. It improves AAT's structural legibility without overclaiming. Worth pursuing.
 
@@ -164,7 +164,7 @@ If RG-0c lands V1 or V2, Move E becomes a clean strategy-DAG-side instance of th
 - Form-preservation framing → ✓ holds, adopt with Friston 2019/2025/IB-RG/Chen-Goldenfeld-Oono citations.
 - Bridge-lemma as flow-distance synthesis → ✓ AAT-distinctive (Move A or its own segment-level work).
 - Directed-separation as graded form-preservation classification → ✓ AAT-distinctive *conditional on Move F*.
-- (O, Σ) recursion as strategy-side form-preservation → ✗ degenerate / equivalent to typed options-MAXQ; defer entirely (RG-0c V2).
+- $(O,\Sigma)$ recursion as strategy-side form-preservation → ✗ degenerate / equivalent to typed options-MAXQ; defer entirely (RG-0c V2).
 
 Two of three AAT-distinctive synthesis pillars survive. The third drops cleanly via the project's prior-art-integration discipline (cite, don't claim).
 
@@ -173,8 +173,8 @@ Two of three AAT-distinctive synthesis pillars survive. The third drops cleanly 
 ## File index (final)
 
 - `00-brief.md` — original framing. Some predictions in it (relevant/irrelevant separation, critical-RG fixed points) are now refined; the form-preservation reading and unification claim are validated.
-- `01-rg-0a-two-kalman-Kc-extension.md` — Case B closed form. ε* → 0 under $K_c$-flow at rate $(1-K_\text{min}^*)^{K_c}$.
+- `01-rg-0a-two-kalman-Kc-extension.md` — Case B closed form. $\varepsilon^\ast \to 0$ under $K_c$-flow at rate $(1-K_\text{min}^*)^{K_c}$.
 - `01b-rg-0a-iterated-coarse-graining.md` — parameter flow has only degenerate fixed point in linear Kalman; structural-RG framing supported, critical-RG framing dropped.
 - `02-prior-art-rg-ib-fep.md` — V2: substantial prior art on form-preservation (Friston, Mehta-Schwab, Kline-Palmer, Chen-Goldenfeld-Oono); AAT integrates with citation.
-- `03-rg-0c-strategy-recursion.md` — V2 returned. Naive (O, Σ) recursion forbidden by `#def-strategy-dag`/`#def-strategy-dimension`; minimal-extension recursion is constructible but degenerate / equivalent to typed options-MAXQ. Not load-bearing.
+- `03-rg-0c-strategy-recursion.md` — V2 returned. Naive $(O,\Sigma)$ recursion forbidden by `#def-strategy-dag`/`#def-strategy-dimension`; minimal-extension recursion is constructible but degenerate / equivalent to typed options-MAXQ. Not load-bearing.
 - `99-verdict.md` — this file. Final.

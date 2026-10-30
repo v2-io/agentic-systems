@@ -57,7 +57,7 @@ Performed inline (2026-05-22) — the relevant findings:
 - `ref/Prior_art_for_AAT_directed_separation.md` covers the active-inference / Friston / Pearl-blanket-vs-Friston-blanket territory comprehensively (Pillar-style search already done as part of the directed-separation segment's prior-art landing). The typology's compositional process-form-at-all-stages case is recognized in this literature as the unified variational machinery's default; the *partial-separation sub-typology* is not covered.
 - `ref/Prior_art_for_unified_agency_theories.md` covers the unified-agency landscape (active inference, control-as-inference, information-theoretic bounded rationality). Same coverage as above on the variational unification side; no coverage of the sub-typology question.
 - Motivated-reasoning / identity-economics / dual-process / self-deception literatures are *not* in AAT's `ref/`. These are the genuinely-unsearched candidate literatures for the typology's specific contributions.
-- `ref/Novelty_defense_and_integration.md` Pillar verdicts cover the directed-separation classification (Pillar-3 *Wholly Novel* Medium) and the κ×$\mathcal{A}$ law downstream — but not the sub-typology this spike develops.
+- `ref/Novelty_defense_and_integration.md` Pillar verdicts cover the directed-separation classification (Pillar-3 *Wholly Novel* Medium) and the $\kappa \times \mathcal{A}$ law downstream — but not the sub-typology this spike develops.
 
 **Sharpened sub-spike scope (post-local-scan).** The Pillar search for the typology should focus on:
 

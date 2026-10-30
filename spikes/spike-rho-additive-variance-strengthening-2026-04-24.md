@@ -273,7 +273,7 @@ The brief calls out: *is there an axiom on disturbance decomposition that forces
 
 **Axiom candidate (disturbance-additivity-under-independent-contributions).** *If the environment, model class, and policy contribute to the effective disturbance rate through statistically independent channels (no mediation, no cross-coupling), then the disturbance rate's second moment decomposes additively across these three sources.*
 
-**AAT-internal motivation.** Adjacent to `#der-chain-confidence-decay`'s structure: the chain layer's additivity is forced by the probability chain rule applied to the product form $P(\text{chain}) = \prod P(E_i \mid E_{<i})$. The disturbance-additivity candidate would be motivated by the *variance-additivity of independent noise sources* — a mathematical identity in probability (Bienaymé 1853) that does not require AAT-internal structure.
+**AAT-internal motivation.** Adjacent to `#der-chain-confidence-decay`'s structure: the chain layer's additivity is forced by the probability chain rule applied to the product form $P(\text{chain}) = \prod P(E_i \mid E_{\lt i})$. The disturbance-additivity candidate would be motivated by the *variance-additivity of independent noise sources* — a mathematical identity in probability (Bienaymé 1853) that does not require AAT-internal structure.
 
 ### 5.2 What this axiom forces
 

@@ -72,7 +72,7 @@ High-risk, high-reward directions pushing the boundaries of AAT further into phy
 
 ### 12. Effects-Spiral eigenvalue condition — derivation for concrete AAT agent classes (Phase-1-grade)
 *   **The Gap:** The joint-Jacobian spectral-abscissa instability condition $\max_{\pi^\ast}\mathrm{Re}\,\lambda_{\max}(\nabla F(\pi^\ast))\gt0$ is only *sketched* in `#deriv-strategic-composition` Discussion, keeping `#der-adversarial-destabilization`'s effects-spiral at discussion-grade.
-*   **The Spike:** Derive it in closed form for two named instances — two Beta-Bernoulli agents on a shared DAG, and two Kalman agents with coupled observations — upgrading the spiral to `derived`. Distinct from the Φ(fight) C1 energy-bound route, which made the $\gamma_A(\lVert\delta_B\rVert)$ leg *unnecessary* via budget-depletion and is explicitly **not** a resolution of the joint-Jacobian problem (INDEX 2026-05-19).
+*   **The Spike:** Derive it in closed form for two named instances — two Beta-Bernoulli agents on a shared DAG, and two Kalman agents with coupled observations — upgrading the spiral to `derived`. Distinct from the Φ(fight) C1 energy-bound route, which made the $\gamma_A(\lVert\delta_B\rVert)$ leg *unnecessary* via budget-depletion and is explicitly **not** a resolution of the joint-Jacobian problem (INDEX 2026-05-19).<!--md-press:not-math:Φ(fight)-->
 *   **Status:** Open; unhomed. Repair-shaped; medium-high tractability.
 
 ### 13. Game-theoretic formalization of the modularity → strategic-asymmetry claim (Phase-1/2 boundary)

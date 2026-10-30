@@ -94,7 +94,7 @@ The axis is the difference $\mathbf{d}^{\text{dir}} = \mathbf{e}(T_{\to}^{XY}) -
 
 **Ground-truth grading**: ordinal modal-strength labels {1, 2, 3, 4, 5} based on standard modal-logic accessibility-relation ordering. *Anchorable to existing psychometric work*: the existing embeddings-paper modal axis (Mosteller-grounded for "certainly / probably / possibly") gives a natural scale anchor.
 
-**Predicted result**: ordinal recovery of modal strength with $\rho > 0.85$, cross-architecture robust. Connects directly to the existing embeddings-paper modal-adverb axis.
+**Predicted result**: ordinal recovery of modal strength with $\rho \gt 0.85$, cross-architecture robust. Connects directly to the existing embeddings-paper modal-adverb axis.
 
 ### Axis C — Cause-vs-temporal axis
 

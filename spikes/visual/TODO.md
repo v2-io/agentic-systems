@@ -25,7 +25,7 @@ Actionable next steps. Grouped by category, not strictly ordered (some items dep
 
 - **Architecture-class three-panel.** Class 1 / Class 2 / Class 3 panels using the driver-in-snow scenario, each showing the agent's information flow with different coupling levels. This is the *pedagogical breakthrough* from the 2026-05-15 brainstorming and has not yet been visualized. Probably the highest-impact next figure after the bathtub v3.
 - **Concept map of the certificate spine + four facets.** The visual companion to `#disc-stability-certificate`. Higher-level than the existing `dep-graph-*.svg`. Not yet sketched.
-- **Worked-example panel — persistence in driving.** The persistence inequality $\alpha > \rho/R$ instantiated for the driving case, alongside the bathtub. Probably a small panel rather than a full figure.
+- **Worked-example panel — persistence in driving.** The persistence inequality $\alpha \gt \rho/R$ instantiated for the driving case, alongside the bathtub. Probably a small panel rather than a full figure.
 
 ### Priority 3 — apply the framework to existing img/
 

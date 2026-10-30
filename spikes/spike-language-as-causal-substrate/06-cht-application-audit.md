@@ -45,13 +45,13 @@ Working only at the event-variable level $V = \{\text{boil}, \text{whistle}\}$.
 
 **$T_B$'s commitment**:
 
-- Both events occurred. So the marginal that the speaker is committed to is $P(\text{boil} = 1, \text{whistle} = 1) > 0$. (How much greater than 0 depends on speaker reliability and conversational context; for cooperative truthful speakers, near 1.)
-- An interventional commitment via "causing": $P(\text{whistle} = 1 \mid \text{do}(\text{boil} = 1)) > P(\text{whistle} = 1 \mid \text{do}(\text{boil} = 0))$. Intervening to make the water boil produces whistling; intervening to prevent boiling prevents (or reduces probability of) whistling.
+- Both events occurred. So the marginal that the speaker is committed to is $P(\text{boil} = 1, \text{whistle} = 1) \gt 0$. (How much greater than 0 depends on speaker reliability and conversational context; for cooperative truthful speakers, near 1.)
+- An interventional commitment via "causing": $P(\text{whistle} = 1 \mid \text{do}(\text{boil} = 1)) \gt P(\text{whistle} = 1 \mid \text{do}(\text{boil} = 0))$. Intervening to make the water boil produces whistling; intervening to prevent boiling prevents (or reduces probability of) whistling.
 
 **$T_D$'s commitment**:
 
 - Both events occurred. Same marginal commitment.
-- An interventional commitment via "causing" in the opposite direction: $P(\text{boil} = 1 \mid \text{do}(\text{whistle} = 1)) > P(\text{boil} = 1 \mid \text{do}(\text{whistle} = 0))$. Intervening on whistling affects boiling.
+- An interventional commitment via "causing" in the opposite direction: $P(\text{boil} = 1 \mid \text{do}(\text{whistle} = 1)) \gt P(\text{boil} = 1 \mid \text{do}(\text{whistle} = 0))$. Intervening on whistling affects boiling.
 
 The Level 1 marginal $P(\text{boil}, \text{whistle})$ is the same in both cases (both events with high probability). The Level 2 interventional content is *opposite-directed* between $T_B$ and $T_D$.
 

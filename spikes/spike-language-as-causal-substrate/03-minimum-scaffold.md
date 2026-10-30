@@ -72,9 +72,9 @@ There are two readings:
 The two readings are **complementary**:
 
 - Reading 1 sets the floor: training-encoded Level 2 content is available to any sufficiently expressive structural parser, including primitive logogenic agents pre-loop.
-- Reading 2 adds the ceiling: fresh Level 2 content requires a loop, and the loop's contribution is bounded by intervention-channel quality (the AAT κ × 𝒜 machinery).
+- Reading 2 adds the ceiling: fresh Level 2 content requires a loop, and the loop's contribution is bounded by intervention-channel quality (the AAT $\kappa \times \mathcal{A}$ machinery).
 
-The full picture: **logogenic agents at any sub-scope have training-encoded Level 2 content (Reading 1's floor) plus fresh-Level-2 content from whichever loops they participate in (Reading 2's ceiling)**. The framing is additive: the inherited part is fixed at training time; the fresh part accumulates per session, attenuated by κ × 𝒜.
+The full picture: **logogenic agents at any sub-scope have training-encoded Level 2 content (Reading 1's floor) plus fresh-Level-2 content from whichever loops they participate in (Reading 2's ceiling)**. The framing is additive: the inherited part is fixed at training time; the fresh part accumulates per session, attenuated by $\kappa \times \mathcal{A}$.
 
 This is the **sharpened AAT position on logogenic agents and Pearl's hierarchy**. The earlier framing in `msc/llm-causal-access-note.md` lumped these two contributions together as "the loop gives Level 2"; the spike's contribution is to split them and quantify each independently.
 

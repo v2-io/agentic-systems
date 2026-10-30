@@ -1,4 +1,4 @@
-# RG-0a: Two-Kalman Closure Defect under Timescale Ratio $K_c > 1$
+# RG-0a: Two-Kalman Closure Defect under Timescale Ratio $K_c \gt 1$
 
 **Status**: in progress — Case B (heterogeneous steady state) derived; Case A (homogeneous transient) and the iterated-coarse-graining test are open.  
 **Date opened**: 2026-05-09 **Depends on**: `00-brief.md`, `spikes/spike-composition-correlated-kalman.md`, `#form-composition-closure`, `#example-kalman`, `#der-temporal-nesting`.
@@ -150,8 +150,10 @@ The key quantity is $\tilde\lambda_{K_c}^2$:
 
 - **At $K_c = 1$**: $\tilde\lambda_1 = (\lambda_1 - \lambda_2)/2 = -(\Delta K^*/2)$, where $\Delta K^* = K_1^* - K_2^*$. Then $\tilde\lambda_1^2 = (\Delta K^*/2)^2$. This recovers the $K_c = 1$ formula in `#form-composition-closure` Working Notes: $\varepsilon_x^2 \propto (\Delta K^*/2)^2$.
 - **At $K_c \to \infty$**: both $\lambda_i^{K_c} \to 0$ since $\lambda_i \in (0, 1)$. Hence $\tilde\lambda_{K_c} \to 0$. The defect goes to zero.
-- **Asymptotic rate**: assuming WLOG $\lambda_1 > \lambda_2$ (the larger memory factor / smaller gain dominates),
+- **Asymptotic rate**: assuming WLOG $\lambda_1 \gt \lambda_2$ (the larger memory factor / smaller gain dominates),
+
   $$\tilde\lambda_{K_c} = \frac{\lambda_1^{K_c} - \lambda_2^{K_c}}{2} \sim \frac{\lambda_1^{K_c}}{2} \quad \text{as } K_c \to \infty$$
+
   so the closure defect decays at rate $\lambda_1^{K_c} = (1 - K_\text{min}^*)^{K_c}$ — the **slower filter's persistence factor**.
 
 ### 2.7 Verdict for Case B
@@ -189,7 +191,7 @@ Candidates for genuinely relevant operators (perturbations that resist $K_c$-flo
 
 1. **World non-stationarity at timescale $\sim K_c$.** If $\omega_t$ itself drifts on the macro-timescale, no aggregation can summarize the window — this would survive $K_c \to \infty$. (Outside Case B's stationary setup.)
 2. **Asymmetric $\Lambda_o$**. Allowing observation aggregations that access $X_-$-direction information reduces $\varepsilon^*$ further but breaks the symmetry that defined the projection — *not* the same operation at higher scale. This may be a marker of non-self-similarity.
-3. **Purposeful sub-state ($G_t$).** Case B is $M_t$-only. Strategy-DAG sub-agents with different objectives produce structural mismatches in the goal direction, where the projection's "averaging" is more delicate. The Beta-Bernoulli case in `spikes/spike-composition-correlated-kalman.md` Part 2 has $\varepsilon^* > 0$ at $K_c = 1$; whether it remains $> 0$ under $K_c$-flow is the natural follow-up.
+3. **Purposeful sub-state ($G_t$).** Case B is $M_t$-only. Strategy-DAG sub-agents with different objectives produce structural mismatches in the goal direction, where the projection's "averaging" is more delicate. The Beta-Bernoulli case in `spikes/spike-composition-correlated-kalman.md` Part 2 has $\varepsilon^* \gt 0$ at $K_c = 1$; whether it remains $\gt 0$ under $K_c$-flow is the natural follow-up.
 4. **Coupling structure that scales with $N$**. The two-agent case may be too simple to expose RG-relevant operators; many-agent systems with non-trivial coupling topology may show fixed-point structure that two-agent collapses.
 5. **Iterated coarse-graining.** The proper RG test is to apply $\Lambda$ repeatedly: composite-of-composites and check whether parameters flow to a fixed point or run away. The single-step test in this section is a special case.
 

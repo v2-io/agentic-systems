@@ -175,4 +175,4 @@ The W₁ / W₂ distinction is the central content. It explains why the strict w
 - Theorem statement (depended on): `01-theorem-statement.md`
 - Admissibility: `02-admissibility.md`
 - Empirical instances (cited): `06-empirical-instances.md`
-- ε* semantics (next): `04-epsilon-semantics.md`
+- $\varepsilon^\ast$ semantics (next): `04-epsilon-semantics.md`

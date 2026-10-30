@@ -1,4 +1,4 @@
-# RG-0c: (O, Σ) Recursion Check Against Formal Definitions
+# RG-0c: $(O,\Sigma)$ Recursion Check Against Formal Definitions
 
 **Status**: derived — verdict V2/V3 boundary, leaning V3 with a constructive V2-rescue path documented.  
 **Date**: 2026-05-09 **Brief**: `00-brief.md` §5 RG-0c.  
@@ -8,7 +8,7 @@
 
 ## 0. The question, sharpened
 
-The naive "fractal of agents" reading: an internal Σ-node represents "achieve condition $C_v$"; achieving $C_v$ is itself an objective; the sub-DAG below that node is a strategy for that sub-objective; so $(O, \Sigma)$ at depth 0 decomposes into $\{(O'_i, \Sigma'_i)\}$ at depth 1, and so on to action leaves.
+The naive "fractal of agents" reading: an internal $\Sigma$-node represents "achieve condition $C_v$"; achieving $C_v$ is itself an objective; the sub-DAG below that node is a strategy for that sub-objective; so $(O, \Sigma)$ at depth 0 decomposes into $\{(O'_i, \Sigma'_i)\}$ at depth 1, and so on to action leaves.
 
 To support a *formal* recursion claim — and a non-trivial AAT-distinctive one beyond FEP-RG (which already has form-preservation under coarse-graining; see `02-prior-art-rg-ib-fep.md` §2) — three things must hold simultaneously, against AAT's actual definitions:
 
@@ -45,7 +45,9 @@ The closest the segment comes to attaching content to internal nodes is the **te
 The well-formedness clause reinforces (b):
 
 > "**Well-formedness.** $\Sigma_t$ is **$O_t$-well-formed** when the agent believes that achieving the terminal conditions yields a trajectory that satisfies the objective:
+>
 > $$\Pr\!\left(O_t \text{ satisfied by } \tau \;\middle\vert\; \text{terminal conditions achieved},\; M_t\right) \geq 1 - \epsilon$$
+>
 > where '$O_t$ satisfied' means $V_{O_t}(\tau)$ exceeds the objective's own satisfaction criterion (formalized as $V_{O_t}^{\min}$ in #def-satisfaction-gap)."
 
 The terminal conditions are well-formed *by reference to $O_t$*, not by being objectives themselves. The $V_{O_t}^{\min}$ that licenses the satisfaction threshold lives on $O_t$, not on the terminal predicates.
@@ -123,7 +125,7 @@ But the AAT strategy-DAG machinery propagates $s_v$ — a probability that $C_v$
 
 > "$\hat P_\Sigma$ is explicitly distinct from $A_O$ ( #def-satisfaction-gap), which optimizes over the entire policy class, and from $V_O(\pi_\text{current})$ ( #def-value-object), which evaluates the current policy. $\hat P_\Sigma$ is cheap to compute ($O(\lvert V\rvert + \lvert E\rvert)$ forward pass) and updates in real time as $M_t$ changes through leaf credences."
 
-(In fact $s_v$ for the AND/OR propagation tracks the agent's belief about the current plan's success on the encoded predicate. The supremum-over-Π that AAT reserves for "attainability" is computed *outside* the DAG and feeds into $\delta_\text{sat}$, not into $s_v$.)
+(In fact $s_v$ for the AND/OR propagation tracks the agent's belief about the current plan's success on the encoded predicate. The supremum-over-$\Pi$ that AAT reserves for "attainability" is computed *outside* the DAG and feeds into $\delta_\text{sat}$, not into $s_v$.)
 
 This means: even if we identified $C_v$ with a sub-objective $O'$, the strategy DAG does not natively produce $A_{O'}$ for that sub-objective. The full diagnostic apparatus (orient cascade, satisfaction gap, control regret, 2×2 cell map) does not naturally instantiate at the sub-node level — it instantiates only at the agent level, where attainability is computed against the actual policy class $\Pi$.
 
@@ -157,7 +159,7 @@ This section is the V2-rescue attempt. Per project working norms, before settlin
 
 ### 3.1 The proposed extension
 
-To make every internal Σ-node carry a genuine sub-AAT instance, we'd need to lift each internal $v$ to a tuple $(O'_v, \Sigma'_v, M'_v)$ where:
+To make every internal $\Sigma$-node carry a genuine sub-AAT instance, we'd need to lift each internal $v$ to a tuple $(O'_v, \Sigma'_v, M'_v)$ where:
 
 - $O'_v$: a sub-objective with $V_{O'_v}: \text{trajectories} \to \mathbb{R}$ and $V_{O'_v}^{\min}$. The natural construction is:
   - For condition leaves: $V_{O'_v}(\tau) = \mathbb{1}[C_v(\tau_v)]$, $V_{O'_v}^{\min} = 1$.
@@ -186,7 +188,7 @@ Six things break or need adjustment.
 
 **(C2) The attainability mismatch is real.** As §2.3 noted, $s_v$ from the strategy DAG is the value-of-current-policy, not the supremum-over-policy-class. To produce $A_{O'_v}$ you'd need to optimize the sub-DAG over its own policy class — but the sub-DAG's "policy class" is just the leaf-action propositions, and re-optimizing means changing the leaf credences, which means changing $M_t$, not the strategy. The supremum collapses to the current $s_v$, and $A_{O'_v} = s_v$. This is consistent with `#example-strategy`'s observation that for greedy policies $V_O = \hat\theta_{k^\ast}$, but it means the "attainability" at internal nodes is just the propagated probability — a *much weaker* quantity than $A_O$ at the agent root.
 
-**(C3) The temporal-nesting motivation pulls toward a different recursion.** The brief's RG framing wants the recursion to interact with timescale separation — the level-$n$ sub-AAT instance should run at a slower tempo than the level-($n+1$) sub-instance. That's the "depth as temporal nesting" connection from `#der-temporal-nesting`. But the strategy-DAG depth recursion goes the other way: deeper nodes are evidence-starved (their effective rate is $\nu_k^\text{eff} = \nu_\text{base} \prod_{j<k} \theta_j$ — the deeper the slower in *update rate*, but only because of the upstream gating, not because of any temporal-scale separation in the sub-objective itself). The sub-AAT interpretation does not naturally connect to temporal nesting; the brief's "depth as temporal nesting" connection is a different thread (closer to the level-$n$ adaptive-cycle structure of `#der-temporal-nesting`'s 5-level table) and conflating the two would be a category error.
+**(C3) The temporal-nesting motivation pulls toward a different recursion.** The brief's RG framing wants the recursion to interact with timescale separation — the level-$n$ sub-AAT instance should run at a slower tempo than the level-($n+1$) sub-instance. That's the "depth as temporal nesting" connection from `#der-temporal-nesting`. But the strategy-DAG depth recursion goes the other way: deeper nodes are evidence-starved (their effective rate is $\nu_k^\text{eff} = \nu_\text{base} \prod_{j\lt k} \theta_j$ — the deeper the slower in *update rate*, but only because of the upstream gating, not because of any temporal-scale separation in the sub-objective itself). The sub-AAT interpretation does not naturally connect to temporal nesting; the brief's "depth as temporal nesting" connection is a different thread (closer to the level-$n$ adaptive-cycle structure of `#der-temporal-nesting`'s 5-level table) and conflating the two would be a category error.
 
 **(C4) The "fractal of agents" reading risks reintroducing the type error.** `#def-strategy-dimension` flags conflating $O$ and $\Sigma$ as a type error AAT was constructed to fix. The proposed extension preserves the split *at each level* but at the cost of treating every internal node as a mini-agent — which makes "the strategy" a DAG of mini-agents, blurring the line between $G_t$-as-state and $G_t$-as-collection-of-sub-states. If the segment voice is "$G_t$ is a structured object of type $(O_t, \Sigma_t)$," the recursion implicitly says "$\Sigma_t$ is a DAG-of-$(O',\Sigma')$-tuples." The latter is still well-typed but it's a much heavier ontological commitment than the current "$\Sigma_t$ is a DAG of nodes with credences."
 
@@ -300,7 +302,7 @@ Three options for what to do with RG-2:
 
 (b) **Promote RG-2 as an integration-content segment.** Write a new `#disc-strategy-recursion-vs-htn` segment in the AAT-prior-art-integration mode: cite Erol-Hendler-Nau 1994, Sutton-Precup-Singh 1999, Dietterich 2000, Ravindran-Barto 2004, Abel et al. 2020 generously; note AAT's typing contributions; do not claim recursion novelty. This is consistent with `CLAUDE.md`'s prior-art-integration discipline.
 
-(c) **Defer RG-2 entirely and keep the focus on (i) the bridge-lemma flow-distance synthesis and (ii) the directed-separation-as-order-parameter contribution from `02-prior-art-rg-ib-fep.md` §8.** These two are the actually-AAT-distinctive contributions in the RG framing. The (O, Σ) recursion is the weakest of the three remaining novelty candidates after this analysis.
+(c) **Defer RG-2 entirely and keep the focus on (i) the bridge-lemma flow-distance synthesis and (ii) the directed-separation-as-order-parameter contribution from `02-prior-art-rg-ib-fep.md` §8.** These two are the actually-AAT-distinctive contributions in the RG framing. The $(O,\Sigma)$ recursion is the weakest of the three remaining novelty candidates after this analysis.
 
 My recommendation: **(c) for the immediate verdict; (b) as the eventual landing if the recursion adds operational content elsewhere in the framework**. If the strategy-DAG recursion never ends up doing load-bearing work in subsequent results — if the diagnostics live only at the agent root and the recursion is used only for narrative compactness — there is no need to formalize it. If a downstream result genuinely uses the recursion (e.g., a result that decomposes the persistence condition along DAG depth, or a result connecting evidence-starvation rates to nested-tempo separation), then (b) is the right move and the integration content gets written.
 
@@ -318,9 +320,9 @@ Three things this analysis did *not* establish, that future work might revisit:
 
 **V2.** Recursion is formally legitimate (under the §3 minimal modifications) but mostly equivalent to standard hierarchical-planning frameworks (HTN, Options, MAXQ, MDP-homomorphism). AAT-distinctive content within the recursion is narrow — the typing contributions (AND/OR aggregation, single-parameter credences with identifiability, Correlation Hierarchy, well-formedness referencing $V_{O_t}^{\min}$) — and lives in the type system rather than the recursion structure. The split between $O$ and $\Sigma$ does survive recursion (differentiating from FEP-RG), but in a degenerate indicator-functional form whose operational content lives only at the agent root.
 
-**Recommended action for RG-2**: defer. The (O, Σ) recursion is the weakest of the three remaining AAT-novelty candidates surveyed in `02-prior-art-rg-ib-fep.md` §8, and pushing it as load-bearing would force AAT into a competition with options/MAXQ on terrain where the pre-existing literature has the structural priority. The other two candidates — (i) bridge-lemma as flow-distance, (ii) directed-separation as order parameter — are stronger and should carry the RG framing's load-bearing weight.
+**Recommended action for RG-2**: defer. The $(O,\Sigma)$ recursion is the weakest of the three remaining AAT-novelty candidates surveyed in `02-prior-art-rg-ib-fep.md` §8, and pushing it as load-bearing would force AAT into a competition with options/MAXQ on terrain where the pre-existing literature has the structural priority. The other two candidates — (i) bridge-lemma as flow-distance, (ii) directed-separation as order parameter — are stronger and should carry the RG framing's load-bearing weight.
 
-If `99-verdict.md` decides to proceed with the RG framing on the strength of (i) and (ii), this file argues that (O, Σ) recursion should *not* be promoted as a third pillar. It can be mentioned honestly as a structural observation that follows from existing definitions under the §3 extension and is consistent with the standard hierarchical-planning literature, but it should not be advertised as AAT-distinctive content.
+If `99-verdict.md` decides to proceed with the RG framing on the strength of (i) and (ii), this file argues that $(O,\Sigma)$ recursion should *not* be promoted as a third pillar. It can be mentioned honestly as a structural observation that follows from existing definitions under the §3 extension and is consistent with the standard hierarchical-planning literature, but it should not be advertised as AAT-distinctive content.
 
 ---
 

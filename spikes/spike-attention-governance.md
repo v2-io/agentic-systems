@@ -4,7 +4,7 @@
 
 **Date**: 2026-03-13 (overnight session)
 
-**Core observation**: AAT's scope condition requires observations exist (𝒪 ≠ ∅) and residual uncertainty (H > 0), but says nothing about **finite channel capacity**. Every real agent has limited attention — it can't monitor everything simultaneously. This constraint is load-bearing for the theory and may need first-class treatment.
+**Core observation**: AAT's scope condition requires observations exist ($\mathcal{O}$ ≠ ∅) and residual uncertainty ($H \gt 0$), but says nothing about **finite channel capacity**. Every real agent has limited attention — it can't monitor everything simultaneously. This constraint is load-bearing for the theory and may need first-class treatment.
 
 ---
 
@@ -14,30 +14,30 @@ Joseph walked through a specific scenario: a fighter pilot deeply focused on pur
 
 Then: a signal from an unmonitored direction. Radar lock from behind. The pilot's model assumed the unmonitored region was static (or at least non-threatening). That assumption was wrong, and catastrophically so.
 
-The interesting thing: the resulting aporia is not "I predicted X and saw Y" (routine δ_epistemic). It's "I was monitoring the wrong thing." The error isn't in the model's prediction within its attended scope — it's in the **allocation of attention itself**.
+The interesting thing: the resulting aporia is not "I predicted X and saw Y" (routine $\delta_{\text{epistemic}}$). It's "I was monitoring the wrong thing." The error isn't in the model's prediction within its attended scope — it's in the **allocation of attention itself**.
 
 This creates a specific cascade that doesn't fit neatly into the sequential orient cascade:
 - The model update (someone has radar lock) has immediate strategy implications
 - The strategy invalidation doesn't need the full cascade to resolve — it's obvious
-- The agent needs to simultaneously: update M_t (new threat), invalidate Σ_t (pursuit plan is now dangerous), and reorient sensors (need to track the new threat)
+- The agent needs to simultaneously: update $M_t$ (new threat), invalidate $\Sigma_t$ (pursuit plan is now dangerous), and reorient sensors (need to track the new threat)
 - These happen effectively simultaneously, not sequentially
 
 ## 2. What AAT Currently Handles
 
-AAT *partially* handles this through the processing/selection distinction in directed separation: goals influence which events arrive (through π → a_t → e_τ), and this is acknowledged as coupling through the action channel. The pilot's attention allocation is part of π — it's an action that determines what observations will be available.
+AAT *partially* handles this through the processing/selection distinction in directed separation: goals influence which events arrive (through $\pi \to a_t \to e_\tau$), and this is acknowledged as coupling through the action channel. The pilot's attention allocation is part of $\pi$ — it's an action that determines what observations will be available.
 
 What AAT doesn't handle:
 1. **The implicit assumption of stationarity in unmonitored regions.** When the agent allocates attention to region A of the model, it implicitly assumes regions B, C, D are either unchanging or have low strategy sensitivity. This assumption is never made explicit.
 2. **The cost of reorientation.** Switching attention from one model region to another takes time and has opportunity cost (you stop monitoring the old region). This is a real resource constraint that affects the orient cascade's timing.
 3. **Preemptive reorientation triggers.** What makes an ambient signal "break through" and demand attention? AAT has no mechanism for signals from unmonitored regions to interrupt the current processing focus.
-4. **The meta-strategic question of attention allocation.** How should the agent divide its finite attention across model regions? This is itself a strategic decision that should be part of Σ_t — but it's currently implicit in the policy π.
+4. **The meta-strategic question of attention allocation.** How should the agent divide its finite attention across model regions? This is itself a strategic decision that should be part of $\Sigma_t$ — but it's currently implicit in the policy $\pi$.
 
 ## 3. Finite Attention as a Constraint on the Orient Cascade
 
-The orient cascade assumes the agent can evaluate δ_epistemic, δ_sat, δ_regret, and δ_strategic in sequence. But with finite attention, the agent can only evaluate these for the regions of M_t it's currently monitoring. For unmonitored regions:
-- δ_epistemic is unknown (no observations → no mismatch signal)
-- δ_sat is unknown (can't assess attainability without current model)
-- δ_regret is unknown (can't compare policies without evidence)
+The orient cascade assumes the agent can evaluate $\delta_{\text{epistemic}}$, $\delta_{\text{sat}}$, $\delta_{\text{regret}}$, and $\delta_{\text{strategic}}$ in sequence. But with finite attention, the agent can only evaluate these for the regions of $M_t$ it's currently monitoring. For unmonitored regions:
+- $\delta_{\text{epistemic}}$ is unknown (no observations → no mismatch signal)
+- $\delta_{\text{sat}}$ is unknown (can't assess attainability without current model)
+- $\delta_{\text{regret}}$ is unknown (can't compare policies without evidence)
 
 The cascade is running, but only over a **projection** of the full state space. The agent is optimizing within its attended scope while being blind to potential threats (or opportunities) in unattended scope.
 
@@ -61,7 +61,7 @@ This is the "governance of reorientation" we identified as missing from AAT. It'
 
 ## 5. Attention Allocation as Part of Strategy
 
-Here's a structural observation: attention allocation should probably be part of Σ_t, not just an implicit consequence of π.
+Here's a structural observation: attention allocation should probably be part of $\Sigma_t$, not just an implicit consequence of $\pi$.
 
 The strategy DAG encodes the agent's theory of how its actions produce progress toward O_t. One class of actions is **observation actions** — actions that change what the agent can perceive (move sensors, run different queries, look in a different direction). The strategy should include nodes for these observation actions, with edges representing their expected information yield.
 
@@ -74,7 +74,7 @@ A richer treatment might split CIY into:
 
 The sentinel actions are particularly interesting. They're the analog of the pilot's periodic scan — briefly redirecting attention from the primary task to check for threats in the periphery. They have a cost (attention diverted from the primary task) and a value (preventing surprise). The optimal sentinel frequency is a function of:
 - How fast the unmonitored regions change (environmental dynamics)
-- How severe the consequences of a missed change (strategy sensitivity, ∂Σ/∂M)
+- How severe the consequences of a missed change (strategy sensitivity, $\partial\Sigma/\partial M$)
 - How costly it is to redirect attention (reorientation cost)
 - How reliable the sentinel observation is (observation quality in the peripheral region)
 
@@ -86,9 +86,9 @@ An agent with finite attention might run multiple loops simultaneously at differ
 
 ### Primary loop (high frequency, narrow scope)
 - Fast cycling: prolepsis → aisthesis → aporia → epistrophe → praxis
-- Focused on the current task: the specific region of M_t and Σ_t that the current action sequence requires
+- Focused on the current task: the specific region of $M_t$ and $\Sigma_t$ that the current action sequence requires
 - High fidelity observations within its narrow scope
-- This is where most of the agent's "tempo" (𝒯) comes from
+- This is where most of the agent's "tempo" ($\mathcal{T}$) comes from
 
 ### Sentinel loop (low frequency, broad scope)
 - Slow cycling: periodic scan of unmonitored regions
@@ -111,11 +111,11 @@ This is a form of temporal self-composition — the agent composing with itself 
 
 ## 7. Connection to Hafez's IDT
 
-Hafez's Information Digital Twin operates as a sidecar that monitors the (S, A, S') stream and computes P, ΔH in real time. When coupling quality degrades (P drops, ΔH shifts), the IDT triggers reflexive modulation.
+Hafez's Information Digital Twin operates as a sidecar that monitors the (S, A, S') stream and computes P, $\Delta H$ in real time. When coupling quality degrades (P drops, $\Delta H$ shifts), the IDT triggers reflexive modulation.
 
 In the multi-loop framework:
 - Each loop has its own (S, A, S') stream
-- Each inter-loop boundary has its own P and ΔH
+- Each inter-loop boundary has its own P and $\Delta H$
 - The IDT monitors these coupling metrics and triggers reorientation when they degrade
 
 The thalamocortical analogy from Hafez maps directly: the thalamus receives copies of sensory signals AND motor commands. It operates on signal statistics (gain, synchrony, bandwidth), not semantic content. This makes it fast enough to modulate signal transmission before cortical processing completes.
@@ -130,15 +130,15 @@ The missing piece is exactly what AAT could provide: a severity-proportional res
 
 | Signal severity | Interpretation | Response | AAT mapping |
 |---|---|---|---|
-| Low | Minor anomaly in monitored region | Note and continue | Small δ_epistemic; handled by normal gain |
-| Medium | Significant anomaly in monitored region | Pause and investigate | Large δ_epistemic; may trigger Σ_t re-evaluation |
+| Low | Minor anomaly in monitored region | Note and continue | Small $\delta_{\text{epistemic}}$; handled by normal gain |
+| Medium | Significant anomaly in monitored region | Pause and investigate | Large $\delta_{\text{epistemic}}$; may trigger $\Sigma_t$ re-evaluation |
 | High | Anomaly in unmonitored region | Redirect sentinel | Sentinel loop detects stationarity violation |
 | Critical | Threat detected in unmonitored region | Preempt primary loop | Strategy sensitivity × anomaly magnitude exceeds threshold |
 | Emergency | Existential threat | Bypass cascade entirely | Reflexive reorientation; hardwired response |
 
 The severity threshold for each level should depend on:
-- δ magnitude (how wrong was the prediction?)
-- ∂Σ/∂M in the affected region (how much does the strategy care?)
+- $\delta$ magnitude (how wrong was the prediction?)
+- $\partial\Sigma/\partial M$ in the affected region (how much does the strategy care?)
 - Current strategy state (how committed are we to the current plan?)
 - Available recovery time (how quickly must we respond?)
 
@@ -148,7 +148,7 @@ The "hardwired responses" at the emergency level correspond to Joseph's formal c
 
 ### Formally:
 - **Finite attention** as an explicit constraint alongside finite observation and finite action
-- **Attention allocation** as a strategic decision within Σ_t (not just implicit in π)
+- **Attention allocation** as a strategic decision within $\Sigma_t$ (not just implicit in $\pi$)
 - **Sentinel CIY** as a distinct information-value category (testing stationarity assumptions in unmonitored regions)
 - **Severity-proportional response** mapping as a consequence of the mismatch decomposition + strategy sensitivity
 
@@ -179,9 +179,9 @@ The "hardwired responses" at the emergency level correspond to Joseph's formal c
 
 **What I'd want to check:**
 - Is "finite attention" already captured by the information bottleneck (IB) framework? IB constrains the *compression* of observations into the model, which might already limit attention. If so, the attention constraint might be a consequence of existing machinery, not a new postulate.
-- Does the existing mismatch decomposition + strategy sensitivity already imply the severity-proportional response? If ∂Σ/∂M × δ_epistemic is large, the cascade already triggers strategy revision quickly. The governance layer might be implicit.
+- Does the existing mismatch decomposition + strategy sensitivity already imply the severity-proportional response? If $\partial\Sigma/\partial M \times \delta_{\text{epistemic}}$ is large, the cascade already triggers strategy revision quickly. The governance layer might be implicit.
 - Is the multi-frequency loop structure derivable from the existing temporal nesting claim (#der-temporal-nesting), or is it genuinely additional?
 
 ---
 
-*This is the most speculative of the three overnight spikes. It identifies structural gaps and proposes architectural solutions, but the formal content is thin. The most concrete contribution is the connection between attention allocation and Σ_t, and the sentinel CIY concept. The multi-frequency self-composition idea is gestural — it needs either a formal model or a concrete example to evaluate.*
+*This is the most speculative of the three overnight spikes. It identifies structural gaps and proposes architectural solutions, but the formal content is thin. The most concrete contribution is the connection between attention allocation and $\Sigma_t$, and the sentinel CIY concept. The multi-frequency self-composition idea is gestural — it needs either a formal model or a concrete example to evaluate.*

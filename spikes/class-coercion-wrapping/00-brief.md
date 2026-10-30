@@ -8,7 +8,7 @@
 1. Parts III/IV currently sit as a "different problem domain" requiring "coupled formulation from the start" (per CLAUDE.md). Formalizing the wrapping construction would make Parts III/IV a *derived* application of the AAT core rather than a parallel research thread — strengthening the theory's coherence.
 2. The form-preservation framing from `spikes/temporal-nesting-rg/99-verdict.md` is currently *descriptive* — when does the form survive coarse-graining? A constructive-form-preservation result would strengthen the framing's load-bearing content.
 3. `#hyp-directed-separation-under-composition` is currently a hypothesis. The wrapping construction is a candidate *constructive procedure* for making directed separation hold under composition — which would promote the hypothesis if it goes through.
-4. The κ-as-scalar framing was identified as a category error in CLAUDE.md, but the leakage analysis (Sub-spike C) may rehabilitate a wrapper-level residual-coupling rate that *is* meaningful. Worth checking.
+4. The $\kappa$-as-scalar framing was identified as a category error in CLAUDE.md, but the leakage analysis (Sub-spike C) may rehabilitate a wrapper-level residual-coupling rate that *is* meaningful. Worth checking.
 
 **Depends on / cites**: `#hyp-directed-separation-under-composition`, `#der-directed-separation` (the descriptive classification), `#form-composition-closure` (admissibility (A1)–(A4)), `#der-tempo-composition` (Brooks's-Law form), `#result-sector-persistence-template`, the Parts III/IV component (`03-llm-core/`, `04-eli-core/`), the PROPRIUM ontology and architecture (`~/src/firmatum/PROPRIUM-ONTOLOGY.md`, `PROPRIUM-ARCHITECTURE.md`), `~/src/shoshin/` (PROPRIUM operational instance), the agentic-tft document family (`ref/agentic-tft/`), `spikes/temporal-nesting-rg/99-verdict.md` for the form-preservation framing context.
 
@@ -118,7 +118,7 @@ Goal: bound the residual coupling $\kappa_W$ when goal-blind queries leak goal-i
 - For LLMs: the mutual information between query distribution and goal distribution gives an upper bound on goal-information surviving in goal-blind responses.
 - The bound is a function of context-window content, query selection policy $q_M$, and pretraining dataset goal-content.
 - Connect to "almost-Class-1" / partial-Class-2 in `#der-directed-separation`.
-- Test: when does $\kappa_W = 0$ exactly? (Probably: when $A$ is a deterministic function of input syntax with no learned world-model component, e.g., a calculator or syntactic parser. Most useful components have $\kappa_W > 0$.)
+- Test: when does $\kappa_W = 0$ exactly? (Probably: when $A$ is a deterministic function of input syntax with no learned world-model component, e.g., a calculator or syntactic parser. Most useful components have $\kappa_W \gt 0$.)
 
 Output: `03-leakage.md`.
 
@@ -196,7 +196,7 @@ If the theorem holds under the conditions stated:
 - **The construction may be expensive in tempo.** If $K$ is very large, the wrapper-level tempo may be too slow to be useful for most tasks. The theorem says class coercion is *possible*; the cost question is whether the result is *useful*. Both belong in the honest accounting.
 - **The wrapping construction changes the component's behavior intentionally.** Reasonable people may disagree about whether the resulting agent is "the same" as the underlying component "in some meaningful sense." This is partly a philosophical question and partly a question about what we want from AAT-compliant systems. Take a position; don't paper over it.
 - **"Universality of AAT" is a strong claim that needs to be hedged.** The construction works for components admitting goal-blind queries; it doesn't apply to components where this is structurally impossible. The honest statement is "AAT applies to all *admissible* components," not "AAT applies to all components."
-- **The (O, Σ) recursion thread from `spikes/temporal-nesting-rg/03-rg-0c-strategy-recursion.md`** found that recursive sub-objectives are degenerate / typed-options-MAXQ. Make sure the wrapping construction doesn't quietly rely on the (O, Σ) recursion that was deferred.
+- **The $(O,\Sigma)$ recursion thread from `spikes/temporal-nesting-rg/03-rg-0c-strategy-recursion.md`** found that recursive sub-objectives are degenerate / typed-options-MAXQ. Make sure the wrapping construction doesn't quietly rely on the $(O,\Sigma)$ recursion that was deferred.
 
 ## 8. Working agreements
 

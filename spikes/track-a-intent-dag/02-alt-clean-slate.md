@@ -26,7 +26,9 @@ These are not design choices. They are consequences of TFT that any formalizatio
 $p_{ij} = P(j \text{ achieved} \mid do(i), M_t)$.
 
 **P2. Edge updates use TFT's uncertainty ratio.** When evidence arrives about an edge, the update gain mirrors TF-06:
+
 $$\eta_{\text{edge}} = \frac{U_{\text{edge}}}{U_{\text{edge}} + U_{\text{obs}}}$$
+
 High uncertainty about the link + reliable observation = large update.
 
 **P3. The Orient cascade.** Observation $\to$ $M_t$ update $\to$ strategy revision $\to$ feasibility check $\to$ possible goal revision. This is not optional architecture; it is what Boyd's Orient *means*, formalized.
@@ -127,11 +129,11 @@ where:
 
 **Structural requirement: acyclicity.** $G_t$ must be a DAG. Causal chains are temporally ordered; an event cannot be both cause and effect of the same outcome. This is a consequence of Pearl's causal framework, not a modeling choice.
 
-**Structural requirement: rootedness.** Every node must have a directed path to at least one **terminal node** (a node with $\omega_v > 0$ and no outgoing edges). Nodes disconnected from all valued outcomes are strategic dead weight.
+**Structural requirement: rootedness.** Every node must have a directed path to at least one **terminal node** (a node with $\omega_v \gt 0$ and no outgoing edges). Nodes disconnected from all valued outcomes are strategic dead weight.
 
 ### 1.5 Degenerate Cases
 
-**PID controller.** Single node ($\omega > 0, \sigma = 1$), no edges. Trivial graph; TFT's point-in-$S$ model suffices. **LQR/LQG.** Two nodes, one edge with $p = 1$. **Single-step lookup.** Two nodes, one edge with $p < 1$ -- the simplest non-trivial case. The formalism earns its keep when $|V| > 3$ and the graph has branching, AND-nodes, or unobservable intermediaries.
+**PID controller.** Single node ($\omega \gt 0, \sigma = 1$), no edges. Trivial graph; TFT's point-in-$S$ model suffices. **LQR/LQG.** Two nodes, one edge with $p = 1$. **Single-step lookup.** Two nodes, one edge with $p \lt 1$ -- the simplest non-trivial case. The formalism earns its keep when $|V| \gt 3$ and the graph has branching, AND-nodes, or unobservable intermediaries.
 
 ---
 
@@ -165,12 +167,15 @@ where:
 When edge weights or leaf-node statuses change, the effects propagate through the graph. For a node $j$ with parents $\text{pa}(j)$:
 
 **AND-node:**
+
 $$s_j = \prod_{i \in \text{pa}(j)} p_{ij} \cdot s_i$$
 
 **OR-node:**
+
 $$s_j = 1 - \prod_{i \in \text{pa}(j)} (1 - p_{ij} \cdot s_i)$$
 
 **WEIGHTED-node:**
+
 $$s_j = \min\!\left(1,\; \sum_{i \in \text{pa}(j)} \alpha_{ij} \cdot p_{ij} \cdot s_i\right)$$
 
 Status propagation is a forward pass in topological order: $O(|V| + |E|)$. The graph IS the agent's theory of how current progress translates into eventual success.
@@ -180,7 +185,9 @@ Status propagation is a forward pass in topological order: $O(|V| + |E|)$. The g
 The full update cycle when an observation arrives:
 
 **Stage 1: Reality update (TFT proper).**
+
 $$M_t = M_{t-1} + \eta^* \cdot g(\delta_t)$$
+
 This is TFT's standard epistrophe. The agent's model of reality updates.
 
 **Stage 2: Edge revision.**  
@@ -193,14 +200,14 @@ For each edge $(i,j) \in G_t$, check whether the updated $M_t$ changes the evide
 Run the forward propagation (Section 2.2) to update all node statuses given the revised edge weights.
 
 **Stage 4: Feasibility check.**  
-For each terminal node (objective) $v$ with $\omega_v > 0$: is $s_v$ still above a viability threshold? Formally:
+For each terminal node (objective) $v$ with $\omega_v \gt 0$: is $s_v$ still above a viability threshold? Formally:
 
 $$\text{viable}(v) \iff s_v > s_{\min}(v)$$
 
 where $s_{\min}(v)$ is the minimum acceptable probability of achieving $v$, given its value $\omega_v$ and the cost of the strategy subtree beneath it.
 
 **Stage 5: Goal revision (rare).**  
-If $s_v < s_{\min}$, the agent may: (a) graft new edges, (b) lower $s_{\min}$, (c) modify the objective, or (d) abandon it ($\omega_v = 0$). Options (c)-(d) are **goal revision** -- TF-10's structural adaptation at the intent level.
+If $s_v \lt s_{\min}$, the agent may: (a) graft new edges, (b) lower $s_{\min}$, (c) modify the objective, or (d) abandon it ($\omega_v = 0$). Options (c)-(d) are **goal revision** -- TF-10's structural adaptation at the intent level.
 
 **Timescale separation.** $\nu_{\text{edge update}} \gg \nu_{\text{prune/graft}} \gg \nu_{\text{goal revision}}$. Violating this ordering produces strategic thrashing -- the temporal nesting constraint (TF-11) predicts this failure mode.
 
@@ -295,9 +302,11 @@ where:
 - $\rho_G(t)$ is the rate at which progress is undone -- by environment changes, adversary actions, or decay of achieved intermediate states
 
 In steady state:
+
 $$\Delta_{G,ss} = \frac{\rho_G}{\mathcal{T}_G}$$
 
 The **strategic persistence condition** is:
+
 $$\mathcal{T}_G > \frac{\rho_G}{\Delta_{G,\text{critical}}}$$
 
 If the environment undermines the agent's strategic progress faster than the agent can advance, the strategy degenerates. This is the intent-level analog of TF-11's persistence threshold.
@@ -316,7 +325,7 @@ $M_t$ (reality model): descriptive, self-contained, updated from observations vi
 
 ### 4.2 Consistency and What $M_t$ Provides
 
-For each edge $(i,j)$ with $p_{ij} > p_{\min}$, $M_t$ should assign non-negligible probability to the underlying causal mechanism. An edge contradicting $M_t$ is a **strategic delusion**. Inconsistencies arise from update lag (normal), compartmentalization (pathological), or untested grafts (normal exploration).
+For each edge $(i,j)$ with $p_{ij} \gt p_{\min}$, $M_t$ should assign non-negligible probability to the underlying causal mechanism. An edge contradicting $M_t$ is a **strategic delusion**. Inconsistencies arise from update lag (normal), compartmentalization (pathological), or untested grafts (normal exploration).
 
 $G_t$ draws four things from $M_t$: (1) causal structure -- which interventions produce which effects; (2) transition probabilities -- initial $p_{ij}$ estimates; (3) observability information -- which channels can confirm which propositions ($\sigma_v$ values); (4) feasibility constraints -- what is physically possible. This is why P6 holds: the intent graph is built from materials the reality model provides.
 
@@ -328,7 +337,7 @@ The formalism should produce insights that go beyond common sense. Here are the 
 
 ### 5.1 Observability Dominates Nominal Confidence
 
-**Prediction.** Given two paths to the same objective with equal nominal confidence $\text{conf}(P_1) = \text{conf}(P_2)$, the agent should prefer the path with higher observability: $\text{obs}(P_1) > \text{obs}(P_2)$ implies $P_1$ is strategically superior.
+**Prediction.** Given two paths to the same objective with equal nominal confidence $\text{conf}(P_1) = \text{conf}(P_2)$, the agent should prefer the path with higher observability: $\text{obs}(P_1) \gt \text{obs}(P_2)$ implies $P_1$ is strategically superior.
 
 **Why this is non-obvious.** Standard planning evaluates paths by expected success probability. Two paths with equal probability seem interchangeable. But the path with higher observability allows the agent to *update* -- to detect failure early and redirect. The unobservable path locks the agent into its prior beliefs.
 

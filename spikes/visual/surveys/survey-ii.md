@@ -90,7 +90,7 @@ Novak and Cañas (2008) explicitly frame concept maps as tools that "make thinki
 ### 2.3 Studying vs. Constructing Concept Maps
 Schroeder et al.'s (2018) meta-analysis of 143 studies distinguished between learners who *study* pre-built concept maps and those who *construct* their own:[^16][^17]
 - Both conditions produced positive learning effects
-- The effect of *constructing* maps (d ≈ 0.72) exceeded the effect of *studying* pre-built maps (d ≈ 0.46)
+- The effect of *constructing* maps ($d \approx 0.72$) exceeded the effect of *studying* pre-built maps ($d \approx 0.46$)
 - The longer learners utilized concept maps, the more effective they were — duration matters for cumulative effect[^17]
 
 This has direct implications for textbook design: embedding pre-built concept maps is valuable, but providing learners with map-building tasks using textbook content is more valuable. In the context of dense monographs and thesis-length work, structuring chapter summaries as skeleton concept maps that readers complete would likely increase retention significantly.

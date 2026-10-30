@@ -44,7 +44,9 @@ C1 is the **stronger** route — it has CHT-style non-reduction. C2 is the **bro
 For a true causal direction $X \to Y$, the conditional $P(Y \mid X)$ and the marginal $P(X)$ are *algorithmically independent*: knowing one does not shorten the description of the other. In the anti-causal direction $Y \to X$ (reading the same joint backwards), $P(X \mid Y)$ and $P(Y)$ are **not** algorithmically independent — there is a description-length penalty.
 
 Formally (in the algorithmic-information version):
+
 $$K(P_{XY}) = K(P_X) + K(P_{Y \mid X}) - O(1) \quad \text{(causal direction)}$$
+
 $$K(P_{XY}) \;\lneq\; K(P_Y) + K(P_{X \mid Y}) - O(1) \quad \text{(anti-causal direction)}$$
 
 The asymmetry between the two factorizations is the empirical signature of causal direction.
@@ -62,12 +64,14 @@ The asymmetry between the two factorizations is the empirical signature of causa
 Each of these breakages requires a *longer description* in the reverse direction to encode equivalent content. Empirically, reverse-language language models have substantially higher perplexity than forward-language ones on the same data (Kaplan et al. 2020 scaling laws, and follow-on work).
 
 **Theorem-target (C3)**:
+
 $$K(L_{\text{forward}}) + I_{\text{causal}} \;\le\; K(L_{\text{reverse}})$$
+
 where $L$ is a natural-language corpus and $I_{\text{causal}}$ is the causal information content of $L$ (some appropriate measure).
 
 **What actually derives**:
 
-The **directional asymmetry** ($K(L_{\text{forward}}) < K(L_{\text{reverse}})$) is derivable under ICM applied to the discourse-generative process — it follows from forward-anaphora-licensing alone, which gives a description-length advantage to the forward direction. This much is solid.
+The **directional asymmetry** ($K(L_{\text{forward}}) \lt K(L_{\text{reverse}})$) is derivable under ICM applied to the discourse-generative process — it follows from forward-anaphora-licensing alone, which gives a description-length advantage to the forward direction. This much is solid.
 
 **What does not derive**:
 

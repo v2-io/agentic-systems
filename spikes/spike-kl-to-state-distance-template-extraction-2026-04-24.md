@@ -319,7 +319,7 @@ Let $(P, Q)$ be two probability distributions on a base space $\Omega$ with $\ma
 
 **(T2-Pinsker) Baseline transport.** *Always available* (Pinsker's inequality; Tsybakov 2009 §2.4): $\lVert P - Q\rVert_{TV} \leq \sqrt{\varepsilon/2}$.
 
-**(T2-LSI) Transport-inequality tier.** $Q$ satisfies a log-Sobolev inequality with constant $\rho_{\text{LSI}} > 0$ (sufficient: $Q$ strongly-log-concave with constant $K$, by Bakry-Émery 1985 curvature-dimension condition, giving $\rho_{\text{LSI}} \geq K$). Under (T2-LSI), Otto-Villani 2000 Theorem 1 gives $W_2^2(P, Q) \leq (2/\rho_{\text{LSI}}) \mathrm{KL}(P \Vert Q)$.
+**(T2-LSI) Transport-inequality tier.** $Q$ satisfies a log-Sobolev inequality with constant $\rho_{\text{LSI}} \gt 0$ (sufficient: $Q$ strongly-log-concave with constant $K$, by Bakry-Émery 1985 curvature-dimension condition, giving $\rho_{\text{LSI}} \geq K$). Under (T2-LSI), Otto-Villani 2000 Theorem 1 gives $W_2^2(P, Q) \leq (2/\rho_{\text{LSI}}) \mathrm{KL}(P \Vert Q)$.
 
 **(T3) Lipschitz-posterior stability.** The pushforward $f$ is $L_{\text{post}}$-Lipschitz in $W_2$: $W_2(f_\ast P, f_\ast Q) \leq L_{\text{post}} W_2(P, Q)$. Sufficient: $f$ is a Bayesian-posterior map on a well-posed inverse problem with bounded log-likelihood Hessian (Stuart 2010 Theorem 4.6; Hairer-Stuart-Vollmer 2014 for explicit W₂-bounds).
 
@@ -381,7 +381,7 @@ The two meta-pieces compose: once the divergence layer selects reverse-KL (per `
 **Load-bearing.** Pinsker (T1), Otto-Villani under LSI (T2), Lipschitz-posterior stability under well-posed inverse problem (T3) are each standard; the composition is the AAT-specific packaging.
 
 **Not established.**
-- Templates under *unbounded* KL: all three tiers assume $\varepsilon < \infty$. Unbounded KL regimes (e.g., support-mismatch) are scope-exits.
+- Templates under *unbounded* KL: all three tiers assume $\varepsilon \lt \infty$. Unbounded KL regimes (e.g., support-mismatch) are scope-exits.
 - Non-Lipschitz pushforward $f$: (T3) fails for ill-posed inverse problems (lack of Bayesian stability). Scope-exit for those.
 - Non-concentrating observation distribution: (T2-LSI) fails for heavy-tailed observations. Scope-exit; T1 is the available fallback.
 

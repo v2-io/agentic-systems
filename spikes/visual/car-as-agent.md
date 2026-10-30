@@ -44,7 +44,7 @@ For the persistence cluster (`#result-persistence-condition`, `#deriv-sector-con
 | wiper-speed dial | `wiper_rate` | adaptive tempo | $\mathcal{T}$ |
 | blade in visual field | `cost_term(wiper_rate)` | deliberation cost | (`#der-deliberation-cost`) |
 | can't see road | `capacity` (visibility threshold) | model capacity | $R$ |
-| crash | `if mismatch > capacity: fail()` | persistence fails | $\rho > \alpha R$ |
+| crash | `if mismatch > capacity: fail()` | persistence fails | $\rho \gt \alpha R$ |
 | vehicle speed | outer-loop variable | outer-loop control | $O_t$-adjacent |
 
 A minimal worked code snippet expressing the update:
@@ -69,7 +69,7 @@ Nine AAT mechanisms, each with a concrete observable behavior in driving:
 
 ### 1. Persistence (`#result-persistence-condition`)
 
-Wipers must clear precipitation faster than it accumulates. Persistence inequality $\alpha > \rho/R$ becomes "wiper-effectiveness at full sweep exceeds the precipitation rate." Ultimate bound $R^* = \rho/\alpha$ becomes "the steady-state occlusion that wipers settle at, given the current precipitation."
+Wipers must clear precipitation faster than it accumulates. Persistence inequality $\alpha \gt \rho/R$ becomes "wiper-effectiveness at full sweep exceeds the precipitation rate." Ultimate bound $R^* = \rho/\alpha$ becomes "the steady-state occlusion that wipers settle at, given the current precipitation."
 
 ### 2. Adaptive tempo as observable dial (`#def-adaptive-tempo`)
 

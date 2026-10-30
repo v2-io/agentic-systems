@@ -81,7 +81,7 @@ The structural difference reduces to: **what is being preserved**. Tabuada-Pappa
 - Sutton-Precup-Singh 1999, "Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning" — the Options framework. *Artificial Intelligence* 112.
 - Dietterich 2000, "Hierarchical reinforcement learning with the MAXQ value function decomposition." *JAIR* 13.
 
-**Already mapped** by `spikes/temporal-nesting-rg/03-rg-0c-strategy-recursion.md` §6 ("Q9: Distinction from HTN / Options / MAXQ — honest scope"), which concluded that the (O, Σ) recursion in AAT is a typed instance of HTN/options/MAXQ-style hierarchical decomposition. The honest scope statement lifted from that verdict:
+**Already mapped** by `spikes/temporal-nesting-rg/03-rg-0c-strategy-recursion.md` §6 ("Q9: Distinction from HTN / Options / MAXQ — honest scope"), which concluded that the $(O,\Sigma)$ recursion in AAT is a typed instance of HTN/options/MAXQ-style hierarchical decomposition. The honest scope statement lifted from that verdict:
 
 > "the recursion, taken on its own, is essentially the same move as options / MAXQ. AAT's contribution is the typing of the move (AND/OR, single-parameter credences, identifiability, Correlation Hierarchy, well-formedness)."
 

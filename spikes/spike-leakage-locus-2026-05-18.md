@@ -13,10 +13,13 @@ The short answer: yes to all four. The intuition is exactly right and falls out 
 Work in the Bayes-filter view. The world carries a latent state $z_t \in \mathbb{R}^n$ (the true present, mostly unobserved). The observation is a lossy/noisy projection $o_t = h(z_t) + v_t$. The model state $M_t$ is (a sufficient statistic for) the belief $b_t(z) = P(z_t = z \mid \text{history})$. The goal-blind update $f_M$ factors into the two standard half-steps:
 
 1. **Predict** (pushes the prior forward through dynamics):
+
    $$b_{\tau^-}(z') = \int P(z' \mid z, a_{\tau^-})\, b_{\text{prev}}(z)\, dz.$$
+
    This is the *predictive-future* content — the forward model. It is future-stamped and **purely epistemic** (this is the $\hat o_t = \mathbb{E}[o_t \mid M_{t-1}, a_{t-1}]$ of `#def-mismatch-signal`; a Kalman predict-step or a weather forecast carries zero goal content). The Working Note's "arrow-of-time is the separator" idea dies here, as recorded there.
 
 2. **Correct** (conditions on the realized event):
+
    $$b_{\tau^+}(z) \;\propto\; P(e_\tau \mid z)\; b_{\tau^-}(z).$$
 
 **Where is the free prior?** The likelihood $L(z) := P(e_\tau \mid z)$ constrains $z$ only along the directions it is sensitive to. Decompose the current latent state relative to the observation: the observation has a *Fisher information* $\mathcal I_\tau$ (defined below); along $\ker \mathcal I_\tau$ the likelihood is flat — the event says nothing about those components of the present world. On that subspace the posterior is whatever the prior $b_{\tau^-}$ says, untouched by the data. **$\ker\mathcal I_\tau$ is exactly "the unseen parts of the current world."** It is the only place in the correct-step where belief is not pinned by evidence — the free prior the Working Note pointed at, now named precisely as the *non-identified subspace of the current latent state given the realized event*.
@@ -30,15 +33,19 @@ This is the first connection: the leakage locus *is* an identifiability null spa
 Linear-Gaussian instantiation (the Laplace approximation of the general case; exact when the model is linear-Gaussian, which is the canonical Section-I tracker — Kalman, Beta-Bernoulli linearization).
 
 Post-predict prior: $b_{\tau^-} = \mathcal N(\mu^-, P^-)$. Observation: $o = Hz + v$, $v \sim \mathcal N(0, R)$, so $L(z) \propto \exp\!\big(-\tfrac12 (o-Hz)^\top R^{-1}(o-Hz)\big)$. **Observation Fisher information** (the information the event carries about the current latent state):
+
 $$\mathcal I_\tau \;=\; H^\top R^{-1} H \;\succeq\; 0, \qquad \ker\mathcal I_\tau = \ker H \;=\;\text{unobserved subspace of } z_\tau.$$
 
 Honest (goal-blind) correct step — the information-form Kalman update:
+
 $$p_0 = \mathcal N(\mu_0,\Lambda_0^{-1}), \qquad \Lambda_0 = (P^-)^{-1} + \mathcal I_\tau, \qquad \mu_0 = \Lambda_0^{-1}\big[(P^-)^{-1}\mu^- + H^\top R^{-1} o\big].$$
 
 **Contamination model.** Let the goal enter as a smooth multiplicative tilt $c_G(z) = \exp(g^\top z)$ on the posterior, $g$ a goal-pull vector (first-order: $g = \nabla$ of a goal-desirability potential; $\lVert g\rVert$ measures coupling strength). Exponential tilting is the minimum-relative-entropy way to impose a mean-shift — the I-projection that changes belief as little as possible while leaning it goalward, i.e. the *least-detectable* motivated-reasoning move, which is the adversarially-relevant case. **Robustness note:** a goal-*tilted prior* $b_{\tau^-}\!\cdot e^{g^\top z}$ followed by an honest likelihood gives an identically tilted posterior (multiplication commutes), so the result below is invariant to whether the goal enters through the prior or through the likelihood reweighting — it does not matter *where* in the predict/correct chain the goal leaks, only *along what subspace*.
 
 Contaminated posterior $p_G \propto p_0 \cdot c_G$. Completing the square:
+
 $$\log p_G = -\tfrac12 (z-\mu_0)^\top \Lambda_0 (z-\mu_0) + g^\top z + \text{const} = -\tfrac12 z^\top\Lambda_0 z + (\Lambda_0\mu_0 + g)^\top z + \text{const}.$$
+
 so $p_G = \mathcal N(\mu_G, \Lambda_0^{-1})$ with
 
 $$\boxed{\;\Delta\mu \;:=\; \mu_G - \mu_0 \;=\; \Lambda_0^{-1} g \;=\; \big[(P^-)^{-1} + H^\top R^{-1} H\big]^{-1} g, \qquad \text{covariance } \Lambda_0^{-1}\ \textbf{unchanged}.\;}$$
@@ -56,9 +63,11 @@ Take any $w$ in the unobserved subspace, $Hw = 0$ (so $\mathcal I_\tau w = 0$). 
 > **Lemma (Data-invariance of null-space leakage).** Along the unobserved subspace $\ker\mathcal I_\tau$, the goal-induced displacement is mediated entirely by the *prior* covariance and is **independent of the observation model $(H,R)$ and of the realized observation $o$**. No amount of sensor precision on the observed dimensions reduces leakage in the unobserved subspace.
 
 Conversely, decompose $g$ in the eigenbasis of $\mathcal I_\tau$ (clean form: isotropic prior $P^- = pI$, or any $P^-$ commuting with $\mathcal I_\tau$); eigenvalue $\lambda_i$ of $\mathcal I_\tau$ along $v_i$:
+
 $$ (\Delta\mu)_i = \frac{g_i}{\,1/p + \lambda_i\,}\;\;\longrightarrow\;\; \begin{cases} p\, g_i & \lambda_i \to 0 \quad(\text{unidentified: pull passes, scaled by prior variance})\\[4pt] g_i/\lambda_i \to 0 & \lambda_i \to \infty \quad(\text{identified: data firewalls the pull}). \end{cases}$$
 
 General (non-commuting) statement, exact in Loewner order: since $(P^-)^{-1} \succ 0$, $\Lambda_0 \succ \mathcal I_\tau$ and $\Lambda_0 \succ (P^-)^{-1}$, so the **leakage gain matrix** $K_G := \Lambda_0^{-1}$ satisfies
+
 $$0 \;\prec\; K_G \;\prec\; P^-, \qquad\text{and}\qquad K_G\big\rvert_{\mathrm{range}\,\mathcal I_\tau} \preceq \mathcal I_\tau^{+}\ \text{(pseudo-inverse) in the commuting case}.$$
 
 > **Result (Leakage Locus).** Goal contamination of a goal-blind-data filter can move belief *only* along the directions the realized event fails to identify, and the data stream cannot reduce it within that subspace (zero Fisher information there by construction). Its magnitude in the unidentified subspace equals the prior uncertainty there; in the identified subspace it is suppressed in proportion to the observation's identifying power.
@@ -86,7 +95,9 @@ This is the Working Note's intuition, derived. The leakage locus is $\ker\mathca
 Per strengthen-before-soften: the move here is **not** "directed separation is weaker than claimed, soften it." It is "the stated condition is insufficient; here is the precise *additional* premise that makes the goal–belief independence it wants actually hold." That is a strengthening — it makes the guarantee true under a named, checkable condition rather than approximately-true under an unstated one.
 
 > **Proposition (Insufficiency + the missing premise).** The conditional independence $M_{\tau^+}\perp G_t \mid (M_{\tau^-}, e_\tau)$ does **not** imply goal–belief independence $M_{\tau^+}\perp G_t$. Counter-model: $f_M$ goal-blind in its event-processing, but $M_{\tau^-}$ carries a $G_t$-dependent component supported on $\ker\mathcal I_\tau$; then $M_{\tau^+}$ inherits it (Lemma §3, data-invariance) while the stated conditional independence holds. **Sufficient condition:** additionally require the prior on the unidentified subspace to be goal-blind —
+>
 > $$\Pi_{\ker\mathcal I_\tau}\, M_{\tau^-} \;\perp\; G_t,$$
+>
 > where $\Pi_{\ker\mathcal I_\tau}$ is the projector onto the current unidentified subspace. Under the stated condition **plus** this, $M_{\tau^+}\perp G_t$ on the correct-step (proof: identified subspace pinned by data via the Lemma's converse → independent of prior hence of $G_t$; unidentified subspace independent of $G_t$ by the added premise; direct sum).
 
 *[Tier: the insufficiency (counter-model) is exact. The sufficiency direction is exact for the linear-Gaussian correct-step; the recursive/temporal closure — that a goal-blind prior stays goal-blind under the predict step — is **not** free and is exactly what §6 is about. Conditional on §6.]*
@@ -125,7 +136,9 @@ This is a normative bridge between two existing parts of the theory (directed se
 ## 8. Nonparametric bound (conjecture)
 
 Beyond Gaussian: a Bernstein–von Mises argument suggests, asymptotically in data, that the posterior on $\mathrm{range}\,\mathcal I_\tau$ concentrates on a deterministic function of the data (prior-washed), so all goal dependence of $M_{\tau^+}$ flows through the prior on $\ker\mathcal I_\tau$:
+
 $$I(G_t; M_{\tau^+}) \;\lesssim\; I\big(G_t;\ \Pi_{\ker\mathcal I_\tau} M_{\tau^-}\big).$$
+
 This would bound the existing $\kappa_{\text{processing}}$ diagnostic by an *identifiability quantity* — the fraction of posterior entropy living in the unidentified subspace — connecting this thread quantitatively to the established operationalization.
 
 *[Tier: **conjecture / heuristic.** BvM regularity (smooth finite-dim parametric, prior positive at truth) is exactly what fails for the interesting Class-3 cases (high-dim, non-regular). State the asymptotic intuition; do not assert the inequality. Open question, §9.]*

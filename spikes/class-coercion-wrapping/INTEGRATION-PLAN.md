@@ -19,7 +19,7 @@
 
 Verifies the integration's specifics. No writes yet.
 
-- [x] `01-aat-core/src/der-directed-separation.md` — read (during plan-writing). Already has Class 1/2/3 + κ_processing + Pearl-blanket framing + composite class inheritance. Discussion update is additive, not destructive.
+- [x] `01-aat-core/src/der-directed-separation.md` — read (during plan-writing). Already has Class 1/$2/3 + \kappa_{\text{processing}}$ + Pearl-blanket framing + composite class inheritance. Discussion update is additive, not destructive.
 - [ ] `01-aat-core/src/hyp-directed-separation-under-composition.md` — read for current state and how to add the "constructive special case" Discussion note.
 - [ ] `01-aat-core/src/form-composition-closure.md` — already heavily read in conversation. Confirm Discussion-section landing slot.
 - [ ] `01-aat-core/src/der-tempo-composition.md` — already heavily read. Confirm Discussion-section landing slot.
@@ -58,15 +58,15 @@ Load-bearing AAT-core segment. Slug per CLAUDE.md role-prefix mapping: `derived`
   - §1 Setup (wrapper state X_W = (M_W, G_W), query selectors q_M / q_G, update maps f_M / f_G with type signatures).
   - §2 Conditions C1 (admissibility), C2 (stationary component conditional), C3 (no implicit goal-inference).
   - §3 Theorem 1 (exact form): under C1–C3, wrapper satisfies (A1)–(A4) at wrapper level (with wrapper-design constraints D-A2/D-A3/D-A4), and directed separation holds exactly at wrapper level. Therefore wrapper is Class-1.
-  - §4 Theorem 2 (approximate form): C3 replaced by KL leakage bound κ; data-processing inequality propagates to wrapper-level KL bound.
-  - §5 W₀/W₂/W₁ regime hierarchy table (from `03-leakage.md` §2). κ_W₁ ≤ I(A(q_M); G_W | q_M) — *structural*. κ_W₂ bounded only behaviorally; **no structural bound**.
-- [ ] Epistemic Status: derived under (C1)–(C3) + D-A2/A3/A4. Tier 1 belief-update class for D-A4. Honest scope on C3-failure for real LLMs (κ_W₁ bound is empirical, the structural form is the ideal).
+  - §4 Theorem 2 (approximate form): C3 replaced by KL leakage bound $\kappa$; data-processing inequality propagates to wrapper-level KL bound.
+  - §5 W₀/W₂/W₁ regime hierarchy table (from `03-leakage.md` §2). $\kappa_{W_1} \leq I(A(q_M);G_W \mid q_M)$ — *structural*. $\kappa_{W_2}$ bounded only behaviorally; **no structural bound**.
+- [ ] Epistemic Status: derived under (C1)–(C3) + D-A2/A3/A4. Tier 1 belief-update class for D-A4. Honest scope on C3-failure for real LLMs ($\kappa_{W_1}$ bound is empirical, the structural form is the ideal).
 - [ ] Discussion:
   - Component admissibility: Class A (goal-blind by design) / Class B (admit goal-blind mode) / Class C (fundamentally goal-conditioned). LLMs in Class B with leakage caveats.
-  - ε*_track vs ε*_coerce disambiguation (from `04-epsilon-semantics.md`).
+  - $\varepsilon^\ast_{\text{track}}$ vs $\varepsilon^\ast_{\text{coerce}}$ disambiguation (from `04-epsilon-semantics.md`).
   - Quality-vs-separation tradeoff inside Class B.
   - Connection to Brooks's-Law form: C_coord^wrap as cost of class coercion in tempo.
-  - Connection to persistence template: wrapper-level persistence inherits with effective disturbance ρ_W = ρ_ext + ρ_int.
+  - Connection to persistence template: wrapper-level persistence inherits with effective disturbance $\rho_W = \rho_{\text{ext}} + \rho_{\text{int}}$.
   - Form-preservation reading (cite Friston 2019 / 2025 RGM and Mehta-Schwab 2014 / Kline-Palmer 2022 IB-as-RG / Chen-Goldenfeld-Oono 1996 — DO NOT cite the temporal-nesting-rg spike directly, segment voice).
 - [ ] Findings section per FORMAT.md:
   - **Brief** (Feynman-criterion plain-language): A Class-3 component (one whose belief and goal updates are entangled) can be wrapped in an external scaffold that maintains explicit belief and goal stores separately, with the structural rule that belief updates only see goal-blind queries to the component. Under stated conditions this gives directed separation at the wrapper level — the wrapped system is Class-1 by construction, even though the underlying component isn't. The cost shows up as more component calls per cycle and a residual leakage bound from the component's pretraining.
@@ -86,7 +86,7 @@ Load-bearing AAT-core segment. Slug per CLAUDE.md role-prefix mapping: `derived`
   - Detailed tempo accounting for canonical wrapper architectures (deferred from this cycle).
   - Quantitative empirical bounds for LLM systems (deferred; would need component-specific MI estimation).
   - Compositional wrapping (wrapper-of-wrapper): how do leakage rates compose? Currently open.
-  - Whether κ_W₂ is bounded under additional behavioral-compliance axioms — open hypothesis.
+  - Whether $\kappa_{W_2}$ is bounded under additional behavioral-compliance axioms — open hypothesis.
   - Cross-reference to `spikes/class-coercion-wrapping/` for the reasoning trail.
 
 ### B2. `03-llm-core/src/der-logogenic-as-wrapping.md` (NEW)
@@ -108,14 +108,14 @@ Specialization of class-coercion to language-component substrate. Slug: `der-log
 - [ ] Title and one-sentence summary.
 - [ ] Formal Expression:
   - §1 Logogenic substrate as a Class-3 component (cite `def-coupled-update-dynamics`): LLM forward pass entangles belief and goal updates.
-  - §2 LLMs satisfy (C1) of `#der-class-coercion-via-wrapping` — Class B in the admissibility partition. (C3) holds approximately, with κ_W₁ bound from pretraining-distribution analysis.
+  - §2 LLMs satisfy (C1) of `#der-class-coercion-via-wrapping` — Class B in the admissibility partition. (C3) holds approximately, with $\kappa_{W_1}$ bound from pretraining-distribution analysis.
   - §3 Two regimes for logogenic wrapping:
     - W₁ (strict): separate goal-blind and goal-conditioned LLM calls per cycle. Structural directed-separation guarantee.
     - W₂ (partial / output-structuring): one goal-conditioned LLM call per cycle with structurally typed parsed response. Behavioral guarantee only.
-- [ ] Epistemic Status: derived from `#der-class-coercion-via-wrapping` under logogenic-substrate admissibility (Class B). Honest scope on κ_W₁ bound being empirical.
+- [ ] Epistemic Status: derived from `#der-class-coercion-via-wrapping` under logogenic-substrate admissibility (Class B). Honest scope on $\kappa_{W_1}$ bound being empirical.
 - [ ] Discussion:
   - Worked example 1: PROPRIUM-as-implemented is W₂. Multi-component typed M_W (VERA / MEMORATA / CONSORTIA / PERCEPTA / CHRONICA) and G_W (AXIOMATA / OPERATA / PRAXES) at write boundary; one goal-conditioned LLM call per cycle.
-  - Worked example 2: PROPRIUM with auxilia handling f_M as W₁. Auxilia (cheap-substrate goal-blind queries) handle belief-side updates; entity's frontier-substrate call handles strategy-side. K = K_M + 1 component calls per cycle; structural κ_W₁ bound.
+  - Worked example 2: PROPRIUM with auxilia handling $f_M$ as W₁. Auxilia (cheap-substrate goal-blind queries) handle belief-side updates; entity's frontier-substrate call handles strategy-side. $K = K_M + 1$ component calls per cycle; structural $\kappa_{W_1}$ bound.
   - Worked example 3: agentic-tft cognitive-loop-spec CONTEXTUALIZE → CHOOSE phase separation as another W₁ candidate.
   - Quality-vs-separation tradeoff for logogenic substrate (LLM-specific): pretraining-induced query-content correlation; system-prompt contamination; few-shot leakage; RLHF biasing.
 - [ ] Findings (per FORMAT.md):
@@ -125,7 +125,7 @@ Specialization of class-coercion to language-component substrate. Slug: `der-log
   - **Related Work**: cite tool-using LLM frameworks; cite Park et al. 2023 Generative Agents as the closest empirical instance of W₁; cite cognitive architectures for the substrate-independent design pattern.
 - [ ] Working Notes:
   - shoshin's current implementation is W₂ (one goal-conditioned LLM call per cycle); strengthening to W₁ via auxilia is engineering follow-on, not theory.
-  - Empirical κ measurement on real LLMs is open follow-on.
+  - Empirical $\kappa$ measurement on real LLMs is open follow-on.
   - Whether the agentic-tft cognitive-loop-spec is anywhere implemented in W₁ form is open.
 
 ## Phase C — Updates to existing segments
@@ -143,11 +143,11 @@ Specialization of class-coercion to language-component substrate. Slug: `der-log
 
 ### C3. `01-aat-core/src/form-composition-closure.md`
 
-- [ ] Discussion: add a sub-section "**Wrapping construction as constructive (A1)–(A4)**" noting that the wrapping construction (`#der-class-coercion-via-wrapping`) is a specific instance where (A1)–(A4) hold *by construction* through the wrapper's type signatures, rather than by post-hoc verification. Brief ε*_track vs. ε*_coerce disambiguation note.
+- [ ] Discussion: add a sub-section "**Wrapping construction as constructive (A1)–(A4)**" noting that the wrapping construction (`#der-class-coercion-via-wrapping`) is a specific instance where (A1)–(A4) hold *by construction* through the wrapper's type signatures, rather than by post-hoc verification. Brief $\varepsilon^\ast_{\text{track}}$ vs. $\varepsilon^\ast_{\text{coerce}}$ disambiguation note.
 
 ### C4. `01-aat-core/src/der-tempo-composition.md`
 
-- [ ] Discussion: add a sub-section "**Wrapping as a Brooks's-Law instance**" noting that class-coercion via wrapping pays its cost in macro-tempo: K component calls per macro-step yields C_coord^wrap = (K-1) * single-call-rate (rough form). Cross-reference `#der-class-coercion-via-wrapping` and the regime-dependent K (W₁ has K≥2; W₂ has K=1 + parsing).
+- [ ] Discussion: add a sub-section "**Wrapping as a Brooks's-Law instance**" noting that class-coercion via wrapping pays its cost in macro-tempo: $K$ component calls per macro-step yields $C_{\text{coord}}^{\text{wrap}} = (K - 1)$ * single-call-rate (rough form). Cross-reference `#der-class-coercion-via-wrapping` and the regime-dependent $K$ (W₁ has $K \geq 2$; W₂ has $K = 1$ + parsing).<!--md-press:not-math:W₂-->
 
 ### C5. `04-eli-core/src/def-auxilia-hierarchy.md`
 
@@ -200,7 +200,7 @@ Specialization of class-coercion to language-component substrate. Slug: `der-log
 
 ## Phase E — LEXICON / FORMAT integration
 
-- [ ] If wrapping-specific vocabulary is missing from `LEXICON.md` (W₀/W₂/W₁, structural vs. behavioral leakage, ε*_track / ε*_coerce, class coercion, wrapper, goal-blind query, goal-conditioned query, admissibility C1–C3, auxilia-as-W₁), add entries.
+- [ ] If wrapping-specific vocabulary is missing from `LEXICON.md` (W₀/W₂/W₁, structural vs. behavioral leakage, $\varepsilon^\ast_{\text{track}}/\varepsilon^\ast_{\text{coerce}}$, class coercion, wrapper, goal-blind query, goal-conditioned query, admissibility C1–C3, auxilia-as-W₁), add entries.
 - [ ] Verify the Findings sections of B1 and B2 satisfy the `feedback_naming_principle_citability.md` Criterion 9 standard.
 - [ ] Verify segment voice (per `feedback_segment_voice_not_diff_voice.md`) — no "this came from the wrapping spike" language in Formal Expression / Epistemic Status / Discussion.
 
