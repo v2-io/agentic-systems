@@ -42,7 +42,7 @@ Six load-bearing independence assumptions in AAT, each paired with its failure r
 
 **Failure regime:** The dominant real-world case in complex, multi-stakeholder, or adversarial environments — shared infrastructure, market conditions, correlated adversary actions, common-mode risks, supply-chain dependencies.
 
-**Diagnostic signal:** Pairwise covariance among sibling edges after edge credences have converged. Positive covariance rejects the independence hypothesis and localizes where a common cause is missing. See #der-causal-insufficiency-detection.
+**Diagnostic signal:** Pairwise covariance among sibling edges after edge credences have converged. Covariance different from zero, of either sign, rejects the independence hypothesis and localizes where a common cause is missing. It is positive for a cause that enables or disables siblings together, and negative for one that makes them exclusive (competition for a resource; alternative answers to one question). See #der-causal-insufficiency-detection.
 
 **Repair operation:** L1 augmentation — add common-cause nodes and restructure the DAG so each common cause is factored *above* the correlation it creates ( #def-strategy-dag Correlation Hierarchy; #deriv-edge-credence-dynamics Prop B.6). L0 formal results transfer exactly to correctly constructed L1 DAGs because a correctly constructed L1 graph is causally sufficient *and* an AND/OR tree, the two conditions under which status propagation is exact ( #deriv-graph-structure, §"Exactness of Status Propagation"). The orient cascade's step 4c triggers this escalation.
 

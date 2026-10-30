@@ -70,23 +70,25 @@ The covariance test (route (b)) is the AAT-canonical detector: it uses only mach
 
 *[Derived (from loop-interventional-access + independence test, conditional on SA3 exploration providing joint observability)]*
 
-Under L0 (the independence model in #def-strategy-dag's Correlation Hierarchy), sibling outcomes under a common parent are uncorrelated:
+Under L0 (the independence model in #def-strategy-dag's Correlation Hierarchy, a causally sufficient AND/OR tree, in which siblings have disjoint ancestors), sibling outcomes under a common parent are uncorrelated:
 
 $$H_0:\;\operatorname{Cov}(Y_{A_i}, Y_{A_j}) = 0 \quad \forall\; i \neq j \;\text{siblings under the same parent}$$
 
-Under causal insufficiency (latent common cause $C$ acting on multiple siblings), sibling outcomes are positively correlated:
+Under causal insufficiency (latent common cause $C$ acting on multiple siblings), sibling outcomes are correlated:
 
-$$H_1:\;\exists\; i \neq j \;\text{with}\; \operatorname{Cov}(Y_{A_i}, Y_{A_j}) \gt 0$$
+$$H_1:\;\exists\; i \neq j \;\text{with}\; \operatorname{Cov}(Y_{A_i}, Y_{A_j}) \neq 0$$
+
+The correlation is positive when the latent enables or disables the siblings together (shared infrastructure, a common resource that is either there or not). It is negative when the latent makes them exclude one another: siblings competing for one scarce resource, or alternative answers to one question, such as "arm $k$ is the best arm" for each $k$ ( #example-strategy). Both reject $H_0$.
 
 The agent generates test data through the standard exploration mechanism (SA3 — $\varepsilon$-greedy or similar). On trials where both siblings are observable — the agent tries one and can also observe the other's outcome, or tries them in rapid succession before the environment state changes — it accumulates the empirical covariance:
 
 $$\hat\rho_{ij} = \frac{1}{N}\sum_t (Y_{A_i,t} - \bar{Y}_{A_i})(Y_{A_j,t} - \bar{Y}_{A_j})$$
 
-A significantly positive $\hat\rho_{ij}$ rejects the L0 independence hypothesis. Joint observability ( #der-loop-interventional-access supplies the interventional character; SA3 supplies the joint sampling) is precisely the violation of scope condition (S3) that admits the test under the no-go.
+A $\hat\rho_{ij}$ significantly different from zero, of either sign, rejects the L0 independence hypothesis. Joint observability ( #der-loop-interventional-access supplies the interventional character; SA3 supplies the joint sampling) is precisely the violation of scope condition (S3) that admits the test under the no-go.
 
-**Detection criterion.** A statistically significant positive $\hat\rho_{ij}$ at sample size $N$ sufficient for the desired test power, after per-edge credences have stabilized:
+**Detection criterion.** A statistically significant nonzero $\hat\rho_{ij}$ at sample size $N$ sufficient for the desired test power, after per-edge credences have stabilized (two-sided):
 
-$$\hat\rho_{ij} \gt z_{1-\alpha}\,\hat\sigma_{\rho_{ij}} / \sqrt{N} \quad\implies\quad \text{DAG is causally insufficient between siblings } i, j$$
+$$\lvert\hat\rho_{ij}\rvert \gt z_{1-\alpha/2}\,\hat\sigma_{\rho_{ij}} / \sqrt{N} \quad\implies\quad \text{DAG is causally insufficient between siblings } i, j$$
 
 (Standard hypothesis-testing form; threshold and test power depend on application.)
 
@@ -96,7 +98,7 @@ $$\hat\rho_{ij} \gt z_{1-\alpha}\,\hat\sigma_{\rho_{ij}} / \sqrt{N} \quad\implie
 2. **Per-edge credence stabilization.** Edge credences $\hat p_i, \hat p_j$ have stopped drifting at the timescale of the covariance accumulation, so $\bar Y_{A_i}, \bar Y_{A_j}$ are well-defined empirical means.
 3. **Approximate stationarity over the test window.** The latent common cause's frequency and the conditional success rates are not drifting faster than the test's accumulation timescale.
 
-When these preconditions hold, $\hat\rho_{ij} \gt 0$ is diagnostic of a missing common cause acting on $(A_i, A_j)$. When they do not, the signal is ambiguous.
+When these preconditions hold, $\hat\rho_{ij} \neq 0$ is diagnostic of a missing common cause acting on $(A_i, A_j)$, and its sign says which kind (enabling together, or exclusive). When they do not, the signal is ambiguous.
 
 ### The Aggregate Residual as a Degenerate Special Case of the No-Go
 
@@ -108,7 +110,7 @@ A historically prominent diagnostic uses the L0 plan-level residual $\Phi^{L0}(\
 
 This is *not* a separate finding from the no-go: it is the no-go's prediction for the specific aggregate-residual statistic. The no-go forbids *any* on-policy statistic from distinguishing $\mathcal W_{L1}$ from $\mathcal W_{L0}^\ast$; the residual evaluates to the same value (zero) in both, as expected.
 
-**Off-policy boundary.** Under $\varepsilon$-exploration (route (a)), the residual scales as $O(\varepsilon)$ to leading order with sign matching the dominant node-type bias ($+$ for OR-heavy, $-$ for AND-heavy):
+**Off-policy boundary.** Under $\varepsilon$-exploration (route (a)), the residual scales as $O(\varepsilon)$ to leading order with sign matching the dominant node-type bias ($+$ for OR-heavy, $-$ for AND-heavy, when $\rho \gt 0$; reversed when $\rho \lt 0$):
 
 $$\Phi^{L0}(\hat{\boldsymbol p}) - \bar y_G = \varepsilon \cdot R + O(\varepsilon^2), \quad \operatorname{sign}(R) = \operatorname{sign}(\rho)$$
 
@@ -118,16 +120,18 @@ The residual is therefore a *confirmatory* signal under route (a): when the agen
 
 ### From Detection to L1 Construction
 
-*[Derived (from positive covariance signal + L1 construction principle in #def-strategy-dag)]*
+*[Derived (from the covariance signal + the L1 construction principle in #def-strategy-dag for positive covariance; explicit conditioning for negative)]*
 
-Once the agent detects $\hat\rho_{ij} \gt 0$ between siblings $A_i$ and $A_j$, it knows a latent common cause exists but not its identity. The construction process:
+Once the agent detects $\hat\rho_{ij} \neq 0$ between siblings $A_i$ and $A_j$, it knows a latent common cause exists but not its identity. For $\hat\rho_{ij} \gt 0$, a shared enabling cause, the construction process is:
 
 1. **Hypothesize** a common-cause node $C$ that explains the correlation.
-2. **Estimate** $\theta_C$ from the pattern of joint outcomes. The joint failure rate $P(A_i\text{ fails}, A_j\text{ fails})$ exceeds $(1-\theta_i)(1-\theta_j)$ by $\hat\rho_{ij}$; the excess localizes the common cause's frequency.
+2. **Estimate** $\theta_C$ from the pattern of joint outcomes. The joint failure rate $P(A_i\text{ fails}, A_j\text{ fails})$ is $(1-\theta_i)(1-\theta_j) + \hat\rho_{ij}$; the excess localizes the common cause's frequency.
 3. **Restructure** the DAG: factor $C$ above the correlated siblings ( #def-strategy-dag, L1 construction principle: factor the common cause above the correlation it creates).
 4. **Re-estimate** conditional edge credences $\theta_{k\mid C}$ from the data, conditioned on the inferred $C$ state.
 
 This is structural adaptation ( #result-structural-adaptation-necessity) at the strategy level: the agent changes its model class from L0 to L1, adding representational capacity for a pattern the L0 model cannot express. The cost is the standard cost of structural change: temporary performance degradation while the new credences converge, and increased graph complexity. (Soft-facilitator common causes require L1' rather than L1 — see #def-strategy-dag and #example-L1 for the strict-prerequisite vs soft-facilitator distinction.)
+
+**When $\hat\rho_{ij} \lt 0$.** The latent makes the siblings exclude one another, so no single gate enables both, and factoring above (step 3) does not apply. The repair is to make the latent a node whose states are the alternatives (which sibling gets the resource, which answer is true) and to condition on it. This is the explicit-conditioning form of #def-strategy-dag, $P_\Sigma(G) = \sum_c P(C = c)\, P_\Sigma(G \mid C = c)$. When the siblings are fully exclusive, an OR over them is the sum of their transmitted credences ( #example-strategy). The observability caveat of L1' carries over: if $C$'s state is never observed, the per-state credences face the same identifiability floor (Prop B.7 in #deriv-edge-credence-dynamics).
 
 ### Diagnostic CIY
 
@@ -164,7 +168,6 @@ By the no-go and its boundary characterization, several latent structures remain
 - **Latents with no joint-observability route.** If the latent affects siblings that cannot be jointly observed (mutually exclusive with long horizons, no cause-indicator availability, no intervention capability, no informative prior), the no-go applies in full strength and detection is impossible.
 - **Latents affecting only one edge.** By definition not common causes; appear as noise in individual edge credences.
 - **Latents too rare to produce observable joint outcomes.** Even with route (b) operational, a latent with $\theta_C \approx 1$ rarely reveals itself — the agent needs enough $C = 0$ events to estimate the covariance.
-- **Negatively-correlating latents.** The formulation assumes positive correlation from shared enabling factors. Negative correlation (competing for a shared resource) produces the opposite bias pattern and requires a different model.
 
 These limitations parallel the information-theoretic underdetermination in #disc-credit-assignment-boundary: detection requires data with the right structure, and the no-go specifies precisely what "right structure" means.
 
@@ -237,7 +240,6 @@ Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo audi
 
 #### 3. Follow-up items
 
-- **Negatively-correlating latents.** The covariance detector targets *positive* sibling correlation (shared enabling cause). Two siblings failing together because they compete for a shared scarce resource produce *negative* correlation — how does the agent restructure its DAG for that? (Claude/193847; Codex/526815 raises the same as a precision concern about the $H_1\!: \mathrm{Cov}\gt 0$ statement). *See off-ramp note in the lift report — the Codex framing of this is a candidate scope-precision finding, not just a curiosity.*
 - **One non-shallow construction wanted.** The no-go is exact for shallow strict-prerequisite cases and robust-qualitative for general topology; the audit suggests at least one mixed-AND/OR + multiple-latent construction to back the general claim (Claude/471203). Tracks the existing Working-Notes general-topology item.
 
 #### 4. Readers often ask / wonder
