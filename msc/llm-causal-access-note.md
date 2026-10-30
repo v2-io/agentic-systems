@@ -32,8 +32,7 @@ The agent = model + loop, not model alone. An LLM writing code, running tests, a
 
 This is not a workaround or approximation. It is the *standard* mechanism by which most agents in TFT's scope achieve Level 2 access. A Kalman filter with an LQR controller achieves Level 2 not through internal counterfactual reasoning but through the control loop. A PID controller has no causal model at all — it achieves Level 2 through the physical feedback loop. Pearl's demand that the internal model contain an SCM is like demanding that a PID controller contain a differential equation solver — the controller doesn't need one because the physical system *is* the solver.
 
-In the software domain specifically, the agent achieves even Level 3:
-git checkout → implement alternative → observe difference provides *literal counterfactual evaluation* with ground-truth verification. No model-based simulation with uncertain fidelity — actual execution of the counterfactual.
+In the software domain specifically, the agent achieves even Level 3: git checkout → implement alternative → observe difference provides *literal counterfactual evaluation* with ground-truth verification. No model-based simulation with uncertain fidelity — actual execution of the counterfactual.
 
 ### Response 2: Language IS Compressed Causal Structure (from linguistics)
 
@@ -109,7 +108,7 @@ For AAT-grounded AI agent design:
 
 3. **M_t preservation across sessions matters more than internal causal architecture.** The 100% context turnover problem destroys the agent's accumulated causal understanding each session. Externalizing M_t (through CLAUDE.md, memory files, well-structured code) preserves the causal knowledge that the loop helped the agent acquire.
 
-4. **The agent's effective G_t level can be raised by enriching the loop.**
+4. **The agent's effective G_t level can be raised by enriching the loop.**  
    More observation channels (better monitoring), faster feedback (faster tests), and richer action spaces (more tools) all increase the agent's effective causal access without changing the model architecture.
 
 ---

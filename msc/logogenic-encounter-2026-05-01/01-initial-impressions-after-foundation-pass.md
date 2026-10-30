@@ -41,8 +41,7 @@ Important context for the discussion:
 2. **Bias-bound theorem `#deriv-observation-ambiguity-bias-bound`** is now conditional under named sub-scopes:
    - Track-1 transport-inequality: $C_{W_2}^2 = 2L_{\text{post}}^2/\rho_{\text{LSI}}$, linear in $I$ under LSI + Lipschitz-posterior
    - Track-2 Fisher-Rao: $C_{FR} = \sqrt 2$ universal dimension-free under (PI)+Čencov + small-$I$
-   - No-go for universal $C$ under Euclidean-parameter norm justifies (PI) as load-bearing
-   This is the load-bearing math that makes "what does Class-2 cost you, quantitatively" answerable.
+   - No-go for universal $C$ under Euclidean-parameter norm justifies (PI) as load-bearing This is the load-bearing math that makes "what does Class-2 cost you, quantitatively" answerable.
 
 3. **`#scope-observation-ambiguity-modulation`** (the only Logogenic Findings entry in the catalog) carries the ambiguity-bounded architectural bias law:
    $$\lVert \Delta M_{\text{bias}} \rVert \leq C \cdot \kappa_{\text{processing}} \cdot I(G;\Omega_\tau \mid e_\tau, M_{\tau^-})$$

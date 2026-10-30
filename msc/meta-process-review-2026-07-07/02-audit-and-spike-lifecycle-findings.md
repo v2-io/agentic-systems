@@ -12,8 +12,7 @@ The audit and spike *lifecycles* are healthy and genuinely enacted. What is brok
 
 ### A1. Spike lifecycle — HEALTHY (de-facto, well-exercised)
 
-Trigger: any question needing exploration (friction-free launch — "go ahead and spike it").
-Observed steps, all present in recent spikes: launch → explore/derive → **independent refute-verification** → land self-contained in canon at honest tier (integration-is-replacement) → set spike status `LANDED`/`EXPLORATORY`/`ACTIVE` → file to `spikes/.integrated/` with a dated MANIFEST, or keep live.
+Trigger: any question needing exploration (friction-free launch — "go ahead and spike it"). Observed steps, all present in recent spikes: launch → explore/derive → **independent refute-verification** → land self-contained in canon at honest tier (integration-is-replacement) → set spike status `LANDED`/`EXPLORATORY`/`ACTIVE` → file to `spikes/.integrated/` with a dated MANIFEST, or keep live.
 
 Evidence it is real, not aspirational (all first-hand from `spikes/INDEX.md` + segment state + git):
 - `spike-mood-timescale-matching-2026-06-17` → **LANDED** in `#der-mood-timescale`; the strong "mood time-constant *matches* environment autocorrelation" slogan was **refuted and replaced** by a derived square-root scaling law — integration-is-replacement enacted, not narrated (commit `857db06`).
@@ -24,8 +23,7 @@ Current live spike: `spikes/epistemic-target-ontology/` (5 files, last touched 2
 
 ### A2. Audit finding-routing — HEALTHY at routing, BLOCKED at graduation
 
-Trigger: a de-novo audit lands as `audit-<id>-FINAL-<date>.md`.
-Steps: per-finding **strengthen-first** disposition (route, don't execute) → `audits/STATUS.md` row → findings routed to canon / TODO / PROPOSALS / the polish-and-sentiment ledger.
+Trigger: a de-novo audit lands as `audit-<id>-FINAL-<date>.md`. Steps: per-finding **strengthen-first** disposition (route, don't execute) → `audits/STATUS.md` row → findings routed to canon / TODO / PROPOSALS / the polish-and-sentiment ledger.
 
 The *routing* half works: `audit-731548-FINAL-2026-07-02` (the newest, Fable-5 de-novo) was routed 2026-07-03 with Tier-1 executed (B-1/B-2/B-4 landed; B-3 → SP-30; mood MG-discharge done — CHANGELOG 2026-07-03). The strengthen-first inversion is genuinely applied (B-1 "strengthen-by-split" gated on a *second* independent re-derivation which refuted necessity by fresh construction).
 
@@ -33,16 +31,13 @@ The *graduation* half does not work — see (d) D1.
 
 ### A3. Gold-lift (incidental-gold routing) — STALLED mid-sweep
 
-Trigger (per routing.sop §8): should be a **standing prompt step** — lift each audit's §14 "Wandering Thoughts" gold into per-segment `## Working Notes` **soon after the audit lands, so it does not pool**.
-Ran hard 2026-05-30→31 under an explicit Joseph-agreed gate-release (`gold-lift-sweep-2026-05-30.md`): batches A1–A17 committed (commits `598631e`…`46168fa`), **122 AAT-core segments** now carry an "Incidental audit gold" Working Note (verified: `grep -rln "Incidental audit gold"` = 122, all in `01-aat-core/src`).
+Trigger (per routing.sop §8): should be a **standing prompt step** — lift each audit's §14 "Wandering Thoughts" gold into per-segment `## Working Notes` **soon after the audit lands, so it does not pool**. Ran hard 2026-05-30→31 under an explicit Joseph-agreed gate-release (`gold-lift-sweep-2026-05-30.md`): batches A1–A17 committed (commits `598631e`…`46168fa`), **122 AAT-core segments** now carry an "Incidental audit gold" Working Note (verified: `grep -rln "Incidental audit gold"` = 122, all in `01-aat-core/src`).
 
 Then it stopped. Verified stall: **0** gold WN in `02-tst-core/src`, `03-llm-core/src`, `04-eli-core/src`. The planned wave 5 (A18–A21 App-A remainder + TST T1–T2 + logogenic L1–L2 + logozoetic E1–E2 + the end-of-sweep batched/paired-note reconciliation) **never ran**; the tracker's last line still reads "**Next — wave 5**" as if live. Last gold-lift commit: 2026-05-31 13:34. This is the clearest single abandoned-mid-flight process in the cluster (~5 weeks stale). It is also actively pooling: `AUDIT-WORKING-731548` has **38 top-level reflection notes and no `.integrated/` subdir** — gold-lift for it "not started" (STATUS.md confirms), exactly the pooling §8 exists to prevent.
 
 ### A4. Gem-hunt (audit re-mining) — HEALTHY but one-time; its meta-finding is durable
 
-Trigger: under-mined audit-findings files (zero ledger / zero MANIFEST hits).
-A 2026-05-29 qualitative pass mined 12 audits across two waves (STATUS.md §"Gem-hunt cycle"), each read first-hand against current canon, each gem parent-verified before landing. Real output: two math errors fixed (`f8d9151`), two headline gems → SP-26/SP-27, seeds → ledger S34–S41.
-The durable meta-finding: **every one of the 12 audits' flagship findings had already been resolved by a later cycle** — "uniform drift," the central confirmation that *audit dispositions are drifted proxies* and the value is the incidental gold, not the certified findings. This is load-bearing for how the whole audit corpus should be read (see feedback-audit-findings-as-gem-hints).
+Trigger: under-mined audit-findings files (zero ledger / zero MANIFEST hits). A 2026-05-29 qualitative pass mined 12 audits across two waves (STATUS.md §"Gem-hunt cycle"), each read first-hand against current canon, each gem parent-verified before landing. Real output: two math errors fixed (`f8d9151`), two headline gems → SP-26/SP-27, seeds → ledger S34–S41. The durable meta-finding: **every one of the 12 audits' flagship findings had already been resolved by a later cycle** — "uniform drift," the central confirmation that *audit dispositions are drifted proxies* and the value is the incidental gold, not the certified findings. This is load-bearing for how the whole audit corpus should be read (see feedback-audit-findings-as-gem-hints).
 
 ---
 

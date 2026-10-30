@@ -1,16 +1,8 @@
 # Consolidated polish-and-sentiment ledger — PRE-DECISIONAL DRAFT
 
-> **Status: working draft, not yet applied.** This is the *design* of the
-> single consolidated soft-findings pass across clusters A–E (per the
-> anti-fragmentation rule: one curated cross-cluster pass, themed and
-> deduplicated — never per-cluster as each graduates, which re-buries the
-> signal). It locks nothing in: `audits/polish-and-sentiment-ledger.md` is
-> untouched until the post-gate durable batch. Rows continue from the live
-> ledger's max **S7**. Numbering is thematic, not cluster-order — the
-> thematic grouping *is* the anti-fragmentation structure.
+> **Status: working draft, not yet applied.** This is the *design* of the single consolidated soft-findings pass across clusters A–E (per the anti-fragmentation rule: one curated cross-cluster pass, themed and deduplicated — never per-cluster as each graduates, which re-buries the signal). It locks nothing in: `audits/polish-and-sentiment-ledger.md` is untouched until the post-gate durable batch. Rows continue from the live ledger's max **S7**. Numbering is thematic, not cluster-order — the thematic grouping *is* the anti-fragmentation structure.
 >
-> Breadcrumb only. If this session ends, the next instance inherits the
-> synthesis here; the authoritative policy is `doc/audit-routing-instructions.md`.
+> Breadcrumb only. If this session ends, the next instance inherits the synthesis here; the authoritative policy is `doc/audit-routing-instructions.md`.
 
 ---
 
@@ -18,72 +10,22 @@
 
 The recurring signals that *must not* become one row per file:
 
-- **"Epistemic honesty / conservatism is extraordinary — best in this
-  space."** Recurs in essentially every reviewer across the whole corpus:
-  Cluster E's 2026-03/04 broad-review cohort (~10 independent Opus/Codex/
-  Gemini reads), Cluster D's 849201 confirmation-class variants, 738192's
-  process praise, scattered Codex passes. → **one** attributed row (**S16**),
-  not per-file.
-- **"Section I is the strongest; the lift into agency/composition is where
-  rigor thins"** + the specific positive (satisfaction-gap/control-regret
-  split, acyclicity-from-temporal-ordering = "the most genuinely useful
-  original formalization / real theory not vocabulary"). Cluster A traced it
-  across Codex 04-01/02×3/03×2/06×3 + Opus echo. → **one** row (**S9**).
-- **"The framework's honesty is load-bearing / the epistemic architecture
-  is the most novel contribution (more than the integration narrative)."**
-  Cluster A (Opus 6d858f28 closing + 3546217a BP-6) **and** Cluster B
-  (audits-2026-04-22-evening Opus closing-observation) — same session-family
-  observation, *and it landed* (it is now the CLAUDE.md honesty-as-
-  architecture posture + the OUTLINE "Reading AAT" preamble). → **one** row
-  (**S10**), status `superseded-by` the landed posture, attributed to both.
-- **Cox-necessity for graph-structure-uniqueness reachable.** Cluster A
-  (extracted-claude-04-22-6d858f28 §BP-E) **and** Cluster B (opus-2026-04-21
-  synthesis "Cox-parallel necessity direction"). → **one** row (**S14**),
-  attributed to both, strengthen-direction graduate-watch.
-- **Audit-process / instruction-set feedback.** Recurs across 471203 §G
-  (pilot-routed), 584721 §A.1–A.4, 742613 process-feedback, 613842 process-
-  feedback. → **one** consolidated themed block (**P-block**, below), not
-  4+ rows. The 742613 Phase-2-triage-vocabulary sub-item is specifically
-  `superseded-by` this program's routing-tracker enum (it is that enum's
-  ancestor) — recorded so it does not read as still-open.
-- **Convergence-as-coherence-evidence.** The opacity-gain ≥3-cycle
-  convergence (849201-F1 / extracted-gemini-2026-04-26-27 / AUDIT-WORKING-742613
-  flag) is a **MANIFEST headline**, *not* a ledger row (per Cluster D). The
-  829314-LOGOZOETIC §6 + 849201 confirmation-class "independent reader
-  re-derived the developmental-trajectory / goal-blind-routing / strengthen-
-  first spine" → **one** sentiment/convergence row (**S17**).
+- **"Epistemic honesty / conservatism is extraordinary — best in this space."** Recurs in essentially every reviewer across the whole corpus: Cluster E's 2026-03/04 broad-review cohort (~10 independent Opus/Codex/ Gemini reads), Cluster D's 849201 confirmation-class variants, 738192's process praise, scattered Codex passes. → **one** attributed row (**S16**), not per-file.
+- **"Section I is the strongest; the lift into agency/composition is where rigor thins"** + the specific positive (satisfaction-gap/control-regret split, acyclicity-from-temporal-ordering = "the most genuinely useful original formalization / real theory not vocabulary"). Cluster A traced it across Codex 04-01/02×3/03×2/06×3 + Opus echo. → **one** row (**S9**).
+- **"The framework's honesty is load-bearing / the epistemic architecture is the most novel contribution (more than the integration narrative)."** Cluster A (Opus 6d858f28 closing + 3546217a BP-6) **and** Cluster B (audits-2026-04-22-evening Opus closing-observation) — same session-family observation, *and it landed* (it is now the CLAUDE.md honesty-as- architecture posture + the OUTLINE "Reading AAT" preamble). → **one** row (**S10**), status `superseded-by` the landed posture, attributed to both.
+- **Cox-necessity for graph-structure-uniqueness reachable.** Cluster A (extracted-claude-04-22-6d858f28 §BP-E) **and** Cluster B (opus-2026-04-21 synthesis "Cox-parallel necessity direction"). → **one** row (**S14**), attributed to both, strengthen-direction graduate-watch.
+- **Audit-process / instruction-set feedback.** Recurs across 471203 §G (pilot-routed), 584721 §A.1–A.4, 742613 process-feedback, 613842 process- feedback. → **one** consolidated themed block (**P-block**, below), not 4+ rows. The 742613 Phase-2-triage-vocabulary sub-item is specifically `superseded-by` this program's routing-tracker enum (it is that enum's ancestor) — recorded so it does not read as still-open.
+- **Convergence-as-coherence-evidence.** The opacity-gain ≥3-cycle convergence (849201-F1 / extracted-gemini-2026-04-26-27 / AUDIT-WORKING-742613 flag) is a **MANIFEST headline**, *not* a ledger row (per Cluster D). The 829314-LOGOZOETIC §6 + 849201 confirmation-class "independent reader re-derived the developmental-trajectory / goal-blind-routing / strengthen- first spine" → **one** sentiment/convergence row (**S17**).
 
 Not mirrored, by design (recorded so they are not silently re-dropped):
 
-- O-BP\* / C-BP1 architectural intuitions → already routed to
-  `architectural-proposals-2026-04-22.md` / the three landed meta-segments.
-  Mirroring would double-track. (S13 captures only the *un-adopted residue*.)
-- The 12-obligation bridge-spike roadmap → already housed in
-  `spike-transient-dependency-amplification.md` + `spikes/INDEX.md` + the
-  TODO spike-audit triage. A ledger row would re-bury, not preserve.
-- Codex/Joseph rule-formation exchanges (04-03 Codex-open-questions rule;
-  04-06 no-shortcuts/false-constraints rule) → `process/instruction-feedback`
-  that *already landed in CLAUDE.md*. Their value is **provenance**, carried
-  in the MANIFEST entry ("primary source for CLAUDE.md Working Convention
-  X"), not a ledger row.
-- 738192-F2 line-53 recap-precision nudge → **resolved by SN-3** (commits
-  `3072667`/`2666eca`; `def-pearl-causal-hierarchy:53` is now scoped, parent-
-  verified). *Not* an open soft-polish row — closed; note in MANIFEST.
-- 849201-FINAL Finding 2 (CIY≠EIG verified-still-honest) → redundant with
-  **S7** (CIY name-vs-substance); skip per Cluster D's own guidance.
-- F-V3/F8 (composite-agent C-iii) → correctly-open, triple-tracked
-  (TODO:95 + PROPOSALS SP-21 §G + ledger). Stays there; **not** a ledger row.
-- Cluster C lint-state (3 ordering + 1 missing-dep) + the
-  `hyp-mismatch-dynamics:54` item → **standing-hygiene TODO**, not ledger.
-  *Correction to the inherited frame:* the `:54` item is **mischaracterized**
-  as an "F-V1 micro-residual." Primary source: line 54 already reads
-  `O(η* c_max)` — linear in η\*, i.e. already correct in η\*-order (the F-V1
-  fix *was* the η\*-power, (η\*)²→η\*). It differs from canonical
-  `deriv-discrete-sector-condition`'s `O(η* c_max²/c_min²)` only in the
-  *prefactor*, at explicit `*Heuristic.*` tier, with a live pointer to the
-  sharper segment. **Plausibly a no-op**; at most an optional precision-nudge.
-  Do not churn a correct segment. (Surfaced as a Cluster-C-frame correction;
-  not a ledger item.)
+- O-BP\* / C-BP1 architectural intuitions → already routed to `architectural-proposals-2026-04-22.md` / the three landed meta-segments. Mirroring would double-track. (S13 captures only the *un-adopted residue*.)
+- The 12-obligation bridge-spike roadmap → already housed in `spike-transient-dependency-amplification.md` + `spikes/INDEX.md` + the TODO spike-audit triage. A ledger row would re-bury, not preserve.
+- Codex/Joseph rule-formation exchanges (04-03 Codex-open-questions rule; 04-06 no-shortcuts/false-constraints rule) → `process/instruction-feedback` that *already landed in CLAUDE.md*. Their value is **provenance**, carried in the MANIFEST entry ("primary source for CLAUDE.md Working Convention X"), not a ledger row.
+- 738192-F2 line-53 recap-precision nudge → **resolved by SN-3** (commits `3072667`/`2666eca`; `def-pearl-causal-hierarchy:53` is now scoped, parent- verified). *Not* an open soft-polish row — closed; note in MANIFEST.
+- 849201-FINAL Finding 2 (CIY≠EIG verified-still-honest) → redundant with **S7** (CIY name-vs-substance); skip per Cluster D's own guidance.
+- F-V3/F8 (composite-agent C-iii) → correctly-open, triple-tracked (TODO:95 + PROPOSALS SP-21 §G + ledger). Stays there; **not** a ledger row.
+- Cluster C lint-state (3 ordering + 1 missing-dep) + the `hyp-mismatch-dynamics:54` item → **standing-hygiene TODO**, not ledger. *Correction to the inherited frame:* the `:54` item is **mischaracterized** as an "F-V1 micro-residual." Primary source: line 54 already reads `O(η* c_max)` — linear in η\*, i.e. already correct in η\*-order (the F-V1 fix *was* the η\*-power, (η\*)²→η\*). It differs from canonical `deriv-discrete-sector-condition`'s `O(η* c_max²/c_min²)` only in the *prefactor*, at explicit `*Heuristic.*` tier, with a live pointer to the sharper segment. **Plausibly a no-op**; at most an optional precision-nudge. Do not churn a correct segment. (Surfaced as a Cluster-C-frame correction; not a ledger item.)
 
 ---
 
@@ -139,81 +81,28 @@ Not mirrored, by design (recorded so they are not silently re-dropped):
 
 ### P-block — audit-process / instruction-set feedback (one consolidated themed entry, NOT per-file)
 
-> Not framework findings; themed separately so they do not pollute framework
-> tracking. Attributed sources: **471203 §G** (pilot-routed), **584721
-> §A.1–A.4** (§4.4 cadence-failure 3/3-first-runs lesson; CLAUDE.md/MEMORY.md
-> auto-load priming; OUTLINE-linearization refinement; prompt-12/13
-> expansion), **742613** (partial-pass protocol; appendix-exception
-> tightening; explicit CLAUDE.md↔TODO conflict override; machine-check
-> helper; "consider writing" too soft; **Phase-2 triage vocabulary**),
-> **613842** (SCC/cycle-handling clause; CLAUDE.md-bleed; appendix
-> example-findings-as-historical-calibration; component-local-lint caveat),
-> **829314 §8 ×variants** (formalize the v2 "Effort estimate" with a
-> complexity metric).
+> Not framework findings; themed separately so they do not pollute framework tracking. Attributed sources: **471203 §G** (pilot-routed), **584721 §A.1–A.4** (§4.4 cadence-failure 3/3-first-runs lesson; CLAUDE.md/MEMORY.md auto-load priming; OUTLINE-linearization refinement; prompt-12/13 expansion), **742613** (partial-pass protocol; appendix-exception tightening; explicit CLAUDE.md↔TODO conflict override; machine-check helper; "consider writing" too soft; **Phase-2 triage vocabulary**), **613842** (SCC/cycle-handling clause; CLAUDE.md-bleed; appendix example-findings-as-historical-calibration; component-local-lint caveat), **829314 §8 ×variants** (formalize the v2 "Effort estimate" with a complexity metric).
 >
 > Two specific dispositions inside the block:
-> - The **742613 Phase-2 triage vocabulary** (new / known-unintegrated /
->   known-resolved / tooling-gap / scope-status-mismatch) is the **direct
->   ancestor of this program's routing-tracker disposition enum** →
->   `superseded-by` the enum (record as absorbed, **not open**).
-> - The **829314 §8 v2 "Effort estimate"** recommendation is `superseded-by`
->   the routing-tracker enum's per-finding classification (note-and-close).
+> - The **742613 Phase-2 triage vocabulary** (new / known-unintegrated / known-resolved / tooling-gap / scope-status-mismatch) is the **direct ancestor of this program's routing-tracker disposition enum** → `superseded-by` the enum (record as absorbed, **not open**).
+> - The **829314 §8 v2 "Effort estimate"** recommendation is `superseded-by` the routing-tracker enum's per-finding classification (note-and-close).
 >
-> Status: themed, consolidated, attributed; the durable instruction-
-> improvement signal (the §4.4-cadence and CLAUDE.md-bleed lessons) is the
-> high-value part the project historically discarded — preserved here, not
-> dumped in TODO.
+> Status: themed, consolidated, attributed; the durable instruction- improvement signal (the §4.4-cadence and CLAUDE.md-bleed lessons) is the high-value part the project historically discarded — preserved here, not dumped in TODO.
 
 ---
 
 ## C. MANIFEST-routing notes (not ledger rows — flagged here so they are not lost)
 
-- **A's stale 04-28 disposition:** `extracted-codex-feedback-2026-04-28`
-  says "Pending"; primary-source-verified resolved (`bin/naming-aggregate.rb`
-  defaults + `doc/naming-principles.md` ref). MANIFEST writes the
-  **corrected (resolved)** disposition, *not* "Pending".
-- **bf945f78 non-independence:** `extracted-claude-feedback-2026-04-22-bf945f78`
-  *is* the Opus pass inside `extracted-audits-2026-04-22-morning` — same
-  audit, not independent corroboration. MANIFEST records the relationship
-  (the convergence-as-evidence discipline only holds for *independent*
-  probes).
-- **No SUPPLEMENT for 829314 / 849201** (contra a since-corrected spine
-  generalization that held only for 471203). Their durable evidence is the
-  FINAL's own inline Phase-2 + first-hand `src/` re-read. MANIFEST says so
-  explicitly so a future verifier does not hunt a non-existent SUPPLEMENT.
-- **193847 ≠ 829314:** the encounter tracker
-  `msc/logogenic-encounter-2026-05-01/07-audit-integration-tracker.md`
-  tracks audit-id 193847, not 829314 (coincidental digit overlap). Not a
-  829314 integration record.
-- **Opacity-gain ≥3-cycle convergence** (849201-F1 / extracted-gemini-2026-04-26-27
-  / AUDIT-WORKING-742613 flag → one shared `deriv-adaptive-gain-dynamics`
-  strengthening) is the Cluster-D **MANIFEST strengthen-first headline**,
-  stated once, not re-litigated three times.
-- **April-01/02 consolidation chain** (04-01 → 04-01-remaining →
-  04-02-{synthesis,round2} → 04-02-comprehensive) is a nested-revision
-  lineage → **one grouped MANIFEST entry** with a shared redundancy table,
-  not 13 near-identical per-file justifications. `analysis-2026-04-02-synthesis`
-  is a curated/raw pair with the deep-reviews extract (same content, *not*
-  `diff`-duplicates) — note, do not double-count as independent signal.
-- **Lineage doc embeds Cluster-C findings:** `extracted-claude-session-…-audit-instructions-lineage`
-  is provenance (retain-as-history) but physically contains the
-  2026-04-24-fresh-pass Tier-A/B/C audit whose findings are
-  `pending-findings-2026-04-25`'s (Cluster C). De-dup at routing; do not
-  track the same findings from two clusters.
-- **451729 stays OPEN** on its single residual D.1 (already first-class in
-  TODO §2026-05-10 — routed, not homeless). Its soft items are S25/S28
-  above; once D.1 is dispositioned, 451729 retires as *fully accounted for*.
-- Files #9/#10 (`extracted-codex-feedback-2026-04-03` / `-04-06`) are
-  **primary sources for live CLAUDE.md Working Conventions** (Codex-open-
-  questions-are-reader-clarity-gaps; no-shortcuts/false-constraints/
-  strengthen-before-soften). MANIFEST notes the provenance value so the
-  lineage survives graduation; `extracted-codex-feedback-2026-04-26-bridge-spike`
-  graduates as `research-trail / provenance`, **not** ledger-routed.
+- **A's stale 04-28 disposition:** `extracted-codex-feedback-2026-04-28` says "Pending"; primary-source-verified resolved (`bin/naming-aggregate.rb` defaults + `doc/naming-principles.md` ref). MANIFEST writes the **corrected (resolved)** disposition, *not* "Pending".
+- **bf945f78 non-independence:** `extracted-claude-feedback-2026-04-22-bf945f78` *is* the Opus pass inside `extracted-audits-2026-04-22-morning` — same audit, not independent corroboration. MANIFEST records the relationship (the convergence-as-evidence discipline only holds for *independent* probes).
+- **No SUPPLEMENT for 829314 / 849201** (contra a since-corrected spine generalization that held only for 471203). Their durable evidence is the FINAL's own inline Phase-2 + first-hand `src/` re-read. MANIFEST says so explicitly so a future verifier does not hunt a non-existent SUPPLEMENT.
+- **193847 ≠ 829314:** the encounter tracker `msc/logogenic-encounter-2026-05-01/07-audit-integration-tracker.md` tracks audit-id 193847, not 829314 (coincidental digit overlap). Not a 829314 integration record.
+- **Opacity-gain ≥3-cycle convergence** (849201-F1 / extracted-gemini-2026-04-26-27 / AUDIT-WORKING-742613 flag → one shared `deriv-adaptive-gain-dynamics` strengthening) is the Cluster-D **MANIFEST strengthen-first headline**, stated once, not re-litigated three times.
+- **April-01/02 consolidation chain** (04-01 → 04-01-remaining → 04-02-{synthesis,round2} → 04-02-comprehensive) is a nested-revision lineage → **one grouped MANIFEST entry** with a shared redundancy table, not 13 near-identical per-file justifications. `analysis-2026-04-02-synthesis` is a curated/raw pair with the deep-reviews extract (same content, *not* `diff`-duplicates) — note, do not double-count as independent signal.
+- **Lineage doc embeds Cluster-C findings:** `extracted-claude-session-…-audit-instructions-lineage` is provenance (retain-as-history) but physically contains the 2026-04-24-fresh-pass Tier-A/B/C audit whose findings are `pending-findings-2026-04-25`'s (Cluster C). De-dup at routing; do not track the same findings from two clusters.
+- **451729 stays OPEN** on its single residual D.1 (already first-class in TODO §2026-05-10 — routed, not homeless). Its soft items are S25/S28 above; once D.1 is dispositioned, 451729 retires as *fully accounted for*.
+- Files #9/#10 (`extracted-codex-feedback-2026-04-03` / `-04-06`) are **primary sources for live CLAUDE.md Working Conventions** (Codex-open- questions-are-reader-clarity-gaps; no-shortcuts/false-constraints/ strengthen-before-soften). MANIFEST notes the provenance value so the lineage survives graduation; `extracted-codex-feedback-2026-04-26-bridge-spike` graduates as `research-trail / provenance`, **not** ledger-routed.
 
 ---
 
-*End pre-decisional draft. Inputs: the five cluster `adjudication.md`
-deliverables (ADJUDICATION-WORKING-{704218 A, 628401 B, 704182 C, 714206 D,
-472914 E}) + parent primary-source verification. Authoritative process:
-`doc/audit-routing-instructions.md`. Durable write deferred to the post-gate
-batch.*
+*End pre-decisional draft. Inputs: the five cluster `adjudication.md` deliverables (ADJUDICATION-WORKING-{704218 A, 628401 B, 704182 C, 714206 D, 472914 E}) + parent primary-source verification. Authoritative process: `doc/audit-routing-instructions.md`. Durable write deferred to the post-gate batch.*

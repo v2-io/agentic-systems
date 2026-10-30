@@ -1,7 +1,7 @@
 # Modularity-as-Contested-Property Cycle: Integration Plan
 
-**Status**: drafted 2026-05-09; pending Joseph's decision to execute.
-**Origin**: emerged at the end of the class-coercion-wrapping integration cycle (`spikes/class-coercion-wrapping/INTEGRATION-PLAN.md`) when uncommitted parallel work — `01-aat-core/src/disc-adversarial-coupling-pressure.md` (drafted via different Opus instance during the same session) and `spikes/spike-strategic-self-coupling.md` (sister spike) — was inspected and found to converge structurally with the class-coercion construction.
+**Status**: drafted 2026-05-09; pending Joseph's decision to execute.  
+**Origin**: emerged at the end of the class-coercion-wrapping integration cycle (`spikes/class-coercion-wrapping/INTEGRATION-PLAN.md`) when uncommitted parallel work — `01-aat-core/src/disc-adversarial-coupling-pressure.md` (drafted via different Opus instance during the same session) and `spikes/spike-strategic-self-coupling.md` (sister spike) — was inspected and found to converge structurally with the class-coercion construction.  
 **Posture**: clean theory and unification, integration content. The work is naming a meta-pattern that has emerged across multiple parallel collaborator probes; AAT's contribution is the recognition and integration, not novel content beyond what each segment carries.
 
 ---
@@ -48,7 +48,7 @@ Five concrete moves form the cycle. They are interdependent — each makes the o
 
 The segment is currently orphaned (lint-outline flags it as the only orphan in the project). It belongs in `01-aat-core/OUTLINE.md`. Two candidate placements:
 
-(a) Under Section II as a discussion-grade adjunct to `#der-directed-separation` (it sits at the architecture-classification layer).
+(a) Under Section II as a discussion-grade adjunct to `#der-directed-separation` (it sits at the architecture-classification layer).  
 (b) **Recommended:** as a meta-segment alongside `#disc-separability-pattern` and `#disc-identifiability-floor` (it's a meta-pattern that cuts across Section II and Section III rather than a Section II result proper).
 
 The segment's working notes flag this same routing question. (b) is the cleaner placement because the modularity-state-dynamics meta-segment (Move 4) will sit there, and adversarial-coupling-pressure is naturally one of its instantiations.

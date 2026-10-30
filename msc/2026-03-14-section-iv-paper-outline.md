@@ -1,8 +1,7 @@
 # Section IV Standalone Paper — Outline
 
-**Status**: Outline only — identifies content, gaps, and omissions. Not a draft.
-**Target venue**: ICSE, FSE, or arXiv cs.SE preprint
-**Working title**: "Temporal Optimization in Evolving Software Systems: A Control-Theoretic Framework"
+**Status**: Outline only — identifies content, gaps, and omissions. Not a draft.  
+**Target venue**: ICSE, FSE, or arXiv cs.SE preprint **Working title**: "Temporal Optimization in Evolving Software Systems: A Control-Theoretic Framework"
 
 ---
 

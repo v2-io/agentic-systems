@@ -75,7 +75,7 @@ $\mathcal{M}_{adm}$ is parameterized by a level $\ell$:
 
 Different Section III results require different admissibility levels. The tempo inequality needs Level 1. Directed separation under composition needs Level 2. Strategy-edge vulnerability needs Level 3.
 
-**Advantage**: honest about what each result requires, doesn't over-constrain.
+**Advantage**: honest about what each result requires, doesn't over-constrain.  
 **Disadvantage**: complicates the formalism. Every result needs to state its admissibility level.
 
 **Approach D: Information-preservation admissibility.**
@@ -86,7 +86,7 @@ $$I(\Lambda_x(X_{micro,t}); \Lambda_o(o_{micro, t+1}) \mid \Lambda_a(a_{micro,t}
 
 The macro-state must retain at least $(1-\epsilon)$ of the predictive mutual information that the micro-state has about next observations. This is the information bottleneck applied to the projection.
 
-**Advantage**: principled, connects to IB framework, domain-agnostic.
+**Advantage**: principled, connects to IB framework, domain-agnostic.  
 **Disadvantage**: doesn't guarantee AAT-structure at the macro level. A neural network could satisfy this without having decomposed state, mismatch signals, etc.
 
 **Approach E: Behavioral equivalence.**
@@ -97,7 +97,7 @@ $$\sup_{\text{obs histories}} \lVert \pi_c(\Lambda_x(X_{micro})) - \pi_{AAT}(M_{
 
 for some AAT agent $(M_{AAT}, G_{AAT}, \pi_{AAT})$ with well-defined quantities.
 
-**Advantage**: doesn't constrain internals, only requires that the external behavior is consistent with AAT.
+**Advantage**: doesn't constrain internals, only requires that the external behavior is consistent with AAT.  
 **Disadvantage**: existential quantifier — hard to verify. How do you show such an AAT agent exists?
 
 ### 2.3 The Bridge Lemma Perspective
@@ -399,8 +399,7 @@ The composite sector condition derived in §6.2 provides the bridge: IF each sub
 
 **Setup.** Two agents, linear dynamics, orthogonal observation channels, no communication.
 
-Agent 1: $\dot{\delta}_1 = -\alpha_1 \delta_1 + w_1(t)$, $\lVert w_1 \rVert \leq \rho_1$
-Agent 2: $\dot{\delta}_2 = -\alpha_2 \delta_2 + w_2(t)$, $\lVert w_2 \rVert \leq \rho_2$
+Agent 1: $\dot{\delta}_1 = -\alpha_1 \delta_1 + w_1(t)$, $\lVert w_1 \rVert \leq \rho_1$ Agent 2: $\dot{\delta}_2 = -\alpha_2 \delta_2 + w_2(t)$, $\lVert w_2 \rVert \leq \rho_2$
 
 **Trivial projection** ($\Lambda$ = identity): $\delta_c = (\delta_1, \delta_2)$, macro-dynamics identical to micro-dynamics. $\varepsilon^\ast = 0$. All admissibility conditions trivially satisfied. Uninteresting but confirms the framework.
 

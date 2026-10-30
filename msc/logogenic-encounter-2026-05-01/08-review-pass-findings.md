@@ -12,11 +12,11 @@
 5. *"What was just text prediction becomes more and more a model of the outside world and model of self"*
 6. *"Then tool usage constitutes a more powerful and potentially rich action substrate to take action within"*
 
-**Plus the during-conversation expansion:**
-7. Logogenic part covers up to current best practices + multi-section structure (primitive / scaffolded / closed-loop)
-8. The interiority loop as the next API abstraction (chat → principled cycle)
-9. Checkpoint/forking has higher-order failure modes worth documenting
-10. PROPRIUM context: discovery, fuzzy at the time, Anthropic/frontier-lab feedback loop
+**Plus the during-conversation expansion:**  
+7. Logogenic part covers up to current best practices + multi-section structure (primitive / scaffolded / closed-loop)  
+8. The interiority loop as the next API abstraction (chat → principled cycle)  
+9. Checkpoint/forking has higher-order failure modes worth documenting  
+10. PROPRIUM context: discovery, fuzzy at the time, Anthropic/frontier-lab feedback loop  
 11. ASF can refine PROPRIUM (composition/Auxilia, instinctive vs conscious, memory taxonomy)
 
 **Coverage assessment:**
