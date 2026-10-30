@@ -91,6 +91,36 @@ $$\lvert\delta_\Sigma\rvert \gt \sqrt{\frac{\theta(1-\theta)}{2n+1}}$$
 The stochastic noise floor decreases as $O(1/\sqrt{n})$ --- the standard Bayesian posterior concentration rate. $\square$
 
 
+## Proposition B.1F: Single Edge under Exponential Forgetting
+
+**Setup.** As B.1, with the pseudo-counts discounted by $\lambda \in [0,1)$ before each observation is added (the standard exponential-forgetting recurrence; Ljung 1987):
+
+*[Definition (Discounted Beta-Bernoulli update)]*
+
+$$\alpha \mapsto \lambda\,\alpha + y, \qquad \beta \mapsto \lambda\,\beta + (1-y)$$
+
+**Statement.** Let $n_t$ be the count after the $t$-th update and $n_{\text{eff}} = 1/(1-\lambda)$. Then:
+
+*[Derived (Conditional on Beta-Bernoulli model + exponential forgetting)]*
+
+1. The per-observation gain is $g_t = 1/n_t$, and the count dynamics $n_t = \lambda n_{t-1} + 1$ are deterministic (independent of the data).
+2. At the stationary count the gain is exactly $1-\lambda$, so the sector parameter is $\alpha_\Sigma^{\text{ss}} = 1-\lambda$, tight. Initialized at $n_{\text{eff}}$, the estimator is the exponentially weighted moving average $\hat p_{t+1} = \lambda\hat p_t + (1-\lambda)\,y_t$.
+3. **Trajectory guarantee.** Under Model D drift $\lvert\theta_{t+1} - \theta_t\rvert \le \rho_\Sigma$, if the initial count satisfies $n_0 \le n_{\text{eff}}$, the mean mismatch $m_t = \mathbb{E}[\hat p_t] - \theta_t$ obeys $\sup_t \lvert m_t\rvert \le \max(\lvert m_0\rvert,\ \rho_\Sigma/(1-\lambda))$ for all $t$, not only asymptotically. If $n_0 \gt n_{\text{eff}}$ the gains rise toward $1-\lambda$ from below and the bound holds asymptotically.
+4. **Reachable region.** Some $\lambda \in [0,1)$ satisfies $1-\lambda \gt \rho_\Sigma/R_\Sigma$ if and only if $\rho_\Sigma \lt R_\Sigma$, approached as $\lambda \to 0$ (where $\hat p = y$, gain $1$).
+
+**Proof.** With $n = \alpha + \beta$ and $\hat p = \alpha/n$ before observing $y$:
+
+*[Derived (Proof Step)]*
+
+$$\hat p' - \hat p = \frac{\lambda\alpha + y}{\lambda n + 1} - \frac{\alpha}{n} = \frac{y - \hat p}{\lambda n + 1}$$
+
+so the gain is the reciprocal of the post-update count $n' = \lambda n + 1$. B.1's $\eta = 1/(n+1)$ is the same statement without discounting: in both, the denominator is the count the new observation is added to *plus one*, and under discounting that count is $\lambda n$, not $n$. The count recursion has fixed point $n_{\text{eff}} = 1/(1-\lambda)$, where $\lambda n_{\text{eff}} + 1 = n_{\text{eff}}$ and hence $g = 1-\lambda$. The expected correction is $\mathbb{E}[\Delta\hat p] = (1-\lambda)(\theta - \hat p)$, exactly linear, so the B.1 sector product gives $\alpha_\Sigma^{\text{ss}} = 1-\lambda$ with equality. Item 3: since $g_t$ is deterministic, $m_{t+1} = (1-g_t)\,m_t - d_t$ exactly, with $d_t = \theta_{t+1} - \theta_t$. If $n_0 \le n_{\text{eff}}$ then $n_t$ increases monotonically to $n_{\text{eff}}$, so $g_t \ge 1-\lambda$; if $\lvert m_t\rvert \le M$ with $M \ge \rho_\Sigma/(1-\lambda)$, then $\lvert m_{t+1}\rvert \le \lambda M + \rho_\Sigma \le M$. Item 4 is item 2 solved for $\lambda$. $\square$
+
+**What the reachable region is.** $\rho_\Sigma \lt R_\Sigma$ is not specific to forgetting. Under Model D a scalar linear corrector of gain $g$ has ultimate bound $\rho/g$ for $g \le 1$ and $\rho/(2-g)$ for $g \in (1,2)$ ( #deriv-discrete-sector-condition DA.1), both at least $\rho$, with equality only at $g = 1$; and an innovation-form update $\hat p + g(y - \hat p)$ keeps $\hat p \in [0,1]$ for both outcomes only if $g \le 1$. So $\rho_\Sigma \lt R_\Sigma$ is the floor every admissible single-edge corrector faces, and exponential forgetting reaches it. Forgetting's structural role is the opposite boundary: at $\lambda = 1$ the gain $1/n_t \to 0$, and every positive $\rho_\Sigma$ is eventually fatal. Where a nontrivial cap on strategic persistence does appear is evidence allocation across edges that share one observation stream ( #deriv-evidence-allocation-ceiling).
+
+With a uniform prior ($n_0 = 2$) the all-time guarantee of item 3 needs $\lambda \ge 1/2$; for $\lambda \lt 1/2$ the gains start below $1-\lambda$ and approach it geometrically, so the guarantee is asymptotic. Initializing the count at $n_{\text{eff}}$ (or below it) makes it all-time for every $\lambda$.
+
+
 ## Proposition B.2: Two-Edge AND-Chain, Observable Intermediate ($A \to B \to G$, $B$ observed)
 
 **Setup.** Action $A$ leads to intermediate $B$, then to goal $G$. Both $y_B$ and $y_G$ are observed. Edge credences $\hat p_1, \hat p_2$ with true probabilities $\theta_1, \theta_2$. Plan confidence: $\hat P_\Sigma = \hat p_1 \hat p_2$ (AND propagation from #scope-and-or). Mismatch vector: $\boldsymbol{\delta}_\Sigma = (\delta_1, \delta_2)^T$.
@@ -233,11 +263,13 @@ $$\alpha_\Sigma = \min\!\left(\frac{1-\varepsilon}{n_{\text{greedy}}+1},\;\min_{
 
 With optimal equal-rate exploration and equal experience: $\alpha_\Sigma = 1/(k(n+1))$. The sector parameter scales as $1/k$ --- each additional alternative dilutes correction capacity.
 
-**Condition (SA3).** For the sector condition to be satisfiable at all, the exploration rate must satisfy:
+**Condition (SA3).** Substituting B.4's $\alpha_\Sigma$ into the persistence threshold $\alpha_\Sigma \gt \rho_\Sigma/R_\Sigma$, the exploration rate must lie in a two-sided interval: high enough that the explored arm is corrected, low enough that the greedy arm still is:
 
-*[Derived (minimum exploration rate for persistence)]*
+*[Derived (admissible exploration interval for persistence)]*
 
-$$\varepsilon \gt \frac{\rho_\Sigma(n_{\max}+1)}{R_\Sigma}$$
+$$\frac{\rho_\Sigma(n_2+1)}{R_\Sigma} \;\lt\; \varepsilon \;\lt\; 1 - \frac{\rho_\Sigma(n_1+1)}{R_\Sigma}$$
+
+The interval is non-empty iff $\rho_\Sigma(n_1 + n_2 + 2) \lt R_\Sigma$. Under exponential forgetting with per-observation discounting at the stationary count (Prop B.1F), each pull lands with gain $1-\lambda$ and the interval becomes $\rho_\Sigma/((1-\lambda)R_\Sigma) \lt \varepsilon \lt 1 - \rho_\Sigma/((1-\lambda)R_\Sigma)$, non-empty iff $\rho_\Sigma \lt (1-\lambda)R_\Sigma/2$. No exploration rate and no update rule lifts the two-arm node past $\rho_\Sigma \lt R_\Sigma/2$ ( #deriv-evidence-allocation-ceiling).
 
 A purely greedy agent ($\varepsilon = 0$) violates the sector condition because the unchosen alternative's mismatch grows without correction. This is the structural justification for (SA3) in #schema-strategy-persistence: OR-nodes require deliberate exploration to maintain strategic persistence.
 
@@ -340,6 +372,7 @@ The bottleneck is typically the explore action behind the condition: $\theta_C \
 | Case | Topology | $\alpha_\Sigma$ | SA1 | SA3 | Weakest link |
 |------|----------|-----------------|-----|-----|-------------|
 | **B.1** Single edge | $A \to G$ | $1/(n+1)$ | Yes | N/A | --- |
+| **B.1F** Single edge, exponential forgetting | $A \to G$ | $1-\lambda$ at the stationary count (exact) | Yes | N/A | --- |
 | **B.2** Two-edge, $B$ observable | $A \to B \to G$ (AND) | $\min(1/(n_1\!+\!1),\;\theta_1/(n_2\!+\!1))$ | Yes | N/A | Depth-gated (evidence starvation) |
 | **B.3** Two-edge, $B$ unobservable | $A \to B \to G$ (AND) | $1/(n_\Phi\!+\!1)$ (plan-level) | Per-edge: No ($O(1/n)$ bias); Plan: Yes | N/A | Credit-assignment collapse |
 | **B.4** Two-arm OR, $\varepsilon$-greedy | $A_1, A_2 \to G$ (OR) | $\min((1\!-\!\varepsilon)/(n_1\!+\!1),\;\varepsilon/(n_2\!+\!1))$ | Yes | Required | Exploration-gated |
@@ -353,7 +386,7 @@ The bottleneck is typically the explore action behind the condition: $\theta_C \
 
 - **Gain as sector parameter.** In every case, $\alpha_\Sigma$ is determined by the edge update gain $\eta_k = 1/(n_k+1)$, modulated by observability ($\theta_1$ attenuation in B.2), credit-assignment (plan-level collapse in B.3), action-selection policy ($\varepsilon$ in B.4), or a combination of these (B.6). The structural parallel between epistemic and strategic persistence is not an analogy --- it is a mathematical identity at the sector-framework level.
 - **Evidence starvation (AND-chains).** Downstream edges in AND-chains have correction rates attenuated by the product of upstream success probabilities. Depth increases fragility: $\alpha_\Sigma$ decays exponentially with chain depth.
-- **Exploration gating (OR-nodes).** Unchosen OR-alternatives receive zero correction. The sector condition requires deliberate exploration (SA3) at a rate exceeding $\rho_\Sigma(n_{\max}+1)/R_\Sigma$. Pure greedy policies fail.
+- **Exploration gating (OR-nodes).** Unchosen OR-alternatives receive zero correction. Persistence requires deliberate exploration (SA3) inside a two-sided interval: enough to correct the explored arm, little enough that the greedy arm is still corrected. Pure greedy policies fail.
 - **Three-way gating (L1 augmented).** When a common cause gates OR-alternatives, calibration faces condition testing, evidence starvation, and exploration gating simultaneously (B.6). The bottleneck is the least-explored action behind the rarest condition.
 - **Five-way gating (L1' mixture, observable $C$).** When the common cause is a *soft facilitator* ($\theta_{j\mid \neg C} \gt 0$) and is observable per trial, calibration faces five gating mechanisms simultaneously (B.7): condition testing, evidence starvation on each conditional branch ($C=1$ and $C=0$), and exploration gating on each branch. The bottleneck is whichever branch is rarer, modulated by exploration on that branch. **Identifiability obstruction under unobservable $C$:** without direct $C$-observation, the mixture parameters are non-identifiable from a single observation channel — the per-trial Fisher information matrix is rank 1 rather than rank $2K+1$, so by the Cramér-Rao bound (Cramér 1946, *Mathematical Methods of Statistics*, Princeton University Press) no unbiased online estimator on the joint conditional vector admits $\alpha \gt 0$. The agent must augment $C$-observability, run multi-child joint observations, or fall back to plan-level (L0-on-marginals) tracking.
 - **Gain-collapse threshold.** In all cases, increasing experience eventually violates persistence when the environment drifts. The critical experience level $n^\ast$ is inversely proportional to the drift rate $\rho_\Sigma$.
@@ -619,6 +652,7 @@ The segment carries derivations at three distinct strengths: (i) exact sector-pa
 | Beta-Bernoulli edge dynamics ($\Delta\hat p_k = (y_k - \hat p_k)/(n_k+1)$) | Conjugate-prior model; matches #hyp-edge-update-via-gain | Formulation choice |
 | Regime-A adjustment: $\alpha_\Sigma^{\text{eff}} = \iota_{ij} \cdot \alpha_\Sigma^{\text{stated}}$ | Diagonal commutation across Props B.1–B.4, B.6; #scope-edge-update-causal-validity | Derived |
 | **B.1** Single-edge sector parameter $\alpha_\Sigma = 1/(n+1)$ | Expected Beta-Bernoulli update + sector product algebra | Proved (tight, conditional on Beta-Bernoulli) |
+| **B.1F** Single edge under exponential forgetting: gain $1/n_t$ (post-update count), stationary $\alpha_\Sigma^{\text{ss}} = 1-\lambda$, all-time mean-mismatch bound for $n_0 \le n_{\text{eff}}$ | Discounted-update algebra + Model-D induction | Proved (tight, conditional on Beta-Bernoulli + forgetting) |
 | **B.1** Stochastic ultimate bound $\lvert\delta\rvert \gt \sqrt{\theta(1-\theta)/(2n+1)}$ | Second-moment recursion + expected-Lyapunov decrement | Derived |
 | **B.2** Observable AND-chain sector parameter $\min(1/(n_1+1),\; \theta_1/(n_2+1))$ | Diagonal correction function; sector product algebra | Proved (conditional on Beta-Bernoulli + observable intermediate) |
 | **B.2** Depth-$d$ generalization $\alpha_\Sigma = \min_k \prod_{j \lt k}\theta_j/(n_k+1)$ | Iteration of B.2 pattern under observable intermediates | Derived |
@@ -628,7 +662,7 @@ The segment carries derivations at three distinct strengths: (i) exact sector-pa
 | **B.4(a)** Pure-greedy OR ($\varepsilon=0$) violates sector condition | Counterexample at $\delta_1 = 0,\,\delta_2 \neq 0$ | Derived as refutation |
 | **B.4(b)** $\varepsilon$-greedy sector parameter $\min((1-\varepsilon)/(n_1+1),\; \varepsilon/(n_2+1))$ | Policy-weighted correction; sector product algebra | Proved (conditional on Beta-Bernoulli + $\varepsilon$-greedy) |
 | **B.4** Optimal exploration $\varepsilon^\ast = (n_2+1)/(n_1+n_2+2)$ | Term-equalization in $\min$ | Derived |
-| **B.4** Minimum exploration rate (SA3 requirement) $\varepsilon \gt \rho_\Sigma(n_{\max}+1)/R_\Sigma$ | Substitution into persistence threshold $\alpha_\Sigma \gt \rho_\Sigma/R_\Sigma$ | Derived |
+| **B.4** Admissible exploration interval (SA3 requirement) $\rho_\Sigma(n_2+1)/R_\Sigma \lt \varepsilon \lt 1 - \rho_\Sigma(n_1+1)/R_\Sigma$ | Substitution into persistence threshold $\alpha_\Sigma \gt \rho_\Sigma/R_\Sigma$ | Derived |
 | **B.5a** Linear credence-to-value transfer $\alpha_s = \alpha_c$ (Jacobian cancels) | Algebraic cancellation of $\mathbf{J}\mathbf{J}^T$ | Proved (exact, DAG-structure independent) |
 | **B.5b** Componentwise nonlinear transfer $\alpha_s = \alpha_c$ | Per-component sector bound + monotone AND/OR ($\mathbf{J}\geq 0$) | Proved (conditional on componentwise update + non-negative Jacobian) |
 | **B.5b** Coupled-edge Cauchy-Schwarz bound $\alpha_s \geq \alpha_c/\kappa(\mathbf{J})^2$ | Cauchy-Schwarz on $\mathbf{J}^T\mathbf F_c$ and $\mathbf{J}^T\boldsymbol\delta_c$ | Derived (conditional on Jacobian regularity *and* an SA1-preserving attribution scheme) |
@@ -655,11 +689,11 @@ The segment carries derivations at three distinct strengths: (i) exact sector-pa
 
 ## Epistemic Status
 
-*Conditional on the Beta-Bernoulli model.* Propositions B.1, B.2, B.4, and B.6 are *derived*: the sector-condition verification is exact algebra under the stated generative model. The persistence conditions follow by direct application of Proposition A.1 ( #deriv-sector-condition), which is independently established. Proposition B.3(a) (the SA1 violation) is also derived; B.3(b) reduces to B.1 by construction. Proposition B.5a (the credence-to-value bridge for linear correction) is *exact* — the Jacobian cancellation is algebraic, independent of DAG structure. Proposition B.5b (the componentwise nonlinear transfer) is *exact under non-negative Jacobian* — algebraic, no condition-number penalty. The coupled-edge case of B.5b is *conditional on (i) Jacobian regularity* — the condition-number bound requires $\sigma_{\min}(\mathbf{J}) \gt 0$, which holds for non-degenerate DAGs — *and (ii) an SA1-preserving attribution scheme* (gradient-based, Prop B.5d); marginal Bayesian attribution on coupled edges does not admit the Cauchy-Schwarz bound because SA1 fails upstream. Proposition B.5d (gradient-based attribution) is *derived* — SA1 verification is algebraic and the sector-parameter bound follows from standard singular-value analysis of the Jacobian.
+*Conditional on the Beta-Bernoulli model.* Propositions B.1, B.1F, B.2, B.4, and B.6 are *derived*: the sector-condition verification is exact algebra under the stated generative model. The persistence conditions follow by direct application of Proposition A.1 ( #deriv-sector-condition), which is independently established. Proposition B.3(a) (the SA1 violation) is also derived; B.3(b) reduces to B.1 by construction. Proposition B.5a (the credence-to-value bridge for linear correction) is *exact* — the Jacobian cancellation is algebraic, independent of DAG structure. Proposition B.5b (the componentwise nonlinear transfer) is *exact under non-negative Jacobian* — algebraic, no condition-number penalty. The coupled-edge case of B.5b is *conditional on (i) Jacobian regularity* — the condition-number bound requires $\sigma_{\min}(\mathbf{J}) \gt 0$, which holds for non-degenerate DAGs — *and (ii) an SA1-preserving attribution scheme* (gradient-based, Prop B.5d); marginal Bayesian attribution on coupled edges does not admit the Cauchy-Schwarz bound because SA1 fails upstream. Proposition B.5d (gradient-based attribution) is *derived* — SA1 verification is algebraic and the sector-parameter bound follows from standard singular-value analysis of the Jacobian.
 
 All results use the *expected-value* sector condition. A full stochastic treatment (Foster-Lyapunov or supermartingale convergence) would give probability bounds rather than expected-value bounds. The expected-value analysis gives the correct asymptotic behavior (posterior concentration at $O(1/\sqrt{n})$) but does not prove almost-sure convergence. For the stationary Beta-Bernoulli case, almost-sure convergence is guaranteed by the standard Bayesian consistency theorem independently of this derivation.
 
-The time-varying $\alpha_\Sigma$ issue remains: since $n_k$ increases with each observation, $\alpha_\Sigma$ decreases over time. The sector-condition framework assumes constant $\alpha$. The results here give an *instantaneous* persistence check at the current experience level, not a trajectory guarantee. Experience discounting (exponential forgetting with factor $\lambda$) stabilizes $\alpha_\Sigma$ at the exact value $(1-\lambda)/(2-\lambda)$ from $1/(n_{\text{eff}}+1)$ with $n_{\text{eff}} = 1/(1-\lambda)$ — with the simpler $\approx 1-\lambda$ as the slow-forgetting asymptote $(\lambda \to 1)$ — yielding the persistence requirement $(1-\lambda)/(2-\lambda) \gt \rho_\Sigma/R_\Sigma$ (full treatment in #schema-strategy-persistence).
+Without forgetting, $\alpha_\Sigma$ is time-varying: since $n_k$ increases with each observation, $\alpha_\Sigma$ decreases over time, while the sector-condition framework assumes constant $\alpha$. Props B.1–B.4 and B.6–B.7 therefore give an *instantaneous* persistence check at the current experience level. Prop B.1F supplies the trajectory version for the single edge: under exponential forgetting the gain is deterministic and equals $1-\lambda$ exactly at the stationary count, giving the persistence requirement $1-\lambda \gt \rho_\Sigma/R_\Sigma$ with an all-time guarantee when the count is initialized at or below $n_{\text{eff}}$ (*exact* under the Beta-Bernoulli model). For intermittently observed edges (B.2, B.4, B.6, B.7) the corresponding statement depends on whether the discount is applied per observation of the edge or per time step; the per-observation case is exact (at the stationary count, $\pi(1-\lambda)$ per step for an edge observed with probability $\pi$), and the cap on what any convention can reach is #deriv-evidence-allocation-ceiling.
 
 **What remains open:**
 
