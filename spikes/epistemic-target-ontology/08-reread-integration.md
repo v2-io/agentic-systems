@@ -34,13 +34,16 @@ One correction to 07's own wording. 07 §2.1 says "For the tracker these [increm
 
 **07's counterexample fails under the segment's definition.** The segment defines $\theta = (\theta_T, \theta_h)$ as the kernel pair itself, not a parameter that indexes it. In 07's construction the channel's law depends on $\theta \in [0, 1]$ only through $b = 1\{\theta \in \mathbb Q\}$. So the law, as the segment defines it, takes two values, $K_0$ and $K_1$. The two priors push forward to $\delta_{K_0}$ (Lebesgue) and $\tfrac12 \delta_{K_0} + \tfrac12 \delta_{K_1}$, which have different supports. The construction shows that support in a *parametrization* does not fix membership. It does not show that for $\pi_0$ on $(\Omega_1, \theta)$ as written.
 
-**The claim is still false in general.** Move the irregularity to the state, where the segment's own objects can carry it:
+**The claim is still false in general.** Move the irregularity into a state that genuinely varies:
 
 - the law is known (a point mass);
-- $\Omega_1 = x \in [0, 1]$ is hidden and never moves;
-- observations are constant except $o_2 = 1\{x \in \mathbb Q\}$.
+- the state is $(t, x_t)$, with a clock;
+- $x_1 \in [0, 1]$ is hidden, $x_2 = x_1$, and $x_t$ is drawn afresh and uniformly for $t \geq 3$;
+- observations are constant except $o_2 = 1\{x_2 \in \mathbb Q\}$.
 
-Under the Lebesgue prior $o_2 = 0$ a.s., so $F_1$ is independent of $x$: out at $t = 1$. Under $\tfrac12$ Lebesgue $+ \tfrac12 \sum_k 2^{-k} \delta_{q_k}$, $o_2$ is a fair coin determined by $x$: in. Both priors have support $[0, 1]$. This is the counterexample that (h′) carries in canon.
+Under the Lebesgue prior on $x_1$, $o_2 = 0$ a.s., so $F_1$ is independent of $x_1$: out at $t = 1$. Under $\tfrac12$ Lebesgue $+ \tfrac12 \sum_k 2^{-k} \delta_{q_k}$, $o_2$ is a fair coin determined by $x_1$: in. Both priors have support $[0, 1]$. No coordinate and no function of the state is invariant along the run (the fresh draws destroy the rationality bit from $t = 3$), so neither the landed invariance rule nor its stronger, function-level form in the Working Notes moves anything into $\theta$. This is the counterexample that (h′) carries in canon.
+
+The first version I landed in f51fc762 had the same flaw as 07's. It used a hidden $x$ that never moves, but a frozen $x$ is invariant, so the invariance rule names it into $\theta$. By §1.6's argument, the reduced world's kernel pair then depends on $x$ only through $1\{x \in \mathbb Q\}$, so the pushforward supports differ again. The advisor I consulted caught it before the report. C4 in `reviews/scope-adaptive-system-integration-2.md` checked that version and stays as the record of what was read at f51fc762; the corrected version is re-checked separately. Both errors share a lesson for the next checker: a counterexample about $\pi_0$'s support has to be typed against the segment's own definitions of $\theta$ *and* of the cut, not against a parametrization.
 
 **(h′), re-derived.** Hypotheses: $\Omega$, $\mathcal O$, $\mathcal A$ finite; $\theta$ is the tuple of kernel entries, in the Euclidean topology on the product of simplices. I reached it independently of 07's sketch, and it agrees with the sketch where they overlap. Steps:
 
@@ -107,7 +110,7 @@ Edited, Part I and III:
 - `#def-agent-environment`:43, `#scope-composite-agent`:85, `#deriv-recursive-update`:27: residual uncertainty no longer stated as the condition;
 - `terminology/entries/agency.md`:19 and `agent.md`:22 (bodies only; `bin/term render` leaves `LEXICON.md` unchanged);
 - `#example-bandit`:46 ("transient" replaced, §1.1);
-- `#deriv-mismatch-budget-attribution`:78: (ii′) vanishes iff the channel law equals the Bayes predictive a.s. This is the plain reading of the mutual information $I(o_t; S_t \mid \mathcal C_{t-1}, a_{t-1})$;
+- `#deriv-mismatch-budget-attribution`:78: (ii′) vanishes iff the channel law equals the Bayes predictive a.s. This is the plain reading of the mutual information $I(o_t; S_t \mid \mathcal C_{t-1}, a_{t-1})$. In the same proposition, the channel law $p_t$ was defined as $p(\cdot \mid \Omega, a)$, and step (b) conditioned on $(\Omega, a, \mathcal C)$, while the result and step (c) are about $S_t$. With the law unknown, conditioning on $\Omega$ alone gives a mixture over $\theta$, not the channel law. Both now read $S$, the typed target. This is a relabeling residue of the first A.1 landing; the identity's derivation needs it to be $S$;
 - `03-llm-core/src/disc-framework-self-diagnostic.md`:35 ("by construction" replaced by "relative to a declared world") and :80 (stage `draft`);
 - `#form-agent-model`:64 (Working Note): the PID claim restated to what is true now. A PID loop is inside when it measures, through noise, a plant whose disturbed state persists. An exactly measured plant under a known law is case (d), and out.
 - NOTATION: the $\pi_0$ row states the support rule and (h′); the $\theta$ row names `#example-strategy`'s $\theta_k(t)$ beside `#der-mood-timescale`.
