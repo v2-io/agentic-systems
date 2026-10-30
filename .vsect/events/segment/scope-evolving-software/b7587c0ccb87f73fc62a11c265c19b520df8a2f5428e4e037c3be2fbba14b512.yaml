@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: b7587c0ccb87f73fc62a11c265c19b520df8a2f5428e4e037c3be2fbba14b512
+at: 2026-10-30T22:58:53Z
+store: asf
+act: review-finding
+about: segment:scope-evolving-software
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: rho_env -> 0 leaves the channel floor, which must lie inside tolerance.
+finding: review:part-i-mismatch-lineage-check-1#F13
+outcome: answered
+revision: segment:scope-evolving-software

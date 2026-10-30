@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: e98221a999d89abc7872cd3d0aab491165211fa7a4edb542feb11faea47fef9f
+at: 2026-10-30T22:58:54Z
+store: asf
+act: review-finding
+about: segment:example-kalman
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Mapping row and Lyapunov section give 1.95 s^-1 at the steady state beside the transient 3.315; numbers re-derived (check-1 C14).
+finding: review:part-i-mismatch-lineage-check-1#F14
+outcome: answered
+revision: segment:example-kalman

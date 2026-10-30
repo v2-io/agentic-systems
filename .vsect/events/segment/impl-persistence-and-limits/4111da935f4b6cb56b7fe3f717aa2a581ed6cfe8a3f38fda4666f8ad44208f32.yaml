@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4111da935f4b6cb56b7fe3f717aa2a581ed6cfe8a3f38fda4666f8ad44208f32
+at: 2026-10-30T22:58:53Z
+store: asf
+act: review-finding
+about: segment:impl-persistence-and-limits
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: '''The environment does not cancel out of it'' is gone; the positive claim stands alone.'
+finding: review:part-i-mismatch-lineage-check-1#F9
+outcome: answered
+revision: segment:impl-persistence-and-limits

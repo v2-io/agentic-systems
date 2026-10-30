@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: dbf5b8ea9d4b0ae99af7fe7f4e362af1c123514957a22394a6c2e16df6da6ff1
+at: 2026-10-30T22:58:52Z
+store: asf
+act: review-finding
+about: segment:result-persistence-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: 'Same as F2: the Model D split is stated as different, not the same.'
+finding: review:part-i-mismatch-lineage-check-1#C2/finding
+outcome: answered
+revision: segment:result-persistence-condition

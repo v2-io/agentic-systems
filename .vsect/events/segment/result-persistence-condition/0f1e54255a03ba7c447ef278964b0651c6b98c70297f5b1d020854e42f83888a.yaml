@@ -1,0 +1,36 @@
+schema: vsect-event/0
+id: 0f1e54255a03ba7c447ef278964b0651c6b98c70297f5b1d020854e42f83888a
+at: 2026-10-30T22:58:19Z
+store: asf
+act: rederive
+about: segment:result-persistence-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-mismatch-signal: 8865e87714b5b10e0430d0e7f860cb1949a2307149171ba204c6f5b3c2b3ee7b
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:deriv-sector-condition: b3c30507cd90d0d11b419358a324887c0dc4d41f132f8e0135ee2928756472d7
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-persistence-condition: 4f4d1304ebe779fea984495037b556dccc78e41a0e50445c689b3d11ff0ff3a6
+  segment:result-sector-condition-stability: aa4f9e56f2df48826fccf234cdbcb3f09c3df640583ed1892ee21f7abc286447
+  segment:result-sector-persistence-template: e8dba2ec6778c68156d3d4c72b164d746a24fed23b253571aa779bba1a1808fa
+  segment:scope-adaptive-system: 85e9aebf3f379092101e656014d69e7be357542e939a5edf1929d98227c8065f
+committed: before
+criterion: The Model S window $\alpha \in (\alpha_-, \alpha_+)$, feasibility iff $R^2 \gt n\sigma_{\text{env}}\sigma_\nu$, $\alpha_-\alpha_+ = K^2$, $\ln(\alpha_+/K) = \operatorname{arccosh}(R^2/(n\sigma_{\text{env}}\sigma_\nu))$; the Model D form $\alpha(R - \bar\nu) \gt \rho_{\text{env}}$.
+effective-version: c1849aacc2c88fc1883f0ff4230ce6bbc4122bba321dc181b99b9c9193f27bbb
+from: review:part-i-round-2-check-1#C10
+line: derivation
+outcome: confirmed
+recheck: Quadratic in $\alpha$ by hand; $\alpha_+/K = x + \sqrt{x^2 - 1}$ with $x = R^2/(n\sigma_{\text{env}}\sigma_\nu)$.
+target-version: 4f4d1304ebe779fea984495037b556dccc78e41a0e50445c689b3d11ff0ff3a6
+version-from: git-revision

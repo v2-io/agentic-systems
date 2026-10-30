@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4d1567f3de68b4e3c721583b110fa48a64555d6a517144821214d8ec5a2762a3
+at: 2026-10-30T22:58:53Z
+store: asf
+act: review-finding
+about: segment:def-death-as-factor-loss
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Both n-alpha/2 sites now give the general floor n(sigma_env^2/(2D)-lambda_s) with n-alpha/2 for the Kalman-optimal agent; the impl-persistence-and-limits shadow row likewise.
+finding: review:part-i-mismatch-lineage-check-1#F8
+outcome: answered
+revision: segment:def-death-as-factor-loss

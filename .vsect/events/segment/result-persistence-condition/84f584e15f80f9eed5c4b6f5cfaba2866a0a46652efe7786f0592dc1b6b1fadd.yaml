@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 84f584e15f80f9eed5c4b6f5cfaba2866a0a46652efe7786f0592dc1b6b1fadd
+at: 2026-10-30T22:58:52Z
+store: asf
+act: review-finding
+about: segment:result-persistence-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Retitled 'Gain and information are different levers'; T defined at the optimal gain so a gain past it moves alpha; Lipschitz ground replaced by B.3 gain scaling.
+finding: review:part-i-mismatch-lineage-check-1#F6
+outcome: answered
+revision: segment:result-persistence-condition

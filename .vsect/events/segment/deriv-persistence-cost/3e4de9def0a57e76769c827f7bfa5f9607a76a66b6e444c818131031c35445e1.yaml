@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 3e4de9def0a57e76769c827f7bfa5f9607a76a66b6e444c818131031c35445e1
+at: 2026-10-30T22:58:53Z
+store: asf
+act: review-finding
+about: segment:deriv-persistence-cost
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Same as F7.
+finding: review:part-i-mismatch-lineage-check-1#C5/finding
+outcome: answered
+revision: segment:deriv-persistence-cost

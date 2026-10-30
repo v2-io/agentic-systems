@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 51e2cbbf0f2b8ad1d3199a9a2f7132455d6afd384d544105280449cb7f8fed94
+at: 2026-10-30T22:58:51Z
+store: asf
+act: review-finding
+about: segment:result-persistence-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: The Model S window, feasibility, geometric-about-K and Model D forms landed; re-derived (check-1 C10).
+finding: review:part-i-mismatch-lineage-check-1#F1
+outcome: answered
+revision: segment:result-persistence-condition

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 6e0e2637a1c54e1ce166f3cd4ab38a0cb7a9b68f0a0d7004373f8a03ef773361
+at: 2026-10-30T22:58:53Z
+store: asf
+act: review-finding
+about: segment:deriv-gain-sector
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: B.3 states the gain scaling of the injected fluctuation, its state dependence for nonlinear g, and the sup-trace replacement for the killed and finite-horizon bounds.
+finding: review:part-i-mismatch-lineage-check-1#F11
+outcome: answered
+revision: segment:deriv-gain-sector

@@ -1,0 +1,33 @@
+schema: vsect-event/0
+id: 29b5d8482d0faedd3d4e1d95737b6ea70a0d2a2109e7b1d2f514d1951a9426a3
+at: 2026-10-30T22:58:15Z
+store: asf
+act: rederive
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-mismatch-signal: 8865e87714b5b10e0430d0e7f860cb1949a2307149171ba204c6f5b3c2b3ee7b
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:deriv-sector-condition: b3c30507cd90d0d11b419358a324887c0dc4d41f132f8e0135ee2928756472d7
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 85e9aebf3f379092101e656014d69e7be357542e939a5edf1929d98227c8065f
+committed: before
+criterion: Prop A.1S(i), the killed second-moment bound, holds under (A2') on the ball, and a stopped-moment bound with the decay term is false under (ii).
+effective-version: dab6b79de50ebf6fe774cb473fc67e246c61ff91c4df56a620aa071a3593c558
+from: review:part-i-round-2-check-1#C1
+line: derivation
+outcome: confirmed
+recheck: Itô on $e^{2\alpha s}V$ to $t\wedge\tau_R$, drop the part on $\{\tau_R \leq t\}$; falsity from $R^2P(\tau_R \leq t) \leq \mathbb E\lVert\delta_{t\wedge\tau_R}\rVert^2$ and Cor A.1S.1.
+target-version: b3c30507cd90d0d11b419358a324887c0dc4d41f132f8e0135ee2928756472d7
+version-from: git-revision

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f9a38725f845d4f358980f08f2342e57c011bf8690635bdcc3971d16db533113
+at: 2026-10-30T22:58:52Z
+store: asf
+act: review-finding
+about: segment:def-mismatch-signal
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Correction drives the error toward the state-and-law floor, not zero; the 'mismatch' convention is stated as adopted. Residual nits (P vs P-minus; 'never to zero') are minor and recorded in the round-2 check write-up W8.
+finding: review:part-i-mismatch-lineage-check-1#F5
+outcome: answered
+revision: segment:def-mismatch-signal

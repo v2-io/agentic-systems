@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ce9ae93b6e140f3e99e0ce3f6be2857818c6889a6987ea1714b3f2703465574d
+at: 2026-10-30T22:58:53Z
+store: asf
+act: review-finding
+about: segment:obs-gated-tempo-advantage
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: 'Levers section credits #obs-gated-tempo-advantage, and that segment''s Epistemic Status cites the derived single-agent half.'
+finding: review:part-i-mismatch-lineage-check-1#F10
+outcome: answered
+revision: segment:result-persistence-condition

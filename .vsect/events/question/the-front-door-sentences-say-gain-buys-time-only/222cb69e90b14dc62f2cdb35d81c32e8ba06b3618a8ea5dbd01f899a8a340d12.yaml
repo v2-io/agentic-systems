@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 222cb69e90b14dc62f2cdb35d81c32e8ba06b3618a8ea5dbd01f899a8a340d12
+at: 2026-10-30T22:59:01Z
+store: asf
+act: answer
+about: question:the-front-door-sentences-say-gain-buys-time-only
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: verifier
+normalizer: vsect-norm/0
+outcome: answered
+text: 'Yes. The exponent kappa_R(alpha) peaks at K; the expected stay Phi(0) peaks strictly below K and falls monotonically past it; on a fixed channel the stay reachable by gain is bounded (kappa_R <= R^2/(2 sigma_env sigma_nu)), so INTRODUCTION headline 2''s ''pushed past any lifetime ... up to the Kalman gain'' is also false as written; only information raises the cap. Computed maximizers (sigma_env=1, sigma_nu=0.5): 0.31K, 0.56K, 0.74K, 0.89K at kappa_R(K)=1, 2.25, 4, 9 (n=1); 0.42K, 0.64K, 0.87K at 2.25, 4, 9 (n=3). The canon edit is owed: review:part-i-round-2-check-1#F1 carries it, with every site listed; derivation in msc/inside-out-2026-10/part-i-round-2-check.md D1.'

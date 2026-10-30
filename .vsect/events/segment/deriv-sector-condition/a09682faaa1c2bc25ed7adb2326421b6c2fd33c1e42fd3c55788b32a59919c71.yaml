@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: a09682faaa1c2bc25ed7adb2326421b6c2fd33c1e42fd3c55788b32a59919c71
+at: 2026-10-30T22:58:51Z
+store: asf
+act: review-finding
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Prop A.1S(i) is now the killed moment; re-derived (review:part-i-round-2-check-1 C1); the stopped-with-decay form is named false with the three-line argument.
+finding: review:c1-exit-time-verify-1#C1/finding
+outcome: answered
+revision: segment:deriv-sector-condition

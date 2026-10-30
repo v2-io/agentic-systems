@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 94bbdeaa2f2d8258422fd4be42e0827520a792b8a55d3386d23386b9d15710e7
+at: 2026-10-30T22:58:52Z
+store: asf
+act: review-finding
+about: segment:result-persistence-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Task-adequacy paragraph and the levers section now qualify the Model S fact and state the Model D picture separately (bound monotone toward nu-bar).
+finding: review:part-i-mismatch-lineage-check-1#F2
+outcome: answered
+revision: segment:result-persistence-condition

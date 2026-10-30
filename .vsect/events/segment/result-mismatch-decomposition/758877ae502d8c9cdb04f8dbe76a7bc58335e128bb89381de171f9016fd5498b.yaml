@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 758877ae502d8c9cdb04f8dbe76a7bc58335e128bb89381de171f9016fd5498b
+at: 2026-10-30T22:58:52Z
+store: asf
+act: review-finding
+about: segment:result-mismatch-decomposition
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Term (i) renamed 'excess over the Bayes predictor' in underbrace, opening and Discussion; estimation error stated as (i)+(ii).
+finding: review:part-i-mismatch-lineage-check-1#F4
+outcome: answered
+revision: segment:result-mismatch-decomposition

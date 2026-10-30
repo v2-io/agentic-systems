@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 1ff3035a535e8955db1135d2c1b3021087191a90da45e566ebc3a68b7a7071e9
+at: 2026-10-30T22:58:53Z
+store: asf
+act: review-finding
+about: segment:der-deliberation-cost
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: 'Derived paragraph: benefit term is about the estimation error and improvement toward the optimal gain; one-step derivation re-derived (check-1 C12).'
+finding: review:part-i-mismatch-lineage-check-1#F12
+outcome: answered
+revision: segment:der-deliberation-cost

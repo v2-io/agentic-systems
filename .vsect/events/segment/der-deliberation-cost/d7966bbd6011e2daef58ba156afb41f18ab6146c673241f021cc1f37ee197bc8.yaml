@@ -1,0 +1,35 @@
+schema: vsect-event/0
+id: d7966bbd6011e2daef58ba156afb41f18ab6146c673241f021cc1f37ee197bc8
+at: 2026-10-30T22:58:20Z
+store: asf
+act: rederive
+about: segment:der-deliberation-cost
+actor:
+  name: Claude Opus 5.5 (Part I round-2 checker)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-mismatch-signal: 8865e87714b5b10e0430d0e7f860cb1949a2307149171ba204c6f5b3c2b3ee7b
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:der-action-selection: ff726f8527dab6ee837cc11b7164313850f125e944c76ea86dca14183c613408
+  segment:der-deliberation-cost: 942267bd11f53b6c924b606694862e9d0507787a8f94d98cb417035816476c72
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 85e9aebf3f379092101e656014d69e7be357542e939a5edf1929d98227c8065f
+committed: before
+criterion: One update with gain $\eta$ on innovation $\bar\delta + \varepsilon$ lowers the mean-square estimation error exactly when $\eta \lt \lVert\bar\delta\rVert^2/(\lVert\bar\delta\rVert^2 + \sigma_\varepsilon^2)$.
+effective-version: 315e16a4ce8c1f6791233c6605d07f5852c16cd255f5a067ac38ffdb6189adf1
+from: review:part-i-round-2-check-1#C12
+line: derivation
+outcome: confirmed
+recheck: Derivative of $(1-\eta)^2\lVert\bar\delta\rVert^2 + \eta^2\sigma_\varepsilon^2$. That threshold is the uncertainty-ratio gain in expectation only (source, W7).
+target-version: 942267bd11f53b6c924b606694862e9d0507787a8f94d98cb417035816476c72
+version-from: git-revision
