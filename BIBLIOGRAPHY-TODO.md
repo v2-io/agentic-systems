@@ -1,6 +1,6 @@
 # BIBLIOGRAPHY-TODO.md — ASF citation system: discipline, tooling, workstreams
 
-*Parent navigator: [FORMAT-TODO.md](FORMAT-TODO.md) Workstream A. This file is the ASF-side companion to the relata-side work: it spells out what ASF agents (Joseph + the ASF instance(s)) own, leaves what relata-side has already done as a recorded handoff, and frames the open citation-discipline decision as the gate everything else flows through. Created 2026-05-20 by a relata-side instance during a planning + bulk-import pass.*
+*Parent navigator: `FORMAT-TODO.md` Workstream A. This file is the ASF-side companion to the relata-side work: it spells out what ASF agents (Joseph + the ASF instance(s)) own, leaves what relata-side has already done as a recorded handoff, and frames the open citation-discipline decision as the gate everything else flows through. Created 2026-05-20 by a relata-side instance during a planning + bulk-import pass.*
 
 ---
 

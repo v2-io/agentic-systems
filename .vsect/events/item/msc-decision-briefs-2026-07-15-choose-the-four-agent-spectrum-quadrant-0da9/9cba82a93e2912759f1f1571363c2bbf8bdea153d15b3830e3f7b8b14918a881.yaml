@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 9cba82a93e2912759f1f1571363c2bbf8bdea153d15b3830e3f7b8b14918a881
+at: 2026-10-30T21:26:31Z
+store: asf
+act: close
+about: item:msc-decision-briefs-2026-07-15-choose-the-four-agent-spectrum-quadrant-0da9
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+outcome: superseded
+reason: 'Duplicate of item:the-four-quadrant-names-of-def-agent-spectrum-ar (TERMINOLOGY-TODO §E, opened by the terminology lane, owner F.1), which carries the same decision and the two 2026-05-17 arguments. One addition from this brief''s re-check belongs with it: owner-review/explorers/terminology.md §2.17 keeps ''actuated'' anchored to Rosenblueth, Wiener & Bigelow 1943, and F.4''s question (does an established name exist?) comes first for each quadrant.'

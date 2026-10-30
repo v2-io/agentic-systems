@@ -36,3 +36,9 @@ spikes/tst-mining-2026-05-21/
 spikes/tst-ideas-cycle-2026-05-21/
 spikes/strategic-composition-class-3-attempt-2026-05-21/
 spikes/visual/
+
+# Tracker lines imported verbatim into the vsect ledger, not yet re-checked.
+# Each is a point-in-time copy of a tracker that I.3 then deletes, so a link in
+# it to its own (now deleted) tracker is period-correct, not a broken pointer.
+# Once an item is re-checked and held it moves to items/, which stays checked.
+items/imported/

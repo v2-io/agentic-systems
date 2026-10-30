@@ -136,7 +136,7 @@ When a spike is `orphaned` and its result must reach canon:
 
 `.integrated/` is a **truth-claim**: *this spike's load-bearing content is present in canon.* `.archived/` is a distinct honest bucket: *consciously set down; not in canon; reason recorded.* The two are **not interchangeable** — collapsing them is the directory-level form of the label-lies-about-status error that audit-routing §5/§6 spends pages preventing.
 
-**Bounded guarantee, stated in `spikes/README.md` so the claim is honestly scoped rather than silently overclaimed:** the guarantee is **forward and per-cycle**. Spikes a spike-routing cycle files to `.integrated/` have had their content verified in canon. Pre-policy residents have **not** — before `.archived/` existed (notably the 2026-05-12 bulk move of 64), some were swept to `.integrated/` *without per-spike verification*. That is **known, un-discharged integration debt** (`../../INTEGRATION-CLEANUP-TODO.md` G2/F3), **not** a "do not re-audit" license: the bulk-64 must be checked — or consciously, explicitly set down — before `.integrated/` is ever wiped (the D-2 wipe question turns on exactly this). Until then, treat pre-policy `.integrated/` membership as an *unverified* record; verify forward, and discharge the bulk-64 through the recovery pass.
+**Bounded guarantee, stated in `spikes/README.md` so the claim is honestly scoped rather than silently overclaimed:** the guarantee is **forward and per-cycle**. Spikes a spike-routing cycle files to `.integrated/` have had their content verified in canon. Pre-policy residents have **not** — before `.archived/` existed (notably the 2026-05-12 bulk move of 64), some were swept to `.integrated/` *without per-spike verification*. That debt is discharged: on 2026-07-16 each of the bulk-64 was verified per-spike and its unlanded content landed (`spikes/.integrated/VERIFICATION-2026-07-16.md`), so `.integrated/` membership is now a verified record. There is no wipe; both directories are permanent.
 
 ### 5a. Directory layout — where everything lives (Joseph-directed, 2026-05-18)
 
@@ -145,7 +145,7 @@ Spike-routing artifacts live under `spikes/` (the corpus they act on) — **neve
 | Artifact | Home | Notes |
 |---|---|---|
 | Governing SOP (this file) | `doc/sop/spikes.sop.md` | long-lived process doc; parallels `doc/audit-routing-instructions.md` |
-| Live cycle tracker / rendezvous | **`spikes/ROUTING.md`** | **undated** — the routing *process* is ongoing, not a one-shot; durable, *not* `msc/`; parallels `spikes/INDEX.md` |
+| Open routing items | the `vsect` ledger (`vsect open`) | one ledger for all open work, keyed by the statement it concerns |
 | Per-cycle move manifest | `spikes/.integrated/MANIFEST-<date>.md` | dated is correct here — it records one specific batch move |
 | Adjudication / verify / regression trails | **`spikes/.routing-trail/SPIKE-{WORKING,VERIFY,REGRESSION}-<id>/`** | dot-prefixed (keeps `ls spikes/` scannable); six-digit ID = identity, prefix = class — never blanket-rewrite a prefix; frozen-as-written, not back-edited; preserved (not deleted/summarized) once conclusions are in the durable layer |
 | Integrated / archived spikes | `spikes/.integrated/` · `spikes/.archived/` | the two terminal homes (§5) |

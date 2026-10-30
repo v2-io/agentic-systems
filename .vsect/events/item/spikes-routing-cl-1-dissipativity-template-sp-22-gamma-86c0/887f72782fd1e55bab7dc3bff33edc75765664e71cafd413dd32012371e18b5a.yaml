@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 887f72782fd1e55bab7dc3bff33edc75765664e71cafd413dd32012371e18b5a
+at: 2026-10-30T21:26:31Z
+store: asf
+act: close
+about: item:spikes-routing-cl-1-dissipativity-template-sp-22-gamma-86c0
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+outcome: superseded
+reason: 'Duplicate of item:proposals-d-9-sp-22-operator-family-tier-2-backlog-0b44, the survivor the proposals lane and the I.3 coordinator agreed for CL-1 / #dissipativity-template. This item was held (owner G.2) before that was agreed; recheck cannot record duplicate on an already re-checked item, so it closes here. The state found at cfc7b529 stands: no #dissipativity-template segment, and its three member spikes still at spikes/ root.'

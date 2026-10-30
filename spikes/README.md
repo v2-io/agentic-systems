@@ -58,8 +58,8 @@ A spike whose authors are still in it is **not touched** by a routing cycle — 
 
 - [`../doc/sop/spikes.sop.md`](../doc/sop/spikes.sop.md) — the spike-specific delta (five-state disposition, directory-label honesty, the live-work exclusion, the lighter dir-spike gold gate, the PROPOSED freshness/mutual-link discipline).
 - [`../doc/audit-routing-instructions.md`](../doc/audit-routing-instructions.md) — the **shared integration-routing core** (strengthen-first, the no-go protocol, the ghost discipline, the meta-stance). The spike doc defers into it; it is corpus-agnostic and already written about spikes.
-- [`ROUTING.md`](ROUTING.md) — the live spike-routing tracker / rendezvous (partition, disposition ledger, log, the honest remaining state). Durable and **undated** — the routing *process* is ongoing, not a one-shot; it lives here in `spikes/`, **not** in `msc/` (delete-at-any-time scratch) and **not** in `audits/` (a different corpus). See `../doc/sop/spikes.sop.md` §5a for the full directory layout.
-- [`.routing-trail/`](.routing-trail/) — frozen archaeology of the process: per-cycle adjudication / independent-verify / regression trails (`SPIKE-{WORKING,VERIFY,REGRESSION}-<id>/`). Preserved as written (its `README.md` carries the rosetta for pre-relocation paths); load-bearing conclusions are extracted to `ROUTING.md` + `.integrated/MANIFEST-*` + `CHANGELOG.md` + canon.
+- Open routing work (spikes waiting to land or be filed) is in the `vsect` ledger: `vsect open`. See `../doc/sop/spikes.sop.md` §5a for the full directory layout.
+- [`.routing-trail/`](.routing-trail/) — frozen archaeology of the process: per-cycle adjudication / independent-verify / regression trails (`SPIKE-{WORKING,VERIFY,REGRESSION}-<id>/`). Preserved as written (its `README.md` carries the rosetta for pre-relocation paths); load-bearing conclusions are extracted to `.integrated/MANIFEST-*` + `CHANGELOG.md` + canon, and open items to the `vsect` ledger.
 
 ### Naming: read "AAD" here as "AAT"
 

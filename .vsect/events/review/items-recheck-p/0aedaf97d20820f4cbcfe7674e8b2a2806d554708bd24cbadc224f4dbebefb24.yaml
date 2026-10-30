@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0aedaf97d20820f4cbcfe7674e8b2a2806d554708bd24cbadc224f4dbebefb24
+at: 2026-10-30T21:27:45Z
+store: asf
+act: take
+about: review:items-recheck-p
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+items:
+- F1:finding
+review: reviews/items-recheck-p.md
+review-version: 08c1f0db61b3221b07105c145c54e8c974b25bb74f99aa074de27f103c522077

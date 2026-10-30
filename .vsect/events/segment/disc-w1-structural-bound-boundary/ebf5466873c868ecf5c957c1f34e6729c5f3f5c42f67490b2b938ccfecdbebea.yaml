@@ -1,0 +1,30 @@
+schema: vsect-event/0
+id: ebf5466873c868ecf5c957c1f34e6729c5f3f5c42f67490b2b938ccfecdbebea
+at: 2026-10-30T21:27:45Z
+store: asf
+act: place-finding
+about: segment:disc-w1-structural-bound-boundary
+actor:
+  name: Claude Opus 5.5 (item rechecker, lane p-process)
+  role: rechecker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 81c263177870a69dc704815762eca670062a0c50342742e93c1962de0672150f
+  segment:def-agent-environment: d559aa1e377ecb84003bdcee7908e065e7ad467b792aaad03f2b9f3b420ee8f1
+  segment:def-chronica: 35ed6dcc52b1e90c6b22396e1bcb6610ec3241702b762f635869b0ad8e0f4d20
+  segment:def-observation-function: 9282640b9979a10962dc2a5614183ac19de3e1b07833b5659aff32656fcf3f95
+  segment:der-class-coercion-via-wrapping: 56e25b8a214aa86ea4061900fbb87fb08a82977d08d56abdb7c6413d5d5ce504
+  segment:der-directed-separation: 0d9c47858e17c9e43efdc9638604dd5db9dabc73f9c4811c30b75026e27e4f5e
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:disc-w1-structural-bound-boundary: 2fd8635b25be65514a0fe64c701b82ab6d3bb99858dad17338cc904bd1371dfa
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: d3898fba83b370fda5d32ace003b55ee464beed58852444a5b96d7a056054111
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 26a703b059f9d7b41f08f2847d7367452d620cec42d0f87afe784ac8606e8119
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+finding: review:items-recheck-p#F1
+target: segment:disc-w1-structural-bound-boundary
+text: 'Working-Note status signal: the Working Note at line 87 says the exact-enumeration simulation behind the $\Theta(\varepsilon^2)$ flatness (`spikes/sim-w1-w2-boundary.py`, figure `spikes/w1-w2-boundary.png`) "sits unintegrated in `spikes/`, '
+version-from: current
