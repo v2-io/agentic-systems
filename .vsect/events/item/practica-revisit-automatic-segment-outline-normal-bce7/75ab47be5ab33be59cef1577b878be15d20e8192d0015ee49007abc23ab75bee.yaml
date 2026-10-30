@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 75ab47be5ab33be59cef1577b878be15d20e8192d0015ee49007abc23ab75bee
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:practica-revisit-automatic-segment-outline-normal-bce7
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PRACTICA › Ops › CI/CD
+  source: PRACTICA.md:67
+own-version: 3161caf0c7645f3cf1839f81bd638862487ca7ff0fcb7bba8947a9ef3d51bcfc
+record: items/imported/practica-revisit-automatic-segment-outline-normal-bce7.md

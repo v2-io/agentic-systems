@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: 09514794bcd8de429c7402163cc18d4a9d0c8485886f34a38334cc3409a3eb35
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:proposals-d-5-sp-13-emergence-conditions-as-formal-ed68
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:scope-agency
+- segment:scope-agent-identity
+source: PROPOSALS.md:182
+unit: sections

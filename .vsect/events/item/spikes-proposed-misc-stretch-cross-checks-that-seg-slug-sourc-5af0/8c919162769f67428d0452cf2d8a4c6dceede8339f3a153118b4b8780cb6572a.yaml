@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 8c919162769f67428d0452cf2d8a4c6dceede8339f3a153118b4b8780cb6572a
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-misc-stretch-cross-checks-that-seg-slug-sourc-5af0
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: spikes/PROPOSED-MISC.md:15
+unit: bullets

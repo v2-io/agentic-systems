@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 6010748a116b14400c93eb4b6f192bded75dd5175e97e8cea710ded24b71799b
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-j-5-non-specialist-tone-calibration-jose-f16b
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › README v2 pass (queued from 2026-04-27 first-human-feedback cycle) › Deferrals from 2026-04-26 doc-pipeline cycle (`msc/judgment-calls-readme-cycle-2026-04-26.md`)
+  source: TODO.md:117
+own-version: a8c4ae080b33968aed0eae4c074eab6cd35bdd2fa8fadcba27be2504e175a05f
+record: items/imported/todo-j-5-non-specialist-tone-calibration-jose-f16b.md

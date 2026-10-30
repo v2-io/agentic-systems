@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: d45e6f5851c3ef204f49c8623ff674b01bbf7de532ec2cb268ba1f1679caefbd
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:integration-cleanup-todo-the-findings-that-still-cite-ref-novelty-f1ca
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: INTEGRATION-CLEANUP-TODO.md › The work (open items) › G3. Citation/bibliography discipline — remaining ASF-side tails
+  source: INTEGRATION-CLEANUP-TODO.md:63
+own-version: 6804ff70c3f6b57689ce4735e0b6343a2b24431db244530e05bc31b518b58cd8
+record: items/imported/integration-cleanup-todo-the-findings-that-still-cite-ref-novelty-f1ca.md

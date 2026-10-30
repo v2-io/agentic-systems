@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: cb1a759ee42caba5a6117d720b2cd32394daa211c4e5b135bda9a82115f399a1
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:terminology-todo-msc-naming-naming-rename-plan-md-decisio-ce2d
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TERMINOLOGY-TODO.md:99
+unit: bullets

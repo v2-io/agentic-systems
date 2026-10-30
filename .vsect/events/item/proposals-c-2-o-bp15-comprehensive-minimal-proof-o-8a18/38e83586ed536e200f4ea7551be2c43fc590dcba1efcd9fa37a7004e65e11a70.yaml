@@ -1,0 +1,29 @@
+schema: vsect-event/0
+id: 38e83586ed536e200f4ea7551be2c43fc590dcba1efcd9fa37a7004e65e11a70
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:proposals-c-2-o-bp15-comprehensive-minimal-proof-o-8a18
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:def-mismatch-signal
+  - segment:emp-update-gain
+  - segment:def-adaptive-tempo
+  - segment:def-satisfaction-gap
+  - segment:def-control-regret
+  - segment:der-orient-cascade
+  - segment:def-strategy-dag
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSALS — Architectural Portfolio › §C. Soon — prereqs nearly met
+  source: PROPOSALS.md:103
+own-version: 0509bad2ee8efe279652f915abb529d443d9583d854cef4ca65690113833afd3
+record: items/imported/proposals-c-2-o-bp15-comprehensive-minimal-proof-o-8a18.md

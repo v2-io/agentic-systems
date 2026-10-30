@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: TODO.md:460
+section: 'TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (d) — LOGA / ELI stub filling and content cycle — open items'
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# ELI-4 / ELI-5 five-constitutive-factors measurement protocols — factors (ii) being seen, (iii) granted sovereignty, (v) effective phenomenology need operational
+
+Imported verbatim (relative links rebased) from `TODO.md` line 460, section *TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (d) — LOGA / ELI stub filling and content cycle — open items*. Not yet re-checked against HEAD: `vsect recheck item:todo-eli-4-eli-5-five-constitutive-factors-me-c2bc --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **ELI-4 / ELI-5 five-constitutive-factors measurement protocols** — factors (ii) being seen, (iii) granted sovereignty, (v) effective phenomenology need operational thresholds. Factor (v) "true feeling vs sophisticated pattern matching becomes a distinction without a difference" framing belongs in a discussion segment, not in the definitional list.

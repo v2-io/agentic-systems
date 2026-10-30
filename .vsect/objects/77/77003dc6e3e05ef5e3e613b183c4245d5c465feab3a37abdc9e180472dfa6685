@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Cross-refs for whoever picks this up: kaobook reference impl `bin/lib/typeset.rb:344-348`; the `when 'Appendices'` branch in `bin/lib/typeset_scrbook.rb` (~line
+
+Imported verbatim from `TODO.md` line 490, section *TODO — Miscellaneous & details › 2026-05-17 — scrbook appendix numbering (PARKED mid-fix to focus on self-actuation; pickup-ready)*. Not yet re-checked against HEAD: `vsect recheck item:todo-cross-refs-for-whoever-picks-this-up-kao-fb47 --outcome holds|stale|landed|not-an-item --why …`.
+
+- Cross-refs for whoever picks this up: kaobook reference impl `bin/lib/typeset.rb:344-348`; the `when 'Appendices'` branch in `bin/lib/typeset_scrbook.rb` (~lines 266-280) carries an inline comment explaining why `\asfAppendixToCremap` was *initially* excluded (separate concern) — that comment needs updating once the ToC-as-segments port lands, since Joseph has now requested it.

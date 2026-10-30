@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: a34197e2c01f4dd14ec18267bf11f00a37f69040af8b8363cdf9fc160c4c69c2
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-der-tempo-composition-a12-f116-119-closu-4424
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:der-tempo-composition
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Strengthen-first candidates from the 2026-05-30/31 gold-lift sweep
+  source: TODO.md:44
+own-version: 51a843700510548b22ee4162262930fe22de4a649bd134957325859f78333876
+record: items/imported/todo-der-tempo-composition-a12-f116-119-closu-4424.md

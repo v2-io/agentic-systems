@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 11194849e524f50d5c2ac21e05c21c0e543eb7825b700c34255a0777c5324492
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:terminology-todo-identity-sufficiency-s-text-id-def-ident-7776
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TERMINOLOGY-TODO.md:68
+unit: bullets

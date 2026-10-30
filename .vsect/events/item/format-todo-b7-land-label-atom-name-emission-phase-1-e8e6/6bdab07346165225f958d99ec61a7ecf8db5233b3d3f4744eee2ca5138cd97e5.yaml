@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 6bdab07346165225f958d99ec61a7ecf8db5233b3d3f4744eee2ca5138cd97e5
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:format-todo-b7-land-label-atom-name-emission-phase-1-e8e6
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: FORMAT-TODO.md:154
+unit: checkboxes

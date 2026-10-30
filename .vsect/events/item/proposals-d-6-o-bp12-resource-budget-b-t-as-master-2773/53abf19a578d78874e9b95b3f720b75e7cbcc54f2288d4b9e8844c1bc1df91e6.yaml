@@ -1,0 +1,19 @@
+schema: vsect-event/0
+id: 53abf19a578d78874e9b95b3f720b75e7cbcc54f2288d4b9e8844c1bc1df91e6
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:proposals-d-6-o-bp12-resource-budget-b-t-as-master-2773
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:disc-compression-operations
+- segment:der-deliberation-cost
+- segment:form-strategy-complexity-cost
+- segment:emp-update-gain
+- segment:def-adaptive-tempo
+source: PROPOSALS.md:194
+unit: sections

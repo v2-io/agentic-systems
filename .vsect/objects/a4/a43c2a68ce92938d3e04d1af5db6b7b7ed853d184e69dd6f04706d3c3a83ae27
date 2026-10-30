@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# LOGA missing stubs (genuinely absent in `03-llm-core/src/`) — `obs-backward-inference-empathy`, `form-structured-rich-context`, `der-active-salience-management`
+
+Imported verbatim (relative links rebased) from `TODO.md` line 451, section *TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (d) — LOGA / ELI stub filling and content cycle — open items*. Not yet re-checked against HEAD: `vsect recheck item:todo-loga-missing-stubs-genuinely-absent-in-0-9487 --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **LOGA missing stubs (genuinely absent in `03-llm-core/src/`)** — `obs-backward-inference-empathy`, `form-structured-rich-context`, `der-active-salience-management`, `der-self-referential-closure`, `def-cognitive-fusion`. The highest priority is `#form-structured-rich-context` because it is the practical bridge between context turnover and scaffolded recovery, and `#der-active-salience-management` for the scaffolded-recovery story.

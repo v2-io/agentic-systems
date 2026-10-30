@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 35bc1581213ccad34ef6dc9772dab5b4e1d2008e05990825b67d181553423e10
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-der-tempo-composition-a12-f116-119-closu-4424
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:der-tempo-composition
+source: TODO.md:44
+unit: bullets

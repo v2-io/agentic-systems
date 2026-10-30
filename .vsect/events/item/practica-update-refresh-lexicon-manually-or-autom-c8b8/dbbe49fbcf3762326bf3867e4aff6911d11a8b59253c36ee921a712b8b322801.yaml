@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: dbbe49fbcf3762326bf3867e4aff6911d11a8b59253c36ee921a712b8b322801
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:practica-update-refresh-lexicon-manually-or-autom-c8b8
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PRACTICA › Names & Lexicon › Lexicon
+  source: PRACTICA.md:110
+own-version: 778cbf35fd3b269964b517decfc6f5a5eb320b1d30504c50c85797f1d95039c7
+record: items/imported/practica-update-refresh-lexicon-manually-or-autom-c8b8.md

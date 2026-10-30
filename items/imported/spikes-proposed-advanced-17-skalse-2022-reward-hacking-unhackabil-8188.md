@@ -1,0 +1,18 @@
+---
+kind: item
+provenance: imported
+source: spikes/PROPOSED-ADVANCED.md:105
+section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 3: Surfaced 2026-05-19 (corpus reconciliation scan)'
+owner: ""
+opened: 2026-10-30T20:17:42Z
+opened-by: Claude Fable 5.1
+concerns: [segment:disc-implementation-impossibility, segment:disc-value-functional-grounding-floor, segment:deriv-reward-channel-learning-no-go, segment:form-objective-functional]
+---
+
+# 17. Skalse 2022 reward-hacking unhackability as cross-cluster bridge candidate
+
+Imported verbatim (relative links rebased) from `spikes/PROPOSED-ADVANCED.md` line 105, section *Advanced Mathematical Spike Proposals (detail home) › Phase 3: Surfaced 2026-05-19 (corpus reconciliation scan)*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-advanced-17-skalse-2022-reward-hacking-unhackabil-8188 --outcome holds|stale|landed|not-an-item --why …`.
+
+*   **The Gap:** Skalse, J., Howe, N., Krasheninnikov, D. & Krueger, D. (2022), *Defining and characterizing reward hacking* (NeurIPS 2022), proves no non-trivial proxy-reward pair is unhackable on open policy sets. The actor under the no-go is the *designer* trying to engineer unhackable reward proxies — structurally a `#disc-implementation-impossibility` candidate. The agent-side dual (the agent exploiting the proxy) lives structurally in the agent-side value-functional-grounding cluster (`#disc-value-functional-grounding-floor`). Skalse 2022 therefore is a *cross-cluster bridge* between the two new meta-segments — flagged in both `#disc-implementation-impossibility` Working Notes (c) and `#deriv-reward-channel-learning-no-go` Working Notes (the closing line about Skalse as Track B charter candidate).
+*   **The Spike:** Two-pass evaluation. (1) Run Skalse 2022's designer-side no-go against `#disc-implementation-impossibility`'s discipline filter — does the reward-proxy-design task fit the constructive-impossibility shape (setting / external theorem / no-go / escapes / strengthened consequence)? Is there an AAT-machinery adjacency under the composite-design reading? (2) Run the agent-side exploitation dual against `#disc-value-functional-grounding-floor`'s discipline — is the agent-exploitation-of-proxy a third charter instance of the value-functional-grounding cluster (alongside Result G′ and Cohen-2022 strengthened), with `#form-objective-functional`'s single-interface narrowness as the shared structural ingredient? Decision: land as charter instance of one cluster, bridge segment between both, or honestly-adjacent-not-instance with cross-references.
+*   **Honest scope:** Tier-2 grade — substantive cross-cluster evaluation. The cluster bridge is the most interesting structural question; the segment-disposition is the practical question. Likely 2-3 cycles.

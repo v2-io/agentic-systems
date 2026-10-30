@@ -1,0 +1,17 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# 3. Transient Dependency Amplification and the Logogenic Lipschitz Constant
+
+Imported verbatim from `spikes/PROPOSED-ADVANCED.md` line 23, section *Advanced Mathematical Spike Proposals (detail home) › Phase 1: Candidate Spikes & Proposed Repairs*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-advanced-3-transient-dependency-amplification-and-a826 --outcome holds|stale|landed|not-an-item --why …`.
+
+* **High-Level Objective / Importance:** To characterize one structural contributor to the logogenic diagnostic sensitivity constant $L_A$, especially for deep software tasks where small representation errors can propagate through coupled dependencies.
+
+* **Initial Direction:** Replace the global codebase/RMT framing with a feature-local effective dependency operator $J_F$ over the task's load-bearing components, interfaces, assumptions, and reasoning steps.
+
+* **Proposed Mechanics:** Bounds a candidate contribution to $L_A$ by the finite-horizon transient gain $\lVert J_{F,d}\cdots J_{F,1}\rVert$, with compilers/tests/probes modeled as interleaved projection or contraction operators $P_k$ on observed task-relevant subspaces.
+
+* **Current Status & Required Revisions:** Candidate bridge only. Promotion requires a formal construction of $J_F$ from TST quantities, an explicit local attainability-sensitivity bound, treatment of cyclic dependencies via strongly connected components or another sub-scope, and a checkpoint coverage/contraction lemma specifying when tool feedback actually bounds the error envelope.
+
+* **Disposition (2026-05-19): open candidate.** `spike-transient-dependency-amplification.md` is `live-or-open` — the author is self-blocked on the formal $J_F$ construction (INDEX correct). Genuinely still a candidate; no change.

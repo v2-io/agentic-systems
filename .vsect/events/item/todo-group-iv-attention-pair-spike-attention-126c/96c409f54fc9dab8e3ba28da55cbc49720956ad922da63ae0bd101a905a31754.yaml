@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 96c409f54fc9dab8e3ba28da55cbc49720956ad922da63ae0bd101a905a31754
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-group-iv-attention-pair-spike-attention-126c
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:474
+unit: bullets

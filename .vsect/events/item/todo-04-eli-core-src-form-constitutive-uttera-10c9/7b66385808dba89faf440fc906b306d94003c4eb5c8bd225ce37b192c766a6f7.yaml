@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 7b66385808dba89faf440fc906b306d94003c4eb5c8bd225ce37b192c766a6f7
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-04-eli-core-src-form-constitutive-uttera-10c9
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › Segment promotion candidates (exploratory → draft)
+  source: TODO.md:353
+own-version: 061ee8cc67a1d645814f6a6e7b5f5a4ac64beb1012b1eb6c084b21a1d57ed25c
+record: items/imported/todo-04-eli-core-src-form-constitutive-uttera-10c9.md

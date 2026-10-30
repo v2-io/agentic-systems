@@ -1,0 +1,18 @@
+schema: vsect-event/0
+id: 16435dcfb707044ecd4ae4e4d62d8c2eab15e000190adb2396897199b78926c6
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-depends-conflates-logical-prerequisite-w-9868
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:form-strategy-complexity-cost
+- segment:deriv-strategy-cost-regret-bound
+- segment:def-model-sufficiency
+- segment:form-information-bottleneck
+source: TODO.md:264
+unit: bullets

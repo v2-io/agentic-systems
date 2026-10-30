@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Alan's testing-scaffolding hierarchy as engineering-applications anchor. From his Engineering Applications notes: *Types > Checks > Automated Tests > Manual Tes
+
+Imported verbatim (relative links rebased) from `TODO.md` line 109, section *TODO — Miscellaneous & details › README v2 pass (queued from 2026-04-27 first-human-feedback cycle) › Surfaced from Alan's review*. Not yet re-checked against HEAD: `vsect recheck item:todo-alan-s-testing-scaffolding-hierarchy-as-3a16 --outcome holds|stale|landed|not-an-item --why …`.
+
+- **Alan's testing-scaffolding hierarchy as engineering-applications anchor.** From his Engineering Applications notes: *Types > Checks > Automated Tests > Manual Tests > Agent Tests > Context Docs* — a practitioner-graded ordering of what scaffolds the Pearl-Level-2 channel spectrum (`#obs-software-epistemic-properties` P3) for a production agentic system. Worth surfacing in `02-tst-core/` (operational instantiation of the channel-spectrum table) and possibly in the README's *Cross-Domain Joining* table as the engineer-side anchor. Alan's other anchor — *"Faster iteration loops that give more reliable and consistent results lead to better accuracy and faster convergence"* — is the folk version of the tempo / persistence-condition story; its phrasing is itself a practitioner-grade Feynman-criterion gloss for the README.

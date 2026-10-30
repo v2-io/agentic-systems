@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 4e66fa64befd743ed435e4aa5ec7cea529465196f518387f8a9db92cda514daf
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:bibliography-todo-registering-a-pdf-for-an-entry-4e19
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: Or bulk-import from an existing .bib file
+  source: BIBLIOGRAPHY-TODO.md:61
+own-version: a6b436c2ba63757fca9ff897ae34a3b30d8b4b4d7e053e58c7acd5c89d0edbc0
+record: items/imported/bibliography-todo-registering-a-pdf-for-an-entry-4e19.md

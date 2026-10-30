@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 648c9dc785bdbf89bd143d75182a7ee0754aa40db8991b3a5050b8d487ca7ae3
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:bibliography-todo-strengthened-hybrid-rule-3a75
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: BIBLIOGRAPHY-TODO.md:19
+unit: sections

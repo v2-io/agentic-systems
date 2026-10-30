@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: cae67c6cea5d2ecdb3d1d8084cf52905cc6062e84ae16e4bb577ab4d5740712e
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-routing-landing-scope-hybrid-auto-land-the-tract-02a9
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: Spike-routing — live tracker (started 2026-05-17) › The job (Joseph's framing, 2026-05-17)
+  source: spikes/ROUTING.md:15
+own-version: e87ebab43575cb05587af4acced42ac4797f4475cd5b130c0fd83cbdd29988eb
+record: items/imported/spikes-routing-landing-scope-hybrid-auto-land-the-tract-02a9.md

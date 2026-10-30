@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 5716003bf867786d00ab86556540c2dc0c3403d65ed4898074a43138b86f38a0
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-big-picture-w3-per-result-census-gates-remaining-can-7bec
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO-big-picture.md:51
+unit: bullets

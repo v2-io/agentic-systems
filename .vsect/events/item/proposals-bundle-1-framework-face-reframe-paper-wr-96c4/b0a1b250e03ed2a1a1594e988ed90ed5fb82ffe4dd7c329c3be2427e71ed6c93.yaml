@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: b0a1b250e03ed2a1a1594e988ed90ed5fb82ffe4dd7c329c3be2427e71ed6c93
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:proposals-bundle-1-framework-face-reframe-paper-wr-96c4
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:disc-identifiability-floor
+- segment:disc-separability-pattern
+- segment:disc-stability-certificate
+- segment:result-certificate-existence
+- segment:scope-agent-identity
+- segment:result-sector-persistence-template
+source: PROPOSALS.md:29
+unit: sections

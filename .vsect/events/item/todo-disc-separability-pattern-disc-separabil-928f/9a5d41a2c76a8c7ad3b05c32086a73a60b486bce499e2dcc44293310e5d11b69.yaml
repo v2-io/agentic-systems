@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 9a5d41a2c76a8c7ad3b05c32086a73a60b486bce499e2dcc44293310e5d11b69
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-disc-separability-pattern-disc-separabil-928f
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:disc-separability-pattern
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Naming pipeline — specific deferred items
+  source: TODO.md:223
+own-version: 0ee1e7020bdba3ff07ad286b3e6fe5961654fe3abb2fc027b3716a2724842397
+record: items/imported/todo-disc-separability-pattern-disc-separabil-928f.md

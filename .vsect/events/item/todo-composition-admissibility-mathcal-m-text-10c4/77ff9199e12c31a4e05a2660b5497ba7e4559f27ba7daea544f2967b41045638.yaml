@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 77ff9199e12c31a4e05a2660b5497ba7e4559f27ba7daea544f2967b41045638
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-composition-admissibility-mathcal-m-text-10c4
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:form-composition-closure
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Open theory items (MEDIUM)
+  source: TODO.md:152
+own-version: 9dc755d9916ec64ba1e35403f000f59c65c8cbd0d5fdcaaed3800d262d484be5
+record: items/imported/todo-composition-admissibility-mathcal-m-text-10c4.md

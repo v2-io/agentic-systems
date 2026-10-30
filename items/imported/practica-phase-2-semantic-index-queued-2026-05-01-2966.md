@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: PRACTICA.md:118
+section: PRACTICA › Misc
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# Phase 2 semantic index (queued 2026-05-01) — `psql-18` + pgvector + ollama + `nomic-embed-text-v2-moe`; lift memorata's data layer wholesale. Drives the four-si
+
+Imported verbatim (relative links rebased) from `PRACTICA.md` line 118, section *PRACTICA › Misc*. Not yet re-checked against HEAD: `vsect recheck item:practica-phase-2-semantic-index-queued-2026-05-01-2966 --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **Phase 2 semantic index** (queued 2026-05-01) — `psql-18` + pgvector + ollama + `nomic-embed-text-v2-moe`; lift memorata's data layer wholesale. Drives the four-signal naming-target context map (anchor + heaviest-attention + supplementary references + dependency chain) for the renaming agent's harder cases. Architecture brief at [`spikes/spike-local-embedding-benchmark/FINDINGS.md`](../../spikes/spike-local-embedding-benchmark/FINDINGS.md).

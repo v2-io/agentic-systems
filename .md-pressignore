@@ -60,3 +60,8 @@ doc/readme/src/_known-issues.md
 LEXICON.md
 CURRENT-VOL1.md
 CURRENT-VOL1-APPENDICES.md
+
+# Imported tracker items (vsect): a tracker line carried verbatim, with its source file and line,
+# until a mind re-checks it against HEAD (`vsect recheck`). A re-check that holds moves the file to
+# items/, where md-press applies like anywhere else.
+items/imported/

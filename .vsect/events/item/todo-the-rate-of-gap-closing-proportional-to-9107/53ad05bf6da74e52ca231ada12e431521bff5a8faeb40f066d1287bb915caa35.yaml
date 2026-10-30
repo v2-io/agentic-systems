@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 53ad05bf6da74e52ca231ada12e431521bff5a8faeb40f066d1287bb915caa35
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-the-rate-of-gap-closing-proportional-to-9107
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:103
+unit: bullets

@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: b5b5f3b2850d037e75bf34c168f8b84347fef38fce9e1e9ae05bb289fbb19c90
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:practica-drafting-outline-modification-repair-4997
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PRACTICA › Ops › Processes
+  source: PRACTICA.md:62
+own-version: 98671baecf56012e2c7fda3eb4d6ca5461653372b2dbfddf478fa9a29418b703
+record: items/imported/practica-drafting-outline-modification-repair-4997.md

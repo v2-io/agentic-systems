@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 318cbc5617f8dfb673949664c82d5556634de297a0feda64a1f4fbddeedcda54
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-decorrelation-by-construction-class-3-bu-f138
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:der-class-coercion-via-wrapping
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Tier 2 — exploratory / next-generation
+  source: spikes/PROPOSED.md:58
+own-version: 62b399d8c1695a0a41d1f16f3d1a5e2c4674ed58a27725bf9b5489d79ebd15e1
+record: items/imported/spikes-proposed-decorrelation-by-construction-class-3-bu-f138.md

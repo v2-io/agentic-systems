@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 3166f4d26d655235466f23ab354789ecaaf427d4db8597029b3706f2709b9b5f
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-f-h-b-b-emitter-side-effect-function-for-3a79
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:der-interaction-channel-classification
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Queued spike work
+  source: TODO.md:207
+own-version: 03460726a44dd5942f12829b7377f7eba263a8ed767b3fdb58f01191f934c017
+record: items/imported/todo-f-h-b-b-emitter-side-effect-function-for-3a79.md

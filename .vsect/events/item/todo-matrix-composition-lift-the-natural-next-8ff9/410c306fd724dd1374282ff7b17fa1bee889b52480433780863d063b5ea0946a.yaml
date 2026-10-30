@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: 410c306fd724dd1374282ff7b17fa1bee889b52480433780863d063b5ea0946a
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-matrix-composition-lift-the-natural-next-8ff9
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:form-composition-closure
+- segment:der-team-persistence
+- segment:deriv-critical-mass-composition
+source: TODO.md:475
+unit: bullets

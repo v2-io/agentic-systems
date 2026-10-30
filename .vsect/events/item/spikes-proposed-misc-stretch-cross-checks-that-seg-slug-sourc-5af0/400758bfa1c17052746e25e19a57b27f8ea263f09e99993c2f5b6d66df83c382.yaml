@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 400758bfa1c17052746e25e19a57b27f8ea263f09e99993c2f5b6d66df83c382
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-misc-stretch-cross-checks-that-seg-slug-sourc-5af0
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — misc detail home › sw-reciprocal-link-check — `bin/` enforcement for the reciprocal-link discipline
+  source: spikes/PROPOSED-MISC.md:15
+own-version: d759fbbfaf892bb173d6e05f752f522ca9b1f9bbcabdd1d9d487c354d374b93a
+record: items/imported/spikes-proposed-misc-stretch-cross-checks-that-seg-slug-sourc-5af0.md

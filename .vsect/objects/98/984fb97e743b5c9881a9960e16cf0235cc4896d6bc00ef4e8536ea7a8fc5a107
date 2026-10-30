@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Project memory `feedback_spike_references_only_in_working_notes.md` (out-of-repo, `~/.claude/projects/.../memory/`) — final pass to match the ratified principle
+
+Imported verbatim from `INTEGRATION-CLEANUP-TODO.md` line 51, section *INTEGRATION-CLEANUP-TODO.md › The work (open items) › G1. Governing/onboarding docs — residual tails*. Not yet re-checked against HEAD: `vsect recheck item:integration-cleanup-todo-project-memory-feedback-spike-references-89b6 --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **Project memory** `feedback_spike_references_only_in_working_notes.md` (out-of-repo, `~/.claude/projects/.../memory/`) — final pass to match the ratified principle; the 2026-05-19 update has the binary + defer-to-FORMAT but still carries some of the *need vs mention* framing latent.

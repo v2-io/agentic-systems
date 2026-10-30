@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ccaa6f7004588e4c4f7b9d0308103dcc75aac474ac56fe493f953f98c52a67de
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-04-eli-core-src-norm-honest-activation-m-27de
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:360
+unit: bullets

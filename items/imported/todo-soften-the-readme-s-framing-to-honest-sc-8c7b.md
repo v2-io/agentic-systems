@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: TODO.md:85
+section: TODO — Miscellaneous & details › Greek vocabulary prose discipline (audit + author finding, 2026-04-29)
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# Soften the README's framing to honest scope for any term where path 1 doesn't apply (i.e., the formalism really does only use the Greek as pedagogical surface v
+
+Imported verbatim (relative links rebased) from `TODO.md` line 85, section *TODO — Miscellaneous & details › Greek vocabulary prose discipline (audit + author finding, 2026-04-29)*. Not yet re-checked against HEAD: `vsect recheck item:todo-soften-the-readme-s-framing-to-honest-sc-8c7b --outcome holds|stale|landed|not-an-item --why …`.
+
+- **Soften the README's framing to honest scope** for any term where path 1 doesn't apply (i.e., the formalism really does only use the Greek as pedagogical surface vocabulary). The README's claim narrows accordingly.

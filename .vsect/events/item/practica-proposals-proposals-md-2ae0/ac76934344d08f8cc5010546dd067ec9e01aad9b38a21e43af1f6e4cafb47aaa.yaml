@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: ac76934344d08f8cc5010546dd067ec9e01aad9b38a21e43af1f6e4cafb47aaa
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:practica-proposals-proposals-md-2ae0
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PRACTICA › ⭐Theory
+  source: PRACTICA.md:10
+own-version: fe8575759bbaa0aa2d0a84aeadd6b61c941f43a221e9ce89a77b3f834cc412cb
+record: items/imported/practica-proposals-proposals-md-2ae0.md

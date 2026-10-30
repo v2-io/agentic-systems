@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 2f6aaa5132366bd94ca0276a1af9ddb092a7893dac3419ced1970472c0f17c61
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-observability-dominance-product-formula-b54f
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Lower priority
+  source: TODO.md:269
+own-version: 0ccc1cec4c65968198c08243d10a81d2c47c750b1912c0fc3497d9fb3988f876
+record: items/imported/todo-observability-dominance-product-formula-b54f.md

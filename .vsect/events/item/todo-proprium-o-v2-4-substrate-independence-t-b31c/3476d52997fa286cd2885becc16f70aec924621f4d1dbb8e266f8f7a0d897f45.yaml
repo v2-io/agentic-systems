@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 3476d52997fa286cd2885becc16f70aec924621f4d1dbb8e266f8f7a0d897f45
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-proprium-o-v2-4-substrate-independence-t-b31c
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:394
+unit: bullets

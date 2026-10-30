@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 90ac79f668bc96fac006457e31813747e9e380ca61d3beef30f8940144559586
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-continuity-4-2-second-no-go-adversariall-c4e7
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: spikes/PROPOSED.md:82
+unit: rows

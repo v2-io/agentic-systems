@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: bfe062fd16c7ad897af34f040ee61f85207f3b05e0fc32626711f44b33cd2a26
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-pearl-llm-causal-access-positioning-refi-974c
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:der-loop-interventional-access
+source: TODO.md:179
+unit: bullets

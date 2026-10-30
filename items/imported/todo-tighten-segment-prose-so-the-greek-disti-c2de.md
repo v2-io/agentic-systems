@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: TODO.md:84
+section: TODO — Miscellaneous & details › Greek vocabulary prose discipline (audit + author finding, 2026-04-29)
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# Tighten segment prose so the Greek distinctions actually do work. Where the load-bearing content is the thing the Greek term names (not the flatter English equi
+
+Imported verbatim (relative links rebased) from `TODO.md` line 84, section *TODO — Miscellaneous & details › Greek vocabulary prose discipline (audit + author finding, 2026-04-29)*. Not yet re-checked against HEAD: `vsect recheck item:todo-tighten-segment-prose-so-the-greek-disti-c2de --outcome holds|stale|landed|not-an-item --why …`.
+
+- **Tighten segment prose so the Greek distinctions actually do work.** Where the load-bearing content is the thing the Greek term names (not the flatter English equivalent), the Greek term becomes the canonical form in that segment's prose: *mismatch → aporia* where the productive-perplexity-resolves-into-action structure is what's structurally distinctive; *update → epistrophe* where the turning-toward-correction is what's load-bearing; etc. Per-term, per-segment judgment.

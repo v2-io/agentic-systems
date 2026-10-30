@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 5b4185f85c44c4e1dfa3745ff23d4f7e10ef764da5172e1456752c6054c21398
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:audits-status-audit-773921-final-2026-05-28-c837
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: Audit routing status — live tracker › Open / in-flight
+  source: audits/STATUS.md:24
+own-version: 56b56fdebd77ade317b8b78af15ca01c0104bef60ac4cda90127a35d3be824f4
+record: items/imported/audits-status-audit-773921-final-2026-05-28-c837.md

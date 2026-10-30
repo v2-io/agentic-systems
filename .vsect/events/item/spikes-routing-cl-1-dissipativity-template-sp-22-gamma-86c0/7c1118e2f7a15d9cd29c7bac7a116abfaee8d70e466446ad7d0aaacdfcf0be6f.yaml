@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 7c1118e2f7a15d9cd29c7bac7a116abfaee8d70e466446ad7d0aaacdfcf0be6f
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-routing-cl-1-dissipativity-template-sp-22-gamma-86c0
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: spikes/ROUTING.md:37
+unit: bullets

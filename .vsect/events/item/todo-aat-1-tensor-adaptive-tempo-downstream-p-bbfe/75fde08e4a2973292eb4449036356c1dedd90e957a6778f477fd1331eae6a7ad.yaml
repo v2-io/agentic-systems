@@ -1,0 +1,30 @@
+schema: vsect-event/0
+id: 75fde08e4a2973292eb4449036356c1dedd90e957a6778f477fd1331eae6a7ad
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:def-adaptive-tempo
+  - segment:deriv-matrix-persistence-condition
+  - segment:result-adversarial-tempo-advantage
+  - segment:form-composition-closure
+  - segment:der-team-persistence
+  - segment:deriv-critical-mass-composition
+  - segment:deriv-sector-condition
+  - segment:deriv-persistence-cost
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (b) — AAT content cycle — open items'
+  source: TODO.md:431
+own-version: 93bc1fb20c9b667acf0743b50743ad85de773e06693f27bce50a5ae3b5b71ad5
+record: items/imported/todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe.md

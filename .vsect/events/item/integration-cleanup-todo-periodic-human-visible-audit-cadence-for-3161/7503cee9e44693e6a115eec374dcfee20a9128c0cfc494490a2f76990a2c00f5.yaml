@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 7503cee9e44693e6a115eec374dcfee20a9128c0cfc494490a2f76990a2c00f5
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:integration-cleanup-todo-periodic-human-visible-audit-cadence-for-3161
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: INTEGRATION-CLEANUP-TODO.md:75
+unit: checkboxes

@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# `framework/` directory for non-mathematical content.
+
+Imported verbatim from `TODO.md` line 282, section *TODO — Miscellaneous & details › Deferred — project structure / tooling*. Not yet re-checked against HEAD: `vsect recheck item:todo-framework-directory-for-non-mathematical-b6ee --outcome holds|stale|landed|not-an-item --why …`.
+
+- `framework/` directory for non-mathematical content.

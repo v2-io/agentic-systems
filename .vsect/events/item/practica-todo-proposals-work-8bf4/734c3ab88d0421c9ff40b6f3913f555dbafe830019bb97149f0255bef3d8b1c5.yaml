@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 734c3ab88d0421c9ff40b6f3913f555dbafe830019bb97149f0255bef3d8b1c5
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:practica-todo-proposals-work-8bf4
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PRACTICA › Ops › Processes
+  source: PRACTICA.md:60
+own-version: 8ac013c300312253a7f10cfcdb4d3db90cb2dead26b5b9b99f41ea9e6a825fd1
+record: items/imported/practica-todo-proposals-work-8bf4.md

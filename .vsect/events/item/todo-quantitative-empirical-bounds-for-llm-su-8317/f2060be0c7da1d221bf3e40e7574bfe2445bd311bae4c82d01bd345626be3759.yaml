@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: f2060be0c7da1d221bf3e40e7574bfe2445bd311bae4c82d01bd345626be3759
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-quantitative-empirical-bounds-for-llm-su-8317
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:der-class-coercion-via-wrapping
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Queued spike work
+  source: TODO.md:193
+own-version: d2e42b2367b9f9776e092f130dd19bf547e3d6e3fb45e9aa985b67b208ccf6a2
+record: items/imported/todo-quantitative-empirical-bounds-for-llm-su-8317.md

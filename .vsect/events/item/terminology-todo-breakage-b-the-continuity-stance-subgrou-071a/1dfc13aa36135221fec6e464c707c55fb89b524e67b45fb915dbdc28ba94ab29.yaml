@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 1dfc13aa36135221fec6e464c707c55fb89b524e67b45fb915dbdc28ba94ab29
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:terminology-todo-breakage-b-the-continuity-stance-subgrou-071a
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TERMINOLOGY-TODO.md:47
+unit: bullets

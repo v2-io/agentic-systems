@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 8bcf4498555e2d22f0aaad87f29d4fe8379fc0fd9232bd887186a3d5786cf37e
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-equation-tag-vs-content-type-drift-for-o-9df0
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:def-action-transition
+  - segment:def-observation-function
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)
+  source: spikes/PROPOSED.md:35
+own-version: d0ad0da050c213710a36fe847521994f6bda7efa339e2190a68dbe1c4a3537f6
+record: items/imported/spikes-proposed-equation-tag-vs-content-type-drift-for-o-9df0.md

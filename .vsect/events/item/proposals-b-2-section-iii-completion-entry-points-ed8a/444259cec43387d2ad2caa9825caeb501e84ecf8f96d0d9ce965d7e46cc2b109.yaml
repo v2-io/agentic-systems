@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: 444259cec43387d2ad2caa9825caeb501e84ecf8f96d0d9ce965d7e46cc2b109
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:proposals-b-2-section-iii-completion-entry-points-ed8a
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:disc-identifiability-floor
+- segment:disc-separability-pattern
+- segment:form-composition-closure
+- segment:der-team-persistence
+- segment:disc-composition-consistency
+- segment:der-tempo-composition
+source: PROPOSALS.md:73
+unit: sections

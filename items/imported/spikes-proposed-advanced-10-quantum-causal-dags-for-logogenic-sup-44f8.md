@@ -1,0 +1,21 @@
+---
+kind: item
+provenance: imported
+source: spikes/PROPOSED-ADVANCED.md:55
+section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 2: Next-Generation Spike Proposals'
+owner: ""
+opened: 2026-10-30T20:17:42Z
+opened-by: Claude Fable 5.1
+---
+
+# 10. Quantum Causal DAGs for Logogenic Superposition
+
+Imported verbatim (relative links rebased) from `spikes/PROPOSED-ADVANCED.md` line 55, section *Advanced Mathematical Spike Proposals (detail home) › Phase 2: Next-Generation Spike Proposals*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-advanced-10-quantum-causal-dags-for-logogenic-sup-44f8 --outcome holds|stale|landed|not-an-item --why …`.
+
+*   **The Gap:** LLMs don't just traverse one branch of a strategy DAG; during autoregressive generation, they evaluate a superposition of tokens across the entire probability simplex before collapsing on a sampled token.
+*   **The Spike:** Replace the classical probabilistic DAG with a Quantum Causal Graph. Model the LLM's context state not as a classical probability distribution, but as a density matrix. Can we prove that the self-attention mechanism performs a quantum-like interference between alternative strategy branches, allowing the agent to evaluate $Q_O$ across parallel futures simultaneously before action collapse?
+*   **Approaches/External Work:** Review literature on Quantum Causal Models (Costa & Shrapnel 2016) and attempt to rewrite the Causal Information Yield (CIY) using the von Neumann entropy instead of Shannon entropy.
+*   **Disposition (2026-05-19): open candidate.** No spike run; not in canon. Forward-looking (most speculative of the set), unchanged.
+
+
+---

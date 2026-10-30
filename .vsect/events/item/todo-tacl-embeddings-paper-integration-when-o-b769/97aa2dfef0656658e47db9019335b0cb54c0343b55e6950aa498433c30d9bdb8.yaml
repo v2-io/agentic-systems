@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 97aa2dfef0656658e47db9019335b0cb54c0343b55e6950aa498433c30d9bdb8
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-tacl-embeddings-paper-integration-when-o-b769
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › Cross-pollination opportunities
+  source: TODO.md:393
+own-version: 42dc93be39e0ec1ecfd16b0a74ff1b1d93af040cfff393e15072c473189d12c6
+record: items/imported/todo-tacl-embeddings-paper-integration-when-o-b769.md

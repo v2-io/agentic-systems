@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: e593eb13e7689247353d00ac424ddb2df2d0f8b518dd15ef8902d1f429feeffa
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-disc-additive-coordinate-forcing-disc-fo-c1fd
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:disc-additive-coordinate-forcing
+source: TODO.md:224
+unit: bullets

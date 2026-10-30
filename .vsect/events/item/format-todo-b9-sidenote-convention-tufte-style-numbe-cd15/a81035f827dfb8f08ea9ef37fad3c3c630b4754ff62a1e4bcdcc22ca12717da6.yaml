@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: a81035f827dfb8f08ea9ef37fad3c3c630b4754ff62a1e4bcdcc22ca12717da6
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:format-todo-b9-sidenote-convention-tufte-style-numbe-cd15
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'FORMAT-TODO.md — Cross-Cutting Conventions: Citations, Cross-Refs, Footnotes, Sidenotes, Margin-Notes › Workstream B — Cross-refs, footnotes, sidenotes, margin-notes'
+  source: FORMAT-TODO.md:156
+own-version: fcf46058620bc2ccc3d4f4cb5de687dc79a34afa8b03baae09b68eecd5fe42c4
+record: items/imported/format-todo-b9-sidenote-convention-tufte-style-numbe-cd15.md

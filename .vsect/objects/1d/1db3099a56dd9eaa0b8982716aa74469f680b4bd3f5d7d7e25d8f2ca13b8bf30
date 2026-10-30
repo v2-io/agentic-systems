@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# `msc/naming/to-canonicalize.md` — Pre-decision residue. The remaining 13 rows still pending Joseph's routing call.
+
+Imported verbatim (relative links rebased) from `TERMINOLOGY-TODO.md` line 100, section *TERMINOLOGY-TODO › How this file relates to other naming-cycle files*. Not yet re-checked against HEAD: `vsect recheck item:terminology-todo-msc-naming-to-canonicalize-md-pre-decisi-1568 --outcome holds|stale|landed|not-an-item --why …`.
+
+- `msc/naming/to-canonicalize.md` — **Pre-decision residue.** The remaining 13 rows still pending Joseph's routing call.

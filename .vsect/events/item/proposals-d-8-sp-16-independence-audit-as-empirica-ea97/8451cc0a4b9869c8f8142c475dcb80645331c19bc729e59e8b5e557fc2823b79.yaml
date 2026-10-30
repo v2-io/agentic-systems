@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 8451cc0a4b9869c8f8142c475dcb80645331c19bc729e59e8b5e557fc2823b79
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:proposals-d-8-sp-16-independence-audit-as-empirica-ea97
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:disc-independence-audit
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSALS — Architectural Portfolio › §D. Later — needs investigation-first scoping or upstream maturation
+  source: PROPOSALS.md:212
+own-version: 02bcc4a9c54dab88697263a8864da12de5c5f45832b1d49540b5b71d35e73b2b
+record: items/imported/proposals-d-8-sp-16-independence-audit-as-empirica-ea97.md

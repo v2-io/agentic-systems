@@ -1,0 +1,14 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Registering a PDF for an entry
+
+Imported verbatim (relative links rebased) from `BIBLIOGRAPHY-TODO.md` line 61, section *Or bulk-import from an existing .bib file*. Not yet re-checked against HEAD: `vsect recheck item:bibliography-todo-registering-a-pdf-for-an-entry-4e19 --outcome holds|stale|landed|not-an-item --why …`.
+
+```bash
+relata pdf pearl-2009-causality ~/Downloads/causality.pdf \
+  --source "publisher-page-url-or-description" --by joseph
+```
+
+This copies the PDF into `$RELATA_PDFS_DIR/pearl-2009-causality.pdf`, computes sha256, extracts the embedded PDF title via `pdfinfo`, and adds an item to the entry's `pdfs:` list. The PDF lives outside the relata git repo (see §11.10 in `~/src/relata/TODO-ingest.md`); Joseph backs the tree up himself.

@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: c0795247805e9922258c14ca515560748df3bbeb3439593c1adb5db3bbd904f4
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-big-picture-peer-voice-on-the-creative-work-constrai-8fe6
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO-big-picture.md — Surface the Forcing-Bound Spine; Stop Deflating Proven Exclusion Results › Guards (forward rules)
+  source: TODO-big-picture.md:47
+own-version: bb478baedb8d8a42cd177be58165ede7332fe96b55b0c1aa503d643fab8c75e0
+record: items/imported/todo-big-picture-peer-voice-on-the-creative-work-constrai-8fe6.md

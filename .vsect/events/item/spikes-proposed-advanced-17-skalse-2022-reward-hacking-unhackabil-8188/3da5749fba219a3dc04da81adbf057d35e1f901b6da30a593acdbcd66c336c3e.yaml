@@ -1,0 +1,18 @@
+schema: vsect-event/0
+id: 3da5749fba219a3dc04da81adbf057d35e1f901b6da30a593acdbcd66c336c3e
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-advanced-17-skalse-2022-reward-hacking-unhackabil-8188
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:disc-implementation-impossibility
+- segment:disc-value-functional-grounding-floor
+- segment:deriv-reward-channel-learning-no-go
+- segment:form-objective-functional
+source: spikes/PROPOSED-ADVANCED.md:105
+unit: sections

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ff3e5bbb29547904da076459f5e9d7ce71147f14c2285247a317c43b8eef5fc0
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-strategic-calibration-aggregation-l-2-no-0917
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:270
+unit: bullets

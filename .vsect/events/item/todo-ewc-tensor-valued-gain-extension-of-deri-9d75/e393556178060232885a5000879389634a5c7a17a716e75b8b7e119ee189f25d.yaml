@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: e393556178060232885a5000879389634a5c7a17a716e75b8b7e119ee189f25d
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-ewc-tensor-valued-gain-extension-of-deri-9d75
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:deriv-adaptive-gain-dynamics
+source: TODO.md:208
+unit: bullets

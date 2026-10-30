@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: c737d9cd2c783d7318052b9c898ab3f0a2189f5f9d8840dfd661ed1709fb731f
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:practica-findings-regeneration-from-above-94f6
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PRACTICA › Ops › CI/CD
+  source: PRACTICA.md:69
+own-version: e29f787ccf90815b3a11a1ca9fa996e53214e38300e24fce783a7c32a5354509
+record: items/imported/practica-findings-regeneration-from-above-94f6.md

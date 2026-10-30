@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Topology-dependent hallucination propagation (percolation)
+
+Imported verbatim from `spikes/PROPOSED.md` line 51, section *PROPOSED — the spike-proposal index › Tier 2 — exploratory / next-generation*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-topology-dependent-hallucination-propaga-bb0e --outcome holds|stale|landed|not-an-item --why …`.
+
+| 2026-04-25 | Topology-dependent hallucination propagation (percolation) | ADV | Critical edge-reliability / checkpoint-coverage threshold $p_c$ for a hallucinated premise reaching a giant affected component | proposed (gated on #3) | 2026-05-19 | [ADV #9](PROPOSED-ADVANCED.md) |

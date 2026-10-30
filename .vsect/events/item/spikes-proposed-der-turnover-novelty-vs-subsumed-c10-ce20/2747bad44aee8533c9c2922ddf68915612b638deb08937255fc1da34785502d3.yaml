@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 2747bad44aee8533c9c2922ddf68915612b638deb08937255fc1da34785502d3
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-der-turnover-novelty-vs-subsumed-c10-ce20
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:der-turnover-information-recursion
+source: spikes/PROPOSED.md:65
+unit: rows

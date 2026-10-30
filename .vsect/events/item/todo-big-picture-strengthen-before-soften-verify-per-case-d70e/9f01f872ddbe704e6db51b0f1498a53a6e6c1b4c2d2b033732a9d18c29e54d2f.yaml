@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 9f01f872ddbe704e6db51b0f1498a53a6e6c1b4c2d2b033732a9d18c29e54d2f
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-big-picture-strengthen-before-soften-verify-per-case-d70e
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO-big-picture.md — Surface the Forcing-Bound Spine; Stop Deflating Proven Exclusion Results › Guards (forward rules)
+  source: TODO-big-picture.md:45
+own-version: bbd2bc3bf759bc2d5d1d2cb4df8286be42a2fe591fc8b0574fa944eb99b8e646
+record: items/imported/todo-big-picture-strengthen-before-soften-verify-per-case-d70e.md

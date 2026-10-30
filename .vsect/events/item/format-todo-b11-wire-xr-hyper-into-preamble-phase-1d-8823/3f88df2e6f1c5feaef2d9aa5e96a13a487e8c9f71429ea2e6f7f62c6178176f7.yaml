@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 3f88df2e6f1c5feaef2d9aa5e96a13a487e8c9f71429ea2e6f7f62c6178176f7
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:format-todo-b11-wire-xr-hyper-into-preamble-phase-1d-8823
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: FORMAT-TODO.md:158
+unit: checkboxes

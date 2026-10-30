@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 572a5ddb407cbbb49e77d5aa5b5bfb0c41b28994a776a2c9c0cc90fc2304f39d
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:practica-per-role-readme-rework-queued-2026-05-01-1c58
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PRACTICA › Misc
+  source: PRACTICA.md:117
+own-version: 3346adcbe32e46893a19834a61690b14d64eb4931d1382682215388a582677d3
+record: items/imported/practica-per-role-readme-rework-queued-2026-05-01-1c58.md

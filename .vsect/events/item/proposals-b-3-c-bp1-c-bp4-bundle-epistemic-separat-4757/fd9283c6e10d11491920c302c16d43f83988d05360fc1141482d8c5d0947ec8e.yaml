@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: fd9283c6e10d11491920c302c16d43f83988d05360fc1141482d8c5d0947ec8e
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:proposals-b-3-c-bp1-c-bp4-bundle-epistemic-separat-4757
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:deriv-observation-ambiguity-bias-bound
+- segment:result-section-ii-survival
+source: PROPOSALS.md:81
+unit: sections

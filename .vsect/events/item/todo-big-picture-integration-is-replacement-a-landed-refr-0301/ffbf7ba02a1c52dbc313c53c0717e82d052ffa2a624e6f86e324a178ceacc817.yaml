@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: ffbf7ba02a1c52dbc313c53c0717e82d052ffa2a624e6f86e324a178ceacc817
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-big-picture-integration-is-replacement-a-landed-refr-0301
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO-big-picture.md — Surface the Forcing-Bound Spine; Stop Deflating Proven Exclusion Results › Guards (forward rules)
+  source: TODO-big-picture.md:46
+own-version: fdffd6a73b6252faef384d246a7245afb54a2d9a4197e5fb149895a8ea3f93ac
+record: items/imported/todo-big-picture-integration-is-replacement-a-landed-refr-0301.md

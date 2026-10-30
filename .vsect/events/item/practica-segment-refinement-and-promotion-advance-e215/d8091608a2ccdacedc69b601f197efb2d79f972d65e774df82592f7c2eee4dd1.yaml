@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: d8091608a2ccdacedc69b601f197efb2d79f972d65e774df82592f7c2eee4dd1
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:practica-segment-refinement-and-promotion-advance-e215
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PRACTICA › Ops › Processes
+  source: PRACTICA.md:63
+own-version: de022aace94c47dc22b9847586b5c5bf703d146fdd30b9840aff5b8b3dba6c99
+record: items/imported/practica-segment-refinement-and-promotion-advance-e215.md

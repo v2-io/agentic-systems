@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 0aab6b852bae32a5ad824a2c98bd827039d8c609ebd57b66d681a162d5917b3d
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-two-routes-exhausts-adversarial-spike-on-3366
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:disc-value-functional-grounding-floor
+  - segment:disc-constructive-impossibility-posture
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)
+  source: spikes/PROPOSED.md:33
+own-version: 4d573670ee603d30fb5a449f07a4c985301feae7496442163e24b596d2629f1e
+record: items/imported/spikes-proposed-two-routes-exhausts-adversarial-spike-on-3366.md

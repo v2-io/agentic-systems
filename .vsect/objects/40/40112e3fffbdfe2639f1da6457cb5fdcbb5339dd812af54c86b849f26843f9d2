@@ -1,0 +1,21 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Bundle 1 — Framework-face reframe (paper-writing-time)
+
+Imported verbatim (relative links rebased) from `PROPOSALS.md` line 29, section *PROPOSALS — Architectural Portfolio › Cross-cutting view*. Not yet re-checked against HEAD: `vsect recheck item:proposals-bundle-1-framework-face-reframe-paper-wr-96c4 --outcome holds|stale|landed|not-an-item --why …`.
+
+Six remaining proposals converge on a single coordinated reframing pass that would shift AAT's public self-presentation from "integration of four disciplines" to "epistemic architecture with three-part meta-structure plus integrating content." Three independent frontier-model audits (Codex / Gemini / Opus, 2026-04-23) converged on this reframe on different axes; the segment-level infrastructure is already in place (CLAUDE.md §7 landed, OUTLINE.md "Reading AAT" paragraph landed, the three meta-segments `#additive-coordinate-forcing` / `#disc-identifiability-floor` / `#disc-separability-pattern` now live in Part II's opening Meta-Architecture chapter alongside the `#disc-stability-certificate` spine, per the 2026-05-25 Meta-Architecture relocation — M4's home is Part III's opening chapter).
+
+**Bundle members:** SP-7 (epistemic architecture foregrounding) + O-BP1 (sector-persistence template as organizing principle) + O-BP8 (scope lattice) + SP-3 (calibration-laboratory template generalization) + SP-4 (agent-identity from scope to architectural postulate) + SP-8 (dual-edged floor/separability reading). (O-BP10, the projection-contraction slogan, has its own exact-tier home `#result-certificate-existence` — CHANGELOG 2026-05-14 — and is not re-queued.)
+
+**What remains unlanded:** `doc/readme/src/_position-and-lineage.md` still *leads* with "ASF integrates four mature disciplines" and then names the three meta-patterns (README *About* already opens on the adaptive cycle; verified `README.md` lines 10–16). OUTLINE: Part I's Adaptive-Systems intro is still the two-sentence stub the HTML-comments flag; Part III's preface is still dropped by the public build (CHANGELOG 2026-08-22). Still open as originally named: possible new canonical scope-lattice location; `domain-instantiation-template.md` or FORMAT.md section; `#scope-agent-identity` frontmatter `type: scope → postulate`; `#disc-identifiability-floor` + `#disc-separability-pattern` dual-edged editorial touches.
+
+**Total effort:** 2–3 coordinated sessions. Individual pieces are each small; the benefit of coordination is that the reframe reads consistently across README / OUTLINE / CLAUDE / segments rather than drifting between framings.
+
+**Value:** **+9 for framework identity; +10 for paper-writing.** This is the highest-leverage single move available in the portfolio. Joseph-check-in recommended before execution (the organizing axis is architectural and commits the framework's self-presentation for future work).
+
+**Independence:** Bundle-internal: **low** — the remaining six members converge on the same presentation surface (README + OUTLINE preambles + three meta-segments + `#scope-agent-identity` + `#result-sector-persistence-template`); must be done as one coordinated pass rather than parallelized. Bundle-external: **high** — touches mostly framing surfaces; does not conflict with Section I / II / III substantive segment work. Safe to run in parallel with Bundle 2 or with individual §C / §D items.
+
+**Risk:** The Fenchel-Bregman reframe (SP-9) proposes to further reorganize `#additive-coordinate-forcing` into "one geometric object + four axioms converging on it." If SP-9 is executed, the bundle's framing of the meta-segments would need revision. Two resolutions: (a) do the bundle first with the current 1-anchor-plus-3-theorem characterization (stable); (b) scope SP-9 first, decide if it supersedes SP-1's landed framing, then do the bundle. **Recommendation: (a) — don't let the Tier-3 reframe-proposal delay the framework-face work.**

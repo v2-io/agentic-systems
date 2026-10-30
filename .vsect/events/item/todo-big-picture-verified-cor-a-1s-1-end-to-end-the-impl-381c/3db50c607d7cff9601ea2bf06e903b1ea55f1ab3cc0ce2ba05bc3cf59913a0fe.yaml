@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 3db50c607d7cff9601ea2bf06e903b1ea55f1ab3cc0ce2ba05bc3cf59913a0fe
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-big-picture-verified-cor-a-1s-1-end-to-end-the-impl-381c
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:disc-stability-certificate
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO-big-picture.md — Surface the Forcing-Bound Spine; Stop Deflating Proven Exclusion Results › Provenance
+  source: TODO-big-picture.md:59
+own-version: 40e92bfbb21284ccd6324ef6d0445d9ebce71b469cec461cb568c5b3eaf58d37
+record: items/imported/todo-big-picture-verified-cor-a-1s-1-end-to-end-the-impl-381c.md

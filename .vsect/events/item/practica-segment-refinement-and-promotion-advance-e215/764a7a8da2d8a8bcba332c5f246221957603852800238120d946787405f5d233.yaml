@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 764a7a8da2d8a8bcba332c5f246221957603852800238120d946787405f5d233
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:practica-segment-refinement-and-promotion-advance-e215
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: PRACTICA.md:63
+unit: checkboxes

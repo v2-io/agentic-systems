@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: 878a8dfc6fc7c2ab85f4bef9efd7eaac8649687fe1b92c89c25bd6d1e3bbb0f9
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:proposals-d-9-sp-22-operator-family-tier-2-backlog-0b44
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:result-certificate-existence
+- segment:disc-stability-certificate
+- segment:der-directed-separation
+source: PROPOSALS.md:220
+unit: sections

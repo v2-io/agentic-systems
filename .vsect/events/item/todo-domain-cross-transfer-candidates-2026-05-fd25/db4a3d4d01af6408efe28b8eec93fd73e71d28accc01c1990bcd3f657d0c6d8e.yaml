@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: db4a3d4d01af6408efe28b8eec93fd73e71d28accc01c1990bcd3f657d0c6d8e
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-domain-cross-transfer-candidates-2026-05-fd25
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Open theory items (MEDIUM)
+  source: TODO.md:177
+own-version: 1f4fffb53587db3a739e5a5b6aae3c948a0b3b55e7d6102de0261ee1fcc98b03
+record: items/imported/todo-domain-cross-transfer-candidates-2026-05-fd25.md

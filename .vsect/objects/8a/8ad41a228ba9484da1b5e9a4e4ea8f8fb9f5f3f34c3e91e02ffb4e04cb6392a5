@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Design decision Joseph flagged — pick before finishing. Either (1) continue the single established `\AlphAlph` counter across both groups (group 2 → AN, AO, …);
+
+Imported verbatim from `TODO.md` line 489, section *TODO — Miscellaneous & details › 2026-05-17 — scrbook appendix numbering (PARKED mid-fix to focus on self-actuation; pickup-ready)*. Not yet re-checked against HEAD: `vsect recheck item:todo-design-decision-joseph-flagged-pick-befo-2649 --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **Design decision Joseph flagged — pick before finishing.** Either **(1)** continue the single established `\AlphAlph` counter across both groups (group 2 → AN, AO, …); or **(2)** restructure appendices into per-group numbering — e.g. `A.1`–`A.10`, `B.1`–`B.10` (group letter + within-group number, counter resets per `*Appendices*` group). Option (2) also addresses the legibility smell of ~45 flat appendices and would make the second-group collapse moot (per-group reset sidesteps the >26 overflow entirely). Monograph-convention call, not mechanical — Joseph's decision gates the final implementation.

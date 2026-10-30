@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 7bc1b40ab0f68968d88bb10c68361352a83a91b72719df7ade8baff9c399fa24
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-form-consolidation-dynamics-topological-7d39
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:form-consolidation-dynamics
+source: TODO.md:47
+unit: bullets

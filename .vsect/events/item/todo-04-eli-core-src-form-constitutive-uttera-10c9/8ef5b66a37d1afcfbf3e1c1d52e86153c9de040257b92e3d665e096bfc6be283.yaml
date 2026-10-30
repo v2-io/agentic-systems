@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 8ef5b66a37d1afcfbf3e1c1d52e86153c9de040257b92e3d665e096bfc6be283
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-04-eli-core-src-form-constitutive-uttera-10c9
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:353
+unit: bullets

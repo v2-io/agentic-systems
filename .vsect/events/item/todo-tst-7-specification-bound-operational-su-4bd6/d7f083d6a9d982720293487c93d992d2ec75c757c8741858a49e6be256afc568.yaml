@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: d7f083d6a9d982720293487c93d992d2ec75c757c8741858a49e6be256afc568
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-tst-7-specification-bound-operational-su-4bd6
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (c) — TST surgical sweep — open items'
+  source: TODO.md:441
+own-version: 9afe1758d65794d18a210e0bddd2901f9fa7655a4acf2688e6fdaa204729b1e7
+record: items/imported/todo-tst-7-specification-bound-operational-su-4bd6.md

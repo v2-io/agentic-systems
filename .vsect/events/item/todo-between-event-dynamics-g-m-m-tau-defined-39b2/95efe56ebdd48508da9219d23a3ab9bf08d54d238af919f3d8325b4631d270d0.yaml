@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 95efe56ebdd48508da9219d23a3ab9bf08d54d238af919f3d8325b4631d270d0
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-between-event-dynamics-g-m-m-tau-defined-39b2
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:272
+unit: bullets

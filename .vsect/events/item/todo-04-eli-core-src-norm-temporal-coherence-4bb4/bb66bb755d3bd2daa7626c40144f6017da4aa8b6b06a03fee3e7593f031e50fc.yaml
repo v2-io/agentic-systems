@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: bb66bb755d3bd2daa7626c40144f6017da4aa8b6b06a03fee3e7593f031e50fc
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-04-eli-core-src-norm-temporal-coherence-4bb4
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › Segment promotion candidates (exploratory → draft)
+  source: TODO.md:361
+own-version: bc1f516346bddb231d76a989a39f1821ad0f5fb88e8d45ad30e3ea926e3dbf35
+record: items/imported/todo-04-eli-core-src-norm-temporal-coherence-4bb4.md

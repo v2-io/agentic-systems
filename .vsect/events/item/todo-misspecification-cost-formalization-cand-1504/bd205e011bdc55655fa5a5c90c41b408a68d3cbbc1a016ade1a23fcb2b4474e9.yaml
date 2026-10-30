@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: bd205e011bdc55655fa5a5c90c41b408a68d3cbbc1a016ade1a23fcb2b4474e9
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-misspecification-cost-formalization-cand-1504
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:disc-identifiability-floor
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Queued spike work
+  source: TODO.md:187
+own-version: 758c6df47a16a8b42a3fb124e4a1c178370c19da9e8114c24817ac2708039931
+record: items/imported/todo-misspecification-cost-formalization-cand-1504.md

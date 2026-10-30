@@ -1,0 +1,11 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Run-from-ASF note (verified 2026-06-04)
+
+Imported verbatim from `BIBLIOGRAPHY-TODO.md` line 107, section *containing exactly the assembled current volume markdown, then runs:*. Not yet re-checked against HEAD: `vsect recheck item:bibliography-todo-run-from-asf-note-verified-2026-06-04-d8f7 --outcome holds|stale|landed|not-an-item --why …`.
+
+The older relata §11.10 caveat is resolved for installed CLI use. ASF scripts should call the packaged `relata` command directly and pass ASF paths explicitly; no `cd ~/src/relata` workaround is currently required. Build integration should still fail loudly on missing citation keys, because `relata emit` can produce a partial `.bib` for keys it did find.
+
+---

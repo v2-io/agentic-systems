@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: e7d33142ef98a3227dc6502c30ab8e2281b4640b42c427658b35c5d7ddfd5d29
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:practica-readme-v2-pass-per-alan-walton-s-first-h-5b5a
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: PRACTICA.md:122
+unit: checkboxes

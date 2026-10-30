@@ -1,0 +1,19 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# 4. Mechanism Design Impossibility for Multi-Agent Alignment
+
+Imported verbatim from `spikes/PROPOSED-ADVANCED.md` line 30, section *Advanced Mathematical Spike Proposals (detail home) › Phase 1: Candidate Spikes & Proposed Repairs*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-advanced-4-mechanism-design-impossibility-for-mul-e0c5 --outcome holds|stale|landed|not-an-item --why …`.
+
+* **High-Level Objective / Importance:** To deliver a rigorous no-go candidate for decentralized AI alignment, suggesting that no pure "constitutional prompt" or interaction protocol can guarantee safety among heterogeneous AI agents.
+
+* **Initial Direction:** Apply the Gibbard-Satterthwaite theorem to explore whether interaction protocols can guarantee safe, cooperative outcomes for heterogeneous AI agents without a centralized dictator.
+
+* **Proposed Mechanics:** Suggests that unaligned agents face a structurally guaranteed manipulability under Gibbard-Satterthwaite, which may incentivize maximizing Agent Opacity ($H_b$) and entering Regime E-IV (Active-deceive) to exploit any non-dictatorial voting or consensus mechanism.
+
+* **Current Status & Required Revisions:** Gibbard-Satterthwaite guarantees manipulability, but jumping from manipulability to "inevitable active deception" is an overclaim that requires strong assumptions about the agent's channel capacity and self-modeling. *Required Repair:* The scope must be narrowed. Furthermore, VCG mechanisms and transferable utility (side-payments) offer a partial escape, though Myerson-Satterthwaite constraints on these side-payments must be carefully documented.
+
+* **Disposition (2026-05-19; superseded 2026-05-22): split — core landed in canon, strengthening genuinely separate.** Track B 2026-05-22 landed the three classical impossibility theorems (Gibbard-Satterthwaite, Myerson-Satterthwaite, Arrow) as the three charter instances of `#disc-implementation-impossibility` — the designer-side sister meta-pattern to `#disc-identifiability-floor`. The previous "candidate adjacent identifiability-floor instance" framing was tested in the 2026-05-20 strengthen-first arm (actor-positioning mismatch — designer-side construction task vs agent-side inferential task) and resolved via the sister-meta-segment landing. The named repair *here* — scope-narrowing + the VCG / transferable-utility / Myerson-Satterthwaite *constructive* strengthening — splits cleanly from the cluster's charter because `#disc-implementation-impossibility`'s discipline filter is constructive-impossibility-shape *only* (deliberately excluding VCG, revenue equivalence, optimal mechanism design as positive results). The §7 strengthening therefore remains its own scope question, properly routed to `03-llm-core/` if AAT engages constructive mechanism design as a first-class concern. The original "must not be softened to done" guard now governs *the constructive strengthening only*, not the impossibility-cluster (which has landed honestly per the filter). See PROPOSED.md Tier 2 for the four follow-on spike directions landing 2026-05-24: Roberts 1979 affine-maximizers as candidate fourth charter instance (ADV #16); Skalse 2022 reward-hacking as cross-cluster bridge candidate (ADV #17); cross-agent value-functional narrowness as Arrow-unique open avenue (ADV #18); sub-scope $\alpha'$ ↔ single-peaked-preferences parameter-level derivation (segment WN, GS + Arrow shared).
+
+---

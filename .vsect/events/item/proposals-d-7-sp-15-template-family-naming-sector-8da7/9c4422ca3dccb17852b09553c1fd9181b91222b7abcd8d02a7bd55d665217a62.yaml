@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: 9c4422ca3dccb17852b09553c1fd9181b91222b7abcd8d02a7bd55d665217a62
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:proposals-d-7-sp-15-template-family-naming-sector-8da7
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:result-sector-persistence-template
+  - segment:result-contraction-template
+  - segment:result-persistence-condition
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSALS — Architectural Portfolio › §D. Later — needs investigation-first scoping or upstream maturation
+  source: PROPOSALS.md:202
+own-version: 11f950552fe4baac7ed3c1c44c422e28bed37c98153d04a2fa8b5774eb414439
+record: items/imported/proposals-d-7-sp-15-template-family-naming-sector-8da7.md

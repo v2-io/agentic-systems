@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 8572bf05b098560a3b0b1582e2ac094b276d612aa629f490a977c6a1ee9fffc3
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:proposals-d-4-sp-12-commitment-resource-temporal-d-1dea
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:def-strategy-dimension
+  - segment:def-strategy-dag
+  - segment:def-satisfaction-gap
+  - segment:deriv-strategic-composition
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSALS — Architectural Portfolio › §D. Later — needs investigation-first scoping or upstream maturation
+  source: PROPOSALS.md:172
+own-version: 2bcec1e5b9d790953c75433400a43b8a7aa87b7de5e1cadc2dcfd36f50c92e5a
+record: items/imported/proposals-d-4-sp-12-commitment-resource-temporal-d-1dea.md

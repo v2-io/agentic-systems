@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: 864c0ac993a78aad2eb4f6ed2fda96c7df9710facefe282e0da8ed9d85786e86
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:terminology-todo-the-deaths-taxonomy-def-death-as-factor-e267
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:der-captured-objective-dynamics
+- segment:def-mood
+source: TERMINOLOGY-TODO.md:67
+unit: bullets

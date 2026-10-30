@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 2e5047a43441684d86294d7a4bfec930b3b18c98503242c49a0651b79efbe339
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:msc-decision-briefs-2026-07-15-a6-claude-md-as-unreviewed-amplifier-gen-747b
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: Decision briefs — 2026-07-15 (the valve) › Policy calls
+  source: msc/decision-briefs-2026-07-15.md:48
+own-version: c61a6f3d52654999af1d293637217e14fb902ab7a9dd781c1ee89a24aa810c76
+record: items/imported/msc-decision-briefs-2026-07-15-a6-claude-md-as-unreviewed-amplifier-gen-747b.md

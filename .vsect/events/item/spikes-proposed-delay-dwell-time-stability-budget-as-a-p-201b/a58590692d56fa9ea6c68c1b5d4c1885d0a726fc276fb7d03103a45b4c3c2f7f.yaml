@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: a58590692d56fa9ea6c68c1b5d4c1885d0a726fc276fb7d03103a45b4c3c2f7f
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-delay-dwell-time-stability-budget-as-a-p-201b
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:result-persistence-condition
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)
+  source: spikes/PROPOSED.md:38
+own-version: 7af4e326fffd4e0a369944cdb7250afe80c2cdc44e62dee317d2cc5859a507f7
+record: items/imported/spikes-proposed-delay-dwell-time-stability-budget-as-a-p-201b.md

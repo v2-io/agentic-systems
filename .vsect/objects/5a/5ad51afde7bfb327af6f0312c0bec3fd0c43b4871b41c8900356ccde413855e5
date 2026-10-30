@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Roberts 1979 affine-maximizers as candidate 4th charter instance of `#disc-implementation-impossibility`
+
+Imported verbatim from `spikes/PROPOSED.md` line 54, section *PROPOSED — the spike-proposal index › Tier 2 — exploratory / next-generation*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-roberts-1979-affine-maximizers-as-candid-09f9 --outcome holds|stale|landed|not-an-item --why …`.
+
+| 2026-05-24 | Roberts 1979 affine-maximizers as candidate 4th charter instance of `#disc-implementation-impossibility` | ADV | Re-derive Roberts 1979's affine-maximizer characterization against the cluster's discipline filter (constructive-impossibility-shape only); if filter admits, land as `#deriv-affine-maximizers-impossibility`. The natural AAT-side adjacency is to `#form-objective-functional`'s cardinal value content (parallel to the Arrow charter instance's cardinal-preference escape, in the with-transfers regime). Held back from Track B's 2026-05-22 landing to keep the charter narrow at three | proposed | 2026-05-24 | [ADV §Phase-3 #16](PROPOSED-ADVANCED.md) → `#disc-implementation-impossibility` Working Notes (open-before-candidate (b)) |

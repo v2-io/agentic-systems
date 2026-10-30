@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# `#disc-additive-coordinate-forcing` → `#disc-forced-coordinates` (Round-1 consensus; addresses Čencov 4th instance which isn't Cauchy-FE).
+
+Imported verbatim from `TODO.md` line 224, section *TODO — Miscellaneous & details › Naming pipeline — specific deferred items*. Not yet re-checked against HEAD: `vsect recheck item:todo-disc-additive-coordinate-forcing-disc-fo-c1fd --outcome holds|stale|landed|not-an-item --why …`.
+
+- `#disc-additive-coordinate-forcing` → `#disc-forced-coordinates` (Round-1 consensus; addresses Čencov 4th instance which isn't Cauchy-FE).

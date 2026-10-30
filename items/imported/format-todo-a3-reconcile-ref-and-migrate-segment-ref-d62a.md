@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: FORMAT-TODO.md:144
+section: 'FORMAT-TODO.md — Cross-Cutting Conventions: Citations, Cross-Refs, Footnotes, Sidenotes, Margin-Notes › Workstream A — Citation system'
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# A3. Reconcile `ref/` and migrate segment references. With the initial relata-side discovery/import pass done, identify which local PDFs back which discovered en
+
+Imported verbatim (relative links rebased) from `FORMAT-TODO.md` line 144, section *FORMAT-TODO.md — Cross-Cutting Conventions: Citations, Cross-Refs, Footnotes, Sidenotes, Margin-Notes › Workstream A — Citation system*. Not yet re-checked against HEAD: `vsect recheck item:format-todo-a3-reconcile-ref-and-migrate-segment-ref-d62a --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **A3. Reconcile `ref/` and migrate segment references.** With the initial relata-side discovery/import pass done, identify which local PDFs back which discovered entries, then do author-judgment segment migration. Under the decided hybrid discipline, preserve rich context-setting prose where useful but add formal citations for every bibliography-worthy source and stronger locator / verification treatment for load-bearing dependencies.

@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 19193c85cd1b5811f080409a7450b9318a2faeda1d613c62d1a2fb961340fd67
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-advanced-17-skalse-2022-reward-hacking-unhackabil-8188
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:disc-implementation-impossibility
+  - segment:disc-value-functional-grounding-floor
+  - segment:deriv-reward-channel-learning-no-go
+  - segment:form-objective-functional
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 3: Surfaced 2026-05-19 (corpus reconciliation scan)'
+  source: spikes/PROPOSED-ADVANCED.md:105
+own-version: 73f50d09c32e3eb5b051a96b3b22b0e4b723db4b8289edc6ea1df4bea2c4b562
+record: items/imported/spikes-proposed-advanced-17-skalse-2022-reward-hacking-unhackabil-8188.md

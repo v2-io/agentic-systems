@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: 0f5972c6c143ad075ca17469a546142f14bc1adbdf540570e7b52f236e1e323f
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-detailed-tempo-accounting-for-canonical-e0c9
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:der-tempo-composition
+- segment:der-class-coercion-via-wrapping
+source: TODO.md:192
+unit: bullets

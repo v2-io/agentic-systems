@@ -1,0 +1,16 @@
+---
+kind: item
+provenance: imported
+source: spikes/PROPOSED.md:53
+section: PROPOSED — the spike-proposal index › Tier 2 — exploratory / next-generation
+owner: ""
+opened: 2026-10-30T20:17:42Z
+opened-by: Claude Fable 5.1
+concerns: [segment:form-composition-closure]
+---
+
+# Categorical-cybernetics first fit-check (Capucci 2022 + Smithe 2024)
+
+Imported verbatim (relative links rebased) from `spikes/PROPOSED.md` line 53, section *PROPOSED — the spike-proposal index › Tier 2 — exploratory / next-generation*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-categorical-cybernetics-first-fit-check-3158 --outcome holds|stale|landed|not-an-item --why …`.
+
+| 2026-05-22 | Categorical-cybernetics first fit-check (Capucci 2022 + Smithe 2024) | ADV | First of a 3-5-spike sequence — *fit-check only*: does the parametrised-optic / selection-function framework actually align cleanly with AAT's existing composition machinery, or do they pull in incompatible directions? Specifically: does `#form-composition-closure` admit a parametrised-optic formulation? Honest scope: exploratory; recognition-tier landing is easy, substantive integration requires the spike sequence | proposed | 2026-05-22 | [ADV §Phase-3 #15](../../spikes/PROPOSED-ADVANCED.md) → `#form-composition-closure` Working Notes |

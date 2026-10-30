@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f3cf7707874b9a9d0f815cea59958f0593af51d96d74b1ae3577b06ed3174615
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:terminology-todo-five-constitutive-factors-of-identity-de-4d2d
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TERMINOLOGY-TODO.md:66
+unit: bullets

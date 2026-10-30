@@ -1,0 +1,26 @@
+---
+kind: item
+provenance: imported
+source: BIBLIOGRAPHY-TODO.md:171
+section: 'containing exactly the assembled current volume markdown, then runs: › Handoff log'
+owner: ""
+opened: 2026-10-30T20:17:42Z
+opened-by: Claude Fable 5.1
+---
+
+# 2026-05-20 — relata-side discovery sweep launched; later completed
+
+Imported verbatim (relative links rebased) from `BIBLIOGRAPHY-TODO.md` line 171, section *containing exactly the assembled current volume markdown, then runs: › Handoff log*. Not yet re-checked against HEAD: `vsect recheck item:bibliography-todo-2026-05-20-relata-side-discovery-sweep-l-489d --outcome holds|stale|landed|not-an-item --why …`.
+
+
+Joseph corrected an earlier draft of this file (which assumed `ref/INDEX.md` was the existing bibliography). Per his framing: *"There is **no** de-facto bibliography. There's an old index that got created. You'll actually have to explore the project at depth, probably using an agent, to surface more."*
+
+So instead of importing from a single curated source, a relata-side Explore agent was dispatched 2026-05-20 to sweep the entire ASF tree (all four volumes' segments, the four `ref/` prose notes + INDEX.md + the three Undermind reports' References sections, `doc/`, `terminology/`, `audits/`, `spikes/`, `msc/`, `mono/`, the top-level tracking docs, commit messages, and the `ref/` PDF filenames) and produce a structured inventory of every external scholarly work referenced anywhere — deduplicated across the multiple naming forms (bracketed cite-codes, inline prose, formal LaTeX, bibliography listings, PDF filenames), with provenance per work.
+
+That inventory becomes the input to the actual relata-side bulk-import pass — done as a single coherent commit on the relata side, with `source:` provenance per entry noting its discovery origin (which ASF file(s) referenced it). Re-runnable / idempotent: future discovery sweeps add new entries without disturbing existing ones.
+
+*Status updated 2026-06-04:* the later relata-side `TODO-ingest.md` §16.16 records the full 20-catalog batch sweep as complete, with the corpus at 1926 valid entries at that checkpoint and 97 PDFs registered. A local ASF-cwd check on 2026-06-04 shows the installed `relata` CLI now sees 2038 entries. Final relata commit SHA still belongs in relata's own tracker if needed; ASF's actionable state is now reconciliation and citation-discipline migration.
+
+---
+
+*This file is the ASF-side counterpart to `~/src/relata/TODO-ingest.md`'s §11 + §16 decision/session logs. Updates here as ASF citation discipline evolves; updates there as relata-side capability evolves; the two together are the joint plan.*

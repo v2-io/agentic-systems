@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 64642a121b74c7e34a24ff9ae296190e404913ea034c9f7cafd1a027b463d33e
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-spike-kl-to-state-distance-template-extr-4083
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › 2026-05-12 (late) — Spike audit triage (99 spike files surveyed via 3 parallel agents)
+  source: TODO.md:473
+own-version: 1a2cafc22d17815a273fd821b88a7912e38069dc322d83ac81b8689859a9c47d
+record: items/imported/todo-spike-kl-to-state-distance-template-extr-4083.md

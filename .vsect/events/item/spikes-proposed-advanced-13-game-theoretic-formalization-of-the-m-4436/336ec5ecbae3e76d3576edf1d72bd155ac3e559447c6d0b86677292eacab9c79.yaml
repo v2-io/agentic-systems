@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 336ec5ecbae3e76d3576edf1d72bd155ac3e559447c6d0b86677292eacab9c79
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-advanced-13-game-theoretic-formalization-of-the-m-4436
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:disc-adversarial-coupling-pressure
+source: spikes/PROPOSED-ADVANCED.md:78
+unit: sections

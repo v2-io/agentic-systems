@@ -1,0 +1,18 @@
+schema: vsect-event/0
+id: 252f970df563e7e7eed925bce9c8462518a53a5106646e29ee528319605c6581
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-def-auxilia-hierarchy-c2-realization-ove-564e
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:def-auxilia-hierarchy
+- segment:der-class-coercion-via-wrapping
+- segment:disc-w1-structural-bound-boundary
+- segment:der-logogenic-as-wrapping
+source: TODO.md:39
+unit: bullets

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: c16af63fd87058c7b72ca5aabdb441a6136607b5fb70152aeb522bb860fea7fb
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-quantum-causal-dags-for-logogenic-superp-2aa6
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: spikes/PROPOSED.md:52
+unit: rows

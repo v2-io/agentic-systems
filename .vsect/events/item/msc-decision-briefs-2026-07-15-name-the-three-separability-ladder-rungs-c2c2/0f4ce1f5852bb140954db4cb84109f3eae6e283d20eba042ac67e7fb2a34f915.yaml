@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0f4ce1f5852bb140954db4cb84109f3eae6e283d20eba042ac67e7fb2a34f915
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:msc-decision-briefs-2026-07-15-name-the-three-separability-ladder-rungs-c2c2
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: msc/decision-briefs-2026-07-15.md:101
+unit: sections

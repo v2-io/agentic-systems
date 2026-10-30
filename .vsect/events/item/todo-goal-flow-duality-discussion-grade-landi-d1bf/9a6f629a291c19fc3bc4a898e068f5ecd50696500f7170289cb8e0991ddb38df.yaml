@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 9a6f629a291c19fc3bc4a898e068f5ecd50696500f7170289cb8e0991ddb38df
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-goal-flow-duality-discussion-grade-landi-d1bf
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:disc-w1-structural-bound-boundary
+source: TODO.md:40
+unit: bullets

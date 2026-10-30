@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: a6b391a8551614c33b01862e9978cbd3212bdb8c9b77b6305d838288d8ff93d6
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-mood-layer-prospective-mood-arc-released-9d91
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:def-mood
+  - segment:der-mood-timescale
+  - segment:der-captured-objective-dynamics
+  - segment:disc-strategic-self-coupling
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Open theory items (MEDIUM)
+  source: TODO.md:156
+own-version: c8bb754704dd7dff3ed71f70492899313586f73eb5ddca638c85dc2937098dad
+record: items/imported/todo-mood-layer-prospective-mood-arc-released-9d91.md

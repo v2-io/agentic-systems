@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 3eced800757cefd01b2653d48ea74f541e6cd5271323ce2643f9ddcc6e2e9011
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:integration-cleanup-todo-asf-side-identification-of-the-23-publis-6849
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: INTEGRATION-CLEANUP-TODO.md › The work (open items) › G3. Citation/bibliography discipline — remaining ASF-side tails
+  source: INTEGRATION-CLEANUP-TODO.md:62
+own-version: 39c8c7ea6732d701b68c4d6a2c116024b57095d9df4c19a2b230ba834f5ca9b2
+record: items/imported/integration-cleanup-todo-asf-side-identification-of-the-23-publis-6849.md

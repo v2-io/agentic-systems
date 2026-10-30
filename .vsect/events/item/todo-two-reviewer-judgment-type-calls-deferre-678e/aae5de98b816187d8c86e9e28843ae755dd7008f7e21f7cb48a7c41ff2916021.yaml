@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: aae5de98b816187d8c86e9e28843ae755dd7008f7e21f7cb48a7c41ff2916021
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-two-reviewer-judgment-type-calls-deferre-678e
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:der-agent-opacity
+- segment:scope-observation-ambiguity-modulation
+source: TODO.md:233
+unit: bullets

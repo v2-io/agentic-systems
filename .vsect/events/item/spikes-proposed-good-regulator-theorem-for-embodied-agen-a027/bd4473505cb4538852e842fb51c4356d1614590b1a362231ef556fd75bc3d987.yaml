@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: bd4473505cb4538852e842fb51c4356d1614590b1a362231ef556fd75bc3d987
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-good-regulator-theorem-for-embodied-agen-a027
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:der-directed-separation
+  - segment:disc-identifiability-floor
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)
+  source: spikes/PROPOSED.md:37
+own-version: a742523e77c81673d5be3d9deb071d55d4fa29eb44f8cbf083ec0cf53b509de1
+record: items/imported/spikes-proposed-good-regulator-theorem-for-embodied-agen-a027.md

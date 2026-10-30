@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f64558be84ccde66a5fa87c1013a9e6f641839d820023c1b823bb9c0eaaa5847
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-big-picture-contribution-state-plainly-new-exact-sta-742e
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO-big-picture.md:33
+unit: bullets

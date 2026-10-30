@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 95bf542a4c1d9e52199b78bb4f3cc7b83802047933801aaec36f4c79a02f1d82
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-prior-art-positioning-synthesis-active-i-9d9c
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:243
+unit: bullets

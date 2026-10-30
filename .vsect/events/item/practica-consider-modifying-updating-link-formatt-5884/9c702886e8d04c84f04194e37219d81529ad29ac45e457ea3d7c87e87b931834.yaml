@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 9c702886e8d04c84f04194e37219d81529ad29ac45e457ea3d7c87e87b931834
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:practica-consider-modifying-updating-link-formatt-5884
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PRACTICA › Misc
+  source: PRACTICA.md:119
+own-version: a63639a05117b9afba1c80325218a4065e942d472d31cc16e4ff6bfdd9556e98
+record: items/imported/practica-consider-modifying-updating-link-formatt-5884.md

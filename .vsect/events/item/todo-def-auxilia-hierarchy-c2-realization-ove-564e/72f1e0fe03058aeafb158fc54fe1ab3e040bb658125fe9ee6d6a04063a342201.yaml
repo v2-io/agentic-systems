@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 72f1e0fe03058aeafb158fc54fe1ab3e040bb658125fe9ee6d6a04063a342201
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-def-auxilia-hierarchy-c2-realization-ove-564e
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:def-auxilia-hierarchy
+  - segment:der-class-coercion-via-wrapping
+  - segment:disc-w1-structural-bound-boundary
+  - segment:der-logogenic-as-wrapping
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Strengthen-first candidates from the 2026-05-30/31 gold-lift sweep
+  source: TODO.md:39
+own-version: 5d538dc0f4bc21594d7e8f98dde64a9571ec7dc923718b31a2c8c8c4b9fab91a
+record: items/imported/todo-def-auxilia-hierarchy-c2-realization-ove-564e.md

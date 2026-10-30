@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 234aeccfab835f12a3224c9811b625c9ad94673a8f0e20a07fdc6258504067d7
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-transient-dependency-amplification-spike-441c
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Open theory items (MEDIUM)
+  source: TODO.md:163
+own-version: 7ef7828759f1c65da6fb85f62249387e51dd5ef6a8898ea273b6ef476d7dc36b
+record: items/imported/todo-transient-dependency-amplification-spike-441c.md

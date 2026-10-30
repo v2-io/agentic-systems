@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 167d8c0fb6f82d11da3dd8dc3a235355b1fb4a50f2d35abe40ea02d6b6464eec
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:msc-decision-briefs-2026-07-15-repo-weight-untrack-archive-162m-garamon-6bb4
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: msc/decision-briefs-2026-07-15.md:21
+unit: sections

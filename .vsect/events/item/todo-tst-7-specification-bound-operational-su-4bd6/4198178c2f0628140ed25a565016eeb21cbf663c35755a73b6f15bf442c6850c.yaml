@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4198178c2f0628140ed25a565016eeb21cbf663c35755a73b6f15bf442c6850c
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-tst-7-specification-bound-operational-su-4bd6
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:441
+unit: bullets

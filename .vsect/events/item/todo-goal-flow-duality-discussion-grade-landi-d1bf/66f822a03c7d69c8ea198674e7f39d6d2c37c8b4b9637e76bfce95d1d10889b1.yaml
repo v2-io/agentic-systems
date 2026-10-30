@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 66f822a03c7d69c8ea198674e7f39d6d2c37c8b4b9637e76bfce95d1d10889b1
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-goal-flow-duality-discussion-grade-landi-d1bf
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:disc-w1-structural-bound-boundary
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Strengthen-first candidates from the 2026-05-30/31 gold-lift sweep
+  source: TODO.md:40
+own-version: d8eef1367ec6f8e5e77692e98ea9a2513ab053c59247f66ecb0e5e65ee8876eb
+record: items/imported/todo-goal-flow-duality-discussion-grade-landi-d1bf.md

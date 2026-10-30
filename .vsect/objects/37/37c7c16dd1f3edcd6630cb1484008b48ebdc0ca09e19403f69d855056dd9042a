@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Update / Refresh Lexicon (manually or automated depending on earlier)
+
+Imported verbatim from `PRACTICA.md` line 110, section *PRACTICA › Names & Lexicon › Lexicon*. Not yet re-checked against HEAD: `vsect recheck item:practica-update-refresh-lexicon-manually-or-autom-c8b8 --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] Update / Refresh Lexicon (manually or automated depending on earlier)

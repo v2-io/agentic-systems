@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Working notes scanning
+
+Imported verbatim (relative links rebased) from `PRACTICA.md` line 56, section *PRACTICA › Ops › Processes*. Not yet re-checked against HEAD: `vsect recheck item:practica-working-notes-scanning-3b73 --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] Working notes scanning

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: bb31c131056f0e3923a86945c5c993b58a809a3071bed1ad1920981f8fe081ae
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-code-quality-bistability-2d-dynamical-fo-0dc9
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:der-code-quality-as-observation-infrastructure
+source: spikes/PROPOSED.md:69
+unit: rows

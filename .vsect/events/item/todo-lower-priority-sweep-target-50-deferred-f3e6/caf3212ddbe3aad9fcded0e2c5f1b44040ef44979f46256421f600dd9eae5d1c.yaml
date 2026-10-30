@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: caf3212ddbe3aad9fcded0e2c5f1b44040ef44979f46256421f600dd9eae5d1c
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-lower-priority-sweep-target-50-deferred-f3e6
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › Audit-integration deferrals
+  source: TODO.md:385
+own-version: 12ad77228504645677722906fced9dd6b4902757273f2b4121fa6d8c6134424b
+record: items/imported/todo-lower-priority-sweep-target-50-deferred-f3e6.md

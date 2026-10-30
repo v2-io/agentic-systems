@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 884e1fa5fb61b49ad06856e96aa8971291293cbb877d9e89ee2cf05d4e05b96b
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-transient-dependency-amplification-logog-5fe5
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: spikes/PROPOSED.md:47
+unit: rows

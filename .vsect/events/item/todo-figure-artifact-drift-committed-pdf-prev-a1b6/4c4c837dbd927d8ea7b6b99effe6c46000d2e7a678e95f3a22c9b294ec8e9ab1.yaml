@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4c4c837dbd927d8ea7b6b99effe6c46000d2e7a678e95f3a22c9b294ec8e9ab1
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-figure-artifact-drift-committed-pdf-prev-a1b6
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:246
+unit: bullets

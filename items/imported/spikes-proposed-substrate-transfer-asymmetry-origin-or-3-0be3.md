@@ -1,0 +1,16 @@
+---
+kind: item
+provenance: imported
+source: spikes/PROPOSED.md:26
+section: PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)
+owner: ""
+opened: 2026-10-30T20:17:42Z
+opened-by: Claude Fable 5.1
+concerns: [segment:hyp-substrate-transfer-asymmetry]
+---
+
+# Substrate-transfer-asymmetry origin (or 3-way no-go)
+
+Imported verbatim (relative links rebased) from `spikes/PROPOSED.md` line 26, section *PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-substrate-transfer-asymmetry-origin-or-3-0be3 --outcome holds|stale|landed|not-an-item --why …`.
+
+| 2026-05-19 | Substrate-transfer-asymmetry origin (or 3-way no-go) | seg:hyp-substrate-transfer-asymmetry | Discriminate A (M3/Čencov coordinate-forcing) / B (decompression-cost asymmetry) / C ($(\kappa,\mathcal A)$ channel-collapse) for the observed frontier→local $S_{\text{id}}$ asymmetry, or a deeper no-go; lifts a `discussion-grade` hypothesis to `derived` | proposed | 2026-05-19 | [ADV §Phase-3 #11](../../spikes/PROPOSED-ADVANCED.md) → WN of `04-eli-core/src/hyp-substrate-transfer-asymmetry.md` |

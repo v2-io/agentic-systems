@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# No process for draining WN follow-ups (gap Joseph named). A forward-pointer WN item has no defined route from "noted in a Working Note" to "actually picked up";
+
+Imported verbatim from `INTEGRATION-CLEANUP-TODO.md` line 30, section *INTEGRATION-CLEANUP-TODO.md › Working-Note discipline — open remainders*. Not yet re-checked against HEAD: `vsect recheck item:integration-cleanup-todo-no-process-for-draining-wn-follow-ups-ga-c20a --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **No process for draining WN follow-ups (gap Joseph named).** A forward-pointer WN item has no defined route from "noted in a Working Note" to "actually picked up"; it can sit indefinitely with the WN as its sole record of obligation. **Proposed (2026-05-31 coherence pass, not yet adopted):** a WN future-work item is *routed to a real tracker* (TODO / PROPOSALS / PRACTICA / the audit cycle / `spikes/PROPOSED.md`) at the time it is written, and the WN then holds a *pointer* to that tracked obligation, never the sole obligation; plus a periodic WN-hygiene pass folded into existing tracker-touches. Full proposal: [`msc/wn-discipline-coherence-pass-2026-05-31.md`](msc/wn-discipline-coherence-pass-2026-05-31.md).

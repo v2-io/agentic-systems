@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 982b3dcdb3d9ca07a723b9bd8c3761b4916b8840a86d18db342934c5ea75351f
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-04-eli-core-src-obs-axiom-genesis-md-axi-0fff
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › Segment promotion candidates (exploratory → draft)
+  source: TODO.md:352
+own-version: 2d0977ee480519ce07d46fcfd7012e5980b951fad1e136fe9c344a5b1e73ef2a
+record: items/imported/todo-04-eli-core-src-obs-axiom-genesis-md-axi-0fff.md

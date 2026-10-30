@@ -38,6 +38,15 @@ kinds:
     find:
       - "questions/*.md"
     note: An open item about the work, with a closer.
+  item:
+    grain: record
+    find:
+      - "items/*.md"
+      - "items/imported/*.md"
+    note: >-
+      Work owed, with an owner, closed by the commit that did it. Under items/imported/ it is a
+      tracker's line carried verbatim and not yet re-checked against HEAD: the tracker's label,
+      not the store's, until `vsect recheck` clears it.
 edges:
   depends:
     in_basis: true

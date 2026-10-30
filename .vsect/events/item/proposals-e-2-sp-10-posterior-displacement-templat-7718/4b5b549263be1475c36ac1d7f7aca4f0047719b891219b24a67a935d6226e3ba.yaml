@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 4b5b549263be1475c36ac1d7f7aca4f0047719b891219b24a67a935d6226e3ba
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:proposals-e-2-sp-10-posterior-displacement-templat-7718
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:deriv-variational-sector-condition
+  - segment:deriv-observation-ambiguity-bias-bound
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSALS — Architectural Portfolio › §E. Wait — explicitly gated
+  source: PROPOSALS.md:238
+own-version: e052e61701313d50f75c824c6829db57e5f3e32c2f3a3c00c19d7feee2682981
+record: items/imported/proposals-e-2-sp-10-posterior-displacement-templat-7718.md

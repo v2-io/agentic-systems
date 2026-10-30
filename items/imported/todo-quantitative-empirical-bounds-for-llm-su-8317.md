@@ -1,0 +1,16 @@
+---
+kind: item
+provenance: imported
+source: TODO.md:193
+section: TODO — Miscellaneous & details › Queued spike work
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+concerns: [segment:der-class-coercion-via-wrapping]
+---
+
+# Quantitative empirical bounds for LLM-substrate wrapping (deferred from class-coercion cycle 2026-05-09) — empirical $\kappa_{W_1}$ measurement protocols on rea
+
+Imported verbatim (relative links rebased) from `TODO.md` line 193, section *TODO — Miscellaneous & details › Queued spike work*. Not yet re-checked against HEAD: `vsect recheck item:todo-quantitative-empirical-bounds-for-llm-su-8317 --outcome holds|stale|landed|not-an-item --why …`.
+
+- **Quantitative empirical bounds for LLM-substrate wrapping** (deferred from class-coercion cycle 2026-05-09) — empirical $\kappa_{W_1}$ measurement protocols on real LLMs. The bound $\kappa_{W_1} \le I(A(q_M); G_W \mid q_M)$ from `#der-class-coercion-via-wrapping` is computable in principle by sampling responses under multiple goal-conditioning histories; specific empirical instantiation depends on the model and the wrapper design. Natural follow-on if downstream applications need the bound at numerical precision.

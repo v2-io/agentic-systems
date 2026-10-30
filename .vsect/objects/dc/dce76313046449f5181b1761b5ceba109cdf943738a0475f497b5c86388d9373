@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Mean-field-game limit for population dynamics
+
+Imported verbatim from `spikes/PROPOSED.md` line 50, section *PROPOSED — the spike-proposal index › Tier 2 — exploratory / next-generation*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-mean-field-game-limit-for-population-dyn-c257 --outcome holds|stale|landed|not-an-item --why …`.
+
+| 2026-04-25 | Mean-field-game limit for population dynamics | ADV | $N\to\infty$ AAT agents via MFG; Fokker-Planck-Kolmogorov ⊗ HJB for population $M_t$ density (Lasry-Lions; Huang-Malhamé-Caines) | proposed | 2026-05-19 | [ADV #7](PROPOSED-ADVANCED.md) |

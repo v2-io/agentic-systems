@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 34db05db59dbfa8e126585d19f29eb06de8c97d82314456502f81cf6553cbff2
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:practica-todo-todo-md-72ce
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PRACTICA › ⭐Theory
+  source: PRACTICA.md:9
+own-version: 69f125f19cab92c72f065c1c2bdd99ac7d818d94e4a4c8c7f44e297318db5d2b
+record: items/imported/practica-todo-todo-md-72ce.md

@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: fb9269f65d3571a16a414d65ab88e32952d9738f4c478187334fa0dff413d4cd
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-bin-lint-readme-deferred-j-15-slug-exist-832e
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › README v2 pass (queued from 2026-04-27 first-human-feedback cycle) › Deferrals from 2026-04-26 doc-pipeline cycle (`msc/judgment-calls-readme-cycle-2026-04-26.md`)
+  source: TODO.md:120
+own-version: 0f5c0e7d7964bb93decddd02b149660b535edfc241acf7d24fe85c2d1f6173a7
+record: items/imported/todo-bin-lint-readme-deferred-j-15-slug-exist-832e.md

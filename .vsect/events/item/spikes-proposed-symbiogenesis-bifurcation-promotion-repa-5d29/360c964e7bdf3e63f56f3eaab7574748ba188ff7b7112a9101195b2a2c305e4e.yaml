@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: 360c964e7bdf3e63f56f3eaab7574748ba188ff7b7112a9101195b2a2c305e4e
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-symbiogenesis-bifurcation-promotion-repa-5d29
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:hyp-symbiogenic-composition
+- segment:def-shared-intent
+source: spikes/PROPOSED.md:30
+unit: rows

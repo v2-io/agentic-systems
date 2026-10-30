@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: a1297beb5688f47713a77d67591068f69a216f5550c2f40423fc2fc93c172d2d
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:bibliography-todo-w-2-reconcile-ref-pdfs-against-the-disco-76a2
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: BIBLIOGRAPHY-TODO.md:125
+unit: sections

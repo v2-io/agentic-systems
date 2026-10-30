@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: b2b43234b01e0574e074f9512b51773960eaa9a10915de0ab321b02a33d1a6cc
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-04-eli-core-src-obs-axiom-genesis-md-axi-0fff
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:352
+unit: bullets

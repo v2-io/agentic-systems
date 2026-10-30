@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 48a2dd33efdb4b2df6bf0bee217981813048398da1b602fc0234ab44b8acd030
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:terminology-todo-practica-md-practica-md-current-naming-c-7b93
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TERMINOLOGY-TODO.md:102
+unit: bullets

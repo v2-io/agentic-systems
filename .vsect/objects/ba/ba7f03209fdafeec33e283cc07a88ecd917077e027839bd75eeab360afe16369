@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# [`PRACTICA.md`](PRACTICA.md) §"🌟 Current naming conventions refactor" — Strategic pipeline. Items 9 (final decisions on 13) → 10 (execute renaming surgery) → 11
+
+Imported verbatim from `TERMINOLOGY-TODO.md` line 102, section *TERMINOLOGY-TODO › How this file relates to other naming-cycle files*. Not yet re-checked against HEAD: `vsect recheck item:terminology-todo-practica-md-practica-md-current-naming-c-7b93 --outcome holds|stale|landed|not-an-item --why …`.
+
+- [`PRACTICA.md`](PRACTICA.md) §"🌟 Current naming conventions refactor" — **Strategic pipeline.** Items 9 (final decisions on 13) → 10 (execute renaming surgery) → 11 (land canonicalize commitments) name the phase this file operationalizes.

@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Joseph review new README outline & partials available
+
+Imported verbatim from `PRACTICA.md` line 116, section *PRACTICA › Misc*. Not yet re-checked against HEAD: `vsect recheck item:practica-joseph-review-new-readme-outline-partial-9722 --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] Joseph review new README outline & partials available

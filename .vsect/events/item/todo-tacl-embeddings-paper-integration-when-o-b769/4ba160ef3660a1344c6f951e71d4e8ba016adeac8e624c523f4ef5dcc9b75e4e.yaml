@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4ba160ef3660a1344c6f951e71d4e8ba016adeac8e624c523f4ef5dcc9b75e4e
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-tacl-embeddings-paper-integration-when-o-b769
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:393
+unit: bullets

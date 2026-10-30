@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 948cd26ae3e36dabe982e3b839859908c735212373a9ab4587dd81ac3874592e
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-spike-update-operator-sector-tractable-l-e7a3
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Reserved / owned elsewhere (cross-ref — discoverable here, owned there)
+  source: spikes/PROPOSED.md:81
+own-version: 1e7ac9d4ce3969fa6e12e0c73c71465588ffc75c571db8927064f9f0fe87f0e7
+record: items/imported/spikes-proposed-spike-update-operator-sector-tractable-l-e7a3.md

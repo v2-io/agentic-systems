@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 760f412b86c499db157888989fe38f89ea90f01dd8fbfb08902f640e1eb89cfd
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:proposals-b-1-framework-face-reframe-bundle-see-cr-d410
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: PROPOSALS.md:69
+unit: sections

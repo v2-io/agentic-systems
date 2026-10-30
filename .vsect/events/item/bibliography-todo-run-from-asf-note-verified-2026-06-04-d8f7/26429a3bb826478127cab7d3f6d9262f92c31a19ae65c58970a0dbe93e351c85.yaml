@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 26429a3bb826478127cab7d3f6d9262f92c31a19ae65c58970a0dbe93e351c85
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:bibliography-todo-run-from-asf-note-verified-2026-06-04-d8f7
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: BIBLIOGRAPHY-TODO.md:107
+unit: sections

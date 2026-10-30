@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 7e9a359c2b862156b9c2f01d4381bf364b2190587a1db52babd50fd127315cdb
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-obs-self-model-from-recursion-in-03-llm-ed6b
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › New segment candidates (not yet in OUTLINE)
+  source: TODO.md:368
+own-version: 4a4b6736998b85ec558cd5d009d1b3875a133c460504b3708030634774ee7e35
+record: items/imported/todo-obs-self-model-from-recursion-in-03-llm-ed6b.md

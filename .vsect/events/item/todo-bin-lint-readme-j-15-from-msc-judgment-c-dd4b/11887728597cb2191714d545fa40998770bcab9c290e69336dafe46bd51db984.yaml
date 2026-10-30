@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 11887728597cb2191714d545fa40998770bcab9c290e69336dafe46bd51db984
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-bin-lint-readme-j-15-from-msc-judgment-c-dd4b
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Documentation queued
+  source: TODO.md:244
+own-version: bb17dd526dbc6080a08be42a72198bccfae3d351e942343c5c330bff8b13ee6c
+record: items/imported/todo-bin-lint-readme-j-15-from-msc-judgment-c-dd4b.md

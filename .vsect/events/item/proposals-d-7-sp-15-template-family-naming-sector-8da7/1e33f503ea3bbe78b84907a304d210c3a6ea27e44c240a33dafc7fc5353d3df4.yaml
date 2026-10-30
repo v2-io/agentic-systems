@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: 1e33f503ea3bbe78b84907a304d210c3a6ea27e44c240a33dafc7fc5353d3df4
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:proposals-d-7-sp-15-template-family-naming-sector-8da7
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:result-sector-persistence-template
+- segment:result-contraction-template
+- segment:result-persistence-condition
+source: PROPOSALS.md:202
+unit: sections

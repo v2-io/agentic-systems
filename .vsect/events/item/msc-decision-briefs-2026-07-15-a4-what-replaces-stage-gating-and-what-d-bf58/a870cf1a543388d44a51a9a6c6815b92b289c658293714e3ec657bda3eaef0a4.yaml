@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: a870cf1a543388d44a51a9a6c6815b92b289c658293714e3ec657bda3eaef0a4
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:msc-decision-briefs-2026-07-15-a4-what-replaces-stage-gating-and-what-d-bf58
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: msc/decision-briefs-2026-07-15.md:31
+unit: sections

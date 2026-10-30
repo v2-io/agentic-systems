@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 0516a044d04f7d00b7a35f34631e697d4c84333fbbd2935772ce1b3229ecfd12
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-spike-strategic-self-coupling-p2-p4-appe-3163
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:disc-strategic-self-coupling
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Reserved / owned elsewhere (cross-ref — discoverable here, owned there)
+  source: spikes/PROPOSED.md:83
+own-version: 19bf19390efb311cb913128dd0f0d4d1f96420ac91ccc5f88b194bdd8c925edf
+record: items/imported/spikes-proposed-spike-strategic-self-coupling-p2-p4-appe-3163.md

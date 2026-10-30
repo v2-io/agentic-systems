@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 5fddd9e4f5cda638fd36e9b37ee831bb70df20ba70113d8a1d88d3e9c56c0466
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-ewc-tensor-valued-gain-extension-of-deri-9d75
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:deriv-adaptive-gain-dynamics
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Queued spike work
+  source: TODO.md:208
+own-version: 8f7d2bc87756269d6adc196be19e5956faf3de73b0b7745b8bc843a43b548c0c
+record: items/imported/todo-ewc-tensor-valued-gain-extension-of-deri-9d75.md

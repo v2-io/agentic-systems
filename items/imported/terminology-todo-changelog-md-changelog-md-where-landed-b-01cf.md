@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: TERMINOLOGY-TODO.md:103
+section: TERMINOLOGY-TODO › How this file relates to other naming-cycle files
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# [`CHANGELOG.md`](../../CHANGELOG.md) — Where landed batches go. When items here are committed, the corresponding CHANGELOG entry captures the batch shape and substanc
+
+Imported verbatim (relative links rebased) from `TERMINOLOGY-TODO.md` line 103, section *TERMINOLOGY-TODO › How this file relates to other naming-cycle files*. Not yet re-checked against HEAD: `vsect recheck item:terminology-todo-changelog-md-changelog-md-where-landed-b-01cf --outcome holds|stale|landed|not-an-item --why …`.
+
+- [`CHANGELOG.md`](../../CHANGELOG.md) — **Where landed batches go.** When items here are committed, the corresponding CHANGELOG entry captures the batch shape and substance.

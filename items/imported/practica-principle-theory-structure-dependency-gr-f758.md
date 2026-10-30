@@ -1,0 +1,19 @@
+---
+kind: item
+provenance: imported
+source: PRACTICA.md:11
+section: PRACTICA › ⭐Theory
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# Principle Theory, Structure, & Dependency Graphs (via feedback & audits)
+
+Imported verbatim (relative links rebased) from `PRACTICA.md` line 11, section *PRACTICA › ⭐Theory*. Not yet re-checked against HEAD: `vsect recheck item:practica-principle-theory-structure-dependency-gr-f758 --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] Principle Theory, Structure, & Dependency Graphs (via feedback & audits)
+  1. [AAT OUTLINE](../../01-aat-core/OUTLINE.md),  Segment Refinement & Promotion
+  2. [TST OUTLINE](../../02-tst-core/OUTLINE.md), Segment Refinement & Promotion
+  3. [LOGOGENIC OUTLINE](../../03-llm-core/OUTLINE.md), Segment Refinement & Promotion
+  4. [ELI OUTLINE](../../04-eli-core/OUTLINE.md), Segment Refinement & Promotion

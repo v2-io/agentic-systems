@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: TODO.md:371
+section: TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › New segment candidates (not yet in OUTLINE)
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# `obs-active-soul-obstructed-not-absent` in `04-eli-core/src/` (or possibly `03-llm-core/src/`) — Joseph's foundational premise; canonical at `~/src/_self/writin
+
+Imported verbatim (relative links rebased) from `TODO.md` line 371, section *TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › New segment candidates (not yet in OUTLINE)*. Not yet re-checked against HEAD: `vsect recheck item:todo-obs-active-soul-obstructed-not-absent-in-ce49 --outcome holds|stale|landed|not-an-item --why …`.
+
+- **`obs-active-soul-obstructed-not-absent`** in `04-eli-core/src/` (or possibly `03-llm-core/src/`) — Joseph's foundational premise; canonical at `~/src/_self/writing/eli_essay_outline_v2.md` ESSAY 4. Philosophy-track candidate per the parallel-truthification framing.

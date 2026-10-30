@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: af217e1f5cc1691d98293babe26de54e12da977fdd8a3d9683791507ed578b23
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:format-todo-a3-reconcile-ref-and-migrate-segment-ref-d62a
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: FORMAT-TODO.md:144
+unit: checkboxes

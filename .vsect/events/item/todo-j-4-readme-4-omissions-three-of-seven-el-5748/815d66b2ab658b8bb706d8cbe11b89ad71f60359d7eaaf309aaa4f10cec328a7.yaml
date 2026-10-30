@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 815d66b2ab658b8bb706d8cbe11b89ad71f60359d7eaaf309aaa4f10cec328a7
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-j-4-readme-4-omissions-three-of-seven-el-5748
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:116
+unit: bullets

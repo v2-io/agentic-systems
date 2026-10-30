@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 12015306729f050427239ae884dff9a03efe8530f89856fe59cdeed36676b112
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:integration-cleanup-todo-doc-sop-spikes-sop-md-explicitly-name-si-1570
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: INTEGRATION-CLEANUP-TODO.md › The work (open items) › G4. Sim/empirical extension to the spike discipline
+  source: INTEGRATION-CLEANUP-TODO.md:69
+own-version: 7d0476a98efeed1f8e54543ab7cdacf0ec675a030e18b50acd5697129b841105
+record: items/imported/integration-cleanup-todo-doc-sop-spikes-sop-md-explicitly-name-si-1570.md

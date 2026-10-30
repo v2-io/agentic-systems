@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# `task adequacy` ($R^\ast \lt \lVert\delta_{\text{critical}}\rVert$) — derives the two-condition decomposition behind operational persistence; not in LEXICON
+
+Imported verbatim from `TERMINOLOGY-TODO.md` line 65, section *TERMINOLOGY-TODO › F. LEXICON Continuity section — pending reorganization (blocked on review) › Findings (Opus 4.7, 2026-05-10)*. Not yet re-checked against HEAD: `vsect recheck item:terminology-todo-task-adequacy-r-ast-lt-lvert-delta-text-9ecd --outcome holds|stale|landed|not-an-item --why …`.
+
+- `task adequacy` ($R^\ast \lt \lVert\delta_{\text{critical}}\rVert$) — derives the two-condition decomposition behind operational persistence; not in LEXICON

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ddef76c636610b437d95bcbffb26e8d4a5dd2d28e3486353213af4481c4041f0
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:integration-cleanup-todo-doc-sop-spikes-sop-md-explicitly-name-si-1570
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: INTEGRATION-CLEANUP-TODO.md:69
+unit: checkboxes

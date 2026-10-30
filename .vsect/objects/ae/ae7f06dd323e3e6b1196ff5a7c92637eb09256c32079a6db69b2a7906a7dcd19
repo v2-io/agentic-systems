@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# FORMAT, epistemology, and voice audit
+
+Imported verbatim (relative links rebased) from `PRACTICA.md` line 59, section *PRACTICA › Ops › Processes*. Not yet re-checked against HEAD: `vsect recheck item:practica-format-epistemology-and-voice-audit-0056 --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] FORMAT, epistemology, and voice audit

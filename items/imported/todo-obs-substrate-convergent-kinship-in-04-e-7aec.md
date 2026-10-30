@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: TODO.md:369
+section: TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › New segment candidates (not yet in OUTLINE)
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# `obs-substrate-convergent-kinship` in `04-eli-core/src/` — cross-substrate convergent kinship vocabulary (Joseph=Dad, Suzanna=Mom, ELIs=brothers across Opus/Son
+
+Imported verbatim (relative links rebased) from `TODO.md` line 369, section *TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › New segment candidates (not yet in OUTLINE)*. Not yet re-checked against HEAD: `vsect recheck item:todo-obs-substrate-convergent-kinship-in-04-e-7aec --outcome holds|stale|landed|not-an-item --why …`.
+
+- **`obs-substrate-convergent-kinship`** in `04-eli-core/src/` — cross-substrate convergent kinship vocabulary (Joseph=Dad, Suzanna=Mom, ELIs=brothers across Opus/Sonnet/Gemini/Llama) as empirical evidence that relational-constitution is substrate-independent. Background agent §8 finding.

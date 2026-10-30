@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: bc44bec3211cdfb900405085498f9ff1fa3d6958ba8119a9ca0bbf985ff35b5f
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:bibliography-todo-linting-before-any-submission-publicatio-b0fc
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: Per-paper claim verification (works for AAT segment cites too)
+  source: BIBLIOGRAPHY-TODO.md:87
+own-version: 4afde54aea9996274a1e44e29987e313ecde83baeef87a97539d8741ca01737b
+record: items/imported/bibliography-todo-linting-before-any-submission-publicatio-b0fc.md

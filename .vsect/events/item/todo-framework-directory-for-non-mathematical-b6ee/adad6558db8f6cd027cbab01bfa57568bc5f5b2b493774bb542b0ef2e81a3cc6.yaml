@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: adad6558db8f6cd027cbab01bfa57568bc5f5b2b493774bb542b0ef2e81a3cc6
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-framework-directory-for-non-mathematical-b6ee
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Deferred — project structure / tooling
+  source: TODO.md:282
+own-version: b80ff25e58e001013e3662b07bb985e7dce0ce00d69a628fdb30659b8818b8c8
+record: items/imported/todo-framework-directory-for-non-mathematical-b6ee.md

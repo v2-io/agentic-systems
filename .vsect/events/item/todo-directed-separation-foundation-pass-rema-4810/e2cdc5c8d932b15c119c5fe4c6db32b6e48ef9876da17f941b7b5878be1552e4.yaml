@@ -1,0 +1,27 @@
+schema: vsect-event/0
+id: e2cdc5c8d932b15c119c5fe4c6db32b6e48ef9876da17f941b7b5878be1552e4
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-directed-separation-foundation-pass-rema-4810
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:der-directed-separation
+  - segment:disc-partial-coupling-pathways
+  - segment:der-logogenic-as-wrapping
+  - segment:def-auxilia-hierarchy
+  - segment:der-class-coercion-in-composition
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Strengthen-first candidates from the 2026-05-30/31 gold-lift sweep
+  source: TODO.md:35
+own-version: 0998067701028b1d70f7b442a48d2814e430a4aa4d22489cfdfccf8bfb192dee
+record: items/imported/todo-directed-separation-foundation-pass-rema-4810.md

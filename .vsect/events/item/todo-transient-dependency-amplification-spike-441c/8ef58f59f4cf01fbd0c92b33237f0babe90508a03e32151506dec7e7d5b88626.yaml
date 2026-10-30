@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 8ef58f59f4cf01fbd0c92b33237f0babe90508a03e32151506dec7e7d5b88626
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-transient-dependency-amplification-spike-441c
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:163
+unit: bullets

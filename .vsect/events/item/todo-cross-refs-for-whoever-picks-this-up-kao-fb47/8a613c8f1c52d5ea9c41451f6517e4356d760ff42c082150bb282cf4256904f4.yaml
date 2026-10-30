@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 8a613c8f1c52d5ea9c41451f6517e4356d760ff42c082150bb282cf4256904f4
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-cross-refs-for-whoever-picks-this-up-kao-fb47
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:490
+unit: bullets

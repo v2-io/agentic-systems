@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 1706b9be15b9635abf80f54a7664bccd43f302f71461828c9377b5a00e1910c8
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-adversarial-adaptive-gain-meta-gain-temp-06a0
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:deriv-adaptive-gain-dynamics
+source: spikes/PROPOSED.md:70
+unit: rows

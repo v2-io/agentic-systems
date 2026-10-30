@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: PRACTICA.md:117
+section: PRACTICA › Misc
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# Per-role README rework (queued 2026-05-01) — extend `doc/readme/` pipeline to emit `README.md`, `README-auditor.md`, `README-voter.md`, etc. from one source tre
+
+Imported verbatim (relative links rebased) from `PRACTICA.md` line 117, section *PRACTICA › Misc*. Not yet re-checked against HEAD: `vsect recheck item:practica-per-role-readme-rework-queued-2026-05-01-1c58 --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **Per-role README rework** (queued 2026-05-01) — extend `doc/readme/` pipeline to emit `README.md`, `README-auditor.md`, `README-voter.md`, etc. from one source tree. Migrate instructions content from `doc/de-novo-audit-instructions.md` / `doc/sop/naming.sop/principles.sop.md` / `doc/sop/naming.sop/methodology.sop.md` into role-composable partials. Add auto-generated project-tree partial. Replaces the shelved `tools/role-encounter/` approach. Architecture sketched in [`msc/handoff-2026-05-01.md`](../../msc/handoff-2026-05-01.md).

@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 1f88730878c3e6a493d51c0397d31ad696f93b7a1959dd565e0a744d79004a81
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-detailed-tempo-accounting-for-canonical-e0c9
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:der-tempo-composition
+  - segment:der-class-coercion-via-wrapping
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Queued spike work
+  source: TODO.md:192
+own-version: 5502eb8e37bd87792713f11be572df7cc3a2f4caaae5b9d5ab9de54311f13181
+record: items/imported/todo-detailed-tempo-accounting-for-canonical-e0c9.md

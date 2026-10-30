@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: bc72d60887a910cc26f537d46d1daf8cf2a2f8ae4600da918401bcffe957d5b0
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-tst-4-git-as-intervention-naming-discipl-936c
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:hyp-causal-discovery-from-git
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (c) — TST surgical sweep — open items'
+  source: TODO.md:440
+own-version: 4874a25359c3094d5eab9fc949baca96e7e12f1f591e8fb33c5e3bb4a7d833e3
+record: items/imported/todo-tst-4-git-as-intervention-naming-discipl-936c.md

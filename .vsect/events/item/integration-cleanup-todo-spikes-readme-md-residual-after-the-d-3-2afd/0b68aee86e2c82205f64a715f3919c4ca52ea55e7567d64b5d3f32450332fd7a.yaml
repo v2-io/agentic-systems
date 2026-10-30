@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0b68aee86e2c82205f64a715f3919c4ca52ea55e7567d64b5d3f32450332fd7a
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:integration-cleanup-todo-spikes-readme-md-residual-after-the-d-3-2afd
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: INTEGRATION-CLEANUP-TODO.md:50
+unit: checkboxes

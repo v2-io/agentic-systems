@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 8b50276af9c593bae21594154fff712b0b4232de26e5b413c361a6ef43a5d24b
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-big-picture-w3-per-result-census-gates-remaining-can-7bec
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO-big-picture.md — Surface the Forcing-Bound Spine; Stop Deflating Proven Exclusion Results › Work items
+  source: TODO-big-picture.md:51
+own-version: 6f76008ec54fb396134654fc8dbddc79aa69e2f858ef6152faf2c370f94d874e
+record: items/imported/todo-big-picture-w3-per-result-census-gates-remaining-can-7bec.md

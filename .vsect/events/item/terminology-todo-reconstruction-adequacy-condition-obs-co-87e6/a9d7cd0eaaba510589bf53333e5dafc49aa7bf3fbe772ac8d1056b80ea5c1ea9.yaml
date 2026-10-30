@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: a9d7cd0eaaba510589bf53333e5dafc49aa7bf3fbe772ac8d1056b80ea5c1ea9
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:terminology-todo-reconstruction-adequacy-condition-obs-co-87e6
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TERMINOLOGY-TODO.md:69
+unit: bullets

@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: 05eb9295a0f60c44fd8cf5a08576fd4780f8d03c30b97dc2aa1a5cba9125350a
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-613842-c-iv-idiom-drift-integration-debt-e3af
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:form-composition-closure
+- segment:def-unity-dimensions
+- segment:deriv-strategic-composition
+source: TODO.md:49
+unit: bullets

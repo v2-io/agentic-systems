@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 7f89fec205959a2077b547a2f5a9ff51886b6aaf6ec25547d7a19d018287354e
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:practica-migrate-notation-md-to-the-same-auto-gen-3924
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PRACTICA › Names & Lexicon › NOTATION migration to terminology system
+  source: PRACTICA.md:113
+own-version: 0518a40cee433ce1cc51553f342758677ea69ac5542563ef6d9488a3ae1ee3a1
+record: items/imported/practica-migrate-notation-md-to-the-same-auto-gen-3924.md

@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: b8c9aee00936b5f23ab6b9778f1f2b422711905b67b875fb85ce08980eeb4b8e
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:proposals-b-3-c-bp1-c-bp4-bundle-epistemic-separat-4757
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:deriv-observation-ambiguity-bias-bound
+  - segment:result-section-ii-survival
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSALS — Architectural Portfolio › §B. Ready now — execute in next 1–2 cycles
+  source: PROPOSALS.md:81
+own-version: d4ab4a53a6f472bcede393e30022e08c1095dd2fa41024064f65ed2ba8557282
+record: items/imported/proposals-b-3-c-bp1-c-bp4-bundle-epistemic-separat-4757.md

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0574469de9d6b34d4bf4c65938e518205f301e3ab633f1f9073e2ce905dbcabe
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-loga-2-kappa-text-processing-approx-1-sc-b641
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:453
+unit: bullets

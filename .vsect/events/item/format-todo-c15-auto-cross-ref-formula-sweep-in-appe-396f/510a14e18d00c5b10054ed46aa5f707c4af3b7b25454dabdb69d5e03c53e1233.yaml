@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 510a14e18d00c5b10054ed46aa5f707c4af3b7b25454dabdb69d5e03c53e1233
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:format-todo-c15-auto-cross-ref-formula-sweep-in-appe-396f
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: FORMAT-TODO.md:168
+unit: checkboxes

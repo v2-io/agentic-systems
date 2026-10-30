@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: TODO.md:306
+section: TODO — Miscellaneous & details › Deferred — project structure / tooling › Chapter-discussion slug-prefix discipline + bin/align-slug recognition (queued 2026-05-13)
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# Chapter-opening discussion segments currently use a `-intro` *suffix*: `persistence-and-limits-intro`, `the-cycle-in-motion-intro`, `causal-access-intro`, `stra
+
+Imported verbatim (relative links rebased) from `TODO.md` line 306, section *TODO — Miscellaneous & details › Deferred — project structure / tooling › Chapter-discussion slug-prefix discipline + bin/align-slug recognition (queued 2026-05-13)*. Not yet re-checked against HEAD: `vsect recheck item:todo-chapter-opening-discussion-segments-curr-4a86 --outcome holds|stale|landed|not-an-item --why …`.
+
+- **Chapter-opening discussion segments** currently use a `-intro` *suffix*: `persistence-and-limits-intro`, `the-cycle-in-motion-intro`, `causal-access-intro`, `strategy-structure-intro`, `cooperative-adversarial-intro` (and others). These pre-date the role-prefix discipline established in the 2026-04-24 pilot.

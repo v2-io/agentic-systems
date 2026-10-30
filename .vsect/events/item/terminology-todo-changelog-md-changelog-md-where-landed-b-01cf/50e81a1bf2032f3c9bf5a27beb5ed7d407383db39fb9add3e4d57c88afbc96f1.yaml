@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 50e81a1bf2032f3c9bf5a27beb5ed7d407383db39fb9add3e4d57c88afbc96f1
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:terminology-todo-changelog-md-changelog-md-where-landed-b-01cf
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TERMINOLOGY-TODO.md:103
+unit: bullets

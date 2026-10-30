@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 410e5d9c9a7c9dc8487b00d98cede399fce9b19af82b29ccd9f8f48bcfbbe210
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:practica-pedagogy-initially-needs-vision-plan-1588
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: PRACTICA.md:38
+unit: checkboxes

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 034c3396846080e0d709b1b028fed51fba4e8fc04d3d18b25cb297b3a8749e84
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:msc-decision-briefs-2026-07-15-greek-cycle-vocabulary-earn-each-distinc-c39b
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: msc/decision-briefs-2026-07-15.md:136
+unit: sections

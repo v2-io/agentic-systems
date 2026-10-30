@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 0645fdaa52413df59f38d402e2b2ea46ac082d35635559ed21e28f0599cc4a99
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-sub-scope-alpha-single-peaked-preference-16d5
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:deriv-strategy-proofness-impossibility
+  - segment:deriv-strategic-composition
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Tier 3 — segment-perspective audit-judgments
+  source: spikes/PROPOSED.md:71
+own-version: fb5f413852b755c5263667a261db3eed77a511af198f6bd956d5b241b3e5dc0a
+record: items/imported/spikes-proposed-sub-scope-alpha-single-peaked-preference-16d5.md

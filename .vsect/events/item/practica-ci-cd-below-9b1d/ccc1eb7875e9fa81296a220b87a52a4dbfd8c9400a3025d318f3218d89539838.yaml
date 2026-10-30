@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: ccc1eb7875e9fa81296a220b87a52a4dbfd8c9400a3025d318f3218d89539838
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:practica-ci-cd-below-9b1d
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PRACTICA › Ops › Processes
+  source: PRACTICA.md:64
+own-version: f1920b7c48ad4fa5ea8b41f5dd3da0c76ed504ec7db1d30a8deb938bfce12754
+record: items/imported/practica-ci-cd-below-9b1d.md

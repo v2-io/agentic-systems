@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 93f026a78f44f964c6670ff7ad7f3d25f7c410ef5a0e48be23f0f0bd3eaa9e96
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-competence-world-model-the-converse-of-f-7c20
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:form-agent-model
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)
+  source: spikes/PROPOSED.md:36
+own-version: c3ece571ac5f5a34c943c4671621a472f41a4dadddad6f8bd8bb1e0d68094b57
+record: items/imported/spikes-proposed-competence-world-model-the-converse-of-f-7c20.md

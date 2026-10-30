@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 95a592958e4dff6f321ae9b01b84ffc009e220e9d8a1c154eb95e6d452b1c95f
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:bibliography-todo-w-3-segment-citation-migration-270-vol1-44ce
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: BIBLIOGRAPHY-TODO.md:131
+unit: sections

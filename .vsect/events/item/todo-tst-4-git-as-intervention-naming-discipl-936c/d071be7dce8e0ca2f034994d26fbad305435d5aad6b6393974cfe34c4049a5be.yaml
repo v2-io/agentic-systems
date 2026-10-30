@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: d071be7dce8e0ca2f034994d26fbad305435d5aad6b6393974cfe34c4049a5be
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-tst-4-git-as-intervention-naming-discipl-936c
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:hyp-causal-discovery-from-git
+source: TODO.md:440
+unit: bullets

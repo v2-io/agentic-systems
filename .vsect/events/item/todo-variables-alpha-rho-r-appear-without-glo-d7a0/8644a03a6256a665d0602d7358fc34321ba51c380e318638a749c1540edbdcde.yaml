@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 8644a03a6256a665d0602d7358fc34321ba51c380e318638a749c1540edbdcde
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-variables-alpha-rho-r-appear-without-glo-d7a0
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › README v2 pass (queued from 2026-04-27 first-human-feedback cycle) › Surfaced from Alan's review
+  source: TODO.md:102
+own-version: 0888a11b40aef998bf13bf244e4ae29e25968273d9f8d243726a18fb824e5d0c
+record: items/imported/todo-variables-alpha-rho-r-appear-without-glo-d7a0.md

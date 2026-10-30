@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 63234554a706def9a8e40e6000fe6e5b98b1ff1baa942652669a0a8ad6e141d3
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:format-todo-c18-format-compliance-linter-sweep-phase-1dc9
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: FORMAT-TODO.md:171
+unit: checkboxes

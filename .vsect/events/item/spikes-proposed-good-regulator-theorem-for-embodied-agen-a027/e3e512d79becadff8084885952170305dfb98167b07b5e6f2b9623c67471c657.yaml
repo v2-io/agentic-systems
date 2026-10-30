@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: e3e512d79becadff8084885952170305dfb98167b07b5e6f2b9623c67471c657
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-good-regulator-theorem-for-embodied-agen-a027
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:der-directed-separation
+- segment:disc-identifiability-floor
+source: spikes/PROPOSED.md:37
+unit: rows

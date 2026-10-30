@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: 6f562534173e2beed3faf3743e31756ee649c3b47bbd59fa292d25a06edc994c
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-613842-c-iv-idiom-drift-integration-debt-e3af
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:form-composition-closure
+  - segment:def-unity-dimensions
+  - segment:deriv-strategic-composition
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Strengthen-first candidates from the 2026-05-30/31 gold-lift sweep
+  source: TODO.md:49
+own-version: 32d19100a2b32edeed94801888ece59efde33588d75271cd5d8def3db8ff824d
+record: items/imported/todo-613842-c-iv-idiom-drift-integration-debt-e3af.md

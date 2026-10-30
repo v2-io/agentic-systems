@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: fd021e4f5da11d4b851b09c14fe996b20055e93978fbf9fe710b2959e34e5514
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-track-c-body-re-authoring-lead-with-meth-683d
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Strategic-composition cluster residuals (post-NEXT-UP archival, 2026-05-25)
+  source: TODO.md:60
+own-version: 271353cf46a3e282ddbedfe4a659c28c7c61f44792d24bb0221a6cfeb246dc54
+record: items/imported/todo-track-c-body-re-authoring-lead-with-meth-683d.md

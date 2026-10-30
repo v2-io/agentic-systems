@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 2a3d527415919b49cfdd6f9f516ace6e2bf14589a8bc27e90085eb8de7811311
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:bibliography-todo-querying-3ad9
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'BIBLIOGRAPHY-TODO.md — ASF citation system: discipline, tooling, workstreams › How to use relata, today'
+  source: BIBLIOGRAPHY-TODO.md:36
+own-version: 34d6bdc16e6936529a1b71a9ce7c89f740d8878e1f43142059b3e4fde9179bbd
+record: items/imported/bibliography-todo-querying-3ad9.md

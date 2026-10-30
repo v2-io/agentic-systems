@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 694bccd4c785abd30e95febdb0094335d0566e1742380a37b5e1daef6900edb0
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-bin-lint-readme-j-15-from-msc-judgment-c-dd4b
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:244
+unit: bullets

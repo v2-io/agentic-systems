@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 4e92adeabdde751e1cd4bac7642859542d069529a8699d778392e52dc5a87b9f
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-design-decision-joseph-flagged-pick-befo-2649
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › 2026-05-17 — scrbook appendix numbering (PARKED mid-fix to focus on self-actuation; pickup-ready)
+  source: TODO.md:489
+own-version: 216d4cd15fa4ed44925831275957d9a0100674d8205376dbbc4dc99666bf71dc
+record: items/imported/todo-design-decision-joseph-flagged-pick-befo-2649.md

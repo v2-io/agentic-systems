@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: c01bc190e6614a2e9998cf1f21b0b646b0d604eea61e044fa18d5ccff78b8d9f
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-advanced-7-mean-field-game-limit-for-population-d-61f3
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 2: Next-Generation Spike Proposals'
+  source: spikes/PROPOSED-ADVANCED.md:43
+own-version: 958ed0eb8e09d023c3b8f8439d34c6aeea444d4f51a53d00bd6677d43ca74f40
+record: items/imported/spikes-proposed-advanced-7-mean-field-game-limit-for-population-d-61f3.md

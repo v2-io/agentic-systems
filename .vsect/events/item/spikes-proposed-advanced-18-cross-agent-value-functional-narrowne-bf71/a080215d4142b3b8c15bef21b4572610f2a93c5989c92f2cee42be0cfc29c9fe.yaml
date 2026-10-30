@@ -1,0 +1,18 @@
+schema: vsect-event/0
+id: a080215d4142b3b8c15bef21b4572610f2a93c5989c92f2cee42be0cfc29c9fe
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-advanced-18-cross-agent-value-functional-narrowne-bf71
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:deriv-social-welfare-aggregation-impossibility
+- segment:form-objective-functional
+- segment:disc-value-functional-grounding-floor
+- segment:disc-implementation-impossibility
+source: spikes/PROPOSED-ADVANCED.md:110
+unit: sections

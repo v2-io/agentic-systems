@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 1a99e4a1e3fd4813599d72c6b69572bb9bb4583632b14f152428608c7cc3b268
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:integration-cleanup-todo-memory-layer-narrowing-deferred-to-the-g-23bb
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: INTEGRATION-CLEANUP-TODO.md:28
+unit: checkboxes

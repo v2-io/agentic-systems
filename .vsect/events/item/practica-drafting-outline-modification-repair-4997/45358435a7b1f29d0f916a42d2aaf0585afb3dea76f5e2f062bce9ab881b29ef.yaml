@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 45358435a7b1f29d0f916a42d2aaf0585afb3dea76f5e2f062bce9ab881b29ef
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:practica-drafting-outline-modification-repair-4997
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: PRACTICA.md:62
+unit: checkboxes

@@ -1,0 +1,11 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# W-2. Reconcile `ref/` PDFs against the discovered bibliography
+
+Imported verbatim (relative links rebased) from `BIBLIOGRAPHY-TODO.md` line 125, section *containing exactly the assembled current volume markdown, then runs: › Workstreams ASF needs to own*. Not yet re-checked against HEAD: `vsect recheck item:bibliography-todo-w-2-reconcile-ref-pdfs-against-the-disco-76a2 --outcome holds|stale|landed|not-an-item --why …`.
+
+The relata-side discovery/import sweep has surfaced the initial corpus; the local `ref/` PDF set and the entries surfaced by discovery now need reconciliation: which PDFs back which discovered entries (filename + sha256 + pdfinfo title cross-check); which PDFs are orphans (locally-held but not referenced by any segment / tracking doc — decide retain-as-reading-material or remove); which discovered entries are PDF-less (have a citation but no local copy — decide acquire or leave bib-only). Per-item judgment; this is now a reconciliation/verification pass, not a wait-for-discovery pass.
+
+**Probably 1–2 hours of judgment.**

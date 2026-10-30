@@ -1,0 +1,20 @@
+---
+kind: item
+provenance: imported
+source: spikes/PROPOSED-ADVANCED.md:16
+section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 1: Candidate Spikes & Proposed Repairs'
+owner: ""
+opened: 2026-10-30T20:17:42Z
+opened-by: Claude Fable 5.1
+concerns: [segment:def-shared-intent, segment:hyp-symbiogenic-composition]
+---
+
+# 2. The Phase Transition of Symbiogenesis (Bifurcation Theory of Mergers)
+
+Imported verbatim (relative links rebased) from `spikes/PROPOSED-ADVANCED.md` line 16, section *Advanced Mathematical Spike Proposals (detail home) › Phase 1: Candidate Spikes & Proposed Repairs*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-advanced-2-the-phase-transition-of-symbiogenesis-59b7 --outcome holds|stale|landed|not-an-item --why …`.
+
+*   **High-Level Objective / Importance:** To provide a pure physics proof for the origin of hierarchical organizations, firms, and eukaryotic cells, proving that hierarchy is not a historical accident but a mathematical necessity in hostile environments.
+*   **Initial Direction:** Use bifurcation theory to mathematically model *when* and *why* multi-agent systems might collapse into hierarchical composites (symbiogenesis).
+*   **Proposed Mechanics:** Explores how environmental volatility ($\rho_{\text{env}}$) might cause the stable equilibrium of a loosely coupled multi-agent system and its unstable failure threshold to annihilate each other in a Saddle-Node Bifurcation. Beyond this critical volatility limit, autonomous teams destabilize, leaving symbiogenesis as a primary transition path.
+*   **Current Status & Required Revisions:** The initial proof assumed a non-linear coordination penalty ($k\delta^2$) out of thin air to force the bifurcation. *Required Repair:* This should be reframed as *one possible high-mismatch coordination-cost transition*, complementing the already-landed smooth weighted-Lyapunov autonomy reduction. The quadratic term must be rigorously derived from mutual information loss in `#def-shared-intent` before any formal promotion.
+*   **Disposition (2026-05-19): partially landed; the promotion repair is genuinely open.** The concept is in canon as `#hyp-symbiogenic-composition` (`type: hypothesis`, `status: robust-qualitative`) plus the smooth weighted-Lyapunov autonomy reduction the entry references. The *specific* repair — the quadratic coordination term rigorously derived from MI loss in `#def-shared-intent`, promoting the saddle-node bifurcation to a formal result — has **not** been done; it remains an open candidate at exactly that scope.

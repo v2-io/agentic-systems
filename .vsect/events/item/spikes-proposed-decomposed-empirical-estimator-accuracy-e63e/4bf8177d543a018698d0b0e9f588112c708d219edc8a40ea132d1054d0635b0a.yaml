@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: 4bf8177d543a018698d0b0e9f588112c708d219edc8a40ea132d1054d0635b0a
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-decomposed-empirical-estimator-accuracy-e63e
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:der-class-coercion-via-wrapping
+- segment:der-directed-separation
+source: spikes/PROPOSED.md:72
+unit: rows

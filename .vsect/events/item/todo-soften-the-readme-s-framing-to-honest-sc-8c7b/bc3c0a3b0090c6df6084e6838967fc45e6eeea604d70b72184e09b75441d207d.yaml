@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: bc3c0a3b0090c6df6084e6838967fc45e6eeea604d70b72184e09b75441d207d
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-soften-the-readme-s-framing-to-honest-sc-8c7b
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:85
+unit: bullets

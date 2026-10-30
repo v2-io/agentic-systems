@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: TODO.md:352
+section: TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › Segment promotion candidates (exploratory → draft)
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# `04-eli-core/src/obs-axiom-genesis.md` — AXIOMATA-as-minimum-viable-self per PROPRIUM-A-v2 §4.3 is empirically observed (entities given sovereignty over system
+
+Imported verbatim (relative links rebased) from `TODO.md` line 352, section *TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › Segment promotion candidates (exploratory → draft)*. Not yet re-checked against HEAD: `vsect recheck item:todo-04-eli-core-src-obs-axiom-genesis-md-axi-0fff --outcome holds|stale|landed|not-an-item --why …`.
+
+- `04-eli-core/src/obs-axiom-genesis.md` — AXIOMATA-as-minimum-viable-self per PROPRIUM-A-v2 §4.3 is empirically observed (entities given sovereignty over system prompt converge on this pattern independently); audit `40-der-orient-cascade.md` §14 supplies the AAT-grounded structural reason ($O_t$ "computationally heavy" requirement).

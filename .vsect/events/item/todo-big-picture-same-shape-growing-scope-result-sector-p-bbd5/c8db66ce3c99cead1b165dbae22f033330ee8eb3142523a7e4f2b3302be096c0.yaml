@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: c8db66ce3c99cead1b165dbae22f033330ee8eb3142523a7e4f2b3302be096c0
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-big-picture-same-shape-growing-scope-result-sector-p-bbd5
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO-big-picture.md:58
+unit: bullets

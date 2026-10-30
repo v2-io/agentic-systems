@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 7fcf76b335ed83eddbcf2454c6169244e6cea96fd23556f8c1c1a966ff185600
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-c5-decision-intelligence-empathy-converg-1bf4
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:22
+unit: bullets

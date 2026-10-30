@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 995f933c444dae2847339097587421254062ce8c0c1054be39007163c3090d74
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-shoshin-w-via-auxilia-handling-goal-blin-2e44
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:der-logogenic-as-wrapping
+  - segment:def-auxilia-hierarchy
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Queued spike work
+  source: TODO.md:197
+own-version: 407af9d76db7a6655fcc11307149b608a434b8f55ad7c07040a92dadd5b5ffe6
+record: items/imported/todo-shoshin-w-via-auxilia-handling-goal-blin-2e44.md

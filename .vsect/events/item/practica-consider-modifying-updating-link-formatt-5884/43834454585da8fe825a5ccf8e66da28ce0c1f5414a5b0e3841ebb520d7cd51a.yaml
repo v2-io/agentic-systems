@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 43834454585da8fe825a5ccf8e66da28ce0c1f5414a5b0e3841ebb520d7cd51a
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:practica-consider-modifying-updating-link-formatt-5884
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: PRACTICA.md:119
+unit: checkboxes

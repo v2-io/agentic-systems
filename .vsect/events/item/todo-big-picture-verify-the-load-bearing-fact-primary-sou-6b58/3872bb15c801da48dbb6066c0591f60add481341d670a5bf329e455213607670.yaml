@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 3872bb15c801da48dbb6066c0591f60add481341d670a5bf329e455213607670
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-big-picture-verify-the-load-bearing-fact-primary-sou-6b58
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO-big-picture.md:44
+unit: bullets

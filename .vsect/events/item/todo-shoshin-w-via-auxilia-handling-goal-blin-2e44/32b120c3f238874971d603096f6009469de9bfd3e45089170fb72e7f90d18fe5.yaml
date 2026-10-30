@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: 32b120c3f238874971d603096f6009469de9bfd3e45089170fb72e7f90d18fe5
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-shoshin-w-via-auxilia-handling-goal-blin-2e44
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:der-logogenic-as-wrapping
+- segment:def-auxilia-hierarchy
+source: TODO.md:197
+unit: bullets

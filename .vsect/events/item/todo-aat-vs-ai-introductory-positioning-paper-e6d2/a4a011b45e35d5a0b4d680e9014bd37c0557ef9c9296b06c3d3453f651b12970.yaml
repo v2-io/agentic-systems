@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: a4a011b45e35d5a0b4d680e9014bd37c0557ef9c9296b06c3d3453f651b12970
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-aat-vs-ai-introductory-positioning-paper-e6d2
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:242
+unit: bullets

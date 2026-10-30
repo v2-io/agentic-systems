@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 7b96c49c90e9ca03400e60ae82fa66738cf130c35fb3e5eecd63f213685afc3f
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-mechanism-design-impossibility-vcg-cardi-63f8
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:disc-implementation-impossibility
+  - segment:disc-identifiability-floor
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)
+  source: spikes/PROPOSED.md:29
+own-version: 8ec2f710fd93ceb4c6540fadae4a1a878487810cc61a96a9b8cb02c2bf47f5dc
+record: items/imported/spikes-proposed-mechanism-design-impossibility-vcg-cardi-63f8.md

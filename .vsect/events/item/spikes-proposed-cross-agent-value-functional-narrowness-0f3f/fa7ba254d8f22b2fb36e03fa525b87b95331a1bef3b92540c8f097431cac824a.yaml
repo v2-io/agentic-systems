@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: fa7ba254d8f22b2fb36e03fa525b87b95331a1bef3b92540c8f097431cac824a
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-cross-agent-value-functional-narrowness-0f3f
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:form-objective-functional
+  - segment:deriv-social-welfare-aggregation-impossibility
+  - segment:disc-value-functional-grounding-floor
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Tier 2 — exploratory / next-generation
+  source: spikes/PROPOSED.md:56
+own-version: 79a9764f5dd14176b66c103facfd189126cf6519f75e84d240bb925a1ad6ff41
+record: items/imported/spikes-proposed-cross-agent-value-functional-narrowness-0f3f.md

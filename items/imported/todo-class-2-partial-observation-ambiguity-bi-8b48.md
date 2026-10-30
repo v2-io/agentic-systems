@@ -1,0 +1,16 @@
+---
+kind: item
+provenance: imported
+source: TODO.md:161
+section: TODO — Miscellaneous & details › Open theory items (MEDIUM)
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+concerns: [segment:deriv-observation-ambiguity-bias-bound]
+---
+
+# Class 2 (Partial) observation-ambiguity bias-bound (surfaced 2026-05-09 by GUC rename audit). `#deriv-observation-ambiguity-bias-bound` derives the bound for th
+
+Imported verbatim (relative links rebased) from `TODO.md` line 161, section *TODO — Miscellaneous & details › Open theory items (MEDIUM)*. Not yet re-checked against HEAD: `vsect recheck item:todo-class-2-partial-observation-ambiguity-bi-8b48 --outcome holds|stale|landed|not-an-item --why …`.
+
+- **Class 2 (Partial) observation-ambiguity bias-bound** (surfaced 2026-05-09 by GUC rename audit). `#deriv-observation-ambiguity-bias-bound` derives the bound for the Class 3 (Coupled) extreme at $\kappa_{\text{processing}} \to 1$. The analogous bound for Class 2 (Partial) agents at $\kappa_{\text{processing}} \in (0, 1)$ is open. Specializing either Track 1 (transport-inequality under LSI + Lipschitz-posterior) or Track 2 (Fisher-Rao under (PI) + Čencov + small-$I$) to the bounded-coupling regime is the natural first move. Whether the Class 2 case admits a clean closed-form bound or requires architectural specifics (per-stage modularity decomposition) is unknown. Detail flagged in segment Working Notes; this entry is the strategic-portfolio cross-reference.

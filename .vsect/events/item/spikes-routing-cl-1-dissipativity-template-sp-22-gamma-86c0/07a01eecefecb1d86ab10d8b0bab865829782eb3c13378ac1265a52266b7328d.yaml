@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 07a01eecefecb1d86ab10d8b0bab865829782eb3c13378ac1265a52266b7328d
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-routing-cl-1-dissipativity-template-sp-22-gamma-86c0
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: Spike-routing — live tracker (started 2026-05-17) › Coupled landing clusters (parent-owned; reconcile recommendations into these)
+  source: spikes/ROUTING.md:37
+own-version: f71bb29445ae4c237cd9d96a0584072cf968f4c2ce98be2926cb22752208c199
+record: items/imported/spikes-routing-cl-1-dissipativity-template-sp-22-gamma-86c0.md

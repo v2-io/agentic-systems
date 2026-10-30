@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 0bc796a8cfe01a44504e5a6c26e43c368d218cb5ed10cb946db1835efc9eb077
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:practica-lexicon-regeneration-potentially-see-bel-65dd
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PRACTICA › Ops › CI/CD
+  source: PRACTICA.md:71
+own-version: 953f07284f59bc46d60a56ab760a15941595ad325dbcc3db124689c898a12084
+record: items/imported/practica-lexicon-regeneration-potentially-see-bel-65dd.md

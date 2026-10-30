@@ -1,0 +1,16 @@
+---
+kind: item
+provenance: imported
+source: TODO.md:498
+section: 'TODO — Miscellaneous & details › 2026-07-03 — Audit 731548 (Fable de-novo, Part I + impl-*) routing: remaining routed items'
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+concerns: [segment:hyp-auftragstaktik-principle, segment:hyp-communication-gain, segment:result-unity-closure-mapping, segment:obs-gated-tempo-advantage, segment:result-adversarial-exponent-regimes, segment:result-contraction-template, segment:deriv-causal-ib-exploration, segment:deriv-causal-ib-lmi, segment:result-coupled-diagnostic-framework, segment:der-tempo-composition, segment:deriv-persistence-cost, segment:der-bounded-objective-as-sanity-criterion, segment:der-captured-objective-dynamics]
+---
+
+# Source-segment defects surfaced by the 2026-08-22 impl batch (each needs a whole-read + regression pickaxe before editing; detail in CHANGELOG 2026-08-22): `#hy
+
+Imported verbatim (relative links rebased) from `TODO.md` line 498, section *TODO — Miscellaneous & details › 2026-07-03 — Audit 731548 (Fable de-novo, Part I + impl-) routing: remaining routed items*. Not yet re-checked against HEAD: `vsect recheck item:todo-source-segment-defects-surfaced-by-the-2-4f4e --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **Source-segment defects surfaced by the 2026-08-22 impl batch** (each needs a whole-read + regression pickaxe before editing; detail in CHANGELOG 2026-08-22): `#hyp-auftragstaktik-principle` (F162/F165); `#hyp-communication-gain` (known-adversary gap; refuted distributed-tempo sum in its trust-transitivity WN); `#result-unity-closure-mapping` WN route count (F151); `#obs-gated-tempo-advantage` + `#result-adversarial-exponent-regimes` leads (one-sided noise-injection prescription from a both-channels simulation); `#result-contraction-template` (scope the strategic-half claim to the shared-truth state variable; (CC-feedback) *iff* vs sufficient); `#deriv-causal-ib-exploration` ("physically cannot stop exploring"); `#deriv-causal-ib-lmi` intro caveat + the $\tfrac12\operatorname{Tr}(\mathcal I_o P_{ss})$ trace-identity strengthening (candidate spike); `#result-coupled-diagnostic-framework` (causally-disciplined re-scope not propagated); `#der-tempo-composition` ($C_{\text{coord}}$ denominator inconsistency); `#deriv-persistence-cost` ($C \geq \mathcal T/2$ per-dimension reading); `#der-bounded-objective-as-sanity-criterion` (cite `#der-captured-objective-dynamics`); `impl-closed-loop-interiority` (03) depending on a Vol-4 segment.

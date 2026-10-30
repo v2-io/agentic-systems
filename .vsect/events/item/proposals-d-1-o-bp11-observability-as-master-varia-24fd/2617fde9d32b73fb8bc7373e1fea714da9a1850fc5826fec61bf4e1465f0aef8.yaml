@@ -1,0 +1,18 @@
+schema: vsect-event/0
+id: 2617fde9d32b73fb8bc7373e1fea714da9a1850fc5826fec61bf4e1465f0aef8
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:proposals-d-1-o-bp11-observability-as-master-varia-24fd
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:der-agent-opacity
+- segment:der-interaction-channel-classification
+- segment:disc-identifiability-floor
+- segment:disc-separability-pattern
+source: PROPOSALS.md:137
+unit: sections

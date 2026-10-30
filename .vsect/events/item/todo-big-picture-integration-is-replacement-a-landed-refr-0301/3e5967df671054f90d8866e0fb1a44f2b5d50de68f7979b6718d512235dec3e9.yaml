@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 3e5967df671054f90d8866e0fb1a44f2b5d50de68f7979b6718d512235dec3e9
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-big-picture-integration-is-replacement-a-landed-refr-0301
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO-big-picture.md:46
+unit: bullets

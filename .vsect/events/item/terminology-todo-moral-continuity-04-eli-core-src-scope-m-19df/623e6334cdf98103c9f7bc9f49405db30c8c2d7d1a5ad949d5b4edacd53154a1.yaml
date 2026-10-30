@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 623e6334cdf98103c9f7bc9f49405db30c8c2d7d1a5ad949d5b4edacd53154a1
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:terminology-todo-moral-continuity-04-eli-core-src-scope-m-19df
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TERMINOLOGY-TODO.md:52
+unit: bullets

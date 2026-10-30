@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 7e360c11f82dfbef451c3ade0393b8bc10317049ec3fc15cc4f90055d5821671
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-topology-dependent-hallucination-propaga-bb0e
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Tier 2 — exploratory / next-generation
+  source: spikes/PROPOSED.md:51
+own-version: 7d0a36347d51e83c148f209d29671277f5586b74aa954853633449c42d136c3a
+record: items/imported/spikes-proposed-topology-dependent-hallucination-propaga-bb0e.md

@@ -1,0 +1,16 @@
+---
+kind: item
+provenance: imported
+source: spikes/PROPOSED.md:27
+section: PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)
+owner: ""
+opened: 2026-10-30T20:17:42Z
+opened-by: Claude Fable 5.1
+concerns: [segment:deriv-strategic-composition, segment:der-adversarial-destabilization]
+---
+
+# Effects-spiral eigenvalue condition — concrete agent classes
+
+Imported verbatim (relative links rebased) from `spikes/PROPOSED.md` line 27, section *PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-effects-spiral-eigenvalue-condition-conc-89ba --outcome holds|stale|landed|not-an-item --why …`.
+
+| 2026-05-19 | Effects-spiral eigenvalue condition — concrete agent classes | seg:deriv-strategic-composition | Derive the joint-Jacobian spectral-abscissa instability condition in closed form for two Beta-Bernoulli agents on a shared DAG and two coupled Kalman agents; upgrades `#der-adversarial-destabilization`'s Effects-Spiral from discussion-grade to `derived` | proposed | 2026-05-19 | [ADV §Phase-3 #12](../../spikes/PROPOSED-ADVANCED.md) → `deriv-strategic-composition:195` |

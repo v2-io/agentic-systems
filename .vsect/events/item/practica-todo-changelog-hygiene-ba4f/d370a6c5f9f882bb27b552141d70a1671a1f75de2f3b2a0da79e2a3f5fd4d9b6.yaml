@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: d370a6c5f9f882bb27b552141d70a1671a1f75de2f3b2a0da79e2a3f5fd4d9b6
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:practica-todo-changelog-hygiene-ba4f
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: PRACTICA.md:72
+unit: checkboxes

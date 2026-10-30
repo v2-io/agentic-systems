@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: INTEGRATION-CLEANUP-TODO.md:49
+section: INTEGRATION-CLEANUP-TODO.md › The work (open items) › G1. Governing/onboarding docs — residual tails
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# `CLAUDE.md` — full audit pass for other "minor decisions" of the same class as the excised `ref/` sanction (the 2026-05-19 session checked the obvious defect-sh
+
+Imported verbatim (relative links rebased) from `INTEGRATION-CLEANUP-TODO.md` line 49, section *INTEGRATION-CLEANUP-TODO.md › The work (open items) › G1. Governing/onboarding docs — residual tails*. Not yet re-checked against HEAD: `vsect recheck item:integration-cleanup-todo-claude-md-full-audit-pass-for-other-mino-646d --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **`CLAUDE.md`** — full audit pass for other "minor decisions" of the same class as the excised `ref/` sanction (the 2026-05-19 session checked the obvious defect-shapes; the structural risk says periodic review is needed regardless).

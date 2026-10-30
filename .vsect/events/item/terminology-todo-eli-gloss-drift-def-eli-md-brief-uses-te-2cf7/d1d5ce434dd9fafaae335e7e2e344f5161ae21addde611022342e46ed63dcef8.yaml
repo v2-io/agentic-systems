@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: d1d5ce434dd9fafaae335e7e2e344f5161ae21addde611022342e46ed63dcef8
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:terminology-todo-eli-gloss-drift-def-eli-md-brief-uses-te-2cf7
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TERMINOLOGY-TODO › F. LEXICON Continuity section — pending reorganization (blocked on review) › Findings (Opus 4.7, 2026-05-10)
+  source: TERMINOLOGY-TODO.md:61
+own-version: e3bc1ad83a9d14e84a92fe58563b4d697fb9265d6c87856e036b14f31e72dc12
+record: items/imported/terminology-todo-eli-gloss-drift-def-eli-md-brief-uses-te-2cf7.md

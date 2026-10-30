@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: a1ccde33c1db7c8316355ce4d392b50819bc252e1ba7b47bb86b57662f782c7a
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-f28-rho-sigma-operationalization-rho-sig-9829
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:162
+unit: bullets

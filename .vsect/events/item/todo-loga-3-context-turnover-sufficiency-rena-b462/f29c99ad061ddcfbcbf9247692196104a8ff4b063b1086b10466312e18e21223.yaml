@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: f29c99ad061ddcfbcbf9247692196104a8ff4b063b1086b10466312e18e21223
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-loga-3-context-turnover-sufficiency-rena-b462
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (d) — LOGA / ELI stub filling and content cycle — open items'
+  source: TODO.md:454
+own-version: 6363401f71d81699022df0b9f105afd61f83a53f36db9a86ceba282f087f8613
+record: items/imported/todo-loga-3-context-turnover-sufficiency-rena-b462.md

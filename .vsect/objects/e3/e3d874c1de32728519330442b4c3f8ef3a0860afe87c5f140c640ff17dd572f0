@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# 🌟 Parts III + IV iteration (active 2026-05-01) — multi-section lattice landed (03.I primitive / 03.II scaffolded / 03.III closed-loop); 04 renamed to ELI; 14 ne
+
+Imported verbatim (relative links rebased) from `PRACTICA.md` line 16, section *PRACTICA › ⭐Theory*. Not yet re-checked against HEAD: `vsect recheck item:practica-parts-iii-iv-iteration-active-2026-05-01-fd7d --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] 🌟 **Parts III + IV iteration (active 2026-05-01)** — multi-section lattice landed (03.I primitive / 03.II scaffolded / 03.III closed-loop); 04 renamed to ELI; 14 new structural stubs; 24/75 Gemini-auditor notes integrated; embeddings paper cross-pollinated. Lingering items + pickup guidance in [TODO.md § "Parts III + IV active work"](../../TODO.md#-parts-iii--iv-active-work-encounter-cycle-2026-05-01); cycle working dir at [`msc/logogenic-encounter-2026-05-01/`](../../msc/logogenic-encounter-2026-05-01).

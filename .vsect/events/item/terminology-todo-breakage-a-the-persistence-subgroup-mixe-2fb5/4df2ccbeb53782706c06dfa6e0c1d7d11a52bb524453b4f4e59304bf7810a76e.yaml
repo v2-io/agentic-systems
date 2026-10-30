@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 4df2ccbeb53782706c06dfa6e0c1d7d11a52bb524453b4f4e59304bf7810a76e
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:terminology-todo-breakage-a-the-persistence-subgroup-mixe-2fb5
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TERMINOLOGY-TODO › F. LEXICON Continuity section — pending reorganization (blocked on review) › Findings (Opus 4.7, 2026-05-10)
+  source: TERMINOLOGY-TODO.md:45
+own-version: f90f10de0d02f2446414f966ebc7181cbc797198d948094847441e9275c854a9
+record: items/imported/terminology-todo-breakage-a-the-persistence-subgroup-mixe-2fb5.md

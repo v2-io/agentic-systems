@@ -1,0 +1,28 @@
+---
+kind: item
+provenance: imported
+source: PROPOSALS.md:137
+section: PROPOSALS — Architectural Portfolio › §D. Later — needs investigation-first scoping or upstream maturation
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+concerns: [segment:der-agent-opacity, segment:der-interaction-channel-classification, segment:disc-identifiability-floor, segment:disc-separability-pattern]
+---
+
+# D.1 O-BP11 — Observability as master variable across the theory
+
+Imported verbatim (relative links rebased) from `PROPOSALS.md` line 137, section *PROPOSALS — Architectural Portfolio › §D. Later — needs investigation-first scoping or upstream maturation*. Not yet re-checked against HEAD: `vsect recheck item:proposals-d-1-o-bp11-observability-as-master-varia-24fd --outcome holds|stale|landed|not-an-item --why …`.
+
+
+**Portfolio has expanded underneath this proposal.** Three segments post-dating the original entry (`#der-agent-opacity`, `#der-interaction-channel-classification`, `#disc-identifiability-floor` Instances 1/2/3) added observability structure the original instance-list doesn't anticipate. Re-catalog before any landing decision.
+
+**Scoping spike** (2–3 sessions) is now genuinely investigation-first: is observability one variable (with forward $U_o$ / backward $H_b$ / cross-agent $\kappa$ / composite $\Lambda$ as projections of one object) or four structurally distinct variables sharing a name? Current segment evidence is genuinely ambiguous. This is the kind of question CLAUDE.md §"Strengthen before softening; attempt the improbable" explicitly calls for — a falsification test of the unification before segment-level work.
+
+**Three outcomes the spike could produce:**
+- **Unification validated (+9):** AAT re-centers on observability-as-master-variable; new organizing dimension. Execution 6–8 sessions for full re-centering.
+- **Cataloging only (+4):** meta-segment listing observability axes without forcing unification; like `#disc-separability-pattern`'s posture-cataloging. Execution 2–3 sessions.
+- **Genuinely partitioned (−2):** attempting unification would introduce presentational complexity without payoff; retire the proposal.
+
+Point estimate **+6** reflecting branching-outcome distribution. **Primary aspect: unification. Secondary: fundamentality, reach.**
+
+**Independence: low (if executed in full).** Full execution (Unification-validated branch) touches ≥10 segments across Sections I / II / III. Would conflict with almost any other in-flight segment-editing proposal. Scoping spike itself is **high-independence** — self-contained catalog work against existing segments; can run in parallel with any other active proposal. Decision to execute the full reorganization should follow scoping outcome and a quiesced-portfolio window.

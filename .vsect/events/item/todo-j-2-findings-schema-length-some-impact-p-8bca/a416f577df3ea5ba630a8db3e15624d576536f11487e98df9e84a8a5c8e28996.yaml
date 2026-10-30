@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: a416f577df3ea5ba630a8db3e15624d576536f11487e98df9e84a8a5c8e28996
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-j-2-findings-schema-length-some-impact-p-8bca
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:deriv-observation-ambiguity-bias-bound
+- segment:result-contraction-template
+source: TODO.md:115
+unit: bullets

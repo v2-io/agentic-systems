@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 3e2c1d9947000db7538aa24bb174e1a11bc3385f6f203f2f41b8b2cce8d63c4b
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-def-cognitive-fusion-framing-fix-class-1-b2c1
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › Review-pass-flagged items not yet acted on
+  source: TODO.md:378
+own-version: 3472d734e5a0ef80ec9b9a1fbe82ab8a15ca654ba287aff5f9ad521a02e27910
+record: items/imported/todo-def-cognitive-fusion-framing-fix-class-1-b2c1.md

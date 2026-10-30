@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Floor-routing diagnostic segment (FINAL §F, Tier-3 #8a). Five independent auditor-arrivals converge: take "persistent high mismatch" as input, route to {raise g
+
+Imported verbatim from `TODO.md` line 500, section *TODO — Miscellaneous & details › 2026-07-03 — Audit 731548 (Fable de-novo, Part I + impl-) routing: remaining routed items*. Not yet re-checked against HEAD: `vsect recheck item:todo-floor-routing-diagnostic-segment-final-f-a963 --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **Floor-routing diagnostic segment** (FINAL §F, Tier-3 #8a). Five independent auditor-arrivals converge: take "persistent high mismatch" as input, route to {raise gain / keep learning / fix sensors / change model class} with the discriminating observable per branch. The three-way routing is now stated compactly in the B-2 verifier verdict §2.3 (structured residuals ⇒ class/estimation; white + CIY-movable ⇒ act; white + unmovable ⇒ channel); the pieces are in canon post-B-2 — the segment composes them.

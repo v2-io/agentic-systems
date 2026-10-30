@@ -1,0 +1,19 @@
+schema: vsect-event/0
+id: 499bde869b985e7f3c1491d979257c07359c65cef284dc016b6d50101ed34617
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:proposals-e-3-sp-9-fenchel-bregman-reframe-of-addi-d684
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:deriv-strategy-cost-regret-bound
+- segment:disc-additive-coordinate-forcing
+- segment:der-chain-confidence-decay
+- segment:deriv-edge-update-natural-parameter
+- segment:der-gain-sector-bridge
+source: PROPOSALS.md:244
+unit: sections

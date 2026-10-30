@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: spikes/PROPOSED-MISC.md:15
+section: PROPOSED — misc detail home › sw-reciprocal-link-check — `bin/` enforcement for the reciprocal-link discipline
+owner: ""
+opened: 2026-10-30T20:17:42Z
+opened-by: Claude Fable 5.1
+---
+
+# (stretch) cross-checks that `seg:<slug>`-sourced rows actually have the reciprocal back-link in `<slug>`'s Working Notes.
+
+Imported verbatim (relative links rebased) from `spikes/PROPOSED-MISC.md` line 15, section *PROPOSED — misc detail home › sw-reciprocal-link-check — `bin/` enforcement for the reciprocal-link discipline*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-misc-stretch-cross-checks-that-seg-slug-sourc-5af0 --outcome holds|stale|landed|not-an-item --why …`.
+
+- (stretch) cross-checks that `seg:<slug>`-sourced rows actually have the reciprocal back-link in `<slug>`'s Working Notes.

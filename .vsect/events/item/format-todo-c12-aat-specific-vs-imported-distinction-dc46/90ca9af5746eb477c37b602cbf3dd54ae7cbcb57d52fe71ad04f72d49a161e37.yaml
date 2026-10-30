@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 90ca9af5746eb477c37b602cbf3dd54ae7cbcb57d52fe71ad04f72d49a161e37
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:format-todo-c12-aat-specific-vs-imported-distinction-dc46
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:def-pearl-causal-hierarchy
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'FORMAT-TODO.md — Cross-Cutting Conventions: Citations, Cross-Refs, Footnotes, Sidenotes, Margin-Notes › Workstream C — Discipline + structural distinctions'
+  source: FORMAT-TODO.md:166
+own-version: e679cbef32d4bf87d434f2ce5eb870c1185d1a50cc9344e187d2f2ff574d21fd
+record: items/imported/format-todo-c12-aat-specific-vs-imported-distinction-dc46.md

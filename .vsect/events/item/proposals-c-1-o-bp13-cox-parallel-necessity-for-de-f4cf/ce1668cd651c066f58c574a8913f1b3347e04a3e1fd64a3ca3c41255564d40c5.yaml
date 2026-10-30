@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: ce1668cd651c066f58c574a8913f1b3347e04a3e1fd64a3ca3c41255564d40c5
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:proposals-c-1-o-bp13-cox-parallel-necessity-for-de-f4cf
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:deriv-graph-structure
+  - segment:der-architecture-noidentifiability
+  - segment:disc-identifiability-floor
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSALS — Architectural Portfolio › §C. Soon — prereqs nearly met
+  source: PROPOSALS.md:95
+own-version: 9ca1fb1c580af13ae7d7df1dcef5ce72a71130f847719fdbf3f68cb0f982aeb0
+record: items/imported/proposals-c-1-o-bp13-cox-parallel-necessity-for-de-f4cf.md

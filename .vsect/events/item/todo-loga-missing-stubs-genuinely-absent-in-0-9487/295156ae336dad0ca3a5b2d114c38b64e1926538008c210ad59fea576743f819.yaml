@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 295156ae336dad0ca3a5b2d114c38b64e1926538008c210ad59fea576743f819
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-loga-missing-stubs-genuinely-absent-in-0-9487
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (d) — LOGA / ELI stub filling and content cycle — open items'
+  source: TODO.md:451
+own-version: a43c2a68ce92938d3e04d1af5db6b7b7ed853d184e69dd6f04706d3c3a83ae27
+record: items/imported/todo-loga-missing-stubs-genuinely-absent-in-0-9487.md

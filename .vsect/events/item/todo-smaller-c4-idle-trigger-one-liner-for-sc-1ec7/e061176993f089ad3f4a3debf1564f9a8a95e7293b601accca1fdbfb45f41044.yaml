@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: e061176993f089ad3f4a3debf1564f9a8a95e7293b601accca1fdbfb45f41044
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-smaller-c4-idle-trigger-one-liner-for-sc-1ec7
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:scope-interiority-loop
+source: TODO.md:24
+unit: bullets

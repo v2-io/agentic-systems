@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 56feb4a54f27279b6bdcb1a13bc30c1fd2b1ea62f7ba508a2a9c3ea40c8dd0f4
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-misc-scans-proposed-md-rows-for-a-present-res-198a
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: spikes/PROPOSED-MISC.md:14
+unit: bullets

@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Memory-layer narrowing (deferred to the global/memory pass). The cross-project half of the original §6.2 decision: project `feedback_integration_is_replacement`
+
+Imported verbatim from `INTEGRATION-CLEANUP-TODO.md` line 28, section *INTEGRATION-CLEANUP-TODO.md › Working-Note discipline — open remainders*. Not yet re-checked against HEAD: `vsect recheck item:integration-cleanup-todo-memory-layer-narrowing-deferred-to-the-g-23bb --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **Memory-layer narrowing (deferred to the global/memory pass).** The cross-project half of the original §6.2 decision: project `feedback_integration_is_replacement` / `feedback_spike_references_only_in_working_notes` and the global `~/.claude/` layer inherit the same narrowing there, not here.

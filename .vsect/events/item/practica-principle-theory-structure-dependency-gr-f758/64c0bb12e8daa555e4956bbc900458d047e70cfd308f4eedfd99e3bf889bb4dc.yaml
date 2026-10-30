@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 64c0bb12e8daa555e4956bbc900458d047e70cfd308f4eedfd99e3bf889bb4dc
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:practica-principle-theory-structure-dependency-gr-f758
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PRACTICA › ⭐Theory
+  source: PRACTICA.md:11
+own-version: 9ba1f150bf4eeee317d7ca606e0db0ba4d5dee4dc5053ec63a3d10e97cc6a674
+record: items/imported/practica-principle-theory-structure-dependency-gr-f758.md

@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 7b44e45392b4313d820cab880bea18a366f8804ef070e8cdc579ed9380840624
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-advanced-2-the-phase-transition-of-symbiogenesis-59b7
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:def-shared-intent
+  - segment:hyp-symbiogenic-composition
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 1: Candidate Spikes & Proposed Repairs'
+  source: spikes/PROPOSED-ADVANCED.md:16
+own-version: 6ff2948f859faf71b788103ca17e69b460fb07b491ea4b824fbb5be111252862
+record: items/imported/spikes-proposed-advanced-2-the-phase-transition-of-symbiogenesis-59b7.md

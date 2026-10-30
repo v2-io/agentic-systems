@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 5d3544a1fba31ca978b78a54f643760794c20afd79239c47cfef4f34fdeafa11
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-advanced-9-topology-dependent-propagation-of-hall-b0b6
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: spikes/PROPOSED-ADVANCED.md:49
+unit: sections

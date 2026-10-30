@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: e2466520c9a8abb3b87eb5d66d4646e6a7c5c260fd20d8fde8832c5a632f4490
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-three-way-presentation-split-multi-agent-492c
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:241
+unit: bullets

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 8a23c9355dbe700d7a805a1fdb35cc6a819fbac3324be0f32b294930a572e803
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-the-about-position-and-lineage-opening-i-1f2e
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:result-persistence-condition
+source: TODO.md:105
+unit: bullets

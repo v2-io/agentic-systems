@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 3aafd0dccf9c7d1fddf5953ae1a3b2c5add2157d37b9004ada136c1fda2301e4
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-topology-dependent-hallucination-propaga-bb0e
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: spikes/PROPOSED.md:51
+unit: rows

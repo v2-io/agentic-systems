@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ba521f156b159b88720180db509fd330304a3286fc5c2d3550e822260fe9f18c
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:bibliography-todo-2026-05-20-relata-side-discovery-sweep-l-489d
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: BIBLIOGRAPHY-TODO.md:171
+unit: sections

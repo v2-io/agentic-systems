@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 5b0fa0546c81e8324c1bc1d27ddf55471bea719b67d0c829cfef0377233afb4b
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-routing-dir-spike-gold-gate-lighter-agents-read-9115
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: Spike-routing — live tracker (started 2026-05-17) › The job (Joseph's framing, 2026-05-17)
+  source: spikes/ROUTING.md:17
+own-version: 7ffd84ce9b6b7e9539a4f140ead4646708e651aaf9443e1da7642465036c9ccd
+record: items/imported/spikes-routing-dir-spike-gold-gate-lighter-agents-read-9115.md

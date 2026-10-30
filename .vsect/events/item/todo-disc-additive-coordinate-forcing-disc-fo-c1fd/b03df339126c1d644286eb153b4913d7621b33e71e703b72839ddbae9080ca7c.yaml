@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: b03df339126c1d644286eb153b4913d7621b33e71e703b72839ddbae9080ca7c
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-disc-additive-coordinate-forcing-disc-fo-c1fd
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:disc-additive-coordinate-forcing
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Naming pipeline — specific deferred items
+  source: TODO.md:224
+own-version: 7862e8047cba73a4211a33e35cc05c58cdc379f4e43ee47fd4a99a05420ad44e
+record: items/imported/todo-disc-additive-coordinate-forcing-disc-fo-c1fd.md

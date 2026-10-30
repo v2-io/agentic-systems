@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: c7074e174de607373ed43fe047261419a1a1f1b3032352246994c6d10e60f806
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-recapitulating-introducing-framing-level-40b5
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:203
+unit: bullets

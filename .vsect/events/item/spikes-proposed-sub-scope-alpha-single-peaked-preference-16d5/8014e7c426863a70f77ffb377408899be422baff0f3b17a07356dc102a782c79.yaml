@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: 8014e7c426863a70f77ffb377408899be422baff0f3b17a07356dc102a782c79
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-sub-scope-alpha-single-peaked-preference-16d5
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:deriv-strategy-proofness-impossibility
+- segment:deriv-strategic-composition
+source: spikes/PROPOSED.md:71
+unit: rows

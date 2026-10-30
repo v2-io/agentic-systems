@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 1c906f32572f7a7d21e443376353158acaec9f3bf00c5dbd1d43423dd38cd253
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:integration-cleanup-todo-spikes-readme-md-residual-after-the-d-3-2afd
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: INTEGRATION-CLEANUP-TODO.md › The work (open items) › G1. Governing/onboarding docs — residual tails
+  source: INTEGRATION-CLEANUP-TODO.md:50
+own-version: 787bee5cb6770aeacc93298a0b6299b280afd3b9417f8328c7a455011b31a17f
+record: items/imported/integration-cleanup-todo-spikes-readme-md-residual-after-the-d-3-2afd.md

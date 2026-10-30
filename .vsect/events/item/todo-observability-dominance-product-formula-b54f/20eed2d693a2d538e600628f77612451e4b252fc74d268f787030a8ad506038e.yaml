@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 20eed2d693a2d538e600628f77612451e4b252fc74d268f787030a8ad506038e
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-observability-dominance-product-formula-b54f
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:269
+unit: bullets

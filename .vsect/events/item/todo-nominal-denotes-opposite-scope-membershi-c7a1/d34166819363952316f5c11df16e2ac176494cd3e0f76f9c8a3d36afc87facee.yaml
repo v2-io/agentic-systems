@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: d34166819363952316f5c11df16e2ac176494cd3e0f76f9c8a3d36afc87facee
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-nominal-denotes-opposite-scope-membershi-c7a1
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:scope-agency
+  - segment:post-causal-structure
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Editorial hygiene (standing items)
+  source: TODO.md:258
+own-version: 71289e0d69db327d52fe3a5a4792ab8e6c5d7fac705b04eb5f300950a103db43
+record: items/imported/todo-nominal-denotes-opposite-scope-membershi-c7a1.md

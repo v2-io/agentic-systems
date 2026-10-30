@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: cd052b35aeeaff533471cf60a4939eaa5bdbcfcd8e98c0d4c49e9ee22659b575
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-r2-detection-latency-sharpening-under-mo-d44a
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:deriv-update-detection-latency
+- segment:result-mismatch-decomposition
+source: spikes/PROPOSED.md:68
+unit: rows

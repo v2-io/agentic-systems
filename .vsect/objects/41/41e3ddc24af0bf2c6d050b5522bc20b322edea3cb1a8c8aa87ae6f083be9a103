@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# TODO/CHANGELOG hygiene
+
+Imported verbatim from `PRACTICA.md` line 72, section *PRACTICA › Ops › CI/CD*. Not yet re-checked against HEAD: `vsect recheck item:practica-todo-changelog-hygiene-ba4f --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] TODO/CHANGELOG hygiene

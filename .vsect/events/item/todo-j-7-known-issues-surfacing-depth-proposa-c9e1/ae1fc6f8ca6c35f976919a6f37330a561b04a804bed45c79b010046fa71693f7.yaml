@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ae1fc6f8ca6c35f976919a6f37330a561b04a804bed45c79b010046fa71693f7
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-j-7-known-issues-surfacing-depth-proposa-c9e1
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:118
+unit: bullets

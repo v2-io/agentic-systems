@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 1ad5e56d606f7bf3bef6db582fb1817022395df5cce48578935396cb05a970dc
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:format-todo-b10-generalize-marginnote-discipline-cur-9bb1
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'FORMAT-TODO.md — Cross-Cutting Conventions: Citations, Cross-Refs, Footnotes, Sidenotes, Margin-Notes › Workstream B — Cross-refs, footnotes, sidenotes, margin-notes'
+  source: FORMAT-TODO.md:157
+own-version: de574e1a9a517ef1f606cb71ce0200ea6c97b64b7dc12724f3019e800748f750
+record: items/imported/format-todo-b10-generalize-marginnote-discipline-cur-9bb1.md

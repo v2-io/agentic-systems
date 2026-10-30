@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# J-4 — README §4 omissions. Three of seven elements from the epistemic-architecture enumeration (originally in CLAUDE-2 §7; subsequently distributed across `msc/
+
+Imported verbatim (relative links rebased) from `TODO.md` line 116, section *TODO — Miscellaneous & details › README v2 pass (queued from 2026-04-27 first-human-feedback cycle) › Deferrals from 2026-04-26 doc-pipeline cycle (`msc/judgment-calls-readme-cycle-2026-04-26.md`)*. Not yet re-checked against HEAD: `vsect recheck item:todo-j-4-readme-4-omissions-three-of-seven-el-5748 --outcome holds|stale|landed|not-an-item --why …`.
+
+- **J-4 — README §4 omissions.** Three of seven elements from the epistemic-architecture enumeration (originally in CLAUDE-2 §7; subsequently distributed across `msc/FINDINGS-RANKED-DRAFT.md` M-section + `#12` calibration-lab + segment-level Findings; both predecessors sunset by 2026-05-13 with content distributed to `#disc-*` meta-segments and chapter-end `impl-*` segments) were left at segment-level rather than README-level: agent-identity-as-token-level-commitment; derivation-audit tables; A2' sub-scope partition. Re-decide which belong at framing level given the casual-curious-reader retarget.

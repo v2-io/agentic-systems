@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: spikes/ROUTING.md:44
+section: Spike-routing — live tracker (started 2026-05-17) › Joseph batch (reserved-decision items — assemble, do not auto-file)
+owner: ""
+opened: 2026-10-30T20:17:42Z
+opened-by: Claude Fable 5.1
+---
+
+# `spike-attention-governance` archived-vs-research-seed — is finite-attention a missing postulate or an IB/temporal-nesting consequence? Truth-call, not a filing
+
+Imported verbatim (relative links rebased) from `spikes/ROUTING.md` line 44, section *Spike-routing — live tracker (started 2026-05-17) › Joseph batch (reserved-decision items — assemble, do not auto-file)*. Not yet re-checked against HEAD: `vsect recheck item:spikes-routing-spike-attention-governance-archived-vs-r-61bb --outcome holds|stale|landed|not-an-item --why …`.
+
+- **`spike-attention-governance` archived-vs-research-seed** — is finite-attention a missing postulate or an IB/temporal-nesting consequence? Truth-call, not a filing op. `spike-attention-causal-graphs` is verified integrated but its `git mv` is **coupled** to this decision (same `446c7a1` cluster) — do not fire alone.

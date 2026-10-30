@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 822f2461424295f365405d81156b5edb310646aeea9dfee1cca71a2db3f9d0e4
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-three-h1-vs-first-tag-word-disagreements-41b3
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Naming pipeline — specific deferred items
+  source: TODO.md:234
+own-version: 1ded5d66d880096a462e69e0395b40ad4c3ce4310a7dde40f52ee0be8f14b301
+record: items/imported/todo-three-h1-vs-first-tag-word-disagreements-41b3.md

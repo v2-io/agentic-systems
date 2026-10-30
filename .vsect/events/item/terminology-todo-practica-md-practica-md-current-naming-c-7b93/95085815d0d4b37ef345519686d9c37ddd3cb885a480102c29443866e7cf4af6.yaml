@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 95085815d0d4b37ef345519686d9c37ddd3cb885a480102c29443866e7cf4af6
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:terminology-todo-practica-md-practica-md-current-naming-c-7b93
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TERMINOLOGY-TODO › How this file relates to other naming-cycle files
+  source: TERMINOLOGY-TODO.md:102
+own-version: 1e34443f61b580cba3f8a54042d9b807ee8bbb01114783fb2c47a27bbf0c625c
+record: items/imported/terminology-todo-practica-md-practica-md-current-naming-c-7b93.md

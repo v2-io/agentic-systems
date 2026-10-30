@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: 57307e53cad2bb09e12382b8995b256733fbe14f948cead7a4803ca49e42d26c
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-two-routes-exhausts-adversarial-spike-on-3366
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:disc-value-functional-grounding-floor
+- segment:disc-constructive-impossibility-posture
+source: spikes/PROPOSED.md:33
+unit: rows

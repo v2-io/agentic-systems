@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: b454ca1d1c54ef06278775d629b0c56460fbab785e242a63e574effd2cca239c
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-consider-promoting-alan-s-split-goal-sta-39ec
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › README v2 pass (queued from 2026-04-27 first-human-feedback cycle) › Surfaced from Alan's review
+  source: TODO.md:108
+own-version: a0a141a9c75c6013506ce431458970f41ebe9dcf7d88b5713a734995608fa962
+record: items/imported/todo-consider-promoting-alan-s-split-goal-sta-39ec.md

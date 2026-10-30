@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 303f8692009320ca50c28b8694ee37d3a8081ec15510a23f498b20909304f537
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:msc-decision-briefs-2026-07-15-c5-land-the-intelligence-empathy-converg-8a1b
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: msc/decision-briefs-2026-07-15.md:81
+unit: sections

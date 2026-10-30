@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Path B: SP-21 architectural restructure (split the four C-routes into distinct composite ontologies). 4–6 sessions; reverses the deliberate 2026-04-22/23 unific
+
+Imported verbatim from `TODO.md` line 145, section *TODO — Miscellaneous & details › Open routing decision: F8 / F-V3 — composite-agent C-iii*. Not yet re-checked against HEAD: `vsect recheck item:todo-path-b-sp-21-architectural-restructure-s-5e79 --outcome holds|stale|landed|not-an-item --why …`.
+
+- **Path B:** SP-21 architectural restructure (split the four C-routes into distinct composite ontologies). 4–6 sessions; reverses the deliberate 2026-04-22/23 unification choice. Currently *deferred* pending Bundle 2 (Section III completion) maturation. See [`PROPOSALS.md`](PROPOSALS.md) §G SP-21.

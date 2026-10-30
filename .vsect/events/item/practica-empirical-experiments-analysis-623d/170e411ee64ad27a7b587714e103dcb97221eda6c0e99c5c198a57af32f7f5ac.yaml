@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 170e411ee64ad27a7b587714e103dcb97221eda6c0e99c5c198a57af32f7f5ac
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:practica-empirical-experiments-analysis-623d
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PRACTICA › ⭐Theory › 🌟 Cycle priority order (added 2026-05-09)
+  source: PRACTICA.md:36
+own-version: b07454e6b13b9cba5ea92fc65c4934242b25db5166d86060e461aef6a758daa1
+record: items/imported/practica-empirical-experiments-analysis-623d.md

@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: dd94db26d9ca050c433cd5e7c6d61f994c51166d583be6d5d116badb65a71b8a
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:terminology-todo-c12-first-encounter-cite-sweep-execution-9274
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TERMINOLOGY-TODO › C. Terminology additions — confirmed canonicalize commitments
+  source: TERMINOLOGY-TODO.md:29
+own-version: 725405b051200d66657e4f65f4600787bb84efc03460d8c6f9f692805cfc1537
+record: items/imported/terminology-todo-c12-first-encounter-cite-sweep-execution-9274.md

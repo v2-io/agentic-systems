@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 88b382ab1ce450c24e34ff21cba46f11a542190e58da286c8f6ec9370145b9f2
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-recapitulating-introducing-framing-level-40b5
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Queued spike work
+  source: TODO.md:203
+own-version: f9d75beaa02d65a1dd39a2c16149daca92ca22df4a8d4b774b1f11e28719a853
+record: items/imported/todo-recapitulating-introducing-framing-level-40b5.md

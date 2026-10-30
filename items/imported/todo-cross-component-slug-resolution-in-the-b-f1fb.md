@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: TODO.md:424
+section: 'TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (a) — Build-pipeline / cross-cutting hygiene'
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# Cross-component `#slug` resolution in the build — open question. The two 2026-05-12 cases (`hyp-checkpoint-forking-failure-modes`, `hyp-experiential-training`)
+
+Imported verbatim (relative links rebased) from `TODO.md` line 424, section *TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (a) — Build-pipeline / cross-cutting hygiene*. Not yet re-checked against HEAD: `vsect recheck item:todo-cross-component-slug-resolution-in-the-b-f1fb --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **Cross-component `#slug` resolution in the build — open question.** The two 2026-05-12 cases (`hyp-checkpoint-forking-failure-modes`, `hyp-experiential-training`) were fixed by OUTLINE wiring (2026-07-14), not by the resolver; whether `bin/build-monograph` resolves references against every component `src/` or only the volume's own was not determined (2026-08-22). Settle by reading `bin/lib`, then either close or fix.

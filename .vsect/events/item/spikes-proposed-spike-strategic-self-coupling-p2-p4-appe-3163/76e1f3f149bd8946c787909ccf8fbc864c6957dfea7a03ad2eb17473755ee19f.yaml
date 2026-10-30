@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 76e1f3f149bd8946c787909ccf8fbc864c6957dfea7a03ad2eb17473755ee19f
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-spike-strategic-self-coupling-p2-p4-appe-3163
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:disc-strategic-self-coupling
+source: spikes/PROPOSED.md:83
+unit: rows

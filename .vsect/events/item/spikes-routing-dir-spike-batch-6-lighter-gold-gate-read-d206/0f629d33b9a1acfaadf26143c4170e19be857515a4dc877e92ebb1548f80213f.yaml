@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 0f629d33b9a1acfaadf26143c4170e19be857515a4dc877e92ebb1548f80213f
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-routing-dir-spike-batch-6-lighter-gold-gate-read-d206
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: Spike-routing — live tracker (started 2026-05-17) › Joseph batch (reserved-decision items — assemble, do not auto-file)
+  source: spikes/ROUTING.md:46
+own-version: 31e6f539eb056e5cd28b073a46d8fddbbd4f8aaf16cd1f65b3dd02a109b5b399
+record: items/imported/spikes-routing-dir-spike-batch-6-lighter-gold-gate-read-d206.md

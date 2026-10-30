@@ -1,0 +1,19 @@
+schema: vsect-event/0
+id: ab14e64b3d21a61c820868ee2136c5b57bf2e3eb85b54432ca7340a0fc9ba84b
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-directed-separation-foundation-pass-rema-4810
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:der-directed-separation
+- segment:disc-partial-coupling-pathways
+- segment:der-logogenic-as-wrapping
+- segment:def-auxilia-hierarchy
+- segment:der-class-coercion-in-composition
+source: TODO.md:35
+unit: bullets

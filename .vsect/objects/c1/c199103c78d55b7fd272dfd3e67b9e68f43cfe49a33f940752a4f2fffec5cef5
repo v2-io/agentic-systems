@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# `reconstruction adequacy condition` (`obs-context-turnover.md:70`) — the session-episodic analog of the persistence condition; not in LEXICON
+
+Imported verbatim from `TERMINOLOGY-TODO.md` line 69, section *TERMINOLOGY-TODO › F. LEXICON Continuity section — pending reorganization (blocked on review) › Findings (Opus 4.7, 2026-05-10)*. Not yet re-checked against HEAD: `vsect recheck item:terminology-todo-reconstruction-adequacy-condition-obs-co-87e6 --outcome holds|stale|landed|not-an-item --why …`.
+
+- `reconstruction adequacy condition` (`obs-context-turnover.md:70`) — the session-episodic analog of the persistence condition; not in LEXICON

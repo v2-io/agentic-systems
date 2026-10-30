@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Adding entries
+
+Imported verbatim from `BIBLIOGRAPHY-TODO.md` line 45, section *BIBLIOGRAPHY-TODO.md — ASF citation system: discipline, tooling, workstreams › How to use relata, today*. Not yet re-checked against HEAD: `vsect recheck item:bibliography-todo-adding-entries-975f --outcome holds|stale|landed|not-an-item --why …`.
+
+```bash

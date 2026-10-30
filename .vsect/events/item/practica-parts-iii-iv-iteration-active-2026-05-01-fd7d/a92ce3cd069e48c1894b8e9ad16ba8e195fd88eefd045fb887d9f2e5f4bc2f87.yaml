@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: a92ce3cd069e48c1894b8e9ad16ba8e195fd88eefd045fb887d9f2e5f4bc2f87
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:practica-parts-iii-iv-iteration-active-2026-05-01-fd7d
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: PRACTICA.md:16
+unit: checkboxes

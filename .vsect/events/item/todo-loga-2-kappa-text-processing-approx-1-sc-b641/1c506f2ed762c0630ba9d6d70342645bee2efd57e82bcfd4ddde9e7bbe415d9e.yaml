@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 1c506f2ed762c0630ba9d6d70342645bee2efd57e82bcfd4ddde9e7bbe415d9e
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-loga-2-kappa-text-processing-approx-1-sc-b641
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (d) — LOGA / ELI stub filling and content cycle — open items'
+  source: TODO.md:453
+own-version: da258a132eae424d1f89475e923e508ec7d27803818e409221667cca18dc05f8
+record: items/imported/todo-loga-2-kappa-text-processing-approx-1-sc-b641.md

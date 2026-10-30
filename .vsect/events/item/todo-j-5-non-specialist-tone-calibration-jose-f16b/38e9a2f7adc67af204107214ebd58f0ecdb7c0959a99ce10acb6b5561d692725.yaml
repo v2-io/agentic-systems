@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 38e9a2f7adc67af204107214ebd58f0ecdb7c0959a99ce10acb6b5561d692725
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-j-5-non-specialist-tone-calibration-jose-f16b
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:117
+unit: bullets

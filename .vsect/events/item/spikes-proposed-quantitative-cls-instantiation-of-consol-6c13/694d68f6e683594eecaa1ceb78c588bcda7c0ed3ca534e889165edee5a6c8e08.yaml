@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 694d68f6e683594eecaa1ceb78c588bcda7c0ed3ca534e889165edee5a6c8e08
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-quantitative-cls-instantiation-of-consol-6c13
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:form-consolidation-dynamics
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Tier 3 — segment-perspective audit-judgments
+  source: spikes/PROPOSED.md:67
+own-version: 5e138fcee2c598ec5a1986635f69b5f39f2dc5c4d5bb2c9fc4ee2a74f1914fe6
+record: items/imported/spikes-proposed-quantitative-cls-instantiation-of-consol-6c13.md

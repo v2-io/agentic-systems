@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: b9253ab4becd1ea291577eb891895ab026563ad9280081a8b5ca6a270ffa6bf8
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-adjacent-identifiability-floors-disc-ide-90c4
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:disc-identifiability-floor
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Open theory items (MEDIUM)
+  source: TODO.md:159
+own-version: 9b4b9340e2b4d3018b3a2c2e28045d66a5476cb368f55402bdfb7749540bf148
+record: items/imported/todo-adjacent-identifiability-floors-disc-ide-90c4.md

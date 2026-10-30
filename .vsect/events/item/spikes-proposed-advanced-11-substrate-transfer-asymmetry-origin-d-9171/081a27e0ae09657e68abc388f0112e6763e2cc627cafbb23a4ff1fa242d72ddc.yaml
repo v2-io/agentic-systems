@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 081a27e0ae09657e68abc388f0112e6763e2cc627cafbb23a4ff1fa242d72ddc
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-advanced-11-substrate-transfer-asymmetry-origin-d-9171
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:hyp-substrate-transfer-asymmetry
+source: spikes/PROPOSED-ADVANCED.md:68
+unit: sections

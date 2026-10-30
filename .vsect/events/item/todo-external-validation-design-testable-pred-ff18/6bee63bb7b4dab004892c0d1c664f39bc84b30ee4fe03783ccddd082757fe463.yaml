@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 6bee63bb7b4dab004892c0d1c664f39bc84b30ee4fe03783ccddd082757fe463
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-external-validation-design-testable-pred-ff18
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Lower priority
+  source: TODO.md:276
+own-version: e5887024b46c4415f6d72c50fd75212bccee4f6b3faffda3785648b6df5aa080
+record: items/imported/todo-external-validation-design-testable-pred-ff18.md

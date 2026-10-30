@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 04a3c10e76a4bcf015682e2392b0025424229a35e5e582a56ed3a968a36f4d94
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-the-rate-of-gap-closing-proportional-to-9107
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › README v2 pass (queued from 2026-04-27 first-human-feedback cycle) › Surfaced from Alan's review
+  source: TODO.md:103
+own-version: 988206262464637c032a51f6b58f076debba15666dd33fd0f774f93933d02a75
+record: items/imported/todo-the-rate-of-gap-closing-proportional-to-9107.md

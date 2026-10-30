@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 7ec93d5f1ad2edabaf41055b37500f177ce02915050b4d952ef05bd14f5e4f8c
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-soften-the-readme-s-framing-to-honest-sc-8c7b
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Greek vocabulary prose discipline (audit + author finding, 2026-04-29)
+  source: TODO.md:85
+own-version: cccf49541360b5afa0fe52bcb4bc39c6219ad079a5936e1d8fc49983bc4b0f03
+record: items/imported/todo-soften-the-readme-s-framing-to-honest-sc-8c7b.md

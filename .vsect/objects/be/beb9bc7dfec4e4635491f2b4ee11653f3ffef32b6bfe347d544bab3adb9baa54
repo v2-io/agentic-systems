@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# `#form-objective-functional` "axiomatic" labeling for scalar-comparability — formulation choice.
+
+Imported verbatim from `TODO.md` line 274, section *TODO — Miscellaneous & details › Lower priority*. Not yet re-checked against HEAD: `vsect recheck item:todo-form-objective-functional-axiomatic-labe-e632 --outcome holds|stale|landed|not-an-item --why …`.
+
+- `#form-objective-functional` "axiomatic" labeling for scalar-comparability — formulation choice.

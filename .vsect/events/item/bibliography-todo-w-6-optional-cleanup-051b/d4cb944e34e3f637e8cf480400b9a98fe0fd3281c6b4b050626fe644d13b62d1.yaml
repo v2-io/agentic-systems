@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: d4cb944e34e3f637e8cf480400b9a98fe0fd3281c6b4b050626fe644d13b62d1
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:bibliography-todo-w-6-optional-cleanup-051b
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'containing exactly the assembled current volume markdown, then runs: › Workstreams ASF needs to own'
+  source: BIBLIOGRAPHY-TODO.md:147
+own-version: cbe717ac18a7df1808442829297d43c362614a6ba1485e05f6bafb5ba06ff165
+record: items/imported/bibliography-todo-w-6-optional-cleanup-051b.md

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4471026d9dfed30621360b941583cd45f6856bd5fd5ea32b8c841e413ef83b90
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-04-eli-core-src-def-century-scale-event-4988
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:359
+unit: bullets

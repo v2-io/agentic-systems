@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: b65654a3006f74e5502af6d3109dfca4130fe80f7f2dbe3ea4cb61163f7ce884
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-design-decision-joseph-flagged-pick-befo-2649
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:489
+unit: bullets

@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: e87211c1364280ee9eff323b3dfd80df2dc3db02d55e18bf70a5a070f901f187
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:msc-decision-briefs-2026-07-15-repo-weight-untrack-archive-162m-garamon-6bb4
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: Decision briefs — 2026-07-15 (the valve) › Quick calls — strong lead-recs
+  source: msc/decision-briefs-2026-07-15.md:21
+own-version: 5288b86420ba5339a385066f3853966efdb4dc31cd349c1f54e26fb4d1b6dcad
+record: items/imported/msc-decision-briefs-2026-07-15-repo-weight-untrack-archive-162m-garamon-6bb4.md

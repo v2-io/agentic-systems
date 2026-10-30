@@ -1,0 +1,25 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# De-block Findings, re-clock naming, or keep them coupled
+
+Imported verbatim from `msc/decision-briefs-2026-07-15.md` line 62, section *Decision briefs — 2026-07-15 (the valve) › Policy calls*. Not yet re-checked against HEAD: `vsect recheck item:msc-decision-briefs-2026-07-15-de-block-findings-re-clock-naming-or-kee-b162 --outcome holds|stale|landed|not-an-item --why …`.
+
+*Since the 2026-07-07 census:* Since census: commit 0d20b87 (07-14) corrected PRACTICA's false "in progress" to "stalled since ~2026-05-10"; the soft-block itself and the 123/506 routing state are unchanged (PRACTICA's 58/~511 counts remain stale prose — a Part-B free fix, not this decision).
+
+**What.** PRACTICA's 🌟 Findings workstream carries "(soft-)blocked until Current naming conventions refactor" — a refactor stalled since ~2026-05-10 with 506 of 629 R2 currents unrouted and a self-estimate of ~40+ Joseph-batches / several months. Decide the coupling.
+
+**Context.** The block means a primary workstream has been gated ~2 months on the program's slowest queue. Verified: no naming-cycle execution since 2026-05-10/11 (last decision event 2026-05-11); the 07-14 cycle honestly relabeled PRACTICA from "in progress" to "stalled" but changed nothing substantive. Meanwhile ~40 already-decided C5–C13 entries are agent-executable with zero input from you, and the four naming decisions above are each ~90-second calls once briefed.
+
+**Options.**
+
+1. **De-block Findings now** — declare the soft-block dissolved except for any *specific* term collisions Findings work actually hits (handled case-by-case). Risk: some Findings prose later needs rename sweeps; `bin/rename-slug` makes that cheap.
+
+2. **Re-clock naming** — keep the coupling but make it real: this brief-batching mechanism feeds you ~12-current batches; C5–C13 executes in parallel.
+
+3. **Keep coupled as-is** — only defensible if the block was deliberate strategy, which nothing on record says.
+
+**Lead.** Options 1+2 together: de-block Findings *and* restart naming via briefs — they're not exclusive, and the rename tooling makes the de-block's risk small. Honest uncertainty: I couldn't find the original rationale for the block, so if it encoded something unwritten, say so.
+
+**Pointer.** `PRACTICA.md` lines 45–47 + §"Current naming conventions refactor" (item 13); cluster brief `msc/meta-process-review-2026-07-07/03-naming-terminology-lexicon-findings.md`.

@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: TODO.md:434
+section: 'TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (b) — AAT content cycle — open items'
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# AAT May-12 chapter intros pass — neither cross-corpus audit recognized the May-12 chapter-intro segments (`the-reality-model-intro`, `the-cycle-in-motion-intro`
+
+Imported verbatim (relative links rebased) from `TODO.md` line 434, section *TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (b) — AAT content cycle — open items*. Not yet re-checked against HEAD: `vsect recheck item:todo-aat-may-12-chapter-intros-pass-neither-c-8850 --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **AAT May-12 chapter intros pass** — neither cross-corpus audit recognized the May-12 chapter-intro segments (`the-reality-model-intro`, `the-cycle-in-motion-intro`, `persistence-and-limits-intro`, `causal-access-intro`, `strategy-structure-intro`, `cooperative-adversarial-intro`, plus the May-12 `def-causal-information-yield` and `def-pearl-causal-hierarchy` rewrites) as recently-written first-pass content. A focused fresh-eyes read of just those eight segments would catch what the broad audit missed.

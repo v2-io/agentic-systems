@@ -1,0 +1,19 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# A9 — Un-gitignore .claude/ (selectively) so project automation can exist?
+
+Imported verbatim from `msc/decision-briefs-2026-07-15.md` line 7, section *Decision briefs — 2026-07-15 (the valve) › Quick calls — strong lead-recs*. Not yet re-checked against HEAD: `vsect recheck item:msc-decision-briefs-2026-07-15-a9-un-gitignore-claude-selectively-so-pr-0326 --outcome holds|stale|landed|not-an-item --why …`.
+
+*Since the 2026-07-07 census:* Unchanged since the census. `.gitignore` still ignores all of `.claude/`; the dir holds only `settings.local.json` (92-entry permission graveyard, 8 dead `/src/act/` paths) and `worktrees/`. No `.claude/agents/` exists yet — this decision gates creating any.
+
+**What:** Repo-policy call: stop gitignoring the whole `.claude/` dir so shared, reviewable project automation (subagent defs, hooks, a curated `settings.json`) becomes possible.
+
+**Context:** Today the blanket ignore structurally forecloses *any* version-controlled harness config for ASF — no project subagents (e.g., a de-novo-auditor or math-verifier def codifying the manual fan-out you already run), no hooks (e.g., lint-gates-the-commit, the exact failure named in INTEGRATION-CLEANUP note 3), no shared permission allowlist. Cluster-09 found this is the single gate under most of its proposed adoptions. The only current content is local cruft, so nothing sensitive is at stake in the *tracked* set if the split is done right.
+
+**Options:** (1) Selective un-ignore: track `.claude/agents/` + a new curated `.claude/settings.json`; keep `settings.local.json` and `worktrees/` ignored (negation patterns; reversible one-liner). (2) Keep the blanket ignore — automation stays personal/local only. (3) Un-ignore everything — rejected: `settings.local.json` carries machine-local paths/accretions.
+
+**Lead recommendation:** Option 1, with confidence — low risk, reversible, and the local/shared split is the standard harness pattern. Independent do-anyway: purge the ~35 provably-dead entries from `settings.local.json`.
+
+**Pointer:** census cluster 09 (esp. §e1); `.gitignore` line 6.

@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: a4731ea82eaf0e4b28c7f32633a3f9704e85b359655fa870ece9c88f40f81a51
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-u-o-sector-constant-uo-mult-derivation-fbb6
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:result-unity-closure-mapping
+  - segment:deriv-critical-mass-composition
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Tier 3 — segment-perspective audit-judgments
+  source: spikes/PROPOSED.md:66
+own-version: 0366284093408562aec47328cc2ff5e58144ca4d8bdc81fc6f04e973d70bfebf
+record: items/imported/spikes-proposed-u-o-sector-constant-uo-mult-derivation-fbb6.md

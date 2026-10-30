@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 63a39d5a75ae29ed1854db81527c7782704996a5bdbaedaf7c03ded585b4171c
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:format-todo-b8-specify-footnote-convention-in-format-9573
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'FORMAT-TODO.md — Cross-Cutting Conventions: Citations, Cross-Refs, Footnotes, Sidenotes, Margin-Notes › Workstream B — Cross-refs, footnotes, sidenotes, margin-notes'
+  source: FORMAT-TODO.md:155
+own-version: 645c4427fe6fbdf8d20e87a5e0c35b1c1cc29c7d42191d47548c4dbc1c0c180c
+record: items/imported/format-todo-b8-specify-footnote-convention-in-format-9573.md

@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: INTEGRATION-CLEANUP-TODO.md:77
+section: INTEGRATION-CLEANUP-TODO.md › The work (open items) › G5. Structural risk mitigation — CLAUDE.md as unreviewed amplifier
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# Onboarding-doc reflexive standard: the same canon-cites-only-canon / honest-uncertainty / no-inherited-rationalization rules apply *to the onboarding doc itself
+
+Imported verbatim (relative links rebased) from `INTEGRATION-CLEANUP-TODO.md` line 77, section *INTEGRATION-CLEANUP-TODO.md › The work (open items) › G5. Structural risk mitigation — CLAUDE.md as unreviewed amplifier*. Not yet re-checked against HEAD: `vsect recheck item:integration-cleanup-todo-onboarding-doc-reflexive-standard-the-sa-2df8 --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **Onboarding-doc reflexive standard:** the same canon-cites-only-canon / honest-uncertainty / no-inherited-rationalization rules apply *to the onboarding doc itself*. Contradictions within CLAUDE.md are §4.1-class defects to be caught and corrected with segment-level urgency.

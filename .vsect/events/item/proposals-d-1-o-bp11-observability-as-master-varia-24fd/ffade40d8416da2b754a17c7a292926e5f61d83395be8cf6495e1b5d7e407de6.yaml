@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: ffade40d8416da2b754a17c7a292926e5f61d83395be8cf6495e1b5d7e407de6
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:proposals-d-1-o-bp11-observability-as-master-varia-24fd
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:der-agent-opacity
+  - segment:der-interaction-channel-classification
+  - segment:disc-identifiability-floor
+  - segment:disc-separability-pattern
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSALS — Architectural Portfolio › §D. Later — needs investigation-first scoping or upstream maturation
+  source: PROPOSALS.md:137
+own-version: e43f2f73350065fd4929d29031dee561908ea5c92c546cd368d60ae0aeddc13e
+record: items/imported/proposals-d-1-o-bp11-observability-as-master-varia-24fd.md

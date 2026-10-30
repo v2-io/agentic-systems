@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 96ce866377ed130b06c86a9a359537d594e9f8734a123c832729968a38b80a54
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-composition-scaling-with-n-whether-closu-b10f
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:154
+unit: bullets

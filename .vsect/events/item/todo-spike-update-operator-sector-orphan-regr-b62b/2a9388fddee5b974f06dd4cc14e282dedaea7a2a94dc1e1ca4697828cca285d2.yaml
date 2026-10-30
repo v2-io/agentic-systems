@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 2a9388fddee5b974f06dd4cc14e282dedaea7a2a94dc1e1ca4697828cca285d2
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-spike-update-operator-sector-orphan-regr-b62b
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:deriv-sector-condition
+  - segment:disc-identifiability-floor
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › 2026-05-12 (late) — Spike audit triage (99 spike files surveyed via 3 parallel agents)
+  source: TODO.md:472
+own-version: 1f920df95f78e9fb49c15610d11df6ccca52058ceb04fcbeb71762e68b6408ad
+record: items/imported/todo-spike-update-operator-sector-orphan-regr-b62b.md

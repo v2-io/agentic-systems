@@ -1,0 +1,16 @@
+---
+kind: item
+provenance: imported
+source: spikes/PROPOSED.md:34
+section: PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)
+owner: ""
+opened: 2026-10-30T20:17:42Z
+opened-by: Claude Fable 5.1
+concerns: [segment:disc-stability-certificate, segment:persistence-and-limits-intro]
+---
+
+# Stability-certificate Brief sharpening (Feynman-criterion isomorphism)
+
+Imported verbatim (relative links rebased) from `spikes/PROPOSED.md` line 34, section *PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-stability-certificate-brief-sharpening-f-f583 --outcome holds|stale|landed|not-an-item --why …`.
+
+| 2026-05-28 | Stability-certificate Brief sharpening (Feynman-criterion isomorphism) | seg:disc-stability-certificate | The current Findings Brief (line 92) attempts a "measuring-stick" analog for the stability-certificate spine but conflates two things slightly — the metric (the yardstick) and the contraction property (every correction shrinks the measure). A fresh reader could interpret "measuring-stick" as just the metric without grasping the load-bearing part — that the metric is *chosen so* contractions provably shrink it. The Walton-bathtub analog in `#persistence-and-limits-intro` has cleaner one-to-one mapping (water = mismatch / drain = correction / overflow = failure). Two sharpening options surveyed in audit 384279 segment-33 reflection: (i) tighten to one mechanism — lead with "the framework's central question is whether the agent's correction operator contracts faster than the world disturbs it; the stability certificate is the positive-definite form that makes that contraction provable…"; (ii) strengthen the bathtub-parallel — "imagine a bathtub with graduated marks — the agent's mismatch is the water level, the marks measure where the rim is. The stability certificate exists exactly when there are marks calibrated such that every drop of water entering the tub provably tips the gauge downward faster than the inflow." Option (ii) is recommended because it preserves continuity with the established bathtub analog (canonical Feynman-criterion target in Joseph's MEMORY); useful editorial work for whoever does the composition-consistency strengthening above and touches neighboring meta-segments anyway. Effort: editorial (~30 minutes including verifying isomorphism) | proposed | 2026-05-28 | [audit-384279 §D Hypothesis 5] → `#disc-stability-certificate` Working Notes (queue this) |

@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: TERMINOLOGY-TODO.md:45
+section: TERMINOLOGY-TODO › F. LEXICON Continuity section — pending reorganization (blocked on review) › Findings (Opus 4.7, 2026-05-10)
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# *Breakage A:* The "Persistence" subgroup mixes three things that aren't peers: three persistence senses (`structural`, `operational`, `continuity`), and `moral-
+
+Imported verbatim (relative links rebased) from `TERMINOLOGY-TODO.md` line 45, section *TERMINOLOGY-TODO › F. LEXICON Continuity section — pending reorganization (blocked on review) › Findings (Opus 4.7, 2026-05-10)*. Not yet re-checked against HEAD: `vsect recheck item:terminology-todo-breakage-a-the-persistence-subgroup-mixe-2fb5 --outcome holds|stale|landed|not-an-item --why …`.
+
+- *Breakage A:* The "Persistence" subgroup mixes three things that aren't peers: three persistence senses (`structural`, `operational`, `continuity`), and `moral-continuity` (a scope condition for `04-eli-core/` — a different object entirely). And the third sense is called just `continuity` rather than `continuity persistence`, conflicting with how every `01-aat-core/src/` segment references it.

@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 52693170a5da97caf93f49f1205beebdcd8a14287bca730dfdd292e52dbb5083
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:terminology-todo-the-deaths-taxonomy-def-death-as-factor-e267
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:der-captured-objective-dynamics
+  - segment:def-mood
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TERMINOLOGY-TODO › F. LEXICON Continuity section — pending reorganization (blocked on review) › Findings (Opus 4.7, 2026-05-10)
+  source: TERMINOLOGY-TODO.md:67
+own-version: 050636649abd4c94f601de6b167238dc5be8b949cc2f6880bc2ae24736b0ca3f
+record: items/imported/terminology-todo-the-deaths-taxonomy-def-death-as-factor-e267.md

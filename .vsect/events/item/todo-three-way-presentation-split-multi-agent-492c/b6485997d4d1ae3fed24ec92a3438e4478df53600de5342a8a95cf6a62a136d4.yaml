@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: b6485997d4d1ae3fed24ec92a3438e4478df53600de5342a8a95cf6a62a136d4
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-three-way-presentation-split-multi-agent-492c
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Documentation queued
+  source: TODO.md:241
+own-version: 1e152f66110a41548252e94431643eaeb1c61e67408167f55d82df876cd6fe9f
+record: items/imported/todo-three-way-presentation-split-multi-agent-492c.md

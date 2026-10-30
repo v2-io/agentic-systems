@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 6bd1e4947f14733e77219fbb2781c206ea72b166f839c3d96b60bad0d81847a7
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-modularity-strategic-asymmetry-game-theo-1392
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:disc-adversarial-coupling-pressure
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)
+  source: spikes/PROPOSED.md:31
+own-version: 3c0c1a811fc55cc84a1f813ab407e1b333df6d853efc8c37fc2cfb9c532ca7c5
+record: items/imported/spikes-proposed-modularity-strategic-asymmetry-game-theo-1392.md

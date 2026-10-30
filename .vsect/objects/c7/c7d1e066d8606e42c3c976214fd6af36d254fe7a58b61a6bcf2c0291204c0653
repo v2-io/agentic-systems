@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# TST spike follow-ups — `spikes/spike-tst-independent-derivations-2026-07-04.md` §9 released five recommendations (21 provably-TST-naive cross-vendor axiomatizat
+
+Imported verbatim (relative links rebased) from `TODO.md` line 23, section *TODO — Miscellaneous & details › Era-artifact routing + TST external-corroboration spike (2026-07-04, visiting vivarium/vestigia session)*. Not yet re-checked against HEAD: `vsect recheck item:todo-tst-spike-follow-ups-spikes-spike-tst-in-ad65 --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **TST spike follow-ups** — `spikes/spike-tst-independent-derivations-2026-07-04.md` §9 released five recommendations (21 provably-TST-naive cross-vendor axiomatizations; T-05 corroborated 21/21; the unmaintainability-ceiling GAP hypothesis independently derived 20/21 → prioritization candidate; the no-counterpart knowledge-persistence/enforcement cluster as candidate new TST content; Naur 1985 citation owed; the per-session-sum form as a T-05 upgrade candidate).

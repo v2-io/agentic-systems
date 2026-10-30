@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 5975bf1dc7dafc8c6b9e427a6f0da771fbd582cf50fed7957677a30656bc1b2d
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:practica-de-novo-audits-4649
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: PRACTICA.md:57
+unit: checkboxes

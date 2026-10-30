@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: d474ec984a5b78f1998f22be8cd85d7c26f769383972550bff42d53f8b569a22
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:integration-cleanup-todo-no-process-for-draining-wn-follow-ups-ga-c20a
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: INTEGRATION-CLEANUP-TODO.md › Working-Note discipline — open remainders
+  source: INTEGRATION-CLEANUP-TODO.md:30
+own-version: 922163dffdc145d2a2a259ff92ffec22314f936d15fe6e32cc17699309eaf94a
+record: items/imported/integration-cleanup-todo-no-process-for-draining-wn-follow-ups-ga-c20a.md

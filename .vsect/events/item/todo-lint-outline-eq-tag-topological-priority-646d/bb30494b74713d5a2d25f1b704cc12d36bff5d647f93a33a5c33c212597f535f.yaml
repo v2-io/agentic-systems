@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: bb30494b74713d5a2d25f1b704cc12d36bff5d647f93a33a5c33c212597f535f
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-lint-outline-eq-tag-topological-priority-646d
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:262
+unit: bullets

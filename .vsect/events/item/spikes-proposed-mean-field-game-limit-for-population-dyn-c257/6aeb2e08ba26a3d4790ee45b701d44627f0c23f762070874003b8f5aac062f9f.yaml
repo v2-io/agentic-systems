@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 6aeb2e08ba26a3d4790ee45b701d44627f0c23f762070874003b8f5aac062f9f
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-mean-field-game-limit-for-population-dyn-c257
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Tier 2 — exploratory / next-generation
+  source: spikes/PROPOSED.md:50
+own-version: a4b590e63e5597f87cdaaf3be21dbb56834e00d3919a1c49235894b49e5c62c8
+record: items/imported/spikes-proposed-mean-field-game-limit-for-population-dyn-c257.md

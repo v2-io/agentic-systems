@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# ⭐ [TODO](../../TODO.md)
+
+Imported verbatim (relative links rebased) from `PRACTICA.md` line 9, section *PRACTICA › ⭐Theory*. Not yet re-checked against HEAD: `vsect recheck item:practica-todo-todo-md-72ce --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] ⭐ [TODO](../../TODO.md)

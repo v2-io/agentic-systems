@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: a70a86f2c09d0e5114a0f010002b276539c753db1cb60502ca4ee4fc101ea900
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:bibliography-todo-w-2-reconcile-ref-pdfs-against-the-disco-76a2
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'containing exactly the assembled current volume markdown, then runs: › Workstreams ASF needs to own'
+  source: BIBLIOGRAPHY-TODO.md:125
+own-version: 6c14931e4120dddd44b63a60bdc564c182c35d4511d4bff2052eb75cda2f5953
+record: items/imported/bibliography-todo-w-2-reconcile-ref-pdfs-against-the-disco-76a2.md

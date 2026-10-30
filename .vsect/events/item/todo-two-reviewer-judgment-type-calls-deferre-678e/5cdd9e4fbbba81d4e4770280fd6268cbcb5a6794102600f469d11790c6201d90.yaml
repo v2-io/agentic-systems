@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 5cdd9e4fbbba81d4e4770280fd6268cbcb5a6794102600f469d11790c6201d90
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-two-reviewer-judgment-type-calls-deferre-678e
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:der-agent-opacity
+  - segment:scope-observation-ambiguity-modulation
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Naming pipeline — specific deferred items
+  source: TODO.md:233
+own-version: 6e4066dc6eeff17aebe2bccc65ffab87fc56069c69f089544d567517b05c8c4d
+record: items/imported/todo-two-reviewer-judgment-type-calls-deferre-678e.md

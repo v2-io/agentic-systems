@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 97e97840d01da9d8e7d2eb2de82f9f5aa761573e7f5b1bd952a59ef460b3cc8d
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-advanced-14-aat-replicator-evolutionary-game-dyna-689c
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:deriv-strategic-composition
+source: spikes/PROPOSED-ADVANCED.md:83
+unit: sections

@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: de16fca6b455352a931630bd6da623e51b5e081762a5cd9b334b8b3a85423094
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-algebra-typo-in-01-aat-core-src-deriv-pe-2e58
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › Side findings flagged for upstream cleanup
+  source: TODO.md:389
+own-version: 8fdef4fd5310c5b6455f6595bcf830eb75a000fe092d4c254301758c2ceb1894
+record: items/imported/todo-algebra-typo-in-01-aat-core-src-deriv-pe-2e58.md

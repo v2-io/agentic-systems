@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f722af0d59b72dab9149774b2060c64f50878896e2dbce051ceffd6e243bf113
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-chapter-opening-discussion-segments-curr-4a86
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:306
+unit: bullets

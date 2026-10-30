@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: d1e051e15489d45742dfbeea2ae6adab64a4a91bb76b2cb15b9cdfd1cc964d7e
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:integration-cleanup-todo-consider-deriving-generating-portions-of-d4bc
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: INTEGRATION-CLEANUP-TODO.md:76
+unit: checkboxes

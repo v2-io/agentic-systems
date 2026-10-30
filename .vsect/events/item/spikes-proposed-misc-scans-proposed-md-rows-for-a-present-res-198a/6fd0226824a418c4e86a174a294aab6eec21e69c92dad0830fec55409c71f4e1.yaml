@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 6fd0226824a418c4e86a174a294aab6eec21e69c92dad0830fec55409c71f4e1
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-misc-scans-proposed-md-rows-for-a-present-res-198a
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — misc detail home › sw-reciprocal-link-check — `bin/` enforcement for the reciprocal-link discipline
+  source: spikes/PROPOSED-MISC.md:14
+own-version: f268935f7780a44f0d4ccd7620da7038d7d01078497fbe517dcb553ce9101a99
+record: items/imported/spikes-proposed-misc-scans-proposed-md-rows-for-a-present-res-198a.md

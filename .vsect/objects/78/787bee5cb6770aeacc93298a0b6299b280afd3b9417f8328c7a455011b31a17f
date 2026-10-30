@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# `spikes/README.md` — residual after the D-3 revise (bounded-guarantee callout done 2026-05-30; header updated 2026-07-16). Remainder: (a) confirm the cardinal-r
+
+Imported verbatim (relative links rebased) from `INTEGRATION-CLEANUP-TODO.md` line 50, section *INTEGRATION-CLEANUP-TODO.md › The work (open items) › G1. Governing/onboarding docs — residual tails*. Not yet re-checked against HEAD: `vsect recheck item:integration-cleanup-todo-spikes-readme-md-residual-after-the-d-3-2afd --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **`spikes/README.md`** — residual after the D-3 revise (bounded-guarantee callout done 2026-05-30; header updated 2026-07-16). Remainder: (a) confirm the cardinal-rule wording is final under the ratified principle (currently reads as clean binary — likely a no-op); (b) **R2** — the `--public` strip is now verified (2026-08-22 CURRENT-VOL1, 0 WN sections); still owed: a note in the WN clause that Working Notes are intermediate and stripped by `bin/build-monograph --public`; (c) ensure sim/empirical/experiment are *explicitly* named as spike-class (G4 overlap).

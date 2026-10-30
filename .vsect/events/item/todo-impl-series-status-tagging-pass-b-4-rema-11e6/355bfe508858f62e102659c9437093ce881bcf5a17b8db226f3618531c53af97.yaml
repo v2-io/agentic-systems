@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 355bfe508858f62e102659c9437093ce881bcf5a17b8db226f3618531c53af97
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-impl-series-status-tagging-pass-b-4-rema-11e6
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:496
+unit: bullets

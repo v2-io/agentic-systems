@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: ad102b9bd241d8719649ea8ac57d75ba5859c7354630a4380c3de2bcda6c0355
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-class-2-partial-observation-ambiguity-bi-8b48
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:deriv-observation-ambiguity-bias-bound
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Open theory items (MEDIUM)
+  source: TODO.md:161
+own-version: 2959617731ee35453546d4313ef20c4b8146721e0502d8c73e797f18cd834bfc
+record: items/imported/todo-class-2-partial-observation-ambiguity-bi-8b48.md

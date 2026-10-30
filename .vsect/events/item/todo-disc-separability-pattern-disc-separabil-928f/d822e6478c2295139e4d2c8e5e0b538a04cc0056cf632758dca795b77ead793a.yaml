@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: d822e6478c2295139e4d2c8e5e0b538a04cc0056cf632758dca795b77ead793a
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-disc-separability-pattern-disc-separabil-928f
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:disc-separability-pattern
+source: TODO.md:223
+unit: bullets

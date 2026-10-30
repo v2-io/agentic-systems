@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 3cc1fefeb9148f48382c5a0815816d965826deb29aef506d1cc75dbe64c719ea
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-lint-outline-eq-tag-topological-priority-646d
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Editorial hygiene (standing items)
+  source: TODO.md:262
+own-version: 2b6f7066627d89de9e70f9679163f44af4c413708680b80622cc5c25396b0149
+record: items/imported/todo-lint-outline-eq-tag-topological-priority-646d.md

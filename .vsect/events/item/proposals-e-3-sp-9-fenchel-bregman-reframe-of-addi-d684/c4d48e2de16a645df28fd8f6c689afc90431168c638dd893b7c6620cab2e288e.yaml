@@ -1,0 +1,27 @@
+schema: vsect-event/0
+id: c4d48e2de16a645df28fd8f6c689afc90431168c638dd893b7c6620cab2e288e
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:proposals-e-3-sp-9-fenchel-bregman-reframe-of-addi-d684
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:deriv-strategy-cost-regret-bound
+  - segment:disc-additive-coordinate-forcing
+  - segment:der-chain-confidence-decay
+  - segment:deriv-edge-update-natural-parameter
+  - segment:der-gain-sector-bridge
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSALS — Architectural Portfolio › §E. Wait — explicitly gated
+  source: PROPOSALS.md:244
+own-version: 9ee6c30e90da53464ea973d88041eeb47dd0ac10d13fdb7ea18c4b6bbf913f99
+record: items/imported/proposals-e-3-sp-9-fenchel-bregman-reframe-of-addi-d684.md

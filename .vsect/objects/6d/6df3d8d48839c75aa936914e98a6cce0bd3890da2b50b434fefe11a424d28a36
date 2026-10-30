@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Consider deriving/generating portions of CLAUDE.md the way `LEXICON.md` is generated from `terminology/entries/` and `README.md` from `doc/readme/src/`. A "mino
+
+Imported verbatim (relative links rebased) from `INTEGRATION-CLEANUP-TODO.md` line 76, section *INTEGRATION-CLEANUP-TODO.md › The work (open items) › G5. Structural risk mitigation — CLAUDE.md as unreviewed amplifier*. Not yet re-checked against HEAD: `vsect recheck item:integration-cleanup-todo-consider-deriving-generating-portions-of-d4bc --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **Consider deriving/generating portions of CLAUDE.md** the way `LEXICON.md` is generated from `terminology/entries/` and `README.md` from `doc/readme/src/`. A "minor early decision" cannot hide unsourced in a generated doc the same way it can in a hand-asserted one. Architectural question for Joseph.

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 3907f60310fe97db810b4cae6096bb70471d273f77b01544989d281d6f0a71dd
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:terminology-todo-task-adequacy-r-ast-lt-lvert-delta-text-9ecd
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TERMINOLOGY-TODO.md:65
+unit: bullets

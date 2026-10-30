@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 745a6122f28ec5875a6b8b9dfaa9b9d49091ebb24f5496687aab43f1c9ab6c22
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:terminology-todo-stability-plasticity-window-c8-residue-n-f580
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TERMINOLOGY-TODO › C. Terminology additions — confirmed canonicalize commitments
+  source: TERMINOLOGY-TODO.md:28
+own-version: 08c907e59d878f456cab69ae94c05e26b759eb281a9c9e9cd024095b28c45073
+record: items/imported/terminology-todo-stability-plasticity-window-c8-residue-n-f580.md

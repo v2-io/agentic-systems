@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 97195a0cb960aa1e8020e89c13cea6a49b011663fa332055e924d3ae3ba9b288
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-non-emergence-lemma-for-composites-bb06
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:form-composition-closure
+  - segment:scope-composite-agent
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Tier 2 — exploratory / next-generation
+  source: spikes/PROPOSED.md:59
+own-version: ab64b0b5a315ea08abfc6c24ace45d47dff9e8d7fffbb531b07cca7bc3f04a7e
+record: items/imported/spikes-proposed-non-emergence-lemma-for-composites-bb06.md

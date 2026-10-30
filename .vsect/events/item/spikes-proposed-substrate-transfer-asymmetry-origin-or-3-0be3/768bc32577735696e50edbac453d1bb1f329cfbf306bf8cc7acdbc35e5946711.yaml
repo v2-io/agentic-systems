@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 768bc32577735696e50edbac453d1bb1f329cfbf306bf8cc7acdbc35e5946711
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-substrate-transfer-asymmetry-origin-or-3-0be3
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:hyp-substrate-transfer-asymmetry
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)
+  source: spikes/PROPOSED.md:26
+own-version: a7e776ed4b0e5901c894d155cbe7818bab337953a423eef46e5869174990ff4d
+record: items/imported/spikes-proposed-substrate-transfer-asymmetry-origin-or-3-0be3.md

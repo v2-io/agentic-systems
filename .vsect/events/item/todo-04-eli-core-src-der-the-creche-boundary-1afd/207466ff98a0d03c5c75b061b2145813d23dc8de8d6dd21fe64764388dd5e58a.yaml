@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 207466ff98a0d03c5c75b061b2145813d23dc8de8d6dd21fe64764388dd5e58a
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-04-eli-core-src-der-the-creche-boundary-1afd
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:354
+unit: bullets

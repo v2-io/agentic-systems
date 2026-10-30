@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: e9aaeafa5e391406195e40d8db9479c90d9bfbe01fe1535c45d31acd542ca472
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-disc-composition-consistency-does-direct-813e
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:disc-composition-consistency
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Strengthen-first candidates from the 2026-05-30/31 gold-lift sweep
+  source: TODO.md:46
+own-version: 0fcbbb9f6d244a8359d0b9ffe96adeedcc92294d6fc99b0120ae33a7bc9d8b30
+record: items/imported/todo-disc-composition-consistency-does-direct-813e.md

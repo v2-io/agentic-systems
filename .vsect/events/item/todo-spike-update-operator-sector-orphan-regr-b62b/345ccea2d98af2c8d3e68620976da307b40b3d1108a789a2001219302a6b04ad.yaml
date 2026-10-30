@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: 345ccea2d98af2c8d3e68620976da307b40b3d1108a789a2001219302a6b04ad
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-spike-update-operator-sector-orphan-regr-b62b
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:deriv-sector-condition
+- segment:disc-identifiability-floor
+source: TODO.md:472
+unit: bullets

@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: edd9877ba4e81d6aee867a791a6aefbec52a2799b6a03a57bcf62b568e7bdc81
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-big-picture-reasoning-trail-the-2026-05-16-session-t-12cc
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO-big-picture.md — Surface the Forcing-Bound Spine; Stop Deflating Proven Exclusion Results › Provenance
+  source: TODO-big-picture.md:57
+own-version: 88054d69f89da76fcc8d04486c06284255d37cafcffd038596fc41f2fb317a9c
+record: items/imported/todo-big-picture-reasoning-trail-the-2026-05-16-session-t-12cc.md

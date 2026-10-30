@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 1550c3ad8871de97fa06534202b9b77eef289ab7b7a527d8fe0ec2e0646ac22b
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-disc-possibility-space-theory-in-03-llm-57e5
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:367
+unit: bullets

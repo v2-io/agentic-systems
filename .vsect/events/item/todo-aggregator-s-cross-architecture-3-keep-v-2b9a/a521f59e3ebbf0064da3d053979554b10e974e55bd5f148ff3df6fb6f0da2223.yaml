@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: a521f59e3ebbf0064da3d053979554b10e974e55bd5f148ff3df6fb6f0da2223
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-aggregator-s-cross-architecture-3-keep-v-2b9a
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Greek vocabulary prose discipline (audit + author finding, 2026-04-29)
+  source: TODO.md:91
+own-version: e77576180da3df2671a90e728f3a8ea34a36621f40d40eeed1165402381aafe1
+record: items/imported/todo-aggregator-s-cross-architecture-3-keep-v-2b9a.md

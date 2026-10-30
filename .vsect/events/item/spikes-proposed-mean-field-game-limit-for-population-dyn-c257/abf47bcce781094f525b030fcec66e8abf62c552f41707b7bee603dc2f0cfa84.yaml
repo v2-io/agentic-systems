@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: abf47bcce781094f525b030fcec66e8abf62c552f41707b7bee603dc2f0cfa84
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-mean-field-game-limit-for-population-dyn-c257
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: spikes/PROPOSED.md:50
+unit: rows

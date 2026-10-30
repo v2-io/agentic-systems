@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 52da629a11ac0be4914fecf18b5fd4b382703bc03d1e521e374ea8954d8961e2
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-routing-temporal-nesting-rg-moves-b-c-d-integrat-fefa
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: Spike-routing — live tracker (started 2026-05-17) › Joseph batch (reserved-decision items — assemble, do not auto-file)
+  source: spikes/ROUTING.md:45
+own-version: 4ace524c03cf40fb6ff5a78bc587778323fa9a03652d78f85e6caa4b97719c56
+record: items/imported/spikes-routing-temporal-nesting-rg-moves-b-c-d-integrat-fefa.md

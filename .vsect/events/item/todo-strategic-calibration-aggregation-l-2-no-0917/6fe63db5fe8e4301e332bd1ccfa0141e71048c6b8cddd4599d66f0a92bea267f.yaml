@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 6fe63db5fe8e4301e332bd1ccfa0141e71048c6b8cddd4599d66f0a92bea267f
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-strategic-calibration-aggregation-l-2-no-0917
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Lower priority
+  source: TODO.md:270
+own-version: 75052be4f6c8feade1645d13c0d15a508f379f5a17c643e51d081fa054783fc5
+record: items/imported/todo-strategic-calibration-aggregation-l-2-no-0917.md

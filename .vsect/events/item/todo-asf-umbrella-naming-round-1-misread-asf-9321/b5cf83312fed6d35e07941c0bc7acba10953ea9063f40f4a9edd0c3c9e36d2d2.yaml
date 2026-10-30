@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: b5cf83312fed6d35e07941c0bc7acba10953ea9063f40f4a9edd0c3c9e36d2d2
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-asf-umbrella-naming-round-1-misread-asf-9321
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:226
+unit: bullets

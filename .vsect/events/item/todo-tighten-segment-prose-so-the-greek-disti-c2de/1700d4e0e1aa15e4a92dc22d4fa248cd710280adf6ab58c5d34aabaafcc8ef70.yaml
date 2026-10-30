@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 1700d4e0e1aa15e4a92dc22d4fa248cd710280adf6ab58c5d34aabaafcc8ef70
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-tighten-segment-prose-so-the-greek-disti-c2de
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Greek vocabulary prose discipline (audit + author finding, 2026-04-29)
+  source: TODO.md:84
+own-version: 7de088d6662bccc4e7e73ec12b6760b9b0afe362b9ee8a777afdc3d6fb45c9fe
+record: items/imported/todo-tighten-segment-prose-so-the-greek-disti-c2de.md

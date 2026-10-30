@@ -1,0 +1,15 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# C.2 O-BP15 — Comprehensive "minimal proof of viability" worked example
+
+Imported verbatim from `PROPOSALS.md` line 103, section *PROPOSALS — Architectural Portfolio › §C. Soon — prereqs nearly met*. Not yet re-checked against HEAD: `vsect recheck item:proposals-c-2-o-bp15-comprehensive-minimal-proof-o-8a18 --outcome holds|stale|landed|not-an-item --why …`.
+
+Threads a single domain example through `#def-mismatch-signal` → `#emp-update-gain` → `#def-adaptive-tempo` → `#sector-condition` → `#def-satisfaction-gap` → `#def-control-regret` → `#der-orient-cascade` → `#def-strategy-dag` → L0/L1 calibration → Prop B.6 + B.7. Currently four fragmentary worked examples exist (`worked-example-kalman`, `worked-example-bandit`, `worked-example-strategy`, `worked-example-L1`, plus missing `worked-example-cam`); none is end-to-end.
+
+**Prereq:** Bundle 1 (framework-face reframe) stabilizes first so the example reflects the cleanest framing. **Effort:** 3–4 sessions. **Domain choice is the critical sub-decision** — software is tempting but risks reading as a TST example. A non-software domain (inventory management with stochastic demand + coordinated multi-site replenishment, or similar) would be more generative.
+
+Primary aspect: teachability. Secondary: discovery (running the example surfaces formal gaps). **Value: +5 framework / +9 paper.**
+
+**Independence: high.** New worked-example segment plus cross-references into existing segments (read-only from the worked-example's perspective). No segment rewrites. Safe to parallelize with any other active proposal, including Bundle 1 (Bundle 1 is framing; O-BP15 is content illustration).

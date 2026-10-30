@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 52aa4b97e01201870bad64f4639b800ff24c3b6684e8f1211f6c5f0c46295cfd
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-routing-temporal-nesting-rg-moves-b-c-d-integrat-fefa
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: spikes/ROUTING.md:45
+unit: bullets

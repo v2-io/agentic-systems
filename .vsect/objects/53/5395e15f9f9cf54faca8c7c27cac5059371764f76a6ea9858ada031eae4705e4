@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Next de-novo cycle target: AAT Part II or III main chains, or the untested worked examples (`example-kalman/bandit/strategy` — the auditor's one untested predic
+
+Imported verbatim (relative links rebased) from `TODO.md` line 504, section *TODO — Miscellaneous & details › 2026-07-03 — Audit 731548 (Fable de-novo, Part I + impl-) routing: remaining routed items*. Not yet re-checked against HEAD: `vsect recheck item:todo-next-de-novo-cycle-target-aat-part-ii-or-42d0 --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] **Next de-novo cycle target**: AAT Part II or III main chains, or the untested worked examples (`example-kalman/bandit/strategy` — the auditor's one untested prediction is a numeric slip there). Different finding-species predicted (derivation gaps rather than statement-layer drift).

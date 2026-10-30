@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: 96bf1cba82d0e60a6fa3fef1c4258240d5600239f2424c1d9811ef36d6332429
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:spikes-proposed-mechanism-design-impossibility-vcg-cardi-63f8
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:disc-implementation-impossibility
+- segment:disc-identifiability-floor
+source: spikes/PROPOSED.md:29
+unit: rows

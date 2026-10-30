@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 5fe6103c684e57609b5a547a80fad4a4b3a1030cc79ef08702149ca0723da0e9
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:msc-decision-briefs-2026-07-15-a9-un-gitignore-claude-selectively-so-pr-0326
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: msc/decision-briefs-2026-07-15.md:7
+unit: sections

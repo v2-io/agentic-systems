@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 6d2b65bb63a9c3322b7b22f9b56fdaed5d642682dfb00bf3113461196aacd58b
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:terminology-todo-two-timescale-persistence-distinction-in-9fb2
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TERMINOLOGY-TODO.md:70
+unit: bullets

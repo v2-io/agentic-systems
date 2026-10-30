@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 01545d0e21264bdb5a541613ba019cb6248a8a13f1cec4818f4c8b440d64efd3
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-quantitative-empirical-bounds-for-llm-su-8317
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:der-class-coercion-via-wrapping
+source: TODO.md:193
+unit: bullets

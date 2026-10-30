@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: a5aad4f6d3f8b2e70db3aae88822f1a3adee6a642c3ca74f279c488a2bc48aab
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:terminology-todo-continuity-persistence-as-its-own-named-2827
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TERMINOLOGY-TODO › F. LEXICON Continuity section — pending reorganization (blocked on review) › Findings (Opus 4.7, 2026-05-10)
+  source: TERMINOLOGY-TODO.md:64
+own-version: facdb0ff30e166a78fa5f808e29d5a653c950331697f9ea1fccb9c6272d43319
+record: items/imported/terminology-todo-continuity-persistence-as-its-own-named-2827.md

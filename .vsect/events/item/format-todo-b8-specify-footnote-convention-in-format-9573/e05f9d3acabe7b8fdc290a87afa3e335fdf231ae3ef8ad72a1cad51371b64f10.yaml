@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: e05f9d3acabe7b8fdc290a87afa3e335fdf231ae3ef8ad72a1cad51371b64f10
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:format-todo-b8-specify-footnote-convention-in-format-9573
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: FORMAT-TODO.md:155
+unit: checkboxes

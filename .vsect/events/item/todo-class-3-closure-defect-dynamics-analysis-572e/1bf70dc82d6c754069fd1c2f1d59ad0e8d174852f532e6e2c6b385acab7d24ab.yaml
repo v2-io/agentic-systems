@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 1bf70dc82d6c754069fd1c2f1d59ad0e8d174852f532e6e2c6b385acab7d24ab
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-class-3-closure-defect-dynamics-analysis-572e
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:hyp-directed-separation-under-composition
+  - segment:der-class-coercion-via-wrapping
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Queued spike work
+  source: TODO.md:194
+own-version: cc5b325b71b53f43a6f2876b90d766ef8f556646299fd2177067ca4cb238470e
+record: items/imported/todo-class-3-closure-defect-dynamics-analysis-572e.md

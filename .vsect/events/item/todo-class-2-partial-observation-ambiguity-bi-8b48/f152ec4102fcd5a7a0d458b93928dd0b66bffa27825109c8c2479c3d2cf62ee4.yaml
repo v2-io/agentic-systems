@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: f152ec4102fcd5a7a0d458b93928dd0b66bffa27825109c8c2479c3d2cf62ee4
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-class-2-partial-observation-ambiguity-bi-8b48
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:deriv-observation-ambiguity-bias-bound
+source: TODO.md:161
+unit: bullets

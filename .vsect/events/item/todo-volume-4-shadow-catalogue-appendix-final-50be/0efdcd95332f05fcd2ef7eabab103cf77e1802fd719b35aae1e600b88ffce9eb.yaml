@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0efdcd95332f05fcd2ef7eabab103cf77e1802fd719b35aae1e600b88ffce9eb
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-volume-4-shadow-catalogue-appendix-final-50be
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:501
+unit: bullets

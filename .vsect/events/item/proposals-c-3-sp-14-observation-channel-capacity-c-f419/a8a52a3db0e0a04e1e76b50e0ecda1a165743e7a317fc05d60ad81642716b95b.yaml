@@ -1,0 +1,27 @@
+schema: vsect-event/0
+id: a8a52a3db0e0a04e1e76b50e0ecda1a165743e7a317fc05d60ad81642716b95b
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:proposals-c-3-sp-14-observation-channel-capacity-c-f419
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:deriv-persistence-cost
+  - segment:der-observability-dominance
+  - segment:hyp-communication-gain
+  - segment:der-interaction-channel-classification
+  - segment:def-adaptive-tempo
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSALS — Architectural Portfolio › §C. Soon — prereqs nearly met
+  source: PROPOSALS.md:113
+own-version: 26d23133899bb7701f3e5e4bdc67e1d7031b15648cc8a6995ff130102fe96461
+record: items/imported/proposals-c-3-sp-14-observation-channel-capacity-c-f419.md

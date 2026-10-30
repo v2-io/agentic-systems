@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 0e5fdf20c3ffc4fb1d62ccf9735894acec9d97e5d6acff607d951d3e0628ee51
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-the-about-position-and-lineage-opening-i-1f2e
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:result-persistence-condition
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › README v2 pass (queued from 2026-04-27 first-human-feedback cycle) › Surfaced from Alan's review
+  source: TODO.md:105
+own-version: e2be15c5d8fa9e970fc95e6b14df19ad449120d522b5c9aef20e92a2ad6c8141
+record: items/imported/todo-the-about-position-and-lineage-opening-i-1f2e.md

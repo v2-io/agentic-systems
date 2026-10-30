@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 34a07829ea37a8ee95d7e502e3b5ff1a9323c0beab848cc996f1ab449ad28fc2
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-big-picture-in-kind-not-magnitude-same-kind-as-g-del-90bc
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO-big-picture.md — Surface the Forcing-Bound Spine; Stop Deflating Proven Exclusion Results › Guards (forward rules)
+  source: TODO-big-picture.md:43
+own-version: 797db053d656f1e74e6ee542a923bc71e5b1e6ea9c95235e33a132c878ce3384
+record: items/imported/todo-big-picture-in-kind-not-magnitude-same-kind-as-g-del-90bc.md

@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 9b9e29ebaeb7f920f97c1298109b0b7ff3de75a1ebb57b123160df4c5ab0779e
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-auto-derive-notation-md-from-segment-def-30e2
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:result-mismatch-decomposition
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Documentation queued
+  source: TODO.md:245
+own-version: 1d7adc87f0304dad3798bb8b9f96eb2e6c9e637367e8f6299d15bfd7cdcf4e0b
+record: items/imported/todo-auto-derive-notation-md-from-segment-def-30e2.md

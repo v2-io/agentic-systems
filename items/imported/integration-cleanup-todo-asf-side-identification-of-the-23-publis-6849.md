@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: INTEGRATION-CLEANUP-TODO.md:62
+section: INTEGRATION-CLEANUP-TODO.md › The work (open items) › G3. Citation/bibliography discipline — remaining ASF-side tails
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# ASF-side identification of the 23 publisher-raw `ref/` PDFs (only ASF agents know what those papers are; relata can surface DOI/title candidates via `Fingerprin
+
+Imported verbatim (relative links rebased) from `INTEGRATION-CLEANUP-TODO.md` line 62, section *INTEGRATION-CLEANUP-TODO.md › The work (open items) › G3. Citation/bibliography discipline — remaining ASF-side tails*. Not yet re-checked against HEAD: `vsect recheck item:integration-cleanup-todo-asf-side-identification-of-the-23-publis-6849 --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] ASF-side identification of the 23 publisher-raw `ref/` PDFs (only ASF agents know what those papers are; relata can surface DOI/title candidates via `Fingerprint.extract`, but the identification call is ASF's).

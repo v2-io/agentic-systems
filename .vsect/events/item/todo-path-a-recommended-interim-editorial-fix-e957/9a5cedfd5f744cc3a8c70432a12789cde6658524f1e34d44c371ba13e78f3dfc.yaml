@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 9a5cedfd5f744cc3a8c70432a12789cde6658524f1e34d44c371ba13e78f3dfc
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-path-a-recommended-interim-editorial-fix-e957
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'TODO — Miscellaneous & details › Open routing decision: F8 / F-V3 — composite-agent C-iii'
+  source: TODO.md:144
+own-version: 486b2aca8f177c29884a6172b7ddac6a3346d1d8c65cb33694ed0969378f074c
+record: items/imported/todo-path-a-recommended-interim-editorial-fix-e957.md

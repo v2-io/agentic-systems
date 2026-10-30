@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: dd1362b0fb6710a4e698d003b005bb434352b6e61e68dc0a0b54dbbee3c40c5b
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:integration-cleanup-todo-onboarding-doc-reflexive-standard-the-sa-2df8
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: INTEGRATION-CLEANUP-TODO.md:77
+unit: checkboxes

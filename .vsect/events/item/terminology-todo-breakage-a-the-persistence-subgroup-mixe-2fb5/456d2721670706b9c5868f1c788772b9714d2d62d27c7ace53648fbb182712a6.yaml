@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 456d2721670706b9c5868f1c788772b9714d2d62d27c7ace53648fbb182712a6
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:terminology-todo-breakage-a-the-persistence-subgroup-mixe-2fb5
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TERMINOLOGY-TODO.md:45
+unit: bullets

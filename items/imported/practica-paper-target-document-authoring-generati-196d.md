@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: PRACTICA.md:40
+section: PRACTICA › ⭐Theory › 🌟 Cycle priority order (added 2026-05-09)
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# 🌟 Paper/target-document authoring & generation — monograph build pipeline alive at `mono/` (LuaLaTeX + kaobook, full corpus renders); now feeding back into sour
+
+Imported verbatim (relative links rebased) from `PRACTICA.md` line 40, section *PRACTICA › ⭐Theory › 🌟 Cycle priority order (added 2026-05-09)*. Not yet re-checked against HEAD: `vsect recheck item:practica-paper-target-document-authoring-generati-196d --outcome holds|stale|landed|not-an-item --why …`.
+
+- [ ] 🌟 **Paper/target-document authoring & generation** — monograph build pipeline alive at `mono/` (LuaLaTeX + kaobook, full corpus renders); now feeding back into source-side cleanup. Active plan: [`FORMAT-TODO.md`](../../FORMAT-TODO.md) — settles the Book/Part/Chapter/Segment/Subclaim/Field/Atom vocabulary, the Part.Chapter.Segment numbering, named-formula evergreen cross-refs, and the phased sweep (build pipeline → docs → OUTLINEs → cross-ref hygiene → FORMAT compliance) to bring the corpus under the new convention. ToC build feature lands first as a quick win (Phase 1a); Phase 1 numbering work gates the source-side sweep that follows.

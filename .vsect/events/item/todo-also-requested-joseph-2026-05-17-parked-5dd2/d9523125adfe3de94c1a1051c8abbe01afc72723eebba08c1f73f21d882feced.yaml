@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: d9523125adfe3de94c1a1051c8abbe01afc72723eebba08c1f73f21d882feced
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-also-requested-joseph-2026-05-17-parked-5dd2
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › 2026-05-17 — scrbook appendix numbering (PARKED mid-fix to focus on self-actuation; pickup-ready)
+  source: TODO.md:488
+own-version: 43153316097e313277861faf9e7d25f371c9bc19ff41724d2af1f90eafc665d5
+record: items/imported/todo-also-requested-joseph-2026-05-17-parked-5dd2.md

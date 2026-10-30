@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 9e6c0a3cce95134ea16296119074e85510e80d7705663143ef12fa89ba7d191a
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-composition-scaling-with-n-whether-closu-b10f
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Open theory items (MEDIUM)
+  source: TODO.md:154
+own-version: afb3c29e35d163047777aa6e8b496a474cfee1fec9c89e34704f307a1de52781
+record: items/imported/todo-composition-scaling-with-n-whether-closu-b10f.md

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 46709d508a162611446f123ac907a2a3ee0ea03e6d2a670500857831e631fe6f
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-heavy-tailed-disturbances-model-s-assume-f3de
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:275
+unit: bullets

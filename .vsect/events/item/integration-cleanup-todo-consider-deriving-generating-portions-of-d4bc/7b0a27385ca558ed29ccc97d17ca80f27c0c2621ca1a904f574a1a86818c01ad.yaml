@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 7b0a27385ca558ed29ccc97d17ca80f27c0c2621ca1a904f574a1a86818c01ad
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:integration-cleanup-todo-consider-deriving-generating-portions-of-d4bc
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: INTEGRATION-CLEANUP-TODO.md › The work (open items) › G5. Structural risk mitigation — CLAUDE.md as unreviewed amplifier
+  source: INTEGRATION-CLEANUP-TODO.md:76
+own-version: 6df3d8d48839c75aa936914e98a6cce0bd3890da2b50b434fefe11a424d28a36
+record: items/imported/integration-cleanup-todo-consider-deriving-generating-portions-of-d4bc.md

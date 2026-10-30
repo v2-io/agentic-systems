@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: c8331976b8449240392729dd899a79e548200716551f3e774e24b3f237390dc5
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:terminology-todo-breakage-b-the-continuity-stance-subgrou-071a
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TERMINOLOGY-TODO › F. LEXICON Continuity section — pending reorganization (blocked on review) › Findings (Opus 4.7, 2026-05-10)
+  source: TERMINOLOGY-TODO.md:47
+own-version: 3dd1d7f3aca3a57c3303e2eb6a0dbfac305807b328ceb49d9f9c03d44429092a
+record: items/imported/terminology-todo-breakage-b-the-continuity-stance-subgrou-071a.md

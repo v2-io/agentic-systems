@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 7ef2751d978aa77f8a75bc672e88aad25d53c3293b59c9785b93f0431a7d512b
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-chapter-closing-discussion-segments-new-5b2a
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Deferred — project structure / tooling › Chapter-discussion slug-prefix discipline + bin/align-slug recognition (queued 2026-05-13)
+  source: TODO.md:307
+own-version: cf26d8e4366bdb16f9b33f678b09ed8a64be5585c95659c19dc1164a06cdb2e9
+record: items/imported/todo-chapter-closing-discussion-segments-new-5b2a.md

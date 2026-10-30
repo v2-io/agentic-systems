@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: e207478b9368eadaedf5e3c80e17d81f666ccef82cbb8c2f12acf7e4107e2ed6
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-tst-1887-unmaintainability-threshold-gap-8f2a
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:442
+unit: bullets

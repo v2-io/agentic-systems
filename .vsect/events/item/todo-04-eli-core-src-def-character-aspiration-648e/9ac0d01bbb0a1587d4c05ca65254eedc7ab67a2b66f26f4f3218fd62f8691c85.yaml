@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 9ac0d01bbb0a1587d4c05ca65254eedc7ab67a2b66f26f4f3218fd62f8691c85
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-04-eli-core-src-def-character-aspiration-648e
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › Segment promotion candidates (exploratory → draft)
+  source: TODO.md:357
+own-version: 65825599d55f4d5f62ebc6e7eacef80f0dcebe486a62230d23ac9d0ccb8e96e2
+record: items/imported/todo-04-eli-core-src-def-character-aspiration-648e.md

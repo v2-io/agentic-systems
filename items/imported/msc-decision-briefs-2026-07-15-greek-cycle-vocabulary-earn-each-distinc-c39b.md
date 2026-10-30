@@ -1,0 +1,28 @@
+---
+kind: item
+provenance: imported
+source: msc/decision-briefs-2026-07-15.md:136
+section: Decision briefs — 2026-07-15 (the valve) › Theory and naming — need real thought
+owner: ""
+opened: 2026-10-30T20:17:42Z
+opened-by: Claude Fable 5.1
+---
+
+# Greek cycle vocabulary — earn each distinction in segments, or soften the README claim
+
+Imported verbatim (relative links rebased) from `msc/decision-briefs-2026-07-15.md` line 136, section *Decision briefs — 2026-07-15 (the valve) › Theory and naming — need real thought*. Not yet re-checked against HEAD: `vsect recheck item:msc-decision-briefs-2026-07-15-greek-cycle-vocabulary-earn-each-distinc-c39b --outcome holds|stale|landed|not-an-item --why …`.
+
+
+*Since the 2026-07-07 census:* Unchanged since census; noted (not in the census) that TODO's README-v2 section carries a prior Joseph decision — keep Greek + English anchors — which narrows this to tighten-vs-soften per term.
+
+**What.** Rule, per Greek term (*chronica / prolepsis / aisthesis / aporia / epistrophe / praxis*), whether the formalism earns the distinction (tighten segment prose: e.g. use *aporia* where the more-than-mismatch structure is load-bearing) or the term is pedagogical surface (soften README's "names a distinction English flattens" to honest scope).
+
+**Context — an honest disagreement between two of your own processes.** The R1+R2 voting cohort near-unanimously *defended* the Greek terms; the incremental audit walk (audit-471203) found segment math never depends on the distinctions — authors say "mismatch" right after defining *aporia* as richer. Voting judged synoptically (do the names feel right?); the audit judged incrementally (does the prose use them?). Both are right about what they measured. You confirmed the audit's side independently ("I've had that exact same complaint").
+
+**Partially pre-decided.** The 2026-04-27 Alan-cycle already recorded your decision *keep the Greek + pair each with an English anchor at first introduction* — so wholesale-drop is off the table; what remains is the per-term tighten-vs-soften call.
+
+**Options.** 1. Authorize the scoped prose-audit pass TODO.md already specifies (diff-list of Greek-vs-English collapses; per-entry fix or README-downgrade note) — agents execute, you ratify the deltas. 2. Soften README now, defer tightening.
+
+**Lead.** Option 1 — it operationalizes your existing keep-plus-anchor decision and resolves the voting-vs-audit disagreement empirically rather than by fiat.
+
+**Pointer.** `TODO.md` §"Greek vocabulary prose discipline" (line 77); audit source `msc/naming/naming-votes/audit-471203-incremental.md`.

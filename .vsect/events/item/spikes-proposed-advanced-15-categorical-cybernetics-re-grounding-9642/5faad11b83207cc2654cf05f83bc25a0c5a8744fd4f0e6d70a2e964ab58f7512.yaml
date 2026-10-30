@@ -1,0 +1,27 @@
+schema: vsect-event/0
+id: 5faad11b83207cc2654cf05f83bc25a0c5a8744fd4f0e6d70a2e964ab58f7512
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-advanced-15-categorical-cybernetics-re-grounding-9642
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:form-composition-closure
+  - segment:deriv-strategic-composition
+  - segment:hyp-directed-separation-under-composition
+  - segment:der-class-coercion-via-wrapping
+  - segment:disc-continuity-stance
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 3: Surfaced 2026-05-19 (corpus reconciliation scan)'
+  source: spikes/PROPOSED-ADVANCED.md:88
+own-version: 39397705b12e61839f7550e3fae98b869bb6f7fc53e087511a45d56d8c094d82
+record: items/imported/spikes-proposed-advanced-15-categorical-cybernetics-re-grounding-9642.md

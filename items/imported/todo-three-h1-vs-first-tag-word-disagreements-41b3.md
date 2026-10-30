@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: TODO.md:234
+section: TODO — Miscellaneous & details › Naming pipeline — specific deferred items
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# Three H1-vs-first-tag word disagreements (`form-objective-functional`, `form-composition-closure`, `scope-observation-ambiguity-modulation`).
+
+Imported verbatim (relative links rebased) from `TODO.md` line 234, section *TODO — Miscellaneous & details › Naming pipeline — specific deferred items*. Not yet re-checked against HEAD: `vsect recheck item:todo-three-h1-vs-first-tag-word-disagreements-41b3 --outcome holds|stale|landed|not-an-item --why …`.
+
+- Three H1-vs-first-tag word disagreements (`form-objective-functional`, `form-composition-closure`, `scope-observation-ambiguity-modulation`).

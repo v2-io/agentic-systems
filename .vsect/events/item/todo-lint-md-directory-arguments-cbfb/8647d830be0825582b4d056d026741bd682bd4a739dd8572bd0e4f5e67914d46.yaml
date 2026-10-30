@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 8647d830be0825582b4d056d026741bd682bd4a739dd8572bd0e4f5e67914d46
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-lint-md-directory-arguments-cbfb
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Deferred — project structure / tooling
+  source: TODO.md:284
+own-version: e6e670d3f5b031d5decb9e4cad30a1d0e06fd1742926287948ce199a1be8215b
+record: items/imported/todo-lint-md-directory-arguments-cbfb.md

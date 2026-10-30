@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 46752c4f383415efca57e0bf6195d806ffe45ad68bc8f9d3691463184c0f1326
+at: 2026-10-30T20:17:42Z
+store: asf
+act: import
+about: item:bibliography-todo-w-5-conditional-rendering-for-applicable-a0a5
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: BIBLIOGRAPHY-TODO.md:143
+unit: sections

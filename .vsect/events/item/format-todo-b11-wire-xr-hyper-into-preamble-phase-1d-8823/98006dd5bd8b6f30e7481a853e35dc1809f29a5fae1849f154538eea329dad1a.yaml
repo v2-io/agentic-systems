@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 98006dd5bd8b6f30e7481a853e35dc1809f29a5fae1849f154538eea329dad1a
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:format-todo-b11-wire-xr-hyper-into-preamble-phase-1d-8823
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'FORMAT-TODO.md — Cross-Cutting Conventions: Citations, Cross-Refs, Footnotes, Sidenotes, Margin-Notes › Workstream B — Cross-refs, footnotes, sidenotes, margin-notes'
+  source: FORMAT-TODO.md:158
+own-version: 045304f5868e9a3a962c8faeb5da7161d65401d7d774abe30ffc16542f2bef1b
+record: items/imported/format-todo-b11-wire-xr-hyper-into-preamble-phase-1d-8823.md

@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 11f8f4fbbab778281880fa3c85564e23d71fe60487ed31a2261c429d57e11f68
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-track-a-phase-6-meta-segment-promotion-o-a5b6
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:disc-dynamic-regime-axis
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Strategic-composition cluster residuals (post-NEXT-UP archival, 2026-05-25)
+  source: TODO.md:58
+own-version: 507ea0b0653c36e735f83153572d7acaa98a35f5b92cc0129359e3122016d0b8
+record: items/imported/todo-track-a-phase-6-meta-segment-promotion-o-a5b6.md

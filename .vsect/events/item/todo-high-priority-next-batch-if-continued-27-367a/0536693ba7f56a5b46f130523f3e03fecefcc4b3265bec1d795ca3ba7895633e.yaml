@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 0536693ba7f56a5b46f130523f3e03fecefcc4b3265bec1d795ca3ba7895633e
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-high-priority-next-batch-if-continued-27-367a
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › 🌟 Parts III + IV active work (encounter cycle 2026-05-01) › Audit-integration deferrals
+  source: TODO.md:384
+own-version: e2c6f26fb7394278edb2bb3691ec83ee4819d2fe936c39330271502fc410bea1
+record: items/imported/todo-high-priority-next-batch-if-continued-27-367a.md

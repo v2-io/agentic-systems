@@ -1,0 +1,16 @@
+---
+kind: item
+provenance: imported
+source: spikes/PROPOSED.md:29
+section: PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)
+owner: ""
+opened: 2026-10-30T20:17:42Z
+opened-by: Claude Fable 5.1
+concerns: [segment:disc-implementation-impossibility, segment:disc-identifiability-floor]
+---
+
+# Mechanism-design impossibility — VCG/cardinal-utility strengthening
+
+Imported verbatim (relative links rebased) from `spikes/PROPOSED.md` line 29, section *PROPOSED — the spike-proposal index › Tier 1 — near-term / high-value (repair- or closure-shaped)*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-mechanism-design-impossibility-vcg-cardi-63f8 --outcome holds|stale|landed|not-an-item --why …`.
+
+| 2026-04-25 | Mechanism-design impossibility — VCG/cardinal-utility strengthening | ADV | GS / MS / Arrow now all landed in `#disc-implementation-impossibility` (Track B 2026-05-22, designer-side sister meta-pattern to `#disc-identifiability-floor`); the §7 VCG / transferable-utility *constructive* strengthening remains separately orphaned in `spike-alignment-impossibility.md` because the cluster's discipline filter deliberately excludes constructive mechanism-design results (VCG, revenue equivalence). The "strengthening" direction therefore splits cleanly from the cluster's charter and is its own scope question — pursued under `03-llm-core/` if AAT engages constructive mechanism design as first-class | split (core landed; strengthening genuinely separate per discipline filter) | 2026-05-24 | [ADV #4](../../spikes/PROPOSED-ADVANCED.md) ; xref `spike-alignment-impossibility.md` ; landed core: `#disc-implementation-impossibility` |

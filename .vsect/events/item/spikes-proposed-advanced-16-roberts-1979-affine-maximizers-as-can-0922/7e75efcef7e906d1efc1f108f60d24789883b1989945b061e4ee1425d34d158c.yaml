@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 7e75efcef7e906d1efc1f108f60d24789883b1989945b061e4ee1425d34d158c
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-advanced-16-roberts-1979-affine-maximizers-as-can-0922
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:disc-implementation-impossibility
+  - segment:form-objective-functional
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 3: Surfaced 2026-05-19 (corpus reconciliation scan)'
+  source: spikes/PROPOSED-ADVANCED.md:100
+own-version: 361bd7a0fce12b8f89da8681e66d836763889ec5daefef94d96ea71e145b25fb
+record: items/imported/spikes-proposed-advanced-16-roberts-1979-affine-maximizers-as-can-0922.md

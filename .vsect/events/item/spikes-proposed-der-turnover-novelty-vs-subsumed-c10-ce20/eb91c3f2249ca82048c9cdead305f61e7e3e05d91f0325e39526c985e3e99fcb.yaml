@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: eb91c3f2249ca82048c9cdead305f61e7e3e05d91f0325e39526c985e3e99fcb
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-der-turnover-novelty-vs-subsumed-c10-ce20
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:der-turnover-information-recursion
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: PROPOSED — the spike-proposal index › Tier 3 — segment-perspective audit-judgments
+  source: spikes/PROPOSED.md:65
+own-version: a979a27484b6cf2f516b6d95001c497f71350bebf88980aa548bba3e17d3451d
+record: items/imported/spikes-proposed-der-turnover-novelty-vs-subsumed-c10-ce20.md

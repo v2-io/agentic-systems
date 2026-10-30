@@ -1,0 +1,16 @@
+---
+kind: item
+provenance: imported
+source: TODO.md:208
+section: TODO — Miscellaneous & details › Queued spike work
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+concerns: [segment:deriv-adaptive-gain-dynamics]
+---
+
+# EWC tensor-valued gain extension of `#deriv-adaptive-gain-dynamics` — stability-weighted per-parameter gain per Kirkpatrick et al. 2017.
+
+Imported verbatim (relative links rebased) from `TODO.md` line 208, section *TODO — Miscellaneous & details › Queued spike work*. Not yet re-checked against HEAD: `vsect recheck item:todo-ewc-tensor-valued-gain-extension-of-deri-9d75 --outcome holds|stale|landed|not-an-item --why …`.
+
+- EWC tensor-valued gain extension of `#deriv-adaptive-gain-dynamics` — stability-weighted per-parameter gain per Kirkpatrick et al. 2017.

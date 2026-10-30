@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Recapitulating / introducing / framing-level segments with more freedom of expression than tightly-structured meta-segments allow. No specific candidates commit
+
+Imported verbatim from `TODO.md` line 203, section *TODO — Miscellaneous & details › Queued spike work*. Not yet re-checked against HEAD: `vsect recheck item:todo-recapitulating-introducing-framing-level-40b5 --outcome holds|stale|landed|not-an-item --why …`.
+
+- Recapitulating / introducing / framing-level segments with more freedom of expression than tightly-structured meta-segments allow. No specific candidates committed yet; surface them as needed. Candidates worth holding: a structural-arc reading guide; an ELI life-stakes framing that names the moral seriousness directly (now that normative claims are register-allowed where structurally backed); histories of how concepts developed; meditations bridging formal segments and `msc/reflections/`.

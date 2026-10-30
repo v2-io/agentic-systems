@@ -1,0 +1,25 @@
+---
+kind: item
+provenance: imported
+source: BIBLIOGRAPHY-TODO.md:19
+section: 'BIBLIOGRAPHY-TODO.md — ASF citation system: discipline, tooling, workstreams › Citation discipline — decided ASF policy (Workstream W-1 landed 2026-06-05)'
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# Strengthened hybrid rule
+
+Imported verbatim (relative links rebased) from `BIBLIOGRAPHY-TODO.md` line 19, section *BIBLIOGRAPHY-TODO.md — ASF citation system: discipline, tooling, workstreams › Citation discipline — decided ASF policy (Workstream W-1 landed 2026-06-05)*. Not yet re-checked against HEAD: `vsect recheck item:bibliography-todo-strengthened-hybrid-rule-3a75 --outcome holds|stale|landed|not-an-item --why …`.
+
+
+1. **Rich scholarly prose remains allowed.** A sentence may still say "Pearl's *Causality*, 2nd ed." or name the publisher / edition / theorem context when that information helps the reader.
+2. **Formal citation commands are required for every bibliography-worthy scholarly source.** If a source should appear in the bibliography, include a natbib-compatible cite command in the segment source: `\citep{key}`, `\citet{key}`, `\citealt{key}`, `\citeauthor{key}`, or `\citeyear{key}`. ASF source should not use biblatex-native `\textcite{...}` because the installed relata scanner is keyed to `\cite...` / natbib-style commands.
+3. **Load-bearing external dependencies need locator-backed formal cites.** Imported definitions, inherited theorem statements, recapitulated machinery, empirical claims, and prior-art assertions that support segment correctness should use a formal cite with a page / chapter / theorem / section locator where available, then receive `claim-supported` / `page-ref` verification events in relata as promotion work proceeds.
+4. **Contextual citations can stay prose-rich, but not prose-only if they belong in the bibliography.** Preserve authorial prose around the cite; do not rely on prose alone to get a source into the emitted `.bib`.
+5. **No prose-cited side list for v1.** Do not build a parallel curated "prose-cited" side list in ASF for the first implementation pass. The bibliography is driven by formal cite commands scanned from the rendered volume source.
+6. **Canon cites external works directly.** Internal `ref/` reports, Undermind catalogs, and local synthesis notes can remain Working-Notes provenance or search trails, but they are not source-of-truth citations for canon body claims.
+
+This decision unblocks Workstream W-3 (segment migration). Workstream W-4 (build-pipeline wiring) landed with the decision on 2026-06-05.
+
+---

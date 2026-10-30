@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 96d89d3ff5c888d5ed7154f45642436964f4b730e6888254a062830bb5549e62
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:practica-prior-adjacent-art-novelty-analysis-cita-fc2f
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: PRACTICA.md:37
+unit: checkboxes

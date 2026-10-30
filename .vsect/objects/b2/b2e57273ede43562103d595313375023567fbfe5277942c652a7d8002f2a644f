@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# Verifying
+
+Imported verbatim from `BIBLIOGRAPHY-TODO.md` line 70, section *Or bulk-import from an existing .bib file*. Not yet re-checked against HEAD: `vsect recheck item:bibliography-todo-verifying-975f --outcome holds|stale|landed|not-an-item --why …`.
+
+```bash

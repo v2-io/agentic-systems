@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: f3cf78f726e9907261c9215d36414e25172b120e283665121cdb4f01801f1f20
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-adaptive-metric-coupling-interaction-wit-c587
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:deriv-adaptive-gain-dynamics
+source: TODO.md:210
+unit: bullets

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 3cd67bb60f98d9ee4fb1a3b08236a7adb6cd3f9a51db6d3393c9f24245f83bba
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:format-todo-c12-aat-specific-vs-imported-distinction-dc46
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:def-pearl-causal-hierarchy
+source: FORMAT-TODO.md:166
+unit: checkboxes

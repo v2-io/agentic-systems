@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 761f155c7a9afb1946d4b0d749a13adc9214a2c2d4e731a32716b14b535f3f38
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:format-todo-c16-format-md-doc-sweep-vocabulary-align-22cd
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: FORMAT-TODO.md:169
+unit: checkboxes

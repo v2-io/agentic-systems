@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 24647eed2d7cb659fdf22be700af82022ef632cb524fe590997403083dc08a64
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-135-segments-still-embed-pre-rename-slug-323d
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:232
+unit: bullets

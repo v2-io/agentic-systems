@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: TODO-big-picture.md:33
+section: TODO-big-picture.md — Surface the Forcing-Bound Spine; Stop Deflating Proven Exclusion Results › The contribution, stated positively and bounded (the claim is strong *because* it is bounded)
+owner: ""
+opened: 2026-10-30T20:17:41Z
+opened-by: Claude Fable 5.1
+---
+
+# Contribution (state plainly): new exact statements — true, previously unstated, expressible only over objects the framework had to define (the Shannon kind: onl
+
+Imported verbatim (relative links rebased) from `TODO-big-picture.md` line 33, section *TODO-big-picture.md — Surface the Forcing-Bound Spine; Stop Deflating Proven Exclusion Results › The contribution, stated positively and bounded (the claim is strong because it is bounded)*. Not yet re-checked against HEAD: `vsect recheck item:todo-big-picture-contribution-state-plainly-new-exact-sta-742e --outcome holds|stale|landed|not-an-item --why …`.
+
+- **Contribution (state plainly):** new exact statements — true, previously unstated, expressible only over objects the framework had to define (the Shannon kind: only-known-tools, yet the novelty is *what became expressible once the objects were right*). In a forcing-bound theory the scope condition is not the caveat — it *is* the theorem.

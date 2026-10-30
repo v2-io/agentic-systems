@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0cf542cbba3320ae081499498ea9b18d51d9b8cd2de33b3aa6ead2e4ec48d17d
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-three-h1-vs-first-tag-word-disagreements-41b3
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TODO.md:234
+unit: bullets

@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 60b898dcc4b8b77859da5082d392300bdce8766e81f7865f0c57f88f12eed1a5
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-aat-may-12-chapter-intros-pass-neither-c-8850
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'TODO — Miscellaneous & details › 2026-05-12 — Audit-findings intake: Codex + Gemini de-novo audits — remaining open items › Group (b) — AAT content cycle — open items'
+  source: TODO.md:434
+own-version: 8ff0d345e139e10cdd824eaef02ed0ab7091c1ceafebf737468dacb500fc8564
+record: items/imported/todo-aat-may-12-chapter-intros-pass-neither-c-8850.md

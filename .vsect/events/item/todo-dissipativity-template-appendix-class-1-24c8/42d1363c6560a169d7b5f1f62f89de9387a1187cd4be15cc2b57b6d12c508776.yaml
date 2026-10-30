@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 42d1363c6560a169d7b5f1f62f89de9387a1187cd4be15cc2b57b6d12c508776
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:todo-dissipativity-template-appendix-class-1-24c8
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns:
+- segment:der-directed-separation
+source: TODO.md:190
+unit: bullets

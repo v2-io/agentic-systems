@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 12737b084cc3ec8d043fe9714b6c6d17ea57c9b480ebc9c8c367dfa753d2bb06
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:terminology-todo-stability-plasticity-window-c8-residue-n-f580
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: TERMINOLOGY-TODO.md:28
+unit: bullets

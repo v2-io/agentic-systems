@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 671193cda702a94e48ccd84ffc48af643b5ed64e9c9114d32591ac9e67753fdc
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-author-the-three-missing-staged-outline-76f2
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Era-artifact routing + TST external-corroboration spike (2026-07-04, visiting vivarium/vestigia session)
+  source: TODO.md:21
+own-version: 2c94dc93744b9c2ba37240e69ebddef670a4bdf96a3e43a0c470f2bd3aa41ba4
+record: items/imported/todo-author-the-three-missing-staged-outline-76f2.md

@@ -1,0 +1,9 @@
+kind: item
+form: 
+normalizer: vsect-norm/0
+---
+# `der-turnover` novelty-vs-subsumed (C10)
+
+Imported verbatim from `spikes/PROPOSED.md` line 65, section *PROPOSED — the spike-proposal index › Tier 3 — segment-perspective audit-judgments*. Not yet re-checked against HEAD: `vsect recheck item:spikes-proposed-der-turnover-novelty-vs-subsumed-c10-ce20 --outcome holds|stale|landed|not-an-item --why …`.
+
+| 2026-05-19 | `der-turnover` novelty-vs-subsumed (C10) | seg:der-turnover-information-recursion | Is R1/R2 a genuinely new $\mathcal A_D$ object or a bridge-lemma-resolvent instance? Test-not-assert; resolving "subsumed" demotes the segment to a worked instance | proposed | 2026-05-19 | `der-turnover-information-recursion:129` Working Note ; trail `RECONCILIATION.md` §4 |

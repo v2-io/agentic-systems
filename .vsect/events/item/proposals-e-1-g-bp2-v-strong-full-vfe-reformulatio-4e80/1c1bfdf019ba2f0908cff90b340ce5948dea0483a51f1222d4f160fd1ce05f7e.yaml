@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 1c1bfdf019ba2f0908cff90b340ce5948dea0483a51f1222d4f160fd1ce05f7e
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:proposals-e-1-g-bp2-v-strong-full-vfe-reformulatio-4e80
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: PROPOSALS.md:232
+unit: sections

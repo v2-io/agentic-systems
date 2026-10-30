@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 1ccdf58639c73daee6529e17646f9b7d0a75f312b5376ed491d4c3a5e84e42ac
+at: 2026-10-30T20:17:41Z
+store: asf
+act: import
+about: item:practica-gaps-spikes-ideation-888d
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+concerns: []
+source: PRACTICA.md:39
+unit: checkboxes

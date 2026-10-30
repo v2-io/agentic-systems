@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: f01b2ce703dc2dbf59f5593e071e8dbce788adb4aaad5fa5ea01af9296b97ad0
+at: 2026-10-30T20:17:42Z
+store: asf
+act: mint
+about: item:spikes-proposed-advanced-11-substrate-transfer-asymmetry-origin-d-9171
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  concerns:
+  - segment:hyp-substrate-transfer-asymmetry
+  kind: item
+  opened: 2026-10-30T20:17:42Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: 'Advanced Mathematical Spike Proposals (detail home) › Phase 3: Surfaced 2026-05-19 (corpus reconciliation scan)'
+  source: spikes/PROPOSED-ADVANCED.md:68
+own-version: 7e816969e60745365d67d7dacdd3ef69456e81d7d69a90dc1f8c973c90802dce
+record: items/imported/spikes-proposed-advanced-11-substrate-transfer-asymmetry-origin-d-9171.md

@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: f80795fb0ddc646086303832be91bab505c6ef687e79a42bdf7897ed58e6de92
+at: 2026-10-30T20:17:41Z
+store: asf
+act: mint
+about: item:todo-heavy-tailed-disturbances-model-s-assume-f3de
+actor:
+  name: Claude Fable 5.1
+  session: session_013g85SGMtMDsCYM9fXWwTEp
+  role: importer
+normalizer: vsect-norm/0
+declarations:
+  kind: item
+  opened: 2026-10-30T20:17:41Z
+  opened-by: Claude Fable 5.1
+  owner: ''
+  provenance: imported
+  section: TODO — Miscellaneous & details › Lower priority
+  source: TODO.md:275
+own-version: e54de901a9aee2a1b72da8dc766e6125ad70cde0aa8e5764fbc17348bdf86b91
+record: items/imported/todo-heavy-tailed-disturbances-model-s-assume-f3de.md

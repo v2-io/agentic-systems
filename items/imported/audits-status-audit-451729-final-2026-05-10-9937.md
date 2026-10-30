@@ -1,0 +1,15 @@
+---
+kind: item
+provenance: imported
+source: audits/STATUS.md:26
+section: Audit routing status — live tracker › Open / in-flight
+owner: ""
+opened: 2026-10-30T20:17:42Z
+opened-by: Claude Fable 5.1
+---
+
+# `audit-451729-FINAL-2026-05-10`
+
+Imported verbatim (relative links rebased) from `audits/STATUS.md` line 26, section *Audit routing status — live tracker › Open / in-flight*. Not yet re-checked against HEAD: `vsect recheck item:audits-status-audit-451729-final-2026-05-10-9937 --outcome holds|stale|landed|not-an-item --why …`.
+
+| `audit-451729-FINAL-2026-05-10` | 2026-05-10 | — | **open** | Single residual D.1 (first-class in `TODO.md` §2026-05-10). Soft items → ledger S25/S28. Does not graduate until D.1 closes. (Per MANIFEST.) |
