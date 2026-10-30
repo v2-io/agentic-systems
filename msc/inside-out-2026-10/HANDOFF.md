@@ -1,6 +1,6 @@
 # HANDOFF — for the lead's successor
 
-What only the lead knows: what it has actually read, what it holds only on another agent's word, and what is in flight. Findings are not restated here; they live in the documents named below. Updated at every checkpoint (last: 2026-10-30 ~13:20 MDT).
+What only the lead knows: what it has actually read, what it holds only on another agent's word, and what is in flight. Findings are not restated here; they live in the documents named below. Updated at every checkpoint (last: 2026-10-30 13:36 MDT).
 
 ## Resume
 
@@ -36,6 +36,9 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 - *arch*
   - `SUBAGENT-INSTRUCTIONS-notes.md`
   - `AGENTIC-DELEGATION.md`
+  - `firmatum/utils/vsect/README.md`, plus the bodies of commits `aecd7ac`, `59436b7` and `d84ffbc`. The Rust source was not read: the evidence for it is its tests and its behavior on the asf store.
+  - `firmatum/utils/md-press/FEEDBACK-2026-10-30.md`
+- *asf, this effort's commits*: every commit through `612bcb65`. `801feaec` was read after it was pushed.
 
 **Partial**
 
@@ -69,16 +72,18 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 
 ## In flight
 
-- **Running.** Read each agent's final documents whole before acting on anything it says.
-  - The A.1 and C.1 integrators (see INTENT's "Who is on what"). Integrators commit by explicit path without pushing; the lead reviews each diff, then pushes. Rebuild `CURRENT-VOL1` after canon changes, using the biber workaround in memory.
+- **Running.** Read each agent's final documents whole before acting on anything it says. Agents commit by explicit path without pushing; the lead reviews, then pushes.
+  - The hooks builder (I.2), in md-press: a deterministic math converter as the default and a remembered decline (`<!--md-press:not-math:…-->`). Before it flips the default estate-wide, it checks which other repos gate on md-press math. It sends the lead asf's math-debt count before adding math to the hook.
+  - The vsect builder (I.4), on one question: should vsect's normalizer drop md-press's markers, so a formatting edit doesn't lapse checks?
 - **Waiting on Joseph: nothing.** Resolve uncertainty rather than route it. Two items that used to wait on him now sit in KR3.3a:
   - Canon citing the gitignored `msc/joseph-working-notes.md`. Lift any theory content those citations need into canon, then remove the citations.
   - The 08-22 cleanup items.
-- **Next for the lead.**
-  1. When the two integrators land, review, push, rebuild `CURRENT-VOL1`, then take a beat.
-  2. I.2 comes next. Its debt clearing touches canon, so it waits until the integrators are out. It fires every other check, so it goes first.
-  3. B.1, the external-claim records starting with Part II, is the next theory launch.
-  4. The A.2 launch should include two places A.1 made stale: `INTRODUCTION.md:39` and `doc/readme/src/_overview-concepts.md:23`. Both say "observation under residual uncertainty", which is now only the necessary condition. Rebuild `CURRENT-VOL1` once, after A.1's cold read and C.1's example-strategy fix both land.
+- **Next for the lead: the beat** (nothing else runs, then re-read INTENT from the top). Then the queued launches, with worktree isolation for parallel integrators:
+  1. B.1, the external-claim records, starting with Part II. Its checks go into vsect as review records.
+  2. A.2, the front door. It should include two places A.1 made stale: `INTRODUCTION.md:39` and `doc/readme/src/_overview-concepts.md:23`. Both say "observation under residual uncertainty", which is now only the necessary condition.
+  3. C.2, the strengthenings.
+  - Also: A.1's revised text has not been re-read independently since its cold reader's four findings were landed.
+  - Rebuild `CURRENT-VOL1` after each canon landing, using the biber workaround in memory.
 - **Joseph's word needed (deletion needs his confirmation):** the NeurIPS scout published its map as a private claude.ai artifact without being asked (https://claude.ai/artifact/AWfAyP5UyNCcu4GFqp5CWE). Should it be deleted?
 
 ## The lead's rhythm
@@ -92,5 +97,5 @@ At each beat, nothing is running. The lead re-reads INTENT from the top intent d
 - **Building on relay.** Agents' chat claims get adopted faster than their documents get read. Read first, then build.
 - **Intent bloat.** INTENT accretes evidence, credits and history. Joseph: *"It will get bloated and if it is not corrected immediately, it will be just yet another thing to integrate."* Correct it at the moment it bloats.
 - **Narrative regeneration.** Summaries written from memory drift from the record. That is why this file only points.
-- **A push sends the whole branch.** In a shared tree, the lead's `git push` carried the integrators' local commits out before review. A.1's landing went out with "Independent check: pending". Before every push, run `git log origin/main..HEAD` as its own command, read every commit that isn't yours, and push only in a later command. Chaining the list and the push in one line repeated the defect: `f4a4a334` went out unread. Better still, give future parallel integrators their own worktree or branch (Agent `isolation: "worktree"`), so the lead merges what it has reviewed.
+- **A push sends the whole branch.** In a shared tree, the lead's `git push` carried the integrators' local commits out before review. A.1's landing went out with "Independent check: pending". Before every push, run `git log origin/main..HEAD` as its own command, read every commit that isn't yours, and push only in a later command. Chaining the list and the push in one line repeated the defect: `f4a4a334` went out unread. Separate commands did not close the race either: `801feaec` was committed between the lead's listing and its push, and went out unread. So push the reviewed SHA, not the branch: `git push origin <sha>:main`. Better still, give future parallel integrators their own worktree or branch (Agent `isolation: "worktree"`), so the lead merges what it has reviewed.
 - **Breadcrumbs.** History and finished items accumulate in working files because writing them feels safe. Joseph: *"It does [do harm]. That's what changelog is for."* Nothing in this directory records what is finished.

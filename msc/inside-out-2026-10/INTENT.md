@@ -66,9 +66,9 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 ## I — The system keeps it true (the lead's part)
 
 - **I.1** This tree stays true and lean, and every agent at every depth knows its KR. · *lead*
-- **I.2** The checks fire without a person. A tracked `.githooks/` runs `md-press --check`, `bin/lint-outline`, `bin/check-links` and `bin/refresh-all --check` on every commit and refuses failures, after the existing debt is cleared (68 files, 10 outline violations). · *not started*
-- **I.3** One open ledger, keyed by claim: every open item carries slug, kind, resolver and date, and every target resolves. The thirteen trackers, the index files, the proposal files, ROUTING and the decision briefs are folded into it or deleted. · *not started*
-- **I.4** Standing is read from recorded checks, not typed: a checks ledger (slug, text hash, who, criterion, outcome), with a lint that flags a changed body whose last check is older. F72 is the first row. · *not started*
+- **I.2** The checks fire without a person. A tracked `.githooks/pre-commit` runs `md-press`, `bin/lint-outline`, `bin/check-links`, `bin/refresh-all --check` and `vsect check` on the tree being committed and refuses failures, and the math pass is gated too. · *hook live and debt cleared; the math pass is not yet gated (md-press decline memory in progress)*
+- **I.3** One open ledger, keyed by claim: every open item carries slug, kind, resolver and date, and every target resolves. The thirteen trackers, the index files, the proposal files, ROUTING and the decision briefs are folded into it or deleted. · *started: `vsect open` is the ledger for findings and questions; no tracker folded in yet, and work items have no kind*
+- **I.4** Standing is read from recorded checks, not typed: a checks ledger (slug, text hash, who, criterion, outcome), with a lint that flags a changed body whose last check is older. · *started: vsect records checks bound to their basis and reports lapses; F72 recorded; `exact 26 (checked 1)`; `confirm` (re-binding a lapsed check) not built*
 - **I.5** Working Notes carry forward pointers and regression guards only. Items are classified by kind and sent to their homes, and lifting audit gold into Working Notes stops. · *not started; seed in `internal-surfaces/wn-ledger-seed/`*
 - **I.6** The always-loaded surface says only what tools cannot check. Tool-enforced rules leave the prose, derivable parts are generated, and every SOP passes md-press. A two-launch probe measures the effect rather than asserting it. · *not started*
 - **I.7** Front surfaces are bound to the record: each restated sentence carries its slug, and a diff fails when the cited body has changed. · *not started*
@@ -81,8 +81,8 @@ Source for I.2–I.8: `system-review/00-system.md` §7. Its test for every mecha
 | Who | KR | Writes to |
 |---|---|---|
 | Lead coordinator (Opus 5.5, session "asf-cleanup") | I, plus coordination | `INTENT.md`, `HANDOFF.md` |
-| vsect MVP builder (Fable), with ASF as the first corpus | I.3, I.4 | `~/src/arch/firmatum/utils/vsect/` (or where it settles) |
-| Hooks builder (Opus) | I.2 | `.githooks/`, the tool fixes, debt outside canon (canon after the integrators land) |
+| vsect builder (Fable), on the normalizer question | I.4 | `~/src/arch/firmatum/utils/vsect/` |
+| Hooks builder (Opus): md-press decline memory, deterministic math converter | I.2 | `~/src/arch/firmatum/utils/md-press/`, `bin/check-commit` |
 
 These are finished and on the line through the lead:
 
