@@ -64,6 +64,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 - **H.1** Outline claim cells are one line each. Their paragraph content moves to the missing chapter intros or into bodies. · *not started*
 - **H.2** Dependency graphs are regenerated on every build, or removed. The stage ladder leaves the outline display. Every OUTLINE row has a file or an honest mark, and every `old-*` file has a fate. · *not started*
 - **H.3** Comprehension is measured before and after on the same chapters, with fresh readers. · *not started*
+- **H.4** Pedagogy gold has a home with Joseph as test reader, and the reader-clarity gaps auditors named ("Readers often ask") are answered in the bodies where they arise, not logged. · *not started; proposed bottom-up by the Working Notes gold drain*
 
 ## I — The system keeps it true (the lead's part)
 
