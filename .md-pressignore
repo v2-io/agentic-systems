@@ -18,6 +18,7 @@ LOG.md
 msc/reflections/
 msc/reflections-rowan-2025-12/
 releases/
+doc/readme/src/_lexicon-full-archive.md
 
 # Audit records: de-novo first-encounter reports and the per-cycle findings
 # written from them. They are what a reader said at the time, kept as said.
@@ -45,6 +46,9 @@ msc/quiz-responses/
 FINDINGS.md
 README.md
 README-auditor.md
+doc/readme/src/_findings-summary.md
+doc/readme/src/_recent-progress.md
+doc/readme/src/_known-issues.md
 LEXICON.md
 CURRENT-VOL1.md
 CURRENT-VOL1-APPENDICES.md

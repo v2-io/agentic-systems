@@ -11,11 +11,11 @@ The 3 most recent cycle narratives. Full record at [`CHANGELOG.md`](CHANGELOG.md
 
 Two landings from the practica `01-theory`-dive remainder (`spikes/ROUTING.md` log (q)/(r)), both elected by Joseph after the remainder was routed.
 
-### Resource-structure axis opened as an exploratory off-spine branch (Φ(fight)-prompted)
+### Resource-structure axis opened as an exploratory off-spine branch (Φ(fight)-prompted)<!--md-press:not-math:Φ(fight)-->
 
 *2026-05-19*
 
-An external-stimulus exercise — the Φ(fight) collective's adversarial-multi-agent-embodied research *agenda* (no published output exists; verified empty repos and a funding proposal), used strictly as an ideation prompt — pressure-tested AAT's adversarial chapter and produced one landed branch plus methodology worth recording.
+An external-stimulus exercise — the Φ(fight) collective's adversarial-multi-agent-embodied research *agenda* (no published output exists; verified empty repos and a funding proposal), used strictly as an ideation prompt — pressure-tested AAT's adversarial chapter and produced one landed branch plus methodology worth recording.<!--md-press:not-math:Φ(fight)-->
 
 ### Accumulation-typing notation convention adopted (D1); the math and register landings since completed (see Update 2026-05-19)
 

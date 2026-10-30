@@ -165,7 +165,7 @@ Do NOT use "Solid," "Confident," or "Plausible" as tier labels — these are not
 
 4. **Sector-condition framework primary.** The linear ODE is pedagogical.
 
-5. **Directed separation is architectural, not parametric.** Three architecture classes: GUC Class 1 (Separated — separation by construction), GUC Class 3 (Coupled — fails by construction), GUC Class 2 (Partial — bounded coupling). The κ-as-scalar framing is a category error. Section II results apply exactly to Separated agents. Logogenic agents are GUC Class 3 (Coupled) and need coupled formulation from the start.
+5. **Directed separation is architectural, not parametric.** Three architecture classes: GUC Class 1 (Separated — separation by construction), GUC Class 3 (Coupled — fails by construction), GUC Class 2 (Partial — bounded coupling). The $\kappa$-as-scalar framing is a category error. Section II results apply exactly to Separated agents. Logogenic agents are GUC Class 3 (Coupled) and need coupled formulation from the start.
 
    > [!warning]
    > **Goal-Update Coupling Class numbering changed 2026-05-09.** Anything older than git tag `pre-guc-rename-2026-05-09` uses the old Class numbering:

@@ -138,7 +138,7 @@ Primary aspect: approachability / teachability. Secondary: beauty. **Value: +3 f
 
 **Portfolio has expanded underneath this proposal.** Three segments post-dating the original entry (`#der-agent-opacity`, `#der-interaction-channel-classification`, `#disc-identifiability-floor` Instances 1/2/3) added observability structure the original instance-list doesn't anticipate. Re-catalog before any landing decision.
 
-**Scoping spike** (2–3 sessions) is now genuinely investigation-first: is observability one variable (with forward $U_o$ / backward $H_b$ / cross-agent κ / composite Λ as projections of one object) or four structurally distinct variables sharing a name? Current segment evidence is genuinely ambiguous. This is the kind of question CLAUDE.md §"Strengthen before softening; attempt the improbable" explicitly calls for — a falsification test of the unification before segment-level work.
+**Scoping spike** (2–3 sessions) is now genuinely investigation-first: is observability one variable (with forward $U_o$ / backward $H_b$ / cross-agent $\kappa$ / composite $\Lambda$ as projections of one object) or four structurally distinct variables sharing a name? Current segment evidence is genuinely ambiguous. This is the kind of question CLAUDE.md §"Strengthen before softening; attempt the improbable" explicitly calls for — a falsification test of the unification before segment-level work.
 
 **Three outcomes the spike could produce:**
 - **Unification validated (+9):** AAT re-centers on observability-as-master-variable; new organizing dimension. Execution 6–8 sessions for full re-centering.
