@@ -59,7 +59,7 @@ The script drops gaps above the window, and the dropped share rises with $d$ (ob
 - outcome: narrowed
 - recheck: nested fit at caps 60, 480, 1440, 10080 and none; simulate a pure exponential with obsidian-linter's $d$ distribution and log-noise s.d. 2.0 through each cap
 
-Uncapped, the corpus gives $a = +0.078$ [+0.001, +0.153]. Obsidian-linter's power slope reaches 0.85 [0.68, 1.01] and $b$ 1.0–1.2. In ink, with lines as a covariate, $b$'s interval reaches zero at every cap. Truncation attenuates a true $a$ by 30–60% but yields $b \le 0.14$. What survives every cap: $b$ far above what truncation makes, and obsidian-linter's negative $a$. "A pure exponential does not describe these data" stands; "sublinear" and "indistinguishable from zero" need scoping. Replacement text in write-up N1, which also lists the four restatements to align.
+Uncapped, the corpus gives $a = +0.078$ [+0.001, +0.153]. Obsidian-linter's power slope reaches 0.85 [0.68, 1.01] and $b$ 1.0–1.2. In ink, with lines as a covariate, $b$'s interval reaches zero at every cap. Truncation attenuates a true $a$ by 30–70% but yields $b \le 0.14$. What survives every cap: $b$ far above what truncation makes, and obsidian-linter's negative $a$. "A pure exponential does not describe these data" stands; "sublinear" and "indistinguishable from zero" need scoping. Replacement text in write-up N1, which also lists the four restatements to align.
 
 ## C5 (check)
 - target: segment:emp-changeset-size-principle
