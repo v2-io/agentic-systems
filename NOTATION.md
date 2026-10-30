@@ -195,6 +195,18 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 
 ## Conventions
 
+**Lettered condition families.** Several segments name a short list of conditions by letter. The families are distinct, and a letter means nothing outside its segment; each is declared here once so a reader meeting "(C2)" knows which family to read it in.
+
+| Family | Letters | Home | What the letters name |
+|---|---|---|---|
+| Identification of own-action effects | *none* — the standard names *positivity*, *sequential ignorability*, *consistency* are used | #der-loop-interventional-access (also #def-value-object) | the conditions under which an agent's own action–outcome data identifies $P(o \mid do(a), Z_t)$ at a conditioning set $Z_t$; formerly lettered (C1)–(C3) |
+| Wrapper admissibility | (C1), (C2), (C2′), (C3) | #der-class-coercion-via-wrapping | goal-blind admissibility; stationary component conditional; no goal-correlated cross-call state; no implicit goal-inference |
+| Recursive-update constraints | C1, C2, C3 | #der-recursive-update | temporal ordering; mediated access; state completeness |
+| Value-object continuation conventions | C1, C2, C3 | #def-value-object | one-step improvement; receding-horizon replanning; Bellman optimum |
+| Edge-update causal validity | (E1), (E2), (E3) | #scope-edge-update-causal-validity | parent is an action leaf; outcome attributable; execution conditions vary — formerly lettered (C1)–(C3) |
+
+Three families still share the letters C1–C3 (wrapper admissibility, recursive-update constraints, continuation conventions); the collision is declared rather than resolved, and the continuation conventions are the natural next rename since they share a segment with the identification conditions.
+
 **Subscript $t$**: Discrete time index or macroscopic continuous time. Context disambiguates: $M_t = f(M_{t-1}, o_t, a_{t-1})$ is discrete; $d\lVert\delta\rVert/dt$ is continuous.
 
 **Subscript $\tau$**: Continuous timestamp of an individual event. Used in the event-driven formulation for microscopic update dynamics.

@@ -555,7 +555,7 @@ The current inevitability-core members, with why inevitability is plausible:
 | #result-sector-condition-stability + #deriv-sector-condition | Lyapunov stability result applied to mismatch dynamics. |
 | #result-sector-persistence-template | Abstract Lyapunov argument; six AAT results instantiate it. |
 | #result-structural-adaptation-necessity | Parametric update converges within model class; wrong class forces structural change. |
-| #der-orient-cascade | Resolution order forced by information dependency ( $M_t$ before $\Sigma_t$ before $O_t$ ). |
+| #der-orient-cascade | Resolution order: $M_t$ before readers of $M_t$ is forced by information dependency; objective revision last is a recommendation. |
 | #def-satisfaction-gap / #def-control-regret | Arithmetic once $V_{\text{ideal}}, A_O, V_{\text{current}}$ are defined. Diagnostic value is the insight. |
 | #der-causal-hierarchy-requirement | Application of Bareinboim et al.'s causal hierarchy result to $Q_O$ evaluation. |
 | #der-loop-interventional-access | Feedback loop generates interventional data by construction. |

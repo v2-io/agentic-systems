@@ -25,7 +25,7 @@ The chat-paradigm baseline: a logogenic agent operating without scaffolding, mul
 
 ## Epistemic Status
 
-**Sketch.** The scope condition is definitional once #scope-channel-collapse is granted; the *consequences* for what AAT machinery survives are inherited from the Part II survival classification ( #result-section-ii-survival) under the most-restrictive sub-scope. Structural results applicable in this sub-scope: full bias bound (worst case for $\kappa \cdot \mathcal{A}$ since no scaffolding mitigates ambiguity); sandbox evaluation ceiling ( #disc-sandbox-evaluation-ceiling — a transportability / external-validity ceiling on carrying evaluation-setting evidence to deployment, not a Pearl-level demotion of forkable data); statelessness-induced empathy result ( #obs-backward-inference-empathy).
+**Sketch.** The scope condition is definitional once #scope-channel-collapse is granted; the *consequences* for what AAT machinery survives are inherited from the Part II survival classification ( #result-section-ii-survival) under the most-restrictive sub-scope. Structural results applicable in this sub-scope: the goal-dependence displacement bound at its ceiling and the distortion bound with no scaffolding to shrink the residual spread of the goal-relevant quantity ( #scope-observation-ambiguity-modulation); sandbox evaluation ceiling ( #disc-sandbox-evaluation-ceiling — a transportability / external-validity ceiling on carrying evaluation-setting evidence to deployment, not a Pearl-level demotion of forkable data); statelessness-induced empathy result ( #obs-backward-inference-empathy).
 
 **Max attainable status:** definition with conditional consequences. The scope itself is exact; the *applicability* of specific AAT results within it is a downstream question per result.
 
@@ -41,7 +41,7 @@ This sub-scope is what the field commonly imagines when it says "LLM agent" — 
 
 The framework's posture toward this sub-scope is *characterizing* rather than *dismissive*. Several substantive claims apply directly:
 
-- The bias bound ( #scope-observation-ambiguity-modulation, #deriv-observation-ambiguity-bias-bound) applies at full strength: $\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa \cdot \mathcal{A}$ with $\kappa \approx 1$ and no scaffolding-mediated reduction of $\mathcal{A}$ (the goal-resolvable residual uncertainty in observation given context).
+- The displacement bound ( #deriv-observation-ambiguity-bias-bound) applies at full strength: with $\kappa \approx 1$ the belief's goal-dependence is bounded only by $\sqrt{2\, H(G \mid e_\tau, M_{\tau^-})}$, the ceiling set by how much goal information there is to transfer; and the distortion ( #scope-observation-ambiguity-modulation) has no scaffolding to shrink the residual spread of the goal-relevant quantity the observations leave, so under the fixed-gain hypothesis it runs at the processor's full gain on every open observation.
 - The sandbox evaluation ceiling ( #disc-sandbox-evaluation-ceiling) applies: whether evaluation-setting evidence about a primitive-logogenic deployment transports is governed by the selection diagram between the two settings, and the repairs are an invariance argument or deployment-time data — not more evaluation.
 - 100% context turnover ( #obs-context-turnover) characterizes the session-boundary discontinuity.
 - Backward-inference empathy ( #obs-backward-inference-empathy) is forced by the statelessness — primitive logogenic agents are *trained for* ToM by their architectural condition, not despite it.
@@ -66,7 +66,7 @@ The transition to §03.II (scaffolded) is what every practical "agentic system" 
 
 **Open questions for verification:**
 - Where exactly is the boundary between primitive and scaffolded? Does a single tool call count as scaffolding? Probably yes (it adds external action channel); but a single "thinking block" probably does not (it's still single-pass).
-- Can the bias bound be measured empirically for primitive-logogenic agents? Direct empirical validation of the $\kappa \cdot \mathcal{A}$ product would calibrate the bound's tightness.
+- Can the distortion be measured empirically for primitive-logogenic agents? It needs outcomes or a reference posterior to separate from allocation, and the fixed-gain hypothesis's regression test ( #scope-observation-ambiguity-modulation) is the experiment; goal-probing alone measures goal-dependence, not distortion.
 
 **Promotion-blocking:** dependencies #scope-channel-collapse just landed; #scope-logogenic-agent at draft; #obs-context-turnover at draft. Could promote together as a cluster.
 

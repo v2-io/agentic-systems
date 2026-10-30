@@ -71,7 +71,7 @@ Each Part II result is classified by whether its statement or derivation referen
 | 12 | #def-satisfaction-gap | Definition: $\delta_{\text{sat}} = V_{O_t}^{\min} - A_O(M_t; \Pi, N_h)$; computed from $(M_t, V_{O_t})$ regardless of provenance |
 | 13 | #def-control-regret | Definition: $\delta_{\text{regret}} = A_O - V_O(M_t, \pi_{\text{current}}; N_h)$; same reasoning |
 | 14 | #der-observability-dominance | When $\sigma_v \approx 0$, $\eta_{\text{edge}} \to 0$; information-channel property |
-| 15 | #scope-edge-update-causal-validity | Conditions (C1-C3) and regimes (A/B/C) are domain/interface properties |
+| 15 | #scope-edge-update-causal-validity | Conditions (E1)–(E3) and regimes (A/B/C) are domain/interface properties |
 | 16 | #disc-credit-assignment-boundary | DAG inference structure; "persistence is credit-assignment-free" (Prop B.5) holds for Class 3 (Coupled) |
 
 Additionally, the DAG *structure* of #def-strategy-dag (acyclicity, propositional nodes, AND/OR combination, status propagation) survives exactly — these are properties of the strategy representation, not of the processing architecture.
@@ -113,13 +113,13 @@ For the five approximately surviving results (in Class 3 (Coupled) agents), the 
 
 $$\Delta M_{\text{bias}} = f_X^M(X_{\tau^-}, e_\tau) - f_M(M_{\tau^-}, e_\tau)$$
 
-where $f_X^M$ denotes the epistemic component of the coupled update. This bias is bounded (in expectation) by the mutual-information form derived in #scope-observation-ambiguity-modulation (equation at line 43):
+where $f_X^M$ denotes the epistemic component of the coupled update. Two quantities have to be kept apart here. The belief's **goal-dependence** — the displacement of the goal-conditional post-update law from the goal-marginal one — is bounded in expectation by the transferred goal information ( #deriv-observation-ambiguity-bias-bound): in the Fisher–Rao metric and the small-information regime,
 
-$$\lVert\Delta M_{\text{bias}}\rVert \leq C \cdot \kappa_{\text{eff}}(e_\tau) \cdot H(\Omega_\tau \mid e_\tau, M_{\tau^-}) = C \cdot \kappa_{\text{processing}} \cdot I(G;\, \Omega_\tau \mid e_\tau, M_{\tau^-})$$
+$$\mathbb{E}\,\lVert\Delta M_{\text{bias}}\rVert_{FR} \;\leq\; \sqrt{2}\,\sqrt{\kappa_{\text{processing}} \cdot H(G_t \mid e_\tau, M_{\tau^-})}\,(1 + o(1)),$$
 
-where $C$ is a domain-dependent constant and $\kappa_{\text{eff}}(e_\tau) = \kappa_{\text{processing}} \cdot \mathcal{A}(e_\tau)$. This is a strict refinement of the coarser form $C \cdot \kappa_{\text{processing}} \cdot H(G_t \mid e_\tau, M_{\tau^-})$, since $I(G;\Omega_\tau \mid e_\tau, M_{\tau^-}) \leq H(G_t \mid e_\tau, M_{\tau^-})$: only the portion of the residual world-state uncertainty that is *goal-resolvable given the observation* can be channeled into epistemic bias. The bias is zero when $\kappa = 0$ (Separated), zero when $\mathcal{A}(e_\tau) = 0$ (the observation's residual uncertainty is goal-neutral or absent), and maximal when $\kappa \approx 1$ *and* the observation is interpretively goal-resolvable.
+with $\kappa_{\text{processing}} \cdot H(G_t \mid e_\tau, M_{\tau^-}) = I(G; M_{\tau^+} \mid e_\tau, M_{\tau^-})$ by the definition of $\kappa$ ( #der-directed-separation), and a $W_2^2$ form linear in the same information under a log-Sobolev condition. It is zero at $\kappa = 0$ and it saturates for any noiseless coupling, however small, because mutual information measures the goal's recoverability and not the belief's displacement. The belief's **distortion** — its departure from the calibrated belief given the agent's information, which is what makes a Part II diagnostic read wrong rather than merely goal-dependent — is a different quantity: it is zero for calibrated goal-dependent allocation and is bounded model-free only by the size of the reweighting the processor applies ( #scope-observation-ambiguity-modulation). Under that segment's fixed-gain tilt hypothesis the distortion factors into a processor gain times the residual spread of the goal-relevant quantity under the calibrated posterior, which is where the familiar engineering fact lives: binary, verifiable observations pin the quantity the goal cares about and leave a tilt nothing to act on, whatever $\kappa$ is. That is a hypothesis with a regression test, not a theorem, and the former product law $\kappa \cdot \mathcal{A}(e_\tau)$ that carried it here is retired ( #scope-observation-ambiguity-modulation, Epistemic Status).
 
-The impact of $\kappa$ on approximation quality is therefore **modulated by observation ambiguity** — binary, verifiable observations carry minimal goal-conditioning bias regardless of $\kappa$. See #scope-observation-ambiguity-modulation for the full treatment, including the definition of $\mathcal{A}(e_\tau)$ and the operationalization of $\hat{\mathcal{A}}$.
+The approximation quality of the surviving results is therefore read in two parts: the diagnostics' *goal-dependence* is bounded by $\kappa$ through the displacement bound, and their *error* is governed by the distortion, whose dependence on observation sharpness is the hypothesis.
 
 ## Epistemic Status
 

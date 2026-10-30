@@ -132,7 +132,7 @@ The standard Information Bottleneck ( #form-information-bottleneck) and the four
 
 ### Misspecification-Cost Quantification
 
-Structural adaptation ( #result-structural-adaptation-necessity) names *when* to switch model classes. It does not quantify the *continuous degradation* from a mildly misspecified model under a finite information budget. Adjacent to #scope-observation-ambiguity-modulation's $\kappa \cdot \mathcal{A}$ bound but not covered by it. The expected floor: under fixed information budget, the degradation rate from misspecification is bounded below by an information-theoretic quantity (likely related to the KL gap between true and assumed model classes). Open.
+Structural adaptation ( #result-structural-adaptation-necessity) names *when* to switch model classes. It does not quantify the *continuous degradation* from a mildly misspecified model under a finite information budget. Adjacent to #scope-observation-ambiguity-modulation's distortion bound but not covered by it. The expected floor: under fixed information budget, the degradation rate from misspecification is bounded below by an information-theoretic quantity (likely related to the KL gap between true and assumed model classes). Open.
 
 ### Tier-Switching Policy Cost
 

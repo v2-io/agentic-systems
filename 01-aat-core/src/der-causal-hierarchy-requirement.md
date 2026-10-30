@@ -15,7 +15,7 @@ The direct application of Pearl's causal hierarchy ( #def-pearl-causal-hierarchy
 
 The result is paired with a sharp *scope narrowing*: attention restricts to **learning purposeful agents** — agents that must *acquire or refine* Level-2 knowledge during operation. This is a named sub-scope of #scope-agency that excludes *pre-compiled* interventional structure (PID controllers where the designer pre-computed the control law, LQR where the separation principle gives the optimal policy from model parameters, hardcoded reactive policies). Pre-compiled agents are still within agency scope (they have objectives and act on them) but outside learning-agent scope — their causal structure was externally supplied by a designer who had Level-2 access. *All remaining Part II results operate within learning-agent scope unless explicitly noted otherwise.* The derivation is exact as a direct application of the external hierarchy theorem to the value-object definition; the scope narrowing is a definitional restriction, not a derived result.
 
-The distinction between intervention and conditioning is the *core* of causal inference and matters whenever the agent's action-selection policy correlates with unobserved confounders — generic for any agent with internal state, plans, or memory. A developer needs "if I refactor this module, will tests pass?" not "modules that were refactored tend to have tests that fail" (the latter is biased by which modules the team chose to refactor). The Discussion below treats the concrete cases (developer / commander / RL agent), why pre-compiled agents fall outside, and the empirical bridge to Hafez et al.'s Information Digital Twin — whose 89% perturbation-detection accuracy versus 44% for reward-based monitoring is consistent with the present segment's claim that the loop's interventional data is information-theoretically richer than outcome monitoring alone.
+The distinction between intervention and conditioning is the *core* of causal inference and matters whenever a cause of the agent's action lies outside the set its estimates are stratified on — not whenever the agent has internal state, plans or memory, since conditioning on the state the action was chosen from blocks the selection ( #der-loop-interventional-access). A developer needs "if I refactor this module, will tests pass?" not "modules that were refactored tend to have tests that fail" (the latter is biased by which modules the team chose to refactor, a decision input the learner typically does not record). The Discussion below treats the concrete cases (developer / commander / RL agent), why pre-compiled agents fall outside, and the empirical bridge to Hafez et al.'s Information Digital Twin — which detects 89.3% of coupling degradations against 44.0% for reward-based monitoring, consistent with the present segment's claim that the loop's interventional data is information-theoretically richer than outcome monitoring alone.
 
 ## Formal Expression
 
@@ -60,17 +60,17 @@ Pre-compiled agents are within agency scope (they have objectives and act on the
 
 ### Monitoring the information structure of the loop detects perturbations better than monitoring outcomes
 
-**Register:** descriptive — the body's reading of Hafez et al. (2026): the Information Digital Twin on the $(S, A, S')$ stream detects environmental perturbations at 89% against 44% for reward-based monitoring, taken as consistent with the loop supplying richer than outcome data.
+**Register:** descriptive — the body's reading of Hafez, Reid & Nazeri (2026, arXiv:2603.01283): the Information Digital Twin on the $(S, A, S')$ stream detects 89.3% of coupling degradations against 44.0% for reward-based monitoring, with 4.4 times lower latency, taken as consistent with the loop supplying richer than outcome data.
 
-**Population:** the agents the cited study ran, as the body reports them; the study's setup has not been read in this project, so the population is not named here by property. The body extends the reading to agency-scope agents in general.
+**Population:** the 21 trained continuous-control RL agents of the cited study (abstract read 2026-10-30; the experimental setup is unread, so what counts as a coupling degradation there is the paper's definition, not stated here). The body extends the reading to agency-scope agents in general.
 
-**True of:** the cited study's agents, on its report (the figure and the arXiv identifier were flagged by an auditor for verification before external use; Working Notes).
+**True of:** the cited study's agents, on its abstract.
 
 **False of:** none known.
 
-**Falsifier:** a monitor on the $(S, A, S')$ stream performing no better than reward monitoring in the same setting. The step from "coupling monitoring detects perturbations" to "the loop supplies identified Level-2 effects" is the body's inference, not the study's claim, and no result of this segment rests on it.
+**Falsifier:** a monitor on the $(S, A, S')$ stream performing no better than reward monitoring in the same setting. The step from "coupling monitoring detects degradations" to "the loop supplies identified Level-2 effects" is the body's inference, not the study's claim, and no result of this segment rests on it.
 
-**Instantiated:** by an external study as reported, not by this project; the figures and their source await the verification the Working Notes flag.
+**Instantiated:** by an external study as reported, not by this project.
 
 ## Discussion
 
@@ -79,13 +79,13 @@ Pre-compiled agents are within agency scope (they have objectives and act on the
 **What "Level 2 knowledge" means concretely.** For different agents:
 - A developer needs to know "if I refactor this module, will tests still pass?" (not just "modules that were refactored tend to have tests that fail")
 - A commander needs to know "if I move forces north, will the enemy respond by retreating?" (not just "when forces moved north, the enemy often retreated")
-- An RL agent in a partially observed environment, or one whose action depends on something unobserved that also affects reward, needs $Q(s, a) = \mathbb{E}[R \mid s, do(a)]$ rather than $\mathbb{E}[R \mid s, A=a]$: the two differ by the selection the policy induces through what $s$ does not record. In a fully observed MDP the policy depends on $s$ alone and the two coincide.
+- An RL agent in a partially observed environment, or one whose action depends on something unobserved that also affects reward, needs $Q(s, a) = \mathbb{E}[R \mid s, do(a)]$ rather than $\mathbb{E}[R \mid s, A=a]$: the two differ by the selection the policy induces through what $s$ does not record. In a fully observed, stationary MDP the two coincide — not because the policy depends on $s$ alone (a learning agent's policy also reads its value table, a statistic of past outcomes), but because stationarity of the kernel makes that statistic outcome-irrelevant given $s$ ( #der-loop-interventional-access).
 
-The distinction between $do(a)$ and $A = a$ is the core of causal inference. It matters whenever the agent's action-selection policy correlates with unobserved confounders.
+The distinction between $do(a)$ and $A = a$ is the core of causal inference. It matters whenever a cause of the action lies outside the conditioning set and also bears on the outcome.
 
 **Why pre-compiled agents are excluded.** A thermostat "knows" that turning on the heater raises temperature — but this knowledge was designed in, not learned. The thermostat never needs to reason about interventions because the intervention-outcome mapping is hardwired. AAT's purposeful-agency machinery is specifically for agents that face uncertainty about how their actions affect the world and must reduce that uncertainty through experience.
 
-**Bi-predictability as empirical evidence for Level 2 advantage.** Hafez et al. (2026) measure the information structure of the agent-environment loop via bi-predictability $P = \text{MI}(S,A; S') / C$, capturing how tightly coupled the agent is to its environment through the action channel. Their Information Digital Twin (IDT), which monitors the loop's information geometry, detects environmental perturbations at 89% accuracy versus 44% for reward-based monitoring. This is consistent with the present segment's claim: the feedback loop provides richer (Level 2) data than outcome monitoring alone. Hafez's framework measures the coupling; AAT explains *why* the coupling is information-theoretically superior — because the loop generates interventional data by construction ( #der-loop-interventional-access), not merely associational data. The measurement (Hafez) and the explanation (AAT) are complementary.
+**Bi-predictability as empirical evidence for Level 2 advantage.** Hafez, Reid & Nazeri (2026, arXiv:2603.01283) measure the information structure of the agent-environment loop via bi-predictability $P = \text{MI}(S,A; S') / C$, capturing how tightly coupled the agent is to its environment through the action channel. Their Information Digital Twin (IDT), which monitors the loop's information geometry, detects 89.3% of coupling degradations across 21 trained continuous-control agents, against 44.0% for reward-based monitoring (abstract; setup unread here). This is consistent with the present segment's claim: the feedback loop provides richer (Level 2) data than outcome monitoring alone. Hafez's framework measures the coupling; AAT explains *why* the coupling is information-theoretically superior — because the loop generates interventional data by construction ( #der-loop-interventional-access), not merely associational data. The measurement (Hafez) and the explanation (AAT) are complementary.
 
 ## Working Notes
 
@@ -109,7 +109,6 @@ Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo audi
 
 #### 3. Follow-up items
 
-- **Hafez 2026 IDT empirical anchor — verify (Phase-2).** The 89% (perturbation detection) vs 44% (reward-based monitoring) figures recur across segments. One auditor spot-checked: the paper appears to exist (arXiv `2603.01283`), and search metadata reports the matching claim (IDT 89.3% vs 44.0%, 4.4× lower median latency) — *evidence for coupling-monitoring performance, not by itself proof that the loop supplies identified Level-2 effects* (Codex/Claude, AUDIT-WORKING-526815; flagged high-priority Phase-2 at AUDIT-WORKING-471203). Confirm the figure and the arXiv id before any external-facing use.
 - **"Purely predictive models" should read "purely associational models."** A model trained on randomized interventions or carrying causal/action-transition structure *can* make $do(a)$ predictions; the problem is L1-only prediction, not prediction as such (Codex/Claude, AUDIT-WORKING-526815). Editorial precision.
 - **Scope-propagation watch.** Later Section-II claims that mention PID / LQR / thermostats should say whether they are illustrative agency-scope examples or inside learning-agent scope — the cut is load-bearing and easy to blur downstream (Codex/Claude, AUDIT-WORKING-526815).
 
