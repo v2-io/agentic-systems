@@ -6,7 +6,7 @@
 
 ## Questions (with the reading I proceed on)
 
-1. **How do I attach a new source to an item that already exists?** vsect has no verb for it: `recheck` refuses an item that was opened directly or already re-checked, and hand-editing item files bypasses the record. *Reading I proceed on:* where my source only adds evidence to an existing item, I open no duplicate; I record the disposition here as LEDGER with the extra source named, so the coordinator can fold it in. Where my source changes what the item is, I open a new item on the same `segment:` that names the existing item, so `vsect open segment:<slug>` shows them side by side. A `vsect attach item:x --source "…"` (or `note --joins item:x`) would serve all nine drain agents; that is a request for the vsect builder (I.4/I.9), and I leave vsect's code alone.
+1. *(answered mid-run, by the other drainers' practice and the coordinator's relay)* **How do I attach a new source to an item that already exists?** I append an "Also / Source added (drain-influx-2-firmatum)" paragraph to the item or question file, run `vsect revise <id>`, and commit by path. Where my source changes what an item is, I open a companion item on the same `segment:` that names the existing one. A dedicated verb (`vsect attach` or `note --joins`) would still make this part of the record rather than a convention. That is a request for the vsect builder (I.4/I.9); I leave vsect's code alone.
 
 ## Method
 
@@ -50,6 +50,28 @@ Items 1, 2 and 4: **ADD → G.2**, in the TST item, at the note's own proposed t
 - **Regression guard for `#scope-channel-collapse` (one forward pass, not a notation).** **ASIDE**: the Formal Expression (lines 24–26) states the forward-pass condition. The map's author caught the misreading by reading the segment, so the segment did its job, and one reader's near-miss is not a pattern that justifies a guard sentence.
 - **Domain instances (M3, M4, M5, M10, §3 "superset of an incumbent").** M5 is in the multi-timescale item. The rest I **set ASIDE** as standalone items, because the map's own external review (`MINEFIELD-MAP-REVIEW.md` B3) demotes M1, M2, M4 and M7 to hypothesized transfers of shape and keeps M3 only with a stated mapping premise. They are illustrations for a domain table, and none of the target segments carries a format-history table today. If a pedagogy pass (H) wants worked instances, M10 for `#disc-anti-collapse` (attribute-vs-element as repair-distinct things merged) and M3 for `#der-interaction-channel-classification` are the two the review lets stand.
 - **The *derived/hypothesized/evidenced* register for outward applications (map §0).** Process input for I.x, carried below under adjacent findings.
+
+### L1–L3. Vivarium's object map, unlawfulness budget, and logical depth
+
+Canon moved under these rows today. A.1 landed the typed target $S_t=(\Omega_t,\theta)$ with **invariance** as the state/law cut (`#scope-adaptive-system` line 31), and the collapse-map table (line 93) now carries the "speed" row, which the spike called compute-shortfall.
+
+- **L1 consequence 1 (phase transition as law-promotion).** **IN in substance**. Canon's cut is invariance along the run under every policy, and "a drifting regime is slow state, and $\theta$ holds the law of its drift". A vivarium phase freeze is the author re-declaring the world, which the segment's two declarations (line 21) already cover. Nothing to add.
+- **L1 consequence 2 (phase ladder as a $\rho$-schedule).** **ASIDE**: a vivarium design hypothesis, unratified by its own note, and nothing in it is for AAT to derive beyond the persistence condition it already uses.
+- **L1 consequence 3 (frame-relative aleatoric boundary).** **IN**, as the scout found (`#obs-authored-world-laboratory` V2); the new "chance" row of the collapse map says the same thing.
+- **L1 consequence 4 (two-layer mind identifiability as an AAT question).** **ASIDE** for asf: an experiment gated behind vivarium's ETHICS and Level C, and stated in terms of $\mathcal A$, which canon deleted today (it joins the F.3 consumer list).
+- **L2 unlawfulness budget.** **ADD as a candidate answer to an open question**, appended to `question:where-is-the-line-between-what-an-agent-s-design` (A.1's integrator asked it today). The budget says a regularity judged invariant from a finite window carries a residual that accumulates. Read against the invariance cut, that suggests the line the question asks for: a design rules out worlds only where it was set by construction or authorship; a learned or pretrained design shrinks nothing and carries a residual on what it treats as law. The appendix also names `#disc-law-discovery-ceiling` as the Discussion home. The scout's suggested home was "wherever $\theta$ lands"; it has landed, and the question is the live place.
+- **L3 Bennett's logical depth.** **ADD → F.2**, item `candidate-named-precedents-for-the-speed-row-of`. The vivarium line is an agent's unratified identification, and logical depth is a property of an object, not a ratio between agent and world. The closer standard name is computational irreducibility (Wolfram 2002). The item offers both as neighbours to state, not names to adopt.
+
+### L4. Vivarium taxonomy spike (§2 and the findings list re-read)
+
+- **2.1 (exo/endo is whether the boundary is escapable; the inhabiting exo agent brackets its access).** **IN / superseded**. The sentence the spike corrected ("a system with direct access to full environment state is outside AAT's scope") is gone from `#def-agent-environment` at HEAD (`01a67cc2`, today). Line 31 now says direct access to the current state does not close the boundary, because the law is only inferred. Membership is then the typed predicate on the coupling being analysed, so an inhabitant analysed at its avatar's channel is inside. Consent, honesty and a retained home estate are vivarium's ethics, not AAT content.
+- **2.2 (the access matrix catalogues boundary-integrity violations AAT assumes away).** **ASIDE**: vivarium's taxonomy. AAT now states its boundary commitment rather than assuming it.
+- **5.1 (vivarium's "logogenic intelligence" = ASF's primitive logogenic).** Retracted by vivarium itself on 2026-07-13 (`LEXICON.udon` line 366), but `~/src/arch/charter/concept-matrix.md` §F still records it as "F5.1 collision fixed". **DEFECT (outward) → F.3**, item `a-cross-member-mapping-that-misstates-asf-s-prim`. The same item carries the open one-letter collision between vivarium's *logogenic intelligence* and ASF's *logozoetic intelligence*, which have opposite moral valence.
+- **5.2 (vivarium's bet reduces to a directed-separation measurement on in-world logogenic agents).** **ASIDE** for canon: it is vivarium's research program, and E.1 ($\kappa$/tilt measurement on LLM families) is the asf-side measurement.
+
+### L5. Multiscale seams
+
+Folded into item `outside-domains-that-meet-der-multi-timescale-st`. The scout's primary claim is stale: vivarium measured the state half solved. The live residue is a law that does not commute with restriction, and it bears on the renormalization paragraph, not on jumps. See U1.
 
 ## What was read whole, sampled, not reached
 
