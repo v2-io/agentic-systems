@@ -61,7 +61,7 @@ This is *definitional* — it names regions of a continuum for analytical conven
 
 **True of:** every agent in the population, by the theorem.
 
-**False of:** myopic agents ($n = 1$), for which their Theorem 2 shows no extraction procedure does better than chance.
+**False of:** myopic agents ($n = 1$): their Theorem 2 shows the bound is tight there, so no extraction procedure does better than the bound allows.
 
 **Falsifier:** for the extension beyond finite MDPs, an agent competent at depth-$n$ goals in a larger space from which no predictive model is extractable.
 

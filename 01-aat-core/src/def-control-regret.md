@@ -59,7 +59,7 @@ Always non-negative — given $\pi_{\text{current}} \in \Pi$ and both terms eval
 
 **False of:** not known; no comparison has been run.
 
-**Falsifier:** a task family mixing infeasible goals and fixable plans (Tileworld-style worlds, software-repair benchmarks, the vivarium) on which agents routing by the 2×2 do no better, in value achieved or in effort spent on optimally-failing plans, than agents responding to total shortfall or than standard RL. The lineage that has tested when to drop a goal rather than a plan — intention as choice with commitment (Cohen & Levesque 1990) and the goal-reasoning line in planning, both cited from recall, primary not read in this project — is uncited in the body and is where the claim would be judged.
+**Falsifier:** a task family mixing infeasible goals and fixable plans (Tileworld-style worlds, software-repair benchmarks, the vivarium) on which agents routing by the 2×2 do no better, in value achieved or in effort spent on optimally-failing plans, than agents responding to total shortfall or than standard RL. The lineage that has tested when to drop a goal rather than a plan — intention as choice with commitment (Cohen & Levesque 1990[^recall-2026-10-30]) and the goal-reasoning line in planning — is uncited in the body and is where the claim would be judged.
 
 **Instantiated:** no. The one empirical comparison in Part II (the simulation check in #disc-exploit-explore-deliberate) tests three-way allocation, not the 2×2, and went against the deliberation axis.
 
@@ -120,3 +120,5 @@ Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo audi
 #### Belongs elsewhere
 
 - **ELI / Section IV — "optimally failing" as the mathematics of despair, and objective-revision as a psychological necessity.** The capability-limit cell ($\delta_{\text{sat}} \gt 0$, $\delta_{\text{regret}} \approx 0$) describes "an agent doing its absolute best, making no mistakes, and still failing — the definition of tragedy"; without a safe mechanism to revise $O_t$, "we condemn it to permanent despair whenever it encounters an impossible situation — perfectly rational, perfectly optimal, and perfectly miserable. Objective revision is therefore not just a safety hazard (the alignment worry that the AI changes its goal to something harmful); it is a psychological necessity for the agent's own survival, and the infrastructure must provide a structurally sound mechanism for it" (Gemini, AUDIT-WORKING-193847). Aspirational reach pointing at `04-eli-core/` (objective-revision architecture / the deaths taxonomy, #def-death-as-factor-loss), anchored on the capability-limit cell — not at this diagnostic definition.
+
+[^recall-2026-10-30]: Cited from the bibliographic record; existence, authors, year and venue were checked on 2026-10-30, and the primary has not been read in this project.

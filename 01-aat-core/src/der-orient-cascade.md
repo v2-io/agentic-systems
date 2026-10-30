@@ -122,7 +122,7 @@ The **convention hierarchy** ( #def-value-object) is *exact*: the three conventi
 
 **False of:** the body's own aspiration hypothesis ( #def-satisfaction-gap, tag `aspiration-dominance`) says that keeping an infeasible objective is sometimes optimal by a feasible objective's measure, in which case "revise once the gap survives every check" is wrong for that agent. The rule has no stopping rule, so it does not separate persistence that pays from escalation of commitment (Staw 1976, cited at #der-belief-strategy-attractor) and does not say when the early revision it discourages is the right one.
 
-**Falsifier:** in environments with a known mix of feasible and infeasible goals and a known drift rate, agents that run 5a–5c before 5d earn no more value and waste no less effort than agents that revise the objective first, or than joint planners. The comparison between bold and cautious intention reconsideration in Tileworld (Kinny & Georgeff 1991, cited from recall, primary not read in this project), where the better policy depended on the world's rate of change, is the existing test of this kind; it has not been run on the cascade.
+**Falsifier:** in environments with a known mix of feasible and infeasible goals and a known drift rate, agents that run 5a–5c before 5d earn no more value and waste no less effort than agents that revise the objective first, or than joint planners. The comparison between bold and cautious intention reconsideration in Tileworld (Kinny & Georgeff 1991[^recall-2026-10-30]), where the better policy depended on the world's rate of change, is the existing test of this kind; it has not been run on the cascade.
 
 **Instantiated:** no.
 
@@ -204,3 +204,5 @@ Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo audi
 These surfaced in the same sweep but are certified-track (structure/computability), not pedagogical gold. Recorded here so they are not lost; they need the strengthen-first / consolidated-queue routing, not promotion into Brief/Discussion.
 
 - **Step 4a/4c trigger: proof-target vs. computable proxy.** Step 4a uses $\delta_s = \hat P_\Sigma - \Phi$ as the default operational signal, but $\Phi$ is the independence-model plan value *at true edge parameters*, which the agent does not directly possess. Likewise step 4c's trigger depends on "persistent $\delta_s \approx 0$." If $\delta_s$ is proof-level rather than computable, both triggers need an observable substitute (stabilized edge credences + residual statistics) (F83/F84 candidates, Codex/Claude AUDIT-WORKING-526815). Distinguishing the proof target from the empirical convergence proxy is a structural clarification, not a wording fix.
+
+[^recall-2026-10-30]: Cited from the bibliographic record; existence, authors, year and venue were checked on 2026-10-30, and the primary has not been read in this project.

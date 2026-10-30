@@ -23,7 +23,7 @@ The chapter closes Part II by tying together what the cascade does, what forces 
 *Proof provenance.* This segment is a synthesis: every result it surfaces is carried, and tier-marked, at the segment it cites, and each implication below inherits the tier of the weakest result it composes — *exact* for the cascade ordering, *conditional* (under named hypotheses) for the survival drive, its matrix lift, the bias-bound constants, and the bandwidth floor, and *discussion-grade* for the compositions this segment itself makes between them. Where an implication rests on a composition no source segment derives, it is marked here as such.
 
 ![[src/img/orient-cascade.pdf]]  
-{#fig-orient-cascade caption="The orient cascade: a five-step resolution order forced by information dependency, not design. The 2x2 diagnostic at step 3 routes the agent to revise the strategy, to escalate before revising the objective, or to terminate at success or capacity limit; a revised model re-enters at step 1."}
+{#fig-orient-cascade caption="The orient cascade: five steps, the first three ordered by information dependency and objective revision placed last by a diagnostic rule. The 2x2 diagnostic at step 3 routes the agent to revise the strategy, to escalate before revising the objective, or to terminate at success or capacity limit; a revised model re-enters at step 1."}
 
 ## The cascade is forced by information dependency, not designed
 

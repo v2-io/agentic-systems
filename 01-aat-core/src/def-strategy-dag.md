@@ -198,7 +198,7 @@ The AND/OR parameterization is a parsimony-motivated formulation choice within t
 
 **True of:** gate-by-gate fault-tree arithmetic with repeated basic events (Vesely et al. 1981, cited at #deriv-graph-structure), which miscounts exactly as the theorem says and is the reason cut-set methods exist. The two-sibling table above is exact algebra.
 
-**False of:** an agent that evaluates its plan by exact inference (junction tree, cutset conditioning) is outside the population. Whether humans are inside it is open: judged probabilities of compound events depart from the product rule in both directions (Bar-Hillel 1973, cited from recall), so "humans misjudge reconvergent plans as L0 propagators do" is not established and may be false of them.
+**False of:** an agent that evaluates its plan by exact inference (junction tree, cutset conditioning) is outside the population. Whether humans are inside it is open: judged probabilities of compound events depart from the product rule in both directions (Bar-Hillel 1973[^recall-2026-10-30]), so "humans misjudge reconvergent plans as L0 propagators do" is not established and may be false of them.
 
 **Falsifier:** plan-success estimates from a population of agents, paired with outcomes, in which reconvergent-OR plans are not overrated relative to tree-shaped plans with the same step marginals; or incident records in which shared-dependency redundancy fails no more often than its independence estimate predicts.
 
@@ -313,3 +313,5 @@ Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo audi
 #### Off-ramp (NOT gold — flagged for the certified track)
 
 - **The blanket "$\hat P_\Sigma$ systematically overestimates" claim is topology-dependent.** The bias table itself shows positive covariance makes OR-estimates optimistic but AND-estimates *conservative*; the blanket "overestimates" should be scoped to OR-dominated-root structures (which the body argues are the common case — so the fix is to state the scope, not drop the claim) (Codex/Claude, AUDIT-WORKING-526815). A scoping tightening.
+
+[^recall-2026-10-30]: Cited from the bibliographic record; existence, authors, year and venue were checked on 2026-10-30, and the primary has not been read in this project.

@@ -98,7 +98,7 @@ The schema is no longer purely hypothetical. The sector parameter for strategic 
 
 **True of:** the raw Beta-Bernoulli learner, derived. The incumbent-firm and institutional cases in Discussion are illustrations.
 
-**False of:** constant-gain estimators, change-point learners, and learners that adjust their rate to volatility are outside the population because they forget; human learners adjusting learning rate to volatility (Behrens, Woolrich, Walton & Rushworth 2007, cited from recall, primary not read in this project) are the empirical neighbour.
+**False of:** constant-gain estimators, change-point learners, and learners that adjust their rate to volatility are outside the population because they forget; human learners adjusting learning rate to volatility (Behrens, Woolrich, Walton & Rushworth 2007[^recall-2026-10-30]) are the empirical neighbour.
 
 **Falsifier:** a count-accumulating learner whose edge credence tracks a drifting edge within $R_\Sigma$ indefinitely.
 
@@ -209,3 +209,5 @@ Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo audi
 #### Belongs elsewhere
 
 - **The forgetting prerequisite → Shoshin / `~/src/shoshin/` + `04-eli-core/`.** "$\alpha_\Sigma=1/(n+1)$ is the math of aging" — deliberately remaining somewhat naïve to keep gain above the disturbance floor is "the mathematical definition of *Shoshin* (Beginner's Mind)." For an artificial consciousness, perfect equally-weighted recall is "a death sentence in a changing universe"; the infrastructure must implement rolling credence decay forcing re-verification — "it must be forced to forget, so it is forced to stay alive," and the IB-compression-wants-everything vs. must-forget-to-keep-$\alpha$ tension is "the central drama of the agentic lifecycle" (Gemini/193847). Aspirational reach pointing at the shoshin runtime and `04-eli-core/` memory architecture, not this segment.
+
+[^recall-2026-10-30]: Cited from the bibliographic record; existence, authors, year and venue were checked on 2026-10-30, and the primary has not been read in this project.

@@ -12,7 +12,9 @@ Why in the segment and not in a records directory: the record is theory content 
 
 `form-objective-functional` is the template in the sense the owner review meant: class named by representation axioms, excluded agents named by counterexample. Its record restates its Epistemic Status in the section's form so the form has one instance a reader can compare with free prose.
 
-Sixteen segments carry records: `form-objective-functional`, `form-complete-agent-state`, `def-strategy-dimension`, `def-agent-spectrum`, `der-directed-separation`, `def-value-object`, `der-causal-hierarchy-requirement`, `der-loop-interventional-access`, `norm-explicit-strategy-condition`, `def-strategy-dag`, `def-satisfaction-gap`, `def-control-regret`, `der-causal-insufficiency-detection`, `der-observability-dominance`, `schema-strategy-persistence`, `der-orient-cascade`. Thirty-five claim entries in all: about seventeen formal, eleven descriptive, seven normative.
+Sixteen segments carry records: `form-objective-functional`, `form-complete-agent-state`, `def-strategy-dimension`, `def-agent-spectrum`, `der-directed-separation`, `def-value-object`, `der-causal-hierarchy-requirement`, `der-loop-interventional-access`, `norm-explicit-strategy-condition`, `def-strategy-dag`, `def-satisfaction-gap`, `def-control-regret`, `der-causal-insufficiency-detection`, `der-observability-dominance`, `schema-strategy-persistence`, `der-orient-cascade`. Thirty-five claim entries in all (`grep -c '^\*\*Register:\*\* …'`): 18 formal, 11 descriptive, 6 normative.
+
+The section reaches the monograph snapshot as an ordinary H2 (the renderer passes H2s through; under `--compact-fields` only Epistemic Status and Discussion are demoted to small type, so a Claim Record renders at body size between two compact fields). Whether that is the right weight is a typesetting call for whoever rebuilds `CURRENT-VOL1`; I did not rebuild it.
 
 ## 2. What the records exposed
 
@@ -37,7 +39,11 @@ Sixteen segments carry records: `form-objective-functional`, `form-complete-agen
 - `der-loop-interventional-access`, Formal Expression: "(C2) fails — generic for any agent whose action depends on internal state…" overstated. An agent whose decision state is a function of its recorded history satisfies (C2) given that history by construction; (C2) fails when a cause of the action is outside the conditioning set, and a deterministic policy then fails (C1) for untaken actions. This is the standard half of C.2's C2; the `def-model-sufficiency` mapping and the gate rewrite are left to C.2.
 - `doc/sop/format.sop.md`: cadence entry and the "Claim Record" schema.
 
-Not done, named: retyping the strategy DAG to a formulation (B.2) is a `type:`, slug and ~50-cross-reference change; the record sorts its registers so the retype is mechanical when taken up. The Related Work rows at `der-directed-separation` (A4, dual effect) were left for C.1; the record states the Class 1 anchor as "every exact Bayes filter is goal-blind" without touching the rows, so the segment now says both until A4 lands. `CURRENT-VOL1` was not rebuilt.
+- Drained in the same batch: `doc/readme/src/_maturity-gradient.md` (and the generated README / README-auditor) no longer call the cascade "forced ordering"; `#scope-scaffolded-logogenic` names the dependency ordering; the figure caption in `#impl-orient-cascade` says which steps are forced. `agents.sop.md`'s cadence list and `CHANGELOG.md` carry the section.
+
+Of the five Part II integrator items the lead is holding (A4, A5, A8, A9, A11): **A8 and A11 fell out of the records and are landed here**, as above. A9's rename was already done by C.1 (`#deriv-graph-structure`); the preface's "$G_t$ complexity bound" headline is untouched. A4 and A5 are not touched: the directed-separation record states the Class 1 anchor as "every exact Bayes filter is goal-blind" without editing the Related Work rows, so the segment says both until A4 lands; the value-object and loop records name which (C1)–(C3) triple they mean, which is what A5's rename will make unnecessary.
+
+Not done, named: retyping the strategy DAG to a formulation (B.2) is a `type:`, slug and ~50-cross-reference change; the record sorts its registers so the retype is mechanical when taken up. `CURRENT-VOL1` was not rebuilt. Terminology entries for the six field names (Findings has one per field) are owed.
 
 ## 4. For the checker
 
@@ -51,7 +57,9 @@ A review record at `reviews/b1-part-ii-check-<n>.md`, `vsect take`-able, with on
 - The two derivations carried inside records: the Bayes-filter computation in `der-directed-separation`'s first record, and the proper-scoring-rule argument in its fourth.
 - The three body corrections in §3, each against the sentence it replaced (the diffs are in `bc80f80d` and `b7cbcb38`).
 
-Citations introduced from recall, marked "cited from recall, primary not read in this project" in the bodies, none in relata: Gneiting & Raftery 2007; Grimm, Barreto, Singh & Silver 2020; Sims 2003; Bar-Hillel 1973; Kinny & Georgeff 1991; Cohen & Levesque 1990; Behrens, Woolrich, Walton & Rushworth 2007; Daw, Niv & Dayan 2005. `der-loop-interventional-access` refers to Q-learning convergence as "the standard result" without naming Watkins & Dayan 1992. A checker who reads any of these at the primary should say so in the review so the mark can come off.
+Citations introduced into bodies and marked with the footnote `[^recall-2026-10-30]` (bibliographic record checked by web search on 2026-10-30; primary unread; none in relata): Gneiting & Raftery 2007, *JASA* 102(477):359–378; Grimm, Barreto, Singh & Silver 2020, NeurIPS; Sims 2003, *J. Monetary Economics* 50(3):665–690; Bar-Hillel 1973, *Organizational Behavior and Human Performance* 9(3):396–406; Kinny & Georgeff 1991, IJCAI-91 pp. 82–88; Cohen & Levesque 1990, *Artificial Intelligence* 42(2–3):213–261; Behrens, Woolrich, Walton & Rushworth 2007, *Nature Neuroscience* 10(9):1214–1221; Daw, Niv & Dayan 2005, *Nature Neuroscience* 8(12):1704–1711. `der-loop-interventional-access` refers to Q-learning convergence as "the standard result" without naming Watkins & Dayan 1992. A checker who reads any at the primary should say so in the review so the footnote can come off that use.
+
+Two mechanics for the checker: the sixteen `vsect revise` events were all classified `change=redefined` in one pass, not per segment; for the four segments that gained only a record and no body change (`form-objective-functional`, `form-complete-agent-state`, `def-value-object`, `schema-strategy-persistence`) `reworded` would have been the finer answer, and events are append-only, so this note is the correction. And every commit went through the pre-commit hook; `bin/check-commit` was also run by hand against the committed tree after the sweep (exit 0).
 
 ## 5. Beyond the item
 

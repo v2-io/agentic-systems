@@ -57,7 +57,7 @@ The inequality is correct *when* the outcomes are approximately equivalent — a
 
 **False of:** choices whose outcomes differ in value, risk or reversibility are outside the population (Epistemic Status). The contrast "loop-based learning does not inherit model bias" overstates: direct exploration is biased by policy selection, partial observability and the model used to read observations (Working Notes).
 
-**Falsifier:** in a domain where the precondition holds, agents following the inequality do worse than agents arbitrating by the uncertainty of their model-based and model-free estimates (Daw, Niv & Dayan 2005, cited from recall, primary not read in this project), which is the arbitration the human literature reports.
+**Falsifier:** in a domain where the precondition holds, agents following the inequality do worse than agents arbitrating by the uncertainty of their model-based and model-free estimates (Daw, Niv & Dayan 2005[^recall-2026-10-30]), which is the arbitration the human literature reports.
 
 **Instantiated:** no.
 
@@ -115,3 +115,5 @@ Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo audi
 #### Belongs elsewhere
 
 - The compounding-fragility-of-long-chains material (chain-confidence decay, evidence starvation, cognitive cost = a "triple depth penalty") that auditors raised while reading this segment belongs at `#der-chain-confidence-decay` (the next segment), not here.
+
+[^recall-2026-10-30]: Cited from the bibliographic record; existence, authors, year and venue were checked on 2026-10-30, and the primary has not been read in this project.

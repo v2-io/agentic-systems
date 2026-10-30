@@ -124,8 +124,9 @@ Claim segments live in `{component}/src/` directories. **Each file is like a hig
 3. One-sentence summary
 4. Formal Expression (with equation-level tags)
 5. Epistemic Status paragraph
-6. Discussion (interpretation, connections — brief)
-7. Working Notes (optional — active development questions, removed at `candidate` stage)
+6. Claim Record (register / population / true of / false of / falsifier / instantiated, per claim; required for load-bearing apparatus)
+7. Discussion (interpretation, connections — brief)
+8. Working Notes (optional — active development questions, removed at `candidate` stage)
 
 ## The Core Insight
 
