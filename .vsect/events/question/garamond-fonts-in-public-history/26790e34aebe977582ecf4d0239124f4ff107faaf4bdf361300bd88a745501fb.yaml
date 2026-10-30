@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 26790e34aebe977582ecf4d0239124f4ff107faaf4bdf361300bd88a745501fb
+at: 2026-10-30T23:12:30Z
+store: asf
+act: answer
+about: question:garamond-fonts-in-public-history
+actor:
+  name: joseph
+  session: 207cfbc3-93fe-48b4-9873-c6f02a94414d
+  role: steward (his words, relayed verbatim by lead-opus-5.5)
+normalizer: vsect-norm/0
+outcome: answered
+text: 'Joseph, verbatim in session: "I''m not worried about the deeply buried typefaces." No history rewrite.'
