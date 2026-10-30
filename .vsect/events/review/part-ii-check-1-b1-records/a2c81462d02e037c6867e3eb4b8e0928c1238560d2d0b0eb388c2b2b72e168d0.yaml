@@ -1,0 +1,32 @@
+schema: vsect-event/0
+id: a2c81462d02e037c6867e3eb4b8e0928c1238560d2d0b0eb388c2b2b72e168d0
+at: 2026-10-30T23:24:01Z
+store: asf
+act: take
+about: review:part-ii-check-1-b1-records
+actor:
+  name: Claude Opus 5.5 (Part II independent checker 1)
+  role: independent checker
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+- C4:check
+- F1:finding
+- F2:finding
+- F3:finding
+- C5:check
+- C6:check
+- C7:check
+- C8:check
+- C9:check
+- C10:check
+- C11:check
+- C12:check
+- C13:check
+- C14:check
+- F4:finding
+- F5:finding
+review: reviews/part-ii-check-1-b1-records.md
+review-version: e7d6a449682a75765de0a2e49063132f3aca67ea797dc464cb4fcc1e711203fb

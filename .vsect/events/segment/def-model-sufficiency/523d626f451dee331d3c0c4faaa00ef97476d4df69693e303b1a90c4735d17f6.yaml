@@ -1,0 +1,53 @@
+schema: vsect-event/0
+id: 523d626f451dee331d3c0c4faaa00ef97476d4df69693e303b1a90c4735d17f6
+at: 2026-10-30T23:23:01Z
+store: asf
+act: confirm-rewording
+about: segment:def-model-sufficiency
+actor:
+  name: Claude Opus 5.5 (Part II independent checker 1)
+  role: second mind
+normalizer: vsect-norm/0
+criterion: 'Diff read against each re-bound check''s full criterion: none uses the content this edit changed (identification clause, true-law premises, right rung of convention monotonicity, Scope Condition and kappa semantics, retired ambiguity law, record wording); each criterion is about its own segment''s formulas, numbers, primaries or identity-layer claims, reached only through depends:. Says nothing about whether the re-bound checks were right.'
+from-version: cb0156177d2d2d215898316d7c7e1e6829188ccffc08bb3f458b93e9f5cd207f
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+  - d9871bd0138d2ef460c86d1197bb3f47adeed87034c7c4a5fb19ea779b9efa8f
+  - 7a5de070c5a593c3d60497a030bb512f2c41d3142f9414deecdf4dbc848b43f9
+  - cff718bdbe87752ba82dd1f45219741a1b84a0a5fa759b9442fc222fcef3937a
+  - 2fb14da9c5899ac605ab648d2918c3310ded36aae424042d783fdfe7b5a2948f
+  - ddccc4c125c18bd5740024d9c6378705b437c7ddcc7f38ba5507aa71c81fc0b8
+  - b7b5fbdb398f3bba8044cb6ffa32a5c107f58c57189bf46f78c3c91270faa75e
+  - f7195d495d35a376d12bd108077ccb6ec063f6bf7372a2c879fff61e518b55c4
+  - 234b1818fa416352c53caa1fe1d89f05e4f2ba22738932e27261ef2505de4686
+  - 38fff55dfd3fce8596b5b772503ca0d8e3e01237a669830874bec8b7088cddbc
+  - 0f75a5ba333dfd0e73f761db68804ad7de86e794a3fc5415648487f4b2ba4ef6
+  - cea69d43c81cdbdc018fd90757f62748f6e1379fcedd246835912ef21ca83aa7
+  - eb63d4516d665ec84357b2379213af44f850377eca0621d25d0b8eb04386ff6a
+  - 0efb52e7c40aabf5ce716fed0cada68051566e832186b90006cfd5f05ffe5e2f
+  - 8559ec07afe30aeb26a826cb651164bbff8d06e6644439c000c987543f9c7553
+  - 688db51986ffe58ec08747514e0ee8cfcb1c1d005088e098dbf1f4b3a453a5a2
+  - 3d69377960548e2c81f0f69299a8a77e0b6966d11634bef540fa2baa1c84a21b
+  - 4408f4588af43e5063a5bafd2566f22d1f2855d21ea353789b0dad53d706675f
+  - fed15afddb85c3ce2240fba63f9a866ab2e1927fa988cbdb6fd7a7c021ab0314
+  - a3c2813220ece8f26f3df5f46cf88d6bc43c715dfd847612c46b4fddc4dfb32a
+  - 0ae0d33ec96cff7dc9c7067d63090220223e9ec5dfbea25c6f9c9bedd7e08bdd
+  - 37958cb23fce6b05a66bc6e71569f922f10c420a3b35d3a09ef2fdcebd9d8ab8
+  - e46eefcd7ccd403a38699f57d0923eab57c657eb3e7de391f55f70e71e562c1e
+  - e04cf21b8b4cd4d206b30be151375ffd61447e04eff284ecabd546951291902f
+  - adde60514eead495e7de86bb6665e01dfbb865c0cf9d9758f46a83401a13cd2f
+  - a425252100509647eb1b8cdbd52b1fc76431cafa325d130e769168819f0b0fe6
+  - 3c7ac053d6d5295b56d7443ac4bc1daf27951faec37f9743cc93ae7b7ef776ce
+  - 4ae2d284128e49a15827e28e117b1517e9ccb9cd6f20818525b7e2ce9b989901
+  - e7b6c83a306cd54b25886dac0a5cb8cd12d3d2e6b1b6629577c0bfb8d9eac276
+  - 8a5a332da6a27997f59e80fe28b7d9755a49ae762672eaca1f870ebc7b77cddf
+  - 0355f83afeece5d703bc03ad296d76989f16471c067cf8811e98a78e0dff3027
+  - 65a19cba761002d3e23b20ab49fc4fbe5baf96008330ef338f316c1416ea3e25
+  - 952f1b8e37feb755a49de93dcc9fc3e05c840d19bd67781ad92b789202adda76
+  - 4e5b62071c96cafb8bd42fd2952172de7d9d834351012dc25a87f86bc5c1396c
+  - 9c56f34053b8c677cee4cc522d1b131a1aa542ae70ba6f06e7b8966ee14ae704
+  - 8e739e5f11bd9c6724d9855a18043387488b00250d7a52f8754b567807dcdceb
+  - 9a4830e9c0bfd2fee96a349d59a4f3b78c1d2bdb36334e3687e6615e9cd0e458
+to-version: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a

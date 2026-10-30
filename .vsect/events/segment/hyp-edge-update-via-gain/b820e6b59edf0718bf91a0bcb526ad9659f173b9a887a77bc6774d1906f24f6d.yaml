@@ -1,0 +1,32 @@
+schema: vsect-event/0
+id: b820e6b59edf0718bf91a0bcb526ad9659f173b9a887a77bc6774d1906f24f6d
+at: 2026-10-30T23:23:06Z
+store: asf
+act: confirm-rewording
+about: segment:hyp-edge-update-via-gain
+actor:
+  name: Claude Opus 5.5 (Part II independent checker 1)
+  role: second mind
+normalizer: vsect-norm/0
+criterion: 'Diff read against each re-bound check''s full criterion: none uses the content this edit changed (identification clause, true-law premises, right rung of convention monotonicity, Scope Condition and kappa semantics, retired ambiguity law, record wording); each criterion is about its own segment''s formulas, numbers, primaries or identity-layer claims, reached only through depends:. Says nothing about whether the re-bound checks were right.'
+from-version: f994de59c6cf6284dab008e0dfea34b8c1bd54df17b87faf3f802a2f4156be31
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+  - d9871bd0138d2ef460c86d1197bb3f47adeed87034c7c4a5fb19ea779b9efa8f
+  - 7a5de070c5a593c3d60497a030bb512f2c41d3142f9414deecdf4dbc848b43f9
+  - 2fb14da9c5899ac605ab648d2918c3310ded36aae424042d783fdfe7b5a2948f
+  - b7b5fbdb398f3bba8044cb6ffa32a5c107f58c57189bf46f78c3c91270faa75e
+  - 234b1818fa416352c53caa1fe1d89f05e4f2ba22738932e27261ef2505de4686
+  - 38fff55dfd3fce8596b5b772503ca0d8e3e01237a669830874bec8b7088cddbc
+  - 0f75a5ba333dfd0e73f761db68804ad7de86e794a3fc5415648487f4b2ba4ef6
+  - cea69d43c81cdbdc018fd90757f62748f6e1379fcedd246835912ef21ca83aa7
+  - eb63d4516d665ec84357b2379213af44f850377eca0621d25d0b8eb04386ff6a
+  - 0efb52e7c40aabf5ce716fed0cada68051566e832186b90006cfd5f05ffe5e2f
+  - 8559ec07afe30aeb26a826cb651164bbff8d06e6644439c000c987543f9c7553
+  - 688db51986ffe58ec08747514e0ee8cfcb1c1d005088e098dbf1f4b3a453a5a2
+  - 8a5a332da6a27997f59e80fe28b7d9755a49ae762672eaca1f870ebc7b77cddf
+  - 0355f83afeece5d703bc03ad296d76989f16471c067cf8811e98a78e0dff3027
+  - 65a19cba761002d3e23b20ab49fc4fbe5baf96008330ef338f316c1416ea3e25
+to-version: 594bed6507decb872a4a6fb2dba3c36a27f3b33f95a003d61aab003144446b25

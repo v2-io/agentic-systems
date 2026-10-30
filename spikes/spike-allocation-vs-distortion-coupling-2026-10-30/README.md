@@ -3,7 +3,7 @@ kr: C.2
 item: C3 (allocation vs distortion coupling)
 opened: 2026-10-30
 head: 620ac98c
-status: landed by replacement 2026-10-30 in der-directed-separation, scope-observation-ambiguity-modulation, deriv-observation-ambiguity-bias-bound, der-orient-cascade, form-information-bottleneck, disc-partial-coupling-pathways, der-class-coercion-via-wrapping (commit af518dd5); L0, the Prop A-prime and break-point-4 "iff"s, the Paper 3 Class 1 reading, and the "model class" scope of Theorem 6.1 were refuted by de-novo-feedback-1.md and did not land; the replacement law landed as a model-free identity plus a fixed-gain hypothesis per that feedback's corrected section 5; account in msc/inside-out-2026-10/part-ii-integration.md
+status: landed by replacement 2026-10-30 in der-directed-separation, scope-observation-ambiguity-modulation, deriv-observation-ambiguity-bias-bound, der-orient-cascade, form-information-bottleneck, disc-partial-coupling-pathways, der-class-coercion-via-wrapping (commit 253d2bca); L0, the Prop A-prime and break-point-4 "iff"s, the Paper 3 Class 1 reading, and the "model class" scope of Theorem 6.1 were refuted by de-novo-feedback-1.md and did not land; the replacement law landed as a model-free identity plus a fixed-gain hypothesis per that feedback's corrected section 5; account in msc/inside-out-2026-10/part-ii-integration.md
 ---
 
 # Spike: allocation versus distortion coupling (item C3)

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: a9ce16ebd58f7554fdbd6ed5b76ec4bdaa6feb2aa3d2ca5e4836c47f927e9edc
+at: 2026-10-30T23:24:02Z
+store: asf
+act: correct
+about: segment:der-causal-hierarchy-requirement
+actor:
+  name: Claude Opus 5.5 (Part II independent checker 1)
+  role: independent checker
+normalizer: vsect-norm/0
+corrects: 3b3c31055e5e3a5e0a39c89cf67167c0dcff83379aa0b20c4072d054d28b86a5
+text: The free text cites af518dd5, a worktree hash not on main; its content landed on main as 253d2bca (rebase of the Part II integration; identical but for rebase context lines). The follow-up the text calls 'the follow-up commit' is 18f1bb4e on main (worktree d981c5bb). Found by the Part II independent check 1 (reviews/part-ii-check-1.md F12).

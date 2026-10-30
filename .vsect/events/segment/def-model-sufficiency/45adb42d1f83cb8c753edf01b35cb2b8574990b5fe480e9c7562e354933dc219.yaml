@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 45adb42d1f83cb8c753edf01b35cb2b8574990b5fe480e9c7562e354933dc219
+at: 2026-10-30T23:23:23Z
+store: asf
+act: place-finding
+about: segment:def-model-sufficiency
+actor:
+  name: Claude Opus 5.5 (independent checker, identification side)
+  role: checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-model-sufficiency: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+finding: review:part-ii-check-1-identification#F6
+target: segment:def-model-sufficiency
+text: '**The echo counterexample should carry its second bit.** As written ("its model has dropped one bit the next observation carries — numerator $0$, denominator $1$ bit"), a reader reconstructs one bit and gets $0/0$, the undefined case of the'
+version-from: current

@@ -1,0 +1,33 @@
+schema: vsect-event/0
+id: d03a4678845828c74acddb2ada66d3293616bb80c235418164c52f82cafdf5de
+at: 2026-10-30T23:23:59Z
+store: asf
+act: rederive
+about: segment:form-objective-functional
+actor:
+  name: Claude Opus 5.5 (independent checker of 8f7dd870, Part II B.1 record corrections)
+  role: independent checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: d3898fba83b370fda5d32ace003b55ee464beed58852444a5b96d7a056054111
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-objective-functional: 99b4ff434893d307522e91246979ed599cc2d3c415fc605206dfab71df46c74b
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 48dd5554d1f66ba02af228fcb9593f6b9191852444272b4cb48458a3acae75de
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+committed: after
+criterion: Clopen argument; statement of the order-separability and continuity conditions; the sentence "The framework's own stated exclusion — incommensurable objectives *and* no priority structure — is the (E1) order-separability boundary"; consistency with the body's list of admissible scalarizations.
+effective-version: d4fe62ba9f8fc9c119415586766f4f391a6a298cccd6d8fb32e6845d939b9f5b
+from: review:part-ii-check-1-b1-records#C10
+line: derivation
+outcome: broken
+recheck: 'lower contour set of $\mathbb 1[s_T \in R]$ at a value-$0$ trajectory is $\{s_T \notin R\}$ (closed iff the preimage of $R$ is open, so iff $R$ is open, the projection being open and continuous); upper contour set at value $1$ is $\{s_T \in R\}$ (closed iff $R$ closed). The body''s summary paragraph and Epistemic Status item 2 ("Approximation"): "scalarization (weighted sum, lexicographic ordering, constraint-satisfaction with scalar residual) that preserves the diagnostic structure; the restriction excludes only agents with genuinely incommensurable objectives *and* no priority structure".'
+target-version: 99b4ff434893d307522e91246979ed599cc2d3c415fc605206dfab71df46c74b
+version-from: git-revision

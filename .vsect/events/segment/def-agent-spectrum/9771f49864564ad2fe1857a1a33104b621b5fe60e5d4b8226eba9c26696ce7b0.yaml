@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 9771f49864564ad2fe1857a1a33104b621b5fe60e5d4b8226eba9c26696ce7b0
+at: 2026-10-30T23:23:59Z
+store: asf
+act: place-finding
+about: segment:def-agent-spectrum
+actor:
+  name: Claude Opus 5.5 (independent checker of 8f7dd870, Part II B.1 record corrections)
+  role: independent checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-agent-spectrum: 5d3bba0901b8d2efc74fa09f7a6e1034608272de46713edc4503a02890a2e3e4
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+finding: review:part-ii-check-1-b1-records#C11/finding
+target: segment:def-agent-spectrum
+text: 'check C11 came back narrowed: Hypotheses, bound and Theorem 2 are quoted correctly, and the placement (Assumption 1 versus §2.4 prose) is as the account says. The experiment sentence is accurate in substance. The paper says worst-case regret $\delta = 1$ on some goals w'
+version-from: git-revision

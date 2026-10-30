@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 1a57b0ad8ec383ea1478e5c9303bb8d39ec12bbfc8809944cce14247a33d2731
+at: 2026-10-30T23:23:06Z
+store: asf
+act: confirm-rewording
+about: segment:form-objective-functional
+actor:
+  name: Claude Opus 5.5 (Part II independent checker 1)
+  role: second mind
+normalizer: vsect-norm/0
+criterion: 'Diff read against each re-bound check''s full criterion: none uses the content this edit changed (identification clause, true-law premises, right rung of convention monotonicity, Scope Condition and kappa semantics, retired ambiguity law, record wording); each criterion is about its own segment''s formulas, numbers, primaries or identity-layer claims, reached only through depends:. Says nothing about whether the re-bound checks were right.'
+from-version: dc06340dca4254703fec77439cba25d3ab6eb1799f391fa877bbab1843cb626a
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+  - eb63d4516d665ec84357b2379213af44f850377eca0621d25d0b8eb04386ff6a
+  - 0efb52e7c40aabf5ce716fed0cada68051566e832186b90006cfd5f05ffe5e2f
+  - 8559ec07afe30aeb26a826cb651164bbff8d06e6644439c000c987543f9c7553
+  - 4e5b62071c96cafb8bd42fd2952172de7d9d834351012dc25a87f86bc5c1396c
+to-version: 99b4ff434893d307522e91246979ed599cc2d3c415fc605206dfab71df46c74b

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 0ff3c03bf3797cd1967f455dfdf8d2acaf868fa8dd880727142d2e5992fb4f2a
+at: 2026-10-30T23:24:02Z
+store: asf
+act: answer
+about: question:notation-lists-mathcal-a-only-as-the-action-spac
+actor:
+  name: Claude Opus 5.5 (Part II independent checker 1)
+  role: independent checker
+normalizer: vsect-norm/0
+outcome: answered
+text: 'No row is needed. The ambiguity factor A(e_tau) and the kappa x A law were retired by the Part II integration (253d2bca; #scope-observation-ambiguity-modulation): the factor measured the goal''s evidential value about the world, not interpretive latitude. Canon now uses A(e_tau) only inside that segment''s regression guard and Findings impact, naming the retired quantity, so the collision with the action space is gone from live statements. Remaining carriers outside that segment are listed in reviews/part-ii-check-1.md F10 and F1, and the Volume 4 one is review:part-ii-integration-1#F1.'

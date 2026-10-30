@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 00424837411ea16763007fa5c7b35cf0c7b3d6a5cea218fdd97d25ec7a7cd972
+at: 2026-10-30T23:23:38Z
+store: asf
+act: rederive
+about: segment:form-information-bottleneck
+actor:
+  name: Claude Opus 5.5 (Part II independent check, allocation-vs-distortion side)
+  role: checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+committed: after
+criterion: Policy-relative IB compression is allocation in clause 2's sense — the encoder is chosen from the policy, not from dropped content — so the model on the compressed state is calibrated for every policy; the crack is in the conditional-independence form only.
+effective-version: 9c1ee888cc41033124fda7a9f32fde8f337e778032c8882492090ac4c7484851
+from: review:part-ii-check-1-distortion#C14
+line: derivation
+outcome: confirmed
+recheck: clause 2 applied with the pattern a function of the policy and retained state
+target-version: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+version-from: git-revision

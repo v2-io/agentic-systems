@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 0407080a078002b7dd64436af1c91829cd6b7ab60a51c1b0078736d5c1a4b905
+at: 2026-10-30T23:23:59Z
+store: asf
+act: read-check
+about: segment:def-agent-spectrum
+actor:
+  name: Claude Opus 5.5 (independent checker of 8f7dd870, Part II B.1 record corrections)
+  role: independent checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-agent-spectrum: 5d3bba0901b8d2efc74fa09f7a6e1034608272de46713edc4503a02890a2e3e4
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+committed: after
+criterion: Are Richens, Abel, Bellot & Everitt's hypotheses, bound and Theorem 2 quoted as the paper states them? Is the new independence clause true?
+effective-version: 6f8e87fe03661e7e0c8ff3e30bc42bf5f952c9f5954dffbd9e31cd10dd9003e9
+from: review:part-ii-check-1-b1-records#C11
+line: imported
+outcome: narrowed
+recheck: local copy `ref/richens-2025-general-agents-world-models.pdf`, pp. 2–6 by `pdftotext`. Assumption 1 ("communicating, stationary, finite, controlled Markov process … with at least two actions"); §2.4 prose ("we assume that the environment is fully observed by the agent, and that the agent follows a deterministic policy"); Definition 5, inequality (2); Theorem 1 with $n \gt 1$ and $\lvert \hat P_{ss'}(a) - P_{ss'}(a) \rvert \leq \sqrt{2P_{ss'}(a)(1 - P_{ss'}(a))/((n-1)(1-\delta))}$; Theorem 2 ("trivial ($\epsilon = 1$) and tight"); Discussion ("In the proof (Section A.6) the agent is required to generalize only to a small subset of $\Psi_n$, comprising $O(n\lvert A\rvert\lvert S\rvert^2)$ simple composite goals"); Limitations ("proves the existence of a world model encoded in the agent's policy, not its specific use").
+target-version: 5d3bba0901b8d2efc74fa09f7a6e1034608272de46713edc4503a02890a2e3e4
+version-from: git-revision

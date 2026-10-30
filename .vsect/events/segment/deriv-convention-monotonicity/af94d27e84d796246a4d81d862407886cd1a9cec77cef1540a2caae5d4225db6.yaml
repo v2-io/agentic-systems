@@ -1,0 +1,38 @@
+schema: vsect-event/0
+id: af94d27e84d796246a4d81d862407886cd1a9cec77cef1540a2caae5d4225db6
+at: 2026-10-30T23:23:52Z
+store: asf
+act: rederive
+about: segment:deriv-convention-monotonicity
+actor:
+  name: Claude Opus 5.5 (independent checker of 8f7dd870, Part II B.1 record corrections)
+  role: independent checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 9086f020f174801ab1c99c935de6113eced20773f464d2e70c49a280afe324f7
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-model-sufficiency: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a
+  segment:def-observation-function: 0635cbf00670816dfafedd540326953a5e505bdf2e870628889db10d3fe33548
+  segment:def-value-object: 08bbd5309246155ed4528d0e56beb4fb064b7c183cf49fa2c4ddc1812cf00141
+  segment:der-directed-separation: 5d0c86c0038022d33efc2e386c2600a3538d8328075e7000efcd8ee0240776d3
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:deriv-convention-monotonicity: 267bc9a3f0131d7654bec8e53231c4a3111baebf9f08210571a93a1622ca0d74
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: d3898fba83b370fda5d32ace003b55ee464beed58852444a5b96d7a056054111
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:form-objective-functional: 99b4ff434893d307522e91246979ed599cc2d3c415fc605206dfab71df46c74b
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 48dd5554d1f66ba02af228fcb9593f6b9191852444272b4cb48458a3acae75de
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+committed: after
+criterion: Both branches use $\pi_{\text{RH}} \in \Pi$ ("That $\pi_{\text{RH}}$ is drawn from $\Pi$ …"; "since $\pi_{\text{RH}} \in \Pi$"; the counterexample's "a member of $\Pi$ as the derivation requires"). Is that membership a consequence of C2's definition, or an unstated third hypothesis the rung fails without?
+effective-version: 0e4770e9a204c141a012e78d5650d8ca408c037fd9998b664560159c51c0e11c
+from: review:part-ii-check-1-b1-records#C2
+line: derivation
+outcome: broken
+recheck: 'deterministic, $N_h = 3$, $N_r = 1$. $x$ has the single action $a$ (pays $0$, to $s$). At $s$: $\alpha$ pays $+1$ to $t_1$, $\beta$ pays $0$ to $t_2$. At $t_1$: $c_1$ pays $0$, $c_2$ pays $+50$. At $t_2$: $d$ pays $+10$. $\Pi = \{m_1 = (s \mapsto \alpha, t_1 \mapsto c_1, t_2 \mapsto d),\ m_2 = (s \mapsto \beta, t_1 \mapsto c_2, t_2 \mapsto d)\}$, both $x \mapsto a$. $V_O(m_1) = 1$, $V_O(m_2) = 10$, $\pi^\ast = m_2$. (PC) holds: the only first action is $a$ and $a \oplus m_i = m_i$. (SO) holds: at $s$ the class supremum $10$ is attained by $m_2$. The replanner, with each one-step window''s argmax taken over $\Pi$ (equivalently over all actions, since the members cover every action), takes $\alpha$ at $s$ ($1 \gt 0$) and $c_2$ at $t_1$ ($50 \gt 0$). Stitched $\pi_{\text{RH}} = (s \mapsto \alpha, t_1 \mapsto c_2) \notin \Pi$. Ran: $A_O^{\text{RH}} = 0 + 1 + 50 = 51 \gt 10 = A_O^{\text{B}}$ on both readings. Non-vacuous variant, also run: add a second first action $b$ at $x$ (pays $0$, to $s$) and take $\Pi$ to be the four policies $\{a, b\} \times \{m_1\text{''s tail}, m_2\text{''s tail}\}$. (PC) then holds non-trivially, (SO) holds, the stitched replanner is still outside $\Pi$, and the result is the same: $51$ against $10$ on both readings.'
+target-version: 267bc9a3f0131d7654bec8e53231c4a3111baebf9f08210571a93a1622ca0d74
+version-from: git-revision

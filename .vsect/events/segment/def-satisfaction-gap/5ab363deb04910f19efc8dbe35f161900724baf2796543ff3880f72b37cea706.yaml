@@ -1,0 +1,27 @@
+schema: vsect-event/0
+id: 5ab363deb04910f19efc8dbe35f161900724baf2796543ff3880f72b37cea706
+at: 2026-10-30T23:23:02Z
+store: asf
+act: confirm-rewording
+about: segment:def-satisfaction-gap
+actor:
+  name: Claude Opus 5.5 (Part II independent checker 1)
+  role: second mind
+normalizer: vsect-norm/0
+criterion: 'Diff read against each re-bound check''s full criterion: none uses the content this edit changed (identification clause, true-law premises, right rung of convention monotonicity, Scope Condition and kappa semantics, retired ambiguity law, record wording); each criterion is about its own segment''s formulas, numbers, primaries or identity-layer claims, reached only through depends:. Says nothing about whether the re-bound checks were right.'
+from-version: 65d41833dad42f4b90c486086b99ebec25412132890d9f4bd587293541735ed0
+outcome: equivalent
+scope:
+  for:
+  - d9871bd0138d2ef460c86d1197bb3f47adeed87034c7c4a5fb19ea779b9efa8f
+  - 7a5de070c5a593c3d60497a030bb512f2c41d3142f9414deecdf4dbc848b43f9
+  - cff718bdbe87752ba82dd1f45219741a1b84a0a5fa759b9442fc222fcef3937a
+  - 2fb14da9c5899ac605ab648d2918c3310ded36aae424042d783fdfe7b5a2948f
+  - b7b5fbdb398f3bba8044cb6ffa32a5c107f58c57189bf46f78c3c91270faa75e
+  - 234b1818fa416352c53caa1fe1d89f05e4f2ba22738932e27261ef2505de4686
+  - 38fff55dfd3fce8596b5b772503ca0d8e3e01237a669830874bec8b7088cddbc
+  - 688db51986ffe58ec08747514e0ee8cfcb1c1d005088e098dbf1f4b3a453a5a2
+  - 8a5a332da6a27997f59e80fe28b7d9755a49ae762672eaca1f870ebc7b77cddf
+  - 0355f83afeece5d703bc03ad296d76989f16471c067cf8811e98a78e0dff3027
+  - 65a19cba761002d3e23b20ab49fc4fbe5baf96008330ef338f316c1416ea3e25
+to-version: cfef16ee412848573f3ecfc72877094960e08b55fb7bf5ad9cfb5cb49bdd1730

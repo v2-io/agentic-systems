@@ -1,0 +1,25 @@
+schema: vsect-event/0
+id: 6a239a7bcdb4198b90041aee9413eedcb786265ad4d8a1b2666290da0fa0a040
+at: 2026-10-30T23:23:07Z
+store: asf
+act: confirm-rewording
+about: segment:result-section-ii-survival
+actor:
+  name: Claude Opus 5.5 (Part II independent checker 1)
+  role: second mind
+normalizer: vsect-norm/0
+criterion: 'Diff read against each re-bound check''s full criterion: none uses the content this edit changed (identification clause, true-law premises, right rung of convention monotonicity, Scope Condition and kappa semantics, retired ambiguity law, record wording); each criterion is about its own segment''s formulas, numbers, primaries or identity-layer claims, reached only through depends:. Says nothing about whether the re-bound checks were right.'
+from-version: 5f2e1a5faed3d105c8ad76633ce22740e2102ed001585dacc897f143aab9af99
+outcome: equivalent
+scope:
+  for:
+  - 0f1698cdfabb4caca141fe2a8ae992045f0c6aa0801c8755405c997290340624
+  - d9871bd0138d2ef460c86d1197bb3f47adeed87034c7c4a5fb19ea779b9efa8f
+  - 7a5de070c5a593c3d60497a030bb512f2c41d3142f9414deecdf4dbc848b43f9
+  - 2fb14da9c5899ac605ab648d2918c3310ded36aae424042d783fdfe7b5a2948f
+  - b7b5fbdb398f3bba8044cb6ffa32a5c107f58c57189bf46f78c3c91270faa75e
+  - 38fff55dfd3fce8596b5b772503ca0d8e3e01237a669830874bec8b7088cddbc
+  - 688db51986ffe58ec08747514e0ee8cfcb1c1d005088e098dbf1f4b3a453a5a2
+  - 8a5a332da6a27997f59e80fe28b7d9755a49ae762672eaca1f870ebc7b77cddf
+  - 0355f83afeece5d703bc03ad296d76989f16471c067cf8811e98a78e0dff3027
+to-version: c31878b02fea07ffc5919e1ba6e6838d1b0c2dd25c945db0cce0b733cd129605

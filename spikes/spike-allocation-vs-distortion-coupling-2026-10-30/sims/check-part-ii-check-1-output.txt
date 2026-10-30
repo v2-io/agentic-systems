@@ -1,0 +1,49 @@
+K1 tilt: exact KL vs leading-order lam^2 Var/2 vs Bennett bound Var*(e^{lam b}-1-lam b)/b^2
+  Bennett bound holds on 20000 random instances; tightest KL/bound=1.0000
+  max KL/(lam^2 Var/2) observed = 9235.1  (the sd-factorization is leading-order only)
+  lam=1 p=0.5: KL=0.12011  lam^2Var/2=0.12500  Bennett=0.14872  range-bound=0.1250
+  lam=1 p=0.1: KL=0.05857  lam^2Var/2=0.04500  Bennett=0.06218  range-bound=0.1250
+  lam=1 p=0.01: KL=0.00704  lam^2Var/2=0.00495  Bennett=0.00708  range-bound=0.1250
+  lam=1 p=0.001: KL=0.00072  lam^2Var/2=0.00050  Bennett=0.00072  range-bound=0.1250
+  lam=5.0 p=0.001: KL=0.1325  lam^2Var/2=0.0125  Bennett=0.1418
+  lam=10.0 p=0.001: KL=3.1266  lam^2Var/2=0.0500  Bennett=21.8181
+
+K2 per-goal calibration of a goal-blind Bayes filter when the goal is evidence (N7beta world)
+  under G=0's law: reliability of goal-blind report (log score) = 0.1927 nats; goal-using report: 0.0000
+  under G=1's law: reliability of goal-blind report (log score) = 0.1927 nats; goal-using report: 0.0000
+  pooled law: goal-blind report reliability = 0 (it is P(flaw|e)=0.5)
+  restoration: record 'principal assigned g' as an event s; f_M(M-, s) = P(flaw|e,s) = post[s]; no G argument; per-goal reliability 0
+
+K3 a calibrated goal-dependent departure from P(W|info) (N3 world): reliability 0, so 'departure => reliability>0' fails
+  agent encodes (x1,x2); report P(W|x1,x2): score=0.2881 RES=0.3849 REL=-0.0000
+  same agent, goal g1, reports P(W|x1) (encode-then-ignore): score=0.3178 RES=0.3552 REL=0.0000
+  departure from P(W|encoded info) costs 0.0297 nats, all of it resolution; reliability 0
+  tilted (N3 row 4): score=0.3301 RES=0.3849 REL=0.0420; recalibrated score = 0.2881 = full-info score 0.2881
+
+K4 action-pinned event + injective policy: G determined by (e,M-) -> I(G;Omega|e,a)=0 even for an informative goal
+  I(G;Omega|y) without the action in the event = 0.1855 nats (goal informative)
+  I(G;Omega|y,a) with the action in the event, a=G = 0.0000 nats
+
+K5 Fisher-Rao convention: KL vs spherical arc theta=arccos(BC) vs Fisher geodesic 2*theta
+  N(0.0,1) vs N(0.01,1): KL=0.00005  arc^2/KL=0.5000  (2arc)^2/KL=2.0000  global check 2arc<=2sqrt(KL): True
+  N(0.0,1) vs N(0.1,1): KL=0.00500  arc^2/KL=0.4998  (2arc)^2/KL=1.9992  global check 2arc<=2sqrt(KL): True
+  N(0.0,1) vs N(1.0,1): KL=0.50000  arc^2/KL=0.4795  (2arc)^2/KL=1.9181  global check 2arc<=2sqrt(KL): True
+  N(0.0,1) vs N(3.0,1): KL=4.50000  arc^2/KL=0.3418  (2arc)^2/KL=1.3671  global check 2arc<=2sqrt(KL): True
+  global: arccos(BC) <= sqrt(KL) on 20000 random pairs; max ratio 1.0000  => d_Fisher=2arc <= 2 sqrt(KL), no small-information hypothesis
+
+K6 step 5a: a feasibility-independent cost on a pursuing action does not by itself break starvation
+  verifier V5 (cost on a2, the feasible-best action): VOI(feasibility)=0.0600
+  cost on a1 instead (a2 best under both): VOI(feasibility)=0.0000  -> tie broken, starvation persists
+
+K7 action in the event + injective deterministic policy: kappa numerator is 0 for a distorting update
+  operating law: H(G|e)=0.0000, I(G;M+|e)=0.0000  (distorting update, TV between goals' reports = 0.762)
+  probe law (G uniform, independent of a fixed e): I(G;M+|e)=log2=0.6931, kappa=1
+
+K8 clause 2's converse: content-dependent drop of an uninformative feature leaves the report calibrated (verifier V6)
+  dropped content x3 independent of W given x1 -> pattern carries no W-information -> report P(W|x1) is calibrated (REL=0, as K3 row 2)
+
+K2b the same point with the action pinned in the event: principal-set goal, a=G, e=(a,o)
+  under G=0: per-goal reliability, likelihood-only filter = 0.1855; action-as-evidence update = -0.0000
+  under G=1: per-goal reliability, likelihood-only filter = 0.1855; action-as-evidence update = -0.0000
+  -> with the goal informative, 'action only through the likelihood' is per-goal miscalibrated, and the per-goal-calibrated
+     goal-blind update is the one that treats the action as evidence, which the certificate's wording excludes. Under NWI they coincide.
