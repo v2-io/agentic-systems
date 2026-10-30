@@ -1,0 +1,8 @@
+K* [0.85410197 0.35825757]
+K_c=  1  eps*^2 ~ 0.1435   tilde-lambda^2=6.15e-02
+K_c=  2  eps*^2 ~ 0.1881   tilde-lambda^2=3.81e-02
+K_c=  4  eps*^2 ~ 0.2063   tilde-lambda^2=7.15e-03
+K_c=  8  eps*^2 ~ 0.2069   tilde-lambda^2=2.07e-04
+K_c= 16  eps*^2 ~ 0.2065   tilde-lambda^2=1.71e-07
+K_c= 32  eps*^2 ~ 0.2053   tilde-lambda^2=1.17e-13
+K_c= 64  eps*^2 ~ 0.2016   tilde-lambda^2=5.50e-26

@@ -1,0 +1,21 @@
+---
+kind: item
+owner: G.2
+opened: 2026-10-30T23:24:58Z
+opened-by: Claude Opus 5.5 (spike drain fork D)
+concerns: [segment:def-system-coupling, segment:meas-coherence-coupling, segment:hyp-conceptual-alignment, segment:result-specification-bound, segment:scope-developer-agent]
+---
+
+# TST has no scope for concurrent writers. The 2026-07-28 partition-isolation spike supplies its pieces, verified absent from canon: subcriticality of the change-propagation kernel as the precondition for isolable concurrent work (a second, threshold-carrying grounding of high cohesion / low coupling), action locality as an enforcement condition, non-decaying observables that no partition isolates, and which artifacts must be contract-first. Land at the tiers the spike states, or set aside with reasons.
+
+Checked at cbd2f345: no segment mentions Lieb–Robinson, Smith & Eppinger, Dobrushin, Lubachevsky or concurrent writers; #scope-developer-agent takes one agent; #hyp-conceptual-alignment :51–55 has the merge-conflict diagnostic, marked "operationalizable but unmeasured" for lack of a ground-truth independence classification.
+
+Source: `spikes/spike-partition-isolation-criterion-2026-07-28.md` (read whole). Its tiers, which the landing should keep (§11): the isolation template (Result 1) is adopted, not claimed (Courant–Friedrichs–Lewy; Lieb & Robinson 1972; Nachtergaele & Sims 2006). The criticality threshold $\rho(K) = 1$ (Result 2b) is prior art, Smith & Eppinger 1997, with the decay from Dobrushin and Künsch 1982 and the kernel estimated from change history in Giffin et al. 2009; cite, do not claim. The identification of #def-system-coupling's kernel as a branching offspring-mean matrix and subcriticality as the precondition for isolable concurrent work (2a, 2c) is the part no searched literature holds (§10.3), *conditional* on reading the kernel as forced follow-on rather than co-change (§4.3); the logarithmic margin in 2a is a known phenomenon (CYCLADES, Pan et al. 2016). Result 4 (action locality is structural for a stencil, promissory for an agent with a shell, so it must be enforced by construction) is *derived*. Result 5 (an order-statistic or global-registry observable has non-decaying sensitivity, so no partition isolates it) is *exact* for the sensitivity statement and *robust-qualitative* for its software twin; it earns its own demonstration segment. Result 7a (those non-decaying artifacts, such as schemas, namespaces and migration orders, are the ones that must be published and bound rather than merged) is *robust-qualitative* and strengthens #result-specification-bound.
+
+Cheapest pieces, which strengthen existing segments: §4.2a, where #hyp-conceptual-alignment's alignment-quality diagnostic becomes measurable with the independence label computed from the coupling metric; §4.3, the forced-follow-on versus co-change separation for #def-system-coupling; and §4.4, where $\rho(K)$ answers #meas-coherence-coupling's Working Note worry that the ratio $Q$ discards absolute level.
+
+What a landing must carry with it: the challenge in §10.5 (Gorshenev & Pis'mak 2004 report self-organized-criticality avalanches in Mozilla, FreeBSD and Emacs histories, i.e. software may sit *at* $\rho(K) \approx 1$, which the spike calls the most promising follow-on and testable by §4.2a's measurement); the unverified Courant-speed attribution in §3 (second-hand; its probe is named); the three prior-art items left open in §10.7; and the collision that "criticality" means FMECA component criticality in the change-propagation literature.
+
+Also owed, outside canon: `02-tst-core/lit-review/` (`result-synthesis-append-4.md`, `undermind/05-empirical-spectral-tools.md`) concludes that spectral cascade analysis for software "does not exist"; the engineering-design change-propagation literature that holds the criterion and the kernel was never searched there (§10.6). That directory's own provenance (it staked this program out in May 2026, `4-RESEARCH-GOALS-spectral-graph.md`) should be stated wherever this lands. The seam ontology and fated-commitment half (§9) is vivarium's design question, not ASF's.
+
+This item replaces the spike's hand-off "the landing calls are Joseph's" (§11; `msc/inside-out-2026-10/system-review/measurements.md` :91 lists it among the hand-offs D.2 counts).

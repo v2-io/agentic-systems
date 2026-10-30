@@ -4,6 +4,9 @@
 **Date**: 2026-05-09 (revised same day, twice — once for framing correction, once for RG-0c integration)  
 **Inputs**: `00-brief.md`, `01-rg-0a-two-kalman-Kc-extension.md`, `01b-rg-0a-iterated-coarse-graining.md`, `02-prior-art-rg-ib-fep.md`.
 
+> [!warning]
+> **Correction (2026-10-30, spike drain).** §2.1's second bullet and every reading built on it ("sufficient timescale separation absorbs structural sub-agent heterogeneity"; the AAT fixed point as attractive from heterogeneous starts; heterogeneity as an irrelevant operator) rest on an RG-0a result that is false: the heterogeneous-gain defect rises to a floor under $K_c$, it does not decay (see the warning atop `01-rg-0a-two-kalman-Kc-extension.md`). Form preservation of the homogeneous case (`01b`) and RG-0c are unaffected. Ledger: `item:the-heterogeneous-gain-closure-defect-does-not-v`.
+
 **Framing note (added on revision).** The first draft of this verdict drifted into "is this novel? then drop" reasoning. That's the wrong frame for ASF. The project's prior-art-integration discipline (CLAUDE.md §Prior art integration) is explicit: *"AAT's contribution is integration, not invention. The individual pieces are mostly known; the synthesis is the contribution."* What we're testing is whether the RG framing is *clean theory and useful unification* — independent of whether AAT got there first. The corrected verdict adopts the framing on those terms.
 
 ---

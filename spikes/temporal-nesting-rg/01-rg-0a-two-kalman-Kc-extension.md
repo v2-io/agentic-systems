@@ -3,6 +3,9 @@
 **Status**: in progress — Case B (heterogeneous steady state) derived; Case A (homogeneous transient) and the iterated-coarse-graining test are open.  
 **Date opened**: 2026-05-09 **Depends on**: `00-brief.md`, `spikes/spike-composition-correlated-kalman.md`, `#form-composition-closure`, `#example-kalman`, `#der-temporal-nesting`.
 
+> [!warning]
+> **§2.6–§2.7's result is false (found 2026-10-30, spike drain).** The boxed §2.5 formula's second term, $\sum_{k=0}^{K_c-1} \widetilde{K\lambda^k}^2 V_{O_-,k}$, is non-decreasing in $K_c$ and its $k=0$ term does not depend on $K_c$; §2.6 drops it. The defect rises to a floor rather than decaying (`check-2026-10-30-kc-defect-floor.py` and its output, beside this file). Heterogeneity is not absorbed by timescale separation under the symmetric projection. Ledger: `item:the-heterogeneous-gain-closure-defect-does-not-v`.
+
 **Goal**. Test the load-bearing prediction of the RG framing (`00-brief.md` §4): that under coarse-graining flow $K_c \to \infty$, AAT's closure defect $\varepsilon^*$ behaves as RG-flow distance from a fixed point. Specifically, that homogeneous (fixed-point-respecting) sub-agent collections sit at $\varepsilon^* = 0$ for all $K_c$, and that heterogeneity perturbs away from the fixed point in a way whose $K_c$-dependence is structurally informative.
 
 ---

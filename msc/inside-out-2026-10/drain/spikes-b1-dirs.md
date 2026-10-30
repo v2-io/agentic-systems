@@ -1,0 +1,62 @@
+# Spike drain, fork B1: `class-coercion-wrapping/`, `track-a-intent-dag/`, `temporal-nesting-rg/`, and the loose root sims
+
+*Serves G.2 (stranded additions), C.1 (canon defects), F.3 (canon-boundary faithfulness) and I.3 (one ledger) of `../INTENT.md`, under the top intent "Complete "in-place" refactor of ASF-- meta, all artifacts, and theory itself." Fork B1 of the spike drain (`spikes.md` beside this file), 2026-10-30, at asf `cbd2f345`. Read by the drain lead; the integrators work from the ledger items named here.*
+
+## What I read
+
+- **Whole:** `class-coercion-wrapping/99-verdict.md` and `INTEGRATION-PLAN.md`; `temporal-nesting-rg/99-verdict.md`; `track-a-intent-dag/01-conference-paper-review.md` and `04-multi-agent-intent-priorities.md`.
+- **At length:** `temporal-nesting-rg/01-rg-0a-two-kalman-Kc-extension.md` §0–§3 (lines 1–175 of 259), `01b-rg-0a-iterated-coarse-graining.md` §1–§4, the tail of `00-brief.md`; the prior adjudication of this cluster, `.routing-trail/SPIKE-WORKING-418736/adjudication.md` §2; `.integrated/spike-guc-class-boundaries-intuition-2026-05-31.md` (grep-led, for the Boundary 2 claim); the headers and docstrings of all five loose sims.
+- **Sampled:** `track-a-intent-dag/00-intent-dag-formalism.md`, `02-alt-clean-slate.md`, `03-alt-and-or-dag.md` (section maps and the opening of 00, then a concept-by-concept grep of canon).
+- **Not read:** `class-coercion-wrapping/00`–`09` bodies (I verified their landing from the canon side, segment by segment, against the INTEGRATION-PLAN's list, rather than reading the trail); `temporal-nesting-rg/02-prior-art-rg-ib-fep.md` and `03-rg-0c-strategy-recursion.md` (taken through the verdict's account; the RG-0c item asks the integrator to re-check the quoted segment text).
+- **Run first-hand:** all five loose sims (`sim-three-way-tradeoff.py`, `sim-w1-w2-boundary.py`, `sim_guc_classes.py`, `sim_guc_boundaries.py` ran; `sim-forgetting-conventions.py` left to the lead's hard-ceiling trio) and a new check of RG-0a's central result, `temporal-nesting-rg/check-2026-10-30-kc-defect-floor.py` with its output beside it.
+
+## Dispositions
+
+**`class-coercion-wrapping/` — already in canon; file it.** Every landing in its INTEGRATION-PLAN is at HEAD: `#der-class-coercion-via-wrapping` (Theorems 1 and 2, conditions, the W₀/W₁/W₂ table, the A/B/C admissibility partition, prior art), `#der-class-coercion-in-composition` (the composition half, Brooks's-Law cost, the $\varepsilon^\ast_{\text{track}}$ / $\varepsilon^\ast_{\text{coerce}}$ split, the form-preservation reading), `#der-logogenic-as-wrapping`, and the updates in `#der-directed-separation` (Class-1-by-structure vs by-behavior), `#hyp-directed-separation-under-composition:72`, `#form-composition-closure:298`, `#der-tempo-composition:120` and `#def-auxilia-hierarchy:84`. One part of the spike is correctly superseded: its W₁ bound $\kappa_{W_1} \le I(A(q_M); G_W \mid q_M)$ (`03-leakage.md`, `99-verdict.md` §2.4) is circular and was replaced by the selection-channel bound on 2026-05-31; both canon segments carry a regression guard in Working Notes, and no other surface (FINDINGS, README, CURRENT-VOL1) states the old form. Deferred work is owned: sub-spike E by `item:todo-detailed-tempo-accounting-for-canonical-e0c9`, sub-spike G by `item:spikes-proposed-decomposed-empirical-estimator-accuracy-e63e` and E.1. Filing is `item:spikes-routing-dir-spike-batch-6-lighter-gold-gate-read-d206`, to which I added this re-check; the Joseph gate it waited on is lifted.
+
+**`track-a-intent-dag/` — already in canon (lineage); file it.** March 2026, pre-AAT. Its live content is in canon under later names: the AND/OR DAG (`#def-strategy-dag`, `#scope-and-or`), unobservable regions as absorbing (`#der-observability-dominance:16,118`), depth decay (`#der-chain-confidence-decay`), adversarial edge targeting (`#der-agent-opacity`). Set aside, correctly: the noisy-OR form, the aggregate health score, $p_{\min}$ and "effective reach", scaffolds the later formalism rejected (noisy-OR explicitly). `01-conference-paper-review.md` is a one-paragraph "irrelevant to AAT" review; nothing to carry. The one piece not in canon, `04`'s Q1/Q2 (cut the DAG across agents through low-uncertainty edges; shared intent compresses to what keeps the spanning edges viable), is added as a source to `item:t1-auftragstaktik-allocation-and-conway`; Q3/Q4 are `item:proposals-sp-20-dag-vulnerability-metrics`. Filing is the same `d206` item.
+
+**`temporal-nesting-rg/` — partly in canon, one false result found, one no-go stranded; stays live until its items land.**
+- *In canon:* the form-preservation reading of (A1)–(A4) and its citation substrate (`#der-class-coercion-in-composition` §"Form-preservation reading" and Related Work), and Move B (`#der-multi-timescale-stability`, de56b9a6, now `exact`, with the renormalization reading at :118–120).
+- *False, never in canon:* RG-0a's central result, that heterogeneous Kalman gains flow to $\varepsilon^\ast = 0$ at rate $(1-K^\ast_{\min})^{K_c}$. The spike's own boxed formula (§2.5) has a second term, a sum over the in-window lags, that is non-decreasing in $K_c$; its $k=0$ term, $((K_1^\ast - K_2^\ast)/2)^2 \operatorname{Var}(O_-)$, does not depend on $K_c$ at all, and §2.6 drops it ("the first term dominates"). A simulation of the spike's exact setup gives $\varepsilon^{\ast 2} = 0.14, 0.19, 0.21, 0.21, 0.21, 0.21$ at $K_c = 1, 2, 4, 8, 16, 32$, while the kept term falls to $10^{-13}$. No prior reader caught this, including the 2026-05-17 adjudication, which checked landing and not the math. Grep finds the false form nowhere in canon, FINDINGS, README or CURRENT-VOL1, so it is a guard plus an addition: the corrected statement strengthens `#result-unity-closure-mapping`'s structural ($U_f$) axis, since gain heterogeneity is a closure-defect driver at every timescale ratio, not only $K_c = 1$. Recorded as `item:the-heterogeneous-gain-closure-defect-does-not-v` (G.2). I put a warning at the top of `01-rg-0a…md` and of `99-verdict.md` so the trail cannot be re-read as true. The 01b homogeneous flow ($\lambda \mapsto \lambda^{K_c}$, degenerate attractor at 0, hence structural-RG rather than critical-RG) is unaffected.
+- *True, never in canon:* RG-0c's no-go. Recursing $(O, \Sigma)$ at sub-goals is the type error `#def-strategy-dag` forbids, and the minimal formal extension is degenerate and equals typed options/MAXQ. Canon never says what a sub-goal's objective status is, and cites neither Sutton–Precup–Singh 1999 nor Dietterich 2000. Recorded as `item:def-strategy-dag-and-form-strategy-complexity-co` (G.2, discussion grade).
+- *Open moves:* A's temporal-nesting half (`#der-temporal-nesting`, `#result-sector-persistence-template`, `#disc-composition-consistency` carry no form-preservation reading), C (two-loop worked example), D (the §3.3 unification table) remain `item:spikes-routing-temporal-nesting-rg-moves-b-c-d-integrat-fefa`, to which I added the move-by-move state and the guard that D must not carry the false heterogeneity claim. F is `item:todo-class-3-closure-defect-dynamics-analysis-572e`.
+- *Physical move:* `.integrated/` once the RG-0c item lands (its last canon-bound content); the refuted RG-0a result is then recorded in the MANIFEST as never-landed and corrected.
+
+**`sim-three-way-tradeoff.py` — canon leans on it unregistered.** Its spike is in `.integrated/`; the script stayed. `#disc-exploit-explore-deliberate`'s Epistemic Status states its outcomes; only a Working Note names the path. Re-run: the outcomes reproduce (oracle +2.1 to +6.5%, so the body's "2–6%" is slightly off; deliberation 0–8 of 200; explore/deliberate information ratio about 3.5; unified beats two-stage by 8.7–13.0%), and two of its four policies are degenerate (they deliberate every step and earn zero). Recorded as `item:disc-exploit-explore-deliberate-s-epistemic-stat` (F.3).
+
+**`sim-w1-w2-boundary.py`, `w1-w2-boundary.png` — already owned** by `item:w1-boundary-toy-sim-unregistered` (F.3). I added the re-run: computations complete; only the plot write fails outside the asf root (relative save path).
+
+**`sim_guc_classes.py`, `sim_guc_boundaries.py`, `guc_boundaries.png` — intuition toys whose spike is in `.integrated/`; one canon defect found through them.** They run (the boundaries script needs `spikes/` on the import path). Canon does not cite them, but `#der-directed-separation:108`'s Boundary 2 sentence comes from them, and it overstates what they show: the Class 2 side is self-limiting under adversarial pressure only for process-form coupling, while content-form Class 2 already tracks the adversary one-for-one (adv_slope 0.90–0.98). Recorded as `item:der-directed-separation-108-says-boundary-2-clas` (C.1). The files can go to `.integrated/` beside their spike, or to `empirica/` if the narrowed sentence is made to lean on them.
+
+**`sim-forgetting-conventions.py` — travels with the hard-ceiling trio** (the lead's row). Verify-1 already found that it never tests the ceiling claim (`…-verify-1.md:66`), and the spike is superseded, so it goes wherever the trio goes.
+
+## Ledger changes
+
+New items (all `--by "Claude Opus 5.5 (spike drain fork B1)"`):
+
+- `item:the-heterogeneous-gain-closure-defect-does-not-v` (G.2): RG-0a's result is false; land the corrected persistence of the gain-heterogeneity defect; guard Move D.
+- `item:def-strategy-dag-and-form-strategy-complexity-co` (G.2): land RG-0c's sub-goal no-go and options/MAXQ citations at discussion grade.
+- `item:der-directed-separation-108-says-boundary-2-clas` (C.1): Boundary 2's "self-limiting" holds for process-form only.
+- `item:disc-exploit-explore-deliberate-s-epistemic-stat` (F.3): register the three-way-tradeoff simulation, correct "2–6%", fix or drop the degenerate baselines.
+
+Sources appended (dated paragraph at the end of the body; `vsect revise --dry-run` shows nothing of mine to take in):
+
+- `item:spikes-routing-temporal-nesting-rg-moves-b-c-d-integrat-fefa`: the move-by-move state and the guard.
+- `item:spikes-routing-dir-spike-batch-6-lighter-gold-gate-read-d206`: the first-hand re-check of both directories.
+- `item:w1-boundary-toy-sim-unregistered`: the re-run and the path fix.
+- `item:t1-auftragstaktik-allocation-and-conway`: track-a `04` Q1/Q2.
+- `item:todo-track-c-body-re-authoring-lead-with-meth-683d`: `#disc-modularity-state-dynamics` cites agent convergence during the class-coercion cycle as evidence in its Epistemic Status (:92), not only as narrative in its lead (:18), which widens that item from register to warrant.
+
+Files written outside the ledger, to commit: this file; `spikes/temporal-nesting-rg/check-2026-10-30-kc-defect-floor.py` and `check-2026-10-30-kc-defect-floor-output.txt`; the warning blocks in `spikes/temporal-nesting-rg/01-rg-0a-two-kalman-Kc-extension.md` and `99-verdict.md`.
+
+## Adjacent, for other rows and lanes
+
+- **Fork C:** `#def-auxilia-hierarchy:84` says auxilia are the constructive realization of strict W₁ wrapping; `spike-c2prime-realization-spectrum` (fork C) says separate substrate is sufficient, not necessary, and the Volume 4 second check broke `#def-auxilia-hierarchy` (C6). CLAUDE.md's Known Fragilities repeats the auxilia-as-W₁ example. The GUC toys are derived from `spike-leakage-locus-2026-05-18.md`'s linear-Gaussian structure (fork C).
+- **Fork B2:** my addition to the Track C item bears on `meta-segment-narrative-ordering-sweep-plan.md`, B2's file.
+- **The Part II lane (C3, landed today):** the allocation-vs-distortion spike lists "the wrapping theorems' missing calibration condition" as open; that falls on `#der-class-coercion-via-wrapping`, which this cluster produced.
+- **`.integrated/` soft spots this cluster touches:** `spike-composition-correlated-kalman.md` left open whether the Beta-Bernoulli strategy defect ($\varepsilon^\ast \gt 0$ at $K_c = 1$, now in `#form-composition-closure:316`) survives $K_c$-flow. Given the state-case floor above, the presumption should be that it does, but that is unchecked. `spike-three-way-tradeoff.md` has its missing-channels finding only in Working Notes (internal-surfaces map).
+
+## Method note
+
+The RG-0a error was found by reading the derivation rather than trusting the verdict, then confirmed by simulating the spike's own setup. Two earlier passes (the 2026-05-09 verdict and the 2026-05-17 adjudication) checked whether the result had landed, not whether it was true. A routing check that tests only presence would have let Move D land a false premise.
