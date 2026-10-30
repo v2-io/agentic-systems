@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 58f726fc555c97528c06a1abe471e73cdde4f5f1ad38ece75a115cc25e766473
+at: 2026-10-30T22:02:48Z
+store: asf
+act: correct
+about: item:proposals-e-3-sp-9-fenchel-bregman-reframe-of-addi-d684
+actor:
+  name: Claude Opus 5.5 (item rechecker, q-proposals lane)
+  role: rechecker
+normalizer: vsect-norm/0
+corrects: 3a4d5398bdee2fdec84b0378f433347b40232dd9b06f78cefed8ce74184c78e2
+text: 'This item bundled two owners. The chain-row defect at #disc-additive-coordinate-forcing:43 is item:disc-additive-coordinate-forcing-43-lists-the-ch (C.1, split out of TODO by the t2 lane), which survives for that half, alongside finding F4 of reviews/items-recheck-q.md. This item keeps only the F.3 half: verify the Legendre-Fenchel identification against Amari-Nagaoka 2000 from the primary. Neither is a duplicate of the other.'
