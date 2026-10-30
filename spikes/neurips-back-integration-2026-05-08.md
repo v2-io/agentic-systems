@@ -85,7 +85,7 @@ The papers in `~/src/neurips/` extracted three ASF results, refined them under a
 
 **Source segments:**
 - `01-aat-core/src/deriv-observation-ambiguity-bias-bound.md` — the conditional-theorem upgrade with two tracks.
-- `03-llm-core/src/scope-observation-ambiguity-modulation.md` — the $\kappa \times A$ factorization.
+- `03-llm-core/src/scope-observation-ambiguity-modulation.md` — the $\kappa \times \mathcal{A}$ factorization.
 - `01-aat-core/src/der-directed-separation.md` — the Class 1/2/3 architectural classification.
 - `03-llm-core/src/scope-channel-collapse.md` — the architectural condition for Class 3 by construction.
 - `01-aat-core/src/scope-agent-identity.md` — the (PI) parameterization-invariance commitment.
@@ -197,7 +197,7 @@ Several spike-report-grade investigations from the NeurIPS sprint are not yet in
 - **#4 Tragedy of the Confident Agent**. Major strengthening: F-A-G-P enforcement framework, KKT shadow-price resolution, per-action LMI pathwise survival, anisotropic-drift dependence, exit-time bound, 2D empirical anchor. Catalog entry should be revised to reflect the conditional-theorem upgrade and reference Paper 1.
 - **#5 Persistence Information-Rate Cost**. Catalog stands. Worth noting that Paper 1's exit-time bound is the structural complement to the information-rate floor.
 - **#7 Forgetting Prerequisite for Persistence**. *Substantially strengthened* in Paper 2 from "forgetting prerequisite" to "structural-class theorem on $\mathcal{A}_{\text{decay}}$". Catalog entry should incorporate the gain-decay class definition and the bidirectional-ceiling-on-finite-gain finding.
-- **#8 Logogenic Bias Bound ($\kappa \times A$)**. *Major strengthening* across multiple axes: two named tracks with explicit hypothesis sets, no-go theorem on Euclidean chart norms, Čencov-uniqueness-and-sharpness, Class 1 reduction to Stuart-school, Coupled-class connectivity lemma covering modern autoregressive architectures, JSD estimator. Catalog entry needs substantial revision; the conditional-theorem upgrade is now itself a richer object than the catalog represents.
+- **#8 Logogenic Bias Bound ($\kappa \times \mathcal{A}$)**. *Major strengthening* across multiple axes: two named tracks with explicit hypothesis sets, no-go theorem on Euclidean chart norms, Čencov-uniqueness-and-sharpness, Class 1 reduction to Stuart-school, Coupled-class connectivity lemma covering modern autoregressive architectures, JSD estimator. Catalog entry needs substantial revision; the conditional-theorem upgrade is now itself a richer object than the catalog represents.
 - **#11 Weakest-Link Dimensional Persistence Law**. Catalog stands. Worth noting that Paper 2's bottleneck-not-sum aggregator argument for strategic tempo is the same structural pattern.
 - **#14 Sandbox Hard Ceiling**. Now grounded by Paper 2's (C1)-(C2)-(C3) framework: sandbox trajectories violate (C2) sequential ignorability by construction (resettable ⇒ $a_t$ not d-separated from $o_{t+1}$ by $H_t$ in mutilated graph). The structural argument is sharper than the catalog states.
 
