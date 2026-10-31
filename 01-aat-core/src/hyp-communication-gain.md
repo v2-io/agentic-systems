@@ -34,7 +34,7 @@ Read each term as an observation $o_k$ of the quantity $i$ is updating, with $h$
 
 $$\eta_k = \frac{U_{M_i}^{+}}{V_k}, \qquad U_{M_i}^{+} = \Big(\frac{1}{U_{M_i}} + \sum_l \frac{1}{V_l}\Big)^{-1},$$
 
-which for a single term is the ratio below. Gains computed separately against the same prior $U_{M_i}$ and then summed count the prior's information once per term: with $U_{M_i} = V_1 = V_2 = 1$ they sum to 1, where the joint gains are $1/3$ each. Errors correlated across terms need the joint form with their covariance, as in #deriv-tempo-additivity's synchronized batch.
+which for a single term is the ratio below. Gains computed separately against the same prior $U_{M_i}$ and then summed count the prior's information once per term: with $U_{M_i} = V_1 = V_2 = 1$ they sum to 1, where the joint gains are $1/3$ each. Errors correlated across terms need the joint form with their covariance, as in #deriv-tempo-additivity's synchronized batch. Read event by event, the terms count each message's noise as fresh. That fits channel noise. A source's miscalibration is usually shared by all of its messages, and so is a systematic misalignment. Repeated messages from $j$ are then #deriv-tempo-additivity's persistent-bias regime: what they tell $i$ about the quantity saturates at precision $1/U_{\text{src},j}$, however many arrive. Charged afresh at each message, $U_{\text{src},j}$ would let $U_{M_i}$ shrink at the additive rate while the error stays at the source's bias. It belongs in the trust meta-model (Discussion) as a persistent state that ground truth updates, not in each event's noise.
 
 *[Hypothesis (communication-gain)]*
 

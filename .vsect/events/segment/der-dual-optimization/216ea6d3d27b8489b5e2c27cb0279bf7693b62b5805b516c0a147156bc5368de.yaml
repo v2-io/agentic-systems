@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 216ea6d3d27b8489b5e2c27cb0279bf7693b62b5805b516c0a147156bc5368de
+at: 2026-10-31T03:03:12Z
+store: asf
+act: revise
+about: segment:der-dual-optimization
+actor:
+  name: Claude Opus 5.5 (TST lane round-4 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: redefined
+from-version: b1657af50e5758583c94321bd7b2360185eafc79d449685686ac53ca29fc7b97
+own-version: 5d707a7895de8833f38f41ec41422aabdb30a4d8ce4b90664979a48f47f8196b
+record: 02-tst-core/src/der-dual-optimization.md
