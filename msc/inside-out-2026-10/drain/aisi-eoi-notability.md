@@ -57,3 +57,9 @@ Vert \le C\kappa I(G;\Omega\mid e,M)$. | **The bias-bound citation is stale and 
 ---
 
 *The drainer was stopped here by the API safeguard (`reasoning_extraction`), the fourth such stop in this region. The rows above that say "recorded below" or "item below" were not recorded in the ledger: no `vsect note` from this drainer exists. Not reached: the rest of `aisi-eoi` (its influx and top-level files) and all of `~/src/notability-extracts/`. (Lead, 2026-10-30.)*
+
+## Second attempt (Fable 5.1), and where this region stands
+
+*Lead, 2026-10-30.* The second drainer (Fable 5.1) recorded the first drainer's owed ledger items in `3f519917`: the honest-activation landing item, seven joins onto existing items, and five raises. Then the same API safeguard (`reasoning_extraction`) stopped it before it reached `notability-extracts` or the rest of `aisi-eoi`. That is the fifth stop in this region, across three model families (Opus twice, Sonnet, Fable), so a further agent attempt is not expected to get through.
+
+Still not drained: `~/src/notability-extracts/` (all of it) and `aisi-eoi`'s influx and top-level files. What would reach them is a human look, or an agent that reads only file listings and commit bodies and never the documents. A listing pass can say what is there and whether its slugs appear in canon, not what it argues.
