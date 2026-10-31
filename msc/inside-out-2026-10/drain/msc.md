@@ -2,19 +2,31 @@
 
 *Serves **I.9** of `../INTENT.md` (every backlog surface drained into the ledger, one disposition per source item), and through it I.10, G.2, C.1, C.4, F.2 and H.3. Top intent: "Complete "in-place" refactor of ASF-- meta, all artifacts, and theory itself." Working file of the `msc/` drain, 2026-10-30, started at asf `515c15ce`. Written as it goes; the lead reads it whole.*
 
-*In progress.*
+*In progress: this agent's part is drained; the two forks' parts are being merged.*
 
 ## Partition
 
-All of `msc/` outside `inside-out-2026-10/`, by this agent alone (two forks were refused at the session's subagent cap). Order of work: the theory-bearing top-level documents first, then the residue, then the subtrees (`reflections/`, `meta-process-review-2026-07-07/`, `logogenic-encounter-2026-05-01/`, `quiz-responses/`, `summary-attempt/`, `reflections-rowan-2025-12/`). What was not reached is listed under Coverage.
+| Who | Sources | Working file |
+|---|---|---|
+| this agent | the 36 top-level `msc/*.md` and cruft, `domain-unification-2026-05-04/`, `quiz-responses/`, `summary-attempt/` | this file |
+| reflections fork (launched after the subagent cap cleared) | `reflections/` (30), `reflections-rowan-2025-12/` (6) | `msc-reflections.md` beside this file |
+| meta-process fork | `meta-process-review-2026-07-07/` (24), `logogenic-encounter-2026-05-01/` (10) | `msc-process-logogenic.md` beside this file |
 
 ## How dispositions are written
 
 One of: **in canon / superseded** (where, checked at HEAD); **canon defect** (ledger item, owner KR); **never reached canon** (ledger item at honest tier); **set aside** (reason). Theory-bearing sources are split into their claims, each disposed. Before adding an item, the ledger (`vsect open`, `items/`) is searched by slug and key phrase; where an item exists, this source is added to it. Each theory item also carries what the other surfaces (audits and their gold, Working Notes, spikes, influx) hold on the same slug, so one item cites every source bearing on it.
 
-## Coverage
+## Coverage (this agent's part)
 
-(filled as read)
+**Read whole:** `nogo-structure-read-2026-07-29.md`, `era-artifact-asf-contributions-2026-07-04.md`, `ch3-calibration-note-review-2026-07-29.md`, `scope-of-work-ontology-and-figure-2026-05-17.md`, `domain-unification-2026-05-04/recommended-agent-ontology.md`, `deaths-grounding-plan-2026-06-10.md`, `mood-layer-sovereignty-carve-2026-06-17.md`, `llm-causal-access-note.md`, `summary-attempt/000-supplement-notes.md`, the two quiz score sheets, three summaries (017, 054, and the supplement's gap table against OUTLINE).
+
+**Read in part (by heading, verdicts, status lines and the sections a claim rests on):** `nogo-unification-archaeology-2026-07-29.md` (§0–§1 head, §5–§8, addendum §4–§5), `working-composition-admissibility.md` (§7, §8), `domain-xfer-candidates.md` (Q1, Q2, Q4, Q6), `separability-standalone-paper-proposal.md`, both `2026-05-08-three-move-shape-*`, both v0.4.0 reviews, `451729-d1-gate-verification-2026-05-20.md` (§9 whole), `audit-routing-microfix-and-manifest-draft-2026-05-16.md` (each spec checked at HEAD), `sop-shift-completion-plan-2026-06-02.md` (B3 whole), `handoff-2026-05-01.md` (§2), `figure-pipeline-buildout-2026-05-18.md` (boxes), `role-encounter-plan.md` (vision), the quiz question and answer files (against the scores).
+
+**Read at the head and status line only, checked at HEAD for the claim the status makes:** `AAD-to-AAT-TODO.md`, `audit-routing-consolidated-ledger-draft-2026-05-16.md`, both `class-rename-*`, `wn-discipline-coherence-pass-2026-05-31.md`, `sop-consolidation-design-2026-06-01.md`, `judgment-calls-readme-cycle-2026-04-26.md`, `build-markdown-design.md`, `modularity-cycle-plan-2026-05-09.md`, `markdown-first-pipeline.md`, both `verify-*-cluster-2026-05-20.md`, `2026-03-14-section-iv-paper-outline.md`.
+
+**Scanned, not read:** the other 142 summaries in `summary-attempt/` (grepped for embedded reader flags; none beyond the supplement), the two 0.5 MB walks (concatenations), 19 of 20 prior-art prompts (their outputs are F.2's).
+
+**Not read:** `joseph-working-notes.md` (git-ignored, Joseph's private transcripts; disposed by its citations only). Not reached: `nogo-unification-archaeology`'s §2–§4 and addendum §1–§3 in full; `working-composition-admissibility.md` §2–§6 in full (its open remainder was already restated by the t1 rechecker); Q3 and Q5 of `domain-xfer-candidates.md` beyond their selection notes.
 
 ## Dispositions
 
