@@ -81,7 +81,7 @@ The three boundary conditions are structurally independent, each stated in quant
 |---|---|---|
 | (I-a) / (II-a): sector-region | $\lVert e\rVert_B$, $R_B$ (from #def-model-class-fitness / #result-sector-persistence-template) | *magnitude* — more capacity cures |
 | (I-b) / (II-b): model-class | $\mathcal{I}(e)$, $\mathcal{F}(\mathcal M_B)$, $\mathcal I_{\max}(\mathcal M_B)$ | *class* — structural adaptation cures |
-| (I-c) / (III): observability | $\mathcal{I}(e)$, $\nu^{(k)}_B$, $U_{o,B}^{(k)}$ (from #obs-gated-tempo-advantage) | *rate* — lower observation noise or higher event rate cures |
+| (I-c) / (III): observability | $\mathcal{I}(e)$, $\nu^{(k)}_B$, $U_{o,B}^{(k)}$ (from #emp-update-gain, #def-adaptive-tempo) | *rate* — lower observation noise or higher event rate cures |
 
 No new ad-hoc thresholds are introduced. $\mathcal I_{\max}(\mathcal M_B)$ is the only new symbol; see Working Notes for its cleaner sufficient-statistics-span formulation.
 
@@ -122,8 +122,8 @@ Each case lands where the classification predicts. The derivation transfers to a
 Each existing emitter-side result is a restriction of the four-regime decomposition:
 
 - **#der-adversarial-destabilization** is Regime II-a integrated over a tempo-proportional event stream. The magnitude-shock sub-regime corresponds directly; the structural-shock II-b subcase is implicit in that segment, collapsed into "adaptive reserve exceeded" but here made explicit.
-- **#result-adversarial-tempo-advantage** — superlinear tempo scaling follows from the sector-persistence template's $1/\alpha$ (Model D) vs $1/\sqrt\alpha$ (Model S) applied to Regime II events. The $b$-exponent drops toward zero in the high-$U_{o,B}$ limit because the fraction of $A$'s events landing in Regime II drops (more fall into Regime III).
-- **#obs-gated-tempo-advantage** is the recipient-side expression of boundary (I-c): high $U_{o,B}$ pushes events into Regime III where they add to variance without contributing to destabilization.
+- **#result-adversarial-tempo-advantage** — superlinear tempo scaling follows from the sector-persistence template's $1/\alpha$ (Model D) vs $1/\sqrt\alpha$ (Model S) applied to Regime II events. High $U_{o,B}$ does not shrink the attacker's advantage by moving its events into Regime III: Regime-III events still enter $\sigma_{w,B}^2$ and drain the reserve (above), and noise on $B$'s own channel raises $B$'s error and the mismatch ratio at every tempo ratio while flattening the exponent's slope ( #deriv-observation-noise-placement, P1).
+- **#obs-gated-tempo-advantage** is not one of these restrictions. It records a simulation with noise on both agents' channels, and its exponent collapse comes from the attacker's own channel, the emitter's side of the interaction, not from boundary (I-c) on the recipient's side ( #deriv-observation-noise-placement, Variant-E check).
 - **#hyp-symbiogenic-composition** corresponds to asymmetric classification: host's signals to endosymbiont contain high-$\mathcal{I}$ structure the endosymbiont's class cannot initially represent (Regime II-b for the endosymbiont, forcing structural adaptation toward the host's class); endosymbiont's signals to the host land in Regime I (host absorbs endosymbiont's accumulated structure). Consolidation is the fixed-point where both streams are Regime I.
 - **Cooperative signaling** (in #der-team-persistence) — Regime-I events from aligned emitters contribute negatively to $\rho_B^{\text{eff}}$ via the cooperative-action term. The communication-tempo $\nu_{ji}^{\text{comm}} \cdot \eta_{ji}^\ast$ is the rate of Regime-I events times the recipient's informative gain.
 
@@ -131,14 +131,14 @@ Each existing emitter-side result is a restriction of the four-regime decomposit
 
 | Property | Source | Strength |
 |---|---|---|
-| Three independent boundaries (sector-region / model-class / observability) | Import from #def-model-class-fitness + #result-sector-persistence-template + #obs-gated-tempo-advantage | Formulation choice (three-way partition; coarser / finer alternatives possible) |
+| Three independent boundaries (sector-region / model-class / observability) | Import from #def-model-class-fitness + #result-sector-persistence-template + #emp-update-gain | Formulation choice (three-way partition; coarser / finer alternatives possible) |
 | Four-regime partition (I / II-a / II-b / III) | The three boundaries yield four boundary-state combinations; only four are non-degenerate | Derived from the boundary structure |
 | (I-a) / (II-a) boundary at $R_B$ | #result-sector-persistence-template's sector-region radius | Derived |
 | (I-b) / (II-b) boundary at $\mathcal{F}(\mathcal M_B) \cdot \mathcal I_{\max}$ | #def-model-class-fitness + class-capacity normalization | Formulation (the $\mathcal I_{\max}$ normalization is heuristic; sufficient-statistics-span form is cleaner — see Working Notes) |
-| (I-c) / (III) boundary at $U_{o,B} \cdot c_\text{floor}$ | #obs-gated-tempo-advantage + detection-theory threshold | Formulation ($c_\text{floor}$ is a detection-power parameter) |
+| (I-c) / (III) boundary at $U_{o,B} \cdot c_\text{floor}$ | #emp-update-gain + detection-theory threshold | Formulation ($c_\text{floor}$ is a detection-power parameter) |
 | Regime-typed $\rho_B^{\text{eff}}$ decomposition with negative Regime-I term | Aggregation over event stream using regime classification | Derived (the sign of the Regime-I term is structural, not a choice) |
 | Kalman-over-Kalman four-case derivation | Direct application of Kalman gain + sector + KL-gap + SNR analyses | Proved (for the stated case) |
-| Recovery of #der-adversarial-destabilization, #hyp-symbiogenic-composition, #obs-gated-tempo-advantage, #der-team-persistence as restrictions | Each emitter-side result is exhibited as a per-regime special case | Derived |
+| Recovery of #der-adversarial-destabilization, #hyp-symbiogenic-composition, #der-team-persistence as restrictions | Each emitter-side result is exhibited as a per-regime special case | Derived |
 | Non-Gaussian Case 4 derivation (heavy-tailed → II-b via KL gap) | Informal argument grounded in robust-filtering literature (Huber, Masreliez) | Discussion-grade (rigorous version requires per-family KL computation) |
 | Class 2 (Partial) approximation with $\kappa_{\text{processing}}$ degradation | Transfer from Class 1 (Separated) with goal-blind-update failure | Formulation (qualitative); exact form requires spelling out the goal-contamination coupling |
 
@@ -154,7 +154,7 @@ The three boundaries are structurally independent and each is stated in an exist
 
 ## Discussion
 
-**Complement, not replacement, of the emitter-side segments.** #der-adversarial-destabilization, #result-adversarial-tempo-advantage, #obs-gated-tempo-advantage, #hyp-symbiogenic-composition, and #der-team-persistence each describe what happens when $A$'s praxis couples into $B$. They collapse the variation into a scalar increment on $B$'s effective disturbance rate. The recipient-side classification decomposes that increment into regime-typed contributions with (importantly) a **signed** Regime-I component. The five emitter-side segments are recovered as restrictions — the classification provides the pattern-recognizer to match the emitter-side optimizer.
+**Complement, not replacement, of the emitter-side segments.** #der-adversarial-destabilization, #result-adversarial-tempo-advantage, #hyp-symbiogenic-composition, and #der-team-persistence each describe what happens when $A$'s praxis couples into $B$. They collapse the variation into a scalar increment on $B$'s effective disturbance rate. The recipient-side classification decomposes that increment into regime-typed contributions with (importantly) a **signed** Regime-I component. The four emitter-side segments are recovered as restrictions — the classification provides the pattern-recognizer to match the emitter-side optimizer.
 
 **Why II-a vs II-b matters.** Both destabilization regimes manifest as "adaptive reserve exceeded" in the emitter-side view. But the repairs are different: magnitude-shock (II-a) calls for more bandwidth — larger $R_B$, higher $\alpha_B$, faster tempo; structural-shock (II-b) calls for a different model class — an expansion, grafting, or compression in the sense of #result-structural-adaptation-necessity. An organization running rapid-response incident drills against a bureaucratic-process adversary faces II-a and responds with more capacity; the same organization hit by a technology-regime change faces II-b and responds with restructuring. The two produce similar pain signals but admit opposite cures. Collapsing them confuses diagnosis.
 

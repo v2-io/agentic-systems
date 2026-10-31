@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: e0af2f04fa6f9a256800b18a9dc4f7d9174311ba33b594b897dd712d500d8fb4
+at: 2026-10-31T03:02:01Z
+store: asf
+act: revise
+about: segment:der-interaction-channel-classification
+actor:
+  name: c1-defender-noise
+  role: adopter
+normalizer: vsect-norm/0
+change: redefined
+from-version: d610ecc63b249e381c952096d2c40a311fe1edcf0f2d76e26532d870df91aeae
+own-version: a6841a1666fe139de66fd54dc115e66f9f746ecab665d07164e54090e5f42939
+record: 01-aat-core/src/der-interaction-channel-classification.md

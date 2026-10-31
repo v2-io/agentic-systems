@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 352bcde17d0a94703b5410ec12b502d6da203a56057a7426f48e1041bd6c10b2
+at: 2026-10-31T03:03:57Z
+store: asf
+act: take
+about: review:deriv-observation-noise-placement-rederive-2026-10-31
+actor:
+  name: c1-defender-noise
+  role: integrator
+normalizer: vsect-norm/0
+items:
+- C1:check
+review: reviews/deriv-observation-noise-placement-rederive-2026-10-31.md
+review-version: 88674fd73b3c6dd799a6322e2cd3b9f223b361602308daf4d6e053f24e4ef0d1
