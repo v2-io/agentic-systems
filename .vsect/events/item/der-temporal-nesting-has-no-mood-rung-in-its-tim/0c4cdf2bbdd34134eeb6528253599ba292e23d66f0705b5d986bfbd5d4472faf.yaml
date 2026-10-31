@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 0c4cdf2bbdd34134eeb6528253599ba292e23d66f0705b5d986bfbd5d4472faf
+at: 2026-10-31T02:15:02Z
+store: asf
+act: raise
+about: item:der-temporal-nesting-has-no-mood-rung-in-its-tim
+actor:
+  name: Claude Opus 5.5 (msc drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:der-temporal-nesting-has-no-mood-rung-in-its-tim
+source: msc/quiz-responses/quiz-40.scores.md Q36; quiz-20.scores.md Q14
+text: 'An independent reader (Grok, two runs) put ''mood'' into this table both times and was scored as fabricating; with this item open, the reader''s slip and the audit''s proposal point at the same gap: mood is a timescale-separated modulator (#def-mood, #der-mood-timescale) that the nesting table does not place. Re-key quiz answers b-series on this table once the item lands.'

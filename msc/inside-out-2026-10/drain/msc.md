@@ -146,3 +146,23 @@ One of: **in canon / superseded** (where, checked at HEAD); **canon defect** (le
 | `2026-03-14-section-iv-paper-outline.md` | **Set aside**: a TST paper plan from before TST's restoration to `02-tst-core`; its gaps (accessible Pareto derivation, quantified worked examples, a 5–10-repo empirical pass) are paper planning, and the empirical half is the kind of thing item:untested-catalog-predictions-for-e collects. |
 | `joseph-working-notes.md` | **Not read** (git-ignored, Joseph's private transcripts). Its three live citations (`#def-eli-cohort`:88 Working Notes, `03-llm-core/OUTLINE.md`:213, `04-eli-core/OUTLINE.md`:207) are dead in any clone; raised on item:eli-cohort-table-entry-verification, which already named the first. |
 | `__pycache__/spike-causal-ib-sim.cpython-313.pyc`, `.DS_Store` | **Cruft**: untracked bytecode and Finder metadata; not tracked by git (nothing to commit), safe to delete locally. |
+
+### `quiz-responses/` (all nine files: the two score sheets read whole, the answered quizzes and keys sampled against the scores, the blank sheets checked)
+
+- The instrument as a whole: **disposed with** the audits drain's item:comprehension-quiz-corpus-374162 (H.3), which owns the 374162 question corpus these runs sample. Raised there: Joseph's strict scoring standard (verbatim at the head of `quiz-40.scores.md`), the one-reader baseline (290/400 and 153/200; 321/400 under the softer rubric), the two repeated failures, and that the keys inherit the corpus's staleness.
+- The repeated "mood" nesting level: raised on item:der-temporal-nesting-has-no-mood-rung-in-its-tim, since the reader's slip and an audit's proposal point at the same gap.
+- The repeated trigger-signature overclaim: carried on the H.3 item as a reader-surface signal (a Working-Notes conjecture read as settled), not as its own item; I.5 (Working Notes carry pointers and guards only) is what would remove the surface it was misread from.
+- `quiz-34.md`, `quiz-40-clean.md`: blank answer sheets; **kept** as the instrument's unused draws.
+
+### `summary-attempt/` (supplement read whole; 145 summaries scanned for reader flags, three read whole: 017, 054, and the supplement's gap table against OUTLINE; walks and scripts checked by size and generation; 20 prior-art prompts checked against their outputs, one read)
+
+- Supplement flags 1 and 2 (the opaque $\Sigma_t$ slot; the five gap intros) and the gap table: item:five-gap-chapter-intros-parts-ii-iii (H.1). The two missing `disc-*` meta-segments of its gap table: **landed** (`#disc-strategic-self-coupling`, `#disc-modularity-state-dynamics`). `worked-example-cam`: raised on item:todo-aat-9-remaining-missing-stub-worked-exam-ad0e.
+- Flag 3 (the "bare-prose shorthand" convention): **set aside**, the convention no longer appears in any segment or in `format.sop.md`.
+- Flag 4 (forward pointer to the additive-coordinate-forcing pattern from `#der-chain-confidence-decay`): **landed** (four references at HEAD).
+- Flag 5: **set aside** by its author ("borderline, noticing only").
+- Flag 6 ("exact" read without its scope): **landed** for `#result-certificate-existence` (the tag reads "exact at the linearized level"); **landed** for `#result-mismatch-decomposition`, which now names the fresh-noise assumption GA-1 in its own summary (:16) and derivation (:36), and says when it fails (:55, :60).
+- Flag 7: a success the author recorded; nothing owed.
+- Flag 8 (lift the Pearl-blanket versus Friston-blanket point into the chapter-end implications): **set aside**: the point is in `#der-directed-separation` (:20, :110) where its argument lives; whether a chapter-end segment should restate it is A.2's and H.1's call on what the front surfaces carry, not an owed fix.
+- The closing stylistic note (name the floor-and-escape posture up front as a methodological commitment): **landed** as `#disc-constructive-impossibility-posture`.
+- The 145 summaries and the two walks: **kept as what it is**, an in-order reader's walk, and raised on item:pedagogy-home-for-lifted-audit-gold as a pedagogy source with its hazard named: it is stale and some summaries state claims refuted today (`054-def-strategy-dag.md`'s "if and only if causally sufficient"). The walks are regenerable from the summaries with the two scripts.
+- `prior-art-prompts/` (20): **superseded** by their outputs in `ref/prior-art-analysis/` (35 files), which F.2 owns; the prompts are the record of what was asked.

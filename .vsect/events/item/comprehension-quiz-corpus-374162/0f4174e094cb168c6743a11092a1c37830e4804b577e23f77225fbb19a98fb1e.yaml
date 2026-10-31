@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 0f4174e094cb168c6743a11092a1c37830e4804b577e23f77225fbb19a98fb1e
+at: 2026-10-31T02:14:51Z
+store: asf
+act: raise
+about: item:comprehension-quiz-corpus-374162
+actor:
+  name: Claude Opus 5.5 (msc drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:comprehension-quiz-corpus-374162
+source: msc/quiz-responses/ (quiz-20, quiz-40 with .scores.md; quiz-34 and quiz-40-clean unanswered)
+text: 'What the two scored runs add to H.3 beyond the corpus: (a) a scoring standard Joseph set on reconciliation, recorded verbatim at the head of quiz-40.scores.md: vocabulary restatement starts at 0, a wrong central piece is a major deduction, and a confident falsehood scores below an honest hedge, which is the property H.3 needs to tell performed from real comprehension; (b) a baseline, one reader only (Grok, after a compaction): 290/400 and 153/200, with a 31-point gap between the soft rubric (321/400) and the strict one, concentrated on confidently-stated wrong claims; (c) a repeated failure worth a reader-surface check, not only an answerer note: Grok stated the same Working-Notes conjecture (a persistent-mismatch trigger signature for structural adaptation, an auditor''s unresolved ''readers often ask'' note in #emp-update-gain) as settled fact in both runs (quiz-40 Q34, quiz-20 Q11), and invented the same nesting level (''mood'') in #der-temporal-nesting''s table while dropping ''architectural change'' twice (quiz-40 Q36, quiz-20 Q14). quiz-34.md and quiz-40-clean.md are blank answer sheets. The keys were generated from audits/AUDIT-WORKING-374162 under the pre-rename path ~/src/archema-io/, so they carry the corpus''s staleness, and re-keying item (1) applies to them too.'

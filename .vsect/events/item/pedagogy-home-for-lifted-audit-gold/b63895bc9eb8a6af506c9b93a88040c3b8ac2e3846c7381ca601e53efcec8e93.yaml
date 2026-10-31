@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: b63895bc9eb8a6af506c9b93a88040c3b8ac2e3846c7381ca601e53efcec8e93
+at: 2026-10-31T02:15:44Z
+store: asf
+act: raise
+about: item:pedagogy-home-for-lifted-audit-gold
+actor:
+  name: Claude Opus 5.5 (msc drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:pedagogy-home-for-lifted-audit-gold
+source: msc/summary-attempt/ (145 plain-English segment summaries of Volume 1, Opus 4.7, 2026-05-20, commit 4b1de6f0; walk-interleaved.md and walk-sequential.md are their concatenations)
+text: 'An unselfconscious in-order walk of the whole of Volume 1, the kind the pedagogy memory prefers to commissioned intros. Its reader flags are in 000-supplement-notes.md and are disposed in drain/msc.md. The summaries themselves are stale against canon and some now state refuted claims: 054-def-strategy-dag.md says AND/OR propagation is correct ''if and only if'' the DAG is causally sufficient, which C.1/A1 deleted (33bf185d; exact iff an AND/OR tree), and the walk predates the Model S window, the typed target and the retirement of the ambiguity factor. Any sentence lifted from it needs its own check against canon at the time of lifting, as with the aat-refactored pedagogy already noted here.'
