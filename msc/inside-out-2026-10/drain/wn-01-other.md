@@ -28,7 +28,7 @@
 
 ## Partition
 
-*Coverage as of the commit that carries this line; updated in every commit of this drain. The `file` column names where a part would have gone had helpers run; with one agent, every part's dispositions are in this file.*
+*Coverage as of the drain's last commit. The `file` column names the part files the helpers wrote; each was read whole, merged into this file and deleted, so every part's dispositions are here.*
 
 | part | OUTLINE sections | items | segments | file | coverage |
 |---|---|---|---|---|---|
@@ -50,7 +50,7 @@
 
 **Dispositions, all parts.** canon 79 · superseded 12 · owed or defect, into ledger items 212 · joined an existing ledger record 175 · guard 106 · set aside, with reason 164 · unclassified by the tally 4. The p1, p2, p5 and p6 figures are the helpers' own counts. The p3, p4 and p7 figures come from a script that takes each line's first disposition word, so an item split across two dispositions counts once, and the four unclassified are multi-id lines the script mis-split. Read the totals as good to a few items, not exact.
 
-**Ledger effect.** 108 items opened (62 here, 46 by helpers) and about 107 sources raised onto existing items and questions. One pair was opened twice in parallel: `item:composition-closure-regime-scope-unstated` is closed as a duplicate of `item:part-iii-segments-name-their-regime-tier`. New items by owner: C.4 74 · G.2 8 · F.2 8 · A.1 5 · H.1 4 · C.1 4 · E.2 3 · C.3 1 · I.5 1.
+**Ledger effect.** 108 items opened (62 here, 46 by helpers) and about 108 sources raised onto existing items and questions. A final read of the likely-overlapping new items (the strategy-compression, AND/OR, edge-update and context-window pairs) found them distinct; the context-window pair was cross-linked by a raise. One pair was opened twice in parallel: `item:composition-closure-regime-scope-unstated` is closed as a duplicate of `item:part-iii-segments-name-their-regime-tier`. New items by owner: C.4 74 · G.2 8 · F.2 8 · A.1 5 · H.1 4 · C.1 4 · E.2 3 · C.3 1 · I.5 1.
 
 **What I.5 inherits.** About 106 items stay as forward pointers and regression guards. That is about one Working-Note item in seven. Every other item is now in canon, in the ledger, or set aside with a reason recorded here, so it can leave the Working Notes. Three hazards for that cleanup:
 - Some bodies cite their own Working Notes for content: `#der-observability-dominance`'s Claim Record and `#def-chronica`:17 so far. The content has to move before the note is deleted (item:canon-bodies-point-into-working-notes, I.5). Grep bodies for "Working Note" first.

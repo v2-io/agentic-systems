@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 83aab72b7f5a684ae8acb13409ef4bcadfdc06c285b6f6d1969c9a3946710633
+at: 2026-10-31T02:55:08Z
+store: asf
+act: raise
+about: item:context-window-strategy-depth-bound
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:context-window-strategy-depth-bound
+source: 01-aat-core/src/def-strategy-dimension.md Working Notes 'Cognitive cost of Sigma_t' (for an LLM the DAG must fit the context window). The general question, a compression price for strategy, is item strategy-compression-price-beta-sigma; this item is its LLM ceiling form, and item context-budget-tempo-ceiling-experiment is the measurement that would test the Part I side of the same constraint.
