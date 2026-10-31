@@ -1,0 +1,21 @@
+schema: vsect-event/0
+id: 373d7b042f2874ca59df866ec9d2ec8fdaff25a0f98ee179ad95d73256c73225
+at: 2026-10-31T03:27:15Z
+store: asf
+act: confirm-rewording
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 check 8)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: The reword 9fde935e (commit 40754025) names (c)'s lemma's generating class as a pi-system with Dynkin's theorem and adds Ferguson to the Epistemic Status's imported results; neither touches what integration-7 C1-C5 checked (non-vacuity from fresh noise, the cut's list of users, (c)'s test, the bandit, pi_0's full support and (h')'s projection), each of which I re-derived on the current text.
+from-version: 6e778ade8d9caa3723c34b29064a8b6d6e4a38319a81df1853cd2df72a09c385
+outcome: equivalent
+scope:
+  for:
+  - fc79d21af67bc3fee1666d7a580f6abe86ebf841684bad4e24bcb92705a6ace0
+  - fd906365bd85db441a6d9d9e5072f5e2771ead7ade90bc5aa9251a6cce3cff67
+  - aa5c94f7a87de19dcd5fbf0d650fc3dfebf72eecd93c78ed7c45c7a94305d3b3
+  - d19912b437e93be395b5ef024a19418bbfdbc28388ddb2f030cfe2e7386ec30b
+  - 414f18d53894e62ba459fcff52912d772d7a25cc269c27af400b38093620a0bd
+to-version: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9

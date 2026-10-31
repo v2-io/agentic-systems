@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: be423d8ad937af2085fcedfc4b5d12cf76015db66fab38c54aea15391433bb42
+at: 2026-10-31T03:18:40Z
+store: asf
+act: review-finding
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 check 8)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: 'Read at 3d17de13: pi_0 is now declared on a named class, ''the declared class of worlds, less those that what the agent holds by design rules out'', and only its null sets (h), or in finite worlds its support (h''), matter. Of the three undecided cases, the wrong-model filter is decided (a false belief rules out no world; the declared class says what else was possible). The hard-coded true guess and the pretrained design remain open, and are carried by question:where-is-the-line-between-what-an-agent-s-design, which states them; that question, not this finding, is where they now live.'
+finding: review:scope-adaptive-system-reread-1#F1
+outcome: answered
+reviser-recorded: true
+revision: 5e613630

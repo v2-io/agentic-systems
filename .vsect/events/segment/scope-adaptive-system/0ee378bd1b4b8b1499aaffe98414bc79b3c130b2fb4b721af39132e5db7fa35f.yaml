@@ -1,0 +1,29 @@
+schema: vsect-event/0
+id: 0ee378bd1b4b8b1499aaffe98414bc79b3c130b2fb4b721af39132e5db7fa35f
+at: 2026-10-31T03:28:12Z
+store: asf
+act: rederive
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 check 8)
+  role: independent checker
+  read:
+  - segment:scope-adaptive-system
+  - segment:def-observation-function
+normalizer: vsect-norm/0
+at-commit: 3d17de13
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:scope-adaptive-system: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+committed: after
+criterion: 'Non-vacuity: under some continuation the (ii′) terms after $t$ sum to at least that continuation''s value plus the renewals, using fresh noise only; under the agent''s own policy the statement holds in the sufficient direction only; the hidden-bit witness; the Discussion''s one-step comparison and its $A = 0$ converse'
+effective-version: 5b83fb94ff22df7c310dc310a820c658ff86ab37f413bcdd55ff806a1b3ecb7b
+from: review:scope-adaptive-system-check-8#C7
+line: derivation
+outcome: confirmed
+recheck: fresh noise gives $o_{k+1}$ independent of $(S_t, S_k)$ given $(S_{k+1}, \mathcal C_k, a_k)$; data processing; chain rule in $(S_t, S_k)$; with $A = 0$, (ii′) is positive while the value and every $r_k$ are zero, so "exactly when" would be false
+target-version: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+version-from: git-revision

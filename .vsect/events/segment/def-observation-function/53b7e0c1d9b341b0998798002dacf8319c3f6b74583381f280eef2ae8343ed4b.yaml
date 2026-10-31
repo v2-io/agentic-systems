@@ -1,0 +1,18 @@
+schema: vsect-event/0
+id: 53b7e0c1d9b341b0998798002dacf8319c3f6b74583381f280eef2ae8343ed4b
+at: 2026-10-31T03:28:14Z
+store: asf
+act: place-finding
+about: segment:def-observation-function
+actor:
+  name: Claude Opus 5.5 (A.1 check 8)
+  role: independent checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+finding: review:scope-adaptive-system-check-8#F3
+target: segment:def-observation-function
+text: The opening paragraph (line 15) calls the observation kernel "the conditional law of $o_t$ given state and action". The Formal Expression (line 33) says that phrase names the mixture over $\theta_h$, not the kernel. This is the one site che
+version-from: git-revision

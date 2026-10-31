@@ -1,0 +1,38 @@
+schema: vsect-event/0
+id: 98172177280616a926ad4a6923e7cca0ce0e9cc70fcf1f518703dd26fb4fc3f3
+at: 2026-10-31T03:28:13Z
+store: asf
+act: place-finding
+about: segment:deriv-mismatch-budget-attribution
+actor:
+  name: Claude Opus 5.5 (A.1 check 8)
+  role: independent checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-model-class-fitness: 80a2eb3fbf06b7ebb3ebdc642c79dc6883eb350ebafb68555ee3ea9c2505a25f
+  segment:def-model-sufficiency: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:deriv-mismatch-budget-attribution: dd75b65855f4ffba7d3ef06d17e2b70942ca2e1ce9984b7554efc0d9faa93e71
+  segment:deriv-sector-condition: 9f0758ed7bc37d6f067d005b9f920c9bc9ed4a45463768b7a2c3131a44ac5b29
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:hyp-mismatch-dynamics: 81832f876549b712e8493fd4728ffb2ada16bbd5521447c142e69a80adc36062
+  segment:internal-external-decomposition: 6a7f48e98da5b826271ff9735406e4f4375c2397f6f0d51b3693ff03a1603db2
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-mismatch-decomposition: d215ad7db1db571c2e719b31cc39f38f7863ce4b5302e74037a3b6098b2c7a5d
+  segment:result-persistence-condition: 382bfbdfce370119cb7f41c8161baf42fa9415a28646b553fbed7f3a9641fce4
+  segment:result-sector-condition-stability: 2537d83bd9bb560749fbef37563e26529e31557ae95e7268bfd5fa4496383e89
+  segment:result-sector-persistence-template: e81dfed0853e9582d41e15e3a737f8fe1829370f72fedf1766ddb60ef07a2d2a
+  segment:scope-adaptive-system: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+finding: review:scope-adaptive-system-check-8#C10/finding
+target: segment:deriv-mismatch-budget-attribution
+text: 'check C10 came back narrowed: The argument holds. The display omits $\theta$ and $\pi_0$, and indexes the run from 0 (F2).'
+version-from: git-revision

@@ -1,0 +1,30 @@
+schema: vsect-event/0
+id: 3548173269b9ddb29c487c0f0f2b525b4ce98be6eefb6ec182340a62f5afe6bd
+at: 2026-10-31T03:28:11Z
+store: asf
+act: rederive
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 check 8)
+  role: independent checker
+  read:
+  - segment:scope-adaptive-system
+  - segment:def-action-transition
+  - segment:def-observation-function
+normalizer: vsect-norm/0
+at-commit: 3d17de13
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:scope-adaptive-system: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+committed: after
+criterion: (g)'s law part and its whole-target bound; the clocked example (out for $t \leq K - 2$, in at $K - 1$); (g′)'s identity and its three consequences; the Epistemic Status's part-only counterexample ($\infty$ against $\tfrac12 \log \tfrac32$)
+effective-version: 5b83fb94ff22df7c310dc310a820c658ff86ab37f413bcdd55ff806a1b3ecb7b
+from: review:scope-adaptive-system-check-8#C4
+line: derivation
+outcome: confirmed
+recheck: chain rule split at $s$; $I(S_s; F_s \mid S_t, \mathcal C_s) \leq \sum_{k \geq s} r_k$ by data processing through $S_k$; state $(t, y_t, y_{t-1})$ with $o_j = y_{j-1}$ for $j \geq K$; two-order chain rule on $I(S_t, S_k; o_{k+1} \mid \mathcal C_k, a_k)$; posterior variance $\tfrac12$ after $o_1$
+target-version: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+version-from: git-revision

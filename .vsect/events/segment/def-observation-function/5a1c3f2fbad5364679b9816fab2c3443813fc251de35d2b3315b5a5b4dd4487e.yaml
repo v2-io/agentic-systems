@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 5a1c3f2fbad5364679b9816fab2c3443813fc251de35d2b3315b5a5b4dd4487e
+at: 2026-10-31T03:18:32Z
+store: asf
+act: review-finding
+about: segment:def-observation-function
+actor:
+  name: Claude Opus 5.5 (A.1 check 8)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: 'Read at 3d17de13: #def-observation-function defines the kernel as the conditional law of o_t given (Omega_t, a_{t-1}) that h and the law of eps_t induce, and says the conditional law given (Omega_t, a_{t-1}) alone is then a mixture over theta_h, not the kernel.'
+finding: review:scope-adaptive-system-check-7#F4
+outcome: answered
+reviser-recorded: true
+revision: 3d4c1822

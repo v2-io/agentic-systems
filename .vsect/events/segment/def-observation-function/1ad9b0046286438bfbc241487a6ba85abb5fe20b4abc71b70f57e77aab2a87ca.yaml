@@ -1,0 +1,27 @@
+schema: vsect-event/0
+id: 1ad9b0046286438bfbc241487a6ba85abb5fe20b4abc71b70f57e77aab2a87ca
+at: 2026-10-31T03:28:12Z
+store: asf
+act: rederive
+about: segment:def-observation-function
+actor:
+  name: Claude Opus 5.5 (A.1 check 8)
+  role: independent checker
+  read:
+  - segment:def-observation-function
+  - segment:def-action-transition
+normalizer: vsect-norm/0
+at-commit: 3d17de13
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+committed: after
+criterion: The kernel's definition and the mixture warning; fresh noise with fresh transitions makes the run's law a product, so pairs $(h, \varepsilon)$ inducing one kernel are indistinguishable; the repeated-noise example
+effective-version: 8b3f7cb24a1a20528b9a18469f4e69601273d5f65674edd30982f8c0aa087d9f
+from: review:scope-adaptive-system-check-8#C9
+line: derivation
+outcome: narrowed
+recheck: product of kernels and policy; for $\varepsilon_t = \varepsilon_{t-1}$ and an additive channel, $o_t - o_{t-1}$ shows the state's change without noise
+target-version: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+version-from: git-revision

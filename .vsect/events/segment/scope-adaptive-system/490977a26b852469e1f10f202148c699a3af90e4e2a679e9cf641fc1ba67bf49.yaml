@@ -1,0 +1,30 @@
+schema: vsect-event/0
+id: 490977a26b852469e1f10f202148c699a3af90e4e2a679e9cf641fc1ba67bf49
+at: 2026-10-31T03:28:11Z
+store: asf
+act: run
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 check 8)
+  role: independent checker
+  read:
+  - segment:scope-adaptive-system
+  - segment:def-observation-function
+  - segment:def-action-transition
+normalizer: vsect-norm/0
+at-commit: 3d17de13
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:scope-adaptive-system: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+committed: after
+criterion: 'Item (b) for a cold reader''s Kalman filter: the criterion $C A^j P_t \neq 0$, the one-step formula, and for the scalar random walk the one-step part $0.135$ and the whole-future value $0.162$ nats; (g′)''s renewal from $\tilde P_t = 0$ rising to $0.135$ with $\sum_k (u_k - r_k) = 0.162$'
+effective-version: 5b83fb94ff22df7c310dc310a820c658ff86ab37f413bcdd55ff806a1b3ecb7b
+from: review:scope-adaptive-system-check-8#C2
+line: simulation
+outcome: confirmed
+recheck: 'Gaussian conditioning (cross-covariance $P_t (A^j)^\top C^\top$); a 200-step script: $P_\infty = 0.61803$, one-step $0.13464$, Rauch–Tung–Striebel steady smoothed variance $1/\sqrt5$, value $0.16175$, renewal $0, 0.1116, 0.1312, 0.1341, \ldots$, $\sum (u_k - r_k) = 0.16175$'
+target-version: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+version-from: git-revision

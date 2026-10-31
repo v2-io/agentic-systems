@@ -1,0 +1,20 @@
+schema: vsect-event/0
+id: b56918c72b2fea98ba59fd4a54dff541afb057f8f0b3b5c8149d3d923aba6b34
+at: 2026-10-31T03:28:13Z
+store: asf
+act: place-finding
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 check 8)
+  role: independent checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:scope-adaptive-system: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+finding: review:scope-adaptive-system-check-8#F1
+target: segment:scope-adaptive-system
+text: For KR A.1's RL reader, (c) wants one sufficient condition for continuous dynamics. Suppose that, for $\pi_0$-almost every law, every row has a density with respect to one $\sigma$-finite measure. Then the posterior of $\theta$ is absolutel
+version-from: git-revision
