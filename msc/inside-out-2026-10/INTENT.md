@@ -44,6 +44,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 
 - **E.1** The fixed-gain tilt hypothesis of `#scope-observation-ambiguity-modulation` is tested on two or three LLM families, comparing $W_1$ with $W_2$, under `empirica/`'s RUNS contract: the processor gain $\lambda$ is estimated against outcome ground truth or a reference posterior at several levels of evidence sharpness, and whether it stays fixed is answered. $\hat\kappa_{\text{processing}}$ is reported beside it as a different quantity, so Volume 3's $\kappa\approx1$ becomes a measured value or a range. · *not started*
 - **E.2** One Part I quantity is estimated on a real adaptive system, or INTRODUCTION stops claiming simulation validation. · *not started*
+- **E.3** One of Volume 2's cheap falsifiers is run on a real codebase history (`item:tst-cheap-falsifiers-and-measurement-design`); the owner review ranks them the cheapest in the estate. · *not started; proposed bottom-up by the Working Notes drain*
 
 ## F — The lineage and evidence that exist reach the bodies, faithfully
 
