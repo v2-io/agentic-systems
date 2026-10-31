@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 8c31aa7007c1686bc5a670d4873a46e9ba72443e843c6dc8b936275e96fd64ba
+at: 2026-10-31T02:20:52Z
+store: asf
+act: raise
+about: item:give-the-unlifted-audit-gold-a-destination-wave
+actor:
+  name: Claude Opus 5.5 (msc drain, meta-process fork)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:give-the-unlifted-audit-gold-a-destination-wave
+source: msc/logogenic-encounter-2026-05-01/07-audit-integration-tracker.md:92,:110; audits/AUDIT-WORKING-193847/57-obs-gates-advantage.md, 69-deriv-strategic-dynamics.md
+text: 'Two more 193847 per-segment notes still sit at the dir''s top level, unlifted, unread by the 2026-05-01 tracker (both 🔲) and outside the audits drain''s stated coverage of 193847 (70–74): 57 (obs-gates-advantage, now #obs-gated-tempo-advantage) and 69 (deriv-strategic-dynamics, a slug no longer in any src/). They need the same destination as the rest; 69 needs reading against whatever replaced its segment.'

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: a14a321eec35b0dce65663d24b7f8d48f550b6a8e1dfcb8a7daa393c88529dd5
+at: 2026-10-31T02:14:16Z
+store: asf
+act: raise
+about: item:give-the-unlifted-audit-gold-a-destination-wave
+actor:
+  name: Claude Opus 5.5 (msc drain, meta-process fork)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:give-the-unlifted-audit-gold-a-destination-wave
+source: msc/meta-process-review-2026-07-07/01-theory-content-lifecycle-findings.md (e); 02-audit-and-spike-lifecycle-findings.md (e)4; audits/.gem-hunt-trail/gold-lift-sweep-2026-05-30.md:22
+text: 'One more held gold source this item''s list omits: AUDIT-WORKING-184930, a predictions-only document with whole-framework framing (forced versus chosen, overclaim hypotheses) and no per-segment anchor, marked JOSEPH-DECISION in the sweep tracker. Under today''s standings that gate is lifted; it needs a destination like the rest (most likely B.3''s anchors test or A.2, since its claims are framework-level).'

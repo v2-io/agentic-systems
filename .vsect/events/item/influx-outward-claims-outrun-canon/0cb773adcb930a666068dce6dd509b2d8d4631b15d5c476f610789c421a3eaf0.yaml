@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 0cb773adcb930a666068dce6dd509b2d8d4631b15d5c476f610789c421a3eaf0
+at: 2026-10-31T02:16:00Z
+store: asf
+act: raise
+about: item:influx-outward-claims-outrun-canon
+actor:
+  name: Claude Opus 5.5 (msc drain, meta-process fork)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:influx-outward-claims-outrun-canon
+source: .zenodo.json:32 (notes field, v0.4.0 record); msc/meta-process-review-2026-07-07/05-publication-build-citation-pipeline-findings.md (d)1
+text: 'The archival record is an outward surface too: the v0.4.0 .zenodo.json notes say Part I ''is mathematically closed with simulation validation'', the claim E.2 asks INTRODUCTION to earn or drop; any correction there lands with the next archival release, not by editing a minted version.'

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 1f7503f5bb7edf88c4a90458a4b1d7af4cd2fc492000af5b8f603e845293b02f
+at: 2026-10-31T02:21:26Z
+store: asf
+act: raise
+about: item:todo-04-eli-core-src-der-the-creche-boundary-1afd
+actor:
+  name: Claude Opus 5.5 (msc drain, meta-process fork)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-04-eli-core-src-der-the-creche-boundary-1afd
+source: msc/logogenic-encounter-2026-05-01/06-background-agent-breadth-report.md §2 (quoting ref/agentic-tft/agentic-tft-creche-concept.md)
+text: 'The row''s undefined ''sycophancy threshold'' has a stated source: the crèche concept reframes sycophancy as developmentally appropriate attachment whose defect is the mismatch between stage and deployment, and its ''critical correction'' makes the crèche an activation environment, not an educational one. Authoring the derivation should start from that premise and say whether the threshold is on eta* or on the stage-deployment mismatch.'

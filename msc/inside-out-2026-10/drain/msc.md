@@ -2,7 +2,7 @@
 
 *Serves **I.9** of `../INTENT.md` (every backlog surface drained into the ledger, one disposition per source item), and through it I.10, G.2, C.1, C.4, F.2 and H.3. Top intent: "Complete "in-place" refactor of ASF-- meta, all artifacts, and theory itself." Working file of the `msc/` drain, 2026-10-30, started at asf `515c15ce`. Written as it goes; the lead reads it whole.*
 
-*In progress: this agent's part is drained; the two forks' parts are being merged.*
+*Drained: every file of `msc/` outside `inside-out-2026-10/` has a disposition here or in the two fork files named under Partition, which are part of this record.*
 
 ## Partition
 
@@ -10,7 +10,7 @@
 |---|---|---|
 | this agent | the 36 top-level `msc/*.md` and cruft, `domain-unification-2026-05-04/`, `quiz-responses/`, `summary-attempt/` | this file |
 | reflections fork (launched after the subagent cap cleared) | `reflections/` (30), `reflections-rowan-2025-12/` (6) | `msc-reflections.md` beside this file: **done**, all 36 read whole; read whole by me; one new item (item:witness-warrants-office-formalization, G.0) and five raises |
-| meta-process fork | `meta-process-review-2026-07-07/` (24), `logogenic-encounter-2026-05-01/` (10) | `msc-process-logogenic.md` beside this file |
+| meta-process fork | `meta-process-review-2026-07-07/` (24), `logogenic-encounter-2026-05-01/` (10) | `msc-process-logogenic.md` beside this file: **done**, all 34 reached (27 whole, 7 in part, named there); read whole by me; one new item (item:volume-1-depends-on-later-volumes, H.2) and four raises |
 
 ## How dispositions are written
 
