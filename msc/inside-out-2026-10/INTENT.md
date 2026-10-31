@@ -29,7 +29,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 
 ## C — The theory is correct where it is known wrong, and stronger where strengthening was found
 
-- **C.1** Every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. The defect lists are `owner-review/integrator-items.md` A1–A15, `internal-surfaces/00-cross-surface-map.md` §3 and `influx-scout/MAP.md` §3. · *every A-item is landed or in a lane. Lanes (accounts in `c1-lanes/`): Part I at round 5; Part II at round 2; TST round 4 landed and checked, with two derivation defects owed (the hazard route's premise, section (7) decided by simulation noise); Volume 4 round 4 landed (the logos 2026-09-25 settlement is canon's form), its check owed; defender-noise round 2 ready to merge. Across every check the mathematics has held; the defects are statements that claim more than the derivation*
+- **C.1** Every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. The defect lists are `owner-review/integrator-items.md` A1–A15, `internal-surfaces/00-cross-surface-map.md` §3 and `influx-scout/MAP.md` §3. · *every A-item is landed or in a lane. Lanes (accounts in `c1-lanes/`): Part I round 5, defender-noise round 2 and Volume 4 round 4 (the logos 2026-09-25 settlement as canon's form) merged, each with its check owed; Part II round 2 running; TST round 4 landed and checked, with two derivation defects owed (the hazard route's premise, section (7) decided by simulation noise); A.1's check 8 owes an integrator. Across every check the mathematics has held; the defects are statements that claim more than the derivation*
   - **Launch rule** (lead, 2026-10-31). A running lane finishes its round and gets its check. A further round launches only for defects in derivations or definitions. Restatement residue on front surfaces and neighbouring segments goes to A.2, A.4 and D.3 as structural work, not to another round
 - **C.2** Strengthenings C1–C3 (exit time, loop identification, allocation vs distortion coupling) are independently checked, then landed or refuted. · *C1 landed and checked: the threshold drift is a derived three-term expansion, re-derived by hand by the round-4 checker. C2 and C3 landed and checked (`part-ii-check-1.md`); the Part II round-2 integration is running*
 - **C.3** A cross-segment contradiction scan reports no open contradictions among load-bearing segments. · *not started; one found: `#scope-composite-agent` admits composites with no composite objective (routes C-iii, C-iv) while requiring one (:83), and eight segments rest on that gate (`items-recheck/q-proposals.md` §2.1)*
@@ -84,12 +84,16 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 
 ## Who is on what
 
+No new agents launch (Joseph, 2026-10-31). Running lanes finish and land; the checks they are owed, and the KRs still unstarted, wait for his word.
+
 | Who | KR | Writes to |
 |---|---|---|
 | Lead coordinator (Opus 5.5) | I.1, and steering every lane by this tree | `INTENT.md`, `HANDOFF.md` |
-| Part I round 5, landed on its branch, to merge and check | C.1 (and A, through the OUTLINE Layer 0 and README partial sites) | `c1-lanes/part-i-round-5.md` |
 | Part II round-2 integrator, with its right-rung and drains sub-lanes | C.2, B.1, C.1 | its worktree branch |
-| Defender-noise round 2, landed on its branch, to merge and check | C.1 | `c1-lanes/defender-noise-round-2.md` |
+| A.2 owner, with D.3 (Fable) | A.2, D.3 | `a2-front-door/` |
+| B.1 Part I record writer (Opus) | B.1 | `b1-claim-records/` |
+| E.3 measurement (Opus) | E.3 | `e3-measurement/` |
+| I.10 baseline (Opus) | I.10 | `i10-signal/` |
 | vsect builder, on the line for the store migration | I.4 | `~/src/arch/firmatum/utils/vsect/` |
 
 ## Using this file
