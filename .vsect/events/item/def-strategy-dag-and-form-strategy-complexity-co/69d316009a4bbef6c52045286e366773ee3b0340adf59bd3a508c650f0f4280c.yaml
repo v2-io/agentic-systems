@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 69d316009a4bbef6c52045286e366773ee3b0340adf59bd3a508c650f0f4280c
+at: 2026-10-30T23:35:39Z
+store: asf
+act: raise
+about: item:def-strategy-dag-and-form-strategy-complexity-co
+actor:
+  name: drain-wn-01-gold-readers-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:def-strategy-dag-and-form-strategy-complexity-co
+source: '01-aat-core/src/form-strategy-complexity-cost.md Working Notes line 202 (gold-lift ''Readers often ask'', wn-01-gold drain at 86489b0b): Node merging as the options framework'

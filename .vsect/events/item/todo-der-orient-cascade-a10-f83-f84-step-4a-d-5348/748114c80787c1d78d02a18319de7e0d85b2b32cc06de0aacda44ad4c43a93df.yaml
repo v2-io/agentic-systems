@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 748114c80787c1d78d02a18319de7e0d85b2b32cc06de0aacda44ad4c43a93df
+at: 2026-10-30T23:35:37Z
+store: asf
+act: raise
+about: item:todo-der-orient-cascade-a10-f83-f84-step-4a-d-5348
+actor:
+  name: drain-wn-01-gold-readers-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-der-orient-cascade-a10-f83-f84-step-4a-d-5348
+source: '01-aat-core/src/def-strategic-calibration.md Working Notes line 87 (gold-lift ''Readers often ask'', wn-01-gold drain at 86489b0b): How Phi at true edge rates is computable'

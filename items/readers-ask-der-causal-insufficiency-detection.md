@@ -1,0 +1,9 @@
+---
+kind: item
+owner: H.4
+opened: 2026-10-30T23:35:56Z
+opened-by: drain-wn-01-gold-readers-opus-5.5
+concerns: [segment:der-causal-insufficiency-detection]
+---
+
+# Reader-clarity gaps at #der-causal-insufficiency-detection that the body at HEAD 86489b0b leaves unanswered. De novo auditors named them, and the 2026-05-30/31 gold lift recorded them under 'Readers often ask' in the segment's Working Notes (lines 292, 293). By project doctrine (the Codex open-questions rule) each is answered in the body where the question arises, not logged. (1) How the tempo budget splits across explore, exploit and diagnose once diagnose is its own axis. #disc-exploit-explore-deliberate names diagnosis as a related mode but gives no allocation rule for it. (2) How the agent sets epsilon (the exploration / redundant-test rate) to trade the efficiency cost of joint observation against the value of detecting latents. Questions from the same block that the body already answers are listed in msc/inside-out-2026-10/drain/wn-01-gold-readers.md.

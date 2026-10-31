@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: f3600c0131993db6ad709c5b800cc2e8ba827ab148b9b8d9637d0fad3055d2b3
+at: 2026-10-30T23:35:37Z
+store: asf
+act: raise
+about: item:theory-of-mind-missing-from-communication
+actor:
+  name: drain-wn-01-gold-readers-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:theory-of-mind-missing-from-communication
+source: '01-aat-core/src/der-agent-opacity.md Working Notes line 219 (gold-lift ''Readers often ask'', wn-01-gold drain at 86489b0b): Mutual-modeling regress depth'

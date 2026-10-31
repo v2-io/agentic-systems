@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: b537845aae440041c37b46929eb2037b92171f86302edac9c3e03454d338d24d
+at: 2026-10-30T23:35:38Z
+store: asf
+act: raise
+about: item:influx-form-agent-model-what-m-covers
+actor:
+  name: drain-wn-01-gold-readers-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:influx-form-agent-model-what-m-covers
+source: '01-aat-core/src/form-agent-model.md Working Notes line 69 (gold-lift ''Readers often ask'', wn-01-gold drain at 86489b0b): Whether M_t includes phi itself'

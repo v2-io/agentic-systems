@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 112fd4da89a8e4e4cadf194a3e4a10283e854fb32844ae45c2bcf09c321fccf1
+at: 2026-10-30T23:35:38Z
+store: asf
+act: raise
+about: item:primary-source-verify-or-replace-with-read-sourc
+actor:
+  name: drain-wn-01-gold-readers-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:primary-source-verify-or-replace-with-read-sourc
+source: '01-aat-core/src/der-tempo-composition.md Working Notes line 161 (gold-lift ''Readers often ask'', wn-01-gold drain at 86489b0b): Convergence with Janow, Bamieh and Gurvich-Van Mieghem'

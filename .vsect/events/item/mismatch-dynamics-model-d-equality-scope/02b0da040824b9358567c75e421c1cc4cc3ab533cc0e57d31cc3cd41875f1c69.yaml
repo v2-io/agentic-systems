@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 02b0da040824b9358567c75e421c1cc4cc3ab533cc0e57d31cc3cd41875f1c69
+at: 2026-10-31T02:23:27Z
+store: asf
+act: raise
+about: item:mismatch-dynamics-model-d-equality-scope
+actor:
+  name: drain-wn-01-gold-readers-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:mismatch-dynamics-model-d-equality-scope
+source: '01-aat-core/src/detail-linear-ode-approximation.md Working Notes line 232 (gold-lift ''Readers often ask'': is rho/T a loose worst-case bound or the real steady state?), the reader-voice twin of the off-ramp at line 236; wn-01-gold-readers drain at 86489b0b'

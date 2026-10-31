@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 248d094bd5c5e2ded4bf3bb653b2e9f02c5aa609cfc327a759421e3b0477ae47
+at: 2026-10-30T23:35:39Z
+store: asf
+act: raise
+about: item:persistence-hysteresis-hypothesis
+actor:
+  name: drain-wn-01-gold-readers-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:persistence-hysteresis-hypothesis
+source: '01-aat-core/src/hyp-mismatch-dynamics.md Working Notes line 101 (gold-lift ''Readers often ask'', wn-01-gold drain at 86489b0b): Recovery after crossing saturation (one-way overwhelm)'

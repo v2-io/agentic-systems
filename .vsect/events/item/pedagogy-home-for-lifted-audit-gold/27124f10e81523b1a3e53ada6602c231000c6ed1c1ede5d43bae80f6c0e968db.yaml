@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 27124f10e81523b1a3e53ada6602c231000c6ed1c1ede5d43bae80f6c0e968db
+at: 2026-10-30T23:36:10Z
+store: asf
+act: raise
+about: item:pedagogy-home-for-lifted-audit-gold
+actor:
+  name: drain-wn-01-gold-readers-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:pedagogy-home-for-lifted-audit-gold
+source: 'Seven ''Readers often ask'' bullets in 01-aat-core gold blocks that are reader-experience or placement signals, not questions: der-chain-confidence-decay WN 92, der-loop-interventional-access WN 152, deriv-persistence-cost WN 177, disc-ciy-unified-objective WN 100, disc-exploit-explore-deliberate WN 215, form-strategy-complexity-cost WN 203, hyp-communication-gain WN 97; plus the Findings-block stumble at der-directed-separation WN 308 and schema-strategy-persistence WN 217. Listed in msc/inside-out-2026-10/drain/wn-01-gold-readers.md.'

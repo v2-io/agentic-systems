@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 6f74db10d6a91c07c46bbba08251a0b5542bc03957b524c5358d6cbf0ab872c8
+at: 2026-10-30T23:35:38Z
+store: asf
+act: raise
+about: item:aat-s-core-has-no-operation-for-an-agent-reading
+actor:
+  name: drain-wn-01-gold-readers-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:aat-s-core-has-no-operation-for-an-agent-reading
+source: '01-aat-core/src/deriv-recursive-update.md Working Notes line 235 (gold-lift ''Readers often ask'', wn-01-gold drain at 86489b0b): A lossy phi locks the agent out of re-querying discarded history, which motivates external memory'

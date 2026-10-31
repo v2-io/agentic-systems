@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 1569cdd5ecba5ee6cdf9a27bd49891c5b36e4c02f11e6c8d63c4f93060b2649d
+at: 2026-10-30T23:35:37Z
+store: asf
+act: raise
+about: item:llm-session-bounds-continuation-horizon
+actor:
+  name: drain-wn-01-gold-readers-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:llm-session-bounds-continuation-horizon
+source: '01-aat-core/src/def-value-object.md Working Notes line 232 (gold-lift ''Readers often ask'', wn-01-gold drain at 86489b0b): What the natural N_h bound means for an LLM that ''knows it will die in 10 turns'''

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 77e3a9dae46dce0a0a085111f96adbb28d36e0e9726ae43272ff8efa0e362b11
+at: 2026-10-30T23:35:37Z
+store: asf
+act: raise
+about: item:proposals-d-4-sp-12-commitment-resource-temporal-d-1dea
+actor:
+  name: drain-wn-01-gold-readers-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:proposals-d-4-sp-12-commitment-resource-temporal-d-1dea
+source: '01-aat-core/src/def-strategy-dimension.md Working Notes line 123 (gold-lift ''Readers often ask'', wn-01-gold drain at 86489b0b): The considering-to-executing commitment transition'

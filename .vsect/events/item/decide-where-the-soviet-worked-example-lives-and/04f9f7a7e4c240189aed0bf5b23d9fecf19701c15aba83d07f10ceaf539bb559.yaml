@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 04f9f7a7e4c240189aed0bf5b23d9fecf19701c15aba83d07f10ceaf539bb559
+at: 2026-10-30T23:35:38Z
+store: asf
+act: raise
+about: item:decide-where-the-soviet-worked-example-lives-and
+actor:
+  name: drain-wn-01-gold-readers-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:decide-where-the-soviet-worked-example-lives-and
+source: '01-aat-core/src/disc-modularity-state-dynamics.md Working Notes line 168 (gold-lift ''Readers often ask'', wn-01-gold drain at 86489b0b): Reader appetite for the Soviet / Lysenko worked example'

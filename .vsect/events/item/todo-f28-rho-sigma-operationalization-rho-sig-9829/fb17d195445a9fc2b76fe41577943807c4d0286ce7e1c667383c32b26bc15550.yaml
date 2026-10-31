@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: fb17d195445a9fc2b76fe41577943807c4d0286ce7e1c667383c32b26bc15550
+at: 2026-10-30T23:35:39Z
+store: asf
+act: raise
+about: item:todo-f28-rho-sigma-operationalization-rho-sig-9829
+actor:
+  name: drain-wn-01-gold-readers-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-f28-rho-sigma-operationalization-rho-sig-9829
+source: '01-aat-core/src/scope-edge-update-causal-validity.md Working Notes line 139 (gold-lift ''Readers often ask'', wn-01-gold drain at 86489b0b): How the agent computes rho_Sigma'
