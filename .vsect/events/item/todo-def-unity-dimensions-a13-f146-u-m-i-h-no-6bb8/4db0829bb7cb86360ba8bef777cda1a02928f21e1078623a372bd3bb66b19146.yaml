@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 4db0829bb7cb86360ba8bef777cda1a02928f21e1078623a372bd3bb66b19146
+at: 2026-10-31T02:52:14Z
+store: asf
+act: raise
+about: item:todo-def-unity-dimensions-a13-f146-u-m-i-h-no-6bb8
+actor:
+  name: lead-opus-5.5
+  role: lead
+normalizer: vsect-norm/0
+raised: item:todo-def-unity-dimensions-a13-f146-u-m-i-h-no-6bb8
+source: 'Durable copy of the NeurIPS adjudicated/ trees this item cites (they were untracked in public paper repos): ~/src/neurips-reviews-responses/neurips-2026/<paper>/adjudicated/ (private, local-only; commit 01854ac). They mention reviewers; point, don''t quote.'

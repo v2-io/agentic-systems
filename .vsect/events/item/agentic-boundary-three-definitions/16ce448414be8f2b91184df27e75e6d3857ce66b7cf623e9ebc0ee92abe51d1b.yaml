@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 16ce448414be8f2b91184df27e75e6d3857ce66b7cf623e9ebc0ee92abe51d1b
+at: 2026-10-31T02:52:12Z
+store: asf
+act: raise
+about: item:agentic-boundary-three-definitions
+actor:
+  name: lead-opus-5.5
+  role: lead
+normalizer: vsect-norm/0
+raised: item:agentic-boundary-three-definitions
+source: 'Durable copy of the NeurIPS adjudicated/ trees this item cites (they were untracked in public paper repos): ~/src/neurips-reviews-responses/neurips-2026/<paper>/adjudicated/ (private, local-only; commit 01854ac). They mention reviewers; point, don''t quote.'

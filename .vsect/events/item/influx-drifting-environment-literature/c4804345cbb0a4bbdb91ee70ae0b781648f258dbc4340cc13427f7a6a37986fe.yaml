@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: c4804345cbb0a4bbdb91ee70ae0b781648f258dbc4340cc13427f7a6a37986fe
+at: 2026-10-31T02:52:13Z
+store: asf
+act: raise
+about: item:influx-drifting-environment-literature
+actor:
+  name: lead-opus-5.5
+  role: lead
+normalizer: vsect-norm/0
+raised: item:influx-drifting-environment-literature
+source: 'Durable copy of the NeurIPS adjudicated/ trees this item cites (they were untracked in public paper repos): ~/src/neurips-reviews-responses/neurips-2026/<paper>/adjudicated/ (private, local-only; commit 01854ac). They mention reviewers; point, don''t quote.'

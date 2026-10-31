@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 992abc0987fb9e8a46406c802636e4efb31a6045caa4caec0d205d8c5db6b398
+at: 2026-10-31T02:52:13Z
+store: asf
+act: raise
+about: item:influx-rhythm-of-survival-layer
+actor:
+  name: lead-opus-5.5
+  role: lead
+normalizer: vsect-norm/0
+raised: item:influx-rhythm-of-survival-layer
+source: 'Durable copy of the NeurIPS adjudicated/ trees this item cites (they were untracked in public paper repos): ~/src/neurips-reviews-responses/neurips-2026/<paper>/adjudicated/ (private, local-only; commit 01854ac). They mention reviewers; point, don''t quote.'

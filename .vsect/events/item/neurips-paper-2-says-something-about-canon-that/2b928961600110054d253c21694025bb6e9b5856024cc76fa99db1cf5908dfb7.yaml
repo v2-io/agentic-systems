@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 2b928961600110054d253c21694025bb6e9b5856024cc76fa99db1cf5908dfb7
+at: 2026-10-31T02:52:13Z
+store: asf
+act: raise
+about: item:neurips-paper-2-says-something-about-canon-that
+actor:
+  name: lead-opus-5.5
+  role: lead
+normalizer: vsect-norm/0
+raised: item:neurips-paper-2-says-something-about-canon-that
+source: 'Durable copy of the NeurIPS adjudicated/ trees this item cites (they were untracked in public paper repos): ~/src/neurips-reviews-responses/neurips-2026/<paper>/adjudicated/ (private, local-only; commit 01854ac). They mention reviewers; point, don''t quote.'

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 14148c956bf79ee746d1c5824da84cda46c05d32bb7e4a4747958b04bc5a4d97
+at: 2026-10-31T02:52:14Z
+store: asf
+act: raise
+about: item:terminology-todo-the-deaths-taxonomy-def-death-as-factor-e267
+actor:
+  name: lead-opus-5.5
+  role: lead
+normalizer: vsect-norm/0
+raised: item:terminology-todo-the-deaths-taxonomy-def-death-as-factor-e267
+source: 'Durable copy of the NeurIPS adjudicated/ trees this item cites (they were untracked in public paper repos): ~/src/neurips-reviews-responses/neurips-2026/<paper>/adjudicated/ (private, local-only; commit 01854ac). They mention reviewers; point, don''t quote.'

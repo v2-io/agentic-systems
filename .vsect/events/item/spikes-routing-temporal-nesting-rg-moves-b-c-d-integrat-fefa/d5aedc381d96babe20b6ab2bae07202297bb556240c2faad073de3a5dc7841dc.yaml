@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: d5aedc381d96babe20b6ab2bae07202297bb556240c2faad073de3a5dc7841dc
+at: 2026-10-31T02:52:14Z
+store: asf
+act: raise
+about: item:spikes-routing-temporal-nesting-rg-moves-b-c-d-integrat-fefa
+actor:
+  name: lead-opus-5.5
+  role: lead
+normalizer: vsect-norm/0
+raised: item:spikes-routing-temporal-nesting-rg-moves-b-c-d-integrat-fefa
+source: 'Durable copy of the NeurIPS adjudicated/ trees this item cites (they were untracked in public paper repos): ~/src/neurips-reviews-responses/neurips-2026/<paper>/adjudicated/ (private, local-only; commit 01854ac). They mention reviewers; point, don''t quote.'
