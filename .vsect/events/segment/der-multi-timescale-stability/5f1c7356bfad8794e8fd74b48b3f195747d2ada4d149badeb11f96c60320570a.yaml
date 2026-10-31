@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 5f1c7356bfad8794e8fd74b48b3f195747d2ada4d149badeb11f96c60320570a
+at: 2026-10-31T03:16:41Z
+store: asf
+act: revise
+about: segment:der-multi-timescale-stability
+actor:
+  name: Claude Opus 5.5 (Part I round-4 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: c985f3a5506609974780cb7b432ab139484a39be0670af89e8aeb0352d2d4d10
+own-version: 0c570902935397e2aa4492d3cfe0afaaa9e13942e9f3b03b854c44c2091d844e
+record: 01-aat-core/src/der-multi-timescale-stability.md
