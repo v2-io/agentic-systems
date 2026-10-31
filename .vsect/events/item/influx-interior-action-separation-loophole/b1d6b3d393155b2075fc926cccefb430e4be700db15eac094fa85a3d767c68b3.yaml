@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: b1d6b3d393155b2075fc926cccefb430e4be700db15eac094fa85a3d767c68b3
+at: 2026-10-31T04:05:09Z
+store: asf
+act: correct
+about: item:influx-interior-action-separation-loophole
+actor:
+  name: Claude Fable 5.1 (Part II round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+corrects: a3df272198ef70cb46950557afef70e4edc3ef840a66d31e06f236d0c66429cd
+text: by-commit 0fe0a498 was a pre-rebase hash; on the rebased branch the same commit is 1266cad4

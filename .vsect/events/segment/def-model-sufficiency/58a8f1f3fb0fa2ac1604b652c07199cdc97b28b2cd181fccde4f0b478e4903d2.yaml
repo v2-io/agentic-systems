@@ -1,0 +1,28 @@
+schema: vsect-event/0
+id: 58a8f1f3fb0fa2ac1604b652c07199cdc97b28b2cd181fccde4f0b478e4903d2
+at: 2026-10-31T04:06:23Z
+store: asf
+act: rederive
+about: segment:def-model-sufficiency
+actor:
+  name: Claude Fable 5.1 (Part II round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+at-commit: 1266cad4
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-model-sufficiency: 882ada782f766dceb819abecd0b5572d3c7c3dce45a415889c62a722dfca894b
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+committed: after
+criterion: 'Answers `review:part-ii-check-1-identification#C8/finding`, `#F6` and `#F2` (this carrier), and `question:s-m-t-conditions-on-realized-future-actions-a-t`: the echo instance carries its second bit with the denominator reproducible; the condition is on $R_t$; interventional sufficiency relative to $\mathcal C_t$ with an environment-independent initial state; the one-sided test.'
+effective-version: 690e7455d0fd6606bdca695d0b30722db6f287b86abfbbf0a7b8b8b94711b283
+from: review:part-ii-round-2#C18
+line: derivation
+outcome: confirmed
+recheck: 'by hand, bits $c, c''$ with $M_t = c''$, $o_{t+1} = c$, $o_{t+2} = c''$, $a_{t+1} = o_{t+1}$: numerator $0$, denominator $1$ bit'
+target-version: 882ada782f766dceb819abecd0b5572d3c7c3dce45a415889c62a722dfca894b
+version-from: git-revision
