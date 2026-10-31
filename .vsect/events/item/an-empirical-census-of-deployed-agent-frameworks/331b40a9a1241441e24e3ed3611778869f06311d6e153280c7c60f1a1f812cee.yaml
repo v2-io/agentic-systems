@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 331b40a9a1241441e24e3ed3611778869f06311d6e153280c7c60f1a1f812cee
+at: 2026-10-31T02:17:21Z
+store: asf
+act: raise
+about: item:an-empirical-census-of-deployed-agent-frameworks
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p6)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:an-empirical-census-of-deployed-agent-frameworks
+source: '01-aat-core/src/der-class-coercion-via-wrapping.md Working Notes ''Identifying the regime in the wild'' (deployed scaffolds almost all implement W2; telling W2 from W1 needs per-cycle query inspection: does f_M''s update path receive a query containing G_W?)'

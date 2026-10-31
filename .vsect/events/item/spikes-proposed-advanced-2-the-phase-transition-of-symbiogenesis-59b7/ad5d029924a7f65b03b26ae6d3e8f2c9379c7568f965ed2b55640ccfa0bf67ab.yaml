@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: ad5d029924a7f65b03b26ae6d3e8f2c9379c7568f965ed2b55640ccfa0bf67ab
+at: 2026-10-31T02:17:23Z
+store: asf
+act: raise
+about: item:spikes-proposed-advanced-2-the-phase-transition-of-symbiogenesis-59b7
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p6)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-advanced-2-the-phase-transition-of-symbiogenesis-59b7
+source: '01-aat-core/src/hyp-symbiogenic-composition.md Working Notes ''Saddle-node bifurcation analysis — quantitative threshold form, conditional on a nonlinear coordination penalty'' (rho_c = alpha_auto^2/(4k); conditional on deriving +k delta^2 from #def-shared-intent; natural candidate: shared-intent mutual information between sub-agent models under coupled evidence)'

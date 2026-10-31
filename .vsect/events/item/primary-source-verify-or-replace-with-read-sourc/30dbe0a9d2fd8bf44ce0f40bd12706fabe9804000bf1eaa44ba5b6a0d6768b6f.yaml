@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 30dbe0a9d2fd8bf44ce0f40bd12706fabe9804000bf1eaa44ba5b6a0d6768b6f
+at: 2026-10-31T02:17:21Z
+store: asf
+act: raise
+about: item:primary-source-verify-or-replace-with-read-sourc
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p6)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:primary-source-verify-or-replace-with-read-sourc
+source: 01-aat-core/src/der-class-coercion-via-wrapping.md Working Notes 'Track E surface-back' (Gat 1992, Simmons 1994, Au 2004; the body's Related Work row :203 carries them) and footnote; 01-aat-core/src/der-tempo-composition.md Working Notes 'Track E surface-back' (Janow 2009, Gurvich and Van Mieghem 2015, Bamieh et al. 2011), which exist only in Working Notes, not in the body; 01-aat-core/src/hyp-symbiogenic-composition.md Working Notes 'Track E surface-back… Szathmary 2015', also Working-Note-only. Landing these needs the body's Related Work, not just verification.

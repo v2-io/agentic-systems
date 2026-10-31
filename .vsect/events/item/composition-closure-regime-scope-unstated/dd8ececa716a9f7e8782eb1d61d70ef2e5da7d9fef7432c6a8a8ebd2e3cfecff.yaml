@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: dd8ececa716a9f7e8782eb1d61d70ef2e5da7d9fef7432c6a8a8ebd2e3cfecff
+at: 2026-10-31T02:18:58Z
+store: asf
+act: close
+about: item:composition-closure-regime-scope-unstated
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+of: item:part-iii-segments-name-their-regime-tier
+outcome: duplicate
+reason: 'Same defect, filed in parallel by the p3 and p6 parts of the WN-01 drain; the surviving item covers #form-composition-closure and every Part III citer, and cites the same Working Note.'

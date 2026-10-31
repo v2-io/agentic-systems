@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 276dd72581d5d2098026e8e652c5f18724a04d894cecce8fdb64105a5855e0a1
+at: 2026-10-31T02:17:23Z
+store: asf
+act: raise
+about: item:todo-heredity-axiom-for-disc-composition-cons-3a39
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p6)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-heredity-axiom-for-disc-composition-cons-3a39
+source: 01-aat-core/src/result-contraction-template.md Working Notes 'Candidate strong-option promotion' (under heredity, agent-level B1* is forced, metric tiers collapse, (CM2-M) becomes AAT-derived; jacobian-b1 spike §11)

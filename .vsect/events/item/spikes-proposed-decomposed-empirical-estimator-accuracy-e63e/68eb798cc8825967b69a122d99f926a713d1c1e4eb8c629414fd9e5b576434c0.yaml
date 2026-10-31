@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 68eb798cc8825967b69a122d99f926a713d1c1e4eb8c629414fd9e5b576434c0
+at: 2026-10-31T02:17:21Z
+store: asf
+act: raise
+about: item:spikes-proposed-decomposed-empirical-estimator-accuracy-e63e
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p6)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-decomposed-empirical-estimator-accuracy-e63e
+source: '01-aat-core/src/der-class-coercion-via-wrapping.md Working Notes ''Empirical kappa measurement'' (estimate the selection-channel ceiling I(q_M; G^op) by varying the latent operator goal at fixed query policy; the realized leak needs sampled responses; the gap between them is the accuracy effect) and ''Spike candidate (2026-05-28): Decomposed empirical estimator…'' (already points here); see also review:part-ii-integration-1#F2 on what kappa_W1^sel mixes'

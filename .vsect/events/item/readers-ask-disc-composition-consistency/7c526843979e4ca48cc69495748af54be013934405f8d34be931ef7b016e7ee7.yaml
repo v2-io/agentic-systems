@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 7c526843979e4ca48cc69495748af54be013934405f8d34be931ef7b016e7ee7
+at: 2026-10-31T02:17:22Z
+store: asf
+act: raise
+about: item:readers-ask-disc-composition-consistency
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p6)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:readers-ask-disc-composition-consistency
+source: '01-aat-core/src/disc-composition-consistency.md Working Notes, ''atomic agent'' item: the recursion terminates where the scope condition fails (below observations, actions and uncertainty), which answers this item''s (1)'

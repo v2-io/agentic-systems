@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: ca1e3596cc57b1580e4ed367a2f616a10ab9bca8f3c5079bf05eddcaedacd926
+at: 2026-10-31T02:17:23Z
+store: asf
+act: raise
+about: item:hyp-truth-serving-loophole-s-open-premise-has-a
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p6)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:hyp-truth-serving-loophole-s-open-premise-has-a
+source: '01-aat-core/src/hyp-truth-serving-loophole.md Working Notes ''Open — the truth-objective premise'' (this item''s source; it also asks whether the terminal invariant of #deriv-self-actuation-grounding already is the formal content of ''truth-serving'')'

@@ -37,7 +37,7 @@
 | p3 | Part II Meta-Architecture I | 104 | 16 | `wn-01-other-p3.md` | **done**: every item read whole and disposed (this commit) |
 | p4 | Part I (all chapters) and the Part II preface and Lift | 141 | 28 | `wn-01-other-p4.md` | **done**: every item read whole and disposed (4d8bb49a, 9fcddd48, f0f81911) |
 | p5 | Part II Causal Access, Strategy Structure, Strategy Dynamics, Orient Cascade | 130 | 25 | `wn-01-other-p5.md` | with a helper fork (launched after the cap freed); merged here when it returns |
-| p6 | Part III Meta-Architecture II, Scope and Formation, Composition Machinery | 85 | 11 | `wn-01-other-p6.md` | with a helper fork (launched after the cap freed); merged here when it returns |
+| p6 | Part III Meta-Architecture II, Scope and Formation, Composition Machinery | 85 | 11 | `wn-01-other-p6.md` | **done** by a helper fork: every item read whole and disposed; merged below (this commit) |
 | p7 | Part III Unity, Cooperative/Adversarial, Strategic Composition; Appendix B | 100 | 21 | `wn-01-other-p7.md` | not reached |
 
 **Helpers.** The first six fork launches were refused (the session's subagent cap). Later two went through, for p5 and p6, writing to `wn-01-other-p5.md` and `-p6.md`; p7, p1 and p2 were refused again and are read here, in that order, after p4 and p3. The coverage column above is updated as each part closes.
@@ -174,7 +174,7 @@ The live correctness findings on this segment sit in its gold Off-ramp (gold-lif
 #### `form-complete-agent-state`
 
 - [502] "The between-event dynamics $\dot{G} = g_G(G, M)$ allow autonomous purposeful evolution…" — **set aside**: a remark (between-event $G$ dynamics may be negligible for session-bound LLMs) with no claim; the between-event seam is item:influx-event-time-seam.
-- [503] "The formulation doesn't constrain the dimensionality or structure of $\mathcal{G}$." — **canon** (the type-stable interface is `#form-objective-functional`'s; the body's True-of line spans thermostat-scale to Kalman+LQR).
+- [503] "The formulation doesn't constrain the dimensionality or structure of $\mathcal{G}$." — **canon** in its load-bearing part: the type-stable interface $V_{O_t}$ is `#form-objective-functional`'s. The thermostat-to-commander range is the note's illustration; the body's True-of line (:60) names Kalman + LQR and Part I's trackers, not a thermostat (checked). Nothing owed.
 - [504] "$G_t = \emptyset$ is not just a degenerate case." — **canon** (:70, "Backward compatibility with Part I — what survives the lift").
 
 #### `form-sector-condition`
@@ -350,7 +350,7 @@ The live correctness findings on this segment sit in its gold Off-ramp (gold-lif
 - [518] "The approach is an approximate dynamical homomorphism condition…" — **canon** (Related Work, :340).
 - [519] "**Categorical-cybernetics fit-check candidate (added 2026-05-22).**" — **joined item:spikes-proposed-advanced-15-categorical-cybernetics-re-grounding-9642** (raised; its source-trail path is dead).
 - [520] "**Mori-Zwanzig memory-kernel relationship — upper-bound direction closes; named lower bound does not.**" — **owed → item:composition-closure-mz-upper-bound-unverified** (C.4: verify, then land or delete).
-- [521] "**Dynamic-regime placement (added 2026-05-21…)**" — **defect → item:composition-closure-regime-scope-unstated** (C.1). Checked: the body never names the regime.
+- [521] "**Dynamic-regime placement (added 2026-05-21…)**" — **defect → item:part-iii-segments-name-their-regime-tier** (C.3). Checked: the body never names the regime. (The p6 helper and this part filed it at the same moment; item:composition-closure-regime-scope-unstated is closed as its duplicate.)
 - [522], [523] "**Track E surface-back of catalog citations (2026-05-22).**" and its footnote — **joined item:primary-source-verify-or-replace-with-read-sourc** (raised).
 
 #### `form-objective-functional`
@@ -363,3 +363,114 @@ The live correctness findings on this segment sit in its gold Off-ramp (gold-lif
 
 - [753] "The interaction between $M_t$ updates and edge updates…" — **owed → item:edge-update-evidence-double-counting** (C.4). This was filed before the p5 helper reaches `#hyp-edge-update-via-gain`, so that helper can raise onto it.
 - [754]–[756] "Can $\iota_{ij}$ be estimated online?", "**Regime C edges should be labeled.**", "The depth-dependent degradation for indirect edges…" — **owed → item:edge-update-causal-validity-open-questions** (C.4).
+
+### Part p6 — Part III Meta-Architecture II, Scope and Formation, Composition Machinery (helper fork)
+
+*KR I.9. Written by a fork of the WN-01 drain, to be merged into `wn-01-other.md`. 85 items in 11 segments, all read whole at `dc2b262c`. Body checks were made by grep on the body (Working Notes excluded) and by reading the matching paragraph where the grep hit; where a disposition rests on the note's own words, it says "per the note; not re-checked". The Part I lane was live on `result-contraction-template` when this ran; its Working Notes lines are untouched on that branch as far as the diff shows.*
+
+**Counts.** 85 items: canon 8 · superseded 2 · owed → new item 31 (into 13 items) · joined an existing item 24 · guard 5 · set aside 15. An item split between dispositions ([471], [606], [164]) is counted under its main one.
+
+**New ledger items (13):** item:wrapping-open-theory-iterated-w2-and-form-selection, item:tempo-composition-dynamic-theta-witness, item:adversarial-coupling-pressure-prior-art-search, item:adversarial-mechanisms-on-partial-coupling-typology, item:adversarial-coupling-brief-feynman, item:defensive-scaffolding-composition-segment, item:strategic-self-coupling-primary-sources-and-cult-boundary, item:symbiogenic-composition-open-formalizations, item:truth-serving-loophole-open-questions, item:decoupling-self-defeat-modes, item:contraction-template-open-strengthenings, item:composite-scope-asymmetric-implicit-transitive, item:part-iii-segments-name-their-regime-tier.
+
+**Raised onto existing items (14, recorded with `vsect raise`):** todo-detailed-tempo-accounting-for-canonical-e0c9, spikes-proposed-decomposed-empirical-estimator-accuracy-e63e, an-empirical-census-of-deployed-agent-frameworks, spikes-proposed-decorrelation-by-construction-class-3-bu-f138, primary-source-verify-or-replace-with-read-sourc, spikes-proposed-advanced-13-game-theoretic-formalization-of-the-m-4436, todo-disc-composition-consistency-does-direct-813e, readers-ask-disc-composition-consistency, spikes-proposed-composition-consistency-meta-segment-str-8fc7, spikes-proposed-spike-strategic-self-coupling-p2-p4-appe-3163, spikes-proposed-advanced-2-the-phase-transition-of-symbiogenesis-59b7, hyp-truth-serving-loophole-s-open-premise-has-a, todo-heredity-axiom-for-disc-composition-cons-3a39, format-todo-c14-discussion-segment-schema-split-in-f-09d7.
+
+**One cross-part note.** item:part-iii-segments-name-their-regime-tier also carries `form-composition-closure`'s "Dynamic-regime placement" note (p3, item [521]): that segment's body never names a regime tier while its note says (A1)–(A4) hold only for R0. Whoever writes p3 can dispose [521] as joined to it.
+
+#### `der-class-coercion-in-composition`
+
+- [101] "**Detailed tempo accounting for canonical wrapper architectures.**" — **joined item:todo-detailed-tempo-accounting-for-canonical-e0c9**.
+- [102] "**Connection to ELI-specific structure in `04-eli-core/`.**" — **set aside**: a remark that ELI structure sits on top of the wrapper, with no claim to land.
+- [103] "**Segment split provenance (2026-05-11).**" — **set aside** (provenance; git carries the split).
+
+#### `der-class-coercion-via-wrapping`
+
+- [104] "**Empirical $\kappa$ measurement.**" — **joined item:spikes-proposed-decomposed-empirical-estimator-accuracy-e63e** (E.1); its ceiling-versus-realized-leak gap bears on review:part-ii-integration-1#F2 (what $\kappa_{W_1}^{\text{sel}}$ mixes), named in the raise.
+- [105] "**Sub-type-aware wrapping regime selection.**" — **owed → item:wrapping-open-theory-iterated-w2-and-form-selection** (c). The wrapping body does not cite `#disc-partial-coupling-pathways` (grep on body: none).
+- [106] "**Compositional wrapping (wrapper-of-wrapper).**" — **owed →** the same item, (a).
+- [107] "**Behavioral compliance axiom for W₂.**" — **owed →** the same item, (b).
+- [108] "**Identifying the regime in the wild.**" — **joined item:an-empirical-census-of-deployed-agent-frameworks** (G.2).
+- [109] "**Segment split provenance (2026-05-11).**" — **set aside** (provenance).
+- [110] "Reasoning-trail provenance: spike directories at `spikes/class-coercion-wrapping/` and `spikes/temporal-nesting-rg/`…" — **set aside**: a provenance pointer; both directories are the spike drain's (fork B1, and the RG verdict).
+- [111] "**W₁ leakage-bound — regression guard.**" — **guard**.
+- [112] "**Migration note (2026-05-09 GUC rename):**" — **set aside** (history; it also records that W₀/W₁/W₂ and Class A/B/C were unchanged, which the body already shows).
+- [113] "**Track E surface-back of catalog citations (2026-05-22).**" and [116] the `[^cat-2026-05-22]` footnote — **joined item:primary-source-verify-or-replace-with-read-sourc** (F.3). The body's Related Work row (:203) carries Gat, Simmons and Au.
+- [114] "**Spike candidate (2026-05-28): Decomposed empirical estimator…**" — **guard**: already a resolved pointer to item:spikes-proposed-decomposed-empirical-estimator-accuracy-e63e; the body's Discussion (:181) carries the substance.
+- [115] "**Spike candidate (2026-05-28): Decorrelation-by-construction…**" — **joined item:spikes-proposed-decorrelation-by-construction-class-3-bu-f138** (unassigned; its owner is still open).
+
+#### `der-tempo-composition`
+
+- [162] "**Migration note (2026-05-09 GUC rename):**" — **set aside**.
+- [163] "The lower bound $C_{\text{coord}} \geq \varepsilon^\ast \nu_c / \lVert\delta_{\text{critical}}\rVert$ captures the minimum…" — **canon** (body :88: "the inequality is a lower bound because additional coordination costs (ne[gotiation …])"; :111 names negotiation). The four-term additive model is not in the body; it is a sketch with no derivation, so set aside beyond that.
+- [164] "**Heterogeneity drives closure defect.**" — **canon** elsewhere: `#result-unity-closure-mapping`'s heterogeneous-gain analysis (13 body hits on heterogeneity / $\Delta K$; paragraph not compared). The note's "$\varepsilon^\ast \propto \lvert\alpha_1-\alpha_2\rvert$" is a simplification of the closed form in `#form-composition-closure`'s Working Notes (p3 [513]); item:the-heterogeneous-gain-closure-defect-does-not-v (G.2) is where that closed form's spike claim is under correction.
+- [165] "The internal/external mismatch distinction is formalized through the bridge lemma…" — **canon** (body :19–25: dimensional accounting through the bridge lemma and the template instantiation; per the body read, not term-by-term).
+- [166] "**Norm specification note.**" — **canon** (`#form-composition-closure` body names the Mahalanobis norm, 3 hits).
+- [167] "**Regression guard — do not restore the unconditional additive $\mathcal T_c \le \sum_i \mathcal T_i$.**" — **guard**.
+- [168] "**Dynamic-$\theta$ regime (from the confirmer≠author verification, 2026-07-16).**", [169] "**(A4) uniformity wrinkle (static witness).**", [170] "**(P1) holds with $\epsilon_I = 0$ exactly**" — **owed → item:tempo-composition-dynamic-theta-witness** (C.4). None is in the body (grep `dynamic`, `random-walk`, `epsilon_I`, `uniform`: none).
+- [171]–[173] "**Track E surface-back of catalog citations (2026-05-22).**" (Janow 2009, Gurvich and Van Mieghem 2015, Bamieh et al. 2011), the queued-verification line and the footnote — **joined item:primary-source-verify-or-replace-with-read-sourc**. Checked: these three exist only in Working Notes (body grep: none; the segment has no Related Work section in its body), which the raise records.
+
+#### `disc-adversarial-coupling-pressure`
+
+- [353] "**Promotion: requires targeted prior-art search.**" — **owed → item:adversarial-coupling-pressure-prior-art-search** (F.2).
+- [354] "**Stage × source × form structure within the adversarial mechanisms.**" — **owed → item:adversarial-mechanisms-on-partial-coupling-typology** (C.4); the body has no stage mapping (grep `P3`/`stage`: frontmatter only).
+- [355] "**Brief is not yet at Feynman criterion.**" — **owed → item:adversarial-coupling-brief-feynman** (H.1). The body Brief (:111) is as the note describes.
+- [356] "**Game-theoretic formalization candidate.**" — **joined item:spikes-proposed-advanced-13-game-theoretic-formalization-of-the-m-4436**.
+- [357] "**Defensive scaffolding deserves its own segment under Part III.**" — **owed → item:defensive-scaffolding-composition-segment** (G.2).
+- [358] "**OUTLINE.md placement.**" — **superseded**: the segment is in `01-aat-core/OUTLINE.md` (6 hits), under Meta-Architecture II.
+- [359] "**Sister segment for strategic self-coupling.**" — **superseded** by `#disc-strategic-self-coupling` (landed 2026-05-24).
+- [360] "**Meta-segment landed 2026-05-24.**" — **set aside** (history).
+- [361] "**Surfacing bounded-signaling in `#der-directed-separation`.**" — **canon** (`#der-directed-separation` :28 and :237, "Bounded-signaling assumption"; checked).
+- [362] "**Migration note (2026-05-09 GUC rename + 2026-05-21 composite-claim withdrawal):**" — **set aside** (history; the withdrawn composite claim is guarded at `#der-directed-separation` and `#deriv-strategic-composition`, p4 [124], [308]).
+
+#### `disc-composition-consistency`
+
+- [369] "**Strengthening attempt — outcome.**" — **canon** (body :46–50, the Tier 1M closed forms (CC-parallel)/(CC-cascade)/(CC-feedback)); the residual Tier 2/3 screening is stated there too, per the body read.
+- [370] "The timescale separation condition is essentially the singular perturbation argument from #der-temporal-nesting…" — not in the body (grep `singular perturb`, `temporal-nesting`: none). **joined item:spikes-proposed-composition-consistency-meta-segment-str-8fc7** (the strengthening of this meta-segment).
+- [371] "Composition of directed separation: if each sub-agent's $f_M$ is $G_t$-independent…" — **joined item:todo-disc-composition-consistency-does-direct-813e** (B.2).
+- [372] "The "atomic agent" question…" — **joined item:readers-ask-disc-composition-consistency** (its (1) asks exactly this).
+- [373] "The relationship to holons (Koestler 1967)…" — not in the body; **joined item:spikes-proposed-composition-consistency-meta-segment-str-8fc7**, which already names Koestler in its prior-art list.
+- [374] "**Provenance — retype from postulate to discussion-grade meta-recognition (2026-05-28).**" — **set aside** (provenance; it is also the record of Joseph's 2026-05-28 reframe, which `feedback_meta_segments_deserve_pedagogical_work.md` in project memory carries).
+
+#### `disc-strategic-self-coupling`
+
+- [471] "**Open before `candidate`.**" — (a) **owed → item:strategic-self-coupling-primary-sources-and-cult-boundary** (F.2); (b)–(d) **joined item:spikes-proposed-spike-strategic-self-coupling-p2-p4-appe-3163** (the spike drain names that item "the whole remainder").
+- [472] "**Possible appendix companions**" — **joined** the same p2-p4 item.
+- [473] "**Forward — the belief-update-layer instance (2026-08-22).**" — **guard** (forward pointer); its instruction for the inflection derivation is carried in the raise on the p2-p4 item.
+- [474] "**Indexed at spike-proposals.**" — **joined** the p2-p4 item (the inflection derivation).
+- [475] "**Boundary with cult-formation literature.**" — **owed →** item:strategic-self-coupling-primary-sources-and-cult-boundary. The body's boundary paragraph (:101) is there; Lifton and Singer are not cited.
+- [476] Migration note — **set aside**.
+
+#### `hyp-symbiogenic-composition`
+
+- [570] "**Objective-transfer dynamics (S-1).**", [571] "**Function transfer $\mathcal{F}$ (S-2).**", [572] "**Autonomy reduction (S-3).**", [573] "**(S-3) as weighted-Lyapunov limit (sketch-level).**", [574] "**Reverse symbiogenesis.**", [575] "**Interaction with logogenic agents.**", [576] "**Quantitative predictions.**", [577] "**Timescale of consolidation.**" — **owed → item:symbiogenic-composition-open-formalizations** (C.4). The body states (S-1)–(S-3) as hypothesis parts (:23, :31, :39); none of the dynamics, the weighted-Lyapunov sketch (grep `weighted`: none) or the rest is there.
+- [578] "**Saddle-node bifurcation analysis…**" — **joined item:spikes-proposed-advanced-2-the-phase-transition-of-symbiogenesis-59b7**. Its own statement that the threshold is a formulation until $+k\delta^2$ is derived is the guard, carried in that item.
+- [579] "**Dynamic-regime placement (added 2026-05-21…)**" — the R1 → R0 reading is not in the body (grep `R0`/`R1`/`regime`: none). **owed →** item:symbiogenic-composition-open-formalizations, last clause.
+- [580] "**Track E surface-back… Szathmáry 2015**" and [581] the footnote — **joined item:primary-source-verify-or-replace-with-read-sourc**. Working-Note-only (body grep `Szathm`: none).
+
+#### `hyp-truth-serving-loophole`
+
+- [582] "**Open — the truth-objective premise.**" — **joined item:hyp-truth-serving-loophole-s-open-premise-has-a** (C.4; this note is its source).
+- [583] "**Open — sign of $\Delta_G$.**", [584] "**Open — is Mode 4 a fifth floor instance?**", [586] "**Open — declaration vs. detection.**" — **owed → item:truth-serving-loophole-open-questions** (C.4), which also names review:part-ii-check-1#F6.
+- [585] "**Hypothesis (Joseph's, 2026-08-22) — decoupled architecture can itself be self-defeating.**" — **owed → item:decoupling-self-defeat-modes** (C.4). The body's local-vs-global reading (:27, :33) touches modes (a) and (b) but does not state the catalogue or attribute it.
+- [587] "Placement: this segment sits after #hyp-directed-separation-under-composition…" — **guard** (says where the segment should move once it outgrows hypothesis grade).
+
+#### `impl-composition-machinery`
+
+- [603] "This segment is a chapter-end discussion grouping findings from…" and [604] "**Cross-reference vs canonical-home policy.**" — the segment's statement of its own standing and of which findings live here. **joined item:format-todo-c14-discussion-segment-schema-split-in-f-09d7** (A.3).
+- [605] "**Class-coercion as truthification mechanism — connection to `#disc-modularity-state-dynamics`.**" — **canon** in `#disc-modularity-state-dynamics` (depends on and names the wrapping construction; per its body opening, paragraph not compared). This implications segment's own body never says "truthification" (grep: none); its composite-level twin, defensive scaffolding, is item:defensive-scaffolding-composition-segment.
+- [606] "**Identifiability-floor pattern coverage now four-of-four.**" — **set aside** as a status summary. Its "Instance 5 (Mehra) remains candidate" is **canon** at `#deriv-adaptive-gain-dynamics`:149 ("Mehra non-identifiability as meta-gain `#disc-identifiability-floor` instance").
+- [607] "**No NeurIPS submission directly formalizes this chapter's machinery.**" — **set aside**: a negative pointer with no work in it.
+
+#### `result-contraction-template` (Part I lane live on this segment)
+
+- [708] "**Landing context.**" — **set aside** (provenance).
+- [709] "**Heterogeneous general-graph composition.**" and [710] "**Jacobian-level B1 strengthening is open.**" — **owed → item:contraction-template-open-strengthenings** (C.4), (a) and (b). Neither is in the ledger (searched `small-gain`, `N \geq 3`, `Jacobian-level`, `B1*`; the one hit is the (CC-feedback) iff defect, a different thing).
+- [711] "**Candidate strong-option promotion.**" — **joined item:todo-heredity-axiom-for-disc-composition-cons-3a39**.
+- [712] "**Finsler metrics.**" — **canon** (Related Work row :196 cites Forni and Sepulchre 2014); the "not priority" judgment is set aside.
+- [713] "**The (T2) / (CT2) structural observation matters for Part I too.**" — **owed →** item:contraction-template-open-strengthenings, (c). `#result-persistence-condition`'s body does not cite the contraction template (grep: none).
+
+#### `scope-composite-agent`
+
+- [747] Migration note — **set aside**.
+- [748] "**Whether a common scalar exists across the alignment routes (resolved 2026-05-21 — negatively).**" — **set aside** as history of a resolved question. The route-to-regime mapping it states is not in the body (grep `R0`/`regime`: none), so its content goes into item:part-iii-segments-name-their-regime-tier.
+- [749] "**Asymmetric unity.**", [750] "**Interaction with Class 3 (Coupled) architectures.**", [751] "**Transitivity.**" — **owed → item:composite-scope-asymmetric-implicit-transitive** (C.4).
+- [752] "**Promotion dependencies.**" — **owed → item:part-iii-segments-name-their-regime-tier** (C.3).

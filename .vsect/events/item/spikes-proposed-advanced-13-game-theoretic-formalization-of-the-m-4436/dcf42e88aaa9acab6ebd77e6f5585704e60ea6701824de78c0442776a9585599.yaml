@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: dcf42e88aaa9acab6ebd77e6f5585704e60ea6701824de78c0442776a9585599
+at: 2026-10-31T02:17:22Z
+store: asf
+act: raise
+about: item:spikes-proposed-advanced-13-game-theoretic-formalization-of-the-m-4436
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p6)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-advanced-13-game-theoretic-formalization-of-the-m-4436
+source: 01-aat-core/src/disc-adversarial-coupling-pressure.md Working Notes 'Game-theoretic formalization candidate'

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 20fd674a91872cc33394d5626b724e975868aea8c2884514e1f8bdf12ee93ea7
+at: 2026-10-31T02:17:20Z
+store: asf
+act: raise
+about: item:todo-detailed-tempo-accounting-for-canonical-e0c9
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p6)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-detailed-tempo-accounting-for-canonical-e0c9
+source: 01-aat-core/src/der-class-coercion-in-composition.md Working Notes 'Detailed tempo accounting for canonical wrapper architectures' (C_coord^wrap for ReAct-, Reflexion-, PROPRIUM-shape wrappers)

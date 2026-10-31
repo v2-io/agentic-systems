@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 2c12b270132f86e1f7c651ff3a686cb582bd59b76957a5fbe57424c4f2ea07bc
+at: 2026-10-31T02:17:23Z
+store: asf
+act: raise
+about: item:spikes-proposed-spike-strategic-self-coupling-p2-p4-appe-3163
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p6)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-spike-strategic-self-coupling-p2-p4-appe-3163
+source: '01-aat-core/src/disc-strategic-self-coupling.md Working Notes ''Open before candidate'' (b) the inflection point kappa* of the inverted-U from action-class composition, (c) the reversibility-cost asymmetry as a special case of #der-deliberation-cost, (d) Ainslie''s intertemporal bargaining read through #disc-composition-consistency; ''Possible appendix companions'' (P2, P4); ''Indexed at spike-proposals'' (the inflection derivation); and ''Forward — the belief-update-layer instance (2026-08-22)'': if the inflection derivation lands it should take the goal''s truth-alignment as an argument, since #hyp-truth-serving-loophole claims that moves kappa*'

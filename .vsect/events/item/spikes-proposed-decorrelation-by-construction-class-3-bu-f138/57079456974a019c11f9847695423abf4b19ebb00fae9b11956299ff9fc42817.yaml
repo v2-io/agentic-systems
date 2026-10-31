@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 57079456974a019c11f9847695423abf4b19ebb00fae9b11956299ff9fc42817
+at: 2026-10-31T02:17:21Z
+store: asf
+act: raise
+about: item:spikes-proposed-decorrelation-by-construction-class-3-bu-f138
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p6)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-decorrelation-by-construction-class-3-bu-f138
+source: '01-aat-core/src/der-class-coercion-via-wrapping.md Working Notes ''Spike candidate (2026-05-28): Decorrelation-by-construction — Class 3 but C3-respecting sub-cases'''

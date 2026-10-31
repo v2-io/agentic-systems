@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 9ac5532d20091923d286ee3955d5c6f63d4e3af1c994d1e7cec8d88cc0b5b933
+at: 2026-10-31T02:17:22Z
+store: asf
+act: raise
+about: item:spikes-proposed-composition-consistency-meta-segment-str-8fc7
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p6)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-composition-consistency-meta-segment-str-8fc7
+source: '01-aat-core/src/disc-composition-consistency.md Working Notes: the timescale-separation condition is the singular-perturbation argument of #der-temporal-nesting applied to composition, and the connection is not made in the body; Koestler''s holons (an AAT agent meeting composition consistency is a holon), ''use sparingly'''

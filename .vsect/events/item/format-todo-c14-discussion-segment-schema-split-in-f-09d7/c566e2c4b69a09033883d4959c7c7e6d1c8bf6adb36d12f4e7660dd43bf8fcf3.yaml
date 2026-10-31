@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: c566e2c4b69a09033883d4959c7c7e6d1c8bf6adb36d12f4e7660dd43bf8fcf3
+at: 2026-10-31T02:17:24Z
+store: asf
+act: raise
+about: item:format-todo-c14-discussion-segment-schema-split-in-f-09d7
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p6)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:format-todo-c14-discussion-segment-schema-split-in-f-09d7
+source: '01-aat-core/src/impl-composition-machinery.md Working Notes, first two items: the chapter-end segment''s sources and its cross-reference-vs-canonical-home policy (which findings live here: the critical-mass closed form as four signed special cases, Brooks''s Law as inequality, composition-level floor Instance 3, wrapping as truthification) are its Epistemic Status in all but name'

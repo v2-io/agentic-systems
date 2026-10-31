@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: fea56d5338377e45952062ab0434ad71fe7a9132975ab7aa836436327d569241
+at: 2026-10-31T02:17:22Z
+store: asf
+act: raise
+about: item:todo-disc-composition-consistency-does-direct-813e
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p6)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-disc-composition-consistency-does-direct-813e
+source: '01-aat-core/src/disc-composition-consistency.md Working Notes, third item: does goal-blindness compose? Hypothesis: yes for processing, but goal-dependent routing of observations to the composite breaks it (the organizational analog of the LLM scope restriction)'
