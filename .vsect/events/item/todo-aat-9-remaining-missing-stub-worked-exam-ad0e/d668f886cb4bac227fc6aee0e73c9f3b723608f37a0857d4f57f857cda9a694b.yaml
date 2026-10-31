@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: d668f886cb4bac227fc6aee0e73c9f3b723608f37a0857d4f57f857cda9a694b
+at: 2026-10-30T23:33:02Z
+store: asf
+act: raise
+about: item:todo-aat-9-remaining-missing-stub-worked-exam-ad0e
+actor:
+  name: Claude Opus 5.5 (msc drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-aat-9-remaining-missing-stub-worked-exam-ad0e
+source: msc/aat-v0.4.0-pdf-review.md §3; msc/summary-attempt/000-supplement-notes.md gap table (152)
+text: Both readers met the stub; the PDF review saw it typeset as Appendix BD '#worked-example-cam (missing)' with Miller 2022 absent from the bibliography.

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 399ed7d0cc7a4c1d65cc111d652db380cd953cb59be07976d865fbd8eb7499c5
+at: 2026-10-30T23:33:02Z
+store: asf
+act: raise
+about: item:bibliography-todo-w-3-segment-citation-migration-270-vol1-44ce
+actor:
+  name: Claude Opus 5.5 (msc drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:bibliography-todo-w-3-segment-citation-migration-270-vol1-44ce
+source: msc/aat-v0.4.0-pdf-review.md §5
+text: The 0.4.0 back page listed ten works, six on singular perturbation, while Miehling et al. 2025, Miller 2022, Nesterov, van der Schaft and Schumacher, Rockafellar, Hafez et al. 2026, Icard, Bruineberg et al. and others appear only as prose author-year strings.

@@ -113,3 +113,36 @@ One of: **in canon / superseded** (where, checked at HEAD); **canon defect** (le
 - The three moves: **absorbed** into `#disc-constructive-impossibility-posture` (floor, escape, apparatus). The paper-scale no-gos the "absorb" list asked M1 to carry (chart rescaling, blank wall) are in canon (seven segments at HEAD).
 - The audit-instrument versus engineering-target distinction (knowing a pattern helps as a diagnostic and harms as a target): **set aside, as what it is**: methodology for the publication pipeline, not a claim about agency. It is a candidate for the global methodology memory, which is not this drain's to write.
 - Refinement directions A–F (dependency between moves, per-move failure modes, Lakatos, counterfactual, inverse moves, the scrutiny gradient): **set aside**; methodology research about the program's papers (logos/ops ground), with no canon claim owed. The "no-go forces axiom" question belongs to `spikes/neurips-back-integration-2026-05-08.md` §7 (spike drain).
+
+### `aat-v0.4.0-pdf-review.md` (§1–§5 and recommendations read whole; §6–§9 by heading) and `aat-v0.4.0-assembled-md-review.md` (verdict, checks and defect list read; §7 sampled)
+
+- The five `[Gap]` chapter openings: **canon gap, still present** (OUTLINE :171, :189, :241, :261, :298; `CURRENT-VOL1.md`:5893 now prints "**[Gap]** Open question"). item:five-gap-chapter-intros-parts-ii-iii (H.1), which also carries the summary-attempt supplement's reader flags 1 and 2.
+- Appendix BD, the `worked-example-cam` stub: raised on item:todo-aat-9-remaining-missing-stub-worked-exam-ad0e.
+- The ten-entry bibliography: raised on item:bibliography-todo-w-3-segment-citation-migration-270-vol1-44ce.
+- Cross-volume `#slug`: **disposed with** item:todo-cross-component-slug-resolution-in-the-b-f1fb.
+- The rest (title-page `-dirty` stamp from the build log, empty PDF metadata, raw within-volume `#slug` in captions, titles and bodies, five bodies citing `NOTATION.md` above their Working Notes, long appendix running heads, overfull displays): **never fixed**. item:v040-reader-copy-publication-defects (H.2).
+- The assembled-markdown review's outline-prose drops (Part III preface, appendix-group preambles, the Part I intro title): **fixed** in the regenerated `CURRENT-VOL1.md` and `-APPENDICES.md`. Its `:review`-versus-`:public` question: **answered** (the reader snapshot is built `--public`).
+
+### Process residue (each read at its head and status line, and checked at HEAD where it makes a claim)
+
+| File | Disposition |
+|---|---|
+| `AAD-to-AAT-TODO.md` | **Superseded**: executed 2026-05-15 (stage commits 9745397b, 4d82df8c and siblings); the status line "planned — not yet executing" is false. Every remaining "AAD" in `src/` is quoted auditor gold in Working Notes, which the plan keeps verbatim. |
+| `figure-pipeline-buildout-2026-05-18.md` | **Superseded**: its eight boxes are stale (the scope-of-work TikZ figure and the bathtub scaffold render into `CURRENT-VOL1.md`). The unguarded committed PDF/preview pair is raised on item:todo-figure-artifact-drift-committed-pdf-prev-a1b6. |
+| `audit-routing-consolidated-ledger-draft-2026-05-16.md` | **Superseded**: applied as `audits/polish-and-sentiment-ledger.md`, which the audits drain owns (its seeds disposed in 9491b73f). |
+| `audit-routing-microfix-and-manifest-draft-2026-05-16.md` | **Landed**: R1 (no "previously held a false" in `#deriv-sector-condition`), R2 (no "This is not a weakening" in `#result-sector-persistence-template`), F7 (the `#der-team-persistence` OUTLINE cell reads "Per-sub-agent persistence within a team") all at HEAD. |
+| `sop-shift-completion-plan-2026-06-02.md` | **Canon-process defect**: its "WHOLE SHIFT COMPLETE" is false for B3. item:agents-sop-slim-b3-unfinished (I.6). |
+| `class-rename-execution-plan-2026-05-09.md`, `class-rename-tracking-2026-05-09.md` | **Landed** (no "Class 2 (Coupled)" or "Class 3 (Partial)" in any `src/`; tag `pre-guc-rename-2026-05-09` marks the line). |
+| `wn-discipline-coherence-pass-2026-05-31.md` | **Landed** (format.sop.md §"What earns a Working Note"). I.5 owns what is still owed. |
+| `sop-consolidation-design-2026-06-01.md` | **Landed** (`doc/sop/` holds the designed set). |
+| `handoff-2026-05-01.md` | **Kept as what it is**: a session handoff whose items landed or were shelved; its role-encounter shelving note (Joseph: the tool paralleled `doc/readme/`) is the provenance of the problem-framing paralleling memory. |
+| `role-encounter-plan.md` | **Superseded** by Joseph's 2026-05-01 reframe (handoff §2); raised on item:practica-per-role-readme-rework-queued-2026-05-01-1c58. |
+| `judgment-calls-readme-cycle-2026-04-26.md` | **Kept as what it is**: the record of the 2026-04-26 README cycle's judgment calls; the README is generated now, and A.2 owns what the front door says. |
+| `451729-d1-gate-verification-2026-05-20.md` | **Set aside** for its stage-gate verdicts (Joseph does not use `stage:`). Its two content findings: §9.4, `#schema-strategy-persistence` under-labeled as `sketch`, **landed** (`conditional` at HEAD); §9.3, `#deriv-sector-condition` cites `#der-gain-sector-bridge` and `#deriv-stochastic-non-exit` in its body without declaring them in `depends:`, **set aside**: `#deriv-stochastic-non-exit` depends on `#deriv-sector-condition`, so declaring it would make a cycle; the body cites it forward as the demonstration of a corollary the segment proves itself, which is the correct direction. |
+| `build-markdown-design.md` | **Landed** (`bin/build-markdown`, `doc/digests/math-core.md.liquid`). |
+| `modularity-cycle-plan-2026-05-09.md` | **Landed** (`#disc-modularity-state-dynamics`, `#disc-strategic-self-coupling`, `#disc-adversarial-coupling-pressure` all exist); the status line "pending Joseph's decision to execute" is false. |
+| `markdown-first-pipeline.md` | **Not residue**: the live design contract for the monograph pipeline, cited by `agents.sop.md` and `build-pipeline.sop.md`. |
+| `verify-sector-condition-cluster-2026-05-20.md`, `verify-strategy-cost-cluster-2026-05-20.md` | **Kept as what it is**: graduated through `spikes/.integrated/MANIFEST-2026-05-20.md`; independent re-derivations of Cor A.1S.1, the hard ceiling and the BH identity, a second route should canon's proofs need one. |
+| `2026-03-14-section-iv-paper-outline.md` | **Set aside**: a TST paper plan from before TST's restoration to `02-tst-core`; its gaps (accessible Pareto derivation, quantified worked examples, a 5–10-repo empirical pass) are paper planning, and the empirical half is the kind of thing item:untested-catalog-predictions-for-e collects. |
+| `joseph-working-notes.md` | **Not read** (git-ignored, Joseph's private transcripts). Its three live citations (`#def-eli-cohort`:88 Working Notes, `03-llm-core/OUTLINE.md`:213, `04-eli-core/OUTLINE.md`:207) are dead in any clone; raised on item:eli-cohort-table-entry-verification, which already named the first. |
+| `__pycache__/spike-causal-ib-sim.cpython-313.pyc`, `.DS_Store` | **Cruft**: untracked bytecode and Finder metadata; not tracked by git (nothing to commit), safe to delete locally. |

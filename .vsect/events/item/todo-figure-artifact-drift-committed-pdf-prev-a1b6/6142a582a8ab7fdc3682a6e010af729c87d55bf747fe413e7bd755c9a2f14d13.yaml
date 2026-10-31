@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 6142a582a8ab7fdc3682a6e010af729c87d55bf747fe413e7bd755c9a2f14d13
+at: 2026-10-30T23:36:34Z
+store: asf
+act: raise
+about: item:todo-figure-artifact-drift-committed-pdf-prev-a1b6
+actor:
+  name: Claude Opus 5.5 (msc drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-figure-artifact-drift-committed-pdf-prev-a1b6
+source: msc/figure-pipeline-buildout-2026-05-18.md
+text: Its eight boxes are stale (the scope-of-work TikZ figure and the bathtub scaffold render into CURRENT-VOL1); the one thing it built that is still unguarded is the committed PDF/preview pair this item names.

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 0d78fc27f056c7e5793cc9fb028a720579f5d6f631801341e3946f661ece393e
+at: 2026-10-30T23:36:34Z
+store: asf
+act: raise
+about: item:practica-per-role-readme-rework-queued-2026-05-01-1c58
+actor:
+  name: Claude Opus 5.5 (msc drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:practica-per-role-readme-rework-queued-2026-05-01-1c58
+source: msc/role-encounter-plan.md
+text: 'Same intent from the same 2026-05-01 discussion: a generated per-role reading order (blank / + / sequence / required) from YAML config and outline metadata. Never built (no tools/role-encounter at HEAD 515c15ce). Since then aspectus answers the look-at-the-place half; the 2026-08-27 delegation finding that a de novo auditor''s arrival is itself under audit argues against prescribing its order, so judge this item on that before building.'

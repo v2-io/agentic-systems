@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: bb009cf6a21204252fa144fa3aa018878917257e9b5a88e490d46bae0e36fab9
+at: 2026-10-31T02:12:51Z
+store: asf
+act: raise
+about: item:eli-cohort-table-entry-verification
+actor:
+  name: Claude Opus 5.5 (msc drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:eli-cohort-table-entry-verification
+source: msc/joseph-working-notes.md (git-ignored); 03-llm-core/OUTLINE.md:213; 04-eli-core/OUTLINE.md:207; LOG.md:72
+text: Beyond this segment's Working Notes, both 03 and 04 OUTLINE source lists cite the same git-ignored file, so the dead reference is three live sites, not one; LOG.md:72 is frozen history and stays.
