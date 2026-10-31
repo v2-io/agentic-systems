@@ -44,13 +44,16 @@ log(1+d), the least-squares exponential rate of log T on d, and the slope on log
 component whose mean is a form in d and an idle component, with a mixing weight per d bin; it
 prints per-bin working-time medians, the nested form inside the working component, the
 working-time power exponent, and the log-likelihoods of the exponential, power and nested forms;
+the best of 30 random starts of each one-idle form, saying when its labels are swapped (an "idle"
+component shorter than working time);
 then the power exponent again with time away modelled by two idle components, a likelihood with
 several optima, so the fit is the best of 30 starts and each bootstrap draw starts from it;
 (7) a parametric null for the windowed test of (2): 1000 times, simulate the fitted mixture with a PURE
 EXPONENTIAL working component on the history's own d values, apply each cap, refit (2)'s nested
 OLS, and report how often the null's b reaches the observed b and how often its a falls as low as
-the observed a; it also prints that fitted exponential's working medians at d = 10 and 20 beside
-its idle median; (8) changeset size, window-free: the same mixture with the working mean linear in
+the observed a, and how often the null's own smallest tail share over the eight readings (four caps,
+a and b, which reuse the same gaps) is as small as the observed smallest; it also prints that fitted
+exponential's working medians at d = 10 and 20 beside its idle median; (8) changeset size, window-free: the same mixture with the working mean linear in
 log(1+lines) or log(files), per-bin working medians by lines, and the ratio of the 201-1000-line
 bin's working median to the 11-50-line bin's, with and without the 0-10-line bin's median
 subtracted from both as a fixed per-commit overhead (not defined unless the three medians rise). The mixture is a modelling choice
@@ -279,10 +282,16 @@ def window_sweep(name, commits):
               f"slope on log(1+lines), all d={ls:.2f}")
 
 
-def mixture_em(y, X, b, K, iters=600):
-    """Working component N(X beta, s_w), idle component N(mu_i, s_i), working share pi[k] per bin k."""
-    beta = np.linalg.lstsq(X, y - 1, rcond=None)[0]
-    mu_i, s_i, s_w, pi = np.percentile(y, 85), 1.0, 1.0, np.full(K, 0.7)
+def mixture_em(y, X, b, K, iters=600, start=None):
+    """Working component N(X beta, s_w), idle component N(mu_i, s_i), working share pi[k] per bin k.
+    The default start puts the idle component high (85th percentile of log T); an int seeds a random start."""
+    if start is None:
+        beta = np.linalg.lstsq(X, y - 1, rcond=None)[0]
+        mu_i, s_i, s_w, pi = np.percentile(y, 85), 1.0, 1.0, np.full(K, 0.7)
+    else:
+        r = np.random.default_rng(start)
+        beta = np.linalg.lstsq(X, y - r.uniform(0.0, 3.0), rcond=None)[0]
+        mu_i, s_i, s_w, pi = r.uniform(np.percentile(y, 50), np.percentile(y, 98)), r.uniform(0.5, 2.0), r.uniform(0.5, 1.5), np.full(K, r.uniform(0.3, 0.9))
     ll_old = -np.inf
     for _ in range(iters):
         m = X @ beta
@@ -292,8 +301,8 @@ def mixture_em(y, X, b, K, iters=600):
         for k in range(K):
             if (b == k).any():
                 pi[k] = r[b == k].mean()
-        m = X @ beta; s_w = np.sqrt(np.sum(r * (y - m) ** 2) / r.sum())
-        mu_i = np.sum((1 - r) * y) / np.sum(1 - r); s_i = np.sqrt(np.sum((1 - r) * (y - mu_i) ** 2) / np.sum(1 - r))
+        m = X @ beta; s_w = max(np.sqrt(np.sum(r * (y - m) ** 2) / r.sum()), 1e-3)
+        mu_i = np.sum((1 - r) * y) / np.sum(1 - r); s_i = max(np.sqrt(np.sum((1 - r) * (y - mu_i) ** 2) / np.sum(1 - r)), 1e-3)
         if abs(ll - ll_old) < 1e-10:
             break
         ll_old = ll
@@ -369,6 +378,14 @@ def mixture_form(name, commits):
           f"idle medians {idle[0]:.0f} and {idle[1]:.0f} min, working s.d. {tp['s_w']:.2f}; log-likelihood power - exponential {tp['ll'] - te['ll']:+.1f}")
     if f1 + f2 + f3 + f4:
         print(f"  (bootstrap draws whose fit failed and were skipped: {f1}, {f2}, {f3}, {f4} of 100, 200, 200, 100)")
+    out = []
+    for f in ('exp', 'pow', 'nest'):
+        tries = [mixture_em(y, design(d, f), b, K, iters=3000, start=s) for s in range(30)]
+        best = max((t for t in tries if np.isfinite(t['ll'])), key=lambda t: t['ll'])
+        swapped = np.exp(best['mu_i']) < np.exp(best['beta'][0])
+        out.append(f"{f} {best['ll']:.1f} (reported {fits[f]['ll']:.1f}; idle median {np.exp(best['mu_i']):.0f} min, working median at d=0 "
+                   f"{np.exp(best['beta'][0]):.0f} min{', labels swapped' if swapped else ''})")
+    print("  one idle component, best of 30 random starts per form: " + '; '.join(out))
     return d, g, fits['exp']
 
 
@@ -394,6 +411,16 @@ def windowed_null(name, d, g, fexp, reps=1000):
         print(f"  cap={c:<5} observed a={obs[c][1]:+.3f} b={obs[c][2]:+.3f}; pure-exponential null: a median {np.median(nb[:, 1]):+.3f}, "
               f"b 95% [{np.percentile(nb[:, 2], 2.5):+.3f},{np.percentile(nb[:, 2], 97.5):+.3f}], "
               f"P(null b >= observed b)={np.mean(nb[:, 2] >= obs[c][2]):.3f}, P(null a <= observed a)={np.mean(nb[:, 1] <= obs[c][1]):.3f}")
+    # The eight readings (four caps, a and b) reuse the same gaps. Calibrate their smallest tail share against the
+    # same null's own smallest, replicate by replicate, so their correlation is accounted for exactly.
+    stats_ = np.column_stack([-np.array(null[c])[:, 1] for c in caps] + [np.array(null[c])[:, 2] for c in caps])  # larger = more extreme
+    obs_ = np.array([-obs[c][1] for c in caps] + [obs[c][2] for c in caps])
+    srt = np.sort(stats_, axis=0)
+    tail = lambda v, k: 1 - np.searchsorted(srt[:, k], v, side='left') / reps  # share of null replicates >= v
+    p_obs = min(tail(obs_[k], k) for k in range(8))
+    p_rep = np.min(np.column_stack([tail(stats_[:, k], k) for k in range(8)]), axis=1)
+    print(f"  smallest of the eight tail shares (four caps, a and b) {p_obs:.3f}; the null reaches a smallest share that low in "
+          f"{np.mean(p_rep <= p_obs):.3f} of its replicates")
 
 
 def changeset_mixture(name, commits):
