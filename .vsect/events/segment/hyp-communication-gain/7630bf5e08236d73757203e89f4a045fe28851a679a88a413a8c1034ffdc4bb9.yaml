@@ -1,0 +1,18 @@
+schema: vsect-event/0
+id: 7630bf5e08236d73757203e89f4a045fe28851a679a88a413a8c1034ffdc4bb9
+at: 2026-10-31T02:53:08Z
+store: asf
+act: confirm-rewording
+about: segment:hyp-communication-gain
+actor:
+  name: Claude Opus 5.5 (TST lane checker 3)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: The rewording names h as the innovation o_k - M_i^-, which C8's recheck already used; C11's Appendix F correspondence is untouched.
+from-version: a75e331dfbf79a2a91d728e340fa960ca573fb44b8dac59b3f16eeebf7669846
+outcome: equivalent
+scope:
+  for:
+  - 991f0e01390b4564b08011ae1ac5c6ae23109dc32ec8c6c54e27d389f7e39e12
+  - 8da59875511b506aabc51f27bf0fdcf9e2e2597c76767b7a5d81b9e11b0222a5
+to-version: 050c23772768f3a0bf2628d63da49ca7a2854b252728582203d999ff780977ad

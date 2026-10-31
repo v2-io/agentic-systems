@@ -1,0 +1,41 @@
+schema: vsect-event/0
+id: 7a516da8301a9d9ecef41712307a0765eb055ce05c5d339b6bdeb6deecde9b2e
+at: 2026-10-31T02:52:40Z
+store: asf
+act: place-finding
+about: segment:hyp-exponential-cognitive-load
+actor:
+  name: Claude Opus 5.5 (TST lane checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-atomic-changeset: 42e9bb3fb6ebff2299c1204253d1665f549db70d3bd0d3181b8a8b0ce760e0a0
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-comprehension-time: b0db6cfd95109646952ebfd76d90b551d3d512240a2ad5f91015b6cbbe1e0aec
+  segment:def-discontinuity-distance: 199c9c0f6a0593d84805a764fa8133b3df722e4768abcecaca211a2e2f1f7b2a
+  segment:def-feature: eefffd509dd084cb6773f2591ba53127c3063f51de688f5a5ccd0a081273e7c6
+  segment:def-implementation-time: 978d42091a677b509a07934ff3a8cbf1717dd62d9d7d4f17cce6f2740baae427
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:der-action-selection: ff726f8527dab6ee837cc11b7164313850f125e944c76ea86dca14183c613408
+  segment:der-change-proximity-principle: 4230914331b92ca534d7ad44713cab4a12f4e89804039bfc25565a01d8b20f3a
+  segment:der-deliberation-cost: fff865feb1ea99b6b937bda8675a42b832cb3330f09bf2db7fb241f8e83c9aeb
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:emp-changeset-size-principle: 160a9a7667ea99f4b1fe60313188625d9a78e178d9d9337c5c7968b8363c3f84
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:hyp-exponential-cognitive-load: 6739b7c9b19b1f18023aab5515394ee220aa3117bdd789517579ea9dc68c8657
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:scope-adaptive-system: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-evolving-software: 203c54085abb77b69eeaa45bb2dfc07c4776fa3455b5df9d178c8e3c2ea4ade6
+finding: review:tst-lane-check-3#C5/finding
+target: segment:hyp-exponential-cognitive-load
+text: 'check C5 came back narrowed: "In ink they rise to 13 minutes at $d$ = 3–5 and not beyond" reads point medians whose intervals are $[4.9, 36.5]$ and $[1.3, 136.9]$. "Reject it in none" gives no criterion, though each history reaches a tail share of 1.3–2.1% at some cap '
+version-from: git-revision

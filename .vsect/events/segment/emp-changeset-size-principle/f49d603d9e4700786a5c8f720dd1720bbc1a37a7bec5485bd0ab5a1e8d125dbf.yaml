@@ -1,0 +1,33 @@
+schema: vsect-event/0
+id: f49d603d9e4700786a5c8f720dd1720bbc1a37a7bec5485bd0ab5a1e8d125dbf
+at: 2026-10-31T02:52:39Z
+store: asf
+act: run
+about: segment:emp-changeset-size-principle
+actor:
+  name: Claude Opus 5.5 (TST lane checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-atomic-changeset: 42e9bb3fb6ebff2299c1204253d1665f549db70d3bd0d3181b8a8b0ce760e0a0
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-comprehension-time: b0db6cfd95109646952ebfd76d90b551d3d512240a2ad5f91015b6cbbe1e0aec
+  segment:def-feature: eefffd509dd084cb6773f2591ba53127c3063f51de688f5a5ccd0a081273e7c6
+  segment:def-implementation-time: 978d42091a677b509a07934ff3a8cbf1717dd62d9d7d4f17cce6f2740baae427
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:emp-changeset-size-principle: 160a9a7667ea99f4b1fe60313188625d9a78e178d9d9337c5c7968b8363c3f84
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:scope-adaptive-system: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-evolving-software: 203c54085abb77b69eeaa45bb2dfc07c4776fa3455b5df9d178c8e3c2ea4ade6
+committed: before
+criterion: Do the measurement paragraph's capped and window-free slopes, its overhead comparison, and the toolkit README's section 2 and 3 numbers come out of sections (4), (5) and (8), with gemini-cli, codex and anthropic-sdk-python reproducing under `--keep-squash`?
+effective-version: e75e35a535cb6066ac854bc61723de21d6edd190607b787e3d858fdf18f4a60f
+from: review:tst-lane-check-3#C2
+line: measurement
+outcome: confirmed
+recheck: as C1; `python3 elapsed_time.py --keep-squash gemini-cli.log codex.log anthropic-sdk-python.log`
+target-version: 160a9a7667ea99f4b1fe60313188625d9a78e178d9d9337c5c7968b8363c3f84
+version-from: git-revision

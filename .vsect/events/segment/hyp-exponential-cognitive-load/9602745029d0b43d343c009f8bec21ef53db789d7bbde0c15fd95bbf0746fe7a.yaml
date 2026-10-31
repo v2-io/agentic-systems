@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: 9602745029d0b43d343c009f8bec21ef53db789d7bbde0c15fd95bbf0746fe7a
+at: 2026-10-31T02:53:07Z
+store: asf
+act: confirm-rewording
+about: segment:hyp-exponential-cognitive-load
+actor:
+  name: Claude Opus 5.5 (TST lane checker 3)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: The rewording describes the corpus as the repository TST was written in instead of by its owner's name; every number the run checks read is unchanged, and my re-run at 945bea3d reproduces them (review:tst-lane-check-3#C1).
+from-version: b873fd667a50944e0ecfb578e9ce1b4d0be009776474e9c11a867fbceb526fca
+outcome: equivalent
+scope:
+  for:
+  - 139475b25f6829e518b03ddbe24aabd9ef42a675809d4493b9b96bf9123eb104
+  - 045916637113f5fb79fa8cd1d1e57c5e2f3e913ca354d241a2a7ee6d609f322d
+  - 2324ebd15476ab6d93359a483bc84987178cd12b04d23eb2d7173278658d0d50
+  - 39e7429428a308ade62592ebcd446848b7e82250115dd15fc19f844ba50eb86d
+  - 398d087c7e7b84cce679325fafdf30bc58d49037e2378f4e412f6df694f32f67
+  - dc8d968ab6dbf2b62cc6f003fd0a139499d514e48a7e77dbd5efb69e256149b2
+to-version: 6739b7c9b19b1f18023aab5515394ee220aa3117bdd789517579ea9dc68c8657

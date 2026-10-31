@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: a4e8688a245b336716bf6bc4337960e240fd532347de147168f0b0ce72594f01
+at: 2026-10-31T02:53:14Z
+store: asf
+act: correct
+about: segment:hyp-exponential-cognitive-load
+actor:
+  name: Claude Opus 5.5 (TST lane checker 3)
+  role: verifier
+normalizer: vsect-norm/0
+corrects: 398d087c7e7b84cce679325fafdf30bc58d49037e2378f4e412f6df694f32f67
+text: 'Annotation by checker 3: at: 0bc90f7d is a worktree commit on no branch. Its main equivalent is 4ea60ca9: every 02-tst-core file and #hyp-communication-gain are identical between them; the only differences in 01-aat-core targets (#detail-operationalization, #der-deliberation-cost) come from the Part I round-3 lane and lie outside what this item read.'

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: dccc3e4adccf6f6cc36f002b1eb1ce383d2598482aa67a554558e64cdefc1023
+at: 2026-10-31T02:52:59Z
+store: asf
+act: review-finding
+about: segment:hyp-communication-gain
+actor:
+  name: Claude Opus 5.5 (TST lane checker 3)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: 'N6 answered: the Derived block states event-by-event application and the joint gain U+/V_k; re-derived (review:tst-lane-check-3#C6). The persistent-miscalibration regime is a new narrowing there, not this finding reopened.'
+finding: review:tst-lane-check-2#C14/finding
+outcome: answered
+revision: 050c2377

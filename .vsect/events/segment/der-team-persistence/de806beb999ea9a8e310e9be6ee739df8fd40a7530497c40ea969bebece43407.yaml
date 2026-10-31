@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: de806beb999ea9a8e310e9be6ee739df8fd40a7530497c40ea969bebece43407
+at: 2026-10-31T02:52:59Z
+store: asf
+act: review-finding
+about: segment:der-team-persistence
+actor:
+  name: Claude Opus 5.5 (TST lane checker 3)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: 'N7 answered: F.4 information asymmetry and F.5 item 2 landed in #hyp-communication-gain''s Discussion, F.5 item 3 is question when-a-team-must-change-model-class-together-wha, ''What TFT contributes'' carried by #der-adversarial-destabilization and the trust meta-game Working Note, F.6 A_ji recorded as replaced (review:tst-lane-check-3#C7).'
+finding: review:tst-lane-check-2#C15/finding
+outcome: answered
+revision: 050c2377

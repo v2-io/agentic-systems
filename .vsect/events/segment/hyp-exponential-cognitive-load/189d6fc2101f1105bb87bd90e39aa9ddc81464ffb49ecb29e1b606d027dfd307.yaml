@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 189d6fc2101f1105bb87bd90e39aa9ddc81464ffb49ecb29e1b606d027dfd307
+at: 2026-10-31T02:53:21Z
+store: asf
+act: correct
+about: segment:hyp-exponential-cognitive-load
+actor:
+  name: Claude Opus 5.5 (TST lane checker 3)
+  role: verifier
+normalizer: vsect-norm/0
+corrects: 39e7429428a308ade62592ebcd446848b7e82250115dd15fc19f844ba50eb86d
+text: 'Correction by checker 3: the criterion asks whether the one-idle fit is the likelihood maximum in each history; in ink it is not (a label-swapped fit is higher by 1.4-2.1 for every form, as this item''s own text says), so the outcome for ink is narrowed, not confirmed. Recorded as review:tst-lane-check-3#C4.'

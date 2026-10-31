@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 459f99a494f3497421d9cf934764118fd2f1b2b4183aa3be861490b37c7b43c7
+at: 2026-10-31T02:52:41Z
+store: asf
+act: place-finding
+about: segment:der-change-expectation-baseline
+actor:
+  name: Claude Opus 5.5 (TST lane checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:der-change-expectation-baseline: 593f39fda457e8fa7cce878dec1942264ddab73798bcdc67b3956aff79e04bf0
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:scope-adaptive-system: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-evolving-software: 203c54085abb77b69eeaa45bb2dfc07c4776fa3455b5df9d178c8e3c2ea4ade6
+finding: review:tst-lane-check-3#C8/finding
+target: segment:der-change-expectation-baseline
+text: 'check C8 came back broken: For a system found in progress the age is uniform given the lifetime (Eq. 23) and the lifetime is length-weighted (Eq. 20). Scale ignorance about the system in progress, invariance under rescaling past and future together, forces $w \propto'
+version-from: git-revision

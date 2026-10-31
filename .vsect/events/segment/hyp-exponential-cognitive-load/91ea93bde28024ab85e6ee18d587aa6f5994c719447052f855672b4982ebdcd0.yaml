@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 91ea93bde28024ab85e6ee18d587aa6f5994c719447052f855672b4982ebdcd0
+at: 2026-10-31T02:52:58Z
+store: asf
+act: review-finding
+about: segment:hyp-exponential-cognitive-load
+actor:
+  name: Claude Opus 5.5 (TST lane checker 3)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: 'M1 answered: Discussion and Epistemic Status give the exponent 0.72-0.86 depending on the idle model, 0.86 [0.69,1.05] at the best of 30 starts; re-run at 945bea3d (review:tst-lane-check-3#C1, #C3).'
+finding: review:tst-lane-check-2#C3/finding
+outcome: answered
+revision: 6739b7c9

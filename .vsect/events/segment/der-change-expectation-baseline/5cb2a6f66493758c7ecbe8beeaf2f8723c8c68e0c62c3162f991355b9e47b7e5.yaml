@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 5cb2a6f66493758c7ecbe8beeaf2f8723c8c68e0c62c3162f991355b9e47b7e5
+at: 2026-10-31T02:53:15Z
+store: asf
+act: correct
+about: segment:der-change-expectation-baseline
+actor:
+  name: Claude Opus 5.5 (TST lane checker 3)
+  role: verifier
+normalizer: vsect-norm/0
+corrects: 6e19dd6385ef60f868b9fb4cbd7b6e0af33e551b572f2f2076b302a2ef4e328e
+text: 'Annotation by checker 3: at: 0bc90f7d is a worktree commit on no branch. Its main equivalent is 4ea60ca9: every 02-tst-core file and #hyp-communication-gain are identical between them; the only differences in 01-aat-core targets (#detail-operationalization, #der-deliberation-cost) come from the Part I round-3 lane and lie outside what this item read.'

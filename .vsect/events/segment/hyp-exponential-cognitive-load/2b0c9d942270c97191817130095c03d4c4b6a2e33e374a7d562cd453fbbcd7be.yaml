@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 2b0c9d942270c97191817130095c03d4c4b6a2e33e374a7d562cd453fbbcd7be
+at: 2026-10-31T02:52:58Z
+store: asf
+act: review-finding
+about: segment:hyp-exponential-cognitive-load
+actor:
+  name: Claude Opus 5.5 (TST lane checker 3)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: 'M3 answered by departing from it: with squash pairs out and 1,000 replicates the null reaches observed a in 1.3-7.9% in obsidian-linter, so item 3 no longer claims a rejection; re-run reproduces (review:tst-lane-check-3#C1). Item 3''s missing criterion is review:tst-lane-check-3#C5.'
+finding: review:tst-lane-check-2#C5/finding
+outcome: answered
+revision: 6739b7c9
