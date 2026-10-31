@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 6bba03343c6307343c0e725b14173907dfdad3d8b80e104cbf1561b7d63112d7
+at: 2026-10-31T02:17:40Z
+store: asf
+act: raise
+about: item:canon-bodies-cite-local-working-paths
+actor:
+  name: Claude Opus 5.5 (influx drain, first half)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:canon-bodies-cite-local-working-paths
+source: msc/inside-out-2026-10/influx-scout/neurips.md §0.6, §4.4 (re-checked at cbd2f345)
+text: 'The same D-1 debt without a path: canon bodies (above Working Notes) that cite the unpublished NeurIPS submissions as the home of a result. At cbd2f345: #der-directed-separation:181 (the Class 3 connectivity argument ''stated at lemma grade in NeurIPS 2026 Paper 3''; landing it is item influx-coupled-class-connectivity-lemma); #schema-strategy-persistence:97 (the gain-decay lift ''stated in NeurIPS Paper 2 ... not in canon''; item influx-gain-decay-class-and-gamma-min); #disc-structural-imagination:47 (''its NeurIPS Paper 3 sharpening''); #impl-closed-loop-interiority:58 (''formal theorems in the NeurIPS submissions''); #deriv-observation-ambiguity-bias-bound:44 (''NeurIPS 2026 Paper 3''s Lemma 5.1 is this step'', a harmless correspondence note in a body); #impl-strategy-dynamics:68 already in this item by path. #deriv-strategic-persistence-hard-ceiling, which the scout found citing Paper 2 three times, no longer exists after the F72 landing. Other body hits for ''NeurIPS'' are published works (Cohen 2020, Skalse 2022, Bareinboim 2015, Besbes 2014, Taylor 2008) and are fine. No NeurIPS 2026 decision is recorded anywhere on disk (ops SUBMISSIONS.md stops at 2026-08-02), so none of these is citable as published yet.'

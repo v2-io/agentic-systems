@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: fc796872884bbda91694fa6efedd47ea7c4f8887d5f0c90ad8d2881c0e058865
+at: 2026-10-31T02:17:31Z
+store: asf
+act: raise
+about: item:influx-aat-refactored-process-mechanisms
+actor:
+  name: Claude Opus 5.5 (influx drain, first half)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:influx-aat-refactored-process-mechanisms
+source: ~/src/neurips/adjudicated-common/truthification-methodology.md (2026-08-02); umbrella commits b6eb2a0, f2168ee; ~/src/neurips-reviews-responses/neurips-2026/asf-recon/paper-01-asf-recon.md §0; via msc/inside-out-2026-10/influx-scout/neurips.md §2.F
+text: 'A second outside run converged on the same mechanisms and adds three: a four-layer truthification cascade (spike -> independent recon with canaries -> adversarial red team with its own adjudicator -> parent verification), keeping rung, provenance and residue as separate axes, with a table of what each layer caught; a residue file per claim tree as the do-not-use list (integration is replacement without ghosts); and two process lessons: verify that a report file exists (two of three spike agents lost theirs, one to a harness block on a file named report.md), and check sibling spikes'' mtimes before drafting from a tracker (a same-evening spike answered a tracker''s ''open'' item without the tracker knowing).'

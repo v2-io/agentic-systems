@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 70f95f2b9584a4f97465cc3ff412ac2fbea5de82cb0c9bd1c878b83aa99e1f64
+at: 2026-10-31T02:16:38Z
+store: asf
+act: raise
+about: item:outside-domains-that-meet-der-multi-timescale-st
+actor:
+  name: Claude Opus 5.5 (influx drain, first half)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:outside-domains-that-meet-der-multi-timescale-st
+source: ~/src/neurips/spikes/jump-drift-unification/ (2026-08-02) and ~/src/neurips/rhythm-of-survival-theory.md; via msc/inside-out-2026-10/influx-scout/neurips.md §2.B
+text: 'A third consumer of the open jump-process premise, with one exact piece: in the linear-Gaussian model a rare-jump component is exactly extra drift, q_eff = q + lambda_J Q_J; a jump-prone axis charges an amplitude as well as a rate (absorption precision iota_abs = 1/R^2 caps every rent); and missed jumps are an observability statement (incremental versus absolute observation operator), not an information one. The jump-drift spike refuted its own brief''s framing that the asymmetry ''falls out of the same recursion''; any canon text uses the corrected form. Demand, not corroboration, for the strengthening; scope is the known-law diagonal linear-Gaussian game. Fuller detail in item influx-rhythm-of-survival-layer.'

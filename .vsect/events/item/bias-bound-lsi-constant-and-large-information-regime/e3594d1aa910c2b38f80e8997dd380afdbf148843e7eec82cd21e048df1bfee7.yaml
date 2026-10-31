@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: e3594d1aa910c2b38f80e8997dd380afdbf148843e7eec82cd21e048df1bfee7
+at: 2026-10-31T02:14:52Z
+store: asf
+act: raise
+about: item:bias-bound-lsi-constant-and-large-information-regime
+actor:
+  name: Claude Opus 5.5 (influx drain, first half)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:bias-bound-lsi-constant-and-large-information-regime
+source: ~/src/neurips/03-llm-hallucinate-bound/adjudicated/claims/{vacuity-and-arccos,unconditional-saturation-nogo,d12-theorem-package}.md (uncommitted in that subrepo); ~/src/neurips/spikes/{information-bound-saturation,rate-reading-chernoff}/report.md; via msc/inside-out-2026-10/influx-scout/neurips.md §2.D
+text: 'Part (b) and the related body defect have verified material outside asf (checked at cbd2f345: :85 still says ''under (PI), Fisher-Rao is the canonical metric and C = sqrt 2 is universal''; failure mode 4 at :141 still says Paper 3''s global C = 2 is ''unread here and not adopted''). The Part II checker''s review:part-ii-check-1-distortion#F5 independently derives a global Track 2 with constant 2 and no compactness, after fixing the d_FR convention; take them together. What the NeurIPS chain adds beyond F5, at its own tags: the tightest global form E d_FR <= 2 arccos(exp(-I/2)) <= min(2 sqrt I, pi) by Jensen on a concave psi [PROVED; concavity re-derived 3x]; an unconditional saturation no-go: Phi(log N) = 2 arccos(N^{-1/2}) exactly on a partition witness, extended to all real I by a perturbed partition, so every bound E d <= F(I) on a bounded invariant metric must approach the diameter pi [PROVED], which with §4''s chart-rescaling counterexample makes a pincer (bounded invariant metrics saturate; unbounded chart metrics admit no universal constant); and Theorem A, E_G D_{1/2}(P_{M|G} || P_M) <= I(G; M | e, M-), equality on the partition family, unbounded in I, so the coordinate that stays informative in the adversarial regime, which is where the logogenic story needs a bound and where every Fisher-Rao bound is vacuous (2 sqrt I > pi once I > pi^2/4 ~ 2.47 nats) [PROVED, numerics re-run]. One refuted gloss to keep out (''I/2 caps the goal-identification exponent''; the partition family identifies perfectly at finite I). Also unlanded and only WN pointers today: the attention-coupling lemma''s extension to linear attention, Mamba, RWKV, RetNet and long convolutions (Paper 3 spike A6; #scope-channel-collapse WN :84), and the Stuart-school reduction of Track 1 with A8''s corrected overhead constant (at least 2).'

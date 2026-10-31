@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 93b5762b92846ab7c2017e5b1e62c54b4f0f429181c309ac669e8aa93d019b26
+at: 2026-10-31T02:16:52Z
+store: asf
+act: raise
+about: item:three-candidate-unifications-of-what-asf-claims
+actor:
+  name: Claude Opus 5.5 (influx drain, first half)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:three-candidate-unifications-of-what-asf-claims
+source: ~/src/neurips/01-tragedy-confident-agent/adjudicated/REVISION-OUTLINE.md:5, :9 (2026-08-03, uncommitted); ~/src/neurips-reviews-responses/neurips-2026/01-tragedy-confident-agent/POST-READY/followup-gHwS-drift-knowledge.md (private); via msc/inside-out-2026-10/influx-scout/neurips.md §0.4, §2.C
+text: 'A fourth candidate statement, from the Paper 01 revision outline''s ''identity sentence'': every agent contains an adaptive tracking core, ''because agency is a narrowing of adaptation, not a departure from it'', so Part I results bind every agent by containment (the set inclusion is canon: agency scope within adaptive scope; the sentence and the inheritance claim are not, grep at cbd2f345 for ''narrowing of adaptation'', ''tracking core''). The outline adds, asserted not derived, that ''the tragedy is inherited upward with increasing force: higher agency adds drifting axes'' (own calibration, goal relevance, models of others) faster than it adds attention; canon would carry that at hypothesis tier. A companion argument for #deriv-causal-ib-lmi and #deriv-causal-ib-exploration Discussion: known drift is the favorable case, so the impossibility results hold a fortiori without that knowledge, and unknown drift adds cost only on the constructive side (''you can only detect drift on axes you glance at''). It is close to INTENT''s working thesis (''the price of that contact rises with success and with purpose'') and should be tested against it under B.3.'

@@ -1,0 +1,9 @@
+---
+kind: item
+owner: F.2
+opened: 2026-10-31T02:17:03Z
+opened-by: Claude Opus 5.5 (influx drain, first half)
+concerns: [segment:result-persistence-condition, segment:deriv-causal-ib-exploration, segment:deriv-causal-ib-lmi, segment:schema-strategy-persistence]
+---
+
+# The drifting-environment literature the NeurIPS Paper 01 reviewers named has little or no canon presence (grep of 0[1-4]-*/src at cbd2f345): sensor scheduling and measurement management (Athans 1972; Pukelsheim's optimal design; van Keuk's radar revisit rates) 0 segments; multiple-model adaptive estimation (MMAE) 0; variable-forgetting-factor RLS and change-detection non-stationary bandits only in passing. These are the native neighbors of #result-persistence-condition, #deriv-causal-ib-exploration, #deriv-causal-ib-lmi (whose 'feasibility under scarce indivisible attention' framing the revision outline calls the unoccupied position) and #schema-strategy-persistence's related-work table; real-time scheduling (rate-monotonic, EDF) is the linear-canvas cousin, with the gap surviving zero switch cost. The Paper 01 revision outline (~/src/neurips/01-tragedy-confident-agent/adjudicated/REVISION-OUTLINE.md §'Add the native neighbors', uncommitted) sketches how each composes rather than competes, and flags the Athans / Bertsekas / Pukelsheim / van Keuk attributions as recon-only: open them first-hand before citing. Reviewer concerns that apply equally to canon's version of the result (paraphrased; reviews are confidential, never quoted): drift structure assumed known; expectation-level, not pathwise; a weak scalar baseline (one reviewer predicted a posterior-dependent scalar escapes the blank wall, right in substance; item influx-causal-ib-lmi-state-independence-boundary); linear-Gaussian scope; no running physical example (canon has the driver in snow only as a figure; item influx-intro-anchor-sentences-outrun-bodies). Source: msc/inside-out-2026-10/influx-scout/neurips.md §4.5, §5.

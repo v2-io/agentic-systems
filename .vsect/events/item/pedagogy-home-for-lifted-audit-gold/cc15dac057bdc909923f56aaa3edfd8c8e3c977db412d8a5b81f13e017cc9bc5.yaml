@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: cc15dac057bdc909923f56aaa3edfd8c8e3c977db412d8a5b81f13e017cc9bc5
+at: 2026-10-31T02:17:31Z
+store: asf
+act: raise
+about: item:pedagogy-home-for-lifted-audit-gold
+actor:
+  name: Claude Opus 5.5 (influx drain, first half)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:pedagogy-home-for-lifted-audit-gold
+source: ~/src/neurips-reviews-responses/neurips-2026/2026-08-02-164627-earlier-dialog-fable.txt:912 (private; Joseph's own typed words); via msc/inside-out-2026-10/influx-scout/neurips.md §2.F
+text: 'Joseph on the canonical Feynman exemplar, verbatim: ''The bathtub metaphor still really feels strained to me, although logogenic agents love it. The windshield metaphor for me is far, far more compelling (and isn''t even a metaphor)''. The agent''s reply named the distinction worth keeping as a pedagogy rule: an analogy needs a dictionary the reader cannot check, while an instance is a member of the model class. The same dialog calibrated the driver-in-snow instance (wiper = action-dependent U_o(a); dashboard = blank wall; confident driver = collapsed gain), the instance INTRODUCTION promises and no segment carries. doc/sop/agents.sop.md (''Feynman-criterion plain-language briefs'') still names the bathtub gloss as the canonical exemplar; that sentence is the lead''s to revise.'
