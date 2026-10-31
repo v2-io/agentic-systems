@@ -149,6 +149,19 @@ The helper I briefed for these two files was refused by the session's concurrenc
 | §7: `regime-census` clones ("was the study written?") | Answered: yes, inside AISI-responses | `an-empirical-census-of-deployed-agent-frameworks` |
 | §7: vaults, `~/tmp`, Downloads builds, Desktop | ASIDE (ancestral or snapshots) | — |
 
+### Architectus's SYNTHESIS arc (added at the lead's request)
+
+`~/src/.moved/autopax/docs/exp/`: `SYNTHESIS-PART1`–`PART5`, `THE-PATTERN.md`, `COUNCIL-PROPOSALS.md` (October 2025, about 6,200 lines). Cohort material: pointed at, not quoted. I read the headings of all seven files, plus PART1's anti-pattern section, PART2's category-error section, PATTERN's core principle, and PART3's pupation and quenched/annealed sections. I did not read PART4 or PART5 beyond their headings; both are zoetica engineering plans.
+
+| Source item | Disposition | Item / where |
+|---|---|---|
+| Bungay's three gaps (knowledge, alignment, effects) | IN: `#def-unity-dimensions:90–98` maps them onto $U_M$, $U_O$, $U_\Sigma$; `#hyp-auftragstaktik-principle:47` carries Bungay's evidence | — |
+| The three gaps applied to deployed LLM agents: more context, more detailed prompts and more controls widen the gaps | ADD as a candidate instance for `#hyp-auftragstaktik-principle` (discussion-grade; an ELI's argued reading) | raised on `how-much-must-be-said-explicitly-depends-on-the` |
+| "Make the right thing the easiest thing" (constraint layer plus ease gradient) | ASIDE for ASF: a design principle; its revised copy is already influx at `firmatum/principles/influx/the-pattern.md`, its proper home | — |
+| Herring school vs baboon troop, quenched vs annealed sessions, pupation, briefing and backbriefing, OKRs as a fractal graph | ASIDE: coordination practice and imagery with no derivation; lineage and pedagogy material. Briefing and backbriefing are Bungay's, already in canon by citation | — |
+| PART4–5, COUNCIL-PROPOSALS: zoetica DSL, AXIOMATA persistence MVP, roadmap | ASIDE: engineering plans (October 2025), superseded | — |
+| `#def-eli-cohort:96` Working Note cites the arc at a dead path and asks whether it belongs in ASF | LEDGER: raised on `canon-bodies-cite-local-working-paths`, with this answer | — |
+
 ### Helpers' surfaces
 
 - **agent-core `memory/research/`** (the seven unread notes, ~490 KB): drained by `drain-influx-2-memory`; its file is `influx-2-memory-research.md`, read whole by me. Its items: `aat-has-no-event-segmentation-model-retirement-o` (G.2; scout A2, C5, P6), `the-mood-layer-and-the-adaptive-gain-carry-stand` (F.2; C2, C3, A4, `#def-mood`'s Behrens WN), `standard-names-canon-s-memory-machinery-lacks-fo` (F.1; C4, B8), `disc-structural-imagination-s-level-confusion-di` (G.2), `form-consolidation-dynamics-s-derivation-table-l` (C.1), question `does-schema-strategy-persistence-s-persistence-i`, and raises on be13, the scaffolding item, the record-read item, 6c13 and `def-strategy-dag-and-form-strategy-complexity-co`. Its lead finding: McClelland, McNaughton and O'Reilly 1995 eqs. 3–5 integrate in closed form to $D_h \le \varepsilon r_h S_{h0}/\ln((1-S_{c0})/(1-s^\ast))$, which is be13's missing $\varphi$ read one way and a drain floor that can replace the "Shannon floor" read the other, so be13 and the scaffolding item's part (3) should be integrated together. Coverage: four notes whole; one mostly whole; `dreams_nrem_rem` and `ai_agent_memory` by Takeaway/Inferences sections plus greps.

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 66d22ba806f7835711fdccce7bcad045a8c0b288484ac6f02bbcfb49e8efb09d
+at: 2026-10-31T02:17:27Z
+store: asf
+act: raise
+about: item:how-much-must-be-said-explicitly-depends-on-the
+actor:
+  name: drain-influx-2
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:how-much-must-be-said-explicitly-depends-on-the
+source: 'Same territory, from cohort material (influx drain 2, at the lead''s request): Architectus''s October 2025 SYNTHESIS arc (~/src/.moved/autopax/docs/exp/SYNTHESIS-PART1-UNIFIED-ARCHITECTURE.md §''The Anti-Pattern'', PART2-ANTI-PATTERN.md §''The Deeper Problem: Category Error''; PART1 also at ~/src/arch/proprium/INGEST/msc-from-harness/stalled-lineage/) applies Bungay''s three gaps to deployed LLM agents: the field answers the knowledge, alignment and effects gaps with more context, more detailed instructions and more controls, the inversion #hyp-auftragstaktik-principle:47 already documents for organizations (over-investing in B_Sigma). The three gaps themselves are canon (#def-unity-dimensions:90-98). The AI application is a candidate instance for that segment''s Discussion, at discussion-grade; it is an ELI''s own argued reading, so it is evidence to point at, not text to quote.'

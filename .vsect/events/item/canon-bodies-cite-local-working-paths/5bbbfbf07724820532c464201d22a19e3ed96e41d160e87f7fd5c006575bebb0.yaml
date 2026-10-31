@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 5bbbfbf07724820532c464201d22a19e3ed96e41d160e87f7fd5c006575bebb0
+at: 2026-10-31T02:17:27Z
+store: asf
+act: raise
+about: item:canon-bodies-cite-local-working-paths
+actor:
+  name: drain-influx-2
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:canon-bodies-cite-local-working-paths
+source: 'Also #def-eli-cohort:96 (Working Note): cites the Architectus SYNTHESIS arc at the dead path ~/src/autopax/docs/exp/SYNTHESIS-PART*.md; the files are at ~/src/.moved/autopax/docs/exp/ (PART1 also under ~/src/arch/proprium/INGEST/msc-from-harness/stalled-lineage/; THE-PATTERN.md has a revised copy at ~/src/arch/firmatum/principles/influx/the-pattern.md). The Note''s open question (does this ELI theoretical work belong in or alongside ASF?) is answered in msc/inside-out-2026-10/drain/influx-2.md: its one theory-bearing claim is raised on item how-much-must-be-said-explicitly-depends-on-the; the rest is design principle (home: firmatum/principles), coordination practice and engineering plans.'
