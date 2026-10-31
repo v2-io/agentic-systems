@@ -160,6 +160,32 @@ Read whole. Sentiment rows (S2, S9, S10, S16, S17, S20, S21, S33) are **ASIDE** 
 | S41 bundle | 193847 B3: **ADD** item:strategic-ignorance-ciy-dual (G.2). B4: **ADD** item:level-3-access-and-moral-weight (G.0). B5: **LEDGER** item:norm-adaptive-reserve-as-ethical-floor-for-04-el. B9 (16-cell arg-max): **LEDGER** item:der-agent-opacity-overclaims-f246-f255. 742613 B1 ($M_0$ seam): **LEDGER** item:influx-chronica-endowment-absorb-into-phi. 742613 B2: raised onto item:influx-action-fluency-and-tempo-conflation. 849201 B2: raised onto item:der-agent-opacity-overclaims-f246-f255. 849201 A1: **ADD** item:tst-user-developer-time-exchange-rate (C.1). 829314 B-2: **ADD** item:in-context-self-reflection-no-go (C.4). 829314 A-1..A-4 Brief slivers: **PED**. 613842 B2: raised onto item:influx-ib-beta-rho-and-exactness. 471203 Fresh-8: **LEDGER** item:todo-source-segment-defects-reported-by-the-b-6d26 (`#def-pearl-causal-hierarchy:41`). 471203 Fresh-14: **ADD** item:continuous-state-structural-change (C.4). |
 | P-block, audit-process feedback | **ASIDE** for theory. Its durable point, that the dominant defect shape is *unnamed relocation* rather than wrong math, is under adjacent findings below. |
 
+### Volumes 2–4 and the unlifted Appendix-A notes: 773921, 829314, 849201, 193847
+
+Read whole: `AUDIT-WORKING-773921/{21,22,55,56,61}` (the five Appendix-A notes the 05-30 sweep never reached). Read by section (predictions, consistency, math, errors, change, curiosity) for every file: 773921 `92`–`116`; 829314 `tst-core/01–11`, `logogenic-agents/02–07`, `logozoetic-agents/01–03`, `39`, `67`; 849201 `71`–`86`; 193847 `70`–`74`. Not read: 829314 `logozoetic-agents/04–06` (explorations of firmatum, `_core` and zoetica, which bear on private infrastructure more than on canon), 193847's tracker files, the initial-prediction files.
+
+**The character of this material.** Almost all of it is enthusiastic restatement by Gemini readers ("flawless", "masterpiece", "Nothing" under *what would I change* in nearly every file). Its verification claims are not evidence. It is a large pedagogy reservoir: teaching frames that work, and overclaims a teacher must not repeat. The overclaims to guard, all paraphrases of canon that canon does not make: "proves backprop works where Bayesian updating fails" (773921/61), "a universal hallucination bound" from $C_{FR}=\sqrt2$ (96), "agentic AI is physics" (101), "you cannot sleep less than four hours and stay adaptive" (107), "LLMs cannot separate what is true from what they want" stated as proven (94), and the ambiguity factor $\mathcal A$ as a settled bound (96, 99, 101), which today's C2 landing deleted. The whole reservoir's disposition is **PED** (item:pedagogy-home-for-lifted-audit-gold), with this guard list carried beside it.
+
+| Source item | Disposition |
+|---|---|
+| 773921/104 state-correlated reinjection as a second, harder no-go for `#der-turnover-information-recursion` | **LEDGER** item:spikes-proposed-continuity-4-2-second-no-go-adversariall-c4e7. |
+| 773921/106 the metrics need a predict-then-observe scaffold | **ADD** item:evaluation-metrics-need-predict-then-observe (E.1). |
+| 773921/99 thinking block versus tool call as the primitive/scaffolded boundary | **IN** as a Working Note at `#scope-primitive-logogenic`; **PED**. |
+| 773921/97 "statics survive, dynamics degrade" (also 829314/04) | **PED**: the best one-line summary of `#result-section-ii-survival` two readers reached independently. |
+| 773921/22 watch item: Loewner order, not elementwise, in matrix persistence | **ASIDE**: a reader's watch item, no instance found. |
+| 773921/111, /115, 829314 logozoetic: "the Three Deaths" | canon now uses the factor-generated taxonomy; "Three Deaths" survives only in lineage lines (`#def-death-as-factor-loss:76`, `#def-eli-cohort:25`, `04-eli-core/OUTLINE.md:118`, `:188`, `:192`) and in one pointer at `03-llm-core/OUTLINE.md:198` that still glosses the taxonomy as "Cognitive/Relational/Truth". **ASIDE** as historical; the 03 OUTLINE gloss is the one line a sweep might restate as "continuity / relational / truth". |
+| 829314 TST: `*(Descended from TST T-0N.)*` residue in seven segments | **IN** (gone from every non-`old-*` body; four Working-Note mentions describe the resolved slip). |
+| 829314/02 `#scope-evolving-software` mixes an axiomatic scope with a derived consequence | **LEDGER** (SP-6 / polish S23, the TST class decision). |
+| 829314/05, 193847/74 `#result-specification-bound` "sufficient" is circular | **IN** in substance: the body now carries (S1) a distinguishability premise; its Working Note `:88` ("written by an earlier agent … needs a review pass") is stale, for the Working-Notes drain. |
+| 829314/07, /10, /07-logogenic: Findings blocks with search logs are editorial bloat | **ASIDE** (polish S18: declined with reason; the build strips them). |
+| 829314/06 Pareto tail makes the expected future-change count undefined | **IN** (`#der-change-expectation-baseline:74`, and the median caveat is propagated to `#der-dual-optimization:44` and `#der-change-investment:23, :29`). |
+| 849201/77 translation-cost form for conceptual alignment | **LEDGER** item:conceptual-alignment-form-diverges; source raised. |
+| 849201/73 summing medians across modules | **ASIDE**: `#der-change-investment:59` weights probabilities, not medians. |
+| 193847/70, 829314/01, 849201/71 the equivalence precondition of `#post-temporal-optimality` is massive and easy to drop | **ASIDE** as a standing caution: the segment and its WN say it; no downstream instance was cited. The TST lane's checker is the place it would bite. |
+| 193847/72 a transfer-assumption register for P1–P6 outside software; 471203 TST sample: transfer is aspirational | **ASIDE** here, for A.4's TST front-door pass. |
+| 829314 logozoetic/01: relational recognition makes moral status relational, not intrinsic | **ASIDE** for canon; argued philosophy, the logos portfolio's ground (G.0 if it is ever to be stated in ASF). |
+| 773921/21, /22, /55, /56, /61 otherwise | **PED.** These were the five segments the 05-30 sweep never reached; nothing in them is a defect. |
+
 Gem-hunt files read for this: `audits/.gem-hunt-trail/GEM-WORKING-{193847,471203,526815,613842,742613,829314,849201}/adjudication.md`, by section. Its 526815 A-1 (the $d^\ast$ table row) is **IN** (`#form-strategy-complexity-cost:102` reads 0).
 
 ## Pedagogy gold: where it is

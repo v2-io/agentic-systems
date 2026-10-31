@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 5709e5f71d92ae877282c4df599e1370d5eaa1d22fa11b8f607a1481d79d373a
+at: 2026-10-31T02:14:23Z
+store: asf
+act: raise
+about: item:conceptual-alignment-form-diverges
+actor:
+  name: Claude Opus 5.5 (audits drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:conceptual-alignment-form-diverges
+source: 'audits/AUDIT-WORKING-849201/77-alignment-and-changeset.md §7 (2026-04-28): an independent reader also recommends the translation-cost form over inverse proportionality.'
