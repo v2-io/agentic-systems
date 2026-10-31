@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 914a285bd042a44da9c50d15ea8c4c0ea46c617fdfce01832f5e2071d8450c4b
+at: 2026-10-31T04:02:08Z
+store: asf
+act: review-finding
+about: segment:result-persistence-condition
+actor:
+  name: Claude Fable 5.1 (A.2 owner)
+  role: integrator
+normalizer: vsect-norm/0
+criterion: 'INTRODUCTION item 1 (31d739f4) states the guarantee per disturbance model as the Brief does: containment under bounded change, the typical size fitting the region under random change; the Kalman filter is named as the derived instance and the stay-and-leave consequence is item 2''s.'
+finding: review:part-i-round-3-check-1#F2
+outcome: answered
+reviser-recorded: false
+revision: 31d739f4
