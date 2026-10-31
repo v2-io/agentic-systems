@@ -16,7 +16,7 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 
 ## A — The front door says only what the bodies support
 
-- **A.1** `#scope-adaptive-system` carries the typed predicate $H(S_t\mid\mathcal C_t)\gt0$ with $S_t=(\Omega_t,\theta)$, or a defended alternative, and the GA registry names $\theta$. A cold reader checks the membership clauses on standard RL and on a Kalman filter. This also resolves the SP-30 brief. · *landed and through five independent reads; the fifth's findings integrated at ed2b07e4 (fresh noise and fresh transitions are now definitions in `#def-observation-function` and `#def-action-transition`; the agent's own budget stated; RL with reward and no prior addressed); a sixth read waits for a free slot. Open: the tail-$\sigma$-field strengthening and a continuous-space (h′) (vsect)*
+- **A.1** `#scope-adaptive-system` carries the typed predicate $H(S_t\mid\mathcal C_t)\gt0$ with $S_t=(\Omega_t,\theta)$, or a defended alternative, and the GA registry names $\theta$. A cold reader checks the membership clauses on standard RL and on a Kalman filter. This also resolves the SP-30 brief. · *landed and through five independent reads; the fifth's findings integrated at ed2b07e4 (fresh noise and fresh transitions are now definitions in `#def-observation-function` and `#def-action-transition`; the agent's own budget stated; RL with reward and no prior addressed); a sixth read waits for a free slot. Open, in the ledger: the tail-$\sigma$-field strengthening, the physical housing, the compute-relative extension, and a continuous-space (h′)*
 - **A.2** INTRODUCTION, the Part I and Part II fronts and the README partials agree on one headline list. Each headline sentence traces to a body sentence of the same register. · *not started*
 - **A.3** No live segment lacks an Epistemic Status (29 do today, all in the `impl-*`/intro layer). · *not started*
 - **A.4** The Volume 2–4 prefaces and OUTLINE claim cells say only what their bodies support (A.2 covers Volume 1). · *not started; the overclaims the item re-checks found are in `items-recheck/t2-todo.md` §2*
@@ -87,7 +87,6 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 | Lead coordinator (Opus 5.5, session "asf-cleanup") | I, plus coordination | `INTENT.md`, `HANDOFF.md` |
 | `aisi-eoi` + `notability-extracts` drain, second attempt (Fable) | I.9 | `drain/aisi-eoi-notability.md`, the ledger |
 | Volume 4 round-3 integrator (Fable), own worktree: the second check's three broken claims (the continuation rule, the factor-(iv) indicator, epoch-conditional W₁) and six narrowings | C.1 | Volume 4 on its branch; `c1-lanes/vol4-round-3.md` |
-| TST round-3 integrator (Opus), own worktree: the second check's seven narrowings (one a strengthening: the capped test rejects the exponential in obsidian-linter) and three Appendix F parts without a fate | C.1, H.2 | TST on its branch; `c1-lanes/tst-round-3.md` |
 | Drain (nine Opus agents): influx halves 1 and 2, audits, spikes, `aisi-eoi` + `notability-extracts`, Working Notes (01 gold lift, 01 other, 02–04), `msc/` | I.9 | `drain/*.md`, the ledger |
 | vsect builder (Fable), on the line for the store migration (after the four integration branches merge) | I.4 | `~/src/arch/firmatum/utils/vsect/`, `.vsect/` |
 
@@ -114,6 +113,7 @@ These are finished and on the line through the lead:
 - the TST lane checker and round-2 integrator;
 - the Part II integrator (C2, C3, B.1's Part II corrections, A4, A5; merged at 279b2699) and its independent checker with three peers;
 - the Part I round-3 integrator;
+- the TST round-3 integrator (merged after 3f6c2362; its check waits for a slot);
 - the A.1 round-5 integrator (fresh noise and fresh transitions).
 - the hooks builder (I.2).
 
