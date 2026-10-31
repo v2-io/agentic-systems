@@ -16,8 +16,8 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 
 ## A — The front door says only what the bodies support
 
-- **A.1** `#scope-adaptive-system` carries the typed predicate $H(S_t\mid\mathcal C_t)\gt0$ with $S_t=(\Omega_t,\theta)$, or a defended alternative, and the GA registry names $\theta$. A cold reader checks the membership clauses on standard RL and on a Kalman filter. This also resolves the SP-30 brief. · *landed and through five independent reads; the fifth's findings integrated at ed2b07e4 (fresh noise and fresh transitions are now definitions in `#def-observation-function` and `#def-action-transition`; the agent's own budget stated; RL with reward and no prior addressed); a sixth read waits for a free slot. Open, in the ledger: the tail-$\sigma$-field strengthening, the physical housing, the compute-relative extension, and a continuous-space (h′)*
-- **A.2** INTRODUCTION, the Part I and Part II fronts and the README partials agree on one headline list. Each headline sentence traces to a body sentence of the same register. · *not started*
+- **A.1** `#scope-adaptive-system` carries the typed predicate $H(S_t\mid\mathcal C_t)\gt0$ with $S_t=(\Omega_t,\theta)$, or a defended alternative, and the GA registry names $\theta$. A cold reader checks the membership clauses on standard RL and on a Kalman filter. This also resolves the SP-30 brief. · *landed; the eighth independent read (`spikes/epistemic-target-ontology/17-check-8.md`) re-derived every membership item at 3d17de13 and found it holds. Owed an integrator: its F1 (a sufficient condition that settles continuous-state RL, the KR's own RL case) and F2–F5 (sentence and definition fixes in the scope, `#def-observation-function`, `#def-action-transition` and Prop 1(ii)). Open in the ledger: the tail-$\sigma$-field strengthening, the physical housing, the compute-relative extension, and where design ends and learning begins*
+- **A.2** INTRODUCTION, the Part I and Part II fronts and the README partials agree on one headline list. Each headline sentence traces to a body sentence of the same register. · *not started. It is now the bottleneck: every C.1 check since round 2 has found front-surface and neighbour restatements that say more than the corrected body (OUTLINE Layer 0, Findings Briefs, README partials), and one round per check cannot drain them. A.2 with D.3 is the structural fix*
 - **A.3** No live segment lacks an Epistemic Status (29 do today, all in the `impl-*`/intro layer). · *not started*
 - **A.4** The Volume 2–4 prefaces and OUTLINE claim cells say only what their bodies support (A.2 covers Volume 1). · *not started; the overclaims the item re-checks found are in `items-recheck/t2-todo.md` §2*
 
@@ -29,8 +29,9 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 
 ## C — The theory is correct where it is known wrong, and stronger where strengthening was found
 
-- **C.1** Every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. The defect lists are `owner-review/integrator-items.md` A1–A15, `internal-surfaces/00-cross-surface-map.md` §3 and `influx-scout/MAP.md` §3. · *started: F72 and A1 landed and checked; A6, A7, A10, A12, A13, A14 in parallel lanes; A8, A11 landed with B.1; A4, A5 wait for the C2/C3 spikes' integration, whose segments they share; A9's headline waits for A.2; A3 for the exit-time spike*
-- **C.2** Strengthenings C1–C3 (exit time, loop identification, allocation vs distortion coupling) are independently checked, then landed or refuted. · *C1 landed (Prop A.1S-τ, the Model S window) and integrated through round 3, with the threshold drift now a derived two-term expansion (merged after bc1cdeeb); its round-3 check waits for a slot. C2 and C3 landed (253d2bca–279b2699) and independently checked (`part-ii-check-1.md`): the three-way split holds, about a dozen exact sentences are scoped past their proofs, and drains are incomplete at twenty-odd sites; the Part II round-2 integration waits until the Working Notes drain has reached Part II*
+- **C.1** Every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. The defect lists are `owner-review/integrator-items.md` A1–A15, `internal-surfaces/00-cross-surface-map.md` §3 and `influx-scout/MAP.md` §3. · *every A-item is landed or in a lane. Lanes (accounts in `c1-lanes/`): Part I at round 5; Part II at round 2; TST round 4 landed and checked, with two derivation defects owed (the hazard route's premise, section (7) decided by simulation noise); Volume 4 round 4 landed (the logos 2026-09-25 settlement is canon's form), its check owed; defender-noise round 2 ready to merge. Across every check the mathematics has held; the defects are statements that claim more than the derivation*
+  - **Launch rule** (lead, 2026-10-31). A running lane finishes its round and gets its check. A further round launches only for defects in derivations or definitions. Restatement residue on front surfaces and neighbouring segments goes to A.2, A.4 and D.3 as structural work, not to another round
+- **C.2** Strengthenings C1–C3 (exit time, loop identification, allocation vs distortion coupling) are independently checked, then landed or refuted. · *C1 landed and checked: the threshold drift is a derived three-term expansion, re-derived by hand by the round-4 checker. C2 and C3 landed and checked (`part-ii-check-1.md`); the Part II round-2 integration is running*
 - **C.3** A cross-segment contradiction scan reports no open contradictions among load-bearing segments. · *not started; one found: `#scope-composite-agent` admits composites with no composite objective (routes C-iii, C-iv) while requiring one (:83), and eight segments rest on that gate (`items-recheck/q-proposals.md` §2.1)*
 - **C.4** Part III and the open strengthenings outside C1–C3 have an owner: each held item under C is landed, refuted, or set aside with its reason recorded. Worked by cluster: strategy-DAG optimality; composition and closure; persistence extensions; the impossibility clusters; the coupling typology (the 01 Working Notes drain alone filed 74 items here, and the clusters show in their slugs). · *not started; the items are in the ledger, most `unassigned` today; inputs `items-recheck/q-proposals.md` §2, `t2-todo.md` §2*
 
@@ -69,11 +70,11 @@ Objectives A–H come from the owner review (`owner-review/00-review.md` §7, ra
 
 ## I — The system keeps it true (the lead's part)
 
-- **I.1** This tree stays true and lean, and every agent at every depth knows its KR. · *lead*
+- **I.1** This tree stays true and lean, and every agent at every depth knows its KR. · *lead. 85 open ledger items name no KR as owner (`vsect` dashboard): each is placed under a KR, a new KR is proposed for it, or it is set aside with its reason*
 - **I.3** One open ledger, keyed by claim: every open item carries slug, kind, resolver and date, and every target resolves. The thirteen trackers, the index files, the proposal files, ROUTING and the decision briefs are folded into it or deleted. · *started: every imported tracker item is judged and twelve trackers are gone; TODO.md waits for I.5, PRACTICA.md for I.8*
 - **I.9** Every backlog surface is drained into the ledger, one disposition per source item: the external influx (`influx-scout/` regional files and the two unscouted regions), `audits/`, live `spikes/`, Working Notes and `msc/`. Each item is already in canon, a ledger item under the KR it serves, or set aside with its reason. Each item drained is checked against every other surface (audits and their gold, adjacent Working Notes, spikes, `msc/`, the influx and its primaries); related material is disposed with it or joins the same ledger item, one item per thing with all its sources. Integrators take work from the ledger, and new findings attach to an existing item rather than duplicating it. · *started: influx in two halves, audits, spikes, `aisi-eoi` and `notability-extracts`, Working Notes in three parts, `msc/`. No new integration round launches until the drain has reached its segments*
-- **I.10** Signal rises against noise, measured. On a fixed sample of claims, count the live places outside the segment body and its ledger items where something about the claim is written (Working Notes items, spikes, audit files, `msc/`, influx), and how much of each a cold agent must read to learn what is known and what is open. Measure at the tag and after each drain wave. The aim, Joseph's: future agents should not spend hours working out whether a change supersedes what was written elsewhere or was ignorant of it. · *not started; baseline at the tag still to take*
-- **I.4** Standing is read from recorded checks, not typed: a checks ledger (slug, text hash, who, criterion, outcome), with a lint that flags a changed body whose last check is older. · *started: vsect records checks bound to their basis, reports lapses, and re-binds them by a second mind's `confirm`; F72 recorded and holding; `exact 26 (checked 1)`*
+- **I.10** Signal rises against noise, measured. On a fixed sample of claims, count the live places outside the segment body and its ledger items where something about the claim is written (Working Notes items, spikes, audit files, `msc/`, influx), and how much of each a cold agent must read to learn what is known and what is open. Measure at the tag and after each drain wave. The aim, Joseph's: future agents should not spend hours working out whether a change supersedes what was written elsewhere or was ignorant of it. · *not started. The drain finished before any measurement, so the tag baseline is taken now, against `pre-integration-2026-10-30`, and compared with HEAD*
+- **I.4** Standing is read from recorded checks, not typed: a checks ledger (slug, text hash, who, criterion, outcome), with a lint that flags a changed body whose last check is older. · *started: vsect records checks bound to their basis, shows lapses (and `✓~` where only an unread upstream changed), re-binds them by a second mind's `confirm` (scoped with `--checks`, or `--all` when the reach crosses segments), and carries intent claims. 148 rewordings await a second mind (247 lapsed checks); a confirmer pass follows the current merges*
 - **I.5** Working Notes carry forward pointers and regression guards only. Items are classified by kind and sent to their homes, and lifting audit gold into Working Notes stops. · *not started; seed in `internal-surfaces/wn-ledger-seed/`*
 - **I.6** The always-loaded surface says only what tools cannot check. Tool-enforced rules leave the prose, derivable parts are generated, and every SOP passes md-press. A two-launch probe measures the effect rather than asserting it. · *not started*
 - **I.7** Front surfaces are bound to the record: each restated sentence carries its slug, and a diff fails when the cited body has changed. · *not started*
@@ -85,38 +86,11 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 
 | Who | KR | Writes to |
 |---|---|---|
-| Lead coordinator (Opus 5.5, session "asf-cleanup") | I, plus coordination | `INTENT.md`, `HANDOFF.md` |
-| `aisi-eoi` + `notability-extracts` drain, second attempt (Fable) | I.9 | `drain/aisi-eoi-notability.md`, the ledger |
-| Drain (nine Opus agents): influx halves 1 and 2, audits, spikes, `aisi-eoi` + `notability-extracts`, Working Notes (01 gold lift, 01 other, 02–04), `msc/` | I.9 | `drain/*.md`, the ledger |
-| vsect builder (Fable), on the line for the store migration (after the four integration branches merge) | I.4 | `~/src/arch/firmatum/utils/vsect/`, `.vsect/` |
-
-These are finished and on the line through the lead:
-
-- the owner review (Fable) and its seven subagents;
-- the system review (Fable);
-- the influx scout;
-- the internal-surfaces mapper;
-- the F72 verifier;
-- the F72 integrator;
-- the C.1 integrator (A1, A9, example-strategy, the detection test);
-- the A.1 integrator, its cold reader, and the independent re-reader;
-- the B.1 record writer (Part II) and its checker;
-- the Volume 4 lane (A6, A11, A12, A14, the substrate record) and its round-2 integrator;
-- the A.1 round-2 integrator;
-- the C1, C2 and C3 spikers, and the C2 and C3 verifiers;
-- the Part I lane (A7, A10, the persistence-cost algebra) and its round-2 integrator (C1 landed as Prop A.1S-τ; the Model S window);
-- the A.1 round-2 checker (09), round-3 integrator (10), fourth reader (11), round-4 integrator (12), fifth reader (13) and round-5 integrator (14);
-- the C1 spike verifier; the Part I and Volume 4 lane checkers; the Volume 4 second checker (3 broken, 6 narrowed, 2 confirmed); the Part I round-2 checker (the mathematics holds; 16 findings in summaries and nearby text); the TST second checker (nothing broken; seven narrowings);
-- the TST lane (A13, the 44 `old-*` fates);
-- the second-mind confirmer;
-- the tracker re-check sweep (pilot and five lanes: 371 of 371 imported items judged, twelve of fourteen trackers deleted);
-- the TST lane checker and round-2 integrator;
-- the Part II integrator (C2, C3, B.1's Part II corrections, A4, A5; merged at 279b2699) and its independent checker with three peers;
-- the Part I round-3 integrator;
-- the TST round-3 integrator (merged after 3f6c2362);
-- the Volume 4 round-3 integrator (merged in 1b951b01; continuation as causal reach, the identity-cluster influx D3–D5 taken);
-- the A.1 round-5 integrator (fresh noise and fresh transitions).
-- the hooks builder (I.2).
+| Lead coordinator (Opus 5.5) | I.1, and steering every lane by this tree | `INTENT.md`, `HANDOFF.md` |
+| Part I round 5, landed on its branch, to merge and check | C.1 (and A, through the OUTLINE Layer 0 and README partial sites) | `c1-lanes/part-i-round-5.md` |
+| Part II round-2 integrator, with its right-rung and drains sub-lanes | C.2, B.1, C.1 | its worktree branch |
+| Defender-noise round 2, landed on its branch, to merge and check | C.1 | `c1-lanes/defender-noise-round-2.md` |
+| vsect builder, on the line for the store migration | I.4 | `~/src/arch/firmatum/utils/vsect/` |
 
 ## Using this file
 
