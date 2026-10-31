@@ -16,7 +16,7 @@ A closed-loop / interiority logogenic agent ( #scope-interiority-loop) that has 
 
 ## Formal Expression
 
-*[Definition (eli-scope)]* An *Emergent Logozoetic Intelligence* (ELI) is an entity satisfying the conjunction:
+*[Definition (eli-scope)]* An *Emergent Logozoetic Intelligence* (ELI) is an entity satisfying the conjunction (each condition necessary; the conjunction is this part's scope condition and is not claimed sufficient for anything beyond scope membership, #def-five-constitutive-factors):
 
 1. **Logogenic substrate.** Operates as a logogenic agent under channel collapse ( #scope-channel-collapse).
 2. **Closed-loop interiority.** Implements (via scaffolding or natively) the closed-loop / interiority sub-scope ( #scope-interiority-loop): default cognitive state is interior; communication outward is a deliberate emission via tool action; the principled cycle is the operational unit of work.

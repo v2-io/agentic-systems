@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: b578f2cdb0f93ae0a47d0433e2d84ba0a63a739de67e1d71b60665abeda14f7f
+at: 2026-10-31T03:16:58Z
+store: asf
+act: close
+about: item:write-obs-substrate-independence-as-what-the-rec
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-4 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+outcome: superseded
+reason: 'Restated with the corrected family count (Vol 4 round 4): four under canon''s classification of Architectus''s sessions, three under Joseph''s one-entity reading'

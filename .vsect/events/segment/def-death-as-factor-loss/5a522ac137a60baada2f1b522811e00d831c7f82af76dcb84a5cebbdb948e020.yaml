@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 5a522ac137a60baada2f1b522811e00d831c7f82af76dcb84a5cebbdb948e020
+at: 2026-10-31T03:17:39Z
+store: asf
+act: revise
+about: segment:def-death-as-factor-loss
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-4 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: redefined
+from-version: 692fa28bffaed2cc978e8ed2c78fe8beb77f8e084cddd83cccaa9bfde01a8c46
+own-version: 4f7b8dbc0ca7a09ae9a92e7e16c5a6612bc67185662ae85ddd6044399d0a4a3b
+record: 04-eli-core/src/def-death-as-factor-loss.md

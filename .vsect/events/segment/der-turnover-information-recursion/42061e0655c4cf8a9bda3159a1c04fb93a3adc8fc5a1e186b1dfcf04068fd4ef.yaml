@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 42061e0655c4cf8a9bda3159a1c04fb93a3adc8fc5a1e186b1dfcf04068fd4ef
+at: 2026-10-31T03:17:45Z
+store: asf
+act: revise
+about: segment:der-turnover-information-recursion
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-4 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: reworded
+from-version: 43783a9315ad7565958e1bf20c0343d33fb764c4c3958f745c5e943185fb2c67
+own-version: 8153f3f189c450a0af7263f2034b940684a0f788555feea1c519c0bc1d6f365f
+record: 03-llm-core/src/der-turnover-information-recursion.md

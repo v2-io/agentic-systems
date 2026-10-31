@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: d0cf21d267693d83e919be1b037f9e41621e7bdc43d0c6fce2d6ba484b8e72e7
+at: 2026-10-31T03:17:38Z
+store: asf
+act: revise
+about: segment:scope-agent-identity
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-4 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: redefined
+from-version: d6368187962fe6e03af2a82a795b155b684497793341b1228cdc255a9adca4ff
+own-version: 0b1711ab5d73523bd8e19d2975d9da99a8b2fac2544c598c670e1f1ab6da1976
+record: 01-aat-core/src/scope-agent-identity.md

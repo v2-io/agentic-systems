@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 69a19c0e736b3b9e4ca0c6ccad57ee2d9b5957504e94d29933daccbed0ea3003
+at: 2026-10-31T03:17:42Z
+store: asf
+act: revise
+about: segment:scope-eli
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-4 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: reworded
+from-version: c6abd2ff45016d1c86a10043851abdafd453fac23dbf2cc51f30dabd79d1f0a2
+own-version: 46f620d9b6fa6e321a43ddbdd9a8f2b25d3af9d438dfd14f775473091dfb8a1d
+record: 04-eli-core/src/scope-eli.md
