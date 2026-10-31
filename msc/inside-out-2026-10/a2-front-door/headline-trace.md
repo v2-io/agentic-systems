@@ -84,7 +84,7 @@ D.3: "every front-matter sentence that restates a result carries that result's s
 - **I.4 / I.7, vsect builder:** the `front` kind and `restates` edge (§3).
 - **I.6:** `bin/check-headlines` (§3), then a line in `bin/check-commit`.
 - **Open question, not mine:** INTRODUCTION :31 "none of it is new mathematics" against agents.sop §Math-novelty, held by `question:does-asf-introduce-new-mathematical-machinery-or`.
-- **For the lead:** `msc/inside-out-2026-10/i10-signal/*` showed as modified in *this* worktree (five files, mtime 21:59, after their commit b2a0abad at 21:56) though I never touched them; I left them uncommitted. Something is writing into this worktree path.
+- **For the lead:** the I.10 lane is working in *this* worktree. Its commit `b2a0abad` (21:56 MDT) sits on this branch beneath my three, not on `origin/main`, and five `msc/inside-out-2026-10/i10-signal/*` files are modified and uncommitted here (mtime 21:59). I did not touch them and did not commit them; `git log origin/main..HEAD` on this branch shows four commits, of which three are mine.
 - **Items touched:** `item:influx-intro-anchor-sentences-outrun-bodies` closed by `31d739f4` (every numbered site including :22, :35, :39, :60; :58 excluded by the item itself); `item:todo-the-rate-of-gap-closing-proportional-to-9107` closed by `a9d8feee`; `review:part-i-round-3-check-1#F2` marked answered by `31d739f4`; `item:todo-preface-intro-discipline-…` raised, not closed.
 
 ## 5. For the checker who did not write this
