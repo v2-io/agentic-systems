@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 828459633364bdb172160b23e03163c54c71f3715e9ba5d0caaab9745b4eb83b
+at: 2026-10-31T02:16:07Z
+store: asf
+act: raise
+about: item:todo-f28-rho-sigma-operationalization-rho-sig-9829
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-f28-rho-sigma-operationalization-rho-sig-9829
+source: 'AISI sweep-2 R42 item 4 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-42.md): restates F28 as a safety-case gap: a trajectory guarantee depending on a threshold no deployment''s data can estimate.'

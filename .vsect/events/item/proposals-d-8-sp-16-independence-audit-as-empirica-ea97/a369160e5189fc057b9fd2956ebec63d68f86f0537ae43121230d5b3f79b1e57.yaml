@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: a369160e5189fc057b9fd2956ebec63d68f86f0537ae43121230d5b3f79b1e57
+at: 2026-10-31T02:16:04Z
+store: asf
+act: raise
+about: item:proposals-d-8-sp-16-independence-audit-as-empirica-ea97
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:proposals-d-8-sp-16-independence-audit-as-empirica-ea97
+source: 'AISI sweep-2 R36 §4 and R52 item 4 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-36.md, report-52.md): two independent sweep agents named the independence profile as the most directly buildable instrument in their slices; R36 sketches the expected profiles for software agents and LLM agents.'

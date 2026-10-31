@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: e364f11f878f7a4437c472c6ab260b466018837924838ff427cc94b61d1032b1
+at: 2026-10-31T02:16:05Z
+store: asf
+act: raise
+about: item:correlated-monitors-saturate-at-a-floor-no-monit
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:correlated-monitors-saturate-at-a-floor-no-monit
+source: 'AISI sweep-2 R40 §1 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-40.md): restates the saturation floor 1/sigma_s^2 and the 1/(1+rho) ratio from spikes/spike-composite-tempo-synergy-2026-07-16.md, and proposes the test: independent-architecture versus same-architecture monitors on one task, checking whether combined false-negative rate tracks the additive or the correlated prediction.'

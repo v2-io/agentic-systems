@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: c2642a62ff0631e25dbf6417bd88e4440ca54f74473a1d8e5fa9644135704af5
+at: 2026-10-31T02:16:03Z
+store: asf
+act: raise
+about: item:readers-ask-deriv-discrete-sector-condition
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:readers-ask-deriv-discrete-sector-condition
+source: 'AISI sweep-2 R34 §(7) (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-34.md; ASF-FIXES-part3.md R34): the same vector-vs-scalar reading, found independently; proposes the one-sentence clarification in the body.'

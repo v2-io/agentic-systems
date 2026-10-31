@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: e05da228254c7b19be99a4ae6e1ad8053994430a513084b46c7b17cdb5311b60
+at: 2026-10-31T02:16:03Z
+store: asf
+act: raise
+about: item:proposals-c-1-o-bp13-cox-parallel-necessity-for-de-f4cf
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:proposals-c-1-o-bp13-cox-parallel-necessity-for-de-f4cf
+source: 'AISI sweep-2 R35 item D (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-35.md): restates the necessity gap and adds a test case to try first: recurrent or cyclic scaffolds that revisit the same intermediate goal under a folded rather than time-unrolled representation, as the natural candidate for a structure that fails the DAG postulates.'

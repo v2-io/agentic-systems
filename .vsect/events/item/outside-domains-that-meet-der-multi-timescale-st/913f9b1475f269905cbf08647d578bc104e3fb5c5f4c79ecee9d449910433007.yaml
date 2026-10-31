@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 913f9b1475f269905cbf08647d578bc104e3fb5c5f4c79ecee9d449910433007
+at: 2026-10-31T02:16:03Z
+store: asf
+act: raise
+about: item:outside-domains-that-meet-der-multi-timescale-st
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:outside-domains-that-meet-der-multi-timescale-st
+source: 'AISI sweep-2 R34 Q2 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-34.md): a reading neither stacking item carries, hypothesis-grade and the report''s own: could an agent that knows it is monitored induce a structural (jump) adaptation to leave the regime the stacking certificate covers, so that capability growth and evasion look alike from outside? Worth a sentence in whatever the impulsive/hybrid spike concludes about jumps the slow layer cannot follow.'

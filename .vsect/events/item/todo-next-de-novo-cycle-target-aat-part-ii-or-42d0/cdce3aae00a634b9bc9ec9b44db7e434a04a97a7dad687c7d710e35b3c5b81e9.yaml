@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: cdce3aae00a634b9bc9ec9b44db7e434a04a97a7dad687c7d710e35b3c5b81e9
+at: 2026-10-31T02:16:06Z
+store: asf
+act: raise
+about: item:todo-next-de-novo-cycle-target-aat-part-ii-or-42d0
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-next-de-novo-cycle-target-aat-part-ii-or-42d0
+source: 'AISI sweep-2 R42 item 2 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-42.md): read example-kalman, example-bandit and example-strategy whole without re-deriving the arithmetic, so the predicted numeric slip is still untested as of 2026-08.'

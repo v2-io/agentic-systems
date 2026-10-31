@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: a90af2bec6a6d6232b1d49c3b401f59ec521caa5e707628fe299dcf5ec3cc725
+at: 2026-10-31T02:16:04Z
+store: asf
+act: raise
+about: item:spikes-proposed-adversarial-adaptive-gain-meta-gain-temp-06a0
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-adversarial-adaptive-gain-meta-gain-temp-06a0
+source: 'AISI sweep-2 R36 §3 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-36.md): the same unrun spike, read as the second-order case of online training in deployment (an adversary varying regime-switching faster than the meta-gain tracks while primary-layer defences look fine).'

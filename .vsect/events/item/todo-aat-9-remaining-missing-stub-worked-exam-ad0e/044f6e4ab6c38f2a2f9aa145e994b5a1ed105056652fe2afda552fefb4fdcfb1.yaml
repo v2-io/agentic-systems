@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 044f6e4ab6c38f2a2f9aa145e994b5a1ed105056652fe2afda552fefb4fdcfb1
+at: 2026-10-31T02:16:06Z
+store: asf
+act: raise
+about: item:todo-aat-9-remaining-missing-stub-worked-exam-ad0e
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-aat-9-remaining-missing-stub-worked-exam-ad0e
+source: 'AISI sweep-2 R42 item 3 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-42.md): adds that the bridge from Miller''s Moore-machine threshold to the computational class of an LLM agent with context is attempted nowhere in canon.'

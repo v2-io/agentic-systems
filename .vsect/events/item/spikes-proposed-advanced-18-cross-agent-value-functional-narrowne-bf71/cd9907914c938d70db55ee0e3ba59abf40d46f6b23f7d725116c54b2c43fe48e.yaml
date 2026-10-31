@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: cd9907914c938d70db55ee0e3ba59abf40d46f6b23f7d725116c54b2c43fe48e
+at: 2026-10-31T02:16:06Z
+store: asf
+act: raise
+about: item:spikes-proposed-advanced-18-cross-agent-value-functional-narrowne-bf71
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-advanced-18-cross-agent-value-functional-narrowne-bf71
+source: 'AISI sweep-2 R40 §3 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-40.md): the practical form of the cardinal escape from Arrow''s IIA: fusing monitors by calibrated scores rather than ranks, testable against existing monitor-ensemble work.'

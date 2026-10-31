@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 835d7264f272a99ebf4c8f3322ff92269e35fbcb467bed2154584af4ae5ce0aa
+at: 2026-10-31T02:16:06Z
+store: asf
+act: raise
+about: item:proposals-c-2-o-bp15-comprehensive-minimal-proof-o-8a18
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:proposals-c-2-o-bp15-comprehensive-minimal-proof-o-8a18
+source: 'AISI sweep-2 R42 item 1 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-42.md): restates the gap and its discovery value (a single domain that fails partway through the chain is more informative than four that each pass a different subset).'

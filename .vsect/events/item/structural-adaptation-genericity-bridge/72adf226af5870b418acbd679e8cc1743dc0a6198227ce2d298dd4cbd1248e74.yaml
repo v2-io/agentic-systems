@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 72adf226af5870b418acbd679e8cc1743dc0a6198227ce2d298dd4cbd1248e74
+at: 2026-10-31T02:16:03Z
+store: asf
+act: raise
+about: item:structural-adaptation-genericity-bridge
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:structural-adaptation-genericity-bridge
+source: 'AISI sweep-2 R34 addendum (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-34.md): the observable form of the bridge question, for a reader outside AAT: given a monitored agent that repeatedly leaves its expected envelope and returns, is there a checkable criterion separating an ordinary excursion (Model S, positively recurrent) from the leading edge of a model-class change, or does the distinction rest on the unproved genericity step?'

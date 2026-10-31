@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 1c8d69b4ebcc73cfc3324f3b38dd8a138a9c15c91d9049654f9ddd315a411b0f
+at: 2026-10-31T02:16:04Z
+store: asf
+act: raise
+about: item:spikes-proposed-decomposed-empirical-estimator-accuracy-e63e
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-decomposed-empirical-estimator-accuracy-e63e
+source: 'AISI sweep-2 R37 addendum (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-37.md), citing audits/AUDIT-WORKING-374162/10-batch-verification.md Q/A b10-v.6 (on #der-directed-separation, cross-referencing #disc-partial-coupling-pathways): accuracy effect and inference effect pull the leakage bound in opposite directions as capability grows and are correlated in pretrained models, so aggregate kappa cannot separate them. That 374162/10 locus is a further source for this item.'

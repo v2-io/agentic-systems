@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 4db6673329f3d22f3aecfce3ed5c40c3660f9724a3d16bc28886f68e8e9a5bfb
+at: 2026-10-31T02:16:03Z
+store: asf
+act: raise
+about: item:untested-catalog-predictions-for-e
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:untested-catalog-predictions-for-e
+source: 'AISI sweep-2 R36 §1 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-36.md): the IDT-vs-reward gap (Hafez et al. 2026) should widen with monitoring experience; names the cheapest test, bandits with drifting rewards, scaling n and measuring latency against Omega((n+1)/epsilon).'
