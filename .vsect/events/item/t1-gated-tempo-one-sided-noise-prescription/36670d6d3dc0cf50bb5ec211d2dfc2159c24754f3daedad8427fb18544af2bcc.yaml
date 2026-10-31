@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 36670d6d3dc0cf50bb5ec211d2dfc2159c24754f3daedad8427fb18544af2bcc
+at: 2026-10-31T02:21:43Z
+store: asf
+act: raise
+about: item:t1-gated-tempo-one-sided-noise-prescription
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:t1-gated-tempo-one-sided-noise-prescription
+source: 'Public-surface check (drain-influx-2-asffixes, 2026-10-30): a third canon body carries the prescription, #impl-strategic-composition:62 (''cheap noise injection into the defender''s observation channel can be a defensive strategy against a high-tempo attacker''), and all three body sites are on the reader snapshot CURRENT-VOL1.md (:10991 exponent-regimes, :11056 obs-gated, :11144 impl-strategic-composition) at 208389b7. Lead told.'
