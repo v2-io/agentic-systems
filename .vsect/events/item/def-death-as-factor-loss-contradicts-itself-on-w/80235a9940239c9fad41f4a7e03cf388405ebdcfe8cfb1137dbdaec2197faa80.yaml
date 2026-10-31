@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 80235a9940239c9fad41f4a7e03cf388405ebdcfe8cfb1137dbdaec2197faa80
+at: 2026-10-31T02:11:46Z
+store: asf
+act: close
+about: item:def-death-as-factor-loss-contradicts-itself-on-w
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-3 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+by-commit: ce119c08
+outcome: done

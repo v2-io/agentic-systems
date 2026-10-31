@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 76f550aed0f9a73fbb11d6a71cbbc7afeb791d470effd5f1b45a5aef6388f394
+at: 2026-10-31T02:11:46Z
+store: asf
+act: close
+about: item:def-five-constitutive-factors-still-offers-the-f
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-3 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+by-commit: 7e40714a
+outcome: done

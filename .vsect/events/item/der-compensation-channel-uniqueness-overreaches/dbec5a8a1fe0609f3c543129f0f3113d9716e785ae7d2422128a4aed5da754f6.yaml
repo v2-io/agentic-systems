@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: dbec5a8a1fe0609f3c543129f0f3113d9716e785ae7d2422128a4aed5da754f6
+at: 2026-10-31T02:11:46Z
+store: asf
+act: close
+about: item:der-compensation-channel-uniqueness-overreaches
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-3 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+by-commit: ce119c08
+outcome: done

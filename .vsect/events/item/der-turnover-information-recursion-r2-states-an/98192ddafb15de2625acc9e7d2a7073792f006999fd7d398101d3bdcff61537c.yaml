@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 98192ddafb15de2625acc9e7d2a7073792f006999fd7d398101d3bdcff61537c
+at: 2026-10-31T02:11:46Z
+store: asf
+act: close
+about: item:der-turnover-information-recursion-r2-states-an
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-3 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+by-commit: ce119c08
+outcome: done
