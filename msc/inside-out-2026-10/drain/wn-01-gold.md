@@ -30,7 +30,7 @@ The kinds are different things to the theory, so the unit of disposition differs
 - **Follow-up items:** one disposition per bullet after dedupe. Where the same open question appears in several segments, it gets one item citing every source.
 - **Belongs elsewhere:** grouped by *destination*, and checked for whether the content has already arrived there.
 - **Readers often ask:** one item per segment listing the questions the body still leaves open. By project doctrine (the Codex open-questions rule) these are body edits, not log entries.
-- **Candidate Brief, Discussion and figures:** disposed as a category to the pedagogy home (§ Pedagogy home below). I sampled them for theory claims or defects filed as pedagogy, and for pedagogy that rides on a superseded claim. These were not read whole; the read ledger says what was sampled.
+- **Candidate Brief, Discussion and figures:** read whole by the pedagogy fork. A per-item body check was made only for the items that ride on a corrected claim, the items that are theory or defects filed as pedagogy, and those found already landed. The rest go to the pedagogy home by category, unverified against their bodies.
 
 Cross-surface: for each item I consulted a slug-to-mentions index over `audits/`, `spikes/`, `msc/` (including `influx-scout/`), `items/`, `questions/` and `reviews/`, and grepped key phrases where it mattered. A related source found there is cited in the same ledger item.
 
@@ -51,6 +51,7 @@ The work was split four ways: this file (Off-ramp, Follow-ups, preambles, guards
 **Checked against the body:** each disposition marked in canon, present, superseded or gone was checked by reading or grepping the segment body (Working Notes excluded) at the line cited. Grep-negative verdicts ("phrase absent", "not found") are evidence, not proof: a reworded survival would be missed.
 
 **Not done, or only partly done:**
+- Three segments where an H.4 readers-ask question and a Follow-up may be the same question in two voices were not reconciled: `result-structural-adaptation-necessity`, `result-sector-persistence-template` and `der-team-persistence` (flagged by the readers fork).
 - F63–F65 on `#form-structural-change-as-parametric-limit` (follow-up #169).
 - F60/F61 on `#disc-credit-assignment-boundary` (recorded in a raise, not verified).
 - F207, F212, F218 (in the residue item, marked not verified).
@@ -112,7 +113,7 @@ u$ vs $\mathcal T$ collision | **defect present** (14, 42) → `item:gated-tempo
 
 ### Follow-up items (245, read whole, each checked at HEAD)
 
-Bodies were checked at `86489b0b`; the items opened in the second half were re-checked at `4175aae7` (no Part I segment body changed between them on main, though five lanes have work in flight on branches). "Raised on" means a `vsect raise` event on an existing item. "H.4" items are the readers drain's per-segment `item:readers-ask-<slug>` (see `wn-01-gold-readers.md`). Where another drain's item already holds a claim, the source is raised onto it rather than duplicated. The 01-other drain, working the same segments' non-gold notes, opened several items for ideas the gold also raises (`and-or-parsimony-uniqueness`, `transient-adequacy-third-persistence-condition`, `boundary-integrity-second-constitutive-commitment`, `strategy-compression-price-beta-sigma`, `continuity-stance-boundary-cases`); the gold sources are raised on those.
+Bodies were checked at `86489b0b`, and the items opened in the second half at `4175aae7`. Fifteen 01 segments changed between those two commits and six more by `f67ea622`. For every changed segment that one of this drain's items cites, the claim was re-checked at `f67ea622`. Two items had moved lines or reworded text, recorded as raises on `item:communication-gain-residual-floor-and-tempo-sum` and `item:what-is-non-forkable-trajectory-not-record`; both claims still hold. In the others the cited text is unchanged. Line numbers in items opened at `86489b0b` may have shifted in `deriv-sector-condition`, which the Part I lane rewrote, so its PID row and its template row were re-located (PID at 327; template insufficiency at `#result-sector-persistence-template`:64, :117). "Raised on" means a `vsect raise` event on an existing item. "H.4" items are the readers drain's per-segment `item:readers-ask-<slug>` (see `wn-01-gold-readers.md`). Where another drain's item already holds a claim, the source is raised onto it rather than duplicated. The 01-other drain, working the same segments' non-gold notes, opened several items for ideas the gold also raises (`and-or-parsimony-uniqueness`, `transient-adequacy-third-persistence-condition`, `boundary-integrity-second-constitutive-commitment`, `strategy-compression-price-beta-sigma`, `continuity-stance-boundary-cases`); the gold sources are raised on those.
 
 | # | segment | follow-up | disposition |
 |---|---|---|---|

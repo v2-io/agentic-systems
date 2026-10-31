@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 1c42c8f99abb9975bfb075fa03d198824186fbf92a3315d3ae6347981f6bdd87
+at: 2026-10-31T03:03:15Z
+store: asf
+act: raise
+about: item:what-is-non-forkable-trajectory-not-record
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:what-is-non-forkable-trajectory-not-record
+source: re-check at f67ea622 after the integration merges
+text: '#def-chronica:16 and :36 were reworded (''letting both copies take events at once''), and #scope-agent-identity now states a continuation criterion by causal reach. Both still say ''Duplicating an agent''s state'' (def-chronica:16, :36) where the non-forkable object is the trajectory. The clone example (#scope-agent-identity:54, ''same model state, same causal history'') still runs record and trajectory together. The causal-reach criterion may settle the token/record distinction once it names the token. The merge point (:31) is unchanged.'

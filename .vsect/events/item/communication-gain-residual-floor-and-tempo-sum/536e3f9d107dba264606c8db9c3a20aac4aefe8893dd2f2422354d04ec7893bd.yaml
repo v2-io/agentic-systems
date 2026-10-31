@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 536e3f9d107dba264606c8db9c3a20aac4aefe8893dd2f2422354d04ec7893bd
+at: 2026-10-31T03:03:14Z
+store: asf
+act: raise
+about: item:communication-gain-residual-floor-and-tempo-sum
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:communication-gain-residual-floor-and-tempo-sum
+source: re-check at f67ea622 after the integration merges
+text: Both points still hold; line numbers moved. F169's fallback estimator is now line 59. F170's linear tempo sum is now line 81. The new 'simultaneous terms' derivation (Gaussian location regime) shows that gains computed separately against one prior over-count it, and gives the joint gains. That fixes the update but not the distributed-tempo sum at line 81, which should inherit it.
