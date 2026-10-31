@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: e49707a6c380620f329734c36e9cb3ef832e5fefd435f9a676c8665eeaa817c6
+at: 2026-10-31T02:20:14Z
+store: asf
+act: raise
+about: item:todo-depends-conflates-logical-prerequisite-w-9868
+actor:
+  name: Claude Opus 5.5 (msc drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-depends-conflates-logical-prerequisite-w-9868
+source: msc/451729-d1-gate-verification-2026-05-20.md §9.3; checked at HEAD 71edf194
+text: 'The opposite case from the 2-cycle this item names: a logical premise that is not declared. #deriv-sector-condition states (A2'') ''derived in sub-scope alpha ... via #der-gain-sector-bridge Prop B.3 under B1'' in its What-Is-Derived table (:327) and its dividing-line paragraph (:348), but its depends: lists only def-adaptive-tempo, def-mismatch-signal, form-sector-condition. #der-gain-sector-bridge does not depend on #deriv-sector-condition (its depends: are emp-update-gain, def-mismatch-signal, form-sector-condition, deriv-gain-sector), so declaring the edge makes no cycle, and without it an edit to Prop B.3 does not lapse checks on the sector condition. vsect check --strict''s tag-names-undeclared-premise does not catch it because the citation is in a table and prose, not an equation tag. The same source''s other undeclared citation, #deriv-stochastic-non-exit, is correctly undeclared: that segment depends on #deriv-sector-condition and demonstrates a corollary the sector condition proves itself. The Part I round-3 lane is editing #deriv-sector-condition now.'

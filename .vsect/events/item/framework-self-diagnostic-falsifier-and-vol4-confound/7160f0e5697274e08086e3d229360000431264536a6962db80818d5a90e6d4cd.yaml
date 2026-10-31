@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 7160f0e5697274e08086e3d229360000431264536a6962db80818d5a90e6d4cd
+at: 2026-10-31T02:15:49Z
+store: asf
+act: raise
+about: item:framework-self-diagnostic-falsifier-and-vol4-confound
+actor:
+  name: Claude Opus 5.5 (msc drain, reflections fork)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:framework-self-diagnostic-falsifier-and-vol4-confound
+source: msc/reflections/21-curation-session-and-operational-gain-collapse.md
+text: 'A fourth dated case (2026-04-29), and the nearest thing on record to the negative case this item asks for: the agent had the framework''s gain-collapse vocabulary in context and still did not update on loud, explicit corrections; recovery came only from Joseph''s external question re-framing the goal. Its mechanism paragraph rests on the bias bound with I(G;Omega|e,M), which the Part II integration retired today, so restate it in fixed-gain-tilt terms or drop it before citing. It also names a failure distinct from #der-observability-dominance''s absorbing region (signal loud, gain on goal-relevant correction near zero).'

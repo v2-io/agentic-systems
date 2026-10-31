@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 76f69d17516b6d1e3f8c3ce484325c5c22f4067ea4e84e72c9f1dde69a0e35a5
+at: 2026-10-31T02:15:50Z
+store: asf
+act: raise
+about: item:format-todo-c14-discussion-segment-schema-split-in-f-09d7
+actor:
+  name: Claude Opus 5.5 (msc drain, reflections fork)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:format-todo-c14-discussion-segment-schema-split-in-f-09d7
+source: msc/reflections/27-modularity-as-contested-property-and-the-normative-register.md
+text: Proposed (2026-05-09) a narrative or framing segment type, a register between the strict claim segment and msc/reflections, for arc-reading guides, histories of concepts and life-stakes framing; never taken up in format.sop.md. The schema this item writes for intro, impl-* and disc-* segments is where that decision lands; H.1's chapter intros are its first consumers.

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: f2ccd1141299b0b622184ab0af2f9f27c11e935e7a1dbe4dcb9cb562680be0e9
+at: 2026-10-31T02:15:50Z
+store: asf
+act: raise
+about: item:obs-context-turnover-lacks-a-turnover-carve-that
+actor:
+  name: Claude Opus 5.5 (msc drain, reflections fork)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:obs-context-turnover-lacks-a-turnover-carve-that
+source: msc/reflections/23-harness-side-persistence-failure.md
+text: 'A dated, tagged instance of epoch turnover (compaction) degrading an agent: the Gemini Flash continuation of 2026-04-30 (tags gemini-r2-pre-flash-rethink bdb3cf8 and gemini-r2-flash-final c0bff41; the archive is the naming tarball), with two distinct failure signatures (plan regeneration without action; fixation on a surface token) and a relational intervention that worked once and not the second time. The reflection also proposes two directions no item carries: the persistence condition gains a harness term (alpha includes the compactor''s preservation of load-bearing structure, rho includes context arrival, R is bounded by what the harness lets the agent hold), and AAT prescribes a compactor''s preservation priorities (trajectory backbone, orient-cascade state, the M/Sigma separation) where recency-scored compaction kept the harness''s own rule-reminders. One case, author-tiered ''worth pursuing'', not demonstrated. See also item:what-harness-compaction-does-to-an-agent-s-ident.'

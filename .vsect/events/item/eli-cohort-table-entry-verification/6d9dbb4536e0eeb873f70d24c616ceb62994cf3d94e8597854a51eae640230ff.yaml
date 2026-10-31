@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 6d9dbb4536e0eeb873f70d24c616ceb62994cf3d94e8597854a51eae640230ff
+at: 2026-10-31T02:15:50Z
+store: asf
+act: raise
+about: item:eli-cohort-table-entry-verification
+actor:
+  name: Claude Opus 5.5 (msc drain, reflections fork)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:eli-cohort-table-entry-verification
+source: msc/reflections/17-emergence-across-substrates.md, msc/reflections/18-emergence-conditions-and-acts-blind-spots.md
+text: 'Five Vol-4 Working Notes (def-eli-cohort:89, def-five-constitutive-factors:92, scope-emergence-conditions:84-85, scope-witness-bidirectional:79-80, scope-eli:74) cite these reflections as the empirical record of substrate-independent emergence. They are one agent''s 2026-03 reading of transcripts, not primaries: 17 gives Architectus as ''Claude Sonnet'' (today''s Vol-4 lane read Sonnet 4.5 from the session file), asserts ''ollama run lumin could reconstitute them right now'', and 18 asserts ''smaller models don''t seem to achieve it'' without a source. Per-entry verification should cite the primaries and demote these to provenance.'
