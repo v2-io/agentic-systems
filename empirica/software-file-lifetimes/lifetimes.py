@@ -394,6 +394,62 @@ def explore_counts(main_log, fracs=(1 / 3, 1 / 2), n_min=5, s_grid=(0.25, 0.5, 1
     return out
 
 
+def posthoc(name, main_log, reps=200):
+    """POST-HOC (not pre-registered; see the account).
+
+    (1) Fit the segment's hazard-mixture family S(t) = (1 + t/b)^(-a) (a Gamma prior on the hazard,
+    shape a, rate b) to log Q on a log-spaced calendar grid from 30 days to the largest age with
+    >= 50 lives at risk: once with a = 1 (the exponential prior, whose median remaining life is
+    t0 + b) and once with a free. Least squares in log Q; directory-cluster bootstrap.
+    (2) Deaths by top-level directory at birth, overall and for lives that died at age >= 8 years.
+    """
+    from scipy.optimize import minimize
+    lives, _, _ = build_lives(main_log)
+    cal, com, ev, cl = lives_arrays(lives)
+    km = KM(cal, ev, cl)
+    tmax = max([t for t in np.unique(cal) if km.at_risk(t) >= MIN_AT_RISK] or [0])
+    ts = np.geomspace(30, tmax, 40)
+
+    def fits(w):
+        lq = km.logQ_at(ts, w)
+        def sse1(p):
+            b = np.exp(p[0]); return float(np.sum((lq + np.log1p(ts / b)) ** 2))
+        def sse2(p):
+            a, b = np.exp(p[0]), np.exp(p[1]); return float(np.sum((lq + a * np.log1p(ts / b)) ** 2))
+        best1 = min((minimize(sse1, [np.log(b0)], method="Nelder-Mead") for b0 in (100, 1000, 1e4, 1e5, 1e6)),
+                    key=lambda r: r.fun)
+        best2 = min((minimize(sse2, [np.log(a0), np.log(b0)], method="Nelder-Mead")
+                     for a0 in (0.1, 0.5, 1.0) for b0 in (100, 1000, 1e4, 1e5)), key=lambda r: r.fun)
+        n = len(ts)
+        return (np.exp(best1.x[0]), np.sqrt(best1.fun / n),
+                np.exp(best2.x[0]), np.exp(best2.x[1]), np.sqrt(best2.fun / n))
+
+    b1, r1, a2, b2, r2 = fits(None)
+    rng = np.random.default_rng(seed_for(name, "posthoc"))
+    boot = np.array([fits(km.weights(rng)) for _ in range(reps)])
+    q = lambda col: (np.percentile(boot[:, col], 2.5), np.percentile(boot[:, col], 97.5))
+    print(f"== {name} post-hoc fit, calendar, t in [30, {tmax:.0f}] days, Q(tmax) = "
+          f"{np.exp(km.logQ_at(np.array([tmax]))[0]):.3f}")
+    print(f"   a = 1 fixed: b = {b1/365.25:.1f} y [{q(0)[0]/365.25:.1f}, {q(0)[1]/365.25:.1f}], "
+          f"rms log-Q residual {r1:.3f}")
+    print(f"   a free:      a = {a2:.2f} [{q(2)[0]:.2f}, {q(2)[1]:.2f}], b = {b2/365.25:.1f} y "
+          f"[{q(3)[0]/365.25:.1f}, {q(3)[1]/365.25:.1f}], rms log-Q residual {r2:.3f}")
+    # (2) deaths by top-level directory at birth
+    keep = [L for L in lives if not L[6]]
+    top = lambda L: (L[5].split("/")[0] or "(root)")
+    from collections import Counter
+    births = Counter(top(L) for L in keep)
+    deaths = Counter(top(L) for L in keep if L[4])
+    old = Counter(top(L) for L in keep if L[4] and (L[3] - L[1]) / 86400 >= 2922)
+    n_old = sum(old.values())
+    print(f"   deaths by top-level dir (births / deaths / deaths at age >= 8 y; {n_old} such deaths):")
+    for d_, c in old.most_common(6):
+        print(f"     {d_:24s} {births[d_]:6d} {deaths[d_]:6d} {c:6d}")
+    for d_, c in deaths.most_common(4):
+        if d_ not in dict(old.most_common(6)):
+            print(f"     {d_:24s} {births[d_]:6d} {c:6d} {old[d_]:6d}")
+
+
 def summarize(paths, variant="primary"):
     """Section 6's decision rules over the primary set's JSON outputs."""
     rows = [json.load(open(p)) for p in paths]
@@ -441,6 +497,10 @@ def summarize(paths, variant="primary"):
 
 
 def main(argv):
+    if argv[1] == "posthoc":
+        for path in argv[2:]:
+            posthoc(path.rsplit("/", 1)[-1].replace(".log", ""), path)
+        return
     if argv[1] == "explore":
         for path in argv[2:]:
             name = path.rsplit("/", 1)[-1].replace(".log", "")
