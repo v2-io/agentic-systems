@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 891017b00a3226ed8d21e1ea9955a1e81d31004e7485cc7bc9bd73a2e5cc89f0
+at: 2026-10-31T03:01:05Z
+store: asf
+act: raise
+about: item:environment-selection-as-adaptive-strategy
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:environment-selection-as-adaptive-strategy
+source: 'questions/persistence-with-endogenous-disturbance.md (belongs drain, from #scope-adaptive-system gold WN 152)'
+text: 'Neighbouring question, not a duplicate: selection chooses the rho an agent faces; endogeneity makes rho depend on its own policy. Whoever writes the corollary should say which of the two it covers.'
