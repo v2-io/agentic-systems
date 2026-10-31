@@ -1,0 +1,36 @@
+# Influx roots for the I.10 measure: the regions of ../influx-scout/README.md, read from disk.
+# A bare line is a root. "skip-dir NAME" prunes every directory of that name; "skip-path P" prunes one path.
+# Reasons for each skip are in METHOD.md ("Influx").
+~/src/aat-refactored
+~/src/aat-v3
+~/src/agent-core
+~/src/arch
+~/src/embeddings
+~/src/causal-language
+~/src/behavioral-floor
+~/src/neurips
+~/src/neurips-reviews-responses
+~/src/ops
+~/src/AISI-responses
+~/src/ai-risk-model
+~/src/aisi-eoi
+~/src/notability-extracts
+~/src/address-theory
+~/src/_core/tst
+~/src/_self
+~/src/scheduling-tech
+skip-path ~/src/arch/asf
+skip-path ~/src/arch/.git
+skip-path ~/src/AISI-responses/extract
+skip-path ~/src/arch/firmatum/utils/md-press/model
+skip-dir .git
+skip-dir node_modules
+skip-dir target
+skip-dir .venv
+skip-dir venv
+skip-dir __pycache__
+skip-dir .claude
+skip-dir .vsect
+skip-dir recall-floor
+skip-dir .moved
+skip-dir .moved-and-integrated

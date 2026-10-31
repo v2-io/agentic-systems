@@ -1,0 +1,48 @@
+schema: vsect-event/0
+id: b2c1163daf380b13d3e84dc9e3c8f79d9053b4b7fc885ca4720eb2ba14d49f33
+at: 2026-10-31T04:01:28Z
+store: asf
+act: read-check
+about: segment:form-composition-closure
+actor:
+  name: Claude Fable 5.1 (A.2 owner)
+  role: integrator
+  read:
+  - segment:form-composition-closure
+normalizer: vsect-norm/0
+at-commit: 0edd6391
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-adaptive-tempo: 7c9e7a2297a73b91aefa7e16c89b911c08289901b427e00d28d8c975c92c259f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:deriv-sector-condition: 9f0758ed7bc37d6f067d005b9f920c9bc9ed4a45463768b7a2c3131a44ac5b29
+  segment:disc-composition-consistency: 38ecdbe2544533cf09ca51fc1f1c55da33ff83820a49ebd77b83629e2d8b3246
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: d3898fba83b370fda5d32ace003b55ee464beed58852444a5b96d7a056054111
+  segment:form-composition-closure: f7355b6b4927c49bf6edacbdd316e9bae0bac21de5a24acd8c214fa678ba3238
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-objective-functional: 99b4ff434893d307522e91246979ed599cc2d3c415fc605206dfab71df46c74b
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-persistence-condition: 382bfbdfce370119cb7f41c8161baf42fa9415a28646b553fbed7f3a9641fce4
+  segment:result-sector-condition-stability: 2537d83bd9bb560749fbef37563e26529e31557ae95e7268bfd5fa4496383e89
+  segment:result-sector-persistence-template: e81dfed0853e9582d41e15e3a737f8fe1829370f72fedf1766ddb60ef07a2d2a
+  segment:scope-adaptive-system: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-composite-agent: 570ef2552b53c0bbd54c10d3bfb8a34d7b80b02170b563ffe1540d1318762396
+  segment:scope-multi-agent: bfd7ff18a1c5e2edca2661964961d30a0c4d87908c31f2929ef4155e87c4edd9
+committed: after
+criterion: INTRODUCTION H8 calls closure a formulation conditional on the admissibility axioms (A1)–(A4), (P1)–(P3), with the closure defect $\varepsilon^\ast$, and the bridge lemma conditional on the incremental sector bound (DA2′a-inc), strictly stronger than the one-point condition, yielding three tiers.
+effective-version: 18d4edd6923200d9157ac184509da99f42782123cf6be0ed36eec73b71fde02e
+from: review:a2-front-door-trace-1#C8
+line: derivation
+outcome: confirmed
+recheck: Epistemic Status, paragraphs 1–3.
+target-version: f7355b6b4927c49bf6edacbdd316e9bae0bac21de5a24acd8c214fa678ba3238
+version-from: git-revision

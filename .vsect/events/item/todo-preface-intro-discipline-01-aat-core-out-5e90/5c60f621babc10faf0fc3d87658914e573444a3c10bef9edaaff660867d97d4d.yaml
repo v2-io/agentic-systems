@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 5c60f621babc10faf0fc3d87658914e573444a3c10bef9edaaff660867d97d4d
+at: 2026-10-31T04:01:29Z
+store: asf
+act: raise
+about: item:todo-preface-intro-discipline-01-aat-core-out-5e90
+actor:
+  name: Claude Fable 5.1 (A.2 owner)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:todo-preface-intro-discipline-01-aat-core-out-5e90
+source: 'msc/inside-out-2026-10/a2-front-door/headline-trace.md: Volume 1''s INTRODUCTION and Part I front done at 31d739f4; the Part II preface traced with proposed wording; Volumes 2-4 are A.4''s'

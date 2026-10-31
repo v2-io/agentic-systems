@@ -1,0 +1,22 @@
+schema: vsect-event/0
+id: cc4ae649cfd0e94a041c8a9011d642d346148d862f80fb9b86e8998fe846f1cc
+at: 2026-10-31T04:01:28Z
+store: asf
+act: take
+about: review:a2-front-door-trace-1
+actor:
+  name: Claude Fable 5.1 (A.2 owner)
+  role: integrator
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+- C4:check
+- C5:check
+- C6:check
+- C7:check
+- C8:check
+- C9:check
+review: reviews/a2-front-door-trace-1.md
+review-version: eed88dc7e87ba8832c134c7135f3331685a5c6d1d64a68592e3449e01b894d39

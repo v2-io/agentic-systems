@@ -1,0 +1,48 @@
+# I.10 baseline: tag `pre-integration-2026-10-30` against `5eee086c`
+
+*KR **I.10** of `../INTENT.md`: "Signal rises against noise, measured." Top intent: "Complete "in-place" refactor of ASF-- meta, all artifacts, and theory itself." (Joseph, 2026-10-30). Measured by Claude Opus 5.5 on 2026-10-30 (MDT). The method, and what every term below means, is in `METHOD.md`. The numbers come from `data/sample-2026-10-30-claims.tsv` and `data/census-2026-10-30-claims.tsv`; the tables print with `python3 -I summarize.py data/<label>` after the run in METHOD's *Rerun*.*
+
+## What it found
+
+Credit every status-bearing record at both ends (the tag's indexes and trackers, HEAD's ledger and drain accounts). On that reading, a cold agent doing full diligence on a claim today reads about what it read at the tag. The drains replaced the old indexes' coverage rather than adding to it, and the effort's own files added new noise. The gain the drains made possible arrives only when I.8 removes that residue, and only if the drain accounts' dispositions reach the ledger before the accounts are deleted.
+
+Census, 244 claims. Total reading is the body plus the ledger plus the must-read noise, in words. The percentages compare each figure with the tag on the symmetric row.
+
+| total reading, block / section unit | tag | HEAD | HEAD after I.8, dispositions moved to the ledger first | HEAD after I.8, dispositions not moved |
+|---|---|---|---|---|
+| symmetric (every status-bearing record discounts) | 2,190,806 / 7,417,707 | 2,191,917 / 7,193,246 (+0% / −3%) | 1,917,959 / 5,174,182 (−12% / −30%) | 2,642,148 / 7,791,410 (+21% / +5%) |
+| strict (only the ledger discounts) | 3,189,327 / 12,113,029 | 3,404,408 / 13,101,758 (+7% / +8%) | the row above applies | 3,074,463 / 9,679,946 (−4% / −20%) |
+| signal share, symmetric, block | 0.22 | 0.48 | 0.55 | 0.40 |
+
+"After I.8" is the limit case in which every file under `msc/inside-out-2026-10/` is gone. "Moved first" credits the drain accounts' naming as if each disposition had reached the ledger; "not moved" drops it. The 30-claim random sample gives the same picture (block, symmetric: 248,494 at the tag, 260,990 at HEAD, 225,391 after I.8 moved, 307,074 after I.8 not moved), and so do the 16 MAP §3 claims.
+
+1. **The tag was not record-less.** 5,381 of its 13,954 places (39%) were named by a status-bearing index or tracker (`spikes/INDEX.md`, `audits/STATUS.md`, `ROUTING.md`, `PROPOSED*.md`, the `*TODO*.md` files). The measure cannot tell whether those rows were right, and HANDOFF and the spike drain record that several misled. The same blindness applies to the drain accounts. Rows that are not symmetric credit the new machinery and not the old, so I compare like with like.
+2. **Coverage moved; it did not grow.** At HEAD, 4,572 places (26%) are named by a ledger record about the claim and 6,828 more (39%) only by a drain account, while 5,908 (34%) are named by nothing. So 60% of the new coverage sits only in `drain/`. The drains put owed work in the ledger. They kept *canon*, *superseded* and *set aside* dispositions, and the walk record of each audit and spike, in their own accounts. The trackers they folded (I.3) took their naming with them. That is why HEAD's "ledger + indexes" row is 35% worse than the tag's.
+3. **Nothing was retired, so noise fell only by being labelled.** In the pooled sample, audits mentioning the claims went 756 → 756, other segments' Working Notes 214 → 219, and the influx stayed constant by construction. Own Working Notes, census-wide, went 176,130 → 176,676 words. The only places removed are the trackers and proposal files the ledger absorbed. The drains disposed each source item but retired no audit, spike, influx file or Working Note, so a grep still lands on every one. Two levers would cut the noise itself: I.5's Working-Notes cleanup, and moving fully disposed spikes and whole audit dirs into `.integrated/` or `.archived/`, the location-as-label convention agents already honor.
+4. **The effort's own writing is most of the new noise.** Of the net +3,560 places, 3,355 (94%) are files under `msc/inside-out-2026-10/`. The rest is the effort's own spikes. In the pooled sample, `spikes/` gained 93 places and lost 13: every new one is in a 2026-10-30 spike or check (`epistemic-target-ontology/` 05–17, the loop-identification, allocation-vs-distortion and exit-time spikes), and every lost one is a folded tracker. Of the 690 effort-residue places in the pooled sample, 370 are named by nothing:
+   - 188 are drain accounts, which cannot account for themselves;
+   - most of the rest are lane accounts (`c1-lanes/`), `internal-surfaces/`, `owner-review/explorers/` and `items-recheck/`.
+5. **Signal grew partly by getting longer.** Bodies grew 13% (478,747 → 539,268 words, census) as the C.1 integrations landed, and the ledger added about 506k words of record mentions. Signal share therefore rises (0.22 → 0.48 symmetric) even where total reading does not move, which is why total reading is the headline here. Of 2,703 ledger records that mention a claim, 1,441 (53%) are keyed to it. The other half are invisible to `vsect open segment:<slug>` and visible only to grep. 13 of 244 claims have no keyed record.
+
+## What the measure gets wrong
+
+The brief asked to hear this as much as the number. In order of how much I think it matters:
+
+1. **"Named" is not "disposed".** L, D and T record that some text names the place, at the granularity the records cite: a path, a directory, or an audit's six-digit id. A spot check of eight marks found them working as defined but showed the gap. One was a drain account section heading that names `AUDIT-WORKING-628417/` as walked, while the place was a file in it about `#def-model-sufficiency`. Correctness is invisible as well: a stale index row counts the same as a fresh disposition. So every coverage figure is an upper bound on how many places a reader can safely skip. A truer measure would key each disposition to (source location, claim, date checked). No surface holds that record today, and building one is the real fix point 2 points at.
+2. **The reading units are uncalibrated.** Block and section differ by a factor of three to five. The true cost of deciding "does this supersede, or is it superseded?" lies between them: probably nearer section for spikes, whose conclusions sit at the end, and nearer block for drain tables. The calibration would give cold agents a claim at each snapshot, log what they open and how long they take, and compare. That was the plan before Joseph asked for no more agents this session, and it is the first item left below. Until then, the account states only conclusions that hold in both units.
+3. **Slug grep cannot see paraphrase.** The influx scouts found that the papers which developed canon's math carry single-digit slug hits. So the influx's 1,120 sampled places are a floor, and its 58% share named by nothing probably understates the true residue. The same blindness hides restatements without a slug (A.2's and D.3's territory).
+4. **Words are not truth.** A body that grew because it now states its premises honestly scores as "more signal". A wrong ledger record scores the same as a right one. The measure tracks findability and reading load, not correctness. Correctness belongs to C and I.4.
+5. **The influx is today's disk at both ends.** That is fair for the comparison, because the drains did not edit other repos, but the "tag" influx includes files written after the tag. Influx numbers move only through accounting.
+6. **The class line is a judgment.** Front surfaces, other segments' bodies, the history layer and anything under `.integrated/` or `.archived/` are reported but not counted as noise. Counting front surfaces and other bodies would put A.2's restatement problem into this number. Their columns are in the data.
+
+## Proposals for the tree (bottom-up)
+
+- **For I.8, a precondition.** Before `drain/` deletes, each per-source disposition goes where a reader of that source or that claim meets it. Owed work is a `vsect raise` onto the claim's item. A spike or audit dir that is fully disposed moves to `.integrated/` or `.archived/`. A set-aside Working-Note item is deleted under I.5. The test: re-run this measure, and the "moved" and "not moved" columns converge without the count of places named by nothing rising. Run it in the other order and the symmetric figure goes from +0% to +21% (block), worse than the tag.
+- **For I.10 itself.** "After each drain wave" no longer applies, since the drains finished before the baseline. Re-measure after I.5, after I.8, and after any `.integrated/` move of audits or spikes, always with the tag in the same run. Track the symmetric total-reading row as the headline, with the count of places named by nothing beside it.
+
+## What is left
+
+- **Calibration.** Cold-agent reads of two or three sample claims at the tag (a `git worktree add` of it) and at HEAD, compared with the block and section estimates. Not run: no agents were allowed this session.
+- **Concept-level influx coverage** for a few purposive claims, to bound how far point 3 under-counts.
+- **A per-claim disposition key.** If I.3 or I.8 adopts one, make `measure.py`'s L test use it in place of path-naming, and re-measure the tag in the same run.
+- **One file in history.** The first commit of this directory (`b2a0abad`) carried `data/sample-2026-10-30-places.tsv`. It lists file paths, not content, in private repos (`agent-core`, `neurips-reviews-responses`, `aisi-eoi` and others); asf's remote is public. The follow-up commit untracks it and ignores `*-places.tsv`, but `b2a0abad` still holds it. Whoever merges this branch decides whether that matters before pushing.

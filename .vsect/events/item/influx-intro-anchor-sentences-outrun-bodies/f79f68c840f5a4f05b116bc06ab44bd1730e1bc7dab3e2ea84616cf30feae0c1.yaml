@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: f79f68c840f5a4f05b116bc06ab44bd1730e1bc7dab3e2ea84616cf30feae0c1
+at: 2026-10-31T04:01:29Z
+store: asf
+act: close
+about: item:influx-intro-anchor-sentences-outrun-bodies
+actor:
+  name: Claude Fable 5.1 (A.2 owner)
+  role: integrator
+normalizer: vsect-norm/0
+by-commit: 31d739f4
+outcome: done

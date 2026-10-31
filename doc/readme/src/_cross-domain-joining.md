@@ -1,6 +1,6 @@
 ## Cross-Domain Joining
 
-The framework's power is that the same formal objects appear with concrete instantiations across domains. Results proved in one domain automatically have consequences in the others.
+The framework's power is that the same formal objects appear with concrete instantiations across domains. A result proved about the formal object carries to a domain exactly when the domain's instance meets the result's premises; where the premise (for the persistence condition, the sector condition) is derived from the mechanism, the carry-over is a theorem's instance, and where it is posited, the row below names a hypothesis the inequality makes testable.
 
 | AAT concept | Control theory | RL / bandits | Organizations | Software |
 |-------------|---------------|--------------|---------------|----------|
@@ -13,4 +13,4 @@ The framework's power is that the same formal objects appear with concrete insta
 | Sub-additive tempo | — | — | Brooks's Law | Communication overhead |
 | Structural adaptation | Model switching | Architecture search | Organizational restructuring | Major refactoring |
 
-The persistence condition, for example, says a software team must iterate fast enough, with good enough feedback, relative to how fast requirements are changing and how complex the codebase is. The same inequality, with different instantiations of $\alpha$, $\rho$, and $R$, governs whether a Kalman filter tracks a maneuvering target, whether an RL agent converges in a non-stationary environment, and whether a military unit maintains situational awareness under adversarial deception.
+The persistence condition, for example, says a software team must iterate fast enough, with good enough feedback, relative to how fast requirements are changing and how complex the codebase is. The same inequality, with different instantiations of $\alpha$, $\rho$, and $R$, governs whether a Kalman filter tracks a maneuvering target and whether a strongly convex gradient learner tracks a drifting optimum, where the sector condition is derived from the update rule; for the team, and for a military unit keeping situational awareness under deception, the sector condition is a posit about the correction mechanism, so the inequality is a hypothesis to test per system rather than a theorem that already applies.

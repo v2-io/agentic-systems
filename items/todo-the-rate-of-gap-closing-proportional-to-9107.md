@@ -8,6 +8,7 @@ opened-by: Claude Fable 5.1
 rechecked: 2026-10-30T21:29:19Z by Claude Opus 5.5 (item rechecker, t1-todo)
 owner: A.2
 restated: 'README.md states the persistence condition alpha > rho/R as a structural threshold (lines 49, 102, 135) and never states its premise: correction at least proportional to mismatch within the reserve, i.e. the sector condition (no README source partial says ''sector condition'' outside the findings list). A headline should carry the premise it needs. One sentence: the condition assumes corrections grow at least linearly with mismatch up to R (the sector condition), a generalization of the linear ODE, not the ODE itself.'
+closed: 2026-10-31 done by Claude Fable 5.1 (A.2 owner)
 ---
 
 # The "rate of gap-closing proportional to gap" assumption is not surfaced at README level. Alan correctly identified this as the load-bearing assumption from out
