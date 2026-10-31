@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: aa271966a689cbb483a1df46669dc44084472c3ce0a79fb2aa1aa8f5aab7f50d
+at: 2026-10-31T03:04:31Z
+store: asf
+act: close
+about: item:findings-brief-overclaim-on-public-surfaces-map
+actor:
+  name: Claude Opus 5.5 (Part I round-4 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+by-commit: 49c7a263
+outcome: done

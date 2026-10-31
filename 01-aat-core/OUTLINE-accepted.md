@@ -8,6 +8,7 @@ All rows below are the *introduced-before-used* meta-segment placements: the ten
 
 | segment | depends-on | accepted | reason |
 | --- | --- | --- | --- |
+| disc-constructive-impossibility-posture | der-causal-insufficiency-detection | 2026-10-30 | Style meta-segment at Meta-Architecture I (Part II opening) before its Instance A source; the dependency was declared in Part I round 4 so checks on the posture's restatement lapse when the source changes (CHANGELOG 2026-05-25 Track C placement) |
 | disc-identifiability-floor | der-causal-insufficiency-detection | 2026-07-14 | M1 meta-segment at Meta-Architecture I (Part II opening) before its Part II instance segments (CHANGELOG 2026-05-25 Track C) |
 | disc-identifiability-floor | der-causal-hierarchy-requirement | 2026-07-14 | M1 meta-segment before its Part II instance segments (CHANGELOG 2026-05-25 Track C) |
 | disc-identifiability-floor | der-loop-interventional-access | 2026-07-14 | M1 meta-segment before its Part II instance segments (CHANGELOG 2026-05-25 Track C) |
