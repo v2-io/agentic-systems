@@ -42,6 +42,7 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 
 **Partial**
 
+- `drain/wn-01-gold.md`: lines 1–61 and 383–410 (surface, method, read ledger, pedagogy home, F-stream residue, guards) read whole; the per-item Off-ramp and Follow-up tables (62–371) and its three fork files not read by the lead.
 - `drain/wn-01-other.md`: its synthesis (lines 1–73) read whole; the ~1,070 lines of per-item dispositions not read by the lead (they are the integrators' index into the ledger).
 
 - `~/src/arch/SPIKE-PROMPT.template.md`: lines were cut at 400 characters. Read it whole before filling it.
@@ -81,10 +82,11 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 - **Next for the lead.**
   1. As each agent lands, read its documents whole, then review and push by SHA.
   2. Spikes: commission a verifier with the template's bare brief, then a separate integrator.
-  3. A.2, the front door, once the round-3 integrations land: B.1's Part II records now exist, so headline sentences can trace to retyped registers. Headline 2's Kalman-gain sentence is in the Part I round-3 integrator's hands.
-  4. The vsect store migration (normalizer), once no checker or integrator is writing records; the vsect builder is on the line for it.
-  6. When the drains finish: the targeted legacy quantifier sweep (`item:todo-targeted-legacy-quantifier-gloss-status-e6a9`, C.1). Every check and audit today found the same defect species, correct algebra under a statement that says more than it (an iff where if is proven, exactly where a factor is undischarged, a blanket sign where the sign depends on topology), and the audits drain adds its dual: a cost discharged by definition with no named place it went is a finding.
-  5. When subagent slots free (the session caps at 20, helpers included): a sixth independent read of `#scope-adaptive-system` and its two new definitions at ed2b07e4; an independent check of Part I round 3. The Part II round-2 integration (`part-ii-check-1.md` items 1–8) waits until the Working Notes drains have reached Part II's segments.
+  3. H.4: build the pedagogy home as the gold drain specified (`drain/wn-01-gold.md` §Pedagogy home: one file per chapter in OUTLINE order, entries verbatim with attribution, a status line per entry with checked-at sha, test-read by Joseph, landed-at, rides-on-corrected-claim). It absorbs PRACTICA's ownerless pedagogy item.
+  4. A.2, the front door, once the round-3 integrations land: B.1's Part II records now exist, so headline sentences can trace to retyped registers. Headline 2's Kalman-gain sentence is in the Part I round-3 integrator's hands.
+  5. The vsect store migration (normalizer), once no checker or integrator is writing records; the vsect builder is on the line for it.
+  6. When subagent slots free (the session caps at 20, helpers included): a sixth independent read of `#scope-adaptive-system` and its two new definitions at ed2b07e4; an independent check of Part I round 3. The Part II round-2 integration (`part-ii-check-1.md` items 1–8) waits until the Working Notes drains have reached Part II's segments.
+  7. When the drains finish: the targeted legacy quantifier sweep (`item:todo-targeted-legacy-quantifier-gloss-status-e6a9`, C.1). Every check and audit today found the same defect species, correct algebra under a statement that says more than it (an iff where if is proven, exactly where a factor is undischarged, a blanket sign where the sign depends on topology), and the audits drain adds its dual: a cost discharged by definition with no named place it went is a finding.
   - Rebuild `CURRENT-VOL1` after each canon landing, using the biber workaround in memory.
 
 ## The lead's rhythm
