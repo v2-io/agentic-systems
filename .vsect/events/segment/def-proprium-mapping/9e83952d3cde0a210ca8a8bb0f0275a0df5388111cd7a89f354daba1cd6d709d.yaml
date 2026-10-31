@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 9e83952d3cde0a210ca8a8bb0f0275a0df5388111cd7a89f354daba1cd6d709d
+at: 2026-10-31T02:58:56Z
+store: asf
+act: review-finding
+about: segment:def-proprium-mapping
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+criterion: The held-out list now has MEMORATA_11 and INTERPRES_21, matching ontology lines 276-307, says none is a continuity clause, and leaves PROPRIUM death-aptness open (check-3 C13).
+finding: review:vol4-c1-check-2#C5/finding
+outcome: answered
+revision: v:9cac5c91

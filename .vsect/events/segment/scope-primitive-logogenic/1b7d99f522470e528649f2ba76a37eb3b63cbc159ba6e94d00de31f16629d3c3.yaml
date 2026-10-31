@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 1b7d99f522470e528649f2ba76a37eb3b63cbc159ba6e94d00de31f16629d3c3
+at: 2026-10-31T02:58:57Z
+store: asf
+act: review-finding
+about: segment:scope-primitive-logogenic
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+criterion: Under the causal-reach criterion a replay against a reset environment branches at the saved state and concurrent sessions fork, so scope-primitive-logogenic line 24 and impl-closed-loop-interiority agree with scope-agent-identity without edit (check-3 C1, what holds).
+finding: review:vol4-c1-check-2#F2
+outcome: answered
+revision: v:d6368187

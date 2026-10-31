@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 87692a3d6e33c38312cb549b964cc2b2e4119fbfab4b9a710bb88d557fadcb80
+at: 2026-10-31T02:58:56Z
+store: asf
+act: review-finding
+about: segment:def-auxilia-hierarchy
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+criterion: The R0 instantiation now takes epsilon = nu_E/nu_min against the slowest fast-level Auxilia, places an Auxilia at E's rate in E's level, and states the LLM-call idealization (check-3 C10).
+finding: review:vol4-c1-check-2#C7/finding
+outcome: answered
+revision: v:517f4b53

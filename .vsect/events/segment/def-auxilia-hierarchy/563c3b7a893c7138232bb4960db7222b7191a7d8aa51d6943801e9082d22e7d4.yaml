@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 563c3b7a893c7138232bb4960db7222b7191a7d8aa51d6943801e9082d22e7d4
+at: 2026-10-31T02:58:58Z
+store: asf
+act: review-finding
+about: segment:def-auxilia-hierarchy
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+criterion: 'The epoch-W1 reading is withdrawn: an Auxilia receiving the aspiration layer is at most causally disciplined in effect, and (H1) carves the belief side (check-3 C10).'
+finding: review:vol4-c1-check-1#C2/finding
+outcome: answered
+revision: v:517f4b53

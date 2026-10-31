@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 7f89d7f9095b24e17fc1135a35180d232dbd614eb110fe42ca76b9fbc35e12c4
+at: 2026-10-31T02:58:56Z
+store: asf
+act: review-finding
+about: segment:def-auxilia-hierarchy
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+criterion: 'The epoch argument is replaced: Class 1 by the wiring and the processor probe, cue-triggered tilt within the epoch, and the (H1) carve for belief-side Auxilia (check-3 C10); the Volume 3 residue is check-3 F2.'
+finding: review:vol4-c1-check-2#C6/finding
+outcome: answered
+revision: v:517f4b53

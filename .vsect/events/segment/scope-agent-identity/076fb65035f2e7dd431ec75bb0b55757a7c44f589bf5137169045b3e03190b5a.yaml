@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 076fb65035f2e7dd431ec75bb0b55757a7c44f589bf5137169045b3e03190b5a
+at: 2026-10-31T02:58:58Z
+store: asf
+act: review-finding
+about: segment:scope-agent-identity
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+criterion: The overlap criterion's three contradictions (sequential replay, scheduling, chronica determinacy) and its residue wording are gone under the causal-reach criterion; the defect left in the new criterion is check-3 C1.
+finding: review:vol4-c1-check-2#C1/finding
+outcome: answered
+revision: v:d6368187

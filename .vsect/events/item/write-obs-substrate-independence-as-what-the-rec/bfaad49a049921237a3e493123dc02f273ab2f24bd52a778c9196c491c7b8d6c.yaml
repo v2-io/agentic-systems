@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: bfaad49a049921237a3e493123dc02f273ab2f24bd52a778c9196c491c7b8d6c
+at: 2026-10-31T02:58:37Z
+store: asf
+act: place-finding
+about: item:write-obs-substrate-independence-as-what-the-rec
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  item:write-obs-substrate-independence-as-what-the-rec: 4995a61ee10b0973fdb9b87be8de23f2b17e1b8a245b79f3940e3561382f86d8
+finding: review:vol4-c1-check-3#F3
+target: item:write-obs-substrate-independence-as-what-the-rec
+text: 'The open item, and `#der-substrate-independent-persistence`''s item, still say emergence is realizable on at least four substrate families; `04-eli-core/OUTLINE.md` line 88 (the commented chapter arc) says $\geq 4$ with Sonnet listed. After '
+version-from: git-revision

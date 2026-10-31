@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 754e7e020f837ba32e9fcd8533ba0fc36b66a233a0977c59045306f8fcbb4748
+at: 2026-10-31T02:58:35Z
+store: asf
+act: read-check
+about: segment:def-chronica
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+committed: after
+criterion: 'Do the clone sentences here and in #persistence-and-limits-intro match the criterion''s concurrency form?'
+effective-version: 1cd1d6aba106ac2651fb2735b96dffbbacaff836fd87be731f2868c7ff72755c
+from: review:vol4-c1-check-3#C15
+line: correspondence
+outcome: confirmed
+recheck: both say "take events at once"; the ordinal-index paragraph is unchanged and the criterion now names the physical causal order for comparing two continuations
+target-version: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+version-from: git-revision

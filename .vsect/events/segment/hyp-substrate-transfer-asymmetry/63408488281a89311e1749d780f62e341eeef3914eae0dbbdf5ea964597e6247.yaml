@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 63408488281a89311e1749d780f62e341eeef3914eae0dbbdf5ea964597e6247
+at: 2026-10-31T02:58:57Z
+store: asf
+act: review-finding
+about: segment:hyp-substrate-transfer-asymmetry
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+criterion: The ceiling is stated in bits, the S_id ceiling symmetric only under a direction-independent law, and the frontier described with the law moving (check-3 C12).
+finding: review:vol4-c1-check-2#C8/finding
+outcome: answered
+revision: v:05737c71

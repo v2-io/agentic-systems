@@ -1,0 +1,30 @@
+schema: vsect-event/0
+id: 25b6853706e8a59cefb0d8c8cf7f9a6c54a53ae96df0f48c1777e6a522e8ac51
+at: 2026-10-31T02:58:20Z
+store: asf
+act: rederive
+about: segment:scope-agent-identity
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+  read:
+  - segment:def-chronica
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-model-sufficiency: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:scope-agent-identity: d6368187962fe6e03af2a82a795b155b684497793341b1228cdc255a9adca4ff
+committed: after
+criterion: Does the causal-reach criterion give one verdict on every case it covers, in particular a set-aside later state resumed after the restored continuation has taken events and stopped, and a session that begins on a trajectory of its own and is reached by another agent's events part-way through?
+effective-version: 9501305b69734dc2fcd9a4af097180404fcb0fbc3a40f1b915fe376baa0e723f
+from: review:vol4-c1-check-3#C1
+line: derivation
+outcome: broken
+recheck: A runs past backup $S_0$ to state $S_1$ and stops; $B$ restored from $S_0$ takes events into a world that keeps them, then stops for good; $S_1$ resumed as $A'$. $A'$ starts from a snapshot of the agent's state and $B$'s events reach it through the world, so by the criterion's first sentence $A'$ continues the trajectory through $B$'s events; no two continuations take events at once, so the fork clause does not fire; the bullet's "a set-aside state resumed after the trajectory has run on without it … is a fork" says fork. As worded that clause also covers the plain restore (the backup is a set-aside state the trajectory ran on without). Separately, the criterion is stated for continuations that start from a reconstruction and is silent on reach that arrives after a continuation has begun on its own trajectory, which is the case the Architectus classification turns on (C2).
+target-version: d6368187962fe6e03af2a82a795b155b684497793341b1228cdc255a9adca4ff
+version-from: git-revision

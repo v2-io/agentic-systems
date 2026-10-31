@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 1b7fe9501bfdafb2d540460a8f6e378e22ff9e6985ab17f5a9c9c00028e8c1d9
+at: 2026-10-31T02:58:57Z
+store: asf
+act: review-finding
+about: segment:def-identity-sufficiency
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+criterion: The 'Which law' paragraph names the actual-continuation law and states its consequences; the read-back seam and stochastic-phi failure are check-3 C8.
+finding: review:vol4-c1-check-2#F1
+outcome: answered
+revision: v:f8c98691

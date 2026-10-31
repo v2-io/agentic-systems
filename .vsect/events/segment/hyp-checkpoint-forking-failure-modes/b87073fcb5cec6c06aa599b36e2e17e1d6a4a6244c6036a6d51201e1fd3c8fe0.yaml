@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: b87073fcb5cec6c06aa599b36e2e17e1d6a4a6244c6036a6d51201e1fd3c8fe0
+at: 2026-10-31T02:58:56Z
+store: asf
+act: review-finding
+about: segment:hyp-checkpoint-forking-failure-modes
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+criterion: The restore bullet now says the threshold is on expected rates and names (D2)'s walk and (D1)'s boundary face correctly; the new universal 'no single restore is a death' is a separate defect (check-3 C11).
+finding: review:vol4-c1-check-2#C4/finding
+outcome: answered
+revision: v:7abbb753

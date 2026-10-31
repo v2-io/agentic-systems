@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: f5aa07b15d0c593e2ec5275f7abe8b6033c4564ae1756301da514dd1b00edaba
+at: 2026-10-31T02:58:20Z
+store: asf
+act: place-finding
+about: segment:scope-agent-identity
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-model-sufficiency: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:scope-agent-identity: d6368187962fe6e03af2a82a795b155b684497793341b1228cdc255a9adca4ff
+finding: review:vol4-c1-check-3#C1/finding
+target: segment:scope-agent-identity
+text: 'check C1 came back broken: What holds: the sandbox-replay verdict (branch at the saved state; consequence 3 stands), concurrent copies as a fork, determinacy of $\mathcal C_t$, and removal of the round-2 residue ("wall-clock overlap is not the test", "scheduling does'
+version-from: git-revision

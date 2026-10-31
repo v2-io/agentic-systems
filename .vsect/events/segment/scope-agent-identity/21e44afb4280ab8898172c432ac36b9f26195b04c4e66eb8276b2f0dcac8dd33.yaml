@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 21e44afb4280ab8898172c432ac36b9f26195b04c4e66eb8276b2f0dcac8dd33
+at: 2026-10-31T02:58:58Z
+store: asf
+act: review-finding
+about: segment:scope-agent-identity
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+criterion: One criterion now governs, and the old wording that contradicted it is removed from scope-agent-identity, def-chronica, persistence-and-limits-intro and obs-context-turnover; the remaining defect is check-3 C1.
+finding: review:vol4-c1-check-1#C4/finding
+outcome: answered
+revision: v:d6368187

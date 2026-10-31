@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: 7cf01144c311dcb250709c4fb90ce4a595bfd7fecbc3224576af0cff6995b0bf
+at: 2026-10-31T02:58:35Z
+store: asf
+act: place-finding
+about: review:vol4-c1-integration-3
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  review:vol4-c1-integration-3: 4494f6713165b868b80c9e44b4fcf1266c4e70f190bf2db79a1672b33f473185
+finding: review:vol4-c1-check-3#F1
+target: review:vol4-c1-integration-3
+text: 'The integrator''s typed record was committed but never taken: `vsect why review:vol4-c1-integration-3` reports no recorded act. Its eleven checks and three findings are invisible to the dashboard and to `vsect open`. The integrator or the le'
+version-from: git-revision
