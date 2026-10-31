@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4dc9df3be05e92f973a5b6454e6f9ddb3dc51fbdd5bec930b0fac1d76b11136f
+at: 2026-10-31T02:14:24Z
+store: asf
+act: raise
+about: item:outside-domains-that-meet-der-multi-timescale-st
+actor:
+  name: drain-influx-2-firmatum
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:outside-domains-that-meet-der-multi-timescale-st
+source: '#disc-stability-certificate line 60 (''Projection failure — Mori–Zwanzig / Schur'': the certificate-as-metric survives coarse-graining but the dynamic guarantee does not; the closure carries a memory/residue term) is a better canon home than the renormalization paragraph for point (3) of this item: vivarium''s measured non-commutation of law with restriction (sketch-detail-abstract-reversion FE(5): signed bias +7.17 m against 8.94 m carved; #obs-coarse-only-closure-nogo, not recoverable from coarse state, R^2 <= 0.36) is a measured instance of exactly that facet, with a sign-definite residue the size of the signal. The vivarium agent''s scratch (~/src/arch/vivarium/msc/personal/1d0c43ec-530f-4c7f-a483-a9049be81500-scratch/06-discretisation-and-information.md, 2026-07-13) reaches the same Mori–Zwanzig reading independently of canon''s 2026-05-14 citation, which is coherence within the estate, not corroboration.'
+text: re-homes point (3) to the facet canon already has

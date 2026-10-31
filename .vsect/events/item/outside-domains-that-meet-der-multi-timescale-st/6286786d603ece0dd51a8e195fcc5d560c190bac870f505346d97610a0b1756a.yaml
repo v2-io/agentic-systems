@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 6286786d603ece0dd51a8e195fcc5d560c190bac870f505346d97610a0b1756a
+at: 2026-10-31T02:14:34Z
+store: asf
+act: correct
+about: item:outside-domains-that-meet-der-multi-timescale-st
+actor:
+  name: drain-influx-2-firmatum
+  role: drainer
+normalizer: vsect-norm/0
+corrects: 4dc9df3be05e92f973a5b6454e6f9ddb3dc51fbdd5bec930b0fac1d76b11136f
+text: 'Wrong file cited for the vivarium Mori–Zwanzig reading: it is not in msc/personal/.../06-discretisation-and-information.md (no hit). The sources are ~/src/arch/vivarium/DECISIONS.decision-log.udon line 670 (2026-07-13, ''Mori-Zwanzig / fluctuation-dissipation: dissipation and fluctuation are a pair'') and its full treatment .super-archive/from-theory/discretisation-and-information.md ~lines 284-294, whose own 2026-07-13 correction says the [thm] tag there does not survive. The rest of the raise stands.'

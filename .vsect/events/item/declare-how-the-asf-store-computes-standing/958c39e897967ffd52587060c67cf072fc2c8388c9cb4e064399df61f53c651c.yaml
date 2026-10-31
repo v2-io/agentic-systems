@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 958c39e897967ffd52587060c67cf072fc2c8388c9cb4e064399df61f53c651c
+at: 2026-10-31T02:14:52Z
+store: asf
+act: raise
+about: item:declare-how-the-asf-store-computes-standing
+actor:
+  name: drain-influx-2-firmatum
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:declare-how-the-asf-store-computes-standing
+source: 'verisectorium RC1 07-DISPOSITION-AND-GAP-ECONOMICS.md and 08-CERTIFICATION-AND-AUDIT.md (read whole by drain-influx-2-firmatum). 08: certification strength is bounded by grader independence, never by effort; a certificate decays with its warrant; verification (meets its stated criterion) and validation (the criterion was adequate) never share a cell; under-recording is as dishonest as an unwarranted lift because it corrupts what absence means, and the repair is a decline event for every considered-and-not-taken lift (vsect''s ''decline'' act already carries this). 07: a gap''s priority is the influence its closing would exert, priced by the decisions waiting on it (a projection over the edge graph plus pending decisions, which the model notes has three arrivals and no landings), with the counterweight that cheap checks are run, not triaged; and a question duplicated across five surfaces bills five times, which is the I.9/I.10 premise. vsect open orders oldest-first today; 07 is the design input if the ledger is ever to order by what waits on an item.'
+text: RC1 02-11 was the scout's named hole; 07 and 08 are the files that bear on asf's ledger and standing
