@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 2184601bbf6ebcf0ccef6c350cc5fba731a83e49cf0e89ceefbc92c9f3fb72a2
+at: 2026-10-31T02:16:37Z
+store: asf
+act: raise
+about: item:weakest-link-needs-conjunctive-failure-boundary
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:weakest-link-needs-conjunctive-failure-boundary
+source: AISI sweep 2 report 31 item 5 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part2.md, Report 31).

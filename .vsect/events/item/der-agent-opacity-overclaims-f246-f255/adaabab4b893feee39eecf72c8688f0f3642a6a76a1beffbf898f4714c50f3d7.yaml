@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: adaabab4b893feee39eecf72c8688f0f3642a6a76a1beffbf898f4714c50f3d7
+at: 2026-10-31T02:16:40Z
+store: asf
+act: raise
+about: item:der-agent-opacity-overclaims-f246-f255
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:der-agent-opacity-overclaims-f246-f255
+source: 'AISI sweep 2 report 30 §2 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part2.md, Report 30): the opacity taxonomy is formulation-grade without boundary inequalities (526815 F252/F253).'

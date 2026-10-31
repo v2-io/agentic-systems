@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 1f3a01dcb2a217bb560c757ac1ae038f2c36580fa687d574e6c734ccf8649446
+at: 2026-10-31T02:16:39Z
+store: asf
+act: raise
+about: item:composition-closure-tier3-prevalence
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:composition-closure-tier3-prevalence
+source: 'AISI sweep 2 reports 22 §2, 24 unknown 2, 28 §3 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part2.md): ''most consequential modern composites are Tier 3'' (471203/55-58; 849201/56).'

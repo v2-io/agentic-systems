@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 8544d6db336f27f22b43e567be32f4def862315e6c6836241b2e11979cbb3cd4
+at: 2026-10-31T02:16:37Z
+store: asf
+act: raise
+about: item:spikes-proposed-quantitative-cls-instantiation-of-consol-6c13
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-quantitative-cls-instantiation-of-consol-6c13
+source: AISI sweep 2 reports 20 and 55 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part2.md; ASF-FIXES-part4.md).

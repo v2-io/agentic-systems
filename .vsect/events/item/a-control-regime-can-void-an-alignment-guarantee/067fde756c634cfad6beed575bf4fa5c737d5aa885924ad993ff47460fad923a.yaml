@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 067fde756c634cfad6beed575bf4fa5c737d5aa885924ad993ff47460fad923a
+at: 2026-10-31T02:16:40Z
+store: asf
+act: raise
+about: item:a-control-regime-can-void-an-alignment-guarantee
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:a-control-regime-can-void-an-alignment-guarantee
+source: 'AISI sweep 2 report 32 (''R23/convergence join'', ~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part2.md, Report 32): not verified from the appendix slice; the stochastic-exit result has the same shape.'

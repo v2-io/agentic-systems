@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 04c482a4bc2f0a431b6b60aab5d33afab0979764a00981b8b44f00a0c999fa69
+at: 2026-10-31T02:16:38Z
+store: asf
+act: raise
+about: item:apply-the-epsilon-programme-s-telescoping-with-c
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:apply-the-epsilon-programme-s-telescoping-with-c
+source: 'AISI sweep 2 report 21 finding 3 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part2.md, Report 21): the propagated-residual bound across the five cascade steps is unattempted.'

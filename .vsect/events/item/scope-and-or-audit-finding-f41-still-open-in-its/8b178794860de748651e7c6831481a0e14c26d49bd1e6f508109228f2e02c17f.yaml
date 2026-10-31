@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 8b178794860de748651e7c6831481a0e14c26d49bd1e6f508109228f2e02c17f
+at: 2026-10-31T02:16:36Z
+store: asf
+act: raise
+about: item:scope-and-or-audit-finding-f41-still-open-in-its
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:scope-and-or-audit-finding-f41-still-open-in-its
+source: 'AISI sweep 2 report 16 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-mine-01-16.md, Report 16): k-of-n misclassification by the gamma-assignment test; topology discovery and terminal-alignment error as further gold leads.'

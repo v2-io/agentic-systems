@@ -72,7 +72,69 @@ Checked at asf `main` `782342c2`–`1f8240df` (2026-10-30, evening). "WN :n" mea
 | R12: Smithe 2024 vs `#disc-continuity-stance` orthogonality | LEDGER (twice again: `spikes-proposed-advanced-15-categorical-cybernetics-re-grounding-9642`, `imported/spikes-proposed-categorical-cybernetics-first-fit-check-3158`) | both |
 | R12, R55: SP-12 commitment / resource / temporal DAG | LEDGER | `proposals-d-4-sp-12-commitment-resource-temporal-d-1dea` |
 
-*(R13 onward being written)*
+### Part II and Part III (R13–R33)
+
+| Source entry | Disposition | Where / item |
+|---|---|---|
+| R13: Mode-3 (observer on agent input) slot of `#der-loop-interventional-access` unfilled | WN | — |
+| R13: scalar-CIY blank-wall attack closed at the LMI level; has the "heuristic unless LMI" label propagated? | IN: checked the four body citers of `#deriv-causal-ib-exploration`. `#disc-ciy-unified-objective:17`, `:48` say the scalar form is heuristic and superseded; `#impl-orient-cascade:38` says the shadow-price mapping is heuristic in the scalar segment; `#disc-anti-collapse:40` uses only the qualitative two-drive reading. Remaining LMI work is in `todo-causal-ib-lmi-follow-ons-segment-landed-f746` (whose first line records a defect in the LMI's "iff") | — |
+| R13: is imitation learning capped by the causal hierarchy | LEDGER | `readers-ask-der-causal-hierarchy-requirement` (raise) |
+| R13: Hafez et al. 2026 IDT figures (89% vs 44%) need a primary check | LEDGER; the figures or the arXiv id are in **eight** canon segments at HEAD, listed in the raise, so one check covers them all | `hafez-citations-der-agent-opacity-109-169-say-h` (raise) |
+| R14: stale "TF-08 lineage artifact" note in `#scope-ciy-observational-proxy` | WN (the note is stale; body clean) | — |
+| R15: `msc/llm-causal-access-note.md` unpromoted | LEDGER | `todo-pearl-llm-causal-access-positioning-refi-974c` |
+| R15: sandbox ceiling conflating forkability with Level 1 | IN (`#disc-sandbox-evaluation-ceiling` re-grounded as a transportability ceiling, WN :73) | — |
+| R16: `#def-strategy-dag`'s Epistemic Status conflates "causal sufficiency ⇒ Markov factorization" with "⇒ AND/OR product formulas" | IN: the Epistemic Status now gives the DAG from P1 + P2 + causal sufficiency and calls AND/OR "a parsimony-motivated formulation choice … not a derived necessity"; `:159` says propagation is correct when the DAG is "a causally sufficient AND/OR tree"; the Claim Record states the exactness-iff-tree result | — |
+| R16: $\gamma$-assignment test misclassifies k-of-n; topology discovery; terminal-alignment error | LEDGER | `scope-and-or-audit-finding-f41-still-open-in-its` (raise), `and-or-parsimony-uniqueness` |
+| R16, R35: O-BP13 (DAG necessity), O-BP4 (continuous DAG, retired) | LEDGER / retired | `proposals-c-1-o-bp13-cox-parallel-necessity-for-de-f4cf` |
+| R17: "unique broadly-available escape" over-strong in `#impl-strategy-structure` | IN: the phrase is gone; `:57` now says Instances 1 and 2 escape differently | — |
+| R17: `spike-actuated-rho-regulation`; three unclosed follow-ons of a backpressure spike | Spikes drain's surface | — |
+| R18: $L^2$ aggregation unjustified; observability-dominance product formula posited | IN for the label (`#def-strategic-calibration:42` discussion-grade, the aggregation called a choice); the product formula is LEDGER | `todo-observability-dominance-product-formula-b54f` |
+| R18: general-topology, multiple-latent construction for causal-insufficiency detection; signal function for continuous / multi-parent edges | WN (`#der-causal-insufficiency-detection`, `#hyp-edge-update-via-gain`) | — |
+| R18: O-BP11 observability as master variable | LEDGER | `proposals-d-1-o-bp11-observability-as-master-varia-24fd` |
+| R19: Miller (2022) bridge is a finite-state proof; `#form-structural-change-as-parametric-limit` does not scope it | LEDGER, still present: the Epistemic Status (`:38`) is silent on it and `:46` says Miller proves "exactly this bridge" | `continuous-state-structural-change` (raise) |
+| R19: OKR mapping in `#disc-credit-assignment-boundary` may be post-hoc fit | WN (the caution is recorded there) | — |
+| R20: F72 convention for `#schema-strategy-persistence` | MOOT (F72 integrated, `5e621256`; hard ceiling deleted) | — |
+| R20: internal vs archive replay (Codex F75) | LEDGER | `aat-s-core-has-no-operation-for-an-agent-reading` (raise); `#form-consolidation-dynamics` WN :195 |
+| R20, R55: quantitative CLS instantiation spike | LEDGER | `spikes-proposed-quantitative-cls-instantiation-of-consol-6c13` (raise) |
+| R20, R22: strategic self-coupling spike (P2/P4, open questions) | LEDGER | `spikes-proposed-spike-strategic-self-coupling-p2-p4-appe-3163` |
+| R21: mixture-support dynamics under the cascade | LEDGER | `spikes-proposed-mixture-support-dynamics-under-the-orien-ca66` (raise) |
+| R21: propagated-residual bound across the five cascade steps | LEDGER | `apply-the-epsilon-programme-s-telescoping-with-c` (raise) |
+| R21: two cascade-order failure patterns "belong elsewhere" | WN (`#der-orient-cascade`) | — |
+| R22: `#disc-strategic-self-coupling`: four canonical citations never read at primary; never asks whether an artificial agent instantiates it | ADD (F.3, with a population note for B.1). WN :166 (a) says primary reading is "queued"; no item carried it; no artificial-agent instance in the body | `disc-strategic-self-coupling-imports-its-four-ca` (new) |
+| R22: fine-tuning-away-of-refusals as adversarial coupling increase | ASIDE: AISI-side mapping, untested and stated as such; no canon claim | — |
+| R22: defensive scaffolding as composition; asymmetric-advantage intuition | WN / body honestly labeled | — |
+| R22: does directed separation compose (TODO:47) | LEDGER | `todo-disc-composition-consistency-does-direct-813e` |
+| R22: which boundary should an analyst draw | LEDGER | `questions/agent-boundary-choice-principle` |
+| R22, R24, R28: Tier 2/3 composites get only a heuristic; "most consequential composites are Tier 3" | LEDGER | `composition-closure-tier3-prevalence` (raise) |
+| R23: `#scope-composite-agent` C-iii admits composites without $O_c$ while saying without $O_c$ "the composite is a fiction" | LEDGER (C.3; INTENT names it) | `todo-path-a-recommended-interim-editorial-fix-e957`, `proposals-sp-21-composite-agent-scope-route-ontolo-4969` |
+| R23: symbiogenic consolidation of multi-agent systems | LEDGER | `spikes-proposed-advanced-2-the-phase-transition-of-symbiogenesis-59b7`, `imported/spikes-proposed-symbiogenesis-bifurcation-promotion-repa-5d29` |
+| R24: passivity gives cooperative, not adversarial, robustness (`spike-passivity-composition` §8.3) | Spikes drain's surface (CL-1 dissipativity template) | — |
+| R24: `#der-tempo-composition` coordination cost is a floor | IN (sketch, honestly labeled) | — |
+| R24, R30, R31: C-iv idiom drift (scope admits strategic composites; closure/unity machinery assumes shared $O_c$) | LEDGER | `todo-613842-c-iv-idiom-drift-integration-debt-e3af` (raise), `todo-c-iv-composite-route-count-mismatch-gem-bb4b` |
+| R25: "valid AAT composite agent" under-gated | LEDGER | `todo-der-class-coercion-in-composition-a12-f1-4890` (raise) |
+| R25: `der-logogenic-as-wrapping` puts shoshin at W₂ | ASIDE here: Volume 3, the helper's slice (R54) | — |
+| R26, R29: impl-series status amplification (F173–F181); F180 "structural, not contingent" | LEDGER; F180 itself IN-fixed (phrase gone from `#impl-unity-communication`); `#impl-cooperative-adversarial:80-86` now lists its corrected overclaims as forms not to restore | `todo-impl-series-status-tagging-pass-b-4-rema-11e6` (raise) |
+| R26: "synchronize weights = cheap $B_M$" unverified | WN | — |
+| R27: communication-gain adversarial scope; Sybil attack on transitive trust | LEDGER | `todo-communication-gain-adversarial-scope-hyp-e79c` (raise) |
+| R27: `#hyp-solicitable-escape`'s falsifier untested | WN (exploratory segment) | — |
+| R28: single-agent persistence "iff" is only "only if" (731548 verify/01) | IN: no "iff" remains in `#result-persistence-condition`, `#result-sector-condition-stability` or `#form-sector-condition` (grep); the persistence condition is stated as two sufficient conditions, and the only "iff" left (`:49`) is the feasibility statement | — |
+| R28: effects-spiral $\gamma_A(\lVert\delta_B\rVert)$ never derived | LEDGER | `spikes-proposed-advanced-12-effects-spiral-eigenvalue-condition-d-d6f7` |
+| R28, R29: composition still scalar; adversary concentrating on the weakest monitored dimension | LEDGER | `todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe` |
+| R29, R30: "cheap noise injection helps the defender" (F226/F227) | LEDGER, still a defect at HEAD and **in a body, not only a Working Note**: `#result-adversarial-exponent-regimes:18` says defender-channel noise reduces the attacker's advantage "without changing tempo or gain", which `#emp-update-gain` contradicts. The existing item named only that segment's WN :99 | `t1-gated-tempo-one-sided-noise-prescription` (raise with the body site) |
+| R29: "contraction cannot handle strategic regimes" | IN-fixed (`#impl-cooperative-adversarial:83`) | — |
+| R29: can a gate be selective, epistemically neutral and enforced at once | ASIDE: the report places it in "this project's own working notes" but I found no such note in asf (grep of Volumes 1 and 4 for the terms) or `AISI-responses/influx/*.md`; untraced. Its nearest canon home is the positivity reading in `a-control-regime-can-void-an-alignment-guarantee` | — |
+| R29: equilibrium chapter marked `--GAP--` | IN (honest mark, `01-aat-core/OUTLINE.md` Part III rows); H.2's | — |
+| R30: agent-opacity taxonomy formulation-grade (F252/F253) | LEDGER | `der-agent-opacity-overclaims-f246-f255` (raise) |
+| R30, R40: constructive VCG / transferable-utility escape | LEDGER | `spikes-proposed-advanced-16-roberts-1979-affine-maximizers-as-can-0922` (raise), `imported/spikes-proposed-mechanism-design-impossibility-vcg-cardi-63f8` |
+| R31: $\nu$ vs $\mathcal T$ conflation in `#obs-gated-tempo-advantage` | LEDGER | `gated-tempo-nu-versus-tempo-collision` (raise) |
+| R31: weakest-dimension claim needs a conjunctive ($L_\infty$) failure boundary | LEDGER | `weakest-link-needs-conjunctive-failure-boundary` (raise) |
+| R31: catalog entries `#28`, `#40` have no segment home | IN (`#impl-strategic-composition:42`, `:64` say so) | — |
+| R32: two of five reward-channel escapes outside canon | IN (`#deriv-reward-channel-learning-no-go:82-85` flags them) | — |
+| R32: R23 / convergence join not verified from the appendix slice | LEDGER | `a-control-regime-can-void-an-alignment-guarantee` (raise) |
+| R32: Skalse 2022 bridge | LEDGER (see R09 row) | — |
+| R33: none found | — | — |
+
+*(R56–R63 being written)*
 
 ## What was read whole, sampled, not reached
 

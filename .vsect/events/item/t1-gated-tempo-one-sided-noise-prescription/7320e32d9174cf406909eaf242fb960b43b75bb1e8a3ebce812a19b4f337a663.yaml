@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 7320e32d9174cf406909eaf242fb960b43b75bb1e8a3ebce812a19b4f337a663
+at: 2026-10-31T02:16:36Z
+store: asf
+act: raise
+about: item:t1-gated-tempo-one-sided-noise-prescription
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:t1-gated-tempo-one-sided-noise-prescription
+source: 'AISI sweep 2 reports 29 and 30 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part2.md, Reports 29-30; F226/F227). The prescription is also in the BODY of #result-adversarial-exponent-regimes, not only its WN :99: line 18 at 1f8240df says noise in the defender''s observation channel ''can reduce the attacker''s superlinear advantage without changing tempo or gain''; ''without changing tempo or gain'' is false by #emp-update-gain (higher U_o lowers the optimal gain, hence tempo). #impl-cooperative-adversarial:84 already lists the form as one not to restore and says the fix belongs in the two lead segments.'

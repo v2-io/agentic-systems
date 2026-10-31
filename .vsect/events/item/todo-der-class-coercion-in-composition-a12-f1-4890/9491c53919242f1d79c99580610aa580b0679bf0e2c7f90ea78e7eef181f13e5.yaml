@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 9491c53919242f1d79c99580610aa580b0679bf0e2c7f90ea78e7eef181f13e5
+at: 2026-10-31T02:16:38Z
+store: asf
+act: raise
+about: item:todo-der-class-coercion-in-composition-a12-f1-4890
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-der-class-coercion-in-composition-a12-f1-4890
+source: AISI sweep 2 report 25 §1(b) (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part2.md, Report 25).

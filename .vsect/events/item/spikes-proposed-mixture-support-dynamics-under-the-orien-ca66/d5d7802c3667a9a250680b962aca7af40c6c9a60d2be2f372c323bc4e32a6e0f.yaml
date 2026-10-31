@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: d5d7802c3667a9a250680b962aca7af40c6c9a60d2be2f372c323bc4e32a6e0f
+at: 2026-10-31T02:16:37Z
+store: asf
+act: raise
+about: item:spikes-proposed-mixture-support-dynamics-under-the-orien-ca66
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-mixture-support-dynamics-under-the-orien-ca66
+source: AISI sweep 2 report 21 addendum (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part2.md, Report 21).

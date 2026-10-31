@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 91e616e34bc8c52ef59b362aa4ca17ab5be9fbfa29b273271cd8a1592bdd8be5
+at: 2026-10-31T02:16:39Z
+store: asf
+act: raise
+about: item:todo-communication-gain-adversarial-scope-hyp-e79c
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-communication-gain-adversarial-scope-hyp-e79c
+source: AISI sweep 2 report 27 item A (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part2.md, Report 27), with the Sybil / sock-puppet attack on the transitive-trust phase as a concrete instance.

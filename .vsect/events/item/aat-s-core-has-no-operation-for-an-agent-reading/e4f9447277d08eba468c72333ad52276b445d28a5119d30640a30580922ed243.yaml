@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: e4f9447277d08eba468c72333ad52276b445d28a5119d30640a30580922ed243
+at: 2026-10-31T02:16:37Z
+store: asf
+act: raise
+about: item:aat-s-core-has-no-operation-for-an-agent-reading
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:aat-s-core-has-no-operation-for-an-agent-reading
+source: 'AISI sweep 2 report 20 item 6 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part2.md, Report 20): Codex F75 internal vs archive replay in #form-consolidation-dynamics (WN :195 ''Two-channel consolidation diagram'').'

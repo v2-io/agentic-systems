@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: e88244547f8ff35a360f9ca65477b4b80c341aa4aee674daba37c11fef90e069
+at: 2026-10-31T02:16:36Z
+store: asf
+act: raise
+about: item:continuous-state-structural-change
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:continuous-state-structural-change
+source: 'AISI sweep 2 report 19 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part2.md, Report 19; raw audit 471203): the Miller bridge is a finite-state existence proof and #form-structural-change-as-parametric-limit''s Epistemic Status (:38) still does not scope it; the Discussion (:46) says ''exactly this bridge''.'

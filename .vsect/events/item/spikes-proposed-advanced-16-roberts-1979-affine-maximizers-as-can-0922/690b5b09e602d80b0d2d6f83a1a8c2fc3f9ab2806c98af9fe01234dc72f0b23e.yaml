@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 690b5b09e602d80b0d2d6f83a1a8c2fc3f9ab2806c98af9fe01234dc72f0b23e
+at: 2026-10-31T02:16:40Z
+store: asf
+act: raise
+about: item:spikes-proposed-advanced-16-roberts-1979-affine-maximizers-as-can-0922
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-advanced-16-roberts-1979-affine-maximizers-as-can-0922
+source: 'AISI sweep 2 reports 30 §4 and 40 item 2 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part2.md; ASF-FIXES-part3.md): the constructive VCG / transferable-utility question split off from the impossibility charter.'

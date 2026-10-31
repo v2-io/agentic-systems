@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 2cf2d1e9930033a9cfb6920f69a7215a66511be054a7715e3e8c7c9f63d1916f
+at: 2026-10-31T02:16:55Z
+store: asf
+act: raise
+about: item:hafez-citations-der-agent-opacity-109-169-say-h
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:hafez-citations-der-agent-opacity-109-169-say-h
+source: 'AISI sweep 2 report 13 §2 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-mine-01-16.md, Report 13): the Hafez et al. 2026 IDT figures (89% perturbation detection vs 44% for reward-based monitoring, arXiv 2603.01283) are flagged in Working Notes as needing a Phase-2 verification pass. At 1f8240df the figures or the arXiv id appear in eight canon segments: #der-agent-opacity, #der-architecture-noidentifiability, #der-causal-hierarchy-requirement, #der-directed-separation, #deriv-update-detection-latency, #disc-sandbox-evaluation-ceiling, #impl-causal-access, 04-eli-core #obs-growth-vs-drift; one primary check covers all eight.'

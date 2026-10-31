@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: b16f83b16d379499e0444d30fedd13ae343ffe19a334bed69427d00a55a47e36
+at: 2026-10-31T02:16:55Z
+store: asf
+act: raise
+about: item:readers-ask-der-causal-hierarchy-requirement
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:readers-ask-der-causal-hierarchy-requirement
+source: 'AISI sweep 2 report 13 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-mine-01-16.md): whether imitation/observational learning is capped by the causal hierarchy unless the demonstrator''s policy is known, raised in the gold and never answered.'

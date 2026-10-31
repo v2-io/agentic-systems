@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: ff0b7b6f85e01de6d150a4da1c9c39bef53598a6cfdee2fe38c66856e1ff3108
+at: 2026-10-31T02:16:37Z
+store: asf
+act: raise
+about: item:gated-tempo-nu-versus-tempo-collision
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:gated-tempo-nu-versus-tempo-collision
+source: AISI sweep 2 report 31 item 4 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part2.md, Report 31; auditors 193847, 829314).

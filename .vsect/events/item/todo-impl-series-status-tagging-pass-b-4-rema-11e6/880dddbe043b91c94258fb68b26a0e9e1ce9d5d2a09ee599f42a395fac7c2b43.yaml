@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 880dddbe043b91c94258fb68b26a0e9e1ce9d5d2a09ee599f42a395fac7c2b43
+at: 2026-10-31T02:16:39Z
+store: asf
+act: raise
+about: item:todo-impl-series-status-tagging-pass-b-4-rema-11e6
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-impl-series-status-tagging-pass-b-4-rema-11e6
+source: 'AISI sweep 2 reports 26 and 29 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part2.md). At 1f8240df F180 (''structural, not contingent'') is gone from #impl-unity-communication and #impl-cooperative-adversarial:80-86 lists its corrected overclaims.'
