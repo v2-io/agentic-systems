@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 144e8f777fb78b044e917f6426be125eee8343374833077deaea7e9052bf446f
+at: 2026-10-31T03:31:45Z
+store: asf
+act: correct
+about: segment:def-observation-function
+actor:
+  name: Claude Opus 5.5 (A.1 check 8)
+  role: independent checker
+normalizer: vsect-norm/0
+corrects: 5a1c3f2fbad5364679b9816fab2c3443813fc251de35d2b3315b5a5b4dd4487e
+text: This disposal covers the kernel's definition in the Formal Expression, which the finding targeted. The opening paragraph (line 15) still uses the phrase the definition warns against; that residue is review:scope-adaptive-system-check-8#F3.

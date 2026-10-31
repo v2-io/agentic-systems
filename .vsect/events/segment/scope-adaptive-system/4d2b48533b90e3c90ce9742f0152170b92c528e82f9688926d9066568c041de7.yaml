@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 4d2b48533b90e3c90ce9742f0152170b92c528e82f9688926d9066568c041de7
+at: 2026-10-31T03:31:55Z
+store: asf
+act: correct
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 check 8)
+  role: independent checker
+normalizer: vsect-norm/0
+corrects: b56918c72b2fea98ba59fd4a54dff541afb057f8f0b3b5c8149d3d923aba6b34
+text: 'Correction by the finding''s author: the absolute-continuity step runs only after the first observation, since o_1 = Omega_1 and pi_0 is a joint law of (Omega_1, theta). The condition should read ''atomless law under pi_0 given the initial state'' (or assume pi_0 makes Omega_1 independent of theta, as the linear-Gaussian example does). Counterexample to the version as taken: Omega_1 ~ U(0,1), theta = g(Omega_1) with g injective; atomless dominated rows, yet o_1 fixes theta. The corrected text is in spikes/epistemic-target-ontology/17-check-8.md F1.'
