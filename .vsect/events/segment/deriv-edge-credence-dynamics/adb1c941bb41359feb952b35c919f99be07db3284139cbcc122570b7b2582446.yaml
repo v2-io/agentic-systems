@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: adb1c941bb41359feb952b35c919f99be07db3284139cbcc122570b7b2582446
+at: 2026-10-31T03:31:31Z
+store: asf
+act: revise
+about: segment:deriv-edge-credence-dynamics
+actor:
+  name: Claude Opus 5.5 (Part I round-5 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 13d4f7f2bd417d4627da1465726e5106659e573a9dc64626bb85d0df79b0ff3c
+own-version: 223b6b9333d13b9df14563154924a1671968b1a6012de6c87a1d8ce9d2d1dd0d
+record: 01-aat-core/src/deriv-edge-credence-dynamics.md

@@ -35,7 +35,7 @@ The actor-and-remedy contrast with the identifiability-floor cluster is sharp:
 | **Actor under the no-go** | An *agent* inferring from data | A *designer* implementing a mechanism |
 | **Information regime** | What the agent observes / can infer | What the designer can implement / commit to |
 | **Kind of remedy** | Augment the agent's data, sensing, interventional access | Relax design constraints; extend the strategy space; introduce transfers |
-| **AAT machinery role in escapes** | The unique broadly-available escape elevates specific AAT machinery (loop-interventional access; observability-as-augmentation; matched-Tier composite-extended observation) | The escape menu mostly belongs to the mechanism-design literature; AAT intersects via sub-scope $\alpha'$ (preference-domain restriction) and adjacent to `#form-objective-functional` (cardinal preferences) |
+| **AAT machinery role in escapes** | The escapes elevate specific AAT machinery (loop-interventional access; observability-as-augmentation; matched-Tier composite-extended observation) | The escape menu mostly belongs to the mechanism-design literature; AAT intersects via sub-scope $\alpha'$ (preference-domain restriction) and adjacent to `#form-objective-functional` (cardinal preferences) |
 | **Strengthened consequence** | Elevates AAT machinery from "useful" to *structurally required* | Maps the AAT/mechanism-design boundary precisely |
 
 Both clusters share the constructive-impossibility-posture shape ( `#disc-constructive-impossibility-posture`); both are boundary-face members of the stability-certificate spine ( `#disc-stability-certificate`). They are *sister meta-clusters*, neither subsumed by the other.

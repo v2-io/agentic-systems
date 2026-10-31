@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 23114d7f4ac83d96cfb470764fa367bcb9044767949adc89631db489321852a7
+at: 2026-10-31T03:31:37Z
+store: asf
+act: revise
+about: segment:impl-strategy-dynamics
+actor:
+  name: Claude Opus 5.5 (Part I round-5 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 040cfdf6ffe12f02985f54a420d1b682165967b4b1289e0564721bf1c7c23f80
+own-version: fc0ab8fb3ee70b5e8705d66b0a0fde0e6bfd03f434759bdf15ee0b61bd050605
+record: 01-aat-core/src/impl-strategy-dynamics.md

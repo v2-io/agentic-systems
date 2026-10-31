@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 537b012863564fa48c10c7e2376a724eef267db27b4925970d6c4eb2453f428f
+at: 2026-10-31T03:31:38Z
+store: asf
+act: revise
+about: segment:schema-strategy-persistence
+actor:
+  name: Claude Opus 5.5 (Part I round-5 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 00fb63e55bc426d659d9a74e531b7e09def9a756b22846680959ffbc948aac91
+own-version: 8734c4dfb7c00c3db2aa2161af2448ea97f2773e231d6795b9aad748f2257f52
+record: 01-aat-core/src/schema-strategy-persistence.md

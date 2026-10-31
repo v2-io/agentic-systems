@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4c465c47a6c71dba1e087fe6eb500b9df766201bc6f9d39ae84974a61dd4f813
+at: 2026-10-31T03:31:37Z
+store: asf
+act: revise
+about: segment:form-consolidation-dynamics
+actor:
+  name: Claude Opus 5.5 (Part I round-5 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 6ac680ca4b1cdbdfc88252295c71ea401df0ae592613302b3147a7ee80506198
+own-version: ad8e9f17f4952bd85c8dacd16c774a49ad8062710665c4e5ffa83ea4fdac9b91
+record: 01-aat-core/src/form-consolidation-dynamics.md

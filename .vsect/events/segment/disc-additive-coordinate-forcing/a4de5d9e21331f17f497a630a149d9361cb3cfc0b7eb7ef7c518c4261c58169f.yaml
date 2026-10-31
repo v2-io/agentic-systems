@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: a4de5d9e21331f17f497a630a149d9361cb3cfc0b7eb7ef7c518c4261c58169f
+at: 2026-10-31T03:31:32Z
+store: asf
+act: revise
+about: segment:disc-additive-coordinate-forcing
+actor:
+  name: Claude Opus 5.5 (Part I round-5 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: d53d07c5d38eb12cc9dcda36140778c2e4566dc1a1a9ad4ab777e4eacae3ea1d
+own-version: 5783e335880a9035fbf1af558c18c9017d99eb9f0d48d4d19d822065f966ef10
+record: 01-aat-core/src/disc-additive-coordinate-forcing.md
