@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 944b671f771371aeffd74dc87295176f272d3b1be8fd36d5ce846fe884a275ca
+at: 2026-10-31T03:14:03Z
+store: asf
+act: revise
+about: segment:def-strategy-dag
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: faa4591fc0981a633a2507adf7da222ea144c18a439da895b155bcadf79c9170
+own-version: 5b3f2beb361f89c72bfe3cdf51164ff727f732acb387c24e3c9841a664ae8676
+record: 01-aat-core/src/def-strategy-dag.md

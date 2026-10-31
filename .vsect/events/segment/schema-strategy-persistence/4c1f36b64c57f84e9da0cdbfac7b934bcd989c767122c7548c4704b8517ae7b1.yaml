@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4c1f36b64c57f84e9da0cdbfac7b934bcd989c767122c7548c4704b8517ae7b1
+at: 2026-10-31T03:14:06Z
+store: asf
+act: revise
+about: segment:schema-strategy-persistence
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: d7bd5a9638ef3dceef35fd108ded0321e58cc01881cbe3fc58718f0ed1acadf9
+own-version: 00fb63e55bc426d659d9a74e531b7e09def9a756b22846680959ffbc948aac91
+record: 01-aat-core/src/schema-strategy-persistence.md

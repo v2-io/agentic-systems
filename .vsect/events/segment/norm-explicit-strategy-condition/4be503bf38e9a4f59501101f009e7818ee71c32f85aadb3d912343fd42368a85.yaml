@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4be503bf38e9a4f59501101f009e7818ee71c32f85aadb3d912343fd42368a85
+at: 2026-10-31T03:14:05Z
+store: asf
+act: revise
+about: segment:norm-explicit-strategy-condition
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 4e180af92c839658651ff13758200adc18f286b5948a92160ca488839f61d930
+own-version: 9ba33948b1a1a431346ec2df7126d81de016b39cd55864f7ea942d2b053bbc92
+record: 01-aat-core/src/norm-explicit-strategy-condition.md

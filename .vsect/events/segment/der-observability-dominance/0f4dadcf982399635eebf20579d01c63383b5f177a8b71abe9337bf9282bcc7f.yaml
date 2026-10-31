@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0f4dadcf982399635eebf20579d01c63383b5f177a8b71abe9337bf9282bcc7f
+at: 2026-10-31T03:14:04Z
+store: asf
+act: revise
+about: segment:der-observability-dominance
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 4a6864390dee86241a64b5e047140ca1fc6393ff2b2e81ad2582cfdf15da8893
+own-version: 4e9d1ddaa927aa17a240ae7d8e9244fe059d0c1beea1a166ccc780c0077ade4f
+record: 01-aat-core/src/der-observability-dominance.md

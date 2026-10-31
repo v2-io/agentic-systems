@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 06d4ec44dca71b1b79278c47f6b28438cf9c5830eef95bde657312ce7d0e9da3
+at: 2026-10-31T03:14:03Z
+store: asf
+act: revise
+about: segment:der-causal-hierarchy-requirement
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 65f0a739e197295a8a3f6621bcdbc22a2e07c4f96c9a87c7a3efdfb2af60ad86
+own-version: 835e20ad3d382d10a3b1196797ad51835f3386df13eb8e226a1df4a5295958d5
+record: 01-aat-core/src/der-causal-hierarchy-requirement.md

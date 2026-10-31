@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 63b0d157f00085f2292d6f4152ccf0b907bd9020bc0d116bfebcc4edc05faf2a
+at: 2026-10-31T03:14:05Z
+store: asf
+act: revise
+about: segment:deriv-update-detection-latency
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 6fb9b2e1c65eba3a2b942afcaf6ded08c7e5c6dee791e122107402d520fb42c8
+own-version: 8b92d340ee3cd966d24c925706e98e4046004b934e937735c9e6a4d777a416ac
+record: 01-aat-core/src/deriv-update-detection-latency.md

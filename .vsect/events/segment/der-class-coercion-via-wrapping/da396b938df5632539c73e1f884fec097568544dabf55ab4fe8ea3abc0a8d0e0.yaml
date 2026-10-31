@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: da396b938df5632539c73e1f884fec097568544dabf55ab4fe8ea3abc0a8d0e0
+at: 2026-10-31T03:14:04Z
+store: asf
+act: revise
+about: segment:der-class-coercion-via-wrapping
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 56e25b8a214aa86ea4061900fbb87fb08a82977d08d56abdb7c6413d5d5ce504
+own-version: d0e2fdd27cf82ac7d9375850ca12c0bcf80cbf9b82735893887ef92b870f5807
+record: 01-aat-core/src/der-class-coercion-via-wrapping.md
