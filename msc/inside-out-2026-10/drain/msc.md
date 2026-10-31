@@ -18,13 +18,13 @@ One of: **in canon / superseded** (where, checked at HEAD); **canon defect** (le
 
 ## Coverage (this agent's part)
 
-**Read whole:** `nogo-structure-read-2026-07-29.md`, `era-artifact-asf-contributions-2026-07-04.md`, `ch3-calibration-note-review-2026-07-29.md`, `scope-of-work-ontology-and-figure-2026-05-17.md`, `domain-unification-2026-05-04/recommended-agent-ontology.md`, `deaths-grounding-plan-2026-06-10.md`, `mood-layer-sovereignty-carve-2026-06-17.md`, `llm-causal-access-note.md`, `summary-attempt/000-supplement-notes.md`, the two quiz score sheets, three summaries (017, 054, and the supplement's gap table against OUTLINE).
+**Read whole:** `nogo-structure-read-2026-07-29.md`, `era-artifact-asf-contributions-2026-07-04.md`, `ch3-calibration-note-review-2026-07-29.md`, `scope-of-work-ontology-and-figure-2026-05-17.md`, `domain-unification-2026-05-04/recommended-agent-ontology.md`, `deaths-grounding-plan-2026-06-10.md`, `mood-layer-sovereignty-carve-2026-06-17.md`, `llm-causal-access-note.md`, `summary-attempt/000-supplement-notes.md`, the two quiz score sheets, two summaries (017, 054); the supplement's gap table was checked against OUTLINE.
 
 **Read in part (by heading, verdicts, status lines and the sections a claim rests on):** `nogo-unification-archaeology-2026-07-29.md` (§0–§1 head, §5–§8, addendum §4–§5), `working-composition-admissibility.md` (§7, §8), `domain-xfer-candidates.md` (Q1, Q2, Q4, Q6), `separability-standalone-paper-proposal.md`, both `2026-05-08-three-move-shape-*`, both v0.4.0 reviews, `451729-d1-gate-verification-2026-05-20.md` (§9 whole), `audit-routing-microfix-and-manifest-draft-2026-05-16.md` (each spec checked at HEAD), `sop-shift-completion-plan-2026-06-02.md` (B3 whole), `handoff-2026-05-01.md` (§2), `figure-pipeline-buildout-2026-05-18.md` (boxes), `role-encounter-plan.md` (vision), the quiz question and answer files (against the scores).
 
 **Read at the head and status line only, checked at HEAD for the claim the status makes:** `AAD-to-AAT-TODO.md`, `audit-routing-consolidated-ledger-draft-2026-05-16.md`, both `class-rename-*`, `wn-discipline-coherence-pass-2026-05-31.md`, `sop-consolidation-design-2026-06-01.md`, `judgment-calls-readme-cycle-2026-04-26.md`, `build-markdown-design.md`, `modularity-cycle-plan-2026-05-09.md`, `markdown-first-pipeline.md`, both `verify-*-cluster-2026-05-20.md`, `2026-03-14-section-iv-paper-outline.md`.
 
-**Scanned, not read:** the other 142 summaries in `summary-attempt/` (grepped for embedded reader flags; none beyond the supplement), the two 0.5 MB walks (concatenations), 19 of 20 prior-art prompts (their outputs are F.2's).
+**Scanned, not read:** the other 143 summaries in `summary-attempt/` (grepped for embedded reader flags; none beyond the supplement), the two 0.5 MB walks (concatenations), 19 of 20 prior-art prompts (their outputs are F.2's).
 
 **Not read:** `joseph-working-notes.md` (git-ignored, Joseph's private transcripts; disposed by its citations only). Not reached: `nogo-unification-archaeology`'s §2–§4 and addendum §1–§3 in full; `working-composition-admissibility.md` §2–§6 in full (its open remainder was already restated by the t1 rechecker); Q3 and Q5 of `domain-xfer-candidates.md` beyond their selection notes.
 
@@ -166,7 +166,7 @@ One of: **in canon / superseded** (where, checked at HEAD); **canon defect** (le
 - The repeated trigger-signature overclaim: carried on the H.3 item as a reader-surface signal (a Working-Notes conjecture read as settled), not as its own item; I.5 (Working Notes carry pointers and guards only) is what would remove the surface it was misread from.
 - `quiz-34.md`, `quiz-40-clean.md`: blank answer sheets; **kept** as the instrument's unused draws.
 
-### `summary-attempt/` (supplement read whole; 145 summaries scanned for reader flags, three read whole: 017, 054, and the supplement's gap table against OUTLINE; walks and scripts checked by size and generation; 20 prior-art prompts checked against their outputs, one read)
+### `summary-attempt/` (supplement read whole; 145 summaries scanned for reader flags, two read whole (017, 054), and the supplement's gap table checked against OUTLINE; walks and scripts checked by size and generation; 20 prior-art prompts checked against their outputs, one read)
 
 - Supplement flags 1 and 2 (the opaque $\Sigma_t$ slot; the five gap intros) and the gap table: item:five-gap-chapter-intros-parts-ii-iii (H.1). The two missing `disc-*` meta-segments of its gap table: **landed** (`#disc-strategic-self-coupling`, `#disc-modularity-state-dynamics`). `worked-example-cam`: raised on item:todo-aat-9-remaining-missing-stub-worked-exam-ad0e.
 - Flag 3 (the "bare-prose shorthand" convention): **set aside**, the convention no longer appears in any segment or in `format.sop.md`.
