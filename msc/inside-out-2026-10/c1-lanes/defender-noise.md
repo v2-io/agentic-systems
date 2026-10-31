@@ -1,6 +1,6 @@
 # C.1 lane: the defender-noise prescription
 
-KR C.1 (under "Complete "in-place" refactor of ASF-- meta, all artifacts, and theory itself."): every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. Items: `item:t1-gated-tempo-one-sided-noise-prescription`, and `item:gated-tempo-nu-versus-tempo-collision` (same lines). Integrator: `c1-defender-noise`. Commits are on this lane's branch, named below.
+KR C.1 (under "Complete "in-place" refactor of ASF-- meta, all artifacts, and theory itself."): every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. Items: `item:t1-gated-tempo-one-sided-noise-prescription`, and `item:gated-tempo-nu-versus-tempo-collision` (same lines). Integrator: `c1-defender-noise`. Commits on this lane's branch: `47d76999` (the landing), `5f5db8ea` (checks and closures), and a third for the P1(b) wording fix.
 
 ## What was false, and what is true
 
@@ -33,7 +33,8 @@ Variant E (`variant_ef_extensions.py`) put the same noise on both channels. It a
 
 1. The P1(c) bound and the fixed-gain threshold $\sqrt{2\alpha_B R_B^2/n - \alpha_B^2\sigma_{\nu,B}^2} - \sigma_{\text{base}}$. Both rest on the `#deriv-sector-condition` window, which another lane owns.
 2. P2(b)'s asymptotics. I checked the $1/2$ limit numerically: local slope $0.500$ at large $\alpha_A$.
-3. Whether P1(b)'s wording is right. Re-tuning lowers the defender's error below the fixed-gain value on the same channel, but not below the noise-free value, and the ratio rises along the re-tuned path. My first draft wrongly said the ratio rises "by more than at fixed gain". I corrected it before commit, and the same correction ran through four bodies ("re-tuning does not undo this", not "pays further").
+3. Whether P1(b)'s wording is right. Re-tuning gives the defender its best attainable error on its channel, and that best error, $n\sigma_{\text{env},B}\sigma_{\nu,B}$, is increasing in $\sigma_{\nu,B}$ because the error at every gain is. The ratio rises along the re-tuned path. My first draft wrongly said the ratio rises "by more than at fixed gain". I corrected it before commit, and the same correction ran through four bodies ("re-tuning does not undo this", not "pays further"). A later aside, "but not below its noise-free value", was ambiguous about which gain it meant, and I replaced it with the monotone statement.
+6. Two checks have lapsed. The Part I round-2 integrator's and verifier's checks on `#result-adversarial-tempo-advantage` lapsed because of my edit to its scope paragraph ("stops growing" became "grows as the square root of the tempo ratio", plus a pointer). The condition they checked is unchanged, but a different mind needs to `vsect confirm` them.
 4. Re-run the script. Check that the closed-form columns match `variant_ef_results.md` and that the split table matches.
 5. The `#der-interaction-channel-classification` change. Its recovery list now says `#obs-gated-tempo-advantage` is not a restriction. Line 163's opacity-dual sentence ("the emitter's advantage degrades when its observations of the environment are noisy") is consistent with that and was left as is.
 
