@@ -15,7 +15,8 @@ The cross-surface check ran against every open item and question (`items/`, `que
 - **Volume 4 (58 items):** almost all of it is aspirational consciousness-infrastructure reach, from Gemini 193847 with some from 829314, 773921, 471203 and 451729. None of it has arrived in 04-eli-core, except the sanity criterion and two readings the self-actuation no-go already carries. It is held under one item (`item:eli-reach-from-01-audit-gold`, G.2), with the half-dozen items that have a checkable structural core named there. G.0 decides where argued, non-derived claims live, and that decision gates this item.
 - **Volume 3 (18) and TST (8):** concrete instantiations, mostly not arrived. One item for each volume.
 - **Naming (15):** one F.1 item, two raises on the existing "nominal" item, and the Section/Part drift, which is gone from bodies.
-- **Within 01-aat-core (61):** pointers to other 01 segments. 27 are **in canon** at the destination; one is superseded. The rest became five new questions, two new items (the plan-depth convergence and the positioning claims), raises on six existing items, or pedagogy.
+- **Within 01-aat-core (61):** pointers to other 01 segments. 21 have arrived: 19 are **in canon** at the destination, one is **superseded** (#158), and one is covered by an existing question that cites the same line (#82). The rest became five new questions, two new items (the plan-depth convergence and the positioning claims), raises on six existing items, pedagogy, or set-asides (four empty or residue bullets).
+- **Overall:** 30 of the 160 rows carry an in-canon, superseded or covered verdict. Several of those are partial, and their remainder is routed in the same row. The commit body of `164cc272` says 28; 30 is the count of the table.
 
 ## Ledger records made
 
