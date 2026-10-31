@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: a17eace6939d686adc67163b561e772bfd72c75fbc3cda9b33dcc8fea9cd9c01
+at: 2026-10-31T02:19:54Z
+store: asf
+act: raise
+about: item:readers-ask-def-strategy-dimension
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:readers-ask-def-strategy-dimension
+source: 01-aat-core/src/def-strategy-dimension.md WN gold Follow-up line 117 (526815)
+text: 'The table row ''Update source: O_t external, Sigma_t internal'' (line 38) is typical provenance, not a rule; self-actuation allows agent-driven objective revision. Mark the row as typical.'

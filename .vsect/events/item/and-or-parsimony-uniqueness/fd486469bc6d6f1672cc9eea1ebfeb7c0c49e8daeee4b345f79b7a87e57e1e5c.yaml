@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: fd486469bc6d6f1672cc9eea1ebfeb7c0c49e8daeee4b345f79b7a87e57e1e5c
+at: 2026-10-31T02:16:38Z
+store: asf
+act: raise
+about: item:and-or-parsimony-uniqueness
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:and-or-parsimony-uniqueness
+source: '01-aat-core gold Follow-ups: deriv-graph-structure.md WN line 254 (773921); scope-and-or.md WN line 78 (829314, 773921, 526815)'
+text: 'Three substrates predict a native k-of-n threshold node under the description-length pressure of #form-strategy-complexity-cost: 3-of-5 needs C(5,3) = 10 AND-branches. That is the compactness side of the parsimony question.'

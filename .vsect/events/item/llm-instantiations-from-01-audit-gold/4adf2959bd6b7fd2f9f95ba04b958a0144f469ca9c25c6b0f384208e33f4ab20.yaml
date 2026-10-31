@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4adf2959bd6b7fd2f9f95ba04b958a0144f469ca9c25c6b0f384208e33f4ab20
+at: 2026-10-31T02:19:37Z
+store: asf
+act: raise
+about: item:llm-instantiations-from-01-audit-gold
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:llm-instantiations-from-01-audit-gold
+source: 01-aat-core/src/der-orient-cascade.md WN gold Follow-up line 185 (Gemini 829314)
+text: 'Fast inner loop (belief update, cached plan) and slow outer loop gated on delta_sat as a token-budget principle for LLM agents: pay for deep deliberation only when the cascade demands it.'

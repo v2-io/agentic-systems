@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 16e3a39ed9d55f87c33d99d1d2f04a548d5c5d022de45c5f28179c9c7801b716
+at: 2026-10-31T02:17:48Z
+store: asf
+act: raise
+about: item:readers-ask-def-mismatch-signal
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:readers-ask-def-mismatch-signal
+source: 01-aat-core/src/def-mismatch-signal.md WN gold Follow-up line 95
+text: The g transform (observation-space error to model-space update) is a terse aside; give it a sentence of prominence (526815).

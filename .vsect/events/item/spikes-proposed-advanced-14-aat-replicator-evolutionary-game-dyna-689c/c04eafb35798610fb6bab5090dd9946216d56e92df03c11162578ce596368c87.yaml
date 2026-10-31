@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: c04eafb35798610fb6bab5090dd9946216d56e92df03c11162578ce596368c87
+at: 2026-10-31T02:12:29Z
+store: asf
+act: raise
+about: item:spikes-proposed-advanced-14-aat-replicator-evolutionary-game-dyna-689c
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-advanced-14-aat-replicator-evolutionary-game-dyna-689c
+source: 01-aat-core/src/deriv-strategic-composition.md WN gold Follow-up line 240 (Claude, AUDIT-WORKING-471203)
+text: 'Seconded: softmax bandits approximate replicator; gradient on log-likelihood is replicator exactly.'

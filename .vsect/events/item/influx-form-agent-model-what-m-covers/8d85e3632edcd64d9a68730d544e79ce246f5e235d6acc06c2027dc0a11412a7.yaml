@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 8d85e3632edcd64d9a68730d544e79ce246f5e235d6acc06c2027dc0a11412a7
+at: 2026-10-31T02:16:40Z
+store: asf
+act: raise
+about: item:influx-form-agent-model-what-m-covers
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:influx-form-agent-model-what-m-covers
+source: 01-aat-core/src/form-agent-model.md WN gold Follow-up line 62
+text: Adjacent gap opened separately as item:chronica-only-raw-material-vs-built-in-knowledge (where priors and built-in knowledge live).

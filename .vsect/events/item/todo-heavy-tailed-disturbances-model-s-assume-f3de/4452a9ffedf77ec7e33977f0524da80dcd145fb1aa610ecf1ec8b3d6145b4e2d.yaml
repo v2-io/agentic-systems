@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4452a9ffedf77ec7e33977f0524da80dcd145fb1aa610ecf1ec8b3d6145b4e2d
+at: 2026-10-31T02:12:29Z
+store: asf
+act: raise
+about: item:todo-heavy-tailed-disturbances-model-s-assume-f3de
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-heavy-tailed-disturbances-model-s-assume-f3de
+source: 01-aat-core/src/deriv-discrete-sector-condition.md WN gold Follow-up line 222 (Gemini, AUDIT-WORKING-193847)
+text: 'Sharpening: with infinite-variance w_k the mean-square Lyapunov argument fails entirely, so heavy tails route to structural adaptation (expanding R), not gain tuning; a candidate routing claim toward #result-structural-adaptation-necessity.'

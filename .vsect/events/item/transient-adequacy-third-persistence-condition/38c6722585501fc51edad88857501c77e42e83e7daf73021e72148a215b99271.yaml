@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 38c6722585501fc51edad88857501c77e42e83e7daf73021e72148a215b99271
+at: 2026-10-31T02:16:39Z
+store: asf
+act: raise
+about: item:transient-adequacy-third-persistence-condition
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:transient-adequacy-third-persistence-condition
+source: 01-aat-core/src/result-persistence-condition.md WN gold Follow-up line 199 (Claude 471203 Challenge 5)
+text: Gold source, recorded as an event (the item already cites it in prose).

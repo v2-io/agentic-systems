@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 6dae8dc533e952529d08552d257cc2cf5ee848617138dc03dc699cb03570d315
+at: 2026-10-31T02:22:21Z
+store: asf
+act: raise
+about: item:strategic-tempo-regime-c-overstated
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:strategic-tempo-regime-c-overstated
+source: 01-aat-core/src/def-strategic-tempo.md WN gold Follow-up line 139 (526815 F66-F68)
+text: 'Gold side of F67. This drain''s first reading took line 42 as true by construction (the iota factor is near zero for Regime C), so the owner should decide whether iota''s Regime-C value is derived or stipulated: if stipulated, the sentence is a definition, not a finding about agents. F66 (sum versus bottleneck) is in canon as per-edge weakest-link persistence (line 20); F68 (homogeneous |E| rho/R bound) is absent from the body.'

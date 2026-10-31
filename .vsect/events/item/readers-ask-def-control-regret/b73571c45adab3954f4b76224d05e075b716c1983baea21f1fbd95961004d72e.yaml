@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: b73571c45adab3954f4b76224d05e075b716c1983baea21f1fbd95961004d72e
+at: 2026-10-31T02:17:48Z
+store: asf
+act: raise
+about: item:readers-ask-def-control-regret
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:readers-ask-def-control-regret
+source: 01-aat-core/src/def-control-regret.md WN gold Follow-up line 108
+text: Give the computational rationale for C2 as the default for strategy revision (C3 needs the full Bellman solution) (584721).

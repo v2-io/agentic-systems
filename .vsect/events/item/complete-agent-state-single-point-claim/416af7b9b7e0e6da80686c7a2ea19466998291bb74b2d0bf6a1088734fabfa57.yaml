@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 416af7b9b7e0e6da80686c7a2ea19466998291bb74b2d0bf6a1088734fabfa57
+at: 2026-10-31T02:22:20Z
+store: asf
+act: raise
+about: item:complete-agent-state-single-point-claim
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:complete-agent-state-single-point-claim
+source: 01-aat-core/src/form-complete-agent-state.md WN gold Follow-ups lines 98 and 101 (526815, 584721)
+text: Same claim from the gold side; also raised on item:readers-ask-form-complete-agent-state, which this C.3 item supersedes for the line-40 sentence.

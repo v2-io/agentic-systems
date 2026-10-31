@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: cc0594eb5a5772cf1a4ebe45d93dc79fa6ba8c8230ded05e11e1329935da731c
+at: 2026-10-31T02:18:44Z
+store: asf
+act: raise
+about: item:llm-instantiations-from-01-audit-gold
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:llm-instantiations-from-01-audit-gold
+source: 01-aat-core/src/scope-edge-update-causal-validity.md WN gold Follow-up line 134 (849201, 829314, 773921)
+text: 'Regime-C provenance metadata: LLMs start with all strategy edges Regime C (from pretraining) and must upgrade them to Regime A by tool use in the loop, which implies a per-edge epistemic-provenance tag on Sigma_t.'

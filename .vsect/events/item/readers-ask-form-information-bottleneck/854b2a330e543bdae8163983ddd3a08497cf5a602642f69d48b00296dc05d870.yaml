@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 854b2a330e543bdae8163983ddd3a08497cf5a602642f69d48b00296dc05d870
+at: 2026-10-31T02:17:49Z
+store: asf
+act: raise
+about: item:readers-ask-form-information-bottleneck
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:readers-ask-form-information-bottleneck
+source: 01-aat-core/src/form-information-bottleneck.md WN gold Follow-up line 76
+text: 'The IT-MDP and active-inference paragraphs read as review rebuttals inside a formulation file (829314; 613842): candidate relocation to #disc-compression-operations.'

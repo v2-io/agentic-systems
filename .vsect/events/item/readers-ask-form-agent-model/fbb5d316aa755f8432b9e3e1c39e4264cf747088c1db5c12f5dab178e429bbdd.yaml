@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: fbb5d316aa755f8432b9e3e1c39e4264cf747088c1db5c12f5dab178e429bbdd
+at: 2026-10-31T02:17:50Z
+store: asf
+act: raise
+about: item:readers-ask-form-agent-model
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:readers-ask-form-agent-model
+source: 01-aat-core/src/form-agent-model.md WN gold Follow-up line 63
+text: 'The chronica shorthand (o_1, a_1, ..., o_t) at line 28 is looser than #def-chronica''s interleaved order (526815).'

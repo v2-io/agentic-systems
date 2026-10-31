@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 8a8179b527311de422ed82e6be1b20895e0b8bf5361474076395f2b23e4a2b83
+at: 2026-10-31T02:17:48Z
+store: asf
+act: raise
+about: item:readers-ask-der-gain-sector-bridge
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:readers-ask-der-gain-sector-bridge
+source: 01-aat-core/src/der-gain-sector-bridge.md WN gold Follow-up line 165
+text: 'The (PI)/Cencov subsection divides readers: heavy and defensive for a main-chain bridge (773921, 829314) or one of the framework''s most elegant moves (384279, 471203, 526815). A placement question; keep the tension visible. The same placement question at #scope-agent-identity (its WN line 90) must keep NeurIPS Paper 3''s chart-rescaling dependency intact.'

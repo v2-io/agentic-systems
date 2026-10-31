@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: ceb6761028d39f3a3ee971c847ed78f10108deca64430e32a32e71d753c98161
+at: 2026-10-31T02:17:47Z
+store: asf
+act: raise
+about: item:readers-ask-def-chronica
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:readers-ask-def-chronica
+source: 01-aat-core/src/def-chronica.md WN gold Follow-up line 89
+text: The entropy-collision rationale anticipates a calligraphic entropy symbol, but NOTATION uses plain H; say so (384279).

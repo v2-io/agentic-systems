@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 343c262a6023fe057a0c38cec45d08402422f30ff74d2b0181a15186ffb8d203
+at: 2026-10-31T02:22:21Z
+store: asf
+act: raise
+about: item:observability-investment-threshold-unsupported
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:observability-investment-threshold-unsupported
+source: 01-aat-core/src/der-observability-dominance.md WN gold Follow-ups lines 156-157
+text: Companion item item:observability-investment-criterion (C.4) asks for the decision criterion the gold wanted; it should be built on whatever this item finds about the threshold.

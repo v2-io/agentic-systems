@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: de079eb13b9af1d720db34823f0ada49ce795f3a5a7df69a2ddedf39ce5e9e13
+at: 2026-10-31T02:17:49Z
+store: asf
+act: raise
+about: item:readers-ask-der-interaction-channel-classification
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:readers-ask-der-interaction-channel-classification
+source: 01-aat-core/src/der-interaction-channel-classification.md WN gold Follow-up line 195
+text: Three Gemini readers ask for the II-a / II-b conflation (both look like 'reserve exceeded'; only II-a is cured by more tempo) to be an explicit warning where repair logic is introduced.

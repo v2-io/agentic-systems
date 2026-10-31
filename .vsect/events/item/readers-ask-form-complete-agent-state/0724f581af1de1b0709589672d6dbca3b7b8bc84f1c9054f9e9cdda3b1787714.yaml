@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 0724f581af1de1b0709589672d6dbca3b7b8bc84f1c9054f9e9cdda3b1787714
+at: 2026-10-31T02:17:50Z
+store: asf
+act: raise
+about: item:readers-ask-form-complete-agent-state
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:readers-ask-form-complete-agent-state
+source: 01-aat-core/src/form-complete-agent-state.md WN gold Follow-up line 98
+text: 'Line 40 ''Action is the single point where epistemic and purposeful states interact'' is too strong given f_X and between-event dynamics g_G(G, M); ''the outward coupling point'', or ''under directed separation'' (526815, 584721). WN 101: backward compatibility (line 46) holds strictly only under directed separation (584721).'

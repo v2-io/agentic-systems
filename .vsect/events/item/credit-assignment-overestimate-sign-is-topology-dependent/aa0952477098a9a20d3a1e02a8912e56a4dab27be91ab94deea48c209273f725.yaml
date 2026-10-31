@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: aa0952477098a9a20d3a1e02a8912e56a4dab27be91ab94deea48c209273f725
+at: 2026-10-31T02:22:20Z
+store: asf
+act: raise
+about: item:credit-assignment-overestimate-sign-is-topology-dependent
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:credit-assignment-overestimate-sign-is-topology-dependent
+source: 01-aat-core/src/disc-credit-assignment-boundary.md WN gold Follow-up line 198 (526815 F60-F62)
+text: Gold side of F62. The same note also names F60 (one signed plan residual cannot point every edge toward its own truth) and F61 (the divide-by-||J||^2 update stays unbounded as ||J|| -> 0 even in log-odds; line 48), neither verified by this drain.

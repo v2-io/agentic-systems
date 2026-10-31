@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 831be7f4d4f1da0c78050e17fae8488132c72f3d0397cb3fe4e0e49b2521dd0c
+at: 2026-10-31T02:17:49Z
+store: asf
+act: raise
+about: item:readers-ask-result-adversarial-tempo-advantage
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:readers-ask-result-adversarial-tempo-advantage
+source: 01-aat-core/src/result-adversarial-tempo-advantage.md WN gold Follow-up line 116
+text: 'State the class restriction visibly: the squared and 3/2 laws are for the coupling-dominant loop-loop class, not every adversarial dynamic (471203 Challenge 11); line 18 (''military intuition becomes physics'') reads as universal. Also WN 117: lift ''the two effects compound'' into the Formal Expression (451729).'

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 394bee94b4c715d443aee9bc154dcb57557afdd8910b336e23d0b242e56a706d
+at: 2026-10-31T02:16:37Z
+store: asf
+act: raise
+about: item:expected-vs-realized-information-symbol
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:expected-vs-realized-information-symbol
+source: 01-aat-core/src/form-event-driven-dynamics.md WN gold Follow-up line 102 (526815, 742613, 829314)
+text: 'Three substrates: I(e_tau) is a mutual information (expected) while line 17 reads it as the surprise of a particular event; the most repeated reader confusion on the segment.'

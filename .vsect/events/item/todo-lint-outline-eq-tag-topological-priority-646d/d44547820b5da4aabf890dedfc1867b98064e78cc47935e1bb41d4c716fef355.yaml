@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: d44547820b5da4aabf890dedfc1867b98064e78cc47935e1bb41d4c716fef355
+at: 2026-10-31T02:22:10Z
+store: asf
+act: raise
+about: item:todo-lint-outline-eq-tag-topological-priority-646d
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-lint-outline-eq-tag-topological-priority-646d
+source: audits/AUDIT-WORKING-526815/00-running-outline.md F217, F219, F211 (gold preambles name the streams)
+text: '#result-adversarial-tempo-advantage depends omits result-sector-persistence-template, def-adaptive-tempo and result-adversarial-exponent-regimes; #der-interaction-channel-classification depends omits obs-gated-tempo-advantage (F211). Checked at HEAD 4175aae7.'

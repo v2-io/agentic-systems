@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 17b9c55938122901109a520dbdb1e99e168969a10d6dabe6febba348ff482e50
+at: 2026-10-31T02:12:29Z
+store: asf
+act: raise
+about: item:proposals-sp-23-disc-theorem-import-architecture-f-a22e
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:proposals-sp-23-disc-theorem-import-architecture-f-a22e
+source: 01-aat-core/src/deriv-persistence-cost.md WN gold Follow-up line 171 (Claude, AUDIT-WORKING-471203; several substrates)
+text: Persistence-cost as the positive dual of the identifiability floor (external theorem lower-bounds vs forbids); convergent across substrates.

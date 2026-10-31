@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 89ad8a7344d01fbb6c2b281e936d1dac9a812abdea9aba5ccf901bddff5233bb
+at: 2026-10-31T02:12:30Z
+store: asf
+act: raise
+about: item:todo-disc-composition-consistency-does-direct-813e
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-disc-composition-consistency-does-direct-813e
+source: 01-aat-core/src/disc-composition-consistency.md WN gold Follow-up lines 126-127 (471203 Challenge 14; four substrates on 'does directed separation compose')
+text: Boundary-choice rationality candidate principle ('the smallest boundary that closes the dependency graph for the prediction at hand') and four-substrate convergence on promoting Case 1.

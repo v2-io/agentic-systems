@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: f6ce154dd0f18fc8d66205073825d072b2606712e43c9183ed2d503f9b18ef63
+at: 2026-10-31T02:12:28Z
+store: asf
+act: raise
+about: item:theory-of-mind-missing-from-communication
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:theory-of-mind-missing-from-communication
+source: 01-aat-core/src/def-shared-intent.md Working Notes, gold Follow-up line 66 (Claude, AUDIT-WORKING-471203 'Missing 2')
+text: 'Same gap: nested beliefs / common knowledge / level-k absent from the communication vocabulary; shared with #hyp-communication-gain.'

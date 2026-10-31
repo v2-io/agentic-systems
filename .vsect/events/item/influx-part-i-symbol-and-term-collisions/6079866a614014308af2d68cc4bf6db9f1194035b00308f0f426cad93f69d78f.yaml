@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 6079866a614014308af2d68cc4bf6db9f1194035b00308f0f426cad93f69d78f
+at: 2026-10-31T02:16:37Z
+store: asf
+act: raise
+about: item:influx-part-i-symbol-and-term-collisions
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:influx-part-i-symbol-and-term-collisions
+source: 01-aat-core/src/emp-update-gain.md WN gold line 105 (Claude 266847); form-event-driven-dynamics.md WN gold line 101 (384279, 527914)
+text: 'Two more collisions: U_M is model uncertainty in #emp-update-gain and epistemic unity in #def-unity-dimensions; nu_eff in #form-event-driven-dynamics:65 names the same sum the segment says is identical to adaptive tempo T, two symbols for one quantity.'

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 0fae6cdc9b6e0180c7deee2c3d1b9655be5d62dab98ca735a18a8e90d89ed9ce
+at: 2026-10-31T02:12:30Z
+store: asf
+act: raise
+about: item:spikes-proposed-spike-strategic-self-coupling-p2-p4-appe-3163
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-spike-strategic-self-coupling-p2-p4-appe-3163
+source: 01-aat-core/src/disc-strategic-self-coupling.md WN gold Follow-up line 189 (Gemini, AUDIT-WORKING-773921)
+text: Self-control as single-agent composition of temporally displaced selves; convergent confirmation of the segment's WN (d) Ainslie / composition-consistency reading.

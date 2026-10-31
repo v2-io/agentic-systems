@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 848e3d366dcb340edaa4c2a1c77983ef874297ab56f85d8980ff961ed4524200
+at: 2026-10-31T02:12:29Z
+store: asf
+act: raise
+about: item:spikes-proposed-advanced-12-effects-spiral-eigenvalue-condition-d-d6f7
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-advanced-12-effects-spiral-eigenvalue-condition-d-d6f7
+source: 01-aat-core/src/der-adversarial-destabilization.md WN gold Follow-up line 111 and der-agent-opacity.md WN gold Follow-up line 213 (Claude, AUDIT-WORKING-471203)
+text: 'Seed mechanisms for gamma_A(||delta_B||): (i) erratic actions degrade coupling-channel structure; (ii) degrading M_t widens action variance.'

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 6cd251b54af34350269a62ef33c054f8fe0f50463e73ed0b56032987809b087b
+at: 2026-10-31T02:17:49Z
+store: asf
+act: raise
+about: item:readers-ask-der-team-persistence
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:readers-ask-der-team-persistence
+source: 01-aat-core/src/der-team-persistence.md WN gold Follow-up line 140
+text: 'Name Brooks''s Law where the coordination-overhead threshold is introduced (193847, 849201, 773921); #impl-composition-machinery already does. Also WN line 142: lift the communication-vs-action distinction into the Formal Expression (451729).'

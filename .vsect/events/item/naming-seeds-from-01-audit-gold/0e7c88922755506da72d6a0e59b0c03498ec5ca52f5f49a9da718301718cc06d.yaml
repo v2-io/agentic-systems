@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 0e7c88922755506da72d6a0e59b0c03498ec5ca52f5f49a9da718301718cc06d
+at: 2026-10-31T02:19:36Z
+store: asf
+act: raise
+about: item:naming-seeds-from-01-audit-gold
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:naming-seeds-from-01-audit-gold
+source: '01-aat-core gold Follow-ups: def-causal-information-yield.md WN 74 (471203, 361742, 266847); der-recursive-update.md WN 71 (471203); disc-composition-consistency.md WN 129 (266847, 527914)'
+text: 'Three more naming seeds: CIY''s name connotes learning gain while it measures action-distinguishability (surface the gloss in the title); ''completeness'' bundles predictive completeness and behavioral (Markov-of-policy) completeness; composition Tier 1/2/3 and ''Tier 1M'' are enumeration, not names.'

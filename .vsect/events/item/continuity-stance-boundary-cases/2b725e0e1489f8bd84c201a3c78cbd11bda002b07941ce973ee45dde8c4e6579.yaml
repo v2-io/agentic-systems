@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 2b725e0e1489f8bd84c201a3c78cbd11bda002b07941ce973ee45dde8c4e6579
+at: 2026-10-31T02:16:39Z
+store: asf
+act: raise
+about: item:continuity-stance-boundary-cases
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:continuity-stance-boundary-cases
+source: 01-aat-core/src/disc-continuity-stance.md WN gold Follow-up line 81 (773921, 526815)
+text: Gold convergence on the serverless-with-auto-retry boundary case.

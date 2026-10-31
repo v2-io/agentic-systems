@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: dba478a05724337900bfc685d267319dfc3a650e7a5433d94cbff465ddc777a0
+at: 2026-10-31T02:16:37Z
+store: asf
+act: raise
+about: item:todo-lint-outline-eq-tag-topological-priority-646d
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-lint-outline-eq-tag-topological-priority-646d
+source: '01-aat-core gold-lift Working Notes (wn-01-gold drain): instances still undeclared at HEAD 4175aae7'
+text: 'Undeclared dependencies the gold recorded, checked at 4175aae7: #hyp-mismatch-dynamics''s Epistemic Status justifies the fluid limit by #deriv-discrete-sector-condition, absent from depends (742613; WN line 95); #norm-explicit-strategy-condition grounds its criterion in #result-persistence-condition, absent (526815; WN line 108); #der-gain-sector-bridge uses (PI) from #scope-agent-identity, absent, while scope-agent-identity sits later in OUTLINE (451729, 584721, 526815; scope-agent-identity WN line 91); #form-strategy-complexity-cost relies on #disc-compression-operations, absent (526815 F71); #deriv-strategic-composition uses #der-gain-sector-bridge, absent (F239). #result-mismatch-decomposition''s def-action-transition (F8) is now declared. audits/audit-findings-526815.md:81-104 lists the class.'

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 36f8a7969fba57918aa85344efd7748037d967fb384bfcf565c4fcfd4a7e6c60
+at: 2026-10-31T02:16:40Z
+store: asf
+act: raise
+about: item:theory-of-mind-missing-from-communication
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:theory-of-mind-missing-from-communication
+source: 01-aat-core/src/hyp-communication-gain.md WN gold Follow-up line 92 (471203, 849201)
+text: Second gold source; 849201 names the segment's meta-model of another agent's model as the attachment point.

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 5be1aafc40daf85669852c83938cb597ebc048794a3e309e5bd12ce6ec759e22
+at: 2026-10-31T02:12:30Z
+store: asf
+act: raise
+about: item:spikes-proposed-two-routes-exhausts-adversarial-spike-on-3366
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-two-routes-exhausts-adversarial-spike-on-3366
+source: 01-aat-core/src/disc-value-functional-grounding-floor.md WN gold Follow-up line 178 (Claude, AUDIT-WORKING-384279)
+text: Three third-route attempts already tried and collapsed (observer-side commitment, inter-agent grounding, substrate-level Goodhart); the spike should inherit them rather than re-derive.
