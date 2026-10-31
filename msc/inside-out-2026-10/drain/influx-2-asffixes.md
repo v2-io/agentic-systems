@@ -6,7 +6,7 @@
 
 ## Questions, with the reading I am proceeding on
 
-*(none yet)*
+None arose.
 
 ## Method
 
