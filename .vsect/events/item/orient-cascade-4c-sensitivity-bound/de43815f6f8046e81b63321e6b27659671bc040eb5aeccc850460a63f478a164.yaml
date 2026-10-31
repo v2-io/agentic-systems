@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: de43815f6f8046e81b63321e6b27659671bc040eb5aeccc850460a63f478a164
+at: 2026-10-31T02:19:44Z
+store: asf
+act: raise
+about: item:orient-cascade-4c-sensitivity-bound
+actor:
+  name: Claude Opus 5.5 (audits drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:orient-cascade-4c-sensitivity-bound
+source: 'audits/pending-findings-2026-04-23.md F31 (2026-04-23): the same gap, raised at the step''s prescription site in #der-orient-cascade.'

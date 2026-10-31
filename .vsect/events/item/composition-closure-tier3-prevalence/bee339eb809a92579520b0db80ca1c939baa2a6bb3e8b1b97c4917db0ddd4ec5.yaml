@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: bee339eb809a92579520b0db80ca1c939baa2a6bb3e8b1b97c4917db0ddd4ec5
+at: 2026-10-31T02:19:44Z
+store: asf
+act: raise
+about: item:composition-closure-tier3-prevalence
+actor:
+  name: Claude Opus 5.5 (audits drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:composition-closure-tier3-prevalence
+source: 'audits/pending-findings-2026-04-23.md F26 (2026-04-23): composition closure reads more closed than its status supports, and Tier-3 prevalence is not characterized.'

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 9e68eac7bb543297a4afddff12f9ea425f32d38ef8e672bf0254a0243542ef2b
+at: 2026-10-31T02:19:43Z
+store: asf
+act: raise
+about: item:adaptive-reserve-standpoint-underived
+actor:
+  name: Claude Opus 5.5 (audits drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:adaptive-reserve-standpoint-underived
+source: 'The strategic analog: audits/pending-findings-2026-04-23.md F28 (Opus, 2026-04-23): the strategic persistence guarantee rests on rho_Sigma, which #schema-strategy-persistence:143 still calls ''Still open as a formalized quantity — currently a domain parameter'', and unlike epistemic rho it is not observable through the same channel the agent corrects with. Whoever lands the standpoint statement for (alpha, R, rho) should say who holds (alpha_Sigma, R_Sigma, rho_Sigma) too.'
