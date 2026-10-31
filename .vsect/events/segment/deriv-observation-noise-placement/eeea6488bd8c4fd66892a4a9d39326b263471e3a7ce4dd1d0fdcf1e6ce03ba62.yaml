@@ -1,0 +1,44 @@
+schema: vsect-event/0
+id: eeea6488bd8c4fd66892a4a9d39326b263471e3a7ce4dd1d0fdcf1e6ce03ba62
+at: 2026-10-31T03:31:20Z
+store: asf
+act: rederive
+about: segment:deriv-observation-noise-placement
+actor:
+  name: c1-defender-noise
+  role: integrator
+  read:
+  - segment:result-persistence-condition
+  - segment:deriv-sector-condition
+normalizer: vsect-norm/0
+at-commit: 2f622c4b
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-adaptive-tempo: 7c9e7a2297a73b91aefa7e16c89b911c08289901b427e00d28d8c975c92c259f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:der-adversarial-destabilization: 7a7fd495a2b47f3c346d6639853aba23dee76acaca1e0551417fe23201026734
+  segment:deriv-observation-noise-placement: ebaaba00ee36a502cf04b7dd0acdb4c9b1a55a6556a1bbc5d302e837ef43108f
+  segment:deriv-sector-condition: 9f0758ed7bc37d6f067d005b9f920c9bc9ed4a45463768b7a2c3131a44ac5b29
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:hyp-mismatch-dynamics: 81832f876549b712e8493fd4728ffb2ada16bbd5521447c142e69a80adc36062
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-adversarial-tempo-advantage: e1ae2367f82923545613b66ea0e8bf99615703b17ba5a78b9371c62b279bea2e
+  segment:result-persistence-condition: 382bfbdfce370119cb7f41c8161baf42fa9415a28646b553fbed7f3a9641fce4
+  segment:result-sector-condition-stability: 2537d83bd9bb560749fbef37563e26529e31557ae95e7268bfd5fa4496383e89
+  segment:result-sector-persistence-template: e81dfed0853e9582d41e15e3a737f8fe1829370f72fedf1766ddb60ef07a2d2a
+  segment:scope-adaptive-system: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+committed: after
+criterion: 'P2(c): with event rate $\nu_A$, per-event gain $h_A$ and per-event noise $s_A^2$, $\alpha_A^2\sigma_{\nu,A}^2 = \alpha_A h_A s_A^2$, so $V_A = n\sigma_{\text{env},A}^2/(2\alpha_A) + nh_As_A^2/2$; dominance fails near $\alpha_A \sim \sigma_{\text{env},A}^2/(h_As_A^2)$ and the exponent goes $3/2 \to 1$ with ratio $\gamma_A\alpha_A/(s_A\sqrt{h_A\alpha_B})$.'
+effective-version: 22e6db7a54e1a641d8712a636c41de600f4694e786d8badee86a9cac4058077a
+from: review:defender-noise-round-2#C2
+line: derivation
+outcome: confirmed
+recheck: 'By hand from $\sigma_{\nu,A}^2 = s_A^2/\nu_A$ and $\alpha_A = \nu_Ah_A$. Numerically: local exponent $1.494$ at low tempo and $1.000$ at high tempo (second source).'
+target-version: ebaaba00ee36a502cf04b7dd0acdb4c9b1a55a6556a1bbc5d302e837ef43108f
+version-from: git-revision

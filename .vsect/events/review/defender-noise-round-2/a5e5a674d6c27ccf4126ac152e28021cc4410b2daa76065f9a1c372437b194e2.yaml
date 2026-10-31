@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: a5e5a674d6c27ccf4126ac152e28021cc4410b2daa76065f9a1c372437b194e2
+at: 2026-10-31T03:31:21Z
+store: asf
+act: take
+about: review:defender-noise-round-2
+actor:
+  name: c1-defender-noise
+  role: integrator
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+- C4:check
+review: reviews/defender-noise-round-2.md
+review-version: 65d6c9e6ca45cf152112e543e93c42e1863b5e78556ab4ba128c5b7b370c6cc9

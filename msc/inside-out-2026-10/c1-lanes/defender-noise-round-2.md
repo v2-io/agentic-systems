@@ -30,6 +30,8 @@ The checker suggested grepping for the mechanism a fix refutes. The same "faster
 4. Whether any other surface still carries "regardless of loop speed" or "event rate keeps the coupling dominant". I grepped 01–04 and the README partials.
 5. Lapsed checks: `vsect revise` reported ten checks resting on the old text of `#deriv-observation-noise-placement`, `#obs-gated-tempo-advantage`, `#result-adversarial-tempo-advantage` and `#disc-constructive-impossibility-posture` (the last through a dependency). They need a second mind's `vsect confirm --checks …`. Scope it, as check 1 warned.
 
+6. Check 1's findings F1–F6 and F8 are still open in `vsect open`. vsect lets only a mind other than the reviser mark a finding answered (`vsect findings --answered review:defender-noise-check-1#Fn --by-revision …`), so that falls to the next checker. The revision is `2f622c4b` on this branch.
+
 ## Open
 
 - `question:model-s-total-disturbance-downstream` stays open for its non-adversarial segments.
