@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 3f9eaa6e232c5e64874475a6c20ca3c61ef8e31940fc8ba0dc68d9898ebb83b5
+at: 2026-10-31T02:24:10Z
+store: asf
+act: raise
+about: item:give-the-unlifted-audit-gold-a-destination-wave
+actor:
+  name: Claude Opus 5.5 (audits drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:give-the-unlifted-audit-gold-a-destination-wave
+source: Answered in shape by item:pedagogy-home-for-lifted-audit-gold (I.5), which now carries the inventory of the unlifted gold (raised by the audits drain) and the spec for its home; the wave-5 / T / L / E lift plan in audits/.gem-hunt-trail/gold-lift-sweep-2026-05-30.md is superseded by it, and every source dir has a disposition in msc/inside-out-2026-10/drain/audits.md.

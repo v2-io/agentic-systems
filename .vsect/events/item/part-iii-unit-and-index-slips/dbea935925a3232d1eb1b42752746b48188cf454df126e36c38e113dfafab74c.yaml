@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: dbea935925a3232d1eb1b42752746b48188cf454df126e36c38e113dfafab74c
+at: 2026-10-31T02:25:01Z
+store: asf
+act: close
+about: item:part-iii-unit-and-index-slips
+actor:
+  name: Claude Opus 5.5 (audits drain)
+  role: drain
+normalizer: vsect-norm/0
+outcome: superseded
+reason: 'Split into one item per segment so each integrator can close its own: item:channel-classification-case1-nats-vs-bits, item:strategic-unity-kl-ratio-unbounded, item:multi-agent-observation-same-step-actions.'

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 3446c9cc145bbdbe9d433200ffd13dc80ffff9b593ba73d05b0160adcec54e11
+at: 2026-10-31T02:24:10Z
+store: asf
+act: raise
+about: item:influx-ib-beta-rho-and-exactness
+actor:
+  name: Claude Opus 5.5 (audits drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:influx-ib-beta-rho-and-exactness
+source: 'The Class-1 compression price this item''s tail asks about is owed a check, not closed by inference. Sources: audits/audit-731548-FINAL-2026-07-02.md §D(1) and its post-report spot-check (§F last bullet: the hypothesis ''survives'' a reading of #der-directed-separation, which prices tempo but not the IB cost of a goal-blind phi); audits/AUDIT-WORKING-731548/11-form-information-bottleneck.md (gold contrarian pass, the ''first crack in the armor'' item from 829314); audits/aat-reboot-aux-supplemental/10-form-information-bottleneck.md:39 with Still 2009 eq. 20 as a lead. The question today''s allocation clause sharpens: #der-directed-separation:58 permits goal-dependent retention under a condition, while :94 says Class 1 holds kappa_processing = 0 (no goal information reaches M_{tau+} except through e_tau) under every distribution, and goal-dependent retention makes the goal recoverable from what was retained. So either allocation lies outside strict Class 1 (and the compression price of strict goal-blindness is live), or kappa''s definition needs the allocation case carved out. The audits drain first marked this dissolved; that was an inference from the clause''s shape and is withdrawn.'
