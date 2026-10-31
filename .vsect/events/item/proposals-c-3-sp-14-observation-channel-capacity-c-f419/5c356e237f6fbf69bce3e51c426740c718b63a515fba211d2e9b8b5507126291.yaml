@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 5c356e237f6fbf69bce3e51c426740c718b63a515fba211d2e9b8b5507126291
+at: 2026-10-31T02:22:24Z
+store: asf
+act: raise
+about: item:proposals-c-3-sp-14-observation-channel-capacity-c-f419
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:proposals-c-3-sp-14-observation-channel-capacity-c-f419
+source: 01-aat-core/src/deriv-persistence-cost.md Working Notes 'Observation-channel capacity as notation' (lift Shannon capacity C^(k) into NOTATION and relate it to U_o; 'the biggest architectural opening from this theorem').

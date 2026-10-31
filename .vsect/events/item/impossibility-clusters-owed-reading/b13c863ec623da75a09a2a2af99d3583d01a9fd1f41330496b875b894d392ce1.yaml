@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: b13c863ec623da75a09a2a2af99d3583d01a9fd1f41330496b875b894d392ce1
+at: 2026-10-31T02:22:25Z
+store: asf
+act: raise
+about: item:impossibility-clusters-owed-reading
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:impossibility-clusters-owed-reading
+source: 01-aat-core/src/deriv-social-welfare-aggregation-impossibility.md Working Notes 'Open before candidate' (a) (Arrow 1951/1963, now from Geanakoplos 2005 and Reny 2001) and 01-aat-core/src/deriv-strategy-proofness-impossibility.md Working Notes 'Open before candidate' (a) (Gibbard 1973, Satterthwaite 1975, now from Mas-Colell, Whinston and Green 1995 §23.C and Reny 2001).

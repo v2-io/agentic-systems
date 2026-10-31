@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 7dc0f527d3319724e9f2e4074044c8938fc4f0e176ca864bc298caa2253f0d7d
+at: 2026-10-31T02:22:26Z
+store: asf
+act: raise
+about: item:proposals-e-3-sp-9-fenchel-bregman-reframe-of-addi-d684
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:proposals-e-3-sp-9-fenchel-bregman-reframe-of-addi-d684
+source: '01-aat-core/src/deriv-strategy-cost-regret-bound.md Working Notes ''Fenchel-Bregman connection to #deriv-edge-update-natural-parameter'' (§6.3 identifies reverse-KL and log-odds as Fenchel-dual coordinates; the four-layer reading is meta-segment level).'

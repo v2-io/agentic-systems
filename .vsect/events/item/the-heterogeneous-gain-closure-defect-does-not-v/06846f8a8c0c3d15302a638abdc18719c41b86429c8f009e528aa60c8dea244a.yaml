@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 06846f8a8c0c3d15302a638abdc18719c41b86429c8f009e528aa60c8dea244a
+at: 2026-10-31T02:22:28Z
+store: asf
+act: raise
+about: item:the-heterogeneous-gain-closure-defect-does-not-v
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:the-heterogeneous-gain-closure-defect-does-not-v
+source: 01-aat-core/src/disc-compression-operations.md Working Notes 'The heterogeneous-gain numeric check is unrun' (the IB-optimal rotation should beat the means-sum when Delta K != 0); now item two-kalman-ib-frontier-and-numeric-check.

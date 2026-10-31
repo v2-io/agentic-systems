@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 24bbb6b44f27a3474d4764ca01b30a9da47dc6e94728034f2d2ba892e769274e
+at: 2026-10-31T02:22:29Z
+store: asf
+act: raise
+about: item:w1-boundary-toy-sim-unregistered
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:w1-boundary-toy-sim-unregistered
+source: 01-aat-core/src/disc-w1-structural-bound-boundary.md Working Notes, second item (the sim 'blocking on G3 in INTEGRATION-CLEANUP-TODO.md', a file deleted today).

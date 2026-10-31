@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: bcccf678843b46410887916aa5ca3f14e47a2e7fc08b84e8c2995a34e881e793
+at: 2026-10-31T02:22:29Z
+store: asf
+act: raise
+about: item:land-the-leakage-locus-result-of-spikes-spike-le
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:land-the-leakage-locus-result-of-spikes-spike-le
+source: '01-aat-core/src/disc-partial-coupling-pathways.md Working Notes ''Connection back to #def-agent-spectrum Working Note'': when the leakage-locus result lands, make the where-in-state-space (locus) and through-what-stage (typology) cross-reference explicit on both sides.'

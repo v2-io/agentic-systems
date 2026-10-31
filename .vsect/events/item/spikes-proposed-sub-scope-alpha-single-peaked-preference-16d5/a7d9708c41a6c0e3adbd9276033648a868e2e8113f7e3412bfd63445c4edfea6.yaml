@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: a7d9708c41a6c0e3adbd9276033648a868e2e8113f7e3412bfd63445c4edfea6
+at: 2026-10-31T02:22:26Z
+store: asf
+act: raise
+about: item:spikes-proposed-sub-scope-alpha-single-peaked-preference-16d5
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-sub-scope-alpha-single-peaked-preference-16d5
+source: '01-aat-core/src/deriv-strategy-proofness-impossibility.md Working Notes ''Open before candidate'' (c) (canonical home) and 01-aat-core/src/deriv-social-welfare-aggregation-impossibility.md Working Notes ''Open before candidate'' (c): if single-peaked preferences on an issue space derivably induce a potential game under best-response dynamics, the GS and Arrow adjacencies lift to exact together. The GS note''s (b), alternative AAT readings (f as a Sigma-level commitment device; sub-agents as VCG bidders), is a further candidate sub-spike.'

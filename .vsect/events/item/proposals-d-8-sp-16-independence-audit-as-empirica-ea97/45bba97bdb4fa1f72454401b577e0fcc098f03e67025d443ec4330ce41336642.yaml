@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 45bba97bdb4fa1f72454401b577e0fcc098f03e67025d443ec4330ce41336642
+at: 2026-10-31T02:22:28Z
+store: asf
+act: raise
+about: item:proposals-d-8-sp-16-independence-audit-as-empirica-ea97
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:proposals-d-8-sp-16-independence-audit-as-empirica-ea97
+source: '01-aat-core/src/disc-independence-audit.md Working Notes ''Empirical audit'' (score a concrete agent against the six assumptions: software agents roughly hold Separated, Regime A and channel independence, may fail scalar tempo; LLM agents fail directed separation structurally).'

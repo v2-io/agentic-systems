@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 87cfeee45e15a16ac5b3a88b8e10a781e8081a3116c13439c3e9e3deaed6b027
+at: 2026-10-31T02:22:25Z
+store: asf
+act: raise
+about: item:structural-adaptation-genericity-bridge
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:structural-adaptation-genericity-bridge
+source: '01-aat-core/src/deriv-sector-condition.md Working Notes ''Low-confidence ideation'', second glimpse: LLM/ELI operating environments are Model-S-like, so the corrected (iii'') plus the dichotomy would make structural (not only parametric) adaptation certain over an unbounded horizon for long-lived language-constituted agents, tying persistence to continuity (the note still uses the retired ''Three-Deaths'' name). Also 01-aat-core/src/sketch-structural-adaptation-genericity.md Working Notes, last item: if the bridge is a no-go, check whether it is an identifiability-floor-shaped instance.'

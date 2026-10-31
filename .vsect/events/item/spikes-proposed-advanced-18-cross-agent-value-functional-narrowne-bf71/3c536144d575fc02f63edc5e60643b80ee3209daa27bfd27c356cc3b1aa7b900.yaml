@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 3c536144d575fc02f63edc5e60643b80ee3209daa27bfd27c356cc3b1aa7b900
+at: 2026-10-31T02:22:25Z
+store: asf
+act: raise
+about: item:spikes-proposed-advanced-18-cross-agent-value-functional-narrowne-bf71
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-advanced-18-cross-agent-value-functional-narrowne-bf71
+source: 01-aat-core/src/deriv-social-welfare-aggregation-impossibility.md Working Notes 'Open before candidate' (b) and 'The Arrow-unique cardinal adjacency as the cluster's most-illuminating open question' (whether cross-agent aggregation of the per-sub-agent cardinal V_O extends the framework or needs separate designer-side machinery).

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: ed2365081051f9bc239fa04c3642f90dc5d2402292de3d979b8b56f597bcf02b
+at: 2026-10-31T02:22:27Z
+store: asf
+act: raise
+about: item:untested-catalog-predictions-for-e
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:untested-catalog-predictions-for-e
+source: '01-aat-core/src/deriv-update-detection-latency.md Working Notes ''Testable prediction'' (detection latency for a fixed footprint epsilon should scale linearly in accumulated n: drifting bandits, simulated organizations with commit-log task environments, human noisy-signal regime detection).'

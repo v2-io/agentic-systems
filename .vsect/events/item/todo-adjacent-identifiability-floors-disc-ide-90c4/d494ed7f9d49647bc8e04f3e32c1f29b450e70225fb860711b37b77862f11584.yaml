@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: d494ed7f9d49647bc8e04f3e32c1f29b450e70225fb860711b37b77862f11584
+at: 2026-10-31T02:22:24Z
+store: asf
+act: raise
+about: item:todo-adjacent-identifiability-floors-disc-ide-90c4
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-adjacent-identifiability-floors-disc-ide-90c4
+source: '01-aat-core/src/deriv-persistence-cost.md Working Notes ''Misspecification cost'': when F(M) < 1 - epsilon, achievable distortion has a floor D_floor, and no information rate buys an error below it, so the floor caps the rate worth spending (the cost side of the misspecification-cost extension).'

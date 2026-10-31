@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 9156ebc3f8b317cffaa22acc1d11a3cd3bf4079a66f6f827c1a95aea15f7e267
+at: 2026-10-31T02:25:51Z
+store: asf
+act: correct
+about: item:spikes-proposed-advanced-15-categorical-cybernetics-re-grounding-9642
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+corrects: 18dbbbb9bc4e054865f15000f688e33e4a8de9363d2d1b44c4f2db624c4c3f12
+text: 'Wrong: the path did not vanish; it moved to spikes/.integrated/spike-enrichment-cluster2-2026-05-21/ (found by the p2 part of the same drain). The source trail is intact there.'

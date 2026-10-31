@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 12dfd10f541959f1f760dff6c40cfef3fe89eb1e36f255bdee965f77cf5798f0
+at: 2026-10-31T02:22:27Z
+store: asf
+act: raise
+about: item:mismatch-dynamics-model-d-equality-scope
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:mismatch-dynamics-model-d-equality-scope
+source: '01-aat-core/src/detail-linear-ode-approximation.md Working Notes, second item: the norm-inequality subtlety carries into the adversarial scaling law, so b = 2 is exact for n = 1 and a worst-case upper bound for n > 1; whether that matters quantitatively in multi-dimensional adversarial dynamics has not been simulated.'

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 632018fb38bf0a9a3081cf7d4e3f50137bcf61d2e987920b0567d2fae779a716
+at: 2026-10-31T02:22:27Z
+store: asf
+act: raise
+about: question:separability-general-open-infectious
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: question:separability-general-open-infectious
+source: 01-aat-core/src/disc-approximation-tiering.md Working Notes 'Interaction between tierings' (is there cross-hierarchy monotonicity; does L1 change the convention hierarchy's guarantees).

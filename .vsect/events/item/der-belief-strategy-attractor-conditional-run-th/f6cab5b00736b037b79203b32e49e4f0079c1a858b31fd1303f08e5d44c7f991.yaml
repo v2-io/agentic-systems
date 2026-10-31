@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: f6cab5b00736b037b79203b32e49e4f0079c1a858b31fd1303f08e5d44c7f991
+at: 2026-10-31T02:22:28Z
+store: asf
+act: raise
+about: item:der-belief-strategy-attractor-conditional-run-th
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:der-belief-strategy-attractor-conditional-run-th
+source: 01-aat-core/src/disc-partial-coupling-pathways.md Working Notes 'Promotion path requires two sub-spikes' (its 'Both are in TODO.md' is stale; this item is where they are).

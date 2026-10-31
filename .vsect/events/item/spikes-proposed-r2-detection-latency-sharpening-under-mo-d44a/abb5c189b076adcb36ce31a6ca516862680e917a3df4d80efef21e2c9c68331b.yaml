@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: abb5c189b076adcb36ce31a6ca516862680e917a3df4d80efef21e2c9c68331b
+at: 2026-10-31T02:22:26Z
+store: asf
+act: raise
+about: item:spikes-proposed-r2-detection-latency-sharpening-under-mo-d44a
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-r2-detection-latency-sharpening-under-mo-d44a
+source: '01-aat-core/src/deriv-update-detection-latency.md Working Notes ''R2 sharpening (model-class inadequacy)'' (common-mode bias under C1 keeps delta_regret small; compute it from #result-mismatch-decomposition''s model-error term and show it is O(1) for directional misspecification).'

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 8ba99947a4956f0d548f6379c8471635ff25a55064f906c0468c19f2f92c5405
+at: 2026-10-31T02:22:26Z
+store: asf
+act: raise
+about: item:todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe
+source: 01-aat-core/src/deriv-tempo-additivity.md Working Notes 'Loewner-order statement' (the tensor versions of the deviation and the common-source bound are asserted, not written out).

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 6afee159581ea45e705c2e152506e256349c631734dd9c7cf28a18b58d60beb8
+at: 2026-10-31T02:22:27Z
+store: asf
+act: raise
+about: item:separability-ladder-extensions-and-necessity
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:separability-ladder-extensions-and-necessity
+source: 01-aat-core/src/disc-approximation-tiering.md Working Notes 'Formal characterization of the tiering pattern' (lattices of model classes, rate-distortion corners, Galerkin hierarchies; none matches; the tierings read as 'ordered families of sufficient conditions').

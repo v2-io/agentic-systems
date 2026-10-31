@@ -2,7 +2,7 @@
 
 *KR I.9 of `../INTENT.md` (every backlog surface drained into the ledger, one disposition per source item), serving I.10 (signal against noise) and I.5 (Working Notes carry only forward pointers and regression guards). Top intent: "Complete "in-place" refactor of ASF-- meta, all artifacts, and theory itself." Working file, 2026-10-30, written as it goes.*
 
-*In progress. Parts are being read in parallel; each part's dispositions land in `wn-01-other-pN.md` beside this file and are merged here when done.*
+*Complete: all 752 items have one disposition each, and every part's file is merged here. The summary of what the drain found comes first; the per-item record follows under Dispositions.*
 
 ## What this covers, and how it was cut
 
@@ -33,16 +33,43 @@
 | part | OUTLINE sections | items | segments | file | coverage |
 |---|---|---|---|---|---|
 | p1 | Appendix A, `der-belief-…` to `deriv-mismatch-…` | 79 | 17 | `wn-01-other-p1.md` | **done** by the p6 helper: every item read whole and disposed; merged below (this commit) |
-| p2 | Appendix A, `deriv-persistence-cost` to the end | 113 | 24 | `wn-01-other-p2.md` | with a third helper fork; merged here when it returns |
+| p2 | Appendix A, `deriv-persistence-cost` to the end | 113 | 24 | `wn-01-other-p2.md` | **done** by a helper fork: every item read whole and disposed; merged below |
 | p3 | Part II Meta-Architecture I | 104 | 16 | `wn-01-other-p3.md` | **done**: every item read whole and disposed (this commit) |
 | p4 | Part I (all chapters) and the Part II preface and Lift | 141 | 28 | `wn-01-other-p4.md` | **done**: every item read whole and disposed (4d8bb49a, 9fcddd48, f0f81911) |
 | p5 | Part II Causal Access, Strategy Structure, Strategy Dynamics, Orient Cascade | 130 | 25 | `wn-01-other-p5.md` | **done** by a helper fork: every item read whole and disposed; merged below (this commit) |
 | p6 | Part III Meta-Architecture II, Scope and Formation, Composition Machinery | 85 | 11 | `wn-01-other-p6.md` | **done** by a helper fork: every item read whole and disposed; merged below (this commit) |
 | p7 | Part III Unity, Cooperative/Adversarial, Strategic Composition; Appendix B | 100 | 21 | `wn-01-other-p7.md` | **done**: every item read whole and disposed (this commit) |
 
-**Helpers.** The first six fork launches were refused (the session's subagent cap). Later two went through, for p5 and p6, writing to `wn-01-other-p5.md` and `-p6.md`; p7, p1 and p2 were refused again and are read here, in that order, after p4 and p3. The coverage column above is updated as each part closes.
+**Helpers.** The first six fork launches were refused (the session's subagent cap). Later, forks went through for p5 and p6; the p6 fork then also took p1, and a third fork took p2. This agent read p4, p3 and p7. Each helper wrote a part file, which was read whole, merged here and deleted; the `file` column names those part files, which no longer exist.
 
 **Cross-surface rule (Joseph, relayed 2026-10-30).** For each item that makes or joins a ledger entry, the other surfaces were searched for the same claim (slug and key phrases over `audits/`, `spikes/`, `msc/`, the influx regional files, other segments' Working Notes, `items/`, `questions/`). One ledger item carries every source found. Canon, history and guard dispositions were not searched across surfaces; nothing turns on them.
+
+## What the drain found
+
+**Coverage.** 752 of 752 items have a disposition, checked by script against the extraction ids. This agent read p3, p4 and p7 whole (345 items). Helper forks read p1, p2, p5 and p6 whole (407 items). This agent read each helper's file whole before merging it, but did not re-read the 407 items under it. A body check means a grep of the segment body (Working Notes excluded), plus a read of the paragraph where the grep hit. Where a disposition rests on the note's words alone, its line says so. Cross-surface search was a grep of the ledger (`items/`, `questions/`) for each owed or joined item, plus targeted greps of `audits/`, `spikes/`, `msc/` and the influx files on key phrases. It was not an exhaustive per-item sweep. `memorata-search` was not used, and no influx primary was opened.
+
+**Dispositions, all parts.** canon 79 · superseded 12 · owed or defect, into ledger items 212 · joined an existing ledger record 175 · guard 106 · set aside, with reason 164 · unclassified by the tally 4. The p1, p2, p5 and p6 figures are the helpers' own counts. The p3, p4 and p7 figures come from a script that takes each line's first disposition word, so an item split across two dispositions counts once, and the four unclassified are multi-id lines the script mis-split. Read the totals as good to a few items, not exact.
+
+**Ledger effect.** 108 items opened (62 here, 46 by helpers) and about 107 sources raised onto existing items and questions. One pair was opened twice in parallel: `item:composition-closure-regime-scope-unstated` is closed as a duplicate of `item:part-iii-segments-name-their-regime-tier`. New items by owner: C.4 74 · G.2 8 · F.2 8 · A.1 5 · H.1 4 · C.1 4 · E.2 3 · C.3 1 · I.5 1.
+
+**What I.5 inherits.** About 106 items stay as forward pointers and regression guards. That is about one Working-Note item in seven. Every other item is now in canon, in the ledger, or set aside with a reason recorded here, so it can leave the Working Notes. Three hazards for that cleanup:
+- Some bodies cite their own Working Notes for content: `#der-observability-dominance`'s Claim Record and `#def-chronica`:17 so far. The content has to move before the note is deleted (item:canon-bodies-point-into-working-notes, I.5). Grep bodies for "Working Note" first.
+- Several kept pointers name spike paths that moved to `spikes/.integrated/`: `fight/`, `spike-enrichment-cluster1/2-2026-05-21/`, `spike-value-object-convention-monotonicity-2026-05-30/` (the last holds reproducibility scripts), and `spike-causal-level-4-strictness-2026-07-16.md`. Repoint them; don't delete them.
+- Some guards carry stale text that should be fixed when the guard is kept. `#deriv-convention-monotonicity`'s dead-end guard still states the (PC)/(SO) characterization the Part II check refuted (raised onto review:part-ii-check-1-b1-records#F1). `#der-team-persistence` and `#deriv-sector-condition` use retired deaths names.
+
+**Findings that change what canon says, in my judgment ordered by consequence.**
+1. **Exact results stated without premises their own notes name.** `#result-adversarial-tempo-advantage` calls its exponents exact without saying tempo is treated as exogenous or that scalar tempo assumes channel independence (item:adversarial-tempo-advantage-unstated-premises). `#deriv-gain-sector`'s bridge is an expectation-level argument and does not say so (item:gain-sector-bridge-in-expectation-scope). `#form-composition-closure` never names the R0 regime its (A2) and (A4) presume, and neither do its Part III citers (item:part-iii-segments-name-their-regime-tier). In all three the honest form is in the Working Notes, a few lines below the overstated body.
+2. **Mathematics that lives only in Working Notes.** The Mori–Zwanzig upper bound $\varepsilon^\ast \le C\lVert K\rVert$, with no derivation written anywhere (item:composition-closure-mz-upper-bound-unverified). The measured dynamic-$\theta$ behaviour of `#der-tempo-composition`'s own witness (item:tempo-composition-dynamic-theta-witness). The result of the search that makes M3 a single-agent family (item:additive-coordinate-forcing-is-single-agent). Each needs verifying, then landing or deleting.
+3. **Joseph's thinking with no home but a Working Note.** The grounding/intent reading of directed separation, the plainest answer in asf to why goal-update coupling governs so much (item:grounding-intent-reframe-of-directed-separation). The TRACTUS/CHRONICA question he asked to have documented (item:tractus-chronica-split-for-logogenic-implementation). His 2026-08-22 hypothesis that decoupling can itself be self-defeating (item:decoupling-self-defeat-modes).
+4. **Small canon breakages.** `#disc-continuity-stance` cites `#self-actuated-agent`, which no segment has (item:self-actuated-agent-dangling-slug). `#der-orient-cascade` states its virtuous/vicious cycle with no tag, and its own note says the cycle is underived (item:orient-cascade-virtuous-cycle-underived).
+
+**A note on the tree, for the lead.** 74 of the 108 new items sit under C.4. Its wording, "Part III and the open strengthenings outside C1–C3 have an owner", fits them, but it now holds most of the theory's open frontier as recorded in Working Notes, in one undifferentiated pile. If C.4 is to be worked, it probably wants sub-KRs by cluster: the strategy-DAG optimality questions; composition and closure; the persistence extensions; the impossibility clusters; the coupling typology. Those clusters are visible in the item slugs. I have not proposed them in INTENT; that is the lead's call.
+
+**Mistakes made and corrected in this drain**, kept here so a reader can weigh the rest:
+- p4 first said Volume 3 carries the IDT sidecar pattern; it is only in a 03 Working Note, and is now owed.
+- p3 said two spike paths were gone when they had moved; the raise that repeated this is annotated.
+- An item said no analysis of edge-update double counting existed when `spikes/.integrated/spike-edge-semantics-resolution.md` §7 has one; the item now says so.
+- A merge script deleted p2's file before its content reached this one; the helper rewrote it and it was verified complete before merging.
 
 ## Dispositions
 
@@ -320,7 +347,7 @@ The live correctness findings on this segment sit in its gold Off-ramp (gold-lif
 
 #### `disc-stability-certificate`
 
-- [463] "**Provenance.**", [464] "**Interior-facet Helmholtz $S/A$ refinement (2026-05-22).**" — **set aside** (history; the refinement is in `#result-certificate-existence`; [464]'s `spikes/spike-enrichment-cluster1-2026-05-21/` path no longer exists).
+- [463] "**Provenance.**", [464] "**Interior-facet Helmholtz $S/A$ refinement (2026-05-22).**" — **set aside** (history; the refinement is in `#result-certificate-existence`; [464]'s `spikes/spike-enrichment-cluster1-2026-05-21/` path is stale: the directory moved to `spikes/.integrated/`).
 - [465] "**Dependency rationale (for Gate-1 audit).**" — **guard**.
 - [466] "**Provisional slug.**" — **set aside** (naming record).
 - [467] "**Findings Brief sharpening queued (2026-05-28…)**" — **superseded**: the Brief (:92) now states option (i), the measure chosen so that every correction provably shrinks it faster than the world pushes it (checked).
@@ -348,7 +375,7 @@ The live correctness findings on this segment sit in its gold Off-ramp (gold-lif
 - [515] "~~The bridge lemma's contraction assumption…~~ **CHARACTERIZED 2026-04-06**" — **canon** (the incremental bound is in the body, :254; checked).
 - [517] "**A richer toy case** is needed…" — **joined item:todo-composition-admissibility-mathcal-m-text-10c4** (raised).
 - [518] "The approach is an approximate dynamical homomorphism condition…" — **canon** (Related Work, :340).
-- [519] "**Categorical-cybernetics fit-check candidate (added 2026-05-22).**" — **joined item:spikes-proposed-advanced-15-categorical-cybernetics-re-grounding-9642** (raised; its source-trail path is dead).
+- [519] "**Categorical-cybernetics fit-check candidate (added 2026-05-22).**" — **joined item:spikes-proposed-advanced-15-categorical-cybernetics-re-grounding-9642** (raised; its source-trail path is stale, the directory having moved to `spikes/.integrated/`. The raise first said the path was gone, and is annotated with the correction).
 - [520] "**Mori-Zwanzig memory-kernel relationship — upper-bound direction closes; named lower bound does not.**" — **owed → item:composition-closure-mz-upper-bound-unverified** (C.4: verify, then land or delete).
 - [521] "**Dynamic-regime placement (added 2026-05-21…)**" — **defect → item:part-iii-segments-name-their-regime-tier** (C.3). Checked: the body never names the regime. (The p6 helper and this part filed it at the same moment; item:composition-closure-regime-scope-unstated is closed as its duplicate.)
 - [522], [523] "**Track E surface-back of catalog citations (2026-05-22).**" and its footnote — **joined item:primary-source-verify-or-replace-with-read-sourc** (raised).
@@ -937,3 +964,180 @@ The $\nu$-versus-$\mathcal T$ collision and the one-sided noise prescription are
 - [250] "`#example-kalman` is consumed by Corollary 1c … but deliberately absent from `depends:`…" — **guard** (explains a deliberate omission that `bin/lint-outline` would otherwise trip on).
 - [251] "The class-ceiling leg of Proposition 4 and $\mathcal F(\mathcal M)$ … are defined over different objects…" — **joined item:influx-sufficiency-fitness-horizon-and-class** (C.4). The body's table (:104) already marks the identification as interpretation.
 - [252] "Under Model S the relation $R^\ast = \rho/\alpha$ changes homogeneity in $\alpha$…" — **owed → item:mismatch-budget-attribution-under-model-s** (C.4).
+
+### Part p2 — Appendix A, `deriv-persistence-cost` to the end (helper fork)
+
+*KR I.9. Written by a fork of the WN-01 drain, to be merged into `wn-01-other.md`. 113 items in 24 segments, all read whole at `dc2b262c`. Body checks were made by grep on the body (Working Notes excluded), reading the matching paragraph where the grep hit; where a disposition rests on the note's own words, it says "per the note; not re-checked". The Part I lane was live on `deriv-sector-condition`, `deriv-stochastic-non-exit`, `detail-linear-ode-approximation`-adjacent `hyp-mismatch-dynamics`, and `result-sector-persistence-template` when this ran; no Working-Note line here is one it is changing as far as its branch diff shows, so nothing below is marked in flight.*
+
+**Counts.** 113 items: canon 12 · superseded 1 · owed → new item 34 (into 15 items) · joined an existing item 21 · guard 21 · set aside 24. An item split between dispositions is counted under its main one.
+
+**New ledger items (15):** item:persistence-cost-extensions, item:regime-indistinguishability-extensions, item:cor-a1s1-dichotomy-recurrence, item:tempo-additivity-pid-citations, item:tempo-additivity-finite-correlation-interpolation, item:detection-latency-extensions, item:variational-sector-extensions, item:sector-template-extensions, item:approximation-tiering-diagnostic-cost, item:two-kalman-ib-frontier-and-numeric-check, item:independence-audit-dependency-graph-and-bounds, item:partial-coupling-typology-open-lines, item:partial-coupling-brief-feynman, item:w1-leak-amplifying-state, item:resource-budget-open-dynamics. (vsect warned that two looked close to existing items: independence-audit vs `proposals-d-8-sp-16` (the empirical profile, which the new item cites) and resource-budget vs `proposals-d-6-o-bp12` (a master variable across the four $\beta$s, not the budget's own dynamics). Both read and judged distinct.)
+
+**Raised onto existing items (22, `vsect raise`):** todo-adjacent-identifiability-floors-disc-ide-90c4, proposals-c-3-sp-14-observation-channel-capacity-c-f419, primary-source-verify-or-replace-with-read-sourc, structural-adaptation-genericity-bridge, spikes-proposed-advanced-18-cross-agent-value-functional-narrowne-bf71, impossibility-clusters-owed-reading, spikes-proposed-sub-scope-alpha-single-peaked-preference-16d5, proposals-e-3-sp-9-fenchel-bregman-reframe-of-addi-d684, todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe, spikes-proposed-r2-detection-latency-sharpening-under-mo-d44a, untested-catalog-predictions-for-e, mismatch-dynamics-model-d-equality-scope, question:separability-general-open-infectious, separability-ladder-extensions-and-necessity, the-heterogeneous-gain-closure-defect-does-not-v, proposals-d-8-sp-16-independence-audit-as-empirica-ea97, der-belief-strategy-attractor-conditional-run-th, land-the-leakage-locus-result-of-spikes-spike-le, w1-boundary-toy-sim-unregistered, spikes-proposed-decomposed-empirical-estimator-accuracy-e63e, proposals-d-6-o-bp12-resource-budget-b-t-as-master-2773, part-iii-segments-name-their-regime-tier.
+
+**Dead pointers that are not dead.** `spikes/fight/` (`#form-resource-budget` [536]) and `spikes/spike-enrichment-cluster1-2026-05-21/` (`#result-certificate-existence` [705]) both exist under `spikes/.integrated/`; the Working-Note paths just predate the move.
+
+#### `deriv-persistence-cost`
+
+- [259] "**Template-cost subsection.**", [260] "**Model D adversarial analog.**", [261] "**Non-Gaussian signals.**", [263] "**Composite persistence cost.**", [265] "**Connection to #schema-strategy-persistence.**" — **owed → item:persistence-cost-extensions** (C.4), (a)–(e). The body has a "Relationship to `#result-sector-persistence-template`" paragraph (:137) that enumerates instantiations but states no parametric template-cost bound. [265]'s "pending spike G" no longer resolves.
+- [262] "**Misspecification cost.**" — **joined item:todo-adjacent-identifiability-floors-disc-ide-90c4** (its misspecification-cost extension; raised).
+- [264] "**Observation-channel capacity as notation.**" — **joined item:proposals-c-3-sp-14-observation-channel-capacity-c-f419** (raised).
+- [266] "**Not forced by a Cauchy-FE axiom.**" — **guard**: records that this bound is a non-example of `#disc-additive-coordinate-forcing` (its linear-in-$\alpha$ coordinate comes from the Gaussian RDF's form, not an additivity axiom). That segment's body does not mention it (grep `persistence-cost`, `rate-distortion`: none); the note keeps someone from cataloguing it as a fourth instance.
+- [267] "**Landauer-coefficient correction (2026-05-30).**" — **set aside** (history; the body carries the corrected $k_BT$/nat form, :121, checked; the refuted 0.35 form is guarded at `#impl-persistence-and-limits`, p4 [623], form (b)).
+
+#### `deriv-recursive-update`
+
+- [268] "C3's definitional character is a feature, not a bug — but it must be stated honestly." — **canon** (:23, "C3 … is *definitional* and cannot be 'violated'"; checked).
+- [269] "The continuous-coupling generalization (Attack 2) deserves a proper note somewhere" — **canon** (the body's "Attack 2: Continuous environmental influence", :137). The event-time seam it touches is item:influx-event-time-seam.
+- [270] "The information-set formalization (Doob-Dynkin) provides the cleanest technical proof." — **canon** in part (the body uses Doob–Dynkin, :125). Which proof is primary is a presentation choice; the body's measure-theoretic restatement has its own open defect, item:influx-recursive-update-information-sets. Set aside beyond that.
+
+#### `deriv-regime-marginal-indistinguishability`
+
+- [271] "**Provenance.**" — **set aside**.
+- [272] "**Cross-regime witness sub-cases.**", [273] "**Connection to escape (e).**", [274] "**Composite-of-composites lift.**", [275] "**Fano-style finite-sample refinement.**" — **owed → item:regime-indistinguishability-extensions** (C.4). [273]'s scoping (escape (e) separates Witness 2, not Witness 1) is not in the body (grep `escape (e)`: none), so the item asks for it there.
+- [276] Migration note — **set aside**.
+- [277] "**Primary-source verification spike queued (2026-05-21).**" and [278] the `[^bg2-2026-05-21]` footnote — **joined item:primary-source-verify-or-replace-with-read-sourc** (raised with the ordered target list and the Hamdan 2000 caution).
+
+#### `deriv-sector-condition`
+
+- [283] "The adversarial extension (Prop A.3, coupled agents) and effects spiral (Cor A.3.1) are in #der-adversarial-destabilization…" — **guard** (where results that used to live here now live).
+- [284] "The vector treatment of $\delta(t) \in \mathbb{R}^n$ connects directly to per-dimension tempo analysis" — **canon** in `#result-per-dimension-persistence` and `#deriv-matrix-persistence-condition`. Set aside.
+- [285] "A global sector condition … would give global stability, making $\Delta\rho^\ast$ infinite" — **canon** (the derivation table, :346, "Global sector condition would give $\Delta\rho^\ast = \infty$ … rejected as unrealistic"; checked).
+- [286] "Landing-context provenance: the sub-scope $\alpha$/$\beta$ partition…" — **set aside** (provenance).
+- [287] "Landing-context provenance (A.1N + register)…" — **guard** (its closing "do not restore a fixed-agent iff" regression guard); the narrative before it is history.
+- [288] "Regression guard (Model S containment)…" — **guard**.
+- [289] "*Low-confidence ideation…*" — first and third glimpses **owed → item:cor-a1s1-dichotomy-recurrence** (C.4); the second glimpse **joined item:structural-adaptation-genericity-bridge** (raised; the note's "Three-Deaths" is a retired name and should not travel).
+
+#### `deriv-social-welfare-aggregation-impossibility`
+
+- [297] "**Provenance.**" — **set aside**.
+- [298] "**Open before `candidate`.**" — (a) **joined item:impossibility-clusters-owed-reading**; (b) **joined item:spikes-proposed-advanced-18-cross-agent-value-functional-narrowne-bf71**; (c) **joined item:spikes-proposed-sub-scope-alpha-single-peaked-preference-16d5** (all raised).
+- [299] "**The cluster's range, complete after this commit.**" — **set aside** (a status assessment; the future candidates it names are items `…advanced-16…` and `…advanced-17…`).
+- [300] "**The Arrow-unique cardinal adjacency as the cluster's most-illuminating open question.**" — **joined item:spikes-proposed-advanced-18-cross-agent-value-functional-narrowne-bf71** (raised, with the note's emphasis).
+
+#### `deriv-stochastic-non-exit`
+
+- [301] "Regression guard: the Ville/Doob route…" — **guard**.
+- [302] "The generality (any $F$ under A2', not just OU) rests on…" — **guard** ("no further strengthening of this half is open").
+- [303] "Low-confidence glimpse (per "working notes FTW")…" — **owed → item:cor-a1s1-dichotomy-recurrence** (the same glimpse as [289]'s first).
+
+#### `deriv-strategy-cost-regret-bound`
+
+- [316] "**Linear vs. square-root form — revisit with downstream evidence.**" — **set aside**: conditional on the four-$\beta$ unification being strained, which is item:proposals-d-6-o-bp12-resource-budget-b-t-as-master-2773's scoping question; nothing to do until that answers.
+- [317] "**Stochastic-$\pi^\ast$ extension.**" — **set aside**, reason: the body already names it as the scope boundary of the BH identity (§9, :106, checked), so a reader meets it there; an item adds nothing until a consumer needs stochastic optima.
+- [318] "**Family characterization strengthening.** *Resolved 2026-04-22*" — **guard**, for its citation audit (Csiszár 1972, Amari 2009 Theorem 1 and Amari–Cichocki 2010 Prop 3.2 do *not* contain the chain-rule uniqueness theorem); the resolution itself is history (body §6.1).
+- [319] "**BH identity under deterministic $\pi^\ast$…** *Resolved 2026-04-24.*" — **set aside** (history; body §4).
+- [320] "**Citation verification (Path 1 content, §6.4).**" — **guard** (the Rubin 2012 vs TP2011 attribution correction).
+- [321] "**AAT-outlier-on-KL-direction…**" — **canon** (:126, optimum-first; checked).
+- [322] "**Cross-reference to NeurIPS Paper 2.**" — **guard** (forward pointer). `influx-scout/neurips.md` §3 records the point-mass identity as already in canon here (§4) before the paper, so the proposed standalone segment is the influx drain's to decide.
+- [323] "**Fenchel-Bregman connection…**" — **joined item:proposals-e-3-sp-9-fenchel-bregman-reframe-of-addi-d684** (raised).
+
+#### `deriv-strategy-proofness-impossibility`
+
+- [324] "**Provenance.**" — **set aside** (the load-bearing point it records, $\alpha'$ secures convergence, not strategy-proofness, is the body's adjacency framing at :14; checked in part).
+- [325] "**Open before `candidate`.**" — (a) **joined item:impossibility-clusters-owed-reading**; (b) and (c) **joined item:spikes-proposed-sub-scope-alpha-single-peaked-preference-16d5** (raised, (b) named as a further sub-spike).
+- [326] "**The composite-revelation-mechanism reading and its sub-agents.**" — **canon** (:56–57; checked).
+- [327] "**The cluster's discipline filter.**" — **set aside** (an assessment, not a claim).
+
+#### `deriv-tempo-additivity`
+
+- [328] "**Citation verification before promotion.**" — **owed → item:tempo-additivity-pid-citations** (F.2).
+- [329] "**Finite-correlation-time interpolation.**" — **owed → item:tempo-additivity-finite-correlation-interpolation** (C.4).
+- [330] "**Loewner-order statement.**" — **joined item:todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe** (raised).
+- [331] "**Attribution conventions.**" — **guard** (forward pointer: choose the attribution convention consciously).
+- [332] "**Trail.**" — **set aside** (provenance; the citations it mentions are [328]).
+
+#### `deriv-update-detection-latency`
+
+- [333] Migration note — **set aside**.
+- [334] "**R2 sharpening (model-class inadequacy).**" — **joined item:spikes-proposed-r2-detection-latency-sharpening-under-mo-d44a** (raised).
+- [335] "**R3 reference, not extension.**" — **canon** (:77, :93; checked).
+- [336] "**Extension beyond Beta-Bernoulli.**", [337] "**Probability bound.**", [339] "**Multi-timescale connection.**", [340] "**Part III analog.**", [341] "**Class 3 (Coupled) architectures.**" — **owed → item:detection-latency-extensions** (C.4), (a)–(e).
+- [338] "**Testable prediction.**" — **joined item:untested-catalog-predictions-for-e** (raised; that item already lists detection-latency growth with experience).
+
+#### `deriv-variational-sector-condition`
+
+- [342] "Landing context…" — **set aside**.
+- [343] "**Open: $O(\varepsilon)$ rate via Talagrand T2.**", [344] "**Amortization gap bounds.**" — **owed → item:variational-sector-extensions** (C.4).
+- [345] "**Connection to natural-gradient VI.**" — **canon** (:58, Khan & Lin 2017; checked).
+
+#### `detail-linear-ode-approximation`
+
+- [346] "The vector ODE … assumes isotropic correction…" — **canon** (`#deriv-matrix-persistence-condition` carries the anisotropic form). Set aside.
+- [347] "The norm-inequality subtlety (Section 1 above) propagates into the adversarial scaling law…" — **joined item:mismatch-dynamics-model-d-equality-scope** (raised; the body's :56–62 is the norm inequality it builds on).
+- [348] "Model S's Ito-Lyapunov derivation assumes $\sigma_w$ is constant." — **owed → item:sector-template-extensions** (b).
+
+#### `disc-approximation-tiering`
+
+- [366] "**Formal characterization of the tiering pattern.**" — **joined item:separability-ladder-extensions-and-necessity** (raised).
+- [367] "**Interaction between tierings.**" — **joined question:separability-general-open-infectious** (raised).
+- [368] "**Diagnostic costs.**" — **owed → item:approximation-tiering-diagnostic-cost** (C.4).
+
+#### `disc-compression-operations`
+
+- [375] "**The $\Sigma_t$ source reformulation changes the theoretical quantity…**" — **superseded**: `#form-strategy-complexity-cost` now cites this segment for $\beta_\Sigma$ (:74; checked).
+- [376] "**(P1) as IB Lagrangian-dual does not close #form-composition-closure's other Working Notes.**" — **set aside**: it restates that those questions are open; they are item:composition-closure-open-computations.
+- [377] "**Synthesis segment vs. full unification.**" — **guard** (the stopping rule for when to escalate to a full rewrite).
+- [378] "**The Gaussian IB frontier derivation is deferred.**", [379] "**The heterogeneous-gain numeric check is unrun.**" — **owed → item:two-kalman-ib-frontier-and-numeric-check** (C.4); [379] also raised onto item:the-heterogeneous-gain-closure-defect-does-not-v.
+
+#### `disc-independence-audit`
+
+- [428] Migration note — **set aside**.
+- [429] "**Interaction between assumptions.**", [430] "**Quantitative failure modes.**" — **owed → item:independence-audit-dependency-graph-and-bounds** (C.4).
+- [431] "**Empirical audit.**" — **joined item:proposals-d-8-sp-16-independence-audit-as-empirica-ea97** (raised).
+
+#### `disc-partial-coupling-pathways`
+
+- [445] "**Promotion path requires two sub-spikes.**" — **joined item:der-belief-strategy-attractor-conditional-run-th** (raised; its "Both are in `TODO.md`" is stale).
+- [446] "**Composite-level sub-type inheritance.**", [447] "**Trajectory coupling as separate axis.**", [448] "**Refined behavioral estimator — construction.**" — **owed → item:partial-coupling-typology-open-lines** (C.4).
+- [449] "**Brief is not yet at Feynman criterion.**" — **owed → item:partial-coupling-brief-feynman** (H.1).
+- [450] "**Connection back to `#def-agent-spectrum` Working Note.**" — **joined item:land-the-leakage-locus-result-of-spikes-spike-le** (raised).
+
+#### `disc-sandbox-evaluation-ceiling`
+
+- [451] "Promoted to its own segment 2026-05-28…", [452] "Open placement question … now resolved toward Appendix A…" — **set aside** (history).
+- [453] "The theorem-grade formalization of the underlying loop-Level-2 result lives in NeurIPS 2026 Paper 2…" — **guard** (forward pointer; influx drain owns the paper).
+- [454] "**Re-grounding 2026-05-30 (transportability spike…)**" — **guard** for its regression content (the "forkability implies Level 1" lemma is false: RCTs are forkable and Level 2); the rest is history. The segment's own open defects are item:disc-sandbox-evaluation-ceiling-four-defects-fro.
+
+#### `disc-w1-structural-bound-boundary`
+
+- [487] "Reasoning trail (filed)…" — **set aside** (provenance).
+- [488] "The exact-enumeration sim exhibiting the $\Theta(\varepsilon^2)$ flatness…" — **joined item:w1-boundary-toy-sim-unregistered** (raised; the tracker it says the sim is blocked on was deleted today).
+- [489] "**Open: amplifying-state mechanisms.**" — **owed → item:w1-leak-amplifying-state** (C.4).
+- [490] "**Open: behavioral-monitor construction.**" — **joined item:spikes-proposed-decomposed-empirical-estimator-accuracy-e63e** (raised).
+
+#### `form-resource-budget`
+
+- [535] "The regenerative regime $r_{\mathcal{B}}\gt 0$ …" and [537] "Open: whether $\mathcal B_t$ should be vector-valued…" — **owed → item:resource-budget-open-dynamics** (C.4). The body (:53) lists alternative resource models as a representational choice but not these two dynamics.
+- [536] "Reasoning trail: `spikes/fight/03-energy-bound-effects-spiral.md`…" — **guard** (provenance pointer; the path has moved to `spikes/.integrated/fight/`, which the item records).
+- [538] "A NOTATION.md entry for $\mathcal B_t$ is added under a resource section" — **canon** (`NOTATION.md`:188; checked).
+
+#### `internal-external-decomposition`
+
+- [680] "Boundary regression-guard (2026-07-03, audit 731548 B-2)…" — **guard**. The segment's separate open defect on its constitutive no-go is item:internal-external-decomposition-59-states-the-co.
+
+#### `obs-authored-world-laboratory`
+
+- [684] "**Provenance and living bridge.**" — **guard** (pointer to `doc/vivarium.md` and the vivarium twin). Its `~/src/archema-io/vivarium/…` paths are stale; they now resolve under `~/src/arch/vivarium/`.
+- [685] "**Build-state re-verification.**" — **guard**.
+- [686] "**Chronica link (forward, cross-volume).**" — **guard**, with one slip in it: it places `#def-chronica` in `04-eli-core`; the segment is in `01-aat-core`. The co-development it asks for (`#hyp-checkpoint-forking-failure-modes`) is a forward pointer; the related non-forkability defect is item:influx-non-forkability-tier.
+- [687] "**P2 uniqueness-claim maintenance.**" — **guard**.
+
+#### `result-certificate-existence`
+
+- [704] "**Provenance.**", [706] "**Provisional slug.**" — **set aside**.
+- [705] "**R0-loss landing (2026-05-22).**" — **set aside** (history). Its admitted gap, the mid-case center-manifold construction (Carr 1981) sketched but not derived, is visible in the body's "Mixed case — Conley anchoring" paragraph (:93), so a reader meets it there; it is standard machinery and asks nothing new.
+- [707] "**Organizing-principle linkage.**" — **set aside**: the step it waits on is an edit to PROPOSALS Bundle 1, and PROPOSALS is gone (its items are in the ledger; no Bundle-1 item names "contraction-over-drift").
+
+#### `result-sector-persistence-template`
+
+- [717] "The template is type `result` because…" — **guard** (why not `formulation`).
+- [718] "Candidate extensions that would strengthen the template…" — **owed → item:sector-template-extensions** (C.4).
+- [719] "The template's role in #disc-composition-consistency's "applies at every level" claim is now explicit…" — **canon**: `#disc-composition-consistency`:74 states transfer as tier-dependent (Tier 1 exact, Tier 2 degraded, Tier 3 per-domain), which is the testable form the note asks for (paragraph read; the phrase itself does not appear).
+- [720] "**Dynamic-regime placement (added 2026-05-21…)**" — **joined item:part-iii-segments-name-their-regime-tier** (raised).
+
+#### `sketch-structural-adaptation-genericity`
+
+- [757] "Provenance: parent-generated 2026-05-16…" — **set aside** (provenance; Joseph's "it will get its day in the light" is why the segment exists, recorded in git).
+- [758] "Segment-vs-spike judgment (recorded so it is not re-litigated)…" — **guard**.
+- [759] "Related: the `#disc-identifiability-floor` family…" — **joined item:structural-adaptation-genericity-bridge** (raised).

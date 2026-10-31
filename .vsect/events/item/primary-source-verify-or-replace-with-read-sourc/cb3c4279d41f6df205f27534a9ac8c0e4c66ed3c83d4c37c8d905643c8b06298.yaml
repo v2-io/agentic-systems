@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: cb3c4279d41f6df205f27534a9ac8c0e4c66ed3c83d4c37c8d905643c8b06298
+at: 2026-10-31T02:22:25Z
+store: asf
+act: raise
+about: item:primary-source-verify-or-replace-with-read-sourc
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:primary-source-verify-or-replace-with-read-sourc
+source: '01-aat-core/src/deriv-regime-marginal-indistinguishability.md Working Notes ''Primary-source verification spike queued (2026-05-21)'', targets in load-bearing order: Bielecki-Jakubowski-Niewkeglowski 2011 (closest structural analogue; positions the witness math); Courbage-Hamdan 1998/2001 with Hamdan 2000 (journal unresolved in the Undermind report; do not infer from the DOI) and Hamdan 2002; Angulo et al. 2015, Cummins et al. 2015; Haile et al. 2008, Ziani et al. 2016; Penalva et al. 2003/2004, Lehrer et al. 2006. This segment uses eight [^bg2] marks in its body.'

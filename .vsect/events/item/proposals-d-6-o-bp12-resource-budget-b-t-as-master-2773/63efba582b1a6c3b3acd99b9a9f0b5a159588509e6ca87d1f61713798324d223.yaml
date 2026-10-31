@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 63efba582b1a6c3b3acd99b9a9f0b5a159588509e6ca87d1f61713798324d223
+at: 2026-10-31T02:22:29Z
+store: asf
+act: raise
+about: item:proposals-d-6-o-bp12-resource-budget-b-t-as-master-2773
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:proposals-d-6-o-bp12-resource-budget-b-t-as-master-2773
+source: 'Related, not the same: item resource-budget-open-dynamics (the budget''s own regenerative and vector-valued dynamics, from #form-resource-budget Working Notes).'

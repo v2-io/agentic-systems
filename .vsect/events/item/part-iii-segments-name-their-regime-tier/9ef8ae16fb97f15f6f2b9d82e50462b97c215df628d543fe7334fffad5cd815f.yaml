@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 9ef8ae16fb97f15f6f2b9d82e50462b97c215df628d543fe7334fffad5cd815f
+at: 2026-10-31T02:22:30Z
+store: asf
+act: raise
+about: item:part-iii-segments-name-their-regime-tier
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:part-iii-segments-name-their-regime-tier
+source: '01-aat-core/src/result-sector-persistence-template.md Working Notes ''Dynamic-regime placement (added 2026-05-21…)'': (T1)-(T3) hold on R0; the template lifts to R1 via the A2''-analog transfer (state xi = pi - pi*, alpha_joint from potential curvature or the joint Jacobian''s symmetric part); R2 does not admit it (CCE at O(1/sqrt T)). Any citation of (T1)-(T3) should name its tier.'
