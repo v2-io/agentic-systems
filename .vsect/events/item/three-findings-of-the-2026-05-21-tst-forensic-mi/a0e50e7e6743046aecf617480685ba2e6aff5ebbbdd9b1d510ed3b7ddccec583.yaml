@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: a0e50e7e6743046aecf617480685ba2e6aff5ebbbdd9b1d510ed3b7ddccec583
+at: 2026-10-31T02:20:28Z
+store: asf
+act: raise
+about: item:three-findings-of-the-2026-05-21-tst-forensic-mi
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:three-findings-of-the-2026-05-21-tst-forensic-mi
+source: 'AISI sweep-2 R49 §2 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-49.md): reads F17 (co-change expected but absent) as the cheap, already-specified instance of detecting absence, an omission no event log records, and proposes porting it to agent action logs (flag a trajectory where an action type that historically accompanies another is missing). For TST it confirms part 2 of this item; the refactoring confounder this item names is the one R49 also names.'

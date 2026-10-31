@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: fb9534629f7d794aa9c2520d3cc7e2ab452a15b59a4b9a24454a162a267724cb
+at: 2026-10-31T02:20:28Z
+store: asf
+act: raise
+about: item:todo-loga-2-kappa-text-processing-approx-1-sc-b641
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-loga-2-kappa-text-processing-approx-1-sc-b641
+source: 'AISI sweep-2 R51 Q1 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-51.md), from audits/AUDIT-WORKING-829314/logogenic-agents/03-def-coupled-update-dynamics.md (Wandering Thoughts): a cheap falsifier for the mechanism sentence at #def-coupled-update-dynamics:53 (''The system prompt (carrying O_t) appearing first is the *mechanism* by which goal-conditioning enters every subsequent computation — it is why kappa_processing ~ 1 for transformer architectures''). If goal-first placement is the cause, assembling the prompt evidence-first and goal-last should lower the measured coupling. Two things to weigh before trusting either outcome: under causal masking the tokens that produce the update still attend to goal and evidence together, so goal-last removes goal-conditioning of the evidence''s encoding but not of the readout, and the sentence may name a contributor rather than the mechanism; and instruction-tuned models are trained on goal-first prompts (R51''s confound), so a goal-last prompt may simply perform worse. The sentence carries no derivation or tag at HEAD; a reorder arm in the E.1 runs would test it.'

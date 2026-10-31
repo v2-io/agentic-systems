@@ -126,6 +126,29 @@ Checked at asf `main` d058c25e (R34–R42). `PROPOSALS.md` and `spikes/PROPOSED*
 - **Count vs dependency structure; $k\approx1.1$–$1.2$ from one atypical repository.** **MOOT/IN** as under R47: canon now says the count form is disfavored and states the structure form as the live candidate.
 - **AI agents re-pay the comprehension cost every episode** (829314/09). **LEDGER**, carried onto `item:ai-cognitive-load-step-shaped` with R47.
 
+### R49 — `def-system-coupling`, `def-system-coherence`, `meas-coherence-coupling`, `der-principled-decision-integration`
+
+- **C4, the observer-effect (Goodhart) confounder: a git chronicle used for evaluation stops being an interventional record.** **ADD**, new item `item:a-fourth-confounder-class-for-hyp-causal-discove` (G.2). It sits only in `TST-IDEAS.md` §C2 (:115–127) and the forensic-mining spike (F1, F3); `#hyp-causal-discovery-from-git` lists C1–C3 and no C4 at HEAD, and `item:three-findings-of-the-2026-05-21-tst-forensic-mi` set the rest of F1–F21 aside as "reached `TST-IDEAS.md`", which is not canon. R49 and R50 found it independently. The item asks for the paragraph at discussion grade and for the source's stronger claim (a fresh M1 identifiability-floor instance) to be attempted before it is stated.
+- **Does an AI agent's reasoning trace observe C3 (the developer's unrecorded knowledge state)?** **WN**: `#hyp-causal-discovery-from-git` WN bullet 4 already says a planning log "could serve as a partial record of $M_t$". R49/R50's test design and the trustworthiness worry are noted in the C4 item as related, not opened separately.
+- **F17, co-change expected but absent ("bugs by omission").** **LEDGER** `item:three-findings-of-the-2026-05-21-tst-forensic-mi` part 2. Raised with R49's reading.
+- **TST-4 naming discipline.** **LEDGER** `item:todo-tst-4-git-as-intervention-naming-discipl-936c` (F.1); no raise.
+- Coupling, coherence and PDI as such: the report finds nothing there. Nothing to drain.
+
+### R50 — `def-system-availability`, `scope-continuous-operation`, `hyp-causal-discovery-from-git`, `impl-system-measures`
+
+- **C3 via reasoning traces; C4 Goodhart.** As under R49.
+- **Developer time and user time added at an unstated 1:1 rate** (849201 gem Fresh-9). **LEDGER** `item:tst-user-developer-time-exchange-rate` (C.1), opened by another lane minutes before I checked (it was absent at my first grep). Raised.
+- Availability as standard SRE in AAT vocabulary: **IN**; the report itself says so.
+
+### R51 — `scope-logogenic-agent`, `scope-channel-collapse`, `def-coupled-update-dynamics`, `scope-observation-ambiguity-modulation`
+
+- **$\kappa_{\text{eff}}=\kappa_{\text{processing}}\times\mathcal A(e_\tau)$: is the product form real, at what constants; ambiguity-stratified evaluation suites; the $\hat{\mathcal A}$ estimator.** **MOOT**: the Part II integration (C3, 253d2bca–279b2699) retired $\mathcal A$ and the product law; `#scope-observation-ambiguity-modulation` now carries a fixed-gain tilt hypothesis (:48–54) and a regression guard against restoring either (:129). Their successor is E.1's fixed-gain tilt test, as `item:untested-catalog-predictions-for-e` also records.
+- **Goal-last prompt order as a test of the coupling mechanism** (829314/03 Wandering Thoughts). **LEDGER** with an addition: `#def-coupled-update-dynamics`:53 says goal-first placement "is the *mechanism* … it is why $\kappa_{\text{processing}}\approx1$", untagged and underived. A goal-last arm discriminates; but under causal masking the update's tokens still attend to goal and evidence together, so the sentence may name a contributor, not the mechanism. Raised onto `item:todo-loga-2-kappa-text-processing-approx-1-sc-b641` (E.1) with both cautions, rather than a new item, since that item owns the $\kappa\approx1$ claim the sentence explains.
+- **Does channel collapse admit a gradient (multimodal, tool-using agents)?** **WN** at `#scope-channel-collapse`, and **LEDGER** `item:todo-loga-1-channel-collapse-scope-narrowing-1217` holds the scope narrowing; R51 adds nothing.
+- **LOGA-1/2/3.** **LEDGER** (three items).
+- **ADV #11, a per-substrate channel-collapse mechanism for substrate-transfer asymmetry.** **LEDGER** (`spikes-proposed-advanced-11-…-9171`, `substrate-transfer-asymmetry-two-halves-empirica`); R51 adds nothing.
+- **SP-30 lists a downstream check of regime (i) in this segment.** **MOOT**: A.1 landed and C3 rewrote the segment's regimes.
+
 ## What was read whole, sampled, not reached
 
 *(being written)*

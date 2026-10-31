@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: bdc2b14830142872cd48a16075905b104daf082e605ac1a69d029da5727f80c2
+at: 2026-10-31T02:20:28Z
+store: asf
+act: raise
+about: item:tst-user-developer-time-exchange-rate
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:tst-user-developer-time-exchange-rate
+source: 'AISI sweep-2 R50 §C (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-50.md): found the same 849201 gem (Fresh-9) independently and judged it a one-sentence scope-honesty fix.'
