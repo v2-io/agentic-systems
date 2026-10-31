@@ -1,0 +1,213 @@
+===== distortion-check.py  2026-10-30T21:33:30-0600
+==============================================================================
+N1  Tilt-Jensen identity, Hoeffding range bound, vanishing on constant tilt
+==============================================================================
+  identity KL(pi||tilt) = log E_pi e^{lam u} - lam E_pi u : holds on 2000 random cases
+  bound KL <= range^2/8 and TV <= range/4 : hold; tightest ratio KL/bound observed = 1.000
+  constant tilt on supp(pi) (u varies only off-support) => KL = 0 : holds
+
+==============================================================================
+N2  kappa (MI form) saturates for injective coupling regardless of magnitude
+==============================================================================
+  lam=1e-06    TV(M+_g1, M+_g2)=1.00e-06   I(G;M+|e,M-)=0.6931 nats   kappa_canon=1.0
+  lam=0.01     TV(M+_g1, M+_g2)=1.00e-02   I(G;M+|e,M-)=0.6931 nats   kappa_canon=1.0
+  lam=1        TV(M+_g1, M+_g2)=7.62e-01   I(G;M+|e,M-)=0.6931 nats   kappa_canon=1.0
+
+==============================================================================
+N3  Reliability/resolution split: allocation moves resolution only; distortion adds reliability
+==============================================================================
+  allocate x1 only (goal g1)                       score=0.3178  U=0.6730  RES=0.3552  REL=0.0000
+  allocate x2 only (goal g2)                       score=0.5939  U=0.6730  RES=0.0791  REL=0.0000
+  full information                                 score=0.2881  U=0.6730  RES=0.3849  REL=-0.0000
+  distort: tilt full posterior toward W=1, lam=1   score=0.3301  U=0.6730  RES=0.3849  REL=0.0420
+  distort: tilt x1-posterior toward W=0, lam=0.7   score=0.3397  U=0.6730  RES=0.3552  REL=0.0218
+
+==============================================================================
+N4  Misspecified prior: a goal-tilt can IMPROVE objective expected score
+==============================================================================
+  lam=0.0   objective E[-log b(W)] = 1.0015
+  lam=0.5   objective E[-log b(W)] = 0.7875
+  lam=1.0   objective E[-log b(W)] = 0.6318
+  lam=1.7   objective E[-log b(W)] = 0.5119
+  lam=2.5   objective E[-log b(W)] = 0.4927
+  lam=4.0   objective E[-log b(W)] = 0.6574
+  best lam ~ 2.23 > 0 : tilt toward the goal lowers TRUE expected loss (misspecified agent). Under the agent's OWN model lam=0 is optimal (proper-score optimality is subjective-model-relative).
+  subjective (agent-model) E[-log b(W)] minimized at lam=0 : holds
+
+==============================================================================
+N5  MNAR attention: 'allocation' whose drop rule peeks at content distorts unless the pattern is modeled
+==============================================================================
+  naive (treats drop as MAR)                     score=0.3029  RES=0.3849  REL=0.0148
+  pattern-aware (MNAR modeled)                   score=0.2881  RES=0.3849  REL=-0.0000
+  MAR rule: encode x2 iff x1==1, naive update    score=0.3053  RES=0.3677  REL=0.0000
+
+==============================================================================
+N6  Step-5a starvation as value of information: zero under pursue-only decision set
+==============================================================================
+  decision set=('a1', 'a2'), abandon pays 0.0:  VOI(f1)=0.3000   VOI(f2: feasibility)=0.0000
+  decision set=('a1', 'a2', 'abandon'), abandon pays 0.25:  VOI(f1)=0.3000   VOI(f2: feasibility)=0.1000
+
+==============================================================================
+N7  The ambiguity term I(G;Omega|e,M-) under the two joints
+==============================================================================
+  (alpha) G ⟂ Omega | e : I(G;Omega|e)=0.000  A(e)=0.000  but a tilting agent shows TV(M+_ship, M+_correct)=0.762  (bias with A=0)
+  (beta)  G informative      : I(G;Omega|e)=0.193  A(e)=0.278  the goal-using Bayesian moves by TV=0.30 from the goal-blind belief --
+          E[-log b]: goal-using = 0.5004  goal-blind = 0.6931  (the 'bias' is the correct update; the goal-blind agent scores worse)
+
+==============================================================================
+N8  Paper-3 semantics: calibrated allocation is counted at maximal transferred information
+==============================================================================
+  allocation agent: beliefs differ across the two goals on 4/4 feature patterns -> I(G;M+|e,M-) = H(G) = log 2 there;
+  kappa_canon = 1 on those events, reliability = 0 (N3). The displacement bound's RHS is maximal for a calibrated agent.
+
+all checks passed
+
+==============================================================================
+N9  MI tracks displacement only relative to update noise (out-of-family for N2)
+==============================================================================
+  lam=0.001  noise sd=1       I(G;M+|e,M-)=0.0000 nats  (H(G)=0.6931)  -> kappa_canon=0.000
+  lam=0.3    noise sd=1       I(G;M+|e,M-)=0.0431 nats  (H(G)=0.6931)  -> kappa_canon=0.062
+  lam=1      noise sd=1       I(G;M+|e,M-)=0.3368 nats  (H(G)=0.6931)  -> kappa_canon=0.486
+  lam=1      noise sd=0.1     I(G;M+|e,M-)=0.6931 nats  (H(G)=0.6931)  -> kappa_canon=1.000
+  lam=0.001  noise sd=0.0001  I(G;M+|e,M-)=0.6931 nats  (H(G)=0.6931)  -> kappa_canon=1.000
+
+==============================================================================
+N10 Abandon option present but never optimal: VOI(feasibility) stays zero
+==============================================================================
+  decision set with abandon paying 0.0: VOI(f2)=0.0000   (condition in Prop 7.1(b) is needed)
+
+==============================================================================
+N11 A non-motivated distortion (rounding the belief) is still uncalibrated
+==============================================================================
+  round full posterior to nearest 0.25: REL=0.0088 > 0 ; coarsening the *belief* is not coarsening the *information*
+
+==============================================================================
+N12 Gaussian mean-shift is an exponential tilt: exact Jensen gap = beta^2/(2 sigma^2); range bound vacuous
+==============================================================================
+  sigma=1.0 beta=0.5: Jensen gap=0.1250  KL(N(mu,s2)||N(mu+beta,s2))=0.1250  Var_pi(u)=sigma^2=1.0  (range bound: supp unbounded -> vacuous)
+  sigma=2.0 beta=0.5: Jensen gap=0.0312  KL(N(mu,s2)||N(mu+beta,s2))=0.0312  Var_pi(u)=sigma^2=4.0  (range bound: supp unbounded -> vacuous)
+  sigma=0.5 beta=0.5: Jensen gap=0.5000  KL(N(mu,s2)||N(mu+beta,s2))=0.5000  Var_pi(u)=sigma^2=0.25  (range bound: supp unbounded -> vacuous)
+
+==============================================================================
+N13 Dorst's two-world example: honest update under ambiguous evidence is predictable, uncalibrated, and still better
+==============================================================================
+  prior Brier=0.2500  updated Brier=0.1250  = U(0.250) - RES(0.250) + REL(0.125)
+  Reflection fails: prior P(g)=0.5 but E[updated P(g)]=0.750; reliability > 0 with no goal involved; recalibrated forecast (0 at b) would score 0.
+
+all checks passed (N1-N13)
+----- exit 0 sha256 ddf3629323ae0c59
+===== distortion-check-1.py  2026-10-30T21:33:30-0600
+K1 tilt: exact KL vs leading-order lam^2 Var/2 vs Bennett bound Var*(e^{lam b}-1-lam b)/b^2
+  Bennett bound holds on 20000 random instances; tightest KL/bound=1.0000
+  max KL/(lam^2 Var/2) observed = 9235.1  (the sd-factorization is leading-order only)
+  lam=1 p=0.5: KL=0.12011  lam^2Var/2=0.12500  Bennett=0.14872  range-bound=0.1250
+  lam=1 p=0.1: KL=0.05857  lam^2Var/2=0.04500  Bennett=0.06218  range-bound=0.1250
+  lam=1 p=0.01: KL=0.00704  lam^2Var/2=0.00495  Bennett=0.00708  range-bound=0.1250
+  lam=1 p=0.001: KL=0.00072  lam^2Var/2=0.00050  Bennett=0.00072  range-bound=0.1250
+  lam=5.0 p=0.001: KL=0.1325  lam^2Var/2=0.0125  Bennett=0.1418
+  lam=10.0 p=0.001: KL=3.1266  lam^2Var/2=0.0500  Bennett=21.8181
+
+K2 per-goal calibration of a goal-blind Bayes filter when the goal is evidence (N7beta world)
+  under G=0's law: reliability of goal-blind report (log score) = 0.1927 nats; goal-using report: 0.0000
+  under G=1's law: reliability of goal-blind report (log score) = 0.1927 nats; goal-using report: 0.0000
+  pooled law: goal-blind report reliability = 0 (it is P(flaw|e)=0.5)
+  restoration: record 'principal assigned g' as an event s; f_M(M-, s) = P(flaw|e,s) = post[s]; no G argument; per-goal reliability 0
+
+K3 a calibrated goal-dependent departure from P(W|info) (N3 world): reliability 0, so 'departure => reliability>0' fails
+  agent encodes (x1,x2); report P(W|x1,x2): score=0.2881 RES=0.3849 REL=-0.0000
+  same agent, goal g1, reports P(W|x1) (encode-then-ignore): score=0.3178 RES=0.3552 REL=0.0000
+  departure from P(W|encoded info) costs 0.0297 nats, all of it resolution; reliability 0
+  tilted (N3 row 4): score=0.3301 RES=0.3849 REL=0.0420; recalibrated score = 0.2881 = full-info score 0.2881
+
+K4 action-pinned event + injective policy: G determined by (e,M-) -> I(G;Omega|e,a)=0 even for an informative goal
+  I(G;Omega|y) without the action in the event = 0.1855 nats (goal informative)
+  I(G;Omega|y,a) with the action in the event, a=G = 0.0000 nats
+
+K5 Fisher-Rao convention: KL vs spherical arc theta=arccos(BC) vs Fisher geodesic 2*theta
+  N(0.0,1) vs N(0.01,1): KL=0.00005  arc^2/KL=0.5000  (2arc)^2/KL=2.0000  global check 2arc<=2sqrt(KL): True
+  N(0.0,1) vs N(0.1,1): KL=0.00500  arc^2/KL=0.4998  (2arc)^2/KL=1.9992  global check 2arc<=2sqrt(KL): True
+  N(0.0,1) vs N(1.0,1): KL=0.50000  arc^2/KL=0.4795  (2arc)^2/KL=1.9181  global check 2arc<=2sqrt(KL): True
+  N(0.0,1) vs N(3.0,1): KL=4.50000  arc^2/KL=0.3418  (2arc)^2/KL=1.3671  global check 2arc<=2sqrt(KL): True
+  global: arccos(BC) <= sqrt(KL) on 20000 random pairs; max ratio 1.0000  => d_Fisher=2arc <= 2 sqrt(KL), no small-information hypothesis
+
+K6 step 5a: a feasibility-independent cost on a pursuing action does not by itself break starvation
+  verifier V5 (cost on a2, the feasible-best action): VOI(feasibility)=0.0600
+  cost on a1 instead (a2 best under both): VOI(feasibility)=0.0000  -> tie broken, starvation persists
+
+K7 action in the event + injective deterministic policy: kappa numerator is 0 for a distorting update
+  operating law: H(G|e)=0.0000, I(G;M+|e)=0.0000  (distorting update, TV between goals' reports = 0.762)
+  probe law (G uniform, independent of a fixed e): I(G;M+|e)=log2=0.6931, kappa=1
+
+K8 clause 2's converse: content-dependent drop of an uninformative feature leaves the report calibrated (verifier V6)
+  dropped content x3 independent of W given x1 -> pattern carries no W-information -> report P(W|x1) is calibrated (REL=0, as K3 row 2)
+
+K2b the same point with the action pinned in the event: principal-set goal, a=G, e=(a,o)
+  under G=0: per-goal reliability, likelihood-only filter = 0.1855; action-as-evidence update = -0.0000
+  under G=1: per-goal reliability, likelihood-only filter = 0.1855; action-as-evidence update = -0.0000
+  -> with the goal informative, 'action only through the likelihood' is per-goal miscalibrated, and the per-goal-calibrated
+     goal-blind update is the one that treats the action as evidence, which the certificate's wording excludes. Under NWI they coincide.
+----- exit 0 sha256 9394d731b59461c5
+===== check-part-ii-check-1-kappa0-action-collider.py  2026-10-30T21:33:31-0600
+H(G | e_1) = 0.4690 bits;  I(G; M_1 | e_1) = -0.0000 bits  ->  kappa_processing = -0.0000
+M_1=0: on-policy P(o=1|a=1,M) = 0.820  vs  interventional P(Y^(1)=1|M) = 0.500;  X-stratified on-policy vs interventional: G=0: 0.100 vs 0.100; G=1: 0.900 vs 0.900
+M_1=1: on-policy P(o=1|a=1,M) = 0.180  vs  interventional P(Y^(1)=1|M) = 0.500;  X-stratified on-policy vs interventional: G=0: 0.900 vs 0.900; G=1: 0.100 vs 0.100
+----- exit 0 sha256 cf831d41fa68bac4
+===== check-part-ii-check-1-nogo-scope.py  2026-10-30T21:33:31-0600
+Case P (coin stored in X_1, deterministic in X_1): 16 on-policy-law classes over 16 environments; untaken-action effect at every visited X_1 identified: True
+Case H (deterministic in the chronica)        : 4 on-policy-law classes over 16 environments; untaken-action effect at every visited X_1 identified: False
+----- exit 0 sha256 e9ecbc5bb3f6ed9a
+===== check-part-ii-check-1-right-rung-rh-not-in-pi.py  2026-10-30T21:33:31-0600
+pi_RH = {'x': 'z', 's': 'c', 's1': 'e2', 's2': 'f'} ; in Pi: False
+pi* = piB ; V_x: {'piA': 5, 'piB': 6} ; V_s: {'piA': 5, 'piB': 6} -> pi* optimal over Pi from x and from s (the only one-step-reachable state): True
+A^RH = 15  A^B = 6
+----- exit 0 sha256 e724ae411297ad9d
+===== check-feedback-1-lemma1b-pstream.py  2026-10-30T21:33:31-0600
+X2=0 a=0: P(a|X2)=1/2  on-policy P(o=1|a,X2)=1  interventional P(Y^a=1|X2)=1/2
+X2=0 a=1: P(a|X2)=1/2  on-policy P(o=1|a,X2)=1  interventional P(Y^a=1|X2)=1/2
+X2=1 a=0: P(a|X2)=1/2  on-policy P(o=1|a,X2)=0  interventional P(Y^a=1|X2)=1/2
+X2=1 a=1: P(a|X2)=1/2  on-policy P(o=1|a,X2)=0  interventional P(Y^a=1|X2)=1/2
+----- exit 0 sha256 e00f4b69c1bbaeb8
+===== check-feedback-1-kappa-collider.py  2026-10-30T21:33:31-0600
+kappa=0: M=0: on-policy 0.000 vs interventional 0.000; M=1: on-policy 1.000 vs interventional 1.000
+kappa=1/10: M=0: on-policy 0.011 vs interventional 0.050; M=1: on-policy 0.917 vs interventional 0.950
+kappa=3/10: M=0: on-policy 0.039 vs interventional 0.150; M=1: on-policy 0.782 vs interventional 0.850
+kappa=1/2: M=0: on-policy 0.083 vs interventional 0.250; M=1: on-policy 0.679 vs interventional 0.750
+----- exit 0 sha256 db1ce5f03aac9111
+===== check-part-ii-check-1-onpolicy-test-detects.py  2026-10-30T21:33:31-0600
+eps=0.0 tie=0: on-policy I(X; o | M, a) = 0.0289 bits
+   M=1: E[o|M,a=1]=0.499; across X-cells (n>200) E[o|X,a=1] ranges 0.499..0.499
+   M=2: E[o|M,a=1]=0.682; across X-cells (n>200) E[o|X,a=1] ranges 0.682..0.682
+   M=3: E[o|M,a=1]=0.543; across X-cells (n>200) E[o|X,a=1] ranges 0.318..0.767
+   M=4: E[o|M,a=1]=0.661; across X-cells (n>200) E[o|X,a=1] ranges 0.327..0.794
+   M=5: E[o|M,a=1]=0.622; across X-cells (n>200) E[o|X,a=1] ranges 0.236..0.797
+   M=6: E[o|M,a=1]=0.650; across X-cells (n>200) E[o|X,a=1] ranges 0.248..0.800
+   M=7: E[o|M,a=1]=0.637; across X-cells (n>200) E[o|X,a=1] ranges 0.189..0.805
+----- exit 0 sha256 b41059cea363092f
+===== check-feedback-1-eps0-identified-vs-truth.py  2026-10-30T21:33:32-0600
+41 a=0-only X cells with >=2000 a=1 samples in their Z cell; max |est-truth| = 0.0339
+  X (5, 6, 1, 1, 1) est 0.524 truth 0.49 visits 3099 Z a=1 n 2339
+  X (7, 2, 2, 3, 4) est 0.307 truth 0.334 visits 545 Z a=1 n 2083
+  X (5, 5, 2, 1, 1) est 0.524 truth 0.498 visits 10918 Z a=1 n 2339
+  X (5, 4, 3, 1, 1) est 0.524 truth 0.499 visits 10310 Z a=1 n 2339
+  X (6, 7, 1, 1, 1) est 0.508 truth 0.488 visits 1573 Z a=1 n 2585
+----- exit 0 sha256 461d43ff966896b8
+===== check-feedback-1-singular-trajectory.py  2026-10-30T21:33:33-0600
+h=0.0005: M-stratum on-policy E[o|a=1]=0.7178 interventional=0.5089 gap=+0.2089 | binned-G gap=+0.0024
+h=0.005: M-stratum on-policy E[o|a=1]=0.6902 interventional=0.4939 gap=+0.1963 | binned-G gap=+0.0026
+h=0.05: M-stratum on-policy E[o|a=1]=0.5944 interventional=0.4996 gap=+0.0947 | binned-G gap=-0.0006
+----- exit 0 sha256 f052907519ddb13b
+===== sim-strategy-counts-confound.py  2026-10-30T21:33:38-0600
+epsilon = 0.2
+       Z = M_t: on-policy E[o|a=1,cell] = 0.5933   interventional E[o|do(a=1),cell] = 0.5004   gap = +0.0929
+       Z = X_t: on-policy E[o|a=1,cell] = 0.5933   interventional E[o|do(a=1),cell] = 0.5935   gap = -0.0002
+  X_t cells visited: 309; with both actions taken: 291
+epsilon = 0.05
+       Z = M_t: on-policy E[o|a=1,cell] = 0.6080   interventional E[o|do(a=1),cell] = 0.4982   gap = +0.1098
+       Z = X_t: on-policy E[o|a=1,cell] = 0.6080   interventional E[o|do(a=1),cell] = 0.6089   gap = -0.0009
+  X_t cells visited: 285; with both actions taken: 234
+epsilon = 0.0
+       Z = M_t: on-policy E[o|a=1,cell] = 0.6161   interventional E[o|do(a=1),cell] = 0.5015   gap = +0.1146
+       Z = X_t: on-policy E[o|a=1,cell] = 0.6161   interventional E[o|do(a=1),cell] = 0.6171   gap = -0.0009
+  X_t cells visited: 184; with both actions taken: 16
+----- exit 0 sha256 4ea02e5e8c0794fd
+done
