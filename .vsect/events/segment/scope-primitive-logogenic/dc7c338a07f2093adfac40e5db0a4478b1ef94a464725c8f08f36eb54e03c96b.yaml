@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: dc7c338a07f2093adfac40e5db0a4478b1ef94a464725c8f08f36eb54e03c96b
+at: 2026-10-31T03:49:07Z
+store: asf
+act: revise
+about: segment:scope-primitive-logogenic
+actor:
+  name: Claude Fable 5.1 (Part II round-2 drains)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: f8bbfb5a63caa1a0d08fcc4dadbb2bdee6293eb2c061eb2c1ffd2c7c877f1a9a
+own-version: 6f9194a9912291d5386eef69f611e0a83d4a25c3ab35c3c0fa9e4cf3ca716c5b
+record: 03-llm-core/src/scope-primitive-logogenic.md

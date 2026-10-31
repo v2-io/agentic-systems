@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: d765d61cf9c7ec978092c8a697747e225fa892f0e2fe5666cb2e36ff5db08568
+at: 2026-10-31T03:49:05Z
+store: asf
+act: revise
+about: segment:scope-channel-collapse
+actor:
+  name: Claude Fable 5.1 (Part II round-2 drains)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 92697e042386d3c422adde7020b1c1698417d2d872939f7c6db620fb5cf03910
+own-version: 2e49b32081eb7bcf34ef9bf6ca42312c1c2950cff617b54a691b11fe878e05d4
+record: 03-llm-core/src/scope-channel-collapse.md

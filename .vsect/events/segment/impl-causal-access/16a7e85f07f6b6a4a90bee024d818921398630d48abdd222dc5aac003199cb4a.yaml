@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 16a7e85f07f6b6a4a90bee024d818921398630d48abdd222dc5aac003199cb4a
+at: 2026-10-31T03:49:05Z
+store: asf
+act: revise
+about: segment:impl-causal-access
+actor:
+  name: Claude Fable 5.1 (Part II round-2 drains)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 277ba1745df9a503486ea2a6bf6dab2dbb81a68a194f87b95c731d4a68db625d
+own-version: 5c697816abb5b1abb3292cf92049f0b284ba1300255229e0e20f48f6f252aa54
+record: 01-aat-core/src/impl-causal-access.md

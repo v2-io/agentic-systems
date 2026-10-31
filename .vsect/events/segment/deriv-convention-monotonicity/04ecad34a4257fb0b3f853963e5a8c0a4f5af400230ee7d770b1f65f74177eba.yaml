@@ -1,0 +1,39 @@
+schema: vsect-event/0
+id: 04ecad34a4257fb0b3f853963e5a8c0a4f5af400230ee7d770b1f65f74177eba
+at: 2026-10-31T03:49:17Z
+store: asf
+act: run
+about: segment:deriv-convention-monotonicity
+actor:
+  name: Claude Fable 5.1 (Part II round-2, right-rung cluster)
+  role: integrator
+normalizer: vsect-norm/0
+at-commit: 3d17de13
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-model-sufficiency: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:def-value-object: 08bbd5309246155ed4528d0e56beb4fb064b7c183cf49fa2c4ddc1812cf00141
+  segment:der-directed-separation: 5d0c86c0038022d33efc2e386c2600a3538d8328075e7000efcd8ee0240776d3
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:deriv-convention-monotonicity: 267bc9a3f0131d7654bec8e53231c4a3111baebf9f08210571a93a1622ca0d74
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: d3898fba83b370fda5d32ace003b55ee464beed58852444a5b96d7a056054111
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:form-objective-functional: 99b4ff434893d307522e91246979ed599cc2d3c415fc605206dfab71df46c74b
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+committed: before
+criterion: 'The rectangularity claim as landed: for a rectangular class (all time-indexed Markov policies with state-wise admissible action sets, first-action supremum over $A_\Pi(x)$), (M) and (PC) hold for every maximizer, the rung $A_O^{\text{RH}} \leq A_O^{\text{B}}$ holds on both readings for every maximizer, and (SO) is guaranteed only for the backward-induction maximizer.'
+effective-version: c808bf181b2eee52e35d038530e91871373e50a9d55698695b96fb6a941524f1
+from: review:part-ii-round-2-right-rung#C1
+line: derivation
+outcome: confirmed
+recheck: '`python3 -I spikes/spike-loop-identification-decision-state-2026-10-30/check-part-ii-round-2-right-rung-rectangular.py`. Instance: $x \to s$ by $z$ or $z''$ (both pay $0$); $s$: $c$ pays $5$ to $s_1$, $d$ pays $0$ to $s_2$; $s_1$: $e_1$ pays $0$, $e_2$ pays $10$; $s_2$: $f$ pays $6$; $N_h = 3$, $N_r = 1$. All $27$ rectangular classes (every nonempty choice of admissible sets at $x$, $s$, $s_1$) enumerated, every maximizer of $V_O$ from $x$ tried as $\pi^\ast$: (M) true, (PC) true, rung true on both readings in all $27$; (SO) and (G) held for every maximizer there, because both first actions reach the same state. Instance 2: $x \to s_1$ by $a_1$ ($0$), $x \to s_2$ by $a_2$ ($0$); $s_1$: $b$ pays $10$; $s_2$: $c_1$ pays $5$, $c_2$ pays $0$; full rectangular class ($16$ policies), $8$ maximizers, (SO) holds for $4$ of them, (G) for all $8$, rung true on both readings for all $8$.'
+target-version: 267bc9a3f0131d7654bec8e53231c4a3111baebf9f08210571a93a1622ca0d74
+version-from: git-revision

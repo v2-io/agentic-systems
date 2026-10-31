@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: fdd0ef3a584194c37285665a6d6cac957253a95c9005ba9ad4b4d55e2bb5abbe
+at: 2026-10-31T03:48:44Z
+store: asf
+act: review-finding
+about: segment:der-causal-insufficiency-detection
+actor:
+  name: Claude Fable 5.1 (Part II round-2 drains)
+  role: integrator
+normalizer: vsect-norm/0
+criterion: 'Answered at 8f7dd870 by the B.1 second mind (not this lane): the detection criterion now requires siblings with disjoint modelled ancestor sets (conditional covariance otherwise), which the independent checker''s C8 confirmed by hand with the XOR construction. Its wording residue (the conclusion names a latent cause where a missing sibling edge also fits) and the off-policy sign display are taken in the Part II round-2 drains.'
+finding: review:b1-part-ii-check-1#C13/finding
+outcome: answered
+reviser-recorded: false
+revision: review:part-ii-check-1-b1-records#C8

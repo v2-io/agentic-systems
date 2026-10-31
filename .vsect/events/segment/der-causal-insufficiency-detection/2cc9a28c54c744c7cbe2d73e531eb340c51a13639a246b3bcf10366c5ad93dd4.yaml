@@ -1,0 +1,56 @@
+schema: vsect-event/0
+id: 2cc9a28c54c744c7cbe2d73e531eb340c51a13639a246b3bcf10366c5ad93dd4
+at: 2026-10-31T03:53:04Z
+store: asf
+act: read-check
+about: segment:der-causal-insufficiency-detection
+actor:
+  name: Claude Fable 5.1 (Part II round-2 drains)
+  role: integrator
+  read:
+  - segment:def-strategy-dag
+normalizer: vsect-norm/0
+at-commit: null
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-causal-information-yield: aafeacbbb79b6c8fa83a38fc5b85f2b38b0aad97f0ccfe80798d0a554c5e5c35
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-model-class-fitness: 80a2eb3fbf06b7ebb3ebdc642c79dc6883eb350ebafb68555ee3ea9c2505a25f
+  segment:def-model-sufficiency: 882ada782f766dceb819abecd0b5572d3c7c3dce45a415889c62a722dfca894b
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:def-pearl-causal-hierarchy: 0b817be6e14dcb78d1de417b1b13a6a63cc41959e8b240931d3184c81e711668
+  segment:def-strategy-dag: 974c1920edd42bf352b1a9c31e1a461079e94061f8157957a2fb125c4e488a21
+  segment:def-strategy-dimension: 531f25a2cae087ff7056e9e76bac57c8ee5771d71409a643614151339171e38f
+  segment:def-value-object: 8c0cdb072e434ea3eab386cbead2c4d8d6331a5fd2644d47b7c0533d6ca2932b
+  segment:der-action-selection: ff726f8527dab6ee837cc11b7164313850f125e944c76ea86dca14183c613408
+  segment:der-causal-hierarchy-requirement: 835e20ad3d382d10a3b1196797ad51835f3386df13eb8e226a1df4a5295958d5
+  segment:der-causal-insufficiency-detection: b5cb4b7d1f9557652da9868a53282c53ddcca30089c51812fac841135dc518d4
+  segment:der-chain-confidence-decay: 369ae67b420173870677632e9efb50963106657b4479b094ac26397623908e48
+  segment:der-directed-separation: a8f6f1315dfd8c4a23dad75ea372fe34bfca2b276b23b2f83455677d239b50b0
+  segment:der-loop-interventional-access: 772e0a9eca182c3242ebe10b6253c6ab4763534b81dbaf459fcd52fda9cef422
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: d3898fba83b370fda5d32ace003b55ee464beed58852444a5b96d7a056054111
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:form-objective-functional: fd1a9487dbdb3e706bd21f434de0cd6087438fccc9c76bbb589b89f92019d8da
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-mismatch-decomposition: d215ad7db1db571c2e719b31cc39f38f7863ce4b5302e74037a3b6098b2c7a5d
+  segment:result-structural-adaptation-necessity: 7c7c9be73dd830411b5791b025db2e211b07520daab48dd58cca0ab30cf18c2a
+  segment:scope-adaptive-system: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-agent-identity: d6368187962fe6e03af2a82a795b155b684497793341b1228cdc255a9adca4ff
+  segment:scope-and-or: 7b529e04b43cb9069c611d88dc65216efe6aaa99d269df0c61a88bba6d7e9cac
+committed: before
+criterion: 'The off-policy display $\operatorname{sign}(R) = \operatorname{sign}(\rho)$ contradicted the sentence above it ("$+$ for OR-heavy, $-$ for AND-heavy, when $\rho \gt 0$"); the display now carries $s_{\text{type}} \in \{+1, -1\}$ and agrees with the prose and with `#def-strategy-dag` :131 (overestimation at OR roots for a shared enabling cause, underestimation for exclusive alternatives). The criterion''s conclusion and the record''s falsifier name the two things a significant covariance between siblings with disjoint modelled ancestors can mean: a latent common cause, or a missing edge between the siblings.'
+effective-version: a75dffe7dd26ab3f24189498107145062ab74468f744e9d86db76235f136a610
+from: review:part-ii-round-2-drains#C4
+line: derivation
+outcome: confirmed
+recheck: compare `:113` prose with `:115` display; compare `:91` with `:215`; for the missing-edge case, two siblings with a direct edge between them and no latent have nonzero covariance and disjoint modelled ancestors, so the old conclusion ("a cause outside the graph") was false of it.
+target-version: b5cb4b7d1f9557652da9868a53282c53ddcca30089c51812fac841135dc518d4
+version-from: current

@@ -585,8 +585,19 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 
 #### Convention monotonicity holds rung by rung under named hypotheses
 
+**Brief:** More planning is not automatically better, in either direction of the hierarchy. Looking one move ahead and grabbing the action that looks best *right now* can be worse than just sticking with your current plan — the classic short-sighted trap (take the quick $+1$ into a dead end, miss the $+0$-now-then-$+10$-later path). It becomes reliably better only if you check the replanned move against simply continuing as you were (or carry an honest estimate of the long-run value past your planning window). And solving the whole problem optimally over your plan library beats the limited replanner only when the library is the right shape: it has to let you bolt any first move onto any plan, or its best plan has to be best from wherever a first move lands, and the replanner's move-by-move patchwork of library plans has to itself be in the library. If your library is a short list, the patchwork usually is not, and the replanner can then score higher than the "optimal" plan — not because it found a better plan in the library, but because it left the library.
+
+**Impact:** Sharpens the convention-hierarchy monotonicity ( #def-value-object) from an unconditional claim into named-hypothesis guarantees. The receding-horizon-to-Bellman rung ($A_O^{\text{RH}} \leq A_O^{\text{B}}$) holds when the replanner's stitched policy is a member of the class and the class is closed under prefixing a first action or its optimum is optimal from every state a first action reaches, read with $A_O^{\text{B}}$ as the best first action under the optimum; a rectangular class has all of this, and each hypothesis is needed (three two-policy instances: $100$ against $10$, $15$ against $6$, $51$ against $12$). The one-step-to-receding-horizon rung ($A_O^{(1)} \leq A_O^{\text{RH}}$) is false in general and holds exactly under order-consistency of the replanning objective, forced by any of (RH-1) horizon alignment, (RH-2) a value-compared/rollout guard, or (RH-3) a baseline-lower-bounding control-Lyapunov terminal cost. Three consequences travel with it: C3's positive gap means no member of the class reaches the threshold, unconditionally; the C1-against-C3 diagnostic needs only membership of the current policy and one closure property; and control regret is non-negative under C2 only when the replanner is guarded. Two cautions follow for deployments: guard the replanning objective or the monotone-improvement reading of C2 does not hold, and read "C3 is strongest" as a statement about a closed policy class, which a restricted plan library (the DAG-representable $\Pi$) need not be.
+
+**Novelty Claim:** Claim transfer of rollout / one-step policy improvement and terminal-cost receding-horizon results into AAT's value-object setting for the left rung; claim novelty, at not-searched depth, on the right rung's characterization for restricted policy classes — that the stitched replanner's membership is a hypothesis of its own, that prefix-closure and state-wise optimality split across the two readings of attainability, and that a rectangular class is the sufficient shape.
+
+**Related Work:** - Bertsekas, *Rollout, Policy Iteration, and Distributed Reinforcement Learning* (published 2020, found 2026-05-30) — *formal antecedent* — supplies the (RH-2) one-step-improvement guarantee that rollout never underperforms its base policy; also *Dynamic Programming and Optimal Control*, Vol. I.
+- Rawlings, Mayne & Diehl, *Model Predictive Control: Theory, Computation, and Design*, 2nd ed., Ch. 2 (published 2017, found 2026-05-30) — *formal antecedent* — terminal-cost / terminal-set ingredients (RH-3) and the non-monotonicity of model-predictive control without them.
+- Grüne & Pannek, *Nonlinear Model Predictive Control*, 2nd ed., Chs. 5–6 (published 2017, found 2026-05-30) — *formal antecedent* — stability without terminal constraints and the role of the prediction horizon.
+- Status of all three: `intuition-only` pending a `relata` citation pass — the mathematics here is elementary and self-contained, so the citations orient rather than back the derivation.
+
 **Search Log:** - 2026-10-30 (*intuition-only*): the three antecedents above were recalled from the receding-horizon and rollout literatures at the 2026-05-30 landing, not searched for; the derivations do not depend on them.
-- 2026-10-30 (*not searched*): the right-rung closure hypothesis (prefix-closure of the policy class, or state-wise optimality of the class optimum) was derived here and not searched for in the restricted-policy-class literature; a search for "optimal policy within a restricted policy class" and "non-Markov improvement over a policy library" would locate the nearest statements.
+- 2026-10-30 (*not-conducted*): the right-rung hypotheses (membership of the stitched replanner; prefix-closure of the policy class, or state-wise optimality of the class optimum; rectangularity as the sufficient shape) were derived here and not searched for in the restricted-policy-class literature; a search for "optimal policy within a restricted policy class", "non-Markov improvement over a policy library" and "policy-set closure under switching" would locate the nearest statements.
 
 ---
 
@@ -1244,11 +1255,4 @@ Related Work, Search Log. The segment's epistemic tier (frontmatter
 - 2026-05-09 (*intuition-only*, prior to targeted search): expected most scaffolded-LLM systems to be partial wrappers; the specific W₂-vs-W₁ distinction surfaced during the targeted survey rather than being prefigured by intuition.
 
 ---
-
-## Extraction warnings
-
-- [deriv-convention-monotonicity — Convention monotonicity holds rung by rung under named hypotheses] Missing field: **Brief:**
-- [deriv-convention-monotonicity — Convention monotonicity holds rung by rung under named hypotheses] Missing field: **Impact:**
-- [deriv-convention-monotonicity — Convention monotonicity holds rung by rung under named hypotheses] Missing field: **Novelty Claim:**
-- [deriv-convention-monotonicity — Convention monotonicity holds rung by rung under named hypotheses] Missing field: **Related Work:**
 

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: eba8b4170101c095b20928333ccf578ed607f87c7e017aed9a84991f20b3d572
+at: 2026-10-31T03:50:18Z
+store: asf
+act: correct
+about: segment:deriv-convention-monotonicity
+actor:
+  name: Claude Fable 5.1 (Part II round-2, right-rung cluster)
+  role: integrator
+normalizer: vsect-norm/0
+corrects: cb1eca7705ec7266e65416f4735d2a24d2f6252f1225f35907b5accc0de179e6
+text: 'The text this check read is the working-tree version of the segment on top of 3d17de13 (v:b032ce82, the text this cluster landed), not the git revision 3d17de13 the at: field named; the check is on the new text and holds there.'

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: e5c8564ba44bbc5c0ca5cf82ed45036d0568f96634b841fedb1029d4e6ebef3b
+at: 2026-10-31T03:49:08Z
+store: asf
+act: revise
+about: segment:der-observability-dominance
+actor:
+  name: Claude Fable 5.1 (Part II round-2 drains)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 4e9d1ddaa927aa17a240ae7d8e9244fe059d0c1beea1a166ccc780c0077ade4f
+own-version: 4fdeb973fc80302da238987828880f9021ae70938e56c692b535fd5e6469f411
+record: 01-aat-core/src/der-observability-dominance.md

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 94af8e3516b15f93dce21de18197f84c7d933b62cedce9e24c015046c4643f5e
+at: 2026-10-31T03:44:16Z
+store: asf
+act: revise
+about: segment:form-objective-functional
+actor:
+  name: Claude Fable 5.1 (Part II round-2, right-rung cluster)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 99b4ff434893d307522e91246979ed599cc2d3c415fc605206dfab71df46c74b
+own-version: fd1a9487dbdb3e706bd21f434de0cd6087438fccc9c76bbb589b89f92019d8da
+record: 01-aat-core/src/form-objective-functional.md

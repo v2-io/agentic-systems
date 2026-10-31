@@ -1,0 +1,38 @@
+schema: vsect-event/0
+id: 13beea11d22f5d3a60a739854e54d9a552c623cdb2cd76041c15a7c38768a0f3
+at: 2026-10-31T03:49:23Z
+store: asf
+act: read-check
+about: segment:def-value-object
+actor:
+  name: Claude Fable 5.1 (Part II round-2, right-rung cluster)
+  role: integrator
+normalizer: vsect-norm/0
+at-commit: 3d17de13
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-model-sufficiency: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:def-value-object: 08bbd5309246155ed4528d0e56beb4fb064b7c183cf49fa2c4ddc1812cf00141
+  segment:der-directed-separation: 5d0c86c0038022d33efc2e386c2600a3538d8328075e7000efcd8ee0240776d3
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: d3898fba83b370fda5d32ace003b55ee464beed58852444a5b96d7a056054111
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:form-objective-functional: 99b4ff434893d307522e91246979ed599cc2d3c415fc605206dfab71df46c74b
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+committed: before
+criterion: Does the right-rung text the Part II round-2 integrator landed in `#def-value-object` (summary :21, C3 paragraph :81, Monotonicity :91 and :101, corollary :113, Epistemic Status :137, Record 3 :169–181) say the same thing as the appendix as now landed, and is each of its statements one the appendix derives or exhibits?
+effective-version: 630c68ec137795aea83c2adda28e8d20b6cb80af93062462d1df43e917df6767
+from: review:part-ii-round-2-right-rung#C11
+line: derivation
+outcome: confirmed
+recheck: read against C1–C7 above. (M) with (PC) or (SO) on the first-action reading, matched; "(SO) alone does not make the two readings coincide", C3 above; "a prefix-closed two-member class with (SO) holding and $A_O^{\text{RH}} = 15 \gt A_O^{\text{B}} = 6$", C2; rectangular classes have all three, C1 (with the maximizer precision the appendix adds); the $(x, H, D)$ instance, C4; the unconditional half and the converse's hypotheses, C6; the C1-against-C3 direct comparison in Record 3's True-of, C7; :81's equality clause "or $\pi^\ast$'s own first action is a best first action under $\pi^\ast$ as continuation" is (G), C5. Nothing disagrees. One thing is unstated there and is F1 below.
+target-version: 08bbd5309246155ed4528d0e56beb4fb064b7c183cf49fa2c4ddc1812cf00141
+version-from: git-revision

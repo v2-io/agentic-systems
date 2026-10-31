@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: bd7ba470bce8830da0dbc1f9949811b8685dba87d829e2d183952adddcd6f67e
+at: 2026-10-31T03:43:59Z
+store: asf
+act: revise
+about: segment:deriv-convention-monotonicity
+actor:
+  name: Claude Fable 5.1 (Part II round-2, right-rung cluster)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 267bc9a3f0131d7654bec8e53231c4a3111baebf9f08210571a93a1622ca0d74
+own-version: b032ce82a01b34731cf7e0b0ffd861ec948dee556f9191d3983429d6566ca72d
+record: 01-aat-core/src/deriv-convention-monotonicity.md

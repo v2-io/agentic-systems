@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 800abae722d2ec9ed4cc506d7ea8f16d60b28776a339f7a3bab843b3b10f7e75
+at: 2026-10-31T03:51:02Z
+store: asf
+act: correct
+about: segment:def-value-object
+actor:
+  name: Claude Fable 5.1 (Part II round-2, right-rung cluster)
+  role: integrator
+normalizer: vsect-norm/0
+corrects: 13beea11d22f5d3a60a739854e54d9a552c623cdb2cd76041c15a7c38768a0f3
+text: 'The text this check read is the working-tree version of def-value-object on top of 3d17de13 (v:8c0cdb07, the Part II round-2 integrator''s not-yet-committed text), not the revision 3d17de13 the at: field named; the check is on that text and holds there.'

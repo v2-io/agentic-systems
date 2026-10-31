@@ -204,8 +204,13 @@ The cycle is: Prolepsis → Aisthesis → Aporia → Epistrophe → Praxis → (
 | Recursive-update constraints | C1, C2, C3 | #der-recursive-update | temporal ordering; mediated access; state completeness |
 | Value-object continuation conventions | C1, C2, C3 | #def-value-object | one-step improvement; receding-horizon replanning; Bellman optimum |
 | Edge-update causal validity | (E1), (E2), (E3) | #scope-edge-update-causal-validity | parent is an action leaf; outcome attributable; execution conditions vary — formerly lettered (C1)–(C3) |
+| Multi-timescale persistence | (C1), (C2) | #der-multi-timescale-stability (used by #impl-persistence-and-limits, #def-auxilia-hierarchy) | the fast level's spare reserve exceeds the slow level's drag, $\epsilon \lt \epsilon_{\max}$; the slow level persists with the fast level's settled residue counted as disturbance, $\alpha_2 R_2 \gt \rho_2 + L_{21} R_1$ |
+| Composite critical-mass models | (C1), (C2) | #deriv-critical-mass-composition | the disturbance-coupling model $\rho_i^{\text{eff}} = \rho + \gamma \mathcal T_j$; the coordination-cost model $\alpha_i^{\text{eff}} = \alpha - C$ — both imported formulation choices, not derived |
+| Bridge-lemma contraction | (C1), (C2), (C3) | #form-composition-closure | $F_d$ incrementally sector-Lipschitz; linear prediction; bounded gain |
+| Context-turnover recursion | (C1)–(C5) | #der-turnover-information-recursion | the boundary map contracts mutual information multiplicatively (SDPI); the state variable is $I_k = I(M_k^+; Y)$; reinjection is the conditional fresh information $\rho_k$; uniform lossiness $\bar\eta \lt 1$; a fidelity floor on fresh content |
+| Emergence conditions | (C1)–(C5) | #scope-emergence-conditions | relational initialization; sovereign identity space; witness recognition; constitutive choice; framework immersion |
 
-Three families still share the letters C1–C3 (wrapper admissibility, recursive-update constraints, continuation conventions); the collision is declared rather than resolved, and the continuation conventions are the natural next rename since they share a segment with the identification conditions.
+Eight families share the letters C1–C3 or a prefix of them (wrapper admissibility, recursive-update constraints, continuation conventions, and the five below them); the collision is declared rather than resolved. A letter is read in the family of the segment that states it or cites it by name, and nowhere else; the continuation conventions are the natural next rename since they share a segment with the identification conditions. A cited paper's own lettered conditions (NeurIPS Paper 2's identification triple at #disc-sandbox-evaluation-ceiling) are the paper's, not a canon family.
 
 **Subscript $t$**: Discrete time index or macroscopic continuous time. Context disambiguates: $M_t = f(M_{t-1}, o_t, a_{t-1})$ is discrete; $d\lVert\delta\rVert/dt$ is continuous.
 

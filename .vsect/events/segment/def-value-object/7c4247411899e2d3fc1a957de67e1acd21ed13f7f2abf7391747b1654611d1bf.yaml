@@ -1,0 +1,32 @@
+schema: vsect-event/0
+id: 7c4247411899e2d3fc1a957de67e1acd21ed13f7f2abf7391747b1654611d1bf
+at: 2026-10-31T03:49:24Z
+store: asf
+act: place-finding
+about: segment:def-value-object
+actor:
+  name: Claude Fable 5.1 (Part II round-2, right-rung cluster)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-model-sufficiency: 882ada782f766dceb819abecd0b5572d3c7c3dce45a415889c62a722dfca894b
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:def-value-object: 8c0cdb072e434ea3eab386cbead2c4d8d6331a5fd2644d47b7c0533d6ca2932b
+  segment:der-directed-separation: a8f6f1315dfd8c4a23dad75ea372fe34bfca2b276b23b2f83455677d239b50b0
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: d3898fba83b370fda5d32ace003b55ee464beed58852444a5b96d7a056054111
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:form-objective-functional: fd1a9487dbdb3e706bd21f434de0cd6087438fccc9c76bbb589b89f92019d8da
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+finding: review:part-ii-round-2-right-rung#F1
+target: segment:def-value-object
+text: 'On the first-action reading, $A_O^{\text{B}} = \sup_a Q_O(M_t, a; \pi^\ast, N_h)$ (:81) depends on which maximizer serves as $\pi^\ast$ when $\Pi$ has several: maximizers of $V_O$ from $x$ can differ at states their own first action does no'
+version-from: current

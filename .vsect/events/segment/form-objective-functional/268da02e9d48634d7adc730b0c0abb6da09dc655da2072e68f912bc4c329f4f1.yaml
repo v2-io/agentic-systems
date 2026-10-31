@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 268da02e9d48634d7adc730b0c0abb6da09dc655da2072e68f912bc4c329f4f1
+at: 2026-10-31T03:54:24Z
+store: asf
+act: correct
+about: segment:form-objective-functional
+actor:
+  name: Claude Fable 5.1 (Part II round-2, right-rung cluster)
+  role: integrator
+normalizer: vsect-norm/0
+corrects: a499482856bede6f4203c3252b9f68c3eb69012370e188c589c8af006e47169a
+text: A second edit to form-objective-functional after this record was taken removed the large-weight-approximation gloss from the two scalarization lists and the sentence about agents using a weighted sum; the text the check now stands on is v:ee7c1b1f, and the three-exclusion statements it checked are unchanged there.

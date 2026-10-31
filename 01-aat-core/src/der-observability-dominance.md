@@ -45,7 +45,7 @@ What is frozen is the *update*, not the *input*: observations continue to arrive
 
 **Register:** formal — robust-qualitative, via the gain principle: observation uncertainty going to infinity drives the edge gain to zero (tag `observability-dominance`, Formal Expression). The multiplicative form $\text{conf} \cdot \text{obs}$ is a first-order approximation; the freezing is the claim, and it is a claim about gain-principle update rules, not yet about any real learner.
 
-**Population:** representations in which edge credences update by the gain principle ( #emp-update-gain) from observations of node outcomes, at a node on which no observed variable depends.
+**Population:** representations in which edge credences update by the gain principle ( #emp-update-gain) from observations of node outcomes, with edge priors independent across edges, at a node on which no observed variable depends. (Under a hierarchical or correlated prior an edge no observation bears on moves through its coupling to edges that are observed; the clause narrows the population, not the claim.)
 
 **True of:** the never-chosen arm of a greedy OR node, which receives zero correction (Prop B.4(a), #deriv-edge-credence-dynamics), and arm 3 of #example-strategy, frozen at its exploration-phase value once nothing observed depends on it (internal consistency, not instantiation).
 
@@ -65,7 +65,7 @@ What is frozen is the *update*, not the *input*: observations continue to arrive
 
 **False of:** an organization whose unmonitored steps feed a monitored terminal is in the Prop B.3 regime, not the frozen one: its step-level beliefs move, and the prediction is non-identification, not persistence of the prior.
 
-**Falsifier:** records from such an organization in which step-level beliefs about unmonitored steps track measured outcomes once measurement is introduced no better than chance would predict against the frozen prior; or, the other way, beliefs about steps no record bears on that nonetheless track the truth, which would require a channel the model does not include.
+**Falsifier:** records from such an organization in which beliefs about steps no record bears on nonetheless track the truth — before any measurement is introduced, or better than the frozen prior would predict once it is — which would require a channel the model does not include.
 
 **Instantiated:** no.
 
@@ -133,7 +133,7 @@ The consequence differs from "frozen edges": an unobservable intermediate with a
 
 ## Working Notes
 
-- The absorbing-state property of unobservable regions is a strong prediction. In organizational settings, it predicts that departments with poor measurement (R&D, strategy groups, some management functions) will develop persistent, untested beliefs about their own effectiveness. The theory predicts this is structural (frozen $\eta_{\text{edge}}$), not motivational.
+- The absorbing-state property of unobservable regions is a strong prediction. In organizational settings, it predicts that departments with poor measurement (R&D, strategy groups, some management functions) will develop persistent, untested beliefs about their own effectiveness. The theory predicts this is structural, not motivational, and names the regime: for steps on which no recorded outcome bears, the beliefs are frozen ($\eta_{\text{edge}} \to 0$); for unmonitored steps that feed a monitored terminal they move but are not identified per step (Prop B.3), so the department's belief about its own effectiveness is untested in the first case and unlocalizable in the second.
 - Observability is not binary — it's a spectrum. Partial observability (noisy observations of intermediate results) gives partial gain, which gives slow but nonzero learning. The diagnostic question is whether the learning rate is fast enough to maintain strategy persistence given the environment's rate of change ($\rho$).
 
 ### Incidental audit gold (lift 2026-05-31, batch A9)
@@ -147,7 +147,7 @@ Cross-audit "wandering thoughts" / §14-ideation harvested from the de-novo audi
 
 #### 2. Candidate Discussion
 
-- **Organizational rot as a structural, not motivational, prediction.** "Departments with poor measurement (R&D, strategy groups, some management functions) will develop persistent, untested beliefs about their own effectiveness" — and the framework predicts this is structural (frozen $\eta_{\text{edge}}$). Already a Working-Notes bullet; the audits independently re-derived it as the segment's most striking consequence and a candidate Discussion centerpiece (Claude/193847, 829314, 584721; Gemini/773921, 849201).
+- **Organizational rot as a structural, not motivational, prediction.** "Departments with poor measurement (R&D, strategy groups, some management functions) will develop persistent, untested beliefs about their own effectiveness" — and the framework predicts this is structural (frozen $\eta_{\text{edge}}$ for steps no recorded outcome bears on; the non-identification regime for unmonitored steps feeding a monitored terminal, per the Working Note above). Already a Working-Notes bullet; the audits independently re-derived it as the segment's most striking consequence and a candidate Discussion centerpiece (Claude/193847, 829314, 584721; Gemini/773921, 849201).
 - **Code quality / telemetry / tests as literal sensor infrastructure.** The segment's TST cross-ref is read as the headline: logging, unit tests, intermediate `print` statements are "not just good engineering practices, but physical prerequisites for intelligence in complex environments" — a 5-step pipeline checked only at the output is an unobservable chain whose mental model "will literally never converge to the truth … permanently stuck in an epistemic trap" until observability investment splits it into trackable edges (Gemini/829314, 773921). Candidate Discussion bridge to `#der-code-quality-as-observation-infrastructure`.
 - **Optimal decomposition depth.** "Decompose as finely as observation channels allow, but no finer" — adding unobservable subgoals *decreases* plan-level $\alpha_\Sigma$ without adding diagnostic signal. Candidate concrete engineering-guidance line (Claude/584721; Gemini/773921).
 

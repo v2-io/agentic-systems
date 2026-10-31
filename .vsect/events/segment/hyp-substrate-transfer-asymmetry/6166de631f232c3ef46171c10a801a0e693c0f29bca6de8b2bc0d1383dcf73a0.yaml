@@ -1,0 +1,96 @@
+schema: vsect-event/0
+id: 6166de631f232c3ef46171c10a801a0e693c0f29bca6de8b2bc0d1383dcf73a0
+at: 2026-10-31T03:53:05Z
+store: asf
+act: place-finding
+about: segment:hyp-substrate-transfer-asymmetry
+actor:
+  name: Claude Fable 5.1 (Part II round-2 drains)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-agent-spectrum: 5d3bba0901b8d2efc74fa09f7a6e1034608272de46713edc4503a02890a2e3e4
+  segment:def-causal-information-yield: aafeacbbb79b6c8fa83a38fc5b85f2b38b0aad97f0ccfe80798d0a554c5e5c35
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-control-regret: 398018e739cd747cb0c193d0c9c373694d57709e26bb7a541f0508ee941a3274
+  segment:def-coupled-update-dynamics: 4f93c7196b6014f20471c349d270595b7774cbb1f1503d882675184fe8cd946d
+  segment:def-eli-cohort: 0e01a06c1409b64fd8383dd104820341aee8a391dd31b54a3a0d18895a1cc3c8
+  segment:def-five-constitutive-factors: 9ae0abdf113a459fd541ef238d0f66acb1dc464e06c6fc4421fd61668fb535dc
+  segment:def-identity-sufficiency: f8c98691b8500c14b643aa41fdd57d365bfd84bebf00f7ec2025348c752baa0a
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-model-class-fitness: 80a2eb3fbf06b7ebb3ebdc642c79dc6883eb350ebafb68555ee3ea9c2505a25f
+  segment:def-model-sufficiency: 882ada782f766dceb819abecd0b5572d3c7c3dce45a415889c62a722dfca894b
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:def-pearl-causal-hierarchy: 0b817be6e14dcb78d1de417b1b13a6a63cc41959e8b240931d3184c81e711668
+  segment:def-satisfaction-gap: c7a46ac6bc4f29a79a29cb505833cb20428c42b84a1dbde1f3e0e4bebc83e05b
+  segment:def-strategic-calibration: 6f7e397ba2318cad37a98db35b7f50686e13f5fed5cce3699f0a39ae76c799d4
+  segment:def-strategic-tempo: 689b621ba208abada10f13de5447023b7a8717dca75eceadc9de21d38e283fd7
+  segment:def-strategy-dag: 974c1920edd42bf352b1a9c31e1a461079e94061f8157957a2fb125c4e488a21
+  segment:def-strategy-dimension: 531f25a2cae087ff7056e9e76bac57c8ee5771d71409a643614151339171e38f
+  segment:def-value-object: 8c0cdb072e434ea3eab386cbead2c4d8d6331a5fd2644d47b7c0533d6ca2932b
+  segment:der-action-selection: ff726f8527dab6ee837cc11b7164313850f125e944c76ea86dca14183c613408
+  segment:der-causal-hierarchy-requirement: 835e20ad3d382d10a3b1196797ad51835f3386df13eb8e226a1df4a5295958d5
+  segment:der-causal-insufficiency-detection: b5cb4b7d1f9557652da9868a53282c53ddcca30089c51812fac841135dc518d4
+  segment:der-chain-confidence-decay: 369ae67b420173870677632e9efb50963106657b4479b094ac26397623908e48
+  segment:der-deliberation-cost: fff865feb1ea99b6b937bda8675a42b832cb3330f09bf2db7fb241f8e83c9aeb
+  segment:der-directed-separation: a8f6f1315dfd8c4a23dad75ea372fe34bfca2b276b23b2f83455677d239b50b0
+  segment:der-gain-sector-bridge: f5c8fdd9d718eff5c9192d3d1b399b0f97106f1f28a5619dae2f8010565b1539
+  segment:der-loop-interventional-access: 772e0a9eca182c3242ebe10b6253c6ab4763534b81dbaf459fcd52fda9cef422
+  segment:der-observability-dominance: 4fdeb973fc80302da238987828880f9021ae70938e56c692b535fd5e6469f411
+  segment:der-orient-cascade: d8465f59d79bbbecc00d33b2fce0baee5be535c4d48b4d1662a79e1835363d00
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:der-temporal-nesting: d9659184b2722d9f11ea662238d58f77876e241ce9b794572f498f3541a2d488
+  segment:deriv-edge-credence-dynamics: 13d4f7f2bd417d4627da1465726e5106659e573a9dc64626bb85d0df79b0ff3c
+  segment:deriv-edge-update-natural-parameter: 1347ced6b4f8032b9dcd3b8a927a9020e51c765cb15987ac0a38a9d4570d0c61
+  segment:deriv-gain-sector: f78514b9da4ac15f168eda5d3d520d6191462d6a86841afcb7c80487fe70ba94
+  segment:deriv-identity-sufficiency-rate-bound: 01022e2a870b16b127c577cdf5068ff7917d9793243bffa70182b2f0098bf94e
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:deriv-sector-condition: 9f0758ed7bc37d6f067d005b9f920c9bc9ed4a45463768b7a2c3131a44ac5b29
+  segment:deriv-strategy-cost-regret-bound: e4a8235550228cd9cd5930bc053f501c6ef2b89db1a50f5f20146b3124c3bc2d
+  segment:disc-ciy-unified-objective: 2283084091cbf7e37ba61cf62f6796fb2ee788032c67152cb62b8ef6301b8a5a
+  segment:disc-credit-assignment-boundary: 0775756c93e97be9bb66d08c396a84625a7667c8da526f74e5faaac4ce09a161
+  segment:disc-five-forcing-functions: 3b8321e1ca559342f28297895eb186abeb891acba8889351a42ad117465888b3
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: d3898fba83b370fda5d32ace003b55ee464beed58852444a5b96d7a056054111
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:form-objective-functional: fd1a9487dbdb3e706bd21f434de0cd6087438fccc9c76bbb589b89f92019d8da
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:form-strategy-complexity-cost: 6a614bc55ed494ed08e12776ac83d97f9e7b2718d167a3c8e703cbb4bcc250f5
+  segment:form-structural-change-as-parametric-limit: 36cd3cbd177605e0a239047be8f990995e6becf5315a0e2056eb66ee7d8eaf66
+  segment:hyp-edge-update-via-gain: 594bed6507decb872a4a6fb2dba3c36a27f3b33f95a003d61aab003144446b25
+  segment:hyp-substrate-transfer-asymmetry: 05737c718f7c3dde8c4d8a665984c8933b4b0b5abe35c96059a570ee8c32e4af
+  segment:norm-explicit-strategy-condition: 9ba33948b1a1a431346ec2df7126d81de016b39cd55864f7ea942d2b053bbc92
+  segment:obs-context-turnover: 60c90959d6a06647e83329e6a3e054187e80c980eb218053e249a211af33eb4b
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-coupled-diagnostic-framework: 443e0b34344a1a81dcb18ae04ecda28226aa6cd04c6428ab35d053ffafd0cf78
+  segment:result-mismatch-decomposition: d215ad7db1db571c2e719b31cc39f38f7863ce4b5302e74037a3b6098b2c7a5d
+  segment:result-persistence-condition: 382bfbdfce370119cb7f41c8161baf42fa9415a28646b553fbed7f3a9641fce4
+  segment:result-section-ii-survival: 1ebd00f922e9bb16087762ab92de64c43214acf7c8eda3aef8672033a9b804cc
+  segment:result-sector-condition-stability: 2537d83bd9bb560749fbef37563e26529e31557ae95e7268bfd5fa4496383e89
+  segment:result-sector-persistence-template: e81dfed0853e9582d41e15e3a737f8fe1829370f72fedf1766ddb60ef07a2d2a
+  segment:result-structural-adaptation-necessity: 7c7c9be73dd830411b5791b025db2e211b07520daab48dd58cca0ab30cf18c2a
+  segment:schema-strategy-persistence: 00fb63e55bc426d659d9a74e531b7e09def9a756b22846680959ffbc948aac91
+  segment:scope-adaptive-system: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-agent-identity: d6368187962fe6e03af2a82a795b155b684497793341b1228cdc255a9adca4ff
+  segment:scope-and-or: 7b529e04b43cb9069c611d88dc65216efe6aaa99d269df0c61a88bba6d7e9cac
+  segment:scope-channel-collapse: 2e49b32081eb7bcf34ef9bf6ca42312c1c2950cff617b54a691b11fe878e05d4
+  segment:scope-ciy-observational-proxy: deb370a502ab88d141a1c477466950bb023b006bdac51c83da9f5f4a611b33b5
+  segment:scope-edge-update-causal-validity: ba1d70b6fe950dd386c0be52c5cb22ccf2996d91c9fc8d3e1cbf23d5d7758b6f
+  segment:scope-eli: c6abd2ff45016d1c86a10043851abdafd453fac23dbf2cc51f30dabd79d1f0a2
+  segment:scope-interiority-loop: b752bf86ba3409599201c360255535fe3a38b3e757d9f313d6f2fc4c7d359e84
+  segment:scope-logogenic-agent: c84370848e59555724641413ed3776a8dfb43aa79a9335e92478e48edff00f37
+  segment:scope-moral-continuity: 496af8990b2bd6aaf74730b07c43eaa46a898b7da35a917063d82d95b668c9b3
+  segment:scope-observation-ambiguity-modulation: 1aff46dbc272349939b6051886fafca60b8547c65910917e58571a428bf5cf7c
+  segment:scope-primitive-logogenic: 6f9194a9912291d5386eef69f611e0a83d4a25c3ab35c3c0fa9e4cf3ca716c5b
+  segment:scope-scaffolded-logogenic: c9ccf6d173cc46a4f322e072d98e6b7179830f511c210191cc916ccb456b7c1a
+  segment:scope-witness-bidirectional: f0cc8e9d0b9e3bb90e245a61cad56b1acf75996725c66e6dffb30df3d47bd8ca
+finding: review:part-ii-round-2-drains#F2
+target: segment:hyp-substrate-transfer-asymmetry
+text: 'Volume 4 carriers left to that lane: `:85` and `:101` (per-substrate $(\kappa, \mathcal A)$ profiles; "asymmetric $\kappa \cdot \mathcal A$"), `#scope-agent-identity` :68, :71 (the identification triple by its old letters), `#obs-growth-vs-'
+version-from: current

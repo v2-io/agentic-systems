@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: d4c177a47d4c7472108800721b3507c0f842919275926954dc05d63e85996358
+at: 2026-10-31T03:44:14Z
+store: asf
+act: revise
+about: segment:def-satisfaction-gap
+actor:
+  name: Claude Fable 5.1 (Part II round-2, right-rung cluster)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: b25e6d1de7c17708e55392f2fe063f13d062e13160f40d3f51fd2a3153533f00
+own-version: c7a46ac6bc4f29a79a29cb505833cb20428c42b84a1dbde1f3e0e4bebc83e05b
+record: 01-aat-core/src/def-satisfaction-gap.md
