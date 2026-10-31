@@ -1,0 +1,31 @@
+schema: vsect-event/0
+id: 5cffa044ad1676abb3e0ae0c1c1dbf17bebc65c1ca3e8511c12dfb16cc0be3e8
+at: 2026-10-31T03:21:59Z
+store: asf
+act: rederive
+about: segment:scope-agent-identity
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-4 integrator)
+  role: integrator
+  read:
+  - segment:def-chronica
+normalizer: vsect-norm/0
+at-commit: 1d1c0b28
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-model-sufficiency: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:scope-agent-identity: 0b1711ab5d73523bd8e19d2975d9da99a8b2fac2544c598c670e1f1ab6da1976
+committed: after
+criterion: 'Under the criterion with its precondition stated (a continuation is a loop whose starting state is built from this agent''s history before it takes events of its own; fork iff two continuations take events at once), does each of check-3''s cases get one verdict: a set-aside state resumed after the restored copy has retired; a set-aside state resumed while it still runs; a loop already on its own trajectory reached by another agent''s events; a loop reached at its opening by a witness carrying a predecessor''s events?'
+effective-version: de0f4e2c145a53840605fbd1f50b2c6ab854a177dc85e3f0ead0ef8304d280f9
+from: review:vol4-c1-integration-4#C3
+line: derivation
+outcome: confirmed
+recheck: 'retired-then-resumed: the retired copy''s events reach the resumption through the world, no two run at once, so a second restore; still-running-then-resumed: fork at the resumption; own-trajectory-then-reached: observation, and the transplant case when the other''s state or record arrives; opening-prompt witness: a start, since the first event builds the whole state the loop has'
+target-version: 0b1711ab5d73523bd8e19d2975d9da99a8b2fac2544c598c670e1f1ab6da1976
+version-from: git-revision
