@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 7c59ac711364e98a4491554e610946bebd7cae046ea24ffee71e1f9e0fd37f5f
+at: 2026-10-31T03:29:35Z
+store: asf
+act: revise
+about: segment:result-adversarial-tempo-advantage
+actor:
+  name: c1-defender-noise
+  role: adopter
+normalizer: vsect-norm/0
+change: redefined
+from-version: 726435cb1d72eb6e5407e20e7569f870f9fd6ece181e867ae73411fd809bce0e
+own-version: e1ae2367f82923545613b66ea0e8bf99615703b17ba5a78b9371c62b279bea2e
+record: 01-aat-core/src/result-adversarial-tempo-advantage.md

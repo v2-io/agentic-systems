@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 9f807bc5fc143468bd2b6ec82c762a2f2901f6db77095fac169da8daba0286b9
+at: 2026-10-31T03:29:35Z
+store: asf
+act: revise
+about: segment:def-adaptive-tempo
+actor:
+  name: c1-defender-noise
+  role: adopter
+normalizer: vsect-norm/0
+change: redefined
+from-version: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+own-version: 7c9e7a2297a73b91aefa7e16c89b911c08289901b427e00d28d8c975c92c259f
+record: 01-aat-core/src/def-adaptive-tempo.md

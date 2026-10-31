@@ -13,7 +13,7 @@ stage: draft
 
 # Derivation: Observation Noise in an Adversarial Pair — Whom It Hurts Depends on Whose Channel It Is On
 
-In a two-agent adversarial pair, observation noise does not gate the faster agent's advantage in general. What it does depends on whose channel carries it. Noise on the defender's own channel raises the defender's error at every gain and every tempo ratio, and it lowers the largest attacker tempo the defender can survive at any gain. It flattens the log-log slope of the mismatch ratio only because it adds to the defender's error a term the attacker does not drive. Noise on the attacker's channel is what reduces the attacker's advantage. When the attacker's tempo comes from gain on that channel, its own error has a minimum at its Kalman gain, and past the point where its injected noise exceeds the coupling, its advantage grows only as the square root of its tempo while its own error grows. Noise added to the shared environment compresses the ratio but raises the slower agent's error by more than the faster agent's. The closed form reproduces the Variant-E simulation table, and splitting that simulation by channel shows that its exponent collapse came from the attacker's channel.
+In a two-agent adversarial pair, observation noise does not gate the faster agent's advantage in general. What it does depends on whose channel carries it. Noise on the defender's own channel raises the defender's error at every gain and every tempo ratio, and it lowers the largest attacker tempo the defender can survive at any gain. It flattens the log-log slope of the mismatch ratio only because it adds to the defender's error a term the attacker does not drive. Noise on the attacker's channel is what reduces the attacker's advantage, measured as the ratio. When the attacker's tempo comes from gain on that channel, its own error has a minimum at its Kalman gain, and past the point where its injected noise exceeds the coupling, its advantage grows only as the square root of its tempo while its own error grows; when the tempo comes from event rate at a fixed per-event gain, the same loss of dominance arrives later and the exponent falls to one. The ratio is not the defender's error, which attacker-channel noise leaves unchanged at a fixed attacker gain. What protects the defender's own persistence is the attacker's: an attacker that must stay in its own region on a fixed channel cannot run its gain past a cap that falls with the square of its channel noise, and with the defender's own survivable bound this gives a condition under which the defender survives every attacker that survives. Noise added to the shared environment compresses the ratio but raises the slower agent's error by more than the faster agent's. The closed form reproduces the Variant-E simulation table, and splitting that simulation by channel shows that its exponent collapse came from the attacker's channel.
 
 ## Formal Expression
 
@@ -39,7 +39,7 @@ minimized over the gain at the Kalman–Bucy gain $K_i = \sigma_{\text{env},i}/\
 
 $$\gamma_A\,\mathcal T_A \;\lt\; \frac{R_B^2}{n\,\sigma_{\nu,B}} - \sigma_{\text{base}},$$
 
-so the largest attacker tempo the defender can withstand at any gain falls as $1/\sigma_{\nu,B}$ (when the Kalman gain is admissible; a cap on the gain only lowers this bound further). At a fixed gain the threshold of #der-adversarial-destabilization becomes $\gamma_A\mathcal T_A \lt \sqrt{2\alpha_B R_B^2/n - \alpha_B^2\sigma_{\nu,B}^2} - \sigma_{\text{base}}$, which also falls strictly in $\sigma_{\nu,B}$.
+so the largest attacker tempo the defender can withstand at any gain falls as $\sigma_{\nu,B}$ rises, as $R_B^2/(n\sigma_{\nu,B}) - \sigma_{\text{base}}$ (when the Kalman gain is admissible; a cap on the gain only lowers this bound further). At a fixed gain the threshold of #der-adversarial-destabilization becomes $\gamma_A\mathcal T_A \lt \sqrt{2\alpha_B R_B^2/n - \alpha_B^2\sigma_{\nu,B}^2} - \sigma_{\text{base}}$, which also falls strictly in $\sigma_{\nu,B}$.
 
 *Model D.* With channel noise bounded by $\bar\nu_B$, the defender's bound is $\rho_{\text{env},B}/\alpha_B + \bar\nu_B$ ( #deriv-sector-condition Setup): defender-channel noise raises it by the same amount at every gain, leaves the attacker's contribution $\gamma_A\mathcal T_A/\alpha_B$ unchanged, and so again raises the ratio while flattening its slope. The Kalman-gain forms in (b) and (c) are Model S results and are not carried over to Model D.
 
@@ -55,13 +55,31 @@ $$\frac{V_B}{V_A} \;\approx\; \frac{\gamma_A^2\,\alpha_A^2/\alpha_B}{\alpha_A\,\
 
 the exponent falls from $3/2$ to $1/2$. The advantage keeps growing, at the slower rate, while the attacker's own error grows linearly in its gain and its expected stay in its region shortens ( #deriv-sector-condition, exit exponent capped at the Kalman gain).
 
-(c) *Tempo raised by event rate.* At a fixed per-event gain $\eta$, $r$ fresh observations per unit step inject noise that averages, and the attacker's noise term is $\eta\,\sigma_{\nu,A}^2/(2-\eta)$ per coordinate in the discrete form, a floor that does not grow with $r$. Attacker-channel noise still flattens the ratio, but more weakly than under gain-raised tempo. This case has a closed form and has not been simulated.
+(c) *Tempo raised by event rate.* Let the attacker observe at event rate $\nu_A$ with per-event noise variance $s_A^2$ and correct with per-event gain $h_A$, so $\alpha_A = \nu_A h_A$ and its channel intensity is $\sigma_{\nu,A}^2 = s_A^2/\nu_A$ ( #result-persistence-condition, the event-rate lever). The injected term is $\alpha_A^2\sigma_{\nu,A}^2 = \alpha_A h_A s_A^2$, linear in tempo, and
+
+$$V_A = \frac{n\,\sigma_{\text{env},A}^2}{2\alpha_A} + \frac{n\,h_A s_A^2}{2}.$$
+
+At a fixed per-event gain the attacker's error falls toward the floor $n h_A s_A^2/2$, which does not move with its tempo. Its coupling dominance ($\sigma_{\text{env},A}^2 \gg \alpha_A h_A s_A^2$) still fails, at $\alpha_A \sim \sigma_{\text{env},A}^2/(h_A s_A^2)$ rather than at the gain-raised point; past it, with the defender coupling-dominant, $\sqrt{V_B/V_A} \approx \gamma_A\alpha_A/(s_A\sqrt{h_A\alpha_B})$, and the exponent falls from $3/2$ to $1$. An attacker keeps its coupling dominance as its tempo grows only if its per-event gain falls at least as fast as its tempo grows, that is, if its event rate grows at least as the square of its tempo. In the discrete form of the Variant-E script the floor is $h\,s^2/(2-h)$ per coordinate, and the slopes the script prints for this case over $r \in [0.5, 4]$ are local slopes, not this asymptote. This case is closed form only; it has not been simulated.
 
 ### P3. Noise added to the shared environment
 
 *[Derived (shared base noise)]*
 
 Without channel noise, $\sqrt{V_i} = \sigma_{\text{env},i}\sqrt{n/(2\alpha_i)}$, so $\partial\sqrt{V_B}/\partial\sigma_{\text{base}} = \sqrt{n/(2\alpha_B)} \gt \sqrt{n/(2\alpha_A)} = \partial\sqrt{V_A}/\partial\sigma_{\text{base}}$ whenever $\alpha_A \gt \alpha_B$. Raising $\sigma_{\text{base}}$ moves the ratio toward $(\alpha_A/\alpha_B)^{1/2}$, the non-coupling-dominant limit of #result-adversarial-tempo-advantage (Regime 3), while the slower agent's error rises by more than the faster agent's, and its destabilization threshold $(R_B\sqrt{2\alpha_B/n} - \sigma_{\text{base}})/\gamma_A$ ( #der-adversarial-destabilization) falls. Under Model D the same holds with $\rho_{\text{base}}/\alpha_i$ in place of $\sigma_{\text{base}}\sqrt{n/(2\alpha_i)}$.
+
+### P4. An attacker that must persist is capped by its own channel
+
+*[Derived (attacker persistence cap)]*
+
+By the Model S window of #result-persistence-condition (gain-injected channel noise), the attacker persists in mean square at gain $\alpha_A$ only if $n(\sigma_{\text{env},A}^2 + \alpha_A^2\sigma_{\nu,A}^2) \lt 2\alpha_A R_A^2$, that is, for $\alpha_A$ between the roots of this quadratic, the larger of which is
+
+$$\alpha_+ = \frac{R_A^2 + \sqrt{R_A^4 - n^2\sigma_{\text{env},A}^2\sigma_{\nu,A}^2}}{n\,\sigma_{\nu,A}^2} \;\leq\; \frac{2R_A^2}{n\,\sigma_{\nu,A}^2},$$
+
+whatever $\sigma_{\text{env},A}$ is. A persisting attacker therefore exerts coupled pressure $\gamma_A\alpha_A \lt 2\gamma_A R_A^2/(n\sigma_{\nu,A}^2)$ on the defender. With P1(c), the defender can persist at some gain against every attacker that itself persists if
+
+$$\frac{2\gamma_A R_A^2}{n\,\sigma_{\nu,A}^2} \;\leq\; \frac{R_B^2}{n\,\sigma_{\nu,B}} - \sigma_{\text{base}} .$$
+
+The left side falls as $1/\sigma_{\nu,A}^2$ and the right side rises as $\sigma_{\nu,B}$ falls, so degrading the attacker's channel and protecting one's own both widen the condition. Unlike P2(a), this is a statement about the defender's own persistence, not about the ratio. It binds an attacker that must stay in its own region and observes through a fixed channel. An attacker that is willing to leave its region is not capped. An attacker that raises its event rate lowers its channel intensity as $\sigma_{\nu,A}^2 = s_A^2/\nu_A$ and raises its cap in proportion to $\nu_A$.
 
 ### Check against the Variant-E simulation
 
@@ -93,7 +111,7 @@ Defender-only noise raises the ratio at every tempo ratio (P1a) while lowering t
 
 ## Epistemic Status
 
-*Conditional*, and exact under its stated model: linear correction on a fixed channel, white channel noise, Coupling Model S (or D where stated), and exogenous tempos. P1–P3 are algebra on the steady state of #deriv-sector-condition and the coupling model of #der-adversarial-destabilization; P1(c) uses that segment's satisfiability condition at the Kalman gain. The exponent in P2(b) is an asymptotic slope; between regimes the slope is a local one. The reproduction of the Variant-E table checks that the simulation is this model; the split re-run is a simulation of the theory's own equations, not an instantiation. What remains open is the fully coupled case in which each agent's tempo responds to the other's error, and nonlinear correction, where #result-adversarial-exponent-regimes finds thresholds rather than exponents.
+*Conditional*, and exact under its stated model: linear correction on a fixed channel, white channel noise, Coupling Model S (or D where stated), and exogenous tempos. P1–P4 are algebra on the steady state of #deriv-sector-condition and the coupling model of #der-adversarial-destabilization; P1(c) uses that segment's satisfiability condition at the Kalman gain, and P4 the Model S window of #result-persistence-condition. P4's cap was also checked on random parameter draws (the integrator's 20,000 and the independent checker's, none violating it). The exponents in P2(b) and P2(c) are asymptotic slopes; between regimes the slope is a local one. The reproduction of the Variant-E table checks that the simulation is this model; the split re-run is a simulation of the theory's own equations, not an instantiation. What remains open is the fully coupled case in which each agent's tempo responds to the other's error, and nonlinear correction, where #result-adversarial-exponent-regimes finds thresholds rather than exponents.
 
 ## Claim Record
 
@@ -119,7 +137,7 @@ Defender-only noise raises the ratio at every tempo ratio (P1a) while lowering t
 
 **True of:** the Variant-E pair (attacker-only noise at $s = 1$: slope 0.40, ratio at $r = 4$ falls to 1.11); internal consistency, not instantiation.
 
-**False of:** an attacker whose tempo comes from event rate at a small per-event gain, for which the noise floor does not grow with tempo (P2c); the exponent there stays above one half.
+**False of:** an attacker whose tempo comes from event rate at a fixed per-event gain, whose noise floor does not grow with tempo (P2c); its exponent falls to one, not one half. An attacker whose event rate grows at least as the square of its tempo keeps the coupling dominant and the exponent at $3/2$.
 
 **Falsifier:** a pair in this Setup where the ratio slope stays at $3/2$ past $\alpha_A/\alpha_B \gg \gamma_B/\sigma_{\nu,A}$ under gain-raised tempo.
 
@@ -127,13 +145,13 @@ Defender-only noise raises the ratio at every tempo ratio (P1a) while lowering t
 
 ### A defender facing a faster attacker should degrade the attacker's observation and protect its own, not add noise to its own channel or to the shared environment
 
-**Register:** normative — a design recommendation drawn from P1–P3.
+**Register:** normative — a design recommendation for the defender's own persistence, drawn from P1(c) and P4.
 
-**Population:** defenders whose interaction with a faster attacker is described by the Setup; the link from a defender's opacity to the attacker's channel noise ( #der-agent-opacity) is qualitative.
+**Population:** defenders whose interaction with a faster attacker is described by the Setup, facing an attacker that must persist in its own region on a fixed channel (P4); the link from a defender's opacity to the attacker's channel noise ( #der-agent-opacity) is qualitative.
 
-**True of:** the Variant-E pair, where the attacker-channel lever lowers the ratio and the defender-channel lever raises it; no comparison on a real agent.
+**True of:** the Setup, by P1(c) and P4: raising $\sigma_{\nu,A}$ or lowering $\sigma_{\nu,B}$ widens the condition under which the defender survives every persisting attacker, and raising $\sigma_{\nu,B}$ narrows it; internal consistency, no comparison on a real agent.
 
-**False of:** contests scored only by the mismatch ratio's slope rather than its level or the defender's persistence margin, where defender-channel noise would look like a gain.
+**False of:** an attacker willing to leave its own region (no P4 cap), against which attacker-channel noise lowers only the ratio and not the defender's error; an attacker that raises its event rate, whose cap grows with it; and contests scored by the mismatch ratio's slope, where defender-channel noise would look like a gain.
 
 **Falsifier:** a comparison on real adversarial agents in which raising the defender's own observation noise improves its persistence or its error against a faster attacker.
 
@@ -145,9 +163,9 @@ Defender-only noise raises the ratio at every tempo ratio (P1a) while lowering t
 
 **Where the two-sided result came from.** The Variant-E table records both channels noisy at once and reads as "observation noise gates the tempo advantage." Split by channel, almost all of the collapse belongs to the attacker's channel (P2), because the simulation raised the attacker's tempo by gain on one noisy observation per step, so the attacker injected noise in proportion to the square of its gain. That is the regime where its own injected noise outgrows the coupling, the scope bound #result-adversarial-tempo-advantage names. Boyd's emphasis on Orient quality survives in this form: the faster agent's advantage is only as good as its own observation channel.
 
-**The defender's levers.** P1–P3 give the defender three levers, and they point different ways. Its own channel's quality is its survival margin: P1(c) makes the survivable attacker tempo inversely proportional to $\sigma_{\nu,B}$. The attacker's channel is where noise helps the defender, through the attacker's error directly and through the attacker's response if it lowers its gain. The shared environment narrows the ratio but costs the slower agent more than the faster one. The cost of each lever is in the defender's own error and persistence margin, which the exponent alone does not show.
+**The defender's levers.** P1–P4 give the defender three levers, and they point different ways. Its own channel's quality is its survival margin: by P1(c) the survivable attacker tempo is $R_B^2/(n\sigma_{\nu,B}) - \sigma_{\text{base}}$, falling as $\sigma_{\nu,B}$ rises. The attacker's channel is where noise helps the defender, but not through the attacker's error, which does not enter the defender's: at a fixed attacker gain the defender's error is unchanged (P2a). It helps through the attacker's own persistence, which caps a persisting attacker's gain as $1/\sigma_{\nu,A}^2$ (P4), and, for an attacker tuned to its own Kalman gain $K_A = \sigma_{\text{env},A}/\sigma_{\nu,A}$, through that gain falling as $\sigma_{\nu,A}$ rises. The shared environment narrows the ratio but costs the slower agent more than the faster one. The cost of each lever is in the defender's own error and persistence margin, which the exponent alone does not show.
 
 ## Working Notes
 
-- The fully coupled version, where each agent's gain is a best response to the other's (the attacker choosing its gain to maximize damage net of its own error), is the natural next derivation; its home is #deriv-strategic-composition. Whether the attacker's best gain lies above or below its Kalman gain decides whether attacker-channel noise lowers the defender's error in equilibrium.
+- The fully coupled version, where each agent's gain is a best response to the other's, is the natural next derivation; its home is #deriv-strategic-composition. The attacker's objective decides it. Damage alone gives it no reason to lower its gain, since $V_B$ grows without bound in $\alpha_A$. The ratio $V_B/V_A$ has no finite global maximizer (it grows as $\alpha_A$ once noise sets the attacker's error), though under weak coupling it can have a local maximum near the attacker's Kalman gain (independent check 1, F3). A Kalman-tuned attacker lowers its gain as its channel noise rises; for every other attacker, persistence is what P4 caps. An objective that trades damage against the attacker's own error is the open case.
 - P2(c) is closed form only. A simulation with $r$ genuine sub-updates per step would test it.

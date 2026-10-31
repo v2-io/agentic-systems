@@ -1,0 +1,42 @@
+schema: vsect-event/0
+id: dbc90a023b9f737cbe1332f2ef4d3a8fb67178c1af07fb7241cf115de1dc94d4
+at: 2026-10-31T03:31:21Z
+store: asf
+act: rederive
+about: segment:result-adversarial-tempo-advantage
+actor:
+  name: c1-defender-noise
+  role: integrator
+  read:
+  - segment:result-persistence-condition
+normalizer: vsect-norm/0
+at-commit: 2f622c4b
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-adaptive-tempo: 7c9e7a2297a73b91aefa7e16c89b911c08289901b427e00d28d8c975c92c259f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:der-adversarial-destabilization: 7a7fd495a2b47f3c346d6639853aba23dee76acaca1e0551417fe23201026734
+  segment:deriv-sector-condition: 9f0758ed7bc37d6f067d005b9f920c9bc9ed4a45463768b7a2c3131a44ac5b29
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:hyp-mismatch-dynamics: 81832f876549b712e8493fd4728ffb2ada16bbd5521447c142e69a80adc36062
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-adversarial-tempo-advantage: e1ae2367f82923545613b66ea0e8bf99615703b17ba5a78b9371c62b279bea2e
+  segment:result-persistence-condition: 382bfbdfce370119cb7f41c8161baf42fa9415a28646b553fbed7f3a9641fce4
+  segment:result-sector-condition-stability: 2537d83bd9bb560749fbef37563e26529e31557ae95e7268bfd5fa4496383e89
+  segment:result-sector-persistence-template: e81dfed0853e9582d41e15e3a737f8fe1829370f72fedf1766ddb60ef07a2d2a
+  segment:scope-adaptive-system: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+committed: after
+criterion: 'The scope paragraph''s event-rate sentence: at a fixed per-event gain $h$ the injected term is $\mathcal T h s^2$, coupling dominance of the attacker fails near $\mathcal T_A \sim \sigma_A^2/(hs^2)$ with exponent $1$ past it, and stays only if the event rate grows at least as the square of tempo.'
+effective-version: a86560388d293af0d0708f7356f8a33d60510efc490fbbbdd3462ff2300c2b04
+from: review:defender-noise-round-2#C4
+line: derivation
+outcome: confirmed
+recheck: As C2; dominance $\sigma_A^2 \gg \mathcal T_A h s^2$ held as $\mathcal T_A$ grows iff $h \lesssim \sigma_A^2/(\mathcal T_A s^2)$, i.e. $\nu = \mathcal T_A/h \gtrsim \mathcal T_A^2 s^2/\sigma_A^2$.
+target-version: e1ae2367f82923545613b66ea0e8bf99615703b17ba5a78b9371c62b279bea2e
+version-from: git-revision

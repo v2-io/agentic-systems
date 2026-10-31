@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 27c612a3b550a2a775c4c150a5830faa57869026aa35d72f366f3d0d48d69d2c
+at: 2026-10-31T03:32:11Z
+store: asf
+act: answer
+about: question:does-def-adaptive-tempo-52-you-cannot-outrun-a-b
+actor:
+  name: c1-defender-noise
+  role: integrator
+normalizer: vsect-norm/0
+outcome: answered
+text: 'Neither reading made it true in general. With independent per-event noise the tempo at the optimal gain is sigma_env sqrt(nu)/s (sigma_nu^2 = s^2/nu, the event-rate lever of #result-persistence-condition), so iterating faster helps, at four times the events for twice the tempo; it does not help against a shared persistent bias or the Model D bounded floor, and correcting harder on the same observations adds error. #def-adaptive-tempo:52 now says this (2f622c4b); check C3 in reviews/defender-noise-round-2.md.'

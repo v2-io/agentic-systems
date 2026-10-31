@@ -34,6 +34,6 @@ The Variant-E fixed-gain loop, unchanged except for separate noise scales on the
 
 ## 3. Event-rate tempo (closed form, not simulated)
 
-The attacker takes $r$ sub-updates per step at per-event gain $\eta = 0.1$, each on a fresh observation: $V_A = \rho_A^2/(1-c^2) + \eta s^2/(2-\eta)$ with $c = (1-\eta)^r$. Slopes for $s = 0, 0.1, 0.2, 0.5, 1.0$: both channels noisy 0.95, 0.94, 0.91, 0.76, 0.50; attacker only 0.95, 0.94, 0.92, 0.84, 0.71. The gating is weaker than under gain-raised tempo; the no-noise slope is 0.95 rather than 1.04 because the per-step contraction $1-(1-\eta)^r$ is below $r\eta$.
+The attacker takes $r$ sub-updates per step at per-event gain $\eta = 0.1$, each on a fresh observation: $V_A = \rho_A^2/(1-c^2) + \eta s^2/(2-\eta)$ with $c = (1-\eta)^r$. Slopes for $s = 0, 0.1, 0.2, 0.5, 1.0$: both channels noisy 0.95, 0.94, 0.91, 0.76, 0.50; attacker only 0.95, 0.94, 0.92, 0.84, 0.71. The gating is weaker than under gain-raised tempo; the no-noise slope is 0.95 rather than 1.04 because the per-step contraction $1-(1-\eta)^r$ is below $r\eta$. These are local slopes over $r \in [0.5, 4]$; the contraction saturates at 1, and the continuous-time asymptote for event-rate tempo at a fixed per-event gain is exponent 1 (`#deriv-observation-noise-placement`, P2(c)).
 
 Environment: Python 3.11.14, numpy 2.4.1, scipy 1.17.1 (2026-10-30).
