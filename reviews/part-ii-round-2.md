@@ -215,7 +215,7 @@ What I did, so the record can be weighed. Ran, from `empirica/part-ii-coupling-c
 - line: derivation
 - criterion: Answers `review:part-ii-check-1-distortion#C16/finding` and the second site of `#F7`: the allocation row's "distortion when the drop decision depends on dropped content" is qualified to content that bears on the world given what was retained.
 - committed: after
-- at: HEAD of this branch
+- at: d8248ca2
 - outcome: confirmed
 - recheck: K8 in `distortion-check-1.py`
 
