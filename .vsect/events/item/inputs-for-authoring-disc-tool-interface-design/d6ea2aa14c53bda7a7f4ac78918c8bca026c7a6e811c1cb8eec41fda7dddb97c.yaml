@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: d6ea2aa14c53bda7a7f4ac78918c8bca026c7a6e811c1cb8eec41fda7dddb97c
+at: 2026-10-31T02:18:06Z
+store: asf
+act: raise
+about: item:inputs-for-authoring-disc-tool-interface-design
+actor:
+  name: drain-influx-2-firmatum
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:inputs-for-authoring-disc-tool-interface-design
+source: 'udon TST-extension-memo §6 (read whole): the corpus''s bridge chapters are multi-claim expositions, and each carries a leg-table (one row per constituent claim with kind, strength, repair) intended as a split manifest, so claims can be extracted into ordinary one-claim segments without re-reading the prose. That table is the work order for this landing; §6(a)''s proposed ''demand'' type (''the evidence says a tool must provide X'', discharged by being met) is how most rows would type, and asf has no such type, so those rows likely stay in udon while theory-bearing rows land. §7''s ''# is a canonicity marker, reserved for canonical segments'' is a convention the landing should keep.'
+text: how the corpus can be carved for landing, from its own authors

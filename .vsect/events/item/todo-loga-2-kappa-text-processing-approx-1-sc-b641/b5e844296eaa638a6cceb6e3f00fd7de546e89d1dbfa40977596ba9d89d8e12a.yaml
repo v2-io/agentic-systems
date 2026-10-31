@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: b5e844296eaa638a6cceb6e3f00fd7de546e89d1dbfa40977596ba9d89d8e12a
+at: 2026-10-31T02:17:53Z
+store: asf
+act: raise
+about: item:todo-loga-2-kappa-text-processing-approx-1-sc-b641
+actor:
+  name: drain-influx-2-firmatum
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-loga-2-kappa-text-processing-approx-1-sc-b641
+source: 'drain-influx-2-firmatum, checked at HEAD: the item''s last clause, ''keep effective-bias gating via kappa * A(e) as the precise claim'', names a quantity canon deleted in 253d2bca (#scope-observation-ambiguity-modulation and #deriv-observation-ambiguity-bias-bound: the ambiguity factor A(e), the product law kappa*A and the A-hat estimator removed; the replacement is the model-free range bound plus the fixed-gain tilt hypothesis, gain times sd_pi(u_G)). The kappa_processing ~ 1 scope half stands and is what E.1 now measures; the gating half should be read against the fixed-gain tilt form, not the product law.'
+text: a live queue entry that would direct its integrator to a deleted claim

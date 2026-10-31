@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 1ac44ea1bc82300e3c4794a141670c9b9c41c612cefee96c8f0bcca2859203fb
+at: 2026-10-31T02:18:06Z
+store: asf
+act: raise
+about: item:declare-how-the-asf-store-computes-standing
+actor:
+  name: drain-influx-2-firmatum
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:declare-how-the-asf-store-computes-standing
+source: 'TST-extension-memo read whole by drain-influx-2-firmatum (I had first carried it from the scout''s summary): the summary in this item holds. Additions from the primary: (a) the memo''s open question 1, whether the depends: downgrade cascade crosses a volume boundary, is answered for asf by vsect: the segment kind finds all four volumes'' src/ in one store and depends edges lapse checks transitively across them; it does not reach a corpus outside the store, which is the case the memo cared about (a transmitting corpus citing asf). (b) It adopted asf''s ladder adding ''hypothesis'', added a fourth triage question (''established here or transmitted?''), and declined the three rings as near-vacuous for a curatorial corpus. (c) Its §3 lock is the construct Joseph later dissolved into the coherence default, as the item already says; its own worked case (one leg, not three, because built/designed/theorized were one author) is the same check this effort applies.'
+text: primary read; scout summary confirmed and one memo question answered
