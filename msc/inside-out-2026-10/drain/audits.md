@@ -99,6 +99,69 @@ Read whole: `99-final-thoughts.md`. Read by search: the 13 batch files and the r
 | The compaction-fidelity experiment (`.prediction.md` twins) | **ASIDE** for ASF canon: evidence about agent memory across compaction, not about the theory. It bears on the global memory note on compaction fidelity and on I.10's question of what a cold agent must read; nobody has scored it. |
 | Batches otherwise | **PED.** |
 
+### `AUDIT-WORKING-471203/` (Claude, 2026-04-28)
+
+Read whole: `adversarial-creative-challenges.md` §§ Challenges 3–8, 12–14 and Missing 1–10; `meta-segments-adversarial-reading.md` from the creative observations to the end; the three Volume 2–4 sample files. Read by heading: Challenges 1–2, 9–11, the rest of the meta-segments file. Not read: the eleven batch files (lifted into Working Notes on 2026-05-30, per the working-dirs map; their items are spot-checked as present in WN there) and `00-initial-predictions.md`.
+
+| Source item | Disposition |
+|---|---|
+| Challenge 3 hysteresis (polish S6) | **ADD** item:persistence-hysteresis-hypothesis (C.4). |
+| Challenge 5 transient adequacy | **IN** in part: Prop A.1S-τ gives expected time in region; noted in the hysteresis item. |
+| Challenge 6 risk-sensitive IB; Missing 10 heavy tails | **LEDGER** item:todo-heavy-tailed-disturbances-model-s-assume-f3de, source added. |
+| Challenges 2, 7 per-mode / strategic coupling | **IN** in part: `#disc-strategic-self-coupling` (M4) covers chosen coupling; per-mode class membership is not stated in `#der-directed-separation`, but today's selection/allocation/distortion clauses make the class a property of what the update does, which may already be per-mode. Not opened; worth a sentence when B.2 retypes the segment. |
+| Challenge 8, Missing 3, Missing 8 commitment | **LEDGER** item:proposals-d-4-sp-12-commitment-resource-temporal-d-1dea, source added. |
+| Challenge 10 floor distinctness; meta file "composed impossibilities" | **ADD** question:identifiability-floors-compose-or-interfere. |
+| Challenge 12 tower fragility versus biological nesting | **ASIDE**: the auditor's own resolution (redundancy raises per-level contraction) is what `#disc-composition-consistency`'s parallel-composition machinery already does; no claim to fix. |
+| Challenge 13 strongest results apply only to engineered wrappers | **IN** (`#der-class-coercion-via-wrapping`, `#der-logogenic-as-wrapping`). |
+| Challenge 14 boundary choice | **ADD** question:agent-boundary-choice-principle. |
+| Missing 1 birth and death | **ADD** question:agent-genesis-and-termination. |
+| Missing 2 theory of mind | **ADD** item:theory-of-mind-missing-from-communication (C.4). |
+| Missing 4 attention, Missing 7 subjective time | **ASIDE** as stated: no line-level claim. Attention has items already (the attention-governance spike routing); subjective time meets item:influx-event-time-seam. |
+| Missing 5 sleep / consolidation; Missing 6 affect; Missing 9 resource budget | **IN** or **LEDGER**: `#impl-scaffolded-logogenic`'s sleep floor; the mood layer (`#def-mood`); item:proposals-d-6-o-bp12-resource-budget-b-t-as-master-2773. |
+| Meta file: fourth meta-segment on theorem imports | **LEDGER** item:proposals-sp-23-disc-theorem-import-architecture-f-a22e. |
+| Meta file: escapes carry costs ((PI) as framework-wide commitment) | **IN** as WN only (`#disc-identifiability-floor:254`); pedagogy item. |
+| Meta file: Wasserstein geometry; (PI) as the surprising convergence | **ADD** question:coordinate-forcing-geometry-forced-or-path-dependent. |
+| TST sample: code-quality bifurcation needs $\dot Q = g(\mathcal T, Q)$ | **LEDGER** item:spikes-proposed-code-quality-bistability-2d-dynamical-fo-0dc9. |
+| TST sample: transfer beyond software is aspirational | **ASIDE** here; it is TST's front-door claim, A.4's. |
+| LLM sample: accumulation problem needs a formal model | **IN** (`#der-turnover-information-recursion`, per the working-dirs map). |
+| LLM sample: RAG is goal-conditioned reconstruction | folded into item:goal-blind-retrieval-norm. |
+| LLM sample: CoT-trained models closer to the cascade (testable) | **ASIDE**: an empirical prediction without a canon claim to attach to; E.1's lane could pick it up. |
+| ELI sample: OUTLINE-versus-present gap; PROPRIUM is one realization | **LEDGER**: the 04-eli-core missing-row items (`todo-04-eli-core-src-*`) and A.4. |
+
+### `polish-and-sentiment-ledger.md` (2026-05-15 to 05-29)
+
+Read whole. Sentiment rows (S2, S9, S10, S16, S17, S20, S21, S33) are **ASIDE** by design (calibration, no action); S9's "Section I is strongest; rigor thins in the lift" is evidence for the owner review's ranking. Declined rows (S1, S8, S15, S18, S19) keep their reasons in the file and are **ASIDE**. Applied rows (S28, S29) are **IN**; S30 is **IN** (`#sketch-structural-adaptation-genericity`), with its bridge in item:structural-adaptation-genericity-bridge.
+
+| Row | Disposition |
+|---|---|
+| S3 README feedback | **ASIDE** (superseded by the generated README). |
+| S4 (PI) uniqueness geometry | question:coordinate-forcing-geometry-forced-or-path-dependent. |
+| S5 composed impossibilities | question:identifiability-floors-compose-or-interfere. |
+| S6 hysteresis | item:persistence-hysteresis-hypothesis. |
+| S7 CIY name fights its definition | **LEDGER** in part: item:influx-agency-condition-4-two-readings carries CIY's naming; 731548/22 sharpened it ("interventional contrast" is the honest name). F.1's verdicts decide. |
+| S11 Tier-3 prevalence | **ADD** item:composition-closure-tier3-prevalence (C.4). |
+| S12 step-4c sensitivity | **ADD** item:orient-cascade-4c-sensitivity-bound (C.4). |
+| S13 un-adopted 04-22 intuitions (continuous strategy layer; the cascade as itself an adaptive cycle; identity as postulate) | **ASIDE**: three speculations no current result forces, and the third is overtaken by item:influx-non-forkability-tier's question. |
+| S14 Cox necessity via Lauritzen | **LEDGER** item:proposals-c-1-o-bp13-cox-parallel-necessity-for-de-f4cf. |
+| S22 D.3 correction-capacity collapse | **ADD** item:correction-capacity-collapse-unification (G.1). S22's D.1, D.2, D.6, D.8 are **ASIDE** (navigational or already FORMAT practice). |
+| S23 TST axiom-vs-derived status | **LEDGER** (SP-6 items). |
+| S24 k-of-n under DL($\Sigma$) | **LEDGER** item:and-or-parsimony-uniqueness and item:scope-and-or-audit-finding-f41-still-open-in-its. |
+| S25 F.3 stability–plasticity upper bound | **LEDGER** item:todo-stability-upper-bound-for-form-consolida-be13. F.2, D.2, F.1: **ASIDE** (pedagogy; D.2 an in-segment scope note). |
+| S26 OUTLINE order | **LEDGER** (the outline-ordering items under H.2). |
+| S27 forward reference in `def-action-transition` | **ASIDE** (sound as is, per the row). |
+| S31 context window as depth ceiling | **ADD** item:context-window-strategy-depth-bound (C.4). |
+| S32 + S40 goal-blind retrieval | **ADD** item:goal-blind-retrieval-norm (C.4). |
+| S34 ordinal/metric duality | **LEDGER** item:influx-event-time-seam. |
+| S35 modeler versus agent standpoint | item:adaptive-reserve-standpoint-underived. |
+| S36 noisy-OR as PGM-tool default | **ASIDE** until someone checks the tools' defaults; the row says so itself, and nothing in canon asserts it. |
+| S37 (a) record-versus-token symbol | **LEDGER** item:influx-non-forkability-tier. (b) expected versus realized information: **ADD** item:expected-vs-realized-information-symbol (F.4). (c) dimensional seam: `#der-gain-sector-bridge` is now `conditional`, `claims-verified`; the downstream over-assumption is not re-checked by me and is left to the integrators of Part I. (d) impl synthesis convention: item:todo-impl-series-status-tagging-pass-b-4-rema-11e6. |
+| S38 $U_M$ overload | **ADD** item:u-m-symbol-names-two-quantities (F.4). |
+| S39 step-shaped AI load | **ADD** item:ai-cognitive-load-step-shaped (C.4). |
+| S41 bundle | 193847 B3: **ADD** item:strategic-ignorance-ciy-dual (G.2). B4: **ADD** item:level-3-access-and-moral-weight (G.0). B5: **LEDGER** item:norm-adaptive-reserve-as-ethical-floor-for-04-el. B9 (16-cell arg-max): **LEDGER** item:der-agent-opacity-overclaims-f246-f255. 742613 B1 ($M_0$ seam): **LEDGER** item:influx-chronica-endowment-absorb-into-phi. 742613 B2: raised onto item:influx-action-fluency-and-tempo-conflation. 849201 B2: raised onto item:der-agent-opacity-overclaims-f246-f255. 849201 A1: **ADD** item:tst-user-developer-time-exchange-rate (C.1). 829314 B-2: **ADD** item:in-context-self-reflection-no-go (C.4). 829314 A-1..A-4 Brief slivers: **PED**. 613842 B2: raised onto item:influx-ib-beta-rho-and-exactness. 471203 Fresh-8: **LEDGER** item:todo-source-segment-defects-reported-by-the-b-6d26 (`#def-pearl-causal-hierarchy:41`). 471203 Fresh-14: **ADD** item:continuous-state-structural-change (C.4). |
+| P-block, audit-process feedback | **ASIDE** for theory. Its durable point, that the dominant defect shape is *unnamed relocation* rather than wrong math, is under adjacent findings below. |
+
+Gem-hunt files read for this: `audits/.gem-hunt-trail/GEM-WORKING-{193847,471203,526815,613842,742613,829314,849201}/adjudication.md`, by section. Its 526815 A-1 (the $d^\ast$ table row) is **IN** (`#form-strategy-complexity-cost:102` reads 0).
+
 ## Pedagogy gold: where it is
 
 ## Adjacent findings

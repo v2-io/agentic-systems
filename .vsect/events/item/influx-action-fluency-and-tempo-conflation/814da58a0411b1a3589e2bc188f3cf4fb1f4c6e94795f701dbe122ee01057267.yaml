@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 814da58a0411b1a3589e2bc188f3cf4fb1f4c6e94795f701dbe122ee01057267
+at: 2026-10-31T02:12:13Z
+store: asf
+act: raise
+about: item:influx-action-fluency-and-tempo-conflation
+actor:
+  name: Claude Opus 5.5 (audits drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:influx-action-fluency-and-tempo-conflation
+source: 'audits/.gem-hunt-trail/GEM-WORKING-742613/adjudication.md B2 (742613 Fresh-1): the strengthening direction for the same seam, a spike on when improving eta* entails improving action value (a collapse condition would make the fluency marker derived) and when the two are genuinely two-track; #der-deliberation-cost:58 already names the gap. Also audits/AUDIT-WORKING-731548/18-der-action-selection.md (ledger xliv) and item:compilation-cost-axis-hypothesis.'

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: e8386edd1040df101d3d97ceaf81de0460a730e90019eb4eca9ccb551edefa88
+at: 2026-10-31T02:12:12Z
+store: asf
+act: raise
+about: item:der-agent-opacity-overclaims-f246-f255
+actor:
+  name: Claude Opus 5.5 (audits drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:der-agent-opacity-overclaims-f246-f255
+source: 'audits/.gem-hunt-trail/GEM-WORKING-849201/adjudication.md B2 (849201 Fresh-6), a strengthening on the same segment: state the cognitive-cost ordering across the four emitter regimes (E-I broadcast, E-II selective signal, E-III information hide, E-IV active deceive), tying E-IV''s model-of-the-observer''s-model cost to the Class 2/3 reachability already named at der-agent-opacity:110; only E-IV''s cost is in canon. Related: item:theory-of-mind-missing-from-communication.'
