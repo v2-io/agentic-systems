@@ -143,7 +143,7 @@ The per-dimension extension is *exact conditional on the disturbance model* ( #r
 
 **Population:** linear correctors $F = \alpha\bar\delta$ valid on $\mathcal B_R$, under Model S, whose total disturbance is environmental diffusion plus white channel noise passed through the gain, $\sigma_w^2 = \sigma_{\text{env}}^2 + \alpha^2\sigma_\nu^2$. Task adequacy takes the same form with $\lVert\delta_{\text{critical}}\rVert$ in place of $R$.
 
-**True of:** $n = 1$, $\sigma_{\text{env}} = 1$, $\sigma_\nu = 0.5$ (so $K = 2$), $R^2 = 1$: the window is $(0.536, 7.464)$, its endpoints multiply to $K^2 = 4$, and $\ln(\alpha_+/K) = \operatorname{arccosh} 2 = 1.317$; at $R^2 \leq 0.5$ the same channel has no window (by derivation, checked against a grid of gains in the Part I round-2 integration).
+**True of:** $n = 1$, $\sigma_{\text{env}} = 1$, $\sigma_\nu = 0.5$ (so $K = 2$), $R^2 = 1$: the window is $(0.536, 7.464)$, its endpoints multiply to $K^2 = 4$, and $\ln(\alpha_+/K) = \operatorname{arccosh} 2 = 1.317$; at $R^2 \leq 0.5$ the same channel has no window (by derivation from the closed form, which the window paragraph reports checking against a grid of gains).
 
 **False of:** Model D with channel noise bounded by $\bar\nu$, where the condition is $\alpha(R - \bar\nu) \gt \rho_{\text{env}}$, a lower threshold with no upper end that needs $R \gt \bar\nu$ (same paragraph). Nonlinear correction: the injected fluctuation still grows with the gain (#deriv-gain-sector Prop B.3), but the window's form and location are derived only for linear correction (Epistemic Status, "Gain versus information"). Channel noise that is not white, such as a bias shared by every reading, is outside the population.
 

@@ -64,7 +64,7 @@ The SOP does not yet state these rules. Adopting them in `doc/sop/format.sop.md`
 
 One choice the Part II records did not face: records cite only canon and the published world. Where a record's False-of is a neighbour that only the ledger names (hysteresis, endogenous disturbance), the record describes it in canon's terms and leaves the slug out.
 
-Two record titles carry the body's own over-claim on purpose, so the False-of has something to refute: `#result-persistence-condition`'s capacity-limit entry and `#result-sector-condition-stability`'s third entry. When C.1 repairs the sentence, the entry changes with it.
+Four record titles carry the body's own over-claim on purpose, so the False-of has something to refute: `#result-persistence-condition`'s capacity-limit entry, `#result-sector-condition-stability`'s third entry, and the "genuinely stochastic" descriptive entries of `#deriv-sector-condition` and `#deriv-stochastic-non-exit`. When C.1 repairs the sentence, the entry changes with it.
 
 ## 4. For the checker
 
@@ -86,7 +86,7 @@ Suggested criteria, one per record, for you to put in your own words:
 6. **`#result-certificate-existence`.** Re-derive the three counterexamples. Is "certificate" used in two senses?
 7. **`#form-sector-condition`.** Is the sub-scope $\alpha$ population the body's list, with the PD question left open? Is the fourth entry's False-of right: does Prop A.1S-τ apply to the discontinuous counterexample?
 
-Also check the seven ledger entries above against the sentences they quote, and confirm that no record cites the ledger.
+Also check the seven ledger entries above against the sentences they quote, and confirm that no record cites anything outside canon and the published world.
 
 ## 5. Beyond the item
 

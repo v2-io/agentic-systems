@@ -426,7 +426,7 @@ The assumptions themselves (sector condition on a region, bounded disturbance) a
 
 **Population:** correctors meeting (A1), (A2') on the closed ball and (S), under isotropic GA-2S in continuous time. The bound is attained, and the law equal, under radial tightness. For a non-tight corrector the lower bound can be arbitrarily loose ((i)). Anisotropic, discrete-time, state-dependent and heavy-tailed noise are outside ("Scope").
 
-**True of:** the benchmark at $\kappa_R = n/2$: $\alpha\Phi(0) = 0.5957$ at $n = 1$ and $1.8897$ at $n = 1000$, against the three-term expansion's $1.889704$ (by derivation, with independent implementations in the Part I rounds 2–4). The dip instance of (v) ($n = 2$, floor $2$ on a thin shell, bulk gain $5$): mean exit time $3.57$, above its floor benchmark $0.92$, as the lower bound requires.
+**True of:** the benchmark at $\kappa_R = n/2$: $\alpha\Phi(0) = 0.5957$ at $n = 1$ and $1.8897$ at $n = 1000$, against the three-term expansion's $1.889704$ (by derivation; the Epistemic Status reports four independent implementations agreeing to four digits). The dip instance of (v) ($n = 2$, floor $2$ on a thin shell, bulk gain $5$): mean exit time $3.57$, above its floor benchmark $0.92$, as the lower bound requires.
 
 **False of:** the asymptotic $\tfrac{\Gamma(n/2)}{2\alpha}\kappa_R^{-n/2}e^{\kappa_R}$ as a bound in either direction: at the threshold it over-states $\Phi(0)$ $3.5$-fold at $n = 1$ and gives $0.13$ of it at $n = 100$ (the Lemma); its leading-order condition in (iv) holds at $n = 2$, $\alpha = R = 1$, $\sigma_w = 10$, $L = 1$, $\epsilon = 0.02$ while $\Phi(0) = 0.0050$ against the needed $50$. Heavy-tailed disturbance, where expected exit time is polynomial rather than exponential in the noise scale ("Scope").
 
