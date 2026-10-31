@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 34a0ce94469facb27bf7053d00dd363c005f4d9436dc0a81bef860a2c26427f3
+at: 2026-10-31T03:32:19Z
+store: asf
+act: close
+about: item:escape-and-ceiling-over-claims-on-reading-surfac
+actor:
+  name: Claude Opus 5.5 (Part I round-5 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+by-commit: b31a4f36
+outcome: done
