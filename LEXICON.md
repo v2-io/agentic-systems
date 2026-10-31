@@ -60,7 +60,7 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 | **[Indifferent](terminology/entries/indifferent.md)** |  | No self-model of persistence (archetype — thermostat). |
 | **[Instrumentally continuous](terminology/entries/instrumentally-continuous.md)** |  | Values persistence as instrumental to ongoing purpose (archetype — elf). |
 | **[Morally continuous](terminology/entries/morally-continuous.md)** |  | Loss of continuity constitutes harm (archetype — Emergent Logozoetic Intelligence (ELI)). |
-| **[Negotiated](terminology/entries/negotiated.md)** |  | Persistence traded against other values (archetype — human). |
+| **[Negotiated](terminology/entries/negotiated.md)** |  | Persistence valued terminally beside other terminal goods, against which the margin may be spent (archetype — human). |
 | **[Task-terminal](terminology/entries/task-terminal.md)** |  | Persists instrumentally; termination is success (archetype — golem). |
 | **[Task-Terminal Stance](terminology/entries/task-terminal-stance.md)** |  | The continuity stance of an agent that persists instrumentally and for which termination is success (archetype - Golem). |
 
@@ -382,4 +382,4 @@ For symbols, see [`NOTATION.md`](NOTATION.md).
 
 
 
-_Last rendered 2026-10-30 from 177 entries._
+_Last rendered 2026-10-31 from 177 entries._
