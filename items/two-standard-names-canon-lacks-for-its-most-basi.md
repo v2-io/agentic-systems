@@ -1,0 +1,9 @@
+---
+kind: item
+owner: F.1
+opened: 2026-10-30T23:33:11Z
+opened-by: drain-influx-2
+concerns: [segment:der-directed-separation, segment:def-strategy-dag, segment:scope-and-or]
+---
+
+# Two standard names canon lacks for its most basic distinctions. (1) Direction of fit (Anscombe's shopping list; Searle's mind-to-world vs world-to-mind; Millikan's 'pushmi-pullyu' representations that face both ways): M_t is satisfied when it matches the world, O_t when the world matches it, which is the classical direction-of-fit distinction; directed separation is then a claim about how the two directions update, and Millikan's two-faced representations are a ready philosophical name for what a GUC Class 3 agent carries. Joseph saved the material himself (Jan-Feb 2026) without writing the connection. Zero hits in segments, FINDINGS or LEXICON for direction of fit, Anscombe, Searle, Millikan. Home: the M_t / O_t definitions and #der-directed-separation, adopted with citation and the differences stated. (2) For the strategy DAG: asf's own ref/prior-art-analysis/06-causal-plan-graphs.md names AND/OR plan structures with local failure parameters as a pillar (Barnett 1983; De Mello and Sanderson 1986; Ghosh, Chakrabarti and Dasgupta 2021) and says AAT does not invent them, yet no segment cites any of them; and hierarchical task network planning (HTN; AO*, Nilsson), the planning field's best-known name for an AND/OR goal decomposition, appears in neither the segments nor that analysis. ~/src/operata/docs/exp/2025-11-26-HTN-GOAP-deep-dive.md is an accessible reference; agent-core's type/token proposal also reads an HTN method as an edge type (item the-strategy-dag-s-acyclicity-and-its-credence-l). Sources: ~/src/_self/direction-of-fit.md, Speech.md (Joseph's scratch repo); relayed in msc/inside-out-2026-10/influx-scout/periphery.md §3, §6, §8 item 2, and MAP.md §2 terminology row.

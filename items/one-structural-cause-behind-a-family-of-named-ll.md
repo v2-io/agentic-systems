@@ -1,0 +1,9 @@
+---
+kind: item
+owner: G.2
+opened: 2026-10-30T23:31:33Z
+opened-by: drain-influx-2
+concerns: [segment:der-directed-separation, segment:disc-partial-coupling-pathways]
+---
+
+# One structural cause behind a family of named LLM pathologies, and its other face, are unstated in canon. Joseph (2026-09-02): motivated reasoning, sycophancy, confabulation under pressure, belief-action gaps and hallucination are 'not distinct defects with distinct fixes, but rather a result of a structural architectural decision' (belief and goal in one forward pass), and 'the same coupling that leads to much of the unintentional misalignment, when properly developed ... seems to be crucial for developing higher order theory of mind, empathy, honest interiority, and metacognition.' #der-directed-separation and its neighbours carry sycophancy and motivated reasoning one by one (#deriv-l1-update-bias, #disc-partial-coupling-pathways, #scope-observation-ambiguity-modulation), but neither the catalogue claim nor the converse is stated; the nearest is the missing #obs-backward-inference-empathy. Related, also without a carrier: honesty for an agent is not report fidelity but calibration held over a trajectory (a coupled agent has no goal-free inner fact to report). Fable's accuracy notes on the source apply before any restatement ('spanning at least 7 model lineages' should be counted; 'the only theoretical way to certify' reads wider than the theory gives). Tier: hypothesis / discussion-grade; candidate for B.3's statement of what ASF claims. Sources: ~/src/AISI-responses/jaw-scratch-more.md Claim 5 (with Fable's notes at the bottom); resp/reframe.md rung 8; ~/src/aisi-eoi/src/bs-honesty-without-an-inner-fact.md and ideation-truth-taxonomy.md. Relayed in msc/inside-out-2026-10/influx-scout/aisi-risk-notability.md §1.3-1.4.
