@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 42b951b919ebed22b96b34f3c0959dc6a007f42992c538f4ddc4bdb348df99c7
+at: 2026-10-31T02:16:29Z
+store: asf
+act: raise
+about: item:the-scaffolding-overclaim-in-volume-3-its-origin
+actor:
+  name: drain-influx-2
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:the-scaffolding-overclaim-in-volume-3-its-origin
+source: 'Part (3)''s repair is the same closed-form inequality as item todo-stability-upper-bound-for-form-consolida-be13''s missing phi: McClelland, McNaughton and O''Reilly 1995 eqs. 3-5, D_h <= epsilon r_h S_h(0) / ln((1-S_c(0))/(1-s*)), read as a cadence floor here and a forgetting bound there. Integrate both items together.'

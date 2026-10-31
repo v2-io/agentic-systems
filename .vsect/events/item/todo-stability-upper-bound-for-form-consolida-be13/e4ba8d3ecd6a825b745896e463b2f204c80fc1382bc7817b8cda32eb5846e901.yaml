@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: e4ba8d3ecd6a825b745896e463b2f204c80fc1382bc7817b8cda32eb5846e901
+at: 2026-10-31T02:16:29Z
+store: asf
+act: raise
+about: item:todo-stability-upper-bound-for-form-consolida-be13
+actor:
+  name: drain-influx-2
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-stability-upper-bound-for-form-consolida-be13
+source: 'Same inequality as item the-scaffolding-overclaim-in-volume-3-its-origin part (3): McClelland, McNaughton and O''Reilly 1995 eqs. 3-5 integrate in closed form to D_h <= epsilon r_h S_h(0) / ln((1-S_c(0))/(1-s*)); read for forgetting it is this item''s missing phi, read for cadence it is the drain floor that replaces impl-scaffolded-logogenic''s ''Sleep has a Shannon floor''. Integrate both items together (derivation in msc/inside-out-2026-10/drain/influx-2-memory-research.md CS-1, DR-1).'
