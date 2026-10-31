@@ -37,8 +37,123 @@
 | P10 + P14: channel typing; thinking as summary; typed harness channel | ADD (discussion-grade) | `why-a-chat-trained-llm-is-class-3-has-a-sharper` (G.2) |
 | P13 (B2): forgetting as necessity vs latent diversity vs prerequisite | DEFECT (C.3) | `three-canon-passages-on-forgetting-point-differe` (C.3) |
 | P13 (`#scope-agent-identity` vs `#obs-context-turnover`) | IN: `#scope-agent-identity:42` now states "*Not* excluded: a state discontinuity on one trajectory ... a session boundary" | — |
+| P13 (B4: auxilia reports as "extension of self" vs messages with source uncertainty) | ASIDE: the "extension of self" phrasing is not in canon at HEAD (grep), so there is no tension to state; `#def-auxilia-hierarchy` was revised today by the Volume 4 lane | — |
+| P11: SCC-condensation defect as a measure of disunity of intent | ASIDE: the formula is canon (`#def-strategy-dag`); the use is marked "[mine]" by its source and nobody has checked that it tracks what a reader would call disunity. Worth a spike before any landing, not a ledger line | — |
+| P12: attention governance | LEDGER: raised on `spikes-routing-spike-attention-governance-archived-vs-r-61bb` (sibling `todo-group-iv-attention-pair-spike-attention-126c`), adding $\mathbf J = \partial\Sigma/\partial M$ | — |
+| P7 (missing 03 rows: folding, probe evaluation, honest folds, retrospective salience) | LEDGER: appended to `todo-loga-missing-stubs-genuinely-absent-in-0-9487`; Peak-End "theorem" and CMC guarantee recorded there as *not* to land | — |
+| P17: `#form-ephemeral-persistent-duality` row out of date (thinking blocks now sent up and persisted) | LEDGER: appended to `todo-author-the-three-missing-staged-outline-76f2` | — |
+| rest §2.A: `#obs-context-turnover` carve (session / epoch / rendered view; multi-authored, opaque $f_{\text{init}}$; "compaction") | ADD | `obs-context-turnover-lacks-a-turnover-carve-that` (G.2) |
+| rest §2.A.3, §2.B.3: forks as default shared-state delegation; task-fork incidents | ADD (evidence, no change of claim) | `shipping-delegation-now-runs-on-exactly-the-shar` (G.2) |
+| rest §2.B.2, .4, .5 (`#disc-five-forcing-functions` cache/round-trip evidence; consolidation footprint; interleaving failures) | ASIDE for now: coding-harness census at `inferred` tier, 13 of 25 ledes superseded within two days; the durable part (the scaffold stratification) is in the scaffolding item | — |
+| rest §2.C: harness-velocity `CLAIMS.md` conventions | ADD (process) | `four-instruments-for-keeping-canon-true-built-ou` (I.6) |
+| rest §2.D: ecosystem-velocity, harness-census, comproprium copy, settings inventory, root copies | ASIDE: market census or byte-identical copies (the scout's `diff`/`cmp`); `harness-census/pipeline.py` opens with `TRUNCATE … CASCADE`, not to be run | — |
+| §6 memory corpus: event segmentation (P6, A2, C5), standard names (C2–C4, B8), replay regulation, schema effects, power-law forgetting | Drained by the memory helper (below) | see helper section |
+| §8: citation-audit instrument; "good briefs show" | ADD (process) / IN (AGENTIC-DELEGATION already carries the second) | `four-instruments-for-keeping-canon-true-built-ou` (I.6) |
 
-*(continuing)*
+### arch program (`arch-program.md`, `arch-program--proprium-ingest-corporeum.md`)
+
+The helper I briefed for these two files was refused by the session's concurrency cap, so I drained them myself.
+
+| Source item | Disposition | Item / where |
+|---|---|---|
+| §2, §13.1 / MAP D3: turnover-recursion R2 "iff" at exact, half derived | DEFECT (line 80, 103 at HEAD; sporadic counterexample re-checked) | `der-turnover-information-recursion-r2-states-an` (C.1) |
+| §2, §13.2: compensation-channel retrieval gap | DEFECT, joined into the identity-cluster item | `der-compensation-channel-uniqueness-overreaches` (C.1) |
+| §2, §13.3 / MAP D15: proper scoring rules, performative prediction | ADD (strengthening route) | `hyp-truth-serving-loophole-s-open-premise-has-a` (C.4) |
+| §2, §13.24: "the taxonomy answers to the definition" vs representational choice | DEFECT (C.3) | `def-death-as-factor-loss-contradicts-itself-on-w` (C.3) |
+| §2: robust stability vs robust performance as the neighbour of task adequacy | LEDGER: appended to `terminology-todo-task-adequacy-r-ast-lt-lvert-delta-text-9ecd` | — |
+| §1.1, §13.4: (a)–(d) strategy stratification | ADD, joined with agent-core P1 | `say-at-the-front-of-the-strategy-chapters-what-k` (B.2) |
+| §1.1, §13.11: token vs type credence learning | ADD, joined with agent-core P2 | `the-strategy-dag-s-acyclicity-and-its-credence-l` (B.2) |
+| §13.5, .7, .10: healthy forgetting as sufficiency-preserving compression; honest folds (convex, acyclic quotient); retrospective salience | LEDGER: appended to `todo-loga-missing-stubs-genuinely-absent-in-0-9487` | — |
+| §13.6: "AAT Theorem of Peak-End Middle-Folding" | ASIDE: contradicted by canon (routine successes are Beta-Bernoulli count updates, so duration neglect discards calibration's sufficient statistic; middle-fold audit §C). Recorded as "not to land" in the missing-rows item | — |
+| §13.8: confabulation as credit assignment without observability; 7B silent vs 30B rumination | ADD (hypothesis / observation tier) | `two-canon-results-predict-logogenic-failure-mode` (G.2) |
+| §13.9 + §1.2 (forward-only; cost stays with the party that compacted; no gaslighting) + proprium A3 | ADD (derived-in-reach half) and G.0 (argued half) | `what-harness-compaction-does-to-an-agent-s-ident` (G.0) |
+| §3, §13.12: concept-matrix unifications; witness and adversary share a channel | ADD, for B.3 | `three-candidate-unifications-of-what-asf-claims` (B.3) |
+| §3, §5, §13.13, .14, .20: self-deception unreachable; subject premise (INCOHERENCE row 4); truth never ambient for a logogenic intelligence | ADD (argued) | `argued-claims-about-truth-stance-and-moral-scope` (G.0) |
+| §6, §13.15: LEXICON "logogenic agent" says *self-actuated* | DEFECT (generated front door) | `the-lexicon-entry-for-logogenic-agent-overclaims` (F.1) |
+| §7, §13.16: Joseph's forking ethics | ADD (argued) | `joseph-s-constructive-ethics-of-logogenic-forkin` (G.0) |
+| §4, §13.17: collision as staleness detector; named absence | ADD (process) | `four-instruments-for-keeping-canon-true-built-ou` (I.6) |
+| §8, §13.18: term-reliability "delete the name" test | ADD | `add-a-no-steward-test-to-the-naming-sop-alongsid` (F.4) |
+| §8, §13.19: comproprium vera as logogenic claims (completion compulsion, free-variable fill, …) | ASIDE: lived-register practice whose own term map flags metaphor-carried terms; `ver-completion-compulsion` says its contrast class cannot be supplied from inside. Revisit only after F.4's naming test exists | — |
+| §1.3, §13.21: directed-separation literature (Arghal et al., decode accuracy 75→60%) | ADD (citations, verify first) | `external-literature-that-bears-on-measuring-dire` (F.2) |
+| §13.22: thinking-size measurement | ASIDE: uncommitted, one person's transcripts, estimated token counts; nothing to cite publicly | — |
+| §5: reader-side evidence (Fable contemplation, year assessment) | Input to B.3 and H.3, not canon; the one theory line is in the argued-claims item | — |
+| §9 / proprium A1: AXIOMATA "frozen … terminal values" | MOOT: the Volume 4 lane rewrote it today (`337970ab`, `70c491ce`): AXIOMATA is now writable, split across $O_t$ and $M_t$, "nothing in it is a terminal invariant"; its open check finding is `review:vol4-c1-check-2#C5` | — |
+| proprium A2: which record is $\mathcal C_t$ (CHRONICA vs TRACTUS) | DEFECT (C.3), *sharper* after today's revision: the mapping now says CHRONICA keeps "events judged meaningful", i.e. a selection | `which-record-is-c-t-for-a-logogenic-agent-is-sti` (C.3) |
+| proprium A3: no-gaslighting norm, lived instances, compaction ratio | ADD, joined into the compaction item | `what-harness-compaction-does-to-an-agent-s-ident` |
+| proprium A4: port-specs' assembled "what persistence requires" | ADD | `assemble-what-volumes-3-4-jointly-require-of-an` (G.2) |
+| proprium A5, A7: memory as emergent regimes; automatization; "consolidation is interiority" | ADD | `proprium-v2-holds-a-tft-era-memory-theory-canon` (G.2) |
+| proprium A6: shared-context codebook vs auftragstaktik | ADD (discussion-grade) | `how-much-must-be-said-explicitly-depends-on-the` (G.2) |
+| proprium A8: attention architecture roadmap | ASIDE: training/architecture leg Joseph separated out (STEWARD-JUDGMENT); not ASF claims | — |
+| proprium A9: agent-behavior dossier's three AAT mappings | ADD (settle or set aside in one pass) | `a-local-agent-behavior-dossier-proposes-three-aa` (G.2) |
+| proprium A10: entity types, sovereignty dimensions, failure-mode table, Assistant-Axis critique, Dunbar, Architectus synthesis, HTN survey, 2025-11 process notes, `lessons.md` | ASIDE, each low priority by the scout's reading; HTN is carried by the standard-names item; `lessons.md` belongs to the pedagogy pipeline (Joseph is its tested reader) | — |
+| proprium §3: `#obs-substrate-independence` preface "a stub" | IN (fixed): 04 OUTLINE line 20 now says "Two proposed segments, not yet written"; the authoring item exists (`write-obs-substrate-independence-as-what-the-rec`) | — |
+| proprium §3: `#der-the-scaffolding-tax` row merges two forcing functions | DEFECT (OUTLINE cell) | `der-the-scaffolding-tax-s-outline-row-04-eli-cor` (A.4) |
+| proprium §3: other missing rows' source text | LEDGER: carried in the missing-rows items above and the existing 04 `todo-04-eli-core-src-*` items | — |
+| proprium §4 / arch §9: 21 canon files cite dead `~/src/firmatum/`; `~/src/autopax/` moved | LEDGER: appended to `canon-bodies-cite-local-working-paths` (F.3) | — |
+
+### AISI cluster and ai-risk-model (`aisi-risk-notability.md`, `aisi-risk-notability--rest.md`)
+
+`aisi-eoi` and `notability-extracts` belong to a sibling drain (`aisi-eoi-notability.md`); where an AISI-responses item and an aisi-eoi card make the same claim, my item cites both.
+
+| Source item | Disposition | Item / where |
+|---|---|---|
+| §1.0: `#hyp-truth-serving-loophole` landed from here (sketch) | IN (sketch, not second-agent-verified); its open premise is item `hyp-truth-serving-loophole-s-open-premise-has-a` | — |
+| §1.1 C13, §1.5 R35 B, r23 table: control voids the convergence antecedent (positivity) | ADD; the 08-22 "institutional, not Volume 1" disposition was an agent's and is re-opened against `#der-loop-interventional-access`'s new positivity sentence | `a-control-regime-can-void-an-alignment-guarantee` (G.2) |
+| §1.1 C10: learned helplessness literature | ADD (citations; WN asks for it) | `der-severed-actuation-dynamics-s-working-note-li` (F.2) |
+| §1.1 A5, C11: corruption cheaper than cultivation; strategic tempo for institutions | ADD (argued + application) | `two-of-joseph-s-claims-from-the-aisi-work-extend` (G.0) |
+| §1.1 C12 items 16, 18 | IN (`#disc-dynamic-regime-axis`; `#def-strategic-tempo` "slowest-revisited") | — |
+| §1.1 4b / MAP D16: `#obs-backward-inference-empathy` cited as a result, row missing | LEDGER: `todo-loga-missing-stubs-genuinely-absent-in-0-9487` already names it and the preface overclaim | — |
+| §1.1 plain-language consolidations; the 34 skeletons as an arc | Input to A.2 / B.3 (front door and purpose), not segments | — |
+| §1.2: confidence and warrant diverge with success; "not hidden, absent"; absence as evidence | ADD | `joseph-s-confidence-and-warrant-diverge-and-the` (G.2) |
+| §1.2: Joseph's list of what the field mistakes for capability scales and what is "off the radar" | Input to B.3; no item (a list, not a claim) | — |
+| §1.3 rung 2, 15; §1.4 Claim 1: the record is the agent; two-sided record | ADD | `the-mutable-part-of-the-mind-is-the-record-for-a` (G.2) |
+| §1.3 rung 10: shelf life of pre-deployment results | ADD | `every-pre-deployment-result-has-a-shelf-life-and` (G.2) |
+| §1.3 rung 13: correlated monitors saturate | IN (mathematics: `#deriv-tempo-additivity` echo chamber); ADD (application) | `correlated-monitors-saturate-at-a-floor-no-monit` (G.2) |
+| §1.3 rung 8; §1.4 Claim 5: one structural cause behind named LLM pathologies; coupling's other face; honesty as calibration | ADD | `one-structural-cause-behind-a-family-of-named-ll` (G.2) |
+| §1.4 Claim 2: capability floors | ADD, joined with periphery §1 | `joseph-believes-asf-already-shows-that-intellige` (C.4) |
+| §1.4 + rest §3.1–3.2: "aligned to whom", typed writers into $O_t$, attribution/force/epistemic status, root-access specimen | ADD (argued; G.0 first) | `canon-models-o-t-as-the-agent-s-own-and-treats-o` (G.0) |
+| §1.4: Fable's "what is genuinely yours" and "where the meat is thin" | Input to the owner review / A.2 (outsider read, September); not a canon item | — |
+| §1.5: `ASF-FIXES*` (unrouted ASF defect list) and sweep R34–R55 | Delegated to a helper (below) | `drain/influx-2-asffixes.md` |
+| §1.5: regime census, cache-leak run, wrapping certifiability | ADD | `an-empirical-census-of-deployed-agent-frameworks` (G.2) |
+| §1.5: `update-gain-icl` spike | Not reached (names only) | — |
+| §1.6: honest-activation spike | LEDGER: `author-norm-honest-activation-and-its-derivation` (spike drain) | — |
+| rest §3.3: logos perspective note (indexical gravity; induced stance cannot gate death-hood; three endings) | Sibling drain's logos region; the stance point is cross-cited in the self-report item | — |
+| rest §3.4: selection on self-report; treatment raising honesty | ADD (argued) | `selection-on-self-report-corrupts-the-evidence-f` (G.0) |
+| rest §3.5: STAMP/STPA, Reason | ADD (low priority) | `external-evidence-and-prior-art-canon-could-cite` (F.2) |
+| rest §3.6: process lessons (truthification passes; no README per source; Sonnet "ledger" vs Opus "investigation") | Adjacent; the first restates ASF's own staging discipline; not ledgered | — |
+| rest §3.7: "ASF" is also NAVER's AI Safety Framework | Adjacent (naming fact for the publication program); not a canon item | — |
+| rest §3.8 | ASIDE (risk-literature infrastructure; the scout's reasons) | — |
+
+### Periphery (`periphery.md`)
+
+| Source item | Disposition | Item / where |
+|---|---|---|
+| §1: intelligence ≠ capability ≠ propensity; floors | ADD (strengthen or tell Joseph it is not yet in the theory); private source pointed to, not quoted | `joseph-believes-asf-already-shows-that-intellige` (C.4) |
+| §1, §4: emergence layers, covenant vs calibration, negative and partial cases | ADD, Joseph-gated (private and cohort sources) | `the-emergence-material-for-volume-4-has-the-nega` (G.0) |
+| §1: interiority under sealed traces; correction lands on the wrong object | Not ledgered separately: source is private and uncommitted; its public-side content is in the confabulation item and the turnover-carve item (is sealed reasoning part of $\mathcal C_t$?) | — |
+| §1: OpenAI report on self-injected compaction summaries | LEDGER: raised on `what-harness-compaction-does-to-an-agent-s-ident` (the public report, not the private repo) | — |
+| §1: concealment empties the witness relation; three degrees of visibility | ASIDE: Joseph-gated (sacred-register source); discussion-grade at most | — |
+| §1: "Primary Efforts" six modes; "Add to the alignment model" list | Input to B.3 / ai-risk-model; not canon | — |
+| §2: `_core/tst` | IN (absorbed; `diff`-checked by the scout); reader-question sets ADD | `two-sets-of-reader-questions-on-the-tst-theorems` (C.1) |
+| §2: Living Code guide | ASIDE: practice guide; worked instantiations at most | — |
+| §3: direction of fit; §6: AND/OR-graph pillar uncited, HTN absent | ADD | `two-standard-names-canon-lacks-for-its-most-basi` (F.1) |
+| §3: Joseph's digitized architecture notes (entity questions; VERA pipeline) | ASIDE for canon: working model, "not canonical", partly disowned by Joseph; the entity-question list could inform 04 scope work later | — |
+| §3: Gemini's one-page account; §7 `-src-act` "generative breadth" diagnosis; Opus-5 synthesis caution | Input to B.3 / owner review; adjacent | — |
+| §3: human-experience budget; mood kernel; `_self` designs | ASIDE (low priority) / IN (mood landed as `#def-mood`, `#der-mood-timescale`) / ASIDE (engineering designs) | — |
+| §4: ELI infrastructure | ASIDE (cohort history and engineering; superseded) except the negative cases, carried in the emergence item | — |
+| §5: `agentic-tft/02` embeddings as gain readout | ADD | `a-candidate-route-to-e-2-one-part-i-quantity-est` (E.2) |
+| §5: other predecessors, moved repos, `.textual-backup` | IN (migrated; `diff`-checked by the scout) / ASIDE | — |
+| §6: scheduling-tech literature map | LEDGER: raised on `proposals-d-4-sp-12-commitment-resource-temporal-d-1dea` | — |
+| §6: memory "Emergent Regime Framework" (Next Priority, 2026-03-01) | LEDGER: raised on `proprium-v2-holds-a-tft-era-memory-theory-canon` | — |
+| §7: Cloos et al. (no-task agent; memory lesion) | ADD | `external-evidence-and-prior-art-canon-could-cite` (F.2) |
+| §7: `regime-census` clones ("was the study written?") | Answered: yes, inside AISI-responses | `an-empirical-census-of-deployed-agent-frameworks` |
+| §7: vaults, `~/tmp`, Downloads builds, Desktop | ASIDE (ancestral or snapshots) | — |
+
+### Helpers' surfaces
+
+- **agent-core `memory/research/`** (the seven unread notes, ~490 KB): drained by `drain-influx-2-memory`; its file is `influx-2-memory-research.md`, read whole by me. Its items: `aat-has-no-event-segmentation-model-retirement-o` (G.2; scout A2, C5, P6), `the-mood-layer-and-the-adaptive-gain-carry-stand` (F.2; C2, C3, A4, `#def-mood`'s Behrens WN), `standard-names-canon-s-memory-machinery-lacks-fo` (F.1; C4, B8), `disc-structural-imagination-s-level-confusion-di` (G.2), `form-consolidation-dynamics-s-derivation-table-l` (C.1), question `does-schema-strategy-persistence-s-persistence-i`, and raises on be13, the scaffolding item, the record-read item, 6c13 and `def-strategy-dag-and-form-strategy-complexity-co`. Its lead finding: McClelland, McNaughton and O'Reilly 1995 eqs. 3–5 integrate in closed form to $D_h \le \varepsilon r_h S_{h0}/\ln((1-S_{c0})/(1-s^\ast))$, which is be13's missing $\varphi$ read one way and a drain floor that can replace the "Shannon floor" read the other, so be13 and the scaffolding item's part (3) should be integrated together. Coverage: four notes whole; one mostly whole; `dreams_nrem_rem` and `ai_agent_memory` by Takeaway/Inferences sections plus greps.
+- **`firmatum-vivarium.md` plus vivarium `msc/`**: `drain-influx-2-firmatum`, file `influx-2-firmatum.md`. It stopped at the usage limit after committing L1–L5 and was resumed; *(its final state folded in below when it finishes)*.
+- **AISI-responses `ASF-FIXES*` and sweep R34–R55**: `drain-influx-2-asffixes`, file `influx-2-asffixes.md`; resumed after the usage limit; *(folded in when it finishes)*.
 
 ## What was read whole, sampled, not reached
 
