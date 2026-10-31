@@ -84,7 +84,7 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 
 ## Who is on what
 
-No agents are running. No new agents launch until Joseph says so (2026-10-31). Next: a review with him of everything since the tag, keep against mislead.
+No agents are running. No new agents launch until Joseph says so (2026-10-31). The sprint ran from `pre-integration-2026-10-30` to `post-integration-2026-10-31`; work continues from `main` (Joseph, after `msc/tag-vs-now-assessment-2026-10-31.md`). What it owes next, and what changes in how the next effort runs, is `msc/reflections/31-the-inside-out-sprint-retrospective.md`.
 
 | Who | KR | Writes to |
 |---|---|---|

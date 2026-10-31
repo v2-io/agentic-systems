@@ -75,9 +75,9 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 
 ## In flight
 
-- **Nothing is running.** Every lane merged at 327637ac or later. Joseph stopped new launches on 2026-10-31; none start until he says so.
-- **Next:** a review with Joseph of the whole diff against `pre-integration-2026-10-30`: what is worth keeping, and what misleads or only adds work. Resetting canon to the tag and treating today as one more influx is one of the options on the table, his to decide.
-- **Merged without their independent checks:** Part I round 5, defender-noise round 2, Volume 4 round 4, Part II round 2, A.2, B.1 Part I. E.3 and I.10 live outside canon.
+- **Nothing is running.** No new agents launch until Joseph says so (2026-10-31).
+- **Decided:** work continues from `main`, tagged `post-integration-2026-10-31`; canon is not reset (Joseph, after the Fable assessment `msc/tag-vs-now-assessment-2026-10-31.md`, which re-derived the largest canon changes and found them correct).
+- **Next, in order:** `msc/reflections/31-the-inside-out-sprint-retrospective.md` §"What is owed next". First is closing the six unchecked merges once (Part I round 5, defender-noise round 2, Volume 4 round 4, Part II round 2, A.2, B.1 Part I), with those segments frozen until then. Its §"What to change" is what the next sprint runs differently.
 
 ## The lead's rhythm
 
