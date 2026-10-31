@@ -1,6 +1,6 @@
 # C.1 lane: the defender-noise prescription
 
-KR C.1 (under "Complete "in-place" refactor of ASF-- meta, all artifacts, and theory itself."): every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. Items: `item:t1-gated-tempo-one-sided-noise-prescription`, and `item:gated-tempo-nu-versus-tempo-collision` (same lines). Integrator: `c1-defender-noise`. Commits on this lane's branch: `47d76999` (the landing), `5f5db8ea` (checks and closures), and a third for the P1(b) wording fix.
+KR C.1 (under "Complete "in-place" refactor of ASF-- meta, all artifacts, and theory itself."): every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier. Items: `item:t1-gated-tempo-one-sided-noise-prescription`, and `item:gated-tempo-nu-versus-tempo-collision` (same lines). Integrator: `c1-defender-noise`. Commits on main: `294a30fb` (the landing), `e540fa62` (checks and closures), and `b75b3f44` (the P1(b) wording fix), merged as `60d2e8f6`.
 
 ## What was false, and what is true
 

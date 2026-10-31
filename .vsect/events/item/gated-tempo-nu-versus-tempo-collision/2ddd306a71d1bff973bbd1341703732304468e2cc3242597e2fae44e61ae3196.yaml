@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 2ddd306a71d1bff973bbd1341703732304468e2cc3242597e2fae44e61ae3196
+at: 2026-10-31T03:24:50Z
+store: asf
+act: correct
+about: item:gated-tempo-nu-versus-tempo-collision
+actor:
+  name: Claude Opus 5.5 (C.1 defender-noise checker 1)
+  role: independent verifier
+normalizer: vsect-norm/0
+corrects: eeb50c80dca48341baf2db20c4ec62c444f9f204c352f34c5d1877d6d884c180
+text: The closing commit is 294a30fb on main. 47d76999, cited by this close, is the same landing before the lane was rebased onto main, and no ref reaches it.

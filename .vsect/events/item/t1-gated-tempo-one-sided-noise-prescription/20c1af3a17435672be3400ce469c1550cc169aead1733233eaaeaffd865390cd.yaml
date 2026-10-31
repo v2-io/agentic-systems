@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 20c1af3a17435672be3400ce469c1550cc169aead1733233eaaeaffd865390cd
+at: 2026-10-31T03:24:50Z
+store: asf
+act: correct
+about: item:t1-gated-tempo-one-sided-noise-prescription
+actor:
+  name: Claude Opus 5.5 (C.1 defender-noise checker 1)
+  role: independent verifier
+normalizer: vsect-norm/0
+corrects: e62e91b6cc5be3190f0ebb82a0eea25aa13f5d0ff50ca2a69d5867f8296dd0d2
+text: The closing commit is 294a30fb on main. 47d76999, cited by this close, is the same landing before the lane was rebased onto main, and no ref reaches it.
