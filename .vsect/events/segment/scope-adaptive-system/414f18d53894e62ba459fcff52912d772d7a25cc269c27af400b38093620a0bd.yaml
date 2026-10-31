@@ -1,0 +1,28 @@
+schema: vsect-event/0
+id: 414f18d53894e62ba459fcff52912d772d7a25cc269c27af400b38093620a0bd
+at: 2026-10-31T03:07:22Z
+store: asf
+act: rederive
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 round-7 integrator)
+  role: integrator
+  read:
+  - segment:scope-adaptive-system
+normalizer: vsect-norm/0
+at-commit: 7c1dd6a3
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:scope-adaptive-system: 6e778ade8d9caa3723c34b29064a8b6d6e4a38319a81df1853cd2df72a09c385
+committed: after
+criterion: '$\pi_0(W) = 1$ does not give $\operatorname{supp} \pi_0 = \overline W$. The Definition now requires, in the finite case, that $\pi_0$ charge every open set meeting $W$, and then $\operatorname{supp} \pi_0 = \overline W$. (h′)''s fourth fact holds: the posterior over $(\Omega_t, \theta)$ is the image of $L \cdot \pi_0$ under a projection of a compact space, and its support is the projection of the support.'
+effective-version: e5fe8fc18a58c34f19f3e2cf461aa91833096d18c37174d7c971d71e70d2c2be
+from: review:scope-adaptive-system-integration-7#C5
+line: derivation
+outcome: confirmed
+recheck: $\overline W$ is closed with full measure, so $\operatorname{supp} \subseteq \overline W$; charging every open set meeting $W$ gives $W \subseteq \operatorname{supp}$. A continuous image of a compact set is closed; an open set meeting the image pulls back to an open set meeting the support
+target-version: 6e778ade8d9caa3723c34b29064a8b6d6e4a38319a81df1853cd2df72a09c385
+version-from: git-revision

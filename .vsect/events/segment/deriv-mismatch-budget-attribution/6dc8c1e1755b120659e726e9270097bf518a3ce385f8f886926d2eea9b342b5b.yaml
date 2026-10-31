@@ -1,0 +1,48 @@
+schema: vsect-event/0
+id: 6dc8c1e1755b120659e726e9270097bf518a3ce385f8f886926d2eea9b342b5b
+at: 2026-10-31T03:07:23Z
+store: asf
+act: rederive
+about: segment:deriv-mismatch-budget-attribution
+actor:
+  name: Claude Opus 5.5 (A.1 round-7 integrator)
+  role: integrator
+  read:
+  - segment:deriv-mismatch-budget-attribution
+  - segment:def-action-transition
+  - segment:def-observation-function
+normalizer: vsect-norm/0
+at-commit: 7c1dd6a3
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-model-class-fitness: 80a2eb3fbf06b7ebb3ebdc642c79dc6883eb350ebafb68555ee3ea9c2505a25f
+  segment:def-model-sufficiency: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:deriv-mismatch-budget-attribution: 783565ea647d6e573368e9c9de4d12c0e4b5963841ec4a00986916d0f60fecec
+  segment:deriv-sector-condition: bb8a7c18abfb6ac12203ec8fbd970b93c6429c6d51a3c60ef654875b4433f648
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:hyp-mismatch-dynamics: 81832f876549b712e8493fd4728ffb2ada16bbd5521447c142e69a80adc36062
+  segment:internal-external-decomposition: 6a7f48e98da5b826271ff9735406e4f4375c2397f6f0d51b3693ff03a1603db2
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-mismatch-decomposition: d215ad7db1db571c2e719b31cc39f38f7863ce4b5302e74037a3b6098b2c7a5d
+  segment:result-persistence-condition: 382bfbdfce370119cb7f41c8161baf42fa9415a28646b553fbed7f3a9641fce4
+  segment:result-sector-condition-stability: aa4f9e56f2df48826fccf234cdbcb3f09c3df640583ed1892ee21f7abc286447
+  segment:result-sector-persistence-template: e81dfed0853e9582d41e15e3a737f8fe1829370f72fedf1766ddb60ef07a2d2a
+  segment:scope-adaptive-system: 6e778ade8d9caa3723c34b29064a8b6d6e4a38319a81df1853cd2df72a09c385
+committed: after
+criterion: Proposition 1(ii)'s factorization $\mathbb P_\pi(\mathcal C, \Omega_{0:t}) = [\prod \pi] \cdot [\text{environment and channel factors}]$ follows from fresh transitions, fresh noise and (P), and not from GA-1 and (P) alone. The GA-1 line, with $\Omega = S_t$ as the Setting defines it, conditions on the law as well as the state.
+effective-version: 6d9428407ced22841a7c9e57649239686fb86cb9ffff6282ac83a7d24e5f281b
+from: review:scope-adaptive-system-integration-7#C7
+line: derivation
+outcome: confirmed
+recheck: 'sequential factorization of the joint law, each world factor reduced to its kernel by the matching fresh clause, each action factor to $\pi(a_s \mid \mathcal C_s)$ by (P). Without fresh transitions, #def-action-transition''s XOR world has a world factor that depends on $\varepsilon_1$, which GA-1 permits'
+target-version: 783565ea647d6e573368e9c9de4d12c0e4b5963841ec4a00986916d0f60fecec
+version-from: git-revision

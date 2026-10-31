@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 31eb5e6cae134b7378c1c842e815a4add5b112b245d485623edabd65b89650e2
+at: 2026-10-31T03:04:01Z
+store: asf
+act: close
+about: item:deriv-mismatch-budget-attribution-1-prop-1-ii-s
+actor:
+  name: Claude Opus 5.5 (A.1 round-7 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+by-commit: 9648363b
+outcome: done

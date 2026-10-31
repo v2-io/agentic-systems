@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 3cccc55dee777126d4d4878afb04c81ea679391b33734256250dcb087b30f07e
+at: 2026-10-31T03:07:22Z
+store: asf
+act: rederive
+about: segment:def-observation-function
+actor:
+  name: Claude Opus 5.5 (A.1 round-7 integrator)
+  role: integrator
+  read:
+  - segment:def-observation-function
+normalizer: vsect-norm/0
+at-commit: 7c1dd6a3
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+committed: after
+criterion: The observation kernel is the law of $o_t$ that $h$ and the noise's law induce at $(\omega, a)$. Under $\pi_0$ with $\theta_h$ random, the conditional law given $(\Omega_t, a_{t-1})$ alone is a mixture over $\theta_h$, so the old wording named the mixture. A channel memory that never changes along the run is named into $\theta_h$ by the invariance cut, not into $\Omega_t$.
+effective-version: 8b3f7cb24a1a20528b9a18469f4e69601273d5f65674edd30982f8c0aa087d9f
+from: review:scope-adaptive-system-integration-7#C6
+line: derivation
+outcome: confirmed
+recheck: the conditional law given $(\omega, a)$ integrates the kernel against the conditional law of $\theta_h$ given $(\Omega_t, a_{t-1})$; the cut names every variable constant along every run under every policy into $\theta$
+target-version: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+version-from: git-revision

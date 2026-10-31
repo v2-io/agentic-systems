@@ -30,11 +30,11 @@ where:
 
 *[Definition (observation-kernel)]*
 
-The **observation kernel** $p_h(\cdot \mid \omega, a)$ is the conditional law of $o_t$ given $\Omega_t = \omega$ and $a_{t-1} = a$.
+The **observation kernel** $p_h(\cdot \mid \omega, a)$ is the conditional law of $o_t$ given $\Omega_t = \omega$ and $a_{t-1} = a$ that $h$ and the law of $\varepsilon_t$ induce. Where the agent was not built knowing them, the kernel is random (the component $\theta_h$ of the environment's law in #scope-adaptive-system), and the conditional law of $o_t$ given $(\Omega_t, a_{t-1})$ alone is then a mixture over it, not the kernel.
 
 *[Definition (fresh-noise)]*
 
-The noise is **fresh**: given $\Omega_t$, $a_{t-1}$ and the kernel, $o_t$ is drawn from $p_h(\cdot \mid \Omega_t, a_{t-1})$ independently of everything earlier in the run (earlier states, observations and actions, the noise behind earlier observations, and the agent's own randomness). A channel with memory, such as a sensor whose bias drifts or whose noise repeats, keeps that memory in $\Omega_t$, as the transition keeps the world's ( #def-action-transition). With fresh transitions, this makes the law of the whole run the product of the law of the initial state, the two kernels and the policy. So the kernel is the learnable content of the channel: two pairs ($h$, distribution of $\varepsilon_t$) that induce the same kernel give the run the same law under every policy, and no history can tell them apart.
+The noise is **fresh**: given $\Omega_t$, $a_{t-1}$ and the kernel, $o_t$ is drawn from $p_h(\cdot \mid \Omega_t, a_{t-1})$ independently of everything earlier in the run (earlier states, observations and actions, the noise behind earlier observations, and the agent's own randomness). A channel with memory, such as a sensor whose bias drifts or whose noise repeats, keeps that memory in $\Omega_t$, as the transition keeps the world's ( #def-action-transition), or, if it never changes along the run, in the law $\theta_h$, by the invariance cut of #scope-adaptive-system. With fresh transitions, this makes the law of the whole run the product of the law of the initial state, the two kernels and the policy. So the kernel is the learnable content of the channel: two pairs ($h$, distribution of $\varepsilon_t$) that induce the same kernel give the run the same law under every policy, and no history can tell them apart.
 
 *[Definition (epistemic opacity)]*
 
@@ -48,7 +48,7 @@ This is *definitional*. The observation function $h$ is a modeling device that c
 
 **Lossiness is the common case, not a requirement.** Usually $h$ destroys information about the current state, and when that state persists the agent does better carrying a model ( #form-agent-model) than reading off each observation. A lossless channel removes the need to filter but not the need to learn the law, so a fully observed learner with an unknown transition law is still in scope ( #scope-adaptive-system).
 
-**Channels with memory.** Fresh noise does not exclude a sensor whose bias drifts or whose errors are correlated over time. It places that memory in $\Omega_t$, where later observations can show it, so the noise the mismatch decomposition books as the channel's, $\operatorname{Var}(o_t \mid S_t, a_{t-1})$, is only what each reading draws afresh ( #result-mismatch-decomposition).
+**Channels with memory.** Fresh noise does not exclude a sensor whose bias drifts or whose errors are correlated over time. It places that memory in $\Omega_t$, or in $\theta_h$ if it never changes, where later observations can show it, so the noise the mismatch decomposition books as the channel's, $\operatorname{Var}(o_t \mid S_t, a_{t-1})$, is only what each reading draws afresh ( #result-mismatch-decomposition).
 
 **Action-dependence.** The inclusion of $a_{t-1}$ allows the observation function to capture active perception: what the agent sees may depend on where it looked. This is relevant in software ( #obs-software-epistemic-properties — cross-component reference, see `02-tst-core/`), where observation quality is partly under agent control.
 

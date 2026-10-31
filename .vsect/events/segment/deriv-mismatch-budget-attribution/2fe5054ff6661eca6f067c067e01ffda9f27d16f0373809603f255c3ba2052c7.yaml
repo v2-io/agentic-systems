@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 2fe5054ff6661eca6f067c067e01ffda9f27d16f0373809603f255c3ba2052c7
+at: 2026-10-31T03:11:03Z
+store: asf
+act: revise
+about: segment:deriv-mismatch-budget-attribution
+actor:
+  name: Claude Opus 5.5 (A.1 round-7 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 783565ea647d6e573368e9c9de4d12c0e4b5963841ec4a00986916d0f60fecec
+own-version: dd75b65855f4ffba7d3ef06d17e2b70942ca2e1ce9984b7554efc0d9faa93e71
+record: 01-aat-core/src/deriv-mismatch-budget-attribution.md
