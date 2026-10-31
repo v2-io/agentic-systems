@@ -76,17 +76,22 @@ Each noise place other than own-wn gets one state, first match wins:
 
 - **L**: a ledger record about $c$ names the place. That means a keyed record anywhere in its text, or an unkeyed record in a section where it mentions $c$. For other-wn: such a record names the host segment and says "Working Note".
 - **D**: a drain account (`msc/inside-out-2026-10/drain/*.md`) names the place. A drain account never accounts for itself or for another drain account, since reading it is the cost of this route. For other-wn: a drain account names the host segment.
+- **T**: a status-bearing index or tracker file names it. These are `INDEX`, `ROUTING`, `STATUS`, `PROPOSED*`, `PROPOSALS`, `PRACTICA` and `*TODO*` `.md` files at the root, in `spikes/` and in `audits/` (`i10lib.is_index`). This is the tag's equivalent of the drain accounts: `spikes/INDEX.md` rows and `audits/STATUS.md` named spikes and audits with a status word. An index never accounts for itself.
 - **H**: the claim's own segment file (body or WN) names the place.
 - **U**: nothing names it.
 
 "Names" means the text contains the place's path (with or without extension), its directory (when the directory is specific, not `spikes/` or `audits/`), its file stem (when that stem is unique across everything read), or, for audits, the six-digit audit id the drains use. This matches records at the granularity they cite. It is lenient on purpose. **Named is not the same as disposed.** A drain naming `AUDIT-WORKING-628417/` says that audit was walked, not what it says about this claim. So L and D measure findability of a disposition record, which is an upper bound on how many places a reader can safely skip.
 
-**Must-read** for a claim = own WN + the reading cost of every noise place not discounted, in two variants:
+**Must-read** for a claim = own WN + the reading cost of every noise place not discounted. Which states discount is the variant (`summarize.VARIANTS`):
 
-- **strict**: only L discounts. The ledger is the designated, durable record (I.3).
-- **with drain**: L and D discount. This counts the drain accounts' dispositions as available, which holds only while those files exist.
+- **strict**: L only. The ledger is the designated, durable record (I.3).
+- **ledger + indexes**: L and T.
+- **ledger + drain**: L and D. This holds only while the drain accounts exist.
+- **ledger + drain + indexes**: L, D and T. This is the **symmetric** comparison: every status-bearing record is credited at both ends, so the tag's indexes count the way HEAD's drain accounts do.
 
-H does not discount. A pointer from the segment to a spike says nothing about whether the spike supersedes the segment or is superseded by it.
+Comparing strict at the tag against ledger + drain at HEAD would credit the new machinery and not the old. Compare like with like, row by row. H never discounts. A pointer from the segment to a spike says nothing about whether the spike supersedes the segment or is superseded by it.
+
+**Effort residue removed.** `summarize.py` adds a column: the last ref with every `msc-effort` place dropped. That is the limit state I.8 aims at (the effort's map, review and drain files deleted). Under "ledger + drain" it means "I.8 done, with the drain dispositions moved into the ledger first". Under strict it means "I.8 done without moving them".
 
 **Signal share** = signal / (signal + must-read). **Total reading** = signal + must-read. Total reading is the better single figure, because signal share rises when the ledger or the bodies simply get longer.
 
@@ -101,4 +106,4 @@ H does not discount. A pointer from the segment to a spike says nothing about wh
 
 ## Output files
 
-`data/<label>-claims.tsv` has one row per claim per ref, with every quantity above and per-class columns. `data/<label>-places.tsv` has one row per place: ref, slug, class, path, mention count, block and section words, whole-file words, and state. The census places file (about 6 MB) is not committed. It regenerates in under a minute.
+`data/<label>-claims.tsv` has one row per claim per ref, with every quantity above and per-class columns. `data/<label>-places.tsv` has one row per place: ref, slug, class, path, mention count, block and section words, whole-file words, and state. Places files are not committed (`data/.gitignore`): they list file paths in private repos, asf's remote is public, and they regenerate in under a minute.

@@ -19,6 +19,14 @@ ARCHIVED_PARTS = ("/.integrated/", "/.archived/", "/.archive/", "/.super-archive
 FRONT_FILES = {"README.md", "README-auditor.md", "FINDINGS.md", "LEXICON.md", "OUTLINE.md"}
 HISTORY_FILES = {"CHANGELOG.md", "LOG.md"}
 TRACKER_FILES = {"TODO.md", "PRACTICA.md", "JOSEPH-TODO.md", "PROPOSALS.md", "ROUTING.md"}
+INDEX_RE = re.compile(r"^(?:spikes/|audits/)?(?:INDEX|ROUTING|STATUS|PROPOSED[A-Z-]*|PROPOSALS|PRACTICA|[A-Z-]*TODO[A-Z-]*)\.md$")
+
+
+def is_index(path):
+    """Status-bearing index and tracker files at the root, spikes/ and audits/ (both snapshots)."""
+    return bool(INDEX_RE.match(path))
+
+
 # Noise classes: live places outside the claim's own home. Everything else is reported, not summed.
 NOISE = {"own-wn", "other-wn", "spikes", "audits", "msc-effort", "msc", "trackers",
          "root-docs", "doc", "ref", "component-other", "influx"}

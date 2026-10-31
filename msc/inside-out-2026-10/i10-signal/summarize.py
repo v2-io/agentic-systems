@@ -3,102 +3,116 @@
 
     python3 -I summarize.py data/<label>   (reads <label>-claims.tsv and <label>-places.tsv)
 
-Prints markdown. Groups: 'random' (all random:* strata pooled), 'purposive', 'census'.
+Prints markdown, per group ('random' = all random:* strata pooled, 'purposive', 'census'):
+the places and their accounted states, then total reading and signal share under each
+discount variant, at every ref, plus the last ref with this effort's residue removed
+(the state I.8 aims at). METHOD.md defines every term.
 """
 import collections
 import csv
+import os
 import statistics
 import sys
 
 sys.dont_write_bytecode = True
-sys.path.insert(0, __import__("os").path.dirname(__import__("os").path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import i10lib as L  # noqa: E402
+
+# discount variants: which accounted states a reader may skip
+VARIANTS = [("raw (nothing discounts)", ""),
+            ("strict (ledger discounts)", "L"),
+            ("ledger + indexes and trackers", "LT"),
+            ("ledger + drain accounts", "LD"),
+            ("ledger + drain + indexes", "LDT")]
 
 pre = sys.argv[1]
 claims = list(csv.DictReader(open(pre + "-claims.tsv"), delimiter="\t"))
 places = list(csv.DictReader(open(pre + "-places.tsv"), delimiter="\t"))
-
-
-def group(st):
-    return "census" if not st else st.split(":")[0]
-
-
 refs = list(dict.fromkeys(c["ref"] for c in claims))
 sha = {c["ref"]: c["sha"] for c in claims}
-gof = {(c["ref"], c["slug"]): group(c["sample"]) for c in claims}
-per = collections.defaultdict(lambda: collections.Counter())
+grp = {(c["ref"], c["slug"]): ("census" if not c["sample"] else c["sample"].split(":")[0]) for c in claims}
+
+# per claim: signal and own-WN words; per (state, effort?) place counts and words
+sig = {}
+own = {}
+pw = collections.defaultdict(collections.Counter)
+plist = collections.defaultdict(list)
 for c in claims:
     k = (c["ref"], c["slug"])
-    d = per[k]
-    d["signal_b"] = int(c["body_words"]) + int(c["ledger_block_words"])
-    d["signal_s"] = int(c["body_words"]) + int(c["ledger_section_words"])
-    d["own_wn"] = int(c["own_wn_words"])
-    d["ledger_n"] = int(c["ledger_n"])
-    d["ledger_keyed"] = int(c["ledger_keyed"])
+    sig[k] = {"b": int(c["body_words"]) + int(c["ledger_block_words"]),
+              "s": int(c["body_words"]) + int(c["ledger_section_words"])}
+    own[k] = int(c["own_wn_words"])
+    pw[k]["ledger_n"] = int(c["ledger_n"])
+    pw[k]["ledger_keyed"] = int(c["ledger_keyed"])
 for p in places:
     if p["class"] not in L.NOISE:
         continue
-    d = per[(p["ref"], p["slug"])]
-    b, s, st = int(p["block_words"]), int(p["section_words"]), p["accounted"]
-    d["places"] += 1
-    d["places_" + st] += 1
-    if p["class"] == "msc-effort":
-        d["places_effort"] += 1
-    for u, w in (("b", b), ("s", s)):
-        d["raw_" + u] += w
-        if st in "UHD":
-            d["strict_" + u] += w
-        if st in "UH":
-            d["drain_" + u] += w
+    k = (p["ref"], p["slug"])
+    eff = "E" if p["class"] == "msc-effort" else "N"
+    st = p["accounted"][0]
+    pw[k]["n" + st + eff] += 1
+    plist[k].append((p["accounted"], eff, int(p["block_words"]), int(p["section_words"])))
+
+
+def must(k, u, disc, drop_effort):
+    """own WN + every noise place that no record in `disc` names (dropping effort residue if asked)."""
+    tot = own[k]
+    for flags, eff, b, s_ in plist[k]:
+        if drop_effort and eff == "E":
+            continue
+        if any(f in disc for f in flags):
+            continue
+        tot += b if u == "b" else s_
+    return tot
+
 
 for g in ("random", "purposive", "census"):
-    rows = {r: [per[k] for k in per if k[0] == r and gof[k] == g] for r in refs}
-    if not any(rows.values()):
+    keys = {r: [k for k in sig if k[0] == r and grp[k] == g] for r in refs}
+    if not keys[refs[0]]:
         continue
-    n = len(rows[refs[0]])
-    print(f"\n### {g} ({n} claims)\n")
-    print("| quantity | " + " | ".join(f"{r} (`{sha[r]}`)" for r in refs) + " |")
+    print(f"\n### {g} ({len(keys[refs[0]])} claims)\n")
+    print("| places | " + " | ".join(f"{r} (`{sha[r]}`)" for r in refs) + " |")
     print("|---|" + "---|" * len(refs))
 
-    def line(label, f, med=True):
+    def cnt(label, f):
         cells = []
         for r in refs:
-            vals = [f(d) for d in rows[r]]
-            tot = sum(vals)
-            cells.append(f"{tot:,}" + (f" (median {statistics.median(vals):,.0f})" if med else ""))
+            v = [f(pw[k]) for k in keys[r]]
+            cells.append(f"{sum(v):,} (median {statistics.median(v):,.0f})")
         print(f"| {label} | " + " | ".join(cells) + " |")
 
-    line("noise places (live, outside body and ledger)", lambda d: d["places"])
-    line("  of which the effort's own residue (`msc/inside-out-2026-10/`)", lambda d: d["places_effort"])
-    line("  pointed to by a ledger record about the claim (L)", lambda d: d["places_L"], False)
-    line("  named only in a drain account (D)", lambda d: d["places_D"], False)
-    line("  named only by the segment file itself (H)", lambda d: d["places_H"], False)
-    line("  named nowhere (U)", lambda d: d["places_U"], False)
-    line("ledger records mentioning the claim (keyed to it)", lambda d: d["ledger_n"], False)
-    for u, nm in (("b", "block"), ("s", "section")):
-        line(f"[{nm}] signal words: body + ledger", lambda d, u=u: d["signal_" + u])
-        line(f"[{nm}] noise words, every place + own WN", lambda d, u=u: d["raw_" + u] + d["own_wn"])
-        line(f"[{nm}] must-read, ledger discounts (strict)", lambda d, u=u: d["strict_" + u] + d["own_wn"])
-        line(f"[{nm}] must-read, ledger and drain discount", lambda d, u=u: d["drain_" + u] + d["own_wn"])
-        for lab, key in (("raw", "raw_"), ("strict", "strict_"), ("with drain", "drain_")):
-            cells = []
-            for r in refs:
-                sig = sum(d["signal_" + u] for d in rows[r])
-                noi = sum(d[key + u] + d["own_wn"] for d in rows[r])
-                shares = [d["signal_" + u] / max(1, d["signal_" + u] + d[key + u] + d["own_wn"]) for d in rows[r]]
-                cells.append(f"{sig / max(1, sig + noi):.2f} (median {statistics.median(shares):.2f})")
-            print(f"| [{nm}] signal share, {lab} | " + " | ".join(cells) + " |")
+    cnt("noise places (live, outside body and ledger)", lambda d: sum(d["n" + s + e] for s in "LDTHU" for e in "EN"))
+    cnt("of which this effort's residue (`msc/inside-out-2026-10/`)", lambda d: sum(d["n" + s + "E"] for s in "LDTHU"))
+    for s, lab in (("L", "named by a ledger record about the claim (L)"), ("D", "else named by a drain account (D)"),
+                   ("T", "else named by an index or tracker file (T)"), ("H", "else named by the segment file (H)"),
+                   ("U", "named nowhere (U)")):
+        cnt(lab, lambda d, s=s: d["n" + s + "E"] + d["n" + s + "N"])
+    cnt("ledger records mentioning the claim", lambda d: d["ledger_n"])
+    cnt("of which keyed to it", lambda d: d["ledger_keyed"])
 
-# places by class
-print("\n### noise places by class, random and purposive pooled with census excluded\n")
+    last = refs[-1]
+    cols = [(r, False) for r in refs] + [(last, True)]
+    hdr = [f"{r}" for r in refs] + [f"{last}, effort residue removed"]
+    for u, unit in (("b", "block"), ("s", "section")):
+        print(f"\n| total reading, {unit} unit (signal + must-read) | " + " | ".join(hdr) + " |")
+        print("|---|" + "---|" * len(cols))
+        for lab, disc in VARIANTS:
+            cells = []
+            for r, drop in cols:
+                s_ = sum(sig[k][u] for k in keys[r])
+                m_ = sum(must(k, u, disc, drop) for k in keys[r])
+                cells.append(f"{s_ + m_:,} (share {s_ / max(1, s_ + m_):.2f})")
+            print(f"| {lab} | " + " | ".join(cells) + " |")
+
+print("\n### noise places by class, random and purposive pooled\n")
 cls = collections.Counter()
 for p in places:
-    if p["class"] in L.NOISE and gof[(p["ref"], p["slug"])] != "census":
-        cls[(p["class"], p["ref"], p["accounted"])] += 1
+    if p["class"] in L.NOISE and grp[(p["ref"], p["slug"])] != "census":
+        cls[(p["class"], p["ref"], p["accounted"][0])] += 1
 classes = sorted({c for c, _, _ in cls})
-print("| class | " + " | ".join(refs) + f" | at {refs[-1]}: L / D / H / U |")
-print("|---|" + "---|" * (len(refs) + 1))
+print("| class | " + " | ".join(refs) + " | " + " | ".join(f"{r}: L / D / T / H / U" for r in refs) + " |")
+print("|---|" + "---|" * (2 * len(refs)))
 for c in classes:
     tots = [sum(v for (cc, r, _), v in cls.items() if cc == c and r == rr) for rr in refs]
-    last = " / ".join(str(cls[(c, refs[-1], k)]) for k in "LDHU")
-    print(f"| {c} | " + " | ".join(map(str, tots)) + f" | {last} |")
+    st = [" / ".join(str(cls[(c, r, k)]) for k in "LDTHU") for r in refs]
+    print(f"| {c} | " + " | ".join(map(str, tots)) + " | " + " | ".join(st) + " |")

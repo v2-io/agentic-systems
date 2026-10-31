@@ -74,6 +74,7 @@ def measure_ref(repo, ref, slugs, influx, sample_of):
         if m:
             seg_path[m.group(2)] = p
     drain_text = L.norm("\n".join(t for p, t in snap.items() if p.startswith(L.DRAIN_DIR)))
+    index_text = {p: L.norm(t) for p, t in snap.items() if L.is_index(p)}
     hits = L.find_mentions(files, slugs)
     claims, places = [], []
     for s in slugs:
@@ -127,30 +128,35 @@ def measure_ref(repo, ref, slugs, influx, sample_of):
                 is_l = bool(hrx.search(led_text)) and re.search(r"working note", led_text, re.I) is not None
                 is_d = bool(hrx.search(drain_text))
                 is_h = False
+                is_t = any(hrx.search(t) for t in index_text.values())
             else:
                 cands = candidates(p, stem_count)
                 is_l = named_in(cands, led_text)
                 # a drain account cannot account for itself: reading it is the cost of that route
                 is_d = bool(drain_text) and not p.startswith(L.DRAIN_DIR) and named_in(cands, drain_text)
                 is_h = named_in(cands, home_text)
+                # an index or tracker file (spikes/INDEX.md, ROUTING, PROPOSED*, STATUS, *TODO*, PRACTICA) naming it;
+                # an index does not account for itself
+                is_t = any(q != p and named_in(cands, t) for q, t in index_text.items())
             b, c = cost(text, offs)
             cat_n[cat] += 1
             cat_b[cat] += b
             cat_s[cat] += c
             state = "-"
             if cat in L.NOISE:
-                state = "L" if is_l else "D" if is_d else "H" if is_h else "U"
-                acct[state] += 1
-                acct[cat + ":" + state] += 1
+                # every record that names the place, in precedence order; the first letter is its state
+                state = "".join(k for k, v in (("L", is_l), ("D", is_d), ("T", is_t), ("H", is_h)) if v) or "U"
+                acct[state[0]] += 1
+                acct[cat + ":" + state[0]] += 1
                 raw_b += b
                 raw_s += c
-                if state in ("H", "U"):
+                if not (is_l or is_d):
                     must_b += b
                     must_s += c
             places.append((ref, s, cat, p, len(offs), b, c, L.words(text), state))
         wnw = L.words(wn)
         row["noise_places"] = sum(n for c, n in cat_n.items() if c in L.NOISE)
-        for k in "LDHU":
+        for k in "LDTHU":
             row["acct_" + k] = acct[k]
         row["signal_block"] = row["body_words"] + lb
         row["signal_section"] = row["body_words"] + ls
@@ -161,7 +167,7 @@ def measure_ref(repo, ref, slugs, influx, sample_of):
             row["b:" + c] = cat_b[c]
             row["s:" + c] = cat_s[c]
             if c in L.NOISE:
-                for k in "LDHU":
+                for k in "LDTHU":
                     row[f"{c}:{k}"] = acct[f"{c}:{k}"]
         claims.append(row)
     return claims, places
