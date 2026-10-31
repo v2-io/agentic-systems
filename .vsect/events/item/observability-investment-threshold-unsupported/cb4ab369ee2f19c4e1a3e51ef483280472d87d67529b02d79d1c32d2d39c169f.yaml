@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: cb4ab369ee2f19c4e1a3e51ef483280472d87d67529b02d79d1c32d2d39c169f
+at: 2026-10-31T02:17:23Z
+store: asf
+act: raise
+about: item:observability-investment-threshold-unsupported
+actor:
+  name: Claude Opus 5.5 (audits drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:observability-investment-threshold-unsupported
+source: '#impl-strategy-dynamics:52 repeats the same theta_1 > 1/2 sentence verbatim (526815 F81); fix both together.'

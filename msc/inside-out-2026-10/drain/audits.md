@@ -186,6 +186,24 @@ Read whole: `AUDIT-WORKING-773921/{21,22,55,56,61}` (the five Appendix-A notes t
 | 829314 logozoetic/01: relational recognition makes moral status relational, not intrinsic | **ASIDE** for canon; argued philosophy, the logos portfolio's ground (G.0 if it is ever to be stated in ASF). |
 | 773921/21, /22, /55, /56, /61 otherwise | **PED.** These were the five segments the 05-30 sweep never reached; nothing in them is a defect. |
 
+### `AUDIT-WORKING-526815/00-running-outline.md` (the "deep-math" F-ledger, 2026-05-15)
+
+Read whole: F1–F82 and every row from F79 to F253 whose number no ledger item cited when I looked (about 120 rows). Checked at HEAD by phrase: about 50 rows. Not checked: the rest, by design, because the Working-Notes drains are working through the same rows from the segments' off-ramp blocks right now. When I looked, 32 items already cited 526815 and the ledger held about 90 distinct F-numbers (F116–F119, F122–F126, F146–F172, F234–F258 among them). A helper for a full row-by-row pass was refused (the session's agent cap).
+
+**What the sample shows.** The May gem-hunt's warning ("stale until re-grepped") was right in both directions. Of the rows I checked, most are fixed in the body: F11, F13, F14, F17, F21, F22, F23, F24, F40, F45, F49, F69, F72/F76/F78, F73, F228, F229, among others. A minority are still live, and they are the kind 731548 called statement-layer drift on correct algebra.
+
+| Row | Disposition |
+|---|---|
+| F15 per-dimension Model S uses a gain for a rate | **DEFECT** item:per-dimension-model-s-gain-for-rate (C.1). |
+| F53, F81 observability investment helps "whenever $\theta_1 \gt 1/2$" | **DEFECT** item:observability-investment-threshold-unsupported (C.1). My own check of the displayed formulas says the comparison goes the other way under equal counts; marked in the item as a check, not a re-derivation. |
+| F62 (with F44) causal insufficiency "systematically overestimates" | **DEFECT** item:credit-assignment-overestimate-sign-is-topology-dependent (C.3: contradicts `#def-strategy-dag`'s sign table). |
+| F67 Regime-C edges "contribute essentially nothing" | **DEFECT** item:strategic-tempo-regime-c-overstated (C.1). |
+| F93, F148, F209 | **DEFECT** item:part-iii-unit-and-index-slips (C.1). |
+| F142 | raised onto item:t1-tempo-composition-c-coord-baseline. |
+| F3, F5, F18, F19, F34, F35, F54, F55, F60, F70, F75, F77, F116–F119, F146–F161, F226/F227, F234–F238, F246–F255 | **LEDGER**: already carried by items other drains opened today (for example item:edge-update-two-log-odds-conflated, item:strategy-complexity-revise-cost-rate, item:ciy-unified-objective-domain-table-overstates, item:directed-separation-kappa-convention-and-estimator-confound, item:der-agent-opacity-overclaims-f246-f255). |
+| F79, F110, F114, F195–F200, F206, F215, F218 | **not dispositioned**: phrase checks were inconclusive (for example F79's S1–S5 collision and F110's combination norm, which `#form-composition-closure:208` now calls load-bearing without fixing). Left for the Part III integrators with the row numbers. |
+| F182–F188, F194, F202, F213, F214, F221, F233, F245 | **ASIDE**: the auditor's own "resolved", "watch" or "forward reference" rows. |
+
 Gem-hunt files read for this: `audits/.gem-hunt-trail/GEM-WORKING-{193847,471203,526815,613842,742613,829314,849201}/adjudication.md`, by section. Its 526815 A-1 (the $d^\ast$ table row) is **IN** (`#form-strategy-complexity-cost:102` reads 0).
 
 ## Pedagogy gold: where it is

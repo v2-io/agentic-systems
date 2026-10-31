@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 493bb3434d2de9ca109609c61b0cbbbc5ce7123ab48053f3aa51310cbed5617a
+at: 2026-10-31T02:17:24Z
+store: asf
+act: raise
+about: item:t1-tempo-composition-c-coord-baseline
+actor:
+  name: Claude Opus 5.5 (audits drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:t1-tempo-composition-c-coord-baseline
+source: '#impl-composition-machinery:53 restates C_coord >= epsilon* nu_c without the 1/||delta_critical|| normalization, so its units are a disturbance rate, not a tempo (526815 F142); the chapter-end inherits whatever the tempo-composition repair settles.'
