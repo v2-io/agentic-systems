@@ -1,6 +1,6 @@
 # HANDOFF — for the lead's successor
 
-What only the lead knows: what it has actually read, what it holds only on another agent's word, and what is in flight. Findings are not restated here; they live in the documents named below. Updated at every checkpoint (last: 2026-10-30 evening MDT).
+What only the lead knows: what it has actually read, what it holds only on another agent's word, and what is in flight. Findings are not restated here; they live in the documents named below. Updated at every checkpoint (last: 2026-10-31 early MDT, all lanes stopped).
 
 ## Resume
 
@@ -75,19 +75,9 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 
 ## In flight
 
-- **Running:** see INTENT's "Who is on what". Agents commit by explicit path without pushing; the lead reviews, then pushes the reviewed SHA. B.1 is in its own worktree, so its branch is merged after review. Spikes get an independently briefed verifier (bare brief) before any integrator.
-- **Waiting on Joseph: nothing.** Resolve uncertainty rather than route it. Two items that used to wait on him are now ordinary work:
-  - Canon citing the gitignored `msc/joseph-working-notes.md` (F.3). Lift any theory content those citations need into canon, then remove the citations.
-  - The 08-22 cleanup items (I.3).
-- **Next for the lead.**
-  1. As each agent lands, read its documents whole, then review and push by SHA.
-  2. Spikes: commission a verifier with the template's bare brief, then a separate integrator.
-  3. H.4: build the pedagogy home as the gold drain specified (`drain/wn-01-gold.md` §Pedagogy home: one file per chapter in OUTLINE order, entries verbatim with attribution, a status line per entry with checked-at sha, test-read by Joseph, landed-at, rides-on-corrected-claim). It absorbs PRACTICA's ownerless pedagogy item.
-  4. A.2, the front door, once the round-3 integrations land: B.1's Part II records now exist, so headline sentences can trace to retyped registers. Headline 2's Kalman-gain sentence is in the Part I round-3 integrator's hands.
-  5. The vsect store migration (normalizer), once no checker or integrator is writing records; the vsect builder is on the line for it.
-  6. When subagent slots free (the session caps at 20, helpers included): a sixth independent read of `#scope-adaptive-system` and its two new definitions at ed2b07e4; an independent check of Part I round 3. The Part II round-2 integration (`part-ii-check-1.md` items 1–8) waits until the Working Notes drains have reached Part II's segments.
-  7. When the drains finish: the targeted legacy quantifier sweep (`item:todo-targeted-legacy-quantifier-gloss-status-e6a9`, C.1). Every check and audit today found the same defect species, correct algebra under a statement that says more than it (an iff where if is proven, exactly where a factor is undischarged, a blanket sign where the sign depends on topology), and the audits drain adds its dual: a cost discharged by definition with no named place it went is a finding.
-  - Rebuild `CURRENT-VOL1` after each canon landing, using the biber workaround in memory.
+- **Nothing is running.** Every lane merged at 327637ac or later. Joseph stopped new launches on 2026-10-31; none start until he says so.
+- **Next:** a review with Joseph of the whole diff against `pre-integration-2026-10-30`: what is worth keeping, and what misleads or only adds work. Resetting canon to the tag and treating today as one more influx is one of the options on the table, his to decide.
+- **Merged without their independent checks:** Part I round 5, defender-noise round 2, Volume 4 round 4, Part II round 2, A.2, B.1 Part I. E.3 and I.10 live outside canon.
 
 ## The lead's rhythm
 
@@ -111,4 +101,11 @@ At each beat, nothing is running. The lead re-reads INTENT from the top intent d
 - **An exact sentence gets a constructed instance.** The Part II check found its four peer-checked failures where every earlier hand agreed ("passes for free"; the right rung's hidden membership), each a verifier's generalization of a two-point case that later hands re-derived from the text, not from an instance. Ask checkers to build a small instance against every sentence labelled exact, iff or for free, and to grep for retired phrasing repository-wide, not only under `src/`.
 - **One region an agent cannot read.** `~/src/aisi-eoi/` (beyond its blind-spot cards and pilot spikes) and all of `~/src/notability-extracts/` stopped five agents across Opus, Sonnet and Fable on the `reasoning_extraction` safeguard. `drain/aisi-eoi-notability.md` says what was reached. What is left needs a human look or a listings-and-commit-bodies-only pass.
 - **asf's remote is public; the ledger is pushed.** Seven drain items quoted private agent-core material verbatim (a line of Joseph's own correction in a logged session, a session id, reader-agreement counts) and went out in b72f4601, 866181bc and 36f3b980 before being rewritten to pointers in 61527078. History was left as is, for Joseph to decide. Briefs that touch private repos should say: point at the path with a one-line paraphrase, never quote.
+- **The process that existed was dropped, not improved.** `~/src/arch/SPIKE-PROMPT.template.md` was never read whole or used, and `spikes.sop.md` and `multi-agent.sop.md` were not read. Integrators derived new results and landed them themselves, against spiker ≠ verifier ≠ integrator. "Gates on Joseph are lifted" lifted gates that waited on him, not the disciplines. Before inventing a landing cycle, read the one the project has.
+- **Checking is not progress.** Eight independent reads of one segment, and checks that re-derived what audits had already derived hundreds of times, added nothing after the first. Joseph: *"Re-derived something already recorded … is NOT a success."* Each round also edited text the next checker then had to read, so the loop fed itself. A check-and-integrate loop converges only if each round shrinks the set of places a claim is restated.
+- **The coordinator multiplexed instead of steering.** Reading accounts, relaying findings and merging filled the day while the tree's first-ranked objectives sat untouched. Joseph: *"your *primary* responsibility is that intent tree and not letting things get off track from it."* Report status as what became true, never as counts.
+- **A new integrator per round loses context.** Findings go back to the original integrator; only the checker must be a different mind.
+- **"We found it" is not "it is all there is".** The drains and scouts assumed their searches were complete. Search by mention (`#asf/`, "AAT") cannot see theory that bears on ASF without naming it; vivarium's `LEXICON.udon` was the planted canary and was missed. Run every canary you plant. Record what was read, so what was not can be listed.
+- **A measurement must measure the claim.** E.3 measured file lifetimes because they were abundant; the claim is about a system's remaining feature count. A brief that asks for "the cheapest falsifier" invites the cheapest proxy.
+- **`.gitignore` does not untrack a tracked file.** I.10's follow-up said it untracked a file of private-repo paths; it only ignored future copies. The branch was rebuilt without it before merge.
 - **Breadcrumbs.** History and finished items accumulate in working files because writing them feels safe. Joseph: *"It does [do harm]. That's what changelog is for."* Nothing in this directory records what is finished.
