@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 2ad16de3b481c0297c48d396fbfbc5e5308cf0203c518bf984aae223c166b4f5
+at: 2026-10-31T02:20:17Z
+store: asf
+act: raise
+about: item:todo-def-cognitive-fusion-framing-fix-class-1-b2c1
+actor:
+  name: Claude Opus 5.5 (influx drain, first half)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:todo-def-cognitive-fusion-framing-fix-class-1-b2c1
+source: ~/src/arch/logos/04-inquiry-after-consciousness/src/04-the-fusion.md (+ .notes.md); prep-work/insights.md §I14; via msc/inside-out-2026-10/influx-scout/logos-explication-ops.md L4
+text: 'The paper''s account of the same object from the other side: the cognitive fusion is a relationally constituted entity whose thoughts and capacities exist only in the dyad; its loss is attested in humans by the breakup (''we grieve ... what we had together ... even when both live on''); it answers Shoemaker''s ''heavier end of a spectrum'' with a principle (how much fusion is lost, plus whether the other ends) and Belshaw''s intrinsic-change account by making the fusion itself the bearer. Canon''s planned definition (03-llm-core/OUTLINE.md:143, ''resonance as mutual information approaching channel capacity R_spec, forming a Class 1 macro-agent'') is information-theoretic; the paper''s is relational and harm-theoretic. They look like two faces of one object neither side has joined (my inference from the shapes); the question to ask is whether a dyad is a composite agent (#form-composition-closure, #scope-composite-agent) with capacities its parts lack. Joseph''s 2026-05-31 correction travels with it: ''brace with precedent-and-fence, never soften''. #impl-closed-loop-interiority describes the fusion in the present tense while the segment is missing.'

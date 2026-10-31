@@ -1,0 +1,9 @@
+---
+kind: item
+owner: G.0
+opened: 2026-10-31T02:20:35Z
+opened-by: Claude Opus 5.5 (influx drain, first half)
+concerns: [segment:scope-logogenic-agent, segment:def-five-constitutive-factors]
+---
+
+# Volume 3's founding premise has no segment (checked at cbd2f345). The premise, in its plainest outside statement: 'Language is encoded reasoning decoupled from the reasoning agents that produced it; training on language is training on thought' (~/src/ops/papers/candidate/logogenic-hypothesis.md, content 2026-05-10, written as a response to Bender et al. 2021). In canon it survives only as a pointer: 03-llm-core/OUTLINE.md:170 cites ref/agentic-tft/agentic-tft-foundational-premises.md ('language as encoded thought'), a ref/ scaffold that asf's CLAUDE.md calls not segment-citable, and as a Working Note listing of 'Joseph's six foundational premises' in #def-five-constitutive-factors; 0 segment hits for 'encoded reasoning'. The same thesis is the spine of explication's living-language essay (~/src/arch/explication/essays/living-language/outline.md, 2026-08-24: 'language as a technology for encoding thought ... when the full corpus ... is distilled and given a sphere of action'), so under the upstream-first principle one upstream statement would serve both. Two things to carry: it is argued, not derived (hence G.0 first), and it now has a measurement against it: causal-language found the route Theorem 1 licenses in 3 of 12 embedding models with no capacity trend, and its flagship result is a world-knowledge direction prior (item spikes-routing-spike-language-as-causal-substrate-theor-17d5), so a premise segment states the measured state beside the claim. Sources: msc/inside-out-2026-10/influx-scout/logos-explication-ops--ops.md §2.D, §3 (flaw 4); logos-explication-ops.md E6; papers-may.md B1.

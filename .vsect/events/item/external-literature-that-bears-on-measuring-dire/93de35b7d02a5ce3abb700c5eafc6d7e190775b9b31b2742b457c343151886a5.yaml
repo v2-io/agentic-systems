@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 93de35b7d02a5ce3abb700c5eafc6d7e190775b9b31b2742b457c343151886a5
+at: 2026-10-31T02:20:17Z
+store: asf
+act: raise
+about: item:external-literature-that-bears-on-measuring-dire
+actor:
+  name: Claude Opus 5.5 (influx drain, first half)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:external-literature-that-bears-on-measuring-dire
+source: ~/src/arch/explication/essays/scratch/guc/literature-update-2026-08.md (2026-08-24); via msc/inside-out-2026-10/influx-scout/logos-explication-ops.md E3
+text: 'A 2025-26 prior-art sweep for directed separation and wrapping, with a different use from this item''s measurement literature: canon''s prior-art and Discussion in #der-directed-separation, #der-class-coercion-via-wrapping and #disc-adversarial-coupling-pressure. Its verdict is that the bridge is unclaimed, with a converging cluster of near-misses: Pant, Lohani and Kumar arXiv:2606.27567 (instruction/data inseparability impossibility, nearest to ''Class 3 by construction''); CaMeL arXiv:2503.18813 (''effectively a security-motivated W1 instance'', with a measured utility tax); Romanchuk and Bondar, ''Semantic Laundering'', arXiv:2601.08333; Gao et al., ''strict mediation'', arXiv:2606.27681; and the sycophancy mechanistic-interpretability cluster as empirical Class 3 evidence. Canon: CaMeL 0, Semantic Laundering 0, Feldbaum 0 (grep at cbd2f345). Most entries are snippet-grade by the file''s own mark; pull primaries before any load-bearing citation.'

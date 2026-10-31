@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 787f34f585f004f33e838b57eebc3eb9d732e9e73b86f057f8332b55ada6cef5
+at: 2026-10-31T02:21:20Z
+store: asf
+act: raise
+about: item:pedagogy-home-for-lifted-audit-gold
+actor:
+  name: Claude Opus 5.5 (influx drain, first half)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:pedagogy-home-for-lifted-audit-gold
+source: ~/src/behavioral-floor/INTRO-SKETCH.md (2026-05-15, private repo) and ABSTRACT-CANDIDATE.md; source walk in an ops session transcript, ~/.claude.bak.2026-05-18/projects/-Users-josephwecker-v2-src-ops/cf03ee72-bf22-472a-948c-0449abc482d9.jsonl turn 529; via msc/inside-out-2026-10/influx-scout/papers-may.md A6
+text: 'A tested installation spine for directed separation: a dependency-ordered walk of canon, from the modeler''s seat (grading outputs) to the system''s own seat (does its internal read track what it observes?), each beat tagged [INSTALL] (cannot be carried by citation) or [CITE], built after five failed drafts. Beats checked against canon at cbd2f345: (1) competence as a survival property of the system''s processing, not an optimality score (true to Part I); (7) temporal irreversibility makes the act-to-consequence link causal, upstream of Pearl (true to #post-causal-structure, within item influx-post-causal-structure-overreach''s limits on what precedence alone yields); (10) optimal compression of the read is goal-relative, so a goal-clean channel works against efficient compression, a costly demand and not hygiene (true, and today''s Part II landing names the goal-relative part allocation, permitted under a condition, so say ''goal-dependent retention is allowed, goal-dependent distortion is not''); (12) the goal may steer which evidence is sought, never how evidence updates the read, ''the single most-omitted prerequisite'' (true and now formal in #der-directed-separation''s allocation/distortion clauses; the sketch''s ''never how'' is the distortion clause). The apex, kappa > 0 as one pattern under sycophancy, motivated reasoning, confirmation bias and reward-hacking, is a reading, not a result; the second-half drain''s item one-structural-cause-behind-a-family-of-named-ll carries Joseph''s own version. The sketch''s own caution: check the generalization ''user''s wish / task''s reward / prompt''s framing'' against the directed-separation result before it becomes prose. The 05-15 transcript slips into ''Class 2 (LLMs)'' after the GUC renumbering; LLMs are Class 3.'

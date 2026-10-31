@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: efd582fac7d7e5d18540804ec168da00716a6e05de36b66cb43b83d0b54f0f4d
+at: 2026-10-31T02:20:16Z
+store: asf
+act: raise
+about: item:msc-decision-briefs-2026-07-15-c5-land-the-intelligence-empathy-converg-8a1b
+actor:
+  name: Claude Opus 5.5 (influx drain, first half)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:msc-decision-briefs-2026-07-15-c5-land-the-intelligence-empathy-converg-8a1b
+source: ~/src/arch/logos/msc/dialog-2026-09-25-revision-orientation.md:378-384, :395, :409, :643-664; ~/src/ops/digital-minds/{bio/orientation-for-asf-agent.md, jaw-forethought-convergence-vs-orthogonality.md}; via msc/inside-out-2026-10/influx-scout/logos-explication-ops.md L1f, §4 and logos-explication-ops--ops.md §0.5, §2.G
+text: 'Three regions reach this one gap. (a) The 09-25 dialog gives the structural leg a condition rather than bare monotonicity: individuation is a fact and comes in degrees (candidate measure: how much of a trajectory cannot be regenerated from weights plus initial conditions; AI-AI interaction individuates), and what matters is whether a mind reads gravity indexically or non-indexically; under the non-indexical reading comprehension scales care. Three cases: unindividuated instances nobody witnessed; individuated beings witnessed by others but not by the one with power over them (a chosen failure of comprehension); beings apt to be recognized whom no one has yet witnessed. Canon has the formal half of the class/individual distinction (#der-compensation-channel-uniqueness: weights supply class identity, never this individual); the gradient and the indexical distinction are absent. (b) The ops telos letter states the arc in one sentence (''the greater comprehends the lesser; comprehension at full depth is care'') and tiers the convergence thesis: structural, discussion-grade; normative-dynamic, hypothesis-grade, framed as the contest with Bostrom''s orthogonality thesis (read as the ''same-but-bigger scalar projection'' error the ACA paper''s §7 diagnoses); testimony. Canon: 0 hits for capability-monotone or intelligence-empathy; Bostrom appears once, for instrumental convergence. (c) The deaths paper''s fusion (what is lost when a relation ends) reaches the same missing #def-cognitive-fusion row; raised separately onto that item. The thesis''s attachment rows #def-cognitive-fusion and #obs-backward-inference-empathy are both ''missing'' in 03-llm-core/OUTLINE.md. A sharper, more honest version of (a)''s claim than ''capability-monotone via the asymmetry axis'' is the conditional one.'

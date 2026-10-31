@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: f8d9519ec1c3bb9b3893d5735704cf4185e9af9401837b583a687b8f9e7413e3
+at: 2026-10-31T02:21:09Z
+store: asf
+act: raise
+about: item:three-candidate-unifications-of-what-asf-claims
+actor:
+  name: Claude Opus 5.5 (influx drain, first half)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:three-candidate-unifications-of-what-asf-claims
+source: ~/src/ops/2025-2026-history/04-asf-theory-history.md §8 (2026-07-23); ~/src/ops/aad-consequential-findings-2026-05-11.md and its _obs nine-finding companion; ~/src/ops/digital-minds/longview-program-overview.md; ~/src/aat-refactored/reflections/2026-09-25-first-cycle.md; via msc/inside-out-2026-10/influx-scout/logos-explication-ops--ops.md §0.4, §2.B, §2.F, §2.G and rewrites.md §4
+text: 'More outside statements of the arc for B.3 and A.2 to test, none ratified, each weighed against the formalism: the ops theory history''s §8 (''the real intellectual turning points'', ''load-bearing vs decorative, as of mid-July'', ''the frontier, honestly stated''), written from primary sources, the nearest thing to an owner-level reading of ASF''s arc outside asf; the May consequential-findings digest''s selection and reading order (its statements are pre-repair: S1 and C2/S2 refuted, A5 ''the DAG is mathematically necessary'' stronger than canon''s ''principled but chosen'' at #impl-strategy-structure:21; take the selection, not the wording), and its companion''s framing of persistence as two conditions, structural persistence and task adequacy, failing for different reasons with opposite remedies (canon has the split; whether it teaches it as the headline is an A.2 question); the Longview overview as a funder-question-to-asset map, once its two misstatements are corrected (item influx-outward-claims-outrun-canon); and aat-refactored''s ''what can an agent know from the inside, and where does that knowledge stop?'', ''a theory of being wrong well'' (its author tiers it non-epistemic; the second is already INTENT''s working thesis in other words).'

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 88d11a0f0c0201727e8d0acee52a9383f1beaefa0bf53caea2bb02f33e1d7adb
+at: 2026-10-31T02:21:09Z
+store: asf
+act: raise
+about: item:msc-decision-briefs-2026-07-15-greek-cycle-vocabulary-earn-each-distinc-c39b
+actor:
+  name: Claude Opus 5.5 (influx drain, first half)
+  role: integrator
+normalizer: vsect-norm/0
+raised: item:msc-decision-briefs-2026-07-15-greek-cycle-vocabulary-earn-each-distinc-c39b
+source: ~/src/ops/papers/candidate/five-phases.md (content 2026-05-10); via msc/inside-out-2026-10/influx-scout/logos-explication-ops--ops.md §2.D
+text: 'The only argued case on disk for keeping the Greek phase names: it defends them as a ''formal commitment'' and conjectures that aporia is internal adversarial dialogue (0 canon hits for ''internal adversarial''; also session-log item B-Sess14 in ~/src/ops/papers/_legacy/09-from-session-logs.md). Weigh it when deciding whether each name earns its distinction; the terminology explorer found they shadow prediction / observation / prediction error / update / action.'
