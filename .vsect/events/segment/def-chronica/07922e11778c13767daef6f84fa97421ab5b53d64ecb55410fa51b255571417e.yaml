@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 07922e11778c13767daef6f84fa97421ab5b53d64ecb55410fa51b255571417e
+at: 2026-10-30T23:20:58Z
+store: asf
+act: revise
+about: segment:def-chronica
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-3 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: reworded
+from-version: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+own-version: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+record: 01-aat-core/src/def-chronica.md

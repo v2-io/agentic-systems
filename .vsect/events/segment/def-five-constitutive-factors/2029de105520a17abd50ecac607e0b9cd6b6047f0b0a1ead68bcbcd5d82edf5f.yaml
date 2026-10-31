@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 2029de105520a17abd50ecac607e0b9cd6b6047f0b0a1ead68bcbcd5d82edf5f
+at: 2026-10-30T23:20:58Z
+store: asf
+act: revise
+about: segment:def-five-constitutive-factors
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-3 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: reworded
+from-version: 42ccfbeeac963a21c2900611360db71882d463cf075037d3b56ab29de9bc1cf1
+own-version: 9ae0abdf113a459fd541ef238d0f66acb1dc464e06c6fc4421fd61668fb535dc
+record: 04-eli-core/src/def-five-constitutive-factors.md

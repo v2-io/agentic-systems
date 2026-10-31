@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 181f796d88fd81c4ced7c8759295d30d1d7cc20ac97a852807938d5cc83ebc42
+at: 2026-10-30T23:20:59Z
+store: asf
+act: revise
+about: segment:hyp-checkpoint-forking-failure-modes
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-3 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: reworded
+from-version: 418169e5df13da67e481a7800fa3bf4524837a1d65ddfbc309dadcb8c4444df4
+own-version: 7abbb753b2650d954c108273b03d8591ee58ac4e2b48b1a971de5f851f42b321
+record: 04-eli-core/src/hyp-checkpoint-forking-failure-modes.md

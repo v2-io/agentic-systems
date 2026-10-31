@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 00471714e850acfb257da16c7db605054371ca315ec2b0e926a975f9f8e635ef
+at: 2026-10-30T23:25:18Z
+store: asf
+act: revise
+about: segment:hyp-substrate-transfer-asymmetry
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-3 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: reworded
+from-version: 7f43d356bab2ab06b7665a0f740900cfa58f2816d4fe0a344dcd47d974fa1093
+own-version: 05737c718f7c3dde8c4d8a665984c8933b4b0b5abe35c96059a570ee8c32e4af
+record: 04-eli-core/src/hyp-substrate-transfer-asymmetry.md
