@@ -149,10 +149,54 @@ Checked at asf `main` d058c25e (R34–R42). `PROPOSALS.md` and `spikes/PROPOSED*
 - **ADV #11, a per-substrate channel-collapse mechanism for substrate-transfer asymmetry.** **LEDGER** (`spikes-proposed-advanced-11-…-9171`, `substrate-transfer-asymmetry-two-halves-empirica`); R51 adds nothing.
 - **SP-30 lists a downstream check of regime (i) in this segment.** **MOOT**: A.1 landed and C3 rewrote the segment's regimes.
 
+### R52 — `result-section-ii-survival`, `disc-framework-self-diagnostic`, `impl-common-roots`
+
+- **"Design $\mathcal A$ structurally small" as a mitigation lever** (R52 §6, from 829314/04's worked sycophancy example). **LEDGER** as a defect, not a lever: `#impl-common-roots`:27 still states the retired product law and the $\mathcal A$-reduction prescription, contradicting :25; that is open as `review:part-ii-check-1#F1`. R51 and R52 show the retired law has already travelled into the AISI response's inputs, so I raised AISI-responses (its `extract/01-aat-core-map.md`, `extract/01-aat-core-formal.md`, and the sweep reports) onto `item:material-outside-asf-still-rests-on-the-ambiguit` (F.3), which listed other estates but not this one.
+- **LOGA-1/2 scope the whole chapter; the Class 2 bias bound is open.** **LEDGER** (LOGA items; `item:todo-class-2-partial-observation-ambiguity-bi-8b48`, C.1). Whether the Class 2 item still has the same form after C3 retired the product law is that item's recheck, not mine.
+- **SP-17's goal-information leakage $I(o_c;G\mid\Omega)$ as "the missing number under certified separation".** **LEDGER** `item:goal-information-leakage-is-not-a-separation-failure` (C.4). R52's reading is the very conflation that item says the body must rule out; raised as evidence that the clarification belongs where readers meet the quantity.
+- **`disc-framework-self-diagnostic`: negative cases; recovery or performance of recovery-shaped language.** **LEDGER** `item:framework-self-diagnostic-falsifier-and-vol4-confound` (B.1). Raised with R52's second reading and test.
+- **SP-16.** Raised under R36.
+- The survival scorecard (16/24 exact) as read: **IN**, with `item:section-ii-survival-map-stale` (C.1) already open on its currency.
+
+### R53 — `scope-primitive-logogenic`, `obs-context-turnover`, `impl-primitive-logogenic`
+
+- **`#obs-backward-inference-empathy` does not exist, yet `#impl-primitive-logogenic` narrates its "finding" (forced Theory of Mind from statelessness).** **LEDGER** as a defect: `review:items-recheck-t2#F6` (open) states exactly this at :32, plus the 03 preface calling it a result; authoring is `item:todo-loga-missing-stubs-genuinely-absent-in-0-9487` (G.2). Raised onto F6: three de novo audits hit the missing file, and R53 then relayed the claim to the AISI response as fundable, so the unbacked passage is travelling.
+- **"Calcification compounds" as a forensic signature.** **LEDGER** `item:impl-primitive-calcification-premise` (C.1), which records that the prediction's premise contradicts the primitive scope (a stateless agent accumulates nothing). R53 relayed the prediction uncritically; raised so whoever resolves the item knows an outside reading depends on it.
+- **`obs-self-model-from-recursion`, the same hole from another side.** **LEDGER** (`todo-obs-self-model-from-recursion-in-03-llm-ed6b`); no raise.
+- **LOGA-3 ("100% context reset").** **LEDGER** (`todo-loga-3-context-turnover-sufficiency-rena-b462`); no raise.
+- **The session as the whole recoverable record for a primitive agent.** **IN** as a reading of `#obs-context-turnover` and the primitive scope; the forensic framing is AISI's. **ASIDE** here.
+
+### R54 — `scope-scaffolded-logogenic`, `der-logogenic-as-wrapping`, `result-coupled-diagnostic-framework`, `der-turnover-information-recursion`
+
+- **Same-substrate, stateful monitors leak the goal they are checking.** **IN** (`#der-logogenic-as-wrapping`, and (C2′) at `#def-auxilia-hierarchy`:86); the decomposed estimator is **LEDGER** (raised under R37).
+- **Reinjection that fails when the agent is most confused (the second no-go).** **WN** at `#der-turnover-information-recursion` and **LEDGER** `item:spikes-proposed-continuity-4-2-second-no-go-adversariall-c4e7` (unassigned). Raised with R54's test.
+- **Control regret's error bound is $2L_A$, the satisfaction gap's $L_A$; $L_A$ may grow with plan depth.** **IN** for the factor of two; the depth growth is the transient-amplification spike (**LEDGER**, raised under R48).
+- **`#disc-tool-interface-design` (mutate / reveal / teach-law) is unwritten.** **LEDGER** `item:t1-author-disc-tool-interface-design` and `item:inputs-for-authoring-disc-tool-interface-design` (G.1). R54 notices the teach-law leg converges with the severed-actuation account of why reason-giving matters; neither item names `#der-severed-actuation-dynamics` Result 4 and its "the compact must be communicative" (:75, :94). Raised onto the inputs item.
+- **`form-ephemeral-persistent-duality` waits on `der-active-salience-management`.** **LEDGER** (`todo-author-the-three-missing-staged-outline-76f2`, the missing-stubs item); no raise.
+
+### R55 — `disc-m-preservation`, `obs-evaluation-metrics`, `impl-scaffolded-logogenic`
+
+- **`form-structured-rich-context` and `der-active-salience-management` are in `depends:` and do not exist.** **LEDGER** (the LOGA missing-stubs item). No raise; R54 and R55 add nothing to it.
+- **Goal-conditioned retrieval as an echo chamber.** **LEDGER** `item:goal-blind-retrieval-norm` (C.4). Raised with two gold loci the item lacks (829314/06, 471203/68-71) and R55's A/B test.
+- **Gain calibration needs predict-then-observe.** **LEDGER** `item:evaluation-metrics-need-predict-then-observe` (E.1). Raised.
+- **The embeddings result is static; the sycophancy/rigidity diagnostics are dynamic.** **LEDGER** `item:todo-tacl-embeddings-paper-integration-when-o-b769` (F.3). Raised with the gap to state when the paper is cited.
+- **W₂ is the production default; findings #33/#38 are promotion candidates.** **IN** and **WN** respectively.
+
+## Tally
+
+Twenty-two reports, about 120 claims sorted. Two new items: `item:obs-section-i-validation-simulations-tells-reade` (F.3, a canon defect) and `item:a-fourth-confounder-class-for-hyp-causal-discove` (G.2, a stranded addition). Thirty-eight sources raised onto existing items and findings, each carrying what the report adds. Everything else is **IN**, **WN**, **MOOT** or **ASIDE**, with the place or the reason given above. None of it needed SendMessage to `main`: the two outside-facing defects I found (`#impl-common-roots`:27, `#impl-primitive-logogenic`:32) are already open findings, and neither is on `FINDINGS.md`, `CURRENT-VOL1.md` or the README.
+
 ## What was read whole, sampled, not reached
 
-*(being written)*
+- **Read whole:** `report-34.md` … `report-55.md`, all twenty-two, addenda included; `ASF-FIXES-part3.md` lines 6–241 (R34–R48) and `ASF-FIXES-part4.md`'s R49–R55 sections; `brief-34.md` and the sweep's `00-README.md`, for what the agents were asked.
+- **Not read:** `IDEATION.md` (the README says it is the same text concatenated; I grepped it only to count $\mathcal A$ carriers); the other `brief-NN.md` files; `DISTILL-NOTES.md` (it covers R01–R33 and R56–R63, the lead's half).
+- **Primaries opened to check a claim:** the segments named in each disposition at HEAD d058c25e (grepped at the cited lines, read around them), `audits/.integrated/AUDIT-WORKING-374162/05-batch-tempo-sector-reflections.md` :15–25, `TST-IDEAS.md` :115–143, `reviews/part-ii-check-1.md` F1, `reviews/items-recheck-t2.md` F6, `empirica/INDEX.md` and `empirica/track-b-nonlinear/` (file list), `audits/.gem-hunt-trail/GEM-WORKING-849201/adjudication.md` A1, and git history for the deleted hard-ceiling segment. I did not open most of the audit-gold files the reports cite; where a report quotes one, I name the locus in the raise and mark it as the report's quotation.
+- **Duplicate checking** was `vsect open segment:<slug>` plus keyword greps over `items/` (including `items/imported/`) immediately before each write. Keyword greps can miss an item phrased differently. One near-miss shows the risk: the 1:1 time item appeared between my first grep and my write, and I raised onto it instead of opening a twin.
 
 ## Adjacent findings
 
-*(being written)*
+1. **The `ASF-FIXES` extraction was not worth draining on its own for R34–R55.** For these reports it kept almost only "no defects found" lines, restated open items, and one fix proposal (the discrete-sector bound) that was already a ledger item. It missed what the reports actually carried that ASF lacked: the C4 confounder, the shared QSD question, the code pointer in `obs-section-i`, the outward travel of retired and unbacked claims. If anyone drains `ASF-FIXES*` for other ranges, read the reports instead.
+2. **Retired and unbacked canon is already in the AISI response's inputs.** The $\kappa\times\mathcal A$ law (retired today), forced Theory of Mind from statelessness (a segment that never existed), and "calcification compounds" (premise contradicts its scope) are each restated in R51–R53 as AISI-facing recommendations, and `~/src/AISI-responses/extract/01-aat-core-*.md` carries the product law. I raised these onto the F.3 items. The AISI-responses project probably wants a notice at its own front door. That is outside asf, so I am naming it here rather than doing it.
+3. **Ledger duplicates for I.3.** One spike or proposal sits under two or three items in several places: transient dependency amplification (`todo-transient-dependency-amplification-spike-441c`, `spikes-proposed-advanced-3-…-a826`, imported `spikes-proposed-transient-dependency-amplification-logog-5fe5`); ADV #9 percolation (two); ADV #11 substrate transfer (two, plus `substrate-transfer-asymmetry-two-halves-empirica`); Roberts, Skalse and value-functional narrowness (each an ADV item plus an imported twin). Mostly this comes from the `items/imported/` tracker import landing beside items the drains had already opened.
+4. **Items whose text is overtaken.** `item:todo-def-auxilia-hierarchy-c2-realization-ove-564e` reads as open, but A11 has landed (`#def-auxilia-hierarchy`:86). `item:posture-floors-vs-reachability-caps` lists the deleted `segment:deriv-strategic-persistence-hard-ceiling` among its concerns. Imported `SP-16` cites a nonexistent "C-BP3" (raised: it means SP-3).
+5. **About the brief.** The brief was right that these reports were unread and that the extraction was lossy. One fact would have saved me time: about half of what the reports flag has been overtaken today, by the Part II integration (C3 retired $\mathcal A$), by F72, and by the TST round 3 (the count form disfavored). A first pass that checks each report's slice against the day's landings before reading it closely would be the efficient order.

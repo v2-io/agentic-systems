@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: c404ba37cd0a22c67a4afd1cc9982377075508502f6de87af01ae2070721ca6a
+at: 2026-10-31T02:22:42Z
+store: asf
+act: raise
+about: item:evaluation-metrics-need-predict-then-observe
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:evaluation-metrics-need-predict-then-observe
+source: 'AISI sweep-2 R55 §3 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-55.md), from the AUDIT-WORKING-773921 reflection on #obs-evaluation-metrics (''If I want to measure delta_t, do I have to prompt the LLM to explicitly output its prediction before I give it the tool result?''): the same precondition, reached independently; R55 states it as the open question whether gain calibration is measurable passively from ordinary transcripts.'

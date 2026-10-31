@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: ae52bb4fd9df4cf5d7f73eb84c3cb44f1d2813cac2524a52ca87abbbd50137fb
+at: 2026-10-31T02:22:06Z
+store: asf
+act: raise
+about: item:material-outside-asf-still-rests-on-the-ambiguit
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:material-outside-asf-still-rests-on-the-ambiguit
+source: 'Further outside consumers, in ~/src/AISI-responses (the AISI expression-of-interest response): extract/01-aat-core-map.md and extract/01-aat-core-formal.md state the kappa x A form; the sweep-2 raw reports carry it as an AISI-facing recommendation, most directly R51 Q2-Q3 (''ambiguity-stratified evaluation suites'', the A-hat estimator as ''genuinely startable'') and R52 §6 (''reducing interpretive ambiguity in the environment should reduce goal-conditioned bias'', a ''testable mitigation lever'') in influx/sweep-2-raw/report-51.md, report-52.md and their concatenation IDEATION.md (38 lines match ''mathcal{A}'' or ''ambiguity''). These are raw and unadjudicated, but they are the inputs the AISI writing draws from; AISI-responses needs the same front-door notice. (.archive/spike-guts/honest-activation/00-REPORT.md also matches, archived.)'

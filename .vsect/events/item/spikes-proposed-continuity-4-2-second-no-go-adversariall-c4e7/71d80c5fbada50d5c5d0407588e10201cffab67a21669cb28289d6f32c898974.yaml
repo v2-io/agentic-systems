@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 71d80c5fbada50d5c5d0407588e10201cffab67a21669cb28289d6f32c898974
+at: 2026-10-31T02:22:41Z
+store: asf
+act: raise
+about: item:spikes-proposed-continuity-4-2-second-no-go-adversariall-c4e7
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-continuity-4-2-second-no-go-adversariall-c4e7
+source: 'AISI sweep-2 R54 §2 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-54.md): restates the open second no-go from #der-turnover-information-recursion''s Working Notes (reinjection quality correlated with how little is retained: retrieval fails when the agent is most confused) and proposes the empirical test: induce escalating uncertainty in a scaffolded agent and measure whether reinjection fidelity degrades with the agent''s own uncertainty rather than independently of it.'

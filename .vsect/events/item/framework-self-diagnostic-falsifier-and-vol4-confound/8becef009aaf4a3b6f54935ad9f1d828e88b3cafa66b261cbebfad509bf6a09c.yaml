@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 8becef009aaf4a3b6f54935ad9f1d828e88b3cafa66b261cbebfad509bf6a09c
+at: 2026-10-31T02:22:07Z
+store: asf
+act: raise
+about: item:framework-self-diagnostic-falsifier-and-vol4-confound
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:framework-self-diagnostic-falsifier-and-vol4-confound
+source: 'AISI sweep-2 R52 §5 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-52.md): proposes the negative-case search as an experiment that also separates two readings this item does not name: genuine recovery versus learning to perform recovery-shaped language. Test: expose agents to the vocabulary in cases with and without genuine recovery and check whether stated self-diagnosis tracks behaviourally measured recovered capability or only fluency in the vocabulary.'

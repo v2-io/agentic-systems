@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 71a682b3f02412217b1948a9f3138358b0827b9b97501efa5427485a7d3025d9
+at: 2026-10-31T02:22:07Z
+store: asf
+act: raise
+about: segment:impl-primitive-logogenic
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: review:items-recheck-t2#F6
+source: 'AISI sweep-2 R53 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-53.md, ''The missing segment is itself the biggest finding''): three de novo audits (773921, 829314, 849201) reached #obs-backward-inference-empathy, found no file, and proceeded on #impl-primitive-logogenic''s summary; R53 then relayed ''forced Theory of Mind from statelessness'' to the AISI response as an AISI-fundable result. The unbacked passage is travelling.'

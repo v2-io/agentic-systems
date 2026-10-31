@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: f1b9114a5b86f6fd2d2f8d64969bea08147fe9868d78cf9aff03e869ac29faf6
+at: 2026-10-31T02:22:07Z
+store: asf
+act: raise
+about: item:impl-primitive-calcification-premise
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:impl-primitive-calcification-premise
+source: 'AISI sweep-2 R53 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-53.md, ''The calcification-compounds prediction''): relays this prediction outward as ''a concrete, derivable forensic signature'' and proposes an empirical study, unaware of the premise problem this item records (a stateless primitive agent accumulates no counts). Resolving this item decides whether that AISI-facing reading survives; if the prediction is restated for one long context, say so where it is cited.'

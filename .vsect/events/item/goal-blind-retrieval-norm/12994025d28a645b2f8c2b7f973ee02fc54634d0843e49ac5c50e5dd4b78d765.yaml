@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 12994025d28a645b2f8c2b7f973ee02fc54634d0843e49ac5c50e5dd4b78d765
+at: 2026-10-31T02:22:42Z
+store: asf
+act: raise
+about: item:goal-blind-retrieval-norm
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:goal-blind-retrieval-norm
+source: 'AISI sweep-2 R55 §2 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-55.md): the same thread found in two further first-encounter reflections this item does not cite: audits/AUDIT-WORKING-829314/logogenic-agents/06-disc-m-preservation.md (Wandering Thoughts: ''RAG is not an objective observation channel. It is a goal-conditioned echo chamber ... it reaches backward in time and corrupts the agent''s access to its own history'') and audits/AUDIT-WORKING-471203/68-71-logogenic-agents-sample.md (''an LLM agent''s memory is conditional on goal, not absolute''). With the polish-ledger seed that makes three independent readers. R55''s test: A/B goal-conditioned versus goal-blind (environment-state-only) retrieval queries and measure whether the goal-blind arm retrieves more of the agent''s own past contradicting evidence.'

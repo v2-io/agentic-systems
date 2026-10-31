@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: a1da2d0acb183bc3157f34f30b5a0939203a7ac2d276ecc5828df9c1ddd655ae
+at: 2026-10-31T02:22:42Z
+store: asf
+act: raise
+about: item:todo-tacl-embeddings-paper-integration-when-o-b769
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-tacl-embeddings-paper-integration-when-o-b769
+source: 'AISI sweep-2 R55 §4 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-55.md): when the TACL paper becomes the load-bearing reference for #obs-evaluation-metrics, state the bridge it does not supply: the paper measures a static property (verbal hedges'' calibration in frozen sentence embeddings, rho > 0.90), while the segment''s sycophancy/rigidity diagnostics are trajectory-level properties of eta*. The AUDIT-WORKING-773921 reflection''s ''it mathematically proves'' overshoots; the segment is discussion-grade.'

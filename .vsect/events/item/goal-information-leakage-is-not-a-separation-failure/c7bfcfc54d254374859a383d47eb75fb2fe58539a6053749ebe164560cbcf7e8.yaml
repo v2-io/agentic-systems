@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: c7bfcfc54d254374859a383d47eb75fb2fe58539a6053749ebe164560cbcf7e8
+at: 2026-10-31T02:22:07Z
+store: asf
+act: raise
+about: item:goal-information-leakage-is-not-a-separation-failure
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:goal-information-leakage-is-not-a-separation-failure
+source: 'AISI sweep-2 R52 §3 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-52.md): reads I(o_c; G | Omega) (SP-17''s deferred residue) as ''the missing measurable quantity underneath'' certified goal/observation separation, which is the conflation this item says to rule out in the body. Evidence that the clarification is needed where readers meet the quantity, not only in Working Notes.'

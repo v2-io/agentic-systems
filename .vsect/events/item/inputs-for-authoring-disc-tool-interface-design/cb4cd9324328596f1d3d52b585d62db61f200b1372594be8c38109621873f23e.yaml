@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: cb4cd9324328596f1d3d52b585d62db61f200b1372594be8c38109621873f23e
+at: 2026-10-31T02:22:42Z
+store: asf
+act: raise
+about: item:inputs-for-authoring-disc-tool-interface-design
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:inputs-for-authoring-disc-tool-interface-design
+source: 'AISI sweep-2 R54 §4 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-54.md): the teach-law leg (a refusal that mutates nothing but says why) has a derived counterpart on the agent side that this item does not name: #der-severed-actuation-dynamics Result 4 and its Discussion (:75, :94: restoration is learned only through contrast the agent may no longer generate, so communicated restoration is one of the two recovery channels, and ''the compact must be communicative''). Whoever authors #disc-tool-interface-design should cite it as the dynamics behind why reason-giving in errors and refusals changes later behaviour.'
