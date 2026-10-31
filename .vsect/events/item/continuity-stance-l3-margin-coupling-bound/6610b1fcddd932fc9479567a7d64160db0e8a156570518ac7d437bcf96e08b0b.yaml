@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 6610b1fcddd932fc9479567a7d64160db0e8a156570518ac7d437bcf96e08b0b
+at: 2026-10-31T02:17:08Z
+store: asf
+act: raise
+about: item:continuity-stance-l3-margin-coupling-bound
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:continuity-stance-l3-margin-coupling-bound
+source: 01-aat-core/src/deriv-self-actuation-grounding.md Working Notes 'Orthogonality grain corrected in Corollary 2(iii) (2026-05-30)', last sentence (the same open follow-on, from the derivation side).

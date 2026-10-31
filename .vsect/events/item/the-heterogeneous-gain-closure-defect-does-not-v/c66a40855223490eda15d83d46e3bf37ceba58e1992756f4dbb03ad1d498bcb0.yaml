@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: c66a40855223490eda15d83d46e3bf37ceba58e1992756f4dbb03ad1d498bcb0
+at: 2026-10-31T02:17:07Z
+store: asf
+act: raise
+about: item:the-heterogeneous-gain-closure-defect-does-not-v
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:the-heterogeneous-gain-closure-defect-does-not-v
+source: '01-aat-core/src/form-composition-closure.md Working Notes ''Two independent drivers of epsilon_x'': the closed form epsilon_x^2 = (Delta K/2)^2 [S_- - C_{+-}^2/S_+] at K_c = 1, nonzero at perfect correlation whenever Delta K != 0, which is the K_c-independent k=0 term this item says the spike dropped.'

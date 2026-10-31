@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 6f9e0fef91b76ce0154972a8c703a32ca36c50817d09c662fa497199ff56926d
+at: 2026-10-31T02:17:04Z
+store: asf
+act: raise
+about: item:spikes-proposed-advanced-17-skalse-2022-reward-hacking-unhackabil-8188
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-advanced-17-skalse-2022-reward-hacking-unhackabil-8188
+source: 01-aat-core/src/deriv-reward-channel-learning-no-go.md Working Notes 'Skalse 2022 as cross-cluster bridge candidate' and 01-aat-core/src/disc-implementation-impossibility.md Working Notes 'Open before candidate' (c); 01-aat-core/src/disc-value-functional-grounding-floor.md Working Notes 'The Skalse-2022 disposition' records why it is not a member of that cluster.

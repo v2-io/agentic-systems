@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 989b2c82b5196327ce5dcdab1873395fb50cd573df2af4df8d73e7f6ed005efd
+at: 2026-10-31T02:17:08Z
+store: asf
+act: raise
+about: item:todo-composition-admissibility-mathcal-m-text-10c4
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-composition-admissibility-mathcal-m-text-10c4
+source: 01-aat-core/src/form-composition-closure.md Working Notes 'A richer toy case is needed' (two purposeful agents with strategy DAGs, cooperative communication and a shared objective, to exercise (A1) with its G_c component and test whether admissibility is tight enough to be useful).

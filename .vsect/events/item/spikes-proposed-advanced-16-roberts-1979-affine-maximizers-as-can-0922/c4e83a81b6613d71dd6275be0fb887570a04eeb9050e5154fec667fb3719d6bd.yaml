@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: c4e83a81b6613d71dd6275be0fb887570a04eeb9050e5154fec667fb3719d6bd
+at: 2026-10-31T02:17:05Z
+store: asf
+act: raise
+about: item:spikes-proposed-advanced-16-roberts-1979-affine-maximizers-as-can-0922
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-advanced-16-roberts-1979-affine-maximizers-as-can-0922
+source: 01-aat-core/src/disc-implementation-impossibility.md Working Notes 'Open before candidate' (b).

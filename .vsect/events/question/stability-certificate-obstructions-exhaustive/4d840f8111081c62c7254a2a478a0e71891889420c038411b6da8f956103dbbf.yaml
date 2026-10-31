@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 4d840f8111081c62c7254a2a478a0e71891889420c038411b6da8f956103dbbf
+at: 2026-10-31T02:17:07Z
+store: asf
+act: raise
+about: question:stability-certificate-obstructions-exhaustive
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: question:stability-certificate-obstructions-exhaustive
+source: '01-aat-core/src/disc-stability-certificate.md Working Notes ''Open edges (from 99-verdict.md)'': besides ''exactly three'' being unproved, the anchor equivalence is linearized/local, a fourth candidate (non-autonomous certificate drift for time-varying systems) was not searched, and the Sylvester mechanism is proved only finite-dimensionally (the function-space case matters for logogenic M_t). The projection obstruction''s MZ side is item composition-closure-mz-upper-bound-unverified.'

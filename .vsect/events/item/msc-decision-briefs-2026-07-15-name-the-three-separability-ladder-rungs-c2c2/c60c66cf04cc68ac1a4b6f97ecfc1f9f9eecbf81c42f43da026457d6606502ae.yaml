@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: c60c66cf04cc68ac1a4b6f97ecfc1f9f9eecbf81c42f43da026457d6606502ae
+at: 2026-10-31T02:17:06Z
+store: asf
+act: raise
+about: item:msc-decision-briefs-2026-07-15-name-the-three-separability-ladder-rungs-c2c2
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:msc-decision-briefs-2026-07-15-name-the-three-separability-ladder-rungs-c2c2
+source: 01-aat-core/src/disc-separability-pattern.md Working Notes 'Pending family rename and rung-rename decision' (family pattern -> ladder; Hintikka's definable / identifiable / non-identifiable as a candidate echo for the rungs).

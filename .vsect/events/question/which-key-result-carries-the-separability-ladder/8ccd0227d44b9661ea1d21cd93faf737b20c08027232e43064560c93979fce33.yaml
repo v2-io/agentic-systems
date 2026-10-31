@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 8ccd0227d44b9661ea1d21cd93faf737b20c08027232e43064560c93979fce33
+at: 2026-10-31T02:17:06Z
+store: asf
+act: raise
+about: question:which-key-result-carries-the-separability-ladder
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: question:which-key-result-carries-the-separability-ladder
+source: 01-aat-core/src/disc-separability-pattern.md Working Notes 'Standalone-paper candidacy' (B-N-Sep; plan at msc/separability-standalone-paper-proposal.md; 'verified novel' by a 2026-05-04 Undermind sweep). The citations the paper and the body both need are item separability-pattern-related-work-citations.

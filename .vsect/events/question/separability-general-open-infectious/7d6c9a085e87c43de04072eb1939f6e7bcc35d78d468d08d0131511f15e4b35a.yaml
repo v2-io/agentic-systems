@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 7d6c9a085e87c43de04072eb1939f6e7bcc35d78d468d08d0131511f15e4b35a
+at: 2026-10-31T02:17:06Z
+store: asf
+act: raise
+about: question:separability-general-open-infectious
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: question:separability-general-open-infectious
+source: '01-aat-core/src/disc-separability-pattern.md Working Notes ''Cross-ladder monotonicity'' (do the eight ladders factor independently; #disc-approximation-tiering''s Working Notes ask the same).'

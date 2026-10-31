@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 73d8fce7d3742883940390ed0ec705832c939e21b481b02e2ade31196c8865b2
+at: 2026-10-31T02:17:07Z
+store: asf
+act: raise
+about: item:spikes-proposed-two-routes-exhausts-adversarial-spike-on-3366
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-two-routes-exhausts-adversarial-spike-on-3366
+source: 01-aat-core/src/disc-value-functional-grounding-floor.md Working Notes 'Open before candidate' (c) (every V_O-anchoring failure reduces to one of the two engines; the engine-side dual of the route-side claim) and 'Two-routes-exhausts adversarial spike queued (2026-05-28; audit 384279 §D Hyp 2)'.

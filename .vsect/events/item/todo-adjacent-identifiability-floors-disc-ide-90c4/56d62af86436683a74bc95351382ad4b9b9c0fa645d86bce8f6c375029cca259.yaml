@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 56d62af86436683a74bc95351382ad4b9b9c0fa645d86bce8f6c375029cca259
+at: 2026-10-31T02:17:04Z
+store: asf
+act: raise
+about: item:todo-adjacent-identifiability-floors-disc-ide-90c4
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-adjacent-identifiability-floors-disc-ide-90c4
+source: '01-aat-core/src/der-interaction-channel-classification.md Working Notes ''Regime II-b as candidate #disc-identifiability-floor Instance 3'' and ''Next spike candidates'' (2): under a sustained II-b stream, rho_B^eff degrades at a rate lower-bounded by the KL gap between M_B and the true event law, a quantitative misspecification-cost floor (its extension (2)). Also 01-aat-core/src/disc-identifiability-floor.md Working Notes ''Instance 3 as a candidate'' (now stale-numbered; Instance 3 is composite contraction): recurse the on-policy no-go to L1 augmentations that are themselves causally insufficient, likely reducing to Instance 1 at the L1 level.'

@@ -28,17 +28,19 @@
 
 ## Partition
 
+*Coverage as of the commit that carries this line; updated in every commit of this drain. The `file` column names where a part would have gone had helpers run; with one agent, every part's dispositions are in this file.*
+
 | part | OUTLINE sections | items | segments | file | coverage |
 |---|---|---|---|---|---|
-| p1 | Appendix A, `der-belief-…` to `deriv-mismatch-…` | 79 | 17 | `wn-01-other-p1.md` | pending |
-| p2 | Appendix A, `deriv-persistence-cost` to the end | 113 | 24 | `wn-01-other-p2.md` | pending |
-| p3 | Part II Meta-Architecture I | 104 | 16 | `wn-01-other-p3.md` | pending |
-| p4 | Part I (all chapters) and the Part II preface and Lift | 141 | 28 | `wn-01-other-p4.md` | pending |
-| p5 | Part II Causal Access, Strategy Structure, Strategy Dynamics, Orient Cascade | 130 | 25 | `wn-01-other-p5.md` | pending |
-| p6 | Part III Meta-Architecture II, Scope and Formation, Composition Machinery | 85 | 11 | `wn-01-other-p6.md` | pending |
-| p7 | Part III Unity, Cooperative/Adversarial, Strategic Composition; Appendix B | 100 | 21 | `wn-01-other-p7.md` | pending |
+| p1 | Appendix A, `der-belief-…` to `deriv-mismatch-…` | 79 | 17 | `wn-01-other-p1.md` | not reached |
+| p2 | Appendix A, `deriv-persistence-cost` to the end | 113 | 24 | `wn-01-other-p2.md` | not reached |
+| p3 | Part II Meta-Architecture I | 104 | 16 | `wn-01-other-p3.md` | **done**: every item read whole and disposed (this commit) |
+| p4 | Part I (all chapters) and the Part II preface and Lift | 141 | 28 | `wn-01-other-p4.md` | **done**: every item read whole and disposed (4d8bb49a, 9fcddd48, f0f81911) |
+| p5 | Part II Causal Access, Strategy Structure, Strategy Dynamics, Orient Cascade | 130 | 25 | `wn-01-other-p5.md` | with a helper fork (launched after the cap freed); merged here when it returns |
+| p6 | Part III Meta-Architecture II, Scope and Formation, Composition Machinery | 85 | 11 | `wn-01-other-p6.md` | with a helper fork (launched after the cap freed); merged here when it returns |
+| p7 | Part III Unity, Cooperative/Adversarial, Strategic Composition; Appendix B | 100 | 21 | `wn-01-other-p7.md` | not reached |
 
-**Helpers.** All six fork launches were refused (the session's subagent cap), so every part below is read by this one agent, serially, in the order p4, p3, p5, p6, p7, p1, p2. The coverage column above is updated as each part closes.
+**Helpers.** The first six fork launches were refused (the session's subagent cap). Later two went through, for p5 and p6, writing to `wn-01-other-p5.md` and `-p6.md`; p7, p1 and p2 were refused again and are read here, in that order, after p4 and p3. The coverage column above is updated as each part closes.
 
 **Cross-surface rule (Joseph, relayed 2026-10-30).** For each item that makes or joins a ledger entry, the other surfaces were searched for the same claim (slug and key phrases over `audits/`, `spikes/`, `msc/`, the influx regional files, other segments' Working Notes, `items/`, `questions/`). One ledger item carries every source found. Canon, history and guard dispositions were not searched across surfaces; nothing turns on them.
 
@@ -106,7 +108,7 @@ Item references are `[n]` (this drain's extraction id) plus the head of the item
 - [118] "**Regression guard — the conditional independence is not the criterion.**" — **guard**.
 - [119] "Directed separation connects to the orient cascade…" — **canon** (`#der-orient-cascade` :95 states the dependency ordering as exact). Set aside.
 - [120] "**Sub-typology of Class 2 (Partial Coupling).**" — **canon** (`#disc-partial-coupling-pathways` is the segment; this is a summary of it). Set aside.
-- [121] "**Engineering design for Class 3 (Coupled) agents.** … Hafez et al. (2026) … 89.3% of coupling degradations against 44.0%" — the IDT row is in the body's Related Work (:256). The figure attribution is **joined item:hafez-citations-der-agent-opacity-109-169-say-h** (F.3) and **review:b1-part-ii-check-1#C7** (which checked the abstract's 89.3%). The engineering-design paragraph is Volume 3 material: **set aside** for 01 (Volume 3's wrapping segments carry it).
+- [121] "**Engineering design for Class 3 (Coupled) agents.** … Hafez et al. (2026) … 89.3% of coupling degradations against 44.0%" — the IDT row is in the body's Related Work (:256). The figure attribution is **joined item:hafez-citations-der-agent-opacity-109-169-say-h** (F.3) and **review:b1-part-ii-check-1#C7** (which checked the abstract's 89.3%). The engineering-design paragraph is Volume 3 material: **set aside** for 01; checked: no Volume 3 body carries the IDT sidecar pattern; it appears only in `#scope-logogenic-agent`'s Working Notes (:78). It is a published external instance of system-level modularization for internally Coupled agents, so it is **owed → item:idt-sidecar-as-volume-3-modularization-instance** (G.2, Volume 3).
 - [122] "**Implication for logogenic agents**: … start from the coupled formulation" — **canon** (:124 says it; `03-llm-core/src/def-coupled-update-dynamics.md` does it).
 - [123] Migration note — **set aside** (history).
 - [124] "**Provenance (composite-level inheritance, 2026-05-21):**" — **guard** (the withdrawn "Class 1 → Class 2 composite" claim, with its Cournot witness). The current inheritance row has its own open defect, item:the-composite-class-inheritance-row-class-1-sub (C.3), which this guard should be read beside.
@@ -126,7 +128,7 @@ Item references are `[n]` (this drain's extraction id) plus the head of the item
 - [232] "**P3→Markov: resolved.**" — **set aside**: history of a resolved gap, now the body's derivation.
 - [233] "**Parsimony theorem for AND/OR.**" — **owed → item:and-or-parsimony-uniqueness** (C.4). Distinct from item:proposals-c-1-o-bp13-cox-parallel-necessity-for-de-f4cf (necessity of DAG semantics); this one is the uniqueness of the AND/OR basis under parsimony. The `#scope-and-or` off-ramp (gold-lift drain) is the same question's other half (k-of-n).
 - [234] "**Non-binary outcome analogs.**" — carried in item:and-or-parsimony-uniqueness.
-- [235] "**Environmental common causes and the CMC.**" — **canon** (the body's "Exactness of Status Propagation" and `#def-strategy-dag`'s correlated-failure paragraph). Set aside.
+- [235] "**Environmental common causes and the CMC.**" — **canon** (this segment's "Exactness of Status Propagation", which the note itself cites, and `#def-strategy-dag`:82 on marginal-status multiplication being exact only under independent parents; checked).
 - [236] "**Promotion potential.**" — **set aside** (status narration).
 
 #### `deriv-observation-ambiguity-bias-bound`
@@ -229,3 +231,135 @@ The live correctness findings on this segment sit in its gold Off-ramp (gold-lif
 #### Chapter intros (`the-cycle-in-motion-intro`, `the-reality-model-intro`)
 
 - [765]–[770] — six authorial notes ("This is a chapter-introduction segment…", "The "two derivations from completeness" framing…", "The CIY-placement paragraph used to be apologetic…", "The "ceiling that's low…" framing is the centerpiece…", "The depends list is light by design…") — **set aside**: design intent for the intros, and one history note; the intros' standing is covered by item:format-todo-c14-discussion-segment-schema-split-in-f-09d7 (A.3).
+
+### Part p3 — Part II Meta-Architecture I
+
+#### `der-architecture-noidentifiability`
+
+- [83] "**Finite-sample Fano refinement is honestly open.**", [84] "**General non-Gaussian sub-scope at exact tier.**", [85] "**The mechanism reduction's relationship to operator-sector machinery.**" — **owed → item:arch-noidentifiability-open-strengthenings** (C.4), with [85] pointed at item:floor-genericity-upgrade-instances-3-4 (same similarity orbit).
+
+#### `der-interaction-channel-classification`
+
+- [128] Migration note — **set aside** (history).
+- [129] "**$\mathcal I_{\max}(\mathcal M_B)$ — replace with sufficient-statistics-span.**", [131] "**Heavy-tailed derivation rigorization.**" (the body's Case 4 at :114 is the informal argument), and [134] "**Next spike candidates.**" part (1), the emitter-side $f(H_b^B)$ — **owed → item:interaction-channel-classification-refinements** (C.4). Part (3) of [134] records a resolved item (the arg-max is derived in `#der-agent-opacity`): set aside.
+- [130] "**Four regimes vs finer splits.**" — **joined item:interaction-channel-four-regimes-forced-vs-precedence** (raised; it supports the "formulation choice" reading).
+- [132] "**Regime II-b as candidate #disc-identifiability-floor Instance 3.**" and [134] part (2) — **joined item:todo-adjacent-identifiability-floors-disc-ide-90c4** (its misspecification-cost extension; raised).
+- [133] "**Connection to active inference.**" — **set aside**: a positioning remark (the classification uses $\mathcal I(e)$, not variational free energy) with no claim. The body never mentions active inference; nothing is owed unless F.2's positioning work wants the sentence.
+
+#### `deriv-reward-channel-learning-no-go`
+
+- [279] "**Provenance.** Authored 2026-05-22 via Track CR Phase 4b…" — **set aside** (provenance; Joseph's slug decision is in git and the spike).
+- [280] "**Open before `candidate`.**" — (a) and (e) **owed → item:impossibility-clusters-owed-reading** (F.2); (b)–(d) **owed → item:value-functional-grounding-cluster-open-extensions** (C.4).
+- [281] "**Cluster's peer meta-segment home landed (2026-05-22…)**" — **set aside** (history; `#disc-value-functional-grounding-floor` exists).
+- [282] "**Skalse 2022 as cross-cluster bridge candidate.**" — **joined item:spikes-proposed-advanced-17-skalse-2022-reward-hacking-unhackabil-8188** (raised).
+
+#### `deriv-self-actuation-grounding`
+
+- [290] "Provenance: derived in the 2026-05-17 self-actuation grounding work trail…" — **set aside** (provenance; the review's three findings are now the body's tier and scope).
+- [291] "Open before `candidate`: (a) the targeted prior-art search…" — (a) **owed → item:impossibility-clusters-owed-reading** (F.2); (b), (c) **owed → item:value-functional-grounding-cluster-open-extensions** (C.4).
+- [292] "Landed status: wired into `01-aat-core/OUTLINE.md`…", [293] "**Cohen 2022 sister-segment landing…**", [294] "**Value-functional-grounding-floor meta-segment landing…**" — **set aside** (history).
+- [295] "**Orthogonality grain corrected in Corollary 2(iii) (2026-05-30).**" — **set aside** (history; the L1/L2/L3 statement is in the body); its last sentence **joined item:continuity-stance-l3-margin-coupling-bound** (raised).
+- [296] "**Open decision — whether to spin out a standalone `self-actuated-agent` class segment…**" — **defect → item:self-actuated-agent-dangling-slug** (C.1): `#disc-continuity-stance`:54 cites a slug that does not exist (checked; `#def-agent-spectrum` no longer uses it). The note's for-and-against reasoning stays as the decision's record until the item is resolved: **guard** meanwhile.
+
+#### `disc-additive-coordinate-forcing`
+
+- [352] "**Composition layer admits anchor-style additivity, not theorem-style.**" — **owed → item:additive-coordinate-forcing-is-single-agent** (G.2). Checked: the body's "Other AAT segments exhibit additive decompositions" paragraph (:70 on) does not state the composition-layer search or the single-agent conclusion.
+
+#### `disc-anti-collapse`
+
+- [363] "Named and catalogued 2026-05-29 (PROPOSALS SP-26)…" — **guard**, for its one forward pointer: the full graded instance list and the exclusion boundary are at `audits/.gem-hunt-trail/SP-26-disambiguation-sweep/sweep.md`. The provenance narration around it is history.
+- [364] "Pedagogical placement…", [365] "Back-references added 2026-05-29 (Joseph-approved)…" — **set aside** (design intent already enacted by the OUTLINE placement; history of the back-references).
+
+#### `disc-constructive-impossibility-posture`
+
+- [380] "**Provenance.**" — **set aside** (provenance).
+- [381] "**Why the posture is not a fifth cross-sectional meta-pattern.**" — **canon** (:55, "not a fifth cross-sectional meta-pattern"; checked).
+- [382] "**Over-claim guards.**" — **guard**.
+- [383] "**Naming alternates considered.**" — **set aside** (a naming record; names now go through `bin/term`).
+- [384] "**Dependency rationale.**" — **guard** (why the `depends:` list is what it is).
+- [385] "**Removed at `candidate` stage per FORMAT.md Gate 4.**" — **set aside**: an orphaned fragment with nothing to remove.
+
+#### `disc-identifiability-floor`
+
+- [412] "**Candidate instance at the top of the causal hierarchy (2026-07-16).**" — **joined item:disc-identifiability-floor-s-catalog-boundary-re** (raised).
+- [413] "**Provenance of the methodology.**" — **canon** in its load-bearing part (:155, "*Whether the methodology is generative* … is a *hypothesis*"; checked). The convergent-not-generative history is set aside.
+- [414] "**Sylvester-recognition provenance.**" — **set aside** (history).
+- [415] "**Instance 3 broadened 2026-05-21.**" — **set aside** (history). Its phrase "the unique broadly-available R1-vs-R2 classifier" is stale: per `#disc-dynamic-regime-axis`'s notes ([399]) it was softened to "primary AAT-framework".
+- [416] Migration note — **set aside**.
+- [417] "**Naming convention.**" — **set aside** (naming record).
+- [418] "**Instance 3 as a candidate.**" — **joined item:todo-adjacent-identifiability-floors-disc-ide-90c4** (raised, with the note that its "Instance 3" label predates today's numbering).
+- [419] "**Is the floor pattern unique to causal/identifiability questions?**" — **joined item:posture-floors-vs-reachability-caps** (raised).
+- [420] "**Cross-segment integrations.**" — **set aside**: a list of where the pattern surfaces, which the body's instance catalog carries.
+- [421] "**Primary-source verification spike queued (2026-05-21).**" — the discharged target (i) record and its arXiv-vs-SODA pagination caution are a **guard**; the remaining targets **joined item:primary-source-verify-or-replace-with-read-sourc** (raised with the ordered list).
+- [422] the `[^bg2-2026-05-21]` footnote — **joined item:primary-source-verify-or-replace-with-read-sourc**.
+
+#### `disc-implementation-impossibility`
+
+- [423] "**Provenance.**" — **set aside**.
+- [424] "**Open before `candidate`.**" — (a) **owed → item:impossibility-clusters-owed-reading** (F.2); (b) **joined item:spikes-proposed-advanced-16-roberts-1979-affine-maximizers-as-can-0922**; (c) **joined item:spikes-proposed-advanced-17-skalse-2022-reward-hacking-unhackabil-8188** (both raised).
+- [425] "**Depends list will grow as supporting segments land.**" — **superseded**: `depends:` now lists all three supporting segments (checked in the frontmatter).
+- [426] "**Sister meta-segments are cross-references, not depends.**" — **guard**.
+- [427] "**The three-cluster taxonomy is the substantive coupling with the Cohen-2022 strengthening cycle.**" — **set aside** (history).
+
+#### `disc-modularity-state-dynamics`
+
+- [437] "**Provenance.**", [441] "**Cross-segment ripple from the M4 landing.**", [444] "**Cross-probe convergence provenance.**" — **set aside** (history).
+- [438] "**Open before `candidate`.**" (a)–(c) and [443] "**M4 amplification specificity per competence axis (open, 2026-05-28).**" — **owed → item:m4-open-before-candidate** (C.4). vsect warned that item:spikes-proposed-decomposed-empirical-estimator-accuracy-e63e looked close; it is the estimator one part of the new item would use, not the same work.
+- [439] "**Worked-example slot.**" and [440] "**Two sub-spike candidates flagged from the Soviet sketch**" — **joined item:decide-where-the-soviet-worked-example-lives-and** (raised).
+- [442] "**The convergence-finding observation as methodological pattern.**" — **set aside**: a methodology reflection whose home is `msc/reflections/27-…` (the `msc/` drain's).
+
+#### `disc-separability-pattern`
+
+- [455] "**Standalone-paper candidacy.**" — **joined question:which-key-result-carries-the-separability-ladder** (raised); its novelty record goes into item:separability-pattern-related-work-citations.
+- [456] "**Citations to land on promotion to draft / when paper drafting begins:**" — **owed → item:separability-pattern-related-work-citations** (F.2). Checked: the body cites none of them.
+- [457] "**Pending family rename and rung-rename decision.**" — **joined item:msc-decision-briefs-2026-07-15-name-the-three-separability-ladder-rungs-c2c2** (raised; its `msc/naming/` pointer is into the archived tarball).
+- [458] "**Cross-ladder monotonicity.**" — **joined question:separability-general-open-infectious** (raised).
+- [459] "**Extension candidates beyond the eight.**", [460] "**Necessity argument for the pattern itself.**" — **owed → item:separability-ladder-extensions-and-necessity** (C.4).
+- [461] "**Does C-BP2 belong in AAT core or in the wider framework narrative?**" — **set aside**: placement is to follow TST adopting the pattern, and nothing proposes that adoption. The segment can move when it happens.
+- [462] Migration note — **set aside**.
+
+#### `disc-stability-certificate`
+
+- [463] "**Provenance.**", [464] "**Interior-facet Helmholtz $S/A$ refinement (2026-05-22).**" — **set aside** (history; the refinement is in `#result-certificate-existence`; [464]'s `spikes/spike-enrichment-cluster1-2026-05-21/` path no longer exists).
+- [465] "**Dependency rationale (for Gate-1 audit).**" — **guard**.
+- [466] "**Provisional slug.**" — **set aside** (naming record).
+- [467] "**Findings Brief sharpening queued (2026-05-28…)**" — **superseded**: the Brief (:92) now states option (i), the measure chosen so that every correction provably shrinks it faster than the world pushes it (checked).
+- [468] "**Provisional OUTLINE position.**" — **superseded**: the spine leads its own chapter, Part II "Meta-Architecture I" (`01-aat-core/OUTLINE.md`:104–118).
+- [469] "**Propagation plan…**" — **superseded**: steps 1–5 are landed (each named segment's body cites `#disc-stability-certificate`; checked by grep), and step 7's preamble reframe is OUTLINE:108 ("The certificate and its facets"). Step 6 (O-BP10's home) was not checked; it is a proposal-file pointer, and PROPOSALS is gone.
+- [470] "**Open edges (from `99-verdict.md`).**" — **joined question:stability-certificate-obstructions-exhaustive** (raised with the linearized-anchor and function-space-Sylvester edges).
+
+#### `disc-value-functional-grounding-floor`
+
+- [481] "**Provenance.**", [486] "**Search provenance.**" — **set aside**.
+- [482] "**Open before `candidate`.**" — (a) **joined item:spikes-proposed-advanced-18-cross-agent-value-functional-narrowne-bf71**; (b) **owed → item:value-functional-grounding-cluster-open-extensions**; (c) **joined item:spikes-proposed-two-routes-exhausts-adversarial-spike-on-3366** (raised).
+- [483] "**The Skalse-2022 disposition.**" — **guard** (why it is not a member of this cluster).
+- [484] "**Why the two charter instances suffice for landing.**" — **guard**: the body states the two instances and the two-routes geometry (:14, :85), but this argument for why two suffice is not in it, and it is the defense a reviewer will ask for. Per the note; the body's :77 completeness sentence is what item:spikes-proposed-two-routes-exhausts-adversarial-spike-on-3366 tests.
+- [485] "**Two-routes-exhausts adversarial spike queued…**" — **joined item:spikes-proposed-two-routes-exhausts-adversarial-spike-on-3366**.
+
+#### `form-composition-closure`
+
+- [505] "**Resolved: $\mathcal P_{\text{adm}}$ now has a proposed definition.**", [506] "**Resolved (2026-04-22): temporal coarse-graining gap.**", [510] "**Resolved (2026-05-19): $N$-agent scaling…**" — **set aside** (history; the body carries (P1)–(P3), $K_c$, and the re-typed $N$-scaling row at :185).
+- [507] "**Resolved: norm choices for estimation-type agents.**" — **canon** (Mahalanobis in the body; checked).
+- [508] "**Open: computing (P1)…**", [509] "**Open: the right value of $\epsilon_I$.**", [516] "The weakest-link structure ($\alpha_c = \min_i \alpha_i^{\text{eff}}$) is conservative." — **owed → item:composition-closure-open-computations** (C.4).
+- [511] "**Partial: Mori-Zwanzig connection.**" — **canon** for the zero-lag bound and the refuted full-kernel form (the body's table, :189–190; checked). Its "hard obstruction" (stationarity fails exactly where $\varepsilon^\ast\gt0$) is carried in item:composition-closure-mz-upper-bound-unverified.
+- [512] "**(P1) as IB Lagrangian-dual — resolved.**" — **canon** (`#disc-compression-operations`; checked by grep).
+- [513] "**Two independent drivers of $\varepsilon_x$.**" — **superseded** for its "gap in `#def-unity-dimensions`" sentence ($U_f$ answers it; the map verified this). Its closed form **joined item:the-heterogeneous-gain-closure-defect-does-not-v** (raised; it is the $K_c$-independent term that item says the spike dropped).
+- [514] "**Resolved (2026-05-19): strategy-DAG projection under $\Lambda_x$.**" — **set aside** (history; the derivation is in `#def-strategy-dag`, :273–281). Its sub-open Q1 goes to item:composition-closure-open-computations, marked per the note.
+- [515] "~~The bridge lemma's contraction assumption…~~ **CHARACTERIZED 2026-04-06**" — **canon** (the incremental bound is in the body, :254; checked).
+- [517] "**A richer toy case** is needed…" — **joined item:todo-composition-admissibility-mathcal-m-text-10c4** (raised).
+- [518] "The approach is an approximate dynamical homomorphism condition…" — **canon** (Related Work, :340).
+- [519] "**Categorical-cybernetics fit-check candidate (added 2026-05-22).**" — **joined item:spikes-proposed-advanced-15-categorical-cybernetics-re-grounding-9642** (raised; its source-trail path is dead).
+- [520] "**Mori-Zwanzig memory-kernel relationship — upper-bound direction closes; named lower bound does not.**" — **owed → item:composition-closure-mz-upper-bound-unverified** (C.4: verify, then land or delete).
+- [521] "**Dynamic-regime placement (added 2026-05-21…)**" — **defect → item:composition-closure-regime-scope-unstated** (C.1). Checked: the body never names the regime.
+- [522], [523] "**Track E surface-back of catalog citations (2026-05-22).**" and its footnote — **joined item:primary-source-verify-or-replace-with-read-sourc** (raised).
+
+#### `form-objective-functional`
+
+- [531] "Compound objectives … might be modeled as terminal AND-nodes…" and [532] "The trajectory functional is real-valued…" — **canon**: the body grounds the scalar codomain as a representation result, with named failures and the Pareto case (:16, :50–62; checked).
+- [533] "*History (not for the body):*…" — **set aside** (history).
+- [534] "$O_t$ can change over time — objectives evolve. The *rate* of objective revision…" — **canon** in part: :58 states timescale separation for resolving conflicting objectives. The general ordering $\nu_O \ll \nu_\Sigma \ll \nu_M$, labelled "an empirical observation, not a derived result", is not in the body. It is a one-clause remark, so **set aside**; it needs no item.
+
+#### `scope-edge-update-causal-validity`
+
+- [753] "The interaction between $M_t$ updates and edge updates…" — **owed → item:edge-update-evidence-double-counting** (C.4). This was filed before the p5 helper reaches `#hyp-edge-update-via-gain`, so that helper can raise onto it.
+- [754]–[756] "Can $\iota_{ij}$ be estimated online?", "**Regime C edges should be labeled.**", "The depth-dependent degradation for indirect edges…" — **owed → item:edge-update-causal-validity-open-questions** (C.4).

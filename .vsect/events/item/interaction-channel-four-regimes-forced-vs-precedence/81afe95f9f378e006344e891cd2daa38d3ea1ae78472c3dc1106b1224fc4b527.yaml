@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 81afe95f9f378e006344e891cd2daa38d3ea1ae78472c3dc1106b1224fc4b527
+at: 2026-10-31T02:17:04Z
+store: asf
+act: raise
+about: item:interaction-channel-four-regimes-forced-vs-precedence
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:interaction-channel-four-regimes-forced-vs-precedence
+source: '01-aat-core/src/der-interaction-channel-classification.md Working Notes ''Four regimes vs finer splits'': calls the partition the coarsest useful split and names finer splits (Regime I by observability vs calibration; II-a transient vs sustained) as not pursued, which supports the derivation table''s ''formulation choice'' reading over the body''s ''forced''.'

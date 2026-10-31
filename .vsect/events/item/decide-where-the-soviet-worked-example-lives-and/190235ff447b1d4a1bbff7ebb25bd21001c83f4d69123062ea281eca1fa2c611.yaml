@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 190235ff447b1d4a1bbff7ebb25bd21001c83f4d69123062ea281eca1fa2c611
+at: 2026-10-31T02:17:06Z
+store: asf
+act: raise
+about: item:decide-where-the-soviet-worked-example-lives-and
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:decide-where-the-soviet-worked-example-lives-and
+source: 01-aat-core/src/disc-modularity-state-dynamics.md Working Notes 'Worked-example slot' and 'Two sub-spike candidates flagged from the Soviet sketch' (when institutional checks-and-balances commitments hold vs erode under leadership pressure; what separates reform-stabilization from dissolution once coupling has accumulated reality-mismatch).

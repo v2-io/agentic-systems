@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: f800e97c171de0fe5efb88edf2bf44b3be5a77fdd209ff816970e02b9c074474
+at: 2026-10-31T02:17:05Z
+store: asf
+act: raise
+about: item:disc-identifiability-floor-s-catalog-boundary-re
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:disc-identifiability-floor-s-catalog-boundary-re
+source: '01-aat-core/src/disc-identifiability-floor.md Working Notes ''Candidate instance at the top of the causal hierarchy (2026-07-16)'': the law-discovery ceiling (#disc-law-discovery-ceiling; mechanism identity beyond the equiv_3 class unrecoverable by any embedded channel, with authored access and testimony as escapes) is a candidate M1 instance; promotion needs the F-catalog treatment, which needs the boundary criterion this item questions.'

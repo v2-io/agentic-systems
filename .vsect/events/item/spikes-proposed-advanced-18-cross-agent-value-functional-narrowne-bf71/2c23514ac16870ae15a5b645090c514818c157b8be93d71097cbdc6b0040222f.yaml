@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 2c23514ac16870ae15a5b645090c514818c157b8be93d71097cbdc6b0040222f
+at: 2026-10-31T02:17:07Z
+store: asf
+act: raise
+about: item:spikes-proposed-advanced-18-cross-agent-value-functional-narrowne-bf71
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-advanced-18-cross-agent-value-functional-narrowne-bf71
+source: 01-aat-core/src/disc-value-functional-grounding-floor.md Working Notes 'Open before candidate' (a).

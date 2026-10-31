@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 713b742a965b333d15ea8e87a4192bdd5b6cb318c87da53847b52f966faf55e4
+at: 2026-10-31T02:17:05Z
+store: asf
+act: raise
+about: item:primary-source-verify-or-replace-with-read-sourc
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:primary-source-verify-or-replace-with-read-sourc
+source: '01-aat-core/src/disc-identifiability-floor.md Working Notes ''Primary-source verification spike queued (2026-05-21)'': target (i), Mertikopoulos-Papadimitriou-Piliouras 2017, was verified first-hand 2026-07-29 (relata claim-supported on mertikopoulos-2017-cycles; the source is stronger than the characterization, chaotic systems included); remaining in load-bearing order: Bichler-Legacci-Mertikopoulos-Oberlechner-Pradelski 2025, Legacci-Mertikopoulos-Pradelski 2024, then Pangallo et al. 2017, Anagnostides et al. 2022, Shi-Zhang 2019. Caution recorded there: ref/ holds the arXiv preprint, not the SODA version cited, so pagination differs. Also 01-aat-core/src/form-composition-closure.md Working Notes ''Track E surface-back'' (Pappas-Simic 2002, Rungger-Zamani 2015, Buchholz 1994).'

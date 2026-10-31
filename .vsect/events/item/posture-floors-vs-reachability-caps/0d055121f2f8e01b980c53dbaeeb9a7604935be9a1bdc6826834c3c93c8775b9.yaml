@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 0d055121f2f8e01b980c53dbaeeb9a7604935be9a1bdc6826834c3c93c8775b9
+at: 2026-10-31T02:17:05Z
+store: asf
+act: raise
+about: item:posture-floors-vs-reachability-caps
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:posture-floors-vs-reachability-caps
+source: '01-aat-core/src/disc-identifiability-floor.md Working Notes ''Is the floor pattern unique to causal/identifiability questions?'': structural-adaptation thresholds, the cost of representing high-correlation regimes, and the bandwidth limits of shared intent as possible instances of a separate ''structural-cost'' pattern.'
