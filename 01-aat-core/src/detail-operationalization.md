@@ -185,7 +185,7 @@ Agent $i$ tracks, for each source $j$, the inputs to the communication gain of #
 
 Residuals alone do not separate $U_{\text{src}}$ from $U_{\text{align}}$: miscalibration and strategic distortion can leave the same residual variance. Separating them needs evidence about the direction of $j$'s errors relative to $j$'s own interests. Where that is unavailable, the sum is what enters the gain.
 
-Two procedures follow from the same segments. An update that would be costly if wrong, from a source whose reliability is low or poorly known, waits for agreement from other sources: the risk-asymmetric trust of #hyp-communication-gain applied as a quorum. Agreement counts only between sources that do not share an upstream source; otherwise the quorum counts one source several times ( #deriv-tempo-additivity). And query actions are logged apart from actions on the world, since their information yield and cost differ ( #def-causal-information-yield).
+Two procedures fit the same segments. An update that would be costly if wrong, from a source whose reliability is low or poorly known, waits for agreement from other sources: the risk-asymmetric trust of #hyp-communication-gain applied as a quorum. Agreement counts only between sources that do not share an upstream source; otherwise the quorum counts one source several times ( #deriv-tempo-additivity). And query actions are logged apart from actions on the world, since their information yield and cost differ ( #def-causal-information-yield).
 
 ## Estimator Uncertainty Guidance
 
