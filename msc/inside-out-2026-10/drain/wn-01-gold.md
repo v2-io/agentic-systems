@@ -2,7 +2,7 @@
 
 *Serves **I.9** (every backlog surface drained into the ledger, one disposition per source item), and through it I.10, I.5, C.1, C.4, G.2 and H.3. Top intent: "Complete "in-place" refactor of ASF-- meta, all artifacts, and theory itself." Working file of the gold-lift drain, 2026-10-30, read at asf `86489b0b`. Written as it goes; the lead reads it whole.*
 
-*In progress.*
+*Complete for its scope; the read ledger below says what was read whole, what was checked, and what was not reached.*
 
 ## What the surface is (measured at `86489b0b`)
 
@@ -372,6 +372,22 @@ Read whole by a fork, arrival checked at the destination by phrase over all four
 ### Readers often ask (192) — in `wn-01-gold-readers.md`
 
 Read whole by a fork, each question checked against its body. 92 open questions are now in 62 per-segment H.4 items (`item:readers-ask-<slug>`), 61 are answered in the body (line cited), 8 answered downstream, 16 raised on existing items, 7 pedagogy signals, 9 set aside, 1 handed here (now `question:class-2-distortion-magnitude-bound`). Five open questions are answered only in a Working Note (`#disc-composition-consistency` WN 134, `#hyp-directed-separation-under-composition` WN 108, `#der-observability-dominance` WN 161, `#scope-adaptive-system` WN 142, `#def-chronica`'s ordinal-not-metric note): I.5 has to land those answers in the bodies before it clears the notes, or they are lost.
+
+### Candidate Brief, Discussion, figures, and the teaching frames (583) — in `wn-01-gold-pedagogy.md`
+
+Read whole by a fork: the 202 Briefs, 263 Discussion items and 99 figures, plus the 19-bullet "Teaching frames and implications (audit gold, lifted 2026-08-22)" block in `#impl-persistence-and-limits`, which sits under a different heading and so escaped the extraction. About 24 items ride on a claim canon has since corrected. Examples: the retired additive tempo bound, "goal-dependence is distortion" glosses of $\kappa$, the scaffolding overclaim, "the Three Deaths", and one gloss with the gain backwards. These are listed and raised on the pedagogy-home item so they cannot teach unchecked. About 18 are theory or defects in pedagogy's clothing. They went to items, among them `item:environment-selection-as-adaptive-strategy` (C.4) and `item:mood-timescale-optimizes-a-surrogate` (C.1). The fork-undetectability synthesis in `#def-chronica`'s gold, true and still in no body, is raised on SP-27's item. About 40 have reached a body. The rest, roughly 480, go to the pedagogy home as content, not ledger items.
+
+## Pedagogy home
+
+The question the brief left open, answered: where should the gold go when I.5 takes it out of Working Notes? The pedagogy fork's proposal (in its file) is one file per chapter, `pedagogy/<volume>/<chapter-intro-slug>.md`, in OUTLINE order, with a section per segment slug. Entries are moved verbatim, not rewritten, keeping attribution and kind. Each entry has a status line: whether Joseph has test-read it and whether it helped, whether it landed (`#slug:line`), and whether it rides on a corrected claim (the item). Testing runs one chapter at a time with Joseph, and a helpful, isomorphic entry reaches a body through an in-order cold walk (H.3), never a commissioned intro. The §14 originals stay as the rebuildable record. aat-refactored enters under its own source tag, checked at HEAD before Joseph sees it.
+
+I agree with it, with three additions from this drain's side.
+
+- **Work and content split cleanly.** The readers-ask questions that are still open are work: 62 H.4 items, which close when the body answers them. The precision and theory items from the Off-ramp and Follow-ups are work too. The home holds only content, so it is not a tracker and I.8 holds. The one status field that looks like tracking ("test-read by Joseph") is a property of the entry, the way a citation's "primary read" is.
+- **Check at entry, both sources.** About 4% of this gold already teaches something canon has corrected, and the gold's own "resolved" annotations are unreliable in both directions (Follow-ups section above). So "already in the home" must not mean "checked". An entry's status line needs a "checked at <sha>" field, and re-checking is part of D.1's standing step when a cited body changes.
+- **Volume 4 reach is not pedagogy.** About 58 belongs-elsewhere items are aspirational ELI reach in a vivid register. They are held in `item:eli-reach-from-01-audit-gold` under G.0's question of where argued claims live, not in the pedagogy home, so the home stays a teaching instrument and does not become a second Volume 4.
+
+Whoever builds the home (I.5) should merge `item:practica-pedagogy-initially-needs-vision-plan-1588` (PRACTICA's ownerless "pedagogy needs vision and plan") into the same resolution. The raise is recorded on the pedagogy-home item.
 
 ### Certified-track F-streams named only in gold preambles
 
