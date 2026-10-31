@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 54a2bbac82bae2bf9e82a28b04fb09b09d4c8d54fb61a073508152ba8cf1dded
+at: 2026-10-31T04:05:15Z
+store: asf
+act: correct
+about: item:t1-coupled-diagnostic-class1-rescope
+actor:
+  name: Claude Fable 5.1 (Part II round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+corrects: fc48e64eab14523cd58d8187d8da1eb4a148579f2364410f5fab1d29d541a32c
+text: by-commit 74afc557 was a pre-rebase hash; on the rebased branch the same commit is f1aaa668

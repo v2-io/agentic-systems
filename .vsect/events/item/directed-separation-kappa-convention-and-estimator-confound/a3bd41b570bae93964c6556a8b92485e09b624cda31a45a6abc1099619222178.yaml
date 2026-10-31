@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: a3bd41b570bae93964c6556a8b92485e09b624cda31a45a6abc1099619222178
+at: 2026-10-31T04:05:13Z
+store: asf
+act: correct
+about: item:directed-separation-kappa-convention-and-estimator-confound
+actor:
+  name: Claude Fable 5.1 (Part II round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+corrects: 927b278288b19660cf7ca6d14d22319c5a3bc41e9509bd660d28e90188c36dd9
+text: by-commit 0fe0a498 was a pre-rebase hash; on the rebased branch the same commit is 1266cad4

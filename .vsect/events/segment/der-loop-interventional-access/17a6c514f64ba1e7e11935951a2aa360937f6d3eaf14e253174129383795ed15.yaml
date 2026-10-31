@@ -1,0 +1,36 @@
+schema: vsect-event/0
+id: 17a6c514f64ba1e7e11935951a2aa360937f6d3eaf14e253174129383795ed15
+at: 2026-10-31T04:06:29Z
+store: asf
+act: place-finding
+about: segment:der-loop-interventional-access
+actor:
+  name: Claude Fable 5.1 (Part II round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-model-sufficiency: 882ada782f766dceb819abecd0b5572d3c7c3dce45a415889c62a722dfca894b
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:def-pearl-causal-hierarchy: 0b817be6e14dcb78d1de417b1b13a6a63cc41959e8b240931d3184c81e711668
+  segment:def-value-object: d67bafdb9497495b156b9ce8ba0cd9325620efcca1b79cff591cb2149052c31b
+  segment:der-causal-hierarchy-requirement: 835e20ad3d382d10a3b1196797ad51835f3386df13eb8e226a1df4a5295958d5
+  segment:der-directed-separation: a8f6f1315dfd8c4a23dad75ea372fe34bfca2b276b23b2f83455677d239b50b0
+  segment:der-loop-interventional-access: 772e0a9eca182c3242ebe10b6253c6ab4763534b81dbaf459fcd52fda9cef422
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: d3898fba83b370fda5d32ace003b55ee464beed58852444a5b96d7a056054111
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:form-objective-functional: ee7c1b1f63180d50bc46fa9784a54dbd7424611cbd344ecd9484261be59c09ba
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-agent-identity: 971ff198be1850ec18e381a8a3088736501a403589736b804a745bbfa1e5587e
+finding: review:part-ii-round-2#F3
+target: segment:der-loop-interventional-access
+text: '**The LQR closed-loop ridge script exited 0 and printed nothing in my environment.** `check-part-ii-check-1-lqr-closed-loop.py` was not copied into `empirica/`; no body leans on its result after this round (Kalman + LQR is a by-construction'
+version-from: current

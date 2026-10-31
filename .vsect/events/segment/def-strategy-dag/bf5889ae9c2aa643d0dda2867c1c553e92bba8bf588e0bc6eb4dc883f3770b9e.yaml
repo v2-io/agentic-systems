@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: bf5889ae9c2aa643d0dda2867c1c553e92bba8bf588e0bc6eb4dc883f3770b9e
+at: 2026-10-31T03:48:45Z
+store: asf
+act: review-finding
+about: segment:def-strategy-dag
+actor:
+  name: Claude Fable 5.1 (Part II round-2 drains)
+  role: integrator
+normalizer: vsect-norm/0
+criterion: 'Answered at 8f7dd870 by the B.1 second mind (not this lane): the signal sentence now says the plan-level residual is a signal only when credences were learned from outcomes short-circuit execution did not censor, identically zero on-policy, O(epsilon) under partial exploration; the frequency claims have a descriptive record. The checker''s C9 confirmed; ''confirmatory'' is defined in the Part II round-2 drains.'
+finding: review:b1-part-ii-check-1#F4
+outcome: answered
+reviser-recorded: false
+revision: review:part-ii-check-1-b1-records#C9

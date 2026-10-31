@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 2a9f22a3eab99bffbb1cd44e71b696fba60d903e5ff7ec6eb47924398de7ea4c
+at: 2026-10-31T03:39:39Z
+store: asf
+act: revise
+about: segment:der-directed-separation
+actor:
+  name: Claude Fable 5.1 (Part II round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 5d0c86c0038022d33efc2e386c2600a3538d8328075e7000efcd8ee0240776d3
+own-version: a8f6f1315dfd8c4a23dad75ea372fe34bfca2b276b23b2f83455677d239b50b0
+record: 01-aat-core/src/der-directed-separation.md

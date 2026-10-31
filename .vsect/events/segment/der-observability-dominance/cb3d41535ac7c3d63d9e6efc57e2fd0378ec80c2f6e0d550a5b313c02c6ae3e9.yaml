@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: cb3d41535ac7c3d63d9e6efc57e2fd0378ec80c2f6e0d550a5b313c02c6ae3e9
+at: 2026-10-31T03:48:44Z
+store: asf
+act: review-finding
+about: segment:der-observability-dominance
+actor:
+  name: Claude Fable 5.1 (Part II round-2 drains)
+  role: integrator
+normalizer: vsect-norm/0
+criterion: 'Answered at 8f7dd870 by the B.1 second mind (not this lane): the freezing claim is scoped to nodes on which no observed variable depends, the Prop B.3 case reads as non-identification, and the depth-d attenuation is derived; the independent checker''s C6 confirmed the scoping across summary, Formal Expression, Epistemic Status, records and OUTLINE row. Its three small residues (prior-independence clause, the frozen-eta Working Note, the falsifier''s confirmatory disjunct) are taken in the Part II round-2 drains.'
+finding: review:b1-part-ii-check-1#C14/finding
+outcome: answered
+reviser-recorded: false
+revision: review:part-ii-check-1-b1-records#C6

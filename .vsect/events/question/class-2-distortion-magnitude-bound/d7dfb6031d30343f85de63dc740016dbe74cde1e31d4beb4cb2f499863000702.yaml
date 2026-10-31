@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: d7dfb6031d30343f85de63dc740016dbe74cde1e31d4beb4cb2f499863000702
+at: 2026-10-31T03:40:07Z
+store: asf
+act: answer
+about: question:class-2-distortion-magnitude-bound
+actor:
+  name: Claude Fable 5.1 (Part II round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+outcome: answered
+text: 'At kappa > 0 the departure from the calibrated update is the distortion D_G of #scope-observation-ambiguity-modulation: bounded model-free by the range of the log-density ratio (KL <= L^2/8, TV <= L/4), and under the fixed-gain tilt hypothesis exactly by Bennett''s lemma, Var_pi(u_G) (e^{lambda b} - 1 - lambda b)/b^2. The M_t-stratum''s confounding of Q_O for a Class 2 agent is then at most Lip(Q_O) times the distortion in the ground metric (#deriv-observation-ambiguity-bias-bound, Discussion), with Q_O''s Lipschitz constant in M_t not yet stated anywhere. No bound indexed by kappa exists, since kappa saturates at any noiseless coupling. Landed 0fe0a498.'

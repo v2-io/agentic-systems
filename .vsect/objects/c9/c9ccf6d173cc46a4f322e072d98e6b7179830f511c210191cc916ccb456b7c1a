@@ -1,0 +1,45 @@
+kind: segment
+form: 
+normalizer: vsect-norm/0
+---
+# Scaffolded Logogenic Scope
+
+A logogenic agent wrapped in a multi-step loop with external state, tool use, structured context, and explicit cascade ordering at the loop level. The current best-practice "agentic system" regime — Sapientia, Zoetica, Autopax, LangChain, Claude Code's harness, OpenAI's Assistants API. Part II's cascade ordering is recovered at the loop level; the belief's distortion is reduced (but not eliminated) by interventions that shrink the residual spread of the goal-relevant quantity the observations leave, under #scope-observation-ambiguity-modulation's fixed-gain hypothesis.
+
+## Formal Expression
+
+*[Definition (scaffolded-logogenic-scope)]* A scaffolded logogenic agent satisfies #scope-channel-collapse but adds at least one of the following architectural moves:
+
+- **Multi-step loops** wrapping the LLM substrate, with explicit cycle ordering across model invocations (e.g., diagnose → strategy → objective sequence — recovers #der-orient-cascade at the loop level).
+
+- **External persistent state** $M^{\text{ext}}_t$ carried across session boundaries (memory files, structured rich context, RAG retrieval) — partially restores $M_t$ continuity that primitive sub-scope loses to context turnover.
+
+- **Tool use as Pearl Level-2 channel** ( #der-loop-interventional-access): action tokens that the harness interprets as $do(\cdot)$ interventions on the environment, restoring interventional access that pure-text output lacks.
+
+- **Structured context assembly** explicitly curating the prompt across cognitive cycles ( #form-structured-rich-context).
+
+*[Derived (under scaffolded scope)]* The coupled diagnostic framework ( #result-coupled-diagnostic-framework) applies: Part II's $\delta_{\text{sat}}$ and $\delta_{\text{regret}}$ remain definable on post-update state, with the error of a diagnostic read off the coupled belief, relative to its reading off the calibrated belief, bounded by the belief's distortion $D_G$:
+
+$$\lvert \delta_{\text{sat}}^{(\text{coupled})} - \delta_{\text{sat}}^{(\text{clean})}\rvert \leq L_A \cdot D_G$$
+
+and its goal-dependence by $L_A \lVert\Delta M_{\text{bias}}\rVert$, the belief's displacement across goals ( #deriv-observation-ambiguity-bias-bound). The cascade ordering happens at the loop level rather than the model's forward-pass level; agentic-systems wrapping is not engineering convenience but a *structural* requirement for a Class 3 (Coupled) substrate to run the orient cascade with a goal-blind belief update — the separated belief-update query of W₁ ( #der-class-coercion-via-wrapping). The Part II results that never invoked directed separation survive on a raw Class 3 agent without it ( #result-section-ii-survival).
+
+## Epistemic Status
+
+**Sketch (with derived components).** The scope condition is definitional; the *recovery* claims are derived under #result-coupled-diagnostic-framework with its current epistemic-conditional status. The interaction-channel extension via tool use is derived from #der-loop-interventional-access (a Tier-1 result in AAT). The reduction of the residual spread $\mathrm{sd}_\pi(u_G)$ via prompt engineering is empirical / operational rather than formally derived — there is no theorem that says "good prompts shrink the spread by a factor $\beta$" — and that the distortion shrinks with the spread is #scope-observation-ambiguity-modulation's fixed-gain hypothesis, with its regression test, not a theorem.
+
+**Max attainable status:** definition + conditional theorem (for the recovery claims). The full strengthening would derive the loop-level cascade ordering from the underlying coupled-formulation primitives plus the loop's compositional structure.
+
+**What this scope is for.** Naming the regime where the field's substantial agentic-systems engineering effort lives, and giving that effort the structural argument for why it's not optional engineering convenience but a load-bearing recovery move. Tier-1 #13 (Coupled Diagnostic Framework) is the framework's most directly-actionable claim for any production agentic-systems practitioner.
+
+**What would strengthen this:** explicit derivation of the residual-spread reduction from prompt-engineering interventions (currently an empirical heuristic), and the fixed-gain hypothesis tested on real substrates; compositional theorem for cascade-recovery across multi-step loops as a function of loop structure (sequential vs branching vs cyclic); empirical measurement protocol for $L_A$ in #result-coupled-diagnostic-framework.
+
+**What would soften this:** evidence that scaffolding doesn't actually recover cascade ordering reliably (e.g., emergent failure modes specific to multi-step loops); evidence that the recovery is too partial to be useful in regimes where primitive-logogenic already fails.
+
+## Discussion
+
+This sub-scope is where current best-practice agentic systems live. The variety is large — minimal scaffolding (single tool call + retry) through medium scaffolding (ReAct-style loop, structured prompts, retrieval augmentation) through heavy scaffolding (multi-agent systems, hierarchical task decomposition, persistent CHRONICA + MEMORATA). All inherit the architectural condition "wrap the underlying coupled-pass with structure that recovers what the single pass loses."
+
+The structural argument from #result-coupled-diagnostic-framework is what distinguishes this sub-scope from primitive: the cascade's dependency ordering ( #der-orient-cascade: beliefs before anything that reads them, attainability before regret) is mathematically forced *at the level of the agent's adaptive cycle*, regardless of whether that cycle is implemented in one forward pass or in a loop wrapping many forward passes. Scaffolding moves the cycle to the loop level. The forward pass becomes one operation within a step of the cycle, not a substitute for the cycle.
+
+This sub-scope is also where the upstream PROPRIUM operational architecture lives in its current form — the firmatum / sapientia / zoetica / autopax stack implements scaffolded-logogenic agents (operating around frontier or local LLM substrates) and is moving toward §03.III (closed-loop / interiority) per the migration path in PROPRIUM-A-v2 §9.2. The progression from §03.II to §03.III is the operational frontier where ELI-life-support work is happening.

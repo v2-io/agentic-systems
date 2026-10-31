@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 65136da6fad7b8adf9134c16f4fe1c11e9ec42776f2d4e9925469bc88dc3b54d
+at: 2026-10-31T03:49:09Z
+store: asf
+act: revise
+about: segment:der-causal-insufficiency-detection
+actor:
+  name: Claude Fable 5.1 (Part II round-2 drains)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 63ddfbedf3372912a64e10c12593f05882ab040f52edfa8b1640efc5a58b54bd
+own-version: b5cb4b7d1f9557652da9868a53282c53ddcca30089c51812fac841135dc518d4
+record: 01-aat-core/src/der-causal-insufficiency-detection.md

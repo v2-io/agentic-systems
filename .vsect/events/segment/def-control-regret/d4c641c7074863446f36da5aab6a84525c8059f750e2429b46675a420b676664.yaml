@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: d4c641c7074863446f36da5aab6a84525c8059f750e2429b46675a420b676664
+at: 2026-10-31T03:44:19Z
+store: asf
+act: revise
+about: segment:def-control-regret
+actor:
+  name: Claude Fable 5.1 (Part II round-2, right-rung cluster)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: a1a591cef40c9df28649f718be4b9e2749722bce84cd308bfb8820c11f5169a8
+own-version: 398018e739cd747cb0c193d0c9c373694d57709e26bb7a541f0508ee941a3274
+record: 01-aat-core/src/def-control-regret.md

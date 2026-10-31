@@ -29,9 +29,9 @@ $$f_M = f_{\text{LLM}}(\text{prompt}(M, e, G))$$
 
 so $f_M$ depends on $G$ by construction. The directed-separation condition ( #der-directed-separation), which requires $M_t$ dynamics to be independent of $G_t$, fails:
 
-$$\kappa_{\text{processing}} = \frac{I(G_t; M_{\tau^+} \mid e_\tau, M_{\tau^-})}{H(G_t \mid e_\tau, M_{\tau^-})} \approx 1$$
+$$\kappa_{\text{processing}} = \frac{I_\rho(G_t; M_{\tau^+} \mid e_\tau, M_{\tau^-})}{H_\rho(G_t)} \approx 1$$
 
-This is structural, not parametric — no choice of $\eta^\ast$ or model size restores directed separation while channel collapse holds.
+under the probe law of #der-directed-separation — the goal drawn from a reference law $\rho$ at fixed inputs $(M_{\tau^-}, e_\tau)$, which is what the same-event-two-goals estimator $\hat\kappa$ measures. This is structural, not parametric — no choice of $\eta^\ast$ or model size restores directed separation while channel collapse holds.
 
 ## Epistemic Status
 

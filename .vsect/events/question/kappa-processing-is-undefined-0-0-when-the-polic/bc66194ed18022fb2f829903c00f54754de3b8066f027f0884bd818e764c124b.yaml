@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: bc66194ed18022fb2f829903c00f54754de3b8066f027f0884bd818e764c124b
+at: 2026-10-31T03:39:57Z
+store: asf
+act: answer
+about: question:kappa-processing-is-undefined-0-0-when-the-polic
+actor:
+  name: Claude Fable 5.1 (Part II round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+outcome: answered
+text: 'Not a convention question: under the operating law with the action in the event, the numerator vanishes too for every update once the policy is injective in the goal (K7 of the distortion check), so kappa_processing is defined under the probe law (goal drawn from a reference law rho at fixed inputs, denominator H_rho(G) > 0), which is what the estimator kappa-hat already measures. Landed in #der-directed-separation at 0fe0a498.'

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: a4da3e4591668ac2e1d3068ca6abd8d2a3adb8807c1924f57c3b908e0356ee7c
+at: 2026-10-31T03:50:23Z
+store: asf
+act: correct
+about: segment:def-control-regret
+actor:
+  name: Claude Fable 5.1 (Part II round-2, right-rung cluster)
+  role: integrator
+normalizer: vsect-norm/0
+corrects: 69affaf9a3255a215fac01c647606cb4c58032026145466a3a69b27d6d364554
+text: 'The text this check read is the working-tree version of def-control-regret on top of 3d17de13 (v:398018e7, the text this cluster landed), not the git revision 3d17de13 the at: field named; the check is on the new text and holds there.'

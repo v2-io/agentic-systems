@@ -1,0 +1,197 @@
+kind: segment
+form: 
+normalizer: vsect-norm/0
+---
+# Derivation: Goal-Dependence Displacement Bound — the Constant $C$
+
+How far a goal-coupled update's belief can depend on the goal — the displacement of the goal-conditional post-update law from the goal-marginal one, under the probe law of #der-directed-separation (the goal drawn from a reference law $\rho$ at fixed inputs) — is bounded by the goal information the update transfers into the belief, $I_\rho(G; M_{\tau^+} \mid e_\tau, M_{\tau^-})$, which by the definition of $\kappa_{\text{processing}}$ ( #der-directed-separation) equals $\kappa_{\text{processing}} \cdot H_\rho(G)$. This appendix derives the constant under two named sub-scopes — a transport inequality linear in the information under a log-Sobolev condition, and a Fisher–Rao bound with the global constant $2$ and the sharp local constant $\sqrt 2$ — records a no-go showing that the constant cannot be universal without the (PI) parameterization-invariance axiom of #scope-agent-identity, and documents two failed derivation routes so future agents do not repeat them. Two things it does not bound, said at the top because the segment once claimed one of them: it does not bound the belief's *distortion* — its departure from the calibrated belief given the agent's information, which is the quantity #der-directed-separation's norm is about and #scope-observation-ambiguity-modulation treats — since calibrated allocation also makes the belief depend on the goal and shows up in this bound at full strength; and it says nothing about observation ambiguity, since the information term is the goal's recoverability from the belief, which saturates for any noiseless coupling however small.
+
+## Formal Expression
+
+### §1 — Setup and the audit before deriving
+
+Let $M_{\tau^-} \in \mathcal{M}$ be the pre-update epistemic substate, $e_\tau$ the event triggering the update (the external event including the realized action, #der-directed-separation Scope Condition), $G$ the goal substate, and $\Omega_\tau$ the latent world-state the event is evidence about. The update produces a post-update state $M_{\tau^+}$ whose law may depend, possibly stochastically, on the goal. All laws in this appendix are **probe-law** laws ( #der-directed-separation): the inputs $(M_{\tau^-}, e_\tau)$ are held fixed and the goal is drawn from a reference law $\rho$ independent of them, so that the post-update law under goal $g$ is the law of $f(M_{\tau^-}, e_\tau, g, \xi)$. Under the operating law, with the realized action in the event and a policy injective in the goal, the goal is a function of the inputs and every quantity below is identically zero for every update; the probe law is where the bound has content, and it is what the estimator $\hat\kappa$ measures. The **goal-conditional post-update law** is $P_{M_{\tau^+} \mid e_\tau, M_{\tau^-}, G}$; the **goal-marginal post-update law** $P_{M_{\tau^+} \mid e_\tau, M_{\tau^-}}$, the average over $\rho$, is the baseline against which goal-dependence is measured. At the causally-disciplined baseline ($\kappa_{\text{processing}} = 0$ — Class 1 by construction or an idealized Class 2 in effect, equally) the two laws coincide for every goal and the displacement below is zero.
+
+$$\lVert \Delta M_{\text{bias}}(G) \rVert \;:=\; d_{\mathcal{M}}\!\big(P_{M_{\tau^+} \mid e_\tau, M_{\tau^-}, G},\; P_{M_{\tau^+} \mid e_\tau, M_{\tau^-}}\big),$$
+
+a random variable in $G$. The name *bias* is inherited and is used here only for this displacement: it is the belief's dependence on the goal, not its departure from the truth.
+
+**Type audit.** For a bound "$\lVert \Delta M_{\text{bias}} \rVert \leq C \cdot \sqrt{I}$" to be well-typed:
+
+1. **Metric on laws over $\mathcal{M}$.** Two candidates are used, each within its own track: *(Track 1)* the Wasserstein distance $W_2$ between the two post-update laws as probability measures on $\mathcal{M}$, with a ground metric on $\mathcal{M}$; *(Track 2)* the Fisher–Rao distance $d_{FR}(p, q) := 2\arccos\!\int\!\sqrt{pq}$, the geodesic distance of the Fisher metric, which is twice the arc between the two laws as points on the unit $L^2$-sphere of $\sqrt{p}$ — available on the statistical-manifold sub-case (H1). The factor $2$ is the convention under which $\mathrm{KL} = \tfrac12 d_{FR}^2 + O(d_{FR}^3)$; with the bare arc $\theta = \arccos\int\!\sqrt{pq}$ the same expansion reads $\mathrm{KL} = 2\theta^2 + O(\theta^3)$. **Under the (PI) parameterization-invariance axiom of #scope-agent-identity** (fourth primary instance of #disc-additive-coordinate-forcing), Euclidean-on-parameters is a coordinate artifact and Fisher–Rao is the canonical invariant choice (Čencov 1982 uniqueness).
+
+2. **Information coordinate.** $I(G; M_{\tau^+} \mid e_\tau, M_{\tau^-})$ is in nats. Converting information to a distance between laws is what the Pinsker / Otto–Villani / Fisher–Rao machinery does.
+
+3. **What $\kappa$ contributes.** Nothing beyond the information term: $\kappa_{\text{processing}} = I_\rho(G; M_{\tau^+} \mid e_\tau, M_{\tau^-}) / H_\rho(G)$ by definition, so $I = \kappa \cdot H_\rho(G)$ identically. The factor $\kappa$ enters the bound by that identity and not as a separate hypothesis. Below, $H(G \mid e_\tau, M_{\tau^-})$ abbreviates $H_\rho(G)$, the two being equal under the probe law.
+
+### §2 — Track 1: Transport-inequality derivation under a log-Sobolev inequality
+
+*[Derived (w2-transport-track, conditional on H2)]*
+
+**Named sub-scope.** **(H2) Log-Sobolev inequality on the goal-marginal post-update law.** $P_{M_{\tau^+} \mid e_\tau, M_{\tau^-}}$, as a measure on $\mathcal{M}$ with the chosen ground metric, satisfies a log-Sobolev inequality with constant $\rho_{\text{LSI}} \gt 0$. Sufficient: strong log-concavity with constant $K$ (Bakry–Émery 1985), giving $\rho_{\text{LSI}} \geq K$; for a Gaussian law on a Euclidean chart, $\rho_{\text{LSI}} = 1 / \sigma^2$.
+
+**Step 1 — KL from mutual information.** Mutual information is the expected relative entropy of the conditional law from the marginal (Cover & Thomas 2006, §2.4), on the post-update law:
+
+$$\mathbb{E}_G\big[\mathrm{KL}\big(P_{M_{\tau^+} \mid e_\tau, M_{\tau^-}, G} \,\Vert\, P_{M_{\tau^+} \mid e_\tau, M_{\tau^-}}\big)\big] \;=\; I(G; M_{\tau^+} \mid e_\tau, M_{\tau^-}).$$
+
+*Exact identity, by definition.*
+
+**Step 2 — Otto–Villani under LSI.** From (H2) and Otto & Villani 2000 *J. Funct. Anal.* 173(2):361–400 Theorem 1, for the reference measure $\mu = P_{M_{\tau^+} \mid e_\tau, M_{\tau^-}}$ and any $\nu \ll \mu$, $W_2^2(\nu, \mu) \leq (2 / \rho_{\text{LSI}})\, \mathrm{KL}(\nu \Vert \mu)$. Taking $\nu$ the goal-conditional law, averaging over $G$ and substituting Step 1:
+
+**Result (Track 1).** *[Derived, conditional on (H2)]*
+
+$$\boxed{\;\mathbb{E}_G\big[W_2^2\big(P_{M_{\tau^+} \mid e_\tau, M_{\tau^-}, G},\, P_{M_{\tau^+} \mid e_\tau, M_{\tau^-}}\big)\big] \;\leq\; \frac{2}{\rho_{\text{LSI}}} \cdot \kappa_{\text{processing}} \cdot H(G \mid e_\tau, M_{\tau^-})\;}$$
+
+The constant is $C_{W_2}^2 = 2 / \rho_{\text{LSI}}$: the concentration of the goal-marginal post-update law is what converts transferred information into displacement, and nothing else does. No pushforward step from world-state to belief appears, because both laws compared are laws of the belief itself.
+
+### §3 — Track 2: Fisher–Rao derivation under (PI) + Čencov, global and local
+
+*[Derived (fisher-rao-track, conditional on H1; the sharp local constant additionally on H4)]*
+
+**Named sub-scope.**
+
+- **(H1) Statistical-manifold sub-case.** The two post-update laws have densities with respect to a common reference on $\mathcal{M}$, so that they are points of the unit $L^2$-sphere of $\sqrt{p}$ and the Fisher–Rao distance $d_{FR} = 2\arccos\int\!\sqrt{pq}$ between them is defined. Under the (PI) axiom, Čencov's uniqueness theorem (*Statistical Decision Rules and Optimal Inference*, AMS 1982; Ay, Jost, Lê & Schwachhöfer 2017 *Information Geometry*, Theorem 5.1) forces the Fisher metric as the canonical Riemannian metric up to global scale.
+
+- **(H4) Small-information regime.** $I(G; M_{\tau^+} \mid e_\tau, M_{\tau^-}) \ll 1$ nat, so the second-order expansion of KL at coincident laws is sharp. Needed only for the sharp local constant.
+
+**Step 1 — A global KL-to-Fisher–Rao inequality, no (H4).** Write $\mathrm{BC}(p, q) = \int\!\sqrt{pq}$ and $\theta = \arccos \mathrm{BC} \in [0, \pi/2]$. Rényi divergence is nondecreasing in its order, and the order-$\tfrac12$ divergence is $-2\log\mathrm{BC}$, so $-2\log\mathrm{BC}(p, q) \leq \mathrm{KL}(p \Vert q)$. On $[0, \pi/2)$, $\log\cos\theta \leq -\theta^2/2$, because $(\log\cos)'' = -\sec^2 \leq -1$ with equality of value and slope at $0$. Hence $\theta^2 \leq -2\log\cos\theta \leq \mathrm{KL}$, that is,
+
+$$d_{FR}(p, q) \;=\; 2\theta \;\leq\; 2\arccos\big(e^{-\mathrm{KL}(p \Vert q)/2}\big) \;\leq\; 2\sqrt{\mathrm{KL}(p \Vert q)},$$
+
+for every pair of densities, with no smallness. (For nearby densities $\mathrm{KL}(p \Vert q) = \tfrac12 d_{FR}^2 + O(d_{FR}^3)$, Cover & Thomas 2006 §12.5; Amari & Nagaoka 2000 §3.7 Theorem 3.1, so the global inequality is loose by a factor $\sqrt 2$ in the limit and exact in form.)
+
+**Step 2 — Compose with Step 1 of §2.** Averaging $d_{FR} \leq 2\sqrt{\mathrm{KL}}$ over $G$ and applying Jensen to the concave square root, $\mathbb{E}_G\, d_{FR} \leq 2\sqrt{\mathbb{E}_G\,\mathrm{KL}} = 2\sqrt{I(G; M_{\tau^+} \mid e_\tau, M_{\tau^-})}$. Under (H4) the local expansion gives $d_{FR}^2 \leq 2\,\mathrm{KL}\,(1 + o(1))$ for each goal instead, and the same averaging gives the sharp constant $\sqrt 2$.
+
+**Result (Track 2).** *[Derived, conditional on (H1); the second form additionally on (H4)]*
+
+$$\boxed{\;\mathbb{E}_G\, d_{FR}\big(P_{M_{\tau^+} \mid e_\tau, M_{\tau^-}, G},\, P_{M_{\tau^+} \mid e_\tau, M_{\tau^-}}\big) \;\leq\; 2 \sqrt{\kappa_{\text{processing}} \cdot H(G \mid e_\tau, M_{\tau^-})}, \qquad \text{and under (H4)} \quad \leq\; \sqrt{2}\,\sqrt{\kappa_{\text{processing}} \cdot H(G \mid e_\tau, M_{\tau^-})}\,(1 + o(1))\;}$$
+
+The global constant $C_{FR} = 2$ (nats) is universal and dimension-free, with no compactness or staging; $\sqrt{2}$ is the sharp local constant, and the price of sharpness is the small-information regime. The bound is on the ambient Fisher–Rao distance between the two laws; a geodesic distance inside a parametric submanifold can be larger, and since the goal-marginal mixture is generally outside the family, the ambient reading is the right one.
+
+**Scaling difference between tracks.** Track 1 bounds $W_2^2$ linearly in $I$; Track 2 bounds $d_{FR}^2$ linearly in $I$, equivalently $d_{FR} \propto \sqrt{I}$. They are bounds in different metrics under different hypotheses, tight in different regimes (Track 1 where the LSI constant is the binding fact, Track 2 where the small-$I$ expansion is sharp).
+
+**What the information term does and does not do.** Because $I(G; M_{\tau^+} \mid e_\tau, M_{\tau^-})$ measures the goal's *recoverability* from the belief, a noiseless update whose belief is an injective function of a discrete goal transfers all of $H(G \mid e_\tau, M_{\tau^-})$ — $\kappa_{\text{processing}} = 1$ — however small the displacement is (exact enumeration: two goal-conditioned beliefs $10^{-6}$ apart in total variation and two $0.76$ apart both read $\kappa = 1$). The bound is then $C \sqrt{H(G \mid e_\tau, M_{\tau^-})}$, true and loose: it is a ceiling on displacement set by how much goal information is there to transfer, and a tight description of displacement only when the update is noisy relative to the goal-shift. It says nothing about how far the belief sits from the *calibrated* belief given the agent's information: calibrated allocation makes the belief depend on the goal and is bounded here at the same rate as distortion ( #scope-observation-ambiguity-modulation for the quantity that separates them).
+
+### §4 — No-go: no universal $C$ under a Euclidean-parameter norm
+
+*[Proved (no-universal-C-euclidean, counterexample-grade)]*
+
+**Claim.** No universal constant $C$ — independent of $\mathcal{M}$'s geometry, parameterization and coupled-update structure — exists such that $\lVert \Delta M_{\text{bias}} \rVert_{\text{Euclidean}} \leq C \sqrt{I}$ under the Euclidean norm on an arbitrary parameter chart.
+
+**Counterexample.** Let $\mathcal{M} = \{N(0, \sigma^2) : \sigma \gt 0\}$ parameterized by $\sigma$, with the two post-update laws two nearby points of it. The Fisher information in $\sigma$ is $\mathbf{I}(\sigma) = 2 / \sigma^2$, so the Fisher–Rao line element is $ds^2 = 2\, d\sigma^2 / \sigma^2$ and a Fisher–Rao displacement $d_{FR}$ corresponds to a Euclidean-$\sigma$ displacement $\Delta\sigma \approx \sigma\, d_{FR} / \sqrt{2}$. For fixed $I = 1$ nat, Track 2 bounds $d_{FR} \leq 2$, and $\Delta\sigma \approx \sqrt 2\,\sigma$ grows without bound as $\sigma \to \infty$. No universal $C$ in Euclidean-parameter norm exists; equivalently, any chart rescaling $\phi \mapsto a\phi$ scales chart-Euclidean distances by $a$ while leaving KL, mutual information and $d_{FR}$ invariant.
+
+**Implication.** The no-go strengthens the (PI) commitment rather than weakening the bound: **under (PI), Fisher–Rao is the canonical metric and $C = 2$ is universal (with $\sqrt 2$ sharp in the small-information regime); without (PI), $C$ does not exist as a universal constant.** The (PI) axiom is *load-bearing* for this derivation.
+
+**Position relative to #disc-identifiability-floor.** The no-go has the shape of a floor-pattern no-go (external obstruction: Euclidean-parameter norms carry unbounded Fisher condition numbers; escape: (PI) + Fisher–Rao) but does not meet the five-element test for a floor instance: a *single* escape, and a strengthened consequence that re-uses existing (PI)+Čencov machinery rather than elevating new machinery. It is a downstream theorem of the (PI) commitment, recorded here as the reason (PI) is load-bearing, not as a floor instance (the distinction is drawn in #disc-additive-coordinate-forcing §"Downstream consequences of the (PI) commitment").
+
+### §5 — Failed derivation routes (honest record)
+
+Two routes were attempted and fail structurally; recorded so they are not re-attempted without new evidence.
+
+**(F1) Cramér–Rao inversion — wrong direction.** Treat $G$ as a parameter estimated from the belief and invert the Cramér–Rao lower bound $\mathrm{Var}(\hat G) \geq \mathbf{I}_G^{-1}$ into an upper bound on displacement. Cramér–Rao bounds estimator error *below*; inverting it needs a fixed-estimator-class assumption unavailable for a Class 3 (Coupled) update. The transport route of §2 is the correct machinery.
+
+**(F2) Rate-distortion inversion — wrong problem structure.** Apply the rate-distortion inequality for a Gaussian source and invert to bound displacement by "bits in." Rate-distortion describes the minimum rate to represent a source within distortion $D$; it does not describe the maximum displacement induced by injecting side-information into an update. Transport inequalities are the correct machinery.
+
+The shared pattern: **source-coding lower bounds (Cramér–Rao, rate-distortion) cannot be inverted into upper bounds on side-information-induced displacement**; upper bounds need transport inequalities (Pinsker, Otto–Villani, Bakry–Émery) or the Fisher–Rao expansion.
+
+### §6 — Two-goal Gaussian example, exact to first order
+
+*[Illustrative, exact under stated assumptions]*
+
+Let the goal be $G \in \{-, +\}$ uniform under $\rho$ and the goal-conditional post-update laws be $N(\pm\beta, \sigma^2)$ on a one-dimensional chart of $\mathcal{M}$; the goal-marginal law is the symmetric mixture. The transferred information is $I(G; M_{\tau^+} \mid e, M^-) = \mathrm{JSD}(N(\beta, \sigma^2), N(-\beta, \sigma^2))$ (mutual information with a uniform binary conditioning variable is the Jensen–Shannon divergence of the two conditionals), and for $\beta \ll \sigma$, $\mathrm{JSD} \approx \tfrac{1}{4}\, \mathrm{KL}(N(\beta) \Vert N(-\beta)) = \tfrac{1}{4} \cdot \tfrac{2\beta^2}{\sigma^2} = \tfrac{\beta^2}{2\sigma^2}$; $H(G) = \log 2$, so $\kappa_{\text{processing}} \approx \beta^2 / (2 \sigma^2 \log 2)$. The local form of Track 2 then bounds $\mathbb{E}\, d_{FR} \leq \sqrt{2 I} = \beta / \sigma$ (the global form, $2\sqrt I = \sqrt 2\,\beta / \sigma$, is looser by $\sqrt 2$ here, as it must be). The actual Fisher–Rao distance from either conditional law to the mixture is, to first order, half the location-family distance between the two conditionals, $\tfrac{1}{2} \cdot 2\beta / \sigma = \beta / \sigma$: the bound is tight at first order, which is the sharpness the symmetric two-point witness is for. In the same example the mixture is close to $N(0, \sigma^2 + \beta^2)$ and satisfies LSI with $\rho_{\text{LSI}} \approx 1 / \sigma^2$ in the chart metric, so Track 1 gives $\mathbb{E}\, W_2^2 \leq 2 \sigma^2 \cdot \beta^2 / (2 \sigma^2) = \beta^2$; the actual $W_2^2$ from $N(\pm\beta, \sigma^2)$ to the mixture is at least $\beta^2$ by the mean shift alone and equals $\beta^2$ to first order: also tight. The example is checkable by hand.
+
+### What Is Derived vs. What Is Chosen
+
+| Property | Source | Strength |
+
+|---|---|---|
+
+| Mutual information as expected KL, $\mathbb{E}_G[\mathrm{KL}(P_{M^+ \mid G} \Vert P_{M^+})] = I(G; M^+ \mid \cdot)$ | Definition (Cover & Thomas 2006 §2.4) | Exact |
+
+| $I_\rho(G; M^+ \mid e, M^-) = \kappa_{\text{processing}} \cdot H_\rho(G)$ under the probe law | Definition of $\kappa_{\text{processing}}$ ( #der-directed-separation) | Exact (identity) |
+
+| Pinsker's inequality | Standard (Csiszár–Körner) | Exact |
+
+| Otto–Villani $W_2^2 \leq (2 / \rho_{\text{LSI}}) \mathrm{KL}$ under LSI | Otto & Villani 2000 Theorem 1; Bakry–Émery 1985 | Exact |
+
+| Global $d_{FR} \leq 2\sqrt{\mathrm{KL}}$ | §3 Step 1: Rényi monotonicity ($-2\log\mathrm{BC} \leq \mathrm{KL}$) and $\log\cos\theta \leq -\theta^2/2$ | Exact (three lines, self-contained) |
+
+| KL-to-Fisher expansion $\mathrm{KL} = \tfrac{1}{2} d_{FR}^2 + O(d_{FR}^3)$ | Cover & Thomas 2006 §12.5; Amari & Nagaoka 2000 §3.7 Theorem 3.1 | Exact (standard information geometry) |
+
+| **Track 1 bound** $\mathbb{E}[W_2^2] \leq (2 / \rho_{\text{LSI}}) \kappa H(G \mid e, M^-)$ | §2 | **Derived (conditional on H2)** |
+
+| **Track 2 bound** $\mathbb{E}\, d_{FR} \leq 2 \sqrt{\kappa H(G \mid e, M^-)}$, and $\sqrt{2}\sqrt{\kappa H}\,(1 + o(1))$ under (H4) | §3 | **Derived (conditional on H1; sharp constant on H1 + H4)** |
+
+| $C_{FR} = 2$ universal and dimension-free; $\sqrt{2}$ sharp locally | §3 | Exact under (H1); (H1)+(H4) |
+
+| No universal $C$ in Euclidean-parameter norm | §4 counterexample | Proved (counterexample-grade) |
+
+| (F1), (F2) fail | §5 | Recorded failures |
+
+| Two-goal Gaussian example, tight to first order | §6 | Exact under its assumptions |
+
+| The bound does not bound distortion from the calibrated belief, and saturates for noiseless couplings | §3, last paragraph; C3 spike Proposition 3.3 | Exact |
+
+The hypotheses (LSI on the goal-marginal post-update law; the statistical-manifold sub-case; small information; (PI)) are standard regularity or AAT-internal axioms already adopted. The no-go §4 justifies (PI) as load-bearing. The failed attempts §5 record structural reasons two alternatives cannot work.
+
+## Epistemic Status
+
+*Conditional — exact under (H2) (Track 1) or (H1) (Track 2; the sharp local constant also under (H4)).* Both tracks are derived theorems under named hypotheses, and both bound the same object: the displacement of the goal-conditional post-update law from the goal-marginal one under the probe law, in transferred goal information $I_\rho(G; M_{\tau^+} \mid e_\tau, M_{\tau^-}) = \kappa_{\text{processing}} \cdot H_\rho(G)$. Track 1 is linear in the information with constant $2 / \rho_{\text{LSI}}$; Track 2 is $\sqrt{I}$ with the universal $2$ globally and the sharp $\sqrt{2}$ in the small-information regime. The no-go §4 is *proved* by the heteroscedastic-normal counterexample. The failed attempts §5 are *recorded* at structural-reason level.
+
+What the bound is a bound on is part of its epistemic status. It bounds *goal-dependence* of the belief. It does not bound *distortion* — the belief's departure from the calibrated belief given the agent's information — and it cannot be read as the degradation norm's bound in the sense of "how far off the truth a $\kappa \gt 0$ agent's belief is" ( #der-directed-separation): calibrated allocation produces goal-dependence at full strength with no distortion, and a noiseless injective coupling of any magnitude sits at $\kappa = 1$. What the bound does deliver for the degradation norm is the controlled continuity of the *belief's goal-dependence* off $\kappa = 0$, which is what a downstream functional of $M_t$ — the value object's $Q_O$, say ( #def-value-object) — inherits as goal-dependence through its argument, with that functional's Lipschitz constant as the factor (Discussion). The probe law is where the statement has content: under the operating law with the realized action in the event, a policy injective in the goal makes every quantity here identically zero.
+
+Max attainable: *exact* for the composition of the textbook inequalities and for the no-go; *conditional* overall. Open: the log-Sobolev constant of the goal-marginal mixture, which is itself goal-dependent beyond the $\beta \ll \sigma$ limit of §6 (mixture LSI constants degrade with component separation); and whether a bound on *distortion* indexed by any processor property exists — it cannot be indexed by $\kappa$, and #scope-observation-ambiguity-modulation's fixed-gain hypothesis is the candidate carrier, with Bennett's lemma as its bound.
+
+## Honest failure modes
+
+The appendix does **not** cover:
+
+1. **Non-statistical-manifold sub-cases of $\mathcal{M}$.** Mixed continuous/discrete components, graphical-model structure, non-parametric models without a common reference measure: (H1) weakens and Čencov's uniqueness does not straightforwardly apply. Track 1 may still apply under a ground metric on $\mathcal{M}$ for which (H2) holds.
+
+2. **Unbounded KL / structural-failure limit.** If some goal-conditional post-update law has support disjoint from the goal-marginal law's, the KL and hence $I$ diverge and the bound is vacuous — a structural failure of the coupled update, not of the bound.
+
+3. **Heavy-tailed goal-marginal post-update laws.** LSI fails for heavy-tailed measures; Track 1 degrades to Pinsker's total-variation form, the $O(\sqrt{\varepsilon})$ baseline without the LSI tightening.
+
+4. **Large-information sharpness.** Track 2's global bound holds for every information level with constant $2$; what is lost away from the small-information regime is only the sharp constant $\sqrt 2$. Every bound of the form $\mathbb{E}\,d_{FR} \leq F(I)$ must saturate at the diameter $\pi$ of the sphere of laws, and $2\sqrt I$ exceeds $\pi$ for $I \gt \pi^2/4$ nats, where the bound is true and vacuous; the pointwise form $d_{FR} \leq 2\arccos(e^{-\mathrm{KL}/2})$ in §3 does saturate at $\pi$ and is the sharper statement for large divergences (its averaged form needs the concavity of $\arccos(e^{-x/2})$ in $x$, not checked here).
+
+5. **Distortion.** The quantity the degradation norm is about is not bounded here at all (Epistemic Status).
+
+## Discussion
+
+**Position in the #disc-additive-coordinate-forcing meta-pattern.** Track 2's constants are downstream theorems of the fourth primary instance (Čencov invariance at the metric layer, under (PI)): once (PI) forces Fisher–Rao as the canonical metric, Rényi monotonicity supplies the global constant $2$ and the KL-to-Fisher expansion the sharp local $\sqrt 2$, and the no-go §4 shows the commitment is load-bearing rather than convenient.
+
+**Connection to #deriv-variational-sector-condition.** Both use Pinsker's inequality as a first step in propagating a KL bound and then diverge: this segment's cascade is KL-to-distance-between-laws machinery; `#deriv-variational-sector-condition`'s is KL-to-scalar-constant machinery. Adjacent family members, not candidates for a shared template.
+
+**What this bound gives the degradation norm, stated carefully.** The scoping rule of #der-directed-separation asks that a result stated at $\kappa_{\text{processing}} = 0$ carry, where it can be shown, how it degrades off the zero. This appendix gives one such degradation, for one kind of consequence: any downstream functional $F$ of the belief inherits the belief's goal-dependence, and for $F$ Lipschitz in the ground metric, $\lvert\mathbb E_\nu F - \mathbb E_\mu F\rvert \leq \mathrm{Lip}(F)\, W_1(\nu, \mu) \leq \mathrm{Lip}(F)\, W_2(\nu, \mu)$, so the goal-dependence of $F$'s expectation is bounded by $\mathrm{Lip}(F) \cdot C \sqrt{\kappa\, H(G \mid e_\tau, M_{\tau^-})}$ — continuous in $\kappa$ and zero at zero, with the functional's own Lipschitz constant as the factor. The value object's $Q_O$ ( #def-value-object) is the first realized client: at $\kappa \gt 0$ its value depends on the goal through $M_t$, and this bound says by at most how much, once $Q_O$'s Lipschitz constant in $M_t$ is known — which no segment states; it depends on the objective functional and the horizon. It is not a bound on how far $Q_O$ is from the value a calibrated belief would give, and #def-value-object does not read it as one.
+
+**Connection to logogenic agents.** This appendix's bounds are the quantitative apparatus behind #result-section-ii-survival's Class 3 (Coupled) scope-survival analysis, for the goal-dependence of the diagnostics ($\delta_{\text{sat}}$, $\delta_{\text{regret}}$) read off a goal-coupled belief: the Lipschitz composition there bounds how much a diagnostic varies with the goal, not how far it is from the diagnostic a calibrated belief would give. #scope-observation-ambiguity-modulation carries the distortion side.
+
+## Findings
+
+### Universal Constant for the Goal-Dependence Displacement Bound under Parameterization-Invariance
+
+**Brief:** When a goal-coupled agent (like an LLM) processes evidence, the belief it ends up with can depend on what it was trying to do, not only on what it saw. How much it can depend on the goal is bounded by how much information about the goal the update lets into the belief — a quantity that is, by definition, the agent's coupling $\kappa$ times how much there was to let in. This result computes the constant in that bound under two sets of conditions — including a universal constant $2$ that needs no smallness at all — and shows that one of them — committing to a particular geometry on the model space, the (PI) axiom — is necessary in a strong sense: without it no universal constant exists. What the bound does not do is say how far the belief is from the *truth*: an agent that merely attends to different things for different goals has goal-dependent beliefs that are all correct, and shows up here at full strength.
+
+**Impact:** Supplies the explicit constants for the belief's goal-dependence off $\kappa_{\text{processing}} = 0$ — $2 / \rho_{\text{LSI}}$ in $W_2^2$, $2$ globally and $\sqrt 2$ locally in Fisher–Rao — which is what downstream functionals of the belief (the value object, the Part II diagnostics on a Class 3 substrate) inherit through their Lipschitz constants; keeps the no-go that makes (PI) load-bearing; and records two failed derivation routes. It bounds goal-dependence and not bias relative to the goal-blind update, nor distortion: the distortion question is carried by #scope-observation-ambiguity-modulation's model-free range bound and fixed-gain hypothesis with its test.
+
+**Novelty Claim:** *Claim differentiation* on the composition of the expected-KL identity with Otto–Villani, with Rényi monotonicity for the global Fisher–Rao constant, and with the Fisher–Rao expansion for the sharp local one, in the goal-coupled setting, plus *claim novelty* on the no-go counterexample showing that universal $C$ in Euclidean-parameter norms cannot exist. The upstream tracks compose textbook machinery (Cover–Thomas; Otto–Villani 2000; Amari–Nagaoka 2000; Rényi monotonicity); the contribution is the composition and the no-go.
+
+**Related Work:**
+
+| ASF concern | Prior-art language | Relationship / Positioning |
+
+|---|---|---|
+
+| KL-to-$W_2$ transport under log-Sobolev | Otto & Villani 2000 *J. Funct. Anal.* 173:361–400; Bakry & Émery 1985 curvature-dimension condition | *formal antecedent* — adopted directly in Track 1 |
+
+| Čencov uniqueness of the Fisher metric | Čencov 1982, *Statistical Decision Rules and Optimal Inference*; Ay, Jost, Lê & Schwachhöfer 2017 *Information Geometry* Theorem 5.1 | *formal antecedent* — adopted via (PI) in #scope-agent-identity; the no-go §4 is the AAT-internal demonstration that the adoption is load-bearing |
+
+| KL-to-Fisher second-order expansion | Amari & Nagaoka 2000 §3.7 Theorem 3.1; Cover & Thomas 2006 §12.5 | *formal antecedent* — supplies Track 2's small-information sharpness |
+
+| Information-processing-constraint bounds on decisions | Ortega & Braun 2012 *Proc. R. Soc. A*; Genewein et al. 2015 *Front. Robot. AI* 2:27 | *adjacent literature* — a different quantity (decision quality under information constraint) in shared vocabulary |
+
+| Variational bounds on posterior beliefs in active inference | Friston et al. 2017, *Neural Computation* 29:1–49 | *adjacent literature* — overlapping transport machinery in a different framework; Track 1 does not need the variational-free-energy commitment |
+
+**Search Log:**
+
+- 2026-04 (*nominally comprehensive*): a Pillar-3 pass located bounded-rationality and information-cost literatures as the closest decision-theoretic precursors and no equivalent of the universal-$C$ derivation under (PI). The verdict attached to the product-form law downstream is retired with that law; this segment's narrower contribution (the constant and the no-go) keeps a Medium confidence with a follow-on targeted search recommended on posterior-displacement bounds for goal-coupled architectures.

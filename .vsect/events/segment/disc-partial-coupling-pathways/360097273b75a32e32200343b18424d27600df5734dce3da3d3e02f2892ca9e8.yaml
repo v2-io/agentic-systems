@@ -1,0 +1,90 @@
+schema: vsect-event/0
+id: 360097273b75a32e32200343b18424d27600df5734dce3da3d3e02f2892ca9e8
+at: 2026-10-31T04:06:29Z
+store: asf
+act: read-check
+about: segment:disc-partial-coupling-pathways
+actor:
+  name: Claude Fable 5.1 (Part II round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+at-commit: 63214fe5
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-adaptive-tempo: 7c9e7a2297a73b91aefa7e16c89b911c08289901b427e00d28d8c975c92c259f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-causal-information-yield: aafeacbbb79b6c8fa83a38fc5b85f2b38b0aad97f0ccfe80798d0a554c5e5c35
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-control-regret: a1a591cef40c9df28649f718be4b9e2749722bce84cd308bfb8820c11f5169a8
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-model-class-fitness: 80a2eb3fbf06b7ebb3ebdc642c79dc6883eb350ebafb68555ee3ea9c2505a25f
+  segment:def-model-sufficiency: 882ada782f766dceb819abecd0b5572d3c7c3dce45a415889c62a722dfca894b
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:def-pearl-causal-hierarchy: 0b817be6e14dcb78d1de417b1b13a6a63cc41959e8b240931d3184c81e711668
+  segment:def-satisfaction-gap: cfef16ee412848573f3ecfc72877094960e08b55fb7bf5ad9cfb5cb49bdd1730
+  segment:def-shared-intent: 8d031fc76a7376d3ad20cace0449c4ee740dafa48ca3b323fe817558c3b944af
+  segment:def-strategic-calibration: 6f7e397ba2318cad37a98db35b7f50686e13f5fed5cce3699f0a39ae76c799d4
+  segment:def-strategic-tempo: 689b621ba208abada10f13de5447023b7a8717dca75eceadc9de21d38e283fd7
+  segment:def-strategy-dag: 5b3f2beb361f89c72bfe3cdf51164ff727f732acb387c24e3c9841a664ae8676
+  segment:def-strategy-dimension: 531f25a2cae087ff7056e9e76bac57c8ee5771d71409a643614151339171e38f
+  segment:def-unity-dimensions: 753278841befbe457c44068c2e2ea55cfb5ac3ee9e0c868f3f285d57310c82f9
+  segment:def-value-object: 8c0cdb072e434ea3eab386cbead2c4d8d6331a5fd2644d47b7c0533d6ca2932b
+  segment:der-action-selection: ff726f8527dab6ee837cc11b7164313850f125e944c76ea86dca14183c613408
+  segment:der-causal-hierarchy-requirement: 835e20ad3d382d10a3b1196797ad51835f3386df13eb8e226a1df4a5295958d5
+  segment:der-causal-insufficiency-detection: 5363d0e4a89ce724eab8b22277cc627000c4abd00d0cbb1aae554b37c7f8e35f
+  segment:der-chain-confidence-decay: 369ae67b420173870677632e9efb50963106657b4479b094ac26397623908e48
+  segment:der-class-coercion-via-wrapping: d0e2fdd27cf82ac7d9375850ca12c0bcf80cbf9b82735893887ef92b870f5807
+  segment:der-directed-separation: a8f6f1315dfd8c4a23dad75ea372fe34bfca2b276b23b2f83455677d239b50b0
+  segment:der-gain-sector-bridge: f5c8fdd9d718eff5c9192d3d1b399b0f97106f1f28a5619dae2f8010565b1539
+  segment:der-loop-interventional-access: 772e0a9eca182c3242ebe10b6253c6ab4763534b81dbaf459fcd52fda9cef422
+  segment:der-observability-dominance: 4e9d1ddaa927aa17a240ae7d8e9244fe059d0c1beea1a166ccc780c0077ade4f
+  segment:der-orient-cascade: d8465f59d79bbbecc00d33b2fce0baee5be535c4d48b4d1662a79e1835363d00
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:deriv-edge-credence-dynamics: 223b6b9333d13b9df14563154924a1671968b1a6012de6c87a1d8ce9d2d1dd0d
+  segment:deriv-edge-update-natural-parameter: 1347ced6b4f8032b9dcd3b8a927a9020e51c765cb15987ac0a38a9d4570d0c61
+  segment:deriv-gain-sector: f78514b9da4ac15f168eda5d3d520d6191462d6a86841afcb7c80487fe70ba94
+  segment:deriv-observation-ambiguity-bias-bound: 4fd06aa1890b5aa0e46632af9aedea55ac3e3191ebf9d8911db8b58c335df19b
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:deriv-sector-condition: 9f0758ed7bc37d6f067d005b9f920c9bc9ed4a45463768b7a2c3131a44ac5b29
+  segment:deriv-strategy-cost-regret-bound: e4a8235550228cd9cd5930bc053f501c6ef2b89db1a50f5f20146b3124c3bc2d
+  segment:disc-additive-coordinate-forcing: 5783e335880a9035fbf1af558c18c9017d99eb9f0d48d4d19d822065f966ef10
+  segment:disc-adversarial-coupling-pressure: 0102cdb0b0d9265658c053bf8d3b733414c4a5e906db66ad6be07a61946d7023
+  segment:disc-composition-consistency: 38ecdbe2544533cf09ca51fc1f1c55da33ff83820a49ebd77b83629e2d8b3246
+  segment:disc-compression-operations: 082527010889cc0f87203fd722423e14a5cdeeb4b951fcae7482be828538220c
+  segment:disc-credit-assignment-boundary: 0775756c93e97be9bb66d08c396a84625a7667c8da526f74e5faaac4ce09a161
+  segment:disc-partial-coupling-pathways: 90041711448dccb974407f2944b4469785ca7e2aeab58b3c7f32b85da09af62c
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: d3898fba83b370fda5d32ace003b55ee464beed58852444a5b96d7a056054111
+  segment:form-composition-closure: f7355b6b4927c49bf6edacbdd316e9bae0bac21de5a24acd8c214fa678ba3238
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:form-objective-functional: 99b4ff434893d307522e91246979ed599cc2d3c415fc605206dfab71df46c74b
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:form-strategy-complexity-cost: 6a614bc55ed494ed08e12776ac83d97f9e7b2718d167a3c8e703cbb4bcc250f5
+  segment:form-structural-change-as-parametric-limit: 36cd3cbd177605e0a239047be8f990995e6becf5315a0e2056eb66ee7d8eaf66
+  segment:hyp-edge-update-via-gain: 594bed6507decb872a4a6fb2dba3c36a27f3b33f95a003d61aab003144446b25
+  segment:norm-explicit-strategy-condition: 9ba33948b1a1a431346ec2df7126d81de016b39cd55864f7ea942d2b053bbc92
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-mismatch-decomposition: d215ad7db1db571c2e719b31cc39f38f7863ce4b5302e74037a3b6098b2c7a5d
+  segment:result-persistence-condition: 382bfbdfce370119cb7f41c8161baf42fa9415a28646b553fbed7f3a9641fce4
+  segment:result-sector-condition-stability: 2537d83bd9bb560749fbef37563e26529e31557ae95e7268bfd5fa4496383e89
+  segment:result-sector-persistence-template: e81dfed0853e9582d41e15e3a737f8fe1829370f72fedf1766ddb60ef07a2d2a
+  segment:result-structural-adaptation-necessity: 7c7c9be73dd830411b5791b025db2e211b07520daab48dd58cca0ab30cf18c2a
+  segment:schema-strategy-persistence: 8734c4dfb7c00c3db2aa2161af2448ea97f2773e231d6795b9aad748f2257f52
+  segment:scope-adaptive-system: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-agent-identity: 971ff198be1850ec18e381a8a3088736501a403589736b804a745bbfa1e5587e
+  segment:scope-and-or: 7b529e04b43cb9069c611d88dc65216efe6aaa99d269df0c61a88bba6d7e9cac
+  segment:scope-composite-agent: 570ef2552b53c0bbd54c10d3bfb8a34d7b80b02170b563ffe1540d1318762396
+  segment:scope-edge-update-causal-validity: ba1d70b6fe950dd386c0be52c5cb22ccf2996d91c9fc8d3e1cbf23d5d7758b6f
+  segment:scope-multi-agent: bfd7ff18a1c5e2edca2661964961d30a0c4d87908c31f2929ef4155e87c4edd9
+committed: after
+criterion: 'Answers `review:part-ii-check-1-distortion#C16/finding` and the second site of `#F7`: the allocation row''s "distortion when the drop decision depends on dropped content" is qualified to content that bears on the world given what was retained.'
+effective-version: d90a70000323dc118ba916e127c2188e8cfd9229d27a1b8680bc7f86d91aae7b
+from: review:part-ii-round-2#C20
+line: derivation
+outcome: confirmed
+recheck: K8 in `distortion-check-1.py`
+target-version: 90041711448dccb974407f2944b4469785ca7e2aeab58b3c7f32b85da09af62c
+version-from: git-revision

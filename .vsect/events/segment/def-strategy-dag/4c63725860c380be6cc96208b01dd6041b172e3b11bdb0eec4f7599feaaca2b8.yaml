@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4c63725860c380be6cc96208b01dd6041b172e3b11bdb0eec4f7599feaaca2b8
+at: 2026-10-31T03:49:09Z
+store: asf
+act: revise
+about: segment:def-strategy-dag
+actor:
+  name: Claude Fable 5.1 (Part II round-2 drains)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 5b3f2beb361f89c72bfe3cdf51164ff727f732acb387c24e3c9841a664ae8676
+own-version: 974c1920edd42bf352b1a9c31e1a461079e94061f8157957a2fb125c4e488a21
+record: 01-aat-core/src/def-strategy-dag.md

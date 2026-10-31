@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 45f330b74a6ca8a81ec49965c2672e161528068ef2fc058854c788720e45e685
+at: 2026-10-31T03:49:03Z
+store: asf
+act: revise
+about: segment:result-coupled-diagnostic-framework
+actor:
+  name: Claude Fable 5.1 (Part II round-2 drains)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 8c650cd3f8b461b9d91c36597e211d5454eba189ed30b763af493b9e07694be1
+own-version: 443e0b34344a1a81dcb18ae04ecda28226aa6cd04c6428ab35d053ffafd0cf78
+record: 03-llm-core/src/result-coupled-diagnostic-framework.md

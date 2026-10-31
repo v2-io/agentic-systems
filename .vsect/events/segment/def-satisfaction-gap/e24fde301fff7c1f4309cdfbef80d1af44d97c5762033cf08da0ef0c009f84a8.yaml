@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: e24fde301fff7c1f4309cdfbef80d1af44d97c5762033cf08da0ef0c009f84a8
+at: 2026-10-31T03:50:23Z
+store: asf
+act: correct
+about: segment:def-satisfaction-gap
+actor:
+  name: Claude Fable 5.1 (Part II round-2, right-rung cluster)
+  role: integrator
+normalizer: vsect-norm/0
+corrects: 9090d0527167b442feb335140afaac1699e3748e61df2d31cedefc326de6bfca
+text: 'The text this check read is the working-tree version of def-satisfaction-gap on top of 3d17de13 (v:c7a46ac6, the text this cluster landed), not the git revision 3d17de13 the at: field named; the check is on the new text and holds there.'

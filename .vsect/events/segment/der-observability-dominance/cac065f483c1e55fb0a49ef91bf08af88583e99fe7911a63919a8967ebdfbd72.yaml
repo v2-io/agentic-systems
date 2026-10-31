@@ -1,0 +1,42 @@
+schema: vsect-event/0
+id: cac065f483c1e55fb0a49ef91bf08af88583e99fe7911a63919a8967ebdfbd72
+at: 2026-10-31T03:53:04Z
+store: asf
+act: rederive
+about: segment:der-observability-dominance
+actor:
+  name: Claude Fable 5.1 (Part II round-2 drains)
+  role: integrator
+normalizer: vsect-norm/0
+at-commit: null
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:def-pearl-causal-hierarchy: 0b817be6e14dcb78d1de417b1b13a6a63cc41959e8b240931d3184c81e711668
+  segment:def-strategy-dag: 974c1920edd42bf352b1a9c31e1a461079e94061f8157957a2fb125c4e488a21
+  segment:def-strategy-dimension: 531f25a2cae087ff7056e9e76bac57c8ee5771d71409a643614151339171e38f
+  segment:der-chain-confidence-decay: 369ae67b420173870677632e9efb50963106657b4479b094ac26397623908e48
+  segment:der-observability-dominance: 4fdeb973fc80302da238987828880f9021ae70938e56c692b535fd5e6469f411
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: d3898fba83b370fda5d32ace003b55ee464beed58852444a5b96d7a056054111
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-objective-functional: fd1a9487dbdb3e706bd21f434de0cd6087438fccc9c76bbb589b89f92019d8da
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-and-or: 7b529e04b43cb9069c611d88dc65216efe6aaa99d269df0c61a88bba6d7e9cac
+committed: before
+criterion: An edge into a node with no observed descendant has no likelihood term, so under edge priors independent across edges its posterior is its prior for every observation sequence; under a hierarchical or correlated prior it moves through its coupling to observed edges. Hence "with edge priors independent across edges" narrows the record's population without changing the claim.
+effective-version: 5dd0fbe2d507d66b9d1f88c58696a2b1a5b4461c4acee508d559071a3a1f835a
+from: review:part-ii-round-2-drains#C3
+line: derivation
+outcome: confirmed
+recheck: write the posterior over edge parameters as prior times likelihood; the likelihood is a function of the parameters of edges with observed descendants only, so it factors out of the marginal over an edge with none iff the prior factors there.
+target-version: 4fdeb973fc80302da238987828880f9021ae70938e56c692b535fd5e6469f411
+version-from: current

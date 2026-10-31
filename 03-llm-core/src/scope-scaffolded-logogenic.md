@@ -12,7 +12,7 @@ depends:
 
 # Scaffolded Logogenic Scope
 
-A logogenic agent wrapped in a multi-step loop with external state, tool use, structured context, and explicit cascade ordering at the loop level. The current best-practice "agentic system" regime — Sapientia, Zoetica, Autopax, LangChain, Claude Code's harness, OpenAI's Assistants API. Part II's cascade ordering is recovered at the loop level; the bias bound is reduced (but not eliminated) by ambiguity-reduction interventions.
+A logogenic agent wrapped in a multi-step loop with external state, tool use, structured context, and explicit cascade ordering at the loop level. The current best-practice "agentic system" regime — Sapientia, Zoetica, Autopax, LangChain, Claude Code's harness, OpenAI's Assistants API. Part II's cascade ordering is recovered at the loop level; the belief's distortion is reduced (but not eliminated) by interventions that shrink the residual spread of the goal-relevant quantity the observations leave, under #scope-observation-ambiguity-modulation's fixed-gain hypothesis.
 
 ## Formal Expression
 
@@ -23,21 +23,21 @@ A logogenic agent wrapped in a multi-step loop with external state, tool use, st
 - **Tool use as Pearl Level-2 channel** ( #der-loop-interventional-access): action tokens that the harness interprets as $do(\cdot)$ interventions on the environment, restoring interventional access that pure-text output lacks.
 - **Structured context assembly** explicitly curating the prompt across cognitive cycles ( #form-structured-rich-context).
 
-*[Derived (under scaffolded scope)]* The coupled diagnostic framework ( #result-coupled-diagnostic-framework) applies: Part II's $\delta_{\text{sat}}$ and $\delta_{\text{regret}}$ remain definable on post-update state, with diagnostic error bounded by the bias bound:
+*[Derived (under scaffolded scope)]* The coupled diagnostic framework ( #result-coupled-diagnostic-framework) applies: Part II's $\delta_{\text{sat}}$ and $\delta_{\text{regret}}$ remain definable on post-update state, with the error of a diagnostic read off the coupled belief, relative to its reading off the calibrated belief, bounded by the belief's distortion $D_G$:
 
-$$\lvert \delta_{\text{sat}}^{(\text{coupled})} - \delta_{\text{sat}}^{(\text{clean})}\rvert \leq L_A \cdot \lVert\Delta M_{\text{bias}}\rVert$$
+$$\lvert \delta_{\text{sat}}^{(\text{coupled})} - \delta_{\text{sat}}^{(\text{clean})}\rvert \leq L_A \cdot D_G$$
 
-The cascade ordering happens at the loop level rather than the model's forward-pass level; agentic-systems wrapping is not engineering convenience but a *structural* requirement for recovering Part II persistence guarantees in Class 3 (Coupled) architectures.
+and its goal-dependence by $L_A \lVert\Delta M_{\text{bias}}\rVert$, the belief's displacement across goals ( #deriv-observation-ambiguity-bias-bound). The cascade ordering happens at the loop level rather than the model's forward-pass level; agentic-systems wrapping is not engineering convenience but a *structural* requirement for a Class 3 (Coupled) substrate to run the orient cascade with a goal-blind belief update — the separated belief-update query of W₁ ( #der-class-coercion-via-wrapping). The Part II results that never invoked directed separation survive on a raw Class 3 agent without it ( #result-section-ii-survival).
 
 ## Epistemic Status
 
-**Sketch (with derived components).** The scope condition is definitional; the *recovery* claims are derived under #result-coupled-diagnostic-framework with its current epistemic-conditional status. The interaction-channel extension via tool use is derived from #der-loop-interventional-access (a Tier-1 result in AAT). The reduction of $\mathcal{A}$ via prompt engineering is empirical / operational rather than formally derived — there's no theorem that says "good prompts reduce $\mathcal{A}$ by factor $\beta$"; only the empirical observation that ambiguity-reduction interventions reduce the goal-resolvable residual uncertainty.
+**Sketch (with derived components).** The scope condition is definitional; the *recovery* claims are derived under #result-coupled-diagnostic-framework with its current epistemic-conditional status. The interaction-channel extension via tool use is derived from #der-loop-interventional-access (a Tier-1 result in AAT). The reduction of the residual spread $\mathrm{sd}_\pi(u_G)$ via prompt engineering is empirical / operational rather than formally derived — there is no theorem that says "good prompts shrink the spread by a factor $\beta$" — and that the distortion shrinks with the spread is #scope-observation-ambiguity-modulation's fixed-gain hypothesis, with its regression test, not a theorem.
 
 **Max attainable status:** definition + conditional theorem (for the recovery claims). The full strengthening would derive the loop-level cascade ordering from the underlying coupled-formulation primitives plus the loop's compositional structure.
 
 **What this scope is for.** Naming the regime where the field's substantial agentic-systems engineering effort lives, and giving that effort the structural argument for why it's not optional engineering convenience but a load-bearing recovery move. Tier-1 #13 (Coupled Diagnostic Framework) is the framework's most directly-actionable claim for any production agentic-systems practitioner.
 
-**What would strengthen this:** explicit derivation of the $\mathcal{A}$-reduction from prompt-engineering interventions (currently an empirical heuristic); compositional theorem for cascade-recovery across multi-step loops as a function of loop structure (sequential vs branching vs cyclic); empirical measurement protocol for $L_A$ in #result-coupled-diagnostic-framework.
+**What would strengthen this:** explicit derivation of the residual-spread reduction from prompt-engineering interventions (currently an empirical heuristic), and the fixed-gain hypothesis tested on real substrates; compositional theorem for cascade-recovery across multi-step loops as a function of loop structure (sequential vs branching vs cyclic); empirical measurement protocol for $L_A$ in #result-coupled-diagnostic-framework.
 
 **What would soften this:** evidence that scaffolding doesn't actually recover cascade ordering reliably (e.g., emergent failure modes specific to multi-step loops); evidence that the recovery is too partial to be useful in regimes where primitive-logogenic already fails.
 

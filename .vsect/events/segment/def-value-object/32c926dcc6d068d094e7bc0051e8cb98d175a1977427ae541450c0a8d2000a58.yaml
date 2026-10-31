@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 32c926dcc6d068d094e7bc0051e8cb98d175a1977427ae541450c0a8d2000a58
+at: 2026-10-31T04:02:09Z
+store: asf
+act: revise
+about: segment:def-value-object
+actor:
+  name: Claude Fable 5.1 (Part II round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 8c0cdb072e434ea3eab386cbead2c4d8d6331a5fd2644d47b7c0533d6ca2932b
+own-version: d67bafdb9497495b156b9ce8ba0cd9325620efcca1b79cff591cb2149052c31b
+record: 01-aat-core/src/def-value-object.md

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 927b278288b19660cf7ca6d14d22319c5a3bc41e9509bd660d28e90188c36dd9
+at: 2026-10-31T03:40:10Z
+store: asf
+act: close
+about: item:directed-separation-kappa-convention-and-estimator-confound
+actor:
+  name: Claude Fable 5.1 (Part II round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+by-commit: 0fe0a498
+outcome: done

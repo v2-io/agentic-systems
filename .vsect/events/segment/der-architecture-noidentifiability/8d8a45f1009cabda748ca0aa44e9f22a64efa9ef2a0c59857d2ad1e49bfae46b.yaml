@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 8d8a45f1009cabda748ca0aa44e9f22a64efa9ef2a0c59857d2ad1e49bfae46b
+at: 2026-10-31T03:49:06Z
+store: asf
+act: revise
+about: segment:der-architecture-noidentifiability
+actor:
+  name: Claude Fable 5.1 (Part II round-2 drains)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: f295eb0d40e8e914c0e75eb52cc91335561c25a2928652feb6c322c894e75608
+own-version: adc56a2d1a26bc8130a428fe6f80f2b80fb66b901d854b83ab9357c9dc3b099a
+record: 01-aat-core/src/der-architecture-noidentifiability.md

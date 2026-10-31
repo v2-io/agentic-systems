@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: fc48e64eab14523cd58d8187d8da1eb4a148579f2364410f5fab1d29d541a32c
+at: 2026-10-31T04:02:11Z
+store: asf
+act: close
+about: item:t1-coupled-diagnostic-class1-rescope
+actor:
+  name: Claude Fable 5.1 (Part II round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+by-commit: 74afc557
+outcome: done

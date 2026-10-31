@@ -1,0 +1,23 @@
+schema: vsect-event/0
+id: 9775e3e56481526fda7831cdae4e20291b5203c4a17d8c24b2e3bba7b575a4dc
+at: 2026-10-31T03:53:06Z
+store: asf
+act: take
+about: review:part-ii-round-2-drains
+actor:
+  name: Claude Fable 5.1 (Part II round-2 drains)
+  role: integrator
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+- C4:check
+- C5:check
+- F1:finding
+- F2:finding
+- F3:finding
+- F4:finding
+- F5:finding
+review: reviews/part-ii-round-2-drains.md
+review-version: 82cc411d3714143cdd6054da1f85e694babefa486454c6e7cf749d922a2349ea

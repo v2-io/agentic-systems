@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 09ad780078596776bcfc7c480a94adaa0ed176ba65a45c37bd055689b5731f34
+at: 2026-10-31T03:48:45Z
+store: asf
+act: review-finding
+about: segment:def-strategy-dag
+actor:
+  name: Claude Fable 5.1 (Part II round-2 drains)
+  role: integrator
+normalizer: vsect-norm/0
+criterion: 'Answered at 8f7dd870 by the B.1 second mind (not this lane): R1''s population carries causal sufficiency, the frequency claims have a descriptive record with a census falsifier, and the signal sentence has its precondition; the independent checker''s C9 confirmed the residual, the scaling and the sign rule.'
+finding: review:b1-part-ii-check-1#C10/finding
+outcome: answered
+reviser-recorded: false
+revision: review:part-ii-check-1-b1-records#C9

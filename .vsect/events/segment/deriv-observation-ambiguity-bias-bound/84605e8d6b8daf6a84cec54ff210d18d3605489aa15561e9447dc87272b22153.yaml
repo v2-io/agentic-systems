@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 84605e8d6b8daf6a84cec54ff210d18d3605489aa15561e9447dc87272b22153
+at: 2026-10-31T03:39:45Z
+store: asf
+act: revise
+about: segment:deriv-observation-ambiguity-bias-bound
+actor:
+  name: Claude Fable 5.1 (Part II round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: c9457a250e12cb175fa3688b1671d5b124d6302e18b5ce1dd7b4fa5df79d28ec
+own-version: 4fd06aa1890b5aa0e46632af9aedea55ac3e3191ebf9d8911db8b58c335df19b
+record: 01-aat-core/src/deriv-observation-ambiguity-bias-bound.md

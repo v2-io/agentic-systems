@@ -26,13 +26,13 @@ Six load-bearing independence assumptions in AAT, each paired with its failure r
 
 **Statement:** $f_M(M_{\tau^-}, e_\tau)$ has no $G_t$ argument — the epistemic update is goal-blind.
 
-**Where it appears:** #der-directed-separation, the structural backbone of Part II. Feeds the orient cascade's sequential resolution ( #der-orient-cascade), the causal validity of $Q_O$ ( #def-value-object), and the scope of all Part II results to Class 1 (Separated) agents.
+**Where it appears:** #der-directed-separation, the structural backbone of Part II. Feeds the orient cascade's sequential resolution ( #der-orient-cascade), the causal validity of $Q_O$ ( #def-value-object), and the scope of Part II's sequential-resolution results to causally-disciplined agents (Class 1, or an idealized Class 2 at $\kappa_{\text{processing}} = 0$).
 
 **Failure regime:** Class 3 (Coupled) architectures — transformer LLMs where attention processes goals and observations together. Motivated reasoning, confirmation bias, prompt-conditioned perception. Partially also Class 2 (Partial) agents.
 
-**Diagnostic signal:** $\kappa_{\text{processing}} = I(G_t; M_{\tau^+} \mid e_\tau, M_{\tau^-})/H(G_t \mid e_\tau, M_{\tau^-})$. Zero for Separated agents; near one for Coupled; intermediate for Partial.
+**Diagnostic signal:** $\kappa_{\text{processing}} = I_\rho(G_t; M_{\tau^+} \mid e_\tau, M_{\tau^-})/H_\rho(G_t)$ under the probe law of #der-directed-separation (the goal varied at fixed inputs). Zero for Separated agents; near one for Coupled; intermediate for Partial.
 
-**Repair operation:** Class 2 (Partial) approximation quality scales with $\kappa_{\text{processing}}$. Class 3 (Coupled) agents require the coupled formulation $X_{\tau^+} = f_X(X_{\tau^-}, e_\tau)$ without $(M_t, G_t)$ decomposition — the scope of `03-llm-core/`. At the system level, Class 3 (Coupled) components can be wrapped in modular topology (separate observation processing, external monitoring — see `#der-directed-separation` Working Notes on the IDT pattern).
+**Repair operation:** For Class 2 (Partial) agents the sequential cascade is an approximation whose quality depends on the belief's distortion (the reliability term) and, for the goal-dependence of downstream quantities, on the displacement bound of #deriv-observation-ambiguity-bias-bound; $\kappa_{\text{processing}}$ says where goal ports exist, not how good the approximation is, since it saturates at any noiseless coupling. Class 3 (Coupled) agents require the coupled formulation $X_{\tau^+} = f_X(X_{\tau^-}, e_\tau)$ without $(M_t, G_t)$ decomposition — the scope of `03-llm-core/`. At the system level, Class 3 (Coupled) components can be wrapped in modular topology (separate observation processing, external monitoring — see `#der-directed-separation` Working Notes on the IDT pattern).
 
 ### 2. Causal sufficiency: no latent common causes among strategy nodes
 

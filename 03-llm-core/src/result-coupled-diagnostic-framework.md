@@ -15,7 +15,7 @@ stage: draft
 
 # Result: Coupled Diagnostic Framework
 
-Even though the Class 3 (Coupled) agent's update does not decompose into sequential epistemic-then-strategic processing, the diagnostic quantities — satisfaction gap, control regret, and strategic calibration — remain *defined* on the post-update state $X^{(\text{post})}$ as functions of the formal apparatus. The orient cascade's sequential ordering, which is derived for Class 1 (Separated) agents, becomes a normative decomposition procedure: an analyst (or the agent itself, in a reflective step that has access to the requisite quantities) reconstructs diagnostic values from the coupled output and applies the 2x2 diagnostic table. Whether these quantities are *operationally extractable* by the running agent — as opposed to definable on the post-update state — depends on what the agent has direct access to vs. what must be reconstructed via separate instrumentation; this segment treats the definedness layer, not the extractability layer (see #result-section-ii-survival).
+Even though the Class 3 (Coupled) agent's update does not decompose into sequential epistemic-then-strategic processing, the diagnostic quantities — satisfaction gap, control regret, and strategic calibration — remain *defined* on the post-update state $X^{(\text{post})}$ as functions of the formal apparatus. The orient cascade's sequential ordering, which is derived for causally-disciplined agents (Class 1, or an idealized Class 2 at $\kappa_{\text{processing}} = 0$; #der-directed-separation), becomes a normative decomposition procedure: an analyst (or the agent itself, in a reflective step that has access to the requisite quantities) reconstructs diagnostic values from the coupled output and applies the 2x2 diagnostic table. Whether these quantities are *operationally extractable* by the running agent — as opposed to definable on the post-update state — depends on what the agent has direct access to vs. what must be reconstructed via separate instrumentation; this segment treats the definedness layer, not the extractability layer (see #result-section-ii-survival).
 
 ## Formal Expression
 
@@ -23,7 +23,7 @@ Even though the Class 3 (Coupled) agent's update does not decompose into sequent
 
 ### The coupled resolution process
 
-The orient cascade for Class 1 (Separated) agents ( #der-orient-cascade):
+The orient cascade for causally-disciplined agents ( #der-orient-cascade):
 
 $$\delta_{\text{epistemic}} \to \delta_{\text{sat}} \to \delta_{\text{regret}} \to \delta_{\text{strategic}} \to O_t \text{ revision}$$
 
@@ -52,7 +52,7 @@ These quantities are well-defined ( #def-satisfaction-gap, #def-control-regret s
 | $\delta_{\text{sat}} \leq 0$ | **Success**: goal attainable, policy near-optimal | **Strategy problem**: goal attainable, policy poor $\to$ revise $\Sigma_t$ |
 | $\delta_{\text{sat}} \gt 0$ | **Capability limit**: best available policy insufficient | **Both**: strategy weak AND goal hard $\to$ revise $\Sigma_t$ first |
 
-The table is identical to the Class 1 (Separated) version ( #der-orient-cascade). What differs is the *provenance* of the inputs: for Class 1 (Separated), the inputs come from a sequential cascade with guaranteed ordering; for Class 3 (Coupled), they come from a post-hoc decomposition of a coupled update.
+The table is identical to the causally-disciplined version ( #der-orient-cascade). What differs is the *provenance* of the inputs: for a causally-disciplined agent, the inputs come from a sequential cascade with guaranteed ordering; for Class 3 (Coupled), they come from a post-hoc decomposition of a coupled update.
 
 **Step 4. Conditional follow-up.**
 
@@ -63,11 +63,11 @@ The table is identical to the Class 1 (Separated) version ( #der-orient-cascade)
 
 *[Discussion (ordering-as-design-principle)]*
 
-For Class 1 (Separated) agents, the cascade ordering is *derived*: you cannot evaluate strategy quality with an out-of-date reality model, because $M_t$ appears in the formulas for $\delta_{\text{sat}}$ and $\delta_{\text{regret}}$. The information dependency forces the ordering.
+For causally-disciplined agents, the cascade ordering is *derived*: you cannot evaluate strategy quality with an out-of-date reality model, because $M_t$ appears in the formulas for $\delta_{\text{sat}}$ and $\delta_{\text{regret}}$. The information dependency forces the ordering of the first three steps; objective revision last is a recommendation ( #der-orient-cascade).
 
 For Class 3 (Coupled) agents, the logical dependency still holds — $\delta_{\text{sat}}$ still depends on $M_t$, and computing it from a stale $M_t$ is still meaningless. But the agent's processing does not enforce the dependency: the forward pass may evaluate strategic implications before adequately processing the epistemic content of the observation. The ordering transitions from a *derived consequence* to a *normative design pattern*:
 
-$$\text{Class 1 (Separated): ordering is forced by architecture} \qquad \text{Class 3 (Coupled): ordering is enforced by design}$$
+$$\text{Causally disciplined: the first three steps' ordering is forced by information dependency} \qquad \text{Class 3 (Coupled): ordering is enforced by design}$$
 
 The mechanisms for enforcement in Class 3 (Coupled) agents:
 - **Structured reasoning templates** that separate epistemic update from strategic evaluation ("First, what did I learn? Then, what does it mean for my plan?")
@@ -76,21 +76,21 @@ The mechanisms for enforcement in Class 3 (Coupled) agents:
 
 ### Accuracy of post-hoc diagnostics
 
-*[Derived (diagnostic-accuracy, conditional on observation-ambiguity-modulation)]*
+*[Derived (diagnostic-accuracy, conditional on Lipschitz regularity of $A_O$ in $M_t$; the dependence on observation sharpness is #scope-observation-ambiguity-modulation's hypothesis)]*
 
-The post-hoc diagnostics are *defined* on a goal-conditioned $M^{(\text{post})}$ (and inherit whatever extractability $M^{(\text{post})}$ has). Their accuracy as expressions of the underlying coupled state, relative to the "clean" (goal-blind) diagnostics, depends on the epistemic bias $\Delta M_{\text{bias}}$ ( #result-section-ii-survival):
+The post-hoc diagnostics are *defined* on a goal-conditioned $M^{(\text{post})}$ (and inherit whatever extractability $M^{(\text{post})}$ has). Two questions about them have different answers, and #result-section-ii-survival keeps the two quantities apart. How *wrong* they are: the "clean" diagnostics are those read off the calibrated belief $\pi$ — the conditional law of the world given the information the agent holds, which under (NWI) is the goal-blind Bayes filter's belief ( #der-directed-separation, Scope Condition) — and the error of the coupled reading against the clean one is bounded by the belief's distortion $D_G = d(M^{(\text{post})}, \pi)$:
 
-$$\lvert\delta_{\text{sat}}^{(\text{coupled})} - \delta_{\text{sat}}^{(\text{clean})}\rvert \leq L_A \cdot \lVert\Delta M_{\text{bias}}\rVert$$
+$$\lvert\delta_{\text{sat}}^{(\text{coupled})} - \delta_{\text{sat}}^{(\text{clean})}\rvert \leq L_A \cdot D_G$$
 
-$$\lvert\delta_{\text{regret}}^{(\text{coupled})} - \delta_{\text{regret}}^{(\text{clean})}\rvert \leq 2 L_A \cdot \lVert\Delta M_{\text{bias}}\rVert$$
+$$\lvert\delta_{\text{regret}}^{(\text{coupled})} - \delta_{\text{regret}}^{(\text{clean})}\rvert \leq 2 L_A \cdot D_G$$
 
-where $L_A$ is the Lipschitz constant of the attainability function $A_O(\cdot; \Pi, N_h)$ with respect to $M_t$ (the factor of 2 for regret arises because it depends on both $A_O$ and $V_O$, each contributing $L_A$ sensitivity). The error is bounded by the epistemic bias, which in turn is bounded by $O(\kappa \cdot \text{ambiguity})$ per #scope-observation-ambiguity-modulation.
+where $L_A$ is the Lipschitz constant of the attainability function $A_O(\cdot; \Pi, N_h)$ with respect to $M_t$ in the metric $d$ (the factor of 2 for regret arises because it depends on both $A_O$ and $V_O$, each contributing $L_A$ sensitivity). How much they *vary with the goal*: the displacement of a diagnostic across goal states at fixed inputs is bounded by $L_A \cdot \lVert\Delta M_{\text{bias}}\rVert$, the goal-dependence displacement of the belief, which #deriv-observation-ambiguity-bias-bound bounds in expectation by the transferred goal information. The two are different quantities — a calibrated goal-dependent allocation has $\Delta M_{\text{bias}} \neq 0$ and $D_G = 0$ — and the distance from the goal-blind update is neither, since that update is itself per-goal miscalibrated when it drops the realized action or when the goal carries world information. The distortion is bounded model-free by the size of the reweighting the processor applies ($\mathrm{TV} \leq L_G / 4$ for a log-density ratio of range $L_G$), and under #scope-observation-ambiguity-modulation's fixed-gain tilt hypothesis by the processor's gain times the residual spread of the goal-relevant quantity under $\pi$.
 
-**Consequence:** For low-ambiguity observations (test pass/fail, deployment success/failure, measurable metrics), the post-hoc diagnostics — *when their inputs can be extracted* — are accurate even for Class 3 (Coupled) agents ($\kappa \approx 1$), because the epistemic bias from goal-conditioning is small when the observation's meaning is unambiguous. For high-ambiguity observations (code quality assessments, strategic evaluations, user feedback interpretation), the diagnostics may be systematically biased even when extraction is feasible.
+**Consequence** (conditional on the fixed-gain hypothesis): for observations that pin the goal-relevant quantity (test pass/fail, deployment success/failure, measurable metrics), the post-hoc diagnostics — *when their inputs can be extracted* — are accurate even for Class 3 (Coupled) agents ($\kappa \approx 1$), because a tilt has no residual spread to act on. For observations that leave it open (code quality assessments, strategic evaluations, user feedback interpretation), the diagnostics may be systematically distorted even when extraction is feasible. This is the hypothesis's prediction, with its regression test at that segment, not a theorem.
 
 ## Epistemic Status
 
-*Conditional.* The post-hoc decomposability of diagnostic quantities is exact at the *definitional* layer — $\delta_{\text{sat}}$ and $\delta_{\text{regret}}$ are well-defined mathematical objects expressible in terms of any $(M_t, G_t)$, regardless of how the state was produced. This is inherited from their survival classification in #result-section-ii-survival. *Operational extractability* — whether the agent or its operator can produce numerical values at runtime — is a separate question, and is *not* established by this segment; #result-section-ii-survival's instrumentation-boundary discussion is the appropriate reference, and the engineering work it identifies (instrumenting $V_{O_t}^{\min}$, $A_O$, $V_O$ via commit messages, structured reasoning traces, external monitoring) is logically prior to the runtime use of this framework. The accuracy bounds, when extraction is feasible, are conditional on: (1) the Lipschitz regularity of $A_O$ with respect to $M_t$ (plausible for smooth value functions but not guaranteed in general), and (2) the epistemic bias structure from #result-section-ii-survival. The ordering-as-design-principle claim is discussion-grade — it is a normative recommendation, not a derived result.
+*Conditional.* The post-hoc decomposability of diagnostic quantities is exact at the *definitional* layer — $\delta_{\text{sat}}$ and $\delta_{\text{regret}}$ are well-defined mathematical objects expressible in terms of any $(M_t, G_t)$, regardless of how the state was produced. This is inherited from their survival classification in #result-section-ii-survival. *Operational extractability* — whether the agent or its operator can produce numerical values at runtime — is a separate question, and is *not* established by this segment; #result-section-ii-survival's instrumentation-boundary discussion is the appropriate reference, and the engineering work it identifies (instrumenting $V_{O_t}^{\min}$, $A_O$, $V_O$ via commit messages, structured reasoning traces, external monitoring) is logically prior to the runtime use of this framework. The accuracy bounds, when extraction is feasible, are conditional on: (1) the Lipschitz regularity of $A_O$ with respect to $M_t$ (plausible for smooth value functions but not guaranteed in general), and (2) the distortion and goal-dependence bounds as #result-section-ii-survival states them, the former's dependence on observation sharpness being a hypothesis. The ordering-as-design-principle claim is discussion-grade — it is a normative recommendation, not a derived result.
 
 Max attainable: conditional. The accuracy bounds require the Lipschitz constant $L_A$, which is domain-dependent and not computed by the theory; runtime use additionally requires the instrumentation #result-section-ii-survival flags.
 

@@ -88,7 +88,7 @@ A $\hat\rho_{ij}$ significantly different from zero, of either sign, rejects the
 
 **Detection criterion.** A statistically significant nonzero $\hat\rho_{ij}$ at sample size $N$ sufficient for the desired test power, after per-edge credences have stabilized (two-sided), between siblings whose *modelled* ancestor sets are disjoint:
 
-$$\lvert\hat\rho_{ij}\rvert \gt z_{1-\alpha/2}\,\hat\sigma_{\rho_{ij}} / \sqrt{N} \quad\implies\quad \text{a cause outside the graph acts on siblings } i, j$$
+$$\lvert\hat\rho_{ij}\rvert \gt z_{1-\alpha/2}\,\hat\sigma_{\rho_{ij}} / \sqrt{N} \quad\implies\quad \text{dependence the graph does not model acts on siblings } i, j \text{ (a latent common cause, or a missing edge between them)}$$
 
 (Standard hypothesis-testing form; threshold and test power depend on application.) The disjointness condition is what $H_0$ assumes. Under L0 the agent's model is a tree, so every sibling pair meets it, and the criterion reads as written. Once the model is not a tree it is not automatic: siblings that share a modelled ancestor are correlated with every cause modelled. The naive-L1 graph of #example-L1, with $C$ a parent of both $B_1$ and $B_2$, has $\operatorname{Cov}(Y_{B_1}, Y_{B_2}) = 0.504 - 0.72 \cdot 0.56 = 0.1008$ and no latent at all. For such pairs the statistic to test is the covariance conditional on the shared modelled ancestors, and an unconditional nonzero covariance says only what the graph already says.
 
@@ -112,7 +112,7 @@ This is *not* a separate finding from the no-go: it is the no-go's prediction fo
 
 **Off-policy boundary.** Under $\varepsilon$-exploration (route (a)), the residual scales as $O(\varepsilon)$ to leading order with sign matching the dominant node-type bias ($+$ for OR-heavy, $-$ for AND-heavy, when $\rho \gt 0$; reversed when $\rho \lt 0$):
 
-$$\Phi^{L0}(\hat{\boldsymbol p}) - \bar y_G = \varepsilon \cdot R + O(\varepsilon^2), \quad \operatorname{sign}(R) = \operatorname{sign}(\rho)$$
+$$\Phi^{L0}(\hat{\boldsymbol p}) - \bar y_G = \varepsilon \cdot R + O(\varepsilon^2), \quad \operatorname{sign}(R) = s_{\text{type}} \cdot \operatorname{sign}(\rho), \quad s_{\text{type}} = \begin{cases} +1 & \text{OR-dominated} \\ -1 & \text{AND-dominated} \end{cases}$$
 
 where $R$ is structure-dependent and recovers the marginal-limit $\rho$ at $\varepsilon = 1$. *[Heuristic]* The qualitative form is robust; the exact coefficient depends on the gap between conditional and marginal credences. The widely-quoted "$\varepsilon \cdot \rho$" scaling is correct as an order-of-magnitude statement. For a 2-sibling OR with conditional credences $p_j^c$, the exact two-OR formula is $\varepsilon R_1 - \varepsilon^2 R_2$ with $R_1 - R_2 = \rho$; the leading-order coefficient $R_1$ is structure-dependent and equals $\rho$ only at $\varepsilon = 1$.
 
@@ -212,7 +212,7 @@ These limitations parallel the information-theoretic underdetermination in #disc
 
 **False of:** latents with no joint-observability route, latents on one edge, and latents too rare to produce joint outcomes ("What Cannot Be Detected"); for these the test has no data. Latents that correlate three or more siblings only jointly (pairwise independent, mutually dependent), which the pairwise statistic cannot see although the node's propagation is biased. Sibling pairs sharing a modelled ancestor, for which the unconditional covariance is nonzero with every cause modelled (the naive-L1 graph of #example-L1); the criterion excludes them.
 
-**Falsifier:** for validity, a nonzero sibling covariance of the predicted sign arising under the stated preconditions, between siblings with disjoint modelled ancestors, with no cause outside the graph; the Detection criterion is the sentence it would refute. For the recommendation, a domain in which routes (c)–(e) are available and cheaper, which the body allows.
+**Falsifier:** for validity, a nonzero sibling covariance of the predicted sign arising under the stated preconditions, between siblings with disjoint modelled ancestors, with no dependence the graph fails to model (no latent common cause and no missing edge between the siblings); the Detection criterion is the sentence it would refute. For the recommendation, a domain in which routes (c)–(e) are available and cheaper, which the body allows.
 
 **Instantiated:** no.
 

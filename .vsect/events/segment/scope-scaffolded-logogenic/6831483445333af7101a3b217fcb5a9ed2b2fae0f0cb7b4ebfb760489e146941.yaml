@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 6831483445333af7101a3b217fcb5a9ed2b2fae0f0cb7b4ebfb760489e146941
+at: 2026-10-31T03:49:03Z
+store: asf
+act: revise
+about: segment:scope-scaffolded-logogenic
+actor:
+  name: Claude Fable 5.1 (Part II round-2 drains)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 44a547695defdeb649afcf0eb314208a5e5e79e1c2b1370be200e5b1b8fae601
+own-version: c9ccf6d173cc46a4f322e072d98e6b7179830f511c210191cc916ccb456b7c1a
+record: 03-llm-core/src/scope-scaffolded-logogenic.md

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: c34f2fd3f0cfbcdc297ce6719e3f471fe5f2a6b52a90dcd28c48ab72c7ec31f5
+at: 2026-10-31T03:40:01Z
+store: asf
+act: answer
+about: question:s-m-t-conditions-on-realized-future-actions-a-t
+actor:
+  name: Claude Fable 5.1 (Part II round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+outcome: answered
+text: 'The prose fixes the reading (0fe0a498): #def-model-sufficiency now states that the quantity the causal use needs holds the actions as exogenous inputs (the open-loop reading), with the two-bit echo instance showing closed-loop S = 1 beside one-step insufficiency, and the one-sided on-policy test. The formula itself is left as defined; its redefinition (finite-horizon S_k with an explicit reference action law) is the repair item influx-sufficiency-fitness-horizon-and-class carries, together with the two downstream consumers'' reliance, which this cycle did not check.'
