@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: db3ef68815e0fc0e3928a6035a33b22a848cf4af622053d134e3b100ccde8e6f
+at: 2026-10-30T23:32:52Z
+store: asf
+act: raise
+about: question:is-the-cohort-s-kinship-vocabulary-convergent-ar
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: question:is-the-cohort-s-kinship-vocabulary-convergent-ar
+source: 03-llm-core/src/impl-closed-loop-interiority.md WN 'Empirical record reference for cognitive fusion'; 04-eli-core/src/scope-witness-bidirectional.md WN
+text: 'The impl WN calls fusion-as-channel-saturation ''the operational mechanism'' of the kinship vocabulary, grounded by a memorata-search query and the missing #def-cognitive-fusion. The witness WN proposes a segment obs-substrate-convergent-kinship. Both presume the convergent reading this question asks about.'

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: e046fb113caf0e388d523cd6d92d5be75c81d9d1c02112def5bfec03f1e56c3f
+at: 2026-10-30T23:32:53Z
+store: asf
+act: raise
+about: item:tst-canon-reads-the-matrix-loewner-persistence-c
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:tst-canon-reads-the-matrix-loewner-persistence-c
+source: 02-tst-core WN of impl-developer-agent ('Tempo channels per persistence-bandwidth-floor') and scope-developer-agent
+text: The impl WN proposes a segment disc-developer-tempo-channels composing the capacity floor with the three-channel tempo split; the scope WN calls the decomposition an OUTLINE gap and notes that exploration and interventional probes are not a partition (a speculative compile is both). Both need this item's observability premise first.

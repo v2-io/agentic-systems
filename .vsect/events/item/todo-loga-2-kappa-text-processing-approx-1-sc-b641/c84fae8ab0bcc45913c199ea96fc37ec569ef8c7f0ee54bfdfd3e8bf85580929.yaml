@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: c84fae8ab0bcc45913c199ea96fc37ec569ef8c7f0ee54bfdfd3e8bf85580929
+at: 2026-10-30T23:36:16Z
+store: asf
+act: raise
+about: item:todo-loga-2-kappa-text-processing-approx-1-sc-b641
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-loga-2-kappa-text-processing-approx-1-sc-b641
+source: 03-llm-core/src/scope-observation-ambiguity-modulation.md WN ('Reference goal family'; 'The domain classification is coarse')
+text: 'Design inputs for the E.1 regression test: the reference goal family is a specification choice (uniform over a task taxonomy, the deployed-goal distribution, or adversarial on sd_pi(u_G)); the domain table should become a distribution of sd_pi(u_G) over the observation stream, and in software the open-ended events (review, architecture) are the strategically important ones.'

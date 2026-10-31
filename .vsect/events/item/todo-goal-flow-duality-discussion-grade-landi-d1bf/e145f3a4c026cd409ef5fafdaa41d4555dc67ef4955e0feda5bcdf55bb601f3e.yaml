@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: e145f3a4c026cd409ef5fafdaa41d4555dc67ef4955e0feda5bcdf55bb601f3e
+at: 2026-10-30T23:32:54Z
+store: asf
+act: raise
+about: item:todo-goal-flow-duality-discussion-grade-landi-d1bf
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-goal-flow-duality-discussion-grade-landi-d1bf
+source: 03-llm-core/src/der-logogenic-as-wrapping.md WN ('Open edges (forward pointers)')
+text: 'Also open from spikes/spike-c2prime-realization-spectrum-2026-05-31.md §7, per the same WN: a certificate for state-stripping (a latent G^op estimator), amplifying cross-call state, and (C2'') across more than two calls.'

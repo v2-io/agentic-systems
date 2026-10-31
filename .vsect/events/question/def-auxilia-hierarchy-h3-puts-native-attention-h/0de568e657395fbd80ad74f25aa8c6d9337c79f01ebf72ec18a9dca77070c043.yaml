@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 0de568e657395fbd80ad74f25aa8c6d9337c79f01ebf72ec18a9dca77070c043
+at: 2026-10-30T23:32:50Z
+store: asf
+act: raise
+about: question:def-auxilia-hierarchy-h3-puts-native-attention-h
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: question:def-auxilia-hierarchy-h3-puts-native-attention-h
+source: 03-llm-core/src/der-logogenic-as-wrapping.md WN 'Class B vs. native goal-blindness for some auxilia'; 04-eli-core/src/def-auxilia-hierarchy.md WN (H3 tiers)
+text: 'The wrapping WN says auxilia on natively goal-blind substrate (small specialized models, scripts, vector-DB retrieval) are Class A in #der-class-coercion-via-wrapping''s partition, and frontier-model auxilia Class B; that bears on which tiers of (H3) can be Class 1. The auxilia WN notes (H3) may not be exhaustive (neuromorphic or other substrates).'

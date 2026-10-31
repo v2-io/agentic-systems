@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: f74a38a24903a3ac552f426bfae6cb8237a1ed95f32335b59bbb6a3ffef05aa9
+at: 2026-10-30T23:32:52Z
+store: asf
+act: raise
+about: segment:hyp-substrate-transfer-asymmetry
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: review:part-ii-integration-1#F1
+source: 04-eli-core/src/hyp-substrate-transfer-asymmetry.md Working Notes, 'Spike C'
+text: 'The Working Note''s Spike C restates the retired law too: ''per-substrate (kappa, A) profiles ... asymmetric kappa*A on the same decompression task''. Rewrite or delete it with the body sites.'

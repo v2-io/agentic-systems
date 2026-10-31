@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 96f9adf346f964e3e4d91a0d6455aaf2e8c7260bf14e2f2aa24c53d727351144
+at: 2026-10-30T23:32:51Z
+store: asf
+act: raise
+about: item:todo-loga-1-channel-collapse-scope-narrowing-1217
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-loga-1-channel-collapse-scope-narrowing-1217
+source: 03-llm-core/src/scope-channel-collapse.md WN (open questions; NeurIPS Paper 3 cross-reference); scope-primitive-logogenic.md WN (scaffolding boundary); owner review
+text: 'Channel-collapse WN asks: is kappa_processing = 1 exactly; is collapse a gradient or discrete (NeurIPS 2026 Paper 3''s Coupled-class connectivity lemma makes the binary reading lemma-grade for decoder-only attention and, under per-source non-degeneracy, for linear attention, SSMs and RWKV; the gradient is not developed); are multimodal models partially logogenic. The primitive scope''s WN asks where scaffolding begins (one tool call vs a thinking block; body :49 calls it soft). msc/inside-out-2026-10/owner-review/explorers/part-iii-and-vols-2-4.md §2.3 separates (a) goal tokens upstream of every computation, true by construction, from (b) kappa ~ 1, an unmeasured magnitude that :Derived tags fuse with (a).'

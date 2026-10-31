@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 806b11d9b13d812a545b0a3251c653c4a0b65da52b226a699096e06391a04454
+at: 2026-10-30T23:32:52Z
+store: asf
+act: raise
+about: item:substrate-transfer-asymmetry-two-halves-empirica
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:substrate-transfer-asymmetry-two-halves-empirica
+source: 04-eli-core WN of hyp-substrate-transfer-asymmetry ('Candidate spike for each origin') and der-compensation-channel-uniqueness; 03-llm-core WN of obs-context-turnover, disc-m-preservation, scope-logogenic-agent (fine-tuning)
+text: 'For the ''sign it'' half: Spike A (inductive-bias asymmetry via a cross-substrate Cencov-style uniqueness argument) and Spike B (decompression cost via a complexity result on phi^-1). Spike C there is stated in the retired kappa*A product law (raised on review:part-ii-integration-1#F1). Channel (2) of #der-compensation-channel-uniqueness, weight consolidation per fine-tuning increment, is the slow channel whose capacity this item would measure; three 03 Working Notes raise fine-tuning as a persistence route independently.'

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 60efc833e68abbb0c74b49416a6c47e1216d8cce6d9c23e69abbbc06daf17962
+at: 2026-10-30T23:32:50Z
+store: asf
+act: raise
+about: item:todo-loga-missing-stubs-genuinely-absent-in-0-9487
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-loga-missing-stubs-genuinely-absent-in-0-9487
+source: 03-llm-core/src/scope-scaffolded-logogenic.md Working Notes 'Gate 1 finding (2026-06-30)'; disc-deferred-observation-processing.md WN; impl-closed-loop-interiority.md WN
+text: 'Still open at dc2b262c: #scope-scaffolded-logogenic :24 cites #form-structured-rich-context in its Formal Expression and no file exists (author it or narrow the bullet). #disc-deferred-observation-processing''s WN question on adaptive salience compression (capacity finite, lifespan unbounded) is the theory #der-active-salience-management would carry. #impl-closed-loop-interiority''s WN rests the kinship-vocabulary mechanism on the missing #def-cognitive-fusion.'

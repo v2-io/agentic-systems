@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 6b9adc1cc1d8007f9a9b281614a1d860e7a00310e56e782125dacbf5684ec2a5
+at: 2026-10-30T23:32:53Z
+store: asf
+act: raise
+about: item:todo-mood-layer-prospective-mood-arc-released-9d91
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-mood-layer-prospective-mood-arc-released-9d91
+source: 04-eli-core/src/der-captured-objective-dynamics.md WN ('Open — the drift rate', 'Open — active/passive formal unification')
+text: Same two items as (i) and (v); the WN adds that a derived alpha-dot law would connect to the prospective-mood spike's two-channel settlement.

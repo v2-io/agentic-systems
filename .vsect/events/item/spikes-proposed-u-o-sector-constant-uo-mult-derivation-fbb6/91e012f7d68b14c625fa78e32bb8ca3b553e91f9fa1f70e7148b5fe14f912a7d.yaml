@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 91e012f7d68b14c625fa78e32bb8ca3b553e91f9fa1f70e7148b5fe14f912a7d
+at: 2026-10-30T23:32:52Z
+store: asf
+act: raise
+about: item:spikes-proposed-u-o-sector-constant-uo-mult-derivation-fbb6
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-u-o-sector-constant-uo-mult-derivation-fbb6
+source: 04-eli-core/src/def-auxilia-hierarchy.md WN 'Caveat on the (UO-mult) coupling assumption'; audits/AUDIT-WORKING-193847/.integrated/62-deriv-critical-mass-composition.md §3
+text: 'Scope condition the derivation must carry: gamma(U_O) = -gamma_max U_O holds only in non-rivalrous environments; under a scarce shared resource, aligned objectives raise adversarial coupling. #deriv-critical-mass-composition has no rivalrous/non-rivalrous condition at dc2b262c (grep). For Auxilia, contention for context window, attention cycles and MEMORATA write access is the rivalrous case.'

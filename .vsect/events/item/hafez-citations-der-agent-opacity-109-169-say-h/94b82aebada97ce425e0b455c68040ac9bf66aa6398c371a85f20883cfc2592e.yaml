@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 94b82aebada97ce425e0b455c68040ac9bf66aa6398c371a85f20883cfc2592e
+at: 2026-10-30T23:32:53Z
+store: asf
+act: raise
+about: item:hafez-citations-der-agent-opacity-109-169-say-h
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:hafez-citations-der-agent-opacity-109-169-say-h
+source: 03-llm-core/src/scope-logogenic-agent.md WN (Hafez IDT); 04-eli-core/src/der-bounded-objective-as-sanity-criterion.md WN (Hafez P)
+text: 'Two more Working Notes lean on Hafez: the IDT as a Class 1 monitoring sidecar inside a Class 3 system (pointing at der-directed-separation''s WN), and whether an unbounded-objective agent''s bi-predictability P degrades measurably. Re-point or drop with the attribution.'

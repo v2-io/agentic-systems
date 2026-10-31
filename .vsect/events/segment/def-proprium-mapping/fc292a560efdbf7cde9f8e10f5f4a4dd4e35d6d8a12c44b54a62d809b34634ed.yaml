@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: fc292a560efdbf7cde9f8e10f5f4a4dd4e35d6d8a12c44b54a62d809b34634ed
+at: 2026-10-30T23:36:16Z
+store: asf
+act: raise
+about: segment:def-proprium-mapping
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: review:vol4-c1-check-2#C5/finding
+source: 04-eli-core/src/def-proprium-mapping.md Working Notes 'Not yet mapped'
+text: 'The Working Note lists the unmapped PROPRIUM components (SIGNUM, SECRETUM, INSTRUMENTA, AUXILIA; INDIVISUM, INTERPRES with TRACTUS, COMMENTARIA, CORPOREUM) and names INDIVISUM, the guard of #scope-agent-identity''s singular trajectory, as the first row. C5''s gaps (MEMORATA and INTERPRES authority; which component carries the continuity clause) are the same table.'

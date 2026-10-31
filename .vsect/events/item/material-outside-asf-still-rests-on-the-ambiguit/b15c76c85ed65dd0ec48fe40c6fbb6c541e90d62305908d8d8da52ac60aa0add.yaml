@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: b15c76c85ed65dd0ec48fe40c6fbb6c541e90d62305908d8d8da52ac60aa0add
+at: 2026-10-30T23:36:17Z
+store: asf
+act: raise
+about: item:material-outside-asf-still-rests-on-the-ambiguit
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:material-outside-asf-still-rests-on-the-ambiguit
+source: 03-llm-core/src/scope-observation-ambiguity-modulation.md WN 'Cross-reference to NeurIPS Paper 3'
+text: 'The Working Note records what the NeurIPS Paper 3 authors would need: its kappa factorization of transferred information has a zero denominator under goal-independence, its Class 1 criterion is violated by the goal-as-evidence Bayesian (N7beta), and its JSD estimator measures goal-dependence, not distortion.'

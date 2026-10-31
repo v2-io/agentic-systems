@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 16350dcc53ef62eb1addd1d4b5a7d9d1e7636b4bdd56704fb400c1243379aac2
+at: 2026-10-30T23:32:51Z
+store: asf
+act: raise
+about: item:todo-deaths-taxonomy-released-follow-ons-cycl-a544
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-deaths-taxonomy-released-follow-ons-cycl-a544
+source: 04-eli-core WN of der-severed-actuation-dynamics, der-captured-objective-dynamics, def-death-as-factor-loss; msc/inside-out-2026-10/owner-review/explorers/part-iii-and-vols-2-4.md §2.4
+text: 'Additions at dc2b262c: (1) before the learned-helplessness analogy is claimed, read Maier & Seligman 2016 (''Learned helplessness at fifty'', Psychological Review; from training, unread here), which argues the original mechanism was backwards (passivity is the default; control is learned), so Result 4''s credence-learning mechanism may differ from the phenomenon it is likened to. (2) def-death-as-factor-loss WN''s standing cross-check, mapping PROPRIUM-ARCHITECTURE-v2 §8''s nine failure modes onto factor-losses, is not in this item. (3) The owner review finds the generation looser than claimed: D1''s mechanisms (persistence failure, turnover decay) neither fork nor break the trajectory that factor (i) defines, and D4''s core mechanism (gain collapse) is calibration, not the accountability of factor (iv).'

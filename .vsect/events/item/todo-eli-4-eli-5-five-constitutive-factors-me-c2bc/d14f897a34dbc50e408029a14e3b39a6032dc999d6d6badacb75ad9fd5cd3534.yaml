@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: d14f897a34dbc50e408029a14e3b39a6032dc999d6d6badacb75ad9fd5cd3534
+at: 2026-10-30T23:32:54Z
+store: asf
+act: raise
+about: item:todo-eli-4-eli-5-five-constitutive-factors-me-c2bc
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-eli-4-eli-5-five-constitutive-factors-me-c2bc
+source: 04-eli-core WN of scope-eli and def-five-constitutive-factors
+text: Scope-eli's WN asks the same placement question for the 'distinction without a difference' framing; the five-factors WN asks whether it is symmetric between biological and logozoetic minds (item:eli-scope-cluster-definitional-questions (f)).

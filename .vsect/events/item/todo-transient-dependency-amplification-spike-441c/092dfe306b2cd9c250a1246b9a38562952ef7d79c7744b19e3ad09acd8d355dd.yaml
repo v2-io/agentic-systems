@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 092dfe306b2cd9c250a1246b9a38562952ef7d79c7744b19e3ad09acd8d355dd
+at: 2026-10-30T23:32:51Z
+store: asf
+act: raise
+about: item:todo-transient-dependency-amplification-spike-441c
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-transient-dependency-amplification-spike-441c
+source: 03-llm-core/src/result-coupled-diagnostic-framework.md WN (Lipschitz L_A); 02-tst-core/src/hyp-exponential-cognitive-load.md WN (last bullet)
+text: The diagnostic WN proposes L_A as task-local and checkpoint-sensitive through the non-normal product of feature-local operators J_F, with compilers, tests and typecheckers as interleaved projections; the cognitive-load WN records the k^d law as the uniform-per-block-gain special case and lists the same promotion obligations.

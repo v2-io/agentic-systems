@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 0749ac034f83f736b3445fe2d48441a9c579bd74dbd6e57495a11b7b313a04bb
+at: 2026-10-30T23:32:55Z
+store: asf
+act: raise
+about: item:pedagogy-home-for-lifted-audit-gold
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:pedagogy-home-for-lifted-audit-gold
+source: Working Notes of 03-llm-core (disc-five-forcing-functions, scope-channel-collapse, scope-interiority-loop, scope-primitive-logogenic, scope-scaffolded-logogenic) and 04-eli-core (def-auxilia-hierarchy, def-five-constitutive-factors, def-imperium-arbitrium-split, der-bounded-objective-as-sanity-criterion, hyp-checkpoint-forking-failure-modes, obs-growth-vs-drift, scope-eli)
+text: These 'Internal references' quote AUDIT-WORKING-193847 §14 gold (files 22, 25, 27, 28, 35, 38, 40, 47, 49, now in .integrated/) as grounding. Where the quote is pedagogy ('infrastructure of souls', 'sustained burn rate of Shannon information', motivated reasoning as G leaking into M) it belongs to this home. Where it grounds a body claim it is a defect, now items auxilia-h4-h5-rest-on-audit-prose, bounded-objective-instrumental-step-underived and scope-interiority-loop-derived-tag-and-audit-grounding.

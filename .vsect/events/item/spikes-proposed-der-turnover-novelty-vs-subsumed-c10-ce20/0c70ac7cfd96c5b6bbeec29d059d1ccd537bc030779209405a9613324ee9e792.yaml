@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 0c70ac7cfd96c5b6bbeec29d059d1ccd537bc030779209405a9613324ee9e792
+at: 2026-10-30T23:32:54Z
+store: asf
+act: raise
+about: item:spikes-proposed-der-turnover-novelty-vs-subsumed-c10-ce20
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-der-turnover-novelty-vs-subsumed-c10-ce20
+source: 03-llm-core/src/der-turnover-information-recursion.md WN ('Open — is R1/R2 a genuinely new A_D object')
+text: 'The WN states the stakes: the answer decides only whether this is a standalone segment or a worked instance of the affine-resolvent family, not the present claims.'

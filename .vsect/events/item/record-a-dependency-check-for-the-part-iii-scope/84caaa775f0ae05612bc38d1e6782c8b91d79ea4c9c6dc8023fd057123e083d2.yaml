@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 84caaa775f0ae05612bc38d1e6782c8b91d79ea4c9c6dc8023fd057123e083d2
+at: 2026-10-30T23:32:55Z
+store: asf
+act: raise
+about: item:record-a-dependency-check-for-the-part-iii-scope
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:record-a-dependency-check-for-the-part-iii-scope
+source: '''Promotion-blocking'' paragraphs in the Working Notes of 03 scope-* and 04 segments'
+text: Those paragraphs list dependency stages as of May 2026 ('just landed', 'about to be drafted', 'missing'), several now false (scope-eli's says scope-interiority-loop is missing). A recorded dependency check replaces them; the drain marks them for deletion under I.5.

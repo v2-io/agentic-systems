@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 69c74ec53ef74846ee1ee263652debe5515d3924755d8988e7db7c80b6faf761
+at: 2026-10-30T23:32:51Z
+store: asf
+act: raise
+about: item:the-scaffolding-overclaim-in-volume-3-its-origin
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:the-scaffolding-overclaim-in-volume-3-its-origin
+source: 03-llm-core/src/scope-scaffolded-logogenic.md WN 'Open questions for verification'
+text: Its WN asks where in the scaffolding spectrum the coupled-diagnostic recovery takes effect, and whether Part II's exact results (not only approximate ones) are reachable under sufficient scaffolding; both bear on what the honest replacement says scaffolding recovers.

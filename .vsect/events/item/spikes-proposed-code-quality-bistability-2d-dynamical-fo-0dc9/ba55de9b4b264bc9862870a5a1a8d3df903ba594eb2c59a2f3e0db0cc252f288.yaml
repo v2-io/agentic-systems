@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: ba55de9b4b264bc9862870a5a1a8d3df903ba594eb2c59a2f3e0db0cc252f288
+at: 2026-10-30T23:32:53Z
+store: asf
+act: raise
+about: item:spikes-proposed-code-quality-bistability-2d-dynamical-fo-0dc9
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-code-quality-bistability-2d-dynamical-fo-0dc9
+source: 02-tst-core WN of der-code-quality-as-observation-infrastructure, der-change-investment, der-dual-optimization
+text: 'Scope caveat for the model: the vicious cycle''s ''rushed changes degrade Q'' step rests on fatigue and stress, which an AI agent under time pressure may not have, so the cycle may be human-specific. Change-investment WN: model Q as a state under the mismatch ODE with each choice moving the effective rho. Dual-optimization WN: documentation amortizes comprehension across readers, the same loop.'

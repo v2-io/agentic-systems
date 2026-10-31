@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: ca0a743aca85cc92e36816e8f4a0d94f0532d244bd28524fe6cb1b89f81ac74e
+at: 2026-10-30T23:32:53Z
+store: asf
+act: raise
+about: question:does-per-commit-cost-grow-with-the-dependency-st
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: question:does-per-commit-cost-grow-with-the-dependency-st
+source: 02-tst-core/src/hyp-exponential-cognitive-load.md WN (AI-agent cost profile)
+text: 'The WN adds a competing hypothesis for LLM agents (sublinear: logarithmic, or linear to an effective context width then saturating; mechanism proposed via Liu et al. 2024, TACL 12, ''Lost in the middle'', which concerns position, not crossings) and names agent session traces, which record every file read, as the direct test.'

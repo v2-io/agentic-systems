@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 6b28615cde992f5c6261db8bf61159d67bcfaa5de22caccefd89e6fe2bd5f31e
+at: 2026-10-30T23:32:54Z
+store: asf
+act: raise
+about: item:todo-loga-2-kappa-text-processing-approx-1-sc-b641
+actor:
+  name: Claude Opus 5.5 (Working Notes drain, 02-04)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-loga-2-kappa-text-processing-approx-1-sc-b641
+source: 03-llm-core WN of der-logogenic-as-wrapping ('Empirical kappa_W1^sel measurement'), scope-channel-collapse, scope-primitive-logogenic, scope-observation-ambiguity-modulation ('Open')
+text: 'Four Working Notes ask for the same measurement family E.1 now owns: kappa_W1^sel by sampling responses under several operator-goal histories (distinct from a (C2'') check); whether kappa = 1 exactly; distortion for primitive agents needs outcomes or a reference posterior, and goal-probing alone measures goal-dependence; whether real coupled architectures tilt with a fixed gain, along the goal''s utility or another functional.'

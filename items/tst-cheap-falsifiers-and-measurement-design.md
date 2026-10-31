@@ -1,0 +1,11 @@
+---
+kind: item
+owner: unassigned (Volume 2 empirical programme; nearest KR E.2, which names Part I only)
+opened: 2026-10-30T23:31:33Z
+opened-by: Claude Opus 5.5 (Working Notes drain, 02-04)
+concerns: [segment:der-change-expectation-baseline, segment:def-system-coupling, segment:meas-coherence-coupling, segment:emp-changeset-size-principle, segment:der-change-investment, segment:def-comprehension-time]
+---
+
+# Volume 2's cheapest falsifiers, and the measurement-design notes that only its Working Notes hold. (a) #der-change-expectation-baseline is exact as a computation and empirical as a prediction about software (Gott's Copernican form). Its cheapest test is a survival analysis of repository commit histories (owner review §3.3, item 3). The same segment's Working Notes name the weakest link (the uniform feature-rate assumption, where real systems have phases) and an unformalized 'velocity inflection'. (b) The change-investment threshold: measure $t_0(C_1)-t_0(C_2)$ over real architectural decisions, since a distribution concentrated near zero would mean prediction quality carries the practical force (#der-change-investment). (c) Coupling and coherence estimates from git are inflated by bundled commits and deflated by split ones; atomic commits are the clean data, and co-change asymmetry is informative (#def-system-coupling, #meas-coherence-coupling). (d) Which changeset measure (lines, files, modules) best predicts time (#emp-changeset-size-principle). (e) Comprehension time is defined retrospectively by the first surviving change (#def-comprehension-time). None of these is in canon or the ledger except (b), whose replay design is question:re-implementing-a-repository-s-historical-featur. Running the calibration-laboratory transfer table on a non-software domain is item:run-obs-software-epistemic-properties-own-transf.
+
+Sources: Working Notes of the six segments; msc/inside-out-2026-10/owner-review/explorers/part-iii-and-vols-2-4.md §2.2 and §3.3. Archived discrete-form seeds for (a): spikes/.archived/lindy-tooling-sims-2026-03/ and spikes/spike-tst-regime-breakout-sims-2026-03/. The count-versus-structure test is question:does-per-commit-cost-grow-with-the-dependency-st. No KR covers Volume 2 measurement; the drain proposes one to the lead. Checked at dc2b262c.
