@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 9199d6de50f059e02cbf5d1c293acd6c9c5d9dd983666544d47fb1cf03368d0a
+at: 2026-10-31T02:13:37Z
+store: asf
+act: raise
+about: item:spikes-proposed-decomposed-empirical-estimator-accuracy-e63e
+actor:
+  name: drain-wn-01-gold-belongs-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-decomposed-empirical-estimator-accuracy-e63e
+source: '01-aat-core/src/der-directed-separation.md Working Notes gold ''Belongs elsewhere'' (266847, 451729): a behavioral kappa-hat probe runnable on real LLMs. Present one event under two task primings (''fix auth bug'' vs ''add logging'') and measure how the epistemic content of the response diverges; auditors found no such measurement run. A design seed for E.1.'

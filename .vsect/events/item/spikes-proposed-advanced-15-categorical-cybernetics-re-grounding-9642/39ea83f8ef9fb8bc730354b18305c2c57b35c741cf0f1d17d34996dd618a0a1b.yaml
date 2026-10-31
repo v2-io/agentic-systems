@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 39ea83f8ef9fb8bc730354b18305c2c57b35c741cf0f1d17d34996dd618a0a1b
+at: 2026-10-31T02:13:38Z
+store: asf
+act: raise
+about: item:spikes-proposed-advanced-15-categorical-cybernetics-re-grounding-9642
+actor:
+  name: drain-wn-01-gold-belongs-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-advanced-15-categorical-cybernetics-re-grounding-9642
+source: '01-aat-core/src/form-composition-closure.md Working Notes gold ''Belongs elsewhere'' (773921): closure defect epsilon* as an optic-morphism obstruction in Capucci-Gavranovic-Hedges-Rischel 2022; a fresh reader reached the same home independently'

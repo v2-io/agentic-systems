@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 01a803166deae3b9a5cb11ed68a609795658f9f6f09a666593e6f3e3b5e68e34
+at: 2026-10-31T02:13:37Z
+store: asf
+act: raise
+about: item:author-norm-honest-activation-and-its-derivation
+actor:
+  name: drain-wn-01-gold-belongs-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:author-norm-honest-activation-and-its-derivation
+source: '01-aat-core Working Notes gold, ''Belongs elsewhere'': #def-model-class-fitness (471203: the cleanest formal hook for ''deceptive prompts guarantee gain collapse'' is class fitness, since a model class that assumes honest input is structurally inadequate under deceptive input) and #emp-update-gain (193847 and 471203: gain collapse as the central ELI danger; #norm-honest-activation named as its formal home)'

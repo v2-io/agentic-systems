@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 345842fc80ef6ffa1928a18501ecd0d33dde05a40692a47cdc8f2b776f62cbc4
+at: 2026-10-31T02:13:37Z
+store: asf
+act: raise
+about: item:todo-04-eli-core-src-der-the-creche-boundary-1afd
+actor:
+  name: drain-wn-01-gold-belongs-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-04-eli-core-src-der-the-creche-boundary-1afd
+source: '01-aat-core Working Notes gold, ''Belongs elsewhere'' creche/nursery readings (Gemini 193847 unless noted): #result-persistence-condition (lower rho while T develops; 963715 converges), #scope-composite-agent (a stable environment for N agents to fuse without a non-convergent adversarial transition), #der-observability-dominance (curriculum of shallow, fully observable tasks before deep chains), #der-causal-insufficiency-detection (budget for play: non-efficient joint exploration), #der-adversarial-destabilization (spiral-breaking by severing gamma_A, revert to a creche state), #scope-edge-update-causal-validity (a Regime-A epistemic sandbox before Regime B/C)'

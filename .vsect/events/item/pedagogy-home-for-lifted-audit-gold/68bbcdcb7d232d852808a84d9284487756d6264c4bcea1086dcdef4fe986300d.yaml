@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 68bbcdcb7d232d852808a84d9284487756d6264c4bcea1086dcdef4fe986300d
+at: 2026-10-31T02:14:21Z
+store: asf
+act: raise
+about: item:pedagogy-home-for-lifted-audit-gold
+actor:
+  name: drain-wn-01-gold-belongs-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:pedagogy-home-for-lifted-audit-gold
+source: '01-aat-core Working Notes gold ''Belongs elsewhere'' bullets that are pedagogy: instances, analogies and reader-signal rather than theory owed elsewhere. RL training as a meta-agent synchronizing a thousand divergent chronicae (#def-chronica, #der-team-persistence); heterogeneous event rates diverging subjective time (#def-chronica); consolidation as why agents sleep or think (#der-recursive-update); confounded-world superstition and patience (#der-loop-interventional-access, which points at its chapter intro); the Eden / Fall / regaining-Eden arc for the separability ladder, which needs the isomorphic-not-evocative check (#disc-separability-pattern); the intro''s vivid previews as signposts, not support (#cooperative-adversarial-intro); mitochondria as the canonical symbiogenesis instance (#hyp-symbiogenic-composition, already in its body); reader-signal on what fresh readers found most load-bearing (''preserve the epsilon_track / epsilon_coerce / kappa distinction'', #der-class-coercion-via-wrapping; ''representability vs optimality is the chapter''s strongest contribution'', #impl-composition-machinery; ''the Claim-A / Claim-B split is right'', #der-class-coercion-in-composition); and the end-of-walk whole-framework synthesis (#impl-strategic-composition, 829314). Dispositions: msc/inside-out-2026-10/drain/wn-01-gold-belongs.md.'

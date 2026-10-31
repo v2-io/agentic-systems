@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 58a86442b51c5656ab0684309efc0d0c5480e283563d9df5c9db3777b56a3dc0
+at: 2026-10-31T02:13:37Z
+store: asf
+act: raise
+about: item:todo-nominal-denotes-opposite-scope-membershi-c7a1
+actor:
+  name: drain-wn-01-gold-belongs-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-nominal-denotes-opposite-scope-membershi-c7a1
+source: '01-aat-core/src/scope-agency.md Working Notes gold ''Belongs elsewhere'' (Naming-cycle seed, AUDIT-WORKING-472913 F3 and 266847: ''nominal agent'' used repeatedly without a formal definition); 01-aat-core/src/post-causal-structure.md Working Notes gold (471203 calls ''nominal coupling'' forgettable and floats query-only / query-bound / epistemic-only coupling)'

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 30cad2517afbe2825b6e58bb90252a9dea3f75d5d9e208cbd35f827c73f17374
+at: 2026-10-31T02:13:37Z
+store: asf
+act: raise
+about: item:proposals-sp-23-disc-theorem-import-architecture-f-a22e
+actor:
+  name: drain-wn-01-gold-belongs-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:proposals-sp-23-disc-theorem-import-architecture-f-a22e
+source: '01-aat-core Working Notes gold, #disc-additive-coordinate-forcing ''Belongs elsewhere'' (471203: a ~20-entry list of imported theorems and the proposed fourth meta-segment) and #disc-identifiability-floor''s pointer to it (the floor is the heaviest importer)'

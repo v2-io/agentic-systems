@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: ac5db4f6fe863581d3470ac5f85f7d1d534999558a6b06e4a94055bf9836bfae
+at: 2026-10-31T02:13:38Z
+store: asf
+act: raise
+about: item:influx-form-agent-model-what-m-covers
+actor:
+  name: drain-wn-01-gold-belongs-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:influx-form-agent-model-what-m-covers
+source: '01-aat-core/src/def-action-transition.md Working Notes gold ''Belongs elsewhere'' (471203): M_t = phi(C_t) as history compression sits nearer the predictive-state-representation tradition than explicit belief over T; whether AAT is agnostic on this axis or forces one stance is unsettled (#def-model-sufficiency:45 says sufficiency is predictive, not which stance)'

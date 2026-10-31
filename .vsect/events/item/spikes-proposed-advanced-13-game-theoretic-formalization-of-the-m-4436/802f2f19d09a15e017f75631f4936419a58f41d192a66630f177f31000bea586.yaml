@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 802f2f19d09a15e017f75631f4936419a58f41d192a66630f177f31000bea586
+at: 2026-10-31T02:13:38Z
+store: asf
+act: raise
+about: item:spikes-proposed-advanced-13-game-theoretic-formalization-of-the-m-4436
+actor:
+  name: drain-wn-01-gold-belongs-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-advanced-13-game-theoretic-formalization-of-the-m-4436
+source: '01-aat-core/src/hyp-mismatch-dynamics.md Working Notes gold ''Belongs elsewhere'' (193847): under symmetric adversarial coupling each agent''s tempo becomes the other''s volatility, rho_B = rho_B,base + gamma_A T_A, a mutual escalation toward both model-class ceilings (arms race, Red Queen)'

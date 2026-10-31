@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 9ebc9d1ea4c28b0ae32270e59d0e4c7c7ebef7b72e61866a799913b5eea00f40
+at: 2026-10-31T02:13:38Z
+store: asf
+act: raise
+about: item:proposals-bundle-2-section-iii-completion-cluster-50fe
+actor:
+  name: drain-wn-01-gold-belongs-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:proposals-bundle-2-section-iii-completion-cluster-50fe
+source: '01-aat-core/src/result-structural-adaptation-necessity.md Working Notes gold ''Belongs elsewhere'' (266847, 384279, 584721, 193847): the Miller subsection reads as population-dynamics content in a single-agent segment, and ''latent structural diversity'' is the named Part III gap (01-aat-core/OUTLINE.md:304) whose formal counterpart is Miller''s five-phase transition motif'
