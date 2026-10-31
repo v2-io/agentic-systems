@@ -52,6 +52,50 @@ Full Lyapunov proofs: #deriv-sector-condition Props A.1, A.1S, A.2.
 
 *Exact.* Both results are direct instances of the sector-persistence template applied to the single-agent epistemic case. Template precondition (T1) is satisfied because no correction should be applied at zero mismatch; (T2) reduces to the local sector condition above and is grounded structurally by #der-gain-sector-bridge for gain-based agents; (T3) is the disturbance-model choice (D or S), a domain question. The linear ODE of #hyp-mismatch-dynamics is the special case where (T2) holds globally with $\alpha = \mathcal{T}$ — the per-time identity, both sides being event-rate-weighted correction rates (units $t^{-1}$); the sector framework generalizes this to saturating, thresholded, and structurally-limited correction functions under the same persistence condition. Disturbance-model choice is a domain question, not a theory question.
 
+## Claim Record
+
+### For a sector corrector under bounded disturbance, a correction rate above the disturbance over the region certifies persistence, with ultimate bound and reserve given in closed form
+
+**Register:** formal — the template's Model D conclusion specialized to $\xi = \bar\delta$ (Formal Expression, *[Derived (from sector-persistence-template)]*; proofs #deriv-sector-condition Prop A.1, Lemma A.1N, Prop A.2).
+
+**Population:** $\dot\delta = -F(\mathcal T, \delta) + w$ with $\delta$ the estimation error, (T1) and the sector condition on $\lVert\delta\rVert \leq R$ with floor $\alpha$, $\lVert w(t)\rVert \leq \rho$ (the total disturbance), started inside the region. Sufficient for each corrector; necessary over the class with floor $\alpha$, and agent-level only under radial tightness. For gain-based agents with directional fidelity $\alpha = \nu\eta^\ast c_{\min}$ (#der-gain-sector-bridge); for a linear corrector $\alpha = \mathcal T$ at the optimal gain.
+
+**True of:** the linear corrector under constant disturbance $\rho \lt \alpha R$: the error settles at $\rho/\alpha$, and the reserve $\alpha R - \rho$ is exactly the shock that puts it on the boundary.
+
+**False of:** the dip corrector of #deriv-sector-condition (Remark after Lemma A.1N), which fails the condition tenfold and stays contained, so failure of the inequality is loss of the guarantee, not certified escape, for a general corrector (as the opening says).
+
+**Falsifier:** a corrector in the population with $\alpha R \gt \rho$ whose error leaves the region; it would refute "the agent is guaranteed to persist when $\alpha \gt \rho/R$".
+
+**Instantiated:** not applicable.
+
+### At fixed disturbance the certified error falls as one over the correction rate against bounded drift and as one over its square root against white noise
+
+**Register:** formal — the Model S specialization and the scaling comparison (Formal Expression, last paragraph; #deriv-sector-condition Prop A.1S).
+
+**Population:** the population above under GA-2S (additive isotropic white noise of per-coordinate intensity $\sigma_w$), at fixed $\rho$ and $\sigma_w$. With channel noise injected through the gain, $\sigma_w$ depends on $\alpha$ and the scalings describe the lag term only; for linear correction the full steady state is $n(\sigma_{\text{env}}^2 + \alpha^2\sigma_\nu^2)/(2\alpha)$. Under the sector condition on the ball only, what is bounded is the error counted while still inside the region.
+
+**True of:** the Ornstein–Uhlenbeck corrector: stationary RMS $\sigma_w\sqrt{n/(2\alpha)}$, so doubling $\alpha$ divides it by $\sqrt 2$, against division by $2$ for $\rho/\alpha$.
+
+**False of:** a gain raised past the Kalman gain on a fixed noisy channel, where the error grows with $\alpha$ (#deriv-sector-condition, Setup).
+
+**Falsifier:** at fixed $\sigma_w$, a sector corrector whose killed second moment exceeds $n\sigma_w^2/(2\alpha)$ in the limit; it refutes the Model S specialization.
+
+**Instantiated:** not applicable.
+
+### Crossing the persistence threshold is the trigger for structural adaptation and calls for a new model class
+
+**Register:** normative — a design claim about the remedy, tested by comparing remedies on agents past the threshold. The formal content beneath it, that a corrector with a finite region has a certificate threshold, is the first entry. Sources: Discussion, "Generalizing the persistence threshold" ("proves the persistence threshold … is a structural necessity of any bounded-correction system") and "Connection to structural adaptation" ("When $\rho/\alpha \gt R$ … The sector condition fails — this is the dynamical trigger for structural adaptation …, requiring a new model class with larger valid radius $R'$ or better efficiency $\alpha'$"); the opening states both.
+
+**Population:** correctors with a finite region $R$ under Model D. What the derivation supplies is a threshold for the *certificate*: sufficient for each corrector, necessary at class level (#deriv-sector-condition Lemma A.1N).
+
+**True of:** a radially tight corrector whose model class admits no larger $\alpha R$: past the threshold the outward disturbance forces exit, and only a class with larger $R$ or $\alpha$ restores a certificate.
+
+**False of:** the reading of "structural necessity" as necessity for a given agent (the dip corrector stays contained below threshold). The sentence "the sector condition fails" when $\rho/\alpha \gt R$: the sector condition is a property of $F$ on $\mathcal B_R$ and does not depend on $\rho$; what fails is the certificate. "Requiring a new model class": a linear corrector on a noisy channel whose gain lies above its Model S window is restored by lowering the gain, and an infeasible window by better observations (#result-persistence-condition), neither a new model class.
+
+**Falsifier:** for the normative half, a structurally failing agent restored within its model class by retuning its gain or by better observations; the window of #result-persistence-condition supplies one, so the "requiring" sentence is refuted as stated.
+
+**Instantiated:** no.
+
 ## Discussion
 
 **Why the sector condition.** The linear ODE assumes correction scales linearly with mismatch forever. Real adaptive systems saturate, exhibit thresholding, or break down when the model class is exhausted. The sector condition captures the minimal structural requirement: the correction must point in the right direction with at least baseline efficiency $\alpha$.

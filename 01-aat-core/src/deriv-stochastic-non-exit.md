@@ -51,6 +51,50 @@ and $dS \leq e^{2\alpha t}\delta^\top\sigma_w\,dW_t$ on $[0,\tau_R]$ — so $S$ 
 
 This derivation is load-bearing for the critical path: it is the proof step that grounds the Model-S half of Corollary A.1S.1 and confines Prop A.1S (in `#deriv-sector-condition`) to the killed moment, the finite-horizon sup-bound (iv), the stationary tail under a global sector condition, and the exit-time comparison of Prop A.1S-τ. It is a **reusable no-go signature**: wherever a "stays-in-region-forever with positive probability" claim is proposed under additive non-degenerate forcing, the unbounded-scale-function / no-non-constant-bounded-harmonic-function obstruction settles it negatively without a fresh attempt.
 
+## Claim Record
+
+### Under additive non-degenerate noise a sector corrector leaves its region with probability one, at every correction strength
+
+**Register:** formal — the Theorem (Model-S no-go), with "Why $P(\tau_R \lt \infty)=1$, generally"; classical (Khasminskii 2012 ch. 3–4).
+
+**Population:** $d\delta = -F\,dt + \sigma_w\,dW_t$ with $\sigma_w \gt 0$, $W$ standard $n$-dimensional, $F$ locally bounded and meeting (A2') on $\mathcal B_R$, started in $\mathcal B_R$. The noise is additive: its intensity does not depend on the state.
+
+**True of:** the 1-D Ornstein–Uhlenbeck benchmark in the Discussion's table: at $\alpha = 0.5$, $\sigma = 0.2$, $R = 0.8$ ($\kappa_R = 8$, mean-square condition met), the probability of having left by $T = 3200$ is $0.796$ and climbs toward one, matching $1 - e^{-T/\Phi(0)}$ to $0.005$ (spectral solve).
+
+**False of:** bounded disturbance (Model D), where the region is invariant past threshold (#deriv-sector-condition Prop A.1). State-dependent noise whose intensity vanishes fast enough at the boundary, which can make the boundary unreachable; it is outside the population because the noise is not additive.
+
+**Falsifier:** a locally bounded drift meeting (A2') on $\mathcal B_R$ under additive noise with $\sigma_w \gt 0$ for which $P(\tau_R \lt \infty) \lt 1$; it refutes the Theorem's display.
+
+**Instantiated:** not applicable.
+
+### The maximal-inequality route to a horizon-independent non-exit bound cannot work, and the obstruction is a reusable signature
+
+**Register:** formal — "Why the natural route cannot work": the only compensated supermartingale $S(t)$ is negative inside the persistence basin, so Ville's and Doob's inequalities do not apply; and the signature *unbounded scale function ⇒ no non-constant bounded harmonic function ⇒ no horizon-independent non-exit certificate* (Epistemic Status).
+
+**Population:** additive non-degenerate diffusions with locally bounded drift on a bounded region, the population of the first entry. The signature is claimed for every future "stays inside forever with positive probability" proposal under such forcing.
+
+**True of:** the Ornstein–Uhlenbeck benchmark: $V \lt n\sigma_w^2/(4\alpha)$ with probability $P(\chi^2_n \lt n) \in (0.5, 0.69)$ at stationarity, where $S$ is negative.
+
+**False of:** proposals under noise that is not additive or not non-degenerate, where the scale function can be bounded and a non-exit certificate can exist; the signature does not settle them.
+
+**Falsifier:** a nonnegative supermartingale dominating $V$, under the first entry's hypotheses, that yields $P(\tau_R \lt \infty) \leq c \lt 1$; it cannot exist if the first entry holds, so the second entry stands or falls with it.
+
+**Instantiated:** not applicable.
+
+### In any genuinely stochastic environment a sufficiently long-lived agent eventually loses its parametric certificate
+
+**Register:** descriptive — the opening's "for any sufficiently long-lived stochastic-environment agent the *loss of its parametric certificate* is a *certain eventual event*" and the Discussion's "under any genuinely stochastic environment region-exit is a certain eventual event". The formal content is the first entry; this entry is the claim that real environments meet its hypotheses.
+
+**Population:** real agents whose disturbance is well modelled by additive non-degenerate Brownian forcing over their lifetime. The dichotomy of #deriv-sector-condition Cor A.1S.1 is selected by the support of the disturbance, not by its being random.
+
+**True of:** no measured instance is cited.
+
+**False of:** an agent whose random disturbance has bounded support, which is Model D: its region is invariant past threshold. Whether the loss forces model-class change is open (#sketch-structural-adaptation-genericity).
+
+**Falsifier:** for a named real environment, measured disturbance increments with support bounded within $\alpha R$ over the agent's lifetime, which refutes "certain eventual event" for it.
+
+**Instantiated:** no.
+
 ## Discussion
 
 The structural reading: additive stochastic forcing does not weaken the *rate* of containment, it removes a *kind* of guarantee. Bounded disturbance (Model D) gives deterministic positive invariance of $\mathcal{B}_R$ ($P(\tau_R \lt \infty)=0$); additive stochastic disturbance gives almost-sure eventual exit ($P(\tau_R \lt \infty)=1$); the achievable value is the two-point set $\{0,1\}$, selected by the disturbance's support structure, not by correction strength — Corollary A.1S.1 in `#deriv-sector-condition`. What survives under Model S is distributional and finite-time: the killed-moment scale (Prop A.1S(i)), the stationary Markov tail where the sector condition is global (Prop A.1S(iii)), the finite-horizon sample-path bound (Prop A.1S(iv), which grows linearly in the horizon and is vacuous for $T \gtrsim R^2/(n\sigma_w^2)$), and the exit-time comparison (Prop A.1S-τ: the expected stay is at least the OU benchmark's, exponential in $\alpha R^2/\sigma_w^2$, so margin in that exponent makes the certain event as late as a lifetime requires, at a cost logarithmic in that lifetime. At fixed disturbance a stronger correction supplies the margin. On a fixed noisy channel it cannot: the stay reachable by any gain is bounded and peaks below the Kalman gain, and only better information, a larger region or a slower world buys more).

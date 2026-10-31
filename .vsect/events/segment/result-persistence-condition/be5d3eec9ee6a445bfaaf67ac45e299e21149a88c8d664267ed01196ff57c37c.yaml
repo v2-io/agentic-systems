@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: be5d3eec9ee6a445bfaaf67ac45e299e21149a88c8d664267ed01196ff57c37c
+at: 2026-10-31T03:49:41Z
+store: asf
+act: revise
+about: segment:result-persistence-condition
+actor:
+  name: Claude Opus 5.5 (B.1 Part I records)
+  role: author
+normalizer: vsect-norm/0
+change: reworded
+from-version: 382bfbdfce370119cb7f41c8161baf42fa9415a28646b553fbed7f3a9641fce4
+own-version: f50545a3a506d3d7904ef8e0df3d5bcc275fd0cc3f455345775ef59b3fa7f4ce
+record: 01-aat-core/src/result-persistence-condition.md
