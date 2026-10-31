@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 52aa4d0f56a58d7478606daa899a79f4d573fed4ff1063196fd4e0f4080603d0
+at: 2026-10-31T02:53:26Z
+store: asf
+act: correct
+about: item:t1-gated-tempo-one-sided-noise-prescription
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+corrects: 7320e32d9174cf406909eaf242fb960b43b75bb1e8a3ebce812a19b4f337a663
+text: 'Correction to my wording: the clause at #result-adversarial-exponent-regimes:18 ''without changing tempo or gain'' is not false as written. It describes the lever (noise, not a tempo or gain change), and under fixed gain it is literally true. The defect is F226''s: the defense is presented as cheap while the framework''s own machinery (#emp-update-gain; higher U_o lowers the defender''s optimal gain, and its tempo and persistence margin with it) says the defender pays. Read it as one-sided, concealing the cost, not as a false clause.'
