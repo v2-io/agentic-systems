@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: a764d3fe76bf643d255c7961fe5ce545d48eb7bebeb77976ce619ed63d0d87b0
+at: 2026-10-31T02:17:45Z
+store: asf
+act: raise
+about: item:proposals-d-8-sp-16-independence-audit-as-empirica-ea97
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:proposals-d-8-sp-16-independence-audit-as-empirica-ea97
+source: 'AISI sweep-2 R43 fresh-eyes note (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-43.md): this item''s imported text pairs the instrument with ''C-BP3 calibration-laboratory framing''; no C-BP3 exists anywhere in the ledger (grep at 7584ab86). The calibration-laboratory template is SP-3, a member of imported item proposals-bundle-1-framework-face-reframe-paper-wr-96c4; read C-BP3 as SP-3.'

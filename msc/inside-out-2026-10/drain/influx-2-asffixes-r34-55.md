@@ -84,6 +84,48 @@ Checked at asf `main` d058c25e (R34–R42). `PROPOSALS.md` and `spikes/PROPOSED*
 - **`PROPOSALS.md` calls the examples `worked-example-*`.** **MOOT**: the file is gone.
 - `example-L1`'s on-policy matched-world arithmetic: **IN**.
 
+### R43 — `post-temporal-optimality`, `scope-evolving-software`, `obs-software-epistemic-properties`, `def-feature`
+
+- **The CIY-optimal sequencing of probes across P3's channel table** and **"effective observability" under a reading-time budget** (P1 inspectable only in principle). **WN**: `#obs-software-epistemic-properties` Working Notes bullets 3 and 5 state both as open; the body's P3 consequence (:49) states the sequencing heuristic. No ledger item; the WN lanes own them. R43's AISI reading (missed vulnerabilities in a P1-inspectable codebase were present and unread, so detection under a review budget is an allocation problem) adds a use for the effective-observability formalization, not a different question.
+- **Mechanism swap under shared randomness is invisible to behavioural testing** (`#deriv-mechanism-counterfactual-separation`). **IN** (exact). R43's reading onto unlearning and model-editing validation is AISI's to use.
+- **"C-BP3" in SP-16 is a dangling label.** **LEDGER** (a cross-reference fault inside an imported item): no C-BP3 exists; the calibration-laboratory template is SP-3 in imported Bundle 1. Raised onto the SP-16 item so whoever rechecks it reads it right.
+- **Code-quality bistability spike.** **LEDGER** `item:spikes-proposed-code-quality-bistability-2d-dynamical-fo-0dc9`. Raised once for R43, R46 and R47 together.
+
+### R44 — `result-specification-bound`, `der-change-expectation-baseline`, `impl-foundations-features`
+
+- **Channel capacity caps an LLM agent's tempo, $\mathcal T \le 2C_{\text{channel}}$** (a "belongs elsewhere" aside on `#deriv-persistence-cost`). **LEDGER** `item:llm-instantiations-from-01-audit-gold` (G.2) lists it as instantiation (6). Raised with R44's proposed test and the confound it guards (a channel-limited agent reads as cautious).
+- **TST-7, an operational definition of "sufficient".** **LEDGER** `item:todo-tst-7-specification-bound-operational-su-4bd6` (unassigned). Raised with the incident-class reading (specification failure vs deviation under sufficient information).
+- **Guessing under pressure: completions that pass surface tests at low $M_{\text{shared}}$** (from `AUDIT-WORKING-193847/74`'s Wandering Thoughts). **ASIDE** here: the audits drain read 193847/74 and disposed its finding (`drain/audits.md`, the 829314/05 + 193847/74 row); a reader's musing with no claim in canon to attach to. If it is ever wanted, its home is the TST-7 item.
+- Austin (2001)'s deadline threshold: **IN** (`02-tst-core/lit-review/specification-bound-prior-art.md`).
+
+### R45 — `scope-developer-agent`, `def-comprehension-time`, `def-implementation-time`, `der-dual-optimization`
+
+- **Developer-tempo channels (obs / explore / probe) and what a git-only record can recover per channel** (`spikes/tst-ideas-cycle-2026-05-21/spike-developer-tempo-channels.md`; OUTLINE `--GAP--` row `#def-developer-tempo-channels`). **LEDGER** `item:the-2026-05-21-tst-spike-cycle-carries-four-deve` (G.2), whose part 1 is exactly this, with the estimator asymmetry as the honest result. Raised with R45's per-channel failure taxonomy (and R46 §D's independent finding).
+- **TST-8 amortization factor.** **LEDGER** `item:todo-tst-8-turnover-multiplier-amortization-f-b626`; R45 adds nothing. No raise.
+- Comprehension dominance under turnover: **IN**.
+
+### R46 — `der-change-investment`, `der-code-quality-as-observation-infrastructure`, `impl-developer-agent`
+
+- **An AI agent under time pressure truncates search rather than degrading from stress; can't-vs-won't as a log discriminator.** **WN**: `#der-code-quality-as-observation-infrastructure` Working Notes bullet 5 states the doubt. The discriminator experiment is the report's own and AISI-facing; I carried the ASF-relevant half (the form of $g(\mathcal T,Q)$ may differ for AI implementers) onto the bistability item.
+- **Asymmetric loss-vs-recovery thresholds** (`audits/polish-and-sentiment-ledger.md` S6). **LEDGER** `item:persistence-hysteresis-hypothesis` (C.4) on `#result-persistence-condition`. Raised with the TST instance and R46's empirical test.
+- **Bistability not demonstrated.** **LEDGER**, as under R43.
+- **Missing `#def-developer-tempo-channels`.** **LEDGER**, as under R45.
+- S26 (OUTLINE ordering nit): the audits drain owns the polish ledger's rows (`9491b73f`); not re-checked here.
+
+### R47 — `hyp-conceptual-alignment`, `def-atomic-changeset`, `emp-changeset-size-principle`, `def-discontinuity-distance`
+
+- **The empirical-discontinuity dataset ($\alpha\approx0.06$–$0.12$, $R^2\approx0.52$–$0.72$, human commits only).** **MOOT** as a description of canon: `02-tst-core/empirical-discontinuity/FINDINGS.md` is gone, and `#hyp-exponential-cognitive-load` now reports the one non-circular measurement (elapsed time between commits, three histories), which *disfavors* the count form (:35), with a regression guard that an estimated time cannot test the hypothesis (:87). The reports' reading was correct of the August state and is overtaken.
+- **No AI-authored commit run; it should cross author type with dependency structure.** **LEDGER**: the count-vs-structure test is `question:does-per-commit-cost-grow-with-the-dependency-st`; the AI-substrate form is `item:ai-cognitive-load-step-shaped` (C.4). Raised onto the item (questions do not take `raise`).
+- **Atomic, content-addressed commits as forensically decomposable records; does that generalize to non-code agent actions?** **IN** for the software claim (`#obs-software-epistemic-properties` P5, Empirical Claim; `item:tst-cheap-falsifiers-and-measurement-design` (c) holds the atomic-commit data-quality point). The generalization to tool calls and browser actions is AISI's question, not a gap in TST, which scopes itself to software: **ASIDE** here.
+- **Bistability**: confirmed independently in R47's addendum; raised under R43.
+
+### R48 — `der-change-proximity-principle`, `hyp-exponential-cognitive-load`, `impl-code-structure`
+
+- **Checkpoint spacing $h\lt\log(1/\eta)/\log\Gamma$ and singular-subspace coverage** (`spikes/spike-transient-dependency-amplification.md`, interrupted on $\widehat J_F$). **LEDGER** `item:todo-transient-dependency-amplification-spike-441c` (G.2). Raised with R48's monitor-cadence reading. The ledger holds this one spike under three items (that one, `spikes-proposed-advanced-3-…-a826`, imported `spikes-proposed-transient-dependency-amplification-logog-5fe5`); I named all three in the raise rather than fold them myself.
+- **Percolation of representation errors (ADV #9), gated on the above.** **LEDGER** (`spikes-proposed-advanced-9-…-b0b6` and its imported twin). R48 adds nothing beyond the gating; no raise.
+- **Count vs dependency structure; $k\approx1.1$–$1.2$ from one atypical repository.** **MOOT/IN** as under R47: canon now says the count form is disfavored and states the structure form as the live candidate.
+- **AI agents re-pay the comprehension cost every episode** (829314/09). **LEDGER**, carried onto `item:ai-cognitive-load-step-shaped` with R47.
+
 ## What was read whole, sampled, not reached
 
 *(being written)*

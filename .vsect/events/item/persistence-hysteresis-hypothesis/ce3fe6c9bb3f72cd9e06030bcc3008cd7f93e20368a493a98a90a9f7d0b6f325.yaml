@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: ce3fe6c9bb3f72cd9e06030bcc3008cd7f93e20368a493a98a90a9f7d0b6f325
+at: 2026-10-31T02:17:46Z
+store: asf
+act: raise
+about: item:persistence-hysteresis-hypothesis
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:persistence-hysteresis-hypothesis
+source: 'AISI sweep-2 R46 §B (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-46.md), citing audits/polish-and-sentiment-ledger.md row S6: the same symmetric-threshold question arises in TST''s quality-to-tempo chain (#der-code-quality-as-observation-infrastructure, #impl-developer-agent): is recovery after quality loss the mirror image of the loss? R46 proposes the empirical test with the repo-history toolkit of 02-tst-core/empirical-discontinuity/. A strengthening of #result-persistence-condition would carry to the TST chain.'

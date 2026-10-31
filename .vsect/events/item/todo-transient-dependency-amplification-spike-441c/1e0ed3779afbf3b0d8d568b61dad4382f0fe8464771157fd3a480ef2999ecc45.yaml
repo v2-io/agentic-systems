@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 1e0ed3779afbf3b0d8d568b61dad4382f0fe8464771157fd3a480ef2999ecc45
+at: 2026-10-31T02:18:44Z
+store: asf
+act: raise
+about: item:todo-transient-dependency-amplification-spike-441c
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-transient-dependency-amplification-spike-441c
+source: 'AISI sweep-2 R48 lead item and addendum (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-48.md): judged this spike the strongest material in its TST slice and read its Corollary 2 (checkpoint spacing h < log(1/eta)/log Gamma) and §5 singular-subspace coverage as a first answer to monitor and review cadence: a checkpoint''s coverage of the amplified error subspace matters more than its frequency. Carries the spike''s own §8 limits; notes the general case is self-blocked on constructing J_F from observables, and that ADV #9 (percolation) is gated on it. The ledger holds this spike under three items (this one, spikes-proposed-advanced-3-transient-dependency-amplification-and-a826, imported spikes-proposed-transient-dependency-amplification-logog-5fe5); whoever takes it should fold them.'

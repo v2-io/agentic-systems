@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 55dc9b697e075d7d51a3beefd054830a7a4b223f8df36784003720b36bf7c504
+at: 2026-10-31T02:17:46Z
+store: asf
+act: raise
+about: item:the-2026-05-21-tst-spike-cycle-carries-four-deve
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:the-2026-05-21-tst-spike-cycle-carries-four-deve
+source: 'AISI sweep-2 R45 §1-2 and R46 §D (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-45.md, report-46.md): two sweep agents independently judged the developer-tempo-channel content the strongest material in their TST slices. R45 adds a reading for landing: the per-channel starvation signatures (comprehension-starved acts confidently on a wrong model; exploration-starved converges on its first plan; verification-starved ships with ungrounded confidence) are a failure taxonomy by access channel, under which aggregate success rates can look healthy while one channel fails; it notes the spike frames this only as a productivity diagnostic.'

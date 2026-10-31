@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 1acd6412729d1fe822bc62f1ab3aa8576b865339d25e60b35621e8ca079db8e4
+at: 2026-10-31T02:17:46Z
+store: asf
+act: raise
+about: item:spikes-proposed-code-quality-bistability-2d-dynamical-fo-0dc9
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-code-quality-bistability-2d-dynamical-fo-0dc9
+source: 'AISI sweep-2 R43 addendum, R46 §C and R47 addendum (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-43.md, report-46.md, report-47.md): three sweep agents found this row independently. R46 adds from the segment''s Working Note :5 (AI agents under time pressure truncate search rather than degrade from stress) that g(T, Q) may differ in form for AI implementers, which the 2D formalization should parametrize rather than assume.'

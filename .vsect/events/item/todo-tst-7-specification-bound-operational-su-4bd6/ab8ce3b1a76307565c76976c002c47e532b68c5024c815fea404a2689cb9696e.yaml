@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: ab8ce3b1a76307565c76976c002c47e532b68c5024c815fea404a2689cb9696e
+at: 2026-10-31T02:17:46Z
+store: asf
+act: raise
+about: item:todo-tst-7-specification-bound-operational-su-4bd6
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-tst-7-specification-bound-operational-su-4bd6
+source: 'AISI sweep-2 R44 §2 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-44.md): why closing TST-7 matters beyond TST: a computable sufficiency criterion separates two incident classes, an implementer that could not distinguish the intended behaviour from what it did (specification failure) and one given sufficient information that deviated anyway. The audits drain (drain/audits.md row on 829314/05, 193847/74) found the body now carries the (S1) distinguishability premise; the posterior-mass threshold is still open.'

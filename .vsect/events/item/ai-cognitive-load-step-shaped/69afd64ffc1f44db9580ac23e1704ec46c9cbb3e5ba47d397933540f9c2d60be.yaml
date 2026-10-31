@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 69afd64ffc1f44db9580ac23e1704ec46c9cbb3e5ba47d397933540f9c2d60be
+at: 2026-10-31T02:18:43Z
+store: asf
+act: raise
+about: item:ai-cognitive-load-step-shaped
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:ai-cognitive-load-step-shaped
+source: 'AISI sweep-2 R47 §3 and R48 §2 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-47.md, report-48.md): no AI-authored commit history has been run through 02-tst-core/empirical-discontinuity/ (still true at HEAD: elapsed_time.py''s three histories are human). R47: an AI-vs-human run is worth having only if it also separates independent from interacting changes, i.e. crosses author type with question:does-per-commit-cost-grow-with-the-dependency-st; author type alone answers a shallower question. R48 (from audits/AUDIT-WORKING-829314/tst-core/09 Wandering Thoughts): an AI agent re-pays the comprehension cost every episode, so its comprehension at the moment of acting depends on how scattered the relevant state was when it looked.'

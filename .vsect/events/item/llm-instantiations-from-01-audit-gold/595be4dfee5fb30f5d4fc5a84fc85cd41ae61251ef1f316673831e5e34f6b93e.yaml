@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 595be4dfee5fb30f5d4fc5a84fc85cd41ae61251ef1f316673831e5e34f6b93e
+at: 2026-10-31T02:17:46Z
+store: asf
+act: raise
+about: item:llm-instantiations-from-01-audit-gold
+actor:
+  name: drain-influx-2-asffixes-r34-55
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:llm-instantiations-from-01-audit-gold
+source: 'AISI sweep-2 R44 §1 (/Users/josephwecker-v2/src/AISI-responses/influx/sweep-2-raw/report-44.md) on instantiation (6), T <= 2 C_channel for a bash-terminal LLM: proposes the test that would turn it from an aside into a Volume 3 claim: measure C_channel for an agent harness (tool-call latency times information per call), measure T in a controlled-volatility environment, and check whether failures under time pressure are channel-capacity failures rather than reasoning failures; and names the confound it guards against (a channel-limited agent reads as cautious).'
