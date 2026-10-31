@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 729bf03aa38f0a1ffc3724f99e50f3489396630a438e566223482567544f3c2c
+at: 2026-10-31T02:12:37Z
+store: asf
+act: raise
+about: item:aat-s-core-has-no-operation-for-an-agent-reading
+actor:
+  name: drain-influx-2-firmatum
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:aat-s-core-has-no-operation-for-an-agent-reading
+source: '~/src/arch/vivarium/core/src/sketch-memory-as-core-to-agency.md (sketch, 2026-07-23): Joseph''s conviction that memory is core to agency and persistence, to be derived from AAT''s adaptation dynamics rather than imported as STM/LTM boxes, with ''ASF-side home may be more natural than vivarium core''. No content beyond the direction; it records that the gap this item names is also the steward''s stated research direction.'

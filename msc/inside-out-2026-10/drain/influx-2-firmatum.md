@@ -73,6 +73,44 @@ Canon moved under these rows today. A.1 landed the typed target $S_t=(\Omega_t,\
 
 Folded into item `outside-domains-that-meet-der-multi-timescale-st`. The scout's primary claim is stale: vivarium measured the state half solved. The live residue is a law that does not commute with restriction, and it bears on the renormalization paragraph, not on jumps. See U1.
 
+### U3, V1. The epistemic-machinery proposals (udon memo read whole; verisectorium `asf-implications` read whole; RC1 `01-SPINE` per the scout, 02–11 not read)
+
+**ADD → I.4**, item `declare-how-the-asf-store-computes-standing`. vsect's model says it shows raw evidence until a store declares how standing is computed, and `vsect kinds` at HEAD declares lines and rungs but no standing rule. The item gathers the four outside design inputs as one lineage: the udon memo, RC1, `asf-implications` and vivarium's machinery norms. It carries Joseph's dissolution of the "convergent lock" into the coherence default and `asf-implications`' caution that any field schema must be additive over the prose. What vsect already adopted is not re-proposed: support-kind is vsect's lines, and the event log replaced stage. Still open from the memo: `deliberately-corrected-away` as an event rather than a Working-Note kind (`format.sop.md` ~467), and stating the evidence-action that would raise a Max-attainable ceiling. One per-segment specimen, the `emp-update-gain` type fossil, was already an item; I appended the wider finding to it (`item:emp-update-gain-depends-render-type`). The audits drain's commit `9491b73f` swept that uncommitted append in with its own files, so it is in the record under that commit. `#obs-gated-tempo-advantage`'s `status: empirical` beside `type: observation` is still so at HEAD and is named in the I.4 item.
+
+The memo's item 7 (`#asf/{vol}/slug`) went to `item:todo-cross-component-slug-resolution-in-the-b-f1fb` (H.2) by `vsect raise`. There are two inbound dialects today, `#asf/1-aat/` (vivarium) and `#asf/aat/` (udon). Slugs are unique across the four volumes (checked), so the volume part is a reader's aid, and one inbound form could be named for the charter.
+
+### V2. Verisectorium truthification segments (`claim-dispatch-compounds` read whole; the rest by name)
+
+- **`claim-dispatch-compounds` → TST bistability gap.** Appended to `item:spikes-proposed-code-quality-bistability-2d-dynamical-fo-0dc9` (the item that already gathers every source on `#hyp-software-unmaintainability-bifurcation`), as a second-domain instance with a mechanism the code case lacks: false nuggets that reward widened search. It carries the P1–P6 caveat and the coherence-default caveat. Its uninstrumented measurement (time-to-first-relevant-find, residue counts, re-billing of settled questions) is close to what I.10 means to measure. That makes it worth the lead's eye for this effort's own design, not only for canon.
+- **`claim-comprehension-economics`.** **ASIDE** for canon: it is TST's `#der-dual-optimization` transmitted to document collections, and the P1–P6 run for documents (item `run-obs-software-epistemic-properties-own-transf`) is where its transfer assumption gets stated.
+- **`claim-strengthen-first`, `def-integration-replacement` (delete-test), `form-influx-membrane`, `form-steward-valve`, `form-state-flags-not-gates`, `norm-truth-above-self`, `obs-truth-failure-manifestations`.** **ASIDE** for canon, as the scout judged: theory about the truthification system, already present in asf as SOP practice. Their reader is I.6 (what the always-loaded surface should say) and I.9 (the delete-test is this drain's own criterion). No item: they are not owed work on any asf claim.
+- **V3 (Petri net of the truthification cycle) and V4 (how verisectorium handles influx).** **ASIDE**: process models for I, not read or run by me. V4's observation that verisectorium emptied `.integrated/` under the delete-test bears on I.8, and the lead already has it from the scout.
+
+### U6. udon `asf-dossier.md` §0 (the ten claims) and reading log
+
+**ASIDE**, with reasons. The scout offered §0 as an outside reader's one-page answer to "what is this theory trying to illuminate" (input for A.2/B.3). But it is a projection of July canon, its first claim is the $\kappa\times\mathcal A$ law canon deleted today, and its interventional claim uses the retired (C1)–(C3) gate letters. As a cold-reader test it is no longer cold to today's canon; H.3 wants fresh readers of the current text. The six 03-llm-core rows its reading log lists as missing are still missing at HEAD, and every one already has ledger items (2–5 each, by grep).
+
+### L7. Smaller vivarium items
+
+- **`sketch-memory-as-core-to-agency`.** Raised onto `item:aat-s-core-has-no-operation-for-an-agent-reading` (G.2). It has no content beyond the direction, but it records that the gap the item names is also the steward's stated research direction.
+- **`scope-agent-seam-constraints` (C2′ and the KV-cache).** **IN**, as the scout found: `#disc-w1-structural-bound-boundary`.
+- **The machinery norms** (`norm-declaration-must-convict`, `norm-caught-disciplines-become-mechanisms`, `norm-bias-vs-noise`, `norm-instrument-before-tuning`). They are in the I.4 item, and the second is in the P1–P6 item.
+- **The DECISIONS lesson** (an overclaim re-entered canon by being read out of `.archive/`, "where they arrive shaped like canon"). **ASIDE**: a process lesson for integrators mining archives. The lead has it from the scout.
+
+### P. `firmatum/principles/`
+
+The worked instances for `#disc-tool-interface-design` are named in the G.1 item `inputs-for-authoring-disc-tool-interface-design`, and `form-agentic-eyes`' use of the deleted law is in the F.3 item. Otherwise **ASIDE**: tooling doctrine that consumes canon.
+
+### R. `firmatum/practica/`
+
+- **(b) Joseph's "AAT crystallization"** (2026-05-19: bringing agent-knowledge into the substrate by accumulation is a category error). Raised onto the G.0 item `argued-claims-about-truth-stance-and-moral-scope`. It is an argued claim with no canon home, and it sits in apparent tension with `#hyp-experiential-training` line 31 (observations may "permanently alter $M_0^{\text{weights}}$"). G.0's placement should name that tension.
+- **(a) "The durable channel is agency-granting conditions for the successor's animation".** **ASIDE** for canon: tool design, single-estate "convergence" (the harvest's own successor note recounts it), and Joseph's "I'm not sure yet" on its recursive form. Its practice is AGENTIC-DELEGATION, which is already the always-loaded carrier.
+- **(c) operata constraints E3–E9.** **ASIDE**: engineering constraints for a tool, not theory.
+
+### A. `~/src/address-theory/`
+
+No theory bearing (the scout's grep agrees with mine). Its vocabulary (binding, dangle, collide; designator vs description) is named in the H.2 raise on cross-volume references. Its process lesson, that definitions want a different form from claims, I **set ASIDE** here. It is input for whoever takes up F.4/H, and I found no ledger item it changes.
+
 ## What was read whole, sampled, not reached
 
 *(being written)*

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: ac5e7133c20da9d304ab619cc77cc4ea656635f812bf1c3972b895a714954818
+at: 2026-10-31T02:12:57Z
+store: asf
+act: raise
+about: item:argued-claims-about-truth-stance-and-moral-scope
+actor:
+  name: drain-influx-2-firmatum
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:argued-claims-about-truth-stance-and-moral-scope
+source: '~/src/arch/firmatum/practica/msc/02-normative-harvest.md line 29: Joseph''s ''AAT crystallization'' (2026-05-19), that the field''s default assumption, that agent-knowledge can be brought into the substrate by sufficient accumulation, is a category error (training-as-substrate is not the same kind of thing as agent-knowledge). An argued claim with no canon home; it bears on 03-llm-core''s weight/context split (#disc-m-preservation''s M_0^weights as a ''pretrained prior'' source of sufficiency, line 66) and stands in apparent tension with #hyp-experiential-training line 31 (observations may ''permanently alter M_0^weights''), which G.0''s decision should name when it places it. The practica reframe built on it (''the durable channel is agency-granting conditions for the successor''s animation, not content-transmission'', msc/02-handoff-for-distillation.md line 13) is tool design, and its recursive form Joseph marked ''I''m not sure yet'' (line 127).'
+text: a further argued claim for the same G.0 placement decision
