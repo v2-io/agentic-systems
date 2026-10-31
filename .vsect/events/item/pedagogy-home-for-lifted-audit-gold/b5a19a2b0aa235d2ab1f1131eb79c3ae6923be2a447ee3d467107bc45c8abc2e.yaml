@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: b5a19a2b0aa235d2ab1f1131eb79c3ae6923be2a447ee3d467107bc45c8abc2e
+at: 2026-10-31T02:24:16Z
+store: asf
+act: raise
+about: item:pedagogy-home-for-lifted-audit-gold
+actor:
+  name: drain-wn-01-gold-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:pedagogy-home-for-lifted-audit-gold
+source: items/imported/practica-pedagogy-initially-needs-vision-plan-1588.md (PRACTICA.md:38, 'Pedagogy (initially needs vision & plan)', no owner)
+text: PRACTICA's standing 'pedagogy needs vision and plan' line has no owner and no content; the home this item asks for is the first concrete part of that plan, so the two should resolve together.

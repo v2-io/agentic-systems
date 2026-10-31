@@ -36,7 +36,25 @@ Cross-surface: for each item I consulted a slug-to-mentions index over `audits/`
 
 ## Read ledger
 
-*(filled as the work proceeds)*
+The work was split four ways: this file (Off-ramp, Follow-ups, preambles, guards), and three forks of this agent, each writing a sibling file that is part of this drain's record: `wn-01-gold-belongs.md` (Belongs elsewhere), `wn-01-gold-readers.md` (Readers often ask, as H.4 items) and `wn-01-gold-pedagogy.md` (Candidate Brief, Discussion and figures, plus the 2026-08-22 teaching-frames block in `#impl-persistence-and-limits` that the extractor missed). Each sibling carries its own read ledger.
+
+**Read whole, by me:**
+- The 57 Off-ramp extracts, plus the two inline off-ramp bullets outside `####` blocks (`#disc-adversarial-coupling-pressure`:163, `#form-consolidation-dynamics`:186).
+- All 245 Follow-up extracts.
+- The 7 regression-guard extracts.
+- The certified-stream sentences of the 119 preambles. The rest of each preamble (coverage and attribution) was skimmed, not read.
+- `audits/AUDIT-WORKING-526815/00-running-outline.md` rows F182–F221.
+- Every existing item I raised a source on: its title and restatement, not always the full body.
+
+**Checked against the body:** each disposition marked in canon, present, superseded or gone was checked by reading or grepping the segment body (Working Notes excluded) at the line cited. Grep-negative verdicts ("phrase absent", "not found") are evidence, not proof: a reworded survival would be missed.
+
+**Not done, or only partly done:**
+- F63–F65 on `#form-structural-change-as-parametric-limit` (follow-up #169).
+- F60/F61 on `#disc-credit-assignment-boundary` (recorded in a raise, not verified).
+- F207, F212, F218 (in the residue item, marked not verified).
+- `#scope-adaptive-system` follow-up #222: the A.1 lane is editing that segment.
+- The 526815 F53 claim (left to the audits drain's item).
+- I did not run `memorata-search` over transcripts for each item. The cross-surface check was the slug index over `audits/`, `spikes/`, `msc/`, `items/`, `questions/` and `reviews/`, phrase greps of the ledger, and the other drains' files where they touched the same rows. That is mostly the `audits.md` F-row table and `wn-01-other.md`.
 
 ## Dispositions
 
