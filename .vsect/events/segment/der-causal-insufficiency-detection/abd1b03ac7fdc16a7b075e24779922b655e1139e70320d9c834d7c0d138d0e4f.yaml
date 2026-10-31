@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: abd1b03ac7fdc16a7b075e24779922b655e1139e70320d9c834d7c0d138d0e4f
+at: 2026-10-31T03:14:03Z
+store: asf
+act: revise
+about: segment:der-causal-insufficiency-detection
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 63ddfbedf3372912a64e10c12593f05882ab040f52edfa8b1640efc5a58b54bd
+own-version: 5363d0e4a89ce724eab8b22277cc627000c4abd00d0cbb1aae554b37c7f8e35f
+record: 01-aat-core/src/der-causal-insufficiency-detection.md

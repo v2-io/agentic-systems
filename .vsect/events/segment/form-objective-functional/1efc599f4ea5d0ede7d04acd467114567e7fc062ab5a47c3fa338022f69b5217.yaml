@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 1efc599f4ea5d0ede7d04acd467114567e7fc062ab5a47c3fa338022f69b5217
+at: 2026-10-31T03:14:05Z
+store: asf
+act: revise
+about: segment:form-objective-functional
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: ee71e3695f00d5346d1a10d7627e02e600d16bc733c981cfce3265427dc4afce
+own-version: 99b4ff434893d307522e91246979ed599cc2d3c415fc605206dfab71df46c74b
+record: 01-aat-core/src/form-objective-functional.md

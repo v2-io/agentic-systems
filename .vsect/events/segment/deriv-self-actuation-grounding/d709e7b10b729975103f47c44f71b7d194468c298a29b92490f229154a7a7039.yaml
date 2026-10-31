@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: d709e7b10b729975103f47c44f71b7d194468c298a29b92490f229154a7a7039
+at: 2026-10-31T03:14:05Z
+store: asf
+act: revise
+about: segment:deriv-self-actuation-grounding
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 4ae225c6f9c0f0c4dc82af65db1d15787a4aa793a2f98bb21f695465d55893c2
+own-version: d3215b11c086839ac3a4d0b653ab30ed36e5372b5eb1b0fc188f50b9c79a4470
+record: 01-aat-core/src/deriv-self-actuation-grounding.md

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: a24de2289085f8b2d8401527032e9109de3859733cfc8348b151b844e0cc06fa
+at: 2026-10-31T03:14:02Z
+store: asf
+act: revise
+about: segment:def-agent-spectrum
+actor:
+  name: Claude Fable 5.1 (Part II integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 82af9539a2f4c9bb11324137f9834061eb00d6bb3be6ccd6318f77095d583290
+own-version: 5d3bba0901b8d2efc74fa09f7a6e1034608272de46713edc4503a02890a2e3e4
+record: 01-aat-core/src/def-agent-spectrum.md
