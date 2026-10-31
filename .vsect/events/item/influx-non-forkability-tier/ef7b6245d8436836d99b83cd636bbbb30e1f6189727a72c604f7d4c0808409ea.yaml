@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: ef7b6245d8436836d99b83cd636bbbb30e1f6189727a72c604f7d4c0808409ea
+at: 2026-10-31T02:13:52Z
+store: asf
+act: raise
+about: item:influx-non-forkability-tier
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:influx-non-forkability-tier
+source: AISI sweep 2 reports 01, 03, 08, 58-60 repeat the 'lossy phi implies fork-undetectability' mechanism (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-mine-01-16.md, ASF-FIXES-part4.md).

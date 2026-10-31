@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 2068d62753c28ea489cc17fd696a42fa46df72b1a466d091e9768f13a41089c7
+at: 2026-10-31T02:13:54Z
+store: asf
+act: raise
+about: item:untested-catalog-predictions-for-e
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:untested-catalog-predictions-for-e
+source: 'AISI sweep 2: report 05 (real multi-channel monitor A/B against #deriv-tempo-additivity''s additive prediction), report 08 (supervisor-cadence sweep across #der-multi-timescale-stability''s epsilon_max; residual-signature diagnostic on LLM-agent traces from #result-structural-adaptation-necessity WN) (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-mine-01-16.md).'

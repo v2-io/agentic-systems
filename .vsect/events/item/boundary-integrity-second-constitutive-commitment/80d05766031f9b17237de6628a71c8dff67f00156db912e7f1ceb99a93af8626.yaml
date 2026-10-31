@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 80d05766031f9b17237de6628a71c8dff67f00156db912e7f1ceb99a93af8626
+at: 2026-10-31T02:13:53Z
+store: asf
+act: raise
+about: item:boundary-integrity-second-constitutive-commitment
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:boundary-integrity-second-constitutive-commitment
+source: 'AISI sweep 2 report 01 §3 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-mine-01-16.md, Report 01): prompt injection, context poisoning, weight tampering as violations of the precondition that makes ''agent'' the unit.'

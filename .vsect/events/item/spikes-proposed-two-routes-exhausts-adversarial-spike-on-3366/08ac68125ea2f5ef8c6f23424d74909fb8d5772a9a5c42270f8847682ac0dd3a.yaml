@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 08ac68125ea2f5ef8c6f23424d74909fb8d5772a9a5c42270f8847682ac0dd3a
+at: 2026-10-31T02:13:54Z
+store: asf
+act: raise
+about: item:spikes-proposed-two-routes-exhausts-adversarial-spike-on-3366
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-two-routes-exhausts-adversarial-spike-on-3366
+source: AISI sweep 2 reports 09 (item C) and 10 (item A) (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-mine-01-16.md).

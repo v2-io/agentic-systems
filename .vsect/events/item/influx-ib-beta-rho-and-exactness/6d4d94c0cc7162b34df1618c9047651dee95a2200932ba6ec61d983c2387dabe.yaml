@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 6d4d94c0cc7162b34df1618c9047651dee95a2200932ba6ec61d983c2387dabe
+at: 2026-10-31T02:13:53Z
+store: asf
+act: raise
+about: item:influx-ib-beta-rho-and-exactness
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:influx-ib-beta-rho-and-exactness
+source: 'AISI sweep 2 reports 01 and 03 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-mine-01-16.md): status exact vs weaker sub-claim (613842), and the Tishby-Zaslavsky citation. At 1f8240df the citation is repaired (#form-information-bottleneck:56 gives the variational bound to Alemi 2017), but the sentence still says the IB objective IS ''the rate-distortion specialization of the variational free energy'', stronger than the relation :56 then describes; WN :77 is stale.'

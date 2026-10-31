@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 352641a497181586119a341170126b1e75930b5d70700b5b0fdc06c9c36db407
+at: 2026-10-31T02:13:53Z
+store: asf
+act: raise
+about: item:spikes-proposed-r2-detection-latency-sharpening-under-mo-d44a
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-r2-detection-latency-sharpening-under-mo-d44a
+source: AISI sweep 2 reports 04, 05, 19 each found it unrun (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-mine-01-16.md R04/R05; ASF-FIXES-part2.md R19).

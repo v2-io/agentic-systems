@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: e4f07c1b8a607bf0f9bebd0d847439481bbd294a5ba69364eaed2dece6648f39
+at: 2026-10-31T02:13:52Z
+store: asf
+act: raise
+about: item:proposals-surfaced-2026-05-29-qualitative-gem-hunt-14e1
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:proposals-surfaced-2026-05-29-qualitative-gem-hunt-14e1
+source: AISI sweep 2 (Aug 2026), reports 01, 03, 08, 58, 59, 60 restate SP-27 as unlanded (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-mine-01-16.md R01/R03/R08; ASF-FIXES-part4.md R58-R60). Note the mechanism as they state it is the refuted one (see item:influx-non-forkability-tier).

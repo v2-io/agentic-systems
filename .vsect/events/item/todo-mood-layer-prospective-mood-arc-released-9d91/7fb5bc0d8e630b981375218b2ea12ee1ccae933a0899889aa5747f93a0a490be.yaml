@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 7fb5bc0d8e630b981375218b2ea12ee1ccae933a0899889aa5747f93a0a490be
+at: 2026-10-31T02:13:54Z
+store: asf
+act: raise
+about: item:todo-mood-layer-prospective-mood-arc-released-9d91
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-mood-layer-prospective-mood-arc-released-9d91
+source: 'AISI sweep 2 report 07 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-mine-01-16.md, Report 07): #der-mood-timescale optimizes mood as estimator while #def-mood uses it as modulator (still open at #der-mood-timescale WN :55); asymmetric-loss failure boundary noted.'

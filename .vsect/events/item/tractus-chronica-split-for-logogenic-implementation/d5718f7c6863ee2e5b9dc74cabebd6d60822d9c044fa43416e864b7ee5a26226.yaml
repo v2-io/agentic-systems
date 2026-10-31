@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: d5718f7c6863ee2e5b9dc74cabebd6d60822d9c044fa43416e864b7ee5a26226
+at: 2026-10-31T02:13:53Z
+store: asf
+act: raise
+about: item:tractus-chronica-split-for-logogenic-implementation
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:tractus-chronica-split-for-logogenic-implementation
+source: 'AISI sweep 2 report 01 §4 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-mine-01-16.md, Report 01): divergence between the two records as the forensic signal; 2025-09 tool_use-stripping incident as worked example.'

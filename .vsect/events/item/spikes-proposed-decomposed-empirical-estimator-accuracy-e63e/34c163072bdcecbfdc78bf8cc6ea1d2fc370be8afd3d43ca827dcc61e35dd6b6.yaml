@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 34c163072bdcecbfdc78bf8cc6ea1d2fc370be8afd3d43ca827dcc61e35dd6b6
+at: 2026-10-31T02:13:55Z
+store: asf
+act: raise
+about: item:spikes-proposed-decomposed-empirical-estimator-accuracy-e63e
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-decomposed-empirical-estimator-accuracy-e63e
+source: 'AISI sweep 2 reports 11, 25, 37 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-mine-01-16.md; ASF-FIXES-part2.md; ASF-FIXES-part3.md): capability pulls the leakage bound both ways (374162 b10-v.6).'

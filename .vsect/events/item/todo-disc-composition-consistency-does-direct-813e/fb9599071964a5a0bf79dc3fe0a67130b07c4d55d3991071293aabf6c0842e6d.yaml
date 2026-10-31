@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: fb9599071964a5a0bf79dc3fe0a67130b07c4d55d3991071293aabf6c0842e6d
+at: 2026-10-31T02:13:55Z
+store: asf
+act: raise
+about: item:todo-disc-composition-consistency-does-direct-813e
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-disc-composition-consistency-does-direct-813e
+source: 'AISI sweep 2 reports 11 (item 3) and 24 (unknown 4) (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-mine-01-16.md; ASF-FIXES-part2.md): F122 goal-blind projection premise still missing from Case 1 at 1f8240df.'

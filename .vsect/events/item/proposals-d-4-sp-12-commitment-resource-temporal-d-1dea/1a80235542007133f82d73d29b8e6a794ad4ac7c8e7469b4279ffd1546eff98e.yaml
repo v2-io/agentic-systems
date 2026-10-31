@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 1a80235542007133f82d73d29b8e6a794ad4ac7c8e7469b4279ffd1546eff98e
+at: 2026-10-31T02:13:55Z
+store: asf
+act: raise
+about: item:proposals-d-4-sp-12-commitment-resource-temporal-d-1dea
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:proposals-d-4-sp-12-commitment-resource-temporal-d-1dea
+source: AISI sweep 2 reports 12 and 55 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-mine-01-16.md; ASF-FIXES-part4.md).
