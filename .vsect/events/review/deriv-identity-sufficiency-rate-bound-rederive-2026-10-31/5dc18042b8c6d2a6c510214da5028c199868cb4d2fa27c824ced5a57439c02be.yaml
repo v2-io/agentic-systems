@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 5dc18042b8c6d2a6c510214da5028c199868cb4d2fa27c824ced5a57439c02be
+at: 2026-10-31T03:01:06Z
+store: asf
+act: take
+about: review:deriv-identity-sufficiency-rate-bound-rederive-2026-10-31
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+items:
+- C1:check
+review: reviews/deriv-identity-sufficiency-rate-bound-rederive-2026-10-31.md
+review-version: 6bc0fe2b1a5c962001f552b31d2a434703cb3a8cb701f1dc36d7fb54e93ec481

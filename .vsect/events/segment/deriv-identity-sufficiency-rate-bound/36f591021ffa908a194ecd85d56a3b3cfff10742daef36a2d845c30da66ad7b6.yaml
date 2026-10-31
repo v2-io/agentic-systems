@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 36f591021ffa908a194ecd85d56a3b3cfff10742daef36a2d845c30da66ad7b6
+at: 2026-10-31T03:01:15Z
+store: asf
+act: correct
+about: segment:deriv-identity-sufficiency-rate-bound
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+corrects: b6bb0daa66fef919ff9b700669e1a5f2a93d9ddbea3aec08729f9707d2204cc4
+text: 'Read-check on correspondence at 7a74d62f (the Epistemic Status paragraph against #def-identity-sufficiency''s Which-law paragraph and #hyp-substrate-transfer-asymmetry), not a rederive; the inline take defaulted the act. Context: msc/inside-out-2026-10/c1-lanes/vol4-check-3.md.'

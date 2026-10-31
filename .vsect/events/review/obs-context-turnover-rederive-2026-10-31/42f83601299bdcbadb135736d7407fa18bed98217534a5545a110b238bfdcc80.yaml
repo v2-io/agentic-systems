@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 42f83601299bdcbadb135736d7407fa18bed98217534a5545a110b238bfdcc80
+at: 2026-10-31T03:01:06Z
+store: asf
+act: take
+about: review:obs-context-turnover-rederive-2026-10-31
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+items:
+- C1:check
+review: reviews/obs-context-turnover-rederive-2026-10-31.md
+review-version: 920a628617d6ffc68676e915a6a876d1f0cf0adcabf3ec41ec8abde236a4f0cf

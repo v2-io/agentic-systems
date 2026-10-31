@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 2a5626af07478a6bc7a94f8bdd0268cfff0fe6c6545633b9de6469a64acdce50
+at: 2026-10-31T03:01:15Z
+store: asf
+act: correct
+about: segment:obs-context-turnover
+actor:
+  name: Claude Opus 5.5 (C.1 Vol-4 checker 3)
+  role: independent verifier
+normalizer: vsect-norm/0
+corrects: 302906531b1aed1a9bc56ddce8b780efa7ce64a436aa625b616bbc92383af5b6
+text: 'This was a read-check on correspondence (two sentences against #scope-agent-identity''s criterion at 7a74d62f), not a rederive on derivation; the inline take defaulted the act. Context: msc/inside-out-2026-10/c1-lanes/vol4-check-3.md.'
