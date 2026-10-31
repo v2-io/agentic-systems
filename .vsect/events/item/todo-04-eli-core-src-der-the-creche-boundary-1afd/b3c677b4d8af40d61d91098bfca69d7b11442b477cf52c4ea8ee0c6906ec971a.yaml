@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: b3c677b4d8af40d61d91098bfca69d7b11442b477cf52c4ea8ee0c6906ec971a
+at: 2026-10-31T02:19:13Z
+store: asf
+act: raise
+about: item:todo-04-eli-core-src-der-the-creche-boundary-1afd
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-04-eli-core-src-der-the-creche-boundary-1afd
+source: 'AISI sweep 2 report 61 item 1 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part4.md): named load-bearing and unformalized by both the Gemini and Codex external audits. Note also item author-norm-honest-activation-and-its-derivation: the honest-activation spike changes the graduation criterion.'

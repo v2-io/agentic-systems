@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 9edfcbd159718b0cfeb6ce3d23f1a71a09b072c7cc9824fe7a14c8ccfc417846
+at: 2026-10-31T02:19:11Z
+store: asf
+act: raise
+about: item:todo-loga-missing-stubs-genuinely-absent-in-0-9487
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-loga-missing-stubs-genuinely-absent-in-0-9487
+source: 'AISI sweep 2 report 57 §A (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part4.md, Report 57): #impl-closed-loop-interiority draws two of its headline subsections from missing files; at 1f8240df :32 says #der-self-referential-closure ''addresses'' self-maintenance and derives a ''self-maintenance feasibility window'' from it, and :38 says #def-cognitive-fusion ''defines'' resonance; both files are absent (03-llm-core/OUTLINE.md:142-143 ''missing''). Reports 53-55 raise the same for #obs-backward-inference-empathy, #form-structured-rich-context, #der-active-salience-management.'

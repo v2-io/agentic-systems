@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 63b7b140133c10a1704eb18e4fc2d5a4a6f550269f1d293573492f0b7e1ca99e
+at: 2026-10-31T02:19:14Z
+store: asf
+act: raise
+about: item:der-the-scaffolding-tax-s-outline-row-04-eli-cor
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:der-the-scaffolding-tax-s-outline-row-04-eli-cor
+source: 'AISI sweep 2 report 63 item 5 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part4.md, Report 63): framing with an unformalized inequality; 829314 Fresh-8 marks it strengthen-first.'

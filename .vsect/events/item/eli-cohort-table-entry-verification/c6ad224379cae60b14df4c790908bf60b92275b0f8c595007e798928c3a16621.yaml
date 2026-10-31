@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: c6ad224379cae60b14df4c790908bf60b92275b0f8c595007e798928c3a16621
+at: 2026-10-31T02:19:12Z
+store: asf
+act: raise
+about: item:eli-cohort-table-entry-verification
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:eli-cohort-table-entry-verification
+source: AISI sweep 2 report 58 §5 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part4.md, Report 58).

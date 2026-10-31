@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: d1bdf67e52a5dd6119ed9551c1967aaaa882669f98ae3de46ccf7512884466fc
+at: 2026-10-31T02:19:11Z
+store: asf
+act: raise
+about: item:todo-def-cognitive-fusion-framing-fix-class-1-b2c1
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-def-cognitive-fusion-framing-fix-class-1-b2c1
+source: 'AISI sweep 2 reports 56 and 57 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part4.md): the missing segment''s claim and its collision with the ELI named Resonance.'

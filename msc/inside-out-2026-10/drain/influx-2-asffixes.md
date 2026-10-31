@@ -134,12 +134,37 @@ Checked at asf `main` `782342c2`–`1f8240df` (2026-10-30, evening). "WN :n" mea
 | R32: Skalse 2022 bridge | LEDGER (see R09 row) | — |
 | R33: none found | — | — |
 
-*(R56–R63 being written)*
+### Volume 3 §03.III and Volume 4 (R56–R63)
+
+| Source entry | Disposition | Where / item |
+|---|---|---|
+| R56, R57: `#def-cognitive-fusion` asserts a Class 1 macro-agent without mechanism; name collides with the ELI Resonance | LEDGER | `todo-def-cognitive-fusion-framing-fix-class-1-b2c1` (raise) |
+| R57: `#impl-closed-loop-interiority` builds two headline subsections on missing files | LEDGER, still a defect at HEAD: `:32` says `#der-self-referential-closure` "addresses" self-maintenance and derives a "self-maintenance feasibility window" from it; `:38` says `#def-cognitive-fusion` "defines" resonance; neither file exists (`03-llm-core/OUTLINE.md:142-143` mark them `missing`) | `todo-loga-missing-stubs-genuinely-absent-in-0-9487` (raise; its restated form already covers impl passages citing absent segments as present) |
+| R58, R61: SP-13, the transition into agency; whether emergence conditions belong in AAT core | LEDGER | `proposals-d-5-sp-13-emergence-conditions-as-formal-ed68` (raise) |
+| R58: `#def-eli-cohort` rows unverified | LEDGER | `eli-cohort-table-entry-verification` (raise) |
+| R58: gold-lift plan's E1 batch omits `#scope-eli`, `#def-five-constitutive-factors`, `#def-eli-cohort` though 773921/112, 114, 115 hold their reflections | LEDGER (I.5) | `give-the-unlifted-audit-gold-a-destination-wave` (raise) |
+| R58, R59, R60: SP-27 | LEDGER (see R01 row) | — |
+| R59, R61, R62, R63: missing Volume 4 rows (`def-character-aspiration-dialectic`, `obs-axiom-genesis`, `obs-substrate-independence`, `form-constitutive-utterance`, `der-substrate-independent-persistence`, `der-the-creche-boundary`, `def-gradient-causal-memory`, `def-century-scale-event-log`, `norm-temporal-coherence-markers`, `form-congruency-selfhood`, `def-the-four-views`, `der-the-scaffolding-tax`) | LEDGER: all still missing at HEAD (`ls`), each with an item | `todo-eli-missing-stubs-twelve-genuinely-absen-4828` (raise) and the per-segment items (`todo-04-eli-core-src-*`, `todo-der-substrate-independent-persistence-in-bc7f`, `write-obs-substrate-independence-as-what-the-rec`, `todo-author-the-three-missing-staged-outline-76f2`) |
+| R59: rate-bound normalized against continuous MI while the threshold needs a quantized version | IN: `#der-identity-continuity-threshold:58` states that its statements are at fidelity $\Delta$ while the rate bound displays the raw continuous quantity; the report itself calls this honest self-description; no defect | — |
+| R60: mono build resolves slugs only within the requesting volume | LEDGER | `todo-cross-component-slug-resolution-in-the-b-f1fb` (raise) |
+| R60, R61: substrate-transfer asymmetry, derived symmetric no-go beside an observed asymmetry | LEDGER (twice: `spikes-proposed-advanced-11-substrate-transfer-asymmetry-origin-d-9171`, `imported/spikes-proposed-substrate-transfer-asymmetry-origin-or-3-0be3`), plus `substrate-transfer-asymmetry-two-halves-empirica` | raised on the first |
+| R61: `#der-the-creche-boundary` missing and load-bearing | LEDGER | `todo-04-eli-core-src-der-the-creche-boundary-1afd` (raise, pointing at the honest-activation spike's changed graduation criterion) |
+| R61: `#obs-developmental-trajectory` has no Epistemic Status | ADD (A.3), widened: the same grep finds three more live segments outside the impl/intro layer with none (`#obs-evaluation-metrics`, `#norm-interiority-default`, `#scope-moral-continuity`) | `four-live-segments-outside-the-impl-intro-layer` (new) |
+| R62: `#norm-honest-activation` row claims a "guarantee" with no segment | LEDGER | `author-norm-honest-activation-and-its-derivation` (raise) |
+| R63: `#def-the-four-views`, `#der-the-scaffolding-tax` sketched in 829314/06 with "proves" language | LEDGER | `der-the-scaffolding-tax-s-outline-row-04-eli-cor` (raise), `imported/todo-04-eli-core-src-def-the-four-views-md-co-b05d` |
 
 ## What was read whole, sampled, not reached
 
-*(being written)*
+- **Read whole:** all five `ASF-FIXES*` files (1,432 lines; duplicates confirmed byte-identical) and `BRIEF-fixes-extract.md`, the extractor's brief, which explains the lossiness: it cut verbatim "defect, gap or proposal" passages and the sweep agents had been asked for research questions, so most entries are restated open questions, not defects.
+- **Checked against canon at HEAD:** every entry above that asserts something about a segment's text, by reading the cited lines; every LEDGER disposition by opening or grepping the item. Where I wrote "WN", I confirmed the Working Note exists and did not judge its content beyond whether it is a defect.
+- **Read in part:** `report-29.md` §1 (to trace the gate trilemma), `IDEATION.md` lines 832–939 (R09, to read item E and its addendum). The other R01–R33 and R56–R63 reports were not reread; the `ASF-FIXES` extract was my reading of them, and its omissions are the extractor's (it skipped AISI-side and research-question material by design).
+- **Not mine:** R34–R55 (both their `ASF-FIXES` entries and `IDEATION.md` reports) are the helper's, in `influx-2-asffixes-r34-55.md`. Its first run stopped on the usage limit; it was resumed after the reset.
+- **Not reached:** the seven `influx/spikes/` gate spikes and the 17 distillation tables (outside this brief's sources; the scout's §1.5 names them).
 
 ## Adjacent findings
 
-*(being written)*
+- **Duplicate items from the tracker import (I.3).** When `spikes/PROPOSED.md` and `spikes/PROPOSED-ADVANCED.md` both listed a spike, the import made two items. Pairs I hit: Skalse 2022 (`spikes-proposed-advanced-17-…-8188` / `imported/spikes-proposed-skalse-2022-…-352d`); modularity game (`…-advanced-13-…-4436` / `imported/…-modularity-strategic-asymmetry-game-theo-1392`); categorical cybernetics (`…-advanced-15-…-9642` / `imported/…-categorical-cybernetics-first-fit-check-3158`); substrate-transfer asymmetry (`…-advanced-11-…-9171` / `imported/…-substrate-transfer-asymmetry-origin-or-3-0be3`); Roberts 1979 (`…-advanced-16-…-0922` / `imported/…-roberts-1979-affine-maximizers-as-candid-09f9`); and probably symbiogenesis (`…-advanced-2-…-59b7` / `imported/…-symbiogenesis-bifurcation-promotion-repa-5d29`: both target the saddle-node threshold of `#hyp-symbiogenic-composition`, but one is a promotion repair and one a bifurcation-theory spike, so this may be two pieces of work). Likely systematic across the two files. I raised on one of each pair and merged nothing.
+- **INTENT A.3's status line is off.** It says 29 segments lack an Epistemic Status, "all in the `impl-*`/intro layer". At `1f8240df` the grep gives 27, and four are claim segments outside that layer (item `four-live-segments-outside-the-impl-intro-layer`).
+- **A body defect the ledger had only as a Working Note.** `t1-gated-tempo-one-sided-noise-prescription` named `#result-adversarial-exponent-regimes`'s WN :99; the same prescription is in its body at `:18`, with the added false clause "without changing tempo or gain". Raised on the item.
+- **`vsect raise` takes items and findings, not questions.** Two LEDGER targets here are questions (`questions/identifiability-floors-compose-or-interfere`, `questions/agent-boundary-choice-principle`); their sources are recorded in this file only.
+- **About the source.** The `ASF-FIXES` extraction was the most direct unrouted list, but its value as a defect list was low: of roughly 130 entries in my share, I found three canon defects not already on the ledger in the form found (the A.3 four, the body site of the noise prescription, and the self-coupling citations and population), one prior-art gap (List & Pettit), and many confirmations that August's open items are now fixed (SP-30, the mismatch sign, the IB citation, F180, `#def-strategy-dag`'s Epistemic Status, `#impl-strategy-structure`'s "unique escape", the persistence "iff", the blank-wall propagation). Most of the rest was already imported from `PROPOSALS.md` / `TODO.md` / `PROPOSED*.md`, which the sweep agents were reading.

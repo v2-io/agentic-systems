@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 139155f275a6175a44a97e9d200ef59880fddc73612f5e4d6c6b97fddb1ed160
+at: 2026-10-31T02:19:12Z
+store: asf
+act: raise
+about: item:proposals-d-5-sp-13-emergence-conditions-as-formal-ed68
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:proposals-d-5-sp-13-emergence-conditions-as-formal-ed68
+source: 'AISI sweep 2 reports 58 (a) and 61 addendum item 5 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part4.md): #scope-eli and #scope-emergence-conditions inherit the gap; open placement question AAT core vs Volume 4.'

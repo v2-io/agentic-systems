@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: a71ca9ca20b26349572a45e340e58b7e7f95aea4845dc2ad9f32128d851834a1
+at: 2026-10-31T02:19:13Z
+store: asf
+act: raise
+about: item:spikes-proposed-advanced-11-substrate-transfer-asymmetry-origin-d-9171
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-advanced-11-substrate-transfer-asymmetry-origin-d-9171
+source: 'AISI sweep 2 reports 60 (item 3) and 61 (addendum 6) (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part4.md): derived symmetric no-go beside an observed asymmetry; three candidate origins unhomed.'

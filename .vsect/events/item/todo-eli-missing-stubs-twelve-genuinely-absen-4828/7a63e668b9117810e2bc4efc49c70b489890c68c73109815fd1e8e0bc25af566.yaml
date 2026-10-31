@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 7a63e668b9117810e2bc4efc49c70b489890c68c73109815fd1e8e0bc25af566
+at: 2026-10-31T02:19:12Z
+store: asf
+act: raise
+about: item:todo-eli-missing-stubs-twelve-genuinely-absen-4828
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-eli-missing-stubs-twelve-genuinely-absen-4828
+source: 'AISI sweep 2 reports 59, 61, 62, 63 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part4.md): the missing Volume 4 rows characterized from their OUTLINE rows; report 63 notes AUDIT-WORKING-829314/logozoetic-agents/06-zoetica-exploration.md sketches #def-the-four-views and #der-the-scaffolding-tax with ''proves'' language for unformalized claims.'

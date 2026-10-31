@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: a8edfd1300318356872460b4cc2fc7528f7499c0ae34fc6606ee9c2d8e0604d2
+at: 2026-10-31T02:19:13Z
+store: asf
+act: raise
+about: item:author-norm-honest-activation-and-its-derivation
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:author-norm-honest-activation-and-its-derivation
+source: 'AISI sweep 2 report 62 §5 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part4.md, Report 62): the OUTLINE row''s ''mathematically guarantee gain collapse'' has no segment to check against.'

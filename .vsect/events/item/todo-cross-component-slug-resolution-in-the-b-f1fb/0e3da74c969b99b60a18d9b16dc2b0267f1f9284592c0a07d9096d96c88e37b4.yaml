@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 0e3da74c969b99b60a18d9b16dc2b0267f1f9284592c0a07d9096d96c88e37b4
+at: 2026-10-31T02:19:13Z
+store: asf
+act: raise
+about: item:todo-cross-component-slug-resolution-in-the-b-f1fb
+actor:
+  name: drain-influx-2-asffixes
+  role: drainer
+normalizer: vsect-norm/0
+raised: item:todo-cross-component-slug-resolution-in-the-b-f1fb
+source: 'AISI sweep 2 report 60 (~/src/AISI-responses/influx/sweep-2-raw/ASF-FIXES-part4.md, Report 60): mono build showed #hyp-checkpoint-forking-failure-modes as missing in the Volume 3 build.'
