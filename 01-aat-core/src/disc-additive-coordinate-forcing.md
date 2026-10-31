@@ -93,7 +93,7 @@ The three meta-segments form AAT's scope-and-structure meta-architecture:
 
 - **#disc-additive-coordinate-forcing** (this) — the *constructive* half: when AAT forces a coordinate, it forces a surface of the exponential-family geometry (not just a generic logarithmic coordinate, but the specific log-coordinate of the exponential family). Names what the theory *does* at its deepest structural moves.
 - **#disc-separability-pattern** — the *positive scope* half: for each ladder of increasing difficulty, name the separable core, the structured repair, and the general open. Names what the theory *covers* across its instantiations.
-- **#disc-identifiability-floor** — the *negative scope* half: for each known structural no-go, name the external information-theoretic theorem that enforces it and the unique escape available. Names what the theory *cannot do* without explicit information augmentation.
+- **#disc-identifiability-floor** — the *negative scope* half: for each known structural no-go, name the external information-theoretic theorem that enforces it and the escapes available. Names what the theory *cannot do* without explicit information augmentation.
 
 The three compose. A ladder's separable core typically admits a coordinate-forcing move that makes the clean identification clean; a ladder's general-open case typically sits at an identifiability floor that names the information-theoretic obstruction. Reading any segment through all three meta-lenses surfaces what makes the segment load-bearing.
 

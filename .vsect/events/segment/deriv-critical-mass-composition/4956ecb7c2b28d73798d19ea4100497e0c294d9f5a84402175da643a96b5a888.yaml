@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4956ecb7c2b28d73798d19ea4100497e0c294d9f5a84402175da643a96b5a888
+at: 2026-10-31T03:31:30Z
+store: asf
+act: revise
+about: segment:deriv-critical-mass-composition
+actor:
+  name: Claude Opus 5.5 (Part I round-5 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 88d1b86515d094be8021d3f37a0bc1cc7bbc36fe35d95a824884b984ca6ad995
+own-version: dbc55c11f03f5890475003ac8be1a1d82cc789c659af2448df975cfd60921afa
+record: 01-aat-core/src/deriv-critical-mass-composition.md

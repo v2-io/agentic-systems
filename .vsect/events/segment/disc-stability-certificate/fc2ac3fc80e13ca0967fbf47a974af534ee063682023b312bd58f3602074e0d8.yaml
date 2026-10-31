@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: fc2ac3fc80e13ca0967fbf47a974af534ee063682023b312bd58f3602074e0d8
+at: 2026-10-31T03:31:36Z
+store: asf
+act: revise
+about: segment:disc-stability-certificate
+actor:
+  name: Claude Opus 5.5 (Part I round-5 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 60041b83616a6f22fa9c71980385296f345e91996930d413f03904705662c4e6
+own-version: 5e6c44a23a011e34f1c2fd008ee2f71ea2c24c90725175dc776535c4f861ba36
+record: 01-aat-core/src/disc-stability-certificate.md

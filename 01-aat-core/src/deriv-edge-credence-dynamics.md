@@ -269,7 +269,7 @@ With optimal equal-rate exploration and equal experience: $\alpha_\Sigma = 1/(k(
 
 $$\frac{\rho_\Sigma(n_2+1)}{R_\Sigma} \;\lt\; \varepsilon \;\lt\; 1 - \frac{\rho_\Sigma(n_1+1)}{R_\Sigma}$$
 
-The interval is non-empty iff $\rho_\Sigma(n_1 + n_2 + 2) \lt R_\Sigma$. Under exponential forgetting with per-observation discounting at the stationary count (Prop B.1F), each pull lands with gain $1-\lambda$ and the interval becomes $\rho_\Sigma/((1-\lambda)R_\Sigma) \lt \varepsilon \lt 1 - \rho_\Sigma/((1-\lambda)R_\Sigma)$, non-empty iff $\rho_\Sigma \lt (1-\lambda)R_\Sigma/2$. No exploration rate and no update rule lifts the two-arm node past $\rho_\Sigma \lt R_\Sigma/2$ ( #deriv-evidence-allocation-ceiling).
+The interval is non-empty iff $\rho_\Sigma(n_1 + n_2 + 2) \lt R_\Sigma$. Under exponential forgetting with per-observation discounting at the stationary count (Prop B.1F), each pull lands with gain $1-\lambda$ and the interval becomes $\rho_\Sigma/((1-\lambda)R_\Sigma) \lt \varepsilon \lt 1 - \rho_\Sigma/((1-\lambda)R_\Sigma)$, non-empty iff $\rho_\Sigma \lt (1-\lambda)R_\Sigma/2$. No exploration rate and no averaging update rule (the class of #deriv-evidence-allocation-ceiling, which includes every Beta-Bernoulli update with or without forgetting) lifts the two-arm node past $\rho_\Sigma \lt R_\Sigma/2$ ( #deriv-evidence-allocation-ceiling).
 
 A purely greedy agent ($\varepsilon = 0$) violates the sector condition because the unchosen alternative's mismatch grows without correction. This is the structural justification for (SA3) in #schema-strategy-persistence: OR-nodes require deliberate exploration to maintain strategic persistence.
 

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 89c48801dcd97331aa3d7172fc4273ecdd110e720e6d0fba4af3c43aabdc6ea8
+at: 2026-10-31T03:31:36Z
+store: asf
+act: revise
+about: segment:disc-identifiability-floor
+actor:
+  name: Claude Opus 5.5 (Part I round-5 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 076ac631839110206c533b74e9704f1337e1b6050911685e5acf9b7c787c1440
+own-version: e800f7e9eb6d58da074e87367a9f3ad66ff3d012006dfd12a1c0c26cd2dd477a
+record: 01-aat-core/src/disc-identifiability-floor.md

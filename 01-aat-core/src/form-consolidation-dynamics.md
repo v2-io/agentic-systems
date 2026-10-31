@@ -107,7 +107,7 @@ The necessity condition (N1)+(N2) is *qualitatively derived* — the argument is
 
 The stability-plasticity window's *existence* follows from #schema-strategy-persistence's lower bound plus any monotone upper bound on $(1-\lambda)$ from consolidation-cadence considerations. The specific functional form of the upper bound is open work; candidate form in Working Notes. The catastrophic-forgetting regime as empty-window is then an immediate structural consequence, not a new claim.
 
-The online-only no-go claim (that under (N1)+(N2), no online-only policy reaches $\phi^\ast$ in steady state) is *sketch-level*. The argument reduces to a rate-distortion inequality close to known results in continual-learning theory and rate-distortion with side information, but the rigorous version requires specifying the budget geometry carefully. It is a candidate Instance 3 for #disc-identifiability-floor (an external information-theoretic obstruction with AAT machinery — the consolidation regime in $g_M$ — as the unique escape).
+The online-only no-go claim (that under (N1)+(N2), no online-only policy reaches $\phi^\ast$ in steady state) is *sketch-level*. The argument reduces to a rate-distortion inequality close to known results in continual-learning theory and rate-distortion with side information, but the rigorous version requires specifying the budget geometry carefully. It is a candidate further instance of #disc-identifiability-floor (an external information-theoretic obstruction with AAT machinery, the consolidation regime in $g_M$, as an escape). That consolidation is the only escape is not derived: relaxing (N1) or (N2) also escapes, and the sketch does not rule out others.
 
 **What this segment does not claim.** It does not introduce a new adaptive primitive — the recursive-update form $f(M_{\tau^-}, e_\tau)$ is preserved, with $e_\tau^{\text{replay}}$ playing the role of $e_\tau$. It does not derive the quantitative feasibility-window upper bound. It does not resolve the (N1) factorization question for specific architectures (e.g., whether transformer attention heads satisfy (N1) is a logogenic-agents question, not an AAT-core one).
 
@@ -154,7 +154,7 @@ When is consolidation a necessity? When both (N1) and (N2) hold, which is the em
 
 **Connection to AAT's meta-architecture.**
 - *#disc-separability-pattern* (positive half): the regime is the repair machinery between separable-core and structured-repair ladders along the representation-factorization axis. Where the (N1)+(N2) necessity conditions hold, the repair is consolidation; where either fails, the online regime suffices.
-- *#disc-identifiability-floor* (negative half): candidate Instance 3 — the under-bounded-budget + no-reach-of-IB-optimum no-go, with consolidation as the unique escape.
+- *#disc-identifiability-floor* (negative half): candidate further instance — the under-bounded-budget + no-reach-of-IB-optimum no-go (sketch-level), with consolidation as an escape; its uniqueness is not derived.
 - *#disc-additive-coordinate-forcing* (constructive half): the IB Lagrangian is an adjacent family member (adopted as applied external theorem, not re-derived from an AAT-internal additivity axiom), which the consolidation objective directly uses.
 
 ## Working Notes

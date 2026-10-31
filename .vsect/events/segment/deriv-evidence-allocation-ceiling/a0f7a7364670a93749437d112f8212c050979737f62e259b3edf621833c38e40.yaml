@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: a0f7a7364670a93749437d112f8212c050979737f62e259b3edf621833c38e40
+at: 2026-10-31T03:31:31Z
+store: asf
+act: revise
+about: segment:deriv-evidence-allocation-ceiling
+actor:
+  name: Claude Opus 5.5 (Part I round-5 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: a66fb79624b00164ce286f45e0c2f4edbeee6b81d6c5479cd5e39616d491e07c
+own-version: b8378bbf2625b61efdd3f9117a305a25469ec2f1f89f22754a3a396e5daeb8ac
+record: 01-aat-core/src/deriv-evidence-allocation-ceiling.md
