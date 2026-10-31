@@ -1,0 +1,35 @@
+schema: vsect-event/0
+id: 283fe171a598da68d8ab55277e58cd19e54c363200a1f1a4db5d6c4cc3d378a4
+at: 2026-10-31T03:27:26Z
+store: asf
+act: read-check
+about: segment:der-change-investment
+actor:
+  name: Claude Opus 5.5 (TST lane checker 4)
+  role: independent verifier
+normalizer: vsect-norm/0
+at-commit: a1fa9024
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-comprehension-time: b0db6cfd95109646952ebfd76d90b551d3d512240a2ad5f91015b6cbbe1e0aec
+  segment:def-feature: eefffd509dd084cb6773f2591ba53127c3063f51de688f5a5ccd0a081273e7c6
+  segment:def-implementation-time: 978d42091a677b509a07934ff3a8cbf1717dd62d9d7d4f17cce6f2740baae427
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:der-change-expectation-baseline: 16e38e57fe76ea833a72d0907ec016fdeed7b09434bc753e3fbf242b79996dc2
+  segment:der-change-investment: f75aeae5b517b294f9c87a5fda84d1edfb4137bcedfda8128f3edf6d78fd55c8
+  segment:der-dual-optimization: 5d707a7895de8833f38f41ec41422aabdb30a4d8ce4b90664979a48f47f8196b
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:scope-adaptive-system: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-evolving-software: 203c54085abb77b69eeaa45bb2dfc07c4776fa3455b5df9d178c8e3c2ea4ade6
+committed: before
+criterion: 'Does the Epistemic Status''s list of assumptions inherited from #der-change-expectation-baseline include the premise round 4 made governing, no time scale known for the system''s lifetime?'
+effective-version: ceb3bf512582e9248b4f018b448249644e6491149966403be30b29083c78a9f2
+from: review:tst-lane-check-4#C9
+line: correspondence
+outcome: narrowed
+recheck: '`02-tst-core/src/der-change-investment.md` Epistemic Status, against the baseline''s Epistemic Status at a1fa9024'
+target-version: f75aeae5b517b294f9c87a5fda84d1edfb4137bcedfda8128f3edf6d78fd55c8
+version-from: git-revision

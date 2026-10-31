@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 27f6b19a15b15e2ff81ba913383eb4f0437ccb362c285bda892c2e7307fc0f05
+at: 2026-10-31T03:25:24Z
+store: asf
+act: review-finding
+about: segment:der-change-expectation-baseline
+actor:
+  name: Claude Opus 5.5 (TST lane checker 4)
+  role: reviewer
+normalizer: vsect-norm/0
+criterion: Round 4 restates the main derivation as scale ignorance about the system in progress (Jeffreys on the in-progress lifetime, t0/T^2 at every age) and places Jeffreys-on-w's failure where it belongs; re-derived in review:tst-lane-check-4#C1. The hazard route's premise is a separate gap, review:tst-lane-check-4 F1.
+finding: review:tst-lane-check-3#C8/finding
+outcome: answered
+reviser-recorded: true
+revision: 16e38e57

@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: ec75dbecc10819c87a4d3ecafb096ba6f64a78fc9769551d3e395024c8e9cdb8
+at: 2026-10-31T03:26:05Z
+store: asf
+act: confirm-rewording
+about: segment:hyp-communication-gain
+actor:
+  name: Claude Opus 5.5 (TST lane checker 4)
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: The round-4 change adds one passage on persistent source bias to the Formal Expression; the F.4 reassignment to U_src, the deliberation paragraph and the Appendix F fates that C7 checked are untouched.
+from-version: 050c23772768f3a0bf2628d63da49ca7a2854b252728582203d999ff780977ad
+outcome: equivalent
+scope:
+  for:
+  - 69f124245b1215f42eafd1c5673e86de77497e710c1920dab3abd0156515bab1
+to-version: 6c9da783d44d3c1a6eb8acfcb2d58c32c6a27c85cd79b22a7c0940bec03b6fc4

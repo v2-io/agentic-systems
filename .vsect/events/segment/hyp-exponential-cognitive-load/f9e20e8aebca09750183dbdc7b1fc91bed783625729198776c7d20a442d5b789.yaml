@@ -1,0 +1,17 @@
+schema: vsect-event/0
+id: f9e20e8aebca09750183dbdc7b1fc91bed783625729198776c7d20a442d5b789
+at: 2026-10-31T03:26:16Z
+store: asf
+act: confirm-rewording
+about: segment:hyp-exponential-cognitive-load
+actor:
+  name: Claude Opus 5.5 (TST lane checker 4)
+  role: second-mind
+normalizer: vsect-norm/0
+criterion: The round-4 change touches item 1's ink sentence, item 3's criterion and a Limits passage on ink's one-idle optimum; item 2's two-idle exponent 0.86 [0.69, 1.05] and its best-of-thirty-starts sentence, which C3 checked, are unchanged.
+from-version: 6739b7c9b19b1f18023aab5515394ee220aa3117bdd789517579ea9dc68c8657
+outcome: equivalent
+scope:
+  for:
+  - 7741837ee7aeb8c24d4373c7ebc66b075d83c627ef8bb502892222853d682e24
+to-version: 93c05477e1fe35644f1f265a45f54c0d469597020e0551e8316313a524526c8b

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 6999718f77970a2c261d3f9621c33a892bdc11779c340a0c82bc89925b470189
+at: 2026-10-31T03:25:25Z
+store: asf
+act: review-finding
+about: segment:hyp-exponential-cognitive-load
+actor:
+  name: Claude Opus 5.5 (TST lane checker 4)
+  role: reviewer
+normalizer: vsect-norm/0
+criterion: 'Limits, the README and section (6) now say ink''s one-idle fit is a chosen local optimum, beaten by 1.4-2.1 with labels swapped; the toolkit prints the 30-start refit (review:tst-lane-check-4#C5). Ink''s numbers in item 2 still lack the qualifier inline: review:tst-lane-check-4 F5.'
+finding: review:tst-lane-check-3#C4/finding
+outcome: answered
+reviser-recorded: true
+revision: 93c05477

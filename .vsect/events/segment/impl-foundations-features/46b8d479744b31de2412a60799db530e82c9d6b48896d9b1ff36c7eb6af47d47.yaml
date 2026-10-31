@@ -1,0 +1,45 @@
+schema: vsect-event/0
+id: 46b8d479744b31de2412a60799db530e82c9d6b48896d9b1ff36c7eb6af47d47
+at: 2026-10-31T03:27:29Z
+store: asf
+act: place-finding
+about: segment:impl-foundations-features
+actor:
+  name: Claude Opus 5.5 (TST lane checker 4)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-feature: eefffd509dd084cb6773f2591ba53127c3063f51de688f5a5ccd0a081273e7c6
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-model-class-fitness: 80a2eb3fbf06b7ebb3ebdc642c79dc6883eb350ebafb68555ee3ea9c2505a25f
+  segment:def-model-sufficiency: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:der-change-expectation-baseline: 16e38e57fe76ea833a72d0907ec016fdeed7b09434bc753e3fbf242b79996dc2
+  segment:der-gain-sector-bridge: f5c8fdd9d718eff5c9192d3d1b399b0f97106f1f28a5619dae2f8010565b1539
+  segment:deriv-gain-sector: f78514b9da4ac15f168eda5d3d520d6191462d6a86841afcb7c80487fe70ba94
+  segment:deriv-persistence-cost: 29b94055c2a6f157d946a1117a10a3dffc0d8bb5693f35de0a0a2740716dddb2
+  segment:deriv-sector-condition: bb8a7c18abfb6ac12203ec8fbd970b93c6429c6d51a3c60ef654875b4433f648
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:impl-foundations-features: e793f63c3eda7130e623ee38c408ec0643c31da09d4411fca3b13f6ec674c20b
+  segment:obs-software-epistemic-properties: 397eca9f14c75b70d3baed91b86e56973273cb782280ba62beb8080e223f6c87
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:result-persistence-condition: 382bfbdfce370119cb7f41c8161baf42fa9415a28646b553fbed7f3a9641fce4
+  segment:result-sector-condition-stability: aa4f9e56f2df48826fccf234cdbcb3f09c3df640583ed1892ee21f7abc286447
+  segment:result-sector-persistence-template: e81dfed0853e9582d41e15e3a737f8fe1829370f72fedf1766ddb60ef07a2d2a
+  segment:result-specification-bound: 7d543081560550bf70c9dfd1790e1a2e889110c6ad9ef7f971446d9ba6da7525
+  segment:scope-adaptive-system: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-evolving-software: 203c54085abb77b69eeaa45bb2dfc07c4776fa3455b5df9d178c8e3c2ea4ade6
+finding: review:tst-lane-check-4#F7
+target: segment:impl-foundations-features
+text: 'The baseline paragraph''s robustness claim, "The same baseline follows, at large age, from any unknown constant termination hazard whose prior density at zero hazard is finite and positive", inherits C2''s finding (write-up F1): it holds for '
+version-from: git-revision

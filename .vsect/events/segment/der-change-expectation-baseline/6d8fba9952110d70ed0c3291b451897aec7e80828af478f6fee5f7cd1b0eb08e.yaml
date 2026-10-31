@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 6d8fba9952110d70ed0c3291b451897aec7e80828af478f6fee5f7cd1b0eb08e
+at: 2026-10-31T03:25:24Z
+store: asf
+act: review-finding
+about: segment:der-change-expectation-baseline
+actor:
+  name: Claude Opus 5.5 (TST lane checker 4)
+  role: reviewer
+normalizer: vsect-norm/0
+criterion: The span-much-longer-than-lifetimes premise is gone; a constant birth rate carries item 1, whose posterior w(T)/Q(t0) is stated as independent of the mean lifetime; re-derived in review:tst-lane-check-4#C1.
+finding: review:tst-lane-check-3#C9/finding
+outcome: answered
+reviser-recorded: true
+revision: 16e38e57

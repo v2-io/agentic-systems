@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 02cae48e7ded8d9c8a95d290ced07fea3421fb867bc87942d31a646156dff50e
+at: 2026-10-31T03:27:29Z
+store: asf
+act: take
+about: review:tst-lane-check-4
+actor:
+  name: Claude Opus 5.5 (TST lane checker 4)
+  role: verifier
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+- C4:check
+- C5:check
+- C6:check
+- C7:check
+- C8:check
+- C9:check
+- F4:finding
+- F5:finding
+- F7:finding
+- F8:finding
+review: reviews/tst-lane-check-4.md
+review-version: 593343492998603402202041e292cca97b27192a13c92f8026d0fa3822d313b2

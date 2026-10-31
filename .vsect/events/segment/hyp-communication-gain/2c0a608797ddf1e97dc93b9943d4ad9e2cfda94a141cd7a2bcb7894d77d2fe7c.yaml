@@ -1,0 +1,33 @@
+schema: vsect-event/0
+id: 2c0a608797ddf1e97dc93b9943d4ad9e2cfda94a141cd7a2bcb7894d77d2fe7c
+at: 2026-10-31T03:27:22Z
+store: asf
+act: rederive
+about: segment:hyp-communication-gain
+actor:
+  name: Claude Opus 5.5 (TST lane checker 4)
+  role: independent verifier
+normalizer: vsect-norm/0
+at-commit: a1fa9024
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:disc-composition-consistency: 38ecdbe2544533cf09ca51fc1f1c55da33ff83820a49ebd77b83629e2d8b3246
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:hyp-communication-gain: 6c9da783d44d3c1a6eb8acfcb2d58c32c6a27c85cd79b22a7c0940bec03b6fc4
+  segment:scope-adaptive-system: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-multi-agent: bfd7ff18a1c5e2edca2661964961d30a0c4d87908c31f2929ef4155e87c4edd9
+committed: before
+criterion: With $o_n = \theta + s + e_n$, $s$ shared and $e_n$ fresh, does the posterior variance of $\theta$ saturate at $(1/U_0 + 1/U_s)^{-1}$ while a fresh-noise update tends to zero; and are the sentences around the new paragraph consistent with it?
+effective-version: dbc9498de54e95c88786bf778a7c3065ed5f0a98f75f586dd4dc5e23a681d757
+from: review:tst-lane-check-4#C4
+line: derivation
+outcome: narrowed
+recheck: sample mean sufficient with variance $U_s + U_e/n$; `#deriv-tempo-additivity` "[Derived (saturation-under-persistent-bias)]
+target-version: 6c9da783d44d3c1a6eb8acfcb2d58c32c6a27c85cd79b22a7c0940bec03b6fc4
+version-from: git-revision

@@ -1,0 +1,30 @@
+schema: vsect-event/0
+id: e2e6bb864b5c74616308bb37f16374a1aba5aad1cebdc927cfaeae14d0e36c81
+at: 2026-10-31T03:27:21Z
+store: asf
+act: rederive
+about: segment:der-change-expectation-baseline
+actor:
+  name: Claude Opus 5.5 (TST lane checker 4)
+  role: independent verifier
+normalizer: vsect-norm/0
+at-commit: a1fa9024
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:der-change-expectation-baseline: 16e38e57fe76ea833a72d0907ec016fdeed7b09434bc753e3fbf242b79996dc2
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:scope-adaptive-system: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-evolving-software: 203c54085abb77b69eeaa45bb2dfc07c4776fa3455b5df9d178c8e3c2ea4ade6
+committed: before
+criterion: Does Jeffreys' prior on the lifetime of the system in progress with the uniform-age likelihood give $t_0/T^2$ and median remaining life $t_0$ at every age; under a constant birth rate, does item 1's $w(T)/Q(t_0)$ hold whatever the mean, does item 2 (in-progress lifetime $\propto T\,w(T)$, uniform age, Jeffreys on it forces $w \propto T^{-2}$, $Q = 1/t$) follow, does the rescaling form give the same $w$, and does Jeffreys on $w$ fail to normalize after survival?
+effective-version: c975ae859237daf7754f7e5b049f0af7f1db8efe1634fe3cbf07b233751c58e7
+from: review:tst-lane-check-4#C1
+line: derivation
+outcome: confirmed
+recheck: by hand; count alive $r\,w(T)\,dT\,dt_0$ for $T \ge t_0$; $p(\alpha t_p, \alpha t_f)\alpha^2 = p(t_p, t_f)$ with $p \propto w(t_p + t_f)$ gives $w(\alpha T) = w(T)/\alpha^2$
+target-version: 16e38e57fe76ea833a72d0907ec016fdeed7b09434bc753e3fbf242b79996dc2
+version-from: git-revision

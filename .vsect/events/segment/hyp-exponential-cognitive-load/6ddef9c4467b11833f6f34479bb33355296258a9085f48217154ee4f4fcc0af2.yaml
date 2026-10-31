@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 6ddef9c4467b11833f6f34479bb33355296258a9085f48217154ee4f4fcc0af2
+at: 2026-10-31T03:25:25Z
+store: asf
+act: review-finding
+about: segment:hyp-exponential-cognitive-load
+actor:
+  name: Claude Opus 5.5 (TST lane checker 4)
+  role: reviewer
+normalizer: vsect-norm/0
+criterion: 'Item 1 now reads ink''s top bins by their intervals, and item 3 names a criterion (the smallest of eight tail shares, calibrated against the null''s own). That criterion is under-resolved at 1,000 replicates and at 10,000 rejects in obsidian-linter: review:tst-lane-check-4 F2.'
+finding: review:tst-lane-check-3#C5/finding
+outcome: answered
+reviser-recorded: true
+revision: 93c05477

@@ -1,0 +1,15 @@
+schema: vsect-event/0
+id: 2b5f70d7f5956d49a5023e79d6f8be7d7b4c8f970cf1a9657ba1eaa170872e78
+at: 2026-10-31T03:25:25Z
+store: asf
+act: review-finding
+about: segment:hyp-communication-gain
+actor:
+  name: Claude Opus 5.5 (TST lane checker 4)
+  role: reviewer
+normalizer: vsect-norm/0
+criterion: The persistent-source regime is named beside the event-by-event reading, with the saturation at the source's persistent error and U_src placed in the trust meta-model; re-derived in review:tst-lane-check-4#C4. Two sentences beside it (the floor omitting persistent misalignment, the Epistemic Status's 'unstructured') are review:tst-lane-check-4 F3.
+finding: review:tst-lane-check-3#C6/finding
+outcome: answered
+reviser-recorded: true
+revision: 6c9da783
