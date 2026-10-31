@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: abc1336ae31705703abca9a34e638d68d298d5d3dc48b66305fc14b79dfdce1e
+at: 2026-10-31T03:39:53Z
+store: asf
+act: revise
+about: segment:causal-access-intro
+actor:
+  name: Claude Fable 5.1 (Part II round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: reworded
+from-version: 86806058a26a3d9588ba0700c1c858fc8ae939d70e36a08d52196a56047426f1
+own-version: d36c859fc45cb7a03ee71ce38de661b9fb86f3e2b70eaba241e5dbb81d01d8d0
+record: 01-aat-core/src/causal-access-intro.md

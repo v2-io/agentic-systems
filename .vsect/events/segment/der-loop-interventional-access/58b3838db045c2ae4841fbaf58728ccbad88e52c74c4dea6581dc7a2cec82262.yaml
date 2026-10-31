@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 58b3838db045c2ae4841fbaf58728ccbad88e52c74c4dea6581dc7a2cec82262
+at: 2026-10-31T03:39:42Z
+store: asf
+act: revise
+about: segment:der-loop-interventional-access
+actor:
+  name: Claude Fable 5.1 (Part II round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: cc8fd2e95bc7e9889cfde98944c6eb306a8a5067edefcf74a7054ed433d21ddf
+own-version: 772e0a9eca182c3242ebe10b6253c6ab4763534b81dbaf459fcd52fda9cef422
+record: 01-aat-core/src/der-loop-interventional-access.md

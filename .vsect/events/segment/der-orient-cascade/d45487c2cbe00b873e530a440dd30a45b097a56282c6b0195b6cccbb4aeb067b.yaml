@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: d45487c2cbe00b873e530a440dd30a45b097a56282c6b0195b6cccbb4aeb067b
+at: 2026-10-31T03:39:50Z
+store: asf
+act: revise
+about: segment:der-orient-cascade
+actor:
+  name: Claude Fable 5.1 (Part II round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: 5911668bd9208cfa9ccee1455880b454cba5c83d498ed4f56ab9ac2883961602
+own-version: d8465f59d79bbbecc00d33b2fce0baee5be535c4d48b4d1662a79e1835363d00
+record: 01-aat-core/src/der-orient-cascade.md

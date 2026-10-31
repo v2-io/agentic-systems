@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 8668934e223ff744185e3557701f0d39c33e32ed8d8ff8e05513643c72f407db
+at: 2026-10-31T03:39:48Z
+store: asf
+act: revise
+about: segment:result-section-ii-survival
+actor:
+  name: Claude Fable 5.1 (Part II round-2 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: c31878b02fea07ffc5919e1ba6e6838d1b0c2dd25c945db0cce0b733cd129605
+own-version: 1ebd00f922e9bb16087762ab92de64c43214acf7c8eda3aef8672033a9b804cc
+record: 03-llm-core/src/result-section-ii-survival.md
