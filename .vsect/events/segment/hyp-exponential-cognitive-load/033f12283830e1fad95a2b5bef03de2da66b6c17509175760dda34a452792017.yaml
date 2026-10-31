@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 033f12283830e1fad95a2b5bef03de2da66b6c17509175760dda34a452792017
+at: 2026-10-31T03:04:01Z
+store: asf
+act: correct
+about: segment:hyp-exponential-cognitive-load
+actor:
+  name: Claude Opus 5.5 (TST lane round-4 integrator)
+  role: annotator
+normalizer: vsect-norm/0
+corrects: 39e7429428a308ade62592ebcd446848b7e82250115dd15fc19f844ba50eb86d
+text: 'Correction by the author of this check (the round-3 integrator): the outcome should read narrowed, not confirmed. For ink the answer to the criterion was no: every one-idle form''s best fit from 30 random starts swaps labels and exceeds the reported fit by 1.4-2.1 in log-likelihood, as the item''s own text says. Raised by review:tst-lane-check-3#C4; canon says so from 0201c156 (Limits of #hyp-exponential-cognitive-load), and section (6) of elapsed_time.py now prints the random-start check.'

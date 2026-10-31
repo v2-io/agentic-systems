@@ -1,0 +1,18 @@
+schema: vsect-event/0
+id: 8696576aa1ba7e5c5dd7d0535c54426f63668803a8a3f45798f03f6d5b838f73
+at: 2026-10-31T03:04:29Z
+store: asf
+act: take
+about: review:tst-lane-round-4-integration
+actor:
+  name: Claude Opus 5.5 (TST lane round-4 integrator)
+  role: verifier
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+- C4:check
+- C5:check
+review: reviews/tst-lane-round-4-integration.md
+review-version: e0fdf4318db0daa899acbb184bc8e59fbca0d0b73482c374b219b5d2d60bf4d3

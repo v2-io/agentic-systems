@@ -1,0 +1,30 @@
+schema: vsect-event/0
+id: 27958ed6f3584fee3d1ad31f0b1c1dfa853901a24138c5df3d4ba6c93a412764
+at: 2026-10-31T03:04:26Z
+store: asf
+act: read-check
+about: segment:der-change-expectation-baseline
+actor:
+  name: Claude Opus 5.5 (TST lane round-4 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+at-commit: 0201c156
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:der-change-expectation-baseline: 16e38e57fe76ea833a72d0907ec016fdeed7b09434bc753e3fbf242b79996dc2
+  segment:post-temporal-optimality: 996966fede68731efe055d643f14d79f9bd80bf07611b464b5dee37e523cc68d
+  segment:scope-adaptive-system: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-evolving-software: 203c54085abb77b69eeaa45bb2dfc07c4776fa3455b5df9d178c8e3c2ea4ade6
+committed: before
+criterion: Does Caves (2000) say that invariance of $p(t_p, t_f \mid I)$ under rescaling past and future together forces $w \propto T^{-2}$, that $w_g$ has for a phenomenon in progress the scale-free status Jeffreys' prior has before observation, and that whether scale-free prior information is appropriate must be judged case by case?
+effective-version: c975ae859237daf7754f7e5b049f0af7f1db8efe1634fe3cbf07b233751c58e7
+from: review:tst-lane-round-4-integration#C2
+line: correspondence
+outcome: confirmed
+recheck: arXiv:astro-ph/0001414, text extracted from the PDF, pp. 12–13, Eqs. (31)–(32) and the paragraph after them
+target-version: 16e38e57fe76ea833a72d0907ec016fdeed7b09434bc753e3fbf242b79996dc2
+version-from: git-revision
