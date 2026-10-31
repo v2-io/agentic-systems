@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 5964fc1ba7672153df9e0437a098a9a2a63ac7b5535379c7ed43dee0536a42b9
+at: 2026-10-31T03:03:26Z
+store: asf
+act: revise
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 round-7 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: redefined
+from-version: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+own-version: aa9487fa06e4e2b732e817d518ad3e3dcd1bb2fdc1ea5f462ecc530485151d62
+record: 01-aat-core/src/scope-adaptive-system.md
