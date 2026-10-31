@@ -1,0 +1,30 @@
+schema: vsect-event/0
+id: d19912b437e93be395b5ef024a19418bbfdbc28388ddb2f030cfe2e7386ec30b
+at: 2026-10-31T03:07:21Z
+store: asf
+act: rederive
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 round-7 integrator)
+  role: integrator
+  read:
+  - segment:scope-adaptive-system
+  - segment:def-action-transition
+  - segment:def-observation-function
+normalizer: vsect-norm/0
+at-commit: 7c1dd6a3
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:scope-adaptive-system: 6e778ade8d9caa3723c34b29064a8b6d6e4a38319a81df1853cd2df72a09c385
+committed: after
+criterion: '(c)''s membership test for observed-state loops, under any $\pi_0$: the loop is in at $t$ iff some continuation, with positive probability, takes at some $k \geq t$ an action whose row the history $\mathcal C_k$ does not fix. The same holds with the law of the next observation in place of the row whenever the history fixes the state at every time. The Dirichlet, deterministic-successor, bandit and unreachable-row instances agree with it.'
+effective-version: e5fe8fc18a58c34f19f3e2cf461aa91833096d18c37174d7c971d71e70d2c2be
+from: review:scope-adaptive-system-integration-7#C3
+line: derivation
+outcome: confirmed
+recheck: 'chain rule over the stream, each term non-negative at every history; given $\theta$ and $\mathcal C_k$, $o_{k+1}$ is a fresh draw from a law that is a function of $\theta$; lemma: for $X \mid K \sim K$, $I(K; X) = 0$ iff $K$ is a.s. constant ($K(B) = P(X \in B)$ a.s. on a countable generating $\pi$-system)'
+target-version: 6e778ade8d9caa3723c34b29064a8b6d6e4a38319a81df1853cd2df72a09c385
+version-from: git-revision
