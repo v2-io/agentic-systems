@@ -42,6 +42,8 @@ Read `INTENT.md`, then this file. Joseph's governing words are in `README.md`. F
 
 **Partial**
 
+- `drain/wn-01-other.md`: its synthesis (lines 1–73) read whole; the ~1,070 lines of per-item dispositions not read by the lead (they are the integrators' index into the ledger).
+
 - `~/src/arch/SPIKE-PROMPT.template.md`: lines were cut at 400 characters. Read it whole before filling it.
 - The first ~25 lines only of each of these:
   - `ref/enrichment-candidates-2026-05-21.md`
