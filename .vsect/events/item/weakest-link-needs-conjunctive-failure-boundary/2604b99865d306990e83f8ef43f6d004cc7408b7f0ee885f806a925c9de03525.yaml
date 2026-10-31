@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 2604b99865d306990e83f8ef43f6d004cc7408b7f0ee885f806a925c9de03525
+at: 2026-10-31T02:23:29Z
+store: asf
+act: raise
+about: item:weakest-link-needs-conjunctive-failure-boundary
+actor:
+  name: drain-wn-01-gold-pedagogy-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:weakest-link-needs-conjunctive-failure-boundary
+source: 01-aat-core/src/result-per-dimension-persistence.md WN gold Candidate Brief lines 142-143 and Candidate Discussion line 148
+text: '''Survival is a min(), not an average()'' and the AI-safety-evaluation readings presuppose the conjunctive (L_inf) failure boundary; usable as pedagogy once the boundary geometry is stated.'

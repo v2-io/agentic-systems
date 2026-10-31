@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: a720d092f7c308cab2c94608d1c4b7be7ac1f8074e2c8286c43b85169e5cc18d
+at: 2026-10-31T02:23:31Z
+store: asf
+act: raise
+about: item:eli-reach-from-01-audit-gold
+actor:
+  name: drain-wn-01-gold-pedagogy-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:eli-reach-from-01-audit-gold
+source: 01-aat-core/src/impl-persistence-and-limits.md WN 'Teaching frames' Candidate Discussion (731548/34, /28)
+text: 'Two more Volume 3-4 readings: self-modification must be the slowest loop (architecture changing faster than model-class adaptation oscillates); graded commitments over hard rules (the Lipschitz-floor scope exit makes threshold-triggered self-governance structurally outside smooth-persistence guarantees).'

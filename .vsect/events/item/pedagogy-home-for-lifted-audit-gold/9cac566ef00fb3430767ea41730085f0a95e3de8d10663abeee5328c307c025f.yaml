@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 9cac566ef00fb3430767ea41730085f0a95e3de8d10663abeee5328c307c025f
+at: 2026-10-31T02:23:48Z
+store: asf
+act: raise
+about: item:pedagogy-home-for-lifted-audit-gold
+actor:
+  name: drain-wn-01-gold-pedagogy-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:pedagogy-home-for-lifted-audit-gold
+source: msc/inside-out-2026-10/drain/wn-01-gold-pedagogy.md (riders table)
+text: 'Before anything from the 01 gold teaches, these items ride on claims canon has since corrected, checked at HEAD 6b794d51, and must be rewritten or dropped: (1) retired additive tempo bound: brief#74 (der-tempo-composition WN 148), discussion#88 (der-team-persistence WN 136), figures#39 (der-tempo-composition WN 165); (2) certificate loss read as guaranteed collapse (impl-persistence-and-limits misquotation catalog items 1, 3): brief#86 and #173 (deriv-sector-condition WN 419, result-sector-condition-stability WN 73), discussion#93 (deriv-critical-mass-composition WN 233), discussion#72 (der-gain-sector-bridge WN 158, which the basin-boundary regression guard in impl-persistence-and-limits names); (3) goal-dependence read as distortion, which canon now separates (der-directed-separation:58-59, scope-observation-ambiguity-modulation:96): brief#57, discussion#68, #155, #157, #259; (4) scaffolding recovers persistence guarantees: brief#147, discussion#192; (5) local errors in the gloss itself: discussion#157 (gain falls, not rises, as U_M grows: wrong direction), discussion#96 (U_M where U_o is meant), discussion#259 (goal-dependent routing gives Class 2, not Class 3); (6) retired name ''the Three Deaths'': discussion#13. Line numbers are the Working Notes lines at the gold lift.'

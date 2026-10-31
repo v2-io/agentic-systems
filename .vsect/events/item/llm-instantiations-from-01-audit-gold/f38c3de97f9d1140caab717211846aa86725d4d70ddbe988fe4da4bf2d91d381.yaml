@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: f38c3de97f9d1140caab717211846aa86725d4d70ddbe988fe4da4bf2d91d381
+at: 2026-10-31T02:23:31Z
+store: asf
+act: raise
+about: item:llm-instantiations-from-01-audit-gold
+actor:
+  name: drain-wn-01-gold-pedagogy-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:llm-instantiations-from-01-audit-gold
+source: 01-aat-core/src/impl-persistence-and-limits.md WN 'Teaching frames' Candidate Discussion (731548/27)
+text: 'Session-bounded deliberation: for context-bounded agents the binding term is the resource cost C(Delta tau), not drift; thinking-token budgets are Delta tau* decisions with measurable Delta eta* curves.'

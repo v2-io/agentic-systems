@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: bf80659b7ce869207a4c255f35e2d814ef7ce9f2eea3ad9f9bba3c2885f88711
+at: 2026-10-31T02:23:31Z
+store: asf
+act: raise
+about: item:identifiability-floor-escapes-compose-and-cost
+actor:
+  name: drain-wn-01-gold-pedagogy-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:identifiability-floor-escapes-compose-and-cost
+source: 01-aat-core/src/disc-additive-coordinate-forcing.md WN gold Candidate Discussion line 146 (Claude 471203)
+text: Adopting (PI) as an escape constrains every later result; the cost-of-escape point stated at the coordinate-forcing side.

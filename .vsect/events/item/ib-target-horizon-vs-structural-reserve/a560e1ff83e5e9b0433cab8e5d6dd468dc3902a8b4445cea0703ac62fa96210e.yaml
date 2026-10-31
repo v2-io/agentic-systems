@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: a560e1ff83e5e9b0433cab8e5d6dd468dc3902a8b4445cea0703ac62fa96210e
+at: 2026-10-31T02:23:30Z
+store: asf
+act: raise
+about: item:ib-target-horizon-vs-structural-reserve
+actor:
+  name: drain-wn-01-gold-pedagogy-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:ib-target-horizon-vs-structural-reserve
+source: 01-aat-core/src/result-structural-adaptation-necessity.md WN gold Candidate Discussion line 107 (Gemini 193847)
+text: Gold source of the IB-versus-structural-reserve tension ('perfect compression is brittle'), with the neutral-variation / exaptation reading.

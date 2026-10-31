@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 9d53de82773ced64c365c9023c6955a44a732489b3ac3f5567b13c5c1aa3b575
+at: 2026-10-31T02:23:31Z
+store: asf
+act: raise
+about: item:readers-ask-def-action-transition
+actor:
+  name: drain-wn-01-gold-pedagogy-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:readers-ask-def-action-transition
+source: 01-aat-core/src/def-action-transition.md WN gold Candidate Discussion line 60 (Claude 472913 THREAD-B)
+text: The Omega-side Markov augmentation is without loss (no finiteness), the M_t-side one meets the capacity wall; line 49 states the Omega commitment but not the asymmetry or where the M_t-side cost is discharged (R, fitness, sufficiency).

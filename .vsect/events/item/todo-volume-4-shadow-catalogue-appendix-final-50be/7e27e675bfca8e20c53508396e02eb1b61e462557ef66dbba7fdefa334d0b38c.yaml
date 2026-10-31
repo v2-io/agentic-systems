@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 7e27e675bfca8e20c53508396e02eb1b61e462557ef66dbba7fdefa334d0b38c
+at: 2026-10-31T02:23:29Z
+store: asf
+act: raise
+about: item:todo-volume-4-shadow-catalogue-appendix-final-50be
+actor:
+  name: drain-wn-01-gold-pedagogy-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-volume-4-shadow-catalogue-appendix-final-50be
+source: 01-aat-core/src/impl-persistence-and-limits.md WN 'Teaching frames' block, 'Shadow catalogue' subsection (731548/35) and the five-failure-modes-as-deaths Candidate Discussion (731548/29)
+text: 'The catalogue''s source text: eleven Part-I-result / Volume-4-reading pairs (exit-certainty, event-rate divergence, burn-rate, fork, gain collapse, FM-1..5 to the deaths, compression policy, structural reserve, nesting violation, task/transient adequacy as the creche control problem).'

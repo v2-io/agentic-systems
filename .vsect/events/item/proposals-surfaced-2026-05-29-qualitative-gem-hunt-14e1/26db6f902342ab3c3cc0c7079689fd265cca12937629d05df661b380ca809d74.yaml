@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 26db6f902342ab3c3cc0c7079689fd265cca12937629d05df661b380ca809d74
+at: 2026-10-31T02:23:28Z
+store: asf
+act: raise
+about: item:proposals-surfaced-2026-05-29-qualitative-gem-hunt-14e1
+actor:
+  name: drain-wn-01-gold-pedagogy-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:proposals-surfaced-2026-05-29-qualitative-gem-hunt-14e1
+source: 01-aat-core/src/def-chronica.md WN gold Candidate Discussion line 79 (Claude, AUDIT-WORKING-472913 THREAD-E) and Candidate figure line 99
+text: 'The SP-27 fork-undetectability synthesis in its gold source form: C_t non-forkable, phi lossy, so divergent chronicae can compress to the same M_t and a fork is not detectable from M_t alone; counterfactual: injective phi makes forks introspectively detectable. Plus a drafted figure (ratchet + fork with isomorphic perturbations). Not in any segment body at HEAD. The gold text uses the retired name ''the Three Deaths''; a landing should say ''the deaths'' (#def-death-as-factor-loss).'

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 4f96a1103ac4deae45efc3ab727f4b4d00101439e1d7e9af16c23b175df8a4bd
+at: 2026-10-31T02:23:30Z
+store: asf
+act: raise
+about: item:todo-def-unity-dimensions-a13-f146-u-m-i-h-no-6bb8
+actor:
+  name: drain-wn-01-gold-pedagogy-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-def-unity-dimensions-a13-f146-u-m-i-h-no-6bb8
+source: 01-aat-core/src/result-unity-closure-mapping.md WN gold Candidate Brief line 133 (Claude 849201)
+text: '''epsilon_x = 0 regardless of U_M ... provided you don''t compress below true rank'' omits the projection-range invariance F154 says the claim needs.'

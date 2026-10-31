@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: b6093c1d59aac1c1babe70bc9c6202cd0c57c7b4f801189f5e7bfa11318d8bd4
+at: 2026-10-31T02:23:53Z
+store: asf
+act: correct
+about: item:pedagogy-home-for-lifted-audit-gold
+actor:
+  name: drain-wn-01-gold-pedagogy-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+corrects: 9cac566ef00fb3430767ea41730085f0a95e3de8d10663abeee5328c307c025f
+text: Item (5), discussion#157, is stated backwards. eta* = U_M/(U_M + U_o) rises toward 1 as U_M grows, so the gloss's 'alpha -> 0 as U_M -> infinity' is wrong because gain rises with U_M, not because it falls.

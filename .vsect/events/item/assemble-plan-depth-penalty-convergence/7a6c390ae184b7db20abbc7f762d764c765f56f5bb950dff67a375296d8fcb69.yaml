@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 7a6c390ae184b7db20abbc7f762d764c765f56f5bb950dff67a375296d8fcb69
+at: 2026-10-31T02:23:30Z
+store: asf
+act: raise
+about: item:assemble-plan-depth-penalty-convergence
+actor:
+  name: drain-wn-01-gold-pedagogy-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:assemble-plan-depth-penalty-convergence
+source: '01-aat-core gold Candidate Discussion: def-strategic-tempo.md WN 133, form-strategy-complexity-cost.md WN 193, scope-edge-update-causal-validity.md WN 130; impl-strategy-structure.md WN 97'
+text: The five- and six-mechanism shallow-plan convergence as the gold states it in three segments plus the chapter-end teaching frame; one home.

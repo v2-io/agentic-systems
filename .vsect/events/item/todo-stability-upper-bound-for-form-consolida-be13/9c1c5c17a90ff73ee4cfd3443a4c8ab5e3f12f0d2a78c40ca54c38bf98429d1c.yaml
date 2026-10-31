@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 9c1c5c17a90ff73ee4cfd3443a4c8ab5e3f12f0d2a78c40ca54c38bf98429d1c
+at: 2026-10-31T02:23:29Z
+store: asf
+act: raise
+about: item:todo-stability-upper-bound-for-form-consolida-be13
+actor:
+  name: drain-wn-01-gold-pedagogy-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-stability-upper-bound-for-form-consolida-be13
+source: 01-aat-core/src/form-consolidation-dynamics.md WN gold Candidate Brief line 176 (Gemini 829314; Claude 584721)
+text: The 'two-sided survival vise' Brief ('the window closes and the agent dies') leans on the stability upper bound phi that the item says is undefined; the pedagogy must wait on, or be scoped to, the upper bound's derivation.

@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 845c9e5ab26432bdc07923c5a22a9a13b7b7a120759fb6ea77e31aa9485e5868
+at: 2026-10-31T02:23:29Z
+store: asf
+act: raise
+about: item:expected-vs-realized-information-symbol
+actor:
+  name: drain-wn-01-gold-pedagogy-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:expected-vs-realized-information-symbol
+source: 01-aat-core/src/form-event-driven-dynamics.md WN gold Candidate Brief line 90 (four substrates)
+text: The most-praised Brief on the segment ('a perfect mathematical definition of boredom and surprise') reads I(e_tau) as realized surprise; it rides on the expected/realized conflation this item fixes.

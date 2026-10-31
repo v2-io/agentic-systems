@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 9e58b0387c623d502e1db6ef97605284fac5d845864415d17a7f0dd6e3b89cd2
+at: 2026-10-31T02:23:30Z
+store: asf
+act: raise
+about: item:todo-der-class-coercion-in-composition-a12-f1-4890
+actor:
+  name: drain-wn-01-gold-pedagogy-opus-5.5
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-der-class-coercion-in-composition-a12-f1-4890
+source: 01-aat-core/src/form-composition-closure.md WN gold Candidate Brief line 383 (Gemini 829314; Claude 849201, 773921)
+text: '''A society is a valid macroscopic entity if and only if eps* < alpha_c R_c / nu_c'' reads the region-fit condition (form-composition-closure:147) as the whole composite criterion, omitting scope satisfaction and projection admissibility, the same under-gating as F132-F134.'
