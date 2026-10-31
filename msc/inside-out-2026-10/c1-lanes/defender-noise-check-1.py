@@ -10,8 +10,9 @@ from any directory; about one second. Output is quoted in defender-noise-check-1
 4. Continuous-time asymptotics: gain-raised attacker tempo (exponent 1/2) and
    event-rate attacker tempo (exponent 1).
 5. The attacker's own mean-square window caps its gain at 2 R_A^2 / (n sigma_nu,A^2),
-   checked on random draws; and neither damage V_B nor the ratio V_B/V_A has an
-   interior maximum in the attacker's gain.
+   checked on random draws; V_B increasing in the attacker's gain; and the ratio
+   V_B/V_A at one strong-coupling point and one weak-coupling point (where it has a
+   local maximum near the attacker's Kalman gain, though it is unbounded).
 """
 import numpy as np
 from scipy.optimize import brentq
@@ -84,7 +85,7 @@ for T in [1e2, 1e3, 1e4, 1e5]:
     print(f"event-rate    T_A={T:8.0f}  ratio {R:12.3f}" + (f"  local exponent {np.log10(R / prev):.3f}" if prev else ""))
     prev = R
 
-print("\n## 5. Attacker persistence caps its gain; no interior optimum for damage or ratio")
+print("\n## 5. Attacker persistence caps its gain; shape of damage and ratio in the attacker's gain")
 rng = np.random.default_rng(1)
 n_ok = 0
 for _ in range(20000):
@@ -106,3 +107,7 @@ VB = ((sb + gA * a) ** 2 + aB ** 2 * sB ** 2) / (2 * aB)
 VA = ((sb + gB * aB) ** 2 + a ** 2 * sA ** 2) / (2 * a)
 print("V_B increasing in alpha_A:", bool(np.all(np.diff(VB) > 0)),
       " V_B/V_A increasing in alpha_A:", bool(np.all(np.diff(VB / VA) > 0)))
+sb, gw, se, sn1 = 1.0, 0.01, 1.0, 1.0
+ratio = lambda a: (sb + gw * a) ** 2 * a / (se ** 2 + a ** 2 * sn1 ** 2)
+print("weak coupling: V_B/V_A (up to a constant) at alpha_A = 1, 100, 1e4:",
+      [round(ratio(v), 3) for v in (1.0, 100.0, 1e4)])

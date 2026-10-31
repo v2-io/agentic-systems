@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 48fb1943737f5ad250a1c0493e870a69682c1f587205dbea3b8e9bccab9ab9ad
+at: 2026-10-31T03:23:28Z
+store: asf
+act: correct
+about: segment:deriv-observation-noise-placement
+actor:
+  name: Claude Opus 5.5 (C.1 defender-noise checker 1)
+  role: independent verifier
+normalizer: vsect-norm/0
+corrects: 78e7fdf3c29639eb8e25dd6671cea871ca799a2df5c107110697adddb79f28d9
+text: 'Overclaim corrected: V_B has no interior maximum in alpha_A, but V_B/V_A can. Under weak coupling (e.g. sigma_base = 1, gamma_A = 0.01, sigma_env,A = sigma_nu,A = 1) it has a local maximum near the attacker''s Kalman gain (0.51 at alpha_A = 1, 0.04 at 100, above 1 only near 10^4). The ratio is unbounded, so no finite global maximizer exists and a damage- or ratio-seeking attacker still has reason to push its gain; an attacker tuned to its own Kalman gain does lower its gain as sigma_nu,A rises, which is the case where the segment''s existing conditional (''if the attacker lowers its gain'') already holds. The persistence cap remains the derived route for every other attacker.'
