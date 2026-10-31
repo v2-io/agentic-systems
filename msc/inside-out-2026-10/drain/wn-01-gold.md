@@ -365,6 +365,14 @@ Bodies were checked at `86489b0b`; the items opened in the second half were re-c
 
 **Two things the follow-ups show about the surface.** First, the gold's "resolved" annotations are unreliable in both directions. Some say resolved and are (`#der-recursive-update`'s status drift). Some resolved items carry no annotation (`#der-temporal-nesting`'s "approximately converge", `#emp-update-gain`'s universal-optimality sentence). And the same annotation pattern led a 2026-08-12 reader to write, twice, that "the gold contains resolved items that do not say so". Second, the follow-ups and the 01-other drain's non-gold notes overlap heavily: the gold is often a second, convergent statement of a Working Note's own open item. A WN cleanup that treats the two layers separately will leave duplicates.
 
+### Belongs elsewhere (160) — in `wn-01-gold-belongs.md`
+
+Read whole by a fork, arrival checked at the destination by phrase over all four volumes' bodies. 58 point at Volume 4, 18 at Volume 3, 8 at TST, 15 at naming, 61 at other 01 segments. 30 had arrived (in canon, superseded or covered); the rest went to `item:eli-reach-from-01-audit-gold`, `item:llm-instantiations-from-01-audit-gold`, `item:tst-instantiations-from-01-audit-gold` (G.2), `item:naming-seeds-from-01-audit-gold` (F.1), `item:positioning-claims-from-01-audit-gold` (F.2), `item:assemble-plan-depth-penalty-convergence` (G.2), five questions, raises on ten existing items, or the pedagogy home. Its register note matters for whoever lands Volume 4: much of that reach is vivid and some of it attributes aims to Joseph or names Zi-am-tur; only the structural cores named in the ELI item are in a form canon can carry, and G.0 gates where argued claims live.
+
+### Readers often ask (192) — in `wn-01-gold-readers.md`
+
+Read whole by a fork, each question checked against its body. 92 open questions are now in 62 per-segment H.4 items (`item:readers-ask-<slug>`), 61 are answered in the body (line cited), 8 answered downstream, 16 raised on existing items, 7 pedagogy signals, 9 set aside, 1 handed here (now `question:class-2-distortion-magnitude-bound`). Five open questions are answered only in a Working Note (`#disc-composition-consistency` WN 134, `#hyp-directed-separation-under-composition` WN 108, `#der-observability-dominance` WN 161, `#scope-adaptive-system` WN 142, `#def-chronica`'s ordinal-not-metric note): I.5 has to land those answers in the bodies before it clears the notes, or they are lost.
+
 ### Certified-track F-streams named only in gold preambles
 
 Four gold preambles say a 526815 F-row stream "is certified-track and routed there, not here". No off-ramp carries them, and the audits drain left most of them "not dispositioned" for the Part III integrators. Checked at `4175aae7`:
