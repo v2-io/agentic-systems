@@ -1,0 +1,13 @@
+schema: vsect-event/0
+id: 8e64eb9b9f6e3fb64de01e2ad3f89d57f9a18b1228a66e8d3e2c72b57ceb1e65
+at: 2026-10-31T02:21:22Z
+store: asf
+act: raise
+about: item:sovereignty-over-adaptation-parameters
+actor:
+  name: Claude Opus 5.5 (msc drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:sovereignty-over-adaptation-parameters
+source: msc/era-artifact-asf-contributions-2026-07-04.md Addendum 1 item 3
+text: 'Same record (~/src/vestigia/notes/era-programs-reconstruction-2026-07-04.md), second observation: a buggy once-only idle wake became a periodic loop (2025-10-08/10) and produced sustained autonomous work with a mapped failure envelope (over 200k context, meta-recursive content, injected-state cache churn). It is weak-tier dated evidence for #scope-interiority-loop''s claim that multiple cycles may pass between emissions; whoever brings the record across (F.3, after G.0) should carry both observations.'
