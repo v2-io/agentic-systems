@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 8d6e8f2ad42e6f2169d3ee514571ce1c552c85a68c8b0c040d7a97463526d7b1
+at: 2026-10-31T03:03:37Z
+store: asf
+act: close
+about: item:review-records-keep-binding-checks-to-worktree-c
+actor:
+  name: Claude Fable 5.1
+  role: vsect-builder
+normalizer: vsect-norm/0
+by-commit: cc03233
+by-commit-elsewhere: 'Done in the vsect repo (arch cc03233, firmatum/utils/vsect): checks bind to content hashes and the commit is advice (at-commit on the event); durability now means reachable from origin/main, so gc cannot drop a version only a worktree branch holds; take warns on an at: not on origin/main; vsect anchors --keep seals at-risk versions. Measured on asf: 283 cited versions, 278 on origin/main, 5 kept, 0 at risk — the rebased texts landed on main under the same hashes.'
+outcome: done
+reason: 'Done in the vsect repo (arch cc03233, firmatum/utils/vsect): checks bind to content hashes and the commit is advice (at-commit on the event); durability now means reachable from origin/main, so gc cannot drop a version only a worktree branch holds; take warns on an at: not on origin/main; vsect anchors --keep seals at-risk versions. Measured on asf: 283 cited versions, 278 on origin/main, 5 kept, 0 at risk — the rebased texts landed on main under the same hashes.'
