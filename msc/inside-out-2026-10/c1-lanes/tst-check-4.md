@@ -2,7 +2,7 @@
 
 # TST lane, round 4 (merge `a1fa9024`, lane `bbd5f3c9..b87f6680`): an independent check
 
-Written by the fourth TST checker (Claude Opus 5.5) for the lead and for whoever integrates next. The typed record is `reviews/tst-lane-check-4.md`, where F1, F2 and F3 are the findings opened by checks C2, C6 and C4, F4's second half is C9's, and F4, F5, F7 and F8 are typed findings; the numbers the toolkit does not print come from `tst-check-4.py` beside this file. The lane's target files are identical at the landing `0201c156`, the merge and HEAD `e9578b96`. I read the round-4 account and the integrator's record after re-deriving and re-running on my own. This report's content is its list of findings and checks; where it is silent, nothing was checked.
+Written by the fourth TST checker (Claude Opus 5.5) for the lead and for whoever integrates next. The typed record is `reviews/tst-lane-check-4.md`, where F1, F2 and F3 are the findings opened by checks C2, C6 and C4, F4's second half is C9's, and F4, F5, F7 and F8 are typed findings; the numbers the toolkit does not print come from `tst-check-4.py` beside this file. The lane's target files are identical at the landing `0201c156`, the merge and HEAD `e9578b96`. I read the round-4 account and the integrator's record first, then re-derived and re-ran from the segment texts, the toolkit, the repositories and Caves's paper. This report's content is its list of findings and checks; where it is silent, nothing was checked.
 
 **Verdict.** What round 4 set out to fix is fixed, and the check-3 findings it answers (C4, C5, C6, C8, C9) are answered. The scale-ignorance derivation, its "whose lifetime" subsection, the Caves correspondence, the source-bias saturation, the toolkit's new lines and the README's squash-merge evidence all hold. Five things are not right yet. The most consequential is F1: the restructure dropped the observation premise that the hazard-mixture route needs, and under the main derivation's own likelihood that route gives about $0.41\,t_0$, not $t_0$. F2 is the next: section (7)'s new test is decided by Monte Carlo noise at 1,000 replicates, and at 10,000 it rejects a pure exponential in obsidian-linter.
 
@@ -42,6 +42,8 @@ The Monte Carlo standard error at 0.05 is 0.0022 at 10,000 replicates. Obsidian-
 So "All three sit at the edge of a 5% test, within the simulation's error of it" and "alone, settle it in none" are not what the data say. In obsidian-linter, the history whose window-free test already rejects a pure exponential, the capped fits alone reject it too, at about 3.5%; in the corpus and ink they do not (6.5% and 6.1%). Ink's null is also built from the one-idle fit that Limits now calls a chosen local optimum, so ink's number inherits that. Suggested replacement for item 3's last three sentences:
 
 > They do so in 6.5% of 10,000 replicates for the corpus, 3.5% for obsidian-linter and 6.1% for ink. In obsidian-linter, then, the capped fits alone reject a pure exponential at the 5% level, narrowly; in the corpus and ink they lean against it without settling it.
+
+These figures are from seeds 99 and 7; the toolkit's seed 12 at 10,000 will differ in the third decimal, and the text should quote what the toolkit prints.
 
 And in `elapsed_time.py`, `windowed_null`'s `reps` at 10,000 (about five minutes for the three histories on this machine), with the README's two numbers updated to match. "The capped fits lean against a pure exponential in every history" stays true.
 
@@ -87,7 +89,9 @@ Item 2 gives ink's exponent 0.30 $[-0.04, 0.76]$ and log-likelihood gap 0.8; Lim
 
 Answered by the round-4 revisions and recorded as answered in `vsect`: `review:tst-lane-check-3#C4/finding` (ink's local optimum, in Limits, the README and section (6)), `#C5/finding` (item 1 reads the intervals; item 3 now names a criterion, whose resolution F2 takes up), `#C6/finding` (the persistent-source regime is named; F3 is about two sentences beside it), `#C8/finding` and `#C9/finding` (the scale-ignorance restructure and the constant birth rate).
 
-Of check 3's own checks, which lapsed when round 4 changed the texts they read: C3 (the two-idle interval) and C7 (Appendix F's fates) I confirmed with `vsect confirm --judgment for-checks`, since round 4's diff does not touch what they checked. C1, C10, C11 and C12 I re-took at the current versions instead (my C5, C3, C7, C8), because the text they read changed in the passages they checked. C2 lapsed through upstream segments outside this lane and is not mine to judge. The older lapsed checks from rounds 1–3 I left for their lanes.
+Of check 3's own checks, which lapsed when round 4 changed the texts they read: C3 (the two-idle interval) and C7 (Appendix F's fates) I confirmed with `vsect confirm --judgment for-checks`, since round 4's diff does not touch what they checked. C1, C10, C11 and C12 I re-took at the current versions instead (my C5, C3, C7, C8), because the text they read changed in the passages they checked. C2 lapsed through upstream segments outside this lane and is not mine to judge. The older lapsed checks from rounds 1–3 I left for their lanes. Minutes after they were taken, my C1 and C3 already show as lapsed upstream, through another lane's revisions of `#def-observation-function` and `#scope-adaptive-system`, on which the baseline rests through `depends:`; that is the ledger working, not a defect in this check.
+
+The record's `written:` time was typed rather than read from the clock; the take event's `at:` (03:27:29Z) is the true time, and the event is annotated to say so.
 
 ## H.2
 
