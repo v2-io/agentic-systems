@@ -1,0 +1,34 @@
+schema: vsect-event/0
+id: b62e3730772b13538f7390cb8a93af412f3de7848504ae6f18066e45b9209fb8
+at: 2026-10-31T03:07:05Z
+store: asf
+act: rederive
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-4 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+at-commit: 53ec1963
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:deriv-sector-condition: 9f0758ed7bc37d6f067d005b9f920c9bc9ed4a45463768b7a2c3131a44ac5b29
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+committed: before
+criterion: $\alpha\Phi(0)|_{\kappa_R = n/2} = \tfrac14(\ln n + \gamma_{\mathrm E}) + \sqrt\pi/(3\sqrt n) - 2/(9n) + O(n^{-3/2})$, by a tail bound beyond $m^{3/5}$, a uniform expansion of the series terms with error monomials $k^p/m^q$, $p/2 - q \leq -\tfrac32$, a Mellin contour shifted to $\operatorname{Re}s = -\tfrac32$ (residues $-\tfrac12\ln\varepsilon + \tfrac12\gamma_{\mathrm E}$ at $0$ and $\varepsilon/12$ at $-1$), Poisson summation and Euler–Maclaurin.
+effective-version: 3c9132019879bb8ee345c4c866ab5213467cf02d03f6aa6904128fe15237cf76
+from: review:part-i-round-4-integration#C1
+line: derivation
+outcome: confirmed
+recheck: 'By hand: the second-order sums reduce to $\sum e^{-k^2/(2m)}(-\tfrac{k}{8m^2} + \tfrac{k^5}{72m^4})$ after the $k^4/m^3$ terms cancel, giving $-\tfrac1{72m}$. Assembly gives $\tfrac{1}{24} - \tfrac14 - \tfrac{1}{72} = -\tfrac29$ per $m$, halved to $-\tfrac{2}{9n}$. Numerically, the series by ${}_2F_2$ and by log-space summation agree to $10^{-30}$ for $n \leq 10^4$. The residual after three terms, times $n^{3/2}$, is $0.125, 0.142, 0.148, 0.150, 0.151, 0.151$ at $n = 10 \ldots 10^6$. The Poisson identities hold to working precision at $m = 50, 500, 5000$.'
+target-version: 9f0758ed7bc37d6f067d005b9f920c9bc9ed4a45463768b7a2c3131a44ac5b29
+version-from: git-revision
