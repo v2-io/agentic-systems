@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ddc803b264af3bf542425106fa40fc2db77b7d2f6404f45545dd80a86c7d15a6
+at: 2026-10-31T03:29:35Z
+store: asf
+act: revise
+about: segment:obs-gated-tempo-advantage
+actor:
+  name: c1-defender-noise
+  role: adopter
+normalizer: vsect-norm/0
+change: redefined
+from-version: 77814c5cc8a60fef038687bdf607943a247ac401a4fc75f109eee41b175e44fc
+own-version: 352df46f7fe4046efe8fa4fd64644c916759ee3f999445cf4390e028455bd378
+record: 01-aat-core/src/obs-gated-tempo-advantage.md

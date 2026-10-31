@@ -65,7 +65,7 @@ The two columns come from sweeps at different parameters — deterministic from 
 - Military: an opponent who maneuvers faster creates systematic positional change (drift, $b \approx 2$)
 - Market: a competitor who acts unpredictably creates noise in signals ($b \approx 1.5$)
 - Software: a fast-changing API creates systematic drift in the codebase state (drift)
-- Adversarial ML: an opponent who varies attack vectors increases observation noise ($b \approx 1.5$)
+- Adversarial ML: an opponent who varies attack vectors adds unpredictable disturbance the target must track ($b \approx 1.5$); an opponent who corrupts the target's observations instead couples into the target's observation channel, which Model S does not describe ( #deriv-observation-noise-placement, P1 "False of")
 
 ## Working Notes
 - The interpolation between drift and noise regimes (Variant B) shows smooth transition, not a sharp boundary. At mixed drift-noise coupling, the exponent lies between the two asymptotes. The drift fraction $f = \mu / (\mu + \sigma)$ continuously parameterizes the transition.

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: d82e316d6396e1b9c0c316232979a8bb2ac21c9be57c2d9ca8fdae147a0a90a5
+at: 2026-10-31T03:29:35Z
+store: asf
+act: revise
+about: segment:deriv-observation-noise-placement
+actor:
+  name: c1-defender-noise
+  role: adopter
+normalizer: vsect-norm/0
+change: redefined
+from-version: 06db79082676415a413128f9e5f1a3d6854ee426a29dee51164865bc9fe0333c
+own-version: ebaaba00ee36a502cf04b7dd0acdb4c9b1a55a6556a1bbc5d302e837ef43108f
+record: 01-aat-core/src/deriv-observation-noise-placement.md

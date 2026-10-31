@@ -14,13 +14,17 @@ the measured exponent collapse comes from.
    The two-sided columns reproduce the recorded Variant-E table.
 
 2. Simulation. The Variant-E fixed-gain loop, copied unchanged except that the two
-   channels get separate noise scales (A only, B only, both).
+   channels get separate noise scales (A only, B only, both). Trials, steps and
+   burn-in are those of the recorded E3 call in variant_ef_extensions.py main()
+   (150 / 15,000 / 4,000), not the function's defaults (200 trials).
 
 3. Event-rate tempo (closed form only, not simulated): A takes r sub-updates per step
    at per-event gain eta, each on a fresh observation; c = (1 - eta)^r, and
-   V_A = rho_A^2 / (1 - c^2) + eta s^2 / (2 - eta).
+   V_A = rho_A^2 / (1 - c^2) + eta s^2 / (2 - eta). The per-step contraction 1 - c
+   saturates at 1, so the slopes printed over r in [0.5, 4] are local; the
+   continuous-time asymptote is exponent 1 (#deriv-observation-noise-placement P2(c)).
 
-Run:  python3 -I variant_e_noise_placement.py   (seed 42; about a minute)
+Run:  python3 -I variant_e_noise_placement.py   (seed 42; a few seconds)
 Results: variant_e_noise_placement_results.md
 """
 import numpy as np
