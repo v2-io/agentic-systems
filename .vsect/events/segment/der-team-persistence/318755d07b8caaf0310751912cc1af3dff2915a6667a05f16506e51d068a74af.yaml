@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 318755d07b8caaf0310751912cc1af3dff2915a6667a05f16506e51d068a74af
+at: 2026-10-31T03:17:24Z
+store: asf
+act: revise
+about: segment:der-team-persistence
+actor:
+  name: Claude Opus 5.5 (TST lane round-4 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: redefined
+from-version: 02f122bd44f9b358c2e371b51fa152ebd120a3e1cf2f01c4b670b8fbfcff1f41
+own-version: f1b195794d2733eb9906d4ef3cdab33b0c2cb281e3f0eb8dee2643a3843b7b7f
+record: 01-aat-core/src/der-team-persistence.md
