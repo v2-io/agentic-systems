@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 3f43169351dab4a370ed49488a979895b6e509adf72e96a25c01eb5abeda2a12
+at: 2026-10-31T02:52:19Z
+store: asf
+act: review-finding
+about: segment:hyp-mismatch-dynamics
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: rho read as total at :14, :16, :38; Model D steady state lag plus floor (review:part-i-round-3-check-1#C11).
+finding: review:part-i-round-2-check-1#F10
+outcome: answered
+revision: 81832f87

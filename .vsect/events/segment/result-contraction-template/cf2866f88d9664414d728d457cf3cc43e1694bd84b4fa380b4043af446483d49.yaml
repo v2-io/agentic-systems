@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: cf2866f88d9664414d728d457cf3cc43e1694bd84b4fa380b4043af446483d49
+at: 2026-10-31T02:52:19Z
+store: asf
+act: review-finding
+about: segment:result-contraction-template
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: (CT-S-persist) corrected to m2/m1 (review:part-i-round-3-check-1#C10).
+finding: review:part-i-round-2-check-1#C17/finding
+outcome: answered
+revision: cd46e227

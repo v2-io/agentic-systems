@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: b2955765ebfdef1a42bfe4f630b14f8baba0ad7ca07de5ccf4a861d7652b4c8e
+at: 2026-10-31T02:52:20Z
+store: asf
+act: review-finding
+about: segment:deriv-stochastic-non-exit
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Exact values replace the biased simulation (review:part-i-round-3-check-1#C8).
+finding: review:part-i-round-2-check-1#C16/finding
+outcome: answered
+revision: e84b085d

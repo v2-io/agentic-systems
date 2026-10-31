@@ -1,0 +1,18 @@
+schema: vsect-event/0
+id: b62d4fda359665014ed40f396df7185c9e12d697b52b4790250e367c800ea514
+at: 2026-10-31T02:52:48Z
+store: asf
+act: confirm-rewording
+about: segment:der-deliberation-cost
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Round 3 added that the threshold uses the realized error and equals the uncertainty-ratio gain only in expectation; the one-step derivative criterion these checks read is unchanged (re-derived in review:part-i-round-3-check-1#C14).
+from-version: 942267bd11f53b6c924b606694862e9d0507787a8f94d98cb417035816476c72
+outcome: equivalent
+scope:
+  for:
+  - 47c9ccf805e3ff6f4b349301cfecf78ebfb01eb256efb6c4fe369ea4653e8318
+  - d7966bbd6011e2daef58ba156afb41f18ab6146c673241f021cc1f37ee197bc8
+to-version: fff865feb1ea99b6b937bda8675a42b832cb3330f09bf2db7fb241f8e83c9aeb

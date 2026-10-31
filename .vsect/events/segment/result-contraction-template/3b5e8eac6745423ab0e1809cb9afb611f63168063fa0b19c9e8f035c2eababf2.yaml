@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 3b5e8eac6745423ab0e1809cb9afb611f63168063fa0b19c9e8f035c2eababf2
+at: 2026-10-31T02:52:19Z
+store: asf
+act: review-finding
+about: segment:result-contraction-template
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: CT-S Ito constant stated as c n sigma^2 m2, (CT-S-persist) m2/m1, scale-invariant, reduces to kappa_R > n/2 (review:part-i-round-3-check-1#C10).
+finding: review:part-i-round-2-check-1#F9
+outcome: answered
+revision: cd46e227

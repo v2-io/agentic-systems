@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 828a9df7f77cac228509b2a3336f2cac504d378543f0b0ae13ae29317c8653c8
+at: 2026-10-31T02:52:17Z
+store: asf
+act: review-finding
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Opening summary and the dichotomy Brief now carry 'at fixed disturbance' / 'against noise that does not grow with the correction'.
+finding: review:part-i-round-2-check-1#F4
+outcome: answered
+revision: bb8a7c18

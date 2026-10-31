@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0633d4a71f61c23af78f6055b9068b846205bd38f5961ff79eca42329ea9a4f3
+at: 2026-10-31T02:52:18Z
+store: asf
+act: review-finding
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Killed moment described as counted on paths still inside, not conditional, at all three segments; (iii) now says Markov on the unstopped moment is unavailable; the asymptotic's error locations rewritten and recomputed (review:part-i-round-3-check-1#C4).
+finding: review:part-i-round-2-check-1#F13
+outcome: answered
+revision: bb8a7c18

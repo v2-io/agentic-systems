@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 8ea98039bd7418f2c00f2b549c5789876d6d266d534ab21d5f01aeb9a12757c8
+at: 2026-10-31T02:52:20Z
+store: asf
+act: review-finding
+about: segment:result-persistence-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: 'alpha = T stated at the optimal gain (review:part-i-round-3-check-1#C12); Brief rewritten per disturbance model. INTRODUCTION headline 1 kept the older containment wording: review:part-i-round-3-check-1#F2.'
+finding: review:part-i-round-2-check-1#F15
+outcome: answered
+revision: 382bfbdf

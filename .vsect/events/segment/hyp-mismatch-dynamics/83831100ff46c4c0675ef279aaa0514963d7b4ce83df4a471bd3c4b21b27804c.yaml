@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 83831100ff46c4c0675ef279aaa0514963d7b4ce83df4a471bd3c4b21b27804c
+at: 2026-10-31T02:52:20Z
+store: asf
+act: review-finding
+about: segment:hyp-mismatch-dynamics
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: hyp-mismatch-dynamics reads rho as total throughout (review:part-i-round-3-check-1#C11).
+finding: review:part-i-mismatch-lineage-check-1#C11/finding
+outcome: answered
+revision: 81832f87

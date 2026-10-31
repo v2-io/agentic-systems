@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 11d2797be6dfe5fd959dafc1e874441cf21ce8282a04d945cba89f0045b66b74
+at: 2026-10-31T02:52:18Z
+store: asf
+act: review-finding
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Discussion states GA-2S per-coordinate (E||w||^2 = n sigma_w^2 per unit time); CT3 likewise; no \Vertw remains in 01-aat-core/src.
+finding: review:part-i-round-2-check-1#F6
+outcome: answered
+revision: bb8a7c18

@@ -1,0 +1,33 @@
+schema: vsect-event/0
+id: 776bafa66b38e0a7ba393ae7d079359a027d7c5e623e886d0badc35f3e856e8a
+at: 2026-10-31T02:26:27Z
+store: asf
+act: read-check
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:deriv-sector-condition: bb8a7c18abfb6ac12203ec8fbd970b93c6429c6d51a3c60ef654875b4433f648
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+committed: before
+criterion: Kersting, Orvieto, Proske & Lucchi 2023, Theorem 4 eq. (17), is the Lemma's integral under $\theta = \alpha$, $\sigma = \sigma_w$, $L = R$, $d = n$.
+effective-version: f04ca64757b9fa1fb82df2a264378a26cca45ac902e03ce07c45a0c03d9ea3af
+from: review:part-i-round-3-check-1#C9
+line: imported
+outcome: confirmed
+recheck: 'Read at the primary (arXiv:2208.04029 as served on 2026-10-30, pp. 5–6): SDE (1) $dX = -\theta X\,dt + \sigma\,dB$; (17) $\mathbb E^x\tau_L = \tfrac{2}{\sigma^2}\int_x^L z^{1-d}e^{\lambda z^2}\int_0^z t^{d-1}e^{-\lambda t^2}dt\,dz$, $\lambda = \theta/\sigma^2$, which is $\tfrac{2}{\sigma_w^2}\int_r^R G/m$. Remark 5 on the same page names Graczyk & Jakubowski 2008 Thm 2.2 as proving (17) for $\sigma = 1$ and expressing it with hypergeometric functions (F4).'
+target-version: bb8a7c18abfb6ac12203ec8fbd970b93c6429c6d51a3c60ef654875b4433f648
+version-from: git-revision

@@ -1,0 +1,27 @@
+schema: vsect-event/0
+id: 02be3874946014be4e11bb3c175d9c1cd37ce1b494a786e2d619cda04a9d02ac
+at: 2026-10-31T02:26:31Z
+store: asf
+act: rederive
+about: segment:def-mismatch-signal
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:scope-adaptive-system: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+committed: before
+criterion: For a linear-Gaussian model term (ii) is $\operatorname{tr}(HP^-H^T)$, the one-step predictive error, attained by the Kalman filter.
+effective-version: aba3896b9166dea25a38701f532f775cbd8320a10c85489c329f35eb1c2e9e54
+from: review:part-i-round-3-check-1#C15
+line: derivation
+outcome: confirmed
+recheck: The history-measurable minimizer of the one-step mean-square prediction error of $\bar o_t = Hx_t$ is $H\hat x_{t\mid t-1}$, with error covariance $HP^-H^T$.
+target-version: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+version-from: git-revision

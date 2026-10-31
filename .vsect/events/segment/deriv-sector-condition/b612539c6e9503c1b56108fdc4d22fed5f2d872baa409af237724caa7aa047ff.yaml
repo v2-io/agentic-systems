@@ -1,0 +1,33 @@
+schema: vsect-event/0
+id: b612539c6e9503c1b56108fdc4d22fed5f2d872baa409af237724caa7aa047ff
+at: 2026-10-31T02:26:25Z
+store: asf
+act: rederive
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:deriv-sector-condition: bb8a7c18abfb6ac12203ec8fbd970b93c6429c6d51a3c60ef654875b4433f648
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+committed: before
+criterion: Lemma A.1S-τ.0's series $\alpha\Phi(0) = \tfrac12\sum_{k\geq1}\kappa_R^k/(k\,(n/2)_k)$ equals the Lemma's exit-function integral, and tends to the Brownian value $\kappa_R/n$ as $\kappa_R \to 0$.
+effective-version: f04ca64757b9fa1fb82df2a264378a26cca45ac902e03ce07c45a0c03d9ea3af
+from: review:part-i-round-3-check-1#C1
+line: derivation
+outcome: confirmed
+recheck: 'Re-derived from the concavity identity: $\alpha\Phi(0) = \int_0^1 t^{n-1}\,(e^{\kappa_R(1-t^2)} - 1)/(1-t^2)\,dt$, termwise with $\int_0^1 t^{n-1}(1-t^2)^{k-1}dt = \tfrac12\Gamma(\tfrac n2)\Gamma(k)/\Gamma(\tfrac n2 + k)$. Numerically, the series by direct log-space summation (no hypergeometric routine) against that $t$-integral by mpmath quadrature (not the integrator''s $G/m$ form) agree to 15 digits at $(n, \kappa_R) = (1, 0.5), (2, 4), (3, 1.5), (3, 6), (10, 5), (20, 40), (100, 50), (5, 9)$; at $\kappa_R = 10^{-8}$, $n = 3$, the ratio to $\kappa_R/n$ is $1 + 2\times10^{-9}$.'
+target-version: bb8a7c18abfb6ac12203ec8fbd970b93c6429c6d51a3c60ef654875b4433f648
+version-from: git-revision

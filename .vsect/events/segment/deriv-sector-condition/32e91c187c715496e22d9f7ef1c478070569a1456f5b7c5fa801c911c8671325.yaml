@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 32e91c187c715496e22d9f7ef1c478070569a1456f5b7c5fa801c911c8671325
+at: 2026-10-31T02:52:17Z
+store: asf
+act: review-finding
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: (v) now states the radial instance with parameters and its exact mean exit 3.57 (3.9x Phi_2(0), near Phi_5(0)); recomputed by finite differences (review:part-i-round-3-check-1#C7).
+finding: review:part-i-round-2-check-1#F3
+outcome: answered
+revision: bb8a7c18

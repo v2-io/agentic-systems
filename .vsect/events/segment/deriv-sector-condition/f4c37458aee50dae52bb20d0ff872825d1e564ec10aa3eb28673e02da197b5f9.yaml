@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f4c37458aee50dae52bb20d0ff872825d1e564ec10aa3eb28673e02da197b5f9
+at: 2026-10-31T02:52:18Z
+store: asf
+act: review-finding
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: 'Strengthening landed: exact series and two-term threshold expansion 1/4(ln n + gamma_E) + sqrt(pi)/(3 sqrt n) + O(1/n), re-derived by hand and recomputed independently (review:part-i-round-3-check-1#C1-C3). Remainder tier can rise further: review:part-i-round-3-check-1#F5.'
+finding: review:part-i-round-2-check-1#F8
+outcome: answered
+revision: bb8a7c18

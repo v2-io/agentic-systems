@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 49ce408b45456c77706b647c41def07e29cf2c72f24a125a0c0e9b6c294c27ba
+at: 2026-10-31T02:52:18Z
+store: asf
+act: review-finding
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: 'Working Note restated at the narrowed strength (certificate loss certain, model-class change open), (iii'') and the retired name removed, pointing at #def-death-as-factor-loss.'
+finding: review:part-i-round-2-check-1#F7
+outcome: answered
+revision: bb8a7c18

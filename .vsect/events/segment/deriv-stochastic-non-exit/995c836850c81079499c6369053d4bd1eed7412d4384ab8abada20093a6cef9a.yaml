@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 995c836850c81079499c6369053d4bd1eed7412d4384ab8abada20093a6cef9a
+at: 2026-10-31T02:52:19Z
+store: asf
+act: review-finding
+about: segment:deriv-stochastic-non-exit
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Table replaced by exact values; recomputed by Crank-Nicolson (review:part-i-round-3-check-1#C8).
+finding: review:part-i-round-2-check-1#F12
+outcome: answered
+revision: e84b085d

@@ -1,0 +1,41 @@
+schema: vsect-event/0
+id: 20bc863cc2e230cc0483cb67f022a7434666d5aea01af62e675e5dc3c02877d6
+at: 2026-10-31T02:26:27Z
+store: asf
+act: run
+about: segment:deriv-stochastic-non-exit
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-model-class-fitness: 80a2eb3fbf06b7ebb3ebdc642c79dc6883eb350ebafb68555ee3ea9c2505a25f
+  segment:def-model-sufficiency: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:deriv-sector-condition: bb8a7c18abfb6ac12203ec8fbd970b93c6429c6d51a3c60ef654875b4433f648
+  segment:deriv-stochastic-non-exit: e84b085d00667adbd5ef1460268a021be074a9a8639f16ed2ab4bcdeea5bb87c
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-mismatch-decomposition: d215ad7db1db571c2e719b31cc39f38f7863ce4b5302e74037a3b6098b2c7a5d
+  segment:result-sector-condition-stability: aa4f9e56f2df48826fccf234cdbcb3f09c3df640583ed1892ee21f7abc286447
+  segment:result-sector-persistence-template: e81dfed0853e9582d41e15e3a737f8fe1829370f72fedf1766ddb60ef07a2d2a
+  segment:result-structural-adaptation-necessity: 7c7c9be73dd830411b5791b025db2e211b07520daab48dd58cca0ab30cf18c2a
+  segment:scope-adaptive-system: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+committed: before
+criterion: The table's $\kappa_R$, $\Phi(0)$ and exit probabilities from the origin by $T = 50, 200, 800, 3200$.
+effective-version: f20ca37b9845308eacd78d3419fbe546c1e1453a3efbd70cbb08522c12139751
+from: review:part-i-round-3-check-1#C8
+line: simulation
+outcome: confirmed
+recheck: 'Crank–Nicolson time-stepping of the survival equation $u_t = \tfrac{\sigma^2}{2}u_{xx} - \alpha xu_x$ on $[-R, R]$ (2001 points, $\Delta t = 0.05$, four damping half-steps), not a spectral solve: $0.003, 0.011, 0.042, 0.157$; $0.023, 0.093, 0.327, 0.796$; $0.842, 0.999, 1.000, 1.000$. $\Phi(0)$ by nested quadrature $18734.8, 2016.3, 27.4$; $\kappa_R = 11.1, 8, 4$.'
+target-version: e84b085d00667adbd5ef1460268a021be074a9a8639f16ed2ab4bcdeea5bb87c
+version-from: git-revision

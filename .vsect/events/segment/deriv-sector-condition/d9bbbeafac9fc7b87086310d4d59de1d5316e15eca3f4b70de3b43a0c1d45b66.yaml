@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: d9bbbeafac9fc7b87086310d4d59de1d5316e15eca3f4b70de3b43a0c1d45b66
+at: 2026-10-31T02:52:17Z
+store: asf
+act: review-finding
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: 'Proof, Epistemic Status, Related Work and Search Log now say what was read at the primary; Kersting (17) re-read by this checker (review:part-i-round-3-check-1#C9). The splice at :293 left a broken sentence: review:part-i-round-3-check-1#F3.'
+finding: review:part-i-round-2-check-1#F5
+outcome: answered
+revision: bb8a7c18

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 5c7a9889045b6bb63b7b7bb455e1ecf82aec891dbdffb889d2eb5f40cfc740a9
+at: 2026-10-31T02:52:17Z
+store: asf
+act: review-finding
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: 'Every listed site now says the stay reachable by tuning the gain on a fixed channel is bounded and peaks below K (summary, Cor A.1S.1, cap paragraph, Kind of guarantee, Findings; result-persistence-condition :98/:130; impl :33/:110; INTRODUCTION headline 2); maximizers recomputed by grid search (review:part-i-round-3-check-1#C5, #C16). One site outside the list remains: review:part-i-round-3-check-1#F1.'
+finding: review:part-i-round-2-check-1#F1
+outcome: answered
+revision: bb8a7c18

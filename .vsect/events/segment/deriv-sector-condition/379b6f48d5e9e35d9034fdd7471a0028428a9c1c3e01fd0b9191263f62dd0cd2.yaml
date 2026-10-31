@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 379b6f48d5e9e35d9034fdd7471a0028428a9c1c3e01fd0b9191263f62dd0cd2
+at: 2026-10-31T02:52:18Z
+store: asf
+act: review-finding
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: OUTLINE caption now says a worst-case drift can defeat the tight corrector and ordinary snowfall marks lost assurance, not certain failure (Lemma A.1N).
+finding: review:part-i-round-2-check-1#F16
+outcome: answered
+revision: bb8a7c18

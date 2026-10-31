@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: aa43530fdbe5702939d69442faa23a267664e9e9aeff2a2233f1e90133164454
+at: 2026-10-31T02:52:17Z
+store: asf
+act: review-finding
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: (iv) now scopes log 2 to kappa_R >> n/2 and gives exact increments, recomputed by bisection (review:part-i-round-3-check-1#C6).
+finding: review:part-i-round-2-check-1#F2
+outcome: answered
+revision: bb8a7c18

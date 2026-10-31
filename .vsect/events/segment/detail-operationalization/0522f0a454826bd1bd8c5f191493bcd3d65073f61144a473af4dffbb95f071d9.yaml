@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0522f0a454826bd1bd8c5f191493bcd3d65073f61144a473af4dffbb95f071d9
+at: 2026-10-31T02:52:19Z
+store: asf
+act: review-finding
+about: segment:detail-operationalization
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Recipes now stated for the noiseless channel; new paragraph says they estimate innovation properties and gives the sound route; estimators owed in item:write-innovation-based-estimators-for-detail-ope (review:part-i-round-3-check-1#C13).
+finding: review:part-i-round-2-check-1#F11
+outcome: answered
+revision: f9d109c1

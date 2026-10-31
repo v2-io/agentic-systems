@@ -1,0 +1,33 @@
+schema: vsect-event/0
+id: aa4bc93e745791c7a9c7db322ef1a258e9c9da9b3a3a88c64d96ad7841059fa6
+at: 2026-10-31T02:52:41Z
+store: asf
+act: confirm-rewording
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: verifier
+normalizer: vsect-norm/0
+criterion: Round 3 changed summaries, qualifiers, the (v) instance, (iv)'s doubling sentence, citations and the cap paragraph, and added the series and threshold expansion; the statements and proofs of Prop A.1S(i)-(iv), Prop A.1S-tau(i)-(iv), Lemma A.1S-tau.0's integral and asymptotic, the Setup and the Kalman-cap algebra these checks read are unchanged in content (diff read whole; numbers recomputed in review:part-i-round-3-check-1).
+from-version: b3c30507cd90d0d11b419358a324887c0dc4d41f132f8e0135ee2928756472d7
+outcome: equivalent
+scope:
+  for:
+  - 4b579a27997bd760e971fb6740ce2395a8d5f79d0ccb1116dce5de4275157592
+  - c0c75f03fe1ffeb13f91ed757e2e2bbed458af8e218c386312d5e74a1ecd2686
+  - 575a22f331cf442a9b5e6c9d3aa0a24b44ce124cd2bccfbc001f2d2ddf4e6366
+  - be0e6125f417ebd63303add5412518e0d87c371788f7b31d55c98c52aa626724
+  - fb4b34d6d0adb24b967ee1a20fc4cf4ec4946ebf0b96a84748c2f2b7fd65284c
+  - 0ca383d7658d1fe3da9f6f966c1dbef7dffeac717e70c1049070830a0511eb7d
+  - 7ff74b6bd1ba97db636954c436ae73a2ae90cc2ae073040678e9211ba5d560ec
+  - 886efe96037d1545d4967667342fe83c787e37fdfe00c7e490ef2ddb0a0881b3
+  - 29b5d8482d0faedd3d4e1d95737b6ea70a0d2a2109e7b1d2f514d1951a9426a3
+  - b9dbfab9880560e7d1e44bdbbd22702efaa4f54e75df7efb74cf15cf8ae189c1
+  - 6fc62e15060a8c110b93352655b91bc01ba285933742d78e989fbd4c9210b5bb
+  - aca0a233c888e7398fc337f4935ffe36d78efe6634f6b2428e1adea56d3bb264
+  - ad7c67021819fa6d04b04133016196ac176d285983fa5850ab7af87aacbd187c
+  - 59d78734fb999fae96eb8995a05d9656fcc96debfd4f108ab9342c40094ea7f9
+  - 7525ea7afd3a0ffb3fc337c55e03870de25d3529d2aff8c068bad22f1790d3c6
+  - 9692d228a8eecf507ad876f490cd9d051a413d97aa200847dc74f3df731a2c4b
+  - c0ef371e270b6911f2995f3ab89bb5bda0ebc59bb7f3c281bb0cae9d83408d1e
+to-version: bb8a7c18abfb6ac12203ec8fbd970b93c6429c6d51a3c60ef654875b4433f648

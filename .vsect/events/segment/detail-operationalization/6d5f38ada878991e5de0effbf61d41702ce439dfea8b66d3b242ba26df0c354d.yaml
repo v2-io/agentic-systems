@@ -1,0 +1,84 @@
+schema: vsect-event/0
+id: 6d5f38ada878991e5de0effbf61d41702ce439dfea8b66d3b242ba26df0c354d
+at: 2026-10-31T02:26:31Z
+store: asf
+act: rederive
+about: segment:detail-operationalization
+actor:
+  name: Claude Opus 5.5 (Part I round-3 checker)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-causal-information-yield: aafeacbbb79b6c8fa83a38fc5b85f2b38b0aad97f0ccfe80798d0a554c5e5c35
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-model-class-fitness: 80a2eb3fbf06b7ebb3ebdc642c79dc6883eb350ebafb68555ee3ea9c2505a25f
+  segment:def-model-sufficiency: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:def-pearl-causal-hierarchy: 0b817be6e14dcb78d1de417b1b13a6a63cc41959e8b240931d3184c81e711668
+  segment:def-strategic-calibration: 6f7e397ba2318cad37a98db35b7f50686e13f5fed5cce3699f0a39ae76c799d4
+  segment:def-strategic-tempo: 689b621ba208abada10f13de5447023b7a8717dca75eceadc9de21d38e283fd7
+  segment:def-strategy-dag: 5b3f2beb361f89c72bfe3cdf51164ff727f732acb387c24e3c9841a664ae8676
+  segment:def-strategy-dimension: 531f25a2cae087ff7056e9e76bac57c8ee5771d71409a643614151339171e38f
+  segment:def-value-object: 08bbd5309246155ed4528d0e56beb4fb064b7c183cf49fa2c4ddc1812cf00141
+  segment:der-action-selection: ff726f8527dab6ee837cc11b7164313850f125e944c76ea86dca14183c613408
+  segment:der-causal-hierarchy-requirement: 835e20ad3d382d10a3b1196797ad51835f3386df13eb8e226a1df4a5295958d5
+  segment:der-chain-confidence-decay: 369ae67b420173870677632e9efb50963106657b4479b094ac26397623908e48
+  segment:der-deliberation-cost: fff865feb1ea99b6b937bda8675a42b832cb3330f09bf2db7fb241f8e83c9aeb
+  segment:der-directed-separation: 5d0c86c0038022d33efc2e386c2600a3538d8328075e7000efcd8ee0240776d3
+  segment:der-gain-sector-bridge: f5c8fdd9d718eff5c9192d3d1b399b0f97106f1f28a5619dae2f8010565b1539
+  segment:der-loop-interventional-access: cc8fd2e95bc7e9889cfde98944c6eb306a8a5067edefcf74a7054ed433d21ddf
+  segment:der-observability-dominance: 4e9d1ddaa927aa17a240ae7d8e9244fe059d0c1beea1a166ccc780c0077ade4f
+  segment:der-recursive-update: e103a83bc7accbe17fffcea5b78dbc7207226b09a7959ca4665d8412968dae00
+  segment:der-team-persistence: f1b195794d2733eb9906d4ef3cdab33b0c2cb281e3f0eb8dee2643a3843b7b7f
+  segment:deriv-adaptive-gain-dynamics: 4645e546481f1dcef35a011632f5127f872b7a616e96f063fa352eff02157070
+  segment:deriv-edge-credence-dynamics: 13d4f7f2bd417d4627da1465726e5106659e573a9dc64626bb85d0df79b0ff3c
+  segment:deriv-edge-update-natural-parameter: 1347ced6b4f8032b9dcd3b8a927a9020e51c765cb15987ac0a38a9d4570d0c61
+  segment:deriv-fisher-local-update-gain: 6b2097fdd6f696393d5aa04c19fe1af3a27943409d33eb97b53e3e3bc5810be1
+  segment:deriv-fisher-whitened-update-rule: c22c45ee56eeb5950b3e8791cb8b77daba845cd7bb423831863fcc5237909b1c
+  segment:deriv-gain-sector: f78514b9da4ac15f168eda5d3d520d6191462d6a86841afcb7c80487fe70ba94
+  segment:deriv-recursive-update: 4ac1b076e663524a8fa12309fdece5f6e62dde7a0d1c3a84d5d642c3831a3415
+  segment:deriv-sector-condition: bb8a7c18abfb6ac12203ec8fbd970b93c6429c6d51a3c60ef654875b4433f648
+  segment:deriv-strategy-cost-regret-bound: e4a8235550228cd9cd5930bc053f501c6ef2b89db1a50f5f20146b3124c3bc2d
+  segment:deriv-tempo-additivity: c3622f84efe0fd516cca4c3e04b603ab2092bb945986a4419dac5b5b0427d64b
+  segment:detail-operationalization: f9d109c1f63b35c97248c3182323425bb6de0b1ed4e05a5aff77a85831caa021
+  segment:disc-additive-coordinate-forcing: d53d07c5d38eb12cc9dcda36140778c2e4566dc1a1a9ad4ab777e4eacae3ea1d
+  segment:disc-composition-consistency: 38ecdbe2544533cf09ca51fc1f1c55da33ff83820a49ebd77b83629e2d8b3246
+  segment:disc-credit-assignment-boundary: 0775756c93e97be9bb66d08c396a84625a7667c8da526f74e5faaac4ce09a161
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-complete-agent-state: d3898fba83b370fda5d32ace003b55ee464beed58852444a5b96d7a056054111
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:form-objective-functional: 99b4ff434893d307522e91246979ed599cc2d3c415fc605206dfab71df46c74b
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:form-strategy-complexity-cost: 6a614bc55ed494ed08e12776ac83d97f9e7b2718d167a3c8e703cbb4bcc250f5
+  segment:form-structural-change-as-parametric-limit: 36cd3cbd177605e0a239047be8f990995e6becf5315a0e2056eb66ee7d8eaf66
+  segment:hyp-communication-gain: 050c23772768f3a0bf2628d63da49ca7a2854b252728582203d999ff780977ad
+  segment:hyp-edge-update-via-gain: 594bed6507decb872a4a6fb2dba3c36a27f3b33f95a003d61aab003144446b25
+  segment:norm-explicit-strategy-condition: 9ba33948b1a1a431346ec2df7126d81de016b39cd55864f7ea942d2b053bbc92
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:result-mismatch-decomposition: d215ad7db1db571c2e719b31cc39f38f7863ce4b5302e74037a3b6098b2c7a5d
+  segment:result-persistence-condition: 382bfbdfce370119cb7f41c8161baf42fa9415a28646b553fbed7f3a9641fce4
+  segment:result-sector-condition-stability: aa4f9e56f2df48826fccf234cdbcb3f09c3df640583ed1892ee21f7abc286447
+  segment:result-sector-persistence-template: e81dfed0853e9582d41e15e3a737f8fe1829370f72fedf1766ddb60ef07a2d2a
+  segment:result-structural-adaptation-necessity: 7c7c9be73dd830411b5791b025db2e211b07520daab48dd58cca0ab30cf18c2a
+  segment:schema-strategy-persistence: 00fb63e55bc426d659d9a74e531b7e09def9a756b22846680959ffbc948aac91
+  segment:scope-adaptive-system: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+  segment:scope-agency: f44ab7605d212e889f3593efe911aa9e504c21f25b08c76ec39c3e6bbb16e5d1
+  segment:scope-agent-identity: d6368187962fe6e03af2a82a795b155b684497793341b1228cdc255a9adca4ff
+  segment:scope-and-or: 7b529e04b43cb9069c611d88dc65216efe6aaa99d269df0c61a88bba6d7e9cac
+  segment:scope-edge-update-causal-validity: ba1d70b6fe950dd386c0be52c5cb22ccf2996d91c9fc8d3e1cbf23d5d7758b6f
+  segment:scope-multi-agent: bfd7ff18a1c5e2edca2661964961d30a0c4d87908c31f2929ef4155e87c4edd9
+committed: before
+criterion: 'The new paragraph "What the residual-based recipes estimate": residuals are the innovation; the recipes estimate innovation properties and coincide with $\rho$, $\sigma_w$ only for a noiseless channel; the innovation''s mean square exceeds the estimation error''s by the channel floor; $\sigma_w^2 = \sigma_{\text{env}}^2 + \alpha^2\sigma_\nu^2$, $\rho = \rho_{\text{env}} + \alpha\bar\nu$.'
+effective-version: dfd9667650935dc89145ae3812d59928f43c167757c3507f8811f615a650fee3
+from: review:part-i-round-3-check-1#C13
+line: derivation
+outcome: confirmed
+recheck: '$o - \hat o = (o - \bar o) + (\bar o - \hat o)$ with the cross term zero under GA-1; the totals are the Setup of #deriv-sector-condition. The deferral to `item:write-innovation-based-estimators-for-detail-ope` is honest, not a softening: the false sentence was removed, and what replaces it is true and scoped; the estimators genuinely do not exist yet.'
+target-version: f9d109c1f63b35c97248c3182323425bb6de0b1ed4e05a5aff77a85831caa021
+version-from: git-revision
