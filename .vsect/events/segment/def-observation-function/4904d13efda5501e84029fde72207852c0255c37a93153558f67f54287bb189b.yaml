@@ -1,0 +1,26 @@
+schema: vsect-event/0
+id: 4904d13efda5501e84029fde72207852c0255c37a93153558f67f54287bb189b
+at: 2026-10-31T02:25:45Z
+store: asf
+act: rederive
+about: segment:def-observation-function
+actor:
+  name: Claude Opus 5.5 (A.1 check 7, bare brief)
+  role: independent checker
+  read:
+  - segment:def-observation-function
+  - segment:def-action-transition
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+committed: after
+criterion: Fresh-noise clause and the product form of the run's law it gives with fresh transitions; the kernel-is-learnable sentence; the repeated-noise counterexample in the Epistemic Status
+effective-version: 92693bd3b42becf084a3ebc500c0096fb9950a3fd064b5a103dafba7474f3499
+from: review:scope-adaptive-system-check-7#C7
+line: derivation
+outcome: confirmed
+recheck: product form given $\theta$ read "with the law held fixed"; $\varepsilon_t = \varepsilon_{t-1}$ keeps the one-step kernel, and $o_t - o_{t-1}$ shows the state's change noiselessly for an additive channel
+target-version: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+version-from: git-revision

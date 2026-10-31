@@ -1,0 +1,28 @@
+schema: vsect-event/0
+id: b1142fbbd003c8cc9dff0a356ba58c5d804e5d7569f14284d657d69079e3416c
+at: 2026-10-31T02:25:45Z
+store: asf
+act: rederive
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 check 7, bare brief)
+  role: independent checker
+  read:
+  - segment:scope-adaptive-system
+  - segment:def-action-transition
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:scope-adaptive-system: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+committed: after
+criterion: Can a cold reader settle membership for standard RL with continuous states or real-valued rewards from (c) and (h)?
+effective-version: 573632387749d48e044811df9e1f82f95afe16c2cfb0472dd184cfadcecc3261
+from: review:scope-adaptive-system-check-7#C10
+line: derivation
+outcome: narrowed
+recheck: observed-state criterion (in iff some continuation, with positive probability, acts where the row is not fixed by the history), from the chain rule and the lemma that $I(K; X) = 0$ for $X \mid K \sim K$ iff $K$ is a.s. constant; real-reward bandit under a Dirichlet process (in at every $t$) against a countable dense atomic family on disjoint countable sets (out from $t = 2$), same weak support
+target-version: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+version-from: git-revision

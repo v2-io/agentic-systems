@@ -1,0 +1,27 @@
+schema: vsect-event/0
+id: 8e344ea1cb64ae2fa9ab46c481c3ddaf2ad9098cfcd6402462753cbbb014122d
+at: 2026-10-31T02:25:45Z
+store: asf
+act: run
+about: segment:scope-adaptive-system
+actor:
+  name: Claude Opus 5.5 (A.1 check 7, bare brief)
+  role: independent checker
+  read:
+  - segment:scope-adaptive-system
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: d0c0ec30de6c187d51bd7745f5d31d4a520209d500234637d7be0cd64b3024fc
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:scope-adaptive-system: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+committed: after
+criterion: 'Discussion and Epistemic Status numbers: fresh uniform row $\log 2 - \tfrac12$; sign flip one-step part like $1/(2t)$ with infinite value; doubling map $\log 2$ per step with no renewal; part-of-target $\infty$ against $\tfrac12 \log \tfrac32$'
+effective-version: 573632387749d48e044811df9e1f82f95afe16c2cfb0472dd184cfadcecc3261
+from: review:scope-adaptive-system-check-7#C9
+line: simulation
+outcome: confirmed
+recheck: $2 \int_0^1 (-p \ln p)\, dp = \tfrac12$; $\tfrac12 \log(1 + 1/(t+1))$ at $t = 10, 100, 1000$; posterior variance $1/2$ after one unit-noise reading
+target-version: 55f592c59aa7706e3e51be3193988459574380e87b13792cf5d9569bce61fa3a
+version-from: git-revision

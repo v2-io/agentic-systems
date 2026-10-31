@@ -1,0 +1,18 @@
+schema: vsect-event/0
+id: aea5b92b76aef27ea699967d81eb44c405af55ee95df31a57a929f371b17972c
+at: 2026-10-31T02:25:45Z
+store: asf
+act: place-finding
+about: segment:def-observation-function
+actor:
+  name: Claude Opus 5.5 (A.1 check 7, bare brief)
+  role: independent checker
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+finding: review:scope-adaptive-system-check-7#F4
+target: segment:def-observation-function
+text: The observation kernel is defined as "the conditional law of $o_t$ given $\Omega_t = \omega$ and $a_{t-1} = a$". Under $\pi_0$ with $\theta_h$ random, that is the mixture over $\theta_h$, not the kernel the fresh-noise clause conditions on.
+version-from: git-revision

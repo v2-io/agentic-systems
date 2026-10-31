@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 9ab6fc27178ef655ca1bef6d81ec88fe58a5597090cf57e028cb21e3daca68f1
+at: 2026-10-31T02:25:44Z
+store: asf
+act: rederive
+about: segment:def-action-transition
+actor:
+  name: Claude Opus 5.5 (A.1 check 7, bare brief)
+  role: independent checker
+  read:
+  - segment:def-action-transition
+normalizer: vsect-norm/0
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+committed: after
+criterion: 'Fresh-transition clause: coherent with the Markov commitment, without loss of generality as the Epistemic Status claims; the XOR example (Markov in its own past, fresh noise, yet $o_K \oplus o_1 = x$)'
+effective-version: 9a9bcb1399364f0e6030a6dc8e6f8a45f6cfa0cdad449ef0d3a20ab3e176ac77
+from: review:scope-adaptive-system-check-7#C6
+line: derivation
+outcome: confirmed
+recheck: $\varepsilon_1$ independent of $x$ makes the state's bit a fair coin given its own past; declaring remembered noise as state only adds coordinates, which by the chain rule can bring a loop in but never put it out
+target-version: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+version-from: git-revision
