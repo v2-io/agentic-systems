@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 9c094e7fe82d024b35ccbe665e3749348c94d08c0e91fd0dddda0cf9bfa011f3
+at: 2026-10-31T03:04:20Z
+store: asf
+act: correct
+about: item:gated-tempo-nu-versus-tempo-collision
+actor:
+  name: c1-defender-noise
+  role: integrator
+normalizer: vsect-norm/0
+corrects: eeb50c80dca48341baf2db20c4ec62c444f9f204c352f34c5d1877d6d884c180
+text: 'Closed by restating lines 14 and 42 (now the gain-raised vs event-rate distinction). The item''s premise that the Variant-E simulation varies nu was false: run_variant_e_adversarial raises the attacker''s tempo by gain on one noisy observation per step; see #deriv-observation-noise-placement, Variant-E check.'

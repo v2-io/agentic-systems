@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: e62e91b6cc5be3190f0ebb82a0eea25aa13f5d0ff50ca2a69d5867f8296dd0d2
+at: 2026-10-31T03:04:13Z
+store: asf
+act: close
+about: item:t1-gated-tempo-one-sided-noise-prescription
+actor:
+  name: c1-defender-noise
+  role: integrator
+normalizer: vsect-norm/0
+by-commit: 47d76999
+outcome: done

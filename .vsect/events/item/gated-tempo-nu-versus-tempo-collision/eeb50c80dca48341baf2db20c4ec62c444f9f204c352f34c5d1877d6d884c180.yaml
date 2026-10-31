@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: eeb50c80dca48341baf2db20c4ec62c444f9f204c352f34c5d1877d6d884c180
+at: 2026-10-31T03:04:15Z
+store: asf
+act: close
+about: item:gated-tempo-nu-versus-tempo-collision
+actor:
+  name: c1-defender-noise
+  role: integrator
+normalizer: vsect-norm/0
+by-commit: 47d76999
+outcome: done
