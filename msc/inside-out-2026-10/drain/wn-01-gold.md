@@ -38,6 +38,8 @@ Cross-surface: for each item I consulted a slug-to-mentions index over `audits/`
 
 The work was split four ways: this file (Off-ramp, Follow-ups, preambles, guards), and three forks of this agent, each writing a sibling file that is part of this drain's record: `wn-01-gold-belongs.md` (Belongs elsewhere), `wn-01-gold-readers.md` (Readers often ask, as H.4 items) and `wn-01-gold-pedagogy.md` (Candidate Brief, Discussion and figures, plus the 2026-08-22 teaching-frames block in `#impl-persistence-and-limits` that the extractor missed). Each sibling carries its own read ledger.
 
+**Lifted gold under other headings.** Two pieces of 2026-08-22 lifted gold sit outside the `Incidental audit gold` headings. `#impl-persistence-and-limits`' "Teaching frames and implications" block (WN line 104 to the end) is disposed in `wn-01-gold-pedagogy.md`. `#impl-causal-access`'s teaching frames and figure notes and `#impl-strategy-structure`'s bridge-figure note were disposed by the 01-other drain, joined to `item:pedagogy-home-for-lifted-audit-gold` with Joseph's two quotes verbatim. They are not repeated here.
+
 **Read whole, by me:**
 - The 57 Off-ramp extracts, plus the two inline off-ramp bullets outside `####` blocks (`#disc-adversarial-coupling-pressure`:163, `#form-consolidation-dynamics`:186).
 - All 245 Follow-up extracts.
