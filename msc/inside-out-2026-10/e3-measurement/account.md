@@ -1,6 +1,6 @@
 *KR E.3 ("One of Volume 2's cheap falsifiers is run on a real codebase history"), under objective E ("One quantity is measured on an agent the theory did not construct"). Top intent: "Complete "in-place" refactor of ASF-- meta, all artifacts, and theory itself." — Joseph, 2026-10-30.*
 
-# E.3: source files outlive the change-expectation baseline, and keep changing at least as often as it predicts
+# E.3: source files outlive the change-expectation baseline, and receive at least as many further changes as it predicts where the follow-up is long enough to tell
 
 Written by the E.3 agent (Claude Opus 5.5) on 2026-10-30, for the lead first and then for an independent checker. Per the lead's instruction, nothing has been landed in canon or in the ledger; §7 holds what I would propose.
 
@@ -13,9 +13,9 @@ Written by the E.3 agent (Claude Opus 5.5) on 2026-10-30, for the lead first and
 Two things were seen before the primary set ran:
 
 - a smoke test of the extraction on asf's own history, which is not part of the test;
-- the four young histories and redis, which ran first because their clones finished first.
+- three of the four young histories (ink, obsidian-linter, gemini-cli), which ran first because their clones finished first. Codex ran later, after most of the primary set.
 
-The exploratory analysis (§4) was written after seeing those, and before most of the primary set. The post-hoc fit (§3) was written after seeing all of it.
+The exploratory analysis (§4) was written after seeing those three, and committed with the script before redis and the rest of the primary set ran. The post-hoc fit (§3) was written after seeing all of it.
 
 ## 1. Which falsifier, and what was measured
 
@@ -97,7 +97,7 @@ A rising $a(t_0)$ is what this family predicts for $t_0$ of order $b$. So, befor
 
 Read within the segment's own family:
 
-- **With $a = 1$**, the scale $b$ is 3 to 80 years. So the baseline's "median remaining life equals age" would hold only for files much older than these histories, and at every observed age the median remaining life is about $b$. Where $a = 1$ is forced, the segment's hazard form is instantiated with $b$ measured.
+- **With $a = 1$**, the scale $b$ is 3 to 80 years. So the baseline's "median remaining life equals age" would hold only for files much older than these histories, and for files younger than $b$ the median remaining life is about $b$ (cpython's $a = 1$ fit, with $b$ of 2.6 years, fits poorly anyway). Where $a = 1$ is forced, the segment's hazard form is instantiated with $b$ measured.
 - **With $a$ free**, $a$ is 0.07–0.40 and fits better in every repository. Its rms residual is two to eight times smaller in seven of them (cpython, postgres, django, rails, perl5, redis, node); git and vim fit about as well either way. That is a prior density over the hazard that diverges at zero, the segment's "a prior that diverges there predicts a longer [future]".
 - **Ruby** is better described by a near-exponential lifetime of about 14 years than by either.
 
@@ -137,7 +137,7 @@ At the 1/2 cut, which has a shorter follow-up, $L$ is 0.17–0.57 and $U$ is 0.5
 
 I wrote the rule and I will not choose between the readings after seeing the data. The checker and the lead should.
 
-**What does not depend on the rule.** $L$ is a lower bound. Its interval excludes 1/2 from above in postgres, django, rails and perl5 at the 1/3 cut, and in rails at the 1/2 cut. In those repositories, $P(n_{\text{future}} \ge n_{\text{past}}) \gt 1/2$ is established for files with five or more changes. No repository's $U$ interval lies below 1/2 at the 1/2 cut, and only cpython's lies below at the 1/3 cut.
+**What does not depend on the rule.** $L$ is a lower bound. Its interval excludes 1/2 from above in postgres, django, rails and perl5 at the 1/3 cut, and in rails at the 1/2 cut. In those repositories, $P(n_{\text{future}} \ge n_{\text{past}}) \gt 1/2$ is established for files with five or more changes. No repository's $U$ interval lies below 1/2 at either cut; only cpython's point estimate does, at the 1/3 cut (0.42, interval $[0.29, 0.55]$).
 
 **A caveat.** A "change" here is a mainline event. A merged branch counts once, however many commits it holds.
 

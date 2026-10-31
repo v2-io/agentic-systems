@@ -18,6 +18,8 @@ The bootstrap used 1,000 replicates for the primary variant and 200 for each sen
 
 **Rerunning.** A rerun from a dump is exact. A rerun from a clone at the recorded HEAD should reproduce the dump byte for byte, given the same git version's rename detection. The digests below are the first 16 hex digits of each file's sha256.
 
+**Post-hoc fit** (account §3; not pre-registered). It ran on the ten primary dumps with `lifetimes.py posthoc <name>.log`, the version committed at `59d5141e`, using 200 directory-cluster bootstrap replicates, with seeds keyed on `sha256("E3:<name>:posthoc")`. Its output was printed, not saved to a file. A rerun from the dumps is exact.
+
 The decision rules were applied with `lifetimes.py summarize --variant {primary,no-renames,no-imports}` over the ten primary JSONs. The exploratory count analysis was run with `lifetimes.py explore <name>.log` (not pre-registered).
 
 | Repository | HEAD | Mainline commits | Lives | Seeds (calendar, commit) | dump (renames) | dump (no renames) | result JSON |
