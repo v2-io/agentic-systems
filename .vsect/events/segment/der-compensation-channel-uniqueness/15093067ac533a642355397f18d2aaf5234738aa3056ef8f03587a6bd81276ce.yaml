@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 15093067ac533a642355397f18d2aaf5234738aa3056ef8f03587a6bd81276ce
+at: 2026-10-31T03:17:45Z
+store: asf
+act: revise
+about: segment:der-compensation-channel-uniqueness
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-4 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: redefined
+from-version: f5cf6b65535219c06d4f73af0d9e60580ca2189c4faa132027aebda503462ae6
+own-version: 611c259dd2ab2d23a0867ec8e497c4d7e2b336b618653d201b359fb69f8c3b15
+record: 04-eli-core/src/der-compensation-channel-uniqueness.md

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 0ebe2252e6fd567a29bf8dc3032894898497d4aa4614eb0e51a9d1f3863aabc3
+at: 2026-10-31T03:17:39Z
+store: asf
+act: revise
+about: segment:disc-continuity-stance
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-4 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: redefined
+from-version: 846b7c38bcef13a75c37d67c0a44c1ef85807422d5a468f4705a4c602071de81
+own-version: 37a3049d13a933d3e24cf336d01ce913b16cbc4e83570d6b4fcecd5c236ab934
+record: 01-aat-core/src/disc-continuity-stance.md

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: fb4a24556482f3ff71a3759b101550ba902abbc9b63c339198256e97f8be2739
+at: 2026-10-31T03:17:43Z
+store: asf
+act: revise
+about: segment:def-identity-sufficiency
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-4 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: redefined
+from-version: f8c98691b8500c14b643aa41fdd57d365bfd84bebf00f7ec2025348c752baa0a
+own-version: d28977f3b7f2410a14613c27084c7cbb2572cb59c22a8fbcdfc73531e2ee0603
+record: 04-eli-core/src/def-identity-sufficiency.md

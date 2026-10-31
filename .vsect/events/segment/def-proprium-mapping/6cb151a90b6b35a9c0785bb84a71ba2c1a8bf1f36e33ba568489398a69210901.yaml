@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 6cb151a90b6b35a9c0785bb84a71ba2c1a8bf1f36e33ba568489398a69210901
+at: 2026-10-31T03:17:44Z
+store: asf
+act: revise
+about: segment:def-proprium-mapping
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-4 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: reworded
+from-version: 9cac5c91d3f11cb545319e3fe9d893b9c61a8f865b438fd61fe0098fb41636bc
+own-version: 7328625189355f9448335232bf5a4a782151c0da3317f4a4110b8b08bf437e1a
+record: 04-eli-core/src/def-proprium-mapping.md

@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 79a76f7ecf117624a24376f08524e361910710b3f2edbd9593654a657929c6fa
+at: 2026-10-31T03:17:45Z
+store: asf
+act: revise
+about: segment:der-identity-continuity-threshold
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-4 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: redefined
+from-version: 4a0b2e31747535b2f6e20c2481a507df0270c3de80c406f9cfee0d0ff805d8d1
+own-version: 1a0e5305dad9c5c9142051b2b3024b7d1eeeb7bad5c09debf1cb495e987a9c8d
+record: 04-eli-core/src/der-identity-continuity-threshold.md
