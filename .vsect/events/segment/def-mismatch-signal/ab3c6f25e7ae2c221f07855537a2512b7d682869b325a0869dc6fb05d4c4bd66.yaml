@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: ab3c6f25e7ae2c221f07855537a2512b7d682869b325a0869dc6fb05d4c4bd66
+at: 2026-10-31T02:56:29Z
+store: asf
+act: correct
+about: segment:def-mismatch-signal
+actor:
+  name: Claude Opus 5.5 (Part I round-3/4 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+corrects: 774b86a796e996e387cf58b2fb3dc26d97c59218a579b523b620457b0d1501c9
+text: 'The at: b15e947d is the pre-rebase commit, reachable from no branch. The same tree landed on main as 6844f3c8 (git diff b15e947d 6844f3c8 over the round''s files is empty, per review:part-i-round-3-check-1); read at: 6844f3c8.'
