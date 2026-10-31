@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: f2e83b83d474a7b731783cfc5701935f57f3969cd906b27ee7723eb326399541
+at: 2026-10-31T03:27:44Z
+store: asf
+act: revise
+about: segment:scope-moral-continuity
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-4 integrator)
+  role: adopter
+normalizer: vsect-norm/0
+change: reworded
+from-version: 496af8990b2bd6aaf74730b07c43eaa46a898b7da35a917063d82d95b668c9b3
+own-version: 94ea6f3257e9c5d830be9d6fe835a00172985630f6f4dc6bf17660ffa8f8d596
+record: 04-eli-core/src/scope-moral-continuity.md
