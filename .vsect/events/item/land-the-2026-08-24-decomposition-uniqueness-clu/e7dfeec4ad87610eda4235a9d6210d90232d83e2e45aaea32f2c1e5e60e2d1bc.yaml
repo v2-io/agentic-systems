@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: e7dfeec4ad87610eda4235a9d6210d90232d83e2e45aaea32f2c1e5e60e2d1bc
+at: 2026-10-31T02:22:09Z
+store: asf
+act: raise
+about: item:land-the-2026-08-24-decomposition-uniqueness-clu
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p1)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:land-the-2026-08-24-decomposition-uniqueness-clu
+source: '01-aat-core/src/deriv-decomposition-uniqueness.md Working Notes ''Open (main line)'' (the kernel-level analog, ''neither constructed nor refuted'' there, which the distributional spike''s Theorem D answers), and two opens the cluster may not cover: the (D3)-respecting gauge subgroup between Proposition 3''s endpoints (expected: beta_m measurable w.r.t. the information about m surviving into (m+, e)), and quantifying Corollary 5''s information gap for Class 3 architectures as a companion to kappa_processing (home 03-llm-core)'

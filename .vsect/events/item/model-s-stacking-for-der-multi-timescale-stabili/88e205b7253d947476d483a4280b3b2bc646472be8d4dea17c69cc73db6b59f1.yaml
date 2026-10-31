@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 88e205b7253d947476d483a4280b3b2bc646472be8d4dea17c69cc73db6b59f1
+at: 2026-10-31T02:22:07Z
+store: asf
+act: raise
+about: item:model-s-stacking-for-der-multi-timescale-stabili
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p1)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:model-s-stacking-for-der-multi-timescale-stabili
+source: 01-aat-core/src/der-multi-timescale-stability.md Working Notes 'Open (Model S stacking)' (extend Prop A.1S-tau's single-level exit time)

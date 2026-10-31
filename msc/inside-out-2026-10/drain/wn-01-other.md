@@ -32,13 +32,13 @@
 
 | part | OUTLINE sections | items | segments | file | coverage |
 |---|---|---|---|---|---|
-| p1 | Appendix A, `der-belief-…` to `deriv-mismatch-…` | 79 | 17 | `wn-01-other-p1.md` | not reached |
-| p2 | Appendix A, `deriv-persistence-cost` to the end | 113 | 24 | `wn-01-other-p2.md` | not reached |
+| p1 | Appendix A, `der-belief-…` to `deriv-mismatch-…` | 79 | 17 | `wn-01-other-p1.md` | **done** by the p6 helper: every item read whole and disposed; merged below (this commit) |
+| p2 | Appendix A, `deriv-persistence-cost` to the end | 113 | 24 | `wn-01-other-p2.md` | with a third helper fork; merged here when it returns |
 | p3 | Part II Meta-Architecture I | 104 | 16 | `wn-01-other-p3.md` | **done**: every item read whole and disposed (this commit) |
 | p4 | Part I (all chapters) and the Part II preface and Lift | 141 | 28 | `wn-01-other-p4.md` | **done**: every item read whole and disposed (4d8bb49a, 9fcddd48, f0f81911) |
-| p5 | Part II Causal Access, Strategy Structure, Strategy Dynamics, Orient Cascade | 130 | 25 | `wn-01-other-p5.md` | with a helper fork (launched after the cap freed); merged here when it returns |
+| p5 | Part II Causal Access, Strategy Structure, Strategy Dynamics, Orient Cascade | 130 | 25 | `wn-01-other-p5.md` | **done** by a helper fork: every item read whole and disposed; merged below (this commit) |
 | p6 | Part III Meta-Architecture II, Scope and Formation, Composition Machinery | 85 | 11 | `wn-01-other-p6.md` | **done** by a helper fork: every item read whole and disposed; merged below (this commit) |
-| p7 | Part III Unity, Cooperative/Adversarial, Strategic Composition; Appendix B | 100 | 21 | `wn-01-other-p7.md` | not reached |
+| p7 | Part III Unity, Cooperative/Adversarial, Strategic Composition; Appendix B | 100 | 21 | `wn-01-other-p7.md` | **done**: every item read whole and disposed (this commit) |
 
 **Helpers.** The first six fork launches were refused (the session's subagent cap). Later two went through, for p5 and p6, writing to `wn-01-other-p5.md` and `-p6.md`; p7, p1 and p2 were refused again and are read here, in that order, after p4 and p3. The coverage column above is updated as each part closes.
 
@@ -361,8 +361,206 @@ The live correctness findings on this segment sit in its gold Off-ramp (gold-lif
 
 #### `scope-edge-update-causal-validity`
 
-- [753] "The interaction between $M_t$ updates and edge updates…" — **owed → item:edge-update-evidence-double-counting** (C.4). This was filed before the p5 helper reaches `#hyp-edge-update-via-gain`, so that helper can raise onto it.
+- [753] "The interaction between $M_t$ updates and edge updates…" — **owed → item:edge-update-evidence-double-counting** (C.4). As first filed the item said no analysis existed; the p5 helper found one (`spikes/.integrated/spike-edge-semantics-resolution.md` §7, "mostly unfounded" with a bounded residual), and the item now asks for that verdict to reach the body.
 - [754]–[756] "Can $\iota_{ij}$ be estimated online?", "**Regime C edges should be labeled.**", "The depth-dependent degradation for indirect edges…" — **owed → item:edge-update-causal-validity-open-questions** (C.4).
+
+### Part p5 — Part II Causal Access, Strategy Structure, Strategy Dynamics, Orient Cascade (helper fork)
+
+*KR I.9 (top intent: "Complete "in-place" refactor of ASF-- meta, all artifacts, and theory itself."). Written by a fork of the WN-01 drain, for merging into `wn-01-other.md`. All 130 items read whole, at asf `f0f81911`. Every "canon" below was checked against the body by grep and, where the grep hit, by reading the paragraph; where it was not, the line says "per the note; not re-checked".*
+
+**Counts (130 items, 25 segments), by the disposition that decides each item's fate under I.5:** canon 18 · superseded 2 · owed → new item 29 · joined an existing item 30 · guard 24 · set aside 27. Some items carry a second disposition for one sentence (a guard plus an open clause); those are said in the line. Raises recorded with `vsect raise`: 22.
+
+**New items (19):** confounded-positive-feedback-worked-failure (G.2), optimal-strategy-dag-topology, strategic-tempo-and-depth-on-mixed-and-or, terminal-alignment-diagnostic-delta-align, causal-insufficiency-no-go-non-shallow-construction, credit-assignment-open-formalizations, deliberation-strict-dominance-conditions, law-discovery-and-structural-imagination-relata-passes (F.2), structural-imagination-retype-under-invariance-cut (A.1), strategy-compression-by-convergence, stochastic-strategic-disturbance, where-new-strategy-edges-come-from, edge-signal-function-continuous-multiparent, consolidation-as-logogenic-primitive (G.2), mehra-instance-5-candidacy, strategy-restriction-on-sub-sphere, explicit-strategy-cost-inequality-readings, gain-modulated-noise-strategic-feasibility, canon-bodies-point-into-working-notes (I.5). Unmarked owners are C.4.
+
+**For the parent, two things from outside p5.** (1) `item:edge-update-evidence-double-counting` (opened from p3's `#scope-edge-update-causal-validity`) says nobody has worked the double-counting question out; `#hyp-edge-update-via-gain`'s Working Notes record an analysis (`spikes/.integrated/spike-edge-semantics-resolution.md` §7, "mostly unfounded", with a bounded residual effect). Raised onto that item. (2) `item:canon-bodies-point-into-working-notes` (I.5) collects body sentences that point into their own Working Notes; p4's `#def-chronica`:17 is in it, and the p1–p3, p6, p7 passes may find more.
+
+#### `causal-access-intro`
+
+- [0] "This is a chapter-introduction segment; it bridges Chapter 1's lift…" — standing statement: **joined item:format-todo-c14-discussion-segment-schema-split-in-f-09d7** (A.3; raised).
+- [1] "The "loop as Level-2 engine" framing is the chapter's central architectural move…" — **set aside**: authorial intent for the intro.
+- [2] "The "tragedy of agency in a confounded world" framing comes from Gemini's first-encounter reaction…" — the worked failure mode (confounded positive feedback; the 2025-09-16 substrate-switching retrospective) is in no body (`#der-loop-interventional-access`: no hit for gambl/confound-win/confounded reinforcement). **owed → item:confounded-positive-feedback-worked-failure** (G.2).
+- [3] "The pre-compiled / learning-agent distinction is small in segment terms but architecturally large…" — **set aside**: authorial intent; the cut is `#der-causal-hierarchy-requirement`:34.
+- [4] "The CIY/EIG honesty is one of those moves that's easy to gloss over…" — **set aside**: authorial intent.
+
+#### `def-strategic-calibration`
+
+- [43] "The aggregation into a single $\delta_{\text{strategic}}$ may lose important structure." — **canon**: the body defines per-edge residuals $r_{ij}$ and opens by saying the quantity locates *where* miscalibration lives (:13).
+- [44] "Alternative aggregation: maximum edge residual…" — **set aside**: a per-use-case design choice with no claim; the per-edge residual already serves location.
+- [45] "Execution fidelity monitoring is a genuine challenge…" — **canon** for the condition (:36 names execution fidelity as a precondition); the domain remark is set aside.
+
+#### `def-strategic-tempo`
+
+- [46] "**2026-07-16 — OR/AND calibration-vs-performance divergence gloss added to Discussion**" — **set aside**: history.
+- [47] "**2026-07-16 — noise-correlation scope made explicit…**" — **set aside**: history.
+- [48] "**Mixed AND/OR DAGs.**" — the body itself says it is conditional for this reason (:100). **owed → item:strategic-tempo-and-depth-on-mixed-and-or**.
+- [49] "**Optimal topology.** Given a fixed action budget $\nu$…" — the qualitative answer (shallow, OR-heavy) is in the body (:20) without derivation. **owed → item:optimal-strategy-dag-topology**, which also carries `#form-strategy-complexity-cost`'s version [542].
+- [50] "**Dynamic complexity.** As $n_{ij}$ grows… Strategic tempo declines over time…" — **superseded** in substance by `#schema-strategy-persistence`'s forgetting prerequisite (:62, the count held at $n_{\text{eff}}$): with forgetting the gain stays at its stationary value; without it the decline is the gain-decay failure that segment derives. The note predates that framing.
+- [51] "**Cross-reference to NeurIPS Paper 2.** The strategic-tempo aggregator is **bottleneck-not-sum**…" — **canon** for the content (:20 "bottleneck-limited by the weakest edge"; :92 $\alpha_\Sigma \le \mathcal T_\Sigma/\lvert E\rvert \le \mathcal T_\Sigma$); the paper pointer is a **guard** (influx drain owns Paper 2).
+
+#### `def-strategy-dag`
+
+- [52] "The Correlation Hierarchy (L0/L1/L2) is now first-class… what heuristics help agents identify which common causes are worth modeling at L1?" — **set aside**: the note itself calls it domain engineering, not a theoretical gap.
+- [53] "The graph-sufficiency argument … is proved, not sketched." — **canon** (`#deriv-graph-structure`); its last clause (necessity of the graphical structure open) **joined item:proposals-c-1-o-bp13-cox-parallel-necessity-for-de-f4cf** (raised).
+- [54] "Health metrics (groundedness, observability coverage…) are scaffold…" — **guard**: no body carries them (grep: none in `#def-strategy-dag`), and the note keeps them out of the formal chain.
+- [55] "**Satisfaction criterion.** $V_{O_t}^{\min}$ is now introduced in #form-objective-functional…" — **canon** (`#form-objective-functional`:14).
+- [56] "**Terminal alignment error.**" — no body names it (grep `align`: none). **owed → item:terminal-alignment-diagnostic-delta-align**.
+- [57] "**Open (composition defect-constant tightness).**" — **joined item:spikes-proposed-scc-defect-constant-tightness-a1-q1-0815** (raised).
+- [58] "**Open (mixture-support dynamics).**" — **joined item:spikes-proposed-mixture-support-dynamics-under-the-orien-ca66** (raised).
+
+#### `der-causal-insufficiency-detection`
+
+- [95] "The general-topology construction is a structural argument…" and [96] "The boundary characterization's routes (c) and (e) depend on domain capability…" — the body's Claim Record says the same (:179, :187) and :156 says routes (c)–(e) only cross-reference. **owed → item:causal-insufficiency-no-go-non-shallow-construction** (both parts; also cites the segment's gold note at :288).
+- [97] "The no-go is asymmetric: it forbids on-policy *detection* of L1 from L0, but it does *not* forbid on-policy *parameter learning within L0*." — not in the body (grep: no hit). A reader-clarity gap: **joined item:readers-ask-der-causal-insufficiency-detection** (raised).
+- [98] "The CHT (Bareinboim et al. 2022) is invoked as an external theorem." — **canon** (Related Work :258 names the CHT as the imported theorem); the "conditions satisfied by construction" sentence is per the note, not re-checked.
+
+#### `der-chain-confidence-decay`
+
+- [99] "The independent-edge assumption … is optimistic for positively correlated failures… Correlation structure is unmodeled" — **superseded**: the body now says $p^n$ is the special case and gives both dependence directions (:26).
+- [100] "The additive log-confidence form is the robust result; $p^n$ is the special case…" — **canon** (:12, :26).
+
+#### `der-loop-interventional-access`
+
+- [135] "This result establishes that all agents within AAT's **agency scope** … have access to interventional data" — **canon** (:35 the availability claim; :67 "a tool-using LLM agent is the body's standing instance").
+- [136] "The connection to #def-causal-information-yield: CIY quantifies *how much*…" — **set aside**: the distinction is the body's own ("availability of the channel", :55); the CIY cross-reference adds no claim. Per the note; the body's CIY sentence not compared.
+- [137] "**Cross-reference to NeurIPS Paper 2.**" with its "**Regression guard:** a goal-conditioned policy does *not* violate sequential ignorability at its own inputs…" — **guard** (the regression guard and the (C2★) scope remark); the paper pointer is influx. This Working Note is now the corrected form of what review:b1-part-ii-check-1#F2 flagged (the old "violate (C2) by construction" sentence); whoever closes F2 can cite it.
+
+#### `der-observability-dominance`
+
+- [146] "The absorbing-state property of unobservable regions is a strong prediction. In organizational settings…" — the body's Claim Record cites this Working Note as its register evidence (:60, "Working Notes: poorly measured departments…"), so deleting the note breaks a body sentence. **owed → item:canon-bodies-point-into-working-notes** (I.5); the content itself is canon by that citation.
+- [147] "Observability is not binary — it's a spectrum." — **canon** in substance: `#hyp-edge-update-via-gain`:19 reads observability dominance as the limiting case as destination observability goes to zero. The diagnostic question it ends on is the persistence condition itself.
+
+#### `deriv-mechanism-counterfactual-separation`
+
+- [247] "**Provenance.** Landed 2026-07-16 from `spikes/spike-causal-level-4-strictness-2026-07-16.md`…" — **set aside**: provenance; the path is now `spikes/.integrated/…` (the live path is dead).
+- [248] "**Naming caution.**" — **guard**.
+- [249] "**Priority-search record.**" — **guard** (records where the clean-miss search and its primary-confirmed readings are, and the one correction that mattered: Bongers prove interventional, not counterfactual, preservation). The standalone-note decision it mentions is in Joseph's ops queue, outside asf.
+
+#### `disc-credit-assignment-boundary`
+
+- [392] "A formal reduction from AND/OR credit assignment to Shapley value computation…", [393] "The proportional-blame heuristic … satisfies directional fidelity for independent edges. Does it satisfy directional fidelity in general?", [394] "The connection between AAT's credit assignment and RL's temporal credit assignment…" — the body asserts the #P-hardness via a Shapley form (:99) and states directional fidelity in expectation as the requirement (:22); neither the reduction nor the sufficiency check is derived, and no TD/eligibility positioning exists. **owed → item:credit-assignment-open-formalizations** (three parts).
+- [395] "The log-odds presentation of the default signal function (this segment) closes the Finding 2 mechanical break…" — **guard** (forward pointer: if the strategy layer moves to log-odds, Props B.1–B.7 follow).
+
+#### `disc-exploit-explore-deliberate`
+
+- [404] Migration note — **set aside** (history).
+- [405] "**Open: conditions for deliberation dominance.**" — the body gives the dominance conditions qualitatively (:98); strict-dominance conditions are not derived. **owed → item:deliberation-strict-dominance-conditions**.
+- [406] "**Open: the additive decomposition.**" — **canon**: the body says the additive form is a linearization that ignores the interaction term (:72).
+- [407] "**The $\Delta V_\Sigma$ approximation misses two channels of deliberation value.**" — **canon** (:78–83 name both channels); the third channel the body omits is item:regret-ceiling-omits-policy-class-expansion.
+- [408] "**Landing context.**" — **set aside**: history.
+- [409] "Reproducibility: the simulation-check outcomes … were produced by … `spikes/sim-three-way-tradeoff.py`" — **joined item:disc-exploit-explore-deliberate-s-epistemic-stat** (F.3), which already names this pointer and re-ran the script; not raised again. The file exists.
+- [410] "**Open: the unified vs two-stage question.**" — **canon**: the body calls the two-stage decomposition "a modeling convenience, not a structural necessity" and writes the unified objective (:64–68).
+- [411] "**Relationship to working memory.**" — **joined item:context-window-strategy-depth-bound** (raised: the window must hold deliberation as well as $M_t$ and $\Sigma_t$).
+
+#### `disc-law-discovery-ceiling`
+
+- [432] "**Provenance.** Developed dialogically with Joseph 2026-07-16…" — **set aside**: provenance.
+- [433] "**Forward pointer (live).**" — **guard** (`03-llm-core/src/hyp-behavioral-self-knowledge-insufficiency.md` exists).
+- [434] "**Floor-catalog candidacy.**" — **joined item:disc-identifiability-floor-s-catalog-boundary-re** (raised; that item already names the ceiling as a deferred candidate).
+- [435] "**Relata pass owed before promotion:**" and [436] "**Standalone-paper feed.** … the Undermind novelty search (running 2026-07-16)…" — no Related Work row for these in the body; no recorded search result in `ref/`. **owed → item:law-discovery-and-structural-imagination-relata-passes** (F.2).
+
+#### `disc-structural-imagination`
+
+- [477] "**Provenance.**" — **set aside**.
+- [478] "**Typed target adopted (2026-10-30); re-typing owed here.**" — **owed → item:structural-imagination-retype-under-invariance-cut** (A.1).
+- [479] "**Relata pass owed** before promotion: Beckers & Halpern…" — **owed → item:law-discovery-and-structural-imagination-relata-passes** (F.2).
+- [480] "**$\delta_{\text{structural}}$** (fifth mismatch type) deliberately withheld" — **guard**.
+
+#### `form-consolidation-dynamics`
+
+- [524] "**Stability upper bound derivation (open).**" — **joined item:todo-stability-upper-bound-for-form-consolida-be13** (raised).
+- [525] "**Online-only no-go rigorization (open).**" and [528] "**Quantitative CLS instantiation.**" — **joined item:spikes-proposed-quantitative-cls-instantiation-of-consol-6c13** (raised).
+- [526] "**EWC formulation as stability-weighted gain.**" — **canon** (the body names EWC/Kirkpatrick, :24 region).
+- [527] "**Relationship to #form-strategy-complexity-cost compression-by-convergence.**" — **owed → item:strategy-compression-by-convergence**.
+- [529] "**Logogenic primitive status.**" — no 03 body declares it (`#impl-scaffolded-logogenic` composes consolidation but does not); **owed → item:consolidation-as-logogenic-primitive** (G.2).
+- [530] "**Is consolidation one segment or two?**" — **joined item:todo-stability-upper-bound-for-form-consolida-be13** (raised: split once the bound lands).
+
+#### `form-strategy-complexity-cost`
+
+- [541] "**Mixed topologies.**" — **owed → item:strategic-tempo-and-depth-on-mixed-and-or**.
+- [542] "**Optimal topology.**" — **owed → item:optimal-strategy-dag-topology**.
+- [543] "**Dynamic complexity.** As edges converge… The IB objective would favor *dropping* converged edges" — **owed → item:strategy-compression-by-convergence**.
+- [544] "**Stochastic $\mathcal T_\Sigma$.**" — **owed → item:stochastic-strategic-disturbance**.
+
+#### `form-structural-change-as-parametric-limit`
+
+- [545] "The timescale ordering (reweight ≫ reclassify ≫ prune/graft ≫ revise $O_t$ ≫ full restructure) is an empirical observation that should be testable." — **set aside**: no body claims the ordering (the operations table :25–32 lists triggers, not rates); the objective-vs-strategy part is `#form-objective-functional`'s timescale-separation point (:58), whose own Working Note is in p3.
+- [546] "Grafting (adding new edges) is qualitatively different…" — **owed → item:where-new-strategy-edges-come-from**.
+
+#### `hyp-edge-update-via-gain`
+
+- [559] "The signal function is characterized at the theory level … but remains domain-specific in implementation." and [560] "**Partial progress on the signal function**" — **owed → item:edge-signal-function-continuous-multiparent** (the body lists it open, :59; the partial result is in `#deriv-edge-credence-dynamics` Props B.2–B.3).
+- [561] "The Beta-Bernoulli model assumes edge outcomes are i.i.d. Bernoulli draws." — **canon**: time-varying reliability is handled by discounting in `#schema-strategy-persistence`; correlated outcomes by the L1 hierarchy of `#def-strategy-dag`. Context-dependent reliability is not separately treated; per the note, not pursued.
+- [562] "**$M_t$/edge evidence double-counting** analyzed in `spikes/.integrated/spike-edge-semantics-resolution.md` §7." — **guard** for the verdict, and **joined item:edge-update-evidence-double-counting** (raised: that item says no analysis exists; this one does, and the body still lists the interaction open).
+- [563] "**Dependency removed 2026-05-11.**" — **set aside**: history. Its closing suspicion (the reverse edge `deriv-edge-update-natural-parameter` → `hyp-edge-update-via-gain` may also be mention-not-use) still applies: that depends entry is present at HEAD; per the note, not re-judged.
+
+#### `impl-causal-access`
+
+- [588] "**Scope.**" — **joined item:format-todo-c14-discussion-segment-schema-split-in-f-09d7** (A.3; raised).
+- [589] "**Regression guard — singularity.**", [590] "**Regression guard — modes.**", [591] "**Regression guard — deliberation.**", [592] "**Regression guard — identification conditions vs wrapping's (C1)–(C3).**", [593] "**Regression guard — escape language.**", [594] "**Regression guard — tiers inherited from a discussion surface.**" — **guard** (six).
+- [595] "**Forward — NeurIPS back-integration (out-of-canon pointer…)**" — **guard**.
+- [596] "**Forward — Hafez IDT anchor.**" — **joined item:hafez-citations-der-agent-opacity-109-169-say-h** (raised).
+- [597] "**Forward — source defects this pass surfaced, not fixed here (routed to TODO):**" — every defect it lists has an item now: **joined item:disc-sandbox-evaluation-ceiling-four-defects-fro**, **item:causal-access-chapter-register-defects-reported** (`#def-pearl-causal-hierarchy`:41, `#scope-ciy-observational-proxy`'s $\Omega_t$, `#causal-access-intro`:29), **item:norm-explicit-strategy-condition-44-says-explici** (F35). All three raised.
+- [598] "**Forward — figures.**" — **joined item:pedagogy-home-for-lifted-audit-gold** (raised).
+- [599] "**Forward — Regime B as the LLM software agent's typical regime**" — **joined item:ciy-proxy-omega-and-llm-agent-regime** (raised; its part (b) is this).
+- [600] "**Teaching frames (lifted audit gold, attributed; chapter-end register).**" — **joined item:pedagogy-home-for-lifted-audit-gold** (raised, with Joseph's two quotes carried verbatim). This is 2026-08-22 lifted gold outside an "Incidental audit gold" heading, like `#impl-persistence-and-limits`' block; it is disposed here so it is not orphaned, and the gold-lift drain may want to know.
+- [601] "**Forward — audit watches kept as guards**" — **guard**.
+- [602] "**Belongs elsewhere.**" — **guard** (each pointer names a canon home).
+
+#### `impl-orient-cascade`
+
+- [613] "**Regression guard — scaffolding claim.**" and [614] "**Regression guard — bias-bound scaling.**" — **guard** (two). [613] is the same correction item:the-scaffolding-overclaim-in-volume-3-its-origin carries for Volume 3.
+- [615] "**Open strengthening — per-direction bandwidth floor.**" — **joined item:todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe** (raised).
+- [616] "**Causal-discipline re-scope (2026-05-31).**" — history, except its last sentence (the propagated-residual bound across the cascade is open), which item:apply-the-epsilon-programme-s-telescoping-with-c already cites by this line: **joined**, not raised again.
+- [617] "This segment is a chapter-end discussion grouping findings from…" — **joined item:format-todo-c14-…** (raised).
+- [618] "**Cross-reference vs canonical-home policy.**" — **set aside**: describes the body's layout.
+- [619] "**`#13` (Coupled Diagnostic Framework) — segment exists in `03-llm-core/`.**" — **set aside**: `#result-coupled-diagnostic-framework` still has no `## Findings` section (checked); that is catalog formatting with no truth content, and the finding is carried in this segment's body.
+- [620] "**Connection to NeurIPS submissions.**" — **guard** (pointer; influx).
+- [621] "**Identifiability-floor pattern coverage update.**" — **set aside**: dated status narration ("five-sixths complete"); its one live content, the Mehra Instance 5 candidacy, has no owner: **owed → item:mehra-instance-5-candidacy**.
+
+#### `impl-strategy-dynamics`
+
+- [659] "This segment is a chapter-end discussion grouping findings from…" — **joined item:format-todo-c14-…** (raised).
+- [660] "**Cross-reference vs canonical-home policy.**" and [661] "**Cross-segment findings — the heaviest content in this chapter.**" — **set aside**: describe the body's layout (CS1, CS2 live in the body).
+- [662] "**Identifiability-floor pattern coverage so far.**" — **set aside** (status narration); Instance 5 is item:mehra-instance-5-candidacy.
+- [663] "**Connection to NeurIPS submissions.**" — **guard** (pointer; influx).
+- [664] "**Density flag and check-in.**" — **set aside**: process narration.
+
+#### `impl-strategy-structure`
+
+- [665] "This segment is a chapter-end discussion grouping what…" — **joined item:format-todo-c14-…** (raised).
+- [666] "**Regression guards.**" — **guard** (five).
+- [667] "**Open — the two-gap identity's grain.**" — **joined item:def-strategy-dag-and-form-strategy-complexity-co** (raised; its rg-0c result on sub-node diagnostics bears directly).
+- [668] "**Open — the L1′ mixing weight.**" — **joined question:where-does-the-l1-mixing-weight-theta-c-for-a-so** (raised).
+- [669] "**Open — partial (sub-sphere) restriction.**" — **owed → item:strategy-restriction-on-sub-sphere**.
+- [670] "**Open — a `convergent-choice` register?**" — **joined item:say-at-the-front-of-the-strategy-chapters-what-k** (B.2; raised).
+- [671] "**Connection to NeurIPS Paper 2.**" — **guard** (pointer).
+- [672] "**Candidate figure — the chapter-end bridge diagram**" — **joined item:pedagogy-home-for-lifted-audit-gold** (raised).
+
+#### `norm-explicit-strategy-condition`
+
+- [681] "The inequality as stated is static…" and [683] "The cost inequality may be most useful not as a binary decision rule but as a way to calibrate $\Sigma_t$ complexity…" — neither reading is in the body (grep: no dynamic/calibration sentence). **owed → item:explicit-strategy-cost-inequality-readings** (discussion grade).
+- [682] "Part of $C_{\text{maintain}}$ is the cognitive cost of keeping $\Sigma_t$ in the agent's representational capacity." — **joined item:context-window-strategy-depth-bound** (raised).
+
+#### `schema-strategy-persistence`
+
+- [728] "**Done.** Five cases verified…" — **set aside**: history; its last sentence (deeper mixed topologies, several common causes) went into item:strategic-tempo-and-depth-on-mixed-and-or.
+- [729] "**Strategic tempo now formalized.**" — **canon** (`#def-strategic-tempo`:92).
+- [730] "The strategic disturbance $\rho_\Sigma$ is qualitatively different from epistemic disturbance $\rho$." — **canon** (:143 defines it as the rate the environment invalidates causal links and calls it a domain parameter).
+- [731] "The stochastic treatment (from track-b simulations) suggests $\rho_\Sigma / \sqrt{\mathcal T_\Sigma}$…" — **owed → item:stochastic-strategic-disturbance**.
+- [732] "The forgetting prerequisite transforms an organizational platitude…" — **canon** (Claim Record :109, :113; institutional cases marked as illustrations).
+- [733] "**Gain-modulated observation noise (forward pointer, `conditional` at most).**" — **owed → item:gain-modulated-noise-strategic-feasibility**.
+- [734] "**Cross-reference to NeurIPS Paper 2.** The forgetting prerequisite is sharpened … into a structural-class theorem on gain-decay updates" — **guard** (pointer). Whether canon should land the class theorem is the influx drain's (`influx-scout/neurips.md` §3: "cited from bodies, not landed").
+
+#### `scope-and-or`
+
+- [744] "The AND/OR assignment per node ($\gamma(v)$) is itself uncertain and should be updateable." — **canon** (`#form-structural-change-as-parametric-limit`:28, "$\gamma$ reclassification … strong structural evidence").
+- [745] "The parsimony argument applies cleanly to binary outcomes." — **joined item:and-or-parsimony-uniqueness** (raised).
+- [746] "K-of-n thresholds are genuinely common…" — **joined item:scope-and-or-audit-finding-f41-still-open-in-its** (raised).
+
+#### `strategy-structure-intro`
+
+- [760] "This is a chapter-introduction segment…" — **joined item:format-todo-c14-…** (raised).
+- [761]–[764] "The framing "Chapter 2 says whether to plan; Chapter 3 says what a plan IS"…", "The "what is and isn't derived in the formal commitment" framing…", "The "two diagnostic quantities, not one" framing…", "The chain-confidence-decay paragraph names what the identity unlocks downstream." — **set aside**: authorial intent for the intro. The derived-vs-chosen distinction they defend is item:say-at-the-front-of-the-strategy-chapters-what-k's subject.
 
 ### Part p6 — Part III Meta-Architecture II, Scope and Formation, Composition Machinery (helper fork)
 
@@ -457,7 +655,7 @@ The live correctness findings on this segment sit in its gold Off-ramp (gold-lif
 
 - [603] "This segment is a chapter-end discussion grouping findings from…" and [604] "**Cross-reference vs canonical-home policy.**" — the segment's statement of its own standing and of which findings live here. **joined item:format-todo-c14-discussion-segment-schema-split-in-f-09d7** (A.3).
 - [605] "**Class-coercion as truthification mechanism — connection to `#disc-modularity-state-dynamics`.**" — **canon** in `#disc-modularity-state-dynamics` (depends on and names the wrapping construction; per its body opening, paragraph not compared). This implications segment's own body never says "truthification" (grep: none); its composite-level twin, defensive scaffolding, is item:defensive-scaffolding-composition-segment.
-- [606] "**Identifiability-floor pattern coverage now four-of-four.**" — **set aside** as a status summary. Its "Instance 5 (Mehra) remains candidate" is **canon** at `#deriv-adaptive-gain-dynamics`:149 ("Mehra non-identifiability as meta-gain `#disc-identifiability-floor` instance").
+- [606] "**Identifiability-floor pattern coverage now four-of-four.**" — **set aside** as a status summary. Its "Instance 5 (Mehra) remains candidate" matches canon: `#deriv-adaptive-gain-dynamics`:149 lists it as a "candidate floor instance". The test itself is item:mehra-instance-5-candidacy (p5).
 - [607] "**No NeurIPS submission directly formalizes this chapter's machinery.**" — **set aside**: a negative pointer with no work in it.
 
 #### `result-contraction-template` (Part I lane live on this segment)
@@ -474,3 +672,268 @@ The live correctness findings on this segment sit in its gold Off-ramp (gold-lif
 - [748] "**Whether a common scalar exists across the alignment routes (resolved 2026-05-21 — negatively).**" — **set aside** as history of a resolved question. The route-to-regime mapping it states is not in the body (grep `R0`/`regime`: none), so its content goes into item:part-iii-segments-name-their-regime-tier.
 - [749] "**Asymmetric unity.**", [750] "**Interaction with Class 3 (Coupled) architectures.**", [751] "**Transitivity.**" — **owed → item:composite-scope-asymmetric-implicit-transitive** (C.4).
 - [752] "**Promotion dependencies.**" — **owed → item:part-iii-segments-name-their-regime-tier** (C.3).
+
+### Part p7 — Part III Unity, Cooperative/Adversarial, Strategic Composition; Appendix B
+
+#### `cooperative-adversarial-intro`
+
+- [5] "This is a chapter-introduction segment…" — the intro's standing: **joined item:format-todo-c14-discussion-segment-schema-split-in-f-09d7** (A.3; raised).
+- [6]–[9] "The "consultant vs employee" analogy…", "The "regime change rather than quantitative disadvantage" framing…", "The "mathematics of panic" framing…", "The "death by a thousand memos" framing…" — **set aside**: authorial notes on where the intro's framings came from and why it uses them; the intro's prose is the result.
+
+#### `def-shared-intent`
+
+- [41] "The IB formulation assumes a single relevance variable…" and [42] "How does shared intent interact with 100% context turnover?" — **owed → item:shared-intent-relevance-and-turnover** (C.4). The body's IB line (:28) has the single relevance variable; turnover is not in the body (checked).
+
+#### `def-unity-dimensions`
+
+- [63] "The independence of unity dimensions needs careful examination.", [64] "The specific metric formulations need testing on concrete cases…", [66] "**$U_f$ operator-distance choice is open.**" — **owed → item:unity-dimensions-open-formalizations** (C.4).
+- [65] "The teleological unity scalar per objective dimension ($+1$ to $-1$)…" — the scale is canon (:42); its mixed-motive use **joined question:unity-mixed-motive-u-o-aggregation** (raised).
+- [67] "**Joint $(U_O, U_\Sigma) \to \varepsilon_a$ dependence.**" — **canon** (the content axis in the body, :17, and `#result-unity-closure-mapping`'s $\varepsilon_a$ form, :52; checked by grep and the first matching lines).
+- [68] "**$U_O$ as scope vs. quality.**" — **canon** for the four-route scope role (item:todo-613842-c-iv-idiom-drift-integration-debt-e3af records that the body now carries four routes). Its open sub-question (do the alignment routes reduce to one scalar?) is **superseded**: resolved negatively at `#scope-composite-agent` (p6 [748]).
+
+#### `der-adversarial-destabilization`
+
+- [74] "The decoupled analysis (treating $\mathcal T_A$ as exogenous) is conservative…" — **guard**: a forward pointer that names the coupled analysis's formal home (`#deriv-strategic-composition`) and the scope boundary against `#result-contraction-template` (saddle points are not attracting fixed points). The body does not carry the boundary (checked); the matching premise in the result segment is item:adversarial-tempo-advantage-unstated-premises.
+- [75] "$\gamma_A$ is the product of coupling strength, observability, and action impact…" — **set aside**: a gloss. The software claim points at TST's `#def-system-coupling`, which is TST's to carry.
+- [76] "The effects spiral is the formal analog of Boyd's cascading disorientation…" — **joined item:spikes-proposed-advanced-12-effects-spiral-eigenvalue-condition-d-d6f7** (raised).
+
+#### `der-agent-opacity`
+
+The overclaims in this segment's gold Off-ramp are item:der-agent-opacity-overclaims-f246-f255 (the gold-lift drain's territory). The non-gold notes:
+
+- [77] Migration note — **set aside**.
+- [78] "The (C-iv) scope route … full composition is open work." — **joined item:spikes-proposed-advanced-12-effects-spiral-eigenvalue-condition-d-d6f7** (raised).
+- [79] "Candidate fourth-instance formalization for `#disc-identifiability-floor`: … Fano's inequality…" — **guard** (dead-end warning: two spikes found Fano is a finite-sample refinement, not an M1 floor anchor), and **joined item:collect-exclusion-criteria-meta-families** (raised). The note says the body's "Meta-pattern positioning" section is Fano-on-$H_b$'s home, but the body does not mention Fano (grep); recorded in the raise.
+- [80] "The 16-cell emitter-recipient composition admits closed-form arg-max only under sub-scope $\alpha$…" — **canon** (sub-scope $\alpha$ scoping in the body; checked by grep).
+- [81] "**2026-07-16 — arg-max formula and backward variance decomposition landed…**" — history, plus the status point that the product form is a Formulation until a second-order analysis lands: **joined item:der-agent-opacity-overclaims-f246-f255** (raised).
+- [82] "Dual-filtration apparatus…" — **set aside**: the body indexes opacity by the observer's filtration $\mathcal F_B^t$ (:32); the symmetric "each model carries the other's filtration" form is called clean but unnecessary, and no derivation wants it.
+
+#### `der-team-persistence`
+
+- [156] "**2026-07-16 — noise-correlation scope corrected…**" — **guard** for its "do not restore the upper-bound reading"; the two-sided scope is canon (:37, checked). Its triangulation design consequence goes to item:team-persistence-coordination-cost-and-mixed-coupling (d).
+- [157] "Topology: the peer network and the ensemble are treated in the Discussion…" — **guard** (says where hierarchy and game theory are handled).
+- [158] "The coordination cost model … needs further specification" and [159] "The disturbance decomposition treats cooperative and adversarial coupling as additive and independent." — **owed → item:team-persistence-coordination-cost-and-mixed-coupling** (C.4); [159] also raised onto question:unity-mixed-motive-u-o-aggregation.
+- [160] "**Continuity-persistence cross-reference (updated 2026-05-19).**" — **guard** (forward pointers that now resolve to canon). It still names the deaths "D1 Cognitive / D2 Relational / D3 Truth", which canon retired on 2026-06-10; raised onto item:terminology-todo-the-deaths-taxonomy-def-death-as-factor-e267 so the names are fixed when the note is kept.
+- [161] "**Dynamic-regime placement (added 2026-05-21…)**" — **joined item:part-iii-segments-name-their-regime-tier** (raised; the body names no regime).
+
+#### `deriv-critical-mass-composition`
+
+- [197] "**Partial-derivation: heterogeneous-architecture dyad.**", [200] "**Connection to Miller-2022 extreme-transition motif.**", [201] "**$N$-agent scaling.**" — **owed → item:critical-mass-open-cases** (C.4). The body's table marks the dyad and $N\gt2$ Open (:127, :132), but no ledger item carried them; the Miller contrast is not in the body.
+- [198] "**Sharpen (UO-mult).**" — **joined item:spikes-proposed-u-o-sector-constant-uo-mult-derivation-fbb6** (raised).
+- [199] "**Close (S-2) function transfer in #hyp-symbiogenic-composition.**" — **joined item:symbiogenic-composition-open-formalizations** (raised).
+- [202] "**Dynamic-regime placement…**" — **joined item:part-iii-segments-name-their-regime-tier** (raised; checked: the body names no regime).
+
+#### `detail-operationalization` (Part I lane live on this segment)
+
+- [349] "End-to-end worked examples … are in #example-kalman (exact) and #example-bandit (approximate)." — **set aside**: a pointer the OUTLINE already makes.
+- [350] "The $\hat{\rho}$ estimator's dependence on $\hat{\mathcal{T}}$ creates a sequential estimation chain." — **joined item:write-innovation-based-estimators-for-detail-ope** (raised).
+- [351] "The structural-switch trigger's $T_{\text{horizon}}$ … is itself uncertain…" — **set aside**: a remark (the model does the predicting) with nothing to derive or land.
+
+#### Appendix B examples (`example-bandit`, `example-kalman`, `example-strategy`)
+
+- [491] "The per-arm analysis is a natural instance of the per-dimension tempo decomposition…" — **set aside**: a reading of the example through `#result-per-dimension-persistence`, which the example can state when (f) of the item below is done.
+- [492], [494], [495], [497]–[501] — the comparisons and extensions the examples' notes name (Q-learner vs Bayesian bandit; multi-dimensional Kalman; a real tracking system; a deeper DAG; Gittins vs explore-then-exploit; Monte Carlo for the satisfaction-gap table; a strategy-tempo example; an uncertain AND/OR domain) — **owed → item:worked-example-extensions-and-comparisons** (E.2).
+- [493] "Reward-unit and surprise-unit formulations coincide up to normalization by $\sigma^2$." — **set aside**: true of this example by its parameters ($\sigma=1$); no claim beyond it.
+- [496] "The Kalman filter is provably optimal for the linear-Gaussian case…" — **set aside**: the example's framing already says this; the "real test is non-Kalman domains" point is (f) of the item above.
+
+#### `hyp-auftragstaktik-principle`
+
+The gold Off-ramp's F162/F165 are item:t1-auftragstaktik-allocation-and-conway (C.1).
+
+- [547] "The formal IB derivation of the priority ordering would need…" — the strengthen-first route for that item: **joined item:t1-auftragstaktik-allocation-and-conway** (raised).
+- [548] "The principle may need qualification for AI agent teams…" — **joined item:how-much-must-be-said-explicitly-depends-on-the** (raised). The body's evidence is military-organizational (:20, :41); it does not qualify for AI teams.
+
+#### `hyp-communication-gain`
+
+- [549] "The communication gain enters the distributed tempo…" — **canon** (`#der-team-persistence`:19, distributed tempo; checked).
+- [550] "Coordination overhead limits team size…" — **owed → item:team-persistence-coordination-cost-and-mixed-coupling** (b); not in either body (checked).
+- [551] "The adversary's strategy (making $U_{\text{align}}$ *appear* low) creates a meta-game on trust estimation." — **joined question:in-aat-s-terms-tempo-reserve-mismatch-communicat** (raised).
+- [552] "Open, now partially derived: when multiple intermediaries provide corroborating recommendations…" and [553] "Consider eventually **splitting $U_{\text{src},j}$ from $U_{\text{align},ji}$**…" — **owed → item:communication-gain-open-extensions** (C.4); [553] also raised onto item:todo-communication-gain-adversarial-scope-hyp-e79c. The body does not mention corroboration or a common source (grep).
+
+#### `hyp-solicitable-escape`
+
+- [564] "**Forward pointer.** The two promotion steps are named in Epistemic Status…" — **guard**.
+- [565] "**Correction, 2026-07-29 … the premise was inherited from prose, not from a derivation.**" — **guard** for its regression-guard sentence; the correction narrative is history. The parent-segment overreach it found is item:observability-dominance-cannot-recognize-unscoped (C.1).
+- [566] "**Regression guard — a truncation to not restore.**" — **guard**.
+- [567] "**Naming.**" — **set aside**: naming is `bin/term`'s, and [564] already says the slug changes on promotion.
+- [568] "**Provenance of the check.**" — **set aside** (provenance).
+- [569] "**Provenance of the insight, not only of the check.**" — **guard**: first-person testimony that the targeting asymmetry was recognized from inside the condition. It is the only record of that standpoint, and the note itself counts it as weak evidence for the partition.
+
+#### `impl-cooperative-adversarial`
+
+- [608] "This segment is a chapter-end discussion grouping findings from…" and [609] "**Cross-reference vs canonical-home policy.**" — **joined item:format-todo-c14-discussion-segment-schema-split-in-f-09d7** (raised).
+- [610] "**Forward-pointers into Ch.5 are heavy.**" — **set aside**: a reading note.
+- [611] "**Identifiability-floor pattern coverage update.**" — **guard** for its distinction: contraction obstructions name where a *method* fails, while floors forbid *identifying* a quantity. The body's "Three adversarial obstructions to contraction" section (:49) does not draw it (checked); item:collect-exclusion-criteria-meta-families is where such exclusions are being collected.
+- [612] "**Connection to NeurIPS submissions.**" — **set aside**: a negative pointer.
+
+#### `impl-strategic-composition`
+
+- [651] Migration note — **set aside** (history; the deeper rewrite it narrates is in the body).
+- [652], [653] chapter grouping and canonical-home policy — **joined item:format-todo-c14-discussion-segment-schema-split-in-f-09d7** (raised).
+- [654] "**`#28` Modular Safety as segment-promotion candidate.**" — **owed → item:modular-safety-under-goal-divergence-segment** (G.2).
+- [655] "**Cross-segment finding without home — `#40` OODA + Detection Latency Self-Bound.**" — **canon**: this segment's body carries the composition (:52–54, the $\mathcal T^{\text{eff}}$ OODA reading beside the 16-cell composition); the note says the segment is its home.
+- [656] "**Identifiability-floor pattern's full four-instance treatment…**" — **set aside** as a status summary; its "Instance 5 (Mehra) remains candidate" is item:mehra-instance-5-candidacy (filed by the p5 helper).
+- [657] "**Connection to NeurIPS submissions.**" — **set aside**.
+- [658] "**AAT chapter-end implications series complete.**" — **superseded**: the TST and logogenic chapter-ends it lists as remaining exist (`02-tst-core/src/impl-*`, `03-llm-core/src/impl-*`, four each).
+
+#### `impl-unity-communication`
+
+- [673], [674] chapter grouping and canonical-home policy — **joined item:format-todo-c14-discussion-segment-schema-split-in-f-09d7** (raised).
+- [675] "**Cross-segment finding — bandwidth-and-trust as the layer between Ch.2 and Ch.4.**" — **canon** per the note (it says §4 of the body carries it; §4 not re-read).
+- [676] "**Status discipline (regression guard).**" — **guard**.
+- [677] "**Strengthening targets (for the sources, forward pointers).**" — (i) **joined item:t1-auftragstaktik-allocation-and-conway** (raised); (ii), (iii) **owed → item:communication-gain-open-extensions**.
+- [678] "**No identifiability-floor instance lands in this chapter.**", [679] "**Connection to NeurIPS submissions.**" — **set aside**.
+
+#### `obs-gated-tempo-advantage`
+
+The $\nu$-versus-$\mathcal T$ collision and the one-sided noise prescription are items gated-tempo-nu-versus-tempo-collision and t1-gated-tempo-one-sided-noise-prescription (C.1).
+
+- [688] "The finding that fixed $\eta = 0.1$ is "remarkably robust" to observation noise…" and [689] "The interaction between observation noise and adversarial exponent regime … has not been tested." — **owed → item:gated-tempo-noise-under-drift-and-default-gain** (C.4).
+- [690] "Simulation code: …" — **guard** (reproducibility pointer; the path exists).
+
+#### `result-adversarial-exponent-regimes`
+
+- [695] "The interpolation between drift and noise regimes (Variant B) shows smooth transition…" — **canon** (:40; checked). The drift fraction as a lever is question:adversary-optimal-drift-fraction.
+- [696] "The exponent of 1.05 from the original sim2 was not a falsification of Corollary 11.2…" — **guard** (keeps the old run from being read as a falsification).
+- [697] "Simulation code: `empirica:track-b-nonlinear`…" — **guard**.
+- [698] "**2026-07-16 — stochastic interpolation column corrected…**" — **guard** for "do not re-transcribe simulation numbers by table position"; the correction history is set aside.
+
+#### `result-adversarial-tempo-advantage`
+
+- [699] "**Channel-independence assumption.**", [701] "The analysis treats each agent's tempo as exogenous…", [702] "The stochastic exponent ($b = 3/2$) is now derived from both…" — **defect → item:adversarial-tempo-advantage-unstated-premises** (C.1): the body calls the exponents exact on the disturbance and coupling models without stating either premise (checked: no "exogenous", "channel" or "correlated" in the body); [702]'s finite-$\nu$ correction is part (c).
+- [700] "**Opacity modulation ( #der-agent-opacity).**" — **joined item:der-agent-opacity-overclaims-f246-f255** (raised; the $\mathcal T_{\text{eff}}$ factor is one of its findings).
+- [703] "Asymmetric coupling ($\gamma_A \neq \gamma_B$) appears as a multiplicative prefactor…" — **canon**: the general ratio (:36) carries $\gamma_A$ and $\gamma_B$ separately; the note reads it off.
+
+#### `result-unity-closure-mapping`
+
+- [721] "**Two-Kalman IB witness landed (2026-07-16).**" — **canon** (`#disc-compression-operations`:84). Its unrun numeric check **joined item:the-heterogeneous-gain-closure-defect-does-not-v** (raised).
+- [722] "**Extension to nonlinear cases.**", [723] "**Structural-unity formalization.**", [724] "**Joint $(U_O, U_\Sigma)$ derivation.**" — **owed → item:unity-dimensions-open-formalizations** (C.4).
+- [725] "**$U_O$ → sector-constant pathway…**" — **joined item:spikes-proposed-u-o-sector-constant-uo-mult-derivation-fbb6** (raised).
+- [726] "**Mori-Zwanzig cross-check.**" — **joined item:composition-closure-mz-upper-bound-unverified** (raised).
+- [727] "**Relationship to #scope-composite-agent.**" — **joined item:part-iii-segments-name-their-regime-tier** (raised; the body never says quality is conditional on a scope route, and the note's "three" routes is stale).
+
+### Part p1 — Appendix A, `der-belief-strategy-attractor` to `deriv-mismatch-budget-attribution` (helper fork)
+
+*KR I.9. Written by a fork of the WN-01 drain, to be merged into `wn-01-other.md`. 79 items in 17 segments, all read whole at `dc2b262c`. Body checks were made by grep on the body (Working Notes excluded), and the matching paragraph was read where the grep hit. Where a disposition rests on the note's own words or on a grep count alone, it says so. The Part I lane was live on `deriv-matrix-persistence-condition` when this ran.*
+
+**Counts.** 79 items: canon 7 · superseded 1 · owed → new item 26 (into 14 items) · joined an existing record 22 · guard 11 · set aside 12. An item split between dispositions ([183], [196], [230]) is counted under its main one.
+
+**New ledger items (14):** item:belief-strategy-attractor-o-vs-sigma-estimator, item:belief-strategy-attractor-brief-feynman, item:multi-timescale-stacking-contraction-metrics, item:resource-bounded-regenerative-regime-and-rates, item:adaptive-gain-open-extensions, item:bilateral-trade-adjacent-escapes, item:convention-monotonicity-rh-citations, item:discrete-sector-nonstationary-and-correlated-noise, item:fisher-local-gain-open-extensions, item:fisher-whitened-open-extensions, item:gain-sector-bridge-in-expectation-scope (C.1), item:matrix-persistence-2d-false-pass-simulation (E.2), item:mismatch-budget-attribution-under-model-s, item:l1-update-bias-n-child-common-cause.
+
+**Raised onto existing records (16, `vsect raise`):** der-belief-strategy-attractor-conditional-run-th, the-composite-class-inheritance-row-class-1-sub, which-aat-structural-adaptation-mechanisms-satis, model-s-stacking-for-der-multi-timescale-stabili, mehra-instance-5-candidacy, spikes-proposed-adversarial-adaptive-gain-meta-gain-temp-06a0, impossibility-clusters-owed-reading, todo-causal-ib-lmi-follow-ons-segment-landed-f746, todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe, land-the-2026-08-24-decomposition-uniqueness-clu, the-prior-art-search-deriv-decomposition-uniquen, todo-heavy-tailed-disturbances-model-s-assume-f3de, adaptive-reserve-standpoint-underived, influx-sufficiency-fitness-horizon-and-class; question:ea1-beyond-averaging-estimators; and the finding review:part-ii-check-1-b1-records#F1 (see [196]).
+
+**Two things worth the merger's attention.**
+
+- **A guard that now carries a refuted claim.** `deriv-convention-monotonicity`'s "Documented dead-end" Working Note [196] ends by saying the right rung's strengthening "is the (PC)/(SO) characterization". The Part II check (review:part-ii-check-1-b1-records C1, C2) found the rung fails with (PC) and (SO) both true. Its F1 lists the body carriers to drain but not this Working Note, so I raised the Note onto F1. The guard against an unconditional rung stays; its last clause has to change with the body.
+- **Dead pointers, both moved to `.integrated/`.** `spikes/fight/` ([152]; `der-resource-bounded-destabilization`'s reasoning trail) is now `spikes/.integrated/fight/`. `spikes/spike-value-object-convention-monotonicity-2026-05-30/` ([194]; the reproducibility scripts) is now `spikes/.integrated/spike-value-object-convention-monotonicity-2026-05-30/`. The second is a reproducibility pointer, so I.5 should repoint it, not delete it.
+
+#### `der-belief-strategy-attractor`
+
+- [86] "**Tier-upgrade gating sub-spike — derivation of $K(\Sigma)$ from utility-cost analysis.**" and [87] "**Tier-upgrade gating sub-spike — Pillar prior-art search.**" — **joined item:der-belief-strategy-attractor-conditional-run-th** (C.4; these notes are its source).
+- [88] "**Composite-level extension.**" and [90] "**Connection to `#deriv-strategic-composition`.**" — **joined item:the-composite-class-inheritance-row-class-1-sub** (C.3): the inheritance table should also track composite sub-type, and with it attractor vulnerability.
+- [89] "**Empirical estimator — distinguishing $O$-source bias from $\Sigma$-source attractor…**" — **owed → item:belief-strategy-attractor-o-vs-sigma-estimator** (C.4).
+- [91] "**Brief is below Feynman criterion.**" — **owed → item:belief-strategy-attractor-brief-feynman** (H.1).
+
+#### `der-multi-timescale-stability`
+
+- [142] "**Open (which AAT mechanisms satisfy the premises).**" — **joined item:which-aat-structural-adaptation-mechanisms-satis** (B.1); item:outside-domains-that-meet-der-multi-timescale-st (C.4) cites the same note.
+- [143] "**Open (Model S stacking).**" — **joined item:model-s-stacking-for-der-multi-timescale-stabili** (C.2).
+- [144] "**Open (non-Euclidean metrics).**" — **owed → item:multi-timescale-stacking-contraction-metrics** (C.4). The body states the stacking in the Euclidean template only (grep `CT1`, `Fisher`: no per-level metric restatement).
+- [145] "**Belongs elsewhere (ELI internal coherence).**" — **canon** at `04-eli-core/src/def-auxilia-hierarchy.md`:76 ("Trust-as-temporal-respect", in the body, above its Working Notes at :96). Per the note, not this segment's claim.
+
+#### `der-resource-bounded-destabilization`
+
+- [152] "Reasoning trail: `spikes/fight/03-energy-bound-effects-spiral.md`…" — **set aside**: provenance, and the path is dead (now `spikes/.integrated/fight/`, cited from the new item).
+- [153] "**Open — regenerative regime.**", [154] "**Open — rate constants.**" and [155] "Exploratory-branch status… Promotion past `draft` is gated on Joseph electing to develop the resource axis…" — **owed → item:resource-bounded-regenerative-regime-and-rates** (C.4). The body has the $r_{\mathcal B}$ ODE and the $r_{\mathcal B}=0$ regime (:27, :37) but not the regenerative case. The item records that the Joseph gate is lifted and asks for develop-or-set-aside. It also names the parallel barrier-reachability item, spikes-proposed-continuity-4-2-second-no-go-adversariall-c4e7.
+
+#### `deriv-adaptive-gain-dynamics`
+
+- [174] "**Identifiability as meta-gain obstruction.**" — **joined item:mehra-instance-5-candidacy** (C.4). The body's table row :149 already carries Mehra non-identifiability as a candidate floor instance.
+- [175] "**Rate-specific results.**", [177] "**Discrete-time form.**", [178] "**Relationship to #schema-strategy-persistence time-varying $\alpha$.**" and [181] "**Deterministic-meta-gain special cases.**" — **owed → item:adaptive-gain-open-extensions** (C.4). The body never names the Fisher-whitened or Fisher-local segments (grep: none).
+- [176] "**Adversarial adaptive-gain.**" — **joined item:spikes-proposed-adversarial-adaptive-gain-meta-gain-temp-06a0**.
+- [179] "**Template-composition as general technique.**" (three or more timescales) — **superseded** by `#der-multi-timescale-stability`, whose body is the $N$-level stacking (:13 on).
+- [180] "**AMSGrad as $\alpha_2$-preserving meta-gain repair.**" — **canon** (body :81 names the AMSGrad fix with Reddi et al.).
+
+#### `deriv-bilateral-trade-impossibility`
+
+- [182] "**Provenance.**" — **set aside**.
+- [183] "**Open before `candidate`.**" — (a) **joined item:impossibility-clusters-owed-reading** (F.2); (b), (c) **owed → item:bilateral-trade-adjacent-escapes** (C.4). The body's escape table (:69–70) has the rows, marked adjacent.
+- [184] "**The honest-almost-entirely-outside scope-mark.**" — **set aside**: a rationale for how the three charter instances differ in how far outside AAT they sit. The scope marks themselves are in the body's escape table.
+
+#### `deriv-causal-ib-exploration`
+
+- [185] "**Empirical validation.**" — **guard** (reproducibility pointer). Checked: `empirica/track-b-nonlinear/variants/variant_causal_ib.py` exists, and `variant_causal_ib_results.md`:23 reports the greedy controller at 0.00% survival, as the note says.
+- [186] "**LMI generalization landed.**" — **set aside** (history).
+- [187] "**Cross-reference to NeurIPS Paper 1.**" — **guard** (forward pointer; the influx drain owns Paper 1, and item:influx-causal-ib-lmi-state-independence-boundary carries what changed).
+
+#### `deriv-causal-ib-lmi`
+
+- [188] "**Tensor adaptive tempo.**" — **joined item:todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe**.
+- [189] "**Worked 2D example.**" and [190] "**2D simulation.**" — **joined item:todo-causal-ib-lmi-follow-ons-segment-landed-f746** (both are among its listed follow-ons).
+- [191] "**EIG vs FIM gap.**" — **canon** per grep (11 body hits on EIG / expected information gain; paragraph not compared); the CIY-EIG surrogate is also in item:influx-active-inference-four-strengths.
+- [192] "**Reasoning trail.**" — **set aside** (provenance).
+- [193] "**Cross-reference to NeurIPS Paper 1.**" — **guard** (forward pointer, influx drain).
+
+#### `deriv-convention-monotonicity`
+
+- [194] "The reproducibility scripts for the counterexample and the two strengthenings live with the originating spike…" — **guard**, with a dead path: the directory is now `spikes/.integrated/spike-value-object-convention-monotonicity-2026-05-30/`. Repoint, don't delete.
+- [195] "External citations for (RH-1/2/3) are `intuition-only` until a `relata` pass lands them…" — **owed → item:convention-monotonicity-rh-citations** (F.2).
+- [196] "**Documented dead-end (so a future agent does not re-attempt it):**" — **guard** for the unconditional left rung. Its right-rung sentence is now wrong: **raised onto review:part-ii-check-1-b1-records#F1** (see the top of this file).
+
+#### `deriv-decomposition-uniqueness`
+
+- [203] "**Regression guard — do not re-formalize restricted access as a target-value subset…**" and [204] "**Regression guard — quantifier-vs-flagship verification…**" — **guards**.
+- [205] "**Open (main line):** the distributional/kernel-level analog…" — **joined item:land-the-2026-08-24-decomposition-uniqueness-clu** (G.2). Per that item, the distributional spike's Theorem D answers the main-line question, so this Note is out of date until the landing.
+- [206] "**Open:** exact characterization of the (D3)-respecting gauge subgroup…" and [207] "**Open (follow-on candidate):** quantifying Corollary 5's information gap for GUC Class 3…" — **joined** the same item, with an explicit note in the raise that the cluster may not cover them. Whoever lands the cluster settles whether they remain open.
+- [208] "**Prior-art status.**" — **joined item:the-prior-art-search-deriv-decomposition-uniquen** (F.2; the search ran 2026-08-24 and never reached the segment).
+
+#### `deriv-discrete-sector-condition`
+
+- [209] "Non-stationary gain…" and [211] "Non-i.i.d. disturbances…" — **owed → item:discrete-sector-nonstationary-and-correlated-noise** (C.4). The body's DA.1S statement assumes i.i.d. zero-mean $w_k$ (:117), and neither extension is discussed.
+- [210] "Heavy-tailed disturbances: DA.1S assumes finite second moment." — **joined item:todo-heavy-tailed-disturbances-model-s-assume-f3de**.
+
+#### `deriv-evidence-allocation-ceiling`
+
+- [212] "**Verification provenance.**" — **set aside**: a verification record from today, which belongs in vsect as a recorded check and in its integration-notes file (named in the Note), not in Working Notes.
+- [213] "**Strengthening direction.**" — **joined question:ea1-beyond-averaging-estimators**.
+
+#### `deriv-fisher-local-update-gain`
+
+- [214] "**Multi-step extrapolation rate.**", [215] "**Edgeworth higher-order correction.**", [216] "**Variational-bound extension.**", [217] "**Multimodal posteriors.**" and [218] "**Consolidation / replay connection.**" — **owed → item:fisher-local-gain-open-extensions** (C.4). vsect flagged item:spikes-proposed-quantitative-cls-instantiation-of-consol-6c13 as close. It is not the same work; only clause (e) touches consolidation.
+- [219] "**Honest obstructions.**" — **canon** (body :97 imports Amari 1998, :101 makes the tier conditional on (PI), :105 gives the outside-regime fallback; read).
+- [220] "**Cross-reference to Paper 3 chart-rescaling no-go.**" — **guard** (forward pointer, influx drain).
+- [221] "**Landing context.**" — **set aside**.
+- [222] "**Downstream consumer at the persistence layer.**" — **canon** (`#def-adaptive-tempo`'s Tensor extension and `#deriv-matrix-persistence-condition` carry it; the latter's counterexample was checked for p4 [714]).
+
+#### `deriv-fisher-whitened-update-rule`
+
+- [223] "**Sub-scope $\alpha_4$ composition**", [224] "**L2 regime.**" and [225] "**Relationship to natural-gradient variational inference.**" — **owed → item:fisher-whitened-open-extensions** (C.4). Khan and Lin are not cited in the body (grep: none).
+- [226] "**Landing context.**" — **set aside**.
+- [227] "**Sibling segment at the model-parameter layer.**" — **set aside**: a cross-reference remark (direction here, magnitude in `#deriv-fisher-local-update-gain`), with no claim beyond the two bodies.
+
+#### `deriv-gain-sector`
+
+- [228] "The fluid-limit gap: the bridge analysis works in expected value." — **owed → item:gain-sector-bridge-in-expectation-scope** (C.1; the body never says its bridge is in expectation).
+- [229] "For variational inference and other approximate methods, B1 is not guaranteed by optimality…" — **canon**: `#deriv-variational-sector-condition` treats exactly this (per its name and this body's :173 pointer; not compared).
+- [230] "The adaptive-reserve factorization for gradient agents is $\Delta\rho^\ast = \eta\mu R - \rho$…" — **joined item:adaptive-reserve-standpoint-underived** (C.1), and folded into item:gain-sector-bridge-in-expectation-scope's last sentence.
+- [231] "Full simulation code, raw traces, and intermediate analysis live in `spikes/.integrated/spike-gain-sector-bridge-nonlinear.md`…" — **set aside** (provenance).
+
+#### `deriv-l1-update-bias`
+
+- [237] "**Forward — citable-supplement script.**" — **guard** (says where the re-run script lives and that the original is lost).
+- [238] "**Regression guard — do not restore the confabulated MC summary.**" — **guard**.
+- [239] "**Open: non-matched-marginal transient bias.**" — **canon** (the body's "What is not established" list, :103, says it).
+- [240] "**Open: $N$-edge common-cause extensions.**" — **owed → item:l1-update-bias-n-child-common-cause** (C.4).
+
+#### `deriv-matrix-persistence-condition` (Part I lane live)
+
+- [241] "**Counterexample as load-bearing content.**" — **set aside**: an assessment of the body's §4. Its "generalizations … are mechanical" claim is unverified, and nothing depends on it.
+- [242] "**Empirical validation.**" — **owed → item:matrix-persistence-2d-false-pass-simulation** (E.2).
+- [243] "**Open work — nonlinear matrix-sector.**", [244] "**Open work — adversarial extension.**" and [245] "**Open work — composition lift.**" — **joined item:todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe** (it lists all three).
+- [246] "**Landing context.**" — **set aside**.
+
+#### `deriv-mismatch-budget-attribution`
+
+- [250] "`#example-kalman` is consumed by Corollary 1c … but deliberately absent from `depends:`…" — **guard** (explains a deliberate omission that `bin/lint-outline` would otherwise trip on).
+- [251] "The class-ceiling leg of Proposition 4 and $\mathcal F(\mathcal M)$ … are defined over different objects…" — **joined item:influx-sufficiency-fitness-horizon-and-class** (C.4). The body's table (:104) already marks the identification as interpretation.
+- [252] "Under Model S the relation $R^\ast = \rho/\alpha$ changes homogeneity in $\alpha$…" — **owed → item:mismatch-budget-attribution-under-model-s** (C.4).

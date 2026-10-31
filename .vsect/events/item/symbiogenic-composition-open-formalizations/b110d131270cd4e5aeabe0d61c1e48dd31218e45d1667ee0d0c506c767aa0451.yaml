@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: b110d131270cd4e5aeabe0d61c1e48dd31218e45d1667ee0d0c506c767aa0451
+at: 2026-10-31T02:22:15Z
+store: asf
+act: raise
+about: item:symbiogenic-composition-open-formalizations
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:symbiogenic-composition-open-formalizations
+source: 01-aat-core/src/deriv-critical-mass-composition.md Working Notes 'Close (S-2) function transfer' (how F(M_e, Sigma_e) lands in M_h; prerequisite for promoting the asymmetric-limit result to derived).

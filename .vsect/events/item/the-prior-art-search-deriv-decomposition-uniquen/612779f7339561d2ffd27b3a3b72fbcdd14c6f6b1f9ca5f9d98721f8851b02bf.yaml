@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 612779f7339561d2ffd27b3a3b72fbcdd14c6f6b1f9ca5f9d98721f8851b02bf
+at: 2026-10-31T02:22:09Z
+store: asf
+act: raise
+about: item:the-prior-art-search-deriv-decomposition-uniquen
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p1)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:the-prior-art-search-deriv-decomposition-uniquen
+source: 01-aat-core/src/deriv-decomposition-uniqueness.md Working Notes 'Prior-art status' (citations 'from working knowledge'; the search is called queued there)

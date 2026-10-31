@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 61767d4d57a29934c1150ee4d3b3cc2687f586ce948324ecc854e766d63f6458
+at: 2026-10-31T02:22:08Z
+store: asf
+act: raise
+about: item:impossibility-clusters-owed-reading
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p1)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:impossibility-clusters-owed-reading
+source: '01-aat-core/src/deriv-bilateral-trade-impossibility.md Working Notes ''Open before candidate'' (a): Myerson and Satterthwaite 1983 is stated from Krishna 2002 §5.3 and Mas-Colell, Whinston and Green 1995 §23.E'

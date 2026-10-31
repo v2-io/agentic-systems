@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 18de31a4d7b8c808578720303eebf7de24bc6c3a2e5d6c751bbe36d9efa5c098
+at: 2026-10-31T02:22:14Z
+store: asf
+act: raise
+about: item:spikes-proposed-advanced-12-effects-spiral-eigenvalue-condition-d-d6f7
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-advanced-12-effects-spiral-eigenvalue-condition-d-d6f7
+source: 01-aat-core/src/der-adversarial-destabilization.md Working Notes, third item (formalize gamma_A(||delta_B||) so the spiral is a result; Boyd's cascading disorientation as the analog) and 01-aat-core/src/der-agent-opacity.md Working Notes, second item (the spiral's joint-Jacobian condition composed with opacity amplification; full composition open).

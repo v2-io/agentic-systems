@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 349908d577da4e154dc8358b9bae6f31dbb985cff9d382675e65f171a820d3b6
+at: 2026-10-31T02:22:17Z
+store: asf
+act: raise
+about: question:unity-mixed-motive-u-o-aggregation
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: question:unity-mixed-motive-u-o-aggregation
+source: 01-aat-core/src/def-unity-dimensions.md Working Notes, third item (the per-objective-dimension U_O scalar for mixed cooperative-competitive cases) and 01-aat-core/src/der-team-persistence.md Working Notes, fourth item (one agent cooperative on some dimensions, adversarial on others).

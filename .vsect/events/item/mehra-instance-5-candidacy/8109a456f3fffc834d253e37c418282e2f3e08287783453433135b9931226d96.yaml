@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 8109a456f3fffc834d253e37c418282e2f3e08287783453433135b9931226d96
+at: 2026-10-31T02:22:08Z
+store: asf
+act: raise
+about: item:mehra-instance-5-candidacy
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p1)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:mehra-instance-5-candidacy
+source: '01-aat-core/src/deriv-adaptive-gain-dynamics.md Working Notes ''Identifiability as meta-gain obstruction'' (Dunik et al. 2021; proposes a cross-reference in #disc-identifiability-floor''s Adjacent Floors); the body''s table row :149 already carries it as candidate'

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 162af4e96d1b7162e02dab66604ec959555f9995441650bac9dd874fc8acc7cf
+at: 2026-10-31T02:19:32Z
+store: asf
+act: raise
+about: item:spikes-proposed-scc-defect-constant-tightness-a1-q1-0815
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-scc-defect-constant-tightness-a1-q1-0815
+source: '01-aat-core/src/def-strategy-dag.md Working Notes ''Open (composition defect-constant tightness)'' (closing instance: two shared nodes, opposite orders, Beta-Bernoulli credences)'

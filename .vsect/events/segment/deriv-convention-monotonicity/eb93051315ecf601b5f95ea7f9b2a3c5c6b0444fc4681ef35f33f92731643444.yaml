@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: eb93051315ecf601b5f95ea7f9b2a3c5c6b0444fc4681ef35f33f92731643444
+at: 2026-10-31T02:22:09Z
+store: asf
+act: raise
+about: segment:deriv-convention-monotonicity
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p1)
+  role: drain
+normalizer: vsect-norm/0
+raised: review:part-ii-check-1-b1-records#F1
+source: '01-aat-core/src/deriv-convention-monotonicity.md Working Notes ''Documented dead-end (so a future agent does not re-attempt it)'': its last sentences say the right rung''s strengthening ''is the (PC)/(SO) characterization'', which C1/C2 of this review found broken; the guard against an unconditional rung stays, but this carrier needs the same correction as the body''s'

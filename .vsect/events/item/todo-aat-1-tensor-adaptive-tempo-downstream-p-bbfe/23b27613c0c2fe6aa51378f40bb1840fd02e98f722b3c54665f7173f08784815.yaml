@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 23b27613c0c2fe6aa51378f40bb1840fd02e98f722b3c54665f7173f08784815
+at: 2026-10-31T02:22:09Z
+store: asf
+act: raise
+about: item:todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p1)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe
+source: 01-aat-core/src/deriv-causal-ib-lmi.md Working Notes 'Tensor adaptive tempo'; 01-aat-core/src/deriv-matrix-persistence-condition.md Working Notes 'Open work — nonlinear matrix-sector' (F + F^T >= 2 alpha delta delta^T/||delta||^2), 'Open work — adversarial extension' (matrix-eigenvalue-ratio exponent), 'Open work — composition lift' (composite Lyapunov equation and Loewner condition)

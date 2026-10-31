@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 6f2713c17fa172952f2905eb32806e526fe261985f0afe8c5a8ad3b8f4020e51
+at: 2026-10-31T02:19:35Z
+store: asf
+act: raise
+about: item:norm-explicit-strategy-condition-44-says-explici
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:norm-explicit-strategy-condition-44-says-explici
+source: 01-aat-core/src/impl-causal-access.md Working Notes 'Forward — source defects this pass surfaced' (F35)

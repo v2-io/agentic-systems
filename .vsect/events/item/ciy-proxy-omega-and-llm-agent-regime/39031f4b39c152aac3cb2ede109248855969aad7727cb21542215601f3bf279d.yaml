@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 39031f4b39c152aac3cb2ede109248855969aad7727cb21542215601f3bf279d
+at: 2026-10-31T02:19:35Z
+store: asf
+act: raise
+about: item:ciy-proxy-omega-and-llm-agent-regime
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:ciy-proxy-omega-and-llm-agent-regime
+source: 01-aat-core/src/impl-causal-access.md Working Notes 'Forward — Regime B as the LLM software agent's typical regime' (AUDIT-WORKING-963715 34-38)

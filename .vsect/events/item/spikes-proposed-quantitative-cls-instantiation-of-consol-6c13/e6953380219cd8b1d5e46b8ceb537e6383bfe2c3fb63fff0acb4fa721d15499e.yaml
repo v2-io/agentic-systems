@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: e6953380219cd8b1d5e46b8ceb537e6383bfe2c3fb63fff0acb4fa721d15499e
+at: 2026-10-31T02:19:31Z
+store: asf
+act: raise
+about: item:spikes-proposed-quantitative-cls-instantiation-of-consol-6c13
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-quantitative-cls-instantiation-of-consol-6c13
+source: 01-aat-core/src/form-consolidation-dynamics.md Working Notes 'Online-only no-go rigorization (open)' (rate-distortion with side information; would make the segment an identifiability-floor candidate) and 'Quantitative CLS instantiation'

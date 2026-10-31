@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 4ad77950e24a0ae456623186e98f0e0d1286c31eecfdc5b4899ddac59ebc6aff
+at: 2026-10-31T02:22:16Z
+store: asf
+act: raise
+about: question:in-aat-s-terms-tempo-reserve-mismatch-communicat
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: question:in-aat-s-terms-tempo-reserve-mismatch-communicat
+source: 01-aat-core/src/hyp-communication-gain.md Working Notes, third item (an adversary making U_align appear low creates a meta-game on trust estimation; AAT supplies the state variables, game theory the equilibrium).

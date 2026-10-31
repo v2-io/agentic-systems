@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 8456825c66cebe00ad8186a6084547b4f9b59e91c19ed32087fc3e4f20e6b4e2
+at: 2026-10-31T02:19:33Z
+store: asf
+act: raise
+about: item:def-strategy-dag-and-form-strategy-complexity-co
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:def-strategy-dag-and-form-strategy-complexity-co
+source: '01-aat-core/src/impl-strategy-structure.md Working Notes ''Open — the two-gap identity''s grain'': whether the two-gap diagnostic recurses to subgoals is open (propagated sub-condition probability is not a best-achievable quantity), and step-level verdicts may be a category error until settled; the rg-0c result this item cites (diagnostics collapse to Boolean at sub-nodes) bears on exactly this.'

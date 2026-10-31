@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 749b64349ab14c293b12e9705a263925de51b2172680067a773d011529c15766
+at: 2026-10-31T02:22:17Z
+store: asf
+act: raise
+about: item:composition-closure-mz-upper-bound-unverified
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:composition-closure-mz-upper-bound-unverified
+source: 01-aat-core/src/result-unity-closure-mapping.md Working Notes 'Mori-Zwanzig cross-check' (the non-degenerate Kalman case exercises the zero-lag kernel K_0 with ||K_0|| scaling with |Delta K|; the MZ zero-lag lower bound and the IB rate-distortion bound should coincide at one linear-algebraic quantity; equivalence not established).

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 53a7d5deaa50f9c8a450affe8ae4069818aaebef4eae953acedd289c133e62d7
+at: 2026-10-31T02:19:31Z
+store: asf
+act: raise
+about: item:proposals-c-1-o-bp13-cox-parallel-necessity-for-de-f4cf
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:proposals-c-1-o-bp13-cox-parallel-necessity-for-de-f4cf
+source: '01-aat-core/src/def-strategy-dag.md Working Notes, second item: ''the necessity of the graphical structure itself is an open stronger result'' (the Cox parallel: Cox is necessary and sufficient, this argument sufficient only)'

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: f067fec04e50ae64a9c00b11d5c55199a577f4992a1f7a897ed64794321ddd20
+at: 2026-10-31T02:19:33Z
+store: asf
+act: raise
+about: item:todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-aat-1-tensor-adaptive-tempo-downstream-p-bbfe
+source: 01-aat-core/src/impl-orient-cascade.md Working Notes 'Open strengthening — per-direction bandwidth floor' (the same Mitter-Newton/Riccati route; it would promote that segment's §2 composition from discussion-grade to conditional)

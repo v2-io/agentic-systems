@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 10895339e236bae108fdedea2a5e35219e4d92ec3795e07b9efee9fdcb669c00
+at: 2026-10-31T02:19:36Z
+store: asf
+act: raise
+about: item:format-todo-c14-discussion-segment-schema-split-in-f-09d7
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:format-todo-c14-discussion-segment-schema-split-in-f-09d7
+source: 'Part II chapter-end and intro segments that state their standing only in Working Notes: #impl-causal-access ''Scope'' (''every result''s load-bearing math lives at its home''), #impl-orient-cascade, #impl-strategy-dynamics, #impl-strategy-structure (opening Working Notes items), #causal-access-intro and #strategy-structure-intro (''carries no formal claim of its own'')'

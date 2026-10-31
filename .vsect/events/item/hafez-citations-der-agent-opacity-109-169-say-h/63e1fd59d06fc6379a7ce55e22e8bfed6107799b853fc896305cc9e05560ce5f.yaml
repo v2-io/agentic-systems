@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 63e1fd59d06fc6379a7ce55e22e8bfed6107799b853fc896305cc9e05560ce5f
+at: 2026-10-31T02:19:34Z
+store: asf
+act: raise
+about: item:hafez-citations-der-agent-opacity-109-169-say-h
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:hafez-citations-der-agent-opacity-109-169-say-h
+source: '01-aat-core/src/impl-causal-access.md Working Notes ''Forward — Hafez IDT anchor'' (the figure is carried at #der-causal-hierarchy-requirement at abstract granularity; setup unread; relata inspect hafez-2026-informational returns no document)'

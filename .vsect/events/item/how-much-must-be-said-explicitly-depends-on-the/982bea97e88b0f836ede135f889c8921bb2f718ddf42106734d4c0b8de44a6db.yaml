@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 982bea97e88b0f836ede135f889c8921bb2f718ddf42106734d4c0b8de44a6db
+at: 2026-10-31T02:22:16Z
+store: asf
+act: raise
+about: item:how-much-must-be-said-explicitly-depends-on-the
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:how-much-must-be-said-explicitly-depends-on-the
+source: '01-aat-core/src/hyp-auftragstaktik-principle.md Working Notes, second item: for AI agent teams model synchronization is cheap (shared stores, persistent memory) while objective alignment is hard, so the human-organization cost structure behind B_O > B_Sigma > B_M may not hold.'

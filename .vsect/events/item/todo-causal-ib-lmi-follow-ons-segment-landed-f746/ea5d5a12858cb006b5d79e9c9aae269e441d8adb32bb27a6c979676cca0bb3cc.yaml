@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: ea5d5a12858cb006b5d79e9c9aae269e441d8adb32bb27a6c979676cca0bb3cc
+at: 2026-10-31T02:22:08Z
+store: asf
+act: raise
+about: item:todo-causal-ib-lmi-follow-ons-segment-landed-f746
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p1)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-causal-ib-lmi-follow-ons-segment-landed-f746
+source: 01-aat-core/src/deriv-causal-ib-lmi.md Working Notes 'Worked 2D example' and '2D simulation' (both 'queued')

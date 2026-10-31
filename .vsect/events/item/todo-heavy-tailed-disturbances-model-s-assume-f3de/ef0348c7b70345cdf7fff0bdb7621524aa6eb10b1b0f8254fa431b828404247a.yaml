@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: ef0348c7b70345cdf7fff0bdb7621524aa6eb10b1b0f8254fa431b828404247a
+at: 2026-10-31T02:22:09Z
+store: asf
+act: raise
+about: item:todo-heavy-tailed-disturbances-model-s-assume-f3de
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p1)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-heavy-tailed-disturbances-model-s-assume-f3de
+source: 01-aat-core/src/deriv-discrete-sector-condition.md Working Notes, second item (DA.1S assumes finite second moment; truncation or other Lyapunov functions, or treat as a structural-adaptation trigger)

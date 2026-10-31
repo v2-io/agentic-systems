@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 6a2b75df16d9449de2203c04b9e09a4d8fc2ef0f498b85872059e7cf83213956
+at: 2026-10-31T02:22:14Z
+store: asf
+act: raise
+about: item:der-agent-opacity-overclaims-f246-f255
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:der-agent-opacity-overclaims-f246-f255
+source: 01-aat-core/src/der-agent-opacity.md Working Notes '2026-07-16 — arg-max formula and backward variance decomposition landed…' (the five-factor product is a first-order independence assumption, so the arg-max is a Formulation until a second-order interaction analysis lands; 'formal dual' owes a theorem or becomes 'structural dual'); and 01-aat-core/src/result-adversarial-tempo-advantage.md Working Notes 'Opacity modulation' (T_eff = T * H_b/H_b^max enters the superlinear ratio as a squared bilateral-opacity prefactor; whether bilateral opacity reshapes b is open).

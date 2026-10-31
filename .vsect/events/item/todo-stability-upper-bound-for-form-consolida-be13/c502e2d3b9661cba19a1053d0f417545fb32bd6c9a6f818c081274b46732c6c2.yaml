@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: c502e2d3b9661cba19a1053d0f417545fb32bd6c9a6f818c081274b46732c6c2
+at: 2026-10-31T02:19:31Z
+store: asf
+act: raise
+about: item:todo-stability-upper-bound-for-form-consolida-be13
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-stability-upper-bound-for-form-consolida-be13
+source: '01-aat-core/src/form-consolidation-dynamics.md Working Notes ''Stability upper bound derivation (open)'' (candidate phi: the minimum forgetting rate leaving enough retained signal in M_fast for the next consolidation cycle; Parisi et al. 2019) and ''Is consolidation one segment or two?'' (split the window into its own segment once the bound is derived)'

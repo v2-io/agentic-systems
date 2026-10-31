@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 60895f466d036fb195f8e1a46ae8328f183ac04f046ad9ee289ca336a4169e87
+at: 2026-10-31T02:22:10Z
+store: asf
+act: raise
+about: item:adaptive-reserve-standpoint-underived
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p1)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:adaptive-reserve-standpoint-underived
+source: '01-aat-core/src/deriv-gain-sector.md Working Notes, third item: the gradient-agent factorization Delta-rho* = eta mu R - rho (three controllable factors), stated only there'

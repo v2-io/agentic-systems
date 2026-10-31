@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 4526e66254f8599a551a78ecc455b2a4a8ca1ce386c2ded3f352e8db1e935bee
+at: 2026-10-31T02:22:17Z
+store: asf
+act: raise
+about: item:write-innovation-based-estimators-for-detail-ope
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:write-innovation-based-estimators-for-detail-ope
+source: 01-aat-core/src/detail-operationalization.md Working Notes, second item (the rho-hat estimator depends on T-hat, so errors compound along a sequential chain; estimate rho directly from exogenous environmental-change measurements when available).

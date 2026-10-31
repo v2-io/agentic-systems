@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 72d1b008b22607aad424a6ae92e9f78501cfbf46b9fe8b0be4d677ea49b64b74
+at: 2026-10-31T02:19:32Z
+store: asf
+act: raise
+about: item:context-window-strategy-depth-bound
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:context-window-strategy-depth-bound
+source: 01-aat-core/src/disc-exploit-explore-deliberate.md Working Notes 'Relationship to working memory' (tokens spent deliberating are unavailable for problem state) and 01-aat-core/src/norm-explicit-strategy-condition.md Working Notes, second item (C_maintain includes fitting Sigma_t in the context window; a 500-node DAG may not fit)

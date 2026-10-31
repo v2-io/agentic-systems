@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: ca9ae989bb0d9eeb302e46cbd2fc2c445eb9f1fdc1cf26345bf422a74ce3f4b9
+at: 2026-10-31T02:19:34Z
+store: asf
+act: raise
+about: item:scope-and-or-audit-finding-f41-still-open-in-its
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:scope-and-or-audit-finding-f41-still-open-in-its
+source: '01-aat-core/src/scope-and-or.md Working Notes, third item: k-of-n thresholds are common (''3 of 5 team members''); nested AND/OR works but is verbose, and whether that matters under bounded cognition is empirical'

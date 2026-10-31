@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: c060382c509c2a5ea563df9a8515704979471767351ce7f9d3aa78214e572206
+at: 2026-10-31T02:19:33Z
+store: asf
+act: raise
+about: item:disc-identifiability-floor-s-catalog-boundary-re
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:disc-identifiability-floor-s-catalog-boundary-re
+source: 01-aat-core/src/disc-law-discovery-ceiling.md Working Notes 'Floor-catalog candidacy' (promotion to a numbered M1 instance needs the F-catalog schema treatment; not claimed)

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: cdb8f2eabaf083449f8255318802b53c7427ce8e5179196e816f480afcc85b6a
+at: 2026-10-31T02:22:07Z
+store: asf
+act: raise
+about: item:the-composite-class-inheritance-row-class-1-sub
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p1)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:the-composite-class-inheritance-row-class-1-sub
+source: '01-aat-core/src/der-belief-strategy-attractor.md Working Notes ''Composite-level extension'' and ''Connection to #deriv-strategic-composition'': a composite of Class 1 sub-agents whose routing depends on the composite''s strategy Sigma^c (not its objective O^c) inherits the attractor possibility, so the inheritance table should also track composite sub-type (and so attractor vulnerability)'

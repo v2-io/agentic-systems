@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 634a850606a30ed7a018f07a01d332c13557a92835a3524bf25866936656e154
+at: 2026-10-31T02:22:16Z
+store: asf
+act: raise
+about: item:t1-auftragstaktik-allocation-and-conway
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:t1-auftragstaktik-allocation-and-conway
+source: '01-aat-core/src/hyp-auftragstaktik-principle.md Working Notes, first item (the strengthen-first route: derive the ordering from how each unity dimension feeds composite tempo, the change rates nu_O, nu_Sigma, nu_M, and the cost per bit of each) and 01-aat-core/src/impl-unity-communication.md Working Notes ''Strengthening targets'' (i) (a bandwidth-to-unity map B_d to U_d composed with the rate-distortion surface).'

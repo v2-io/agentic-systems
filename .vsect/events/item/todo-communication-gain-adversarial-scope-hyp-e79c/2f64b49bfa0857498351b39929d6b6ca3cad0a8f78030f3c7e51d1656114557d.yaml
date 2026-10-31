@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 2f64b49bfa0857498351b39929d6b6ca3cad0a8f78030f3c7e51d1656114557d
+at: 2026-10-31T02:22:16Z
+store: asf
+act: raise
+about: item:todo-communication-gain-adversarial-scope-hyp-e79c
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:todo-communication-gain-adversarial-scope-hyp-e79c
+source: 01-aat-core/src/hyp-communication-gain.md Working Notes 'Consider eventually splitting U_src from U_align' (now part (b) of item communication-gain-open-extensions).

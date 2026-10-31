@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: f856999d6a9572300422cb91a8c49377edc682b236b7402da2d6d47579244f22
+at: 2026-10-31T02:22:10Z
+store: asf
+act: raise
+about: item:influx-sufficiency-fitness-horizon-and-class
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p1)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:influx-sufficiency-fitness-horizon-and-class
+source: '01-aat-core/src/deriv-mismatch-budget-attribution.md Working Notes, second item: the class-ceiling leg of Proposition 4 (one-step divergence) and F(M) of #def-model-class-fitness (infinite-horizon information ratio) are different objects; a derivation relating them under a named horizon assumption would lift that row (body :104 marks it Interpretation)'

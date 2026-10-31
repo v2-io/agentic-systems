@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 63623e4a407ebd800a5ce7f972227f9ba05bf9df7ff00d936a2afb671e8d1099
+at: 2026-10-31T02:22:15Z
+store: asf
+act: raise
+about: item:part-iii-segments-name-their-regime-tier
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:part-iii-segments-name-their-regime-tier
+source: '01-aat-core/src/der-team-persistence.md, 01-aat-core/src/deriv-critical-mass-composition.md Working Notes ''Dynamic-regime placement (added 2026-05-21…)'' (neither body names a regime, checked by grep); 01-aat-core/src/result-unity-closure-mapping.md Working Notes ''Relationship to #scope-composite-agent'' (quality is conditional on scope satisfaction by a route; the note still says ''three'' routes, and the body says none of it).'

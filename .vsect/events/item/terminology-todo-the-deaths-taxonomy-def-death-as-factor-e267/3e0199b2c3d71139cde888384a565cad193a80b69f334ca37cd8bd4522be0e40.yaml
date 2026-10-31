@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 3e0199b2c3d71139cde888384a565cad193a80b69f334ca37cd8bd4522be0e40
+at: 2026-10-31T02:22:15Z
+store: asf
+act: raise
+about: item:terminology-todo-the-deaths-taxonomy-def-death-as-factor-e267
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:terminology-todo-the-deaths-taxonomy-def-death-as-factor-e267
+source: 01-aat-core/src/der-team-persistence.md Working Notes 'Continuity-persistence cross-reference (updated 2026-05-19)' still names the deaths 'D1 Cognitive / D2 Relational / D3 Truth', the pre-2026-06-10 names; current canon is continuity, relational, truth, agency. The note is otherwise a forward pointer worth keeping, so fix the names when it is kept.

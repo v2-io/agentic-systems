@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: f34847354a87813a06931ef903930b9b988fef77e8a0fca485c61d3ea7b08560
+at: 2026-10-31T02:19:35Z
+store: asf
+act: raise
+about: item:pedagogy-home-for-lifted-audit-gold
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:pedagogy-home-for-lifted-audit-gold
+source: '01-aat-core/src/impl-causal-access.md Working Notes ''Teaching frames (lifted audit gold, attributed; chapter-end register)'' and ''Forward — figures'' (the three-layer proof-flow figure, drafted at audits/AUDIT-WORKING-526815/.integrated/49-impl-causal-access.tex); 01-aat-core/src/impl-strategy-structure.md Working Notes ''Candidate figure — the chapter-end bridge diagram'' (56-impl-strategy-structure.tex/.png). These are 2026-08-22 lifts outside the ''Incidental audit gold'' headings. The teaching frames include two Joseph quotes worth keeping verbatim: ''sufficient life before starting life … integrating experiential exploration into reinforcement learning loops'' and ''Real goal blindness is self-defeating at higher levels of cognition where your action-space actually cascades from your goals.'''

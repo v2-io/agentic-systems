@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 012e0c5b8166f49fd0d6df569e943b6591431906fd327e58ca2011687230fe0b
+at: 2026-10-31T02:19:35Z
+store: asf
+act: raise
+about: item:causal-access-chapter-register-defects-reported
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:causal-access-chapter-register-defects-reported
+source: 01-aat-core/src/impl-causal-access.md Working Notes 'Forward — source defects this pass surfaced' is the original report of these defects

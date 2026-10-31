@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: e4009f33e146270cf2031df00b77907a99c5c0fb2d245748a108c277b7f53543
+at: 2026-10-31T02:19:32Z
+store: asf
+act: raise
+about: item:spikes-proposed-mixture-support-dynamics-under-the-orien-ca66
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-mixture-support-dynamics-under-the-orien-ca66
+source: '01-aat-core/src/def-strategy-dag.md Working Notes ''Open (mixture-support dynamics)'' (conjecture: support stays SCC-count-bounded while the cascade reshuffles shared nodes)'

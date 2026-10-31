@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 5158155022d2e7264a3863f2056f6b8eea5f0013596afa6a0abd44ff8bd7e7c6
+at: 2026-10-31T02:19:34Z
+store: asf
+act: raise
+about: item:disc-sandbox-evaluation-ceiling-four-defects-fro
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:disc-sandbox-evaluation-ceiling-four-defects-fro
+source: 01-aat-core/src/impl-causal-access.md Working Notes 'Forward — source defects this pass surfaced' (prior art Bellot, Richens and Everitt ICML 2025 Thm 3; frontmatter tier vs an exact-conditional Formal Expression; the 'iff' cites Bareinboim and Pearl 2014 Thm 1 where the biconditional is Thm 5 / Cor 1-2)

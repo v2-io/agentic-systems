@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 7bcb8c490ae688861d4c32b768d8a9e5ba97eaec4f3e741ca123701fd8fafce7
+at: 2026-10-31T02:22:07Z
+store: asf
+act: raise
+about: item:der-belief-strategy-attractor-conditional-run-th
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p1)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:der-belief-strategy-attractor-conditional-run-th
+source: 01-aat-core/src/der-belief-strategy-attractor.md Working Notes, the two 'Tier-upgrade gating sub-spike' items (the K(Sigma) derivation from a prediction-error plus strategy-revision-cost objective, recommended first; the Pillar search over Benabou-Tirole, Akerlof-Kranton, Kruglanski, Mele, von Hippel-Trivers)

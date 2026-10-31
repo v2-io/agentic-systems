@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: f41615aeae12049ac9810376bf3b36bd2ea0b40b042631bb7ac6d197715e0efa
+at: 2026-10-31T02:22:17Z
+store: asf
+act: raise
+about: item:the-heterogeneous-gain-closure-defect-does-not-v
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:the-heterogeneous-gain-closure-defect-does-not-v
+source: '01-aat-core/src/result-unity-closure-mapping.md Working Notes ''Two-Kalman IB witness landed (2026-07-16)'': the falsification handle in #disc-compression-operations §symmetric-two-Kalman-witness (the IB-optimal rotation should beat the means-sum''s epsilon_x when Delta K != 0) has its numeric check unrun.'

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: f336ac7ac1004d0695301ff20227252ca854346f215e0fb8ac2f7a45f51bea4e
+at: 2026-10-31T02:19:33Z
+store: asf
+act: raise
+about: question:where-does-the-l1-mixing-weight-theta-c-for-a-so
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: question:where-does-the-l1-mixing-weight-theta-c-for-a-so
+source: 01-aat-core/src/impl-strategy-structure.md Working Notes 'Open — the L1 mixing weight'

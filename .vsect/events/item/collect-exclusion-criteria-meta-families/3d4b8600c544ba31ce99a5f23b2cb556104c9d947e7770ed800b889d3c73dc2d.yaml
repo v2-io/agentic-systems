@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 3d4b8600c544ba31ce99a5f23b2cb556104c9d947e7770ed800b889d3c73dc2d
+at: 2026-10-31T02:22:14Z
+store: asf
+act: raise
+about: item:collect-exclusion-criteria-meta-families
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:collect-exclusion-criteria-meta-families
+source: '01-aat-core/src/der-agent-opacity.md Working Notes, third item: two spikes (spikes/.integrated/spike-4th-identifiability-floor-instance-2026-05-20.md §3 on action prediction; spike-identifiability-floor-instance4-resolution-2026-05-18.md §4 on architecture prediction) reach the same verdict: Fano is a finite-sample refinement of an attainable task, not a categorical M1 floor anchor. Note: der-agent-opacity''s body does not mention Fano (grep), though the Working Note says its ''Meta-pattern positioning'' section is Fano-on-H_b''s home.'

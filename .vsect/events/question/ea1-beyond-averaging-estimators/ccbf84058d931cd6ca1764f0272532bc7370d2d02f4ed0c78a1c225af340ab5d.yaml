@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: ccbf84058d931cd6ca1764f0272532bc7370d2d02f4ed0c78a1c225af340ab5d
+at: 2026-10-31T02:22:10Z
+store: asf
+act: raise
+about: question:ea1-beyond-averaging-estimators
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p1)
+  role: drain
+normalizer: vsect-norm/0
+raised: question:ea1-beyond-averaging-estimators
+source: 01-aat-core/src/deriv-evidence-allocation-ceiling.md Working Notes 'Strengthening direction'

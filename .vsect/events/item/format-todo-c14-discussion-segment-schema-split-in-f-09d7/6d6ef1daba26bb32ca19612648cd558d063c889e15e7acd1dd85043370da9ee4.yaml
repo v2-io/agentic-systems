@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 6d6ef1daba26bb32ca19612648cd558d063c889e15e7acd1dd85043370da9ee4
+at: 2026-10-31T02:22:17Z
+store: asf
+act: raise
+about: item:format-todo-c14-discussion-segment-schema-split-in-f-09d7
+actor:
+  name: Claude Opus 5.5 (WN-01 drain)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:format-todo-c14-discussion-segment-schema-split-in-f-09d7
+source: 'More impl-*/intro standing statements in Working Notes: #cooperative-adversarial-intro (''carries no formal claim of its own''), #impl-cooperative-adversarial (which findings it is the canonical catalog home for), #impl-strategic-composition and #impl-unity-communication (the same, with #22 and #51 called hypothesis-grade and #47 exact in four instances).'

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 8d2673d198f471f36c4470de589dbd969097af885072fad329aa2b45fae64c88
+at: 2026-10-31T02:22:08Z
+store: asf
+act: raise
+about: item:spikes-proposed-adversarial-adaptive-gain-meta-gain-temp-06a0
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p1)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:spikes-proposed-adversarial-adaptive-gain-meta-gain-temp-06a0
+source: 01-aat-core/src/deriv-adaptive-gain-dynamics.md Working Notes 'Adversarial adaptive-gain' (faster meta-gain tracking beats hostile regime switching iff alpha_K T_dwell exceeds the transition rate; not derived)

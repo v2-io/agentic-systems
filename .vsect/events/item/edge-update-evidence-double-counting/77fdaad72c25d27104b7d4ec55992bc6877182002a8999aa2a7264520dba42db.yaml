@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 77fdaad72c25d27104b7d4ec55992bc6877182002a8999aa2a7264520dba42db
+at: 2026-10-31T02:19:35Z
+store: asf
+act: raise
+about: item:edge-update-evidence-double-counting
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:edge-update-evidence-double-counting
+source: '01-aat-core/src/hyp-edge-update-via-gain.md Working Notes ''$/edge evidence double-counting'': an analysis exists, spikes/.integrated/spike-edge-semantics-resolution.md §7, verdict ''mostly unfounded'' (the two updates extract different information from o_t), with a bounded effect when M_t updates change leaf credences that also feed edge updates; cascade ordering correct, effect self-correcting under the gain mechanism. The hyp-edge-update-via-gain body (:59, item 2) still lists the interaction as open, so the work is to check that verdict and land it, not to start fresh.'

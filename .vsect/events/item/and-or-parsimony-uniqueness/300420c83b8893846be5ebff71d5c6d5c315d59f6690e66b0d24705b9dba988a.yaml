@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 300420c83b8893846be5ebff71d5c6d5c315d59f6690e66b0d24705b9dba988a
+at: 2026-10-31T02:19:34Z
+store: asf
+act: raise
+about: item:and-or-parsimony-uniqueness
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:and-or-parsimony-uniqueness
+source: '01-aat-core/src/scope-and-or.md Working Notes, second item (continuous and multi-valued analogs: min/max, additive/multiplicative; is there a completeness result?)'

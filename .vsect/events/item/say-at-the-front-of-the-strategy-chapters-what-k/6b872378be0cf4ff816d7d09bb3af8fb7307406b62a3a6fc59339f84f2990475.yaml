@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 6b872378be0cf4ff816d7d09bb3af8fb7307406b62a3a6fc59339f84f2990475
+at: 2026-10-31T02:19:33Z
+store: asf
+act: raise
+about: item:say-at-the-front-of-the-strategy-chapters-what-k
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:say-at-the-front-of-the-strategy-chapters-what-k
+source: '01-aat-core/src/impl-strategy-structure.md Working Notes ''Open — a convergent-choice register?'': the derived / chosen / convergent-choice trichotomy has no frontmatter or Claim Record field; whether FORMAT should carry one.'

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 4ae2eb9d96f82d5e8f7f28ddbdc239441f78777e70ebc13ee671a4450106eb26
+at: 2026-10-31T02:19:32Z
+store: asf
+act: raise
+about: item:readers-ask-der-causal-insufficiency-detection
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p5)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:readers-ask-der-causal-insufficiency-detection
+source: '01-aat-core/src/der-causal-insufficiency-detection.md Working Notes, third item: the no-go forbids on-policy detection of L1 from L0 but not on-policy parameter learning within L0 (conditionals learnable to any precision; the latent stays hidden). The body does not say this asymmetry, which sharpens the diagnosis-vs-calibration split of #result-structural-adaptation-necessity.'

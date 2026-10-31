@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 7fdcf1064e3a12421d78b10d3b4e9d4b184ea67ba14165d75c25d73677d1cc7b
+at: 2026-10-31T02:22:07Z
+store: asf
+act: raise
+about: item:which-aat-structural-adaptation-mechanisms-satis
+actor:
+  name: Claude Opus 5.5 (WN-01 drain p1)
+  role: drain
+normalizer: vsect-norm/0
+raised: item:which-aat-structural-adaptation-mechanisms-satis
+source: 01-aat-core/src/der-multi-timescale-stability.md Working Notes 'Open (which AAT mechanisms satisfy the premises)' (jump-process slow level; impulsive/hybrid extension; the RGM correspondence as constructive discrete-time instance)
