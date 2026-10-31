@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 4069e417258d6469c9abc1a5af0a0a48b3a097f8ee5b812e7b1f31da7726ed58
+at: 2026-10-31T03:49:47Z
+store: asf
+act: revise
+about: segment:result-sector-persistence-template
+actor:
+  name: Claude Opus 5.5 (B.1 Part I records)
+  role: author
+normalizer: vsect-norm/0
+change: reworded
+from-version: e81dfed0853e9582d41e15e3a737f8fe1829370f72fedf1766ddb60ef07a2d2a
+own-version: 179b8316f9e6c318adc08135ebccc0ff79bd999c468ecd4a586515879fce29ca
+record: 01-aat-core/src/result-sector-persistence-template.md

@@ -362,6 +362,106 @@ The sector condition A2' carries its sub-scope $\alpha$ / $\beta$ status, the op
 
 The assumptions themselves (sector condition on a region, bounded disturbance) are *empirical claims* about the qualitative behavior of real correction dynamics. The sector-condition framework originates with Lur'e (1957); the Lyapunov stability results are standard. The application to adaptive agents under the AAT framework is new but the mathematics is not.
 
+## Claim Record
+
+### Under bounded disturbance a sector corrector's error is ultimately bounded by the disturbance over the floor, the region is invariant past the threshold, and the threshold is tight only at class level
+
+**Register:** formal — Prop A.1 and Lemma A.1N, with the Remark after A.1N.
+
+**Population:** representations $\dot\delta = -F(\mathcal T, \delta) + w$, $\delta$ the estimation error, with $F$ meeting (A1), (A2') on $\mathcal B_R$ with floor $\alpha$ and (A3), $\lVert w(t)\rVert \leq \rho$ (GA-2, $\rho$ the total disturbance of the Setup), started in $\mathcal B_R$. Necessity of $\alpha \gt \rho/R$ holds over the class $\mathcal F_\alpha$ and, for a fixed corrector, only when $\delta^T F \leq \bar\alpha\lVert\delta\rVert^2$ with $\bar\alpha = \alpha$ (radial tightness).
+
+**True of:** $F = \alpha\delta$ under a constant disturbance of norm $\rho \lt \alpha R$: the error settles at $\rho/\alpha$; under the outward disturbance $w = \rho\,\delta/\lVert\delta\rVert$ with $\alpha \lt \rho/R$ it leaves $\mathcal B_R$ in finite time (proof of Lemma A.1N).
+
+**False of:** the agent-level only-if for a general corrector: the dip corrector ($R = \rho = 1$, $g \geq 10$ except $g = 0.1$ near $r = 0.5$) fails the condition tenfold and, from the origin, stays within about $0.1$ under every admissible disturbance (Remark after A.1N). A trajectory started outside $\mathcal B_R$ is outside the population ("Initial condition requirement").
+
+**Falsifier:** a corrector in $\mathcal F_\alpha$ under $\lVert w\rVert \leq \rho$ with $\alpha R \gt \rho$ whose trajectory from $\mathcal B_R$ leaves it, refuting "Invariance of $\mathcal B_R$"; or a radially tight corrector that stays in $\mathcal B_R$ under the outward disturbance with $\alpha \lt \rho/R$, refuting the agent-level iff in the paragraph after Lemma A.1N.
+
+**Instantiated:** not applicable.
+
+### The adaptive reserve is the extra bounded disturbance a corrector absorbs before its ultimate bound leaves the region
+
+**Register:** formal — Prop A.2, an algebraic corollary of Prop A.1.
+
+**Population:** the population of Prop A.1, under a shock $\rho \to \rho + \Delta\rho$ that leaves $\alpha$ and $R$ unchanged (the table "What Is Derived vs. What Is Chosen" names the fixed-$R$ requirement). With channel noise bounded by $\bar\nu$ and linear correction it reads $\alpha(R - \bar\nu) - \rho_{\text{env}}$ (#result-persistence-condition, window paragraph). It is a quantity of the representation; that the agent itself reads it is not claimed here.
+
+**True of:** $\alpha = 2$, $R = 1$, $\rho = 1$: the reserve is $1$, and a shock to $\rho = 2$ puts the ultimate bound exactly on the boundary.
+
+**False of:** a shock that also shrinks $R$ or lowers $\alpha$ (a regime change that degrades the model class), which is outside the population; Model S, for which no reserve is stated.
+
+**Falsifier:** a corrector in the population whose ultimate bound leaves $\mathcal B_R$ under a shock $\Delta\rho \lt \alpha R - \rho$.
+
+**Instantiated:** not applicable.
+
+### Under white-noise disturbance and a sector condition on the ball only, the error counted while still inside has the Ornstein–Uhlenbeck scale, and its path over a finite horizon is bounded
+
+**Register:** formal — Prop A.1S (i)–(iv), region-aware form.
+
+**Population:** the representations of Prop A.1 with GA-2S in place of GA-2 ($d\delta = -F\,dt + \sigma_w\,dW_t$, $W$ standard $n$-dimensional, $\sigma_w$ the total per-coordinate intensity) and the regularity (S). The stationary scale and the fixed-time tail (iii) in Markov form need (A2') on all of $\mathbb R^n$; under (A2') on the ball the tail is the composed form.
+
+**True of:** the Ornstein–Uhlenbeck corrector $F = \alpha\delta$, for which (A2') is global and the stationary second moment is exactly $n\sigma_w^2/(2\alpha)$; and the Monte Carlo in the proof of (i) ($n = 2$, $\alpha = 2$, $\sigma_w = R = 1$), where the killed moment is $0.09$ at $t = 1$ under the bound $0.49$.
+
+**False of:** the stopped moment with the decay term, which tends to $R^2$, not $n\sigma_w^2/(2\alpha)$ (same Monte Carlo: $0.74$ at $t = 1$, $0.995$ at $t = 4$, against $0.5$); the moment conditional on being inside; any infinite-horizon non-exit bound (Cor A.1S.1). Heavy-tailed, state-dependent and anisotropic noise are outside the population ("Scope" after Prop A.1S-τ).
+
+**Falsifier:** a corrector meeting (A1), (A2') on $\mathcal B_R$, (A3) and (S) whose killed second moment exceeds the right side of (i) at some $t$; it would refute (i).
+
+**Instantiated:** not applicable.
+
+### Whether a sector corrector ever leaves its region is decided by the disturbance's support, not by the correction strength
+
+**Register:** formal — Corollary A.1S.1 ($P(\tau_R \lt \infty) = 0$ under Model D with $\alpha R \gt \rho$; $= 1$ under Model S).
+
+**Population:** correctors meeting (A1), (A2') on $\mathcal B_R$ and (A3), started in $\mathcal B_R$; Model D with $\alpha R \gt \rho$ for the zero, and additive non-degenerate Brownian forcing with locally bounded drift for the one.
+
+**True of:** the Ornstein–Uhlenbeck benchmark, recurrent with unbounded stationary support, which leaves every ball almost surely (Khasminskii 2012 ch. 3–4); the same corrector under a disturbance bounded by $\rho \lt \alpha R$, which never leaves.
+
+**False of:** noise outside both models. A random disturbance of bounded support is Model D, so its region is invariant past threshold whatever its randomness. State-dependent noise that vanishes fast enough at the boundary can leave the boundary unreachable, which places it outside the additive Model S the one rests on.
+
+**Falsifier:** a locally bounded drift meeting (A2') on $\mathcal B_R$ under $\sigma_w\,dW_t$ with $\sigma_w \gt 0$ for which $P(\tau_R \lt \infty) \lt 1$; it would refute the Model S half and #deriv-stochastic-non-exit with it.
+
+**Instantiated:** not applicable.
+
+### A sector corrector's time in the region is at least that of the linear corrector with the same floor, exponential in the barrier height, and about one correction time at the mean-square threshold
+
+**Register:** formal — Lemma A.1S-τ.0 and Prop A.1S-τ (i)–(v); the series is exact, and the threshold expansion is derived to three terms with an $O(n^{-3/2})$ remainder bounded step by step.
+
+**Population:** correctors meeting (A1), (A2') on the closed ball and (S), under isotropic GA-2S in continuous time. The bound is attained, and the law equal, under radial tightness. For a non-tight corrector the lower bound can be arbitrarily loose ((i)). Anisotropic, discrete-time, state-dependent and heavy-tailed noise are outside ("Scope").
+
+**True of:** the benchmark at $\kappa_R = n/2$: $\alpha\Phi(0) = 0.5957$ at $n = 1$ and $1.8897$ at $n = 1000$, against the three-term expansion's $1.889704$ (by derivation, with independent implementations in the Part I rounds 2–4). The dip instance of (v) ($n = 2$, floor $2$ on a thin shell, bulk gain $5$): mean exit time $3.57$, above its floor benchmark $0.92$, as the lower bound requires.
+
+**False of:** the asymptotic $\tfrac{\Gamma(n/2)}{2\alpha}\kappa_R^{-n/2}e^{\kappa_R}$ as a bound in either direction: at the threshold it over-states $\Phi(0)$ $3.5$-fold at $n = 1$ and gives $0.13$ of it at $n = 100$ (the Lemma); its leading-order condition in (iv) holds at $n = 2$, $\alpha = R = 1$, $\sigma_w = 10$, $L = 1$, $\epsilon = 0.02$ while $\Phi(0) = 0.0050$ against the needed $50$. Heavy-tailed disturbance, where expected exit time is polynomial rather than exponential in the noise scale ("Scope").
+
+**Falsifier:** a corrector in the population whose mean exit time from some start is below $\Phi_{\alpha,n,\sigma_w,R}$ at that radius, refuting (i); or a value of the series at $\kappa_R = n/2$ whose residual after the three terms, times $n^{3/2}$, grows with $n$, refuting the expansion.
+
+**Instantiated:** not applicable.
+
+### On a fixed channel with white noise the exit exponent peaks at the Kalman gain, and the stay any gain can buy is bounded and largest below it
+
+**Register:** formal — "The exit exponent is capped at the Kalman gain" (tag *[Derived (linear correction, Model S, white channel noise)]*), with the maximizer locations computed.
+
+**Population:** linear correctors $F = \alpha\delta$ whose disturbance is $\sigma_w^2 = \sigma_{\text{env}}^2 + \alpha^2\sigma_\nu^2$ (the Setup). At fixed $\sigma_w$ the expected stay grows without bound in $\alpha$; this entry concerns the fixed channel only.
+
+**True of:** $\sigma_{\text{env}} = 1$, $\sigma_\nu = 0.5$, $n = 1$, $\kappa_R(K) = 1$: $\Phi(0) = 1.07, 0.87, 0.72, 0.56, 0.27$ at $\alpha = 0.5K, 0.8K, K, 1.25K, 2K$, maximum $1.11$ (by derivation and computation).
+
+**False of:** a corrector whose disturbance does not grow with its gain (fixed $\sigma_w$), for which a stronger correction buys time exponentially; Model D, where the gain lowers the bound toward $\bar\nu$ and pathwise containment is free past threshold.
+
+**Falsifier:** a gain on a fixed white-noise channel with $\kappa_R(\alpha) \gt R^2/(2\sigma_{\text{env}}\sigma_\nu)$, or with expected stay increasing at $\alpha = K$; either refutes the paragraph's display or its "the derivative at $K$ is $-\Phi(0)/K$".
+
+**Instantiated:** not applicable.
+
+### Real environments sort into persistent directional change and fluctuation, and in a genuinely stochastic one every long-lived agent eventually loses its parametric certificate
+
+**Register:** descriptive — Discussion, "Two disturbance models" (Model D "covers persistent directional change: an adversary who maneuvers, an API that drifts, a climate that shifts"; Model S "unpredictable fluctuations around a stable mean: market noise, sensor noise"), "Kind of guarantee, not just rate" ("in a genuinely stochastic environment, region-exit is … a *certain eventual event*"), the Prop A.2 domain table, and the Epistemic Status's "The assumptions themselves … are *empirical claims* about the qualitative behavior of real correction dynamics".
+
+**Population:** real adaptive systems and their environments as the body names them. The formal dichotomy selects by the support of the disturbance (bounded versus additive unbounded), not by whether it is random, so the descriptive claim covers environments whose disturbance is well modelled by additive Brownian forcing over the horizon in question.
+
+**True of:** sensor noise in a linear tracking filter, which the filtering literature models as white, is the case the Model S equations are built from; no measured instance of certificate loss in a real agent is cited.
+
+**False of:** an environment whose random disturbance has bounded support, which is Model D: its region is invariant past threshold, and "genuinely stochastic" does not make exit certain for it. Heavy-tailed shocks (financial crises, strategic surprise), which the body places outside both models.
+
+**Falsifier:** for a named real environment, measured disturbance increments whose support is bounded within $\alpha R$ over the agent's lifetime, which refutes "certain eventual event" for agents in it; or a long-lived agent in a well-modelled Brownian environment observed never to leave a region its correction certifies, which would refute the modelling, since the mathematics cannot fail there.
+
+**Instantiated:** no.
+
 ## Discussion
 
 **Key value.** The persistence threshold and adaptive reserve are no longer contingent on the linear hypothesis in #hyp-mismatch-dynamics. They hold for any correction dynamics satisfying the sector condition — a mild qualitative assumption that says "correction points inward with at least baseline efficiency $\alpha$." This is a significant epistemic upgrade: from *hypothesis-dependent* to *robust under qualitative assumptions*.

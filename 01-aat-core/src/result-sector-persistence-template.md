@@ -101,6 +101,64 @@ Max attainable: *exact*. The result is as strong as Lyapunov stability theory. A
 - *Time-varying parameters.* The template assumes constant $\alpha$ and $R$. Time-varying cases require additional machinery. #schema-strategy-persistence documents the most important AAT example: $\alpha_\Sigma = 1/(n+1)$ decays with experience, so strategic persistence requires experience discounting at rate $(1-\lambda) \gt \rho_\Sigma/R_\Sigma$ to recover constant-$\alpha$.
 - *Heavy-tailed disturbances.* Neither (T3-D) nor (T3-S) covers disturbances with unbounded moments. Extreme tail events are better handled as triggers for structural adaptation than as disturbances the template can absorb.
 
+## Claim Record
+
+### Any state with a one-point sector correction on a region and a bounded or white-noise disturbance obeys the persistence inequality
+
+**Register:** formal — the template result under (T1)–(T3) (Formal Expression, *[Template result]*), the proofs of #deriv-sector-condition Props A.1, A.1S, A.2 transferred.
+
+**Population:** $\dot\xi = -F(\xi) + w$ in $\mathbb R^n$, continuous time, with (T1), (T2) on $\lVert\xi\rVert \leq R$ with constant $\alpha$ and $R$, and (T3) either $\lVert w\rVert \leq \rho_\xi$ or additive isotropic Brownian noise. In the Model S case the per-coordinate convention of #deriv-sector-condition applies ($\mathbb E\lVert w\rVert^2 = n\sigma_\xi^2$ per unit time), and the convergence of the unstopped moment to $n\sigma_\xi^2/(2\alpha)$ needs (T2) on all of $\mathbb R^n$; under (T2) on the ball the result is the killed moment, the finite-horizon path and the exit time (Epistemic Status, "On Prop A.1S region-awareness").
+
+**True of:** the epistemic case $\xi = \bar\delta$ with a linear corrector (#result-persistence-condition), where every precondition holds by construction.
+
+**False of:** a time-varying sector constant, such as the undiscounted Beta-Bernoulli strategy learner whose $\alpha_\Sigma = 1/(n+1)$ tends to zero (Epistemic Status, "Time-varying parameters"); heavy-tailed disturbance; the destroy-and-reconstruct operator family of #der-turnover-information-recursion, where the Discussion records that the template does not transfer.
+
+**Falsifier:** a state meeting (T1)–(T3) under Model D with $\alpha R \gt \rho_\xi$ whose trajectory from inside the region leaves it; it refutes the Model D display.
+
+**Instantiated:** not applicable.
+
+### AAT's persistence-flavoured results are instances of this one template
+
+**Register:** formal — the claim of the opening and of "Instantiations in AAT" that the seven tabled segments each verify (T1)–(T3) for their $(\xi, F, \rho_\xi, R)$, so that "the same Lyapunov argument applies in every row".
+
+**Population:** the rows whose instantiation is continuous-time with constant $\alpha$ and $R$. Rows that need more than (T2) inherit the conclusion through a stronger condition: composition closure and tempo composition through the incremental bound DA2'-inc, which implies (T2). The strategic row needs experience discounting before it is an instance.
+
+**True of:** #result-persistence-condition, by construction; #der-adversarial-destabilization, where the coupling-amplified disturbance is the only change.
+
+**False of:** #schema-strategy-persistence without discounting, whose sector constant decays (the table's own row says so). The #der-identity-continuity-threshold row is described in the table as a reflected discrete (Lindley) walk on the turnover index, which is not the continuous-time equation the template states; whether the template's argument is the one that row uses is not shown here.
+
+**Falsifier:** a tabled segment whose persistence conclusion does not follow from (T1)–(T3) as verified there, refuting "The same Lyapunov argument applies in every row".
+
+**Instantiated:** not applicable.
+
+### Persistence and destabilization are one inequality read in two directions
+
+**Register:** formal — Discussion, "Persistence and destabilization as one result": $B$'s certificate holds iff $\alpha_B R_B \gt \rho_B$ and is lost iff $\rho_B \geq \alpha_B R_B$, with escape forced only when $B$'s sector bound is radially tight.
+
+**Population:** a target agent meeting the template with disturbance $\rho_{B,\text{base}} + \gamma_A\mathcal T_A$ under Model D. Both directions are statements about the certificate; the agent-level only-if needs radial tightness (#deriv-sector-condition Lemma A.1N).
+
+**True of:** a radially tight target pushed past $\rho_B = \alpha_B R_B$ by the attacker's coupling, which then leaves its region in finite time under the outward disturbance.
+
+**False of:** a non-tight target such as the dip corrector, which loses the certificate and is not driven out.
+
+**Falsifier:** none for the certificate statement, which holds by definition; for forced escape, a radially tight target with $\rho_B \gt \alpha_B R_B$ that stays in its region under outward disturbance.
+
+**Instantiated:** not applicable.
+
+### The template does the persistence work the free-energy flow argument attempts, with broader validity
+
+**Register:** descriptive — a claim about two published arguments ("Comparison with the FEP-flow stability argument": "AAT does the persistence work AI tries to do, with broader validity and explicit ultimate-bound formulas").
+
+**Population:** the FEP-flow stability argument as published (Friston 2019; Friston et al. 2023) and this template.
+
+**True of:** on the body's reading of Aguilera, Millidge, Tschantz & Buckley 2022, the NESS-density framing holds in a narrow parameter regime, while the template's conclusion holds wherever (T1)–(T3) are verified. The body's characterization of Aguilera et al. is not recorded here as read at the primary.
+
+**False of:** "broader validity" as a statement about agents: the template's reach is the set of systems for which (T2) is verified, and for sub-scope $\beta$ agents that verification is per system (Epistemic Status, "On (T2) and A2' sub-scoping"). The two arguments assume different things, so neither scope contains the other as stated.
+
+**Falsifier:** a reading of Aguilera et al. 2022 at the primary that does not support "holds only in a small parameter regime", or an agent class inside the FEP argument's validated regime for which (T2) fails.
+
+**Instantiated:** no.
+
 ## Discussion
 
 **Why factor this out.** Every persistence-flavored result in AAT takes the form "correction rate exceeds effective disturbance rate (relative to reserve)" and is proved by the same Lyapunov function $V(\xi) = \tfrac{1}{2}\lVert\xi\rVert^2$. Stating the argument once, parameter-free, makes visible that the theory is *one result about bounded-correction dynamics applied to several state spaces*, not seven separately-proved results that happen to look alike.

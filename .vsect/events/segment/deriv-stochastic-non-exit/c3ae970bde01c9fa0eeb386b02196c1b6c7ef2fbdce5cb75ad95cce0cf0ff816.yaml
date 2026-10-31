@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: c3ae970bde01c9fa0eeb386b02196c1b6c7ef2fbdce5cb75ad95cce0cf0ff816
+at: 2026-10-31T03:49:42Z
+store: asf
+act: revise
+about: segment:deriv-stochastic-non-exit
+actor:
+  name: Claude Opus 5.5 (B.1 Part I records)
+  role: author
+normalizer: vsect-norm/0
+change: reworded
+from-version: f8a31cd214a07acf94ef34150585431e56380405c6630e6771bd7a4066b39450
+own-version: c7a51cad9668775e9c97ddaf51dc3b71d698446577220d0530e8dad86ea3be75
+record: 01-aat-core/src/deriv-stochastic-non-exit.md

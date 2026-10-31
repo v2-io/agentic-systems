@@ -102,6 +102,64 @@ Letcher-Balduzzi et al. 2019 Lemma 1 (uniqueness of the $S + A$ decomposition) a
 
 Max attainable: *exact* (it is the Lyapunov theorem, in scope; R0-loss extends via Letcher 2019 / Conley 1978, recognized and applied — not fresh derivations). Novelty posture is *recognition*, not new mathematics.
 
+## Claim Record
+
+### At the linearized level, a one-point sector condition in some inner product exists exactly when the error dynamics is exponentially stable
+
+**Register:** formal — the equivalence of clauses 1–3 (*[Result (certificate-existence), exact at the linearized level]*), the Lyapunov theorem (Khalil Thm 4.6).
+
+**Population:** linear error dynamics $\dot e = -Je$, $J = DF(e^\ast)$ for $F \in C^1$ near the equilibrium, with "certificate" in the sense of (C), $\kappa \gt 0$. Global nonlinear stability is outside it; the global statement needs the incremental rung R1 (Epistemic Status, "Scope honesty").
+
+**True of:** $J = \begin{pmatrix} 1 & -2 \\ 2 & 1\end{pmatrix}$, eigenvalues $1 \pm 2i$ for $J$, so $-J$ is Hurwitz, and $\mathcal M = I$ gives $\mathcal MJ + J^\top\mathcal M = 2I$, a certificate with $\kappa = 1$.
+
+**False of:** $J$ with an eigenvalue of $-J$ in the open right half-plane, for which no $\mathcal M \succ 0$ works (case (ii)). The ladder's R0-loss rung also uses "certificate" for $\mathcal M$ with $\sup\kappa = 0$, which exists for non-exponentially-stable systems (case (iii)); in that sense the opening's "a stability certificate exists for an agent exactly when the agent is exponentially stable" is false, and the equivalence holds for the (C) sense only.
+
+**Falsifier:** a matrix with $-J$ Hurwitz and no $\mathcal M \succ 0$, $\kappa \gt 0$ satisfying clause 2, or the converse; either refutes the equivalence.
+
+**Instantiated:** not applicable.
+
+### The certificate holds on a ball for the nonlinear system when the linearization is stable and the remainder is dominated there
+
+**Register:** formal — "Local nonlinear extension" (the Lyapunov indirect method, Khalil Thm 4.7).
+
+**Population:** $F(e) = Je + r(e)$, $\lVert r(e)\rVert = o(\lVert e\rVert)$. Linearization stable and $\lVert r\rVert_{\mathcal M} \leq c\lVert e\rVert^2_{\mathcal M}$ with $cR \lt \kappa$ is sufficient for (C) on $\mathcal B_R$. Exponential stability of the linearization is also necessary, since (C) on any ball forces $\mathcal MJ + J^\top\mathcal M \succeq 2\kappa\mathcal M$ as $e \to 0$. The remainder bound is not necessary.
+
+**True of:** $F(e) = e - e^3/4$ on $\lvert e\rvert \leq 1$ with $\mathcal M = 1$: $J = 1$, $c = 1/4$, $cR = 1/4 \lt 1$, and $eF(e) \geq \tfrac34 e^2$ there.
+
+**False of:** the "only if" of the body's "iff": $F(e) = e + e^3$ satisfies (C) with $\mathcal M = 1$, $\kappa = 1$ on every ball, since $eF(e) = e^2 + e^4$, while on $\lvert e\rvert \leq 2$ the remainder bound needs $c \geq 2$, so $cR \geq 4 \gt \kappa$.
+
+**Falsifier:** for the sufficient direction, a $C^1$ field with stable linearization and dominated remainder on a ball that violates (C) there.
+
+**Instantiated:** not applicable.
+
+### The certificate ladder: no certificate, certificate without contraction, contraction, incremental contraction, forced metric
+
+**Register:** formal — "The certificate-strength ladder" and "R0-loss: certificate without contraction" (the four-case spectral partition; the pure case by direct calculation; the mixed case via Conley 1978).
+
+**Population:** real square matrices $J$ (the partition is exhaustive over them); R1 and R2 are characterized in #result-contraction-template and #disc-additive-coordinate-forcing.
+
+**True of:** $J = \begin{pmatrix} 0 & -1 \\ 1 & 0\end{pmatrix}$: antisymmetric, eigenvalues $\pm i$, $V = \tfrac12\lVert e\rVert^2$ conserved, R0-loss with $\mathcal M = I$.
+
+**False of:** the converse of the pure-case route: $J = \begin{pmatrix} 1 & -2 \\ 2 & -1\end{pmatrix}$ sits in case (iii) (eigenvalues $\pm i\sqrt 3$) with $S = \operatorname{diag}(1, -1) \neq 0$ at $\mathcal M = I$, as the Derivation shows. The Epistemic Status sentence "the equivalence $S \equiv 0 \Leftrightarrow$ full-state marginal stability at $\kappa = 0$" contradicts this instance unless it is read at $\mathcal M = I$ with $V = \tfrac12\lVert e\rVert^2$ conserved.
+
+**Falsifier:** a real matrix in two cases of the partition or in none, refuting "exhaustive … and mutually exclusive".
+
+**Instantiated:** not applicable.
+
+### An adaptive system is one whose contraction outpaces its target's drift, and that is identically the Lyapunov theorem
+
+**Register:** formal — the slogan as the Discussion reads it: the contraction half is the equivalence of clauses 1 and 2, and the "exceeds the drift" half is the ultimate-bound argument of #result-sector-persistence-template. INTRODUCTION headline 3 and the Findings Brief ("*the measuring-stick exists* = *the agent can keep up*") restate it.
+
+**Population:** linearized error dynamics for the contraction half; for keeping up, the template's population with $\kappa R \gt \rho$ (Model D) or $\kappa_R \gt n/2$ (Model S). Exponential stability alone does not give keeping up: a certificate with small $\kappa$ against a large disturbance certifies nothing about the region.
+
+**True of:** a linear corrector with $\kappa = \alpha$ and constant disturbance $\rho \lt \alpha R$: contracts, and keeps up with ultimate bound $\rho/\alpha$.
+
+**False of:** a system whose certificate exists with $\kappa R \lt \rho$, which is exponentially stable and does not keep up; "identically the Lyapunov theorem" without "at the linearized level", which is what the headline drops.
+
+**Falsifier:** for the formal reading, as the first entry; the Brief's equation of certificate existence with keeping up is refuted by the instance under False of.
+
+**Instantiated:** not applicable.
+
 ## Discussion
 
 **This is the segment-level home of the contraction-over-drift organizing principle.** The slogan *an adaptive system is an operator whose contraction rate exceeds its target's drift rate* had, until now, no segment to point to — it was carried as a framing heuristic. The equivalence above is its formal content: the "contraction" half is clause 2 ⟺ clause 1 (a certificate exists iff the dynamics is exponentially stable); the "exceeds the drift" half is the ultimate-bound argument of #result-sector-persistence-template, which takes the certificate's $\kappa$ and the disturbance rate and returns the bounded-error guarantee. A reader can now cite the principle to a result, not to a slogan.

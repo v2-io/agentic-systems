@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: ac4758cc5a2e1613965548baf6adca2329202359732e9ea51908d36e12a12c74
+at: 2026-10-31T03:49:43Z
+store: asf
+act: revise
+about: segment:result-sector-condition-stability
+actor:
+  name: Claude Opus 5.5 (B.1 Part I records)
+  role: author
+normalizer: vsect-norm/0
+change: reworded
+from-version: 2537d83bd9bb560749fbef37563e26529e31557ae95e7268bfd5fa4496383e89
+own-version: 788f5b7e9bc6acdbec0599978e2599f7bf72bbbe1c1dad224e7644df712cffd4
+record: 01-aat-core/src/result-sector-condition-stability.md

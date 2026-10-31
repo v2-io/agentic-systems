@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 7ac67acf761eafc3e992ce3c00767f494470cb651c1d4278cbd2be6dde9b75df
+at: 2026-10-31T03:49:48Z
+store: asf
+act: revise
+about: segment:form-sector-condition
+actor:
+  name: Claude Opus 5.5 (B.1 Part I records)
+  role: author
+normalizer: vsect-norm/0
+change: reworded
+from-version: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+own-version: 370a4527a53b92c9934fdac629df146139cbec0e74d723d182c59558a8aaf265
+record: 01-aat-core/src/form-sector-condition.md

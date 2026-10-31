@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 415b512624f06790d34a3e8748067a6e752850e3be03eb710ff7697b9aed4923
+at: 2026-10-31T03:49:47Z
+store: asf
+act: revise
+about: segment:result-certificate-existence
+actor:
+  name: Claude Opus 5.5 (B.1 Part I records)
+  role: author
+normalizer: vsect-norm/0
+change: reworded
+from-version: 043bbf78cda2acc11723baed309f0419a55830b3ba4169748412831e18d7ea38
+own-version: e5a2fc4c2642b2e68994f0cc9e4005a7b70b8cce52ff33725b7512ab0a8f0e37
+record: 01-aat-core/src/result-certificate-existence.md

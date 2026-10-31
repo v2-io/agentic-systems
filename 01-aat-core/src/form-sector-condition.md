@@ -81,6 +81,64 @@ For the remaining AAT-in-scope agents, A2' stands as a well-scoped empirical cla
 
 Within sub-scope $\beta$, A2' must be verified per-system — the claim is stronger than what AAT's postulates + gain structure alone can force (an agent with $g(\delta) = R_{90°}\delta$ satisfies every AAT postulate but violates B1 trivially; see #der-gain-sector-bridge FM-1).
 
+## Claim Record
+
+### A2' is the inward-correction shape the persistence results consume: correction at least the floor times the squared error, on a ball
+
+**Register:** formal — a formulation (*[Formulation A2' (sector-condition)]*) with (A1) and (A3) as stated assumptions; Epistemic Status names it a chosen shape, matched to the quadratic Lyapunov candidate, among several that would fill the role.
+
+**Population:** correction functions $F(\mathcal T, \cdot)\colon \mathbb R^n \to \mathbb R^n$ on the estimation error. "The linear case has $\alpha = \mathcal T$" holds at the optimal gain; a linear corrector tuned away from it has floor $\alpha \neq \mathcal T$ (#result-persistence-condition, "The relationship between $\alpha$ and $\mathcal T$").
+
+**True of:** $F = \alpha\delta$, with floor $\alpha$ on every ball.
+
+**False of:** the rotation $g(\delta) = R_{90°}\delta$, which satisfies every AAT postulate with $\delta^T F = 0$ (#der-gain-sector-bridge FM-1); a threshold corrector, whose floor on any ball containing its dead zone is $0$.
+
+**Falsifier:** none for the formulation. That the shape is the one the downstream results need is checked at #deriv-sector-condition, whose propositions use it and nothing stronger.
+
+**Instantiated:** not applicable.
+
+### For update rules with directional fidelity, A2' is derived, not assumed
+
+**Register:** formal — sub-scope $\alpha$: B1, $\delta^T Hg(\delta) \geq c_{\min}\lVert\delta\rVert^2$ on $\mathcal B_R$, implies A2' with $\alpha = \eta^\ast c_{\min}$ (#der-gain-sector-bridge Prop B.3); the five listed classes are those where B1 holds by construction.
+
+**Population:** gain-based update rules $M_t = M_{t-1} + \eta^\ast g(\delta_t)$ with B1 on $\mathcal B_R$: optimal Bayesian updates (Kalman, conjugate families), exponential families in natural parameters on a bounded interior $\Theta_0$, gradient descent on locally strongly convex losses, L2-regularized convex losses, and linear corrections with positive-definite gain–observation product on the observable subspace. Whether a fixed-gain proportional or proportional-derivative controller also belongs here, with only the integral state forcing PID out, is not settled in the body.
+
+**True of:** the scalar Kalman filter, $\alpha = \eta^\ast$; gradient descent on a $\mu$-strongly convex loss, $\alpha = \eta\mu$ (Nesterov 2004, Thm 2.1.10).
+
+**False of:** exponential families without the bounded-interior restriction: the Poisson family has Fisher information $e^\theta$ with infimum $0$ on $\mathbb R$, so no global floor. Severely misspecified agents, whose proper-gradient rule can aim at the wrong target (FM-5).
+
+**Falsifier:** an update rule in one of the five classes, meeting B1 on $\mathcal B_R$, whose induced correction violates A2' there; it refutes "Within sub-scope $\alpha$, A2' is written down by inspection of the update rule".
+
+**Instantiated:** not applicable.
+
+### For PID controllers, rule-based systems, human judgment and organizations, A2' is a per-system empirical claim
+
+**Register:** descriptive — sub-scope $\beta$: that a real agent of these kinds corrects with a positive sector floor on a region is a claim about it, to be verified per system.
+
+**Population:** the sub-scope $\beta$ list: PID with fixed gains, rule-based systems, human judgment and organizational learning, severely misspecified agents, variational posteriors (with the intermediate sub-scope $\alpha'$ under a KL bound), non-convex gradient agents beyond their basin, per-step stochastic gradients.
+
+**True of:** no measured instance is cited.
+
+**False of:** a non-convex gradient agent beyond its basin, where A2' fails at the basin boundary (the body's own entry). Discontinuous rule-based correctors are outside the composition-closure contraction (the structural Lipschitz floor in Discussion), though not outside A2' itself: the counterexample there satisfies the sector bound.
+
+**Falsifier:** for a named real agent, an estimated correction field whose inner product with the error falls to zero or below at some error size inside the region it is claimed to hold on.
+
+**Instantiated:** no.
+
+### Discontinuous correctors exit the contraction analysis, not the persistence results
+
+**Register:** formal — Discussion, "Sub-scope $\beta$ 'rule-based / discontinuous' — structural Lipschitz floor" (*[Derived, status: exact scope-exit statement]*): for $F$ not locally Lipschitz, no scalar sector bound implies the update-map contraction the bridge lemma of #form-composition-closure needs, with the counterexample $F(\delta) = \alpha\delta + \operatorname{sign}(\delta)$ for $\lvert\delta\rvert \geq 1$.
+
+**Population:** correction functions that are not locally Lipschitz, with respect to the composition-closure contraction. The body's further sentence that "AAT's Lyapunov machinery in #deriv-sector-condition … require[s] $C^1$ or better regularity" is not this population: Prop A.1S there needs only $F$ measurable and locally bounded (regularity (S)), and Prop A.1S-τ's proof uses "no Lipschitz continuity".
+
+**True of:** the body's counterexample: the sector bound holds with floor $\alpha$, and the update map jumps by $\eta^\ast$ at $\lvert X\rvert = 1$.
+
+**False of:** the persistence results for that same corrector: it is bounded on every ball and meets A2', so Props A.1S and A.1S-τ apply to it.
+
+**Falsifier:** a non-locally-Lipschitz $F$ meeting the sector bound whose update map is a contraction with some $\lambda \lt 1$; it refutes the scope-exit.
+
+**Instantiated:** not applicable.
+
 ## Discussion
 
 ### Operator-family classification (external mathematical lineage)

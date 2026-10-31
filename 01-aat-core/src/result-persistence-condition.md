@@ -121,6 +121,106 @@ The scalar condition overestimates by up to 72% in simulation. The weak dimensio
 
 The per-dimension extension is *exact conditional on the disturbance model* ( #result-per-dimension-persistence): the Model D per-dimension threshold ($\mathcal{T}_k \gt \rho_k/\delta_{\text{critical},k}$) is exact by the same Lyapunov argument applied per dimension (GA-2, GA-3), and the Model S per-dimension thresholds are exact under the AR(1) stationary distribution (GA-2S), with simulation confirming the AR(1) prediction to 4 significant figures.
 
+## Claim Record
+
+### Under a sector condition on a region, correction that outpaces disturbance relative to the region certifies containment against bounded disturbance and a certified scale against white-noise disturbance
+
+**Register:** formal — the template conclusion of #result-sector-persistence-template with $\xi = \bar\delta$ (Formal Expression, "Structural Persistence"; proofs in #deriv-sector-condition Prop A.1, Prop A.1S and Lemma A.1N). Sufficient for every corrector in the population; necessary only for the uniform guarantee over all correctors with sector floor $\alpha$, and for a fixed corrector only when its sector bound is radially tight.
+
+**Population:** representations $\dot{\bar\delta} = -F(\mathcal T, \bar\delta) + w$ with $F$ meeting (A1), (A2') on $\mathcal B_R$ with floor $\alpha$, and (A3), started inside $\mathcal B_R$, under a disturbance that is either bounded in norm by the total rate $\rho$ (Model D, GA-2) or additive isotropic Brownian with per-coordinate intensity $\sigma_w$ (Model S, GA-2S, with the regularity (S) of #deriv-sector-condition). $\rho$ and $\sigma_w$ are the total disturbance, including the channel noise the correction injects (#deriv-sector-condition, Setup). Under Model S what is certified is the scale of the killed second moment and an expected stay of about one correction time at threshold, not containment.
+
+**True of:** the linear corrector $F = \alpha\bar\delta$ under a constant disturbance of norm $\rho$ with $\alpha R \gt \rho$: the error settles at exactly $\rho/\alpha$ inside $\mathcal B_R$, so the bound is attained (Prop A.1). Under Model S, the Ornstein–Uhlenbeck benchmark at the threshold $\kappa_R = n/2$: killed moment at most $n\sigma_w^2/(2\alpha)$, and expected stay from the origin $\alpha\Phi(0) = 0.60$ correction times at $n = 1$ (#deriv-sector-condition Lemma A.1S-τ.0, by derivation).
+
+**False of:** pathwise containment under Model S, for every corrector at every $\alpha$: exit is certain (#deriv-sector-condition Cor A.1S.1), so "once inside, forever" is a Model D sentence only. Certified escape below threshold for a general corrector: the dip corrector of the Remark after Lemma A.1N ($R = \rho = 1$, floor $0.1$) fails the condition tenfold and, started at the origin, never leaves a ball of radius about $0.1$. Outside the population: a corrector whose sector bound breaks down inside $\mathcal B_R$, and a trajectory that starts outside $\mathcal B_R$.
+
+**Falsifier:** a corrector meeting (A1), (A2') on $\mathcal B_R$ and (A3) under $\lVert w(t)\rVert \leq \rho$ with $\alpha R \gt \rho$, started in $\mathcal B_R$, whose error leaves $\mathcal B_R$; it would refute "Under Model D the region is positively invariant: once inside, forever" (Formal Expression, after the Structural Persistence display). For class-level tightness: some $\alpha \lt \rho/R$ at which the extremal corrector $\alpha\bar\delta$ stays in $\mathcal B_R$ under every disturbance bounded by $\rho$, which would refute "tight at class level".
+
+**Instantiated:** not applicable.
+
+### Under white channel noise the Model S condition is a window of gains about the Kalman gain, and no gain satisfies it unless the Kalman–Bucy error fits inside the region
+
+**Register:** formal — the quadratic in $\alpha$ of Formal Expression, "The Model S condition as a window in the gain" (tag *[Derived (linear correction, Model S, white channel noise)]*).
+
+**Population:** linear correctors $F = \alpha\bar\delta$ valid on $\mathcal B_R$, under Model S, whose total disturbance is environmental diffusion plus white channel noise passed through the gain, $\sigma_w^2 = \sigma_{\text{env}}^2 + \alpha^2\sigma_\nu^2$. Task adequacy takes the same form with $\lVert\delta_{\text{critical}}\rVert$ in place of $R$.
+
+**True of:** $n = 1$, $\sigma_{\text{env}} = 1$, $\sigma_\nu = 0.5$ (so $K = 2$), $R^2 = 1$: the window is $(0.536, 7.464)$, its endpoints multiply to $K^2 = 4$, and $\ln(\alpha_+/K) = \operatorname{arccosh} 2 = 1.317$; at $R^2 \leq 0.5$ the same channel has no window (by derivation, checked against a grid of gains in the Part I round-2 integration).
+
+**False of:** Model D with channel noise bounded by $\bar\nu$, where the condition is $\alpha(R - \bar\nu) \gt \rho_{\text{env}}$, a lower threshold with no upper end that needs $R \gt \bar\nu$ (same paragraph). Nonlinear correction: the injected fluctuation still grows with the gain (#deriv-gain-sector Prop B.3), but the window's form and location are derived only for linear correction (Epistemic Status, "Gain versus information"). Channel noise that is not white, such as a bias shared by every reading, is outside the population.
+
+**Falsifier:** a linear corrector on such a channel that meets the mean-square condition at a gain outside $(\alpha_-, \alpha_+)$, or at any gain while $R^2 \leq n\sigma_{\text{env}}\sigma_\nu$; either refutes "some gain satisfies the condition iff $R^2 \gt n\sigma_{\text{env}}\sigma_\nu$" (*Feasibility*, same paragraph).
+
+**Instantiated:** not applicable.
+
+### Faster adaptation improves persistence when the tempo comes from more information, and not when it comes from a gain raised past the optimum on the same observations
+
+**Register:** formal — Formal Expression, "Gain and information are different levers" (tag *[Derived (lag/noise trade-off, linear correction, Model S with white channel noise)]*); the Model D contrast in its last paragraph is exact and tight.
+
+**Population:** linear correctors under Model S with white channel noise; the information lever is stated for per-event noise that is independent across events, so that $\sigma_\nu^2 \propto 1/\nu$. Under Model D with channel noise bounded by $\bar\nu$ the roles reverse: the gain lowers the bound monotonically toward $\bar\nu$, and more events do nothing to the worst case.
+
+**True of:** the scalar Kalman–Bucy filter on a random walk: steady-state error $n(\sigma_{\text{env}}^2 + \alpha^2\sigma_\nu^2)/(2\alpha)$, smallest, at $n\sigma_{\text{env}}\sigma_\nu$, at $\alpha = K$ (simulated against the closed form twice, Epistemic Status). On the same channel the expected stay is largest below $K$: with $\sigma_{\text{env}} = 1$, $\sigma_\nu = 0.5$, $n = 1$, $R = 1$, $\Phi(0) = 1.07$ at $0.5K$ against $0.72$ at $K$ (#deriv-sector-condition, "The exit exponent is capped at the Kalman gain").
+
+**False of:** Model D, as above. Noise that does not average across events (a shared bias, or Model D's bounded floor): more events do not lower it. A corrector whose gain is below its optimum: there a larger gain on the same observations does shrink the error, so the bullet "Above it, faster correction enlarges the error" holds for gains above $K$ only, as written.
+
+**Falsifier:** a linear corrector under white channel noise whose steady-state error falls as its gain is raised past $\sigma_{\text{env}}/\sigma_\nu$, or independent per-event noise for which raising $\nu$ does not lower the minimum error; either refutes the two bullets of "Gain and information are different levers".
+
+**Instantiated:** not applicable. #obs-gated-tempo-advantage, which the body credits with the same mechanism, simulates the theory's own equations.
+
+### Task adequacy compares the certified error with a domain tolerance, and the linear operational form is exact for linear correction
+
+**Register:** formal — task adequacy is a definition (*[Definition (task-adequacy)]*); the linear operational forms are exact for linear correction (Epistemic Status, "The linear operational forms").
+
+**Population:** for exactness, linear correctors with $\alpha = \mathcal T$, which holds at the optimal gain ("The relationship between $\alpha$ and $\mathcal T$"), with $\rho$ and $\sigma_w$ the total disturbance. With the environmental rate alone and channel noise bounded by $\bar\nu$, the Model D form is $\mathcal T \gt \rho_{\text{env}}/(\lVert\delta_{\text{critical}}\rVert - \bar\nu)$ and needs $\lVert\delta_{\text{critical}}\rVert \gt \bar\nu$. A linear corrector tuned away from its optimum has $\alpha \neq \mathcal T$, and the form must be read in $\alpha$.
+
+**True of:** a linear corrector with $\alpha = \mathcal T$ under a constant disturbance of norm $\rho$: the error settles at $\rho/\mathcal T$, so the form is exact and attained.
+
+**False of:** a saturating corrector with finite capacity $R$: the linear form omits $\alpha \gt \rho/R$ and overstates the margin (Formal Expression, after the linear operational display). Mildly nonlinear correctors are covered as a proxy ($\alpha \approx \mathcal T$) with no stated tolerance.
+
+**Falsifier:** for the definition, none. For exactness, a linear corrector at its optimal gain under $\lVert w\rVert \leq \rho$ whose ultimate error exceeds $\rho/\mathcal T$.
+
+**Instantiated:** not applicable.
+
+### The split into structural persistence and task adequacy routes a failure to its remedy
+
+**Register:** normative — the opening's "The remedies differ — task inadequacy can be fixed by raising tempo through more or better observations, lowering disturbance, or relaxing tolerance; structural failure requires changing the correction architecture entirely", and Discussion, "Below task-adequacy threshold". It is tested by comparing remedies on failures classified by which condition fails.
+
+**Population:** adaptive systems whose failure the body classifies as structural ($\alpha R \leq \rho$, or a Model S gain outside its window) or as task inadequacy ($R \gt R^\ast \gt \lVert\delta_{\text{critical}}\rVert$).
+
+**True of:** a model class whose capacity is the binding limit, $\rho \gt \alpha R$ at every gain the class admits: no retuning or added information within the class restores the certificate, and only a class with a larger $R$ does, the case #result-structural-adaptation-necessity treats.
+
+**False of:** the segment's own window. A linear corrector on a noisy channel with gain above $\alpha_+$ fails structural persistence under Model S, and lowering its gain on the same architecture restores it; one with $R^2 \leq n\sigma_{\text{env}}\sigma_\nu$ is restored by better observations, which the body lists as a task-adequacy remedy. Under Model D a corrector with $\alpha R \leq \rho$ is restored by raising $\alpha$ where the architecture allows it. The sentence "structural failure requires changing the correction architecture entirely" is therefore false of retunable gains and of added information.
+
+**Falsifier:** the comparison, on failures classified by condition, of the routed remedy against the others; the window instances above already supply it for structural failure.
+
+**Instantiated:** no.
+
+### The same inequality governs a Kalman filter, a development team, an organization, an immune system and an evolving organism
+
+**Register:** descriptive — the opening's "a structural pattern that recurs across domains", INTRODUCTION headline 1 ("that it is one inequality and not an analogy among three is itself the result"), and the Findings Brief and Impact. The formal half, that every representation meeting the hypotheses obeys one inequality, is the first entry; this entry is the claim that the named real classes meet the hypotheses.
+
+**Population:** the named real classes, each claimed to carry an error state with a sector-bounded correction on a region and a disturbance of Model D or Model S. The body leaves open, per domain, whether "the specific mechanism … is the dominant cause in any given empirical case".
+
+**True of:** the Kalman filter on a moving target, where linear correction, white channel noise and the disturbance law are built in (the tracking analysis of Widrow et al. 1976 and Guo & Ljung 1995). #example-kalman is an internal consistency check, not an instance.
+
+**False of:** the body names none. Two neighbours fall outside the hypotheses: systems that cross the threshold at different values in each direction, whose correction depends on history, and agents whose disturbance rises with their own correction effort, against the fixed $\rho$ the conditions assume. Heavy-tailed shocks are outside both disturbance models (#deriv-sector-condition, "Two disturbance models").
+
+**Falsifier:** for a named domain, estimates of $\alpha$, $R$ and $\rho$ from the error process under which the error ultimately exceeds $\rho/\alpha$ while $\alpha R \gt \rho$, or the sector bound fails on the region; either shows that domain does not meet the hypotheses and refutes "governs" for it. The estimators from innovation data that such a measurement needs are not yet written ( #detail-operationalization).
+
+**Instantiated:** no, for every class the theory did not build.
+
+### Every monotone correction function has a capacity limit, so the threshold exists
+
+**Register:** descriptive — Epistemic Status: "The threshold's *existence* is *robust qualitative* — any monotone correction function has a capacity limit; this holds across all correction functions tested."
+
+**Population:** real correctors. Read as a statement about functions it does not hold, since the linear corrector is monotone with $R \to \infty$ (Formal Expression, "Linear case").
+
+**True of:** the saturating, sigmoid and threshold correction functions of the Part I simulations (#obs-section-i-validation-simulations), which are the theory's own equations.
+
+**False of:** $F = \mathcal T\bar\delta$, by the segment's own linear case.
+
+**Falsifier:** a real corrector, measured, whose sector floor does not shrink at any error size its world produces.
+
+**Instantiated:** no.
+
 ## Discussion
 
 **Two conditions, not one.** Structural persistence ($\alpha \gt \rho/R$) is the Lyapunov-derived result — it says the machinery *works*. Task adequacy ($R^\ast \lt \lVert\delta_{\text{critical}}\rVert$) is a domain-specific constraint — it says the machinery works *well enough*. This is the stability-versus-performance distinction of control engineering, and the ultimate bound $R^\ast$ is Khalil's ultimate bound; the adaptive reserve below is a disturbance stability margin. Neither implies the other, and downstream segments should specify which they mean. Most adversarial-dynamics results ( #result-adversarial-tempo-advantage, #der-adversarial-destabilization) depend on structural persistence. Most domain instantiations (TST, logogenic agent design) care about task adequacy. See Persistence in `LEXICON.md` and `README.md` for the full three-sense taxonomy (structural, operational, continuity).

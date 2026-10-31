@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: d14498206f523abf4f39314731ca4cf72c589399dc55754e6036b3692a19b5d9
+at: 2026-10-31T03:49:42Z
+store: asf
+act: revise
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (B.1 Part I records)
+  role: author
+normalizer: vsect-norm/0
+change: reworded
+from-version: 9f0758ed7bc37d6f067d005b9f920c9bc9ed4a45463768b7a2c3131a44ac5b29
+own-version: a17869f53a089623b2f61bc749e8efe26573d89f34a0f1d1dab8e683f13a9c75
+record: 01-aat-core/src/deriv-sector-condition.md
