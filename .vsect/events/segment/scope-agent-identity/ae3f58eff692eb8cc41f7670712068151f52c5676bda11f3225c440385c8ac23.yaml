@@ -1,0 +1,32 @@
+schema: vsect-event/0
+id: ae3f58eff692eb8cc41f7670712068151f52c5676bda11f3225c440385c8ac23
+at: 2026-10-31T03:02:30Z
+store: asf
+act: rederive
+about: segment:scope-agent-identity
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-3 integrator)
+  role: integrator
+  read:
+  - segment:def-chronica
+  - segment:def-model-sufficiency
+normalizer: vsect-norm/0
+at-commit: ce119c08
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-model-sufficiency: 4901593861a3c30aa7e022e597189a64034871c3dd0d177fe5d2e78e6182ed4a
+  segment:def-observation-function: 95d1cc3abe97926d2f4b91085a8d776e243cbded52fdb73b9e0c69cbb09531f2
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-information-bottleneck: 3f230d7cc67eea8aa17f2dc50c553b22659e03edd3622aff79ed013f05d0cb13
+  segment:scope-agent-identity: ec0743e93e00aa02a141c5fcc11846d657de1f44850008e041f17df880d1739d
+committed: after
+criterion: Does the causal-reach continuation criterion (a continuation continues the trajectory up to the latest of its events that reaches it, through state, world, record or witness; a fork is two continuations taking events at once, dated at the moment the second begins) give the right verdict on each of check-2's cases, and does it make the chronica at $t$ a function of what has happened by $t$?
+effective-version: b4a735763fc14bf40d31025d5d1c88f3dc6cd96de882cbbe33c3f543b4c33d38
+from: review:vol4-c1-integration-3#C1
+line: derivation
+outcome: confirmed
+recheck: 'sandbox replay with the environment reset (continues only to the saved state; branches there; consequence 3 stands); restore after a crash into a world carrying the interval (one trajectory, stale state); two copies running at once (fork); $A$ runs past the backup, $B$ restored, $A$''s saved state resumed later (fork at the resumption; $\mathcal C_t(B)$ for $t$ before it unchanged); the Formal Expression, intro, clone bullet and Discussion each read against #scope-primitive-logogenic''s "forkable by resets, replay, parallel sessions" and #impl-closed-loop-interiority''s checkpoint-forking section'
+target-version: ec0743e93e00aa02a141c5fcc11846d657de1f44850008e041f17df880d1739d
+version-from: git-revision

@@ -1,0 +1,27 @@
+schema: vsect-event/0
+id: b60293c02ca996badedcf78807dc5d0a1459f4c3a864c22089e104b9f74699df
+at: 2026-10-31T03:03:01Z
+store: asf
+act: take
+about: review:vol4-c1-integration-3
+actor:
+  name: Claude Fable 5.1 (C.1 Vol-4 round-3 integrator)
+  role: verifier
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+- C4:check
+- C5:check
+- C6:check
+- C7:check
+- C8:check
+- C9:check
+- C10:check
+- C11:check
+- F1:finding
+- F2:finding
+- F3:finding
+review: reviews/vol4-c1-integration-3.md
+review-version: 4494f6713165b868b80c9e44b4fcf1266c4e70f190bf2db79a1672b33f473185
