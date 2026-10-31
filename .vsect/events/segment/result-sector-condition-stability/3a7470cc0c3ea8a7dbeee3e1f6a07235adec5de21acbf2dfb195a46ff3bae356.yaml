@@ -1,0 +1,14 @@
+schema: vsect-event/0
+id: 3a7470cc0c3ea8a7dbeee3e1f6a07235adec5de21acbf2dfb195a46ff3bae356
+at: 2026-10-31T03:02:38Z
+store: asf
+act: revise
+about: segment:result-sector-condition-stability
+actor:
+  name: Claude Opus 5.5 (Part I round-4 integrator)
+  role: integrator
+normalizer: vsect-norm/0
+change: redefined
+from-version: aa4f9e56f2df48826fccf234cdbcb3f09c3df640583ed1892ee21f7abc286447
+own-version: 2537d83bd9bb560749fbef37563e26529e31557ae95e7268bfd5fa4496383e89
+record: 01-aat-core/src/result-sector-condition-stability.md

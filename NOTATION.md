@@ -240,7 +240,7 @@ The theory uses natural (dimensionless information-theoretic) units where possib
 | $\nu^{(k)}$ | Events per unit time (Hz) | |
 | $\mathcal{T}$ | Inverse time ($t^{-1}$) | Effective correction rate |
 | $\alpha$ | Inverse time ($t^{-1}$) | Worst-case scalar correction rate from the sector condition; same units as $\mathcal{T}$ (sector projection per `#der-gain-sector-bridge`) |
-| $\rho$ | Surprise $\cdot t^{-1}$ | Mismatch injection rate |
+| $\rho$ | Surprise $\cdot t^{-1}$ | Total disturbance rate on the estimation error (environmental change plus injected channel noise; see the $\rho(t)$ row above) |
 | $R$ | Surprise | Sector-region radius / model class capacity — the largest mismatch magnitude under which the sector condition is certified |
 | $\rho/R$ | Inverse time ($t^{-1}$) | Disturbance rate normalized by capacity — the rate constant the persistence condition compares $\alpha$ against |
 | $1/\alpha$ | Time | Characteristic correction timescale — the time over which mismatch decays by a factor of $e$ under the linear approximation |
