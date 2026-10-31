@@ -9,6 +9,11 @@ depends:
   - deriv-sector-condition
   - deriv-stochastic-non-exit
   - deriv-evidence-allocation-ceiling
+  - der-causal-insufficiency-detection
+  - deriv-edge-credence-dynamics
+  - deriv-critical-mass-composition
+  - deriv-self-actuation-grounding
+  - deriv-reward-channel-learning-no-go
 stage: draft
 ---
 
