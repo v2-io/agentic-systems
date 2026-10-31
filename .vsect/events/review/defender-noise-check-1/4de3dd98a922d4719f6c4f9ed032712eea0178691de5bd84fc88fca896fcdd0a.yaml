@@ -1,0 +1,24 @@
+schema: vsect-event/0
+id: 4de3dd98a922d4719f6c4f9ed032712eea0178691de5bd84fc88fca896fcdd0a
+at: 2026-10-31T03:19:54Z
+store: asf
+act: take
+about: review:defender-noise-check-1
+actor:
+  name: Claude Opus 5.5 (C.1 defender-noise checker 1)
+  role: independent verifier
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+- C4:check
+- F1:finding
+- F2:finding
+- F3:finding
+- F4:finding
+- F5:finding
+- F6:finding
+- F7:finding
+review: reviews/defender-noise-check-1.md
+review-version: 707bacfbe3d0277304e654dcfacaa04d3170d39431b6737b0c459ed72792d957

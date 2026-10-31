@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: dd5fadde847e9ba8aaad7a2c6fd1c26f4e9da676f263993f9ff26eb974b03138
+at: 2026-10-31T03:19:54Z
+store: asf
+act: place-finding
+about: item:t1-gated-tempo-one-sided-noise-prescription
+actor:
+  name: Claude Opus 5.5 (C.1 defender-noise checker 1)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  item:t1-gated-tempo-one-sided-noise-prescription: 1674bd41b9728b632da7255c1958793ca6fe6bd20e6f58e3974c77a223a665b9
+finding: review:defender-noise-check-1#F7
+target: item:t1-gated-tempo-one-sided-noise-prescription
+text: This item and item:gated-tempo-nu-versus-tempo-collision were closed `--by-commit 47d76999`, the lane's pre-rebase landing, which no ref reaches (`git for-each-ref --contains` is empty). On main it is `294a30fb`; the account's `5f5db8ea` is
+version-from: git-revision

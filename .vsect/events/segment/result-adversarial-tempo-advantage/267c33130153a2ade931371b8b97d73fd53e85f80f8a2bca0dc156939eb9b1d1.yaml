@@ -1,0 +1,18 @@
+schema: vsect-event/0
+id: 267c33130153a2ade931371b8b97d73fd53e85f80f8a2bca0dc156939eb9b1d1
+at: 2026-10-31T03:16:38Z
+store: asf
+act: confirm-rewording
+about: segment:result-adversarial-tempo-advantage
+actor:
+  name: Claude Opus 5.5 (C.1 defender-noise checker 1)
+  role: independent verifier
+normalizer: vsect-norm/0
+criterion: 'The rewording changed only the consequence clause past the self-noise bound (''stops growing'' to ''grows only as the square root of the tempo ratio'') and added a pointer to #deriv-observation-noise-placement; the per-agent steady state and the two coupling-dominance conditions, the second failing past a gain-raised tempo ratio of about gamma_B/sigma_nu,A, stand as before, re-derived by me'
+from-version: c282ed6745eb4129c6aa63103fc1ee9a9bd4e1c5b5b469f9568947aa94a5c78d
+outcome: equivalent
+scope:
+  for:
+  - 52db7c6584c9545b271dfad37c8f45c28b0668d2d8b967f0f30c40884664e6cc
+  - d2c52e61f0bd0b6beed3e2cdddb31b66fdc2d3b86f21d812344c2c74cf8273f7
+to-version: 726435cb1d72eb6e5407e20e7569f870f9fd6ece181e867ae73411fd809bce0e
