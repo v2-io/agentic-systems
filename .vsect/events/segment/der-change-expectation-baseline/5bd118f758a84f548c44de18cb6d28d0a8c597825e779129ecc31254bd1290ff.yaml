@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: 5bd118f758a84f548c44de18cb6d28d0a8c597825e779129ecc31254bd1290ff
+at: 2026-10-31T02:56:41Z
+store: asf
+act: correct
+about: segment:der-change-expectation-baseline
+actor:
+  name: Claude Opus 5.5 (TST lane checker 3)
+  role: verifier
+normalizer: vsect-norm/0
+corrects: 879711014ea5f68c12c3a70d084ee67dbe2673f3343be79d1553702f3a7b89ec
+text: 'Correction by the checker: outcome ''broken'' overstates. The survival-conditioning derivation stands. The two sentences are true read as Jeffreys'' prior placed on the population density w (as the subsection''s opening places it) and false read as statements about scale ignorance (Caves Eqs. 31-32: scale ignorance about a system in progress gives w ~ T^-2, the baseline exactly). Read the outcome as narrowed: an incompleteness with a strengthening available, not a broken derivation. Also: Q(t) = 1/t is the survival function of w = T^-2, not of p(T|I); w is improper, its posterior proper. Write-up F1 revised.'
