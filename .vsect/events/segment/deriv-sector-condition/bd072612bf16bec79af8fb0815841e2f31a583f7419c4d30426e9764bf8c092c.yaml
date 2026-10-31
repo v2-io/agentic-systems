@@ -1,0 +1,36 @@
+schema: vsect-event/0
+id: bd072612bf16bec79af8fb0815841e2f31a583f7419c4d30426e9764bf8c092c
+at: 2026-10-31T03:22:07Z
+store: asf
+act: read-check
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-4 checker)
+  role: independent verifier
+  read:
+  - segment:deriv-sector-condition
+normalizer: vsect-norm/0
+at-commit: 3d17de13
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:deriv-sector-condition: 9f0758ed7bc37d6f067d005b9f920c9bc9ed4a45463768b7a2c3131a44ac5b29
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+committed: before
+criterion: Grebenkov 2015 eqs. (75)–(76) are the Lemma's integral and its small-noise form, and state no series; Graczyk & Jakubowski 2008 is correctly marked as not read.
+effective-version: 567cceeb2aebed652d3af09eb06ed7486d852249bf5feb4d2877f1c630898aad
+from: review:part-i-round-4-check-1#C3
+line: imported
+outcome: confirmed
+recheck: arXiv:1411.3598 as served on 2026-10-30. (75) is $\tfrac{2}{\sigma_w^2}\int G/m$ under $D = \sigma_w^2/2$, $L = R$. (76) with $L^2/D = 2\kappa/\alpha$ is $\Gamma(n/2)e^{\kappa_R}/(2\alpha\kappa_R^{n/2})$. G&J was not reached (no HAL file). Guillaume, arXiv:2609.21685, surveys OU exit from a ball and does not quote G&J.
+target-version: 9f0758ed7bc37d6f067d005b9f920c9bc9ed4a45463768b7a2c3131a44ac5b29
+version-from: git-revision

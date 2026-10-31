@@ -1,0 +1,36 @@
+schema: vsect-event/0
+id: 0ff73c83e8f02f4b565d3e777438473e98b926786031ffb664ad7b0038334f98
+at: 2026-10-31T03:22:07Z
+store: asf
+act: run
+about: segment:deriv-sector-condition
+actor:
+  name: Claude Opus 5.5 (Part I round-4 checker)
+  role: independent verifier
+  read:
+  - segment:deriv-sector-condition
+normalizer: vsect-norm/0
+at-commit: 3d17de13
+basis:
+  segment:def-action-transition: 62f8ce0513a87ce9411b41d1a6355703023d67da5cf177eaaf387d16fc5cf83f
+  segment:def-adaptive-tempo: 56c6099a5696672148aac392b8ac2fee8634225510ce92fb48e20592a6215c28
+  segment:def-agent-environment: da0b3e9792fef4570e11bc3a0df5eb335592aa14ae78a8c57f2f8b89676714c5
+  segment:def-chronica: dc33bc190fa67035757b782cc4ed7279c328daa414efa808193c1074f88442e7
+  segment:def-mismatch-signal: 35ad559fb9699fe1f721857d4c7f2a978affeab64d389a82df225147388a7700
+  segment:def-observation-function: 3d4c1822812cba6959974914caacb46aeb541b571b30d084cecd9b0e4941a7da
+  segment:deriv-sector-condition: 9f0758ed7bc37d6f067d005b9f920c9bc9ed4a45463768b7a2c3131a44ac5b29
+  segment:emp-update-gain: 2d8403fcc2b22c919511ffec811005090ad1ff03cff559241f0adec1288388e1
+  segment:form-agent-model: 5538cec01b692765a7f31ea692bff9f1302efdbc5fa01f40dd369d17d9bc8962
+  segment:form-event-driven-dynamics: 591391a0ea8dcb133b5105f6f19d2a8327f1b27b6fd3193ad2d09e69707e132a
+  segment:form-sector-condition: 0ca0e3214dcd6da7994cf3c6de7b987e3e8beac9d44b5cc4d4422f3353532452
+  segment:post-causal-structure: 9a3dd248cc22776e23a48a4f4255205e375434c0986d755803743949d173ee17
+  segment:scope-adaptive-system: 9fde935eba787586c385b4c463889a786548a702182745a46bccc53826c926a9
+committed: before
+criterion: 'The numbers the round wrote or kept: threshold values $0.60 \ldots 1.89$; three terms $1.889704$ against exact $1.889709$ at $n = 1000$, and $0.885$ against $0.889$ at $n = 10$; residual times $n^{3/2}$ $0.125, 0.142, 0.148, 0.150, 0.151, 0.151$ at $n = 10 \ldots 10^6$; margin values $0.71, 1.57, 3.12, 12.0, 51.2$ at $n = 3$; doubling increments $1.01, 0.955, 7.5, 1.9, 1.20$.'
+effective-version: 567cceeb2aebed652d3af09eb06ed7486d852249bf5feb4d2877f1c630898aad
+from: review:part-i-round-4-check-1#C2
+line: derivation
+outcome: confirmed
+recheck: 'Own log-space series against an independent quadrature of $\int_0^1 t^{n-1}(e^{\kappa(1-t^2)}-1)/(1-t^2)\,dt$, 40 digits, agreeing to 10 digits: $0.5957, 0.6590, 0.7064, 0.7767, 0.8885, 1.0157, 1.2018, 1.3526, 1.8897085$; three terms $1.8897038$, $0.88456$; residual $\times n^{3/2}$ $0.1249, 0.1422, 0.1482, 0.1501, 0.1507, 0.1509$; margins $0.7064, 1.574, 3.124, 11.98, 51.24$; increments by `findroot` $1.012, 0.9548, 7.521, 1.945, 1.197$.'
+target-version: 9f0758ed7bc37d6f067d005b9f920c9bc9ed4a45463768b7a2c3131a44ac5b29
+version-from: git-revision

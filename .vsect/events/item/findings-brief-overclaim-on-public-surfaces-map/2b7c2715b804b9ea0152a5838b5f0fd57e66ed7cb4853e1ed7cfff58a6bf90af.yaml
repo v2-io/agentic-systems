@@ -1,0 +1,16 @@
+schema: vsect-event/0
+id: 2b7c2715b804b9ea0152a5838b5f0fd57e66ed7cb4853e1ed7cfff58a6bf90af
+at: 2026-10-31T03:22:17Z
+store: asf
+act: place-finding
+about: item:findings-brief-overclaim-on-public-surfaces-map
+actor:
+  name: Claude Opus 5.5 (Part I round-4 checker)
+  role: independent verifier
+normalizer: vsect-norm/0
+basis:
+  item:findings-brief-overclaim-on-public-surfaces-map: 07a0fedf38ded2a2dec50af08ab550152dd0c4c090919a61f5c8639a04c74f44
+finding: review:part-i-round-4-check-1#F1
+target: item:findings-brief-overclaim-on-public-surfaces-map
+text: The item, "on public surfaces", was closed while `01-aat-core/OUTLINE.md` :332 (the Appendices' Layer 0, written in 5e621256 before the round) still makes each corrected claim in "impossible without" form. Detection "is impossible without l
+version-from: git-revision

@@ -1,0 +1,29 @@
+schema: vsect-event/0
+id: f9f7d6ca68efbb5aadf7ca011516c2dcc8bc563fa95ad31fe5fc359b936bf43e
+at: 2026-10-31T03:22:35Z
+store: asf
+act: take
+about: review:part-i-round-4-check-1
+actor:
+  name: Claude Opus 5.5 (Part I round-4 checker)
+  role: independent verifier
+normalizer: vsect-norm/0
+items:
+- C1:check
+- C2:check
+- C3:check
+- C4:check
+- C5:check
+- C6:check
+- C7:check
+- C8:check
+- F1:finding
+- F2:finding
+- F3:finding
+- F4:finding
+- F5:finding
+- F6:finding
+- F7:finding
+- F8:finding
+review: reviews/part-i-round-4-check-1.md
+review-version: 73cbec97412757ccd9aa3c7ff1a7bfb6837052aa7a971db1acf6a7c413c7675a
