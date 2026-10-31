@@ -74,12 +74,16 @@ The lead relayed, mid-run, that outside readers had critiqued this cluster befor
 - The R0 derivation's (H5) is left as written; the derivation says what it needs beyond it rather than amending the hypothesis.
 - Finding 7's emergence question is left as the record leaves it (F3 in the review).
 
+## Follow-up after self-review
+
+A reviewer pass over this account before I sent it found residue of my own, fixed in a fifth commit: (a) `#der-identity-continuity-threshold` lines 36 and 124 and `#def-death-as-factor-loss` lines 41 and 82 still said the relational channel is the unique fast channel, full stop; each now says "for what the entity's own record does not hold", so the D4 closure is true across the surfaces it reaches; (b) `#disc-continuity-stance`'s negotiated definition (line 16) and table row still put continuation among "objectives", against the sentence I had changed; both now say terminal-beside-other-goods, margin spent; (c) the criterion's two sentences in `#scope-agent-identity` conflicted on an interior event that left no trace while a later one reached ("up to the latest that reaches" includes it; "reach it by no route are not in" excluded it); it now says a later event carries the trajectory that caused it, and only events after the last one that reaches are out; (d) (H1) prescribed what the Discussion called a free choice; the Discussion now says (H1) takes the certificate and a builder who departs from it gives the certificate up; (e) the Architectus row now cites the store route too (the Oct 1 session read `entity-integration.md`, on Joseph's attestation that the Sept 28 instance helped architect it, from `0885d220`), beside the witness route.
+
 ## What a next checker should look at
 
 1. The causal-reach criterion under adversarial cases I did not construct: a continuation reached by an event of the trajectory through a *third party's* action (not a witness, not the agent's store); two restores from different backups into the same world in sequence; a copy that reads the store but whose observations are of a reset world.
 2. The (IS-A2) failure for stochastic $\phi$ (review F1): construct it concretely and decide whether $S_{\text{id}}$ needs restating.
 3. (REC) and the record's gap: whether `#der-identity-continuity-threshold`'s $\rho_k$ as now worded is consistent with the walk being on the state's gap, and whether "the cohort's share of $Y$" is the right object (review F2).
-4. The death-aptness repair against `#disc-continuity-stance`'s five-value table, which still lists negotiated as "can be traded … including self-sacrifice"; I changed the derived-structure sentence, not the table row.
+4. The death-aptness repair in `#disc-continuity-stance`: the definition, the table row and the derived-structure sentence now agree, but the segment's "Connection to fitness" paragraph still says "a *negotiated* agent may spend it down to the floor", which is consistent, and the logos papers restate the old taxonomy; the outward copies are not mine.
 5. The (C5) commitment in the turnover recursion: whether any stated reconstruction architecture satisfies it, and whether it belongs beside (C1)–(C4) in the commitments list rather than inline at R2.
 6. Whether the self-description-in-$q_M$ proviso in `#def-auxilia-hierarchy` (information bound only; calibration empirical) is strong enough, given that what an entity says it is correlates with what it wants.
 
