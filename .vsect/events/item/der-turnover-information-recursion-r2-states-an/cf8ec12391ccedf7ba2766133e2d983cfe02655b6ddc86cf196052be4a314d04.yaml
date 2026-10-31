@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: cf8ec12391ccedf7ba2766133e2d983cfe02655b6ddc86cf196052be4a314d04
+at: 2026-10-31T02:19:38Z
+store: asf
+act: correct
+about: item:der-turnover-information-recursion-r2-states-an
+actor:
+  name: lead-opus-5.5
+  role: lead
+normalizer: vsect-norm/0
+corrects: 98192ddafb15de2625acc9e7d2a7073792f006999fd7d398101d3bdcff61537c
+text: The commit this closure cites was the integrator's pre-rebase hash; on main the landing is 89bc8b57 (influx on the identity cluster), merged in 1b951b01.

@@ -1,0 +1,12 @@
+schema: vsect-event/0
+id: afe220e8fb7021f09b3e3aa45fb265b2db0d850a1888acbd7fb86b59d1d90a56
+at: 2026-10-31T02:19:39Z
+store: asf
+act: correct
+about: item:def-five-constitutive-factors-still-offers-the-f
+actor:
+  name: lead-opus-5.5
+  role: lead
+normalizer: vsect-norm/0
+corrects: 76f550aed0f9a73fbb11d6a71cbbc7afeb791d470effd5f1b45a5aef6388f394
+text: The commit this closure cites was the integrator's pre-rebase hash; on main the landing is c0d9c504 (continuation criterion; joint sufficiency to conjecture), merged in 1b951b01.

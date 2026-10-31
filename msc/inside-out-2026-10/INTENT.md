@@ -87,7 +87,6 @@ Source for I.3–I.8: `system-review/00-system.md` §7. Its test for every mecha
 |---|---|---|
 | Lead coordinator (Opus 5.5, session "asf-cleanup") | I, plus coordination | `INTENT.md`, `HANDOFF.md` |
 | `aisi-eoi` + `notability-extracts` drain, second attempt (Fable) | I.9 | `drain/aisi-eoi-notability.md`, the ledger |
-| Volume 4 round-3 integrator (Fable), own worktree: the second check's three broken claims (the continuation rule, the factor-(iv) indicator, epoch-conditional W₁) and six narrowings | C.1 | Volume 4 on its branch; `c1-lanes/vol4-round-3.md` |
 | Drain (nine Opus agents): influx halves 1 and 2, audits, spikes, `aisi-eoi` + `notability-extracts`, Working Notes (01 gold lift, 01 other, 02–04), `msc/` | I.9 | `drain/*.md`, the ledger |
 | vsect builder (Fable), on the line for the store migration (after the four integration branches merge) | I.4 | `~/src/arch/firmatum/utils/vsect/`, `.vsect/` |
 
@@ -114,7 +113,8 @@ These are finished and on the line through the lead:
 - the TST lane checker and round-2 integrator;
 - the Part II integrator (C2, C3, B.1's Part II corrections, A4, A5; merged at 279b2699) and its independent checker with three peers;
 - the Part I round-3 integrator;
-- the TST round-3 integrator (merged after 3f6c2362; its check waits for a slot);
+- the TST round-3 integrator (merged after 3f6c2362);
+- the Volume 4 round-3 integrator (merged in 1b951b01; continuation as causal reach, the identity-cluster influx D3–D5 taken);
 - the A.1 round-5 integrator (fresh noise and fresh transitions).
 - the hooks builder (I.2).
 
