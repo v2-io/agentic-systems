@@ -2,7 +2,7 @@
 
 KR **C.1** (`msc/inside-out-2026-10/INTENT.md`): *"Every verified defect is replaced, each by an integrator who re-ran the check and then by an independent verifier."* Top intent: *"Complete "in-place" refactor of ASF-- meta, all artifacts, and theory itself."* Inputs: `c1-lanes/vol4-check-2.md` with its record `reviews/vol4-c1-check-2.md`; the round-2 account `c1-lanes/vol4-round-2.md`; and, relayed mid-run by the lead, the outside critiques of the identity cluster in `influx-scout/MAP.md` §2 and §3 D3–D5, read at their primaries. My own checks are in `reviews/vol4-c1-integration-3.md`. This file is for the next checker: what landed, what I re-derived, where I departed from the check, and where to push.
 
-The work is three commits on branch `worktree-agent-afb4c13ca64d0e645`, each with its reasoning in the body: `7e40714a` (findings 1, 2, 6; joint sufficiency), `5f60ecad` (findings 3, 4, 5, 7, 8), `ce119c08` (influx D3, D4, D5). The hashes change when the lead merges; the subjects map one to one.
+The work is three commits on branch `worktree-agent-afb4c13ca64d0e645`, each with its reasoning in the body: `7e40714a` (findings 1, 2, 6; joint sufficiency), `5f60ecad` (findings 3, 4, 5, 7, 8), `ce119c08` (influx D3, D4, D5). The hashes change at every rebase and again when the lead merges; the subjects map one to one, and the `--by-commit` references in the four ledger closures below name the influx commit and the first landing commit by the hashes they had when closed, so the lead's merge is the place to `vsect annotate` them to the final ones.
 
 ## Finding 1: the continuation criterion is causal reach
 
