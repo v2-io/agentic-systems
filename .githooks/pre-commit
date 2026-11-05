@@ -3,4 +3,9 @@
 # bin/check-commit (md-press, lint-outline, check-links, refresh-all --check,
 # vsect). It is active when `git config core.hooksPath` is `.githooks`;
 # bin/setup-hooks sets that. The checks themselves live in bin/check-commit.
+# Disabled on 2026-11-04 at Joseph's request, "for now". To turn it back on,
+# delete the `exit 0` line below. bin/setup-hooks only sets core.hooksPath and
+# never touches this file, so it will not undo this. bin/check-commit still
+# runs by hand.
+exit 0
 exec "$(git rev-parse --show-toplevel)/bin/check-commit"
